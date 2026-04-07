@@ -205,6 +205,8 @@ Deno.serve(async (req) => {
     dailyPageviews: dailyCounts,
     topFlows,
     topReferrers,
+    referrerTrend,
+    referrerTrendKeys: topRefSources,
     journey: {
       starts: journeyStarts,
       completes: journeyCompletes,
