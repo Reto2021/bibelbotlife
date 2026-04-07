@@ -3,9 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <title>BibelBot.ch – Dein persönlicher Begleiter</title>
-    <meta name="description" content="Die Bibel neu entdecken – mit KI, guten Fragen und ehrlicher Begleitung. Kein Login, kein Urteil.">
+
+    <!-- Primary SEO -->
+    <title>BibelBot.ch – Bibel-KI-Chatbot | Kostenlos & Anonym</title>
+    <meta name="description" content="Entdecke die Bibel neu – mit KI, guten Fragen und ehrlicher Begleitung. Tägliche Impulse, 5 Übersetzungen, Coaching-Methodik. Kein Login, kein Urteil, kostenlos.">
     <meta name="author" content="BibelBot.ch" />
+    <meta name="keywords" content="Bibel, Chatbot, KI, Bible AI, Bibelstudium, täglicher Impuls, Seelsorge, christlich, Schweiz, kostenlos, anonym">
+    <link rel="canonical" href="https://bibelbot.ch/" />
+
+    <!-- hreflang for multilingual -->
+    <link rel="alternate" hreflang="de" href="https://bibelbot.ch/?lng=de" />
+    <link rel="alternate" hreflang="en" href="https://bibelbot.ch/?lng=en" />
+    <link rel="alternate" hreflang="fr" href="https://bibelbot.ch/?lng=fr" />
+    <link rel="alternate" hreflang="es" href="https://bibelbot.ch/?lng=es" />
+    <link rel="alternate" hreflang="x-default" href="https://bibelbot.ch/" />
 
     <!-- PWA -->
     <link rel="manifest" href="/manifest.json" />
@@ -15,22 +26,89 @@
     <meta name="apple-mobile-web-app-title" content="BibelBot" />
     <link rel="apple-touch-icon" href="/icon-192.png" />
 
-    <!-- Open Graph -->
-    
-    
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/af1b2e4a-9662-41c6-908b-f5f06e4536c5/id-preview-d5ddc426--61c4d057-2da9-4781-b298-6bfeafe7a27b.lovable.app-1775555372499.png">
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
 
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bibelbot.ch/" />
+    <meta property="og:site_name" content="BibelBot.ch" />
+    <meta property="og:locale" content="de_CH" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="fr_FR" />
+    <meta property="og:locale:alternate" content="es_ES" />
+    <meta property="og:title" content="BibelBot.ch – Bibel-KI-Chatbot | Kostenlos & Anonym">
+    <meta property="og:description" content="Entdecke die Bibel neu – mit KI, guten Fragen und ehrlicher Begleitung. Tägliche Impulse, 5 Übersetzungen, Coaching-Methodik. Kein Login, kostenlos.">
+    <meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/af1b2e4a-9662-41c6-908b-f5f06e4536c5/id-preview-d5ddc426--61c4d057-2da9-4781-b298-6bfeafe7a27b.lovable.app-1775555372499.png">
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@BibelBot" />
+    <meta name="twitter:title" content="BibelBot.ch – Bibel-KI-Chatbot | Kostenlos & Anonym">
+    <meta name="twitter:description" content="Entdecke die Bibel neu – mit KI, guten Fragen und ehrlicher Begleitung. Tägliche Impulse, 5 Übersetzungen, Coaching-Methodik. Kein Login, kostenlos.">
     <meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/af1b2e4a-9662-41c6-908b-f5f06e4536c5/id-preview-d5ddc426--61c4d057-2da9-4781-b298-6bfeafe7a27b.lovable.app-1775555372499.png">
-    <meta property="og:title" content="BibelBot.ch – Dein persönlicher Begleiter">
-  <meta name="twitter:title" content="BibelBot.ch – Dein persönlicher Begleiter">
-  <meta property="og:description" content="Die Bibel neu entdecken – mit KI, guten Fragen und ehrlicher Begleitung. Kein Login, kein Urteil.">
-  <meta name="twitter:description" content="Die Bibel neu entdecken – mit KI, guten Fragen und ehrlicher Begleitung. Kein Login, kein Urteil.">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
-</head>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "BibelBot.ch",
+          "url": "https://bibelbot.ch",
+          "description": "KI-gestützter Bibel-Chatbot mit täglichen Impulsen, 5 Bibelübersetzungen und Coaching-Methodik. Kostenlos, anonym, ohne Login.",
+          "applicationCategory": "ReligiousApplication",
+          "operatingSystem": "All",
+          "browserRequirements": "Requires JavaScript",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "CHF"
+          },
+          "inLanguage": ["de", "en", "fr", "es"],
+          "creator": {
+            "@type": "Organization",
+            "name": "BibelBot.ch",
+            "url": "https://bibelbot.ch"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Was unterscheidet BibelBot von ChatGPT?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "BibelBot arbeitet mit 5 anerkannten Bibelübersetzungen, hat seelsorgerische Guardrails, Krisenverweise (Tel. 143/147), und basiert ausschliesslich auf christlicher Theologie – keine Vermischung mit Esoterik."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ist BibelBot kostenlos?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ja, BibelBot ist vollständig kostenlos, ohne Login, ohne Werbung und ohne versteckte Kosten. Das Projekt finanziert sich durch freiwillige Spenden."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Wie geht BibelBot mit meinen Daten um?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "BibelBot speichert keine persönlichen Daten und keine Chatverläufe. Jedes Gespräch ist anonym. Es gibt kein Login, kein Tracking und keine Weitergabe von Daten an Dritte."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+  </head>
 
   <body>
     <div id="root"></div>
