@@ -144,6 +144,7 @@ const Analytics = () => {
     Object.entries(data.chat?.dailyActivity || {}).forEach(([date, count]) => rows.push(["Chat-Aktivität", date, String(count)]));
     data.topPages?.forEach((p) => rows.push(["Top Seiten", p.path, String(p.count)]));
     data.topEvents?.forEach((e) => rows.push(["Top Events", e.name, String(e.count)]));
+    data.topReferrers?.forEach((r) => rows.push(["Referrer", r.source, String(r.count)]));
     Object.entries(data.subscribers?.byChannel || {}).forEach(([ch, total]) =>
       rows.push(["Abonnenten-Kanal", ch, `${total} (aktiv: ${data.subscribers?.activeByChannel?.[ch] || 0})`])
     );
