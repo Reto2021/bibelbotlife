@@ -504,90 +504,90 @@
     "backToList": "Back to list"
   },
   "church": {
-    "badge": "For Churches",
-    "heroTitle": "BibleBot for Your Church",
-    "heroSubtitle": "Accompany your congregation with biblical wisdom – digital, personal, and around the clock.",
-    "useCasesTitle": "Use Cases",
+    "badge": "Dla Kościołów",
+    "heroTitle": "BibleBot dla Twojego Kościoła",
+    "heroSubtitle": "Towarzysz swojej wspólnocie z biblijną mądrością – cyfrowo, osobiście i całą dobę.",
+    "useCasesTitle": "Zastosowania",
     "useCase": {
       "youth": {
-        "title": "Youth Ministry",
-        "desc": "Teens discover the Bible in their own way – interactive and without hesitation."
+        "title": "Praca z młodzieżą",
+        "desc": "Nastolatki odkrywają Biblię na swój sposób – interaktywnie i bez zahamowań."
       },
       "confirmation": {
-        "title": "Confirmation",
-        "desc": "Confirmands deepen Bible knowledge independently with personal guidance."
+        "title": "Bierzmowanie",
+        "desc": "Kandydaci pogłębiają wiedzę biblijną samodzielnie z osobistym wsparciem."
       },
       "pastoral": {
-        "title": "Pastoral Care",
-        "desc": "24/7 companionship as a complement to personal pastoral care."
+        "title": "Opieka duszpasterska",
+        "desc": "Towarzyszenie 24/7 jako uzupełnienie osobistej opieki duszpasterskiej."
       },
       "bibleStudy": {
-        "title": "Bible Study",
-        "desc": "Impulses and discussion starters for groups and home circles."
+        "title": "Studium Biblii",
+        "desc": "Impulsy i tematy do dyskusji dla grup i kółek domowych."
       }
     },
-    "pricingTitle": "Partnership Model",
-    "pricingSubtitle": "Choose the plan that fits your church. One-time setup + annual contribution.",
-    "popular": "Popular",
-    "setup": "Setup",
-    "free": "Free",
-    "perYear": "year",
-    "contact": "Get in touch",
+    "pricingTitle": "Model partnerski",
+    "pricingSubtitle": "Wybierz plan pasujący do Twojego kościoła. Jednorazowa konfiguracja + roczna składka.",
+    "popular": "Popularny",
+    "setup": "Konfiguracja",
+    "free": "Bezpłatnie",
+    "perYear": "Rok",
+    "contact": "Skontaktuj się",
     "tier": {
       "free": {
-        "name": "Starter",
-        "size": "For all churches"
+        "name": "Start",
+        "size": "Dla wszystkich kościołów"
       },
       "community": {
-        "name": "Community",
-        "size": "Up to 500 members"
+        "name": "Wspólnota",
+        "size": "Do 500 członków"
       },
       "gemeinde": {
-        "name": "Parish",
-        "size": "500–2,000 members"
+        "name": "Parafia",
+        "size": "500–2 000 członków"
       },
       "kirche": {
-        "name": "Church",
-        "size": "Over 2,000 members"
+        "name": "Kościół",
+        "size": "Ponad 2 000 członków"
       }
     },
     "features": {
-      "directoryEntry": "Directory listing",
-      "telegramGroup": "Telegram group",
-      "partnerPage": "Own partner page",
-      "badge": "Partner badge",
-      "qrFlyer": "Printable QR flyer",
-      "contactForm": "Contact form",
-      "pastorProfile": "Pastor profile",
-      "welcomeVideo": "Welcome video",
-      "analytics": "Analytics dashboard",
-      "prioritySupport": "Priority support",
-      "multipleProfiles": "Multiple profiles",
-      "customBranding": "Custom branding",
-      "apiAccess": "API access",
-      "accountManager": "Dedicated account manager"
+      "directoryEntry": "Wpis w katalogu",
+      "telegramGroup": "Grupa Telegram",
+      "partnerPage": "Własna strona partnerska",
+      "badge": "Odznaka partnera",
+      "qrFlyer": "Ulotka QR do druku",
+      "contactForm": "Formularz kontaktowy",
+      "pastorProfile": "Profil pastora",
+      "welcomeVideo": "Film powitalny",
+      "analytics": "Panel analityczny",
+      "prioritySupport": "Wsparcie priorytetowe",
+      "multipleProfiles": "Wiele profili",
+      "customBranding": "Własna marka",
+      "apiAccess": "Dostęp API",
+      "accountManager": "Osobisty opiekun konta"
     },
-    "viewDirectory": "View church directory",
-    "directoryBadge": "Church Directory",
-    "directoryTitle": "Partner Churches",
-    "directorySubtitle": "Find a church near you that recommends BibleBot.",
-    "searchPlaceholder": "Search by city, name, or denomination...",
-    "noResults": "No churches in the directory yet.",
-    "becomePartner": "Become a partner →",
-    "notFound": "Church not found.",
-    "backToDirectory": "Back to directory",
+    "viewDirectory": "Zobacz katalog kościołów",
+    "directoryBadge": "Katalog Kościołów",
+    "directoryTitle": "Kościoły partnerskie",
+    "directorySubtitle": "Znajdź kościół w pobliżu, który poleca BibleBot.",
+    "searchPlaceholder": "Szukaj według miejsca, nazwy lub wyznania...",
+    "noResults": "Brak kościołów w katalogu.",
+    "becomePartner": "Zostań partnerem →",
+    "notFound": "Kościół nie znaleziony.",
+    "backToDirectory": "Powrót do katalogu",
     "pastor": "Pastor",
-    "serviceTimes": "Service Times",
-    "startChat": "Start Chat",
-    "website": "Website",
-    "telegramGroup": "Telegram Group",
-    "contactTitle": "Contact {{name}}",
-    "contactName": "Your name (optional)",
-    "contactEmail": "Your email address",
-    "contactMessage": "Your message",
-    "contactSend": "Send message",
-    "contactSuccess": "Message sent! 🙏",
-    "contactSuccessDesc": "The church will get back to you.",
-    "recommendedBy": "Recommended by {{name}}"
+    "serviceTimes": "Godziny nabożeństw",
+    "startChat": "Rozpocznij czat",
+    "website": "Strona internetowa",
+    "telegramGroup": "Grupa Telegram",
+    "contactTitle": "Kontakt z {{name}}",
+    "contactName": "Twoje imię (opcjonalnie)",
+    "contactEmail": "Twój adres e-mail",
+    "contactMessage": "Twoja wiadomość",
+    "contactSend": "Wyślij wiadomość",
+    "contactSuccess": "Wiadomość wysłana! 🙏",
+    "contactSuccessDesc": "Kościół skontaktuje się z Tobą.",
+    "recommendedBy": "Polecany przez {{name}}"
   }
 }

@@ -504,90 +504,90 @@
     "backToList": "Back to list"
   },
   "church": {
-    "badge": "For Churches",
-    "heroTitle": "BibleBot for Your Church",
-    "heroSubtitle": "Accompany your congregation with biblical wisdom – digital, personal, and around the clock.",
-    "useCasesTitle": "Use Cases",
+    "badge": "Seurakunnille",
+    "heroTitle": "BibleBot seurakunnallesi",
+    "heroSubtitle": "Saata seurakuntaasi raamatullisella viisaudella – digitaalisesti, henkilökohtaisesti ja ympäri vuorokauden.",
+    "useCasesTitle": "Käyttötapaukset",
     "useCase": {
       "youth": {
-        "title": "Youth Ministry",
-        "desc": "Teens discover the Bible in their own way – interactive and without hesitation."
+        "title": "Nuorisotyö",
+        "desc": "Nuoret löytävät Raamatun omalla tavallaan – interaktiivisesti ja ilman esteitä."
       },
       "confirmation": {
-        "title": "Confirmation",
-        "desc": "Confirmands deepen Bible knowledge independently with personal guidance."
+        "title": "Rippikoulu",
+        "desc": "Rippikoululaiset syventävät raamatuntuntemustaan itsenäisesti henkilökohtaisella ohjauksella."
       },
       "pastoral": {
-        "title": "Pastoral Care",
-        "desc": "24/7 companionship as a complement to personal pastoral care."
+        "title": "Sielunhoito",
+        "desc": "24/7-kumppanuus henkilökohtaisen sielunhoidon täydentäjänä."
       },
       "bibleStudy": {
-        "title": "Bible Study",
-        "desc": "Impulses and discussion starters for groups and home circles."
+        "title": "Raamattupiiri",
+        "desc": "Impulsseja ja keskustelunaiheita ryhmille ja kotipiireille."
       }
     },
-    "pricingTitle": "Partnership Model",
-    "pricingSubtitle": "Choose the plan that fits your church. One-time setup + annual contribution.",
-    "popular": "Popular",
-    "setup": "Setup",
-    "free": "Free",
-    "perYear": "year",
-    "contact": "Get in touch",
+    "pricingTitle": "Kumppanuusmalli",
+    "pricingSubtitle": "Valitse seurakuntaasi sopiva suunnitelma. Kertakäyttöönotto + vuosimaksu.",
+    "popular": "Suosittu",
+    "setup": "Käyttöönotto",
+    "free": "Ilmainen",
+    "perYear": "Vuosi",
+    "contact": "Ota yhteyttä",
     "tier": {
       "free": {
-        "name": "Starter",
-        "size": "For all churches"
+        "name": "Kokeilu",
+        "size": "Kaikille seurakunnille"
       },
       "community": {
-        "name": "Community",
-        "size": "Up to 500 members"
+        "name": "Yhteisö",
+        "size": "Enintään 500 jäsentä"
       },
       "gemeinde": {
-        "name": "Parish",
-        "size": "500–2,000 members"
+        "name": "Seurakunta",
+        "size": "500–2 000 jäsentä"
       },
       "kirche": {
-        "name": "Church",
-        "size": "Over 2,000 members"
+        "name": "Kirkko",
+        "size": "Yli 2 000 jäsentä"
       }
     },
     "features": {
-      "directoryEntry": "Directory listing",
-      "telegramGroup": "Telegram group",
-      "partnerPage": "Own partner page",
-      "badge": "Partner badge",
-      "qrFlyer": "Printable QR flyer",
-      "contactForm": "Contact form",
-      "pastorProfile": "Pastor profile",
-      "welcomeVideo": "Welcome video",
-      "analytics": "Analytics dashboard",
-      "prioritySupport": "Priority support",
-      "multipleProfiles": "Multiple profiles",
-      "customBranding": "Custom branding",
-      "apiAccess": "API access",
-      "accountManager": "Dedicated account manager"
+      "directoryEntry": "Hakemistomerkintä",
+      "telegramGroup": "Telegram-ryhmä",
+      "partnerPage": "Oma kumppanisivu",
+      "badge": "Kumppanimerkki",
+      "qrFlyer": "Tulostettava QR-esite",
+      "contactForm": "Yhteydenottolomake",
+      "pastorProfile": "Pastorin profiili",
+      "welcomeVideo": "Tervetulovideo",
+      "analytics": "Analytiikkapaneeli",
+      "prioritySupport": "Ensisijainen tuki",
+      "multipleProfiles": "Useita profiileja",
+      "customBranding": "Oma brändi",
+      "apiAccess": "API-pääsy",
+      "accountManager": "Henkilökohtainen yhteyshenkilö"
     },
-    "viewDirectory": "View church directory",
-    "directoryBadge": "Church Directory",
-    "directoryTitle": "Partner Churches",
-    "directorySubtitle": "Find a church near you that recommends BibleBot.",
-    "searchPlaceholder": "Search by city, name, or denomination...",
-    "noResults": "No churches in the directory yet.",
-    "becomePartner": "Become a partner →",
-    "notFound": "Church not found.",
-    "backToDirectory": "Back to directory",
-    "pastor": "Pastor",
-    "serviceTimes": "Service Times",
-    "startChat": "Start Chat",
-    "website": "Website",
-    "telegramGroup": "Telegram Group",
-    "contactTitle": "Contact {{name}}",
-    "contactName": "Your name (optional)",
-    "contactEmail": "Your email address",
-    "contactMessage": "Your message",
-    "contactSend": "Send message",
-    "contactSuccess": "Message sent! 🙏",
-    "contactSuccessDesc": "The church will get back to you.",
-    "recommendedBy": "Recommended by {{name}}"
+    "viewDirectory": "Katso seurakuntahakemisto",
+    "directoryBadge": "Seurakuntahakemisto",
+    "directoryTitle": "Kumppaniseurakunnat",
+    "directorySubtitle": "Löydä lähellesi seurakunta, joka suosittelee BibleBotia.",
+    "searchPlaceholder": "Hae paikan, nimen tai kirkkokuntien mukaan...",
+    "noResults": "Hakemistossa ei ole vielä seurakuntia.",
+    "becomePartner": "Ryhdy kumppaniksi →",
+    "notFound": "Seurakuntaa ei löytynyt.",
+    "backToDirectory": "Takaisin hakemistoon",
+    "pastor": "Pastori",
+    "serviceTimes": "Jumalanpalvelusajat",
+    "startChat": "Aloita keskustelu",
+    "website": "Verkkosivusto",
+    "telegramGroup": "Telegram-ryhmä",
+    "contactTitle": "Ota yhteyttä: {{name}}",
+    "contactName": "Nimesi (valinnainen)",
+    "contactEmail": "Sähköpostiosoitteesi",
+    "contactMessage": "Viestisi",
+    "contactSend": "Lähetä viesti",
+    "contactSuccess": "Viesti lähetetty! 🙏",
+    "contactSuccessDesc": "Seurakunta ottaa sinuun yhteyttä.",
+    "recommendedBy": "Suosittelija: {{name}}"
   }
 }

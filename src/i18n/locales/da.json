@@ -504,90 +504,90 @@
     "backToList": "Back to list"
   },
   "church": {
-    "badge": "For Churches",
-    "heroTitle": "BibleBot for Your Church",
-    "heroSubtitle": "Accompany your congregation with biblical wisdom – digital, personal, and around the clock.",
-    "useCasesTitle": "Use Cases",
+    "badge": "For Kirker",
+    "heroTitle": "BibleBot til din Kirke",
+    "heroSubtitle": "Ledsag din menighed med bibelsk visdom – digitalt, personligt og døgnet rundt.",
+    "useCasesTitle": "Anvendelser",
     "useCase": {
       "youth": {
-        "title": "Youth Ministry",
-        "desc": "Teens discover the Bible in their own way – interactive and without hesitation."
+        "title": "Ungdomsarbejde",
+        "desc": "Teenagere opdager Bibelen på deres egen måde – interaktivt og uden tøven."
       },
       "confirmation": {
-        "title": "Confirmation",
-        "desc": "Confirmands deepen Bible knowledge independently with personal guidance."
+        "title": "Konfirmation",
+        "desc": "Konfirmander uddyber deres bibelkendskab selvstændigt med personlig vejledning."
       },
       "pastoral": {
-        "title": "Pastoral Care",
-        "desc": "24/7 companionship as a complement to personal pastoral care."
+        "title": "Sjælesorg",
+        "desc": "24/7 ledsagelse som supplement til personlig sjælesorg."
       },
       "bibleStudy": {
-        "title": "Bible Study",
-        "desc": "Impulses and discussion starters for groups and home circles."
+        "title": "Bibelstudium",
+        "desc": "Impulser og diskussionsemner for grupper og husfællesskaber."
       }
     },
-    "pricingTitle": "Partnership Model",
-    "pricingSubtitle": "Choose the plan that fits your church. One-time setup + annual contribution.",
-    "popular": "Popular",
-    "setup": "Setup",
-    "free": "Free",
-    "perYear": "year",
-    "contact": "Get in touch",
+    "pricingTitle": "Partnerskabsmodel",
+    "pricingSubtitle": "Vælg den plan, der passer til din kirke. Engangsopsætning + årligt bidrag.",
+    "popular": "Populær",
+    "setup": "Opsætning",
+    "free": "Gratis",
+    "perYear": "År",
+    "contact": "Kontakt os",
     "tier": {
       "free": {
-        "name": "Starter",
-        "size": "For all churches"
+        "name": "Prøve",
+        "size": "For alle kirker"
       },
       "community": {
-        "name": "Community",
-        "size": "Up to 500 members"
+        "name": "Fællesskab",
+        "size": "Op til 500 medlemmer"
       },
       "gemeinde": {
-        "name": "Parish",
-        "size": "500–2,000 members"
+        "name": "Menighed",
+        "size": "500–2.000 medlemmer"
       },
       "kirche": {
-        "name": "Church",
-        "size": "Over 2,000 members"
+        "name": "Kirke",
+        "size": "Over 2.000 medlemmer"
       }
     },
     "features": {
-      "directoryEntry": "Directory listing",
-      "telegramGroup": "Telegram group",
-      "partnerPage": "Own partner page",
-      "badge": "Partner badge",
-      "qrFlyer": "Printable QR flyer",
-      "contactForm": "Contact form",
-      "pastorProfile": "Pastor profile",
-      "welcomeVideo": "Welcome video",
-      "analytics": "Analytics dashboard",
-      "prioritySupport": "Priority support",
-      "multipleProfiles": "Multiple profiles",
-      "customBranding": "Custom branding",
-      "apiAccess": "API access",
-      "accountManager": "Dedicated account manager"
+      "directoryEntry": "Opføring i fortegnelsen",
+      "telegramGroup": "Telegramgruppe",
+      "partnerPage": "Egen partnerside",
+      "badge": "Partnerbadge",
+      "qrFlyer": "QR-flyer til print",
+      "contactForm": "Kontaktformular",
+      "pastorProfile": "Præsteprofil",
+      "welcomeVideo": "Velkomstvideo",
+      "analytics": "Analysepanel",
+      "prioritySupport": "Prioriteret support",
+      "multipleProfiles": "Flere profiler",
+      "customBranding": "Eget design",
+      "apiAccess": "API-adgang",
+      "accountManager": "Personlig kontaktperson"
     },
-    "viewDirectory": "View church directory",
-    "directoryBadge": "Church Directory",
-    "directoryTitle": "Partner Churches",
-    "directorySubtitle": "Find a church near you that recommends BibleBot.",
-    "searchPlaceholder": "Search by city, name, or denomination...",
-    "noResults": "No churches in the directory yet.",
-    "becomePartner": "Become a partner →",
-    "notFound": "Church not found.",
-    "backToDirectory": "Back to directory",
-    "pastor": "Pastor",
-    "serviceTimes": "Service Times",
-    "startChat": "Start Chat",
-    "website": "Website",
-    "telegramGroup": "Telegram Group",
-    "contactTitle": "Contact {{name}}",
-    "contactName": "Your name (optional)",
-    "contactEmail": "Your email address",
-    "contactMessage": "Your message",
-    "contactSend": "Send message",
-    "contactSuccess": "Message sent! 🙏",
-    "contactSuccessDesc": "The church will get back to you.",
-    "recommendedBy": "Recommended by {{name}}"
+    "viewDirectory": "Se kirkefortegnelsen",
+    "directoryBadge": "Kirkefortegnelse",
+    "directoryTitle": "Partnerkirker",
+    "directorySubtitle": "Find en kirke i nærheden, der anbefaler BibleBot.",
+    "searchPlaceholder": "Søg efter sted, navn eller kirkesamfund...",
+    "noResults": "Endnu ingen kirker i fortegnelsen.",
+    "becomePartner": "Bliv partner →",
+    "notFound": "Kirke ikke fundet.",
+    "backToDirectory": "Tilbage til fortegnelsen",
+    "pastor": "Præst",
+    "serviceTimes": "Gudstjenester",
+    "startChat": "Start chat",
+    "website": "Hjemmeside",
+    "telegramGroup": "Telegramgruppe",
+    "contactTitle": "Kontakt {{name}}",
+    "contactName": "Dit navn (valgfrit)",
+    "contactEmail": "Din e-mailadresse",
+    "contactMessage": "Din besked",
+    "contactSend": "Send besked",
+    "contactSuccess": "Besked sendt! 🙏",
+    "contactSuccessDesc": "Kirken vender tilbage til dig.",
+    "recommendedBy": "Anbefalet af {{name}}"
   }
 }

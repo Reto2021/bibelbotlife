@@ -504,90 +504,90 @@
     "backToList": "Back to list"
   },
   "church": {
-    "badge": "For Churches",
-    "heroTitle": "BibleBot for Your Church",
-    "heroSubtitle": "Accompany your congregation with biblical wisdom – digital, personal, and around the clock.",
-    "useCasesTitle": "Use Cases",
+    "badge": "Pre cirkvi",
+    "heroTitle": "BibleBot pre váš zbor",
+    "heroSubtitle": "Sprevádzajte svoj zbor biblickou múdrosťou – digitálne, osobne a nepretržite.",
+    "useCasesTitle": "Prípady použitia",
     "useCase": {
       "youth": {
-        "title": "Youth Ministry",
-        "desc": "Teens discover the Bible in their own way – interactive and without hesitation."
+        "title": "Práca s mládežou",
+        "desc": "Tínedžeri objavujú Bibliu po svojom – interaktívne a bez zábran."
       },
       "confirmation": {
-        "title": "Confirmation",
-        "desc": "Confirmands deepen Bible knowledge independently with personal guidance."
+        "title": "Konfirmácia",
+        "desc": "Konfirmandi prehlbujú biblické znalosti samostatne s osobným vedením."
       },
       "pastoral": {
-        "title": "Pastoral Care",
-        "desc": "24/7 companionship as a complement to personal pastoral care."
+        "title": "Pastoračná starostlivosť",
+        "desc": "Nepretržitý sprievod ako doplnok osobnej pastoračnej starostlivosti."
       },
       "bibleStudy": {
-        "title": "Bible Study",
-        "desc": "Impulses and discussion starters for groups and home circles."
+        "title": "Štúdium Biblie",
+        "desc": "Impulzy a podnety na diskusiu pre skupiny a domáce spoločenstvá."
       }
     },
-    "pricingTitle": "Partnership Model",
-    "pricingSubtitle": "Choose the plan that fits your church. One-time setup + annual contribution.",
-    "popular": "Popular",
-    "setup": "Setup",
-    "free": "Free",
-    "perYear": "year",
-    "contact": "Get in touch",
+    "pricingTitle": "Model partnerstva",
+    "pricingSubtitle": "Vyberte si plán, ktorý vyhovuje vášmu zboru. Jednorazové nastavenie + ročný príspevok.",
+    "popular": "Obľúbené",
+    "setup": "Nastavenie",
+    "free": "Zadarmo",
+    "perYear": "Rok",
+    "contact": "Kontaktujte nás",
     "tier": {
       "free": {
-        "name": "Starter",
-        "size": "For all churches"
+        "name": "Štart",
+        "size": "Pre všetky zbory"
       },
       "community": {
-        "name": "Community",
-        "size": "Up to 500 members"
+        "name": "Komunita",
+        "size": "Do 500 členov"
       },
       "gemeinde": {
-        "name": "Parish",
-        "size": "500–2,000 members"
+        "name": "Zbor",
+        "size": "500–2 000 členov"
       },
       "kirche": {
-        "name": "Church",
-        "size": "Over 2,000 members"
+        "name": "Cirkev",
+        "size": "Nad 2 000 členov"
       }
     },
     "features": {
-      "directoryEntry": "Directory listing",
-      "telegramGroup": "Telegram group",
-      "partnerPage": "Own partner page",
-      "badge": "Partner badge",
-      "qrFlyer": "Printable QR flyer",
-      "contactForm": "Contact form",
-      "pastorProfile": "Pastor profile",
-      "welcomeVideo": "Welcome video",
-      "analytics": "Analytics dashboard",
-      "prioritySupport": "Priority support",
-      "multipleProfiles": "Multiple profiles",
-      "customBranding": "Custom branding",
-      "apiAccess": "API access",
-      "accountManager": "Dedicated account manager"
+      "directoryEntry": "Záznam v adresári",
+      "telegramGroup": "Skupina Telegram",
+      "partnerPage": "Vlastná partnerská stránka",
+      "badge": "Partnerský odznak",
+      "qrFlyer": "QR leták na tlač",
+      "contactForm": "Kontaktný formulár",
+      "pastorProfile": "Profil pastora",
+      "welcomeVideo": "Uvítacie video",
+      "analytics": "Analytický panel",
+      "prioritySupport": "Prioritná podpora",
+      "multipleProfiles": "Viacero profilov",
+      "customBranding": "Vlastný branding",
+      "apiAccess": "API prístup",
+      "accountManager": "Osobný správca účtu"
     },
-    "viewDirectory": "View church directory",
-    "directoryBadge": "Church Directory",
-    "directoryTitle": "Partner Churches",
-    "directorySubtitle": "Find a church near you that recommends BibleBot.",
-    "searchPlaceholder": "Search by city, name, or denomination...",
-    "noResults": "No churches in the directory yet.",
-    "becomePartner": "Become a partner →",
-    "notFound": "Church not found.",
-    "backToDirectory": "Back to directory",
+    "viewDirectory": "Zobraziť adresár zborov",
+    "directoryBadge": "Adresár zborov",
+    "directoryTitle": "Partnerské zbory",
+    "directorySubtitle": "Nájdite zbor vo vašom okolí, ktorý odporúča BibleBot.",
+    "searchPlaceholder": "Hľadať podľa miesta, názvu alebo denominácie...",
+    "noResults": "V adresári zatiaľ nie sú žiadne zbory.",
+    "becomePartner": "Staňte sa partnerom →",
+    "notFound": "Zbor sa nenašiel.",
+    "backToDirectory": "Späť do adresára",
     "pastor": "Pastor",
-    "serviceTimes": "Service Times",
-    "startChat": "Start Chat",
-    "website": "Website",
-    "telegramGroup": "Telegram Group",
-    "contactTitle": "Contact {{name}}",
-    "contactName": "Your name (optional)",
-    "contactEmail": "Your email address",
-    "contactMessage": "Your message",
-    "contactSend": "Send message",
-    "contactSuccess": "Message sent! 🙏",
-    "contactSuccessDesc": "The church will get back to you.",
-    "recommendedBy": "Recommended by {{name}}"
+    "serviceTimes": "Časy bohoslužieb",
+    "startChat": "Začať chat",
+    "website": "Webová stránka",
+    "telegramGroup": "Skupina Telegram",
+    "contactTitle": "Kontaktovať {{name}}",
+    "contactName": "Vaše meno (nepovinné)",
+    "contactEmail": "Vaša e-mailová adresa",
+    "contactMessage": "Vaša správa",
+    "contactSend": "Odoslať správu",
+    "contactSuccess": "Správa odoslaná! 🙏",
+    "contactSuccessDesc": "Zbor sa vám ozve.",
+    "recommendedBy": "Odporúčané od {{name}}"
   }
 }
