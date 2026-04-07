@@ -43,10 +43,31 @@ const QA_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/bibelbot-qa`;
 
 const SUGGESTIONS = [
   "Ich brauche gerade ein aufbauendes Wort",
-  "Hilf mir, meine Ziele und nächsten Schritte zu klären",
-  "Ich möchte herausfinden, was ich wirklich will",
   "Was sagt die Bibel, wenn man sich unsicher fühlt?",
+  "Ich möchte herausfinden, was ich wirklich will",
 ];
+
+const JOURNEY_DISMISSED_KEY = "bibelbot-journey-dismissed";
+const JOURNEY_NUDGE_KEY = "bibelbot-journey-nudge-ts";
+
+function isJourneyDismissed(): boolean {
+  try { return localStorage.getItem(JOURNEY_DISMISSED_KEY) === "1"; } catch { return false; }
+}
+function dismissJourney() {
+  try { localStorage.setItem(JOURNEY_DISMISSED_KEY, "1"); } catch {}
+}
+function shouldNudgeJourney(): boolean {
+  try {
+    if (getJourneyDay() > 0) return false; // already started
+    if (!isJourneyDismissed()) return false; // never dismissed = hasn't seen it yet or is seeing it
+    const lastNudge = localStorage.getItem(JOURNEY_NUDGE_KEY);
+    if (!lastNudge) return true;
+    return Date.now() - parseInt(lastNudge, 10) > 3 * 24 * 60 * 60 * 1000; // every 3 days
+  } catch { return false; }
+}
+function markNudgeShown() {
+  try { localStorage.setItem(JOURNEY_NUDGE_KEY, Date.now().toString()); } catch {}
+}
 
 const DEFAULT_BOT_NAME = "BibelBot";
 const STORAGE_KEY = "bibelbot-name";
@@ -106,7 +127,13 @@ function saveCheckin(day: number, score: number) {
 const WELCOME_MESSAGE: Message = {
   role: "assistant",
   content:
-    "Schön, dass du da bist 🤗\n\nIch bin hier, um dich über die nächsten **21 Tage** zu begleiten – mit der Bibel, guten Fragen und konkreten Schritten. Kein Druck, keine Bewertung.\n\nMein Ziel: Dass es dir nach diesen 3 Wochen spürbar besser geht. 💛\n\nWas beschäftigt dich gerade am meisten?",
+    "Schön, dass du da bist 🤗\n\nIch bin dein BibelBot – dein persönlicher Begleiter mit der Bibel, guten Fragen und konkreten Impulsen. Kein Druck, keine Bewertung.\n\nDu kannst mich alles fragen – oder einfach erzählen, was dich gerade beschäftigt. 💛",
+};
+
+const JOURNEY_OFFER: Message = {
+  role: "assistant",
+  content:
+    "💡 **Tipp:** Ich biete auch eine **21-Tage-Begleitung** an – 3 Wochen mit täglichen Impulsen, Reflexionen und konkreten Schritten. Ganz in deinem Tempo.\n\nMöchtest du das ausprobieren?",
 };
 
 // Check if text likely contains Bible citations
@@ -254,6 +281,8 @@ export function BibelBotChat() {
   const [isEditingName, setIsEditingName] = useState(false);
   const [nameDraft, setNameDraft] = useState("");
   const [showWelcome, setShowWelcome] = useState(false);
+  const [showJourneyOffer, setShowJourneyOffer] = useState(false);
+  const [showRenameTip, setShowRenameTip] = useState(false);
   const recognitionRef = useRef<any>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -357,6 +386,40 @@ export function BibelBotChat() {
     }
   }, [isOpen, messages.length, showWelcome]);
 
+  // Show journey offer after first assistant reply (if not started/dismissed)
+  useEffect(() => {
+    if (
+      messages.length >= 3 &&
+      journeyDay === 0 &&
+      !isJourneyDismissed() &&
+      !showJourneyOffer
+    ) {
+      const timer = setTimeout(() => setShowJourneyOffer(true), 1500);
+      return () => clearTimeout(timer);
+    }
+    // Nudge if dismissed but enough time passed
+    if (
+      messages.length >= 2 &&
+      journeyDay === 0 &&
+      shouldNudgeJourney() &&
+      !showJourneyOffer
+    ) {
+      const timer = setTimeout(() => {
+        setShowJourneyOffer(true);
+        markNudgeShown();
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [messages.length, journeyDay, showJourneyOffer]);
+
+  // Show rename tip after first reply if name is still default
+  useEffect(() => {
+    if (messages.length >= 2 && botName === DEFAULT_BOT_NAME && !showRenameTip) {
+      const timer = setTimeout(() => setShowRenameTip(true), 4000);
+      return () => clearTimeout(timer);
+    }
+  }, [messages.length, botName, showRenameTip]);
+
   // Persist messages to localStorage
   useEffect(() => {
     if (messages.length > 0) saveMessages(messages);
@@ -386,10 +449,6 @@ export function BibelBotChat() {
       if (!text.trim() || isLoading) return;
 
       const userMsg: Message = { role: "user", content: text.trim() };
-      if (!journeyDay) {
-        startJourney();
-        setJourneyDay(1);
-      }
       const contextMessages = messages.length === 0 ? [WELCOME_MESSAGE, userMsg] : [...messages, userMsg];
       setMessages(contextMessages);
       setInput("");
@@ -579,7 +638,7 @@ export function BibelBotChat() {
                 ? `Tag ${journeyDay} von 21 · ${journeyDay <= 7 ? "Ankommen" : journeyDay <= 14 ? "Vertiefen" : "Handeln"}`
                 : journeyDay > 21
                   ? "21 Tage geschafft! 🎉"
-                  : "Deine 21-Tage-Begleitung"}
+                  : "Dein persönlicher Begleiter"}
             </p>
             {journeyDay > 0 && (
               <div className="w-full bg-border rounded-full h-1 mt-1">
@@ -587,6 +646,12 @@ export function BibelBotChat() {
                   className="bg-primary h-1 rounded-full transition-all duration-500"
                   style={{ width: `${Math.min(100, (journeyDay / 21) * 100)}%` }}
                 />
+              </div>
+            )}
+            {showRenameTip && botName === DEFAULT_BOT_NAME && (
+              <div className="animate-fade-up mt-1 text-[10px] text-primary/70 flex items-center gap-1">
+                <Info className="h-2.5 w-2.5" />
+                <span>Tipp: Klick auf den Namen, um mich umzubenennen ✨</span>
               </div>
             )}
           </div>
@@ -668,6 +733,44 @@ export function BibelBotChat() {
             </div>
           </div>
         ))}
+
+        {/* Journey offer card */}
+        {showJourneyOffer && journeyDay === 0 && !isLoading && (
+          <div className="animate-fade-up">
+            <div className="flex justify-start">
+              <div className="max-w-[85%] rounded-2xl rounded-bl-md px-4 py-3 text-sm leading-relaxed bg-primary/5 border border-primary/20 text-foreground">
+                <div className="prose prose-sm max-w-none dark:prose-invert">
+                  <ReactMarkdown>{JOURNEY_OFFER.content}</ReactMarkdown>
+                </div>
+                <div className="flex gap-2 mt-3">
+                  <Button
+                    size="sm"
+                    className="text-xs h-7"
+                    onClick={() => {
+                      startJourney();
+                      setJourneyDay(1);
+                      setShowJourneyOffer(false);
+                      sendMessage("Ja, ich möchte die 21-Tage-Begleitung starten!");
+                    }}
+                  >
+                    Ja, starten ✨
+                  </Button>
+                  <Button
+                    size="sm"
+                    variant="ghost"
+                    className="text-xs h-7 text-muted-foreground"
+                    onClick={() => {
+                      setShowJourneyOffer(false);
+                      dismissJourney();
+                    }}
+                  >
+                    Später vielleicht
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
 
         {isLoading && messages[messages.length - 1]?.role !== "assistant" && (
           <div className="flex justify-start">
