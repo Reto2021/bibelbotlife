@@ -53,6 +53,63 @@ export type Database = {
         }
         Relationships: []
       }
+      daily_broadcast_log: {
+        Row: {
+          id: string
+          impulse_data: Json
+          impulse_date: string
+          sent_at: string
+          subscribers_count: number
+        }
+        Insert: {
+          id?: string
+          impulse_data: Json
+          impulse_date: string
+          sent_at?: string
+          subscribers_count?: number
+        }
+        Update: {
+          id?: string
+          impulse_data?: Json
+          impulse_date?: string
+          sent_at?: string
+          subscribers_count?: number
+        }
+        Relationships: []
+      }
+      daily_subscribers: {
+        Row: {
+          channel: string
+          created_at: string
+          id: string
+          is_active: boolean
+          phone_number: string | null
+          push_subscription: Json | null
+          telegram_chat_id: number | null
+          updated_at: string
+        }
+        Insert: {
+          channel: string
+          created_at?: string
+          id?: string
+          is_active?: boolean
+          phone_number?: string | null
+          push_subscription?: Json | null
+          telegram_chat_id?: number | null
+          updated_at?: string
+        }
+        Update: {
+          channel?: string
+          created_at?: string
+          id?: string
+          is_active?: boolean
+          phone_number?: string | null
+          push_subscription?: Json | null
+          telegram_chat_id?: number | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
       telegram_bot_state: {
         Row: {
           id: number
