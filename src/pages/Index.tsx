@@ -335,7 +335,65 @@ const Index = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* Glaube neu entdecken */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-primary bg-primary/10 px-4 py-1.5 rounded-full mb-4">
+              <Compass className="h-4 w-4" />
+              Für Neugierige
+            </div>
+            <h2 className="text-4xl font-bold text-foreground mb-4">
+              Glaube neu entdecken – ohne Druck
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Immer mehr Menschen stellen sich die grossen Fragen neu. BibelBot.ch ist für alle, die den Glauben (wieder) entdecken wollen – ehrlich, ohne Pathos und ohne Kirchen-Jargon.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-10">
+            {[
+              {
+                emoji: "🤔",
+                title: "Du zweifelst?",
+                text: "Gut so. Zweifel sind kein Fehler – sie sind der Anfang von ehrlichem Glauben. Die Bibel ist voller Menschen, die gerungen haben.",
+              },
+              {
+                emoji: "🔍",
+                title: "Du suchst?",
+                text: "Vielleicht weisst du nicht mal genau, wonach. Das ist völlig okay. Dein BibelBot hilft dir, die richtigen Fragen zu stellen – statt schnelle Antworten zu liefern.",
+              },
+              {
+                emoji: "🌱",
+                title: "Du willst vertiefen?",
+                text: "Du glaubst bereits, aber willst mehr verstehen? Entdecke die Tiefe der Bibel – historisch, persönlich, überraschend relevant.",
+              },
+            ].map((item) => (
+              <Card key={item.title} className="bg-card/80 border-border text-center">
+                <CardHeader>
+                  <span className="text-3xl mb-2 block">{item.emoji}</span>
+                  <CardTitle className="text-lg">{item.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{item.text}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="bg-card/60 backdrop-blur-sm rounded-2xl border border-border p-8 text-center">
+            <p className="text-foreground/80 italic text-lg mb-2">
+              «Klopft an, so wird euch aufgetan.»
+            </p>
+            <p className="text-muted-foreground text-sm mb-6">– Matthäus 7,7</p>
+            <p className="text-sm text-muted-foreground max-w-xl mx-auto">
+              In der Schweiz reden wir nicht gross über Glauben. Das muss auch nicht sein. Aber wer Fragen hat, verdient ehrliche Antworten – ohne Predigt, ohne Mitgliedschaft, ohne Hintergedanken.
+            </p>
+          </div>
+        </div>
+      </section>
+
+
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-12">
