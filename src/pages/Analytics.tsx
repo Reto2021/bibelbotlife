@@ -166,6 +166,10 @@ const Analytics = () => {
                 {d}T
               </Button>
             ))}
+            <Button variant="outline" size="sm" onClick={exportCSV} disabled={!data}>
+              <Download className="h-4 w-4" />
+              <span className="hidden sm:inline">CSV</span>
+            </Button>
           </div>
         </div>
 
