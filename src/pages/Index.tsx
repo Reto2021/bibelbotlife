@@ -122,18 +122,18 @@ const Index = () => {
         <div className="container mx-auto text-center max-w-4xl">
           <div className="mb-4">
             <span className="inline-flex items-center gap-2 text-sm font-medium text-primary bg-primary/10 px-4 py-1.5 rounded-full">
-              <Heart className="h-4 w-4" />
-              Ein sicherer Ort für deine Fragen
+              <Shield className="h-4 w-4" />
+              Kein Login · Keine Daten · Kein Urteil
             </span>
           </div>
           <div className="mb-8">
             <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
-              Jemand, der
-              <span className="text-transparent bg-clip-text" style={{ backgroundImage: "var(--gradient-cta)" }}> wirklich zuhört</span>
+              Die Bibel.
+              <span className="text-transparent bg-clip-text" style={{ backgroundImage: "var(--gradient-cta)" }}> Neu gedacht.</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto">
-              Egal ob Zweifel, Hoffnung oder eine schwierige Phase – BibelBot ist da. 
-              Ohne Bewertung, ohne Login. Einfach ein Gespräch, das dir guttut.
+              BibelBot ist eine KI, die die Bibel kennt – und die richtigen Fragen stellt.
+              Kein Mensch, aber ein ehrlicher Begleiter. 21 Tage, die etwas verändern können.
             </p>
           </div>
           
