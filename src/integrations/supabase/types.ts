@@ -76,6 +76,7 @@ export type Database = {
           chat_id: number
           created_at: string
           raw_update: Json
+          role: string
           text: string | null
           update_id: number
         }
@@ -83,6 +84,7 @@ export type Database = {
           chat_id: number
           created_at?: string
           raw_update: Json
+          role?: string
           text?: string | null
           update_id: number
         }
@@ -90,6 +92,7 @@ export type Database = {
           chat_id?: number
           created_at?: string
           raw_update?: Json
+          role?: string
           text?: string | null
           update_id?: number
         }
