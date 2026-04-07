@@ -392,13 +392,26 @@ export function BibelBotChat() {
     return (
       <div className="fixed bottom-6 right-6 z-50 flex items-end gap-3">
         {showTeaser && (
-          <div className="animate-in fade-in slide-in-from-right-4 duration-500 bg-card border border-border rounded-2xl rounded-br-md px-4 py-3 shadow-lg max-w-[240px]">
-            <p className="text-sm text-foreground font-medium">{t("chat.teaser")}</p>
+          <div
+            className="animate-in fade-in slide-in-from-right-4 duration-500 bg-card border border-primary/30 rounded-2xl rounded-br-md px-4 py-3 shadow-[0_4px_24px_hsl(var(--primary)/0.2)] max-w-[260px] cursor-pointer hover:shadow-[0_4px_32px_hsl(var(--primary)/0.3)] transition-shadow"
+            onClick={() => setIsOpen(true)}
+          >
+            <p className="text-sm text-foreground font-semibold">{t("chat.teaser")}</p>
             <p className="text-xs text-muted-foreground mt-1">{t("chat.teaserSub")}</p>
+            <p className="text-xs text-primary font-medium mt-2 flex items-center gap-1">
+              <MessageCircle className="h-3 w-3" />
+              {t("chat.teaserCta")}
+            </p>
           </div>
         )}
-        <button onClick={() => setIsOpen(true)} className="h-14 w-14 rounded-full bg-primary text-primary-foreground shadow-lg hover:bg-primary/90 transition-all flex items-center justify-center animate-pulse-warm" aria-label={t("chat.openChat")}>
-          <MessageCircle className="h-6 w-6" />
+        <button
+          onClick={() => setIsOpen(true)}
+          className="relative h-16 w-16 rounded-full bg-primary text-primary-foreground shadow-[0_4px_20px_hsl(var(--primary)/0.4)] hover:shadow-[0_4px_28px_hsl(var(--primary)/0.5)] hover:scale-105 transition-all duration-300 flex items-center justify-center"
+          aria-label={t("chat.openChat")}
+        >
+          {/* Glow ring */}
+          <span className="absolute inset-0 rounded-full bg-primary/30 animate-ping" style={{ animationDuration: "2.5s" }} />
+          <MessageCircle className="h-7 w-7 relative z-10" />
         </button>
       </div>
     );
