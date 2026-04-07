@@ -157,6 +157,8 @@ const Index = () => {
           </div>
         </div>
       </footer>
+
+      <BibelBotChat />
     </div>
   );
 };
