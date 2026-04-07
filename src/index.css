@@ -117,8 +117,8 @@
 }
 
 @keyframes pulse-warm {
-  0%, 100% { box-shadow: 0 0 0 0 hsl(32 65% 52% / 0.4); }
-  50% { box-shadow: 0 0 0 12px hsl(32 65% 52% / 0); }
+  0%, 100% { box-shadow: 0 0 0 0 hsl(38 78% 50% / 0.4); }
+  50% { box-shadow: 0 0 0 12px hsl(38 78% 50% / 0); }
 }
 
 .animate-pulse-warm {
