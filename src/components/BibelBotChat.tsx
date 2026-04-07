@@ -267,6 +267,17 @@ export function BibelBotChat() {
             className="min-h-[40px] max-h-[100px] resize-none text-sm"
             rows={1}
           />
+          {SpeechRecognition && (
+            <Button
+              size="icon"
+              variant={isListening ? "destructive" : "outline"}
+              onClick={isListening ? stopListening : startListening}
+              className="h-10 w-10 shrink-0"
+              aria-label={isListening ? "Aufnahme stoppen" : "Spracheingabe starten"}
+            >
+              {isListening ? <MicOff className="h-4 w-4" /> : <Mic className="h-4 w-4" />}
+            </Button>
+          )}
           <Button
             size="icon"
             onClick={() => sendMessage(input)}
