@@ -304,6 +304,14 @@ export function BibelBotChat() {
   const sendMessage = useCallback(
     async (text: string) => {
       if (!text.trim() || isLoading) return;
+      const currentDay = getJourneyDay();
+      if (currentDay > 0 && currentDay <= 21) {
+        const phase = currentDay <= 7 ? "ankommen" : currentDay <= 14 ? "vertiefen" : "handeln";
+        track("journey_progress", { day: currentDay, phase });
+      }
+      if (currentDay > 21 && journeyDay <= 21) {
+        track("journey_complete", { totalDays: 21 });
+      }
       const userMsg: Message = { role: "user", content: text.trim() };
       const contextMessages = messages.length === 0 ? [welcomeMessage, userMsg] : [...messages, userMsg];
       setMessages(contextMessages);
