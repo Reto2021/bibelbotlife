@@ -192,6 +192,36 @@ Deno.serve(async (req) => {
       return entry;
     });
 
+  // ── Tile click stats ──
+  const tileClicks = customEvents.filter((e: any) => e.event_name === "tile_click");
+  const tileClickCounts: Record<string, number> = {};
+  tileClicks.forEach((e: any) => {
+    const tile = e.event_data?.tile || "unknown";
+    tileClickCounts[tile] = (tileClickCounts[tile] || 0) + 1;
+  });
+  const topTiles = Object.entries(tileClickCounts)
+    .sort(([, a], [, b]) => b - a)
+    .map(([tile, count]) => ({ tile, count }));
+
+  // ── LifeWheel stats ──
+  const lifewheelEvents = customEvents.filter((e: any) => e.event_name === "lifewheel_complete");
+  const lifewheelWeakestCounts: Record<string, number> = {};
+  let lifewheelTotalAvg = 0;
+  lifewheelEvents.forEach((e: any) => {
+    const weakest = e.event_data?.weakest || "unknown";
+    lifewheelWeakestCounts[weakest] = (lifewheelWeakestCounts[weakest] || 0) + 1;
+    lifewheelTotalAvg += (e.event_data?.average || 0);
+  });
+  const lifewheelAvg = lifewheelEvents.length > 0
+    ? Math.round((lifewheelTotalAvg / lifewheelEvents.length) * 10) / 10
+    : 0;
+  const lifewheelWeakest = Object.entries(lifewheelWeakestCounts)
+    .sort(([, a], [, b]) => b - a)
+    .map(([area, count]) => ({ area, count }));
+
+  // ── 7 Whys stats ──
+  const sevenWhysStarts = customEvents.filter((e: any) => e.event_name === "seven_whys_start").length;
+
   const result = {
     period: { days, since },
     summary: {
@@ -224,6 +254,18 @@ Deno.serve(async (req) => {
       totalBotMessages: botMessages,
       avgMessagesPerUser: avgMsgsPerUser,
       dailyActivity: dailyChats,
+    },
+    tiles: {
+      totalClicks: tileClicks.length,
+      topTiles,
+    },
+    lifewheel: {
+      completions: lifewheelEvents.length,
+      avgScore: lifewheelAvg,
+      weakestAreas: lifewheelWeakest,
+    },
+    sevenWhys: {
+      starts: sevenWhysStarts,
     },
   };
 
