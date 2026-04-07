@@ -1,11 +1,11 @@
 # Project Memory
 
 ## Core
-BibelBot.ch - Bibel-Chatbot Projekt. Schweizer Deutsch (CH) als Standard.
+BibelBot.Life - Bibel-Begleiter Projekt. Schweizer Deutsch (CH) als Standard.
 Kein ß verwenden - immer "ss" (Deutsch Schweiz). Auch in Chat-Antworten.
-Schweizerdeutsch als KI-Audio-Eingabesprache für Audio-Chat.
-Farbpalette: Goldene Stunde – Honig-Gold + Petrol (warm, modern, nicht kirchig).
+Schweizerdeutsch als Audio-Eingabesprache für Audio-Chat.
+Markenname: BibelBot.Life. Kein «KI» im Marketing/SEO/Social Sharing.
 
 ## Memories
 - [Sprachregeln](mem://preference/sprache) — Schweizer Deutsch, kein ß, Audio-Eingabe Schweizerdeutsch
-- [Farbpalette](mem://design/color-palette) — Goldene Stunde: Honig-Gold Primary, Petrol Secondary
+- [Branding](mem://preference/branding) — BibelBot.Life als Markenname, kein KI im Marketing
