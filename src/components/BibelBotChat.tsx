@@ -36,8 +36,11 @@ function saveBotName(name: string) {
   } catch {}
 }
 
+const AUTO_OPEN_KEY = "bibelbot-autoopened";
+
 export function BibelBotChat() {
   const [isOpen, setIsOpen] = useState(false);
+  const [showTeaser, setShowTeaser] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
