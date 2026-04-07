@@ -47,9 +47,9 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        whatsapp: {
-          DEFAULT: "hsl(var(--whatsapp))",
-          foreground: "hsl(var(--whatsapp-foreground))",
+        telegram: {
+          DEFAULT: "hsl(var(--telegram))",
+          foreground: "hsl(var(--telegram-foreground))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
