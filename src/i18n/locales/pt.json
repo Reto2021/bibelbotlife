@@ -494,6 +494,12 @@
       "family": "Família",
       "leisure": "Lazer",
       "growth": "Crescimento pessoal"
-    }
+    },
+    "save": "Save result",
+    "saved": "Saved!",
+    "history": "Previous results",
+    "noHistory": "No saved results yet.",
+    "backToNew": "New Life Wheel",
+    "backToList": "Back to list"
   }
 }
