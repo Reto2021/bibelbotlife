@@ -18,7 +18,7 @@ const BIBLE_EDITIONS = [
 
 const TESTIMONIALS = [
   {
-    text: "BibelBot hat mir geholfen, in einer schwierigen Phase die richtigen Worte zu finden. Die Antworten sind durchdacht und respektvoll.",
+    text: "Mein BibelBot hat mir geholfen, in einer schwierigen Phase die richtigen Worte zu finden. Die Antworten sind durchdacht und respektvoll.",
     author: "M. Keller",
     role: "Gemeindeleiterin, ref. Kirche Zürich",
   },
@@ -81,7 +81,7 @@ const Index = () => {
     {
       icon: GraduationCap,
       title: "Glaubensweg & Christus finden",
-      description: "Ob suchend, zweifelnd oder vertiefend – BibelBot begleitet dich auf deinem persönlichen Weg."
+      description: "Ob suchend, zweifelnd oder vertiefend – Dein BibelBot begleitet dich auf deinem persönlichen Weg."
     },
     {
       icon: Calendar,
@@ -136,7 +136,7 @@ const Index = () => {
               <span className="text-transparent bg-clip-text" style={{ backgroundImage: "var(--gradient-cta)" }}> Neu gedacht.</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto">
-              BibelBot ist eine KI, die die Bibel kennt – und die richtigen Fragen stellt.
+              Dein BibelBot ist eine KI, die die Bibel kennt – und die richtigen Fragen stellt.
               Kein Mensch, aber ein ehrlicher Begleiter. 21 Tage, die etwas verändern können.
             </p>
           </div>
@@ -167,10 +167,10 @@ const Index = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-foreground mb-4">
-              Wie BibelBot.ch dich begleitet
+              Wie dein BibelBot dich begleitet
             </h2>
             <p className="text-xl text-muted-foreground">
-              Entdecke die vielfältigen Möglichkeiten, wie der BibelBot dein spirituelles Leben bereichern kann
+              Entdecke die vielfältigen Möglichkeiten, wie dein BibelBot dich begleiten kann
             </p>
           </div>
 
@@ -204,7 +204,7 @@ const Index = () => {
               Nicht einfach ein Chatbot – eine echte Begleitung
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              BibelBot verbindet biblische Weisheit mit bewährten Coaching-Methoden und Positiver Psychologie.
+              Dein BibelBot verbindet biblische Weisheit mit bewährten Coaching-Methoden und Positiver Psychologie.
             </p>
           </div>
 
@@ -217,7 +217,7 @@ const Index = () => {
               <div>
                 <h3 className="text-2xl font-bold text-foreground mb-2">21 Tage, die etwas verändern</h3>
                 <p className="text-muted-foreground">
-                  BibelBot begleitet dich über 3 Wochen – mit dem Ziel, dass es dir danach spürbar besser geht.
+                  Dein BibelBot begleitet dich über 3 Wochen – mit dem Ziel, dass es dir danach spürbar besser geht.
                 </p>
               </div>
             </div>
@@ -263,7 +263,7 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                  BibelBot gibt dir keine billigen Ratschläge. Stattdessen stellt er die Fragen, die wirklich zählen:
+                  Dein BibelBot gibt dir keine billigen Ratschläge. Stattdessen stellt er die Fragen, die wirklich zählen:
                 </p>
                 <div className="space-y-2">
                   {[
@@ -286,7 +286,7 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                  Kein «Wird schon!» und kein Schönreden. BibelBot ist empathisch UND ehrlich:
+                  Kein «Wird schon!» und kein Schönreden. Dein BibelBot ist empathisch UND ehrlich:
                 </p>
                 <div className="space-y-2">
                   {[
@@ -344,7 +344,7 @@ const Index = () => {
               Häufige Fragen
             </div>
             <h2 className="text-4xl font-bold text-foreground mb-4">
-              Was du über BibelBot wissen solltest
+              Was du über deinen BibelBot wissen solltest
             </h2>
             <p className="text-lg text-muted-foreground">
               Transparenz ist uns wichtig – besonders gegenüber Theologinnen, Seelsorgern und kritischen Köpfen.
@@ -354,7 +354,7 @@ const Index = () => {
           <Accordion type="multiple" className="space-y-3">
             <AccordionItem value="unterschied" className="bg-card/80 border border-border rounded-xl px-6 data-[state=open]:shadow-md">
               <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
-                Was unterscheidet BibelBot von ChatGPT & Co.?
+                Was unterscheidet dein BibelBot von ChatGPT & Co.?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
                 <div className="grid md:grid-cols-2 gap-6 pt-2">
@@ -403,7 +403,7 @@ const Index = () => {
                 Welche Bibelübersetzungen sind hinterlegt?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
-                <p className="mb-4">BibelBot arbeitet ökumenisch mit den massgeblichen deutschsprachigen Bibelausgaben:</p>
+                <p className="mb-4">Dein BibelBot arbeitet ökumenisch mit den massgeblichen deutschsprachigen Bibelausgaben:</p>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
                   {BIBLE_EDITIONS.map((bible) => (
                     <div key={bible.name} className="flex items-center gap-3 bg-accent/30 rounded-lg px-4 py-3">
@@ -443,7 +443,7 @@ const Index = () => {
 
             <AccordionItem value="guardrails" className="bg-card/80 border border-border rounded-xl px-6 data-[state=open]:shadow-md">
               <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
-                Wie stellt BibelBot seelsorgerische Sicherheit sicher?
+                Wie stellt dein BibelBot seelsorgerische Sicherheit sicher?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
                 <div className="space-y-3">
@@ -467,34 +467,34 @@ const Index = () => {
 
             <AccordionItem value="oekumenisch" className="bg-card/80 border border-border rounded-xl px-6 data-[state=open]:shadow-md">
               <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
-                Ist BibelBot konfessionell gebunden?
+                Ist dein BibelBot konfessionell gebunden?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
-                Nein. BibelBot ist ökumenisch ausgerichtet und respektiert reformierte, katholische, freikirchliche und weitere christliche Traditionen gleichermassen. Bei konfessionell unterschiedlichen Auslegungen werden verschiedene Perspektiven transparent dargestellt – ohne eine Tradition zu bevorzugen.
+                Nein. Dein BibelBot ist ökumenisch ausgerichtet und respektiert reformierte, katholische, freikirchliche und weitere christliche Traditionen gleichermassen. Bei konfessionell unterschiedlichen Auslegungen werden verschiedene Perspektiven transparent dargestellt – ohne eine Tradition zu bevorzugen.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="grenzen" className="bg-card/80 border border-border rounded-xl px-6 data-[state=open]:shadow-md">
               <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
-                Ersetzt BibelBot die Seelsorge oder Therapie?
+                Ersetzt dein BibelBot die Seelsorge oder Therapie?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
-                Nein. BibelBot ist ein KI-gestütztes Hilfsmittel für die persönliche Bibellektüre und Reflexion. Er ersetzt keine professionelle Seelsorge, theologische Beratung oder psychologische Therapie. Bei ernsthaften Krisen verweist BibelBot immer an qualifizierte Anlaufstellen.
+                Nein. Dein BibelBot ist ein KI-gestütztes Hilfsmittel für die persönliche Bibellektüre und Reflexion. Er ersetzt keine professionelle Seelsorge, theologische Beratung oder psychologische Therapie. Bei ernsthaften Krisen verweist dein BibelBot immer an qualifizierte Anlaufstellen.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="herausfordernd" className="bg-card/80 border border-border rounded-xl px-6 data-[state=open]:shadow-md">
               <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
-                Ist BibelBot nicht einfach ein «Wohlfühl-Bot»?
+                Ist dein BibelBot nicht einfach ein «Wohlfühl-Bot»?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
-                Nein. BibelBot tröstet, wo Trost nötig ist – aber er fordert auch heraus. Geistliches Wachstum braucht Reibung. BibelBot stellt unbequeme Rückfragen, benennt schwierige Bibeltexte (Hiob, Klagepsalmen, prophetische Kritik) und scheut sich nicht vor Themen wie Gerechtigkeit, Umkehr und Verantwortung. Die prophetische Tradition war nie bequem – und BibelBot auch nicht.
+                Nein. Dein BibelBot tröstet, wo Trost nötig ist – aber er fordert auch heraus. Geistliches Wachstum braucht Reibung. Dein BibelBot stellt unbequeme Rückfragen, benennt schwierige Bibeltexte (Hiob, Klagepsalmen, prophetische Kritik) und scheut sich nicht vor Themen wie Gerechtigkeit, Umkehr und Verantwortung. Die prophetische Tradition war nie bequem – und dein BibelBot auch nicht.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="spenden" className="bg-card/80 border border-border rounded-xl px-6 data-[state=open]:shadow-md">
               <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
-                Wer steht hinter BibelBot und wie wird es finanziert?
+                Wer steht hinter deinem BibelBot und wie wird es finanziert?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
                 BibelBot.ch ist ein privates, nicht-kommerzielles Projekt. Es wird ehrenamtlich betrieben und finanziert sich ausschliesslich durch freiwillige Spenden. Es gibt keine Werbung, keine Datenverkäufe und keine kostenpflichtigen Features. Alle Spenden fliessen direkt in die Deckung der laufenden Kosten (KI-Infrastruktur, Hosting, Entwicklung). Da BibelBot als privates Projekt läuft, sind Spenden nicht steuerabzugsfähig.
@@ -503,10 +503,10 @@ const Index = () => {
 
             <AccordionItem value="datenschutz" className="bg-card/80 border border-border rounded-xl px-6 data-[state=open]:shadow-md">
               <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
-                Wie geht BibelBot mit meinen Daten um?
+                Wie geht dein BibelBot mit meinen Daten um?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
-                BibelBot speichert keine persönlichen Daten und keine Chatverläufe. Jedes Gespräch ist anonym. Es gibt kein Login, kein Tracking und keine Weitergabe von Daten an Dritte. Die Nutzung ist vollständig anonym.
+                Dein BibelBot speichert keine persönlichen Daten und keine Chatverläufe. Jedes Gespräch ist anonym. Es gibt kein Login, kein Tracking und keine Weitergabe von Daten an Dritte. Die Nutzung ist vollständig anonym.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
@@ -550,14 +550,14 @@ const Index = () => {
           <div className="mb-4">
             <span className="inline-flex items-center gap-2 text-sm font-medium text-primary bg-primary/10 px-4 py-1.5 rounded-full">
               <HandHeart className="h-4 w-4" />
-              Unterstütze BibelBot
+              Unterstütze deinen BibelBot
             </span>
           </div>
           <h2 className="text-4xl font-bold text-foreground mb-4">
-            Hilf mit, dass BibelBot kostenlos bleibt
+            Hilf mit, dass dein BibelBot kostenlos bleibt
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            BibelBot ist ein Herzensprojekt – ohne Werbung, ohne Abo, ohne versteckte Kosten. 
+            Dein BibelBot ist ein Herzensprojekt – ohne Werbung, ohne Abo, ohne versteckte Kosten. 
             Damit das so bleibt, bin ich auf freiwillige Spenden angewiesen. 
             Jeder Beitrag hilft, die laufenden Kosten für KI und Betrieb zu decken.
           </p>
@@ -620,8 +620,8 @@ const Index = () => {
             Du musst das nicht alleine durchstehen
           </h2>
           <p className="text-xl text-primary-foreground/90 mb-8">
-            Schreib einfach, was dich beschäftigt. Kein Login, keine Kosten, kein Urteil – 
-            nur ein offenes Ohr und die Weisheit der Bibel.
+            Schreib deinem BibelBot einfach, was dich beschäftigt. Kein Login, keine Kosten, kein Urteil – 
+            nur ehrliche Begleitung und die Weisheit der Bibel.
           </p>
           <Button asChild size="lg" className="bg-card text-foreground hover:bg-card/90 px-8 py-4 text-lg font-semibold">
             <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
@@ -640,7 +640,7 @@ const Index = () => {
             <span className="text-2xl font-bold">BibelBot.ch</span>
           </div>
           <p className="text-background/70 mb-4 text-center">
-            Dein digitaler Begleiter für ein Leben mit der Bibel
+            Dein persönlicher Begleiter für ein Leben mit der Bibel
           </p>
           <p className="text-background/50 text-xs mb-6 max-w-2xl mx-auto text-center">
             BibelBot.ch ist ein KI-gestütztes Hilfsmittel und ersetzt keine professionelle Seelsorge, 
