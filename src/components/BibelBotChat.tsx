@@ -33,8 +33,9 @@ const QA_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/bibelbot-qa`;
 
 const SUGGESTIONS = [
   "Ich brauche gerade ein aufbauendes Wort",
+  "Hilf mir, meine Ziele und nächsten Schritte zu klären",
+  "Ich möchte herausfinden, was ich wirklich will",
   "Was sagt die Bibel, wenn man sich unsicher fühlt?",
-  "Gib mir einen kurzen Impuls für heute",
 ];
 
 const DEFAULT_BOT_NAME = "BibelBot";

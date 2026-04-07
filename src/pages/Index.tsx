@@ -69,18 +69,23 @@ const Index = () => {
     },
     {
       icon: Star,
-      title: "Tagesimpulse & Gebete",
-      description: "Starte oder beende deinen Tag mit inspirierenden Bibelversen und passenden Gebeten."
-    },
-    {
-      icon: Calendar,
-      title: "Kirchenjahr-Begleitung",
-      description: "Lass dich durch Advent, Fastenzeit und kirchliche Feiertage führen mit passenden Impulsen."
+      title: "Lebensplanung & Zielsetzung",
+      description: "Entdecke deine Berufung, setze konkrete Ziele und finde heraus, was Gott mit dir vorhaben könnte."
     },
     {
       icon: Heart,
-      title: "Persönliche Begleitung",
-      description: "Ob Konfirmation, Trauer oder Sinnsuche – der BibelBot begleitet dich in allen Lebensphasen."
+      title: "Zu dir selbst finden",
+      description: "Erkenne deine Gaben, Stärken und Sehnsüchte – und was dein Herz wirklich braucht."
+    },
+    {
+      icon: GraduationCap,
+      title: "Glaubensweg & Christus finden",
+      description: "Ob suchend, zweifelnd oder vertiefend – BibelBot begleitet dich auf deinem persönlichen Weg."
+    },
+    {
+      icon: Calendar,
+      title: "Tagesimpulse & Kirchenjahr",
+      description: "Starte deinen Tag mit Impulsen und lass dich durch Advent, Fastenzeit und Feiertage begleiten."
     },
     {
       icon: Users,
