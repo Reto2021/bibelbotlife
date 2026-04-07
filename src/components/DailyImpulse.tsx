@@ -85,7 +85,7 @@ export function DailyImpulse() {
 
   if (isLoading) {
     return (
-      <div className="bg-primary/5 border-b border-border">
+      <div className="bg-primary/10 dark:bg-primary/15 border-b border-primary/20">
         <div className="container mx-auto px-4 py-3 flex items-center justify-center gap-2">
           <Loader2 className="h-4 w-4 animate-spin text-primary" />
           <span className="text-sm text-muted-foreground">Tagesimpuls wird geladen...</span>
@@ -97,10 +97,10 @@ export function DailyImpulse() {
   if (!impulse) return null;
 
   return (
-    <div className="bg-primary/5 border-b border-border overflow-hidden">
+    <div className="bg-primary/10 dark:bg-primary/15 border-b border-primary/20 overflow-hidden">
       <button
         onClick={() => setIsExpanded(!isExpanded)}
-        className="w-full container mx-auto px-4 py-3 flex items-center justify-between gap-3 hover:bg-primary/10 transition-colors group cursor-pointer"
+        className="w-full container mx-auto px-4 py-3 flex items-center justify-between gap-3 hover:bg-primary/15 dark:hover:bg-primary/20 transition-colors group cursor-pointer"
       >
         <div className="flex items-center gap-3 min-w-0">
           <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
@@ -111,7 +111,7 @@ export function DailyImpulse() {
               <span className="text-xs font-semibold text-primary uppercase tracking-wider">Impuls des Tages</span>
               <span className="text-xs text-muted-foreground">· {impulse.topic}</span>
             </div>
-            <p className="text-sm text-foreground font-medium truncate">
+            <p className="text-sm text-foreground dark:text-foreground font-semibold truncate">
               {impulse.teaser}
             </p>
           </div>
