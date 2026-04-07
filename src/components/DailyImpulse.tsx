@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { Sparkles, ChevronRight, BookOpen, Loader2, MessageCircle } from "lucide-react";
+import { Sparkles, ChevronRight, BookOpen, Loader2, MessageCircle, Share2 } from "lucide-react";
+import { ShareButton } from "@/components/ShareButton";
 import { Button } from "@/components/ui/button";
 import { openBibelBotChat } from "@/lib/chat-events";
 
@@ -142,6 +143,11 @@ export function DailyImpulse() {
                 <BookOpen className="h-3 w-3 mr-1.5" />
                 {t("impulse.explore")}
               </Button>
+              <ShareButton
+                title={t("share.impulseTitle")}
+                text={`${impulse.verse}\n\n– ${impulse.reference}\n\n${impulse.teaser}`}
+                variant="button"
+              />
             </div>
           </div>
         </div>
