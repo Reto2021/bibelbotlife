@@ -17,6 +17,8 @@ type AnalyticsData = {
   topPages: { path: string; count: number }[];
   topEvents: { name: string; count: number }[];
   topReferrers?: { source: string; count: number }[];
+  referrerTrend?: Record<string, string | number>[];
+  referrerTrendKeys?: string[];
   devices: { mobile: number; tablet: number; desktop: number };
   dailyPageviews: Record<string, number>;
   topFlows: { flow: string; count: number }[];
