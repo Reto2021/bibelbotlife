@@ -15,12 +15,9 @@ import {
 const SpeechRecognition =
   (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
 
-// Global event for opening chat with a pre-filled message (used by DailyImpulse etc.)
-const CHAT_OPEN_EVENT = "bibelbot-open-chat";
-
-export function openBibelBotChat(message: string) {
-  window.dispatchEvent(new CustomEvent(CHAT_OPEN_EVENT, { detail: message }));
-}
+import { CHAT_OPEN_EVENT } from "@/lib/chat-events";
+// Re-export for backward compatibility
+export { openBibelBotChat } from "@/lib/chat-events";
 
 // Bible reference pattern for making citations clickable
 const BIBLE_REF_PATTERN = /(\d\.\s?)?(?:Genesis|Exodus|Levitikus|Numeri|Deuteronomium|Josua|Richter|Rut|Samuel|Könige|Chronik|Esra|Nehemia|Ester|Hiob|Psalm|Psalmen|Sprüche|Prediger|Hoheslied|Jesaja|Jeremia|Klagelieder|Ezechiel|Daniel|Hosea|Joel|Amos|Obadja|Jona|Micha|Nahum|Habakuk|Zefanja|Haggai|Sacharja|Maleachi|Matthäus|Markus|Lukas|Johannes|Apostelgeschichte|Römer|Korinther|Galater|Epheser|Philipper|Kolosser|Thessalonicher|Timotheus|Titus|Philemon|Hebräer|Jakobus|Petrus|Judas|Offenbarung|Mose|Gen|Ex|Lev|Num|Dtn|Jos|Ri|Kön|Chr|Esr|Neh|Est|Ps|Spr|Pred|Hld|Jes|Jer|Klgl|Ez|Dan|Hos|Am|Ob|Jon|Mi|Nah|Hab|Zef|Hag|Sach|Mal|Mt|Mk|Lk|Joh|Apg|Röm|Kor|Gal|Eph|Phil|Kol|Thess|Tim|Tit|Phlm|Hebr|Jak|Petr|Jud|Offb)\s+\d+(?:[,:]\d+(?:[\-–]\d+)?)?/g;
