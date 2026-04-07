@@ -3,12 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://swsthxftugjqznqjcfpk.supabase.co" crossorigin />
+    <link rel="dns-prefetch" href="https://swsthxftugjqznqjcfpk.supabase.co" />
 
     <!-- Primary SEO -->
-    <title>BibelBot.ch – Bibel-KI-Chatbot | Kostenlos & Anonym</title>
-    <meta name="description" content="Entdecke die Bibel neu – mit KI, guten Fragen und ehrlicher Begleitung. Tägliche Impulse, 5 Übersetzungen, Coaching-Methodik. Kein Login, kein Urteil, kostenlos.">
+    <title>BibelBot – KI-Bibel-Chatbot für Seelsorge & Coaching | Kostenlos</title>
+    <meta name="description" content="BibelBot verbindet KI mit 5 Bibelübersetzungen, Coaching-Methodik und seelsorgerischer Begleitung. 30 Einstiegsthemen, Lebensrad, 7-Warum-Methode. Anonym, kostenlos, in 8 Sprachen.">
     <meta name="author" content="BibelBot.ch" />
-    <meta name="keywords" content="Bibel, Chatbot, KI, Bible AI, Bibelstudium, täglicher Impuls, Seelsorge, christlich, Schweiz, kostenlos, anonym, Bibbia, chatbot biblico, intelligenza artificiale, studio biblico, impulso quotidiano, cristiano, gratuito, anonimo, Italia, Biblia, chatbot bíblico, IA, estudio bíblico, impulso diario, cristiano, gratis, anónimo, Bible, chatbot biblique, IA, étude biblique, impulsion quotidienne, chrétien, gratuit, anonyme, Bíblia, chatbot bíblico, impulso diário, cristão, gratuito, anônimo, Portugal, Biblia, chatbot biblijny, AI, studium biblijne, codzienny impuls, chrześcijański, bezpłatny, anonimowy, Polska, Bible, biblický chatbot, AI, biblické studium, denní impulz, křesťanský, zdarma, anonymní, Česko">
     <link rel="canonical" href="https://bibelbot.ch/" />
 
     <!-- hreflang for multilingual -->
@@ -37,7 +41,7 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bibelbot.ch/" />
-    <meta property="og:site_name" content="BibelBot.ch" />
+    <meta property="og:site_name" content="BibelBot" />
     <meta property="og:locale" content="de_CH" />
     <meta property="og:locale:alternate" content="en_US" />
     <meta property="og:locale:alternate" content="fr_FR" />
@@ -46,18 +50,19 @@
     <meta property="og:locale:alternate" content="pl_PL" />
     <meta property="og:locale:alternate" content="cs_CZ" />
     <meta property="og:locale:alternate" content="pt_PT" />
-    <meta property="og:title" content="BibelBot.ch – Bibel-KI-Chatbot | Kostenlos & Anonym">
-    <meta property="og:description" content="Entdecke die Bibel neu – mit KI, guten Fragen und ehrlicher Begleitung. Tägliche Impulse, 5 Übersetzungen, Coaching-Methodik. Kein Login, kostenlos.">
+    <meta property="og:title" content="BibelBot – KI-Bibel-Chatbot für Seelsorge & Coaching">
+    <meta property="og:description" content="Entdecke die Bibel neu – mit KI, 5 Übersetzungen, Coaching-Methodik und seelsorgerischer Begleitung. Anonym, kostenlos, in 8 Sprachen.">
     <meta property="og:image" content="https://bibelbot.ch/og-image.jpg">
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="BibelBot – KI-gestützter Bibel-Chatbot" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@BibelBot" />
-    <meta name="twitter:title" content="BibelBot.ch – Bibel-KI-Chatbot | Kostenlos & Anonym">
-    <meta name="twitter:description" content="Entdecke die Bibel neu – mit KI, guten Fragen und ehrlicher Begleitung. Tägliche Impulse, 5 Übersetzungen, Coaching-Methodik. Kein Login, kostenlos.">
+    <meta name="twitter:title" content="BibelBot – KI-Bibel-Chatbot für Seelsorge & Coaching">
+    <meta name="twitter:description" content="Entdecke die Bibel neu – mit KI, 5 Übersetzungen, Coaching-Methodik und seelsorgerischer Begleitung. Anonym, kostenlos, in 8 Sprachen.">
     <meta name="twitter:image" content="https://bibelbot.ch/og-image.jpg">
+    <meta name="twitter:image:alt" content="BibelBot – KI-gestützter Bibel-Chatbot" />
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -65,38 +70,50 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "WebApplication",
-          "name": "BibelBot.ch",
+          "@type": "Organization",
+          "name": "BibelBot",
           "url": "https://bibelbot.ch",
-          "description": "KI-gestützter Bibel-Chatbot mit täglichen Impulsen, 5 Bibelübersetzungen und Coaching-Methodik. Kostenlos, anonym, ohne Login.",
-          "applicationCategory": "ReligiousApplication",
+          "logo": "https://bibelbot.ch/favicon.png",
+          "description": "KI-gestützter Bibel-Chatbot mit seelsorgerischer Begleitung und Coaching-Methodik.",
+          "sameAs": [
+            "https://t.me/meinbibelbot"
+          ],
+          "areaServed": [
+            { "@type": "Country", "name": "Switzerland" },
+            { "@type": "Country", "name": "Germany" },
+            { "@type": "Country", "name": "Austria" }
+          ]
+        },
+        {
+          "@type": "WebApplication",
+          "name": "BibelBot",
+          "url": "https://bibelbot.ch",
+          "description": "KI-gestützter Bibel-Chatbot mit täglichen Impulsen, 5 Bibelübersetzungen, Lebensrad, 7-Warum-Methode und Coaching-Methodik. Kostenlos, anonym, in 8 Sprachen.",
+          "applicationCategory": "LifestyleApplication",
           "operatingSystem": "All",
           "browserRequirements": "Requires JavaScript",
           "offers": {
             "@type": "Offer",
             "price": "0",
-            "priceCurrency": "CHF"
+            "priceCurrency": "CHF",
+            "availability": "https://schema.org/InStock"
           },
           "inLanguage": ["de", "en", "fr", "es", "it", "pl", "cs", "pt"],
           "creator": {
             "@type": "Organization",
-            "name": "BibelBot.ch",
+            "name": "BibelBot",
             "url": "https://bibelbot.ch"
           },
-          "areaServed": [
-            { "@type": "Country", "name": "Switzerland" },
-            { "@type": "Country", "name": "Germany" },
-            { "@type": "Country", "name": "Austria" },
-            { "@type": "Country", "name": "Italy" },
-            { "@type": "Country", "name": "France" },
-            { "@type": "Country", "name": "Spain" },
-            { "@type": "Country", "name": "Poland" },
-            { "@type": "Country", "name": "Czech Republic" },
-            { "@type": "Country", "name": "Portugal" },
-            { "@type": "Country", "name": "Brazil" },
-            { "@type": "Country", "name": "United Kingdom" },
-            { "@type": "Country", "name": "United States" }
-          ]
+          "featureList": [
+            "5 Bibelübersetzungen (Zürcher, Luther, Einheitsübersetzung, Schlachter, Elberfelder)",
+            "30 emotionale Einstiegsthemen",
+            "Interaktives Lebensrad",
+            "7-Warum-Coaching-Methode",
+            "Tägliche Impulse via Telegram & Push",
+            "8 Sprachen",
+            "Seelsorgerische Guardrails mit Krisenverweisen"
+          ],
+          "screenshot": "https://bibelbot.ch/og-image.jpg"
         },
         {
           "@type": "FAQPage",
@@ -119,42 +136,10 @@
             },
             {
               "@type": "Question",
-              "name": "Cosa distingue BibelBot da ChatGPT?",
+              "name": "Ist BibelBot kostenlos?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "BibelBot utilizza 5 traduzioni bibliche riconosciute, ha protezioni pastorali, riferimenti per le crisi e si basa esclusivamente sulla teologia cristiana."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Co odlišuje BibelBot od ChatGPT?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "BibelBot pracuje s 5 uznávanými biblickými překlady, má pastorační záruky, krizové odkazy a je založen výhradně na křesťanské teologii."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Co wyróżnia BibelBot od ChatGPT?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "BibelBot pracuje z 5 uznanymi tłumaczeniami Biblii, posiada zabezpieczenia duszpasterskie, odesłania kryzysowe i opiera się wyłącznie na teologii chrześcijańskiej."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "O que distingue o BibelBot do ChatGPT?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "O BibelBot utiliza 5 traduções bíblicas reconhecidas, tem salvaguardas pastorais, referências de crise e baseia-se exclusivamente na teologia cristã."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Ist BibelBot kostenlos? / Is BibelBot free?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Ja / Yes – BibelBot ist vollständig kostenlos, ohne Login, ohne Werbung. BibelBot is completely free, no login, no ads. Il est entièrement gratuit. È completamente gratuito. Jest całkowicie bezpłatny. Je zcela zdarma. É completamente gratuito."
+                "text": "Ja – BibelBot ist vollständig kostenlos, ohne Login, ohne Werbung. Verfügbar als Web-App und auf Telegram in 8 Sprachen."
               }
             },
             {
@@ -163,6 +148,14 @@
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "BibelBot speichert keine persönlichen Daten und keine Chatverläufe. Jedes Gespräch ist anonym. Es gibt kein Login, kein Tracking und keine Weitergabe von Daten an Dritte."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Welche Bibelübersetzungen nutzt BibelBot?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "BibelBot verwendet 5 anerkannte Übersetzungen: Zürcher Bibel (2007), Lutherbibel (2017), Einheitsübersetzung (2016), Schlachter Bibel (2000) und Elberfelder Bibel (2006)."
               }
             }
           ]
