@@ -10,6 +10,8 @@ import it from "./locales/it.json";
 import pl from "./locales/pl.json";
 import cs from "./locales/cs.json";
 import pt from "./locales/pt.json";
+import nl from "./locales/nl.json";
+import ro from "./locales/ro.json";
 
 i18n
   .use(LanguageDetector)
@@ -24,9 +26,11 @@ i18n
       pl: { translation: pl },
       cs: { translation: cs },
       pt: { translation: pt },
+      nl: { translation: nl },
+      ro: { translation: ro },
     },
     fallbackLng: "de",
-    supportedLngs: ["de", "en", "fr", "es", "it", "pl", "cs", "pt"],
+    supportedLngs: ["de", "en", "fr", "es", "it", "pl", "cs", "pt", "nl", "ro"],
     interpolation: { escapeValue: false },
     detection: {
       order: ["localStorage", "navigator"],

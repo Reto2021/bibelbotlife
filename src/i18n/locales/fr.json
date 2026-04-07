@@ -296,7 +296,9 @@
     "it": "Italiano",
     "pl": "Polski",
     "cs": "Čeština",
-    "pt": "Português"
+    "pt": "Português",
+    "nl": "Nederlands",
+    "ro": "Română"
   },
   "tiles": {
     "sectionTitle": "Qu'est-ce qui te préoccupe ?",
