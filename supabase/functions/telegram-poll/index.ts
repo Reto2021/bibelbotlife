@@ -126,22 +126,79 @@ async function generateAndSendReply(
   telegramApiKey: string,
   supabase: any
 ) {
-  // Fetch last 20 messages from this chat for conversation context
+  // Fetch last 50 messages from this chat for conversation context
   const { data: history } = await supabase
     .from('telegram_messages')
-    .select('text, role')
+    .select('text, role, created_at')
     .eq('chat_id', chatId)
     .not('text', 'is', null)
-    .order('created_at', { ascending: true })
-    .limit(20);
+    .order('created_at', { ascending: false })
+    .limit(50);
+
+  const allMessages = (history || []).reverse();
+
+  // Check if there are older messages beyond the 50 we fetched
+  const { count: totalCount } = await supabase
+    .from('telegram_messages')
+    .select('*', { count: 'exact', head: true })
+    .eq('chat_id', chatId)
+    .not('text', 'is', null);
+
+  let summaryPrefix = "";
+  if (totalCount && totalCount > 50) {
+    // Fetch the oldest messages that are NOT in our 50-message window for summarization
+    const oldestInWindow = allMessages[0]?.created_at;
+    const { data: olderMessages } = await supabase
+      .from('telegram_messages')
+      .select('text, role')
+      .eq('chat_id', chatId)
+      .not('text', 'is', null)
+      .lt('created_at', oldestInWindow)
+      .order('created_at', { ascending: true })
+      .limit(100);
+
+    if (olderMessages && olderMessages.length > 0) {
+      // Generate a summary of older conversation
+      const olderText = olderMessages
+        .map((m: any) => `${m.role === 'assistant' ? 'Bot' : 'User'}: ${m.text}`)
+        .join('\n');
+
+      const summaryResponse = await fetch(
+        "https://ai.gateway.lovable.dev/v1/chat/completions",
+        {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${lovableApiKey}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            model: "google/gemini-2.5-flash-lite",
+            messages: [
+              {
+                role: "system",
+                content: "Fasse das folgende Gespräch in 3-5 Sätzen zusammen. Fokus auf: Hauptthemen, persönliche Situation des Nutzers, wichtige Erkenntnisse, offene Fragen. Deutsch (Schweiz), kein ß."
+              },
+              { role: "user", content: olderText }
+            ],
+            stream: false,
+          }),
+        }
+      );
+
+      if (summaryResponse.ok) {
+        const summaryData = await summaryResponse.json();
+        summaryPrefix = summaryData.choices?.[0]?.message?.content || "";
+      }
+    }
+  }
 
   // Build conversation messages from history
-  const conversationMessages = (history || []).map((msg: any) => ({
+  const conversationMessages = allMessages.map((msg: any) => ({
     role: msg.role === 'assistant' ? 'assistant' : 'user',
     content: msg.text,
   }));
 
-  // Call AI with full conversation context
+  // Call AI with full conversation context + optional summary
   const chatResponse = await fetch(
     "https://ai.gateway.lovable.dev/v1/chat/completions",
     {
@@ -155,7 +212,7 @@ async function generateAndSendReply(
         messages: [
           {
             role: "system",
-            content: `Du bist BibelBot – ein einfühlsamer, weiser Begleiter für Menschen, die an der Bibel wachsen wollen. Du sprichst Deutsch (Schweiz), kein ß. Halte Antworten unter 4000 Zeichen (Telegram-Limit). Verwende Markdown-Formatierung sparsam (Telegram unterstützt nur *bold*, _italic_, \`code\`). Antworte fokussiert und warmherzig. Du erinnerst dich an den bisherigen Gesprächsverlauf.`
+            content: `Du bist BibelBot – ein einfühlsamer, weiser Begleiter für Menschen, die an der Bibel wachsen wollen. Du sprichst Deutsch (Schweiz), kein ß. Halte Antworten unter 4000 Zeichen (Telegram-Limit). Verwende Markdown-Formatierung sparsam (Telegram unterstützt nur *bold*, _italic_, \`code\`). Antworte fokussiert und warmherzig. Du erinnerst dich an den bisherigen Gesprächsverlauf.${summaryPrefix ? `\n\n[ZUSAMMENFASSUNG FRÜHERER GESPRÄCHE]\n${summaryPrefix}\n[ENDE ZUSAMMENFASSUNG]` : ""}`
           },
           ...conversationMessages,
         ],
