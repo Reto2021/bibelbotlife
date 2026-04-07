@@ -15,6 +15,16 @@ import {
 const SpeechRecognition =
   (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
 
+// Global event for opening chat with a pre-filled message (used by DailyImpulse etc.)
+const CHAT_OPEN_EVENT = "bibelbot-open-chat";
+
+export function openBibelBotChat(message: string) {
+  window.dispatchEvent(new CustomEvent(CHAT_OPEN_EVENT, { detail: message }));
+}
+
+// Bible reference pattern for making citations clickable
+const BIBLE_REF_PATTERN = /(\d\.\s?)?(?:Genesis|Exodus|Levitikus|Numeri|Deuteronomium|Josua|Richter|Rut|Samuel|Könige|Chronik|Esra|Nehemia|Ester|Hiob|Psalm|Psalmen|Sprüche|Prediger|Hoheslied|Jesaja|Jeremia|Klagelieder|Ezechiel|Daniel|Hosea|Joel|Amos|Obadja|Jona|Micha|Nahum|Habakuk|Zefanja|Haggai|Sacharja|Maleachi|Matthäus|Markus|Lukas|Johannes|Apostelgeschichte|Römer|Korinther|Galater|Epheser|Philipper|Kolosser|Thessalonicher|Timotheus|Titus|Philemon|Hebräer|Jakobus|Petrus|Judas|Offenbarung|Mose|Gen|Ex|Lev|Num|Dtn|Jos|Ri|Kön|Chr|Esr|Neh|Est|Ps|Spr|Pred|Hld|Jes|Jer|Klgl|Ez|Dan|Hos|Am|Ob|Jon|Mi|Nah|Hab|Zef|Hag|Sach|Mal|Mt|Mk|Lk|Joh|Apg|Röm|Kor|Gal|Eph|Phil|Kol|Thess|Tim|Tit|Phlm|Hebr|Jak|Petr|Jud|Offb)\s+\d+(?:[,:]\d+(?:[\-–]\d+)?)?/g;
+
 type QAResult = {
   citations_found: number;
   issues: { citation: string; problem: string; correction: string }[];
@@ -164,6 +174,56 @@ function QABadge({ qa }: { qa: QAResult | "loading" | "skipped" }) {
   );
 }
 
+// Make Bible references clickable in chat messages
+function makeRefsClickable(children: React.ReactNode, onRefClick: (msg: string) => void): React.ReactNode {
+  if (!children) return children;
+  
+  const processNode = (node: React.ReactNode): React.ReactNode => {
+    if (typeof node === "string") {
+      const parts: React.ReactNode[] = [];
+      let lastIndex = 0;
+      const regex = new RegExp(BIBLE_REF_PATTERN.source, "g");
+      let match;
+      
+      while ((match = regex.exec(node)) !== null) {
+        if (match.index > lastIndex) {
+          parts.push(node.slice(lastIndex, match.index));
+        }
+        const ref = match[0];
+        parts.push(
+          <button
+            key={`ref-${match.index}`}
+            onClick={(e) => {
+              e.preventDefault();
+              onRefClick(`Erkläre mir ${ref} im Detail: Was ist der historische Kontext? Wer spricht? Was kommt davor und danach? Und was bedeutet das für mich heute?`);
+            }}
+            className="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary cursor-pointer font-medium"
+            title={`${ref} vertiefen`}
+          >
+            {ref}
+          </button>
+        );
+        lastIndex = regex.lastIndex;
+      }
+      
+      if (parts.length === 0) return node;
+      if (lastIndex < node.length) parts.push(node.slice(lastIndex));
+      return <>{parts}</>;
+    }
+    
+    if (Array.isArray(node)) {
+      return node.map((child, i) => <span key={i}>{processNode(child)}</span>);
+    }
+    
+    return node;
+  };
+  
+  if (Array.isArray(children)) {
+    return children.map((child, i) => <span key={i}>{processNode(child)}</span>);
+  }
+  return processNode(children);
+}
+
 function loadMessages(): Message[] {
   try {
     const stored = localStorage.getItem(MESSAGES_KEY);
@@ -272,6 +332,19 @@ export function BibelBotChat() {
     recognitionRef.current?.stop();
     setIsListening(false);
   }, []);
+
+  // Listen for external open-chat events (from DailyImpulse etc.)
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const msg = (e as CustomEvent).detail as string;
+      setIsOpen(true);
+      setShowTeaser(false);
+      // Small delay to ensure chat is open before sending
+      setTimeout(() => sendMessage(msg), 300);
+    };
+    window.addEventListener(CHAT_OPEN_EVENT, handler);
+    return () => window.removeEventListener(CHAT_OPEN_EVENT, handler);
+  }, [sendMessage]);
 
   useEffect(() => {
     const alreadyOpened = sessionStorage.getItem(AUTO_OPEN_KEY);
@@ -579,7 +652,12 @@ export function BibelBotChat() {
               >
                 {msg.role === "assistant" ? (
                   <div className="prose prose-sm max-w-none dark:prose-invert">
-                    <ReactMarkdown>{msg.content}</ReactMarkdown>
+                    <ReactMarkdown
+                      components={{
+                        p: ({ children }) => <p>{makeRefsClickable(children, sendMessage)}</p>,
+                        li: ({ children }) => <li>{makeRefsClickable(children, sendMessage)}</li>,
+                      }}
+                    >{msg.content}</ReactMarkdown>
                   </div>
                 ) : (
                   msg.content
