@@ -87,6 +87,28 @@ export function BibelBotChat() {
     setIsListening(false);
   }, []);
 
+  // Auto-open after 5s (once per session) + teaser bubble
+  useEffect(() => {
+    const alreadyOpened = sessionStorage.getItem(AUTO_OPEN_KEY);
+    if (alreadyOpened) return;
+
+    const teaserTimer = setTimeout(() => setShowTeaser(true), 2000);
+    const openTimer = setTimeout(() => {
+      setIsOpen(true);
+      setShowTeaser(false);
+      sessionStorage.setItem(AUTO_OPEN_KEY, "1");
+    }, 5000);
+
+    return () => {
+      clearTimeout(teaserTimer);
+      clearTimeout(openTimer);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isOpen) setShowTeaser(false);
+  }, [isOpen]);
+
   useEffect(() => {
     if (scrollRef.current) {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
