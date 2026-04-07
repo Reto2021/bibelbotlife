@@ -375,6 +375,38 @@ const Analytics = () => {
           </CardContent>
         </Card>
 
+        {/* Kachel-Klicks Zeitverlauf */}
+        <Card>
+          <CardHeader className="pb-2">
+            <CardTitle className="text-base flex items-center gap-2">
+              <Target className="h-4 w-4 text-primary" />
+              Kachel-Klicks pro Tag
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            {(() => {
+              const tileDaily = Object.entries(data?.tiles?.dailyClicks || {})
+                .sort(([a], [b]) => a.localeCompare(b))
+                .map(([date, count]) => ({ date: date.slice(5), Klicks: count }));
+              return tileDaily.length > 0 ? (
+                <div className="h-48">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <AreaChart data={tileDaily}>
+                      <CartesianGrid strokeDasharray="3 3" className="stroke-border" />
+                      <XAxis dataKey="date" tick={{ fontSize: 11 }} className="fill-muted-foreground" />
+                      <YAxis tick={{ fontSize: 11 }} className="fill-muted-foreground" allowDecimals={false} />
+                      <RTooltip contentStyle={{ background: "hsl(var(--card))", border: "1px solid hsl(var(--border))", borderRadius: 8, fontSize: 12 }} />
+                      <Area type="monotone" dataKey="Klicks" fill="hsl(var(--chart-4) / 0.2)" stroke="hsl(var(--chart-4))" strokeWidth={2} />
+                    </AreaChart>
+                  </ResponsiveContainer>
+                </div>
+              ) : (
+                <p className="text-sm text-muted-foreground">Keine Daten</p>
+              );
+            })()}
+          </CardContent>
+        </Card>
+
         {/* Kacheln & Features */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {/* Tile Clicks */}
