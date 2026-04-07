@@ -48,7 +48,7 @@ const SYSTEM_PROMPT = `Du generierst einen täglichen biblischen Impuls. Antwort
 
 Regeln:
 - Verwende kein "ß", immer "ss" (Schweizer Deutsch).
-- Verwende IMMER korrekte Umlaute: ä, ö, ü, Ä, Ö, Ü. NIEMALS ae, oe, ue als Ersatz. Beispiel: "Erfüllung" (richtig), NICHT "Erfuellung" oder "Er Fuellung".
+- Verwende IMMER korrekte Umlaute: ä, ö, ü, Ä, Ö, Ü. NIEMALS ae, oe, ue als Ersatz. NIEMALS "sz" statt "ss". Beispiele: "erfüllt" (NICHT "erfuellt"), "Verheissung" (NICHT "Verheiszung"), "fühlt" (NICHT "fuehlt"), "schöpferisch" (NICHT "schoepferisch"), "Grösse" (NICHT "Groesse").
 - Zitiere exakt aus Zürcher Bibel, Lutherbibel 2017 oder Einheitsübersetzung 2016.
 - Nenne immer die Übersetzung.
 - Wähle Themen die berühren: Mut, Zweifel, Liebe, Gerechtigkeit, Hoffnung, Vergebung, Identität, Angst, Dankbarkeit, Berufung.
