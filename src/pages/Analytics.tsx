@@ -444,7 +444,35 @@ const Analytics = () => {
           </Card>
         </div>
 
-        {/* User Flows */}
+        {/* Referrer-Quellen */}
+        <Card>
+          <CardHeader className="pb-2">
+            <CardTitle className="text-base flex items-center gap-2">
+              <Globe className="h-4 w-4 text-primary" />
+              Referrer-Quellen
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-2">
+              {data?.topReferrers?.map((r) => {
+                const max = data.topReferrers?.[0]?.count || 1;
+                return (
+                  <div key={r.source} className="space-y-0.5">
+                    <div className="flex justify-between items-center text-sm">
+                      <span className="text-foreground text-xs truncate">{r.source}</span>
+                      <span className="text-muted-foreground text-xs ml-2">{r.count}</span>
+                    </div>
+                    <div className="h-1.5 bg-muted rounded-full overflow-hidden">
+                      <div className="h-full bg-chart-3 rounded-full" style={{ width: `${(r.count / max) * 100}%` }} />
+                    </div>
+                  </div>
+                );
+              })}
+              {!data?.topReferrers?.length && <p className="text-sm text-muted-foreground">Keine Referrer-Daten</p>}
+            </div>
+          </CardContent>
+        </Card>
+
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-base">User Flows</CardTitle>
