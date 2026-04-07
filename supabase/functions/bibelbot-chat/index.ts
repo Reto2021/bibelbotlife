@@ -242,7 +242,7 @@ serve(async (req) => {
   }
 
   try {
-    const { messages, journeyDay } = await req.json();
+    const { messages, journeyDay, language } = await req.json();
 
     if (!messages || !Array.isArray(messages)) {
       return new Response(
@@ -251,8 +251,13 @@ serve(async (req) => {
       );
     }
 
-    // Inject journey context into system prompt
+    // Inject language instruction and journey context into system prompt
     let systemPrompt = SYSTEM_PROMPT;
+    const lang = language || "de";
+    if (lang !== "de") {
+      const langNames: Record<string, string> = { en: "English", fr: "French", es: "Spanish" };
+      systemPrompt += `\n\n[LANGUAGE OVERRIDE: The user's interface is set to ${langNames[lang] || lang}. You MUST respond in ${langNames[lang] || lang}. Adapt Bible quotes to well-known translations in that language. Keep your coaching style and depth identical.]`;
+    }
     if (journeyDay && typeof journeyDay === "number") {
       const phase = journeyDay <= 7 ? "Ankommen" : journeyDay <= 14 ? "Vertiefen" : "Handeln";
       const isCheckIn = [1, 7, 14, 21].includes(journeyDay);
