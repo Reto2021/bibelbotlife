@@ -1,19 +1,36 @@
 import { useState, useRef, useEffect, useCallback } from "react";
-import { Send, X, MessageCircle, Loader2, Mic, MicOff, Pencil, Shield, Sparkles } from "lucide-react";
+import { Send, X, MessageCircle, Loader2, Mic, MicOff, Pencil, Shield, Sparkles, CheckCircle2, AlertTriangle, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import ReactMarkdown from "react-markdown";
 import { useToast } from "@/hooks/use-toast";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 const SpeechRecognition =
   (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
 
-type Message = { role: "user" | "assistant"; content: string };
+type QAResult = {
+  citations_found: number;
+  issues: { citation: string; problem: string; correction: string }[];
+  has_issues: boolean;
+  summary: string;
+};
+
+type Message = {
+  role: "user" | "assistant";
+  content: string;
+  qa?: QAResult | "loading" | "skipped";
+};
 
 const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/bibelbot-chat`;
+const QA_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/bibelbot-qa`;
 
-// Psychologically optimised: low-barrier, emotionally inviting, curiosity-driven
 const SUGGESTIONS = [
   "Ich brauche gerade ein aufbauendes Wort",
   "Was sagt die Bibel, wenn man sich unsicher fühlt?",
@@ -39,12 +56,76 @@ function saveBotName(name: string) {
 
 const AUTO_OPEN_KEY = "bibelbot-autoopened";
 
-// Warm welcome message — the bot "opens up" first (reciprocity principle)
 const WELCOME_MESSAGE: Message = {
   role: "assistant",
   content:
     "Schön, dass du da bist 🤗\n\nIch bin hier, um mit dir über die Bibel nachzudenken – ganz ohne Druck oder Bewertung. Du kannst mir alles erzählen, was dich gerade beschäftigt.\n\nWas liegt dir auf dem Herzen?",
 };
+
+// Check if text likely contains Bible citations
+function likelyHasCitations(text: string): boolean {
+  // Match patterns like "Johannes 3,16" or "Psalm 23" or "1. Mose 2,7" or "Mt 5,3-12"
+  const pattern = /(\d\.\s?)?(Genesis|Exodus|Levitikus|Numeri|Deuteronomium|Josua|Richter|Rut|Samuel|Könige|Chronik|Esra|Nehemia|Ester|Hiob|Psalm|Psalmen|Sprüche|Prediger|Hoheslied|Jesaja|Jeremia|Klagelieder|Ezechiel|Daniel|Hosea|Joel|Amos|Obadja|Jona|Micha|Nahum|Habakuk|Zefanja|Haggai|Sacharja|Maleachi|Matthäus|Markus|Lukas|Johannes|Apostelgeschichte|Römer|Korinther|Galater|Epheser|Philipper|Kolosser|Thessalonicher|Timotheus|Titus|Philemon|Hebräer|Jakobus|Petrus|Judas|Offenbarung|Mose|Gen|Ex|Lev|Num|Dtn|Jos|Ri|Rut|Kön|Chr|Esr|Neh|Est|Ps|Spr|Pred|Hld|Jes|Jer|Klgl|Ez|Dan|Hos|Am|Ob|Jon|Mi|Nah|Hab|Zef|Hag|Sach|Mal|Mt|Mk|Lk|Joh|Apg|Röm|Kor|Gal|Eph|Phil|Kol|Thess|Tim|Tit|Phlm|Hebr|Jak|Petr|Jud|Offb)\s+\d+/i;
+  return pattern.test(text);
+}
+
+function QABadge({ qa }: { qa: QAResult | "loading" | "skipped" }) {
+  if (qa === "loading") {
+    return (
+      <div className="flex items-center gap-1.5 mt-2 text-xs text-muted-foreground">
+        <Loader2 className="h-3 w-3 animate-spin" />
+        <span>Zitate werden geprüft...</span>
+      </div>
+    );
+  }
+
+  if (qa === "skipped") return null;
+
+  if (qa.citations_found === 0) return null;
+
+  return (
+    <TooltipProvider>
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <div
+            className={`flex items-center gap-1.5 mt-2 text-xs cursor-help ${
+              qa.has_issues ? "text-amber-600 dark:text-amber-400" : "text-emerald-600 dark:text-emerald-400"
+            }`}
+          >
+            {qa.has_issues ? (
+              <AlertTriangle className="h-3 w-3" />
+            ) : (
+              <CheckCircle2 className="h-3 w-3" />
+            )}
+            <span>
+              {qa.has_issues
+                ? `${qa.issues.length} Hinweis${qa.issues.length > 1 ? "e" : ""} zu Zitaten`
+                : `${qa.citations_found} Zitat${qa.citations_found > 1 ? "e" : ""} geprüft ✓`}
+            </span>
+          </div>
+        </TooltipTrigger>
+        <TooltipContent side="top" className="max-w-[300px] text-xs">
+          {qa.has_issues ? (
+            <div className="space-y-2">
+              <p className="font-semibold">⚠️ Hinweise zur Genauigkeit:</p>
+              {qa.issues.map((issue, i) => (
+                <div key={i} className="border-t border-border pt-1.5">
+                  <p className="font-medium">{issue.citation}</p>
+                  <p className="text-muted-foreground">{issue.problem}</p>
+                  {issue.correction && (
+                    <p className="text-foreground mt-0.5">→ {issue.correction}</p>
+                  )}
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p>{qa.summary}</p>
+          )}
+        </TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
+  );
+}
 
 export function BibelBotChat() {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,6 +142,46 @@ export function BibelBotChat() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const { toast } = useToast();
+
+  const runQA = useCallback(async (text: string, msgIndex: number) => {
+    if (!likelyHasCitations(text)) {
+      setMessages((prev) =>
+        prev.map((m, i) => (i === msgIndex ? { ...m, qa: "skipped" } : m))
+      );
+      return;
+    }
+
+    setMessages((prev) =>
+      prev.map((m, i) => (i === msgIndex ? { ...m, qa: "loading" } : m))
+    );
+
+    try {
+      const resp = await fetch(QA_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+        },
+        body: JSON.stringify({ text }),
+      });
+
+      if (!resp.ok) {
+        setMessages((prev) =>
+          prev.map((m, i) => (i === msgIndex ? { ...m, qa: "skipped" } : m))
+        );
+        return;
+      }
+
+      const qaResult: QAResult = await resp.json();
+      setMessages((prev) =>
+        prev.map((m, i) => (i === msgIndex ? { ...m, qa: qaResult } : m))
+      );
+    } catch {
+      setMessages((prev) =>
+        prev.map((m, i) => (i === msgIndex ? { ...m, qa: "skipped" } : m))
+      );
+    }
+  }, []);
 
   const startListening = useCallback(() => {
     if (!SpeechRecognition) {
@@ -96,7 +217,6 @@ export function BibelBotChat() {
     setIsListening(false);
   }, []);
 
-  // Auto-open after 5s (once per session) + teaser bubble
   useEffect(() => {
     const alreadyOpened = sessionStorage.getItem(AUTO_OPEN_KEY);
     if (alreadyOpened) return;
@@ -114,7 +234,6 @@ export function BibelBotChat() {
     };
   }, []);
 
-  // Show welcome greeting with slight delay for natural feel
   useEffect(() => {
     if (isOpen && messages.length === 0 && !showWelcome) {
       const timer = setTimeout(() => setShowWelcome(true), 600);
@@ -146,7 +265,6 @@ export function BibelBotChat() {
       if (!text.trim() || isLoading) return;
 
       const userMsg: Message = { role: "user", content: text.trim() };
-      // Include welcome message in context so the AI knows it greeted the user
       const contextMessages = messages.length === 0 ? [WELCOME_MESSAGE, userMsg] : [...messages, userMsg];
       setMessages(contextMessages);
       setInput("");
@@ -219,6 +337,17 @@ export function BibelBotChat() {
             }
           }
         }
+
+        // After streaming is complete, run QA on the assistant's response
+        if (assistantSoFar) {
+          setMessages((prev) => {
+            const lastIdx = prev.length - 1;
+            if (prev[lastIdx]?.role === "assistant") {
+              runQA(assistantSoFar, lastIdx);
+            }
+            return prev;
+          });
+        }
       } catch (e) {
         console.error(e);
         toast({
@@ -230,7 +359,7 @@ export function BibelBotChat() {
         setIsLoading(false);
       }
     },
-    [messages, isLoading, toast, botName]
+    [messages, isLoading, toast, botName, runQA]
   );
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -268,14 +397,13 @@ export function BibelBotChat() {
 
   return (
     <div className="fixed bottom-6 right-6 z-50 w-[390px] max-w-[calc(100vw-2rem)] h-[580px] max-h-[calc(100vh-3rem)] bg-card border border-border rounded-2xl shadow-2xl flex flex-col overflow-hidden">
-      {/* Header — warm, personal */}
+      {/* Header */}
       <div className="flex items-center justify-between px-4 py-3 border-b border-border bg-primary/5">
         <div className="flex items-center gap-3">
           <div className="relative">
             <div className="h-9 w-9 rounded-full bg-primary/10 flex items-center justify-center">
               <Sparkles className="h-4 w-4 text-primary" />
             </div>
-            {/* Online indicator — signals availability & presence */}
             <div className="absolute -bottom-0.5 -right-0.5 h-3 w-3 rounded-full bg-whatsapp border-2 border-card" />
           </div>
           <div>
@@ -309,7 +437,7 @@ export function BibelBotChat() {
                 <Pencil className="h-3 w-3 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
               </button>
             )}
-            <p className="text-xs text-muted-foreground">Immer für dich da · Vertraulich</p>
+            <p className="text-xs text-muted-foreground">Immer für dich da · Zitate geprüft</p>
           </div>
         </div>
         <button
@@ -323,10 +451,8 @@ export function BibelBotChat() {
 
       {/* Messages */}
       <div ref={scrollRef} className="flex-1 overflow-y-auto px-4 py-3 space-y-3">
-        {/* Welcome state — warm, inviting, low barrier */}
         {!hasConversation && (
           <div className="space-y-4">
-            {/* Auto-greeting from bot — appears with delay */}
             {showWelcome && (
               <div className="animate-fade-up">
                 <div className="flex justify-start">
@@ -337,7 +463,6 @@ export function BibelBotChat() {
                   </div>
                 </div>
 
-                {/* Suggestion chips — low-barrier emotional entry points */}
                 <div className="flex flex-col gap-2 mt-4">
                   {SUGGESTIONS.map((s, i) => (
                     <button
@@ -351,35 +476,38 @@ export function BibelBotChat() {
                   ))}
                 </div>
 
-                {/* Trust signal — subtle, reassuring */}
                 <div className="flex items-center justify-center gap-1.5 mt-5 text-xs text-muted-foreground">
                   <Shield className="h-3 w-3" />
-                  <span>Kein Login · Kein Urteil · Vertraulich</span>
+                  <span>Kein Login · Kein Urteil · Zitate geprüft</span>
                 </div>
               </div>
             )}
           </div>
         )}
 
-        {/* Conversation messages */}
         {messages.map((msg, i) => (
           <div
             key={i}
             className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
           >
-            <div
-              className={`max-w-[85%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed ${
-                msg.role === "user"
-                  ? "bg-primary text-primary-foreground rounded-br-md"
-                  : "bg-muted text-foreground rounded-bl-md"
-              }`}
-            >
-              {msg.role === "assistant" ? (
-                <div className="prose prose-sm max-w-none dark:prose-invert">
-                  <ReactMarkdown>{msg.content}</ReactMarkdown>
-                </div>
-              ) : (
-                msg.content
+            <div className={`max-w-[85%] ${msg.role === "user" ? "" : ""}`}>
+              <div
+                className={`rounded-2xl px-4 py-2.5 text-sm leading-relaxed ${
+                  msg.role === "user"
+                    ? "bg-primary text-primary-foreground rounded-br-md"
+                    : "bg-muted text-foreground rounded-bl-md"
+                }`}
+              >
+                {msg.role === "assistant" ? (
+                  <div className="prose prose-sm max-w-none dark:prose-invert">
+                    <ReactMarkdown>{msg.content}</ReactMarkdown>
+                  </div>
+                ) : (
+                  msg.content
+                )}
+              </div>
+              {msg.role === "assistant" && msg.qa && (
+                <QABadge qa={msg.qa} />
               )}
             </div>
           </div>
@@ -395,7 +523,7 @@ export function BibelBotChat() {
         )}
       </div>
 
-      {/* Input — warm placeholder, inviting */}
+      {/* Input */}
       <div className="border-t border-border p-3">
         <div className="flex gap-2 items-end">
           <Textarea
