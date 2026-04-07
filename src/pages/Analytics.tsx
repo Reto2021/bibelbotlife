@@ -27,12 +27,6 @@ const Analytics = () => {
     setLoading(true);
     setError("");
     try {
-      const { data: result, error: fnError } = await supabase.functions.invoke(
-        "analytics-dashboard",
-        { body: null, headers: {} }
-      );
-
-      // Use URL params approach instead
       const response = await fetch(
         `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/analytics-dashboard?key=${encodeURIComponent(key)}&days=${days}`,
         { headers: { "Content-Type": "application/json" } }
