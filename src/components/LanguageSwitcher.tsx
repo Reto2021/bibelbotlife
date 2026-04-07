@@ -13,9 +13,11 @@ const LANGS = [
   { code: "fr", flag: "🇫🇷" },
   { code: "es", flag: "🇪🇸" },
   { code: "it", flag: "🇮🇹" },
+  { code: "nl", flag: "🇳🇱" },
   { code: "pl", flag: "🇵🇱" },
   { code: "cs", flag: "🇨🇿" },
   { code: "pt", flag: "🇵🇹" },
+  { code: "ro", flag: "🇷🇴" },
 ] as const;
 
 export function LanguageSwitcher() {
