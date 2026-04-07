@@ -2,6 +2,7 @@ import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, Shield, Graduati
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { BibelBotChat } from "@/components/BibelBotChat";
+import { DailyImpulse } from "@/components/DailyImpulse";
 import { Separator } from "@/components/ui/separator";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
@@ -116,6 +117,9 @@ const Index = () => {
           </Button>
         </div>
       </nav>
+
+      {/* Daily Impulse Banner */}
+      <DailyImpulse />
 
       {/* Hero Section */}
       <section className="py-20 px-4">
