@@ -1,29 +1,23 @@
 ---
 name: Church Partnership Pricing
-description: Gestaffeltes Pricing-Modell für Gemeinde-Partnerschaft mit Setup + Jahresbeitrag
+description: Patronats-Pakete mit Jahresbeitrag für Gemeinde-Partnerschaft
 type: feature
 ---
-## Pricing-Modell (CHF)
+## Patronats-Pakete (CHF/Jahr)
 
-| Tier | Setup (einmalig) | Jahr (laufend) |
-|------|-------------------|----------------|
-| Free (Schnupper) | 0 | 0 |
-| Community (<500) | 490 | 790 |
-| Gemeinde (500–2000) | 990 | 1'490 |
-| Kirche (2000+) | 1'990 | 2'990 |
+| Paket | Beitrag (Jahr) | Leistung |
+|-------|----------------|----------|
+| Senfkorn | CHF 0.– | Basis-Nutzung des Bots für alle Gemeindeglieder |
+| Wegbegleiter | CHF 490.– | Erwähnung als Unterstützer + werbefreier Zugang |
+| Brückenbauer (Top-Wahl) | CHF 990.– | Logo im Bot-Interface, monatlicher Nutzungs-Report |
+| Leuchtturm | CHF 1'990.– | Eigene Inhalte, Roadmap-Mitgestaltung, Premium-Support |
 
 ## DB-Tabellen
 - `church_partners` mit `plan_tier` enum: free, community, gemeinde, kirche
 - `church_contact_requests` (public INSERT, no public SELECT)
 
 ## Routen
-- `/for-churches` – Info & Pricing
+- `/for-churches` – Info & Patronats-Pakete
 - `/churches` – Verzeichnis
 - `/church/:slug` – Partner-Profil
 - `?church=slug` → Banner via localStorage
-
-## Feature Gating
-- Free: Verzeichnis + Telegram
-- Community: + Partner-Seite, Badge, QR, Kontakt
-- Gemeinde: + Pastor-Profil, Video, Analytics, Priority
-- Kirche: + Multi-Profile, Custom Branding, API, Account Manager
