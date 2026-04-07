@@ -369,6 +369,81 @@
       "title": "7 Pourquois",
       "desc": "Trouve la racine profonde de ta question",
       "prompt": "J'aimerais faire l'exercice des 7 Pourquois. Voici mon sujet :"
+    },
+    "anger": {
+      "title": "Colère",
+      "desc": "Quand tu es sur le point d'exploser",
+      "prompt": "Je suis tellement en colère et je ne sais pas quoi faire. Que dit la Bible sur la colère ?"
+    },
+    "shame": {
+      "title": "Honte & Culpabilité",
+      "desc": "Quand la culpabilité t'écrase",
+      "prompt": "J'ai tellement honte et je me sens coupable. Que dit la Bible sur la culpabilité et le pardon ?"
+    },
+    "burnout": {
+      "title": "Épuisement",
+      "desc": "Quand tu n'en peux plus",
+      "prompt": "Je suis totalement épuisé(e). Que dit la Bible sur le repos et la récupération ?"
+    },
+    "illness": {
+      "title": "Maladie",
+      "desc": "Quand un diagnostic change tout",
+      "prompt": "J'ai reçu un diagnostic difficile et j'ai peur. Que dit la Bible sur la maladie et l'espérance ?"
+    },
+    "financial": {
+      "title": "Soucis d'argent",
+      "desc": "Quand les factures s'accumulent",
+      "prompt": "J'ai des soucis financiers. Que dit la Bible sur l'argent et la confiance ?"
+    },
+    "meaningcrisis": {
+      "title": "Crise de sens",
+      "desc": "À quoi ça sert tout ça ?",
+      "prompt": "Je me demande à quoi tout ça sert. Que dit la Bible sur le sens de la vie ?"
+    },
+    "selfdoubt": {
+      "title": "Doute de soi",
+      "desc": "Quand tu ne te sens pas à la hauteur",
+      "prompt": "Je doute constamment de moi-même. Que dit la Bible sur ma valeur ?"
+    },
+    "calling": {
+      "title": "Vocation",
+      "desc": "Que faire de ma vie ?",
+      "prompt": "Je ne sais pas quoi faire de ma vie. Que dit la Bible sur la vocation ?"
+    },
+    "faithdoubt": {
+      "title": "Doutes de foi",
+      "desc": "Quand la foi vacille",
+      "prompt": "J'ai des doutes sur ma foi. Que dit la Bible sur le doute ?"
+    },
+    "forgiveness": {
+      "title": "Pardon",
+      "desc": "Quand pardonner semble impossible",
+      "prompt": "Je n'arrive pas à pardonner. Que dit la Bible sur le pardon ?"
+    },
+    "familyconflict": {
+      "title": "Conflit familial",
+      "desc": "Quand ça explose en famille",
+      "prompt": "Il y a un gros conflit dans ma famille. Que dit la Bible sur la réconciliation ?"
+    },
+    "envy": {
+      "title": "Envie",
+      "desc": "Quand les autres ont tout mieux",
+      "prompt": "Je suis envieux/envieuse. Que dit la Bible sur l'envie et le contentement ?"
+    },
+    "joy": {
+      "title": "Partager la joie",
+      "desc": "Quand quelque chose de merveilleux arrive",
+      "prompt": "Il m'est arrivé quelque chose de merveilleux ! Que dit la Bible sur la joie ?"
+    },
+    "prayer": {
+      "title": "Demande de prière",
+      "desc": "Prier ensemble",
+      "prompt": "J'ai une demande de prière. Accompagne-moi dans la prière."
+    },
+    "bibleverse": {
+      "title": "Comprendre un verset",
+      "desc": "Se faire expliquer un passage",
+      "prompt": "J'aimerais mieux comprendre un passage biblique. Peux-tu m'aider ?"
     }
   },
   "lifeWheel": {
