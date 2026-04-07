@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { Send, X, MessageCircle, Loader2, Mic, MicOff, Pencil, Shield, Sparkles, CheckCircle2, AlertTriangle, Info } from "lucide-react";
+import { ShareButton } from "@/components/ShareButton";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
@@ -494,7 +495,17 @@ export function BibelBotChat() {
                   </div>
                 ) : msg.content}
               </div>
-              {msg.role === "assistant" && msg.qa && <QABadge qa={msg.qa} t={t} />}
+              {msg.role === "assistant" && (
+                <div className="flex items-center gap-2 mt-1">
+                  {msg.qa && <QABadge qa={msg.qa} t={t} />}
+                  <ShareButton
+                    title={t("share.chatTitle")}
+                    text={msg.content.length > 280 ? msg.content.slice(0, 277) + "…" : msg.content}
+                    variant="icon"
+                    className="ml-auto"
+                  />
+                </div>
+              )}
             </div>
           </div>
         ))}
