@@ -333,19 +333,6 @@ export function BibelBotChat() {
     setIsListening(false);
   }, []);
 
-  // Listen for external open-chat events (from DailyImpulse etc.)
-  useEffect(() => {
-    const handler = (e: Event) => {
-      const msg = (e as CustomEvent).detail as string;
-      setIsOpen(true);
-      setShowTeaser(false);
-      // Small delay to ensure chat is open before sending
-      setTimeout(() => sendMessage(msg), 300);
-    };
-    window.addEventListener(CHAT_OPEN_EVENT, handler);
-    return () => window.removeEventListener(CHAT_OPEN_EVENT, handler);
-  }, [sendMessage]);
-
   useEffect(() => {
     const alreadyOpened = sessionStorage.getItem(AUTO_OPEN_KEY);
     if (alreadyOpened) return;
@@ -499,6 +486,18 @@ export function BibelBotChat() {
     },
     [messages, isLoading, toast, botName, runQA]
   );
+
+  // Listen for external open-chat events (from DailyImpulse etc.)
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const msg = (e as CustomEvent).detail as string;
+      setIsOpen(true);
+      setShowTeaser(false);
+      setTimeout(() => sendMessage(msg), 300);
+    };
+    window.addEventListener(CHAT_OPEN_EVENT, handler);
+    return () => window.removeEventListener(CHAT_OPEN_EVENT, handler);
+  }, [sendMessage]);
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === "Enter" && !e.shiftKey) {
