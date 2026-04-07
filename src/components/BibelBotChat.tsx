@@ -399,6 +399,7 @@ export function BibelBotChat() {
       const msg = typeof detail === "string" ? detail : detail?.message;
       const mode: ChatMode = typeof detail === "string" ? "normal" : (detail?.mode || "normal");
       setChatMode(mode);
+      if (mode === "seven-whys") track("seven_whys_start", {});
       setIsOpen(true);
       setShowTeaser(false);
       setTimeout(() => sendMessage(msg), 300);
