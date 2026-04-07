@@ -4,26 +4,26 @@
 
 @layer base {
   :root {
-    --background: 38 40% 97%;
-    --foreground: 200 15% 20%;
+    --background: 40 45% 96%;
+    --foreground: 192 30% 15%;
 
-    --card: 38 30% 99%;
-    --card-foreground: 200 15% 20%;
+    --card: 42 35% 98%;
+    --card-foreground: 192 30% 15%;
 
-    --popover: 38 30% 99%;
-    --popover-foreground: 200 15% 20%;
+    --popover: 42 35% 98%;
+    --popover-foreground: 192 30% 15%;
 
-    --primary: 32 65% 52%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 38 78% 50%;
+    --primary-foreground: 192 35% 12%;
 
-    --secondary: 185 45% 35%;
+    --secondary: 192 55% 28%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 38 25% 93%;
-    --muted-foreground: 200 10% 45%;
+    --muted: 40 30% 92%;
+    --muted-foreground: 192 15% 42%;
 
-    --accent: 32 50% 93%;
-    --accent-foreground: 32 65% 38%;
+    --accent: 38 55% 91%;
+    --accent-foreground: 38 70% 35%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
@@ -31,69 +31,69 @@
     --telegram: 200 80% 50%;
     --telegram-foreground: 0 0% 100%;
 
-    --border: 32 25% 88%;
-    --input: 32 25% 88%;
-    --ring: 32 65% 52%;
+    --border: 38 28% 86%;
+    --input: 38 28% 86%;
+    --ring: 38 78% 50%;
 
     --radius: 0.5rem;
 
-    --gradient-hero: linear-gradient(135deg, hsl(38 40% 97%) 0%, hsl(32 45% 96%) 40%, hsl(185 20% 96%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(40 45% 96%) 0%, hsl(38 50% 94%) 35%, hsl(192 25% 95%) 100%);
     --gradient-cta: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
 
-    --chat-warmth: 32 50% 97%;
-    --chat-bot-bubble: 32 40% 94%;
-    --chat-welcome-glow: 32 45% 96%;
+    --chat-warmth: 38 50% 96%;
+    --chat-bot-bubble: 38 42% 93%;
+    --chat-welcome-glow: 40 48% 95%;
 
-    --sidebar-background: 38 30% 98%;
-    --sidebar-foreground: 200 10% 26%;
-    --sidebar-primary: 185 45% 35%;
+    --sidebar-background: 40 35% 97%;
+    --sidebar-foreground: 192 15% 25%;
+    --sidebar-primary: 192 55% 28%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 32 30% 95%;
-    --sidebar-accent-foreground: 200 15% 20%;
-    --sidebar-border: 32 20% 91%;
-    --sidebar-ring: 185 45% 45%;
+    --sidebar-accent: 38 35% 93%;
+    --sidebar-accent-foreground: 192 30% 15%;
+    --sidebar-border: 38 22% 89%;
+    --sidebar-ring: 192 55% 38%;
   }
 
   .dark {
-    --background: 200 18% 7%;
-    --foreground: 38 25% 93%;
+    --background: 192 28% 7%;
+    --foreground: 40 30% 92%;
 
-    --card: 200 18% 11%;
-    --card-foreground: 38 25% 93%;
+    --card: 192 25% 11%;
+    --card-foreground: 40 30% 92%;
 
-    --popover: 200 18% 11%;
-    --popover-foreground: 38 25% 93%;
+    --popover: 192 25% 11%;
+    --popover-foreground: 40 30% 92%;
 
-    --primary: 32 65% 52%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 38 78% 50%;
+    --primary-foreground: 192 35% 10%;
 
-    --secondary: 185 45% 45%;
+    --secondary: 192 50% 42%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 200 12% 15%;
-    --muted-foreground: 200 10% 60%;
+    --muted: 192 18% 15%;
+    --muted-foreground: 192 12% 58%;
 
-    --accent: 32 25% 15%;
-    --accent-foreground: 32 60% 65%;
+    --accent: 38 30% 16%;
+    --accent-foreground: 38 65% 62%;
 
     --destructive: 0 63% 31%;
     --destructive-foreground: 0 0% 100%;
 
-    --whatsapp: 142 70% 40%;
-    --whatsapp-foreground: 0 0% 100%;
+    --telegram: 200 80% 50%;
+    --telegram-foreground: 0 0% 100%;
 
-    --border: 200 12% 18%;
-    --input: 200 12% 18%;
-    --ring: 32 65% 52%;
+    --border: 192 18% 18%;
+    --input: 192 18% 18%;
+    --ring: 38 78% 50%;
 
-    --sidebar-background: 200 18% 9%;
-    --sidebar-foreground: 38 20% 90%;
-    --sidebar-primary: 185 45% 45%;
+    --sidebar-background: 192 28% 9%;
+    --sidebar-foreground: 40 25% 88%;
+    --sidebar-primary: 192 50% 42%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 200 12% 15%;
-    --sidebar-accent-foreground: 38 20% 90%;
-    --sidebar-border: 200 12% 15%;
-    --sidebar-ring: 185 45% 45%;
+    --sidebar-accent: 192 18% 15%;
+    --sidebar-accent-foreground: 40 25% 88%;
+    --sidebar-border: 192 18% 15%;
+    --sidebar-ring: 192 50% 42%;
   }
 }
 
@@ -117,8 +117,8 @@
 }
 
 @keyframes pulse-warm {
-  0%, 100% { box-shadow: 0 0 0 0 hsl(32 65% 52% / 0.4); }
-  50% { box-shadow: 0 0 0 12px hsl(32 65% 52% / 0); }
+  0%, 100% { box-shadow: 0 0 0 0 hsl(38 78% 50% / 0.4); }
+  50% { box-shadow: 0 0 0 12px hsl(38 78% 50% / 0); }
 }
 
 .animate-pulse-warm {
