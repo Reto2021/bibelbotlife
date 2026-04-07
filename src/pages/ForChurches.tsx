@@ -110,6 +110,11 @@ const ForChurches = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="text-center mb-6">
+                    {tier.setup > 0 && (
+                      <p className="text-sm text-muted-foreground mb-1">
+                        {t("church.setup")}: <span className="font-semibold text-foreground">CHF {tier.setup.toLocaleString("de-CH")}.–</span>
+                      </p>
+                    )}
                     <p className="text-3xl font-bold text-foreground">
                       {tier.annual === 0 ? "CHF 0.–" : `CHF ${tier.annual.toLocaleString("de-CH")}.–`}
                     </p>
