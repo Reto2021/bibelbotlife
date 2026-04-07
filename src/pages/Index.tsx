@@ -139,7 +139,12 @@ const Index = () => {
                 Über Telegram starten
               </a>
             </Button>
-            <Button size="lg" variant="outline" className="border-primary/30 text-primary hover:bg-accent px-8 py-4 text-lg">
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-primary/30 text-primary hover:bg-accent px-8 py-4 text-lg"
+              onClick={() => document.getElementById("features")?.scrollIntoView({ behavior: "smooth" })}
+            >
               Mehr erfahren
             </Button>
           </div>
@@ -154,7 +159,7 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 bg-card/40">
+      <section id="features" className="py-20 px-4 bg-card/40">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-foreground mb-4">
