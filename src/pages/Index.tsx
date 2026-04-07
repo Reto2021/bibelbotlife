@@ -208,13 +208,13 @@ const Index = () => {
               </CardHeader>
               <CardContent className="space-y-3">
                 {[
-                  "Zitiert aus 5 anerkannten Bibelübersetzungen mit Quellenangabe",
-                  "Kennt reformierte, katholische und freikirchliche Auslegungstraditionen",
-                  "Strenge seelsorgerische Guardrails – validiert Gefühle vor Ratschlägen",
-                  "Verweist bei Krisen sofort an Dargebotene Hand (143) und Pro Juventute (147)",
-                  "Arbeitet ausschliesslich mit christlicher Theologie und peer-reviewed Psychologie",
-                  "Differenziert zwischen Konfessionen und zeigt verschiedene Perspektiven",
-                  "Basiert auf PERMA, Logotherapie, Dankbarkeitsforschung und REACH-Modell",
+                  "Zitiert aus 5 anerkannten Übersetzungen – auch unbequeme Stellen",
+                  "Strenge Guardrails UND Mut zur herausfordernden Begleitung",
+                  "Stellt Rückfragen, die zur Selbstreflexion einladen",
+                  "Krisenintervention: Dargebotene Hand (143) und Pro Juventute (147)",
+                  "Benennt Spannungen in der Bibel ehrlich – fördert kritisches Denken",
+                  "Differenziert zwischen Konfessionen und zeigt Perspektiven auf",
+                  "Basiert auf PERMA, Logotherapie und prophetischer Tradition",
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-2">
                     <Check className="h-4 w-4 text-whatsapp shrink-0 mt-0.5" />
