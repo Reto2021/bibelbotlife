@@ -368,7 +368,87 @@ const Analytics = () => {
           </CardContent>
         </Card>
 
-        {/* Subscribers */}
+        {/* Kacheln & Features */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {/* Tile Clicks */}
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-base flex items-center gap-2">
+                <Target className="h-4 w-4 text-primary" />
+                Kachel-Klicks
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-2xl font-bold text-foreground mb-3">{data?.tiles?.totalClicks || 0}</p>
+              <div className="space-y-1.5">
+                {data?.tiles?.topTiles?.slice(0, 8).map((t) => {
+                  const max = data?.tiles?.topTiles?.[0]?.count || 1;
+                  return (
+                    <div key={t.tile} className="space-y-0.5">
+                      <div className="flex justify-between items-center">
+                        <span className="text-xs text-foreground">{t.tile}</span>
+                        <span className="text-xs text-muted-foreground">{t.count}</span>
+                      </div>
+                      <div className="h-1 bg-muted rounded-full overflow-hidden">
+                        <div className="h-full bg-primary rounded-full" style={{ width: `${(t.count / max) * 100}%` }} />
+                      </div>
+                    </div>
+                  );
+                })}
+                {!data?.tiles?.topTiles?.length && <p className="text-xs text-muted-foreground">Keine Klicks</p>}
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* LifeWheel */}
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-base flex items-center gap-2">
+                <CircleDot className="h-4 w-4 text-primary" />
+                Lebensrad
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-2 gap-3 mb-3">
+                <div className="bg-primary/5 rounded-lg p-2.5 text-center">
+                  <p className="text-xl font-bold text-foreground">{data?.lifewheel?.completions || 0}</p>
+                  <p className="text-[10px] text-muted-foreground">Abschlüsse</p>
+                </div>
+                <div className="bg-primary/5 rounded-lg p-2.5 text-center">
+                  <p className="text-xl font-bold text-foreground">{data?.lifewheel?.avgScore || "–"}</p>
+                  <p className="text-[10px] text-muted-foreground">Ø Score</p>
+                </div>
+              </div>
+              <p className="text-xs text-muted-foreground mb-1.5">Schwächste Bereiche:</p>
+              <div className="space-y-1.5">
+                {data?.lifewheel?.weakestAreas?.slice(0, 5).map((w) => (
+                  <div key={w.area} className="flex justify-between items-center text-xs">
+                    <span className="text-foreground">{w.area}</span>
+                    <span className="text-muted-foreground">{w.count}×</span>
+                  </div>
+                ))}
+                {!data?.lifewheel?.weakestAreas?.length && <p className="text-xs text-muted-foreground">Keine Daten</p>}
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* 7 Whys */}
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-base flex items-center gap-2">
+                <Search className="h-4 w-4 text-primary" />
+                7 Warums
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="bg-primary/5 rounded-lg p-3 text-center">
+                <p className="text-3xl font-bold text-foreground">{data?.sevenWhys?.starts || 0}</p>
+                <p className="text-xs text-muted-foreground">Gestartet</p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-base flex items-center gap-2">
