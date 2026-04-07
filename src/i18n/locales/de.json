@@ -243,7 +243,8 @@
     "noChat": "Keine Speicherung von Chatdaten",
     "noTax": "Spenden sind nicht steuerabzugsfähig",
     "datenschutz": "Datenschutz",
-    "love": "Mit ❤️ für alle, die sich fragen, was Christus denkt."
+    "love": "Mit ❤️ für alle, die sich fragen, was Christus denkt.",
+    "forChurches": "Für Gemeinden"
   },
   "chat": {
     "welcome": "Schön, dass du da bist 🤗\n\nIch bin dein BibleBot – dein persönlicher Begleiter mit der Bibel, guten Fragen und konkreten Impulsen. Kein Druck, keine Bewertung.\n\nDu kannst mich alles fragen – oder einfach erzählen, was dich gerade beschäftigt. 💛",
@@ -538,5 +539,92 @@
     "noHistory": "Noch keine gespeicherten Ergebnisse.",
     "backToNew": "Neues Lebensrad",
     "backToList": "Zurück zur Liste"
+  },
+  "church": {
+    "badge": "Für Gemeinden",
+    "heroTitle": "BibleBot für Ihre Gemeinde",
+    "heroSubtitle": "Begleiten Sie Ihre Gemeindemitglieder mit biblischer Weisheit – digital, persönlich und rund um die Uhr.",
+    "useCasesTitle": "Einsatzmöglichkeiten",
+    "useCase": {
+      "youth": {
+        "title": "Jugendarbeit",
+        "desc": "Teens entdecken die Bibel auf ihre eigene Art – interaktiv und ohne Hemmungen."
+      },
+      "confirmation": {
+        "title": "Konfirmation",
+        "desc": "Konfirmanden vertiefen Bibelwissen eigenständig mit persönlicher Begleitung."
+      },
+      "pastoral": {
+        "title": "Seelsorge",
+        "desc": "24/7-Begleitung als Ergänzung zur persönlichen Seelsorge."
+      },
+      "bibleStudy": {
+        "title": "Bibelkreis",
+        "desc": "Impulse und Diskussionsanstösse für Gruppen und Hauskreise."
+      }
+    },
+    "pricingTitle": "Partnerschafts-Modell",
+    "pricingSubtitle": "Wählen Sie den Plan, der zu Ihrer Gemeinde passt. Einmaliges Setup + jährlicher Beitrag.",
+    "popular": "Beliebt",
+    "setup": "Setup",
+    "free": "Kostenlos",
+    "perYear": "Jahr",
+    "contact": "Kontakt aufnehmen",
+    "tier": {
+      "free": {
+        "name": "Schnupper",
+        "size": "Für alle Gemeinden"
+      },
+      "community": {
+        "name": "Community",
+        "size": "Bis 500 Mitglieder"
+      },
+      "gemeinde": {
+        "name": "Gemeinde",
+        "size": "500–2'000 Mitglieder"
+      },
+      "kirche": {
+        "name": "Kirche",
+        "size": "Über 2'000 Mitglieder"
+      }
+    },
+    "features": {
+      "directoryEntry": "Verzeichnis-Eintrag",
+      "telegramGroup": "Telegram-Gruppe",
+      "partnerPage": "Eigene Partner-Seite",
+      "badge": "Partner-Badge",
+      "qrFlyer": "QR-Flyer zum Drucken",
+      "contactForm": "Kontaktformular",
+      "pastorProfile": "Pfarrer/Pastor-Profil",
+      "welcomeVideo": "Willkommensvideo",
+      "analytics": "Analytics-Dashboard",
+      "prioritySupport": "Priority-Support",
+      "multipleProfiles": "Mehrere Profile",
+      "customBranding": "Custom Branding",
+      "apiAccess": "API-Zugang",
+      "accountManager": "Persönlicher Betreuer"
+    },
+    "viewDirectory": "Gemeinde-Verzeichnis ansehen",
+    "directoryBadge": "Gemeinde-Verzeichnis",
+    "directoryTitle": "Partnergemeinden",
+    "directorySubtitle": "Finden Sie eine Gemeinde in Ihrer Nähe, die BibleBot empfiehlt.",
+    "searchPlaceholder": "Ort, Name oder Denomination suchen...",
+    "noResults": "Noch keine Gemeinden im Verzeichnis.",
+    "becomePartner": "Partner werden →",
+    "notFound": "Gemeinde nicht gefunden.",
+    "backToDirectory": "Zurück zum Verzeichnis",
+    "pastor": "Pfarrer/Pastor",
+    "serviceTimes": "Gottesdienstzeiten",
+    "startChat": "Chat starten",
+    "website": "Website",
+    "telegramGroup": "Telegram-Gruppe",
+    "contactTitle": "Kontakt zu {{name}}",
+    "contactName": "Ihr Name (optional)",
+    "contactEmail": "Ihre E-Mail-Adresse",
+    "contactMessage": "Ihre Nachricht",
+    "contactSend": "Nachricht senden",
+    "contactSuccess": "Nachricht gesendet! 🙏",
+    "contactSuccessDesc": "Die Gemeinde wird sich bei Ihnen melden.",
+    "recommendedBy": "Empfohlen von {{name}}"
   }
 }

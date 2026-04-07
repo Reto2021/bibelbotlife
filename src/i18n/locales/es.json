@@ -228,7 +228,8 @@
     "noChat": "Sin almacenamiento de datos de chat",
     "noTax": "Las donaciones no son deducibles de impuestos",
     "datenschutz": "Política de privacidad",
-    "love": "Con ❤️ para todos los que se preguntan qué piensa Cristo."
+    "love": "Con ❤️ para todos los que se preguntan qué piensa Cristo.",
+    "forChurches": "For Churches"
   },
   "chat": {
     "welcome": "¡Bienvenido/a! 🤗\n\nSoy tu BibleBot – tu compañero personal con la Biblia, buenas preguntas e impulsos reales. Sin presión, sin juicio.\n\nPuedes preguntarme lo que quieras – o simplemente compartir lo que te preocupa. 💛",
@@ -501,5 +502,92 @@
     "noHistory": "No saved results yet.",
     "backToNew": "New Life Wheel",
     "backToList": "Back to list"
+  },
+  "church": {
+    "badge": "For Churches",
+    "heroTitle": "BibleBot for Your Church",
+    "heroSubtitle": "Accompany your congregation with biblical wisdom – digital, personal, and around the clock.",
+    "useCasesTitle": "Use Cases",
+    "useCase": {
+      "youth": {
+        "title": "Youth Ministry",
+        "desc": "Teens discover the Bible in their own way – interactive and without hesitation."
+      },
+      "confirmation": {
+        "title": "Confirmation",
+        "desc": "Confirmands deepen Bible knowledge independently with personal guidance."
+      },
+      "pastoral": {
+        "title": "Pastoral Care",
+        "desc": "24/7 companionship as a complement to personal pastoral care."
+      },
+      "bibleStudy": {
+        "title": "Bible Study",
+        "desc": "Impulses and discussion starters for groups and home circles."
+      }
+    },
+    "pricingTitle": "Partnership Model",
+    "pricingSubtitle": "Choose the plan that fits your church. One-time setup + annual contribution.",
+    "popular": "Popular",
+    "setup": "Setup",
+    "free": "Free",
+    "perYear": "year",
+    "contact": "Get in touch",
+    "tier": {
+      "free": {
+        "name": "Starter",
+        "size": "For all churches"
+      },
+      "community": {
+        "name": "Community",
+        "size": "Up to 500 members"
+      },
+      "gemeinde": {
+        "name": "Parish",
+        "size": "500–2,000 members"
+      },
+      "kirche": {
+        "name": "Church",
+        "size": "Over 2,000 members"
+      }
+    },
+    "features": {
+      "directoryEntry": "Directory listing",
+      "telegramGroup": "Telegram group",
+      "partnerPage": "Own partner page",
+      "badge": "Partner badge",
+      "qrFlyer": "Printable QR flyer",
+      "contactForm": "Contact form",
+      "pastorProfile": "Pastor profile",
+      "welcomeVideo": "Welcome video",
+      "analytics": "Analytics dashboard",
+      "prioritySupport": "Priority support",
+      "multipleProfiles": "Multiple profiles",
+      "customBranding": "Custom branding",
+      "apiAccess": "API access",
+      "accountManager": "Dedicated account manager"
+    },
+    "viewDirectory": "View church directory",
+    "directoryBadge": "Church Directory",
+    "directoryTitle": "Partner Churches",
+    "directorySubtitle": "Find a church near you that recommends BibleBot.",
+    "searchPlaceholder": "Search by city, name, or denomination...",
+    "noResults": "No churches in the directory yet.",
+    "becomePartner": "Become a partner →",
+    "notFound": "Church not found.",
+    "backToDirectory": "Back to directory",
+    "pastor": "Pastor",
+    "serviceTimes": "Service Times",
+    "startChat": "Start Chat",
+    "website": "Website",
+    "telegramGroup": "Telegram Group",
+    "contactTitle": "Contact {{name}}",
+    "contactName": "Your name (optional)",
+    "contactEmail": "Your email address",
+    "contactMessage": "Your message",
+    "contactSend": "Send message",
+    "contactSuccess": "Message sent! 🙏",
+    "contactSuccessDesc": "The church will get back to you.",
+    "recommendedBy": "Recommended by {{name}}"
   }
 }
