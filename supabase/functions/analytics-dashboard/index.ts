@@ -167,6 +167,7 @@ Deno.serve(async (req) => {
 
   // ── Referrer stats ──
   const referrerCounts: Record<string, number> = {};
+  const referrerDaily: Record<string, Record<string, number>> = {};
   pageviews.forEach((e: any) => {
     let ref = e.referrer || "";
     if (!ref || ref === "" || ref === "null") { ref = "(direkt)"; }
@@ -174,11 +175,22 @@ Deno.serve(async (req) => {
       try { ref = new URL(ref).hostname.replace(/^www\./, ""); } catch { /* keep raw */ }
     }
     referrerCounts[ref] = (referrerCounts[ref] || 0) + 1;
+    const day = e.created_at.split("T")[0];
+    if (!referrerDaily[day]) referrerDaily[day] = {};
+    referrerDaily[day][ref] = (referrerDaily[day][ref] || 0) + 1;
   });
   const topReferrers = Object.entries(referrerCounts)
     .sort(([, a], [, b]) => b - a)
     .slice(0, 10)
     .map(([source, count]) => ({ source, count }));
+  const topRefSources = topReferrers.slice(0, 5).map((r) => r.source);
+  const referrerTrend = Object.entries(referrerDaily)
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([date, sources]) => {
+      const entry: Record<string, string | number> = { date };
+      topRefSources.forEach((s) => { entry[s] = sources[s] || 0; });
+      return entry;
+    });
 
   const result = {
     period: { days, since },
