@@ -7,7 +7,7 @@ import { toast } from "@/hooks/use-toast";
 const VAPID_PUBLIC_KEY = "BLMl5bBRzhlza0ozrHEblp3BfKtbyDsbOP-n120rl6teGPFdoyFb77P9WnOZpbFs2hKyfwILmw8WQebJrp_qc7c";
 
 const SUBSCRIBE_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/subscribe-daily`;
-const TELEGRAM_LINK = "https://t.me/BibelBot_ch_bot";
+const TELEGRAM_LINK = "https://t.me/meinbibelbot";
 
 type Channel = "push" | "sms" | "telegram";
 

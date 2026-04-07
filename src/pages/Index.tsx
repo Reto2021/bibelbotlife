@@ -9,7 +9,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Link } from "react-router-dom";
 import { DarkModeToggle } from "@/components/DarkModeToggle";
 
-const TELEGRAM_LINK = "https://t.me/BibelBot_ch_bot";
+const TELEGRAM_LINK = "https://t.me/meinbibelbot";
 
 const BIBLE_EDITIONS = [
   { name: "Zürcher Bibel", year: "2007", tradition: "Reformiert" },
