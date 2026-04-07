@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const BibelBotChat = lazy(() => import("@/components/BibelBotChat").then(m => ({ default: m.BibelBotChat })));
-import { DailyImpulse } from "@/components/DailyImpulse";
-import { DailySubscribe } from "@/components/DailySubscribe";
+const DailyImpulse = lazy(() => import("@/components/DailyImpulse").then(m => ({ default: m.DailyImpulse })));
+const DailySubscribe = lazy(() => import("@/components/DailySubscribe").then(m => ({ default: m.DailySubscribe })));
 import { Separator } from "@/components/ui/separator";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
@@ -70,7 +70,9 @@ const Index = () => {
         </div>
       </nav>
 
-      <DailyImpulse />
+      <Suspense fallback={<div className="h-20" />}>
+        <DailyImpulse />
+      </Suspense>
 
       {/* Hero Section */}
       <section className="py-20 px-4">
@@ -285,7 +287,9 @@ const Index = () => {
       {/* Daily Subscribe Widget */}
       <section className="py-20 px-4 bg-card/40">
         <div className="container mx-auto max-w-lg">
-          <DailySubscribe />
+          <Suspense fallback={<div className="h-40" />}>
+            <DailySubscribe />
+          </Suspense>
         </div>
       </section>
 
