@@ -276,7 +276,7 @@ export function BibelBotChat() {
               <Sparkles className="h-4 w-4 text-primary" />
             </div>
             {/* Online indicator — signals availability & presence */}
-            <div className="absolute -bottom-0.5 -right-0.5 h-3 w-3 rounded-full bg-green-500 border-2 border-card" />
+            <div className="absolute -bottom-0.5 -right-0.5 h-3 w-3 rounded-full bg-whatsapp border-2 border-card" />
           </div>
           <div>
             {isEditingName ? (
