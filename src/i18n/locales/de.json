@@ -563,29 +563,28 @@
         "desc": "Impulse und Diskussionsanstösse für Gruppen und Hauskreise."
       }
     },
-    "pricingTitle": "Partnerschafts-Modell",
-    "pricingSubtitle": "Wählen Sie den Plan, der zu Ihrer Gemeinde passt. Einmaliges Setup + jährlicher Beitrag.",
+    "pricingTitle": "Patronats-Pakete",
+    "pricingSubtitle": "Unterstützen Sie BibleBot und Ihre Gemeinde mit dem passenden Patronats-Paket.",
     "popular": "Beliebt",
-    "setup": "Setup",
     "free": "Kostenlos",
     "perYear": "Jahr",
     "contact": "Kontakt aufnehmen",
     "tier": {
       "free": {
-        "name": "Schnupper",
-        "size": "Für alle Gemeinden"
+        "name": "Senfkorn",
+        "size": "Basis-Nutzung des Bots für alle Gemeindeglieder."
       },
       "community": {
-        "name": "Community",
-        "size": "Bis 500 Mitglieder"
+        "name": "Wegbegleiter",
+        "size": "Erwähnung der Gemeinde als Unterstützer auf der Webseite & werbefreier Zugang."
       },
       "gemeinde": {
-        "name": "Gemeinde",
-        "size": "500–2'000 Mitglieder"
+        "name": "Brückenbauer",
+        "size": "Logo-Präsenz im Bot-Interface («Powered by…»), monatlicher Nutzungs-Report (anonymisiert)."
       },
       "kirche": {
-        "name": "Kirche",
-        "size": "Über 2'000 Mitglieder"
+        "name": "Leuchtturm",
+        "size": "Integration eigener Inhalte (z.B. Predigt-Archiv), Mitgestaltung der Roadmap, Premium-Support."
       }
     },
     "features": {

@@ -526,28 +526,27 @@
         "desc": "Impulzy a podněty k diskuzi pro skupiny a domácí společenství."
       }
     },
-    "pricingTitle": "Model partnerství",
-    "pricingSubtitle": "Vyberte plán, který vyhovuje vašemu sboru. Jednorázové nastavení + roční příspěvek.",
+    "pricingTitle": "Patronátní balíčky",
+    "pricingSubtitle": "Podpořte BibleBot a svůj sbor správným patronátním balíčkem.",
     "popular": "Oblíbené",
-    "setup": "Nastavení",
     "free": "Zdarma",
     "perYear": "Rok",
     "contact": "Kontaktujte nás",
     "tier": {
       "free": {
-        "name": "Start",
+        "name": "Hořčičné zrnko",
         "size": "Pro všechny sbory"
       },
       "community": {
-        "name": "Komunita",
+        "name": "Průvodce",
         "size": "Do 500 členů"
       },
       "gemeinde": {
-        "name": "Sbor",
+        "name": "Stavitel mostů",
         "size": "500–2 000 členů"
       },
       "kirche": {
-        "name": "Církev",
+        "name": "Maják",
         "size": "Více než 2 000 členů"
       }
     },

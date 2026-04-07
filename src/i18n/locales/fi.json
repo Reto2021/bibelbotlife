@@ -526,28 +526,27 @@
         "desc": "Impulsseja ja keskustelunaiheita ryhmille ja kotipiireille."
       }
     },
-    "pricingTitle": "Kumppanuusmalli",
-    "pricingSubtitle": "Valitse seurakuntaasi sopiva suunnitelma. Kertakäyttöönotto + vuosimaksu.",
+    "pricingTitle": "Kummipaketit",
+    "pricingSubtitle": "Tue BibleBotia ja seurakuntaasi oikealla kummipaketilla.",
     "popular": "Suosittu",
-    "setup": "Käyttöönotto",
     "free": "Ilmainen",
     "perYear": "Vuosi",
     "contact": "Ota yhteyttä",
     "tier": {
       "free": {
-        "name": "Kokeilu",
+        "name": "Sinapinsiemen",
         "size": "Kaikille seurakunnille"
       },
       "community": {
-        "name": "Yhteisö",
+        "name": "Matkatoveri",
         "size": "Enintään 500 jäsentä"
       },
       "gemeinde": {
-        "name": "Seurakunta",
+        "name": "Sillanrakentaja",
         "size": "500–2 000 jäsentä"
       },
       "kirche": {
-        "name": "Kirkko",
+        "name": "Majakka",
         "size": "Yli 2 000 jäsentä"
       }
     },

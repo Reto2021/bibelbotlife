@@ -526,28 +526,27 @@
         "desc": "Impulses and discussion starters for groups and home circles."
       }
     },
-    "pricingTitle": "Partnership Model",
-    "pricingSubtitle": "Choose the plan that fits your church. One-time setup + annual contribution.",
+    "pricingTitle": "Mga pakete ng patronato",
+    "pricingSubtitle": "Suportahan ang BibleBot at ang iyong simbahan sa tamang pakete.",
     "popular": "Popular",
-    "setup": "Setup",
     "free": "Free",
     "perYear": "year",
     "contact": "Get in touch",
     "tier": {
       "free": {
-        "name": "Starter",
+        "name": "Butil ng mustasa",
         "size": "For all churches"
       },
       "community": {
-        "name": "Community",
+        "name": "Kasama sa paglalakbay",
         "size": "Up to 500 members"
       },
       "gemeinde": {
-        "name": "Parish",
+        "name": "Tagapagtayo ng tulay",
         "size": "500–2,000 members"
       },
       "kirche": {
-        "name": "Church",
+        "name": "Parola",
         "size": "Over 2,000 members"
       }
     },

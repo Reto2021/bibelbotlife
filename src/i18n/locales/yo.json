@@ -526,28 +526,27 @@
         "desc": "Impulses and discussion starters for groups and home circles."
       }
     },
-    "pricingTitle": "Partnership Model",
-    "pricingSubtitle": "Choose the plan that fits your church. One-time setup + annual contribution.",
+    "pricingTitle": "Àwọn àpò ìtìlẹ́yìn",
+    "pricingSubtitle": "Ṣe àtìlẹ́yìn BibleBot àti ṣọ́ọ̀ṣì rẹ pẹ̀lú àpò tó tọ́.",
     "popular": "Popular",
-    "setup": "Setup",
     "free": "Free",
     "perYear": "year",
     "contact": "Get in touch",
     "tier": {
       "free": {
-        "name": "Starter",
+        "name": "Irúgbìn mọsitádì",
         "size": "For all churches"
       },
       "community": {
-        "name": "Community",
+        "name": "Alábàákẹ́gbẹ́",
         "size": "Up to 500 members"
       },
       "gemeinde": {
-        "name": "Parish",
+        "name": "Olùkọ́ àfàrá",
         "size": "500–2,000 members"
       },
       "kirche": {
-        "name": "Church",
+        "name": "Ilé ìmọ́lẹ̀",
         "size": "Over 2,000 members"
       }
     },

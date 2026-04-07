@@ -526,28 +526,27 @@
         "desc": "Impulsi i teme za raspravu za grupe i kućne zajednice."
       }
     },
-    "pricingTitle": "Model partnerstva",
-    "pricingSubtitle": "Odaberite plan koji odgovara vašoj crkvi. Jednokratno postavljanje + godišnji doprinos.",
+    "pricingTitle": "Paketi pokroviteljstva",
+    "pricingSubtitle": "Podržite BibleBot i svoju crkvu pravim paketom pokroviteljstva.",
     "popular": "Popularno",
-    "setup": "Postavljanje",
     "free": "Besplatno",
     "perYear": "Godina",
     "contact": "Kontaktirajte nas",
     "tier": {
       "free": {
-        "name": "Probni",
+        "name": "Gorušičino zrno",
         "size": "Za sve crkve"
       },
       "community": {
-        "name": "Zajednica",
+        "name": "Suputnik",
         "size": "Do 500 članova"
       },
       "gemeinde": {
-        "name": "Župa",
+        "name": "Graditelj mostova",
         "size": "500–2.000 članova"
       },
       "kirche": {
-        "name": "Crkva",
+        "name": "Svjetionik",
         "size": "Preko 2.000 članova"
       }
     },

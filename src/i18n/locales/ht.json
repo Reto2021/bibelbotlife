@@ -526,28 +526,27 @@
         "desc": "Impulses and discussion starters for groups and home circles."
       }
     },
-    "pricingTitle": "Partnership Model",
-    "pricingSubtitle": "Choose the plan that fits your church. One-time setup + annual contribution.",
+    "pricingTitle": "Pakè patwonaj",
+    "pricingSubtitle": "Sipòte BibleBot ak legliz ou ak bon pakè patwonaj la.",
     "popular": "Popular",
-    "setup": "Setup",
     "free": "Free",
     "perYear": "year",
     "contact": "Get in touch",
     "tier": {
       "free": {
-        "name": "Starter",
+        "name": "Grenn moutad",
         "size": "For all churches"
       },
       "community": {
-        "name": "Community",
+        "name": "Konpayon",
         "size": "Up to 500 members"
       },
       "gemeinde": {
-        "name": "Parish",
+        "name": "Konstwiktè pon",
         "size": "500–2,000 members"
       },
       "kirche": {
-        "name": "Church",
+        "name": "Fa",
         "size": "Over 2,000 members"
       }
     },

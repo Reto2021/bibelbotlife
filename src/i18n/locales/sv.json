@@ -526,28 +526,27 @@
         "desc": "Impulser och diskussionsämnen för grupper och hemgrupper."
       }
     },
-    "pricingTitle": "Partnerskapsmodell",
-    "pricingSubtitle": "Välj planen som passar din kyrka. Engångsuppställning + årligt bidrag.",
+    "pricingTitle": "Patronatspaket",
+    "pricingSubtitle": "Stöd BibleBot och din församling med rätt patronatspaket.",
     "popular": "Populär",
-    "setup": "Uppställning",
     "free": "Gratis",
     "perYear": "År",
     "contact": "Kontakta oss",
     "tier": {
       "free": {
-        "name": "Prov",
+        "name": "Senapsfrö",
         "size": "För alla kyrkor"
       },
       "community": {
-        "name": "Gemenskap",
+        "name": "Reskamrat",
         "size": "Upp till 500 medlemmar"
       },
       "gemeinde": {
-        "name": "Församling",
+        "name": "Brobyggare",
         "size": "500–2 000 medlemmar"
       },
       "kirche": {
-        "name": "Kyrka",
+        "name": "Fyr",
         "size": "Över 2 000 medlemmar"
       }
     },

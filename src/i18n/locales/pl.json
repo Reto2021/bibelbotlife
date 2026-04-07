@@ -526,28 +526,27 @@
         "desc": "Impulsy i tematy do dyskusji dla grup i kółek domowych."
       }
     },
-    "pricingTitle": "Model partnerski",
-    "pricingSubtitle": "Wybierz plan pasujący do Twojego kościoła. Jednorazowa konfiguracja + roczna składka.",
+    "pricingTitle": "Pakiety patronackie",
+    "pricingSubtitle": "Wesprzyj BibleBot i swój kościół odpowiednim pakietem patronackim.",
     "popular": "Popularny",
-    "setup": "Konfiguracja",
     "free": "Bezpłatnie",
     "perYear": "Rok",
     "contact": "Skontaktuj się",
     "tier": {
       "free": {
-        "name": "Start",
+        "name": "Ziarno gorczycy",
         "size": "Dla wszystkich kościołów"
       },
       "community": {
-        "name": "Wspólnota",
+        "name": "Towarzysz drogi",
         "size": "Do 500 członków"
       },
       "gemeinde": {
-        "name": "Parafia",
+        "name": "Budowniczy mostów",
         "size": "500–2 000 członków"
       },
       "kirche": {
-        "name": "Kościół",
+        "name": "Latarnia morska",
         "size": "Ponad 2 000 członków"
       }
     },

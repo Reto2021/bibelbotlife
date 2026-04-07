@@ -526,28 +526,27 @@
         "desc": "Impulses and discussion starters for groups and home circles."
       }
     },
-    "pricingTitle": "Partnership Model",
-    "pricingSubtitle": "Choose the plan that fits your church. One-time setup + annual contribution.",
+    "pricingTitle": "赞助套餐",
+    "pricingSubtitle": "选择合适的赞助套餐，支持 BibleBot 和您的教会。",
     "popular": "Popular",
-    "setup": "Setup",
     "free": "Free",
     "perYear": "year",
     "contact": "Get in touch",
     "tier": {
       "free": {
-        "name": "Starter",
+        "name": "芥菜种",
         "size": "For all churches"
       },
       "community": {
-        "name": "Community",
+        "name": "同行者",
         "size": "Up to 500 members"
       },
       "gemeinde": {
-        "name": "Parish",
+        "name": "搭桥者",
         "size": "500–2,000 members"
       },
       "kirche": {
-        "name": "Church",
+        "name": "灯塔",
         "size": "Over 2,000 members"
       }
     },
