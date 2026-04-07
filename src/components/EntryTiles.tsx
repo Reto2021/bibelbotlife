@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { openBibelBotChat } from "@/lib/chat-events";
 import { openLifeWheel } from "@/components/LifeWheel";
+import { useTrack } from "@/components/AnalyticsProvider";
 import { cn } from "@/lib/utils";
 
 type TileConfig = {
@@ -74,8 +75,10 @@ export function EntryTiles() {
   }, [checkScroll]);
 
   const { t } = useTranslation();
+  const { track } = useTrack();
 
   const handleClick = (tile: TileConfig) => {
+    track("tile_click", { tile: tile.key, special: tile.special || "chat" });
     if (tile.special === "lifewheel") {
       openLifeWheel();
     } else if (tile.special === "sevenwhys") {

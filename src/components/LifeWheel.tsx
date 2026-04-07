@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import { RadarChart, PolarGrid, PolarAngleAxis, Radar, ResponsiveContainer } from "recharts";
 import { openBibelBotChat } from "@/lib/chat-events";
+import { useTrack } from "@/components/AnalyticsProvider";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 import { cn } from "@/lib/utils";
@@ -261,6 +262,7 @@ export function LifeWheelProvider({ children }: { children: React.ReactNode }) {
 
 function LifeWheelInner({ onClose }: { onClose: () => void }) {
   const { t } = useTranslation();
+  const { track } = useTrack();
   const [step, setStep] = useState<Step>("intro");
   const [scores, setScores] = useState<Record<AreaKey, number>>(
     () => Object.fromEntries(AREAS.map(a => [a.key, 5])) as Record<AreaKey, number>
@@ -300,6 +302,7 @@ function LifeWheelInner({ onClose }: { onClose: () => void }) {
   const handleGetImpulse = () => {
     const areaName = t(`lifeWheel.areas.${weakest}`);
     const prompt = t("lifeWheel.prompt", { area: areaName, score: scores[weakest] });
+    track("lifewheel_complete", { weakest, scores, average: parseFloat(average) });
     onClose();
     setTimeout(() => openBibelBotChat(prompt), 300);
   };
