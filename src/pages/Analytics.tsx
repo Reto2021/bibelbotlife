@@ -475,7 +475,50 @@ const Analytics = () => {
           </CardContent>
         </Card>
 
-        <Card>
+        {/* Referrer-Trend */}
+        {(data?.referrerTrend?.length ?? 0) > 1 && (
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-base flex items-center gap-2">
+                <TrendingUp className="h-4 w-4 text-primary" />
+                Referrer-Trend
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="h-48">
+                <ResponsiveContainer width="100%" height="100%">
+                  <AreaChart data={data?.referrerTrend?.map((d) => ({ ...d, date: String(d.date).slice(5) }))}>
+                    <CartesianGrid strokeDasharray="3 3" className="stroke-border" />
+                    <XAxis dataKey="date" tick={{ fontSize: 10 }} className="fill-muted-foreground" />
+                    <YAxis tick={{ fontSize: 10 }} className="fill-muted-foreground" allowDecimals={false} />
+                    <RTooltip contentStyle={{ background: "hsl(var(--card))", border: "1px solid hsl(var(--border))", borderRadius: 8, fontSize: 12 }} />
+                    {data?.referrerTrendKeys?.map((key, i) => (
+                      <Area
+                        key={key}
+                        type="monotone"
+                        dataKey={key}
+                        stackId="1"
+                        fill={COLORS[i % COLORS.length]}
+                        stroke={COLORS[i % COLORS.length]}
+                        fillOpacity={0.4}
+                        strokeWidth={1.5}
+                      />
+                    ))}
+                  </AreaChart>
+                </ResponsiveContainer>
+              </div>
+              <div className="flex flex-wrap gap-3 mt-3">
+                {data?.referrerTrendKeys?.map((key, i) => (
+                  <div key={key} className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                    <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: COLORS[i % COLORS.length] }} />
+                    {key}
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        )}
+
           <CardHeader className="pb-2">
             <CardTitle className="text-base">User Flows</CardTitle>
           </CardHeader>
