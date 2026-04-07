@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   BarChart3, Eye, MousePointer, Users, Smartphone, Monitor, Tablet,
-  MessageCircle, Flame, Trophy, Bell, TrendingUp,
+  MessageCircle, Flame, Trophy, Bell, TrendingUp, Download,
 } from "lucide-react";
 import {
   BarChart, Bar, XAxis, YAxis, Tooltip as RTooltip, ResponsiveContainer,
@@ -124,6 +124,38 @@ const Analytics = () => {
     );
   }
 
+  const exportCSV = () => {
+    if (!data) return;
+    const rows: string[][] = [["Kategorie", "Metrik", "Wert"]];
+    rows.push(["Übersicht", "Seitenaufrufe", String(data.summary.totalPageviews)]);
+    rows.push(["Übersicht", "Sessions", String(data.summary.uniqueSessions)]);
+    rows.push(["Übersicht", "Events", String(data.summary.totalEvents)]);
+    rows.push(["Chat", "Nutzer", String(data.chat?.uniqueUsers || 0)]);
+    rows.push(["Chat", "User-Nachrichten", String(data.chat?.totalUserMessages || 0)]);
+    rows.push(["Chat", "Bot-Antworten", String(data.chat?.totalBotMessages || 0)]);
+    rows.push(["Chat", "Ø Nachr./Person", String(data.chat?.avgMessagesPerUser || 0)]);
+    rows.push(["Journey", "Gestartet", String(data.journey?.starts || 0)]);
+    rows.push(["Journey", "Abgeschlossen", String(data.journey?.completes || 0)]);
+    rows.push(["Abonnenten", "Total", String(data.subscribers?.total || 0)]);
+    rows.push(["Abonnenten", "Aktiv", String(data.subscribers?.active || 0)]);
+    Object.entries(data.devices || {}).forEach(([k, v]) => rows.push(["Geräte", k, String(v)]));
+    Object.entries(data.dailyPageviews || {}).forEach(([date, count]) => rows.push(["Seitenaufrufe", date, String(count)]));
+    Object.entries(data.chat?.dailyActivity || {}).forEach(([date, count]) => rows.push(["Chat-Aktivität", date, String(count)]));
+    data.topPages?.forEach((p) => rows.push(["Top Seiten", p.path, String(p.count)]));
+    data.topEvents?.forEach((e) => rows.push(["Top Events", e.name, String(e.count)]));
+    Object.entries(data.subscribers?.byChannel || {}).forEach(([ch, total]) =>
+      rows.push(["Abonnenten-Kanal", ch, `${total} (aktiv: ${data.subscribers?.activeByChannel?.[ch] || 0})`])
+    );
+    const csv = rows.map((r) => r.map((c) => `"${c.replace(/"/g, '""')}"`).join(",")).join("\n");
+    const blob = new Blob(["\uFEFF" + csv], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `bibelbot-analytics-${days}d.csv`;
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
   // Prepare chart data
   const dailyData = Object.entries(data?.dailyPageviews || {}).map(([date, count]) => ({
     date: date.slice(5),
@@ -166,6 +198,10 @@ const Analytics = () => {
                 {d}T
               </Button>
             ))}
+            <Button variant="outline" size="sm" onClick={exportCSV} disabled={!data}>
+              <Download className="h-4 w-4" />
+              <span className="hidden sm:inline">CSV</span>
+            </Button>
           </div>
         </div>
 
