@@ -121,7 +121,7 @@ export function EntryTiles() {
                 desc={t(`tiles.${tile.key}.desc`)}
                 onClick={() => handleClick(tile)}
                 index={i}
-                className="min-w-[260px] max-w-[280px] snap-start flex-shrink-0"
+                className="min-w-[220px] max-w-[250px] snap-start flex-shrink-0"
               />
             ))}
             {/* Spacer to prevent last tile from being clipped */}
