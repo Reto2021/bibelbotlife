@@ -152,6 +152,81 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Unterschied zu generischen KI-Bots */}
+      <section className="py-20 px-4 bg-card/40">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-secondary bg-secondary/10 px-4 py-1.5 rounded-full mb-4">
+              <Sparkles className="h-4 w-4" />
+              Spezialisiert statt generisch
+            </div>
+            <h2 className="text-4xl font-bold text-foreground mb-4">
+              Was BibelBot von ChatGPT & Co. unterscheidet
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Generische KI-Chatbots wissen viel über alles – aber wenig über die Bibel im seelsorgerischen Kontext.
+              BibelBot ist anders konzipiert.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="bg-card/60 border-border">
+              <CardHeader>
+                <CardTitle className="text-lg text-muted-foreground flex items-center gap-2">
+                  <div className="h-8 w-8 rounded-full bg-muted flex items-center justify-center">
+                    <MessageCircle className="h-4 w-4 text-muted-foreground" />
+                  </div>
+                  Generischer KI-Chatbot
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                {[
+                  "Gibt oberflächliche Bibelzitate ohne Kontext",
+                  "Kein theologisches Bewusstsein für Auslegungstraditionen",
+                  "Keine seelsorgerischen Guardrails bei sensiblen Themen",
+                  "Keine Krisenintervention – erkennt Suizidalität nicht zuverlässig",
+                  "Mischt Bibel mit beliebiger Esoterik oder Selbsthilfe",
+                  "Kann nicht zwischen Konfessionen differenzieren",
+                  "Keine psychologische Fundierung der Begleitung",
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-2">
+                    <XIcon className="h-4 w-4 text-destructive shrink-0 mt-0.5" />
+                    <p className="text-muted-foreground text-sm">{item}</p>
+                  </div>
+                ))}
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card border-primary/30 shadow-lg ring-1 ring-primary/10">
+              <CardHeader>
+                <CardTitle className="text-lg text-card-foreground flex items-center gap-2">
+                  <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center">
+                    <BookOpen className="h-4 w-4 text-primary" />
+                  </div>
+                  BibelBot.ch
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                {[
+                  "Zitiert aus 5 anerkannten Bibelübersetzungen mit Quellenangabe",
+                  "Kennt reformierte, katholische und freikirchliche Auslegungstraditionen",
+                  "Strenge seelsorgerische Guardrails – validiert Gefühle vor Ratschlägen",
+                  "Verweist bei Krisen sofort an Dargebotene Hand (143) und Pro Juventute (147)",
+                  "Arbeitet ausschliesslich mit christlicher Theologie und peer-reviewed Psychologie",
+                  "Differenziert zwischen Konfessionen und zeigt verschiedene Perspektiven",
+                  "Basiert auf PERMA, Logotherapie, Dankbarkeitsforschung und REACH-Modell",
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-2">
+                    <Check className="h-4 w-4 text-whatsapp shrink-0 mt-0.5" />
+                    <p className="text-foreground/90 text-sm">{item}</p>
+                  </div>
+                ))}
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Ökumenische Bibelquellen */}
       <section className="py-20 px-4 bg-card/40">
         <div className="container mx-auto max-w-5xl">
