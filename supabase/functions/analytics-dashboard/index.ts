@@ -10,7 +10,6 @@ Deno.serve(async (req) => {
     return new Response("ok", { headers: corsHeaders });
   }
 
-  // Simple password protection
   const url = new URL(req.url);
   const key = url.searchParams.get("key");
   const ADMIN_KEY = Deno.env.get("ANALYTICS_ADMIN_KEY") || "bibelbot2025";
@@ -30,22 +29,36 @@ Deno.serve(async (req) => {
   const days = parseInt(url.searchParams.get("days") || "7");
   const since = new Date(Date.now() - days * 86400000).toISOString();
 
-  // Fetch all events for the period
-  const { data: events, error } = await supabase
-    .from("analytics_events")
-    .select("*")
-    .gte("created_at", since)
-    .order("created_at", { ascending: true })
-    .limit(5000);
+  // Fetch events + subscribers + telegram messages in parallel
+  const [eventsRes, subscribersRes, telegramRes] = await Promise.all([
+    supabase
+      .from("analytics_events")
+      .select("*")
+      .gte("created_at", since)
+      .order("created_at", { ascending: true })
+      .limit(5000),
+    supabase
+      .from("daily_subscribers")
+      .select("*"),
+    supabase
+      .from("telegram_messages")
+      .select("chat_id, role, created_at")
+      .order("created_at", { ascending: true })
+      .limit(10000),
+  ]);
 
-  if (error) {
-    return new Response(JSON.stringify({ error: error.message }), {
+  if (eventsRes.error) {
+    return new Response(JSON.stringify({ error: eventsRes.error.message }), {
       status: 500,
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   }
 
-  // Aggregate stats
+  const events = eventsRes.data || [];
+  const subscribers = subscribersRes.data || [];
+  const telegramMsgs = telegramRes.data || [];
+
+  // ── Aggregate basic stats ──
   const pageviews = events.filter((e: any) => e.event_type === "pageview");
   const customEvents = events.filter((e: any) => e.event_type === "event");
   const sessions = new Set(events.map((e: any) => e.session_id));
@@ -89,7 +102,7 @@ Deno.serve(async (req) => {
     dailyCounts[day] = (dailyCounts[day] || 0) + 1;
   });
 
-  // User flows (top 5 session paths)
+  // User flows
   const sessionPaths: Record<string, string[]> = {};
   pageviews.forEach((e: any) => {
     if (!sessionPaths[e.session_id]) sessionPaths[e.session_id] = [];
@@ -105,6 +118,53 @@ Deno.serve(async (req) => {
     .slice(0, 10)
     .map(([flow, count]) => ({ flow, count }));
 
+  // ── Journey (21-Tage-Coaching) stats ──
+  const journeyEvents = customEvents.filter((e: any) =>
+    ["journey_start", "journey_progress", "journey_complete"].includes(e.event_name)
+  );
+  const journeyStarts = journeyEvents.filter((e: any) => e.event_name === "journey_start").length;
+  const journeyCompletes = journeyEvents.filter((e: any) => e.event_name === "journey_complete").length;
+
+  // Progress by day
+  const progressByDay: Record<number, number> = {};
+  journeyEvents
+    .filter((e: any) => e.event_name === "journey_progress")
+    .forEach((e: any) => {
+      const day = e.event_data?.day;
+      if (day) progressByDay[day] = (progressByDay[day] || 0) + 1;
+    });
+  const journeyProgressChart = Array.from({ length: 21 }, (_, i) => ({
+    day: i + 1,
+    interactions: progressByDay[i + 1] || 0,
+  }));
+
+  // ── Subscriber stats ──
+  const subsByChannel: Record<string, number> = {};
+  const activeSubsByChannel: Record<string, number> = {};
+  subscribers.forEach((s: any) => {
+    subsByChannel[s.channel] = (subsByChannel[s.channel] || 0) + 1;
+    if (s.is_active) activeSubsByChannel[s.channel] = (activeSubsByChannel[s.channel] || 0) + 1;
+  });
+
+  // ── Chat stats (Telegram) ──
+  const uniqueChatters = new Set(telegramMsgs.filter((m: any) => m.role === "user").map((m: any) => m.chat_id));
+  const userMessages = telegramMsgs.filter((m: any) => m.role === "user").length;
+  const botMessages = telegramMsgs.filter((m: any) => m.role === "assistant").length;
+
+  // Messages per user
+  const msgsPerUser: Record<string, number> = {};
+  telegramMsgs.filter((m: any) => m.role === "user").forEach((m: any) => {
+    msgsPerUser[m.chat_id] = (msgsPerUser[m.chat_id] || 0) + 1;
+  });
+  const avgMsgsPerUser = uniqueChatters.size > 0 ? Math.round(userMessages / uniqueChatters.size * 10) / 10 : 0;
+
+  // Daily chat activity
+  const dailyChats: Record<string, number> = {};
+  telegramMsgs.forEach((m: any) => {
+    const day = m.created_at.split("T")[0];
+    dailyChats[day] = (dailyChats[day] || 0) + 1;
+  });
+
   const result = {
     period: { days, since },
     summary: {
@@ -117,6 +177,24 @@ Deno.serve(async (req) => {
     devices,
     dailyPageviews: dailyCounts,
     topFlows,
+    journey: {
+      starts: journeyStarts,
+      completes: journeyCompletes,
+      progressChart: journeyProgressChart,
+    },
+    subscribers: {
+      total: subscribers.length,
+      active: subscribers.filter((s: any) => s.is_active).length,
+      byChannel: subsByChannel,
+      activeByChannel: activeSubsByChannel,
+    },
+    chat: {
+      uniqueUsers: uniqueChatters.size,
+      totalUserMessages: userMessages,
+      totalBotMessages: botMessages,
+      avgMessagesPerUser: avgMsgsPerUser,
+      dailyActivity: dailyChats,
+    },
   };
 
   return new Response(JSON.stringify(result), {
