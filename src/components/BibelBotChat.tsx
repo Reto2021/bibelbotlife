@@ -1,9 +1,13 @@
 import { useState, useRef, useEffect, useCallback } from "react";
-import { Send, X, MessageCircle, Loader2 } from "lucide-react";
+import { Send, X, MessageCircle, Loader2, Mic, MicOff } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import ReactMarkdown from "react-markdown";
 import { useToast } from "@/hooks/use-toast";
+
+const SpeechRecognition =
+  (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+
 
 type Message = { role: "user" | "assistant"; content: string };
 
@@ -20,9 +24,45 @@ export function BibelBotChat() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [isListening, setIsListening] = useState(false);
+  const recognitionRef = useRef<any>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const { toast } = useToast();
+
+  const startListening = useCallback(() => {
+    if (!SpeechRecognition) {
+      toast({
+        title: "Nicht unterstützt",
+        description: "Dein Browser unterstützt keine Spracheingabe.",
+        variant: "destructive",
+      });
+      return;
+    }
+    const recognition = new SpeechRecognition();
+    recognition.lang = "de-CH";
+    recognition.continuous = false;
+    recognition.interimResults = true;
+
+    recognition.onresult = (event: any) => {
+      const transcript = Array.from(event.results)
+        .map((r: any) => r[0].transcript)
+        .join("");
+      setInput(transcript);
+    };
+
+    recognition.onend = () => setIsListening(false);
+    recognition.onerror = () => setIsListening(false);
+
+    recognitionRef.current = recognition;
+    recognition.start();
+    setIsListening(true);
+  }, [toast]);
+
+  const stopListening = useCallback(() => {
+    recognitionRef.current?.stop();
+    setIsListening(false);
+  }, []);
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -227,6 +267,17 @@ export function BibelBotChat() {
             className="min-h-[40px] max-h-[100px] resize-none text-sm"
             rows={1}
           />
+          {SpeechRecognition && (
+            <Button
+              size="icon"
+              variant={isListening ? "destructive" : "outline"}
+              onClick={isListening ? stopListening : startListening}
+              className="h-10 w-10 shrink-0"
+              aria-label={isListening ? "Aufnahme stoppen" : "Spracheingabe starten"}
+            >
+              {isListening ? <MicOff className="h-4 w-4" /> : <Mic className="h-4 w-4" />}
+            </Button>
+          )}
           <Button
             size="icon"
             onClick={() => sendMessage(input)}
