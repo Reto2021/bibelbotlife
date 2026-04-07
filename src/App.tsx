@@ -12,6 +12,9 @@ const Index = lazy(() => import("./pages/Index"));
 const Impressum = lazy(() => import("./pages/Impressum"));
 const Datenschutz = lazy(() => import("./pages/Datenschutz"));
 const Analytics = lazy(() => import("./pages/Analytics"));
+const ForChurches = lazy(() => import("./pages/ForChurches"));
+const ChurchDirectory = lazy(() => import("./pages/ChurchDirectory"));
+const ChurchPartner = lazy(() => import("./pages/ChurchPartner"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -38,6 +41,9 @@ const App = () => (
               <Route path="/impressum" element={<Impressum />} />
               <Route path="/datenschutz" element={<Datenschutz />} />
               <Route path="/analytics" element={<Analytics />} />
+              <Route path="/for-churches" element={<ForChurches />} />
+              <Route path="/churches" element={<ChurchDirectory />} />
+              <Route path="/church/:slug" element={<ChurchPartner />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
