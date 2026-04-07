@@ -18,7 +18,7 @@ import {
 const SpeechRecognition =
   (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
 
-import { CHAT_OPEN_EVENT } from "@/lib/chat-events";
+import { CHAT_OPEN_EVENT, type ChatMode } from "@/lib/chat-events";
 export { openBibelBotChat } from "@/lib/chat-events";
 
 const BIBLE_REF_PATTERN = /(\d\.\s?)?(?:Genesis|Exodus|Levitikus|Numeri|Deuteronomium|Josua|Richter|Rut|Samuel|Könige|Chronik|Esra|Nehemia|Ester|Hiob|Psalm|Psalmen|Sprüche|Prediger|Hoheslied|Jesaja|Jeremia|Klagelieder|Ezechiel|Daniel|Hosea|Joel|Amos|Obadja|Jona|Micha|Nahum|Habakuk|Zefanja|Haggai|Sacharja|Maleachi|Matthäus|Markus|Lukas|Johannes|Apostelgeschichte|Römer|Korinther|Galater|Epheser|Philipper|Kolosser|Thessalonicher|Timotheus|Titus|Philemon|Hebräer|Jakobus|Petrus|Judas|Offenbarung|Mose|Gen|Ex|Lev|Num|Dtn|Jos|Ri|Kön|Chr|Esr|Neh|Est|Ps|Spr|Pred|Hld|Jes|Jer|Klgl|Ez|Dan|Hos|Am|Ob|Jon|Mi|Nah|Hab|Zef|Hag|Sach|Mal|Mt|Mk|Lk|Joh|Apg|Röm|Kor|Gal|Eph|Phil|Kol|Thess|Tim|Tit|Phlm|Hebr|Jak|Petr|Jud|Offb|Matthew|Mark|Luke|John|Acts|Romans|Corinthians|Galatians|Ephesians|Philippians|Colossians|Thessalonians|Timothy|Hebrews|James|Peter|Jude|Revelation)\s+\d+(?:[,:]\d+(?:[\-–]\d+)?)?/g;
@@ -191,6 +191,7 @@ function getSpeechLang(lang: string): string {
 export function BibelBotChat() {
   const { t, i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
+  const [chatMode, setChatMode] = useState<ChatMode>("normal");
   const [showTeaser, setShowTeaser] = useState(false);
   const [messages, setMessages] = useState<Message[]>(loadMessages);
   const [journeyDay, setJourneyDay] = useState(getJourneyDay);
@@ -324,7 +325,7 @@ export function BibelBotChat() {
         const resp = await fetch(CHAT_URL, {
           method: "POST",
           headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}` },
-          body: JSON.stringify({ messages: contextMessages, journeyDay: journeyDay || 1, language: i18n.language }),
+          body: JSON.stringify({ messages: contextMessages, journeyDay: journeyDay || 1, language: i18n.language, mode: chatMode }),
         });
 
         if (!resp.ok) {
@@ -394,7 +395,10 @@ export function BibelBotChat() {
 
   useEffect(() => {
     const handler = (e: Event) => {
-      const msg = (e as CustomEvent).detail as string;
+      const detail = (e as CustomEvent).detail;
+      const msg = typeof detail === "string" ? detail : detail?.message;
+      const mode: ChatMode = typeof detail === "string" ? "normal" : (detail?.mode || "normal");
+      setChatMode(mode);
       setIsOpen(true);
       setShowTeaser(false);
       setTimeout(() => sendMessage(msg), 300);
