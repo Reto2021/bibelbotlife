@@ -5,6 +5,7 @@ import { BibelBotChat } from "@/components/BibelBotChat";
 import { DailyImpulse } from "@/components/DailyImpulse";
 import { Separator } from "@/components/ui/separator";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Link } from "react-router-dom";
 
 const WHATSAPP_LINK = "https://wa.me/41XXXXXXXXXX?text=Hallo%20BibelBot!";
 
@@ -675,8 +676,15 @@ const Index = () => {
                 <p>Spenden sind nicht steuerabzugsfähig</p>
               </div>
             </div>
-            <p className="text-background/50 text-sm text-center">
-              © 2026 BibelBot.ch – Mit ❤️ für alle, die sich fragen, was Christus denkt.
+            <div className="flex items-center justify-center gap-4 text-background/50 text-sm">
+              <span>© 2026 BibelBot.ch</span>
+              <span>·</span>
+              <Link to="/impressum" className="hover:text-background/80 underline underline-offset-2">Impressum</Link>
+              <span>·</span>
+              <Link to="/datenschutz" className="hover:text-background/80 underline underline-offset-2">Datenschutz</Link>
+            </div>
+            <p className="text-background/50 text-sm text-center mt-2">
+              Mit ❤️ für alle, die sich fragen, was Christus denkt.
             </p>
           </div>
         </div>
