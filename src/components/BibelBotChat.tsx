@@ -36,8 +36,11 @@ function saveBotName(name: string) {
   } catch {}
 }
 
+const AUTO_OPEN_KEY = "bibelbot-autoopened";
+
 export function BibelBotChat() {
   const [isOpen, setIsOpen] = useState(false);
+  const [showTeaser, setShowTeaser] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -83,6 +86,28 @@ export function BibelBotChat() {
     recognitionRef.current?.stop();
     setIsListening(false);
   }, []);
+
+  // Auto-open after 5s (once per session) + teaser bubble
+  useEffect(() => {
+    const alreadyOpened = sessionStorage.getItem(AUTO_OPEN_KEY);
+    if (alreadyOpened) return;
+
+    const teaserTimer = setTimeout(() => setShowTeaser(true), 2000);
+    const openTimer = setTimeout(() => {
+      setIsOpen(true);
+      setShowTeaser(false);
+      sessionStorage.setItem(AUTO_OPEN_KEY, "1");
+    }, 5000);
+
+    return () => {
+      clearTimeout(teaserTimer);
+      clearTimeout(openTimer);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isOpen) setShowTeaser(false);
+  }, [isOpen]);
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -199,13 +224,21 @@ export function BibelBotChat() {
 
   if (!isOpen) {
     return (
-      <button
-        onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 z-50 h-14 w-14 rounded-full bg-primary text-primary-foreground shadow-lg hover:bg-primary/90 transition-all flex items-center justify-center"
-        aria-label="Chat öffnen"
-      >
-        <MessageCircle className="h-6 w-6" />
-      </button>
+      <div className="fixed bottom-6 right-6 z-50 flex items-end gap-3">
+        {showTeaser && (
+          <div className="animate-in fade-in slide-in-from-right-4 duration-500 bg-card border border-border rounded-2xl rounded-br-md px-4 py-3 shadow-lg max-w-[220px]">
+            <p className="text-sm text-foreground font-medium">Hast du eine Frage zur Bibel? 📖</p>
+            <p className="text-xs text-muted-foreground mt-1">Ich bin hier für dich.</p>
+          </div>
+        )}
+        <button
+          onClick={() => setIsOpen(true)}
+          className="h-14 w-14 rounded-full bg-primary text-primary-foreground shadow-lg hover:bg-primary/90 transition-all flex items-center justify-center animate-bounce-gentle"
+          aria-label="Chat öffnen"
+        >
+          <MessageCircle className="h-6 w-6" />
+        </button>
+      </div>
     );
   }
 
