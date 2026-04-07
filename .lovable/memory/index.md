@@ -1,11 +1,11 @@
 # Project Memory
 
 ## Core
-BibelBot.Life - Bibel-Begleiter Projekt. Schweizer Deutsch (CH) als Standard.
+BibelBot.ch - Bibel-Chatbot Projekt. Schweizer Deutsch (CH) als Standard.
 Kein ß verwenden - immer "ss" (Deutsch Schweiz). Auch in Chat-Antworten.
-Schweizerdeutsch als Audio-Eingabesprache für Audio-Chat.
-Markenname: BibelBot.Life. Kein «KI» im Marketing/SEO/Social Sharing.
+Schweizerdeutsch als KI-Audio-Eingabesprache für Audio-Chat.
 
 ## Memories
 - [Sprachregeln](mem://preference/sprache) — Schweizer Deutsch, kein ß, Audio-Eingabe Schweizerdeutsch
-- [Branding](mem://preference/branding) — BibelBot.Life als Markenname, kein KI im Marketing
+- [Branding](mem://preference/branding) — BibelBot.Life Markenname, kein KI im Marketing
+- [Church Partnership](mem://feature/church-partnership) — Gestaffeltes Pricing: Setup CHF 490–1990 + Jahresbeitrag CHF 790–2990, 4 Tiers

@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import { useTranslation } from "react-i18next";
 import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, Shield, GraduationCap, Church, Quote, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass, Send } from "lucide-react";
+import { ChurchBanner } from "@/components/ChurchBanner";
 import { ReferralSection } from "@/components/ReferralSection";
 import { EntryTiles } from "@/components/EntryTiles";
 import { LifeWheelProvider } from "@/components/LifeWheel";
@@ -54,6 +55,7 @@ const Index = () => {
   return (
     <LifeWheelProvider>
     <div className="min-h-screen" style={{ background: "var(--gradient-hero)" }}>
+      <ChurchBanner />
       {/* Navigation */}
       <nav className="bg-card/80 backdrop-blur-sm border-b border-border sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -512,6 +514,8 @@ const Index = () => {
               <Link to="/impressum" className="hover:text-background/80 underline underline-offset-2">{t("footer.impressum")}</Link>
               <span>·</span>
               <Link to="/datenschutz" className="hover:text-background/80 underline underline-offset-2">{t("footer.datenschutz")}</Link>
+              <span>·</span>
+              <Link to="/for-churches" className="hover:text-background/80 underline underline-offset-2">{t("footer.forChurches")}</Link>
             </div>
             <p className="text-background/50 text-sm text-center mt-2">{t("footer.love")}</p>
           </div>
