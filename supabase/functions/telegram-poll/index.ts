@@ -91,7 +91,7 @@ Deno.serve(async () => {
         if (!row.text) continue;
         
         try {
-          await generateAndSendReply(row.chat_id, row.text, LOVABLE_API_KEY, TELEGRAM_API_KEY, supabaseUrl);
+          await generateAndSendReply(row.chat_id, row.text, LOVABLE_API_KEY, TELEGRAM_API_KEY, supabase);
         } catch (err) {
           console.error(`Failed to reply to chat ${row.chat_id}:`, err);
         }
@@ -124,9 +124,24 @@ async function generateAndSendReply(
   userText: string,
   lovableApiKey: string,
   telegramApiKey: string,
-  supabaseUrl: string
+  supabase: any
 ) {
-  // Call bibelbot-chat (non-streaming for simplicity in Telegram context)
+  // Fetch last 20 messages from this chat for conversation context
+  const { data: history } = await supabase
+    .from('telegram_messages')
+    .select('text, role')
+    .eq('chat_id', chatId)
+    .not('text', 'is', null)
+    .order('created_at', { ascending: true })
+    .limit(20);
+
+  // Build conversation messages from history
+  const conversationMessages = (history || []).map((msg: any) => ({
+    role: msg.role === 'assistant' ? 'assistant' : 'user',
+    content: msg.text,
+  }));
+
+  // Call AI with full conversation context
   const chatResponse = await fetch(
     "https://ai.gateway.lovable.dev/v1/chat/completions",
     {
@@ -140,9 +155,9 @@ async function generateAndSendReply(
         messages: [
           {
             role: "system",
-            content: `Du bist BibelBot – ein einfühlsamer, weiser Begleiter für Menschen, die an der Bibel wachsen wollen. Du sprichst Deutsch (Schweiz), kein ß. Halte Antworten unter 4000 Zeichen (Telegram-Limit). Verwende Markdown-Formatierung sparsam (Telegram unterstützt nur *bold*, _italic_, \`code\`). Antworte fokussiert und warmherzig.`
+            content: `Du bist BibelBot – ein einfühlsamer, weiser Begleiter für Menschen, die an der Bibel wachsen wollen. Du sprichst Deutsch (Schweiz), kein ß. Halte Antworten unter 4000 Zeichen (Telegram-Limit). Verwende Markdown-Formatierung sparsam (Telegram unterstützt nur *bold*, _italic_, \`code\`). Antworte fokussiert und warmherzig. Du erinnerst dich an den bisherigen Gesprächsverlauf.`
           },
-          { role: "user", content: userText },
+          ...conversationMessages,
         ],
         stream: false,
       }),
@@ -156,6 +171,15 @@ async function generateAndSendReply(
 
   const chatData = await chatResponse.json();
   const replyText = chatData.choices?.[0]?.message?.content || "Entschuldige, ich konnte gerade keine Antwort generieren. Bitte versuche es nochmal.";
+
+  // Store bot reply in telegram_messages for future context
+  await supabase.from('telegram_messages').insert({
+    update_id: Date.now(),
+    chat_id: chatId,
+    text: replyText,
+    role: 'assistant',
+    raw_update: { type: 'bot_reply', chat_id: chatId },
+  });
 
   // Send reply via Telegram
   const sendResponse = await fetch(`${GATEWAY_URL}/sendMessage`, {
@@ -173,7 +197,6 @@ async function generateAndSendReply(
   });
 
   if (!sendResponse.ok) {
-    // Retry without parse_mode in case Markdown is invalid
     const retryResponse = await fetch(`${GATEWAY_URL}/sendMessage`, {
       method: 'POST',
       headers: {
