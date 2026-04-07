@@ -106,24 +106,11 @@ const ForChurches = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="text-center mb-6">
-                    {tier.setup > 0 && (
-                      <p className="text-sm text-muted-foreground mb-1">
-                        {t("church.setup")}: <span className="font-semibold text-foreground">CHF {tier.setup.toLocaleString("de-CH")}</span>
-                      </p>
-                    )}
                     <p className="text-3xl font-bold text-foreground">
-                      {tier.annual === 0 ? t("church.free") : `CHF ${tier.annual.toLocaleString("de-CH")}`}
+                      {tier.annual === 0 ? "CHF 0.–" : `CHF ${tier.annual.toLocaleString("de-CH")}.–`}
                     </p>
                     {tier.annual > 0 && <p className="text-xs text-muted-foreground">/{t("church.perYear")}</p>}
                   </div>
-                  <ul className="space-y-2">
-                    {tier.features.map((f) => (
-                      <li key={f} className="flex items-start gap-2 text-sm">
-                        <CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" />
-                        <span className="text-muted-foreground">{t(f)}</span>
-                      </li>
-                    ))}
-                  </ul>
                   <Button
                     className="w-full mt-6"
                     variant={tier.popular ? "default" : "outline"}
