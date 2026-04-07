@@ -738,6 +738,44 @@ export function BibelBotChat() {
           </div>
         ))}
 
+        {/* Journey offer card */}
+        {showJourneyOffer && journeyDay === 0 && !isLoading && (
+          <div className="animate-fade-up">
+            <div className="flex justify-start">
+              <div className="max-w-[85%] rounded-2xl rounded-bl-md px-4 py-3 text-sm leading-relaxed bg-primary/5 border border-primary/20 text-foreground">
+                <div className="prose prose-sm max-w-none dark:prose-invert">
+                  <ReactMarkdown>{JOURNEY_OFFER.content}</ReactMarkdown>
+                </div>
+                <div className="flex gap-2 mt-3">
+                  <Button
+                    size="sm"
+                    className="text-xs h-7"
+                    onClick={() => {
+                      startJourney();
+                      setJourneyDay(1);
+                      setShowJourneyOffer(false);
+                      sendMessage("Ja, ich möchte die 21-Tage-Begleitung starten!");
+                    }}
+                  >
+                    Ja, starten ✨
+                  </Button>
+                  <Button
+                    size="sm"
+                    variant="ghost"
+                    className="text-xs h-7 text-muted-foreground"
+                    onClick={() => {
+                      setShowJourneyOffer(false);
+                      dismissJourney();
+                    }}
+                  >
+                    Später vielleicht
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
         {isLoading && messages[messages.length - 1]?.role !== "assistant" && (
           <div className="flex justify-start">
             <div className="bg-muted rounded-2xl rounded-bl-md px-4 py-3 flex items-center gap-2">
