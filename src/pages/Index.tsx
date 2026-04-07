@@ -121,7 +121,7 @@ const Index = () => {
             </h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto">
               Dein BibelBot ist eine KI, die die Bibel kennt – und die richtigen Fragen stellt.
-              Kein Mensch, aber ein ehrlicher Begleiter. 21 Tage, die etwas verändern können.
+              Kein Mensch, aber ein ehrlicher Begleiter. Für gute Gespräche, tiefe Fragen und echte Impulse.
             </p>
           </div>
           
@@ -199,9 +199,9 @@ const Index = () => {
                 <Calendar className="h-6 w-6 text-primary" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-foreground mb-2">21 Tage, die etwas verändern</h3>
+                <h3 className="text-2xl font-bold text-foreground mb-2">Persönliche Begleitung</h3>
                 <p className="text-muted-foreground">
-                  Dein BibelBot begleitet dich über 3 Wochen – mit dem Ziel, dass es dir danach spürbar besser geht.
+                  Dein BibelBot begleitet dich so lange du willst – im freien Gespräch oder mit einer optionalen 21-Tage-Struktur.
                 </p>
               </div>
             </div>
