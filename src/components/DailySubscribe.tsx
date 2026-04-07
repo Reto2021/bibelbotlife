@@ -42,6 +42,18 @@ export function DailySubscribe() {
       let pushSubscription: PushSubscription | null = null;
 
       if (selectedChannel === "push") {
+        const isInIframe = (() => { try { return window.self !== window.top; } catch { return true; } })();
+        const isPreview = window.location.hostname.includes("lovableproject.com") || window.location.hostname.includes("id-preview--");
+
+        if (isInIframe || isPreview) {
+          toast({
+            title: "Push-Abo nicht im Preview",
+            description: "Push-Benachrichtigungen funktionieren nur auf der veröffentlichten Seite.",
+            variant: "destructive",
+          });
+          return;
+        }
+
         if (!("Notification" in window) || !("serviceWorker" in navigator)) {
           toast({
             title: "Nicht unterstützt",
