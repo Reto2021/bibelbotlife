@@ -182,12 +182,12 @@ const Index = () => {
               <CardContent className="space-y-3">
                 {[
                   "Gibt oberflächliche Bibelzitate ohne Kontext",
-                  "Kein theologisches Bewusstsein für Auslegungstraditionen",
                   "Keine seelsorgerischen Guardrails bei sensiblen Themen",
-                  "Keine Krisenintervention – erkennt Suizidalität nicht zuverlässig",
+                  "Vermeidet unbequeme Texte – nur Wohlfühl-Verse",
+                  "Keine Krisenintervention bei Suizidalität",
                   "Mischt Bibel mit beliebiger Esoterik oder Selbsthilfe",
                   "Kann nicht zwischen Konfessionen differenzieren",
-                  "Keine psychologische Fundierung der Begleitung",
+                  "Keine Rückfragen – nur oberflächliche Bestätigung",
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-2">
                     <XIcon className="h-4 w-4 text-destructive shrink-0 mt-0.5" />
