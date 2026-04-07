@@ -122,40 +122,52 @@ function TileCard({
   desc,
   onClick,
   className,
+  index = 0,
 }: {
   tile: TileConfig;
   title: string;
   desc: string;
   onClick: () => void;
   className?: string;
+  index?: number;
 }) {
   return (
-    <button
+    <motion.button
       onClick={onClick}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-40px" }}
+      transition={{ duration: 0.4, delay: index * 0.05, ease: "easeOut" }}
+      whileHover={{ y: -6, scale: 1.02, boxShadow: "0 12px 28px -8px hsl(var(--primary) / 0.15)" }}
+      whileTap={{ scale: 0.97 }}
       className={cn(
-        "group relative text-left rounded-2xl border border-border p-5 transition-all duration-300",
-        "hover:shadow-lg hover:-translate-y-1 hover:border-primary/30",
-        "active:scale-[0.98] cursor-pointer",
+        "group relative text-left rounded-2xl border border-border p-5 cursor-pointer",
+        "hover:border-primary/30",
         tile.bgClass,
         className
       )}
     >
       <div
         className={cn(
-          "absolute top-0 left-4 right-4 h-1 rounded-b-full transition-all",
+          "absolute top-0 left-4 right-4 h-1 rounded-b-full transition-all duration-300",
           "group-hover:left-3 group-hover:right-3",
           tile.accentClass
         )}
       />
-      <span className="text-3xl block mb-3" role="img">
+      <motion.span
+        className="text-3xl block mb-3"
+        role="img"
+        whileHover={{ scale: 1.25, rotate: [0, -8, 8, 0] }}
+        transition={{ duration: 0.4 }}
+      >
         {tile.emoji}
-      </span>
+      </motion.span>
       <h3 className="font-semibold text-foreground text-base mb-1">
         {title}
       </h3>
       <p className="text-muted-foreground text-sm leading-snug">
         {desc}
       </p>
-    </button>
+    </motion.button>
   );
 }
