@@ -156,6 +156,20 @@
     "purpose": "Verwendungszweck",
     "purposeValue": "Spende BibelBot",
     "note": "BibelBot.ch wird als privates Projekt betrieben. Spenden sind daher nicht steuerabzugsfähig."
+  "refer": {
+    "badge": "Gottes Wort teilen",
+    "title": "Empfiehl BibelBot weiter",
+    "subtitle": "Kennst du jemanden, der gerade Ermutigung braucht? Teile BibelBot – eine Nachricht kann viel bewirken.",
+    "whatsapp": "Per WhatsApp teilen",
+    "whatsappMsg": "Hey, ich wollte dir BibelBot zeigen – ein kostenloser KI-Chatbot, der die Bibel kennt und wirklich gute Fragen stellt. Kein Login, anonym, ehrlich. Probier's mal aus: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "telegram": "Per Telegram teilen",
+    "telegramMsg": "Hey, kennst du schon BibelBot? Ein kostenloser KI-Bibel-Begleiter – ehrlich, anonym, ohne Login. Schau mal rein: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "email": "Per E-Mail teilen",
+    "emailSubject": "Das könnte dich interessieren: BibelBot.ch",
+    "emailBody": "Hallo!\n\nIch wollte dir BibelBot zeigen – ein kostenloser KI-Chatbot, der die Bibel wirklich kennt. Keine Anmeldung nötig, komplett anonym.\n\nEr stellt gute Rückfragen, erklärt Bibelstellen im Kontext und begleitet dich ehrlich – auch bei schwierigen Themen.\n\nProbier's mal aus: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nLiebe Grüsse",
+    "copy": "Link kopieren",
+    "copied": "Link kopiert! 📋",
+    "qr": "Oder zeig einfach diesen QR-Code:"
   },
   "cta": {
     "title": "Du musst das nicht alleine durchstehen",
