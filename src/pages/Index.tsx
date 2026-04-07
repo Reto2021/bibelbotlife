@@ -192,6 +192,149 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Coaching-Methodik Section */}
+      <section className="py-20 px-4 bg-card/40">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-primary bg-primary/10 px-4 py-1.5 rounded-full mb-4">
+              <Brain className="h-4 w-4" />
+              Methodik
+            </div>
+            <h2 className="text-4xl font-bold text-foreground mb-4">
+              Nicht einfach ein Chatbot – eine echte Begleitung
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              BibelBot verbindet biblische Weisheit mit bewährten Coaching-Methoden und Positiver Psychologie.
+            </p>
+          </div>
+
+          {/* 21-Tage Journey */}
+          <div className="bg-card/80 backdrop-blur-sm rounded-2xl border border-border p-8 mb-10">
+            <div className="flex items-start gap-4 mb-6">
+              <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                <Calendar className="h-6 w-6 text-primary" />
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-foreground mb-2">21 Tage, die etwas verändern</h3>
+                <p className="text-muted-foreground">
+                  BibelBot begleitet dich über 3 Wochen – mit dem Ziel, dass es dir danach spürbar besser geht.
+                </p>
+              </div>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div>
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="h-8 w-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">1</span>
+                  <span className="font-semibold text-foreground">Woche 1: Ankommen</span>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Vertrauen aufbauen, zuhören, deine Situation verstehen. Wo stehst du? Was beschäftigt dich?
+                </p>
+              </div>
+              <div>
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="h-8 w-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">2</span>
+                  <span className="font-semibold text-foreground">Woche 2: Vertiefen</span>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Muster erkennen, Wünsche klären, biblische Impulse vertiefen. Was willst du wirklich?
+                </p>
+              </div>
+              <div>
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="h-8 w-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">3</span>
+                  <span className="font-semibold text-foreground">Woche 3: Handeln</span>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Konkrete Schritte setzen, Ziele formulieren, Veränderung anstossen. Was ist dein nächster Schritt?
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Fragetechniken */}
+          <div className="grid md:grid-cols-2 gap-6 mb-10">
+            <Card className="bg-card/80 border-border">
+              <CardHeader>
+                <div className="h-10 w-10 rounded-lg bg-secondary/10 flex items-center justify-center mb-2">
+                  <MessageCircle className="h-5 w-5 text-secondary" />
+                </div>
+                <CardTitle className="text-lg">Offene Fragen statt schnelle Antworten</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                  BibelBot gibt dir keine billigen Ratschläge. Stattdessen stellt er die Fragen, die wirklich zählen:
+                </p>
+                <div className="space-y-2">
+                  {[
+                    "«Was steckt eigentlich hinter diesem Wunsch?»",
+                    "«Woran würdest du merken, dass sich etwas verändert hat?»",
+                    "«Was wäre ein erster kleiner Schritt?»",
+                  ].map((q, i) => (
+                    <p key={i} className="text-sm text-foreground/80 italic pl-3 border-l-2 border-primary/20">{q}</p>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card/80 border-border">
+              <CardHeader>
+                <div className="h-10 w-10 rounded-lg bg-secondary/10 flex items-center justify-center mb-2">
+                  <Heart className="h-5 w-5 text-secondary" />
+                </div>
+                <CardTitle className="text-lg">Ehrlich statt toxisch positiv</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                  Kein «Wird schon!» und kein Schönreden. BibelBot ist empathisch UND ehrlich:
+                </p>
+                <div className="space-y-2">
+                  {[
+                    "Benennt auch unbequeme Bibelstellen",
+                    "Fordert zur Selbstreflexion heraus",
+                    "Unterscheidet Trost von Verdrängung",
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-start gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                      <span className="text-sm text-foreground/80">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Wissenschaftliche Basis */}
+          <div className="bg-card/80 backdrop-blur-sm rounded-2xl border border-border p-8">
+            <h3 className="text-xl font-bold text-foreground mb-6 text-center">Wissenschaftlich fundiert</h3>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { icon: Brain, name: "PERMA-Modell", author: "Seligman", desc: "Positive Emotionen, Sinn & Wachstum" },
+                { icon: Heart, name: "Logotherapie", author: "Frankl", desc: "Sinnfindung in schwierigen Zeiten" },
+                { icon: Star, name: "Dankbarkeit", author: "Emmons", desc: "Forschungsbasierte Dankbarkeitspraxis" },
+                { icon: Users, name: "Vergebung", author: "Worthington", desc: "REACH-Modell für Vergebungsprozesse" },
+              ].map((method) => (
+                <div key={method.name} className="text-center">
+                  <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-3">
+                    <method.icon className="h-5 w-5 text-primary" />
+                  </div>
+                  <p className="font-semibold text-foreground text-sm">{method.name}</p>
+                  <p className="text-xs text-muted-foreground">{method.author}</p>
+                  <p className="text-xs text-muted-foreground mt-1">{method.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Personalisation hint */}
+          <div className="mt-8 text-center">
+            <p className="text-sm text-muted-foreground">
+              💡 Du kannst deinem BibelBot einen eigenen Namen geben – damit er wirklich <strong className="text-foreground">dein</strong> Begleiter wird.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-4xl">
