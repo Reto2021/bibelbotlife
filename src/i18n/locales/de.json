@@ -277,5 +277,21 @@
     "pl": "Polski",
     "cs": "Čeština",
     "pt": "Português"
+  },
+  "tiles": {
+    "sectionTitle": "Was bewegt dich?",
+    "sectionSubtitle": "Wähle ein Thema — der BibelBot begleitet dich",
+    "baptism": { "title": "Taufspruch finden", "desc": "Der perfekte Vers für dein Kind", "prompt": "Hilf mir, einen passenden Taufspruch zu finden. Was für ein Kind ist es und was wünschen sich die Eltern?" },
+    "condolence": { "title": "Trostworte", "desc": "Kondolenz & Abschied begleiten", "prompt": "Ich brauche tröstende Worte für eine Trauerkarte. Kannst du mir helfen, etwas Passendes zu formulieren?" },
+    "wedding": { "title": "Hochzeitsspruch", "desc": "Biblische Worte für eure Liebe", "prompt": "Wir suchen einen schönen biblischen Spruch für unsere Hochzeit. Welche Bibelstellen passen zu Liebe und Partnerschaft?" },
+    "anxiety": { "title": "Angst & Sorgen", "desc": "Mut finden in schweren Zeiten", "prompt": "Ich habe gerade mit Ängsten und Sorgen zu kämpfen. Was sagt die Bibel dazu? Gibt es Verse, die Mut machen?" },
+    "confession": { "title": "Beichte", "desc": "Gott vergibt — sprich es aus", "prompt": "Ich möchte etwas loswerden, das mich belastet. Was sagt die Bibel über Vergebung und Neuanfang?" },
+    "heartbreak": { "title": "Liebeskummer", "desc": "Was die Bibel über Herzschmerz sagt", "prompt": "Mein Herz ist gebrochen. Was sagt die Bibel über Liebeskummer und wie man wieder Hoffnung findet?" },
+    "newstart": { "title": "Neuanfang", "desc": "Kraft für einen neuen Lebensabschnitt", "prompt": "Ich stehe vor einem Neuanfang und brauche Ermutigung. Welche Bibelstellen sprechen über Neuanfänge?" },
+    "namequiz": { "title": "Tauf-Quiz", "desc": "Finde den passenden biblischen Namen", "prompt": "Ich suche einen biblischen Namen für mein Kind. Kannst du mir ein paar Vorschläge machen und ihre Bedeutung erklären?" },
+    "sleepless": { "title": "Schlaflos", "desc": "Ruhe finden in der Nacht", "prompt": "Ich kann nicht schlafen und mache mir Gedanken. Gibt es ein beruhigendes Gebet oder einen Psalm für die Nacht?" },
+    "loneliness": { "title": "Einsamkeit", "desc": "Du bist nie allein", "prompt": "Ich fühle mich einsam. Was sagt die Bibel darüber, dass Gott immer bei uns ist?" },
+    "decision": { "title": "Schwere Entscheidung", "desc": "Weisheit für den richtigen Weg", "prompt": "Ich stehe vor einer schwierigen Entscheidung. Welche Bibelstellen helfen mir, den richtigen Weg zu finden?" },
+    "gratitude": { "title": "Dankbarkeit", "desc": "Ein persönliches Dankgebet", "prompt": "Ich möchte Gott danken. Hilf mir, ein persönliches Dankgebet zu formulieren." }
   }
 }

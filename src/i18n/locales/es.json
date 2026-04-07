@@ -240,5 +240,21 @@
     "pl": "Polski",
     "cs": "Čeština",
     "pt": "Português"
+  },
+  "tiles": {
+    "sectionTitle": "¿Qué te preocupa?",
+    "sectionSubtitle": "Elige un tema — BibelBot te acompaña",
+    "baptism": { "title": "Versículo de bautismo", "desc": "El versículo perfecto para tu hijo/a", "prompt": "Ayúdame a encontrar un versículo de bautismo adecuado. ¿Qué tipo de niño/a es y qué desean los padres?" },
+    "condolence": { "title": "Palabras de consuelo", "desc": "Acompañar el duelo y la despedida", "prompt": "Necesito palabras reconfortantes para una tarjeta de condolencia. ¿Puedes ayudarme a encontrar las palabras adecuadas?" },
+    "wedding": { "title": "Versículo de boda", "desc": "Palabras bíblicas para vuestro amor", "prompt": "Buscamos un hermoso versículo bíblico para nuestra boda. ¿Qué pasajes hablan del amor y la unión?" },
+    "anxiety": { "title": "Miedo y preocupación", "desc": "Encontrar valor en tiempos difíciles", "prompt": "Estoy luchando con miedos y preocupaciones. ¿Qué dice la Biblia al respecto? ¿Hay versículos que den valor?" },
+    "confession": { "title": "Confesión", "desc": "Dios perdona — exprésalo", "prompt": "Quiero soltar algo que me pesa. ¿Qué dice la Biblia sobre el perdón y los nuevos comienzos?" },
+    "heartbreak": { "title": "Desamor", "desc": "Lo que la Biblia dice sobre el dolor del corazón", "prompt": "Tengo el corazón roto. ¿Qué dice la Biblia sobre el desamor y cómo encontrar esperanza de nuevo?" },
+    "newstart": { "title": "Nuevo comienzo", "desc": "Fuerza para una nueva etapa", "prompt": "Estoy ante un nuevo comienzo y necesito ánimo. ¿Qué pasajes bíblicos hablan de empezar de nuevo?" },
+    "namequiz": { "title": "Quiz de nombres", "desc": "Encuentra el nombre bíblico perfecto", "prompt": "Busco un nombre bíblico para mi hijo/a. ¿Puedes sugerirme algunos y explicar su significado?" },
+    "sleepless": { "title": "Insomnio", "desc": "Encontrar paz en la noche", "prompt": "No puedo dormir y mi mente no para. ¿Hay una oración o salmo tranquilizador para la noche?" },
+    "loneliness": { "title": "Soledad", "desc": "Nunca estás solo/a", "prompt": "Me siento solo/a. ¿Qué dice la Biblia sobre que Dios siempre está con nosotros?" },
+    "decision": { "title": "Decisión difícil", "desc": "Sabiduría para el camino correcto", "prompt": "Estoy ante una decisión difícil. ¿Qué pasajes bíblicos me ayudan a encontrar el camino correcto?" },
+    "gratitude": { "title": "Gratitud", "desc": "Una oración personal de agradecimiento", "prompt": "Quiero dar gracias a Dios. Ayúdame a formular una oración de gratitud personal." }
   }
 }

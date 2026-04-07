@@ -240,5 +240,21 @@
     "pl": "Polski",
     "cs": "Čeština",
     "pt": "Português"
+  },
+  "tiles": {
+    "sectionTitle": "What's on your heart?",
+    "sectionSubtitle": "Choose a topic — BibelBot walks with you",
+    "baptism": { "title": "Find a baptism verse", "desc": "The perfect verse for your child", "prompt": "Help me find a fitting baptism verse. What kind of child is it and what do the parents wish for?" },
+    "condolence": { "title": "Words of comfort", "desc": "Support through grief & farewell", "prompt": "I need comforting words for a condolence card. Can you help me find the right words?" },
+    "wedding": { "title": "Wedding verse", "desc": "Biblical words for your love", "prompt": "We're looking for a beautiful biblical verse for our wedding. Which passages speak about love and partnership?" },
+    "anxiety": { "title": "Fear & worry", "desc": "Finding courage in hard times", "prompt": "I'm struggling with fear and worry right now. What does the Bible say about this? Are there verses that give courage?" },
+    "confession": { "title": "Confession", "desc": "God forgives — speak it out", "prompt": "I want to let go of something that weighs on me. What does the Bible say about forgiveness and new beginnings?" },
+    "heartbreak": { "title": "Heartbreak", "desc": "What the Bible says about heartache", "prompt": "My heart is broken. What does the Bible say about heartbreak and how to find hope again?" },
+    "newstart": { "title": "New beginning", "desc": "Strength for a new chapter", "prompt": "I'm facing a new beginning and need encouragement. Which Bible passages speak about fresh starts?" },
+    "namequiz": { "title": "Name quiz", "desc": "Find the right biblical name", "prompt": "I'm looking for a biblical name for my child. Can you suggest some and explain their meanings?" },
+    "sleepless": { "title": "Sleepless", "desc": "Finding peace at night", "prompt": "I can't sleep and my mind is racing. Is there a calming prayer or psalm for the night?" },
+    "loneliness": { "title": "Loneliness", "desc": "You are never alone", "prompt": "I feel lonely. What does the Bible say about God always being with us?" },
+    "decision": { "title": "Tough decision", "desc": "Wisdom for the right path", "prompt": "I'm facing a difficult decision. Which Bible passages can help me find the right way?" },
+    "gratitude": { "title": "Gratitude", "desc": "A personal prayer of thanks", "prompt": "I want to thank God. Help me write a personal prayer of gratitude." }
   }
 }
