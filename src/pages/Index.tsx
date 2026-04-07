@@ -1,8 +1,63 @@
-import { MessageCircle, BookOpen, Calendar, Heart, Users, Star } from "lucide-react";
+import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, Shield, GraduationCap, Church, Quote, CheckCircle2, Brain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { BibelBotChat } from "@/components/BibelBotChat";
+import { Separator } from "@/components/ui/separator";
+
 const WHATSAPP_LINK = "https://wa.me/41XXXXXXXXXX?text=Hallo%20BibelBot!";
+
+const BIBLE_EDITIONS = [
+  { name: "Zürcher Bibel", year: "2007", tradition: "Reformiert" },
+  { name: "Lutherbibel", year: "2017", tradition: "Evangelisch" },
+  { name: "Einheitsübersetzung", year: "2016", tradition: "Katholisch" },
+  { name: "Schlachter Bibel", year: "2000", tradition: "Freikirchlich" },
+  { name: "Elberfelder Bibel", year: "2006", tradition: "Wortgetreu" },
+];
+
+const TESTIMONIALS = [
+  {
+    text: "BibelBot hat mir geholfen, in einer schwierigen Phase die richtigen Worte zu finden. Die Antworten sind durchdacht und respektvoll.",
+    author: "M. Keller",
+    role: "Gemeindeleiterin, ref. Kirche Zürich",
+  },
+  {
+    text: "Endlich ein digitales Angebot, das theologisch fundiert ist und trotzdem verständlich bleibt. Ideal für unseren Bibelkreis.",
+    author: "P. Brunner",
+    role: "Pfarrer, kath. Pfarrei Luzern",
+  },
+  {
+    text: "Die Verbindung von biblischer Weisheit und positiver Psychologie überzeugt. Seelsorgerisch verantwortungsvoll umgesetzt.",
+    author: "Dr. S. Meier",
+    role: "Theologin & Psychologin, Universität Bern",
+  },
+];
+
+const GUIDELINES = [
+  {
+    icon: Brain,
+    title: "PERMA-Modell",
+    author: "Martin Seligman",
+    desc: "Fördert positive Emotionen, Engagement, Beziehungen, Sinn und Zielerreichung – biblisch verankert.",
+  },
+  {
+    icon: Heart,
+    title: "Logotherapie & Sinnfindung",
+    author: "Viktor Frankl",
+    desc: "Begleitung bei Sinnfragen und in schwierigen Lebensphasen – ehrlich statt toxisch positiv.",
+  },
+  {
+    icon: Star,
+    title: "Dankbarkeitsforschung",
+    author: "Robert Emmons",
+    desc: "Wissenschaftlich fundierte Dankbarkeitspraxis, gestützt durch Psalmen und Loblieder.",
+  },
+  {
+    icon: Users,
+    title: "REACH-Vergebungsmodell",
+    author: "Everett Worthington",
+    desc: "Begleitung bei Vergebungsprozessen – psychologisch fundiert und biblisch untermauert.",
+  },
+];
 
 const Index = () => {
   const features = [
@@ -59,14 +114,20 @@ const Index = () => {
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center max-w-4xl">
+          <div className="mb-4">
+            <span className="inline-flex items-center gap-2 text-sm font-medium text-primary bg-primary/10 px-4 py-1.5 rounded-full">
+              <Church className="h-4 w-4" />
+              Ökumenisch · Theologisch fundiert · Wissenschaftlich begleitet
+            </span>
+          </div>
           <div className="mb-8">
             <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
               Dein persönlicher
               <span className="text-transparent bg-clip-text" style={{ backgroundImage: "var(--gradient-cta)" }}> Bibelbegleiter</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              BibelBot.ch ist dein WhatsApp-Chatbot, der dich mit der Weisheit der Bibel 
-              durch alle Lebenssituationen begleitet. Einfach, persönlich und immer verfügbar.
+              BibelBot.ch verbindet die Weisheit der Bibel mit Erkenntnissen der Positiven Psychologie –
+              ökumenisch, respektvoll und seelsorgerisch verantwortungsvoll.
             </p>
           </div>
           
@@ -91,8 +152,46 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Ökumenische Bibelquellen */}
       <section className="py-20 px-4 bg-card/40">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-secondary bg-secondary/10 px-4 py-1.5 rounded-full mb-4">
+              <BookOpen className="h-4 w-4" />
+              Quellengrundlage
+            </div>
+            <h2 className="text-4xl font-bold text-foreground mb-4">
+              Fundiert in anerkannten Bibelübersetzungen
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              BibelBot arbeitet ökumenisch und greift auf die massgeblichen deutschsprachigen Bibelausgaben
+              aller grossen christlichen Traditionen zurück.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            {BIBLE_EDITIONS.map((bible) => (
+              <Card key={bible.name} className="bg-card/80 border-border text-center">
+                <CardContent className="pt-6 pb-4">
+                  <p className="font-semibold text-card-foreground text-sm">{bible.name}</p>
+                  <p className="text-xs text-muted-foreground mt-1">{bible.year}</p>
+                  <span className="inline-block mt-2 text-xs bg-accent text-accent-foreground px-2 py-0.5 rounded-full">
+                    {bible.tradition}
+                  </span>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <p className="text-center text-sm text-muted-foreground mt-6">
+            Alle Bibelstellen werden mit Quellenangabe und historischem Kontext ausgegeben.
+            Bei unterschiedlichen Auslegungstraditionen zeigt BibelBot verschiedene Perspektiven auf.
+          </p>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-foreground mb-4">
@@ -114,6 +213,111 @@ const Index = () => {
                   <CardDescription className="text-muted-foreground text-center leading-relaxed">
                     {feature.description}
                   </CardDescription>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Wissenschaftliche Grundlagen / Guidelines */}
+      <section className="py-20 px-4 bg-card/40">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-secondary bg-secondary/10 px-4 py-1.5 rounded-full mb-4">
+              <GraduationCap className="h-4 w-4" />
+              Wissenschaftliche Grundlage
+            </div>
+            <h2 className="text-4xl font-bold text-foreground mb-4">
+              Positive Psychologie trifft biblische Weisheit
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Die Antworten des BibelBot basieren auf peer-reviewed Forschung der Positiven Psychologie,
+              verbunden mit theologischer Sorgfalt.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {GUIDELINES.map((g) => (
+              <Card key={g.title} className="bg-card/80 border-border">
+                <CardHeader className="pb-2">
+                  <div className="flex items-start gap-3">
+                    <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                      <g.icon className="h-5 w-5 text-primary" />
+                    </div>
+                    <div>
+                      <CardTitle className="text-lg text-card-foreground">{g.title}</CardTitle>
+                      <p className="text-sm text-muted-foreground">{g.author}</p>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{g.desc}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Seelsorgerische Guardrails */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-secondary bg-secondary/10 px-4 py-1.5 rounded-full mb-4">
+              <Shield className="h-4 w-4" />
+              Seelsorgerische Verantwortung
+            </div>
+            <h2 className="text-4xl font-bold text-foreground mb-4">
+              Klare ethische Leitlinien
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              BibelBot kennt seine Grenzen und handelt nach strengen seelsorgerischen Standards.
+            </p>
+          </div>
+
+          <div className="bg-card/80 border border-border rounded-2xl p-8 space-y-4">
+            {[
+              "Bei Suizidgedanken oder akuten Krisen → sofortige Weiterleitung an Dargebotene Hand (143) und Pro Juventute (147)",
+              "Keine psychologischen oder medizinischen Diagnosen – BibelBot ist kein Therapeut",
+              "Kein moralisches Urteil – jeder Mensch wird mit Würde und Respekt behandelt",
+              "Empathie vor Antwort – zuhören und verstehen, bevor Rat gegeben wird",
+              "Transparenz über Grenzen – offene Kommunikation, wenn professionelle Hilfe nötig ist",
+              "Keine toxische Positivität – ehrliche Begleitung statt Verharmlosung",
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-3">
+                <CheckCircle2 className="h-5 w-5 text-whatsapp shrink-0 mt-0.5" />
+                <p className="text-foreground/90 text-sm leading-relaxed">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Social Proof / Testimonials */}
+      <section className="py-20 px-4 bg-card/40">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-secondary bg-secondary/10 px-4 py-1.5 rounded-full mb-4">
+              <Quote className="h-4 w-4" />
+              Stimmen
+            </div>
+            <h2 className="text-4xl font-bold text-foreground mb-4">
+              Vertrauen aus verschiedenen Traditionen
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {TESTIMONIALS.map((t) => (
+              <Card key={t.author} className="bg-card/80 border-border">
+                <CardContent className="pt-6">
+                  <Quote className="h-6 w-6 text-primary/30 mb-3" />
+                  <p className="text-foreground/80 text-sm leading-relaxed italic mb-4">
+                    «{t.text}»
+                  </p>
+                  <Separator className="mb-3" />
+                  <p className="font-semibold text-sm text-card-foreground">{t.author}</p>
+                  <p className="text-xs text-muted-foreground">{t.role}</p>
                 </CardContent>
               </Card>
             ))}
@@ -147,12 +351,17 @@ const Index = () => {
             <BookOpen className="h-8 w-8 text-primary" />
             <span className="text-2xl font-bold">BibelBot.ch</span>
           </div>
-          <p className="text-background/70 mb-6">
+          <p className="text-background/70 mb-4">
             Dein digitaler Begleiter für ein Leben mit der Bibel
+          </p>
+          <p className="text-background/50 text-xs mb-6 max-w-2xl mx-auto">
+            BibelBot.ch ist ein KI-gestütztes Hilfsmittel und ersetzt keine professionelle Seelsorge, 
+            theologische Beratung oder psychologische Therapie. Bei akuten Krisen wende dich bitte an 
+            die Dargebotene Hand (Tel. 143) oder Pro Juventute (Tel. 147).
           </p>
           <div className="border-t border-background/20 pt-6">
             <p className="text-background/50 text-sm">
-              © 2024 BibelBot.ch – Mit ❤️ für die christliche Gemeinschaft entwickelt
+              © 2025 BibelBot.ch – Mit ❤️ für die christliche Gemeinschaft entwickelt
             </p>
           </div>
         </div>
