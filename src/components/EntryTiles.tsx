@@ -88,6 +88,7 @@ export function EntryTiles() {
                 title={t(`tiles.${tile.key}.title`)}
                 desc={t(`tiles.${tile.key}.desc`)}
                 onClick={() => handleClick(tile)}
+                index={i}
                 className="min-w-[260px] max-w-[280px] snap-start flex-shrink-0"
               />
             ))}
@@ -108,6 +109,7 @@ export function EntryTiles() {
               title={t(`tiles.${tile.key}.title`)}
               desc={t(`tiles.${tile.key}.desc`)}
               onClick={() => handleClick(tile)}
+              index={i}
             />
           ))}
         </div>
