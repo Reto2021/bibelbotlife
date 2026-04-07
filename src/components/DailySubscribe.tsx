@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
 
+const VAPID_PUBLIC_KEY = "BLMl5bBRzhlza0ozrHEblp3BfKtbyDsbOP-n120rl6teGPFdoyFb77P9WnOZpbFs2hKyfwILmw8WQebJrp_qc7c";
+
 const SUBSCRIBE_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/subscribe-daily`;
 const TELEGRAM_LINK = "https://t.me/BibelBot_ch_bot";
 
@@ -40,6 +42,18 @@ export function DailySubscribe() {
       let pushSubscription: PushSubscription | null = null;
 
       if (selectedChannel === "push") {
+        const isInIframe = (() => { try { return window.self !== window.top; } catch { return true; } })();
+        const isPreview = window.location.hostname.includes("lovableproject.com") || window.location.hostname.includes("id-preview--");
+
+        if (isInIframe || isPreview) {
+          toast({
+            title: "Push-Abo nicht im Preview",
+            description: "Push-Benachrichtigungen funktionieren nur auf der veröffentlichten Seite.",
+            variant: "destructive",
+          });
+          return;
+        }
+
         if (!("Notification" in window) || !("serviceWorker" in navigator)) {
           toast({
             title: "Nicht unterstützt",
@@ -63,7 +77,7 @@ export function DailySubscribe() {
         const registration = await navigator.serviceWorker.register("/sw.js");
         pushSubscription = await registration.pushManager.subscribe({
           userVisibleOnly: true,
-          applicationServerKey: import.meta.env.VITE_VAPID_PUBLIC_KEY,
+          applicationServerKey: VAPID_PUBLIC_KEY,
         });
       }
 
