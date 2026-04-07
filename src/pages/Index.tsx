@@ -1,4 +1,4 @@
-import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, Shield, GraduationCap, Church, Quote, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy } from "lucide-react";
+import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, Shield, GraduationCap, Church, Quote, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { BibelBotChat } from "@/components/BibelBotChat";
