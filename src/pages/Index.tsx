@@ -127,7 +127,7 @@ const Index = () => {
             </h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
               BibelBot.ch verbindet die Weisheit der Bibel mit Erkenntnissen der Positiven Psychologie –
-              ökumenisch, respektvoll und seelsorgerisch verantwortungsvoll.
+              ökumenisch, ehrlich und bereit, auch unbequeme Fragen zu stellen. Trost und Herausforderung gehören zusammen.
             </p>
           </div>
           
@@ -182,12 +182,12 @@ const Index = () => {
               <CardContent className="space-y-3">
                 {[
                   "Gibt oberflächliche Bibelzitate ohne Kontext",
-                  "Kein theologisches Bewusstsein für Auslegungstraditionen",
                   "Keine seelsorgerischen Guardrails bei sensiblen Themen",
-                  "Keine Krisenintervention – erkennt Suizidalität nicht zuverlässig",
+                  "Vermeidet unbequeme Texte – nur Wohlfühl-Verse",
+                  "Keine Krisenintervention bei Suizidalität",
                   "Mischt Bibel mit beliebiger Esoterik oder Selbsthilfe",
                   "Kann nicht zwischen Konfessionen differenzieren",
-                  "Keine psychologische Fundierung der Begleitung",
+                  "Keine Rückfragen – nur oberflächliche Bestätigung",
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-2">
                     <XIcon className="h-4 w-4 text-destructive shrink-0 mt-0.5" />
@@ -208,13 +208,13 @@ const Index = () => {
               </CardHeader>
               <CardContent className="space-y-3">
                 {[
-                  "Zitiert aus 5 anerkannten Bibelübersetzungen mit Quellenangabe",
-                  "Kennt reformierte, katholische und freikirchliche Auslegungstraditionen",
-                  "Strenge seelsorgerische Guardrails – validiert Gefühle vor Ratschlägen",
-                  "Verweist bei Krisen sofort an Dargebotene Hand (143) und Pro Juventute (147)",
-                  "Arbeitet ausschliesslich mit christlicher Theologie und peer-reviewed Psychologie",
-                  "Differenziert zwischen Konfessionen und zeigt verschiedene Perspektiven",
-                  "Basiert auf PERMA, Logotherapie, Dankbarkeitsforschung und REACH-Modell",
+                  "Zitiert aus 5 anerkannten Übersetzungen – auch unbequeme Stellen",
+                  "Strenge Guardrails UND Mut zur herausfordernden Begleitung",
+                  "Stellt Rückfragen, die zur Selbstreflexion einladen",
+                  "Krisenintervention: Dargebotene Hand (143) und Pro Juventute (147)",
+                  "Benennt Spannungen in der Bibel ehrlich – fördert kritisches Denken",
+                  "Differenziert zwischen Konfessionen und zeigt Perspektiven auf",
+                  "Basiert auf PERMA, Logotherapie und prophetischer Tradition",
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-2">
                     <Check className="h-4 w-4 text-whatsapp shrink-0 mt-0.5" />
@@ -344,10 +344,10 @@ const Index = () => {
               Seelsorgerische Verantwortung
             </div>
             <h2 className="text-4xl font-bold text-foreground mb-4">
-              Klare ethische Leitlinien
+              Ehrlich, verantwortungsvoll, herausfordernd
             </h2>
             <p className="text-lg text-muted-foreground">
-              BibelBot kennt seine Grenzen und handelt nach strengen seelsorgerischen Standards.
+              BibelBot kennt seine Grenzen – aber scheut sich nicht vor unbequemen Wahrheiten.
             </p>
           </div>
 
@@ -355,10 +355,11 @@ const Index = () => {
             {[
               "Bei Suizidgedanken oder akuten Krisen → sofortige Weiterleitung an Dargebotene Hand (143) und Pro Juventute (147)",
               "Keine psychologischen oder medizinischen Diagnosen – BibelBot ist kein Therapeut",
-              "Kein moralisches Urteil – jeder Mensch wird mit Würde und Respekt behandelt",
-              "Empathie vor Antwort – zuhören und verstehen, bevor Rat gegeben wird",
-              "Transparenz über Grenzen – offene Kommunikation, wenn professionelle Hilfe nötig ist",
-              "Keine toxische Positivität – ehrliche Begleitung statt Verharmlosung",
+              "Respekt ohne Beliebigkeit – klare biblische Positionen werden eingenommen",
+              "Empathie UND Ehrlichkeit – zuhören, verstehen, und auch Unbequemes ansprechen",
+              "Stellt Rückfragen zur Selbstreflexion – nicht nur Bestätigung",
+              "Keine toxische Positivität – aber auch kein billiger Trost. Echte Begleitung.",
+              "Benennt Spannungen und schwierige Texte offen – fördert geistliche Reife",
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-3">
                 <CheckCircle2 className="h-5 w-5 text-whatsapp shrink-0 mt-0.5" />
