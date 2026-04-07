@@ -29,7 +29,6 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
           </Routes>
           <InstallPrompt />
-          </Routes>
         </AnalyticsProvider>
       </BrowserRouter>
     </TooltipProvider>
