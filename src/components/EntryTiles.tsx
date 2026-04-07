@@ -124,6 +124,8 @@ export function EntryTiles() {
                 className="min-w-[260px] max-w-[280px] snap-start flex-shrink-0"
               />
             ))}
+            {/* Spacer to prevent last tile from being clipped */}
+            <div className="min-w-[1px] flex-shrink-0" aria-hidden="true" />
           </div>
           <div className="flex justify-center gap-1 mt-2">
             {Array.from({ length: Math.ceil(tileConfigs.length / 2) }).map((_, i) => (
