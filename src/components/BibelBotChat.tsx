@@ -419,13 +419,30 @@ export function BibelBotChat() {
           </div>
           <div>
             {isEditingName ? (
-              <form onSubmit={(e) => { e.preventDefault(); handleSaveName(); }} className="flex items-center gap-1">
-                <Input value={nameDraft} onChange={(e) => setNameDraft(e.target.value)} className="h-6 text-sm w-28 px-1 py-0" maxLength={20} autoFocus onBlur={handleSaveName} />
+              <form onSubmit={(e) => { e.preventDefault(); handleSaveName(); }} className="flex items-center gap-1.5">
+                <Input
+                  value={nameDraft}
+                  onChange={(e) => setNameDraft(e.target.value)}
+                  className="h-7 text-sm w-32 px-2 py-0.5 border-primary/40 focus:border-primary bg-primary/5 rounded-lg shadow-[0_0_8px_hsl(var(--primary)/0.2)] transition-shadow"
+                  maxLength={20}
+                  autoFocus
+                  onBlur={handleSaveName}
+                  placeholder={t("chat.namePlaceholder")}
+                />
               </form>
             ) : (
-              <button onClick={() => { setNameDraft(botName); setIsEditingName(true); }} className="flex items-center gap-1 group" title={t("chat.changeName")}>
-                <p className="font-semibold text-sm text-foreground">{botName}</p>
-                <Pencil className="h-3 w-3 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
+              <button
+                onClick={() => { setNameDraft(botName); setIsEditingName(true); }}
+                className="flex items-center gap-1.5 group relative"
+                title={t("chat.changeName")}
+              >
+                <p className="font-semibold text-sm text-foreground group-hover:text-primary transition-colors">{botName}</p>
+                <div className="relative">
+                  <Pencil className="h-3 w-3 text-primary/60 group-hover:text-primary transition-all group-hover:scale-110" />
+                  {botName === DEFAULT_BOT_NAME && (
+                    <span className="absolute -top-1 -right-1 h-2 w-2 rounded-full bg-primary animate-pulse" />
+                  )}
+                </div>
               </button>
             )}
             <p className="text-xs text-muted-foreground">
@@ -441,9 +458,9 @@ export function BibelBotChat() {
               </div>
             )}
             {showRenameTip && botName === DEFAULT_BOT_NAME && (
-              <div className="animate-fade-up mt-1 text-[10px] text-primary/70 flex items-center gap-1">
-                <Info className="h-2.5 w-2.5" />
-                <span>{t("chat.renameTip")}</span>
+              <div className="animate-fade-up mt-1.5 flex items-center gap-1.5 bg-primary/10 border border-primary/20 rounded-full px-2.5 py-1 cursor-pointer hover:bg-primary/15 transition-colors shadow-[0_0_12px_hsl(var(--primary)/0.15)]" onClick={() => { setNameDraft(botName); setIsEditingName(true); }}>
+                <Sparkles className="h-2.5 w-2.5 text-primary animate-pulse" />
+                <span className="text-[10px] font-medium text-primary">{t("chat.renameTip")}</span>
               </div>
             )}
           </div>
