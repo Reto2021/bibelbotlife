@@ -6,6 +6,7 @@ import { DailyImpulse } from "@/components/DailyImpulse";
 import { Separator } from "@/components/ui/separator";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
+import { DarkModeToggle } from "@/components/DarkModeToggle";
 
 const TELEGRAM_LINK = "https://t.me/BibelBot_ch_bot";
 
@@ -89,12 +90,15 @@ const Index = () => {
             <BookOpen className="h-8 w-8 text-primary" />
             <span className="text-2xl font-bold text-foreground">BibelBot.ch</span>
           </div>
-          <Button asChild className="bg-telegram hover:bg-telegram/90 text-telegram-foreground">
-            <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer">
-              <Send className="h-4 w-4 mr-2" />
-              Jetzt starten
-            </a>
-          </Button>
+          <div className="flex items-center gap-2">
+            <DarkModeToggle />
+            <Button asChild className="bg-telegram hover:bg-telegram/90 text-telegram-foreground">
+              <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer">
+                <Send className="h-4 w-4 mr-2" />
+                Jetzt starten
+              </a>
+            </Button>
+          </div>
         </div>
       </nav>
 
