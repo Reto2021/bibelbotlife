@@ -504,90 +504,90 @@
     "backToList": "Back to list"
   },
   "church": {
-    "badge": "For Churches",
-    "heroTitle": "BibleBot for Your Church",
-    "heroSubtitle": "Accompany your congregation with biblical wisdom – digital, personal, and around the clock.",
-    "useCasesTitle": "Use Cases",
+    "badge": "Pour les Églises",
+    "heroTitle": "BibleBot pour votre Église",
+    "heroSubtitle": "Accompagnez vos fidèles avec la sagesse biblique – numérique, personnelle et 24h/24.",
+    "useCasesTitle": "Cas d'utilisation",
     "useCase": {
       "youth": {
-        "title": "Youth Ministry",
-        "desc": "Teens discover the Bible in their own way – interactive and without hesitation."
+        "title": "Travail jeunesse",
+        "desc": "Les ados découvrent la Bible à leur manière – interactif et sans hésitation."
       },
       "confirmation": {
-        "title": "Confirmation",
-        "desc": "Confirmands deepen Bible knowledge independently with personal guidance."
+        "title": "Catéchisme",
+        "desc": "Les catéchumènes approfondissent leurs connaissances bibliques de manière autonome avec un accompagnement personnel."
       },
       "pastoral": {
-        "title": "Pastoral Care",
-        "desc": "24/7 companionship as a complement to personal pastoral care."
+        "title": "Accompagnement pastoral",
+        "desc": "Un accompagnement 24h/24 en complément du soin pastoral personnel."
       },
       "bibleStudy": {
-        "title": "Bible Study",
-        "desc": "Impulses and discussion starters for groups and home circles."
+        "title": "Étude biblique",
+        "desc": "Impulsions et amorces de discussion pour les groupes et les cercles de maison."
       }
     },
-    "pricingTitle": "Partnership Model",
-    "pricingSubtitle": "Choose the plan that fits your church. One-time setup + annual contribution.",
-    "popular": "Popular",
-    "setup": "Setup",
-    "free": "Free",
-    "perYear": "year",
-    "contact": "Get in touch",
+    "pricingTitle": "Modèle de partenariat",
+    "pricingSubtitle": "Choisissez le plan qui convient à votre église. Mise en place unique + contribution annuelle.",
+    "popular": "Populaire",
+    "setup": "Mise en place",
+    "free": "Gratuit",
+    "perYear": "An",
+    "contact": "Nous contacter",
     "tier": {
       "free": {
-        "name": "Starter",
-        "size": "For all churches"
+        "name": "Découverte",
+        "size": "Pour toutes les églises"
       },
       "community": {
-        "name": "Community",
-        "size": "Up to 500 members"
+        "name": "Communauté",
+        "size": "Jusqu'à 500 membres"
       },
       "gemeinde": {
-        "name": "Parish",
-        "size": "500–2,000 members"
+        "name": "Paroisse",
+        "size": "500–2 000 membres"
       },
       "kirche": {
-        "name": "Church",
-        "size": "Over 2,000 members"
+        "name": "Église",
+        "size": "Plus de 2 000 membres"
       }
     },
     "features": {
-      "directoryEntry": "Directory listing",
-      "telegramGroup": "Telegram group",
-      "partnerPage": "Own partner page",
-      "badge": "Partner badge",
-      "qrFlyer": "Printable QR flyer",
-      "contactForm": "Contact form",
-      "pastorProfile": "Pastor profile",
-      "welcomeVideo": "Welcome video",
-      "analytics": "Analytics dashboard",
-      "prioritySupport": "Priority support",
-      "multipleProfiles": "Multiple profiles",
-      "customBranding": "Custom branding",
-      "apiAccess": "API access",
-      "accountManager": "Dedicated account manager"
+      "directoryEntry": "Entrée dans l'annuaire",
+      "telegramGroup": "Groupe Telegram",
+      "partnerPage": "Page partenaire propre",
+      "badge": "Badge partenaire",
+      "qrFlyer": "Flyer QR imprimable",
+      "contactForm": "Formulaire de contact",
+      "pastorProfile": "Profil du pasteur",
+      "welcomeVideo": "Vidéo de bienvenue",
+      "analytics": "Tableau de bord analytique",
+      "prioritySupport": "Support prioritaire",
+      "multipleProfiles": "Profils multiples",
+      "customBranding": "Marque personnalisée",
+      "apiAccess": "Accès API",
+      "accountManager": "Gestionnaire de compte personnel"
     },
-    "viewDirectory": "View church directory",
-    "directoryBadge": "Church Directory",
-    "directoryTitle": "Partner Churches",
-    "directorySubtitle": "Find a church near you that recommends BibleBot.",
-    "searchPlaceholder": "Search by city, name, or denomination...",
-    "noResults": "No churches in the directory yet.",
-    "becomePartner": "Become a partner →",
-    "notFound": "Church not found.",
-    "backToDirectory": "Back to directory",
-    "pastor": "Pastor",
-    "serviceTimes": "Service Times",
-    "startChat": "Start Chat",
-    "website": "Website",
-    "telegramGroup": "Telegram Group",
-    "contactTitle": "Contact {{name}}",
-    "contactName": "Your name (optional)",
-    "contactEmail": "Your email address",
-    "contactMessage": "Your message",
-    "contactSend": "Send message",
-    "contactSuccess": "Message sent! 🙏",
-    "contactSuccessDesc": "The church will get back to you.",
-    "recommendedBy": "Recommended by {{name}}"
+    "viewDirectory": "Voir l'annuaire des églises",
+    "directoryBadge": "Annuaire des Églises",
+    "directoryTitle": "Églises partenaires",
+    "directorySubtitle": "Trouvez une église près de chez vous qui recommande BibleBot.",
+    "searchPlaceholder": "Rechercher par lieu, nom ou dénomination...",
+    "noResults": "Aucune église dans l'annuaire pour le moment.",
+    "becomePartner": "Devenir partenaire →",
+    "notFound": "Église non trouvée.",
+    "backToDirectory": "Retour à l'annuaire",
+    "pastor": "Pasteur",
+    "serviceTimes": "Horaires des cultes",
+    "startChat": "Démarrer le chat",
+    "website": "Site web",
+    "telegramGroup": "Groupe Telegram",
+    "contactTitle": "Contacter {{name}}",
+    "contactName": "Votre nom (facultatif)",
+    "contactEmail": "Votre adresse e-mail",
+    "contactMessage": "Votre message",
+    "contactSend": "Envoyer le message",
+    "contactSuccess": "Message envoyé ! 🙏",
+    "contactSuccessDesc": "L'église vous répondra bientôt.",
+    "recommendedBy": "Recommandé par {{name}}"
   }
 }
