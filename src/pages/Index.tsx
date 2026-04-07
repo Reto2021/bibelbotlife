@@ -78,11 +78,6 @@ const Index = () => {
       title: "Gruppen & Gemeinden",
       description: "Perfekt für Bibelkreise, Gemeinde-Gruppen und gemeinschaftliche Andachten."
     },
-    {
-      icon: Send,
-      title: "Telegram Integration",
-      description: "Einfach und vertraut – direkt über Telegram, sicher und datenschutzfreundlich."
-    }
   ];
 
   return (
