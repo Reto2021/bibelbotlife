@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   BarChart3, Eye, MousePointer, Users, Smartphone, Monitor, Tablet,
   MessageCircle, Flame, Trophy, Bell, TrendingUp, Download, Globe,
+  Target, CircleDot, Search,
 } from "lucide-react";
 import {
   BarChart, Bar, XAxis, YAxis, Tooltip as RTooltip, ResponsiveContainer,
@@ -39,6 +40,18 @@ type AnalyticsData = {
     totalBotMessages: number;
     avgMessagesPerUser: number;
     dailyActivity: Record<string, number>;
+  };
+  tiles?: {
+    totalClicks: number;
+    topTiles: { tile: string; count: number }[];
+  };
+  lifewheel?: {
+    completions: number;
+    avgScore: number;
+    weakestAreas: { area: string; count: number }[];
+  };
+  sevenWhys?: {
+    starts: number;
   };
 };
 
