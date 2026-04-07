@@ -44,6 +44,7 @@ type AnalyticsData = {
   tiles?: {
     totalClicks: number;
     topTiles: { tile: string; count: number }[];
+    dailyClicks?: Record<string, number>;
   };
   lifewheel?: {
     completions: number;
