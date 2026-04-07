@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
-import { Sparkles, ChevronRight, BookOpen, Loader2 } from "lucide-react";
+import { Sparkles, ChevronRight, BookOpen, Loader2, MessageCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { openBibelBotChat } from "./BibelBotChat";
 
 const IMPULSE_CACHE_KEY = "bibelbot-daily-impulse";
 const IMPULSE_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/daily-impulse`;
@@ -51,7 +53,6 @@ export function DailyImpulse() {
         cacheImpulse(data);
       } catch (e) {
         console.error("Failed to load daily impulse:", e);
-        // Fallback
         setImpulse({
           topic: "Hoffnung",
           verse: "«Denn ich weiss wohl, was ich für Gedanken über euch habe, spricht der Herr: Gedanken des Friedens und nicht des Leides.»",
@@ -67,6 +68,20 @@ export function DailyImpulse() {
 
     fetchImpulse();
   }, [impulse]);
+
+  const handleDeepDive = () => {
+    if (!impulse) return;
+    openBibelBotChat(
+      `Der Tagesimpuls ist "${impulse.topic}" mit ${impulse.reference}. Erkläre mir diese Stelle: Wer hat das geschrieben? In welcher Situation? Was kommt davor und danach? Und was bedeutet das für mein Leben heute?`
+    );
+  };
+
+  const handleExploreVerse = () => {
+    if (!impulse) return;
+    openBibelBotChat(
+      `Lies mir den ganzen Abschnitt rund um ${impulse.reference} vor und erkläre mir den Zusammenhang. Ich möchte die Geschichte dahinter verstehen.`
+    );
+  };
 
   if (isLoading) {
     return (
@@ -110,7 +125,7 @@ export function DailyImpulse() {
 
       {isExpanded && (
         <div className="container mx-auto px-4 pb-5 animate-fade-up">
-          <div className="ml-11 space-y-3">
+          <div className="ml-11 space-y-4">
             <blockquote className="border-l-2 border-primary/30 pl-4">
               <p className="text-foreground/90 italic text-sm leading-relaxed">
                 {impulse.verse}
@@ -123,6 +138,28 @@ export function DailyImpulse() {
             <p className="text-sm text-muted-foreground leading-relaxed">
               {impulse.context}
             </p>
+
+            {/* Deep dive buttons */}
+            <div className="flex flex-wrap gap-2">
+              <Button
+                size="sm"
+                variant="outline"
+                onClick={handleDeepDive}
+                className="text-xs border-primary/30 text-primary hover:bg-primary/10"
+              >
+                <MessageCircle className="h-3 w-3 mr-1.5" />
+                Was bedeutet das für mich?
+              </Button>
+              <Button
+                size="sm"
+                variant="outline"
+                onClick={handleExploreVerse}
+                className="text-xs border-primary/30 text-primary hover:bg-primary/10"
+              >
+                <BookOpen className="h-3 w-3 mr-1.5" />
+                Ganzen Abschnitt lesen
+              </Button>
+            </div>
           </div>
         </div>
       )}
