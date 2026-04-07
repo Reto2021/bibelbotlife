@@ -535,19 +535,19 @@
     "tier": {
       "free": {
         "name": "Gorušičino zrno",
-        "size": "Za sve crkve"
+        "size": "Osnovni pristup botu za sve članove zajednice."
       },
       "community": {
         "name": "Suputnik",
-        "size": "Do 500 članova"
+        "size": "Spomen crkve kao podržavatelja na web stranici i pristup bez reklama."
       },
       "gemeinde": {
         "name": "Graditelj mostova",
-        "size": "500–2.000 članova"
+        "size": "Logo u sučelju bota, mjesečni izvještaj o korištenju (anonimizirano)."
       },
       "kirche": {
         "name": "Svjetionik",
-        "size": "Preko 2.000 članova"
+        "size": "Integracija vlastitih sadržaja (npr. arhiva propovijedi), suoblikovanje plana, premium podrška."
       }
     },
     "features": {

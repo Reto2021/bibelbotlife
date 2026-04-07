@@ -535,19 +535,19 @@
     "tier": {
       "free": {
         "name": "Mustármag",
-        "size": "Minden gyülekezetnek"
+        "size": "Alapszintű bot-hozzáférés a gyülekezet minden tagja számára."
       },
       "community": {
         "name": "Útitárs",
-        "size": "500 tagig"
+        "size": "A gyülekezet megemlítése támogatóként a weboldalon & reklámmentes hozzáférés."
       },
       "gemeinde": {
         "name": "Hídépítő",
-        "size": "500–2 000 tag"
+        "size": "Logó a bot felületén, havi használati jelentés (anonimizált)."
       },
       "kirche": {
         "name": "Világítótorony",
-        "size": "2 000 tag felett"
+        "size": "Saját tartalom integrálása (pl. prédikációarchívum), a roadmap közös alakítása, prémium támogatás."
       }
     },
     "features": {

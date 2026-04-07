@@ -535,19 +535,19 @@
     "tier": {
       "free": {
         "name": "Biji sesawi",
-        "size": "For all churches"
+        "size": "Akses dasar bot untuk semua anggota jemaat."
       },
       "community": {
         "name": "Teman seperjalanan",
-        "size": "Up to 500 members"
+        "size": "Gereja disebutkan sebagai pendukung di situs web & akses bebas iklan."
       },
       "gemeinde": {
         "name": "Pembangun jembatan",
-        "size": "500–2,000 members"
+        "size": "Logo di antarmuka bot, laporan penggunaan bulanan (anonim)."
       },
       "kirche": {
         "name": "Mercusuar",
-        "size": "Over 2,000 members"
+        "size": "Integrasi konten sendiri (mis. arsip khotbah), kerja sama peta jalan, dukungan premium."
       }
     },
     "features": {

@@ -535,19 +535,19 @@
     "tier": {
       "free": {
         "name": "Granello di senape",
-        "size": "Per tutte le chiese"
+        "size": "Accesso base al bot per tutti i membri della comunità."
       },
       "community": {
         "name": "Compagno di viaggio",
-        "size": "Fino a 500 membri"
+        "size": "Menzione della chiesa come sostenitore sul sito web e accesso senza pubblicità."
       },
       "gemeinde": {
         "name": "Costruttore di ponti",
-        "size": "500–2.000 membri"
+        "size": "Presenza del logo nell’interfaccia del bot, report mensile sull’utilizzo (anonimizzato)."
       },
       "kirche": {
         "name": "Faro",
-        "size": "Oltre 2.000 membri"
+        "size": "Integrazione di contenuti propri (es. archivio sermoni), co-creazione della roadmap, supporto premium."
       }
     },
     "features": {

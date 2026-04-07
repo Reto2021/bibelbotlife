@@ -535,19 +535,19 @@
     "tier": {
       "free": {
         "name": "Mbegu ya haradali",
-        "size": "For all churches"
+        "size": "Ufikiaji wa msingi wa bot kwa wanachama wote wa jumuiya."
       },
       "community": {
         "name": "Mwandani",
-        "size": "Up to 500 members"
+        "size": "Kanisa linatajwa kama msaidizi kwenye tovuti na ufikiaji bila matangazo."
       },
       "gemeinde": {
         "name": "Mjenzi wa madaraja",
-        "size": "500–2,000 members"
+        "size": "Nembo katika kiolesura cha bot, ripoti ya matumizi ya kila mwezi (bila kutambulishwa)."
       },
       "kirche": {
         "name": "Mnara wa taa",
-        "size": "Over 2,000 members"
+        "size": "Uunganishaji wa maudhui yako (mf. kumbukumbu za mahubiri), ushirikiano wa ramani ya njia, msaada wa hali ya juu."
       }
     },
     "features": {

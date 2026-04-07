@@ -535,19 +535,19 @@
     "tier": {
       "free": {
         "name": "Grain de moutarde",
-        "size": "Pour toutes les églises"
+        "size": "Accès de base au bot pour tous les membres de la communauté."
       },
       "community": {
         "name": "Compagnon",
-        "size": "Jusqu'à 500 membres"
+        "size": "Mention de l’église comme soutien sur le site web & accès sans publicité."
       },
       "gemeinde": {
         "name": "Bâtisseur de ponts",
-        "size": "500–2 000 membres"
+        "size": "Présence du logo dans l’interface du bot, rapport d’utilisation mensuel (anonymisé)."
       },
       "kirche": {
         "name": "Phare",
-        "size": "Plus de 2 000 membres"
+        "size": "Intégration de contenus propres (ex. archives de sermons), co-création de la feuille de route, support premium."
       }
     },
     "features": {

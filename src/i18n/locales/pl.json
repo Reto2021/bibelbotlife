@@ -535,19 +535,19 @@
     "tier": {
       "free": {
         "name": "Ziarno gorczycy",
-        "size": "Dla wszystkich kościołów"
+        "size": "Podstawowy dostęp do bota dla wszystkich członków zboru."
       },
       "community": {
         "name": "Towarzysz drogi",
-        "size": "Do 500 członków"
+        "size": "Wzmianka o kościele jako wspierającym na stronie & dostęp bez reklam."
       },
       "gemeinde": {
         "name": "Budowniczy mostów",
-        "size": "500–2 000 członków"
+        "size": "Logo w interfejsie bota, miesięczny raport użytkowania (zanonimizowany)."
       },
       "kirche": {
         "name": "Latarnia morska",
-        "size": "Ponad 2 000 członków"
+        "size": "Integracja własnych treści (np. archiwum kazań), współtworzenie mapy drogowej, wsparcie premium."
       }
     },
     "features": {

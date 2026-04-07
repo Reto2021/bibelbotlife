@@ -535,19 +535,19 @@
     "tier": {
       "free": {
         "name": "Hạt cải",
-        "size": "For all churches"
+        "size": "Truy cập bot cơ bản cho tất cả thành viên cộng đồng."
       },
       "community": {
         "name": "Người đồng hành",
-        "size": "Up to 500 members"
+        "size": "Nhà thờ được ghi nhận là người ủng hộ trên trang web & truy cập không quảng cáo."
       },
       "gemeinde": {
         "name": "Người xây cầu",
-        "size": "500–2,000 members"
+        "size": "Logo trong giao diện bot, báo cáo sử dụng hàng tháng (ẩn danh)."
       },
       "kirche": {
         "name": "Ngọn hải đăng",
-        "size": "Over 2,000 members"
+        "size": "Tích hợp nội dung riêng (VD: kho bài giảng), đồng sáng tạo lộ trình, hỗ trợ cao cấp."
       }
     },
     "features": {

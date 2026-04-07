@@ -535,19 +535,19 @@
     "tier": {
       "free": {
         "name": "Senapsfrö",
-        "size": "För alla kyrkor"
+        "size": "Grundläggande botåtkomst för alla församlingsmedlemmar."
       },
       "community": {
         "name": "Reskamrat",
-        "size": "Upp till 500 medlemmar"
+        "size": "Omnämnande av församlingen som stödjare på webbplatsen & reklamfri åtkomst."
       },
       "gemeinde": {
         "name": "Brobyggare",
-        "size": "500–2 000 medlemmar"
+        "size": "Logo i bot-gränssnittet, månatlig användningsrapport (anonymiserad)."
       },
       "kirche": {
         "name": "Fyr",
-        "size": "Över 2 000 medlemmar"
+        "size": "Integration av eget innehåll (t.ex. predikarkiv), medutformning av roadmap, premiumsupport."
       }
     },
     "features": {

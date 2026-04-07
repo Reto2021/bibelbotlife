@@ -535,19 +535,19 @@
     "tier": {
       "free": {
         "name": "Grano de mostaza",
-        "size": "Para todas las iglesias"
+        "size": "Acceso básico al bot para todos los miembros de la comunidad."
       },
       "community": {
         "name": "Acompañante",
-        "size": "Hasta 500 miembros"
+        "size": "Mención de la iglesia como colaborador en el sitio web y acceso sin publicidad."
       },
       "gemeinde": {
         "name": "Constructor de puentes",
-        "size": "500–2.000 miembros"
+        "size": "Presencia del logo en la interfaz del bot, informe de uso mensual (anonimizado)."
       },
       "kirche": {
         "name": "Faro",
-        "size": "Más de 2.000 miembros"
+        "size": "Integración de contenidos propios (p. ej. archivo de sermones), co-creación de la hoja de ruta, soporte premium."
       }
     },
     "features": {

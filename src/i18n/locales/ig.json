@@ -535,19 +535,19 @@
     "tier": {
       "free": {
         "name": "Mkpụrụ mọsụtadị",
-        "size": "For all churches"
+        "size": "Nweta bot isi mmalite maka ndị otu nịile."
       },
       "community": {
         "name": "Onye njem",
-        "size": "Up to 500 members"
+        "size": "A kpọụrụ chọcọcị dịka onye nkwado na weebụsaịtị & nweta na-enwaghị mgbasa ozi."
       },
       "gemeinde": {
         "name": "Onye na-ewu àkwà mmiri",
-        "size": "500–2,000 members"
+        "size": "Logo na ngalaba bot, akukọ ojiji kwa ọnwa (anịnịm)."
       },
       "kirche": {
         "name": "Ụlọ ìhè",
-        "size": "Over 2,000 members"
+        "size": "Njikọta ọdịnaya nke gị (dịka nnọkọ ozizi), mmekọrịta ụzọ, nkwado ọkwa elu."
       }
     },
     "features": {

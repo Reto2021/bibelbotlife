@@ -535,19 +535,19 @@
     "tier": {
       "free": {
         "name": "Imbewu yemastadi",
-        "size": "For all churches"
+        "size": "Ukufinyelela kwe-bot okuyisisekelo kuwo wonke amalungu omphakathi."
       },
       "community": {
         "name": "Umkhaphi",
-        "size": "Up to 500 members"
+        "size": "Isonto likhonjwa njengomxhasi ku-website kanye nokufinyelela okungenamakhono."
       },
       "gemeinde": {
         "name": "Umakhi wamabhuloho",
-        "size": "500–2,000 members"
+        "size": "I-logo ku-interface ye-bot, umbiko wokusebenzisa wanyanga zonke (ongaziwa)."
       },
       "kirche": {
         "name": "Indlu yokukhanya",
-        "size": "Over 2,000 members"
+        "size": "Ukuhlanganiswa kokuqukethwe kwakho (isib. i-archive yamasemoni), ukubambisana ngemephu yendlela, ukwesekwa okuhle kakhulu."
       }
     },
     "features": {

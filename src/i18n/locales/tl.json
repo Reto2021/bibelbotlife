@@ -535,19 +535,19 @@
     "tier": {
       "free": {
         "name": "Butil ng mustasa",
-        "size": "For all churches"
+        "size": "Pangunahing access sa bot para sa lahat ng miyembro ng komunidad."
       },
       "community": {
         "name": "Kasama sa paglalakbay",
-        "size": "Up to 500 members"
+        "size": "Pagbanggit sa simbahan bilang tagasuporta sa website at access na walang ads."
       },
       "gemeinde": {
         "name": "Tagapagtayo ng tulay",
-        "size": "500–2,000 members"
+        "size": "Logo sa interface ng bot, buwanang ulat ng paggamit (anonymous)."
       },
       "kirche": {
         "name": "Parola",
-        "size": "Over 2,000 members"
+        "size": "Integrasyon ng sariling nilalaman (hal. sermon archive), pakikipagtulungan sa roadmap, premium na suporta."
       }
     },
     "features": {
