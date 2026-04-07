@@ -1,13 +1,13 @@
 import { useState, useRef, useEffect, useCallback } from "react";
-import { Send, X, MessageCircle, Loader2, Mic, MicOff } from "lucide-react";
+import { Send, X, MessageCircle, Loader2, Mic, MicOff, Pencil } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
+import { Input } from "@/components/ui/input";
 import ReactMarkdown from "react-markdown";
 import { useToast } from "@/hooks/use-toast";
 
 const SpeechRecognition =
   (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
-
 
 type Message = { role: "user" | "assistant"; content: string };
 
@@ -19,12 +19,32 @@ const SUGGESTIONS = [
   "Hilf mir bei einem Gebet für einen schwierigen Tag",
 ];
 
+const DEFAULT_BOT_NAME = "BibelBot";
+const STORAGE_KEY = "bibelbot-name";
+
+function getBotName(): string {
+  try {
+    return localStorage.getItem(STORAGE_KEY) || DEFAULT_BOT_NAME;
+  } catch {
+    return DEFAULT_BOT_NAME;
+  }
+}
+
+function saveBotName(name: string) {
+  try {
+    localStorage.setItem(STORAGE_KEY, name);
+  } catch {}
+}
+
 export function BibelBotChat() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isListening, setIsListening] = useState(false);
+  const [botName, setBotName] = useState(getBotName);
+  const [isEditingName, setIsEditingName] = useState(false);
+  const [nameDraft, setNameDraft] = useState("");
   const recognitionRef = useRef<any>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -69,6 +89,15 @@ export function BibelBotChat() {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
     }
   }, [messages]);
+
+  const handleSaveName = () => {
+    const trimmed = nameDraft.trim();
+    if (trimmed) {
+      setBotName(trimmed);
+      saveBotName(trimmed);
+    }
+    setIsEditingName(false);
+  };
 
   const sendMessage = useCallback(
     async (text: string) => {
@@ -151,14 +180,14 @@ export function BibelBotChat() {
         console.error(e);
         toast({
           title: "Verbindungsfehler",
-          description: "BibelBot konnte nicht erreicht werden.",
+          description: `${botName} konnte nicht erreicht werden.`,
           variant: "destructive",
         });
       } finally {
         setIsLoading(false);
       }
     },
-    [messages, isLoading, toast]
+    [messages, isLoading, toast, botName]
   );
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -189,7 +218,36 @@ export function BibelBotChat() {
             <MessageCircle className="h-4 w-4 text-primary" />
           </div>
           <div>
-            <p className="font-semibold text-sm text-foreground">BibelBot</p>
+            {isEditingName ? (
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  handleSaveName();
+                }}
+                className="flex items-center gap-1"
+              >
+                <Input
+                  value={nameDraft}
+                  onChange={(e) => setNameDraft(e.target.value)}
+                  className="h-6 text-sm w-28 px-1 py-0"
+                  maxLength={20}
+                  autoFocus
+                  onBlur={handleSaveName}
+                />
+              </form>
+            ) : (
+              <button
+                onClick={() => {
+                  setNameDraft(botName);
+                  setIsEditingName(true);
+                }}
+                className="flex items-center gap-1 group"
+                title="Namen ändern"
+              >
+                <p className="font-semibold text-sm text-foreground">{botName}</p>
+                <Pencil className="h-3 w-3 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
+              </button>
+            )}
             <p className="text-xs text-muted-foreground">Dein Bibelbegleiter</p>
           </div>
         </div>
