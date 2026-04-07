@@ -1,9 +1,13 @@
 import { useState, useRef, useEffect, useCallback } from "react";
-import { Send, X, MessageCircle, Loader2 } from "lucide-react";
+import { Send, X, MessageCircle, Loader2, Mic, MicOff } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import ReactMarkdown from "react-markdown";
 import { useToast } from "@/hooks/use-toast";
+
+const SpeechRecognition =
+  (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+
 
 type Message = { role: "user" | "assistant"; content: string };
 
