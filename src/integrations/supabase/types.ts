@@ -53,6 +53,110 @@ export type Database = {
         }
         Relationships: []
       }
+      church_contact_requests: {
+        Row: {
+          church_id: string
+          created_at: string
+          id: string
+          message: string
+          sender_email: string
+          sender_name: string | null
+        }
+        Insert: {
+          church_id: string
+          created_at?: string
+          id?: string
+          message: string
+          sender_email: string
+          sender_name?: string | null
+        }
+        Update: {
+          church_id?: string
+          created_at?: string
+          id?: string
+          message?: string
+          sender_email?: string
+          sender_name?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "church_contact_requests_church_id_fkey"
+            columns: ["church_id"]
+            isOneToOne: false
+            referencedRelation: "church_partners"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      church_partners: {
+        Row: {
+          city: string | null
+          contact_email: string | null
+          contact_phone: string | null
+          country: string | null
+          created_at: string
+          denomination: string | null
+          id: string
+          is_active: boolean
+          language: string | null
+          logo_url: string | null
+          name: string
+          pastor_name: string | null
+          pastor_photo_url: string | null
+          plan_tier: Database["public"]["Enums"]["church_plan_tier"]
+          service_times: string | null
+          slug: string
+          telegram_group_link: string | null
+          updated_at: string
+          website: string | null
+          welcome_message: string | null
+        }
+        Insert: {
+          city?: string | null
+          contact_email?: string | null
+          contact_phone?: string | null
+          country?: string | null
+          created_at?: string
+          denomination?: string | null
+          id?: string
+          is_active?: boolean
+          language?: string | null
+          logo_url?: string | null
+          name: string
+          pastor_name?: string | null
+          pastor_photo_url?: string | null
+          plan_tier?: Database["public"]["Enums"]["church_plan_tier"]
+          service_times?: string | null
+          slug: string
+          telegram_group_link?: string | null
+          updated_at?: string
+          website?: string | null
+          welcome_message?: string | null
+        }
+        Update: {
+          city?: string | null
+          contact_email?: string | null
+          contact_phone?: string | null
+          country?: string | null
+          created_at?: string
+          denomination?: string | null
+          id?: string
+          is_active?: boolean
+          language?: string | null
+          logo_url?: string | null
+          name?: string
+          pastor_name?: string | null
+          pastor_photo_url?: string | null
+          plan_tier?: Database["public"]["Enums"]["church_plan_tier"]
+          service_times?: string | null
+          slug?: string
+          telegram_group_link?: string | null
+          updated_at?: string
+          website?: string | null
+          welcome_message?: string | null
+        }
+        Relationships: []
+      }
       daily_broadcast_log: {
         Row: {
           id: string
@@ -166,7 +270,7 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      [_ in never]: never
+      church_plan_tier: "free" | "community" | "gemeinde" | "kirche"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -293,6 +397,8 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      church_plan_tier: ["free", "community", "gemeinde", "kirche"],
+    },
   },
 } as const
