@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect, useCallback } from "react";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 import { openBibelBotChat } from "@/lib/chat-events";
 import { cn } from "@/lib/utils";
 
