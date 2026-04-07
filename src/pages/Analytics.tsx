@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   BarChart3, Eye, MousePointer, Users, Smartphone, Monitor, Tablet,
-  MessageCircle, Flame, Trophy, Bell, TrendingUp, Download,
+  MessageCircle, Flame, Trophy, Bell, TrendingUp, Download, Globe,
 } from "lucide-react";
 import {
   BarChart, Bar, XAxis, YAxis, Tooltip as RTooltip, ResponsiveContainer,
@@ -16,6 +16,7 @@ type AnalyticsData = {
   summary: { totalPageviews: number; totalEvents: number; uniqueSessions: number };
   topPages: { path: string; count: number }[];
   topEvents: { name: string; count: number }[];
+  topReferrers?: { source: string; count: number }[];
   devices: { mobile: number; tablet: number; desktop: number };
   dailyPageviews: Record<string, number>;
   topFlows: { flow: string; count: number }[];
@@ -143,6 +144,7 @@ const Analytics = () => {
     Object.entries(data.chat?.dailyActivity || {}).forEach(([date, count]) => rows.push(["Chat-Aktivität", date, String(count)]));
     data.topPages?.forEach((p) => rows.push(["Top Seiten", p.path, String(p.count)]));
     data.topEvents?.forEach((e) => rows.push(["Top Events", e.name, String(e.count)]));
+    data.topReferrers?.forEach((r) => rows.push(["Referrer", r.source, String(r.count)]));
     Object.entries(data.subscribers?.byChannel || {}).forEach(([ch, total]) =>
       rows.push(["Abonnenten-Kanal", ch, `${total} (aktiv: ${data.subscribers?.activeByChannel?.[ch] || 0})`])
     );
@@ -442,7 +444,35 @@ const Analytics = () => {
           </Card>
         </div>
 
-        {/* User Flows */}
+        {/* Referrer-Quellen */}
+        <Card>
+          <CardHeader className="pb-2">
+            <CardTitle className="text-base flex items-center gap-2">
+              <Globe className="h-4 w-4 text-primary" />
+              Referrer-Quellen
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-2">
+              {data?.topReferrers?.map((r) => {
+                const max = data.topReferrers?.[0]?.count || 1;
+                return (
+                  <div key={r.source} className="space-y-0.5">
+                    <div className="flex justify-between items-center text-sm">
+                      <span className="text-foreground text-xs truncate">{r.source}</span>
+                      <span className="text-muted-foreground text-xs ml-2">{r.count}</span>
+                    </div>
+                    <div className="h-1.5 bg-muted rounded-full overflow-hidden">
+                      <div className="h-full bg-chart-3 rounded-full" style={{ width: `${(r.count / max) * 100}%` }} />
+                    </div>
+                  </div>
+                );
+              })}
+              {!data?.topReferrers?.length && <p className="text-sm text-muted-foreground">Keine Referrer-Daten</p>}
+            </div>
+          </CardContent>
+        </Card>
+
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-base">User Flows</CardTitle>

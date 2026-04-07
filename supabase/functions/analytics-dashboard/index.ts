@@ -165,6 +165,21 @@ Deno.serve(async (req) => {
     dailyChats[day] = (dailyChats[day] || 0) + 1;
   });
 
+  // ── Referrer stats ──
+  const referrerCounts: Record<string, number> = {};
+  pageviews.forEach((e: any) => {
+    let ref = e.referrer || "";
+    if (!ref || ref === "" || ref === "null") { ref = "(direkt)"; }
+    else {
+      try { ref = new URL(ref).hostname.replace(/^www\./, ""); } catch { /* keep raw */ }
+    }
+    referrerCounts[ref] = (referrerCounts[ref] || 0) + 1;
+  });
+  const topReferrers = Object.entries(referrerCounts)
+    .sort(([, a], [, b]) => b - a)
+    .slice(0, 10)
+    .map(([source, count]) => ({ source, count }));
+
   const result = {
     period: { days, since },
     summary: {
@@ -177,6 +192,7 @@ Deno.serve(async (req) => {
     devices,
     dailyPageviews: dailyCounts,
     topFlows,
+    topReferrers,
     journey: {
       starts: journeyStarts,
       completes: journeyCompletes,
