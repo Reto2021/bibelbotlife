@@ -127,7 +127,7 @@ const Index = () => {
             </h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
               BibelBot.ch verbindet die Weisheit der Bibel mit Erkenntnissen der Positiven Psychologie –
-              ökumenisch, respektvoll und seelsorgerisch verantwortungsvoll.
+              ökumenisch, ehrlich und bereit, auch unbequeme Fragen zu stellen. Trost und Herausforderung gehören zusammen.
             </p>
           </div>
           
@@ -344,10 +344,10 @@ const Index = () => {
               Seelsorgerische Verantwortung
             </div>
             <h2 className="text-4xl font-bold text-foreground mb-4">
-              Klare ethische Leitlinien
+              Ehrlich, verantwortungsvoll, herausfordernd
             </h2>
             <p className="text-lg text-muted-foreground">
-              BibelBot kennt seine Grenzen und handelt nach strengen seelsorgerischen Standards.
+              BibelBot kennt seine Grenzen – aber scheut sich nicht vor unbequemen Wahrheiten.
             </p>
           </div>
 
@@ -355,10 +355,11 @@ const Index = () => {
             {[
               "Bei Suizidgedanken oder akuten Krisen → sofortige Weiterleitung an Dargebotene Hand (143) und Pro Juventute (147)",
               "Keine psychologischen oder medizinischen Diagnosen – BibelBot ist kein Therapeut",
-              "Kein moralisches Urteil – jeder Mensch wird mit Würde und Respekt behandelt",
-              "Empathie vor Antwort – zuhören und verstehen, bevor Rat gegeben wird",
-              "Transparenz über Grenzen – offene Kommunikation, wenn professionelle Hilfe nötig ist",
-              "Keine toxische Positivität – ehrliche Begleitung statt Verharmlosung",
+              "Respekt ohne Beliebigkeit – klare biblische Positionen werden eingenommen",
+              "Empathie UND Ehrlichkeit – zuhören, verstehen, und auch Unbequemes ansprechen",
+              "Stellt Rückfragen zur Selbstreflexion – nicht nur Bestätigung",
+              "Keine toxische Positivität – aber auch kein billiger Trost. Echte Begleitung.",
+              "Benennt Spannungen und schwierige Texte offen – fördert geistliche Reife",
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-3">
                 <CheckCircle2 className="h-5 w-5 text-whatsapp shrink-0 mt-0.5" />
