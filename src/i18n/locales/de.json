@@ -228,7 +228,16 @@
     "copyLink": "Text kopieren",
     "error": "Kopieren fehlgeschlagen",
     "impulseTitle": "BibelBot – Impuls des Tages",
-    "chatTitle": "BibelBot – Gedanke des Tages"
+    "chatTitle": "BibelBot – Gedanke des Tages",
+    "createImage": "Bild erstellen ✨",
+    "generating": "Wird erstellt…",
+    "imageReady": "Dein Bild ist bereit zum Teilen!",
+    "shareImage": "Bild teilen",
+    "download": "Speichern",
+    "imageError": "Bild-Erstellung fehlgeschlagen",
+    "imageErrorDesc": "Das Bild konnte nicht erstellt werden. Versuche es später erneut.",
+    "imageSaved": "Text kopiert! 📋",
+    "imageSavedDesc": "Speichere das Bild und teile es mit dem kopierten Text auf Instagram, WhatsApp oder wo du möchtest!"
   },
   "darkMode": {
     "light": "Heller Modus",
