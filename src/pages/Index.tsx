@@ -153,13 +153,195 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Unterschied zu generischen KI-Bots */}
+      {/* Features Section */}
       <section className="py-20 px-4 bg-card/40">
-        <div className="container mx-auto max-w-5xl">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-foreground mb-4">
+              Wie BibelBot.ch dich begleitet
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Entdecke die vielfältigen Möglichkeiten, wie der BibelBot dein spirituelles Leben bereichern kann
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <Card key={index} className="bg-card/80 backdrop-blur-sm border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <CardHeader className="text-center">
+                  <feature.icon className="h-12 w-12 text-primary mx-auto mb-4" />
+                  <CardTitle className="text-xl text-card-foreground">{feature.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-muted-foreground text-center leading-relaxed">
+                    {feature.description}
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 text-sm font-medium text-secondary bg-secondary/10 px-4 py-1.5 rounded-full mb-4">
-              <Sparkles className="h-4 w-4" />
-              Spezialisiert statt generisch
+              <HelpCircle className="h-4 w-4" />
+              Häufige Fragen
+            </div>
+            <h2 className="text-4xl font-bold text-foreground mb-4">
+              Was du über BibelBot wissen solltest
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Transparenz ist uns wichtig – besonders gegenüber Theologinnen, Seelsorgern und kritischen Köpfen.
+            </p>
+          </div>
+
+          <Accordion type="multiple" className="space-y-3">
+            <AccordionItem value="unterschied" className="bg-card/80 border border-border rounded-xl px-6 data-[state=open]:shadow-md">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
+                Was unterscheidet BibelBot von ChatGPT & Co.?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+                <div className="grid md:grid-cols-2 gap-6 pt-2">
+                  <div>
+                    <p className="font-semibold text-foreground text-sm mb-3">Generische KI-Chatbots:</p>
+                    <div className="space-y-2">
+                      {[
+                        "Oberflächliche Bibelzitate ohne Kontext",
+                        "Keine seelsorgerischen Guardrails",
+                        "Vermeidet unbequeme Texte",
+                        "Keine Krisenintervention",
+                        "Mischt Bibel mit Esoterik",
+                        "Keine Rückfragen – nur Bestätigung",
+                      ].map((item, i) => (
+                        <div key={i} className="flex items-start gap-2">
+                          <XIcon className="h-4 w-4 text-destructive shrink-0 mt-0.5" />
+                          <span className="text-sm">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-foreground text-sm mb-3">BibelBot.ch:</p>
+                    <div className="space-y-2">
+                      {[
+                        "5 anerkannte Übersetzungen – auch unbequeme Stellen",
+                        "Guardrails UND herausfordernde Begleitung",
+                        "Rückfragen zur Selbstreflexion",
+                        "Krisenverweise (Tel. 143 / 147)",
+                        "Ausschliesslich christliche Theologie",
+                        "Fördert kritisches Denken als Glaubensreife",
+                      ].map((item, i) => (
+                        <div key={i} className="flex items-start gap-2">
+                          <Check className="h-4 w-4 text-whatsapp shrink-0 mt-0.5" />
+                          <span className="text-sm text-foreground/90">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="bibeln" className="bg-card/80 border border-border rounded-xl px-6 data-[state=open]:shadow-md">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
+                Welche Bibelübersetzungen sind hinterlegt?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+                <p className="mb-4">BibelBot arbeitet ökumenisch mit den massgeblichen deutschsprachigen Bibelausgaben:</p>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                  {BIBLE_EDITIONS.map((bible) => (
+                    <div key={bible.name} className="flex items-center gap-3 bg-accent/30 rounded-lg px-4 py-3">
+                      <BookOpen className="h-4 w-4 text-primary shrink-0" />
+                      <div>
+                        <p className="font-medium text-foreground text-sm">{bible.name} ({bible.year})</p>
+                        <p className="text-xs text-muted-foreground">{bible.tradition}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <p className="mt-4 text-sm">Alle Bibelstellen werden mit Quellenangabe und historischem Kontext ausgegeben.</p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="psychologie" className="bg-card/80 border border-border rounded-xl px-6 data-[state=open]:shadow-md">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
+                Welche wissenschaftlichen Grundlagen stecken dahinter?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+                <p className="mb-4">Die Begleitung basiert auf peer-reviewed Forschung der Positiven Psychologie:</p>
+                <div className="space-y-3">
+                  {GUIDELINES.map((g) => (
+                    <div key={g.title} className="flex items-start gap-3">
+                      <div className="h-8 w-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
+                        <g.icon className="h-4 w-4 text-primary" />
+                      </div>
+                      <div>
+                        <p className="font-medium text-foreground text-sm">{g.title} <span className="text-muted-foreground font-normal">({g.author})</span></p>
+                        <p className="text-sm">{g.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="guardrails" className="bg-card/80 border border-border rounded-xl px-6 data-[state=open]:shadow-md">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
+                Wie stellt BibelBot seelsorgerische Sicherheit sicher?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+                <div className="space-y-3">
+                  {[
+                    "Bei Suizidgedanken oder Krisen → sofortige Weiterleitung an Dargebotene Hand (143) und Pro Juventute (147)",
+                    "Keine psychologischen oder medizinischen Diagnosen",
+                    "Respekt ohne Beliebigkeit – klare biblische Positionen werden eingenommen",
+                    "Empathie UND Ehrlichkeit – auch Unbequemes wird angesprochen",
+                    "Rückfragen zur Selbstreflexion statt billiger Bestätigung",
+                    "Keine toxische Positivität – echte, ehrliche Begleitung",
+                    "Benennt Spannungen und schwierige Texte offen",
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-start gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-whatsapp shrink-0 mt-0.5" />
+                      <span className="text-sm">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="oekumenisch" className="bg-card/80 border border-border rounded-xl px-6 data-[state=open]:shadow-md">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
+                Ist BibelBot konfessionell gebunden?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+                Nein. BibelBot ist ökumenisch ausgerichtet und respektiert reformierte, katholische, freikirchliche und weitere christliche Traditionen gleichermassen. Bei konfessionell unterschiedlichen Auslegungen werden verschiedene Perspektiven transparent dargestellt – ohne eine Tradition zu bevorzugen.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="grenzen" className="bg-card/80 border border-border rounded-xl px-6 data-[state=open]:shadow-md">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
+                Ersetzt BibelBot die Seelsorge oder Therapie?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+                Nein. BibelBot ist ein KI-gestütztes Hilfsmittel für die persönliche Bibellektüre und Reflexion. Er ersetzt keine professionelle Seelsorge, theologische Beratung oder psychologische Therapie. Bei ernsthaften Krisen verweist BibelBot immer an qualifizierte Anlaufstellen.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="herausfordernd" className="bg-card/80 border border-border rounded-xl px-6 data-[state=open]:shadow-md">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
+                Ist BibelBot nicht einfach ein «Wohlfühl-Bot»?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+                Nein. BibelBot tröstet, wo Trost nötig ist – aber er fordert auch heraus. Geistliches Wachstum braucht Reibung. BibelBot stellt unbequeme Rückfragen, benennt schwierige Bibeltexte (Hiob, Klagepsalmen, prophetische Kritik) und scheut sich nicht vor Themen wie Gerechtigkeit, Umkehr und Verantwortung. Die prophetische Tradition war nie bequem – und BibelBot auch nicht.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+      </section>
             </div>
             <h2 className="text-4xl font-bold text-foreground mb-4">
               Was BibelBot von ChatGPT & Co. unterscheidet
