@@ -25,7 +25,7 @@ export const useAnalytics = () => {
   const track = useCallback(
     async (eventName: string, eventData: Record<string, unknown> = {}) => {
       try {
-        await supabase.from("analytics_events").insert({
+        await (supabase.from("analytics_events") as any).insert({
           session_id: sessionId.current,
           event_type: "event",
           page_path: location.pathname,
@@ -47,8 +47,7 @@ export const useAnalytics = () => {
     if (location.pathname === lastPath.current) return;
     lastPath.current = location.pathname;
 
-    supabase
-      .from("analytics_events")
+    (supabase.from("analytics_events") as any)
       .insert({
         session_id: sessionId.current,
         event_type: "pageview",
