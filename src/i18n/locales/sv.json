@@ -587,6 +587,7 @@
     "contactSend": "Skicka meddelande",
     "contactSuccess": "Meddelande skickat! 🙏",
     "contactSuccessDesc": "Kyrkan återkommer till dig.",
-    "recommendedBy": "Rekommenderad av {{name}}"
+    "recommendedBy": "Rekommenderad av {{name}}",
+    "setup": "Installation (engångs)"
   }
 }

@@ -587,6 +587,7 @@
     "contactSend": "Send message",
     "contactSuccess": "Message sent! 🙏",
     "contactSuccessDesc": "The church will get back to you.",
-    "recommendedBy": "Recommended by {{name}}"
+    "recommendedBy": "Recommended by {{name}}",
+    "setup": "Ukumisa (kanye)"
   }
 }

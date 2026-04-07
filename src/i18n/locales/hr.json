@@ -587,6 +587,7 @@
     "contactSend": "Pošalji poruku",
     "contactSuccess": "Poruka poslana! 🙏",
     "contactSuccessDesc": "Crkva će vam se javiti.",
-    "recommendedBy": "Preporučeno od {{name}}"
+    "recommendedBy": "Preporučeno od {{name}}",
+    "setup": "Postavljanje (jednokratno)"
   }
 }

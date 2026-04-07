@@ -587,6 +587,7 @@
     "contactSend": "Send besked",
     "contactSuccess": "Besked sendt! 🙏",
     "contactSuccessDesc": "Kirken vender tilbage til dig.",
-    "recommendedBy": "Anbefalet af {{name}}"
+    "recommendedBy": "Anbefalet af {{name}}",
+    "setup": "Opsætning (engangs)"
   }
 }

@@ -587,6 +587,7 @@
     "contactSend": "Invia messaggio",
     "contactSuccess": "Messaggio inviato! 🙏",
     "contactSuccessDesc": "La chiesa ti risponderà presto.",
-    "recommendedBy": "Raccomandato da {{name}}"
+    "recommendedBy": "Raccomandato da {{name}}",
+    "setup": "Setup (una tantum)"
   }
 }

@@ -587,6 +587,7 @@
     "contactSend": "Odeslat zprávu",
     "contactSuccess": "Zpráva odeslána! 🙏",
     "contactSuccessDesc": "Sbor se vám ozve.",
-    "recommendedBy": "Doporučeno od {{name}}"
+    "recommendedBy": "Doporučeno od {{name}}",
+    "setup": "Nastavení (jednorázové)"
   }
 }

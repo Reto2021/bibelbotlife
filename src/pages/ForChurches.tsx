@@ -9,25 +9,29 @@ import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 const tiers = [
   {
     key: "free",
+    setup: 0,
     annual: 0,
     icon: Church,
     popular: false,
   },
   {
     key: "community",
-    annual: 490,
+    setup: 490,
+    annual: 790,
     icon: Users,
     popular: false,
   },
   {
     key: "gemeinde",
-    annual: 990,
+    setup: 990,
+    annual: 1490,
     icon: BarChart3,
     popular: true,
   },
   {
     key: "kirche",
-    annual: 1990,
+    setup: 1990,
+    annual: 2990,
     icon: Palette,
     popular: false,
   },
@@ -106,6 +110,11 @@ const ForChurches = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="text-center mb-6">
+                    {tier.setup > 0 && (
+                      <p className="text-sm text-muted-foreground mb-1">
+                        {t("church.setup")}: <span className="font-semibold text-foreground">CHF {tier.setup.toLocaleString("de-CH")}.–</span>
+                      </p>
+                    )}
                     <p className="text-3xl font-bold text-foreground">
                       {tier.annual === 0 ? "CHF 0.–" : `CHF ${tier.annual.toLocaleString("de-CH")}.–`}
                     </p>
