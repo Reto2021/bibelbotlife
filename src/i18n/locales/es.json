@@ -369,6 +369,81 @@
       "title": "7 Por Qués",
       "desc": "Encuentra la raíz más profunda de tu pregunta",
       "prompt": "Me gustaría hacer el ejercicio de los 7 Por Qués. Aquí está mi tema:"
+    },
+    "anger": {
+      "title": "Ira",
+      "desc": "Cuando estás a punto de explotar",
+      "prompt": "Estoy muy enojado/a. ¿Qué dice la Biblia sobre la ira?"
+    },
+    "shame": {
+      "title": "Vergüenza",
+      "desc": "Cuando la culpa te aplasta",
+      "prompt": "Siento mucha vergüenza y culpa. ¿Qué dice la Biblia sobre el perdón?"
+    },
+    "burnout": {
+      "title": "Agotamiento",
+      "desc": "Cuando ya no puedes más",
+      "prompt": "Estoy totalmente agotado/a. ¿Qué dice la Biblia sobre el descanso?"
+    },
+    "illness": {
+      "title": "Enfermedad",
+      "desc": "Cuando un diagnóstico lo cambia todo",
+      "prompt": "Recibí un diagnóstico difícil. ¿Qué dice la Biblia sobre la enfermedad y la esperanza?"
+    },
+    "financial": {
+      "title": "Preocupaciones económicas",
+      "desc": "Cuando las cuentas agobian",
+      "prompt": "Tengo preocupaciones financieras. ¿Qué dice la Biblia sobre el dinero y la confianza?"
+    },
+    "meaningcrisis": {
+      "title": "Crisis de sentido",
+      "desc": "¿Para qué todo esto?",
+      "prompt": "Me pregunto para qué sirve todo. ¿Qué dice la Biblia sobre el sentido de la vida?"
+    },
+    "selfdoubt": {
+      "title": "Inseguridad",
+      "desc": "Cuando no te sientes suficiente",
+      "prompt": "Dudo constantemente de mí mismo/a. ¿Qué dice la Biblia sobre mi valor?"
+    },
+    "calling": {
+      "title": "Vocación",
+      "desc": "¿Qué hacer con mi vida?",
+      "prompt": "No sé qué hacer con mi vida. ¿Qué dice la Biblia sobre la vocación?"
+    },
+    "faithdoubt": {
+      "title": "Dudas de fe",
+      "desc": "Cuando la fe tambalea",
+      "prompt": "Tengo dudas sobre mi fe. ¿Qué dice la Biblia sobre la duda?"
+    },
+    "forgiveness": {
+      "title": "Perdón",
+      "desc": "Cuando perdonar parece imposible",
+      "prompt": "No puedo perdonar. ¿Qué dice la Biblia sobre el perdón?"
+    },
+    "familyconflict": {
+      "title": "Conflicto familiar",
+      "desc": "Cuando la familia estalla",
+      "prompt": "Hay un gran conflicto en mi familia. ¿Qué dice la Biblia sobre la reconciliación?"
+    },
+    "envy": {
+      "title": "Envidia",
+      "desc": "Cuando otros lo tienen mejor",
+      "prompt": "Siento envidia. ¿Qué dice la Biblia sobre la envidia y la satisfacción?"
+    },
+    "joy": {
+      "title": "Compartir alegría",
+      "desc": "Cuando algo maravilloso sucede",
+      "prompt": "¡Me pasó algo maravilloso! ¿Qué dice la Biblia sobre la alegría?"
+    },
+    "prayer": {
+      "title": "Petición de oración",
+      "desc": "Orar juntos",
+      "prompt": "Tengo una petición de oración. Acompáñame en la oración."
+    },
+    "bibleverse": {
+      "title": "Entender un versículo",
+      "desc": "Explicación de un pasaje",
+      "prompt": "Me gustaría entender mejor un pasaje bíblico. ¿Puedes ayudarme?"
     }
   },
   "lifeWheel": {

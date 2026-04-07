@@ -369,6 +369,81 @@
       "title": "7 Proč",
       "desc": "Najdi nejhlubší kořen své otázky",
       "prompt": "Chtěl/a bych udělat cvičení 7 Proč. Tady je mé téma:"
+    },
+    "anger": {
+      "title": "Hněv",
+      "desc": "Když jsi na pokraji výbuchu",
+      "prompt": "Jsem velmi rozzlobený/á. Co říká Bible o hněvu?"
+    },
+    "shame": {
+      "title": "Stud a vina",
+      "desc": "Když tě pocit viny drtí",
+      "prompt": "Cítím velký stud a vinu. Co říká Bible o odpuštění?"
+    },
+    "burnout": {
+      "title": "Vyhoření",
+      "desc": "Když už nemůžeš dál",
+      "prompt": "Jsem totálně vyčerpaný/á. Co říká Bible o odpočinku?"
+    },
+    "illness": {
+      "title": "Nemoc",
+      "desc": "Když diagnóza změní všechno",
+      "prompt": "Dostal/a jsem těžkou diagnózu. Co říká Bible o nemoci a naději?"
+    },
+    "financial": {
+      "title": "Finanční starosti",
+      "desc": "Když účty tlačí",
+      "prompt": "Mám finanční starosti. Co říká Bible o penězích a důvěře?"
+    },
+    "meaningcrisis": {
+      "title": "Krize smyslu",
+      "desc": "K čemu to všechno je?",
+      "prompt": "Ptám se, k čemu to všechno je. Co říká Bible o smyslu života?"
+    },
+    "selfdoubt": {
+      "title": "Pochybnosti o sobě",
+      "desc": "Když se necítíš dost dobrý/á",
+      "prompt": "Neustále o sobě pochybuji. Co říká Bible o mé hodnotě?"
+    },
+    "calling": {
+      "title": "Povolání",
+      "desc": "Co dělat se svým životem?",
+      "prompt": "Nevím, co dělat se svým životem. Co říká Bible o povolání?"
+    },
+    "faithdoubt": {
+      "title": "Pochybnosti o víře",
+      "desc": "Když víra kolísá",
+      "prompt": "Mám pochybnosti o své víře. Co říká Bible o pochybnostech?"
+    },
+    "forgiveness": {
+      "title": "Odpuštění",
+      "desc": "Když odpustit se zdá nemožné",
+      "prompt": "Nemůžu odpustit. Co říká Bible o odpuštění?"
+    },
+    "familyconflict": {
+      "title": "Rodinný konflikt",
+      "desc": "Když to v rodině vře",
+      "prompt": "V mé rodině je velký konflikt. Co říká Bible o smíření?"
+    },
+    "envy": {
+      "title": "Závist",
+      "desc": "Když to ostatní mají lepší",
+      "prompt": "Cítím závist. Co říká Bible o závisti a spokojenosti?"
+    },
+    "joy": {
+      "title": "Sdílet radost",
+      "desc": "Když se stane něco krásného",
+      "prompt": "Stalo se mi něco nádherného! Co říká Bible o radosti?"
+    },
+    "prayer": {
+      "title": "Modlitební prosba",
+      "desc": "Modlit se společně",
+      "prompt": "Mám modlitební prosbu. Doprovoď mě v modlitbě."
+    },
+    "bibleverse": {
+      "title": "Pochopit verš",
+      "desc": "Vysvětlení biblického úryvku",
+      "prompt": "Chtěl/a bych lépe pochopit biblický úryvek. Můžeš mi pomoci?"
     }
   },
   "lifeWheel": {

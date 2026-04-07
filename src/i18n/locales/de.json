@@ -406,6 +406,81 @@
       "title": "7 Warums",
       "desc": "Finde die tiefste Wurzel deiner Frage",
       "prompt": "Ich möchte die 7-Warums-Übung machen. Hier ist mein Thema:"
+    },
+    "anger": {
+      "title": "Wut & Zorn",
+      "desc": "Wenn du vor Wut platzen könntest",
+      "prompt": "Ich bin so wütend und weiss nicht wohin mit meiner Wut. Was sagt die Bibel über Zorn und wie ich damit umgehen kann?"
+    },
+    "shame": {
+      "title": "Scham & Schuld",
+      "desc": "Wenn Schuldgefühle dich erdrücken",
+      "prompt": "Ich schäme mich so sehr und fühle mich schuldig. Was sagt die Bibel über Schuld, Vergebung und einen Neuanfang?"
+    },
+    "burnout": {
+      "title": "Burnout",
+      "desc": "Wenn du einfach nicht mehr kannst",
+      "prompt": "Ich bin total erschöpft und ausgebrannt. Ich kann einfach nicht mehr. Was sagt die Bibel über Ruhe und Erholung?"
+    },
+    "illness": {
+      "title": "Krankheit",
+      "desc": "Wenn eine Diagnose alles verändert",
+      "prompt": "Ich habe eine schwierige Diagnose erhalten und habe Angst. Was sagt die Bibel über Krankheit, Heilung und Hoffnung?"
+    },
+    "financial": {
+      "title": "Geldsorgen",
+      "desc": "Wenn die Rechnungen drücken",
+      "prompt": "Ich habe finanzielle Sorgen und weiss nicht weiter. Was sagt die Bibel über Geld, Vertrauen und Versorgung?"
+    },
+    "meaningcrisis": {
+      "title": "Sinnkrise",
+      "desc": "Wofür das alles?",
+      "prompt": "Ich frage mich, wofür das alles gut sein soll. Ich stecke in einer Sinnkrise. Was sagt die Bibel über den Sinn des Lebens?"
+    },
+    "selfdoubt": {
+      "title": "Selbstzweifel",
+      "desc": "Wenn du dich nicht gut genug fühlst",
+      "prompt": "Ich zweifle ständig an mir selbst und fühle mich nicht gut genug. Was sagt die Bibel über meinen Wert?"
+    },
+    "calling": {
+      "title": "Berufung",
+      "desc": "Was soll ich mit meinem Leben anfangen?",
+      "prompt": "Ich weiss nicht, was ich mit meinem Leben anfangen soll. Hilf mir, meine Berufung zu finden – was sagt die Bibel dazu?"
+    },
+    "faithdoubt": {
+      "title": "Glaubenszweifel",
+      "desc": "Wenn der Glaube wackelt",
+      "prompt": "Ich habe Zweifel an meinem Glauben und weiss nicht, ob ich noch glauben kann. Was sagt die Bibel über Zweifel?"
+    },
+    "forgiveness": {
+      "title": "Vergebung",
+      "desc": "Wenn Vergeben unmöglich scheint",
+      "prompt": "Ich kann jemandem einfach nicht vergeben. Es tut zu sehr weh. Was sagt die Bibel über Vergebung?"
+    },
+    "familyconflict": {
+      "title": "Familienstreit",
+      "desc": "Wenn es in der Familie kracht",
+      "prompt": "Es gibt grossen Streit in meiner Familie. Was sagt die Bibel über Familienfrieden und Versöhnung?"
+    },
+    "envy": {
+      "title": "Neid",
+      "desc": "Wenn andere es besser haben",
+      "prompt": "Ich bin neidisch auf andere und vergleiche mich ständig. Was sagt die Bibel über Neid und Zufriedenheit?"
+    },
+    "joy": {
+      "title": "Freude teilen",
+      "desc": "Wenn etwas Wunderbares passiert ist",
+      "prompt": "Mir ist etwas Wunderbares passiert und ich möchte meine Freude teilen! Was sagt die Bibel über Freude und Dankbarkeit?"
+    },
+    "prayer": {
+      "title": "Gebetsanliegen",
+      "desc": "Gemeinsam beten",
+      "prompt": "Ich habe ein Gebetsanliegen und möchte gemeinsam beten. Begleite mich im Gebet."
+    },
+    "bibleverse": {
+      "title": "Vers verstehen",
+      "desc": "Eine Bibelstelle erklärt bekommen",
+      "prompt": "Ich möchte eine Bibelstelle besser verstehen. Kannst du mir helfen, sie im Kontext einzuordnen?"
     }
   },
   "lifeWheel": {

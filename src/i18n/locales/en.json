@@ -369,6 +369,81 @@
       "title": "7 Whys",
       "desc": "Find the deepest root of your question",
       "prompt": "I'd like to do the 7 Whys exercise. Here is my topic:"
+    },
+    "anger": {
+      "title": "Anger",
+      "desc": "When you're about to explode",
+      "prompt": "I'm so angry and don't know what to do with my rage. What does the Bible say about anger and how to deal with it?"
+    },
+    "shame": {
+      "title": "Shame & Guilt",
+      "desc": "When guilt is crushing you",
+      "prompt": "I feel so ashamed and guilty. What does the Bible say about guilt, forgiveness, and starting over?"
+    },
+    "burnout": {
+      "title": "Burnout",
+      "desc": "When you just can't go on",
+      "prompt": "I'm totally exhausted and burned out. I just can't anymore. What does the Bible say about rest and recovery?"
+    },
+    "illness": {
+      "title": "Illness",
+      "desc": "When a diagnosis changes everything",
+      "prompt": "I've received a difficult diagnosis and I'm scared. What does the Bible say about illness, healing, and hope?"
+    },
+    "financial": {
+      "title": "Money Worries",
+      "desc": "When bills are piling up",
+      "prompt": "I have financial worries and don't know what to do. What does the Bible say about money, trust, and provision?"
+    },
+    "meaningcrisis": {
+      "title": "Meaning Crisis",
+      "desc": "What's it all for?",
+      "prompt": "I'm wondering what's the point of it all. I'm in a meaning crisis. What does the Bible say about the meaning of life?"
+    },
+    "selfdoubt": {
+      "title": "Self-Doubt",
+      "desc": "When you don't feel good enough",
+      "prompt": "I constantly doubt myself and don't feel good enough. What does the Bible say about my worth?"
+    },
+    "calling": {
+      "title": "Calling",
+      "desc": "What should I do with my life?",
+      "prompt": "I don't know what to do with my life. Help me find my calling — what does the Bible say?"
+    },
+    "faithdoubt": {
+      "title": "Faith Doubts",
+      "desc": "When your faith is shaking",
+      "prompt": "I have doubts about my faith and don't know if I can still believe. What does the Bible say about doubt?"
+    },
+    "forgiveness": {
+      "title": "Forgiveness",
+      "desc": "When forgiving seems impossible",
+      "prompt": "I simply can't forgive someone. It hurts too much. What does the Bible say about forgiveness?"
+    },
+    "familyconflict": {
+      "title": "Family Conflict",
+      "desc": "When family is at war",
+      "prompt": "There's a big conflict in my family. What does the Bible say about family peace and reconciliation?"
+    },
+    "envy": {
+      "title": "Envy",
+      "desc": "When others have it better",
+      "prompt": "I'm envious of others and constantly comparing myself. What does the Bible say about envy and contentment?"
+    },
+    "joy": {
+      "title": "Share Joy",
+      "desc": "When something wonderful happened",
+      "prompt": "Something wonderful happened to me and I want to share my joy! What does the Bible say about joy and gratitude?"
+    },
+    "prayer": {
+      "title": "Prayer Request",
+      "desc": "Pray together",
+      "prompt": "I have a prayer request and would like to pray together. Join me in prayer."
+    },
+    "bibleverse": {
+      "title": "Understand a Verse",
+      "desc": "Get a Bible passage explained",
+      "prompt": "I'd like to understand a Bible passage better. Can you help me put it in context?"
     }
   },
   "lifeWheel": {
