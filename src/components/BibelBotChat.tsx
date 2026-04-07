@@ -642,7 +642,7 @@ export function BibelBotChat() {
                 ? `Tag ${journeyDay} von 21 · ${journeyDay <= 7 ? "Ankommen" : journeyDay <= 14 ? "Vertiefen" : "Handeln"}`
                 : journeyDay > 21
                   ? "21 Tage geschafft! 🎉"
-                  : "Deine 21-Tage-Begleitung"}
+                  : "Dein persönlicher Begleiter"}
             </p>
             {journeyDay > 0 && (
               <div className="w-full bg-border rounded-full h-1 mt-1">
@@ -650,6 +650,12 @@ export function BibelBotChat() {
                   className="bg-primary h-1 rounded-full transition-all duration-500"
                   style={{ width: `${Math.min(100, (journeyDay / 21) * 100)}%` }}
                 />
+              </div>
+            )}
+            {showRenameTip && botName === DEFAULT_BOT_NAME && (
+              <div className="animate-fade-up mt-1 text-[10px] text-primary/70 flex items-center gap-1">
+                <Info className="h-2.5 w-2.5" />
+                <span>Tipp: Klick auf den Namen, um mich umzubenennen ✨</span>
               </div>
             )}
           </div>
