@@ -139,6 +139,10 @@ serve(async (req) => {
     try {
       const cleaned = content.replace(/```json\n?/g, "").replace(/```\n?/g, "").trim();
       impulse = JSON.parse(cleaned);
+      // Fix spelling in all text fields
+      for (const key of ['topic', 'verse', 'teaser', 'context']) {
+        if (impulse[key]) impulse[key] = fixSpelling(impulse[key]);
+      }
       impulse.date = dateStr;
     } catch {
       console.error("Failed to parse impulse:", content);
