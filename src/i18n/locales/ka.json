@@ -1,19 +1,19 @@
 {
   "nav": {
-    "startNow": "Get started"
+    "startNow": "დაწყება"
   },
-  "loader": "Loading…",
+  "loader": "იტვირთება…",
   "hero": {
     "badge": {
-      "noLogin": "No login",
-      "noData": "No data",
-      "noJudgment": "No judgment"
+      "noLogin": "შესვლა არ არის",
+      "noData": "მონაცემები არ არის",
+      "noJudgment": "განკითხვა არ არის"
     },
-    "title1": "The Bible.",
-    "title2": " Reimagined.",
-    "subtitle": "BibleBot knows the Bible – and asks the right questions. Not a person, but an honest companion. For meaningful conversations, deep questions, and real impulses.",
-    "ctaTelegram": "Start via Telegram",
-    "ctaMore": "Learn more",
+    "title1": "ბიბლია.",
+    "title2": " ხელახლა გააზრებული.",
+    "subtitle": "BibleBot იცნობს ბიბლიას – და სწორ კითხვებს სვამს. არა ადამიანი, მაგრამ გულწრფელი თანამგზავრი.",
+    "ctaTelegram": "დაიწყეთ Telegram-ით",
+    "ctaMore": "გაიგეთ მეტი",
     "quote": "\"Come to me, all you who are weary and burdened, and I will give you rest.\"",
     "quoteRef": "– Matthew 11:28"
   },

@@ -1,19 +1,19 @@
 {
   "nav": {
-    "startNow": "Get started"
+    "startNow": "Bẹ̀rẹ̀"
   },
-  "loader": "Loading…",
+  "loader": "Ń gbékalẹ̀…",
   "hero": {
     "badge": {
-      "noLogin": "No login",
-      "noData": "No data",
-      "noJudgment": "No judgment"
+      "noLogin": "Kò sí ìforúkọsílẹ̀",
+      "noData": "Kò sí dátà",
+      "noJudgment": "Kò sí ìdájọ́"
     },
-    "title1": "The Bible.",
-    "title2": " Reimagined.",
-    "subtitle": "BibleBot knows the Bible – and asks the right questions. Not a person, but an honest companion. For meaningful conversations, deep questions, and real impulses.",
-    "ctaTelegram": "Start via Telegram",
-    "ctaMore": "Learn more",
+    "title1": "Bíbélì.",
+    "title2": " Tí a tún ronú rẹ̀.",
+    "subtitle": "BibleBot mọ Bíbélì – ó sì ń béèrè àwọn ìbéèrè tó tọ́. Kì í ṣe ènìyàn, ṣùgbọ́n alábàáṣiṣẹ́pọ̀ olóòtítọ́.",
+    "ctaTelegram": "Bẹ̀rẹ̀ nípasẹ̀ Telegram",
+    "ctaMore": "Kà síi",
     "quote": "\"Come to me, all you who are weary and burdened, and I will give you rest.\"",
     "quoteRef": "– Matthew 11:28"
   },

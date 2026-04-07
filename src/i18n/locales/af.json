@@ -1,19 +1,19 @@
 {
   "nav": {
-    "startNow": "Get started"
+    "startNow": "Begin"
   },
-  "loader": "Loading…",
+  "loader": "Laai…",
   "hero": {
     "badge": {
-      "noLogin": "No login",
-      "noData": "No data",
-      "noJudgment": "No judgment"
+      "noLogin": "Geen aanmelding",
+      "noData": "Geen data",
+      "noJudgment": "Geen oordeel"
     },
-    "title1": "The Bible.",
-    "title2": " Reimagined.",
-    "subtitle": "BibleBot knows the Bible – and asks the right questions. Not a person, but an honest companion. For meaningful conversations, deep questions, and real impulses.",
-    "ctaTelegram": "Start via Telegram",
-    "ctaMore": "Learn more",
+    "title1": "Die Bybel.",
+    "title2": " Heroorweeg.",
+    "subtitle": "BibleBot ken die Bybel – en vra die regte vrae. Nie 'n mens nie, maar 'n eerlike metgesel. Vir sinvolle gesprekke, diep vrae en ware impulse.",
+    "ctaTelegram": "Begin via Telegram",
+    "ctaMore": "Lees meer",
     "quote": "\"Come to me, all you who are weary and burdened, and I will give you rest.\"",
     "quoteRef": "– Matthew 11:28"
   },
@@ -220,7 +220,7 @@
     "button": "Start a conversation"
   },
   "footer": {
-    "tagline": "Your personal companion for a life with the Bible",
+    "tagline": "Jou persoonlike metgesel vir 'n lewe met die Bybel",
     "disclaimer": "BibleBot.Life is a digital tool and does not replace professional pastoral care, theological counseling, or psychological therapy. In acute crises, please contact your local emergency helpline.",
     "impressum": "Imprint",
     "notes": "Notes",

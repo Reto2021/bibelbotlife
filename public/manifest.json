@@ -1,7 +1,7 @@
 {
-  "name": "BibelBot – Dein persönlicher Begleiter",
-  "short_name": "BibelBot",
-  "description": "Die Bibel neu entdecken – mit KI, guten Fragen und ehrlicher Begleitung.",
+  "name": "BibleBot – Your Personal Companion",
+  "short_name": "BibleBot",
+  "description": "Rediscover the Bible – with good questions, honest companionship, and real impulses.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#1A2630",

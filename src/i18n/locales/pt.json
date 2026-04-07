@@ -11,7 +11,7 @@
     },
     "title1": "A Bíblia.",
     "title2": " Repensada.",
-    "subtitle": "O BibelBot conhece a Bíblia – e faz as perguntas certas. Não é uma pessoa, mas um companheiro honesto. Para conversas significativas, perguntas profundas e impulsos reais.",
+    "subtitle": "O BibleBot conhece a Bíblia – e faz as perguntas certas. Não é uma pessoa, mas um companheiro honesto. Para conversas significativas, perguntas profundas e impulsos reais.",
     "ctaTelegram": "Começar via Telegram",
     "ctaMore": "Saber mais",
     "quote": "«Vinde a mim, todos os que estais cansados e sobrecarregados, e eu vos aliviarei.»",
@@ -24,8 +24,8 @@
     "explore": "Ler a passagem completa"
   },
   "features": {
-    "sectionTitle": "Como o BibelBot te acompanha",
-    "sectionSubtitle": "Descobre as diversas formas como o BibelBot pode caminhar ao teu lado",
+    "sectionTitle": "Como o BibleBot te acompanha",
+    "sectionSubtitle": "Descobre as diversas formas como o BibleBot pode caminhar ao teu lado",
     "bible": {
       "title": "Passagens bíblicas e interpretação",
       "desc": "Pergunta «O que diz a Bíblia sobre...?» e recebe versículos relevantes com contexto e explicação clara."
@@ -40,7 +40,7 @@
     },
     "faith": {
       "title": "Caminho de fé e encontro com Cristo",
-      "desc": "Estejas a procurar, a duvidar ou a aprofundar – o BibelBot acompanha-te no teu caminho pessoal."
+      "desc": "Estejas a procurar, a duvidar ou a aprofundar – o BibleBot acompanha-te no teu caminho pessoal."
     },
     "daily": {
       "title": "Impulsos diários e ano litúrgico",
@@ -54,9 +54,9 @@
   "coaching": {
     "badge": "Metodologia",
     "title": "Não é só um chatbot – um verdadeiro acompanhamento",
-    "subtitle": "O BibelBot combina sabedoria bíblica com métodos de coaching comprovados e Psicologia Positiva.",
+    "subtitle": "O BibleBot combina sabedoria bíblica com métodos de coaching comprovados e Psicologia Positiva.",
     "journeyTitle": "Acompanhamento pessoal",
-    "journeyDesc": "O BibelBot acompanha-te durante o tempo que quiseres – em conversa livre ou com uma estrutura opcional de 21 dias.",
+    "journeyDesc": "O BibleBot acompanha-te durante o tempo que quiseres – em conversa livre ou com uma estrutura opcional de 21 dias.",
     "week1": "Semana 1: Chegar",
     "week1Desc": "Construir confiança, ouvir, compreender a tua situação. Onde estás? O que te preocupa?",
     "week2": "Semana 2: Aprofundar",
@@ -64,12 +64,12 @@
     "week3": "Semana 3: Agir",
     "week3Desc": "Dar passos concretos, formular objetivos, iniciar a mudança. Qual é o teu próximo passo?",
     "openQuestionsTitle": "Perguntas abertas em vez de respostas rápidas",
-    "openQuestionsDesc": "O BibelBot não dá conselhos superficiais. Em vez disso, faz as perguntas que realmente importam:",
+    "openQuestionsDesc": "O BibleBot não dá conselhos superficiais. Em vez disso, faz as perguntas que realmente importam:",
     "openQ1": "«O que está realmente por trás deste desejo?»",
     "openQ2": "«Como saberias que algo mudou?»",
     "openQ3": "«Qual seria um primeiro pequeno passo?»",
     "honestTitle": "Honesto em vez de tóxicamente positivo",
-    "honestDesc": "Nenhum «Vai correr tudo bem!» e nenhum embelezamento. O BibelBot é empático E honesto:",
+    "honestDesc": "Nenhum «Vai correr tudo bem!» e nenhum embelezamento. O BibleBot é empático E honesto:",
     "honest1": "Aborda também passagens bíblicas desconfortáveis",
     "honest2": "Desafia-te à autorreflexão",
     "honest3": "Distingue conforto de evitamento",
@@ -94,19 +94,19 @@
       "author": "Worthington",
       "desc": "Modelo REACH para processos de perdão"
     },
-    "renameTip": "💡 Podes dar ao teu BibelBot um nome pessoal – para que se torne realmente o <strong>teu</strong> companheiro."
+    "renameTip": "💡 Podes dar ao teu BibleBot um nome pessoal – para que se torne realmente o <strong>teu</strong> companheiro."
   },
   "discover": {
     "badge": "Para curiosos",
     "title": "Redescobrir a fé – sem pressão",
-    "subtitle": "Cada vez mais pessoas estão a fazer as grandes perguntas de novo. O BibelBot.ch é para todos os que querem (re)descobrir a fé – honestamente, sem pathos e sem jargão eclesiástico.",
+    "subtitle": "Cada vez mais pessoas estão a fazer as grandes perguntas de novo. O BibleBot.Life é para todos os que querem (re)descobrir a fé – honestamente, sem pathos e sem jargão eclesiástico.",
     "doubt": {
       "title": "Duvidas?",
       "text": "Ótimo. A dúvida não é um defeito – é o início de uma fé honesta. A Bíblia está cheia de pessoas que lutaram."
     },
     "search": {
       "title": "Procuras?",
-      "text": "Talvez nem saibas o quê. Tudo bem. O BibelBot ajuda-te a fazer as perguntas certas – em vez de dar respostas rápidas."
+      "text": "Talvez nem saibas o quê. Tudo bem. O BibleBot ajuda-te a fazer as perguntas certas – em vez de dar respostas rápidas."
     },
     "deepen": {
       "title": "Queres aprofundar?",
@@ -155,9 +155,9 @@
   },
   "faq": {
     "badge": "FAQ",
-    "title": "O que deves saber sobre o BibelBot",
+    "title": "O que deves saber sobre o BibleBot",
     "subtitle": "A transparência é importante – especialmente para teólogos, pastores e mentes críticas.",
-    "q1": "O que distingue o BibelBot do ChatGPT e similares?",
+    "q1": "O que distingue o BibleBot do ChatGPT e similares?",
     "q1Generic": "Chatbots genéricos:",
     "q1GenericItems": [
       "Citações bíblicas superficiais sem contexto",
@@ -167,7 +167,7 @@
       "Mistura Bíblia com esoterismo",
       "Sem perguntas de aprofundamento – só confirmação"
     ],
-    "q1Bot": "BibelBot.ch:",
+    "q1Bot": "BibleBot.Life:",
     "q1BotItems": [
       "5 traduções reconhecidas – incluindo passagens desconfortáveis",
       "Salvaguardas E acompanhamento desafiante",
@@ -177,11 +177,11 @@
       "Promove o pensamento crítico como maturidade de fé"
     ],
     "q2": "Que traduções da Bíblia estão incluídas?",
-    "q2Intro": "O BibelBot trabalha ecumenicamente com as principais edições bíblicas em língua alemã:",
+    "q2Intro": "O BibleBot trabalha ecumenicamente com as principais edições bíblicas em língua alemã:",
     "q2Outro": "Todas as passagens bíblicas incluem citação da fonte e contexto histórico.",
     "q3": "Que fundamentos científicos estão por trás?",
     "q3Intro": "O acompanhamento baseia-se em investigação peer-reviewed em Psicologia Positiva:",
-    "q4": "Como o BibelBot garante a segurança pastoral?",
+    "q4": "Como o BibleBot garante a segurança pastoral?",
     "q4Items": [
       "Pensamentos suicidas ou crise → encaminhamento imediato para linhas de emergência",
       "Sem diagnósticos psicológicos ou médicos",
@@ -191,37 +191,37 @@
       "Sem positividade tóxica – acompanhamento genuíno e honesto",
       "Nomeia abertamente tensões e textos difíceis"
     ],
-    "q5": "O BibelBot está ligado a uma confissão específica?",
-    "q5Answer": "Não. O BibelBot é ecumenicamente orientado e respeita igualmente as tradições reformadas, católicas, evangélicas livres e outras cristãs.",
-    "q6": "O BibelBot substitui o cuidado pastoral ou a terapia?",
-    "q6Answer": "Não. O BibelBot é uma ferramenta digital para leitura bíblica pessoal e reflexão. Não substitui o cuidado pastoral profissional, o aconselhamento teológico nem a terapia psicológica.",
-    "q7": "O BibelBot não é simplesmente um 'bot de bem-estar'?",
-    "q7Answer": "Não. O BibelBot conforta onde o conforto é necessário – mas também desafia. O crescimento espiritual requer atrito. O BibelBot faz perguntas desconfortáveis e não evita temas como justiça, arrependimento e responsabilidade.",
-    "q8": "Quem está por trás do BibelBot e como é financiado?",
-    "q8Answer": "O BibelBot.ch é um projeto privado e não comercial. É gerido voluntariamente e financiado exclusivamente por doações voluntárias. Sem publicidade, sem venda de dados, sem funcionalidades pagas.",
-    "q9": "Como o BibelBot lida com os meus dados?",
-    "q9Answer": "O BibelBot não armazena dados pessoais nem históricos de chat. Cada conversa é anónima. Sem login, sem rastreamento, sem partilha de dados com terceiros."
+    "q5": "O BibleBot está ligado a uma confissão específica?",
+    "q5Answer": "Não. O BibleBot é ecumenicamente orientado e respeita igualmente as tradições reformadas, católicas, evangélicas livres e outras cristãs.",
+    "q6": "O BibleBot substitui o cuidado pastoral ou a terapia?",
+    "q6Answer": "Não. O BibleBot é uma ferramenta digital para leitura bíblica pessoal e reflexão. Não substitui o cuidado pastoral profissional, o aconselhamento teológico nem a terapia psicológica.",
+    "q7": "O BibleBot não é simplesmente um 'bot de bem-estar'?",
+    "q7Answer": "Não. O BibleBot conforta onde o conforto é necessário – mas também desafia. O crescimento espiritual requer atrito. O BibleBot faz perguntas desconfortáveis e não evita temas como justiça, arrependimento e responsabilidade.",
+    "q8": "Quem está por trás do BibleBot e como é financiado?",
+    "q8Answer": "O BibleBot.Life é um projeto privado e não comercial. É gerido voluntariamente e financiado exclusivamente por doações voluntárias. Sem publicidade, sem venda de dados, sem funcionalidades pagas.",
+    "q9": "Como o BibleBot lida com os meus dados?",
+    "q9Answer": "O BibleBot não armazena dados pessoais nem históricos de chat. Cada conversa é anónima. Sem login, sem rastreamento, sem partilha de dados com terceiros."
   },
   "donate": {
-    "badge": "Apoia o BibelBot",
-    "title": "Ajuda a manter o BibelBot gratuito",
-    "subtitle": "O BibelBot é um projeto do coração – sem publicidade, sem subscrições, sem custos ocultos. Para que continue assim, dependo de doações voluntárias.",
+    "badge": "Apoia o BibleBot",
+    "title": "Ajuda a manter o BibleBot gratuito",
+    "subtitle": "O BibleBot é um projeto do coração – sem publicidade, sem subscrições, sem custos ocultos. Para que continue assim, dependo de doações voluntárias.",
     "bankTitle": "Doar por transferência bancária",
     "bankSubtitle": "Cada montante conta – muito obrigado! 🙏",
     "recipient": "Destinatário",
     "bank": "Banco",
     "purpose": "Referência",
-    "purposeValue": "Doação BibelBot",
-    "note": "O BibelBot.ch é operado como projeto privado. As doações não são dedutíveis nos impostos."
+    "purposeValue": "Doação BibleBot",
+    "note": "O BibleBot.Life é operado como projeto privado. As doações não são dedutíveis nos impostos."
   },
   "cta": {
     "title": "Não tens de passar por isto sozinho",
-    "subtitle": "Escreve simplesmente ao BibelBot o que te preocupa. Sem login, sem custos, sem julgamento – apenas acompanhamento honesto e a sabedoria da Bíblia.",
+    "subtitle": "Escreve simplesmente ao BibleBot o que te preocupa. Sem login, sem custos, sem julgamento – apenas acompanhamento honesto e a sabedoria da Bíblia.",
     "button": "Iniciar uma conversa"
   },
   "footer": {
     "tagline": "O teu companheiro pessoal para uma vida com a Bíblia",
-    "disclaimer": "O BibelBot.Life é uma ferramenta digital e não substitui o cuidado pastoral profissional, o aconselhamento teológico nem a terapia psicológica. Em crises agudas, contacta a linha de emergência local.",
+    "disclaimer": "O BibleBot.Life é uma ferramenta digital e não substitui o cuidado pastoral profissional, o aconselhamento teológico nem a terapia psicológica. Em crises agudas, contacta a linha de emergência local.",
     "impressum": "Informação legal",
     "notes": "Avisos",
     "private": "Projeto privado, não comercial",
@@ -231,7 +231,7 @@
     "love": "Com ❤️ para todos os que se perguntam o que Cristo pensa."
   },
   "chat": {
-    "welcome": "Bem-vindo! 🤗\n\nSou o teu BibelBot – o teu companheiro pessoal com a Bíblia, boas perguntas e impulsos concretos. Sem pressão, sem julgamento.\n\nPodes perguntar-me qualquer coisa – ou simplesmente contar o que te preocupa. 💛",
+    "welcome": "Bem-vindo! 🤗\n\nSou o teu BibleBot – o teu companheiro pessoal com a Bíblia, boas perguntas e impulsos concretos. Sem pressão, sem julgamento.\n\nPodes perguntar-me qualquer coisa – ou simplesmente contar o que te preocupa. 💛",
     "journeyOffer": "💡 **Dica:** Ofereço também uma **jornada de 21 dias** – 3 semanas de impulsos diários, reflexões e passos concretos. Ao teu ritmo.\n\nQueres experimentar?",
     "suggestion1": "Preciso de uma palavra encorajadora agora",
     "suggestion2": "O que diz a Bíblia quando te sentes inseguro?",
@@ -270,7 +270,7 @@
     "errorNoStream": "Sem stream"
   },
   "install": {
-    "title": "Instalar BibelBot",
+    "title": "Instalar BibleBot",
     "androidDesc": "Acesso rápido a partir do ecrã inicial",
     "iosDesc": "Toca em «Partilhar» → «Adicionar ao ecrã principal»",
     "button": "Instalar",
@@ -298,11 +298,37 @@
     "cs": "Čeština",
     "pt": "Português",
     "nl": "Nederlands",
-    "ro": "Română"
+    "ro": "Română",
+    "da": "Dansk",
+    "no": "Norsk",
+    "sv": "Svenska",
+    "fi": "Suomi",
+    "el": "Ελληνικά",
+    "hr": "Hrvatski",
+    "sr": "Srpski",
+    "hu": "Magyar",
+    "sk": "Slovenčina",
+    "bg": "Български",
+    "ru": "Русский",
+    "uk": "Українська",
+    "ka": "ქართული",
+    "hy": "Հայերեն",
+    "ko": "한국어",
+    "tl": "Filipino",
+    "id": "Bahasa Indonesia",
+    "vi": "Tiếng Việt",
+    "zh": "中文",
+    "sw": "Kiswahili",
+    "am": "አማርኛ",
+    "af": "Afrikaans",
+    "yo": "Yorùbá",
+    "ig": "Igbo",
+    "zu": "isiZulu",
+    "ht": "Kreyòl"
   },
   "tiles": {
     "sectionTitle": "O que te preocupa?",
-    "sectionSubtitle": "Escolhe um tema — o BibelBot acompanha-te",
+    "sectionSubtitle": "Escolhe um tema — o BibleBot acompanha-te",
     "baptism": {
       "title": "Versículo de batismo",
       "desc": "O versículo perfeito para o teu filho",
