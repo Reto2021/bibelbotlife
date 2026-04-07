@@ -9,6 +9,10 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://bibelbot.ch/?lng=en"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://bibelbot.ch/?lng=fr"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://bibelbot.ch/?lng=es"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bibelbot.ch/?lng=it"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://bibelbot.ch/?lng=pl"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://bibelbot.ch/?lng=cs"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bibelbot.ch/?lng=pt"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bibelbot.ch/"/>
   </url>
   <url>
