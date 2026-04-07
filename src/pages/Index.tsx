@@ -1,4 +1,4 @@
-import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, Shield, GraduationCap, Church, Quote, CheckCircle2, Brain, X as XIcon, Check, HelpCircle } from "lucide-react";
+import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, Shield, GraduationCap, Church, Quote, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { BibelBotChat } from "@/components/BibelBotChat";
@@ -339,6 +339,24 @@ const Index = () => {
                 Nein. BibelBot tröstet, wo Trost nötig ist – aber er fordert auch heraus. Geistliches Wachstum braucht Reibung. BibelBot stellt unbequeme Rückfragen, benennt schwierige Bibeltexte (Hiob, Klagepsalmen, prophetische Kritik) und scheut sich nicht vor Themen wie Gerechtigkeit, Umkehr und Verantwortung. Die prophetische Tradition war nie bequem – und BibelBot auch nicht.
               </AccordionContent>
             </AccordionItem>
+
+            <AccordionItem value="spenden" className="bg-card/80 border border-border rounded-xl px-6 data-[state=open]:shadow-md">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
+                Wer steht hinter BibelBot und wie wird es finanziert?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+                BibelBot.ch ist ein privates, nicht-kommerzielles Projekt. Es wird ehrenamtlich betrieben und finanziert sich ausschliesslich durch freiwillige Spenden. Es gibt keine Werbung, keine Datenverkäufe und keine kostenpflichtigen Features. Alle Spenden fliessen direkt in die Deckung der laufenden Kosten (KI-Infrastruktur, Hosting, Entwicklung). Da BibelBot als privates Projekt läuft, sind Spenden nicht steuerabzugsfähig.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="datenschutz" className="bg-card/80 border border-border rounded-xl px-6 data-[state=open]:shadow-md">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
+                Wie geht BibelBot mit meinen Daten um?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+                BibelBot speichert keine persönlichen Daten und keine Chatverläufe. Jedes Gespräch ist anonym. Es gibt kein Login, kein Tracking und keine Weitergabe von Daten an Dritte. Die Nutzung ist vollständig anonym.
+              </AccordionContent>
+            </AccordionItem>
           </Accordion>
         </div>
       </section>
@@ -374,6 +392,75 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Spenden Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-3xl text-center">
+          <div className="mb-4">
+            <span className="inline-flex items-center gap-2 text-sm font-medium text-primary bg-primary/10 px-4 py-1.5 rounded-full">
+              <HandHeart className="h-4 w-4" />
+              Unterstütze BibelBot
+            </span>
+          </div>
+          <h2 className="text-4xl font-bold text-foreground mb-4">
+            Hilf mit, dass BibelBot kostenlos bleibt
+          </h2>
+          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+            BibelBot ist ein Herzensprojekt – ohne Werbung, ohne Abo, ohne versteckte Kosten. 
+            Damit das so bleibt, bin ich auf freiwillige Spenden angewiesen. 
+            Jeder Beitrag hilft, die laufenden Kosten für KI und Betrieb zu decken.
+          </p>
+          
+          <Card className="bg-card/80 backdrop-blur-sm border-border max-w-md mx-auto">
+            <CardHeader>
+              <CardTitle className="text-xl">Spende per Banküberweisung</CardTitle>
+              <CardDescription>Jeder Betrag zählt – herzlichen Dank! 🙏</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4 text-left">
+              <div className="space-y-3">
+                <div className="flex justify-between items-center bg-accent/30 rounded-lg px-4 py-3">
+                  <div>
+                    <p className="text-xs text-muted-foreground">Empfänger</p>
+                    <p className="font-medium text-foreground text-sm">Vorname Nachname</p>
+                  </div>
+                </div>
+                <div className="flex justify-between items-center bg-accent/30 rounded-lg px-4 py-3">
+                  <div>
+                    <p className="text-xs text-muted-foreground">IBAN</p>
+                    <p className="font-mono font-medium text-foreground text-sm">CH00 0000 0000 0000 0000 0</p>
+                  </div>
+                  <button
+                    onClick={() => {
+                      navigator.clipboard.writeText("CH0000000000000000000");
+                      // Optional: toast notification
+                    }}
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                    title="IBAN kopieren"
+                  >
+                    <Copy className="h-4 w-4" />
+                  </button>
+                </div>
+                <div className="flex justify-between items-center bg-accent/30 rounded-lg px-4 py-3">
+                  <div>
+                    <p className="text-xs text-muted-foreground">Bank</p>
+                    <p className="font-medium text-foreground text-sm">Bankname</p>
+                  </div>
+                </div>
+                <div className="flex justify-between items-center bg-accent/30 rounded-lg px-4 py-3">
+                  <div>
+                    <p className="text-xs text-muted-foreground">Verwendungszweck</p>
+                    <p className="font-medium text-foreground text-sm">Spende BibelBot</p>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <p className="text-sm text-muted-foreground mt-6">
+            BibelBot.ch wird als privates Projekt betrieben. Spenden sind daher nicht steuerabzugsfähig.
+          </p>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4" style={{ backgroundImage: "var(--gradient-cta)" }}>
         <div className="container mx-auto text-center max-w-4xl">
@@ -395,21 +482,37 @@ const Index = () => {
 
       {/* Footer */}
       <footer className="bg-foreground text-background py-12 px-4">
-        <div className="container mx-auto max-w-4xl text-center">
+        <div className="container mx-auto max-w-4xl">
           <div className="flex items-center justify-center space-x-2 mb-6">
             <BookOpen className="h-8 w-8 text-primary" />
             <span className="text-2xl font-bold">BibelBot.ch</span>
           </div>
-          <p className="text-background/70 mb-4">
+          <p className="text-background/70 mb-4 text-center">
             Dein digitaler Begleiter für ein Leben mit der Bibel
           </p>
-          <p className="text-background/50 text-xs mb-6 max-w-2xl mx-auto">
+          <p className="text-background/50 text-xs mb-6 max-w-2xl mx-auto text-center">
             BibelBot.ch ist ein KI-gestütztes Hilfsmittel und ersetzt keine professionelle Seelsorge, 
             theologische Beratung oder psychologische Therapie. Bei akuten Krisen wende dich bitte an 
             die Dargebotene Hand (Tel. 143) oder Pro Juventute (Tel. 147).
           </p>
-          <div className="border-t border-background/20 pt-6">
-            <p className="text-background/50 text-sm">
+          
+          <div className="border-t border-background/20 pt-6 mt-6">
+            <div className="grid sm:grid-cols-2 gap-6 text-sm text-background/50 mb-6">
+              <div>
+                <p className="font-semibold text-background/70 mb-2">Impressum</p>
+                <p>Vorname Nachname</p>
+                <p>Strasse Nr.</p>
+                <p>PLZ Ort, Schweiz</p>
+                <p className="mt-1">kontakt@bibelbot.ch</p>
+              </div>
+              <div>
+                <p className="font-semibold text-background/70 mb-2">Hinweise</p>
+                <p>Privates, nicht-kommerzielles Projekt</p>
+                <p>Keine Speicherung von Chatdaten</p>
+                <p>Spenden sind nicht steuerabzugsfähig</p>
+              </div>
+            </div>
+            <p className="text-background/50 text-sm text-center">
               © 2026 BibelBot.ch – Mit ❤️ für alle, die sich fragen, was Christus denkt.
             </p>
           </div>
