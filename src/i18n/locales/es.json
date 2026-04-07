@@ -526,28 +526,27 @@
         "desc": "Impulsos y temas de discusión para grupos y células."
       }
     },
-    "pricingTitle": "Modelo de asociación",
-    "pricingSubtitle": "Elige el plan que se adapte a tu iglesia. Configuración única + contribución anual.",
+    "pricingTitle": "Paquetes de patrocinio",
+    "pricingSubtitle": "Apoya a BibleBot y a tu iglesia con el paquete de patrocinio adecuado.",
     "popular": "Popular",
-    "setup": "Configuración",
     "free": "Gratis",
     "perYear": "Año",
     "contact": "Contactar",
     "tier": {
       "free": {
-        "name": "Prueba",
+        "name": "Grano de mostaza",
         "size": "Para todas las iglesias"
       },
       "community": {
-        "name": "Comunidad",
+        "name": "Acompañante",
         "size": "Hasta 500 miembros"
       },
       "gemeinde": {
-        "name": "Parroquia",
+        "name": "Constructor de puentes",
         "size": "500–2.000 miembros"
       },
       "kirche": {
-        "name": "Iglesia",
+        "name": "Faro",
         "size": "Más de 2.000 miembros"
       }
     },

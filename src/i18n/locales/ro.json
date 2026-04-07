@@ -534,28 +534,27 @@
         "desc": "Impulsuri și subiecte de discuție pentru grupuri și întâlniri casnice."
       }
     },
-    "pricingTitle": "Model de parteneriat",
-    "pricingSubtitle": "Alegeți planul potrivit bisericii dumneavoastră. Configurare unică + contribuție anuală.",
+    "pricingTitle": "Pachete de patronaj",
+    "pricingSubtitle": "Sprijiniți BibleBot și biserica dvs. cu pachetul de patronaj potrivit.",
     "popular": "Popular",
-    "setup": "Configurare",
     "free": "Gratuit",
     "perYear": "An",
     "contact": "Contactați-ne",
     "tier": {
       "free": {
-        "name": "Probă",
+        "name": "Bobul de muștar",
         "size": "Pentru toate bisericile"
       },
       "community": {
-        "name": "Comunitate",
+        "name": "Însoțitor",
         "size": "Până la 500 de membri"
       },
       "gemeinde": {
-        "name": "Parohie",
+        "name": "Constructor de poduri",
         "size": "500–2.000 de membri"
       },
       "kirche": {
-        "name": "Biserică",
+        "name": "Far",
         "size": "Peste 2.000 de membri"
       }
     },

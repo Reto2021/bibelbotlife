@@ -526,28 +526,27 @@
         "desc": "Impulses and discussion starters for groups and home circles."
       }
     },
-    "pricingTitle": "Partnership Model",
-    "pricingSubtitle": "Choose the plan that fits your church. One-time setup + annual contribution.",
+    "pricingTitle": "Vifurushi vya udhamini",
+    "pricingSubtitle": "Saidia BibleBot na kanisa lako kwa kifurushi sahihi cha udhamini.",
     "popular": "Popular",
-    "setup": "Setup",
     "free": "Free",
     "perYear": "year",
     "contact": "Get in touch",
     "tier": {
       "free": {
-        "name": "Starter",
+        "name": "Mbegu ya haradali",
         "size": "For all churches"
       },
       "community": {
-        "name": "Community",
+        "name": "Mwandani",
         "size": "Up to 500 members"
       },
       "gemeinde": {
-        "name": "Parish",
+        "name": "Mjenzi wa madaraja",
         "size": "500–2,000 members"
       },
       "kirche": {
-        "name": "Church",
+        "name": "Mnara wa taa",
         "size": "Over 2,000 members"
       }
     },

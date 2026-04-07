@@ -526,28 +526,27 @@
         "desc": "Impulser og diskusjonstemaer for grupper og husfellesskap."
       }
     },
-    "pricingTitle": "Partnerskapsmodell",
-    "pricingSubtitle": "Velg planen som passer din kirke. Engangsoppsett + årlig bidrag.",
+    "pricingTitle": "Patronatspakker",
+    "pricingSubtitle": "Støtt BibleBot og menigheten din med riktig patronatspakke.",
     "popular": "Populær",
-    "setup": "Oppsett",
     "free": "Gratis",
     "perYear": "År",
     "contact": "Kontakt oss",
     "tier": {
       "free": {
-        "name": "Prøve",
+        "name": "Sennepsfrø",
         "size": "For alle kirker"
       },
       "community": {
-        "name": "Fellesskap",
+        "name": "Reisefølge",
         "size": "Opptil 500 medlemmer"
       },
       "gemeinde": {
-        "name": "Menighet",
+        "name": "Brobygger",
         "size": "500–2 000 medlemmer"
       },
       "kirche": {
-        "name": "Kirke",
+        "name": "Fyrtårn",
         "size": "Over 2 000 medlemmer"
       }
     },

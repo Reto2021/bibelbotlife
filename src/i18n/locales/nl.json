@@ -534,28 +534,27 @@
         "desc": "Impulsen en gespreksstarters voor groepen en huiskringen."
       }
     },
-    "pricingTitle": "Partnerschapsmodel",
-    "pricingSubtitle": "Kies het plan dat bij uw kerk past. Eenmalige setup + jaarlijkse bijdrage.",
+    "pricingTitle": "Patronaatspakketten",
+    "pricingSubtitle": "Ondersteun BibleBot en uw kerk met het juiste patronaatspakket.",
     "popular": "Populair",
-    "setup": "Setup",
     "free": "Gratis",
     "perYear": "Jaar",
     "contact": "Contact opnemen",
     "tier": {
       "free": {
-        "name": "Proef",
+        "name": "Mosterdzaadje",
         "size": "Voor alle kerken"
       },
       "community": {
-        "name": "Gemeenschap",
+        "name": "Reisgenoot",
         "size": "Tot 500 leden"
       },
       "gemeinde": {
-        "name": "Gemeente",
+        "name": "Bruggenbouwer",
         "size": "500–2.000 leden"
       },
       "kirche": {
-        "name": "Kerk",
+        "name": "Vuurtoren",
         "size": "Meer dan 2.000 leden"
       }
     },

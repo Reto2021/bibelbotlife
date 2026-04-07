@@ -526,28 +526,27 @@
         "desc": "Impulses and discussion starters for groups and home circles."
       }
     },
-    "pricingTitle": "Partnership Model",
-    "pricingSubtitle": "Choose the plan that fits your church. One-time setup + annual contribution.",
+    "pricingTitle": "Gói bảo trợ",
+    "pricingSubtitle": "Hỗ trợ BibleBot và nhà thờ của bạn với gói bảo trợ phù hợp.",
     "popular": "Popular",
-    "setup": "Setup",
     "free": "Free",
     "perYear": "year",
     "contact": "Get in touch",
     "tier": {
       "free": {
-        "name": "Starter",
+        "name": "Hạt cải",
         "size": "For all churches"
       },
       "community": {
-        "name": "Community",
+        "name": "Người đồng hành",
         "size": "Up to 500 members"
       },
       "gemeinde": {
-        "name": "Parish",
+        "name": "Người xây cầu",
         "size": "500–2,000 members"
       },
       "kirche": {
-        "name": "Church",
+        "name": "Ngọn hải đăng",
         "size": "Over 2,000 members"
       }
     },

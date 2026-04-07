@@ -526,28 +526,27 @@
         "desc": "Impulses and discussion starters for groups and home circles."
       }
     },
-    "pricingTitle": "Partnership Model",
-    "pricingSubtitle": "Choose the plan that fits your church. One-time setup + annual contribution.",
+    "pricingTitle": "Borgpakkette",
+    "pricingSubtitle": "Ondersteun BibleBot en jou gemeente met die regte borgpakket.",
     "popular": "Popular",
-    "setup": "Setup",
     "free": "Free",
     "perYear": "year",
     "contact": "Get in touch",
     "tier": {
       "free": {
-        "name": "Starter",
+        "name": "Mosterdsaad",
         "size": "For all churches"
       },
       "community": {
-        "name": "Community",
+        "name": "Reisgenoot",
         "size": "Up to 500 members"
       },
       "gemeinde": {
-        "name": "Parish",
+        "name": "Brugbouer",
         "size": "500–2,000 members"
       },
       "kirche": {
-        "name": "Church",
+        "name": "Vuurtoring",
         "size": "Over 2,000 members"
       }
     },

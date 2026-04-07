@@ -526,28 +526,27 @@
         "desc": "Impulzusok és beszélgetés-indítók csoportok és házi körök számára."
       }
     },
-    "pricingTitle": "Partneri modell",
-    "pricingSubtitle": "Válassza ki a gyülekezetéhez illő tervet. Egyszeri beállítás + éves hozzájárulás.",
+    "pricingTitle": "Patronátusi csomagok",
+    "pricingSubtitle": "Támogassa a BibleBot-ot és gyülekezetét a megfelelő patronátusi csomaggal.",
     "popular": "Népszerű",
-    "setup": "Beállítás",
     "free": "Ingyenes",
     "perYear": "Év",
     "contact": "Kapcsolatfelvétel",
     "tier": {
       "free": {
-        "name": "Próba",
+        "name": "Mustármag",
         "size": "Minden gyülekezetnek"
       },
       "community": {
-        "name": "Közösség",
+        "name": "Útitárs",
         "size": "500 tagig"
       },
       "gemeinde": {
-        "name": "Gyülekezet",
+        "name": "Hídépítő",
         "size": "500–2 000 tag"
       },
       "kirche": {
-        "name": "Egyház",
+        "name": "Világítótorony",
         "size": "2 000 tag felett"
       }
     },

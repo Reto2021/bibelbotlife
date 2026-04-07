@@ -9,67 +9,26 @@ import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 const tiers = [
   {
     key: "free",
-    setup: 0,
     annual: 0,
     icon: Church,
-    features: ["church.features.directoryEntry", "church.features.telegramGroup"],
     popular: false,
   },
   {
     key: "community",
-    setup: 490,
-    annual: 790,
+    annual: 490,
     icon: Users,
-    features: [
-      "church.features.directoryEntry",
-      "church.features.telegramGroup",
-      "church.features.partnerPage",
-      "church.features.badge",
-      "church.features.qrFlyer",
-      "church.features.contactForm",
-    ],
     popular: false,
   },
   {
     key: "gemeinde",
-    setup: 990,
-    annual: 1490,
+    annual: 990,
     icon: BarChart3,
-    features: [
-      "church.features.directoryEntry",
-      "church.features.telegramGroup",
-      "church.features.partnerPage",
-      "church.features.badge",
-      "church.features.qrFlyer",
-      "church.features.contactForm",
-      "church.features.pastorProfile",
-      "church.features.welcomeVideo",
-      "church.features.analytics",
-      "church.features.prioritySupport",
-    ],
     popular: true,
   },
   {
     key: "kirche",
-    setup: 1990,
-    annual: 2990,
+    annual: 1990,
     icon: Palette,
-    features: [
-      "church.features.directoryEntry",
-      "church.features.telegramGroup",
-      "church.features.partnerPage",
-      "church.features.badge",
-      "church.features.qrFlyer",
-      "church.features.contactForm",
-      "church.features.pastorProfile",
-      "church.features.welcomeVideo",
-      "church.features.analytics",
-      "church.features.prioritySupport",
-      "church.features.multipleProfiles",
-      "church.features.customBranding",
-      "church.features.apiAccess",
-      "church.features.accountManager",
-    ],
     popular: false,
   },
 ];
@@ -147,24 +106,11 @@ const ForChurches = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="text-center mb-6">
-                    {tier.setup > 0 && (
-                      <p className="text-sm text-muted-foreground mb-1">
-                        {t("church.setup")}: <span className="font-semibold text-foreground">CHF {tier.setup.toLocaleString("de-CH")}</span>
-                      </p>
-                    )}
                     <p className="text-3xl font-bold text-foreground">
-                      {tier.annual === 0 ? t("church.free") : `CHF ${tier.annual.toLocaleString("de-CH")}`}
+                      {tier.annual === 0 ? "CHF 0.–" : `CHF ${tier.annual.toLocaleString("de-CH")}.–`}
                     </p>
                     {tier.annual > 0 && <p className="text-xs text-muted-foreground">/{t("church.perYear")}</p>}
                   </div>
-                  <ul className="space-y-2">
-                    {tier.features.map((f) => (
-                      <li key={f} className="flex items-start gap-2 text-sm">
-                        <CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" />
-                        <span className="text-muted-foreground">{t(f)}</span>
-                      </li>
-                    ))}
-                  </ul>
                   <Button
                     className="w-full mt-6"
                     variant={tier.popular ? "default" : "outline"}

@@ -526,28 +526,27 @@
         "desc": "Impulses and discussion starters for groups and home circles."
       }
     },
-    "pricingTitle": "Partnership Model",
-    "pricingSubtitle": "Choose the plan that fits your church. One-time setup + annual contribution.",
+    "pricingTitle": "የድጋፍ ጥቅሎች",
+    "pricingSubtitle": "BibleBot-ን እና ቤተ ክርስቲያንዎን በትክክለኛው ጥቅል ይደግፉ።",
     "popular": "Popular",
-    "setup": "Setup",
     "free": "Free",
     "perYear": "year",
     "contact": "Get in touch",
     "tier": {
       "free": {
-        "name": "Starter",
+        "name": "የሰናፍጥ ፍሬ",
         "size": "For all churches"
       },
       "community": {
-        "name": "Community",
+        "name": "መንገደኛ",
         "size": "Up to 500 members"
       },
       "gemeinde": {
-        "name": "Parish",
+        "name": "ድልድይ ሰሪ",
         "size": "500–2,000 members"
       },
       "kirche": {
-        "name": "Church",
+        "name": "ብርሃን ማማ",
         "size": "Over 2,000 members"
       }
     },

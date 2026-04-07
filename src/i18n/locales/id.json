@@ -526,28 +526,27 @@
         "desc": "Impulses and discussion starters for groups and home circles."
       }
     },
-    "pricingTitle": "Partnership Model",
-    "pricingSubtitle": "Choose the plan that fits your church. One-time setup + annual contribution.",
+    "pricingTitle": "Paket patronase",
+    "pricingSubtitle": "Dukung BibleBot dan gereja Anda dengan paket patronase yang tepat.",
     "popular": "Popular",
-    "setup": "Setup",
     "free": "Free",
     "perYear": "year",
     "contact": "Get in touch",
     "tier": {
       "free": {
-        "name": "Starter",
+        "name": "Biji sesawi",
         "size": "For all churches"
       },
       "community": {
-        "name": "Community",
+        "name": "Teman seperjalanan",
         "size": "Up to 500 members"
       },
       "gemeinde": {
-        "name": "Parish",
+        "name": "Pembangun jembatan",
         "size": "500–2,000 members"
       },
       "kirche": {
-        "name": "Church",
+        "name": "Mercusuar",
         "size": "Over 2,000 members"
       }
     },

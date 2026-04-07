@@ -526,29 +526,28 @@
         "desc": "Impulses and discussion starters for groups and home circles."
       }
     },
-    "pricingTitle": "Partnership Model",
-    "pricingSubtitle": "Choose the plan that fits your church. One-time setup + annual contribution.",
+    "pricingTitle": "Patronage Packages",
+    "pricingSubtitle": "Support BibleBot and your church with the right patronage package.",
     "popular": "Popular",
-    "setup": "Setup",
     "free": "Free",
     "perYear": "year",
     "contact": "Get in touch",
     "tier": {
       "free": {
-        "name": "Starter",
-        "size": "For all churches"
+        "name": "Mustard Seed",
+        "size": "Basic bot access for all congregation members."
       },
       "community": {
-        "name": "Community",
-        "size": "Up to 500 members"
+        "name": "Companion",
+        "size": "Church mentioned as supporter on the website & ad-free access."
       },
       "gemeinde": {
-        "name": "Parish",
-        "size": "500–2,000 members"
+        "name": "Bridge Builder",
+        "size": "Logo presence in bot interface (\"Powered by…\"), monthly usage report (anonymized)."
       },
       "kirche": {
-        "name": "Church",
-        "size": "Over 2,000 members"
+        "name": "Lighthouse",
+        "size": "Integration of custom content (e.g. sermon archive), roadmap co-creation, premium support."
       }
     },
     "features": {

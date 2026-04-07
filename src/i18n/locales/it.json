@@ -526,28 +526,27 @@
         "desc": "Impulsi e spunti di discussione per gruppi e incontri domestici."
       }
     },
-    "pricingTitle": "Modello di partnership",
-    "pricingSubtitle": "Scegli il piano adatto alla tua chiesa. Setup una tantum + contributo annuale.",
+    "pricingTitle": "Pacchetti di patronato",
+    "pricingSubtitle": "Sostieni BibleBot e la tua chiesa con il pacchetto di patronato giusto.",
     "popular": "Popolare",
-    "setup": "Setup",
     "free": "Gratuito",
     "perYear": "Anno",
     "contact": "Contattaci",
     "tier": {
       "free": {
-        "name": "Prova",
+        "name": "Granello di senape",
         "size": "Per tutte le chiese"
       },
       "community": {
-        "name": "Comunità",
+        "name": "Compagno di viaggio",
         "size": "Fino a 500 membri"
       },
       "gemeinde": {
-        "name": "Parrocchia",
+        "name": "Costruttore di ponti",
         "size": "500–2.000 membri"
       },
       "kirche": {
-        "name": "Chiesa",
+        "name": "Faro",
         "size": "Oltre 2.000 membri"
       }
     },

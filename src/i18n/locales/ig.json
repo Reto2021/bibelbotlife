@@ -526,28 +526,27 @@
         "desc": "Impulses and discussion starters for groups and home circles."
       }
     },
-    "pricingTitle": "Partnership Model",
-    "pricingSubtitle": "Choose the plan that fits your church. One-time setup + annual contribution.",
+    "pricingTitle": "Ngwugwu nkwado",
+    "pricingSubtitle": "Kwado BibleBot na chọọchị gị site na ngwugwu nkwado kwesịrị ekwesị.",
     "popular": "Popular",
-    "setup": "Setup",
     "free": "Free",
     "perYear": "year",
     "contact": "Get in touch",
     "tier": {
       "free": {
-        "name": "Starter",
+        "name": "Mkpụrụ mọsụtadị",
         "size": "For all churches"
       },
       "community": {
-        "name": "Community",
+        "name": "Onye njem",
         "size": "Up to 500 members"
       },
       "gemeinde": {
-        "name": "Parish",
+        "name": "Onye na-ewu àkwà mmiri",
         "size": "500–2,000 members"
       },
       "kirche": {
-        "name": "Church",
+        "name": "Ụlọ ìhè",
         "size": "Over 2,000 members"
       }
     },

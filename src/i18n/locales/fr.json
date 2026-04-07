@@ -526,28 +526,27 @@
         "desc": "Impulsions et amorces de discussion pour les groupes et les cercles de maison."
       }
     },
-    "pricingTitle": "Modèle de partenariat",
-    "pricingSubtitle": "Choisissez le plan qui convient à votre église. Mise en place unique + contribution annuelle.",
+    "pricingTitle": "Formules de parrainage",
+    "pricingSubtitle": "Soutenez BibleBot et votre église avec la formule de parrainage adaptée.",
     "popular": "Populaire",
-    "setup": "Mise en place",
     "free": "Gratuit",
     "perYear": "An",
     "contact": "Nous contacter",
     "tier": {
       "free": {
-        "name": "Découverte",
+        "name": "Grain de moutarde",
         "size": "Pour toutes les églises"
       },
       "community": {
-        "name": "Communauté",
+        "name": "Compagnon",
         "size": "Jusqu'à 500 membres"
       },
       "gemeinde": {
-        "name": "Paroisse",
+        "name": "Bâtisseur de ponts",
         "size": "500–2 000 membres"
       },
       "kirche": {
-        "name": "Église",
+        "name": "Phare",
         "size": "Plus de 2 000 membres"
       }
     },
