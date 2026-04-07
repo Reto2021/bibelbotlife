@@ -221,8 +221,11 @@
   },
   "share": {
     "label": "Teilen",
+    "shareVia": "Teilen über",
     "copied": "Kopiert! 📋",
+    "copiedShort": "Kopiert!",
     "copiedDesc": "Text wurde in die Zwischenablage kopiert. Teile ihn jetzt auf WhatsApp, Instagram oder wo du möchtest!",
+    "copyLink": "Text kopieren",
     "error": "Kopieren fehlgeschlagen",
     "impulseTitle": "BibelBot – Impuls des Tages",
     "chatTitle": "BibelBot – Gedanke des Tages"

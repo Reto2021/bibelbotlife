@@ -146,6 +146,7 @@ export function DailyImpulse() {
               <ShareButton
                 title={t("share.impulseTitle")}
                 text={`${impulse.verse}\n\n– ${impulse.reference}\n\n${impulse.teaser}`}
+                utmSource="impulse"
                 variant="button"
               />
             </div>
