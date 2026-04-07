@@ -117,18 +117,18 @@ const Index = () => {
         <div className="container mx-auto text-center max-w-4xl">
           <div className="mb-4">
             <span className="inline-flex items-center gap-2 text-sm font-medium text-primary bg-primary/10 px-4 py-1.5 rounded-full">
-              <Church className="h-4 w-4" />
-              Ökumenisch · Theologisch fundiert · Wissenschaftlich begleitet
+              <Heart className="h-4 w-4" />
+              Ein sicherer Ort für deine Fragen
             </span>
           </div>
           <div className="mb-8">
             <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
-              Dein persönlicher
-              <span className="text-transparent bg-clip-text" style={{ backgroundImage: "var(--gradient-cta)" }}> Bibelbegleiter</span>
+              Jemand, der
+              <span className="text-transparent bg-clip-text" style={{ backgroundImage: "var(--gradient-cta)" }}> wirklich zuhört</span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              BibelBot.ch verbindet die Weisheit der Bibel mit Erkenntnissen der Positiven Psychologie –
-              ökumenisch, ehrlich und bereit, auch unbequeme Fragen zu stellen. Trost und Herausforderung gehören zusammen.
+            <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto">
+              Egal ob Zweifel, Hoffnung oder eine schwierige Phase – BibelBot ist da. 
+              Ohne Bewertung, ohne Login. Einfach ein Gespräch, das dir guttut.
             </p>
           </div>
           
@@ -146,9 +146,9 @@ const Index = () => {
 
           <div className="bg-card/60 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-border">
             <p className="text-foreground/80 italic text-lg">
-              «Dein Wort ist meines Fusses Leuchte und ein Licht auf meinem Wege.»
+              «Kommt her zu mir, alle, die ihr mühselig und beladen seid; ich will euch erquicken.»
             </p>
-            <p className="text-muted-foreground mt-2">– Psalm 119,105</p>
+            <p className="text-muted-foreground mt-2">– Matthäus 11,28</p>
           </div>
         </div>
       </section>
@@ -378,16 +378,16 @@ const Index = () => {
       <section className="py-20 px-4" style={{ backgroundImage: "var(--gradient-cta)" }}>
         <div className="container mx-auto text-center max-w-4xl">
           <h2 className="text-4xl font-bold text-primary-foreground mb-6">
-            Bereit für deine spirituelle Reise?
+            Du musst das nicht alleine durchstehen
           </h2>
           <p className="text-xl text-primary-foreground/90 mb-8">
-            Starte heute noch und lasse dich von der Bibel durch deinen Alltag begleiten. 
-            Kostenlos und jederzeit verfügbar über WhatsApp.
+            Schreib einfach, was dich beschäftigt. Kein Login, keine Kosten, kein Urteil – 
+            nur ein offenes Ohr und die Weisheit der Bibel.
           </p>
           <Button asChild size="lg" className="bg-card text-foreground hover:bg-card/90 px-8 py-4 text-lg font-semibold">
             <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
               <MessageCircle className="h-5 w-5 mr-2" />
-              BibelBot jetzt kontaktieren
+              Jetzt Gespräch starten
             </a>
           </Button>
         </div>
