@@ -261,6 +261,7 @@ Deno.serve(async (req) => {
     tiles: {
       totalClicks: tileClicks.length,
       topTiles,
+      dailyClicks: dailyTileClicks,
     },
     lifewheel: {
       completions: lifewheelEvents.length,
