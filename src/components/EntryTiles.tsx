@@ -2,6 +2,7 @@ import { useRef, useState, useEffect, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { openBibelBotChat } from "@/lib/chat-events";
+import { openLifeWheel } from "@/components/LifeWheel";
 import { cn } from "@/lib/utils";
 
 type TileConfig = {
@@ -9,9 +10,11 @@ type TileConfig = {
   key: string;
   accentClass: string;
   bgClass: string;
+  special?: "lifewheel";
 };
 
 const tileConfigs: TileConfig[] = [
+  { emoji: "🎡", key: "lifewheel", accentClass: "bg-gradient-to-r from-primary to-secondary", bgClass: "bg-[hsl(32_40%_94%)] dark:bg-[hsl(32_25%_14%)]", special: "lifewheel" },
   { emoji: "🕊️", key: "baptism", accentClass: "bg-primary", bgClass: "bg-[hsl(32_50%_95%)] dark:bg-[hsl(32_30%_16%)]" },
   { emoji: "💐", key: "condolence", accentClass: "bg-secondary", bgClass: "bg-[hsl(185_30%_94%)] dark:bg-[hsl(185_25%_14%)]" },
   { emoji: "💍", key: "wedding", accentClass: "bg-primary", bgClass: "bg-[hsl(38_40%_95%)] dark:bg-[hsl(38_25%_15%)]" },
@@ -53,7 +56,11 @@ export function EntryTiles() {
   const { t } = useTranslation();
 
   const handleClick = (tile: TileConfig) => {
-    openBibelBotChat(t(`tiles.${tile.key}.prompt`));
+    if (tile.special === "lifewheel") {
+      openLifeWheel();
+    } else {
+      openBibelBotChat(t(`tiles.${tile.key}.prompt`));
+    }
   };
 
   return (

@@ -26,12 +26,30 @@
   "features": {
     "sectionTitle": "Come BibelBot ti accompagna",
     "sectionSubtitle": "Scopri i tanti modi in cui BibelBot può camminare al tuo fianco",
-    "bible": { "title": "Passi biblici e interpretazione", "desc": "Chiedi «Cosa dice la Bibbia su...?» e ricevi versetti pertinenti con contesto e spiegazione chiara." },
-    "goals": { "title": "Pianificazione e obiettivi di vita", "desc": "Scopri la tua vocazione, stabilisci obiettivi concreti e scopri cosa Dio potrebbe avere in serbo per te." },
-    "self": { "title": "Trovare te stesso", "desc": "Riconosci i tuoi doni, punti di forza e desideri – e ciò di cui il tuo cuore ha veramente bisogno." },
-    "faith": { "title": "Cammino di fede e incontro con Cristo", "desc": "Che tu stia cercando, dubitando o approfondendo – BibelBot ti accompagna nel tuo percorso personale." },
-    "daily": { "title": "Impulsi quotidiani e anno liturgico", "desc": "Inizia la giornata con impulsi e lasciati accompagnare attraverso Avvento, Quaresima e festività." },
-    "groups": { "title": "Gruppi e comunità", "desc": "Perfetto per gruppi di studio biblico, comunità parrocchiali e devozioni condivise." }
+    "bible": {
+      "title": "Passi biblici e interpretazione",
+      "desc": "Chiedi «Cosa dice la Bibbia su...?» e ricevi versetti pertinenti con contesto e spiegazione chiara."
+    },
+    "goals": {
+      "title": "Pianificazione e obiettivi di vita",
+      "desc": "Scopri la tua vocazione, stabilisci obiettivi concreti e scopri cosa Dio potrebbe avere in serbo per te."
+    },
+    "self": {
+      "title": "Trovare te stesso",
+      "desc": "Riconosci i tuoi doni, punti di forza e desideri – e ciò di cui il tuo cuore ha veramente bisogno."
+    },
+    "faith": {
+      "title": "Cammino di fede e incontro con Cristo",
+      "desc": "Che tu stia cercando, dubitando o approfondendo – BibelBot ti accompagna nel tuo percorso personale."
+    },
+    "daily": {
+      "title": "Impulsi quotidiani e anno liturgico",
+      "desc": "Inizia la giornata con impulsi e lasciati accompagnare attraverso Avvento, Quaresima e festività."
+    },
+    "groups": {
+      "title": "Gruppi e comunità",
+      "desc": "Perfetto per gruppi di studio biblico, comunità parrocchiali e devozioni condivise."
+    }
   },
   "coaching": {
     "badge": "Metodologia",
@@ -56,19 +74,44 @@
     "honest2": "Ti sfida all'autoriflessione",
     "honest3": "Distingue il conforto dalla rimozione",
     "scienceTitle": "Fondato scientificamente",
-    "perma": { "name": "Modello PERMA", "author": "Seligman", "desc": "Emozioni positive, significato e crescita" },
-    "logo": { "name": "Logoterapia", "author": "Frankl", "desc": "Trovare senso nei momenti difficili" },
-    "gratitude": { "name": "Gratitudine", "author": "Emmons", "desc": "Pratica di gratitudine basata sulla ricerca" },
-    "forgiveness": { "name": "Perdono", "author": "Worthington", "desc": "Modello REACH per i processi di perdono" },
+    "perma": {
+      "name": "Modello PERMA",
+      "author": "Seligman",
+      "desc": "Emozioni positive, significato e crescita"
+    },
+    "logo": {
+      "name": "Logoterapia",
+      "author": "Frankl",
+      "desc": "Trovare senso nei momenti difficili"
+    },
+    "gratitude": {
+      "name": "Gratitudine",
+      "author": "Emmons",
+      "desc": "Pratica di gratitudine basata sulla ricerca"
+    },
+    "forgiveness": {
+      "name": "Perdono",
+      "author": "Worthington",
+      "desc": "Modello REACH per i processi di perdono"
+    },
     "renameTip": "💡 Puoi dare al tuo BibelBot un nome personale – così diventa davvero il <strong>tuo</strong> compagno."
   },
   "discover": {
     "badge": "Per i curiosi",
     "title": "Riscoprire la fede – senza pressioni",
     "subtitle": "Sempre più persone si pongono le grandi domande. BibelBot.ch è per tutti coloro che vogliono (ri)scoprire la fede – onestamente, senza pathos e senza gergo ecclesiastico.",
-    "doubt": { "title": "Dubiti?", "text": "Bene. Il dubbio non è un difetto – è l'inizio di una fede onesta. La Bibbia è piena di persone che hanno lottato." },
-    "search": { "title": "Stai cercando?", "text": "Forse non sai nemmeno cosa. Va benissimo. BibelBot ti aiuta a porre le domande giuste – invece di dare risposte veloci." },
-    "deepen": { "title": "Vuoi approfondire?", "text": "Credi già, ma vuoi capire di più? Scopri la profondità della Bibbia – storica, personale, sorprendentemente attuale." },
+    "doubt": {
+      "title": "Dubiti?",
+      "text": "Bene. Il dubbio non è un difetto – è l'inizio di una fede onesta. La Bibbia è piena di persone che hanno lottato."
+    },
+    "search": {
+      "title": "Stai cercando?",
+      "text": "Forse non sai nemmeno cosa. Va benissimo. BibelBot ti aiuta a porre le domande giuste – invece di dare risposte veloci."
+    },
+    "deepen": {
+      "title": "Vuoi approfondire?",
+      "text": "Credi già, ma vuoi capire di più? Scopri la profondità della Bibbia – storica, personale, sorprendentemente attuale."
+    },
     "quote": "«Chiedete e vi sarà dato; cercate e troverete; bussate e vi sarà aperto.»",
     "quoteRef": "– Matteo 7,7",
     "quoteText": "Molti di noi non parlano molto di fede. Va bene così. Ma chi ha domande merita risposte oneste – senza prediche, senza tessere, senza secondi fini."
@@ -116,9 +159,23 @@
     "subtitle": "La trasparenza è importante – specialmente per teologi, pastori e menti critiche.",
     "q1": "Cosa distingue BibelBot da ChatGPT & Co.?",
     "q1Generic": "Chatbot IA generici:",
-    "q1GenericItems": ["Citazioni bibliche superficiali senza contesto", "Nessuna protezione pastorale", "Evita testi scomodi", "Nessun intervento di crisi", "Mescola Bibbia con esoterismo", "Nessuna domanda di approfondimento – solo conferma"],
+    "q1GenericItems": [
+      "Citazioni bibliche superficiali senza contesto",
+      "Nessuna protezione pastorale",
+      "Evita testi scomodi",
+      "Nessun intervento di crisi",
+      "Mescola Bibbia con esoterismo",
+      "Nessuna domanda di approfondimento – solo conferma"
+    ],
     "q1Bot": "BibelBot.ch:",
-    "q1BotItems": ["5 traduzioni riconosciute – anche passi scomodi", "Protezioni E accompagnamento sfidante", "Domande per l'autoriflessione", "Riferimenti per le crisi (numeri di emergenza)", "Esclusivamente teologia cristiana", "Promuove il pensiero critico come maturità di fede"],
+    "q1BotItems": [
+      "5 traduzioni riconosciute – anche passi scomodi",
+      "Protezioni E accompagnamento sfidante",
+      "Domande per l'autoriflessione",
+      "Riferimenti per le crisi (numeri di emergenza)",
+      "Esclusivamente teologia cristiana",
+      "Promuove il pensiero critico come maturità di fede"
+    ],
     "q2": "Quali traduzioni della Bibbia sono incluse?",
     "q2Intro": "BibelBot lavora ecumenicamente con le principali edizioni bibliche in lingua tedesca:",
     "q2Outro": "Tutti i passi biblici includono citazione della fonte e contesto storico.",
@@ -244,17 +301,91 @@
   "tiles": {
     "sectionTitle": "Cosa ti sta a cuore?",
     "sectionSubtitle": "Scegli un tema — BibelBot ti accompagna",
-    "baptism": { "title": "Versetto per il battesimo", "desc": "Il versetto perfetto per il tuo bambino", "prompt": "Aiutami a trovare un versetto adatto per il battesimo. Che tipo di bambino è e cosa desiderano i genitori?" },
-    "condolence": { "title": "Parole di conforto", "desc": "Accompagnare il lutto e l'addio", "prompt": "Ho bisogno di parole confortanti per un biglietto di condoglianze. Puoi aiutarmi a trovare le parole giuste?" },
-    "wedding": { "title": "Versetto per il matrimonio", "desc": "Parole bibliche per il vostro amore", "prompt": "Cerchiamo un bel versetto biblico per il nostro matrimonio. Quali passi parlano di amore e unione?" },
-    "anxiety": { "title": "Paura e preoccupazione", "desc": "Trovare coraggio nei momenti difficili", "prompt": "Sto lottando con paure e preoccupazioni. Cosa dice la Bibbia a riguardo? Ci sono versetti che danno coraggio?" },
-    "confession": { "title": "Confessione", "desc": "Dio perdona — dillo apertamente", "prompt": "Voglio liberarmi di qualcosa che mi pesa. Cosa dice la Bibbia sul perdono e i nuovi inizi?" },
-    "heartbreak": { "title": "Cuore spezzato", "desc": "Cosa dice la Bibbia sul dolore d'amore", "prompt": "Ho il cuore spezzato. Cosa dice la Bibbia sul mal d'amore e come ritrovare la speranza?" },
-    "newstart": { "title": "Nuovo inizio", "desc": "Forza per un nuovo capitolo", "prompt": "Sto affrontando un nuovo inizio e ho bisogno di incoraggiamento. Quali passi biblici parlano di ricominciare?" },
-    "namequiz": { "title": "Quiz dei nomi", "desc": "Trova il nome biblico perfetto", "prompt": "Cerco un nome biblico per il mio bambino. Puoi suggerirmene alcuni e spiegarne il significato?" },
-    "sleepless": { "title": "Insonnia", "desc": "Trovare pace nella notte", "prompt": "Non riesco a dormire e la mente non si ferma. C'è una preghiera o un salmo rilassante per la notte?" },
-    "loneliness": { "title": "Solitudine", "desc": "Non sei mai solo/a", "prompt": "Mi sento solo/a. Cosa dice la Bibbia sul fatto che Dio è sempre con noi?" },
-    "decision": { "title": "Decisione difficile", "desc": "Saggezza per la strada giusta", "prompt": "Ho una decisione difficile da prendere. Quali passi biblici mi aiutano a trovare la strada giusta?" },
-    "gratitude": { "title": "Gratitudine", "desc": "Una preghiera di ringraziamento personale", "prompt": "Voglio ringraziare Dio. Aiutami a formulare una preghiera di gratitudine personale." }
+    "baptism": {
+      "title": "Versetto per il battesimo",
+      "desc": "Il versetto perfetto per il tuo bambino",
+      "prompt": "Aiutami a trovare un versetto adatto per il battesimo. Che tipo di bambino è e cosa desiderano i genitori?"
+    },
+    "condolence": {
+      "title": "Parole di conforto",
+      "desc": "Accompagnare il lutto e l'addio",
+      "prompt": "Ho bisogno di parole confortanti per un biglietto di condoglianze. Puoi aiutarmi a trovare le parole giuste?"
+    },
+    "wedding": {
+      "title": "Versetto per il matrimonio",
+      "desc": "Parole bibliche per il vostro amore",
+      "prompt": "Cerchiamo un bel versetto biblico per il nostro matrimonio. Quali passi parlano di amore e unione?"
+    },
+    "anxiety": {
+      "title": "Paura e preoccupazione",
+      "desc": "Trovare coraggio nei momenti difficili",
+      "prompt": "Sto lottando con paure e preoccupazioni. Cosa dice la Bibbia a riguardo? Ci sono versetti che danno coraggio?"
+    },
+    "confession": {
+      "title": "Confessione",
+      "desc": "Dio perdona — dillo apertamente",
+      "prompt": "Voglio liberarmi di qualcosa che mi pesa. Cosa dice la Bibbia sul perdono e i nuovi inizi?"
+    },
+    "heartbreak": {
+      "title": "Cuore spezzato",
+      "desc": "Cosa dice la Bibbia sul dolore d'amore",
+      "prompt": "Ho il cuore spezzato. Cosa dice la Bibbia sul mal d'amore e come ritrovare la speranza?"
+    },
+    "newstart": {
+      "title": "Nuovo inizio",
+      "desc": "Forza per un nuovo capitolo",
+      "prompt": "Sto affrontando un nuovo inizio e ho bisogno di incoraggiamento. Quali passi biblici parlano di ricominciare?"
+    },
+    "namequiz": {
+      "title": "Quiz dei nomi",
+      "desc": "Trova il nome biblico perfetto",
+      "prompt": "Cerco un nome biblico per il mio bambino. Puoi suggerirmene alcuni e spiegarne il significato?"
+    },
+    "sleepless": {
+      "title": "Insonnia",
+      "desc": "Trovare pace nella notte",
+      "prompt": "Non riesco a dormire e la mente non si ferma. C'è una preghiera o un salmo rilassante per la notte?"
+    },
+    "loneliness": {
+      "title": "Solitudine",
+      "desc": "Non sei mai solo/a",
+      "prompt": "Mi sento solo/a. Cosa dice la Bibbia sul fatto che Dio è sempre con noi?"
+    },
+    "decision": {
+      "title": "Decisione difficile",
+      "desc": "Saggezza per la strada giusta",
+      "prompt": "Ho una decisione difficile da prendere. Quali passi biblici mi aiutano a trovare la strada giusta?"
+    },
+    "gratitude": {
+      "title": "Gratitudine",
+      "desc": "Una preghiera di ringraziamento personale",
+      "prompt": "Voglio ringraziare Dio. Aiutami a formulare una preghiera di gratitudine personale."
+    },
+    "lifewheel": {
+      "title": "Ruota della vita",
+      "desc": "Sei davvero soddisfatto/a?"
+    }
+  },
+  "lifeWheel": {
+    "title": "La tua ruota della vita",
+    "intro": "Valuta 8 aree della vita su una scala da 1 a 10. Scopri dove ti trovi — e ricevi impulsi biblici per l'area che ha bisogno di attenzione.",
+    "start": "Inizia",
+    "sliderHint": "Muovi i cursori — 1 = molto insoddisfatto, 10 = molto soddisfatto",
+    "showResult": "Mostra risultato",
+    "average": "Media",
+    "weakestArea": "Bisogno maggiore",
+    "getImpulse": "Impulso biblico per {{area}}",
+    "reset": "Riprova",
+    "prompt": "La mia ruota della vita mostra che ho solo {{score}}/10 nell'area «{{area}}». Cosa dice la Bibbia su quest'area? Dammi incoraggiamento e impulsi pratici.",
+    "areas": {
+      "health": "Salute",
+      "relationships": "Relazioni",
+      "career": "Carriera",
+      "spirituality": "Spiritualità",
+      "finances": "Finanze",
+      "family": "Famiglia",
+      "leisure": "Tempo libero",
+      "growth": "Crescita personale"
+    }
   }
 }

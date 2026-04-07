@@ -26,12 +26,30 @@
   "features": {
     "sectionTitle": "Jak tě BibelBot doprovází",
     "sectionSubtitle": "Objevte různé způsoby, jak vás BibelBot může provázet",
-    "bible": { "title": "Biblické pasáže a výklad", "desc": "Zeptej se «Co říká Bible o...?» a získej relevantní verše s kontextem a srozumitelným vysvětlením." },
-    "goals": { "title": "Plánování života a cíle", "desc": "Objev své povolání, stanovi si konkrétní cíle a zjisti, co pro tebe Bůh možná připravil." },
-    "self": { "title": "Najít sám sebe", "desc": "Rozpoznej své dary, silné stránky a touhy – a co tvé srdce skutečně potřebuje." },
-    "faith": { "title": "Cesta víry a setkání s Kristem", "desc": "Ať hledáš, pochybuješ nebo prohlubujete – BibelBot tě doprovází na tvé osobní cestě." },
-    "daily": { "title": "Denní impulzy a liturgický rok", "desc": "Začni den s impulzy a nech se provést Adventem, postní dobou a svátky." },
-    "groups": { "title": "Skupiny a společenství", "desc": "Ideální pro biblické skupiny, farní společenství a společné pobožnosti." }
+    "bible": {
+      "title": "Biblické pasáže a výklad",
+      "desc": "Zeptej se «Co říká Bible o...?» a získej relevantní verše s kontextem a srozumitelným vysvětlením."
+    },
+    "goals": {
+      "title": "Plánování života a cíle",
+      "desc": "Objev své povolání, stanovi si konkrétní cíle a zjisti, co pro tebe Bůh možná připravil."
+    },
+    "self": {
+      "title": "Najít sám sebe",
+      "desc": "Rozpoznej své dary, silné stránky a touhy – a co tvé srdce skutečně potřebuje."
+    },
+    "faith": {
+      "title": "Cesta víry a setkání s Kristem",
+      "desc": "Ať hledáš, pochybuješ nebo prohlubujete – BibelBot tě doprovází na tvé osobní cestě."
+    },
+    "daily": {
+      "title": "Denní impulzy a liturgický rok",
+      "desc": "Začni den s impulzy a nech se provést Adventem, postní dobou a svátky."
+    },
+    "groups": {
+      "title": "Skupiny a společenství",
+      "desc": "Ideální pro biblické skupiny, farní společenství a společné pobožnosti."
+    }
   },
   "coaching": {
     "badge": "Metodologie",
@@ -56,19 +74,44 @@
     "honest2": "Vyzývá k sebereflexi",
     "honest3": "Rozlišuje útěchu od vytěsňování",
     "scienceTitle": "Vědecky podložený",
-    "perma": { "name": "Model PERMA", "author": "Seligman", "desc": "Pozitivní emoce, smysl a růst" },
-    "logo": { "name": "Logoterapie", "author": "Frankl", "desc": "Hledání smyslu v těžkých chvílích" },
-    "gratitude": { "name": "Vděčnost", "author": "Emmons", "desc": "Praxe vděčnosti založená na výzkumu" },
-    "forgiveness": { "name": "Odpuštění", "author": "Worthington", "desc": "Model REACH pro procesy odpuštění" },
+    "perma": {
+      "name": "Model PERMA",
+      "author": "Seligman",
+      "desc": "Pozitivní emoce, smysl a růst"
+    },
+    "logo": {
+      "name": "Logoterapie",
+      "author": "Frankl",
+      "desc": "Hledání smyslu v těžkých chvílích"
+    },
+    "gratitude": {
+      "name": "Vděčnost",
+      "author": "Emmons",
+      "desc": "Praxe vděčnosti založená na výzkumu"
+    },
+    "forgiveness": {
+      "name": "Odpuštění",
+      "author": "Worthington",
+      "desc": "Model REACH pro procesy odpuštění"
+    },
     "renameTip": "💡 Můžeš svému BibelBotovi dát osobní jméno – aby se stal opravdu <strong>tvým</strong> společníkem."
   },
   "discover": {
     "badge": "Pro zvědavé",
     "title": "Znovuobjevit víru – bez nátlaku",
     "subtitle": "Stále více lidí si znovu klade velké otázky. BibelBot.ch je pro všechny, kteří chtějí (znovu) objevit víru – upřímně, bez patosu a bez církevního žargonu.",
-    "doubt": { "title": "Pochybuješ?", "text": "Dobře. Pochybnosti nejsou chyba – jsou začátkem upřímné víry. Bible je plná lidí, kteří zápasili." },
-    "search": { "title": "Hledáš?", "text": "Možná ani nevíš co. To je naprosto v pořádku. BibelBot ti pomůže klást správné otázky – místo rychlých odpovědí." },
-    "deepen": { "title": "Chceš jít hlouběji?", "text": "Už věříš, ale chceš porozumět víc? Objev hloubku Bible – historickou, osobní, překvapivě aktuální." },
+    "doubt": {
+      "title": "Pochybuješ?",
+      "text": "Dobře. Pochybnosti nejsou chyba – jsou začátkem upřímné víry. Bible je plná lidí, kteří zápasili."
+    },
+    "search": {
+      "title": "Hledáš?",
+      "text": "Možná ani nevíš co. To je naprosto v pořádku. BibelBot ti pomůže klást správné otázky – místo rychlých odpovědí."
+    },
+    "deepen": {
+      "title": "Chceš jít hlouběji?",
+      "text": "Už věříš, ale chceš porozumět víc? Objev hloubku Bible – historickou, osobní, překvapivě aktuální."
+    },
     "quote": "«Proste, a bude vám dáno; hledejte, a naleznete; tlučte, a bude vám otevřeno.»",
     "quoteRef": "– Matouš 7,7",
     "quoteText": "Mnozí z nás o víře moc nemluví. A to je v pořádku. Ale kdo má otázky, zaslouží si upřímné odpovědi – bez kázání, bez členství, bez postranních úmyslů."
@@ -116,9 +159,23 @@
     "subtitle": "Transparentnost je důležitá – zejména pro teology, duchovní a kritické myslitele.",
     "q1": "Čím se BibelBot liší od ChatGPT a podobných?",
     "q1Generic": "Obecné AI chatboty:",
-    "q1GenericItems": ["Povrchní biblické citáty bez kontextu", "Žádné pastorační záruky", "Vyhýbá se nepohodlným textům", "Žádná krizová intervence", "Míchá Bibli s esoterikou", "Žádné doplňující otázky – jen potvrzení"],
+    "q1GenericItems": [
+      "Povrchní biblické citáty bez kontextu",
+      "Žádné pastorační záruky",
+      "Vyhýbá se nepohodlným textům",
+      "Žádná krizová intervence",
+      "Míchá Bibli s esoterikou",
+      "Žádné doplňující otázky – jen potvrzení"
+    ],
     "q1Bot": "BibelBot.ch:",
-    "q1BotItems": ["5 uznávaných překladů – i nepohodlné pasáže", "Záruky A náročný doprovod", "Otázky k sebereflexi", "Krizové odkazy (tísňové linky)", "Výhradně křesťanská teologie", "Podporuje kritické myšlení jako zralost víry"],
+    "q1BotItems": [
+      "5 uznávaných překladů – i nepohodlné pasáže",
+      "Záruky A náročný doprovod",
+      "Otázky k sebereflexi",
+      "Krizové odkazy (tísňové linky)",
+      "Výhradně křesťanská teologie",
+      "Podporuje kritické myšlení jako zralost víry"
+    ],
     "q2": "Jaké překlady Bible jsou zahrnuty?",
     "q2Intro": "BibelBot pracuje ekumenicky s hlavními německojazyčnými biblickými vydáními:",
     "q2Outro": "Všechny biblické pasáže obsahují citaci zdroje a historický kontext.",
@@ -244,17 +301,91 @@
   "tiles": {
     "sectionTitle": "Co tě trápí?",
     "sectionSubtitle": "Vyber si téma — BibelBot tě doprovází",
-    "baptism": { "title": "Verš ke křtu", "desc": "Dokonalý verš pro tvé dítě", "prompt": "Pomoz mi najít vhodný verš ke křtu. Jaké je to dítě a co si přejí rodiče?" },
-    "condolence": { "title": "Slova útěchy", "desc": "Doprovázení smutkem a loučením", "prompt": "Potřebuji útěšná slova na kondolenční lístek. Můžeš mi pomoci najít ta správná slova?" },
-    "wedding": { "title": "Svatební verš", "desc": "Biblická slova pro vaši lásku", "prompt": "Hledáme krásný biblický verš pro náš svatební den. Které pasáže mluví o lásce a partnerství?" },
-    "anxiety": { "title": "Strach a starosti", "desc": "Najít odvahu v těžkých chvílích", "prompt": "Bojuji se strachem a starostmi. Co říká Bible k tomuto tématu? Existují verše, které dodávají odvahu?" },
-    "confession": { "title": "Zpověď", "desc": "Bůh odpouští — vyslov to", "prompt": "Chci se zbavit něčeho, co mě tíží. Co říká Bible o odpuštění a novém začátku?" },
-    "heartbreak": { "title": "Zlomené srdce", "desc": "Co říká Bible o bolesti srdce", "prompt": "Mám zlomené srdce. Co říká Bible o bolesti srdce a jak znovu najít naději?" },
-    "newstart": { "title": "Nový začátek", "desc": "Síla pro novou kapitolu", "prompt": "Stojím před novým začátkem a potřebuji povzbuzení. Které biblické pasáže mluví o nových začátcích?" },
-    "namequiz": { "title": "Kvíz jmen", "desc": "Najdi to správné biblické jméno", "prompt": "Hledám biblické jméno pro své dítě. Můžeš mi navrhnout několik a vysvětlit jejich význam?" },
-    "sleepless": { "title": "Nespavost", "desc": "Najít klid v noci", "prompt": "Nemůžu spát a moje mysl se nezastaví. Existuje uklidňující modlitba nebo žalm na noc?" },
-    "loneliness": { "title": "Osamělost", "desc": "Nikdy nejsi sám/sama", "prompt": "Cítím se osamělý/á. Co říká Bible o tom, že Bůh je vždy s námi?" },
-    "decision": { "title": "Těžké rozhodnutí", "desc": "Moudrost pro správnou cestu", "prompt": "Stojím před těžkým rozhodnutím. Které biblické pasáže mi pomohou najít správnou cestu?" },
-    "gratitude": { "title": "Vděčnost", "desc": "Osobní děkovná modlitba", "prompt": "Chci poděkovat Bohu. Pomoz mi formulovat osobní modlitbu vděčnosti." }
+    "baptism": {
+      "title": "Verš ke křtu",
+      "desc": "Dokonalý verš pro tvé dítě",
+      "prompt": "Pomoz mi najít vhodný verš ke křtu. Jaké je to dítě a co si přejí rodiče?"
+    },
+    "condolence": {
+      "title": "Slova útěchy",
+      "desc": "Doprovázení smutkem a loučením",
+      "prompt": "Potřebuji útěšná slova na kondolenční lístek. Můžeš mi pomoci najít ta správná slova?"
+    },
+    "wedding": {
+      "title": "Svatební verš",
+      "desc": "Biblická slova pro vaši lásku",
+      "prompt": "Hledáme krásný biblický verš pro náš svatební den. Které pasáže mluví o lásce a partnerství?"
+    },
+    "anxiety": {
+      "title": "Strach a starosti",
+      "desc": "Najít odvahu v těžkých chvílích",
+      "prompt": "Bojuji se strachem a starostmi. Co říká Bible k tomuto tématu? Existují verše, které dodávají odvahu?"
+    },
+    "confession": {
+      "title": "Zpověď",
+      "desc": "Bůh odpouští — vyslov to",
+      "prompt": "Chci se zbavit něčeho, co mě tíží. Co říká Bible o odpuštění a novém začátku?"
+    },
+    "heartbreak": {
+      "title": "Zlomené srdce",
+      "desc": "Co říká Bible o bolesti srdce",
+      "prompt": "Mám zlomené srdce. Co říká Bible o bolesti srdce a jak znovu najít naději?"
+    },
+    "newstart": {
+      "title": "Nový začátek",
+      "desc": "Síla pro novou kapitolu",
+      "prompt": "Stojím před novým začátkem a potřebuji povzbuzení. Které biblické pasáže mluví o nových začátcích?"
+    },
+    "namequiz": {
+      "title": "Kvíz jmen",
+      "desc": "Najdi to správné biblické jméno",
+      "prompt": "Hledám biblické jméno pro své dítě. Můžeš mi navrhnout několik a vysvětlit jejich význam?"
+    },
+    "sleepless": {
+      "title": "Nespavost",
+      "desc": "Najít klid v noci",
+      "prompt": "Nemůžu spát a moje mysl se nezastaví. Existuje uklidňující modlitba nebo žalm na noc?"
+    },
+    "loneliness": {
+      "title": "Osamělost",
+      "desc": "Nikdy nejsi sám/sama",
+      "prompt": "Cítím se osamělý/á. Co říká Bible o tom, že Bůh je vždy s námi?"
+    },
+    "decision": {
+      "title": "Těžké rozhodnutí",
+      "desc": "Moudrost pro správnou cestu",
+      "prompt": "Stojím před těžkým rozhodnutím. Které biblické pasáže mi pomohou najít správnou cestu?"
+    },
+    "gratitude": {
+      "title": "Vděčnost",
+      "desc": "Osobní děkovná modlitba",
+      "prompt": "Chci poděkovat Bohu. Pomoz mi formulovat osobní modlitbu vděčnosti."
+    },
+    "lifewheel": {
+      "title": "Kolo života",
+      "desc": "Jsi opravdu spokojený/á?"
+    }
+  },
+  "lifeWheel": {
+    "title": "Tvé kolo života",
+    "intro": "Ohodnoť 8 životních oblastí na stupnici od 1 do 10. Zjisti, kde stojíš — a získej biblické impulsy pro oblast, která potřebuje pozornost.",
+    "start": "Začít",
+    "sliderHint": "Posuň posuvníky — 1 = velmi nespokojený, 10 = velmi spokojený",
+    "showResult": "Zobrazit výsledek",
+    "average": "Průměr",
+    "weakestArea": "Největší potřeba",
+    "getImpulse": "Biblický impuls pro {{area}}",
+    "reset": "Zkusit znovu",
+    "prompt": "Mé kolo života ukazuje, že v oblasti «{{area}}» mám pouze {{score}}/10. Co říká Bible o této oblasti života? Dej mi povzbuzení a praktické impulsy.",
+    "areas": {
+      "health": "Zdraví",
+      "relationships": "Vztahy",
+      "career": "Kariéra",
+      "spirituality": "Spiritualita",
+      "finances": "Finance",
+      "family": "Rodina",
+      "leisure": "Volný čas",
+      "growth": "Osobní růst"
+    }
   }
 }
