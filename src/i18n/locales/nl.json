@@ -11,7 +11,7 @@
     },
     "title1": "De Bijbel.",
     "title2": " Opnieuw ontdekt.",
-    "subtitle": "BibelBot is een begeleider die de Bijbel kent – en de juiste vragen stelt. Geen persoon, maar een eerlijke metgezel. Voor zinvolle gesprekken, diepe vragen en echte impulsen.",
+    "subtitle": "BibleBot is een begeleider die de Bijbel kent – en de juiste vragen stelt. Geen persoon, maar een eerlijke metgezel. Voor zinvolle gesprekken, diepe vragen en echte impulsen.",
     "ctaTelegram": "Start via Telegram",
     "ctaMore": "Meer ontdekken",
     "quote": "\"Kom naar mij, jullie die vermoeid zijn en onder lasten gebukt gaan, dan zal ik jullie rust geven.\"",
@@ -24,8 +24,8 @@
     "explore": "Volledige passage lezen"
   },
   "features": {
-    "sectionTitle": "Hoe BibelBot je begeleidt",
-    "sectionSubtitle": "Ontdek de vele manieren waarop BibelBot je kan begeleiden",
+    "sectionTitle": "Hoe BibleBot je begeleidt",
+    "sectionSubtitle": "Ontdek de vele manieren waarop BibleBot je kan begeleiden",
     "bible": {
       "title": "Bijbelpassages & uitleg",
       "desc": "Vraag \"Wat zegt de Bijbel over...?\" en ontvang relevante verzen met context en duidelijke uitleg."
@@ -40,11 +40,11 @@
     },
     "faith": {
       "title": "Geloofsreis & Christus vinden",
-      "desc": "Of je zoekt, twijfelt of verdiept – BibelBot begeleidt je op je persoonlijke weg."
+      "desc": "Of je zoekt, twijfelt of verdiept – BibleBot begeleidt je op je persoonlijke weg."
     },
     "daily": {
       "title": "Dagelijkse impulsen & kerkelijk jaar",
-      "desc": "Begin je dag met impulsen en laat BibelBot je begeleiden door Advent, Vastentijd en feestdagen."
+      "desc": "Begin je dag met impulsen en laat BibleBot je begeleiden door Advent, Vastentijd en feestdagen."
     },
     "groups": {
       "title": "Groepen & gemeenschappen",
@@ -54,9 +54,9 @@
   "coaching": {
     "badge": "Methodiek",
     "title": "Niet zomaar een chatbot – echte begeleiding",
-    "subtitle": "BibelBot combineert bijbelse wijsheid met bewezen coachingmethoden en Positieve Psychologie.",
+    "subtitle": "BibleBot combineert bijbelse wijsheid met bewezen coachingmethoden en Positieve Psychologie.",
     "journeyTitle": "Persoonlijke begeleiding",
-    "journeyDesc": "BibelBot begeleidt je zo lang als je wilt – in vrij gesprek of met een optionele 21-dagenstructuur.",
+    "journeyDesc": "BibleBot begeleidt je zo lang als je wilt – in vrij gesprek of met een optionele 21-dagenstructuur.",
     "week1": "Week 1: Aankomen",
     "week1Desc": "Vertrouwen opbouwen, luisteren, je situatie begrijpen. Waar sta je? Wat houdt je bezig?",
     "week2": "Week 2: Verdiepen",
@@ -64,12 +64,12 @@
     "week3": "Week 3: Handelen",
     "week3Desc": "Concrete stappen zetten, doelen stellen, verandering in gang zetten. Wat is je volgende stap?",
     "openQuestionsTitle": "Open vragen in plaats van snelle antwoorden",
-    "openQuestionsDesc": "BibelBot geeft geen goedkoop advies. In plaats daarvan stelt het de vragen die er echt toe doen:",
+    "openQuestionsDesc": "BibleBot geeft geen goedkoop advies. In plaats daarvan stelt het de vragen die er echt toe doen:",
     "openQ1": "\"Wat zit er echt achter dit verlangen?\"",
     "openQ2": "\"Hoe zou je merken dat er iets is veranderd?\"",
     "openQ3": "\"Wat zou een eerste kleine stap kunnen zijn?\"",
     "honestTitle": "Eerlijk in plaats van toxische positiviteit",
-    "honestDesc": "Geen \"Het komt wel goed!\" en geen mooipraterij. BibelBot is empathisch EN eerlijk:",
+    "honestDesc": "Geen \"Het komt wel goed!\" en geen mooipraterij. BibleBot is empathisch EN eerlijk:",
     "honest1": "Behandelt ook ongemakkelijke bijbelpassages",
     "honest2": "Daagt je uit tot zelfreflectie",
     "honest3": "Onderscheidt troost van vermijding",
@@ -94,19 +94,19 @@
       "author": "Worthington",
       "desc": "REACH-model voor vergevingsprocessen"
     },
-    "renameTip": "💡 Je kunt je BibelBot een persoonlijke naam geven – zodat het echt <strong>jouw</strong> metgezel wordt."
+    "renameTip": "💡 Je kunt je BibleBot een persoonlijke naam geven – zodat het echt <strong>jouw</strong> metgezel wordt."
   },
   "discover": {
     "badge": "Voor nieuwsgierigen",
     "title": "Geloof herontdekken – zonder druk",
-    "subtitle": "Steeds meer mensen stellen de grote vragen opnieuw. BibelBot is er voor iedereen die geloof wil (her)ontdekken – eerlijk, zonder pathos en zonder kerktaal.",
+    "subtitle": "Steeds meer mensen stellen de grote vragen opnieuw. BibleBot is er voor iedereen die geloof wil (her)ontdekken – eerlijk, zonder pathos en zonder kerktaal.",
     "doubt": {
       "title": "Je twijfelt?",
       "text": "Goed zo. Twijfel is geen gebrek – het is het begin van eerlijk geloof. De Bijbel staat vol met mensen die worstelden."
     },
     "search": {
       "title": "Je zoekt?",
-      "text": "Misschien weet je niet eens waarnaar. Dat is helemaal oké. BibelBot helpt je de juiste vragen te stellen – in plaats van snelle antwoorden te geven."
+      "text": "Misschien weet je niet eens waarnaar. Dat is helemaal oké. BibleBot helpt je de juiste vragen te stellen – in plaats van snelle antwoorden te geven."
     },
     "deepen": {
       "title": "Je wilt dieper gaan?",
@@ -155,9 +155,9 @@
   },
   "faq": {
     "badge": "FAQ",
-    "title": "Wat je moet weten over BibelBot",
+    "title": "Wat je moet weten over BibleBot",
     "subtitle": "Transparantie is belangrijk – vooral voor theologen, pastors en kritische denkers.",
-    "q1": "Wat maakt BibelBot anders dan ChatGPT & Co.?",
+    "q1": "Wat maakt BibleBot anders dan ChatGPT & Co.?",
     "q1Generic": "Generieke chatbots:",
     "q1GenericItems": [
       "Oppervlakkige bijbelcitaten zonder context",
@@ -167,7 +167,7 @@
       "Mengt Bijbel met esoterie",
       "Geen vervolgvragen – alleen bevestiging"
     ],
-    "q1Bot": "BibelBot:",
+    "q1Bot": "BibleBot:",
     "q1BotItems": [
       "5 erkende vertalingen – inclusief ongemakkelijke passages",
       "Bescherming EN uitdagende begeleiding",
@@ -177,11 +177,11 @@
       "Bevordert kritisch denken als geloofsvolwassenheid"
     ],
     "q2": "Welke bijbelvertalingen zijn opgenomen?",
-    "q2Intro": "BibelBot werkt oecumenisch met de belangrijkste Duitstalige bijbeledities:",
+    "q2Intro": "BibleBot werkt oecumenisch met de belangrijkste Duitstalige bijbeledities:",
     "q2Outro": "Alle bijbelpassages bevatten bronvermelding en historische context.",
     "q3": "Welke wetenschappelijke basis zit erachter?",
     "q3Intro": "De begeleiding is gebaseerd op peer-reviewed onderzoek in de Positieve Psychologie:",
-    "q4": "Hoe waarborgt BibelBot pastorale veiligheid?",
+    "q4": "Hoe waarborgt BibleBot pastorale veiligheid?",
     "q4Items": [
       "Suïcidale gedachten of crisis → directe verwijzing naar hulplijnen",
       "Geen psychologische of medische diagnoses",
@@ -191,37 +191,37 @@
       "Geen toxische positiviteit – oprechte, eerlijke begeleiding",
       "Benoemt openlijk spanningen en moeilijke teksten"
     ],
-    "q5": "Is BibelBot gebonden aan een specifieke denominatie?",
-    "q5Answer": "Nee. BibelBot is oecumenisch georiënteerd en respecteert gereformeerde, katholieke, evangelische en andere christelijke tradities gelijkwaardig. Bij denominatieverschillen worden de verschillende perspectieven transparant gepresenteerd.",
-    "q6": "Vervangt BibelBot pastorale zorg of therapie?",
-    "q6Answer": "Nee. BibelBot is een hulpmiddel voor persoonlijk bijbellezen en reflectie. Het vervangt geen professionele pastorale zorg, theologisch advies of psychologische therapie. Bij ernstige crises verwijst BibelBot altijd naar gekwalificeerde hulp.",
-    "q7": "Is BibelBot niet gewoon een 'feel-good bot'?",
-    "q7Answer": "Nee. BibelBot troost waar troost nodig is – maar daagt ook uit. Spirituele groei vereist wrijving. BibelBot stelt ongemakkelijke vervolgvragen, benoemt moeilijke bijbelteksten en schuwt onderwerpen als gerechtigheid, berouw en verantwoordelijkheid niet.",
-    "q8": "Wie zit achter BibelBot en hoe wordt het gefinancierd?",
-    "q8Answer": "BibelBot is een privé, niet-commercieel project. Het wordt op vrijwillige basis gerund en uitsluitend gefinancierd door vrijwillige donaties. Er is geen reclame, geen dataverkoop en geen betaalde functies.",
-    "q9": "Hoe gaat BibelBot om met mijn gegevens?",
-    "q9Answer": "BibelBot slaat geen persoonlijke gegevens en geen chatgeschiedenissen op. Elk gesprek is anoniem. Er is geen login, geen tracking en geen gegevensdeling met derden."
+    "q5": "Is BibleBot gebonden aan een specifieke denominatie?",
+    "q5Answer": "Nee. BibleBot is oecumenisch georiënteerd en respecteert gereformeerde, katholieke, evangelische en andere christelijke tradities gelijkwaardig. Bij denominatieverschillen worden de verschillende perspectieven transparant gepresenteerd.",
+    "q6": "Vervangt BibleBot pastorale zorg of therapie?",
+    "q6Answer": "Nee. BibleBot is een hulpmiddel voor persoonlijk bijbellezen en reflectie. Het vervangt geen professionele pastorale zorg, theologisch advies of psychologische therapie. Bij ernstige crises verwijst BibleBot altijd naar gekwalificeerde hulp.",
+    "q7": "Is BibleBot niet gewoon een 'feel-good bot'?",
+    "q7Answer": "Nee. BibleBot troost waar troost nodig is – maar daagt ook uit. Spirituele groei vereist wrijving. BibleBot stelt ongemakkelijke vervolgvragen, benoemt moeilijke bijbelteksten en schuwt onderwerpen als gerechtigheid, berouw en verantwoordelijkheid niet.",
+    "q8": "Wie zit achter BibleBot en hoe wordt het gefinancierd?",
+    "q8Answer": "BibleBot is een privé, niet-commercieel project. Het wordt op vrijwillige basis gerund en uitsluitend gefinancierd door vrijwillige donaties. Er is geen reclame, geen dataverkoop en geen betaalde functies.",
+    "q9": "Hoe gaat BibleBot om met mijn gegevens?",
+    "q9Answer": "BibleBot slaat geen persoonlijke gegevens en geen chatgeschiedenissen op. Elk gesprek is anoniem. Er is geen login, geen tracking en geen gegevensdeling met derden."
   },
   "donate": {
-    "badge": "Steun BibelBot",
-    "title": "Help BibelBot gratis te houden",
-    "subtitle": "BibelBot is een passieproject – geen advertenties, geen abonnementen, geen verborgen kosten. Om het zo te houden, ben ik afhankelijk van vrijwillige donaties.",
+    "badge": "Steun BibleBot",
+    "title": "Help BibleBot gratis te houden",
+    "subtitle": "BibleBot is een passieproject – geen advertenties, geen abonnementen, geen verborgen kosten. Om het zo te houden, ben ik afhankelijk van vrijwillige donaties.",
     "bankTitle": "Doneren via bankoverschrijving",
     "bankSubtitle": "Elk bedrag telt – dank je wel! 🙏",
     "recipient": "Ontvanger",
     "bank": "Bank",
     "purpose": "Referentie",
-    "purposeValue": "Donatie BibelBot",
-    "note": "BibelBot wordt als privéproject uitgevoerd. Donaties zijn daarom niet fiscaal aftrekbaar."
+    "purposeValue": "Donatie BibleBot",
+    "note": "BibleBot wordt als privéproject uitgevoerd. Donaties zijn daarom niet fiscaal aftrekbaar."
   },
   "cta": {
     "title": "Je hoeft dit niet alleen te doen",
-    "subtitle": "Vertel BibelBot gewoon wat je bezighoudt. Geen login, geen kosten, geen oordeel – alleen eerlijke begeleiding en de wijsheid van de Bijbel.",
+    "subtitle": "Vertel BibleBot gewoon wat je bezighoudt. Geen login, geen kosten, geen oordeel – alleen eerlijke begeleiding en de wijsheid van de Bijbel.",
     "button": "Start een gesprek"
   },
   "footer": {
     "tagline": "Je persoonlijke metgezel voor een leven met de Bijbel",
-    "disclaimer": "BibelBot is een hulpmiddel en vervangt geen professionele pastorale zorg, theologisch advies of psychologische therapie. Bel bij acute crises je lokale hulplijn.",
+    "disclaimer": "BibleBot is een hulpmiddel en vervangt geen professionele pastorale zorg, theologisch advies of psychologische therapie. Bel bij acute crises je lokale hulplijn.",
     "impressum": "Impressum",
     "notes": "Opmerkingen",
     "private": "Privé, niet-commercieel project",
@@ -231,7 +231,7 @@
     "love": "Met ❤️ voor iedereen die zich afvraagt wat Christus denkt."
   },
   "chat": {
-    "welcome": "Welkom! 🤗\n\nIk ben je BibelBot – je persoonlijke metgezel met de Bijbel, goede vragen en echte impulsen. Geen druk, geen oordeel.\n\nJe kunt me alles vragen – of gewoon delen wat je bezighoudt. 💛",
+    "welcome": "Welkom! 🤗\n\nIk ben je BibleBot – je persoonlijke metgezel met de Bijbel, goede vragen en echte impulsen. Geen druk, geen oordeel.\n\nJe kunt me alles vragen – of gewoon delen wat je bezighoudt. 💛",
     "journeyOffer": "💡 **Tip:** Ik bied ook een **21-dagenreis** aan – 3 weken dagelijkse impulsen, reflecties en concrete stappen. Op je eigen tempo.\n\nWil je het proberen?",
     "suggestion1": "Ik heb nu een bemoedigend woord nodig",
     "suggestion2": "Wat zegt de Bijbel als je je onzeker voelt?",
@@ -270,7 +270,7 @@
     "errorNoStream": "Geen stream"
   },
   "install": {
-    "title": "BibelBot installeren",
+    "title": "BibleBot installeren",
     "androidDesc": "Snelle toegang vanaf je startscherm",
     "iosDesc": "Tik op \"Delen\" → \"Zet op beginscherm\"",
     "button": "Installeren",
@@ -302,7 +302,7 @@
   },
   "tiles": {
     "sectionTitle": "Wat leeft er in je?",
-    "sectionSubtitle": "Kies een thema — BibelBot begeleidt je",
+    "sectionSubtitle": "Kies een thema — BibleBot begeleidt je",
     "baptism": {
       "title": "Dooptekst vinden",
       "desc": "Het perfecte vers voor je kind",
@@ -471,9 +471,9 @@
     }
   },
   "referral": {
-    "title": "Know someone who could use BibelBot?",
-    "subtitle": "Share BibelBot with friends and family.",
-    "shareText": "Check out BibelBot.Life – your personal Bible companion. Free, anonymous, in 8 languages.",
+    "title": "Know someone who could use BibleBot?",
+    "subtitle": "Share BibleBot with friends and family.",
+    "shareText": "Check out BibleBot.Life – your personal Bible companion. Free, anonymous, in 8 languages.",
     "copied": "Link copied!",
     "copyLink": "Copy link",
     "shareButton": "Share"
