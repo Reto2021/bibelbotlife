@@ -195,9 +195,12 @@ Deno.serve(async (req) => {
   // ── Tile click stats ──
   const tileClicks = customEvents.filter((e: any) => e.event_name === "tile_click");
   const tileClickCounts: Record<string, number> = {};
+  const dailyTileClicks: Record<string, number> = {};
   tileClicks.forEach((e: any) => {
     const tile = e.event_data?.tile || "unknown";
     tileClickCounts[tile] = (tileClickCounts[tile] || 0) + 1;
+    const day = e.created_at.split("T")[0];
+    dailyTileClicks[day] = (dailyTileClicks[day] || 0) + 1;
   });
   const topTiles = Object.entries(tileClickCounts)
     .sort(([, a], [, b]) => b - a)
