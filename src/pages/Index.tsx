@@ -1,4 +1,4 @@
-import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, Shield, GraduationCap, Church, Quote, CheckCircle2, Brain, X as XIcon, Check, HelpCircle } from "lucide-react";
+import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, Shield, GraduationCap, Church, Quote, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { BibelBotChat } from "@/components/BibelBotChat";
@@ -371,6 +371,75 @@ const Index = () => {
               </Card>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Spenden Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-3xl text-center">
+          <div className="mb-4">
+            <span className="inline-flex items-center gap-2 text-sm font-medium text-primary bg-primary/10 px-4 py-1.5 rounded-full">
+              <HandHeart className="h-4 w-4" />
+              Unterstütze BibelBot
+            </span>
+          </div>
+          <h2 className="text-4xl font-bold text-foreground mb-4">
+            Hilf mit, dass BibelBot kostenlos bleibt
+          </h2>
+          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+            BibelBot ist ein Herzensprojekt – ohne Werbung, ohne Abo, ohne versteckte Kosten. 
+            Damit das so bleibt, bin ich auf freiwillige Spenden angewiesen. 
+            Jeder Beitrag hilft, die laufenden Kosten für KI und Betrieb zu decken.
+          </p>
+          
+          <Card className="bg-card/80 backdrop-blur-sm border-border max-w-md mx-auto">
+            <CardHeader>
+              <CardTitle className="text-xl">Spende per Banküberweisung</CardTitle>
+              <CardDescription>Jeder Betrag zählt – herzlichen Dank! 🙏</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4 text-left">
+              <div className="space-y-3">
+                <div className="flex justify-between items-center bg-accent/30 rounded-lg px-4 py-3">
+                  <div>
+                    <p className="text-xs text-muted-foreground">Empfänger</p>
+                    <p className="font-medium text-foreground text-sm">Vorname Nachname</p>
+                  </div>
+                </div>
+                <div className="flex justify-between items-center bg-accent/30 rounded-lg px-4 py-3">
+                  <div>
+                    <p className="text-xs text-muted-foreground">IBAN</p>
+                    <p className="font-mono font-medium text-foreground text-sm">CH00 0000 0000 0000 0000 0</p>
+                  </div>
+                  <button
+                    onClick={() => {
+                      navigator.clipboard.writeText("CH0000000000000000000");
+                      // Optional: toast notification
+                    }}
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                    title="IBAN kopieren"
+                  >
+                    <Copy className="h-4 w-4" />
+                  </button>
+                </div>
+                <div className="flex justify-between items-center bg-accent/30 rounded-lg px-4 py-3">
+                  <div>
+                    <p className="text-xs text-muted-foreground">Bank</p>
+                    <p className="font-medium text-foreground text-sm">Bankname</p>
+                  </div>
+                </div>
+                <div className="flex justify-between items-center bg-accent/30 rounded-lg px-4 py-3">
+                  <div>
+                    <p className="text-xs text-muted-foreground">Verwendungszweck</p>
+                    <p className="font-medium text-foreground text-sm">Spende BibelBot</p>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <p className="text-sm text-muted-foreground mt-6">
+            BibelBot.ch wird als privates Projekt betrieben. Spenden sind daher nicht steuerabzugsfähig.
+          </p>
         </div>
       </section>
 
