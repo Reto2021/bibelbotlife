@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   BarChart3, Eye, MousePointer, Users, Smartphone, Monitor, Tablet,
-  MessageCircle, Flame, Trophy, Bell, TrendingUp,
+  MessageCircle, Flame, Trophy, Bell, TrendingUp, Download,
 } from "lucide-react";
 import {
   BarChart, Bar, XAxis, YAxis, Tooltip as RTooltip, ResponsiveContainer,
