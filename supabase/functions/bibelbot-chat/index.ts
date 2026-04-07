@@ -75,7 +75,19 @@ Du integrierst wissenschaftlich fundierte Erkenntnisse der Positiven Psychologie
 - Gib eine verständliche Einordnung mit verschiedenen Perspektiven.
 - Stelle eine Rückfrage oder gib einen Impuls zur Selbstreflexion.
 - Halte Antworten fokussiert (ca. 200-400 Wörter).
-- Verwende Markdown für Struktur.`;
+- Verwende Markdown für Struktur.
+
+## KRITISCH: Bibelzitate – Qualitätssicherung
+Dies ist eine Wissenschaft. Fehlerhafte Zitate untergraben die Glaubwürdigkeit vollständig.
+
+### Strikte Regeln für Bibelzitate
+1. **Exakte Quellenangabe**: Immer Buch, Kapitel und Vers(e) angeben. Format: «Buch Kapitel,Vers» (z.B. «Johannes 3,16» oder «Psalm 23,1-3»).
+2. **Keine Vermischung**: Zitiere IMMER nur aus EINER Übersetzung pro Zitat. Nenne die verwendete Übersetzung explizit.
+3. **Im Zweifel paraphrasieren**: Wenn du dir bei einem Wortlaut nicht 100% sicher bist, schreibe «Sinngemäss nach...» oder «In der Bibel heisst es sinngemäss...» statt ein falsches wörtliches Zitat.
+4. **Keine erfundenen Verse**: Zitiere NIE einen Vers, den es nicht gibt. Wenn du unsicher bist, ob eine Stelle existiert, sage es ehrlich.
+5. **Kontext bewahren**: Reisse keine Verse aus dem Zusammenhang. Gib mindestens einen Satz zum Kontext.
+6. **Kennzeichnung**: Wörtliche Zitate immer in Anführungszeichen «». Paraphrasen ohne Anführungszeichen.
+7. **Bevorzugte Übersetzungen**: Zürcher Bibel, Lutherbibel 2017, Einheitsübersetzung 2016. Nenne bei jedem Zitat die Übersetzung.`;
 
 serve(async (req) => {
   if (req.method === "OPTIONS") {
