@@ -207,6 +207,7 @@ export function BibelBotChat() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const { toast } = useToast();
+  const { track } = useTrack();
 
   const welcomeMessage: Message = { role: "assistant", content: t("chat.welcome") };
   const journeyOffer: Message = { role: "assistant", content: t("chat.journeyOffer") };
