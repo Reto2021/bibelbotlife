@@ -364,6 +364,11 @@
     "lifewheel": {
       "title": "Roue de la vie",
       "desc": "Es-tu vraiment satisfait(e) ?"
+    },
+    "sevenwhys": {
+      "title": "7 Pourquois",
+      "desc": "Trouve la racine profonde de ta question",
+      "prompt": "J'aimerais faire l'exercice des 7 Pourquois. Voici mon sujet :"
     }
   },
   "lifeWheel": {

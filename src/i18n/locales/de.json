@@ -401,6 +401,11 @@
     "lifewheel": {
       "title": "Lebensrad",
       "desc": "Wie zufrieden bist du wirklich?"
+    },
+    "sevenwhys": {
+      "title": "7 Warums",
+      "desc": "Finde die tiefste Wurzel deiner Frage",
+      "prompt": "Ich möchte die 7-Warums-Übung machen. Hier ist mein Thema:"
     }
   },
   "lifeWheel": {
