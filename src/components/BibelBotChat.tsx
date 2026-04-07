@@ -559,7 +559,7 @@ export function BibelBotChat() {
                   <ReactMarkdown>{journeyOffer.content}</ReactMarkdown>
                 </div>
                 <div className="flex gap-2 mt-3">
-                  <Button size="sm" className="text-xs h-7" onClick={() => { startJourney(); setJourneyDay(1); setShowJourneyOffer(false); sendMessage(t("chat.journeyStartMsg")); }}>{t("chat.journeyStart")}</Button>
+                  <Button size="sm" className="text-xs h-7" onClick={() => { startJourney(); setJourneyDay(1); setShowJourneyOffer(false); track("journey_start", { day: 1 }); sendMessage(t("chat.journeyStartMsg")); }}>{t("chat.journeyStart")}</Button>
                   <Button size="sm" variant="ghost" className="text-xs h-7 text-muted-foreground" onClick={() => { setShowJourneyOffer(false); dismissJourney(); }}>{t("chat.journeyLater")}</Button>
                 </div>
               </div>
