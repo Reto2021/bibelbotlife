@@ -49,8 +49,10 @@ export function EntryTiles() {
     };
   }, [checkScroll]);
 
-  const handleClick = (tile: EntryTile) => {
-    openBibelBotChat(tile.prompt);
+  const { t } = useTranslation();
+
+  const handleClick = (tile: TileConfig) => {
+    openBibelBotChat(t(`tiles.${tile.key}.prompt`));
   };
 
   return (
@@ -58,10 +60,10 @@ export function EntryTiles() {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-            Was bewegt dich?
+            {t("tiles.sectionTitle")}
           </h2>
           <p className="text-muted-foreground text-lg">
-            Wähle ein Thema — der BibelBot begleitet dich
+            {t("tiles.sectionSubtitle")}
           </p>
         </div>
 
@@ -78,29 +80,32 @@ export function EntryTiles() {
             className="flex gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 -mx-4 px-4"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
-            {tiles.map((tile, i) => (
+            {tileConfigs.map((tile, i) => (
               <TileCard
                 key={i}
                 tile={tile}
+                title={t(`tiles.${tile.key}.title`)}
+                desc={t(`tiles.${tile.key}.desc`)}
                 onClick={() => handleClick(tile)}
                 className="min-w-[260px] max-w-[280px] snap-start flex-shrink-0"
               />
             ))}
           </div>
-          {/* Scroll indicator dots */}
           <div className="flex justify-center gap-1 mt-2">
-            {Array.from({ length: Math.ceil(tiles.length / 2) }).map((_, i) => (
+            {Array.from({ length: Math.ceil(tileConfigs.length / 2) }).map((_, i) => (
               <div key={i} className="w-1.5 h-1.5 rounded-full bg-primary/30" />
             ))}
           </div>
         </div>
 
-        {/* Desktop: 2-column grid (3 cols on lg) */}
+        {/* Desktop: grid */}
         <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {tiles.map((tile, i) => (
+          {tileConfigs.map((tile, i) => (
             <TileCard
               key={i}
               tile={tile}
+              title={t(`tiles.${tile.key}.title`)}
+              desc={t(`tiles.${tile.key}.desc`)}
               onClick={() => handleClick(tile)}
             />
           ))}
@@ -112,10 +117,14 @@ export function EntryTiles() {
 
 function TileCard({
   tile,
+  title,
+  desc,
   onClick,
   className,
 }: {
-  tile: EntryTile;
+  tile: TileConfig;
+  title: string;
+  desc: string;
   onClick: () => void;
   className?: string;
 }) {
@@ -130,7 +139,6 @@ function TileCard({
         className
       )}
     >
-      {/* Top accent bar */}
       <div
         className={cn(
           "absolute top-0 left-4 right-4 h-1 rounded-b-full transition-all",
@@ -138,15 +146,14 @@ function TileCard({
           tile.accentClass
         )}
       />
-
       <span className="text-3xl block mb-3" role="img">
         {tile.emoji}
       </span>
       <h3 className="font-semibold text-foreground text-base mb-1">
-        {tile.title}
+        {title}
       </h3>
       <p className="text-muted-foreground text-sm leading-snug">
-        {tile.desc}
+        {desc}
       </p>
     </button>
   );
