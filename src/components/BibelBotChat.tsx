@@ -250,8 +250,17 @@ export function BibelBotChat() {
   useEffect(() => {
     const alreadyOpened = sessionStorage.getItem(AUTO_OPEN_KEY);
     if (alreadyOpened) return;
-    const teaserTimer = setTimeout(() => setShowTeaser(true), 2000);
-    const openTimer = setTimeout(() => { setIsOpen(true); setShowTeaser(false); sessionStorage.setItem(AUTO_OPEN_KEY, "1"); }, 5000);
+
+    const isFirstEverVisit = !localStorage.getItem("bibelbot-visited");
+    if (isFirstEverVisit) {
+      localStorage.setItem("bibelbot-visited", "1");
+    }
+
+    const openDelay = isFirstEverVisit ? 1200 : 3000;
+    const teaserDelay = isFirstEverVisit ? 400 : 1500;
+
+    const teaserTimer = setTimeout(() => setShowTeaser(true), teaserDelay);
+    const openTimer = setTimeout(() => { setIsOpen(true); setShowTeaser(false); sessionStorage.setItem(AUTO_OPEN_KEY, "1"); }, openDelay);
     return () => { clearTimeout(teaserTimer); clearTimeout(openTimer); };
   }, []);
 
