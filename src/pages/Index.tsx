@@ -108,10 +108,16 @@ const Index = () => {
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center max-w-4xl">
-          <div className="mb-4">
-            <span className="inline-flex items-center gap-2 text-sm font-medium text-primary bg-primary/10 px-4 py-1.5 rounded-full">
-              <Shield className="h-4 w-4" />
-              Kein Login · Keine Daten · Kein Urteil
+          <div className="mb-6">
+            <span className="inline-flex items-center gap-3 text-sm font-semibold text-foreground bg-card/80 backdrop-blur-sm border border-border shadow-md px-5 py-2.5 rounded-full">
+              <Shield className="h-5 w-5 text-primary" />
+              <span className="flex items-center gap-2">
+                <span>Kein Login</span>
+                <span className="text-primary/40">·</span>
+                <span>Keine Daten</span>
+                <span className="text-primary/40">·</span>
+                <span>Kein Urteil</span>
+              </span>
             </span>
           </div>
           <div className="mb-8">
