@@ -163,6 +163,12 @@ const Analytics = () => {
     Object.entries(data.subscribers?.byChannel || {}).forEach(([ch, total]) =>
       rows.push(["Abonnenten-Kanal", ch, `${total} (aktiv: ${data.subscribers?.activeByChannel?.[ch] || 0})`])
     );
+    rows.push(["Kacheln", "Total Klicks", String(data.tiles?.totalClicks || 0)]);
+    data.tiles?.topTiles?.forEach((t) => rows.push(["Kacheln", t.tile, String(t.count)]));
+    rows.push(["Lebensrad", "Abschlüsse", String(data.lifewheel?.completions || 0)]);
+    rows.push(["Lebensrad", "Ø Score", String(data.lifewheel?.avgScore || 0)]);
+    data.lifewheel?.weakestAreas?.forEach((a) => rows.push(["Lebensrad – Schwächste", a.area, String(a.count)]));
+    rows.push(["7 Warums", "Gestartet", String(data.sevenWhys?.starts || 0)]);
     const csv = rows.map((r) => r.map((c) => `"${c.replace(/"/g, '""')}"`).join(",")).join("\n");
     const blob = new Blob(["\uFEFF" + csv], { type: "text/csv;charset=utf-8;" });
     const url = URL.createObjectURL(blob);
