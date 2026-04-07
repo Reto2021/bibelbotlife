@@ -339,6 +339,24 @@ const Index = () => {
                 Nein. BibelBot tröstet, wo Trost nötig ist – aber er fordert auch heraus. Geistliches Wachstum braucht Reibung. BibelBot stellt unbequeme Rückfragen, benennt schwierige Bibeltexte (Hiob, Klagepsalmen, prophetische Kritik) und scheut sich nicht vor Themen wie Gerechtigkeit, Umkehr und Verantwortung. Die prophetische Tradition war nie bequem – und BibelBot auch nicht.
               </AccordionContent>
             </AccordionItem>
+
+            <AccordionItem value="spenden" className="bg-card/80 border border-border rounded-xl px-6 data-[state=open]:shadow-md">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
+                Wer steht hinter BibelBot und wie wird es finanziert?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+                BibelBot.ch ist ein privates, nicht-kommerzielles Projekt. Es wird ehrenamtlich betrieben und finanziert sich ausschliesslich durch freiwillige Spenden. Es gibt keine Werbung, keine Datenverkäufe und keine kostenpflichtigen Features. Alle Spenden fliessen direkt in die Deckung der laufenden Kosten (KI-Infrastruktur, Hosting, Entwicklung). Da BibelBot als privates Projekt läuft, sind Spenden nicht steuerabzugsfähig.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="datenschutz" className="bg-card/80 border border-border rounded-xl px-6 data-[state=open]:shadow-md">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
+                Wie geht BibelBot mit meinen Daten um?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+                BibelBot speichert keine persönlichen Daten und keine Chatverläufe. Jedes Gespräch ist anonym. Es gibt kein Login, kein Tracking und keine Weitergabe von Daten an Dritte. Die Nutzung ist vollständig anonym.
+              </AccordionContent>
+            </AccordionItem>
           </Accordion>
         </div>
       </section>
