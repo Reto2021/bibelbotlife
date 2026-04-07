@@ -535,19 +535,19 @@
     "tier": {
       "free": {
         "name": "Grenn moutad",
-        "size": "For all churches"
+        "size": "Aksè debaz nan bot la pou tout manm kominote a."
       },
       "community": {
         "name": "Konpayon",
-        "size": "Up to 500 members"
+        "size": "Legliz la mansyone kòm sipòtè sou sit entènèt la & aksè san piblisite."
       },
       "gemeinde": {
         "name": "Konstwiktè pon",
-        "size": "500–2,000 members"
+        "size": "Logo nan entèfas bot la, rapò itilizasyon chak mwa (anonim)."
       },
       "kirche": {
         "name": "Fa",
-        "size": "Over 2,000 members"
+        "size": "Entegrasyon kontni pa w (egzanp achiv prèch), ko-kreyasyon plan wout, sipò premyòm."
       }
     },
     "features": {

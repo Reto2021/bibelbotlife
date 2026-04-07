@@ -535,19 +535,19 @@
     "tier": {
       "free": {
         "name": "Grão de mostarda",
-        "size": "Para todas as igrejas"
+        "size": "Acesso básico ao bot para todos os membros da comunidade."
       },
       "community": {
         "name": "Companheiro",
-        "size": "Até 500 membros"
+        "size": "Menção da igreja como apoiante no site e acesso sem publicidade."
       },
       "gemeinde": {
         "name": "Construtor de pontes",
-        "size": "500–2.000 membros"
+        "size": "Presença do logótipo na interface do bot, relatório mensal de utilização (anonimizado)."
       },
       "kirche": {
         "name": "Farol",
-        "size": "Mais de 2.000 membros"
+        "size": "Integração de conteúdos próprios (ex. arquivo de sermões), co-criação do roadmap, suporte premium."
       }
     },
     "features": {

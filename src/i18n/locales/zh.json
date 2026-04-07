@@ -535,19 +535,19 @@
     "tier": {
       "free": {
         "name": "芥菜种",
-        "size": "For all churches"
+        "size": "所有会众成员均可使用机器人基本功能。"
       },
       "community": {
         "name": "同行者",
-        "size": "Up to 500 members"
+        "size": "在网站上标注教会为支持者，并享受无广告访问。"
       },
       "gemeinde": {
         "name": "搭桥者",
-        "size": "500–2,000 members"
+        "size": "机器人界面中展示教会标志，每月使用报告（匿名）。"
       },
       "kirche": {
         "name": "灯塔",
-        "size": "Over 2,000 members"
+        "size": "整合自有内容（如讲道档案），共同参与路线图规划，高级支持。"
       }
     },
     "features": {

@@ -543,19 +543,19 @@
     "tier": {
       "free": {
         "name": "Bobul de muștar",
-        "size": "Pentru toate bisericile"
+        "size": "Acces de bază la bot pentru toți membrii comunității."
       },
       "community": {
         "name": "Însoțitor",
-        "size": "Până la 500 de membri"
+        "size": "Menționarea bisericii ca susținător pe site & acces fără reclame."
       },
       "gemeinde": {
         "name": "Constructor de poduri",
-        "size": "500–2.000 de membri"
+        "size": "Logo în interfața botului, raport lunar de utilizare (anonimizat)."
       },
       "kirche": {
         "name": "Far",
-        "size": "Peste 2.000 de membri"
+        "size": "Integrarea conținutului propriu (ex. arhivă de predici), co-creare a foii de parcurs, suport premium."
       }
     },
     "features": {

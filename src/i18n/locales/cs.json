@@ -535,19 +535,19 @@
     "tier": {
       "free": {
         "name": "Hořčičné zrnko",
-        "size": "Pro všechny sbory"
+        "size": "Základní přístup k botu pro všechny členy sboru."
       },
       "community": {
         "name": "Průvodce",
-        "size": "Do 500 členů"
+        "size": "Zmínka sboru jako podporovatele na webu a přístup bez reklam."
       },
       "gemeinde": {
         "name": "Stavitel mostů",
-        "size": "500–2 000 členů"
+        "size": "Logo v rozhraní botu, měsíční report o využívání (anonymizovaný)."
       },
       "kirche": {
         "name": "Maják",
-        "size": "Více než 2 000 členů"
+        "size": "Integrace vlastního obsahu (např. archiv kázání), spoluvytváření roadmapy, prémiová podpora."
       }
     },
     "features": {

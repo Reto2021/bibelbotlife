@@ -535,19 +535,19 @@
     "tier": {
       "free": {
         "name": "Sennepsfrø",
-        "size": "For alle kirker"
+        "size": "Grunnleggende bottilgang for alle menighetsmedlemmer."
       },
       "community": {
         "name": "Reisefølge",
-        "size": "Opptil 500 medlemmer"
+        "size": "Omtale av kirken som støttespiller på nettsiden & reklamefri tilgang."
       },
       "gemeinde": {
         "name": "Brobygger",
-        "size": "500–2 000 medlemmer"
+        "size": "Logo i bot-grensesnittet, månedlig bruksrapport (anonymisert)."
       },
       "kirche": {
         "name": "Fyrtårn",
-        "size": "Over 2 000 medlemmer"
+        "size": "Integrasjon av eget innhold (f.eks. prekenarkiv), medskapelse av veikart, premiumstøtte."
       }
     },
     "features": {

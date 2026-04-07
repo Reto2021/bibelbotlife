@@ -535,19 +535,19 @@
     "tier": {
       "free": {
         "name": "Mosterdsaad",
-        "size": "For all churches"
+        "size": "Basiese bottoegang vir alle gemeentelede."
       },
       "community": {
         "name": "Reisgenoot",
-        "size": "Up to 500 members"
+        "size": "Kerk genoem as ondersteuner op die webwerf & advertensievrye toegang."
       },
       "gemeinde": {
         "name": "Brugbouer",
-        "size": "500–2,000 members"
+        "size": "Logo in die bot-koppelvlak, maandelikse gebruiksverslag (anoniem)."
       },
       "kirche": {
         "name": "Vuurtoring",
-        "size": "Over 2,000 members"
+        "size": "Integrasie van eie inhoud (bv. preekargief), medeskepping van die padkaart, premium-ondersteuning."
       }
     },
     "features": {

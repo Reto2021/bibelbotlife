@@ -535,19 +535,19 @@
     "tier": {
       "free": {
         "name": "Sinapinsiemen",
-        "size": "Kaikille seurakunnille"
+        "size": "Botin perusäyttö kaikille seurakunnan jäsenille."
       },
       "community": {
         "name": "Matkatoveri",
-        "size": "Enintään 500 jäsentä"
+        "size": "Seurakunnan maininta tukijana verkkosivulla ja mainokseton käyttö."
       },
       "gemeinde": {
         "name": "Sillanrakentaja",
-        "size": "500–2 000 jäsentä"
+        "size": "Logo bot-käyttöliittymässä, kuukausittainen käyttöraportti (anonymisoitu)."
       },
       "kirche": {
         "name": "Majakka",
-        "size": "Yli 2 000 jäsentä"
+        "size": "Omien sisältöjen integrointi (esim. saarnaarkisto), tiekartan yhteismuotoilu, premium-tuki."
       }
     },
     "features": {

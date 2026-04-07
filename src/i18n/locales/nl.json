@@ -543,19 +543,19 @@
     "tier": {
       "free": {
         "name": "Mosterdzaadje",
-        "size": "Voor alle kerken"
+        "size": "Basistoegang tot de bot voor alle gemeenteleden."
       },
       "community": {
         "name": "Reisgenoot",
-        "size": "Tot 500 leden"
+        "size": "Vermelding van de kerk als ondersteuner op de website & reclamevrije toegang."
       },
       "gemeinde": {
         "name": "Bruggenbouwer",
-        "size": "500–2.000 leden"
+        "size": "Logo-aanwezigheid in de botinterface, maandelijks gebruiksrapport (geanonimiseerd)."
       },
       "kirche": {
         "name": "Vuurtoren",
-        "size": "Meer dan 2.000 leden"
+        "size": "Integratie van eigen inhoud (bijv. preekarchief), medeskepping van de roadmap, premiumondersteuning."
       }
     },
     "features": {

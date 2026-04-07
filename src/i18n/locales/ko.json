@@ -535,19 +535,19 @@
     "tier": {
       "free": {
         "name": "겨자씨",
-        "size": "For all churches"
+        "size": "모든 교인을 위한 봇 기본 이용."
       },
       "community": {
         "name": "동행자",
-        "size": "Up to 500 members"
+        "size": "웹사이트에 교회 후원자로 표시 및 광고 없는 이용."
       },
       "gemeinde": {
         "name": "다리 건설자",
-        "size": "500–2,000 members"
+        "size": "봇 인터페이스에 로고 표시, 월간 사용 보고서(익명화)."
       },
       "kirche": {
         "name": "등대",
-        "size": "Over 2,000 members"
+        "size": "자체 콘텐츠 통합(예: 설교 아카이브), 로드맵 공동 설계, 프리미엄 지원."
       }
     },
     "features": {

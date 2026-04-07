@@ -535,19 +535,19 @@
     "tier": {
       "free": {
         "name": "Irúgbìn mọsitádì",
-        "size": "For all churches"
+        "size": "Ìwọlé bot ìpilẹ̀ṣẹ̀ fún gbogbo ọmọ ẹgbẹ́."
       },
       "community": {
         "name": "Alábàákẹ́gbẹ́",
-        "size": "Up to 500 members"
+        "size": "Ṣọ́ọ̀ṣì ni a mẹ́nu kàn gẹ́gẹ́ bí olùtìlẹ́yìn lórí ojú-ìwé àyélujára & ìwọlé láì sí ìpolowó."
       },
       "gemeinde": {
         "name": "Olùkọ́ àfàrá",
-        "size": "500–2,000 members"
+        "size": "Àmì ìdánimqdelays̀ nínú atọ́kùn bot, ìròyìn lílo oṣooṣù (aláìlórúkọ)."
       },
       "kirche": {
         "name": "Ilé ìmọ́lẹ̀",
-        "size": "Over 2,000 members"
+        "size": "Ìṣọ̀kan àkóónú tìẹ (bí àpẹẹrẹ àkójọ wàásù), ìdásílẹ̀ ọ̀nà-àtẹ̀lé, àtìlẹ́yìn gíga."
       }
     },
     "features": {
