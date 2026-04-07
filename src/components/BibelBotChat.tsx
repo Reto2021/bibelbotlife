@@ -386,6 +386,40 @@ export function BibelBotChat() {
     }
   }, [isOpen, messages.length, showWelcome]);
 
+  // Show journey offer after first assistant reply (if not started/dismissed)
+  useEffect(() => {
+    if (
+      messages.length >= 3 &&
+      journeyDay === 0 &&
+      !isJourneyDismissed() &&
+      !showJourneyOffer
+    ) {
+      const timer = setTimeout(() => setShowJourneyOffer(true), 1500);
+      return () => clearTimeout(timer);
+    }
+    // Nudge if dismissed but enough time passed
+    if (
+      messages.length >= 2 &&
+      journeyDay === 0 &&
+      shouldNudgeJourney() &&
+      !showJourneyOffer
+    ) {
+      const timer = setTimeout(() => {
+        setShowJourneyOffer(true);
+        markNudgeShown();
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [messages.length, journeyDay, showJourneyOffer]);
+
+  // Show rename tip after first reply if name is still default
+  useEffect(() => {
+    if (messages.length >= 2 && botName === DEFAULT_BOT_NAME && !showRenameTip) {
+      const timer = setTimeout(() => setShowRenameTip(true), 4000);
+      return () => clearTimeout(timer);
+    }
+  }, [messages.length, botName, showRenameTip]);
+
   // Persist messages to localStorage
   useEffect(() => {
     if (messages.length > 0) saveMessages(messages);
