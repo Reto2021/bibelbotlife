@@ -174,3 +174,5 @@ export function DailySubscribe() {
     </div>
   );
 }
+
+export default DailySubscribe;

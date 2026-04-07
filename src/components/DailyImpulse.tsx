@@ -149,3 +149,5 @@ export function DailyImpulse() {
     </div>
   );
 }
+
+export default DailyImpulse;
