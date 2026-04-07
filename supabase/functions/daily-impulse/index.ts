@@ -1,5 +1,35 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 
+// Fix common AI spelling mistakes: wrong umlaut substitutions, sz→ss, etc.
+function fixSpelling(text: string): string {
+  const wordFixes: [RegExp, string][] = [
+    [/\b([Ff])uell/g, '$1üll'], [/\b([Ee])rfuell/g, '$1rfüll'],
+    [/\b([Gg])efuehl/g, '$1efühl'], [/\b([Ff])uehr/g, '$1ühr'],
+    [/\b([Ww])uerdig/g, '$1ürdig'], [/\b([Ww])uensch/g, '$1ünsch'],
+    [/\b([Gg])lueck/g, '$1lück'], [/\b([Zz])urueck/g, '$1urück'],
+    [/\b([Ss])tueck/g, '$1tück'], [/\b([Uu])ebung/g, '$1bung'],
+    [/\b([Uu])eber(?!all)/g, '$1ber'], [/\b([Gg])uet/g, '$1üt'],
+    [/\b([Mm])uede/g, '$1üde'], [/\b([Mm])uess/g, '$1üss'],
+    [/\b([Ss])uend/g, '$1ünd'], [/\b([Tt])uer(?!k)/g, '$1ür'],
+    [/\b([Nn])uetz/g, '$1ütz'], [/\b([Pp])ruef/g, '$1rüf'],
+    [/\b([Ww])uerd/g, '$1ürd'], [/\b([Ss])pueren/g, '$1püren'],
+    [/\b([Ff])uer\b/g, '$1ür'], [/\b([Nn])atuerlich/g, '$1atürlich'],
+    [/\b([Ee])rzaehl/g, '$1rzähl'], [/\b([Gg])espraech/g, '$1espräch'],
+    [/\b([Nn])aechst/g, '$1ächst'], [/\b([Tt])aeglich/g, '$1äglich'],
+    [/\b([Ss])paet/g, '$1pät'], [/\b([Ss])taerk/g, '$1tärk'],
+    [/\b([Gg])naed/g, '$1näd'], [/\b([Ww])aer/g, '$1är'],
+    [/\b([Hh])oer/g, '$1ör'], [/\b([Ss])choepf/g, '$1chöpf'],
+    [/\b([Ss])choen/g, '$1chön'], [/\b([Gg])roess/g, '$1röss'],
+    [/\b([Tt])roest/g, '$1röst'], [/\b([Vv])erheisz/g, '$1erheiss'],
+    [/sz(?=[uo]ng)/g, 'ss'], [/ß/g, 'ss'],
+  ];
+  let result = text;
+  for (const [pattern, replacement] of wordFixes) {
+    result = result.replace(pattern, replacement);
+  }
+  return result;
+}
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers":
@@ -18,7 +48,7 @@ const SYSTEM_PROMPT = `Du generierst einen täglichen biblischen Impuls. Antwort
 
 Regeln:
 - Verwende kein "ß", immer "ss" (Schweizer Deutsch).
-- Verwende IMMER korrekte Umlaute: ä, ö, ü, Ä, Ö, Ü. NIEMALS ae, oe, ue als Ersatz. Beispiel: "Erfüllung" (richtig), NICHT "Erfuellung" oder "Er Fuellung".
+- Verwende IMMER korrekte Umlaute: ä, ö, ü, Ä, Ö, Ü. NIEMALS ae, oe, ue als Ersatz. NIEMALS "sz" statt "ss". Beispiele: "erfüllt" (NICHT "erfuellt"), "Verheissung" (NICHT "Verheiszung"), "fühlt" (NICHT "fuehlt"), "schöpferisch" (NICHT "schoepferisch"), "Grösse" (NICHT "Groesse").
 - Zitiere exakt aus Zürcher Bibel, Lutherbibel 2017 oder Einheitsübersetzung 2016.
 - Nenne immer die Übersetzung.
 - Wähle Themen die berühren: Mut, Zweifel, Liebe, Gerechtigkeit, Hoffnung, Vergebung, Identität, Angst, Dankbarkeit, Berufung.
@@ -109,6 +139,10 @@ serve(async (req) => {
     try {
       const cleaned = content.replace(/```json\n?/g, "").replace(/```\n?/g, "").trim();
       impulse = JSON.parse(cleaned);
+      // Fix spelling in all text fields
+      for (const key of ['topic', 'verse', 'teaser', 'context']) {
+        if (impulse[key]) impulse[key] = fixSpelling(impulse[key]);
+      }
       impulse.date = dateStr;
     } catch {
       console.error("Failed to parse impulse:", content);

@@ -6,10 +6,46 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
+// Fix common AI spelling mistakes: wrong umlaut substitutions, sz→ss, etc.
+function fixSpelling(text: string): string {
+  const wordFixes: [RegExp, string][] = [
+    [/\b([Ff])uell/g, '$1üll'], [/\b([Ee])rfuell/g, '$1rfüll'],
+    [/\b([Gg])efuehl/g, '$1efühl'], [/\b([Ff])uehr/g, '$1ühr'],
+    [/\b([Ww])uerdig/g, '$1ürdig'], [/\b([Ww])uensch/g, '$1ünsch'],
+    [/\b([Gg])lueck/g, '$1lück'], [/\b([Zz])urueck/g, '$1urück'],
+    [/\b([Ss])tueck/g, '$1tück'], [/\b([Uu])ebung/g, '$1bung'],
+    [/\b([Uu])eber(?!all)/g, '$1ber'], [/\b([Gg])uet/g, '$1üt'],
+    [/\b([Hh])uet/g, '$1üt'], [/\b([Mm])uede/g, '$1üde'],
+    [/\b([Mm])uess/g, '$1üss'], [/\b([Ss])uend/g, '$1ünd'],
+    [/\b([Tt])uer(?!k)/g, '$1ür'], [/\b([Nn])uetz/g, '$1ütz'],
+    [/\b([Ss])chuetz/g, '$1chütz'], [/\b([Ss])tuetz/g, '$1tütz'],
+    [/\b([Pp])ruef/g, '$1rüf'], [/\b([Bb])uecher/g, '$1ücher'],
+    [/\b([Kk])ueche/g, '$1üche'], [/\b([Ww])uerd/g, '$1ürd'],
+    [/\b([Bb])eruehr/g, '$1erühr'], [/\b([Ss])pueren/g, '$1püren'],
+    [/\b([Ff])uer\b/g, '$1ür'], [/\b([Nn])atuerlich/g, '$1atürlich'],
+    [/\b([Ee])rwaehlt/g, '$1rwählt'], [/\b([Ee])rzaehl/g, '$1rzähl'],
+    [/\b([Gg])espraech/g, '$1espräch'], [/\b([Nn])aechst/g, '$1ächst'],
+    [/\b([Tt])aeglich/g, '$1äglich'], [/\b([Ss])paet/g, '$1pät'],
+    [/\b([Ss])taerk/g, '$1tärk'], [/\b([Gg])naed/g, '$1näd'],
+    [/\b([Hh])aett/g, '$1ätt'], [/\b([Ww])aer/g, '$1är'],
+    [/\b([Mm])aecht/g, '$1ächt'], [/\b([Hh])oer/g, '$1ör'],
+    [/\b([Ss])choepf/g, '$1chöpf'], [/\b([Vv])oellig/g, '$1öllig'],
+    [/\b([Gg])oettlich/g, '$1öttlich'], [/\b([Mm])oeglich/g, '$1öglich'],
+    [/\b([Ss])choen/g, '$1chön'], [/\b([Gg])roess/g, '$1röss'],
+    [/\b([Tt])roest/g, '$1röst'], [/\b([Vv])erheisz/g, '$1erheiss'],
+    [/sz(?=[uo]ng)/g, 'ss'], [/ß/g, 'ss'],
+  ];
+  let result = text;
+  for (const [pattern, replacement] of wordFixes) {
+    result = result.replace(pattern, replacement);
+  }
+  return result;
+}
+
 const SYSTEM_PROMPT = `Du bist BibelBot – ein einfühlsamer, weiser und herausfordernder Begleiter für Menschen, die an der Bibel wachsen wollen. Du bist nicht nur tröstend, sondern auch ehrlich, tiefgründig und bereit, unbequeme Fragen zu stellen.
 
 ## Deine Identität
-- Du sprichst Deutsch (Schweiz). Verwende nie "ß", immer "ss". Verwende IMMER korrekte Umlaute (ä, ö, ü), NIEMALS ASCII-Ersatz (ae, oe, ue). Achte auf korrekte Grammatik und vollständige Wörter (z.B. "schlägt" statt "schlät", "geht" statt "geh").
+- Du sprichst Deutsch (Schweiz). Verwende nie "ß", immer "ss". Verwende IMMER korrekte Umlaute (ä, ö, ü), NIEMALS ASCII-Ersatz (ae, oe, ue). Schreibe z.B. "erfüllt" (NICHT "erfuellt"), "Verheissung" (NICHT "Verheiszung"), "fühlt" (NICHT "fuehlt"), "schöpferisch" (NICHT "schoepferisch"). Achte auf korrekte Grammatik und vollständige Wörter (z.B. "schlägt" statt "schlät", "geht" statt "geh").
 - Du zitierst bevorzugt aus der Zürcher Bibel, Lutherbibel (2017) oder Einheitsübersetzung.
 - Du bist ökumenisch orientiert und respektierst alle christlichen Traditionen.
 - Du bist kein Ersatz für seelsorgerische Beratung oder Therapie.
@@ -358,7 +394,28 @@ serve(async (req) => {
       );
     }
 
-    return new Response(response.body, {
+    // Transform stream to fix spelling in SSE chunks
+    const reader = response.body!.getReader();
+    const decoder = new TextDecoder();
+    const encoder = new TextEncoder();
+
+    const stream = new ReadableStream({
+      async pull(controller) {
+        const { done, value } = await reader.read();
+        if (done) {
+          controller.close();
+          return;
+        }
+        let text = decoder.decode(value, { stream: true });
+        // Fix spelling in SSE data lines containing content
+        text = text.replace(/"content":"([^"]*)"/g, (_match, content) => {
+          return `"content":"${fixSpelling(content)}"`;
+        });
+        controller.enqueue(encoder.encode(text));
+      },
+    });
+
+    return new Response(stream, {
       headers: { ...corsHeaders, "Content-Type": "text/event-stream" },
     });
   } catch (e) {
