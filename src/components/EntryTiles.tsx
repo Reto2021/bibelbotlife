@@ -1,113 +1,28 @@
 import { useRef, useState, useEffect, useCallback } from "react";
+import { useTranslation } from "react-i18next";
 import { openBibelBotChat } from "@/lib/chat-events";
 import { cn } from "@/lib/utils";
 
-type EntryTile = {
+type TileConfig = {
   emoji: string;
-  title: string;
-  desc: string;
-  prompt: string;
+  key: string;
   accentClass: string;
   bgClass: string;
 };
 
-const tiles: EntryTile[] = [
-  {
-    emoji: "🕊️",
-    title: "Taufspruch finden",
-    desc: "Der perfekte Vers für dein Kind",
-    prompt: "Hilf mir, einen passenden Taufspruch zu finden. Was für ein Kind ist es und was wünschen sich die Eltern?",
-    accentClass: "bg-primary",
-    bgClass: "bg-[hsl(32_50%_95%)]  dark:bg-[hsl(32_30%_16%)]",
-  },
-  {
-    emoji: "💐",
-    title: "Trostworte",
-    desc: "Kondolenz & Abschied begleiten",
-    prompt: "Ich brauche tröstende Worte für eine Trauerkarte. Kannst du mir helfen, etwas Passendes zu formulieren?",
-    accentClass: "bg-secondary",
-    bgClass: "bg-[hsl(185_30%_94%)] dark:bg-[hsl(185_25%_14%)]",
-  },
-  {
-    emoji: "💍",
-    title: "Hochzeitsspruch",
-    desc: "Biblische Worte für eure Liebe",
-    prompt: "Wir suchen einen schönen biblischen Spruch für unsere Hochzeit. Welche Bibelstellen passen zu Liebe und Partnerschaft?",
-    accentClass: "bg-primary",
-    bgClass: "bg-[hsl(38_40%_95%)] dark:bg-[hsl(38_25%_15%)]",
-  },
-  {
-    emoji: "😰",
-    title: "Angst & Sorgen",
-    desc: "Mut finden in schweren Zeiten",
-    prompt: "Ich habe gerade mit Ängsten und Sorgen zu kämpfen. Was sagt die Bibel dazu? Gibt es Verse, die Mut machen?",
-    accentClass: "bg-secondary",
-    bgClass: "bg-[hsl(210_25%_94%)] dark:bg-[hsl(210_20%_14%)]",
-  },
-  {
-    emoji: "🙏",
-    title: "Beichte",
-    desc: "Gott vergibt — sprich es aus",
-    prompt: "Ich möchte etwas loswerden, das mich belastet. Was sagt die Bibel über Vergebung und Neuanfang?",
-    accentClass: "bg-primary",
-    bgClass: "bg-[hsl(30_35%_93%)] dark:bg-[hsl(30_20%_14%)]",
-  },
-  {
-    emoji: "💔",
-    title: "Liebeskummer",
-    desc: "Was die Bibel über Herzschmerz sagt",
-    prompt: "Mein Herz ist gebrochen. Was sagt die Bibel über Liebeskummer und wie man wieder Hoffnung findet?",
-    accentClass: "bg-secondary",
-    bgClass: "bg-[hsl(340_25%_94%)] dark:bg-[hsl(340_20%_14%)]",
-  },
-  {
-    emoji: "🌅",
-    title: "Neuanfang",
-    desc: "Kraft für einen neuen Lebensabschnitt",
-    prompt: "Ich stehe vor einem Neuanfang und brauche Ermutigung. Welche Bibelstellen sprechen über Neuanfänge?",
-    accentClass: "bg-secondary",
-    bgClass: "bg-[hsl(100_25%_93%)] dark:bg-[hsl(100_15%_14%)]",
-  },
-  {
-    emoji: "🤔",
-    title: "Tauf-Quiz",
-    desc: "Finde den passenden biblischen Namen",
-    prompt: "Ich suche einen biblischen Namen für mein Kind. Kannst du mir ein paar Vorschläge machen und ihre Bedeutung erklären?",
-    accentClass: "bg-primary",
-    bgClass: "bg-[hsl(270_20%_94%)] dark:bg-[hsl(270_15%_14%)]",
-  },
-  {
-    emoji: "🌙",
-    title: "Schlaflos",
-    desc: "Ruhe finden in der Nacht",
-    prompt: "Ich kann nicht schlafen und mache mir Gedanken. Gibt es ein beruhigendes Gebet oder einen Psalm für die Nacht?",
-    accentClass: "bg-secondary",
-    bgClass: "bg-[hsl(220_25%_94%)] dark:bg-[hsl(220_18%_14%)]",
-  },
-  {
-    emoji: "🫂",
-    title: "Einsamkeit",
-    desc: "Du bist nie allein",
-    prompt: "Ich fühle mich einsam. Was sagt die Bibel darüber, dass Gott immer bei uns ist?",
-    accentClass: "bg-primary",
-    bgClass: "bg-[hsl(25_30%_94%)] dark:bg-[hsl(25_20%_14%)]",
-  },
-  {
-    emoji: "⚖️",
-    title: "Schwere Entscheidung",
-    desc: "Weisheit für den richtigen Weg",
-    prompt: "Ich stehe vor einer schwierigen Entscheidung. Welche Bibelstellen helfen mir, den richtigen Weg zu finden?",
-    accentClass: "bg-secondary",
-    bgClass: "bg-[hsl(200_25%_94%)] dark:bg-[hsl(200_18%_14%)]",
-  },
-  {
-    emoji: "🙌",
-    title: "Dankbarkeit",
-    desc: "Ein persönliches Dankgebet",
-    prompt: "Ich möchte Gott danken. Hilf mir, ein persönliches Dankgebet zu formulieren.",
-    accentClass: "bg-primary",
-    bgClass: "bg-[hsl(45_35%_94%)] dark:bg-[hsl(45_20%_14%)]",
-  },
+const tileConfigs: TileConfig[] = [
+  { emoji: "🕊️", key: "baptism", accentClass: "bg-primary", bgClass: "bg-[hsl(32_50%_95%)] dark:bg-[hsl(32_30%_16%)]" },
+  { emoji: "💐", key: "condolence", accentClass: "bg-secondary", bgClass: "bg-[hsl(185_30%_94%)] dark:bg-[hsl(185_25%_14%)]" },
+  { emoji: "💍", key: "wedding", accentClass: "bg-primary", bgClass: "bg-[hsl(38_40%_95%)] dark:bg-[hsl(38_25%_15%)]" },
+  { emoji: "😰", key: "anxiety", accentClass: "bg-secondary", bgClass: "bg-[hsl(210_25%_94%)] dark:bg-[hsl(210_20%_14%)]" },
+  { emoji: "🙏", key: "confession", accentClass: "bg-primary", bgClass: "bg-[hsl(30_35%_93%)] dark:bg-[hsl(30_20%_14%)]" },
+  { emoji: "💔", key: "heartbreak", accentClass: "bg-secondary", bgClass: "bg-[hsl(340_25%_94%)] dark:bg-[hsl(340_20%_14%)]" },
+  { emoji: "🌅", key: "newstart", accentClass: "bg-secondary", bgClass: "bg-[hsl(100_25%_93%)] dark:bg-[hsl(100_15%_14%)]" },
+  { emoji: "🤔", key: "namequiz", accentClass: "bg-primary", bgClass: "bg-[hsl(270_20%_94%)] dark:bg-[hsl(270_15%_14%)]" },
+  { emoji: "🌙", key: "sleepless", accentClass: "bg-secondary", bgClass: "bg-[hsl(220_25%_94%)] dark:bg-[hsl(220_18%_14%)]" },
+  { emoji: "🫂", key: "loneliness", accentClass: "bg-primary", bgClass: "bg-[hsl(25_30%_94%)] dark:bg-[hsl(25_20%_14%)]" },
+  { emoji: "⚖️", key: "decision", accentClass: "bg-secondary", bgClass: "bg-[hsl(200_25%_94%)] dark:bg-[hsl(200_18%_14%)]" },
+  { emoji: "🙌", key: "gratitude", accentClass: "bg-primary", bgClass: "bg-[hsl(45_35%_94%)] dark:bg-[hsl(45_20%_14%)]" },
 ];
 
 export function EntryTiles() {
