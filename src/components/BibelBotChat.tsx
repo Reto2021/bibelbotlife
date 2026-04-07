@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import ReactMarkdown from "react-markdown";
 import { useToast } from "@/hooks/use-toast";
+import { useTrack } from "@/components/AnalyticsProvider";
 import {
   Tooltip,
   TooltipContent,
@@ -206,6 +207,7 @@ export function BibelBotChat() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const { toast } = useToast();
+  const { track } = useTrack();
 
   const welcomeMessage: Message = { role: "assistant", content: t("chat.welcome") };
   const journeyOffer: Message = { role: "assistant", content: t("chat.journeyOffer") };
@@ -302,6 +304,14 @@ export function BibelBotChat() {
   const sendMessage = useCallback(
     async (text: string) => {
       if (!text.trim() || isLoading) return;
+      const currentDay = getJourneyDay();
+      if (currentDay > 0 && currentDay <= 21) {
+        const phase = currentDay <= 7 ? "ankommen" : currentDay <= 14 ? "vertiefen" : "handeln";
+        track("journey_progress", { day: currentDay, phase });
+      }
+      if (currentDay > 21 && journeyDay <= 21) {
+        track("journey_complete", { totalDays: 21 });
+      }
       const userMsg: Message = { role: "user", content: text.trim() };
       const contextMessages = messages.length === 0 ? [welcomeMessage, userMsg] : [...messages, userMsg];
       setMessages(contextMessages);
@@ -379,7 +389,7 @@ export function BibelBotChat() {
         setIsLoading(false);
       }
     },
-    [messages, isLoading, toast, botName, runQA, t, i18n.language, journeyDay, welcomeMessage]
+    [messages, isLoading, toast, botName, runQA, t, i18n.language, journeyDay, welcomeMessage, track]
   );
 
   useEffect(() => {
@@ -557,7 +567,7 @@ export function BibelBotChat() {
                   <ReactMarkdown>{journeyOffer.content}</ReactMarkdown>
                 </div>
                 <div className="flex gap-2 mt-3">
-                  <Button size="sm" className="text-xs h-7" onClick={() => { startJourney(); setJourneyDay(1); setShowJourneyOffer(false); sendMessage(t("chat.journeyStartMsg")); }}>{t("chat.journeyStart")}</Button>
+                  <Button size="sm" className="text-xs h-7" onClick={() => { startJourney(); setJourneyDay(1); setShowJourneyOffer(false); track("journey_start", { day: 1 }); sendMessage(t("chat.journeyStartMsg")); }}>{t("chat.journeyStart")}</Button>
                   <Button size="sm" variant="ghost" className="text-xs h-7 text-muted-foreground" onClick={() => { setShowJourneyOffer(false); dismissJourney(); }}>{t("chat.journeyLater")}</Button>
                 </div>
               </div>
