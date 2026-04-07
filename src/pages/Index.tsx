@@ -16,23 +16,7 @@ const BIBLE_EDITIONS = [
   { name: "Elberfelder Bibel", year: "2006", tradition: "Wortgetreu" },
 ];
 
-const TESTIMONIALS = [
-  {
-    text: "Mein BibelBot hat mir geholfen, in einer schwierigen Phase die richtigen Worte zu finden. Die Antworten sind durchdacht und respektvoll.",
-    author: "M. Keller",
-    role: "Gemeindeleiterin, ref. Kirche Zürich",
-  },
-  {
-    text: "Endlich ein digitales Angebot, das theologisch fundiert ist und trotzdem verständlich bleibt. Ideal für unseren Bibelkreis.",
-    author: "P. Brunner",
-    role: "Pfarrer, kath. Pfarrei Luzern",
-  },
-  {
-    text: "Die Verbindung von biblischer Weisheit und positiver Psychologie überzeugt. Seelsorgerisch verantwortungsvoll umgesetzt.",
-    author: "Dr. S. Meier",
-    role: "Theologin & Psychologin, Universität Bern",
-  },
-];
+// Testimonials entfernt – werden später mit echten Stimmen ergänzt
 
 const GUIDELINES = [
   {
@@ -568,37 +552,6 @@ const Index = () => {
               </AccordionContent>
             </AccordionItem>
           </Accordion>
-        </div>
-      </section>
-
-      {/* Social Proof / Testimonials */}
-      <section className="py-20 px-4 bg-card/40">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 text-sm font-medium text-secondary bg-secondary/10 px-4 py-1.5 rounded-full mb-4">
-              <Quote className="h-4 w-4" />
-              Stimmen
-            </div>
-            <h2 className="text-4xl font-bold text-foreground mb-4">
-              Vertrauen aus verschiedenen Traditionen
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {TESTIMONIALS.map((t) => (
-              <Card key={t.author} className="bg-card/80 border-border">
-                <CardContent className="pt-6">
-                  <Quote className="h-6 w-6 text-primary/30 mb-3" />
-                  <p className="text-foreground/80 text-sm leading-relaxed italic mb-4">
-                    «{t.text}»
-                  </p>
-                  <Separator className="mb-3" />
-                  <p className="font-semibold text-sm text-card-foreground">{t.author}</p>
-                  <p className="text-xs text-muted-foreground">{t.role}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
         </div>
       </section>
 
