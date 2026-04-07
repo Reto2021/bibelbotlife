@@ -190,13 +190,27 @@ serve(async (req) => {
   }
 
   try {
-    const { messages } = await req.json();
+    const { messages, journeyDay } = await req.json();
 
     if (!messages || !Array.isArray(messages)) {
       return new Response(
         JSON.stringify({ error: "messages array is required" }),
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
+    }
+
+    // Inject journey context into system prompt
+    let systemPrompt = SYSTEM_PROMPT;
+    if (journeyDay && typeof journeyDay === "number") {
+      const phase = journeyDay <= 7 ? "Ankommen" : journeyDay <= 14 ? "Vertiefen" : "Handeln";
+      const isCheckIn = [1, 7, 14, 21].includes(journeyDay);
+      systemPrompt += `\n\n[JOURNEY: Tag ${journeyDay} von 21 – Phase: ${phase}]`;
+      if (isCheckIn) {
+        systemPrompt += `\n[CHECK-IN FÄLLIG: Frage aktiv nach dem Wohlbefinden (Skala 1-10) und passe deine Begleitung an die Phase an.]`;
+      }
+      if (journeyDay > 21) {
+        systemPrompt += `\n[JOURNEY ABGESCHLOSSEN: Der Nutzer hat die 21 Tage geschafft! Feiere das und biete Vertiefung an.]`;
+      }
     }
 
     const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
