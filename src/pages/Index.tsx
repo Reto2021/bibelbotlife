@@ -16,23 +16,7 @@ const BIBLE_EDITIONS = [
   { name: "Elberfelder Bibel", year: "2006", tradition: "Wortgetreu" },
 ];
 
-const TESTIMONIALS = [
-  {
-    text: "Mein BibelBot hat mir geholfen, in einer schwierigen Phase die richtigen Worte zu finden. Die Antworten sind durchdacht und respektvoll.",
-    author: "M. Keller",
-    role: "Gemeindeleiterin, ref. Kirche Zürich",
-  },
-  {
-    text: "Endlich ein digitales Angebot, das theologisch fundiert ist und trotzdem verständlich bleibt. Ideal für unseren Bibelkreis.",
-    author: "P. Brunner",
-    role: "Pfarrer, kath. Pfarrei Luzern",
-  },
-  {
-    text: "Die Verbindung von biblischer Weisheit und positiver Psychologie überzeugt. Seelsorgerisch verantwortungsvoll umgesetzt.",
-    author: "Dr. S. Meier",
-    role: "Theologin & Psychologin, Universität Bern",
-  },
-];
+// Testimonials entfernt – werden später mit echten Stimmen ergänzt
 
 const GUIDELINES = [
   {
