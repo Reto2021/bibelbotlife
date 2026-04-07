@@ -364,6 +364,11 @@
     "lifewheel": {
       "title": "Koło życia",
       "desc": "Czy jesteś naprawdę zadowolony/a?"
+    },
+    "sevenwhys": {
+      "title": "7 Dlaczego",
+      "desc": "Znajdź najgłębszy korzeń swojego pytania",
+      "prompt": "Chciałbym/Chciałabym zrobić ćwiczenie 7 Dlaczego. Oto mój temat:"
     }
   },
   "lifeWheel": {

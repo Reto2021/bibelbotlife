@@ -364,6 +364,11 @@
     "lifewheel": {
       "title": "Life Wheel",
       "desc": "How satisfied are you really?"
+    },
+    "sevenwhys": {
+      "title": "7 Whys",
+      "desc": "Find the deepest root of your question",
+      "prompt": "I'd like to do the 7 Whys exercise. Here is my topic:"
     }
   },
   "lifeWheel": {

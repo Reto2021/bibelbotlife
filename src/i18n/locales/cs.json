@@ -364,6 +364,11 @@
     "lifewheel": {
       "title": "Kolo života",
       "desc": "Jsi opravdu spokojený/á?"
+    },
+    "sevenwhys": {
+      "title": "7 Proč",
+      "desc": "Najdi nejhlubší kořen své otázky",
+      "prompt": "Chtěl/a bych udělat cvičení 7 Proč. Tady je mé téma:"
     }
   },
   "lifeWheel": {
