@@ -125,18 +125,18 @@ export function DailySubscribe() {
 
       <div className="mb-5">
         <label className="block text-sm font-medium text-foreground mb-2">{t("subscribe.channelLabel")}</label>
-        <div className="grid grid-cols-3 gap-3">
+        <div className="grid grid-cols-3 gap-2 sm:gap-3">
           {CHANNELS.map((ch) => (
             <button
               key={ch.id}
               onClick={() => setSelectedChannel(ch.id)}
-              className={`flex flex-col items-center gap-2 p-4 rounded-xl border transition-all cursor-pointer ${
+              className={`flex flex-col items-center gap-1.5 p-3 sm:p-4 rounded-xl border transition-all cursor-pointer min-h-[100px] ${
                 selectedChannel === ch.id ? "border-primary bg-primary/10 ring-2 ring-primary/20" : "border-border hover:border-primary/30 hover:bg-accent/50"
               }`}
             >
-              <ch.icon className={`h-6 w-6 ${selectedChannel === ch.id ? "text-primary" : "text-muted-foreground"}`} />
-              <span className={`text-sm font-medium ${selectedChannel === ch.id ? "text-foreground" : "text-muted-foreground"}`}>{ch.label}</span>
-              <span className="text-xs text-muted-foreground text-center leading-tight">{ch.desc}</span>
+              <ch.icon className={`h-5 w-5 sm:h-6 sm:w-6 shrink-0 ${selectedChannel === ch.id ? "text-primary" : "text-muted-foreground"}`} />
+              <span className={`text-xs sm:text-sm font-semibold ${selectedChannel === ch.id ? "text-foreground" : "text-muted-foreground"}`}>{ch.label}</span>
+              <span className="text-[10px] sm:text-xs text-muted-foreground text-center leading-snug line-clamp-2">{ch.desc}</span>
             </button>
           ))}
         </div>
