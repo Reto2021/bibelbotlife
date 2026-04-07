@@ -281,6 +281,8 @@ export function BibelBotChat() {
   const [isEditingName, setIsEditingName] = useState(false);
   const [nameDraft, setNameDraft] = useState("");
   const [showWelcome, setShowWelcome] = useState(false);
+  const [showJourneyOffer, setShowJourneyOffer] = useState(false);
+  const [showRenameTip, setShowRenameTip] = useState(false);
   const recognitionRef = useRef<any>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
