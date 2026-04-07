@@ -449,10 +449,6 @@ export function BibelBotChat() {
       if (!text.trim() || isLoading) return;
 
       const userMsg: Message = { role: "user", content: text.trim() };
-      if (!journeyDay) {
-        startJourney();
-        setJourneyDay(1);
-      }
       const contextMessages = messages.length === 0 ? [WELCOME_MESSAGE, userMsg] : [...messages, userMsg];
       setMessages(contextMessages);
       setInput("");
