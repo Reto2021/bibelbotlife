@@ -9,25 +9,29 @@ import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 const tiers = [
   {
     key: "free",
+    setup: 0,
     annual: 0,
     icon: Church,
     popular: false,
   },
   {
     key: "community",
-    annual: 490,
+    setup: 490,
+    annual: 790,
     icon: Users,
     popular: false,
   },
   {
     key: "gemeinde",
-    annual: 990,
+    setup: 990,
+    annual: 1490,
     icon: BarChart3,
     popular: true,
   },
   {
     key: "kirche",
-    annual: 1990,
+    setup: 1990,
+    annual: 2990,
     icon: Palette,
     popular: false,
   },

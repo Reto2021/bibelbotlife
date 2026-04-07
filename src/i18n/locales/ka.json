@@ -587,6 +587,7 @@
     "contactSend": "გაგზავნა",
     "contactSuccess": "შეტყობინება გაგზავნილია! 🙏",
     "contactSuccessDesc": "ეკლესია დაგიკავშირდებათ.",
-    "recommendedBy": "რეკომენდებულია {{name}}-ის მიერ"
+    "recommendedBy": "რეკომენდებულია {{name}}-ის მიერ",
+    "setup": "დაყენება (ერთჯერადი)"
   }
 }

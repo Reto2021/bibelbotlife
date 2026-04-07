@@ -587,6 +587,7 @@
     "contactSend": "Надіслати",
     "contactSuccess": "Повідомлення надіслано! 🙏",
     "contactSuccessDesc": "Церква зв'яжеться з вами.",
-    "recommendedBy": "Рекомендовано: {{name}}"
+    "recommendedBy": "Рекомендовано: {{name}}",
+    "setup": "Налаштування (разове)"
   }
 }

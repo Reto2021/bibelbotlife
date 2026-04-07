@@ -624,6 +624,7 @@
     "contactSend": "Nachricht senden",
     "contactSuccess": "Nachricht gesendet! 🙏",
     "contactSuccessDesc": "Die Gemeinde wird sich bei Ihnen melden.",
-    "recommendedBy": "Empfohlen von {{name}}"
+    "recommendedBy": "Empfohlen von {{name}}",
+    "setup": "Setup (einmalig)"
   }
 }

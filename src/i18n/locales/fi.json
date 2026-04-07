@@ -587,6 +587,7 @@
     "contactSend": "Lähetä viesti",
     "contactSuccess": "Viesti lähetetty! 🙏",
     "contactSuccessDesc": "Seurakunta ottaa sinuun yhteyttä.",
-    "recommendedBy": "Suosittelija: {{name}}"
+    "recommendedBy": "Suosittelija: {{name}}",
+    "setup": "Käyttöönotto (kertamaksu)"
   }
 }

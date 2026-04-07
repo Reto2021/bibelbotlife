@@ -587,6 +587,7 @@
     "contactSend": "Ուղարկել",
     "contactSuccess": "Հաղորդագրությունը ուղարկվել է! 🙏",
     "contactSuccessDesc": "Եկեղեցին կկապվի ձեզ:",
-    "recommendedBy": "Խորհուրդ է տրվում {{name}}-ի կողմից"
+    "recommendedBy": "Խորհուրդ է տրվում {{name}}-ի կողմից",
+    "setup": "Տեղադրում (միանգամյա)"
   }
 }

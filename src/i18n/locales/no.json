@@ -587,6 +587,7 @@
     "contactSend": "Send melding",
     "contactSuccess": "Melding sendt! 🙏",
     "contactSuccessDesc": "Kirken tar kontakt med deg.",
-    "recommendedBy": "Anbefalt av {{name}}"
+    "recommendedBy": "Anbefalt av {{name}}",
+    "setup": "Oppsett (engangs)"
   }
 }

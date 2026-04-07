@@ -595,6 +595,7 @@
     "contactSend": "Trimite mesajul",
     "contactSuccess": "Mesaj trimis! 🙏",
     "contactSuccessDesc": "Biserica vă va contacta în curând.",
-    "recommendedBy": "Recomandat de {{name}}"
+    "recommendedBy": "Recomandat de {{name}}",
+    "setup": "Configurare (unică)"
   }
 }

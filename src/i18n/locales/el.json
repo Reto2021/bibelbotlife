@@ -587,6 +587,7 @@
     "contactSend": "Αποστολή μηνύματος",
     "contactSuccess": "Το μήνυμα εστάλη! 🙏",
     "contactSuccessDesc": "Η εκκλησία θα επικοινωνήσει μαζί σας.",
-    "recommendedBy": "Προτεινόμενο από {{name}}"
+    "recommendedBy": "Προτεινόμενο από {{name}}",
+    "setup": "Εγκατάσταση (εφάπαξ)"
   }
 }

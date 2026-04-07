@@ -595,6 +595,7 @@
     "contactSend": "Bericht versturen",
     "contactSuccess": "Bericht verzonden! 🙏",
     "contactSuccessDesc": "De kerk neemt contact met u op.",
-    "recommendedBy": "Aanbevolen door {{name}}"
+    "recommendedBy": "Aanbevolen door {{name}}",
+    "setup": "Setup (eenmalig)"
   }
 }

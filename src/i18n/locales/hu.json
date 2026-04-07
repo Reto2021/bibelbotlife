@@ -587,6 +587,7 @@
     "contactSend": "Üzenet küldése",
     "contactSuccess": "Üzenet elküldve! 🙏",
     "contactSuccessDesc": "A gyülekezet felveszi Önnel a kapcsolatot.",
-    "recommendedBy": "Ajánlotta: {{name}}"
+    "recommendedBy": "Ajánlotta: {{name}}",
+    "setup": "Beüzemelés (egyszeri)"
   }
 }
