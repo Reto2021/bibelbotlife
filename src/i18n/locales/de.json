@@ -219,6 +219,14 @@
     "button": "Installieren",
     "close": "Schliessen"
   },
+  "share": {
+    "label": "Teilen",
+    "copied": "Kopiert! 📋",
+    "copiedDesc": "Text wurde in die Zwischenablage kopiert. Teile ihn jetzt auf WhatsApp, Instagram oder wo du möchtest!",
+    "error": "Kopieren fehlgeschlagen",
+    "impulseTitle": "BibelBot – Impuls des Tages",
+    "chatTitle": "BibelBot – Gedanke des Tages"
+  },
   "darkMode": {
     "light": "Heller Modus",
     "dark": "Dunkler Modus"
