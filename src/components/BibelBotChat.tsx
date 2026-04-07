@@ -55,6 +55,7 @@ function saveBotName(name: string) {
 }
 
 const AUTO_OPEN_KEY = "bibelbot-autoopened";
+const MESSAGES_KEY = "bibelbot-messages";
 
 const WELCOME_MESSAGE: Message = {
   role: "assistant",
