@@ -86,11 +86,35 @@ Deno.serve(async () => {
         return new Response(JSON.stringify({ error: insertErr.message }), { status: 500 });
       }
 
-      // Process each message and send AI reply
+      // Process each message
       for (const row of rows) {
         if (!row.text) continue;
         
         try {
+          // Handle /daily command
+          if (row.text.trim().toLowerCase().startsWith('/daily')) {
+            await handleDailyCommand(row.chat_id, row.text, LOVABLE_API_KEY, TELEGRAM_API_KEY, supabase);
+            continue;
+          }
+          // Handle /stopdaily command
+          if (row.text.trim().toLowerCase().startsWith('/stopdaily')) {
+            await handleStopDailyCommand(row.chat_id, LOVABLE_API_KEY, TELEGRAM_API_KEY, supabase);
+            continue;
+          }
+          // Handle /start command
+          if (row.text.trim().toLowerCase() === '/start') {
+            await sendTelegramMessage(row.chat_id, 
+              "Willkommen bei BibelBot! 🙏\n\nIch bin dein persönlicher Begleiter mit der Bibel.\n\n" +
+              "*Befehle:*\n" +
+              "/daily – Täglichen Bibelimpuls um 07:00 abonnieren\n" +
+              "/daily Thomas – Mit persönlicher Begrüssung\n" +
+              "/stopdaily – Täglichen Impuls abbestellen\n\n" +
+              "Oder schreib mir einfach – ich bin hier für dich. 💛",
+              LOVABLE_API_KEY, TELEGRAM_API_KEY
+            );
+            continue;
+          }
+          
           await generateAndSendReply(row.chat_id, row.text, LOVABLE_API_KEY, TELEGRAM_API_KEY, supabase);
         } catch (err) {
           console.error(`Failed to reply to chat ${row.chat_id}:`, err);
@@ -270,6 +294,126 @@ async function generateAndSendReply(
     if (!retryResponse.ok) {
       const errData = await retryResponse.json();
       throw new Error(`Telegram sendMessage failed [${retryResponse.status}]: ${JSON.stringify(errData)}`);
+}
+
+async function sendTelegramMessage(
+  chatId: number,
+  text: string,
+  lovableApiKey: string,
+  telegramApiKey: string,
+) {
+  const resp = await fetch(`${GATEWAY_URL}/sendMessage`, {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${lovableApiKey}`,
+      'X-Connection-Api-Key': telegramApiKey,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ chat_id: chatId, text, parse_mode: 'Markdown' }),
+  });
+  if (!resp.ok) {
+    // Retry without parse_mode if Markdown fails
+    await fetch(`${GATEWAY_URL}/sendMessage`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${lovableApiKey}`,
+        'X-Connection-Api-Key': telegramApiKey,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ chat_id: chatId, text }),
+    });
+  }
+}
+
+async function handleDailyCommand(
+  chatId: number,
+  text: string,
+  lovableApiKey: string,
+  telegramApiKey: string,
+  supabase: any,
+) {
+  // Extract optional name: /daily Thomas
+  const parts = text.trim().split(/\s+/);
+  const firstName = parts.length > 1 ? parts.slice(1).join(' ').slice(0, 50) : null;
+
+  // Check if already subscribed
+  const { data: existing } = await supabase
+    .from('daily_subscribers')
+    .select('id, is_active')
+    .eq('channel', 'telegram')
+    .eq('telegram_chat_id', chatId)
+    .maybeSingle();
+
+  if (existing && existing.is_active) {
+    await sendTelegramMessage(chatId,
+      "Du bist bereits für den täglichen Impuls angemeldet! 🙏\n\nJeden Morgen um 07:00 erhältst du deinen Vers." +
+      (firstName ? `\n\nIch habe deinen Namen aktualisiert: ${firstName}` : "") +
+      "\n\nMit /stopdaily kannst du abbestellen.",
+      lovableApiKey, telegramApiKey
+    );
+    // Update name if provided
+    if (firstName && existing) {
+      await supabase.from('daily_subscribers')
+        .update({ first_name: firstName, updated_at: new Date().toISOString() })
+        .eq('id', existing.id);
     }
+    return;
+  }
+
+  // Reactivate or create
+  if (existing && !existing.is_active) {
+    await supabase.from('daily_subscribers')
+      .update({ is_active: true, first_name: firstName, updated_at: new Date().toISOString() })
+      .eq('id', existing.id);
+  } else {
+    const record: Record<string, unknown> = {
+      channel: 'telegram',
+      telegram_chat_id: chatId,
+      is_active: true,
+    };
+    if (firstName) record.first_name = firstName;
+    await supabase.from('daily_subscribers').insert(record);
+  }
+
+  const greeting = firstName ? `Hallo ${firstName}! ` : "";
+  await sendTelegramMessage(chatId,
+    `${greeting}Du bist jetzt für den täglichen Bibelimpuls angemeldet! 🙏\n\n` +
+    "Ab morgen um *07:00 Uhr* erhältst du jeden Tag einen Vers mit Impuls.\n\n" +
+    "Mit /stopdaily kannst du jederzeit abbestellen.",
+    lovableApiKey, telegramApiKey
+  );
+}
+
+async function handleStopDailyCommand(
+  chatId: number,
+  lovableApiKey: string,
+  telegramApiKey: string,
+  supabase: any,
+) {
+  const { data: existing } = await supabase
+    .from('daily_subscribers')
+    .select('id')
+    .eq('channel', 'telegram')
+    .eq('telegram_chat_id', chatId)
+    .eq('is_active', true)
+    .maybeSingle();
+
+  if (!existing) {
+    await sendTelegramMessage(chatId,
+      "Du bist aktuell nicht für den täglichen Impuls angemeldet.\n\nMit /daily kannst du dich anmelden. 🙏",
+      lovableApiKey, telegramApiKey
+    );
+    return;
+  }
+
+  await supabase.from('daily_subscribers')
+    .update({ is_active: false, updated_at: new Date().toISOString() })
+    .eq('id', existing.id);
+
+  await sendTelegramMessage(chatId,
+    "Dein täglicher Impuls wurde abbestellt. 🙏\n\nDu kannst dich jederzeit mit /daily wieder anmelden.\n\nIch bin weiterhin hier für Gespräche! 💛",
+    lovableApiKey, telegramApiKey
+  );
+}
   }
 }
