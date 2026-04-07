@@ -437,7 +437,7 @@ const Index = () => {
           </p>
           <div className="border-t border-background/20 pt-6">
             <p className="text-background/50 text-sm">
-              © 2025 BibelBot.ch – Mit ❤️ für die christliche Gemeinschaft entwickelt
+              © 2026 BibelBot.ch – Mit ❤️ für alle, die sich fragen, was Christus denkt.
             </p>
           </div>
         </div>
