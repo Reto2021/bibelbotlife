@@ -519,6 +519,8 @@ const Analytics = () => {
           </Card>
         )}
 
+        {/* User Flows */}
+        <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-base">User Flows</CardTitle>
           </CardHeader>
