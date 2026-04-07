@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { Sparkles, ChevronRight, BookOpen, Loader2, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { openBibelBotChat } from "@/lib/chat-events";
@@ -33,6 +34,7 @@ function cacheImpulse(impulse: Impulse) {
 }
 
 export function DailyImpulse() {
+  const { t } = useTranslation();
   const [impulse, setImpulse] = useState<Impulse | null>(getCachedImpulse);
   const [isExpanded, setIsExpanded] = useState(false);
   const [isLoading, setIsLoading] = useState(!impulse);
@@ -88,7 +90,7 @@ export function DailyImpulse() {
       <div className="bg-primary/10 dark:bg-primary/15 border-b border-primary/20">
         <div className="container mx-auto px-4 py-3 flex items-center justify-center gap-2">
           <Loader2 className="h-4 w-4 animate-spin text-primary" />
-          <span className="text-sm text-muted-foreground">Tagesimpuls wird geladen...</span>
+          <span className="text-sm text-muted-foreground">{t("impulse.loading")}</span>
         </div>
       </div>
     );
@@ -108,18 +110,14 @@ export function DailyImpulse() {
           </div>
           <div className="min-w-0 text-left">
             <div className="flex items-center gap-2">
-              <span className="text-xs font-semibold text-primary uppercase tracking-wider">Impuls des Tages</span>
+              <span className="text-xs font-semibold text-primary uppercase tracking-wider">{t("impulse.label")}</span>
               <span className="text-xs text-muted-foreground">· {impulse.topic}</span>
             </div>
-            <p className="text-sm text-foreground dark:text-foreground font-semibold truncate">
-              {impulse.teaser}
-            </p>
+            <p className="text-sm text-foreground dark:text-foreground font-semibold truncate">{impulse.teaser}</p>
           </div>
         </div>
         <ChevronRight
-          className={`h-4 w-4 text-muted-foreground shrink-0 transition-transform duration-300 ${
-            isExpanded ? "rotate-90" : "group-hover:translate-x-0.5"
-          }`}
+          className={`h-4 w-4 text-muted-foreground shrink-0 transition-transform duration-300 ${isExpanded ? "rotate-90" : "group-hover:translate-x-0.5"}`}
         />
       </button>
 
@@ -127,37 +125,22 @@ export function DailyImpulse() {
         <div className="container mx-auto px-4 pb-5 animate-fade-up">
           <div className="ml-11 space-y-4">
             <blockquote className="border-l-2 border-primary/30 pl-4">
-              <p className="text-foreground/90 italic text-sm leading-relaxed">
-                {impulse.verse}
-              </p>
+              <p className="text-foreground/90 italic text-sm leading-relaxed">{impulse.verse}</p>
               <footer className="flex items-center gap-1.5 mt-1.5 text-xs text-muted-foreground">
                 <BookOpen className="h-3 w-3" />
                 {impulse.reference}
               </footer>
             </blockquote>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              {impulse.context}
-            </p>
+            <p className="text-sm text-muted-foreground leading-relaxed">{impulse.context}</p>
 
-            {/* Deep dive buttons */}
             <div className="flex flex-wrap gap-2">
-              <Button
-                size="sm"
-                variant="outline"
-                onClick={handleDeepDive}
-                className="text-xs border-primary/30 text-primary hover:bg-primary/10"
-              >
+              <Button size="sm" variant="outline" onClick={handleDeepDive} className="text-xs border-primary/30 text-primary hover:bg-primary/10">
                 <MessageCircle className="h-3 w-3 mr-1.5" />
-                Was bedeutet das für mich?
+                {t("impulse.deepDive")}
               </Button>
-              <Button
-                size="sm"
-                variant="outline"
-                onClick={handleExploreVerse}
-                className="text-xs border-primary/30 text-primary hover:bg-primary/10"
-              >
+              <Button size="sm" variant="outline" onClick={handleExploreVerse} className="text-xs border-primary/30 text-primary hover:bg-primary/10">
                 <BookOpen className="h-3 w-3 mr-1.5" />
-                Ganzen Abschnitt lesen
+                {t("impulse.explore")}
               </Button>
             </div>
           </div>
