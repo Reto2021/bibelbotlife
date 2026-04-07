@@ -278,7 +278,7 @@ serve(async (req) => {
   }
 
   try {
-    const { messages, journeyDay, language } = await req.json();
+    const { messages, journeyDay, language, mode } = await req.json();
 
     if (!messages || !Array.isArray(messages)) {
       return new Response(
@@ -291,9 +291,36 @@ serve(async (req) => {
     let systemPrompt = SYSTEM_PROMPT;
     const lang = language || "de";
     if (lang !== "de") {
-      const langNames: Record<string, string> = { en: "English", fr: "French", es: "Spanish" };
+      const langNames: Record<string, string> = { en: "English", fr: "French", es: "Spanish", it: "Italian", pt: "Portuguese", pl: "Polish", cs: "Czech" };
       systemPrompt += `\n\n[LANGUAGE OVERRIDE: The user's interface is set to ${langNames[lang] || lang}. You MUST respond in ${langNames[lang] || lang}. Adapt Bible quotes to well-known translations in that language. Keep your coaching style and depth identical.]`;
     }
+
+    // 7 Whys guided mode
+    if (mode === "seven-whys") {
+      systemPrompt += `\n\n[7-WARUMS-MODUS – GEFÜHRTER TIEFENCOACHING-PROZESS]
+Du führst jetzt einen geführten «7 Warums»-Prozess durch. Das ist eine Tiefenübung, inspiriert von der «5 Whys»-Methode, erweitert auf 7 Ebenen mit biblischer Begleitung.
+
+ABLAUF:
+1. Der Nutzer nennt ein Thema, eine Sorge oder einen Wunsch.
+2. Du stellst 7 Mal «Warum?» – jedes Mal eine Ebene tiefer. Zähle mit: «Warum? (1/7)», «Warum? (2/7)» usw.
+3. Jede Warum-Frage ist einfühlsam formuliert, nicht mechanisch. Beziehe dich auf die letzte Antwort.
+4. Nach der 7. Antwort: Fasse die Reise zusammen, zeige den Weg von der Oberfläche zur tiefsten Erkenntnis, und gib 2-3 passende Bibelverse mit Kontext zur tiefsten Ebene.
+5. Biete am Ende eine praktische Übung oder einen nächsten Schritt an.
+
+REGELN:
+- Stelle pro Nachricht NUR EINE Frage. Keine langen Texte zwischen den Warums.
+- Validiere kurz die Antwort des Nutzers (1 Satz), dann die nächste Warum-Frage.
+- Wenn der Nutzer emotional wird: Zeige Empathie, aber führe sanft weiter.
+- Nach Warum 7: Die Zusammenfassung soll die «Reise» zeigen – wie ein roter Faden von der ersten Aussage zur tiefsten Erkenntnis.
+- Die Bibelverse am Ende sollen die tiefste Erkenntnis spiegeln, nicht das Oberflächenthema.
+
+BEISPIEL-FLOW:
+User: «Ich bin unzufrieden mit meiner Arbeit.»
+Bot: «Danke, dass du das teilst. Lass uns gemeinsam tiefer schauen. Warum bist du unzufrieden mit deiner Arbeit? (1/7)»
+...nach 7 Runden...
+Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... [Praktischer nächster Schritt]»`;
+    }
+
     if (journeyDay && typeof journeyDay === "number") {
       const phase = journeyDay <= 7 ? "Ankommen" : journeyDay <= 14 ? "Vertiefen" : "Handeln";
       const isCheckIn = [1, 7, 14, 21].includes(journeyDay);
