@@ -260,6 +260,49 @@ serve(async (req) => {
       throw new Error("LOVABLE_API_KEY is not configured");
     }
 
+    // If conversation exceeds 50 messages, summarize older ones
+    let finalMessages = messages;
+    if (messages.length > 50) {
+      const olderMessages = messages.slice(0, messages.length - 50);
+      const recentMessages = messages.slice(messages.length - 50);
+
+      const olderText = olderMessages
+        .map((m: any) => `${m.role === 'assistant' ? 'Bot' : 'User'}: ${m.content}`)
+        .join('\n');
+
+      const summaryResponse = await fetch(
+        "https://ai.gateway.lovable.dev/v1/chat/completions",
+        {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${LOVABLE_API_KEY}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            model: "google/gemini-2.5-flash-lite",
+            messages: [
+              {
+                role: "system",
+                content: "Fasse das folgende Gespräch in 3-5 Sätzen zusammen. Fokus auf: Hauptthemen, persönliche Situation des Nutzers, wichtige Erkenntnisse, offene Fragen. Deutsch (Schweiz), kein ß."
+              },
+              { role: "user", content: olderText }
+            ],
+            stream: false,
+          }),
+        }
+      );
+
+      if (summaryResponse.ok) {
+        const summaryData = await summaryResponse.json();
+        const summary = summaryData.choices?.[0]?.message?.content || "";
+        if (summary) {
+          systemPrompt += `\n\n[ZUSAMMENFASSUNG FRÜHERER GESPRÄCHE]\n${summary}\n[ENDE ZUSAMMENFASSUNG]`;
+        }
+      }
+
+      finalMessages = recentMessages;
+    }
+
     const response = await fetch(
       "https://ai.gateway.lovable.dev/v1/chat/completions",
       {
@@ -272,7 +315,7 @@ serve(async (req) => {
           model: "google/gemini-3-flash-preview",
           messages: [
             { role: "system", content: systemPrompt },
-            ...messages,
+            ...finalMessages,
           ],
           stream: true,
         }),
