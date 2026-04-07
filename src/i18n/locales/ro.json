@@ -494,7 +494,13 @@
       "family": "Familie",
       "leisure": "Timp liber",
       "growth": "Dezvoltare personală"
-    }
+    },
+    "save": "Save result",
+    "saved": "Saved!",
+    "history": "Previous results",
+    "noHistory": "No saved results yet.",
+    "backToNew": "New Life Wheel",
+    "backToList": "Back to list"
   },
   "referral": {
     "title": "Cunoști pe cineva care ar putea folosi BibleBot?",

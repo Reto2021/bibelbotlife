@@ -494,7 +494,13 @@
       "family": "Familie",
       "leisure": "Vrije tijd",
       "growth": "Persoonlijke groei"
-    }
+    },
+    "save": "Save result",
+    "saved": "Saved!",
+    "history": "Previous results",
+    "noHistory": "No saved results yet.",
+    "backToNew": "New Life Wheel",
+    "backToList": "Back to list"
   },
   "referral": {
     "title": "Know someone who could use BibleBot?",

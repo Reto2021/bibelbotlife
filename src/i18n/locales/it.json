@@ -494,6 +494,12 @@
       "family": "Famiglia",
       "leisure": "Tempo libero",
       "growth": "Crescita personale"
-    }
+    },
+    "save": "Save result",
+    "saved": "Saved!",
+    "history": "Previous results",
+    "noHistory": "No saved results yet.",
+    "backToNew": "New Life Wheel",
+    "backToList": "Back to list"
   }
 }

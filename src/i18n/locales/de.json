@@ -531,6 +531,12 @@
       "family": "Familie",
       "leisure": "Freizeit",
       "growth": "Persönliches Wachstum"
-    }
+    },
+    "save": "Ergebnis speichern",
+    "saved": "Gespeichert!",
+    "history": "Frühere Ergebnisse",
+    "noHistory": "Noch keine gespeicherten Ergebnisse.",
+    "backToNew": "Neues Lebensrad",
+    "backToList": "Zurück zur Liste"
   }
 }
