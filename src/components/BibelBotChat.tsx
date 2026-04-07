@@ -43,10 +43,31 @@ const QA_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/bibelbot-qa`;
 
 const SUGGESTIONS = [
   "Ich brauche gerade ein aufbauendes Wort",
-  "Hilf mir, meine Ziele und nächsten Schritte zu klären",
-  "Ich möchte herausfinden, was ich wirklich will",
   "Was sagt die Bibel, wenn man sich unsicher fühlt?",
+  "Ich möchte herausfinden, was ich wirklich will",
 ];
+
+const JOURNEY_DISMISSED_KEY = "bibelbot-journey-dismissed";
+const JOURNEY_NUDGE_KEY = "bibelbot-journey-nudge-ts";
+
+function isJourneyDismissed(): boolean {
+  try { return localStorage.getItem(JOURNEY_DISMISSED_KEY) === "1"; } catch { return false; }
+}
+function dismissJourney() {
+  try { localStorage.setItem(JOURNEY_DISMISSED_KEY, "1"); } catch {}
+}
+function shouldNudgeJourney(): boolean {
+  try {
+    if (getJourneyDay() > 0) return false; // already started
+    if (!isJourneyDismissed()) return false; // never dismissed = hasn't seen it yet or is seeing it
+    const lastNudge = localStorage.getItem(JOURNEY_NUDGE_KEY);
+    if (!lastNudge) return true;
+    return Date.now() - parseInt(lastNudge, 10) > 3 * 24 * 60 * 60 * 1000; // every 3 days
+  } catch { return false; }
+}
+function markNudgeShown() {
+  try { localStorage.setItem(JOURNEY_NUDGE_KEY, Date.now().toString()); } catch {}
+}
 
 const DEFAULT_BOT_NAME = "BibelBot";
 const STORAGE_KEY = "bibelbot-name";
