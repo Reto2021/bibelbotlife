@@ -294,6 +294,8 @@ async function generateAndSendReply(
     if (!retryResponse.ok) {
       const errData = await retryResponse.json();
       throw new Error(`Telegram sendMessage failed [${retryResponse.status}]: ${JSON.stringify(errData)}`);
+    }
+  }
 }
 
 async function sendTelegramMessage(
@@ -312,7 +314,6 @@ async function sendTelegramMessage(
     body: JSON.stringify({ chat_id: chatId, text, parse_mode: 'Markdown' }),
   });
   if (!resp.ok) {
-    // Retry without parse_mode if Markdown fails
     await fetch(`${GATEWAY_URL}/sendMessage`, {
       method: 'POST',
       headers: {
@@ -332,11 +333,9 @@ async function handleDailyCommand(
   telegramApiKey: string,
   supabase: any,
 ) {
-  // Extract optional name: /daily Thomas
   const parts = text.trim().split(/\s+/);
   const firstName = parts.length > 1 ? parts.slice(1).join(' ').slice(0, 50) : null;
 
-  // Check if already subscribed
   const { data: existing } = await supabase
     .from('daily_subscribers')
     .select('id, is_active')
@@ -351,7 +350,6 @@ async function handleDailyCommand(
       "\n\nMit /stopdaily kannst du abbestellen.",
       lovableApiKey, telegramApiKey
     );
-    // Update name if provided
     if (firstName && existing) {
       await supabase.from('daily_subscribers')
         .update({ first_name: firstName, updated_at: new Date().toISOString() })
@@ -360,7 +358,6 @@ async function handleDailyCommand(
     return;
   }
 
-  // Reactivate or create
   if (existing && !existing.is_active) {
     await supabase.from('daily_subscribers')
       .update({ is_active: true, first_name: firstName, updated_at: new Date().toISOString() })
@@ -414,6 +411,4 @@ async function handleStopDailyCommand(
     "Dein täglicher Impuls wurde abbestellt. 🙏\n\nDu kannst dich jederzeit mit /daily wieder anmelden.\n\nIch bin weiterhin hier für Gespräche! 💛",
     lovableApiKey, telegramApiKey
   );
-}
-  }
 }
