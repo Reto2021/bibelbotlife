@@ -240,5 +240,21 @@
     "pl": "Polski",
     "cs": "Čeština",
     "pt": "Português"
+  },
+  "tiles": {
+    "sectionTitle": "Qu'est-ce qui te préoccupe ?",
+    "sectionSubtitle": "Choisis un thème — BibelBot t'accompagne",
+    "baptism": { "title": "Verset de baptême", "desc": "Le verset parfait pour ton enfant", "prompt": "Aide-moi à trouver un verset de baptême approprié. Quel genre d'enfant est-ce et que souhaitent les parents ?" },
+    "condolence": { "title": "Mots de réconfort", "desc": "Accompagner le deuil et l'adieu", "prompt": "J'ai besoin de mots réconfortants pour une carte de condoléances. Peux-tu m'aider à trouver les bons mots ?" },
+    "wedding": { "title": "Verset de mariage", "desc": "Paroles bibliques pour votre amour", "prompt": "Nous cherchons un beau verset biblique pour notre mariage. Quels passages parlent d'amour et de partenariat ?" },
+    "anxiety": { "title": "Peur & soucis", "desc": "Trouver du courage dans les moments difficiles", "prompt": "Je lutte avec la peur et les soucis. Que dit la Bible à ce sujet ? Y a-t-il des versets qui donnent du courage ?" },
+    "confession": { "title": "Confession", "desc": "Dieu pardonne — exprime-le", "prompt": "Je veux me libérer de quelque chose qui me pèse. Que dit la Bible sur le pardon et le renouveau ?" },
+    "heartbreak": { "title": "Chagrin d'amour", "desc": "Ce que la Bible dit sur la peine de cœur", "prompt": "Mon cœur est brisé. Que dit la Bible sur le chagrin d'amour et comment retrouver l'espoir ?" },
+    "newstart": { "title": "Nouveau départ", "desc": "Force pour un nouveau chapitre", "prompt": "Je suis face à un nouveau départ et j'ai besoin d'encouragement. Quels passages bibliques parlent de recommencements ?" },
+    "namequiz": { "title": "Quiz des prénoms", "desc": "Trouve le bon prénom biblique", "prompt": "Je cherche un prénom biblique pour mon enfant. Peux-tu me faire quelques suggestions et expliquer leur signification ?" },
+    "sleepless": { "title": "Insomnie", "desc": "Trouver la paix la nuit", "prompt": "Je n'arrive pas à dormir et je me fais des soucis. Y a-t-il une prière ou un psaume apaisant pour la nuit ?" },
+    "loneliness": { "title": "Solitude", "desc": "Tu n'es jamais seul(e)", "prompt": "Je me sens seul(e). Que dit la Bible sur le fait que Dieu est toujours avec nous ?" },
+    "decision": { "title": "Décision difficile", "desc": "Sagesse pour le bon chemin", "prompt": "Je suis face à une décision difficile. Quels passages bibliques peuvent m'aider à trouver le bon chemin ?" },
+    "gratitude": { "title": "Gratitude", "desc": "Une prière de remerciement personnelle", "prompt": "Je veux remercier Dieu. Aide-moi à formuler une prière de gratitude personnelle." }
   }
 }

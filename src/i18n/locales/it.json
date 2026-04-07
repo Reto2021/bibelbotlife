@@ -240,5 +240,21 @@
     "pl": "Polski",
     "cs": "Čeština",
     "pt": "Português"
+  },
+  "tiles": {
+    "sectionTitle": "Cosa ti sta a cuore?",
+    "sectionSubtitle": "Scegli un tema — BibelBot ti accompagna",
+    "baptism": { "title": "Versetto per il battesimo", "desc": "Il versetto perfetto per il tuo bambino", "prompt": "Aiutami a trovare un versetto adatto per il battesimo. Che tipo di bambino è e cosa desiderano i genitori?" },
+    "condolence": { "title": "Parole di conforto", "desc": "Accompagnare il lutto e l'addio", "prompt": "Ho bisogno di parole confortanti per un biglietto di condoglianze. Puoi aiutarmi a trovare le parole giuste?" },
+    "wedding": { "title": "Versetto per il matrimonio", "desc": "Parole bibliche per il vostro amore", "prompt": "Cerchiamo un bel versetto biblico per il nostro matrimonio. Quali passi parlano di amore e unione?" },
+    "anxiety": { "title": "Paura e preoccupazione", "desc": "Trovare coraggio nei momenti difficili", "prompt": "Sto lottando con paure e preoccupazioni. Cosa dice la Bibbia a riguardo? Ci sono versetti che danno coraggio?" },
+    "confession": { "title": "Confessione", "desc": "Dio perdona — dillo apertamente", "prompt": "Voglio liberarmi di qualcosa che mi pesa. Cosa dice la Bibbia sul perdono e i nuovi inizi?" },
+    "heartbreak": { "title": "Cuore spezzato", "desc": "Cosa dice la Bibbia sul dolore d'amore", "prompt": "Ho il cuore spezzato. Cosa dice la Bibbia sul mal d'amore e come ritrovare la speranza?" },
+    "newstart": { "title": "Nuovo inizio", "desc": "Forza per un nuovo capitolo", "prompt": "Sto affrontando un nuovo inizio e ho bisogno di incoraggiamento. Quali passi biblici parlano di ricominciare?" },
+    "namequiz": { "title": "Quiz dei nomi", "desc": "Trova il nome biblico perfetto", "prompt": "Cerco un nome biblico per il mio bambino. Puoi suggerirmene alcuni e spiegarne il significato?" },
+    "sleepless": { "title": "Insonnia", "desc": "Trovare pace nella notte", "prompt": "Non riesco a dormire e la mente non si ferma. C'è una preghiera o un salmo rilassante per la notte?" },
+    "loneliness": { "title": "Solitudine", "desc": "Non sei mai solo/a", "prompt": "Mi sento solo/a. Cosa dice la Bibbia sul fatto che Dio è sempre con noi?" },
+    "decision": { "title": "Decisione difficile", "desc": "Saggezza per la strada giusta", "prompt": "Ho una decisione difficile da prendere. Quali passi biblici mi aiutano a trovare la strada giusta?" },
+    "gratitude": { "title": "Gratitudine", "desc": "Una preghiera di ringraziamento personale", "prompt": "Voglio ringraziare Dio. Aiutami a formulare una preghiera di gratitudine personale." }
   }
 }

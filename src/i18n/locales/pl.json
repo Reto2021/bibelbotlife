@@ -240,5 +240,21 @@
     "pl": "Polski",
     "cs": "Čeština",
     "pt": "Português"
+  },
+  "tiles": {
+    "sectionTitle": "Co cię porusza?",
+    "sectionSubtitle": "Wybierz temat — BibelBot towarzyszy ci",
+    "baptism": { "title": "Werset na chrzest", "desc": "Idealny werset dla twojego dziecka", "prompt": "Pomóż mi znaleźć odpowiedni werset na chrzest. Co to za dziecko i czego życzą sobie rodzice?" },
+    "condolence": { "title": "Słowa pocieszenia", "desc": "Towarzyszenie w żałobie i pożegnaniu", "prompt": "Potrzebuję pocieszających słów na kartkę kondolencyjną. Czy możesz mi pomóc znaleźć odpowiednie słowa?" },
+    "wedding": { "title": "Werset ślubny", "desc": "Biblijne słowa dla waszej miłości", "prompt": "Szukamy pięknego wersetu biblijnego na nasz ślub. Które fragmenty mówią o miłości i partnerstwie?" },
+    "anxiety": { "title": "Strach i troska", "desc": "Znaleźć odwagę w trudnych chwilach", "prompt": "Zmagam się ze strachem i troską. Co mówi Biblia na ten temat? Czy są wersety dodające odwagi?" },
+    "confession": { "title": "Spowiedź", "desc": "Bóg przebacza — wypowiedz to", "prompt": "Chcę się uwolnić od czegoś, co mnie obciąża. Co mówi Biblia o przebaczeniu i nowym początku?" },
+    "heartbreak": { "title": "Złamane serce", "desc": "Co Biblia mówi o bólu serca", "prompt": "Moje serce jest złamane. Co mówi Biblia o złamanym sercu i jak znaleźć nadzieję?" },
+    "newstart": { "title": "Nowy początek", "desc": "Siła na nowy rozdział", "prompt": "Stoję przed nowym początkiem i potrzebuję zachęty. Które fragmenty Biblii mówią o nowych początkach?" },
+    "namequiz": { "title": "Quiz imion", "desc": "Znajdź idealne biblijne imię", "prompt": "Szukam biblijnego imienia dla mojego dziecka. Czy możesz zaproponować kilka i wyjaśnić ich znaczenie?" },
+    "sleepless": { "title": "Bezsenność", "desc": "Znaleźć spokój w nocy", "prompt": "Nie mogę zasnąć i kręcą mi się myśli. Czy jest uspokajająca modlitwa lub psalm na noc?" },
+    "loneliness": { "title": "Samotność", "desc": "Nigdy nie jesteś sam/a", "prompt": "Czuję się samotny/a. Co mówi Biblia o tym, że Bóg jest zawsze z nami?" },
+    "decision": { "title": "Trudna decyzja", "desc": "Mądrość na właściwą drogę", "prompt": "Stoję przed trudną decyzją. Które fragmenty Biblii pomogą mi znaleźć właściwą drogę?" },
+    "gratitude": { "title": "Wdzięczność", "desc": "Osobista modlitwa dziękczynna", "prompt": "Chcę podziękować Bogu. Pomóż mi sformułować osobistą modlitwę wdzięczności." }
   }
 }

@@ -240,5 +240,21 @@
     "pl": "Polski",
     "cs": "Čeština",
     "pt": "Português"
+  },
+  "tiles": {
+    "sectionTitle": "Co tě trápí?",
+    "sectionSubtitle": "Vyber si téma — BibelBot tě doprovází",
+    "baptism": { "title": "Verš ke křtu", "desc": "Dokonalý verš pro tvé dítě", "prompt": "Pomoz mi najít vhodný verš ke křtu. Jaké je to dítě a co si přejí rodiče?" },
+    "condolence": { "title": "Slova útěchy", "desc": "Doprovázení smutkem a loučením", "prompt": "Potřebuji útěšná slova na kondolenční lístek. Můžeš mi pomoci najít ta správná slova?" },
+    "wedding": { "title": "Svatební verš", "desc": "Biblická slova pro vaši lásku", "prompt": "Hledáme krásný biblický verš pro náš svatební den. Které pasáže mluví o lásce a partnerství?" },
+    "anxiety": { "title": "Strach a starosti", "desc": "Najít odvahu v těžkých chvílích", "prompt": "Bojuji se strachem a starostmi. Co říká Bible k tomuto tématu? Existují verše, které dodávají odvahu?" },
+    "confession": { "title": "Zpověď", "desc": "Bůh odpouští — vyslov to", "prompt": "Chci se zbavit něčeho, co mě tíží. Co říká Bible o odpuštění a novém začátku?" },
+    "heartbreak": { "title": "Zlomené srdce", "desc": "Co říká Bible o bolesti srdce", "prompt": "Mám zlomené srdce. Co říká Bible o bolesti srdce a jak znovu najít naději?" },
+    "newstart": { "title": "Nový začátek", "desc": "Síla pro novou kapitolu", "prompt": "Stojím před novým začátkem a potřebuji povzbuzení. Které biblické pasáže mluví o nových začátcích?" },
+    "namequiz": { "title": "Kvíz jmen", "desc": "Najdi to správné biblické jméno", "prompt": "Hledám biblické jméno pro své dítě. Můžeš mi navrhnout několik a vysvětlit jejich význam?" },
+    "sleepless": { "title": "Nespavost", "desc": "Najít klid v noci", "prompt": "Nemůžu spát a moje mysl se nezastaví. Existuje uklidňující modlitba nebo žalm na noc?" },
+    "loneliness": { "title": "Osamělost", "desc": "Nikdy nejsi sám/sama", "prompt": "Cítím se osamělý/á. Co říká Bible o tom, že Bůh je vždy s námi?" },
+    "decision": { "title": "Těžké rozhodnutí", "desc": "Moudrost pro správnou cestu", "prompt": "Stojím před těžkým rozhodnutím. Které biblické pasáže mi pomohou najít správnou cestu?" },
+    "gratitude": { "title": "Vděčnost", "desc": "Osobní děkovná modlitba", "prompt": "Chci poděkovat Bohu. Pomoz mi formulovat osobní modlitbu vděčnosti." }
   }
 }
