@@ -389,7 +389,7 @@ export function BibelBotChat() {
         setIsLoading(false);
       }
     },
-    [messages, isLoading, toast, botName, runQA, t, i18n.language, journeyDay, welcomeMessage]
+    [messages, isLoading, toast, botName, runQA, t, i18n.language, journeyDay, welcomeMessage, track]
   );
 
   useEffect(() => {
