@@ -139,7 +139,12 @@ const Index = () => {
                 Über Telegram starten
               </a>
             </Button>
-            <Button size="lg" variant="outline" className="border-primary/30 text-primary hover:bg-accent px-8 py-4 text-lg">
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-primary/30 text-primary hover:bg-accent px-8 py-4 text-lg"
+              onClick={() => document.getElementById("features")?.scrollIntoView({ behavior: "smooth" })}
+            >
               Mehr erfahren
             </Button>
           </div>
