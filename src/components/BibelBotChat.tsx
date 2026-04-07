@@ -127,7 +127,13 @@ function saveCheckin(day: number, score: number) {
 const WELCOME_MESSAGE: Message = {
   role: "assistant",
   content:
-    "Schön, dass du da bist 🤗\n\nIch bin hier, um dich über die nächsten **21 Tage** zu begleiten – mit der Bibel, guten Fragen und konkreten Schritten. Kein Druck, keine Bewertung.\n\nMein Ziel: Dass es dir nach diesen 3 Wochen spürbar besser geht. 💛\n\nWas beschäftigt dich gerade am meisten?",
+    "Schön, dass du da bist 🤗\n\nIch bin dein BibelBot – dein persönlicher Begleiter mit der Bibel, guten Fragen und konkreten Impulsen. Kein Druck, keine Bewertung.\n\nDu kannst mich alles fragen – oder einfach erzählen, was dich gerade beschäftigt. 💛",
+};
+
+const JOURNEY_OFFER: Message = {
+  role: "assistant",
+  content:
+    "💡 **Tipp:** Ich biete auch eine **21-Tage-Begleitung** an – 3 Wochen mit täglichen Impulsen, Reflexionen und konkreten Schritten. Ganz in deinem Tempo.\n\nMöchtest du das ausprobieren?",
 };
 
 // Check if text likely contains Bible citations
