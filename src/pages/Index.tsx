@@ -482,21 +482,37 @@ const Index = () => {
 
       {/* Footer */}
       <footer className="bg-foreground text-background py-12 px-4">
-        <div className="container mx-auto max-w-4xl text-center">
+        <div className="container mx-auto max-w-4xl">
           <div className="flex items-center justify-center space-x-2 mb-6">
             <BookOpen className="h-8 w-8 text-primary" />
             <span className="text-2xl font-bold">BibelBot.ch</span>
           </div>
-          <p className="text-background/70 mb-4">
+          <p className="text-background/70 mb-4 text-center">
             Dein digitaler Begleiter für ein Leben mit der Bibel
           </p>
-          <p className="text-background/50 text-xs mb-6 max-w-2xl mx-auto">
+          <p className="text-background/50 text-xs mb-6 max-w-2xl mx-auto text-center">
             BibelBot.ch ist ein KI-gestütztes Hilfsmittel und ersetzt keine professionelle Seelsorge, 
             theologische Beratung oder psychologische Therapie. Bei akuten Krisen wende dich bitte an 
             die Dargebotene Hand (Tel. 143) oder Pro Juventute (Tel. 147).
           </p>
-          <div className="border-t border-background/20 pt-6">
-            <p className="text-background/50 text-sm">
+          
+          <div className="border-t border-background/20 pt-6 mt-6">
+            <div className="grid sm:grid-cols-2 gap-6 text-sm text-background/50 mb-6">
+              <div>
+                <p className="font-semibold text-background/70 mb-2">Impressum</p>
+                <p>Vorname Nachname</p>
+                <p>Strasse Nr.</p>
+                <p>PLZ Ort, Schweiz</p>
+                <p className="mt-1">kontakt@bibelbot.ch</p>
+              </div>
+              <div>
+                <p className="font-semibold text-background/70 mb-2">Hinweise</p>
+                <p>Privates, nicht-kommerzielles Projekt</p>
+                <p>Keine Speicherung von Chatdaten</p>
+                <p>Spenden sind nicht steuerabzugsfähig</p>
+              </div>
+            </div>
+            <p className="text-background/50 text-sm text-center">
               © 2026 BibelBot.ch – Mit ❤️ für alle, die sich fragen, was Christus denkt.
             </p>
           </div>
