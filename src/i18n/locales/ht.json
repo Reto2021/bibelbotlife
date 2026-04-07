@@ -1,19 +1,19 @@
 {
   "nav": {
-    "startNow": "Get started"
+    "startNow": "Kòmanse"
   },
-  "loader": "Loading…",
+  "loader": "Ap chaje…",
   "hero": {
     "badge": {
-      "noLogin": "No login",
-      "noData": "No data",
-      "noJudgment": "No judgment"
+      "noLogin": "Pa gen koneksyon",
+      "noData": "Pa gen done",
+      "noJudgment": "Pa gen jijman"
     },
-    "title1": "The Bible.",
-    "title2": " Reimagined.",
-    "subtitle": "BibleBot knows the Bible – and asks the right questions. Not a person, but an honest companion. For meaningful conversations, deep questions, and real impulses.",
-    "ctaTelegram": "Start via Telegram",
-    "ctaMore": "Learn more",
+    "title1": "Bib la.",
+    "title2": " Repanse.",
+    "subtitle": "BibleBot konnen Bib la – epi li poze bon kesyon yo. Se pa yon moun, men se yon konpayon onèt. Pou konvèsasyon ki gen sans, kesyon pwofon ak enspirasyon reyèl.",
+    "ctaTelegram": "Kòmanse sou Telegram",
+    "ctaMore": "Aprann plis",
     "quote": "\"Come to me, all you who are weary and burdened, and I will give you rest.\"",
     "quoteRef": "– Matthew 11:28"
   },

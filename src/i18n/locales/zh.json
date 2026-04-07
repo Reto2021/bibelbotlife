@@ -1,19 +1,19 @@
 {
   "nav": {
-    "startNow": "Get started"
+    "startNow": "开始"
   },
-  "loader": "Loading…",
+  "loader": "加载中…",
   "hero": {
     "badge": {
-      "noLogin": "No login",
-      "noData": "No data",
-      "noJudgment": "No judgment"
+      "noLogin": "无需登录",
+      "noData": "无数据",
+      "noJudgment": "无评判"
     },
-    "title1": "The Bible.",
-    "title2": " Reimagined.",
-    "subtitle": "BibleBot knows the Bible – and asks the right questions. Not a person, but an honest companion. For meaningful conversations, deep questions, and real impulses.",
-    "ctaTelegram": "Start via Telegram",
-    "ctaMore": "Learn more",
+    "title1": "圣经.",
+    "title2": " 重新思考。",
+    "subtitle": "BibleBot了解圣经——并提出正确的问题。不是人，但是一个真诚的伙伴。用于有意义的对话、深入的问题和真正的启发。",
+    "ctaTelegram": "通过Telegram开始",
+    "ctaMore": "了解更多",
     "quote": "\"Come to me, all you who are weary and burdened, and I will give you rest.\"",
     "quoteRef": "– Matthew 11:28"
   },
@@ -220,7 +220,7 @@
     "button": "Start a conversation"
   },
   "footer": {
-    "tagline": "Your personal companion for a life with the Bible",
+    "tagline": "您与圣经生活的个人伙伴",
     "disclaimer": "BibleBot.Life is a digital tool and does not replace professional pastoral care, theological counseling, or psychological therapy. In acute crises, please contact your local emergency helpline.",
     "impressum": "Imprint",
     "notes": "Notes",
@@ -236,7 +236,7 @@
     "suggestion1": "I need an uplifting word right now",
     "suggestion2": "What does the Bible say when you feel uncertain?",
     "suggestion3": "I want to find out what I really want",
-    "teaser": "What's on your mind? 💛",
+    "teaser": "你在想什么？💛",
     "teaserSub": "I'm here – without any judgment.",
     "openChat": "Open chat",
     "closeChat": "Close chat",
@@ -247,7 +247,7 @@
     "acting": "Acting",
     "renameTip": "Tip: Click the name to rename me ✨",
     "changeName": "Change name",
-    "placeholder": "Just start typing...",
+    "placeholder": "随便写...",
     "startVoice": "Start voice input",
     "stopVoice": "Stop recording",
     "noVoice": "Your browser does not support voice input.",
@@ -270,7 +270,7 @@
     "errorNoStream": "No stream"
   },
   "install": {
-    "title": "Install BibleBot",
+    "title": "安装BibleBot",
     "androidDesc": "Quick access from your home screen",
     "iosDesc": "Tap \"Share\" → \"Add to Home Screen\"",
     "button": "Install",

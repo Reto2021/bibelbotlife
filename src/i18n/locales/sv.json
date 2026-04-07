@@ -1,19 +1,19 @@
 {
   "nav": {
-    "startNow": "Get started"
+    "startNow": "Kom igång"
   },
-  "loader": "Loading…",
+  "loader": "Laddar…",
   "hero": {
     "badge": {
-      "noLogin": "No login",
-      "noData": "No data",
-      "noJudgment": "No judgment"
+      "noLogin": "Ingen inloggning",
+      "noData": "Ingen data",
+      "noJudgment": "Ingen dom"
     },
-    "title1": "The Bible.",
-    "title2": " Reimagined.",
-    "subtitle": "BibleBot knows the Bible – and asks the right questions. Not a person, but an honest companion. For meaningful conversations, deep questions, and real impulses.",
-    "ctaTelegram": "Start via Telegram",
-    "ctaMore": "Learn more",
+    "title1": "Bibeln.",
+    "title2": " Nytänkt.",
+    "subtitle": "BibleBot känner Bibeln – och ställer de rätta frågorna. Inte en person, men en ärlig följeslagare. För meningsfulla samtal, djupa frågor och verkliga impulser.",
+    "ctaTelegram": "Starta via Telegram",
+    "ctaMore": "Läs mer",
     "quote": "\"Come to me, all you who are weary and burdened, and I will give you rest.\"",
     "quoteRef": "– Matthew 11:28"
   },
@@ -220,7 +220,7 @@
     "button": "Start a conversation"
   },
   "footer": {
-    "tagline": "Your personal companion for a life with the Bible",
+    "tagline": "Din personliga följeslagare för ett liv med Bibeln",
     "disclaimer": "BibleBot.Life is a digital tool and does not replace professional pastoral care, theological counseling, or psychological therapy. In acute crises, please contact your local emergency helpline.",
     "impressum": "Imprint",
     "notes": "Notes",
@@ -236,7 +236,7 @@
     "suggestion1": "I need an uplifting word right now",
     "suggestion2": "What does the Bible say when you feel uncertain?",
     "suggestion3": "I want to find out what I really want",
-    "teaser": "What's on your mind? 💛",
+    "teaser": "Vad tänker du på? 💛",
     "teaserSub": "I'm here – without any judgment.",
     "openChat": "Open chat",
     "closeChat": "Close chat",
@@ -247,7 +247,7 @@
     "acting": "Acting",
     "renameTip": "Tip: Click the name to rename me ✨",
     "changeName": "Change name",
-    "placeholder": "Just start typing...",
+    "placeholder": "Skriv fritt...",
     "startVoice": "Start voice input",
     "stopVoice": "Stop recording",
     "noVoice": "Your browser does not support voice input.",
@@ -270,7 +270,7 @@
     "errorNoStream": "No stream"
   },
   "install": {
-    "title": "Install BibleBot",
+    "title": "Installera BibleBot",
     "androidDesc": "Quick access from your home screen",
     "iosDesc": "Tap \"Share\" → \"Add to Home Screen\"",
     "button": "Install",

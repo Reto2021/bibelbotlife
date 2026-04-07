@@ -1,19 +1,19 @@
 {
   "nav": {
-    "startNow": "Get started"
+    "startNow": "Začni"
   },
-  "loader": "Loading…",
+  "loader": "Načítanie…",
   "hero": {
     "badge": {
-      "noLogin": "No login",
-      "noData": "No data",
-      "noJudgment": "No judgment"
+      "noLogin": "Bez prihlásenia",
+      "noData": "Bez údajov",
+      "noJudgment": "Bez súdenia"
     },
-    "title1": "The Bible.",
-    "title2": " Reimagined.",
-    "subtitle": "BibleBot knows the Bible – and asks the right questions. Not a person, but an honest companion. For meaningful conversations, deep questions, and real impulses.",
-    "ctaTelegram": "Start via Telegram",
-    "ctaMore": "Learn more",
+    "title1": "Biblia.",
+    "title2": " Nanovo premyslená.",
+    "subtitle": "BibleBot pozná Bibliu – a kladie správne otázky. Nie je to človek, ale úprimný spoločník. Pre zmysluplné rozhovory, hlboké otázky a skutočné impulzy.",
+    "ctaTelegram": "Začni cez Telegram",
+    "ctaMore": "Zistiť viac",
     "quote": "\"Come to me, all you who are weary and burdened, and I will give you rest.\"",
     "quoteRef": "– Matthew 11:28"
   },
@@ -220,7 +220,7 @@
     "button": "Start a conversation"
   },
   "footer": {
-    "tagline": "Your personal companion for a life with the Bible",
+    "tagline": "Váš osobný spoločník pre život s Bibliou",
     "disclaimer": "BibleBot.Life is a digital tool and does not replace professional pastoral care, theological counseling, or psychological therapy. In acute crises, please contact your local emergency helpline.",
     "impressum": "Imprint",
     "notes": "Notes",

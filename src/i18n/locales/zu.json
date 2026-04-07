@@ -1,19 +1,19 @@
 {
   "nav": {
-    "startNow": "Get started"
+    "startNow": "Qala"
   },
-  "loader": "Loading…",
+  "loader": "Iyalayisha…",
   "hero": {
     "badge": {
-      "noLogin": "No login",
-      "noData": "No data",
-      "noJudgment": "No judgment"
+      "noLogin": "Akukho ukungena",
+      "noData": "Akukho idatha",
+      "noJudgment": "Akukho ukwahlulela"
     },
-    "title1": "The Bible.",
-    "title2": " Reimagined.",
-    "subtitle": "BibleBot knows the Bible – and asks the right questions. Not a person, but an honest companion. For meaningful conversations, deep questions, and real impulses.",
-    "ctaTelegram": "Start via Telegram",
-    "ctaMore": "Learn more",
+    "title1": "IBhayibheli.",
+    "title2": " Licatshangwe kabusha.",
+    "subtitle": "I-BibleBot iyalazi iBhayibheli – futhi ibuza imibuzo efanele. Akuyena umuntu, kodwa ungumngane oqotho.",
+    "ctaTelegram": "Qala nge-Telegram",
+    "ctaMore": "Funda kabanzi",
     "quote": "\"Come to me, all you who are weary and burdened, and I will give you rest.\"",
     "quoteRef": "– Matthew 11:28"
   },

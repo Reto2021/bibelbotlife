@@ -1,19 +1,19 @@
 {
   "nav": {
-    "startNow": "Get started"
+    "startNow": "Bắt đầu"
   },
-  "loader": "Loading…",
+  "loader": "Đang tải…",
   "hero": {
     "badge": {
-      "noLogin": "No login",
-      "noData": "No data",
-      "noJudgment": "No judgment"
+      "noLogin": "Không cần đăng nhập",
+      "noData": "Không dữ liệu",
+      "noJudgment": "Không phán xét"
     },
-    "title1": "The Bible.",
-    "title2": " Reimagined.",
-    "subtitle": "BibleBot knows the Bible – and asks the right questions. Not a person, but an honest companion. For meaningful conversations, deep questions, and real impulses.",
-    "ctaTelegram": "Start via Telegram",
-    "ctaMore": "Learn more",
+    "title1": "Kinh Thánh.",
+    "title2": " Được suy nghĩ lại.",
+    "subtitle": "BibleBot hiểu Kinh Thánh – và đặt những câu hỏi đúng. Không phải con người, nhưng là người bạn đồng hành chân thành. Cho những cuộc trò chuyện ý nghĩa, câu hỏi sâu sắc và cảm hứng thực sự.",
+    "ctaTelegram": "Bắt đầu qua Telegram",
+    "ctaMore": "Tìm hiểu thêm",
     "quote": "\"Come to me, all you who are weary and burdened, and I will give you rest.\"",
     "quoteRef": "– Matthew 11:28"
   },
