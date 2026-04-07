@@ -1,7 +1,7 @@
 import { MessageCircle, BookOpen, Calendar, Heart, Users, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-
+import { BibelBotChat } from "@/components/BibelBotChat";
 const WHATSAPP_LINK = "https://wa.me/41XXXXXXXXXX?text=Hallo%20BibelBot!";
 
 const Index = () => {
@@ -157,6 +157,8 @@ const Index = () => {
           </div>
         </div>
       </footer>
+
+      <BibelBotChat />
     </div>
   );
 };
