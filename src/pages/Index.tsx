@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, Shield, GraduationCap, Church, Quote, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass, Send } from "lucide-react";
 import { ReferralSection } from "@/components/ReferralSection";
 import { EntryTiles } from "@/components/EntryTiles";
+import { LifeWheelProvider } from "@/components/LifeWheel";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -51,6 +52,7 @@ const Index = () => {
   ];
 
   return (
+    <LifeWheelProvider>
     <div className="min-h-screen" style={{ background: "var(--gradient-hero)" }}>
       {/* Navigation */}
       <nav className="bg-card/80 backdrop-blur-sm border-b border-border sticky top-0 z-50">
@@ -520,6 +522,7 @@ const Index = () => {
         <BibelBotChat />
       </Suspense>
     </div>
+    </LifeWheelProvider>
   );
 };
 
