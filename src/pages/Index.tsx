@@ -555,37 +555,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Social Proof / Testimonials */}
-      <section className="py-20 px-4 bg-card/40">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 text-sm font-medium text-secondary bg-secondary/10 px-4 py-1.5 rounded-full mb-4">
-              <Quote className="h-4 w-4" />
-              Stimmen
-            </div>
-            <h2 className="text-4xl font-bold text-foreground mb-4">
-              Vertrauen aus verschiedenen Traditionen
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {TESTIMONIALS.map((t) => (
-              <Card key={t.author} className="bg-card/80 border-border">
-                <CardContent className="pt-6">
-                  <Quote className="h-6 w-6 text-primary/30 mb-3" />
-                  <p className="text-foreground/80 text-sm leading-relaxed italic mb-4">
-                    «{t.text}»
-                  </p>
-                  <Separator className="mb-3" />
-                  <p className="font-semibold text-sm text-card-foreground">{t.author}</p>
-                  <p className="text-xs text-muted-foreground">{t.role}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Spenden Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-3xl text-center">
