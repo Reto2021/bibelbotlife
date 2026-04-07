@@ -125,6 +125,9 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Entry Tiles */}
+      <EntryTiles />
+
       {/* Features Section */}
       <section id="features" className="py-20 px-4 bg-card/40">
         <div className="container mx-auto max-w-6xl">
