@@ -113,11 +113,11 @@ export function ShareButton({ title, text, url, utmSource = "share", variant = "
 
   const triggerButton = variant === "icon" ? (
     <button
-      className={`text-muted-foreground hover:text-primary transition-colors ${className}`}
+      className={`text-primary/60 hover:text-primary transition-colors p-1.5 rounded-full hover:bg-primary/10 ${className}`}
       title={t("share.label")}
       aria-label={t("share.label")}
     >
-      <Share2 className="h-3.5 w-3.5" />
+      <Share2 className="h-5 w-5" />
     </button>
   ) : (
     <Button
