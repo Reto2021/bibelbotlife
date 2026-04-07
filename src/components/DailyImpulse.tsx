@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Sparkles, ChevronRight, BookOpen, Loader2, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { openBibelBotChat } from "./BibelBotChat";
+import { openBibelBotChat } from "@/lib/chat-events";
 
 const IMPULSE_CACHE_KEY = "bibelbot-daily-impulse";
 const IMPULSE_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/daily-impulse`;

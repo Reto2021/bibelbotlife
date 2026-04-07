@@ -1,7 +1,10 @@
+import { lazy, Suspense } from "react";
 import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, Shield, GraduationCap, Church, Quote, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { BibelBotChat } from "@/components/BibelBotChat";
+
+// Lazy-load the heavy chat component – loads only when page is ready
+const BibelBotChat = lazy(() => import("@/components/BibelBotChat").then(m => ({ default: m.BibelBotChat })));
 import { DailyImpulse } from "@/components/DailyImpulse";
 import { DailySubscribe } from "@/components/DailySubscribe";
 import { Separator } from "@/components/ui/separator";
@@ -708,7 +711,9 @@ const Index = () => {
         </div>
       </footer>
 
-      <BibelBotChat />
+      <Suspense fallback={null}>
+        <BibelBotChat />
+      </Suspense>
     </div>
   );
 };
