@@ -1,4 +1,4 @@
-import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, Shield, GraduationCap, Church, Quote, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass } from "lucide-react";
+import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, Shield, GraduationCap, Church, Quote, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { BibelBotChat } from "@/components/BibelBotChat";
@@ -7,7 +7,7 @@ import { Separator } from "@/components/ui/separator";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
 
-const WHATSAPP_LINK = "https://wa.me/41XXXXXXXXXX?text=Hallo%20BibelBot!";
+const TELEGRAM_LINK = "https://t.me/BibelBot_ch_bot";
 
 const BIBLE_EDITIONS = [
   { name: "Zürcher Bibel", year: "2007", tradition: "Reformiert" },
@@ -79,9 +79,9 @@ const Index = () => {
       description: "Perfekt für Bibelkreise, Gemeinde-Gruppen und gemeinschaftliche Andachten."
     },
     {
-      icon: MessageCircle,
-      title: "WhatsApp Integration",
-      description: "Einfach und vertraut – direkt über WhatsApp, wo du bereits mit Familie und Freunden chattest."
+      icon: Send,
+      title: "Telegram Integration",
+      description: "Einfach und vertraut – direkt über Telegram, sicher und datenschutzfreundlich."
     }
   ];
 
@@ -94,9 +94,9 @@ const Index = () => {
             <BookOpen className="h-8 w-8 text-primary" />
             <span className="text-2xl font-bold text-foreground">BibelBot.ch</span>
           </div>
-          <Button asChild className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground">
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="h-4 w-4 mr-2" />
+          <Button asChild className="bg-telegram hover:bg-telegram/90 text-telegram-foreground">
+            <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer">
+              <Send className="h-4 w-4 mr-2" />
               Jetzt starten
             </a>
           </Button>
@@ -127,10 +127,10 @@ const Index = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button asChild size="lg" className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground px-8 py-4 text-lg">
-              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="h-5 w-5 mr-2" />
-                Über WhatsApp starten
+            <Button asChild size="lg" className="bg-telegram hover:bg-telegram/90 text-telegram-foreground px-8 py-4 text-lg">
+              <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer">
+                <Send className="h-5 w-5 mr-2" />
+                Über Telegram starten
               </a>
             </Button>
             <Button size="lg" variant="outline" className="border-primary/30 text-primary hover:bg-accent px-8 py-4 text-lg">
@@ -431,7 +431,7 @@ const Index = () => {
                         "Fördert kritisches Denken als Glaubensreife",
                       ].map((item, i) => (
                         <div key={i} className="flex items-start gap-2">
-                          <Check className="h-4 w-4 text-whatsapp shrink-0 mt-0.5" />
+                          <Check className="h-4 w-4 text-telegram shrink-0 mt-0.5" />
                           <span className="text-sm text-foreground/90">{item}</span>
                         </div>
                       ))}
@@ -500,7 +500,7 @@ const Index = () => {
                     "Benennt Spannungen und schwierige Texte offen",
                   ].map((item, i) => (
                     <div key={i} className="flex items-start gap-2">
-                      <CheckCircle2 className="h-4 w-4 text-whatsapp shrink-0 mt-0.5" />
+                      <CheckCircle2 className="h-4 w-4 text-telegram shrink-0 mt-0.5" />
                       <span className="text-sm">{item}</span>
                     </div>
                   ))}
@@ -636,8 +636,8 @@ const Index = () => {
             nur ehrliche Begleitung und die Weisheit der Bibel.
           </p>
           <Button asChild size="lg" className="bg-card text-foreground hover:bg-card/90 px-8 py-4 text-lg font-semibold">
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="h-5 w-5 mr-2" />
+            <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer">
+              <Send className="h-5 w-5 mr-2" />
               Jetzt Gespräch starten
             </a>
           </Button>

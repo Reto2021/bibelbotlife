@@ -600,7 +600,7 @@ export function BibelBotChat() {
             <div className="h-9 w-9 rounded-full bg-primary/10 flex items-center justify-center">
               <Sparkles className="h-4 w-4 text-primary" />
             </div>
-            <div className="absolute -bottom-0.5 -right-0.5 h-3 w-3 rounded-full bg-whatsapp border-2 border-card" />
+            <div className="absolute -bottom-0.5 -right-0.5 h-3 w-3 rounded-full bg-telegram border-2 border-card" />
           </div>
           <div>
             {isEditingName ? (
