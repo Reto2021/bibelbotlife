@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
 
+const VAPID_PUBLIC_KEY = "BLMl5bBRzhlza0ozrHEblp3BfKtbyDsbOP-n120rl6teGPFdoyFb77P9WnOZpbFs2hKyfwILmw8WQebJrp_qc7c";
+
 const SUBSCRIBE_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/subscribe-daily`;
 const TELEGRAM_LINK = "https://t.me/BibelBot_ch_bot";
 
@@ -63,7 +65,7 @@ export function DailySubscribe() {
         const registration = await navigator.serviceWorker.register("/sw.js");
         pushSubscription = await registration.pushManager.subscribe({
           userVisibleOnly: true,
-          applicationServerKey: import.meta.env.VITE_VAPID_PUBLIC_KEY,
+          applicationServerKey: VAPID_PUBLIC_KEY,
         });
       }
 
