@@ -59,7 +59,7 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <BookOpen className="h-8 w-8 text-primary" />
-            <span className="text-2xl font-bold text-foreground">BibelBot</span>
+            <span className="text-2xl font-bold text-foreground">BibleBot</span>
           </div>
           <div className="flex items-center gap-2">
             <LanguageSwitcher />
@@ -485,7 +485,7 @@ const Index = () => {
         <div className="container mx-auto max-w-4xl">
           <div className="flex items-center justify-center space-x-2 mb-6">
             <BookOpen className="h-8 w-8 text-primary" />
-            <span className="text-2xl font-bold">BibelBot.ch</span>
+            <span className="text-2xl font-bold">BibleBot.Life</span>
           </div>
           <p className="text-background/70 mb-4 text-center">{t("footer.tagline")}</p>
           <p className="text-background/50 text-xs mb-6 max-w-2xl mx-auto text-center">{t("footer.disclaimer")}</p>
@@ -497,7 +497,7 @@ const Index = () => {
                 <p>Reto Wettstein</p>
                 <p>Rebmoosweg 63</p>
                 <p>5200 Brugg, Schweiz</p>
-                <p className="mt-1">kontakt@bibelbot.ch</p>
+                <p className="mt-1">kontakt@biblebot.life</p>
               </div>
               <div>
                 <p className="font-semibold text-background/70 mb-2">{t("footer.notes")}</p>
@@ -507,7 +507,7 @@ const Index = () => {
               </div>
             </div>
             <div className="flex items-center justify-center gap-4 text-background/50 text-sm">
-              <span>© 2026 BibelBot.ch</span>
+              <span>© 2026 BibleBot.Life</span>
               <span>·</span>
               <Link to="/impressum" className="hover:text-background/80 underline underline-offset-2">{t("footer.impressum")}</Link>
               <span>·</span>
