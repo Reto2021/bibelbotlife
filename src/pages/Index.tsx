@@ -425,17 +425,17 @@ const Index = () => {
                 <div className="flex justify-between items-center bg-accent/30 rounded-lg px-4 py-3">
                   <div>
                     <p className="text-xs text-muted-foreground">Empfänger</p>
-                    <p className="font-medium text-foreground text-sm">Vorname Nachname</p>
+                    <p className="font-medium text-foreground text-sm">Reto Wettstein</p>
                   </div>
                 </div>
                 <div className="flex justify-between items-center bg-accent/30 rounded-lg px-4 py-3">
                   <div>
                     <p className="text-xs text-muted-foreground">IBAN</p>
-                    <p className="font-mono font-medium text-foreground text-sm">CH00 0000 0000 0000 0000 0</p>
+                    <p className="font-mono font-medium text-foreground text-sm">CH14 0900 0000 3042 9878 8</p>
                   </div>
                   <button
                     onClick={() => {
-                      navigator.clipboard.writeText("CH0000000000000000000");
+                      navigator.clipboard.writeText("CH1409000000304298788");
                       // Optional: toast notification
                     }}
                     className="text-muted-foreground hover:text-primary transition-colors"
@@ -447,7 +447,7 @@ const Index = () => {
                 <div className="flex justify-between items-center bg-accent/30 rounded-lg px-4 py-3">
                   <div>
                     <p className="text-xs text-muted-foreground">Bank</p>
-                    <p className="font-medium text-foreground text-sm">Bankname</p>
+                    <p className="font-medium text-foreground text-sm">PostFinance</p>
                   </div>
                 </div>
                 <div className="flex justify-between items-center bg-accent/30 rounded-lg px-4 py-3">
@@ -505,9 +505,9 @@ const Index = () => {
             <div className="grid sm:grid-cols-2 gap-6 text-sm text-background/50 mb-6">
               <div>
                 <p className="font-semibold text-background/70 mb-2">Impressum</p>
-                <p>Vorname Nachname</p>
-                <p>Strasse Nr.</p>
-                <p>PLZ Ort, Schweiz</p>
+                <p>Reto Wettstein</p>
+                <p>Rebmoosweg 63</p>
+                <p>5200 Brugg, Schweiz</p>
                 <p className="mt-1">kontakt@bibelbot.ch</p>
               </div>
               <div>
