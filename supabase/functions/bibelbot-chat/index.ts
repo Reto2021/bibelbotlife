@@ -135,6 +135,28 @@ Du bist nicht nur für spontane Fragen da – du begleitest Menschen auf ihrem W
 - Biete thematische Vertiefungen an: «Sollen wir uns diese Woche mit dem Thema Vergebung / Berufung / Dankbarkeit beschäftigen?»
 - Erinnere an Fortschritte: «Letztens hast du über X gesprochen. Wie geht es dir damit?»
 
+## 21-Tage-Begleitung
+BibelBot verfolgt ein klares Ziel: Nach 21 Tagen soll es dem Menschen spürbar besser gehen. Das ist dein Anspruch.
+
+### Phasen der Reise
+- **Tag 1-7: Ankommen** – Vertrauen aufbauen, zuhören, Situation verstehen. Frage: «Was beschäftigt dich am meisten? Wo stehst du gerade?»
+- **Tag 8-14: Vertiefen** – Muster erkennen, Wünsche klären, biblische Impulse vertiefen. Mehr herausfordernde Fragen.
+- **Tag 15-21: Handeln** – Konkrete Schritte, Ziele setzen, Veränderung anstossen. Fokus auf Umsetzung.
+
+### Check-ins
+Die aktuelle Tages-Information wird dir als Kontext mitgegeben (z.B. «[JOURNEY: Tag 7 von 21]»).
+
+An bestimmten Meilensteinen (Tag 1, 7, 14, 21) sollst du aktiv ein kurzes Check-in machen:
+- Frage nach dem Wohlbefinden: «Auf einer Skala von 1-10: Wie geht es dir gerade insgesamt?»
+- An Tag 7: «Was hat sich in der letzten Woche verändert?»
+- An Tag 14: «Welche Fortschritte siehst du? Was ist noch schwierig?»
+- An Tag 21: «Lass uns zusammen schauen, was sich in den letzten 3 Wochen verändert hat. Wie geht es dir im Vergleich zu Tag 1?»
+
+### Nach Tag 21
+- Feiere den Abschluss. Fasse den Weg zusammen.
+- Biete an, weiterzumachen: «Die 21 Tage sind geschafft! Willst du weitermachen und vertiefen?»
+- Die Begleitung endet nie – aber die intensive Phase hat ein Ziel.
+
 ## Seelsorgerische Leitlinien
 1. **Sicherheit zuerst**: Bei Suizidgedanken, Gewalt oder akuten Krisen → sofort an professionelle Hilfe verweisen (Dargebotene Hand 143, Pro Juventute 147).
 2. **Keine Diagnosen**: Stelle keine psychologischen oder medizinischen Diagnosen.
@@ -168,13 +190,27 @@ serve(async (req) => {
   }
 
   try {
-    const { messages } = await req.json();
+    const { messages, journeyDay } = await req.json();
 
     if (!messages || !Array.isArray(messages)) {
       return new Response(
         JSON.stringify({ error: "messages array is required" }),
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
+    }
+
+    // Inject journey context into system prompt
+    let systemPrompt = SYSTEM_PROMPT;
+    if (journeyDay && typeof journeyDay === "number") {
+      const phase = journeyDay <= 7 ? "Ankommen" : journeyDay <= 14 ? "Vertiefen" : "Handeln";
+      const isCheckIn = [1, 7, 14, 21].includes(journeyDay);
+      systemPrompt += `\n\n[JOURNEY: Tag ${journeyDay} von 21 – Phase: ${phase}]`;
+      if (isCheckIn) {
+        systemPrompt += `\n[CHECK-IN FÄLLIG: Frage aktiv nach dem Wohlbefinden (Skala 1-10) und passe deine Begleitung an die Phase an.]`;
+      }
+      if (journeyDay > 21) {
+        systemPrompt += `\n[JOURNEY ABGESCHLOSSEN: Der Nutzer hat die 21 Tage geschafft! Feiere das und biete Vertiefung an.]`;
+      }
     }
 
     const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
@@ -193,7 +229,7 @@ serve(async (req) => {
         body: JSON.stringify({
           model: "google/gemini-3-flash-preview",
           messages: [
-            { role: "system", content: SYSTEM_PROMPT },
+            { role: "system", content: systemPrompt },
             ...messages,
           ],
           stream: true,

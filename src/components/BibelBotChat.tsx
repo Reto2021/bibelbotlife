@@ -57,11 +57,46 @@ function saveBotName(name: string) {
 
 const AUTO_OPEN_KEY = "bibelbot-autoopened";
 const MESSAGES_KEY = "bibelbot-messages";
+const JOURNEY_START_KEY = "bibelbot-journey-start";
+const JOURNEY_CHECKINS_KEY = "bibelbot-checkins";
+
+function getJourneyDay(): number {
+  try {
+    const start = localStorage.getItem(JOURNEY_START_KEY);
+    if (!start) return 0;
+    const diff = Date.now() - parseInt(start, 10);
+    return Math.max(1, Math.floor(diff / (1000 * 60 * 60 * 24)) + 1);
+  } catch { return 0; }
+}
+
+function startJourney() {
+  try {
+    if (!localStorage.getItem(JOURNEY_START_KEY)) {
+      localStorage.setItem(JOURNEY_START_KEY, Date.now().toString());
+    }
+  } catch {}
+}
+
+function getCheckins(): Record<number, number> {
+  try {
+    const stored = localStorage.getItem(JOURNEY_CHECKINS_KEY);
+    if (stored) return JSON.parse(stored);
+  } catch {}
+  return {};
+}
+
+function saveCheckin(day: number, score: number) {
+  try {
+    const checkins = getCheckins();
+    checkins[day] = score;
+    localStorage.setItem(JOURNEY_CHECKINS_KEY, JSON.stringify(checkins));
+  } catch {}
+}
 
 const WELCOME_MESSAGE: Message = {
   role: "assistant",
   content:
-    "Schön, dass du da bist 🤗\n\nIch bin hier, um mit dir über die Bibel nachzudenken – ganz ohne Druck oder Bewertung. Du kannst mir alles erzählen, was dich gerade beschäftigt.\n\nWas liegt dir auf dem Herzen?",
+    "Schön, dass du da bist 🤗\n\nIch bin hier, um dich über die nächsten **21 Tage** zu begleiten – mit der Bibel, guten Fragen und konkreten Schritten. Kein Druck, keine Bewertung.\n\nMein Ziel: Dass es dir nach diesen 3 Wochen spürbar besser geht. 💛\n\nWas beschäftigt dich gerade am meisten?",
 };
 
 // Check if text likely contains Bible citations
@@ -151,6 +186,7 @@ export function BibelBotChat() {
   const [isOpen, setIsOpen] = useState(false);
   const [showTeaser, setShowTeaser] = useState(false);
   const [messages, setMessages] = useState<Message[]>(loadMessages);
+  const [journeyDay, setJourneyDay] = useState(getJourneyDay);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isListening, setIsListening] = useState(false);
@@ -290,6 +326,10 @@ export function BibelBotChat() {
       if (!text.trim() || isLoading) return;
 
       const userMsg: Message = { role: "user", content: text.trim() };
+      if (!journeyDay) {
+        startJourney();
+        setJourneyDay(1);
+      }
       const contextMessages = messages.length === 0 ? [WELCOME_MESSAGE, userMsg] : [...messages, userMsg];
       setMessages(contextMessages);
       setInput("");
@@ -304,7 +344,7 @@ export function BibelBotChat() {
             "Content-Type": "application/json",
             Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
           },
-          body: JSON.stringify({ messages: contextMessages }),
+          body: JSON.stringify({ messages: contextMessages, journeyDay: journeyDay || 1 }),
         });
 
         if (!resp.ok) {
@@ -462,7 +502,21 @@ export function BibelBotChat() {
                 <Pencil className="h-3 w-3 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
               </button>
             )}
-            <p className="text-xs text-muted-foreground">Immer für dich da · Zitate geprüft</p>
+            <p className="text-xs text-muted-foreground">
+              {journeyDay > 0 && journeyDay <= 21
+                ? `Tag ${journeyDay} von 21 · ${journeyDay <= 7 ? "Ankommen" : journeyDay <= 14 ? "Vertiefen" : "Handeln"}`
+                : journeyDay > 21
+                  ? "21 Tage geschafft! 🎉"
+                  : "Deine 21-Tage-Begleitung"}
+            </p>
+            {journeyDay > 0 && (
+              <div className="w-full bg-border rounded-full h-1 mt-1">
+                <div
+                  className="bg-primary h-1 rounded-full transition-all duration-500"
+                  style={{ width: `${Math.min(100, (journeyDay / 21) * 100)}%` }}
+                />
+              </div>
+            )}
           </div>
         </div>
         <button
