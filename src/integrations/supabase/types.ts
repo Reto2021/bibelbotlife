@@ -81,6 +81,7 @@ export type Database = {
         Row: {
           channel: string
           created_at: string
+          first_name: string | null
           id: string
           is_active: boolean
           phone_number: string | null
@@ -91,6 +92,7 @@ export type Database = {
         Insert: {
           channel: string
           created_at?: string
+          first_name?: string | null
           id?: string
           is_active?: boolean
           phone_number?: string | null
@@ -101,6 +103,7 @@ export type Database = {
         Update: {
           channel?: string
           created_at?: string
+          first_name?: string | null
           id?: string
           is_active?: boolean
           phone_number?: string | null

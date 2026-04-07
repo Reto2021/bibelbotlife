@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { BibelBotChat } from "@/components/BibelBotChat";
 import { DailyImpulse } from "@/components/DailyImpulse";
+import { DailySubscribe } from "@/components/DailySubscribe";
 import { Separator } from "@/components/ui/separator";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
@@ -380,6 +381,13 @@ const Index = () => {
               In der Schweiz reden wir nicht gross über Glauben. Das muss auch nicht sein. Aber wer Fragen hat, verdient ehrliche Antworten – ohne Predigt, ohne Mitgliedschaft, ohne Hintergedanken.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Daily Subscribe Widget */}
+      <section className="py-20 px-4 bg-card/40">
+        <div className="container mx-auto max-w-lg">
+          <DailySubscribe />
         </div>
       </section>
 
