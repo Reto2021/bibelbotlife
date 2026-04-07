@@ -1,7 +1,25 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://bibelbot.ch/" },
+    { "@type": "ListItem", "position": 2, "name": "Impressum", "item": "https://bibelbot.ch/impressum" }
+  ]
+};
+
 const Impressum = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = JSON.stringify(breadcrumbJsonLd);
+    script.id = "breadcrumb-jsonld";
+    document.head.appendChild(script);
+    return () => { document.getElementById("breadcrumb-jsonld")?.remove(); };
+  }, []);
   return (
     <div className="min-h-screen bg-background text-foreground">
       <div className="max-w-2xl mx-auto px-4 py-12">
