@@ -128,10 +128,28 @@ function QABadge({ qa }: { qa: QAResult | "loading" | "skipped" }) {
   );
 }
 
+function loadMessages(): Message[] {
+  try {
+    const stored = localStorage.getItem(MESSAGES_KEY);
+    if (stored) return JSON.parse(stored);
+  } catch {}
+  return [];
+}
+
+function saveMessages(msgs: Message[]) {
+  try {
+    const clean = msgs.map(({ qa, ...rest }) => ({
+      ...rest,
+      ...(qa && qa !== "loading" ? { qa } : {}),
+    }));
+    localStorage.setItem(MESSAGES_KEY, JSON.stringify(clean));
+  } catch {}
+}
+
 export function BibelBotChat() {
   const [isOpen, setIsOpen] = useState(false);
   const [showTeaser, setShowTeaser] = useState(false);
-  const [messages, setMessages] = useState<Message[]>([]);
+  const [messages, setMessages] = useState<Message[]>(loadMessages);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isListening, setIsListening] = useState(false);
@@ -241,6 +259,11 @@ export function BibelBotChat() {
       return () => clearTimeout(timer);
     }
   }, [isOpen, messages.length, showWelcome]);
+
+  // Persist messages to localStorage
+  useEffect(() => {
+    if (messages.length > 0) saveMessages(messages);
+  }, [messages]);
 
   useEffect(() => {
     if (isOpen) setShowTeaser(false);
