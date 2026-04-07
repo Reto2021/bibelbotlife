@@ -394,7 +394,28 @@ serve(async (req) => {
       );
     }
 
-    return new Response(response.body, {
+    // Transform stream to fix spelling in SSE chunks
+    const reader = response.body!.getReader();
+    const decoder = new TextDecoder();
+    const encoder = new TextEncoder();
+
+    const stream = new ReadableStream({
+      async pull(controller) {
+        const { done, value } = await reader.read();
+        if (done) {
+          controller.close();
+          return;
+        }
+        let text = decoder.decode(value, { stream: true });
+        // Fix spelling in SSE data lines containing content
+        text = text.replace(/"content":"([^"]*)"/g, (_match, content) => {
+          return `"content":"${fixSpelling(content)}"`;
+        });
+        controller.enqueue(encoder.encode(text));
+      },
+    });
+
+    return new Response(stream, {
       headers: { ...corsHeaders, "Content-Type": "text/event-stream" },
     });
   } catch (e) {
