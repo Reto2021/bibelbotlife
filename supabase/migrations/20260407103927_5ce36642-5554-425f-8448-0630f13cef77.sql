@@ -1,0 +1,1 @@
+ALTER TABLE public.daily_subscribers ADD COLUMN first_name TEXT;
