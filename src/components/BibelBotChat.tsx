@@ -566,9 +566,9 @@ export function BibelBotChat() {
         {messages.map((msg, i) => (
           <div key={i} className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
             <div className="max-w-[85%]">
-              <div className={`rounded-2xl px-4 py-2.5 text-sm leading-relaxed ${msg.role === "user" ? "bg-primary text-primary-foreground rounded-br-md" : "bg-muted text-foreground rounded-bl-md"}`}>
+              <div className={`rounded-2xl ${s.msgPadding} ${s.text} leading-relaxed ${msg.role === "user" ? "bg-primary text-primary-foreground rounded-br-md" : "bg-muted text-foreground rounded-bl-md"}`}>
                 {msg.role === "assistant" ? (
-                  <div className="prose prose-sm max-w-none dark:prose-invert">
+                  <div className={`prose ${isSenior ? "prose-lg" : "prose-sm"} max-w-none dark:prose-invert`}>
                     <ReactMarkdown components={{
                       p: ({ children }) => <p>{makeRefsClickable(children, sendMessage)}</p>,
                       li: ({ children }) => <li>{makeRefsClickable(children, sendMessage)}</li>,
