@@ -1,4 +1,5 @@
 import { Outlet, useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { useAuth } from "@/hooks/use-auth";
 import {
   Sidebar,
@@ -15,21 +16,21 @@ import {
 } from "@/components/ui/sidebar";
 import { NavLink } from "@/components/NavLink";
 import { Heart, Cross, Baby, BookHeart, LogOut, Home, User } from "lucide-react";
-import { Button } from "@/components/ui/button";
-
-const menuItems = [
-  { title: "Übersicht", url: "/mein-bereich", icon: Home },
-  { title: "Abdankung", url: "/mein-bereich/abdankung", icon: Cross },
-  { title: "Hochzeit", url: "/mein-bereich/hochzeit", icon: Heart },
-  { title: "Taufe", url: "/mein-bereich/taufe", icon: Baby },
-  { title: "Konfirmation", url: "/mein-bereich/konfirmation", icon: BookHeart },
-];
 
 function MeinBereichSidebar() {
+  const { t } = useTranslation();
   const { state } = useSidebar();
   const collapsed = state === "collapsed";
-  const { user, signOut } = useAuth();
+  const { signOut } = useAuth();
   const navigate = useNavigate();
+
+  const menuItems = [
+    { title: t("meinBereich.overview"), url: "/mein-bereich", icon: Home },
+    { title: t("meinBereich.funeral"), url: "/mein-bereich/abdankung", icon: Cross },
+    { title: t("meinBereich.wedding"), url: "/mein-bereich/hochzeit", icon: Heart },
+    { title: t("meinBereich.baptismCeremony"), url: "/mein-bereich/taufe", icon: Baby },
+    { title: t("meinBereich.confirmation"), url: "/mein-bereich/konfirmation", icon: BookHeart },
+  ];
 
   const handleSignOut = async () => {
     await signOut();
@@ -42,12 +43,12 @@ function MeinBereichSidebar() {
         <SidebarGroup>
           <SidebarGroupLabel className="flex items-center gap-2">
             <User className="h-4 w-4" />
-            {!collapsed && "Mein Bereich"}
+            {!collapsed && t("meinBereich.sidebarLabel")}
           </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {menuItems.map((item) => (
-                <SidebarMenuItem key={item.title}>
+                <SidebarMenuItem key={item.url}>
                   <SidebarMenuButton asChild>
                     <NavLink
                       to={item.url}
@@ -72,7 +73,7 @@ function MeinBereichSidebar() {
                 <SidebarMenuButton asChild>
                   <button onClick={handleSignOut} className="hover:bg-muted/50 w-full flex items-center">
                     <LogOut className="mr-2 h-4 w-4" />
-                    {!collapsed && <span>Abmelden</span>}
+                    {!collapsed && <span>{t("meinBereich.logout")}</span>}
                   </button>
                 </SidebarMenuButton>
               </SidebarMenuItem>
