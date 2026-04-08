@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { Church, ArrowLeft, Send, Users, BarChart3, Palette } from "lucide-react";
+import { Church, ArrowLeft, Send, Handshake, Landmark, Sprout, Castle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -13,10 +13,10 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 
 const tiers = [
-  { key: "free", setup: 0, annual: 0, icon: Church, popular: false },
-  { key: "community", setup: 490, annual: 790, icon: Users, popular: false },
-  { key: "gemeinde", setup: 990, annual: 1490, icon: BarChart3, popular: true },
-  { key: "kirche", setup: 1990, annual: 2990, icon: Palette, popular: false },
+  { key: "free", setup: 0, annual: 0, icon: Sprout, popular: false },
+  { key: "community", setup: 490, annual: 790, icon: Handshake, popular: false },
+  { key: "gemeinde", setup: 990, annual: 1490, icon: Landmark, popular: true },
+  { key: "kirche", setup: 1990, annual: 2990, icon: Castle, popular: false },
 ];
 
 const ForChurches = () => {
