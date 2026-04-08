@@ -1,6 +1,6 @@
 import { lazy, Suspense } from "react";
 import { useTranslation } from "react-i18next";
-import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, Shield, GraduationCap, Church, Quote, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass, Send } from "lucide-react";
+import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, Shield, GraduationCap, Church, Quote, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass, Send, Building2 } from "lucide-react";
 import { ChurchBanner } from "@/components/ChurchBanner";
 import { ReferralSection } from "@/components/ReferralSection";
 import { EntryTiles } from "@/components/EntryTiles";
