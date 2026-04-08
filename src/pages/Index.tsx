@@ -70,10 +70,21 @@ const Index = () => {
                 {t("church.badge")}
               </Link>
             </Button>
-            <Button asChild variant="ghost" size="sm" className="hidden md:inline-flex">
+            <Button asChild variant="ghost" size="sm" className="hidden sm:inline-flex">
               <Link to="/for-institutions">
                 <Building2 className="h-4 w-4 mr-1" />
                 {t("institutions.badge")}
+              </Link>
+            </Button>
+            {/* Mobile: icon-only buttons */}
+            <Button asChild variant="ghost" size="icon" className="sm:hidden h-8 w-8">
+              <Link to="/for-churches" aria-label={t("church.badge")}>
+                <Church className="h-4 w-4" />
+              </Link>
+            </Button>
+            <Button asChild variant="ghost" size="icon" className="sm:hidden h-8 w-8">
+              <Link to="/for-institutions" aria-label={t("institutions.badge")}>
+                <Building2 className="h-4 w-4" />
               </Link>
             </Button>
             <LanguageSwitcher />
