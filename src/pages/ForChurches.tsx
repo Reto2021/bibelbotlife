@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { Church, ArrowLeft, Send, Handshake, Landmark, Sprout, Castle, Heart, Building2, Hospital, ShieldCheck, Swords } from "lucide-react";
+import { Church, ArrowLeft, Send, Handshake, Sprout, Heart, Building2, Hospital, ShieldCheck, Swords, Footprints, Lighthouse } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
