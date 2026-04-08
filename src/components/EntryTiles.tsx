@@ -15,7 +15,7 @@ type TileConfig = {
   special?: "lifewheel" | "sevenwhys";
 };
 
-const tileConfigs: TileConfig[] = [
+const allTiles: TileConfig[] = [
   { emoji: "🎡", key: "lifewheel", accentClass: "bg-gradient-to-r from-primary to-secondary", bgClass: "bg-card", special: "lifewheel" },
   { emoji: "🔍", key: "sevenwhys", accentClass: "bg-gradient-to-r from-secondary to-primary", bgClass: "bg-card", special: "sevenwhys" },
   { emoji: "🕊️", key: "baptism", accentClass: "bg-primary", bgClass: "bg-card" },
@@ -24,9 +24,6 @@ const tileConfigs: TileConfig[] = [
   { emoji: "😰", key: "anxiety", accentClass: "bg-secondary", bgClass: "bg-card" },
   { emoji: "🌅", key: "newstart", accentClass: "bg-secondary", bgClass: "bg-card" },
   { emoji: "🙌", key: "gratitude", accentClass: "bg-primary", bgClass: "bg-card" },
-];
-
-const moreTileConfigs: TileConfig[] = [
   { emoji: "💐", key: "condolence", accentClass: "bg-secondary", bgClass: "bg-card" },
   { emoji: "💍", key: "wedding", accentClass: "bg-primary", bgClass: "bg-card" },
   { emoji: "🙏", key: "confession", accentClass: "bg-primary", bgClass: "bg-card" },
@@ -51,7 +48,6 @@ const moreTileConfigs: TileConfig[] = [
 ];
 
 export function EntryTiles() {
-  const [showMore, setShowMore] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
@@ -76,7 +72,7 @@ export function EntryTiles() {
       el.removeEventListener("scroll", checkScroll);
       window.removeEventListener("resize", checkScroll);
     };
-  }, [checkScroll, showMore]);
+  }, [checkScroll]);
 
   const scroll = (direction: "left" | "right") => {
     const el = scrollRef.current;
@@ -96,7 +92,10 @@ export function EntryTiles() {
     }
   };
 
-  const visibleTiles = showMore ? [...tileConfigs, ...moreTileConfigs] : tileConfigs;
+  // Split tiles into 2 rows
+  const half = Math.ceil(allTiles.length / 2);
+  const row1 = allTiles.slice(0, half);
+  const row2 = allTiles.slice(half);
 
   return (
     <section className="py-12 px-4">
@@ -110,7 +109,7 @@ export function EntryTiles() {
           </p>
         </div>
 
-        {/* Horizontal carousel with arrows */}
+        {/* 2-row horizontal carousel */}
         <div className="relative group/carousel">
           {/* Left arrow */}
           {canScrollLeft && (
@@ -144,29 +143,38 @@ export function EntryTiles() {
 
           <div
             ref={scrollRef}
-            className="flex gap-3 overflow-x-auto scrollbar-hide pb-2"
+            className="overflow-x-auto scrollbar-hide"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
-            {visibleTiles.map((tile, i) => (
-              <TileCard
-                key={tile.key}
-                tile={tile}
-                title={t(`tiles.${tile.key}.title`)}
-                desc={t(`tiles.${tile.key}.desc`)}
-                onClick={() => handleClick(tile)}
-                index={i}
-              />
-            ))}
+            <div className="flex flex-col gap-3 w-max">
+              {/* Row 1 */}
+              <div className="flex gap-3">
+                {row1.map((tile, i) => (
+                  <TileCard
+                    key={tile.key}
+                    tile={tile}
+                    title={t(`tiles.${tile.key}.title`)}
+                    desc={t(`tiles.${tile.key}.desc`)}
+                    onClick={() => handleClick(tile)}
+                    index={i}
+                  />
+                ))}
+              </div>
+              {/* Row 2 */}
+              <div className="flex gap-3">
+                {row2.map((tile, i) => (
+                  <TileCard
+                    key={tile.key}
+                    tile={tile}
+                    title={t(`tiles.${tile.key}.title`)}
+                    desc={t(`tiles.${tile.key}.desc`)}
+                    onClick={() => handleClick(tile)}
+                    index={i}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
-        </div>
-
-        <div className="text-center mt-6">
-          <button
-            onClick={() => setShowMore(!showMore)}
-            className="text-sm px-6 py-2.5 rounded-full border border-border bg-card text-muted-foreground hover:text-foreground hover:border-primary/40 transition-all duration-200"
-          >
-            {showMore ? t("tiles.showLess", "Weniger anzeigen") : t("tiles.showMore", "Mehr Themen entdecken")}
-          </button>
         </div>
       </div>
     </section>
