@@ -34,6 +34,8 @@ const RecordsPage = lazy(() => import("./pages/dashboard/RecordsPage"));
 const TeamPage = lazy(() => import("./pages/dashboard/TeamPage"));
 const SettingsPage = lazy(() => import("./pages/dashboard/SettingsPage"));
 const ConductorMode = lazy(() => import("./pages/dashboard/ConductorMode"));
+const MeinBereich = lazy(() => import("./pages/MeinBereich"));
+const MeinBereichHome = lazy(() => import("./pages/mein-bereich/MeinBereichHome"));
 
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 
@@ -122,6 +124,9 @@ const App = () => {
                     <Route path="records" element={<RecordsPage />} />
                     <Route path="team" element={<TeamPage />} />
                     <Route path="settings" element={<SettingsPage />} />
+                  </Route>
+                  <Route path="/mein-bereich" element={<ProtectedRoute><MeinBereich /></ProtectedRoute>}>
+                    <Route index element={<MeinBereichHome />} />
                   </Route>
                   <Route path="*" element={<NotFound />} />
                 </Routes>
