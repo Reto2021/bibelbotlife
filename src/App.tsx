@@ -125,6 +125,9 @@ const App = () => {
                     <Route path="team" element={<TeamPage />} />
                     <Route path="settings" element={<SettingsPage />} />
                   </Route>
+                  <Route path="/mein-bereich" element={<ProtectedRoute><MeinBereich /></ProtectedRoute>}>
+                    <Route index element={<MeinBereichHome />} />
+                  </Route>
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Suspense>
