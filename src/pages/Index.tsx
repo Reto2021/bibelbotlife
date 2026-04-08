@@ -64,6 +64,12 @@ const Index = () => {
             <span className="text-2xl font-bold text-foreground">BibleBot</span>
           </div>
           <div className="flex items-center gap-2">
+            <Button asChild variant="ghost" size="sm" className="hidden sm:inline-flex">
+              <Link to="/for-churches">
+                <Church className="h-4 w-4 mr-1" />
+                {t("church.badge")}
+              </Link>
+            </Button>
             <LanguageSwitcher />
             <DarkModeToggle />
             <Button asChild className="bg-telegram hover:bg-telegram/90 text-telegram-foreground">
