@@ -1,31 +1,32 @@
 
 
-# Daily-Impulse Prompt verbessern: Grammatik & Schweizer Hochdeutsch
+# Mehr Abwechslung bei Tile-Antworten
 
 ## Problem
-Die KI generiert grammatikalisch falsche Sätze wie "Vergessen Gottes deine Fehler wirklich?" — unnatürliche Wortstellung, fehlerhafte Genitiv-Konstruktionen.
+Gleiche Tile → gleicher Prompt → ähnliche Antwort. Die KI hat keinen Kontext, dass der Nutzer dasselbe Thema schon mal gewählt hat.
 
-## Ursache
-Der SYSTEM_PROMPT (Zeile 39-57) enthält keine expliziten Grammatikregeln für den Teaser. Das Modell (`gemini-2.5-flash-lite`) neigt bei kurzen, "packenden" Sätzen zu unnatürlichen Konstruktionen.
+## Lösung: Varianz-Instruktion im System-Prompt + Kontext-Hinweis
 
-## Änderungen
+### 1. Temperature erhöhen (Edge Function)
+**Datei**: `supabase/functions/bibelbot-chat/index.ts`
 
-### 1. SYSTEM_PROMPT erweitern (Zeile 39-57)
-Neue Regeln zum bestehenden Regeln-Block hinzufügen:
+`temperature: 1.0` explizit setzen im API-Call, damit das Modell kreativer antwortet.
 
-- **Grammatikregel für Teaser**: "Der Teaser muss grammatikalisch korrektes Schweizer Hochdeutsch sein. Natürliche Satzstellung: Subjekt-Verb-Objekt. KEINE invertierten Genitiv-Konstruktionen wie 'Vergessen Gottes' — korrekt wäre 'Vergibt Gott wirklich?'"
-- **Fragesätze-Regel**: "Fragesätze beginnen mit dem Verb oder einem Fragewort (Wer, Was, Warum, Wie). Beispiele: 'Vergibt Gott wirklich alles?' (NICHT 'Vergeben Gottes alles?'), 'Warum lohnt sich Vertrauen?' (NICHT 'Lohnen des Vertrauens sich?')"
-- **Positive Beispiele** im Prompt für Teaser-Stil:
-  - "Warum Vergebung dein Leben verändert"
-  - "Gott vergisst – aber wie geht das?"
-  - "Drei Worte, die alles verändern"
+### 2. Varianz-Anweisung im System-Prompt
+Ergänzung im `SYSTEM_PROMPT`:
 
-### 2. Modell upgraden (Zeile 111)
-Von `google/gemini-2.5-flash-lite` auf `google/gemini-2.5-flash` wechseln — bessere Sprachqualität bei minimalem Mehraufwand, weniger Grammatikfehler.
+> «Wenn ein Nutzer ein allgemeines Thema anspricht (z.B. Taufe, Gebet, Angst), wähle JEDES MAL einen anderen Einstieg: andere Bibelstelle, andere Perspektive, anderer Ton (mal persönlich, mal historisch, mal herausfordernd, mal tröstend). Wiederhole dich nie.»
 
-### 3. Grammatik-Postprocessing (optional, nach fixSpelling)
-Einfache Prüfung auf bekannte Fehlmuster wie doppelten Genitiv oder falsche Verbformen, die per Regex korrigiert werden können.
+### 3. Zufällige Prompt-Varianten (optional, mehr Aufwand)
+In `EntryTiles.tsx`: Pro Tile 2–3 leicht unterschiedliche Prompt-Varianten definieren und zufällig eine wählen. Z.B. für "Taufe":
+- Variante A: «Was bedeutet die Taufe?»
+- Variante B: «Erzähl mir von der Taufe in der Bibel – überrasche mich!»
+- Variante C: «Warum lassen sich Menschen taufen?»
 
-## Betroffene Datei
-- `supabase/functions/daily-impulse/index.ts` — SYSTEM_PROMPT + Modell-Zeile
+### Empfehlung
+Schritte 1 + 2 sind schnell und wirkungsvoll. Schritt 3 bringt die grösste Abwechslung, ist aber mehr Arbeit (i18n-Keys pro Variante).
+
+## Betroffene Dateien
+- `supabase/functions/bibelbot-chat/index.ts` (temperature + Prompt-Ergänzung)
+- Optional: `src/components/EntryTiles.tsx` + `de.json` / `en.json` (Prompt-Varianten)
 
