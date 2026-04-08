@@ -11,6 +11,7 @@ import {
   Html,
   Preview,
   Text,
+  Hr,
 } from 'npm:@react-email/components@0.0.22'
 
 interface MagicLinkEmailProps {
@@ -22,21 +23,21 @@ export const MagicLinkEmail = ({
   siteName,
   confirmationUrl,
 }: MagicLinkEmailProps) => (
-  <Html lang="en" dir="ltr">
+  <Html lang="de" dir="ltr">
     <Head />
-    <Preview>Your login link for {siteName}</Preview>
+    <Preview>Dein Login-Link für {siteName}</Preview>
     <Body style={main}>
       <Container style={container}>
-        <Heading style={h1}>Your login link</Heading>
+        <Heading style={h1}>Dein Login-Link</Heading>
         <Text style={text}>
-          Click the button below to log in to {siteName}. This link will expire
-          shortly.
+          Klicke auf den Button, um dich bei {siteName} anzumelden. Dieser Link ist nur kurze Zeit gültig.
         </Text>
         <Button style={button} href={confirmationUrl}>
-          Log In
+          Jetzt anmelden
         </Button>
+        <Hr style={hr} />
         <Text style={footer}>
-          If you didn't request this link, you can safely ignore this email.
+          Falls du diesen Link nicht angefordert hast, kannst du diese E-Mail ignorieren.
         </Text>
       </Container>
     </Body>
@@ -45,26 +46,10 @@ export const MagicLinkEmail = ({
 
 export default MagicLinkEmail
 
-const main = { backgroundColor: '#ffffff', fontFamily: 'Arial, sans-serif' }
-const container = { padding: '20px 25px' }
-const h1 = {
-  fontSize: '22px',
-  fontWeight: 'bold' as const,
-  color: '#000000',
-  margin: '0 0 20px',
-}
-const text = {
-  fontSize: '14px',
-  color: '#55575d',
-  lineHeight: '1.5',
-  margin: '0 0 25px',
-}
-const button = {
-  backgroundColor: '#000000',
-  color: '#ffffff',
-  fontSize: '14px',
-  borderRadius: '8px',
-  padding: '12px 20px',
-  textDecoration: 'none',
-}
-const footer = { fontSize: '12px', color: '#999999', margin: '30px 0 0' }
+const main = { backgroundColor: '#ffffff', fontFamily: "'Helvetica Neue', Arial, sans-serif" }
+const container = { padding: '32px 28px', maxWidth: '520px', margin: '0 auto' }
+const h1 = { fontSize: '22px', fontWeight: 'bold' as const, color: '#1a2a3a', margin: '0 0 20px' }
+const text = { fontSize: '15px', color: '#4a5568', lineHeight: '1.6', margin: '0 0 24px' }
+const button = { backgroundColor: 'hsl(32, 65%, 52%)', color: '#ffffff', fontSize: '15px', borderRadius: '0.5rem', padding: '12px 24px', textDecoration: 'none', fontWeight: 'bold' as const }
+const hr = { borderColor: '#e2c496', margin: '24px 0' }
+const footer = { fontSize: '12px', color: '#999999', margin: '0' }
