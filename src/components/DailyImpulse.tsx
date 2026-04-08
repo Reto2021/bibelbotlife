@@ -339,12 +339,9 @@ export function DailyImpulse() {
           </div>
         )}
         {isSubscribed && (
-          <button
-            onClick={() => { setIsExpanded(true); setShowChannels(true); }}
-            className="hidden sm:flex text-xs text-primary/70 items-center gap-1 shrink-0 hover:text-primary transition-colors cursor-pointer"
-          >
-            ✓ {t("impulse.alreadySubscribed")} · {t("subscribe.channelLabel", "Kanal ändern")}
-          </button>
+          <span className="hidden sm:flex text-xs text-primary/70 items-center gap-1 shrink-0">
+            ✓ {t("impulse.alreadySubscribed")}
+          </span>
         )}
       </div>
 
