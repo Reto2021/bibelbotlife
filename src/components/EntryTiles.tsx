@@ -51,7 +51,6 @@ const moreTileConfigs: TileConfig[] = [
 
 export function EntryTiles() {
   const [showMore, setShowMore] = useState(false);
-  const [showMore, setShowMore] = useState(false);
 
   const { t } = useTranslation();
   const { track } = useTrack();
