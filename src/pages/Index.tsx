@@ -70,6 +70,12 @@ const Index = () => {
                 {t("church.badge")}
               </Link>
             </Button>
+            <Button asChild variant="ghost" size="sm" className="hidden md:inline-flex">
+              <Link to="/for-institutions">
+                <Building2 className="h-4 w-4 mr-1" />
+                {t("institutions.badge")}
+              </Link>
+            </Button>
             <LanguageSwitcher />
             <DarkModeToggle />
             <Button asChild className="bg-telegram hover:bg-telegram/90 text-telegram-foreground">
