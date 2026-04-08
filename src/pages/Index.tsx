@@ -328,14 +328,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Daily Subscribe Widget */}
-      <section className="py-20 px-4 bg-card/40">
-        <div className="container mx-auto max-w-lg">
-          <Suspense fallback={<div className="h-40" />}>
-            <DailySubscribe />
-          </Suspense>
-        </div>
-      </section>
+      {/* Subscribe CTA is now integrated in the DailyImpulse banner */}
       {/* Referral / Empfehlen */}
       <ReferralSection />
 

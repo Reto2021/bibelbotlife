@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { useTranslation } from "react-i18next";
-import { Sparkles, ChevronRight, BookOpen, Loader2, MessageCircle, Image, Download } from "lucide-react";
+import { Sparkles, ChevronRight, BookOpen, Loader2, MessageCircle, Image, Download, Bell, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { openBibelBotChat } from "@/lib/chat-events";
 import { ShareButton } from "@/components/ShareButton";
@@ -9,6 +9,10 @@ import { useToast } from "@/hooks/use-toast";
 const IMPULSE_CACHE_KEY = "bibelbot-daily-impulse";
 const IMPULSE_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/daily-impulse`;
 const SHARE_IMAGE_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/impulse-share-image`;
+const SUBSCRIBE_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/subscribe-daily`;
+const TELEGRAM_LINK = "https://t.me/meinbibelbot";
+const VAPID_PUBLIC_KEY = "BLMl5bBRzhlza0ozrHEblp3BfKtbyDsbOP-n120rl6teGPFdoyFb77P9WnOZpbFs2hKyfwILmw8WQebJrp_qc7c";
+const SUBSCRIBED_KEY = "bibelbot-daily-subscribed";
 
 type Impulse = {
   topic: string;
@@ -57,13 +61,15 @@ function cacheShareImage(url: string, date: string) {
 }
 
 export function DailyImpulse() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { toast } = useToast();
   const [impulse, setImpulse] = useState<Impulse | null>(getCachedImpulse);
   const [isExpanded, setIsExpanded] = useState(false);
   const [isLoading, setIsLoading] = useState(!impulse);
   const [shareImageUrl, setShareImageUrl] = useState<string | null>(getCachedShareImage);
   const [isGeneratingImage, setIsGeneratingImage] = useState(false);
+  const [isSubscribed, setIsSubscribed] = useState(() => localStorage.getItem(SUBSCRIBED_KEY) === "1");
+  const [isSubscribing, setIsSubscribing] = useState(false);
   const [showImagePreview, setShowImagePreview] = useState(false);
 
   useEffect(() => {
@@ -213,6 +219,49 @@ export function DailyImpulse() {
     );
   };
 
+  const handleSubscribePush = useCallback(async () => {
+    setIsSubscribing(true);
+    try {
+      const isInIframe = (() => { try { return window.self !== window.top; } catch { return true; } })();
+      const isPreview = window.location.hostname.includes("lovableproject.com") || window.location.hostname.includes("id-preview--");
+      if (isInIframe || isPreview) {
+        toast({ title: t("subscribe.toastPushPreview"), description: t("subscribe.toastPushPreviewDesc"), variant: "destructive" });
+        return;
+      }
+      if (!("Notification" in window) || !("serviceWorker" in navigator)) {
+        toast({ title: t("subscribe.toastNotSupported"), description: t("subscribe.toastNotSupportedDesc"), variant: "destructive" });
+        return;
+      }
+      const permission = await Notification.requestPermission();
+      if (permission !== "granted") {
+        toast({ title: t("subscribe.toastPermDenied"), description: t("subscribe.toastPermDeniedDesc"), variant: "destructive" });
+        return;
+      }
+      const registration = await navigator.serviceWorker.register("/sw.js");
+      const pushSubscription = await registration.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: VAPID_PUBLIC_KEY });
+      const resp = await fetch(SUBSCRIBE_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ channel: "push", push_subscription: pushSubscription.toJSON(), language: i18n.language }),
+      });
+      if (!resp.ok) throw new Error("Subscribe failed");
+      localStorage.setItem(SUBSCRIBED_KEY, "1");
+      setIsSubscribed(true);
+      toast({ title: t("subscribe.toastSuccess"), description: t("subscribe.toastSuccessDesc") });
+    } catch (e) {
+      toast({ title: t("subscribe.toastError"), description: e instanceof Error ? e.message : t("subscribe.toastErrorDesc"), variant: "destructive" });
+    } finally {
+      setIsSubscribing(false);
+    }
+  }, [toast, t, i18n.language]);
+
+  const handleSubscribeTelegram = useCallback(() => {
+    window.open(TELEGRAM_LINK, "_blank");
+    localStorage.setItem(SUBSCRIBED_KEY, "1");
+    setIsSubscribed(true);
+    toast({ title: t("subscribe.toastTelegram"), description: t("subscribe.toastTelegramDesc") });
+  }, [toast, t]);
+
   if (isLoading) {
     return (
       <div className="bg-primary/10 dark:bg-primary/15 border-b border-primary/20">
@@ -337,6 +386,49 @@ export function DailyImpulse() {
                 variant="button"
               />
             </div>
+
+            {/* Inline Subscribe CTA */}
+            {!isSubscribed && (
+              <div className="mt-4 pt-4 border-t border-primary/15">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
+                  <p className="text-sm text-foreground/80 font-medium flex items-center gap-1.5">
+                    <Bell className="h-3.5 w-3.5 text-primary" />
+                    {t("impulse.subscribeCta")}
+                  </p>
+                  <div className="flex gap-2">
+                    <Button
+                      size="sm"
+                      onClick={handleSubscribePush}
+                      disabled={isSubscribing}
+                      className="text-xs h-7 bg-primary hover:bg-primary/90"
+                    >
+                      {isSubscribing ? (
+                        <Loader2 className="h-3 w-3 mr-1 animate-spin" />
+                      ) : (
+                        <Bell className="h-3 w-3 mr-1" />
+                      )}
+                      Push
+                    </Button>
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      onClick={handleSubscribeTelegram}
+                      className="text-xs h-7 border-primary/30 text-primary hover:bg-primary/10"
+                    >
+                      <Send className="h-3 w-3 mr-1" />
+                      Telegram
+                    </Button>
+                  </div>
+                </div>
+                <p className="text-[10px] text-muted-foreground mt-1.5">{t("subscribe.footNote")}</p>
+              </div>
+            )}
+
+            {isSubscribed && (
+              <p className="mt-3 text-xs text-primary/70 flex items-center gap-1">
+                ✓ {t("impulse.alreadySubscribed")}
+              </p>
+            )}
           </div>
         </div>
       )}
