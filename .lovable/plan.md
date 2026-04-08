@@ -1,88 +1,94 @@
 
+# Phase 7: Super-Admin Panel
 
-# Phase 6: Team, Register & Einstellungen
-
-Phase 6 schliesst den Messeplaner ab. Es geht um drei Bereiche: **Team-Verwaltung**, **Amtshandlungs-Register** und **Gemeinde-Einstellungen**.
-
----
-
-## 1. Team-Verwaltung (`/dashboard/team`)
-
-Mitarbeitende der Gemeinde verwalten, Rollen zuteilen, Verfügbarkeiten erfassen.
-
-**Funktionen:**
-- Liste aller Team-Mitglieder mit Name, Rolle, E-Mail, Status (aktiv/inaktiv)
-- Erstellen / Bearbeiten / Löschen von Mitgliedern
-- Rollen: Pfarrer, Musiker, Lektor, Sakristei, Techniker, Freiwillige
-- Verfügbarkeits-Ansicht (einfache Wochentag-Checkboxen)
-- Optional: Mitglied einem Service zuweisen (Verknüpfung Service ↔ Team-Member)
-
-**Datenmodell:** `service_team_members` Tabelle existiert bereits mit allen nötigen Feldern (name, role, email, church_id, availability, is_active).
-
-**UI:** Tabellen-Ansicht mit Dialog zum Hinzufügen/Bearbeiten. Filter nach Rolle.
+Internes Verwaltungs-Panel für BibleBot.Life-Betreiber. Geschützte Route `/admin` mit Rollen-basiertem Zugang.
 
 ---
 
-## 2. Amtshandlungs-Register (`/dashboard/records`)
+## 1. DB: Admin-Rollen-System
 
-Offizielle kirchliche Handlungen dokumentieren — Taufen, Trauungen, Abdankungen.
-
-**Funktionen:**
-- Neuen Eintrag erfassen: Typ (Taufe/Trauung/Abdankung), Datum, beteiligte Personen, Pfarrer, Notizen
-- Tabellarische Übersicht mit Suche und Filter nach Typ/Jahr
-- PDF-Export einer Einzelhandlung oder Jahresübersicht (Kirchenbuch-Format)
-- Verknüpfung mit einem Service (optional)
-
-**DB-Änderung:** Neue Tabelle `church_records`:
+Neue `user_roles` Tabelle (Best Practice — keine Rollen auf Profil-Tabelle):
 
 ```text
-church_records
+user_roles
 ├── id (uuid, PK)
-├── church_id (uuid, NOT NULL)
-├── created_by (uuid, NOT NULL)
-├── record_type (enum: baptism, wedding, funeral)
-├── record_date (date, NOT NULL)
-├── participants (jsonb) — Namen, Rollen der Beteiligten
-├── officiant (text) — Pfarrer/Seelsorger
-├── service_id (uuid, nullable) — Verknüpfung zum Gottesdienst
-├── notes (text)
-├── record_number (text) — offizielle Kirchenbuch-Nummer
-├── created_at, updated_at
+├── user_id (uuid, NOT NULL, FK → auth.users)
+├── role (enum: admin, moderator, user)
+├── UNIQUE(user_id, role)
 ```
 
-RLS: Nur eigene Einträge (created_by = auth.uid()).
+Security-Definer-Funktion `has_role(user_id, role)` für RLS-Policies ohne Rekursion.
+
+RLS: Nur Admins können `user_roles` lesen. Kein öffentlicher Zugang.
 
 ---
 
-## 3. Gemeinde-Einstellungen (`/dashboard/settings`)
+## 2. Admin Dashboard (`/admin`)
 
-Gemeindeprofil pflegen — die Daten aus `church_partners` bearbeitbar machen.
+Übersichts-Kacheln mit Live-Zahlen:
 
-**Funktionen:**
-- Gemeindename, Konfession, Stadt, Sprache bearbeiten
-- Kontaktdaten (E-Mail, Telefon, Website)
-- Logo und Pfarrerbild hochladen (Storage)
-- Gottesdienstzeiten, Willkommensnachricht
-- Farben (Primary/Secondary) für Branding
+| Kachel | Datenquelle |
+|---|---|
+| Gemeinden gesamt | `COUNT(church_partners)` |
+| Aktive Abos | `WHERE subscription_status = 'active'` |
+| Ablaufende Abos (30 Tage) | `WHERE subscription_expires_at < now() + 30 days` |
+| Chat-Nachrichten heute | `COUNT(chat_messages) WHERE today` |
+| Tagesimpuls-Abonnenten | `COUNT(daily_subscribers WHERE is_active)` |
 
-**Datenmodell:** `church_partners` hat bereits alle Felder. Kein DB-Change nötig.
+Darunter: **Gemeinden-Tabelle** mit Suche, Filter nach Plan-Tier und Status.
 
-**UI:** Formular mit Sektionen (Profil, Kontakt, Branding). Save-Button mit Supabase-Update.
+Spalten: Name, Stadt, Plan, Status, Abo-Ablauf, Erstellt
 
 ---
 
-## Technische Details
+## 3. Gemeinde-Detail-Drawer
+
+Klick auf Gemeinde öffnet Sheet/Drawer mit:
+
+**Tab 1 – Profil:**
+- Name, Slug, Konfession, Stadt, Land
+- Kontaktperson, E-Mail, Telefon, Website
+- Logo-Vorschau
+
+**Tab 2 – Abo & Billing:**
+- Plan-Tier (änderbar: free/community/gemeinde/kirche)
+- Abo-Status, Start, Ablauf
+- Rechnungsadresse, IBAN
+- Billing-Intervall (monatlich/jährlich)
+
+**Tab 3 – Nutzung:**
+- Anzahl Services, Team-Mitglieder, Records
+- Letzte Aktivität (updated_at)
+
+**Aktionen:**
+- Plan ändern (Dropdown)
+- Abo verlängern (Datum-Picker)
+- Gemeinde deaktivieren/aktivieren (Toggle)
+
+---
+
+## 4. Route-Schutz
+
+- `ProtectedAdminRoute` Komponente prüft `has_role(auth.uid(), 'admin')` via Supabase RPC
+- Kein localStorage/sessionStorage für Admin-Check
+- Nicht-Admins sehen 403 / Redirect
+
+---
+
+## 5. Technische Übersicht
 
 | Datei | Änderung |
 |---|---|
-| `src/pages/dashboard/TeamPage.tsx` | Komplette CRUD-UI für Team-Mitglieder |
-| `src/pages/dashboard/RecordsPage.tsx` | Register-Tabelle + Erfassungs-Dialog |
-| `src/pages/dashboard/SettingsPage.tsx` | Formular für Gemeinde-Einstellungen |
-| `src/hooks/use-team.ts` | Hook für Team-CRUD |
-| `src/hooks/use-records.ts` | Hook für Register-CRUD |
-| DB-Migration | Neue Tabelle `church_records` + enum `record_type` |
-| `src/i18n/locales/de.json` | Keys für Team, Register, Einstellungen |
-| `src/i18n/locales/en.json` | Englische Übersetzungen |
+| DB-Migration | `user_roles` Tabelle, `app_role` Enum, `has_role()` Funktion, RLS |
+| `src/pages/admin/AdminDashboard.tsx` | Dashboard mit Kacheln + Gemeinden-Tabelle |
+| `src/pages/admin/ChurchDetailDrawer.tsx` | Sheet mit 3 Tabs |
+| `src/hooks/use-admin.ts` | Hook: Rollen-Check, Gemeinden laden, Stats |
+| `src/components/ProtectedAdminRoute.tsx` | Route-Guard mit RPC-Check |
+| `src/App.tsx` | Route `/admin` registrieren |
 
-**Reihenfolge:** DB-Migration → Team-Seite → Register-Seite → Einstellungen-Seite
-
+**Reihenfolge:**
+1. DB-Migration (Rollen-Tabelle + Funktion)
+2. Admin-Route-Schutz
+3. Dashboard mit Stats
+4. Gemeinden-Tabelle mit Suche/Filter
+5. Detail-Drawer mit Bearbeitung
