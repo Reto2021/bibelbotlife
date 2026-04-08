@@ -10,6 +10,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ServiceBlock, type ServiceBlockData, type BlockType } from "@/components/services/ServiceBlock";
 import { BlockPalette } from "@/components/services/BlockPalette";
 import { useAuth } from "@/hooks/use-auth";
+import { useUserChurch } from "@/hooks/use-user-church";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
