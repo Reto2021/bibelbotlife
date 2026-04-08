@@ -318,7 +318,7 @@ export function DailyImpulse() {
               <span className="text-xs font-semibold text-primary uppercase tracking-wider">{t("impulse.label")}</span>
               <span className="text-xs text-muted-foreground">· {impulse.topic}</span>
             </div>
-            <p className="text-sm text-foreground dark:text-foreground font-semibold truncate">{impulse.teaser}</p>
+            <p className="text-sm text-foreground dark:text-foreground font-semibold line-clamp-2 sm:line-clamp-1">{impulse.teaser}</p>
           </div>
           <ChevronRight
             className={`h-4 w-4 text-muted-foreground shrink-0 transition-transform duration-300 ${isExpanded ? "rotate-90" : "group-hover:translate-x-0.5"}`}
