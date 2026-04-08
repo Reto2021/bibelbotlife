@@ -20,7 +20,7 @@ function TelegramIcon({ className }: { className?: string }) {
   );
 }
 
-const REFER_URL = "https://bibelbot.ch?utm_source=refer&utm_medium=link";
+const REFER_URL = "https://biblebot.life?utm_source=refer&utm_medium=link";
 
 export function ReferralSection() {
   const { t } = useTranslation();
@@ -39,7 +39,7 @@ export function ReferralSection() {
     {
       name: t("refer.telegram"),
       icon: TelegramIcon,
-      href: `https://t.me/share/url?url=${encodeURIComponent("https://bibelbot.ch?utm_source=refer&utm_medium=telegram")}&text=${encodeURIComponent(t("refer.telegramMsg"))}`,
+      href: `https://t.me/share/url?url=${encodeURIComponent("https://biblebot.life?utm_source=refer&utm_medium=telegram")}&text=${encodeURIComponent(t("refer.telegramMsg"))}`,
       bg: "bg-[#0088cc]",
       hoverBg: "hover:bg-[#007ab8]",
       text: "text-white",
@@ -93,7 +93,7 @@ export function ReferralSection() {
 
         {/* Copy Link */}
         <div className="flex items-center gap-3 bg-card/80 border border-border rounded-xl px-4 py-3 mb-8">
-          <code className="flex-1 text-sm text-muted-foreground truncate select-all">bibelbot.ch</code>
+          <code className="flex-1 text-sm text-muted-foreground truncate select-all">biblebot.life</code>
           <Button
             size="sm"
             variant="outline"
@@ -111,7 +111,7 @@ export function ReferralSection() {
           <div className="inline-block bg-white rounded-xl p-4 shadow-md">
             <img
               src={`https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=${encodeURIComponent(REFER_URL)}&margin=0&format=svg`}
-              alt="BibelBot QR Code"
+              alt="BibleBot QR Code"
               className="h-40 w-40"
               loading="lazy"
             />

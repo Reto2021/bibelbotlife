@@ -52,7 +52,7 @@ const ResetPassword = () => {
     <div className="min-h-screen flex items-center justify-center px-4" style={{ background: "var(--gradient-hero)" }}>
       <Card className="w-full max-w-sm bg-card/90 backdrop-blur-sm">
         <CardHeader className="text-center">
-          <img src={bibelbotLogo} alt="BibelBot" className="h-10 w-10 mx-auto mb-2" />
+          <img src={bibelbotLogo} alt="BibleBot" className="h-10 w-10 mx-auto mb-2" />
           <CardTitle>{t("auth.newPassword", "Neues Passwort setzen")}</CardTitle>
         </CardHeader>
         <CardContent>

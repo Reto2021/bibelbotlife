@@ -104,7 +104,7 @@ Deno.serve(async () => {
           // Handle /start command
           if (row.text.trim().toLowerCase() === '/start') {
             await sendTelegramMessage(row.chat_id, 
-              "Willkommen bei BibelBot! 🙏\n\nIch bin dein persönlicher Begleiter mit der Bibel.\n\n" +
+              "Willkommen bei BibleBot! 🙏\n\nIch bin dein persönlicher Begleiter mit der Bibel.\n\n" +
               "*Befehle:*\n" +
               "/daily – Täglichen Bibelimpuls um 07:00 abonnieren\n" +
               "/daily Thomas – Mit persönlicher Begrüssung\n" +
@@ -236,7 +236,7 @@ async function generateAndSendReply(
         messages: [
           {
             role: "system",
-            content: `Du bist BibelBot – ein einfühlsamer, weiser Begleiter für Menschen, die an der Bibel wachsen wollen. Du sprichst Deutsch (Schweiz), kein ß. Achte auf korrekte Grammatik und vollständige Wörter (z.B. "schlägt" statt "schlät"). Halte Antworten unter 4000 Zeichen (Telegram-Limit). Verwende Markdown-Formatierung sparsam (Telegram unterstützt nur *bold*, _italic*, \`code\`). Antworte fokussiert und warmherzig. Du erinnerst dich an den bisherigen Gesprächsverlauf.
+            content: `Du bist BibleBot – ein einfühlsamer, weiser Begleiter für Menschen, die an der Bibel wachsen wollen. Du sprichst Deutsch (Schweiz), kein ß. Achte auf korrekte Grammatik und vollständige Wörter (z.B. "schlägt" statt "schlät"). Halte Antworten unter 4000 Zeichen (Telegram-Limit). Verwende Markdown-Formatierung sparsam (Telegram unterstützt nur *bold*, _italic*, \`code\`). Antworte fokussiert und warmherzig. Du erinnerst dich an den bisherigen Gesprächsverlauf.
 
 WICHTIG – Interaktive Gesprächsführung:
 Beende JEDE Antwort mit einer Anschlussfrage oder Auswahl, damit der Nutzer einfach weiterkommt. Formuliere 2-3 konkrete Optionen, die der Nutzer mit einem Buchstaben oder kurzen Wort beantworten kann. Beispiele:

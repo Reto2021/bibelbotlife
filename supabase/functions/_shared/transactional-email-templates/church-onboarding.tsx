@@ -5,7 +5,7 @@ import {
 import type { TemplateEntry } from './registry.ts'
 
 const SITE_NAME = "BibleBot.Life"
-const BASE_URL = "https://bibelbot.ch"
+const BASE_URL = "https://biblebot.life"
 
 interface ChurchOnboardingProps {
   churchName?: string
@@ -25,7 +25,7 @@ const ChurchOnboardingEmail = ({
   const brandedLink = `${BASE_URL}/?church=${slug}`
   const integrationPageLink = `${BASE_URL}/church-integration/${slug}`
   const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(brandedLink)}&margin=12`
-  const botName = customBotName || 'BibelBot'
+  const botName = customBotName || 'BibleBot'
 
   return (
     <Html lang="de" dir="ltr">
@@ -52,7 +52,7 @@ const ChurchOnboardingEmail = ({
           {/* 1. Branded Link */}
           <Heading as="h2" style={h2}>🔗 Euer Branded Link</Heading>
           <Text style={text}>
-            Dieser Link führt direkt zu eurem gebrandeten BibelBot mit Splash-Screen und Kirchenlogo:
+            Dieser Link führt direkt zu eurem gebrandeten BibleBot mit Splash-Screen und Kirchenlogo:
           </Text>
           <Section style={codeBlock}>
             <Text style={codeText}>{brandedLink}</Text>
@@ -125,7 +125,7 @@ const ChurchOnboardingEmail = ({
 export const template = {
   component: ChurchOnboardingEmail,
   subject: (data: Record<string, any>) =>
-    `Willkommen ${data.churchName ? `– ${data.churchName}` : ''} | Euer BibelBot Integrations-Kit`,
+    `Willkommen ${data.churchName ? `– ${data.churchName}` : ''} | Euer BibleBot Integrations-Kit`,
   displayName: 'Gemeinde-Onboarding',
   previewData: {
     churchName: 'Vineyard Bern',

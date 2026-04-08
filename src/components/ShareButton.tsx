@@ -48,7 +48,7 @@ export function ShareButton({ title, text, url, utmSource = "share", variant = "
   const [copied, setCopied] = useState(false);
   const [open, setOpen] = useState(false);
 
-  const baseUrl = url || "https://bibelbot.ch";
+  const baseUrl = url || "https://biblebot.life";
   const shareUrl = `${baseUrl}${baseUrl.includes("?") ? "&" : "?"}utm_source=${utmSource}&utm_medium=social`;
   const shareText = `${text}\n\n— ${title}`;
   const fullShareText = `${shareText}\n${shareUrl}`;
