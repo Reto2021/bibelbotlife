@@ -522,7 +522,7 @@ const Index = () => {
         <div className="container mx-auto max-w-4xl">
           <div className="flex items-center justify-center space-x-2 mb-6">
             <BookOpen className="h-8 w-8 text-primary" />
-            <span className="text-2xl font-bold">BibleBot.Life</span>
+            <span className="text-2xl font-bold">{i18n.language === "de" ? "BibelBot.Life" : "BibleBot.Life"}</span>
           </div>
           <p className="text-background/70 mb-4 text-center">{t("footer.tagline")}</p>
           <p className="text-background/50 text-xs mb-6 max-w-2xl mx-auto text-center">{t("footer.disclaimer")}</p>
@@ -552,7 +552,7 @@ const Index = () => {
               <Link to="/churches" className="hover:text-background/80 underline underline-offset-2">{t("church.directoryBadge")}</Link>
             </div>
 
-            <p className="text-background/40 text-xs text-center mb-1">© 2026 BibleBot.Life</p>
+            <p className="text-background/40 text-xs text-center mb-1">© 2026 {i18n.language === "de" ? "BibelBot.Life" : "BibleBot.Life"}</p>
             <p className="text-background/50 text-sm text-center">{t("footer.love")}</p>
           </div>
         </div>
