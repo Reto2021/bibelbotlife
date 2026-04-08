@@ -161,6 +161,24 @@ const Index = () => {
                 <ShieldCheck className="h-4 w-4" />
                 {t("footer.datenschutz")}
               </Link>
+              {user ? (
+                <button
+                  onClick={() => { signOut(); setMobileMenuOpen(false); }}
+                  className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-foreground hover:bg-primary/10 transition-colors w-full"
+                >
+                  <LogOut className="h-4 w-4 text-primary" />
+                  {t("auth.logout", "Abmelden")}
+                </button>
+              ) : (
+                <Link
+                  to="/login"
+                  className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-foreground hover:bg-primary/10 transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <LogIn className="h-4 w-4 text-primary" />
+                  {t("auth.loginShort", "Anmelden")}
+                </Link>
+              )}
               <div className="pt-2 pb-1">
                 <Button asChild className="w-full bg-telegram hover:bg-telegram/90 text-telegram-foreground">
                   <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)}>
