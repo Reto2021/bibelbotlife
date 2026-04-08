@@ -172,7 +172,7 @@ export function ChatHero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="flex flex-wrap justify-center gap-2"
+          className="flex flex-wrap justify-center gap-2 mb-12"
         >
           {suggestions.map((s, i) => (
             <button
@@ -183,6 +183,21 @@ export function ChatHero() {
               {s}
             </button>
           ))}
+        </motion.div>
+
+        {/* Bible quote */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.7 }}
+          className="max-w-xl mx-auto"
+        >
+          <div className="bg-card/40 backdrop-blur-sm rounded-xl px-6 py-4 border border-border/50">
+            <p className="text-foreground/70 italic text-base leading-relaxed">
+              {t("hero.quote")}
+            </p>
+            <p className="text-muted-foreground text-sm mt-1.5">{t("hero.quoteRef")}</p>
+          </div>
         </motion.div>
       </div>
     </section>
