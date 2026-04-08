@@ -603,7 +603,7 @@
       "error": "Erreur d'envoi. Veuillez réessayer."
     },
     "institutionsTitle": "Aussi pour les institutions",
-    "institutionsSubtitle": "BibleBot accompagne aussi les maisons de retraite, les EMS et les hôpitaux avec un soutien spirituel numérique.",
+    "institutionsSubtitle": "BibleBot accompagne aussi les maisons de retraite, les EMS, les hôpitaux et l'aumônerie de prison avec un soutien spirituel numérique.",
     "institution": {
       "careHome": {
         "title": "Maisons de soins",
@@ -616,6 +616,10 @@
       "hospital": {
         "title": "Hôpitaux",
         "desc": "Réconfort et accompagnement spirituel pour les patients – disponible 24h/24."
+      },
+      "prison": {
+        "title": "Aumônerie de prison",
+        "desc": "Espoir et soutien spirituel pour les détenus – un compagnon confidentiel 24h/24."
       }
     }
   }

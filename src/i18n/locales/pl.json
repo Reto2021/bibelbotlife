@@ -616,6 +616,10 @@
       "hospital": {
         "title": "Szpitale",
         "desc": "Pocieszenie i duchowe wsparcie dla pacjentów – dostępne 24/7."
+      },
+      "prison": {
+        "title": "Kapelan więzienny",
+        "desc": "Nadzieja i duchowe wsparcie dla osadzonych – poufny towarzysz przez całą dobę."
       }
     }
   }

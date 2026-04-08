@@ -640,7 +640,7 @@
       "error": "Fehler beim Senden. Bitte versuchen Sie es erneut."
     },
     "institutionsTitle": "Auch für Institutionen",
-    "institutionsSubtitle": "BibleBot begleitet nicht nur Gemeinden – auch Pflege- und Altersheime sowie Spitäler profitieren von digitaler Seelsorge.",
+    "institutionsSubtitle": "BibleBot begleitet nicht nur Gemeinden – auch Pflege- und Altersheime, Spitäler und die Gefängnisseelsorge profitieren von digitaler Seelsorge.",
     "institution": {
       "careHome": {
         "title": "Pflegeheime",
@@ -653,6 +653,10 @@
       "hospital": {
         "title": "Spitäler",
         "desc": "Trost und geistliche Begleitung für Patienten in schwierigen Zeiten – 24/7 verfügbar am Krankenbett."
+      },
+      "prison": {
+        "title": "Gefängnisseelsorge",
+        "desc": "Hoffnung und geistliche Begleitung für Inhaftierte – ein vertraulicher Gesprächspartner rund um die Uhr."
       }
     }
   }

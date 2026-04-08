@@ -616,6 +616,10 @@
       "hospital": {
         "title": "Hospitals",
         "desc": "Comfort and spiritual support for patients in difficult times – available 24/7 at the bedside."
+      },
+      "prison": {
+        "title": "Prison Chaplaincy",
+        "desc": "Hope and spiritual support for inmates – a confidential companion around the clock."
       }
     }
   }

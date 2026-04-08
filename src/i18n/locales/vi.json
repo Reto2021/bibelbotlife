@@ -616,6 +616,10 @@
       "hospital": {
         "title": "Bệnh viện",
         "desc": "An ủi và hỗ trợ tâm linh cho bệnh nhân – có sẵn 24/7."
+      },
+      "prison": {
+        "title": "Tuyên úy nhà tù",
+        "desc": "Hy vọng và hỗ trợ tâm linh cho phạm nhân – người đồng hành bảo mật 24/7."
       }
     }
   }

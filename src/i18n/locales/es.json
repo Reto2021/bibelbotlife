@@ -603,7 +603,7 @@
       "error": "Error al enviar. Inténtelo de nuevo."
     },
     "institutionsTitle": "También para instituciones",
-    "institutionsSubtitle": "BibleBot acompaña también a residencias y hospitales con cuidado pastoral digital.",
+    "institutionsSubtitle": "BibleBot acompaña también a residencias, hospitales y la capellanía carcelaria con cuidado pastoral digital.",
     "institution": {
       "careHome": {
         "title": "Residencias",
@@ -616,6 +616,10 @@
       "hospital": {
         "title": "Hospitales",
         "desc": "Consuelo y acompañamiento espiritual para pacientes – disponible las 24 horas."
+      },
+      "prison": {
+        "title": "Capellanía carcelaria",
+        "desc": "Esperanza y acompañamiento espiritual para reclusos – un compañero confidencial las 24 horas."
       }
     }
   }
