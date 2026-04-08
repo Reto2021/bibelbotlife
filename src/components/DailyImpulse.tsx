@@ -264,6 +264,27 @@ export function DailyImpulse() {
     toast({ title: t("subscribe.toastTelegram"), description: t("subscribe.toastTelegramDesc") });
   }, [toast, t]);
 
+  const handleSubscribeSms = useCallback(async () => {
+    if (smsPhone.length < 8) return;
+    setIsSubscribing(true);
+    try {
+      const resp = await fetch(SUBSCRIBE_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ channel: "sms", phone_number: smsPhone, language: i18n.language }),
+      });
+      if (!resp.ok) throw new Error("Subscribe failed");
+      localStorage.setItem(SUBSCRIBED_KEY, "1");
+      setIsSubscribed(true);
+      setShowSmsInput(false);
+      toast({ title: t("subscribe.toastSuccess"), description: t("subscribe.toastSuccessDesc") });
+    } catch (e) {
+      toast({ title: t("subscribe.toastError"), description: e instanceof Error ? e.message : t("subscribe.toastErrorDesc"), variant: "destructive" });
+    } finally {
+      setIsSubscribing(false);
+    }
+  }, [smsPhone, toast, t, i18n.language]);
+
   if (isLoading) {
     return (
       <div className="bg-primary/10 dark:bg-primary/15 border-b border-primary/20">
