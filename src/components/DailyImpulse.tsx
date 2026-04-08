@@ -324,35 +324,16 @@ export function DailyImpulse() {
           />
         </button>
 
-        {/* Subscribe buttons always visible in banner */}
+        {/* Single CTA button in banner */}
         {!isSubscribed && (
-          <div className="hidden sm:flex items-center gap-1.5 shrink-0">
+          <div className="hidden sm:flex shrink-0">
             <Button
               size="sm"
-              onClick={handleSubscribePush}
-              disabled={isSubscribing}
+              onClick={() => setIsExpanded(true)}
               className="text-xs h-7 bg-primary hover:bg-primary/90"
             >
-              {isSubscribing ? <Loader2 className="h-3 w-3 mr-1 animate-spin" /> : <Bell className="h-3 w-3 mr-1" />}
-              Push
-            </Button>
-            <Button
-              size="sm"
-              variant="outline"
-              onClick={handleSubscribeTelegram}
-              className="text-xs h-7 border-primary/30 text-primary hover:bg-primary/10"
-            >
-              <Send className="h-3 w-3 mr-1" />
-              Telegram
-            </Button>
-            <Button
-              size="sm"
-              variant="outline"
-              onClick={() => { setIsExpanded(true); setShowSmsInput(true); }}
-              className="text-xs h-7 border-primary/30 text-primary hover:bg-primary/10"
-            >
-              <Smartphone className="h-3 w-3 mr-1" />
-              SMS
+              <Bell className="h-3 w-3 mr-1" />
+              {t("subscribe.subscribeButton")}
             </Button>
           </div>
         )}
@@ -468,7 +449,7 @@ export function DailyImpulse() {
                       ) : (
                         <Bell className="h-3 w-3 mr-1" />
                       )}
-                      Push
+                      {t("subscribe.push")}
                     </Button>
                     <Button
                       size="sm"
