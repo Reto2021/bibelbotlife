@@ -1,13 +1,38 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Search, ArrowRight, Shield } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { openBibelBotChat } from "@/lib/chat-events";
 import { useTrack } from "@/components/AnalyticsProvider";
 
-const TYPEWRITER_SPEED = 45; // ms per char
-const PAUSE_BETWEEN = 2800; // ms pause after full phrase
-const DELETE_SPEED = 25; // ms per char when deleting
+const TYPEWRITER_SPEED = 45;
+const PAUSE_BETWEEN = 2800;
+const DELETE_SPEED = 25;
+
+const DAILY_VERSES = [
+  { quote: "«Kommt her zu mir, alle, die ihr mühselig und beladen seid; ich will euch erquicken.»", ref: "Matthäus 11,28" },
+  { quote: "«Denn ich weiss wohl, was ich für Gedanken über euch habe, spricht der Herr: Gedanken des Friedens.»", ref: "Jeremia 29,11" },
+  { quote: "«Fürchte dich nicht, denn ich bin bei dir; hab keine Angst, denn ich bin dein Gott.»", ref: "Jesaja 41,10" },
+  { quote: "«Der Herr ist mein Hirte, mir wird nichts mangeln.»", ref: "Psalm 23,1" },
+  { quote: "«Alle eure Sorge werft auf ihn; denn er sorgt für euch.»", ref: "1. Petrus 5,7" },
+  { quote: "«Ich bin das Licht der Welt. Wer mir nachfolgt, wird nicht in der Finsternis wandeln.»", ref: "Johannes 8,12" },
+  { quote: "«Seid stark und mutig! Fürchtet euch nicht, denn der Herr, euer Gott, ist mit euch.»", ref: "Josua 1,9" },
+  { quote: "«Die auf den Herrn harren, kriegen neue Kraft, dass sie auffahren mit Flügeln wie Adler.»", ref: "Jesaja 40,31" },
+  { quote: "«Denn wo zwei oder drei versammelt sind in meinem Namen, da bin ich mitten unter ihnen.»", ref: "Matthäus 18,20" },
+  { quote: "«Schmecket und sehet, wie freundlich der Herr ist. Wohl dem, der auf ihn trauet!»", ref: "Psalm 34,9" },
+  { quote: "«Er heilt, die zerbrochenen Herzens sind, und verbindet ihre Wunden.»", ref: "Psalm 147,3" },
+  { quote: "«Die Liebe ist langmütig und freundlich. Sie erträgt alles, glaubt alles, hofft alles.»", ref: "1. Korinther 13,4–7" },
+  { quote: "«Seid fröhlich in Hoffnung, geduldig in Trübsal, beharrlich im Gebet.»", ref: "Römer 12,12" },
+  { quote: "«Vertraue auf den Herrn von ganzem Herzen und verlass dich nicht auf deinen Verstand.»", ref: "Sprüche 3,5" },
+];
+
+function getDailyVerse() {
+  const today = new Date();
+  const dayOfYear = Math.floor(
+    (today.getTime() - new Date(today.getFullYear(), 0, 0).getTime()) / 86400000
+  );
+  return DAILY_VERSES[dayOfYear % DAILY_VERSES.length];
+}
 
 export function ChatHero() {
   const { t, i18n } = useTranslation();
@@ -18,6 +43,7 @@ export function ChatHero() {
   const inputRef = useRef<HTMLInputElement>(null);
   const [isFocused, setIsFocused] = useState(false);
   const { track } = useTrack();
+  const dailyVerse = useMemo(() => getDailyVerse(), []);
 
   const phrases = [
     t("chatHero.placeholder1"),
@@ -194,9 +220,9 @@ export function ChatHero() {
         >
           <div className="bg-card/40 backdrop-blur-sm rounded-xl px-6 py-4 border border-border/50">
             <p className="text-foreground/70 italic text-base leading-relaxed">
-              {t("hero.quote")}
+              {dailyVerse.quote}
             </p>
-            <p className="text-muted-foreground text-sm mt-1.5">{t("hero.quoteRef")}</p>
+            <p className="text-muted-foreground text-sm mt-1.5">– {dailyVerse.ref}</p>
           </div>
         </motion.div>
       </div>
