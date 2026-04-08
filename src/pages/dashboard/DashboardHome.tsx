@@ -3,16 +3,42 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useAuth } from "@/hooks/use-auth";
 import { Link } from "react-router-dom";
+import { useUserChurch } from "@/hooks/use-user-church";
+import ChurchWizard from "./ChurchWizard";
 
 export default function DashboardHome() {
   const { user } = useAuth();
+  const { data: church, isLoading } = useUserChurch();
+
+  if (isLoading) {
+    return (
+      <div className="flex items-center justify-center py-20">
+        <div className="animate-pulse text-muted-foreground">Lade...</div>
+      </div>
+    );
+  }
+
+  // No church yet → show wizard
+  if (!church) {
+    return (
+      <div className="space-y-6">
+        <div className="text-center">
+          <h1 className="text-3xl font-bold text-foreground">Willkommen bei BibleBot.Life</h1>
+          <p className="text-muted-foreground mt-2">
+            Richte zuerst deine Gemeinde ein, um den Messeplaner zu nutzen.
+          </p>
+        </div>
+        <ChurchWizard />
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-3xl font-bold text-foreground">Willkommen zurück</h1>
+        <h1 className="text-3xl font-bold text-foreground">{church.name}</h1>
         <p className="text-muted-foreground mt-1">
-          {user?.email}
+          {church.denomination} · {church.city}, {church.country}
         </p>
       </div>
 

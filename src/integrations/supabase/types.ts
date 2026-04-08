@@ -161,6 +161,7 @@ export type Database = {
           language: string | null
           logo_url: string | null
           name: string
+          owner_id: string | null
           pastor_name: string | null
           pastor_photo_url: string | null
           plan_tier: Database["public"]["Enums"]["church_plan_tier"]
@@ -186,6 +187,7 @@ export type Database = {
           language?: string | null
           logo_url?: string | null
           name: string
+          owner_id?: string | null
           pastor_name?: string | null
           pastor_photo_url?: string | null
           plan_tier?: Database["public"]["Enums"]["church_plan_tier"]
@@ -211,6 +213,7 @@ export type Database = {
           language?: string | null
           logo_url?: string | null
           name?: string
+          owner_id?: string | null
           pastor_name?: string | null
           pastor_photo_url?: string | null
           plan_tier?: Database["public"]["Enums"]["church_plan_tier"]
