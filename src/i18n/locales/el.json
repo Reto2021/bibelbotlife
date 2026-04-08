@@ -1,586 +1,622 @@
 {
   "nav": {
-    "startNow": "Ξεκίνα"
+    "startNow": "Ξεκινήστε τώρα"
   },
-  "loader": "Φόρτωση…",
+  "loader": "Φορτώνεται…",
   "hero": {
     "badge": {
       "noLogin": "Χωρίς σύνδεση",
       "noData": "Χωρίς δεδομένα",
       "noJudgment": "Χωρίς κρίση"
     },
-    "title1": "Η Βίβλος.",
-    "title2": " Ξανασκεφτείτε την.",
-    "subtitle": "Το BibleBot γνωρίζει τη Βίβλο – και κάνει τις σωστές ερωτήσεις. Όχι άνθρωπος, αλλά ένας ειλικρινής σύντροφος. Για ουσιαστικές συζητήσεις, βαθιά ερωτήματα και πραγματικές εμπνεύσεις.",
+    "title1": "Η Αγία Γραφή.",
+    "title2": " Αναθεωρημένη.",
+    "subtitle": "Το BibleBot σας γνωρίζει την Αγία Γραφή – και κάνει τις σωστές ερωτήσεις. Όχι άνθρωπος, αλλά ένας ειλικρινής σύντροφος. Για καλές συζητήσεις, βαθιές ερωτήσεις και γνήσιες παρορμήσεις.",
     "ctaTelegram": "Ξεκινήστε μέσω Telegram",
     "ctaMore": "Μάθετε περισσότερα",
-    "quote": "\"Come to me, all you who are weary and burdened, and I will give you rest.\"",
-    "quoteRef": "– Matthew 11:28"
+    "quote": "«Έλθετε πρός με πάντες οι κοπιώντες και πεφορτισμένοι, κ’ εγώ θέλω σας αναπαύσει.»",
+    "quoteRef": "– Ματθαίος 11,28",
+    "quoteText": "Στην Ελβετία δεν μιλάμε πολύ για την πίστη. Και δεν χρειάζεται. Αλλά όποιος έχει ερωτήσεις, αξίζει ειλικρινείς απαντήσεις – χωρίς κήρυγμα, χωρίς μέλος, χωρίς κρυφά κίνητρα."
   },
   "impulse": {
-    "loading": "Loading daily impulse...",
-    "label": "Impulse of the Day",
-    "deepDive": "What does this mean for me?",
-    "explore": "Read full passage"
+    "loading": "Φορτώνεται η καθημερινή παρόρμηση...",
+    "label": "Η παρόρμηση της ημέρας",
+    "deepDive": "Τι σημαίνει αυτό για μένα;",
+    "explore": "Διαβάστε ολόκληρο το απόσπασμα"
   },
   "features": {
-    "sectionTitle": "How BibleBot accompanies you",
-    "sectionSubtitle": "Discover the many ways BibleBot can walk alongside you",
+    "sectionTitle": "Πώς σας συνοδεύει το BibleBot σας",
+    "sectionSubtitle": "Ανακαλύψτε τις πολλές δυνατότητες με τις οποίες μπορεί να σας συνοδεύσει το BibleBot σας",
     "bible": {
-      "title": "Bible passages & interpretation",
-      "desc": "Ask \"What does the Bible say about...?\" and receive relevant verses with context and clear explanation."
+      "title": "Βιβλικά χωρία & Ερμηνεία",
+      "desc": "Ρωτήστε «Τι λέει η Αγία Γραφή για…;» και λάβετε κατάλληλους στίχους με πλαίσιο και κατανοητή εξήγηση."
     },
     "goals": {
-      "title": "Life planning & goals",
-      "desc": "Discover your calling, set concrete goals, and find out what God might have in store for you."
+      "title": "Σχεδιασμός ζωής & Στόχοι",
+      "desc": "Ανακαλύψτε την κλήση σας, θέστε συγκεκριμένους στόχους και βρείτε τι μπορεί να έχει ο Θεός στο μυαλό του για εσάς."
     },
     "self": {
-      "title": "Finding yourself",
-      "desc": "Recognize your gifts, strengths, and longings – and what your heart truly needs."
+      "title": "Βρείτε τον εαυτό σας",
+      "desc": "Αναγνωρίστε τα χαρίσματα, τις δυνάμεις και τις επιθυμίες σας – και τι πραγματικά χρειάζεται η καρδιά σας."
     },
     "faith": {
-      "title": "Faith journey & finding Christ",
-      "desc": "Whether seeking, doubting, or deepening – BibleBot accompanies you on your personal path."
+      "title": "Πορεία πίστης & Εύρεση του Χριστού",
+      "desc": "Είτε αναζητάτε, αμφιβάλλετε ή εμβαθύνετε – το BibleBot σας συνοδεύει στην προσωπική σας πορεία."
     },
     "daily": {
-      "title": "Daily impulses & church year",
-      "desc": "Start your day with impulses and let BibleBot guide you through Advent, Lent, and holidays."
+      "title": "Καθημερινές παρορμήσεις & Εκκλησιαστικό Έτος",
+      "desc": "Ξεκινήστε την ημέρα σας με παρορμήσεις και αφήστε τον εαυτό σας να συνοδευτεί στην περίοδο της Σαρακοστής και των εορτών."
     },
     "groups": {
-      "title": "Groups & communities",
-      "desc": "Perfect for Bible study groups, church communities, and shared devotions."
+      "title": "Ομάδες & Κοινότητες",
+      "desc": "Ιδανικό για κύκλους μελέτης της Αγίας Γραφής, ομάδες εκκλησίας και κοινές λατρευτικές εκδηλώσεις."
     }
   },
   "coaching": {
-    "badge": "Methodology",
-    "title": "Not just a chatbot – genuine companionship",
-    "subtitle": "BibleBot combines biblical wisdom with proven coaching methods and Positive Psychology.",
-    "journeyTitle": "Personal companionship",
-    "journeyDesc": "BibleBot accompanies you as long as you wish – in free conversation or with an optional 21-day structure.",
-    "week1": "Week 1: Arriving",
-    "week1Desc": "Building trust, listening, understanding your situation. Where are you? What concerns you?",
-    "week2": "Week 2: Deepening",
-    "week2Desc": "Recognizing patterns, clarifying desires, deepening biblical impulses. What do you really want?",
-    "week3": "Week 3: Acting",
-    "week3Desc": "Taking concrete steps, setting goals, initiating change. What's your next step?",
-    "openQuestionsTitle": "Open questions instead of quick answers",
-    "openQuestionsDesc": "BibleBot doesn't give cheap advice. Instead, it asks the questions that truly matter:",
-    "openQ1": "\"What's really behind this desire?\"",
-    "openQ2": "\"How would you know something has changed?\"",
-    "openQ3": "\"What would be a first small step?\"",
-    "honestTitle": "Honest instead of toxic positivity",
-    "honestDesc": "No \"It'll be fine!\" and no sugarcoating. BibleBot is empathetic AND honest:",
-    "honest1": "Also addresses uncomfortable Bible passages",
-    "honest2": "Challenges you to self-reflection",
-    "honest3": "Distinguishes comfort from avoidance",
-    "scienceTitle": "Scientifically grounded",
+    "badge": "Μεθοδολογία",
+    "title": "Όχι απλά ένα chatbot – μια πραγματική συνοδεία",
+    "subtitle": "Το BibleBot σας συνδυάζει τη βιβλική σοφία με αποδεδειγμένες μεθόδους coaching και τη Θετική Ψυχολογία.",
+    "journeyTitle": "Προσωπική συνοδεία",
+    "journeyDesc": "Το BibleBot σας συνοδεύει όση ώρα θέλετε – σε ελεύθερη συζήτηση ή με μια προαιρετική δομή 21 ημερών.",
+    "week1": "Εβδομάδα 1: Άφιξη",
+    "week1Desc": "Χτίστε εμπιστοσύνη, ακούστε, κατανοήστε την κατάστασή σας. Πού βρίσκεστε; Τι σας απασχολεί;",
+    "week2": "Εβδομάδα 2: Εμβάθυνση",
+    "week2Desc": "Αναγνωρίστε μοτίβα, διευκρινίστε επιθυμίες, εμβαθύνετε βιβλικές παρορμήσεις. Τι θέλετε πραγματικά;",
+    "week3": "Εβδομάδα 3: Δράση",
+    "week3Desc": "Θέστε συγκεκριμένα βήματα, διατυπώστε στόχους, ξεκινήστε αλλαγές. Ποιο είναι το επόμενο βήμα σας;",
+    "openQuestionsTitle": "Ανοιχτές ερωτήσεις αντί για γρήγορες απαντήσεις",
+    "openQuestionsDesc": "Το BibleBot σας δεν σας δίνει φθηνές συμβουλές. Αντίθετα, θέτει τις ερωτήσεις που πραγματικά έχουν σημασία:",
+    "openQ1": "«Τι κρύβεται στην πραγματικότητα πίσω από αυτή την επιθυμία;»",
+    "openQ2": "«Τι θα παρατηρούσατε αν κάτι είχε αλλάξει;»",
+    "openQ3": "«Ποιο θα ήταν ένα πρώτο μικρό βήμα;»",
+    "honestTitle": "Ειλικρινές αντί για τοξικά θετικό",
+    "honestDesc": "Όχι «Θα περάσει!» και όχι ωραιοποίηση. Το BibleBot σας είναι ενσυναισθητικό ΚΑΙ ειλικρινές:",
+    "honest1": "Αναφέρει επίσης δυσάρεστα βιβλικά χωρία",
+    "honest2": "Προκαλεί στην αυτο-ανάλυση",
+    "honest3": "Διαχωρίζει την παρηγοριά από την καταστολή",
+    "scienceTitle": "Επιστημονικά τεκμηριωμένο",
     "perma": {
-      "name": "PERMA Model",
-      "author": "Seligman",
-      "desc": "Positive emotions, meaning & growth"
+      "name": "Μοντέλο PERMA",
+      "author": "Σέλιγκμαν",
+      "desc": "Θετικά συναισθήματα, νόημα & ανάπτυξη"
     },
     "logo": {
-      "name": "Logotherapy",
-      "author": "Frankl",
-      "desc": "Finding meaning in difficult times"
+      "name": "Λογοθεραπεία",
+      "author": "Φρανκλ",
+      "desc": "Αναζήτηση νοήματος σε δύσκολες στιγμές"
     },
     "gratitude": {
-      "name": "Gratitude",
-      "author": "Emmons",
-      "desc": "Research-based gratitude practice"
+      "name": "Ευγνωμοσύνη",
+      "author": "Έμονς",
+      "desc": "Πρακτική ευγνωμοσύνης βασισμένη στην έρευνα"
     },
     "forgiveness": {
-      "name": "Forgiveness",
-      "author": "Worthington",
-      "desc": "REACH model for forgiveness processes"
+      "name": "Συγχώρεση",
+      "author": "Γουόρθινγκτον",
+      "desc": "Μοντέλο REACH για διαδικασίες συγχώρεσης"
     },
-    "renameTip": "💡 You can give your BibleBot a personal name – so it truly becomes <strong>your</strong> companion."
+    "renameTip": "💡 Μπορείτε να δώσετε στο BibleBot σας ένα δικό του όνομα – έτσι ώστε να γίνει πραγματικά ο <strong>σύντροφός</strong> σας."
   },
   "discover": {
-    "badge": "For the curious",
-    "title": "Rediscover faith – without pressure",
-    "subtitle": "More and more people are asking the big questions anew. BibleBot.Life is for everyone who wants to (re)discover faith – honestly, without pathos, and without church jargon.",
+    "badge": "Για τους περίεργους",
+    "title": "Ανακαλύψτε ξανά την πίστη – χωρίς πίεση",
+    "subtitle": "Όλο και περισσότεροι άνθρωποι θέτουν εκ νέου τα μεγάλα ερωτήματα. Το BibleBot.Life είναι για όλους όσους θέλουν να (ξανα)ανακαλύψουν την πίστη – ειλικρινά, χωρίς πάθος και χωρίς εκκλησιαστική ορολογία.",
     "doubt": {
-      "title": "You doubt?",
-      "text": "Good. Doubt isn't a flaw – it's the beginning of honest faith. The Bible is full of people who wrestled."
+      "title": "Αμφιβάλλετε;",
+      "text": "Καλώς. Οι αμφιβολίες δεν είναι λάθος – είναι η αρχή της ειλικρινούς πίστης. Η Βίβλος είναι γεμάτη ανθρώπους που πάλεψαν."
     },
     "search": {
-      "title": "You're searching?",
-      "text": "Maybe you don't even know what for. That's perfectly fine. BibleBot helps you ask the right questions – instead of delivering quick answers."
+      "title": "Αναζητάτε;",
+      "text": "Ίσως δεν ξέρετε καν τι ακριβώς. Αυτό είναι απολύτως εντάξει. Το BibleBot σας βοηθά να κάνετε τις σωστές ερωτήσεις – αντί να δίνει γρήγορες απαντήσεις."
     },
     "deepen": {
-      "title": "You want to go deeper?",
-      "text": "You already believe, but want to understand more? Discover the depth of the Bible – historical, personal, surprisingly relevant."
+      "title": "Θέλετε να εμβαθύνετε;",
+      "text": "Πιστεύετε ήδη, αλλά θέλετε να κατανοήσετε περισσότερα; Ανακαλύψτε το βάθος της Αγίας Γραφής – ιστορικά, προσωπικά, εκπληκτικά επίκαιρα."
     },
-    "quote": "\"Ask, and it will be given to you; seek, and you will find; knock, and the door will be opened.\"",
-    "quoteRef": "– Matthew 7:7",
-    "quoteText": "Many of us don't talk much about faith. That's okay. But those with questions deserve honest answers – without sermons, without membership, without ulterior motives."
+    "quote": "«Κρούετε, και θέλει σας ανοιχθή.»",
+    "quoteRef": "– Ματθαίος 7,7",
+    "quoteText": "Στην Ελλάδα δεν μιλάμε πολύ για την πίστη. Και δεν χρειάζεται. Αλλά όποιος έχει ερωτήσεις, αξίζει ειλικρινείς απαντήσεις – χωρίς κήρυγμα, χωρίς μέλος, χωρίς κρυφά κίνητρα."
   },
   "subscribe": {
-    "title": "Daily Bible impulse",
-    "subtitle": "Every morning at 7:00 AM – a verse, a thought, a good start.",
-    "firstName": "Your first name",
-    "firstNameOptional": "(optional)",
-    "firstNamePlaceholder": "e.g. Thomas",
-    "firstNameHint": "So we can greet you personally.",
-    "channelLabel": "How would you like to receive the impulse?",
+    "title": "Καθημερινή Βιβλική Παρόρμηση",
+    "subtitle": "Κάθε πρωί στις 07:00 – ένας στίχος, μια σκέψη, μια καλή αρχή.",
+    "firstName": "Το όνομά σας",
+    "firstNameOptional": "(προαιρετικό)",
+    "firstNamePlaceholder": "π.χ. Θωμάς",
+    "firstNameHint": "Για να μπορέσουμε να σας χαιρετήσουμε προσωπικά.",
+    "channelLabel": "Πώς θέλετε να λαμβάνετε την παρόρμηση;",
     "push": "Push",
-    "pushDesc": "Browser notification",
+    "pushDesc": "Ειδοποίηση προγράμματος περιήγησης",
     "telegram": "Telegram",
-    "telegramDesc": "Message via Telegram",
+    "telegramDesc": "Μήνυμα μέσω Telegram",
     "sms": "SMS",
-    "smsDesc": "Text to your phone",
-    "phoneLabel": "Phone number",
-    "phonePlaceholder": "+1 555 123 4567",
-    "phoneHint": "With country code, e.g. +1 for the US.",
-    "telegramHint": "Click \"Subscribe\" – you'll be redirected to Telegram. Start the bot and type <strong>/daily</strong> to activate the daily impulse.",
-    "pushHint": "After clicking \"Subscribe\", your browser will ask for notification permission. Please allow it to receive the impulse.",
-    "submit": "Subscribe",
-    "submitting": "Subscribing...",
-    "footNote": "No login required. Cancel anytime.",
-    "successTitle": "You're subscribed! 🙏",
-    "successText": "Starting tomorrow at 7:00 AM, you'll receive your personal Bible impulse.",
-    "toastTelegram": "Telegram opened 🙏",
-    "toastTelegramDesc": "Start the bot and type /daily to activate the daily impulse.",
-    "toastSuccess": "Subscribed! 🙏",
-    "toastSuccessDesc": "You'll receive your daily impulse starting tomorrow.",
-    "toastPushPreview": "Push subscription not available in preview",
-    "toastPushPreviewDesc": "Push notifications only work on the published site.",
-    "toastNotSupported": "Not supported",
-    "toastNotSupportedDesc": "Your browser does not support push notifications.",
-    "toastPermDenied": "Permission denied",
-    "toastPermDeniedDesc": "Please allow notifications in your browser settings.",
-    "toastError": "Error",
-    "toastErrorDesc": "Please try again later."
+    "smsDesc": "SMS στο κινητό σας",
+    "phoneLabel": "Αριθμός κινητού",
+    "phonePlaceholder": "+30 691 123 4567",
+    "phoneHint": "Με κωδικό χώρας, π.χ. +30 για την Ελλάδα.",
+    "telegramHint": "Κάντε κλικ στο «Εγγραφή» – θα μεταφερθείτε στο Telegram. Ξεκινήστε το bot εκεί και γράψτε <strong>/daily</strong> για να ενεργοποιήσετε την καθημερινή παρόρμηση.",
+    "pushHint": "Μετά το κλικ στο «Εγγραφή» ο browser σας θα ζητήσει άδεια για ειδοποιήσεις. Παρακαλώ επιτρέψτε το για να λάβετε την παρόρμηση.",
+    "submit": "Εγγραφή",
+    "submitting": "Εγγράφεται...",
+    "footNote": "Δεν απαιτείται σύνδεση. Μπορείτε να διαγραφείτε ανά πάσα στιγμή.",
+    "successTitle": "Έχετε εγγραφεί! 🙏",
+    "successText": "Από αύριο στις 07:00 θα λαμβάνετε την προσωπική σας βιβλική παρόρμηση.",
+    "toastTelegram": "Άνοιξε το Telegram 🙏",
+    "toastTelegramDesc": "Ξεκινήστε το bot και γράψτε /daily για να ενεργοποιήσετε την καθημερινή παρόρμηση.",
+    "toastSuccess": "Εγγραφήκατε! 🙏",
+    "toastSuccessDesc": "Θα λαμβάνετε την καθημερινή σας παρόρμηση από αύριο.",
+    "toastPushPreview": "Η εγγραφή push δεν είναι διαθέσιμη στην προεπισκόπηση",
+    "toastPushPreviewDesc": "Οι ειδοποιήσεις push λειτουργούν μόνο στην δημοσιευμένη σελίδα.",
+    "toastNotSupported": "Δεν υποστηρίζεται",
+    "toastNotSupportedDesc": "Ο browser σας δεν υποστηρίζει ειδοποιήσεις push.",
+    "toastPermDenied": "Η άδεια απορρίφθηκε",
+    "toastPermDeniedDesc": "Παρακαλώ επιτρέψτε τις ειδοποιήσεις στις ρυθμίσεις του browser σας.",
+    "toastError": "Σφάλμα",
+    "toastErrorDesc": "Παρακαλώ δοκιμάστε ξανά αργότερα."
   },
   "faq": {
-    "badge": "FAQ",
-    "title": "What you should know about BibleBot",
-    "subtitle": "Transparency matters – especially for theologians, pastors, and critical thinkers.",
-    "q1": "What makes BibleBot different from ChatGPT & Co.?",
-    "q1Generic": "Generic chatbots:",
+    "badge": "Συχνές ερωτήσεις",
+    "title": "Τι πρέπει να ξέρετε για το BibleBot σας",
+    "subtitle": "Η διαφάνεια είναι σημαντική για εμάς – ειδικά προς θεολόγους, ποιμένες και κριτικούς.",
+    "q1": "Τι διαφοροποιεί το BibleBot σας από το ChatGPT & Co.;",
+    "q1Generic": "Γενικής χρήσης chatbots:",
     "q1GenericItems": [
-      "Superficial Bible quotes without context",
-      "No pastoral guardrails",
-      "Avoids uncomfortable texts",
-      "No crisis intervention",
-      "Mixes Bible with esotericism",
-      "No follow-up questions – just confirmation"
+      "Επιφανειακά αποσπάσματα της Βίβλου χωρίς πλαίσιο",
+      "Χωρίς ποιμαντικές οδηγίες",
+      "Αποφεύγει δυσάρεστα κείμενα",
+      "Καμία παρέμβαση σε κρίσεις",
+      "Αναμιγνύει τη Βίβλο με τον αποκρυφισμό",
+      "Χωρίς περαιτέρω ερωτήσεις – μόνο επιβεβαίωση"
     ],
     "q1Bot": "BibleBot.Life:",
     "q1BotItems": [
-      "5 recognized translations – including uncomfortable passages",
-      "Guardrails AND challenging companionship",
-      "Follow-up questions for self-reflection",
-      "Crisis referrals (emergency helplines)",
-      "Exclusively Christian theology",
-      "Promotes critical thinking as faith maturity"
+      "5 αναγνωρισμένες μεταφράσεις – ακόμα και δυσάρεστα χωρία",
+      "Οδηγίες ΚΑΙ προκλητική συνοδεία",
+      "Περαιτέρω ερωτήσεις για αυτο-ανάλυση",
+      "Αναφορές σε κρίσεις (Τηλ. 143 / 147)",
+      "Αποκλειστικά χριστιανική θεολογία",
+      "Ενισχύει την κριτική σκέψη ως ωριμότητα πίστης"
     ],
-    "q2": "Which Bible translations are included?",
-    "q2Intro": "BibleBot works ecumenically with the major German-language Bible editions:",
-    "q2Outro": "All Bible passages include source citations and historical context.",
-    "q3": "What scientific foundations are behind it?",
-    "q3Intro": "The companionship is based on peer-reviewed research in Positive Psychology:",
-    "q4": "How does BibleBot ensure pastoral safety?",
+    "q2": "Ποιες μεταφράσεις της Βίβλου είναι αποθηκευμένες;",
+    "q2Intro": "Το BibleBot σας συνεργάζεται οικουμενικά με τις κύριες γερμανόφωνες εκδόσεις της Βίβλου:",
+    "q2Outro": "Όλα τα βιβλικά χωρία εκδίδονται με αναφορά πηγής και ιστορικό πλαίσιο.",
+    "q3": "Ποιες επιστημονικές βάσεις έχουν χρησιμοποιηθεί;",
+    "q3Intro": "Η συνοδεία βασίζεται σε peer-reviewed έρευνα της Θετικής Ψυχολογίας:",
+    "q4": "Πώς διασφαλίζει το BibleBot σας την ποιμαντική ασφάλεια;",
     "q4Items": [
-      "Suicidal thoughts or crisis → immediate referral to emergency helplines",
-      "No psychological or medical diagnoses",
-      "Respect without arbitrariness – clear biblical positions are taken",
-      "Empathy AND honesty – uncomfortable topics are addressed",
-      "Follow-up questions for self-reflection instead of cheap validation",
-      "No toxic positivity – genuine, honest companionship",
-      "Openly names tensions and difficult texts"
+      "Σε περιπτώσεις αυτοκτονικών σκέψεων ή κρίσεων → άμεση παραπομπή στην Τηλεφωνική Γραμμή Βοήθειας (143) και στην Pro Juventute (147)",
+      "Καμία ψυχολογική ή ιατρική διάγνωση",
+      "Σεβασμός χωρίς αυθαιρεσία – λαμβάνονται σαφείς βιβλικές θέσεις",
+      "Ενσυναίσθηση ΚΑΙ ειλικρίνεια – αναφέρονται και δυσάρεστα θέματα",
+      "Ερωτήσεις για αυτοανάλυση αντί για φθηνή επιβεβαίωση",
+      "Καμία τοξική θετικότητα – γνήσια, ειλικρινής συνοδεία",
+      "Αναφέρει ανοιχτά εντάσεις και δύσκολα κείμενα"
     ],
-    "q5": "Is BibleBot tied to a specific denomination?",
-    "q5Answer": "No. BibleBot is ecumenically oriented and respects Reformed, Catholic, Free Church, and other Christian traditions equally. When there are denominational differences in interpretation, various perspectives are presented transparently – without favoring any tradition.",
-    "q6": "Does BibleBot replace pastoral care or therapy?",
-    "q6Answer": "No. BibleBot is a digital tool for personal Bible reading and reflection. It does not replace professional pastoral care, theological counseling, or psychological therapy. In serious crises, BibleBot always refers to qualified resources.",
-    "q7": "Isn't BibleBot just a 'feel-good bot'?",
-    "q7Answer": "No. BibleBot comforts where comfort is needed – but it also challenges. Spiritual growth requires friction. BibleBot asks uncomfortable follow-up questions, names difficult Bible texts (Job, Lament Psalms, prophetic criticism), and doesn't shy away from topics like justice, repentance, and responsibility. The prophetic tradition was never comfortable – and neither is BibleBot.",
-    "q8": "Who is behind BibleBot and how is it funded?",
-    "q8Answer": "BibleBot.Life is a private, non-commercial project. It's run on a volunteer basis and funded exclusively through voluntary donations. There's no advertising, no data sales, and no paid features. All donations go directly to covering operating costs (infrastructure, hosting, development). Since BibleBot is a private project, donations are not tax-deductible.",
-    "q9": "How does BibleBot handle my data?",
-    "q9Answer": "BibleBot stores no personal data and no chat histories. Every conversation is anonymous. There's no login, no tracking, and no sharing of data with third parties. Usage is completely anonymous."
+    "q5": "Έχει το BibleBot σας ομολογιακή δέσμευση;",
+    "q5Answer": "Όχι. Το BibleBot σας είναι οικουμενικά προσανατολισμένο και σέβεται εξίσου τις αναμορφωτικές, καθολικές, ελεύθερες εκκλησιαστικές και άλλες χριστιανικές παραδόσεις. Σε περιπτώσεις ομολογιακά διαφορετικών ερμηνειών, παρουσιάζονται διάφορες προοπτικές με διαφάνεια – χωρίς να προτιμάται κάποια παράδοση.",
+    "q6": "Αντικαθιστά το BibleBot σας την ποιμαντική φροντίδα ή τη θεραπεία;",
+    "q6Answer": "Όχι. Το BibleBot σας είναι ένα ψηφιακό εργαλείο για προσωπική βιβλική ανάγνωση και προβληματισμό. Δεν αντικαθιστά την επαγγελματική ποιμαντική φροντίδα, τη θεολογική συμβουλευτική ή την ψυχολογική θεραπεία. Σε σοβαρές κρίσεις, το BibleBot σας παραπέμπει πάντα σε εξειδικευμένους φορείς.",
+    "q7": "Δεν είναι το BibleBot σας απλά ένα «bot ευεξίας»;",
+    "q7Answer": "Όχι. Το BibleBot σας παρηγορεί, όπου χρειάζεται παρηγοριά – αλλά και προκαλεί. Η πνευματική ανάπτυξη απαιτεί τριβή. Το BibleBot σας θέτει δυσάρεστες ερωτήσεις, αναφέρει δύσκολα βιβλικά κείμενα (Ιώβ, ψαλμοί θρήνων, προφητική κριτική) και δεν διστάζει να ασχοληθεί με θέματα όπως η δικαιοσύνη, η μετάνοια και η ευθύνη. Η προφητική παράδοση δεν ήταν ποτέ άνετη – και ούτε το BibleBot σας.",
+    "q8": "Ποιος βρίσκεται πίσω από το BibleBot σας και πώς χρηματοδοτείται;",
+    "q8Answer": "Το BibleBot.Life είναι ένα ιδιωτικό, μη εμπορικό έργο. Λειτουργεί εθελοντικά και χρηματοδοτείται αποκλειστικά από εθελοντικές δωρεές. Δεν υπάρχουν διαφημίσεις, πωλήσεις δεδομένων και χρεώσιμα χαρακτηριστικά. Όλες οι δωρεές πηγαίνουν απευθείας για την κάλυψη των τρεχόντων εξόδων (υποδομή, φιλοξενία, ανάπτυξη). Δεδομένου ότι το BibleBot λειτουργεί ως ιδιωτικό έργο, οι δωρεές δεν είναι εκπίπτουσες φορολογικά.",
+    "q9": "Πώς διαχειρίζεται το BibleBot σας τα δεδομένα μου;",
+    "q9Answer": "Το BibleBot σας δεν αποθηκεύει προσωπικά δεδομένα ούτε ιστορικό συνομιλιών. Κάθε συνομιλία είναι ανώνυμη. Δεν υπάρχει σύνδεση, παρακολούθηση και κοινή χρήση δεδομένων με τρίτους. Η χρήση είναι πλήρως ανώνυμη."
   },
   "donate": {
-    "badge": "Support BibleBot",
-    "title": "Help keep BibleBot free",
-    "subtitle": "BibleBot is a passion project – no ads, no subscriptions, no hidden costs. To keep it that way, I rely on voluntary donations. Every contribution helps cover the ongoing costs for operations and infrastructure.",
-    "bankTitle": "Donate via bank transfer",
-    "bankSubtitle": "Every amount counts – thank you! 🙏",
-    "recipient": "Recipient",
-    "bank": "Bank",
-    "purpose": "Reference",
-    "purposeValue": "Donation BibleBot",
-    "note": "BibleBot.Life is operated as a private project. Donations are therefore not tax-deductible."
+    "badge": "Υποστηρίξτε το BibleBot σας",
+    "title": "Βοηθήστε να παραμείνει το BibleBot σας δωρεάν",
+    "subtitle": "Το BibleBot σας είναι ένα έργο καρδιάς – χωρίς διαφημίσεις, χωρίς συνδρομή, χωρίς κρυφό κόστος. Για να παραμείνει έτσι, βασίζομαι σε εθελοντικές δωρεές. Κάθε συνεισφορά βοηθά στην κάλυψη των τρεχόντων εξόδων λειτουργίας και υποδομής.",
+    "bankTitle": "Δωρεά μέσω τραπεζικής μεταφοράς",
+    "bankSubtitle": "Κάθε ποσό μετράει – σας ευχαριστούμε θερμά! 🙏",
+    "recipient": "Παραλήπτης",
+    "bank": "Τράπεζα",
+    "purpose": "Αιτιολογία",
+    "purposeValue": "Δωρεά BibleBot",
+    "note": "Το BibleBot.Life λειτουργεί ως ιδιωτικό έργο. Οι δωρεές επομένως δεν είναι εκπίπτουσες φορολογικά."
+  },
+  "refer": {
+    "badge": "Μοιραστείτε τον Λόγο του Θεού",
+    "title": "Προτείνετε το BibleBot",
+    "subtitle": "Γνωρίζετε κάποιον που χρειάζεται ενθάρρυνση αυτή τη στιγμή; Μοιραστείτε το BibleBot – ένα μήνυμα μπορεί να κάνει τη διαφορά.",
+    "whatsapp": "Κοινή χρήση μέσω WhatsApp",
+    "whatsappMsg": "Γεια σου, ήθελα να σου δείξω το BibleBot – έναν δωρεάν βιβλικό σύντροφο που γνωρίζει την Αγία Γραφή και κάνει πραγματικά καλές ερωτήσεις. Χωρίς σύνδεση, ανώνυμο, ειλικρινές. Δοκίμασέ το: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "telegram": "Κοινή χρήση μέσω Telegram",
+    "telegramMsg": "Γεια σου, ξέρεις το BibleBot; Ένας δωρεάν προσωπικός βιβλικός σύντροφος – ειλικρινής, ανώνυμος, χωρίς σύνδεση. Ρίξε μια ματιά: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "email": "Κοινή χρήση μέσω Email",
+    "emailSubject": "Αυτό μπορεί να σας ενδιαφέρει: BibleBot.Life",
+    "emailBody": "Γεια!\n\nΉθελα να σου δείξω το BibleBot – έναν δωρεάν βιβλικό σύντροφο που γνωρίζει πραγματικά την Αγία Γραφή. Δεν χρειάζεται εγγραφή, είναι εντελώς ανώνυμο.\n\nΚάνει καλές ερωτήσεις, εξηγεί βιβλικά χωρία στο πλαίσιο και σε συνοδεύει ειλικρινά – ακόμα και σε δύσκολα θέματα.\n\nΔοκίμασέ το: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nΜε αγάπη",
+    "copy": "Αντιγραφή συνδέσμου",
+    "copied": "Ο σύνδεσμος αντιγράφηκε! 📋",
+    "qr": "Ή απλά δείξτε αυτόν τον κωδικό QR:"
   },
   "cta": {
-    "title": "You don't have to go through this alone",
-    "subtitle": "Just tell BibleBot what's on your mind. No login, no cost, no judgment – just honest companionship and the wisdom of the Bible.",
-    "button": "Start a conversation"
+    "title": "Δεν χρειάζεται να το περάσετε μόνοι σας",
+    "subtitle": "Απλά γράψτε στο BibleBot σας τι σας απασχολεί. Χωρίς σύνδεση, χωρίς κόστος, χωρίς κρίση – μόνο ειλικρινής συνοδεία και η σοφία της Αγίας Γραφής.",
+    "button": "Ξεκινήστε τώρα τη συζήτηση"
   },
   "footer": {
-    "tagline": "Ο προσωπικός σας σύντροφος για μια ζωή με τη Βίβλο",
-    "disclaimer": "BibleBot.Life is a digital tool and does not replace professional pastoral care, theological counseling, or psychological therapy. In acute crises, please contact your local emergency helpline.",
-    "impressum": "Imprint",
-    "notes": "Notes",
-    "private": "Private, non-commercial project",
-    "noChat": "No storage of chat data",
-    "noTax": "Donations are not tax-deductible",
-    "datenschutz": "Privacy Policy",
-    "love": "With ❤️ for everyone wondering what Christ thinks.",
-    "forChurches": "For Churches"
+    "tagline": "Ο προσωπικός σας σύντροφος για μια ζωή με την Αγία Γραφή",
+    "disclaimer": "Το BibleBot.Life είναι ένα ψηφιακό εργαλείο και δεν αντικαθιστά την επαγγελματική ποιμαντική φροντίδα, τη θεολογική συμβουλευτική ή την ψυχολογική θεραπεία. Σε περιπτώσεις οξέων κρίσεων, επικοινωνήστε με την Τηλεφωνική Γραμμή Βοήθειας (Τηλ. 143) ή την Pro Juventute (Τηλ. 147).",
+    "impressum": "Στοιχεία επικοινωνίας",
+    "notes": "Σημειώσεις",
+    "private": "Ιδιωτικό, μη κερδοσκοπικό έργο",
+    "noChat": "Καμία αποθήκευση δεδομένων συνομιλίας",
+    "noTax": "Οι δωρεές δεν είναι φορολογικά εκπίπτουσες",
+    "datenschutz": "Πολιτική απορρήτου",
+    "love": "Με ❤️ για όλους όσους αναρωτιούνται τι σκέφτεται ο Χριστός.",
+    "forChurches": "Για εκκλησίες"
   },
   "chat": {
-    "welcome": "Welcome! 🤗\n\nI'm your BibleBot – your personal companion with the Bible, good questions, and real impulses. No pressure, no judgment.\n\nYou can ask me anything – or just share what's on your mind. 💛",
-    "journeyOffer": "💡 **Tip:** I also offer a **21-day journey** – 3 weeks of daily impulses, reflections, and concrete steps. At your own pace.\n\nWould you like to try it?",
-    "suggestion1": "I need an uplifting word right now",
-    "suggestion2": "What does the Bible say when you feel uncertain?",
-    "suggestion3": "I want to find out what I really want",
-    "teaser": "Τι σας απασχολεί; 💛",
-    "teaserSub": "I'm here – without any judgment.",
-    "openChat": "Open chat",
-    "closeChat": "Close chat",
-    "yourCompanion": "Your personal companion",
-    "journeyComplete": "21 days completed! 🎉",
-    "arriving": "Arriving",
-    "deepening": "Deepening",
-    "acting": "Acting",
-    "renameTip": "Tip: Click the name to rename me ✨",
-    "changeName": "Change name",
-    "placeholder": "Γράψτε ελεύθερα...",
-    "startVoice": "Start voice input",
-    "stopVoice": "Stop recording",
-    "noVoice": "Your browser does not support voice input.",
-    "writing": "typing...",
-    "shieldBadge": "No login · No judgment · Citations verified",
-    "journeyStart": "Yes, let's go ✨",
-    "journeyLater": "Maybe later",
-    "journeyStartMsg": "Yes, I'd like to start the 21-day journey!",
-    "qaChecking": "Checking citations...",
-    "qaIssue": "{{count}} issue with citations",
-    "qaIssue_plural": "{{count}} issues with citations",
-    "qaOk": "{{count}} citation verified ✓",
-    "qaOk_plural": "{{count}} citations verified ✓",
-    "qaWarning": "⚠️ Accuracy notes:",
-    "errorTooMany": "Too many requests – please wait a moment.",
-    "errorCredits": "AI quota exhausted.",
-    "errorConnect": "Connection error.",
-    "errorTitle": "Error",
-    "errorConnection": "could not be reached.",
-    "errorNoStream": "No stream",
-    "seniorMode": "Senior mode (larger text)",
-    "teaserCta": "Start writing →",
-    "namePlaceholder": "e.g. Eli, Miriam…"
+    "welcome": "Χαίρομαι που είσαι εδώ 🤗\n\nΕίμαι το BibleBot σου – ο προσωπικός σου σύντροφος με την Αγία Γραφή, καλές ερωτήσεις και συγκεκριμένες παρορμήσεις. Χωρίς πίεση, χωρίς κριτική.\n\nΜπορείς να με ρωτήσεις τα πάντα – ή απλά να πεις τι σε απασχολεί αυτή τη στιγμή. 💛",
+    "journeyOffer": "💡 **Συμβουλή:** Προσφέρω επίσης μια **συνοδεία 21 ημερών** – 3 εβδομάδες με καθημερινές παρορμήσεις, προβληματισμούς και συγκεκριμένα βήματα. Με τον δικό σου ρυθμό.\n\nΘέλεις να το δοκιμάσεις;",
+    "suggestion1": "Χρειάζομαι μια ενθαρρυντική λέξη αυτή τη στιγμή",
+    "suggestion2": "Τι λέει η Βίβλος όταν κάποιος αισθάνεται ανασφάλεια;",
+    "suggestion3": "Θέλω να ανακαλύψω τι πραγματικά θέλω",
+    "teaser": "Τι σε απασχολεί αυτή τη στιγμή; 💛",
+    "teaserSub": "Είμαι εδώ – χωρίς καμία κριτική.",
+    "teaserCta": "Γράψτε τώρα →",
+    "openChat": "Άνοιγμα συνομιλίας",
+    "closeChat": "Κλείσιμο συνομιλίας",
+    "yourCompanion": "Ο προσωπικός σας σύντροφος",
+    "journeyComplete": "21 ημέρες ολοκληρώθηκαν! 🎉",
+    "arriving": "Άφιξη",
+    "deepening": "Εμβάθυνση",
+    "acting": "Δράση",
+    "renameTip": "Δώστε μου ένα όνομα ✨",
+    "namePlaceholder": "π.χ. Ηλίας, Μαρία…",
+    "changeName": "Αλλαγή ονόματος",
+    "placeholder": "Απλά γράψτε...",
+    "startVoice": "Έναρξη φωνητικής εισαγωγής",
+    "stopVoice": "Διακοπή ηχογράφησης",
+    "noVoice": "Ο browser σας δεν υποστηρίζει φωνητική εισαγωγή.",
+    "writing": "γράφει...",
+    "shieldBadge": "Χωρίς σύνδεση · Χωρίς κρίση · Ελεγμένα αποσπάσματα",
+    "journeyStart": "Ναι, ξεκινήστε ✨",
+    "journeyLater": "Ίσως αργότερα",
+    "journeyStartMsg": "Ναι, θέλω να ξεκινήσω τη συνοδεία 21 ημερών!",
+    "qaChecking": "Ελέγχονται τα αποσπάσματα...",
+    "qaIssue": "{{count}} σημείωση για αποσπάσματα",
+    "qaIssue_plural": "{{count}} σημειώσεις για αποσπάσματα",
+    "qaOk": "{{count}} απόσπασμα ελέγχθηκε ✓",
+    "qaOk_plural": "{{count}} αποσπάσματα ελέγχθηκαν ✓",
+    "qaWarning": "⚠️ Σημειώσεις σχετικά με την ακρίβεια:",
+    "errorTooMany": "Πάρα πολλές αιτήσεις – παρακαλώ περιμένετε λίγο.",
+    "errorCredits": "Εξαντλήθηκε η ποσόστωση AI.",
+    "errorConnect": "Σφάλμα σύνδεσης.",
+    "errorTitle": "Σφάλμα",
+    "errorConnection": "δεν ήταν δυνατή η σύνδεση.",
+    "errorNoStream": "Χωρίς ροή",
+    "seniorMode": "Λειτουργία για ηλικιωμένους (μεγαλύτερη γραμματοσειρά)"
   },
   "install": {
-    "title": "Εγκαταστήστε το BibleBot",
-    "androidDesc": "Quick access from your home screen",
-    "iosDesc": "Tap \"Share\" → \"Add to Home Screen\"",
-    "button": "Install",
-    "close": "Close"
+    "title": "Εγκατάσταση BibleBot",
+    "androidDesc": "Γρήγορη πρόσβαση απευθείας από την αρχική οθόνη",
+    "iosDesc": "Πατήστε «Κοινή χρήση» → «Προσθήκη στην αρχική οθόνη»",
+    "button": "Εγκατάσταση",
+    "close": "Κλείσιμο"
+  },
+  "share": {
+    "label": "Κοινή χρήση",
+    "shareVia": "Κοινή χρήση μέσω",
+    "copied": "Αντιγράφηκε! 📋",
+    "copiedShort": "Αντιγράφηκε!",
+    "copiedDesc": "Το κείμενο αντιγράφηκε στο πρόχειρο. Μοιραστείτε το τώρα στο WhatsApp, το Instagram ή όπου θέλετε!",
+    "copyLink": "Αντιγραφή κειμένου",
+    "error": "Αποτυχία αντιγραφής",
+    "impulseTitle": "BibleBot – Παρόρμηση της Ημέρας",
+    "chatTitle": "BibleBot – Σκέψη της Ημέρας",
+    "createImage": "Δημιουργία εικόνας ✨",
+    "generating": "Δημιουργείται…",
+    "imageReady": "Η εικόνα σας είναι έτοιμη για κοινή χρήση!",
+    "shareImage": "Κοινή χρήση εικόνας",
+    "download": "Αποθήκευση",
+    "imageError": "Αποτυχία δημιουργίας εικόνας",
+    "imageErrorDesc": "Δεν ήταν δυνατή η δημιουργία της εικόνας. Δοκιμάστε ξανά αργότερα.",
+    "imageSaved": "Αντιγράφηκε το κείμενο! 📋",
+    "imageSavedDesc": "Αποθηκεύστε την εικόνα και μοιραστείτε την με το αντιγραμμένο κείμενο στο Instagram, το WhatsApp ή όπου θέλετε!"
   },
   "darkMode": {
-    "light": "Light mode",
-    "dark": "Dark mode"
+    "light": "Φωτεινή λειτουργία",
+    "dark": "Σκοτεινή λειτουργία"
   },
   "impressum": {
-    "back": "Back to home",
-    "title": "Imprint"
+    "back": "Επιστροφή στην αρχική σελίδα",
+    "title": "Στοιχεία επικοινωνίας"
   },
   "datenschutz": {
-    "back": "Back to home",
-    "title": "Privacy Policy"
+    "back": "Επιστροφή στην αρχική σελίδα",
+    "title": "Πολιτική απορρήτου"
   },
   "lang": {
-    "de": "Deutsch",
-    "en": "English",
-    "fr": "Français",
-    "es": "Español",
-    "it": "Italiano",
-    "pl": "Polski",
-    "cs": "Čeština",
-    "pt": "Português",
-    "nl": "Nederlands",
-    "ro": "Română",
-    "da": "Dansk",
-    "no": "Norsk",
-    "sv": "Svenska",
-    "fi": "Suomi",
+    "de": "Γερμανικά",
+    "en": "Αγγλικά",
+    "fr": "Γαλλικά",
+    "es": "Ισπανικά",
+    "it": "Ιταλικά",
+    "pl": "Πολωνικά",
+    "cs": "Τσεχικά",
+    "pt": "Πορτογαλικά",
+    "nl": "Ολλανδικά",
+    "ro": "Ρουμανικά",
+    "da": "Δανικά",
+    "no": "Νορβηγικά",
+    "sv": "Σουηδικά",
+    "fi": "Φινλανδικά",
     "el": "Ελληνικά",
-    "hr": "Hrvatski",
-    "sr": "Srpski",
-    "hu": "Magyar",
-    "sk": "Slovenčina",
-    "bg": "Български",
-    "ru": "Русский",
-    "uk": "Українська",
-    "ka": "ქართული",
-    "hy": "Հայերեն",
-    "ko": "한국어",
-    "tl": "Filipino",
-    "id": "Bahasa Indonesia",
-    "vi": "Tiếng Việt",
-    "zh": "中文",
-    "sw": "Kiswahili",
-    "am": "አማርኛ",
-    "af": "Afrikaans",
-    "yo": "Yorùbá",
-    "ig": "Igbo",
-    "zu": "isiZulu",
-    "ht": "Kreyòl"
+    "hr": "Κροατικά",
+    "sr": "Σερβικά",
+    "hu": "Ουγγρικά",
+    "sk": "Σλοβακικά",
+    "bg": "Βουλγαρικά",
+    "ru": "Ρωσικά",
+    "uk": "Ουκρανικά",
+    "ka": "Γεωργιανά",
+    "hy": "Αρμενικά",
+    "ko": "Κορεατικά",
+    "tl": "Φιλιππινέζικα",
+    "id": "Ινδονησιακά",
+    "vi": "Βιετναμέζικα",
+    "zh": "Κινεζικά",
+    "sw": "Σουαχίλι",
+    "am": "Αμαρικά",
+    "af": "Αφρικάανς",
+    "yo": "Γιορούμπα",
+    "ig": "Ίγκμπο",
+    "zu": "Ζουλού",
+    "ht": "Κρεολικά"
   },
   "tiles": {
-    "sectionTitle": "What's on your heart?",
-    "sectionSubtitle": "Choose a topic — BibleBot walks with you",
+    "sectionTitle": "Τι σας απασχολεί;",
+    "sectionSubtitle": "Επιλέξτε ένα θέμα — το BibleBot σας συνοδεύει",
     "baptism": {
-      "title": "Find a baptism verse",
-      "desc": "The perfect verse for your child",
-      "prompt": "Help me find a fitting baptism verse. What kind of child is it and what do the parents wish for?"
+      "title": "Βρείτε ένα ρητό βαπτίσματος",
+      "desc": "Ο τέλειος στίχος για το παιδί σας",
+      "prompt": "Βοηθήστε με να βρω ένα κατάλληλο ρητό βαπτίσματος. Τι είδους παιδί είναι και τι εύχονται οι γονείς;"
     },
     "condolence": {
-      "title": "Words of comfort",
-      "desc": "Support through grief & farewell",
-      "prompt": "I need comforting words for a condolence card. Can you help me find the right words?"
+      "title": "Λόγια παρηγοριάς",
+      "desc": "Συλλυπητήρια & Συνοδεία στην αποχώρηση",
+      "prompt": "Χρειάζομαι λόγια παρηγοριάς για μια κάρτα συλλυπητηρίων. Μπορείτε να με βοηθήσετε να διατυπώσω κάτι κατάλληλο;"
     },
     "wedding": {
-      "title": "Wedding verse",
-      "desc": "Biblical words for your love",
-      "prompt": "We're looking for a beautiful biblical verse for our wedding. Which passages speak about love and partnership?"
+      "title": "Γαμήλιο ρητό",
+      "desc": "Βιβλικά λόγια για την αγάπη σας",
+      "prompt": "Ψάχνουμε ένα όμορφο βιβλικό ρητό για το γάμο μας. Ποια βιβλικά χωρία ταιριάζουν στην αγάπη και τη σύντροφο;"
     },
     "anxiety": {
-      "title": "Fear & worry",
-      "desc": "Finding courage in hard times",
-      "prompt": "I'm struggling with fear and worry right now. What does the Bible say about this? Are there verses that give courage?"
+      "title": "Άγχος & Ανησυχίες",
+      "desc": "Βρείτε θάρρος σε δύσκολες στιγμές",
+      "prompt": "Αυτή τη στιγμή παλεύω με άγχος και ανησυχίες. Τι λέει η Βίβλος γι' αυτό; Υπάρχουν στίχοι που δίνουν θάρρος;"
     },
     "confession": {
-      "title": "Confession",
-      "desc": "God forgives — speak it out",
-      "prompt": "I want to let go of something that weighs on me. What does the Bible say about forgiveness and new beginnings?"
+      "title": "Εξομολόγηση",
+      "desc": "Ο Θεός συγχωρεί — εκφράστε το",
+      "prompt": "Θέλω να απαλλαγώ από κάτι που με βαραίνει. Τι λέει η Βίβλος για τη συγχώρεση και μια νέα αρχή;"
     },
     "heartbreak": {
-      "title": "Heartbreak",
-      "desc": "What the Bible says about heartache",
-      "prompt": "My heart is broken. What does the Bible say about heartbreak and how to find hope again?"
+      "title": "Ερωτική απογοήτευση",
+      "desc": "Τι λέει η Βίβλος για τη θλίψη της καρδιάς",
+      "prompt": "Η καρδιά μου είναι ραγισμένη. Τι λέει η Βίβλος για την ερωτική απογοήτευση και πώς μπορεί κανείς να βρει ξανά ελπίδα;"
     },
     "newstart": {
-      "title": "New beginning",
-      "desc": "Strength for a new chapter",
-      "prompt": "I'm facing a new beginning and need encouragement. Which Bible passages speak about fresh starts?"
+      "title": "Νέα αρχή",
+      "desc": "Δύναμη για ένα νέο κεφάλαιο της ζωής",
+      "prompt": "Βρίσκομαι μπροστά σε μια νέα αρχή και χρειάζομαι ενθάρρυνση. Ποια βιβλικά χωρία μιλούν για νέες αρχές;"
     },
     "namequiz": {
-      "title": "Name quiz",
-      "desc": "Find the right biblical name",
-      "prompt": "I'm looking for a biblical name for my child. Can you suggest some and explain their meanings?"
+      "title": "Κουίζ ονομάτων",
+      "desc": "Βρείτε το κατάλληλο βιβλικό όνομα",
+      "prompt": "Ψάχνω ένα βιβλικό όνομα για το παιδί μου. Μπορείτε να μου δώσετε κάποιες προτάσεις και να εξηγήσετε τη σημασία τους;"
     },
     "sleepless": {
-      "title": "Sleepless",
-      "desc": "Finding peace at night",
-      "prompt": "I can't sleep and my mind is racing. Is there a calming prayer or psalm for the night?"
+      "title": "Αϋπνία",
+      "desc": "Βρείτε ηρεμία τη νύχτα",
+      "prompt": "Δεν μπορώ να κοιμηθώ και σκέφτομαι. Υπάρχει μια ηρεμιστική προσευχή ή ένας ψαλμός για τη νύχτα;"
     },
     "loneliness": {
-      "title": "Loneliness",
-      "desc": "You are never alone",
-      "prompt": "I feel lonely. What does the Bible say about God always being with us?"
+      "title": "Μοναξιά",
+      "desc": "Δεν είσαι ποτέ μόνος",
+      "prompt": "Αισθάνομαι μοναξιά. Τι λέει η Βίβλος για το ότι ο Θεός είναι πάντα μαζί μας;"
     },
     "decision": {
-      "title": "Tough decision",
-      "desc": "Wisdom for the right path",
-      "prompt": "I'm facing a difficult decision. Which Bible passages can help me find the right way?"
+      "title": "Δύσκολη απόφαση",
+      "desc": "Σοφία για τη σωστή πορεία",
+      "prompt": "Βρίσκομαι μπροστά σε μια δύσκολη απόφαση. Ποια βιβλικά χωρία με βοηθούν να βρω τη σωστή πορεία;"
     },
     "gratitude": {
-      "title": "Gratitude",
-      "desc": "A personal prayer of thanks",
-      "prompt": "I want to thank God. Help me write a personal prayer of gratitude."
+      "title": "Ευγνωμοσύνη",
+      "desc": "Μια προσωπική προσευχή ευχαριστίας",
+      "prompt": "Θέλω να ευχαριστήσω τον Θεό. Βοηθήστε με να διατυπώσω μια προσωπική προσευχή ευχαριστίας."
     },
     "lifewheel": {
-      "title": "Life Wheel",
-      "desc": "How satisfied are you really?"
+      "title": "Τροχός ζωής",
+      "desc": "Πόσο ευχαριστημένοι είστε πραγματικά;"
     },
     "sevenwhys": {
-      "title": "7 Whys",
-      "desc": "Find the deepest root of your question",
-      "prompt": "I'd like to do the 7 Whys exercise. Here is my topic:"
+      "title": "7 Γιατί",
+      "desc": "Βρείτε την βαθύτερη ρίζα της ερώτησής σας",
+      "prompt": "Θέλω να κάνω την άσκηση 7-Γιατί. Εδώ είναι το θέμα μου:"
     },
     "anger": {
-      "title": "Anger",
-      "desc": "When you're about to explode",
-      "prompt": "I'm so angry and don't know what to do with my rage. What does the Bible say about anger and how to deal with it?"
+      "title": "Οργή & Θυμός",
+      "desc": "Όταν μπορείς να εκραγείς από θυμό",
+      "prompt": "Είμαι τόσο θυμωμένος και δεν ξέρω τι να κάνω με την οργή μου. Τι λέει η Βίβλος για την οργή και πώς μπορώ να τη διαχειριστώ;"
     },
     "shame": {
-      "title": "Shame & Guilt",
-      "desc": "When guilt is crushing you",
-      "prompt": "I feel so ashamed and guilty. What does the Bible say about guilt, forgiveness, and starting over?"
+      "title": "Ντροπή & Ενοχή",
+      "desc": "Όταν οι τύψεις σε πνίγουν",
+      "prompt": "Ντρέπομαι τόσο πολύ και νιώθω ένοχος. Τι λέει η Βίβλος για την ενοχή, τη συγχώρεση και μια νέα αρχή;"
     },
     "burnout": {
-      "title": "Burnout",
-      "desc": "When you just can't go on",
-      "prompt": "I'm totally exhausted and burned out. I just can't anymore. What does the Bible say about rest and recovery?"
+      "title": "Εξουθένωση",
+      "desc": "Όταν απλά δεν μπορείτε άλλο",
+      "prompt": "Είμαι εντελώς εξαντλημένος και καμένος. Απλά δεν μπορώ άλλο. Τι λέει η Βίβλος για την ξεκούραση και την ανάπαυση;"
     },
     "illness": {
-      "title": "Illness",
-      "desc": "When a diagnosis changes everything",
-      "prompt": "I've received a difficult diagnosis and I'm scared. What does the Bible say about illness, healing, and hope?"
+      "title": "Ασθένεια",
+      "desc": "Όταν μια διάγνωση αλλάζει τα πάντα",
+      "prompt": "Έλαβα μια δύσκολη διάγνωση και φοβάμαι. Τι λέει η Βίβλος για την ασθένεια, την ίαση και την ελπίδα;"
     },
     "financial": {
-      "title": "Money Worries",
-      "desc": "When bills are piling up",
-      "prompt": "I have financial worries and don't know what to do. What does the Bible say about money, trust, and provision?"
+      "title": "Οικονομικές ανησυχίες",
+      "desc": "Όταν οι λογαριασμοί πιέζουν",
+      "prompt": "Έχω οικονομικές ανησυχίες και δεν ξέρω τι να κάνω. Τι λέει η Βίβλος για τα χρήματα, την εμπιστοσύνη και την πρόνοια;"
     },
     "meaningcrisis": {
-      "title": "Meaning Crisis",
-      "desc": "What's it all for?",
-      "prompt": "I'm wondering what's the point of it all. I'm in a meaning crisis. What does the Bible say about the meaning of life?"
+      "title": "Κρίση νοήματος",
+      "desc": "Για ποιο λόγο όλα αυτά;",
+      "prompt": "Αναρωτιέμαι για ποιο λόγο όλα αυτά. Βρίσκομαι σε κρίση νοήματος. Τι λέει η Βίβλος για το νόημα της ζωής;"
     },
     "selfdoubt": {
-      "title": "Self-Doubt",
-      "desc": "When you don't feel good enough",
-      "prompt": "I constantly doubt myself and don't feel good enough. What does the Bible say about my worth?"
+      "title": "Αυτο-αμφισβήτηση",
+      "desc": "Όταν δεν νιώθεις αρκετά καλός",
+      "prompt": "Αμφιβάλλω συνεχώς για τον εαυτό μου και δεν νιώθω αρκετά καλός. Τι λέει η Βίβλος για την αξία μου;"
     },
     "calling": {
-      "title": "Calling",
-      "desc": "What should I do with my life?",
-      "prompt": "I don't know what to do with my life. Help me find my calling — what does the Bible say?"
+      "title": "Κλήση",
+      "desc": "Τι πρέπει να κάνω με τη ζωή μου;",
+      "prompt": "Δεν ξέρω τι να κάνω με τη ζωή μου. Βοηθήστε με να βρω την κλήση μου – τι λέει η Βίβλος γι' αυτό;"
     },
     "faithdoubt": {
-      "title": "Faith Doubts",
-      "desc": "When your faith is shaking",
-      "prompt": "I have doubts about my faith and don't know if I can still believe. What does the Bible say about doubt?"
+      "title": "Αμφιβολίες πίστης",
+      "desc": "Όταν η πίστη κλονίζεται",
+      "prompt": "Έχω αμφιβολίες στην πίστη μου και δεν ξέρω αν μπορώ ακόμα να πιστεύω. Τι λέει η Βίβλος για τις αμφιβολίες;"
     },
     "forgiveness": {
-      "title": "Forgiveness",
-      "desc": "When forgiving seems impossible",
-      "prompt": "I simply can't forgive someone. It hurts too much. What does the Bible say about forgiveness?"
+      "title": "Συγχώρεση",
+      "desc": "Όταν η συγχώρεση φαίνεται αδύνατη",
+      "prompt": "Δεν μπορώ απλά να συγχωρέσω κάποιον. Πονάει πάρα πολύ. Τι λέει η Βίβλος για τη συγχώρεση;"
     },
     "familyconflict": {
-      "title": "Family Conflict",
-      "desc": "When family is at war",
-      "prompt": "There's a big conflict in my family. What does the Bible say about family peace and reconciliation?"
+      "title": "Οικογενειακή σύγκρουση",
+      "desc": "Όταν υπάρχουν προβλήματα στην οικογένεια",
+      "prompt": "Υπάρχει μεγάλη διαφωνία στην οικογένειά μου. Τι λέει η Βίβλος για την οικογενειακή ειρήνη και τη συμφιλίωση;"
     },
     "envy": {
-      "title": "Envy",
-      "desc": "When others have it better",
-      "prompt": "I'm envious of others and constantly comparing myself. What does the Bible say about envy and contentment?"
+      "title": "Φθόνος",
+      "desc": "Όταν οι άλλοι είναι καλύτεροι",
+      "prompt": "Ζηλεύω τους άλλους και συγκρίνω τον εαυτό μου συνεχώς. Τι λέει η Βίβλος για το φθόνο και την ικανοποίηση;"
     },
     "joy": {
-      "title": "Share Joy",
-      "desc": "When something wonderful happened",
-      "prompt": "Something wonderful happened to me and I want to share my joy! What does the Bible say about joy and gratitude?"
+      "title": "Μοιραστείτε τη χαρά",
+      "desc": "Όταν συνέβη κάτι υπέροχο",
+      "prompt": "Μου συνέβη κάτι υπέροχο και θέλω να μοιραστώ τη χαρά μου! Τι λέει η Βίβλος για τη χαρά και την ευγνωμοσύνη;"
     },
     "prayer": {
-      "title": "Prayer Request",
-      "desc": "Pray together",
-      "prompt": "I have a prayer request and would like to pray together. Join me in prayer."
+      "title": "Αίτημα προσευχής",
+      "desc": "Προσευχηθείτε μαζί",
+      "prompt": "Έχω ένα αίτημα προσευχής και θα ήθελα να προσευχηθούμε μαζί. Συνοδέψτε με στην προσευχή."
     },
     "bibleverse": {
-      "title": "Understand a Verse",
-      "desc": "Get a Bible passage explained",
-      "prompt": "I'd like to understand a Bible passage better. Can you help me put it in context?"
+      "title": "Κατανόηση στίχου",
+      "desc": "Εξήγηση ενός βιβλικού χωρίου",
+      "prompt": "Θέλω να κατανοήσω καλύτερα ένα βιβλικό χωρίο. Μπορείτε να με βοηθήσετε να το τοποθετήσω στο πλαίσιο;"
     }
   },
   "lifeWheel": {
-    "title": "Your Life Wheel",
-    "intro": "Rate 8 life areas on a scale of 1-10. Discover where you stand — and receive biblical impulses for the area that needs attention.",
-    "start": "Get started",
-    "sliderHint": "Move the sliders — 1 = very unsatisfied, 10 = very satisfied",
-    "showResult": "Show result",
-    "average": "Average",
-    "weakestArea": "Greatest need",
-    "getImpulse": "Biblical impulse for {{area}}",
-    "reset": "Try again",
-    "prompt": "My life wheel shows that I scored only {{score}}/10 in the area of '{{area}}'. What does the Bible say about this area of life? Give me encouragement and practical impulses.",
+    "title": "Ο Τροχός της Ζωής σας",
+    "intro": "Αξιολογήστε 8 τομείς της ζωής σε κλίμακα από 1-10. Ανακαλύψτε πού βρίσκεστε – και λάβετε βιβλικές παρορμήσεις για τον τομέα που χρειάζεται προσοχή.",
+    "start": "Ξεκινήστε τώρα",
+    "sliderHint": "Μετακινήστε τους ρυθμιστές — 1 = πολύ δυσαρεστημένος, 10 = πολύ ικανοποιημένος",
+    "showResult": "Εμφάνιση αποτελέσματος",
+    "average": "Μέσος όρος",
+    "weakestArea": "Μεγαλύτερη ανάγκη",
+    "getImpulse": "Βιβλική παρόρμηση για το {{area}}",
+    "reset": "Ξανακάντε το",
+    "prompt": "Ο τροχός της ζωής μου δείχνει ότι στον τομέα «{{area}}» έχω μόνο {{score}}/10 βαθμούς. Τι λέει η Βίβλος για αυτόν τον τομέα της ζωής; Δώστε μου ενθάρρυνση και πρακτικές παρορμήσεις.",
     "areas": {
-      "health": "Health",
-      "relationships": "Relationships",
-      "career": "Career",
-      "spirituality": "Spirituality",
-      "finances": "Finances",
-      "family": "Family",
-      "leisure": "Leisure",
-      "growth": "Personal Growth"
+      "health": "Υγεία",
+      "relationships": "Σχέσεις",
+      "career": "Καριέρα",
+      "spirituality": "Πνευματικότητα",
+      "finances": "Οικονομικά",
+      "family": "Οικογένεια",
+      "leisure": "Ελεύθερος χρόνος",
+      "growth": "Προσωπική ανάπτυξη"
     },
-    "save": "Save result",
-    "saved": "Saved!",
-    "history": "Previous results",
-    "noHistory": "No saved results yet.",
-    "backToNew": "New Life Wheel",
-    "backToList": "Back to list"
+    "save": "Αποθήκευση αποτελέσματος",
+    "saved": "Αποθηκεύτηκε!",
+    "history": "Προηγούμενα αποτελέσματα",
+    "noHistory": "Δεν υπάρχουν ακόμη αποθηκευμένα αποτελέσματα.",
+    "backToNew": "Νέος τροχός ζωής",
+    "backToList": "Επιστροφή στη λίστα"
   },
   "church": {
-    "badge": "Για Εκκλησίες",
-    "heroTitle": "BibleBot για την Εκκλησία σας",
-    "heroSubtitle": "Συνοδέψτε την κοινότητά σας με βιβλική σοφία – ψηφιακά, προσωπικά και όλο το 24ωρο.",
+    "badge": "Για Κοινότητες",
+    "heroTitle": "BibleBot για την κοινότητά σας",
+    "heroSubtitle": "Συντροφεύστε τα μέλη της κοινότητάς σας με βιβλική σοφία – ψηφιακά, προσωπικά και όλο το εικοσιτετράωρο.",
     "useCasesTitle": "Περιπτώσεις χρήσης",
     "useCase": {
       "youth": {
-        "title": "Εργασία νεολαίας",
-        "desc": "Οι έφηβοι ανακαλύπτουν τη Βίβλο με τον δικό τους τρόπο – διαδραστικά και χωρίς δισταγμούς."
+        "title": "Νεανική εργασία",
+        "desc": "Οι έφηβοι ανακαλύπτουν τη Βίβλο με τον δικό τους τρόπο – διαδραστικά και χωρίς αναστολές."
       },
       "confirmation": {
-        "title": "Κατήχηση",
-        "desc": "Οι κατηχούμενοι εμβαθύνουν τις βιβλικές γνώσεις τους αυτόνομα με προσωπική καθοδήγηση."
+        "title": "Επιβεβαίωση",
+        "desc": "Οι επιβεβαιωθέντες εμβαθύνουν τις γνώσεις τους στη Βίβλο αυτόνομα με προσωπική υποστήριξη."
       },
       "pastoral": {
         "title": "Ποιμαντική φροντίδα",
-        "desc": "Συντροφιά 24/7 ως συμπλήρωμα στην προσωπική ποιμαντική φροντίδα."
+        "desc": "24/7 συνοδεία ως συμπλήρωμα της προσωπικής ποιμαντικής φροντίδας."
       },
       "bibleStudy": {
-        "title": "Μελέτη Βίβλου",
-        "desc": "Ερεθίσματα και θέματα συζήτησης για ομάδες και οικιακές συναντήσεις."
+        "title": "Κύκλος μελέτης της Βίβλου",
+        "desc": "Παρορμήσεις και ερεθίσματα για συζήτηση για ομάδες και οικιακούς κύκλους."
       }
     },
-    "pricingTitle": "Πακέτα χορηγίας",
-    "pricingSubtitle": "Υποστηρίξτε το BibleBot και την εκκλησία σας με το κατάλληλο πακέτο.",
+    "pricingTitle": "Πακέτα Πατρονίας",
+    "pricingSubtitle": "Υποστηρίξτε το BibleBot και την κοινότητά σας με το κατάλληλο πακέτο πατρονίας.",
     "popular": "Δημοφιλές",
     "free": "Δωρεάν",
-    "perYear": "Έτος",
-    "contact": "Επικοινωνήστε",
+    "perYear": "έτος",
+    "contact": "Επικοινωνία",
     "tier": {
       "free": {
-        "name": "Σπόρος σιναπιού",
-        "size": "Βασική πρόσβαση στο bot για όλα τα μέλη της κοινότητας."
+        "name": "Σιναπόσπορος",
+        "size": "Για μικρές κοινότητες & οικιακούς κύκλους (έως 50 μέλη)"
       },
       "community": {
-        "name": "Συνοδοιπόρος",
-        "size": "Αναφορά της εκκλησίας ως υποστηρικτή στον ιστότοπο & πρόσβαση χωρίς διαφημίσεις."
+        "name": "Σύντροφος",
+        "size": "Για κοινότητες με 50–200 μέλη"
       },
       "gemeinde": {
         "name": "Γεφυροποιός",
-        "size": "Λογότυπο στη διεπαφή του bot, μηνιαία αναφορά χρήσης (ανωνυμοποιημένη)."
+        "size": "Για κοινότητες με 200–500 μέλη"
       },
       "kirche": {
         "name": "Φάρος",
-        "size": "Ενσωμάτωση ιδίου περιεχομένου (π.χ. αρχείο κηρυγμάτων), συνδιαμόρφωση οδικού χάρτη, premium υποστήριξη."
+        "size": "Για μεγάλες κοινότητες & ιδρύματα (500+ μέλη)"
       }
     },
     "features": {
-      "directoryEntry": "Καταχώρηση στον κατάλογο",
+      "directoryEntry": "Καταχώριση στον κατάλογο",
       "telegramGroup": "Ομάδα Telegram",
-      "partnerPage": "Δική σας σελίδα συνεργάτη",
+      "partnerPage": "Προσωπική σελίδα συνεργάτη",
       "badge": "Σήμα συνεργάτη",
-      "qrFlyer": "Εκτυπώσιμο QR φυλλάδιο",
+      "qrFlyer": "QR-Flyer για εκτύπωση",
       "contactForm": "Φόρμα επικοινωνίας",
-      "pastorProfile": "Προφίλ ιερέα",
+      "pastorProfile": "Προφίλ Ιερέα/Ποιμένα",
       "welcomeVideo": "Βίντεο καλωσορίσματος",
-      "analytics": "Πίνακας αναλυτικών",
+      "analytics": "Πίνακας ελέγχου Analytics",
       "prioritySupport": "Υποστήριξη προτεραιότητας",
       "multipleProfiles": "Πολλαπλά προφίλ",
-      "customBranding": "Προσαρμοσμένη ταυτότητα",
+      "customBranding": "Προσαρμοσμένη επωνυμία",
       "apiAccess": "Πρόσβαση API",
-      "accountManager": "Προσωπικός υπεύθυνος"
+      "accountManager": "Προσωπικός διαχειριστής λογαριασμού"
     },
-    "viewDirectory": "Δείτε τον κατάλογο εκκλησιών",
-    "directoryBadge": "Κατάλογος Εκκλησιών",
-    "directoryTitle": "Εκκλησίες-συνεργάτες",
-    "directorySubtitle": "Βρείτε μια εκκλησία κοντά σας που προτείνει το BibleBot.",
-    "searchPlaceholder": "Αναζήτηση κατά τοποθεσία, όνομα ή δόγμα...",
-    "noResults": "Δεν υπάρχουν ακόμη εκκλησίες στον κατάλογο.",
+    "viewDirectory": "Προβολή καταλόγου κοινοτήτων",
+    "directoryBadge": "Κατάλογος κοινοτήτων",
+    "directoryTitle": "Συνεργαζόμενες Κοινότητες",
+    "directorySubtitle": "Βρείτε μια κοινότητα κοντά σας που συνιστά το BibleBot.",
+    "searchPlaceholder": "Αναζήτηση τοποθεσίας, ονόματος ή ονομασίας...",
+    "noResults": "Δεν υπάρχουν ακόμη κοινότητες στον κατάλογο.",
     "becomePartner": "Γίνετε συνεργάτης →",
-    "notFound": "Η εκκλησία δεν βρέθηκε.",
+    "notFound": "Δεν βρέθηκε κοινότητα.",
     "backToDirectory": "Επιστροφή στον κατάλογο",
-    "pastor": "Ιερέας",
-    "serviceTimes": "Ώρες λατρείας",
-    "startChat": "Ξεκινήστε συνομιλία",
+    "pastor": "Ιερέας/Ποιμένας",
+    "serviceTimes": "Ώρες λειτουργίας",
+    "startChat": "Έναρξη συνομιλίας",
     "website": "Ιστοσελίδα",
     "telegramGroup": "Ομάδα Telegram",
     "contactTitle": "Επικοινωνία με {{name}}",
@@ -589,167 +625,132 @@
     "contactMessage": "Το μήνυμά σας",
     "contactSend": "Αποστολή μηνύματος",
     "contactSuccess": "Το μήνυμα εστάλη! 🙏",
-    "contactSuccessDesc": "Η εκκλησία θα επικοινωνήσει μαζί σας.",
-    "recommendedBy": "Προτεινόμενο από {{name}}",
-    "setup": "Εγκατάσταση (εφάπαξ)",
+    "contactSuccessDesc": "Η κοινότητα θα επικοινωνήσει μαζί σας.",
+    "recommendedBy": "Συνιστάται από τον/την {{name}}",
+    "setup": "Ρύθμιση (μία φορά)",
     "form": {
-      "title": "Ενδιαφέρεστε; Επικοινωνήστε μαζί μας!",
-      "subtitle": "Θα απαντήσουμε εντός 48 ωρών.",
+      "title": "Ενδιαφέρεστε; Γράψτε μας!",
+      "subtitle": "Θα επικοινωνήσουμε μαζί σας εντός 48 ωρών.",
       "name": "Το όνομά σας",
-      "email": "Διεύθυνση email",
-      "churchName": "Όνομα εκκλησίας",
-      "tier": "Προτιμώμενο πακέτο",
+      "email": "Διεύθυνση E-mail",
+      "churchName": "Όνομα της κοινότητας",
+      "tier": "Επιθυμητό πακέτο",
       "tierPlaceholder": "Επιλέξτε πακέτο...",
       "message": "Το μήνυμά σας",
-      "submit": "Αποστολή ερωτήματος",
-      "success": "Το ερώτημα στάλθηκε! Θα επικοινωνήσουμε σύντομα. 🙏",
-      "error": "Σφάλμα αποστολής. Δοκιμάστε ξανά.",
-      "orgType": "Organization type",
-      "orgTypePlaceholder": "Select type...",
+      "submit": "Αποστολή αιτήματος",
+      "success": "Το αίτημα στάλθηκε! Θα επικοινωνήσουμε σύντομα. 🙏",
+      "error": "Σφάλμα κατά την αποστολή. Παρακαλώ δοκιμάστε ξανά.",
+      "orgType": "Τύπος Οργανισμού",
+      "orgTypePlaceholder": "Επιλέξτε τύπο...",
       "orgTypes": {
-        "church": "Church",
-        "careHome": "Care Home",
-        "seniorHome": "Retirement Home",
-        "hospital": "Hospital",
-        "prison": "Prison Chaplaincy",
-        "military": "Military Chaplaincy"
+        "church": "Εκκλησία",
+        "careHome": "Οίκος Ευγηρίας",
+        "seniorHome": "Γηροκομείο",
+        "hospital": "Νοσοκομείο",
+        "prison": "Σωφρονιστική Ιεραποστολή",
+        "military": "Στρατιωτική Ιεραποστολή"
       }
     },
-    "institutionsTitle": "Also for Institutions",
-    "institutionsSubtitle": "BibleBot supports not only churches – care homes, retirement homes, and hospitals also benefit from digital pastoral care.",
+    "institutionsTitle": "Επίσης για ιδρύματα",
+    "institutionsSubtitle": "Το BibleBot δεν συνοδεύει μόνο κοινότητες – και οι οίκοι ευγηρίας, τα γηροκομεία, τα νοσοκομεία και η ποιμαντική φροντίδα στις φυλακές επωφελούνται από την ψηφιακή ποιμαντική φροντίδα.",
     "institution": {
       "careHome": {
-        "title": "Care Homes",
-        "desc": "Daily Bible impulses and companionship for residents – even when no chaplain is on site."
+        "title": "Οίκοι Ευγηρίας",
+        "desc": "Καθημερινές Βιβλικές παρορμήσεις και συνοδεία για τους κατοίκους – ακόμα και όταν δεν υπάρχει ποιμένας επιτόπου."
       },
       "seniorHome": {
-        "title": "Retirement Homes",
-        "desc": "Familiar Bible verses and conversations for seniors – easily accessible via tablet or smartphone."
+        "title": "Γηροκομεία",
+        "desc": "Γνώριμα βιβλικά χωρία και συζητήσεις για ηλικιωμένους – εύκολα προσβάσιμα μέσω tablet ή smartphone."
       },
       "hospital": {
-        "title": "Hospitals",
-        "desc": "Comfort and spiritual support for patients in difficult times – available 24/7 at the bedside."
+        "title": "Νοσοκομεία",
+        "desc": "Παρηγοριά και πνευματική συνοδεία για ασθενείς σε δύσκολες στιγμές – διαθέσιμα 24/7 στο κρεβάτι του ασθενούς."
       },
       "prison": {
-        "title": "Prison Chaplaincy",
-        "desc": "Hope and spiritual support for inmates – a confidential companion around the clock."
+        "title": "Σωφρονιστική Ιεραποστολή",
+        "desc": "Ελπίδα και πνευματική συνοδεία για τους κρατουμένους – ένας εμπιστευτικός συνομιλητής όλο το εικοσιτετράωρο."
       },
       "military": {
-        "title": "Military Chaplaincy",
-        "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
+        "title": "Στρατιωτική Ιεραποστολή",
+        "desc": "Πνευματική συνοδεία για τα μέλη του στρατού – προσβάσιμη ακόμα και σε αποστολές ή στο στρατόπεδο."
       }
     }
   },
   "institutions": {
-    "badge": "For Institutions",
-    "heroTitle": "BibleBot for Your Institution",
-    "heroSubtitle": "Digital pastoral care for care homes, retirement homes, hospitals, and correctional facilities – personal, confidential, and around the clock.",
-    "typesTitle": "Who is BibleBot for?",
-    "useCasesTitle": "How BibleBot is Used",
-    "useCasesSubtitle": "Practical applications for daily life in your institution.",
-    "pricingTitle": "Patronage Packages",
-    "pricingSubtitle": "The same packages as for churches – adapted to institutional needs.",
-    "linkChurches": "Also available for churches",
+    "badge": "Για Ιδρύματα",
+    "heroTitle": "BibleBot για το Ίδρυμά σας",
+    "heroSubtitle": "Ψηφιακή ποιμαντική φροντίδα για οίκους ευγηρίας, γηροκομεία, νοσοκομεία και σωφρονιστικά ιδρύματα – προσωπική, εμπιστευτική και όλο το εικοσιτετράωρο.",
+    "seniorHint": {
+      "title": "Διαθέσιμη λειτουργία για ηλικιωμένους",
+      "desc": "Μεγαλύτερη γραμματοσειρά και απλοποιημένη λειτουργία – ιδανικό για ηλικιωμένους κατοίκους.",
+      "cta": "Δοκιμάστε τη λειτουργία για ηλικιωμένους"
+    },
+    "typesTitle": "Για ποιον είναι το BibleBot;",
+    "useCasesTitle": "Πώς χρησιμοποιείται το BibleBot",
+    "useCasesSubtitle": "Συγκεκριμένες εφαρμογές για την καθημερινότητα στο ίδρυμά σας.",
+    "pricingTitle": "Πακέτα Πατρονίας",
+    "pricingSubtitle": "Τα ίδια πακέτα με αυτά για τις κοινότητες – προσαρμοσμένα στις ανάγκες των ιδρυμάτων.",
+    "linkChurches": "Διατίθεται επίσης για εκκλησίες",
     "type": {
       "careHome": {
-        "title": "Care Homes",
-        "desc": "Daily Bible impulses and companionship for residents – even when no chaplain is on site."
+        "title": "Οίκοι Ευγηρίας",
+        "desc": "Καθημερινές Βιβλικές παρορμήσεις και συνοδεία για τους κατοίκους – ακόμα και όταν δεν υπάρχει ποιμένας επιτόπου."
       },
       "seniorHome": {
-        "title": "Retirement Homes",
-        "desc": "Familiar Bible verses and conversations for seniors – easily accessible via tablet or smartphone."
+        "title": "Γηροκομεία",
+        "desc": "Γνώριμα βιβλικά χωρία και συζητήσεις για ηλικιωμένους – εύκολα προσβάσιμα μέσω tablet ή smartphone."
       },
       "hospital": {
-        "title": "Hospitals",
-        "desc": "Comfort and spiritual support for patients in difficult times – available 24/7 at the bedside."
+        "title": "Νοσοκομεία",
+        "desc": "Παρηγοριά και πνευματική συνοδεία για ασθενείς σε δύσκολες στιγμές – διαθέσιμα 24/7 στο κρεβάτι του ασθενούς."
       },
       "prison": {
-        "title": "Prison Chaplaincy",
-        "desc": "Hope and spiritual support for inmates – a confidential companion around the clock."
+        "title": "Σωφρονιστική Ιεραποστολή",
+        "desc": "Ελπίδα και πνευματική συνοδεία για τους κρατουμένους – ένας εμπιστευτικός συνομιλητής όλο το εικοσιτετράωρο."
       },
       "military": {
-        "title": "Military Chaplaincy",
-        "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
+        "title": "Στρατιωτική Ιεραποστολή",
+        "desc": "Πνευματική συνοδεία για τα μέλη του στρατού – προσβάσιμη ακόμα και σε αποστολές ή στο στρατόπεδο."
       }
     },
     "useCase": {
       "dailyImpulse": {
-        "title": "Daily Impulse",
-        "desc": "A Bible verse with reflection question every morning – lowers the barrier for spiritual conversations."
+        "title": "Καθημερινή Παρόρμηση",
+        "desc": "Κάθε πρωί ένα βιβλικό χωρίο με ερώτηση προβληματισμού – μειώνει το φραγμό για πνευματικές συζητήσεις."
       },
       "companionship": {
-        "title": "Conversation Partner",
-        "desc": "BibleBot answers faith questions patiently and without time pressure – ideal for lonely hours."
+        "title": "Σύντροφος συζήτησης",
+        "desc": "Το BibleBot απαντά υπομονετικά σε ερωτήσεις πίστης και χωρίς πίεση χρόνου – ιδανικό για μοναχικές ώρες."
       },
       "accessibility": {
-        "title": "Easy Access",
-        "desc": "Large text, simple tablet interface – also for people with limited mobility."
+        "title": "Εύκολη πρόσβαση",
+        "desc": "Μεγάλη γραμματοσειρά, εύκολη χρήση μέσω tablet – ακόμα και για άτομα με περιορισμένη κινητικότητα."
       },
       "availability": {
-        "title": "24/7 Available",
-        "desc": "Spiritual companionship at night and on weekends – when no chaplain is available."
+        "title": "Διαθέσιμο 24/7",
+        "desc": "Πνευματική συνοδεία και τη νύχτα και τα Σαββατοκύριακα – όταν δεν είναι διαθέσιμος ποιμένας."
       }
     },
     "tierDesc": {
-      "free": "Basic access for residents and patients",
-      "community": "Mentioned as supporter, ad-free access",
-      "gemeinde": "Logo presence, monthly usage report",
-      "kirche": "Custom content, roadmap co-creation, premium support"
+      "free": "Βασική πρόσβαση για κατοίκους και ασθενείς",
+      "community": "Αναφορά ως υποστηρικτής, πρόσβαση χωρίς διαφημίσεις",
+      "gemeinde": "Παρουσία λογότυπου, μηνιαία αναφορά χρήσης",
+      "kirche": "Δικό σας περιεχόμενο, συνδιαμόρφωση χρονοδιαγράμματος, Premium υποστήριξη"
     },
     "form": {
-      "title": "Interested? Get in touch!",
-      "subtitle": "We'll get back to you within 48 hours.",
-      "name": "Your name",
-      "email": "Email address",
-      "institutionName": "Institution name",
-      "type": "Type of institution",
-      "typePlaceholder": "Please select...",
-      "tier": "Preferred package",
-      "tierPlaceholder": "Choose package...",
-      "message": "Your message",
-      "submit": "Send inquiry",
-      "success": "Inquiry sent! We'll be in touch soon. 🙏",
-      "error": "Error sending. Please try again."
-    },
-    "seniorHint": {
-      "title": "Λειτουργία ηλικιωμένων διαθέσιμη",
-      "desc": "Μεγαλύτερο κείμενο και απλοποιημένη πλοήγηση – ιδανικό για ηλικιωμένους.",
-      "cta": "Δοκιμάστε τη λειτουργία ηλικιωμένων"
+      "title": "Ενδιαφέρεστε; Επικοινωνήστε μαζί μας!",
+      "subtitle": "Θα επικοινωνήσουμε μαζί σας εντός 48 ωρών.",
+      "name": "Το όνομά σας",
+      "email": "Διεύθυνση E-mail",
+      "institutionName": "Όνομα του Ιδρύματος",
+      "type": "Είδος του Ιδρύματος",
+      "typePlaceholder": "Παρακαλώ επιλέξτε...",
+      "tier": "Επιθυμητό πακέτο",
+      "tierPlaceholder": "Επιλέξτε πακέτο...",
+      "message": "Το μήνυμά σας",
+      "submit": "Αποστολή αιτήματος",
+      "success": "Το αίτημα στάλθηκε! Θα επικοινωνήσουμε σύντομα. 🙏",
+      "error": "Σφάλμα κατά την αποστολή. Παρακαλώ δοκιμάστε ξανά."
     }
-  },
-  "refer": {
-    "badge": "Share God's Word",
-    "title": "Recommend BibleBot",
-    "subtitle": "Know someone who could use encouragement? Share BibleBot – one message can make a difference.",
-    "whatsapp": "Share via WhatsApp",
-    "whatsappMsg": "Hey, I wanted to show you BibleBot – a free Bible companion that really knows the Bible and asks great questions. No login, anonymous, honest. Try it out: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
-    "telegram": "Share via Telegram",
-    "telegramMsg": "Hey, do you know BibleBot? A free personal Bible companion – honest, anonymous, no login needed. Check it out: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
-    "email": "Share via email",
-    "emailSubject": "This might interest you: BibleBot.Life",
-    "emailBody": "Hi!\n\nI wanted to show you BibleBot – a free Bible companion that really knows the Bible. No sign-up needed, completely anonymous.\n\nIt asks thoughtful questions, explains Bible passages in context and accompanies you honestly – even on difficult topics.\n\nTry it out: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nBest wishes",
-    "copy": "Copy link",
-    "copied": "Link copied! 📋",
-    "qr": "Or just show this QR code:"
-  },
-  "share": {
-    "label": "Share",
-    "shareVia": "Share via",
-    "copied": "Copied! 📋",
-    "copiedShort": "Copied!",
-    "copiedDesc": "Text copied to clipboard. Share it on WhatsApp, Instagram or wherever you like!",
-    "copyLink": "Copy text",
-    "error": "Copy failed",
-    "impulseTitle": "BibleBot – Impulse of the Day",
-    "chatTitle": "BibleBot – Thought of the Day",
-    "createImage": "Create image ✨",
-    "generating": "Creating…",
-    "imageReady": "Your image is ready to share!",
-    "shareImage": "Share image",
-    "download": "Save",
-    "imageError": "Image creation failed",
-    "imageErrorDesc": "The image could not be created. Please try again later.",
-    "imageSaved": "Text copied! 📋",
-    "imageSavedDesc": "Save the image and share it with the copied text on Instagram, WhatsApp or wherever you like!"
   }
 }

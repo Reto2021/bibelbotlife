@@ -1,6 +1,6 @@
 {
   "nav": {
-    "startNow": "Bắt đầu"
+    "startNow": "Bắt đầu ngay"
   },
   "loader": "Đang tải…",
   "hero": {
@@ -10,287 +10,324 @@
       "noJudgment": "Không phán xét"
     },
     "title1": "Kinh Thánh.",
-    "title2": " Được suy nghĩ lại.",
-    "subtitle": "BibleBot hiểu Kinh Thánh – và đặt những câu hỏi đúng. Không phải con người, nhưng là người bạn đồng hành chân thành. Cho những cuộc trò chuyện ý nghĩa, câu hỏi sâu sắc và cảm hứng thực sự.",
+    "title2": " Suy nghĩ lại.",
+    "subtitle": "BibleBot của bạn hiểu Kinh Thánh – và đặt những câu hỏi đúng. Không phải con người, nhưng là một người bạn đồng hành trung thực. Để có những cuộc trò chuyện ý nghĩa, những câu hỏi sâu sắc và những động lực thực sự.",
     "ctaTelegram": "Bắt đầu qua Telegram",
     "ctaMore": "Tìm hiểu thêm",
-    "quote": "\"Come to me, all you who are weary and burdened, and I will give you rest.\"",
-    "quoteRef": "– Matthew 11:28"
+    "quote": "«Hỡi những kẻ mệt mỏi và gánh nặng, hãy đến với Ta, Ta sẽ cho các ngươi được an nghỉ.»",
+    "quoteRef": "– Ma-thi-ơ 11,28",
+    "ctaInstagram": "Bắt đầu qua Instagram",
+    "ctaWhatsapp": "Bắt đầu qua WhatsApp"
   },
   "impulse": {
-    "loading": "Loading daily impulse...",
-    "label": "Impulse of the Day",
-    "deepDive": "What does this mean for me?",
-    "explore": "Read full passage"
+    "loading": "Đang tải lời khuyên hàng ngày...",
+    "label": "Lời khuyên trong ngày",
+    "deepDive": "Điều này có ý nghĩa gì đối với tôi?",
+    "explore": "Đọc toàn bộ đoạn văn"
   },
   "features": {
-    "sectionTitle": "How BibleBot accompanies you",
-    "sectionSubtitle": "Discover the many ways BibleBot can walk alongside you",
+    "sectionTitle": "Cách BibleBot của bạn đồng hành cùng bạn",
+    "sectionSubtitle": "Khám phá nhiều cách mà BibleBot có thể đồng hành cùng bạn",
     "bible": {
-      "title": "Bible passages & interpretation",
-      "desc": "Ask \"What does the Bible say about...?\" and receive relevant verses with context and clear explanation."
+      "title": "Kinh Thánh & Chú giải",
+      "desc": "Hỏi «Kinh Thánh nói gì về...?» và nhận được những câu phù hợp với ngữ cảnh và giải thích dễ hiểu."
     },
     "goals": {
-      "title": "Life planning & goals",
-      "desc": "Discover your calling, set concrete goals, and find out what God might have in store for you."
+      "title": "Kế hoạch cuộc sống & Đặt mục tiêu",
+      "desc": "Khám phá ơn gọi của bạn, đặt mục tiêu cụ thể và tìm hiểu xem Chúa có thể có kế hoạch gì với bạn."
     },
     "self": {
-      "title": "Finding yourself",
-      "desc": "Recognize your gifts, strengths, and longings – and what your heart truly needs."
+      "title": "Tìm thấy chính mình",
+      "desc": "Nhận ra những ân tứ, điểm mạnh và khao khát của bạn – và điều trái tim bạn thực sự cần."
     },
     "faith": {
-      "title": "Faith journey & finding Christ",
-      "desc": "Whether seeking, doubting, or deepening – BibleBot accompanies you on your personal path."
+      "title": "Con đường đức tin & Tìm thấy Chúa Kitô",
+      "desc": "Dù đang tìm kiếm, nghi ngờ hay đào sâu – BibleBot của bạn sẽ đồng hành cùng bạn trên hành trình cá nhân của bạn."
     },
     "daily": {
-      "title": "Daily impulses & church year",
-      "desc": "Start your day with impulses and let BibleBot guide you through Advent, Lent, and holidays."
+      "title": "Lời khuyên hàng ngày & Lịch phụng vụ",
+      "desc": "Bắt đầu ngày mới với những lời khuyên và để bản thân được đồng hành qua Mùa Vọng, Mùa Chay và các ngày lễ."
     },
     "groups": {
-      "title": "Groups & communities",
-      "desc": "Perfect for Bible study groups, church communities, and shared devotions."
+      "title": "Nhóm & Hội thánh",
+      "desc": "Hoàn hảo cho các nhóm học Kinh Thánh, nhóm Hội thánh và thờ phượng chung."
     }
   },
   "coaching": {
-    "badge": "Methodology",
-    "title": "Not just a chatbot – genuine companionship",
-    "subtitle": "BibleBot combines biblical wisdom with proven coaching methods and Positive Psychology.",
-    "journeyTitle": "Personal companionship",
-    "journeyDesc": "BibleBot accompanies you as long as you wish – in free conversation or with an optional 21-day structure.",
-    "week1": "Week 1: Arriving",
-    "week1Desc": "Building trust, listening, understanding your situation. Where are you? What concerns you?",
-    "week2": "Week 2: Deepening",
-    "week2Desc": "Recognizing patterns, clarifying desires, deepening biblical impulses. What do you really want?",
-    "week3": "Week 3: Acting",
-    "week3Desc": "Taking concrete steps, setting goals, initiating change. What's your next step?",
-    "openQuestionsTitle": "Open questions instead of quick answers",
-    "openQuestionsDesc": "BibleBot doesn't give cheap advice. Instead, it asks the questions that truly matter:",
-    "openQ1": "\"What's really behind this desire?\"",
-    "openQ2": "\"How would you know something has changed?\"",
-    "openQ3": "\"What would be a first small step?\"",
-    "honestTitle": "Honest instead of toxic positivity",
-    "honestDesc": "No \"It'll be fine!\" and no sugarcoating. BibleBot is empathetic AND honest:",
-    "honest1": "Also addresses uncomfortable Bible passages",
-    "honest2": "Challenges you to self-reflection",
-    "honest3": "Distinguishes comfort from avoidance",
-    "scienceTitle": "Scientifically grounded",
+    "badge": "Phương pháp",
+    "title": "Không chỉ là một chatbot – mà là một người bạn đồng hành thực sự",
+    "subtitle": "BibleBot của bạn kết hợp sự khôn ngoan của Kinh Thánh với các phương pháp huấn luyện đã được kiểm chứng và Tâm lý học Tích cực.",
+    "journeyTitle": "Đồng hành cá nhân",
+    "journeyDesc": "BibleBot của bạn sẽ đồng hành cùng bạn21 ngày đầu tiên bạn muốn – trong cuộc trò chuyện tự do hoặc với một cấu trúc tùy chọn.",
+    "week1": "Tuần 1: Bắt đầu",
+    "week1Desc": "Xây dựng niềm tin, lắng nghe, hiểu tình huống của bạn. Bạn đang ở đâu? Điều gì đang làm bạn bận tâm?",
+    "week2": "Tuần 2: Đào sâu",
+    "week2Desc": "Nhận diện các mẫu, làm rõ mong muốn, đào sâu những lời khuyên từ Kinh Thánh. Bạn thực sự muốn gì?",
+    "week3": "Tuần 3: Hành động",
+    "week3Desc": "Thực hiện các bước cụ thể, đặt mục tiêu, thúc đẩy sự thay đổi. Bước tiếp theo của bạn là gì?",
+    "openQuestionsTitle": "Câu hỏi mở thay vì câu trả lời nhanh",
+    "openQuestionsDesc": "BibleBot của bạn không đưa ra những lời khuyên rẻ tiền. Thay vào đó, nó đặt ra những câu hỏi thực sự quan trọng:",
+    "openQ1": "«Thật ra điều gì đằng sau mong muốn này?»",
+    "openQ2": "«Bạn sẽ nhận ra điều gì đã thay đổi?»",
+    "openQ3": "«Bước nhỏ đầu tiên là gì?»",
+    "honestTitle": "Trung thực thay vì tích cực độc hại",
+    "honestDesc": "Không có «Rồi sẽ ổn thôi!» và không có lời nói ngọt ngào. BibleBot của bạn đồng cảm VÀ trung thực:",
+    "honest1": "Nhắc đến cả những đoạn Kinh Thánh khó nghe",
+    "honest2": "Thúc đẩy tự phản tỉnh",
+    "honest3": "Phân biệt sự an ủi với sự phủ nhận",
+    "scienceTitle": "Dựa trên khoa học",
     "perma": {
-      "name": "PERMA Model",
+      "name": "Mô hình PERMA",
       "author": "Seligman",
-      "desc": "Positive emotions, meaning & growth"
+      "desc": "Cảm xúc tích cực, Ý nghĩa & Phát triển"
     },
     "logo": {
-      "name": "Logotherapy",
+      "name": "Liệu pháp ý nghĩa",
       "author": "Frankl",
-      "desc": "Finding meaning in difficult times"
+      "desc": "Tìm ý nghĩa trong thời kỳ khó khăn"
     },
     "gratitude": {
-      "name": "Gratitude",
+      "name": "Lòng biết ơn",
       "author": "Emmons",
-      "desc": "Research-based gratitude practice"
+      "desc": "Thực hành lòng biết ơn dựa trên nghiên cứu"
     },
     "forgiveness": {
-      "name": "Forgiveness",
+      "name": "Sự tha thứ",
       "author": "Worthington",
-      "desc": "REACH model for forgiveness processes"
+      "desc": "Mô hình REACH cho quá trình tha thứ"
     },
-    "renameTip": "💡 You can give your BibleBot a personal name – so it truly becomes <strong>your</strong> companion."
+    "renameTip": "💡 Bạn có thể đặt tên riêng cho BibleBot của mình – để nó thực sự trở thành người bạn đồng hành của bạn."
   },
   "discover": {
-    "badge": "For the curious",
-    "title": "Rediscover faith – without pressure",
-    "subtitle": "More and more people are asking the big questions anew. BibleBot.Life is for everyone who wants to (re)discover faith – honestly, without pathos, and without church jargon.",
+    "badge": "Dành cho những người tò mò",
+    "title": "Khám phá lại đức tin – không áp lực",
+    "subtitle": "Ngày càng nhiều người đặt ra những câu hỏi lớn. BibleBot.Life dành cho tất cả những ai muốn (lại) khám phá đức tin – trung thực, không hoa mỹ và không dùng biệt ngữ nhà thờ.",
     "doubt": {
-      "title": "You doubt?",
-      "text": "Good. Doubt isn't a flaw – it's the beginning of honest faith. The Bible is full of people who wrestled."
+      "title": "Bạn nghi ngờ?",
+      "text": "Tốt thôi. Nghi ngờ không phải là lỗi lầm – đó là sự khởi đầu của đức tin chân thật. Kinh Thánh đầy những người đã từng đấu tranh."
     },
     "search": {
-      "title": "You're searching?",
-      "text": "Maybe you don't even know what for. That's perfectly fine. BibleBot helps you ask the right questions – instead of delivering quick answers."
+      "title": "Bạn đang tìm kiếm?",
+      "text": "Có thể bạn không biết chính xác mình đang tìm gì. Điều đó hoàn toàn bình thường. BibleBot của bạn giúp bạn đặt ra những câu hỏi đúng – thay vì đưa ra những câu trả lời nhanh chóng."
     },
     "deepen": {
-      "title": "You want to go deeper?",
-      "text": "You already believe, but want to understand more? Discover the depth of the Bible – historical, personal, surprisingly relevant."
+      "title": "Bạn muốn đào sâu?",
+      "text": "Bạn đã tin, nhưng muốn hiểu nhiều hơn? Khám phá chiều sâu của Kinh Thánh – về mặt lịch sử, cá nhân, và có liên quan đáng ngạc nhiên."
     },
-    "quote": "\"Ask, and it will be given to you; seek, and you will find; knock, and the door will be opened.\"",
-    "quoteRef": "– Matthew 7:7",
-    "quoteText": "Many of us don't talk much about faith. That's okay. But those with questions deserve honest answers – without sermons, without membership, without ulterior motives."
+    "quote": "«Hãy gõ, thì cửa sẽ mở cho các ngươi.»",
+    "quoteRef": "– Ma-thi-ơ 7,7",
+    "quoteText": "Ở Thụy Sĩ, chúng ta không nói nhiều về đức tin. Điều đó cũng không cần thiết. Nhưng ai có câu hỏi, xứng đáng nhận được những câu trả lời trung thực – không giảng đạo, không thành viên, không có động cơ ngầm."
   },
   "subscribe": {
-    "title": "Daily Bible impulse",
-    "subtitle": "Every morning at 7:00 AM – a verse, a thought, a good start.",
-    "firstName": "Your first name",
-    "firstNameOptional": "(optional)",
-    "firstNamePlaceholder": "e.g. Thomas",
-    "firstNameHint": "So we can greet you personally.",
-    "channelLabel": "How would you like to receive the impulse?",
-    "push": "Push",
-    "pushDesc": "Browser notification",
+    "title": "Lời khuyên Kinh Thánh hàng ngày",
+    "subtitle": "Mỗi sáng lúc 07:00 – một câu Kinh Thánh, một suy nghĩ, một khởi đầu tốt đẹp.",
+    "firstName": "Tên của bạn",
+    "firstNameOptional": "(tùy chọn)",
+    "firstNamePlaceholder": "ví dụ: Thomas",
+    "firstNameHint": "Để chúng tôi có thể chào bạn một cách thân mật.",
+    "channelLabel": "Bạn muốn nhận lời khuyên bằng cách nào?",
+    "push": "Thông báo đẩy",
+    "pushDesc": "Thông báo trình duyệt",
     "telegram": "Telegram",
-    "telegramDesc": "Message via Telegram",
+    "telegramDesc": "Tin nhắn qua Telegram",
     "sms": "SMS",
-    "smsDesc": "Text to your phone",
-    "phoneLabel": "Phone number",
-    "phonePlaceholder": "+1 555 123 4567",
-    "phoneHint": "With country code, e.g. +1 for the US.",
-    "telegramHint": "Click \"Subscribe\" – you'll be redirected to Telegram. Start the bot and type <strong>/daily</strong> to activate the daily impulse.",
-    "pushHint": "After clicking \"Subscribe\", your browser will ask for notification permission. Please allow it to receive the impulse.",
-    "submit": "Subscribe",
-    "submitting": "Subscribing...",
-    "footNote": "No login required. Cancel anytime.",
-    "successTitle": "You're subscribed! 🙏",
-    "successText": "Starting tomorrow at 7:00 AM, you'll receive your personal Bible impulse.",
-    "toastTelegram": "Telegram opened 🙏",
-    "toastTelegramDesc": "Start the bot and type /daily to activate the daily impulse.",
-    "toastSuccess": "Subscribed! 🙏",
-    "toastSuccessDesc": "You'll receive your daily impulse starting tomorrow.",
-    "toastPushPreview": "Push subscription not available in preview",
-    "toastPushPreviewDesc": "Push notifications only work on the published site.",
-    "toastNotSupported": "Not supported",
-    "toastNotSupportedDesc": "Your browser does not support push notifications.",
-    "toastPermDenied": "Permission denied",
-    "toastPermDeniedDesc": "Please allow notifications in your browser settings.",
-    "toastError": "Error",
-    "toastErrorDesc": "Please try again later."
+    "smsDesc": "SMS đến điện thoại của bạn",
+    "phoneLabel": "Số điện thoại di động",
+    "phonePlaceholder": "+41 79 123 45 67",
+    "phoneHint": "Với mã quốc gia, ví dụ: +41 cho Thụy Sĩ.",
+    "telegramHint": "Nhấp vào «Đăng ký» – bạn sẽ được chuyển hướng đến Telegram. Bắt đầu bot ở đó và nhập **_daily** để kích hoạt lời khuyên hàng ngày.",
+    "pushHint": "Sau khi nhấp vào «Đăng ký», trình duyệt của bạn sẽ yêu cầu quyền nhận thông báo. Vui lòng cho phép để nhận lời khuyên.",
+    "submit": "Đăng ký",
+    "submitting": "Đang đăng ký...",
+    "footNote": "Không cần đăng nhập. Có thể hủy đăng ký bất cứ lúc nào.",
+    "successTitle": "Bạn đã đăng ký! 🙏",
+    "successText": "Từ ngày mai lúc 07:00, bạn sẽ nhận được lời khuyên Kinh Thánh cá nhân của mình.",
+    "toastTelegram": "Đã mở Telegram 🙏",
+    "toastTelegramDesc": "Khởi động bot và nhập /daily để kích hoạt lời khuyên hàng ngày.",
+    "toastSuccess": "Đã đăng ký! 🙏",
+    "toastSuccessDesc": "Bạn sẽ nhận được lời khuyên hàng ngày từ ngày mai.",
+    "toastPushPreview": "Đăng ký đẩy không có trong bản xem trước",
+    "toastPushPreviewDesc": "Thông báo đẩy chỉ hoạt động trên trang đã xuất bản.",
+    "toastNotSupported": "Không được hỗ trợ",
+    "toastNotSupportedDesc": "Trình duyệt của bạn không hỗ trợ thông báo đẩy.",
+    "toastPermDenied": "Quyền bị từ chối",
+    "toastPermDeniedDesc": "Vui lòng cho phép thông báo trong cài đặt trình duyệt của bạn.",
+    "toastError": "Lỗi",
+    "toastErrorDesc": "Vui lòng thử lại sau."
   },
   "faq": {
-    "badge": "FAQ",
-    "title": "What you should know about BibleBot",
-    "subtitle": "Transparency matters – especially for theologians, pastors, and critical thinkers.",
-    "q1": "What makes BibleBot different from ChatGPT & Co.?",
-    "q1Generic": "Generic chatbots:",
+    "badge": "Những câu hỏi thường gặp",
+    "title": "Những điều bạn nên biết về BibleBot của mình",
+    "subtitle": "Chúng tôi coi trọng sự minh bạch – đặc biệt đối với các nhà thần học, cố vấn mục vụ và những người có tư duy phản biện.",
+    "q1": "Điều gì phân biệt BibleBot của bạn với ChatGPT & các loại khác?",
+    "q1Generic": "Chatbot chung:",
     "q1GenericItems": [
-      "Superficial Bible quotes without context",
-      "No pastoral guardrails",
-      "Avoids uncomfortable texts",
-      "No crisis intervention",
-      "Mixes Bible with esotericism",
-      "No follow-up questions – just confirmation"
+      "Trích dẫn Kinh Thánh hời hợt không có ngữ cảnh",
+      "Không có hướng dẫn mục vụ",
+      "Tránh các văn bản khó chịu",
+      "Không can thiệp khủng hoảng",
+      "Kết hợp Kinh Thánh với chủ nghĩa thần bí",
+      "Không hỏi lại – chỉ xác nhận"
     ],
     "q1Bot": "BibleBot.Life:",
     "q1BotItems": [
-      "5 recognized translations – including uncomfortable passages",
-      "Guardrails AND challenging companionship",
-      "Follow-up questions for self-reflection",
-      "Crisis referrals (emergency helplines)",
-      "Exclusively Christian theology",
-      "Promotes critical thinking as faith maturity"
+      "5 bản dịch được công nhận – cả những đoạn khó nghe",
+      "Hướng dẫn VÀ đồng hành đầy thử thách",
+      "Hỏi lại để tự phản tỉnh",
+      "Tham khảo khủng hoảng (Điện thoại 143 / 147)",
+      "Chỉ thần học Thiên Chúa giáo",
+      "Thúc đẩy tư duy phản biện như sự trưởng thành trong đức tin"
     ],
-    "q2": "Which Bible translations are included?",
-    "q2Intro": "BibleBot works ecumenically with the major German-language Bible editions:",
-    "q2Outro": "All Bible passages include source citations and historical context.",
-    "q3": "What scientific foundations are behind it?",
-    "q3Intro": "The companionship is based on peer-reviewed research in Positive Psychology:",
-    "q4": "How does BibleBot ensure pastoral safety?",
+    "q2": "Những bản dịch Kinh Thánh nào được lưu trữ?",
+    "q2Intro": "BibleBot của bạn làm việc theo cách liên giáo phái với các bản Kinh Thánh tiếng Đức quan trọng:",
+    "q2Outro": "Tất cả các đoạn Kinh Thánh đều được cung cấp nguồn gốc và ngữ cảnh lịch sử.",
+    "q3": "Những cơ sở khoa học nào đằng sau nó?",
+    "q3Intro": "Sự đồng hành dựa trên nghiên cứu đã được bình duyệt của Tâm lý học Tích cực:",
+    "q4": "Làm thế nào để BibleBot của bạn đảm bảo an toàn mục vụ?",
     "q4Items": [
-      "Suicidal thoughts or crisis → immediate referral to emergency helplines",
-      "No psychological or medical diagnoses",
-      "Respect without arbitrariness – clear biblical positions are taken",
-      "Empathy AND honesty – uncomfortable topics are addressed",
-      "Follow-up questions for self-reflection instead of cheap validation",
-      "No toxic positivity – genuine, honest companionship",
-      "Openly names tensions and difficult texts"
+      "Khi có ý định tự tử hoặc khủng hoảng → chuyển ngay đến Dargebotene Hand (143) và Pro Juventute (147)",
+      "Không có chẩn đoán tâm lý hoặc y tế",
+      "Tôn trọng không tùy tiện – lập trường Kinh Thánh rõ ràng được thể hiện",
+      "Đồng cảm VÀ trung thực – cả những điều khó chịu cũng được đề cập",
+      "Hỏi lại để tự phản tỉnh thay vì xác nhận rẻ tiền",
+      "Không có sự tích cực độc hại – đồng hành chân thành, trung thực",
+      "Đề cập công khai những căng thẳng và văn bản khó khăn"
     ],
-    "q5": "Is BibleBot tied to a specific denomination?",
-    "q5Answer": "No. BibleBot is ecumenically oriented and respects Reformed, Catholic, Free Church, and other Christian traditions equally. When there are denominational differences in interpretation, various perspectives are presented transparently – without favoring any tradition.",
-    "q6": "Does BibleBot replace pastoral care or therapy?",
-    "q6Answer": "No. BibleBot is a digital tool for personal Bible reading and reflection. It does not replace professional pastoral care, theological counseling, or psychological therapy. In serious crises, BibleBot always refers to qualified resources.",
-    "q7": "Isn't BibleBot just a 'feel-good bot'?",
-    "q7Answer": "No. BibleBot comforts where comfort is needed – but it also challenges. Spiritual growth requires friction. BibleBot asks uncomfortable follow-up questions, names difficult Bible texts (Job, Lament Psalms, prophetic criticism), and doesn't shy away from topics like justice, repentance, and responsibility. The prophetic tradition was never comfortable – and neither is BibleBot.",
-    "q8": "Who is behind BibleBot and how is it funded?",
-    "q8Answer": "BibleBot.Life is a private, non-commercial project. It's run on a volunteer basis and funded exclusively through voluntary donations. There's no advertising, no data sales, and no paid features. All donations go directly to covering operating costs (infrastructure, hosting, development). Since BibleBot is a private project, donations are not tax-deductible.",
-    "q9": "How does BibleBot handle my data?",
-    "q9Answer": "BibleBot stores no personal data and no chat histories. Every conversation is anonymous. There's no login, no tracking, and no sharing of data with third parties. Usage is completely anonymous."
+    "q5": "BibleBot của bạn có bị ràng buộc giáo phái không?",
+    "q5Answer": "Không. BibleBot của bạn hướng đến liên giáo phái và tôn trọng các truyền thống Cải cách, Công giáo, Giáo hội tự do và các truyền thống Kitô giáo khác như nhau. Đối với các cách giải thích khác nhau về giáo phái, các quan điểm khác nhau được trình bày minh bạch – mà không ưu tiên một truyền thống nào.",
+    "q6": "BibleBot của bạn có thay thế cố vấn mục vụ hoặc liệu pháp không?",
+    "q6Answer": "Không. BibleBot của bạn là một công cụ kỹ thuật số để đọc và suy tư Kinh Thánh cá nhân. Nó không thay thế cố vấn mục vụ chuyên nghiệp, tư vấn thần học hoặc liệu pháp tâm lý. Trong trường hợp khủng hoảng nghiêm trọng, BibleBot của bạn luôn giới thiệu đến các cơ quan có trình độ.",
+    "q7": "BibleBot của bạn không chỉ là một «bot dễ chịu» sao?",
+    "q7Answer": "Không. BibleBot của bạn an ủi khi cần an ủi – nhưng nó cũng thách thức. Sự phát triển tâm linh cần sự cọ xát. BibleBot của bạn đặt ra những câu hỏi khó chịu, nhắc đến những văn bản Kinh Thánh khó khăn (Gióp, Thi thiên than vãn, phê bình tiên tri) và không ngại các chủ đề như công lý, sự ăn năn và trách nhiệm. Truyền thống tiên tri chưa bao giờ dễ chịu – và BibleBot của bạn cũng vậy.",
+    "q8": "Ai đứng sau BibleBot của bạn và nó được tài trợ như thế nào?",
+    "q8Answer": "BibleBot.Life là một dự án tư nhân, phi thương mại. Nó được vận hành tình nguyện và chỉ được tài trợ thông qua các khoản quyên góp tự nguyện. Không có quảng cáo, không bán dữ liệu và không có tính năng trả phí. Tất cả các khoản quyên góp trực tiếp trang trải chi phí hoạt động (cơ sở hạ tầng, lưu trữ, phát triển). Vì BibleBot hoạt động như một dự án tư nhân, các khoản quyên góp không được trừ thuế.",
+    "q9": "BibleBot của bạn xử lý dữ liệu của tôi như thế nào?",
+    "q9Answer": "BibleBot của bạn không lưu trữ dữ liệu cá nhân hay lịch sử trò chuyện. Mọi cuộc trò chuyện đều ẩn danh. Không có đăng nhập, không theo dõi và không chia sẻ dữ liệu với bên thứ ba. Việc sử dụng hoàn toàn ẩn danh."
   },
   "donate": {
-    "badge": "Support BibleBot",
-    "title": "Help keep BibleBot free",
-    "subtitle": "BibleBot is a passion project – no ads, no subscriptions, no hidden costs. To keep it that way, I rely on voluntary donations. Every contribution helps cover the ongoing costs for operations and infrastructure.",
-    "bankTitle": "Donate via bank transfer",
-    "bankSubtitle": "Every amount counts – thank you! 🙏",
-    "recipient": "Recipient",
-    "bank": "Bank",
-    "purpose": "Reference",
-    "purposeValue": "Donation BibleBot",
-    "note": "BibleBot.Life is operated as a private project. Donations are therefore not tax-deductible."
+    "badge": "Hỗ trợ BibleBot của bạn",
+    "title": "Hãy giúp BibleBot của bạn duy trì miễn phí",
+    "subtitle": "BibleBot của bạn là một dự án tâm huyết – không quảng cáo, không phí thuê bao, không có chi phí ẩn. Để duy trì điều này, tôi cần sự quyên góp tự nguyện. Mọi đóng góp đều giúp trang trải chi phí hoạt động và cơ sở hạ tầng.",
+    "bankTitle": "Quyên góp qua chuyển khoản ngân hàng",
+    "bankSubtitle": "Mọi số tiền đều có giá trị – chân thành cảm ơn! 🙏",
+    "recipient": "Người nhận",
+    "bank": "Ngân hàng",
+    "purpose": "Mục đích",
+    "purposeValue": "Quyên góp BibleBot",
+    "note": "BibleBot.Life hoạt động như một dự án cá nhân. Do đó, các khoản quyên góp không được giảm trừ thuế."
+  },
+  "refer": {
+    "badge": "Chia sẻ Lời Chúa",
+    "title": "Giới thiệu BibleBot",
+    "subtitle": "Bạn có biết ai đó đang cần lời động viên? Hãy chia sẻ BibleBot – một tin nhắn có thể tạo ra nhiều điều khác biệt.",
+    "whatsapp": "Chia sẻ qua WhatsApp",
+    "whatsappMsg": "Chào, mình muốn giới thiệu cho bạn BibleBot – một người bạn đồng hành Kinh Thánh miễn phí, hiểu Kinh Thánh và đặt những câu hỏi thực sự hay. Không cần đăng nhập, ẩn danh, trung thực. Hãy thử xem: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "telegram": "Chia sẻ qua Telegram",
+    "telegramMsg": "Chào, bạn đã biết BibleBot chưa? Một người bạn đồng hành Kinh Thánh cá nhân miễn phí – trung thực, ẩn danh, không cần đăng nhập. Hãy xem thử: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "email": "Chia sẻ qua E-mail",
+    "emailSubject": "Bạn có thể quan tâm: BibleBot.Life",
+    "emailBody": "Chào bạn!\n\nMình muốn giới thiệu cho bạn BibleBot – một người bạn đồng hành Kinh Thánh miễn phí, thực sự hiểu Kinh Thánh. Không cần đăng ký, hoàn toàn ẩn danh.\n\nNó đặt ra những câu hỏi hay, giải thích các đoạn Kinh Thánh trong ngữ cảnh và đồng hành cùng bạn một cách trung thực – ngay cả với những chủ đề khó khăn.\n\nHãy thử xem: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nThân ái",
+    "copy": "Sao chép liên kết",
+    "copied": "Đã sao chép liên kết! 📋",
+    "qr": "Hoặc chỉ cần hiển thị mã QR này:"
   },
   "cta": {
-    "title": "You don't have to go through this alone",
-    "subtitle": "Just tell BibleBot what's on your mind. No login, no cost, no judgment – just honest companionship and the wisdom of the Bible.",
-    "button": "Start a conversation"
+    "title": "Bạn không cần phải vượt qua điều này một mình",
+    "subtitle": "Chỉ cần viết cho BibleBot của bạn điều đang làm bạn bận tâm. Không đăng nhập, không chi phí, không phán xét – chỉ có sự đồng hành chân thành và sự khôn ngoan của Kinh Thánh.",
+    "button": "Bắt đầu cuộc trò chuyện ngay"
   },
   "footer": {
-    "tagline": "Your personal companion for a life with the Bible",
-    "disclaimer": "BibleBot.Life is a digital tool and does not replace professional pastoral care, theological counseling, or psychological therapy. In acute crises, please contact your local emergency helpline.",
-    "impressum": "Imprint",
-    "notes": "Notes",
-    "private": "Private, non-commercial project",
-    "noChat": "No storage of chat data",
-    "noTax": "Donations are not tax-deductible",
-    "datenschutz": "Privacy Policy",
-    "love": "With ❤️ for everyone wondering what Christ thinks.",
-    "forChurches": "For Churches"
+    "tagline": "Người bạn đồng hành cá nhân của bạn cho cuộc sống với Kinh Thánh",
+    "disclaimer": "BibleBot.Life là một công cụ kỹ thuật số và không thay thế cho việc tư vấn tâm linh chuyên nghiệp, tư vấn thần học hoặc liệu pháp tâm lý. Trong các trường hợp khủng hoảng nghiêm trọng, vui lòng liên hệ Dargebotene Hand (ĐT 143) hoặc Pro Juventute (ĐT 147).",
+    "impressum": "Thông tin pháp lý",
+    "notes": "Ghi chú",
+    "private": "Dự án cá nhân, phi lợi nhuận",
+    "noChat": "Không lưu trữ dữ liệu trò chuyện",
+    "noTax": "Spenden sind nicht steuerabzugsfähig",
+    "datenschutz": "Chính sách bảo mật",
+    "love": "Với ❤️ cho tất cả những ai tự hỏi Chúa Kitô nghĩ gì.",
+    "forChurches": "Dành cho các Hội thánh"
   },
   "chat": {
-    "welcome": "Welcome! 🤗\n\nI'm your BibleBot – your personal companion with the Bible, good questions, and real impulses. No pressure, no judgment.\n\nYou can ask me anything – or just share what's on your mind. 💛",
-    "journeyOffer": "💡 **Tip:** I also offer a **21-day journey** – 3 weeks of daily impulses, reflections, and concrete steps. At your own pace.\n\nWould you like to try it?",
-    "suggestion1": "I need an uplifting word right now",
-    "suggestion2": "What does the Bible say when you feel uncertain?",
-    "suggestion3": "I want to find out what I really want",
-    "teaser": "What's on your mind? 💛",
-    "teaserSub": "I'm here – without any judgment.",
-    "openChat": "Open chat",
-    "closeChat": "Close chat",
-    "yourCompanion": "Your personal companion",
-    "journeyComplete": "21 days completed! 🎉",
-    "arriving": "Arriving",
-    "deepening": "Deepening",
-    "acting": "Acting",
-    "renameTip": "Tip: Click the name to rename me ✨",
-    "changeName": "Change name",
-    "placeholder": "Just start typing...",
-    "startVoice": "Start voice input",
-    "stopVoice": "Stop recording",
-    "noVoice": "Your browser does not support voice input.",
-    "writing": "typing...",
-    "shieldBadge": "No login · No judgment · Citations verified",
-    "journeyStart": "Yes, let's go ✨",
-    "journeyLater": "Maybe later",
-    "journeyStartMsg": "Yes, I'd like to start the 21-day journey!",
-    "qaChecking": "Checking citations...",
-    "qaIssue": "{{count}} issue with citations",
-    "qaIssue_plural": "{{count}} issues with citations",
-    "qaOk": "{{count}} citation verified ✓",
-    "qaOk_plural": "{{count}} citations verified ✓",
-    "qaWarning": "⚠️ Accuracy notes:",
-    "errorTooMany": "Too many requests – please wait a moment.",
-    "errorCredits": "AI quota exhausted.",
-    "errorConnect": "Connection error.",
-    "errorTitle": "Error",
-    "errorConnection": "could not be reached.",
-    "errorNoStream": "No stream",
-    "seniorMode": "Senior mode (larger text)",
-    "teaserCta": "Start writing →",
-    "namePlaceholder": "e.g. Eli, Miriam…"
+    "welcome": "Chào mừng bạn 🤗\n\nTôi là BibleBot của bạn – người bạn đồng hành cá nhân của bạn với Kinh Thánh, những câu hỏi hay và những lời khuyên cụ thể. Không áp lực, không phán xét.\n\nBạn có thể hỏi tôi bất cứ điều gì – hoặc chỉ đơn giản là kể cho tôi những gì đang làm bạn bận tâm. 💛",
+    "journeyOffer": "💡 **Mẹo:** Tôi cũng cung cấp **chương trình đồng hành 21 ngày** – 3 tuần với những lời khuyên, suy ngẫm và bước đi cụ thể hàng ngày. Hoàn toàn theo tốc độ của bạn.\n\nBạn có muốn thử không?",
+    "suggestion1": "Tôi đang cần một lời động viên",
+    "suggestion2": "Kinh Thánh nói gì khi bạn cảm thấy không chắc chắn?",
+    "suggestion3": "Tôi muốn tìm hiểu xem mình thực sự muốn gì",
+    "teaser": "Điều gì đang làm bạn bận tâm? 💛",
+    "teaserSub": "Tôi ở đây – hoàn toàn không phán xét.",
+    "teaserCta": "Viết ngay →",
+    "openChat": "Mở trò chuyện",
+    "closeChat": "Đóng trò chuyện",
+    "yourCompanion": "Người bạn đồng hành cá nhân của bạn",
+    "journeyComplete": "Hoàn thành 21 ngày! 🎉",
+    "arriving": "Đến",
+    "deepening": "Đào sâu",
+    "acting": "Hành động",
+    "renameTip": "Đặt tên cho tôi ✨",
+    "namePlaceholder": "ví dụ: Eli, Miriam…",
+    "changeName": "Đổi tên",
+    "placeholder": "Chỉ cần viết thôi...",
+    "startVoice": "Bắt đầu nhập liệu bằng giọng nói",
+    "stopVoice": "Dừng ghi âm",
+    "noVoice": "Trình duyệt của bạn không hỗ trợ nhập liệu bằng giọng nói.",
+    "writing": "đang viết...",
+    "shieldBadge": "Không đăng nhập · Không phán xét · Trích dẫn được kiểm tra",
+    "journeyStart": "Vâng, bắt đầu ✨",
+    "journeyLater": "Có thể sau",
+    "journeyStartMsg": "Vâng, tôi muốn bắt đầu chương trình đồng hành 21 ngày!",
+    "qaChecking": "Đang kiểm tra trích dẫn...",
+    "qaIssue": "{{count}} lưu ý về trích dẫn",
+    "qaIssue_plural": "{{count}} lưu ý về trích dẫn",
+    "qaOk": "Đã kiểm tra {{count}} trích dẫn ✓",
+    "qaOk_plural": "Đã kiểm tra {{count}} trích dẫn ✓",
+    "qaWarning": "⚠️ Lưu ý về độ chính xác:",
+    "errorTooMany": "Quá nhiều yêu cầu – vui lòng đợi một chút.",
+    "errorCredits": "Hạn mức AI đã hết.",
+    "errorConnect": "Lỗi kết nối.",
+    "errorTitle": "Lỗi",
+    "errorConnection": "không thể kết nối.",
+    "errorNoStream": "Không có luồng",
+    "seniorMode": "Chế độ người cao tuổi (phông chữ lớn hơn)"
   },
   "install": {
-    "title": "Install BibleBot",
-    "androidDesc": "Quick access from your home screen",
-    "iosDesc": "Tap \"Share\" → \"Add to Home Screen\"",
-    "button": "Install",
-    "close": "Close"
+    "title": "Cài đặt BibleBot",
+    "androidDesc": "Truy cập nhanh chóng trực tiếp từ màn hình chính",
+    "iosDesc": "Chạm vào «Chia sẻ» → «Thêm vào Màn hình chính»",
+    "button": "Cài đặt",
+    "close": "Đóng"
+  },
+  "share": {
+    "label": "Chia sẻ",
+    "shareVia": "Chia sẻ qua",
+    "copied": "Đã sao chép! 📋",
+    "copiedShort": "Đã sao chép!",
+    "copiedDesc": "Văn bản đã được sao chép vào bộ nhớ đệm. Chia sẻ nó ngay bây giờ trên WhatsApp, Instagram hoặc bất cứ nơi nào bạn muốn!",
+    "copyLink": "Sao chép văn bản",
+    "error": "Sao chép thất bại",
+    "impulseTitle": "BibleBot – Lời khuyên trong ngày",
+    "chatTitle": "BibleBot – Suy nghĩ trong ngày",
+    "createImage": "Tạo hình ảnh ✨",
+    "generating": "Đang tạo…",
+    "imageReady": "Hình ảnh của bạn đã sẵn sàng để chia sẻ!",
+    "shareImage": "Chia sẻ hình ảnh",
+    "download": "Lưu",
+    "imageError": "Tạo hình ảnh thất bại",
+    "imageErrorDesc": "Không thể tạo hình ảnh. Vui lòng thử lại sau.",
+    "imageSaved": "Đã sao chép văn bản! 📋",
+    "imageSavedDesc": "Lưu hình ảnh và chia sẻ nó với văn bản đã sao chép trên Instagram, WhatsApp hoặc bất cứ nơi nào bạn muốn!"
   },
   "darkMode": {
-    "light": "Light mode",
-    "dark": "Dark mode"
+    "light": "Chế độ sáng",
+    "dark": "Chế độ tối"
   },
   "impressum": {
-    "back": "Back to home",
-    "title": "Imprint"
+    "back": "Trở về trang chủ",
+    "title": "Thông tin pháp lý"
   },
   "datenschutz": {
-    "back": "Back to home",
-    "title": "Privacy Policy"
+    "back": "Trở về trang chủ",
+    "title": "Chính sách bảo mật"
   },
   "lang": {
     "de": "Deutsch",
@@ -331,425 +368,390 @@
     "ht": "Kreyòl"
   },
   "tiles": {
-    "sectionTitle": "What's on your heart?",
-    "sectionSubtitle": "Choose a topic — BibleBot walks with you",
+    "sectionTitle": "Điều gì đang làm bạn bận tâm?",
+    "sectionSubtitle": "Chọn một chủ đề — BibleBot sẽ đồng hành cùng bạn",
     "baptism": {
-      "title": "Find a baptism verse",
-      "desc": "The perfect verse for your child",
-      "prompt": "Help me find a fitting baptism verse. What kind of child is it and what do the parents wish for?"
+      "title": "Tìm câu nói rửa tội",
+      "desc": "Câu thơ hoàn hảo cho con bạn",
+      "prompt": "Giúp tôi tìm một câu rửa tội phù hợp. Đó là đứa trẻ như thế nào và cha mẹ mong muốn gì?"
     },
     "condolence": {
-      "title": "Words of comfort",
-      "desc": "Support through grief & farewell",
-      "prompt": "I need comforting words for a condolence card. Can you help me find the right words?"
+      "title": "Lời an ủi",
+      "desc": "Đồng hành lời chia buồn & tạm biệt",
+      "prompt": "Tôi cần những lời an ủi cho một tấm thiệp chia buồn. Bạn có thể giúp tôi soạn một cái gì đó phù hợp không?"
     },
     "wedding": {
-      "title": "Wedding verse",
-      "desc": "Biblical words for your love",
-      "prompt": "We're looking for a beautiful biblical verse for our wedding. Which passages speak about love and partnership?"
+      "title": "Câu nói cho đám cưới",
+      "desc": "Lời Kinh Thánh cho tình yêu của bạn",
+      "prompt": "Chúng tôi đang tìm một câu Kinh Thánh đẹp cho đám cưới của mình. Đoạn Kinh Thánh nào phù hợp với tình yêu và mối quan hệ?"
     },
     "anxiety": {
-      "title": "Fear & worry",
-      "desc": "Finding courage in hard times",
-      "prompt": "I'm struggling with fear and worry right now. What does the Bible say about this? Are there verses that give courage?"
+      "title": "Lo lắng & Sầu muộn",
+      "desc": "Tìm thấy lòng can đảm trong thời điểm khó khăn",
+      "prompt": "Tôi đang phải đối mặt với nỗi sợ hãi và lo lắng. Kinh Thánh nói gì về điều đó? Có những câu nào động viên không?"
     },
     "confession": {
-      "title": "Confession",
-      "desc": "God forgives — speak it out",
-      "prompt": "I want to let go of something that weighs on me. What does the Bible say about forgiveness and new beginnings?"
+      "title": "Xưng tội",
+      "desc": "Chúa tha thứ — hãy nói ra",
+      "prompt": "Tôi muốn nói ra điều gì đó đang làm tôi nặng lòng. Kinh Thánh nói gì về sự tha thứ và khởi đầu mới?"
     },
     "heartbreak": {
-      "title": "Heartbreak",
-      "desc": "What the Bible says about heartache",
-      "prompt": "My heart is broken. What does the Bible say about heartbreak and how to find hope again?"
+      "title": "Đau khổ vì tình yêu",
+      "desc": "Kinh Thánh nói gì về đau khổ vì tình yêu",
+      "prompt": "Trái tim tôi tan nát. Kinh Thánh nói gì về đau khổ vì tình yêu và cách tìm lại hy vọng?"
     },
     "newstart": {
-      "title": "New beginning",
-      "desc": "Strength for a new chapter",
-      "prompt": "I'm facing a new beginning and need encouragement. Which Bible passages speak about fresh starts?"
+      "title": "Khởi đầu mới",
+      "desc": "Sức mạnh cho một giai đoạn mới của cuộc đời",
+      "prompt": "Tôi đang đứng trước một khởi đầu mới và cần được động viên. Đoạn Kinh Thánh nào nói về khởi đầu mới?"
     },
     "namequiz": {
-      "title": "Name quiz",
-      "desc": "Find the right biblical name",
-      "prompt": "I'm looking for a biblical name for my child. Can you suggest some and explain their meanings?"
+      "title": "Quiz tên rửa tội",
+      "desc": "Tìm tên Kinh Thánh phù hợp",
+      "prompt": "Tôi đang tìm một tên Kinh Thánh cho con tôi. Bạn có thể cho tôi một vài gợi ý và giải thích ý nghĩa của chúng không?"
     },
     "sleepless": {
-      "title": "Sleepless",
-      "desc": "Finding peace at night",
-      "prompt": "I can't sleep and my mind is racing. Is there a calming prayer or psalm for the night?"
+      "title": "Mất ngủ",
+      "desc": "Tìm sự bình yên vào ban đêm",
+      "prompt": "Tôi không ngủ được và đang suy nghĩ. Có lời cầu nguyện hay Thi thiên nào trấn an cho ban đêm không?"
     },
     "loneliness": {
-      "title": "Loneliness",
-      "desc": "You are never alone",
-      "prompt": "I feel lonely. What does the Bible say about God always being with us?"
+      "title": "Cô đơn",
+      "desc": "Bạn không bao giờ cô đơn",
+      "prompt": "Tôi cảm thấy cô đơn. Kinh Thánh nói gì về việc Chúa luôn ở với chúng ta?"
     },
     "decision": {
-      "title": "Tough decision",
-      "desc": "Wisdom for the right path",
-      "prompt": "I'm facing a difficult decision. Which Bible passages can help me find the right way?"
+      "title": "Quyết định khó khăn",
+      "desc": "Sự khôn ngoan để đi đúng đường",
+      "prompt": "Tôi đang đứng trước một quyết định khó khăn. Đoạn Kinh Thánh nào giúp tôi tìm ra con đường đúng đắn?"
     },
     "gratitude": {
-      "title": "Gratitude",
-      "desc": "A personal prayer of thanks",
-      "prompt": "I want to thank God. Help me write a personal prayer of gratitude."
+      "title": "Lòng biết ơn",
+      "desc": "Một lời cầu nguyện tạ ơn cá nhân",
+      "prompt": "Tôi muốn tạ ơn Chúa. Giúp tôi soạn một lời cầu nguyện tạ ơn cá nhân."
     },
     "lifewheel": {
-      "title": "Life Wheel",
-      "desc": "How satisfied are you really?"
+      "title": "Bánh xe cuộc sống",
+      "desc": "Bạn thực sự hài lòng đến mức nào?"
     },
     "sevenwhys": {
-      "title": "7 Whys",
-      "desc": "Find the deepest root of your question",
-      "prompt": "I'd like to do the 7 Whys exercise. Here is my topic:"
+      "title": "7 Tại sao",
+      "desc": "Tìm gốc rễ sâu xa nhất của câu hỏi của bạn",
+      "prompt": "Tôi muốn thực hiện bài tập 7 Tại sao. Đây là chủ đề của tôi:"
     },
     "anger": {
-      "title": "Anger",
-      "desc": "When you're about to explode",
-      "prompt": "I'm so angry and don't know what to do with my rage. What does the Bible say about anger and how to deal with it?"
+      "title": "Giận dữ & Nộ khí",
+      "desc": "Khi bạn có thể bùng nổ vì giận dữ",
+      "prompt": "Tôi rất tức giận và không biết phải làm gì với cơn giận của mình. Kinh Thánh nói gì về sự giận dữ và cách tôi có thể đối phó với nó?"
     },
     "shame": {
-      "title": "Shame & Guilt",
-      "desc": "When guilt is crushing you",
-      "prompt": "I feel so ashamed and guilty. What does the Bible say about guilt, forgiveness, and starting over?"
+      "title": "Xấu hổ & Tội lỗi",
+      "desc": "Khi cảm giác tội lỗi đè nặng bạn",
+      "prompt": "Tôi quá xấu hổ và cảm thấy tội lỗi. Kinh Thánh nói gì về tội lỗi, sự tha thứ và một khởi đầu mới?"
     },
     "burnout": {
-      "title": "Burnout",
-      "desc": "When you just can't go on",
-      "prompt": "I'm totally exhausted and burned out. I just can't anymore. What does the Bible say about rest and recovery?"
+      "title": "Kiệt sức",
+      "desc": "Khi bạn không thể làm gì được nữa",
+      "prompt": "Tôi hoàn toàn kiệt sức và cạn kiệt. Tôi không thể làm gì được nữa. Kinh Thánh nói gì về sự nghỉ ngơi và hồi phục?"
     },
     "illness": {
-      "title": "Illness",
-      "desc": "When a diagnosis changes everything",
-      "prompt": "I've received a difficult diagnosis and I'm scared. What does the Bible say about illness, healing, and hope?"
+      "title": "Bệnh tật",
+      "desc": "Khi một chẩn đoán thay đổi mọi thứ",
+      "prompt": "Tôi đã nhận được một chẩn đoán khó khăn và sợ hãi. Kinh Thánh nói gì về bệnh tật, sự chữa lành và hy vọng?"
     },
     "financial": {
-      "title": "Money Worries",
-      "desc": "When bills are piling up",
-      "prompt": "I have financial worries and don't know what to do. What does the Bible say about money, trust, and provision?"
+      "title": "Lo lắng về tiền bạc",
+      "desc": "Khi hóa đơn đè nặng",
+      "prompt": "Tôi có những lo lắng về tài chính và không biết phải làm gì. Kinh Thánh nói gì về tiền bạc, sự tin cậy và sự cung cấp?"
     },
     "meaningcrisis": {
-      "title": "Meaning Crisis",
-      "desc": "What's it all for?",
-      "prompt": "I'm wondering what's the point of it all. I'm in a meaning crisis. What does the Bible say about the meaning of life?"
+      "title": "Khủng hoảng ý nghĩa",
+      "desc": "Tất cả những điều này để làm gì?",
+      "prompt": "Tôi tự hỏi tất cả những điều này có ý nghĩa gì. Tôi đang ở trong một cuộc khủng hoảng ý nghĩa. Kinh Thánh nói gì về ý nghĩa cuộc sống?"
     },
     "selfdoubt": {
-      "title": "Self-Doubt",
-      "desc": "When you don't feel good enough",
-      "prompt": "I constantly doubt myself and don't feel good enough. What does the Bible say about my worth?"
+      "title": "Tự ti",
+      "desc": "Khi bạn cảm thấy mình không đủ tốt",
+      "prompt": "Tôi luôn nghi ngờ bản thân và cảm thấy mình không đủ tốt. Kinh Thánh nói gì về giá trị của tôi?"
     },
     "calling": {
-      "title": "Calling",
-      "desc": "What should I do with my life?",
-      "prompt": "I don't know what to do with my life. Help me find my calling — what does the Bible say?"
+      "title": "Ơn gọi",
+      "desc": "Tôi nên làm gì với cuộc đời mình?",
+      "prompt": "Tôi không biết mình nên làm gì với cuộc đời mình. Giúp tôi tìm ra ơn gọi của mình – Kinh Thánh nói gì về điều đó?"
     },
     "faithdoubt": {
-      "title": "Faith Doubts",
-      "desc": "When your faith is shaking",
-      "prompt": "I have doubts about my faith and don't know if I can still believe. What does the Bible say about doubt?"
+      "title": "Nghi ngờ đức tin",
+      "desc": "Khi đức tin lung lay",
+      "prompt": "Tôi nghi ngờ đức tin của mình và không biết liệu tôi có thể tin nữa hay không. Kinh Thánh nói gì về sự nghi ngờ?"
     },
     "forgiveness": {
-      "title": "Forgiveness",
-      "desc": "When forgiving seems impossible",
-      "prompt": "I simply can't forgive someone. It hurts too much. What does the Bible say about forgiveness?"
+      "title": "Tha thứ",
+      "desc": "Khi tha thứ dường như là không thể",
+      "prompt": "Tôi không thể tha thứ cho ai đó. Điều đó quá đau đớn. Kinh Thánh nói gì về sự tha thứ?"
     },
     "familyconflict": {
-      "title": "Family Conflict",
-      "desc": "When family is at war",
-      "prompt": "There's a big conflict in my family. What does the Bible say about family peace and reconciliation?"
+      "title": "Xung đột gia đình",
+      "desc": "Khi gia đình có vấn đề",
+      "prompt": "Có một cuộc cãi vã lớn trong gia đình tôi. Kinh Thánh nói gì về sự hòa thuận và hòa giải trong gia đình?"
     },
     "envy": {
-      "title": "Envy",
-      "desc": "When others have it better",
-      "prompt": "I'm envious of others and constantly comparing myself. What does the Bible say about envy and contentment?"
+      "title": "Đố kỵ",
+      "desc": "Khi người khác có điều tốt hơn",
+      "prompt": "Tôi đố kỵ với người khác và luôn so sánh bản thân. Kinh Thánh nói gì về sự đố kỵ và sự hài lòng?"
     },
     "joy": {
-      "title": "Share Joy",
-      "desc": "When something wonderful happened",
-      "prompt": "Something wonderful happened to me and I want to share my joy! What does the Bible say about joy and gratitude?"
+      "title": "Chia sẻ niềm vui",
+      "desc": "Khi điều gì đó tuyệt vời xảy ra",
+      "prompt": "Một điều tuyệt vời đã xảy ra với tôi và tôi muốn chia sẻ niềm vui của mình! Kinh Thánh nói gì về niềm vui và lòng biết ơn?"
     },
     "prayer": {
-      "title": "Prayer Request",
-      "desc": "Pray together",
-      "prompt": "I have a prayer request and would like to pray together. Join me in prayer."
+      "title": "Ý cầu nguyện",
+      "desc": "Cùng nhau cầu nguyện",
+      "prompt": "Tôi có một ý cầu nguyện và muốn cùng nhau cầu nguyện. Hãy đồng hành cùng tôi trong lời cầu nguyện."
     },
     "bibleverse": {
-      "title": "Understand a Verse",
-      "desc": "Get a Bible passage explained",
-      "prompt": "I'd like to understand a Bible passage better. Can you help me put it in context?"
+      "title": "Hiểu câu Kinh Thánh",
+      "desc": "Nhận giải thích một đoạn Kinh Thánh",
+      "prompt": "Tôi muốn hiểu rõ hơn một đoạn Kinh Thánh. Bạn có thể giúp tôi đặt nó vào ngữ cảnh không?"
     }
   },
   "lifeWheel": {
-    "title": "Your Life Wheel",
-    "intro": "Rate 8 life areas on a scale of 1-10. Discover where you stand — and receive biblical impulses for the area that needs attention.",
-    "start": "Get started",
-    "sliderHint": "Move the sliders — 1 = very unsatisfied, 10 = very satisfied",
-    "showResult": "Show result",
-    "average": "Average",
-    "weakestArea": "Greatest need",
-    "getImpulse": "Biblical impulse for {{area}}",
-    "reset": "Try again",
-    "prompt": "My life wheel shows that I scored only {{score}}/10 in the area of '{{area}}'. What does the Bible say about this area of life? Give me encouragement and practical impulses.",
+    "title": "Bánh xe cuộc sống của bạn",
+    "intro": "Đánh giá 8 lĩnh vực cuộc sống trên thang điểm 1-10. Tìm hiểu vị trí của bạn — và nhận được những lời khuyên Kinh Thánh cho lĩnh vực cần được quan tâm.",
+    "start": "Bắt đầu ngay",
+    "sliderHint": "Di chuyển các thanh trượt — 1 = rất không hài lòng, 10 = rất hài lòng",
+    "showResult": "Hiển thị kết quả",
+    "average": "Trung bình",
+    "weakestArea": "Nhu cầu lớn nhất",
+    "getImpulse": "Lời khuyên Kinh Thánh cho {{area}}",
+    "reset": "Làm lại",
+    "prompt": "Bánh xe cuộc sống của tôi cho thấy tôi chỉ có {{score}}/10 điểm trong lĩnh vực «{{area}}». Kinh Thánh nói gì về lĩnh vực cuộc sống này? Hãy cho tôi lời động viên và những lời khuyên thực tế.",
     "areas": {
-      "health": "Health",
-      "relationships": "Relationships",
-      "career": "Career",
-      "spirituality": "Spirituality",
-      "finances": "Finances",
-      "family": "Family",
-      "leisure": "Leisure",
-      "growth": "Personal Growth"
+      "health": "Sức khỏe",
+      "relationships": "Mối quan hệ",
+      "career": "Sự nghiệp",
+      "spirituality": "Tâm linh",
+      "finances": "Tài chính",
+      "family": "Gia đình",
+      "leisure": "Giải trí",
+      "growth": "Phát triển cá nhân"
     },
-    "save": "Save result",
-    "saved": "Saved!",
-    "history": "Previous results",
-    "noHistory": "No saved results yet.",
-    "backToNew": "New Life Wheel",
-    "backToList": "Back to list"
+    "save": "Lưu kết quả",
+    "saved": "Đã lưu!",
+    "history": "Kết quả trước đây",
+    "noHistory": "Chưa có kết quả nào được lưu.",
+    "backToNew": "Bánh xe cuộc sống mới",
+    "backToList": "Quay lại danh sách"
   },
   "church": {
-    "badge": "For Churches",
-    "heroTitle": "BibleBot for Your Church",
-    "heroSubtitle": "Accompany your congregation with biblical wisdom – digital, personal, and around the clock.",
-    "useCasesTitle": "Use Cases",
+    "badge": "Dành cho các Hội thánh",
+    "heroTitle": "BibleBot cho Hội thánh của bạn",
+    "heroSubtitle": "Đồng hành cùng các thành viên Hội thánh của bạn với sự khôn ngoan của Kinh Thánh – kỹ thuật số, cá nhân và 24/7.",
+    "useCasesTitle": "Trường hợp sử dụng",
     "useCase": {
       "youth": {
-        "title": "Youth Ministry",
-        "desc": "Teens discover the Bible in their own way – interactive and without hesitation."
+        "title": "Công tác thanh niên",
+        "desc": "Thanh thiếu niên khám phá Kinh Thánh theo cách riêng của họ – tương tác và không ngần ngại."
       },
       "confirmation": {
-        "title": "Confirmation",
-        "desc": "Confirmands deepen Bible knowledge independently with personal guidance."
+        "title": "Rửa tội",
+        "desc": "Các ứng cử viên rửa tội đào sâu kiến thức Kinh Thánh độc lập với sự đồng hành cá nhân."
       },
       "pastoral": {
-        "title": "Pastoral Care",
-        "desc": "24/7 companionship as a complement to personal pastoral care."
+        "title": "Mục vụ",
+        "desc": "Đồng hành 24/7 như một sự bổ sung cho mục vụ cá nhân."
       },
       "bibleStudy": {
-        "title": "Bible Study",
-        "desc": "Impulses and discussion starters for groups and home circles."
+        "title": "Nhóm học Kinh Thánh",
+        "desc": "Lời khuyên và gợi ý thảo luận cho các nhóm và nhóm nhỏ."
       }
     },
     "pricingTitle": "Gói bảo trợ",
-    "pricingSubtitle": "Hỗ trợ BibleBot và nhà thờ của bạn với gói bảo trợ phù hợp.",
-    "popular": "Popular",
-    "free": "Free",
-    "perYear": "year",
-    "contact": "Get in touch",
+    "pricingSubtitle": "Hỗ trợ BibleBot và Hội thánh của bạn với gói bảo trợ phù hợp.",
+    "popular": "Phổ biến",
+    "free": "Miễn phí",
+    "perYear": "năm",
+    "contact": "Liên hệ",
     "tier": {
       "free": {
         "name": "Hạt cải",
-        "size": "Truy cập bot cơ bản cho tất cả thành viên cộng đồng."
+        "size": "Dành cho các hội nhỏ & nhóm gia đình (dưới 50 thành viên)"
       },
       "community": {
-        "name": "Người đồng hành",
-        "size": "Nhà thờ được ghi nhận là người ủng hộ trên trang web & truy cập không quảng cáo."
+        "name": "Người dẫn đường",
+        "size": "Dành cho các hội có 50–200 thành viên"
       },
       "gemeinde": {
         "name": "Người xây cầu",
-        "size": "Logo trong giao diện bot, báo cáo sử dụng hàng tháng (ẩn danh)."
+        "size": "Dành cho các hội có 200–500 thành viên"
       },
       "kirche": {
         "name": "Ngọn hải đăng",
-        "size": "Tích hợp nội dung riêng (VD: kho bài giảng), đồng sáng tạo lộ trình, hỗ trợ cao cấp."
+        "size": "Dành cho các hội lớn & tổ chức (hơn 500 thành viên)"
       }
     },
     "features": {
-      "directoryEntry": "Directory listing",
-      "telegramGroup": "Telegram group",
-      "partnerPage": "Own partner page",
-      "badge": "Partner badge",
-      "qrFlyer": "Printable QR flyer",
-      "contactForm": "Contact form",
-      "pastorProfile": "Pastor profile",
-      "welcomeVideo": "Welcome video",
-      "analytics": "Analytics dashboard",
-      "prioritySupport": "Priority support",
-      "multipleProfiles": "Multiple profiles",
-      "customBranding": "Custom branding",
-      "apiAccess": "API access",
-      "accountManager": "Dedicated account manager"
+      "directoryEntry": "Mục lục vào danh bạ",
+      "telegramGroup": "Nhóm Telegram",
+      "partnerPage": "Trang đối tác riêng",
+      "badge": "Huy hiệu đối tác",
+      "qrFlyer": "Tờ rơi QR để in",
+      "contactForm": "Mẫu liên hệ",
+      "pastorProfile": "Hồ sơ mục sư/linh mục",
+      "welcomeVideo": "Video chào mừng",
+      "analytics": "Bảng điều khiển phân tích",
+      "prioritySupport": "Hỗ trợ ưu tiên",
+      "multipleProfiles": "Nhiều hồ sơ",
+      "customBranding": "Thương hiệu tùy chỉnh",
+      "apiAccess": "Truy cập API",
+      "accountManager": "Người quản lý tài khoản cá nhân"
     },
-    "viewDirectory": "View church directory",
-    "directoryBadge": "Church Directory",
-    "directoryTitle": "Partner Churches",
-    "directorySubtitle": "Find a church near you that recommends BibleBot.",
-    "searchPlaceholder": "Search by city, name, or denomination...",
-    "noResults": "No churches in the directory yet.",
-    "becomePartner": "Become a partner →",
-    "notFound": "Church not found.",
-    "backToDirectory": "Back to directory",
-    "pastor": "Pastor",
-    "serviceTimes": "Service Times",
-    "startChat": "Start Chat",
-    "website": "Website",
-    "telegramGroup": "Telegram Group",
-    "contactTitle": "Contact {{name}}",
-    "contactName": "Your name (optional)",
-    "contactEmail": "Your email address",
-    "contactMessage": "Your message",
-    "contactSend": "Send message",
-    "contactSuccess": "Message sent! 🙏",
-    "contactSuccessDesc": "The church will get back to you.",
-    "recommendedBy": "Recommended by {{name}}",
-    "setup": "Cài đặt (một lần)",
+    "viewDirectory": "Xem danh bạ Hội thánh",
+    "directoryBadge": "Danh bạ Hội thánh",
+    "directoryTitle": "Hội thánh đối tác",
+    "directorySubtitle": "Tìm một Hội thánh gần bạn, nơi giới thiệu BibleBot.",
+    "searchPlaceholder": "Tìm kiếm địa điểm, tên hoặc giáo phái...",
+    "noResults": "Chưa có Hội thánh nào trong danh bạ.",
+    "becomePartner": "Trở thành đối tác →",
+    "notFound": "Không tìm thấy Hội thánh.",
+    "backToDirectory": "Trở về danh bạ",
+    "pastor": "Mục sư/Linh mục",
+    "serviceTimes": "Thời gian lễ/buổi thờ phượng",
+    "startChat": "Bắt đầu trò chuyện",
+    "website": "Trang web",
+    "telegramGroup": "Nhóm Telegram",
+    "contactTitle": "Liên hệ với {{name}}",
+    "contactName": "Tên của bạn (tùy chọn)",
+    "contactEmail": "Địa chỉ E-mail của bạn",
+    "contactMessage": "Tin nhắn của bạn",
+    "contactSend": "Gửi tin nhắn",
+    "contactSuccess": "Đã gửi tin nhắn! 🙏",
+    "contactSuccessDesc": "Hội thánh sẽ liên hệ với bạn.",
+    "recommendedBy": "Được {{name}} giới thiệu",
+    "setup": "Thiết lập (một lần)",
     "form": {
-      "title": "Quan tâm? Liên hệ với chúng tôi!",
-      "subtitle": "Chúng tôi sẽ phản hồi trong 48 giờ.",
+      "title": "Bạn quan tâm? Viết thư cho chúng tôi!",
+      "subtitle": "Chúng tôi sẽ trả lời trong vòng 48 giờ.",
       "name": "Tên của bạn",
-      "email": "Địa chỉ email",
-      "churchName": "Tên hội thánh",
-      "tier": "Gói ưu tiên",
+      "email": "Địa chỉ E-mail",
+      "churchName": "Tên Hội thánh",
+      "tier": "Gói mong muốn",
       "tierPlaceholder": "Chọn gói...",
       "message": "Tin nhắn của bạn",
       "submit": "Gửi yêu cầu",
-      "success": "Yêu cầu đã gửi! Chúng tôi sẽ liên hệ sớm. 🙏",
-      "error": "Lỗi gửi. Vui lòng thử lại.",
-      "orgType": "Organization type",
-      "orgTypePlaceholder": "Select type...",
+      "success": "Yêu cầu đã được gửi! Chúng tôi sẽ liên hệ sớm. 🙏",
+      "error": "Lỗi khi gửi. Vui lòng thử lại.",
+      "orgType": "Loại tổ chức",
+      "orgTypePlaceholder": "Chọn loại...",
       "orgTypes": {
-        "church": "Church",
-        "careHome": "Care Home",
-        "seniorHome": "Retirement Home",
-        "hospital": "Hospital",
-        "prison": "Prison Chaplaincy",
-        "military": "Military Chaplaincy"
+        "church": "Hội thánh",
+        "careHome": "Viện dưỡng lão",
+        "seniorHome": "Viện dưỡng lão",
+        "hospital": "Bệnh viện",
+        "prison": "Mục vụ nhà tù",
+        "military": "Mục vụ quân đội"
       }
     },
-    "institutionsTitle": "Cũng dành cho các cơ sở",
-    "institutionsSubtitle": "BibleBot đồng hành cùng viện dưỡng lão và bệnh viện với sự chăm sóc tâm linh số.",
+    "institutionsTitle": "Cũng dành cho các tổ chức",
+    "institutionsSubtitle": "BibleBot không chỉ đồng hành cùng các Hội thánh – các viện dưỡng lão, bệnh viện và mục vụ nhà tù cũng được hưởng lợi từ mục vụ kỹ thuật số.",
     "institution": {
       "careHome": {
         "title": "Viện dưỡng lão",
-        "desc": "Lời Kinh Thánh hàng ngày cho cư dân – ngay cả khi không có mục sư."
+        "desc": "Lời khuyên Kinh Thánh hàng ngày và sự đồng hành cho cư dân – ngay cả khi không có mục sư tại chỗ."
       },
       "seniorHome": {
-        "title": "Nhà dưỡng lão",
-        "desc": "Câu Kinh Thánh quen thuộc và trò chuyện cho người cao tuổi – dễ dàng qua máy tính bảng."
+        "title": "Viện dưỡng lão",
+        "desc": "Những câu Kinh Thánh quen thuộc và những cuộc trò chuyện cho người cao tuổi – dễ dàng tiếp cận qua máy tính bảng hoặc điện thoại thông minh."
       },
       "hospital": {
         "title": "Bệnh viện",
-        "desc": "An ủi và hỗ trợ tâm linh cho bệnh nhân – có sẵn 24/7."
+        "desc": "Sự an ủi và đồng hành tâm linh cho bệnh nhân trong thời điểm khó khăn – có sẵn 24/7 tại giường bệnh."
       },
       "prison": {
-        "title": "Tuyên úy nhà tù",
-        "desc": "Hy vọng và hỗ trợ tâm linh cho phạm nhân – người đồng hành bảo mật 24/7."
+        "title": "Mục vụ nhà tù",
+        "desc": "Hy vọng và đồng hành tâm linh cho tù nhân – một người bạn trò chuyện đáng tin cậy 24/7."
       },
       "military": {
-        "title": "Military Chaplaincy",
-        "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
+        "title": "Mục vụ quân đội",
+        "desc": "Đồng hành tâm linh cho quân nhân – có thể liên hệ ngay cả khi đang làm nhiệm vụ hoặc trong doanh trại."
       }
     }
   },
   "institutions": {
-    "badge": "For Institutions",
-    "heroTitle": "BibleBot for Your Institution",
-    "heroSubtitle": "Digital pastoral care for care homes, retirement homes, hospitals, and correctional facilities – personal, confidential, and around the clock.",
-    "typesTitle": "Who is BibleBot for?",
-    "useCasesTitle": "How BibleBot is Used",
-    "useCasesSubtitle": "Practical applications for daily life in your institution.",
-    "pricingTitle": "Patronage Packages",
-    "pricingSubtitle": "The same packages as for churches – adapted to institutional needs.",
-    "linkChurches": "Also available for churches",
+    "badge": "Dành cho các tổ chức",
+    "heroTitle": "BibleBot cho tổ chức của bạn",
+    "heroSubtitle": "Mục vụ kỹ thuật số cho các viện dưỡng lão, bệnh viện, trại giam và các cơ sở y tế – cá nhân, bảo mật và 24/7.",
+    "seniorHint": {
+      "title": "Chế độ người cao tuổi có sẵn",
+      "desc": "Phông chữ lớn hơn và thao tác đơn giản hơn – lý tưởng cho người cao tuổi.",
+      "cta": "Thử chế độ người cao tuổi"
+    },
+    "typesTitle": "BibleBot dành cho ai?",
+    "useCasesTitle": "Cách BibleBot được sử dụng",
+    "useCasesSubtitle": "Các ứng dụng cụ thể cho cuộc sống hàng ngày tại tổ chức của bạn.",
+    "pricingTitle": "Gói bảo trợ",
+    "pricingSubtitle": "Các gói tương tự như cho hội thánh – được điều chỉnh cho nhu cầu của tổ chức.",
+    "linkChurches": "Cũng có sẵn cho các hội thánh",
     "type": {
       "careHome": {
-        "title": "Care Homes",
-        "desc": "Daily Bible impulses and companionship for residents – even when no chaplain is on site."
+        "title": "Viện dưỡng lão",
+        "desc": "Lời khuyên Kinh Thánh hàng ngày và sự đồng hành cho cư dân – ngay cả khi không có mục sư tại chỗ."
       },
       "seniorHome": {
-        "title": "Retirement Homes",
-        "desc": "Familiar Bible verses and conversations for seniors – easily accessible via tablet or smartphone."
+        "title": "Viện dưỡng lão",
+        "desc": "Những câu Kinh Thánh quen thuộc và những cuộc trò chuyện cho người cao tuổi – dễ dàng tiếp cận qua máy tính bảng hoặc điện thoại thông minh."
       },
       "hospital": {
-        "title": "Hospitals",
-        "desc": "Comfort and spiritual support for patients in difficult times – available 24/7 at the bedside."
+        "title": "Bệnh viện",
+        "desc": "Sự an ủi và đồng hành tâm linh cho bệnh nhân trong thời điểm khó khăn – có sẵn 24/7 tại giường bệnh."
       },
       "prison": {
-        "title": "Prison Chaplaincy",
-        "desc": "Hope and spiritual support for inmates – a confidential companion around the clock."
+        "title": "Mục vụ nhà tù",
+        "desc": "Hy vọng và đồng hành tâm linh cho tù nhân – một người bạn trò chuyện đáng tin cậy 24/7."
       },
       "military": {
-        "title": "Military Chaplaincy",
-        "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
+        "title": "Mục vụ quân đội",
+        "desc": "Đồng hành tâm linh cho quân nhân – có thể liên hệ ngay cả khi đang làm nhiệm vụ hoặc trong doanh trại."
       }
     },
     "useCase": {
       "dailyImpulse": {
-        "title": "Daily Impulse",
-        "desc": "A Bible verse with reflection question every morning – lowers the barrier for spiritual conversations."
+        "title": "Cảm hứng hàng ngày",
+        "desc": "Mỗi sáng một câu Kinh Thánh với câu hỏi suy ngẫm – giảm rào cản cho các cuộc trò chuyện tâm linh."
       },
       "companionship": {
-        "title": "Conversation Partner",
-        "desc": "BibleBot answers faith questions patiently and without time pressure – ideal for lonely hours."
+        "title": "Bạn đồng hành",
+        "desc": "BibleBot trả lời các câu hỏi đức tin một cách kiên nhẫn và không áp lực thời gian – lý tưởng cho những giờ cô đơn."
       },
       "accessibility": {
-        "title": "Easy Access",
-        "desc": "Large text, simple tablet interface – also for people with limited mobility."
+        "title": "Khả năng tiếp cận dễ dàng",
+        "desc": "Chữ lớn, thao tác đơn giản qua máy tính bảng – cũng dành cho những người bị hạn chế khả năng di chuyển."
       },
       "availability": {
-        "title": "24/7 Available",
-        "desc": "Spiritual companionship at night and on weekends – when no chaplain is available."
+        "title": "Sẵn sàng 24/7",
+        "desc": "Đồng hành tâm linh cả ban đêm và cuối tuần – khi không có mục sư."
       }
     },
     "tierDesc": {
-      "free": "Basic access for residents and patients",
-      "community": "Mentioned as supporter, ad-free access",
-      "gemeinde": "Logo presence, monthly usage report",
-      "kirche": "Custom content, roadmap co-creation, premium support"
+      "free": "Truy cập cơ bản cho cư dân và bệnh nhân",
+      "community": "Được đề cập là người hỗ trợ, truy cập không quảng cáo",
+      "gemeinde": "Logo hiện diện, báo cáo sử dụng hàng tháng",
+      "kirche": "Nội dung riêng, tham gia lập kế hoạch, hỗ trợ ưu tiên"
     },
     "form": {
-      "title": "Interested? Get in touch!",
-      "subtitle": "We'll get back to you within 48 hours.",
-      "name": "Your name",
-      "email": "Email address",
-      "institutionName": "Institution name",
-      "type": "Type of institution",
-      "typePlaceholder": "Please select...",
-      "tier": "Preferred package",
-      "tierPlaceholder": "Choose package...",
-      "message": "Your message",
-      "submit": "Send inquiry",
-      "success": "Inquiry sent! We'll be in touch soon. 🙏",
-      "error": "Error sending. Please try again."
-    },
-    "seniorHint": {
-      "title": "Chế độ cao tuổi có sẵn",
-      "desc": "Chữ lớn hơn và điều hướng đơn giản – lý tưởng cho cư dân cao tuổi.",
-      "cta": "Thử chế độ cao tuổi"
+      "title": "Bạn quan tâm? Liên hệ với chúng tôi!",
+      "subtitle": "Chúng tôi sẽ trả lời trong vòng 48 giờ.",
+      "name": "Tên của bạn",
+      "email": "Địa chỉ E-mail",
+      "institutionName": "Tên tổ chức",
+      "type": "Loại tổ chức",
+      "typePlaceholder": "Vui lòng chọn...",
+      "tier": "Gói mong muốn",
+      "tierPlaceholder": "Chọn gói...",
+      "message": "Tin nhắn của bạn",
+      "submit": "Gửi yêu cầu",
+      "success": "Yêu cầu đã được gửi! Chúng tôi sẽ liên hệ sớm. 🙏",
+      "error": "Lỗi khi gửi. Vui lòng thử lại."
     }
-  },
-  "refer": {
-    "badge": "Share God's Word",
-    "title": "Recommend BibleBot",
-    "subtitle": "Know someone who could use encouragement? Share BibleBot – one message can make a difference.",
-    "whatsapp": "Share via WhatsApp",
-    "whatsappMsg": "Hey, I wanted to show you BibleBot – a free Bible companion that really knows the Bible and asks great questions. No login, anonymous, honest. Try it out: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
-    "telegram": "Share via Telegram",
-    "telegramMsg": "Hey, do you know BibleBot? A free personal Bible companion – honest, anonymous, no login needed. Check it out: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
-    "email": "Share via email",
-    "emailSubject": "This might interest you: BibleBot.Life",
-    "emailBody": "Hi!\n\nI wanted to show you BibleBot – a free Bible companion that really knows the Bible. No sign-up needed, completely anonymous.\n\nIt asks thoughtful questions, explains Bible passages in context and accompanies you honestly – even on difficult topics.\n\nTry it out: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nBest wishes",
-    "copy": "Copy link",
-    "copied": "Link copied! 📋",
-    "qr": "Or just show this QR code:"
-  },
-  "share": {
-    "label": "Share",
-    "shareVia": "Share via",
-    "copied": "Copied! 📋",
-    "copiedShort": "Copied!",
-    "copiedDesc": "Text copied to clipboard. Share it on WhatsApp, Instagram or wherever you like!",
-    "copyLink": "Copy text",
-    "error": "Copy failed",
-    "impulseTitle": "BibleBot – Impulse of the Day",
-    "chatTitle": "BibleBot – Thought of the Day",
-    "createImage": "Create image ✨",
-    "generating": "Creating…",
-    "imageReady": "Your image is ready to share!",
-    "shareImage": "Share image",
-    "download": "Save",
-    "imageError": "Image creation failed",
-    "imageErrorDesc": "The image could not be created. Please try again later.",
-    "imageSaved": "Text copied! 📋",
-    "imageSavedDesc": "Save the image and share it with the copied text on Instagram, WhatsApp or wherever you like!"
   }
 }
