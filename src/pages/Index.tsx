@@ -1,6 +1,6 @@
 import { lazy, Suspense, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, GraduationCap, Church, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass, Send, Building2, Menu, FileText, ShieldCheck } from "lucide-react";
+import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, GraduationCap, Church, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass, Send, Building2, Menu, FileText, ShieldCheck, LogIn, LogOut, User } from "lucide-react";
 import { ChurchBanner } from "@/components/ChurchBanner";
 import { ReferralSection } from "@/components/ReferralSection";
 // EntryTiles removed - chips are now in ChatHero
@@ -17,6 +17,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Link } from "react-router-dom";
 import { DarkModeToggle } from "@/components/DarkModeToggle";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { useAuth } from "@/hooks/use-auth";
 
 const TELEGRAM_LINK = "https://t.me/meinbibelbot";
 
@@ -30,6 +31,7 @@ const BIBLE_EDITIONS = [
 
 const Index = () => {
   const { t, i18n } = useTranslation();
+  const { user, signOut } = useAuth();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const features = [
