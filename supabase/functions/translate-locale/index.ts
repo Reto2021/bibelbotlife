@@ -13,7 +13,7 @@ Deno.serve(async (req) => {
 - No markdown fences, no explanation, no comments
 - The output must be valid parseable JSON`;
 
-  const response = await fetch("https://ai-gateway.lovable.dev/v1/chat/completions", {
+  const response = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
