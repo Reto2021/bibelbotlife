@@ -573,19 +573,19 @@
     "tier": {
       "free": {
         "name": "Senfkorn",
-        "size": "Basis-Nutzung des Bots für alle Gemeindeglieder."
+        "size": "Für kleine Gemeinden & Hauskreise (bis 50 Mitglieder)"
       },
       "community": {
         "name": "Wegbegleiter",
-        "size": "Erwähnung der Gemeinde als Unterstützer auf der Webseite & werbefreier Zugang."
+        "size": "Für Gemeinden mit 50–200 Mitgliedern"
       },
       "gemeinde": {
         "name": "Brückenbauer",
-        "size": "Logo-Präsenz im Bot-Interface («Powered by…»), monatlicher Nutzungs-Report (anonymisiert)."
+        "size": "Für Gemeinden mit 200–500 Mitgliedern"
       },
       "kirche": {
         "name": "Leuchtturm",
-        "size": "Integration eigener Inhalte (z.B. Predigt-Archiv), Mitgestaltung der Roadmap, Premium-Support."
+        "size": "Für grosse Gemeinden & Institutionen (500+ Mitglieder)"
       }
     },
     "features": {

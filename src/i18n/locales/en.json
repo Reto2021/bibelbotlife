@@ -536,19 +536,19 @@
     "tier": {
       "free": {
         "name": "Mustard Seed",
-        "size": "Basic bot access for all congregation members."
+        "size": "For small churches & home groups (up to 50 members)"
       },
       "community": {
         "name": "Companion",
-        "size": "Church mentioned as supporter on the website & ad-free access."
+        "size": "For churches with 50–200 members"
       },
       "gemeinde": {
         "name": "Bridge Builder",
-        "size": "Logo presence in bot interface (\"Powered by…\"), monthly usage report (anonymized)."
+        "size": "For churches with 200–500 members"
       },
       "kirche": {
         "name": "Lighthouse",
-        "size": "Integration of custom content (e.g. sermon archive), roadmap co-creation, premium support."
+        "size": "For large churches & institutions (500+ members)"
       }
     },
     "features": {
