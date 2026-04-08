@@ -4,6 +4,7 @@ import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, Shield, Graduati
 import { ChurchBanner } from "@/components/ChurchBanner";
 import { ReferralSection } from "@/components/ReferralSection";
 import { EntryTiles } from "@/components/EntryTiles";
+import { ChatHero } from "@/components/ChatHero";
 import { LifeWheelProvider } from "@/components/LifeWheel";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -161,54 +162,8 @@ const Index = () => {
         <DailyImpulse />
       </Suspense>
 
-      {/* Hero Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto text-center max-w-4xl">
-          <div className="mb-6">
-            <span className="inline-flex items-center gap-3 text-sm font-semibold text-foreground bg-card/80 backdrop-blur-sm border border-border shadow-md px-5 py-2.5 rounded-full">
-              <Shield className="h-5 w-5 text-primary" />
-              <span className="flex items-center gap-2">
-                <span>{t("hero.badge.noLogin")}</span>
-                <span className="text-primary/40">·</span>
-                <span>{t("hero.badge.noData")}</span>
-                <span className="text-primary/40">·</span>
-                <span>{t("hero.badge.noJudgment")}</span>
-              </span>
-            </span>
-          </div>
-          <div className="mb-8">
-            <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
-              {t("hero.title1")}
-              <span className="text-transparent bg-clip-text" style={{ backgroundImage: "var(--gradient-cta)" }}>{t("hero.title2")}</span>
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto">
-              {t("hero.subtitle")}
-            </p>
-          </div>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button asChild size="lg" className="bg-telegram hover:bg-telegram/90 text-telegram-foreground px-8 py-4 text-lg">
-              <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer">
-                <Send className="h-5 w-5 mr-2" />
-                {t("hero.ctaTelegram")}
-              </a>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-primary/30 text-primary hover:bg-accent px-8 py-4 text-lg"
-              onClick={() => document.getElementById("features")?.scrollIntoView({ behavior: "smooth" })}
-            >
-              {t("hero.ctaMore")}
-            </Button>
-          </div>
-
-          <div className="bg-card/60 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-border">
-            <p className="text-foreground/80 italic text-lg">{t("hero.quote")}</p>
-            <p className="text-muted-foreground mt-2">{t("hero.quoteRef")}</p>
-          </div>
-        </div>
-      </section>
+      {/* Chat-First Hero */}
+      <ChatHero />
 
       {/* Entry Tiles */}
       <EntryTiles />

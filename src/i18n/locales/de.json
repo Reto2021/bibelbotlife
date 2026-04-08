@@ -751,5 +751,19 @@
       "success": "Anfrage gesendet! Wir melden uns bald. 🙏",
       "error": "Fehler beim Senden. Bitte versuchen Sie es erneut."
     }
+  },
+  "chatHero": {
+    "subtitle": "Stell deine Frage – offen, ehrlich, ohne Anmeldung.",
+    "placeholder1": "Was sagt die Bibel zu Vergebung?",
+    "placeholder2": "Ich kann nicht schlafen – was hilft?",
+    "placeholder3": "Warum lässt Gott Leid zu?",
+    "placeholder4": "Wie finde ich meinen Sinn im Leben?",
+    "placeholder5": "Ich fühle mich allein. Was sagt Jesus dazu?",
+    "focusPlaceholder": "Schreib deine Frage…",
+    "ariaLabel": "Frage an BibleBot stellen",
+    "send": "Absenden",
+    "suggestion1": "Was sagt die Bibel zu Angst?",
+    "suggestion2": "Hilf mir zu beten",
+    "suggestion3": "Ich zweifle an meinem Glauben"
   }
 }

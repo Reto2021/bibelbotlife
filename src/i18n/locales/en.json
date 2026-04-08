@@ -751,5 +751,19 @@
     "imageErrorDesc": "The image could not be created. Please try again later.",
     "imageSaved": "Text copied! 📋",
     "imageSavedDesc": "Save the image and share it with the copied text on Instagram, WhatsApp or wherever you like!"
+  },
+  "chatHero": {
+    "subtitle": "Ask your question – open, honest, no sign-up needed.",
+    "placeholder1": "What does the Bible say about forgiveness?",
+    "placeholder2": "I can't sleep – what helps?",
+    "placeholder3": "Why does God allow suffering?",
+    "placeholder4": "How do I find my purpose in life?",
+    "placeholder5": "I feel alone. What does Jesus say about that?",
+    "focusPlaceholder": "Type your question…",
+    "ariaLabel": "Ask BibleBot a question",
+    "send": "Submit",
+    "suggestion1": "What does the Bible say about anxiety?",
+    "suggestion2": "Help me pray",
+    "suggestion3": "I'm doubting my faith"
   }
 }
