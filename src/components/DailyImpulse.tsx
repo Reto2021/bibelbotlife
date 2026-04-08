@@ -219,6 +219,49 @@ export function DailyImpulse() {
     );
   };
 
+  const handleSubscribePush = useCallback(async () => {
+    setIsSubscribing(true);
+    try {
+      const isInIframe = (() => { try { return window.self !== window.top; } catch { return true; } })();
+      const isPreview = window.location.hostname.includes("lovableproject.com") || window.location.hostname.includes("id-preview--");
+      if (isInIframe || isPreview) {
+        toast({ title: t("subscribe.toastPushPreview"), description: t("subscribe.toastPushPreviewDesc"), variant: "destructive" });
+        return;
+      }
+      if (!("Notification" in window) || !("serviceWorker" in navigator)) {
+        toast({ title: t("subscribe.toastNotSupported"), description: t("subscribe.toastNotSupportedDesc"), variant: "destructive" });
+        return;
+      }
+      const permission = await Notification.requestPermission();
+      if (permission !== "granted") {
+        toast({ title: t("subscribe.toastPermDenied"), description: t("subscribe.toastPermDeniedDesc"), variant: "destructive" });
+        return;
+      }
+      const registration = await navigator.serviceWorker.register("/sw.js");
+      const pushSubscription = await registration.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: VAPID_PUBLIC_KEY });
+      const resp = await fetch(SUBSCRIBE_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ channel: "push", push_subscription: pushSubscription.toJSON(), language: i18n.language }),
+      });
+      if (!resp.ok) throw new Error("Subscribe failed");
+      localStorage.setItem(SUBSCRIBED_KEY, "1");
+      setIsSubscribed(true);
+      toast({ title: t("subscribe.toastSuccess"), description: t("subscribe.toastSuccessDesc") });
+    } catch (e) {
+      toast({ title: t("subscribe.toastError"), description: e instanceof Error ? e.message : t("subscribe.toastErrorDesc"), variant: "destructive" });
+    } finally {
+      setIsSubscribing(false);
+    }
+  }, [toast, t, i18n.language]);
+
+  const handleSubscribeTelegram = useCallback(() => {
+    window.open(TELEGRAM_LINK, "_blank");
+    localStorage.setItem(SUBSCRIBED_KEY, "1");
+    setIsSubscribed(true);
+    toast({ title: t("subscribe.toastTelegram"), description: t("subscribe.toastTelegramDesc") });
+  }, [toast, t]);
+
   if (isLoading) {
     return (
       <div className="bg-primary/10 dark:bg-primary/15 border-b border-primary/20">
