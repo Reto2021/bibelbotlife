@@ -99,8 +99,11 @@ const Index = () => {
           </div>
         </div>
         {/* Mobile menu dropdown */}
-        {mobileMenuOpen && (
-          <div className="sm:hidden border-t border-border bg-card/95 backdrop-blur-sm animate-in slide-in-from-top-2 duration-200">
+        <div
+          className={`sm:hidden border-t border-border bg-card/95 backdrop-blur-sm overflow-hidden transition-all duration-300 ease-in-out ${
+            mobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0 border-t-transparent"
+          }`}
+        >
             <div className="container mx-auto px-4 py-3 flex flex-col gap-1">
               <Link
                 to="/for-churches"
@@ -151,8 +154,7 @@ const Index = () => {
                 </Button>
               </div>
             </div>
-          </div>
-        )}
+        </div>
       </nav>
 
       <Suspense fallback={<div className="h-20" />}>
