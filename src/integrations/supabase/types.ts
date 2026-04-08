@@ -191,8 +191,17 @@ export type Database = {
       }
       church_partners: {
         Row: {
+          billing_city: string | null
+          billing_country: string | null
+          billing_email: string | null
+          billing_interval: string | null
+          billing_name: string | null
+          billing_reference: string | null
+          billing_street: string | null
+          billing_zip: string | null
           city: string | null
           contact_email: string | null
+          contact_person: string | null
           contact_phone: string | null
           country: string | null
           created_at: string
@@ -208,17 +217,30 @@ export type Database = {
           pastor_photo_url: string | null
           plan_tier: Database["public"]["Enums"]["church_plan_tier"]
           primary_color: string | null
+          qr_iban: string | null
           secondary_color: string | null
           service_times: string | null
           slug: string
+          subscription_expires_at: string | null
+          subscription_started_at: string | null
+          subscription_status: string | null
           telegram_group_link: string | null
           updated_at: string
           website: string | null
           welcome_message: string | null
         }
         Insert: {
+          billing_city?: string | null
+          billing_country?: string | null
+          billing_email?: string | null
+          billing_interval?: string | null
+          billing_name?: string | null
+          billing_reference?: string | null
+          billing_street?: string | null
+          billing_zip?: string | null
           city?: string | null
           contact_email?: string | null
+          contact_person?: string | null
           contact_phone?: string | null
           country?: string | null
           created_at?: string
@@ -234,17 +256,30 @@ export type Database = {
           pastor_photo_url?: string | null
           plan_tier?: Database["public"]["Enums"]["church_plan_tier"]
           primary_color?: string | null
+          qr_iban?: string | null
           secondary_color?: string | null
           service_times?: string | null
           slug: string
+          subscription_expires_at?: string | null
+          subscription_started_at?: string | null
+          subscription_status?: string | null
           telegram_group_link?: string | null
           updated_at?: string
           website?: string | null
           welcome_message?: string | null
         }
         Update: {
+          billing_city?: string | null
+          billing_country?: string | null
+          billing_email?: string | null
+          billing_interval?: string | null
+          billing_name?: string | null
+          billing_reference?: string | null
+          billing_street?: string | null
+          billing_zip?: string | null
           city?: string | null
           contact_email?: string | null
+          contact_person?: string | null
           contact_phone?: string | null
           country?: string | null
           created_at?: string
@@ -260,9 +295,13 @@ export type Database = {
           pastor_photo_url?: string | null
           plan_tier?: Database["public"]["Enums"]["church_plan_tier"]
           primary_color?: string | null
+          qr_iban?: string | null
           secondary_color?: string | null
           service_times?: string | null
           slug?: string
+          subscription_expires_at?: string | null
+          subscription_started_at?: string | null
+          subscription_status?: string | null
           telegram_group_link?: string | null
           updated_at?: string
           website?: string | null
