@@ -183,7 +183,7 @@ export function ChatHero() {
     return SUGGESTIONS.filter(s => s.label.toLowerCase().includes(q) || s.prompt.toLowerCase().includes(q)).slice(0, 6);
   }, [input, SUGGESTIONS]);
 
-
+  const {
     conversations,
     activeConversationId,
     messages,
