@@ -1,6 +1,6 @@
 ---
 name: Church Partnership & Patronat
-description: Patronats-Pakete, Splash-Screen mit Logo für bezahlte Partner, plan_tier steuert Sichtbarkeit
+description: Patronats-Pakete, Splash-Screen, Gemeinde-Branding (Bot-Name, Farben, Logo im Chat)
 type: feature
 ---
 ## Patronats-Pakete (CHF/Jahr) – nach Grösse
@@ -12,21 +12,29 @@ type: feature
 | Brückenbauer (Top-Wahl) | 200–500 Mitglieder | CHF 990.– |
 | Leuchtturm | 500+ Mitglieder | CHF 1'990.– |
 
-Alle Pakete bieten denselben Funktionsumfang. Der Preis richtet sich nach Gemeindegrösse.
+## Gemeinde-Branding
+- `custom_bot_name` – Eigener Bot-Name (z.B. "ReformierterBot")
+- `primary_color` – Hex-Farbe, wird dynamisch als CSS `--primary` überschrieben
+- `secondary_color` – Optional
+- Logo im Chat-Header + Splash-Screen
+- Direktlink zur Gemeindeseite im Banner und Chat
+- Verwaltung: Direkt über Lovable Cloud Backend (kein Admin-UI)
 
 ## Splash-Screen (Patronat)
-- `SplashScreen.tsx`: Zeigt BibelBot-Logo + Partner-Logo/Name bei App-Start
-- Logo nur für bezahlte Tiers (community, gemeinde, kirche) — nicht für free
-- Erscheint nur bei PWA-Standalone oder wenn `?church=slug` / localStorage gesetzt
-- Pro Session nur einmal (sessionStorage)
-- Partner-Daten aus `church_partners` (slug, logo_url, name, plan_tier)
+- `SplashScreen.tsx`: BibelBot-Logo + custom_bot_name + Partner-Logo
+- Nur für bezahlte Tiers (community, gemeinde, kirche)
+- Pro Session einmal (sessionStorage)
 
 ## DB-Tabellen
-- `church_partners` mit `plan_tier` enum: free, community, gemeinde, kirche
+- `church_partners` mit: plan_tier, custom_bot_name, primary_color, secondary_color, logo_url
 - `church_contact_requests` (public INSERT, no public SELECT)
 
 ## Routen
 - `/for-churches` – Info & Patronats-Pakete
 - `/churches` – Verzeichnis
 - `/church/:slug` – Partner-Profil
-- `?church=slug` → Banner via localStorage + Splash-Screen
+- `?church=slug` → Banner + Splash + Branding via localStorage
+
+## Hooks
+- `useChurchBranding()` – Cached Branding-Daten aus church_partners
+- `ChurchColorOverride` (App.tsx) – Dynamische CSS-Variable-Überschreibung

@@ -13,7 +13,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useChatHistory, type ChatMessage } from "@/hooks/use-chat-history";
 import { ChatSidebar } from "@/components/ChatSidebar";
 import { useAuth } from "@/hooks/use-auth";
-
+import { useChurchBranding } from "@/hooks/use-church-branding";
 
 const TYPEWRITER_SPEED = 45;
 const PAUSE_BETWEEN = 2800;
@@ -128,6 +128,7 @@ export function ChatHero() {
   const { track } = useTrack();
   const { toast } = useToast();
   const { user } = useAuth();
+  const { branding } = useChurchBranding();
   const dailyVerse = useMemo(() => getDailyVerse(), []);
 
   const {
@@ -548,6 +549,18 @@ export function ChatHero() {
             ) : (
               /* ========== CHAT STATE ========== */
               <motion.div key="chat" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex-1 flex flex-col py-4 min-h-0">
+                {/* Church branding header */}
+                {branding && (
+                  <div className="flex items-center gap-2.5 mb-3 px-1">
+                    {branding.logoUrl && (
+                      <img src={branding.logoUrl} alt="" className="h-7 w-7 object-contain rounded" loading="lazy" />
+                    )}
+                    <span className="text-sm font-semibold text-foreground">{branding.botName}</span>
+                    <a href={`/church/${branding.churchSlug}`} className="text-xs text-muted-foreground hover:text-foreground ml-auto transition-colors">
+                      {branding.churchName} →
+                    </a>
+                  </div>
+                )}
                 {isLoadingHistory ? (
                   <div className="flex-1 flex items-center justify-center">
                     <Loader2 className="h-6 w-6 animate-spin text-muted-foreground" />

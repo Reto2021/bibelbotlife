@@ -1,32 +1,45 @@
 
+# Gemeinde-Branding: Vollständige Umsetzung
 
-# Mehr Abwechslung bei Tile-Antworten
+## 1. DB-Migration – Neue Spalten auf `church_partners`
+- `custom_bot_name` (text, nullable) – z.B. "ReformierterBot Zürich"
+- `primary_color` (text, nullable) – z.B. "#2E7D32"
+- `secondary_color` (text, nullable) – optional
 
-## Problem
-Gleiche Tile → gleicher Prompt → ähnliche Antwort. Die KI hat keinen Kontext, dass der Nutzer dasselbe Thema schon mal gewählt hat.
+Keine neuen Tabellen, keine RLS-Änderungen nötig (bestehendes SELECT-Policy reicht).
 
-## Lösung: Varianz-Instruktion im System-Prompt + Kontext-Hinweis
+## 2. Gemeinde-Kontext-Hook: `useChurchBranding()`
+**Neue Datei**: `src/hooks/use-church-branding.ts`
+- Liest Slug aus localStorage (`biblebot-church`)
+- Fetcht `name`, `logo_url`, `custom_bot_name`, `primary_color`, `secondary_color` aus `church_partners`
+- Cached mit React Query (kein Re-Fetch bei jedem Render)
+- Gibt `{ botName, logoUrl, primaryColor, churchName, churchSlug }` zurück
 
-### 1. Temperature erhöhen (Edge Function)
-**Datei**: `supabase/functions/bibelbot-chat/index.ts`
+## 3. Dynamische Farbanpassung
+- In `App.tsx` oder einem Wrapper: Wenn `primary_color` gesetzt, CSS-Custom-Properties (`--primary`) dynamisch überschreiben
+- Nur HSL-Umrechnung nötig (hex → hsl)
 
-`temperature: 1.0` explizit setzen im API-Call, damit das Modell kreativer antwortet.
+## 4. Logo im Chat-Header
+- `ChatHero.tsx`: Wenn Gemeinde aktiv, Gemeinde-Logo + `custom_bot_name` statt "BibelBot" im oberen Bereich
 
-### 2. Varianz-Anweisung im System-Prompt
-Ergänzung im `SYSTEM_PROMPT`:
+## 5. Splash-Screen erweitern
+- `SplashScreen.tsx`: `custom_bot_name` statt "BibelBot.Life" anzeigen, wenn vorhanden
 
-> «Wenn ein Nutzer ein allgemeines Thema anspricht (z.B. Taufe, Gebet, Angst), wähle JEDES MAL einen anderen Einstieg: andere Bibelstelle, andere Perspektive, anderer Ton (mal persönlich, mal historisch, mal herausfordernd, mal tröstend). Wiederhole dich nie.»
+## 6. Direktlink zur Gemeindeseite
+- Im ChurchBanner (bereits vorhanden) einen Link zu `/church/:slug` hinzufügen
+- Im Chat: Nach dem Login-Hint einen dezenten "Deine Gemeinde"-Link einblenden
 
-### 3. Zufällige Prompt-Varianten (optional, mehr Aufwand)
-In `EntryTiles.tsx`: Pro Tile 2–3 leicht unterschiedliche Prompt-Varianten definieren und zufällig eine wählen. Z.B. für "Taufe":
-- Variante A: «Was bedeutet die Taufe?»
-- Variante B: «Erzähl mir von der Taufe in der Bibel – überrasche mich!»
-- Variante C: «Warum lassen sich Menschen taufen?»
-
-### Empfehlung
-Schritte 1 + 2 sind schnell und wirkungsvoll. Schritt 3 bringt die grösste Abwechslung, ist aber mehr Arbeit (i18n-Keys pro Variante).
+## 7. Testdaten aktualisieren
+- `reformierte-zuerich`: `custom_bot_name = "ReformierterBot"`, `primary_color = "#1B3A5C"`
+- `vineyard-bern`: `custom_bot_name = "VineyardBot"`, `primary_color = "#2E7D32"`
 
 ## Betroffene Dateien
-- `supabase/functions/bibelbot-chat/index.ts` (temperature + Prompt-Ergänzung)
-- Optional: `src/components/EntryTiles.tsx` + `de.json` / `en.json` (Prompt-Varianten)
+- DB-Migration (neue Spalten)
+- `src/hooks/use-church-branding.ts` (neu)
+- `src/components/SplashScreen.tsx` (Bot-Name)
+- `src/components/ChatHero.tsx` (Logo + Bot-Name im Header)
+- `src/components/ChurchBanner.tsx` (Direktlink)
+- `src/App.tsx` (Farb-Override)
 
+## Verwaltung
+Kein Admin-UI – Gemeindedaten werden direkt über Lovable Cloud Backend gepflegt.

@@ -8,6 +8,7 @@ import { AnalyticsProvider } from "@/components/AnalyticsProvider";
 import { InstallPrompt } from "@/components/InstallPrompt";
 import { AuthProvider } from "@/hooks/use-auth";
 import { SplashScreen } from "@/components/SplashScreen";
+import { useChurchBranding, hexToHsl } from "@/hooks/use-church-branding";
 
 // Lazy-load pages for smaller initial bundle
 const Index = lazy(() => import("./pages/Index"));
@@ -25,16 +26,12 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
 
-const PageLoader = () => {
-  // Can't use useTranslation here (outside Suspense boundary for i18n)
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="animate-pulse text-muted-foreground">Loading…</div>
-    </div>
-  );
-};
+const PageLoader = () => (
+  <div className="min-h-screen flex items-center justify-center bg-background">
+    <div className="animate-pulse text-muted-foreground">Loading…</div>
+  </div>
+);
 
-// Show splash only in standalone (PWA) mode or on first visit with a church param
 function shouldShowSplash(): boolean {
   const isStandalone =
     window.matchMedia("(display-mode: standalone)").matches ||
@@ -43,8 +40,30 @@ function shouldShowSplash(): boolean {
     new URLSearchParams(window.location.search).has("church") ||
     !!localStorage.getItem("biblebot-church");
   const isFirstSession = !sessionStorage.getItem("biblebot-splash-shown");
-
   return isFirstSession && (isStandalone || hasChurchParam);
+}
+
+/** Applies church branding colors as CSS custom properties */
+function ChurchColorOverride() {
+  const { branding } = useChurchBranding();
+
+  useEffect(() => {
+    const root = document.documentElement;
+    if (branding?.primaryColor) {
+      const hsl = hexToHsl(branding.primaryColor);
+      if (hsl) {
+        root.style.setProperty("--primary", hsl);
+        // Auto-generate a lighter foreground for contrast on primary bg
+        root.style.setProperty("--primary-foreground", "0 0% 100%");
+      }
+    }
+    return () => {
+      root.style.removeProperty("--primary");
+      root.style.removeProperty("--primary-foreground");
+    };
+  }, [branding?.primaryColor]);
+
+  return null;
 }
 
 const App = () => {
@@ -65,6 +84,7 @@ const App = () => {
         <BrowserRouter>
           <AuthProvider>
             <AnalyticsProvider>
+              <ChurchColorOverride />
               <Suspense fallback={<PageLoader />}>
                 <Routes>
                   <Route path="/" element={<Index />} />
@@ -78,7 +98,6 @@ const App = () => {
                   <Route path="/unsubscribe" element={<Unsubscribe />} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/reset-password" element={<ResetPassword />} />
-                  {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Suspense>

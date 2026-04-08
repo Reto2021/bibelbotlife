@@ -7,6 +7,7 @@ import bibelbotLogo from "@/assets/bibelbot-logo.png";
 type PatronData = {
   name: string;
   logo_url: string | null;
+  custom_bot_name: string | null;
 };
 
 const SPLASH_DURATION_WITH_PATRON = 2500;
@@ -27,14 +28,18 @@ export function SplashScreen({ onComplete }: { onComplete: () => void }) {
 
     supabase
       .from("church_partners")
-      .select("name, logo_url, plan_tier")
+      .select("name, logo_url, plan_tier, custom_bot_name")
       .eq("slug", slug)
       .eq("is_active", true)
       .neq("plan_tier", "free")
       .maybeSingle()
       .then(({ data }) => {
         if (data) {
-          setPatron({ name: data.name, logo_url: data.logo_url });
+          setPatron({
+            name: data.name,
+            logo_url: data.logo_url,
+            custom_bot_name: data.custom_bot_name,
+          });
         }
         setDataLoaded(true);
       });
@@ -47,12 +52,10 @@ export function SplashScreen({ onComplete }: { onComplete: () => void }) {
     return () => clearTimeout(timer);
   }, [dataLoaded, patron]);
 
-  const handleExitComplete = () => {
-    onComplete();
-  };
+  const displayName = patron?.custom_bot_name || "BibelBot.Life";
 
   return (
-    <AnimatePresence onExitComplete={handleExitComplete}>
+    <AnimatePresence onExitComplete={onComplete}>
       {visible && (
         <motion.div
           key="splash"
@@ -61,7 +64,7 @@ export function SplashScreen({ onComplete }: { onComplete: () => void }) {
           transition={{ duration: 0.5, ease: "easeInOut" }}
           className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-background"
         >
-          {/* BibelBot Logo */}
+          {/* Logo */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -70,7 +73,7 @@ export function SplashScreen({ onComplete }: { onComplete: () => void }) {
           >
             <img src={bibelbotLogo} alt="BibelBot" className="h-20 w-20" width={512} height={512} />
             <h1 className="text-2xl font-bold text-foreground tracking-tight">
-              BibelBot.Life
+              {displayName}
             </h1>
           </motion.div>
 
@@ -95,6 +98,7 @@ export function SplashScreen({ onComplete }: { onComplete: () => void }) {
                   src={patron.logo_url}
                   alt={patron.name}
                   className="h-12 w-auto max-w-[180px] object-contain"
+                  loading="lazy"
                 />
               )}
               <span className="text-sm font-medium text-foreground/80">
