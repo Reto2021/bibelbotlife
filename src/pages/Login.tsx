@@ -91,7 +91,7 @@ const Login = () => {
         <div className="text-center mb-6">
           <Link to="/" className="inline-flex items-center gap-2 text-foreground hover:text-primary transition-colors">
             <BookOpen className="h-8 w-8 text-primary" />
-            <span className="text-2xl font-bold">{i18n.language === "de" ? "BibelBot" : "BibleBot"}</span>
+            <span className="text-2xl font-bold">BibelBot</span>
           </Link>
         </div>
 
