@@ -257,6 +257,7 @@
     "noVoice": "Your browser does not support voice input.",
     "writing": "typing...",
     "shieldBadge": "No login · No judgment · Citations verified",
+    "loginHint": "Sign in to keep your conversations across all devices",
     "journeyStart": "Yes, let's go ✨",
     "journeyLater": "Maybe later",
     "journeyStartMsg": "Yes, I'd like to start the 21-day journey!",

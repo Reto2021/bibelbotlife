@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import { Search, ArrowRight, Shield, Loader2, Mic, MicOff, Send, Menu } from "lucide-react";
+import { Search, ArrowRight, Shield, Loader2, Mic, MicOff, Send, Menu, LogIn } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTrack } from "@/components/AnalyticsProvider";
 import { openLifeWheel } from "@/components/LifeWheel";
@@ -12,6 +12,8 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { useChatHistory, type ChatMessage } from "@/hooks/use-chat-history";
 import { ChatSidebar } from "@/components/ChatSidebar";
+import { useAuth } from "@/hooks/use-auth";
+
 
 const TYPEWRITER_SPEED = 45;
 const PAUSE_BETWEEN = 2800;
@@ -124,6 +126,7 @@ export function ChatHero() {
   const conversationIdRef = useRef<string | null>(null);
   const { track } = useTrack();
   const { toast } = useToast();
+  const { user } = useAuth();
   const dailyVerse = useMemo(() => getDailyVerse(), []);
 
   const {
@@ -575,6 +578,24 @@ export function ChatHero() {
                         </div>
                       </div>
                     ))}
+
+                    {/* Login hint for anonymous users after first exchange */}
+                    {!user && messages.length >= 2 && !isLoading && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 5 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 1, duration: 0.4 }}
+                        className="flex justify-center"
+                      >
+                        <a
+                          href="/login"
+                          className="inline-flex items-center gap-2 text-xs text-muted-foreground hover:text-foreground bg-card/60 border border-border/50 rounded-full px-4 py-2 transition-all hover:border-primary/30"
+                        >
+                          <LogIn className="h-3 w-3" />
+                          {t("chat.loginHint", "Melde dich an, um Gespräche auf allen Geräten zu behalten")}
+                        </a>
+                      </motion.div>
+                    )}
 
                     {isLoading && messages[messages.length - 1]?.role !== "assistant" && (
                       <div className="flex justify-start">
