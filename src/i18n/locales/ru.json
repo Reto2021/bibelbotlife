@@ -708,6 +708,11 @@
       "submit": "Send inquiry",
       "success": "Inquiry sent! We'll be in touch soon. 🙏",
       "error": "Error sending. Please try again."
+    },
+    "seniorHint": {
+      "title": "Режим для пожилых доступен",
+      "desc": "Увеличенный текст и упрощённая навигация – идеально для пожилых жителей.",
+      "cta": "Попробовать режим для пожилых"
     }
   }
 }

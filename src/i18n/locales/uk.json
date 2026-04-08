@@ -708,6 +708,11 @@
       "submit": "Send inquiry",
       "success": "Inquiry sent! We'll be in touch soon. 🙏",
       "error": "Error sending. Please try again."
+    },
+    "seniorHint": {
+      "title": "Режим для літніх доступний",
+      "desc": "Збільшений текст та спрощена навігація – ідеально для літніх мешканців.",
+      "cta": "Спробувати режим для літніх"
     }
   }
 }

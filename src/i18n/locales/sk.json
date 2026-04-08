@@ -708,6 +708,11 @@
       "submit": "Send inquiry",
       "success": "Inquiry sent! We'll be in touch soon. 🙏",
       "error": "Error sending. Please try again."
+    },
+    "seniorHint": {
+      "title": "Režim pre seniorov k dispozícii",
+      "desc": "Väčšie písmo a zjednodušená navigácia – ideálne pre starších obyvateľov.",
+      "cta": "Vyskúšajte režim pre seniorov"
     }
   }
 }

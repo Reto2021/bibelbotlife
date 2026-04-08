@@ -708,6 +708,11 @@
       "submit": "Send inquiry",
       "success": "Inquiry sent! We'll be in touch soon. 🙏",
       "error": "Error sending. Please try again."
+    },
+    "seniorHint": {
+      "title": "Seniorläge tillgängligt",
+      "desc": "Större text och förenklad navigering – perfekt för äldre boende.",
+      "cta": "Testa seniorläge"
     }
   }
 }

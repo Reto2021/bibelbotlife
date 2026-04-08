@@ -708,6 +708,11 @@
       "submit": "Send inquiry",
       "success": "Inquiry sent! We'll be in touch soon. 🙏",
       "error": "Error sending. Please try again."
+    },
+    "seniorHint": {
+      "title": "Ipo agbalagba wa",
+      "desc": "Ọrọ ti o tobi ati lilọ kiri ti o rọrun – o dara julọ fun awọn olugbe agbalagba.",
+      "cta": "Gbiyanju ipo agbalagba"
     }
   }
 }

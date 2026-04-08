@@ -708,6 +708,11 @@
       "submit": "Send inquiry",
       "success": "Inquiry sent! We'll be in touch soon. 🙏",
       "error": "Error sending. Please try again."
+    },
+    "seniorHint": {
+      "title": "长者模式可用",
+      "desc": "更大的文字和简化的导航 – 非常适合老年居民。",
+      "cta": "试用长者模式"
     }
   }
 }

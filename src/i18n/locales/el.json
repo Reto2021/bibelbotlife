@@ -708,6 +708,11 @@
       "submit": "Send inquiry",
       "success": "Inquiry sent! We'll be in touch soon. 🙏",
       "error": "Error sending. Please try again."
+    },
+    "seniorHint": {
+      "title": "Λειτουργία ηλικιωμένων διαθέσιμη",
+      "desc": "Μεγαλύτερο κείμενο και απλοποιημένη πλοήγηση – ιδανικό για ηλικιωμένους.",
+      "cta": "Δοκιμάστε τη λειτουργία ηλικιωμένων"
     }
   }
 }

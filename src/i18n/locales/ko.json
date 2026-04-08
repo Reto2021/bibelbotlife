@@ -708,6 +708,11 @@
       "submit": "Send inquiry",
       "success": "Inquiry sent! We'll be in touch soon. 🙏",
       "error": "Error sending. Please try again."
+    },
+    "seniorHint": {
+      "title": "시니어 모드 사용 가능",
+      "desc": "더 큰 글씨와 간소화된 탐색 – 고령 거주자에게 이상적입니다.",
+      "cta": "시니어 모드 사용해 보기"
     }
   }
 }

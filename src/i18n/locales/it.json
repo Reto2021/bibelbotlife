@@ -708,6 +708,11 @@
       "submit": "Send inquiry",
       "success": "Inquiry sent! We'll be in touch soon. 🙏",
       "error": "Error sending. Please try again."
+    },
+    "seniorHint": {
+      "title": "Modalità senior disponibile",
+      "desc": "Testo più grande e navigazione semplificata – ideale per gli anziani.",
+      "cta": "Prova la modalità senior"
     }
   }
 }
