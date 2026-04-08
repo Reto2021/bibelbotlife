@@ -258,6 +258,66 @@ export type Database = {
         }
         Relationships: []
       }
+      church_records: {
+        Row: {
+          church_id: string
+          created_at: string
+          created_by: string
+          id: string
+          notes: string | null
+          officiant: string | null
+          participants: Json | null
+          record_date: string
+          record_number: string | null
+          record_type: Database["public"]["Enums"]["record_type"]
+          service_id: string | null
+          updated_at: string
+        }
+        Insert: {
+          church_id: string
+          created_at?: string
+          created_by: string
+          id?: string
+          notes?: string | null
+          officiant?: string | null
+          participants?: Json | null
+          record_date: string
+          record_number?: string | null
+          record_type: Database["public"]["Enums"]["record_type"]
+          service_id?: string | null
+          updated_at?: string
+        }
+        Update: {
+          church_id?: string
+          created_at?: string
+          created_by?: string
+          id?: string
+          notes?: string | null
+          officiant?: string | null
+          participants?: Json | null
+          record_date?: string
+          record_number?: string | null
+          record_type?: Database["public"]["Enums"]["record_type"]
+          service_id?: string | null
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "church_records_church_id_fkey"
+            columns: ["church_id"]
+            isOneToOne: false
+            referencedRelation: "church_partners"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "church_records_service_id_fkey"
+            columns: ["service_id"]
+            isOneToOne: false
+            referencedRelation: "services"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       daily_broadcast_log: {
         Row: {
           id: string
@@ -770,6 +830,7 @@ export type Database = {
         | "lutheran"
         | "evangelical"
         | "secular"
+      record_type: "baptism" | "wedding" | "funeral"
       resource_type: "song" | "prayer" | "reading" | "liturgy" | "other"
       service_status: "draft" | "published" | "archived"
       service_type:
@@ -924,6 +985,7 @@ export const Constants = {
         "evangelical",
         "secular",
       ],
+      record_type: ["baptism", "wedding", "funeral"],
       resource_type: ["song", "prayer", "reading", "liturgy", "other"],
       service_status: ["draft", "published", "archived"],
       service_type: [
