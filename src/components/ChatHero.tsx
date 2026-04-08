@@ -523,13 +523,34 @@ export function ChatHero() {
                       ref={inputRef}
                       type="text"
                       value={input}
-                      onChange={(e) => setInput(e.target.value)}
-                      onFocus={() => setIsFocused(true)}
-                      onBlur={() => setIsFocused(false)}
-                      onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); handleSubmit(e); } }}
+                      onChange={(e) => { setInput(e.target.value); setShowSuggestions(true); setSelectedSuggestion(-1); }}
+                      onFocus={() => { setIsFocused(true); setShowSuggestions(true); }}
+                      onBlur={() => { setIsFocused(false); setTimeout(() => setShowSuggestions(false), 200); }}
+                      onKeyDown={(e) => {
+                        if (e.key === "ArrowDown" && filteredSuggestions.length > 0) {
+                          e.preventDefault();
+                          setSelectedSuggestion(prev => Math.min(prev + 1, filteredSuggestions.length - 1));
+                        } else if (e.key === "ArrowUp") {
+                          e.preventDefault();
+                          setSelectedSuggestion(prev => Math.max(prev - 1, -1));
+                        } else if (e.key === "Enter") {
+                          e.preventDefault();
+                          if (selectedSuggestion >= 0 && filteredSuggestions[selectedSuggestion]) {
+                            const sg = filteredSuggestions[selectedSuggestion];
+                            setInput("");
+                            setShowSuggestions(false);
+                            sendMessage(sg.prompt);
+                          } else {
+                            handleSubmit(e);
+                          }
+                        } else if (e.key === "Escape") {
+                          setShowSuggestions(false);
+                        }
+                      }}
                       placeholder={isFocused ? t("chatHero.focusPlaceholder") : placeholder + "│"}
                       className="w-full bg-transparent pl-12 pr-24 py-4 md:pl-14 md:py-5 text-base md:text-lg text-foreground placeholder:text-muted-foreground/60 focus:outline-none rounded-2xl"
                       aria-label={t("chatHero.ariaLabel")}
+                      autoComplete="off"
                     />
                     <div className="absolute right-3 flex items-center gap-1.5">
                       {SpeechRecognition && (
