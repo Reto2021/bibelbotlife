@@ -1,129 +1,71 @@
 
 
-## Messeplaner v6 — Memory-File + Zugangskonzept
+# SEO-Verbesserung & Übersetzungen nachziehen
 
-### 1. Memory-File erstellen
+## Problem (aus dem Screenshot)
 
-Speichere den vollständigen Messeplaner-Plan v6 unter `mem://feature/messeplaner` mit allen Dimensionen:
+Google Search Console meldet **42 ungültige URLs** in der Sitemap. Die Ursache:
+- Query-String-URLs (`?lng=de`, `?lng=en`, etc.) sind **kein gültiges Format** für Sitemaps
+- Google erwartet entweder echte Pfade (`/de/`, `/en/`) oder `xhtml:link`-Alternates ohne separate `<url>`-Einträge pro Sprache
+- Die Sitemap referenziert `biblebot.life`, Google crawlt aber `bibelbot.ch`
 
-**Kernfunktionen (v1–v4)**:
-- Service-Editor mit Drag & Drop Blöcken
-- Kalender-Ansicht & Print-CSS
-- BibleBot-Integration pro Block ("BibleBot fragen")
-- Team-Verwaltung (Rollen: Pfarrer, Musiker, Lektor, Sakristei)
-- Vorlagen-System mit Konfessions-Profilen
-- Ressourcen-Bibliothek (Lieder, Gebete, Lesungen)
-- Conductor Mode (Live-Durchführung)
-- Teleprompter (Read-Modus)
-- Integrierter Audio-Player
-- Besuchsprotokolle mit KI-Zusammenfassung
+## Plan
 
-**10 ergänzte Dimensionen (v5–v6)**:
-1. Mehrsprachigkeit pro Block
-2. Amtshandlungs-Register (Taufe, Trauung, Abdankung)
-3. Gäste-/Teilnehmerverwaltung
-4. Budget & Kosten
-5. Freiwilligen-Rotation
-6. Offline-Fähigkeit (PWA)
-7. Gastzugang für externe Mitwirkende
-8. Statistiken & Feedback
-9. Barrierefreiheit
-10. Versionierung & Änderungshistorie
+### 1. Sitemap bereinigen — Sprachversionen entfernen
+Die 36 `?lng=`-Einträge aus der Sitemap entfernen. Sprach-Alternates gehören **nur** als `hreflang`-Links in den `<head>` (ist bereits vorhanden in `index.html`). Die Sitemap enthält danach nur noch die echten Seiten:
+- `/` (Startseite)
+- `/for-churches`
+- `/for-institutions`
+- `/churches`
+- `/impressum`
+- `/datenschutz`
+- `/login`
 
-**Konfessionen**: Katholisch, Reformiert, Lutherisch, Evangelikal/Freikirchlich, Säkular/Freie Zeremonien
+### 2. index.html — Domain & Meta anpassen
+- `<html lang="de">` statt `"en"` (Hauptsprache ist Deutsch/Schweiz)
+- Canonical und alle URLs auf `bibelbot.ch` umstellen (oder Redirect sicherstellen)
+- Dynamischen `<title>` und `<meta description>` per Sprache vorbereiten (via i18n-Keys im `<head>` über eine React-Helmet-Komponente)
+
+### 3. React-Helmet für dynamische Meta-Tags
+`react-helmet-async` einbauen, damit jede Seite ihren eigenen `<title>` und `<meta description>` setzen kann — übersetzt via i18n.
+
+### 4. Übersetzungskeys ergänzen
+Neue i18n-Keys für SEO-Meta-Tags in `de.json` und `en.json`:
+```json
+"meta": {
+  "homeTitle": "BibleBot – Dein persönlicher Bibel-Begleiter",
+  "homeDesc": "BibleBot begleitet dich mit 5 Bibelübersetzungen...",
+  "forChurchesTitle": "BibleBot für Gemeinden",
+  "loginTitle": "Anmelden – BibleBot"
+}
+```
+Dann via `translate-locale` Edge Function in alle 36 Sprachen übersetzen.
+
+### 5. Fehlende Übersetzungen in neuen Seiten nachziehen
+- `MeinBereich.tsx` und `MeinBereichHome.tsx` verwenden **keine** `useTranslation` — alle Texte sind hardcoded Deutsch
+- i18n-Keys für den Mein-Bereich-Abschnitt ergänzen und in DE/EN eintragen, Rest via Translate-Funktion
+
+### 6. robots.txt — Domain anpassen
+Sitemap-URL auf korrekte Domain zeigen lassen.
 
 ---
 
-### 2. Zugang: Wie gelangen Seelsorger zum Messe-Modul?
+### Technische Details
 
-#### Login-Flow
+| Datei | Änderung |
+|---|---|
+| `public/sitemap.xml` | Nur echte Pfade, keine `?lng=` URLs |
+| `public/robots.txt` | Sitemap-URL auf `bibelbot.ch` |
+| `index.html` | `lang="de"`, Domain-URLs prüfen |
+| `package.json` | `react-helmet-async` hinzufügen |
+| `src/components/SEOHead.tsx` | Neue Komponente für dynamische Meta-Tags |
+| `src/pages/Index.tsx` | `<SEOHead>` einbauen |
+| `src/pages/ForChurches.tsx` | `<SEOHead>` einbauen |
+| `src/pages/MeinBereich.tsx` | i18n nachrüsten |
+| `src/pages/mein-bereich/MeinBereichHome.tsx` | i18n nachrüsten |
+| `src/i18n/locales/de.json` | Meta-Keys + MeinBereich-Keys |
+| `src/i18n/locales/en.json` | Meta-Keys + MeinBereich-Keys |
 
-```text
-Startseite (biblebot.life)
-    │
-    ├── "Anmelden" Button (bereits vorhanden in Nav-Bar)
-    │
-    └── /login (bestehende Seite, E-Mail + Google)
-              │
-              ▼
-         Eingeloggt → /dashboard
-         │
-         Hat User eine Gemeinde? ─ Ja → Dashboard mit Kalender
-         │
-         Nein → Willkommens-Wizard (Gemeinde erstellen, Tradition wählen)
-```
-
-- Eingeloggte User sehen in der Nav-Bar **"Mein Bereich"** statt nur Logout
-- Nicht-eingeloggte User sehen den Chat wie bisher — keine Änderung
-
-#### Dashboard-UI
-
-```text
-┌─────────────────────────────────────────────────┐
-│  BibleBot.Life          🔍  🔔  👤 Pfarrer Müller │
-├──────────┬──────────────────────────────────────┤
-│ Sidebar  │                                      │
-│          │   Nächster Gottesdienst               │
-│ 📅 Kalender│   So 12. April — 10:00 Uhr           │
-│ ✏️ Neuer  │   "3. Sonntag nach Ostern"           │
-│ 📚 Biblio │   [Block-Vorschau]                   │
-│ 📊 Serien │                                      │
-│ 📋 Register│   Letzte Gottesdienste                │
-│ 👥 Team   │   • Karfreitag — Abdankung            │
-│ ⚙️ Settings│   • Gründonnerstag — Abendmahl        │
-└──────────┴──────────────────────────────────────┘
-
-Mobile: Bottom-Tab-Navigation (5 Tabs)
-```
-
-#### Routing
-
-```text
-/dashboard            → Übersicht (nächste Services)
-/dashboard/services   → Kalender
-/dashboard/editor/:id → Block-Editor
-/dashboard/resources  → Bibliothek
-/dashboard/series     → Predigtreihen
-/dashboard/records    → Amtshandlungen
-/dashboard/team       → Team & Rotation
-/dashboard/settings   → Gemeinde & Tradition
-```
-
-Alle `/dashboard/*` Routes sind auth-geschützt via `<ProtectedRoute>`.
-
----
-
-### 3. Technische Umsetzung
-
-#### Schritt 1: Memory-File schreiben
-- `mem://feature/messeplaner` mit vollständigem Plan (Datenmodell, Block-Typen, Phasen, Konfessionen)
-- `mem://index.md` aktualisieren
-
-#### Schritt 2: Dateien erstellen (kein DB noch)
-- `src/components/ProtectedRoute.tsx` — Auth-Guard
-- `src/pages/Dashboard.tsx` — Layout mit Sidebar + Outlet
-- `src/pages/dashboard/DashboardHome.tsx` — Übersichtsseite (Platzhalter)
-- `src/App.tsx` — Neue Routes einfügen
-- `src/pages/Index.tsx` — Nav-Bar: "Mein Bereich" für eingeloggte User
-
-#### Neue Dateien
-
-```text
-src/components/ProtectedRoute.tsx
-src/pages/Dashboard.tsx
-src/pages/dashboard/DashboardHome.tsx
-```
-
----
-
-### 4. Phasenplan
-
-| Phase | Inhalt |
-|-------|--------|
-| **1 (jetzt)** | Memory-File, Dashboard-Shell, ProtectedRoute, Nav-Anpassung |
-| **2** | DB-Migration (services, templates, resource_library, series, team) |
-| **3** | Service-Editor mit Block-DnD + BibleBot-Button |
-| **4** | Kalender, Vorlagen, Print-CSS |
-| **5** | Conductor Mode, Teleprompter, Audio |
-| **6** | Team, Rotation, Register, Offline, Statistiken |
+### Offene Frage
+Ist `bibelbot.ch` die primäre Domain und `biblebot.life` ein Redirect — oder umgekehrt? Die Sitemap und index.html müssen auf dieselbe Domain zeigen wie die Google Search Console.
 
