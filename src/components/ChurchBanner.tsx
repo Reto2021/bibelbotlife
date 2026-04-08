@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import { supabase } from "@/integrations/supabase/client";
-import { X, Church } from "lucide-react";
+import { X, Church, ExternalLink } from "lucide-react";
 
 export const ChurchBanner = () => {
   const { t } = useTranslation();
@@ -25,7 +25,7 @@ export const ChurchBanner = () => {
     queryFn: async () => {
       const { data } = await supabase
         .from("church_partners")
-        .select("name, slug")
+        .select("name, slug, logo_url")
         .eq("slug", storedSlug!)
         .eq("is_active", true)
         .single();
@@ -39,10 +39,18 @@ export const ChurchBanner = () => {
   return (
     <div className="bg-primary/10 border-b border-primary/20 py-2 px-4">
       <div className="container mx-auto flex items-center justify-center gap-2 text-sm">
-        <Church className="h-4 w-4 text-primary shrink-0" />
-        <span className="text-foreground/80">
+        {church.logo_url ? (
+          <img src={church.logo_url} alt="" className="h-4 w-4 object-contain shrink-0" />
+        ) : (
+          <Church className="h-4 w-4 text-primary shrink-0" />
+        )}
+        <Link
+          to={`/church/${church.slug}`}
+          className="text-foreground/80 hover:text-foreground transition-colors inline-flex items-center gap-1"
+        >
           {t("church.recommendedBy", { name: church.name })}
-        </span>
+          <ExternalLink className="h-3 w-3 opacity-50" />
+        </Link>
         <button
           onClick={() => {
             setDismissed(true);
