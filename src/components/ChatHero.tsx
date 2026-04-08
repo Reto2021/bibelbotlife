@@ -417,7 +417,7 @@ export function ChatHero() {
                   <span className="inline-flex items-center gap-3 text-sm font-semibold text-foreground bg-card/80 backdrop-blur-sm border border-border shadow-md px-5 py-2.5 rounded-full">
                     <Shield className="h-4 w-4 text-primary" />
                     <span className="flex items-center gap-2">
-                      <span>{t("hero.badge.noLogin")}</span>
+                      <span>{t("hero.badge.optionalLogin")}</span>
                       <span className="text-primary/40">·</span>
                       <span>{t("hero.badge.noData")}</span>
                       <span className="text-primary/40">·</span>

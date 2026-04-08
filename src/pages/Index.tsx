@@ -1,6 +1,6 @@
 import { lazy, Suspense, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, GraduationCap, Church, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass, Send, Building2, Menu, FileText, ShieldCheck } from "lucide-react";
+import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, GraduationCap, Church, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass, Send, Building2, Menu, FileText, ShieldCheck, LogIn, LogOut, User } from "lucide-react";
 import { ChurchBanner } from "@/components/ChurchBanner";
 import { ReferralSection } from "@/components/ReferralSection";
 // EntryTiles removed - chips are now in ChatHero
@@ -17,6 +17,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Link } from "react-router-dom";
 import { DarkModeToggle } from "@/components/DarkModeToggle";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { useAuth } from "@/hooks/use-auth";
 
 const TELEGRAM_LINK = "https://t.me/meinbibelbot";
 
@@ -30,6 +31,7 @@ const BIBLE_EDITIONS = [
 
 const Index = () => {
   const { t, i18n } = useTranslation();
+  const { user, signOut } = useAuth();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const features = [
@@ -81,6 +83,19 @@ const Index = () => {
             </Button>
             <LanguageSwitcher />
             <DarkModeToggle />
+            {user ? (
+              <Button variant="ghost" size="sm" className="hidden sm:inline-flex" onClick={() => signOut()}>
+                <LogOut className="h-4 w-4 mr-1" />
+                {t("auth.logout", "Abmelden")}
+              </Button>
+            ) : (
+              <Button asChild variant="ghost" size="sm" className="hidden sm:inline-flex">
+                <Link to="/login">
+                  <LogIn className="h-4 w-4 mr-1" />
+                  {t("auth.loginShort", "Anmelden")}
+                </Link>
+              </Button>
+            )}
             <Button asChild className="hidden sm:inline-flex bg-telegram hover:bg-telegram/90 text-telegram-foreground">
               <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer">
                 <Send className="h-4 w-4 mr-2" />
@@ -146,6 +161,24 @@ const Index = () => {
                 <ShieldCheck className="h-4 w-4" />
                 {t("footer.datenschutz")}
               </Link>
+              {user ? (
+                <button
+                  onClick={() => { signOut(); setMobileMenuOpen(false); }}
+                  className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-foreground hover:bg-primary/10 transition-colors w-full"
+                >
+                  <LogOut className="h-4 w-4 text-primary" />
+                  {t("auth.logout", "Abmelden")}
+                </button>
+              ) : (
+                <Link
+                  to="/login"
+                  className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-foreground hover:bg-primary/10 transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <LogIn className="h-4 w-4 text-primary" />
+                  {t("auth.loginShort", "Anmelden")}
+                </Link>
+              )}
               <div className="pt-2 pb-1">
                 <Button asChild className="w-full bg-telegram hover:bg-telegram/90 text-telegram-foreground">
                   <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)}>
