@@ -287,6 +287,43 @@ serve(async (req) => {
       );
     }
 
+    // === Generate title mode ===
+    if (mode === "generate_title") {
+      const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
+      if (!LOVABLE_API_KEY) throw new Error("LOVABLE_API_KEY is not configured");
+
+      const titleResp = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${LOVABLE_API_KEY}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          model: "google/gemini-2.5-flash-lite",
+          messages: [
+            {
+              role: "system",
+              content: "Generiere einen kurzen, prägnanten Titel (max 50 Zeichen) für dieses Gespräch. Nur den Titel ausgeben, keine Anführungszeichen, keine Erklärung. Deutsch (Schweiz), kein ß."
+            },
+            ...messages.slice(0, 4),
+          ],
+          stream: false,
+        }),
+      });
+
+      if (!titleResp.ok) {
+        return new Response(JSON.stringify({ error: "Title generation failed" }), {
+          status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" },
+        });
+      }
+
+      const titleData = await titleResp.json();
+      const title = titleData.choices?.[0]?.message?.content?.trim() || "";
+      return new Response(JSON.stringify({ title }), {
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+
     // Inject language instruction and journey context into system prompt
     let systemPrompt = SYSTEM_PROMPT;
     const lang = language || "de";
