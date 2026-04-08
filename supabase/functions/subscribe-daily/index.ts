@@ -12,6 +12,7 @@ const SubscribeSchema = z.object({
   channel: z.enum(["push", "telegram", "sms"]),
   first_name: z.string().trim().min(1).max(50).optional(),
   phone_number: z.string().trim().min(8).max(20).optional(),
+  language: z.string().trim().min(2).max(10).optional(),
   push_subscription: z.object({
     endpoint: z.string().url(),
     keys: z.object({
@@ -36,7 +37,7 @@ serve(async (req) => {
       );
     }
 
-    const { channel, first_name, phone_number, push_subscription } = parsed.data;
+    const { channel, first_name, phone_number, language, push_subscription } = parsed.data;
 
     // Validate channel-specific fields
     if (channel === "sms" && !phone_number) {
@@ -61,6 +62,7 @@ serve(async (req) => {
     const record: Record<string, unknown> = {
       channel,
       is_active: true,
+      language: language || 'de',
     };
     if (first_name) record.first_name = first_name;
     if (channel === "sms") record.phone_number = phone_number;

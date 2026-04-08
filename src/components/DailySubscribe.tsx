@@ -13,7 +13,7 @@ const TELEGRAM_LINK = "https://t.me/meinbibelbot";
 type Channel = "push" | "sms" | "telegram";
 
 export function DailySubscribe() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [selectedChannel, setSelectedChannel] = useState<Channel | null>(null);
   const [firstName, setFirstName] = useState("");
   const [phone, setPhone] = useState("");
@@ -67,7 +67,7 @@ export function DailySubscribe() {
         });
       }
 
-      const body: Record<string, unknown> = { channel: selectedChannel };
+      const body: Record<string, unknown> = { channel: selectedChannel, language: i18n.language };
       if (firstName.trim()) body.first_name = firstName.trim();
       if (selectedChannel === "sms") body.phone_number = phone;
       if (selectedChannel === "push" && pushSubscription) {

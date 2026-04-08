@@ -218,6 +218,7 @@ export type Database = {
           first_name: string | null
           id: string
           is_active: boolean
+          language: string | null
           phone_number: string | null
           push_subscription: Json | null
           telegram_chat_id: number | null
@@ -229,6 +230,7 @@ export type Database = {
           first_name?: string | null
           id?: string
           is_active?: boolean
+          language?: string | null
           phone_number?: string | null
           push_subscription?: Json | null
           telegram_chat_id?: number | null
@@ -240,6 +242,7 @@ export type Database = {
           first_name?: string | null
           id?: string
           is_active?: boolean
+          language?: string | null
           phone_number?: string | null
           push_subscription?: Json | null
           telegram_chat_id?: number | null
