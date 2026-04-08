@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Send, Building2, Heart, Hospital, ShieldCheck, Swords, Handshake, Landmark, Sprout, Castle, Clock, Tablet, MessageCircle, BookOpen } from "lucide-react";
+import { ArrowLeft, Send, Building2, Heart, Hospital, ShieldCheck, Swords, Handshake, Sprout, TowerControl, Footprints, Clock, Tablet, MessageCircle, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -29,9 +29,9 @@ const useCases = [
 
 const tiers = [
   { key: "free", setup: 0, annual: 0, icon: Sprout, popular: false },
-  { key: "community", setup: 490, annual: 790, icon: Handshake, popular: false },
-  { key: "gemeinde", setup: 990, annual: 1490, icon: Landmark, popular: true },
-  { key: "kirche", setup: 1990, annual: 2990, icon: Castle, popular: false },
+  { key: "community", setup: 490, annual: 790, icon: Footprints, popular: false },
+  { key: "gemeinde", setup: 990, annual: 1490, icon: Handshake, popular: true },
+  { key: "kirche", setup: 1990, annual: 2990, icon: TowerControl, popular: false },
 ];
 
 const ForInstitutions = () => {
