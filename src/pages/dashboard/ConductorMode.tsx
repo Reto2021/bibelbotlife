@@ -51,7 +51,7 @@ export default function ConductorMode() {
       .then(({ data }) => {
         if (data) {
           setService(data);
-          setBlocks((data.blocks as ServiceBlockData[]) || []);
+          setBlocks((data.blocks as unknown as ServiceBlockData[]) || []);
         }
       });
   }, [id, user]);
