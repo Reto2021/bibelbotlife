@@ -41,7 +41,7 @@ const Unsubscribe = () => {
         {status === "valid" && (
           <>
             <h1 className="text-2xl font-bold text-foreground mb-4">E-Mail-Benachrichtigungen abbestellen</h1>
-            <p className="text-muted-foreground mb-6">Möchten Sie keine E-Mails mehr von BibleBot.Life erhalten?</p>
+            <p className="text-muted-foreground mb-6">Möchten Sie keine E-Mails mehr von BibelBot.Life erhalten?</p>
             <Button onClick={handleUnsubscribe} className="w-full">Abbestellen bestätigen</Button>
           </>
         )}
