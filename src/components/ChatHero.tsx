@@ -570,7 +570,29 @@ export function ChatHero() {
                         <ArrowRight className="h-5 w-5" />
                       </button>
                     </div>
-                  </div>
+                   </div>
+                  {/* Autocomplete suggestions */}
+                  {showSuggestions && filteredSuggestions.length > 0 && (
+                    <div ref={suggestionsRef} className="absolute left-0 right-0 top-full mt-1 bg-card border border-border rounded-xl shadow-xl z-50 overflow-hidden">
+                      {filteredSuggestions.map((sg, i) => (
+                        <button
+                          key={`${sg.type}-${i}`}
+                          type="button"
+                          onMouseDown={(e) => { e.preventDefault(); setInput(""); setShowSuggestions(false); sendMessage(sg.prompt); }}
+                          onMouseEnter={() => setSelectedSuggestion(i)}
+                          className={`w-full flex items-center gap-3 px-4 py-3 text-left transition-colors ${
+                            i === selectedSuggestion ? "bg-primary/10 text-foreground" : "text-foreground/80 hover:bg-muted"
+                          }`}
+                        >
+                          <span className="text-lg shrink-0">{sg.emoji}</span>
+                          <span className={`${isSenior ? "text-base" : "text-sm"} truncate`}>{sg.label}</span>
+                          <span className={`ml-auto ${isSenior ? "text-sm" : "text-xs"} text-muted-foreground shrink-0`}>
+                            {sg.type === "bible" ? "📖" : "💬"}
+                          </span>
+                        </button>
+                      ))}
+                    </div>
+                  )}
                 </motion.form>
 
                 {/* === CTA Cards === */}
