@@ -136,6 +136,7 @@ export function ChatHero() {
     createConversation,
     addMessage,
     updateLastAssistantMessage,
+    updateTitle,
     deleteConversation,
     startNewChat,
     searchConversations,
@@ -273,6 +274,29 @@ export function ChatHero() {
         // Update the DB with final assistant content
         if (assistantSoFar && convId) {
           await updateLastAssistantMessage(convId, assistantSoFar);
+
+          // Generate AI title after the first exchange (only 1 user + 1 assistant message)
+          if (allMessages.length === 1) {
+            try {
+              const titleResp = await fetch(CHAT_URL, {
+                method: "POST",
+                headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}` },
+                body: JSON.stringify({
+                  messages: [
+                    { role: "user", content: text.trim() },
+                    { role: "assistant", content: assistantSoFar.slice(0, 500) },
+                  ],
+                  mode: "generate_title",
+                }),
+              });
+              if (titleResp.ok) {
+                const { title } = await titleResp.json();
+                if (title) await updateTitle(convId, title);
+              }
+            } catch (e) {
+              console.error("Title generation failed:", e);
+            }
+          }
         }
       } catch (e) {
         console.error(e);
