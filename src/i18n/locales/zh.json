@@ -1,755 +1,756 @@
 {
   "nav": {
-    "startNow": "开始"
+    "startNow": "立即开始"
   },
-  "loader": "加载中…",
+  "loader": "正在加载...",
   "hero": {
     "badge": {
       "noLogin": "无需登录",
-      "noData": "无数据",
-      "noJudgment": "无评判"
+      "noData": "不存储数据",
+      "noJudgment": "不评判"
     },
-    "title1": "圣经.",
-    "title2": " 重新思考。",
-    "subtitle": "BibleBot了解圣经——并提出正确的问题。不是人，但是一个真诚的伙伴。用于有意义的对话、深入的问题和真正的启发。",
-    "ctaTelegram": "通过Telegram开始",
+    "title1": "《圣经》。",
+    "title2": " 重新认识。",
+    "subtitle": "你的BibleBot了解圣经，并提出正确的问题。它不是人，但却是诚实的伴侣。带来愉快的对话、深刻的问题和真实的启发。",
+    "ctaTelegram": "在Telegram开始",
     "ctaMore": "了解更多",
-    "quote": "\"Come to me, all you who are weary and burdened, and I will give you rest.\"",
-    "quoteRef": "– Matthew 11:28"
+    "quote": "“凡劳苦担重担的人，到我这里来，我就使你们得安息。”",
+    "quoteRef": "– 马太福音 11:28",
+    "ctaWhatsApp": "在WhatsApp开始"
   },
   "impulse": {
-    "loading": "Loading daily impulse...",
-    "label": "Impulse of the Day",
-    "deepDive": "What does this mean for me?",
-    "explore": "Read full passage"
+    "loading": "正在加载每日灵感...",
+    "label": "Tagesimpuls",
+    "deepDive": "这对我意味着什么？",
+    "explore": "阅读整个章节"
   },
   "features": {
-    "sectionTitle": "How BibleBot accompanies you",
-    "sectionSubtitle": "Discover the many ways BibleBot can walk alongside you",
+    "sectionTitle": "你的BibleBot如何伴随你",
+    "sectionSubtitle": "探索你的BibleBot伴随你的多种可能性",
     "bible": {
-      "title": "Bible passages & interpretation",
-      "desc": "Ask \"What does the Bible say about...?\" and receive relevant verses with context and clear explanation."
+      "title": "圣经经文与解释",
+      "desc": "问“圣经对...怎么说？”，即可获得相关经文、背景和通俗易懂的解释。"
     },
     "goals": {
-      "title": "Life planning & goals",
-      "desc": "Discover your calling, set concrete goals, and find out what God might have in store for you."
+      "title": "人生规划与目标设定",
+      "desc": "发掘你的呼召，设定具体目标，并了解上帝对你可能有何旨意。"
     },
     "self": {
-      "title": "Finding yourself",
-      "desc": "Recognize your gifts, strengths, and longings – and what your heart truly needs."
+      "title": "找到真我",
+      "desc": "认识你的恩赐、长处和渴望——以及你内心真正需要什么。"
     },
     "faith": {
-      "title": "Faith journey & finding Christ",
-      "desc": "Whether seeking, doubting, or deepening – BibleBot accompanies you on your personal path."
+      "title": "信仰之路与寻见基督",
+      "desc": "无论你在寻求、怀疑还是深化信仰——你的BibleBot都会在你的个人道路上伴随你。"
     },
     "daily": {
-      "title": "Daily impulses & church year",
-      "desc": "Start your day with impulses and let BibleBot guide you through Advent, Lent, and holidays."
+      "title": "每日灵感与教会年历",
+      "desc": "以灵感开启你的一天，让它陪伴你度过降临节、四旬期和节日。"
     },
     "groups": {
-      "title": "Groups & communities",
-      "desc": "Perfect for Bible study groups, church communities, and shared devotions."
+      "title": "小组与教会",
+      "desc": "非常适合查经班、教会小组和团契灵修。"
     }
   },
   "coaching": {
-    "badge": "Methodology",
-    "title": "Not just a chatbot – genuine companionship",
-    "subtitle": "BibleBot combines biblical wisdom with proven coaching methods and Positive Psychology.",
-    "journeyTitle": "Personal companionship",
-    "journeyDesc": "BibleBot accompanies you as long as you wish – in free conversation or with an optional 21-day structure.",
-    "week1": "Week 1: Arriving",
-    "week1Desc": "Building trust, listening, understanding your situation. Where are you? What concerns you?",
-    "week2": "Week 2: Deepening",
-    "week2Desc": "Recognizing patterns, clarifying desires, deepening biblical impulses. What do you really want?",
-    "week3": "Week 3: Acting",
-    "week3Desc": "Taking concrete steps, setting goals, initiating change. What's your next step?",
-    "openQuestionsTitle": "Open questions instead of quick answers",
-    "openQuestionsDesc": "BibleBot doesn't give cheap advice. Instead, it asks the questions that truly matter:",
-    "openQ1": "\"What's really behind this desire?\"",
-    "openQ2": "\"How would you know something has changed?\"",
-    "openQ3": "\"What would be a first small step?\"",
-    "honestTitle": "Honest instead of toxic positivity",
-    "honestDesc": "No \"It'll be fine!\" and no sugarcoating. BibleBot is empathetic AND honest:",
-    "honest1": "Also addresses uncomfortable Bible passages",
-    "honest2": "Challenges you to self-reflection",
-    "honest3": "Distinguishes comfort from avoidance",
-    "scienceTitle": "Scientifically grounded",
+    "badge": "方法论",
+    "title": "不仅仅是一个聊天机器人——而是一个真正的陪伴者",
+    "subtitle": "你的BibleBot将圣经智慧与成熟的辅导方法和积极心理学相结合。",
+    "journeyTitle": "个性化陪伴",
+    "journeyDesc": "你的BibleBot会陪伴你，只要你愿意——通过自由对话或可选的21天结构。",
+    "week1": "第一周：安顿",
+    "week1Desc": "建立信任，倾听，理解你的处境。你身处何处？什么困扰着你？",
+    "week2": "第二周：深入",
+    "week2Desc": "识别模式，澄清愿望，深化圣经启发。你真正想要什么？",
+    "week3": "第三周：行动",
+    "week3Desc": "采取具体步骤，制定目标，启动改变。你的下一步是什么？",
+    "openQuestionsTitle": "开放式问题而非快速答案",
+    "openQuestionsDesc": "你的BibleBot不会给你廉价的建议。相反，它会提出真正重要的问题：",
+    "openQ1": "«这个愿望背后究竟是什么？»",
+    "openQ2": "«你会如何察觉到事情已经改变了？»",
+    "openQ3": "«第一个小步骤会是什么？»",
+    "honestTitle": "诚实而非有毒的积极",
+    "honestDesc": "没有“一切都会好起来的！”也没有粉饰太平。你的BibleBot既富有同情心又诚实：",
+    "honest1": "点出不舒服的圣经经文",
+    "honest2": "挑战自我反思",
+    "honest3": "区分安慰与逃避",
+    "scienceTitle": "科学依据",
     "perma": {
-      "name": "PERMA Model",
-      "author": "Seligman",
-      "desc": "Positive emotions, meaning & growth"
+      "name": "PERMA模型",
+      "author": "塞利格曼",
+      "desc": "积极情绪，意义与成长"
     },
     "logo": {
-      "name": "Logotherapy",
-      "author": "Frankl",
-      "desc": "Finding meaning in difficult times"
+      "name": "意义疗法",
+      "author": "弗兰克尔",
+      "desc": "在困难时期寻找意义"
     },
     "gratitude": {
-      "name": "Gratitude",
-      "author": "Emmons",
-      "desc": "Research-based gratitude practice"
+      "name": "感恩",
+      "author": "埃蒙斯",
+      "desc": "基于研究的感恩实践"
     },
     "forgiveness": {
-      "name": "Forgiveness",
-      "author": "Worthington",
-      "desc": "REACH model for forgiveness processes"
+      "name": "宽恕",
+      "author": "沃辛顿",
+      "desc": "宽恕过程的REACH模型"
     },
-    "renameTip": "💡 You can give your BibleBot a personal name – so it truly becomes <strong>your</strong> companion."
+    "renameTip": "💡 你可以给你的BibleBot起一个自己的名字——这样它就真正成为<strong>你的</strong>伴侣了。"
   },
   "discover": {
-    "badge": "For the curious",
-    "title": "Rediscover faith – without pressure",
-    "subtitle": "More and more people are asking the big questions anew. BibleBot.Life is for everyone who wants to (re)discover faith – honestly, without pathos, and without church jargon.",
+    "badge": "献给好奇者",
+    "title": "重新发现信仰——没有压力",
+    "subtitle": "越来越多的人重新审视那些重大问题。BibleBot.Life 致力于为所有希望（重新）发现信仰的人提供一个诚实、不造作、无教会术语的平台。",
     "doubt": {
-      "title": "You doubt?",
-      "text": "Good. Doubt isn't a flaw – it's the beginning of honest faith. The Bible is full of people who wrestled."
+      "title": "你怀疑吗？",
+      "text": "很好。怀疑不是错误——它是真诚信仰的开始。圣经里充满了挣扎的人。"
     },
     "search": {
-      "title": "You're searching?",
-      "text": "Maybe you don't even know what for. That's perfectly fine. BibleBot helps you ask the right questions – instead of delivering quick answers."
+      "title": "你在寻找吗？",
+      "text": "也许你甚至不确定自己在寻找什么。这完全没关系。你的BibleBot会帮助你提出正确的问题——而不是提供快速答案。"
     },
     "deepen": {
-      "title": "You want to go deeper?",
-      "text": "You already believe, but want to understand more? Discover the depth of the Bible – historical, personal, surprisingly relevant."
+      "title": "你想深化吗？",
+      "text": "你已经相信，但想了解更多？探索圣经的深度——历史性的，个性化的，以及令人惊讶的相关性。"
     },
-    "quote": "\"Ask, and it will be given to you; seek, and you will find; knock, and the door will be opened.\"",
-    "quoteRef": "– Matthew 7:7",
-    "quoteText": "Many of us don't talk much about faith. That's okay. But those with questions deserve honest answers – without sermons, without membership, without ulterior motives."
+    "quote": "«叩门的，就给他开门。»",
+    "quoteRef": "– 马太福音 7:7",
+    "quoteText": "在瑞士，我们不太谈论信仰。这也没什么不好。但有疑问的人，应该得到诚实的答案——没有说教，没有会员资格，没有私心。"
   },
   "subscribe": {
-    "title": "Daily Bible impulse",
-    "subtitle": "Every morning at 7:00 AM – a verse, a thought, a good start.",
-    "firstName": "Your first name",
-    "firstNameOptional": "(optional)",
-    "firstNamePlaceholder": "e.g. Thomas",
-    "firstNameHint": "So we can greet you personally.",
-    "channelLabel": "How would you like to receive the impulse?",
-    "push": "Push",
-    "pushDesc": "Browser notification",
+    "title": "每日圣经灵感",
+    "subtitle": "每天早上7:00——一节经文，一个想法，一个美好的开始。",
+    "firstName": "您的名字",
+    "firstNameOptional": "（可选）",
+    "firstNamePlaceholder": "例如 托马斯",
+    "firstNameHint": "以便我们能亲自问候您。",
+    "channelLabel": "您希望如何接收灵感？",
+    "push": "推送",
+    "pushDesc": "浏览器通知",
     "telegram": "Telegram",
-    "telegramDesc": "Message via Telegram",
-    "sms": "SMS",
-    "smsDesc": "Text to your phone",
-    "phoneLabel": "Phone number",
-    "phonePlaceholder": "+1 555 123 4567",
-    "phoneHint": "With country code, e.g. +1 for the US.",
-    "telegramHint": "Click \"Subscribe\" – you'll be redirected to Telegram. Start the bot and type <strong>/daily</strong> to activate the daily impulse.",
-    "pushHint": "After clicking \"Subscribe\", your browser will ask for notification permission. Please allow it to receive the impulse.",
-    "submit": "Subscribe",
-    "submitting": "Subscribing...",
-    "footNote": "No login required. Cancel anytime.",
-    "successTitle": "You're subscribed! 🙏",
-    "successText": "Starting tomorrow at 7:00 AM, you'll receive your personal Bible impulse.",
-    "toastTelegram": "Telegram opened 🙏",
-    "toastTelegramDesc": "Start the bot and type /daily to activate the daily impulse.",
-    "toastSuccess": "Subscribed! 🙏",
-    "toastSuccessDesc": "You'll receive your daily impulse starting tomorrow.",
-    "toastPushPreview": "Push subscription not available in preview",
-    "toastPushPreviewDesc": "Push notifications only work on the published site.",
-    "toastNotSupported": "Not supported",
-    "toastNotSupportedDesc": "Your browser does not support push notifications.",
-    "toastPermDenied": "Permission denied",
-    "toastPermDeniedDesc": "Please allow notifications in your browser settings.",
-    "toastError": "Error",
-    "toastErrorDesc": "Please try again later."
+    "telegramDesc": "通过Telegram消息",
+    "sms": "短信",
+    "smsDesc": "手机短信",
+    "phoneLabel": "手机号码",
+    "phonePlaceholder": "+41 79 123 45 67",
+    "phoneHint": "包含国家代码，例如瑞士为 +41。",
+    "telegramHint": "点击“订阅”——您将被重定向到Telegram。在那里启动机器人并输入 <strong>/daily</strong>，以激活每日灵感。",
+    "pushHint": "点击“订阅”后，您的浏览器会请求通知权限。请允许其获取，以便接收灵感。",
+    "submit": "订阅",
+    "submitting": "正在订阅...",
+    "footNote": "无需登录。可随时取消订阅。",
+    "successTitle": "您已订阅！🙏",
+    "successText": "从明天早上7:00开始，您将收到您的个人圣经灵感。",
+    "toastTelegram": "Telegram 已打开 🙏",
+    "toastTelegramDesc": "启动机器人并输入 /daily 以激活每日灵感。",
+    "toastSuccess": "已订阅！🙏",
+    "toastSuccessDesc": "您将从明天开始收到您的每日灵感。",
+    "toastPushPreview": "预览中不支持推送订阅",
+    "toastPushPreviewDesc": "推送通知仅在发布的页面上有效。",
+    "toastNotSupported": "不支持",
+    "toastNotSupportedDesc": "您的浏览器不支持推送通知。",
+    "toastPermDenied": "权限被拒绝",
+    "toastPermDeniedDesc": "请在您的浏览器设置中允许通知。",
+    "toastError": "错误",
+    "toastErrorDesc": "请稍后重试。"
   },
   "faq": {
-    "badge": "FAQ",
-    "title": "What you should know about BibleBot",
-    "subtitle": "Transparency matters – especially for theologians, pastors, and critical thinkers.",
-    "q1": "What makes BibleBot different from ChatGPT & Co.?",
-    "q1Generic": "Generic chatbots:",
+    "badge": "常见问题",
+    "title": "关于你的BibleBot你需要知道什么",
+    "subtitle": "我们重视透明度——尤其是在神学家、牧师和有批判性思维的人面前。",
+    "q1": "你的BibleBot与ChatGPT等有何不同？",
+    "q1Generic": "通用聊天机器人：",
     "q1GenericItems": [
-      "Superficial Bible quotes without context",
-      "No pastoral guardrails",
-      "Avoids uncomfortable texts",
-      "No crisis intervention",
-      "Mixes Bible with esotericism",
-      "No follow-up questions – just confirmation"
+      "肤浅的圣经引文，缺乏上下文",
+      "没有牧养护栏",
+      "避开令人不安的经文",
+      "没有危机干预",
+      "将圣经与神秘主义混淆",
+      "不提问——只确认"
     ],
-    "q1Bot": "BibleBot.Life:",
+    "q1Bot": "BibleBot.Life：",
     "q1BotItems": [
-      "5 recognized translations – including uncomfortable passages",
-      "Guardrails AND challenging companionship",
-      "Follow-up questions for self-reflection",
-      "Crisis referrals (emergency helplines)",
-      "Exclusively Christian theology",
-      "Promotes critical thinking as faith maturity"
+      "5种权威译本——包括令人不安的经文",
+      "护栏和挑战性陪伴",
+      "反思性提问",
+      "危机处理指引（电话 143 / 147）",
+      "只提供基督教神学",
+      "促进批判性思维作为信仰的成熟"
     ],
-    "q2": "Which Bible translations are included?",
-    "q2Intro": "BibleBot works ecumenically with the major German-language Bible editions:",
-    "q2Outro": "All Bible passages include source citations and historical context.",
-    "q3": "What scientific foundations are behind it?",
-    "q3Intro": "The companionship is based on peer-reviewed research in Positive Psychology:",
-    "q4": "How does BibleBot ensure pastoral safety?",
+    "q2": "支持哪些圣经译本？",
+    "q2Intro": "你的BibleBot与主要的德语圣经译本进行普世合作：",
+    "q2Outro": "所有圣经经文均附有来源和历史背景。",
+    "q3": "其背后的科学依据是什么？",
+    "q3Intro": "此陪伴基于积极心理学同行评审研究：",
+    "q4": "你的BibleBot如何确保教牧关怀的安全性？",
     "q4Items": [
-      "Suicidal thoughts or crisis → immediate referral to emergency helplines",
-      "No psychological or medical diagnoses",
-      "Respect without arbitrariness – clear biblical positions are taken",
-      "Empathy AND honesty – uncomfortable topics are addressed",
-      "Follow-up questions for self-reflection instead of cheap validation",
-      "No toxic positivity – genuine, honest companionship",
-      "Openly names tensions and difficult texts"
+      "对于自杀念头或危机 → 立即转介给 Dargebotene Hand (143) 和 Pro Juventute (147)",
+      "不提供心理或医疗诊断",
+      "尊重而不随意——采取明确的圣经立场",
+      "同理心和诚实——也触及不舒服的话题",
+      "通过反思性提问而非廉价的肯定",
+      "没有有毒的积极性——真实、诚实的陪伴",
+      "公开指出紧张和困难的经文"
     ],
-    "q5": "Is BibleBot tied to a specific denomination?",
-    "q5Answer": "No. BibleBot is ecumenically oriented and respects Reformed, Catholic, Free Church, and other Christian traditions equally. When there are denominational differences in interpretation, various perspectives are presented transparently – without favoring any tradition.",
-    "q6": "Does BibleBot replace pastoral care or therapy?",
-    "q6Answer": "No. BibleBot is a digital tool for personal Bible reading and reflection. It does not replace professional pastoral care, theological counseling, or psychological therapy. In serious crises, BibleBot always refers to qualified resources.",
-    "q7": "Isn't BibleBot just a 'feel-good bot'?",
-    "q7Answer": "No. BibleBot comforts where comfort is needed – but it also challenges. Spiritual growth requires friction. BibleBot asks uncomfortable follow-up questions, names difficult Bible texts (Job, Lament Psalms, prophetic criticism), and doesn't shy away from topics like justice, repentance, and responsibility. The prophetic tradition was never comfortable – and neither is BibleBot.",
-    "q8": "Who is behind BibleBot and how is it funded?",
-    "q8Answer": "BibleBot.Life is a private, non-commercial project. It's run on a volunteer basis and funded exclusively through voluntary donations. There's no advertising, no data sales, and no paid features. All donations go directly to covering operating costs (infrastructure, hosting, development). Since BibleBot is a private project, donations are not tax-deductible.",
-    "q9": "How does BibleBot handle my data?",
-    "q9Answer": "BibleBot stores no personal data and no chat histories. Every conversation is anonymous. There's no login, no tracking, and no sharing of data with third parties. Usage is completely anonymous."
+    "q5": "你的BibleBot是否受宗派约束？",
+    "q5Answer": "否。你的BibleBot秉持普世精神，平等尊重归正宗、天主教、自由教会及其他基督教传统。对于宗派解读上的差异，会透明地呈现不同观点——不偏袒任何一种传统。",
+    "q6": "你的BibleBot能替代牧养关怀或心理治疗吗？",
+    "q6Answer": "否。你的BibleBot是一个个人圣经阅读和反思的数字辅助工具。它不能替代专业的牧养关怀、神学咨询或心理治疗。在严重的危机中，你的BibleBot会始终转介给合格的专业机构。",
+    "q7": "你的BibleBot不只是一个“舒适机器人”吗？",
+    "q7Answer": "绝不是。你的BibleBot会在需要安慰时给予安慰，但它也会提出挑战。属灵成长需要摩擦。你的BibleBot会提出令人不安的反问，指出圣经中困难的经文（约伯记、哀歌、先知批判），并且不回避诸如公义、悔改和责任等主题。先知传统从来都不是舒适的——你的BibleBot也并非如此。",
+    "q8": "你的BibleBot背后是谁，它是如何获得资助的？",
+    "q8Answer": "BibleBot.Life是一个私人、非商业项目。它由义工运营，完全依靠自愿捐款资助。没有广告、没有数据销售، 也没有付费功能。所有捐款直接用于支付运营和基础设施的持续成本。由于BibleBot作为一个私人项目运营，捐款不可抵税。",
+    "q9": "你的BibleBot如何处理我的数据？",
+    "q9Answer": "你的BibleBot不存储任何个人数据和聊天记录。每次对话都是匿名的。没有登录、没有跟踪，也没有将数据分享给第三方。使用完全匿名。"
   },
   "donate": {
-    "badge": "Support BibleBot",
-    "title": "Help keep BibleBot free",
-    "subtitle": "BibleBot is a passion project – no ads, no subscriptions, no hidden costs. To keep it that way, I rely on voluntary donations. Every contribution helps cover the ongoing costs for operations and infrastructure.",
-    "bankTitle": "Donate via bank transfer",
-    "bankSubtitle": "Every amount counts – thank you! 🙏",
-    "recipient": "Recipient",
-    "bank": "Bank",
-    "purpose": "Reference",
-    "purposeValue": "Donation BibleBot",
-    "note": "BibleBot.Life is operated as a private project. Donations are therefore not tax-deductible."
+    "badge": "支持您的BibleBot",
+    "title": "帮助您的BibleBot保持免费",
+    "subtitle": "您的BibleBot是一个充满热情的项目——无广告、无订阅、无隐藏费用。为了保持如此，我依赖自愿捐款。每一份贡献都有助于支付运营和基础设施的持续成本。",
+    "bankTitle": "通过银行转账捐款",
+    "bankSubtitle": "每一分都重要——万分感谢！🙏",
+    "recipient": "收款人",
+    "bank": "银行",
+    "purpose": "用途",
+    "purposeValue": "捐款 BibleBot",
+    "note": "BibleBot.Life 作为一个私人项目运营。因此，捐款不可免税。"
+  },
+  "refer": {
+    "badge": "分享上帝的话语",
+    "title": "推荐 BibleBot",
+    "subtitle": "您认识需要鼓励的人吗？分享 BibleBot——一条消息可以带来很大改变。",
+    "whatsapp": "通过WhatsApp分享",
+    "whatsappMsg": "嘿，我想向你介绍BibleBot——一个免费的圣经伴侣，它了解圣经，并提出真正好的问题。无需登录，匿名，诚实。试试看：https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "telegram": "通过Telegram分享",
+    "telegramMsg": "嘿，你听说过BibleBot吗？一个免费的个人圣经伴侣——诚实、匿名、无需登录。来看看：https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "email": "通过电子邮件分享",
+    "emailSubject": "你可能对此感兴趣：BibleBot.Life",
+    "emailBody": "你好！\n\n我想向你介绍BibleBot——一个免费的圣经伴侣，它真正了解圣经。无需注册，完全匿名。\n\n它会提出好的反问，解释圣经经文的上下文，并诚实地陪伴你——即使是在困难的主题上。\n\n试试看：https://bibelbot.ch?utm_source=refer&utm_medium=email\n\n此致",
+    "copy": "复制链接",
+    "copied": "链接已复制！📋",
+    "qr": "或者直接出示这张二维码："
   },
   "cta": {
-    "title": "You don't have to go through this alone",
-    "subtitle": "Just tell BibleBot what's on your mind. No login, no cost, no judgment – just honest companionship and the wisdom of the Bible.",
-    "button": "Start a conversation"
+    "title": "你没必要独自面对",
+    "subtitle": "只需告诉你的BibleBot你在烦恼什么。无需登录，不收费，不评判——只有真诚的陪伴和圣经的智慧。",
+    "button": "立即开始对话"
   },
   "footer": {
-    "tagline": "您与圣经生活的个人伙伴",
-    "disclaimer": "BibleBot.Life is a digital tool and does not replace professional pastoral care, theological counseling, or psychological therapy. In acute crises, please contact your local emergency helpline.",
-    "impressum": "Imprint",
-    "notes": "Notes",
-    "private": "Private, non-commercial project",
-    "noChat": "No storage of chat data",
-    "noTax": "Donations are not tax-deductible",
-    "datenschutz": "Privacy Policy",
-    "love": "With ❤️ for everyone wondering what Christ thinks.",
-    "forChurches": "For Churches"
+    "tagline": "您的个人圣经生活伴侣",
+    "disclaimer": "BibleBot.Life 是一个数字辅助工具，不能替代专业的心理咨询、神学建议或心理治疗。在紧急危机情况下，请联系Dargebotene Hand（电话143）或Pro Juventute（电话147）。",
+    "impressum": "版本说明",
+    "notes": "注意",
+    "private": "私人，非商业项目",
+    "noChat": "不存储聊天数据",
+    "noTax": "捐款不可抵税",
+    "datenschutz": "数据保护",
+    "love": "怀着❤️，献给所有想知道基督想法的人。",
+    "forChurches": "为教会服务"
   },
   "chat": {
-    "welcome": "Welcome! 🤗\n\nI'm your BibleBot – your personal companion with the Bible, good questions, and real impulses. No pressure, no judgment.\n\nYou can ask me anything – or just share what's on your mind. 💛",
-    "journeyOffer": "💡 **Tip:** I also offer a **21-day journey** – 3 weeks of daily impulses, reflections, and concrete steps. At your own pace.\n\nWould you like to try it?",
-    "suggestion1": "I need an uplifting word right now",
-    "suggestion2": "What does the Bible say when you feel uncertain?",
-    "suggestion3": "I want to find out what I really want",
-    "teaser": "你在想什么？💛",
-    "teaserSub": "I'm here – without any judgment.",
-    "openChat": "Open chat",
-    "closeChat": "Close chat",
-    "yourCompanion": "Your personal companion",
-    "journeyComplete": "21 days completed! 🎉",
-    "arriving": "Arriving",
-    "deepening": "Deepening",
-    "acting": "Acting",
-    "renameTip": "Tip: Click the name to rename me ✨",
-    "changeName": "Change name",
-    "placeholder": "随便写...",
-    "startVoice": "Start voice input",
-    "stopVoice": "Stop recording",
-    "noVoice": "Your browser does not support voice input.",
-    "writing": "typing...",
-    "shieldBadge": "No login · No judgment · Citations verified",
-    "journeyStart": "Yes, let's go ✨",
-    "journeyLater": "Maybe later",
-    "journeyStartMsg": "Yes, I'd like to start the 21-day journey!",
-    "qaChecking": "Checking citations...",
-    "qaIssue": "{{count}} issue with citations",
-    "qaIssue_plural": "{{count}} issues with citations",
-    "qaOk": "{{count}} citation verified ✓",
-    "qaOk_plural": "{{count}} citations verified ✓",
-    "qaWarning": "⚠️ Accuracy notes:",
-    "errorTooMany": "Too many requests – please wait a moment.",
-    "errorCredits": "AI quota exhausted.",
-    "errorConnect": "Connection error.",
-    "errorTitle": "Error",
-    "errorConnection": "could not be reached.",
-    "errorNoStream": "No stream",
-    "seniorMode": "Senior mode (larger text)",
-    "teaserCta": "Start writing →",
-    "namePlaceholder": "e.g. Eli, Miriam…"
+    "welcome": "很高兴你来 🤗\n\n我是你的BibleBot——你的私人伙伴，提供圣经、好的问题和具体的启发。没有压力，没有评判。\n\n你可以问我任何问题——或者只是告诉我你现在正在烦恼什么。💛",
+    "journeyOffer": "💡 **提示：** 我还提供一份**21天陪伴计划**——3周的每日灵感、反思和具体步骤。完全按照你的节奏。\n\n你想试试看吗？",
+    "suggestion1": "我需要一些鼓励的话语",
+    "suggestion2": "当感到不确定时，圣经怎么说？",
+    "suggestion3": "我想弄清楚自己真正想要什么",
+    "teaser": "你现在在想什么？💛",
+    "teaserSub": "我在这里——没有任何评判。",
+    "teaserCta": "现在开始写 →",
+    "openChat": "打开聊天",
+    "closeChat": "关闭聊天",
+    "yourCompanion": "您的私人伴侣",
+    "journeyComplete": "完成21天！🎉",
+    "arriving": "安顿",
+    "deepening": "深入",
+    "acting": "行动",
+    "renameTip": "给我起个名字 ✨",
+    "namePlaceholder": "例如  Eli, Miriam…",
+    "changeName": "更改名字",
+    "placeholder": "随便写点什么...",
+    "startVoice": "开始语音输入",
+    "stopVoice": "停止录音",
+    "noVoice": "您的浏览器不支持语音输入。",
+    "writing": "正在输入...",
+    "shieldBadge": "无需登录 · 无评判 · 引用已核实",
+    "journeyStart": "是的，开始 ✨",
+    "journeyLater": "也许稍后",
+    "journeyStartMsg": "是的，我想开始21天陪伴计划！",
+    "qaChecking": "引用正在核实...",
+    "qaIssue": "{{count}} 引用提示",
+    "qaIssue_plural": "{{count}} 引用提示",
+    "qaOk": "{{count}} 引用已核实 ✓",
+    "qaOk_plural": "{{count}} 引用已核实 ✓",
+    "qaWarning": "⚠️ 精确性提示：",
+    "errorTooMany": "请求过多——请稍候。",
+    "errorCredits": "AI配额已用尽。",
+    "errorConnect": "连接错误。",
+    "errorTitle": "错误",
+    "errorConnection": "无法连接。",
+    "errorNoStream": "无流",
+    "seniorMode": "老年模式（字体更大）"
   },
   "install": {
-    "title": "安装BibleBot",
-    "androidDesc": "Quick access from your home screen",
-    "iosDesc": "Tap \"Share\" → \"Add to Home Screen\"",
-    "button": "Install",
-    "close": "Close"
+    "title": "安装 BibleBot",
+    "androidDesc": "从主屏幕直接快速访问",
+    "iosDesc": "点击“分享”→“添加到主屏幕”",
+    "button": "安装",
+    "close": "关闭"
+  },
+  "share": {
+    "label": "分享",
+    "shareVia": "通过以下方式分享",
+    "copied": "已复制！📋",
+    "copiedShort": "已复制！",
+    "copiedDesc": "文本已复制到剪贴板。现在可以在WhatsApp、Instagram或您想分享的任何地方分享！",
+    "copyLink": "复制文本",
+    "error": "复制失败",
+    "impulseTitle": "BibleBot – 每日灵感",
+    "chatTitle": "BibleBot – 每日思索",
+    "createImage": "创建图片 ✨",
+    "generating": "正在创建...",
+    "imageReady": "您的图片已准备好分享！",
+    "shareImage": "分享图片",
+    "download": "保存",
+    "imageError": "图片创建失败",
+    "imageErrorDesc": "无法创建图片。请稍后重试。",
+    "imageSaved": "文本已复制！📋",
+    "imageSavedDesc": "保存图片，并将复制的文本分享到Instagram、WhatsApp或任何您想分享的地方！"
   },
   "darkMode": {
-    "light": "Light mode",
-    "dark": "Dark mode"
+    "light": "浅色模式",
+    "dark": "深色模式"
   },
   "impressum": {
-    "back": "Back to home",
-    "title": "Imprint"
+    "back": "返回首页",
+    "title": "版本说明"
   },
   "datenschutz": {
-    "back": "Back to home",
-    "title": "Privacy Policy"
+    "back": "返回首页",
+    "title": "隐私政策"
   },
   "lang": {
-    "de": "Deutsch",
-    "en": "English",
-    "fr": "Français",
-    "es": "Español",
-    "it": "Italiano",
-    "pl": "Polski",
-    "cs": "Čeština",
-    "pt": "Português",
-    "nl": "Nederlands",
-    "ro": "Română",
-    "da": "Dansk",
-    "no": "Norsk",
-    "sv": "Svenska",
-    "fi": "Suomi",
-    "el": "Ελληνικά",
-    "hr": "Hrvatski",
-    "sr": "Srpski",
-    "hu": "Magyar",
-    "sk": "Slovenčina",
-    "bg": "Български",
-    "ru": "Русский",
-    "uk": "Українська",
-    "ka": "ქართული",
-    "hy": "Հայերեն",
-    "ko": "한국어",
-    "tl": "Filipino",
-    "id": "Bahasa Indonesia",
-    "vi": "Tiếng Việt",
+    "de": "德语",
+    "en": "英语",
+    "fr": "法语",
+    "es": "西班牙语",
+    "it": "意大利语",
+    "pl": "波兰语",
+    "cs": "捷克语",
+    "pt": "葡萄牙语",
+    "nl": "荷兰语",
+    "ro": "罗马尼亚语",
+    "da": "丹麦语",
+    "no": "挪威语",
+    "sv": "瑞典语",
+    "fi": "芬兰语",
+    "el": "希腊语",
+    "hr": "克罗地亚语",
+    "sr": "塞尔维亚语",
+    "hu": "匈牙利语",
+    "sk": "斯洛伐克语",
+    "bg": "保加利亚语",
+    "ru": "俄语",
+    "uk": "乌克兰语",
+    "ka": "格鲁吉亚语",
+    "hy": "亚美尼亚语",
+    "ko": "韩语",
+    "tl": "菲律宾语",
+    "id": "印尼语",
+    "vi": "越南语",
     "zh": "中文",
-    "sw": "Kiswahili",
-    "am": "አማርኛ",
-    "af": "Afrikaans",
-    "yo": "Yorùbá",
-    "ig": "Igbo",
-    "zu": "isiZulu",
-    "ht": "Kreyòl"
+    "sw": "斯瓦希里语",
+    "am": "阿姆哈拉语",
+    "af": "南非荷兰语",
+    "yo": "约鲁巴语",
+    "ig": "伊博语",
+    "zu": "祖鲁语",
+    "ht": "海地克里奥尔语"
   },
   "tiles": {
-    "sectionTitle": "What's on your heart?",
-    "sectionSubtitle": "Choose a topic — BibleBot walks with you",
+    "sectionTitle": "什么触动了你？",
+    "sectionSubtitle": "选择一个主题——BibleBot会陪伴你",
     "baptism": {
-      "title": "Find a baptism verse",
-      "desc": "The perfect verse for your child",
-      "prompt": "Help me find a fitting baptism verse. What kind of child is it and what do the parents wish for?"
+      "title": "寻找洗礼经文",
+      "desc": "为您的孩子选择完美经文",
+      "prompt": "帮我找到合适的洗礼经文。孩子是怎样的？父母有什么愿望？"
     },
     "condolence": {
-      "title": "Words of comfort",
-      "desc": "Support through grief & farewell",
-      "prompt": "I need comforting words for a condolence card. Can you help me find the right words?"
+      "title": "慰问",
+      "desc": "陪伴吊丧与告别",
+      "prompt": "我需要丧葬卡上的慰问词。你能帮我措辞一下吗？"
     },
     "wedding": {
-      "title": "Wedding verse",
-      "desc": "Biblical words for your love",
-      "prompt": "We're looking for a beautiful biblical verse for our wedding. Which passages speak about love and partnership?"
+      "title": "婚礼经文",
+      "desc": "为你们的爱献上圣经的话语",
+      "prompt": "我们正在为婚礼寻找一句美丽的圣经经文。哪些经文适合爱情和伴侣关系？"
     },
     "anxiety": {
-      "title": "Fear & worry",
-      "desc": "Finding courage in hard times",
-      "prompt": "I'm struggling with fear and worry right now. What does the Bible say about this? Are there verses that give courage?"
+      "title": "焦虑与担忧",
+      "desc": "在艰难时期找到勇气",
+      "prompt": "我正在与焦虑和担忧搏斗。圣经对此有何说法？有没有能给我带来勇气的经文？"
     },
     "confession": {
-      "title": "Confession",
-      "desc": "God forgives — speak it out",
-      "prompt": "I want to let go of something that weighs on me. What does the Bible say about forgiveness and new beginnings?"
+      "title": "告解",
+      "desc": "上帝赦免——说出来",
+      "prompt": "我想说一些困扰我的事情。圣经如何论述赦免和重新开始？"
     },
     "heartbreak": {
-      "title": "Heartbreak",
-      "desc": "What the Bible says about heartache",
-      "prompt": "My heart is broken. What does the Bible say about heartbreak and how to find hope again?"
+      "title": "失恋",
+      "desc": "圣经如何谈论心碎",
+      "prompt": "我的心碎了。圣经如何谈论失恋以及如何重新找到希望？"
     },
     "newstart": {
-      "title": "New beginning",
-      "desc": "Strength for a new chapter",
-      "prompt": "I'm facing a new beginning and need encouragement. Which Bible passages speak about fresh starts?"
+      "title": "新的开始",
+      "desc": "为人生新阶段积蓄力量",
+      "prompt": "我正面临一个新的开始，需要鼓励。哪些圣经经文谈到新的开始？"
     },
     "namequiz": {
-      "title": "Name quiz",
-      "desc": "Find the right biblical name",
-      "prompt": "I'm looking for a biblical name for my child. Can you suggest some and explain their meanings?"
+      "title": "洗礼测验",
+      "desc": "找到合适的圣经名字",
+      "prompt": "我正在为我的孩子寻找一个圣经名字。你能给我一些建议并解释它们的含义吗？"
     },
     "sleepless": {
-      "title": "Sleepless",
-      "desc": "Finding peace at night",
-      "prompt": "I can't sleep and my mind is racing. Is there a calming prayer or psalm for the night?"
+      "title": "失眠",
+      "desc": "在夜晚寻找平静",
+      "prompt": "我睡不着，心里有很多想法。有没有适合夜晚的平静祷告或诗篇？"
     },
     "loneliness": {
-      "title": "Loneliness",
-      "desc": "You are never alone",
-      "prompt": "I feel lonely. What does the Bible say about God always being with us?"
+      "title": "寂寞",
+      "desc": "你从不孤单",
+      "prompt": "我感到孤独。圣经如何说上帝总是与我们同在？"
     },
     "decision": {
-      "title": "Tough decision",
-      "desc": "Wisdom for the right path",
-      "prompt": "I'm facing a difficult decision. Which Bible passages can help me find the right way?"
+      "title": "艰难的决定",
+      "desc": "寻找正确方向的智慧",
+      "prompt": "我面临一个艰难的决定。哪些圣经经文能帮助我找到正确的道路？"
     },
     "gratitude": {
-      "title": "Gratitude",
-      "desc": "A personal prayer of thanks",
-      "prompt": "I want to thank God. Help me write a personal prayer of gratitude."
+      "title": "感恩",
+      "desc": "一份个人感谢祷告",
+      "prompt": "我想感谢上帝。请帮助我写一份个人感谢祷告。"
     },
     "lifewheel": {
-      "title": "Life Wheel",
-      "desc": "How satisfied are you really?"
+      "title": "生命之轮",
+      "desc": "你对自己的生活满意度如何？"
     },
     "sevenwhys": {
-      "title": "7 Whys",
-      "desc": "Find the deepest root of your question",
-      "prompt": "I'd like to do the 7 Whys exercise. Here is my topic:"
+      "title": "七问法",
+      "desc": "找出你问题的最深层根源",
+      "prompt": "我想做七问法练习。这是我的主题："
     },
     "anger": {
-      "title": "Anger",
-      "desc": "When you're about to explode",
-      "prompt": "I'm so angry and don't know what to do with my rage. What does the Bible say about anger and how to deal with it?"
+      "title": "愤怒与暴躁",
+      "desc": "当你怒不可遏时",
+      "prompt": "我非常生气，不知道如何处理我的怒火。圣经如何谈论愤怒以及我该如何处理它？"
     },
     "shame": {
-      "title": "Shame & Guilt",
-      "desc": "When guilt is crushing you",
-      "prompt": "I feel so ashamed and guilty. What does the Bible say about guilt, forgiveness, and starting over?"
+      "title": "羞耻与罪疚",
+      "desc": "当罪恶感压得你喘不过气",
+      "prompt": "我感到羞愧和内疚。圣经如何谈论罪疚、宽恕和新的开始？"
     },
     "burnout": {
-      "title": "Burnout",
-      "desc": "When you just can't go on",
-      "prompt": "I'm totally exhausted and burned out. I just can't anymore. What does the Bible say about rest and recovery?"
+      "title": "倦怠",
+      "desc": "当你再也撑不下去的时候",
+      "prompt": "我筋疲力尽，精疲力竭。我真的撑不下去了。圣经如何谈论休息和恢复？"
     },
     "illness": {
-      "title": "Illness",
-      "desc": "When a diagnosis changes everything",
-      "prompt": "I've received a difficult diagnosis and I'm scared. What does the Bible say about illness, healing, and hope?"
+      "title": "疾病",
+      "desc": "当诊断改变一切时",
+      "prompt": "我收到了一个艰难的诊断，我很害怕。圣经如何谈论疾病、医治和希望？"
     },
     "financial": {
-      "title": "Money Worries",
-      "desc": "When bills are piling up",
-      "prompt": "I have financial worries and don't know what to do. What does the Bible say about money, trust, and provision?"
+      "title": "财务担忧",
+      "desc": "当账单令人担忧时",
+      "prompt": "我有财务上的担忧，不知道该怎么办。圣经如何谈论金钱、信心和供应？"
     },
     "meaningcrisis": {
-      "title": "Meaning Crisis",
-      "desc": "What's it all for?",
-      "prompt": "I'm wondering what's the point of it all. I'm in a meaning crisis. What does the Bible say about the meaning of life?"
+      "title": "意义危机",
+      "desc": "这一切为了什么？",
+      "prompt": "我问自己这一切有什么意义。我正处于一场意义危机中。圣经如何谈论生命的意义？"
     },
     "selfdoubt": {
-      "title": "Self-Doubt",
-      "desc": "When you don't feel good enough",
-      "prompt": "I constantly doubt myself and don't feel good enough. What does the Bible say about my worth?"
+      "title": "自我怀疑",
+      "desc": "当你觉得自己不够好时",
+      "prompt": "我总是怀疑自己，觉得自己不够好。圣经如何谈论我的价值？"
     },
     "calling": {
-      "title": "Calling",
-      "desc": "What should I do with my life?",
-      "prompt": "I don't know what to do with my life. Help me find my calling — what does the Bible say?"
+      "title": "呼召",
+      "desc": "我该如何开始我的人生？",
+      "prompt": "我不知道我该如何开始我的人生。请帮助我找到我的呼召——圣经对此有何说法？"
     },
     "faithdoubt": {
-      "title": "Faith Doubts",
-      "desc": "When your faith is shaking",
-      "prompt": "I have doubts about my faith and don't know if I can still believe. What does the Bible say about doubt?"
+      "title": "信仰上的怀疑",
+      "desc": "当信仰动摇时",
+      "prompt": "我对我的信仰有所怀疑，不知道我是否还能相信。圣经如何谈论怀疑？"
     },
     "forgiveness": {
-      "title": "Forgiveness",
-      "desc": "When forgiving seems impossible",
-      "prompt": "I simply can't forgive someone. It hurts too much. What does the Bible say about forgiveness?"
+      "title": "宽恕",
+      "desc": "当宽恕似乎不可能时",
+      "prompt": "我就是无法原谅某人。太痛苦了。圣经如何谈论宽恕？"
     },
     "familyconflict": {
-      "title": "Family Conflict",
-      "desc": "When family is at war",
-      "prompt": "There's a big conflict in my family. What does the Bible say about family peace and reconciliation?"
+      "title": "家庭冲突",
+      "desc": "当家庭闹矛盾时",
+      "prompt": "我的家庭有很大的冲突。圣经如何谈论家庭和平与和解？"
     },
     "envy": {
-      "title": "Envy",
-      "desc": "When others have it better",
-      "prompt": "I'm envious of others and constantly comparing myself. What does the Bible say about envy and contentment?"
+      "title": "嫉妒",
+      "desc": "当别人过得更好时",
+      "prompt": "我嫉妒别人，不断与他们比较。圣经如何谈论嫉妒和知足？"
     },
     "joy": {
-      "title": "Share Joy",
-      "desc": "When something wonderful happened",
-      "prompt": "Something wonderful happened to me and I want to share my joy! What does the Bible say about joy and gratitude?"
+      "title": "分享喜悦",
+      "desc": "当发生了一些美好的事情时",
+      "prompt": "我遇到了很棒的事情，想分享我的喜悦！圣经如何谈论喜悦和感恩？"
     },
     "prayer": {
-      "title": "Prayer Request",
-      "desc": "Pray together",
-      "prompt": "I have a prayer request and would like to pray together. Join me in prayer."
+      "title": "代祷事项",
+      "desc": "一起祷告",
+      "prompt": "我有一个代祷事项，想一起祷告。请在祷告中陪伴我。"
     },
     "bibleverse": {
-      "title": "Understand a Verse",
-      "desc": "Get a Bible passage explained",
-      "prompt": "I'd like to understand a Bible passage better. Can you help me put it in context?"
+      "title": "理解经文",
+      "desc": "解释一段圣经经文",
+      "prompt": "我想更好地理解一段圣经经文。你能帮我理解它的背景吗？"
     }
   },
   "lifeWheel": {
-    "title": "Your Life Wheel",
-    "intro": "Rate 8 life areas on a scale of 1-10. Discover where you stand — and receive biblical impulses for the area that needs attention.",
-    "start": "Get started",
-    "sliderHint": "Move the sliders — 1 = very unsatisfied, 10 = very satisfied",
-    "showResult": "Show result",
-    "average": "Average",
-    "weakestArea": "Greatest need",
-    "getImpulse": "Biblical impulse for {{area}}",
-    "reset": "Try again",
-    "prompt": "My life wheel shows that I scored only {{score}}/10 in the area of '{{area}}'. What does the Bible say about this area of life? Give me encouragement and practical impulses.",
+    "title": "您的生命之轮",
+    "intro": "在1-10分制下评估8个人生领域。找出您所处的位置——并为您需要关注的领域获得圣经启发。",
+    "start": "立即开始",
+    "sliderHint": "移动滑块 — 1 = 非常不满意，10 = 非常满意",
+    "showResult": "显示结果",
+    "average": "平均",
+    "weakestArea": "最需要关注的领域",
+    "getImpulse": "{{area}}的圣经启发",
+    "reset": "重做一遍",
+    "prompt": "我的生命之轮显示，我在“{{area}}”领域的得分只有{{score}}/10。圣经对此生命领域有何说法？请给我鼓励和实用的启发。",
     "areas": {
-      "health": "Health",
-      "relationships": "Relationships",
-      "career": "Career",
-      "spirituality": "Spirituality",
-      "finances": "Finances",
-      "family": "Family",
-      "leisure": "Leisure",
-      "growth": "Personal Growth"
+      "health": "健康",
+      "relationships": "人际关系",
+      "career": "职业",
+      "spirituality": "灵性",
+      "finances": "财务",
+      "family": "家庭",
+      "leisure": "休闲",
+      "growth": "个人成长"
     },
-    "save": "Save result",
-    "saved": "Saved!",
-    "history": "Previous results",
-    "noHistory": "No saved results yet.",
-    "backToNew": "New Life Wheel",
-    "backToList": "Back to list"
+    "save": "保存结果",
+    "saved": "已保存！",
+    "history": "历史结果",
+    "noHistory": "尚无保存结果。",
+    "backToNew": "新建生命之轮",
+    "backToList": "返回列表"
   },
   "church": {
-    "badge": "For Churches",
-    "heroTitle": "BibleBot for Your Church",
-    "heroSubtitle": "Accompany your congregation with biblical wisdom – digital, personal, and around the clock.",
-    "useCasesTitle": "Use Cases",
+    "badge": "面向教会",
+    "heroTitle": "BibleBot 助力您的教会",
+    "heroSubtitle": "以圣经智慧伴随您的会众——数字化、个性化、全天候。",
+    "useCasesTitle": "应用场景",
     "useCase": {
       "youth": {
-        "title": "Youth Ministry",
-        "desc": "Teens discover the Bible in their own way – interactive and without hesitation."
+        "title": "青少年事工",
+        "desc": "青少年以自己的方式探索圣经——互动且无拘无束。"
       },
       "confirmation": {
-        "title": "Confirmation",
-        "desc": "Confirmands deepen Bible knowledge independently with personal guidance."
+        "title": "坚信礼（Konfirmation）",
+        "desc": "坚信礼学员通过个性化陪伴，自主深化圣经知识。"
       },
       "pastoral": {
-        "title": "Pastoral Care",
-        "desc": "24/7 companionship as a complement to personal pastoral care."
+        "title": "教牧关怀",
+        "desc": "24/7陪伴，作为个人教牧关怀的补充。"
       },
       "bibleStudy": {
-        "title": "Bible Study",
-        "desc": "Impulses and discussion starters for groups and home circles."
+        "title": "查经班",
+        "desc": "为小组和家庭聚会提供启发和讨论点。"
       }
     },
     "pricingTitle": "赞助套餐",
     "pricingSubtitle": "选择合适的赞助套餐，支持 BibleBot 和您的教会。",
-    "popular": "Popular",
-    "free": "Free",
-    "perYear": "year",
-    "contact": "Get in touch",
+    "popular": "热门",
+    "free": "免费",
+    "perYear": "年",
+    "contact": "联系我们",
     "tier": {
       "free": {
-        "name": "芥菜种",
-        "size": "所有会众成员均可使用机器人基本功能。"
+        "name": "芥菜种（Senfkorn）",
+        "size": "适用于小型教会和家庭小组（50名成员以内）"
       },
       "community": {
-        "name": "同行者",
-        "size": "在网站上标注教会为支持者，并享受无广告访问。"
+        "name": "同行者（Wegbegleiter）",
+        "size": "适用于拥有50-200名成员的教会"
       },
       "gemeinde": {
-        "name": "搭桥者",
-        "size": "机器人界面中展示教会标志，每月使用报告（匿名）。"
+        "name": "架桥者（Brückenbauer）",
+        "size": "适用于拥有200-500名成员的教会"
       },
       "kirche": {
-        "name": "灯塔",
-        "size": "整合自有内容（如讲道档案），共同参与路线图规划，高级支持。"
+        "name": "灯塔（Leuchtturm）",
+        "size": "适用于大型教会和机构（500+成员）"
       }
     },
     "features": {
-      "directoryEntry": "Directory listing",
-      "telegramGroup": "Telegram group",
-      "partnerPage": "Own partner page",
-      "badge": "Partner badge",
-      "qrFlyer": "Printable QR flyer",
-      "contactForm": "Contact form",
-      "pastorProfile": "Pastor profile",
-      "welcomeVideo": "Welcome video",
-      "analytics": "Analytics dashboard",
-      "prioritySupport": "Priority support",
-      "multipleProfiles": "Multiple profiles",
-      "customBranding": "Custom branding",
-      "apiAccess": "API access",
-      "accountManager": "Dedicated account manager"
+      "directoryEntry": "目录收录",
+      "telegramGroup": "Telegram 群组",
+      "partnerPage": "专属合作伙伴页面",
+      "badge": "合作伙伴徽章",
+      "qrFlyer": "可打印的二维码传单",
+      "contactForm": "联系表格",
+      "pastorProfile": "牧师/牧者档案",
+      "welcomeVideo": "欢迎视频",
+      "analytics": "分析仪表板",
+      "prioritySupport": "优先支持",
+      "multipleProfiles": "多重档案",
+      "customBranding": "定制品牌",
+      "apiAccess": "API 访问",
+      "accountManager": "专属客户经理"
     },
-    "viewDirectory": "View church directory",
-    "directoryBadge": "Church Directory",
-    "directoryTitle": "Partner Churches",
-    "directorySubtitle": "Find a church near you that recommends BibleBot.",
-    "searchPlaceholder": "Search by city, name, or denomination...",
-    "noResults": "No churches in the directory yet.",
-    "becomePartner": "Become a partner →",
-    "notFound": "Church not found.",
-    "backToDirectory": "Back to directory",
-    "pastor": "Pastor",
-    "serviceTimes": "Service Times",
-    "startChat": "Start Chat",
-    "website": "Website",
-    "telegramGroup": "Telegram Group",
-    "contactTitle": "Contact {{name}}",
-    "contactName": "Your name (optional)",
-    "contactEmail": "Your email address",
-    "contactMessage": "Your message",
-    "contactSend": "Send message",
-    "contactSuccess": "Message sent! 🙏",
-    "contactSuccessDesc": "The church will get back to you.",
-    "recommendedBy": "Recommended by {{name}}",
+    "viewDirectory": "查看教会名录",
+    "directoryBadge": "教会名录",
+    "directoryTitle": "合作教会",
+    "directorySubtitle": "查找您附近推荐 BibleBot 的教会。",
+    "searchPlaceholder": "搜索地点、名称或宗派...",
+    "noResults": "目录中尚无教会。",
+    "becomePartner": "成为合作伙伴 →",
+    "notFound": "未找到教会。",
+    "backToDirectory": "返回目录",
+    "pastor": "牧师/牧者",
+    "serviceTimes": "礼拜时间",
+    "startChat": "开始聊天",
+    "website": "网站",
+    "telegramGroup": "Telegram群组",
+    "contactTitle": "联系 {{name}}",
+    "contactName": "您的姓名（可选）",
+    "contactEmail": "您的电子邮件地址",
+    "contactMessage": "您的消息",
+    "contactSend": "发送消息",
+    "contactSuccess": "消息已发送！🙏",
+    "contactSuccessDesc": "教会将尽快与您联系。",
+    "recommendedBy": "{{name}}推荐",
     "setup": "设置（一次性）",
     "form": {
-      "title": "有兴趣？联系我们！",
+      "title": "感兴趣？请联系我们！",
       "subtitle": "我们将在48小时内回复。",
       "name": "您的姓名",
-      "email": "电子邮件",
+      "email": "电子邮件地址",
       "churchName": "教会名称",
-      "tier": "首选套餐",
+      "tier": "期望的套餐",
       "tierPlaceholder": "选择套餐...",
-      "message": "您的留言",
-      "submit": "发送咨询",
-      "success": "咨询已发送！我们将尽快回复。🙏",
-      "error": "发送错误。请重试。",
-      "orgType": "Organization type",
-      "orgTypePlaceholder": "Select type...",
+      "message": "您的消息",
+      "submit": "发送请求",
+      "success": "请求已发送！我们将尽快与您联系。🙏",
+      "error": "发送失败。请重试。",
+      "orgType": "组织类型",
+      "orgTypePlaceholder": "选择类型...",
       "orgTypes": {
-        "church": "Church",
-        "careHome": "Care Home",
-        "seniorHome": "Retirement Home",
-        "hospital": "Hospital",
-        "prison": "Prison Chaplaincy",
-        "military": "Military Chaplaincy"
+        "church": "教会",
+        "careHome": "护理院",
+        "seniorHome": "养老院",
+        "hospital": "医院",
+        "prison": "监狱教牧关怀",
+        "military": "军队教牧关怀"
       }
     },
     "institutionsTitle": "也适用于机构",
-    "institutionsSubtitle": "BibleBot也为养老院和医院提供数字化灵性关怀。",
+    "institutionsSubtitle": "BibleBot 不仅伴随教会——护理院和养老院、医院以及监狱教牧关怀也能从数字教牧关怀中受益。",
     "institution": {
       "careHome": {
         "title": "护理院",
-        "desc": "为居民提供每日圣经灵感——即使没有牧师在场。"
+        "desc": "为住户提供每日圣经灵感和陪伴——即使没有牧师在场。"
       },
       "seniorHome": {
         "title": "养老院",
-        "desc": "为老年人提供熟悉的圣经经文和对话——通过平板轻松获取。"
+        "desc": "为老年人提供熟悉的圣经经文和对话——通过平板电脑或智能手机即可轻松访问。"
       },
       "hospital": {
         "title": "医院",
-        "desc": "为患者提供安慰和灵性支持——全天候可用。"
+        "desc": "在困难时期为患者提供安慰和属灵陪伴——可在病床边24/7使用。"
       },
       "prison": {
-        "title": "监狱牧灵",
-        "desc": "为被拘留者提供希望和灵性支持——全天候的知心伴侣。"
+        "title": "监狱教牧关怀",
+        "desc": "为被拘禁者提供希望和属灵陪伴——一个24小时的保密谈话伙伴。"
       },
       "military": {
-        "title": "Military Chaplaincy",
-        "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
+        "title": "军队教牧关怀",
+        "desc": "为军队成员提供属灵陪伴——即使在任务中或军营中也能联系上。"
       }
     }
   },
   "institutions": {
-    "badge": "For Institutions",
-    "heroTitle": "BibleBot for Your Institution",
-    "heroSubtitle": "Digital pastoral care for care homes, retirement homes, hospitals, and correctional facilities – personal, confidential, and around the clock.",
-    "typesTitle": "Who is BibleBot for?",
-    "useCasesTitle": "How BibleBot is Used",
-    "useCasesSubtitle": "Practical applications for daily life in your institution.",
-    "pricingTitle": "Patronage Packages",
-    "pricingSubtitle": "The same packages as for churches – adapted to institutional needs.",
-    "linkChurches": "Also available for churches",
+    "badge": "适用于机构",
+    "heroTitle": "BibleBot 助力您的机构",
+    "heroSubtitle": "为护理院、养老院、医院和刑事监管提供数字教牧关怀——个性化、保密且全天候。",
+    "seniorHint": {
+      "title": "提供老年模式",
+      "desc": "更大的字体和简化的操作——非常适合老年住户。",
+      "cta": "测试老年模式"
+    },
+    "typesTitle": "BibleBot 适合谁？",
+    "useCasesTitle": "BibleBot 的应用方式",
+    "useCasesSubtitle": "您的机构日常运营的具体应用。",
+    "pricingTitle": "赞助套餐",
+    "pricingSubtitle": "与教会套餐相同——根据机构需求调整。",
+    "linkChurches": "也适用于教会",
     "type": {
       "careHome": {
-        "title": "Care Homes",
-        "desc": "Daily Bible impulses and companionship for residents – even when no chaplain is on site."
+        "title": "护理院",
+        "desc": "为住户提供每日圣经灵感和陪伴——即使没有牧师在场。"
       },
       "seniorHome": {
-        "title": "Retirement Homes",
-        "desc": "Familiar Bible verses and conversations for seniors – easily accessible via tablet or smartphone."
+        "title": "养老院",
+        "desc": "为老年人提供熟悉的圣经经文和对话——通过平板电脑或智能手机即可轻松访问。"
       },
       "hospital": {
-        "title": "Hospitals",
-        "desc": "Comfort and spiritual support for patients in difficult times – available 24/7 at the bedside."
+        "title": "医院",
+        "desc": "在困难时期为患者提供安慰和精神陪伴——可在病床边全天候使用。"
       },
       "prison": {
-        "title": "Prison Chaplaincy",
-        "desc": "Hope and spiritual support for inmates – a confidential companion around the clock."
+        "title": "监狱教牧关怀",
+        "desc": "为被拘禁者提供希望和属灵陪伴——一个全天候的保密谈话伙伴。"
       },
       "military": {
-        "title": "Military Chaplaincy",
-        "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
+        "title": "军队教牧关怀",
+        "desc": "为军队成员提供属灵陪伴——即使在任务中或军营中也能联系上。"
       }
     },
     "useCase": {
       "dailyImpulse": {
-        "title": "Daily Impulse",
-        "desc": "A Bible verse with reflection question every morning – lowers the barrier for spiritual conversations."
+        "title": "每日启发",
+        "desc": "每天早上提供一节带反思问题的圣经经文——降低进行属灵对话的门槛。"
       },
       "companionship": {
-        "title": "Conversation Partner",
-        "desc": "BibleBot answers faith questions patiently and without time pressure – ideal for lonely hours."
+        "title": "谈话伙伴",
+        "desc": "BibleBot 耐心解答信仰问题，没有时间压力——是孤独时光的理想选择。"
       },
       "accessibility": {
-        "title": "Easy Access",
-        "desc": "Large text, simple tablet interface – also for people with limited mobility."
+        "title": "易于访问",
+        "desc": "大字体，通过平板电脑轻松操作——也适用于行动不便的人士。"
       },
       "availability": {
-        "title": "24/7 Available",
-        "desc": "Spiritual companionship at night and on weekends – when no chaplain is available."
+        "title": "24/7 可用",
+        "desc": "夜间和周末也可获得属灵陪伴——即使牧师无法联系上。"
       }
     },
     "tierDesc": {
-      "free": "Basic access for residents and patients",
-      "community": "Mentioned as supporter, ad-free access",
-      "gemeinde": "Logo presence, monthly usage report",
-      "kirche": "Custom content, roadmap co-creation, premium support"
+      "free": "为住户和患者提供基本访问权限",
+      "community": "被提及为支持者，无广告访问",
+      "gemeinde": "Logo展示，每月使用报告",
+      "kirche": "自有内容，参与路线图制定，高级支持"
     },
     "form": {
-      "title": "Interested? Get in touch!",
-      "subtitle": "We'll get back to you within 48 hours.",
-      "name": "Your name",
-      "email": "Email address",
-      "institutionName": "Institution name",
-      "type": "Type of institution",
-      "typePlaceholder": "Please select...",
-      "tier": "Preferred package",
-      "tierPlaceholder": "Choose package...",
-      "message": "Your message",
-      "submit": "Send inquiry",
-      "success": "Inquiry sent! We'll be in touch soon. 🙏",
-      "error": "Error sending. Please try again."
-    },
-    "seniorHint": {
-      "title": "长者模式可用",
-      "desc": "更大的文字和简化的导航 – 非常适合老年居民。",
-      "cta": "试用长者模式"
+      "title": "感兴趣？请联系我们！",
+      "subtitle": "我们将在48小时内回复。",
+      "name": "您的姓名",
+      "email": "电子邮件地址",
+      "institutionName": "机构名称",
+      "type": "机构类型",
+      "typePlaceholder": "请选择...",
+      "tier": "期望的套餐",
+      "tierPlaceholder": "选择套餐...",
+      "message": "您的消息",
+      "submit": "发送请求",
+      "success": "请求已发送！我们将尽快与您联系。🙏",
+      "error": "发送失败。请重试。"
     }
-  },
-  "refer": {
-    "badge": "Share God's Word",
-    "title": "Recommend BibleBot",
-    "subtitle": "Know someone who could use encouragement? Share BibleBot – one message can make a difference.",
-    "whatsapp": "Share via WhatsApp",
-    "whatsappMsg": "Hey, I wanted to show you BibleBot – a free Bible companion that really knows the Bible and asks great questions. No login, anonymous, honest. Try it out: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
-    "telegram": "Share via Telegram",
-    "telegramMsg": "Hey, do you know BibleBot? A free personal Bible companion – honest, anonymous, no login needed. Check it out: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
-    "email": "Share via email",
-    "emailSubject": "This might interest you: BibleBot.Life",
-    "emailBody": "Hi!\n\nI wanted to show you BibleBot – a free Bible companion that really knows the Bible. No sign-up needed, completely anonymous.\n\nIt asks thoughtful questions, explains Bible passages in context and accompanies you honestly – even on difficult topics.\n\nTry it out: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nBest wishes",
-    "copy": "Copy link",
-    "copied": "Link copied! 📋",
-    "qr": "Or just show this QR code:"
-  },
-  "share": {
-    "label": "Share",
-    "shareVia": "Share via",
-    "copied": "Copied! 📋",
-    "copiedShort": "Copied!",
-    "copiedDesc": "Text copied to clipboard. Share it on WhatsApp, Instagram or wherever you like!",
-    "copyLink": "Copy text",
-    "error": "Copy failed",
-    "impulseTitle": "BibleBot – Impulse of the Day",
-    "chatTitle": "BibleBot – Thought of the Day",
-    "createImage": "Create image ✨",
-    "generating": "Creating…",
-    "imageReady": "Your image is ready to share!",
-    "shareImage": "Share image",
-    "download": "Save",
-    "imageError": "Image creation failed",
-    "imageErrorDesc": "The image could not be created. Please try again later.",
-    "imageSaved": "Text copied! 📋",
-    "imageSavedDesc": "Save the image and share it with the copied text on Instagram, WhatsApp or wherever you like!"
   }
 }

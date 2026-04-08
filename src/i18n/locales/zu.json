@@ -1,755 +1,755 @@
 {
   "nav": {
-    "startNow": "Qala"
+    "startNow": "Qala Manje"
   },
   "loader": "Iyalayisha…",
   "hero": {
     "badge": {
-      "noLogin": "Akukho ukungena",
-      "noData": "Akukho idatha",
+      "noLogin": "Akukho ukungena ngemvume",
+      "noData": "Ayikho idatha",
       "noJudgment": "Akukho ukwahlulela"
     },
     "title1": "IBhayibheli.",
-    "title2": " Licatshangwe kabusha.",
-    "subtitle": "I-BibleBot iyalazi iBhayibheli – futhi ibuza imibuzo efanele. Akuyena umuntu, kodwa ungumngane oqotho.",
-    "ctaTelegram": "Qala nge-Telegram",
-    "ctaMore": "Funda kabanzi",
-    "quote": "\"Come to me, all you who are weary and burdened, and I will give you rest.\"",
-    "quoteRef": "– Matthew 11:28"
+    "title2": " Kucatshangwe kabusha.",
+    "subtitle": "I-BibleBot yakho iyaliqonda iBhayibheli – futhi ibuza imibuzo efanele. Hhayi umuntu, kodwa umngane othembekile. Ngezingxoxo ezinhle, imibuzo ejulile kanye nogqozi lwangempela.",
+    "ctaTelegram": "Qala ngeTelegram",
+    "ctaMore": "Funda okwengeziwe",
+    "quote": "«Wozani kimi, nonke nina enikhandlekayo nenisindwe umthwalo; ngiyakuniphumuza.»",
+    "quoteRef": "– Mathewu 11,28"
   },
   "impulse": {
-    "loading": "Loading daily impulse...",
-    "label": "Impulse of the Day",
-    "deepDive": "What does this mean for me?",
-    "explore": "Read full passage"
+    "loading": "Umlayezo wosuku ulayishwa...",
+    "label": "Umlayezo Wosuku",
+    "deepDive": "Kusho ukuthini lokhu kimi?",
+    "explore": "Funda Isigaba Sonke"
   },
   "features": {
-    "sectionTitle": "How BibleBot accompanies you",
-    "sectionSubtitle": "Discover the many ways BibleBot can walk alongside you",
+    "sectionTitle": "Indlela iBibleBot yakho ikuphelezela ngayo",
+    "sectionSubtitle": "Thola amathuba ahlukahlukene okuthi iBibleBot yakho ingakuphelezela kanjani",
     "bible": {
-      "title": "Bible passages & interpretation",
-      "desc": "Ask \"What does the Bible say about...?\" and receive relevant verses with context and clear explanation."
+      "title": "Amavesi EBhayibheli Nokuchazwa kwawo",
+      "desc": "Buza ukuthi «Lithini iBhayibheli nge...?» bese uthola amavesi afanelekile nomongo kanye nencazelo eqondakalayo."
     },
     "goals": {
-      "title": "Life planning & goals",
-      "desc": "Discover your calling, set concrete goals, and find out what God might have in store for you."
+      "title": "Ukuhlela Impilo Nokubeka Izinhloso",
+      "desc": "Thola ubizo lwakho, setha izinhloso ezithile, bese uthola ukuthi uNkulunkulu angaba nezinhlelo zokwenzani ngawe."
     },
     "self": {
-      "title": "Finding yourself",
-      "desc": "Recognize your gifts, strengths, and longings – and what your heart truly needs."
+      "title": "Ukuzazi Wena",
+      "desc": "Bona izipho zakho, amandla namaphupho – nokuthi inhliziyo yakho idinga ngempela ini."
     },
     "faith": {
-      "title": "Faith journey & finding Christ",
-      "desc": "Whether seeking, doubting, or deepening – BibleBot accompanies you on your personal path."
+      "title": "Uhambo Lwezenkolo Nokuthola Kristu",
+      "desc": "Noma ngabe ufuna, uyathandabuza noma ujulisa – iBibleBot yakho izokuphelezela ohambweni lwakho lomuntu siqu."
     },
     "daily": {
-      "title": "Daily impulses & church year",
-      "desc": "Start your day with impulses and let BibleBot guide you through Advent, Lent, and holidays."
+      "title": "Ogqozi Lwansuku Zonke Nemikhosi Yonyaka Yokukhonza",
+      "desc": "Qala usuku lwakho ngogqozi bese uziphathisa uNcibijane, iLent kanye namaholide."
     },
     "groups": {
-      "title": "Groups & communities",
-      "desc": "Perfect for Bible study groups, church communities, and shared devotions."
+      "title": "Amaqembu & Amabandla",
+      "desc": "Ilungele izindlu zeBhayibheli, amaqembu esonto kanye nemikhuleko yomphakathi."
     }
   },
   "coaching": {
-    "badge": "Methodology",
-    "title": "Not just a chatbot – genuine companionship",
-    "subtitle": "BibleBot combines biblical wisdom with proven coaching methods and Positive Psychology.",
-    "journeyTitle": "Personal companionship",
-    "journeyDesc": "BibleBot accompanies you as long as you wish – in free conversation or with an optional 21-day structure.",
-    "week1": "Week 1: Arriving",
-    "week1Desc": "Building trust, listening, understanding your situation. Where are you? What concerns you?",
-    "week2": "Week 2: Deepening",
-    "week2Desc": "Recognizing patterns, clarifying desires, deepening biblical impulses. What do you really want?",
-    "week3": "Week 3: Acting",
-    "week3Desc": "Taking concrete steps, setting goals, initiating change. What's your next step?",
-    "openQuestionsTitle": "Open questions instead of quick answers",
-    "openQuestionsDesc": "BibleBot doesn't give cheap advice. Instead, it asks the questions that truly matter:",
-    "openQ1": "\"What's really behind this desire?\"",
-    "openQ2": "\"How would you know something has changed?\"",
-    "openQ3": "\"What would be a first small step?\"",
-    "honestTitle": "Honest instead of toxic positivity",
-    "honestDesc": "No \"It'll be fine!\" and no sugarcoating. BibleBot is empathetic AND honest:",
-    "honest1": "Also addresses uncomfortable Bible passages",
-    "honest2": "Challenges you to self-reflection",
-    "honest3": "Distinguishes comfort from avoidance",
-    "scienceTitle": "Scientifically grounded",
+    "badge": "Indlela",
+    "title": "Hhayi nje i-chatbot – umngane wangempela",
+    "subtitle": "I-BibleBot yakho ihlanganisa ukuhlakanipha kweBhayibheli nezindlela zokuphelezela eziqinisekisiwe kanye ne-Positive Psychology.",
+    "journeyTitle": "Ukuphelezela Komuntu Siqu",
+    "journeyDesc": "I-BibleBot yakho izokuphelezela isikhathi eside njengoba ufisa – ngengxoxo ekhululekile noma nangesakhiwo sezinsuku ezingu-21 ozikhethelayo.",
+    "week1": "Isonto 1: Ukufika",
+    "week1Desc": "Ukwakha ukwethembana, ukulalela, ukuqonda isimo sakho. Ukuphi? Yini ekukhathazayo?",
+    "week2": "Isonto 2: Ukujulisa",
+    "week2Desc": "Ukubona amaphethini, ukucacisa izifiso, ukujulisa ugqozi lweBhayibheli. Ufunani ngempela?",
+    "week3": "Isonto 3: Ukwenza",
+    "week3Desc": "Ukuthatha izinyathelo ezithile, ukubeka izinhloso, ukugqugquzela ushintsho. Yini isinyathelo sakho esilandelayo?",
+    "openQuestionsTitle": "Imibuzo Evulekile Esikhundleni Sezimpendulo Ezisheshayo",
+    "openQuestionsDesc": "I-BibleBot yakho ngeke ikunikeze izeluleko ezingabizi. Esikhundleni salokho, ibuza imibuzo ebaluleke ngempela:",
+    "openQ1": "«Yini ngempela ngemuva kwalesi sifiso?»",
+    "openQ2": "«Uzokwazi ngani ukuthi kukhona okushintshile?»",
+    "openQ3": "«Yisiphi isinyathelo sokuqala esincane?»",
+    "honestTitle": "Othembekile esikhundleni sokuba nethemba elinamandla",
+    "honestDesc": "Akukho «Kuzolunga!» futhi akukho ukukuhlehlisa. I-BibleBot yakho izwelana FUTHI ithembekile:",
+    "honest1": "Iphinda futhi ikhulume ngamavesi eBhayibheli angakhululekile",
+    "honest2": "Iphonsa inselele ekuzindleni komuntu",
+    "honest3": "Ihlukanisa ukududuza nokugwema",
+    "scienceTitle": "Kusekelwe kusayensi",
     "perma": {
-      "name": "PERMA Model",
+      "name": "I-PERMA-Model",
       "author": "Seligman",
-      "desc": "Positive emotions, meaning & growth"
+      "desc": "Imizwa emihle, inhloso nokukhula"
     },
     "logo": {
-      "name": "Logotherapy",
+      "name": "I-Logotherapy",
       "author": "Frankl",
-      "desc": "Finding meaning in difficult times"
+      "desc": "Ukuthola inhloso ezikhathini ezinzima"
     },
     "gratitude": {
-      "name": "Gratitude",
+      "name": "Ukubonga",
       "author": "Emmons",
-      "desc": "Research-based gratitude practice"
+      "desc": "Ukuzijwayeza okusekelwe ocwaningweni lokubonga"
     },
     "forgiveness": {
-      "name": "Forgiveness",
+      "name": "Ukuthethelela",
       "author": "Worthington",
-      "desc": "REACH model for forgiveness processes"
+      "desc": "I-REACH-Model yezinqubo zokuthethelela"
     },
-    "renameTip": "💡 You can give your BibleBot a personal name – so it truly becomes <strong>your</strong> companion."
+    "renameTip": "💡 Ungaqamba i-BibleBot yakho igama elisha – ukuze ibe umngane wakho wangempela."
   },
   "discover": {
-    "badge": "For the curious",
-    "title": "Rediscover faith – without pressure",
-    "subtitle": "More and more people are asking the big questions anew. BibleBot.Life is for everyone who wants to (re)discover faith – honestly, without pathos, and without church jargon.",
+    "badge": "Okwabalalali",
+    "title": "Thola kabusha ukholo – ngaphandle kokucindezela",
+    "subtitle": "Abantu abaningi bayazibuza imibuzo emikhulu engashintshi. I-BibleBot.Life ingeyabantu bonke abafuna ukuthola (kabusha) ukholo – ngokwethembeka, ngaphandle kokuhlonishwa nangaphandle kobudlelwano basonto.",
     "doubt": {
-      "title": "You doubt?",
-      "text": "Good. Doubt isn't a flaw – it's the beginning of honest faith. The Bible is full of people who wrestled."
+      "title": "Uyathandabuza?",
+      "text": "Kuhle lokho. Ukungabaza akuyona iphutha – kuyisiqalo sokholo oluqotho. IBhayibheli ligcwele abantu ababonakalisile."
     },
     "search": {
-      "title": "You're searching?",
-      "text": "Maybe you don't even know what for. That's perfectly fine. BibleBot helps you ask the right questions – instead of delivering quick answers."
+      "title": "Ufuna?",
+      "text": "Mhlawumbe awazi ngisho nokuthi ufunani. Kulungile lokho. I-BibleBot yakho izokusiza ukuthi ubuze imibuzo efanele – esikhundleni sokunikeza izimpendulo ezisheshayo."
     },
     "deepen": {
-      "title": "You want to go deeper?",
-      "text": "You already believe, but want to understand more? Discover the depth of the Bible – historical, personal, surprisingly relevant."
+      "title": "Ufuna ukujulisa?",
+      "text": "Usuvele ukholelwa, kodwa ufuna ukuqonda okwengeziwe? Thola ubunzulu beBhayibheli – ngokomlando, siqu, okuhambelana ngendlela emangalisayo."
     },
-    "quote": "\"Ask, and it will be given to you; seek, and you will find; knock, and the door will be opened.\"",
-    "quoteRef": "– Matthew 7:7",
-    "quoteText": "Many of us don't talk much about faith. That's okay. But those with questions deserve honest answers – without sermons, without membership, without ulterior motives."
+    "quote": "«Ngqongqozani, niyakuvulelwa.»",
+    "quoteRef": "– Mathewu 7,7",
+    "quoteText": "ESwitzerland asikhulumi kakhulu ngenkolo. Lokho akudingekile. Kodwa noma ubani onemibuzo, ufanelwe izimpendulo eziqotho – ngaphandle kokushumayela, ngaphandle kobulungu, ngaphandle kwezizathu ezifihliwe."
   },
   "subscribe": {
-    "title": "Daily Bible impulse",
-    "subtitle": "Every morning at 7:00 AM – a verse, a thought, a good start.",
-    "firstName": "Your first name",
-    "firstNameOptional": "(optional)",
-    "firstNamePlaceholder": "e.g. Thomas",
-    "firstNameHint": "So we can greet you personally.",
-    "channelLabel": "How would you like to receive the impulse?",
+    "title": "Umlayezo Wansuku Zonke WeBhayibheli",
+    "subtitle": "Njalo ekuseni ngo-07:00 – ivesi, umcabango, isiqalo esihle.",
+    "firstName": "Igama Lakho",
+    "firstNameOptional": "(iyazikhethela)",
+    "firstNamePlaceholder": "isb. uThomas",
+    "firstNameHint": "Ukuze sikwazi ukukubingelela mathupha.",
+    "channelLabel": "Ufuna ukuthola umlayezo kanjani?",
     "push": "Push",
-    "pushDesc": "Browser notification",
+    "pushDesc": "Isaziso se-Browser",
     "telegram": "Telegram",
-    "telegramDesc": "Message via Telegram",
+    "telegramDesc": "Umlayezo ngeTelegram",
     "sms": "SMS",
-    "smsDesc": "Text to your phone",
-    "phoneLabel": "Phone number",
-    "phonePlaceholder": "+1 555 123 4567",
-    "phoneHint": "With country code, e.g. +1 for the US.",
-    "telegramHint": "Click \"Subscribe\" – you'll be redirected to Telegram. Start the bot and type <strong>/daily</strong> to activate the daily impulse.",
-    "pushHint": "After clicking \"Subscribe\", your browser will ask for notification permission. Please allow it to receive the impulse.",
-    "submit": "Subscribe",
-    "submitting": "Subscribing...",
-    "footNote": "No login required. Cancel anytime.",
-    "successTitle": "You're subscribed! 🙏",
-    "successText": "Starting tomorrow at 7:00 AM, you'll receive your personal Bible impulse.",
-    "toastTelegram": "Telegram opened 🙏",
-    "toastTelegramDesc": "Start the bot and type /daily to activate the daily impulse.",
-    "toastSuccess": "Subscribed! 🙏",
-    "toastSuccessDesc": "You'll receive your daily impulse starting tomorrow.",
-    "toastPushPreview": "Push subscription not available in preview",
-    "toastPushPreviewDesc": "Push notifications only work on the published site.",
-    "toastNotSupported": "Not supported",
-    "toastNotSupportedDesc": "Your browser does not support push notifications.",
-    "toastPermDenied": "Permission denied",
-    "toastPermDeniedDesc": "Please allow notifications in your browser settings.",
-    "toastError": "Error",
-    "toastErrorDesc": "Please try again later."
+    "smsDesc": "I-SMS efonini yakho",
+    "phoneLabel": "Inombolo Yocingo",
+    "phonePlaceholder": "+41 79 123 45 67",
+    "phoneHint": "Ngenombolo yezwe, isb. +41 yeSwitzerland.",
+    "telegramHint": "Chofoza ku-\"Bhalisa\" – uzodluliselwa kuTelegram. Qala i-bot lapho bese ubhala <strong>/daily</strong> ukuze uvule umlayezo wansuku zonke.",
+    "pushHint": "Ngemuva kokuchofoza ku-\"Bhalisa\", isiphequluli sakho sizocela imvume yezaziso. Sicela uyivumele ukuze uthole umlayezo.",
+    "submit": "Bhalisa",
+    "submitting": "Iyaqhubeka nokubhalisa...",
+    "footNote": "Akukho ukungena ngemvume okudingekayo. Ingakhanselwa noma kunini.",
+    "successTitle": "Ubhalele! 🙏",
+    "successText": "Kusukela kusasa ngo-07:00 uzothola umlayezo wakho wangasese weBhayibheli.",
+    "toastTelegram": "ITelegram ivuliwe 🙏",
+    "toastTelegramDesc": "Qala i-bot bese ubhala /daily ukuze uvule umlayezo wansuku zonke.",
+    "toastSuccess": "Kubhalisiwe! 🙏",
+    "toastSuccessDesc": "Uzothola umlayezo wakho wansuku zonke kusukela kusasa.",
+    "toastPushPreview": "Ukubhalisa kwePush akukho ekubukeni kuqala",
+    "toastPushPreviewDesc": "Izaziso ze-Push zisebenza kuphela ekhasini elishicilelwe.",
+    "toastNotSupported": "Ayisekelwa",
+    "toastNotSupportedDesc": "Isiphequluli sakho asizisekeli izaziso ze-push.",
+    "toastPermDenied": "Imvume yehliwe",
+    "toastPermDeniedDesc": "Sicela uvumele izaziso kuzilungiselelo zesiphequluli sakho.",
+    "toastError": "Iphutha",
+    "toastErrorDesc": "Sicela uzame futhi kamuva."
   },
   "faq": {
-    "badge": "FAQ",
-    "title": "What you should know about BibleBot",
-    "subtitle": "Transparency matters – especially for theologians, pastors, and critical thinkers.",
-    "q1": "What makes BibleBot different from ChatGPT & Co.?",
-    "q1Generic": "Generic chatbots:",
+    "badge": "Imibuzo Evame Ukubuzwa",
+    "title": "Okufanele Ukwazi Nge-BibleBot Yakho",
+    "subtitle": "Ukungafihli kubalulekile kithi – ikakhulukazi kubefundisi, abeluleki bomphefumulo nabacabangi abagxekayo.",
+    "q1": "Yini eyahlukanisa iBibleBot yakho ku-ChatGPT nabanye?",
+    "q1Generic": "Ama-chatbot ajwayelekile:",
     "q1GenericItems": [
-      "Superficial Bible quotes without context",
-      "No pastoral guardrails",
-      "Avoids uncomfortable texts",
-      "No crisis intervention",
-      "Mixes Bible with esotericism",
-      "No follow-up questions – just confirmation"
+      "Izingcaphuno zeBhayibheli ezingajulile ngaphandle komongo",
+      "Akukho ukuqondisa okungokwasezingeni lokwelulekwa",
+      "Kugwema imibhalo engakhululekile",
+      "Akukho ukungenela esimweni esibucayi",
+      "Kuxuba iBhayibheli ne-esoteric",
+      "Akukho ukubuza imibuzo – kuphela ukuqinisekiswa"
     ],
-    "q1Bot": "BibleBot.Life:",
+    "q1Bot": "I-BibleBot.Life:",
     "q1BotItems": [
-      "5 recognized translations – including uncomfortable passages",
-      "Guardrails AND challenging companionship",
-      "Follow-up questions for self-reflection",
-      "Crisis referrals (emergency helplines)",
-      "Exclusively Christian theology",
-      "Promotes critical thinking as faith maturity"
+      "Izinguqulo ezingu-5 ezibonwe – ngisho nezindawo ezingakhululekile",
+      "Ukuqondisa NOKUPHELEZELA okuyinselele",
+      "Imibuzo yokuzindla",
+      "Izinkolelo eziyingozi (Tel. 143 / 147)",
+      "Ubungcwele bukaNkulunkulu kuphela",
+      "Ikhuthaza ukucabanga okubucayi njengobuvuthiwe bokholo"
     ],
-    "q2": "Which Bible translations are included?",
-    "q2Intro": "BibleBot works ecumenically with the major German-language Bible editions:",
-    "q2Outro": "All Bible passages include source citations and historical context.",
-    "q3": "What scientific foundations are behind it?",
-    "q3Intro": "The companionship is based on peer-reviewed research in Positive Psychology:",
-    "q4": "How does BibleBot ensure pastoral safety?",
+    "q2": "Yiziphi izinguqulo zeBhayibheli ezikhona?",
+    "q2Intro": "I-BibleBot yakho isebenza ngokubambisana nezinguqulo zesiJalimane zeBhayibheli ezibalulekile:",
+    "q2Outro": "Zonke izindawo zeBhayibheli ziphuma nomthombo nomongo womlando.",
+    "q3": "Yiziphi izisekelo zesayensi ezisemva kwayo?",
+    "q3Intro": "Ukuphelezela kusekelwe ocwaningweni olubuyekezwe ozakwethu lwe-Positive Psychology:",
+    "q4": "I-BibleBot yakho iqinisekisa kanjani ukuphepha kokwelulekwa?",
     "q4Items": [
-      "Suicidal thoughts or crisis → immediate referral to emergency helplines",
-      "No psychological or medical diagnoses",
-      "Respect without arbitrariness – clear biblical positions are taken",
-      "Empathy AND honesty – uncomfortable topics are addressed",
-      "Follow-up questions for self-reflection instead of cheap validation",
-      "No toxic positivity – genuine, honest companionship",
-      "Openly names tensions and difficult texts"
+      "Ngezingcingo zokuzibulala noma izimo ezinzima → ukudluliselwa ngokushesha ku-Dargebotene Hand (143) nase-Pro Juventute (147)",
+      "Akukho ukuxilongwa kwengqondo noma kwezokwelapha",
+      "Inhlonipho ngaphandle kokungabaza – izikhundla zeBhayibheli ezicacile ziyathathelwa",
+      "Uzwelo NOKUQOTHO – ngisho nezinto ezingakhululekile kuyakhulunywa ngazo",
+      "Imibuzo yokuphinda icabange esikhundleni sokuqinisekiswa okushibhile",
+      "Akukho ukuba nethemba okuyingozi – ukuphelezela okwangempela, koqotho",
+      "Ikhomba ukungezwani nemibhalo enzima ngokusobala"
     ],
-    "q5": "Is BibleBot tied to a specific denomination?",
-    "q5Answer": "No. BibleBot is ecumenically oriented and respects Reformed, Catholic, Free Church, and other Christian traditions equally. When there are denominational differences in interpretation, various perspectives are presented transparently – without favoring any tradition.",
-    "q6": "Does BibleBot replace pastoral care or therapy?",
-    "q6Answer": "No. BibleBot is a digital tool for personal Bible reading and reflection. It does not replace professional pastoral care, theological counseling, or psychological therapy. In serious crises, BibleBot always refers to qualified resources.",
-    "q7": "Isn't BibleBot just a 'feel-good bot'?",
-    "q7Answer": "No. BibleBot comforts where comfort is needed – but it also challenges. Spiritual growth requires friction. BibleBot asks uncomfortable follow-up questions, names difficult Bible texts (Job, Lament Psalms, prophetic criticism), and doesn't shy away from topics like justice, repentance, and responsibility. The prophetic tradition was never comfortable – and neither is BibleBot.",
-    "q8": "Who is behind BibleBot and how is it funded?",
-    "q8Answer": "BibleBot.Life is a private, non-commercial project. It's run on a volunteer basis and funded exclusively through voluntary donations. There's no advertising, no data sales, and no paid features. All donations go directly to covering operating costs (infrastructure, hosting, development). Since BibleBot is a private project, donations are not tax-deductible.",
-    "q9": "How does BibleBot handle my data?",
-    "q9Answer": "BibleBot stores no personal data and no chat histories. Every conversation is anonymous. There's no login, no tracking, and no sharing of data with third parties. Usage is completely anonymous."
+    "q5": "Ingabe i-BibleBot yakho ibophezelekile ngokwesonto?",
+    "q5Answer": "Cha. I-BibleBot yakho ihambisana nezinkolo ezahlukene futhi ihlonipha izindinganiso zamaProtestanti, zamaKatolika, zamasonto amahhala nezinye izindinganiso zobuKristu ngokulinganayo. Lapho kunomehluko ezincazelweni zezinkolo, izindlela ezahlukene zikhonjiswa ngokucacile – ngaphandle kokukhetha uhlobo oluthile.",
+    "q6": "Ingabe iBibleBot yakho ithatha indawo yokwelulekwa noma yokwelapha?",
+    "q6Answer": "Cha. I-BibleBot yakho iyithuluzi ledijithali lokufunda iBhayibheli nokuzindla. Ayithathi indawo yokwelulekwa kobuchwepheshe, iseluleko sezenkolo noma ukwelashwa kwengqondo. Esimweni sezimo ezinzima, i-BibleBot yakho ihlale ikukhombisa izindawo ezifanele zokusiza.",
+    "q7": "Ingabe iBibleBot yakho akuyona nje «i-bot ekhululekile»?",
+    "q7Answer": "Cha. I-BibleBot yakho iduduza lapho kudingeka khona induduzo – kodwa futhi iphonsa inselele. Ukukhula ngokomoya kudinga ukungqubuzana. I-BibleBot yakho ibuza imibuzo engakhululekile, ikhomba imibhalo enzima yeBhayibheli (uJobe, amaHubo okulila, ukugxeka kwesiprofetho) futhi ayiesabi izingosi ezifana nokulunga, ukuphenduka nobuqotho. Isiko lesiprofetho alizange libe lula – futhi i-BibleBot yakho nayo ayikho.",
+    "q8": "Ubani osemuva kweBibleBot yakho futhi ixhaswa kanjani?",
+    "q8Answer": "I-BibleBot.Life iyiphrojekthi yangasese, engenzi inzuzo. Isebenza ngokuzithandela futhi ixhaswa kuphela yiminikelo yokuzithandela. Ayikho imikhangiso, akukho ukuthengiswa kwedatha futhi akukho izici ezikhokhelwayo. Yonke iminikelo ihamba ngqo ekuhlanganisweni kwezindleko zokusebenza (ingqalasizinda, ukubamba, ukuthuthukiswa). Njengoba i-BibleBot isebenza njengephrojekthi yangasese, iminikelo ayikwazi ukudonswa intela.",
+    "q9": "I-BibleBot yakho ihamba kanjani nedatha yami?",
+    "q9Answer": "I-BibleBot yakho ayibongi idatha yomuntu siqu nanoma yimaphi amarekhodi engxoxo. Yonke ingxoxo ayaziwa. Akukho ukungena ngemvume, akukho ukulandelela futhi akukho ukwabelana ngedatha nabantu besithathu. Ukusetshenziswa kuyimfihlo ngokuphelele."
   },
   "donate": {
-    "badge": "Support BibleBot",
-    "title": "Help keep BibleBot free",
-    "subtitle": "BibleBot is a passion project – no ads, no subscriptions, no hidden costs. To keep it that way, I rely on voluntary donations. Every contribution helps cover the ongoing costs for operations and infrastructure.",
-    "bankTitle": "Donate via bank transfer",
-    "bankSubtitle": "Every amount counts – thank you! 🙏",
-    "recipient": "Recipient",
-    "bank": "Bank",
-    "purpose": "Reference",
-    "purposeValue": "Donation BibleBot",
-    "note": "BibleBot.Life is operated as a private project. Donations are therefore not tax-deductible."
+    "badge": "Sekela iBibleBot yakho",
+    "title": "Siza ukuba iBibleBot yakho ihlale mahhala",
+    "subtitle": "I-BibleBot yakho iyiphrojekthi yothando – ngaphandle kokukhangisa, ngaphandle kokubhaliselwa, ngaphandle kwezindleko ezifihliwe. Ukuze ihlale kanjalo, ngithembele eminikelweni yokuzithandela. Yonke imali inceda ukuhlanganisa izindleko ezikhona zokusebenza nengqalasizinda.",
+    "bankTitle": "Nikezela nge-Bank Transfer",
+    "bankSubtitle": "Yonke imali ibalulekile – ngiyabonga kakhulu! 🙏",
+    "recipient": "Mtholi",
+    "bank": "Ibhange",
+    "purpose": "Inhloso",
+    "purposeValue": "Nikezela iBibleBot",
+    "note": "I-BibleBot.Life isebenza njengephrojekthi yangasese. Ngakho-ke iminikelo ayikwazi ukubuyiselwa intela."
+  },
+  "refer": {
+    "badge": "Yabelana ngezwi likaNkulunkulu",
+    "title": "Phakamisa iBibleBot",
+    "subtitle": "Ukhona umuntu odinga ukukhuthazwa njengamanje? Yabelana nge-BibleBot – umlayezo owodwa ungenza umehluko omkhulu.",
+    "whatsapp": "Yabelana ngeWhatsApp",
+    "whatsappMsg": "Heyi, bengifuna ukukubonisa i-BibleBot – umngane weBhayibheli wamahhala okwazi iBhayibheli futhi ebuza imibuzo emihle ngempela. Akukho ukungena ngemvume, ayaziwa, iqotho. Zama: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "telegram": "Yabelana ngeTelegram",
+    "telegramMsg": "Heyi, uyayazi i-BibleBot? Umngane siqu weBhayibheli wamahhala – oqotho, ongaziwa, ongenawo ukungena ngemvume. Buka: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "email": "Yabelana Nge-imeyili",
+    "emailSubject": "Lokhu kungase kukuthakazelise: BibleBot.Life",
+    "emailBody": "Sawubona!\n\nBengifuna ukukubonisa i-BibleBot – umngane weBhayibheli wamahhala okwazi ngempela iBhayibheli. Akukho ukubhaliswa okudingekayo, kuyimfihlo ngokuphelele.\n\nUbuza imibuzo emihle, uchaza izindawo zeBhayibheli kumongo futhi akuphelezela ngokwethembeka – nasezindabeni ezinzima.\n\nZama: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nNgemfiselomihle",
+    "copy": "Kopisha Isixhumanisi",
+    "copied": "Kopishiwe isixhumanisi! 📋",
+    "qr": "Noma uvele ukhombise le kade ye-QR:"
   },
   "cta": {
-    "title": "You don't have to go through this alone",
-    "subtitle": "Just tell BibleBot what's on your mind. No login, no cost, no judgment – just honest companionship and the wisdom of the Bible.",
-    "button": "Start a conversation"
+    "title": "Akudingeki ukuthi uhambe wodwa ngalokhu",
+    "subtitle": "Vele ubhalele iBibleBot yakho, ukuthi yini ekukhathazayo. Akukho ukungena ngemvume, akukho zindleko, akukho kwahlulela – kuphela ukuphelezela okwethembekile nokuhlakanipha kweBhayibheli.",
+    "button": "Qala Ingxoxo Manje"
   },
   "footer": {
-    "tagline": "Your personal companion for a life with the Bible",
-    "disclaimer": "BibleBot.Life is a digital tool and does not replace professional pastoral care, theological counseling, or psychological therapy. In acute crises, please contact your local emergency helpline.",
-    "impressum": "Imprint",
-    "notes": "Notes",
-    "private": "Private, non-commercial project",
-    "noChat": "No storage of chat data",
-    "noTax": "Donations are not tax-deductible",
-    "datenschutz": "Privacy Policy",
-    "love": "With ❤️ for everyone wondering what Christ thinks.",
-    "forChurches": "For Churches"
+    "tagline": "Umngane wakho siqu wempilo neBhayibheli",
+    "disclaimer": "I-BibleBot.Life iyithuluzi ledijithali futhi ayithathi indawo yokwelulekwa kobungcweti, iseluleko sezenkolo noma ukwelashwa kwengqondo. Esimweni sezinkinga ezinzima, sicela uxhumane ne-Dargebotene Hand (Tel. 143) noma i-Pro Juventute (Tel. 147).",
+    "impressum": "Ulwazi Lwegunya",
+    "notes": "Amanothi",
+    "private": "Iphrojekthi yangasese, engenzi inzuzo",
+    "noChat": "Akukho ukulondolozwa kwedatha yengxoxo",
+    "noTax": "Iminikelo ayikhokhelwa intela",
+    "datenschutz": "Inqubomgomo Yemfihlo",
+    "love": "Ngo ❤️ yabo bonke abazibuza ukuthi uKristu ucabangani.",
+    "forChurches": "Okwamabandla"
   },
   "chat": {
-    "welcome": "Welcome! 🤗\n\nI'm your BibleBot – your personal companion with the Bible, good questions, and real impulses. No pressure, no judgment.\n\nYou can ask me anything – or just share what's on your mind. 💛",
-    "journeyOffer": "💡 **Tip:** I also offer a **21-day journey** – 3 weeks of daily impulses, reflections, and concrete steps. At your own pace.\n\nWould you like to try it?",
-    "suggestion1": "I need an uplifting word right now",
-    "suggestion2": "What does the Bible say when you feel uncertain?",
-    "suggestion3": "I want to find out what I really want",
-    "teaser": "What's on your mind? 💛",
-    "teaserSub": "I'm here – without any judgment.",
-    "openChat": "Open chat",
-    "closeChat": "Close chat",
-    "yourCompanion": "Your personal companion",
-    "journeyComplete": "21 days completed! 🎉",
-    "arriving": "Arriving",
-    "deepening": "Deepening",
-    "acting": "Acting",
-    "renameTip": "Tip: Click the name to rename me ✨",
-    "changeName": "Change name",
-    "placeholder": "Just start typing...",
-    "startVoice": "Start voice input",
-    "stopVoice": "Stop recording",
-    "noVoice": "Your browser does not support voice input.",
-    "writing": "typing...",
-    "shieldBadge": "No login · No judgment · Citations verified",
-    "journeyStart": "Yes, let's go ✨",
-    "journeyLater": "Maybe later",
-    "journeyStartMsg": "Yes, I'd like to start the 21-day journey!",
-    "qaChecking": "Checking citations...",
-    "qaIssue": "{{count}} issue with citations",
-    "qaIssue_plural": "{{count}} issues with citations",
-    "qaOk": "{{count}} citation verified ✓",
-    "qaOk_plural": "{{count}} citations verified ✓",
-    "qaWarning": "⚠️ Accuracy notes:",
-    "errorTooMany": "Too many requests – please wait a moment.",
-    "errorCredits": "AI quota exhausted.",
-    "errorConnect": "Connection error.",
-    "errorTitle": "Error",
-    "errorConnection": "could not be reached.",
-    "errorNoStream": "No stream",
-    "seniorMode": "Senior mode (larger text)",
-    "teaserCta": "Start writing →",
-    "namePlaceholder": "e.g. Eli, Miriam…"
+    "welcome": "Kuhle ukuthi ulapha 🤗\n\nNginguBibleBot yakho – umngane wakho siqu neBhayibheli, imibuzo emihle kanye nogqozi oluthile. Akukho ukuphoqelela, akukho ukwahlulela.\n\nUngangibuza noma yini – noma uvele uxoxe ngalokho okukhathazayo njengamanje. 💛",
+    "journeyOffer": "💡 **Iseluleko:** Ngiphinde nginikeze **ukulekelelwa kwezinsuku eziyi-21** – emasontweni amathathu ngezigqozi zansuku zonke, ukuzindla nezinyathelo ezibambekayo. Ngokushesha kwakho.\n\nUngathanda ukukuzama?",
+    "suggestion1": "Ngingathanda izwi lokukhuthaza",
+    "suggestion2": "Lithini iBhayibheli uma umuntu ezizwa engavikelekile?",
+    "suggestion3": "Ngifuna ukuthola ukuthi ngifuna ngempela ini",
+    "teaser": "Yini ekukhathazayo njengamanje? 💛",
+    "teaserSub": "Ngingapha – ngaphandle kokwahlulela.",
+    "teaserCta": "Bhala Manje →",
+    "openChat": "Vula Ingxoxo",
+    "closeChat": "Vala Ingxoxo",
+    "yourCompanion": "Umngane Wakho Siqu",
+    "journeyComplete": "Izinsuku ezingama-21 ziphelile! 🎉",
+    "arriving": "Ukufika",
+    "deepening": "Ukujulisa",
+    "acting": "Ukwenza",
+    "renameTip": "Nginike igama ✨",
+    "namePlaceholder": "isb. U-Eli, uMiriam…",
+    "changeName": "Shintsha igama",
+    "placeholder": "Vele ubhale...",
+    "startVoice": "Qala Ukungena Kwezwi",
+    "stopVoice": "Misa Ukurekhoda",
+    "noVoice": "Isiphequluli sakho asikusekeli ukungena kwezwi.",
+    "writing": "uyabhala...",
+    "shieldBadge": "Akukho ukungena ngemvume · Akukho ukwahlulela · Izingcaphuno zihlolwe",
+    "journeyStart": "Yebo, Qala ✨",
+    "journeyLater": "Mhlawumbe Kamuva",
+    "journeyStartMsg": "Yebo, ngifuna ukuqala ukulekelelwa kwezinsuku eziyi-21!",
+    "qaChecking": "Izingcaphuno ziyahlolwa...",
+    "qaIssue": "{{count}} inothi ngezingcaphuno",
+    "qaIssue_plural": "{{count}} amanothi ngezingcaphuno",
+    "qaOk": "{{count}} icaphuno lihloliwe ✓",
+    "qaOk_plural": "{{count}} izingcaphuno zihloliwe ✓",
+    "qaWarning": "⚠️ Amanothi ngokuqonda:",
+    "errorTooMany": "Izicelo eziningi kakhulu – sicela ulinde kancane.",
+    "errorCredits": "Isilinganiso se-AI siphelile.",
+    "errorConnect": "Iphutha lokuxhuma.",
+    "errorTitle": "Iphutha",
+    "errorConnection": "ayikwazanga ukufinyelelwa.",
+    "errorNoStream": "Akukho ukusakazwa",
+    "seniorMode": "Imodi Yomdala (ifonti enkulu)"
   },
   "install": {
-    "title": "Install BibleBot",
-    "androidDesc": "Quick access from your home screen",
-    "iosDesc": "Tap \"Share\" → \"Add to Home Screen\"",
-    "button": "Install",
-    "close": "Close"
+    "title": "Faka iBibleBot",
+    "androidDesc": "Ukufinyelela okusheshayo ngqo kusuka kusikrini sasekhaya",
+    "iosDesc": "Thepha ku-\"Yabelana\" → \"Kuya Esikrinini Sasekhaya\"",
+    "button": "Faka",
+    "close": "Vala"
+  },
+  "share": {
+    "label": "Yabelana",
+    "shareVia": "Yabelana Nge",
+    "copied": "Kopishiwe! 📋",
+    "copiedShort": "Kopishiwe!",
+    "copiedDesc": "Umbhalo ukopishiwe ebhodini lokunamathisela. Wabelane manje ku-WhatsApp, Instagram noma lapho ufuna khona!",
+    "copyLink": "Kopisha Umbhalo",
+    "error": "Ukukopisha kuhlulekile",
+    "impulseTitle": "BibleBot – Umlayezo Wosuku",
+    "chatTitle": "BibleBot – Umcabango Wosuku",
+    "createImage": "Dala Isithombe ✨",
+    "generating": "Iyaqhubeka nokudala…",
+    "imageReady": "Isithombe sakho sesilungele ukwabelana!",
+    "shareImage": "Yabelana ngesithombe",
+    "download": "Londoloza",
+    "imageError": "Ukudala isithombe kuhlulekile",
+    "imageErrorDesc": "Isithombe asikwazanga ukudala. Sicela uzame futhi kamuva.",
+    "imageSaved": "Umbhalo ukopishiwe! 📋",
+    "imageSavedDesc": "Londoloza isithombe bese usabelana ngaso nombhalo okopishiwe ku-Instagram, WhatsApp noma lapho ufuna khona!"
   },
   "darkMode": {
-    "light": "Light mode",
-    "dark": "Dark mode"
+    "light": "Imodi Ekhanyayo",
+    "dark": "Imodi Emnyama"
   },
   "impressum": {
-    "back": "Back to home",
-    "title": "Imprint"
+    "back": "Buyela Ekhasini Lasekhaya",
+    "title": "Ulwazi Lwegunya"
   },
   "datenschutz": {
-    "back": "Back to home",
-    "title": "Privacy Policy"
+    "back": "Buyela Ekhasini Lasekhaya",
+    "title": "Inqubomgomo Yemfihlo"
   },
   "lang": {
-    "de": "Deutsch",
-    "en": "English",
-    "fr": "Français",
-    "es": "Español",
-    "it": "Italiano",
-    "pl": "Polski",
-    "cs": "Čeština",
-    "pt": "Português",
-    "nl": "Nederlands",
-    "ro": "Română",
-    "da": "Dansk",
-    "no": "Norsk",
-    "sv": "Svenska",
-    "fi": "Suomi",
-    "el": "Ελληνικά",
-    "hr": "Hrvatski",
-    "sr": "Srpski",
-    "hu": "Magyar",
-    "sk": "Slovenčina",
-    "bg": "Български",
-    "ru": "Русский",
-    "uk": "Українська",
-    "ka": "ქართული",
-    "hy": "Հայերեն",
-    "ko": "한국어",
-    "tl": "Filipino",
-    "id": "Bahasa Indonesia",
-    "vi": "Tiếng Việt",
-    "zh": "中文",
-    "sw": "Kiswahili",
-    "am": "አማርኛ",
-    "af": "Afrikaans",
-    "yo": "Yorùbá",
-    "ig": "Igbo",
+    "de": "IsiJalimane",
+    "en": "IsiNgisi",
+    "fr": "IsiFulentshi",
+    "es": "IsiSpanishi",
+    "it": "IsiTaliyane",
+    "pl": "IsiPolish",
+    "cs": "IsiCzech",
+    "pt": "IsiPhuthukezi",
+    "nl": "IsiDutch",
+    "ro": "IsiRomanian",
+    "da": "IsiDanish",
+    "no": "IsiNorwegian",
+    "sv": "IsiSwedish",
+    "fi": "IsiFinnish",
+    "el": "IsiGreek",
+    "hr": "IsiCroatian",
+    "sr": "IsiSerbian",
+    "hu": "IsiHungary",
+    "sk": "IsiSlovak",
+    "bg": "IsiBulgarian",
+    "ru": "IsiRussia",
+    "uk": "Isi-Ukrainian",
+    "ka": "IsiGeorgian",
+    "hy": "Isi-Armenian",
+    "ko": "IsiKorea",
+    "tl": "IsiFilipino",
+    "id": "Isi-Indonesian",
+    "vi": "IsiVitenam",
+    "zh": "IsiShayina",
+    "sw": "IsiSwahili",
+    "am": "Isi-Amharic",
+    "af": "Isi-Afrikaans",
+    "yo": "IsiYoruba",
+    "ig": "Isi-Igbo",
     "zu": "isiZulu",
-    "ht": "Kreyòl"
+    "ht": "IsiCreole"
   },
   "tiles": {
-    "sectionTitle": "What's on your heart?",
-    "sectionSubtitle": "Choose a topic — BibleBot walks with you",
+    "sectionTitle": "Yini ekukhathazayo?",
+    "sectionSubtitle": "Khetha isihloko — i-BibleBot izokuphelezela",
     "baptism": {
-      "title": "Find a baptism verse",
-      "desc": "The perfect verse for your child",
-      "prompt": "Help me find a fitting baptism verse. What kind of child is it and what do the parents wish for?"
+      "title": "Thola Ivesi Lobhapathizo",
+      "desc": "Ivesi eliphelele lengane yakho",
+      "prompt": "Nceda ngithole ivesi lobhapathizo elifanele. Luhlobo luni lwengane futhi abazali bafisani?"
     },
     "condolence": {
-      "title": "Words of comfort",
-      "desc": "Support through grief & farewell",
-      "prompt": "I need comforting words for a condolence card. Can you help me find the right words?"
+      "title": "Amazwi Okududuzeka",
+      "desc": "Ukuphelelezela Ukududuzeka Nokubingelela",
+      "prompt": "Ndinga amazwi okududuza ekhadini lokudabukisa. Ungangisiza kanjani ukuba ngibhale okufanelekile?"
     },
     "wedding": {
-      "title": "Wedding verse",
-      "desc": "Biblical words for your love",
-      "prompt": "We're looking for a beautiful biblical verse for our wedding. Which passages speak about love and partnership?"
+      "title": "Isiqubulo Somshado",
+      "desc": "Amazwi EBhayibheli othando lwenu",
+      "prompt": "Sifuna isiqubulo esihle seBhayibheli somshado wethu. Yiziphi izifundo zeBhayibheli ezifanelekile othandweni nasekuhlanganeni?"
     },
     "anxiety": {
-      "title": "Fear & worry",
-      "desc": "Finding courage in hard times",
-      "prompt": "I'm struggling with fear and worry right now. What does the Bible say about this? Are there verses that give courage?"
+      "title": "Ukukhathazeka & Ukukhathazeka",
+      "desc": "Thola isibindi ngezikhathi ezinzima",
+      "prompt": "Ngingakwazi ukubhekana nokwesaba nokukhathazeka njengamanje. Lithini iBhayibheli ngakho? Kukhona yini amavesi akhuthazayo?"
     },
     "confession": {
-      "title": "Confession",
-      "desc": "God forgives — speak it out",
-      "prompt": "I want to let go of something that weighs on me. What does the Bible say about forgiveness and new beginnings?"
+      "title": "Ukuvuma Izono",
+      "desc": "UNkulunkulu uyaxolela — khuluma",
+      "prompt": "Ngifuna ukuvuma okuthile okungikhathazayo. Lithini iBhayibheli ngokuthethelela nesiqalo esisha?"
     },
     "heartbreak": {
-      "title": "Heartbreak",
-      "desc": "What the Bible says about heartache",
-      "prompt": "My heart is broken. What does the Bible say about heartbreak and how to find hope again?"
+      "title": "Inhliziyo Ephukile",
+      "desc": "Okushoyo iBhayibheli ngentlungu yenhliziyo",
+      "prompt": "Inhliziyo yami ephukile. Lithini iBhayibheli ngenhliziyo ephukile nokuthi ungathola kanjani ithemba futhi?"
     },
     "newstart": {
-      "title": "New beginning",
-      "desc": "Strength for a new chapter",
-      "prompt": "I'm facing a new beginning and need encouragement. Which Bible passages speak about fresh starts?"
+      "title": "Isiqalo Esisha",
+      "desc": "Amandla esigabeni esisha sempilo",
+      "prompt": "Ngibhekene nesiqalo esisha futhi ngidinga ukukhuthazwa. Yiziphi izindawo zeBhayibheli ezikhuluma ngeziqalo ezintsha?"
     },
     "namequiz": {
-      "title": "Name quiz",
-      "desc": "Find the right biblical name",
-      "prompt": "I'm looking for a biblical name for my child. Can you suggest some and explain their meanings?"
+      "title": "I-Quiz Yegama Lobhapathizo",
+      "desc": "Thola igama leBhayibheli elifanele",
+      "prompt": "Ngifuna igama leBhayibheli lengane yami. Ungangipha yini iziphakamiso ezimbalwa futhi uchaze izincazelo zazo?"
     },
     "sleepless": {
-      "title": "Sleepless",
-      "desc": "Finding peace at night",
-      "prompt": "I can't sleep and my mind is racing. Is there a calming prayer or psalm for the night?"
+      "title": "Ungalaleli",
+      "desc": "Thola ukuthula ebusuku",
+      "prompt": "Angikwazi ukulala futhi ngicabanga. Kukhona yini umthandazo owanele noma iHubo lobusuku?"
     },
     "loneliness": {
-      "title": "Loneliness",
-      "desc": "You are never alone",
-      "prompt": "I feel lonely. What does the Bible say about God always being with us?"
+      "title": "Isizungu",
+      "desc": "Awukho wedwa",
+      "prompt": "Ngizizwa nginesizungu. Lithini iBhayibheli ngokuthi uNkulunkulu uhlale enathi?"
     },
     "decision": {
-      "title": "Tough decision",
-      "desc": "Wisdom for the right path",
-      "prompt": "I'm facing a difficult decision. Which Bible passages can help me find the right way?"
+      "title": "Isinqumo Esilukhuni",
+      "desc": "Ukuhlakanipha ngendlela efanele",
+      "prompt": "Ngebhekene nesinqumo esilukhuni. Yiziphi izindawo zeBhayibheli ezingangisiza ukuthi ngithole indlela efanele?"
     },
     "gratitude": {
-      "title": "Gratitude",
-      "desc": "A personal prayer of thanks",
-      "prompt": "I want to thank God. Help me write a personal prayer of gratitude."
+      "title": "Ukubonga",
+      "desc": "Umthandazo wokubonga womuntu siqu",
+      "prompt": "Ngifuna ukubonga uNkulunkulu. Nceda ngibhale umthandazo wokubonga womuntu siqu."
     },
     "lifewheel": {
-      "title": "Life Wheel",
-      "desc": "How satisfied are you really?"
+      "title": "Isondo Lempilo",
+      "desc": "Uyanelisa kangakanani ngempela?"
     },
     "sevenwhys": {
-      "title": "7 Whys",
-      "desc": "Find the deepest root of your question",
-      "prompt": "I'd like to do the 7 Whys exercise. Here is my topic:"
+      "title": "7 Izizathu",
+      "desc": "Thola impande ejulile yombuzo wakho",
+      "prompt": "Ngifuna ukwenza umsebenzi wezi-7 izizathu. Nansi indaba yami:"
     },
     "anger": {
-      "title": "Anger",
-      "desc": "When you're about to explode",
-      "prompt": "I'm so angry and don't know what to do with my rage. What does the Bible say about anger and how to deal with it?"
+      "title": "Ukufutheka & Intukuthelo",
+      "desc": "Uma umuntu ecishe aqhume yintukuthelo",
+      "prompt": "Ngingase ngidinwe ngingazi ukuthi ngizoyaphi ngentukuthelo yami. Lithini iBhayibheli ngentukuthelo nokuthi ngingabhekana kanjani nayo?"
     },
     "shame": {
-      "title": "Shame & Guilt",
-      "desc": "When guilt is crushing you",
-      "prompt": "I feel so ashamed and guilty. What does the Bible say about guilt, forgiveness, and starting over?"
+      "title": "Ihlazo & Icala",
+      "desc": "Uma imizwa yecala ikufiphaza",
+      "prompt": "Nginamahloni kakhulu futhi ngizizwa nginecala. Lithini iBhayibheli ngecala, ukuthethelelwa kanye nesiqalo esisha?"
     },
     "burnout": {
-      "title": "Burnout",
-      "desc": "When you just can't go on",
-      "prompt": "I'm totally exhausted and burned out. I just can't anymore. What does the Bible say about rest and recovery?"
+      "title": "Ukugula ngokudla",
+      "desc": "Uma usukhathele ungenalutho",
+      "prompt": "Ngiqeda amandla. Ngingase ngingakwazi. Lithini iBhayibheli ngokuphumula?"
     },
     "illness": {
-      "title": "Illness",
-      "desc": "When a diagnosis changes everything",
-      "prompt": "I've received a difficult diagnosis and I'm scared. What does the Bible say about illness, healing, and hope?"
+      "title": "Ukugula",
+      "desc": "Uma ukuxilongwa kushintsha konke",
+      "prompt": "Ngiye ngathola ukuxilongwa okunzima futhi ngiyesaba. Lithini iBhayibheli ngobuthwa, ukuphila nethemba?"
     },
     "financial": {
-      "title": "Money Worries",
-      "desc": "When bills are piling up",
-      "prompt": "I have financial worries and don't know what to do. What does the Bible say about money, trust, and provision?"
+      "title": "Izinkinga Zemali",
+      "desc": "Uma izikweletu zicindezela",
+      "prompt": "Nginamaphaphu emali futhi angazi ukuthi ngizokwenzenjani. Lithini iBhayibheli ngemali, ukwethemba nokuhlinzekela?"
     },
     "meaningcrisis": {
-      "title": "Meaning Crisis",
-      "desc": "What's it all for?",
-      "prompt": "I'm wondering what's the point of it all. I'm in a meaning crisis. What does the Bible say about the meaning of life?"
+      "title": "Inselelo Yencazelo",
+      "desc": "Kungani konke lokhu?",
+      "prompt": "Ngiyazibuza, ukuthi kungani konke lokhu kufanele. Ngibhekene nenkinga yencazelo. Lithini iBhayibheli ngencazelo yokuphila?"
     },
     "selfdoubt": {
-      "title": "Self-Doubt",
-      "desc": "When you don't feel good enough",
-      "prompt": "I constantly doubt myself and don't feel good enough. What does the Bible say about my worth?"
+      "title": "Ukuzihlelela",
+      "desc": "Uma ungazizwa upholile",
+      "prompt": "Ngiye ngihlale ngingazithembi futhi ngingazizwa nganele. Lithini iBhayibheli ngentengo yami?"
     },
     "calling": {
-      "title": "Calling",
-      "desc": "What should I do with my life?",
-      "prompt": "I don't know what to do with my life. Help me find my calling — what does the Bible say?"
+      "title": "Ubizo",
+      "desc": "Kufanele ngiphenduke nani ngempilo yami?",
+      "prompt": "Angazi ukuthi ngizokwenzenjani ngempilo yami. Nceda ngithole ubizo lwami – lithini iBhayibheli ngalokhu?"
     },
     "faithdoubt": {
-      "title": "Faith Doubts",
-      "desc": "When your faith is shaking",
-      "prompt": "I have doubts about my faith and don't know if I can still believe. What does the Bible say about doubt?"
+      "title": "Ukungabaza Ngokholo",
+      "desc": "Uma ukholo luhamba",
+      "prompt": "Nginokungabaza ngokholo lwami futhi angazi ukuthi ngingakwazi yini ukukholwa. Lithini iBhayibheli ngokungabaza?"
     },
     "forgiveness": {
-      "title": "Forgiveness",
-      "desc": "When forgiving seems impossible",
-      "prompt": "I simply can't forgive someone. It hurts too much. What does the Bible say about forgiveness?"
+      "title": "Ukuthethelela",
+      "desc": "Uma ukuthethelela kubonakala kungenakwenzeka",
+      "prompt": "Angikwazi ukuthethelela umuntu. Kubuhlungu kakhulu. Lithini iBhayibheli ngokuthethelela?"
     },
     "familyconflict": {
-      "title": "Family Conflict",
-      "desc": "When family is at war",
-      "prompt": "There's a big conflict in my family. What does the Bible say about family peace and reconciliation?"
+      "title": "Ukungqubuzana Komndeni",
+      "desc": "Uma kukhona ukungqubuzana emndenini",
+      "prompt": "Kukhona ukungqubuzana okukhulu emndenini wami. Lithini iBhayibheli ngokuthula komndeni nokubuyisana?"
     },
     "envy": {
-      "title": "Envy",
-      "desc": "When others have it better",
-      "prompt": "I'm envious of others and constantly comparing myself. What does the Bible say about envy and contentment?"
+      "title": "Umona",
+      "desc": "Uma abanye behamba kangcono",
+      "prompt": "Nginomona kwabanye futhi ngihlale ngiziqhathanisa. Lithini iBhayibheli ngomona nokwaneliseka?"
     },
     "joy": {
-      "title": "Share Joy",
-      "desc": "When something wonderful happened",
-      "prompt": "Something wonderful happened to me and I want to share my joy! What does the Bible say about joy and gratitude?"
+      "title": "Yabelana Ngenjabulo",
+      "desc": "Uma kukhona okumangalisayo okwenzeke",
+      "prompt": "Kukhona okumangalisayo okwenzeke kimi futhi ngifuna ukwabelana ngenjabulo yami! Lithini iBhayibheli ngenjabulo nokubonga?"
     },
     "prayer": {
-      "title": "Prayer Request",
-      "desc": "Pray together",
-      "prompt": "I have a prayer request and would like to pray together. Join me in prayer."
+      "title": "Izicelo Zomthandazo",
+      "desc": "Ukuthandaza Ndawonye",
+      "prompt": "Nginokugqugquzela komthandazo futhi ngifuna ukuthandaza ndawonye. Ngiphelezela emthandazweni."
     },
     "bibleverse": {
-      "title": "Understand a Verse",
-      "desc": "Get a Bible passage explained",
-      "prompt": "I'd like to understand a Bible passage better. Can you help me put it in context?"
+      "title": "Qonda Ivesi",
+      "desc": "Ukuchazwa Kohlelo LweBhayibheli",
+      "prompt": "Ngifuna ukuqonda kangcono indawo yeBhayibheli. Ungangisiza kanjani ukulinganisa ekuvulekeni?"
     }
   },
   "lifeWheel": {
-    "title": "Your Life Wheel",
-    "intro": "Rate 8 life areas on a scale of 1-10. Discover where you stand — and receive biblical impulses for the area that needs attention.",
-    "start": "Get started",
-    "sliderHint": "Move the sliders — 1 = very unsatisfied, 10 = very satisfied",
-    "showResult": "Show result",
-    "average": "Average",
-    "weakestArea": "Greatest need",
-    "getImpulse": "Biblical impulse for {{area}}",
-    "reset": "Try again",
-    "prompt": "My life wheel shows that I scored only {{score}}/10 in the area of '{{area}}'. What does the Bible say about this area of life? Give me encouragement and practical impulses.",
+    "title": "Isondo lempilo yakho",
+    "intro": "Linganisa izigaba zempilo eziyi-8 esikalini esingu-1-10. Thola ukuthi umi kuphi — bese uthola ugqozi lweBhayibheli esigabeni esidinga ukunakwa.",
+    "start": "Qala Manje",
+    "sliderHint": "Hambisa izilawuli — 1 = angijabule kakhulu, 10 = ngijabule kakhulu",
+    "showResult": "Bonisa Umphumela",
+    "average": "Isilinganiso",
+    "weakestArea": "Isidingo Esikhulu Kakhulu",
+    "getImpulse": "Ugqozi lweBhayibheli olwenzelwe {{area}}",
+    "reset": "Yenza Futhi",
+    "prompt": "Isondo lami lempilo libonisa ukuthi nginesahluko esingu-{{area}} kuphela esingu-{{score}}/10. Lithini iBhayibheli ngalesi sici sempilo? Nginike ugqozi olukhuthazayo nolusebenzayo.",
     "areas": {
-      "health": "Health",
-      "relationships": "Relationships",
-      "career": "Career",
-      "spirituality": "Spirituality",
-      "finances": "Finances",
-      "family": "Family",
-      "leisure": "Leisure",
-      "growth": "Personal Growth"
+      "health": "Impilo",
+      "relationships": "Ubudlelwano",
+      "career": "Umsebenzi",
+      "spirituality": "Ukungcwele",
+      "finances": "Ezezimali",
+      "family": "Umndeni",
+      "leisure": "Isikhathi Sokuphumula",
+      "growth": "Ukukhula Komuntu Siqu"
     },
-    "save": "Save result",
-    "saved": "Saved!",
-    "history": "Previous results",
-    "noHistory": "No saved results yet.",
-    "backToNew": "New Life Wheel",
-    "backToList": "Back to list"
+    "save": "Londoloza Umphumela",
+    "saved": "Kuphelele!",
+    "history": "Imiphumela Eyedlule",
+    "noHistory": "Ayikho imiphumela elondoloziwe okwamanje.",
+    "backToNew": "Isondo Lempilo Elisha",
+    "backToList": "Buyela Kuhlu"
   },
   "church": {
-    "badge": "For Churches",
-    "heroTitle": "BibleBot for Your Church",
-    "heroSubtitle": "Accompany your congregation with biblical wisdom – digital, personal, and around the clock.",
-    "useCasesTitle": "Use Cases",
+    "badge": "Okwamabandla",
+    "heroTitle": "IBibleBot Yomphakathi Wakho",
+    "heroSubtitle": "Hambani namalungu omphakathi wenu ngokuhlakanipha kweBhayibheli – ngokwedijithali, ngasese futhi usuku lonke.",
+    "useCasesTitle": "Izindlela Zokusetshenziswa",
     "useCase": {
       "youth": {
-        "title": "Youth Ministry",
-        "desc": "Teens discover the Bible in their own way – interactive and without hesitation."
+        "title": "Umsebenzi Wobusha",
+        "desc": "Amatheena athola iBhayibheli ngendlela yawo – ngokusebenzisana nangaphandle kokwesaba."
       },
       "confirmation": {
-        "title": "Confirmation",
-        "desc": "Confirmands deepen Bible knowledge independently with personal guidance."
+        "title": "Isiqinisekiso",
+        "desc": "Abaqinisi baphatha ulwazi lweBhayibheli ngokuzimela ngokuqondisa komuntu siqu."
       },
       "pastoral": {
-        "title": "Pastoral Care",
-        "desc": "24/7 companionship as a complement to personal pastoral care."
+        "title": "Ukungcwele",
+        "desc": "Ukuphelelezela 24/7 njengesengezo ekwelulekweni komuntu siqu."
       },
       "bibleStudy": {
-        "title": "Bible Study",
-        "desc": "Impulses and discussion starters for groups and home circles."
+        "title": "Cwaningo LweBhayibheli",
+        "desc": "Imibono yezingxoxo nezithombe zamaqembu namasela asendlini."
       }
     },
-    "pricingTitle": "Amaphakeji okuxhasa",
-    "pricingSubtitle": "Sekela iBibleBot nesonto lakho ngephakeji lokuxhasa elifanele.",
-    "popular": "Popular",
-    "free": "Free",
-    "perYear": "year",
-    "contact": "Get in touch",
+    "pricingTitle": "Amaphakheji Okuxhasa",
+    "pricingSubtitle": "Sekela i-BibleBot nomphakathi wakho ngephakheji yokuxhasa efanelekile.",
+    "popular": "Kuthandwa",
+    "free": "Mahhala",
+    "perYear": "Unyaka",
+    "contact": "Xhumana Nathi",
     "tier": {
       "free": {
-        "name": "Imbewu yemastadi",
-        "size": "Ukufinyelela kwe-bot okuyisisekelo kuwo wonke amalungu omphakathi."
+        "name": "Imbewu Yesinapi",
+        "size": "Okwamabandla amancane & amasela asendlini (kufika kumalungu angu-50)"
       },
       "community": {
-        "name": "Umkhaphi",
-        "size": "Isonto likhonjwa njengomxhasi ku-website kanye nokufinyelela okungenamakhono."
+        "name": "Umngane Wendlela",
+        "size": "Okwamabandla anamalungu angu-50–200"
       },
       "gemeinde": {
-        "name": "Umakhi wamabhuloho",
-        "size": "I-logo ku-interface ye-bot, umbiko wokusebenzisa wanyanga zonke (ongaziwa)."
+        "name": "Umakhi Wamabhuloho",
+        "size": "Okwamabandla anamalungu angu-200–500"
       },
       "kirche": {
-        "name": "Indlu yokukhanya",
-        "size": "Ukuhlanganiswa kokuqukethwe kwakho (isib. i-archive yamasemoni), ukubambisana ngemephu yendlela, ukwesekwa okuhle kakhulu."
+        "name": "Isibani sendawo",
+        "size": "Okwamabandla amakhulu nezikhungo (amalungu angu-500+)"
       }
     },
     "features": {
-      "directoryEntry": "Directory listing",
-      "telegramGroup": "Telegram group",
-      "partnerPage": "Own partner page",
-      "badge": "Partner badge",
-      "qrFlyer": "Printable QR flyer",
-      "contactForm": "Contact form",
-      "pastorProfile": "Pastor profile",
-      "welcomeVideo": "Welcome video",
-      "analytics": "Analytics dashboard",
-      "prioritySupport": "Priority support",
-      "multipleProfiles": "Multiple profiles",
-      "customBranding": "Custom branding",
-      "apiAccess": "API access",
-      "accountManager": "Dedicated account manager"
+      "directoryEntry": "Ukungena Kwekhasi",
+      "telegramGroup": "Iqembu leTelegram",
+      "partnerPage": "Ikhasi Lomlingani Eliyilakho",
+      "badge": "Ibhaji Lomlingani",
+      "qrFlyer": "I-QR Flyer Yokup printa",
+      "contactForm": "Ifomu Lokuxhumana",
+      "pastorProfile": "Iphrofayela Yomfundisi/Umfundisi",
+      "welcomeVideo": "Ividiyo yokwamukela",
+      "analytics": "Idashbhodi Yokuhlaziya",
+      "prioritySupport": "Ukweseka Okubalulekile",
+      "multipleProfiles": "Amaphrofayela Amasiningi",
+      "customBranding": "Ukubeka uphawu okwenziwe ngokwezifiso",
+      "apiAccess": "Ukufinyelela Kwi-API",
+      "accountManager": "Umphathi Wamakhawunti Omuntu Siqu"
     },
-    "viewDirectory": "View church directory",
-    "directoryBadge": "Church Directory",
-    "directoryTitle": "Partner Churches",
-    "directorySubtitle": "Find a church near you that recommends BibleBot.",
-    "searchPlaceholder": "Search by city, name, or denomination...",
-    "noResults": "No churches in the directory yet.",
-    "becomePartner": "Become a partner →",
-    "notFound": "Church not found.",
-    "backToDirectory": "Back to directory",
-    "pastor": "Pastor",
-    "serviceTimes": "Service Times",
-    "startChat": "Start Chat",
-    "website": "Website",
-    "telegramGroup": "Telegram Group",
-    "contactTitle": "Contact {{name}}",
-    "contactName": "Your name (optional)",
-    "contactEmail": "Your email address",
-    "contactMessage": "Your message",
-    "contactSend": "Send message",
-    "contactSuccess": "Message sent! 🙏",
-    "contactSuccessDesc": "The church will get back to you.",
-    "recommendedBy": "Recommended by {{name}}",
-    "setup": "Ukumisa (kanye)",
+    "viewDirectory": "Buka uhla lwamabandla",
+    "directoryBadge": "Uhla lwamabandla",
+    "directoryTitle": "Amabandla Ahlanganisiwe",
+    "directorySubtitle": "Thola ibandla eduze nawe eliphakamisa i-BibleBot.",
+    "searchPlaceholder": "Sesha indawo, igama noma isonto...",
+    "noResults": "Ayikho amabandla kuluhla okwamanje.",
+    "becomePartner": "Yiba Umngane →",
+    "notFound": "Ibandla alitholakalanga.",
+    "backToDirectory": "Buyela Kuluhla",
+    "pastor": "Umfundisi",
+    "serviceTimes": "Izikhathi Zokukhonza",
+    "startChat": "Qala Ingxoxo",
+    "website": "Iwebhusayithi",
+    "telegramGroup": "Iqembu leTelegram",
+    "contactTitle": "Xhumana no-{{name}}",
+    "contactName": "Igama lakho (okungaphoqelekile)",
+    "contactEmail": "Ikheli lakho le-imeyili",
+    "contactMessage": "Umlayezo wakho",
+    "contactSend": "Thumela Umbiko",
+    "contactSuccess": "Umlayezo uthunyelwe! 🙏",
+    "contactSuccessDesc": "Ibandla lizoxhumana nawe.",
+    "recommendedBy": "Kusikiswe ngu-{{name}}",
+    "setup": "Ukumisa (kanye kuphela)",
     "form": {
-      "title": "Unentshisekelo? Xhumana nathi!",
-      "subtitle": "Sizophendula phakathi kwamahora angu-48.",
+      "title": "Unentshisekelo? Sibhalele!",
+      "subtitle": "Sizoxhumana nawe kungakapheli amahora angama-48.",
       "name": "Igama lakho",
-      "email": "Ikheli le-imeyili",
-      "churchName": "Igama lesonto",
-      "tier": "Iphakheji oyithandayo",
-      "tierPlaceholder": "Khetha iphakheji...",
+      "email": "Ikheli Le-imeyili",
+      "churchName": "Igama Lebandla",
+      "tier": "Ipakeji efiselekayo",
+      "tierPlaceholder": "Khetha ipakeji...",
       "message": "Umlayezo wakho",
-      "submit": "Thumela umbuzo",
-      "success": "Umbuzo uthunyelwe! Sizoxhumana nawe maduze. 🙏",
-      "error": "Iphutha lokuthumela. Zama futhi.",
-      "orgType": "Organization type",
-      "orgTypePlaceholder": "Select type...",
+      "submit": "Thumela Isicelo",
+      "success": "Isicelo Sithunyelwe! Sizoxhumana nawe ngokushesha. 🙏",
+      "error": "Iphutha ekuthumeleni. Sicela uzame futhi.",
+      "orgType": "Uhlobo Lwenhlangano",
+      "orgTypePlaceholder": "Khetha uhlobo...",
       "orgTypes": {
-        "church": "Church",
-        "careHome": "Care Home",
-        "seniorHome": "Retirement Home",
-        "hospital": "Hospital",
-        "prison": "Prison Chaplaincy",
-        "military": "Military Chaplaincy"
+        "church": "Ibandla",
+        "careHome": "Ikhaya Lokunakekela",
+        "seniorHome": "Ikhaya Labadala",
+        "hospital": "Isibhedlela",
+        "prison": "Ukungcwele Kwejele",
+        "military": "Ukungcwele Kwebutho"
       }
     },
-    "institutionsTitle": "Also for Institutions",
-    "institutionsSubtitle": "BibleBot supports not only churches – care homes, retirement homes, and hospitals also benefit from digital pastoral care.",
+    "institutionsTitle": "Okwezikhungo futhi",
+    "institutionsSubtitle": "I-BibleBot ayiphelezeli amabandla kuphela – kodwa nezindawo zokunakekelwa kwabantu abadala, izibhedlela kanye nokunakekelwa kwejele kuzuza ekunakekelweni kwedijithali.",
     "institution": {
       "careHome": {
-        "title": "Care Homes",
-        "desc": "Daily Bible impulses and companionship for residents – even when no chaplain is on site."
+        "title": "Izindawo Zokunakekelwa",
+        "desc": "Ogqozi Lwansuku Zonke LweBhayibheli kanye Nokuphelelezela Okubalulekile kwabahlali – ngisho noma engekho umfundisi."
       },
       "seniorHome": {
-        "title": "Retirement Homes",
-        "desc": "Familiar Bible verses and conversations for seniors – easily accessible via tablet or smartphone."
+        "title": "Izindawo Zabantu Abadala",
+        "desc": "Amavesi eBhayibheli ajwayelekile nezingxoxo zabantu abadala – kulula ukufinyelela nge-tablet noma i-smartphone."
       },
       "hospital": {
-        "title": "Hospitals",
-        "desc": "Comfort and spiritual support for patients in difficult times – available 24/7 at the bedside."
+        "title": "Izibhedlela",
+        "desc": "Ukunethezeka nokuphathwa ngokomoya kwabagulayo ezikhathini ezinzima – kutholakala 24/7 ebhedeni lokugula."
       },
       "prison": {
-        "title": "Prison Chaplaincy",
-        "desc": "Hope and spiritual support for inmates – a confidential companion around the clock."
+        "title": "Ukungcwele Kwejele",
+        "desc": "Ithemba nokuphathwa ngokomoya kwababejele – umngane othembekile wengxoxo usuku lonke."
       },
       "military": {
-        "title": "Military Chaplaincy",
-        "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
+        "title": "Ukungcwele Kwebutho",
+        "desc": "Ukuphelelezela ngokomoya kwamalungu ebutho – atholakala ngisho nasesivumelwaneni noma esikoleni."
       }
     }
   },
   "institutions": {
-    "badge": "For Institutions",
-    "heroTitle": "BibleBot for Your Institution",
-    "heroSubtitle": "Digital pastoral care for care homes, retirement homes, hospitals, and correctional facilities – personal, confidential, and around the clock.",
-    "typesTitle": "Who is BibleBot for?",
-    "useCasesTitle": "How BibleBot is Used",
-    "useCasesSubtitle": "Practical applications for daily life in your institution.",
-    "pricingTitle": "Patronage Packages",
-    "pricingSubtitle": "The same packages as for churches – adapted to institutional needs.",
-    "linkChurches": "Also available for churches",
+    "badge": "Okwamakhungo",
+    "heroTitle": "IBibleBot Yesikhungo Sakho",
+    "heroSubtitle": "Ukungcwele Okwedijithali Kwezindawo Zokunakekelwa, Izindawo Zabantu Abadala, Izibhedlela kanye Nokugcinwa Kwezinhlawsulo – Ngesiqu sokuqala, okuyimfihlo futhi usuku lonke.",
+    "seniorHint": {
+      "title": "Imodi yabantu abadala iyatholakala",
+      "desc": "Ifonti enkulu nokusebenza okulula – ilungele izakhamuzi ezindala.",
+      "cta": "Zama imodi yabantu abadala"
+    },
+    "typesTitle": "Okwakubani iBibleBot?",
+    "useCasesTitle": "I-BibleBot isetshenziswa kanje",
+    "useCasesSubtitle": "Izicelo ezithile zempilo yansuku zonke esikhungweni sakho.",
+    "pricingTitle": "Amaphakheji Okuxhasa",
+    "pricingSubtitle": "Amaphakheji afanayo njengamabandla – ahambisana nezidingo zezikhungo.",
+    "linkChurches": "Ikhona neyamabandla",
     "type": {
       "careHome": {
-        "title": "Care Homes",
-        "desc": "Daily Bible impulses and companionship for residents – even when no chaplain is on site."
+        "title": "Izindawo Zokunakekelwa",
+        "desc": "Ogqozi Lwansuku Zonke LweBhayibheli kanye Nokuphelelezela Okubalulekile kwabahlali – ngisho noma engekho umfundisi."
       },
       "seniorHome": {
-        "title": "Retirement Homes",
-        "desc": "Familiar Bible verses and conversations for seniors – easily accessible via tablet or smartphone."
+        "title": "Izindawo Zabantu Abadala",
+        "desc": "Amavesi eBhayibheli ajwayelekile nezingxoxo zabantu abadala – kulula ukufinyelela nge-tablet noma i-smartphone."
       },
       "hospital": {
-        "title": "Hospitals",
-        "desc": "Comfort and spiritual support for patients in difficult times – available 24/7 at the bedside."
+        "title": "Izibhedlela",
+        "desc": "Ukunethezeka nokuphathwa ngokomoya kwabagulayo ezikhathini ezinzima – kutholakala 24/7 ebhedeni lokugula."
       },
       "prison": {
-        "title": "Prison Chaplaincy",
-        "desc": "Hope and spiritual support for inmates – a confidential companion around the clock."
+        "title": "Ukungcwele Kwejele",
+        "desc": "Ithemba nokuphathwa ngokomoya kwababejele – umngane othembekile wengxoxo usuku lonke."
       },
       "military": {
-        "title": "Military Chaplaincy",
-        "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
+        "title": "Ukungcwele Kwebutho",
+        "desc": "Ukuphelelezela ngokomoya kwamalungu ebutho – atholakala ngisho nasesivumelwaneni noma esikoleni."
       }
     },
     "useCase": {
       "dailyImpulse": {
-        "title": "Daily Impulse",
-        "desc": "A Bible verse with reflection question every morning – lowers the barrier for spiritual conversations."
+        "title": "Umlayezo Wansuku Zonke",
+        "desc": "Njalo ekuseni ivesi leBhayibheli nombuzo wokuzindla – lehlisa isikali sokuxoxisana ngokomoya."
       },
       "companionship": {
-        "title": "Conversation Partner",
-        "desc": "BibleBot answers faith questions patiently and without time pressure – ideal for lonely hours."
+        "title": "Umngane",
+        "desc": "I-BibleBot iphendula imibuzo yokholo ngokubekezela nangaphandle kokuphoqelelwa esikhathini – ilungele izikhathi zokuzimela."
       },
       "accessibility": {
-        "title": "Easy Access",
-        "desc": "Large text, simple tablet interface – also for people with limited mobility."
+        "title": "Ukufinyelela Okulula",
+        "desc": "Ifonti enkulu, ukusebenza okulula nge-tablet – nasekubantu abanokukhubazeka."
       },
       "availability": {
-        "title": "24/7 Available",
-        "desc": "Spiritual companionship at night and on weekends – when no chaplain is available."
+        "title": "Kutholakala 24/7",
+        "desc": "Ukuphelelezela ngokomoya nasebusuku nangezimpelasonto – uma engekho umfundisi."
       }
     },
     "tierDesc": {
-      "free": "Basic access for residents and patients",
-      "community": "Mentioned as supporter, ad-free access",
-      "gemeinde": "Logo presence, monthly usage report",
-      "kirche": "Custom content, roadmap co-creation, premium support"
+      "free": "Ukufinyelela okuyisisekelo kwabahlali neziguli",
+      "community": "Ukukhulunywa njengomsekeli, ukufinyelela ngaphandle kokukhangisa",
+      "gemeinde": "Ukubonakala kwelogo, umbiko wokuphatha wenyanga",
+      "kirche": "Okuqukethwe okukhethekile, ukubamba iqhaza ekuhleleni, ukusekelwa okuphezulu"
     },
     "form": {
-      "title": "Interested? Get in touch!",
-      "subtitle": "We'll get back to you within 48 hours.",
-      "name": "Your name",
-      "email": "Email address",
-      "institutionName": "Institution name",
-      "type": "Type of institution",
-      "typePlaceholder": "Please select...",
-      "tier": "Preferred package",
-      "tierPlaceholder": "Choose package...",
-      "message": "Your message",
-      "submit": "Send inquiry",
-      "success": "Inquiry sent! We'll be in touch soon. 🙏",
-      "error": "Error sending. Please try again."
-    },
-    "seniorHint": {
-      "title": "Imodi yabadala iyatholakala",
-      "desc": "Umbhalo omkhulu kanye nokuzulazula okulula – kuhle kakhulu kwabadala.",
-      "cta": "Zama imodi yabadala"
+      "title": "Unentshisekelo? Xhumana Nathi!",
+      "subtitle": "Sizoxhumana nawe kungakapheli amahora angama-48.",
+      "name": "Igama lakho",
+      "email": "Ikheli Le-imeyili",
+      "institutionName": "Igama Lesikhungo",
+      "type": "Uhlobo Lwesikhungo",
+      "typePlaceholder": "Sicela ukhethe...",
+      "tier": "Ipakeji efiselekayo",
+      "tierPlaceholder": "Khetha ipakeji...",
+      "message": "Umlayezo wakho",
+      "submit": "Thumela Isicelo",
+      "success": "Isicelo Sithunyelwe! Sizoxhumana nawe ngokushesha. 🙏",
+      "error": "Iphutha ekuthumeleni. Sicela uzame futhi."
     }
-  },
-  "refer": {
-    "badge": "Share God's Word",
-    "title": "Recommend BibleBot",
-    "subtitle": "Know someone who could use encouragement? Share BibleBot – one message can make a difference.",
-    "whatsapp": "Share via WhatsApp",
-    "whatsappMsg": "Hey, I wanted to show you BibleBot – a free Bible companion that really knows the Bible and asks great questions. No login, anonymous, honest. Try it out: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
-    "telegram": "Share via Telegram",
-    "telegramMsg": "Hey, do you know BibleBot? A free personal Bible companion – honest, anonymous, no login needed. Check it out: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
-    "email": "Share via email",
-    "emailSubject": "This might interest you: BibleBot.Life",
-    "emailBody": "Hi!\n\nI wanted to show you BibleBot – a free Bible companion that really knows the Bible. No sign-up needed, completely anonymous.\n\nIt asks thoughtful questions, explains Bible passages in context and accompanies you honestly – even on difficult topics.\n\nTry it out: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nBest wishes",
-    "copy": "Copy link",
-    "copied": "Link copied! 📋",
-    "qr": "Or just show this QR code:"
-  },
-  "share": {
-    "label": "Share",
-    "shareVia": "Share via",
-    "copied": "Copied! 📋",
-    "copiedShort": "Copied!",
-    "copiedDesc": "Text copied to clipboard. Share it on WhatsApp, Instagram or wherever you like!",
-    "copyLink": "Copy text",
-    "error": "Copy failed",
-    "impulseTitle": "BibleBot – Impulse of the Day",
-    "chatTitle": "BibleBot – Thought of the Day",
-    "createImage": "Create image ✨",
-    "generating": "Creating…",
-    "imageReady": "Your image is ready to share!",
-    "shareImage": "Share image",
-    "download": "Save",
-    "imageError": "Image creation failed",
-    "imageErrorDesc": "The image could not be created. Please try again later.",
-    "imageSaved": "Text copied! 📋",
-    "imageSavedDesc": "Save the image and share it with the copied text on Instagram, WhatsApp or wherever you like!"
   }
 }
