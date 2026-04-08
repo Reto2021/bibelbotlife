@@ -1,33 +1,59 @@
 
 
-## Plan: Abo-Button & Toast-Texte optimieren
+## Rebranding-Plan: BibelBot → BibleBot.Life durchziehen
 
-### Analyse
+### Ist-Zustand
 
-Aktuell zeigt der Banner 3 separate kleine Buttons (Push, Telegram, SMS) – das ist visuell überladen und unklar. Besser: **ein einziger CTA-Button** im Banner, der beim Klick die Kanalwahl öffnet.
+Das Rebranding ist im Code **nicht konsistent** umgesetzt. Folgende Stellen verwenden noch alte Bezeichnungen:
+
+| Problem | Stellen |
+|---------|---------|
+| **Header zeigt "BibleBot"** statt "BibleBot.Life" | `Index.tsx` Zeile 70 |
+| **Dateiname `bibelbot-logo.png`** | `src/assets/bibelbot-logo.png` + 9 Import-Stellen |
+| **Telegram `meinbibelbot`** | 4 Dateien (DailyImpulse, Index, DailySubscribe, ChurchPartner) |
+| **localStorage-Keys mit `bibelbot-`** | `bibelbot-church`, `bibelbot-daily-subscribed`, `bibelbot-name`, `bibelbot-splash-shown` |
+| **DEFAULT_BOT_NAME = "BibleBot"** | `BibelBotChat.tsx` Zeile 65 |
+| **Komponente heisst `BibelBotChat`** | Dateiname + Exports |
 
 ### Änderungen
 
-**1. Toast-Texte in `de.json` anpassen**
-- `toastPushPreview`: "Push-Abo nicht im Preview" → "Benachrichtigungen nicht im Preview"
-- `toastPushPreviewDesc`: "Push-Benachrichtigungen funktionieren..." → "Benachrichtigungen funktionieren..."
-- `toastNotSupportedDesc`: "...keine Push-Benachrichtigungen" → "...keine Browser-Benachrichtigungen"
-- `pushHint`: "Push" raus aus dem Text
+**1. Header-Text korrigieren**
+- `Index.tsx` Zeile 70: `"BibleBot"` → `"BibleBot.Life"` (oder nur "BibleBot" mit ".Life" in kleinerer Schrift darunter, wie im Footer bereits)
 
-**2. Banner-UI in `DailyImpulse.tsx` umbauen**
+**2. Logo-Datei umbenennen**
+- `src/assets/bibelbot-logo.png` → `src/assets/biblebot-logo.png`
+- Alle 9 Import-Stellen aktualisieren (ChatHero, SplashScreen, Index, Login, ResetPassword, ForChurches, ForInstitutions, ChurchDirectory, Unsubscribe)
 
-Statt 3 Buttons im Banner → **ein einziger Button**: **"Inspo abonnieren"** (mit Bell-Icon)
+**3. Telegram-Link prüfen**
+- `https://t.me/meinbibelbot` — Ist der Bot tatsächlich umbenannt? Falls ja → neuen Link einsetzen. Falls nein → bleibt vorerst (Telegram-Bots können nicht umbenannt werden)
 
-Beim Klick: Banner expandiert und zeigt die 3 Kanal-Optionen (Benachrichtigung, Telegram, SMS) – wie bisher im expanded-Bereich.
+**4. localStorage-Keys migrieren (optional, Breaking Change)**
+- Keys wie `bibelbot-church`, `bibelbot-splash-shown` etc. sind intern und für User unsichtbar
+- Umbenennung optional, würde aber bestehende User-Sessions zurücksetzen
+- **Empfehlung**: Vorerst belassen, da rein technisch und nicht sichtbar
 
-Desktop-Banner wird dadurch aufgeräumter: ein klarer CTA statt 3 kleine Buttons.
+**5. Komponenten-/Dateinamen**
+- `BibelBotChat.tsx` → interne Benennung, nicht user-facing
+- **Empfehlung**: Belassen (Refactoring-Risiko ohne sichtbaren Nutzen)
+
+### Betroffene Dateien
 
 ```text
-Vorher:  [Benachrichtigung] [Telegram] [SMS]
-Nachher: [🔔 Inspo abonnieren]  →  klick  →  expandiert mit Kanalwahl
+src/assets/biblebot-logo.png        — Umbenannt
+src/pages/Index.tsx                  — Header-Text + Import
+src/components/ChatHero.tsx          — Import
+src/components/SplashScreen.tsx      — Import
+src/pages/Login.tsx                  — Import
+src/pages/ResetPassword.tsx          — Import
+src/pages/ForChurches.tsx            — Import
+src/pages/ForInstitutions.tsx        — Import
+src/pages/ChurchDirectory.tsx        — Import
+src/pages/Unsubscribe.tsx            — Import
 ```
 
-**3. Betroffene Dateien**
-- `src/i18n/locales/de.json` — Toast-Texte + neuer Key `impulse.subscribeButton`
-- `src/components/DailyImpulse.tsx` — Banner-Buttons durch einzelnen CTA ersetzen, der `isExpanded` triggert
+### Nicht ändern
+- `index.html` — bereits korrekt ("BibleBot.Life", "BibleBot – Your Personal Bible Companion")
+- `manifest.json` — bereits korrekt ("BibleBot")
+- localStorage-Keys — internes Detail, kein Rebranding-Effekt
+- Telegram-Link — abhängig vom Bot-Handle, nicht änderbar
 
