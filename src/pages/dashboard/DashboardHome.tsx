@@ -57,9 +57,11 @@ export default function DashboardHome() {
           <p className="text-sm text-muted-foreground">
             Erstelle deinen ersten Gottesdienst, um loszulegen.
           </p>
-          <Button className="mt-4">
-            <Plus className="h-4 w-4 mr-2" />
-            Ersten Gottesdienst erstellen
+          <Button className="mt-4" asChild>
+            <Link to="/dashboard/editor/new">
+              <Plus className="h-4 w-4 mr-2" />
+              Ersten Gottesdienst erstellen
+            </Link>
           </Button>
         </CardContent>
       </Card>
