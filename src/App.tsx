@@ -113,6 +113,13 @@ const App = () => {
                   <Route path="/reset-password" element={<ResetPassword />} />
                   <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>}>
                     <Route index element={<DashboardHome />} />
+                    <Route path="editor/:id" element={<ServiceEditor />} />
+                    <Route path="services" element={<ServicesCalendar />} />
+                    <Route path="resources" element={<ResourceLibrary />} />
+                    <Route path="series" element={<SeriesPage />} />
+                    <Route path="records" element={<RecordsPage />} />
+                    <Route path="team" element={<TeamPage />} />
+                    <Route path="settings" element={<SettingsPage />} />
                   </Route>
                   <Route path="*" element={<NotFound />} />
                 </Routes>
