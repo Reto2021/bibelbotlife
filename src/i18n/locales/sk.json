@@ -1,296 +1,718 @@
 {
   "nav": {
-    "startNow": "Začni"
+    "startNow": "Začať teraz"
   },
-  "loader": "Načítanie…",
+  "loader": "Načítava sa…",
   "hero": {
     "badge": {
       "noLogin": "Bez prihlásenia",
-      "noData": "Bez údajov",
-      "noJudgment": "Bez súdenia"
+      "noData": "Žiadne dáta",
+      "noJudgment": "Žiadne súdenie"
     },
     "title1": "Biblia.",
-    "title2": " Nanovo premyslená.",
-    "subtitle": "BibleBot pozná Bibliu – a kladie správne otázky. Nie je to človek, ale úprimný spoločník. Pre zmysluplné rozhovory, hlboké otázky a skutočné impulzy.",
-    "ctaTelegram": "Začni cez Telegram",
+    "title2": " Prehodnotená.",
+    "subtitle": "Váš BibleBot pozná Bibliu – a kladie správne otázky. Nie je to človek, ale úprimný spoločník. Pre dobré rozhovory, hlboké otázky a skutočné impulzy.",
+    "ctaTelegram": "Začať cez Telegram",
     "ctaMore": "Zistiť viac",
-    "quote": "\"Come to me, all you who are weary and burdened, and I will give you rest.\"",
-    "quoteRef": "– Matthew 11:28"
+    "quote": "«Poďte ku mne všetci, ktorí sa namáhate a ste zaťažení; ja vám dám odpočinok.»",
+    "quoteRef": "– Matúš 11,28"
   },
   "impulse": {
-    "loading": "Loading daily impulse...",
-    "label": "Impulse of the Day",
-    "deepDive": "What does this mean for me?",
-    "explore": "Read full passage"
+    "loading": "Denný impulz sa načítava...",
+    "label": "Impulz dňa",
+    "deepDive": "Čo to pre mňa znamená?",
+    "explore": "Prečítať celý úsek"
   },
   "features": {
-    "sectionTitle": "How BibleBot accompanies you",
-    "sectionSubtitle": "Discover the many ways BibleBot can walk alongside you",
+    "sectionTitle": "Ako vás váš BibleBot sprevádza",
+    "sectionSubtitle": "Objavte rôznorodé možnosti, ako vás váš BibleBot môže sprevádzať",
     "bible": {
-      "title": "Bible passages & interpretation",
-      "desc": "Ask \"What does the Bible say about...?\" and receive relevant verses with context and clear explanation."
+      "title": "Biblické pasáže a výklad",
+      "desc": "Opýtajte sa „Čo hovorí Biblia o...?“ a získajte vhodné verše s kontextom a zrozumiteľným vysvetlením."
     },
     "goals": {
-      "title": "Life planning & goals",
-      "desc": "Discover your calling, set concrete goals, and find out what God might have in store for you."
+      "title": "Životné plánovanie a stanovovanie cieľov",
+      "desc": "Objavte svoje povolanie, stanovte si konkrétne ciele a zistite, čo s vami Boh môže mať v pláne."
     },
     "self": {
-      "title": "Finding yourself",
-      "desc": "Recognize your gifts, strengths, and longings – and what your heart truly needs."
+      "title": "Nájdite cestu k sebe samému",
+      "desc": "Rozpoznajte svoje dary, silné stránky a túžby – a to, čo vaše srdce skutočne potrebuje."
     },
     "faith": {
-      "title": "Faith journey & finding Christ",
-      "desc": "Whether seeking, doubting, or deepening – BibleBot accompanies you on your personal path."
+      "title": "Cesta viery a nájdenie Krista",
+      "desc": "Či už hľadáte, pochybujete alebo prehlbujete – váš BibleBot vás sprevádza na vašej osobnej ceste."
     },
     "daily": {
-      "title": "Daily impulses & church year",
-      "desc": "Start your day with impulses and let BibleBot guide you through Advent, Lent, and holidays."
+      "title": "Denné impulzy a cirkevný rok",
+      "desc": "Začnite svoj deň s impulzmi a nechajte sa sprevádzať adventom, pôstom a sviatkami."
     },
     "groups": {
-      "title": "Groups & communities",
-      "desc": "Perfect for Bible study groups, church communities, and shared devotions."
+      "title": "Skupiny a spoločenstvá",
+      "desc": "Ideálne pre biblické krúžky, cirkevné skupiny a spoločné pobožnosti."
     }
   },
   "coaching": {
-    "badge": "Methodology",
-    "title": "Not just a chatbot – genuine companionship",
-    "subtitle": "BibleBot combines biblical wisdom with proven coaching methods and Positive Psychology.",
-    "journeyTitle": "Personal companionship",
-    "journeyDesc": "BibleBot accompanies you as long as you wish – in free conversation or with an optional 21-day structure.",
-    "week1": "Week 1: Arriving",
-    "week1Desc": "Building trust, listening, understanding your situation. Where are you? What concerns you?",
-    "week2": "Week 2: Deepening",
-    "week2Desc": "Recognizing patterns, clarifying desires, deepening biblical impulses. What do you really want?",
-    "week3": "Week 3: Acting",
-    "week3Desc": "Taking concrete steps, setting goals, initiating change. What's your next step?",
-    "openQuestionsTitle": "Open questions instead of quick answers",
-    "openQuestionsDesc": "BibleBot doesn't give cheap advice. Instead, it asks the questions that truly matter:",
-    "openQ1": "\"What's really behind this desire?\"",
-    "openQ2": "\"How would you know something has changed?\"",
-    "openQ3": "\"What would be a first small step?\"",
-    "honestTitle": "Honest instead of toxic positivity",
-    "honestDesc": "No \"It'll be fine!\" and no sugarcoating. BibleBot is empathetic AND honest:",
-    "honest1": "Also addresses uncomfortable Bible passages",
-    "honest2": "Challenges you to self-reflection",
-    "honest3": "Distinguishes comfort from avoidance",
-    "scienceTitle": "Scientifically grounded",
+    "badge": "Metodika",
+    "title": "Nie je to len chatbot – je to skutočný sprievodca",
+    "subtitle": "Váš BibleBot spája biblickú múdrosť s osvedčenými koučovacími metódami a pozitívnou psychológiou.",
+    "journeyTitle": "Osobné sprevádzanie",
+    "journeyDesc": "Váš BibleBot vás sprevádza tak dlho, ako chcete – vo voľnom rozhovore alebo s voliteľnou 21-dňovou štruktúrou.",
+    "week1": "Týždeň 1: Príchod",
+    "week1Desc": "Budovanie dôvery, počúvanie, pochopenie vašej situácie. Kde ste? Čo vás trápi?",
+    "week2": "Týždeň 2: Prehĺbenie",
+    "week2Desc": "Rozpoznávanie vzorcov, objasňovanie želaní, prehlbovanie biblických impulzov. Čo naozaj chcete?",
+    "week3": "Týždeň 3: Konanie",
+    "week3Desc": "Podniknutie konkrétnych krokov, formulovanie cieľov, iniciovanie zmien. Aký je váš ďalší krok?",
+    "openQuestionsTitle": "Otvorené otázky namiesto rýchlych odpovedí",
+    "openQuestionsDesc": "Váš BibleBot vám nedáva lacné rady. Namiesto toho kladie otázky, ktoré sú skutočne dôležité:",
+    "openQ1": "«Čo sa vlastne skrýva za týmto želaním?»",
+    "openQ2": "«Podľa čoho by ste si všimli, že sa niečo zmenilo?»",
+    "openQ3": "«Aký by bol prvý malý krok?»",
+    "honestTitle": "Úprimný namiesto toxicky pozitívneho",
+    "honestDesc": "Žiadne „To bude dobré!“ a žiadne prikrášľovanie. Váš BibleBot je empatický A úprimný:",
+    "honest1": "Pomenúva aj nepríjemné biblické pasáže",
+    "honest2": "Vyzýva k sebareflexii",
+    "honest3": "Rozlišuje útechu od potláčania",
+    "scienceTitle": "Vedecky podložené",
     "perma": {
-      "name": "PERMA Model",
+      "name": "PERMA model",
       "author": "Seligman",
-      "desc": "Positive emotions, meaning & growth"
+      "desc": "Pozitívne emócie, zmysel a rast"
     },
     "logo": {
-      "name": "Logotherapy",
+      "name": "Logoterapia",
       "author": "Frankl",
-      "desc": "Finding meaning in difficult times"
+      "desc": "Hľadanie zmyslu v ťažkých časoch"
     },
     "gratitude": {
-      "name": "Gratitude",
+      "name": "Vďačnosť",
       "author": "Emmons",
-      "desc": "Research-based gratitude practice"
+      "desc": "Výskumom podložená prax vďačnosti"
     },
     "forgiveness": {
-      "name": "Forgiveness",
+      "name": "Odpustenie",
       "author": "Worthington",
-      "desc": "REACH model for forgiveness processes"
+      "desc": "REACH model pre procesy odpustenia"
     },
-    "renameTip": "💡 You can give your BibleBot a personal name – so it truly becomes <strong>your</strong> companion."
+    "renameTip": "💡 Svojmu BibleBotovi môžete dať vlastné meno – aby sa stal skutočne <strong>vaším</strong> spoločníkom."
   },
   "discover": {
-    "badge": "For the curious",
-    "title": "Rediscover faith – without pressure",
-    "subtitle": "More and more people are asking the big questions anew. BibleBot.Life is for everyone who wants to (re)discover faith – honestly, without pathos, and without church jargon.",
+    "badge": "Pre zvedavých",
+    "title": "Objavte vieru nanovo – bez tlaku",
+    "subtitle": "Čoraz viac ľudí si nanovo kladie veľké otázky. BibleBot.Life je pre všetkých, ktorí chcú (znovu) objaviť vieru – úprimne, bez pátosu a bez cirkevného žargónu.",
     "doubt": {
-      "title": "You doubt?",
-      "text": "Good. Doubt isn't a flaw – it's the beginning of honest faith. The Bible is full of people who wrestled."
+      "title": "Pochybujete?",
+      "text": "To je dobre. Pochybnosti nie sú chyba – sú začiatkom úprimnej viery. Biblia je plná ľudí, ktorí zápasili."
     },
     "search": {
-      "title": "You're searching?",
-      "text": "Maybe you don't even know what for. That's perfectly fine. BibleBot helps you ask the right questions – instead of delivering quick answers."
+      "title": "Hľadáte?",
+      "text": "Možno ani neviete presne, čo. To je úplne v poriadku. Váš BibleBot vám pomôže klásť správne otázky – namiesto toho, aby poskytoval rýchle odpovede."
     },
     "deepen": {
-      "title": "You want to go deeper?",
-      "text": "You already believe, but want to understand more? Discover the depth of the Bible – historical, personal, surprisingly relevant."
+      "title": "Chcete prehĺbiť?",
+      "text": "Už veríte, ale chcete viac pochopiť? Objavte hĺbku Biblie – historicky, osobne, prekvapivo relevantne."
     },
-    "quote": "\"Ask, and it will be given to you; seek, and you will find; knock, and the door will be opened.\"",
-    "quoteRef": "– Matthew 7:7",
-    "quoteText": "Many of us don't talk much about faith. That's okay. But those with questions deserve honest answers – without sermons, without membership, without ulterior motives."
+    "quote": "«Klopať, a otvorí sa vám.»",
+    "quoteRef": "– Matúš 7,7",
+    "quoteText": "Vo Švajčiarsku sa o viere veľa nehovorí. To ani nemusí byť. Ale kto má otázky, zaslúži si úprimné odpovede – bez kázania, bez členstva, bez postranných úmyslov."
   },
   "subscribe": {
-    "title": "Daily Bible impulse",
-    "subtitle": "Every morning at 7:00 AM – a verse, a thought, a good start.",
-    "firstName": "Your first name",
-    "firstNameOptional": "(optional)",
-    "firstNamePlaceholder": "e.g. Thomas",
-    "firstNameHint": "So we can greet you personally.",
-    "channelLabel": "How would you like to receive the impulse?",
+    "title": "Denný biblický impulz",
+    "subtitle": "Každé ráno o 07:00 – verš, myšlienka, dobrý začiatok.",
+    "firstName": "Vaše krstné meno",
+    "firstNameOptional": "(voliteľné)",
+    "firstNamePlaceholder": "napr. Tomáš",
+    "firstNameHint": "Aby sme vás mohli osobne pozdraviť.",
+    "channelLabel": "Ako chcete dostávať impulz?",
     "push": "Push",
-    "pushDesc": "Browser notification",
+    "pushDesc": "Upozornenie prehliadača",
     "telegram": "Telegram",
-    "telegramDesc": "Message via Telegram",
+    "telegramDesc": "Správa cez Telegram",
     "sms": "SMS",
-    "smsDesc": "Text to your phone",
-    "phoneLabel": "Phone number",
-    "phonePlaceholder": "+1 555 123 4567",
-    "phoneHint": "With country code, e.g. +1 for the US.",
-    "telegramHint": "Click \"Subscribe\" – you'll be redirected to Telegram. Start the bot and type <strong>/daily</strong> to activate the daily impulse.",
-    "pushHint": "After clicking \"Subscribe\", your browser will ask for notification permission. Please allow it to receive the impulse.",
-    "submit": "Subscribe",
-    "submitting": "Subscribing...",
-    "footNote": "No login required. Cancel anytime.",
-    "successTitle": "You're subscribed! 🙏",
-    "successText": "Starting tomorrow at 7:00 AM, you'll receive your personal Bible impulse.",
-    "toastTelegram": "Telegram opened 🙏",
-    "toastTelegramDesc": "Start the bot and type /daily to activate the daily impulse.",
-    "toastSuccess": "Subscribed! 🙏",
-    "toastSuccessDesc": "You'll receive your daily impulse starting tomorrow.",
-    "toastPushPreview": "Push subscription not available in preview",
-    "toastPushPreviewDesc": "Push notifications only work on the published site.",
-    "toastNotSupported": "Not supported",
-    "toastNotSupportedDesc": "Your browser does not support push notifications.",
-    "toastPermDenied": "Permission denied",
-    "toastPermDeniedDesc": "Please allow notifications in your browser settings.",
-    "toastError": "Error",
-    "toastErrorDesc": "Please try again later."
+    "smsDesc": "SMS na váš mobil",
+    "phoneLabel": "Telefónne číslo",
+    "phonePlaceholder": "+421 9xx xxx xxx",
+    "phoneHint": "S predvoľbou krajiny, napr. +421 pre Slovensko.",
+    "telegramHint": "Kliknite na „Prihlásiť sa“ – budete presmerovaní na Telegram. Tam spustite bota a napíšte <strong>/daily</strong>, aby ste aktivovali denný impulz.",
+    "pushHint": "Po kliknutí na „Prihlásiť sa“ vás prehliadač požiada o povolenie na upozornenia. Prosím, povoľte ich, aby ste dostávali impulz.",
+    "submit": "Prihlásiť sa",
+    "submitting": "Prihlasuje sa...",
+    "footNote": "Nie je potrebné prihlásenie. Kedykoľvek sa môžete odhlásiť.",
+    "successTitle": "Ste prihlásení! 🙏",
+    "successText": "Od zajtra o 07:00 budete dostávať svoj osobný biblický impulz.",
+    "toastTelegram": "Telegram otvorený 🙏",
+    "toastTelegramDesc": "Spustite bota a napíšte /daily, aby ste aktivovali denný impulz.",
+    "toastSuccess": "Prihlásené! 🙏",
+    "toastSuccessDesc": "Od zajtra budete dostávať svoj denný impulz.",
+    "toastPushPreview": "Push predplatné nie je v náhľade",
+    "toastPushPreviewDesc": "Push notifikácie fungujú iba na publikovanej stránke.",
+    "toastNotSupported": "Nepodporované",
+    "toastNotSupportedDesc": "Váš prehliadač nepodporuje push notifikácie.",
+    "toastPermDenied": "Povolenie zamietnuté",
+    "toastPermDeniedDesc": "Prosím, povoľte upozornenia v nastaveniach prehliadača.",
+    "toastError": "Chyba",
+    "toastErrorDesc": "Prosím, skúste to neskôr znova."
   },
   "faq": {
-    "badge": "FAQ",
-    "title": "What you should know about BibleBot",
-    "subtitle": "Transparency matters – especially for theologians, pastors, and critical thinkers.",
-    "q1": "What makes BibleBot different from ChatGPT & Co.?",
-    "q1Generic": "Generic chatbots:",
+    "badge": "Často kladené otázky",
+    "title": "Čo by ste mali vedieť o svojom BibleBotovi",
+    "subtitle": "Transparentnosť je pre nás dôležitá – najmä voči teológom, duchovným a kritickým mysliteľom.",
+    "q1": "Čím sa váš BibleBot líši od ChatGPT & Co.?",
+    "q1Generic": "Generické chatboty:",
     "q1GenericItems": [
-      "Superficial Bible quotes without context",
-      "No pastoral guardrails",
-      "Avoids uncomfortable texts",
-      "No crisis intervention",
-      "Mixes Bible with esotericism",
-      "No follow-up questions – just confirmation"
+      "Povrchné biblické citáty bez kontextu",
+      "Žiadne pastoračné zábrany",
+      "Vyhýba sa nepríjemným textom",
+      "Žiadna krízová intervencia",
+      "Mieša Bibliu s ezoterikou",
+      "Žiadne doplňujúce otázky – len potvrdenie"
     ],
     "q1Bot": "BibleBot.Life:",
     "q1BotItems": [
-      "5 recognized translations – including uncomfortable passages",
-      "Guardrails AND challenging companionship",
-      "Follow-up questions for self-reflection",
-      "Crisis referrals (emergency helplines)",
-      "Exclusively Christian theology",
-      "Promotes critical thinking as faith maturity"
+      "5 uznávaných prekladov – aj nepríjemné pasáže",
+      "Zábrany A náročná sprievodná služba",
+      "Doplňujúce otázky pre sebareflexiu",
+      "Odkazy na krízové linky (Tel. 143 / 147)",
+      "Výhradne kresťanská teológia",
+      "Podporuje kritické myslenie ako zrelosť viery"
     ],
-    "q2": "Which Bible translations are included?",
-    "q2Intro": "BibleBot works ecumenically with the major German-language Bible editions:",
-    "q2Outro": "All Bible passages include source citations and historical context.",
-    "q3": "What scientific foundations are behind it?",
-    "q3Intro": "The companionship is based on peer-reviewed research in Positive Psychology:",
-    "q4": "How does BibleBot ensure pastoral safety?",
+    "q2": "Aké biblické preklady sú uložené?",
+    "q2Intro": "Váš BibleBot ekumenicky pracuje s hlavnými nemecky hovoriacimi vydaniami Biblie:",
+    "q2Outro": "Všetky biblické pasáže sú uvedené s odkazom na zdroj a historickým kontextom.",
+    "q3": "Aké vedecké základy sú za tým?",
+    "q3Intro": "Sprevádzanie je založené na recenzovanom výskume pozitívnej psychológie:",
+    "q4": "Ako váš BibleBot zabezpečuje pastoračnú bezpečnosť?",
     "q4Items": [
-      "Suicidal thoughts or crisis → immediate referral to emergency helplines",
-      "No psychological or medical diagnoses",
-      "Respect without arbitrariness – clear biblical positions are taken",
-      "Empathy AND honesty – uncomfortable topics are addressed",
-      "Follow-up questions for self-reflection instead of cheap validation",
-      "No toxic positivity – genuine, honest companionship",
-      "Openly names tensions and difficult texts"
+      "Pri samovražedných myšlienkach alebo krízach → okamžité presmerovanie na Dargebotene Hand (143) a Pro Juventute (147)",
+      "Žiadne psychologické ani medicínske diagnózy",
+      "Rešpekt bez ľubovôle – zaujímajú sa jasné biblické pozície",
+      "Empatia A úprimnosť – riešia sa aj nepríjemné témy",
+      "Doplňujúce otázky pre sebareflexiu namiesto lacného potvrdenia",
+      "Žiadna toxická pozitivita – skutočné, úprimné sprevádzanie",
+      "Otvorene pomenúva napätia a ťažké texty"
     ],
-    "q5": "Is BibleBot tied to a specific denomination?",
-    "q5Answer": "No. BibleBot is ecumenically oriented and respects Reformed, Catholic, Free Church, and other Christian traditions equally. When there are denominational differences in interpretation, various perspectives are presented transparently – without favoring any tradition.",
-    "q6": "Does BibleBot replace pastoral care or therapy?",
-    "q6Answer": "No. BibleBot is a digital tool for personal Bible reading and reflection. It does not replace professional pastoral care, theological counseling, or psychological therapy. In serious crises, BibleBot always refers to qualified resources.",
-    "q7": "Isn't BibleBot just a 'feel-good bot'?",
-    "q7Answer": "No. BibleBot comforts where comfort is needed – but it also challenges. Spiritual growth requires friction. BibleBot asks uncomfortable follow-up questions, names difficult Bible texts (Job, Lament Psalms, prophetic criticism), and doesn't shy away from topics like justice, repentance, and responsibility. The prophetic tradition was never comfortable – and neither is BibleBot.",
-    "q8": "Who is behind BibleBot and how is it funded?",
-    "q8Answer": "BibleBot.Life is a private, non-commercial project. It's run on a volunteer basis and funded exclusively through voluntary donations. There's no advertising, no data sales, and no paid features. All donations go directly to covering operating costs (infrastructure, hosting, development). Since BibleBot is a private project, donations are not tax-deductible.",
-    "q9": "How does BibleBot handle my data?",
-    "q9Answer": "BibleBot stores no personal data and no chat histories. Every conversation is anonymous. There's no login, no tracking, and no sharing of data with third parties. Usage is completely anonymous."
+    "q5": "Je váš BibleBot viazaný na konfesiu?",
+    "q5Answer": "Nie. Váš BibleBot je ekumenicky orientovaný a rovnako rešpektuje reformované, katolícke, slobodné cirkevné a iné kresťanské tradície. Pri konfesionálne odlišných výkladoch sú rôzne perspektívy transparentne prezentované – bez uprednostňovania jednej tradície.",
+    "q6": "Nahrádza váš BibleBot pastoračnú starostlivosť alebo terapiu?",
+    "q6Answer": "Nie. Váš BibleBot je digitálny nástroj pre osobné čítanie Biblie a reflexiu. Nenahrádza profesionálnu pastoračnú starostlivosť, teologické poradenstvo ani psychologickú terapiu. V prípade vážnych kríz váš BibleBot vždy odkazuje na kvalifikované kontaktné miesta.",
+    "q7": "Nie je váš BibleBot len „bot pre dobrý pocit“?",
+    "q7Answer": "Nie. Váš BibleBot utešuje tam, kde je útecha potrebná – ale aj vyzýva. Duchovný rast potrebuje trenie. Váš BibleBot kladie nepríjemné doplňujúce otázky, pomenúva ťažké biblické texty (Jób, žalmy nárekov, prorocká kritika) a nebojí sa tém ako spravodlivosť, pokánie a zodpovednosť. Prorocká tradícia nikdy nebola pohodlná – a váš BibleBot tiež nie.",
+    "q8": "Kto stojí za vaším BibleBotom a ako je financovaný?",
+    "q8Answer": "BibleBot.Life je súkromný, nekomerčný projekt. Je prevádzkovaný dobrovoľne a financovaný výhradne z dobrovoľných darov. Neexistuje žiadna reklama, žiadny predaj dát a žiadne platené funkcie. Všetky dary idú priamo na pokrytie prevádzkových nákladov (infraštruktúra, hosting, vývoj). Keďže BibleBot funguje ako súkromný projekt, dary nie sú daňovo odpočítateľné.",
+    "q9": "Ako váš BibleBot zaobchádza s mojimi údajmi?",
+    "q9Answer": "Váš BibleBot neukladá žiadne osobné údaje ani históriu chatu. Každý rozhovor je anonymný. Neexistuje žiadne prihlásenie, žiadne sledovanie a žiadne zdieľanie údajov s tretími stranami. Používanie je úplne anonymné."
   },
   "donate": {
-    "badge": "Support BibleBot",
-    "title": "Help keep BibleBot free",
-    "subtitle": "BibleBot is a passion project – no ads, no subscriptions, no hidden costs. To keep it that way, I rely on voluntary donations. Every contribution helps cover the ongoing costs for operations and infrastructure.",
-    "bankTitle": "Donate via bank transfer",
-    "bankSubtitle": "Every amount counts – thank you! 🙏",
-    "recipient": "Recipient",
-    "bank": "Bank",
-    "purpose": "Reference",
-    "purposeValue": "Donation BibleBot",
-    "note": "BibleBot.Life is operated as a private project. Donations are therefore not tax-deductible."
+    "badge": "Podporte svojho BibleBota",
+    "title": "Pomôžte, aby váš BibleBot zostal zadarmo",
+    "subtitle": "Váš BibleBot je projekt srdca – bez reklám, bez predplatného, bez skrytých nákladov. Aby to tak zostalo, som odkázaný na dobrovoľné dary. Každý príspevok pomáha pokryť prevádzkové náklady a náklady na infraštruktúru.",
+    "bankTitle": "Darujte bankovým prevodom",
+    "bankSubtitle": "Každá suma sa počíta – srdečná vďaka! 🙏",
+    "recipient": "Príjemca",
+    "bank": "Banka",
+    "purpose": "Účel platby",
+    "purposeValue": "Dar BibleBot",
+    "note": "BibleBot.Life je prevádzkovaný ako súkromný projekt. Dary preto nie sú daňovo odpočítateľné."
+  },
+  "refer": {
+    "badge": "Zdieľajte Božie slovo",
+    "title": "Odporučte BibleBot ďalej",
+    "subtitle": "Poznáte niekoho, kto práve potrebuje povzbudenie? Zdieľajte BibleBot – jedna správa môže veľa zmeniť.",
+    "whatsapp": "Zdieľať cez WhatsApp",
+    "whatsappMsg": "Ahoj, chcel som ti ukázať BibleBot – bezplatného biblického sprievodcu, ktorý pozná Bibliu a kladie naozaj dobré otázky. Bez prihlásenia, anonymný, úprimný. Skús to: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "telegram": "Zdieľať cez Telegram",
+    "telegramMsg": "Ahoj, poznáš už BibleBot? Bezplatný osobný biblický sprievodca – úprimný, anonymný, bez prihlásenia. Pozri sa: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "email": "Zdieľať cez e-mail",
+    "emailSubject": "Toto by ťa mohlo zaujímať: BibleBot.Life",
+    "emailBody": "Ahoj!\n\nChcel som ti ukázať BibleBot – bezplatného biblického sprievodcu, ktorý naozaj pozná Bibliu. Nie je potrebné sa prihlasovať, je úplne anonymný.\n\nKladie dobré doplňujúce otázky, vysvetľuje biblické pasáže v kontexte a sprevádza ťa úprimne – aj pri ťažkých témach.\n\nSkús to: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nS pozdravom",
+    "copy": "Kopírovať odkaz",
+    "copied": "Odkaz skopírovaný! 📋",
+    "qr": "Alebo jednoducho ukážte tento QR kód:"
   },
   "cta": {
-    "title": "You don't have to go through this alone",
-    "subtitle": "Just tell BibleBot what's on your mind. No login, no cost, no judgment – just honest companionship and the wisdom of the Bible.",
-    "button": "Start a conversation"
+    "title": "Nemusíte to prekonávať sami",
+    "subtitle": "Jednoducho napíšte svojmu BibleBotovi, čo vás trápi. Žiadne prihlásenie, žiadne náklady, žiadne súdenie – len úprimné sprevádzanie a múdrosť Biblie.",
+    "button": "Začať rozhovor teraz"
   },
   "footer": {
-    "tagline": "Váš osobný spoločník pre život s Bibliou",
-    "disclaimer": "BibleBot.Life is a digital tool and does not replace professional pastoral care, theological counseling, or psychological therapy. In acute crises, please contact your local emergency helpline.",
-    "impressum": "Imprint",
-    "notes": "Notes",
-    "private": "Private, non-commercial project",
-    "noChat": "No storage of chat data",
-    "noTax": "Donations are not tax-deductible",
-    "datenschutz": "Privacy Policy",
-    "love": "With ❤️ for everyone wondering what Christ thinks.",
-    "forChurches": "For Churches"
+    "tagline": "Váš osobný sprievodca pre život s Bibliou",
+    "disclaimer": "BibleBot.Life je digitálny nástroj a nenahrádza profesionálnu pastoračnú starostlivosť, teologické poradenstvo ani psychologickú terapiu. V prípade akútnych kríz sa obráťte na Dargebotene Hand (tel. 143) alebo Pro Juventute (tel. 147).",
+    "impressum": "Impresum",
+    "notes": "Poznámky",
+    "private": "Súkromný, nekomerčný projekt",
+    "noChat": "Žiadne ukladanie chatových dát",
+    "noTax": "Dary nie sú daňovo odpočítateľné",
+    "datenschutz": "Ochrana údajov",
+    "love": "S ❤️ pre všetkých, ktorí sa pýtajú, čo si myslí Kristus.",
+    "forChurches": "Pre cirkvi"
   },
   "chat": {
-    "welcome": "Welcome! 🤗\n\nI'm your BibleBot – your personal companion with the Bible, good questions, and real impulses. No pressure, no judgment.\n\nYou can ask me anything – or just share what's on your mind. 💛",
-    "journeyOffer": "💡 **Tip:** I also offer a **21-day journey** – 3 weeks of daily impulses, reflections, and concrete steps. At your own pace.\n\nWould you like to try it?",
-    "suggestion1": "I need an uplifting word right now",
-    "suggestion2": "What does the Bible say when you feel uncertain?",
-    "suggestion3": "I want to find out what I really want",
-    "teaser": "What's on your mind? 💛",
-    "teaserSub": "I'm here – without any judgment.",
-    "openChat": "Open chat",
-    "closeChat": "Close chat",
-    "yourCompanion": "Your personal companion",
-    "journeyComplete": "21 days completed! 🎉",
-    "arriving": "Arriving",
-    "deepening": "Deepening",
-    "acting": "Acting",
-    "renameTip": "Tip: Click the name to rename me ✨",
-    "changeName": "Change name",
-    "placeholder": "Just start typing...",
-    "startVoice": "Start voice input",
-    "stopVoice": "Stop recording",
-    "noVoice": "Your browser does not support voice input.",
-    "writing": "typing...",
-    "shieldBadge": "No login · No judgment · Citations verified",
-    "journeyStart": "Yes, let's go ✨",
-    "journeyLater": "Maybe later",
-    "journeyStartMsg": "Yes, I'd like to start the 21-day journey!",
-    "qaChecking": "Checking citations...",
-    "qaIssue": "{{count}} issue with citations",
-    "qaIssue_plural": "{{count}} issues with citations",
-    "qaOk": "{{count}} citation verified ✓",
-    "qaOk_plural": "{{count}} citations verified ✓",
-    "qaWarning": "⚠️ Accuracy notes:",
-    "errorTooMany": "Too many requests – please wait a moment.",
-    "errorCredits": "AI quota exhausted.",
-    "errorConnect": "Connection error.",
-    "errorTitle": "Error",
-    "errorConnection": "could not be reached.",
-    "errorNoStream": "No stream",
-    "seniorMode": "Senior mode (larger text)",
-    "teaserCta": "Start writing →",
-    "namePlaceholder": "e.g. Eli, Miriam…"
+    "welcome": "Teší ma, že ste tu 🤗\n\nSom váš BibleBot – váš osobný sprievodca s Bibliou, dobrými otázkami a konkrétnymi impulzmi. Žiadny tlak, žiadne hodnotenie.\n\nMôžete sa ma opýtať na čokoľvek – alebo mi jednoducho povedať, čo vás práve trápi. 💛",
+    "journeyOffer": "💡 **Tip:** Ponúkam aj **21-dňové sprevádzanie** – 3 týždne s dennými impulzmi, reflexiami a konkrétnymi krokmi. Úplne vo vašom tempe.\n\nChcete to vyskúšať?",
+    "suggestion1": "Práve teraz potrebujem povzbudivé slovo",
+    "suggestion2": "Čo hovorí Biblia, keď sa človek cíti neistý?",
+    "suggestion3": "Chcem zistiť, čo naozaj chcem",
+    "teaser": "Čo vás práve trápi? 💛",
+    "teaserSub": "Som tu – úplne bez hodnotenia.",
+    "teaserCta": "Napísať teraz →",
+    "openChat": "Otvoriť chat",
+    "closeChat": "Zavrieť chat",
+    "yourCompanion": "Váš osobný sprievodca",
+    "journeyComplete": "21 dní hotovo! 🎉",
+    "arriving": "Príchod",
+    "deepening": "Prehĺbenie",
+    "acting": "Konanie",
+    "renameTip": "Dajte mi meno ✨",
+    "namePlaceholder": "napr. Eli, Miriam…",
+    "changeName": "Zmeniť meno",
+    "placeholder": "Len píšte...",
+    "startVoice": "Spustiť hlasový vstup",
+    "stopVoice": "Zastaviť nahrávanie",
+    "noVoice": "Váš prehliadač nepodporuje hlasový vstup.",
+    "writing": "píše...",
+    "shieldBadge": "Bez prihlásenia · Bez súdenia · Citáty overené",
+    "journeyStart": "Áno, začať ✨",
+    "journeyLater": "Možno neskôr",
+    "journeyStartMsg": "Áno, chcem začať 21-dňové sprevádzanie!",
+    "qaChecking": "Citáty sa overujú...",
+    "qaIssue": "{{count}} poznámka k citátom",
+    "qaIssue_plural": "{{count}} poznámok k citátom",
+    "qaOk": "{{count}} citát overený ✓",
+    "qaOk_plural": "{{count}} citátov overených ✓",
+    "qaWarning": "⚠️ Poznámky k presnosti:",
+    "errorTooMany": "Príliš veľa požiadaviek – prosím, počkajte chvíľu.",
+    "errorCredits": "Kredit AI vyčerpaný.",
+    "errorConnect": "Chyba pri pripojení.",
+    "errorTitle": "Chyba",
+    "errorConnection": "sa nepodarilo dosiahnuť.",
+    "errorNoStream": "Žiadny stream",
+    "seniorMode": "Režim pre seniorov (väčšie písmo)"
   },
   "install": {
-    "title": "Install BibleBot",
-    "androidDesc": "Quick access from your home screen",
-    "iosDesc": "Tap \"Share\" → \"Add to Home Screen\"",
-    "button": "Install",
-    "close": "Close"
+    "title": "Nainštalovať BibleBot",
+    "androidDesc": "Rýchly prístup priamo z domovskej obrazovky",
+    "iosDesc": "Ťuknite na „Zdieľať“ → „Na plochu“",
+    "button": "Nainštalovať",
+    "close": "Zavrieť"
+  },
+  "share": {
+    "label": "Zdieľať",
+    "shareVia": "Zdieľať cez",
+    "copied": "Skopírované! 📋",
+    "copiedShort": "Skopírované!",
+    "copiedDesc": "Text bol skopírovaný do schránky. Zdieľajte ho teraz na WhatsApp, Instagram alebo kdekoľvek chcete!",
+    "copyLink": "Kopírovať text",
+    "error": "Kopírovanie zlyhalo",
+    "impulseTitle": "BibleBot – Impulz dňa",
+    "chatTitle": "BibleBot – Myšlienka dňa",
+    "createImage": "Vytvoriť obrázok ✨",
+    "generating": "Generuje sa…",
+    "imageReady": "Váš obrázok je pripravený na zdieľanie!",
+    "shareImage": "Zdieľať obrázok",
+    "download": "Uložiť",
+    "imageError": "Vytvorenie obrázka zlyhalo",
+    "imageErrorDesc": "Obrázok sa nepodarilo vytvoriť. Skúste to neskôr znova.",
+    "imageSaved": "Text skopírovaný! 📋",
+    "imageSavedDesc": "Uložte obrázok a zdieľajte ho so skopírovaným textom na Instagrame, WhatsApp alebo kdekoľvek chcete!"
   },
   "darkMode": {
-    "light": "Light mode",
-    "dark": "Dark mode"
+    "light": "Svetlý režim",
+    "dark": "Tmavý režim"
   },
   "impressum": {
-    "back": "Back to home",
-    "title": "Imprint"
+    "back": "Späť na úvodnú stránku",
+    "title": "Impresum"
   },
   "datenschutz": {
-    "back": "Back to home",
-    "title": "Privacy Policy"
+    "back": "Späť na úvodnú stránku",
+    "title": "Vyhlásenie o ochrane údajov"
+  },
+  "tiles": {
+    "sectionTitle": "Čo vás trápi?",
+    "sectionSubtitle": "Vyberte si tému — BibleBot vás bude sprevádzať",
+    "baptism": {
+      "title": "Nájsť krstný verš",
+      "desc": "Perfektný verš pre vaše dieťa",
+      "prompt": "Pomôžte mi nájsť vhodný krstný verš. Aké je to dieťa a čo si želajú rodičia?"
+    },
+    "condolence": {
+      "title": "Slová útechy",
+      "desc": "Sprevádzanie pri kondolencii a rozlúčke",
+      "prompt": "Potrebujem utešujúce slová na kondolenčnú kartu. Môžete mi pomôcť s formuláciou niečoho vhodného?"
+    },
+    "wedding": {
+      "title": "Svadobný verš",
+      "desc": "Biblické slová pre vašu lásku",
+      "prompt": "Hľadáme krásny biblický verš na našu svadbu. Ktoré biblické pasáže sa hodia k láske a partnerstvu?"
+    },
+    "anxiety": {
+      "title": "Úzkosť a starosti",
+      "desc": "Nájsť odvahu v ťažkých časoch",
+      "prompt": "Práve bojujem s úzkosťami a starosťami. Čo o tom hovorí Biblia? Existujú verše, ktoré dodávajú odvahu?"
+    },
+    "confession": {
+      "title": "Spoveď",
+      "desc": "Boh odpúšťa — povedzte to",
+      "prompt": "Chcem sa zbaviť niečoho, čo ma trápi. Čo hovorí Biblia o odpustení a novom začiatku?"
+    },
+    "heartbreak": {
+      "title": "Zlomené srdce",
+      "desc": "Čo hovorí Biblia o zlomenom srdci",
+      "prompt": "Moje srdce je zlomené. Čo hovorí Biblia o zlomenom srdci a ako znovu nájsť nádej?"
+    },
+    "newstart": {
+      "title": "Nový začiatok",
+      "desc": "Sila pre novú životnú etapu",
+      "prompt": "Stojím pred novým začiatkom a potrebujem povzbudenie. Ktoré biblické pasáže hovoria o nových začiatkoch?"
+    },
+    "namequiz": {
+      "title": "Krstný kvíz",
+      "desc": "Nájdite vhodné biblické meno",
+      "prompt": "Hľadám biblické meno pre svoje dieťa. Môžete mi dať nejaké návrhy a vysvetliť ich význam?"
+    },
+    "sleepless": {
+      "title": "Nespavosť",
+      "desc": "Nájsť pokoj v noci",
+      "prompt": "Nemôžem spať a premýšľam. Existuje upokojujúca modlitba alebo žalm na noc?"
+    },
+    "loneliness": {
+      "title": "Osamelosť",
+      "desc": "Nikdy nie ste sami",
+      "prompt": "Cítim sa osamelý. Čo hovorí Biblia o tom, že Boh je vždy s nami?"
+    },
+    "decision": {
+      "title": "Ťažké rozhodnutie",
+      "desc": "Múdrosť pre správnu cestu",
+      "prompt": "Stojím pred ťažkým rozhodnutím. Ktoré biblické pasáže mi pomôžu nájsť správnu cestu?"
+    },
+    "gratitude": {
+      "title": "Vďačnosť",
+      "desc": "Osobná modlitba vďaky",
+      "prompt": "Chcem poďakovať Bohu. Pomôžte mi sformulovať osobnú modlitbu vďaky."
+    },
+    "lifewheel": {
+      "title": "Koleso života",
+      "desc": "Ako ste naozaj spokojní?"
+    },
+    "sevenwhys": {
+      "title": "7 prečo",
+      "desc": "Nájdite najhlbší koreň svojej otázky",
+      "prompt": "Chcem urobiť cvičenie 7 prečo. Tu je moja téma:"
+    },
+    "anger": {
+      "title": "Hnev a zlosť",
+      "desc": "Keď by ste mohli prasknúť od hnevu",
+      "prompt": "Som taký nahnevaný a neviem, čo s mojím hnevom. Čo hovorí Biblia o hneve a ako sa s ním vyrovnať?"
+    },
+    "shame": {
+      "title": "Hanba a vina",
+      "desc": "Keď vás pocity viny drvia",
+      "prompt": "Tak veľmi sa hanbím a cítim sa vinný. Čo hovorí Biblia o vine, odpustení a novom začiatku?"
+    },
+    "burnout": {
+      "title": "Vyhorenie",
+      "desc": "Keď už jednoducho nemôžete",
+      "prompt": "Som úplne vyčerpaný a vyhorený. Už jednoducho nemôžem. Čo hovorí Biblia o odpočinku a zotavení?"
+    },
+    "illness": {
+      "title": "Choroba",
+      "desc": "Keď diagnóza všetko zmení",
+      "prompt": "Dostal som ťažkú diagnózu a bojím sa. Čo hovorí Biblia o chorobe, uzdravení a nádeji?"
+    },
+    "financial": {
+      "title": "Finančné starosti",
+      "desc": "Keď účty tlačia",
+      "prompt": "Mám finančné starosti a neviem, čo ďalej. Čo hovorí Biblia o peniazoch, dôvere a zaopatrení?"
+    },
+    "meaningcrisis": {
+      "title": "Kríza zmyslu",
+      "desc": "Načo to všetko?",
+      "prompt": "Pýtam sa, na čo to všetko je dobré. Som v kríze zmyslu. Čo hovorí Biblia o zmysle života?"
+    },
+    "selfdoubt": {
+      "title": "Pochybnosti o sebe",
+      "desc": "Keď sa necítite dosť dobrí",
+      "prompt": "Neustále o sebe pochybujem a necítim sa dosť dobrý. Čo hovorí Biblia o mojej hodnote?"
+    },
+    "calling": {
+      "title": "Povolanie",
+      "desc": "Čo mám robiť so svojím životom?",
+      "prompt": "Neviem, čo mám robiť so svojím životom. Pomôžte mi nájsť moje povolanie – čo o tom hovorí Biblia?"
+    },
+    "faithdoubt": {
+      "title": "Pochybnosti vo viere",
+      "desc": "Keď viera kolíše",
+      "prompt": "Mám pochybnosti o svojej viere a neviem, či ešte môžem veriť. Čo hovorí Biblia o pochybnostiach?"
+    },
+    "forgiveness": {
+      "title": "Odpustenie",
+      "desc": "Keď sa odpustenie zdá nemožné",
+      "prompt": "Jednoducho nemôžem niekomu odpustiť. Bolí to príliš. Čo hovorí Biblia o odpustení?"
+    },
+    "familyconflict": {
+      "title": "Rodinný konflikt",
+      "desc": "Keď sa v rodine hádajú",
+      "prompt": "V mojej rodine je veľký spor. Čo hovorí Biblia o rodinnom mieri a zmierení?"
+    },
+    "envy": {
+      "title": "Závisť",
+      "desc": "Keď sa iným darí lepšie",
+      "prompt": "Závidím iným a neustále sa porovnávam. Čo hovorí Biblia o závisti a spokojnosti?"
+    },
+    "joy": {
+      "title": "Zdieľať radosť",
+      "desc": "Keď sa stalo niečo úžasné",
+      "prompt": "Stalo sa mi niečo úžasné a chcem sa podeliť o svoju radosť! Čo hovorí Biblia o radosti a vďačnosti?"
+    },
+    "prayer": {
+      "title": "Modlitebný úmysel",
+      "desc": "Spoločne sa modliť",
+      "prompt": "Mám modlitebný úmysel a chcem sa spoločne modliť. Sprevádzajte ma v modlitbe."
+    },
+    "bibleverse": {
+      "title": "Pochopiť verš",
+      "desc": "Vysvetlenie biblickej pasáže",
+      "prompt": "Chcem lepšie pochopiť biblickú pasáž. Môžete mi pomôcť zaradiť ju do kontextu?"
+    }
+  },
+  "lifeWheel": {
+    "title": "Vaše koleso života",
+    "intro": "Ohodnoťte 8 oblastí života na stupnici od 1 do 10. Zistite, kde sa nachádzate – a získajte biblické impulzy pre oblasť, ktorá si vyžaduje pozornosť.",
+    "start": "Začať teraz",
+    "sliderHint": "Posúvajte posuvníky — 1 = veľmi nespokojný, 10 = veľmi spokojný",
+    "showResult": "Zobraziť výsledok",
+    "average": "Priemer",
+    "weakestArea": "Najväčšia potreba",
+    "getImpulse": "Biblický impulz pre {{area}}",
+    "reset": "Urobiť znova",
+    "prompt": "Moje koleso života ukazuje, že v oblasti „{{area}}“ mám len {{score}}/10 bodov. Čo hovorí Biblia o tejto oblasti života? Dajte mi povzbudenie a praktické impulzy.",
+    "areas": {
+      "health": "Zdravie",
+      "relationships": "Vzťahy",
+      "career": "Kariéra",
+      "spirituality": "Spiritualita",
+      "finances": "Financie",
+      "family": "Rodina",
+      "leisure": "Voľný čas",
+      "growth": "Osobný rast"
+    },
+    "save": "Uložiť výsledok",
+    "saved": "Uložené!",
+    "history": "Predchádzajúce výsledky",
+    "noHistory": "Zatiaľ žiadne uložené výsledky.",
+    "backToNew": "Nové koleso života",
+    "backToList": "Späť na zoznam"
+  },
+  "church": {
+    "badge": "Pre spoločenstvá",
+    "heroTitle": "BibleBot pre vaše spoločenstvo",
+    "heroSubtitle": "Sprevádzajte svojich členov spoločenstva biblickou múdrosťou – digitálne, osobne a nepretržite.",
+    "useCasesTitle": "Možnosti použitia",
+    "useCase": {
+      "youth": {
+        "title": "Mládežnícka práca",
+        "desc": "Tínedžeri objavujú Bibliu vlastným spôsobom – interaktívne a bez zábran."
+      },
+      "confirmation": {
+        "title": "Konfirmácia",
+        "desc": "Konfirmandi si samostatne prehlbujú biblické vedomosti s osobným sprievodom."
+      },
+      "pastoral": {
+        "title": "Pastoračná starostlivosť",
+        "desc": "24/7 sprievod ako doplnok k osobnej pastoračnej starostlivosti."
+      },
+      "bibleStudy": {
+        "title": "Biblický krúžok",
+        "desc": "Impulzy a podnety na diskusiu pre skupiny a domáce krúžky."
+      }
+    },
+    "pricingTitle": "Patronátne balíčky",
+    "pricingSubtitle": "Podporte BibleBot a vaše spoločenstvo vhodným patronátnym balíčkom.",
+    "popular": "Obľúbené",
+    "free": "Zadarmo",
+    "perYear": "rok",
+    "contact": "Kontaktovať",
+    "tier": {
+      "free": {
+        "name": "Horčičné zrnko",
+        "size": "Pre malé spoločenstvá a domáce krúžky (do 50 členov)"
+      },
+      "community": {
+        "name": "Sprievodca",
+        "size": "Pre spoločenstvá s 50 – 200 členmi"
+      },
+      "gemeinde": {
+        "name": "Staviteľ mostov",
+        "size": "Pre spoločenstvá s 200 – 500 členmi"
+      },
+      "kirche": {
+        "name": "Maják",
+        "size": "Pre veľké spoločenstvá a inštitúcie (500+ členov)"
+      }
+    },
+    "features": {
+      "directoryEntry": "Záznam v adresári",
+      "telegramGroup": "Telegram skupina",
+      "partnerPage": "Vlastná partnerská stránka",
+      "badge": "Partnerský odznak",
+      "qrFlyer": "QR leták na tlač",
+      "contactForm": "Kontaktný formulár",
+      "pastorProfile": "Profil farára/pastora",
+      "welcomeVideo": "Uvítacie video",
+      "analytics": "Analytický panel",
+      "prioritySupport": "Prioritná podpora",
+      "multipleProfiles": "Viacero profilov",
+      "customBranding": "Vlastná značka",
+      "apiAccess": "Prístup k API",
+      "accountManager": "Osobný správca účtu"
+    },
+    "viewDirectory": "Zobraziť adresár spoločenstiev",
+    "directoryBadge": "Adresár spoločenstiev",
+    "directoryTitle": "Partnerské spoločenstvá",
+    "directorySubtitle": "Nájdite spoločenstvo vo vašej blízkosti, ktoré odporúča BibleBot.",
+    "searchPlaceholder": "Hľadať miesto, názov alebo denomináciu...",
+    "noResults": "Zatiaľ žiadne spoločenstvá v adresári.",
+    "becomePartner": "Stať sa partnerom →",
+    "notFound": "Spoločenstvo nenájdené.",
+    "backToDirectory": "Späť do adresára",
+    "pastor": "Farář/Pastor",
+    "serviceTimes": "Časy bohoslužieb",
+    "startChat": "Začať chat",
+    "website": "Webová stránka",
+    "telegramGroup": "Telegram skupina",
+    "contactTitle": "Kontakt na {{name}}",
+    "contactName": "Vaše meno (voliteľné)",
+    "contactEmail": "Vaša e-mailová adresa",
+    "contactMessage": "Vaša správa",
+    "contactSend": "Odoslať správu",
+    "contactSuccess": "Správa odoslaná! 🙏",
+    "contactSuccessDesc": "Spoločenstvo sa vám ozve.",
+    "recommendedBy": "Odporúča {{name}}",
+    "setup": "Nastavenie (jednorazové)",
+    "form": {
+      "title": "Záujem? Napíšte nám!",
+      "subtitle": "Ozveme sa do 48 hodín.",
+      "name": "Vaše meno",
+      "email": "E-mailová adresa",
+      "churchName": "Názov spoločenstva",
+      "tier": "Želaný balíček",
+      "tierPlaceholder": "Vybrať balíček...",
+      "message": "Vaša správa",
+      "submit": "Odoslať žiadosť",
+      "success": "Žiadosť odoslaná! Čoskoro sa vám ozveme. 🙏",
+      "error": "Chyba pri odosielaní. Prosím, skúste to znova.",
+      "orgType": "Typ organizácie",
+      "orgTypePlaceholder": "Vybrať typ...",
+      "orgTypes": {
+        "church": "Spoločenstvo",
+        "careHome": "Domov sociálnych služieb",
+        "seniorHome": "Domov pre seniorov",
+        "hospital": "Nemocnica",
+        "prison": "Väzenská pastorácia",
+        "military": "Armádna pastorácia"
+      }
+    },
+    "institutionsTitle": "Aj pre inštitúcie",
+    "institutionsSubtitle": "BibleBot nesprevádza len spoločenstvá – aj domovy sociálnych služieb, domovy pre seniorov, nemocnice a väzenská pastorácia profitujú z digitálnej pastoračnej starostlivosti.",
+    "institution": {
+      "careHome": {
+        "title": "Domovy sociálnych služieb",
+        "desc": "Denné biblické impulzy a sprievod pre obyvateľov – aj keď nie je prítomný duchovný."
+      },
+      "seniorHome": {
+        "title": "Domovy pre seniorov",
+        "desc": "Dôverné biblické verše a rozhovory pre seniorov – ľahko dostupné cez tablet alebo smartfón."
+      },
+      "hospital": {
+        "title": "Nemocnice",
+        "desc": "Útecha a duchovný sprievod pre pacientov v ťažkých časoch – 24/7 k dispozícii pri lôžku."
+      },
+      "prison": {
+        "title": "Väzenská pastorácia",
+        "desc": "Nádej a duchovný sprievod pre väzňov – dôverný partner na rozhovor nepretržite."
+      },
+      "military": {
+        "title": "Armádna pastorácia",
+        "desc": "Duchovný sprievod pre príslušníkov armády – dostupný aj v akcii alebo v kasárňach."
+      }
+    }
+  },
+  "institutions": {
+    "badge": "Pre inštitúcie",
+    "heroTitle": "BibleBot pre vašu inštitúciu",
+    "heroSubtitle": "Digitálna pastoračná starostlivosť pre domovy sociálnych služieb, domovy pre seniorov, nemocnice a väzenskú správu – osobne, dôverne a nepretržite.",
+    "seniorHint": {
+      "title": "Režim pre seniorov k dispozícii",
+      "desc": "Väčšie písmo a zjednodušené ovládanie – ideálne pre starších obyvateľov.",
+      "cta": "Vyskúšať režim pre seniorov"
+    },
+    "typesTitle": "Pre koho je BibleBot?",
+    "useCasesTitle": "Ako sa BibleBot používa",
+    "useCasesSubtitle": "Konkrétne aplikácie pre každodenný život vo vašej inštitúcii.",
+    "pricingTitle": "Patronátne balíčky",
+    "pricingSubtitle": "Rovnaké balíčky ako pre spoločenstvá – prispôsobené inštitucionálnym potrebám.",
+    "linkChurches": "Dostupné aj pre spoločenstvá",
+    "type": {
+      "careHome": {
+        "title": "Domovy sociálnych služieb",
+        "desc": "Denné biblické impulzy a sprievod pre obyvateľov – aj keď nie je prítomný duchovný."
+      },
+      "seniorHome": {
+        "title": "Domovy pre seniorov",
+        "desc": "Dôverné biblické verše a rozhovory pre seniorov – ľahko dostupné cez tablet alebo smartfón."
+      },
+      "hospital": {
+        "title": "Nemocnice",
+        "desc": "Útecha a duchovný sprievod pre pacientov v ťažkých časoch – 24/7 k dispozícii pri lôžku."
+      },
+      "prison": {
+        "title": "Väzenská pastorácia",
+        "desc": "Nádej a duchovný sprievod pre väzňov – dôverný partner na rozhovor nepretržite."
+      },
+      "military": {
+        "title": "Armádna pastorácia",
+        "desc": "Duchovný sprievod pre príslušníkov armády – dostupný aj v akcii alebo v kasárňach."
+      }
+    },
+    "useCase": {
+      "dailyImpulse": {
+        "title": "Denný impulz",
+        "desc": "Každé ráno biblický verš s otázkou na zamyslenie – znižuje prah pre duchovné rozhovory."
+      },
+      "companionship": {
+        "title": "Partner na rozhovor",
+        "desc": "BibleBot trpezlivo a bez časového tlaku odpovedá na otázky viery – ideálne pre osamelé chvíle."
+      },
+      "accessibility": {
+        "title": "Jednoduchý prístup",
+        "desc": "Veľké písmo, jednoduché ovládanie cez tablet – aj pre ľudí s obmedzenou pohyblivosťou."
+      },
+      "availability": {
+        "title": "Dostupné 24/7",
+        "desc": "Duchovný sprievod aj v noci a cez víkend – keď nie je k dispozícii duchovný."
+      }
+    },
+    "tierDesc": {
+      "free": "Základný prístup pre obyvateľov a pacientov",
+      "community": "Uvedenie ako podporovateľ, prístup bez reklám",
+      "gemeinde": "Prítomnosť loga, mesačná správa o používaní",
+      "kirche": "Vlastný obsah, spoluvytváranie roadmapy, prémiová podpora"
+    },
+    "form": {
+      "title": "Záujem? Kontaktujte nás!",
+      "subtitle": "Ozveme sa do 48 hodín.",
+      "name": "Vaše meno",
+      "email": "E-mailová adresa",
+      "institutionName": "Názov inštitúcie",
+      "type": "Typ inštitúcie",
+      "typePlaceholder": "Prosím, vyberte...",
+      "tier": "Želaný balíček",
+      "tierPlaceholder": "Vybrať balíček...",
+      "message": "Vaša správa",
+      "submit": "Odoslať žiadosť",
+      "success": "Žiadosť odoslaná! Čoskoro sa vám ozveme. 🙏",
+      "error": "Chyba pri odosielaní. Prosím, skúste to znova."
+    }
   },
   "lang": {
     "de": "Deutsch",
@@ -329,427 +751,5 @@
     "ig": "Igbo",
     "zu": "isiZulu",
     "ht": "Kreyòl"
-  },
-  "tiles": {
-    "sectionTitle": "What's on your heart?",
-    "sectionSubtitle": "Choose a topic — BibleBot walks with you",
-    "baptism": {
-      "title": "Find a baptism verse",
-      "desc": "The perfect verse for your child",
-      "prompt": "Help me find a fitting baptism verse. What kind of child is it and what do the parents wish for?"
-    },
-    "condolence": {
-      "title": "Words of comfort",
-      "desc": "Support through grief & farewell",
-      "prompt": "I need comforting words for a condolence card. Can you help me find the right words?"
-    },
-    "wedding": {
-      "title": "Wedding verse",
-      "desc": "Biblical words for your love",
-      "prompt": "We're looking for a beautiful biblical verse for our wedding. Which passages speak about love and partnership?"
-    },
-    "anxiety": {
-      "title": "Fear & worry",
-      "desc": "Finding courage in hard times",
-      "prompt": "I'm struggling with fear and worry right now. What does the Bible say about this? Are there verses that give courage?"
-    },
-    "confession": {
-      "title": "Confession",
-      "desc": "God forgives — speak it out",
-      "prompt": "I want to let go of something that weighs on me. What does the Bible say about forgiveness and new beginnings?"
-    },
-    "heartbreak": {
-      "title": "Heartbreak",
-      "desc": "What the Bible says about heartache",
-      "prompt": "My heart is broken. What does the Bible say about heartbreak and how to find hope again?"
-    },
-    "newstart": {
-      "title": "New beginning",
-      "desc": "Strength for a new chapter",
-      "prompt": "I'm facing a new beginning and need encouragement. Which Bible passages speak about fresh starts?"
-    },
-    "namequiz": {
-      "title": "Name quiz",
-      "desc": "Find the right biblical name",
-      "prompt": "I'm looking for a biblical name for my child. Can you suggest some and explain their meanings?"
-    },
-    "sleepless": {
-      "title": "Sleepless",
-      "desc": "Finding peace at night",
-      "prompt": "I can't sleep and my mind is racing. Is there a calming prayer or psalm for the night?"
-    },
-    "loneliness": {
-      "title": "Loneliness",
-      "desc": "You are never alone",
-      "prompt": "I feel lonely. What does the Bible say about God always being with us?"
-    },
-    "decision": {
-      "title": "Tough decision",
-      "desc": "Wisdom for the right path",
-      "prompt": "I'm facing a difficult decision. Which Bible passages can help me find the right way?"
-    },
-    "gratitude": {
-      "title": "Gratitude",
-      "desc": "A personal prayer of thanks",
-      "prompt": "I want to thank God. Help me write a personal prayer of gratitude."
-    },
-    "lifewheel": {
-      "title": "Life Wheel",
-      "desc": "How satisfied are you really?"
-    },
-    "sevenwhys": {
-      "title": "7 Whys",
-      "desc": "Find the deepest root of your question",
-      "prompt": "I'd like to do the 7 Whys exercise. Here is my topic:"
-    },
-    "anger": {
-      "title": "Anger",
-      "desc": "When you're about to explode",
-      "prompt": "I'm so angry and don't know what to do with my rage. What does the Bible say about anger and how to deal with it?"
-    },
-    "shame": {
-      "title": "Shame & Guilt",
-      "desc": "When guilt is crushing you",
-      "prompt": "I feel so ashamed and guilty. What does the Bible say about guilt, forgiveness, and starting over?"
-    },
-    "burnout": {
-      "title": "Burnout",
-      "desc": "When you just can't go on",
-      "prompt": "I'm totally exhausted and burned out. I just can't anymore. What does the Bible say about rest and recovery?"
-    },
-    "illness": {
-      "title": "Illness",
-      "desc": "When a diagnosis changes everything",
-      "prompt": "I've received a difficult diagnosis and I'm scared. What does the Bible say about illness, healing, and hope?"
-    },
-    "financial": {
-      "title": "Money Worries",
-      "desc": "When bills are piling up",
-      "prompt": "I have financial worries and don't know what to do. What does the Bible say about money, trust, and provision?"
-    },
-    "meaningcrisis": {
-      "title": "Meaning Crisis",
-      "desc": "What's it all for?",
-      "prompt": "I'm wondering what's the point of it all. I'm in a meaning crisis. What does the Bible say about the meaning of life?"
-    },
-    "selfdoubt": {
-      "title": "Self-Doubt",
-      "desc": "When you don't feel good enough",
-      "prompt": "I constantly doubt myself and don't feel good enough. What does the Bible say about my worth?"
-    },
-    "calling": {
-      "title": "Calling",
-      "desc": "What should I do with my life?",
-      "prompt": "I don't know what to do with my life. Help me find my calling — what does the Bible say?"
-    },
-    "faithdoubt": {
-      "title": "Faith Doubts",
-      "desc": "When your faith is shaking",
-      "prompt": "I have doubts about my faith and don't know if I can still believe. What does the Bible say about doubt?"
-    },
-    "forgiveness": {
-      "title": "Forgiveness",
-      "desc": "When forgiving seems impossible",
-      "prompt": "I simply can't forgive someone. It hurts too much. What does the Bible say about forgiveness?"
-    },
-    "familyconflict": {
-      "title": "Family Conflict",
-      "desc": "When family is at war",
-      "prompt": "There's a big conflict in my family. What does the Bible say about family peace and reconciliation?"
-    },
-    "envy": {
-      "title": "Envy",
-      "desc": "When others have it better",
-      "prompt": "I'm envious of others and constantly comparing myself. What does the Bible say about envy and contentment?"
-    },
-    "joy": {
-      "title": "Share Joy",
-      "desc": "When something wonderful happened",
-      "prompt": "Something wonderful happened to me and I want to share my joy! What does the Bible say about joy and gratitude?"
-    },
-    "prayer": {
-      "title": "Prayer Request",
-      "desc": "Pray together",
-      "prompt": "I have a prayer request and would like to pray together. Join me in prayer."
-    },
-    "bibleverse": {
-      "title": "Understand a Verse",
-      "desc": "Get a Bible passage explained",
-      "prompt": "I'd like to understand a Bible passage better. Can you help me put it in context?"
-    }
-  },
-  "lifeWheel": {
-    "title": "Your Life Wheel",
-    "intro": "Rate 8 life areas on a scale of 1-10. Discover where you stand — and receive biblical impulses for the area that needs attention.",
-    "start": "Get started",
-    "sliderHint": "Move the sliders — 1 = very unsatisfied, 10 = very satisfied",
-    "showResult": "Show result",
-    "average": "Average",
-    "weakestArea": "Greatest need",
-    "getImpulse": "Biblical impulse for {{area}}",
-    "reset": "Try again",
-    "prompt": "My life wheel shows that I scored only {{score}}/10 in the area of '{{area}}'. What does the Bible say about this area of life? Give me encouragement and practical impulses.",
-    "areas": {
-      "health": "Health",
-      "relationships": "Relationships",
-      "career": "Career",
-      "spirituality": "Spirituality",
-      "finances": "Finances",
-      "family": "Family",
-      "leisure": "Leisure",
-      "growth": "Personal Growth"
-    },
-    "save": "Save result",
-    "saved": "Saved!",
-    "history": "Previous results",
-    "noHistory": "No saved results yet.",
-    "backToNew": "New Life Wheel",
-    "backToList": "Back to list"
-  },
-  "church": {
-    "badge": "Pre cirkvi",
-    "heroTitle": "BibleBot pre váš zbor",
-    "heroSubtitle": "Sprevádzajte svoj zbor biblickou múdrosťou – digitálne, osobne a nepretržite.",
-    "useCasesTitle": "Prípady použitia",
-    "useCase": {
-      "youth": {
-        "title": "Práca s mládežou",
-        "desc": "Tínedžeri objavujú Bibliu po svojom – interaktívne a bez zábran."
-      },
-      "confirmation": {
-        "title": "Konfirmácia",
-        "desc": "Konfirmandi prehlbujú biblické znalosti samostatne s osobným vedením."
-      },
-      "pastoral": {
-        "title": "Pastoračná starostlivosť",
-        "desc": "Nepretržitý sprievod ako doplnok osobnej pastoračnej starostlivosti."
-      },
-      "bibleStudy": {
-        "title": "Štúdium Biblie",
-        "desc": "Impulzy a podnety na diskusiu pre skupiny a domáce spoločenstvá."
-      }
-    },
-    "pricingTitle": "Patronátne balíčky",
-    "pricingSubtitle": "Podporte BibleBot a svoj zbor správnym patronátnym balíčkom.",
-    "popular": "Obľúbené",
-    "free": "Zadarmo",
-    "perYear": "Rok",
-    "contact": "Kontaktujte nás",
-    "tier": {
-      "free": {
-        "name": "Horčičné zrnko",
-        "size": "Základný prístup k botu pre všetkých členov zboru."
-      },
-      "community": {
-        "name": "Sprievodca",
-        "size": "Zmienka zboru ako podporovateľa na webe a prístup bez reklám."
-      },
-      "gemeinde": {
-        "name": "Staviteľ mostov",
-        "size": "Logo v rozhraní botu, mesačný report o využívaní (anonymizovaný)."
-      },
-      "kirche": {
-        "name": "Maják",
-        "size": "Integrácia vlastného obsahu (napr. archív kázní), spoluvytváranie roadmapy, prémiová podpora."
-      }
-    },
-    "features": {
-      "directoryEntry": "Záznam v adresári",
-      "telegramGroup": "Skupina Telegram",
-      "partnerPage": "Vlastná partnerská stránka",
-      "badge": "Partnerský odznak",
-      "qrFlyer": "QR leták na tlač",
-      "contactForm": "Kontaktný formulár",
-      "pastorProfile": "Profil pastora",
-      "welcomeVideo": "Uvítacie video",
-      "analytics": "Analytický panel",
-      "prioritySupport": "Prioritná podpora",
-      "multipleProfiles": "Viacero profilov",
-      "customBranding": "Vlastný branding",
-      "apiAccess": "API prístup",
-      "accountManager": "Osobný správca účtu"
-    },
-    "viewDirectory": "Zobraziť adresár zborov",
-    "directoryBadge": "Adresár zborov",
-    "directoryTitle": "Partnerské zbory",
-    "directorySubtitle": "Nájdite zbor vo vašom okolí, ktorý odporúča BibleBot.",
-    "searchPlaceholder": "Hľadať podľa miesta, názvu alebo denominácie...",
-    "noResults": "V adresári zatiaľ nie sú žiadne zbory.",
-    "becomePartner": "Staňte sa partnerom →",
-    "notFound": "Zbor sa nenašiel.",
-    "backToDirectory": "Späť do adresára",
-    "pastor": "Pastor",
-    "serviceTimes": "Časy bohoslužieb",
-    "startChat": "Začať chat",
-    "website": "Webová stránka",
-    "telegramGroup": "Skupina Telegram",
-    "contactTitle": "Kontaktovať {{name}}",
-    "contactName": "Vaše meno (nepovinné)",
-    "contactEmail": "Vaša e-mailová adresa",
-    "contactMessage": "Vaša správa",
-    "contactSend": "Odoslať správu",
-    "contactSuccess": "Správa odoslaná! 🙏",
-    "contactSuccessDesc": "Zbor sa vám ozve.",
-    "recommendedBy": "Odporúčané od {{name}}",
-    "setup": "Nastavenie (jednorazové)",
-    "form": {
-      "title": "Máte záujem? Kontaktujte nás!",
-      "subtitle": "Odpovieme do 48 hodín.",
-      "name": "Vaše meno",
-      "email": "E-mailová adresa",
-      "churchName": "Názov zboru",
-      "tier": "Preferovaný balík",
-      "tierPlaceholder": "Vyberte balík...",
-      "message": "Vaša správa",
-      "submit": "Odoslať dopyt",
-      "success": "Dopyt odoslaný! Čoskoro sa ozveme. 🙏",
-      "error": "Chyba pri odosielaní. Skúste to znova.",
-      "orgType": "Organization type",
-      "orgTypePlaceholder": "Select type...",
-      "orgTypes": {
-        "church": "Church",
-        "careHome": "Care Home",
-        "seniorHome": "Retirement Home",
-        "hospital": "Hospital",
-        "prison": "Prison Chaplaincy",
-        "military": "Military Chaplaincy"
-      }
-    },
-    "institutionsTitle": "Also for Institutions",
-    "institutionsSubtitle": "BibleBot supports not only churches – care homes, retirement homes, and hospitals also benefit from digital pastoral care.",
-    "institution": {
-      "careHome": {
-        "title": "Care Homes",
-        "desc": "Daily Bible impulses and companionship for residents – even when no chaplain is on site."
-      },
-      "seniorHome": {
-        "title": "Retirement Homes",
-        "desc": "Familiar Bible verses and conversations for seniors – easily accessible via tablet or smartphone."
-      },
-      "hospital": {
-        "title": "Hospitals",
-        "desc": "Comfort and spiritual support for patients in difficult times – available 24/7 at the bedside."
-      },
-      "prison": {
-        "title": "Prison Chaplaincy",
-        "desc": "Hope and spiritual support for inmates – a confidential companion around the clock."
-      },
-      "military": {
-        "title": "Military Chaplaincy",
-        "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
-      }
-    }
-  },
-  "institutions": {
-    "badge": "For Institutions",
-    "heroTitle": "BibleBot for Your Institution",
-    "heroSubtitle": "Digital pastoral care for care homes, retirement homes, hospitals, and correctional facilities – personal, confidential, and around the clock.",
-    "typesTitle": "Who is BibleBot for?",
-    "useCasesTitle": "How BibleBot is Used",
-    "useCasesSubtitle": "Practical applications for daily life in your institution.",
-    "pricingTitle": "Patronage Packages",
-    "pricingSubtitle": "The same packages as for churches – adapted to institutional needs.",
-    "linkChurches": "Also available for churches",
-    "type": {
-      "careHome": {
-        "title": "Care Homes",
-        "desc": "Daily Bible impulses and companionship for residents – even when no chaplain is on site."
-      },
-      "seniorHome": {
-        "title": "Retirement Homes",
-        "desc": "Familiar Bible verses and conversations for seniors – easily accessible via tablet or smartphone."
-      },
-      "hospital": {
-        "title": "Hospitals",
-        "desc": "Comfort and spiritual support for patients in difficult times – available 24/7 at the bedside."
-      },
-      "prison": {
-        "title": "Prison Chaplaincy",
-        "desc": "Hope and spiritual support for inmates – a confidential companion around the clock."
-      },
-      "military": {
-        "title": "Military Chaplaincy",
-        "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
-      }
-    },
-    "useCase": {
-      "dailyImpulse": {
-        "title": "Daily Impulse",
-        "desc": "A Bible verse with reflection question every morning – lowers the barrier for spiritual conversations."
-      },
-      "companionship": {
-        "title": "Conversation Partner",
-        "desc": "BibleBot answers faith questions patiently and without time pressure – ideal for lonely hours."
-      },
-      "accessibility": {
-        "title": "Easy Access",
-        "desc": "Large text, simple tablet interface – also for people with limited mobility."
-      },
-      "availability": {
-        "title": "24/7 Available",
-        "desc": "Spiritual companionship at night and on weekends – when no chaplain is available."
-      }
-    },
-    "tierDesc": {
-      "free": "Basic access for residents and patients",
-      "community": "Mentioned as supporter, ad-free access",
-      "gemeinde": "Logo presence, monthly usage report",
-      "kirche": "Custom content, roadmap co-creation, premium support"
-    },
-    "form": {
-      "title": "Interested? Get in touch!",
-      "subtitle": "We'll get back to you within 48 hours.",
-      "name": "Your name",
-      "email": "Email address",
-      "institutionName": "Institution name",
-      "type": "Type of institution",
-      "typePlaceholder": "Please select...",
-      "tier": "Preferred package",
-      "tierPlaceholder": "Choose package...",
-      "message": "Your message",
-      "submit": "Send inquiry",
-      "success": "Inquiry sent! We'll be in touch soon. 🙏",
-      "error": "Error sending. Please try again."
-    },
-    "seniorHint": {
-      "title": "Režim pre seniorov k dispozícii",
-      "desc": "Väčšie písmo a zjednodušená navigácia – ideálne pre starších obyvateľov.",
-      "cta": "Vyskúšajte režim pre seniorov"
-    }
-  },
-  "refer": {
-    "badge": "Share God's Word",
-    "title": "Recommend BibleBot",
-    "subtitle": "Know someone who could use encouragement? Share BibleBot – one message can make a difference.",
-    "whatsapp": "Share via WhatsApp",
-    "whatsappMsg": "Hey, I wanted to show you BibleBot – a free Bible companion that really knows the Bible and asks great questions. No login, anonymous, honest. Try it out: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
-    "telegram": "Share via Telegram",
-    "telegramMsg": "Hey, do you know BibleBot? A free personal Bible companion – honest, anonymous, no login needed. Check it out: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
-    "email": "Share via email",
-    "emailSubject": "This might interest you: BibleBot.Life",
-    "emailBody": "Hi!\n\nI wanted to show you BibleBot – a free Bible companion that really knows the Bible. No sign-up needed, completely anonymous.\n\nIt asks thoughtful questions, explains Bible passages in context and accompanies you honestly – even on difficult topics.\n\nTry it out: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nBest wishes",
-    "copy": "Copy link",
-    "copied": "Link copied! 📋",
-    "qr": "Or just show this QR code:"
-  },
-  "share": {
-    "label": "Share",
-    "shareVia": "Share via",
-    "copied": "Copied! 📋",
-    "copiedShort": "Copied!",
-    "copiedDesc": "Text copied to clipboard. Share it on WhatsApp, Instagram or wherever you like!",
-    "copyLink": "Copy text",
-    "error": "Copy failed",
-    "impulseTitle": "BibleBot – Impulse of the Day",
-    "chatTitle": "BibleBot – Thought of the Day",
-    "createImage": "Create image ✨",
-    "generating": "Creating…",
-    "imageReady": "Your image is ready to share!",
-    "shareImage": "Share image",
-    "download": "Save",
-    "imageError": "Image creation failed",
-    "imageErrorDesc": "The image could not be created. Please try again later.",
-    "imageSaved": "Text copied! 📋",
-    "imageSavedDesc": "Save the image and share it with the copied text on Instagram, WhatsApp or wherever you like!"
   }
 }

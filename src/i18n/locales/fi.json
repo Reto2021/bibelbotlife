@@ -1,296 +1,718 @@
 {
   "nav": {
-    "startNow": "Aloita"
+    "startNow": "Aloita nyt"
   },
   "loader": "Ladataan…",
   "hero": {
     "badge": {
       "noLogin": "Ei kirjautumista",
-      "noData": "Ei dataa",
-      "noJudgment": "Ei tuomitsemista"
+      "noData": "Ei tietoja",
+      "noJudgment": "Ei tuomiota"
     },
     "title1": "Raamattu.",
     "title2": " Uudelleen ajateltuna.",
-    "subtitle": "BibleBot tuntee Raamatun – ja esittää oikeat kysymykset. Ei ihminen, mutta rehellinen kumppani. Merkityksellisiin keskusteluihin, syviin kysymyksiin ja aitoihin impulsseihin.",
-    "ctaTelegram": "Aloita Telegramissa",
+    "subtitle": "BibleBotisi tuntee Raamatun – ja esittää oikeat kysymykset. Ei ihminen, mutta rehellinen kumppani. Hyviin keskusteluihin, syviin kysymyksiin ja aitoihin impulsseihin.",
+    "ctaTelegram": "Aloita Telegramilla",
     "ctaMore": "Lue lisää",
-    "quote": "\"Come to me, all you who are weary and burdened, and I will give you rest.\"",
-    "quoteRef": "– Matthew 11:28"
+    "quote": "«Tulkaa minun luokseni, kaikki te työllä rasitetut ja kuormitetut, niin minä annan teille levon.»",
+    "quoteRef": "– Matteus 11:28"
   },
   "impulse": {
-    "loading": "Loading daily impulse...",
-    "label": "Impulse of the Day",
-    "deepDive": "What does this mean for me?",
-    "explore": "Read full passage"
+    "loading": "Päivän impulssi latautuu...",
+    "label": "Päivän impulssi",
+    "deepDive": "Mitä tämä tarkoittaa minulle?",
+    "explore": "Lue koko kohta"
   },
   "features": {
-    "sectionTitle": "How BibleBot accompanies you",
-    "sectionSubtitle": "Discover the many ways BibleBot can walk alongside you",
+    "sectionTitle": "Miten BibleBotisi opastaa sinua",
+    "sectionSubtitle": "Tutustu monipuolisiin tapoihin, joilla BibleBotisi voi opastaa sinua",
     "bible": {
-      "title": "Bible passages & interpretation",
-      "desc": "Ask \"What does the Bible say about...?\" and receive relevant verses with context and clear explanation."
+      "title": "Raamatunkohdat & tulkinta",
+      "desc": "Kysy «Mitä Raamattu sanoo...?» ja saat sopivia jakeita kontekstin ja ymmärrettävän selityksen kera."
     },
     "goals": {
-      "title": "Life planning & goals",
-      "desc": "Discover your calling, set concrete goals, and find out what God might have in store for you."
+      "title": "Elämän suunnittelu & tavoitteiden asettaminen",
+      "desc": "Löydä kutsumuksesi, aseta konkreettisia tavoitteita ja selvitä, mitä Jumalalla voisi olla mielessäsi."
     },
     "self": {
-      "title": "Finding yourself",
-      "desc": "Recognize your gifts, strengths, and longings – and what your heart truly needs."
+      "title": "Löydä itsesi",
+      "desc": "Tunnista lahjasi, vahvuutesi ja kaipauksesi – ja mitä sydämesi todella tarvitsee."
     },
     "faith": {
-      "title": "Faith journey & finding Christ",
-      "desc": "Whether seeking, doubting, or deepening – BibleBot accompanies you on your personal path."
+      "title": "Uskon tie & Kristuksen löytäminen",
+      "desc": "Olitpa etsivä, epäilevä tai syventävä – BibleBotisi opastaa sinua henkilökohtaisella tielläsi."
     },
     "daily": {
-      "title": "Daily impulses & church year",
-      "desc": "Start your day with impulses and let BibleBot guide you through Advent, Lent, and holidays."
+      "title": "Päivittäiset impulssit & kirkkovuosi",
+      "desc": "Aloita päiväsi impulsseilla ja anna itsesi tulla opastetuksi adventin, paastonajan ja juhlapyhien läpi."
     },
     "groups": {
-      "title": "Groups & communities",
-      "desc": "Perfect for Bible study groups, church communities, and shared devotions."
+      "title": "Ryhmät & seurakunnat",
+      "desc": "Täydellinen raamattupiireille, seurakuntaryhmille ja yhteisille hartauksille."
     }
   },
   "coaching": {
-    "badge": "Methodology",
-    "title": "Not just a chatbot – genuine companionship",
-    "subtitle": "BibleBot combines biblical wisdom with proven coaching methods and Positive Psychology.",
-    "journeyTitle": "Personal companionship",
-    "journeyDesc": "BibleBot accompanies you as long as you wish – in free conversation or with an optional 21-day structure.",
-    "week1": "Week 1: Arriving",
-    "week1Desc": "Building trust, listening, understanding your situation. Where are you? What concerns you?",
-    "week2": "Week 2: Deepening",
-    "week2Desc": "Recognizing patterns, clarifying desires, deepening biblical impulses. What do you really want?",
-    "week3": "Week 3: Acting",
-    "week3Desc": "Taking concrete steps, setting goals, initiating change. What's your next step?",
-    "openQuestionsTitle": "Open questions instead of quick answers",
-    "openQuestionsDesc": "BibleBot doesn't give cheap advice. Instead, it asks the questions that truly matter:",
-    "openQ1": "\"What's really behind this desire?\"",
-    "openQ2": "\"How would you know something has changed?\"",
-    "openQ3": "\"What would be a first small step?\"",
-    "honestTitle": "Honest instead of toxic positivity",
-    "honestDesc": "No \"It'll be fine!\" and no sugarcoating. BibleBot is empathetic AND honest:",
-    "honest1": "Also addresses uncomfortable Bible passages",
-    "honest2": "Challenges you to self-reflection",
-    "honest3": "Distinguishes comfort from avoidance",
-    "scienceTitle": "Scientifically grounded",
+    "badge": "Metodologia",
+    "title": "Ei vain chatbot – aitoa ohjausta",
+    "subtitle": "BibleBotisi yhdistää raamatullisen viisauden todistettuihin valmennusmenetelmiin ja positiiviseen psykologiaan.",
+    "journeyTitle": "Henkilökohtainen ohjaus",
+    "journeyDesc": "BibleBotisi opastaa sinua niin kauan kuin haluat – vapaassa keskustelussa tai valinnaisella 21 päivän rakenteella.",
+    "week1": "Viikko 1: Saapuminen",
+    "week1Desc": "Rakenna luottamusta, kuuntele, ymmärrä tilannettasi. Missä olet? Mikä sinua askarruttaa?",
+    "week2": "Viikko 2: Syventäminen",
+    "week2Desc": "Tunnista malleja, selvennä toiveita, syvennä raamatullisia impulsseja. Mitä todella haluat?",
+    "week3": "Viikko 3: Toiminta",
+    "week3Desc": "Tee konkreettisia askelia, muotoile tavoitteita, käynnistä muutos. Mikä on seuraava askeleesi?",
+    "openQuestionsTitle": "Avoimia kysymyksiä nopeiden vastausten sijaan",
+    "openQuestionsDesc": "BibleBotisi ei anna sinulle halpoja neuvoja. Sen sijaan se esittää kysymyksiä, jotka todella merkitsevät:",
+    "openQ1": "«Mitä tämän toiveen takana oikeastaan on?»",
+    "openQ2": "«Mistä huomaisit, että jokin on muuttunut?»",
+    "openQ3": "«Mikä olisi ensimmäinen pieni askel?»",
+    "honestTitle": "Rehellinen myrkyllisen positiivisuuden sijaan",
+    "honestDesc": "Ei «Kyllä se siitä!» eikä kaunistelua. BibleBotisi on empaattinen JA rehellinen:",
+    "honest1": "Nimeää myös epämukavat raamatunkohdat",
+    "honest2": "Haastaa itsetutkiskeluun",
+    "honest3": "Erottaa lohdutuksen ja torjunnan",
+    "scienceTitle": "Tieteellisesti perusteltu",
     "perma": {
-      "name": "PERMA Model",
+      "name": "PERMA-malli",
       "author": "Seligman",
-      "desc": "Positive emotions, meaning & growth"
+      "desc": "Positiiviset tunteet, merkitys & kasvu"
     },
     "logo": {
-      "name": "Logotherapy",
+      "name": "Logoterapia",
       "author": "Frankl",
-      "desc": "Finding meaning in difficult times"
+      "desc": "Merkityksen löytäminen vaikeina aikoina"
     },
     "gratitude": {
-      "name": "Gratitude",
+      "name": "Kiitollisuus",
       "author": "Emmons",
-      "desc": "Research-based gratitude practice"
+      "desc": "Tutkimukseen perustuva kiitollisuusharjoitus"
     },
     "forgiveness": {
-      "name": "Forgiveness",
+      "name": "Anteeksianto",
       "author": "Worthington",
-      "desc": "REACH model for forgiveness processes"
+      "desc": "REACH-malli anteeksiantoprosesseihin"
     },
-    "renameTip": "💡 You can give your BibleBot a personal name – so it truly becomes <strong>your</strong> companion."
+    "renameTip": "💡 Voit antaa BibleBotillesi oman nimen – jotta siitä tulee todella <strong>sinun</strong> kumppanisi."
   },
   "discover": {
-    "badge": "For the curious",
-    "title": "Rediscover faith – without pressure",
-    "subtitle": "More and more people are asking the big questions anew. BibleBot.Life is for everyone who wants to (re)discover faith – honestly, without pathos, and without church jargon.",
+    "badge": "Uteliaille",
+    "title": "Löydä usko uudelleen – ilman paineita",
+    "subtitle": "Yhä useammat ihmiset esittävät itselleen suuria kysymyksiä uudelleen. BibleBot.Life on kaikille, jotka haluavat (uudelleen) löytää uskon – rehellisesti, ilman paatosta ja ilman kirkkojargonia.",
     "doubt": {
-      "title": "You doubt?",
-      "text": "Good. Doubt isn't a flaw – it's the beginning of honest faith. The Bible is full of people who wrestled."
+      "title": "Epäiletkö?",
+      "text": "Hyvä niin. Epäilykset eivät ole virhe – ne ovat rehellisen uskon alku. Raamattu on täynnä ihmisiä, jotka ovat kamppailleet."
     },
     "search": {
-      "title": "You're searching?",
-      "text": "Maybe you don't even know what for. That's perfectly fine. BibleBot helps you ask the right questions – instead of delivering quick answers."
+      "title": "Etsitkö?",
+      "text": "Ehkä et edes tiedä tarkalleen, mitä. Se on täysin ok. BibleBotisi auttaa sinua esittämään oikeat kysymykset – sen sijaan, että antaisi nopeita vastauksia."
     },
     "deepen": {
-      "title": "You want to go deeper?",
-      "text": "You already believe, but want to understand more? Discover the depth of the Bible – historical, personal, surprisingly relevant."
+      "title": "Haluatko syventää?",
+      "text": "Uskotko jo, mutta haluat ymmärtää enemmän? Tutustu Raamatun syvyyteen – historiallisesti, henkilökohtaisesti, yllättävän relevantisti."
     },
-    "quote": "\"Ask, and it will be given to you; seek, and you will find; knock, and the door will be opened.\"",
-    "quoteRef": "– Matthew 7:7",
-    "quoteText": "Many of us don't talk much about faith. That's okay. But those with questions deserve honest answers – without sermons, without membership, without ulterior motives."
+    "quote": "«Koluttakaa, niin teille avataan.»",
+    "quoteRef": "– Matteus 7:7",
+    "quoteText": "Sveitsissä emme puhu paljon uskosta. Sitä ei tarvitsekaan. Mutta ne, joilla on kysyttävää, ansaitsevat rehellisiä vastauksia – ilman saarnaa, ilman jäsenyyttä, ilman taka-ajatuksia."
   },
   "subscribe": {
-    "title": "Daily Bible impulse",
-    "subtitle": "Every morning at 7:00 AM – a verse, a thought, a good start.",
-    "firstName": "Your first name",
-    "firstNameOptional": "(optional)",
-    "firstNamePlaceholder": "e.g. Thomas",
-    "firstNameHint": "So we can greet you personally.",
-    "channelLabel": "How would you like to receive the impulse?",
+    "title": "Päivittäinen Raamatun impulssi",
+    "subtitle": "Joka aamu klo 07:00 – jae, ajatus, hyvä alku.",
+    "firstName": "Etunimesi",
+    "firstNameOptional": "(valinnainen)",
+    "firstNamePlaceholder": "esim. Thomas",
+    "firstNameHint": "Jotta voimme tervehtiä sinua henkilökohtaisesti.",
+    "channelLabel": "Miten haluat vastaanottaa impulssin?",
     "push": "Push",
-    "pushDesc": "Browser notification",
+    "pushDesc": "Selaimen ilmoitus",
     "telegram": "Telegram",
-    "telegramDesc": "Message via Telegram",
+    "telegramDesc": "Viesti Telegramin kautta",
     "sms": "SMS",
-    "smsDesc": "Text to your phone",
-    "phoneLabel": "Phone number",
-    "phonePlaceholder": "+1 555 123 4567",
-    "phoneHint": "With country code, e.g. +1 for the US.",
-    "telegramHint": "Click \"Subscribe\" – you'll be redirected to Telegram. Start the bot and type <strong>/daily</strong> to activate the daily impulse.",
-    "pushHint": "After clicking \"Subscribe\", your browser will ask for notification permission. Please allow it to receive the impulse.",
-    "submit": "Subscribe",
-    "submitting": "Subscribing...",
-    "footNote": "No login required. Cancel anytime.",
-    "successTitle": "You're subscribed! 🙏",
-    "successText": "Starting tomorrow at 7:00 AM, you'll receive your personal Bible impulse.",
-    "toastTelegram": "Telegram opened 🙏",
-    "toastTelegramDesc": "Start the bot and type /daily to activate the daily impulse.",
-    "toastSuccess": "Subscribed! 🙏",
-    "toastSuccessDesc": "You'll receive your daily impulse starting tomorrow.",
-    "toastPushPreview": "Push subscription not available in preview",
-    "toastPushPreviewDesc": "Push notifications only work on the published site.",
-    "toastNotSupported": "Not supported",
-    "toastNotSupportedDesc": "Your browser does not support push notifications.",
-    "toastPermDenied": "Permission denied",
-    "toastPermDeniedDesc": "Please allow notifications in your browser settings.",
-    "toastError": "Error",
-    "toastErrorDesc": "Please try again later."
+    "smsDesc": "SMS puhelimeesi",
+    "phoneLabel": "Puhelinnumero",
+    "phonePlaceholder": "+41 79 123 45 67",
+    "phoneHint": "Maakoodilla, esim. +41 Sveitsille.",
+    "telegramHint": "Napsauta «Tilaa» – sinut ohjataan Telegramiin. Käynnistä botti siellä ja kirjoita <strong>/daily</strong> aktivoidaksesi päivittäisen impulssin.",
+    "pushHint": "Napsautettuasi «Tilaa» selaimesi pyytää lupaa ilmoituksiin. Salli se saadaksesi impulssin.",
+    "submit": "Tilaa",
+    "submitting": "Tilataan...",
+    "footNote": "Ei vaadi kirjautumista. Voit peruuttaa tilauksen milloin tahansa.",
+    "successTitle": "Olet tilannut! 🙏",
+    "successText": "Huomisesta alkaen klo 07:00 saat henkilökohtaisen Raamatun impulssisi.",
+    "toastTelegram": "Telegram avattu 🙏",
+    "toastTelegramDesc": "Käynnistä botti ja kirjoita /daily aktivoidaksesi päivittäisen impulssin.",
+    "toastSuccess": "Tilattu! 🙏",
+    "toastSuccessDesc": "Saat päivittäisen impulssisi huomisesta alkaen.",
+    "toastPushPreview": "Push-tilaus ei esikatselussa",
+    "toastPushPreviewDesc": "Push-ilmoitukset toimivat vain julkaistulla sivulla.",
+    "toastNotSupported": "Ei tuettu",
+    "toastNotSupportedDesc": "Selaimesi ei tue push-ilmoituksia.",
+    "toastPermDenied": "Lupa evätty",
+    "toastPermDeniedDesc": "Salli ilmoitukset selaimesi asetuksista.",
+    "toastError": "Virhe",
+    "toastErrorDesc": "Yritä myöhemmin uudelleen."
   },
   "faq": {
-    "badge": "FAQ",
-    "title": "What you should know about BibleBot",
-    "subtitle": "Transparency matters – especially for theologians, pastors, and critical thinkers.",
-    "q1": "What makes BibleBot different from ChatGPT & Co.?",
-    "q1Generic": "Generic chatbots:",
+    "badge": "Usein kysytyt kysymykset",
+    "title": "Mitä sinun tulisi tietää BibleBotistasi",
+    "subtitle": "Läpinäkyvyys on meille tärkeää – erityisesti teologien, sielunhoitajien ja kriittisten mielien suhteen.",
+    "q1": "Miten BibleBotisi eroaa ChatGPT:stä & kumppaneista?",
+    "q1Generic": "Yleiset chatbotit:",
     "q1GenericItems": [
-      "Superficial Bible quotes without context",
-      "No pastoral guardrails",
-      "Avoids uncomfortable texts",
-      "No crisis intervention",
-      "Mixes Bible with esotericism",
-      "No follow-up questions – just confirmation"
+      "Pinnallisia Raamatun lainauksia ilman kontekstia",
+      "Ei sielunhoidollisia suojakaiteita",
+      "Välttää epämukavia tekstejä",
+      "Ei kriisi-interventiota",
+      "Sekoittaa Raamatun esoteriaan",
+      "Ei lisäkysymyksiä – vain vahvistusta"
     ],
     "q1Bot": "BibleBot.Life:",
     "q1BotItems": [
-      "5 recognized translations – including uncomfortable passages",
-      "Guardrails AND challenging companionship",
-      "Follow-up questions for self-reflection",
-      "Crisis referrals (emergency helplines)",
-      "Exclusively Christian theology",
-      "Promotes critical thinking as faith maturity"
+      "5 hyväksyttyä käännöstä – myös epämukavat kohdat",
+      "Suojakaiteet JA haastava ohjaus",
+      "Lisäkysymyksiä itsetutkiskeluun",
+      "Kriisiviittaukset (puh. 143 / 147)",
+      "Yksinomaan kristillinen teologia",
+      "Edistää kriittistä ajattelua uskon kypsyytenä"
     ],
-    "q2": "Which Bible translations are included?",
-    "q2Intro": "BibleBot works ecumenically with the major German-language Bible editions:",
-    "q2Outro": "All Bible passages include source citations and historical context.",
-    "q3": "What scientific foundations are behind it?",
-    "q3Intro": "The companionship is based on peer-reviewed research in Positive Psychology:",
-    "q4": "How does BibleBot ensure pastoral safety?",
+    "q2": "Mitä Raamatun käännöksiä on käytössä?",
+    "q2Intro": "BibleBotisi toimii ekumeenisesti merkittävimpien saksankielisten Raamatun painosten kanssa:",
+    "q2Outro": "Kaikki Raamatun kohdat annetaan lähdeviitteen ja historiallisen kontekstin kera.",
+    "q3": "Mitä tieteellisiä perusteita sen takana on?",
+    "q3Intro": "Ohjaus perustuu positiivisen psykologian vertaisarvioituun tutkimukseen:",
+    "q4": "Miten BibleBotisi varmistaa sielunhoidollisen turvallisuuden?",
     "q4Items": [
-      "Suicidal thoughts or crisis → immediate referral to emergency helplines",
-      "No psychological or medical diagnoses",
-      "Respect without arbitrariness – clear biblical positions are taken",
-      "Empathy AND honesty – uncomfortable topics are addressed",
-      "Follow-up questions for self-reflection instead of cheap validation",
-      "No toxic positivity – genuine, honest companionship",
-      "Openly names tensions and difficult texts"
+      "Itsemurha-ajatusten tai kriisien yhteydessä → välitön ohjaus Dargebotene Handiin (143) ja Pro Juventuteen (147)",
+      "Ei psykologisia tai lääketieteellisiä diagnooseja",
+      "Kunnioitus ilman mielivaltaisuutta – selkeät raamatulliset kannat otetaan",
+      "Empatia JA rehellisyys – myös epämukavista asioista puhutaan",
+      "Lisäkysymyksiä itsetutkiskeluun halvan vahvistuksen sijaan",
+      "Ei myrkyllistä positiivisuutta – aitoa, rehellistä ohjausta",
+      "Nimeää jännitteet ja vaikeat tekstit avoimesti"
     ],
-    "q5": "Is BibleBot tied to a specific denomination?",
-    "q5Answer": "No. BibleBot is ecumenically oriented and respects Reformed, Catholic, Free Church, and other Christian traditions equally. When there are denominational differences in interpretation, various perspectives are presented transparently – without favoring any tradition.",
-    "q6": "Does BibleBot replace pastoral care or therapy?",
-    "q6Answer": "No. BibleBot is a digital tool for personal Bible reading and reflection. It does not replace professional pastoral care, theological counseling, or psychological therapy. In serious crises, BibleBot always refers to qualified resources.",
-    "q7": "Isn't BibleBot just a 'feel-good bot'?",
-    "q7Answer": "No. BibleBot comforts where comfort is needed – but it also challenges. Spiritual growth requires friction. BibleBot asks uncomfortable follow-up questions, names difficult Bible texts (Job, Lament Psalms, prophetic criticism), and doesn't shy away from topics like justice, repentance, and responsibility. The prophetic tradition was never comfortable – and neither is BibleBot.",
-    "q8": "Who is behind BibleBot and how is it funded?",
-    "q8Answer": "BibleBot.Life is a private, non-commercial project. It's run on a volunteer basis and funded exclusively through voluntary donations. There's no advertising, no data sales, and no paid features. All donations go directly to covering operating costs (infrastructure, hosting, development). Since BibleBot is a private project, donations are not tax-deductible.",
-    "q9": "How does BibleBot handle my data?",
-    "q9Answer": "BibleBot stores no personal data and no chat histories. Every conversation is anonymous. There's no login, no tracking, and no sharing of data with third parties. Usage is completely anonymous."
+    "q5": "Onko BibleBotisi tunnustuksellisesti sidottu?",
+    "q5Answer": "Ei. BibleBotisi on ekumeenisesti suuntautunut ja kunnioittaa yhtä lailla reformoituja, katolisia, vapaakirkollisia ja muita kristillisiä perinteitä. Tunnustuksellisesti erilaisten tulkintojen yhteydessä esitetään läpinäkyvästi eri näkökulmia – suosimatta yhtäkään perinnettä.",
+    "q6": "Korvaako BibleBotisi sielunhoidon tai terapian?",
+    "q6Answer": "Ei. BibleBotisi on digitaalinen apuväline henkilökohtaiseen Raamatun lukemiseen ja pohdintaan. Se ei korvaa ammattimaista sielunhoitoa, teologista neuvontaa tai psykologista terapiaa. Vakavissa kriiseissä BibleBotisi ohjaa aina päteviin yhteyspisteisiin.",
+    "q7": "Eikö BibleBotisi ole vain «hyvän olon botti»?",
+    "q7Answer": "Ei. BibleBotisi lohduttaa, missä lohdutusta tarvitaan – mutta se myös haastaa. Hengellinen kasvu vaatii kitkaa. BibleBotisi esittää epämukavia lisäkysymyksiä, nimeää vaikeita Raamatun tekstejä (Job, valituspsalmit, profeetallinen kritiikki) eikä pelkää aiheita kuten oikeudenmukaisuus, parannus ja vastuu. Profeetallinen perinne ei ole koskaan ollut mukava – eikä BibleBotisikaan.",
+    "q8": "Kuka BibleBotisi takana on ja miten se rahoitetaan?",
+    "q8Answer": "BibleBot.Life on yksityinen, ei-kaupallinen projekti. Sitä ylläpidetään vapaaehtoisvoimin ja rahoitetaan yksinomaan vapaaehtoisilla lahjoituksilla. Ei ole mainoksia, ei tietojen myyntiä eikä maksullisia ominaisuuksia. Kaikki lahjoitukset menevät suoraan juoksevien kulujen (infrastruktuuri, hosting, kehitys) kattamiseen. Koska BibleBot toimii yksityisenä projektina, lahjoitukset eivät ole verovähennyskelpoisia.",
+    "q9": "Miten BibleBotisi käsittelee tietojani?",
+    "q9Answer": "BibleBotisi ei tallenna henkilötietoja eikä chat-historiaa. Jokainen keskustelu on anonyymi. Ei ole kirjautumista, ei seurantaa eikä tietojen luovuttamista kolmansille osapuolille. Käyttö on täysin anonyymi."
   },
   "donate": {
-    "badge": "Support BibleBot",
-    "title": "Help keep BibleBot free",
-    "subtitle": "BibleBot is a passion project – no ads, no subscriptions, no hidden costs. To keep it that way, I rely on voluntary donations. Every contribution helps cover the ongoing costs for operations and infrastructure.",
-    "bankTitle": "Donate via bank transfer",
-    "bankSubtitle": "Every amount counts – thank you! 🙏",
-    "recipient": "Recipient",
-    "bank": "Bank",
-    "purpose": "Reference",
-    "purposeValue": "Donation BibleBot",
-    "note": "BibleBot.Life is operated as a private project. Donations are therefore not tax-deductible."
+    "badge": "Tue BibleBotiasi",
+    "title": "Auta pitämään BibleBotisi ilmaisena",
+    "subtitle": "BibleBotisi on sydänprojekti – ilman mainoksia, ilman tilausta, ilman piilokustannuksia. Jotta se pysyisi sellaisena, olen riippuvainen vapaaehtoisista lahjoituksista. Jokainen panos auttaa kattamaan toiminnan ja infrastruktuurin juoksevat kulut.",
+    "bankTitle": "Lahjoita pankkisiirrolla",
+    "bankSubtitle": "Jokainen summa on tärkeä – suuri kiitos! 🙏",
+    "recipient": "Vastaanottaja",
+    "bank": "Pankki",
+    "purpose": "Käyttötarkoitus",
+    "purposeValue": "Lahjoitus BibleBot",
+    "note": "BibleBot.Life toimii yksityisenä projektina. Lahjoitukset eivät siksi ole verovähennyskelpoisia."
+  },
+  "refer": {
+    "badge": "Jumalan sanan jakaminen",
+    "title": "Suosittele BibleBotia eteenpäin",
+    "subtitle": "Tunnetko jonkun, joka tarvitsee juuri nyt rohkaisua? Jaa BibleBot – yksi viesti voi tehdä paljon.",
+    "whatsapp": "Jaa WhatsAppissa",
+    "whatsappMsg": "Hei, halusin näyttää sinulle BibleBotin – ilmaisen Raamatun kumppanin, joka tuntee Raamatun ja esittää todella hyviä kysymyksiä. Ei kirjautumista, anonyymi, rehellinen. Kokeile: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "telegram": "Jaa Telegramissa",
+    "telegramMsg": "Hei, tunnetko jo BibleBotin? Ilmainen henkilökohtainen Raamatun kumppani – rehellinen, anonyymi, ilman kirjautumista. Katso: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "email": "Jaa sähköpostilla",
+    "emailSubject": "Tämä voisi kiinnostaa sinua: BibleBot.Life",
+    "emailBody": "Hei!\n\nHaluaisin näyttää sinulle BibleBotin – ilmaisen Raamatun kumppanin, joka todella tuntee Raamatun. Ei vaadi rekisteröitymistä, täysin anonyymi.\n\nSe esittää hyviä lisäkysymyksiä, selittää Raamatun kohtia kontekstissa ja opastaa sinua rehellisesti – myös vaikeissa aiheissa.\n\nKokeile: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nTerveisin",
+    "copy": "Kopioi linkki",
+    "copied": "Linkki kopioitu! 📋",
+    "qr": "Tai näytä vain tämä QR-koodi:"
   },
   "cta": {
-    "title": "You don't have to go through this alone",
-    "subtitle": "Just tell BibleBot what's on your mind. No login, no cost, no judgment – just honest companionship and the wisdom of the Bible.",
-    "button": "Start a conversation"
+    "title": "Sinun ei tarvitse käydä tätä läpi yksin",
+    "subtitle": "Kirjoita BibleBotillesi, mikä sinua askarruttaa. Ei kirjautumista, ei kustannuksia, ei tuomiota – vain rehellistä ohjausta ja Raamatun viisautta.",
+    "button": "Aloita keskustelu nyt"
   },
   "footer": {
-    "tagline": "Henkilökohtainen kumppanisi Raamatun äärellä",
-    "disclaimer": "BibleBot.Life is a digital tool and does not replace professional pastoral care, theological counseling, or psychological therapy. In acute crises, please contact your local emergency helpline.",
-    "impressum": "Imprint",
-    "notes": "Notes",
-    "private": "Private, non-commercial project",
-    "noChat": "No storage of chat data",
-    "noTax": "Donations are not tax-deductible",
-    "datenschutz": "Privacy Policy",
-    "love": "With ❤️ for everyone wondering what Christ thinks.",
-    "forChurches": "For Churches"
+    "tagline": "Henkilökohtainen kumppanisi elämään Raamatun kanssa",
+    "disclaimer": "BibleBot.Life on digitaalinen apuväline eikä korvaa ammattimaista sielunhoitoa, teologista neuvontaa tai psykologista terapiaa. Akuuteissa kriiseissä ota yhteyttä Dargebotene Handiin (puh. 143) tai Pro Juventuteen (puh. 147).",
+    "impressum": "Julkaisutiedot",
+    "notes": "Huomautuksia",
+    "private": "Yksityinen, ei-kaupallinen projekti",
+    "noChat": "Ei chat-tietojen tallennusta",
+    "noTax": "Lahjoitukset eivät ole verovähennyskelpoisia",
+    "datenschutz": "Tietosuojakäytäntö",
+    "love": "❤️:lla kaikille, jotka miettivät, mitä Kristus ajattelee.",
+    "forChurches": "Seurakunnille"
   },
   "chat": {
-    "welcome": "Welcome! 🤗\n\nI'm your BibleBot – your personal companion with the Bible, good questions, and real impulses. No pressure, no judgment.\n\nYou can ask me anything – or just share what's on your mind. 💛",
-    "journeyOffer": "💡 **Tip:** I also offer a **21-day journey** – 3 weeks of daily impulses, reflections, and concrete steps. At your own pace.\n\nWould you like to try it?",
-    "suggestion1": "I need an uplifting word right now",
-    "suggestion2": "What does the Bible say when you feel uncertain?",
-    "suggestion3": "I want to find out what I really want",
-    "teaser": "Mikä mieltäsi painaa? 💛",
-    "teaserSub": "I'm here – without any judgment.",
-    "openChat": "Open chat",
-    "closeChat": "Close chat",
-    "yourCompanion": "Your personal companion",
-    "journeyComplete": "21 days completed! 🎉",
-    "arriving": "Arriving",
-    "deepening": "Deepening",
-    "acting": "Acting",
-    "renameTip": "Tip: Click the name to rename me ✨",
-    "changeName": "Change name",
-    "placeholder": "Kirjoita vapaasti...",
-    "startVoice": "Start voice input",
-    "stopVoice": "Stop recording",
-    "noVoice": "Your browser does not support voice input.",
-    "writing": "typing...",
-    "shieldBadge": "No login · No judgment · Citations verified",
-    "journeyStart": "Yes, let's go ✨",
-    "journeyLater": "Maybe later",
-    "journeyStartMsg": "Yes, I'd like to start the 21-day journey!",
-    "qaChecking": "Checking citations...",
-    "qaIssue": "{{count}} issue with citations",
-    "qaIssue_plural": "{{count}} issues with citations",
-    "qaOk": "{{count}} citation verified ✓",
-    "qaOk_plural": "{{count}} citations verified ✓",
-    "qaWarning": "⚠️ Accuracy notes:",
-    "errorTooMany": "Too many requests – please wait a moment.",
-    "errorCredits": "AI quota exhausted.",
-    "errorConnect": "Connection error.",
-    "errorTitle": "Error",
-    "errorConnection": "could not be reached.",
-    "errorNoStream": "No stream",
-    "seniorMode": "Senior mode (larger text)",
-    "teaserCta": "Start writing →",
-    "namePlaceholder": "e.g. Eli, Miriam…"
+    "welcome": "Mukava nähdä sinua 🤗\n\nOlen BibleBotisi – henkilökohtainen kumppanisi Raamatun, hyvien kysymysten ja konkreettisten impulssien kanssa. Ei paineita, ei arvostelua.\n\nVoit kysyä minulta mitä tahansa – tai vain kertoa, mikä sinua juuri nyt askarruttaa. 💛",
+    "journeyOffer": "💡 **Vinkki:** Tarjoan myös **21 päivän ohjausta** – 3 viikkoa päivittäisiä impulsseja, pohdintoja ja konkreettisia askelia. Täysin omaan tahtiisi.\n\nHaluaisitko kokeilla sitä?",
+    "suggestion1": "Tarvitsen juuri nyt rakentavan sanan",
+    "suggestion2": "Mitä Raamattu sanoo, kun tuntee olonsa epävarmaksi?",
+    "suggestion3": "Haluan selvittää, mitä todella haluan",
+    "teaser": "Mikä sinua juuri nyt askarruttaa? 💛",
+    "teaserSub": "Olen täällä – ilman arvostelua.",
+    "teaserCta": "Kirjoita nyt →",
+    "openChat": "Avaa chat",
+    "closeChat": "Sulje chat",
+    "yourCompanion": "Henkilökohtainen kumppanisi",
+    "journeyComplete": "21 päivää suoritettu! 🎉",
+    "arriving": "Saapuminen",
+    "deepening": "Syventäminen",
+    "acting": "Toiminta",
+    "renameTip": "Anna minulle nimi ✨",
+    "namePlaceholder": "esim. Eli, Miriam…",
+    "changeName": "Vaihda nimi",
+    "placeholder": "Kirjoita vain...",
+    "startVoice": "Aloita puheentunnistus",
+    "stopVoice": "Pysäytä tallennus",
+    "noVoice": "Selaimesi ei tue puheentunnistusta.",
+    "writing": "kirjoittaa...",
+    "shieldBadge": "Ei kirjautumista · Ei tuomiota · Lainaukset tarkistettu",
+    "journeyStart": "Kyllä, aloita ✨",
+    "journeyLater": "Ehkä myöhemmin",
+    "journeyStartMsg": "Kyllä, haluan aloittaa 21 päivän ohjauksen!",
+    "qaChecking": "Lainauksia tarkistetaan...",
+    "qaIssue": "{{count}} huomautus lainauksista",
+    "qaIssue_plural": "{{count}} huomautusta lainauksista",
+    "qaOk": "{{count}} lainaus tarkistettu ✓",
+    "qaOk_plural": "{{count}} lainausta tarkistettu ✓",
+    "qaWarning": "⚠️ Huomautuksia tarkkuudesta:",
+    "errorTooMany": "Liian monta pyyntöä – odota hetki.",
+    "errorCredits": "Tekoälykiintiö käytetty.",
+    "errorConnect": "Virhe yhdistettäessä.",
+    "errorTitle": "Virhe",
+    "errorConnection": "ei voitu tavoittaa.",
+    "errorNoStream": "Ei virtaa",
+    "seniorMode": "Senioritila (suurempi fontti)"
   },
   "install": {
     "title": "Asenna BibleBot",
-    "androidDesc": "Quick access from your home screen",
-    "iosDesc": "Tap \"Share\" → \"Add to Home Screen\"",
-    "button": "Install",
-    "close": "Close"
+    "androidDesc": "Nopea pääsy suoraan aloitusnäytöltä",
+    "iosDesc": "Napauta «Jaa» → «Lisää Koti-valikkoon»",
+    "button": "Asenna",
+    "close": "Sulje"
+  },
+  "share": {
+    "label": "Jaa",
+    "shareVia": "Jaa kautta",
+    "copied": "Kopioitu! 📋",
+    "copiedShort": "Kopioitu!",
+    "copiedDesc": "Teksti kopioitu leikepöydälle. Jaa se nyt WhatsAppissa, Instagramissa tai missä haluat!",
+    "copyLink": "Kopioi teksti",
+    "error": "Kopiointi epäonnistui",
+    "impulseTitle": "BibleBot – Päivän impulssi",
+    "chatTitle": "BibleBot – Päivän ajatus",
+    "createImage": "Luo kuva ✨",
+    "generating": "Luodaan…",
+    "imageReady": "Kuvasi on valmis jaettavaksi!",
+    "shareImage": "Jaa kuva",
+    "download": "Tallenna",
+    "imageError": "Kuvan luominen epäonnistui",
+    "imageErrorDesc": "Kuvaa ei voitu luoda. Yritä myöhemmin uudelleen.",
+    "imageSaved": "Teksti kopioitu! 📋",
+    "imageSavedDesc": "Tallenna kuva ja jaa se kopioidun tekstin kanssa Instagramissa, WhatsAppissa tai missä haluat!"
   },
   "darkMode": {
-    "light": "Light mode",
-    "dark": "Dark mode"
+    "light": "Vaalea tila",
+    "dark": "Tumma tila"
   },
   "impressum": {
-    "back": "Back to home",
-    "title": "Imprint"
+    "back": "Takaisin etusivulle",
+    "title": "Julkaisutiedot"
   },
   "datenschutz": {
-    "back": "Back to home",
-    "title": "Privacy Policy"
+    "back": "Takaisin etusivulle",
+    "title": "Tietosuojakäytäntö"
+  },
+  "tiles": {
+    "sectionTitle": "Mikä sinua liikuttaa?",
+    "sectionSubtitle": "Valitse aihe — BibleBot opastaa sinua",
+    "baptism": {
+      "title": "Löydä kastejae",
+      "desc": "Täydellinen jae lapsellesi",
+      "prompt": "Auta minua löytämään sopiva kastejae. Millainen lapsi hän on ja mitä vanhemmat toivovat?"
+    },
+    "condolence": {
+      "title": "Lohduttavat sanat",
+      "desc": "Osanotto & jäähyväiset",
+      "prompt": "Tarvitsen lohduttavia sanoja surukorttiin. Voitko auttaa minua muotoilemaan jotain sopivaa?"
+    },
+    "wedding": {
+      "title": "Hääjae",
+      "desc": "Raamatullisia sanoja rakkaudellenne",
+      "prompt": "Etsimme kaunista raamatullista jaetta häihimme. Mitkä Raamatun kohdat sopivat rakkauteen ja parisuhteeseen?"
+    },
+    "anxiety": {
+      "title": "Pelko & huolet",
+      "desc": "Löydä rohkeutta vaikeina aikoina",
+      "prompt": "Kamppailen juuri nyt pelkojen ja huolien kanssa. Mitä Raamattu sanoo siitä? Onko jakeita, jotka antavat rohkeutta?"
+    },
+    "confession": {
+      "title": "Tunnustus",
+      "desc": "Jumala antaa anteeksi — sano se ääneen",
+      "prompt": "Haluan päästä eroon jostakin, mikä painaa mieltäni. Mitä Raamattu sanoo anteeksiannosta ja uudesta alusta?"
+    },
+    "heartbreak": {
+      "title": "Sydänsuru",
+      "desc": "Mitä Raamattu sanoo sydänsurusta",
+      "prompt": "Sydämeni on särkynyt. Mitä Raamattu sanoo sydänsurusta ja miten löytää toivoa uudelleen?"
+    },
+    "newstart": {
+      "title": "Uusi alku",
+      "desc": "Voimaa uuteen elämänvaiheeseen",
+      "prompt": "Olen uuden alun edessä ja tarvitsen rohkaisua. Mitkä Raamatun kohdat puhuvat uusista aluista?"
+    },
+    "namequiz": {
+      "title": "Kaste-visa",
+      "desc": "Löydä sopiva raamatullinen nimi",
+      "prompt": "Etsin raamatullista nimeä lapselleni. Voitko antaa minulle ehdotuksia ja selittää niiden merkityksen?"
+    },
+    "sleepless": {
+      "title": "Uneton",
+      "desc": "Löydä rauhaa yöllä",
+      "prompt": "En saa unta ja mietin asioita. Onko olemassa rauhoittavaa rukousta tai psalmia yöksi?"
+    },
+    "loneliness": {
+      "title": "Yksinäisyys",
+      "desc": "Et ole koskaan yksin",
+      "prompt": "Tunnen itseni yksinäiseksi. Mitä Raamattu sanoo siitä, että Jumala on aina kanssamme?"
+    },
+    "decision": {
+      "title": "Vaikea päätös",
+      "desc": "Viisautta oikealle tielle",
+      "prompt": "Olen vaikean päätöksen edessä. Mitkä Raamatun kohdat auttavat minua löytämään oikean tien?"
+    },
+    "gratitude": {
+      "title": "Kiitollisuus",
+      "desc": "Henkilökohtainen kiitosrukous",
+      "prompt": "Haluan kiittää Jumalaa. Auta minua muotoilemaan henkilökohtainen kiitosrukous."
+    },
+    "lifewheel": {
+      "title": "Elämänpyörä",
+      "desc": "Kuinka tyytyväinen olet todella?"
+    },
+    "sevenwhys": {
+      "title": "7 Miksiä",
+      "desc": "Löydä kysymyksesi syvin juuri",
+      "prompt": "Haluan tehdä 7 miksiä -harjoituksen. Tässä on aiheeni:"
+    },
+    "anger": {
+      "title": "Viha & suuttumus",
+      "desc": "Kun olet räjähtämäisilläsi vihasta",
+      "prompt": "Olen niin vihainen enkä tiedä, mitä tehdä vihalleni. Mitä Raamattu sanoo vihasta ja miten voin käsitellä sitä?"
+    },
+    "shame": {
+      "title": "Häpeä & syyllisyys",
+      "desc": "Kun syyllisyys painaa sinua",
+      "prompt": "Häpeän niin paljon ja tunnen itseni syylliseksi. Mitä Raamattu sanoo syyllisyydestä, anteeksiannosta ja uudesta alusta?"
+    },
+    "burnout": {
+      "title": "Burnout",
+      "desc": "Kun et enää jaksa",
+      "prompt": "Olen täysin uupunut ja loppuunpalanut. En yksinkertaisesti jaksa enää. Mitä Raamattu sanoo levosta ja virkistyksestä?"
+    },
+    "illness": {
+      "title": "Sairaus",
+      "desc": "Kun diagnoosi muuttaa kaiken",
+      "prompt": "Olen saanut vaikean diagnoosin ja pelkään. Mitä Raamattu sanoo sairaudesta, parantumisesta ja toivosta?"
+    },
+    "financial": {
+      "title": "Rahahuolet",
+      "desc": "Kun laskut painavat",
+      "prompt": "Minulla on taloudellisia huolia enkä tiedä, mitä tehdä. Mitä Raamattu sanoo rahasta, luottamuksesta ja huolenpidosta?"
+    },
+    "meaningcrisis": {
+      "title": "Merkityskriisi",
+      "desc": "Mitä varten kaikki tämä?",
+      "prompt": "Mietin, mitä varten kaikki tämä on. Olen merkityskriisissä. Mitä Raamattu sanoo elämän tarkoituksesta?"
+    },
+    "selfdoubt": {
+      "title": "Itseluottamuksen puute",
+      "desc": "Kun et tunne itseäsi tarpeeksi hyväksi",
+      "prompt": "Epäilen jatkuvasti itseäni enkä tunne itseäni tarpeeksi hyväksi. Mitä Raamattu sanoo arvostani?"
+    },
+    "calling": {
+      "title": "Kutsumus",
+      "desc": "Mitä minun pitäisi tehdä elämälläni?",
+      "prompt": "En tiedä, mitä minun pitäisi tehdä elämälläni. Auta minua löytämään kutsumukseni – mitä Raamattu sanoo siitä?"
+    },
+    "faithdoubt": {
+      "title": "Uskon epäilykset",
+      "desc": "Kun usko horjuu",
+      "prompt": "Minulla on epäilyksiä uskoni suhteen enkä tiedä, voinko enää uskoa. Mitä Raamattu sanoo epäilyksistä?"
+    },
+    "forgiveness": {
+      "title": "Anteeksianto",
+      "desc": "Kun anteeksianto tuntuu mahdottomalta",
+      "prompt": "En yksinkertaisesti voi antaa anteeksi jollekin. Se sattuu liikaa. Mitä Raamattu sanoo anteeksiannosta?"
+    },
+    "familyconflict": {
+      "title": "Perheriita",
+      "desc": "Kun perheessä riidellään",
+      "prompt": "Perheessäni on suuri riita. Mitä Raamattu sanoo perheen rauhasta ja sovinnosta?"
+    },
+    "envy": {
+      "title": "Kateus",
+      "desc": "Kun muilla menee paremmin",
+      "prompt": "Olen kateellinen muille ja vertailen itseäni jatkuvasti. Mitä Raamattu sanoo kateudesta ja tyytyväisyydestä?"
+    },
+    "joy": {
+      "title": "Jaa iloa",
+      "desc": "Kun jotain ihanaa on tapahtunut",
+      "prompt": "Minulle on tapahtunut jotain ihanaa ja haluan jakaa iloni! Mitä Raamattu sanoo ilosta ja kiitollisuudesta?"
+    },
+    "prayer": {
+      "title": "Rukouspyyntö",
+      "desc": "Rukoillaan yhdessä",
+      "prompt": "Minulla on rukouspyyntö ja haluan rukoilla yhdessä. Ohjaa minua rukouksessa."
+    },
+    "bibleverse": {
+      "title": "Ymmärrä jae",
+      "desc": "Selitys Raamatun kohdasta",
+      "prompt": "Haluan ymmärtää Raamatun kohtaa paremmin. Voitko auttaa minua sijoittamaan sen kontekstiin?"
+    }
+  },
+  "lifeWheel": {
+    "title": "Elämänpyöräsi",
+    "intro": "Arvioi 8 elämänaluetta asteikolla 1-10. Selvitä, missä olet – ja saat raamatullisia impulsseja alueelle, joka tarvitsee huomiota.",
+    "start": "Aloita nyt",
+    "sliderHint": "Siirrä liukusäätimiä – 1 = erittäin tyytymätön, 10 = erittäin tyytyväinen",
+    "showResult": "Näytä tulos",
+    "average": "Keskiarvo",
+    "weakestArea": "Suurin tarve",
+    "getImpulse": "Raamatullinen impulssi {{area}}",
+    "reset": "Tee uudelleen",
+    "prompt": "Elämänpyöräni osoittaa, että minulla on vain {{score}}/10 pistettä alueella «{{area}}». Mitä Raamattu sanoo tästä elämänalueesta? Anna minulle rohkaisua ja käytännön impulsseja.",
+    "areas": {
+      "health": "Terveys",
+      "relationships": "Suhteet",
+      "career": "Ura",
+      "spirituality": "Hengellisyys",
+      "finances": "Talous",
+      "family": "Perhe",
+      "leisure": "Vapaa-aika",
+      "growth": "Henkilökohtainen kasvu"
+    },
+    "save": "Tallenna tulos",
+    "saved": "Tallennettu!",
+    "history": "Aiemmat tulokset",
+    "noHistory": "Ei vielä tallennettuja tuloksia.",
+    "backToNew": "Uusi elämänpyörä",
+    "backToList": "Takaisin listaan"
+  },
+  "church": {
+    "badge": "Seurakunnille",
+    "heroTitle": "BibleBot seurakunnallesi",
+    "heroSubtitle": "Opasta seurakuntalaisiasi raamatullisella viisaudella – digitaalisesti, henkilökohtaisesti ja ympäri vuorokauden.",
+    "useCasesTitle": "Käyttötapaukset",
+    "useCase": {
+      "youth": {
+        "title": "Nuorisotyö",
+        "desc": "Nuoret löytävät Raamatun omalla tavallaan – interaktiivisesti ja ilman estoja."
+      },
+      "confirmation": {
+        "title": "Konfirmaatio",
+        "desc": "Konfirmoitavat syventävät Raamatun tuntemusta itsenäisesti henkilökohtaisella ohjauksella."
+      },
+      "pastoral": {
+        "title": "Sielunhoito",
+        "desc": "24/7-ohjaus täydentämään henkilökohtaista sielunhoitoa."
+      },
+      "bibleStudy": {
+        "title": "Raamattupiiri",
+        "desc": "Impulsseja ja keskustelunaiheita ryhmille ja kotipiireille."
+      }
+    },
+    "pricingTitle": "Mecenaatti-paketit",
+    "pricingSubtitle": "Tue BibleBotia ja seurakuntaasi sopivalla mecenaatti-paketilla.",
+    "popular": "Suosittu",
+    "free": "Ilmainen",
+    "perYear": "vuosi",
+    "contact": "Ota yhteyttä",
+    "tier": {
+      "free": {
+        "name": "Sinapinsiemen",
+        "size": "Pienille seurakunnille & kotipiireille (alle 50 jäsentä)"
+      },
+      "community": {
+        "name": "Matkakumppani",
+        "size": "Seurakunnille, joissa 50–200 jäsentä"
+      },
+      "gemeinde": {
+        "name": "Sillanrakentaja",
+        "size": "Seurakunnille, joissa 200–500 jäsentä"
+      },
+      "kirche": {
+        "name": "Majakka",
+        "size": "Suurille seurakunnille & instituutioille (yli 500 jäsentä)"
+      }
+    },
+    "features": {
+      "directoryEntry": "Hakemistomerkintä",
+      "telegramGroup": "Telegram-ryhmä",
+      "partnerPage": "Oma kumppanisivu",
+      "badge": "Kumppanimerkki",
+      "qrFlyer": "QR-flyeri tulostettavaksi",
+      "contactForm": "Yhteydenottolomake",
+      "pastorProfile": "Pappi/pastori-profiili",
+      "welcomeVideo": "Tervetulovideo",
+      "analytics": "Analytiikka-hallintapaneeli",
+      "prioritySupport": "Prioriteettituki",
+      "multipleProfiles": "Useita profiileja",
+      "customBranding": "Mukautettu brändäys",
+      "apiAccess": "API-käyttöoikeus",
+      "accountManager": "Henkilökohtainen yhteyshenkilö"
+    },
+    "viewDirectory": "Katso seurakuntahakemisto",
+    "directoryBadge": "Seurakuntahakemisto",
+    "directoryTitle": "Kumppaniseurakunnat",
+    "directorySubtitle": "Löydä seurakunta läheltäsi, joka suosittelee BibleBotia.",
+    "searchPlaceholder": "Etsi paikkaa, nimeä tai tunnustusta...",
+    "noResults": "Ei vielä seurakuntia hakemistossa.",
+    "becomePartner": "Ryhdy kumppaniksi →",
+    "notFound": "Seurakuntaa ei löytynyt.",
+    "backToDirectory": "Takaisin hakemistoon",
+    "pastor": "Pappi/pastori",
+    "serviceTimes": "Jumalanpalvelusajat",
+    "startChat": "Aloita chat",
+    "website": "Verkkosivusto",
+    "telegramGroup": "Telegram-ryhmä",
+    "contactTitle": "Ota yhteyttä {{name}}",
+    "contactName": "Nimesi (valinnainen)",
+    "contactEmail": "Sähköpostiosoitteesi",
+    "contactMessage": "Viestisi",
+    "contactSend": "Lähetä viesti",
+    "contactSuccess": "Viesti lähetetty! 🙏",
+    "contactSuccessDesc": "Seurakunta ottaa sinuun yhteyttä.",
+    "recommendedBy": "Suosittelee {{name}}",
+    "setup": "Asennus (kertaluonteinen)",
+    "form": {
+      "title": "Kiinnostuitko? Kirjoita meille!",
+      "subtitle": "Otamme yhteyttä 48 tunnin kuluessa.",
+      "name": "Nimesi",
+      "email": "Sähköpostiosoite",
+      "churchName": "Seurakunnan nimi",
+      "tier": "Haluttu paketti",
+      "tierPlaceholder": "Valitse paketti...",
+      "message": "Viestisi",
+      "submit": "Lähetä pyyntö",
+      "success": "Pyyntö lähetetty! Otamme pian yhteyttä. 🙏",
+      "error": "Virhe lähetyksessä. Yritä uudelleen.",
+      "orgType": "Organisaation tyyppi",
+      "orgTypePlaceholder": "Valitse tyyppi...",
+      "orgTypes": {
+        "church": "Seurakunta",
+        "careHome": "Hoitokoti",
+        "seniorHome": "Vanhainkoti",
+        "hospital": "Sairaala",
+        "prison": "Vankilasielunhoito",
+        "military": "Armeijasielunhoito"
+      }
+    },
+    "institutionsTitle": "Myös instituutioille",
+    "institutionsSubtitle": "BibleBot ei opasta vain seurakuntia – myös hoito- ja vanhainkodit, sairaalat ja vankilasielunhoito hyötyvät digitaalisesta sielunhoidosta.",
+    "institution": {
+      "careHome": {
+        "title": "Hoitokodit",
+        "desc": "Päivittäiset Raamatun impulssit ja ohjaus asukkaille – myös silloin, kun sielunhoitajaa ei ole paikalla."
+      },
+      "seniorHome": {
+        "title": "Vanhainkodit",
+        "desc": "Tuttuja Raamatun jakeita ja keskusteluja senioreille – helposti saatavilla tabletin tai älypuhelimen kautta."
+      },
+      "hospital": {
+        "title": "Sairaalat",
+        "desc": "Lohdutusta ja hengellistä ohjausta potilaille vaikeina aikoina – saatavilla 24/7 sairaalavuoteen äärellä."
+      },
+      "prison": {
+        "title": "Vankilasielunhoito",
+        "desc": "Toivoa ja hengellistä ohjausta vangeille – luottamuksellinen keskustelukumppani ympäri vuorokauden."
+      },
+      "military": {
+        "title": "Armeijasielunhoito",
+        "desc": "Hengellistä ohjausta armeijan jäsenille – saatavilla myös tehtävissä tai kasarmilla."
+      }
+    }
+  },
+  "institutions": {
+    "badge": "Instituutioille",
+    "heroTitle": "BibleBot laitoksellesi",
+    "heroSubtitle": "Digitaalinen sielunhoito hoitokodeille, vanhainkodeille, sairaaloille ja vankiloille – henkilökohtaisesti, luottamuksellisesti ja ympäri vuorokauden.",
+    "seniorHint": {
+      "title": "Senioritila saatavilla",
+      "desc": "Suurempi fontti ja yksinkertaistettu käyttö – ihanteellinen vanhemmille asukkaille.",
+      "cta": "Kokeile senioritilaa"
+    },
+    "typesTitle": "Kenelle BibleBot on tarkoitettu?",
+    "useCasesTitle": "Miten BibleBotia käytetään",
+    "useCasesSubtitle": "Konkreettisia sovelluksia laitoksesi arkeen.",
+    "pricingTitle": "Mecenaatti-paketit",
+    "pricingSubtitle": "Samankaltaiset paketit kuin seurakunnille – mukautettu institutionaalisiin tarpeisiin.",
+    "linkChurches": "Saatavilla myös seurakunnille",
+    "type": {
+      "careHome": {
+        "title": "Hoitokodit",
+        "desc": "Päivittäiset Raamatun impulssit ja ohjaus asukkaille – myös silloin, kun sielunhoitajaa ei ole paikalla."
+      },
+      "seniorHome": {
+        "title": "Vanhainkodit",
+        "desc": "Tuttuja Raamatun jakeita ja keskusteluja senioreille – helposti saatavilla tabletin tai älypuhelimen kautta."
+      },
+      "hospital": {
+        "title": "Sairaalat",
+        "desc": "Lohdutusta ja hengellistä ohjausta potilaille vaikeina aikoina – saatavilla 24/7 sairaalavuoteen äärellä."
+      },
+      "prison": {
+        "title": "Vankilasielunhoito",
+        "desc": "Toivoa ja hengellistä ohjausta vangeille – luottamuksellinen keskustelukumppani ympäri vuorokauden."
+      },
+      "military": {
+        "title": "Armeijasielunhoito",
+        "desc": "Hengellistä ohjausta armeijan jäsenille – saatavilla myös tehtävissä tai kasarmilla."
+      }
+    },
+    "useCase": {
+      "dailyImpulse": {
+        "title": "Päivittäinen impulssi",
+        "desc": "Joka aamu Raamatun jae pohdintakysymyksen kera – alentaa kynnystä hengellisiin keskusteluihin."
+      },
+      "companionship": {
+        "title": "Keskustelukumppani",
+        "desc": "BibleBot vastaa uskonkysymyksiin kärsivällisesti ja ilman aikarajoituksia – ihanteellinen yksinäisiin hetkiin."
+      },
+      "accessibility": {
+        "title": "Helppo pääsy",
+        "desc": "Suuri fontti, helppo käyttö tabletin kautta – myös liikuntarajoitteisille."
+      },
+      "availability": {
+        "title": "Saatavilla 24/7",
+        "desc": "Hengellistä ohjausta myös yöllä ja viikonloppuisin – kun sielunhoitajaa ei ole tavoitettavissa."
+      }
+    },
+    "tierDesc": {
+      "free": "Peruskäyttö asukkaille ja potilaille",
+      "community": "Maininta tukijana, mainokseton käyttö",
+      "gemeinde": "Logon näkyvyys, kuukausittainen käyttöraportti",
+      "kirche": "Oma sisältö, tiekartan muokkaus, premium-tuki"
+    },
+    "form": {
+      "title": "Kiinnostuitko? Ota meihin yhteyttä!",
+      "subtitle": "Otamme yhteyttä 48 tunnin kuluessa.",
+      "name": "Nimesi",
+      "email": "Sähköpostiosoite",
+      "institutionName": "Laitoksen nimi",
+      "type": "Laitoksen tyyppi",
+      "typePlaceholder": "Valitse tyyppi...",
+      "tier": "Haluttu paketti",
+      "tierPlaceholder": "Valitse paketti...",
+      "message": "Viestisi",
+      "submit": "Lähetä pyyntö",
+      "success": "Pyyntö lähetetty! Otamme pian yhteyttä. 🙏",
+      "error": "Virhe lähetyksessä. Yritä uudelleen."
+    }
   },
   "lang": {
     "de": "Deutsch",
@@ -329,427 +751,5 @@
     "ig": "Igbo",
     "zu": "isiZulu",
     "ht": "Kreyòl"
-  },
-  "tiles": {
-    "sectionTitle": "What's on your heart?",
-    "sectionSubtitle": "Choose a topic — BibleBot walks with you",
-    "baptism": {
-      "title": "Find a baptism verse",
-      "desc": "The perfect verse for your child",
-      "prompt": "Help me find a fitting baptism verse. What kind of child is it and what do the parents wish for?"
-    },
-    "condolence": {
-      "title": "Words of comfort",
-      "desc": "Support through grief & farewell",
-      "prompt": "I need comforting words for a condolence card. Can you help me find the right words?"
-    },
-    "wedding": {
-      "title": "Wedding verse",
-      "desc": "Biblical words for your love",
-      "prompt": "We're looking for a beautiful biblical verse for our wedding. Which passages speak about love and partnership?"
-    },
-    "anxiety": {
-      "title": "Fear & worry",
-      "desc": "Finding courage in hard times",
-      "prompt": "I'm struggling with fear and worry right now. What does the Bible say about this? Are there verses that give courage?"
-    },
-    "confession": {
-      "title": "Confession",
-      "desc": "God forgives — speak it out",
-      "prompt": "I want to let go of something that weighs on me. What does the Bible say about forgiveness and new beginnings?"
-    },
-    "heartbreak": {
-      "title": "Heartbreak",
-      "desc": "What the Bible says about heartache",
-      "prompt": "My heart is broken. What does the Bible say about heartbreak and how to find hope again?"
-    },
-    "newstart": {
-      "title": "New beginning",
-      "desc": "Strength for a new chapter",
-      "prompt": "I'm facing a new beginning and need encouragement. Which Bible passages speak about fresh starts?"
-    },
-    "namequiz": {
-      "title": "Name quiz",
-      "desc": "Find the right biblical name",
-      "prompt": "I'm looking for a biblical name for my child. Can you suggest some and explain their meanings?"
-    },
-    "sleepless": {
-      "title": "Sleepless",
-      "desc": "Finding peace at night",
-      "prompt": "I can't sleep and my mind is racing. Is there a calming prayer or psalm for the night?"
-    },
-    "loneliness": {
-      "title": "Loneliness",
-      "desc": "You are never alone",
-      "prompt": "I feel lonely. What does the Bible say about God always being with us?"
-    },
-    "decision": {
-      "title": "Tough decision",
-      "desc": "Wisdom for the right path",
-      "prompt": "I'm facing a difficult decision. Which Bible passages can help me find the right way?"
-    },
-    "gratitude": {
-      "title": "Gratitude",
-      "desc": "A personal prayer of thanks",
-      "prompt": "I want to thank God. Help me write a personal prayer of gratitude."
-    },
-    "lifewheel": {
-      "title": "Life Wheel",
-      "desc": "How satisfied are you really?"
-    },
-    "sevenwhys": {
-      "title": "7 Whys",
-      "desc": "Find the deepest root of your question",
-      "prompt": "I'd like to do the 7 Whys exercise. Here is my topic:"
-    },
-    "anger": {
-      "title": "Anger",
-      "desc": "When you're about to explode",
-      "prompt": "I'm so angry and don't know what to do with my rage. What does the Bible say about anger and how to deal with it?"
-    },
-    "shame": {
-      "title": "Shame & Guilt",
-      "desc": "When guilt is crushing you",
-      "prompt": "I feel so ashamed and guilty. What does the Bible say about guilt, forgiveness, and starting over?"
-    },
-    "burnout": {
-      "title": "Burnout",
-      "desc": "When you just can't go on",
-      "prompt": "I'm totally exhausted and burned out. I just can't anymore. What does the Bible say about rest and recovery?"
-    },
-    "illness": {
-      "title": "Illness",
-      "desc": "When a diagnosis changes everything",
-      "prompt": "I've received a difficult diagnosis and I'm scared. What does the Bible say about illness, healing, and hope?"
-    },
-    "financial": {
-      "title": "Money Worries",
-      "desc": "When bills are piling up",
-      "prompt": "I have financial worries and don't know what to do. What does the Bible say about money, trust, and provision?"
-    },
-    "meaningcrisis": {
-      "title": "Meaning Crisis",
-      "desc": "What's it all for?",
-      "prompt": "I'm wondering what's the point of it all. I'm in a meaning crisis. What does the Bible say about the meaning of life?"
-    },
-    "selfdoubt": {
-      "title": "Self-Doubt",
-      "desc": "When you don't feel good enough",
-      "prompt": "I constantly doubt myself and don't feel good enough. What does the Bible say about my worth?"
-    },
-    "calling": {
-      "title": "Calling",
-      "desc": "What should I do with my life?",
-      "prompt": "I don't know what to do with my life. Help me find my calling — what does the Bible say?"
-    },
-    "faithdoubt": {
-      "title": "Faith Doubts",
-      "desc": "When your faith is shaking",
-      "prompt": "I have doubts about my faith and don't know if I can still believe. What does the Bible say about doubt?"
-    },
-    "forgiveness": {
-      "title": "Forgiveness",
-      "desc": "When forgiving seems impossible",
-      "prompt": "I simply can't forgive someone. It hurts too much. What does the Bible say about forgiveness?"
-    },
-    "familyconflict": {
-      "title": "Family Conflict",
-      "desc": "When family is at war",
-      "prompt": "There's a big conflict in my family. What does the Bible say about family peace and reconciliation?"
-    },
-    "envy": {
-      "title": "Envy",
-      "desc": "When others have it better",
-      "prompt": "I'm envious of others and constantly comparing myself. What does the Bible say about envy and contentment?"
-    },
-    "joy": {
-      "title": "Share Joy",
-      "desc": "When something wonderful happened",
-      "prompt": "Something wonderful happened to me and I want to share my joy! What does the Bible say about joy and gratitude?"
-    },
-    "prayer": {
-      "title": "Prayer Request",
-      "desc": "Pray together",
-      "prompt": "I have a prayer request and would like to pray together. Join me in prayer."
-    },
-    "bibleverse": {
-      "title": "Understand a Verse",
-      "desc": "Get a Bible passage explained",
-      "prompt": "I'd like to understand a Bible passage better. Can you help me put it in context?"
-    }
-  },
-  "lifeWheel": {
-    "title": "Your Life Wheel",
-    "intro": "Rate 8 life areas on a scale of 1-10. Discover where you stand — and receive biblical impulses for the area that needs attention.",
-    "start": "Get started",
-    "sliderHint": "Move the sliders — 1 = very unsatisfied, 10 = very satisfied",
-    "showResult": "Show result",
-    "average": "Average",
-    "weakestArea": "Greatest need",
-    "getImpulse": "Biblical impulse for {{area}}",
-    "reset": "Try again",
-    "prompt": "My life wheel shows that I scored only {{score}}/10 in the area of '{{area}}'. What does the Bible say about this area of life? Give me encouragement and practical impulses.",
-    "areas": {
-      "health": "Health",
-      "relationships": "Relationships",
-      "career": "Career",
-      "spirituality": "Spirituality",
-      "finances": "Finances",
-      "family": "Family",
-      "leisure": "Leisure",
-      "growth": "Personal Growth"
-    },
-    "save": "Save result",
-    "saved": "Saved!",
-    "history": "Previous results",
-    "noHistory": "No saved results yet.",
-    "backToNew": "New Life Wheel",
-    "backToList": "Back to list"
-  },
-  "church": {
-    "badge": "Seurakunnille",
-    "heroTitle": "BibleBot seurakunnallesi",
-    "heroSubtitle": "Saata seurakuntaasi raamatullisella viisaudella – digitaalisesti, henkilökohtaisesti ja ympäri vuorokauden.",
-    "useCasesTitle": "Käyttötapaukset",
-    "useCase": {
-      "youth": {
-        "title": "Nuorisotyö",
-        "desc": "Nuoret löytävät Raamatun omalla tavallaan – interaktiivisesti ja ilman esteitä."
-      },
-      "confirmation": {
-        "title": "Rippikoulu",
-        "desc": "Rippikoululaiset syventävät raamatuntuntemustaan itsenäisesti henkilökohtaisella ohjauksella."
-      },
-      "pastoral": {
-        "title": "Sielunhoito",
-        "desc": "24/7-kumppanuus henkilökohtaisen sielunhoidon täydentäjänä."
-      },
-      "bibleStudy": {
-        "title": "Raamattupiiri",
-        "desc": "Impulsseja ja keskustelunaiheita ryhmille ja kotipiireille."
-      }
-    },
-    "pricingTitle": "Kummipaketit",
-    "pricingSubtitle": "Tue BibleBotia ja seurakuntaasi oikealla kummipaketilla.",
-    "popular": "Suosittu",
-    "free": "Ilmainen",
-    "perYear": "Vuosi",
-    "contact": "Ota yhteyttä",
-    "tier": {
-      "free": {
-        "name": "Sinapinsiemen",
-        "size": "Botin perusäyttö kaikille seurakunnan jäsenille."
-      },
-      "community": {
-        "name": "Matkatoveri",
-        "size": "Seurakunnan maininta tukijana verkkosivulla ja mainokseton käyttö."
-      },
-      "gemeinde": {
-        "name": "Sillanrakentaja",
-        "size": "Logo bot-käyttöliittymässä, kuukausittainen käyttöraportti (anonymisoitu)."
-      },
-      "kirche": {
-        "name": "Majakka",
-        "size": "Omien sisältöjen integrointi (esim. saarnaarkisto), tiekartan yhteismuotoilu, premium-tuki."
-      }
-    },
-    "features": {
-      "directoryEntry": "Hakemistomerkintä",
-      "telegramGroup": "Telegram-ryhmä",
-      "partnerPage": "Oma kumppanisivu",
-      "badge": "Kumppanimerkki",
-      "qrFlyer": "Tulostettava QR-esite",
-      "contactForm": "Yhteydenottolomake",
-      "pastorProfile": "Pastorin profiili",
-      "welcomeVideo": "Tervetulovideo",
-      "analytics": "Analytiikkapaneeli",
-      "prioritySupport": "Ensisijainen tuki",
-      "multipleProfiles": "Useita profiileja",
-      "customBranding": "Oma brändi",
-      "apiAccess": "API-pääsy",
-      "accountManager": "Henkilökohtainen yhteyshenkilö"
-    },
-    "viewDirectory": "Katso seurakuntahakemisto",
-    "directoryBadge": "Seurakuntahakemisto",
-    "directoryTitle": "Kumppaniseurakunnat",
-    "directorySubtitle": "Löydä lähellesi seurakunta, joka suosittelee BibleBotia.",
-    "searchPlaceholder": "Hae paikan, nimen tai kirkkokuntien mukaan...",
-    "noResults": "Hakemistossa ei ole vielä seurakuntia.",
-    "becomePartner": "Ryhdy kumppaniksi →",
-    "notFound": "Seurakuntaa ei löytynyt.",
-    "backToDirectory": "Takaisin hakemistoon",
-    "pastor": "Pastori",
-    "serviceTimes": "Jumalanpalvelusajat",
-    "startChat": "Aloita keskustelu",
-    "website": "Verkkosivusto",
-    "telegramGroup": "Telegram-ryhmä",
-    "contactTitle": "Ota yhteyttä: {{name}}",
-    "contactName": "Nimesi (valinnainen)",
-    "contactEmail": "Sähköpostiosoitteesi",
-    "contactMessage": "Viestisi",
-    "contactSend": "Lähetä viesti",
-    "contactSuccess": "Viesti lähetetty! 🙏",
-    "contactSuccessDesc": "Seurakunta ottaa sinuun yhteyttä.",
-    "recommendedBy": "Suosittelija: {{name}}",
-    "setup": "Käyttöönotto (kertamaksu)",
-    "form": {
-      "title": "Kiinnostunut? Ota yhteyttä!",
-      "subtitle": "Vastaamme 48 tunnin kuluessa.",
-      "name": "Nimesi",
-      "email": "Sähköpostiosoite",
-      "churchName": "Seurakunnan nimi",
-      "tier": "Toivottu paketti",
-      "tierPlaceholder": "Valitse paketti...",
-      "message": "Viestisi",
-      "submit": "Lähetä tiedustelu",
-      "success": "Tiedustelu lähetetty! Otamme yhteyttä pian. 🙏",
-      "error": "Lähetysvirhe. Yritä uudelleen.",
-      "orgType": "Organization type",
-      "orgTypePlaceholder": "Select type...",
-      "orgTypes": {
-        "church": "Church",
-        "careHome": "Care Home",
-        "seniorHome": "Retirement Home",
-        "hospital": "Hospital",
-        "prison": "Prison Chaplaincy",
-        "military": "Military Chaplaincy"
-      }
-    },
-    "institutionsTitle": "Also for Institutions",
-    "institutionsSubtitle": "BibleBot supports not only churches – care homes, retirement homes, and hospitals also benefit from digital pastoral care.",
-    "institution": {
-      "careHome": {
-        "title": "Care Homes",
-        "desc": "Daily Bible impulses and companionship for residents – even when no chaplain is on site."
-      },
-      "seniorHome": {
-        "title": "Retirement Homes",
-        "desc": "Familiar Bible verses and conversations for seniors – easily accessible via tablet or smartphone."
-      },
-      "hospital": {
-        "title": "Hospitals",
-        "desc": "Comfort and spiritual support for patients in difficult times – available 24/7 at the bedside."
-      },
-      "prison": {
-        "title": "Prison Chaplaincy",
-        "desc": "Hope and spiritual support for inmates – a confidential companion around the clock."
-      },
-      "military": {
-        "title": "Military Chaplaincy",
-        "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
-      }
-    }
-  },
-  "institutions": {
-    "badge": "For Institutions",
-    "heroTitle": "BibleBot for Your Institution",
-    "heroSubtitle": "Digital pastoral care for care homes, retirement homes, hospitals, and correctional facilities – personal, confidential, and around the clock.",
-    "typesTitle": "Who is BibleBot for?",
-    "useCasesTitle": "How BibleBot is Used",
-    "useCasesSubtitle": "Practical applications for daily life in your institution.",
-    "pricingTitle": "Patronage Packages",
-    "pricingSubtitle": "The same packages as for churches – adapted to institutional needs.",
-    "linkChurches": "Also available for churches",
-    "type": {
-      "careHome": {
-        "title": "Care Homes",
-        "desc": "Daily Bible impulses and companionship for residents – even when no chaplain is on site."
-      },
-      "seniorHome": {
-        "title": "Retirement Homes",
-        "desc": "Familiar Bible verses and conversations for seniors – easily accessible via tablet or smartphone."
-      },
-      "hospital": {
-        "title": "Hospitals",
-        "desc": "Comfort and spiritual support for patients in difficult times – available 24/7 at the bedside."
-      },
-      "prison": {
-        "title": "Prison Chaplaincy",
-        "desc": "Hope and spiritual support for inmates – a confidential companion around the clock."
-      },
-      "military": {
-        "title": "Military Chaplaincy",
-        "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
-      }
-    },
-    "useCase": {
-      "dailyImpulse": {
-        "title": "Daily Impulse",
-        "desc": "A Bible verse with reflection question every morning – lowers the barrier for spiritual conversations."
-      },
-      "companionship": {
-        "title": "Conversation Partner",
-        "desc": "BibleBot answers faith questions patiently and without time pressure – ideal for lonely hours."
-      },
-      "accessibility": {
-        "title": "Easy Access",
-        "desc": "Large text, simple tablet interface – also for people with limited mobility."
-      },
-      "availability": {
-        "title": "24/7 Available",
-        "desc": "Spiritual companionship at night and on weekends – when no chaplain is available."
-      }
-    },
-    "tierDesc": {
-      "free": "Basic access for residents and patients",
-      "community": "Mentioned as supporter, ad-free access",
-      "gemeinde": "Logo presence, monthly usage report",
-      "kirche": "Custom content, roadmap co-creation, premium support"
-    },
-    "form": {
-      "title": "Interested? Get in touch!",
-      "subtitle": "We'll get back to you within 48 hours.",
-      "name": "Your name",
-      "email": "Email address",
-      "institutionName": "Institution name",
-      "type": "Type of institution",
-      "typePlaceholder": "Please select...",
-      "tier": "Preferred package",
-      "tierPlaceholder": "Choose package...",
-      "message": "Your message",
-      "submit": "Send inquiry",
-      "success": "Inquiry sent! We'll be in touch soon. 🙏",
-      "error": "Error sending. Please try again."
-    },
-    "seniorHint": {
-      "title": "Senioritila saatavilla",
-      "desc": "Suurempi teksti ja yksinkertaistettu navigointi – ihanteellinen iäkkäille asukkaille.",
-      "cta": "Kokeile senioritilaa"
-    }
-  },
-  "refer": {
-    "badge": "Share God's Word",
-    "title": "Recommend BibleBot",
-    "subtitle": "Know someone who could use encouragement? Share BibleBot – one message can make a difference.",
-    "whatsapp": "Share via WhatsApp",
-    "whatsappMsg": "Hey, I wanted to show you BibleBot – a free Bible companion that really knows the Bible and asks great questions. No login, anonymous, honest. Try it out: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
-    "telegram": "Share via Telegram",
-    "telegramMsg": "Hey, do you know BibleBot? A free personal Bible companion – honest, anonymous, no login needed. Check it out: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
-    "email": "Share via email",
-    "emailSubject": "This might interest you: BibleBot.Life",
-    "emailBody": "Hi!\n\nI wanted to show you BibleBot – a free Bible companion that really knows the Bible. No sign-up needed, completely anonymous.\n\nIt asks thoughtful questions, explains Bible passages in context and accompanies you honestly – even on difficult topics.\n\nTry it out: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nBest wishes",
-    "copy": "Copy link",
-    "copied": "Link copied! 📋",
-    "qr": "Or just show this QR code:"
-  },
-  "share": {
-    "label": "Share",
-    "shareVia": "Share via",
-    "copied": "Copied! 📋",
-    "copiedShort": "Copied!",
-    "copiedDesc": "Text copied to clipboard. Share it on WhatsApp, Instagram or wherever you like!",
-    "copyLink": "Copy text",
-    "error": "Copy failed",
-    "impulseTitle": "BibleBot – Impulse of the Day",
-    "chatTitle": "BibleBot – Thought of the Day",
-    "createImage": "Create image ✨",
-    "generating": "Creating…",
-    "imageReady": "Your image is ready to share!",
-    "shareImage": "Share image",
-    "download": "Save",
-    "imageError": "Image creation failed",
-    "imageErrorDesc": "The image could not be created. Please try again later.",
-    "imageSaved": "Text copied! 📋",
-    "imageSavedDesc": "Save the image and share it with the copied text on Instagram, WhatsApp or wherever you like!"
   }
 }
