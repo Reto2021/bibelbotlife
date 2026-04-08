@@ -642,6 +642,11 @@
     "badge": "For Institutions",
     "heroTitle": "BibleBot for Your Institution",
     "heroSubtitle": "Digital pastoral care for care homes, retirement homes, hospitals, and correctional facilities – personal, confidential, and around the clock.",
+    "seniorHint": {
+      "title": "Senior Mode Available",
+      "desc": "Larger text and simplified navigation – ideal for elderly residents.",
+      "cta": "Try Senior Mode"
+    },
     "typesTitle": "Who is BibleBot for?",
     "useCasesTitle": "How BibleBot is Used",
     "useCasesSubtitle": "Practical applications for daily life in your institution.",
