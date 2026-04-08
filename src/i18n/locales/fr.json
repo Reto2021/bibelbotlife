@@ -609,7 +609,8 @@
         "careHome": "Care Home",
         "seniorHome": "Retirement Home",
         "hospital": "Hospital",
-        "prison": "Aumônerie de prison"
+        "prison": "Aumônerie de prison",
+        "military": "Aumônerie militaire"
       }
     },
     "institutionsTitle": "Aussi pour les institutions",
@@ -630,6 +631,10 @@
       "prison": {
         "title": "Aumônerie de prison",
         "desc": "Espoir et soutien spirituel pour les détenus – un compagnon confidentiel 24h/24."
+      },
+      "military": {
+        "title": "Aumônerie militaire",
+        "desc": "Accompagnement spirituel pour les membres de l'armée – accessible même en déploiement ou à la caserne."
       }
     }
   },
@@ -659,6 +664,10 @@
       "prison": {
         "title": "Aumônerie de prison",
         "desc": "Espoir et soutien spirituel pour les détenus – un compagnon confidentiel 24h/24."
+      },
+      "military": {
+        "title": "Aumônerie militaire",
+        "desc": "Accompagnement spirituel pour les membres de l'armée – accessible même en déploiement ou à la caserne."
       }
     },
     "useCase": {

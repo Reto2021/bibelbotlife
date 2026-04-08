@@ -646,7 +646,8 @@
         "careHome": "Pflegeheim",
         "seniorHome": "Altersheim",
         "hospital": "Spital",
-        "prison": "Gefängnisseelsorge"
+        "prison": "Gefängnisseelsorge",
+        "military": "Armeeseelsorge"
       }
     },
     "institutionsTitle": "Auch für Institutionen",
@@ -667,6 +668,10 @@
       "prison": {
         "title": "Gefängnisseelsorge",
         "desc": "Hoffnung und geistliche Begleitung für Inhaftierte – ein vertraulicher Gesprächspartner rund um die Uhr."
+      },
+      "military": {
+        "title": "Armeeseelsorge",
+        "desc": "Geistliche Begleitung für Angehörige der Armee – auch im Einsatz oder in der Kaserne erreichbar."
       }
     }
   },
@@ -696,6 +701,10 @@
       "prison": {
         "title": "Gefängnisseelsorge",
         "desc": "Hoffnung und geistliche Begleitung für Inhaftierte – ein vertraulicher Gesprächspartner rund um die Uhr."
+      },
+      "military": {
+        "title": "Armeeseelsorge",
+        "desc": "Geistliche Begleitung für Angehörige der Armee – auch im Einsatz oder in der Kaserne erreichbar."
       }
     },
     "useCase": {

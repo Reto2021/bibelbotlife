@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Send, Building2, Heart, Hospital, ShieldCheck, Handshake, Landmark, Sprout, Castle, Clock, Tablet, MessageCircle, BookOpen } from "lucide-react";
+import { ArrowLeft, Send, Building2, Heart, Hospital, ShieldCheck, Swords, Handshake, Landmark, Sprout, Castle, Clock, Tablet, MessageCircle, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -17,6 +17,7 @@ const institutions = [
   { key: "seniorHome", icon: Heart },
   { key: "hospital", icon: Hospital },
   { key: "prison", icon: ShieldCheck },
+  { key: "military", icon: Swords },
 ] as const;
 
 const useCases = [
@@ -89,9 +90,9 @@ const ForInstitutions = () => {
 
       {/* Institution Types */}
       <section className="py-12 px-4 bg-card/40">
-        <div className="container mx-auto max-w-5xl">
+        <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl font-bold text-foreground text-center mb-10">{t("institutions.typesTitle")}</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {institutions.map((inst) => (
               <Card key={inst.key} className="bg-card/80 border-border text-center">
                 <CardHeader>

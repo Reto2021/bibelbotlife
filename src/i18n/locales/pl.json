@@ -609,7 +609,8 @@
         "careHome": "Care Home",
         "seniorHome": "Retirement Home",
         "hospital": "Hospital",
-        "prison": "Prison Chaplaincy"
+        "prison": "Prison Chaplaincy",
+        "military": "Military Chaplaincy"
       }
     },
     "institutionsTitle": "Również dla instytucji",
@@ -630,6 +631,10 @@
       "prison": {
         "title": "Kapelan więzienny",
         "desc": "Nadzieja i duchowe wsparcie dla osadzonych – poufny towarzysz przez całą dobę."
+      },
+      "military": {
+        "title": "Military Chaplaincy",
+        "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
       }
     }
   },
@@ -659,6 +664,10 @@
       "prison": {
         "title": "Prison Chaplaincy",
         "desc": "Hope and spiritual support for inmates – a confidential companion around the clock."
+      },
+      "military": {
+        "title": "Military Chaplaincy",
+        "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
       }
     },
     "useCase": {

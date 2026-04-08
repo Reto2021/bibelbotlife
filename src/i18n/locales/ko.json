@@ -609,7 +609,8 @@
         "careHome": "Care Home",
         "seniorHome": "Retirement Home",
         "hospital": "Hospital",
-        "prison": "Prison Chaplaincy"
+        "prison": "Prison Chaplaincy",
+        "military": "Military Chaplaincy"
       }
     },
     "institutionsTitle": "기관에도 적합",
@@ -630,6 +631,10 @@
       "prison": {
         "title": "교도소 목회",
         "desc": "수감자를 위한 희망과 영적 돌봄 – 24시간 비밀이 보장되는 동반자."
+      },
+      "military": {
+        "title": "Military Chaplaincy",
+        "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
       }
     }
   },
@@ -659,6 +664,10 @@
       "prison": {
         "title": "Prison Chaplaincy",
         "desc": "Hope and spiritual support for inmates – a confidential companion around the clock."
+      },
+      "military": {
+        "title": "Military Chaplaincy",
+        "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
       }
     },
     "useCase": {
