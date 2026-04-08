@@ -50,7 +50,7 @@ const moreTileConfigs: TileConfig[] = [
 ];
 
 export function EntryTiles() {
-  const scrollRef = useRef<HTMLDivElement>(null);
+  const [showMore, setShowMore] = useState(false);
   const [showMore, setShowMore] = useState(false);
 
   const { t } = useTranslation();
