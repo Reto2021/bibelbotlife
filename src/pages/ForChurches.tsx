@@ -115,6 +115,8 @@ const ForChurches = () => {
             ))}
           </div>
         </div>
+      </section>
+
       {/* Pricing */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
