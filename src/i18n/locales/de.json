@@ -638,6 +638,22 @@
       "submit": "Anfrage senden",
       "success": "Anfrage gesendet! Wir melden uns bald. 🙏",
       "error": "Fehler beim Senden. Bitte versuchen Sie es erneut."
+    },
+    "institutionsTitle": "Auch für Institutionen",
+    "institutionsSubtitle": "BibleBot begleitet nicht nur Gemeinden – auch Pflege- und Altersheime sowie Spitäler profitieren von digitaler Seelsorge.",
+    "institution": {
+      "careHome": {
+        "title": "Pflegeheime",
+        "desc": "Tägliche Bibelimpulse und Begleitung für Bewohnerinnen und Bewohner – auch wenn kein Seelsorger vor Ort ist."
+      },
+      "seniorHome": {
+        "title": "Altersheime",
+        "desc": "Vertraute Bibelverse und Gespräche für Seniorinnen und Senioren – einfach zugänglich via Tablet oder Smartphone."
+      },
+      "hospital": {
+        "title": "Spitäler",
+        "desc": "Trost und geistliche Begleitung für Patienten in schwierigen Zeiten – 24/7 verfügbar am Krankenbett."
+      }
     }
   }
 }

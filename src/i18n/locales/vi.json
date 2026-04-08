@@ -601,6 +601,22 @@
       "submit": "Gửi yêu cầu",
       "success": "Yêu cầu đã gửi! Chúng tôi sẽ liên hệ sớm. 🙏",
       "error": "Lỗi gửi. Vui lòng thử lại."
+    },
+    "institutionsTitle": "Cũng dành cho các cơ sở",
+    "institutionsSubtitle": "BibleBot đồng hành cùng viện dưỡng lão và bệnh viện với sự chăm sóc tâm linh số.",
+    "institution": {
+      "careHome": {
+        "title": "Viện dưỡng lão",
+        "desc": "Lời Kinh Thánh hàng ngày cho cư dân – ngay cả khi không có mục sư."
+      },
+      "seniorHome": {
+        "title": "Nhà dưỡng lão",
+        "desc": "Câu Kinh Thánh quen thuộc và trò chuyện cho người cao tuổi – dễ dàng qua máy tính bảng."
+      },
+      "hospital": {
+        "title": "Bệnh viện",
+        "desc": "An ủi và hỗ trợ tâm linh cho bệnh nhân – có sẵn 24/7."
+      }
     }
   }
 }
