@@ -754,16 +754,16 @@
   },
   "chatHero": {
     "subtitle": "Stell deine Frage – offen, ehrlich, ohne Anmeldung.",
-    "placeholder1": "Was sagt die Bibel zu Vergebung?",
-    "placeholder2": "Ich kann nicht schlafen – was hilft?",
-    "placeholder3": "Warum lässt Gott Leid zu?",
-    "placeholder4": "Wie finde ich meinen Sinn im Leben?",
-    "placeholder5": "Ich fühle mich allein. Was sagt Jesus dazu?",
+    "placeholder1": "Was macht mich wirklich dankbar?",
+    "placeholder2": "Wie finde ich inneren Frieden?",
+    "placeholder3": "Was gibt mir Hoffnung?",
+    "placeholder4": "Was wünscht sich mein Herz?",
+    "placeholder5": "Was kann ich heute Gutes tun?",
     "focusPlaceholder": "Schreib deine Frage…",
     "ariaLabel": "Frage an BibleBot stellen",
     "send": "Absenden",
-    "suggestion1": "Was sagt die Bibel zu Angst?",
-    "suggestion2": "Hilf mir zu beten",
-    "suggestion3": "Ich zweifle an meinem Glauben"
+    "suggestion1": "Wofür bin ich dankbar?",
+    "suggestion2": "Was gibt mir heute Kraft?",
+    "suggestion3": "Wie finde ich inneren Frieden?"
   }
 }
