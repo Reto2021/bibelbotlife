@@ -624,6 +624,10 @@
       "hospital": {
         "title": "Ziekenhuizen",
         "desc": "Troost en geestelijke begeleiding voor patiënten – 24/7 beschikbaar."
+      },
+      "prison": {
+        "title": "Gevangenispastoraat",
+        "desc": "Hoop en geestelijke begeleiding voor gedetineerden – een vertrouwelijke gesprekspartner dag en nacht."
       }
     }
   }

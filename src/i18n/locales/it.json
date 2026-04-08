@@ -603,7 +603,7 @@
       "error": "Errore nell'invio. Riprovare."
     },
     "institutionsTitle": "Anche per le istituzioni",
-    "institutionsSubtitle": "BibleBot accompagna anche case di cura, case di riposo e ospedali con assistenza spirituale digitale.",
+    "institutionsSubtitle": "BibleBot accompagna anche case di cura, ospedali e la cappellania carceraria con assistenza spirituale digitale.",
     "institution": {
       "careHome": {
         "title": "Case di cura",
@@ -616,6 +616,10 @@
       "hospital": {
         "title": "Ospedali",
         "desc": "Conforto e accompagnamento spirituale per i pazienti – disponibile 24/7."
+      },
+      "prison": {
+        "title": "Cappellania carceraria",
+        "desc": "Speranza e accompagnamento spirituale per i detenuti – un compagno confidenziale 24 ore su 24."
       }
     }
   }

@@ -616,6 +616,10 @@
       "hospital": {
         "title": "Hospitais",
         "desc": "Conforto e acompanhamento espiritual para pacientes – disponível 24h."
+      },
+      "prison": {
+        "title": "Capelania prisional",
+        "desc": "Esperança e apoio espiritual para detentos – um companheiro confidencial 24 horas."
       }
     }
   }
