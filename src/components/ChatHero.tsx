@@ -149,8 +149,41 @@ export function ChatHero() {
     msgPadding: isSenior ? "px-5 py-4" : "px-4 py-3",
     chipText: isSenior ? "text-sm px-4 py-2" : "text-xs px-3 py-1.5",
   };
+  // Autocomplete suggestions
+  const SUGGESTIONS = useMemo(() => {
+    const topics = TOPIC_CHIPS.map(chip => ({
+      type: "topic" as const,
+      emoji: chip.emoji,
+      label: t(`tiles.${chip.key}.label`),
+      prompt: t(`tiles.${chip.key}.prompt`),
+    }));
+    const bibleRefs = [
+      { ref: "Psalm 23", label: t("suggest.psalm23", "Psalm 23 – Der Herr ist mein Hirte") },
+      { ref: "Johannes 3,16", label: t("suggest.joh316", "Johannes 3,16 – So sehr hat Gott die Welt geliebt") },
+      { ref: "Römer 8,28", label: t("suggest.rom828", "Römer 8,28 – Alles zum Besten") },
+      { ref: "Matthäus 11,28", label: t("suggest.mt1128", "Matthäus 11,28 – Kommt her zu mir") },
+      { ref: "Philipper 4,13", label: t("suggest.phil413", "Philipper 4,13 – Ich vermag alles") },
+      { ref: "Jesaja 41,10", label: t("suggest.jes4110", "Jesaja 41,10 – Fürchte dich nicht") },
+      { ref: "1. Korinther 13", label: t("suggest.1kor13", "1. Korinther 13 – Das Hohelied der Liebe") },
+      { ref: "Sprüche 3,5", label: t("suggest.spr35", "Sprüche 3,5 – Vertraue auf den Herrn") },
+      { ref: "Josua 1,9", label: t("suggest.jos19", "Josua 1,9 – Sei stark und mutig") },
+      { ref: "Psalm 46,2", label: t("suggest.ps462", "Psalm 46,2 – Gott ist unsere Zuversicht") },
+    ].map(b => ({
+      type: "bible" as const,
+      emoji: "📖",
+      label: b.label,
+      prompt: `Erkläre mir ${b.ref} im Detail`,
+    }));
+    return [...topics, ...bibleRefs];
+  }, [t]);
 
-  const {
+  const filteredSuggestions = useMemo(() => {
+    if (!input.trim() || input.trim().length < 2) return [];
+    const q = input.toLowerCase();
+    return SUGGESTIONS.filter(s => s.label.toLowerCase().includes(q) || s.prompt.toLowerCase().includes(q)).slice(0, 6);
+  }, [input, SUGGESTIONS]);
+
+
     conversations,
     activeConversationId,
     messages,
