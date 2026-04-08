@@ -306,7 +306,7 @@ export function ChatHero() {
         loadConversations();
       }
     },
-    [messages, isLoading, toast, t, i18n.language, chatMode, track, createConversation, addMessage, updateLastAssistantMessage, setMessages, loadConversations]
+    [messages, isLoading, toast, t, i18n.language, chatMode, track, createConversation, addMessage, updateLastAssistantMessage, updateTitle, setMessages, loadConversations]
   );
 
   // Listen for external chat open events
