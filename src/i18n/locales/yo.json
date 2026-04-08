@@ -1,6 +1,6 @@
 {
   "nav": {
-    "startNow": "Bẹ̀rẹ̀"
+    "startNow": "Bẹ̀rẹ̀ báyìí"
   },
   "loader": "Ń gbékalẹ̀…",
   "hero": {
@@ -11,286 +11,321 @@
     },
     "title1": "Bíbélì.",
     "title2": " Tí a tún ronú rẹ̀.",
-    "subtitle": "BibleBot mọ Bíbélì – ó sì ń béèrè àwọn ìbéèrè tó tọ́. Kì í ṣe ènìyàn, ṣùgbọ́n alábàáṣiṣẹ́pọ̀ olóòtítọ́.",
+    "subtitle": "BibleBot mọ Bíbélì – ó sì ń béèrè àwọn ìbéèrè tó tọ́. Kì í ṣe ènìyàn, ṣùgbọ́n alábàáṣiṣẹ́pọ̀ olóòtítọ́. Fún àwọn ìjíròrò rere, àwọn ìbéèrè jíjinlẹ̀ àti àwọn ìmúlọ́ gidi.",
     "ctaTelegram": "Bẹ̀rẹ̀ nípasẹ̀ Telegram",
     "ctaMore": "Kà síi",
-    "quote": "\"Come to me, all you who are weary and burdened, and I will give you rest.\"",
-    "quoteRef": "– Matthew 11:28"
+    "quote": "«Ẹ wá sọ́dọ̀ mi, gbogbo ẹ̀yin tí ẹ ṣiṣẹ́ tító, tí ẹ sì rù ẹrù wúwo, èmi yóò sì fún yín ní ìsinmi.»",
+    "quoteRef": "– Mátíù 11:28"
   },
   "impulse": {
-    "loading": "Loading daily impulse...",
-    "label": "Impulse of the Day",
-    "deepDive": "What does this mean for me?",
-    "explore": "Read full passage"
+    "loading": "Ìmúlọ́ ọjọ́ ń gbékalẹ̀...",
+    "label": "Ìmúlọ́ Ọjọ́",
+    "deepDive": "Kí ni èyí túmọ̀ sí fún mi?",
+    "explore": "Ka abala kíkún"
   },
   "features": {
-    "sectionTitle": "How BibleBot accompanies you",
-    "sectionSubtitle": "Discover the many ways BibleBot can walk alongside you",
+    "sectionTitle": "Bí BibleBot ṣe ń bá ọ rìn",
+    "sectionSubtitle": "Ṣàwárí àwọn ọ̀nà púpọ̀ tí BibleBot lè bá ọ rìn",
     "bible": {
-      "title": "Bible passages & interpretation",
-      "desc": "Ask \"What does the Bible say about...?\" and receive relevant verses with context and clear explanation."
+      "title": "Àwọn ẹsẹ Bíbélì àti àlàyé",
+      "desc": "Béèrè «Kí ni Bíbélì sọ nípa...?» kí o sì gba àwọn ẹsẹ tó yẹ pẹ̀lú àyíká àti àlàyé tó ṣe kedere."
     },
     "goals": {
-      "title": "Life planning & goals",
-      "desc": "Discover your calling, set concrete goals, and find out what God might have in store for you."
+      "title": "Ètò ìgbésí ayé àti àwọn àfojúsùn",
+      "desc": "Ṣàwárí ìpè rẹ, ṣètò àwọn àfojúsùn pàtó, kí o sì rí ohun tí Ọlọ́run lè ti ní ní ètò fún ọ."
     },
     "self": {
-      "title": "Finding yourself",
-      "desc": "Recognize your gifts, strengths, and longings – and what your heart truly needs."
+      "title": "Rí ara rẹ",
+      "desc": "Mọ àwọn ẹ̀bùn rẹ, agbára rẹ àti ohun tí o ń wá – àti ohun tí ọkàn rẹ ní í nílò gan-an."
     },
     "faith": {
-      "title": "Faith journey & finding Christ",
-      "desc": "Whether seeking, doubting, or deepening – BibleBot accompanies you on your personal path."
+      "title": "Ìrìn-àjò ìgbàgbọ́ àti rírí Krístì",
+      "desc": "Bóyá o ń wá, o ń ṣiyèméjì tàbí o ń jinlẹ̀ – BibleBot yóò bá ọ rìn ní ọ̀nà tìrẹ."
     },
     "daily": {
-      "title": "Daily impulses & church year",
-      "desc": "Start your day with impulses and let BibleBot guide you through Advent, Lent, and holidays."
+      "title": "Àwọn ìmúlọ́ ojoojúmọ́ àti ọdún ìjọ",
+      "desc": "Bẹ̀rẹ̀ ọjọ́ rẹ pẹ̀lú àwọn ìmúlọ́ kí BibleBot sì bá ọ rìn nípasẹ̀ Àdvẹ́ntì, àkókò àwẹ àti àwọn àjọ̀dún."
     },
     "groups": {
-      "title": "Groups & communities",
-      "desc": "Perfect for Bible study groups, church communities, and shared devotions."
+      "title": "Àwọn ẹgbẹ́ àti àwùjọ",
+      "desc": "Ó dára fún àwọn ẹgbẹ́ ìkẹ́kọ̀ọ́ Bíbélì, àwọn àwùjọ ìjọ àti ìwàásù àpapọ̀."
     }
   },
   "coaching": {
-    "badge": "Methodology",
-    "title": "Not just a chatbot – genuine companionship",
-    "subtitle": "BibleBot combines biblical wisdom with proven coaching methods and Positive Psychology.",
-    "journeyTitle": "Personal companionship",
-    "journeyDesc": "BibleBot accompanies you as long as you wish – in free conversation or with an optional 21-day structure.",
-    "week1": "Week 1: Arriving",
-    "week1Desc": "Building trust, listening, understanding your situation. Where are you? What concerns you?",
-    "week2": "Week 2: Deepening",
-    "week2Desc": "Recognizing patterns, clarifying desires, deepening biblical impulses. What do you really want?",
-    "week3": "Week 3: Acting",
-    "week3Desc": "Taking concrete steps, setting goals, initiating change. What's your next step?",
-    "openQuestionsTitle": "Open questions instead of quick answers",
-    "openQuestionsDesc": "BibleBot doesn't give cheap advice. Instead, it asks the questions that truly matter:",
-    "openQ1": "\"What's really behind this desire?\"",
-    "openQ2": "\"How would you know something has changed?\"",
-    "openQ3": "\"What would be a first small step?\"",
-    "honestTitle": "Honest instead of toxic positivity",
-    "honestDesc": "No \"It'll be fine!\" and no sugarcoating. BibleBot is empathetic AND honest:",
-    "honest1": "Also addresses uncomfortable Bible passages",
-    "honest2": "Challenges you to self-reflection",
-    "honest3": "Distinguishes comfort from avoidance",
-    "scienceTitle": "Scientifically grounded",
+    "badge": "Ọ̀nà ìṣe",
+    "title": "Kì í ṣe chatbot lásán – alábàáṣiṣẹ́pọ̀ gidi",
+    "subtitle": "BibleBot so ọgbọ́n Bíbélì pọ̀ mọ́ àwọn ọ̀nà ìkọ́ni tí a ti fìdí múlẹ̀ àti Ẹ̀kọ́ Ìmọ̀-ọkàn Aládùúrà.",
+    "journeyTitle": "Alábàáṣiṣẹ́pọ̀ tìrẹ",
+    "journeyDesc": "BibleBot yóò bá ọ rìn bí o bá ṣe fẹ́ – nínú ìjíròrò ọ̀fẹ́ tàbí pẹ̀lú ètò ọjọ́ 21 tí o lè yan.",
+    "week1": "Ọ̀sẹ̀ 1: Dédé",
+    "week1Desc": "Kọ́ ìgbẹ́kẹ̀lé, tẹ́tí sí, lóye ipò rẹ. Níbo ni o wà? Kí ni ó ń ṣe ọ́ lọ́kàn?",
+    "week2": "Ọ̀sẹ̀ 2: Jíjinlẹ̀",
+    "week2Desc": "Mọ àwọn àpẹẹrẹ, ṣàlàyé ohun tí o fẹ́, jinlẹ̀ sí àwọn ìmúlọ́ Bíbélì. Kí ni o fẹ́ gan-an?",
+    "week3": "Ọ̀sẹ̀ 3: Ìgbésẹ̀",
+    "week3Desc": "Gbé àwọn ìgbésẹ̀ pàtó, ṣètò àwọn àfojúsùn, bẹ̀rẹ̀ ìyípadà. Kí ni ìgbésẹ̀ tó kàn rẹ?",
+    "openQuestionsTitle": "Àwọn ìbéèrè ṣíṣí dípò àwọn ìdáhùn yára",
+    "openQuestionsDesc": "BibleBot kò fún ọ ní ìmọ̀ràn pẹlẹbẹ. Dípò bẹ́ẹ̀, ó béèrè àwọn ìbéèrè tó ṣe pàtákì gan-an:",
+    "openQ1": "«Kí ni ó wà lẹ́yìn ìfẹ́ yìí gan-an?»",
+    "openQ2": "«Báwo ni o ṣe máa mọ̀ pé nǹkan kan ti yí padà?»",
+    "openQ3": "«Kí ni ìgbésẹ̀ kékeré àkọ́kọ́ kan yóò jẹ́?»",
+    "honestTitle": "Olóòtítọ́ dípò ìdùnnú èké",
+    "honestDesc": "Kò sí «Ó máa dára!» àti ọ̀rọ̀ ẹlẹ́wà. BibleBot ní ìyọ́nú AṢI olóòtítọ́:",
+    "honest1": "Ó tún sọ àwọn abala Bíbélì tó le",
+    "honest2": "Ó pè ọ́ sí ìrònú àrà rẹ",
+    "honest3": "Ó yà ìtùnú sọ́tọ̀ kúrò nínú yíyẹra",
+    "scienceTitle": "Tí a fi ìmọ̀ sáyẹ́nsì múlẹ̀",
     "perma": {
-      "name": "PERMA Model",
+      "name": "Àwòṣe PERMA",
       "author": "Seligman",
-      "desc": "Positive emotions, meaning & growth"
+      "desc": "Àwọn ìmọ̀lára rere, ìtumọ̀ àti ìdàgbàsókè"
     },
     "logo": {
       "name": "Logotherapy",
       "author": "Frankl",
-      "desc": "Finding meaning in difficult times"
+      "desc": "Rírí ìtumọ̀ ní àkókò líle"
     },
     "gratitude": {
-      "name": "Gratitude",
+      "name": "Ìdúpẹ́",
       "author": "Emmons",
-      "desc": "Research-based gratitude practice"
+      "desc": "Ìṣe ìdúpẹ́ tí ìwádìí fi múlẹ̀"
     },
     "forgiveness": {
-      "name": "Forgiveness",
+      "name": "Ìdáríjì",
       "author": "Worthington",
-      "desc": "REACH model for forgiveness processes"
+      "desc": "Àwòṣe REACH fún ìlànà ìdáríjì"
     },
-    "renameTip": "💡 You can give your BibleBot a personal name – so it truly becomes <strong>your</strong> companion."
+    "renameTip": "💡 O lè fún BibleBot rẹ ní orúkọ tìrẹ – kí ó lè di alábàáṣiṣẹ́pọ̀ <strong>tìrẹ</strong> gan-an."
   },
   "discover": {
-    "badge": "For the curious",
-    "title": "Rediscover faith – without pressure",
-    "subtitle": "More and more people are asking the big questions anew. BibleBot.Life is for everyone who wants to (re)discover faith – honestly, without pathos, and without church jargon.",
+    "badge": "Fún àwọn olùfẹ́ mọ̀",
+    "title": "Tún ṣàwárí ìgbàgbọ́ – láìsí ìfipá mú",
+    "subtitle": "Àwọn ènìyàn púpọ̀ sí i ń béèrè àwọn ìbéèrè ńlá lẹ́ẹ̀kan sí i. BibleBot.Life wà fún gbogbo ẹni tó fẹ́ (tún) ṣàwárí ìgbàgbọ́ – ní olóòtítọ́, láìsí ìṣògo àti láìsí èdè ṣọ́ọ̀ṣì.",
     "doubt": {
-      "title": "You doubt?",
-      "text": "Good. Doubt isn't a flaw – it's the beginning of honest faith. The Bible is full of people who wrestled."
+      "title": "Ṣé o ń ṣiyèméjì?",
+      "text": "Ó dára. Ìyèméjì kì í ṣe àṣìṣe – ó jẹ́ ìbẹ̀rẹ̀ ìgbàgbọ́ olóòtítọ́. Bíbélì kún fún àwọn ènìyàn tí wọ́n jà."
     },
     "search": {
-      "title": "You're searching?",
-      "text": "Maybe you don't even know what for. That's perfectly fine. BibleBot helps you ask the right questions – instead of delivering quick answers."
+      "title": "Ṣé o ń wá?",
+      "text": "Bóyá o kò tilẹ̀ mọ ohun tí o ń wá. Kò sí wàhálà. BibleBot ràn ọ́ lọ́wọ́ láti béèrè àwọn ìbéèrè tó tọ́ – dípò kí ó fún ọ ní àwọn ìdáhùn yára."
     },
     "deepen": {
-      "title": "You want to go deeper?",
-      "text": "You already believe, but want to understand more? Discover the depth of the Bible – historical, personal, surprisingly relevant."
+      "title": "Ṣé o fẹ́ jinlẹ̀ sí i?",
+      "text": "O ti gbàgbọ́ tẹ́lẹ̀, ṣùgbọ́n o fẹ́ lóye síi? Ṣàwárí ìjinlẹ̀ Bíbélì – ní ìtàn, ní ara ẹni, ní ọ̀nà tí ó yà ẹ́ lẹ́nu."
     },
-    "quote": "\"Ask, and it will be given to you; seek, and you will find; knock, and the door will be opened.\"",
-    "quoteRef": "– Matthew 7:7",
-    "quoteText": "Many of us don't talk much about faith. That's okay. But those with questions deserve honest answers – without sermons, without membership, without ulterior motives."
+    "quote": "«Ẹ béèrè, a ó sì fún yín; ẹ wá, ẹ̀yin yóò sì rí; ẹ kankàn, a ó sì ṣí fún yín.»",
+    "quoteRef": "– Mátíù 7:7",
+    "quoteText": "Ọ̀pọ̀lọpọ̀ wa kì í sọ̀rọ̀ púpọ̀ nípa ìgbàgbọ́. Kò sí wàhálà. Ṣùgbọ́n ẹni tó ní ìbéèrè yẹ fún àwọn ìdáhùn olóòtítọ́ – láìsí ìwàásù, láìsí ìforúkọsílẹ̀, láìsí èrò ẹ̀yìn."
   },
   "subscribe": {
-    "title": "Daily Bible impulse",
-    "subtitle": "Every morning at 7:00 AM – a verse, a thought, a good start.",
-    "firstName": "Your first name",
-    "firstNameOptional": "(optional)",
-    "firstNamePlaceholder": "e.g. Thomas",
-    "firstNameHint": "So we can greet you personally.",
-    "channelLabel": "How would you like to receive the impulse?",
+    "title": "Ìmúlọ́ Bíbélì ojoojúmọ́",
+    "subtitle": "Ní gbogbo àárọ̀ ní 07:00 – ẹsẹ kan, èrò kan, ìbẹ̀rẹ̀ tó dára.",
+    "firstName": "Orúkọ rẹ",
+    "firstNameOptional": "(àṣàyàn)",
+    "firstNamePlaceholder": "bíi Thomas",
+    "firstNameHint": "Kí a lè kí ọ ní àdánidá.",
+    "channelLabel": "Báwo ni o ṣe fẹ́ gba ìmúlọ́ náà?",
     "push": "Push",
-    "pushDesc": "Browser notification",
+    "pushDesc": "Ìfitónilétí aṣàwákiri",
     "telegram": "Telegram",
-    "telegramDesc": "Message via Telegram",
+    "telegramDesc": "Ifiranṣẹ́ nípasẹ̀ Telegram",
     "sms": "SMS",
-    "smsDesc": "Text to your phone",
-    "phoneLabel": "Phone number",
-    "phonePlaceholder": "+1 555 123 4567",
-    "phoneHint": "With country code, e.g. +1 for the US.",
-    "telegramHint": "Click \"Subscribe\" – you'll be redirected to Telegram. Start the bot and type <strong>/daily</strong> to activate the daily impulse.",
-    "pushHint": "After clicking \"Subscribe\", your browser will ask for notification permission. Please allow it to receive the impulse.",
-    "submit": "Subscribe",
-    "submitting": "Subscribing...",
-    "footNote": "No login required. Cancel anytime.",
-    "successTitle": "You're subscribed! 🙏",
-    "successText": "Starting tomorrow at 7:00 AM, you'll receive your personal Bible impulse.",
-    "toastTelegram": "Telegram opened 🙏",
-    "toastTelegramDesc": "Start the bot and type /daily to activate the daily impulse.",
-    "toastSuccess": "Subscribed! 🙏",
-    "toastSuccessDesc": "You'll receive your daily impulse starting tomorrow.",
-    "toastPushPreview": "Push subscription not available in preview",
-    "toastPushPreviewDesc": "Push notifications only work on the published site.",
-    "toastNotSupported": "Not supported",
-    "toastNotSupportedDesc": "Your browser does not support push notifications.",
-    "toastPermDenied": "Permission denied",
-    "toastPermDeniedDesc": "Please allow notifications in your browser settings.",
-    "toastError": "Error",
-    "toastErrorDesc": "Please try again later."
+    "smsDesc": "SMS sí fóònù rẹ",
+    "phoneLabel": "Nọ́mbà fóònù",
+    "phonePlaceholder": "+234 801 234 5678",
+    "phoneHint": "Pẹ̀lú kóòdù orílẹ̀-èdè, bíi +234 fún Nàìjíríà.",
+    "telegramHint": "Tẹ «Forúkọsílẹ̀» – wọ́n yóò darí ọ sí Telegram. Bẹ̀rẹ̀ bot náà kí o sì kọ <strong>/daily</strong> láti mú ìmúlọ́ ojoojúmọ́ ṣiṣẹ́.",
+    "pushHint": "Lẹ́yìn tí o bá tẹ «Forúkọsílẹ̀», aṣàwákiri rẹ yóò béèrè fún àṣẹ ìfitónilétí. Jọ̀wọ́ gbà á láti gba ìmúlọ́ náà.",
+    "submit": "Forúkọsílẹ̀",
+    "submitting": "Ń forúkọsílẹ̀...",
+    "footNote": "Kò sí ìforúkọsílẹ̀ tí ó nílò. Fagilee nígbàkígbà.",
+    "successTitle": "O ti forúkọsílẹ̀! 🙏",
+    "successText": "Láti ọ̀la ní 07:00, ìwọ yóò gba ìmúlọ́ Bíbélì tìrẹ.",
+    "toastTelegram": "Telegram ti ṣí 🙏",
+    "toastTelegramDesc": "Bẹ̀rẹ̀ bot náà kí o sì kọ /daily láti mú ìmúlọ́ ojoojúmọ́ ṣiṣẹ́.",
+    "toastSuccess": "O ti forúkọsílẹ̀! 🙏",
+    "toastSuccessDesc": "Ìwọ yóò gba ìmúlọ́ ojoojúmọ́ rẹ láti ọ̀la.",
+    "toastPushPreview": "Ìforúkọsílẹ̀ Push kò sí ní àyẹ̀wò",
+    "toastPushPreviewDesc": "Àwọn ìfitónilétí Push ṣiṣẹ́ lórí ojú-ìwé tí a tẹ̀jáde nìkan.",
+    "toastNotSupported": "Kò ní àtìlẹ́yìn",
+    "toastNotSupportedDesc": "Aṣàwákiri rẹ kò ṣe àtìlẹ́yìn àwọn ìfitónilétí Push.",
+    "toastPermDenied": "A kọ̀ àṣẹ",
+    "toastPermDeniedDesc": "Jọ̀wọ́ gbà àwọn ìfitónilétí nínú ètò aṣàwákiri rẹ.",
+    "toastError": "Àṣìṣe",
+    "toastErrorDesc": "Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kan sí i nígbà míì."
   },
   "faq": {
-    "badge": "FAQ",
-    "title": "What you should know about BibleBot",
-    "subtitle": "Transparency matters – especially for theologians, pastors, and critical thinkers.",
-    "q1": "What makes BibleBot different from ChatGPT & Co.?",
-    "q1Generic": "Generic chatbots:",
+    "badge": "Àwọn ìbéèrè tí a sábà ń béèrè",
+    "title": "Ohun tí o yẹ kí o mọ̀ nípa BibleBot",
+    "subtitle": "Ṣíṣí-kedere ṣe pàtákì – ní pàtàkì fún àwọn onímọ̀ ẹ̀kọ́ ìsìn, àwọn alùfáà àti àwọn olùronú jíjinlẹ̀.",
+    "q1": "Kí ni ó yà BibleBot sọ́tọ̀ kúrò nínú ChatGPT àti àwọn míì?",
+    "q1Generic": "Àwọn chatbot àkọ́kọ́:",
     "q1GenericItems": [
-      "Superficial Bible quotes without context",
-      "No pastoral guardrails",
-      "Avoids uncomfortable texts",
-      "No crisis intervention",
-      "Mixes Bible with esotericism",
-      "No follow-up questions – just confirmation"
+      "Àwọn ẹsẹ Bíbélì láìsí àyíká",
+      "Kò sí ààbò ìtọ́jú ẹ̀mí",
+      "Ó yẹra fún àwọn ọ̀rọ̀ líle",
+      "Kò sí ìdáhùn ìṣòro",
+      "Ó dàpọ̀ Bíbélì pẹ̀lú ìdán",
+      "Kò sí ìbéèrè àtúnṣe – ìjẹ́rìísí nìkan"
     ],
     "q1Bot": "BibleBot.Life:",
     "q1BotItems": [
-      "5 recognized translations – including uncomfortable passages",
-      "Guardrails AND challenging companionship",
-      "Follow-up questions for self-reflection",
-      "Crisis referrals (emergency helplines)",
-      "Exclusively Christian theology",
-      "Promotes critical thinking as faith maturity"
+      "Àwọn ìtumọ̀ 5 tí a mọ̀ – àwọn abala líle pẹ̀lú",
+      "Ààbò ATI ìpè sí ìdàgbàsókè",
+      "Àwọn ìbéèrè àtúnṣe fún ìrònú àrà rẹ",
+      "Ìtọ́kasí ìṣòro (Tel. 143 / 147)",
+      "Ẹ̀kọ́ ìsìn Krístì nìkan",
+      "Ó gbé ìronú jíjinlẹ̀ ga gẹ́gẹ́ bí ìdàgbàsókè ìgbàgbọ́"
     ],
-    "q2": "Which Bible translations are included?",
-    "q2Intro": "BibleBot works ecumenically with the major German-language Bible editions:",
-    "q2Outro": "All Bible passages include source citations and historical context.",
-    "q3": "What scientific foundations are behind it?",
-    "q3Intro": "The companionship is based on peer-reviewed research in Positive Psychology:",
-    "q4": "How does BibleBot ensure pastoral safety?",
+    "q2": "Àwọn ìtumọ̀ Bíbélì wo ni a fi sínú?",
+    "q2Intro": "BibleBot ṣiṣẹ́ ní ẹkúméníkà pẹ̀lú àwọn ẹ̀dà Bíbélì àkọ́kọ́ ní èdè Jámánì:",
+    "q2Outro": "Gbogbo àwọn ẹsẹ Bíbélì pẹ̀lú orísun àti àyíká ìtàn.",
+    "q3": "Àwọn ìpìlẹ̀ ìmọ̀ sáyẹ́nsì wo ni ó wà lẹ́yìn rẹ̀?",
+    "q3Intro": "Ìrìn-àjò náà dá lórí ìwádìí tí a ṣàyẹ̀wò ní Ẹ̀kọ́ Ìmọ̀-ọkàn Aládùúrà:",
+    "q4": "Báwo ni BibleBot ṣe rí dájú ààbò ìtọ́jú ẹ̀mí?",
     "q4Items": [
-      "Suicidal thoughts or crisis → immediate referral to emergency helplines",
-      "No psychological or medical diagnoses",
-      "Respect without arbitrariness – clear biblical positions are taken",
-      "Empathy AND honesty – uncomfortable topics are addressed",
-      "Follow-up questions for self-reflection instead of cheap validation",
-      "No toxic positivity – genuine, honest companionship",
-      "Openly names tensions and difficult texts"
+      "Èrò ìpaára tàbí ìṣòro → ìtọ́kasí lẹ́sẹ̀kẹsẹ̀ sí àwọn laini ìrànlọ́wọ́ (143 àti 147)",
+      "Kò sí àyẹ̀wò ìmọ̀-ọkàn tàbí ìṣègùn",
+      "Ọ̀wọ̀ láìsí àìnídìí – a gbé ìdúró Bíbélì tó ṣe kedere",
+      "Ìyọ́nú ATI olóòtítọ́ – àwọn kókó líle ni a sọ̀rọ̀ rẹ̀ pẹ̀lú",
+      "Àwọn ìbéèrè àtúnṣe fún ìrònú àrà rẹ dípò ìjẹ́rìísí pẹlẹbẹ",
+      "Kò sí ìdùnnú èké – alábàáṣiṣẹ́pọ̀ gidi, olóòtítọ́",
+      "Ó sọ àwọn ìforígbárí àti àwọn ọ̀rọ̀ líle ní gbangba"
     ],
-    "q5": "Is BibleBot tied to a specific denomination?",
-    "q5Answer": "No. BibleBot is ecumenically oriented and respects Reformed, Catholic, Free Church, and other Christian traditions equally. When there are denominational differences in interpretation, various perspectives are presented transparently – without favoring any tradition.",
-    "q6": "Does BibleBot replace pastoral care or therapy?",
-    "q6Answer": "No. BibleBot is a digital tool for personal Bible reading and reflection. It does not replace professional pastoral care, theological counseling, or psychological therapy. In serious crises, BibleBot always refers to qualified resources.",
-    "q7": "Isn't BibleBot just a 'feel-good bot'?",
-    "q7Answer": "No. BibleBot comforts where comfort is needed – but it also challenges. Spiritual growth requires friction. BibleBot asks uncomfortable follow-up questions, names difficult Bible texts (Job, Lament Psalms, prophetic criticism), and doesn't shy away from topics like justice, repentance, and responsibility. The prophetic tradition was never comfortable – and neither is BibleBot.",
-    "q8": "Who is behind BibleBot and how is it funded?",
-    "q8Answer": "BibleBot.Life is a private, non-commercial project. It's run on a volunteer basis and funded exclusively through voluntary donations. There's no advertising, no data sales, and no paid features. All donations go directly to covering operating costs (infrastructure, hosting, development). Since BibleBot is a private project, donations are not tax-deductible.",
-    "q9": "How does BibleBot handle my data?",
-    "q9Answer": "BibleBot stores no personal data and no chat histories. Every conversation is anonymous. There's no login, no tracking, and no sharing of data with third parties. Usage is completely anonymous."
+    "q5": "Ṣé BibleBot so mọ́ ẹgbẹ́ ìjọ kan pàtó?",
+    "q5Answer": "Rárá. BibleBot jẹ́ ẹkúméníkà ó sì bọ̀wọ̀ fún àwọn àṣà Reformed, Catholic, Free Church àti àwọn àṣà Krístì míì bákan náà. Nígbà tí àwọn ìyàtọ̀ wà nínú ìtumọ̀, a ṣàfihàn àwọn ojú ìwòye oríṣiríṣi ní gbangba – láìsí àyànfẹ́ àṣà kankan.",
+    "q6": "Ṣé BibleBot rọ́pò ìtọ́jú ẹ̀mí tàbí ìtọ́jú ọkàn?",
+    "q6Answer": "Rárá. BibleBot jẹ́ ohun-èlò dígítà fún kíkà Bíbélì àti ìrònú tìrẹ. Kò rọ́pò ìtọ́jú ẹ̀mí, ìgbìmọ̀ ẹ̀kọ́ ìsìn tàbí ìtọ́jú ìmọ̀-ọkàn. Nínú ìṣòro ńlá, BibleBot máa ń tọ́kasí sí àwọn ibùdó tó péye.",
+    "q7": "Ṣé BibleBot kì í ṣe 'bot ìdùnnú' lásán?",
+    "q7Answer": "Rárá. BibleBot tù ní lára níbi tí ìtùnú bá nílò – ṣùgbọ́n ó tún pè ọ́ sí ìpenija. Ìdàgbàsókè ẹ̀mí nílò ìjà. BibleBot béèrè àwọn ìbéèrè tó le, sọ àwọn ọ̀rọ̀ Bíbélì líle (Jóòbù, Àwọn Saàmù Ẹkún, àtakò wòlíì) kò sì bẹ̀rù àwọn kókó bíi ìdájọ́ òdodo, ìronúpìwàdà àti ojúṣe. Àṣà wòlíì kò rọrùn rí – BibleBot náà bẹ́ẹ̀.",
+    "q8": "Ta ni ó wà lẹ́yìn BibleBot, báwo ni a ṣe ń sanwó rẹ̀?",
+    "q8Answer": "BibleBot.Life jẹ́ iṣẹ́ àkànṣe, tí kì í ṣe fún owó. A ń ṣe é lọ́fẹ̀ẹ́ a sì ń sanwó rẹ̀ nípasẹ̀ ẹ̀bùn àtinúwá nìkan. Kò sí ìpolówó, kò sí títà dátà, kò sí ẹ̀ka tí a ń san owó fún. Gbogbo ẹ̀bùn lọ tààrà sí ìbọ́jú ìnáwó ìṣiṣẹ́. Nítorí BibleBot jẹ́ iṣẹ́ àkànṣe, àwọn ẹ̀bùn kò ṣe é yọ kúrò nínú owó orí.",
+    "q9": "Báwo ni BibleBot ṣe ń ṣe pẹ̀lú dátà mi?",
+    "q9Answer": "BibleBot kò tọ́jú dátà àkànṣe kankan tàbí ìtàn ìjíròrò. Gbogbo ìjíròrò jẹ́ aláìlórúkọ. Kò sí ìforúkọsílẹ̀, kò sí ìtọpinpin, kò sí pínpín dátà pẹ̀lú ẹlòmíì."
   },
   "donate": {
-    "badge": "Support BibleBot",
-    "title": "Help keep BibleBot free",
-    "subtitle": "BibleBot is a passion project – no ads, no subscriptions, no hidden costs. To keep it that way, I rely on voluntary donations. Every contribution helps cover the ongoing costs for operations and infrastructure.",
-    "bankTitle": "Donate via bank transfer",
-    "bankSubtitle": "Every amount counts – thank you! 🙏",
-    "recipient": "Recipient",
-    "bank": "Bank",
-    "purpose": "Reference",
-    "purposeValue": "Donation BibleBot",
-    "note": "BibleBot.Life is operated as a private project. Donations are therefore not tax-deductible."
+    "badge": "Ṣe àtìlẹ́yìn BibleBot",
+    "title": "Ràn wá lọ́wọ́ kí BibleBot wà lọ́fẹ̀ẹ́",
+    "subtitle": "BibleBot jẹ́ iṣẹ́ ọkàn – kò sí ìpolówó, kò sí ìforúkọsílẹ̀, kò sí ìnáwó fàfínúkò. Kí ó lè wà bẹ́ẹ̀, mo gbára lé àwọn ẹ̀bùn àtinúwá. Gbogbo ẹ̀bùn ràn wá lọ́wọ́ láti bo ìnáwó ìṣiṣẹ́.",
+    "bankTitle": "Ṣe ẹ̀bùn nípasẹ̀ ìfowópamọ́sí",
+    "bankSubtitle": "Gbogbo iye owó ṣe pàtákì – ó ṣeun! 🙏",
+    "recipient": "Olùgbà",
+    "bank": "Ilé-ìfowópamọ́",
+    "purpose": "Ìdí",
+    "purposeValue": "Ẹ̀bùn BibleBot",
+    "note": "BibleBot.Life jẹ́ iṣẹ́ àkànṣe. Nítorí náà àwọn ẹ̀bùn kò ṣe é yọ kúrò nínú owó orí."
+  },
+  "refer": {
+    "badge": "Pin ọ̀rọ̀ Ọlọ́run",
+    "title": "Ṣe ìgbànímọ̀ràn BibleBot",
+    "subtitle": "Ṣé o mọ ẹnìkan tó nílò ìwúrí báyìí? Pin BibleBot – ifiranṣẹ́ kan lè ṣe ànfàní púpọ̀.",
+    "whatsapp": "Pin nípasẹ̀ WhatsApp",
+    "whatsappMsg": "Hey, mo fẹ́ fi BibleBot hàn ọ́ – alábàáṣiṣẹ́pọ̀ Bíbélì ọ̀fẹ́ tó mọ Bíbélì gan-an. Kò sí ìforúkọsílẹ̀, aláìlórúkọ, olóòtítọ́. Gbìyànjú rẹ̀: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "telegram": "Pin nípasẹ̀ Telegram",
+    "telegramMsg": "Hey, ṣé o ti mọ BibleBot? Alábàáṣiṣẹ́pọ̀ Bíbélì ọ̀fẹ́ – olóòtítọ́, aláìlórúkọ, kò sí ìforúkọsílẹ̀. Wo ẹ̀: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "email": "Pin nípasẹ̀ Ímeèlì",
+    "emailSubject": "Èyí lè wú ọ lórí: BibleBot.Life",
+    "emailBody": "Bàwo!\n\nMo fẹ́ fi BibleBot hàn ọ́ – alábàáṣiṣẹ́pọ̀ Bíbélì ọ̀fẹ́ tó mọ Bíbélì gan-an. Kò sí ìforúkọsílẹ̀, aláìlórúkọ pátápátá.\n\nGbìyànjú rẹ̀: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nKí a pàdé",
+    "copy": "Ṣàdàkọ ìjápọ̀",
+    "copied": "Ìjápọ̀ ti dì àkọ̀! 📋",
+    "qr": "Tàbí fi kóòdù QR yìí hàn:"
   },
   "cta": {
-    "title": "You don't have to go through this alone",
-    "subtitle": "Just tell BibleBot what's on your mind. No login, no cost, no judgment – just honest companionship and the wisdom of the Bible.",
-    "button": "Start a conversation"
+    "title": "O kò ní láti kọjá èyí nìkan",
+    "subtitle": "Sọ fún BibleBot ohun tó ń ṣe ọ́ lọ́kàn. Kò sí ìforúkọsílẹ̀, kò sí ìnáwó, kò sí ìdájọ́ – alábàáṣiṣẹ́pọ̀ olóòtítọ́ àti ọgbọ́n Bíbélì nìkan.",
+    "button": "Bẹ̀rẹ̀ ìjíròrò"
   },
   "footer": {
-    "tagline": "Your personal companion for a life with the Bible",
-    "disclaimer": "BibleBot.Life is a digital tool and does not replace professional pastoral care, theological counseling, or psychological therapy. In acute crises, please contact your local emergency helpline.",
-    "impressum": "Imprint",
-    "notes": "Notes",
-    "private": "Private, non-commercial project",
-    "noChat": "No storage of chat data",
-    "noTax": "Donations are not tax-deductible",
-    "datenschutz": "Privacy Policy",
-    "love": "With ❤️ for everyone wondering what Christ thinks.",
-    "forChurches": "For Churches"
+    "tagline": "Alábàáṣiṣẹ́pọ̀ tìrẹ fún ìgbésí ayé pẹ̀lú Bíbélì",
+    "disclaimer": "BibleBot.Life jẹ́ ohun-èlò dígítà kò sì rọ́pò ìtọ́jú ẹ̀mí, ìgbìmọ̀ ẹ̀kọ́ ìsìn tàbí ìtọ́jú ìmọ̀-ọkàn. Nínú ìṣòro ńlá, jọ̀wọ́ kan sí laini ìrànlọ́wọ́ pàjáwìrì rẹ.",
+    "impressum": "Ìwé ẹ̀rí",
+    "notes": "Àwọn àkíyèsí",
+    "private": "Iṣẹ́ àkànṣe, tí kì í ṣe fún owó",
+    "noChat": "Kò sí ìtọ́jú dátà ìjíròrò",
+    "noTax": "Àwọn ẹ̀bùn kò ṣe é yọ kúrò nínú owó orí",
+    "datenschutz": "Ìlànà Àṣírí",
+    "love": "Pẹ̀lú ❤️ fún gbogbo ẹni tó ń ṣe àrídájú ohun tí Krístì rò.",
+    "forChurches": "Fún àwọn Ìjọ"
   },
   "chat": {
-    "welcome": "Welcome! 🤗\n\nI'm your BibleBot – your personal companion with the Bible, good questions, and real impulses. No pressure, no judgment.\n\nYou can ask me anything – or just share what's on your mind. 💛",
-    "journeyOffer": "💡 **Tip:** I also offer a **21-day journey** – 3 weeks of daily impulses, reflections, and concrete steps. At your own pace.\n\nWould you like to try it?",
-    "suggestion1": "I need an uplifting word right now",
-    "suggestion2": "What does the Bible say when you feel uncertain?",
-    "suggestion3": "I want to find out what I really want",
-    "teaser": "What's on your mind? 💛",
-    "teaserSub": "I'm here – without any judgment.",
-    "openChat": "Open chat",
-    "closeChat": "Close chat",
-    "yourCompanion": "Your personal companion",
-    "journeyComplete": "21 days completed! 🎉",
-    "arriving": "Arriving",
-    "deepening": "Deepening",
-    "acting": "Acting",
-    "renameTip": "Tip: Click the name to rename me ✨",
-    "changeName": "Change name",
-    "placeholder": "Just start typing...",
-    "startVoice": "Start voice input",
-    "stopVoice": "Stop recording",
-    "noVoice": "Your browser does not support voice input.",
-    "writing": "typing...",
-    "shieldBadge": "No login · No judgment · Citations verified",
-    "journeyStart": "Yes, let's go ✨",
-    "journeyLater": "Maybe later",
-    "journeyStartMsg": "Yes, I'd like to start the 21-day journey!",
-    "qaChecking": "Checking citations...",
-    "qaIssue": "{{count}} issue with citations",
-    "qaIssue_plural": "{{count}} issues with citations",
-    "qaOk": "{{count}} citation verified ✓",
-    "qaOk_plural": "{{count}} citations verified ✓",
-    "qaWarning": "⚠️ Accuracy notes:",
-    "errorTooMany": "Too many requests – please wait a moment.",
-    "errorCredits": "AI quota exhausted.",
-    "errorConnect": "Connection error.",
-    "errorTitle": "Error",
-    "errorConnection": "could not be reached.",
-    "errorNoStream": "No stream",
-    "seniorMode": "Senior mode (larger text)",
-    "teaserCta": "Start writing →",
-    "namePlaceholder": "e.g. Eli, Miriam…"
+    "welcome": "Ẹ kú àbọ̀ 🤗\n\nÈmi ni BibleBot rẹ – alábàáṣiṣẹ́pọ̀ tìrẹ pẹ̀lú Bíbélì, àwọn ìbéèrè rere àti àwọn ìmúlọ́ gidi. Kò sí ìfipámú, kò sí ìdájọ́.\n\nO lè béèrè ohunkóhun – tàbí sọ ohun tó ń ṣe ọ́ lọ́kàn. 💛",
+    "journeyOffer": "💡 **Ìmọ̀ràn:** Mo tún ń pèsè **ìrìn-àjò ọjọ́ 21** – ọ̀sẹ̀ 3 àwọn ìmúlọ́ ojoojúmọ́, ìrònú àti àwọn ìgbésẹ̀ pàtó. Ní ìyára tìrẹ.\n\nṢé o fẹ́ gbìyànjú rẹ̀?",
+    "suggestion1": "Mo nílò ọ̀rọ̀ ìwúrí báyìí",
+    "suggestion2": "Kí ni Bíbélì sọ nígbà tí ìyèméjì bá ń bá ọ?",
+    "suggestion3": "Mo fẹ́ mọ ohun tí mo fẹ́ gan-an",
+    "teaser": "Kí ni ó ń ṣe ọ́ lọ́kàn? 💛",
+    "teaserSub": "Mo wà níbí – láìsí ìdájọ́ kankan.",
+    "teaserCta": "Bẹ̀rẹ̀ kíkọ →",
+    "openChat": "Ṣí ìjíròrò",
+    "closeChat": "Pa ìjíròrò dé",
+    "yourCompanion": "Alábàáṣiṣẹ́pọ̀ tìrẹ",
+    "journeyComplete": "Ọjọ́ 21 ti parí! 🎉",
+    "arriving": "Dédé",
+    "deepening": "Jíjinlẹ̀",
+    "acting": "Ìgbésẹ̀",
+    "renameTip": "Fún mi ní orúkọ ✨",
+    "namePlaceholder": "bíi Élì, Míríámù…",
+    "changeName": "Yí orúkọ padà",
+    "placeholder": "Kọ lásán...",
+    "startVoice": "Bẹ̀rẹ̀ ìgbọ́hùnsáfẹ́fẹ́",
+    "stopVoice": "Dá ìgbasilẹ̀ dúró",
+    "noVoice": "Aṣàwákiri rẹ kò ṣe àtìlẹ́yìn ìgbọ́hùnsáfẹ́fẹ́.",
+    "writing": "ń kọ...",
+    "shieldBadge": "Kò sí ìforúkọsílẹ̀ · Kò sí ìdájọ́ · Àwọn ẹsẹ ti jẹ́rìí sí",
+    "journeyStart": "Bẹ́ẹ̀ni, ẹ jẹ́ ká bẹ̀rẹ̀ ✨",
+    "journeyLater": "Nígbà míì bóyá",
+    "journeyStartMsg": "Bẹ́ẹ̀ni, mo fẹ́ bẹ̀rẹ̀ ìrìn-àjò ọjọ́ 21!",
+    "qaChecking": "Ń ṣàyẹ̀wò àwọn ẹsẹ...",
+    "qaIssue": "{{count}} àkíyèsí nípa àwọn ẹsẹ",
+    "qaIssue_plural": "{{count}} àwọn àkíyèsí nípa àwọn ẹsẹ",
+    "qaOk": "{{count}} ẹsẹ ti jẹ́rìí sí ✓",
+    "qaOk_plural": "{{count}} àwọn ẹsẹ ti jẹ́rìí sí ✓",
+    "qaWarning": "⚠️ Àwọn àkíyèsí nípa ìṣedéédé:",
+    "errorTooMany": "Àwọn ìbéèrè púpọ̀ jù – jọ̀wọ́ dúró díẹ̀.",
+    "errorCredits": "Ìpín AI ti parí.",
+    "errorConnect": "Àṣìṣe ìsopọ̀.",
+    "errorTitle": "Àṣìṣe",
+    "errorConnection": "kò lè dé.",
+    "errorNoStream": "Kò sí ìṣàn",
+    "seniorMode": "Ìpele àgbàlagbà (ọ̀rọ̀ tó tóbi)"
   },
   "install": {
-    "title": "Install BibleBot",
-    "androidDesc": "Quick access from your home screen",
-    "iosDesc": "Tap \"Share\" → \"Add to Home Screen\"",
-    "button": "Install",
-    "close": "Close"
+    "title": "Fi BibleBot sí",
+    "androidDesc": "Ìráyè kíákíá láti ojú iboju ilé",
+    "iosDesc": "Tẹ «Pin» → «Fi sí ojú iboju ilé»",
+    "button": "Fi sí",
+    "close": "Pa á dé"
+  },
+  "share": {
+    "label": "Pin",
+    "shareVia": "Pin nípasẹ̀",
+    "copied": "Ti dì àkọ̀! 📋",
+    "copiedShort": "Ti dì àkọ̀!",
+    "copiedDesc": "Ọ̀rọ̀ ti dì àkọ̀ sí pátákó ìgbàkọ. Pin rẹ̀ ní WhatsApp, Instagram tàbí ibikíbi tí o bá fẹ́!",
+    "copyLink": "Ṣàdàkọ ọ̀rọ̀",
+    "error": "Àdàkọ kùnà",
+    "impulseTitle": "BibleBot – Ìmúlọ́ Ọjọ́",
+    "chatTitle": "BibleBot – Èrò Ọjọ́",
+    "createImage": "Ṣe àwòrán ✨",
+    "generating": "Ń ṣe é…",
+    "imageReady": "Àwòrán rẹ ti ṣetán fún pípín!",
+    "shareImage": "Pin àwòrán",
+    "download": "Fipamọ́",
+    "imageError": "Ìṣe àwòrán kùnà",
+    "imageErrorDesc": "A kò lè ṣe àwòrán náà. Gbìyànjú lẹ́ẹ̀kan sí i nígbà míì.",
+    "imageSaved": "Ọ̀rọ̀ ti dì àkọ̀! 📋",
+    "imageSavedDesc": "Fipamọ́ àwòrán náà kí o sì pin rẹ̀ pẹ̀lú ọ̀rọ̀ tí a dì àkọ̀ ní Instagram, WhatsApp tàbí ibikíbi!"
   },
   "darkMode": {
-    "light": "Light mode",
-    "dark": "Dark mode"
+    "light": "Ìpele ìmọ́lẹ̀",
+    "dark": "Ìpele òkùnkùn"
   },
   "impressum": {
-    "back": "Back to home",
-    "title": "Imprint"
+    "back": "Padà sí ojú-ìwé ilé",
+    "title": "Ìwé ẹ̀rí"
   },
   "datenschutz": {
-    "back": "Back to home",
-    "title": "Privacy Policy"
+    "back": "Padà sí ojú-ìwé ilé",
+    "title": "Ìlànà Àṣírí"
   },
   "lang": {
     "de": "Deutsch",
@@ -331,425 +366,390 @@
     "ht": "Kreyòl"
   },
   "tiles": {
-    "sectionTitle": "What's on your heart?",
-    "sectionSubtitle": "Choose a topic — BibleBot walks with you",
+    "sectionTitle": "Kí ni ó ń ṣe ọ́ lọ́kàn?",
+    "sectionSubtitle": "Yan kókó kan — BibleBot yóò bá ọ rìn",
     "baptism": {
-      "title": "Find a baptism verse",
-      "desc": "The perfect verse for your child",
-      "prompt": "Help me find a fitting baptism verse. What kind of child is it and what do the parents wish for?"
+      "title": "Rí ẹsẹ ìrìbọmi",
+      "desc": "Ẹsẹ tó péye fún ọmọ rẹ",
+      "prompt": "Ràn mí lọ́wọ́ láti rí ẹsẹ ìrìbọmi tó yẹ. Irú ọmọ wo ni, kí ni àwọn òbí fẹ́?"
     },
     "condolence": {
-      "title": "Words of comfort",
-      "desc": "Support through grief & farewell",
-      "prompt": "I need comforting words for a condolence card. Can you help me find the right words?"
+      "title": "Ọ̀rọ̀ ìtùnú",
+      "desc": "Àtìlẹ́yìn nínú ìbànújẹ́ àti ìpínlẹ̀",
+      "prompt": "Mo nílò ọ̀rọ̀ ìtùnú fún káàdì ìkẹ́dùn. Ṣé o lè ràn mí lọ́wọ́ láti rí ọ̀rọ̀ tó tọ́?"
     },
     "wedding": {
-      "title": "Wedding verse",
-      "desc": "Biblical words for your love",
-      "prompt": "We're looking for a beautiful biblical verse for our wedding. Which passages speak about love and partnership?"
+      "title": "Ẹsẹ ìgbéyàwó",
+      "desc": "Ọ̀rọ̀ Bíbélì fún ìfẹ́ yín",
+      "prompt": "A ń wá ẹsẹ Bíbélì tó dára fún ìgbéyàwó wa. Àwọn abala wo ni ó sọ̀rọ̀ nípa ìfẹ́ àti ìbádọ́rẹ̀ẹ́?"
     },
     "anxiety": {
-      "title": "Fear & worry",
-      "desc": "Finding courage in hard times",
-      "prompt": "I'm struggling with fear and worry right now. What does the Bible say about this? Are there verses that give courage?"
+      "title": "Ìbẹ̀rù àti àníyàn",
+      "desc": "Rírí ìgboyà ní àkókò líle",
+      "prompt": "Mo ń jà pẹ̀lú ìbẹ̀rù àti àníyàn báyìí. Kí ni Bíbélì sọ nípa èyí? Ṣé àwọn ẹsẹ tó fún ni ní ìgboyà wà?"
     },
     "confession": {
-      "title": "Confession",
-      "desc": "God forgives — speak it out",
-      "prompt": "I want to let go of something that weighs on me. What does the Bible say about forgiveness and new beginnings?"
+      "title": "Ìjẹ́wọ́",
+      "desc": "Ọlọ́run dáríjì — sọ ọ́ jáde",
+      "prompt": "Mo fẹ́ jẹ́ kí nǹkan tó ń tẹ̀ mí lọ́rùn lọ. Kí ni Bíbélì sọ nípa ìdáríjì àti àtúnbẹ̀rẹ̀?"
     },
     "heartbreak": {
-      "title": "Heartbreak",
-      "desc": "What the Bible says about heartache",
-      "prompt": "My heart is broken. What does the Bible say about heartbreak and how to find hope again?"
+      "title": "Ọkàn fífọ́",
+      "desc": "Ohun tí Bíbélì sọ nípa ìrora ọkàn",
+      "prompt": "Ọkàn mi ti fọ́. Kí ni Bíbélì sọ nípa ìrora ọkàn àti bí a ṣe lè rí ìrètí mọ́?"
     },
     "newstart": {
-      "title": "New beginning",
-      "desc": "Strength for a new chapter",
-      "prompt": "I'm facing a new beginning and need encouragement. Which Bible passages speak about fresh starts?"
+      "title": "Àtúnbẹ̀rẹ̀",
+      "desc": "Agbára fún orí ìwé tuntun",
+      "prompt": "Mo wà nídojú àtúnbẹ̀rẹ̀ mo sì nílò ìwúrí. Àwọn abala Bíbélì wo ni ó sọ̀rọ̀ nípa àwọn ìbẹ̀rẹ̀ tuntun?"
     },
     "namequiz": {
-      "title": "Name quiz",
-      "desc": "Find the right biblical name",
-      "prompt": "I'm looking for a biblical name for my child. Can you suggest some and explain their meanings?"
+      "title": "Ìdánwò orúkọ",
+      "desc": "Rí orúkọ Bíbélì tó tọ́",
+      "prompt": "Mo ń wá orúkọ Bíbélì fún ọmọ mi. Ṣé o lè dábàá díẹ̀ kí o sì ṣàlàyé ìtumọ̀ wọn?"
     },
     "sleepless": {
-      "title": "Sleepless",
-      "desc": "Finding peace at night",
-      "prompt": "I can't sleep and my mind is racing. Is there a calming prayer or psalm for the night?"
+      "title": "Aláìsùn",
+      "desc": "Rírí ìfọ̀kànbalẹ̀ ní alẹ́",
+      "prompt": "Mi ò lè sùn mo sì ń ronú púpọ̀. Ṣé àdúrà ìtùnú tàbí Saàmù fún alẹ́ wà?"
     },
     "loneliness": {
-      "title": "Loneliness",
-      "desc": "You are never alone",
-      "prompt": "I feel lonely. What does the Bible say about God always being with us?"
+      "title": "Àdánù",
+      "desc": "O kò wà nìkan rí",
+      "prompt": "Àdánù ń bá mi. Kí ni Bíbélì sọ pé Ọlọ́run máa ń wà pẹ̀lú wa nígbà gbogbo?"
     },
     "decision": {
-      "title": "Tough decision",
-      "desc": "Wisdom for the right path",
-      "prompt": "I'm facing a difficult decision. Which Bible passages can help me find the right way?"
+      "title": "Ìpinnu líle",
+      "desc": "Ọgbọ́n fún ọ̀nà tó tọ́",
+      "prompt": "Mo wà nídojú ìpinnu líle. Àwọn abala Bíbélì wo ni ó lè ràn mí lọ́wọ́ láti rí ọ̀nà tó tọ́?"
     },
     "gratitude": {
-      "title": "Gratitude",
-      "desc": "A personal prayer of thanks",
-      "prompt": "I want to thank God. Help me write a personal prayer of gratitude."
+      "title": "Ìdúpẹ́",
+      "desc": "Àdúrà ìdúpẹ́ tìrẹ",
+      "prompt": "Mo fẹ́ dúpẹ́ lọ́wọ́ Ọlọ́run. Ràn mí lọ́wọ́ láti kọ àdúrà ìdúpẹ́ tìrẹ."
     },
     "lifewheel": {
-      "title": "Life Wheel",
-      "desc": "How satisfied are you really?"
+      "title": "Kẹ̀kẹ́ ìgbésí ayé",
+      "desc": "Báwo ni o ṣe ní ìtẹ́lọ́rùn gan-an?"
     },
     "sevenwhys": {
-      "title": "7 Whys",
-      "desc": "Find the deepest root of your question",
-      "prompt": "I'd like to do the 7 Whys exercise. Here is my topic:"
+      "title": "7 Kí-nìdí",
+      "desc": "Rí gbòǹgbo jíjinlẹ̀ ìbéèrè rẹ",
+      "prompt": "Mo fẹ́ ṣe àdàṣe 7-kí-nìdí. Kókó mi nìyí:"
     },
     "anger": {
-      "title": "Anger",
-      "desc": "When you're about to explode",
-      "prompt": "I'm so angry and don't know what to do with my rage. What does the Bible say about anger and how to deal with it?"
+      "title": "Ìbínú àti ẹ̀fà",
+      "desc": "Nígbà tí ìbínú bá ń pa ọ́",
+      "prompt": "Mo bínú púpọ̀ mi ò sì mọ bí mo ṣe lè ṣe pẹ̀lú ìbínú mi. Kí ni Bíbélì sọ nípa ẹ̀fà àti bí mo ṣe lè bá a lò?"
     },
     "shame": {
-      "title": "Shame & Guilt",
-      "desc": "When guilt is crushing you",
-      "prompt": "I feel so ashamed and guilty. What does the Bible say about guilt, forgiveness, and starting over?"
+      "title": "Ìtìjú àti ẹ̀bi",
+      "desc": "Nígbà tí ẹ̀bi bá ń tẹ̀ ọ́ lọ́rùn",
+      "prompt": "Mo tìjú púpọ̀ ẹ̀bi sì ń bá mi. Kí ni Bíbélì sọ nípa ẹ̀bi, ìdáríjì àti àtúnbẹ̀rẹ̀?"
     },
     "burnout": {
-      "title": "Burnout",
-      "desc": "When you just can't go on",
-      "prompt": "I'm totally exhausted and burned out. I just can't anymore. What does the Bible say about rest and recovery?"
+      "title": "Ìrẹ̀wẹ̀sì",
+      "desc": "Nígbà tí o kò lè mọ́",
+      "prompt": "Mo ti rẹ̀ pátápátá mo sì ti jó. Mi ò lè mọ́. Kí ni Bíbélì sọ nípa ìsinmi àti àtúnṣe?"
     },
     "illness": {
-      "title": "Illness",
-      "desc": "When a diagnosis changes everything",
-      "prompt": "I've received a difficult diagnosis and I'm scared. What does the Bible say about illness, healing, and hope?"
+      "title": "Àìsàn",
+      "desc": "Nígbà tí àyẹ̀wò bá yí ohun gbogbo padà",
+      "prompt": "Mo ti gba àyẹ̀wò líle mo sì ń bẹ̀rù. Kí ni Bíbélì sọ nípa àìsàn, ìwòsàn àti ìrètí?"
     },
     "financial": {
-      "title": "Money Worries",
-      "desc": "When bills are piling up",
-      "prompt": "I have financial worries and don't know what to do. What does the Bible say about money, trust, and provision?"
+      "title": "Wàhálà owó",
+      "desc": "Nígbà tí àwọn owó orí bá ń tẹ̀ ọ́",
+      "prompt": "Mo ní wàhálà owó mi ò sì mọ bí mo ṣe lè ṣe. Kí ni Bíbélì sọ nípa owó, ìgbẹ́kẹ̀lé àti ìpèsè?"
     },
     "meaningcrisis": {
-      "title": "Meaning Crisis",
-      "desc": "What's it all for?",
-      "prompt": "I'm wondering what's the point of it all. I'm in a meaning crisis. What does the Bible say about the meaning of life?"
+      "title": "Ìṣòro ìtumọ̀",
+      "desc": "Kí ni gbogbo èyí jẹ́ fún?",
+      "prompt": "Mo ń ṣe àrídájú kí ni gbogbo rẹ̀ jẹ́ fún. Mo wà nínú ìṣòro ìtumọ̀. Kí ni Bíbélì sọ nípa ìtumọ̀ ìgbésí ayé?"
     },
     "selfdoubt": {
-      "title": "Self-Doubt",
-      "desc": "When you don't feel good enough",
-      "prompt": "I constantly doubt myself and don't feel good enough. What does the Bible say about my worth?"
+      "title": "Ìyèméjì àrà ẹni",
+      "desc": "Nígbà tí o bá rò pé o kò tó",
+      "prompt": "Mo máa ń ṣiyèméjì àrà mi nígbà gbogbo mo sì rò pé mi ò tó. Kí ni Bíbélì sọ nípa iye mi?"
     },
     "calling": {
-      "title": "Calling",
-      "desc": "What should I do with my life?",
-      "prompt": "I don't know what to do with my life. Help me find my calling — what does the Bible say?"
+      "title": "Ìpè",
+      "desc": "Kí ni mo yẹ kí n ṣe pẹ̀lú ìgbésí ayé mi?",
+      "prompt": "Mi ò mọ kí ni mo yẹ kí n ṣe pẹ̀lú ìgbésí ayé mi. Ràn mí lọ́wọ́ láti rí ìpè mi – kí ni Bíbélì sọ nípa rẹ̀?"
     },
     "faithdoubt": {
-      "title": "Faith Doubts",
-      "desc": "When your faith is shaking",
-      "prompt": "I have doubts about my faith and don't know if I can still believe. What does the Bible say about doubt?"
+      "title": "Ìyèméjì ìgbàgbọ́",
+      "desc": "Nígbà tí ìgbàgbọ́ bá ń mì",
+      "prompt": "Mo ní ìyèméjì nípa ìgbàgbọ́ mi mi ò sì mọ bóyá mo tún lè gbàgbọ́. Kí ni Bíbélì sọ nípa ìyèméjì?"
     },
     "forgiveness": {
-      "title": "Forgiveness",
-      "desc": "When forgiving seems impossible",
-      "prompt": "I simply can't forgive someone. It hurts too much. What does the Bible say about forgiveness?"
+      "title": "Ìdáríjì",
+      "desc": "Nígbà tí ìdáríjì bá dàbí èyí tí kò ṣeé ṣe",
+      "prompt": "Mi ò lè dáríjì ẹnìkan. Ó ń dùn mi púpọ̀. Kí ni Bíbélì sọ nípa ìdáríjì?"
     },
     "familyconflict": {
-      "title": "Family Conflict",
-      "desc": "When family is at war",
-      "prompt": "There's a big conflict in my family. What does the Bible say about family peace and reconciliation?"
+      "title": "Ìjà nínú ẹbí",
+      "desc": "Nígbà tí ìjà bá wà nínú ẹbí",
+      "prompt": "Ìjà ńlá wà nínú ẹbí mi. Kí ni Bíbélì sọ nípa àlàáfíà ẹbí àti ìlaja?"
     },
     "envy": {
-      "title": "Envy",
-      "desc": "When others have it better",
-      "prompt": "I'm envious of others and constantly comparing myself. What does the Bible say about envy and contentment?"
+      "title": "Ìlara",
+      "desc": "Nígbà tí àwọn ẹlòmíì bá dára jù ọ",
+      "prompt": "Mo ń ṣe ìlara àwọn ẹlòmíì mo sì máa ń fi àrà mi wé wọn. Kí ni Bíbélì sọ nípa ìlara àti ìtẹ́lọ́rùn?"
     },
     "joy": {
-      "title": "Share Joy",
-      "desc": "When something wonderful happened",
-      "prompt": "Something wonderful happened to me and I want to share my joy! What does the Bible say about joy and gratitude?"
+      "title": "Pin ayọ̀",
+      "desc": "Nígbà tí nǹkan ìyanu bá ṣẹlẹ̀",
+      "prompt": "Nǹkan ìyanu ṣẹlẹ̀ fún mi mo sì fẹ́ pin ayọ̀ mi! Kí ni Bíbélì sọ nípa ayọ̀ àti ìdúpẹ́?"
     },
     "prayer": {
-      "title": "Prayer Request",
-      "desc": "Pray together",
-      "prompt": "I have a prayer request and would like to pray together. Join me in prayer."
+      "title": "Ẹ̀bẹ̀ àdúrà",
+      "desc": "Jẹ́ ká gbàdúrà papọ̀",
+      "prompt": "Mo ní ẹ̀bẹ̀ àdúrà mo sì fẹ́ gbàdúrà papọ̀. Bá mi gbàdúrà."
     },
     "bibleverse": {
-      "title": "Understand a Verse",
-      "desc": "Get a Bible passage explained",
-      "prompt": "I'd like to understand a Bible passage better. Can you help me put it in context?"
+      "title": "Lóye ẹsẹ kan",
+      "desc": "Gba àlàyé abala Bíbélì kan",
+      "prompt": "Mo fẹ́ lóye abala Bíbélì kan dáradára. Ṣé o lè ràn mí lọ́wọ́ láti fi sí àyíká rẹ̀?"
     }
   },
   "lifeWheel": {
-    "title": "Your Life Wheel",
-    "intro": "Rate 8 life areas on a scale of 1-10. Discover where you stand — and receive biblical impulses for the area that needs attention.",
-    "start": "Get started",
-    "sliderHint": "Move the sliders — 1 = very unsatisfied, 10 = very satisfied",
-    "showResult": "Show result",
-    "average": "Average",
-    "weakestArea": "Greatest need",
-    "getImpulse": "Biblical impulse for {{area}}",
-    "reset": "Try again",
-    "prompt": "My life wheel shows that I scored only {{score}}/10 in the area of '{{area}}'. What does the Bible say about this area of life? Give me encouragement and practical impulses.",
+    "title": "Kẹ̀kẹ́ ìgbésí ayé rẹ",
+    "intro": "Ṣe àyẹ̀wò àwọn apá ìgbésí ayé 8 lórí ìwọ̀n 1-10. Rí ibití o wà — kí o sì gba àwọn ìmúlọ́ Bíbélì fún apá tó nílò àfiyèsí.",
+    "start": "Bẹ̀rẹ̀ báyìí",
+    "sliderHint": "Yí àwọn ọ̀pá – 1 = kò ní ìtẹ́lọ́rùn rárá, 10 = ní ìtẹ́lọ́rùn púpọ̀",
+    "showResult": "Fi àbájáde hàn",
+    "average": "Àpapọ̀",
+    "weakestArea": "Àìní tó tóbi jùlọ",
+    "getImpulse": "Ìmúlọ́ Bíbélì fún {{area}}",
+    "reset": "Ṣe lẹ́ẹ̀kan sí i",
+    "prompt": "Kẹ̀kẹ́ ìgbésí ayé mi fi hàn pé mo ní {{score}}/10 nìkan ní apá «{{area}}». Kí ni Bíbélì sọ nípa apá ìgbésí ayé yìí? Fún mi ní ìwúrí àti àwọn ìmúlọ́ àṣe.",
     "areas": {
-      "health": "Health",
-      "relationships": "Relationships",
-      "career": "Career",
-      "spirituality": "Spirituality",
-      "finances": "Finances",
-      "family": "Family",
-      "leisure": "Leisure",
-      "growth": "Personal Growth"
+      "health": "Ìlera",
+      "relationships": "Àjọṣe",
+      "career": "Iṣẹ́",
+      "spirituality": "Ẹ̀mí",
+      "finances": "Owó",
+      "family": "Ẹbí",
+      "leisure": "Ìsinmi",
+      "growth": "Ìdàgbàsókè àrà ẹni"
     },
-    "save": "Save result",
-    "saved": "Saved!",
-    "history": "Previous results",
-    "noHistory": "No saved results yet.",
-    "backToNew": "New Life Wheel",
-    "backToList": "Back to list"
+    "save": "Fi àbájáde pamọ́",
+    "saved": "Ti fipamọ́!",
+    "history": "Àwọn àbájáde tẹ́lẹ̀",
+    "noHistory": "Kò sí àbájáde tí a ti fipamọ́.",
+    "backToNew": "Kẹ̀kẹ́ ìgbésí ayé tuntun",
+    "backToList": "Padà sí àtòjọ"
   },
   "church": {
-    "badge": "For Churches",
-    "heroTitle": "BibleBot for Your Church",
-    "heroSubtitle": "Accompany your congregation with biblical wisdom – digital, personal, and around the clock.",
-    "useCasesTitle": "Use Cases",
+    "badge": "Fún àwọn Ìjọ",
+    "heroTitle": "BibleBot fún Ìjọ yín",
+    "heroSubtitle": "Bá àwọn ọmọ ìjọ yín rìn pẹ̀lú ọgbọ́n Bíbélì – dígítà, tìrẹ àti 24/7.",
+    "useCasesTitle": "Àwọn ọ̀nà àmúlò",
     "useCase": {
       "youth": {
-        "title": "Youth Ministry",
-        "desc": "Teens discover the Bible in their own way – interactive and without hesitation."
+        "title": "Iṣẹ́ ọ̀dọ́",
+        "desc": "Àwọn ọ̀dọ́ ṣàwárí Bíbélì ní ọ̀nà tiwọn – ní ìbáṣepọ̀ àti láìsí ìdádúró."
       },
       "confirmation": {
-        "title": "Confirmation",
-        "desc": "Confirmands deepen Bible knowledge independently with personal guidance."
+        "title": "Ìjẹ́rìísí",
+        "desc": "Àwọn tí wọ́n ń múra fún ìjẹ́rìísí jinlẹ̀ sí ìmọ̀ Bíbélì lọ́nà tiwọn pẹ̀lú alábàáṣiṣẹ́pọ̀ tìrẹ."
       },
       "pastoral": {
-        "title": "Pastoral Care",
-        "desc": "24/7 companionship as a complement to personal pastoral care."
+        "title": "Ìtọ́jú ẹ̀mí",
+        "desc": "Alábàáṣiṣẹ́pọ̀ 24/7 gẹ́gẹ́ bí àfikún sí ìtọ́jú ẹ̀mí àdánidá."
       },
       "bibleStudy": {
-        "title": "Bible Study",
-        "desc": "Impulses and discussion starters for groups and home circles."
+        "title": "Ẹgbẹ́ ìkẹ́kọ̀ọ́ Bíbélì",
+        "desc": "Àwọn ìmúlọ́ àti àwọn ìbẹ̀rẹ̀ ìjíròrò fún àwọn ẹgbẹ́ àti àwọn ẹgbẹ́ ilé."
       }
     },
-    "pricingTitle": "Àwọn àpò ìtìlẹ́yìn",
-    "pricingSubtitle": "Ṣe àtìlẹ́yìn BibleBot àti ṣọ́ọ̀ṣì rẹ pẹ̀lú àpò tó tọ́.",
-    "popular": "Popular",
-    "free": "Free",
-    "perYear": "year",
-    "contact": "Get in touch",
+    "pricingTitle": "Àwọn ètò àtìlẹ́yìn",
+    "pricingSubtitle": "Ṣe àtìlẹ́yìn BibleBot àti ìjọ yín pẹ̀lú ètò tó yẹ.",
+    "popular": "Olókìkí",
+    "free": "Ọ̀fẹ́",
+    "perYear": "Ọdún",
+    "contact": "Kan sí wa",
     "tier": {
       "free": {
-        "name": "Irúgbìn mọsitádì",
-        "size": "Ìwọlé bot ìpilẹ̀ṣẹ̀ fún gbogbo ọmọ ẹgbẹ́."
+        "name": "Irúgbìn ewékó",
+        "size": "Fún àwọn ìjọ kékeré (títí dé àwọn ọmọ ẹgbẹ́ 50)"
       },
       "community": {
-        "name": "Alábàákẹ́gbẹ́",
-        "size": "Ṣọ́ọ̀ṣì ni a mẹ́nu kàn gẹ́gẹ́ bí olùtìlẹ́yìn lórí ojú-ìwé àyélujára & ìwọlé láì sí ìpolowó."
+        "name": "Alábàáṣiṣẹ́pọ̀ ọ̀nà",
+        "size": "Fún àwọn ìjọ tó ní àwọn ọmọ ẹgbẹ́ 50–200"
       },
       "gemeinde": {
-        "name": "Olùkọ́ àfàrá",
-        "size": "Àmì ìdánimqdelays̀ nínú atọ́kùn bot, ìròyìn lílo oṣooṣù (aláìlórúkọ)."
+        "name": "Olùkọ́ àfàrà",
+        "size": "Fún àwọn ìjọ tó ní àwọn ọmọ ẹgbẹ́ 200–500"
       },
       "kirche": {
         "name": "Ilé ìmọ́lẹ̀",
-        "size": "Ìṣọ̀kan àkóónú tìẹ (bí àpẹẹrẹ àkójọ wàásù), ìdásílẹ̀ ọ̀nà-àtẹ̀lé, àtìlẹ́yìn gíga."
+        "size": "Fún àwọn ìjọ ńlá (500+ àwọn ọmọ ẹgbẹ́)"
       }
     },
     "features": {
-      "directoryEntry": "Directory listing",
-      "telegramGroup": "Telegram group",
-      "partnerPage": "Own partner page",
-      "badge": "Partner badge",
-      "qrFlyer": "Printable QR flyer",
-      "contactForm": "Contact form",
-      "pastorProfile": "Pastor profile",
-      "welcomeVideo": "Welcome video",
-      "analytics": "Analytics dashboard",
-      "prioritySupport": "Priority support",
-      "multipleProfiles": "Multiple profiles",
-      "customBranding": "Custom branding",
-      "apiAccess": "API access",
-      "accountManager": "Dedicated account manager"
+      "directoryEntry": "Ìgbanisọ́kọ àkójọ",
+      "telegramGroup": "Ẹgbẹ́ Telegram",
+      "partnerPage": "Ojú-ìwé alábàáṣiṣẹ́pọ̀ tìrẹ",
+      "badge": "Àmì alábàáṣiṣẹ́pọ̀",
+      "qrFlyer": "Ìwé-pẹlẹbẹ QR fún títẹ̀",
+      "contactForm": "Fọ́ọ̀mù ìkànsí",
+      "pastorProfile": "Ìtàn-ẹ̀kúnrẹ́rẹ́ Pásítọ̀",
+      "welcomeVideo": "Fídíò ìkíni",
+      "analytics": "Pátákò ìṣirò",
+      "prioritySupport": "Àtìlẹ́yìn àkọ́kọ́",
+      "multipleProfiles": "Àwọn ìtàn-ẹ̀kúnrẹ́rẹ́ púpọ̀",
+      "customBranding": "Àmì tìrẹ",
+      "apiAccess": "Ìráyè API",
+      "accountManager": "Olùṣàkóso àkànṣe"
     },
-    "viewDirectory": "View church directory",
-    "directoryBadge": "Church Directory",
-    "directoryTitle": "Partner Churches",
-    "directorySubtitle": "Find a church near you that recommends BibleBot.",
-    "searchPlaceholder": "Search by city, name, or denomination...",
-    "noResults": "No churches in the directory yet.",
-    "becomePartner": "Become a partner →",
-    "notFound": "Church not found.",
-    "backToDirectory": "Back to directory",
-    "pastor": "Pastor",
-    "serviceTimes": "Service Times",
-    "startChat": "Start Chat",
-    "website": "Website",
-    "telegramGroup": "Telegram Group",
-    "contactTitle": "Contact {{name}}",
-    "contactName": "Your name (optional)",
-    "contactEmail": "Your email address",
-    "contactMessage": "Your message",
-    "contactSend": "Send message",
-    "contactSuccess": "Message sent! 🙏",
-    "contactSuccessDesc": "The church will get back to you.",
-    "recommendedBy": "Recommended by {{name}}",
-    "setup": "Ìṣètò (ẹ̀ẹ̀kan)",
+    "viewDirectory": "Wo àkójọ àwọn ìjọ",
+    "directoryBadge": "Àkójọ àwọn ìjọ",
+    "directoryTitle": "Àwọn ìjọ alábàáṣiṣẹ́pọ̀",
+    "directorySubtitle": "Rí ìjọ kan tó súnmọ́ ọ tó ṣe ìgbànímọ̀ràn BibleBot.",
+    "searchPlaceholder": "Wá ibùdó, orúkọ tàbí ẹgbẹ́ ìsìn...",
+    "noResults": "Kò sí ìjọ nínú àkójọ.",
+    "becomePartner": "Di alábàáṣiṣẹ́pọ̀ →",
+    "notFound": "A kò rí ìjọ.",
+    "backToDirectory": "Padà sí àkójọ",
+    "pastor": "Pásítọ̀/Alùfáà",
+    "serviceTimes": "Àwọn àkókò ìsìn",
+    "startChat": "Bẹ̀rẹ̀ ìjíròrò",
+    "website": "Ojú-ìwé ayélujára",
+    "telegramGroup": "Ẹgbẹ́ Telegram",
+    "contactTitle": "Kan sí {{name}}",
+    "contactName": "Orúkọ yín (àṣàyàn)",
+    "contactEmail": "Àdírẹ́sì ímeèlì yín",
+    "contactMessage": "Ifiranṣẹ́ yín",
+    "contactSend": "Fi ifiranṣẹ́ ránṣẹ́",
+    "contactSuccess": "Ifiranṣẹ́ ti ránṣẹ́! 🙏",
+    "contactSuccessDesc": "Ìjọ náà yóò kàn sí yín.",
+    "recommendedBy": "Tí {{name}} ṣe ìgbànímọ̀ràn rẹ̀",
+    "setup": "Ìtọ́jú (ẹ̀ẹ̀kan)",
     "form": {
-      "title": "Nifẹ? Kan si wa!",
-      "subtitle": "A yoo dahun laarin wakati 48.",
-      "name": "Orukọ rẹ",
-      "email": "Adirẹsi imeeli",
-      "churchName": "Orukọ ile ijọsin",
-      "tier": "Akopọ ti o fẹ",
-      "tierPlaceholder": "Yan akopọ...",
-      "message": "Ifiranṣẹ rẹ",
-      "submit": "Fi ibeere ranṣẹ",
-      "success": "Ibeere ti ranṣẹ! A yoo kan si yin laipẹ. 🙏",
-      "error": "Aṣiṣe fifiranṣẹ. Gbiyanju lẹẹkansi.",
-      "orgType": "Organization type",
-      "orgTypePlaceholder": "Select type...",
+      "title": "Ṣé o ní ìfẹ́? Kọ sí wa!",
+      "subtitle": "A óò kàn sí yín láàárín wákàtí 48.",
+      "name": "Orúkọ yín",
+      "email": "Àdírẹ́sì ímeèlì",
+      "churchName": "Orúkọ ìjọ",
+      "tier": "Ètò tí ẹ fẹ́",
+      "tierPlaceholder": "Yan ètò...",
+      "message": "Ifiranṣẹ́ yín",
+      "submit": "Fi ìbéèrè ránṣẹ́",
+      "success": "Ìbéèrè ti ránṣẹ́! A óò kàn sí yín láìpẹ́. 🙏",
+      "error": "Àṣìṣe. Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kan sí i.",
+      "orgType": "Irú àjọ",
+      "orgTypePlaceholder": "Yan irú...",
       "orgTypes": {
-        "church": "Church",
-        "careHome": "Care Home",
-        "seniorHome": "Retirement Home",
-        "hospital": "Hospital",
-        "prison": "Prison Chaplaincy",
-        "military": "Military Chaplaincy"
+        "church": "Ìjọ",
+        "careHome": "Ilé ìtọ́jú",
+        "seniorHome": "Ilé àgbàlagbà",
+        "hospital": "Ilé ìwòsàn",
+        "prison": "Ìtọ́jú ẹ̀mí ẹ̀wọ̀n",
+        "military": "Ìtọ́jú ẹ̀mí ológun"
       }
     },
-    "institutionsTitle": "Also for Institutions",
-    "institutionsSubtitle": "BibleBot supports not only churches – care homes, retirement homes, and hospitals also benefit from digital pastoral care.",
+    "institutionsTitle": "Fún àwọn ilé-iṣẹ́ pẹ̀lú",
+    "institutionsSubtitle": "BibleBot kì í ṣe fún àwọn ìjọ nìkan – àwọn ilé ìtọ́jú, ilé ìwòsàn àti ìtọ́jú ẹ̀mí ẹ̀wọ̀n pẹ̀lú ń jèrè nínú ìtọ́jú ẹ̀mí dígítà.",
     "institution": {
       "careHome": {
-        "title": "Care Homes",
-        "desc": "Daily Bible impulses and companionship for residents – even when no chaplain is on site."
+        "title": "Àwọn ilé ìtọ́jú",
+        "desc": "Àwọn ìmúlọ́ Bíbélì ojoojúmọ́ àti alábàáṣiṣẹ́pọ̀ fún àwọn olùgbé – bí alùfáà kò bá sí."
       },
       "seniorHome": {
-        "title": "Retirement Homes",
-        "desc": "Familiar Bible verses and conversations for seniors – easily accessible via tablet or smartphone."
+        "title": "Àwọn ilé àgbàlagbà",
+        "desc": "Àwọn ẹsẹ Bíbélì tí wọ́n mọ̀ àti ìjíròrò fún àwọn àgbàlagbà – tó rọrùn ní ìráyè nípasẹ̀ tábùlẹ́ẹ̀tì tàbí fóònù."
       },
       "hospital": {
-        "title": "Hospitals",
-        "desc": "Comfort and spiritual support for patients in difficult times – available 24/7 at the bedside."
+        "title": "Àwọn ilé ìwòsàn",
+        "desc": "Ìtùnú àti alábàáṣiṣẹ́pọ̀ ẹ̀mí fún àwọn aláìsàn ní àkókò líle – 24/7 ní ẹ̀gbẹ́ ibùsùn."
       },
       "prison": {
-        "title": "Prison Chaplaincy",
-        "desc": "Hope and spiritual support for inmates – a confidential companion around the clock."
+        "title": "Ìtọ́jú ẹ̀mí ẹ̀wọ̀n",
+        "desc": "Ìrètí àti alábàáṣiṣẹ́pọ̀ ẹ̀mí fún àwọn ẹlẹ́wọ̀n – ẹlẹ́gbẹ́ ìjíròrò olóòtítọ́ 24/7."
       },
       "military": {
-        "title": "Military Chaplaincy",
-        "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
+        "title": "Ìtọ́jú ẹ̀mí ológun",
+        "desc": "Alábàáṣiṣẹ́pọ̀ ẹ̀mí fún àwọn ọmọ ogun – tó wà ní ìṣiṣẹ́ tàbí ní ìbùdó."
       }
     }
   },
   "institutions": {
-    "badge": "For Institutions",
-    "heroTitle": "BibleBot for Your Institution",
-    "heroSubtitle": "Digital pastoral care for care homes, retirement homes, hospitals, and correctional facilities – personal, confidential, and around the clock.",
-    "typesTitle": "Who is BibleBot for?",
-    "useCasesTitle": "How BibleBot is Used",
-    "useCasesSubtitle": "Practical applications for daily life in your institution.",
-    "pricingTitle": "Patronage Packages",
-    "pricingSubtitle": "The same packages as for churches – adapted to institutional needs.",
-    "linkChurches": "Also available for churches",
+    "badge": "Fún àwọn ilé-iṣẹ́",
+    "heroTitle": "BibleBot fún ilé-iṣẹ́ yín",
+    "heroSubtitle": "Ìtọ́jú ẹ̀mí dígítà fún àwọn ilé ìtọ́jú, ilé àgbàlagbà, ilé ìwòsàn àti ẹ̀wọ̀n – tìrẹ, àṣírí àti 24/7.",
+    "seniorHint": {
+      "title": "Ìpele àgbàlagbà wà",
+      "desc": "Ọ̀rọ̀ tó tóbi àti ìmúlò tó rọrùn – ó dára fún àwọn olùgbé àgbàlagbà.",
+      "cta": "Dán ìpele àgbàlagbà wò"
+    },
+    "typesTitle": "BibleBot jẹ́ fún ta ni?",
+    "useCasesTitle": "Bí a ṣe ń lo BibleBot",
+    "useCasesSubtitle": "Àwọn ohun àmúlò pàtó fún ojoojúmọ́ nínú ilé-iṣẹ́ yín.",
+    "pricingTitle": "Àwọn ètò àtìlẹ́yìn",
+    "pricingSubtitle": "Àwọn ètò kan náà bíi ti àwọn ìjọ – tí a ṣe déédé fún àwọn àìní ilé-iṣẹ́.",
+    "linkChurches": "Ó tún wà fún àwọn ìjọ",
     "type": {
       "careHome": {
-        "title": "Care Homes",
-        "desc": "Daily Bible impulses and companionship for residents – even when no chaplain is on site."
+        "title": "Àwọn ilé ìtọ́jú",
+        "desc": "Àwọn ìmúlọ́ Bíbélì ojoojúmọ́ àti alábàáṣiṣẹ́pọ̀ fún àwọn olùgbé – bí alùfáà kò bá sí."
       },
       "seniorHome": {
-        "title": "Retirement Homes",
-        "desc": "Familiar Bible verses and conversations for seniors – easily accessible via tablet or smartphone."
+        "title": "Àwọn ilé àgbàlagbà",
+        "desc": "Àwọn ẹsẹ Bíbélì tí wọ́n mọ̀ àti ìjíròrò fún àwọn àgbàlagbà – tó rọrùn ní ìráyè nípasẹ̀ tábùlẹ́ẹ̀tì tàbí fóònù."
       },
       "hospital": {
-        "title": "Hospitals",
-        "desc": "Comfort and spiritual support for patients in difficult times – available 24/7 at the bedside."
+        "title": "Àwọn ilé ìwòsàn",
+        "desc": "Ìtùnú àti alábàáṣiṣẹ́pọ̀ ẹ̀mí fún àwọn aláìsàn ní àkókò líle – 24/7 ní ẹ̀gbẹ́ ibùsùn."
       },
       "prison": {
-        "title": "Prison Chaplaincy",
-        "desc": "Hope and spiritual support for inmates – a confidential companion around the clock."
+        "title": "Ìtọ́jú ẹ̀mí ẹ̀wọ̀n",
+        "desc": "Ìrètí àti alábàáṣiṣẹ́pọ̀ ẹ̀mí fún àwọn ẹlẹ́wọ̀n – ẹlẹ́gbẹ́ ìjíròrò olóòtítọ́ 24/7."
       },
       "military": {
-        "title": "Military Chaplaincy",
-        "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
+        "title": "Ìtọ́jú ẹ̀mí ológun",
+        "desc": "Alábàáṣiṣẹ́pọ̀ ẹ̀mí fún àwọn ọmọ ogun – tó wà ní ìṣiṣẹ́ tàbí ní ìbùdó."
       }
     },
     "useCase": {
       "dailyImpulse": {
-        "title": "Daily Impulse",
-        "desc": "A Bible verse with reflection question every morning – lowers the barrier for spiritual conversations."
+        "title": "Ìmúlọ́ ojoojúmọ́",
+        "desc": "Ní gbogbo àárọ̀ ẹsẹ Bíbélì kan pẹ̀lú ìbéèrè ìrònú – ó mú kí ìjíròrò ẹ̀mí rọrùn."
       },
       "companionship": {
-        "title": "Conversation Partner",
-        "desc": "BibleBot answers faith questions patiently and without time pressure – ideal for lonely hours."
+        "title": "Ẹlẹ́gbẹ́ ìjíròrò",
+        "desc": "BibleBot dáhùn àwọn ìbéèrè ìgbàgbọ́ pẹ̀lú sùúrù láìsí ìdẹ́rù àkókò – ó dára fún àwọn wákàtí àdánù."
       },
       "accessibility": {
-        "title": "Easy Access",
-        "desc": "Large text, simple tablet interface – also for people with limited mobility."
+        "title": "Ìráyè rọrùn",
+        "desc": "Ọ̀rọ̀ tó tóbi, ìmúlò rọrùn nípasẹ̀ tábùlẹ́ẹ̀tì – fún àwọn tó ní ìdíwọ́ ìgbékè pẹ̀lú."
       },
       "availability": {
-        "title": "24/7 Available",
-        "desc": "Spiritual companionship at night and on weekends – when no chaplain is available."
+        "title": "24/7 Tí ó wà",
+        "desc": "Alábàáṣiṣẹ́pọ̀ ẹ̀mí ní alẹ́ àti ní ìgbà ìsinmi – nígbà tí alùfáà kò bá sí."
       }
     },
     "tierDesc": {
-      "free": "Basic access for residents and patients",
-      "community": "Mentioned as supporter, ad-free access",
-      "gemeinde": "Logo presence, monthly usage report",
-      "kirche": "Custom content, roadmap co-creation, premium support"
+      "free": "Ìráyè ìpìlẹ̀ fún àwọn olùgbé àti aláìsàn",
+      "community": "Ìdárúkọ gẹ́gẹ́ bí olùṣàtìlẹ́yìn, ìráyè láìsí ìpolówó",
+      "gemeinde": "Ìfihàn àmì, ìròyìn àmúlò oṣooṣù",
+      "kirche": "Àkóónú tìrẹ, ìkópa ètò, àtìlẹ́yìn àkọ́kọ́"
     },
     "form": {
-      "title": "Interested? Get in touch!",
-      "subtitle": "We'll get back to you within 48 hours.",
-      "name": "Your name",
-      "email": "Email address",
-      "institutionName": "Institution name",
-      "type": "Type of institution",
-      "typePlaceholder": "Please select...",
-      "tier": "Preferred package",
-      "tierPlaceholder": "Choose package...",
-      "message": "Your message",
-      "submit": "Send inquiry",
-      "success": "Inquiry sent! We'll be in touch soon. 🙏",
-      "error": "Error sending. Please try again."
-    },
-    "seniorHint": {
-      "title": "Ipo agbalagba wa",
-      "desc": "Ọrọ ti o tobi ati lilọ kiri ti o rọrun – o dara julọ fun awọn olugbe agbalagba.",
-      "cta": "Gbiyanju ipo agbalagba"
+      "title": "Ṣé o ní ìfẹ́? Kan sí wa!",
+      "subtitle": "A óò kàn sí yín láàárín wákàtí 48.",
+      "name": "Orúkọ yín",
+      "email": "Àdírẹ́sì ímeèlì",
+      "institutionName": "Orúkọ ilé-iṣẹ́",
+      "type": "Irú ilé-iṣẹ́",
+      "typePlaceholder": "Jọ̀wọ́ yan...",
+      "tier": "Ètò tí ẹ fẹ́",
+      "tierPlaceholder": "Yan ètò...",
+      "message": "Ifiranṣẹ́ yín",
+      "submit": "Fi ìbéèrè ránṣẹ́",
+      "success": "Ìbéèrè ti ránṣẹ́! A óò kàn sí yín láìpẹ́. 🙏",
+      "error": "Àṣìṣe. Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kan sí i."
     }
-  },
-  "refer": {
-    "badge": "Share God's Word",
-    "title": "Recommend BibleBot",
-    "subtitle": "Know someone who could use encouragement? Share BibleBot – one message can make a difference.",
-    "whatsapp": "Share via WhatsApp",
-    "whatsappMsg": "Hey, I wanted to show you BibleBot – a free Bible companion that really knows the Bible and asks great questions. No login, anonymous, honest. Try it out: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
-    "telegram": "Share via Telegram",
-    "telegramMsg": "Hey, do you know BibleBot? A free personal Bible companion – honest, anonymous, no login needed. Check it out: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
-    "email": "Share via email",
-    "emailSubject": "This might interest you: BibleBot.Life",
-    "emailBody": "Hi!\n\nI wanted to show you BibleBot – a free Bible companion that really knows the Bible. No sign-up needed, completely anonymous.\n\nIt asks thoughtful questions, explains Bible passages in context and accompanies you honestly – even on difficult topics.\n\nTry it out: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nBest wishes",
-    "copy": "Copy link",
-    "copied": "Link copied! 📋",
-    "qr": "Or just show this QR code:"
-  },
-  "share": {
-    "label": "Share",
-    "shareVia": "Share via",
-    "copied": "Copied! 📋",
-    "copiedShort": "Copied!",
-    "copiedDesc": "Text copied to clipboard. Share it on WhatsApp, Instagram or wherever you like!",
-    "copyLink": "Copy text",
-    "error": "Copy failed",
-    "impulseTitle": "BibleBot – Impulse of the Day",
-    "chatTitle": "BibleBot – Thought of the Day",
-    "createImage": "Create image ✨",
-    "generating": "Creating…",
-    "imageReady": "Your image is ready to share!",
-    "shareImage": "Share image",
-    "download": "Save",
-    "imageError": "Image creation failed",
-    "imageErrorDesc": "The image could not be created. Please try again later.",
-    "imageSaved": "Text copied! 📋",
-    "imageSavedDesc": "Save the image and share it with the copied text on Instagram, WhatsApp or wherever you like!"
   }
 }

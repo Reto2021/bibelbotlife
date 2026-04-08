@@ -10,7 +10,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 
 const LANGS = [
   // Europe – West
-  { code: "de", flag: "🇨🇭" },
+  { code: "de", flag: "🇩🇪" },
   { code: "en", flag: "🇬🇧" },
   { code: "fr", flag: "🇫🇷" },
   { code: "es", flag: "🇪🇸" },
