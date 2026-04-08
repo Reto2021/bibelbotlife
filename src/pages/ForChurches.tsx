@@ -92,6 +92,29 @@ const ForChurches = () => {
         </div>
       </section>
 
+      {/* Institutions */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="text-3xl font-bold text-foreground text-center mb-4">{t("church.institutionsTitle")}</h2>
+          <p className="text-muted-foreground text-center mb-10 max-w-2xl mx-auto">{t("church.institutionsSubtitle")}</p>
+          <div className="grid sm:grid-cols-3 gap-6">
+            {([
+              { key: "careHome", icon: Building2 },
+              { key: "seniorHome", icon: Heart },
+              { key: "hospital", icon: Hospital },
+            ] as const).map((inst) => (
+              <Card key={inst.key} className="bg-card/80 border-border text-center">
+                <CardHeader>
+                  <inst.icon className="h-10 w-10 text-primary mx-auto mb-2" />
+                  <CardTitle className="text-lg">{t(`church.institution.${inst.key}.title`)}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground">{t(`church.institution.${inst.key}.desc`)}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
       {/* Pricing */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
