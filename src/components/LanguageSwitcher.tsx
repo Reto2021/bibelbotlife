@@ -57,27 +57,33 @@ const LANGS = [
 export function LanguageSwitcher() {
   const { i18n, t } = useTranslation();
 
+  const currentLang = LANGS.find((l) => l.code === i18n.language) ?? LANGS[0];
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <button
-          className="p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+          className="flex items-center gap-1.5 px-2 py-1.5 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
           aria-label="Language"
         >
-          <Globe className="h-5 w-5" />
+          <span className="text-base leading-none">{currentLang.flag}</span>
+          <span className="uppercase text-xs font-medium">{currentLang.code}</span>
         </button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-[180px] p-0">
+      <DropdownMenuContent align="end" className="w-[200px] p-0">
         <ScrollArea className="h-[320px]">
           <div className="p-1">
             {LANGS.map((lang) => (
               <DropdownMenuItem
                 key={lang.code}
                 onClick={() => i18n.changeLanguage(lang.code)}
-                className={i18n.language === lang.code ? "bg-accent font-semibold" : ""}
+                className={`flex items-center gap-2 ${i18n.language === lang.code ? "bg-accent font-semibold" : ""}`}
               >
-                <span className="mr-2">{lang.flag}</span>
-                {t(`lang.${lang.code}`)}
+                <span className="text-base leading-none">{lang.flag}</span>
+                <span className="flex-1">{t(`lang.${lang.code}`)}</span>
+                {i18n.language === lang.code && (
+                  <span className="text-primary text-xs">✓</span>
+                )}
               </DropdownMenuItem>
             ))}
           </div>
