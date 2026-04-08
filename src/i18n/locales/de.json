@@ -5,7 +5,8 @@
   "loader": "Wird geladen…",
   "hero": {
     "badge": {
-      "noLogin": "Kein Login",
+      "noLogin": "Kein Login nötig",
+      "optionalLogin": "Login optional",
       "noData": "Keine Daten",
       "noJudgment": "Kein Urteil"
     },
