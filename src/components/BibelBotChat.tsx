@@ -541,16 +541,16 @@ export function BibelBotChat() {
             {showWelcome && (
               <div className="animate-fade-up">
                 <div className="flex justify-start">
-                  <div className="max-w-[85%] rounded-2xl rounded-bl-md px-4 py-3 text-sm leading-relaxed bg-muted text-foreground">
-                    <div className="prose prose-sm max-w-none dark:prose-invert">
+                  <div className={`max-w-[85%] rounded-2xl rounded-bl-md ${s.msgPadding} ${s.text} leading-relaxed bg-muted text-foreground`}>
+                    <div className={`prose ${isSenior ? "prose-lg" : "prose-sm"} max-w-none dark:prose-invert`}>
                       <ReactMarkdown>{welcomeMessage.content}</ReactMarkdown>
                     </div>
                   </div>
                 </div>
 
                 <div className="flex flex-col gap-2 mt-4">
-                  {suggestions.map((s, i) => (
-                    <button key={s} onClick={() => sendMessage(s)} className="text-left text-sm px-4 py-2.5 rounded-xl border border-primary/20 bg-accent/30 hover:bg-accent hover:border-primary/40 text-foreground transition-all duration-200 animate-fade-up" style={{ animationDelay: `${(i + 1) * 150}ms`, opacity: 0 }}>{s}</button>
+                  {suggestions.map((sg, i) => (
+                    <button key={sg} onClick={() => sendMessage(sg)} className={`text-left ${s.text} ${isSenior ? "px-5 py-4" : "px-4 py-2.5"} rounded-xl border border-primary/20 bg-accent/30 hover:bg-accent hover:border-primary/40 text-foreground transition-all duration-200 animate-fade-up`} style={{ animationDelay: `${(i + 1) * 150}ms`, opacity: 0 }}>{sg}</button>
                   ))}
                 </div>
 
