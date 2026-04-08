@@ -106,6 +106,14 @@ export function useChatHistory() {
     }
   }, []);
 
+  // Update conversation title
+  const updateTitle = useCallback(async (conversationId: string, title: string) => {
+    await supabase
+      .from("chat_conversations")
+      .update({ title })
+      .eq("id", conversationId);
+    await loadConversations();
+  }, [loadConversations]);
   // Delete conversation
   const deleteConversation = useCallback(async (conversationId: string) => {
     await supabase.from("chat_conversations").delete().eq("id", conversationId);
@@ -154,6 +162,7 @@ export function useChatHistory() {
     createConversation,
     addMessage,
     updateLastAssistantMessage,
+    updateTitle,
     deleteConversation,
     startNewChat,
     searchConversations,
