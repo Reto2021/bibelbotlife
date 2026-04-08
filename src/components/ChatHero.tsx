@@ -662,13 +662,13 @@ export function ChatHero() {
                           <img src={branding?.logoUrl || bibelbotLogo} alt="" className="h-6 w-6 rounded-full shrink-0 mt-1" />
                         )}
                         <div className="max-w-[85%] md:max-w-[75%]">
-                          <div className={`rounded-2xl px-4 py-3 text-sm leading-relaxed ${
+                          <div className={`rounded-2xl ${s.msgPadding} ${s.text} leading-relaxed ${
                             msg.role === "user"
                               ? "bg-primary text-primary-foreground rounded-br-md"
                               : "bg-card border border-border text-foreground rounded-bl-md"
                           }`}>
                             {msg.role === "assistant" ? (
-                              <div className="prose prose-sm max-w-none dark:prose-invert">
+                              <div className={`prose max-w-none dark:prose-invert ${isSenior ? "prose-lg" : "prose-sm"}`}>
                                 <ReactMarkdown components={{
                                   p: ({ children }) => <p>{makeRefsClickable(children, sendMessage)}</p>,
                                   li: ({ children }) => <li>{makeRefsClickable(children, sendMessage)}</li>,
