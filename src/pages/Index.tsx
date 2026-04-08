@@ -28,7 +28,7 @@ const BIBLE_EDITIONS = [
 ];
 
 const Index = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const features = [
