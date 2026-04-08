@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { DndContext, closestCenter, KeyboardSensor, PointerSensor, useSensor, useSensors, type DragEndEvent } from "@dnd-kit/core";
 import { arrayMove, SortableContext, sortableKeyboardCoordinates, verticalListSortingStrategy } from "@dnd-kit/sortable";
@@ -29,8 +29,32 @@ export default function ServiceEditor() {
   const [tradition, setTradition] = useState("reformed");
   const [blocks, setBlocks] = useState<ServiceBlockData[]>([]);
   const [saving, setSaving] = useState(false);
+  const [loading, setLoading] = useState(!isNew);
   const [bibleBotOpen, setBibleBotOpen] = useState(false);
   const [bibleBotContext, setBibleBotContext] = useState("");
+
+  // Load existing service
+  useEffect(() => {
+    if (isNew || !user || !id) return;
+    setLoading(true);
+    supabase
+      .from("services")
+      .select("*")
+      .eq("id", id)
+      .eq("created_by", user.id)
+      .maybeSingle()
+      .then(({ data, error }) => {
+        if (data) {
+          setTitle(data.title);
+          setServiceDate(data.service_date);
+          setServiceTime(data.service_time || "10:00");
+          setServiceType(data.service_type);
+          setTradition(data.tradition);
+          setBlocks((data.blocks as unknown as ServiceBlockData[]) || []);
+        }
+        setLoading(false);
+      });
+  }, [id, isNew, user]);
 
   const sensors = useSensors(
     useSensor(PointerSensor, { activationConstraint: { distance: 5 } }),
@@ -110,6 +134,14 @@ export default function ServiceEditor() {
       setSaving(false);
     }
   };
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-[40vh] text-muted-foreground">
+        Gottesdienst wird geladen...
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-4xl mx-auto space-y-6">
