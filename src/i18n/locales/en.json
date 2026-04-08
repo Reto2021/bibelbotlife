@@ -790,5 +790,29 @@
   },
   "splash": {
     "patronage": "Recommended by"
+  },
+  "meta": {
+    "homeTitle": "BibleBot – Your Personal Bible Companion | Free & Anonymous",
+    "homeDesc": "BibleBot accompanies you with 5 Bible translations, coaching methodology and pastoral care. Anonymous, free, in 36 languages.",
+    "forChurchesTitle": "BibleBot for Churches – Digital Pastoral Care & Bible Companionship",
+    "forChurchesDesc": "BibleBot as a partner for your church: youth work, confirmation, pastoral care and Bible study groups. Free to Premium.",
+    "loginTitle": "Sign In – BibleBot",
+    "loginDesc": "Sign in to BibleBot to prepare your personal ceremonies."
+  },
+  "meinBereich": {
+    "title": "My Area",
+    "subtitle": "Prepare your personal ceremonies and share them with your pastor.",
+    "sidebarLabel": "My Area",
+    "overview": "Overview",
+    "funeral": "Funeral",
+    "wedding": "Wedding",
+    "baptismCeremony": "Baptism",
+    "confirmation": "Confirmation",
+    "logout": "Sign out",
+    "comingSoon": "Coming soon",
+    "funeralDesc": "Create a biography, capture memories and share them with your pastor.",
+    "weddingDesc": "Write your vows, choose songs and plan the celebration.",
+    "baptismDesc": "Formulate baptism wishes and prepare the ceremony with your church.",
+    "confirmationDesc": "Find a confirmation verse and prepare personal texts."
   }
 }

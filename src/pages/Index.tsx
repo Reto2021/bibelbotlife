@@ -1,4 +1,5 @@
 import { lazy, Suspense, useState } from "react";
+import { SEOHead } from "@/components/SEOHead";
 import { useTranslation } from "react-i18next";
 import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, GraduationCap, Church, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass, Send, Building2, Menu, FileText, ShieldCheck, LogIn, LogOut, User } from "lucide-react";
 import bibelbotLogo from "@/assets/biblebot-logo.png";
@@ -60,6 +61,7 @@ const Index = () => {
   return (
     <LifeWheelProvider>
     <div className="min-h-screen" style={{ background: "var(--gradient-hero)" }}>
+      <SEOHead titleKey="meta.homeTitle" descKey="meta.homeDesc" path="/" />
       <ChurchBanner />
       {/* Navigation */}
       <nav className="bg-card/80 backdrop-blur-sm border-b border-border sticky top-0 z-50">

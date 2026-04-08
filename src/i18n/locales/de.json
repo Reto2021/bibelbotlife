@@ -791,5 +791,29 @@
   },
   "splash": {
     "patronage": "Empfohlen von"
+  },
+  "meta": {
+    "homeTitle": "BibleBot – Dein persönlicher Bibel-Begleiter | Kostenlos & Anonym",
+    "homeDesc": "BibleBot begleitet dich mit 5 Bibelübersetzungen, Coaching-Methodik und Seelsorge. Anonym, kostenlos, in 36 Sprachen.",
+    "forChurchesTitle": "BibleBot für Gemeinden – Digitale Seelsorge & Bibelbegleitung",
+    "forChurchesDesc": "BibleBot als Partner für Ihre Gemeinde: Jugendarbeit, Konfirmation, Seelsorge und Bibelkreise. Kostenlos bis Premium.",
+    "loginTitle": "Anmelden – BibleBot",
+    "loginDesc": "Melde dich bei BibleBot an, um deine persönlichen Zeremonien vorzubereiten."
+  },
+  "meinBereich": {
+    "title": "Mein Bereich",
+    "subtitle": "Bereite deine persönlichen Zeremonien vor und teile sie mit deinem Seelsorger.",
+    "sidebarLabel": "Mein Bereich",
+    "overview": "Übersicht",
+    "funeral": "Abdankung",
+    "wedding": "Hochzeit",
+    "baptismCeremony": "Taufe",
+    "confirmation": "Konfirmation",
+    "logout": "Abmelden",
+    "comingSoon": "Bald verfügbar",
+    "funeralDesc": "Lebenslauf erstellen, Erinnerungen festhalten und mit dem Seelsorger teilen.",
+    "weddingDesc": "Eheversprechen schreiben, Lieder auswählen und die Feier planen.",
+    "baptismDesc": "Taufwünsche formulieren und den Ablauf mit der Gemeinde vorbereiten.",
+    "confirmationDesc": "Konfirmationsspruch finden und persönliche Texte vorbereiten."
   }
 }
