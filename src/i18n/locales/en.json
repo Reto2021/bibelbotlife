@@ -21,7 +21,9 @@
     "loading": "Loading daily impulse...",
     "label": "Impulse of the Day",
     "deepDive": "What does this mean for me?",
-    "explore": "Read full passage"
+    "explore": "Read full passage",
+    "subscribeCta": "Get this impulse daily?",
+    "alreadySubscribed": "You receive the daily impulse"
   },
   "features": {
     "sectionTitle": "How BibleBot accompanies you",

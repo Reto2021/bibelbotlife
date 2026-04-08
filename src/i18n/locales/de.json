@@ -21,7 +21,9 @@
     "loading": "Tagesimpuls wird geladen...",
     "label": "Impuls des Tages",
     "deepDive": "Was bedeutet das für mich?",
-    "explore": "Ganzen Abschnitt lesen"
+    "explore": "Ganzen Abschnitt lesen",
+    "subscribeCta": "Diesen Impuls täglich erhalten?",
+    "alreadySubscribed": "Du erhältst den täglichen Impuls"
   },
   "features": {
     "sectionTitle": "Wie dein BibelBot dich begleitet",
