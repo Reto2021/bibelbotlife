@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import bibelbotLogo from "@/assets/bibelbot-logo.png";
-import { Search, ArrowRight, Shield, Loader2, Mic, MicOff, Send, Menu, LogIn, X, EyeOff, Heart } from "lucide-react";
+import { Search, ArrowRight, Shield, Loader2, Mic, MicOff, Send, Menu, LogIn, X, EyeOff, Heart, Accessibility } from "lucide-react";
+import { useSeniorMode } from "@/hooks/use-senior-mode";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTrack } from "@/components/AnalyticsProvider";
 import { openLifeWheel } from "@/components/LifeWheel";
@@ -130,7 +131,21 @@ export function ChatHero() {
   const { toast } = useToast();
   const { user } = useAuth();
   const { branding } = useChurchBranding();
+  const { isSenior, toggle: toggleSenior } = useSeniorMode();
   const dailyVerse = useMemo(() => getDailyVerse(), []);
+
+  // Senior mode size classes
+  const s = {
+    text: isSenior ? "text-lg" : "text-sm",
+    textXs: isSenior ? "text-sm" : "text-xs",
+    heading: isSenior ? "text-4xl md:text-5xl" : "text-3xl md:text-4xl",
+    btnIcon: isSenior ? "h-6 w-6" : "h-4 w-4",
+    btnSize: isSenior ? "h-12 w-12" : "h-10 w-10",
+    inputText: isSenior ? "text-lg" : "text-sm",
+    inputHeight: isSenior ? "min-h-[52px]" : "min-h-[40px]",
+    msgPadding: isSenior ? "px-5 py-4" : "px-4 py-3",
+    chipText: isSenior ? "text-sm px-4 py-2" : "text-xs px-3 py-1.5",
+  };
 
   const {
     conversations,
