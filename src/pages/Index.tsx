@@ -1,7 +1,7 @@
 import { lazy, Suspense, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, GraduationCap, Church, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass, Send, Building2, Menu, FileText, ShieldCheck, LogIn, LogOut, User } from "lucide-react";
-import bibelbotLogo from "@/assets/bibelbot-logo.png";
+import bibelbotLogo from "@/assets/biblebot-logo.png";
 import { ChurchBanner } from "@/components/ChurchBanner";
 import { ReferralSection } from "@/components/ReferralSection";
 // EntryTiles removed - chips are now in ChatHero
@@ -67,7 +67,7 @@ const Index = () => {
           <div className="flex items-center space-x-2">
             <img src={bibelbotLogo} alt="BibleBot" className="h-16 w-16" />
             <div className="flex flex-col">
-              <span className="text-2xl font-bold text-foreground leading-tight">BibleBot</span>
+              <span className="text-2xl font-bold text-foreground leading-tight">BibleBot<span className="text-lg font-normal text-muted-foreground">.Life</span></span>
               <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-muted-foreground/70">Everyday Sunday</span>
             </div>
           </div>
