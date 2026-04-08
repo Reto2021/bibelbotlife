@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { Plus, ChevronLeft, ChevronRight, CalendarDays, CalendarRange } from "lucide-react";
+import { Plus, ChevronLeft, ChevronRight, CalendarDays, CalendarRange, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -245,9 +245,19 @@ export default function ServicesCalendar() {
                           <Card className="p-2 hover:border-primary/50 transition-colors cursor-pointer">
                             <div className="text-xs font-medium truncate">{s.title}</div>
                             <div className="text-[10px] text-muted-foreground">{s.service_time?.slice(0, 5)}</div>
-                            <Badge variant="outline" className={cn("text-[10px] mt-1", SERVICE_TYPE_COLORS[s.service_type])}>
-                              {SERVICE_TYPE_LABELS[s.service_type] || s.service_type}
-                            </Badge>
+                            <div className="flex items-center justify-between mt-1">
+                              <Badge variant="outline" className={cn("text-[10px]", SERVICE_TYPE_COLORS[s.service_type])}>
+                                {SERVICE_TYPE_LABELS[s.service_type] || s.service_type}
+                              </Badge>
+                              <Link
+                                to={`/dashboard/conductor/${s.id}`}
+                                onClick={(e) => e.stopPropagation()}
+                                className="text-primary hover:text-primary/80"
+                                title="Live starten"
+                              >
+                                <Play className="h-3.5 w-3.5" />
+                              </Link>
+                            </div>
                           </Card>
                         </Link>
                       ))}
