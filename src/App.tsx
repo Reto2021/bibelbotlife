@@ -37,6 +37,7 @@ const SettingsPage = lazy(() => import("./pages/dashboard/SettingsPage"));
 const ConductorMode = lazy(() => import("./pages/dashboard/ConductorMode"));
 const MeinBereich = lazy(() => import("./pages/MeinBereich"));
 const MeinBereichHome = lazy(() => import("./pages/mein-bereich/MeinBereichHome"));
+const EulogyWriter = lazy(() => import("./pages/mein-bereich/EulogyWriter"));
 
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 
@@ -129,6 +130,7 @@ const App = () => {
                   </Route>
                   <Route path="/mein-bereich" element={<ProtectedRoute><MeinBereich /></ProtectedRoute>}>
                     <Route index element={<MeinBereichHome />} />
+                    <Route path="abdankung" element={<EulogyWriter />} />
                   </Route>
                   <Route path="*" element={<NotFound />} />
                 </Routes>
