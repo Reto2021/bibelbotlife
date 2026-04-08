@@ -81,14 +81,28 @@ export function EntryTiles() {
     el.scrollBy({ left: direction === "right" ? scrollAmount : -scrollAmount, behavior: "smooth" });
   };
 
+  const getRandomPrompt = (tileKey: string): string => {
+    // Try prompt variants (prompt_v1, prompt_v2, prompt_v3), fall back to single prompt
+    const variants: string[] = [];
+    for (let i = 1; i <= 3; i++) {
+      const key = `tiles.${tileKey}.prompt_v${i}`;
+      const val = t(key);
+      if (val !== key) variants.push(val); // i18next returns the key if missing
+    }
+    if (variants.length > 0) {
+      return variants[Math.floor(Math.random() * variants.length)];
+    }
+    return t(`tiles.${tileKey}.prompt`);
+  };
+
   const handleClick = (tile: TileConfig) => {
     track("tile_click", { tile: tile.key, special: tile.special || "chat" });
     if (tile.special === "lifewheel") {
       openLifeWheel();
     } else if (tile.special === "sevenwhys") {
-      openBibelBotChat(t(`tiles.${tile.key}.prompt`), "seven-whys");
+      openBibelBotChat(getRandomPrompt(tile.key), "seven-whys");
     } else {
-      openBibelBotChat(t(`tiles.${tile.key}.prompt`));
+      openBibelBotChat(getRandomPrompt(tile.key));
     }
   };
 
