@@ -66,7 +66,10 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <img src={bibelbotLogo} alt="BibelBot" className="h-16 w-16" />
-            <span className="text-2xl font-bold text-foreground">{i18n.language.startsWith("de") ? "BibelBot" : "BibleBot"}</span>
+            <div className="flex flex-col">
+              <span className="text-2xl font-bold text-foreground leading-tight">{i18n.language.startsWith("de") ? "BibelBot" : "BibleBot"}</span>
+              <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-muted-foreground/70">Everyday Sunday</span>
+            </div>
           </div>
           <div className="flex items-center gap-2">
             {/* Desktop links */}
