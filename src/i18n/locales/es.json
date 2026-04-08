@@ -269,7 +269,9 @@
     "errorTitle": "Error",
     "errorConnection": "no se pudo conectar.",
     "errorNoStream": "Sin flujo",
-    "seniorMode": "Senior mode (larger text)"
+    "seniorMode": "Senior mode (larger text)",
+    "teaserCta": "Escribir ahora →",
+    "namePlaceholder": "p.ej. Eli, Miriam…"
   },
   "install": {
     "title": "Instalar BibleBot",
@@ -714,5 +716,40 @@
       "desc": "Texto más grande y navegación simplificada – ideal para residentes mayores.",
       "cta": "Probar modo senior"
     }
+  },
+  "refer": {
+    "badge": "Comparte la Palabra",
+    "title": "Recomienda BibleBot",
+    "subtitle": "¿Conoces a alguien que necesite ánimo? Comparte BibleBot – un mensaje puede marcar la diferencia.",
+    "whatsapp": "Compartir por WhatsApp",
+    "whatsappMsg": "Hola, quería mostrarte BibleBot – un compañero bíblico gratuito. Sin registro, anónimo, honesto. Pruébalo: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "telegram": "Compartir por Telegram",
+    "telegramMsg": "Hola, ¿conoces BibleBot? Un compañero bíblico personal gratuito. Échale un vistazo: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "email": "Compartir por correo",
+    "emailSubject": "Esto podría interesarte: BibleBot.Life",
+    "emailBody": "¡Hola!\n\nQuería mostrarte BibleBot – un compañero bíblico gratuito.\n\nPruébalo: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nSaludos",
+    "copy": "Copiar enlace",
+    "copied": "¡Enlace copiado! 📋",
+    "qr": "O muestra este código QR:"
+  },
+  "share": {
+    "label": "Compartir",
+    "shareVia": "Compartir vía",
+    "copied": "¡Copiado! 📋",
+    "copiedShort": "¡Copiado!",
+    "copiedDesc": "Texto copiado. ¡Compártelo en WhatsApp, Instagram o donde quieras!",
+    "copyLink": "Copiar texto",
+    "error": "Error al copiar",
+    "impulseTitle": "BibleBot – Impulso del día",
+    "chatTitle": "BibleBot – Pensamiento del día",
+    "createImage": "Crear imagen ✨",
+    "generating": "Creando…",
+    "imageReady": "¡Tu imagen está lista!",
+    "shareImage": "Compartir imagen",
+    "download": "Guardar",
+    "imageError": "Error al crear imagen",
+    "imageErrorDesc": "No se pudo crear la imagen. Inténtalo más tarde.",
+    "imageSaved": "¡Texto copiado! 📋",
+    "imageSavedDesc": "¡Guarda la imagen y compártela!"
   }
 }

@@ -269,7 +269,9 @@
     "errorTitle": "Erro",
     "errorConnection": "não foi possível contactar.",
     "errorNoStream": "Sem stream",
-    "seniorMode": "Senior mode (larger text)"
+    "seniorMode": "Senior mode (larger text)",
+    "teaserCta": "Escrever agora →",
+    "namePlaceholder": "ex. Eli, Miriam…"
   },
   "install": {
     "title": "Instalar BibleBot",
@@ -714,5 +716,40 @@
       "desc": "Texto maior e navegação simplificada – ideal para residentes idosos.",
       "cta": "Experimentar modo sénior"
     }
+  },
+  "refer": {
+    "badge": "Partilhar a Palavra",
+    "title": "Recomendar o BibleBot",
+    "subtitle": "Conhece alguém que precisa de encorajamento? Partilhe o BibleBot.",
+    "whatsapp": "Partilhar por WhatsApp",
+    "whatsappMsg": "Olá, queria mostrar-te o BibleBot – um companheiro bíblico gratuito. Experimenta: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "telegram": "Partilhar por Telegram",
+    "telegramMsg": "Olá, conheces o BibleBot? Um companheiro bíblico pessoal gratuito. Vê aqui: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "email": "Partilhar por email",
+    "emailSubject": "Isto pode interessar-te: BibleBot.Life",
+    "emailBody": "Olá!\n\nQueria mostrar-te o BibleBot.\n\nExperimenta: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nCumprimentos",
+    "copy": "Copiar link",
+    "copied": "Link copiado! 📋",
+    "qr": "Ou mostra este código QR:"
+  },
+  "share": {
+    "label": "Partilhar",
+    "shareVia": "Partilhar via",
+    "copied": "Copiado! 📋",
+    "copiedShort": "Copiado!",
+    "copiedDesc": "Texto copiado. Partilha no WhatsApp, Instagram ou onde quiseres!",
+    "copyLink": "Copiar texto",
+    "error": "Falha ao copiar",
+    "impulseTitle": "BibleBot – Impulso do dia",
+    "chatTitle": "BibleBot – Pensamento do dia",
+    "createImage": "Criar imagem ✨",
+    "generating": "A criar…",
+    "imageReady": "A tua imagem está pronta!",
+    "shareImage": "Partilhar imagem",
+    "download": "Guardar",
+    "imageError": "Falha ao criar imagem",
+    "imageErrorDesc": "Não foi possível criar a imagem.",
+    "imageSaved": "Texto copiado! 📋",
+    "imageSavedDesc": "Guarda a imagem e partilha-a!"
   }
 }

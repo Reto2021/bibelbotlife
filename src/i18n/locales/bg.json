@@ -269,7 +269,9 @@
     "errorTitle": "Error",
     "errorConnection": "could not be reached.",
     "errorNoStream": "No stream",
-    "seniorMode": "Senior mode (larger text)"
+    "seniorMode": "Senior mode (larger text)",
+    "teaserCta": "Start writing →",
+    "namePlaceholder": "e.g. Eli, Miriam…"
   },
   "install": {
     "title": "Install BibleBot",
@@ -714,5 +716,40 @@
       "desc": "По-голям текст и опростена навигация – идеално за възрастни жители.",
       "cta": "Опитайте режим за възрастни"
     }
+  },
+  "refer": {
+    "badge": "Share God's Word",
+    "title": "Recommend BibleBot",
+    "subtitle": "Know someone who could use encouragement? Share BibleBot – one message can make a difference.",
+    "whatsapp": "Share via WhatsApp",
+    "whatsappMsg": "Hey, I wanted to show you BibleBot – a free Bible companion that really knows the Bible and asks great questions. No login, anonymous, honest. Try it out: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "telegram": "Share via Telegram",
+    "telegramMsg": "Hey, do you know BibleBot? A free personal Bible companion – honest, anonymous, no login needed. Check it out: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "email": "Share via email",
+    "emailSubject": "This might interest you: BibleBot.Life",
+    "emailBody": "Hi!\n\nI wanted to show you BibleBot – a free Bible companion that really knows the Bible. No sign-up needed, completely anonymous.\n\nIt asks thoughtful questions, explains Bible passages in context and accompanies you honestly – even on difficult topics.\n\nTry it out: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nBest wishes",
+    "copy": "Copy link",
+    "copied": "Link copied! 📋",
+    "qr": "Or just show this QR code:"
+  },
+  "share": {
+    "label": "Share",
+    "shareVia": "Share via",
+    "copied": "Copied! 📋",
+    "copiedShort": "Copied!",
+    "copiedDesc": "Text copied to clipboard. Share it on WhatsApp, Instagram or wherever you like!",
+    "copyLink": "Copy text",
+    "error": "Copy failed",
+    "impulseTitle": "BibleBot – Impulse of the Day",
+    "chatTitle": "BibleBot – Thought of the Day",
+    "createImage": "Create image ✨",
+    "generating": "Creating…",
+    "imageReady": "Your image is ready to share!",
+    "shareImage": "Share image",
+    "download": "Save",
+    "imageError": "Image creation failed",
+    "imageErrorDesc": "The image could not be created. Please try again later.",
+    "imageSaved": "Text copied! 📋",
+    "imageSavedDesc": "Save the image and share it with the copied text on Instagram, WhatsApp or wherever you like!"
   }
 }
