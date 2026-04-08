@@ -1,6 +1,6 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, Shield, GraduationCap, Church, Quote, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass, Send, Building2 } from "lucide-react";
+import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, Shield, GraduationCap, Church, Quote, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass, Send, Building2, Menu, FileText, ShieldCheck } from "lucide-react";
 import { ChurchBanner } from "@/components/ChurchBanner";
 import { ReferralSection } from "@/components/ReferralSection";
 import { EntryTiles } from "@/components/EntryTiles";
@@ -29,6 +29,7 @@ const BIBLE_EDITIONS = [
 
 const Index = () => {
   const { t } = useTranslation();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const features = [
     { icon: BookOpen, title: t("features.bible.title"), description: t("features.bible.desc") },
@@ -64,6 +65,7 @@ const Index = () => {
             <span className="text-2xl font-bold text-foreground">BibleBot</span>
           </div>
           <div className="flex items-center gap-2">
+            {/* Desktop links */}
             <Button asChild variant="ghost" size="sm" className="hidden sm:inline-flex">
               <Link to="/for-churches">
                 <Church className="h-4 w-4 mr-1" />
@@ -76,27 +78,81 @@ const Index = () => {
                 {t("institutions.badge")}
               </Link>
             </Button>
-            {/* Mobile: icon-only buttons */}
-            <Button asChild variant="ghost" size="icon" className="sm:hidden h-8 w-8">
-              <Link to="/for-churches" aria-label={t("church.badge")}>
-                <Church className="h-4 w-4" />
-              </Link>
-            </Button>
-            <Button asChild variant="ghost" size="icon" className="sm:hidden h-8 w-8">
-              <Link to="/for-institutions" aria-label={t("institutions.badge")}>
-                <Building2 className="h-4 w-4" />
-              </Link>
-            </Button>
             <LanguageSwitcher />
             <DarkModeToggle />
-            <Button asChild className="bg-telegram hover:bg-telegram/90 text-telegram-foreground">
+            <Button asChild className="hidden sm:inline-flex bg-telegram hover:bg-telegram/90 text-telegram-foreground">
               <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer">
                 <Send className="h-4 w-4 mr-2" />
                 {t("nav.startNow")}
               </a>
             </Button>
+            {/* Mobile hamburger */}
+            <Button
+              variant="ghost"
+              size="icon"
+              className="sm:hidden h-9 w-9"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Menu"
+            >
+              {mobileMenuOpen ? <XIcon className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </Button>
           </div>
         </div>
+        {/* Mobile menu dropdown */}
+        {mobileMenuOpen && (
+          <div className="sm:hidden border-t border-border bg-card/95 backdrop-blur-sm animate-in slide-in-from-top-2 duration-200">
+            <div className="container mx-auto px-4 py-3 flex flex-col gap-1">
+              <Link
+                to="/for-churches"
+                className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-foreground hover:bg-primary/10 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <Church className="h-4 w-4 text-primary" />
+                {t("church.badge")}
+              </Link>
+              <Link
+                to="/for-institutions"
+                className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-foreground hover:bg-primary/10 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <Building2 className="h-4 w-4 text-primary" />
+                {t("institutions.badge")}
+              </Link>
+              <Link
+                to="/churches"
+                className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-foreground hover:bg-primary/10 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <Users className="h-4 w-4 text-primary" />
+                {t("footer.forChurches")}
+              </Link>
+              <Link
+                to="/impressum"
+                className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-muted-foreground hover:bg-primary/10 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <FileText className="h-4 w-4" />
+                {t("footer.impressum")}
+              </Link>
+              <Link
+                to="/datenschutz"
+                className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-muted-foreground hover:bg-primary/10 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <ShieldCheck className="h-4 w-4" />
+                {t("footer.datenschutz")}
+              </Link>
+              <div className="pt-2 pb-1">
+                <Button asChild className="w-full bg-telegram hover:bg-telegram/90 text-telegram-foreground">
+                  <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)}>
+                    <Send className="h-4 w-4 mr-2" />
+                    {t("nav.startNow")}
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </div>
+        )}
       </nav>
 
       <Suspense fallback={<div className="h-20" />}>
