@@ -83,7 +83,7 @@ export function ChatHero() {
   ];
 
   return (
-    <section className="relative py-16 md:py-24 px-4">
+    <section className="relative py-10 md:py-24 px-4">
       <div className="container mx-auto max-w-3xl text-center">
         {/* Trust badge */}
         <motion.div
@@ -153,7 +153,7 @@ export function ChatHero() {
               onFocus={() => setIsFocused(true)}
               onBlur={() => setIsFocused(false)}
               placeholder={isFocused ? t("chatHero.focusPlaceholder") : placeholder + "│"}
-              className="w-full bg-transparent pl-14 pr-14 py-5 text-lg text-foreground placeholder:text-muted-foreground/60 focus:outline-none rounded-2xl"
+              className="w-full bg-transparent pl-12 pr-14 py-4 md:pl-14 md:py-5 text-base md:text-lg text-foreground placeholder:text-muted-foreground/60 focus:outline-none rounded-2xl"
               aria-label={t("chatHero.ariaLabel")}
             />
             <button
@@ -172,7 +172,7 @@ export function ChatHero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="flex flex-wrap justify-center gap-2"
+          className="flex flex-wrap justify-center gap-2 mb-12"
         >
           {suggestions.map((s, i) => (
             <button
@@ -183,6 +183,21 @@ export function ChatHero() {
               {s}
             </button>
           ))}
+        </motion.div>
+
+        {/* Bible quote */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.7 }}
+          className="max-w-xl mx-auto"
+        >
+          <div className="bg-card/40 backdrop-blur-sm rounded-xl px-6 py-4 border border-border/50">
+            <p className="text-foreground/70 italic text-base leading-relaxed">
+              {t("hero.quote")}
+            </p>
+            <p className="text-muted-foreground text-sm mt-1.5">{t("hero.quoteRef")}</p>
+          </div>
         </motion.div>
       </div>
     </section>
