@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { supabase } from "@/integrations/supabase/client";
-import bibelbotLogo from "@/assets/bibelbot-logo.png";
+import bibelbotLogo from "@/assets/biblebot-logo.png";
 
 type PatronData = {
   name: string;

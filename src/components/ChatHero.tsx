@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import bibelbotLogo from "@/assets/bibelbot-logo.png";
+import bibelbotLogo from "@/assets/biblebot-logo.png";
 import { Search, ArrowRight, Shield, Loader2, Mic, MicOff, Send, Menu, LogIn, X, EyeOff, Heart, Accessibility } from "lucide-react";
 import { useSeniorMode } from "@/hooks/use-senior-mode";
 import { motion, AnimatePresence } from "framer-motion";

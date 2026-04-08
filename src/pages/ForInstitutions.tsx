@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Send, Building2, Heart, Hospital, ShieldCheck, Swords, Handshake, Sprout, TowerControl, Footprints, Clock, Tablet, MessageCircle, BookOpen } from "lucide-react";
-import bibelbotLogo from "@/assets/bibelbot-logo.png";
+import bibelbotLogo from "@/assets/biblebot-logo.png";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";

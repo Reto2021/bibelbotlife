@@ -3,7 +3,7 @@ import { useSearchParams, Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
-import bibelbotLogo from "@/assets/bibelbot-logo.png";
+import bibelbotLogo from "@/assets/biblebot-logo.png";
 
 type Status = "loading" | "valid" | "already" | "invalid" | "success" | "error";
 

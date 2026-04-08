@@ -9,7 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, Loader2, ArrowLeft } from "lucide-react";
-import bibelbotLogo from "@/assets/bibelbot-logo.png";
+import bibelbotLogo from "@/assets/biblebot-logo.png";
 import { useToast } from "@/hooks/use-toast";
 import { Link } from "react-router-dom";
 
