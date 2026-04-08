@@ -600,7 +600,15 @@
       "message": "Tin nhắn của bạn",
       "submit": "Gửi yêu cầu",
       "success": "Yêu cầu đã gửi! Chúng tôi sẽ liên hệ sớm. 🙏",
-      "error": "Lỗi gửi. Vui lòng thử lại."
+      "error": "Lỗi gửi. Vui lòng thử lại.",
+      "orgType": "Organization type",
+      "orgTypePlaceholder": "Select type...",
+      "orgTypes": {
+        "church": "Church",
+        "careHome": "Care Home",
+        "seniorHome": "Retirement Home",
+        "hospital": "Hospital"
+      }
     },
     "institutionsTitle": "Cũng dành cho các cơ sở",
     "institutionsSubtitle": "BibleBot đồng hành cùng viện dưỡng lão và bệnh viện với sự chăm sóc tâm linh số.",

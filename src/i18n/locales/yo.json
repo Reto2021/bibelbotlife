@@ -600,7 +600,15 @@
       "message": "Ifiranṣẹ rẹ",
       "submit": "Fi ibeere ranṣẹ",
       "success": "Ibeere ti ranṣẹ! A yoo kan si yin laipẹ. 🙏",
-      "error": "Aṣiṣe fifiranṣẹ. Gbiyanju lẹẹkansi."
+      "error": "Aṣiṣe fifiranṣẹ. Gbiyanju lẹẹkansi.",
+      "orgType": "Organization type",
+      "orgTypePlaceholder": "Select type...",
+      "orgTypes": {
+        "church": "Church",
+        "careHome": "Care Home",
+        "seniorHome": "Retirement Home",
+        "hospital": "Hospital"
+      }
     },
     "institutionsTitle": "Also for Institutions",
     "institutionsSubtitle": "BibleBot supports not only churches – care homes, retirement homes, and hospitals also benefit from digital pastoral care.",

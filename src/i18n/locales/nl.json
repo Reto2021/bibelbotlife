@@ -608,7 +608,15 @@
       "message": "Uw bericht",
       "submit": "Aanvraag versturen",
       "success": "Aanvraag verzonden! We nemen contact op. 🙏",
-      "error": "Fout bij verzenden. Probeer het opnieuw."
+      "error": "Fout bij verzenden. Probeer het opnieuw.",
+      "orgType": "Organization type",
+      "orgTypePlaceholder": "Select type...",
+      "orgTypes": {
+        "church": "Church",
+        "careHome": "Care Home",
+        "seniorHome": "Retirement Home",
+        "hospital": "Hospital"
+      }
     },
     "institutionsTitle": "Ook voor instellingen",
     "institutionsSubtitle": "BibleBot begeleidt ook verzorgingshuizen, bejaardenhuizen en ziekenhuizen met digitale pastorale zorg.",

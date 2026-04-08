@@ -600,7 +600,15 @@
       "message": "Il vostro messaggio",
       "submit": "Invia richiesta",
       "success": "Richiesta inviata! Vi contatteremo presto. 🙏",
-      "error": "Errore nell'invio. Riprovare."
+      "error": "Errore nell'invio. Riprovare.",
+      "orgType": "Organization type",
+      "orgTypePlaceholder": "Select type...",
+      "orgTypes": {
+        "church": "Church",
+        "careHome": "Care Home",
+        "seniorHome": "Retirement Home",
+        "hospital": "Hospital"
+      }
     },
     "institutionsTitle": "Anche per le istituzioni",
     "institutionsSubtitle": "BibleBot accompagna anche case di cura, ospedali e la cappellania carceraria con assistenza spirituale digitale.",

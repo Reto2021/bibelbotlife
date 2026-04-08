@@ -600,7 +600,15 @@
       "message": "您的留言",
       "submit": "发送咨询",
       "success": "咨询已发送！我们将尽快回复。🙏",
-      "error": "发送错误。请重试。"
+      "error": "发送错误。请重试。",
+      "orgType": "Organization type",
+      "orgTypePlaceholder": "Select type...",
+      "orgTypes": {
+        "church": "Church",
+        "careHome": "Care Home",
+        "seniorHome": "Retirement Home",
+        "hospital": "Hospital"
+      }
     },
     "institutionsTitle": "也适用于机构",
     "institutionsSubtitle": "BibleBot也为养老院和医院提供数字化灵性关怀。",

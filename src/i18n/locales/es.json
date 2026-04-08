@@ -600,7 +600,15 @@
       "message": "Su mensaje",
       "submit": "Enviar consulta",
       "success": "¡Consulta enviada! Nos pondremos en contacto. 🙏",
-      "error": "Error al enviar. Inténtelo de nuevo."
+      "error": "Error al enviar. Inténtelo de nuevo.",
+      "orgType": "Organization type",
+      "orgTypePlaceholder": "Select type...",
+      "orgTypes": {
+        "church": "Church",
+        "careHome": "Care Home",
+        "seniorHome": "Retirement Home",
+        "hospital": "Hospital"
+      }
     },
     "institutionsTitle": "También para instituciones",
     "institutionsSubtitle": "BibleBot acompaña también a residencias, hospitales y la capellanía carcelaria con cuidado pastoral digital.",

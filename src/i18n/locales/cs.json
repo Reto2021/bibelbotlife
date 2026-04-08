@@ -600,7 +600,15 @@
       "message": "Vaše zpráva",
       "submit": "Odeslat poptávku",
       "success": "Poptávka odeslána! Ozveme se brzy. 🙏",
-      "error": "Chyba při odesílání. Zkuste to znovu."
+      "error": "Chyba při odesílání. Zkuste to znovu.",
+      "orgType": "Organization type",
+      "orgTypePlaceholder": "Select type...",
+      "orgTypes": {
+        "church": "Church",
+        "careHome": "Care Home",
+        "seniorHome": "Retirement Home",
+        "hospital": "Hospital"
+      }
     },
     "institutionsTitle": "Also for Institutions",
     "institutionsSubtitle": "BibleBot supports not only churches – care homes, retirement homes, and hospitals also benefit from digital pastoral care.",

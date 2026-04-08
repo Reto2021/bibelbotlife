@@ -600,7 +600,15 @@
       "message": "Sua mensagem",
       "submit": "Enviar consulta",
       "success": "Consulta enviada! Entraremos em contato. 🙏",
-      "error": "Erro ao enviar. Tente novamente."
+      "error": "Erro ao enviar. Tente novamente.",
+      "orgType": "Organization type",
+      "orgTypePlaceholder": "Select type...",
+      "orgTypes": {
+        "church": "Church",
+        "careHome": "Care Home",
+        "seniorHome": "Retirement Home",
+        "hospital": "Hospital"
+      }
     },
     "institutionsTitle": "Também para instituições",
     "institutionsSubtitle": "BibleBot acompanha lares, casas de repouso e hospitais com cuidado pastoral digital.",

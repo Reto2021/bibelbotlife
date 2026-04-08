@@ -600,7 +600,15 @@
       "message": "Votre message",
       "submit": "Envoyer la demande",
       "success": "Demande envoyée! Nous reviendrons vers vous. 🙏",
-      "error": "Erreur d'envoi. Veuillez réessayer."
+      "error": "Erreur d'envoi. Veuillez réessayer.",
+      "orgType": "Organization type",
+      "orgTypePlaceholder": "Select type...",
+      "orgTypes": {
+        "church": "Church",
+        "careHome": "Care Home",
+        "seniorHome": "Retirement Home",
+        "hospital": "Hospital"
+      }
     },
     "institutionsTitle": "Aussi pour les institutions",
     "institutionsSubtitle": "BibleBot accompagne aussi les maisons de retraite, les EMS, les hôpitaux et l'aumônerie de prison avec un soutien spirituel numérique.",
