@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import { Search, ArrowRight, Shield, Loader2, Mic, MicOff, Send, Menu, LogIn } from "lucide-react";
+import { Search, ArrowRight, Shield, Loader2, Mic, MicOff, Send, Menu, LogIn, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTrack } from "@/components/AnalyticsProvider";
 import { openLifeWheel } from "@/components/LifeWheel";
@@ -119,6 +119,7 @@ export function ChatHero() {
   const [chatMode, setChatMode] = useState<ChatMode>("normal");
   const [isListening, setIsListening] = useState(false);
   const [showMoreChips, setShowMoreChips] = useState(false);
+  const [loginHintDismissed, setLoginHintDismissed] = useState(() => localStorage.getItem("biblebot-login-hint-dismissed") === "1");
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -580,20 +581,33 @@ export function ChatHero() {
                     ))}
 
                     {/* Login hint for anonymous users after first exchange */}
-                    {!user && messages.length >= 2 && !isLoading && (
+                    {!user && messages.length >= 2 && !isLoading && !loginHintDismissed && (
                       <motion.div
                         initial={{ opacity: 0, y: 5 }}
                         animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -5 }}
                         transition={{ delay: 1, duration: 0.4 }}
                         className="flex justify-center"
                       >
-                        <a
-                          href="/login"
-                          className="inline-flex items-center gap-2 text-xs text-muted-foreground hover:text-foreground bg-card/60 border border-border/50 rounded-full px-4 py-2 transition-all hover:border-primary/30"
-                        >
-                          <LogIn className="h-3 w-3" />
-                          {t("chat.loginHint", "Melde dich an, um Gespräche auf allen Geräten zu behalten")}
-                        </a>
+                        <div className="inline-flex items-center gap-2 text-xs text-muted-foreground bg-card/60 border border-border/50 rounded-full px-4 py-2">
+                          <LogIn className="h-3 w-3 shrink-0" />
+                          <a
+                            href="/login"
+                            className="hover:text-foreground transition-colors"
+                          >
+                            {t("chat.loginHint", "Melde dich an, um Gespräche auf allen Geräten zu behalten")}
+                          </a>
+                          <button
+                            onClick={() => {
+                              localStorage.setItem("biblebot-login-hint-dismissed", "1");
+                              setLoginHintDismissed(true);
+                            }}
+                            className="h-4 w-4 shrink-0 rounded-full hover:bg-muted flex items-center justify-center transition-colors"
+                            aria-label="Schliessen"
+                          >
+                            <X className="h-3 w-3" />
+                          </button>
+                        </div>
                       </motion.div>
                     )}
 
