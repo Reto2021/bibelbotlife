@@ -34,6 +34,8 @@ const RecordsPage = lazy(() => import("./pages/dashboard/RecordsPage"));
 const TeamPage = lazy(() => import("./pages/dashboard/TeamPage"));
 const SettingsPage = lazy(() => import("./pages/dashboard/SettingsPage"));
 const ConductorMode = lazy(() => import("./pages/dashboard/ConductorMode"));
+const MeinBereich = lazy(() => import("./pages/MeinBereich"));
+const MeinBereichHome = lazy(() => import("./pages/mein-bereich/MeinBereichHome"));
 
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 
