@@ -90,9 +90,9 @@ const ForInstitutions = () => {
 
       {/* Institution Types */}
       <section className="py-12 px-4 bg-card/40">
-        <div className="container mx-auto max-w-5xl">
+        <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl font-bold text-foreground text-center mb-10">{t("institutions.typesTitle")}</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {institutions.map((inst) => (
               <Card key={inst.key} className="bg-card/80 border-border text-center">
                 <CardHeader>
