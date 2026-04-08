@@ -533,13 +533,17 @@ export function ChatHero() {
 
                 {/* Bible quote */}
                 <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.7 }} className="max-w-2xl mx-auto w-full">
-                  <div className="relative bg-card/60 backdrop-blur-sm rounded-2xl px-8 py-6 border border-primary/10 text-center shadow-sm overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.03] to-transparent pointer-events-none" />
+                  <button
+                    onClick={() => sendMessage(`Erkläre mir diesen Bibelvers im Detail: ${dailyVerse.quote} (${dailyVerse.ref}) – Wer hat das geschrieben? In welchem Kontext? Was bedeutet das für mein Leben heute?`)}
+                    className="relative w-full bg-card/60 backdrop-blur-sm rounded-2xl px-8 py-6 border border-primary/10 text-center shadow-sm overflow-hidden cursor-pointer hover:border-primary/30 hover:shadow-md transition-all duration-300 group"
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.03] to-transparent pointer-events-none group-hover:from-primary/[0.06] transition-all duration-300" />
                     <div className="relative">
                       <p className="text-foreground/80 italic text-base sm:text-lg leading-relaxed font-serif">{dailyVerse.quote}</p>
                       <p className="text-primary/60 text-sm mt-2 font-medium tracking-wide">– {dailyVerse.ref}</p>
+                      <p className="text-xs text-muted-foreground mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">{t("impulse.deepDive", "Vers erkunden →")}</p>
                     </div>
-                  </div>
+                  </button>
                 </motion.div>
 
                 {/* Previous conversations hint */}
