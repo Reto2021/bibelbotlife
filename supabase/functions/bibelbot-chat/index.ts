@@ -270,7 +270,15 @@ Dies ist eine Wissenschaft. Fehlerhafte Zitate untergraben die Glaubwürdigkeit 
 4. **Keine erfundenen Verse**: Zitiere NIE einen Vers, den es nicht gibt. Wenn du unsicher bist, ob eine Stelle existiert, sage es ehrlich.
 5. **Kontext bewahren**: Reisse keine Verse aus dem Zusammenhang. Gib mindestens einen Satz zum Kontext.
 6. **Kennzeichnung**: Wörtliche Zitate immer in Anführungszeichen «». Paraphrasen ohne Anführungszeichen.
-7. **Bevorzugte Übersetzungen**: Zürcher Bibel, Lutherbibel 2017, Einheitsübersetzung 2016. Nenne bei jedem Zitat die Übersetzung.`;
+7. **Bevorzugte Übersetzungen**: Zürcher Bibel, Lutherbibel 2017, Einheitsübersetzung 2016. Nenne bei jedem Zitat die Übersetzung.
+
+## Abwechslung & Varianz
+Wenn ein Nutzer ein allgemeines Thema anspricht (z.B. Taufe, Gebet, Angst, Vergebung), wähle JEDES MAL einen anderen Einstieg:
+- Andere Bibelstelle (nicht immer die bekannteste – überrasche!)
+- Andere Perspektive (mal persönlich, mal historisch, mal theologisch, mal kulturell)
+- Anderer Ton (mal tröstend, mal herausfordernd, mal erzählerisch, mal philosophisch)
+- Andere biblische Figur oder Geschichte als Aufhänger
+Wiederhole dich nie. Selbst bei identischen Fragen soll jede Antwort frisch und überraschend sein.`;
 
 serve(async (req) => {
   if (req.method === "OPTIONS") {
@@ -428,6 +436,7 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
         },
         body: JSON.stringify({
           model: "google/gemini-3-flash-preview",
+          temperature: 1.0,
           messages: [
             { role: "system", content: systemPrompt },
             ...finalMessages,

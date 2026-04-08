@@ -375,7 +375,10 @@
     "baptism": {
       "title": "Taufspruch finden",
       "desc": "Der perfekte Vers für dein Kind",
-      "prompt": "Hilf mir, einen passenden Taufspruch zu finden. Was für ein Kind ist es und was wünschen sich die Eltern?"
+      "prompt": "Hilf mir, einen passenden Taufspruch zu finden. Was für ein Kind ist es und was wünschen sich die Eltern?",
+      "prompt_v1": "Was bedeutet die Taufe eigentlich?",
+      "prompt_v2": "Erzähl mir von der Taufe in der Bibel – überrasche mich!",
+      "prompt_v3": "Warum lassen sich Menschen taufen?"
     },
     "condolence": {
       "title": "Trostworte",
@@ -390,7 +393,10 @@
     "anxiety": {
       "title": "Angst & Sorgen",
       "desc": "Mut finden in schweren Zeiten",
-      "prompt": "Ich habe gerade mit Ängsten und Sorgen zu kämpfen. Was sagt die Bibel dazu? Gibt es Verse, die Mut machen?"
+      "prompt": "Ich habe gerade mit Ängsten und Sorgen zu kämpfen. Was sagt die Bibel dazu? Gibt es Verse, die Mut machen?",
+      "prompt_v1": "Ich habe Angst. Was sagt die Bibel über Angst?",
+      "prompt_v2": "Wie kann mir der Glaube bei Ängsten helfen?",
+      "prompt_v3": "Welche biblischen Figuren hatten auch Angst?"
     },
     "confession": {
       "title": "Beichte",
@@ -400,7 +406,10 @@
     "heartbreak": {
       "title": "Liebeskummer",
       "desc": "Was die Bibel über Herzschmerz sagt",
-      "prompt": "Mein Herz ist gebrochen. Was sagt die Bibel über Liebeskummer und wie man wieder Hoffnung findet?"
+      "prompt": "Mein Herz ist gebrochen. Was sagt die Bibel über Liebeskummer und wie man wieder Hoffnung findet?",
+      "prompt_v1": "Mein Herz ist gebrochen. Was sagt die Bibel dazu?",
+      "prompt_v2": "Wie gehe ich mit Liebeskummer um – gibt es biblische Hilfe?",
+      "prompt_v3": "Kann Gott ein gebrochenes Herz heilen?"
     },
     "newstart": {
       "title": "Neuanfang",
@@ -430,7 +439,10 @@
     "gratitude": {
       "title": "Dankbarkeit",
       "desc": "Ein persönliches Dankgebet",
-      "prompt": "Ich möchte Gott danken. Hilf mir, ein persönliches Dankgebet zu formulieren."
+      "prompt": "Ich möchte Gott danken. Hilf mir, ein persönliches Dankgebet zu formulieren.",
+      "prompt_v1": "Wie kann ich dankbarer werden?",
+      "prompt_v2": "Was sagt die Bibel über Dankbarkeit?",
+      "prompt_v3": "Warum ist Dankbarkeit so wichtig im Glauben?"
     },
     "lifewheel": {
       "title": "Lebensrad",
@@ -489,7 +501,10 @@
     "forgiveness": {
       "title": "Vergebung",
       "desc": "Wenn Vergeben unmöglich scheint",
-      "prompt": "Ich kann jemandem einfach nicht vergeben. Es tut zu sehr weh. Was sagt die Bibel über Vergebung?"
+      "prompt": "Ich kann jemandem einfach nicht vergeben. Es tut zu sehr weh. Was sagt die Bibel über Vergebung?",
+      "prompt_v1": "Was sagt die Bibel über Vergebung?",
+      "prompt_v2": "Wie kann ich jemandem vergeben, der mich verletzt hat?",
+      "prompt_v3": "Gibt es Grenzen der Vergebung?"
     },
     "familyconflict": {
       "title": "Familienstreit",
@@ -509,7 +524,10 @@
     "prayer": {
       "title": "Gebetsanliegen",
       "desc": "Gemeinsam beten",
-      "prompt": "Ich habe ein Gebetsanliegen und möchte gemeinsam beten. Begleite mich im Gebet."
+      "prompt": "Ich habe ein Gebetsanliegen und möchte gemeinsam beten. Begleite mich im Gebet.",
+      "prompt_v1": "Wie kann ich beten lernen?",
+      "prompt_v2": "Was sagt die Bibel über das Gebet?",
+      "prompt_v3": "Warum erhört Gott manche Gebete nicht?"
     },
     "bibleverse": {
       "title": "Vers verstehen",

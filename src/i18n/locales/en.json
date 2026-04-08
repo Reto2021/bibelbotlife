@@ -340,7 +340,10 @@
     "baptism": {
       "title": "Find a baptism verse",
       "desc": "The perfect verse for your child",
-      "prompt": "Help me find a fitting baptism verse. What kind of child is it and what do the parents wish for?"
+      "prompt": "Help me find a fitting baptism verse. What kind of child is it and what do the parents wish for?",
+      "prompt_v1": "What does baptism actually mean?",
+      "prompt_v2": "Tell me about baptism in the Bible – surprise me!",
+      "prompt_v3": "Why do people get baptized?"
     },
     "condolence": {
       "title": "Words of comfort",
@@ -355,7 +358,10 @@
     "anxiety": {
       "title": "Fear & worry",
       "desc": "Finding courage in hard times",
-      "prompt": "I'm struggling with fear and worry right now. What does the Bible say about this? Are there verses that give courage?"
+      "prompt": "I'm struggling with fear and worry right now. What does the Bible say about this? Are there verses that give courage?",
+      "prompt_v1": "I'm anxious. What does the Bible say about fear?",
+      "prompt_v2": "How can faith help with anxiety?",
+      "prompt_v3": "Which biblical figures also struggled with fear?"
     },
     "confession": {
       "title": "Confession",
@@ -365,7 +371,10 @@
     "heartbreak": {
       "title": "Heartbreak",
       "desc": "What the Bible says about heartache",
-      "prompt": "My heart is broken. What does the Bible say about heartbreak and how to find hope again?"
+      "prompt": "My heart is broken. What does the Bible say about heartbreak and how to find hope again?",
+      "prompt_v1": "My heart is broken. What does the Bible say?",
+      "prompt_v2": "How do I deal with heartbreak – any biblical guidance?",
+      "prompt_v3": "Can God heal a broken heart?"
     },
     "newstart": {
       "title": "New beginning",
@@ -395,7 +404,10 @@
     "gratitude": {
       "title": "Gratitude",
       "desc": "A personal prayer of thanks",
-      "prompt": "I want to thank God. Help me write a personal prayer of gratitude."
+      "prompt": "I want to thank God. Help me write a personal prayer of gratitude.",
+      "prompt_v1": "How can I become more grateful?",
+      "prompt_v2": "What does the Bible say about gratitude?",
+      "prompt_v3": "Why is gratitude so important in faith?"
     },
     "lifewheel": {
       "title": "Life Wheel",
@@ -454,7 +466,10 @@
     "forgiveness": {
       "title": "Forgiveness",
       "desc": "When forgiving seems impossible",
-      "prompt": "I simply can't forgive someone. It hurts too much. What does the Bible say about forgiveness?"
+      "prompt": "I simply can't forgive someone. It hurts too much. What does the Bible say about forgiveness?",
+      "prompt_v1": "What does the Bible say about forgiveness?",
+      "prompt_v2": "How can I forgive someone who hurt me?",
+      "prompt_v3": "Are there limits to forgiveness?"
     },
     "familyconflict": {
       "title": "Family Conflict",
@@ -474,7 +489,10 @@
     "prayer": {
       "title": "Prayer Request",
       "desc": "Pray together",
-      "prompt": "I have a prayer request and would like to pray together. Join me in prayer."
+      "prompt": "I have a prayer request and would like to pray together. Join me in prayer.",
+      "prompt_v1": "How can I learn to pray?",
+      "prompt_v2": "What does the Bible say about prayer?",
+      "prompt_v3": "Why doesn't God answer some prayers?"
     },
     "bibleverse": {
       "title": "Understand a Verse",
