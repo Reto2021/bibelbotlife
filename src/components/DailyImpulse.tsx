@@ -448,7 +448,7 @@ export function DailyImpulse() {
               />
             </div>
 
-            {/* Inline Subscribe CTA */}
+            {/* Inline Subscribe CTA (mobile: shown here, desktop: in banner) */}
             {!isSubscribed && (
               <div className="mt-4 pt-4 border-t border-primary/15">
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
@@ -456,14 +456,14 @@ export function DailyImpulse() {
                     <Bell className="h-3.5 w-3.5 text-primary" />
                     {t("impulse.subscribeCta")}
                   </p>
-                  <div className="flex gap-2">
+                  <div className="flex flex-wrap gap-2">
                     <Button
                       size="sm"
                       onClick={handleSubscribePush}
                       disabled={isSubscribing}
                       className="text-xs h-7 bg-primary hover:bg-primary/90"
                     >
-                      {isSubscribing ? (
+                      {isSubscribing && !showSmsInput ? (
                         <Loader2 className="h-3 w-3 mr-1 animate-spin" />
                       ) : (
                         <Bell className="h-3 w-3 mr-1" />
@@ -479,8 +479,37 @@ export function DailyImpulse() {
                       <Send className="h-3 w-3 mr-1" />
                       Telegram
                     </Button>
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      onClick={() => setShowSmsInput(!showSmsInput)}
+                      className="text-xs h-7 border-primary/30 text-primary hover:bg-primary/10"
+                    >
+                      <Smartphone className="h-3 w-3 mr-1" />
+                      SMS
+                    </Button>
                   </div>
                 </div>
+                {showSmsInput && (
+                  <div className="mt-3 flex items-center gap-2 animate-fade-up">
+                    <input
+                      type="tel"
+                      placeholder={t("subscribe.phonePlaceholder", "+41 79 123 45 67")}
+                      value={smsPhone}
+                      onChange={(e) => setSmsPhone(e.target.value)}
+                      className="flex-1 h-7 text-xs px-3 rounded-md border border-primary/30 bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary"
+                      maxLength={20}
+                    />
+                    <Button
+                      size="sm"
+                      onClick={handleSubscribeSms}
+                      disabled={isSubscribing || smsPhone.length < 8}
+                      className="text-xs h-7 bg-primary hover:bg-primary/90"
+                    >
+                      {isSubscribing && showSmsInput ? <Loader2 className="h-3 w-3 animate-spin" /> : t("subscribe.submit", "Abonnieren")}
+                    </Button>
+                  </div>
+                )}
                 <p className="text-[10px] text-muted-foreground mt-1.5">{t("subscribe.footNote")}</p>
               </div>
             )}
