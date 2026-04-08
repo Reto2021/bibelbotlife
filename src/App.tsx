@@ -18,6 +18,7 @@ const Analytics = lazy(() => import("./pages/Analytics"));
 const ForChurches = lazy(() => import("./pages/ForChurches"));
 const ChurchDirectory = lazy(() => import("./pages/ChurchDirectory"));
 const ChurchPartner = lazy(() => import("./pages/ChurchPartner"));
+const ChurchIntegration = lazy(() => import("./pages/ChurchIntegration"));
 const ForInstitutions = lazy(() => import("./pages/ForInstitutions"));
 const Unsubscribe = lazy(() => import("./pages/Unsubscribe"));
 const Login = lazy(() => import("./pages/Login"));
@@ -94,6 +95,7 @@ const App = () => {
                   <Route path="/for-churches" element={<ForChurches />} />
                   <Route path="/churches" element={<ChurchDirectory />} />
                   <Route path="/church/:slug" element={<ChurchPartner />} />
+                  <Route path="/church-integration/:slug" element={<ChurchIntegration />} />
                   <Route path="/for-institutions" element={<ForInstitutions />} />
                   <Route path="/unsubscribe" element={<Unsubscribe />} />
                   <Route path="/login" element={<Login />} />
