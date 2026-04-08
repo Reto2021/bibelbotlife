@@ -119,6 +119,7 @@ export function ChatHero() {
   const [chatMode, setChatMode] = useState<ChatMode>("normal");
   const [isListening, setIsListening] = useState(false);
   const [showMoreChips, setShowMoreChips] = useState(false);
+  const [loginHintDismissed, setLoginHintDismissed] = useState(() => localStorage.getItem("biblebot-login-hint-dismissed") === "1");
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -580,7 +581,7 @@ export function ChatHero() {
                     ))}
 
                     {/* Login hint for anonymous users after first exchange */}
-                    {!user && messages.length >= 2 && !isLoading && !localStorage.getItem("biblebot-login-hint-dismissed") && (
+                    {!user && messages.length >= 2 && !isLoading && !loginHintDismissed && (
                       <motion.div
                         initial={{ opacity: 0, y: 5 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -599,8 +600,7 @@ export function ChatHero() {
                           <button
                             onClick={() => {
                               localStorage.setItem("biblebot-login-hint-dismissed", "1");
-                              // Force re-render by updating a throwaway state
-                              setInput(prev => prev);
+                              setLoginHintDismissed(true);
                             }}
                             className="h-4 w-4 shrink-0 rounded-full hover:bg-muted flex items-center justify-center transition-colors"
                             aria-label="Schliessen"
