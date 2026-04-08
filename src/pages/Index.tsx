@@ -78,10 +78,8 @@ const Index = () => {
                 {t("institutions.badge")}
               </Link>
             </Button>
-            <div className="hidden sm:flex items-center gap-2">
-              <LanguageSwitcher />
-              <DarkModeToggle />
-            </div>
+            <LanguageSwitcher />
+            <DarkModeToggle />
             <Button asChild className="hidden sm:inline-flex bg-telegram hover:bg-telegram/90 text-telegram-foreground">
               <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer">
                 <Send className="h-4 w-4 mr-2" />
@@ -147,12 +145,8 @@ const Index = () => {
                 <ShieldCheck className="h-4 w-4" />
                 {t("footer.datenschutz")}
               </Link>
-              <div className="flex items-center justify-between pt-2 pb-1 gap-2">
-                <div className="flex items-center gap-2">
-                  <LanguageSwitcher />
-                  <DarkModeToggle />
-                </div>
-                <Button asChild className="flex-1 bg-telegram hover:bg-telegram/90 text-telegram-foreground">
+              <div className="pt-2 pb-1">
+                <Button asChild className="w-full bg-telegram hover:bg-telegram/90 text-telegram-foreground">
                   <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)}>
                     <Send className="h-4 w-4 mr-2" />
                     {t("nav.startNow")}
