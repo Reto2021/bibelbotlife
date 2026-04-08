@@ -607,7 +607,8 @@
         "church": "Church",
         "careHome": "Care Home",
         "seniorHome": "Retirement Home",
-        "hospital": "Hospital"
+        "hospital": "Hospital",
+        "prison": "Prison Chaplaincy"
       }
     },
     "institutionsTitle": "Также для учреждений",

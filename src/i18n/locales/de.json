@@ -644,7 +644,8 @@
         "church": "Gemeinde",
         "careHome": "Pflegeheim",
         "seniorHome": "Altersheim",
-        "hospital": "Spital"
+        "hospital": "Spital",
+        "prison": "Gefängnisseelsorge"
       }
     },
     "institutionsTitle": "Auch für Institutionen",
