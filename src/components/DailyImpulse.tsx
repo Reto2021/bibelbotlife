@@ -386,6 +386,49 @@ export function DailyImpulse() {
                 variant="button"
               />
             </div>
+
+            {/* Inline Subscribe CTA */}
+            {!isSubscribed && (
+              <div className="mt-4 pt-4 border-t border-primary/15">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
+                  <p className="text-sm text-foreground/80 font-medium flex items-center gap-1.5">
+                    <Bell className="h-3.5 w-3.5 text-primary" />
+                    {t("impulse.subscribeCta")}
+                  </p>
+                  <div className="flex gap-2">
+                    <Button
+                      size="sm"
+                      onClick={handleSubscribePush}
+                      disabled={isSubscribing}
+                      className="text-xs h-7 bg-primary hover:bg-primary/90"
+                    >
+                      {isSubscribing ? (
+                        <Loader2 className="h-3 w-3 mr-1 animate-spin" />
+                      ) : (
+                        <Bell className="h-3 w-3 mr-1" />
+                      )}
+                      Push
+                    </Button>
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      onClick={handleSubscribeTelegram}
+                      className="text-xs h-7 border-primary/30 text-primary hover:bg-primary/10"
+                    >
+                      <Send className="h-3 w-3 mr-1" />
+                      Telegram
+                    </Button>
+                  </div>
+                </div>
+                <p className="text-[10px] text-muted-foreground mt-1.5">{t("subscribe.footNote")}</p>
+              </div>
+            )}
+
+            {isSubscribed && (
+              <p className="mt-3 text-xs text-primary/70 flex items-center gap-1">
+                ✓ {t("impulse.alreadySubscribed")}
+              </p>
+            )}
           </div>
         </div>
       )}
