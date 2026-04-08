@@ -13,7 +13,7 @@ const MeinBereichHome = () => {
       descKey: "meinBereich.funeralDesc",
       icon: Cross,
       href: "/mein-bereich/abdankung",
-      available: false,
+      available: true,
     },
     {
       titleKey: "meinBereich.wedding",
