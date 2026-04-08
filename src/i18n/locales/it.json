@@ -601,6 +601,22 @@
       "submit": "Invia richiesta",
       "success": "Richiesta inviata! Vi contatteremo presto. 🙏",
       "error": "Errore nell'invio. Riprovare."
+    },
+    "institutionsTitle": "Anche per le istituzioni",
+    "institutionsSubtitle": "BibleBot accompagna anche case di cura, case di riposo e ospedali con assistenza spirituale digitale.",
+    "institution": {
+      "careHome": {
+        "title": "Case di cura",
+        "desc": "Impulsi biblici quotidiani per i residenti – anche senza cappellano in loco."
+      },
+      "seniorHome": {
+        "title": "Case di riposo",
+        "desc": "Versetti biblici e conversazioni per anziani – facilmente accessibili tramite tablet o smartphone."
+      },
+      "hospital": {
+        "title": "Ospedali",
+        "desc": "Conforto e accompagnamento spirituale per i pazienti – disponibile 24/7."
+      }
     }
   }
 }

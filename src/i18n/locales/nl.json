@@ -609,6 +609,22 @@
       "submit": "Aanvraag versturen",
       "success": "Aanvraag verzonden! We nemen contact op. 🙏",
       "error": "Fout bij verzenden. Probeer het opnieuw."
+    },
+    "institutionsTitle": "Ook voor instellingen",
+    "institutionsSubtitle": "BibleBot begeleidt ook verzorgingshuizen, bejaardenhuizen en ziekenhuizen met digitale pastorale zorg.",
+    "institution": {
+      "careHome": {
+        "title": "Verzorgingshuizen",
+        "desc": "Dagelijkse bijbelse impulsen voor bewoners – ook zonder aalmoezenier ter plaatse."
+      },
+      "seniorHome": {
+        "title": "Bejaardenhuizen",
+        "desc": "Vertrouwde bijbelverzen en gesprekken voor senioren – eenvoudig toegankelijk via tablet."
+      },
+      "hospital": {
+        "title": "Ziekenhuizen",
+        "desc": "Troost en geestelijke begeleiding voor patiënten – 24/7 beschikbaar."
+      }
     }
   }
 }

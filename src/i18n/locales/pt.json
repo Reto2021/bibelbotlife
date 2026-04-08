@@ -601,6 +601,22 @@
       "submit": "Enviar consulta",
       "success": "Consulta enviada! Entraremos em contato. 🙏",
       "error": "Erro ao enviar. Tente novamente."
+    },
+    "institutionsTitle": "Também para instituições",
+    "institutionsSubtitle": "BibleBot acompanha lares, casas de repouso e hospitais com cuidado pastoral digital.",
+    "institution": {
+      "careHome": {
+        "title": "Lares de idosos",
+        "desc": "Impulsos bíblicos diários para residentes – mesmo sem capelão presente."
+      },
+      "seniorHome": {
+        "title": "Casas de repouso",
+        "desc": "Versículos bíblicos e conversas para idosos – acessíveis via tablet ou smartphone."
+      },
+      "hospital": {
+        "title": "Hospitais",
+        "desc": "Conforto e acompanhamento espiritual para pacientes – disponível 24h."
+      }
     }
   }
 }

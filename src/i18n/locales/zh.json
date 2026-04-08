@@ -601,6 +601,22 @@
       "submit": "发送咨询",
       "success": "咨询已发送！我们将尽快回复。🙏",
       "error": "发送错误。请重试。"
+    },
+    "institutionsTitle": "也适用于机构",
+    "institutionsSubtitle": "BibleBot也为养老院和医院提供数字化灵性关怀。",
+    "institution": {
+      "careHome": {
+        "title": "护理院",
+        "desc": "为居民提供每日圣经灵感——即使没有牧师在场。"
+      },
+      "seniorHome": {
+        "title": "养老院",
+        "desc": "为老年人提供熟悉的圣经经文和对话——通过平板轻松获取。"
+      },
+      "hospital": {
+        "title": "医院",
+        "desc": "为患者提供安慰和灵性支持——全天候可用。"
+      }
     }
   }
 }

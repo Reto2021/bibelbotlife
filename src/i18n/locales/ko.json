@@ -601,6 +601,22 @@
       "submit": "문의 보내기",
       "success": "문의가 전송되었습니다! 곧 연락드리겠습니다. 🙏",
       "error": "전송 오류. 다시 시도해 주세요."
+    },
+    "institutionsTitle": "기관에도 적합",
+    "institutionsSubtitle": "BibleBot은 요양원과 병원에도 디지털 영적 돌봄을 제공합니다.",
+    "institution": {
+      "careHome": {
+        "title": "요양원",
+        "desc": "입주자를 위한 매일의 성경 말씀 – 목회자가 없을 때도."
+      },
+      "seniorHome": {
+        "title": "양로원",
+        "desc": "어르신들을 위한 친숙한 성경 구절과 대화 – 태블릿으로 쉽게 접근."
+      },
+      "hospital": {
+        "title": "병원",
+        "desc": "어려운 시기의 환자를 위한 위로와 영적 돌봄 – 24시간 가능."
+      }
     }
   }
 }

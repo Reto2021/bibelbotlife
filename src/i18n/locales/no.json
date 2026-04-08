@@ -601,6 +601,22 @@
       "submit": "Send henvendelse",
       "success": "Henvendelse sendt! Vi tar kontakt snart. 🙏",
       "error": "Feil ved sending. Prøv igjen."
+    },
+    "institutionsTitle": "Also for Institutions",
+    "institutionsSubtitle": "BibleBot supports not only churches – care homes, retirement homes, and hospitals also benefit from digital pastoral care.",
+    "institution": {
+      "careHome": {
+        "title": "Care Homes",
+        "desc": "Daily Bible impulses and companionship for residents – even when no chaplain is on site."
+      },
+      "seniorHome": {
+        "title": "Retirement Homes",
+        "desc": "Familiar Bible verses and conversations for seniors – easily accessible via tablet or smartphone."
+      },
+      "hospital": {
+        "title": "Hospitals",
+        "desc": "Comfort and spiritual support for patients in difficult times – available 24/7 at the bedside."
+      }
     }
   }
 }

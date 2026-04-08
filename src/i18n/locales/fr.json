@@ -601,6 +601,22 @@
       "submit": "Envoyer la demande",
       "success": "Demande envoyée! Nous reviendrons vers vous. 🙏",
       "error": "Erreur d'envoi. Veuillez réessayer."
+    },
+    "institutionsTitle": "Aussi pour les institutions",
+    "institutionsSubtitle": "BibleBot accompagne aussi les maisons de retraite, les EMS et les hôpitaux avec un soutien spirituel numérique.",
+    "institution": {
+      "careHome": {
+        "title": "Maisons de soins",
+        "desc": "Impulsions bibliques quotidiennes pour les résidents – même sans aumônier sur place."
+      },
+      "seniorHome": {
+        "title": "Maisons de retraite",
+        "desc": "Versets bibliques et conversations pour les aînés – accessibles via tablette ou smartphone."
+      },
+      "hospital": {
+        "title": "Hôpitaux",
+        "desc": "Réconfort et accompagnement spirituel pour les patients – disponible 24h/24."
+      }
     }
   }
 }

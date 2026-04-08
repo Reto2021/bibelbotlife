@@ -601,6 +601,22 @@
       "submit": "Wyślij zapytanie",
       "success": "Zapytanie wysłane! Skontaktujemy się wkrótce. 🙏",
       "error": "Błąd wysyłania. Spróbuj ponownie."
+    },
+    "institutionsTitle": "Również dla instytucji",
+    "institutionsSubtitle": "BibleBot wspiera także domy opieki, domy starców i szpitale z cyfrową opieką duszpasterską.",
+    "institution": {
+      "careHome": {
+        "title": "Domy opieki",
+        "desc": "Codzienne impulsy biblijne dla mieszkańców – nawet bez kapelana na miejscu."
+      },
+      "seniorHome": {
+        "title": "Domy starców",
+        "desc": "Znane wersety biblijne i rozmowy dla seniorów – dostępne przez tablet lub smartfon."
+      },
+      "hospital": {
+        "title": "Szpitale",
+        "desc": "Pocieszenie i duchowe wsparcie dla pacjentów – dostępne 24/7."
+      }
     }
   }
 }
