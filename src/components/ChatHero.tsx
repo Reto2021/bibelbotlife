@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import bibelbotLogo from "@/assets/bibelbot-logo.png";
-import { Search, ArrowRight, Shield, Loader2, Mic, MicOff, Send, Menu, LogIn, X, EyeOff, Heart } from "lucide-react";
+import { Search, ArrowRight, Shield, Loader2, Mic, MicOff, Send, Menu, LogIn, X, EyeOff, Heart, Accessibility } from "lucide-react";
+import { useSeniorMode } from "@/hooks/use-senior-mode";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTrack } from "@/components/AnalyticsProvider";
 import { openLifeWheel } from "@/components/LifeWheel";
@@ -130,7 +131,21 @@ export function ChatHero() {
   const { toast } = useToast();
   const { user } = useAuth();
   const { branding } = useChurchBranding();
+  const { isSenior, toggle: toggleSenior } = useSeniorMode();
   const dailyVerse = useMemo(() => getDailyVerse(), []);
+
+  // Senior mode size classes
+  const s = {
+    text: isSenior ? "text-lg" : "text-sm",
+    textXs: isSenior ? "text-sm" : "text-xs",
+    heading: isSenior ? "text-4xl md:text-5xl" : "text-3xl md:text-4xl",
+    btnIcon: isSenior ? "h-6 w-6" : "h-4 w-4",
+    btnSize: isSenior ? "h-12 w-12" : "h-10 w-10",
+    inputText: isSenior ? "text-lg" : "text-sm",
+    inputHeight: isSenior ? "min-h-[52px]" : "min-h-[40px]",
+    msgPadding: isSenior ? "px-5 py-4" : "px-4 py-3",
+    chipText: isSenior ? "text-sm px-4 py-2" : "text-xs px-3 py-1.5",
+  };
 
   const {
     conversations,
@@ -647,13 +662,13 @@ export function ChatHero() {
                           <img src={branding?.logoUrl || bibelbotLogo} alt="" className="h-6 w-6 rounded-full shrink-0 mt-1" />
                         )}
                         <div className="max-w-[85%] md:max-w-[75%]">
-                          <div className={`rounded-2xl px-4 py-3 text-sm leading-relaxed ${
+                          <div className={`rounded-2xl ${s.msgPadding} ${s.text} leading-relaxed ${
                             msg.role === "user"
                               ? "bg-primary text-primary-foreground rounded-br-md"
                               : "bg-card border border-border text-foreground rounded-bl-md"
                           }`}>
                             {msg.role === "assistant" ? (
-                              <div className="prose prose-sm max-w-none dark:prose-invert">
+                              <div className={`prose max-w-none dark:prose-invert ${isSenior ? "prose-lg" : "prose-sm"}`}>
                                 <ReactMarkdown components={{
                                   p: ({ children }) => <p>{makeRefsClickable(children, sendMessage)}</p>,
                                   li: ({ children }) => <li>{makeRefsClickable(children, sendMessage)}</li>,
@@ -720,22 +735,31 @@ export function ChatHero() {
                       onChange={(e) => setInput(e.target.value)}
                       onKeyDown={handleKeyDown}
                       placeholder={t("chat.placeholder")}
-                      className="min-h-[40px] max-h-[100px] text-sm resize-none"
-                      rows={1}
+                      className={`${s.inputHeight} max-h-[120px] ${s.inputText} resize-none`}
+                      rows={isSenior ? 2 : 1}
                     />
                     {SpeechRecognition && (
-                      <Button size="icon" variant={isListening ? "destructive" : "outline"} onClick={isListening ? stopListening : startListening} className="h-10 w-10 shrink-0">
-                        {isListening ? <MicOff className="h-4 w-4" /> : <Mic className="h-4 w-4" />}
+                      <Button size="icon" variant={isListening ? "destructive" : "outline"} onClick={isListening ? stopListening : startListening} className={`${s.btnSize} shrink-0`}>
+                        {isListening ? <MicOff className={s.btnIcon} /> : <Mic className={s.btnIcon} />}
                       </Button>
                     )}
-                    <Button size="icon" onClick={() => sendMessage(input)} disabled={!input.trim() || isLoading} className="h-10 w-10 shrink-0">
-                      <Send className="h-4 w-4" />
+                    <Button size="icon" onClick={() => sendMessage(input)} disabled={!input.trim() || isLoading} className={`${s.btnSize} shrink-0`}>
+                      <Send className={s.btnIcon} />
                     </Button>
                   </div>
-                  <div className="flex justify-center mt-2">
+                  <div className="flex items-center justify-between mt-2">
+                    <button
+                      onClick={toggleSenior}
+                      className={`flex items-center gap-1 p-1.5 rounded-lg transition-colors ${s.textXs} ${isSenior ? "bg-primary/20 text-primary" : "text-muted-foreground hover:text-foreground"}`}
+                      aria-label={t("chat.seniorMode", "Grosse Schrift")}
+                      title={t("chat.seniorMode", "Grosse Schrift")}
+                    >
+                      <Accessibility className={isSenior ? "h-5 w-5" : "h-4 w-4"} />
+                      {isSenior && <span>{t("chat.seniorMode", "Grosse Schrift")}</span>}
+                    </button>
                     <button
                       onClick={() => { startNewChat(); }}
-                      className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+                      className={`${s.textXs} text-muted-foreground hover:text-foreground transition-colors`}
                     >
                       {t("chat.newChat", "Neues Gespräch starten")}
                     </button>
