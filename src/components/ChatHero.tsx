@@ -43,6 +43,7 @@ export function ChatHero() {
   const inputRef = useRef<HTMLInputElement>(null);
   const [isFocused, setIsFocused] = useState(false);
   const { track } = useTrack();
+  const dailyVerse = useMemo(() => getDailyVerse(), []);
 
   const phrases = [
     t("chatHero.placeholder1"),
@@ -219,9 +220,9 @@ export function ChatHero() {
         >
           <div className="bg-card/40 backdrop-blur-sm rounded-xl px-6 py-4 border border-border/50">
             <p className="text-foreground/70 italic text-base leading-relaxed">
-              {t("hero.quote")}
+              {dailyVerse.quote}
             </p>
-            <p className="text-muted-foreground text-sm mt-1.5">{t("hero.quoteRef")}</p>
+            <p className="text-muted-foreground text-sm mt-1.5">– {dailyVerse.ref}</p>
           </div>
         </motion.div>
       </div>
