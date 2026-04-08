@@ -268,7 +268,8 @@
     "errorConnect": "Verbindingsfout.",
     "errorTitle": "Fout",
     "errorConnection": "kon niet worden bereikt.",
-    "errorNoStream": "Geen stream"
+    "errorNoStream": "Geen stream",
+    "seniorMode": "Senior mode (larger text)"
   },
   "install": {
     "title": "BibleBot installeren",

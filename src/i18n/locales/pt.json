@@ -268,7 +268,8 @@
     "errorConnect": "Erro de ligação.",
     "errorTitle": "Erro",
     "errorConnection": "não foi possível contactar.",
-    "errorNoStream": "Sem stream"
+    "errorNoStream": "Sem stream",
+    "seniorMode": "Senior mode (larger text)"
   },
   "install": {
     "title": "Instalar BibleBot",

@@ -285,7 +285,8 @@
     "errorConnect": "Fehler beim Verbinden.",
     "errorTitle": "Fehler",
     "errorConnection": "konnte nicht erreicht werden.",
-    "errorNoStream": "Kein Stream"
+    "errorNoStream": "Kein Stream",
+    "seniorMode": "Senioren-Modus (grössere Schrift)"
   },
   "install": {
     "title": "BibleBot installieren",
