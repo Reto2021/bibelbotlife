@@ -154,6 +154,7 @@ export type Database = {
           contact_phone: string | null
           country: string | null
           created_at: string
+          custom_bot_name: string | null
           denomination: string | null
           id: string
           is_active: boolean
@@ -163,6 +164,8 @@ export type Database = {
           pastor_name: string | null
           pastor_photo_url: string | null
           plan_tier: Database["public"]["Enums"]["church_plan_tier"]
+          primary_color: string | null
+          secondary_color: string | null
           service_times: string | null
           slug: string
           telegram_group_link: string | null
@@ -176,6 +179,7 @@ export type Database = {
           contact_phone?: string | null
           country?: string | null
           created_at?: string
+          custom_bot_name?: string | null
           denomination?: string | null
           id?: string
           is_active?: boolean
@@ -185,6 +189,8 @@ export type Database = {
           pastor_name?: string | null
           pastor_photo_url?: string | null
           plan_tier?: Database["public"]["Enums"]["church_plan_tier"]
+          primary_color?: string | null
+          secondary_color?: string | null
           service_times?: string | null
           slug: string
           telegram_group_link?: string | null
@@ -198,6 +204,7 @@ export type Database = {
           contact_phone?: string | null
           country?: string | null
           created_at?: string
+          custom_bot_name?: string | null
           denomination?: string | null
           id?: string
           is_active?: boolean
@@ -207,6 +214,8 @@ export type Database = {
           pastor_name?: string | null
           pastor_photo_url?: string | null
           plan_tier?: Database["public"]["Enums"]["church_plan_tier"]
+          primary_color?: string | null
+          secondary_color?: string | null
           service_times?: string | null
           slug?: string
           telegram_group_link?: string | null
