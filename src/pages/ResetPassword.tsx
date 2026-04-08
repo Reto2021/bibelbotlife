@@ -6,7 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { BookOpen, Loader2 } from "lucide-react";
+import { Loader2 } from "lucide-react";
+import bibelbotLogo from "@/assets/bibelbot-logo.png";
 import { useToast } from "@/hooks/use-toast";
 
 const ResetPassword = () => {
@@ -51,7 +52,7 @@ const ResetPassword = () => {
     <div className="min-h-screen flex items-center justify-center px-4" style={{ background: "var(--gradient-hero)" }}>
       <Card className="w-full max-w-sm bg-card/90 backdrop-blur-sm">
         <CardHeader className="text-center">
-          <BookOpen className="h-8 w-8 text-primary mx-auto mb-2" />
+          <img src={bibelbotLogo} alt="BibelBot" className="h-10 w-10 mx-auto mb-2" />
           <CardTitle>{t("auth.newPassword", "Neues Passwort setzen")}</CardTitle>
         </CardHeader>
         <CardContent>
