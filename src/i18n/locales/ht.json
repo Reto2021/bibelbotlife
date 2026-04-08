@@ -600,7 +600,15 @@
       "message": "Mesaj ou",
       "submit": "Voye demann",
       "success": "Demann voye! Nou pral kontakte ou byento. 🙏",
-      "error": "Erè nan voye. Eseye ankò."
+      "error": "Erè nan voye. Eseye ankò.",
+      "orgType": "Organization type",
+      "orgTypePlaceholder": "Select type...",
+      "orgTypes": {
+        "church": "Church",
+        "careHome": "Care Home",
+        "seniorHome": "Retirement Home",
+        "hospital": "Hospital"
+      }
     },
     "institutionsTitle": "Also for Institutions",
     "institutionsSubtitle": "BibleBot supports not only churches – care homes, retirement homes, and hospitals also benefit from digital pastoral care.",

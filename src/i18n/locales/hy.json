@@ -600,7 +600,15 @@
       "message": "Ձեր հաղորդագրությունը",
       "submit": "Ուղարկել հարցումը",
       "success": "Հարցումն ուղարկված է: 🙏",
-      "error": "Սխալ ուղարկման ժամանակ. Փորձեք կրկին."
+      "error": "Սխալ ուղարկման ժամանակ. Փորձեք կրկին.",
+      "orgType": "Organization type",
+      "orgTypePlaceholder": "Select type...",
+      "orgTypes": {
+        "church": "Church",
+        "careHome": "Care Home",
+        "seniorHome": "Retirement Home",
+        "hospital": "Hospital"
+      }
     },
     "institutionsTitle": "Also for Institutions",
     "institutionsSubtitle": "BibleBot supports not only churches – care homes, retirement homes, and hospitals also benefit from digital pastoral care.",

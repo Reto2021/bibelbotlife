@@ -600,7 +600,15 @@
       "message": "Ваше повідомлення",
       "submit": "Надіслати запит",
       "success": "Запит надіслано! Ми зв'яжемося найближчим часом. 🙏",
-      "error": "Помилка надсилання. Спробуйте ще раз."
+      "error": "Помилка надсилання. Спробуйте ще раз.",
+      "orgType": "Organization type",
+      "orgTypePlaceholder": "Select type...",
+      "orgTypes": {
+        "church": "Church",
+        "careHome": "Care Home",
+        "seniorHome": "Retirement Home",
+        "hospital": "Hospital"
+      }
     },
     "institutionsTitle": "Також для установ",
     "institutionsSubtitle": "BibleBot супроводжує будинки престарілих та лікарні цифровою духовною підтримкою.",

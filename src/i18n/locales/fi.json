@@ -600,7 +600,15 @@
       "message": "Viestisi",
       "submit": "Lähetä tiedustelu",
       "success": "Tiedustelu lähetetty! Otamme yhteyttä pian. 🙏",
-      "error": "Lähetysvirhe. Yritä uudelleen."
+      "error": "Lähetysvirhe. Yritä uudelleen.",
+      "orgType": "Organization type",
+      "orgTypePlaceholder": "Select type...",
+      "orgTypes": {
+        "church": "Church",
+        "careHome": "Care Home",
+        "seniorHome": "Retirement Home",
+        "hospital": "Hospital"
+      }
     },
     "institutionsTitle": "Also for Institutions",
     "institutionsSubtitle": "BibleBot supports not only churches – care homes, retirement homes, and hospitals also benefit from digital pastoral care.",

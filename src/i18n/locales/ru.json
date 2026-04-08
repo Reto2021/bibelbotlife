@@ -600,7 +600,15 @@
       "message": "Ваше сообщение",
       "submit": "Отправить запрос",
       "success": "Запрос отправлен! Мы свяжемся с вами в ближайшее время. 🙏",
-      "error": "Ошибка отправки. Попробуйте снова."
+      "error": "Ошибка отправки. Попробуйте снова.",
+      "orgType": "Organization type",
+      "orgTypePlaceholder": "Select type...",
+      "orgTypes": {
+        "church": "Church",
+        "careHome": "Care Home",
+        "seniorHome": "Retirement Home",
+        "hospital": "Hospital"
+      }
     },
     "institutionsTitle": "Также для учреждений",
     "institutionsSubtitle": "BibleBot сопровождает дома престарелых и больницы цифровой духовной поддержкой.",

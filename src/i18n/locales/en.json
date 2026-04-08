@@ -600,7 +600,15 @@
       "message": "Your message",
       "submit": "Send inquiry",
       "success": "Inquiry sent! We'll be in touch soon. 🙏",
-      "error": "Error sending. Please try again."
+      "error": "Error sending. Please try again.",
+      "orgType": "Organization type",
+      "orgTypePlaceholder": "Select type...",
+      "orgTypes": {
+        "church": "Church",
+        "careHome": "Care Home",
+        "seniorHome": "Retirement Home",
+        "hospital": "Hospital"
+      }
     },
     "institutionsTitle": "Also for Institutions",
     "institutionsSubtitle": "BibleBot supports not only churches – care homes, retirement homes, hospitals, and prison chaplaincy also benefit from digital pastoral care.",

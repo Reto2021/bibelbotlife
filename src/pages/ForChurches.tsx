@@ -21,7 +21,7 @@ const tiers = [
 
 const ForChurches = () => {
   const { t } = useTranslation();
-  const [formData, setFormData] = useState({ name: "", email: "", church_name: "", preferred_tier: "", message: "" });
+  const [formData, setFormData] = useState({ name: "", email: "", church_name: "", organization_type: "", preferred_tier: "", message: "" });
   const [sending, setSending] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -32,13 +32,15 @@ const ForChurches = () => {
       const { error } = await (supabase.from as any)("church_partnership_inquiries").insert({
         name: formData.name || null,
         email: formData.email,
-        church_name: formData.church_name || null,
+        church_name: formData.church_name
+          ? `[${formData.organization_type || "Gemeinde"}] ${formData.church_name}`
+          : formData.organization_type ? `[${formData.organization_type}]` : null,
         preferred_tier: formData.preferred_tier || null,
         message: formData.message,
       });
       if (error) throw error;
       toast.success(t("church.form.success"));
-      setFormData({ name: "", email: "", church_name: "", preferred_tier: "", message: "" });
+      setFormData({ name: "", email: "", church_name: "", organization_type: "", preferred_tier: "", message: "" });
     } catch {
       toast.error(t("church.form.error"));
     } finally {
@@ -209,20 +211,34 @@ const ForChurches = () => {
                     />
                   </div>
                   <div>
-                    <label className="text-sm font-medium text-foreground mb-1 block">{t("church.form.tier")}</label>
-                    <Select value={formData.preferred_tier} onValueChange={(v) => setFormData(prev => ({ ...prev, preferred_tier: v }))}>
+                    <label className="text-sm font-medium text-foreground mb-1 block">{t("church.form.orgType")}</label>
+                    <Select value={formData.organization_type} onValueChange={(v) => setFormData(prev => ({ ...prev, organization_type: v }))}>
                       <SelectTrigger>
-                        <SelectValue placeholder={t("church.form.tierPlaceholder")} />
+                        <SelectValue placeholder={t("church.form.orgTypePlaceholder")} />
                       </SelectTrigger>
                       <SelectContent>
-                        {tiers.map((tier) => (
-                          <SelectItem key={tier.key} value={tier.key}>
-                            {t(`church.tier.${tier.key}.name`)}
-                          </SelectItem>
-                        ))}
+                        <SelectItem value="Gemeinde">{t("church.form.orgTypes.church")}</SelectItem>
+                        <SelectItem value="Pflegeheim">{t("church.form.orgTypes.careHome")}</SelectItem>
+                        <SelectItem value="Altersheim">{t("church.form.orgTypes.seniorHome")}</SelectItem>
+                        <SelectItem value="Spital">{t("church.form.orgTypes.hospital")}</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
+                </div>
+                <div>
+                  <label className="text-sm font-medium text-foreground mb-1 block">{t("church.form.tier")}</label>
+                  <Select value={formData.preferred_tier} onValueChange={(v) => setFormData(prev => ({ ...prev, preferred_tier: v }))}>
+                    <SelectTrigger>
+                      <SelectValue placeholder={t("church.form.tierPlaceholder")} />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {tiers.map((tier) => (
+                        <SelectItem key={tier.key} value={tier.key}>
+                          {t(`church.tier.${tier.key}.name`)}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
                 </div>
                 <div>
                   <label className="text-sm font-medium text-foreground mb-1 block">{t("church.form.message")} *</label>
