@@ -1,45 +1,33 @@
 
-# Gemeinde-Branding: Vollständige Umsetzung
 
-## 1. DB-Migration – Neue Spalten auf `church_partners`
-- `custom_bot_name` (text, nullable) – z.B. "ReformierterBot Zürich"
-- `primary_color` (text, nullable) – z.B. "#2E7D32"
-- `secondary_color` (text, nullable) – optional
+## Plan: Abo-Button & Toast-Texte optimieren
 
-Keine neuen Tabellen, keine RLS-Änderungen nötig (bestehendes SELECT-Policy reicht).
+### Analyse
 
-## 2. Gemeinde-Kontext-Hook: `useChurchBranding()`
-**Neue Datei**: `src/hooks/use-church-branding.ts`
-- Liest Slug aus localStorage (`biblebot-church`)
-- Fetcht `name`, `logo_url`, `custom_bot_name`, `primary_color`, `secondary_color` aus `church_partners`
-- Cached mit React Query (kein Re-Fetch bei jedem Render)
-- Gibt `{ botName, logoUrl, primaryColor, churchName, churchSlug }` zurück
+Aktuell zeigt der Banner 3 separate kleine Buttons (Push, Telegram, SMS) – das ist visuell überladen und unklar. Besser: **ein einziger CTA-Button** im Banner, der beim Klick die Kanalwahl öffnet.
 
-## 3. Dynamische Farbanpassung
-- In `App.tsx` oder einem Wrapper: Wenn `primary_color` gesetzt, CSS-Custom-Properties (`--primary`) dynamisch überschreiben
-- Nur HSL-Umrechnung nötig (hex → hsl)
+### Änderungen
 
-## 4. Logo im Chat-Header
-- `ChatHero.tsx`: Wenn Gemeinde aktiv, Gemeinde-Logo + `custom_bot_name` statt "BibelBot" im oberen Bereich
+**1. Toast-Texte in `de.json` anpassen**
+- `toastPushPreview`: "Push-Abo nicht im Preview" → "Benachrichtigungen nicht im Preview"
+- `toastPushPreviewDesc`: "Push-Benachrichtigungen funktionieren..." → "Benachrichtigungen funktionieren..."
+- `toastNotSupportedDesc`: "...keine Push-Benachrichtigungen" → "...keine Browser-Benachrichtigungen"
+- `pushHint`: "Push" raus aus dem Text
 
-## 5. Splash-Screen erweitern
-- `SplashScreen.tsx`: `custom_bot_name` statt "BibelBot.Life" anzeigen, wenn vorhanden
+**2. Banner-UI in `DailyImpulse.tsx` umbauen**
 
-## 6. Direktlink zur Gemeindeseite
-- Im ChurchBanner (bereits vorhanden) einen Link zu `/church/:slug` hinzufügen
-- Im Chat: Nach dem Login-Hint einen dezenten "Deine Gemeinde"-Link einblenden
+Statt 3 Buttons im Banner → **ein einziger Button**: **"Inspo abonnieren"** (mit Bell-Icon)
 
-## 7. Testdaten aktualisieren
-- `reformierte-zuerich`: `custom_bot_name = "ReformierterBot"`, `primary_color = "#1B3A5C"`
-- `vineyard-bern`: `custom_bot_name = "VineyardBot"`, `primary_color = "#2E7D32"`
+Beim Klick: Banner expandiert und zeigt die 3 Kanal-Optionen (Benachrichtigung, Telegram, SMS) – wie bisher im expanded-Bereich.
 
-## Betroffene Dateien
-- DB-Migration (neue Spalten)
-- `src/hooks/use-church-branding.ts` (neu)
-- `src/components/SplashScreen.tsx` (Bot-Name)
-- `src/components/ChatHero.tsx` (Logo + Bot-Name im Header)
-- `src/components/ChurchBanner.tsx` (Direktlink)
-- `src/App.tsx` (Farb-Override)
+Desktop-Banner wird dadurch aufgeräumter: ein klarer CTA statt 3 kleine Buttons.
 
-## Verwaltung
-Kein Admin-UI – Gemeindedaten werden direkt über Lovable Cloud Backend gepflegt.
+```text
+Vorher:  [Benachrichtigung] [Telegram] [SMS]
+Nachher: [🔔 Inspo abonnieren]  →  klick  →  expandiert mit Kanalwahl
+```
+
+**3. Betroffene Dateien**
+- `src/i18n/locales/de.json` — Toast-Texte + neuer Key `impulse.subscribeButton`
+- `src/components/DailyImpulse.tsx` — Banner-Buttons durch einzelnen CTA ersetzen, der `isExpanded` triggert
+
