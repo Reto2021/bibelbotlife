@@ -1,59 +1,157 @@
 
+## Messeplaner v6 — Memory-File + Zugangskonzept
 
-## Rebranding-Plan: BibelBot → BibleBot.Life durchziehen
+### 1. Memory-File erstellen
 
-### Ist-Zustand
+Speichere den vollständigen Messeplaner-Plan v6 unter `mem://feature/messeplaner` mit allen Dimensionen:
 
-Das Rebranding ist im Code **nicht konsistent** umgesetzt. Folgende Stellen verwenden noch alte Bezeichnungen:
+**Kernfunktionen (v1–v4)**:
+- Service-Editor mit Drag & Drop Blöcken
+- Kalender-Ansicht & Print-CSS
+- BibleBot-Integration pro Block ("BibleBot fragen")
+- Team-Verwaltung (Rollen: Pfarrer, Musiker, Lektor, Sakristei)
+- Vorlagen-System mit Konfessions-Profilen
+- Ressourcen-Bibliothek (Lieder, Gebete, Lesungen)
+- Conductor Mode (Live-Durchführung)
+- Teleprompter (Read-Modus)
+- Integrierter Audio-Player
+- Besuchsprotokolle mit KI-Zusammenfassung
 
-| Problem | Stellen |
-|---------|---------|
-| **Header zeigt "BibleBot"** statt "BibleBot.Life" | `Index.tsx` Zeile 70 |
-| **Dateiname `bibelbot-logo.png`** | `src/assets/bibelbot-logo.png` + 9 Import-Stellen |
-| **Telegram `meinbibelbot`** | 4 Dateien (DailyImpulse, Index, DailySubscribe, ChurchPartner) |
-| **localStorage-Keys mit `bibelbot-`** | `bibelbot-church`, `bibelbot-daily-subscribed`, `bibelbot-name`, `bibelbot-splash-shown` |
-| **DEFAULT_BOT_NAME = "BibleBot"** | `BibelBotChat.tsx` Zeile 65 |
-| **Komponente heisst `BibelBotChat`** | Dateiname + Exports |
+**10 ergänzte Dimensionen (v5–v6)**:
+1. Mehrsprachigkeit pro Block
+2. Amtshandlungs-Register (Taufe, Trauung, Abdankung)
+3. Gäste-/Teilnehmerverwaltung
+4. Budget & Kosten
+5. Freiwilligen-Rotation
+6. Offline-Fähigkeit (PWA)
+7. Gastzugang für externe Mitwirkende
+8. Statistiken & Feedback
+9. Barrierefreiheit
+10. Versionierung & Änderungshistorie
 
-### Änderungen
+**Konfessionen**: Katholisch, Reformiert, Lutherisch, Evangelikal/Freikirchlich, Säkular/Freie Zeremonien
 
-**1. Header-Text korrigieren**
-- `Index.tsx` Zeile 70: `"BibleBot"` → `"BibleBot.Life"` (oder nur "BibleBot" mit ".Life" in kleinerer Schrift darunter, wie im Footer bereits)
+---
 
-**2. Logo-Datei umbenennen**
-- `src/assets/bibelbot-logo.png` → `src/assets/biblebot-logo.png`
-- Alle 9 Import-Stellen aktualisieren (ChatHero, SplashScreen, Index, Login, ResetPassword, ForChurches, ForInstitutions, ChurchDirectory, Unsubscribe)
+### 2. Zugang: Wie gelangen Seelsorger zum Messe-Modul?
 
-**3. Telegram-Link prüfen**
-- `https://t.me/meinbibelbot` — Ist der Bot tatsächlich umbenannt? Falls ja → neuen Link einsetzen. Falls nein → bleibt vorerst (Telegram-Bots können nicht umbenannt werden)
+#### Navigation & Routing
 
-**4. localStorage-Keys migrieren (optional, Breaking Change)**
-- Keys wie `bibelbot-church`, `bibelbot-splash-shown` etc. sind intern und für User unsichtbar
-- Umbenennung optional, würde aber bestehende User-Sessions zurücksetzen
-- **Empfehlung**: Vorerst belassen, da rein technisch und nicht sichtbar
-
-**5. Komponenten-/Dateinamen**
-- `BibelBotChat.tsx` → interne Benennung, nicht user-facing
-- **Empfehlung**: Belassen (Refactoring-Risiko ohne sichtbaren Nutzen)
-
-### Betroffene Dateien
-
-```text
-src/assets/biblebot-logo.png        — Umbenannt
-src/pages/Index.tsx                  — Header-Text + Import
-src/components/ChatHero.tsx          — Import
-src/components/SplashScreen.tsx      — Import
-src/pages/Login.tsx                  — Import
-src/pages/ResetPassword.tsx          — Import
-src/pages/ForChurches.tsx            — Import
-src/pages/ForInstitutions.tsx        — Import
-src/pages/ChurchDirectory.tsx        — Import
-src/pages/Unsubscribe.tsx            — Import
+```
+/login                → Bestehende Login-Seite (E-Mail + Google)
+/dashboard            → NEU: Seelsorger-Dashboard (nach Login)
+/dashboard/services   → Service-Kalender & Editor
+/dashboard/resources  → Ressourcen-Bibliothek
+/dashboard/series     → Predigtreihen
+/dashboard/records    → Amtshandlungen
+/dashboard/team       → Team-Verwaltung
 ```
 
-### Nicht ändern
-- `index.html` — bereits korrekt ("BibleBot.Life", "BibleBot – Your Personal Bible Companion")
-- `manifest.json` — bereits korrekt ("BibleBot")
-- localStorage-Keys — internes Detail, kein Rebranding-Effekt
-- Telegram-Link — abhängig vom Bot-Handle, nicht änderbar
+#### Login-Flow
 
+```text
+Startseite (biblebot.life)
+    │
+    ├── "Anmelden" Button (bereits vorhanden, Nav-Bar)
+    │
+    └── /login (bestehende Seite)
+         ├── Google Login
+         └── E-Mail + Passwort
+              │
+              ▼
+         Hat User eine Gemeinde? ──── Ja ──→ /dashboard
+              │
+              Nein
+              │
+              ▼
+         /dashboard (Willkommens-Wizard)
+         "Gemeinde einrichten" → Tradition wählen → Fertig
+```
+
+- Eingeloggte User sehen in der Nav-Bar einen neuen **"Mein Bereich"**-Button (statt nur Logout)
+- Klick → `/dashboard` mit Sidebar-Navigation
+- Nicht-eingeloggte User sehen den Button nicht — die öffentliche Chat-Seite bleibt unverändert
+
+#### Dashboard-UI (Wireframe)
+
+```text
+┌─────────────────────────────────────────────────┐
+│  BibleBot.Life          🔍  🔔  👤 Pfarrer Müller │
+├──────────┬──────────────────────────────────────┤
+│ Sidebar  │                                      │
+│          │   Nächster Gottesdienst               │
+│ 📅 Kalender│   So 12. April — 10:00 Uhr           │
+│ ✏️ Neuer  │   "3. Sonntag nach Ostern"           │
+│ 📚 Biblio │   ┌─────────────────────────┐        │
+│ 📊 Serien │   │ Einzug  │ Begrüssung   │        │
+│ 📋 Register│   │ Lied GL │ Lesung       │        │
+│ 👥 Team   │   │ Predigt │ Fürbitten    │        │
+│ ⚙️ Settings│   │ Segen   │              │        │
+│          │   └─────────────────────────┘        │
+│          │                                      │
+│          │   Letzte Gottesdienste                │
+│          │   • Karfreitag — Abdankung            │
+│          │   • Gründonnerstag — Abendmahl        │
+└──────────┴──────────────────────────────────────┘
+```
+
+- **Mobile**: Sidebar wird zu Bottom-Tab-Navigation (5 Tabs: Kalender, Neu, Bibliothek, Register, Profil)
+- **Conductor Mode**: Vollbild ohne Sidebar, nur Block-Ansicht + Swipe
+
+---
+
+### 3. Technische Umsetzung
+
+#### Neue Dateien
+
+```text
+src/pages/Dashboard.tsx              — Dashboard-Layout mit Sidebar
+src/pages/dashboard/
+  ServiceCalendar.tsx                — Kalender-Übersicht
+  ServiceEditor.tsx                  — Block-Editor mit DnD
+  ResourceLibrary.tsx                — Baustein-Bibliothek
+  ServiceSeries.tsx                  — Predigtreihen
+  ChurchRecords.tsx                  — Amtshandlungen
+  TeamManager.tsx                    — Team & Rotation
+  Settings.tsx                       — Gemeinde-Einstellungen & Tradition
+src/components/services/
+  ServiceBlock.tsx                   — Einzelner Block im Editor
+  BlockPalette.tsx                   — Block-Typen zum Einfügen
+  ConductorMode.tsx                  — Live-Durchführung
+  TeleprompterView.tsx               — Predigt-Lesemodus
+  AudioPlayer.tsx                    — Inline-Musik-Player
+```
+
+#### Datenbank (Migration)
+
+5 neue Tabellen:
+- `services` — Gottesdienste mit Blöcken (JSONB)
+- `service_templates` — Vorlagen pro Tradition
+- `service_team_members` — Team-Zuordnung
+- `resource_library` — Wiederverwendbare Bausteine
+- `service_series` — Predigtreihen
+
+Plus `church_records` für Amtshandlungen (Phase 2).
+
+Alle Tabellen mit RLS: User sehen nur Daten ihrer eigenen Gemeinde.
+
+#### Routing in App.tsx
+
+```text
+Neue Routes (alle lazy-loaded, auth-geschützt):
+  /dashboard/*  →  Dashboard-Layout mit verschachtelten Routes
+```
+
+Ein `<ProtectedRoute>` Wrapper prüft `useAuth()` und leitet zu `/login` um falls nicht eingeloggt.
+
+---
+
+### 4. Phasenplan
+
+| Phase | Was | Umfang |
+|-------|-----|--------|
+| **1** | DB-Migration, Dashboard-Layout, Service-Editor (Blöcke, DnD), Kalender | Kern |
+| **2** | BibleBot pro Block, Ressourcen-Bibliothek, Vorlagen, Print-CSS | KI + Inhalte |
+| **3** | Conductor Mode, Teleprompter, Audio-Player | Durchführung |
+| **4** | Team, Rotation, Serien, Amtshandlungen, Offline (PWA) | Organisation |
+| **5** | Statistiken, Versionierung, Gastzugang, Barrierefreiheit | Reife |
