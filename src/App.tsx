@@ -24,6 +24,10 @@ const Unsubscribe = lazy(() => import("./pages/Unsubscribe"));
 const Login = lazy(() => import("./pages/Login"));
 const ResetPassword = lazy(() => import("./pages/ResetPassword"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+const Dashboard = lazy(() => import("./pages/Dashboard"));
+const DashboardHome = lazy(() => import("./pages/dashboard/DashboardHome"));
+
+import { ProtectedRoute } from "@/components/ProtectedRoute";
 
 const queryClient = new QueryClient();
 
