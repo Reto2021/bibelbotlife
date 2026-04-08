@@ -622,5 +622,73 @@
         "desc": "为被拘留者提供希望和灵性支持——全天候的知心伴侣。"
       }
     }
+  },
+  "institutions": {
+    "badge": "For Institutions",
+    "heroTitle": "BibleBot for Your Institution",
+    "heroSubtitle": "Digital pastoral care for care homes, retirement homes, hospitals, and correctional facilities – personal, confidential, and around the clock.",
+    "typesTitle": "Who is BibleBot for?",
+    "useCasesTitle": "How BibleBot is Used",
+    "useCasesSubtitle": "Practical applications for daily life in your institution.",
+    "pricingTitle": "Patronage Packages",
+    "pricingSubtitle": "The same packages as for churches – adapted to institutional needs.",
+    "linkChurches": "Also available for churches",
+    "type": {
+      "careHome": {
+        "title": "Care Homes",
+        "desc": "Daily Bible impulses and companionship for residents – even when no chaplain is on site."
+      },
+      "seniorHome": {
+        "title": "Retirement Homes",
+        "desc": "Familiar Bible verses and conversations for seniors – easily accessible via tablet or smartphone."
+      },
+      "hospital": {
+        "title": "Hospitals",
+        "desc": "Comfort and spiritual support for patients in difficult times – available 24/7 at the bedside."
+      },
+      "prison": {
+        "title": "Prison Chaplaincy",
+        "desc": "Hope and spiritual support for inmates – a confidential companion around the clock."
+      }
+    },
+    "useCase": {
+      "dailyImpulse": {
+        "title": "Daily Impulse",
+        "desc": "A Bible verse with reflection question every morning – lowers the barrier for spiritual conversations."
+      },
+      "companionship": {
+        "title": "Conversation Partner",
+        "desc": "BibleBot answers faith questions patiently and without time pressure – ideal for lonely hours."
+      },
+      "accessibility": {
+        "title": "Easy Access",
+        "desc": "Large text, simple tablet interface – also for people with limited mobility."
+      },
+      "availability": {
+        "title": "24/7 Available",
+        "desc": "Spiritual companionship at night and on weekends – when no chaplain is available."
+      }
+    },
+    "tierDesc": {
+      "free": "Basic access for residents and patients",
+      "community": "Mentioned as supporter, ad-free access",
+      "gemeinde": "Logo presence, monthly usage report",
+      "kirche": "Custom content, roadmap co-creation, premium support"
+    },
+    "form": {
+      "title": "Interested? Get in touch!",
+      "subtitle": "We'll get back to you within 48 hours.",
+      "name": "Your name",
+      "email": "Email address",
+      "institutionName": "Institution name",
+      "type": "Type of institution",
+      "typePlaceholder": "Please select...",
+      "tier": "Preferred package",
+      "tierPlaceholder": "Choose package...",
+      "message": "Your message",
+      "submit": "Send inquiry",
+      "success": "Inquiry sent! We'll be in touch soon. 🙏",
+      "error": "Error sending. Please try again."
+    }
   }
 }
