@@ -33,6 +33,7 @@ const SeriesPage = lazy(() => import("./pages/dashboard/SeriesPage"));
 const RecordsPage = lazy(() => import("./pages/dashboard/RecordsPage"));
 const TeamPage = lazy(() => import("./pages/dashboard/TeamPage"));
 const SettingsPage = lazy(() => import("./pages/dashboard/SettingsPage"));
+const ConductorMode = lazy(() => import("./pages/dashboard/ConductorMode"));
 
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 
@@ -114,6 +115,7 @@ const App = () => {
                   <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>}>
                     <Route index element={<DashboardHome />} />
                     <Route path="editor/:id" element={<ServiceEditor />} />
+                    <Route path="conductor/:id" element={<ConductorMode />} />
                     <Route path="services" element={<ServicesCalendar />} />
                     <Route path="resources" element={<ResourceLibrary />} />
                     <Route path="series" element={<SeriesPage />} />
