@@ -38,6 +38,7 @@ const ConductorMode = lazy(() => import("./pages/dashboard/ConductorMode"));
 const MeinBereich = lazy(() => import("./pages/MeinBereich"));
 const MeinBereichHome = lazy(() => import("./pages/mein-bereich/MeinBereichHome"));
 const EulogyWriter = lazy(() => import("./pages/mein-bereich/EulogyWriter"));
+const SharedDraft = lazy(() => import("./pages/SharedDraft"));
 
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 
@@ -132,6 +133,7 @@ const App = () => {
                     <Route index element={<MeinBereichHome />} />
                     <Route path="abdankung" element={<EulogyWriter />} />
                   </Route>
+                  <Route path="/shared/:token" element={<SharedDraft />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Suspense>

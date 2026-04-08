@@ -53,6 +53,48 @@ export type Database = {
         }
         Relationships: []
       }
+      ceremony_drafts: {
+        Row: {
+          ceremony_type: Database["public"]["Enums"]["ceremony_type"]
+          created_at: string
+          form_data: Json | null
+          generated_text: string | null
+          id: string
+          is_shared: boolean
+          person_name: string | null
+          share_token: string | null
+          transcripts: Json | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          ceremony_type?: Database["public"]["Enums"]["ceremony_type"]
+          created_at?: string
+          form_data?: Json | null
+          generated_text?: string | null
+          id?: string
+          is_shared?: boolean
+          person_name?: string | null
+          share_token?: string | null
+          transcripts?: Json | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          ceremony_type?: Database["public"]["Enums"]["ceremony_type"]
+          created_at?: string
+          form_data?: Json | null
+          generated_text?: string | null
+          id?: string
+          is_shared?: boolean
+          person_name?: string | null
+          share_token?: string | null
+          transcripts?: Json | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       chat_conversations: {
         Row: {
           created_at: string
@@ -823,6 +865,7 @@ export type Database = {
       }
     }
     Enums: {
+      ceremony_type: "funeral" | "wedding" | "baptism" | "confirmation"
       church_plan_tier: "free" | "community" | "gemeinde" | "kirche"
       confession_tradition:
         | "catholic"
@@ -977,6 +1020,7 @@ export type CompositeTypes<
 export const Constants = {
   public: {
     Enums: {
+      ceremony_type: ["funeral", "wedding", "baptism", "confirmation"],
       church_plan_tier: ["free", "community", "gemeinde", "kirche"],
       confession_tradition: [
         "catholic",
