@@ -1,6 +1,9 @@
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet, useNavigate, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useAuth } from "@/hooks/use-auth";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { Heart, Cross, Baby, BookHeart, LogOut, Home, User } from "lucide-react";
+import { cn } from "@/lib/utils";
 import {
   Sidebar,
   SidebarContent,
@@ -15,7 +18,6 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar";
 import { NavLink } from "@/components/NavLink";
-import { Heart, Cross, Baby, BookHeart, LogOut, Home, User } from "lucide-react";
 
 function MeinBereichSidebar() {
   const { t } = useTranslation();
@@ -85,7 +87,65 @@ function MeinBereichSidebar() {
   );
 }
 
+/** Mobile bottom navigation bar */
+function MobileBottomNav() {
+  const { t } = useTranslation();
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const items = [
+    { label: t("meinBereich.overview"), url: "/mein-bereich", icon: Home, exact: true },
+    { label: t("meinBereich.funeral"), url: "/mein-bereich/abdankung", icon: Cross },
+    { label: t("meinBereich.wedding"), url: "/mein-bereich/hochzeit", icon: Heart },
+    { label: t("meinBereich.baptismCeremony"), url: "/mein-bereich/taufe", icon: Baby },
+    { label: t("meinBereich.confirmation"), url: "/mein-bereich/konfirmation", icon: BookHeart },
+  ];
+
+  return (
+    <nav className="fixed bottom-0 left-0 right-0 z-50 border-t bg-card/95 backdrop-blur-md safe-area-bottom">
+      <div className="flex items-center justify-around h-14 px-1">
+        {items.map((item) => {
+          const isActive = item.exact
+            ? location.pathname === item.url
+            : location.pathname.startsWith(item.url);
+          return (
+            <button
+              key={item.url}
+              onClick={() => navigate(item.url)}
+              className={cn(
+                "flex flex-col items-center justify-center gap-0.5 flex-1 py-1 rounded-lg transition-colors",
+                isActive
+                  ? "text-primary"
+                  : "text-muted-foreground hover:text-foreground"
+              )}
+            >
+              <item.icon className="h-5 w-5" />
+              <span className="text-[10px] leading-tight font-medium truncate max-w-[56px]">
+                {item.label}
+              </span>
+            </button>
+          );
+        })}
+      </div>
+    </nav>
+  );
+}
+
 const MeinBereich = () => {
+  const isMobile = useIsMobile();
+
+  if (isMobile) {
+    return (
+      <div className="min-h-screen flex flex-col bg-background">
+        <main className="flex-1 px-4 py-4 pb-20">
+          <Outlet />
+        </main>
+        <MobileBottomNav />
+      </div>
+    );
+  }
+
+  // Desktop: sidebar layout
   return (
     <SidebarProvider>
       <div className="min-h-screen flex w-full">

@@ -144,3 +144,8 @@
 .chat-welcome-gradient {
   background: linear-gradient(180deg, hsl(var(--chat-welcome-glow)) 0%, hsl(var(--chat-warmth)) 100%);
 }
+
+/* Safe area for bottom navigation on notched devices */
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
