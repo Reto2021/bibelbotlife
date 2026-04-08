@@ -1,6 +1,6 @@
 ---
-name: Church Partnership Pricing
-description: Patronats-Pakete nach Gemeindegrösse gestaffelt
+name: Church Partnership & Patronat
+description: Patronats-Pakete, Splash-Screen mit Logo für bezahlte Partner, plan_tier steuert Sichtbarkeit
 type: feature
 ---
 ## Patronats-Pakete (CHF/Jahr) – nach Grösse
@@ -13,7 +13,13 @@ type: feature
 | Leuchtturm | 500+ Mitglieder | CHF 1'990.– |
 
 Alle Pakete bieten denselben Funktionsumfang. Der Preis richtet sich nach Gemeindegrösse.
-Keine Feature-Versprechungen wie "Powered by" Sponsoren-Logos etc.
+
+## Splash-Screen (Patronat)
+- `SplashScreen.tsx`: Zeigt BibelBot-Logo + Partner-Logo/Name bei App-Start
+- Logo nur für bezahlte Tiers (community, gemeinde, kirche) — nicht für free
+- Erscheint nur bei PWA-Standalone oder wenn `?church=slug` / localStorage gesetzt
+- Pro Session nur einmal (sessionStorage)
+- Partner-Daten aus `church_partners` (slug, logo_url, name, plan_tier)
 
 ## DB-Tabellen
 - `church_partners` mit `plan_tier` enum: free, community, gemeinde, kirche
@@ -23,4 +29,4 @@ Keine Feature-Versprechungen wie "Powered by" Sponsoren-Logos etc.
 - `/for-churches` – Info & Patronats-Pakete
 - `/churches` – Verzeichnis
 - `/church/:slug` – Partner-Profil
-- `?church=slug` → Banner via localStorage
+- `?church=slug` → Banner via localStorage + Splash-Screen

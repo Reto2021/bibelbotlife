@@ -787,5 +787,8 @@
     "suggestion1": "What does the Bible say about anxiety?",
     "suggestion2": "Help me pray",
     "suggestion3": "I'm doubting my faith"
+  },
+  "splash": {
+    "patronage": "Recommended by"
   }
 }
