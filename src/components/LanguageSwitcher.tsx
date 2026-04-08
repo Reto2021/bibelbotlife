@@ -63,11 +63,11 @@ export function LanguageSwitcher() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <button
-          className="flex items-center gap-1.5 px-2 py-1.5 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+          className="flex items-center gap-1 px-1.5 py-1 sm:gap-1.5 sm:px-2 sm:py-1.5 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
           aria-label="Language"
         >
-          <span className="text-base leading-none">{currentLang.flag}</span>
-          <span className="uppercase text-xs font-medium">{currentLang.code}</span>
+          <span className="text-sm sm:text-base leading-none">{currentLang.flag}</span>
+          <span className="hidden sm:inline uppercase text-xs font-medium">{currentLang.code}</span>
         </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-[200px] p-0">
