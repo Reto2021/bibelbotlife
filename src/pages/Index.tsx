@@ -83,6 +83,19 @@ const Index = () => {
             </Button>
             <LanguageSwitcher />
             <DarkModeToggle />
+            {user ? (
+              <Button variant="ghost" size="sm" className="hidden sm:inline-flex" onClick={() => signOut()}>
+                <LogOut className="h-4 w-4 mr-1" />
+                {t("auth.logout", "Abmelden")}
+              </Button>
+            ) : (
+              <Button asChild variant="ghost" size="sm" className="hidden sm:inline-flex">
+                <Link to="/login">
+                  <LogIn className="h-4 w-4 mr-1" />
+                  {t("auth.loginShort", "Anmelden")}
+                </Link>
+              </Button>
+            )}
             <Button asChild className="hidden sm:inline-flex bg-telegram hover:bg-telegram/90 text-telegram-foreground">
               <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer">
                 <Send className="h-4 w-4 mr-2" />
