@@ -27,7 +27,7 @@ const Login = () => {
 
   // Redirect if already logged in
   if (user) {
-    navigate("/", { replace: true });
+    navigate("/mein-bereich", { replace: true });
     return null;
   }
 
@@ -53,7 +53,7 @@ const Login = () => {
       } else {
         const { error } = await supabase.auth.signInWithPassword({ email, password });
         if (error) throw error;
-        navigate("/", { replace: true });
+        navigate("/mein-bereich", { replace: true });
       }
     } catch (err: any) {
       toast({ title: t("auth.error", "Fehler"), description: err.message, variant: "destructive" });
