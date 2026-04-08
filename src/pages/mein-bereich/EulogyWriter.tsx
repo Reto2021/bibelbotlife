@@ -603,7 +603,7 @@ const EulogyWriter = () => {
                       {window.location.origin}/shared/{shareToken}
                     </div>
                     <Button variant="ghost" size="icon" onClick={copyShareLink}>
-                      {linkCopied ? <Check className="h-4 w-4 text-green-500" /> : <Copy className="h-4 w-4" />}
+                      {linkCopied ? <Check className="h-4 w-4 text-primary" /> : <Copy className="h-4 w-4" />}
                     </Button>
                     <a
                       href={`${window.location.origin}/shared/${shareToken}`}
