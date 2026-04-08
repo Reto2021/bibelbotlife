@@ -599,6 +599,8 @@ const Index = () => {
               <Link to="/for-churches" className="hover:text-background/80 underline underline-offset-2">{t("footer.forChurches")}</Link>
               <span>·</span>
               <Link to="/for-institutions" className="hover:text-background/80 underline underline-offset-2">{t("institutions.badge")}</Link>
+              <span>·</span>
+              <Link to="/churches" className="hover:text-background/80 underline underline-offset-2">{t("footer.forChurches")}</Link>
             </div>
             <p className="text-background/50 text-sm text-center mt-2">{t("footer.love")}</p>
           </div>
