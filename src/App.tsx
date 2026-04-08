@@ -6,6 +6,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { AnalyticsProvider } from "@/components/AnalyticsProvider";
 import { InstallPrompt } from "@/components/InstallPrompt";
+import { AuthProvider } from "@/hooks/use-auth";
 
 // Lazy-load pages for smaller initial bundle
 const Index = lazy(() => import("./pages/Index"));
@@ -17,6 +18,8 @@ const ChurchDirectory = lazy(() => import("./pages/ChurchDirectory"));
 const ChurchPartner = lazy(() => import("./pages/ChurchPartner"));
 const ForInstitutions = lazy(() => import("./pages/ForInstitutions"));
 const Unsubscribe = lazy(() => import("./pages/Unsubscribe"));
+const Login = lazy(() => import("./pages/Login"));
+const ResetPassword = lazy(() => import("./pages/ResetPassword"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -36,24 +39,28 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <AnalyticsProvider>
-          <Suspense fallback={<PageLoader />}>
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/impressum" element={<Impressum />} />
-              <Route path="/datenschutz" element={<Datenschutz />} />
-              <Route path="/analytics" element={<Analytics />} />
-              <Route path="/for-churches" element={<ForChurches />} />
-              <Route path="/churches" element={<ChurchDirectory />} />
-              <Route path="/church/:slug" element={<ChurchPartner />} />
-              <Route path="/for-institutions" element={<ForInstitutions />} />
-              <Route path="/unsubscribe" element={<Unsubscribe />} />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </Suspense>
-          <InstallPrompt />
-        </AnalyticsProvider>
+        <AuthProvider>
+          <AnalyticsProvider>
+            <Suspense fallback={<PageLoader />}>
+              <Routes>
+                <Route path="/" element={<Index />} />
+                <Route path="/impressum" element={<Impressum />} />
+                <Route path="/datenschutz" element={<Datenschutz />} />
+                <Route path="/analytics" element={<Analytics />} />
+                <Route path="/for-churches" element={<ForChurches />} />
+                <Route path="/churches" element={<ChurchDirectory />} />
+                <Route path="/church/:slug" element={<ChurchPartner />} />
+                <Route path="/for-institutions" element={<ForInstitutions />} />
+                <Route path="/unsubscribe" element={<Unsubscribe />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/reset-password" element={<ResetPassword />} />
+                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </Suspense>
+            <InstallPrompt />
+          </AnalyticsProvider>
+        </AuthProvider>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
