@@ -26,6 +26,13 @@ const ResetPassword = lazy(() => import("./pages/ResetPassword"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const Dashboard = lazy(() => import("./pages/Dashboard"));
 const DashboardHome = lazy(() => import("./pages/dashboard/DashboardHome"));
+const ServiceEditor = lazy(() => import("./pages/dashboard/ServiceEditor"));
+const ServicesCalendar = lazy(() => import("./pages/dashboard/ServicesCalendar"));
+const ResourceLibrary = lazy(() => import("./pages/dashboard/ResourceLibrary"));
+const SeriesPage = lazy(() => import("./pages/dashboard/SeriesPage"));
+const RecordsPage = lazy(() => import("./pages/dashboard/RecordsPage"));
+const TeamPage = lazy(() => import("./pages/dashboard/TeamPage"));
+const SettingsPage = lazy(() => import("./pages/dashboard/SettingsPage"));
 
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 
@@ -106,6 +113,13 @@ const App = () => {
                   <Route path="/reset-password" element={<ResetPassword />} />
                   <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>}>
                     <Route index element={<DashboardHome />} />
+                    <Route path="editor/:id" element={<ServiceEditor />} />
+                    <Route path="services" element={<ServicesCalendar />} />
+                    <Route path="resources" element={<ResourceLibrary />} />
+                    <Route path="series" element={<SeriesPage />} />
+                    <Route path="records" element={<RecordsPage />} />
+                    <Route path="team" element={<TeamPage />} />
+                    <Route path="settings" element={<SettingsPage />} />
                   </Route>
                   <Route path="*" element={<NotFound />} />
                 </Routes>
