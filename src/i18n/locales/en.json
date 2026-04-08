@@ -842,6 +842,11 @@
     "downloadPDF": "Download as PDF",
     "micError": "Could not start microphone. Please grant permission.",
     "needMore": "Please record memories or write notes first.",
-    "genError": "Error creating text. Please try again."
+    "genError": "Error creating text. Please try again.",
+    "save": "Save",
+    "shareStep": "Share with pastor",
+    "shareDesc": "Create a link you can send to your pastor via email or messenger. They can read the text and download it as PDF.",
+    "enableShare": "Create & copy link",
+    "disableShare": "Disable sharing"
   }
 }
