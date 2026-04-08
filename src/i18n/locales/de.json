@@ -659,5 +659,73 @@
         "desc": "Hoffnung und geistliche Begleitung für Inhaftierte – ein vertraulicher Gesprächspartner rund um die Uhr."
       }
     }
+  },
+  "institutions": {
+    "badge": "Für Institutionen",
+    "heroTitle": "BibleBot für Ihre Institution",
+    "heroSubtitle": "Digitale Seelsorge für Pflegeheime, Altersheime, Spitäler und Justizvollzug – persönlich, vertraulich und rund um die Uhr.",
+    "typesTitle": "Für wen ist BibleBot?",
+    "useCasesTitle": "So wird BibleBot eingesetzt",
+    "useCasesSubtitle": "Konkrete Anwendungen für den Alltag in Ihrer Institution.",
+    "pricingTitle": "Patronats-Pakete",
+    "pricingSubtitle": "Dieselben Pakete wie für Gemeinden – angepasst an institutionelle Bedürfnisse.",
+    "linkChurches": "Auch für Gemeinden verfügbar",
+    "type": {
+      "careHome": {
+        "title": "Pflegeheime",
+        "desc": "Tägliche Bibelimpulse und Begleitung für Bewohnerinnen und Bewohner – auch wenn kein Seelsorger vor Ort ist."
+      },
+      "seniorHome": {
+        "title": "Altersheime",
+        "desc": "Vertraute Bibelverse und Gespräche für Seniorinnen und Senioren – einfach zugänglich via Tablet oder Smartphone."
+      },
+      "hospital": {
+        "title": "Spitäler",
+        "desc": "Trost und geistliche Begleitung für Patienten in schwierigen Zeiten – 24/7 verfügbar am Krankenbett."
+      },
+      "prison": {
+        "title": "Gefängnisseelsorge",
+        "desc": "Hoffnung und geistliche Begleitung für Inhaftierte – ein vertraulicher Gesprächspartner rund um die Uhr."
+      }
+    },
+    "useCase": {
+      "dailyImpulse": {
+        "title": "Täglicher Impuls",
+        "desc": "Jeden Morgen ein Bibelvers mit Reflexionsfrage – senkt die Hemmschwelle für spirituelle Gespräche."
+      },
+      "companionship": {
+        "title": "Gesprächspartner",
+        "desc": "BibleBot beantwortet Glaubensfragen geduldig und ohne Zeitdruck – ideal für einsame Stunden."
+      },
+      "accessibility": {
+        "title": "Einfacher Zugang",
+        "desc": "Grosse Schrift, einfache Bedienung via Tablet – auch für Menschen mit eingeschränkter Mobilität."
+      },
+      "availability": {
+        "title": "24/7 Verfügbar",
+        "desc": "Geistliche Begleitung auch nachts und am Wochenende – wenn kein Seelsorger erreichbar ist."
+      }
+    },
+    "tierDesc": {
+      "free": "Basis-Zugang für Bewohner und Patienten",
+      "community": "Erwähnung als Unterstützer, werbefreier Zugang",
+      "gemeinde": "Logo-Präsenz, monatlicher Nutzungs-Report",
+      "kirche": "Eigene Inhalte, Roadmap-Mitgestaltung, Premium-Support"
+    },
+    "form": {
+      "title": "Interesse? Kontaktieren Sie uns!",
+      "subtitle": "Wir melden uns innert 48 Stunden.",
+      "name": "Ihr Name",
+      "email": "E-Mail-Adresse",
+      "institutionName": "Name der Institution",
+      "type": "Art der Institution",
+      "typePlaceholder": "Bitte wählen...",
+      "tier": "Gewünschtes Paket",
+      "tierPlaceholder": "Paket wählen...",
+      "message": "Ihre Nachricht",
+      "submit": "Anfrage senden",
+      "success": "Anfrage gesendet! Wir melden uns bald. 🙏",
+      "error": "Fehler beim Senden. Bitte versuchen Sie es erneut."
+    }
   }
 }

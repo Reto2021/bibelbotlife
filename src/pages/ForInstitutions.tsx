@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { Church, ArrowLeft, Send, Handshake, Landmark, Sprout, Castle, Heart, Building2, Hospital, ShieldCheck } from "lucide-react";
+import { ArrowLeft, Send, Building2, Heart, Hospital, ShieldCheck, Handshake, Landmark, Sprout, Castle, Clock, Tablet, MessageCircle, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -12,6 +12,20 @@ import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 
+const institutions = [
+  { key: "careHome", icon: Building2 },
+  { key: "seniorHome", icon: Heart },
+  { key: "hospital", icon: Hospital },
+  { key: "prison", icon: ShieldCheck },
+] as const;
+
+const useCases = [
+  { key: "dailyImpulse", icon: BookOpen },
+  { key: "companionship", icon: MessageCircle },
+  { key: "accessibility", icon: Tablet },
+  { key: "availability", icon: Clock },
+] as const;
+
 const tiers = [
   { key: "free", setup: 0, annual: 0, icon: Sprout, popular: false },
   { key: "community", setup: 490, annual: 790, icon: Handshake, popular: false },
@@ -19,9 +33,9 @@ const tiers = [
   { key: "kirche", setup: 1990, annual: 2990, icon: Castle, popular: false },
 ];
 
-const ForChurches = () => {
+const ForInstitutions = () => {
   const { t } = useTranslation();
-  const [formData, setFormData] = useState({ name: "", email: "", church_name: "", preferred_tier: "", message: "" });
+  const [formData, setFormData] = useState({ name: "", email: "", institution_name: "", institution_type: "", preferred_tier: "", message: "" });
   const [sending, setSending] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -32,15 +46,15 @@ const ForChurches = () => {
       const { error } = await (supabase.from as any)("church_partnership_inquiries").insert({
         name: formData.name || null,
         email: formData.email,
-        church_name: formData.church_name || null,
+        church_name: formData.institution_name ? `[${formData.institution_type || "Institution"}] ${formData.institution_name}` : null,
         preferred_tier: formData.preferred_tier || null,
         message: formData.message,
       });
       if (error) throw error;
-      toast.success(t("church.form.success"));
-      setFormData({ name: "", email: "", church_name: "", preferred_tier: "", message: "" });
+      toast.success(t("institutions.form.success"));
+      setFormData({ name: "", email: "", institution_name: "", institution_type: "", preferred_tier: "", message: "" });
     } catch {
-      toast.error(t("church.form.error"));
+      toast.error(t("institutions.form.error"));
     } finally {
       setSending(false);
     }
@@ -65,26 +79,27 @@ const ForChurches = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto text-center max-w-4xl">
           <div className="inline-flex items-center gap-2 text-sm font-medium text-primary bg-primary/10 px-4 py-1.5 rounded-full mb-6">
-            <Church className="h-4 w-4" />
-            {t("church.badge")}
+            <Building2 className="h-4 w-4" />
+            {t("institutions.badge")}
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">{t("church.heroTitle")}</h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">{t("church.heroSubtitle")}</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">{t("institutions.heroTitle")}</h1>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">{t("institutions.heroSubtitle")}</p>
         </div>
       </section>
 
-      {/* Use Cases */}
+      {/* Institution Types */}
       <section className="py-12 px-4 bg-card/40">
         <div className="container mx-auto max-w-5xl">
-          <h2 className="text-3xl font-bold text-foreground text-center mb-10">{t("church.useCasesTitle")}</h2>
+          <h2 className="text-3xl font-bold text-foreground text-center mb-10">{t("institutions.typesTitle")}</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {(["youth", "confirmation", "pastoral", "bibleStudy"] as const).map((uc) => (
-              <Card key={uc} className="bg-card/80 border-border text-center">
+            {institutions.map((inst) => (
+              <Card key={inst.key} className="bg-card/80 border-border text-center">
                 <CardHeader>
-                  <CardTitle className="text-lg">{t(`church.useCase.${uc}.title`)}</CardTitle>
+                  <inst.icon className="h-10 w-10 text-primary mx-auto mb-2" />
+                  <CardTitle className="text-lg">{t(`institutions.type.${inst.key}.title`)}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-muted-foreground">{t(`church.useCase.${uc}.desc`)}</p>
+                  <p className="text-sm text-muted-foreground">{t(`institutions.type.${inst.key}.desc`)}</p>
                 </CardContent>
               </Card>
             ))}
@@ -92,25 +107,20 @@ const ForChurches = () => {
         </div>
       </section>
 
-      {/* Institutions */}
+      {/* Use Cases */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-5xl">
-          <h2 className="text-3xl font-bold text-foreground text-center mb-4">{t("church.institutionsTitle")}</h2>
-          <p className="text-muted-foreground text-center mb-10 max-w-2xl mx-auto">{t("church.institutionsSubtitle")}</p>
+          <h2 className="text-3xl font-bold text-foreground text-center mb-4">{t("institutions.useCasesTitle")}</h2>
+          <p className="text-muted-foreground text-center mb-10 max-w-2xl mx-auto">{t("institutions.useCasesSubtitle")}</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {([
-              { key: "careHome", icon: Building2 },
-              { key: "seniorHome", icon: Heart },
-              { key: "hospital", icon: Hospital },
-              { key: "prison", icon: ShieldCheck },
-            ] as const).map((inst) => (
-              <Card key={inst.key} className="bg-card/80 border-border text-center">
+            {useCases.map((uc) => (
+              <Card key={uc.key} className="bg-card/80 border-border text-center">
                 <CardHeader>
-                  <inst.icon className="h-10 w-10 text-primary mx-auto mb-2" />
-                  <CardTitle className="text-lg">{t(`church.institution.${inst.key}.title`)}</CardTitle>
+                  <uc.icon className="h-10 w-10 text-primary mx-auto mb-2" />
+                  <CardTitle className="text-lg">{t(`institutions.useCase.${uc.key}.title`)}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-muted-foreground">{t(`church.institution.${inst.key}.desc`)}</p>
+                  <p className="text-sm text-muted-foreground">{t(`institutions.useCase.${uc.key}.desc`)}</p>
                 </CardContent>
               </Card>
             ))}
@@ -119,10 +129,10 @@ const ForChurches = () => {
       </section>
 
       {/* Pricing */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-card/40">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold text-foreground text-center mb-4">{t("church.pricingTitle")}</h2>
-          <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">{t("church.pricingSubtitle")}</p>
+          <h2 className="text-3xl font-bold text-foreground text-center mb-4">{t("institutions.pricingTitle")}</h2>
+          <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">{t("institutions.pricingSubtitle")}</p>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {tiers.map((tier) => (
@@ -138,7 +148,7 @@ const ForChurches = () => {
                 <CardHeader className="text-center pb-2">
                   <tier.icon className="h-10 w-10 text-primary mx-auto mb-2" />
                   <CardTitle className="text-xl">{t(`church.tier.${tier.key}.name`)}</CardTitle>
-                  <p className="text-xs text-muted-foreground">{t(`church.tier.${tier.key}.size`)}</p>
+                  <p className="text-xs text-muted-foreground">{t(`institutions.tierDesc.${tier.key}`)}</p>
                 </CardHeader>
                 <CardContent>
                   <div className="text-center mb-6">
@@ -157,7 +167,7 @@ const ForChurches = () => {
                     variant={tier.popular ? "default" : "outline"}
                     onClick={() => {
                       setFormData(prev => ({ ...prev, preferred_tier: tier.key }));
-                      document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" });
+                      document.getElementById("institution-contact")?.scrollIntoView({ behavior: "smooth" });
                     }}
                   >
                     <Send className="h-4 w-4 mr-2" />
@@ -171,17 +181,17 @@ const ForChurches = () => {
       </section>
 
       {/* Contact Form */}
-      <section id="contact-form" className="py-20 px-4 bg-card/40">
+      <section id="institution-contact" className="py-20 px-4">
         <div className="container mx-auto max-w-xl">
-          <h2 className="text-3xl font-bold text-foreground text-center mb-4">{t("church.form.title")}</h2>
-          <p className="text-muted-foreground text-center mb-8">{t("church.form.subtitle")}</p>
+          <h2 className="text-3xl font-bold text-foreground text-center mb-4">{t("institutions.form.title")}</h2>
+          <p className="text-muted-foreground text-center mb-8">{t("institutions.form.subtitle")}</p>
 
           <Card className="bg-card/80 border-border">
             <CardContent className="pt-6">
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="text-sm font-medium text-foreground mb-1 block">{t("church.form.name")}</label>
+                    <label className="text-sm font-medium text-foreground mb-1 block">{t("institutions.form.name")}</label>
                     <Input
                       value={formData.name}
                       onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
@@ -189,7 +199,7 @@ const ForChurches = () => {
                     />
                   </div>
                   <div>
-                    <label className="text-sm font-medium text-foreground mb-1 block">{t("church.form.email")} *</label>
+                    <label className="text-sm font-medium text-foreground mb-1 block">{t("institutions.form.email")} *</label>
                     <Input
                       type="email"
                       required
@@ -201,23 +211,23 @@ const ForChurches = () => {
                 </div>
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="text-sm font-medium text-foreground mb-1 block">{t("church.form.churchName")}</label>
+                    <label className="text-sm font-medium text-foreground mb-1 block">{t("institutions.form.institutionName")}</label>
                     <Input
-                      value={formData.church_name}
-                      onChange={(e) => setFormData(prev => ({ ...prev, church_name: e.target.value }))}
+                      value={formData.institution_name}
+                      onChange={(e) => setFormData(prev => ({ ...prev, institution_name: e.target.value }))}
                       maxLength={200}
                     />
                   </div>
                   <div>
-                    <label className="text-sm font-medium text-foreground mb-1 block">{t("church.form.tier")}</label>
-                    <Select value={formData.preferred_tier} onValueChange={(v) => setFormData(prev => ({ ...prev, preferred_tier: v }))}>
+                    <label className="text-sm font-medium text-foreground mb-1 block">{t("institutions.form.type")}</label>
+                    <Select value={formData.institution_type} onValueChange={(v) => setFormData(prev => ({ ...prev, institution_type: v }))}>
                       <SelectTrigger>
-                        <SelectValue placeholder={t("church.form.tierPlaceholder")} />
+                        <SelectValue placeholder={t("institutions.form.typePlaceholder")} />
                       </SelectTrigger>
                       <SelectContent>
-                        {tiers.map((tier) => (
-                          <SelectItem key={tier.key} value={tier.key}>
-                            {t(`church.tier.${tier.key}.name`)}
+                        {institutions.map((inst) => (
+                          <SelectItem key={inst.key} value={inst.key}>
+                            {t(`institutions.type.${inst.key}.title`)}
                           </SelectItem>
                         ))}
                       </SelectContent>
@@ -225,7 +235,22 @@ const ForChurches = () => {
                   </div>
                 </div>
                 <div>
-                  <label className="text-sm font-medium text-foreground mb-1 block">{t("church.form.message")} *</label>
+                  <label className="text-sm font-medium text-foreground mb-1 block">{t("institutions.form.tier")}</label>
+                  <Select value={formData.preferred_tier} onValueChange={(v) => setFormData(prev => ({ ...prev, preferred_tier: v }))}>
+                    <SelectTrigger>
+                      <SelectValue placeholder={t("institutions.form.tierPlaceholder")} />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {tiers.map((tier) => (
+                        <SelectItem key={tier.key} value={tier.key}>
+                          {t(`church.tier.${tier.key}.name`)}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div>
+                  <label className="text-sm font-medium text-foreground mb-1 block">{t("institutions.form.message")} *</label>
                   <Textarea
                     required
                     value={formData.message}
@@ -236,7 +261,7 @@ const ForChurches = () => {
                 </div>
                 <Button type="submit" className="w-full" disabled={sending}>
                   <Send className="h-4 w-4 mr-2" />
-                  {sending ? "..." : t("church.form.submit")}
+                  {sending ? "..." : t("institutions.form.submit")}
                 </Button>
               </form>
             </CardContent>
@@ -244,17 +269,14 @@ const ForChurches = () => {
         </div>
       </section>
 
-      {/* Footer links */}
+      {/* Cross-link */}
       <div className="py-8 text-center space-y-2">
-        <Link to="/for-institutions" className="text-primary hover:underline text-sm font-medium block">
-          {t("institutions.badge")} →
-        </Link>
-        <Link to="/churches" className="text-primary hover:underline text-sm font-medium block">
-          {t("church.viewDirectory")} →
+        <Link to="/for-churches" className="text-primary hover:underline text-sm font-medium block">
+          {t("institutions.linkChurches")} →
         </Link>
       </div>
     </div>
   );
 };
 
-export default ForChurches;
+export default ForInstitutions;

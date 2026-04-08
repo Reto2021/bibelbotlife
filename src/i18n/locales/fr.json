@@ -622,5 +622,73 @@
         "desc": "Espoir et soutien spirituel pour les détenus – un compagnon confidentiel 24h/24."
       }
     }
+  },
+  "institutions": {
+    "badge": "Pour les institutions",
+    "heroTitle": "BibleBot pour votre institution",
+    "heroSubtitle": "Accompagnement spirituel numérique pour les maisons de soins, de retraite, les hôpitaux et les établissements pénitentiaires.",
+    "typesTitle": "À qui s'adresse BibleBot?",
+    "useCasesTitle": "Comment BibleBot est utilisé",
+    "useCasesSubtitle": "Applications concrètes pour le quotidien de votre institution.",
+    "pricingTitle": "Forfaits de parrainage",
+    "pricingSubtitle": "Les mêmes forfaits que pour les paroisses – adaptés aux besoins institutionnels.",
+    "linkChurches": "Également disponible pour les paroisses",
+    "type": {
+      "careHome": {
+        "title": "Maisons de soins",
+        "desc": "Impulsions bibliques quotidiennes pour les résidents – même sans aumônier sur place."
+      },
+      "seniorHome": {
+        "title": "Maisons de retraite",
+        "desc": "Versets bibliques et conversations pour les aînés – accessibles via tablette."
+      },
+      "hospital": {
+        "title": "Hôpitaux",
+        "desc": "Réconfort et accompagnement spirituel pour les patients – disponible 24h/24."
+      },
+      "prison": {
+        "title": "Aumônerie de prison",
+        "desc": "Espoir et soutien spirituel pour les détenus – un compagnon confidentiel 24h/24."
+      }
+    },
+    "useCase": {
+      "dailyImpulse": {
+        "title": "Impulsion quotidienne",
+        "desc": "Un verset biblique avec question de réflexion chaque matin."
+      },
+      "companionship": {
+        "title": "Partenaire de conversation",
+        "desc": "BibleBot répond aux questions de foi avec patience – idéal pour les heures solitaires."
+      },
+      "accessibility": {
+        "title": "Accès facile",
+        "desc": "Grande police, interface tablette simple – aussi pour les personnes à mobilité réduite."
+      },
+      "availability": {
+        "title": "Disponible 24/7",
+        "desc": "Accompagnement spirituel la nuit et le week-end – quand aucun aumônier n'est disponible."
+      }
+    },
+    "tierDesc": {
+      "free": "Accès de base pour résidents et patients",
+      "community": "Mention comme soutien, accès sans publicité",
+      "gemeinde": "Présence du logo, rapport mensuel",
+      "kirche": "Contenus personnalisés, co-création, support premium"
+    },
+    "form": {
+      "title": "Intéressé? Contactez-nous!",
+      "subtitle": "Nous vous répondrons sous 48 heures.",
+      "name": "Votre nom",
+      "email": "Adresse e-mail",
+      "institutionName": "Nom de l'institution",
+      "type": "Type d'institution",
+      "typePlaceholder": "Veuillez choisir...",
+      "tier": "Forfait souhaité",
+      "tierPlaceholder": "Choisir un forfait...",
+      "message": "Votre message",
+      "submit": "Envoyer la demande",
+      "success": "Demande envoyée! Nous reviendrons vers vous. 🙏",
+      "error": "Erreur d'envoi. Veuillez réessayer."
+    }
   }
 }
