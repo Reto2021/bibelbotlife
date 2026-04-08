@@ -735,17 +735,34 @@ export function ChatHero() {
                       onChange={(e) => setInput(e.target.value)}
                       onKeyDown={handleKeyDown}
                       placeholder={t("chat.placeholder")}
-                      className="min-h-[40px] max-h-[100px] text-sm resize-none"
-                      rows={1}
+                      className={`${s.inputHeight} max-h-[120px] ${s.inputText} resize-none`}
+                      rows={isSenior ? 2 : 1}
                     />
                     {SpeechRecognition && (
-                      <Button size="icon" variant={isListening ? "destructive" : "outline"} onClick={isListening ? stopListening : startListening} className="h-10 w-10 shrink-0">
-                        {isListening ? <MicOff className="h-4 w-4" /> : <Mic className="h-4 w-4" />}
+                      <Button size="icon" variant={isListening ? "destructive" : "outline"} onClick={isListening ? stopListening : startListening} className={`${s.btnSize} shrink-0`}>
+                        {isListening ? <MicOff className={s.btnIcon} /> : <Mic className={s.btnIcon} />}
                       </Button>
                     )}
-                    <Button size="icon" onClick={() => sendMessage(input)} disabled={!input.trim() || isLoading} className="h-10 w-10 shrink-0">
-                      <Send className="h-4 w-4" />
+                    <Button size="icon" onClick={() => sendMessage(input)} disabled={!input.trim() || isLoading} className={`${s.btnSize} shrink-0`}>
+                      <Send className={s.btnIcon} />
                     </Button>
+                  </div>
+                  <div className="flex items-center justify-between mt-2">
+                    <button
+                      onClick={toggleSenior}
+                      className={`flex items-center gap-1 p-1.5 rounded-lg transition-colors ${s.textXs} ${isSenior ? "bg-primary/20 text-primary" : "text-muted-foreground hover:text-foreground"}`}
+                      aria-label={t("chat.seniorMode", "Grosse Schrift")}
+                      title={t("chat.seniorMode", "Grosse Schrift")}
+                    >
+                      <Accessibility className={isSenior ? "h-5 w-5" : "h-4 w-4"} />
+                      {isSenior && <span>{t("chat.seniorMode", "Grosse Schrift")}</span>}
+                    </button>
+                    <button
+                      onClick={() => { startNewChat(); }}
+                      className={`${s.textXs} text-muted-foreground hover:text-foreground transition-colors`}
+                    >
+                      {t("chat.newChat", "Neues Gespräch starten")}
+                    </button>
                   </div>
                   <div className="flex justify-center mt-2">
                     <button
