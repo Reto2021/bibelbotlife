@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { supabase } from "@/integrations/supabase/client";
+import { useAuth } from "@/hooks/use-auth";
 
 const SESSION_KEY = "bibelbot-session-id";
 
@@ -32,17 +33,38 @@ export function useChatHistory() {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [isLoadingHistory, setIsLoadingHistory] = useState(false);
   const sessionId = getSessionId();
+  const { user } = useAuth();
 
-  // Load conversation list
+  // Claim anonymous session conversations when user logs in
+  useEffect(() => {
+    if (!user) return;
+    const claimConversations = async () => {
+      await supabase
+        .from("chat_conversations")
+        .update({ user_id: user.id })
+        .eq("session_id", sessionId)
+        .is("user_id", null);
+    };
+    claimConversations();
+  }, [user, sessionId]);
+
+  // Load conversation list - by user_id if logged in, else by session_id
   const loadConversations = useCallback(async () => {
-    const { data } = await supabase
+    let query = supabase
       .from("chat_conversations")
       .select("*")
-      .eq("session_id", sessionId)
       .order("updated_at", { ascending: false })
       .limit(50);
+
+    if (user) {
+      query = query.eq("user_id", user.id);
+    } else {
+      query = query.eq("session_id", sessionId);
+    }
+
+    const { data } = await query;
     if (data) setConversations(data);
-  }, [sessionId]);
+  }, [sessionId, user]);
 
   // Load messages for a conversation
   const loadMessages = useCallback(async (conversationId: string) => {
@@ -62,16 +84,19 @@ export function useChatHistory() {
   // Create new conversation
   const createConversation = useCallback(async (firstMessage: string): Promise<string> => {
     const title = firstMessage.length > 60 ? firstMessage.slice(0, 57) + "…" : firstMessage;
+    const insertData: any = { session_id: sessionId, title };
+    if (user) insertData.user_id = user.id;
+
     const { data } = await supabase
       .from("chat_conversations")
-      .insert({ session_id: sessionId, title })
+      .insert(insertData)
       .select("id")
       .single();
     const id = data!.id;
     setActiveConversationId(id);
     await loadConversations();
     return id;
-  }, [sessionId, loadConversations]);
+  }, [sessionId, user, loadConversations]);
 
   // Add message to DB
   const addMessage = useCallback(async (conversationId: string, role: "user" | "assistant", content: string) => {
@@ -80,7 +105,6 @@ export function useChatHistory() {
       role,
       content,
     });
-    // Update conversation timestamp
     await supabase
       .from("chat_conversations")
       .update({ updated_at: new Date().toISOString() })
@@ -89,7 +113,6 @@ export function useChatHistory() {
 
   // Update last assistant message (for streaming)
   const updateLastAssistantMessage = useCallback(async (conversationId: string, content: string) => {
-    // Get the last assistant message
     const { data } = await supabase
       .from("chat_messages")
       .select("id")
@@ -114,6 +137,7 @@ export function useChatHistory() {
       .eq("id", conversationId);
     await loadConversations();
   }, [loadConversations]);
+
   // Delete conversation
   const deleteConversation = useCallback(async (conversationId: string) => {
     await supabase.from("chat_conversations").delete().eq("id", conversationId);
@@ -136,17 +160,24 @@ export function useChatHistory() {
       await loadConversations();
       return;
     }
-    const { data } = await supabase
+    let q = supabase
       .from("chat_conversations")
       .select("*")
-      .eq("session_id", sessionId)
       .ilike("title", `%${query}%`)
       .order("updated_at", { ascending: false })
       .limit(50);
-    if (data) setConversations(data);
-  }, [sessionId, loadConversations]);
 
-  // Initial load
+    if (user) {
+      q = q.eq("user_id", user.id);
+    } else {
+      q = q.eq("session_id", sessionId);
+    }
+
+    const { data } = await q;
+    if (data) setConversations(data);
+  }, [sessionId, user, loadConversations]);
+
+  // Initial load + reload when user changes
   useEffect(() => {
     loadConversations();
   }, [loadConversations]);
