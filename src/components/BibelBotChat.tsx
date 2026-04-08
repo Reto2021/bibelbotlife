@@ -20,7 +20,7 @@ const SpeechRecognition =
   (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
 
 import { CHAT_OPEN_EVENT, type ChatMode } from "@/lib/chat-events";
-export { openBibelBotChat } from "@/lib/chat-events";
+export { openBibleBotChat } from "@/lib/chat-events";
 
 const BIBLE_REF_PATTERN = /(\d\.\s?)?(?:Genesis|Exodus|Levitikus|Numeri|Deuteronomium|Josua|Richter|Rut|Samuel|Könige|Chronik|Esra|Nehemia|Ester|Hiob|Psalm|Psalmen|Sprüche|Prediger|Hoheslied|Jesaja|Jeremia|Klagelieder|Ezechiel|Daniel|Hosea|Joel|Amos|Obadja|Jona|Micha|Nahum|Habakuk|Zefanja|Haggai|Sacharja|Maleachi|Matthäus|Markus|Lukas|Johannes|Apostelgeschichte|Römer|Korinther|Galater|Epheser|Philipper|Kolosser|Thessalonicher|Timotheus|Titus|Philemon|Hebräer|Jakobus|Petrus|Judas|Offenbarung|Mose|Gen|Ex|Lev|Num|Dtn|Jos|Ri|Kön|Chr|Esr|Neh|Est|Ps|Spr|Pred|Hld|Jes|Jer|Klgl|Ez|Dan|Hos|Am|Ob|Jon|Mi|Nah|Hab|Zef|Hag|Sach|Mal|Mt|Mk|Lk|Joh|Apg|Röm|Kor|Gal|Eph|Phil|Kol|Thess|Tim|Tit|Phlm|Hebr|Jak|Petr|Jud|Offb|Matthew|Mark|Luke|John|Acts|Romans|Corinthians|Galatians|Ephesians|Philippians|Colossians|Thessalonians|Timothy|Hebrews|James|Peter|Jude|Revelation)\s+\d+(?:[,:]\d+(?:[\-–]\d+)?)?/g;
 
@@ -62,7 +62,7 @@ function markNudgeShown() {
   try { localStorage.setItem(JOURNEY_NUDGE_KEY, Date.now().toString()); } catch {}
 }
 
-const DEFAULT_BOT_NAME = "BibelBot";
+const DEFAULT_BOT_NAME = "BibleBot";
 const STORAGE_KEY = "bibelbot-name";
 
 function getBotName(): string {
@@ -189,7 +189,7 @@ function getSpeechLang(lang: string): string {
   return map[lang] || "de-CH";
 }
 
-export function BibelBotChat() {
+export function BibleBotChat() {
   const { t, i18n } = useTranslation();
   const { isSenior, toggle: toggleSenior } = useSeniorMode();
   const [isOpen, setIsOpen] = useState(false);

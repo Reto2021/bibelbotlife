@@ -111,7 +111,7 @@ export function ReferralSection() {
           <div className="inline-block bg-white rounded-xl p-4 shadow-md">
             <img
               src={`https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=${encodeURIComponent(REFER_URL)}&margin=0&format=svg`}
-              alt="BibelBot QR Code"
+              alt="BibleBot QR Code"
               className="h-40 w-40"
               loading="lazy"
             />

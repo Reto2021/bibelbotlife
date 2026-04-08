@@ -38,12 +38,12 @@ const Unsubscribe = () => {
   return (
     <div className="min-h-screen flex items-center justify-center px-4" style={{ background: "var(--gradient-hero)" }}>
       <div className="bg-card rounded-2xl shadow-lg p-8 max-w-md w-full text-center">
-        <img src={bibelbotLogo} alt="BibelBot" className="h-12 w-12 mx-auto mb-4" />
+        <img src={bibelbotLogo} alt="BibleBot" className="h-12 w-12 mx-auto mb-4" />
         {status === "loading" && <Loader2 className="h-8 w-8 animate-spin text-primary mx-auto" />}
         {status === "valid" && (
           <>
             <h1 className="text-2xl font-bold text-foreground mb-4">E-Mail-Benachrichtigungen abbestellen</h1>
-            <p className="text-muted-foreground mb-6">Möchten Sie keine E-Mails mehr von BibelBot.Life erhalten?</p>
+            <p className="text-muted-foreground mb-6">Möchten Sie keine E-Mails mehr von BibleBot.Life erhalten?</p>
             <Button onClick={handleUnsubscribe} className="w-full">Abbestellen bestätigen</Button>
           </>
         )}

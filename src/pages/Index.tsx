@@ -10,7 +10,7 @@ import { LifeWheelProvider } from "@/components/LifeWheel";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
-// BibelBotChat overlay removed - chat is now inline in ChatHero
+// BibleBotChat overlay removed - chat is now inline in ChatHero
 const DailyImpulse = lazy(() => import("@/components/DailyImpulse").then(m => ({ default: m.DailyImpulse })));
 const DailySubscribe = lazy(() => import("@/components/DailySubscribe").then(m => ({ default: m.DailySubscribe })));
 import { Separator } from "@/components/ui/separator";
@@ -588,7 +588,7 @@ const Index = () => {
         </div>
       </footer>
 
-      {/* BibelBotChat overlay removed - chat is inline in hero */}
+      {/* BibleBotChat overlay removed - chat is inline in hero */}
     </div>
     </LifeWheelProvider>
   );

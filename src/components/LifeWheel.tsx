@@ -2,7 +2,7 @@ import { useState, useMemo, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import { RadarChart, PolarGrid, PolarAngleAxis, Radar, ResponsiveContainer } from "recharts";
-import { openBibelBotChat } from "@/lib/chat-events";
+import { openBibleBotChat } from "@/lib/chat-events";
 import { useTrack } from "@/components/AnalyticsProvider";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
@@ -112,7 +112,7 @@ function LifeWheelInner({ onClose }: { onClose: () => void }) {
     const prompt = t("lifeWheel.prompt", { area: areaName, score: scores[weakest] });
     track("lifewheel_complete", { weakest, scores, average: parseFloat(average) });
     onClose();
-    setTimeout(() => openBibelBotChat(prompt), 300);
+    setTimeout(() => openBibleBotChat(prompt), 300);
   };
 
   const handleSave = () => {

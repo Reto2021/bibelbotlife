@@ -2,7 +2,7 @@ import { useState, useRef, useCallback, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { openBibelBotChat } from "@/lib/chat-events";
+import { openBibleBotChat } from "@/lib/chat-events";
 import { openLifeWheel } from "@/components/LifeWheel";
 import { useTrack } from "@/components/AnalyticsProvider";
 import { cn } from "@/lib/utils";
@@ -100,9 +100,9 @@ export function EntryTiles() {
     if (tile.special === "lifewheel") {
       openLifeWheel();
     } else if (tile.special === "sevenwhys") {
-      openBibelBotChat(getRandomPrompt(tile.key), "seven-whys");
+      openBibleBotChat(getRandomPrompt(tile.key), "seven-whys");
     } else {
-      openBibelBotChat(getRandomPrompt(tile.key));
+      openBibleBotChat(getRandomPrompt(tile.key));
     }
   };
 

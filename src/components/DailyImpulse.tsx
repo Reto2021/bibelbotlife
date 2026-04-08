@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { Sparkles, ChevronRight, BookOpen, Loader2, MessageCircle, Image, Download, Bell, Send, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { openBibelBotChat } from "@/lib/chat-events";
+import { openBibleBotChat } from "@/lib/chat-events";
 import { ShareButton } from "@/components/ShareButton";
 import { useToast } from "@/hooks/use-toast";
 
@@ -210,14 +210,14 @@ export function DailyImpulse() {
 
   const handleDeepDive = () => {
     if (!impulse) return;
-    openBibelBotChat(
+    openBibleBotChat(
       `Der Tagesimpuls ist "${impulse.topic}" mit ${impulse.reference}. Erkläre mir diese Stelle: Wer hat das geschrieben? In welcher Situation? Was kommt davor und danach? Und was bedeutet das für mein Leben heute?`
     );
   };
 
   const handleExploreVerse = () => {
     if (!impulse) return;
-    openBibelBotChat(
+    openBibleBotChat(
       `Lies mir den ganzen Abschnitt rund um ${impulse.reference} vor und erkläre mir den Zusammenhang. Ich möchte die Geschichte dahinter verstehen.`
     );
   };

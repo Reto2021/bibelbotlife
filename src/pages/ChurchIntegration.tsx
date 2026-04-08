@@ -66,15 +66,15 @@ const ChurchIntegration = () => {
   const brandedLink = `${BASE_URL}/?church=${church.slug}`;
   const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=${encodeURIComponent(brandedLink)}&margin=16`;
 
-  const widgetCode = `<!-- BibelBot Widget für ${church.name} -->
+  const widgetCode = `<!-- BibleBot Widget für ${church.name} -->
 <script src="${SUPABASE_URL}/functions/v1/church-widget?slug=${church.slug}" defer></script>`;
 
-  const iframeCode = `<!-- BibelBot Inline für ${church.name} -->
+  const iframeCode = `<!-- BibleBot Inline für ${church.name} -->
 <iframe
   src="${brandedLink}"
   style="width:100%;height:600px;border:none;border-radius:12px;"
   loading="lazy"
-  title="BibelBot"
+  title="BibleBot"
 ></iframe>`;
 
   return (
@@ -108,7 +108,7 @@ const ChurchIntegration = () => {
                 </div>
                 <div>
                   <CardTitle className="text-lg">Branded Link</CardTitle>
-                  <CardDescription>Direkter Link zu eurem gebrandeten BibelBot</CardDescription>
+                  <CardDescription>Direkter Link zu eurem gebrandeten BibleBot</CardDescription>
                 </div>
               </div>
             </CardHeader>
@@ -153,7 +153,7 @@ const ChurchIntegration = () => {
                 </div>
                 <div className="space-y-2">
                   <p className="text-sm text-muted-foreground">
-                    Dieser QR-Code führt direkt zu eurem gebrandeten BibelBot mit Splash-Screen und Kirchenlogo.
+                    Dieser QR-Code führt direkt zu eurem gebrandeten BibleBot mit Splash-Screen und Kirchenlogo.
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <Button
@@ -190,7 +190,7 @@ const ChurchIntegration = () => {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-sm text-muted-foreground">
-                Füge diesen Code vor dem schliessenden <code className="text-xs bg-muted px-1 py-0.5 rounded">&lt;/body&gt;</code> Tag ein. Eure Besucher sehen einen Chat-Button und können BibelBot direkt auf eurer Website nutzen.
+                Füge diesen Code vor dem schliessenden <code className="text-xs bg-muted px-1 py-0.5 rounded">&lt;/body&gt;</code> Tag ein. Eure Besucher sehen einen Chat-Button und können BibleBot direkt auf eurer Website nutzen.
               </p>
               <div className="relative">
                 <pre className="p-4 bg-muted/50 rounded-lg border text-xs overflow-x-auto whitespace-pre-wrap break-all text-foreground">
@@ -212,13 +212,13 @@ const ChurchIntegration = () => {
                 </div>
                 <div>
                   <CardTitle className="text-lg">Inline-Einbettung (iFrame)</CardTitle>
-                  <CardDescription>BibelBot direkt in eine Seite eingebettet</CardDescription>
+                  <CardDescription>BibleBot direkt in eine Seite eingebettet</CardDescription>
                 </div>
               </div>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-sm text-muted-foreground">
-                Alternativ kann BibelBot auch direkt in eine Unterseite eingebettet werden — z.B. auf einer "Bibel-Chat"-Seite.
+                Alternativ kann BibleBot auch direkt in eine Unterseite eingebettet werden — z.B. auf einer "Bibel-Chat"-Seite.
               </p>
               <div className="relative">
                 <pre className="p-4 bg-muted/50 rounded-lg border text-xs overflow-x-auto whitespace-pre-wrap break-all text-foreground">
