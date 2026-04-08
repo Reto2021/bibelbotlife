@@ -54,7 +54,16 @@ Regeln:
 - Wähle Themen die berühren: Mut, Zweifel, Liebe, Gerechtigkeit, Hoffnung, Vergebung, Identität, Angst, Dankbarkeit, Berufung.
 - Der Teaser soll neugierig machen – wie eine Überschrift, die man anklicken MUSS.
 - Beziehe dich auf christliche Feiertage wenn einer nahe ist (±3 Tage).
-- Decke Altes UND Neues Testament ab – wechsle ab.`;
+- Decke Altes UND Neues Testament ab – wechsle ab.
+
+WICHTIG – Grammatikregeln für den Teaser:
+- Der Teaser MUSS grammatikalisch korrektes Schweizer Hochdeutsch sein.
+- Natürliche Satzstellung verwenden: Subjekt-Verb-Objekt.
+- KEINE invertierten Genitiv-Konstruktionen wie "Vergessen Gottes" oder "Lohnen des Vertrauens".
+- Fragesätze beginnen mit dem Verb oder einem Fragewort (Wer, Was, Warum, Wie, Kann, Hat, Ist).
+- GUTE Teaser-Beispiele: "Vergibt Gott wirklich alles?", "Warum Vergebung dein Leben verändert", "Gott vergisst – aber wie geht das?", "Drei Worte, die alles verändern", "Was passiert, wenn du loslässt?", "Warum lohnt sich Vertrauen?"
+- SCHLECHTE Teaser (NIEMALS so schreiben): "Vergessen Gottes deine Fehler wirklich?", "Lohnen des Vertrauens sich?", "Verändern Gottes Worte alles?"
+- Prüfe jeden Teaser: Würde ein Schweizer diesen Satz natürlich so sagen? Wenn nein, formuliere um.`;
 
 // Major Christian holidays (approximate, some move yearly)
 function getChurchContext(date: Date): string {
@@ -108,7 +117,7 @@ serve(async (req) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: "google/gemini-2.5-flash-lite",
+        model: "google/gemini-2.5-flash",
         messages: [
           { role: "system", content: SYSTEM_PROMPT },
           { role: "user", content: userPrompt },
