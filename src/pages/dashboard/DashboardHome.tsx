@@ -2,6 +2,7 @@ import { Calendar, Plus, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useAuth } from "@/hooks/use-auth";
+import { Link } from "react-router-dom";
 
 export default function DashboardHome() {
   const { user } = useAuth();
