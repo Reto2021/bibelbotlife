@@ -433,13 +433,13 @@ export function DailyImpulse() {
               />
             </div>
 
-            {/* Inline Subscribe CTA */}
-            {(!isSubscribed || showChannels) && (
+            {/* Subscribe: not yet subscribed */}
+            {!isSubscribed && (
               <div className="mt-4 pt-4 border-t border-primary/15">
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
                   <p className="text-sm text-foreground/80 font-medium flex items-center gap-1.5">
                     <Bell className="h-3.5 w-3.5 text-primary" />
-                    {isSubscribed ? t("subscribe.channelLabel") : t("impulse.subscribeCta")}
+                    {t("impulse.subscribeCta")}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <Button
@@ -499,13 +499,35 @@ export function DailyImpulse() {
               </div>
             )}
 
-            {isSubscribed && !showChannels && (
-              <button
-                onClick={() => setShowChannels(true)}
-                className="mt-3 text-xs text-primary/70 flex items-center gap-1 hover:text-primary transition-colors cursor-pointer"
-              >
-                ✓ {t("impulse.alreadySubscribed")} · {t("subscribe.channelLabel", "Kanal ändern")}
-              </button>
+            {/* Already subscribed: clickable toggle for channel options */}
+            {isSubscribed && (
+              <div className="mt-3">
+                <button
+                  onClick={() => setShowChannels(!showChannels)}
+                  className="text-xs text-primary/70 flex items-center gap-1 hover:text-primary transition-colors cursor-pointer"
+                >
+                  ✓ {t("impulse.alreadySubscribed")}
+                </button>
+                {showChannels && (
+                  <div className="mt-3 flex flex-wrap gap-2 animate-fade-up">
+                    <Button
+                      size="sm"
+                      onClick={handleSubscribePush}
+                      disabled={isSubscribing}
+                      className="text-xs h-7 bg-primary hover:bg-primary/90"
+                    >
+                      {isSubscribing && !showSmsInput ? <Loader2 className="h-3 w-3 mr-1 animate-spin" /> : <Bell className="h-3 w-3 mr-1" />}
+                      {t("subscribe.push")}
+                    </Button>
+                    <Button size="sm" variant="outline" onClick={handleSubscribeTelegram} className="text-xs h-7 border-primary/30 text-primary hover:bg-primary/10">
+                      <Send className="h-3 w-3 mr-1" /> Telegram
+                    </Button>
+                    <Button size="sm" variant="outline" onClick={() => setShowSmsInput(!showSmsInput)} className="text-xs h-7 border-primary/30 text-primary hover:bg-primary/10">
+                      <Smartphone className="h-3 w-3 mr-1" /> SMS
+                    </Button>
+                  </div>
+                )}
+              </div>
             )}
           </div>
         </div>
