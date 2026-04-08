@@ -1,0 +1,1 @@
+ALTER TABLE public.church_partners RENAME COLUMN qr_iban TO iban;
