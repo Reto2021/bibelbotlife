@@ -28,7 +28,7 @@ const BIBLE_EDITIONS = [
 ];
 
 const Index = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const features = [
@@ -62,7 +62,7 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <BookOpen className="h-8 w-8 text-primary" />
-            <span className="text-2xl font-bold text-foreground">BibleBot</span>
+            <span className="text-2xl font-bold text-foreground">{i18n.language === "de" ? "BibelBot" : "BibleBot"}</span>
           </div>
           <div className="flex items-center gap-2">
             {/* Desktop links */}
