@@ -3,13 +3,13 @@ import { useTranslation } from "react-i18next";
 import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, GraduationCap, Church, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass, Send, Building2, Menu, FileText, ShieldCheck } from "lucide-react";
 import { ChurchBanner } from "@/components/ChurchBanner";
 import { ReferralSection } from "@/components/ReferralSection";
-import { EntryTiles } from "@/components/EntryTiles";
+// EntryTiles removed - chips are now in ChatHero
 import { ChatHero } from "@/components/ChatHero";
 import { LifeWheelProvider } from "@/components/LifeWheel";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
-const BibelBotChat = lazy(() => import("@/components/BibelBotChat").then(m => ({ default: m.BibelBotChat })));
+// BibelBotChat overlay removed - chat is now inline in ChatHero
 const DailyImpulse = lazy(() => import("@/components/DailyImpulse").then(m => ({ default: m.DailyImpulse })));
 const DailySubscribe = lazy(() => import("@/components/DailySubscribe").then(m => ({ default: m.DailySubscribe })));
 import { Separator } from "@/components/ui/separator";
@@ -165,8 +165,7 @@ const Index = () => {
       {/* Chat-First Hero */}
       <ChatHero />
 
-      {/* Entry Tiles */}
-      <EntryTiles />
+      {/* Entry Tiles removed - integrated as chips in ChatHero */}
 
       {/* Features Section */}
       <section id="features" className="py-20 px-4 bg-card/40">
@@ -559,9 +558,7 @@ const Index = () => {
         </div>
       </footer>
 
-      <Suspense fallback={null}>
-        <BibelBotChat />
-      </Suspense>
+      {/* BibelBotChat overlay removed - chat is inline in hero */}
     </div>
     </LifeWheelProvider>
   );
