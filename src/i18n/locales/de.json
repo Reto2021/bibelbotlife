@@ -19,12 +19,12 @@
     "quoteRef": "– Matthäus 11,28"
   },
   "impulse": {
-    "loading": "Tagesimpuls wird geladen...",
-    "label": "Impuls des Tages",
+    "loading": "Inspiration wird geladen...",
+    "label": "Inspiration des Tages",
     "deepDive": "Was bedeutet das für mich?",
     "explore": "Ganzen Abschnitt lesen",
-    "subscribeCta": "Diesen Impuls täglich erhalten?",
-    "alreadySubscribed": "Du erhältst den täglichen Impuls"
+    "subscribeCta": "Diese Inspiration täglich erhalten?",
+    "alreadySubscribed": "Du erhältst die tägliche Inspiration"
   },
   "features": {
     "sectionTitle": "Wie dein BibelBot dich begleitet",
