@@ -1,6 +1,7 @@
 import { lazy, Suspense, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, GraduationCap, Church, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass, Send, Building2, Menu, FileText, ShieldCheck, LogIn, LogOut, User } from "lucide-react";
+import bibelbotLogo from "@/assets/bibelbot-logo.png";
 import { ChurchBanner } from "@/components/ChurchBanner";
 import { ReferralSection } from "@/components/ReferralSection";
 // EntryTiles removed - chips are now in ChatHero
@@ -64,7 +65,7 @@ const Index = () => {
       <nav className="bg-card/80 backdrop-blur-sm border-b border-border sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            <BookOpen className="h-8 w-8 text-primary" />
+            <img src={bibelbotLogo} alt="BibelBot" className="h-8 w-8" />
             <span className="text-2xl font-bold text-foreground">{i18n.language.startsWith("de") ? "BibelBot" : "BibleBot"}</span>
           </div>
           <div className="flex items-center gap-2">
