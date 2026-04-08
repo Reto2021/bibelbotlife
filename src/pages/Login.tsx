@@ -8,7 +8,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { BookOpen, Mail, Loader2, ArrowLeft } from "lucide-react";
+import { Mail, Loader2, ArrowLeft } from "lucide-react";
+import bibelbotLogo from "@/assets/bibelbot-logo.png";
 import { useToast } from "@/hooks/use-toast";
 import { Link } from "react-router-dom";
 
@@ -90,7 +91,7 @@ const Login = () => {
       <div className="w-full max-w-sm">
         <div className="text-center mb-6">
           <Link to="/" className="inline-flex items-center gap-2 text-foreground hover:text-primary transition-colors">
-            <BookOpen className="h-8 w-8 text-primary" />
+            <img src={bibelbotLogo} alt="BibelBot" className="h-10 w-10" />
             <span className="text-2xl font-bold">{i18n.language.startsWith("de") ? "BibelBot" : "BibleBot"}</span>
           </Link>
         </div>
