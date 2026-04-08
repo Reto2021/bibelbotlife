@@ -135,6 +135,14 @@ export default function ServiceEditor() {
     }
   };
 
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-[40vh] text-muted-foreground">
+        Gottesdienst wird geladen...
+      </div>
+    );
+  }
+
   return (
     <div className="max-w-4xl mx-auto space-y-6">
       {/* Header */}
