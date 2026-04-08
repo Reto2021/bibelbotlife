@@ -51,27 +51,7 @@ const moreTileConfigs: TileConfig[] = [
 
 export function EntryTiles() {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(true);
-
-  const checkScroll = useCallback(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-    setCanScrollLeft(el.scrollLeft > 4);
-    setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 4);
-  }, []);
-
-  useEffect(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-    checkScroll();
-    el.addEventListener("scroll", checkScroll, { passive: true });
-    window.addEventListener("resize", checkScroll);
-    return () => {
-      el.removeEventListener("scroll", checkScroll);
-      window.removeEventListener("resize", checkScroll);
-    };
-  }, [checkScroll]);
+  const [showMore, setShowMore] = useState(false);
 
   const { t } = useTranslation();
   const { track } = useTrack();
@@ -87,9 +67,11 @@ export function EntryTiles() {
     }
   };
 
+  const visibleTiles = showMore ? [...tileConfigs, ...moreTileConfigs] : tileConfigs;
+
   return (
     <section className="py-12 px-4">
-      <div className="container mx-auto max-w-6xl">
+      <div className="container mx-auto max-w-5xl">
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
             {t("tiles.sectionTitle")}
@@ -99,39 +81,10 @@ export function EntryTiles() {
           </p>
         </div>
 
-        {/* Mobile: Horizontal carousel */}
-        <div className="md:hidden relative">
-          <div
-            ref={scrollRef}
-            className="flex gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 -mx-4 px-4"
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-          >
-            {tileConfigs.map((tile, i) => (
-              <TileCard
-                key={i}
-                tile={tile}
-                title={t(`tiles.${tile.key}.title`)}
-                desc={t(`tiles.${tile.key}.desc`)}
-                onClick={() => handleClick(tile)}
-                index={i}
-                className="min-w-[220px] max-w-[250px] snap-start flex-shrink-0"
-              />
-            ))}
-            {/* Spacer to prevent last tile from being clipped */}
-            <div className="min-w-[1px] flex-shrink-0" aria-hidden="true" />
-          </div>
-          <div className="flex justify-center gap-1 mt-2">
-            {Array.from({ length: Math.ceil(tileConfigs.length / 2) }).map((_, i) => (
-              <div key={i} className="w-1.5 h-1.5 rounded-full bg-primary/30" />
-            ))}
-          </div>
-        </div>
-
-        {/* Desktop: grid */}
-        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {tileConfigs.map((tile, i) => (
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+          {visibleTiles.map((tile, i) => (
             <TileCard
-              key={i}
+              key={tile.key}
               tile={tile}
               title={t(`tiles.${tile.key}.title`)}
               desc={t(`tiles.${tile.key}.desc`)}
@@ -139,6 +92,15 @@ export function EntryTiles() {
               index={i}
             />
           ))}
+        </div>
+
+        <div className="text-center mt-6">
+          <button
+            onClick={() => setShowMore(!showMore)}
+            className="text-sm px-6 py-2.5 rounded-full border border-border bg-card text-muted-foreground hover:text-foreground hover:border-primary/40 transition-all duration-200"
+          >
+            {showMore ? t("tiles.showLess", "Weniger anzeigen") : t("tiles.showMore", "Mehr Themen entdecken")}
+          </button>
         </div>
       </div>
     </section>
