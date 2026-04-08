@@ -33,7 +33,7 @@ async function fetchBranding(slug: string): Promise<ChurchBranding | null> {
   return {
     churchName: data.name,
     churchSlug: data.slug,
-    botName: data.custom_bot_name || "BibelBot",
+    botName: data.custom_bot_name || "BibleBot",
     logoUrl: data.logo_url,
     primaryColor: data.primary_color,
     secondaryColor: data.secondary_color,
