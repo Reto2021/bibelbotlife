@@ -191,6 +191,7 @@ function getSpeechLang(lang: string): string {
 
 export function BibelBotChat() {
   const { t, i18n } = useTranslation();
+  const { isSenior, toggle: toggleSenior } = useSeniorMode();
   const [isOpen, setIsOpen] = useState(false);
   const [chatMode, setChatMode] = useState<ChatMode>("normal");
   const [showTeaser, setShowTeaser] = useState(false);
@@ -210,6 +211,22 @@ export function BibelBotChat() {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const { toast } = useToast();
   const { track } = useTrack();
+
+  // Senior mode size classes
+  const s = {
+    text: isSenior ? "text-xl" : "text-sm",
+    textXs: isSenior ? "text-base" : "text-xs",
+    textSm: isSenior ? "text-lg" : "text-sm",
+    btnSize: isSenior ? "h-14 w-14" : "h-10 w-10",
+    btnIcon: isSenior ? "h-6 w-6" : "h-4 w-4",
+    chatWidth: isSenior ? "w-[480px]" : "w-[390px]",
+    chatHeight: isSenior ? "h-[680px]" : "h-[580px]",
+    padding: isSenior ? "px-5 py-4" : "px-4 py-3",
+    msgPadding: isSenior ? "px-5 py-4" : "px-4 py-2.5",
+    inputRows: isSenior ? 2 : 1,
+    fabSize: isSenior ? "h-20 w-20" : "h-16 w-16",
+    fabIcon: isSenior ? "h-9 w-9" : "h-7 w-7",
+  };
 
   const welcomeMessage: Message = { role: "assistant", content: t("chat.welcome") };
   const journeyOffer: Message = { role: "assistant", content: t("chat.journeyOffer") };
