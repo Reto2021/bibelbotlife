@@ -12,6 +12,8 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { useChatHistory, type ChatMessage } from "@/hooks/use-chat-history";
 import { ChatSidebar } from "@/components/ChatSidebar";
+import { useAuth } from "@/hooks/use-auth";
+import { LogIn } from "lucide-react";
 
 const TYPEWRITER_SPEED = 45;
 const PAUSE_BETWEEN = 2800;
