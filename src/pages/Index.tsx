@@ -29,6 +29,7 @@ const BIBLE_EDITIONS = [
 
 const Index = () => {
   const { t } = useTranslation();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const features = [
     { icon: BookOpen, title: t("features.bible.title"), description: t("features.bible.desc") },
