@@ -1,296 +1,718 @@
 {
   "nav": {
-    "startNow": "Kom igång"
+    "startNow": "Starta nu"
   },
   "loader": "Laddar…",
   "hero": {
     "badge": {
       "noLogin": "Ingen inloggning",
       "noData": "Ingen data",
-      "noJudgment": "Ingen dom"
+      "noJudgment": "Ingen dömande"
     },
     "title1": "Bibeln.",
-    "title2": " Nytänkt.",
-    "subtitle": "BibleBot känner Bibeln – och ställer de rätta frågorna. Inte en person, men en ärlig följeslagare. För meningsfulla samtal, djupa frågor och verkliga impulser.",
+    "title2": " Nytt tänkande.",
+    "subtitle": "Din BibleBot känner Bibeln – och ställer de rätta frågorna. Ingen människa, men en ärlig följeslagare. För goda samtal, djupa frågor och äkta impulser.",
     "ctaTelegram": "Starta via Telegram",
     "ctaMore": "Läs mer",
-    "quote": "\"Come to me, all you who are weary and burdened, and I will give you rest.\"",
-    "quoteRef": "– Matthew 11:28"
+    "quote": "«Kom till mig, alla ni som är trötta och tyngda av bördor, så ska jag ge er vila.»",
+    "quoteRef": "– Matteus 11:28"
   },
   "impulse": {
-    "loading": "Loading daily impulse...",
-    "label": "Impulse of the Day",
-    "deepDive": "What does this mean for me?",
-    "explore": "Read full passage"
+    "loading": "Dagens impuls laddas...",
+    "label": "Dagens impuls",
+    "deepDive": "Vad betyder detta för mig?",
+    "explore": "Läs hela avsnittet"
   },
   "features": {
-    "sectionTitle": "How BibleBot accompanies you",
-    "sectionSubtitle": "Discover the many ways BibleBot can walk alongside you",
+    "sectionTitle": "Hur din BibleBot följer dig",
+    "sectionSubtitle": "Upptäck de många sätt din BibleBot kan följa dig på",
     "bible": {
-      "title": "Bible passages & interpretation",
-      "desc": "Ask \"What does the Bible say about...?\" and receive relevant verses with context and clear explanation."
+      "title": "Bibelställen & tolkning",
+      "desc": "Fråga «Vad säger Bibeln om...?» och få passande verser med kontext och en förståelig förklaring."
     },
     "goals": {
-      "title": "Life planning & goals",
-      "desc": "Discover your calling, set concrete goals, and find out what God might have in store for you."
+      "title": "Livsplanering & målsättning",
+      "desc": "Upptäck ditt kall, sätt konkreta mål och ta reda på vad Gud kan ha för planer med dig."
     },
     "self": {
-      "title": "Finding yourself",
-      "desc": "Recognize your gifts, strengths, and longings – and what your heart truly needs."
+      "title": "Hitta dig själv",
+      "desc": "Känn igen dina gåvor, styrkor och längtan – och vad ditt hjärta verkligen behöver."
     },
     "faith": {
-      "title": "Faith journey & finding Christ",
-      "desc": "Whether seeking, doubting, or deepening – BibleBot accompanies you on your personal path."
+      "title": "Tro & hitta Kristus",
+      "desc": "Oavsett om du söker, tvivlar eller vill fördjupa dig – din BibleBot följer dig på din personliga väg."
     },
     "daily": {
-      "title": "Daily impulses & church year",
-      "desc": "Start your day with impulses and let BibleBot guide you through Advent, Lent, and holidays."
+      "title": "Dagliga impulser & kyrkoår",
+      "desc": "Börja dagen med impulser och låt dig vägledas genom advent, fasta och helgdagar."
     },
     "groups": {
-      "title": "Groups & communities",
-      "desc": "Perfect for Bible study groups, church communities, and shared devotions."
+      "title": "Grupper & församlingar",
+      "desc": "Perfekt för bibelstudiegrupper, församlingsgrupper och gemensamma andakter."
     }
   },
   "coaching": {
-    "badge": "Methodology",
-    "title": "Not just a chatbot – genuine companionship",
-    "subtitle": "BibleBot combines biblical wisdom with proven coaching methods and Positive Psychology.",
-    "journeyTitle": "Personal companionship",
-    "journeyDesc": "BibleBot accompanies you as long as you wish – in free conversation or with an optional 21-day structure.",
-    "week1": "Week 1: Arriving",
-    "week1Desc": "Building trust, listening, understanding your situation. Where are you? What concerns you?",
-    "week2": "Week 2: Deepening",
-    "week2Desc": "Recognizing patterns, clarifying desires, deepening biblical impulses. What do you really want?",
-    "week3": "Week 3: Acting",
-    "week3Desc": "Taking concrete steps, setting goals, initiating change. What's your next step?",
-    "openQuestionsTitle": "Open questions instead of quick answers",
-    "openQuestionsDesc": "BibleBot doesn't give cheap advice. Instead, it asks the questions that truly matter:",
-    "openQ1": "\"What's really behind this desire?\"",
-    "openQ2": "\"How would you know something has changed?\"",
-    "openQ3": "\"What would be a first small step?\"",
-    "honestTitle": "Honest instead of toxic positivity",
-    "honestDesc": "No \"It'll be fine!\" and no sugarcoating. BibleBot is empathetic AND honest:",
-    "honest1": "Also addresses uncomfortable Bible passages",
-    "honest2": "Challenges you to self-reflection",
-    "honest3": "Distinguishes comfort from avoidance",
-    "scienceTitle": "Scientifically grounded",
+    "badge": "Metodik",
+    "title": "Inte bara en chatbot – en äkta följeslagare",
+    "subtitle": "Din BibleBot kombinerar biblisk visdom med beprövade coachningsmetoder och positiv psykologi.",
+    "journeyTitle": "Personlig vägledning",
+    "journeyDesc": "Din BibleBot följer dig så länge du vill – i fria samtal eller med en valfri 21-dagarsstruktur.",
+    "week1": "Vecka 1: Ankomst",
+    "week1Desc": "Bygga förtroende, lyssna, förstå din situation. Var står du? Vad bekymrar dig?",
+    "week2": "Vecka 2: Fördjupning",
+    "week2Desc": "Känna igen mönster, klargöra önskningar, fördjupa bibliska impulser. Vad vill du verkligen?",
+    "week3": "Vecka 3: Handling",
+    "week3Desc": "Ta konkreta steg, formulera mål, initiera förändring. Vad är ditt nästa steg?",
+    "openQuestionsTitle": "Öppna frågor istället för snabba svar",
+    "openQuestionsDesc": "Din BibleBot ger dig inga billiga råd. Istället ställer den de frågor som verkligen räknas:",
+    "openQ1": "«Vad ligger egentligen bakom denna önskan?»",
+    "openQ2": "«Hur skulle du märka att något har förändrats?»",
+    "openQ3": "«Vad skulle vara ett första litet steg?»",
+    "honestTitle": "Ärlig istället för toxiskt positiv",
+    "honestDesc": "Inget «Det ordnar sig!» och ingen försköning. Din BibleBot är empatisk OCH ärlig:",
+    "honest1": "Nämnar även obekväma bibelställen",
+    "honest2": "Utmanar till självreflektion",
+    "honest3": "Skiljer tröst från förträngning",
+    "scienceTitle": "Vetenskapligt grundad",
     "perma": {
-      "name": "PERMA Model",
+      "name": "PERMA-modellen",
       "author": "Seligman",
-      "desc": "Positive emotions, meaning & growth"
+      "desc": "Positiva känslor, mening & tillväxt"
     },
     "logo": {
-      "name": "Logotherapy",
+      "name": "Logoterapi",
       "author": "Frankl",
-      "desc": "Finding meaning in difficult times"
+      "desc": "Meningssökande i svåra tider"
     },
     "gratitude": {
-      "name": "Gratitude",
+      "name": "Tacksamhet",
       "author": "Emmons",
-      "desc": "Research-based gratitude practice"
+      "desc": "Forskningsbaserad tacksamhetspraxis"
     },
     "forgiveness": {
-      "name": "Forgiveness",
+      "name": "Förlåtelse",
       "author": "Worthington",
-      "desc": "REACH model for forgiveness processes"
+      "desc": "REACH-modellen för förlåtelseprocesser"
     },
-    "renameTip": "💡 You can give your BibleBot a personal name – so it truly becomes <strong>your</strong> companion."
+    "renameTip": "💡 Du kan ge din BibleBot ett eget namn – så att den verkligen blir <strong>din</strong> följeslagare."
   },
   "discover": {
-    "badge": "For the curious",
-    "title": "Rediscover faith – without pressure",
-    "subtitle": "More and more people are asking the big questions anew. BibleBot.Life is for everyone who wants to (re)discover faith – honestly, without pathos, and without church jargon.",
+    "badge": "För nyfikna",
+    "title": "Upptäck tron på nytt – utan press",
+    "subtitle": "Allt fler människor ställer sig de stora frågorna på nytt. BibleBot.Life är för alla som vill (åter)upptäcka tron – ärligt, utan patos och utan kyrklig jargong.",
     "doubt": {
-      "title": "You doubt?",
-      "text": "Good. Doubt isn't a flaw – it's the beginning of honest faith. The Bible is full of people who wrestled."
+      "title": "Du tvivlar?",
+      "text": "Bra så. Tvivlet är inget fel – det är början på en ärlig tro. Bibeln är full av människor som har kämpat."
     },
     "search": {
-      "title": "You're searching?",
-      "text": "Maybe you don't even know what for. That's perfectly fine. BibleBot helps you ask the right questions – instead of delivering quick answers."
+      "title": "Du söker?",
+      "text": "Kanske vet du inte ens exakt vad du söker. Det är helt okej. Din BibleBot hjälper dig att ställa de rätta frågorna – istället för att ge snabba svar."
     },
     "deepen": {
-      "title": "You want to go deeper?",
-      "text": "You already believe, but want to understand more? Discover the depth of the Bible – historical, personal, surprisingly relevant."
+      "title": "Du vill fördjupa dig?",
+      "text": "Du tror redan, men vill förstå mer? Upptäck Bibelns djup – historiskt, personligt, överraskande relevant."
     },
-    "quote": "\"Ask, and it will be given to you; seek, and you will find; knock, and the door will be opened.\"",
-    "quoteRef": "– Matthew 7:7",
-    "quoteText": "Many of us don't talk much about faith. That's okay. But those with questions deserve honest answers – without sermons, without membership, without ulterior motives."
+    "quote": "«Knacka, så ska dörren öppnas för er.»",
+    "quoteRef": "– Matteus 7:7",
+    "quoteText": "I Schweiz pratar vi inte mycket om tro. Det behöver vi inte heller. Men den som har frågor förtjänar ärliga svar – utan predikan, utan medlemskap, utan baktankar."
   },
   "subscribe": {
-    "title": "Daily Bible impulse",
-    "subtitle": "Every morning at 7:00 AM – a verse, a thought, a good start.",
-    "firstName": "Your first name",
-    "firstNameOptional": "(optional)",
-    "firstNamePlaceholder": "e.g. Thomas",
-    "firstNameHint": "So we can greet you personally.",
-    "channelLabel": "How would you like to receive the impulse?",
+    "title": "Daglig bibelimpuls",
+    "subtitle": "Varje morgon kl. 07:00 – en vers, en tanke, en bra start.",
+    "firstName": "Ditt förnamn",
+    "firstNameOptional": "(valfritt)",
+    "firstNamePlaceholder": "t.ex. Thomas",
+    "firstNameHint": "Så att vi kan hälsa dig personligen.",
+    "channelLabel": "Hur vill du ta emot impulsen?",
     "push": "Push",
-    "pushDesc": "Browser notification",
+    "pushDesc": "Webbläsaravisering",
     "telegram": "Telegram",
-    "telegramDesc": "Message via Telegram",
+    "telegramDesc": "Meddelande via Telegram",
     "sms": "SMS",
-    "smsDesc": "Text to your phone",
-    "phoneLabel": "Phone number",
-    "phonePlaceholder": "+1 555 123 4567",
-    "phoneHint": "With country code, e.g. +1 for the US.",
-    "telegramHint": "Click \"Subscribe\" – you'll be redirected to Telegram. Start the bot and type <strong>/daily</strong> to activate the daily impulse.",
-    "pushHint": "After clicking \"Subscribe\", your browser will ask for notification permission. Please allow it to receive the impulse.",
-    "submit": "Subscribe",
-    "submitting": "Subscribing...",
-    "footNote": "No login required. Cancel anytime.",
-    "successTitle": "You're subscribed! 🙏",
-    "successText": "Starting tomorrow at 7:00 AM, you'll receive your personal Bible impulse.",
-    "toastTelegram": "Telegram opened 🙏",
-    "toastTelegramDesc": "Start the bot and type /daily to activate the daily impulse.",
-    "toastSuccess": "Subscribed! 🙏",
-    "toastSuccessDesc": "You'll receive your daily impulse starting tomorrow.",
-    "toastPushPreview": "Push subscription not available in preview",
-    "toastPushPreviewDesc": "Push notifications only work on the published site.",
-    "toastNotSupported": "Not supported",
-    "toastNotSupportedDesc": "Your browser does not support push notifications.",
-    "toastPermDenied": "Permission denied",
-    "toastPermDeniedDesc": "Please allow notifications in your browser settings.",
-    "toastError": "Error",
-    "toastErrorDesc": "Please try again later."
+    "smsDesc": "SMS till din mobil",
+    "phoneLabel": "Mobilnummer",
+    "phonePlaceholder": "+46 70 123 45 67",
+    "phoneHint": "Med landskod, t.ex. +46 för Sverige.",
+    "telegramHint": "Klicka på «Anmäl dig» – du kommer att omdirigeras till Telegram. Starta boten där och skriv <strong>/daily</strong> för att aktivera den dagliga impulsen.",
+    "pushHint": "Efter att ha klickat på «Anmäl dig» kommer din webbläsare att fråga om behörighet för aviseringar. Vänligen tillåt dem för att få impulsen.",
+    "submit": "Anmäl dig",
+    "submitting": "Anmäler...",
+    "footNote": "Ingen inloggning krävs. Kan avbeställas när som helst.",
+    "successTitle": "Du är anmäld! 🙏",
+    "successText": "Från och med imorgon kl. 07:00 får du din personliga bibelimpuls.",
+    "toastTelegram": "Telegram öppnat 🙏",
+    "toastTelegramDesc": "Starta boten och skriv /daily för att aktivera den dagliga impulsen.",
+    "toastSuccess": "Anmäld! 🙏",
+    "toastSuccessDesc": "Du får din dagliga impuls från och med imorgon.",
+    "toastPushPreview": "Push-prenumeration inte i förhandsvisning",
+    "toastPushPreviewDesc": "Push-aviseringar fungerar endast på den publicerade sidan.",
+    "toastNotSupported": "Stöds inte",
+    "toastNotSupportedDesc": "Din webbläsare stöder inte push-aviseringar.",
+    "toastPermDenied": "Behörighet nekad",
+    "toastPermDeniedDesc": "Vänligen tillåt aviseringar i dina webbläsarinställningar.",
+    "toastError": "Fel",
+    "toastErrorDesc": "Vänligen försök igen senare."
   },
   "faq": {
-    "badge": "FAQ",
-    "title": "What you should know about BibleBot",
-    "subtitle": "Transparency matters – especially for theologians, pastors, and critical thinkers.",
-    "q1": "What makes BibleBot different from ChatGPT & Co.?",
-    "q1Generic": "Generic chatbots:",
+    "badge": "Vanliga frågor",
+    "title": "Vad du bör veta om din BibleBot",
+    "subtitle": "Transparens är viktigt för oss – särskilt gentemot teologer, själavårdare och kritiska tänkare.",
+    "q1": "Vad skiljer din BibleBot från ChatGPT & Co.?",
+    "q1Generic": "Generiska chatbots:",
     "q1GenericItems": [
-      "Superficial Bible quotes without context",
-      "No pastoral guardrails",
-      "Avoids uncomfortable texts",
-      "No crisis intervention",
-      "Mixes Bible with esotericism",
-      "No follow-up questions – just confirmation"
+      "Ytliga bibelcitat utan kontext",
+      "Inga själavårdande skyddsräcken",
+      "Undviker obekväma texter",
+      "Ingen krisintervention",
+      "Blandar Bibeln med esoterik",
+      "Inga följdfrågor – bara bekräftelse"
     ],
     "q1Bot": "BibleBot.Life:",
     "q1BotItems": [
-      "5 recognized translations – including uncomfortable passages",
-      "Guardrails AND challenging companionship",
-      "Follow-up questions for self-reflection",
-      "Crisis referrals (emergency helplines)",
-      "Exclusively Christian theology",
-      "Promotes critical thinking as faith maturity"
+      "5 erkända översättningar – även obekväma ställen",
+      "Skyddsräcken OCH utmanande vägledning",
+      "Följdfrågor för självreflektion",
+      "Krisreferenser (Tel. 143 / 147)",
+      "Exklusivt kristen teologi",
+      "Främjar kritiskt tänkande som trosmognad"
     ],
-    "q2": "Which Bible translations are included?",
-    "q2Intro": "BibleBot works ecumenically with the major German-language Bible editions:",
-    "q2Outro": "All Bible passages include source citations and historical context.",
-    "q3": "What scientific foundations are behind it?",
-    "q3Intro": "The companionship is based on peer-reviewed research in Positive Psychology:",
-    "q4": "How does BibleBot ensure pastoral safety?",
+    "q2": "Vilka bibelöversättningar används?",
+    "q2Intro": "Din BibleBot arbetar ekumeniskt med de viktigaste tyskspråkiga bibelutgåvorna:",
+    "q2Outro": "Alla bibelställen anges med källhänvisning och historisk kontext.",
+    "q3": "Vilka vetenskapliga grunder ligger bakom?",
+    "q3Intro": "Vägledningen baseras på peer-reviewed forskning inom positiv psykologi:",
+    "q4": "Hur säkerställer din BibleBot själavårdande säkerhet?",
     "q4Items": [
-      "Suicidal thoughts or crisis → immediate referral to emergency helplines",
-      "No psychological or medical diagnoses",
-      "Respect without arbitrariness – clear biblical positions are taken",
-      "Empathy AND honesty – uncomfortable topics are addressed",
-      "Follow-up questions for self-reflection instead of cheap validation",
-      "No toxic positivity – genuine, honest companionship",
-      "Openly names tensions and difficult texts"
+      "Vid självmordstankar eller kriser → omedelbar hänvisning till Dargebotene Hand (143) och Pro Juventute (147)",
+      "Inga psykologiska eller medicinska diagnoser",
+      "Respekt utan godtycklighet – tydliga bibliska ståndpunkter intas",
+      "Empati OCH ärlighet – även obekväma ämnen tas upp",
+      "Följdfrågor för självreflektion istället för billig bekräftelse",
+      "Ingen toxisk positivitet – äkta, ärlig vägledning",
+      "Benämner spänningar och svåra texter öppet"
     ],
-    "q5": "Is BibleBot tied to a specific denomination?",
-    "q5Answer": "No. BibleBot is ecumenically oriented and respects Reformed, Catholic, Free Church, and other Christian traditions equally. When there are denominational differences in interpretation, various perspectives are presented transparently – without favoring any tradition.",
-    "q6": "Does BibleBot replace pastoral care or therapy?",
-    "q6Answer": "No. BibleBot is a digital tool for personal Bible reading and reflection. It does not replace professional pastoral care, theological counseling, or psychological therapy. In serious crises, BibleBot always refers to qualified resources.",
-    "q7": "Isn't BibleBot just a 'feel-good bot'?",
-    "q7Answer": "No. BibleBot comforts where comfort is needed – but it also challenges. Spiritual growth requires friction. BibleBot asks uncomfortable follow-up questions, names difficult Bible texts (Job, Lament Psalms, prophetic criticism), and doesn't shy away from topics like justice, repentance, and responsibility. The prophetic tradition was never comfortable – and neither is BibleBot.",
-    "q8": "Who is behind BibleBot and how is it funded?",
-    "q8Answer": "BibleBot.Life is a private, non-commercial project. It's run on a volunteer basis and funded exclusively through voluntary donations. There's no advertising, no data sales, and no paid features. All donations go directly to covering operating costs (infrastructure, hosting, development). Since BibleBot is a private project, donations are not tax-deductible.",
-    "q9": "How does BibleBot handle my data?",
-    "q9Answer": "BibleBot stores no personal data and no chat histories. Every conversation is anonymous. There's no login, no tracking, and no sharing of data with third parties. Usage is completely anonymous."
+    "q5": "Är din BibleBot konfessionellt bunden?",
+    "q5Answer": "Nej. Din BibleBot är ekumeniskt inriktad och respekterar reformerta, katolska, frikyrkliga och andra kristna traditioner lika mycket. Vid konfessionellt olika tolkningar presenteras olika perspektiv transparent – utan att favorisera en tradition.",
+    "q6": "Ersätter din BibleBot själavård eller terapi?",
+    "q6Answer": "Nej. Din BibleBot är ett digitalt hjälpmedel för personlig bibelläsning och reflektion. Den ersätter inte professionell själavård, teologisk rådgivning eller psykologisk terapi. Vid allvarliga kriser hänvisar din BibleBot alltid till kvalificerade kontaktpunkter.",
+    "q7": "Är din BibleBot inte bara en «må-bra-bot»?",
+    "q7Answer": "Nej. Din BibleBot tröstar där tröst behövs – men den utmanar också. Andlig tillväxt kräver friktion. Din BibleBot ställer obekväma följdfrågor, nämner svåra bibeltexter (Job, klagopsalmer, profetisk kritik) och drar sig inte för ämnen som rättvisa, omvändelse och ansvar. Den profetiska traditionen var aldrig bekväm – och din BibleBot är det inte heller.",
+    "q8": "Vem står bakom din BibleBot och hur finansieras den?",
+    "q8Answer": "BibleBot.Life är ett privat, icke-kommersiellt projekt. Det drivs ideellt och finansieras uteslutande genom frivilliga donationer. Det finns ingen reklam, ingen dataförsäljning och inga betalda funktioner. Alla donationer går direkt till att täcka de löpande kostnaderna (infrastruktur, hosting, utveckling). Eftersom BibleBot drivs som ett privat projekt är donationer inte avdragsgilla.",
+    "q9": "Hur hanterar din BibleBot mina data?",
+    "q9Answer": "Din BibleBot lagrar inga personliga data och inga chatthistoriker. Varje samtal är anonymt. Det finns ingen inloggning, ingen spårning och ingen vidarebefordran av data till tredje part. Användningen är helt anonym."
   },
   "donate": {
-    "badge": "Support BibleBot",
-    "title": "Help keep BibleBot free",
-    "subtitle": "BibleBot is a passion project – no ads, no subscriptions, no hidden costs. To keep it that way, I rely on voluntary donations. Every contribution helps cover the ongoing costs for operations and infrastructure.",
-    "bankTitle": "Donate via bank transfer",
-    "bankSubtitle": "Every amount counts – thank you! 🙏",
-    "recipient": "Recipient",
+    "badge": "Stöd din BibleBot",
+    "title": "Hjälp till att hålla din BibleBot gratis",
+    "subtitle": "Din BibleBot är ett hjärteprojekt – utan reklam, utan prenumeration, utan dolda kostnader. För att det ska förbli så är jag beroende av frivilliga donationer. Varje bidrag hjälper till att täcka de löpande kostnaderna för drift och infrastruktur.",
+    "bankTitle": "Donera via banköverföring",
+    "bankSubtitle": "Varje belopp räknas – stort tack! 🙏",
+    "recipient": "Mottagare",
     "bank": "Bank",
-    "purpose": "Reference",
+    "purpose": "Ändamål",
     "purposeValue": "Donation BibleBot",
-    "note": "BibleBot.Life is operated as a private project. Donations are therefore not tax-deductible."
+    "note": "BibleBot.Life drivs som ett privat projekt. Donationer är därför inte avdragsgilla."
+  },
+  "refer": {
+    "badge": "Dela Guds ord",
+    "title": "Rekommendera BibleBot",
+    "subtitle": "Känner du någon som behöver uppmuntran just nu? Dela BibleBot – ett meddelande kan göra stor skillnad.",
+    "whatsapp": "Dela via WhatsApp",
+    "whatsappMsg": "Hej, jag ville visa dig BibleBot – en gratis bibelkompanjon som känner Bibeln och ställer riktigt bra frågor. Ingen inloggning, anonym, ärlig. Prova den: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "telegram": "Dela via Telegram",
+    "telegramMsg": "Hej, känner du till BibleBot? En gratis personlig bibelkompanjon – ärlig, anonym, utan inloggning. Kolla in den: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "email": "Dela via e-post",
+    "emailSubject": "Detta kan intressera dig: BibleBot.Life",
+    "emailBody": "Hej!\n\nJag ville visa dig BibleBot – en gratis bibelkompanjon som verkligen känner Bibeln. Ingen registrering krävs, helt anonym.\n\nDen ställer bra följdfrågor, förklarar bibelställen i kontext och följer dig ärligt – även i svåra ämnen.\n\nProva den: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nMed vänliga hälsningar",
+    "copy": "Kopiera länk",
+    "copied": "Länk kopierad! 📋",
+    "qr": "Eller visa bara denna QR-kod:"
   },
   "cta": {
-    "title": "You don't have to go through this alone",
-    "subtitle": "Just tell BibleBot what's on your mind. No login, no cost, no judgment – just honest companionship and the wisdom of the Bible.",
-    "button": "Start a conversation"
+    "title": "Du behöver inte gå igenom detta ensam",
+    "subtitle": "Skriv bara till din BibleBot vad som bekymrar dig. Ingen inloggning, inga kostnader, ingen dömande – bara ärlig vägledning och Bibelns visdom.",
+    "button": "Starta samtal nu"
   },
   "footer": {
     "tagline": "Din personliga följeslagare för ett liv med Bibeln",
-    "disclaimer": "BibleBot.Life is a digital tool and does not replace professional pastoral care, theological counseling, or psychological therapy. In acute crises, please contact your local emergency helpline.",
-    "impressum": "Imprint",
-    "notes": "Notes",
-    "private": "Private, non-commercial project",
-    "noChat": "No storage of chat data",
-    "noTax": "Donations are not tax-deductible",
-    "datenschutz": "Privacy Policy",
-    "love": "With ❤️ for everyone wondering what Christ thinks.",
-    "forChurches": "For Churches"
+    "disclaimer": "BibleBot.Life är ett digitalt hjälpmedel och ersätter inte professionell själavård, teologisk rådgivning eller psykologisk terapi. Vid akuta kriser, kontakta Dargebotene Hand (tel. 143) eller Pro Juventute (tel. 147).",
+    "impressum": "Impressum",
+    "notes": "Anmärkningar",
+    "private": "Privat, icke-kommersiellt projekt",
+    "noChat": "Ingen lagring av chattdata",
+    "noTax": "Donationer är inte avdragsgilla",
+    "datenschutz": "Dataskydd",
+    "love": "Med ❤️ för alla som undrar vad Kristus tänker.",
+    "forChurches": "För församlingar"
   },
   "chat": {
-    "welcome": "Welcome! 🤗\n\nI'm your BibleBot – your personal companion with the Bible, good questions, and real impulses. No pressure, no judgment.\n\nYou can ask me anything – or just share what's on your mind. 💛",
-    "journeyOffer": "💡 **Tip:** I also offer a **21-day journey** – 3 weeks of daily impulses, reflections, and concrete steps. At your own pace.\n\nWould you like to try it?",
-    "suggestion1": "I need an uplifting word right now",
-    "suggestion2": "What does the Bible say when you feel uncertain?",
-    "suggestion3": "I want to find out what I really want",
-    "teaser": "Vad tänker du på? 💛",
-    "teaserSub": "I'm here – without any judgment.",
-    "openChat": "Open chat",
-    "closeChat": "Close chat",
-    "yourCompanion": "Your personal companion",
-    "journeyComplete": "21 days completed! 🎉",
-    "arriving": "Arriving",
-    "deepening": "Deepening",
-    "acting": "Acting",
-    "renameTip": "Tip: Click the name to rename me ✨",
-    "changeName": "Change name",
-    "placeholder": "Skriv fritt...",
-    "startVoice": "Start voice input",
-    "stopVoice": "Stop recording",
-    "noVoice": "Your browser does not support voice input.",
-    "writing": "typing...",
-    "shieldBadge": "No login · No judgment · Citations verified",
-    "journeyStart": "Yes, let's go ✨",
-    "journeyLater": "Maybe later",
-    "journeyStartMsg": "Yes, I'd like to start the 21-day journey!",
-    "qaChecking": "Checking citations...",
-    "qaIssue": "{{count}} issue with citations",
-    "qaIssue_plural": "{{count}} issues with citations",
-    "qaOk": "{{count}} citation verified ✓",
-    "qaOk_plural": "{{count}} citations verified ✓",
-    "qaWarning": "⚠️ Accuracy notes:",
-    "errorTooMany": "Too many requests – please wait a moment.",
-    "errorCredits": "AI quota exhausted.",
-    "errorConnect": "Connection error.",
-    "errorTitle": "Error",
-    "errorConnection": "could not be reached.",
-    "errorNoStream": "No stream",
-    "seniorMode": "Senior mode (larger text)",
-    "teaserCta": "Start writing →",
-    "namePlaceholder": "e.g. Eli, Miriam…"
+    "welcome": "Kul att du är här 🤗\n\nJag är din BibleBot – din personliga följeslagare med Bibeln, goda frågor och konkreta impulser. Ingen press, ingen bedömning.\n\nDu kan fråga mig vad som helst – eller bara berätta vad som bekymrar dig just nu. 💛",
+    "journeyOffer": "💡 **Tips:** Jag erbjuder också en **21-dagars vägledning** – 3 veckor med dagliga impulser, reflektioner och konkreta steg. Helt i din egen takt.\n\nVill du prova det?",
+    "suggestion1": "Jag behöver ett uppmuntrande ord just nu",
+    "suggestion2": "Vad säger Bibeln när man känner sig osäker?",
+    "suggestion3": "Jag vill ta reda på vad jag verkligen vill",
+    "teaser": "Vad bekymrar dig just nu? 💛",
+    "teaserSub": "Jag är här – helt utan bedömning.",
+    "teaserCta": "Skriv nu →",
+    "openChat": "Öppna chatt",
+    "closeChat": "Stäng chatt",
+    "yourCompanion": "Din personliga följeslagare",
+    "journeyComplete": "21 dagar avklarade! 🎉",
+    "arriving": "Ankomst",
+    "deepening": "Fördjupning",
+    "acting": "Handling",
+    "renameTip": "Ge mig ett namn ✨",
+    "namePlaceholder": "t.ex. Eli, Miriam…",
+    "changeName": "Ändra namn",
+    "placeholder": "Bara skriv på...",
+    "startVoice": "Starta röstinmatning",
+    "stopVoice": "Stoppa inspelning",
+    "noVoice": "Din webbläsare stöder inte röstinmatning.",
+    "writing": "skriver...",
+    "shieldBadge": "Ingen inloggning · Ingen dömande · Citat kontrollerade",
+    "journeyStart": "Ja, starta ✨",
+    "journeyLater": "Kanske senare",
+    "journeyStartMsg": "Ja, jag vill starta 21-dagars vägledningen!",
+    "qaChecking": "Citat kontrolleras...",
+    "qaIssue": "{{count}} anmärkning om citat",
+    "qaIssue_plural": "{{count}} anmärkningar om citat",
+    "qaOk": "{{count}} citat kontrollerat ✓",
+    "qaOk_plural": "{{count}} citat kontrollerade ✓",
+    "qaWarning": "⚠️ Anmärkningar om noggrannhet:",
+    "errorTooMany": "För många förfrågningar – vänta en stund.",
+    "errorCredits": "AI-kvoten är slut.",
+    "errorConnect": "Fel vid anslutning.",
+    "errorTitle": "Fel",
+    "errorConnection": "kunde inte nås.",
+    "errorNoStream": "Ingen ström",
+    "seniorMode": "Seniorläge (större text)"
   },
   "install": {
     "title": "Installera BibleBot",
-    "androidDesc": "Quick access from your home screen",
-    "iosDesc": "Tap \"Share\" → \"Add to Home Screen\"",
-    "button": "Install",
-    "close": "Close"
+    "androidDesc": "Snabb åtkomst direkt från startskärmen",
+    "iosDesc": "Tryck på «Dela» → «Lägg till på hemskärmen»",
+    "button": "Installera",
+    "close": "Stäng"
+  },
+  "share": {
+    "label": "Dela",
+    "shareVia": "Dela via",
+    "copied": "Kopierat! 📋",
+    "copiedShort": "Kopierat!",
+    "copiedDesc": "Texten har kopierats till urklipp. Dela den nu på WhatsApp, Instagram eller var du vill!",
+    "copyLink": "Kopiera text",
+    "error": "Kopiering misslyckades",
+    "impulseTitle": "BibleBot – Dagens impuls",
+    "chatTitle": "BibleBot – Dagens tanke",
+    "createImage": "Skapa bild ✨",
+    "generating": "Skapar…",
+    "imageReady": "Din bild är redo att delas!",
+    "shareImage": "Dela bild",
+    "download": "Spara",
+    "imageError": "Bildskapande misslyckades",
+    "imageErrorDesc": "Bilden kunde inte skapas. Försök igen senare.",
+    "imageSaved": "Text kopierad! 📋",
+    "imageSavedDesc": "Spara bilden och dela den med den kopierade texten på Instagram, WhatsApp eller var du vill!"
   },
   "darkMode": {
-    "light": "Light mode",
-    "dark": "Dark mode"
+    "light": "Ljust läge",
+    "dark": "Mörkt läge"
   },
   "impressum": {
-    "back": "Back to home",
-    "title": "Imprint"
+    "back": "Tillbaka till startsidan",
+    "title": "Impressum"
   },
   "datenschutz": {
-    "back": "Back to home",
-    "title": "Privacy Policy"
+    "back": "Tillbaka till startsidan",
+    "title": "Dataskyddspolicy"
+  },
+  "tiles": {
+    "sectionTitle": "Vad rör dig?",
+    "sectionSubtitle": "Välj ett ämne — BibleBot följer dig",
+    "baptism": {
+      "title": "Hitta dopvers",
+      "desc": "Den perfekta versen för ditt barn",
+      "prompt": "Hjälp mig att hitta en passande dopvers. Vad för slags barn är det och vad önskar föräldrarna?"
+    },
+    "condolence": {
+      "title": "Tröstande ord",
+      "desc": "Kondoleans & avsked",
+      "prompt": "Jag behöver tröstande ord för ett kondoleanskort. Kan du hjälpa mig att formulera något passande?"
+    },
+    "wedding": {
+      "title": "Bröllopsvers",
+      "desc": "Bibliska ord för er kärlek",
+      "prompt": "Vi söker en vacker biblisk vers för vårt bröllop. Vilka bibelställen passar kärlek och partnerskap?"
+    },
+    "anxiety": {
+      "title": "Ångest & oro",
+      "desc": "Hitta mod i svåra tider",
+      "prompt": "Jag kämpar just nu med ångest och oro. Vad säger Bibeln om det? Finns det verser som ger mod?"
+    },
+    "confession": {
+      "title": "Bikt",
+      "desc": "Gud förlåter — säg det",
+      "prompt": "Jag vill bli av med något som tynger mig. Vad säger Bibeln om förlåtelse och en ny start?"
+    },
+    "heartbreak": {
+      "title": "Kärlekssorg",
+      "desc": "Vad Bibeln säger om hjärtesorg",
+      "prompt": "Mitt hjärta är krossat. Vad säger Bibeln om kärlekssorg och hur man hittar hopp igen?"
+    },
+    "newstart": {
+      "title": "Ny start",
+      "desc": "Kraft för en ny livsfas",
+      "prompt": "Jag står inför en ny start och behöver uppmuntran. Vilka bibelställen talar om nya starter?"
+    },
+    "namequiz": {
+      "title": "Dop-quiz",
+      "desc": "Hitta det passande bibliska namnet",
+      "prompt": "Jag söker ett bibliskt namn till mitt barn. Kan du ge mig några förslag och förklara deras betydelse?"
+    },
+    "sleepless": {
+      "title": "Sömnlös",
+      "desc": "Hitta ro på natten",
+      "prompt": "Jag kan inte sova och oroar mig. Finns det en lugnande bön eller psalm för natten?"
+    },
+    "loneliness": {
+      "title": "Ensamhet",
+      "desc": "Du är aldrig ensam",
+      "prompt": "Jag känner mig ensam. Vad säger Bibeln om att Gud alltid är med oss?"
+    },
+    "decision": {
+      "title": "Svårt beslut",
+      "desc": "Visdom för den rätta vägen",
+      "prompt": "Jag står inför ett svårt beslut. Vilka bibelställen hjälper mig att hitta den rätta vägen?"
+    },
+    "gratitude": {
+      "title": "Tacksamhet",
+      "desc": "En personlig tacksägelsebön",
+      "prompt": "Jag vill tacka Gud. Hjälp mig att formulera en personlig tacksägelsebön."
+    },
+    "lifewheel": {
+      "title": "Livshjul",
+      "desc": "Hur nöjd är du egentligen?"
+    },
+    "sevenwhys": {
+      "title": "7 Varför",
+      "desc": "Hitta den djupaste roten till din fråga",
+      "prompt": "Jag vill göra 7-varför-övningen. Här är mitt ämne:"
+    },
+    "anger": {
+      "title": "Ilska & vrede",
+      "desc": "När du kunde explodera av ilska",
+      "prompt": "Jag är så arg och vet inte vart jag ska ta vägen med min ilska. Vad säger Bibeln om vrede och hur jag kan hantera den?"
+    },
+    "shame": {
+      "title": "Skam & skuld",
+      "desc": "När skuldkänslor tynger dig",
+      "prompt": "Jag skäms så mycket och känner mig skyldig. Vad säger Bibeln om skuld, förlåtelse och en ny start?"
+    },
+    "burnout": {
+      "title": "Utbrändhet",
+      "desc": "När du bara inte orkar mer",
+      "prompt": "Jag är helt utmattad och utbränd. Jag orkar bara inte mer. Vad säger Bibeln om vila och återhämtning?"
+    },
+    "illness": {
+      "title": "Sjukdom",
+      "desc": "När en diagnos förändrar allt",
+      "prompt": "Jag har fått en svår diagnos och är rädd. Vad säger Bibeln om sjukdom, helande och hopp?"
+    },
+    "financial": {
+      "title": "Ekonomiska bekymmer",
+      "desc": "När räkningarna hopar sig",
+      "prompt": "Jag har ekonomiska bekymmer och vet inte vad jag ska göra. Vad säger Bibeln om pengar, tillit och försörjning?"
+    },
+    "meaningcrisis": {
+      "title": "Meningskris",
+      "desc": "Vad är allt detta till för?",
+      "prompt": "Jag undrar vad allt detta är till för. Jag befinner mig i en meningskris. Vad säger Bibeln om livets mening?"
+    },
+    "selfdoubt": {
+      "title": "Självtvivel",
+      "desc": "När du inte känner dig tillräckligt bra",
+      "prompt": "Jag tvivlar ständigt på mig själv och känner mig inte tillräckligt bra. Vad säger Bibeln om mitt värde?"
+    },
+    "calling": {
+      "title": "Kallelse",
+      "desc": "Vad ska jag göra med mitt liv?",
+      "prompt": "Jag vet inte vad jag ska göra med mitt liv. Hjälp mig att hitta min kallelse – vad säger Bibeln om det?"
+    },
+    "faithdoubt": {
+      "title": "Trosvivel",
+      "desc": "När tron vacklar",
+      "prompt": "Jag tvivlar på min tro och vet inte om jag fortfarande kan tro. Vad säger Bibeln om tvivel?"
+    },
+    "forgiveness": {
+      "title": "Förlåtelse",
+      "desc": "När förlåtelse verkar omöjligt",
+      "prompt": "Jag kan bara inte förlåta någon. Det gör för ont. Vad säger Bibeln om förlåtelse?"
+    },
+    "familyconflict": {
+      "title": "Familjekonflikt",
+      "desc": "När det bråkas i familjen",
+      "prompt": "Det är stora bråk i min familj. Vad säger Bibeln om familjefrid och försoning?"
+    },
+    "envy": {
+      "title": "Avund",
+      "desc": "När andra har det bättre",
+      "prompt": "Jag är avundsjuk på andra och jämför mig ständigt. Vad säger Bibeln om avund och tillfredsställelse?"
+    },
+    "joy": {
+      "title": "Dela glädje",
+      "desc": "När något underbart har hänt",
+      "prompt": "Något underbart har hänt mig och jag vill dela min glädje! Vad säger Bibeln om glädje och tacksamhet?"
+    },
+    "prayer": {
+      "title": "Böneämne",
+      "desc": "Be tillsammans",
+      "prompt": "Jag har ett böneämne och vill be tillsammans. Följ mig i bönen."
+    },
+    "bibleverse": {
+      "title": "Förstå vers",
+      "desc": "Få en bibelvers förklarad",
+      "prompt": "Jag vill förstå en bibelvers bättre. Kan du hjälpa mig att placera den i sitt sammanhang?"
+    }
+  },
+  "lifeWheel": {
+    "title": "Ditt livshjul",
+    "intro": "Betygsätt 8 livsområden på en skala från 1-10. Ta reda på var du står — och få bibliska impulser för det område som behöver uppmärksamhet.",
+    "start": "Starta nu",
+    "sliderHint": "Flytta reglagen — 1 = mycket missnöjd, 10 = mycket nöjd",
+    "showResult": "Visa resultat",
+    "average": "Genomsnitt",
+    "weakestArea": "Största behov",
+    "getImpulse": "Biblisk impuls för {{area}}",
+    "reset": "Gör om",
+    "prompt": "Mitt livshjul visar att jag bara har {{score}}/10 poäng inom området «{{area}}». Vad säger Bibeln om detta livsområde? Ge mig uppmuntran och praktiska impulser.",
+    "areas": {
+      "health": "Hälsa",
+      "relationships": "Relationer",
+      "career": "Karriär",
+      "spirituality": "Andlighet",
+      "finances": "Ekonomi",
+      "family": "Familj",
+      "leisure": "Fritid",
+      "growth": "Personlig utveckling"
+    },
+    "save": "Spara resultat",
+    "saved": "Sparat!",
+    "history": "Tidigare resultat",
+    "noHistory": "Inga sparade resultat ännu.",
+    "backToNew": "Nytt livshjul",
+    "backToList": "Tillbaka till listan"
+  },
+  "church": {
+    "badge": "För församlingar",
+    "heroTitle": "BibleBot för din församling",
+    "heroSubtitle": "Följ dina församlingsmedlemmar med biblisk visdom – digitalt, personligt och dygnet runt.",
+    "useCasesTitle": "Användningsområden",
+    "useCase": {
+      "youth": {
+        "title": "Ungdomsarbete",
+        "desc": "Tonåringar upptäcker Bibeln på sitt eget sätt – interaktivt och utan hämningar."
+      },
+      "confirmation": {
+        "title": "Konfirmation",
+        "desc": "Konfirmander fördjupar bibelkunskapen självständigt med personlig vägledning."
+      },
+      "pastoral": {
+        "title": "Själavård",
+        "desc": "24/7-vägledning som komplement till personlig själavård."
+      },
+      "bibleStudy": {
+        "title": "Bibelstudiegrupp",
+        "desc": "Impulser och diskussionsunderlag för grupper och hemgrupper."
+      }
+    },
+    "pricingTitle": "Patronatspaket",
+    "pricingSubtitle": "Stöd BibleBot och din församling med det passande patronatspaketet.",
+    "popular": "Populär",
+    "free": "Gratis",
+    "perYear": "år",
+    "contact": "Kontakta oss",
+    "tier": {
+      "free": {
+        "name": "Senapsfrö",
+        "size": "För små församlingar & hemgrupper (upp till 50 medlemmar)"
+      },
+      "community": {
+        "name": "Vägvisare",
+        "size": "För församlingar med 50–200 medlemmar"
+      },
+      "gemeinde": {
+        "name": "Brobyggare",
+        "size": "För församlingar med 200–500 medlemmar"
+      },
+      "kirche": {
+        "name": "Fyr",
+        "size": "För stora församlingar & institutioner (500+ medlemmar)"
+      }
+    },
+    "features": {
+      "directoryEntry": "Katalogpost",
+      "telegramGroup": "Telegramgrupp",
+      "partnerPage": "Egen partnersida",
+      "badge": "Partner-märke",
+      "qrFlyer": "QR-flyer för utskrift",
+      "contactForm": "Kontaktformulär",
+      "pastorProfile": "Präst/Pastor-profil",
+      "welcomeVideo": "Välkomstvideo",
+      "analytics": "Analys-dashboard",
+      "prioritySupport": "Prioriterad support",
+      "multipleProfiles": "Flera profiler",
+      "customBranding": "Anpassad branding",
+      "apiAccess": "API-åtkomst",
+      "accountManager": "Personlig handläggare"
+    },
+    "viewDirectory": "Visa församlingskatalog",
+    "directoryBadge": "Församlingskatalog",
+    "directoryTitle": "Partnerförsamlingar",
+    "directorySubtitle": "Hitta en församling nära dig som rekommenderar BibleBot.",
+    "searchPlaceholder": "Sök ort, namn eller samfund...",
+    "noResults": "Inga församlingar i katalogen ännu.",
+    "becomePartner": "Bli partner →",
+    "notFound": "Församlingen hittades inte.",
+    "backToDirectory": "Tillbaka till katalogen",
+    "pastor": "Präst/Pastor",
+    "serviceTimes": "Gudstjänsttider",
+    "startChat": "Starta chatt",
+    "website": "Webbplats",
+    "telegramGroup": "Telegramgrupp",
+    "contactTitle": "Kontakt till {{name}}",
+    "contactName": "Ditt namn (valfritt)",
+    "contactEmail": "Din e-postadress",
+    "contactMessage": "Ditt meddelande",
+    "contactSend": "Skicka meddelande",
+    "contactSuccess": "Meddelande skickat! 🙏",
+    "contactSuccessDesc": "Församlingen kommer att kontakta dig.",
+    "recommendedBy": "Rekommenderas av {{name}}",
+    "setup": "Installation (engångsavgift)",
+    "form": {
+      "title": "Intresserad? Skriv till oss!",
+      "subtitle": "Vi återkommer inom 48 timmar.",
+      "name": "Ditt namn",
+      "email": "E-postadress",
+      "churchName": "Församlingens namn",
+      "tier": "Önskat paket",
+      "tierPlaceholder": "Välj paket...",
+      "message": "Ditt meddelande",
+      "submit": "Skicka förfrågan",
+      "success": "Förfrågan skickad! Vi återkommer snart. 🙏",
+      "error": "Fel vid sändning. Vänligen försök igen.",
+      "orgType": "Organisationstyp",
+      "orgTypePlaceholder": "Välj typ...",
+      "orgTypes": {
+        "church": "Församling",
+        "careHome": "Vårdhem",
+        "seniorHome": "Äldreboende",
+        "hospital": "Sjukhus",
+        "prison": "Fängelsesjälavård",
+        "military": "Militärsjälavård"
+      }
+    },
+    "institutionsTitle": "Även för institutioner",
+    "institutionsSubtitle": "BibleBot följer inte bara församlingar – även vård- och äldreboenden, sjukhus och fängelsesjälavården drar nytta av digital själavård.",
+    "institution": {
+      "careHome": {
+        "title": "Vårdhem",
+        "desc": "Dagliga bibelimpulser och vägledning för boende – även när ingen själavårdare finns på plats."
+      },
+      "seniorHome": {
+        "title": "Äldreboenden",
+        "desc": "Bekanta bibelverser och samtal för seniorer – lättillgängligt via surfplatta eller smartphone."
+      },
+      "hospital": {
+        "title": "Sjukhus",
+        "desc": "Tröst och andlig vägledning för patienter i svåra tider – tillgängligt dygnet runt vid sjuksängen."
+      },
+      "prison": {
+        "title": "Fängelsesjälavård",
+        "desc": "Hopp och andlig vägledning för intagna – en konfidentiell samtalspartner dygnet runt."
+      },
+      "military": {
+        "title": "Militärsjälavård",
+        "desc": "Andlig vägledning för militär personal – även under insats eller på kasernen."
+      }
+    }
+  },
+  "institutions": {
+    "badge": "För institutioner",
+    "heroTitle": "BibleBot för din institution",
+    "heroSubtitle": "Digital själavård för vårdhem, äldreboenden, sjukhus och kriminalvård – personligt, konfidentiellt och dygnet runt.",
+    "seniorHint": {
+      "title": "Seniorläge tillgängligt",
+      "desc": "Större text och förenklad användning – idealiskt för äldre boende.",
+      "cta": "Testa seniorläge"
+    },
+    "typesTitle": "Vem är BibleBot för?",
+    "useCasesTitle": "Så används BibleBot",
+    "useCasesSubtitle": "Konkreta tillämpningar för vardagen i din institution.",
+    "pricingTitle": "Patronatspaket",
+    "pricingSubtitle": "Samma paket som för församlingar – anpassade till institutionella behov.",
+    "linkChurches": "Även tillgängligt för församlingar",
+    "type": {
+      "careHome": {
+        "title": "Vårdhem",
+        "desc": "Dagliga bibelimpulser och vägledning för boende – även när ingen själavårdare finns på plats."
+      },
+      "seniorHome": {
+        "title": "Äldreboenden",
+        "desc": "Bekanta bibelverser och samtal för seniorer – lättillgängligt via surfplatta eller smartphone."
+      },
+      "hospital": {
+        "title": "Sjukhus",
+        "desc": "Tröst och andlig vägledning för patienter i svåra tider – tillgängligt dygnet runt vid sjuksängen."
+      },
+      "prison": {
+        "title": "Fängelsesjälavård",
+        "desc": "Hopp och andlig vägledning för intagna – en konfidentiell samtalspartner dygnet runt."
+      },
+      "military": {
+        "title": "Militärsjälavård",
+        "desc": "Andlig vägledning för militär personal – även under insats eller på kasernen."
+      }
+    },
+    "useCase": {
+      "dailyImpulse": {
+        "title": "Daglig impuls",
+        "desc": "Varje morgon en bibelvers med reflektionsfråga – sänker tröskeln för andliga samtal."
+      },
+      "companionship": {
+        "title": "Samtalspartner",
+        "desc": "BibleBot svarar tålmodigt på trosfrågor och utan tidspress – idealiskt för ensamma stunder."
+      },
+      "accessibility": {
+        "title": "Enkel åtkomst",
+        "desc": "Stor text, enkel användning via surfplatta – även för personer med nedsatt rörlighet."
+      },
+      "availability": {
+        "title": "Tillgänglig dygnet runt",
+        "desc": "Andlig vägledning även nattetid och på helger – när ingen själavårdare är tillgänglig."
+      }
+    },
+    "tierDesc": {
+      "free": "Grundläggande åtkomst för boende och patienter",
+      "community": "Omnämnande som supporter, reklamfri åtkomst",
+      "gemeinde": "Logotypnärvaro, månatlig användningsrapport",
+      "kirche": "Eget innehåll, medverkan i färdplan, premiumsupport"
+    },
+    "form": {
+      "title": "Intresserad? Kontakta oss!",
+      "subtitle": "Vi återkommer inom 48 timmar.",
+      "name": "Ditt namn",
+      "email": "E-postadress",
+      "institutionName": "Institutionens namn",
+      "type": "Institutionstyp",
+      "typePlaceholder": "Vänligen välj...",
+      "tier": "Önskat paket",
+      "tierPlaceholder": "Välj paket...",
+      "message": "Ditt meddelande",
+      "submit": "Skicka förfrågan",
+      "success": "Förfrågan skickad! Vi återkommer snart. 🙏",
+      "error": "Fel vid sändning. Vänligen försök igen."
+    }
   },
   "lang": {
     "de": "Deutsch",
@@ -329,427 +751,5 @@
     "ig": "Igbo",
     "zu": "isiZulu",
     "ht": "Kreyòl"
-  },
-  "tiles": {
-    "sectionTitle": "What's on your heart?",
-    "sectionSubtitle": "Choose a topic — BibleBot walks with you",
-    "baptism": {
-      "title": "Find a baptism verse",
-      "desc": "The perfect verse for your child",
-      "prompt": "Help me find a fitting baptism verse. What kind of child is it and what do the parents wish for?"
-    },
-    "condolence": {
-      "title": "Words of comfort",
-      "desc": "Support through grief & farewell",
-      "prompt": "I need comforting words for a condolence card. Can you help me find the right words?"
-    },
-    "wedding": {
-      "title": "Wedding verse",
-      "desc": "Biblical words for your love",
-      "prompt": "We're looking for a beautiful biblical verse for our wedding. Which passages speak about love and partnership?"
-    },
-    "anxiety": {
-      "title": "Fear & worry",
-      "desc": "Finding courage in hard times",
-      "prompt": "I'm struggling with fear and worry right now. What does the Bible say about this? Are there verses that give courage?"
-    },
-    "confession": {
-      "title": "Confession",
-      "desc": "God forgives — speak it out",
-      "prompt": "I want to let go of something that weighs on me. What does the Bible say about forgiveness and new beginnings?"
-    },
-    "heartbreak": {
-      "title": "Heartbreak",
-      "desc": "What the Bible says about heartache",
-      "prompt": "My heart is broken. What does the Bible say about heartbreak and how to find hope again?"
-    },
-    "newstart": {
-      "title": "New beginning",
-      "desc": "Strength for a new chapter",
-      "prompt": "I'm facing a new beginning and need encouragement. Which Bible passages speak about fresh starts?"
-    },
-    "namequiz": {
-      "title": "Name quiz",
-      "desc": "Find the right biblical name",
-      "prompt": "I'm looking for a biblical name for my child. Can you suggest some and explain their meanings?"
-    },
-    "sleepless": {
-      "title": "Sleepless",
-      "desc": "Finding peace at night",
-      "prompt": "I can't sleep and my mind is racing. Is there a calming prayer or psalm for the night?"
-    },
-    "loneliness": {
-      "title": "Loneliness",
-      "desc": "You are never alone",
-      "prompt": "I feel lonely. What does the Bible say about God always being with us?"
-    },
-    "decision": {
-      "title": "Tough decision",
-      "desc": "Wisdom for the right path",
-      "prompt": "I'm facing a difficult decision. Which Bible passages can help me find the right way?"
-    },
-    "gratitude": {
-      "title": "Gratitude",
-      "desc": "A personal prayer of thanks",
-      "prompt": "I want to thank God. Help me write a personal prayer of gratitude."
-    },
-    "lifewheel": {
-      "title": "Life Wheel",
-      "desc": "How satisfied are you really?"
-    },
-    "sevenwhys": {
-      "title": "7 Whys",
-      "desc": "Find the deepest root of your question",
-      "prompt": "I'd like to do the 7 Whys exercise. Here is my topic:"
-    },
-    "anger": {
-      "title": "Anger",
-      "desc": "When you're about to explode",
-      "prompt": "I'm so angry and don't know what to do with my rage. What does the Bible say about anger and how to deal with it?"
-    },
-    "shame": {
-      "title": "Shame & Guilt",
-      "desc": "When guilt is crushing you",
-      "prompt": "I feel so ashamed and guilty. What does the Bible say about guilt, forgiveness, and starting over?"
-    },
-    "burnout": {
-      "title": "Burnout",
-      "desc": "When you just can't go on",
-      "prompt": "I'm totally exhausted and burned out. I just can't anymore. What does the Bible say about rest and recovery?"
-    },
-    "illness": {
-      "title": "Illness",
-      "desc": "When a diagnosis changes everything",
-      "prompt": "I've received a difficult diagnosis and I'm scared. What does the Bible say about illness, healing, and hope?"
-    },
-    "financial": {
-      "title": "Money Worries",
-      "desc": "When bills are piling up",
-      "prompt": "I have financial worries and don't know what to do. What does the Bible say about money, trust, and provision?"
-    },
-    "meaningcrisis": {
-      "title": "Meaning Crisis",
-      "desc": "What's it all for?",
-      "prompt": "I'm wondering what's the point of it all. I'm in a meaning crisis. What does the Bible say about the meaning of life?"
-    },
-    "selfdoubt": {
-      "title": "Self-Doubt",
-      "desc": "When you don't feel good enough",
-      "prompt": "I constantly doubt myself and don't feel good enough. What does the Bible say about my worth?"
-    },
-    "calling": {
-      "title": "Calling",
-      "desc": "What should I do with my life?",
-      "prompt": "I don't know what to do with my life. Help me find my calling — what does the Bible say?"
-    },
-    "faithdoubt": {
-      "title": "Faith Doubts",
-      "desc": "When your faith is shaking",
-      "prompt": "I have doubts about my faith and don't know if I can still believe. What does the Bible say about doubt?"
-    },
-    "forgiveness": {
-      "title": "Forgiveness",
-      "desc": "When forgiving seems impossible",
-      "prompt": "I simply can't forgive someone. It hurts too much. What does the Bible say about forgiveness?"
-    },
-    "familyconflict": {
-      "title": "Family Conflict",
-      "desc": "When family is at war",
-      "prompt": "There's a big conflict in my family. What does the Bible say about family peace and reconciliation?"
-    },
-    "envy": {
-      "title": "Envy",
-      "desc": "When others have it better",
-      "prompt": "I'm envious of others and constantly comparing myself. What does the Bible say about envy and contentment?"
-    },
-    "joy": {
-      "title": "Share Joy",
-      "desc": "When something wonderful happened",
-      "prompt": "Something wonderful happened to me and I want to share my joy! What does the Bible say about joy and gratitude?"
-    },
-    "prayer": {
-      "title": "Prayer Request",
-      "desc": "Pray together",
-      "prompt": "I have a prayer request and would like to pray together. Join me in prayer."
-    },
-    "bibleverse": {
-      "title": "Understand a Verse",
-      "desc": "Get a Bible passage explained",
-      "prompt": "I'd like to understand a Bible passage better. Can you help me put it in context?"
-    }
-  },
-  "lifeWheel": {
-    "title": "Your Life Wheel",
-    "intro": "Rate 8 life areas on a scale of 1-10. Discover where you stand — and receive biblical impulses for the area that needs attention.",
-    "start": "Get started",
-    "sliderHint": "Move the sliders — 1 = very unsatisfied, 10 = very satisfied",
-    "showResult": "Show result",
-    "average": "Average",
-    "weakestArea": "Greatest need",
-    "getImpulse": "Biblical impulse for {{area}}",
-    "reset": "Try again",
-    "prompt": "My life wheel shows that I scored only {{score}}/10 in the area of '{{area}}'. What does the Bible say about this area of life? Give me encouragement and practical impulses.",
-    "areas": {
-      "health": "Health",
-      "relationships": "Relationships",
-      "career": "Career",
-      "spirituality": "Spirituality",
-      "finances": "Finances",
-      "family": "Family",
-      "leisure": "Leisure",
-      "growth": "Personal Growth"
-    },
-    "save": "Save result",
-    "saved": "Saved!",
-    "history": "Previous results",
-    "noHistory": "No saved results yet.",
-    "backToNew": "New Life Wheel",
-    "backToList": "Back to list"
-  },
-  "church": {
-    "badge": "För Kyrkor",
-    "heroTitle": "BibleBot för din Kyrka",
-    "heroSubtitle": "Följ din församling med biblisk visdom – digitalt, personligt och dygnet runt.",
-    "useCasesTitle": "Användningsområden",
-    "useCase": {
-      "youth": {
-        "title": "Ungdomsarbete",
-        "desc": "Tonåringar upptäcker Bibeln på sitt eget sätt – interaktivt och utan hämningar."
-      },
-      "confirmation": {
-        "title": "Konfirmation",
-        "desc": "Konfirmander fördjupar sina bibelkunskaper självständigt med personlig vägledning."
-      },
-      "pastoral": {
-        "title": "Själavård",
-        "desc": "Sällskap dygnet runt som komplement till personlig själavård."
-      },
-      "bibleStudy": {
-        "title": "Bibelstudium",
-        "desc": "Impulser och diskussionsämnen för grupper och hemgrupper."
-      }
-    },
-    "pricingTitle": "Patronatspaket",
-    "pricingSubtitle": "Stöd BibleBot och din församling med rätt patronatspaket.",
-    "popular": "Populär",
-    "free": "Gratis",
-    "perYear": "År",
-    "contact": "Kontakta oss",
-    "tier": {
-      "free": {
-        "name": "Senapsfrö",
-        "size": "Grundläggande botåtkomst för alla församlingsmedlemmar."
-      },
-      "community": {
-        "name": "Reskamrat",
-        "size": "Omnämnande av församlingen som stödjare på webbplatsen & reklamfri åtkomst."
-      },
-      "gemeinde": {
-        "name": "Brobyggare",
-        "size": "Logo i bot-gränssnittet, månatlig användningsrapport (anonymiserad)."
-      },
-      "kirche": {
-        "name": "Fyr",
-        "size": "Integration av eget innehåll (t.ex. predikarkiv), medutformning av roadmap, premiumsupport."
-      }
-    },
-    "features": {
-      "directoryEntry": "Katalogpost",
-      "telegramGroup": "Telegramgrupp",
-      "partnerPage": "Egen partnersida",
-      "badge": "Partnermärke",
-      "qrFlyer": "QR-flygblad för utskrift",
-      "contactForm": "Kontaktformulär",
-      "pastorProfile": "Pastorsprofil",
-      "welcomeVideo": "Välkomstvideo",
-      "analytics": "Analyspanel",
-      "prioritySupport": "Prioriterad support",
-      "multipleProfiles": "Flera profiler",
-      "customBranding": "Egen design",
-      "apiAccess": "API-åtkomst",
-      "accountManager": "Personlig kontaktperson"
-    },
-    "viewDirectory": "Se kyrkkatalogen",
-    "directoryBadge": "Kyrkkatalog",
-    "directoryTitle": "Partnerkyrkor",
-    "directorySubtitle": "Hitta en kyrka nära dig som rekommenderar BibleBot.",
-    "searchPlaceholder": "Sök efter plats, namn eller samfund...",
-    "noResults": "Inga kyrkor i katalogen ännu.",
-    "becomePartner": "Bli partner →",
-    "notFound": "Kyrka hittades inte.",
-    "backToDirectory": "Tillbaka till katalogen",
-    "pastor": "Pastor",
-    "serviceTimes": "Gudstjänsttider",
-    "startChat": "Starta chatt",
-    "website": "Webbplats",
-    "telegramGroup": "Telegramgrupp",
-    "contactTitle": "Kontakta {{name}}",
-    "contactName": "Ditt namn (valfritt)",
-    "contactEmail": "Din e-postadress",
-    "contactMessage": "Ditt meddelande",
-    "contactSend": "Skicka meddelande",
-    "contactSuccess": "Meddelande skickat! 🙏",
-    "contactSuccessDesc": "Kyrkan återkommer till dig.",
-    "recommendedBy": "Rekommenderad av {{name}}",
-    "setup": "Installation (engångs)",
-    "form": {
-      "title": "Intresserad? Kontakta oss!",
-      "subtitle": "Vi svarar inom 48 timmar.",
-      "name": "Ditt namn",
-      "email": "E-postadress",
-      "churchName": "Kyrkans namn",
-      "tier": "Föredraget paket",
-      "tierPlaceholder": "Välj paket...",
-      "message": "Ditt meddelande",
-      "submit": "Skicka förfrågan",
-      "success": "Förfrågan skickad! Vi hör av oss snart. 🙏",
-      "error": "Fel vid sändning. Försök igen.",
-      "orgType": "Organization type",
-      "orgTypePlaceholder": "Select type...",
-      "orgTypes": {
-        "church": "Church",
-        "careHome": "Care Home",
-        "seniorHome": "Retirement Home",
-        "hospital": "Hospital",
-        "prison": "Prison Chaplaincy",
-        "military": "Military Chaplaincy"
-      }
-    },
-    "institutionsTitle": "Also for Institutions",
-    "institutionsSubtitle": "BibleBot supports not only churches – care homes, retirement homes, and hospitals also benefit from digital pastoral care.",
-    "institution": {
-      "careHome": {
-        "title": "Care Homes",
-        "desc": "Daily Bible impulses and companionship for residents – even when no chaplain is on site."
-      },
-      "seniorHome": {
-        "title": "Retirement Homes",
-        "desc": "Familiar Bible verses and conversations for seniors – easily accessible via tablet or smartphone."
-      },
-      "hospital": {
-        "title": "Hospitals",
-        "desc": "Comfort and spiritual support for patients in difficult times – available 24/7 at the bedside."
-      },
-      "prison": {
-        "title": "Prison Chaplaincy",
-        "desc": "Hope and spiritual support for inmates – a confidential companion around the clock."
-      },
-      "military": {
-        "title": "Military Chaplaincy",
-        "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
-      }
-    }
-  },
-  "institutions": {
-    "badge": "For Institutions",
-    "heroTitle": "BibleBot for Your Institution",
-    "heroSubtitle": "Digital pastoral care for care homes, retirement homes, hospitals, and correctional facilities – personal, confidential, and around the clock.",
-    "typesTitle": "Who is BibleBot for?",
-    "useCasesTitle": "How BibleBot is Used",
-    "useCasesSubtitle": "Practical applications for daily life in your institution.",
-    "pricingTitle": "Patronage Packages",
-    "pricingSubtitle": "The same packages as for churches – adapted to institutional needs.",
-    "linkChurches": "Also available for churches",
-    "type": {
-      "careHome": {
-        "title": "Care Homes",
-        "desc": "Daily Bible impulses and companionship for residents – even when no chaplain is on site."
-      },
-      "seniorHome": {
-        "title": "Retirement Homes",
-        "desc": "Familiar Bible verses and conversations for seniors – easily accessible via tablet or smartphone."
-      },
-      "hospital": {
-        "title": "Hospitals",
-        "desc": "Comfort and spiritual support for patients in difficult times – available 24/7 at the bedside."
-      },
-      "prison": {
-        "title": "Prison Chaplaincy",
-        "desc": "Hope and spiritual support for inmates – a confidential companion around the clock."
-      },
-      "military": {
-        "title": "Military Chaplaincy",
-        "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
-      }
-    },
-    "useCase": {
-      "dailyImpulse": {
-        "title": "Daily Impulse",
-        "desc": "A Bible verse with reflection question every morning – lowers the barrier for spiritual conversations."
-      },
-      "companionship": {
-        "title": "Conversation Partner",
-        "desc": "BibleBot answers faith questions patiently and without time pressure – ideal for lonely hours."
-      },
-      "accessibility": {
-        "title": "Easy Access",
-        "desc": "Large text, simple tablet interface – also for people with limited mobility."
-      },
-      "availability": {
-        "title": "24/7 Available",
-        "desc": "Spiritual companionship at night and on weekends – when no chaplain is available."
-      }
-    },
-    "tierDesc": {
-      "free": "Basic access for residents and patients",
-      "community": "Mentioned as supporter, ad-free access",
-      "gemeinde": "Logo presence, monthly usage report",
-      "kirche": "Custom content, roadmap co-creation, premium support"
-    },
-    "form": {
-      "title": "Interested? Get in touch!",
-      "subtitle": "We'll get back to you within 48 hours.",
-      "name": "Your name",
-      "email": "Email address",
-      "institutionName": "Institution name",
-      "type": "Type of institution",
-      "typePlaceholder": "Please select...",
-      "tier": "Preferred package",
-      "tierPlaceholder": "Choose package...",
-      "message": "Your message",
-      "submit": "Send inquiry",
-      "success": "Inquiry sent! We'll be in touch soon. 🙏",
-      "error": "Error sending. Please try again."
-    },
-    "seniorHint": {
-      "title": "Seniorläge tillgängligt",
-      "desc": "Större text och förenklad navigering – perfekt för äldre boende.",
-      "cta": "Testa seniorläge"
-    }
-  },
-  "refer": {
-    "badge": "Share God's Word",
-    "title": "Recommend BibleBot",
-    "subtitle": "Know someone who could use encouragement? Share BibleBot – one message can make a difference.",
-    "whatsapp": "Share via WhatsApp",
-    "whatsappMsg": "Hey, I wanted to show you BibleBot – a free Bible companion that really knows the Bible and asks great questions. No login, anonymous, honest. Try it out: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
-    "telegram": "Share via Telegram",
-    "telegramMsg": "Hey, do you know BibleBot? A free personal Bible companion – honest, anonymous, no login needed. Check it out: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
-    "email": "Share via email",
-    "emailSubject": "This might interest you: BibleBot.Life",
-    "emailBody": "Hi!\n\nI wanted to show you BibleBot – a free Bible companion that really knows the Bible. No sign-up needed, completely anonymous.\n\nIt asks thoughtful questions, explains Bible passages in context and accompanies you honestly – even on difficult topics.\n\nTry it out: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nBest wishes",
-    "copy": "Copy link",
-    "copied": "Link copied! 📋",
-    "qr": "Or just show this QR code:"
-  },
-  "share": {
-    "label": "Share",
-    "shareVia": "Share via",
-    "copied": "Copied! 📋",
-    "copiedShort": "Copied!",
-    "copiedDesc": "Text copied to clipboard. Share it on WhatsApp, Instagram or wherever you like!",
-    "copyLink": "Copy text",
-    "error": "Copy failed",
-    "impulseTitle": "BibleBot – Impulse of the Day",
-    "chatTitle": "BibleBot – Thought of the Day",
-    "createImage": "Create image ✨",
-    "generating": "Creating…",
-    "imageReady": "Your image is ready to share!",
-    "shareImage": "Share image",
-    "download": "Save",
-    "imageError": "Image creation failed",
-    "imageErrorDesc": "The image could not be created. Please try again later.",
-    "imageSaved": "Text copied! 📋",
-    "imageSavedDesc": "Save the image and share it with the copied text on Instagram, WhatsApp or wherever you like!"
   }
 }

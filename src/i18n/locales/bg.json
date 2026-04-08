@@ -1,8 +1,8 @@
 {
   "nav": {
-    "startNow": "Започни"
+    "startNow": "Започни сега"
   },
-  "loader": "Зареждане…",
+  "loader": "Зареждане...",
   "hero": {
     "badge": {
       "noLogin": "Без вход",
@@ -11,286 +11,708 @@
     },
     "title1": "Библията.",
     "title2": " Преосмислена.",
-    "subtitle": "BibleBot познава Библията – и задава правилните въпроси. Не е човек, но е честен спътник. За смислени разговори, дълбоки въпроси и истински импулси.",
+    "subtitle": "Вашият BibleBot познава Библията – и задава правилните въпроси. Не е човек, но е честен спътник. За добри разговори, дълбоки въпроси и истински импулси.",
     "ctaTelegram": "Започни чрез Telegram",
     "ctaMore": "Научи повече",
-    "quote": "\"Come to me, all you who are weary and burdened, and I will give you rest.\"",
-    "quoteRef": "– Matthew 11:28"
+    "quote": "«Елате при Мене всички отрудени и обременени, и Аз ще ви успокоя.»",
+    "quoteRef": "– Матей 11:28"
   },
   "impulse": {
-    "loading": "Loading daily impulse...",
-    "label": "Impulse of the Day",
-    "deepDive": "What does this mean for me?",
-    "explore": "Read full passage"
+    "loading": "Дневният импулс се зарежда...",
+    "label": "Импулс на деня",
+    "deepDive": "Какво означава това за мен?",
+    "explore": "Прочети целия раздел"
   },
   "features": {
-    "sectionTitle": "How BibleBot accompanies you",
-    "sectionSubtitle": "Discover the many ways BibleBot can walk alongside you",
+    "sectionTitle": "Как вашият BibleBot ви придружава",
+    "sectionSubtitle": "Открийте многобройните начини, по които вашият BibleBot може да ви придружава",
     "bible": {
-      "title": "Bible passages & interpretation",
-      "desc": "Ask \"What does the Bible say about...?\" and receive relevant verses with context and clear explanation."
+      "title": "Библейски пасажи и тълкуване",
+      "desc": "Попитайте „Какво казва Библията за...?“ и получете подходящи стихове с контекст и разбираемо обяснение."
     },
     "goals": {
-      "title": "Life planning & goals",
-      "desc": "Discover your calling, set concrete goals, and find out what God might have in store for you."
+      "title": "Планиране на живота и поставяне на цели",
+      "desc": "Открийте своето призвание, поставете конкретни цели и разберете какво може да има Бог за вас."
     },
     "self": {
-      "title": "Finding yourself",
-      "desc": "Recognize your gifts, strengths, and longings – and what your heart truly needs."
+      "title": "Намиране на себе си",
+      "desc": "Разпознайте своите дарби, силни страни и копнежи – и от какво наистина се нуждае сърцето ви."
     },
     "faith": {
-      "title": "Faith journey & finding Christ",
-      "desc": "Whether seeking, doubting, or deepening – BibleBot accompanies you on your personal path."
+      "title": "Пътят на вярата и намирането на Христос",
+      "desc": "Независимо дали търсите, съмнявате се или задълбочавате – вашият BibleBot ви придружава по вашия личен път."
     },
     "daily": {
-      "title": "Daily impulses & church year",
-      "desc": "Start your day with impulses and let BibleBot guide you through Advent, Lent, and holidays."
+      "title": "Дневни импулси и църковна година",
+      "desc": "Започнете деня си с импулси и се оставете да бъдете придружени през Адвент, Великия пост и празниците."
     },
     "groups": {
-      "title": "Groups & communities",
-      "desc": "Perfect for Bible study groups, church communities, and shared devotions."
+      "title": "Групи и общности",
+      "desc": "Идеален за библейски кръжоци, църковни групи и общи богослужения."
     }
   },
   "coaching": {
-    "badge": "Methodology",
-    "title": "Not just a chatbot – genuine companionship",
-    "subtitle": "BibleBot combines biblical wisdom with proven coaching methods and Positive Psychology.",
-    "journeyTitle": "Personal companionship",
-    "journeyDesc": "BibleBot accompanies you as long as you wish – in free conversation or with an optional 21-day structure.",
-    "week1": "Week 1: Arriving",
-    "week1Desc": "Building trust, listening, understanding your situation. Where are you? What concerns you?",
-    "week2": "Week 2: Deepening",
-    "week2Desc": "Recognizing patterns, clarifying desires, deepening biblical impulses. What do you really want?",
-    "week3": "Week 3: Acting",
-    "week3Desc": "Taking concrete steps, setting goals, initiating change. What's your next step?",
-    "openQuestionsTitle": "Open questions instead of quick answers",
-    "openQuestionsDesc": "BibleBot doesn't give cheap advice. Instead, it asks the questions that truly matter:",
-    "openQ1": "\"What's really behind this desire?\"",
-    "openQ2": "\"How would you know something has changed?\"",
-    "openQ3": "\"What would be a first small step?\"",
-    "honestTitle": "Honest instead of toxic positivity",
-    "honestDesc": "No \"It'll be fine!\" and no sugarcoating. BibleBot is empathetic AND honest:",
-    "honest1": "Also addresses uncomfortable Bible passages",
-    "honest2": "Challenges you to self-reflection",
-    "honest3": "Distinguishes comfort from avoidance",
-    "scienceTitle": "Scientifically grounded",
+    "badge": "Методология",
+    "title": "Не просто чатбот – истински спътник",
+    "subtitle": "Вашият BibleBot съчетава библейска мъдрост с доказани коучинг методи и позитивна психология.",
+    "journeyTitle": "Лично придружаване",
+    "journeyDesc": "Вашият BibleBot ви придружава толкова дълго, колкото желаете – в свободен разговор или с опционална 21-дневна структура.",
+    "week1": "Седмица 1: Пристигане",
+    "week1Desc": "Изграждане на доверие, слушане, разбиране на вашата ситуация. Къде сте? Какво ви тревожи?",
+    "week2": "Седмица 2: Задълбочаване",
+    "week2Desc": "Разпознаване на модели, изясняване на желания, задълбочаване на библейски импулси. Какво наистина искате?",
+    "week3": "Седмица 3: Действие",
+    "week3Desc": "Предприемане на конкретни стъпки, формулиране на цели, иницииране на промяна. Каква е следващата ви стъпка?",
+    "openQuestionsTitle": "Отворени въпроси вместо бързи отговори",
+    "openQuestionsDesc": "Вашият BibleBot не ви дава евтини съвети. Вместо това той задава въпросите, които наистина имат значение:",
+    "openQ1": "„Какво всъщност стои зад това желание?“",
+    "openQ2": "„Как бихте разбрали, че нещо се е променило?“",
+    "openQ3": "„Каква би била първата малка стъпка?“",
+    "honestTitle": "Честен вместо токсично позитивен",
+    "honestDesc": "Без „Всичко ще бъде наред!“ и без разкрасяване. Вашият BibleBot е емпатичен И честен:",
+    "honest1": "Назовава и неудобни библейски пасажи",
+    "honest2": "Предизвиква към саморефлексия",
+    "honest3": "Разграничава утехата от потискането",
+    "scienceTitle": "Научно обоснован",
     "perma": {
-      "name": "PERMA Model",
-      "author": "Seligman",
-      "desc": "Positive emotions, meaning & growth"
+      "name": "PERMA-модел",
+      "author": "Селигман",
+      "desc": "Положителни емоции, смисъл и растеж"
     },
     "logo": {
-      "name": "Logotherapy",
-      "author": "Frankl",
-      "desc": "Finding meaning in difficult times"
+      "name": "Логотерапия",
+      "author": "Франкъл",
+      "desc": "Намиране на смисъл в трудни времена"
     },
     "gratitude": {
-      "name": "Gratitude",
-      "author": "Emmons",
-      "desc": "Research-based gratitude practice"
+      "name": "Благодарност",
+      "author": "Емънс",
+      "desc": "Изследователски базирана практика на благодарност"
     },
     "forgiveness": {
-      "name": "Forgiveness",
-      "author": "Worthington",
-      "desc": "REACH model for forgiveness processes"
+      "name": "Прошка",
+      "author": "Уортингтън",
+      "desc": "REACH-модел за процеси на прошка"
     },
-    "renameTip": "💡 You can give your BibleBot a personal name – so it truly becomes <strong>your</strong> companion."
+    "renameTip": "💡 Можете да дадете на вашия BibleBot собствено име – така че той наистина да стане <strong>ваш</strong> спътник."
   },
   "discover": {
-    "badge": "For the curious",
-    "title": "Rediscover faith – without pressure",
-    "subtitle": "More and more people are asking the big questions anew. BibleBot.Life is for everyone who wants to (re)discover faith – honestly, without pathos, and without church jargon.",
+    "badge": "За любопитните",
+    "title": "Открийте вярата отново – без натиск",
+    "subtitle": "Все повече хора си задават отново големите въпроси. BibleBot.Life е за всички, които искат да (пре)открият вярата – честно, без патос и без църковен жаргон.",
     "doubt": {
-      "title": "You doubt?",
-      "text": "Good. Doubt isn't a flaw – it's the beginning of honest faith. The Bible is full of people who wrestled."
+      "title": "Съмнявате ли се?",
+      "text": "Добре. Съмненията не са грешка – те са началото на честна вяра. Библията е пълна с хора, които са се борили."
     },
     "search": {
-      "title": "You're searching?",
-      "text": "Maybe you don't even know what for. That's perfectly fine. BibleBot helps you ask the right questions – instead of delivering quick answers."
+      "title": "Търсите ли?",
+      "text": "Може би дори не знаете какво точно. Това е напълно нормално. Вашият BibleBot ви помага да зададете правилните въпроси – вместо да дава бързи отговори."
     },
     "deepen": {
-      "title": "You want to go deeper?",
-      "text": "You already believe, but want to understand more? Discover the depth of the Bible – historical, personal, surprisingly relevant."
+      "title": "Искате ли да задълбочите?",
+      "text": "Вече вярвате, но искате да разберете повече? Открийте дълбочината на Библията – исторически, лично, изненадващо актуално."
     },
-    "quote": "\"Ask, and it will be given to you; seek, and you will find; knock, and the door will be opened.\"",
-    "quoteRef": "– Matthew 7:7",
-    "quoteText": "Many of us don't talk much about faith. That's okay. But those with questions deserve honest answers – without sermons, without membership, without ulterior motives."
+    "quote": "«Похлопайте, и ще ви се отвори.»",
+    "quoteRef": "– Матей 7:7",
+    "quoteText": "В Швейцария не говорим много за вяра. И не е нужно. Но който има въпроси, заслужава честни отговори – без проповеди, без членство, без скрити мотиви."
   },
   "subscribe": {
-    "title": "Daily Bible impulse",
-    "subtitle": "Every morning at 7:00 AM – a verse, a thought, a good start.",
-    "firstName": "Your first name",
-    "firstNameOptional": "(optional)",
-    "firstNamePlaceholder": "e.g. Thomas",
-    "firstNameHint": "So we can greet you personally.",
-    "channelLabel": "How would you like to receive the impulse?",
-    "push": "Push",
-    "pushDesc": "Browser notification",
+    "title": "Ежедневен библейски импулс",
+    "subtitle": "Всяка сутрин в 07:00 часа – стих, мисъл, добро начало.",
+    "firstName": "Вашето име",
+    "firstNameOptional": "(по избор)",
+    "firstNamePlaceholder": "напр. Томас",
+    "firstNameHint": "За да можем да ви поздравим лично.",
+    "channelLabel": "Как искате да получавате импулса?",
+    "push": "Известие",
+    "pushDesc": "Известие от браузъра",
     "telegram": "Telegram",
-    "telegramDesc": "Message via Telegram",
+    "telegramDesc": "Съобщение чрез Telegram",
     "sms": "SMS",
-    "smsDesc": "Text to your phone",
-    "phoneLabel": "Phone number",
-    "phonePlaceholder": "+1 555 123 4567",
-    "phoneHint": "With country code, e.g. +1 for the US.",
-    "telegramHint": "Click \"Subscribe\" – you'll be redirected to Telegram. Start the bot and type <strong>/daily</strong> to activate the daily impulse.",
-    "pushHint": "After clicking \"Subscribe\", your browser will ask for notification permission. Please allow it to receive the impulse.",
-    "submit": "Subscribe",
-    "submitting": "Subscribing...",
-    "footNote": "No login required. Cancel anytime.",
-    "successTitle": "You're subscribed! 🙏",
-    "successText": "Starting tomorrow at 7:00 AM, you'll receive your personal Bible impulse.",
-    "toastTelegram": "Telegram opened 🙏",
-    "toastTelegramDesc": "Start the bot and type /daily to activate the daily impulse.",
-    "toastSuccess": "Subscribed! 🙏",
-    "toastSuccessDesc": "You'll receive your daily impulse starting tomorrow.",
-    "toastPushPreview": "Push subscription not available in preview",
-    "toastPushPreviewDesc": "Push notifications only work on the published site.",
-    "toastNotSupported": "Not supported",
-    "toastNotSupportedDesc": "Your browser does not support push notifications.",
-    "toastPermDenied": "Permission denied",
-    "toastPermDeniedDesc": "Please allow notifications in your browser settings.",
-    "toastError": "Error",
-    "toastErrorDesc": "Please try again later."
+    "smsDesc": "SMS на телефона ви",
+    "phoneLabel": "Мобилен номер",
+    "phonePlaceholder": "+41 79 123 45 67",
+    "phoneHint": "С код на държавата, напр. +41 за Швейцария.",
+    "telegramHint": "Кликнете върху „Абониране“ – ще бъдете пренасочени към Telegram. Стартирайте бота там и напишете <strong>/daily</strong>, за да активирате ежедневния импулс.",
+    "pushHint": "След като кликнете върху „Абониране“, браузърът ви ще поиска разрешение за известия. Моля, разрешете ги, за да получавате импулса.",
+    "submit": "Абониране",
+    "submitting": "Абониране...",
+    "footNote": "Не е необходим вход. Може да се отпишете по всяко време.",
+    "successTitle": "Вие сте абонирани! 🙏",
+    "successText": "От утре в 07:00 часа ще получавате своя личен библейски импулс.",
+    "toastTelegram": "Telegram отворен 🙏",
+    "toastTelegramDesc": "Стартирайте бота и напишете /daily, за да активирате ежедневния импулс.",
+    "toastSuccess": "Абонирани! 🙏",
+    "toastSuccessDesc": "От утре ще получавате своя ежедневен импулс.",
+    "toastPushPreview": "Push абонаментът не е в предварителен преглед",
+    "toastPushPreviewDesc": "Push известията работят само на публикуваната страница.",
+    "toastNotSupported": "Не се поддържа",
+    "toastNotSupportedDesc": "Вашият браузър не поддържа push известия.",
+    "toastPermDenied": "Разрешението е отказано",
+    "toastPermDeniedDesc": "Моля, разрешете известията в настройките на браузъра си.",
+    "toastError": "Грешка",
+    "toastErrorDesc": "Моля, опитайте отново по-късно."
   },
   "faq": {
-    "badge": "FAQ",
-    "title": "What you should know about BibleBot",
-    "subtitle": "Transparency matters – especially for theologians, pastors, and critical thinkers.",
-    "q1": "What makes BibleBot different from ChatGPT & Co.?",
-    "q1Generic": "Generic chatbots:",
+    "badge": "Често задавани въпроси",
+    "title": "Какво трябва да знаете за вашия BibleBot",
+    "subtitle": "Прозрачността е важна за нас – особено към теолози, пастори и критични умове.",
+    "q1": "Какво отличава вашия BibleBot от ChatGPT & Co.?",
+    "q1Generic": "Общи чатботове:",
     "q1GenericItems": [
-      "Superficial Bible quotes without context",
-      "No pastoral guardrails",
-      "Avoids uncomfortable texts",
-      "No crisis intervention",
-      "Mixes Bible with esotericism",
-      "No follow-up questions – just confirmation"
+      "Повърхностни библейски цитати без контекст",
+      "Без пасторски предпазни мерки",
+      "Избягва неудобни текстове",
+      "Без кризисна интервенция",
+      "Смесва Библията с езотерика",
+      "Без допълнителни въпроси – само потвърждение"
     ],
     "q1Bot": "BibleBot.Life:",
     "q1BotItems": [
-      "5 recognized translations – including uncomfortable passages",
-      "Guardrails AND challenging companionship",
-      "Follow-up questions for self-reflection",
-      "Crisis referrals (emergency helplines)",
-      "Exclusively Christian theology",
-      "Promotes critical thinking as faith maturity"
+      "5 признати превода – включително неудобни пасажи",
+      "Предпазни мерки И предизвикателно придружаване",
+      "Допълнителни въпроси за саморефлексия",
+      "Препратки към кризи (тел. 143 / 147)",
+      "Изключително християнска теология",
+      "Насърчава критичното мислене като зрялост на вярата"
     ],
-    "q2": "Which Bible translations are included?",
-    "q2Intro": "BibleBot works ecumenically with the major German-language Bible editions:",
-    "q2Outro": "All Bible passages include source citations and historical context.",
-    "q3": "What scientific foundations are behind it?",
-    "q3Intro": "The companionship is based on peer-reviewed research in Positive Psychology:",
-    "q4": "How does BibleBot ensure pastoral safety?",
+    "q2": "Кои библейски преводи са включени?",
+    "q2Intro": "Вашият BibleBot работи екуменически с основните немскоезични издания на Библията:",
+    "q2Outro": "Всички библейски пасажи се предоставят с източник и исторически контекст.",
+    "q3": "Какви научни основи стоят зад това?",
+    "q3Intro": "Придружаването се основава на рецензирани изследвания в позитивната психология:",
+    "q4": "Как вашият BibleBot осигурява пасторска безопасност?",
     "q4Items": [
-      "Suicidal thoughts or crisis → immediate referral to emergency helplines",
-      "No psychological or medical diagnoses",
-      "Respect without arbitrariness – clear biblical positions are taken",
-      "Empathy AND honesty – uncomfortable topics are addressed",
-      "Follow-up questions for self-reflection instead of cheap validation",
-      "No toxic positivity – genuine, honest companionship",
-      "Openly names tensions and difficult texts"
+      "При мисли за самоубийство или кризи → незабавно пренасочване към Dargebotene Hand (143) и Pro Juventute (147)",
+      "Без психологически или медицински диагнози",
+      "Уважение без произвол – заемат се ясни библейски позиции",
+      "Емпатия И честност – обсъждат се и неудобни неща",
+      "Допълнителни въпроси за саморефлексия вместо евтино потвърждение",
+      "Без токсична позитивност – истинско, честно придружаване",
+      "Открито назовава напрежения и трудни текстове"
     ],
-    "q5": "Is BibleBot tied to a specific denomination?",
-    "q5Answer": "No. BibleBot is ecumenically oriented and respects Reformed, Catholic, Free Church, and other Christian traditions equally. When there are denominational differences in interpretation, various perspectives are presented transparently – without favoring any tradition.",
-    "q6": "Does BibleBot replace pastoral care or therapy?",
-    "q6Answer": "No. BibleBot is a digital tool for personal Bible reading and reflection. It does not replace professional pastoral care, theological counseling, or psychological therapy. In serious crises, BibleBot always refers to qualified resources.",
-    "q7": "Isn't BibleBot just a 'feel-good bot'?",
-    "q7Answer": "No. BibleBot comforts where comfort is needed – but it also challenges. Spiritual growth requires friction. BibleBot asks uncomfortable follow-up questions, names difficult Bible texts (Job, Lament Psalms, prophetic criticism), and doesn't shy away from topics like justice, repentance, and responsibility. The prophetic tradition was never comfortable – and neither is BibleBot.",
-    "q8": "Who is behind BibleBot and how is it funded?",
-    "q8Answer": "BibleBot.Life is a private, non-commercial project. It's run on a volunteer basis and funded exclusively through voluntary donations. There's no advertising, no data sales, and no paid features. All donations go directly to covering operating costs (infrastructure, hosting, development). Since BibleBot is a private project, donations are not tax-deductible.",
-    "q9": "How does BibleBot handle my data?",
-    "q9Answer": "BibleBot stores no personal data and no chat histories. Every conversation is anonymous. There's no login, no tracking, and no sharing of data with third parties. Usage is completely anonymous."
+    "q5": "Вашият BibleBot конфесионално обвързан ли е?",
+    "q5Answer": "Не. Вашият BibleBot е екуменически ориентиран и уважава реформираните, католическите, свободните църковни и други християнски традиции еднакво. При конфесионално различни тълкувания се представят прозрачно различни перспективи – без да се предпочита една традиция.",
+    "q6": "Замества ли вашият BibleBot пасторската грижа или терапията?",
+    "q6Answer": "Не. Вашият BibleBot е дигитален инструмент за лично четене на Библията и размисъл. Той не замества професионална пасторска грижа, теологични съвети или психологическа терапия. При сериозни кризи вашият BibleBot винаги препраща към квалифицирани центрове за помощ.",
+    "q7": "Вашият BibleBot не е ли просто „бот за добро настроение“?",
+    "q7Answer": "Не. Вашият BibleBot утешава, където е необходима утеха – но той също така предизвиква. Духовното израстване изисква триене. Вашият BibleBot задава неудобни допълнителни въпроси, назовава трудни библейски текстове (Йов, плачове, пророческа критика) и не се страхува от теми като справедливост, покаяние и отговорност. Пророческата традиция никога не е била удобна – и вашият BibleBot също не е.",
+    "q8": "Кой стои зад вашия BibleBot и как се финансира?",
+    "q8Answer": "BibleBot.Life е частен, некомерсиален проект. Той се управлява доброволно и се финансира изключително чрез доброволни дарения. Няма реклами, продажби на данни и платени функции. Всички дарения отиват директно за покриване на текущите разходи (инфраструктура, хостинг, разработка). Тъй като BibleBot се управлява като частен проект, даренията не подлежат на данъчно облекчение.",
+    "q9": "Как вашият BibleBot обработва моите данни?",
+    "q9Answer": "Вашият BibleBot не съхранява лични данни и история на чатовете. Всеки разговор е анонимен. Няма вход, проследяване и споделяне на данни с трети страни. Използването е напълно анонимно."
   },
   "donate": {
-    "badge": "Support BibleBot",
-    "title": "Help keep BibleBot free",
-    "subtitle": "BibleBot is a passion project – no ads, no subscriptions, no hidden costs. To keep it that way, I rely on voluntary donations. Every contribution helps cover the ongoing costs for operations and infrastructure.",
-    "bankTitle": "Donate via bank transfer",
-    "bankSubtitle": "Every amount counts – thank you! 🙏",
-    "recipient": "Recipient",
-    "bank": "Bank",
-    "purpose": "Reference",
-    "purposeValue": "Donation BibleBot",
-    "note": "BibleBot.Life is operated as a private project. Donations are therefore not tax-deductible."
+    "badge": "Подкрепете вашия BibleBot",
+    "title": "Помогнете на вашия BibleBot да остане безплатен",
+    "subtitle": "Вашият BibleBot е проект от сърце – без реклами, без абонамент, без скрити разходи. За да остане така, разчитам на доброволни дарения. Всеки принос помага за покриване на текущите разходи за експлоатация и инфраструктура.",
+    "bankTitle": "Дарение чрез банков превод",
+    "bankSubtitle": "Всяка сума е от значение – благодаря ви много! 🙏",
+    "recipient": "Получател",
+    "bank": "Банка",
+    "purpose": "Основание за плащане",
+    "purposeValue": "Дарение BibleBot",
+    "note": "BibleBot.Life се управлява като частен проект. Затова даренията не подлежат на данъчно облекчение."
+  },
+  "refer": {
+    "badge": "Споделете Божието слово",
+    "title": "Препоръчайте BibleBot",
+    "subtitle": "Познавате ли някой, който се нуждае от насърчение в момента? Споделете BibleBot – едно съобщение може да направи много.",
+    "whatsapp": "Споделете чрез WhatsApp",
+    "whatsappMsg": "Здравейте, исках да ви покажа BibleBot – безплатен библейски спътник, който познава Библията и задава наистина добри въпроси. Без вход, анонимен, честен. Опитайте: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "telegram": "Споделете чрез Telegram",
+    "telegramMsg": "Здравейте, познавате ли BibleBot? Безплатен личен библейски спътник – честен, анонимен, без вход. Разгледайте: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "email": "Споделете чрез имейл",
+    "emailSubject": "Това може да ви заинтересува: BibleBot.Life",
+    "emailBody": "Здравейте!\n\nИсках да ви покажа BibleBot – безплатен библейски спътник, който наистина познава Библията. Не е необходима регистрация, напълно анонимен.\n\nТой задава добри допълнителни въпроси, обяснява библейски пасажи в контекст и ви придружава честно – дори по трудни теми.\n\nОпитайте: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nС най-добри пожелания",
+    "copy": "Копирай линк",
+    "copied": "Линкът е копиран! 📋",
+    "qr": "Или просто покажете този QR код:"
   },
   "cta": {
-    "title": "You don't have to go through this alone",
-    "subtitle": "Just tell BibleBot what's on your mind. No login, no cost, no judgment – just honest companionship and the wisdom of the Bible.",
-    "button": "Start a conversation"
+    "title": "Не е нужно да преминавате през това сами",
+    "subtitle": "Просто напишете на вашия BibleBot какво ви тревожи. Без вход, без разходи, без осъждане – само честно придружаване и мъдростта на Библията.",
+    "button": "Започни разговор сега"
   },
   "footer": {
     "tagline": "Вашият личен спътник за живот с Библията",
-    "disclaimer": "BibleBot.Life is a digital tool and does not replace professional pastoral care, theological counseling, or psychological therapy. In acute crises, please contact your local emergency helpline.",
-    "impressum": "Imprint",
-    "notes": "Notes",
-    "private": "Private, non-commercial project",
-    "noChat": "No storage of chat data",
-    "noTax": "Donations are not tax-deductible",
-    "datenschutz": "Privacy Policy",
-    "love": "With ❤️ for everyone wondering what Christ thinks.",
-    "forChurches": "For Churches"
+    "disclaimer": "BibleBot.Life е дигитален инструмент и не замества професионална пасторска грижа, теологични съвети или психологическа терапия. При остри кризи се обърнете към Dargebotene Hand (тел. 143) или Pro Juventute (тел. 147).",
+    "impressum": "Импресум",
+    "notes": "Бележки",
+    "private": "Частен, некомерсиален проект",
+    "noChat": "Без съхранение на данни от чата",
+    "noTax": "Даренията не подлежат на данъчно облекчение",
+    "datenschutz": "Защита на данните",
+    "love": "С ❤️ за всички, които се чудят какво мисли Христос.",
+    "forChurches": "За църкви"
   },
   "chat": {
-    "welcome": "Welcome! 🤗\n\nI'm your BibleBot – your personal companion with the Bible, good questions, and real impulses. No pressure, no judgment.\n\nYou can ask me anything – or just share what's on your mind. 💛",
-    "journeyOffer": "💡 **Tip:** I also offer a **21-day journey** – 3 weeks of daily impulses, reflections, and concrete steps. At your own pace.\n\nWould you like to try it?",
-    "suggestion1": "I need an uplifting word right now",
-    "suggestion2": "What does the Bible say when you feel uncertain?",
-    "suggestion3": "I want to find out what I really want",
-    "teaser": "What's on your mind? 💛",
-    "teaserSub": "I'm here – without any judgment.",
-    "openChat": "Open chat",
-    "closeChat": "Close chat",
-    "yourCompanion": "Your personal companion",
-    "journeyComplete": "21 days completed! 🎉",
-    "arriving": "Arriving",
-    "deepening": "Deepening",
-    "acting": "Acting",
-    "renameTip": "Tip: Click the name to rename me ✨",
-    "changeName": "Change name",
-    "placeholder": "Just start typing...",
-    "startVoice": "Start voice input",
-    "stopVoice": "Stop recording",
-    "noVoice": "Your browser does not support voice input.",
-    "writing": "typing...",
-    "shieldBadge": "No login · No judgment · Citations verified",
-    "journeyStart": "Yes, let's go ✨",
-    "journeyLater": "Maybe later",
-    "journeyStartMsg": "Yes, I'd like to start the 21-day journey!",
-    "qaChecking": "Checking citations...",
-    "qaIssue": "{{count}} issue with citations",
-    "qaIssue_plural": "{{count}} issues with citations",
-    "qaOk": "{{count}} citation verified ✓",
-    "qaOk_plural": "{{count}} citations verified ✓",
-    "qaWarning": "⚠️ Accuracy notes:",
-    "errorTooMany": "Too many requests – please wait a moment.",
-    "errorCredits": "AI quota exhausted.",
-    "errorConnect": "Connection error.",
-    "errorTitle": "Error",
-    "errorConnection": "could not be reached.",
-    "errorNoStream": "No stream",
-    "seniorMode": "Senior mode (larger text)",
-    "teaserCta": "Start writing →",
-    "namePlaceholder": "e.g. Eli, Miriam…"
+    "welcome": "Радвам се, че сте тук 🤗\n\nАз съм вашият BibleBot – вашият личен спътник с Библията, добри въпроси и конкретни импулси. Без натиск, без оценка.\n\nМожете да ме попитате всичко – или просто да разкажете какво ви тревожи в момента. 💛",
+    "journeyOffer": "💡 **Съвет:** Предлагам и **21-дневно придружаване** – 3 седмици с ежедневни импулси, размисли и конкретни стъпки. Изцяло във вашето темпо.\n\nИскате ли да опитате?",
+    "suggestion1": "В момента имам нужда от окуражителна дума",
+    "suggestion2": "Какво казва Библията, когато човек се чувства несигурен?",
+    "suggestion3": "Искам да разбера какво наистина искам",
+    "teaser": "Какво ви тревожи в момента? 💛",
+    "teaserSub": "Аз съм тук – без никаква оценка.",
+    "teaserCta": "Пишете сега →",
+    "openChat": "Отвори чат",
+    "closeChat": "Затвори чат",
+    "yourCompanion": "Вашият личен спътник",
+    "journeyComplete": "21 дни завършени! 🎉",
+    "arriving": "Пристигане",
+    "deepening": "Задълбочаване",
+    "acting": "Действие",
+    "renameTip": "Дайте ми име ✨",
+    "namePlaceholder": "напр. Ели, Мириам...",
+    "changeName": "Промени името",
+    "placeholder": "Просто започнете да пишете...",
+    "startVoice": "Стартирай гласово въвеждане",
+    "stopVoice": "Спри записа",
+    "noVoice": "Вашият браузър не поддържа гласово въвеждане.",
+    "writing": "пише...",
+    "shieldBadge": "Без вход · Без осъждане · Цитати проверени",
+    "journeyStart": "Да, започни ✨",
+    "journeyLater": "Може би по-късно",
+    "journeyStartMsg": "Да, искам да започна 21-дневното придружаване!",
+    "qaChecking": "Цитатите се проверяват...",
+    "qaIssue": "{{count}} бележка за цитати",
+    "qaIssue_plural": "{{count}} бележки за цитати",
+    "qaOk": "{{count}} цитат проверен ✓",
+    "qaOk_plural": "{{count}} цитати проверени ✓",
+    "qaWarning": "⚠️ Бележки за точност:",
+    "errorTooMany": "Твърде много заявки – моля, изчакайте малко.",
+    "errorCredits": "Изчерпан AI лимит.",
+    "errorConnect": "Грешка при свързване.",
+    "errorTitle": "Грешка",
+    "errorConnection": "не може да бъде достигнат.",
+    "errorNoStream": "Няма поток",
+    "seniorMode": "Режим за възрастни (по-голям шрифт)"
   },
   "install": {
-    "title": "Install BibleBot",
-    "androidDesc": "Quick access from your home screen",
-    "iosDesc": "Tap \"Share\" → \"Add to Home Screen\"",
-    "button": "Install",
-    "close": "Close"
+    "title": "Инсталирайте BibleBot",
+    "androidDesc": "Бърз достъп директно от началния екран",
+    "iosDesc": "Докоснете „Сподели“ → „Към началния екран“",
+    "button": "Инсталирай",
+    "close": "Затвори"
+  },
+  "share": {
+    "label": "Сподели",
+    "shareVia": "Сподели чрез",
+    "copied": "Копирано! 📋",
+    "copiedShort": "Копирано!",
+    "copiedDesc": "Текстът е копиран в клипборда. Споделете го сега в WhatsApp, Instagram или където пожелаете!",
+    "copyLink": "Копирай текст",
+    "error": "Копирането не успя",
+    "impulseTitle": "BibleBot – Импулс на деня",
+    "chatTitle": "BibleBot – Мисъл на деня",
+    "createImage": "Създай изображение ✨",
+    "generating": "Създаване...",
+    "imageReady": "Вашето изображение е готово за споделяне!",
+    "shareImage": "Сподели изображение",
+    "download": "Запази",
+    "imageError": "Създаването на изображение не успя",
+    "imageErrorDesc": "Изображението не можа да бъде създадено. Моля, опитайте отново по-късно.",
+    "imageSaved": "Текстът е копиран! 📋",
+    "imageSavedDesc": "Запазете изображението и го споделете с копирания текст в Instagram, WhatsApp или където пожелаете!"
   },
   "darkMode": {
-    "light": "Light mode",
-    "dark": "Dark mode"
+    "light": "Светъл режим",
+    "dark": "Тъмен режим"
   },
   "impressum": {
-    "back": "Back to home",
-    "title": "Imprint"
+    "back": "Обратно към началната страница",
+    "title": "Импресум"
   },
   "datenschutz": {
-    "back": "Back to home",
-    "title": "Privacy Policy"
+    "back": "Обратно към началната страница",
+    "title": "Декларация за защита на данните"
+  },
+  "tiles": {
+    "sectionTitle": "Какво ви тревожи?",
+    "sectionSubtitle": "Изберете тема — BibleBot ще ви придружава",
+    "baptism": {
+      "title": "Намери кръщелен стих",
+      "desc": "Идеалният стих за вашето дете",
+      "prompt": "Помогнете ми да намеря подходящ кръщелен стих. Какво дете е и какво желаят родителите?"
+    },
+    "condolence": {
+      "title": "Утешителни думи",
+      "desc": "Придружаване при съболезнования и сбогуване",
+      "prompt": "Имам нужда от утешителни думи за съболезнователна картичка. Можете ли да ми помогнете да формулирам нещо подходящо?"
+    },
+    "wedding": {
+      "title": "Сватбен стих",
+      "desc": "Библейски думи за вашата любов",
+      "prompt": "Търсим красив библейски стих за нашата сватба. Кои библейски пасажи са подходящи за любов и партньорство?"
+    },
+    "anxiety": {
+      "title": "Страх и тревоги",
+      "desc": "Намиране на смелост в трудни времена",
+      "prompt": "В момента се боря със страхове и тревоги. Какво казва Библията за това? Има ли стихове, които дават смелост?"
+    },
+    "confession": {
+      "title": "Изповед",
+      "desc": "Бог прощава — изречете го",
+      "prompt": "Искам да се освободя от нещо, което ме тежи. Какво казва Библията за прошката и новото начало?"
+    },
+    "heartbreak": {
+      "title": "Разбито сърце",
+      "desc": "Какво казва Библията за разбитото сърце",
+      "prompt": "Сърцето ми е разбито. Какво казва Библията за разбитото сърце и как да намерим отново надежда?"
+    },
+    "newstart": {
+      "title": "Ново начало",
+      "desc": "Сила за нов етап от живота",
+      "prompt": "Предстои ми ново начало и имам нужда от насърчение. Кои библейски пасажи говорят за нови начала?"
+    },
+    "namequiz": {
+      "title": "Кръщелен тест",
+      "desc": "Намерете подходящо библейско име",
+      "prompt": "Търся библейско име за детето си. Можете ли да ми дадете няколко предложения и да обясните значението им?"
+    },
+    "sleepless": {
+      "title": "Безсъние",
+      "desc": "Намиране на покой през нощта",
+      "prompt": "Не мога да спя и се тревожа. Има ли успокояваща молитва или псалм за нощта?"
+    },
+    "loneliness": {
+      "title": "Самота",
+      "desc": "Никога не сте сами",
+      "prompt": "Чувствам се самотен. Какво казва Библията за това, че Бог винаги е с нас?"
+    },
+    "decision": {
+      "title": "Трудно решение",
+      "desc": "Мъдрост за правилния път",
+      "prompt": "Предстои ми трудно решение. Кои библейски пасажи ми помагат да намеря правилния път?"
+    },
+    "gratitude": {
+      "title": "Благодарност",
+      "desc": "Лична молитва за благодарност",
+      "prompt": "Искам да благодаря на Бог. Помогнете ми да формулирам лична молитва за благодарност."
+    },
+    "lifewheel": {
+      "title": "Колелото на живота",
+      "desc": "Колко сте доволни наистина?"
+    },
+    "sevenwhys": {
+      "title": "7 Защо",
+      "desc": "Намерете най-дълбокия корен на въпроса си",
+      "prompt": "Искам да направя упражнението „7 Защо“. Ето моята тема:"
+    },
+    "anger": {
+      "title": "Гняв и ярост",
+      "desc": "Когато сте на път да избухнете от гняв",
+      "prompt": "Толкова съм ядосан и не знам какво да правя с гнева си. Какво казва Библията за гнева и как мога да се справя с него?"
+    },
+    "shame": {
+      "title": "Срам и вина",
+      "desc": "Когато чувството за вина ви потиска",
+      "prompt": "Толкова се срамувам и се чувствам виновен. Какво казва Библията за вината, прошката и новото начало?"
+    },
+    "burnout": {
+      "title": "Прегаряне",
+      "desc": "Когато просто не можете повече",
+      "prompt": "Напълно съм изтощен и прегорял. Просто не мога повече. Какво казва Библията за почивката и възстановяването?"
+    },
+    "illness": {
+      "title": "Болест",
+      "desc": "Когато диагнозата променя всичко",
+      "prompt": "Получих трудна диагноза и се страхувам. Какво казва Библията за болестта, изцелението и надеждата?"
+    },
+    "financial": {
+      "title": "Финансови притеснения",
+      "desc": "Когато сметките притискат",
+      "prompt": "Имам финансови притеснения и не знам какво да правя. Какво казва Библията за парите, доверието и осигуряването?"
+    },
+    "meaningcrisis": {
+      "title": "Криза на смисъла",
+      "desc": "За какво е всичко това?",
+      "prompt": "Чудя се за какво е всичко това. Аз съм в криза на смисъла. Какво казва Библията за смисъла на живота?"
+    },
+    "selfdoubt": {
+      "title": "Самосъмнение",
+      "desc": "Когато не се чувствате достатъчно добри",
+      "prompt": "Постоянно се съмнявам в себе си и не се чувствам достатъчно добър. Какво казва Библията за моята стойност?"
+    },
+    "calling": {
+      "title": "Призвание",
+      "desc": "Какво да правя с живота си?",
+      "prompt": "Не знам какво да правя с живота си. Помогнете ми да намеря своето призвание – какво казва Библията за това?"
+    },
+    "faithdoubt": {
+      "title": "Съмнения във вярата",
+      "desc": "Когато вярата се разклаща",
+      "prompt": "Имам съмнения във вярата си и не знам дали все още мога да вярвам. Какво казва Библията за съмненията?"
+    },
+    "forgiveness": {
+      "title": "Прошка",
+      "desc": "Когато прошката изглежда невъзможна",
+      "prompt": "Просто не мога да простя на някого. Боли твърде много. Какво казва Библията за прошката?"
+    },
+    "familyconflict": {
+      "title": "Семеен конфликт",
+      "desc": "Когато има конфликт в семейството",
+      "prompt": "Има голям конфликт в семейството ми. Какво казва Библията за семейния мир и помирението?"
+    },
+    "envy": {
+      "title": "Завист",
+      "desc": "Когато другите са по-добре",
+      "prompt": "Завиждам на другите и постоянно се сравнявам. Какво казва Библията за завистта и удовлетворението?"
+    },
+    "joy": {
+      "title": "Сподели радостта",
+      "desc": "Когато се е случило нещо прекрасно",
+      "prompt": "Случи ми се нещо прекрасно и искам да споделя радостта си! Какво казва Библията за радостта и благодарността?"
+    },
+    "prayer": {
+      "title": "Молитвено намерение",
+      "desc": "Молете се заедно",
+      "prompt": "Имам молитвено намерение и искам да се моля заедно. Придружете ме в молитва."
+    },
+    "bibleverse": {
+      "title": "Разбери стих",
+      "desc": "Обяснение на библейски пасаж",
+      "prompt": "Искам да разбера по-добре един библейски пасаж. Можете ли да ми помогнете да го поставя в контекст?"
+    }
+  },
+  "lifeWheel": {
+    "title": "Вашето колело на живота",
+    "intro": "Оценете 8 области от живота по скала от 1 до 10. Разберете къде се намирате — и получете библейски импулси за областта, която се нуждае от внимание.",
+    "start": "Започни сега",
+    "sliderHint": "Преместете плъзгачите — 1 = много недоволен, 10 = много доволен",
+    "showResult": "Покажи резултата",
+    "average": "Средно",
+    "weakestArea": "Най-голяма нужда",
+    "getImpulse": "Библейски импулс за {{area}}",
+    "reset": "Направи отново",
+    "prompt": "Моето колело на живота показва, че в областта „{{area}}“ имам само {{score}}/10 точки. Какво казва Библията за тази област от живота? Дайте ми насърчение и практически импулси.",
+    "areas": {
+      "health": "Здраве",
+      "relationships": "Взаимоотношения",
+      "career": "Кариера",
+      "spirituality": "Духовност",
+      "finances": "Финанси",
+      "family": "Семейство",
+      "leisure": "Свободно време",
+      "growth": "Личностно израстване"
+    },
+    "save": "Запази резултата",
+    "saved": "Запазено!",
+    "history": "Предишни резултати",
+    "noHistory": "Все още няма запазени резултати.",
+    "backToNew": "Ново колело на живота",
+    "backToList": "Обратно към списъка"
+  },
+  "church": {
+    "badge": "За общности",
+    "heroTitle": "BibleBot за вашата общност",
+    "heroSubtitle": "Придружавайте членовете на вашата общност с библейска мъдрост – дигитално, лично и денонощно.",
+    "useCasesTitle": "Случаи на употреба",
+    "useCase": {
+      "youth": {
+        "title": "Младежка работа",
+        "desc": "Тийнейджърите откриват Библията по свой начин – интерактивно и без задръжки."
+      },
+      "confirmation": {
+        "title": "Конфирмация",
+        "desc": "Конфирмантите задълбочават библейските си познания самостоятелно с лично придружаване."
+      },
+      "pastoral": {
+        "title": "Пасторска грижа",
+        "desc": "24/7 придружаване като допълнение към личната пасторска грижа."
+      },
+      "bibleStudy": {
+        "title": "Библейски кръжок",
+        "desc": "Импулси и теми за дискусия за групи и домашни кръжоци."
+      }
+    },
+    "pricingTitle": "Патронажни пакети",
+    "pricingSubtitle": "Подкрепете BibleBot и вашата общност с подходящия патронажен пакет.",
+    "popular": "Популярно",
+    "free": "Безплатно",
+    "perYear": "година",
+    "contact": "Свържете се",
+    "tier": {
+      "free": {
+        "name": "Синапено зърно",
+        "size": "За малки общности и домашни кръжоци (до 50 члена)"
+      },
+      "community": {
+        "name": "Спътник",
+        "size": "За общности с 50–200 члена"
+      },
+      "gemeinde": {
+        "name": "Мостостроител",
+        "size": "За общности с 200–500 члена"
+      },
+      "kirche": {
+        "name": "Фар",
+        "size": "За големи общности и институции (500+ члена)"
+      }
+    },
+    "features": {
+      "directoryEntry": "Запис в директория",
+      "telegramGroup": "Telegram група",
+      "partnerPage": "Собствена партньорска страница",
+      "badge": "Партньорска значка",
+      "qrFlyer": "QR флаер за печат",
+      "contactForm": "Формуляр за контакт",
+      "pastorProfile": "Профил на пастор",
+      "welcomeVideo": "Приветствено видео",
+      "analytics": "Табло за анализи",
+      "prioritySupport": "Приоритетна поддръжка",
+      "multipleProfiles": "Множество профили",
+      "customBranding": "Персонализиран брандинг",
+      "apiAccess": "API достъп",
+      "accountManager": "Личен акаунт мениджър"
+    },
+    "viewDirectory": "Вижте директорията на общностите",
+    "directoryBadge": "Директория на общностите",
+    "directoryTitle": "Партньорски общности",
+    "directorySubtitle": "Намерете общност близо до вас, която препоръчва BibleBot.",
+    "searchPlaceholder": "Търсене на място, име или деноминация...",
+    "noResults": "Все още няма общности в директорията.",
+    "becomePartner": "Стани партньор →",
+    "notFound": "Общността не е намерена.",
+    "backToDirectory": "Обратно към директорията",
+    "pastor": "Пастор",
+    "serviceTimes": "Време за богослужение",
+    "startChat": "Започни чат",
+    "website": "Уебсайт",
+    "telegramGroup": "Telegram група",
+    "contactTitle": "Контакт с {{name}}",
+    "contactName": "Вашето име (по избор)",
+    "contactEmail": "Вашият имейл адрес",
+    "contactMessage": "Вашето съобщение",
+    "contactSend": "Изпрати съобщение",
+    "contactSuccess": "Съобщението е изпратено! 🙏",
+    "contactSuccessDesc": "Общността ще се свърже с вас.",
+    "recommendedBy": "Препоръчано от {{name}}",
+    "setup": "Настройка (еднократна)",
+    "form": {
+      "title": "Интересувате ли се? Пишете ни!",
+      "subtitle": "Ще се свържем с вас до 48 часа.",
+      "name": "Вашето име",
+      "email": "Имейл адрес",
+      "churchName": "Име на общността",
+      "tier": "Желан пакет",
+      "tierPlaceholder": "Изберете пакет...",
+      "message": "Вашето съобщение",
+      "submit": "Изпрати запитване",
+      "success": "Запитването е изпратено! Скоро ще се свържем с вас. 🙏",
+      "error": "Грешка при изпращане. Моля, опитайте отново.",
+      "orgType": "Тип организация",
+      "orgTypePlaceholder": "Изберете тип...",
+      "orgTypes": {
+        "church": "Църква",
+        "careHome": "Дом за грижи",
+        "seniorHome": "Дом за възрастни хора",
+        "hospital": "Болница",
+        "prison": "Затворническа пасторска грижа",
+        "military": "Военна пасторска грижа"
+      }
+    },
+    "institutionsTitle": "Също и за институции",
+    "institutionsSubtitle": "BibleBot придружава не само общности – домове за грижи и възрастни хора, болници и затворническа пасторска грижа също се възползват от дигиталната пасторска грижа.",
+    "institution": {
+      "careHome": {
+        "title": "Домове за грижи",
+        "desc": "Ежедневни библейски импулси и придружаване за жителите – дори когато няма пастор на място."
+      },
+      "seniorHome": {
+        "title": "Домове за възрастни хора",
+        "desc": "Познати библейски стихове и разговори за възрастни хора – лесно достъпни чрез таблет или смартфон."
+      },
+      "hospital": {
+        "title": "Болници",
+        "desc": "Утеха и духовно придружаване за пациенти в трудни времена – на разположение 24/7 до болничното легло."
+      },
+      "prison": {
+        "title": "Затворническа пасторска грижа",
+        "desc": "Надежда и духовно придружаване за лишени от свобода – доверен събеседник денонощно."
+      },
+      "military": {
+        "title": "Военна пасторска грижа",
+        "desc": "Духовно придружаване за членове на армията – достъпно дори по време на мисия или в казармата."
+      }
+    }
+  },
+  "institutions": {
+    "badge": "За институции",
+    "heroTitle": "BibleBot за вашата институция",
+    "heroSubtitle": "Дигитална пасторска грижа за домове за грижи, домове за възрастни хора, болници и места за лишаване от свобода – лично, поверително и денонощно.",
+    "seniorHint": {
+      "title": "Наличен режим за възрастни",
+      "desc": "По-голям шрифт и опростено управление – идеално за по-възрастни жители.",
+      "cta": "Тествайте режима за възрастни"
+    },
+    "typesTitle": "За кого е BibleBot?",
+    "useCasesTitle": "Как се използва BibleBot",
+    "useCasesSubtitle": "Конкретни приложения за ежедневието във вашата институция.",
+    "pricingTitle": "Патронажни пакети",
+    "pricingSubtitle": "Същите пакети като за общности – адаптирани към институционалните нужди.",
+    "linkChurches": "Налично и за общности",
+    "type": {
+      "careHome": {
+        "title": "Домове за грижи",
+        "desc": "Ежедневни библейски импулси и придружаване за жителите – дори когато няма пастор на място."
+      },
+      "seniorHome": {
+        "title": "Домове за възрастни хора",
+        "desc": "Познати библейски стихове и разговори за възрастни хора – лесно достъпни чрез таблет или смартфон."
+      },
+      "hospital": {
+        "title": "Болници",
+        "desc": "Утеха и духовно придружаване за пациенти в трудни времена – на разположение 24/7 до болничното легло."
+      },
+      "prison": {
+        "title": "Затворническа пасторска грижа",
+        "desc": "Надежда и духовно придружаване за лишени от свобода – доверен събеседник денонощно."
+      },
+      "military": {
+        "title": "Военна пасторска грижа",
+        "desc": "Духовно придружаване за членове на армията – достъпно дори по време на мисия или в казармата."
+      }
+    },
+    "useCase": {
+      "dailyImpulse": {
+        "title": "Ежедневен импулс",
+        "desc": "Всяка сутрин библейски стих с въпрос за размисъл – намалява бариерата за духовни разговори."
+      },
+      "companionship": {
+        "title": "Събеседник",
+        "desc": "BibleBot отговаря на въпроси за вярата търпеливо и без времеви натиск – идеално за самотни часове."
+      },
+      "accessibility": {
+        "title": "Лесен достъп",
+        "desc": "Голям шрифт, лесно управление чрез таблет – също и за хора с ограничена подвижност."
+      },
+      "availability": {
+        "title": "На разположение 24/7",
+        "desc": "Духовно придружаване и през нощта и през уикенда – когато няма пастор на разположение."
+      }
+    },
+    "tierDesc": {
+      "free": "Основен достъп за жители и пациенти",
+      "community": "Споменаване като поддръжник, достъп без реклами",
+      "gemeinde": "Присъствие на лого, месечен отчет за използване",
+      "kirche": "Собствено съдържание, участие в пътната карта, премиум поддръжка"
+    },
+    "form": {
+      "title": "Интересувате ли се? Свържете се с нас!",
+      "subtitle": "Ще се свържем с вас до 48 часа.",
+      "name": "Вашето име",
+      "email": "Имейл адрес",
+      "institutionName": "Име на институцията",
+      "type": "Тип институция",
+      "typePlaceholder": "Моля, изберете...",
+      "tier": "Желан пакет",
+      "tierPlaceholder": "Изберете пакет...",
+      "message": "Вашето съобщение",
+      "submit": "Изпрати запитване",
+      "success": "Запитването е изпратено! Скоро ще се свържем с вас. 🙏",
+      "error": "Грешка при изпращане. Моля, опитайте отново."
+    }
   },
   "lang": {
     "de": "Deutsch",
@@ -329,427 +751,5 @@
     "ig": "Igbo",
     "zu": "isiZulu",
     "ht": "Kreyòl"
-  },
-  "tiles": {
-    "sectionTitle": "What's on your heart?",
-    "sectionSubtitle": "Choose a topic — BibleBot walks with you",
-    "baptism": {
-      "title": "Find a baptism verse",
-      "desc": "The perfect verse for your child",
-      "prompt": "Help me find a fitting baptism verse. What kind of child is it and what do the parents wish for?"
-    },
-    "condolence": {
-      "title": "Words of comfort",
-      "desc": "Support through grief & farewell",
-      "prompt": "I need comforting words for a condolence card. Can you help me find the right words?"
-    },
-    "wedding": {
-      "title": "Wedding verse",
-      "desc": "Biblical words for your love",
-      "prompt": "We're looking for a beautiful biblical verse for our wedding. Which passages speak about love and partnership?"
-    },
-    "anxiety": {
-      "title": "Fear & worry",
-      "desc": "Finding courage in hard times",
-      "prompt": "I'm struggling with fear and worry right now. What does the Bible say about this? Are there verses that give courage?"
-    },
-    "confession": {
-      "title": "Confession",
-      "desc": "God forgives — speak it out",
-      "prompt": "I want to let go of something that weighs on me. What does the Bible say about forgiveness and new beginnings?"
-    },
-    "heartbreak": {
-      "title": "Heartbreak",
-      "desc": "What the Bible says about heartache",
-      "prompt": "My heart is broken. What does the Bible say about heartbreak and how to find hope again?"
-    },
-    "newstart": {
-      "title": "New beginning",
-      "desc": "Strength for a new chapter",
-      "prompt": "I'm facing a new beginning and need encouragement. Which Bible passages speak about fresh starts?"
-    },
-    "namequiz": {
-      "title": "Name quiz",
-      "desc": "Find the right biblical name",
-      "prompt": "I'm looking for a biblical name for my child. Can you suggest some and explain their meanings?"
-    },
-    "sleepless": {
-      "title": "Sleepless",
-      "desc": "Finding peace at night",
-      "prompt": "I can't sleep and my mind is racing. Is there a calming prayer or psalm for the night?"
-    },
-    "loneliness": {
-      "title": "Loneliness",
-      "desc": "You are never alone",
-      "prompt": "I feel lonely. What does the Bible say about God always being with us?"
-    },
-    "decision": {
-      "title": "Tough decision",
-      "desc": "Wisdom for the right path",
-      "prompt": "I'm facing a difficult decision. Which Bible passages can help me find the right way?"
-    },
-    "gratitude": {
-      "title": "Gratitude",
-      "desc": "A personal prayer of thanks",
-      "prompt": "I want to thank God. Help me write a personal prayer of gratitude."
-    },
-    "lifewheel": {
-      "title": "Life Wheel",
-      "desc": "How satisfied are you really?"
-    },
-    "sevenwhys": {
-      "title": "7 Whys",
-      "desc": "Find the deepest root of your question",
-      "prompt": "I'd like to do the 7 Whys exercise. Here is my topic:"
-    },
-    "anger": {
-      "title": "Anger",
-      "desc": "When you're about to explode",
-      "prompt": "I'm so angry and don't know what to do with my rage. What does the Bible say about anger and how to deal with it?"
-    },
-    "shame": {
-      "title": "Shame & Guilt",
-      "desc": "When guilt is crushing you",
-      "prompt": "I feel so ashamed and guilty. What does the Bible say about guilt, forgiveness, and starting over?"
-    },
-    "burnout": {
-      "title": "Burnout",
-      "desc": "When you just can't go on",
-      "prompt": "I'm totally exhausted and burned out. I just can't anymore. What does the Bible say about rest and recovery?"
-    },
-    "illness": {
-      "title": "Illness",
-      "desc": "When a diagnosis changes everything",
-      "prompt": "I've received a difficult diagnosis and I'm scared. What does the Bible say about illness, healing, and hope?"
-    },
-    "financial": {
-      "title": "Money Worries",
-      "desc": "When bills are piling up",
-      "prompt": "I have financial worries and don't know what to do. What does the Bible say about money, trust, and provision?"
-    },
-    "meaningcrisis": {
-      "title": "Meaning Crisis",
-      "desc": "What's it all for?",
-      "prompt": "I'm wondering what's the point of it all. I'm in a meaning crisis. What does the Bible say about the meaning of life?"
-    },
-    "selfdoubt": {
-      "title": "Self-Doubt",
-      "desc": "When you don't feel good enough",
-      "prompt": "I constantly doubt myself and don't feel good enough. What does the Bible say about my worth?"
-    },
-    "calling": {
-      "title": "Calling",
-      "desc": "What should I do with my life?",
-      "prompt": "I don't know what to do with my life. Help me find my calling — what does the Bible say?"
-    },
-    "faithdoubt": {
-      "title": "Faith Doubts",
-      "desc": "When your faith is shaking",
-      "prompt": "I have doubts about my faith and don't know if I can still believe. What does the Bible say about doubt?"
-    },
-    "forgiveness": {
-      "title": "Forgiveness",
-      "desc": "When forgiving seems impossible",
-      "prompt": "I simply can't forgive someone. It hurts too much. What does the Bible say about forgiveness?"
-    },
-    "familyconflict": {
-      "title": "Family Conflict",
-      "desc": "When family is at war",
-      "prompt": "There's a big conflict in my family. What does the Bible say about family peace and reconciliation?"
-    },
-    "envy": {
-      "title": "Envy",
-      "desc": "When others have it better",
-      "prompt": "I'm envious of others and constantly comparing myself. What does the Bible say about envy and contentment?"
-    },
-    "joy": {
-      "title": "Share Joy",
-      "desc": "When something wonderful happened",
-      "prompt": "Something wonderful happened to me and I want to share my joy! What does the Bible say about joy and gratitude?"
-    },
-    "prayer": {
-      "title": "Prayer Request",
-      "desc": "Pray together",
-      "prompt": "I have a prayer request and would like to pray together. Join me in prayer."
-    },
-    "bibleverse": {
-      "title": "Understand a Verse",
-      "desc": "Get a Bible passage explained",
-      "prompt": "I'd like to understand a Bible passage better. Can you help me put it in context?"
-    }
-  },
-  "lifeWheel": {
-    "title": "Your Life Wheel",
-    "intro": "Rate 8 life areas on a scale of 1-10. Discover where you stand — and receive biblical impulses for the area that needs attention.",
-    "start": "Get started",
-    "sliderHint": "Move the sliders — 1 = very unsatisfied, 10 = very satisfied",
-    "showResult": "Show result",
-    "average": "Average",
-    "weakestArea": "Greatest need",
-    "getImpulse": "Biblical impulse for {{area}}",
-    "reset": "Try again",
-    "prompt": "My life wheel shows that I scored only {{score}}/10 in the area of '{{area}}'. What does the Bible say about this area of life? Give me encouragement and practical impulses.",
-    "areas": {
-      "health": "Health",
-      "relationships": "Relationships",
-      "career": "Career",
-      "spirituality": "Spirituality",
-      "finances": "Finances",
-      "family": "Family",
-      "leisure": "Leisure",
-      "growth": "Personal Growth"
-    },
-    "save": "Save result",
-    "saved": "Saved!",
-    "history": "Previous results",
-    "noHistory": "No saved results yet.",
-    "backToNew": "New Life Wheel",
-    "backToList": "Back to list"
-  },
-  "church": {
-    "badge": "За Църкви",
-    "heroTitle": "BibleBot за вашата Църква",
-    "heroSubtitle": "Придружете общността си с библейска мъдрост – дигитално, лично и денонощно.",
-    "useCasesTitle": "Приложения",
-    "useCase": {
-      "youth": {
-        "title": "Младежка работа",
-        "desc": "Тийнейджърите откриват Библията по свой начин – интерактивно и без притеснения."
-      },
-      "confirmation": {
-        "title": "Конфирмация",
-        "desc": "Конфирмандите задълбочават библейските си познания самостоятелно с лично ръководство."
-      },
-      "pastoral": {
-        "title": "Пастирска грижа",
-        "desc": "24/7 придружаване като допълнение към личната пастирска грижа."
-      },
-      "bibleStudy": {
-        "title": "Библейско изучаване",
-        "desc": "Импулси и теми за дискусия за групи и домашни общности."
-      }
-    },
-    "pricingTitle": "Патронажни пакети",
-    "pricingSubtitle": "Подкрепете BibleBot и вашата църква с подходящия патронажен пакет.",
-    "popular": "Популярно",
-    "free": "Безплатно",
-    "perYear": "Година",
-    "contact": "Свържете се",
-    "tier": {
-      "free": {
-        "name": "Синапено зърно",
-        "size": "Базов достъп до бота за всички членове на общността."
-      },
-      "community": {
-        "name": "Спътник",
-        "size": "Споменаване на църквата като поддръжник в сайта и достъп без реклами."
-      },
-      "gemeinde": {
-        "name": "Мостостроител",
-        "size": "Лого в интерфейса на бота, месечен отчет за употреба (анонимизиран)."
-      },
-      "kirche": {
-        "name": "Фар",
-        "size": "Интегриране на собствено съдържание (напр. архив на проповеди), съвместно изграждане на пътна карта, премиум поддръжка."
-      }
-    },
-    "features": {
-      "directoryEntry": "Запис в указателя",
-      "telegramGroup": "Телеграм група",
-      "partnerPage": "Собствена партньорска страница",
-      "badge": "Партньорски бадж",
-      "qrFlyer": "QR флаер за печат",
-      "contactForm": "Формуляр за контакт",
-      "pastorProfile": "Профил на пастор",
-      "welcomeVideo": "Видео за добре дошли",
-      "analytics": "Аналитично табло",
-      "prioritySupport": "Приоритетна поддръжка",
-      "multipleProfiles": "Множество профили",
-      "customBranding": "Собствен бранд",
-      "apiAccess": "API достъп",
-      "accountManager": "Личен мениджър"
-    },
-    "viewDirectory": "Вижте указателя",
-    "directoryBadge": "Указател на Църквите",
-    "directoryTitle": "Партньорски църкви",
-    "directorySubtitle": "Намерете църква близо до вас, която препоръчва BibleBot.",
-    "searchPlaceholder": "Търсене по място, име или деноминация...",
-    "noResults": "Все още няма църкви в указателя.",
-    "becomePartner": "Станете партньор →",
-    "notFound": "Църквата не е намерена.",
-    "backToDirectory": "Обратно към указателя",
-    "pastor": "Пастор",
-    "serviceTimes": "Часове на богослужения",
-    "startChat": "Започнете чат",
-    "website": "Уебсайт",
-    "telegramGroup": "Телеграм група",
-    "contactTitle": "Свържете се с {{name}}",
-    "contactName": "Вашето име (незадължително)",
-    "contactEmail": "Вашият имейл",
-    "contactMessage": "Вашето съобщение",
-    "contactSend": "Изпращане",
-    "contactSuccess": "Съобщението е изпратено! 🙏",
-    "contactSuccessDesc": "Църквата ще се свърже с вас.",
-    "recommendedBy": "Препоръчано от {{name}}",
-    "setup": "Настройка (еднократна)",
-    "form": {
-      "title": "Интересувате се? Свържете се с нас!",
-      "subtitle": "Ще отговорим до 48 часа.",
-      "name": "Вашето име",
-      "email": "Имейл адрес",
-      "churchName": "Име на църквата",
-      "tier": "Предпочитан пакет",
-      "tierPlaceholder": "Изберете пакет...",
-      "message": "Вашето съобщение",
-      "submit": "Изпрати запитване",
-      "success": "Запитването е изпратено! Ще се свържем скоро. 🙏",
-      "error": "Грешка при изпращане. Опитайте отново.",
-      "orgType": "Organization type",
-      "orgTypePlaceholder": "Select type...",
-      "orgTypes": {
-        "church": "Church",
-        "careHome": "Care Home",
-        "seniorHome": "Retirement Home",
-        "hospital": "Hospital",
-        "prison": "Prison Chaplaincy",
-        "military": "Military Chaplaincy"
-      }
-    },
-    "institutionsTitle": "Also for Institutions",
-    "institutionsSubtitle": "BibleBot supports not only churches – care homes, retirement homes, and hospitals also benefit from digital pastoral care.",
-    "institution": {
-      "careHome": {
-        "title": "Care Homes",
-        "desc": "Daily Bible impulses and companionship for residents – even when no chaplain is on site."
-      },
-      "seniorHome": {
-        "title": "Retirement Homes",
-        "desc": "Familiar Bible verses and conversations for seniors – easily accessible via tablet or smartphone."
-      },
-      "hospital": {
-        "title": "Hospitals",
-        "desc": "Comfort and spiritual support for patients in difficult times – available 24/7 at the bedside."
-      },
-      "prison": {
-        "title": "Prison Chaplaincy",
-        "desc": "Hope and spiritual support for inmates – a confidential companion around the clock."
-      },
-      "military": {
-        "title": "Military Chaplaincy",
-        "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
-      }
-    }
-  },
-  "institutions": {
-    "badge": "For Institutions",
-    "heroTitle": "BibleBot for Your Institution",
-    "heroSubtitle": "Digital pastoral care for care homes, retirement homes, hospitals, and correctional facilities – personal, confidential, and around the clock.",
-    "typesTitle": "Who is BibleBot for?",
-    "useCasesTitle": "How BibleBot is Used",
-    "useCasesSubtitle": "Practical applications for daily life in your institution.",
-    "pricingTitle": "Patronage Packages",
-    "pricingSubtitle": "The same packages as for churches – adapted to institutional needs.",
-    "linkChurches": "Also available for churches",
-    "type": {
-      "careHome": {
-        "title": "Care Homes",
-        "desc": "Daily Bible impulses and companionship for residents – even when no chaplain is on site."
-      },
-      "seniorHome": {
-        "title": "Retirement Homes",
-        "desc": "Familiar Bible verses and conversations for seniors – easily accessible via tablet or smartphone."
-      },
-      "hospital": {
-        "title": "Hospitals",
-        "desc": "Comfort and spiritual support for patients in difficult times – available 24/7 at the bedside."
-      },
-      "prison": {
-        "title": "Prison Chaplaincy",
-        "desc": "Hope and spiritual support for inmates – a confidential companion around the clock."
-      },
-      "military": {
-        "title": "Military Chaplaincy",
-        "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
-      }
-    },
-    "useCase": {
-      "dailyImpulse": {
-        "title": "Daily Impulse",
-        "desc": "A Bible verse with reflection question every morning – lowers the barrier for spiritual conversations."
-      },
-      "companionship": {
-        "title": "Conversation Partner",
-        "desc": "BibleBot answers faith questions patiently and without time pressure – ideal for lonely hours."
-      },
-      "accessibility": {
-        "title": "Easy Access",
-        "desc": "Large text, simple tablet interface – also for people with limited mobility."
-      },
-      "availability": {
-        "title": "24/7 Available",
-        "desc": "Spiritual companionship at night and on weekends – when no chaplain is available."
-      }
-    },
-    "tierDesc": {
-      "free": "Basic access for residents and patients",
-      "community": "Mentioned as supporter, ad-free access",
-      "gemeinde": "Logo presence, monthly usage report",
-      "kirche": "Custom content, roadmap co-creation, premium support"
-    },
-    "form": {
-      "title": "Interested? Get in touch!",
-      "subtitle": "We'll get back to you within 48 hours.",
-      "name": "Your name",
-      "email": "Email address",
-      "institutionName": "Institution name",
-      "type": "Type of institution",
-      "typePlaceholder": "Please select...",
-      "tier": "Preferred package",
-      "tierPlaceholder": "Choose package...",
-      "message": "Your message",
-      "submit": "Send inquiry",
-      "success": "Inquiry sent! We'll be in touch soon. 🙏",
-      "error": "Error sending. Please try again."
-    },
-    "seniorHint": {
-      "title": "Наличен режим за възрастни",
-      "desc": "По-голям текст и опростена навигация – идеално за възрастни жители.",
-      "cta": "Опитайте режим за възрастни"
-    }
-  },
-  "refer": {
-    "badge": "Share God's Word",
-    "title": "Recommend BibleBot",
-    "subtitle": "Know someone who could use encouragement? Share BibleBot – one message can make a difference.",
-    "whatsapp": "Share via WhatsApp",
-    "whatsappMsg": "Hey, I wanted to show you BibleBot – a free Bible companion that really knows the Bible and asks great questions. No login, anonymous, honest. Try it out: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
-    "telegram": "Share via Telegram",
-    "telegramMsg": "Hey, do you know BibleBot? A free personal Bible companion – honest, anonymous, no login needed. Check it out: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
-    "email": "Share via email",
-    "emailSubject": "This might interest you: BibleBot.Life",
-    "emailBody": "Hi!\n\nI wanted to show you BibleBot – a free Bible companion that really knows the Bible. No sign-up needed, completely anonymous.\n\nIt asks thoughtful questions, explains Bible passages in context and accompanies you honestly – even on difficult topics.\n\nTry it out: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nBest wishes",
-    "copy": "Copy link",
-    "copied": "Link copied! 📋",
-    "qr": "Or just show this QR code:"
-  },
-  "share": {
-    "label": "Share",
-    "shareVia": "Share via",
-    "copied": "Copied! 📋",
-    "copiedShort": "Copied!",
-    "copiedDesc": "Text copied to clipboard. Share it on WhatsApp, Instagram or wherever you like!",
-    "copyLink": "Copy text",
-    "error": "Copy failed",
-    "impulseTitle": "BibleBot – Impulse of the Day",
-    "chatTitle": "BibleBot – Thought of the Day",
-    "createImage": "Create image ✨",
-    "generating": "Creating…",
-    "imageReady": "Your image is ready to share!",
-    "shareImage": "Share image",
-    "download": "Save",
-    "imageError": "Image creation failed",
-    "imageErrorDesc": "The image could not be created. Please try again later.",
-    "imageSaved": "Text copied! 📋",
-    "imageSavedDesc": "Save the image and share it with the copied text on Instagram, WhatsApp or wherever you like!"
   }
 }
