@@ -2,7 +2,7 @@ import { useState, useCallback } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { DndContext, closestCenter, KeyboardSensor, PointerSensor, useSensor, useSensors, type DragEndEvent } from "@dnd-kit/core";
 import { arrayMove, SortableContext, sortableKeyboardCoordinates, verticalListSortingStrategy } from "@dnd-kit/sortable";
-import { ArrowLeft, Save, Clock, Plus } from "lucide-react";
+import { ArrowLeft, Save, Clock, Plus, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -129,6 +129,12 @@ export default function ServiceEditor() {
               <Clock className="h-4 w-4" />
               {totalDuration} Min.
             </span>
+          )}
+          {!isNew && (
+            <Button variant="outline" onClick={() => navigate(`/dashboard/conductor/${id}`)}>
+              <Play className="h-4 w-4 mr-2" />
+              Live
+            </Button>
           )}
           <Button onClick={handleSave} disabled={saving}>
             <Save className="h-4 w-4 mr-2" />
