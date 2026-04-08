@@ -69,6 +69,7 @@ export function DailyImpulse() {
   const [shareImageUrl, setShareImageUrl] = useState<string | null>(getCachedShareImage);
   const [isGeneratingImage, setIsGeneratingImage] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(() => localStorage.getItem(SUBSCRIBED_KEY) === "1");
+  const [showChannels, setShowChannels] = useState(false);
   const [isSubscribing, setIsSubscribing] = useState(false);
   const [showImagePreview, setShowImagePreview] = useState(false);
   const [showSmsInput, setShowSmsInput] = useState(false);
@@ -338,9 +339,12 @@ export function DailyImpulse() {
           </div>
         )}
         {isSubscribed && (
-          <span className="hidden sm:flex text-xs text-primary/70 items-center gap-1 shrink-0">
-            ✓ {t("impulse.alreadySubscribed")}
-          </span>
+          <button
+            onClick={() => { setIsExpanded(true); setShowChannels(true); }}
+            className="hidden sm:flex text-xs text-primary/70 items-center gap-1 shrink-0 hover:text-primary transition-colors cursor-pointer"
+          >
+            ✓ {t("impulse.alreadySubscribed")} · {t("subscribe.channelLabel", "Kanal ändern")}
+          </button>
         )}
       </div>
 
@@ -429,13 +433,13 @@ export function DailyImpulse() {
               />
             </div>
 
-            {/* Inline Subscribe CTA (mobile: shown here, desktop: in banner) */}
-            {!isSubscribed && (
+            {/* Inline Subscribe CTA */}
+            {(!isSubscribed || showChannels) && (
               <div className="mt-4 pt-4 border-t border-primary/15">
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
                   <p className="text-sm text-foreground/80 font-medium flex items-center gap-1.5">
                     <Bell className="h-3.5 w-3.5 text-primary" />
-                    {t("impulse.subscribeCta")}
+                    {isSubscribed ? t("subscribe.channelLabel") : t("impulse.subscribeCta")}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <Button
@@ -495,10 +499,13 @@ export function DailyImpulse() {
               </div>
             )}
 
-            {isSubscribed && (
-              <p className="mt-3 text-xs text-primary/70 flex items-center gap-1">
-                ✓ {t("impulse.alreadySubscribed")}
-              </p>
+            {isSubscribed && !showChannels && (
+              <button
+                onClick={() => setShowChannels(true)}
+                className="mt-3 text-xs text-primary/70 flex items-center gap-1 hover:text-primary transition-colors cursor-pointer"
+              >
+                ✓ {t("impulse.alreadySubscribed")} · {t("subscribe.channelLabel", "Kanal ändern")}
+              </button>
             )}
           </div>
         </div>
