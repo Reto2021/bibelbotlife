@@ -1,13 +1,16 @@
+# Memory: index.md
+Updated: now
+
 # Project Memory
 
 ## Core
-BibleBot.Life - internationaler Bibel-Chatbot. Markenname IMMER "BibleBot", nie "BibelBot".
+BibelBot.ch → BibleBot.Life Rebranding. Schweizer Deutsch (CH) als Standard.
 Kein ß verwenden - immer "ss" (Deutsch Schweiz). Auch in Chat-Antworten.
 Schweizerdeutsch als KI-Audio-Eingabesprache für Audio-Chat.
-Domain: biblebot.life (nicht bibelbot.ch)
 
 ## Memories
 - [Sprachregeln](mem://preference/sprache) — Schweizer Deutsch, kein ß, Audio-Eingabe Schweizerdeutsch
-- [Branding](mem://preference/branding) — BibleBot.Life international, Subline "Everyday Sunday", kein KI im Marketing
-- [Farbpalette](mem://design/color-palette) — Design-Tokens und Farbsystem
-- [Gemeinde-Partnerschaft](mem://feature/church-partnership) — Patronats-Pakete, Splash-Screen, Gemeinde-Branding
+- [Branding](mem://preference/branding) — BibleBot.Life (international), kein KI im Marketing
+- [Messeplaner v6](mem://feature/messeplaner) — Gottesdienst-Planungs-Modul mit 10 Dimensionen, Block-Editor, Conductor Mode, Phasenplan
+- [Church Partnership](mem://feature/church-partnership) — Gemeinde-Partnerschaft Konzept
+- [Farbpalette](mem://design/color-palette) — Design-Tokens und Farbschema
