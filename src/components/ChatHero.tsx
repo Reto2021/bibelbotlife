@@ -83,7 +83,7 @@ export function ChatHero() {
   ];
 
   return (
-    <section className="relative py-16 md:py-24 px-4">
+    <section className="relative py-10 md:py-24 px-4">
       <div className="container mx-auto max-w-3xl text-center">
         {/* Trust badge */}
         <motion.div
@@ -153,7 +153,7 @@ export function ChatHero() {
               onFocus={() => setIsFocused(true)}
               onBlur={() => setIsFocused(false)}
               placeholder={isFocused ? t("chatHero.focusPlaceholder") : placeholder + "│"}
-              className="w-full bg-transparent pl-14 pr-14 py-5 text-lg text-foreground placeholder:text-muted-foreground/60 focus:outline-none rounded-2xl"
+              className="w-full bg-transparent pl-12 pr-14 py-4 md:pl-14 md:py-5 text-base md:text-lg text-foreground placeholder:text-muted-foreground/60 focus:outline-none rounded-2xl"
               aria-label={t("chatHero.ariaLabel")}
             />
             <button
