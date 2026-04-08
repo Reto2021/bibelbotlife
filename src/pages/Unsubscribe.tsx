@@ -3,6 +3,7 @@ import { useSearchParams, Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
+import bibelbotLogo from "@/assets/bibelbot-logo.png";
 
 type Status = "loading" | "valid" | "already" | "invalid" | "success" | "error";
 
@@ -37,6 +38,7 @@ const Unsubscribe = () => {
   return (
     <div className="min-h-screen flex items-center justify-center px-4" style={{ background: "var(--gradient-hero)" }}>
       <div className="bg-card rounded-2xl shadow-lg p-8 max-w-md w-full text-center">
+        <img src={bibelbotLogo} alt="BibelBot" className="h-12 w-12 mx-auto mb-4" />
         {status === "loading" && <Loader2 className="h-8 w-8 animate-spin text-primary mx-auto" />}
         {status === "valid" && (
           <>

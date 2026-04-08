@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Send, Building2, Heart, Hospital, ShieldCheck, Swords, Handshake, Sprout, TowerControl, Footprints, Clock, Tablet, MessageCircle, BookOpen } from "lucide-react";
+import bibelbotLogo from "@/assets/bibelbot-logo.png";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -77,7 +78,7 @@ const ForInstitutions = () => {
       <nav className="bg-card/80 backdrop-blur-sm border-b border-border sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link to="/" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
-            <ArrowLeft className="h-4 w-4" />
+            <img src={bibelbotLogo} alt="BibelBot" className="h-8 w-8" />
             {t("impressum.back")}
           </Link>
           <div className="flex items-center gap-2">
