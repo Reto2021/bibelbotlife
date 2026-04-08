@@ -19,6 +19,7 @@ export default function ServiceEditor() {
   const { id } = useParams();
   const navigate = useNavigate();
   const { user } = useAuth();
+  const { data: church } = useUserChurch();
   const isNew = !id || id === "new";
 
   const [title, setTitle] = useState("Neuer Gottesdienst");
