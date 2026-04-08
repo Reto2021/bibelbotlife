@@ -156,7 +156,7 @@ export function DailyImpulse() {
   const shareAsImage = useCallback(async () => {
     if (!shareImageUrl || !impulse) return;
 
-    const shareText = `${impulse.verse}\n\n– ${impulse.reference}\n\n${impulse.teaser}\n\nbibelbot.ch`;
+    const shareText = `${impulse.verse}\n\n– ${impulse.reference}\n\n${impulse.teaser}\n\nbiblebot.life`;
 
     // Try sharing with image file (Web Share API Level 2)
     try {

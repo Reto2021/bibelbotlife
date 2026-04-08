@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 
-const BASE_URL = "https://bibelbot.ch";
+const BASE_URL = "https://biblebot.life";
 const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
 
 function CopyButton({ text, label }: { text: string; label?: string }) {

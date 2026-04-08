@@ -146,7 +146,7 @@ serve(async (req) => {
   // Button
   var btn = document.createElement('button');
   btn.id = 'bibelbot-widget-btn';
-  btn.setAttribute('aria-label', 'BibelBot öffnen');
+  btn.setAttribute('aria-label', 'BibleBot öffnen');
   btn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.04 2 11c0 2.76 1.35 5.22 3.5 6.84V22l3.94-2.16c.82.22 1.68.34 2.56.34 5.52 0 10-4.04 10-9S17.52 2 12 2z"/><path d="M9 10h6M9 13h4"/></svg>';
   document.body.appendChild(btn);
 

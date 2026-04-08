@@ -6,8 +6,8 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://bibelbot.ch/" },
-    { "@type": "ListItem", "position": 2, "name": "Datenschutz", "item": "https://bibelbot.ch/datenschutz" }
+    { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://biblebot.life/" },
+    { "@type": "ListItem", "position": 2, "name": "Datenschutz", "item": "https://biblebot.life/datenschutz" }
   ]
 };
 
