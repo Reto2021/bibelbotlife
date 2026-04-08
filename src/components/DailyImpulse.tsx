@@ -61,13 +61,15 @@ function cacheShareImage(url: string, date: string) {
 }
 
 export function DailyImpulse() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { toast } = useToast();
   const [impulse, setImpulse] = useState<Impulse | null>(getCachedImpulse);
   const [isExpanded, setIsExpanded] = useState(false);
   const [isLoading, setIsLoading] = useState(!impulse);
   const [shareImageUrl, setShareImageUrl] = useState<string | null>(getCachedShareImage);
   const [isGeneratingImage, setIsGeneratingImage] = useState(false);
+  const [isSubscribed, setIsSubscribed] = useState(() => localStorage.getItem(SUBSCRIBED_KEY) === "1");
+  const [isSubscribing, setIsSubscribing] = useState(false);
   const [showImagePreview, setShowImagePreview] = useState(false);
 
   useEffect(() => {
