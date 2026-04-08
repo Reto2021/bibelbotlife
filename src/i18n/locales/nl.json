@@ -596,6 +596,19 @@
     "contactSuccess": "Bericht verzonden! 🙏",
     "contactSuccessDesc": "De kerk neemt contact met u op.",
     "recommendedBy": "Aanbevolen door {{name}}",
-    "setup": "Setup (eenmalig)"
+    "setup": "Setup (eenmalig)",
+    "form": {
+      "title": "Geïnteresseerd? Neem contact op!",
+      "subtitle": "We reageren binnen 48 uur.",
+      "name": "Uw naam",
+      "email": "E-mailadres",
+      "churchName": "Naam van de kerk",
+      "tier": "Gewenst pakket",
+      "tierPlaceholder": "Kies pakket...",
+      "message": "Uw bericht",
+      "submit": "Aanvraag versturen",
+      "success": "Aanvraag verzonden! We nemen contact op. 🙏",
+      "error": "Fout bij verzenden. Probeer het opnieuw."
+    }
   }
 }

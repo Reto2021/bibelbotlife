@@ -588,6 +588,19 @@
     "contactSuccess": "Message sent! 🙏",
     "contactSuccessDesc": "The church will get back to you.",
     "recommendedBy": "Recommended by {{name}}",
-    "setup": "설정 (1회)"
+    "setup": "설정 (1회)",
+    "form": {
+      "title": "관심이 있으신가요? 문의하세요!",
+      "subtitle": "48시간 이내에 답변드리겠습니다.",
+      "name": "이름",
+      "email": "이메일 주소",
+      "churchName": "교회 이름",
+      "tier": "희망 패키지",
+      "tierPlaceholder": "패키지 선택...",
+      "message": "메시지",
+      "submit": "문의 보내기",
+      "success": "문의가 전송되었습니다! 곧 연락드리겠습니다. 🙏",
+      "error": "전송 오류. 다시 시도해 주세요."
+    }
   }
 }

@@ -588,6 +588,19 @@
     "contactSuccess": "Meddelande skickat! 🙏",
     "contactSuccessDesc": "Kyrkan återkommer till dig.",
     "recommendedBy": "Rekommenderad av {{name}}",
-    "setup": "Installation (engångs)"
+    "setup": "Installation (engångs)",
+    "form": {
+      "title": "Intresserad? Kontakta oss!",
+      "subtitle": "Vi svarar inom 48 timmar.",
+      "name": "Ditt namn",
+      "email": "E-postadress",
+      "churchName": "Kyrkans namn",
+      "tier": "Föredraget paket",
+      "tierPlaceholder": "Välj paket...",
+      "message": "Ditt meddelande",
+      "submit": "Skicka förfrågan",
+      "success": "Förfrågan skickad! Vi hör av oss snart. 🙏",
+      "error": "Fel vid sändning. Försök igen."
+    }
   }
 }

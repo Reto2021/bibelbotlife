@@ -588,6 +588,19 @@
     "contactSuccess": "Melding sendt! 🙏",
     "contactSuccessDesc": "Kirken tar kontakt med deg.",
     "recommendedBy": "Anbefalt av {{name}}",
-    "setup": "Oppsett (engangs)"
+    "setup": "Oppsett (engangs)",
+    "form": {
+      "title": "Interessert? Kontakt oss!",
+      "subtitle": "Vi svarer innen 48 timer.",
+      "name": "Ditt navn",
+      "email": "E-postadresse",
+      "churchName": "Kirkens navn",
+      "tier": "Foretrukket pakke",
+      "tierPlaceholder": "Velg pakke...",
+      "message": "Din melding",
+      "submit": "Send henvendelse",
+      "success": "Henvendelse sendt! Vi tar kontakt snart. 🙏",
+      "error": "Feil ved sending. Prøv igjen."
+    }
   }
 }

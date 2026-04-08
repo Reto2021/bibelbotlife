@@ -588,6 +588,19 @@
     "contactSuccess": "Zpráva odeslána! 🙏",
     "contactSuccessDesc": "Sbor se vám ozve.",
     "recommendedBy": "Doporučeno od {{name}}",
-    "setup": "Nastavení (jednorázové)"
+    "setup": "Nastavení (jednorázové)",
+    "form": {
+      "title": "Máte zájem? Kontaktujte nás!",
+      "subtitle": "Odpovíme do 48 hodin.",
+      "name": "Vaše jméno",
+      "email": "E-mailová adresa",
+      "churchName": "Název sboru",
+      "tier": "Preferovaný balíček",
+      "tierPlaceholder": "Vyberte balíček...",
+      "message": "Vaše zpráva",
+      "submit": "Odeslat poptávku",
+      "success": "Poptávka odeslána! Ozveme se brzy. 🙏",
+      "error": "Chyba při odesílání. Zkuste to znovu."
+    }
   }
 }

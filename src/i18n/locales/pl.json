@@ -588,6 +588,19 @@
     "contactSuccess": "Wiadomość wysłana! 🙏",
     "contactSuccessDesc": "Kościół skontaktuje się z Tobą.",
     "recommendedBy": "Polecany przez {{name}}",
-    "setup": "Konfiguracja (jednorazowa)"
+    "setup": "Konfiguracja (jednorazowa)",
+    "form": {
+      "title": "Zainteresowany? Skontaktuj się!",
+      "subtitle": "Odpowiemy w ciągu 48 godzin.",
+      "name": "Twoje imię",
+      "email": "Adres e-mail",
+      "churchName": "Nazwa kościoła",
+      "tier": "Preferowany pakiet",
+      "tierPlaceholder": "Wybierz pakiet...",
+      "message": "Twoja wiadomość",
+      "submit": "Wyślij zapytanie",
+      "success": "Zapytanie wysłane! Skontaktujemy się wkrótce. 🙏",
+      "error": "Błąd wysyłania. Spróbuj ponownie."
+    }
   }
 }

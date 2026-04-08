@@ -625,6 +625,19 @@
     "contactSuccess": "Nachricht gesendet! 🙏",
     "contactSuccessDesc": "Die Gemeinde wird sich bei Ihnen melden.",
     "recommendedBy": "Empfohlen von {{name}}",
-    "setup": "Setup (einmalig)"
+    "setup": "Setup (einmalig)",
+    "form": {
+      "title": "Interesse? Schreiben Sie uns!",
+      "subtitle": "Wir melden uns innert 48 Stunden.",
+      "name": "Ihr Name",
+      "email": "E-Mail-Adresse",
+      "churchName": "Name der Gemeinde",
+      "tier": "Gewünschtes Paket",
+      "tierPlaceholder": "Paket wählen...",
+      "message": "Ihre Nachricht",
+      "submit": "Anfrage senden",
+      "success": "Anfrage gesendet! Wir melden uns bald. 🙏",
+      "error": "Fehler beim Senden. Bitte versuchen Sie es erneut."
+    }
   }
 }
