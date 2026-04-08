@@ -1,755 +1,755 @@
 {
   "nav": {
-    "startNow": "Mulai"
+    "startNow": "Mulai Sekarang"
   },
   "loader": "Memuat…",
   "hero": {
     "badge": {
-      "noLogin": "Tanpa login",
-      "noData": "Tanpa data",
-      "noJudgment": "Tanpa penghakiman"
+      "noLogin": "Tidak Perlu Login",
+      "noData": "Tidak Ada Data",
+      "noJudgment": "Tanpa Penghakiman"
     },
     "title1": "Alkitab.",
-    "title2": " Dipikirkan ulang.",
-    "subtitle": "BibleBot mengenal Alkitab – dan mengajukan pertanyaan yang tepat. Bukan manusia, tapi pendamping yang jujur. Untuk percakapan bermakna, pertanyaan mendalam, dan inspirasi nyata.",
+    "title2": " Dipikirkan Ulang.",
+    "subtitle": "BibleBot Anda tahu Alkitab – dan mengajukan pertanyaan yang tepat. Bukan manusia, tapi pendamping yang jujur. Untuk percakapan yang baik, pertanyaan mendalam, dan dorongan sejati.",
     "ctaTelegram": "Mulai via Telegram",
-    "ctaMore": "Pelajari lebih lanjut",
-    "quote": "\"Come to me, all you who are weary and burdened, and I will give you rest.\"",
-    "quoteRef": "– Matthew 11:28"
+    "ctaMore": "Pelajari Lebih Lanjut",
+    "quote": "«Datanglah kepada-Ku, semua yang letih lesu dan berbeban berat; Aku akan memberi kelegaan kepadamu.»",
+    "quoteRef": "– Matius 11,28"
   },
   "impulse": {
-    "loading": "Loading daily impulse...",
-    "label": "Impulse of the Day",
-    "deepDive": "What does this mean for me?",
-    "explore": "Read full passage"
+    "loading": "Memuat Renungan Harian...",
+    "label": "Renungan Harian",
+    "deepDive": "Apa artinya ini bagiku?",
+    "explore": "Baca Bagian Lengkap"
   },
   "features": {
-    "sectionTitle": "How BibleBot accompanies you",
-    "sectionSubtitle": "Discover the many ways BibleBot can walk alongside you",
+    "sectionTitle": "Bagaimana BibleBot Anda Mendampingi Anda",
+    "sectionSubtitle": "Temukan berbagai cara bagaimana BibleBot Anda dapat mendukung Anda",
     "bible": {
-      "title": "Bible passages & interpretation",
-      "desc": "Ask \"What does the Bible say about...?\" and receive relevant verses with context and clear explanation."
+      "title": "Ayat Alkitab & Penjelasan",
+      "desc": "Tanyakan «Apa kata Alkitab tentang...?» dan dapatkan ayat yang relevan dengan konteks dan penjelasan yang mudah dipahami."
     },
     "goals": {
-      "title": "Life planning & goals",
-      "desc": "Discover your calling, set concrete goals, and find out what God might have in store for you."
+      "title": "Perencanaan Hidup & Penetapan Tujuan",
+      "desc": "Temukan panggilan Anda, tetapkan tujuan konkret, dan cari tahu apa yang mungkin Tuhan inginkan dari Anda."
     },
     "self": {
-      "title": "Finding yourself",
-      "desc": "Recognize your gifts, strengths, and longings – and what your heart truly needs."
+      "title": "Menemukan Diri Anda Sendiri",
+      "desc": "Kenali karunia, kekuatan, dan kerinduan Anda – dan apa yang benar-benar dibutuhkan hati Anda."
     },
     "faith": {
-      "title": "Faith journey & finding Christ",
-      "desc": "Whether seeking, doubting, or deepening – BibleBot accompanies you on your personal path."
+      "title": "Perjalanan Iman & Menemukan Kristus",
+      "desc": "Baik mencari, ragu, atau memperdalam – BibleBot Anda mendampingi Anda dalam perjalanan pribadi Anda."
     },
     "daily": {
-      "title": "Daily impulses & church year",
-      "desc": "Start your day with impulses and let BibleBot guide you through Advent, Lent, and holidays."
+      "title": "Dorongan Harian & Tahun Gerejawi",
+      "desc": "Mulai hari Anda dengan dorongan dan biarkan diri Anda didampingi melalui Adven, Prapaskah, dan Hari Raya."
     },
     "groups": {
-      "title": "Groups & communities",
-      "desc": "Perfect for Bible study groups, church communities, and shared devotions."
+      "title": "Kelompok & Jemaat",
+      "desc": "Sempurna untuk kelompok studi Alkitab, kelompok gereja, dan kebaktian bersama."
     }
   },
   "coaching": {
-    "badge": "Methodology",
-    "title": "Not just a chatbot – genuine companionship",
-    "subtitle": "BibleBot combines biblical wisdom with proven coaching methods and Positive Psychology.",
-    "journeyTitle": "Personal companionship",
-    "journeyDesc": "BibleBot accompanies you as long as you wish – in free conversation or with an optional 21-day structure.",
-    "week1": "Week 1: Arriving",
-    "week1Desc": "Building trust, listening, understanding your situation. Where are you? What concerns you?",
-    "week2": "Week 2: Deepening",
-    "week2Desc": "Recognizing patterns, clarifying desires, deepening biblical impulses. What do you really want?",
-    "week3": "Week 3: Acting",
-    "week3Desc": "Taking concrete steps, setting goals, initiating change. What's your next step?",
-    "openQuestionsTitle": "Open questions instead of quick answers",
-    "openQuestionsDesc": "BibleBot doesn't give cheap advice. Instead, it asks the questions that truly matter:",
-    "openQ1": "\"What's really behind this desire?\"",
-    "openQ2": "\"How would you know something has changed?\"",
-    "openQ3": "\"What would be a first small step?\"",
-    "honestTitle": "Honest instead of toxic positivity",
-    "honestDesc": "No \"It'll be fine!\" and no sugarcoating. BibleBot is empathetic AND honest:",
-    "honest1": "Also addresses uncomfortable Bible passages",
-    "honest2": "Challenges you to self-reflection",
-    "honest3": "Distinguishes comfort from avoidance",
-    "scienceTitle": "Scientifically grounded",
+    "badge": "Metodologi",
+    "title": "Bukan sekadar Chatbot – sebuah Pendampingan Sejati",
+    "subtitle": "BibleBot Anda menggabungkan kebijaksanaan alkitabiah dengan metode pembinaan yang terbukti dan Psikologi Positif.",
+    "journeyTitle": "Pendampingan Pribadi",
+    "journeyDesc": "BibleBot Anda mendampingi Anda selama Anda mau – dalam percakapan bebas atau dengan struktur 21 hari opsional.",
+    "week1": "Minggu 1: Tiba",
+    "week1Desc": "Membangun kepercayaan, mendengarkan, memahami situasi Anda. Di mana posisi Anda? Apa yang mengganggu Anda?",
+    "week2": "Minggu 2: Mendalami",
+    "week2Desc": "Mengenali pola, mengklarifikasi keinginan, mendalami dorongan Alkitabiah. Apa yang benar-benar Anda inginkan?",
+    "week3": "Minggu 3: Bertindak",
+    "week3Desc": "Mengambil langkah konkret, merumuskan tujuan, memulai perubahan. Apa langkah selanjutnya?",
+    "openQuestionsTitle": "Pertanyaan Terbuka daripada Jawaban Cepat",
+    "openQuestionsDesc": "BibleBot Anda tidak memberikan nasihat murahan. Sebaliknya, ia mengajukan pertanyaan yang benar-benar penting:",
+    "openQ1": "«Apa sebenarnya di balik keinginan ini?»",
+    "openQ2": "«Bagaimana Anda akan tahu bahwa sesuatu telah berubah?»",
+    "openQ3": "«Apa langkah kecil pertama?»",
+    "honestTitle": "Jujur daripada Positif Beracun",
+    "honestDesc": "Tidak ada «Semua akan baik-baik saja!» dan tidak ada polesan. BibleBot Anda berempati DAN jujur:",
+    "honest1": "Mengidentifikasi ayat-ayat Alkitab yang tidak nyaman sekalipun",
+    "honest2": "Menantang untuk refleksi diri",
+    "honest3": "Membedakan penghiburan dari penekanan",
+    "scienceTitle": "Berdasarkan Ilmu Pengetahuan",
     "perma": {
-      "name": "PERMA Model",
+      "name": "Model PERMA",
       "author": "Seligman",
-      "desc": "Positive emotions, meaning & growth"
+      "desc": "Emosi Positif, Makna & Pertumbuhan"
     },
     "logo": {
-      "name": "Logotherapy",
+      "name": "Logoterapi",
       "author": "Frankl",
-      "desc": "Finding meaning in difficult times"
+      "desc": "Mencari Makna dalam Masa Sulit"
     },
     "gratitude": {
-      "name": "Gratitude",
+      "name": "Syukur",
       "author": "Emmons",
-      "desc": "Research-based gratitude practice"
+      "desc": "Praktik Syukur Berbasis Penelitian"
     },
     "forgiveness": {
-      "name": "Forgiveness",
+      "name": "Pengampunan",
       "author": "Worthington",
-      "desc": "REACH model for forgiveness processes"
+      "desc": "Model REACH untuk Proses Pengampunan"
     },
-    "renameTip": "💡 You can give your BibleBot a personal name – so it truly becomes <strong>your</strong> companion."
+    "renameTip": "💡 Anda dapat memberikan nama sendiri pada BibleBot Anda – agar benar-benar menjadi pendamping <strong>Anda</strong>."
   },
   "discover": {
-    "badge": "For the curious",
-    "title": "Rediscover faith – without pressure",
-    "subtitle": "More and more people are asking the big questions anew. BibleBot.Life is for everyone who wants to (re)discover faith – honestly, without pathos, and without church jargon.",
+    "badge": "Untuk yang Penasaran",
+    "title": "Menemukan Kembali Iman – Tanpa Tekanan",
+    "subtitle": "Semakin banyak orang mengajukan pertanyaan-pertanyaan besar yang baru. BibleBot.Life untuk semua orang yang ingin (kembali) menemukan iman – jujur, tanpa kepura-puraan, dan tanpa jargon gerejawi.",
     "doubt": {
-      "title": "You doubt?",
-      "text": "Good. Doubt isn't a flaw – it's the beginning of honest faith. The Bible is full of people who wrestled."
+      "title": "Anda ragu?",
+      "text": "Bagus. Keraguan bukanlah kesalahan – itu adalah awal dari iman yang jujur. Alkitab penuh dengan orang-orang yang bergumul."
     },
     "search": {
-      "title": "You're searching?",
-      "text": "Maybe you don't even know what for. That's perfectly fine. BibleBot helps you ask the right questions – instead of delivering quick answers."
+      "title": "Anda mencari?",
+      "text": "Mungkin Anda bahkan tidak tahu persis apa yang Anda cari. Itu tidak masalah sama sekali. BibleBot Anda membantu Anda mengajukan pertanyaan yang tepat – daripada memberikan jawaban cepat."
     },
     "deepen": {
-      "title": "You want to go deeper?",
-      "text": "You already believe, but want to understand more? Discover the depth of the Bible – historical, personal, surprisingly relevant."
+      "title": "Anda ingin memperdalam?",
+      "text": "Anda sudah percaya, tetapi ingin lebih memahami? Temukan kedalaman Alkitab – secara historis, pribadi, sangat relevan secara mengejutkan."
     },
-    "quote": "\"Ask, and it will be given to you; seek, and you will find; knock, and the door will be opened.\"",
-    "quoteRef": "– Matthew 7:7",
-    "quoteText": "Many of us don't talk much about faith. That's okay. But those with questions deserve honest answers – without sermons, without membership, without ulterior motives."
+    "quote": "«Ketuklah, maka pintu akan dibukakan bagimu.»",
+    "quoteRef": "– Matius 7,7",
+    "quoteText": "Di Swiss kami tidak banyak berbicara tentang iman. Itu juga tidak perlu. Tetapi siapa pun yang memiliki pertanyaan, pantas mendapatkan jawaban yang jujur – tanpa khotbah, tanpa keanggotaan, tanpa motif tersembunyi."
   },
   "subscribe": {
-    "title": "Daily Bible impulse",
-    "subtitle": "Every morning at 7:00 AM – a verse, a thought, a good start.",
-    "firstName": "Your first name",
-    "firstNameOptional": "(optional)",
-    "firstNamePlaceholder": "e.g. Thomas",
-    "firstNameHint": "So we can greet you personally.",
-    "channelLabel": "How would you like to receive the impulse?",
+    "title": "Renungan Alkitab Harian",
+    "subtitle": "Setiap pagi pukul 07:00 – satu ayat, satu pemikiran, awal yang baik.",
+    "firstName": "Nama Depan Anda",
+    "firstNameOptional": "(opsional)",
+    "firstNamePlaceholder": "misalnya Thomas",
+    "firstNameHint": "Agar kami dapat menyambut Anda secara pribadi.",
+    "channelLabel": "Bagaimana Anda ingin menerima renungan?",
     "push": "Push",
-    "pushDesc": "Browser notification",
+    "pushDesc": "Pemberitahuan Browser",
     "telegram": "Telegram",
-    "telegramDesc": "Message via Telegram",
+    "telegramDesc": "Pesan melalui Telegram",
     "sms": "SMS",
-    "smsDesc": "Text to your phone",
-    "phoneLabel": "Phone number",
-    "phonePlaceholder": "+1 555 123 4567",
-    "phoneHint": "With country code, e.g. +1 for the US.",
-    "telegramHint": "Click \"Subscribe\" – you'll be redirected to Telegram. Start the bot and type <strong>/daily</strong> to activate the daily impulse.",
-    "pushHint": "After clicking \"Subscribe\", your browser will ask for notification permission. Please allow it to receive the impulse.",
-    "submit": "Subscribe",
-    "submitting": "Subscribing...",
-    "footNote": "No login required. Cancel anytime.",
-    "successTitle": "You're subscribed! 🙏",
-    "successText": "Starting tomorrow at 7:00 AM, you'll receive your personal Bible impulse.",
-    "toastTelegram": "Telegram opened 🙏",
-    "toastTelegramDesc": "Start the bot and type /daily to activate the daily impulse.",
-    "toastSuccess": "Subscribed! 🙏",
-    "toastSuccessDesc": "You'll receive your daily impulse starting tomorrow.",
-    "toastPushPreview": "Push subscription not available in preview",
-    "toastPushPreviewDesc": "Push notifications only work on the published site.",
-    "toastNotSupported": "Not supported",
-    "toastNotSupportedDesc": "Your browser does not support push notifications.",
-    "toastPermDenied": "Permission denied",
-    "toastPermDeniedDesc": "Please allow notifications in your browser settings.",
-    "toastError": "Error",
-    "toastErrorDesc": "Please try again later."
+    "smsDesc": "SMS ke ponsel Anda",
+    "phoneLabel": "Nomor Telepon",
+    "phonePlaceholder": "+41 79 123 45 67",
+    "phoneHint": "Dengan kode negara, misalnya +41 untuk Swiss.",
+    "telegramHint": "Klik «Daftar» – Anda akan diarahkan ke Telegram. Mulai bot di sana dan tulis <strong>/daily</strong> untuk mengaktifkan renungan harian.",
+    "pushHint": "Setelah mengklik «Daftar», browser Anda akan meminta izin untuk notifikasi. Harap izinkan untuk menerima renungan.",
+    "submit": "Daftar",
+    "submitting": "Mendaftar...",
+    "footNote": "Tidak perlu login. Dapat berhenti berlangganan kapan saja.",
+    "successTitle": "Anda telah terdaftar! 🙏",
+    "successText": "Mulai besok pukul 07:00 Anda akan menerima renungan Alkitab pribadi Anda.",
+    "toastTelegram": "Telegram dibuka 🙏",
+    "toastTelegramDesc": "Mulai bot dan tulis /daily untuk mengaktifkan renungan harian.",
+    "toastSuccess": "Berhasil terdaftar! 🙏",
+    "toastSuccessDesc": "Anda akan menerima renungan harian Anda mulai besok.",
+    "toastPushPreview": "Langganan Push tidak tersedia di Pratinjau",
+    "toastPushPreviewDesc": "Pemberitahuan Push hanya berfungsi di halaman yang dipublikasikan.",
+    "toastNotSupported": "Tidak Didukung",
+    "toastNotSupportedDesc": "Browser Anda tidak mendukung pemberitahuan Push.",
+    "toastPermDenied": "Izin Ditolak",
+    "toastPermDeniedDesc": "Harap izinkan notifikasi di pengaturan browser Anda.",
+    "toastError": "Kesalahan",
+    "toastErrorDesc": "Silakan coba lagi nanti."
   },
   "faq": {
-    "badge": "FAQ",
-    "title": "What you should know about BibleBot",
-    "subtitle": "Transparency matters – especially for theologians, pastors, and critical thinkers.",
-    "q1": "What makes BibleBot different from ChatGPT & Co.?",
-    "q1Generic": "Generic chatbots:",
+    "badge": "Pertanyaan yang Sering Diajukan",
+    "title": "Apa yang Perlu Anda Ketahui tentang BibleBot Anda",
+    "subtitle": "Transparansi penting bagi kami – terutama bagi para teolog, pendeta, dan pemikir kritis.",
+    "q1": "Apa yang membedakan BibleBot Anda dari ChatGPT & Co.?",
+    "q1Generic": "Chatbot Generik:",
     "q1GenericItems": [
-      "Superficial Bible quotes without context",
-      "No pastoral guardrails",
-      "Avoids uncomfortable texts",
-      "No crisis intervention",
-      "Mixes Bible with esotericism",
-      "No follow-up questions – just confirmation"
+      "Kutipan Alkitab yang dangkal tanpa konteks",
+      "Tidak ada batasan pastoral",
+      "Menghindari teks-teks yang tidak nyaman",
+      "Tidak ada intervensi krisis",
+      "Mencampur Alkitab dengan esoterik",
+      "Tidak ada pertanyaan balik – hanya konfirmasi"
     ],
     "q1Bot": "BibleBot.Life:",
     "q1BotItems": [
-      "5 recognized translations – including uncomfortable passages",
-      "Guardrails AND challenging companionship",
-      "Follow-up questions for self-reflection",
-      "Crisis referrals (emergency helplines)",
-      "Exclusively Christian theology",
-      "Promotes critical thinking as faith maturity"
+      "5 terjemahan yang diakui – termasuk bagian yang tidak nyaman",
+      "Batasan DAN pendampingan yang menantang",
+      "Pertanyaan balik untuk refleksi diri",
+      "Rujukan krisis (Tel. 143 / 147)",
+      "Hanya teologi Kristen",
+      "Mendorong pemikiran kritis sebagai kematangan iman"
     ],
-    "q2": "Which Bible translations are included?",
-    "q2Intro": "BibleBot works ecumenically with the major German-language Bible editions:",
-    "q2Outro": "All Bible passages include source citations and historical context.",
-    "q3": "What scientific foundations are behind it?",
-    "q3Intro": "The companionship is based on peer-reviewed research in Positive Psychology:",
-    "q4": "How does BibleBot ensure pastoral safety?",
+    "q2": "Terjemahan Alkitab apa yang tersedia?",
+    "q2Intro": "BibleBot Anda bekerja secara ekumenis dengan edisi Alkitab berbahasa Jerman yang relevan:",
+    "q2Outro": "Semua ayat Alkitab disajikan dengan sumber dan konteks historis.",
+    "q3": "Apa dasar ilmiah di baliknya?",
+    "q3Intro": "Pendampingan ini didasarkan pada penelitian peer-review dari Psikologi Positif:",
+    "q4": "Bagaimana BibleBot Anda memastikan keamanan pastoral?",
     "q4Items": [
-      "Suicidal thoughts or crisis → immediate referral to emergency helplines",
-      "No psychological or medical diagnoses",
-      "Respect without arbitrariness – clear biblical positions are taken",
-      "Empathy AND honesty – uncomfortable topics are addressed",
-      "Follow-up questions for self-reflection instead of cheap validation",
-      "No toxic positivity – genuine, honest companionship",
-      "Openly names tensions and difficult texts"
+      "Dalam kasus pikiran bunuh diri atau krisis → segera dialihkan ke Dargebotene Hand (143) dan Pro Juventute (147)",
+      "Tidak ada diagnosis psikologis atau medis",
+      "Hormat tanpa kesewenang-wenangan – posisi Alkitabiah yang jelas diambil",
+      "Empati DAN Kejujuran – hal-hal yang tidak nyaman pun dibahas",
+      "Pertanyaan balik untuk refleksi diri daripada konfirmasi murah",
+      "Tidak ada positif beracun – pendampingan yang tulus dan jujur",
+      "Mengidentifikasi ketegangan dan teks-teks sulit secara terbuka"
     ],
-    "q5": "Is BibleBot tied to a specific denomination?",
-    "q5Answer": "No. BibleBot is ecumenically oriented and respects Reformed, Catholic, Free Church, and other Christian traditions equally. When there are denominational differences in interpretation, various perspectives are presented transparently – without favoring any tradition.",
-    "q6": "Does BibleBot replace pastoral care or therapy?",
-    "q6Answer": "No. BibleBot is a digital tool for personal Bible reading and reflection. It does not replace professional pastoral care, theological counseling, or psychological therapy. In serious crises, BibleBot always refers to qualified resources.",
-    "q7": "Isn't BibleBot just a 'feel-good bot'?",
-    "q7Answer": "No. BibleBot comforts where comfort is needed – but it also challenges. Spiritual growth requires friction. BibleBot asks uncomfortable follow-up questions, names difficult Bible texts (Job, Lament Psalms, prophetic criticism), and doesn't shy away from topics like justice, repentance, and responsibility. The prophetic tradition was never comfortable – and neither is BibleBot.",
-    "q8": "Who is behind BibleBot and how is it funded?",
-    "q8Answer": "BibleBot.Life is a private, non-commercial project. It's run on a volunteer basis and funded exclusively through voluntary donations. There's no advertising, no data sales, and no paid features. All donations go directly to covering operating costs (infrastructure, hosting, development). Since BibleBot is a private project, donations are not tax-deductible.",
-    "q9": "How does BibleBot handle my data?",
-    "q9Answer": "BibleBot stores no personal data and no chat histories. Every conversation is anonymous. There's no login, no tracking, and no sharing of data with third parties. Usage is completely anonymous."
+    "q5": "Apakah BibleBot Anda terikat pada suatu denominasi?",
+    "q5Answer": "Tidak. BibleBot Anda berorientasi ekumenis dan menghormati tradisi Reformed, Katolik, gereja bebas, dan tradisi Kristen lainnya secara setara. Dalam kasus interpretasi yang berbeda secara denominasi, berbagai perspektif disajikan secara transparan – tanpa mengutamakan satu tradisi pun.",
+    "q6": "Apakah BibleBot Anda menggantikan pelayanan pastoral atau terapi?",
+    "q6Answer": "Tidak. BibleBot Anda adalah alat digital untuk pembacaan Alkitab pribadi dan refleksi. Ini tidak menggantikan pelayanan pastoral profesional, konseling teologis, atau terapi psikologis. Dalam kasus krisis serius, BibleBot Anda selalu merujuk ke tempat bantuan yang berkualitas.",
+    "q7": "Bukankah BibleBot Anda hanya 'bot yang menyenangkan'?",
+    "q7Answer": "Tidak. BibleBot Anda menghibur di mana penghiburan diperlukan – tetapi ia juga menantang. Pertumbuhan rohani membutuhkan gesekan. BibleBot Anda mengajukan pertanyaan balik yang tidak nyaman, mengidentifikasi teks-teks Alkitab yang sulit (Ayub, Mazmur ratapan, kritik profetik) dan tidak menghindar dari topik-topik seperti keadilan, pertobatan, dan tanggung jawab. Tradisi profetik tidak pernah nyaman – dan BibleBot Anda juga tidak.",
+    "q8": "Siapa di balik BibleBot Anda dan bagaimana pendanaannya?",
+    "q8Answer": "BibleBot.Life adalah proyek pribadi, non-komersial. Ini dijalankan secara sukarela dan didanai sepenuhnya melalui donasi sukarela. Tidak ada iklan, tidak ada penjualan data, dan tidak ada fitur berbayar. Semua donasi digunakan langsung untuk menutupi biaya operasional (infrastruktur, hosting, pengembangan). Karena BibleBot berjalan sebagai proyek pribadi, donasi tidak dapat dikurangkan dari pajak.",
+    "q9": "Bagaimana BibleBot Anda menangani data saya?",
+    "q9Answer": "BibleBot Anda tidak menyimpan data pribadi dan riwayat obrolan. Setiap percakapan bersifat anonim. Tidak ada login, tidak ada pelacakan, dan tidak ada pembagian data dengan pihak ketiga. Penggunaan sepenuhnya anonim."
   },
   "donate": {
-    "badge": "Support BibleBot",
-    "title": "Help keep BibleBot free",
-    "subtitle": "BibleBot is a passion project – no ads, no subscriptions, no hidden costs. To keep it that way, I rely on voluntary donations. Every contribution helps cover the ongoing costs for operations and infrastructure.",
-    "bankTitle": "Donate via bank transfer",
-    "bankSubtitle": "Every amount counts – thank you! 🙏",
-    "recipient": "Recipient",
+    "badge": "Dukung BibleBot Anda",
+    "title": "Bantu agar BibleBot Anda tetap gratis",
+    "subtitle": "BibleBot Anda adalah proyek yang lahir dari hati – tanpa iklan, tanpa langganan, tanpa biaya tersembunyi. Agar tetap demikian, saya bergantung pada donasi sukarela. Setiap kontribusi membantu menutupi biaya operasional dan infrastruktur.",
+    "bankTitle": "Donasi melalui Transfer Bank",
+    "bankSubtitle": "Setiap jumlah berarti – terima kasih banyak! 🙏",
+    "recipient": "Penerima",
     "bank": "Bank",
-    "purpose": "Reference",
-    "purposeValue": "Donation BibleBot",
-    "note": "BibleBot.Life is operated as a private project. Donations are therefore not tax-deductible."
+    "purpose": "Tujuan",
+    "purposeValue": "Donasi BibleBot",
+    "note": "BibleBot.Life dijalankan sebagai proyek pribadi. Oleh karena itu, donasi tidak dapat dikurangkan dari pajak."
+  },
+  "refer": {
+    "badge": "Bagikan Firman Tuhan",
+    "title": "Rekomendasikan BibleBot",
+    "subtitle": "Apakah Anda mengenal seseorang yang membutuhkan dorongan? Bagikan BibleBot – satu pesan dapat membuat perbedaan besar.",
+    "whatsapp": "Bagikan via WhatsApp",
+    "whatsappMsg": "Hai, saya ingin menunjukkan BibleBot kepada Anda – pendamping Alkitab gratis yang tahu Alkitab dan mengajukan pertanyaan yang sangat bagus. Tanpa login, anonim, jujur. Coba saja: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "telegram": "Bagikan via Telegram",
+    "telegramMsg": "Hai, sudahkah Anda mengenal BibleBot? Pendamping Alkitab pribadi gratis – jujur, anonim, tanpa login. Lihatlah: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "email": "Bagikan via Email",
+    "emailSubject": "Ini mungkin menarik bagi Anda: BibleBot.Life",
+    "emailBody": "Halo!\n\nSaya ingin menunjukkan BibleBot kepada Anda – pendamping Alkitab gratis yang benar-benar tahu Alkitab. Tidak perlu mendaftar, sepenuhnya anonim.\n\nIa mengajukan pertanyaan balik yang baik, menjelaskan ayat-ayat Alkitab dalam konteks, dan mendampingi Anda dengan jujur – bahkan dalam topik-topik sulit.\n\nCoba saja: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nSalam hormat",
+    "copy": "Salin Tautan",
+    "copied": "Tautan disalin! 📋",
+    "qr": "Atau cukup tunjukkan kode QR ini:"
   },
   "cta": {
-    "title": "You don't have to go through this alone",
-    "subtitle": "Just tell BibleBot what's on your mind. No login, no cost, no judgment – just honest companionship and the wisdom of the Bible.",
-    "button": "Start a conversation"
+    "title": "Anda tidak harus menghadapi ini sendirian",
+    "subtitle": "Cukup tuliskan apa yang mengganggu Anda kepada BibleBot Anda. Tanpa login, tanpa biaya, tanpa penghakiman – hanya pendampingan yang jujur dan kebijaksanaan Alkitab.",
+    "button": "Mulai Obrolan Sekarang"
   },
   "footer": {
     "tagline": "Pendamping pribadi Anda untuk hidup bersama Alkitab",
-    "disclaimer": "BibleBot.Life is a digital tool and does not replace professional pastoral care, theological counseling, or psychological therapy. In acute crises, please contact your local emergency helpline.",
-    "impressum": "Imprint",
-    "notes": "Notes",
-    "private": "Private, non-commercial project",
-    "noChat": "No storage of chat data",
-    "noTax": "Donations are not tax-deductible",
-    "datenschutz": "Privacy Policy",
-    "love": "With ❤️ for everyone wondering what Christ thinks.",
-    "forChurches": "For Churches"
+    "disclaimer": "BibleBot.Life adalah alat digital dan tidak menggantikan layanan pastoral profesional, konseling teologis, atau terapi psikologis. Dalam kasus krisis akut, hubungi Dargebotene Hand (Tel. 143) atau Pro Juventute (Tel. 147).",
+    "impressum": "Impressum",
+    "notes": "Catatan",
+    "private": "Proyek pribadi, non-komersial",
+    "noChat": "Tidak ada penyimpanan data obrolan",
+    "noTax": "Donasi tidak dapat dikurangkan dari pajak",
+    "datenschutz": "Privasi Data",
+    "love": "Dengan ❤️ untuk semua yang bertanya-tanya apa yang Kristus pikirkan.",
+    "forChurches": "Untuk Gereja"
   },
   "chat": {
-    "welcome": "Welcome! 🤗\n\nI'm your BibleBot – your personal companion with the Bible, good questions, and real impulses. No pressure, no judgment.\n\nYou can ask me anything – or just share what's on your mind. 💛",
-    "journeyOffer": "💡 **Tip:** I also offer a **21-day journey** – 3 weeks of daily impulses, reflections, and concrete steps. At your own pace.\n\nWould you like to try it?",
-    "suggestion1": "I need an uplifting word right now",
-    "suggestion2": "What does the Bible say when you feel uncertain?",
-    "suggestion3": "I want to find out what I really want",
-    "teaser": "What's on your mind? 💛",
-    "teaserSub": "I'm here – without any judgment.",
-    "openChat": "Open chat",
-    "closeChat": "Close chat",
-    "yourCompanion": "Your personal companion",
-    "journeyComplete": "21 days completed! 🎉",
-    "arriving": "Arriving",
-    "deepening": "Deepening",
-    "acting": "Acting",
-    "renameTip": "Tip: Click the name to rename me ✨",
-    "changeName": "Change name",
-    "placeholder": "Just start typing...",
-    "startVoice": "Start voice input",
-    "stopVoice": "Stop recording",
-    "noVoice": "Your browser does not support voice input.",
-    "writing": "typing...",
-    "shieldBadge": "No login · No judgment · Citations verified",
-    "journeyStart": "Yes, let's go ✨",
-    "journeyLater": "Maybe later",
-    "journeyStartMsg": "Yes, I'd like to start the 21-day journey!",
-    "qaChecking": "Checking citations...",
-    "qaIssue": "{{count}} issue with citations",
-    "qaIssue_plural": "{{count}} issues with citations",
-    "qaOk": "{{count}} citation verified ✓",
-    "qaOk_plural": "{{count}} citations verified ✓",
-    "qaWarning": "⚠️ Accuracy notes:",
-    "errorTooMany": "Too many requests – please wait a moment.",
-    "errorCredits": "AI quota exhausted.",
-    "errorConnect": "Connection error.",
-    "errorTitle": "Error",
-    "errorConnection": "could not be reached.",
-    "errorNoStream": "No stream",
-    "seniorMode": "Senior mode (larger text)",
-    "teaserCta": "Start writing →",
-    "namePlaceholder": "e.g. Eli, Miriam…"
+    "welcome": "Senang Anda di sini 🤗\n\nSaya BibleBot Anda – pendamping pribadi Anda dengan Alkitab, pertanyaan-pertanyaan bagus, dan inspirasi konkret. Tanpa tekanan, tanpa penilaian.\n\nAnda bisa bertanya apa saja – atau cukup ceritakan apa yang sedang mengganggu Anda. 💛",
+    "journeyOffer": "💡 **Tip:** Saya juga menawarkan **pendampingan 21 hari** – 3 minggu dengan inspirasi harian, refleksi, dan langkah-langkah konkret. Sepenuhnya sesuai kecepatan Anda.\n\nApakah Anda ingin mencobanya?",
+    "suggestion1": "Saya butuh kata-kata yang membangun",
+    "suggestion2": "Apa kata Alkitab jika seseorang merasa tidak yakin?",
+    "suggestion3": "Saya ingin mengetahui apa yang benar-benar saya inginkan",
+    "teaser": "Apa yang sedang mengganggu Anda? 💛",
+    "teaserSub": "Saya di sini – tanpa penilaian sama sekali.",
+    "teaserCta": "Tulis sekarang →",
+    "openChat": "Buka Obrolan",
+    "closeChat": "Tutup Obrolan",
+    "yourCompanion": "Pendamping pribadi Anda",
+    "journeyComplete": "21 hari Selesai! 🎉",
+    "arriving": "Tiba",
+    "deepening": "Mendalami",
+    "acting": "Bertindak",
+    "renameTip": "Beri saya nama ✨",
+    "namePlaceholder": "misalnya Eli, Miriam…",
+    "changeName": "Ganti Nama",
+    "placeholder": "Cukup mulai mengetik...",
+    "startVoice": "Mulai Input Suara",
+    "stopVoice": "Hentikan Rekaman",
+    "noVoice": "Browser Anda tidak mendukung input suara.",
+    "writing": "sedang menulis...",
+    "shieldBadge": "Tanpa Login · Tanpa Penghakiman · Kutipan Terverifikasi",
+    "journeyStart": "Ya, mulai sekarang ✨",
+    "journeyLater": "Mungkin nanti",
+    "journeyStartMsg": "Ya, saya ingin memulai pendampingan 21 hari!",
+    "qaChecking": "Memeriksa kutipan...",
+    "qaIssue": "{{count}} Catatan tentang Kutipan",
+    "qaIssue_plural": "{{count}} Catatan tentang Kutipan",
+    "qaOk": "{{count}} Kutipan diverifikasi ✓",
+    "qaOk_plural": "{{count}} Kutipan diverifikasi ✓",
+    "qaWarning": "⚠️ Catatan tentang akurasi:",
+    "errorTooMany": "Terlalu banyak permintaan – harap tunggu sebentar.",
+    "errorCredits": "Kuota AI habis.",
+    "errorConnect": "Kesalahan saat menyambungkan.",
+    "errorTitle": "Kesalahan",
+    "errorConnection": "tidak dapat dijangkau.",
+    "errorNoStream": "Tidak ada aliran",
+    "seniorMode": "Mode Senior (huruf lebih besar)"
   },
   "install": {
-    "title": "Install BibleBot",
-    "androidDesc": "Quick access from your home screen",
-    "iosDesc": "Tap \"Share\" → \"Add to Home Screen\"",
-    "button": "Install",
-    "close": "Close"
+    "title": "Instal BibleBot",
+    "androidDesc": "Akses cepat langsung dari layar utama",
+    "iosDesc": "Ketuk «Bagikan» → «Tambah ke Layar Utama»",
+    "button": "Instal",
+    "close": "Tutup"
+  },
+  "share": {
+    "label": "Bagikan",
+    "shareVia": "Bagikan melalui",
+    "copied": "Disalin! 📋",
+    "copiedShort": "Disalin!",
+    "copiedDesc": "Teks telah disalin ke papan klip. Bagikan sekarang di WhatsApp, Instagram, atau di mana pun Anda mau!",
+    "copyLink": "Salin Teks",
+    "error": "Gagal menyalin",
+    "impulseTitle": "BibleBot – Renungan Harian",
+    "chatTitle": "BibleBot – Pemikiran Harian",
+    "createImage": "Buat Gambar ✨",
+    "generating": "Membuat…",
+    "imageReady": "Gambar Anda siap untuk dibagikan!",
+    "shareImage": "Bagikan Gambar",
+    "download": "Simpan",
+    "imageError": "Gagal membuat gambar",
+    "imageErrorDesc": "Gambar tidak dapat dibuat. Silakan coba lagi nanti.",
+    "imageSaved": "Teks disalin! 📋",
+    "imageSavedDesc": "Simpan gambar dan bagikan dengan teks yang disalin di Instagram, WhatsApp, atau di mana pun Anda mau!"
   },
   "darkMode": {
-    "light": "Light mode",
-    "dark": "Dark mode"
+    "light": "Mode Terang",
+    "dark": "Mode Gelap"
   },
   "impressum": {
-    "back": "Back to home",
-    "title": "Imprint"
+    "back": "Kembali ke Beranda",
+    "title": "Impressum"
   },
   "datenschutz": {
-    "back": "Back to home",
-    "title": "Privacy Policy"
+    "back": "Kembali ke Beranda",
+    "title": "Kebijakan Privasi"
   },
   "lang": {
-    "de": "Deutsch",
-    "en": "English",
-    "fr": "Français",
-    "es": "Español",
-    "it": "Italiano",
-    "pl": "Polski",
-    "cs": "Čeština",
-    "pt": "Português",
-    "nl": "Nederlands",
-    "ro": "Română",
-    "da": "Dansk",
-    "no": "Norsk",
-    "sv": "Svenska",
-    "fi": "Suomi",
-    "el": "Ελληνικά",
-    "hr": "Hrvatski",
-    "sr": "Srpski",
-    "hu": "Magyar",
-    "sk": "Slovenčina",
-    "bg": "Български",
-    "ru": "Русский",
-    "uk": "Українська",
-    "ka": "ქართული",
-    "hy": "Հայերեն",
-    "ko": "한국어",
+    "de": "Jerman",
+    "en": "Inggris",
+    "fr": "Prancis",
+    "es": "Spanyol",
+    "it": "Italia",
+    "pl": "Polandia",
+    "cs": "Ceko",
+    "pt": "Portugis",
+    "nl": "Belanda",
+    "ro": "Rumania",
+    "da": "Denmark",
+    "no": "Norwegia",
+    "sv": "Swedia",
+    "fi": "Finlandia",
+    "el": "Yunani",
+    "hr": "Kroasia",
+    "sr": "Serbia",
+    "hu": "Hongaria",
+    "sk": "Slovakia",
+    "bg": "Bulgaria",
+    "ru": "Rusia",
+    "uk": "Ukraina",
+    "ka": "Georgia",
+    "hy": "Armenia",
+    "ko": "Korea",
     "tl": "Filipino",
     "id": "Bahasa Indonesia",
-    "vi": "Tiếng Việt",
-    "zh": "中文",
-    "sw": "Kiswahili",
-    "am": "አማርኛ",
+    "vi": "Vietnam",
+    "zh": "Tionghoa",
+    "sw": "Swahili",
+    "am": "Amharik",
     "af": "Afrikaans",
-    "yo": "Yorùbá",
+    "yo": "Yoruba",
     "ig": "Igbo",
-    "zu": "isiZulu",
-    "ht": "Kreyòl"
+    "zu": "Zulu",
+    "ht": "Kreol"
   },
   "tiles": {
-    "sectionTitle": "What's on your heart?",
-    "sectionSubtitle": "Choose a topic — BibleBot walks with you",
+    "sectionTitle": "Apa yang mengganggu Anda?",
+    "sectionSubtitle": "Pilih topik — BibleBot akan mendampingi Anda",
     "baptism": {
-      "title": "Find a baptism verse",
-      "desc": "The perfect verse for your child",
-      "prompt": "Help me find a fitting baptism verse. What kind of child is it and what do the parents wish for?"
+      "title": "Menemukan Ayat Pembaptisan",
+      "desc": "Ayat yang sempurna untuk anak Anda",
+      "prompt": "Bantu saya menemukan ayat pembaptisan yang cocok. Anak seperti apa dia dan apa yang orang tua inginkan?"
     },
     "condolence": {
-      "title": "Words of comfort",
-      "desc": "Support through grief & farewell",
-      "prompt": "I need comforting words for a condolence card. Can you help me find the right words?"
+      "title": "Kata-kata Penghiburan",
+      "desc": "Pendampingan dukacita & perpisahan",
+      "prompt": "Saya butuh kata-kata penghiburan untuk kartu belasungkawa. Bisakah Anda membantu saya merumuskan sesuatu yang cocok?"
     },
     "wedding": {
-      "title": "Wedding verse",
-      "desc": "Biblical words for your love",
-      "prompt": "We're looking for a beautiful biblical verse for our wedding. Which passages speak about love and partnership?"
+      "title": "Ayat Pernikahan",
+      "desc": "Kata-kata Alkitab untuk cinta Anda",
+      "prompt": "Kami mencari ayat Alkitab yang indah untuk pernikahan kami. Ayat-ayat Alkitab mana yang cocok untuk cinta dan kemitraan?"
     },
     "anxiety": {
-      "title": "Fear & worry",
-      "desc": "Finding courage in hard times",
-      "prompt": "I'm struggling with fear and worry right now. What does the Bible say about this? Are there verses that give courage?"
+      "title": "Kecemasan & Kekhawatiran",
+      "desc": "Menemukan keberanian di masa sulit",
+      "prompt": "Saat ini saya sedang berjuang dengan kecemasan dan kekhawatiran. Apa kata Alkitab tentang ini? Adakah ayat-ayat yang memberi keberanian?"
     },
     "confession": {
-      "title": "Confession",
-      "desc": "God forgives — speak it out",
-      "prompt": "I want to let go of something that weighs on me. What does the Bible say about forgiveness and new beginnings?"
+      "title": "Pengakuan",
+      "desc": "Tuhan mengampuni — ucapkan itu",
+      "prompt": "Saya ingin melepaskan sesuatu yang membebani saya. Apa kata Alkitab tentang pengampunan dan permulaan yang baru?"
     },
     "heartbreak": {
-      "title": "Heartbreak",
-      "desc": "What the Bible says about heartache",
-      "prompt": "My heart is broken. What does the Bible say about heartbreak and how to find hope again?"
+      "title": "Patah Hati",
+      "desc": "Apa kata Alkitab tentang patah hati",
+      "prompt": "Hati saya hancur. Apa kata Alkitab tentang patah hati dan bagaimana menemukan harapan lagi?"
     },
     "newstart": {
-      "title": "New beginning",
-      "desc": "Strength for a new chapter",
-      "prompt": "I'm facing a new beginning and need encouragement. Which Bible passages speak about fresh starts?"
+      "title": "Awal Baru",
+      "desc": "Kekuatan untuk fase hidup yang baru",
+      "prompt": "Saya sedang menghadapi awal yang baru dan membutuhkan dorongan. Ayat-ayat Alkitab mana yang berbicara tentang awal yang baru?"
     },
     "namequiz": {
-      "title": "Name quiz",
-      "desc": "Find the right biblical name",
-      "prompt": "I'm looking for a biblical name for my child. Can you suggest some and explain their meanings?"
+      "title": "Kuis Pembaptisan",
+      "desc": "Temukan nama Alkitab yang cocok",
+      "prompt": "Saya mencari nama Alkitab untuk anak saya. Bisakah Anda memberi saya beberapa saran dan menjelaskan artinya?"
     },
     "sleepless": {
-      "title": "Sleepless",
-      "desc": "Finding peace at night",
-      "prompt": "I can't sleep and my mind is racing. Is there a calming prayer or psalm for the night?"
+      "title": "Tidak Bisa Tidur",
+      "desc": "Menemukan kedamaian di malam hari",
+      "prompt": "Saya tidak bisa tidur dan banyak pikiran. Adakah doa yang menenangkan atau mazmur untuk malam hari?"
     },
     "loneliness": {
-      "title": "Loneliness",
-      "desc": "You are never alone",
-      "prompt": "I feel lonely. What does the Bible say about God always being with us?"
+      "title": "Kesepian",
+      "desc": "Anda tidak pernah sendirian",
+      "prompt": "Saya merasa kesepian. Apa kata Alkitab tentang Tuhan selalu bersama kita?"
     },
     "decision": {
-      "title": "Tough decision",
-      "desc": "Wisdom for the right path",
-      "prompt": "I'm facing a difficult decision. Which Bible passages can help me find the right way?"
+      "title": "Keputusan Sulit",
+      "desc": "Kebijaksanaan untuk jalan yang benar",
+      "prompt": "Saya menghadapi keputusan yang sulit. Ayat-ayat Alkitab mana yang membantu saya menemukan jalan yang benar?"
     },
     "gratitude": {
-      "title": "Gratitude",
-      "desc": "A personal prayer of thanks",
-      "prompt": "I want to thank God. Help me write a personal prayer of gratitude."
+      "title": "Syukur",
+      "desc": "Doa Syukur Pribadi",
+      "prompt": "Saya ingin berterima kasih kepada Tuhan. Bantu saya merumuskan doa syukur pribadi."
     },
     "lifewheel": {
-      "title": "Life Wheel",
-      "desc": "How satisfied are you really?"
+      "title": "Roda Kehidupan",
+      "desc": "Seberapa puas Anda sebenarnya?"
     },
     "sevenwhys": {
-      "title": "7 Whys",
-      "desc": "Find the deepest root of your question",
-      "prompt": "I'd like to do the 7 Whys exercise. Here is my topic:"
+      "title": "7 Mengapa",
+      "desc": "Temukan akar terdalam pertanyaan Anda",
+      "prompt": "Saya ingin melakukan latihan 7 Mengapa. Ini adalah topik saya:"
     },
     "anger": {
-      "title": "Anger",
-      "desc": "When you're about to explode",
-      "prompt": "I'm so angry and don't know what to do with my rage. What does the Bible say about anger and how to deal with it?"
+      "title": "Kemarahan",
+      "desc": "Ketika Anda bisa meledak karena marah",
+      "prompt": "Saya sangat marah dan tidak tahu harus melampiaskan kemarahan saya ke mana. Apa kata Alkitab tentang kemarahan dan bagaimana saya bisa mengatasinya?"
     },
     "shame": {
-      "title": "Shame & Guilt",
-      "desc": "When guilt is crushing you",
-      "prompt": "I feel so ashamed and guilty. What does the Bible say about guilt, forgiveness, and starting over?"
+      "title": "Malu & Rasa Bersalah",
+      "desc": "Ketika rasa bersalah menghimpit Anda",
+      "prompt": "Saya sangat malu dan merasa bersalah. Apa kata Alkitab tentang rasa bersalah, pengampunan, dan awal yang baru?"
     },
     "burnout": {
       "title": "Burnout",
-      "desc": "When you just can't go on",
-      "prompt": "I'm totally exhausted and burned out. I just can't anymore. What does the Bible say about rest and recovery?"
+      "desc": "Ketika Anda benar-benar tidak bisa lagi",
+      "prompt": "Saya benar-benar lelah dan kelelahan. Saya tidak bisa lagi. Apa kata Alkitab tentang istirahat dan pemulihan?"
     },
     "illness": {
-      "title": "Illness",
-      "desc": "When a diagnosis changes everything",
-      "prompt": "I've received a difficult diagnosis and I'm scared. What does the Bible say about illness, healing, and hope?"
+      "title": "Penyakit",
+      "desc": "Ketika diagnosis mengubah segalanya",
+      "prompt": "Saya menerima diagnosis yang sulit dan saya takut. Apa kata Alkitab tentang penyakit, penyembuhan, dan harapan?"
     },
     "financial": {
-      "title": "Money Worries",
-      "desc": "When bills are piling up",
-      "prompt": "I have financial worries and don't know what to do. What does the Bible say about money, trust, and provision?"
+      "title": "Masalah Keuangan",
+      "desc": "Ketika tagihan membebani",
+      "prompt": "Saya memiliki masalah keuangan dan tidak tahu harus berbuat apa. Apa kata Alkitab tentang uang, kepercayaan, dan pemeliharaan?"
     },
     "meaningcrisis": {
-      "title": "Meaning Crisis",
-      "desc": "What's it all for?",
-      "prompt": "I'm wondering what's the point of it all. I'm in a meaning crisis. What does the Bible say about the meaning of life?"
+      "title": "Krisis Makna",
+      "desc": "Untuk apa semua ini?",
+      "prompt": "Saya bertanya-tanya untuk apa semua ini. Saya berada dalam krisis makna. Apa kata Alkitab tentang makna hidup?"
     },
     "selfdoubt": {
-      "title": "Self-Doubt",
-      "desc": "When you don't feel good enough",
-      "prompt": "I constantly doubt myself and don't feel good enough. What does the Bible say about my worth?"
+      "title": "Keraguan Diri",
+      "desc": "Ketika Anda merasa tidak cukup baik",
+      "prompt": "Saya selalu meragukan diri sendiri dan merasa tidak cukup baik. Apa kata Alkitab tentang nilai saya?"
     },
     "calling": {
-      "title": "Calling",
-      "desc": "What should I do with my life?",
-      "prompt": "I don't know what to do with my life. Help me find my calling — what does the Bible say?"
+      "title": "Panggilan",
+      "desc": "Apa yang harus saya lakukan dengan hidup saya?",
+      "prompt": "Saya tidak tahu apa yang harus saya lakukan dengan hidup saya. Bantu saya menemukan panggilan saya – apa kata Alkitab tentang itu?"
     },
     "faithdoubt": {
-      "title": "Faith Doubts",
-      "desc": "When your faith is shaking",
-      "prompt": "I have doubts about my faith and don't know if I can still believe. What does the Bible say about doubt?"
+      "title": "Keraguan Iman",
+      "desc": "Ketika iman goyah",
+      "prompt": "Saya memiliki keraguan tentang iman saya dan tidak tahu apakah saya masih bisa percaya. Apa kata Alkitab tentang keraguan?"
     },
     "forgiveness": {
-      "title": "Forgiveness",
-      "desc": "When forgiving seems impossible",
-      "prompt": "I simply can't forgive someone. It hurts too much. What does the Bible say about forgiveness?"
+      "title": "Pengampunan",
+      "desc": "Ketika memaafkan tampaknya mustahil",
+      "prompt": "Saya tidak bisa memaafkan seseorang. Terlalu sakit. Apa kata Alkitab tentang pengampunan?"
     },
     "familyconflict": {
-      "title": "Family Conflict",
-      "desc": "When family is at war",
-      "prompt": "There's a big conflict in my family. What does the Bible say about family peace and reconciliation?"
+      "title": "Konflik Keluarga",
+      "desc": "Ketika ada masalah dalam keluarga",
+      "prompt": "Ada masalah besar dalam keluarga saya. Apa kata Alkitab tentang perdamaian keluarga dan rekonsiliasi?"
     },
     "envy": {
-      "title": "Envy",
-      "desc": "When others have it better",
-      "prompt": "I'm envious of others and constantly comparing myself. What does the Bible say about envy and contentment?"
+      "title": "Iri Hati",
+      "desc": "Ketika orang lain lebih baik",
+      "prompt": "Saya iri pada orang lain dan selalu membandingkan diri saya. Apa kata Alkitab tentang iri hati dan kepuasan?"
     },
     "joy": {
-      "title": "Share Joy",
-      "desc": "When something wonderful happened",
-      "prompt": "Something wonderful happened to me and I want to share my joy! What does the Bible say about joy and gratitude?"
+      "title": "Berbagi Sukacita",
+      "desc": "Ketika sesuatu yang indah terjadi",
+      "prompt": "Sesuatu yang indah terjadi pada saya dan saya ingin berbagi sukacita saya! Apa kata Alkitab tentang sukacita dan syukur?"
     },
     "prayer": {
-      "title": "Prayer Request",
-      "desc": "Pray together",
-      "prompt": "I have a prayer request and would like to pray together. Join me in prayer."
+      "title": "Permohonan Doa",
+      "desc": "Berdoa Bersama",
+      "prompt": "Saya memiliki permohonan doa dan ingin berdoa bersama. Dampingi saya dalam doa."
     },
     "bibleverse": {
-      "title": "Understand a Verse",
-      "desc": "Get a Bible passage explained",
-      "prompt": "I'd like to understand a Bible passage better. Can you help me put it in context?"
+      "title": "Memahami Ayat",
+      "desc": "Meminta penjelasan ayat Alkitab",
+      "prompt": "Saya ingin lebih memahami suatu ayat Alkitab. Bisakah Anda membantu saya menempatkannya dalam konteks?"
     }
   },
   "lifeWheel": {
-    "title": "Your Life Wheel",
-    "intro": "Rate 8 life areas on a scale of 1-10. Discover where you stand — and receive biblical impulses for the area that needs attention.",
-    "start": "Get started",
-    "sliderHint": "Move the sliders — 1 = very unsatisfied, 10 = very satisfied",
-    "showResult": "Show result",
-    "average": "Average",
-    "weakestArea": "Greatest need",
-    "getImpulse": "Biblical impulse for {{area}}",
-    "reset": "Try again",
-    "prompt": "My life wheel shows that I scored only {{score}}/10 in the area of '{{area}}'. What does the Bible say about this area of life? Give me encouragement and practical impulses.",
+    "title": "Roda Hidup Anda",
+    "intro": "Nilai 8 bidang kehidupan pada skala 1-10. Cari tahu di mana posisi Anda — dan dapatkan inspirasi Alkitab untuk bidang yang membutuhkan perhatian.",
+    "start": "Mulai Sekarang",
+    "sliderHint": "Gerakkan penggeser — 1 = sangat tidak puas, 10 = sangat puas",
+    "showResult": "Tampilkan Hasil",
+    "average": "Rata-rata",
+    "weakestArea": "Kebutuhan Terbesar",
+    "getImpulse": "Inspirasi Alkitab untuk {{area}}",
+    "reset": "Lakukan Lagi",
+    "prompt": "Roda hidup saya menunjukkan bahwa saya hanya memiliki {{score}}/10 poin di bidang «{{area}}». Apa kata Alkitab tentang bidang kehidupan ini? Beri saya dorongan dan inspirasi praktis.",
     "areas": {
-      "health": "Health",
-      "relationships": "Relationships",
-      "career": "Career",
-      "spirituality": "Spirituality",
-      "finances": "Finances",
-      "family": "Family",
-      "leisure": "Leisure",
-      "growth": "Personal Growth"
+      "health": "Kesehatan",
+      "relationships": "Hubungan",
+      "career": "Karier",
+      "spirituality": "Spiritualitas",
+      "finances": "Keuangan",
+      "family": "Keluarga",
+      "leisure": "Rekreasi",
+      "growth": "Pertumbuhan Pribadi"
     },
-    "save": "Save result",
-    "saved": "Saved!",
-    "history": "Previous results",
-    "noHistory": "No saved results yet.",
-    "backToNew": "New Life Wheel",
-    "backToList": "Back to list"
+    "save": "Simpan Hasil",
+    "saved": "Tersimpan!",
+    "history": "Hasil Sebelumnya",
+    "noHistory": "Belum ada hasil yang tersimpan.",
+    "backToNew": "Roda Hidup Baru",
+    "backToList": "Kembali ke Daftar"
   },
   "church": {
-    "badge": "For Churches",
-    "heroTitle": "BibleBot for Your Church",
-    "heroSubtitle": "Accompany your congregation with biblical wisdom – digital, personal, and around the clock.",
-    "useCasesTitle": "Use Cases",
+    "badge": "Untuk Gereja",
+    "heroTitle": "BibleBot untuk Jemaat Anda",
+    "heroSubtitle": "Dampingi anggota jemaat Anda dengan kebijaksanaan Alkitab – secara digital, pribadi, dan 24/7.",
+    "useCasesTitle": "Kasus Penggunaan",
     "useCase": {
       "youth": {
-        "title": "Youth Ministry",
-        "desc": "Teens discover the Bible in their own way – interactive and without hesitation."
+        "title": "Pelayanan Pemuda",
+        "desc": "Remaja menemukan Alkitab dengan cara mereka sendiri – interaktif dan tanpa rasa malu."
       },
       "confirmation": {
-        "title": "Confirmation",
-        "desc": "Confirmands deepen Bible knowledge independently with personal guidance."
+        "title": "Konfirmasi",
+        "desc": "Katekumen memperdalam pengetahuan Alkitab secara mandiri dengan pendampingan pribadi."
       },
       "pastoral": {
-        "title": "Pastoral Care",
-        "desc": "24/7 companionship as a complement to personal pastoral care."
+        "title": "Pelayanan Pastoral",
+        "desc": "Pendampingan 24/7 sebagai pelengkap pelayanan pastoral pribadi."
       },
       "bibleStudy": {
-        "title": "Bible Study",
-        "desc": "Impulses and discussion starters for groups and home circles."
+        "title": "Kelompok Studi Alkitab",
+        "desc": "Inspirasi dan pemicu diskusi untuk kelompok dan kelompok sel."
       }
     },
-    "pricingTitle": "Paket patronase",
-    "pricingSubtitle": "Dukung BibleBot dan gereja Anda dengan paket patronase yang tepat.",
-    "popular": "Popular",
-    "free": "Free",
-    "perYear": "year",
-    "contact": "Get in touch",
+    "pricingTitle": "Paket Patronase",
+    "pricingSubtitle": "Dukung BibleBot dan jemaat Anda dengan paket patronase yang sesuai.",
+    "popular": "Populer",
+    "free": "Gratis",
+    "perYear": "Tahun",
+    "contact": "Hubungi Kami",
     "tier": {
       "free": {
-        "name": "Biji sesawi",
-        "size": "Akses dasar bot untuk semua anggota jemaat."
+        "name": "Biji Sesawi",
+        "size": "Untuk jemaat kecil & kelompok sel (hingga 50 anggota)"
       },
       "community": {
-        "name": "Teman seperjalanan",
-        "size": "Gereja disebutkan sebagai pendukung di situs web & akses bebas iklan."
+        "name": "Pendamping Perjalanan",
+        "size": "Untuk jemaat dengan 50–200 anggota"
       },
       "gemeinde": {
-        "name": "Pembangun jembatan",
-        "size": "Logo di antarmuka bot, laporan penggunaan bulanan (anonim)."
+        "name": "Pembangun Jembatan",
+        "size": "Untuk jemaat dengan 200–500 anggota"
       },
       "kirche": {
         "name": "Mercusuar",
-        "size": "Integrasi konten sendiri (mis. arsip khotbah), kerja sama peta jalan, dukungan premium."
+        "size": "Untuk jemaat besar & institusi (500+ anggota)"
       }
     },
     "features": {
-      "directoryEntry": "Directory listing",
-      "telegramGroup": "Telegram group",
-      "partnerPage": "Own partner page",
-      "badge": "Partner badge",
-      "qrFlyer": "Printable QR flyer",
-      "contactForm": "Contact form",
-      "pastorProfile": "Pastor profile",
-      "welcomeVideo": "Welcome video",
-      "analytics": "Analytics dashboard",
-      "prioritySupport": "Priority support",
-      "multipleProfiles": "Multiple profiles",
-      "customBranding": "Custom branding",
-      "apiAccess": "API access",
-      "accountManager": "Dedicated account manager"
+      "directoryEntry": "Entri Direktori",
+      "telegramGroup": "Grup Telegram",
+      "partnerPage": "Halaman Mitra Sendiri",
+      "badge": "Lencana Mitra",
+      "qrFlyer": "Flyer QR untuk Dicetak",
+      "contactForm": "Formulir Kontak",
+      "pastorProfile": "Profil Pendeta/Pastor",
+      "welcomeVideo": "Video Selamat Datang",
+      "analytics": "Dasbor Analitik",
+      "prioritySupport": "Dukungan Prioritas",
+      "multipleProfiles": "Beberapa Profil",
+      "customBranding": "Branding Kustom",
+      "apiAccess": "Akses API",
+      "accountManager": "Manajer Akun Pribadi"
     },
-    "viewDirectory": "View church directory",
-    "directoryBadge": "Church Directory",
-    "directoryTitle": "Partner Churches",
-    "directorySubtitle": "Find a church near you that recommends BibleBot.",
-    "searchPlaceholder": "Search by city, name, or denomination...",
-    "noResults": "No churches in the directory yet.",
-    "becomePartner": "Become a partner →",
-    "notFound": "Church not found.",
-    "backToDirectory": "Back to directory",
-    "pastor": "Pastor",
-    "serviceTimes": "Service Times",
-    "startChat": "Start Chat",
-    "website": "Website",
-    "telegramGroup": "Telegram Group",
-    "contactTitle": "Contact {{name}}",
-    "contactName": "Your name (optional)",
-    "contactEmail": "Your email address",
-    "contactMessage": "Your message",
-    "contactSend": "Send message",
-    "contactSuccess": "Message sent! 🙏",
-    "contactSuccessDesc": "The church will get back to you.",
-    "recommendedBy": "Recommended by {{name}}",
+    "viewDirectory": "Lihat Direktori Gereja",
+    "directoryBadge": "Direktori Gereja",
+    "directoryTitle": "Gereja Mitra",
+    "directorySubtitle": "Temukan gereja di dekat Anda yang merekomendasikan BibleBot.",
+    "searchPlaceholder": "Cari Lokasi, Nama, atau Denominasi...",
+    "noResults": "Belum ada gereja di direktori.",
+    "becomePartner": "Jadi Mitra →",
+    "notFound": "Gereja tidak ditemukan.",
+    "backToDirectory": "Kembali ke Direktori",
+    "pastor": "Pendeta/Pastor",
+    "serviceTimes": "Jadwal Kebaktian",
+    "startChat": "Mulai Obrolan",
+    "website": "Situs Web",
+    "telegramGroup": "Grup Telegram",
+    "contactTitle": "Hubungi {{name}}",
+    "contactName": "Nama Anda (opsional)",
+    "contactEmail": "Alamat Email Anda",
+    "contactMessage": "Pesan Anda",
+    "contactSend": "Kirim Pesan",
+    "contactSuccess": "Pesan Terkirim! 🙏",
+    "contactSuccessDesc": "Gereja akan menghubungi Anda.",
+    "recommendedBy": "Direkomendasikan oleh {{name}}",
     "setup": "Pengaturan (satu kali)",
     "form": {
-      "title": "Tertarik? Hubungi kami!",
-      "subtitle": "Kami akan merespons dalam 48 jam.",
+      "title": "Tertarik? Hubungi Kami!",
+      "subtitle": "Kami akan menghubungi Anda dalam waktu 48 jam.",
       "name": "Nama Anda",
-      "email": "Alamat email",
-      "churchName": "Nama gereja",
-      "tier": "Paket pilihan",
+      "email": "Alamat Email",
+      "churchName": "Nama Gereja",
+      "tier": "Paket yang Diinginkan",
       "tierPlaceholder": "Pilih paket...",
       "message": "Pesan Anda",
-      "submit": "Kirim pertanyaan",
-      "success": "Pertanyaan terkirim! Kami akan segera menghubungi. 🙏",
-      "error": "Gagal mengirim. Coba lagi.",
-      "orgType": "Organization type",
-      "orgTypePlaceholder": "Select type...",
+      "submit": "Kirim Permintaan",
+      "success": "Permintaan terkirim! Kami akan segera menghubungi Anda. 🙏",
+      "error": "Kesalahan saat mengirim. Silakan coba lagi.",
+      "orgType": "Jenis Organisasi",
+      "orgTypePlaceholder": "Pilih jenis...",
       "orgTypes": {
-        "church": "Church",
-        "careHome": "Care Home",
-        "seniorHome": "Retirement Home",
-        "hospital": "Hospital",
-        "prison": "Prison Chaplaincy",
-        "military": "Military Chaplaincy"
+        "church": "Gereja",
+        "careHome": "Panti Jompo",
+        "seniorHome": "Panti Lansia",
+        "hospital": "Rumah Sakit",
+        "prison": "Pelayanan Pastoral Penjara",
+        "military": "Pelayanan Pastoral Militer"
       }
     },
-    "institutionsTitle": "Also for Institutions",
-    "institutionsSubtitle": "BibleBot supports not only churches – care homes, retirement homes, and hospitals also benefit from digital pastoral care.",
+    "institutionsTitle": "Juga untuk Institusi",
+    "institutionsSubtitle": "BibleBot tidak hanya menemani jemaat – panti jompo, panti lansia, rumah sakit, dan pelayanan pastoral penjara juga mendapat manfaat dari pelayanan pastoral digital.",
     "institution": {
       "careHome": {
-        "title": "Care Homes",
-        "desc": "Daily Bible impulses and companionship for residents – even when no chaplain is on site."
+        "title": "Panti Jompo",
+        "desc": "Renungan Alkitab harian dan pendampingan bagi penghuni – bahkan saat tidak ada pendeta di tempat."
       },
       "seniorHome": {
-        "title": "Retirement Homes",
-        "desc": "Familiar Bible verses and conversations for seniors – easily accessible via tablet or smartphone."
+        "title": "Panti Lansia",
+        "desc": "Ayat-ayat Alkitab yang akrab dan percakapan untuk lansia – mudah diakses melalui tablet atau smartphone."
       },
       "hospital": {
-        "title": "Hospitals",
-        "desc": "Comfort and spiritual support for patients in difficult times – available 24/7 at the bedside."
+        "title": "Rumah Sakit",
+        "desc": "Penghiburan dan pendampingan rohani bagi pasien di masa sulit – tersedia 24/7 di samping tempat tidur."
       },
       "prison": {
-        "title": "Prison Chaplaincy",
-        "desc": "Hope and spiritual support for inmates – a confidential companion around the clock."
+        "title": "Pelayanan Pastoral Penjara",
+        "desc": "Harapan dan pendampingan rohani bagi narapidana – teman bicara yang rahasia sepanjang waktu."
       },
       "military": {
-        "title": "Military Chaplaincy",
-        "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
+        "title": "Pelayanan Pastoral Militer",
+        "desc": "Pendampingan rohani bagi anggota militer – dapat dijangkau bahkan dalam misi atau di barak."
       }
     }
   },
   "institutions": {
-    "badge": "For Institutions",
-    "heroTitle": "BibleBot for Your Institution",
-    "heroSubtitle": "Digital pastoral care for care homes, retirement homes, hospitals, and correctional facilities – personal, confidential, and around the clock.",
-    "typesTitle": "Who is BibleBot for?",
-    "useCasesTitle": "How BibleBot is Used",
-    "useCasesSubtitle": "Practical applications for daily life in your institution.",
-    "pricingTitle": "Patronage Packages",
-    "pricingSubtitle": "The same packages as for churches – adapted to institutional needs.",
-    "linkChurches": "Also available for churches",
+    "badge": "Untuk Institusi",
+    "heroTitle": "BibleBot untuk Institusi Anda",
+    "heroSubtitle": "Pelayanan pastoral digital untuk panti jompo, panti lansia, rumah sakit, dan lembaga pemasyarakatan – pribadi, rahasia, dan 24/7.",
+    "seniorHint": {
+      "title": "Mode Senior Tersedia",
+      "desc": "Font lebih besar dan pengoperasian yang disederhanakan – ideal untuk penghuni lansia.",
+      "cta": "Coba Mode Senior"
+    },
+    "typesTitle": "Untuk Siapa BibleBot?",
+    "useCasesTitle": "Bagaimana BibleBot Digunakan",
+    "useCasesSubtitle": "Aplikasi konkret untuk kehidupan sehari-hari di institusi Anda.",
+    "pricingTitle": "Paket Patronase",
+    "pricingSubtitle": "Paket yang sama dengan untuk gereja – disesuaikan dengan kebutuhan institusi.",
+    "linkChurches": "Juga tersedia untuk gereja",
     "type": {
       "careHome": {
-        "title": "Care Homes",
-        "desc": "Daily Bible impulses and companionship for residents – even when no chaplain is on site."
+        "title": "Panti Jompo",
+        "desc": "Renungan Alkitab harian dan pendampingan bagi penghuni – bahkan saat tidak ada pendeta di tempat."
       },
       "seniorHome": {
-        "title": "Retirement Homes",
-        "desc": "Familiar Bible verses and conversations for seniors – easily accessible via tablet or smartphone."
+        "title": "Panti Lansia",
+        "desc": "Ayat-ayat Alkitab yang akrab dan percakapan untuk lansia – mudah diakses melalui tablet atau smartphone."
       },
       "hospital": {
-        "title": "Hospitals",
-        "desc": "Comfort and spiritual support for patients in difficult times – available 24/7 at the bedside."
+        "title": "Rumah Sakit",
+        "desc": "Penghiburan dan pendampingan rohani bagi pasien di masa sulit – tersedia 24/7 di samping tempat tidur."
       },
       "prison": {
-        "title": "Prison Chaplaincy",
-        "desc": "Hope and spiritual support for inmates – a confidential companion around the clock."
+        "title": "Pelayanan Pastoral Penjara",
+        "desc": "Harapan dan pendampingan rohani bagi narapidana – teman bicara yang rahasia sepanjang waktu."
       },
       "military": {
-        "title": "Military Chaplaincy",
-        "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
+        "title": "Pelayanan Pastoral Militer",
+        "desc": "Pendampingan rohani bagi anggota militer – dapat dijangkau bahkan dalam misi atau di barak."
       }
     },
     "useCase": {
       "dailyImpulse": {
-        "title": "Daily Impulse",
-        "desc": "A Bible verse with reflection question every morning – lowers the barrier for spiritual conversations."
+        "title": "Renungan Harian",
+        "desc": "Setiap pagi satu ayat Alkitab dengan pertanyaan reflektif – mengurangi hambatan untuk percakapan spiritual."
       },
       "companionship": {
-        "title": "Conversation Partner",
-        "desc": "BibleBot answers faith questions patiently and without time pressure – ideal for lonely hours."
+        "title": "Mitra Percakapan",
+        "desc": "BibleBot menjawab pertanyaan iman dengan sabar dan tanpa tekanan waktu – ideal untuk saat-saat kesepian."
       },
       "accessibility": {
-        "title": "Easy Access",
-        "desc": "Large text, simple tablet interface – also for people with limited mobility."
+        "title": "Akses Mudah",
+        "desc": "Huruf besar, pengoperasian mudah melalui tablet – juga untuk orang dengan mobilitas terbatas."
       },
       "availability": {
-        "title": "24/7 Available",
-        "desc": "Spiritual companionship at night and on weekends – when no chaplain is available."
+        "title": "Tersedia 24/7",
+        "desc": "Pendampingan rohani juga malam hari dan akhir pekan – ketika tidak ada pendeta yang dapat dijangkau."
       }
     },
     "tierDesc": {
-      "free": "Basic access for residents and patients",
-      "community": "Mentioned as supporter, ad-free access",
-      "gemeinde": "Logo presence, monthly usage report",
-      "kirche": "Custom content, roadmap co-creation, premium support"
+      "free": "Akses dasar untuk penghuni dan pasien",
+      "community": "Disebutkan sebagai pendukung, akses bebas iklan",
+      "gemeinde": "Kehadiran logo, laporan penggunaan bulanan",
+      "kirche": "Konten sendiri, partisipasi dalam peta jalan, dukungan premium"
     },
     "form": {
-      "title": "Interested? Get in touch!",
-      "subtitle": "We'll get back to you within 48 hours.",
-      "name": "Your name",
-      "email": "Email address",
-      "institutionName": "Institution name",
-      "type": "Type of institution",
-      "typePlaceholder": "Please select...",
-      "tier": "Preferred package",
-      "tierPlaceholder": "Choose package...",
-      "message": "Your message",
-      "submit": "Send inquiry",
-      "success": "Inquiry sent! We'll be in touch soon. 🙏",
-      "error": "Error sending. Please try again."
-    },
-    "seniorHint": {
-      "title": "Mode senior tersedia",
-      "desc": "Teks lebih besar dan navigasi yang disederhanakan – ideal untuk penghuni lanjut usia.",
-      "cta": "Coba mode senior"
+      "title": "Tertarik? Hubungi Kami!",
+      "subtitle": "Kami akan menghubungi Anda dalam waktu 48 jam.",
+      "name": "Nama Anda",
+      "email": "Alamat Email",
+      "institutionName": "Nama Institusi",
+      "type": "Jenis Institusi",
+      "typePlaceholder": "Mohon pilih...",
+      "tier": "Paket yang Diinginkan",
+      "tierPlaceholder": "Pilih paket...",
+      "message": "Pesan Anda",
+      "submit": "Kirim Permintaan",
+      "success": "Permintaan terkirim! Kami akan segera menghubungi Anda. 🙏",
+      "error": "Kesalahan saat mengirim. Silakan coba lagi."
     }
-  },
-  "refer": {
-    "badge": "Share God's Word",
-    "title": "Recommend BibleBot",
-    "subtitle": "Know someone who could use encouragement? Share BibleBot – one message can make a difference.",
-    "whatsapp": "Share via WhatsApp",
-    "whatsappMsg": "Hey, I wanted to show you BibleBot – a free Bible companion that really knows the Bible and asks great questions. No login, anonymous, honest. Try it out: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
-    "telegram": "Share via Telegram",
-    "telegramMsg": "Hey, do you know BibleBot? A free personal Bible companion – honest, anonymous, no login needed. Check it out: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
-    "email": "Share via email",
-    "emailSubject": "This might interest you: BibleBot.Life",
-    "emailBody": "Hi!\n\nI wanted to show you BibleBot – a free Bible companion that really knows the Bible. No sign-up needed, completely anonymous.\n\nIt asks thoughtful questions, explains Bible passages in context and accompanies you honestly – even on difficult topics.\n\nTry it out: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nBest wishes",
-    "copy": "Copy link",
-    "copied": "Link copied! 📋",
-    "qr": "Or just show this QR code:"
-  },
-  "share": {
-    "label": "Share",
-    "shareVia": "Share via",
-    "copied": "Copied! 📋",
-    "copiedShort": "Copied!",
-    "copiedDesc": "Text copied to clipboard. Share it on WhatsApp, Instagram or wherever you like!",
-    "copyLink": "Copy text",
-    "error": "Copy failed",
-    "impulseTitle": "BibleBot – Impulse of the Day",
-    "chatTitle": "BibleBot – Thought of the Day",
-    "createImage": "Create image ✨",
-    "generating": "Creating…",
-    "imageReady": "Your image is ready to share!",
-    "shareImage": "Share image",
-    "download": "Save",
-    "imageError": "Image creation failed",
-    "imageErrorDesc": "The image could not be created. Please try again later.",
-    "imageSaved": "Text copied! 📋",
-    "imageSavedDesc": "Save the image and share it with the copied text on Instagram, WhatsApp or wherever you like!"
   }
 }
