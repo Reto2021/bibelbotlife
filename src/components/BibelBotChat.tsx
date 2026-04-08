@@ -519,13 +519,23 @@ export function BibelBotChat() {
             )}
           </div>
         </div>
-        <button onClick={() => setIsOpen(false)} className="text-muted-foreground hover:text-foreground transition-colors" aria-label={t("chat.closeChat")}>
-          <X className="h-5 w-5" />
-        </button>
+        <div className="flex items-center gap-1.5">
+          <button
+            onClick={toggleSenior}
+            className={`p-1.5 rounded-lg transition-colors ${isSenior ? "bg-primary/20 text-primary" : "text-muted-foreground hover:text-foreground"}`}
+            aria-label={t("chat.seniorMode")}
+            title={t("chat.seniorMode")}
+          >
+            <Accessibility className={isSenior ? "h-5 w-5" : "h-4 w-4"} />
+          </button>
+          <button onClick={() => setIsOpen(false)} className="text-muted-foreground hover:text-foreground transition-colors" aria-label={t("chat.closeChat")}>
+            <X className={isSenior ? "h-6 w-6" : "h-5 w-5"} />
+          </button>
+        </div>
       </div>
 
       {/* Messages */}
-      <div ref={scrollRef} className="flex-1 overflow-y-auto px-4 py-3 space-y-3">
+      <div ref={scrollRef} className={`flex-1 overflow-y-auto ${s.padding} space-y-3`}>
         {!hasConversation && (
           <div className="space-y-4">
             {showWelcome && (
