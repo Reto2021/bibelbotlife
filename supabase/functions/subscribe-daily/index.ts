@@ -62,6 +62,7 @@ serve(async (req) => {
     const record: Record<string, unknown> = {
       channel,
       is_active: true,
+      language: language || 'de',
     };
     if (first_name) record.first_name = first_name;
     if (channel === "sms") record.phone_number = phone_number;
