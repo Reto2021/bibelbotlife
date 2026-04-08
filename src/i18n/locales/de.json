@@ -637,7 +637,15 @@
       "message": "Ihre Nachricht",
       "submit": "Anfrage senden",
       "success": "Anfrage gesendet! Wir melden uns bald. 🙏",
-      "error": "Fehler beim Senden. Bitte versuchen Sie es erneut."
+      "error": "Fehler beim Senden. Bitte versuchen Sie es erneut.",
+      "orgType": "Typ der Organisation",
+      "orgTypePlaceholder": "Typ wählen...",
+      "orgTypes": {
+        "church": "Gemeinde",
+        "careHome": "Pflegeheim",
+        "seniorHome": "Altersheim",
+        "hospital": "Spital"
+      }
     },
     "institutionsTitle": "Auch für Institutionen",
     "institutionsSubtitle": "BibleBot begleitet nicht nur Gemeinden – auch Pflege- und Altersheime, Spitäler und die Gefängnisseelsorge profitieren von digitaler Seelsorge.",
