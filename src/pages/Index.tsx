@@ -88,10 +88,18 @@ const Index = () => {
             <LanguageSwitcher />
             <DarkModeToggle />
             {user ? (
-              <Button variant="ghost" size="sm" className="hidden sm:inline-flex" onClick={() => signOut()}>
-                <LogOut className="h-4 w-4 mr-1" />
-                {t("auth.logout", "Abmelden")}
-              </Button>
+              <>
+                <Button asChild variant="outline" size="sm" className="hidden sm:inline-flex">
+                  <Link to="/dashboard">
+                    <User className="h-4 w-4 mr-1" />
+                    Mein Bereich
+                  </Link>
+                </Button>
+                <Button variant="ghost" size="sm" className="hidden sm:inline-flex" onClick={() => signOut()}>
+                  <LogOut className="h-4 w-4 mr-1" />
+                  {t("auth.logout", "Abmelden")}
+                </Button>
+              </>
             ) : (
               <Button asChild variant="ghost" size="sm" className="hidden sm:inline-flex">
                 <Link to="/login">
