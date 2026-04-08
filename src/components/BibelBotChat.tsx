@@ -609,25 +609,25 @@ export function BibelBotChat() {
 
         {isLoading && messages[messages.length - 1]?.role !== "assistant" && (
           <div className="flex justify-start">
-            <div className="bg-muted rounded-2xl rounded-bl-md px-4 py-3 flex items-center gap-2">
-              <Loader2 className="h-4 w-4 animate-spin text-muted-foreground" />
-              <span className="text-xs text-muted-foreground">{t("chat.writing")}</span>
+            <div className={`bg-muted rounded-2xl rounded-bl-md ${s.msgPadding} flex items-center gap-2`}>
+              <Loader2 className={`${s.btnIcon} animate-spin text-muted-foreground`} />
+              <span className={`${s.textXs} text-muted-foreground`}>{t("chat.writing")}</span>
             </div>
           </div>
         )}
       </div>
 
       {/* Input */}
-      <div className="border-t border-border p-3">
+      <div className={`border-t border-border ${isSenior ? "p-4" : "p-3"}`}>
         <div className="flex gap-2 items-end">
-          <Textarea ref={textareaRef} value={input} onChange={(e) => setInput(e.target.value)} onKeyDown={handleKeyDown} placeholder={t("chat.placeholder")} className="min-h-[40px] max-h-[100px] resize-none text-sm" rows={1} />
+          <Textarea ref={textareaRef} value={input} onChange={(e) => setInput(e.target.value)} onKeyDown={handleKeyDown} placeholder={t("chat.placeholder")} className={`${isSenior ? "min-h-[56px] max-h-[120px] text-lg" : "min-h-[40px] max-h-[100px] text-sm"} resize-none`} rows={s.inputRows} />
           {SpeechRecognition && (
-            <Button size="icon" variant={isListening ? "destructive" : "outline"} onClick={isListening ? stopListening : startListening} className="h-10 w-10 shrink-0" aria-label={isListening ? t("chat.stopVoice") : t("chat.startVoice")}>
-              {isListening ? <MicOff className="h-4 w-4" /> : <Mic className="h-4 w-4" />}
+            <Button size="icon" variant={isListening ? "destructive" : "outline"} onClick={isListening ? stopListening : startListening} className={`${s.btnSize} shrink-0`} aria-label={isListening ? t("chat.stopVoice") : t("chat.startVoice")}>
+              {isListening ? <MicOff className={s.btnIcon} /> : <Mic className={s.btnIcon} />}
             </Button>
           )}
-          <Button size="icon" onClick={() => sendMessage(input)} disabled={!input.trim() || isLoading} className="h-10 w-10 shrink-0">
-            <Send className="h-4 w-4" />
+          <Button size="icon" onClick={() => sendMessage(input)} disabled={!input.trim() || isLoading} className={`${s.btnSize} shrink-0`}>
+            <Send className={s.btnIcon} />
           </Button>
         </div>
       </div>
