@@ -216,9 +216,13 @@ export function DailyImpulse() {
   if (isLoading) {
     return (
       <div className="bg-primary/10 dark:bg-primary/15 border-b border-primary/20">
-        <div className="container mx-auto px-4 py-3 flex items-center justify-center gap-2">
-          <Loader2 className="h-4 w-4 animate-spin text-primary" />
-          <span className="text-sm text-muted-foreground">{t("impulse.loading")}</span>
+        <div className="container mx-auto px-4 py-3 flex items-center gap-3">
+          <div className="h-8 w-8 rounded-full bg-primary/10 animate-pulse shrink-0" />
+          <div className="min-w-0 flex-1 space-y-2">
+            <div className="h-3 w-24 bg-primary/15 rounded animate-pulse" />
+            <div className="h-4 w-3/4 bg-primary/10 rounded animate-pulse" />
+          </div>
+          <div className="h-4 w-4 bg-primary/10 rounded animate-pulse shrink-0" />
         </div>
       </div>
     );
