@@ -10,6 +10,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ServiceBlock, type ServiceBlockData, type BlockType } from "@/components/services/ServiceBlock";
 import { BlockPalette } from "@/components/services/BlockPalette";
 import { useAuth } from "@/hooks/use-auth";
+import { useUserChurch } from "@/hooks/use-user-church";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
@@ -18,6 +19,7 @@ export default function ServiceEditor() {
   const { id } = useParams();
   const navigate = useNavigate();
   const { user } = useAuth();
+  const { data: church } = useUserChurch();
   const isNew = !id || id === "new";
 
   const [title, setTitle] = useState("Neuer Gottesdienst");
@@ -78,7 +80,7 @@ export default function ServiceEditor() {
   const totalDuration = blocks.reduce((sum, b) => sum + (b.duration || 0), 0);
 
   const handleSave = async () => {
-    if (!user) return;
+    if (!user || !church) return;
     setSaving(true);
     try {
       const payload = {
@@ -89,7 +91,7 @@ export default function ServiceEditor() {
         tradition: tradition as any,
         blocks: blocks as any,
         created_by: user.id,
-        church_id: "00000000-0000-0000-0000-000000000000", // placeholder
+        church_id: church.id,
       };
 
       if (isNew) {
