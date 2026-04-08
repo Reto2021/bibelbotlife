@@ -588,6 +588,19 @@
     "contactSuccess": "Message sent! 🙏",
     "contactSuccessDesc": "The church will get back to you.",
     "recommendedBy": "Recommended by {{name}}",
-    "setup": "Opstelling (eenmalig)"
+    "setup": "Opstelling (eenmalig)",
+    "form": {
+      "title": "Belangstel? Kontak ons!",
+      "subtitle": "Ons antwoord binne 48 uur.",
+      "name": "U naam",
+      "email": "E-posadres",
+      "churchName": "Kerknaam",
+      "tier": "Voorkeurpakket",
+      "tierPlaceholder": "Kies pakket...",
+      "message": "U boodskap",
+      "submit": "Stuur navraag",
+      "success": "Navraag gestuur! Ons sal binnekort kontak maak. 🙏",
+      "error": "Fout met stuur. Probeer weer."
+    }
   }
 }

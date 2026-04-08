@@ -588,6 +588,19 @@
     "contactSuccess": "Message sent! 🙏",
     "contactSuccessDesc": "The church will get back to you.",
     "recommendedBy": "Recommended by {{name}}",
-    "setup": "Nhazi (otu oge)"
+    "setup": "Nhazi (otu oge)",
+    "form": {
+      "title": "Nwere mmasị? Kpọtụrụ anyị!",
+      "subtitle": "Anyị ga-aza n'ime awa 48.",
+      "name": "Aha gị",
+      "email": "Adreesị email",
+      "churchName": "Aha ụka",
+      "tier": "Ngwugwu ị chọrọ",
+      "tierPlaceholder": "Họrọ ngwugwu...",
+      "message": "Ozi gị",
+      "submit": "Ziga ajụjụ",
+      "success": "Ezigara ajụjụ! Anyị ga-akpọtụrụ gị n'oge na-adịghị anya. 🙏",
+      "error": "Njehie n'iziga. Gbalịa ọzọ."
+    }
   }
 }

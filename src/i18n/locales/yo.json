@@ -588,6 +588,19 @@
     "contactSuccess": "Message sent! 🙏",
     "contactSuccessDesc": "The church will get back to you.",
     "recommendedBy": "Recommended by {{name}}",
-    "setup": "Ìṣètò (ẹ̀ẹ̀kan)"
+    "setup": "Ìṣètò (ẹ̀ẹ̀kan)",
+    "form": {
+      "title": "Nifẹ? Kan si wa!",
+      "subtitle": "A yoo dahun laarin wakati 48.",
+      "name": "Orukọ rẹ",
+      "email": "Adirẹsi imeeli",
+      "churchName": "Orukọ ile ijọsin",
+      "tier": "Akopọ ti o fẹ",
+      "tierPlaceholder": "Yan akopọ...",
+      "message": "Ifiranṣẹ rẹ",
+      "submit": "Fi ibeere ranṣẹ",
+      "success": "Ibeere ti ranṣẹ! A yoo kan si yin laipẹ. 🙏",
+      "error": "Aṣiṣe fifiranṣẹ. Gbiyanju lẹẹkansi."
+    }
   }
 }

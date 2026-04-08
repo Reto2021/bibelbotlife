@@ -588,6 +588,19 @@
     "contactSuccess": "Message sent! 🙏",
     "contactSuccessDesc": "The church will get back to you.",
     "recommendedBy": "Recommended by {{name}}",
-    "setup": "Setup (one-time)"
+    "setup": "Setup (one-time)",
+    "form": {
+      "title": "Interested? Get in touch!",
+      "subtitle": "We'll get back to you within 48 hours.",
+      "name": "Your name",
+      "email": "Email address",
+      "churchName": "Church name",
+      "tier": "Preferred package",
+      "tierPlaceholder": "Choose package...",
+      "message": "Your message",
+      "submit": "Send inquiry",
+      "success": "Inquiry sent! We'll be in touch soon. 🙏",
+      "error": "Error sending. Please try again."
+    }
   }
 }

@@ -588,6 +588,19 @@
     "contactSuccess": "Message sent! 🙏",
     "contactSuccessDesc": "The church will get back to you.",
     "recommendedBy": "Recommended by {{name}}",
-    "setup": "Ukumisa (kanye)"
+    "setup": "Ukumisa (kanye)",
+    "form": {
+      "title": "Unentshisekelo? Xhumana nathi!",
+      "subtitle": "Sizophendula phakathi kwamahora angu-48.",
+      "name": "Igama lakho",
+      "email": "Ikheli le-imeyili",
+      "churchName": "Igama lesonto",
+      "tier": "Iphakheji oyithandayo",
+      "tierPlaceholder": "Khetha iphakheji...",
+      "message": "Umlayezo wakho",
+      "submit": "Thumela umbuzo",
+      "success": "Umbuzo uthunyelwe! Sizoxhumana nawe maduze. 🙏",
+      "error": "Iphutha lokuthumela. Zama futhi."
+    }
   }
 }

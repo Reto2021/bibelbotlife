@@ -588,6 +588,19 @@
     "contactSuccess": "Message sent! 🙏",
     "contactSuccessDesc": "The church will get back to you.",
     "recommendedBy": "Recommended by {{name}}",
-    "setup": "Setup (isang beses)"
+    "setup": "Setup (isang beses)",
+    "form": {
+      "title": "Interesado? Makipag-ugnayan!",
+      "subtitle": "Sasagutin namin sa loob ng 48 oras.",
+      "name": "Iyong pangalan",
+      "email": "Email address",
+      "churchName": "Pangalan ng simbahan",
+      "tier": "Gustong pakete",
+      "tierPlaceholder": "Pumili ng pakete...",
+      "message": "Iyong mensahe",
+      "submit": "Ipadala ang tanong",
+      "success": "Naipadala na ang tanong! Makikipag-ugnayan kami sa lalong madaling panahon. 🙏",
+      "error": "Error sa pagpapadala. Subukan muli."
+    }
   }
 }

@@ -588,6 +588,19 @@
     "contactSuccess": "Message sent! 🙏",
     "contactSuccessDesc": "The church will get back to you.",
     "recommendedBy": "Recommended by {{name}}",
-    "setup": "Cài đặt (một lần)"
+    "setup": "Cài đặt (một lần)",
+    "form": {
+      "title": "Quan tâm? Liên hệ với chúng tôi!",
+      "subtitle": "Chúng tôi sẽ phản hồi trong 48 giờ.",
+      "name": "Tên của bạn",
+      "email": "Địa chỉ email",
+      "churchName": "Tên hội thánh",
+      "tier": "Gói ưu tiên",
+      "tierPlaceholder": "Chọn gói...",
+      "message": "Tin nhắn của bạn",
+      "submit": "Gửi yêu cầu",
+      "success": "Yêu cầu đã gửi! Chúng tôi sẽ liên hệ sớm. 🙏",
+      "error": "Lỗi gửi. Vui lòng thử lại."
+    }
   }
 }

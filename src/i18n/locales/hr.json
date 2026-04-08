@@ -588,6 +588,19 @@
     "contactSuccess": "Poruka poslana! 🙏",
     "contactSuccessDesc": "Crkva će vam se javiti.",
     "recommendedBy": "Preporučeno od {{name}}",
-    "setup": "Postavljanje (jednokratno)"
+    "setup": "Postavljanje (jednokratno)",
+    "form": {
+      "title": "Zainteresirani? Javite nam se!",
+      "subtitle": "Odgovorimo u roku od 48 sati.",
+      "name": "Vaše ime",
+      "email": "E-mail adresa",
+      "churchName": "Naziv crkve",
+      "tier": "Željeni paket",
+      "tierPlaceholder": "Odaberite paket...",
+      "message": "Vaša poruka",
+      "submit": "Pošalji upit",
+      "success": "Upit poslan! Javit ćemo se uskoro. 🙏",
+      "error": "Greška pri slanju. Pokušajte ponovo."
+    }
   }
 }

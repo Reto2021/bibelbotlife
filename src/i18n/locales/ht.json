@@ -588,6 +588,19 @@
     "contactSuccess": "Message sent! 🙏",
     "contactSuccessDesc": "The church will get back to you.",
     "recommendedBy": "Recommended by {{name}}",
-    "setup": "Enstalasyon (yon sèl fwa)"
+    "setup": "Enstalasyon (yon sèl fwa)",
+    "form": {
+      "title": "Enterese? Kontakte nou!",
+      "subtitle": "Nou pral reponn nan 48 èdtan.",
+      "name": "Non ou",
+      "email": "Adrès imèl",
+      "churchName": "Non legliz la",
+      "tier": "Pakè prefere",
+      "tierPlaceholder": "Chwazi pakè...",
+      "message": "Mesaj ou",
+      "submit": "Voye demann",
+      "success": "Demann voye! Nou pral kontakte ou byento. 🙏",
+      "error": "Erè nan voye. Eseye ankò."
+    }
   }
 }

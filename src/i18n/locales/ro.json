@@ -596,6 +596,19 @@
     "contactSuccess": "Mesaj trimis! 🙏",
     "contactSuccessDesc": "Biserica vă va contacta în curând.",
     "recommendedBy": "Recomandat de {{name}}",
-    "setup": "Configurare (unică)"
+    "setup": "Configurare (unică)",
+    "form": {
+      "title": "Interesat? Contactați-ne!",
+      "subtitle": "Vă răspundem în 48 de ore.",
+      "name": "Numele dvs.",
+      "email": "Adresă de e-mail",
+      "churchName": "Numele bisericii",
+      "tier": "Pachetul preferat",
+      "tierPlaceholder": "Alegeți pachetul...",
+      "message": "Mesajul dvs.",
+      "submit": "Trimite cererea",
+      "success": "Cerere trimisă! Vă contactăm curând. 🙏",
+      "error": "Eroare la trimitere. Încercați din nou."
+    }
   }
 }

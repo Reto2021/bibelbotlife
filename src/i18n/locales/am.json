@@ -588,6 +588,19 @@
     "contactSuccess": "Message sent! 🙏",
     "contactSuccessDesc": "The church will get back to you.",
     "recommendedBy": "Recommended by {{name}}",
-    "setup": "ማዋቀር (አንድ ጊዜ)"
+    "setup": "ማዋቀር (አንድ ጊዜ)",
+    "form": {
+      "title": "ይፋልጋል? እባክዎ ይባሉን!",
+      "subtitle": "በ 48 ሰዓት ውስጥ እንመልሳለን.",
+      "name": "ስምዎ",
+      "email": "ኢሜል",
+      "churchName": "የበተክርስቲያን ስም",
+      "tier": "የሚፈልጉት ፕካጂ",
+      "tierPlaceholder": "ፕካጂ ይምረጡ...",
+      "message": "መልእክትዎ",
+      "submit": "ጥያቄ ይላኩ",
+      "success": "ጥያቄዎ ተላከ! 🙏",
+      "error": "የመላከ ስህተት. እባክዎ ይሞክሩ."
+    }
   }
 }

@@ -588,6 +588,19 @@
     "contactSuccess": "Message envoyé ! 🙏",
     "contactSuccessDesc": "L'église vous répondra bientôt.",
     "recommendedBy": "Recommandé par {{name}}",
-    "setup": "Mise en place (unique)"
+    "setup": "Mise en place (unique)",
+    "form": {
+      "title": "Intéressé? Contactez-nous!",
+      "subtitle": "Nous vous répondrons sous 48 heures.",
+      "name": "Votre nom",
+      "email": "Adresse e-mail",
+      "churchName": "Nom de l'église",
+      "tier": "Forfait souhaité",
+      "tierPlaceholder": "Choisir un forfait...",
+      "message": "Votre message",
+      "submit": "Envoyer la demande",
+      "success": "Demande envoyée! Nous reviendrons vers vous. 🙏",
+      "error": "Erreur d'envoi. Veuillez réessayer."
+    }
   }
 }

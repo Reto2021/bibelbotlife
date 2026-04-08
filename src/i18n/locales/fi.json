@@ -588,6 +588,19 @@
     "contactSuccess": "Viesti lähetetty! 🙏",
     "contactSuccessDesc": "Seurakunta ottaa sinuun yhteyttä.",
     "recommendedBy": "Suosittelija: {{name}}",
-    "setup": "Käyttöönotto (kertamaksu)"
+    "setup": "Käyttöönotto (kertamaksu)",
+    "form": {
+      "title": "Kiinnostunut? Ota yhteyttä!",
+      "subtitle": "Vastaamme 48 tunnin kuluessa.",
+      "name": "Nimesi",
+      "email": "Sähköpostiosoite",
+      "churchName": "Seurakunnan nimi",
+      "tier": "Toivottu paketti",
+      "tierPlaceholder": "Valitse paketti...",
+      "message": "Viestisi",
+      "submit": "Lähetä tiedustelu",
+      "success": "Tiedustelu lähetetty! Otamme yhteyttä pian. 🙏",
+      "error": "Lähetysvirhe. Yritä uudelleen."
+    }
   }
 }
