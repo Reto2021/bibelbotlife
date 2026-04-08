@@ -679,6 +679,11 @@
     "badge": "Für Institutionen",
     "heroTitle": "BibleBot für Ihre Institution",
     "heroSubtitle": "Digitale Seelsorge für Pflegeheime, Altersheime, Spitäler und Justizvollzug – persönlich, vertraulich und rund um die Uhr.",
+    "seniorHint": {
+      "title": "Senioren-Modus verfügbar",
+      "desc": "Grössere Schrift und vereinfachte Bedienung – ideal für ältere Bewohnerinnen und Bewohner.",
+      "cta": "Senioren-Modus testen"
+    },
     "typesTitle": "Für wen ist BibleBot?",
     "useCasesTitle": "So wird BibleBot eingesetzt",
     "useCasesSubtitle": "Konkrete Anwendungen für den Alltag in Ihrer Institution.",
