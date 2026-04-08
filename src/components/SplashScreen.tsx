@@ -52,7 +52,7 @@ export function SplashScreen({ onComplete }: { onComplete: () => void }) {
     return () => clearTimeout(timer);
   }, [dataLoaded, patron]);
 
-  const displayName = patron?.custom_bot_name || "BibelBot.Life";
+  const displayName = patron?.custom_bot_name || "BibleBot.Life";
 
   return (
     <AnimatePresence onExitComplete={onComplete}>
@@ -71,15 +71,25 @@ export function SplashScreen({ onComplete }: { onComplete: () => void }) {
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="flex flex-col items-center gap-4"
           >
-            <img src={bibelbotLogo} alt="BibelBot" className="h-16 w-16 sm:h-20 sm:w-20" width={512} height={512} />
-            <motion.h1
-              initial={{ opacity: 0, y: 5 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.5 }}
-              className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight"
-            >
-              {displayName}
-            </motion.h1>
+            <img src={bibelbotLogo} alt="BibleBot" className="h-16 w-16 sm:h-20 sm:w-20" width={512} height={512} />
+            <div className="flex flex-col items-center">
+              <motion.h1
+                initial={{ opacity: 0, y: 5 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.5 }}
+                className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight"
+              >
+                {displayName}
+              </motion.h1>
+              <motion.span
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5, duration: 0.5 }}
+                className="text-[10px] sm:text-xs font-medium tracking-[0.25em] uppercase text-muted-foreground/70 mt-1"
+              >
+                Everyday Sunday
+              </motion.span>
+            </div>
           </motion.div>
 
           {/* Patron section */}
