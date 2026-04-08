@@ -29,7 +29,9 @@ const ForChurches = () => {
     if (!formData.email || !formData.message) return;
     setSending(true);
     try {
+      const id = crypto.randomUUID();
       const { error } = await (supabase.from as any)("church_partnership_inquiries").insert({
+        id,
         name: formData.name || null,
         email: formData.email,
         church_name: formData.church_name
@@ -39,6 +41,15 @@ const ForChurches = () => {
         message: formData.message,
       });
       if (error) throw error;
+      // Send confirmation email (fire-and-forget)
+      supabase.functions.invoke("send-transactional-email", {
+        body: {
+          templateName: "contact-confirmation",
+          recipientEmail: formData.email,
+          idempotencyKey: `contact-confirm-${id}`,
+          templateData: { name: formData.name || undefined },
+        },
+      });
       toast.success(t("church.form.success"));
       setFormData({ name: "", email: "", church_name: "", organization_type: "", preferred_tier: "", message: "" });
     } catch {
