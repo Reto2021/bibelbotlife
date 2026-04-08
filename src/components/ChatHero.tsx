@@ -1,10 +1,9 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { Search, ArrowRight, Shield } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { openBibelBotChat } from "@/lib/chat-events";
 import { useTrack } from "@/components/AnalyticsProvider";
-import { HeroImpulse } from "@/components/HeroImpulse";
 
 const TYPEWRITER_SPEED = 45; // ms per char
 const PAUSE_BETWEEN = 2800; // ms pause after full phrase
@@ -186,8 +185,20 @@ export function ChatHero() {
           ))}
         </motion.div>
 
-        {/* Daily Impulse Card */}
-        <HeroImpulse />
+        {/* Bible quote */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.7 }}
+          className="max-w-xl mx-auto"
+        >
+          <div className="bg-card/40 backdrop-blur-sm rounded-xl px-6 py-4 border border-border/50">
+            <p className="text-foreground/70 italic text-base leading-relaxed">
+              {t("hero.quote")}
+            </p>
+            <p className="text-muted-foreground text-sm mt-1.5">{t("hero.quoteRef")}</p>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
