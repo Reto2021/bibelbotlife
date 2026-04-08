@@ -126,6 +126,7 @@ export function ChatHero() {
   const conversationIdRef = useRef<string | null>(null);
   const { track } = useTrack();
   const { toast } = useToast();
+  const { user } = useAuth();
   const dailyVerse = useMemo(() => getDailyVerse(), []);
 
   const {
