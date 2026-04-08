@@ -1,16 +1,19 @@
 ---
 name: Church Partnership Pricing
-description: Patronats-Pakete mit Jahresbeitrag für Gemeinde-Partnerschaft
+description: Patronats-Pakete nach Gemeindegrösse gestaffelt
 type: feature
 ---
-## Patronats-Pakete (CHF/Jahr)
+## Patronats-Pakete (CHF/Jahr) – nach Grösse
 
-| Paket | Beitrag (Jahr) | Leistung |
-|-------|----------------|----------|
-| Senfkorn | CHF 0.– | Basis-Nutzung des Bots für alle Gemeindeglieder |
-| Wegbegleiter | CHF 490.– | Erwähnung als Unterstützer + werbefreier Zugang |
-| Brückenbauer (Top-Wahl) | CHF 990.– | Logo im Bot-Interface, monatlicher Nutzungs-Report |
-| Leuchtturm | CHF 1'990.– | Eigene Inhalte, Roadmap-Mitgestaltung, Premium-Support |
+| Paket | Grösse | Beitrag (Jahr) |
+|-------|--------|----------------|
+| Senfkorn | bis 50 Mitglieder | CHF 0.– |
+| Wegbegleiter | 50–200 Mitglieder | CHF 490.– |
+| Brückenbauer (Top-Wahl) | 200–500 Mitglieder | CHF 990.– |
+| Leuchtturm | 500+ Mitglieder | CHF 1'990.– |
+
+Alle Pakete bieten denselben Funktionsumfang. Der Preis richtet sich nach Gemeindegrösse.
+Keine Feature-Versprechungen wie "Powered by" Sponsoren-Logos etc.
 
 ## DB-Tabellen
 - `church_partners` mit `plan_tier` enum: free, community, gemeinde, kirche
