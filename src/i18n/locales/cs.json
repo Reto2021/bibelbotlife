@@ -268,7 +268,8 @@
     "errorConnect": "Chyba připojení.",
     "errorTitle": "Chyba",
     "errorConnection": "nelze se připojit.",
-    "errorNoStream": "Žádný stream"
+    "errorNoStream": "Žádný stream",
+    "seniorMode": "Senior mode (larger text)"
   },
   "install": {
     "title": "Nainstalovat BibleBot",

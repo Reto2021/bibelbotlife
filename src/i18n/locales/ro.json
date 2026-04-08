@@ -268,7 +268,8 @@
     "errorConnect": "Eroare de conexiune.",
     "errorTitle": "Eroare",
     "errorConnection": "nu a putut fi contactat.",
-    "errorNoStream": "Niciun stream"
+    "errorNoStream": "Niciun stream",
+    "seniorMode": "Senior mode (larger text)"
   },
   "install": {
     "title": "Instalează BibleBot",
