@@ -708,6 +708,11 @@
       "submit": "Send inquiry",
       "success": "Inquiry sent! We'll be in touch soon. 🙏",
       "error": "Error sending. Please try again."
+    },
+    "seniorHint": {
+      "title": "Mode senior tersedia",
+      "desc": "Teks lebih besar dan navigasi yang disederhanakan – ideal untuk penghuni lanjut usia.",
+      "cta": "Coba mode senior"
     }
   }
 }

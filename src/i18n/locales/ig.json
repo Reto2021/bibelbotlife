@@ -708,6 +708,11 @@
       "submit": "Send inquiry",
       "success": "Inquiry sent! We'll be in touch soon. 🙏",
       "error": "Error sending. Please try again."
+    },
+    "seniorHint": {
+      "title": "Ọnọdụ ndị okenye dị",
+      "desc": "Ederede ka ukwuu na nchọgharị dị mfe – ọ kacha mma maka ndị okenye.",
+      "cta": "Nwalee ọnọdụ ndị okenye"
     }
   }
 }

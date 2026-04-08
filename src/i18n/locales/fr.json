@@ -708,6 +708,11 @@
       "submit": "Envoyer la demande",
       "success": "Demande envoyée! Nous reviendrons vers vous. 🙏",
       "error": "Erreur d'envoi. Veuillez réessayer."
+    },
+    "seniorHint": {
+      "title": "Mode senior disponible",
+      "desc": "Texte plus grand et navigation simplifiée – idéal pour les résidents âgés.",
+      "cta": "Essayer le mode senior"
     }
   }
 }

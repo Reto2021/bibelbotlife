@@ -716,6 +716,11 @@
       "submit": "Send inquiry",
       "success": "Inquiry sent! We'll be in touch soon. 🙏",
       "error": "Error sending. Please try again."
+    },
+    "seniorHint": {
+      "title": "Seniormodus beschikbaar",
+      "desc": "Grotere tekst en vereenvoudigde navigatie – ideaal voor oudere bewoners.",
+      "cta": "Probeer seniormodus"
     }
   }
 }

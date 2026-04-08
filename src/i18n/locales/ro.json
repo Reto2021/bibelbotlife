@@ -716,6 +716,11 @@
       "submit": "Send inquiry",
       "success": "Inquiry sent! We'll be in touch soon. 🙏",
       "error": "Error sending. Please try again."
+    },
+    "seniorHint": {
+      "title": "Mod senior disponibil",
+      "desc": "Text mai mare și navigare simplificată – ideal pentru rezidenții vârstnici.",
+      "cta": "Încercați modul senior"
     }
   }
 }

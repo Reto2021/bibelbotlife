@@ -708,6 +708,11 @@
       "submit": "Send inquiry",
       "success": "Inquiry sent! We'll be in touch soon. 🙏",
       "error": "Error sending. Please try again."
+    },
+    "seniorHint": {
+      "title": "Режим за старије доступан",
+      "desc": "Већи текст и поједностављена навигација – идеално за старије станаре.",
+      "cta": "Испробајте режим за старије"
     }
   }
 }

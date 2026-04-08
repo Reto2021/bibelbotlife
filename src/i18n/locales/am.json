@@ -708,6 +708,11 @@
       "submit": "Send inquiry",
       "success": "Inquiry sent! We'll be in touch soon. 🙏",
       "error": "Error sending. Please try again."
+    },
+    "seniorHint": {
+      "title": "የአረጋውያን ሁነታ ይገኛል",
+      "desc": "ትልቅ ጽሁፍ እና ቀለል ያለ አሰሳ – ለአረጋውያን ነዋሪዎች ተስማሚ።",
+      "cta": "የአረጋውያን ሁነታን ሞክሩ"
     }
   }
 }

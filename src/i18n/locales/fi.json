@@ -708,6 +708,11 @@
       "submit": "Send inquiry",
       "success": "Inquiry sent! We'll be in touch soon. 🙏",
       "error": "Error sending. Please try again."
+    },
+    "seniorHint": {
+      "title": "Senioritila saatavilla",
+      "desc": "Suurempi teksti ja yksinkertaistettu navigointi – ihanteellinen iäkkäille asukkaille.",
+      "cta": "Kokeile senioritilaa"
     }
   }
 }

@@ -708,6 +708,11 @@
       "submit": "Send inquiry",
       "success": "Inquiry sent! We'll be in touch soon. 🙏",
       "error": "Error sending. Please try again."
+    },
+    "seniorHint": {
+      "title": "Hali ya wazee inapatikana",
+      "desc": "Maandishi makubwa na urambazaji rahisi – bora kwa wakazi wazee.",
+      "cta": "Jaribu hali ya wazee"
     }
   }
 }

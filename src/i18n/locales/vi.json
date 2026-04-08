@@ -708,6 +708,11 @@
       "submit": "Send inquiry",
       "success": "Inquiry sent! We'll be in touch soon. 🙏",
       "error": "Error sending. Please try again."
+    },
+    "seniorHint": {
+      "title": "Chế độ cao tuổi có sẵn",
+      "desc": "Chữ lớn hơn và điều hướng đơn giản – lý tưởng cho cư dân cao tuổi.",
+      "cta": "Thử chế độ cao tuổi"
     }
   }
 }

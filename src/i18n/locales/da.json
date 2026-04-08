@@ -708,6 +708,11 @@
       "submit": "Send inquiry",
       "success": "Inquiry sent! We'll be in touch soon. 🙏",
       "error": "Error sending. Please try again."
+    },
+    "seniorHint": {
+      "title": "Seniortilstand tilgængelig",
+      "desc": "Større tekst og forenklet navigation – ideel til ældre beboere.",
+      "cta": "Prøv seniortilstand"
     }
   }
 }
