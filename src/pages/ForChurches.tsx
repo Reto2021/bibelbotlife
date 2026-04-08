@@ -29,7 +29,7 @@ const ForChurches = () => {
     if (!formData.email || !formData.message) return;
     setSending(true);
     try {
-      const { error } = await supabase.from("church_partnership_inquiries").insert({
+      const { error } = await (supabase.from as any)("church_partnership_inquiries").insert({
         name: formData.name || null,
         email: formData.email,
         church_name: formData.church_name || null,
