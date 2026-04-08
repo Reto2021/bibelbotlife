@@ -1,4 +1,5 @@
 
+
 ## Messeplaner v6 — Memory-File + Zugangskonzept
 
 ### 1. Memory-File erstellen
@@ -35,44 +36,27 @@ Speichere den vollständigen Messeplaner-Plan v6 unter `mem://feature/messeplane
 
 ### 2. Zugang: Wie gelangen Seelsorger zum Messe-Modul?
 
-#### Navigation & Routing
-
-```
-/login                → Bestehende Login-Seite (E-Mail + Google)
-/dashboard            → NEU: Seelsorger-Dashboard (nach Login)
-/dashboard/services   → Service-Kalender & Editor
-/dashboard/resources  → Ressourcen-Bibliothek
-/dashboard/series     → Predigtreihen
-/dashboard/records    → Amtshandlungen
-/dashboard/team       → Team-Verwaltung
-```
-
 #### Login-Flow
 
 ```text
 Startseite (biblebot.life)
     │
-    ├── "Anmelden" Button (bereits vorhanden, Nav-Bar)
+    ├── "Anmelden" Button (bereits vorhanden in Nav-Bar)
     │
-    └── /login (bestehende Seite)
-         ├── Google Login
-         └── E-Mail + Passwort
+    └── /login (bestehende Seite, E-Mail + Google)
               │
               ▼
-         Hat User eine Gemeinde? ──── Ja ──→ /dashboard
-              │
-              Nein
-              │
-              ▼
-         /dashboard (Willkommens-Wizard)
-         "Gemeinde einrichten" → Tradition wählen → Fertig
+         Eingeloggt → /dashboard
+         │
+         Hat User eine Gemeinde? ─ Ja → Dashboard mit Kalender
+         │
+         Nein → Willkommens-Wizard (Gemeinde erstellen, Tradition wählen)
 ```
 
-- Eingeloggte User sehen in der Nav-Bar einen neuen **"Mein Bereich"**-Button (statt nur Logout)
-- Klick → `/dashboard` mit Sidebar-Navigation
-- Nicht-eingeloggte User sehen den Button nicht — die öffentliche Chat-Seite bleibt unverändert
+- Eingeloggte User sehen in der Nav-Bar **"Mein Bereich"** statt nur Logout
+- Nicht-eingeloggte User sehen den Chat wie bisher — keine Änderung
 
-#### Dashboard-UI (Wireframe)
+#### Dashboard-UI
 
 ```text
 ┌─────────────────────────────────────────────────┐
@@ -82,76 +66,64 @@ Startseite (biblebot.life)
 │          │   Nächster Gottesdienst               │
 │ 📅 Kalender│   So 12. April — 10:00 Uhr           │
 │ ✏️ Neuer  │   "3. Sonntag nach Ostern"           │
-│ 📚 Biblio │   ┌─────────────────────────┐        │
-│ 📊 Serien │   │ Einzug  │ Begrüssung   │        │
-│ 📋 Register│   │ Lied GL │ Lesung       │        │
-│ 👥 Team   │   │ Predigt │ Fürbitten    │        │
-│ ⚙️ Settings│   │ Segen   │              │        │
-│          │   └─────────────────────────┘        │
-│          │                                      │
-│          │   Letzte Gottesdienste                │
-│          │   • Karfreitag — Abdankung            │
-│          │   • Gründonnerstag — Abendmahl        │
+│ 📚 Biblio │   [Block-Vorschau]                   │
+│ 📊 Serien │                                      │
+│ 📋 Register│   Letzte Gottesdienste                │
+│ 👥 Team   │   • Karfreitag — Abdankung            │
+│ ⚙️ Settings│   • Gründonnerstag — Abendmahl        │
 └──────────┴──────────────────────────────────────┘
+
+Mobile: Bottom-Tab-Navigation (5 Tabs)
 ```
 
-- **Mobile**: Sidebar wird zu Bottom-Tab-Navigation (5 Tabs: Kalender, Neu, Bibliothek, Register, Profil)
-- **Conductor Mode**: Vollbild ohne Sidebar, nur Block-Ansicht + Swipe
+#### Routing
+
+```text
+/dashboard            → Übersicht (nächste Services)
+/dashboard/services   → Kalender
+/dashboard/editor/:id → Block-Editor
+/dashboard/resources  → Bibliothek
+/dashboard/series     → Predigtreihen
+/dashboard/records    → Amtshandlungen
+/dashboard/team       → Team & Rotation
+/dashboard/settings   → Gemeinde & Tradition
+```
+
+Alle `/dashboard/*` Routes sind auth-geschützt via `<ProtectedRoute>`.
 
 ---
 
 ### 3. Technische Umsetzung
 
+#### Schritt 1: Memory-File schreiben
+- `mem://feature/messeplaner` mit vollständigem Plan (Datenmodell, Block-Typen, Phasen, Konfessionen)
+- `mem://index.md` aktualisieren
+
+#### Schritt 2: Dateien erstellen (kein DB noch)
+- `src/components/ProtectedRoute.tsx` — Auth-Guard
+- `src/pages/Dashboard.tsx` — Layout mit Sidebar + Outlet
+- `src/pages/dashboard/DashboardHome.tsx` — Übersichtsseite (Platzhalter)
+- `src/App.tsx` — Neue Routes einfügen
+- `src/pages/Index.tsx` — Nav-Bar: "Mein Bereich" für eingeloggte User
+
 #### Neue Dateien
 
 ```text
-src/pages/Dashboard.tsx              — Dashboard-Layout mit Sidebar
-src/pages/dashboard/
-  ServiceCalendar.tsx                — Kalender-Übersicht
-  ServiceEditor.tsx                  — Block-Editor mit DnD
-  ResourceLibrary.tsx                — Baustein-Bibliothek
-  ServiceSeries.tsx                  — Predigtreihen
-  ChurchRecords.tsx                  — Amtshandlungen
-  TeamManager.tsx                    — Team & Rotation
-  Settings.tsx                       — Gemeinde-Einstellungen & Tradition
-src/components/services/
-  ServiceBlock.tsx                   — Einzelner Block im Editor
-  BlockPalette.tsx                   — Block-Typen zum Einfügen
-  ConductorMode.tsx                  — Live-Durchführung
-  TeleprompterView.tsx               — Predigt-Lesemodus
-  AudioPlayer.tsx                    — Inline-Musik-Player
+src/components/ProtectedRoute.tsx
+src/pages/Dashboard.tsx
+src/pages/dashboard/DashboardHome.tsx
 ```
-
-#### Datenbank (Migration)
-
-5 neue Tabellen:
-- `services` — Gottesdienste mit Blöcken (JSONB)
-- `service_templates` — Vorlagen pro Tradition
-- `service_team_members` — Team-Zuordnung
-- `resource_library` — Wiederverwendbare Bausteine
-- `service_series` — Predigtreihen
-
-Plus `church_records` für Amtshandlungen (Phase 2).
-
-Alle Tabellen mit RLS: User sehen nur Daten ihrer eigenen Gemeinde.
-
-#### Routing in App.tsx
-
-```text
-Neue Routes (alle lazy-loaded, auth-geschützt):
-  /dashboard/*  →  Dashboard-Layout mit verschachtelten Routes
-```
-
-Ein `<ProtectedRoute>` Wrapper prüft `useAuth()` und leitet zu `/login` um falls nicht eingeloggt.
 
 ---
 
 ### 4. Phasenplan
 
-| Phase | Was | Umfang |
-|-------|-----|--------|
-| **1** | DB-Migration, Dashboard-Layout, Service-Editor (Blöcke, DnD), Kalender | Kern |
-| **2** | BibleBot pro Block, Ressourcen-Bibliothek, Vorlagen, Print-CSS | KI + Inhalte |
-| **3** | Conductor Mode, Teleprompter, Audio-Player | Durchführung |
-| **4** | Team, Rotation, Serien, Amtshandlungen, Offline (PWA) | Organisation |
-| **5** | Statistiken, Versionierung, Gastzugang, Barrierefreiheit | Reife |
+| Phase | Inhalt |
+|-------|--------|
+| **1 (jetzt)** | Memory-File, Dashboard-Shell, ProtectedRoute, Nav-Anpassung |
+| **2** | DB-Migration (services, templates, resource_library, series, team) |
+| **3** | Service-Editor mit Block-DnD + BibleBot-Button |
+| **4** | Kalender, Vorlagen, Print-CSS |
+| **5** | Conductor Mode, Teleprompter, Audio |
+| **6** | Team, Rotation, Register, Offline, Statistiken |
+
