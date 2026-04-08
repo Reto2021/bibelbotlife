@@ -579,6 +579,24 @@ export function ChatHero() {
                       </div>
                     ))}
 
+                    {/* Login hint for anonymous users after first exchange */}
+                    {!user && messages.length >= 2 && !isLoading && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 5 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 1, duration: 0.4 }}
+                        className="flex justify-center"
+                      >
+                        <a
+                          href="/login"
+                          className="inline-flex items-center gap-2 text-xs text-muted-foreground hover:text-foreground bg-card/60 border border-border/50 rounded-full px-4 py-2 transition-all hover:border-primary/30"
+                        >
+                          <LogIn className="h-3 w-3" />
+                          {t("chat.loginHint", "Melde dich an, um Gespräche auf allen Geräten zu behalten")}
+                        </a>
+                      </motion.div>
+                    )}
+
                     {isLoading && messages[messages.length - 1]?.role !== "assistant" && (
                       <div className="flex justify-start">
                         <div className="bg-card border border-border rounded-2xl rounded-bl-md px-4 py-3 flex items-center gap-2">
