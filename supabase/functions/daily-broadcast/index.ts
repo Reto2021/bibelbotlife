@@ -8,13 +8,6 @@ const corsHeaders = {
 };
 
 // ── Web Push helpers ────────────────────────────────────
-function base64UrlToUint8Array(b64url: string): Uint8Array {
-  const b64 = b64url.replace(/-/g, "+").replace(/_/g, "/");
-  const pad = "=".repeat((4 - (b64.length % 4)) % 4);
-  const bin = atob(b64 + pad);
-  return Uint8Array.from(bin, (c) => c.charCodeAt(0));
-}
-
 async function sendWebPush(
   subscription: { endpoint: string; keys: { p256dh: string; auth: string } },
   payload: string,
@@ -22,8 +15,6 @@ async function sendWebPush(
   vapidPrivate: string,
 ): Promise<boolean> {
   try {
-    // Use simple fetch-based push (no encryption for compatibility)
-    // For production, use web-push library via npm
     const resp = await fetch(subscription.endpoint, {
       method: "POST",
       headers: { "Content-Type": "application/json", TTL: "86400" },
@@ -73,10 +64,85 @@ async function sendSMS(phone: string, text: string, apiKey: string): Promise<boo
   }
 }
 
-// ── Format message ────────────────────────────────────
-function formatMessage(impulse: Record<string, string>, firstName?: string): string {
-  const greeting = firstName ? `Guten Morgen, ${firstName}! 🙏` : "Guten Morgen! 🙏";
-  return `${greeting}
+// ── Language names for translation prompt ──────────────
+const LANGUAGE_NAMES: Record<string, string> = {
+  de: "German (Swiss)", en: "English", fr: "French", es: "Spanish", it: "Italian",
+  pt: "Portuguese", nl: "Dutch", pl: "Polish", cs: "Czech", sk: "Slovak",
+  hu: "Hungarian", ro: "Romanian", bg: "Bulgarian", hr: "Croatian", sr: "Serbian",
+  sl: "Slovenian", uk: "Ukrainian", ru: "Russian", el: "Greek", da: "Danish",
+  sv: "Swedish", no: "Norwegian", fi: "Finnish", ko: "Korean", zh: "Chinese",
+  vi: "Vietnamese", id: "Indonesian", tl: "Filipino", sw: "Swahili", am: "Amharic",
+  yo: "Yoruba", ig: "Igbo", zu: "Zulu", af: "Afrikaans", ht: "Haitian Creole",
+  ka: "Georgian", hy: "Armenian",
+};
+
+// ── Translate impulse via AI ───────────────────────────
+async function translateImpulse(
+  impulse: Record<string, string>,
+  targetLang: string,
+  apiKey: string,
+): Promise<Record<string, string>> {
+  const langName = LANGUAGE_NAMES[targetLang] || targetLang;
+  const prompt = `Translate this Bible daily impulse JSON from German to ${langName}. 
+Keep ALL JSON keys exactly as they are. Translate only the values.
+Keep the Bible reference format (Book Chapter,Verse) but use the standard book names in ${langName}.
+Output ONLY valid JSON, no markdown, no explanation.
+
+${JSON.stringify(impulse, null, 2)}`;
+
+  try {
+    const resp = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: "google/gemini-2.5-flash-lite",
+        messages: [
+          { role: "system", content: "You are a translator. Output ONLY valid JSON. No markdown code blocks." },
+          { role: "user", content: prompt },
+        ],
+      }),
+    });
+
+    if (!resp.ok) {
+      console.error(`Translation to ${targetLang} failed:`, resp.status);
+      return impulse; // fallback to German
+    }
+
+    const data = await resp.json();
+    const content = data.choices?.[0]?.message?.content || "";
+    const cleaned = content.replace(/```json\n?/g, "").replace(/```\n?/g, "").trim();
+    const parsed = JSON.parse(cleaned);
+    parsed.date = impulse.date; // preserve date
+    return parsed;
+  } catch (e) {
+    console.error(`Translation to ${targetLang} error:`, e);
+    return impulse; // fallback to German
+  }
+}
+
+// ── Format messages ────────────────────────────────────
+const GREETINGS: Record<string, [string, string]> = {
+  de: ["Guten Morgen", "Mehr auf BibelBot.ch"],
+  en: ["Good morning", "More at BibelBot.ch"],
+  fr: ["Bonjour", "Plus sur BibelBot.ch"],
+  es: ["Buenos días", "Más en BibelBot.ch"],
+  it: ["Buongiorno", "Altro su BibelBot.ch"],
+  pt: ["Bom dia", "Mais em BibelBot.ch"],
+  ko: ["좋은 아침", "BibelBot.ch에서 더 보기"],
+  zh: ["早上好", "更多内容请访问 BibelBot.ch"],
+};
+
+function getGreeting(lang: string): [string, string] {
+  return GREETINGS[lang] || GREETINGS["en"];
+}
+
+function formatMessage(impulse: Record<string, string>, firstName?: string, lang = "de"): string {
+  const [greeting, cta] = getGreeting(lang);
+  const name = firstName ? `${greeting}, ${firstName}! 🙏` : `${greeting}! 🙏`;
+  return `${name}
 
 *${impulse.topic}*
 
@@ -85,12 +151,13 @@ _${impulse.verse}_
 
 ${impulse.context}
 
-👉 Mehr auf BibelBot.ch`;
+👉 ${cta}`;
 }
 
-function formatSMS(impulse: Record<string, string>, firstName?: string): string {
-  const greeting = firstName ? `Guten Morgen, ${firstName}!` : "Guten Morgen!";
-  return `${greeting} ${impulse.topic}: ${impulse.teaser} - ${impulse.reference} | BibelBot.ch`;
+function formatSMS(impulse: Record<string, string>, firstName?: string, lang = "de"): string {
+  const [greeting] = getGreeting(lang);
+  const name = firstName ? `${greeting}, ${firstName}!` : `${greeting}!`;
+  return `${name} ${impulse.topic}: ${impulse.teaser} - ${impulse.reference} | BibelBot.ch`;
 }
 
 serve(async (req) => {
@@ -109,7 +176,7 @@ serve(async (req) => {
 
     const supabase = createClient(supabaseUrl, serviceKey);
 
-    // 1. Generate today's impulse by calling the daily-impulse function
+    // 1. Generate today's impulse (German base)
     const impulseResp = await fetch(`${supabaseUrl}/functions/v1/daily-impulse`, {
       headers: {
         Authorization: `Bearer ${serviceKey}`,
@@ -117,7 +184,7 @@ serve(async (req) => {
       },
     });
     if (!impulseResp.ok) throw new Error("Failed to fetch impulse");
-    const impulse = await impulseResp.json();
+    const baseImpulse = await impulseResp.json();
 
     // 2. Get active subscribers
     const { data: subscribers, error: subError } = await supabase
@@ -132,17 +199,42 @@ serve(async (req) => {
       });
     }
 
+    // 3. Group subscribers by language
+    const byLang: Record<string, typeof subscribers> = {};
+    for (const sub of subscribers) {
+      const lang = sub.language || "de";
+      if (!byLang[lang]) byLang[lang] = [];
+      byLang[lang].push(sub);
+    }
+
+    // 4. Translate impulse for each non-German language (in parallel)
+    const impulseByLang: Record<string, Record<string, string>> = { de: baseImpulse };
+    const languages = Object.keys(byLang).filter((l) => l !== "de");
+
+    if (languages.length > 0) {
+      const translations = await Promise.all(
+        languages.map((lang) => translateImpulse(baseImpulse, lang, lovableApiKey))
+      );
+      languages.forEach((lang, i) => {
+        impulseByLang[lang] = translations[i];
+      });
+    }
+
+    console.log(`Broadcasting to ${subscribers.length} subscribers in ${Object.keys(byLang).length} language(s): ${Object.keys(byLang).join(", ")}`);
+
+    // 5. Send to each subscriber in their language
     let sentCount = 0;
 
-    // 3. Send to each subscriber
     for (const sub of subscribers) {
+      const lang = sub.language || "de";
+      const impulse = impulseByLang[lang] || baseImpulse;
       let success = false;
 
       if (sub.channel === "telegram" && sub.telegram_chat_id && telegramToken) {
-        const msg = formatMessage(impulse, sub.first_name);
+        const msg = formatMessage(impulse, sub.first_name, lang);
         success = await sendTelegram(sub.telegram_chat_id, msg, telegramToken);
       } else if (sub.channel === "sms" && sub.phone_number && smsApiKey) {
-        const msg = formatSMS(impulse, sub.first_name);
+        const msg = formatSMS(impulse, sub.first_name, lang);
         success = await sendSMS(sub.phone_number, msg, smsApiKey);
       } else if (sub.channel === "push" && sub.push_subscription && vapidPublic) {
         const msg = JSON.stringify({
@@ -156,19 +248,24 @@ serve(async (req) => {
       if (success) sentCount++;
     }
 
-    // 4. Log broadcast
+    // 6. Log broadcast
     const today = new Date().toISOString().slice(0, 10);
     await supabase.from("daily_broadcast_log").upsert(
       {
         impulse_date: today,
-        impulse_data: impulse,
+        impulse_data: baseImpulse,
         subscribers_count: sentCount,
       },
       { onConflict: "impulse_date" }
     );
 
     return new Response(
-      JSON.stringify({ message: "Broadcast complete", sent: sentCount, total: subscribers.length }),
+      JSON.stringify({
+        message: "Broadcast complete",
+        sent: sentCount,
+        total: subscribers.length,
+        languages: Object.keys(byLang),
+      }),
       { headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
   } catch (e) {
