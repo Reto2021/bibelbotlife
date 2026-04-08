@@ -764,14 +764,6 @@ export function ChatHero() {
                       {t("chat.newChat", "Neues Gespräch starten")}
                     </button>
                   </div>
-                  <div className="flex justify-center mt-2">
-                    <button
-                      onClick={() => { startNewChat(); }}
-                      className="text-xs text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      {t("chat.newChat", "Neues Gespräch starten")}
-                    </button>
-                  </div>
                 </div>
               </motion.div>
             )}
