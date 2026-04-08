@@ -16,6 +16,7 @@ const ForChurches = lazy(() => import("./pages/ForChurches"));
 const ChurchDirectory = lazy(() => import("./pages/ChurchDirectory"));
 const ChurchPartner = lazy(() => import("./pages/ChurchPartner"));
 const ForInstitutions = lazy(() => import("./pages/ForInstitutions"));
+const Unsubscribe = lazy(() => import("./pages/Unsubscribe"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -46,6 +47,7 @@ const App = () => (
               <Route path="/churches" element={<ChurchDirectory />} />
               <Route path="/church/:slug" element={<ChurchPartner />} />
               <Route path="/for-institutions" element={<ForInstitutions />} />
+              <Route path="/unsubscribe" element={<Unsubscribe />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
