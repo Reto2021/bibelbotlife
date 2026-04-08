@@ -405,6 +405,260 @@ export type Database = {
         }
         Relationships: []
       }
+      resource_library: {
+        Row: {
+          church_id: string | null
+          content: string | null
+          created_at: string
+          created_by: string
+          id: string
+          language: string
+          metadata: Json | null
+          resource_type: Database["public"]["Enums"]["resource_type"]
+          tags: string[] | null
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          church_id?: string | null
+          content?: string | null
+          created_at?: string
+          created_by: string
+          id?: string
+          language?: string
+          metadata?: Json | null
+          resource_type?: Database["public"]["Enums"]["resource_type"]
+          tags?: string[] | null
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          church_id?: string | null
+          content?: string | null
+          created_at?: string
+          created_by?: string
+          id?: string
+          language?: string
+          metadata?: Json | null
+          resource_type?: Database["public"]["Enums"]["resource_type"]
+          tags?: string[] | null
+          title?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "resource_library_church_id_fkey"
+            columns: ["church_id"]
+            isOneToOne: false
+            referencedRelation: "church_partners"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      service_series: {
+        Row: {
+          church_id: string | null
+          created_at: string
+          created_by: string
+          description: string | null
+          end_date: string | null
+          id: string
+          name: string
+          start_date: string | null
+          updated_at: string
+        }
+        Insert: {
+          church_id?: string | null
+          created_at?: string
+          created_by: string
+          description?: string | null
+          end_date?: string | null
+          id?: string
+          name: string
+          start_date?: string | null
+          updated_at?: string
+        }
+        Update: {
+          church_id?: string | null
+          created_at?: string
+          created_by?: string
+          description?: string | null
+          end_date?: string | null
+          id?: string
+          name?: string
+          start_date?: string | null
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "service_series_church_id_fkey"
+            columns: ["church_id"]
+            isOneToOne: false
+            referencedRelation: "church_partners"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      service_team_members: {
+        Row: {
+          availability: Json | null
+          church_id: string
+          created_at: string
+          created_by: string
+          email: string | null
+          id: string
+          is_active: boolean
+          name: string
+          role: Database["public"]["Enums"]["team_role"]
+          updated_at: string
+          user_id: string | null
+        }
+        Insert: {
+          availability?: Json | null
+          church_id: string
+          created_at?: string
+          created_by: string
+          email?: string | null
+          id?: string
+          is_active?: boolean
+          name: string
+          role?: Database["public"]["Enums"]["team_role"]
+          updated_at?: string
+          user_id?: string | null
+        }
+        Update: {
+          availability?: Json | null
+          church_id?: string
+          created_at?: string
+          created_by?: string
+          email?: string | null
+          id?: string
+          is_active?: boolean
+          name?: string
+          role?: Database["public"]["Enums"]["team_role"]
+          updated_at?: string
+          user_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "service_team_members_church_id_fkey"
+            columns: ["church_id"]
+            isOneToOne: false
+            referencedRelation: "church_partners"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      service_templates: {
+        Row: {
+          blocks: Json
+          church_id: string | null
+          created_at: string
+          created_by: string
+          id: string
+          is_default: boolean
+          name: string
+          tradition: Database["public"]["Enums"]["confession_tradition"]
+          updated_at: string
+        }
+        Insert: {
+          blocks?: Json
+          church_id?: string | null
+          created_at?: string
+          created_by: string
+          id?: string
+          is_default?: boolean
+          name: string
+          tradition?: Database["public"]["Enums"]["confession_tradition"]
+          updated_at?: string
+        }
+        Update: {
+          blocks?: Json
+          church_id?: string | null
+          created_at?: string
+          created_by?: string
+          id?: string
+          is_default?: boolean
+          name?: string
+          tradition?: Database["public"]["Enums"]["confession_tradition"]
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "service_templates_church_id_fkey"
+            columns: ["church_id"]
+            isOneToOne: false
+            referencedRelation: "church_partners"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      services: {
+        Row: {
+          blocks: Json
+          church_id: string
+          created_at: string
+          created_by: string
+          id: string
+          notes: string | null
+          series_id: string | null
+          service_date: string
+          service_time: string | null
+          service_type: Database["public"]["Enums"]["service_type"]
+          status: Database["public"]["Enums"]["service_status"]
+          title: string
+          tradition: Database["public"]["Enums"]["confession_tradition"]
+          updated_at: string
+        }
+        Insert: {
+          blocks?: Json
+          church_id: string
+          created_at?: string
+          created_by: string
+          id?: string
+          notes?: string | null
+          series_id?: string | null
+          service_date: string
+          service_time?: string | null
+          service_type?: Database["public"]["Enums"]["service_type"]
+          status?: Database["public"]["Enums"]["service_status"]
+          title: string
+          tradition?: Database["public"]["Enums"]["confession_tradition"]
+          updated_at?: string
+        }
+        Update: {
+          blocks?: Json
+          church_id?: string
+          created_at?: string
+          created_by?: string
+          id?: string
+          notes?: string | null
+          series_id?: string | null
+          service_date?: string
+          service_time?: string | null
+          service_type?: Database["public"]["Enums"]["service_type"]
+          status?: Database["public"]["Enums"]["service_status"]
+          title?: string
+          tradition?: Database["public"]["Enums"]["confession_tradition"]
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "services_church_id_fkey"
+            columns: ["church_id"]
+            isOneToOne: false
+            referencedRelation: "church_partners"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "services_series_fk"
+            columns: ["series_id"]
+            isOneToOne: false
+            referencedRelation: "service_series"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       suppressed_emails: {
         Row: {
           created_at: string
@@ -507,6 +761,31 @@ export type Database = {
     }
     Enums: {
       church_plan_tier: "free" | "community" | "gemeinde" | "kirche"
+      confession_tradition:
+        | "catholic"
+        | "reformed"
+        | "lutheran"
+        | "evangelical"
+        | "secular"
+      resource_type: "song" | "prayer" | "reading" | "liturgy" | "other"
+      service_status: "draft" | "published" | "archived"
+      service_type:
+        | "regular"
+        | "baptism"
+        | "wedding"
+        | "funeral"
+        | "confirmation"
+        | "communion"
+        | "special"
+        | "other"
+      team_role:
+        | "pastor"
+        | "musician"
+        | "lector"
+        | "sacristan"
+        | "technician"
+        | "volunteer"
+        | "other"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -635,6 +914,34 @@ export const Constants = {
   public: {
     Enums: {
       church_plan_tier: ["free", "community", "gemeinde", "kirche"],
+      confession_tradition: [
+        "catholic",
+        "reformed",
+        "lutheran",
+        "evangelical",
+        "secular",
+      ],
+      resource_type: ["song", "prayer", "reading", "liturgy", "other"],
+      service_status: ["draft", "published", "archived"],
+      service_type: [
+        "regular",
+        "baptism",
+        "wedding",
+        "funeral",
+        "confirmation",
+        "communion",
+        "special",
+        "other",
+      ],
+      team_role: [
+        "pastor",
+        "musician",
+        "lector",
+        "sacristan",
+        "technician",
+        "volunteer",
+        "other",
+      ],
     },
   },
 } as const
