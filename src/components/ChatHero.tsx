@@ -500,17 +500,81 @@ export function ChatHero() {
                   </div>
                 </motion.form>
 
-                {/* Quick suggestions */}
-                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.4 }} className="flex flex-wrap justify-center gap-2 mb-6 max-w-2xl mx-auto">
-                  {suggestions.map((s, i) => (
-                    <button key={i} onClick={() => sendMessage(s)} className="text-sm px-4 py-2 rounded-full border border-border bg-card/60 text-muted-foreground hover:text-foreground hover:border-primary/40 hover:bg-card transition-all duration-200">
-                      {s}
+                {/* === CTA Cards === */}
+                <motion.div
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                  className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-2xl mx-auto mb-8 w-full"
+                >
+                  {[
+                    { emoji: "😰", title: t("quickCta.anxiety", "Was tun bei Angst?"), prompt: t("tiles.anxiety.prompt", "Ich habe Angst und weiss nicht weiter. Was sagt die Bibel dazu?") },
+                    { emoji: "🙏", title: t("quickCta.prayer", "Ein Gebet für heute"), prompt: t("tiles.prayer.prompt", "Sprich ein Gebet für mich – passend zu meinem Tag.") },
+                    { emoji: "📖", title: t("quickCta.verse", "Bibelvers für mich"), prompt: t("tiles.bibleverse.prompt", "Gib mir einen Bibelvers, der mich heute ermutigt.") },
+                  ].map((card) => (
+                    <button
+                      key={card.title}
+                      onClick={() => sendMessage(card.prompt)}
+                      className="group flex items-center gap-3 sm:flex-col sm:items-center sm:text-center bg-card/70 backdrop-blur-sm border border-border rounded-xl px-4 py-3 sm:px-5 sm:py-5 hover:border-primary/40 hover:shadow-md hover:bg-card transition-all duration-300 cursor-pointer"
+                    >
+                      <span className="text-2xl sm:text-3xl shrink-0">{card.emoji}</span>
+                      <span className="text-sm sm:text-base font-semibold text-foreground group-hover:text-primary transition-colors">{card.title}</span>
                     </button>
                   ))}
                 </motion.div>
 
-                {/* Topic chips */}
-                <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }} className="max-w-2xl mx-auto mb-6">
+                {/* === Chat Demo Preview === */}
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.55 }}
+                  className="max-w-2xl mx-auto w-full mb-6"
+                >
+                  <div className="bg-card/50 backdrop-blur-sm rounded-2xl border border-border/60 p-4 sm:p-5 space-y-3">
+                    <p className="text-[10px] uppercase tracking-widest text-muted-foreground/60 text-center font-semibold mb-2">{t("chatDemo.label", "So sieht ein Gespräch aus")}</p>
+                    {/* User bubble */}
+                    <div className="flex justify-end">
+                      <div className="bg-primary/10 border border-primary/15 rounded-2xl rounded-br-md px-4 py-2.5 max-w-[80%]">
+                        <p className="text-sm text-foreground">{t("chatDemo.userMsg", "Ich fühle mich allein. Was sagt die Bibel dazu?")}</p>
+                      </div>
+                    </div>
+                    {/* Bot bubble */}
+                    <div className="flex justify-start">
+                      <div className="bg-card border border-border rounded-2xl rounded-bl-md px-4 py-2.5 max-w-[85%] shadow-sm">
+                        <p className="text-sm text-foreground/90 leading-relaxed">{t("chatDemo.botMsg", "Du bist nicht allein – auch wenn es sich gerade so anfühlt. In Psalm 23 heisst es: «Der Herr ist mein Hirte, mir wird nichts mangeln.» Das bedeutet, dass Gott dir nahe ist, auch in den dunkelsten Momenten. Möchtest du, dass wir diese Stelle gemeinsam vertiefen?")}</p>
+                      </div>
+                    </div>
+                    {/* CTA to start */}
+                    <button
+                      onClick={() => inputRef.current?.focus()}
+                      className="w-full text-center text-xs text-primary font-medium hover:underline cursor-pointer pt-1"
+                    >
+                      {t("chatDemo.cta", "Starte jetzt dein eigenes Gespräch →")}
+                    </button>
+                  </div>
+                </motion.div>
+
+                {/* === Social Proof === */}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.65 }}
+                  className="flex flex-wrap justify-center gap-4 sm:gap-8 mb-6 max-w-2xl mx-auto"
+                >
+                  {[
+                    { value: "2'500+", label: t("social.conversations", "Gespräche geführt") },
+                    { value: "36", label: t("social.languages", "Sprachen") },
+                    { value: "5", label: t("social.bibles", "Bibelübersetzungen") },
+                  ].map((stat) => (
+                    <div key={stat.label} className="text-center">
+                      <p className="text-xl sm:text-2xl font-bold text-primary">{stat.value}</p>
+                      <p className="text-xs text-muted-foreground">{stat.label}</p>
+                    </div>
+                  ))}
+                </motion.div>
+
+                {/* Topic chips (collapsed) */}
+                <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.75 }} className="max-w-2xl mx-auto mb-6">
                   <p className="text-xs text-muted-foreground text-center mb-3">{t("tiles.sectionTitle")}</p>
                   <div className="flex flex-wrap justify-center gap-1.5">
                     {visibleChips.map((chip) => (
@@ -532,7 +596,7 @@ export function ChatHero() {
                 </motion.div>
 
                 {/* Bible quote */}
-                <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.7 }} className="max-w-2xl mx-auto w-full">
+                <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.85 }} className="max-w-2xl mx-auto w-full">
                   <button
                     onClick={() => sendMessage(`Erkläre mir diesen Bibelvers im Detail: ${dailyVerse.quote} (${dailyVerse.ref}) – Wer hat das geschrieben? In welchem Kontext? Was bedeutet das für mein Leben heute?`)}
                     className="relative w-full bg-card/60 backdrop-blur-sm rounded-2xl px-8 py-6 border border-primary/10 text-center shadow-sm overflow-hidden cursor-pointer hover:border-primary/30 hover:shadow-md transition-all duration-300 group"
@@ -548,7 +612,7 @@ export function ChatHero() {
 
                 {/* Previous conversations hint */}
                 {conversations.length > 0 && (
-                  <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8 }} className="text-center mt-6">
+                  <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9 }} className="text-center mt-6">
                     <button onClick={() => setSidebarOpen(true)} className="text-xs text-muted-foreground hover:text-foreground transition-colors underline underline-offset-2">
                       {t("chat.previousChats", { count: conversations.length, defaultValue: `${conversations.length} frühere Gespräche` })}
                     </button>
