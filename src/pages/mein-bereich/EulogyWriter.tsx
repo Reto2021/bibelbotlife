@@ -1,7 +1,7 @@
 import { useState, useRef, useCallback, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Mic, MicOff, Square, Play, Pause, Trash2, Sparkles, Download, FileText, Loader2, Plus } from "lucide-react";
+import { ArrowLeft, Mic, Square, Play, Pause, Trash2, Sparkles, Download, Loader2, Save, Share2, Check, Copy, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -9,24 +9,31 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { SEOHead } from "@/components/SEOHead";
 import { toast } from "sonner";
+import { useAuth } from "@/hooks/use-auth";
+import { useCeremonyDrafts } from "@/hooks/use-ceremony-drafts";
 import jsPDF from "jspdf";
 
 interface Recording {
   id: string;
-  blob: Blob;
+  blob: Blob | null;
   url: string;
   transcript: string;
   duration: number;
-  isTranscribing: boolean;
 }
 
 const EulogyWriter = () => {
   const { t, i18n } = useTranslation();
+  const { user } = useAuth();
+  const { draftsQuery, saveDraft, toggleShare } = useCeremonyDrafts("funeral");
 
   // Form state
   const [personName, setPersonName] = useState("");
   const [personAge, setPersonAge] = useState("");
   const [additionalNotes, setAdditionalNotes] = useState("");
+  const [draftId, setDraftId] = useState<string | null>(null);
+  const [shareToken, setShareToken] = useState<string | null>(null);
+  const [isShared, setIsShared] = useState(false);
+  const [linkCopied, setLinkCopied] = useState(false);
 
   // Recording state
   const [isRecording, setIsRecording] = useState(false);
@@ -44,16 +51,99 @@ const EulogyWriter = () => {
   const [generatedText, setGeneratedText] = useState("");
   const [isGenerating, setIsGenerating] = useState(false);
 
-  // Speech recognition for transcription
+  // Speech recognition
   const recognitionRef = useRef<any>(null);
   const interimTranscriptRef = useRef("");
 
+  // Load most recent draft
+  useEffect(() => {
+    if (draftsQuery.data && draftsQuery.data.length > 0 && !draftId) {
+      const draft = draftsQuery.data[0];
+      setDraftId(draft.id);
+      setPersonName(draft.person_name || "");
+      setShareToken(draft.share_token);
+      setIsShared(draft.is_shared);
+      setGeneratedText(draft.generated_text || "");
+      const fd = draft.form_data as Record<string, string> | null;
+      if (fd) {
+        setPersonAge(fd.personAge || "");
+        setAdditionalNotes(fd.additionalNotes || "");
+      }
+      const tr = draft.transcripts as Array<{ text: string; duration: number }> | null;
+      if (tr && tr.length > 0) {
+        setRecordings(tr.map((t, i) => ({
+          id: `loaded-${i}`,
+          blob: null,
+          url: "",
+          transcript: t.text,
+          duration: t.duration,
+        })));
+      }
+    }
+  }, [draftsQuery.data]);
+
   useEffect(() => {
     return () => {
-      recordings.forEach((r) => URL.revokeObjectURL(r.url));
+      recordings.forEach((r) => { if (r.url) URL.revokeObjectURL(r.url); });
       if (timerRef.current) clearInterval(timerRef.current);
     };
   }, []);
+
+  const handleSave = async () => {
+    if (!user) {
+      toast.error("Bitte melde dich an, um zu speichern.");
+      return;
+    }
+    try {
+      const result = await saveDraft.mutateAsync({
+        id: draftId || undefined,
+        ceremony_type: "funeral",
+        person_name: personName,
+        form_data: { personAge, additionalNotes },
+        transcripts: recordings.map((r) => ({ text: r.transcript, duration: r.duration })),
+        generated_text: generatedText,
+      });
+      setDraftId(result.id);
+      setShareToken(result.share_token);
+      setIsShared(result.is_shared);
+      toast.success("Entwurf gespeichert");
+    } catch {
+      toast.error("Fehler beim Speichern");
+    }
+  };
+
+  const handleToggleShare = async () => {
+    if (!draftId) {
+      await handleSave();
+    }
+    const id = draftId || saveDraft.data?.id;
+    if (!id) return;
+    try {
+      const result = await toggleShare.mutateAsync({ id, is_shared: !isShared });
+      setIsShared(!isShared);
+      if (!isShared && result.share_token) {
+        setShareToken(result.share_token);
+        const url = `${window.location.origin}/shared/${result.share_token}`;
+        await navigator.clipboard.writeText(url);
+        setLinkCopied(true);
+        setTimeout(() => setLinkCopied(false), 3000);
+        toast.success("Link kopiert – teile ihn mit deinem Seelsorger");
+      } else {
+        toast.info("Freigabe deaktiviert");
+      }
+    } catch {
+      toast.error("Fehler beim Teilen");
+    }
+  };
+
+  const copyShareLink = async () => {
+    if (!shareToken) return;
+    const url = `${window.location.origin}/shared/${shareToken}`;
+    await navigator.clipboard.writeText(url);
+    setLinkCopied(true);
+    setTimeout(() => setLinkCopied(false), 3000);
+    toast.success("Link kopiert");
+  };
 
   const startRecording = useCallback(async () => {
     try {
@@ -74,21 +164,19 @@ const EulogyWriter = () => {
 
         setRecordings((prev) => [
           ...prev,
-          { id, blob, url, transcript: interimTranscriptRef.current, duration, isTranscribing: false },
+          { id, blob, url, transcript: interimTranscriptRef.current, duration },
         ]);
         interimTranscriptRef.current = "";
         stream.getTracks().forEach((track) => track.stop());
       };
 
-      // Start speech recognition in parallel
       const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
       if (SpeechRecognition) {
         const recognition = new SpeechRecognition();
         recognition.continuous = true;
         recognition.interimResults = true;
-        // Use Swiss German for speech recognition as per memory
         recognition.lang = i18n.language === "en" ? "en-US" : "de-CH";
-        
+
         let finalTranscript = "";
         recognition.onresult = (event: any) => {
           let interim = "";
@@ -131,12 +219,13 @@ const EulogyWriter = () => {
   const deleteRecording = (id: string) => {
     setRecordings((prev) => {
       const rec = prev.find((r) => r.id === id);
-      if (rec) URL.revokeObjectURL(rec.url);
+      if (rec?.url) URL.revokeObjectURL(rec.url);
       return prev.filter((r) => r.id !== id);
     });
   };
 
   const togglePlayback = (rec: Recording) => {
+    if (!rec.url) return;
     if (playingId === rec.id) {
       audioRef.current?.pause();
       setPlayingId(null);
@@ -243,15 +332,12 @@ const EulogyWriter = () => {
     const margin = 25;
     const maxWidth = pageWidth - margin * 2;
 
-    // Title
     if (personName) {
       doc.setFontSize(20);
       doc.setFont("helvetica", "bold");
-      const titleLines = doc.splitTextToSize(personName, maxWidth);
-      doc.text(titleLines, pageWidth / 2, 35, { align: "center" });
+      doc.text(doc.splitTextToSize(personName, maxWidth), pageWidth / 2, 35, { align: "center" });
     }
 
-    // Subtitle
     if (personAge) {
       doc.setFontSize(12);
       doc.setFont("helvetica", "normal");
@@ -260,13 +346,11 @@ const EulogyWriter = () => {
       doc.setTextColor(0);
     }
 
-    // Decorative line
     const lineY = (personName ? 50 : 40) + (personAge ? 5 : 0);
     doc.setDrawColor(180);
     doc.setLineWidth(0.3);
     doc.line(margin + 20, lineY, pageWidth - margin - 20, lineY);
 
-    // Body text
     doc.setFontSize(11);
     doc.setFont("helvetica", "normal");
     const textY = lineY + 12;
@@ -284,7 +368,6 @@ const EulogyWriter = () => {
       currentY += lineHeight;
     }
 
-    // Footer
     doc.setFontSize(8);
     doc.setTextColor(160);
     doc.text("Erstellt mit BibleBot.Life", pageWidth / 2, pageHeight - 10, { align: "center" });
@@ -297,17 +380,30 @@ const EulogyWriter = () => {
     <div className="min-h-screen bg-background">
       <SEOHead titleKey="eulogy.pageTitle" descKey="eulogy.pageDesc" path="/mein-bereich/abdankung" />
 
-      {/* Header */}
       <header className="border-b bg-card/80 backdrop-blur-sm sticky top-0 z-10">
-        <div className="max-w-3xl mx-auto px-4 py-3 flex items-center gap-3">
-          <Link to="/mein-bereich">
-            <Button variant="ghost" size="icon">
-              <ArrowLeft className="h-5 w-5" />
+        <div className="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <Link to="/mein-bereich">
+              <Button variant="ghost" size="icon">
+                <ArrowLeft className="h-5 w-5" />
+              </Button>
+            </Link>
+            <div>
+              <h1 className="text-lg font-semibold">{t("eulogy.title")}</h1>
+              <p className="text-sm text-muted-foreground">{t("eulogy.subtitle")}</p>
+            </div>
+          </div>
+          <div className="flex items-center gap-2">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={handleSave}
+              disabled={saveDraft.isPending}
+              className="gap-1.5"
+            >
+              {saveDraft.isPending ? <Loader2 className="h-4 w-4 animate-spin" /> : <Save className="h-4 w-4" />}
+              <span className="hidden sm:inline">{t("eulogy.save", "Speichern")}</span>
             </Button>
-          </Link>
-          <div>
-            <h1 className="text-lg font-semibold">{t("eulogy.title")}</h1>
-            <p className="text-sm text-muted-foreground">{t("eulogy.subtitle")}</p>
           </div>
         </div>
       </header>
@@ -356,7 +452,6 @@ const EulogyWriter = () => {
           <CardContent className="space-y-4">
             <p className="text-sm text-muted-foreground">{t("eulogy.step2Desc")}</p>
 
-            {/* Record button */}
             <div className="flex items-center justify-center gap-4">
               {isRecording ? (
                 <div className="flex items-center gap-4">
@@ -380,7 +475,6 @@ const EulogyWriter = () => {
               )}
             </div>
 
-            {/* Recordings list */}
             {recordings.length > 0 && (
               <div className="space-y-3">
                 {recordings.map((rec, i) => (
@@ -390,9 +484,11 @@ const EulogyWriter = () => {
                         {t("eulogy.recording")} {i + 1} ({formatTime(rec.duration)})
                       </span>
                       <div className="flex gap-1">
-                        <Button variant="ghost" size="icon" onClick={() => togglePlayback(rec)}>
-                          {playingId === rec.id ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4" />}
-                        </Button>
+                        {rec.url && (
+                          <Button variant="ghost" size="icon" onClick={() => togglePlayback(rec)}>
+                            {playingId === rec.id ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4" />}
+                          </Button>
+                        )}
                         <Button variant="ghost" size="icon" onClick={() => deleteRecording(rec.id)}>
                           <Trash2 className="h-4 w-4 text-destructive" />
                         </Button>
@@ -413,7 +509,6 @@ const EulogyWriter = () => {
               </div>
             )}
 
-            {/* Additional notes */}
             <div>
               <Label>{t("eulogy.additionalNotes")}</Label>
               <Textarea
@@ -458,7 +553,7 @@ const EulogyWriter = () => {
                   rows={16}
                   className="text-sm leading-relaxed"
                 />
-                <div className="flex gap-3">
+                <div className="flex flex-wrap gap-3">
                   <Button onClick={downloadPDF} className="gap-2 flex-1">
                     <Download className="h-4 w-4" />
                     {t("eulogy.downloadPDF")}
@@ -472,6 +567,68 @@ const EulogyWriter = () => {
             )}
           </CardContent>
         </Card>
+
+        {/* Step 4: Share with pastor */}
+        {generatedText && (
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-base flex items-center gap-2">
+                <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm">4</span>
+                {t("eulogy.shareStep", "Mit Seelsorger teilen")}
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p className="text-sm text-muted-foreground">
+                {t("eulogy.shareDesc", "Erstelle einen Link, den du per E-Mail oder Messenger an deinen Seelsorger senden kannst. Er kann den Text lesen und als PDF herunterladen.")}
+              </p>
+
+              {!isShared ? (
+                <Button
+                  onClick={handleToggleShare}
+                  variant="outline"
+                  className="gap-2 w-full"
+                  disabled={toggleShare.isPending}
+                >
+                  {toggleShare.isPending ? (
+                    <Loader2 className="h-4 w-4 animate-spin" />
+                  ) : (
+                    <Share2 className="h-4 w-4" />
+                  )}
+                  {t("eulogy.enableShare", "Link erstellen & kopieren")}
+                </Button>
+              ) : (
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2 p-3 bg-muted/50 rounded-lg">
+                    <div className="flex-1 text-sm font-mono truncate">
+                      {window.location.origin}/shared/{shareToken}
+                    </div>
+                    <Button variant="ghost" size="icon" onClick={copyShareLink}>
+                      {linkCopied ? <Check className="h-4 w-4 text-green-500" /> : <Copy className="h-4 w-4" />}
+                    </Button>
+                    <a
+                      href={`${window.location.origin}/shared/${shareToken}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button variant="ghost" size="icon">
+                        <ExternalLink className="h-4 w-4" />
+                      </Button>
+                    </a>
+                  </div>
+                  <Button
+                    onClick={handleToggleShare}
+                    variant="ghost"
+                    size="sm"
+                    className="text-muted-foreground"
+                    disabled={toggleShare.isPending}
+                  >
+                    {t("eulogy.disableShare", "Freigabe deaktivieren")}
+                  </Button>
+                </div>
+              )}
+            </CardContent>
+          </Card>
+        )}
       </main>
     </div>
   );
