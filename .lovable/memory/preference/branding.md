@@ -1,13 +1,14 @@
 ---
-name: Branding BibelBot.Life
-description: Markenname, Sprachregel BibelBot vs BibleBot, kein KI im Marketing
+name: Branding BibleBot.Life
+description: Markenname immer BibleBot.Life, international, kein KI im Marketing
 type: preference
 ---
-Markenname: **BibleBot.Life** (international)
-- Bei deutscher Sprache (de): IMMER **BibelBot** verwenden, NIE "BibleBot"
-- Bei allen anderen Sprachen: **BibleBot** verwenden
-- Gilt für: Locale-Dateien, hardcodierte Texte, Komponenten, Seiten, Meta-Tags
+Markenname: **BibleBot.Life** (international, alle Sprachen)
+- IMMER **BibleBot** verwenden, auch bei deutscher Sprache – NIE "BibelBot"
+- Domain: biblebot.life (nicht bibelbot.ch)
+- Subline: "Everyday Sunday" – im Header und Splash-Screen
+- Gilt für: Locale-Dateien, hardcodierte Texte, Komponenten, Seiten, Meta-Tags, Edge Functions
 
 Kein «KI» in Marketing, Meta-Tags, Social Sharing oder Beschreibungen verwenden.
-Stattdessen: «Dein persönlicher Bibel-Begleiter», «Bibel-Begleiter», «seelsorgerische Begleitung».
-Fokus auf Nutzen (Begleitung, Coaching, Impulse) statt Technologie.
+Stattdessen: «Your personal Bible companion», «Bibel-Begleiter», «pastoral companionship».
+Fokus auf Nutzen (companionship, coaching, impulses) statt Technologie.
