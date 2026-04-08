@@ -1,6 +1,6 @@
 {
   "nav": {
-    "startNow": "Kezdjük"
+    "startNow": "Kezdje most"
   },
   "loader": "Betöltés…",
   "hero": {
@@ -11,286 +11,708 @@
     },
     "title1": "A Biblia.",
     "title2": " Újragondolva.",
-    "subtitle": "A BibleBot ismeri a Bibliát – és a helyes kérdéseket teszi fel. Nem ember, de őszinte társ. Értelmes beszélgetésekhez, mély kérdésekhez és valódi impulzusokhoz.",
-    "ctaTelegram": "Indítás Telegramon",
-    "ctaMore": "Tudj meg többet",
-    "quote": "\"Come to me, all you who are weary and burdened, and I will give you rest.\"",
-    "quoteRef": "– Matthew 11:28"
+    "subtitle": "A BibleBot ismeri a Bibliát – és felteszi a megfelelő kérdéseket. Nem ember, de őszinte társ. Jó beszélgetésekhez, mély kérdésekhez és valódi impulzusokhoz.",
+    "ctaTelegram": "Kezdés Telegramon keresztül",
+    "ctaMore": "Tudjon meg többet",
+    "quote": "«Jöjjetek hozzám mindnyájan, akik megfáradtatok és meg vagytok terhelve, és én megnyugtatlak titeket.»",
+    "quoteRef": "– Máté 11,28"
   },
   "impulse": {
-    "loading": "Loading daily impulse...",
-    "label": "Impulse of the Day",
-    "deepDive": "What does this mean for me?",
-    "explore": "Read full passage"
+    "loading": "Napi impulzus betöltése...",
+    "label": "A nap impulzusa",
+    "deepDive": "Mit jelent ez számomra?",
+    "explore": "Olvassa el a teljes szakaszt"
   },
   "features": {
-    "sectionTitle": "How BibleBot accompanies you",
-    "sectionSubtitle": "Discover the many ways BibleBot can walk alongside you",
+    "sectionTitle": "Hogyan kísér el a BibleBot",
+    "sectionSubtitle": "Fedezze fel a sokféle lehetőséget, ahogyan a BibleBot elkísérheti Önt",
     "bible": {
-      "title": "Bible passages & interpretation",
-      "desc": "Ask \"What does the Bible say about...?\" and receive relevant verses with context and clear explanation."
+      "title": "Bibliai versek és magyarázatok",
+      "desc": "Kérdezze meg: „Mit mond a Biblia erről…?” és kapjon megfelelő verseket kontextussal és érthető magyarázattal."
     },
     "goals": {
-      "title": "Life planning & goals",
-      "desc": "Discover your calling, set concrete goals, and find out what God might have in store for you."
+      "title": "Élet tervezése és célkitűzés",
+      "desc": "Fedezze fel hivatását, tűzzön ki konkrét célokat, és derítse ki, mit tervezhet Isten Önnel."
     },
     "self": {
-      "title": "Finding yourself",
-      "desc": "Recognize your gifts, strengths, and longings – and what your heart truly needs."
+      "title": "Önmagára találás",
+      "desc": "Ismerje fel ajándékait, erősségeit és vágyait – és azt, amire a szíve igazán vágyik."
     },
     "faith": {
-      "title": "Faith journey & finding Christ",
-      "desc": "Whether seeking, doubting, or deepening – BibleBot accompanies you on your personal path."
+      "title": "Hitút és Krisztus megtalálása",
+      "desc": "Akár kereső, kételkedő vagy elmélyedő – a BibleBot elkíséri Önt személyes útján."
     },
     "daily": {
-      "title": "Daily impulses & church year",
-      "desc": "Start your day with impulses and let BibleBot guide you through Advent, Lent, and holidays."
+      "title": "Napi impulzusok és egyházi év",
+      "desc": "Kezdje a napját impulzusokkal, és kísérje el az advent, a nagyböjt és az ünnepek során."
     },
     "groups": {
-      "title": "Groups & communities",
-      "desc": "Perfect for Bible study groups, church communities, and shared devotions."
+      "title": "Csoportok és gyülekezetek",
+      "desc": "Tökéletes bibliai körök, gyülekezeti csoportok és közösségi áhítatok számára."
     }
   },
   "coaching": {
-    "badge": "Methodology",
-    "title": "Not just a chatbot – genuine companionship",
-    "subtitle": "BibleBot combines biblical wisdom with proven coaching methods and Positive Psychology.",
-    "journeyTitle": "Personal companionship",
-    "journeyDesc": "BibleBot accompanies you as long as you wish – in free conversation or with an optional 21-day structure.",
-    "week1": "Week 1: Arriving",
-    "week1Desc": "Building trust, listening, understanding your situation. Where are you? What concerns you?",
-    "week2": "Week 2: Deepening",
-    "week2Desc": "Recognizing patterns, clarifying desires, deepening biblical impulses. What do you really want?",
-    "week3": "Week 3: Acting",
-    "week3Desc": "Taking concrete steps, setting goals, initiating change. What's your next step?",
-    "openQuestionsTitle": "Open questions instead of quick answers",
-    "openQuestionsDesc": "BibleBot doesn't give cheap advice. Instead, it asks the questions that truly matter:",
-    "openQ1": "\"What's really behind this desire?\"",
-    "openQ2": "\"How would you know something has changed?\"",
-    "openQ3": "\"What would be a first small step?\"",
-    "honestTitle": "Honest instead of toxic positivity",
-    "honestDesc": "No \"It'll be fine!\" and no sugarcoating. BibleBot is empathetic AND honest:",
-    "honest1": "Also addresses uncomfortable Bible passages",
-    "honest2": "Challenges you to self-reflection",
-    "honest3": "Distinguishes comfort from avoidance",
-    "scienceTitle": "Scientifically grounded",
+    "badge": "Módszertan",
+    "title": "Nem csak egy chatbot – valódi kíséret",
+    "subtitle": "A BibleBot ötvözi a bibliai bölcsességet a bevált coaching módszerekkel és a pozitív pszichológiával.",
+    "journeyTitle": "Személyes kíséret",
+    "journeyDesc": "A BibleBot elkíséri Önt, ameddig csak akarja – szabad beszélgetésben vagy opcionális 21 napos struktúrával.",
+    "week1": "1. hét: Megérkezés",
+    "week1Desc": "Bizalom építése, meghallgatás, a helyzet megértése. Hol áll? Mi foglalkoztatja?",
+    "week2": "2. hét: Elmélyítés",
+    "week2Desc": "Minták felismerése, vágyak tisztázása, bibliai impulzusok elmélyítése. Mit akar valójában?",
+    "week3": "3. hét: Cselekvés",
+    "week3Desc": "Konkrét lépések megtétele, célok megfogalmazása, változás elindítása. Mi a következő lépés?",
+    "openQuestionsTitle": "Nyitott kérdések gyors válaszok helyett",
+    "openQuestionsDesc": "A BibleBot nem ad olcsó tanácsokat. Ehelyett felteszi azokat a kérdéseket, amelyek igazán számítanak:",
+    "openQ1": "«Mi is áll valójában e mögött a vágy mögött?»",
+    "openQ2": "«Miből venné észre, hogy valami megváltozott?»",
+    "openQ3": "«Mi lenne az első apró lépés?»",
+    "honestTitle": "Őszinte, nem toxikus pozitív",
+    "honestDesc": "Nincs „Minden rendben lesz!” és nincs szépítés. A BibleBot empatikus ÉS őszinte:",
+    "honest1": "Megnevezi a kényelmetlen bibliai verseket is",
+    "honest2": "Önreflexióra ösztönöz",
+    "honest3": "Megkülönbözteti a vigaszt a elnyomástól",
+    "scienceTitle": "Tudományosan megalapozott",
     "perma": {
-      "name": "PERMA Model",
+      "name": "PERMA-modell",
       "author": "Seligman",
-      "desc": "Positive emotions, meaning & growth"
+      "desc": "Pozitív érzelmek, értelem és növekedés"
     },
     "logo": {
-      "name": "Logotherapy",
+      "name": "Logoterápia",
       "author": "Frankl",
-      "desc": "Finding meaning in difficult times"
+      "desc": "Értelemkeresés nehéz időkben"
     },
     "gratitude": {
-      "name": "Gratitude",
+      "name": "Hála",
       "author": "Emmons",
-      "desc": "Research-based gratitude practice"
+      "desc": "Kutatásalapú hála gyakorlat"
     },
     "forgiveness": {
-      "name": "Forgiveness",
+      "name": "Megbocsátás",
       "author": "Worthington",
-      "desc": "REACH model for forgiveness processes"
+      "desc": "REACH-modell a megbocsátási folyamatokhoz"
     },
-    "renameTip": "💡 You can give your BibleBot a personal name – so it truly becomes <strong>your</strong> companion."
+    "renameTip": "💡 Adhatsz a BibleBotodnak saját nevet – hogy valóban **a te** társad legyen."
   },
   "discover": {
-    "badge": "For the curious",
-    "title": "Rediscover faith – without pressure",
-    "subtitle": "More and more people are asking the big questions anew. BibleBot.Life is for everyone who wants to (re)discover faith – honestly, without pathos, and without church jargon.",
+    "badge": "Kíváncsiaknak",
+    "title": "Fedezze fel újra a hitet – nyomás nélkül",
+    "subtitle": "Egyre több ember teszi fel újra a nagy kérdéseket. A BibleBot.Life mindazoknak szól, akik (újra) fel akarják fedezni a hitet – őszintén, pátosz és egyházi zsargon nélkül.",
     "doubt": {
-      "title": "You doubt?",
-      "text": "Good. Doubt isn't a flaw – it's the beginning of honest faith. The Bible is full of people who wrestled."
+      "title": "Kételkedik?",
+      "text": "Jó. A kétség nem hiba – az őszinte hit kezdete. A Biblia tele van emberekkel, akik küzdöttek."
     },
     "search": {
-      "title": "You're searching?",
-      "text": "Maybe you don't even know what for. That's perfectly fine. BibleBot helps you ask the right questions – instead of delivering quick answers."
+      "title": "Keres?",
+      "text": "Talán még azt sem tudja pontosan, mit. Ez teljesen rendben van. A BibleBot segít Önnek feltenni a megfelelő kérdéseket – ahelyett, hogy gyors válaszokat adna."
     },
     "deepen": {
-      "title": "You want to go deeper?",
-      "text": "You already believe, but want to understand more? Discover the depth of the Bible – historical, personal, surprisingly relevant."
+      "title": "El akar mélyedni?",
+      "text": "Már hisz, de többet akar érteni? Fedezze fel a Biblia mélységét – történelmileg, személyesen, meglepően relevánsan."
     },
-    "quote": "\"Ask, and it will be given to you; seek, and you will find; knock, and the door will be opened.\"",
-    "quoteRef": "– Matthew 7:7",
-    "quoteText": "Many of us don't talk much about faith. That's okay. But those with questions deserve honest answers – without sermons, without membership, without ulterior motives."
+    "quote": "«Zörgessetek, és megnyittatik nektek.»",
+    "quoteRef": "– Máté 7,7",
+    "quoteText": "Svájcban nem sokat beszélünk a hitről. Nem is kell. De aki kérdez, az őszinte válaszokat érdemel – prédikáció, tagság és hátsó szándék nélkül."
   },
   "subscribe": {
-    "title": "Daily Bible impulse",
-    "subtitle": "Every morning at 7:00 AM – a verse, a thought, a good start.",
-    "firstName": "Your first name",
-    "firstNameOptional": "(optional)",
-    "firstNamePlaceholder": "e.g. Thomas",
-    "firstNameHint": "So we can greet you personally.",
-    "channelLabel": "How would you like to receive the impulse?",
+    "title": "Napi bibliai impulzus",
+    "subtitle": "Minden reggel 7:00-kor – egy vers, egy gondolat, egy jó kezdet.",
+    "firstName": "Keresztneved",
+    "firstNameOptional": "(opcionális)",
+    "firstNamePlaceholder": "pl. Tamás",
+    "firstNameHint": "Hogy személyesen üdvözölhessük Önt.",
+    "channelLabel": "Hogyan szeretné megkapni az impulzust?",
     "push": "Push",
-    "pushDesc": "Browser notification",
+    "pushDesc": "Böngésző értesítés",
     "telegram": "Telegram",
-    "telegramDesc": "Message via Telegram",
+    "telegramDesc": "Üzenet Telegramon keresztül",
     "sms": "SMS",
-    "smsDesc": "Text to your phone",
-    "phoneLabel": "Phone number",
-    "phonePlaceholder": "+1 555 123 4567",
-    "phoneHint": "With country code, e.g. +1 for the US.",
-    "telegramHint": "Click \"Subscribe\" – you'll be redirected to Telegram. Start the bot and type <strong>/daily</strong> to activate the daily impulse.",
-    "pushHint": "After clicking \"Subscribe\", your browser will ask for notification permission. Please allow it to receive the impulse.",
-    "submit": "Subscribe",
-    "submitting": "Subscribing...",
-    "footNote": "No login required. Cancel anytime.",
-    "successTitle": "You're subscribed! 🙏",
-    "successText": "Starting tomorrow at 7:00 AM, you'll receive your personal Bible impulse.",
-    "toastTelegram": "Telegram opened 🙏",
-    "toastTelegramDesc": "Start the bot and type /daily to activate the daily impulse.",
-    "toastSuccess": "Subscribed! 🙏",
-    "toastSuccessDesc": "You'll receive your daily impulse starting tomorrow.",
-    "toastPushPreview": "Push subscription not available in preview",
-    "toastPushPreviewDesc": "Push notifications only work on the published site.",
-    "toastNotSupported": "Not supported",
-    "toastNotSupportedDesc": "Your browser does not support push notifications.",
-    "toastPermDenied": "Permission denied",
-    "toastPermDeniedDesc": "Please allow notifications in your browser settings.",
-    "toastError": "Error",
-    "toastErrorDesc": "Please try again later."
+    "smsDesc": "SMS a telefonjára",
+    "phoneLabel": "Telefonszám",
+    "phonePlaceholder": "+36 20 123 4567",
+    "phoneHint": "Országkóddal, pl. +36 Magyarországra.",
+    "telegramHint": "Kattintson a „Feliratkozás” gombra – átirányítjuk a Telegramra. Indítsa el ott a botot, és írja be a <strong>/daily</strong> parancsot a napi impulzus aktiválásához.",
+    "pushHint": "A „Feliratkozás” gombra kattintás után a böngészője engedélyt kér az értesítésekhez. Kérjük, engedélyezze azokat az impulzus fogadásához.",
+    "submit": "Feliratkozás",
+    "submitting": "Feliratkozás folyamatban...",
+    "footNote": "Nincs szükség bejelentkezésre. Bármikor lemondható.",
+    "successTitle": "Feliratkozott! 🙏",
+    "successText": "Holnaptól reggel 7:00-kor megkapja személyes bibliai impulzusát.",
+    "toastTelegram": "Telegram megnyitva 🙏",
+    "toastTelegramDesc": "Indítsa el a botot, és írja be a /daily parancsot a napi impulzus aktiválásához.",
+    "toastSuccess": "Feliratkozva! 🙏",
+    "toastSuccessDesc": "Holnaptól megkapja napi impulzusát.",
+    "toastPushPreview": "Push-előfizetés nem előnézetben",
+    "toastPushPreviewDesc": "A push értesítések csak a közzétett oldalon működnek.",
+    "toastNotSupported": "Nem támogatott",
+    "toastNotSupportedDesc": "Böngészője nem támogatja a push értesítéseket.",
+    "toastPermDenied": "Engedély megtagadva",
+    "toastPermDeniedDesc": "Kérjük, engedélyezze az értesítéseket a böngésző beállításaiban.",
+    "toastError": "Hiba",
+    "toastErrorDesc": "Kérjük, próbálja meg később."
   },
   "faq": {
-    "badge": "FAQ",
-    "title": "What you should know about BibleBot",
-    "subtitle": "Transparency matters – especially for theologians, pastors, and critical thinkers.",
-    "q1": "What makes BibleBot different from ChatGPT & Co.?",
-    "q1Generic": "Generic chatbots:",
+    "badge": "Gyakran Ismételt Kérdések",
+    "title": "Amit tudnia kell a BibleBotról",
+    "subtitle": "Az átláthatóság fontos számunkra – különösen a teológusok, lelkészek és kritikus gondolkodók felé.",
+    "q1": "Miben különbözik a BibleBot a ChatGPT-től és társaitól?",
+    "q1Generic": "Általános chatbotok:",
     "q1GenericItems": [
-      "Superficial Bible quotes without context",
-      "No pastoral guardrails",
-      "Avoids uncomfortable texts",
-      "No crisis intervention",
-      "Mixes Bible with esotericism",
-      "No follow-up questions – just confirmation"
+      "Felületes bibliai idézetek kontextus nélkül",
+      "Nincs lelkipásztori védőkorlát",
+      "Kényelmetlen szövegek elkerülése",
+      "Nincs krízisintervenció",
+      "Biblia és ezoterika keverése",
+      "Nincs visszakérdezés – csak megerősítés"
     ],
     "q1Bot": "BibleBot.Life:",
     "q1BotItems": [
-      "5 recognized translations – including uncomfortable passages",
-      "Guardrails AND challenging companionship",
-      "Follow-up questions for self-reflection",
-      "Crisis referrals (emergency helplines)",
-      "Exclusively Christian theology",
-      "Promotes critical thinking as faith maturity"
+      "5 elismert fordítás – kényelmetlen részek is",
+      "Védőkorlátok ÉS kihívást jelentő kíséret",
+      "Visszakérdezés az önreflexióhoz",
+      "Krízisre utalások (Tel. 143 / 147)",
+      "Kizárólag keresztény teológia",
+      "Kritikus gondolkodás elősegítése a hit érettségéhez"
     ],
-    "q2": "Which Bible translations are included?",
-    "q2Intro": "BibleBot works ecumenically with the major German-language Bible editions:",
-    "q2Outro": "All Bible passages include source citations and historical context.",
-    "q3": "What scientific foundations are behind it?",
-    "q3Intro": "The companionship is based on peer-reviewed research in Positive Psychology:",
-    "q4": "How does BibleBot ensure pastoral safety?",
+    "q2": "Milyen bibliafordítások vannak mögötte?",
+    "q2Intro": "A BibleBot ökumenikus módon dolgozik a legfontosabb német nyelvű bibliai kiadásokkal:",
+    "q2Outro": "Minden bibliai vers forrásmegjelöléssel és történelmi kontextussal kerül kiadásra.",
+    "q3": "Milyen tudományos alapok állnak mögötte?",
+    "q3Intro": "A kíséret a pozitív pszichológia szakértők által ellenőrzött kutatásain alapul:",
+    "q4": "Hogyan biztosítja a BibleBot a lelkipásztori biztonságot?",
     "q4Items": [
-      "Suicidal thoughts or crisis → immediate referral to emergency helplines",
-      "No psychological or medical diagnoses",
-      "Respect without arbitrariness – clear biblical positions are taken",
-      "Empathy AND honesty – uncomfortable topics are addressed",
-      "Follow-up questions for self-reflection instead of cheap validation",
-      "No toxic positivity – genuine, honest companionship",
-      "Openly names tensions and difficult texts"
+      "Öngyilkossági gondolatok vagy krízisek esetén → azonnali továbbítás a Dargebotene Hand (143) és a Pro Juventute (147) szervezetekhez",
+      "Nincs pszichológiai vagy orvosi diagnózis",
+      "Tisztelet a tetszőlegesség nélkül – világos bibliai álláspontok elfogadása",
+      "Empátia ÉS őszinteség – a kényelmetlen dolgok is szóba kerülnek",
+      "Visszakérdezés az önreflexióhoz az olcsó megerősítés helyett",
+      "Nincs toxikus pozitivitás – valódi, őszinte kíséret",
+      "Nyíltan megnevezi a feszültségeket és a nehéz szövegeket"
     ],
-    "q5": "Is BibleBot tied to a specific denomination?",
-    "q5Answer": "No. BibleBot is ecumenically oriented and respects Reformed, Catholic, Free Church, and other Christian traditions equally. When there are denominational differences in interpretation, various perspectives are presented transparently – without favoring any tradition.",
-    "q6": "Does BibleBot replace pastoral care or therapy?",
-    "q6Answer": "No. BibleBot is a digital tool for personal Bible reading and reflection. It does not replace professional pastoral care, theological counseling, or psychological therapy. In serious crises, BibleBot always refers to qualified resources.",
-    "q7": "Isn't BibleBot just a 'feel-good bot'?",
-    "q7Answer": "No. BibleBot comforts where comfort is needed – but it also challenges. Spiritual growth requires friction. BibleBot asks uncomfortable follow-up questions, names difficult Bible texts (Job, Lament Psalms, prophetic criticism), and doesn't shy away from topics like justice, repentance, and responsibility. The prophetic tradition was never comfortable – and neither is BibleBot.",
-    "q8": "Who is behind BibleBot and how is it funded?",
-    "q8Answer": "BibleBot.Life is a private, non-commercial project. It's run on a volunteer basis and funded exclusively through voluntary donations. There's no advertising, no data sales, and no paid features. All donations go directly to covering operating costs (infrastructure, hosting, development). Since BibleBot is a private project, donations are not tax-deductible.",
-    "q9": "How does BibleBot handle my data?",
-    "q9Answer": "BibleBot stores no personal data and no chat histories. Every conversation is anonymous. There's no login, no tracking, and no sharing of data with third parties. Usage is completely anonymous."
+    "q5": "A BibleBot felekezeti kötődésű?",
+    "q5Answer": "Nem. A BibleBot ökumenikus irányultságú, és egyformán tiszteletben tartja a református, katolikus, szabadegyházi és más keresztény hagyományokat. A felekezetileg eltérő értelmezések esetén a különböző perspektívák átláthatóan kerülnek bemutatásra – anélkül, hogy bármelyik hagyományt előnyben részesítenék.",
+    "q6": "A BibleBot helyettesíti a lelkipásztori gondozást vagy a terápiát?",
+    "q6Answer": "Nem. A BibleBot egy digitális segédeszköz a személyes bibliaolvasáshoz és elmélkedéshez. Nem helyettesíti a professzionális lelkipásztori gondozást, teológiai tanácsadást vagy pszichológiai terápiát. Súlyos krízisek esetén a BibleBot mindig minősített segélyhelyekre utal.",
+    "q7": "A BibleBot nem csak egy „jó érzés bot”?",
+    "q7Answer": "Nem. A BibleBot vigasztal, ahol vigaszra van szükség – de kihívást is jelent. A lelki növekedéshez súrlódás kell. A BibleBot kényelmetlen visszakérdezéseket tesz fel, megnevezi a nehéz bibliai szövegeket (Jób, panaszos zsoltárok, prófétai kritika), és nem riad vissza olyan témáktól, mint az igazságosság, a megtérés és a felelősség. A prófétai hagyomány soha nem volt kényelmes – és a BibleBot sem az.",
+    "q8": "Ki áll a BibleBot mögött, és hogyan finanszírozzák?",
+    "q8Answer": "A BibleBot.Life egy magán, nem kereskedelmi projekt. Önkéntes alapon működik, és kizárólag önkéntes adományokból finanszírozza magát. Nincs reklám, nincs adatértékesítés és nincsenek fizetős funkciók. Minden adomány közvetlenül a működési költségek (infrastruktúra, tárhely, fejlesztés) fedezésére fordítódik. Mivel a BibleBot magánprojektként működik, az adományok nem vonhatók le az adóból.",
+    "q9": "Hogyan kezeli a BibleBot az adataimat?",
+    "q9Answer": "A BibleBot nem tárol személyes adatokat és chat-előzményeket. Minden beszélgetés névtelen. Nincs bejelentkezés, nincs nyomon követés és nincs adatmegosztás harmadik felekkel. A használat teljesen névtelen."
   },
   "donate": {
-    "badge": "Support BibleBot",
-    "title": "Help keep BibleBot free",
-    "subtitle": "BibleBot is a passion project – no ads, no subscriptions, no hidden costs. To keep it that way, I rely on voluntary donations. Every contribution helps cover the ongoing costs for operations and infrastructure.",
-    "bankTitle": "Donate via bank transfer",
-    "bankSubtitle": "Every amount counts – thank you! 🙏",
-    "recipient": "Recipient",
+    "badge": "Támogassa a BibleBotot",
+    "title": "Segítsen abban, hogy a BibleBot ingyenes maradjon",
+    "subtitle": "A BibleBot egy szívügy – reklámok, előfizetés és rejtett költségek nélkül. Ahhoz, hogy ez így maradjon, önkéntes adományokra van szükségem. Minden hozzájárulás segít fedezni a működési és infrastrukturális költségeket.",
+    "bankTitle": "Adomány banki átutalással",
+    "bankSubtitle": "Minden összeg számít – nagyon köszönjük! 🙏",
+    "recipient": "Kedvezményezett",
     "bank": "Bank",
-    "purpose": "Reference",
-    "purposeValue": "Donation BibleBot",
-    "note": "BibleBot.Life is operated as a private project. Donations are therefore not tax-deductible."
+    "purpose": "Közlemény",
+    "purposeValue": "Adomány BibleBot",
+    "note": "A BibleBot.Life magánprojektként működik. Az adományok ezért nem vonhatók le az adóból."
+  },
+  "refer": {
+    "badge": "Isten szavának megosztása",
+    "title": "Ajánlja tovább a BibleBotot",
+    "subtitle": "Ismer valakit, akinek éppen bátorításra van szüksége? Ossza meg a BibleBotot – egy üzenet sokat jelenthet.",
+    "whatsapp": "Megosztás WhatsAppon keresztül",
+    "whatsappMsg": "Szia, meg akartam mutatni neked a BibleBotot – egy ingyenes bibliai társat, aki ismeri a Bibliát és igazán jó kérdéseket tesz fel. Nincs bejelentkezés, névtelen, őszinte. Próbáld ki: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "telegram": "Megosztás Telegramon keresztül",
+    "telegramMsg": "Szia, ismered már a BibleBotot? Egy ingyenes személyes bibliai társ – őszinte, névtelen, bejelentkezés nélkül. Nézd meg: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "email": "Megosztás e-mailben",
+    "emailSubject": "Ez érdekelhet: BibleBot.Life",
+    "emailBody": "Szia!\n\nMeg akartam mutatni neked a BibleBotot – egy ingyenes bibliai társat, aki igazán ismeri a Bibliát. Nincs szükség regisztrációra, teljesen névtelen.\n\nJó visszakérdezéseket tesz fel, magyarázza a bibliai verseket kontextusban, és őszintén elkísér – még nehéz témákban is.\n\nPróbáld ki: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nÜdvözlettel",
+    "copy": "Link másolása",
+    "copied": "Link másolva! 📋",
+    "qr": "Vagy egyszerűen mutassa meg ezt a QR-kódot:"
   },
   "cta": {
-    "title": "You don't have to go through this alone",
-    "subtitle": "Just tell BibleBot what's on your mind. No login, no cost, no judgment – just honest companionship and the wisdom of the Bible.",
-    "button": "Start a conversation"
+    "title": "Nem kell egyedül átvészelnie",
+    "subtitle": "Egyszerűen írja meg a BibleBotnak, mi foglalkoztatja. Nincs bejelentkezés, nincs költség, nincs ítélet – csak őszinte kíséret és a Biblia bölcsessége.",
+    "button": "Kezdje el a beszélgetést most"
   },
   "footer": {
-    "tagline": "Személyes társad a Bibliával élt élethez",
-    "disclaimer": "BibleBot.Life is a digital tool and does not replace professional pastoral care, theological counseling, or psychological therapy. In acute crises, please contact your local emergency helpline.",
-    "impressum": "Imprint",
-    "notes": "Notes",
-    "private": "Private, non-commercial project",
-    "noChat": "No storage of chat data",
-    "noTax": "Donations are not tax-deductible",
-    "datenschutz": "Privacy Policy",
-    "love": "With ❤️ for everyone wondering what Christ thinks.",
-    "forChurches": "For Churches"
+    "tagline": "Személyes társad a Biblia szerinti élethez",
+    "disclaimer": "A BibleBot.Life egy digitális segédeszköz, és nem helyettesíti a professzionális lelkipásztori gondozást, teológiai tanácsadást vagy pszichológiai terápiát. Akut krízisek esetén forduljon a Dargebotene Hand (Tel. 143) vagy a Pro Juventute (Tel. 147) szervezetekhez.",
+    "impressum": "Impresszum",
+    "notes": "Megjegyzések",
+    "private": "Magán, nem kereskedelmi projekt",
+    "noChat": "Nincs chatadat tárolása",
+    "noTax": "Az adományok nem vonhatók le az adóból",
+    "datenschutz": "Adatvédelem",
+    "love": "❤️-vel mindazoknak, akik azon gondolkodnak, mit gondol Krisztus.",
+    "forChurches": "Gyülekezeteknek"
   },
   "chat": {
-    "welcome": "Welcome! 🤗\n\nI'm your BibleBot – your personal companion with the Bible, good questions, and real impulses. No pressure, no judgment.\n\nYou can ask me anything – or just share what's on your mind. 💛",
-    "journeyOffer": "💡 **Tip:** I also offer a **21-day journey** – 3 weeks of daily impulses, reflections, and concrete steps. At your own pace.\n\nWould you like to try it?",
-    "suggestion1": "I need an uplifting word right now",
-    "suggestion2": "What does the Bible say when you feel uncertain?",
-    "suggestion3": "I want to find out what I really want",
-    "teaser": "Mi foglalkoztat? 💛",
-    "teaserSub": "I'm here – without any judgment.",
-    "openChat": "Open chat",
-    "closeChat": "Close chat",
-    "yourCompanion": "Your personal companion",
-    "journeyComplete": "21 days completed! 🎉",
-    "arriving": "Arriving",
-    "deepening": "Deepening",
-    "acting": "Acting",
-    "renameTip": "Tip: Click the name to rename me ✨",
-    "changeName": "Change name",
-    "placeholder": "Csak írj...",
-    "startVoice": "Start voice input",
-    "stopVoice": "Stop recording",
-    "noVoice": "Your browser does not support voice input.",
-    "writing": "typing...",
-    "shieldBadge": "No login · No judgment · Citations verified",
-    "journeyStart": "Yes, let's go ✨",
-    "journeyLater": "Maybe later",
-    "journeyStartMsg": "Yes, I'd like to start the 21-day journey!",
-    "qaChecking": "Checking citations...",
-    "qaIssue": "{{count}} issue with citations",
-    "qaIssue_plural": "{{count}} issues with citations",
-    "qaOk": "{{count}} citation verified ✓",
-    "qaOk_plural": "{{count}} citations verified ✓",
-    "qaWarning": "⚠️ Accuracy notes:",
-    "errorTooMany": "Too many requests – please wait a moment.",
-    "errorCredits": "AI quota exhausted.",
-    "errorConnect": "Connection error.",
-    "errorTitle": "Error",
-    "errorConnection": "could not be reached.",
-    "errorNoStream": "No stream",
-    "seniorMode": "Senior mode (larger text)",
-    "teaserCta": "Start writing →",
-    "namePlaceholder": "e.g. Eli, Miriam…"
+    "welcome": "Örülök, hogy itt vagy 🤗\n\nÉn vagyok a BibleBotod – a személyes társad a Bibliával, jó kérdésekkel és konkrét impulzusokkal. Nincs nyomás, nincs ítélet.\n\nBármit megkérdezhetsz tőlem – vagy egyszerűen elmondhatod, mi foglalkoztat éppen. 💛",
+    "journeyOffer": "💡 **Tipp:** Egy **21 napos kíséretet** is kínálok – 3 hét napi impulzusokkal, elmélkedésekkel és konkrét lépésekkel. Teljesen a saját tempódban.\n\nSzeretnéd kipróbálni?",
+    "suggestion1": "Éppen egy bátorító szóra van szükségem",
+    "suggestion2": "Mit mond a Biblia, ha bizonytalannak érzi magát?",
+    "suggestion3": "Szeretném megtudni, mit akarok valójában",
+    "teaser": "Mi foglalkoztat éppen? 💛",
+    "teaserSub": "Itt vagyok – ítélet nélkül.",
+    "teaserCta": "Írj most →",
+    "openChat": "Chat megnyitása",
+    "closeChat": "Chat bezárása",
+    "yourCompanion": "Személyes társad",
+    "journeyComplete": "21 nap kész! 🎉",
+    "arriving": "Megérkezés",
+    "deepening": "Elmélyítés",
+    "acting": "Cselekvés",
+    "renameTip": "Adj nevet nekem ✨",
+    "namePlaceholder": "pl. Éli, Mirjam…",
+    "changeName": "Név módosítása",
+    "placeholder": "Csak írj bátran...",
+    "startVoice": "Hangbevitel indítása",
+    "stopVoice": "Felvétel leállítása",
+    "noVoice": "Böngészője nem támogatja a hangbevitelt.",
+    "writing": "ír...",
+    "shieldBadge": "Nincs bejelentkezés · Nincs ítélet · Idézetek ellenőrizve",
+    "journeyStart": "Igen, kezdjük ✨",
+    "journeyLater": "Talán később",
+    "journeyStartMsg": "Igen, szeretném elkezdeni a 21 napos kíséretet!",
+    "qaChecking": "Idézetek ellenőrzése...",
+    "qaIssue": "{{count}} megjegyzés az idézetekhez",
+    "qaIssue_plural": "{{count}} megjegyzés az idézetekhez",
+    "qaOk": "{{count}} idézet ellenőrizve ✓",
+    "qaOk_plural": "{{count}} idézet ellenőrizve ✓",
+    "qaWarning": "⚠️ Megjegyzések a pontossághoz:",
+    "errorTooMany": "Túl sok kérés – kérjük, várjon egy pillanatot.",
+    "errorCredits": "AI kvóta kimerült.",
+    "errorConnect": "Hiba a csatlakozáskor.",
+    "errorTitle": "Hiba",
+    "errorConnection": "nem érhető el.",
+    "errorNoStream": "Nincs stream",
+    "seniorMode": "Szenior mód (nagyobb betűméret)"
   },
   "install": {
-    "title": "Install BibleBot",
-    "androidDesc": "Quick access from your home screen",
-    "iosDesc": "Tap \"Share\" → \"Add to Home Screen\"",
-    "button": "Install",
-    "close": "Close"
+    "title": "BibleBot telepítése",
+    "androidDesc": "Gyors hozzáférés közvetlenül a kezdőképernyőről",
+    "iosDesc": "Koppintson a „Megosztás” → „Hozzáadás a kezdőképernyőhöz” gombra",
+    "button": "Telepítés",
+    "close": "Bezárás"
+  },
+  "share": {
+    "label": "Megosztás",
+    "shareVia": "Megosztás ezen keresztül",
+    "copied": "Másolva! 📋",
+    "copiedShort": "Másolva!",
+    "copiedDesc": "A szöveg a vágólapra másolva. Most oszd meg WhatsAppon, Instagramon vagy ahol szeretnéd!",
+    "copyLink": "Szöveg másolása",
+    "error": "Másolás sikertelen",
+    "impulseTitle": "BibleBot – A nap impulzusa",
+    "chatTitle": "BibleBot – A nap gondolata",
+    "createImage": "Kép létrehozása ✨",
+    "generating": "Létrehozás folyamatban…",
+    "imageReady": "A képed készen áll a megosztásra!",
+    "shareImage": "Kép megosztása",
+    "download": "Mentés",
+    "imageError": "Kép létrehozása sikertelen",
+    "imageErrorDesc": "A kép nem hozható létre. Kérjük, próbálja meg később.",
+    "imageSaved": "Szöveg másolva! 📋",
+    "imageSavedDesc": "Mentse el a képet, és ossza meg a másolt szöveggel Instagramon, WhatsAppon vagy ahol szeretné!"
   },
   "darkMode": {
-    "light": "Light mode",
-    "dark": "Dark mode"
+    "light": "Világos mód",
+    "dark": "Sötét mód"
   },
   "impressum": {
-    "back": "Back to home",
-    "title": "Imprint"
+    "back": "Vissza a kezdőlapra",
+    "title": "Impresszum"
   },
   "datenschutz": {
-    "back": "Back to home",
-    "title": "Privacy Policy"
+    "back": "Vissza a kezdőlapra",
+    "title": "Adatvédelmi nyilatkozat"
+  },
+  "tiles": {
+    "sectionTitle": "Mi foglalkoztat?",
+    "sectionSubtitle": "Válasszon egy témát — a BibleBot elkíséri Önt",
+    "baptism": {
+      "title": "Keresztelői ige megtalálása",
+      "desc": "A tökéletes vers gyermekednek",
+      "prompt": "Segítsen nekem megtalálni egy megfelelő keresztelői igét. Milyen gyermekről van szó, és mit kívánnak a szülők?"
+    },
+    "condolence": {
+      "title": "Vigasztaló szavak",
+      "desc": "Részvétnyilvánítás és búcsú kísérése",
+      "prompt": "Vigasztaló szavakra van szükségem egy részvétnyilvánító kártyához. Tudna segíteni nekem valami megfelelő megfogalmazásában?"
+    },
+    "wedding": {
+      "title": "Esküvői ige",
+      "desc": "Bibliai szavak szerelmetekhez",
+      "prompt": "Szép bibliai igét keresünk esküvőnkre. Mely bibliai versek illenek a szerelemhez és a partnerséghez?"
+    },
+    "anxiety": {
+      "title": "Szorongás és aggodalmak",
+      "desc": "Bátorság megtalálása nehéz időkben",
+      "prompt": "Éppen szorongással és aggodalmakkal küzdök. Mit mond erről a Biblia? Vannak versek, amelyek bátorságot adnak?"
+    },
+    "confession": {
+      "title": "Gyónás",
+      "desc": "Isten megbocsát — mondd ki",
+      "prompt": "Szeretnék megszabadulni valamitől, ami nyomaszt. Mit mond a Biblia a megbocsátásról és az újrakezdésről?"
+    },
+    "heartbreak": {
+      "title": "Szívfájdalom",
+      "desc": "Amit a Biblia mond a szívfájdalomról",
+      "prompt": "Megtört a szívem. Mit mond a Biblia a szívfájdalomról és arról, hogyan találhatunk újra reményt?"
+    },
+    "newstart": {
+      "title": "Újrakezdés",
+      "desc": "Erő egy új életszakaszhoz",
+      "prompt": "Újrakezdés előtt állok, és bátorításra van szükségem. Mely bibliai versek szólnak az újrakezdésről?"
+    },
+    "namequiz": {
+      "title": "Keresztelői kvíz",
+      "desc": "Találd meg a megfelelő bibliai nevet",
+      "prompt": "Bibliai nevet keresek gyermekemnek. Tudna javaslatokat tenni, és elmagyarázni a jelentésüket?"
+    },
+    "sleepless": {
+      "title": "Álmatlan",
+      "desc": "Nyugalom megtalálása éjszaka",
+      "prompt": "Nem tudok aludni, és gondolkodom. Van-e nyugtató ima vagy zsoltár az éjszakára?"
+    },
+    "loneliness": {
+      "title": "Magány",
+      "desc": "Soha nem vagy egyedül",
+      "prompt": "Magányosnak érzem magam. Mit mond a Biblia arról, hogy Isten mindig velünk van?"
+    },
+    "decision": {
+      "title": "Nehéz döntés",
+      "desc": "Bölcsesség a helyes úthoz",
+      "prompt": "Nehéz döntés előtt állok. Mely bibliai versek segítenek megtalálni a helyes utat?"
+    },
+    "gratitude": {
+      "title": "Hála",
+      "desc": "Személyes hálaima",
+      "prompt": "Szeretnék hálát adni Istennek. Segítsen nekem egy személyes hálaima megfogalmazásában."
+    },
+    "lifewheel": {
+      "title": "Életkerék",
+      "desc": "Mennyire vagy elégedett valójában?"
+    },
+    "sevenwhys": {
+      "title": "7 Miért",
+      "desc": "Találd meg kérdésed legmélyebb gyökerét",
+      "prompt": "Szeretném elvégezni a 7 miért gyakorlatot. Itt van a témám:"
+    },
+    "anger": {
+      "title": "Harag és düh",
+      "desc": "Ha felrobbanhatnál a dühtől",
+      "prompt": "Nagyon dühös vagyok, és nem tudom, mit kezdjek a haragommal. Mit mond a Biblia a haragról és annak kezeléséről?"
+    },
+    "shame": {
+      "title": "Szégyen és bűntudat",
+      "desc": "Ha a bűntudat elnyom",
+      "prompt": "Nagyon szégyellem magam, és bűnösnek érzem magam. Mit mond a Biblia a bűnről, a megbocsátásról és az újrakezdésről?"
+    },
+    "burnout": {
+      "title": "Kiégés",
+      "desc": "Ha egyszerűen nem bírod tovább",
+      "prompt": "Teljesen kimerültem és kiégtem. Egyszerűen nem bírom tovább. Mit mond a Biblia a pihenésről és a felépülésről?"
+    },
+    "illness": {
+      "title": "Betegség",
+      "desc": "Ha egy diagnózis mindent megváltoztat",
+      "prompt": "Nehéz diagnózist kaptam, és félek. Mit mond a Biblia a betegségről, a gyógyulásról és a reményről?"
+    },
+    "financial": {
+      "title": "Pénzügyi gondok",
+      "desc": "Ha a számlák nyomnak",
+      "prompt": "Pénzügyi gondjaim vannak, és nem tudom, mit tegyek. Mit mond a Biblia a pénzről, a bizalomról és a gondviselésről?"
+    },
+    "meaningcrisis": {
+      "title": "Értelemválság",
+      "desc": "Miért is van ez az egész?",
+      "prompt": "Azon gondolkodom, miért is van ez az egész. Értelemválságban vagyok. Mit mond a Biblia az élet értelméről?"
+    },
+    "selfdoubt": {
+      "title": "Önbizalomhiány",
+      "desc": "Ha nem érzed magad elég jónak",
+      "prompt": "Állandóan kételkedem magamban, és nem érzem magam elég jónak. Mit mond a Biblia az értékemről?"
+    },
+    "calling": {
+      "title": "Hivatás",
+      "desc": "Mit kezdjek az életemmel?",
+      "prompt": "Nem tudom, mit kezdjek az életemmel. Segítsen megtalálni a hivatásomat – mit mond erről a Biblia?"
+    },
+    "faithdoubt": {
+      "title": "Hitbeli kétségek",
+      "desc": "Ha a hit meginog",
+      "prompt": "Kétségeim vannak a hitemmel kapcsolatban, és nem tudom, tudok-e még hinni. Mit mond a Biblia a kétségekről?"
+    },
+    "forgiveness": {
+      "title": "Megbocsátás",
+      "desc": "Ha a megbocsátás lehetetlennek tűnik",
+      "prompt": "Egyszerűen nem tudok megbocsátani valakinek. Túl fájdalmas. Mit mond a Biblia a megbocsátásról?"
+    },
+    "familyconflict": {
+      "title": "Családi vita",
+      "desc": "Ha a családban feszültség van",
+      "prompt": "Nagy vita van a családomban. Mit mond a Biblia a családi békéről és a megbékélésről?"
+    },
+    "envy": {
+      "title": "Irigység",
+      "desc": "Ha másoknak jobban megy",
+      "prompt": "Irigykedem másokra, és állandóan összehasonlítom magam. Mit mond a Biblia az irigységről és az elégedettségről?"
+    },
+    "joy": {
+      "title": "Öröm megosztása",
+      "desc": "Ha valami csodálatos történt",
+      "prompt": "Valami csodálatos történt velem, és szeretném megosztani az örömömet! Mit mond a Biblia az örömről és a háláról?"
+    },
+    "prayer": {
+      "title": "Imakérés",
+      "desc": "Együtt imádkozni",
+      "prompt": "Van egy imakérésem, és szeretnék együtt imádkozni. Kísérjen el az imában."
+    },
+    "bibleverse": {
+      "title": "Vers megértése",
+      "desc": "Egy bibliai vers magyarázata",
+      "prompt": "Szeretnék jobban megérteni egy bibliai verset. Tudna segíteni nekem kontextusba helyezni?"
+    }
+  },
+  "lifeWheel": {
+    "title": "Életkereke",
+    "intro": "Értékeljen 8 életterületet egy 1-10-es skálán. Tudja meg, hol áll – és kapjon bibliai impulzusokat arra a területre, amely figyelmet igényel.",
+    "start": "Kezdje most",
+    "sliderHint": "Mozgassa a csúszkákat — 1 = nagyon elégedetlen, 10 = nagyon elégedett",
+    "showResult": "Eredmény megjelenítése",
+    "average": "Átlag",
+    "weakestArea": "Legnagyobb szükség",
+    "getImpulse": "Bibliai impulzus a(z) {{area}} területre",
+    "reset": "Újra csinálni",
+    "prompt": "Életkerekem azt mutatja, hogy a(z) „{{area}}” területen csak {{score}}/10 pontom van. Mit mond a Biblia erről az életterületről? Adjon bátorítást és gyakorlati impulzusokat.",
+    "areas": {
+      "health": "Egészség",
+      "relationships": "Kapcsolatok",
+      "career": "Karrier",
+      "spirituality": "Spiritualitás",
+      "finances": "Pénzügyek",
+      "family": "Család",
+      "leisure": "Szabadidő",
+      "growth": "Személyes fejlődés"
+    },
+    "save": "Eredmény mentése",
+    "saved": "Mentve!",
+    "history": "Korábbi eredmények",
+    "noHistory": "Még nincsenek mentett eredmények.",
+    "backToNew": "Új életkerék",
+    "backToList": "Vissza a listához"
+  },
+  "church": {
+    "badge": "Gyülekezeteknek",
+    "heroTitle": "BibleBot az Ön gyülekezete számára",
+    "heroSubtitle": "Kísérje el gyülekezeti tagjait bibliai bölcsességgel – digitálisan, személyesen és éjjel-nappal.",
+    "useCasesTitle": "Felhasználási lehetőségek",
+    "useCase": {
+      "youth": {
+        "title": "Ifjúsági munka",
+        "desc": "A tinédzserek saját módjukon fedezik fel a Bibliát – interaktívan és gátlások nélkül."
+      },
+      "confirmation": {
+        "title": "Konfirmáció",
+        "desc": "A konfirmandusok önállóan mélyítik el bibliai tudásukat személyes kísérettel."
+      },
+      "pastoral": {
+        "title": "Lelkipásztori gondozás",
+        "desc": "24/7 kíséret a személyes lelkipásztori gondozás kiegészítéseként."
+      },
+      "bibleStudy": {
+        "title": "Bibliai kör",
+        "desc": "Impulzusok és vitaindítók csoportok és házi körök számára."
+      }
+    },
+    "pricingTitle": "Patronátus csomagok",
+    "pricingSubtitle": "Támogassa a BibleBotot és gyülekezetét a megfelelő patronátus csomaggal.",
+    "popular": "Népszerű",
+    "free": "Ingyenes",
+    "perYear": "Év",
+    "contact": "Kapcsolatfelvétel",
+    "tier": {
+      "free": {
+        "name": "Mustármag",
+        "size": "Kis gyülekezeteknek és házi köröknek (legfeljebb 50 tag)"
+      },
+      "community": {
+        "name": "Útitárs",
+        "size": "50–200 tagú gyülekezeteknek"
+      },
+      "gemeinde": {
+        "name": "Hídépítő",
+        "size": "200–500 tagú gyülekezeteknek"
+      },
+      "kirche": {
+        "name": "Világítótorony",
+        "size": "Nagy gyülekezeteknek és intézményeknek (500+ tag)"
+      }
+    },
+    "features": {
+      "directoryEntry": "Címtárbejegyzés",
+      "telegramGroup": "Telegram csoport",
+      "partnerPage": "Saját partneroldal",
+      "badge": "Partnerjelvény",
+      "qrFlyer": "Nyomtatható QR-szórólap",
+      "contactForm": "Kapcsolatfelvételi űrlap",
+      "pastorProfile": "Lelkész/Pásztor profil",
+      "welcomeVideo": "Üdvözlő videó",
+      "analytics": "Analitikai irányítópult",
+      "prioritySupport": "Prioritásos támogatás",
+      "multipleProfiles": "Több profil",
+      "customBranding": "Egyedi márkaépítés",
+      "apiAccess": "API hozzáférés",
+      "accountManager": "Személyes kapcsolattartó"
+    },
+    "viewDirectory": "Gyülekezeti címtár megtekintése",
+    "directoryBadge": "Gyülekezeti címtár",
+    "directoryTitle": "Partnergyülekezetek",
+    "directorySubtitle": "Keressen egy gyülekezetet a közelében, amely ajánlja a BibleBotot.",
+    "searchPlaceholder": "Hely, név vagy felekezet keresése...",
+    "noResults": "Még nincsenek gyülekezetek a címtárban.",
+    "becomePartner": "Legyen partner →",
+    "notFound": "Gyülekezet nem található.",
+    "backToDirectory": "Vissza a címtárhoz",
+    "pastor": "Lelkész/Pásztor",
+    "serviceTimes": "Istentiszteleti idők",
+    "startChat": "Chat indítása",
+    "website": "Weboldal",
+    "telegramGroup": "Telegram csoport",
+    "contactTitle": "Kapcsolatfelvétel {{name}}",
+    "contactName": "Az Ön neve (opcionális)",
+    "contactEmail": "Az Ön e-mail címe",
+    "contactMessage": "Az Ön üzenete",
+    "contactSend": "Üzenet küldése",
+    "contactSuccess": "Üzenet elküldve! 🙏",
+    "contactSuccessDesc": "A gyülekezet felveszi Önnel a kapcsolatot.",
+    "recommendedBy": "Ajánlja: {{name}}",
+    "setup": "Beállítás (egyszeri)",
+    "form": {
+      "title": "Érdekli? Írjon nekünk!",
+      "subtitle": "48 órán belül felvesszük Önnel a kapcsolatot.",
+      "name": "Az Ön neve",
+      "email": "E-mail cím",
+      "churchName": "Gyülekezet neve",
+      "tier": "Kívánt csomag",
+      "tierPlaceholder": "Csomag kiválasztása...",
+      "message": "Az Ön üzenete",
+      "submit": "Kérés küldése",
+      "success": "Kérés elküldve! Hamarosan felvesszük Önnel a kapcsolatot. 🙏",
+      "error": "Hiba történt a küldés során. Kérjük, próbálja újra.",
+      "orgType": "Szervezet típusa",
+      "orgTypePlaceholder": "Típus kiválasztása...",
+      "orgTypes": {
+        "church": "Gyülekezet",
+        "careHome": "Idősek otthona",
+        "seniorHome": "Idősek otthona",
+        "hospital": "Kórház",
+        "prison": "Börtönlelkészi szolgálat",
+        "military": "Katonai lelkészi szolgálat"
+      }
+    },
+    "institutionsTitle": "Intézményeknek is",
+    "institutionsSubtitle": "A BibleBot nemcsak gyülekezeteket kísér – az idősek otthonai, kórházak és a börtönlelkészi szolgálat is profitál a digitális lelkipásztori gondozásból.",
+    "institution": {
+      "careHome": {
+        "title": "Idősek otthonai",
+        "desc": "Napi bibliai impulzusok és kíséret a lakók számára – akkor is, ha nincs lelkész a helyszínen."
+      },
+      "seniorHome": {
+        "title": "Idősek otthonai",
+        "desc": "Ismert bibliai versek és beszélgetések az idősek számára – könnyen hozzáférhető tableten vagy okostelefonon keresztül."
+      },
+      "hospital": {
+        "title": "Kórházak",
+        "desc": "Vigasz és lelki kíséret a betegeknek nehéz időkben – 24/7 elérhető az ágy mellett."
+      },
+      "prison": {
+        "title": "Börtönlelkészi szolgálat",
+        "desc": "Remény és lelki kíséret a fogvatartottaknak – egy bizalmas beszélgetőpartner éjjel-nappal."
+      },
+      "military": {
+        "title": "Katonai lelkészi szolgálat",
+        "desc": "Lelki kíséret a hadsereg tagjainak – a bevetésen vagy a laktanyában is elérhető."
+      }
+    }
+  },
+  "institutions": {
+    "badge": "Intézményeknek",
+    "heroTitle": "BibleBot az Ön intézménye számára",
+    "heroSubtitle": "Digitális lelkipásztori gondozás idősek otthonai, kórházak és büntetés-végrehajtási intézetek számára – személyesen, bizalmasan és éjjel-nappal.",
+    "seniorHint": {
+      "title": "Szenior mód elérhető",
+      "desc": "Nagyobb betűméret és egyszerűsített kezelés – ideális idősebb lakók számára.",
+      "cta": "Szenior mód tesztelése"
+    },
+    "typesTitle": "Kinek szól a BibleBot?",
+    "useCasesTitle": "Hogyan használják a BibleBotot?",
+    "useCasesSubtitle": "Konkrét alkalmazások az intézmény mindennapjaiban.",
+    "pricingTitle": "Patronátus csomagok",
+    "pricingSubtitle": "Ugyanazok a csomagok, mint a gyülekezetek számára – az intézményi igényekhez igazítva.",
+    "linkChurches": "Gyülekezetek számára is elérhető",
+    "type": {
+      "careHome": {
+        "title": "Idősek otthonai",
+        "desc": "Napi bibliai impulzusok és kíséret a lakók számára – akkor is, ha nincs lelkész a helyszínen."
+      },
+      "seniorHome": {
+        "title": "Idősek otthonai",
+        "desc": "Ismert bibliai versek és beszélgetések az idősek számára – könnyen hozzáférhető tableten vagy okostelefonon keresztül."
+      },
+      "hospital": {
+        "title": "Kórházak",
+        "desc": "Vigasz és lelki kíséret a betegeknek nehéz időkben – 24/7 elérhető az ágy mellett."
+      },
+      "prison": {
+        "title": "Börtönlelkészi szolgálat",
+        "desc": "Remény és lelki kíséret a fogvatartottaknak – egy bizalmas beszélgetőpartner éjjel-nappal."
+      },
+      "military": {
+        "title": "Katonai lelkészi szolgálat",
+        "desc": "Lelki kíséret a hadsereg tagjainak – a bevetésen vagy a laktanyában is elérhető."
+      }
+    },
+    "useCase": {
+      "dailyImpulse": {
+        "title": "Napi impulzus",
+        "desc": "Minden reggel egy bibliai vers reflexiós kérdéssel – csökkenti a spirituális beszélgetések küszöbét."
+      },
+      "companionship": {
+        "title": "Beszélgetőpartner",
+        "desc": "A BibleBot türelmesen és időnyomás nélkül válaszol a hitbeli kérdésekre – ideális magányos órákban."
+      },
+      "accessibility": {
+        "title": "Könnyű hozzáférés",
+        "desc": "Nagy betűméret, egyszerű kezelés tableten keresztül – mozgáskorlátozottak számára is."
+      },
+      "availability": {
+        "title": "24/7 elérhető",
+        "desc": "Lelki kíséret éjszaka és hétvégén is – amikor nincs elérhető lelkész."
+      }
+    },
+    "tierDesc": {
+      "free": "Alap hozzáférés a lakók és betegek számára",
+      "community": "Megemlítés támogatóként, reklámmentes hozzáférés",
+      "gemeinde": "Logó megjelenítése, havi használati jelentés",
+      "kirche": "Saját tartalom, útiterv-alakítás, prémium támogatás"
+    },
+    "form": {
+      "title": "Érdekli? Vegye fel velünk a kapcsolatot!",
+      "subtitle": "48 órán belül felvesszük Önnel a kapcsolatot.",
+      "name": "Az Ön neve",
+      "email": "E-mail cím",
+      "institutionName": "Intézmény neve",
+      "type": "Intézmény típusa",
+      "typePlaceholder": "Kérjük, válasszon...",
+      "tier": "Kívánt csomag",
+      "tierPlaceholder": "Csomag kiválasztása...",
+      "message": "Az Ön üzenete",
+      "submit": "Kérés küldése",
+      "success": "Kérés elküldve! Hamarosan felvesszük Önnel a kapcsolatot. 🙏",
+      "error": "Hiba történt a küldés során. Kérjük, próbálja újra."
+    }
   },
   "lang": {
     "de": "Deutsch",
@@ -329,427 +751,5 @@
     "ig": "Igbo",
     "zu": "isiZulu",
     "ht": "Kreyòl"
-  },
-  "tiles": {
-    "sectionTitle": "What's on your heart?",
-    "sectionSubtitle": "Choose a topic — BibleBot walks with you",
-    "baptism": {
-      "title": "Find a baptism verse",
-      "desc": "The perfect verse for your child",
-      "prompt": "Help me find a fitting baptism verse. What kind of child is it and what do the parents wish for?"
-    },
-    "condolence": {
-      "title": "Words of comfort",
-      "desc": "Support through grief & farewell",
-      "prompt": "I need comforting words for a condolence card. Can you help me find the right words?"
-    },
-    "wedding": {
-      "title": "Wedding verse",
-      "desc": "Biblical words for your love",
-      "prompt": "We're looking for a beautiful biblical verse for our wedding. Which passages speak about love and partnership?"
-    },
-    "anxiety": {
-      "title": "Fear & worry",
-      "desc": "Finding courage in hard times",
-      "prompt": "I'm struggling with fear and worry right now. What does the Bible say about this? Are there verses that give courage?"
-    },
-    "confession": {
-      "title": "Confession",
-      "desc": "God forgives — speak it out",
-      "prompt": "I want to let go of something that weighs on me. What does the Bible say about forgiveness and new beginnings?"
-    },
-    "heartbreak": {
-      "title": "Heartbreak",
-      "desc": "What the Bible says about heartache",
-      "prompt": "My heart is broken. What does the Bible say about heartbreak and how to find hope again?"
-    },
-    "newstart": {
-      "title": "New beginning",
-      "desc": "Strength for a new chapter",
-      "prompt": "I'm facing a new beginning and need encouragement. Which Bible passages speak about fresh starts?"
-    },
-    "namequiz": {
-      "title": "Name quiz",
-      "desc": "Find the right biblical name",
-      "prompt": "I'm looking for a biblical name for my child. Can you suggest some and explain their meanings?"
-    },
-    "sleepless": {
-      "title": "Sleepless",
-      "desc": "Finding peace at night",
-      "prompt": "I can't sleep and my mind is racing. Is there a calming prayer or psalm for the night?"
-    },
-    "loneliness": {
-      "title": "Loneliness",
-      "desc": "You are never alone",
-      "prompt": "I feel lonely. What does the Bible say about God always being with us?"
-    },
-    "decision": {
-      "title": "Tough decision",
-      "desc": "Wisdom for the right path",
-      "prompt": "I'm facing a difficult decision. Which Bible passages can help me find the right way?"
-    },
-    "gratitude": {
-      "title": "Gratitude",
-      "desc": "A personal prayer of thanks",
-      "prompt": "I want to thank God. Help me write a personal prayer of gratitude."
-    },
-    "lifewheel": {
-      "title": "Life Wheel",
-      "desc": "How satisfied are you really?"
-    },
-    "sevenwhys": {
-      "title": "7 Whys",
-      "desc": "Find the deepest root of your question",
-      "prompt": "I'd like to do the 7 Whys exercise. Here is my topic:"
-    },
-    "anger": {
-      "title": "Anger",
-      "desc": "When you're about to explode",
-      "prompt": "I'm so angry and don't know what to do with my rage. What does the Bible say about anger and how to deal with it?"
-    },
-    "shame": {
-      "title": "Shame & Guilt",
-      "desc": "When guilt is crushing you",
-      "prompt": "I feel so ashamed and guilty. What does the Bible say about guilt, forgiveness, and starting over?"
-    },
-    "burnout": {
-      "title": "Burnout",
-      "desc": "When you just can't go on",
-      "prompt": "I'm totally exhausted and burned out. I just can't anymore. What does the Bible say about rest and recovery?"
-    },
-    "illness": {
-      "title": "Illness",
-      "desc": "When a diagnosis changes everything",
-      "prompt": "I've received a difficult diagnosis and I'm scared. What does the Bible say about illness, healing, and hope?"
-    },
-    "financial": {
-      "title": "Money Worries",
-      "desc": "When bills are piling up",
-      "prompt": "I have financial worries and don't know what to do. What does the Bible say about money, trust, and provision?"
-    },
-    "meaningcrisis": {
-      "title": "Meaning Crisis",
-      "desc": "What's it all for?",
-      "prompt": "I'm wondering what's the point of it all. I'm in a meaning crisis. What does the Bible say about the meaning of life?"
-    },
-    "selfdoubt": {
-      "title": "Self-Doubt",
-      "desc": "When you don't feel good enough",
-      "prompt": "I constantly doubt myself and don't feel good enough. What does the Bible say about my worth?"
-    },
-    "calling": {
-      "title": "Calling",
-      "desc": "What should I do with my life?",
-      "prompt": "I don't know what to do with my life. Help me find my calling — what does the Bible say?"
-    },
-    "faithdoubt": {
-      "title": "Faith Doubts",
-      "desc": "When your faith is shaking",
-      "prompt": "I have doubts about my faith and don't know if I can still believe. What does the Bible say about doubt?"
-    },
-    "forgiveness": {
-      "title": "Forgiveness",
-      "desc": "When forgiving seems impossible",
-      "prompt": "I simply can't forgive someone. It hurts too much. What does the Bible say about forgiveness?"
-    },
-    "familyconflict": {
-      "title": "Family Conflict",
-      "desc": "When family is at war",
-      "prompt": "There's a big conflict in my family. What does the Bible say about family peace and reconciliation?"
-    },
-    "envy": {
-      "title": "Envy",
-      "desc": "When others have it better",
-      "prompt": "I'm envious of others and constantly comparing myself. What does the Bible say about envy and contentment?"
-    },
-    "joy": {
-      "title": "Share Joy",
-      "desc": "When something wonderful happened",
-      "prompt": "Something wonderful happened to me and I want to share my joy! What does the Bible say about joy and gratitude?"
-    },
-    "prayer": {
-      "title": "Prayer Request",
-      "desc": "Pray together",
-      "prompt": "I have a prayer request and would like to pray together. Join me in prayer."
-    },
-    "bibleverse": {
-      "title": "Understand a Verse",
-      "desc": "Get a Bible passage explained",
-      "prompt": "I'd like to understand a Bible passage better. Can you help me put it in context?"
-    }
-  },
-  "lifeWheel": {
-    "title": "Your Life Wheel",
-    "intro": "Rate 8 life areas on a scale of 1-10. Discover where you stand — and receive biblical impulses for the area that needs attention.",
-    "start": "Get started",
-    "sliderHint": "Move the sliders — 1 = very unsatisfied, 10 = very satisfied",
-    "showResult": "Show result",
-    "average": "Average",
-    "weakestArea": "Greatest need",
-    "getImpulse": "Biblical impulse for {{area}}",
-    "reset": "Try again",
-    "prompt": "My life wheel shows that I scored only {{score}}/10 in the area of '{{area}}'. What does the Bible say about this area of life? Give me encouragement and practical impulses.",
-    "areas": {
-      "health": "Health",
-      "relationships": "Relationships",
-      "career": "Career",
-      "spirituality": "Spirituality",
-      "finances": "Finances",
-      "family": "Family",
-      "leisure": "Leisure",
-      "growth": "Personal Growth"
-    },
-    "save": "Save result",
-    "saved": "Saved!",
-    "history": "Previous results",
-    "noHistory": "No saved results yet.",
-    "backToNew": "New Life Wheel",
-    "backToList": "Back to list"
-  },
-  "church": {
-    "badge": "Gyülekezeteknek",
-    "heroTitle": "BibleBot a gyülekezetednek",
-    "heroSubtitle": "Kísérje gyülekezetét bibliai bölcsességgel – digitálisan, személyesen és éjjel-nappal.",
-    "useCasesTitle": "Felhasználási módok",
-    "useCase": {
-      "youth": {
-        "title": "Ifjúsági munka",
-        "desc": "A fiatalok a maguk módján fedezik fel a Bibliát – interaktívan és gátlások nélkül."
-      },
-      "confirmation": {
-        "title": "Konfirmáció",
-        "desc": "A konfirmandusok önállóan mélyítik el biblia-tudásukat személyes vezetéssel."
-      },
-      "pastoral": {
-        "title": "Lelkigondozás",
-        "desc": "24/7 kísérés a személyes lelkigondozás kiegészítéseként."
-      },
-      "bibleStudy": {
-        "title": "Biblia-tanulmány",
-        "desc": "Impulzusok és beszélgetés-indítók csoportok és házi körök számára."
-      }
-    },
-    "pricingTitle": "Patronátusi csomagok",
-    "pricingSubtitle": "Támogassa a BibleBot-ot és gyülekezetét a megfelelő patronátusi csomaggal.",
-    "popular": "Népszerű",
-    "free": "Ingyenes",
-    "perYear": "Év",
-    "contact": "Kapcsolatfelvétel",
-    "tier": {
-      "free": {
-        "name": "Mustármag",
-        "size": "Alapszintű bot-hozzáférés a gyülekezet minden tagja számára."
-      },
-      "community": {
-        "name": "Útitárs",
-        "size": "A gyülekezet megemlítése támogatóként a weboldalon & reklámmentes hozzáférés."
-      },
-      "gemeinde": {
-        "name": "Hídépítő",
-        "size": "Logó a bot felületén, havi használati jelentés (anonimizált)."
-      },
-      "kirche": {
-        "name": "Világítótorony",
-        "size": "Saját tartalom integrálása (pl. prédikációarchívum), a roadmap közös alakítása, prémium támogatás."
-      }
-    },
-    "features": {
-      "directoryEntry": "Jegyzékbeli bejegyzés",
-      "telegramGroup": "Telegram-csoport",
-      "partnerPage": "Saját partneroldal",
-      "badge": "Partnerjelvény",
-      "qrFlyer": "Nyomtatható QR-szórólap",
-      "contactForm": "Kapcsolatfelvételi űrlap",
-      "pastorProfile": "Lelkészprofil",
-      "welcomeVideo": "Üdvözlő videó",
-      "analytics": "Analitikai panel",
-      "prioritySupport": "Kiemelt támogatás",
-      "multipleProfiles": "Több profil",
-      "customBranding": "Egyedi arculat",
-      "apiAccess": "API-hozzáférés",
-      "accountManager": "Személyes kapcsolattartó"
-    },
-    "viewDirectory": "Gyülekezeti jegyzék",
-    "directoryBadge": "Gyülekezeti Jegyzék",
-    "directoryTitle": "Partnergyülekezetek",
-    "directorySubtitle": "Találjon gyülekezetet a közelében, amely ajánlja a BibleBotot.",
-    "searchPlaceholder": "Keresés hely, név vagy felekezet szerint...",
-    "noResults": "Még nincsenek gyülekezetek a jegyzékben.",
-    "becomePartner": "Legyen partner →",
-    "notFound": "Gyülekezet nem található.",
-    "backToDirectory": "Vissza a jegyzékbe",
-    "pastor": "Lelkész",
-    "serviceTimes": "Istentiszteletek",
-    "startChat": "Csevegés indítása",
-    "website": "Weboldal",
-    "telegramGroup": "Telegram-csoport",
-    "contactTitle": "Kapcsolat: {{name}}",
-    "contactName": "Neve (nem kötelező)",
-    "contactEmail": "E-mail címe",
-    "contactMessage": "Üzenete",
-    "contactSend": "Üzenet küldése",
-    "contactSuccess": "Üzenet elküldve! 🙏",
-    "contactSuccessDesc": "A gyülekezet felveszi Önnel a kapcsolatot.",
-    "recommendedBy": "Ajánlotta: {{name}}",
-    "setup": "Beüzemelés (egyszeri)",
-    "form": {
-      "title": "Érdekli? Vegye fel velünk a kapcsolatot!",
-      "subtitle": "48 órán belül válaszolunk.",
-      "name": "Az Ön neve",
-      "email": "E-mail cím",
-      "churchName": "Gyülekezet neve",
-      "tier": "Kívánt csomag",
-      "tierPlaceholder": "Válasszon csomagot...",
-      "message": "Üzenete",
-      "submit": "Érdeklődés küldése",
-      "success": "Érdeklődés elküldve! Hamarosan jelentkezünk. 🙏",
-      "error": "Hiba a küldésnél. Próbálja újra.",
-      "orgType": "Organization type",
-      "orgTypePlaceholder": "Select type...",
-      "orgTypes": {
-        "church": "Church",
-        "careHome": "Care Home",
-        "seniorHome": "Retirement Home",
-        "hospital": "Hospital",
-        "prison": "Prison Chaplaincy",
-        "military": "Military Chaplaincy"
-      }
-    },
-    "institutionsTitle": "Also for Institutions",
-    "institutionsSubtitle": "BibleBot supports not only churches – care homes, retirement homes, and hospitals also benefit from digital pastoral care.",
-    "institution": {
-      "careHome": {
-        "title": "Care Homes",
-        "desc": "Daily Bible impulses and companionship for residents – even when no chaplain is on site."
-      },
-      "seniorHome": {
-        "title": "Retirement Homes",
-        "desc": "Familiar Bible verses and conversations for seniors – easily accessible via tablet or smartphone."
-      },
-      "hospital": {
-        "title": "Hospitals",
-        "desc": "Comfort and spiritual support for patients in difficult times – available 24/7 at the bedside."
-      },
-      "prison": {
-        "title": "Prison Chaplaincy",
-        "desc": "Hope and spiritual support for inmates – a confidential companion around the clock."
-      },
-      "military": {
-        "title": "Military Chaplaincy",
-        "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
-      }
-    }
-  },
-  "institutions": {
-    "badge": "For Institutions",
-    "heroTitle": "BibleBot for Your Institution",
-    "heroSubtitle": "Digital pastoral care for care homes, retirement homes, hospitals, and correctional facilities – personal, confidential, and around the clock.",
-    "typesTitle": "Who is BibleBot for?",
-    "useCasesTitle": "How BibleBot is Used",
-    "useCasesSubtitle": "Practical applications for daily life in your institution.",
-    "pricingTitle": "Patronage Packages",
-    "pricingSubtitle": "The same packages as for churches – adapted to institutional needs.",
-    "linkChurches": "Also available for churches",
-    "type": {
-      "careHome": {
-        "title": "Care Homes",
-        "desc": "Daily Bible impulses and companionship for residents – even when no chaplain is on site."
-      },
-      "seniorHome": {
-        "title": "Retirement Homes",
-        "desc": "Familiar Bible verses and conversations for seniors – easily accessible via tablet or smartphone."
-      },
-      "hospital": {
-        "title": "Hospitals",
-        "desc": "Comfort and spiritual support for patients in difficult times – available 24/7 at the bedside."
-      },
-      "prison": {
-        "title": "Prison Chaplaincy",
-        "desc": "Hope and spiritual support for inmates – a confidential companion around the clock."
-      },
-      "military": {
-        "title": "Military Chaplaincy",
-        "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
-      }
-    },
-    "useCase": {
-      "dailyImpulse": {
-        "title": "Daily Impulse",
-        "desc": "A Bible verse with reflection question every morning – lowers the barrier for spiritual conversations."
-      },
-      "companionship": {
-        "title": "Conversation Partner",
-        "desc": "BibleBot answers faith questions patiently and without time pressure – ideal for lonely hours."
-      },
-      "accessibility": {
-        "title": "Easy Access",
-        "desc": "Large text, simple tablet interface – also for people with limited mobility."
-      },
-      "availability": {
-        "title": "24/7 Available",
-        "desc": "Spiritual companionship at night and on weekends – when no chaplain is available."
-      }
-    },
-    "tierDesc": {
-      "free": "Basic access for residents and patients",
-      "community": "Mentioned as supporter, ad-free access",
-      "gemeinde": "Logo presence, monthly usage report",
-      "kirche": "Custom content, roadmap co-creation, premium support"
-    },
-    "form": {
-      "title": "Interested? Get in touch!",
-      "subtitle": "We'll get back to you within 48 hours.",
-      "name": "Your name",
-      "email": "Email address",
-      "institutionName": "Institution name",
-      "type": "Type of institution",
-      "typePlaceholder": "Please select...",
-      "tier": "Preferred package",
-      "tierPlaceholder": "Choose package...",
-      "message": "Your message",
-      "submit": "Send inquiry",
-      "success": "Inquiry sent! We'll be in touch soon. 🙏",
-      "error": "Error sending. Please try again."
-    },
-    "seniorHint": {
-      "title": "Idősek módja elérhető",
-      "desc": "Nagyobb szöveg és egyszerűsített navigáció – ideális idős lakók számára.",
-      "cta": "Próbálja ki az idősek módját"
-    }
-  },
-  "refer": {
-    "badge": "Share God's Word",
-    "title": "Recommend BibleBot",
-    "subtitle": "Know someone who could use encouragement? Share BibleBot – one message can make a difference.",
-    "whatsapp": "Share via WhatsApp",
-    "whatsappMsg": "Hey, I wanted to show you BibleBot – a free Bible companion that really knows the Bible and asks great questions. No login, anonymous, honest. Try it out: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
-    "telegram": "Share via Telegram",
-    "telegramMsg": "Hey, do you know BibleBot? A free personal Bible companion – honest, anonymous, no login needed. Check it out: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
-    "email": "Share via email",
-    "emailSubject": "This might interest you: BibleBot.Life",
-    "emailBody": "Hi!\n\nI wanted to show you BibleBot – a free Bible companion that really knows the Bible. No sign-up needed, completely anonymous.\n\nIt asks thoughtful questions, explains Bible passages in context and accompanies you honestly – even on difficult topics.\n\nTry it out: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nBest wishes",
-    "copy": "Copy link",
-    "copied": "Link copied! 📋",
-    "qr": "Or just show this QR code:"
-  },
-  "share": {
-    "label": "Share",
-    "shareVia": "Share via",
-    "copied": "Copied! 📋",
-    "copiedShort": "Copied!",
-    "copiedDesc": "Text copied to clipboard. Share it on WhatsApp, Instagram or wherever you like!",
-    "copyLink": "Copy text",
-    "error": "Copy failed",
-    "impulseTitle": "BibleBot – Impulse of the Day",
-    "chatTitle": "BibleBot – Thought of the Day",
-    "createImage": "Create image ✨",
-    "generating": "Creating…",
-    "imageReady": "Your image is ready to share!",
-    "shareImage": "Share image",
-    "download": "Save",
-    "imageError": "Image creation failed",
-    "imageErrorDesc": "The image could not be created. Please try again later.",
-    "imageSaved": "Text copied! 📋",
-    "imageSavedDesc": "Save the image and share it with the copied text on Instagram, WhatsApp or wherever you like!"
   }
 }

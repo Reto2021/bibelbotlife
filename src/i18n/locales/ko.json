@@ -1,8 +1,8 @@
 {
   "nav": {
-    "startNow": "시작하기"
+    "startNow": "지금 시작하기"
   },
-  "loader": "로딩 중…",
+  "loader": "로드 중…",
   "hero": {
     "badge": {
       "noLogin": "로그인 없음",
@@ -11,286 +11,708 @@
     },
     "title1": "성경.",
     "title2": " 새롭게 생각하다.",
-    "subtitle": "BibleBot은 성경을 알고 있으며 올바른 질문을 합니다. 사람은 아니지만 정직한 동반자입니다. 의미 있는 대화, 깊은 질문, 진정한 영감을 위해.",
-    "ctaTelegram": "텔레그램으로 시작",
-    "ctaMore": "자세히 보기",
-    "quote": "\"Come to me, all you who are weary and burdened, and I will give you rest.\"",
-    "quoteRef": "– Matthew 11:28"
+    "subtitle": "당신의 BibleBot은 성경을 알고 올바른 질문을 합니다. 사람이 아닌 정직한 동반자입니다. 좋은 대화, 깊은 질문, 진정한 영감을 위해.",
+    "ctaTelegram": "Telegram으로 시작하기",
+    "ctaMore": "더 알아보기",
+    "quote": "«수고하고 무거운 짐 진 자들아 다 내게로 오라 내가 너희를 쉬게 하리라.»",
+    "quoteRef": "– 마태복음 11,28"
   },
   "impulse": {
-    "loading": "Loading daily impulse...",
-    "label": "Impulse of the Day",
-    "deepDive": "What does this mean for me?",
-    "explore": "Read full passage"
+    "loading": "오늘의 영감을 로드 중...",
+    "label": "오늘의 영감",
+    "deepDive": "이것이 나에게 무엇을 의미합니까?",
+    "explore": "전체 구절 읽기"
   },
   "features": {
-    "sectionTitle": "How BibleBot accompanies you",
-    "sectionSubtitle": "Discover the many ways BibleBot can walk alongside you",
+    "sectionTitle": "BibleBot이 당신을 돕는 방법",
+    "sectionSubtitle": "BibleBot이 당신을 도울 수 있는 다양한 방법을 알아보세요",
     "bible": {
-      "title": "Bible passages & interpretation",
-      "desc": "Ask \"What does the Bible say about...?\" and receive relevant verses with context and clear explanation."
+      "title": "성경 구절 및 해석",
+      "desc": "«성경은 ...에 대해 무엇이라고 말합니까?»라고 질문하고, 문맥과 이해하기 쉬운 설명이 포함된 적절한 구절을 받으세요."
     },
     "goals": {
-      "title": "Life planning & goals",
-      "desc": "Discover your calling, set concrete goals, and find out what God might have in store for you."
+      "title": "인생 계획 및 목표 설정",
+      "desc": "당신의 소명을 발견하고, 구체적인 목표를 설정하고, 하나님이 당신에게 무엇을 원하시는지 알아보세요."
     },
     "self": {
-      "title": "Finding yourself",
-      "desc": "Recognize your gifts, strengths, and longings – and what your heart truly needs."
+      "title": "자신을 찾기",
+      "desc": "당신의 은사, 강점, 열망, 그리고 당신의 마음이 진정으로 필요로 하는 것을 깨달으세요."
     },
     "faith": {
-      "title": "Faith journey & finding Christ",
-      "desc": "Whether seeking, doubting, or deepening – BibleBot accompanies you on your personal path."
+      "title": "신앙의 길 & 그리스도를 찾기",
+      "desc": "찾고 있든, 의심하고 있든, 심화하고 있든 – 당신의 BibleBot은 당신의 개인적인 길을 동반합니다."
     },
     "daily": {
-      "title": "Daily impulses & church year",
-      "desc": "Start your day with impulses and let BibleBot guide you through Advent, Lent, and holidays."
+      "title": "매일의 영감 & 교회력",
+      "desc": "매일 영감으로 하루를 시작하고, 대림절, 사순절, 공휴일을 통해 안내를 받으세요."
     },
     "groups": {
-      "title": "Groups & communities",
-      "desc": "Perfect for Bible study groups, church communities, and shared devotions."
+      "title": "그룹 & 교회",
+      "desc": "성경 공부 모임, 교회 그룹, 공동 예배에 적합합니다."
     }
   },
   "coaching": {
-    "badge": "Methodology",
-    "title": "Not just a chatbot – genuine companionship",
-    "subtitle": "BibleBot combines biblical wisdom with proven coaching methods and Positive Psychology.",
-    "journeyTitle": "Personal companionship",
-    "journeyDesc": "BibleBot accompanies you as long as you wish – in free conversation or with an optional 21-day structure.",
-    "week1": "Week 1: Arriving",
-    "week1Desc": "Building trust, listening, understanding your situation. Where are you? What concerns you?",
-    "week2": "Week 2: Deepening",
-    "week2Desc": "Recognizing patterns, clarifying desires, deepening biblical impulses. What do you really want?",
-    "week3": "Week 3: Acting",
-    "week3Desc": "Taking concrete steps, setting goals, initiating change. What's your next step?",
-    "openQuestionsTitle": "Open questions instead of quick answers",
-    "openQuestionsDesc": "BibleBot doesn't give cheap advice. Instead, it asks the questions that truly matter:",
-    "openQ1": "\"What's really behind this desire?\"",
-    "openQ2": "\"How would you know something has changed?\"",
-    "openQ3": "\"What would be a first small step?\"",
-    "honestTitle": "Honest instead of toxic positivity",
-    "honestDesc": "No \"It'll be fine!\" and no sugarcoating. BibleBot is empathetic AND honest:",
-    "honest1": "Also addresses uncomfortable Bible passages",
-    "honest2": "Challenges you to self-reflection",
-    "honest3": "Distinguishes comfort from avoidance",
-    "scienceTitle": "Scientifically grounded",
+    "badge": "방법론",
+    "title": "단순한 챗봇이 아닌 진정한 동반자",
+    "subtitle": "당신의 BibleBot은 성경적 지혜와 검증된 코칭 방법, 긍정 심리학을 결합합니다.",
+    "journeyTitle": "개인적인 동반",
+    "journeyDesc": "당신의 BibleBot은 당신이 원하는 만큼 당신을 동반합니다 – 자유로운 대화 또는 선택적인 21일 구조로.",
+    "week1": "1주차: 적응하기",
+    "week1Desc": "신뢰를 쌓고, 경청하고, 당신의 상황을 이해합니다. 당신은 어디에 서 있습니까? 무엇이 당신을 괴롭힙니까?",
+    "week2": "2주차: 심화하기",
+    "week2Desc": "패턴을 인식하고, 소원을 명확히 하고, 성경적 영감을 심화합니다. 당신은 진정으로 무엇을 원합니까?",
+    "week3": "3주차: 행동하기",
+    "week3Desc": "구체적인 단계를 설정하고, 목표를 공식화하고, 변화를 시작합니다. 당신의 다음 단계는 무엇입니까?",
+    "openQuestionsTitle": "빠른 답변 대신 열린 질문",
+    "openQuestionsDesc": "당신의 BibleBot은 값싼 조언을 주지 않습니다. 대신, 진정으로 중요한 질문을 합니다:",
+    "openQ1": "«이 소원 뒤에는 무엇이 숨어 있습니까?»",
+    "openQ2": "«무엇이 변했다고 어떻게 알 수 있습니까?»",
+    "openQ3": "«첫 번째 작은 단계는 무엇일까요?»",
+    "honestTitle": "독성 긍정 대신 정직함",
+    "honestDesc": "«다 잘 될 거야!»나 미화는 없습니다. 당신의 BibleBot은 공감적이고 정직합니다:",
+    "honest1": "불편한 성경 구절도 언급합니다",
+    "honest2": "자기 성찰을 촉구합니다",
+    "honest3": "위로와 회피를 구별합니다",
+    "scienceTitle": "과학적 근거",
     "perma": {
-      "name": "PERMA Model",
-      "author": "Seligman",
-      "desc": "Positive emotions, meaning & growth"
+      "name": "PERMA 모델",
+      "author": "셀리그만",
+      "desc": "긍정적인 감정, 의미 & 성장"
     },
     "logo": {
-      "name": "Logotherapy",
-      "author": "Frankl",
-      "desc": "Finding meaning in difficult times"
+      "name": "로고테라피",
+      "author": "프랭클",
+      "desc": "어려운 시기에 의미 찾기"
     },
     "gratitude": {
-      "name": "Gratitude",
-      "author": "Emmons",
-      "desc": "Research-based gratitude practice"
+      "name": "감사",
+      "author": "에몬스",
+      "desc": "연구 기반 감사 실천"
     },
     "forgiveness": {
-      "name": "Forgiveness",
-      "author": "Worthington",
-      "desc": "REACH model for forgiveness processes"
+      "name": "용서",
+      "author": "워딩턴",
+      "desc": "용서 과정을 위한 REACH 모델"
     },
-    "renameTip": "💡 You can give your BibleBot a personal name – so it truly becomes <strong>your</strong> companion."
+    "renameTip": "💡 당신은 당신의 BibleBot에게 자신만의 이름을 줄 수 있습니다 – 진정으로 <strong>당신의</strong> 동반자가 되도록."
   },
   "discover": {
-    "badge": "For the curious",
-    "title": "Rediscover faith – without pressure",
-    "subtitle": "More and more people are asking the big questions anew. BibleBot.Life is for everyone who wants to (re)discover faith – honestly, without pathos, and without church jargon.",
+    "badge": "궁금한 사람들을 위해",
+    "title": "압력 없이 신앙을 새롭게 발견하기",
+    "subtitle": "점점 더 많은 사람들이 큰 질문을 새롭게 던지고 있습니다. BibleBot.Life는 신앙을 (다시) 발견하고 싶은 모든 사람들을 위한 것입니다 – 정직하게, 감상적이지 않게, 교회 용어 없이.",
     "doubt": {
-      "title": "You doubt?",
-      "text": "Good. Doubt isn't a flaw – it's the beginning of honest faith. The Bible is full of people who wrestled."
+      "title": "의심합니까?",
+      "text": "잘하셨습니다. 의심은 실수가 아닙니다 – 그것은 정직한 신앙의 시작입니다. 성경은 고뇌했던 사람들로 가득합니다."
     },
     "search": {
-      "title": "You're searching?",
-      "text": "Maybe you don't even know what for. That's perfectly fine. BibleBot helps you ask the right questions – instead of delivering quick answers."
+      "title": "찾고 있습니까?",
+      "text": "무엇을 찾고 있는지 정확히 모를 수도 있습니다. 괜찮습니다. 당신의 BibleBot은 빠른 답변을 제공하는 대신 올바른 질문을 하도록 돕습니다."
     },
     "deepen": {
-      "title": "You want to go deeper?",
-      "text": "You already believe, but want to understand more? Discover the depth of the Bible – historical, personal, surprisingly relevant."
+      "title": "심화하고 싶습니까?",
+      "text": "이미 믿고 있지만 더 이해하고 싶습니까? 성경의 깊이를 발견하세요 – 역사적으로, 개인적으로, 놀랍도록 관련성 있게."
     },
-    "quote": "\"Ask, and it will be given to you; seek, and you will find; knock, and the door will be opened.\"",
-    "quoteRef": "– Matthew 7:7",
-    "quoteText": "Many of us don't talk much about faith. That's okay. But those with questions deserve honest answers – without sermons, without membership, without ulterior motives."
+    "quote": "«두드리라 그리하면 너희에게 열릴 것이니.»",
+    "quoteRef": "– 마태복음 7,7",
+    "quoteText": "스위스에서는 신앙에 대해 크게 이야기하지 않습니다. 그럴 필요도 없습니다. 하지만 질문이 있는 사람은 설교 없이, 회원 가입 없이, 숨겨진 의도 없이 정직한 답변을 받을 자격이 있습니다."
   },
   "subscribe": {
-    "title": "Daily Bible impulse",
-    "subtitle": "Every morning at 7:00 AM – a verse, a thought, a good start.",
-    "firstName": "Your first name",
-    "firstNameOptional": "(optional)",
-    "firstNamePlaceholder": "e.g. Thomas",
-    "firstNameHint": "So we can greet you personally.",
-    "channelLabel": "How would you like to receive the impulse?",
-    "push": "Push",
-    "pushDesc": "Browser notification",
-    "telegram": "Telegram",
-    "telegramDesc": "Message via Telegram",
+    "title": "매일 성경 영감",
+    "subtitle": "매일 아침 07:00 – 한 구절, 한 생각, 좋은 시작.",
+    "firstName": "이름",
+    "firstNameOptional": "(선택 사항)",
+    "firstNamePlaceholder": "예: 토마스",
+    "firstNameHint": "개인적으로 인사할 수 있도록.",
+    "channelLabel": "어떤 방법으로 영감을 받고 싶습니까?",
+    "push": "푸시",
+    "pushDesc": "브라우저 알림",
+    "telegram": "텔레그램",
+    "telegramDesc": "텔레그램을 통한 메시지",
     "sms": "SMS",
-    "smsDesc": "Text to your phone",
-    "phoneLabel": "Phone number",
-    "phonePlaceholder": "+1 555 123 4567",
-    "phoneHint": "With country code, e.g. +1 for the US.",
-    "telegramHint": "Click \"Subscribe\" – you'll be redirected to Telegram. Start the bot and type <strong>/daily</strong> to activate the daily impulse.",
-    "pushHint": "After clicking \"Subscribe\", your browser will ask for notification permission. Please allow it to receive the impulse.",
-    "submit": "Subscribe",
-    "submitting": "Subscribing...",
-    "footNote": "No login required. Cancel anytime.",
-    "successTitle": "You're subscribed! 🙏",
-    "successText": "Starting tomorrow at 7:00 AM, you'll receive your personal Bible impulse.",
-    "toastTelegram": "Telegram opened 🙏",
-    "toastTelegramDesc": "Start the bot and type /daily to activate the daily impulse.",
-    "toastSuccess": "Subscribed! 🙏",
-    "toastSuccessDesc": "You'll receive your daily impulse starting tomorrow.",
-    "toastPushPreview": "Push subscription not available in preview",
-    "toastPushPreviewDesc": "Push notifications only work on the published site.",
-    "toastNotSupported": "Not supported",
-    "toastNotSupportedDesc": "Your browser does not support push notifications.",
-    "toastPermDenied": "Permission denied",
-    "toastPermDeniedDesc": "Please allow notifications in your browser settings.",
-    "toastError": "Error",
-    "toastErrorDesc": "Please try again later."
+    "smsDesc": "휴대폰으로 SMS",
+    "phoneLabel": "휴대폰 번호",
+    "phonePlaceholder": "+41 79 123 45 67",
+    "phoneHint": "국가 코드 포함, 예: 스위스의 경우 +41.",
+    "telegramHint": "«구독»을 클릭하면 텔레그램으로 리디렉션됩니다. 거기서 봇을 시작하고 <strong>/daily</strong>를 입력하여 매일 영감을 활성화하세요.",
+    "pushHint": "«구독»을 클릭하면 브라우저가 알림 권한을 요청합니다. 영감을 받으려면 허용해 주세요.",
+    "submit": "구독",
+    "submitting": "구독 중...",
+    "footNote": "로그인 필요 없음. 언제든지 구독 취소 가능.",
+    "successTitle": "구독되었습니다! 🙏",
+    "successText": "내일 아침 07:00부터 개인 성경 영감을 받게 됩니다.",
+    "toastTelegram": "텔레그램이 열렸습니다 🙏",
+    "toastTelegramDesc": "봇을 시작하고 /daily를 입력하여 매일 영감을 활성화하세요.",
+    "toastSuccess": "구독되었습니다! 🙏",
+    "toastSuccessDesc": "내일부터 매일 영감을 받게 됩니다.",
+    "toastPushPreview": "미리보기에서는 푸시 구독 불가",
+    "toastPushPreviewDesc": "푸시 알림은 게시된 페이지에서만 작동합니다.",
+    "toastNotSupported": "지원되지 않음",
+    "toastNotSupportedDesc": "귀하의 브라우저는 푸시 알림을 지원하지 않습니다.",
+    "toastPermDenied": "권한 거부됨",
+    "toastPermDeniedDesc": "브라우저 설정에서 알림을 허용해 주세요.",
+    "toastError": "오류",
+    "toastErrorDesc": "나중에 다시 시도해 주세요."
   },
   "faq": {
-    "badge": "FAQ",
-    "title": "What you should know about BibleBot",
-    "subtitle": "Transparency matters – especially for theologians, pastors, and critical thinkers.",
-    "q1": "What makes BibleBot different from ChatGPT & Co.?",
-    "q1Generic": "Generic chatbots:",
+    "badge": "자주 묻는 질문",
+    "title": "BibleBot에 대해 알아야 할 사항",
+    "subtitle": "투명성은 우리에게 중요합니다 – 특히 신학자, 상담사, 비판적인 사람들에게.",
+    "q1": "BibleBot과 ChatGPT & Co.의 차이점은 무엇입니까?",
+    "q1Generic": "일반 챗봇:",
     "q1GenericItems": [
-      "Superficial Bible quotes without context",
-      "No pastoral guardrails",
-      "Avoids uncomfortable texts",
-      "No crisis intervention",
-      "Mixes Bible with esotericism",
-      "No follow-up questions – just confirmation"
+      "문맥 없는 피상적인 성경 인용",
+      "상담 가이드라인 없음",
+      "불편한 텍스트 회피",
+      "위기 개입 없음",
+      "성경과 신비주의 혼합",
+      "질문 없음 – 오직 확인"
     ],
     "q1Bot": "BibleBot.Life:",
     "q1BotItems": [
-      "5 recognized translations – including uncomfortable passages",
-      "Guardrails AND challenging companionship",
-      "Follow-up questions for self-reflection",
-      "Crisis referrals (emergency helplines)",
-      "Exclusively Christian theology",
-      "Promotes critical thinking as faith maturity"
+      "5가지 인정된 번역본 – 불편한 구절도 포함",
+      "가이드라인 및 도전적인 동반",
+      "자기 성찰을 위한 질문",
+      "위기 참조 (전화 143 / 147)",
+      "오직 기독교 신학",
+      "신앙 성숙으로서 비판적 사고 촉진"
     ],
-    "q2": "Which Bible translations are included?",
-    "q2Intro": "BibleBot works ecumenically with the major German-language Bible editions:",
-    "q2Outro": "All Bible passages include source citations and historical context.",
-    "q3": "What scientific foundations are behind it?",
-    "q3Intro": "The companionship is based on peer-reviewed research in Positive Psychology:",
-    "q4": "How does BibleBot ensure pastoral safety?",
+    "q2": "어떤 성경 번역본이 저장되어 있습니까?",
+    "q2Intro": "당신의 BibleBot은 주요 독일어 성경 번역본과 함께 에큐메니컬하게 작동합니다:",
+    "q2Outro": "모든 성경 구절은 출처와 역사적 문맥과 함께 제공됩니다.",
+    "q3": "어떤 과학적 근거가 있습니까?",
+    "q3Intro": "동반은 긍정 심리학의 동료 심사 연구를 기반으로 합니다:",
+    "q4": "BibleBot은 상담 안전을 어떻게 보장합니까?",
     "q4Items": [
-      "Suicidal thoughts or crisis → immediate referral to emergency helplines",
-      "No psychological or medical diagnoses",
-      "Respect without arbitrariness – clear biblical positions are taken",
-      "Empathy AND honesty – uncomfortable topics are addressed",
-      "Follow-up questions for self-reflection instead of cheap validation",
-      "No toxic positivity – genuine, honest companionship",
-      "Openly names tensions and difficult texts"
+      "자살 충동 또는 위기 시 → 즉시 Dargebotene Hand (143) 및 Pro Juventute (147)로 연결",
+      "심리적 또는 의학적 진단 없음",
+      "임의성 없는 존중 – 명확한 성경적 입장 취함",
+      "공감 및 정직 – 불편한 내용도 언급",
+      "값싼 확인 대신 자기 성찰을 위한 질문",
+      "독성 긍정 없음 – 진정하고 정직한 동반",
+      "긴장과 어려운 텍스트를 공개적으로 언급"
     ],
-    "q5": "Is BibleBot tied to a specific denomination?",
-    "q5Answer": "No. BibleBot is ecumenically oriented and respects Reformed, Catholic, Free Church, and other Christian traditions equally. When there are denominational differences in interpretation, various perspectives are presented transparently – without favoring any tradition.",
-    "q6": "Does BibleBot replace pastoral care or therapy?",
-    "q6Answer": "No. BibleBot is a digital tool for personal Bible reading and reflection. It does not replace professional pastoral care, theological counseling, or psychological therapy. In serious crises, BibleBot always refers to qualified resources.",
-    "q7": "Isn't BibleBot just a 'feel-good bot'?",
-    "q7Answer": "No. BibleBot comforts where comfort is needed – but it also challenges. Spiritual growth requires friction. BibleBot asks uncomfortable follow-up questions, names difficult Bible texts (Job, Lament Psalms, prophetic criticism), and doesn't shy away from topics like justice, repentance, and responsibility. The prophetic tradition was never comfortable – and neither is BibleBot.",
-    "q8": "Who is behind BibleBot and how is it funded?",
-    "q8Answer": "BibleBot.Life is a private, non-commercial project. It's run on a volunteer basis and funded exclusively through voluntary donations. There's no advertising, no data sales, and no paid features. All donations go directly to covering operating costs (infrastructure, hosting, development). Since BibleBot is a private project, donations are not tax-deductible.",
-    "q9": "How does BibleBot handle my data?",
-    "q9Answer": "BibleBot stores no personal data and no chat histories. Every conversation is anonymous. There's no login, no tracking, and no sharing of data with third parties. Usage is completely anonymous."
+    "q5": "BibleBot은 교파에 묶여 있습니까?",
+    "q5Answer": "아니요. 당신의 BibleBot은 에큐메니컬 지향적이며 개혁교회, 가톨릭, 자유교회 및 기타 기독교 전통을 동등하게 존중합니다. 교파적으로 다른 해석의 경우, 다양한 관점이 투명하게 제시됩니다 – 어떤 전통도 선호하지 않습니다.",
+    "q6": "BibleBot이 상담이나 치료를 대체합니까?",
+    "q6Answer": "아니요. 당신의 BibleBot은 개인 성경 읽기와 성찰을 위한 디지털 도구입니다. 전문 상담, 신학적 조언 또는 심리 치료를 대체하지 않습니다. 심각한 위기 시, 당신의 BibleBot은 항상 자격을 갖춘 기관으로 안내합니다.",
+    "q7": "BibleBot은 단순히 «웰빙 봇»이 아닙니까?",
+    "q7Answer": "아니요. 당신의 BibleBot은 위로가 필요한 곳에서 위로하지만, 또한 도전합니다. 영적 성장은 마찰을 필요로 합니다. 당신의 BibleBot은 불편한 질문을 하고, 어려운 성경 텍스트 (욥기, 애가 시편, 예언자적 비판)를 언급하며, 정의, 회개, 책임과 같은 주제를 피하지 않습니다. 예언자적 전통은 결코 편안하지 않았으며, 당신의 BibleBot도 마찬가지입니다.",
+    "q8": "BibleBot 뒤에는 누가 있으며 어떻게 자금을 조달합니까?",
+    "q8Answer": "BibleBot.Life는 비영리 개인 프로젝트입니다. 자원봉사로 운영되며 전적으로 자발적인 기부로 자금을 조달합니다. 광고, 데이터 판매, 유료 기능은 없습니다. 모든 기부금은 운영 비용 (인프라, 호스팅, 개발)을 충당하는 데 직접 사용됩니다. BibleBot은 개인 프로젝트로 운영되므로 기부금은 세금 공제 대상이 아닙니다.",
+    "q9": "BibleBot은 내 데이터를 어떻게 처리합니까?",
+    "q9Answer": "당신의 BibleBot은 개인 데이터나 채팅 기록을 저장하지 않습니다. 모든 대화는 익명입니다. 로그인, 추적, 제3자에게 데이터 공유는 없습니다. 사용은 완전히 익명입니다."
   },
   "donate": {
-    "badge": "Support BibleBot",
-    "title": "Help keep BibleBot free",
-    "subtitle": "BibleBot is a passion project – no ads, no subscriptions, no hidden costs. To keep it that way, I rely on voluntary donations. Every contribution helps cover the ongoing costs for operations and infrastructure.",
-    "bankTitle": "Donate via bank transfer",
-    "bankSubtitle": "Every amount counts – thank you! 🙏",
-    "recipient": "Recipient",
-    "bank": "Bank",
-    "purpose": "Reference",
-    "purposeValue": "Donation BibleBot",
-    "note": "BibleBot.Life is operated as a private project. Donations are therefore not tax-deductible."
+    "badge": "BibleBot 지원하기",
+    "title": "BibleBot이 무료로 유지되도록 도와주세요",
+    "subtitle": "당신의 BibleBot은 광고, 구독, 숨겨진 비용 없이 마음으로 만든 프로젝트입니다. 이것이 유지되려면 자발적인 기부에 의존합니다. 모든 기부금은 운영 및 인프라 비용을 충당하는 데 도움이 됩니다.",
+    "bankTitle": "은행 송금으로 기부하기",
+    "bankSubtitle": "모든 금액이 중요합니다 – 진심으로 감사합니다! 🙏",
+    "recipient": "수취인",
+    "bank": "은행",
+    "purpose": "목적",
+    "purposeValue": "BibleBot 기부",
+    "note": "BibleBot.Life는 개인 프로젝트로 운영됩니다. 따라서 기부금은 세금 공제 대상이 아닙니다."
+  },
+  "refer": {
+    "badge": "하나님의 말씀 나누기",
+    "title": "BibleBot을 추천하세요",
+    "subtitle": "지금 격려가 필요한 사람을 알고 있습니까? BibleBot을 공유하세요 – 메시지 하나가 큰 영향을 미칠 수 있습니다.",
+    "whatsapp": "WhatsApp으로 공유",
+    "whatsappMsg": "안녕, BibleBot을 보여주고 싶었어 – 성경을 알고 정말 좋은 질문을 하는 무료 성경 동반자야. 로그인 필요 없고, 익명이고, 정직해. 한번 사용해 봐: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "telegram": "Telegram으로 공유",
+    "telegramMsg": "안녕, BibleBot을 알고 있니? 무료 개인 성경 동반자야 – 정직하고, 익명이고, 로그인 필요 없어. 한번 봐봐: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "email": "이메일로 공유",
+    "emailSubject": "이것이 당신에게 흥미로울 수 있습니다: BibleBot.Life",
+    "emailBody": "안녕하세요!\n\nBibleBot을 보여주고 싶었습니다 – 성경을 정말 잘 아는 무료 성경 동반자입니다. 가입 필요 없고, 완전히 익명입니다.\n\n그는 좋은 질문을 하고, 문맥에서 성경 구절을 설명하며, 어려운 주제에서도 정직하게 당신을 동반합니다.\n\n한번 사용해 보세요: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\n안녕히 계세요",
+    "copy": "링크 복사",
+    "copied": "링크 복사됨! 📋",
+    "qr": "또는 이 QR 코드를 보여주세요:"
   },
   "cta": {
-    "title": "You don't have to go through this alone",
-    "subtitle": "Just tell BibleBot what's on your mind. No login, no cost, no judgment – just honest companionship and the wisdom of the Bible.",
-    "button": "Start a conversation"
+    "title": "혼자서 이겨낼 필요 없습니다",
+    "subtitle": "당신을 괴롭히는 것을 BibleBot에게 말하세요. 로그인, 비용, 판단 없이 – 오직 정직한 동반과 성경의 지혜만 있습니다.",
+    "button": "지금 대화 시작하기"
   },
   "footer": {
-    "tagline": "성경과 함께하는 삶을 위한 개인 동반자",
-    "disclaimer": "BibleBot.Life is a digital tool and does not replace professional pastoral care, theological counseling, or psychological therapy. In acute crises, please contact your local emergency helpline.",
-    "impressum": "Imprint",
-    "notes": "Notes",
-    "private": "Private, non-commercial project",
-    "noChat": "No storage of chat data",
-    "noTax": "Donations are not tax-deductible",
-    "datenschutz": "Privacy Policy",
-    "love": "With ❤️ for everyone wondering what Christ thinks.",
-    "forChurches": "For Churches"
+    "tagline": "성경과 함께하는 삶을 위한 당신의 개인 동반자",
+    "disclaimer": "BibleBot.Life는 디지털 도구이며 전문 상담, 신학적 조언 또는 심리 치료를 대체하지 않습니다. 심각한 위기 시에는 Dargebotene Hand (전화 143) 또는 Pro Juventute (전화 147)에 문의하십시오.",
+    "impressum": "법적 고지",
+    "notes": "참고",
+    "private": "개인, 비영리 프로젝트",
+    "noChat": "채팅 데이터 저장 안 함",
+    "noTax": "기부금은 세금 공제 대상이 아님",
+    "datenschutz": "개인 정보 보호 정책",
+    "love": "그리스도가 무엇을 생각하는지 궁금해하는 모든 사람들을 위한 ❤️",
+    "forChurches": "교회를 위해"
   },
   "chat": {
-    "welcome": "Welcome! 🤗\n\nI'm your BibleBot – your personal companion with the Bible, good questions, and real impulses. No pressure, no judgment.\n\nYou can ask me anything – or just share what's on your mind. 💛",
-    "journeyOffer": "💡 **Tip:** I also offer a **21-day journey** – 3 weeks of daily impulses, reflections, and concrete steps. At your own pace.\n\nWould you like to try it?",
-    "suggestion1": "I need an uplifting word right now",
-    "suggestion2": "What does the Bible say when you feel uncertain?",
-    "suggestion3": "I want to find out what I really want",
-    "teaser": "무엇이 마음에 걸리나요? 💛",
-    "teaserSub": "I'm here – without any judgment.",
-    "openChat": "Open chat",
-    "closeChat": "Close chat",
-    "yourCompanion": "Your personal companion",
-    "journeyComplete": "21 days completed! 🎉",
-    "arriving": "Arriving",
-    "deepening": "Deepening",
-    "acting": "Acting",
-    "renameTip": "Tip: Click the name to rename me ✨",
-    "changeName": "Change name",
-    "placeholder": "자유롭게 적어보세요...",
-    "startVoice": "Start voice input",
-    "stopVoice": "Stop recording",
-    "noVoice": "Your browser does not support voice input.",
-    "writing": "typing...",
-    "shieldBadge": "No login · No judgment · Citations verified",
-    "journeyStart": "Yes, let's go ✨",
-    "journeyLater": "Maybe later",
-    "journeyStartMsg": "Yes, I'd like to start the 21-day journey!",
-    "qaChecking": "Checking citations...",
-    "qaIssue": "{{count}} issue with citations",
-    "qaIssue_plural": "{{count}} issues with citations",
-    "qaOk": "{{count}} citation verified ✓",
-    "qaOk_plural": "{{count}} citations verified ✓",
-    "qaWarning": "⚠️ Accuracy notes:",
-    "errorTooMany": "Too many requests – please wait a moment.",
-    "errorCredits": "AI quota exhausted.",
-    "errorConnect": "Connection error.",
-    "errorTitle": "Error",
-    "errorConnection": "could not be reached.",
-    "errorNoStream": "No stream",
-    "seniorMode": "Senior mode (larger text)",
-    "teaserCta": "Start writing →",
-    "namePlaceholder": "e.g. Eli, Miriam…"
+    "welcome": "오신 것을 환영합니다 🤗\n\n저는 당신의 BibleBot입니다 – 성경, 좋은 질문, 구체적인 영감을 가진 당신의 개인 동반자입니다. 압력도, 판단도 없습니다.\n\n무엇이든 물어보거나, 지금 당신을 괴롭히는 것을 말할 수 있습니다. 💛",
+    "journeyOffer": "💡 **팁:** 저는 또한 **21일 동반**을 제공합니다 – 매일 영감, 성찰, 구체적인 단계가 포함된 3주. 당신의 속도에 맞춰.\n\n시도해 보시겠습니까?",
+    "suggestion1": "지금 격려의 말이 필요해요",
+    "suggestion2": "불안할 때 성경은 무엇이라고 말합니까?",
+    "suggestion3": "내가 진정으로 원하는 것을 찾고 싶어요",
+    "teaser": "지금 무엇이 당신을 괴롭힙니까? 💛",
+    "teaserSub": "저는 여기 있습니다 – 어떤 판단도 없이.",
+    "teaserCta": "지금 쓰기 →",
+    "openChat": "채팅 열기",
+    "closeChat": "채팅 닫기",
+    "yourCompanion": "당신의 개인 동반자",
+    "journeyComplete": "21일 완료! 🎉",
+    "arriving": "도착",
+    "deepening": "심화",
+    "acting": "행동",
+    "renameTip": "이름을 지어주세요 ✨",
+    "namePlaceholder": "예: 엘리, 미리암…",
+    "changeName": "이름 변경",
+    "placeholder": "그냥 쓰세요...",
+    "startVoice": "음성 입력 시작",
+    "stopVoice": "녹음 중지",
+    "noVoice": "귀하의 브라우저는 음성 입력을 지원하지 않습니다.",
+    "writing": "쓰는 중...",
+    "shieldBadge": "로그인 없음 · 판단 없음 · 인용문 확인됨",
+    "journeyStart": "네, 시작합니다 ✨",
+    "journeyLater": "나중에 할게요",
+    "journeyStartMsg": "네, 21일 동반을 시작하고 싶습니다!",
+    "qaChecking": "인용문 확인 중...",
+    "qaIssue": "인용문에 대한 {{count}}개의 참고 사항",
+    "qaIssue_plural": "인용문에 대한 {{count}}개의 참고 사항",
+    "qaOk": "{{count}}개의 인용문 확인됨 ✓",
+    "qaOk_plural": "{{count}}개의 인용문 확인됨 ✓",
+    "qaWarning": "⚠️ 정확성에 대한 참고 사항:",
+    "errorTooMany": "요청이 너무 많습니다 – 잠시 기다려 주세요.",
+    "errorCredits": "AI 할당량 소진.",
+    "errorConnect": "연결 오류.",
+    "errorTitle": "오류",
+    "errorConnection": "연결할 수 없습니다.",
+    "errorNoStream": "스트림 없음",
+    "seniorMode": "시니어 모드 (큰 글꼴)"
   },
   "install": {
     "title": "BibleBot 설치",
-    "androidDesc": "Quick access from your home screen",
-    "iosDesc": "Tap \"Share\" → \"Add to Home Screen\"",
-    "button": "Install",
-    "close": "Close"
+    "androidDesc": "홈 화면에서 바로 빠른 액세스",
+    "iosDesc": "«공유» → «홈 화면에 추가»를 탭하세요",
+    "button": "설치",
+    "close": "닫기"
+  },
+  "share": {
+    "label": "공유",
+    "shareVia": "공유 방법",
+    "copied": "복사됨! 📋",
+    "copiedShort": "복사됨!",
+    "copiedDesc": "텍스트가 클립보드에 복사되었습니다. 지금 WhatsApp, Instagram 또는 원하는 곳에 공유하세요!",
+    "copyLink": "텍스트 복사",
+    "error": "복사 실패",
+    "impulseTitle": "BibleBot – 오늘의 영감",
+    "chatTitle": "BibleBot – 오늘의 생각",
+    "createImage": "이미지 만들기 ✨",
+    "generating": "생성 중…",
+    "imageReady": "이미지가 공유할 준비가 되었습니다!",
+    "shareImage": "이미지 공유",
+    "download": "저장",
+    "imageError": "이미지 생성 실패",
+    "imageErrorDesc": "이미지를 생성할 수 없습니다. 나중에 다시 시도해 주세요.",
+    "imageSaved": "텍스트 복사됨! 📋",
+    "imageSavedDesc": "이미지를 저장하고 복사된 텍스트와 함께 Instagram, WhatsApp 또는 원하는 곳에 공유하세요!"
   },
   "darkMode": {
-    "light": "Light mode",
-    "dark": "Dark mode"
+    "light": "밝은 모드",
+    "dark": "어두운 모드"
   },
   "impressum": {
-    "back": "Back to home",
-    "title": "Imprint"
+    "back": "홈으로 돌아가기",
+    "title": "법적 고지"
   },
   "datenschutz": {
-    "back": "Back to home",
-    "title": "Privacy Policy"
+    "back": "홈으로 돌아가기",
+    "title": "개인 정보 보호 정책"
+  },
+  "tiles": {
+    "sectionTitle": "무엇이 당신을 움직입니까?",
+    "sectionSubtitle": "주제를 선택하세요 — BibleBot이 당신을 동반합니다",
+    "baptism": {
+      "title": "세례 구절 찾기",
+      "desc": "자녀를 위한 완벽한 구절",
+      "prompt": "적절한 세례 구절을 찾는 데 도움을 주세요. 어떤 아이이고 부모님은 무엇을 원하십니까?"
+    },
+    "condolence": {
+      "title": "위로의 말",
+      "desc": "조의 및 작별 동반",
+      "prompt": "조의 카드에 위로의 말이 필요합니다. 적절한 문구를 작성하는 데 도움을 주실 수 있습니까?"
+    },
+    "wedding": {
+      "title": "결혼 구절",
+      "desc": "당신의 사랑을 위한 성경적 말씀",
+      "prompt": "우리는 결혼식을 위한 아름다운 성경 구절을 찾고 있습니다. 사랑과 파트너십에 어떤 성경 구절이 적합합니까?"
+    },
+    "anxiety": {
+      "title": "불안 & 걱정",
+      "desc": "어려운 시기에 용기 찾기",
+      "prompt": "저는 지금 불안과 걱정으로 힘들어하고 있습니다. 성경은 이에 대해 무엇이라고 말합니까? 용기를 주는 구절이 있습니까?"
+    },
+    "confession": {
+      "title": "고백",
+      "desc": "하나님은 용서하십니다 — 말하세요",
+      "prompt": "저를 괴롭히는 것을 털어놓고 싶습니다. 성경은 용서와 새로운 시작에 대해 무엇이라고 말합니까?"
+    },
+    "heartbreak": {
+      "title": "실연",
+      "desc": "성경이 실연에 대해 말하는 것",
+      "prompt": "제 마음이 아픕니다. 성경은 실연과 희망을 다시 찾는 방법에 대해 무엇이라고 말합니까?"
+    },
+    "newstart": {
+      "title": "새로운 시작",
+      "desc": "새로운 삶의 단계를 위한 힘",
+      "prompt": "저는 새로운 시작을 앞두고 있으며 격려가 필요합니다. 어떤 성경 구절이 새로운 시작에 대해 말합니까?"
+    },
+    "namequiz": {
+      "title": "세례 퀴즈",
+      "desc": "적절한 성경적 이름 찾기",
+      "prompt": "저는 제 아이를 위한 성경적 이름을 찾고 있습니다. 몇 가지 제안과 그 의미를 설명해 주실 수 있습니까?"
+    },
+    "sleepless": {
+      "title": "불면증",
+      "desc": "밤에 평화 찾기",
+      "prompt": "잠을 잘 수 없고 걱정하고 있습니다. 밤을 위한 위로의 기도나 시편이 있습니까?"
+    },
+    "loneliness": {
+      "title": "외로움",
+      "desc": "당신은 결코 혼자가 아닙니다",
+      "prompt": "저는 외롭습니다. 하나님이 항상 우리와 함께 계신다는 것에 대해 성경은 무엇이라고 말합?"
+    },
+    "decision": {
+      "title": "어려운 결정",
+      "desc": "올바른 길을 위한 지혜",
+      "prompt": "저는 어려운 결정을 앞두고 있습니다. 어떤 성경 구절이 올바른 길을 찾는 데 도움이 됩니까?"
+    },
+    "gratitude": {
+      "title": "감사",
+      "desc": "개인적인 감사 기도",
+      "prompt": "하나님께 감사하고 싶습니다. 개인적인 감사 기도를 작성하는 데 도움을 주세요."
+    },
+    "lifewheel": {
+      "title": "인생 바퀴",
+      "desc": "얼마나 만족하십니까?"
+    },
+    "sevenwhys": {
+      "title": "7가지 이유",
+      "desc": "질문의 가장 깊은 뿌리 찾기",
+      "prompt": "7가지 이유 연습을 하고 싶습니다. 제 주제는 다음과 같습니다:"
+    },
+    "anger": {
+      "title": "분노 & 화",
+      "desc": "화가 폭발할 것 같을 때",
+      "prompt": "저는 너무 화가 나서 어떻게 해야 할지 모르겠습니다. 성경은 분노와 그것을 다루는 방법에 대해 무엇이라고 말합니까?"
+    },
+    "shame": {
+      "title": "수치심 & 죄책감",
+      "desc": "죄책감이 당신을 짓누를 때",
+      "prompt": "저는 너무 부끄럽고 죄책감을 느낍니다. 성경은 죄책감, 용서, 새로운 시작에 대해 무엇이라고 말합니까?"
+    },
+    "burnout": {
+      "title": "번아웃",
+      "desc": "더 이상 할 수 없을 때",
+      "prompt": "저는 완전히 지치고 번아웃되었습니다. 더 이상 할 수 없습니다. 성경은 휴식과 회복에 대해 무엇이라고 말합니까?"
+    },
+    "illness": {
+      "title": "질병",
+      "desc": "진단이 모든 것을 바꿀 때",
+      "prompt": "저는 어려운 진단을 받았고 두렵습니다. 성경은 질병, 치유, 희망에 대해 무엇이라고 말합니까?"
+    },
+    "financial": {
+      "title": "재정 문제",
+      "desc": "청구서가 압박할 때",
+      "prompt": "저는 재정적인 걱정이 있고 어떻게 해야 할지 모르겠습니다. 성경은 돈, 신뢰, 공급에 대해 무엇이라고 말합니까?"
+    },
+    "meaningcrisis": {
+      "title": "의미 위기",
+      "desc": "이 모든 것이 무엇을 위한 것인가?",
+      "prompt": "저는 이 모든 것이 무엇을 위한 것인지 궁금합니다. 저는 의미 위기에 처해 있습니다. 성경은 삶의 의미에 대해 무엇이라고 말합니까?"
+    },
+    "selfdoubt": {
+      "title": "자기 의심",
+      "desc": "자신이 충분히 좋지 않다고 느낄 때",
+      "prompt": "저는 항상 저 자신을 의심하고 충분히 좋지 않다고 느낍니다. 성경은 저의 가치에 대해 무엇이라고 말합니까?"
+    },
+    "calling": {
+      "title": "소명",
+      "desc": "내 삶으로 무엇을 해야 할까?",
+      "prompt": "저는 제 삶으로 무엇을 해야 할지 모르겠습니다. 제 소명을 찾는 데 도움을 주세요 – 성경은 이에 대해 무엇이라고 말합니까?"
+    },
+    "faithdoubt": {
+      "title": "신앙 의심",
+      "desc": "신앙이 흔들릴 때",
+      "prompt": "저는 제 신앙에 의심이 있고 더 이상 믿을 수 있을지 모르겠습니다. 성경은 의심에 대해 무엇이라고 말합니까?"
+    },
+    "forgiveness": {
+      "title": "용서",
+      "desc": "용서가 불가능해 보일 때",
+      "prompt": "저는 누군가를 용서할 수 없습니다. 너무 아픕니다. 성경은 용서에 대해 무엇이라고 말합니까?"
+    },
+    "familyconflict": {
+      "title": "가족 갈등",
+      "desc": "가족 내 갈등이 있을 때",
+      "prompt": "우리 가족에 큰 갈등이 있습니다. 성경은 가족의 평화와 화해에 대해 무엇이라고 말합니까?"
+    },
+    "envy": {
+      "title": "질투",
+      "desc": "다른 사람들이 더 잘할 때",
+      "prompt": "저는 다른 사람들을 질투하고 항상 저 자신을 비교합니다. 성경은 질투와 만족에 대해 무엇이라고 말합니까?"
+    },
+    "joy": {
+      "title": "기쁨 나누기",
+      "desc": "놀라운 일이 일어났을 때",
+      "prompt": "저에게 놀라운 일이 일어났고 제 기쁨을 나누고 싶습니다! 성경은 기쁨과 감사에 대해 무엇이라고 말합니까?"
+    },
+    "prayer": {
+      "title": "기도 요청",
+      "desc": "함께 기도하기",
+      "prompt": "기도 요청이 있고 함께 기도하고 싶습니다. 기도에 동참해 주세요."
+    },
+    "bibleverse": {
+      "title": "구절 이해하기",
+      "desc": "성경 구절 설명 듣기",
+      "prompt": "성경 구절을 더 잘 이해하고 싶습니다. 문맥에서 그것을 이해하는 데 도움을 주실 수 있습니까?"
+    }
+  },
+  "lifeWheel": {
+    "title": "당신의 인생 바퀴",
+    "intro": "8가지 삶의 영역을 1-10점 척도로 평가하세요. 당신이 어디에 서 있는지 알아보고 – 주의가 필요한 영역에 대한 성경적 영감을 받으세요.",
+    "start": "지금 시작하기",
+    "sliderHint": "슬라이더를 움직이세요 — 1 = 매우 불만족, 10 = 매우 만족",
+    "showResult": "결과 보기",
+    "average": "평균",
+    "weakestArea": "가장 큰 필요 영역",
+    "getImpulse": "{{area}}에 대한 성경적 영감",
+    "reset": "다시 하기",
+    "prompt": "제 인생 바퀴는 «{{area}}» 영역에서 {{score}}/10점만 받았음을 보여줍니다. 성경은 이 삶의 영역에 대해 무엇이라고 말합니까? 격려와 실질적인 영감을 주세요.",
+    "areas": {
+      "health": "건강",
+      "relationships": "관계",
+      "career": "직업",
+      "spirituality": "영성",
+      "finances": "재정",
+      "family": "가족",
+      "leisure": "여가",
+      "growth": "개인 성장"
+    },
+    "save": "결과 저장",
+    "saved": "저장됨!",
+    "history": "이전 결과",
+    "noHistory": "아직 저장된 결과가 없습니다.",
+    "backToNew": "새로운 인생 바퀴",
+    "backToList": "목록으로 돌아가기"
+  },
+  "church": {
+    "badge": "교회를 위해",
+    "heroTitle": "귀하의 교회를 위한 BibleBot",
+    "heroSubtitle": "성경적 지혜로 교인들을 동반하세요 – 디지털로, 개인적으로, 24시간 내내.",
+    "useCasesTitle": "사용 사례",
+    "useCase": {
+      "youth": {
+        "title": "청소년 사역",
+        "desc": "청소년들은 자신만의 방식으로 성경을 발견합니다 – 상호작용적이고 거리낌 없이."
+      },
+      "confirmation": {
+        "title": "견진성사",
+        "desc": "견진성사 준비생들은 개인적인 동반과 함께 성경 지식을 스스로 심화합니다."
+      },
+      "pastoral": {
+        "title": "상담",
+        "desc": "개인 상담을 보완하는 24/7 동반."
+      },
+      "bibleStudy": {
+        "title": "성경 공부 모임",
+        "desc": "그룹 및 가정 모임을 위한 영감과 토론 시작점."
+      }
+    },
+    "pricingTitle": "후원 패키지",
+    "pricingSubtitle": "적절한 후원 패키지로 BibleBot과 귀하의 교회를 지원하세요.",
+    "popular": "인기",
+    "free": "무료",
+    "perYear": "년",
+    "contact": "문의하기",
+    "tier": {
+      "free": {
+        "name": "겨자씨",
+        "size": "작은 교회 및 가정 모임 (50명 이하)"
+      },
+      "community": {
+        "name": "동반자",
+        "size": "50-200명 규모의 교회를 위해"
+      },
+      "gemeinde": {
+        "name": "다리 놓는 자",
+        "size": "200-500명 규모의 교회를 위해"
+      },
+      "kirche": {
+        "name": "등대",
+        "size": "대규모 교회 및 기관 (500명 이상)"
+      }
+    },
+    "features": {
+      "directoryEntry": "디렉토리 항목",
+      "telegramGroup": "텔레그램 그룹",
+      "partnerPage": "자체 파트너 페이지",
+      "badge": "파트너 배지",
+      "qrFlyer": "인쇄용 QR 전단지",
+      "contactForm": "문의 양식",
+      "pastorProfile": "목사/사제 프로필",
+      "welcomeVideo": "환영 비디오",
+      "analytics": "분석 대시보드",
+      "prioritySupport": "우선 지원",
+      "multipleProfiles": "여러 프로필",
+      "customBranding": "맞춤 브랜딩",
+      "apiAccess": "API 액세스",
+      "accountManager": "개인 계정 관리자"
+    },
+    "viewDirectory": "교회 디렉토리 보기",
+    "directoryBadge": "교회 디렉토리",
+    "directoryTitle": "파트너 교회",
+    "directorySubtitle": "BibleBot을 추천하는 가까운 교회를 찾으세요.",
+    "searchPlaceholder": "장소, 이름 또는 교파 검색...",
+    "noResults": "아직 디렉토리에 교회가 없습니다.",
+    "becomePartner": "파트너 되기 →",
+    "notFound": "교회를 찾을 수 없습니다.",
+    "backToDirectory": "디렉토리로 돌아가기",
+    "pastor": "목사/사제",
+    "serviceTimes": "예배 시간",
+    "startChat": "채팅 시작",
+    "website": "웹사이트",
+    "telegramGroup": "텔레그램 그룹",
+    "contactTitle": "{{name}}에게 문의",
+    "contactName": "이름 (선택 사항)",
+    "contactEmail": "이메일 주소",
+    "contactMessage": "메시지",
+    "contactSend": "메시지 보내기",
+    "contactSuccess": "메시지 전송됨! 🙏",
+    "contactSuccessDesc": "교회에서 연락을 드릴 것입니다.",
+    "recommendedBy": "{{name}} 추천",
+    "setup": "설정 (1회)",
+    "form": {
+      "title": "관심 있으십니까? 저희에게 연락하세요!",
+      "subtitle": "48시간 이내에 연락드리겠습니다.",
+      "name": "이름",
+      "email": "이메일 주소",
+      "churchName": "교회 이름",
+      "tier": "원하는 패키지",
+      "tierPlaceholder": "패키지 선택...",
+      "message": "메시지",
+      "submit": "문의 보내기",
+      "success": "문의 전송됨! 곧 연락드리겠습니다. 🙏",
+      "error": "전송 오류. 다시 시도해 주세요.",
+      "orgType": "조직 유형",
+      "orgTypePlaceholder": "유형 선택...",
+      "orgTypes": {
+        "church": "교회",
+        "careHome": "요양원",
+        "seniorHome": "노인 요양원",
+        "hospital": "병원",
+        "prison": "교도소 상담",
+        "military": "군종 사목"
+      }
+    },
+    "institutionsTitle": "기관을 위해서도",
+    "institutionsSubtitle": "BibleBot은 교회뿐만 아니라 요양원, 노인 요양원, 병원, 교도소 상담도 디지털 상담의 혜택을 받습니다.",
+    "institution": {
+      "careHome": {
+        "title": "요양원",
+        "desc": "거주자들을 위한 매일 성경 영감과 동반 – 상담사가 현장에 없어도."
+      },
+      "seniorHome": {
+        "title": "노인 요양원",
+        "desc": "태블릿이나 스마트폰을 통해 쉽게 접근할 수 있는 노인들을 위한 친숙한 성경 구절과 대화."
+      },
+      "hospital": {
+        "title": "병원",
+        "desc": "어려운 시기에 환자들을 위한 위로와 영적 동반 – 병상에서 24시간 내내 이용 가능."
+      },
+      "prison": {
+        "title": "교도소 상담",
+        "desc": "수감자들을 위한 희망과 영적 동반 – 24시간 내내 비밀스러운 대화 상대."
+      },
+      "military": {
+        "title": "군종 사목",
+        "desc": "군인들을 위한 영적 동반 – 임무 중이거나 병영에서도 접근 가능."
+      }
+    }
+  },
+  "institutions": {
+    "badge": "기관을 위해",
+    "heroTitle": "귀하의 기관을 위한 BibleBot",
+    "heroSubtitle": "요양원, 노인 요양원, 병원, 교정 시설을 위한 디지털 상담 – 개인적으로, 비밀스럽게, 24시간 내내.",
+    "seniorHint": {
+      "title": "시니어 모드 사용 가능",
+      "desc": "큰 글꼴과 간소화된 조작 – 노인 거주자에게 이상적입니다.",
+      "cta": "시니어 모드 테스트"
+    },
+    "typesTitle": "BibleBot은 누구를 위한 것입니까?",
+    "useCasesTitle": "BibleBot 사용 방법",
+    "useCasesSubtitle": "귀하의 기관에서 일상생활을 위한 구체적인 응용 프로그램.",
+    "pricingTitle": "후원 패키지",
+    "pricingSubtitle": "교회와 동일한 패키지 – 기관의 필요에 맞게 조정됨.",
+    "linkChurches": "교회를 위해서도 사용 가능",
+    "type": {
+      "careHome": {
+        "title": "요양원",
+        "desc": "거주자들을 위한 매일 성경 영감과 동반 – 상담사가 현장에 없어도."
+      },
+      "seniorHome": {
+        "title": "노인 요양원",
+        "desc": "태블릿이나 스마트폰을 통해 쉽게 접근할 수 있는 노인들을 위한 친숙한 성경 구절과 대화."
+      },
+      "hospital": {
+        "title": "병원",
+        "desc": "어려운 시기에 환자들을 위한 위로와 영적 동반 – 병상에서 24시간 내내 이용 가능."
+      },
+      "prison": {
+        "title": "교도소 상담",
+        "desc": "수감자들을 위한 희망과 영적 동반 – 24시간 내내 비밀스러운 대화 상대."
+      },
+      "military": {
+        "title": "군종 사목",
+        "desc": "군인들을 위한 영적 동반 – 임무 중이거나 병영에서도 접근 가능."
+      }
+    },
+    "useCase": {
+      "dailyImpulse": {
+        "title": "매일의 영감",
+        "desc": "매일 아침 성찰 질문이 포함된 성경 구절 – 영적 대화의 장벽을 낮춥니다."
+      },
+      "companionship": {
+        "title": "동반자",
+        "desc": "BibleBot은 신앙 질문에 인내심을 가지고 시간 압박 없이 답변합니다 – 외로운 시간에 이상적입니다."
+      },
+      "accessibility": {
+        "title": "쉬운 접근성",
+        "desc": "큰 글꼴, 태블릿을 통한 쉬운 조작 – 이동이 제한된 사람들을 위해서도."
+      },
+      "availability": {
+        "title": "24/7 이용 가능",
+        "desc": "상담사가 이용할 수 없을 때에도 밤과 주말에도 영적 동반."
+      }
+    },
+    "tierDesc": {
+      "free": "거주자 및 환자를 위한 기본 액세스",
+      "community": "후원자로 언급, 광고 없는 액세스",
+      "gemeinde": "로고 존재, 월별 사용 보고서",
+      "kirche": "자체 콘텐츠, 로드맵 공동 설계, 프리미엄 지원"
+    },
+    "form": {
+      "title": "관심 있으십니까? 저희에게 연락하세요!",
+      "subtitle": "48시간 이내에 연락드리겠습니다.",
+      "name": "이름",
+      "email": "이메일 주소",
+      "institutionName": "기관 이름",
+      "type": "기관 유형",
+      "typePlaceholder": "선택하세요...",
+      "tier": "원하는 패키지",
+      "tierPlaceholder": "패키지 선택...",
+      "message": "메시지",
+      "submit": "문의 보내기",
+      "success": "문의 전송됨! 곧 연락드리겠습니다. 🙏",
+      "error": "전송 오류. 다시 시도해 주세요."
+    }
   },
   "lang": {
     "de": "Deutsch",
@@ -329,427 +751,5 @@
     "ig": "Igbo",
     "zu": "isiZulu",
     "ht": "Kreyòl"
-  },
-  "tiles": {
-    "sectionTitle": "What's on your heart?",
-    "sectionSubtitle": "Choose a topic — BibleBot walks with you",
-    "baptism": {
-      "title": "Find a baptism verse",
-      "desc": "The perfect verse for your child",
-      "prompt": "Help me find a fitting baptism verse. What kind of child is it and what do the parents wish for?"
-    },
-    "condolence": {
-      "title": "Words of comfort",
-      "desc": "Support through grief & farewell",
-      "prompt": "I need comforting words for a condolence card. Can you help me find the right words?"
-    },
-    "wedding": {
-      "title": "Wedding verse",
-      "desc": "Biblical words for your love",
-      "prompt": "We're looking for a beautiful biblical verse for our wedding. Which passages speak about love and partnership?"
-    },
-    "anxiety": {
-      "title": "Fear & worry",
-      "desc": "Finding courage in hard times",
-      "prompt": "I'm struggling with fear and worry right now. What does the Bible say about this? Are there verses that give courage?"
-    },
-    "confession": {
-      "title": "Confession",
-      "desc": "God forgives — speak it out",
-      "prompt": "I want to let go of something that weighs on me. What does the Bible say about forgiveness and new beginnings?"
-    },
-    "heartbreak": {
-      "title": "Heartbreak",
-      "desc": "What the Bible says about heartache",
-      "prompt": "My heart is broken. What does the Bible say about heartbreak and how to find hope again?"
-    },
-    "newstart": {
-      "title": "New beginning",
-      "desc": "Strength for a new chapter",
-      "prompt": "I'm facing a new beginning and need encouragement. Which Bible passages speak about fresh starts?"
-    },
-    "namequiz": {
-      "title": "Name quiz",
-      "desc": "Find the right biblical name",
-      "prompt": "I'm looking for a biblical name for my child. Can you suggest some and explain their meanings?"
-    },
-    "sleepless": {
-      "title": "Sleepless",
-      "desc": "Finding peace at night",
-      "prompt": "I can't sleep and my mind is racing. Is there a calming prayer or psalm for the night?"
-    },
-    "loneliness": {
-      "title": "Loneliness",
-      "desc": "You are never alone",
-      "prompt": "I feel lonely. What does the Bible say about God always being with us?"
-    },
-    "decision": {
-      "title": "Tough decision",
-      "desc": "Wisdom for the right path",
-      "prompt": "I'm facing a difficult decision. Which Bible passages can help me find the right way?"
-    },
-    "gratitude": {
-      "title": "Gratitude",
-      "desc": "A personal prayer of thanks",
-      "prompt": "I want to thank God. Help me write a personal prayer of gratitude."
-    },
-    "lifewheel": {
-      "title": "Life Wheel",
-      "desc": "How satisfied are you really?"
-    },
-    "sevenwhys": {
-      "title": "7 Whys",
-      "desc": "Find the deepest root of your question",
-      "prompt": "I'd like to do the 7 Whys exercise. Here is my topic:"
-    },
-    "anger": {
-      "title": "Anger",
-      "desc": "When you're about to explode",
-      "prompt": "I'm so angry and don't know what to do with my rage. What does the Bible say about anger and how to deal with it?"
-    },
-    "shame": {
-      "title": "Shame & Guilt",
-      "desc": "When guilt is crushing you",
-      "prompt": "I feel so ashamed and guilty. What does the Bible say about guilt, forgiveness, and starting over?"
-    },
-    "burnout": {
-      "title": "Burnout",
-      "desc": "When you just can't go on",
-      "prompt": "I'm totally exhausted and burned out. I just can't anymore. What does the Bible say about rest and recovery?"
-    },
-    "illness": {
-      "title": "Illness",
-      "desc": "When a diagnosis changes everything",
-      "prompt": "I've received a difficult diagnosis and I'm scared. What does the Bible say about illness, healing, and hope?"
-    },
-    "financial": {
-      "title": "Money Worries",
-      "desc": "When bills are piling up",
-      "prompt": "I have financial worries and don't know what to do. What does the Bible say about money, trust, and provision?"
-    },
-    "meaningcrisis": {
-      "title": "Meaning Crisis",
-      "desc": "What's it all for?",
-      "prompt": "I'm wondering what's the point of it all. I'm in a meaning crisis. What does the Bible say about the meaning of life?"
-    },
-    "selfdoubt": {
-      "title": "Self-Doubt",
-      "desc": "When you don't feel good enough",
-      "prompt": "I constantly doubt myself and don't feel good enough. What does the Bible say about my worth?"
-    },
-    "calling": {
-      "title": "Calling",
-      "desc": "What should I do with my life?",
-      "prompt": "I don't know what to do with my life. Help me find my calling — what does the Bible say?"
-    },
-    "faithdoubt": {
-      "title": "Faith Doubts",
-      "desc": "When your faith is shaking",
-      "prompt": "I have doubts about my faith and don't know if I can still believe. What does the Bible say about doubt?"
-    },
-    "forgiveness": {
-      "title": "Forgiveness",
-      "desc": "When forgiving seems impossible",
-      "prompt": "I simply can't forgive someone. It hurts too much. What does the Bible say about forgiveness?"
-    },
-    "familyconflict": {
-      "title": "Family Conflict",
-      "desc": "When family is at war",
-      "prompt": "There's a big conflict in my family. What does the Bible say about family peace and reconciliation?"
-    },
-    "envy": {
-      "title": "Envy",
-      "desc": "When others have it better",
-      "prompt": "I'm envious of others and constantly comparing myself. What does the Bible say about envy and contentment?"
-    },
-    "joy": {
-      "title": "Share Joy",
-      "desc": "When something wonderful happened",
-      "prompt": "Something wonderful happened to me and I want to share my joy! What does the Bible say about joy and gratitude?"
-    },
-    "prayer": {
-      "title": "Prayer Request",
-      "desc": "Pray together",
-      "prompt": "I have a prayer request and would like to pray together. Join me in prayer."
-    },
-    "bibleverse": {
-      "title": "Understand a Verse",
-      "desc": "Get a Bible passage explained",
-      "prompt": "I'd like to understand a Bible passage better. Can you help me put it in context?"
-    }
-  },
-  "lifeWheel": {
-    "title": "Your Life Wheel",
-    "intro": "Rate 8 life areas on a scale of 1-10. Discover where you stand — and receive biblical impulses for the area that needs attention.",
-    "start": "Get started",
-    "sliderHint": "Move the sliders — 1 = very unsatisfied, 10 = very satisfied",
-    "showResult": "Show result",
-    "average": "Average",
-    "weakestArea": "Greatest need",
-    "getImpulse": "Biblical impulse for {{area}}",
-    "reset": "Try again",
-    "prompt": "My life wheel shows that I scored only {{score}}/10 in the area of '{{area}}'. What does the Bible say about this area of life? Give me encouragement and practical impulses.",
-    "areas": {
-      "health": "Health",
-      "relationships": "Relationships",
-      "career": "Career",
-      "spirituality": "Spirituality",
-      "finances": "Finances",
-      "family": "Family",
-      "leisure": "Leisure",
-      "growth": "Personal Growth"
-    },
-    "save": "Save result",
-    "saved": "Saved!",
-    "history": "Previous results",
-    "noHistory": "No saved results yet.",
-    "backToNew": "New Life Wheel",
-    "backToList": "Back to list"
-  },
-  "church": {
-    "badge": "For Churches",
-    "heroTitle": "BibleBot for Your Church",
-    "heroSubtitle": "Accompany your congregation with biblical wisdom – digital, personal, and around the clock.",
-    "useCasesTitle": "Use Cases",
-    "useCase": {
-      "youth": {
-        "title": "Youth Ministry",
-        "desc": "Teens discover the Bible in their own way – interactive and without hesitation."
-      },
-      "confirmation": {
-        "title": "Confirmation",
-        "desc": "Confirmands deepen Bible knowledge independently with personal guidance."
-      },
-      "pastoral": {
-        "title": "Pastoral Care",
-        "desc": "24/7 companionship as a complement to personal pastoral care."
-      },
-      "bibleStudy": {
-        "title": "Bible Study",
-        "desc": "Impulses and discussion starters for groups and home circles."
-      }
-    },
-    "pricingTitle": "후원 패키지",
-    "pricingSubtitle": "적합한 후원 패키지로 BibleBot과 교회를 지원하세요.",
-    "popular": "Popular",
-    "free": "Free",
-    "perYear": "year",
-    "contact": "Get in touch",
-    "tier": {
-      "free": {
-        "name": "겨자씨",
-        "size": "모든 교인을 위한 봇 기본 이용."
-      },
-      "community": {
-        "name": "동행자",
-        "size": "웹사이트에 교회 후원자로 표시 및 광고 없는 이용."
-      },
-      "gemeinde": {
-        "name": "다리 건설자",
-        "size": "봇 인터페이스에 로고 표시, 월간 사용 보고서(익명화)."
-      },
-      "kirche": {
-        "name": "등대",
-        "size": "자체 콘텐츠 통합(예: 설교 아카이브), 로드맵 공동 설계, 프리미엄 지원."
-      }
-    },
-    "features": {
-      "directoryEntry": "Directory listing",
-      "telegramGroup": "Telegram group",
-      "partnerPage": "Own partner page",
-      "badge": "Partner badge",
-      "qrFlyer": "Printable QR flyer",
-      "contactForm": "Contact form",
-      "pastorProfile": "Pastor profile",
-      "welcomeVideo": "Welcome video",
-      "analytics": "Analytics dashboard",
-      "prioritySupport": "Priority support",
-      "multipleProfiles": "Multiple profiles",
-      "customBranding": "Custom branding",
-      "apiAccess": "API access",
-      "accountManager": "Dedicated account manager"
-    },
-    "viewDirectory": "View church directory",
-    "directoryBadge": "Church Directory",
-    "directoryTitle": "Partner Churches",
-    "directorySubtitle": "Find a church near you that recommends BibleBot.",
-    "searchPlaceholder": "Search by city, name, or denomination...",
-    "noResults": "No churches in the directory yet.",
-    "becomePartner": "Become a partner →",
-    "notFound": "Church not found.",
-    "backToDirectory": "Back to directory",
-    "pastor": "Pastor",
-    "serviceTimes": "Service Times",
-    "startChat": "Start Chat",
-    "website": "Website",
-    "telegramGroup": "Telegram Group",
-    "contactTitle": "Contact {{name}}",
-    "contactName": "Your name (optional)",
-    "contactEmail": "Your email address",
-    "contactMessage": "Your message",
-    "contactSend": "Send message",
-    "contactSuccess": "Message sent! 🙏",
-    "contactSuccessDesc": "The church will get back to you.",
-    "recommendedBy": "Recommended by {{name}}",
-    "setup": "설정 (1회)",
-    "form": {
-      "title": "관심이 있으신가요? 문의하세요!",
-      "subtitle": "48시간 이내에 답변드리겠습니다.",
-      "name": "이름",
-      "email": "이메일 주소",
-      "churchName": "교회 이름",
-      "tier": "희망 패키지",
-      "tierPlaceholder": "패키지 선택...",
-      "message": "메시지",
-      "submit": "문의 보내기",
-      "success": "문의가 전송되었습니다! 곧 연락드리겠습니다. 🙏",
-      "error": "전송 오류. 다시 시도해 주세요.",
-      "orgType": "Organization type",
-      "orgTypePlaceholder": "Select type...",
-      "orgTypes": {
-        "church": "Church",
-        "careHome": "Care Home",
-        "seniorHome": "Retirement Home",
-        "hospital": "Hospital",
-        "prison": "Prison Chaplaincy",
-        "military": "Military Chaplaincy"
-      }
-    },
-    "institutionsTitle": "기관에도 적합",
-    "institutionsSubtitle": "BibleBot은 요양원과 병원에도 디지털 영적 돌봄을 제공합니다.",
-    "institution": {
-      "careHome": {
-        "title": "요양원",
-        "desc": "입주자를 위한 매일의 성경 말씀 – 목회자가 없을 때도."
-      },
-      "seniorHome": {
-        "title": "양로원",
-        "desc": "어르신들을 위한 친숙한 성경 구절과 대화 – 태블릿으로 쉽게 접근."
-      },
-      "hospital": {
-        "title": "병원",
-        "desc": "어려운 시기의 환자를 위한 위로와 영적 돌봄 – 24시간 가능."
-      },
-      "prison": {
-        "title": "교도소 목회",
-        "desc": "수감자를 위한 희망과 영적 돌봄 – 24시간 비밀이 보장되는 동반자."
-      },
-      "military": {
-        "title": "Military Chaplaincy",
-        "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
-      }
-    }
-  },
-  "institutions": {
-    "badge": "For Institutions",
-    "heroTitle": "BibleBot for Your Institution",
-    "heroSubtitle": "Digital pastoral care for care homes, retirement homes, hospitals, and correctional facilities – personal, confidential, and around the clock.",
-    "typesTitle": "Who is BibleBot for?",
-    "useCasesTitle": "How BibleBot is Used",
-    "useCasesSubtitle": "Practical applications for daily life in your institution.",
-    "pricingTitle": "Patronage Packages",
-    "pricingSubtitle": "The same packages as for churches – adapted to institutional needs.",
-    "linkChurches": "Also available for churches",
-    "type": {
-      "careHome": {
-        "title": "Care Homes",
-        "desc": "Daily Bible impulses and companionship for residents – even when no chaplain is on site."
-      },
-      "seniorHome": {
-        "title": "Retirement Homes",
-        "desc": "Familiar Bible verses and conversations for seniors – easily accessible via tablet or smartphone."
-      },
-      "hospital": {
-        "title": "Hospitals",
-        "desc": "Comfort and spiritual support for patients in difficult times – available 24/7 at the bedside."
-      },
-      "prison": {
-        "title": "Prison Chaplaincy",
-        "desc": "Hope and spiritual support for inmates – a confidential companion around the clock."
-      },
-      "military": {
-        "title": "Military Chaplaincy",
-        "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
-      }
-    },
-    "useCase": {
-      "dailyImpulse": {
-        "title": "Daily Impulse",
-        "desc": "A Bible verse with reflection question every morning – lowers the barrier for spiritual conversations."
-      },
-      "companionship": {
-        "title": "Conversation Partner",
-        "desc": "BibleBot answers faith questions patiently and without time pressure – ideal for lonely hours."
-      },
-      "accessibility": {
-        "title": "Easy Access",
-        "desc": "Large text, simple tablet interface – also for people with limited mobility."
-      },
-      "availability": {
-        "title": "24/7 Available",
-        "desc": "Spiritual companionship at night and on weekends – when no chaplain is available."
-      }
-    },
-    "tierDesc": {
-      "free": "Basic access for residents and patients",
-      "community": "Mentioned as supporter, ad-free access",
-      "gemeinde": "Logo presence, monthly usage report",
-      "kirche": "Custom content, roadmap co-creation, premium support"
-    },
-    "form": {
-      "title": "Interested? Get in touch!",
-      "subtitle": "We'll get back to you within 48 hours.",
-      "name": "Your name",
-      "email": "Email address",
-      "institutionName": "Institution name",
-      "type": "Type of institution",
-      "typePlaceholder": "Please select...",
-      "tier": "Preferred package",
-      "tierPlaceholder": "Choose package...",
-      "message": "Your message",
-      "submit": "Send inquiry",
-      "success": "Inquiry sent! We'll be in touch soon. 🙏",
-      "error": "Error sending. Please try again."
-    },
-    "seniorHint": {
-      "title": "시니어 모드 사용 가능",
-      "desc": "더 큰 글씨와 간소화된 탐색 – 고령 거주자에게 이상적입니다.",
-      "cta": "시니어 모드 사용해 보기"
-    }
-  },
-  "refer": {
-    "badge": "Share God's Word",
-    "title": "Recommend BibleBot",
-    "subtitle": "Know someone who could use encouragement? Share BibleBot – one message can make a difference.",
-    "whatsapp": "Share via WhatsApp",
-    "whatsappMsg": "Hey, I wanted to show you BibleBot – a free Bible companion that really knows the Bible and asks great questions. No login, anonymous, honest. Try it out: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
-    "telegram": "Share via Telegram",
-    "telegramMsg": "Hey, do you know BibleBot? A free personal Bible companion – honest, anonymous, no login needed. Check it out: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
-    "email": "Share via email",
-    "emailSubject": "This might interest you: BibleBot.Life",
-    "emailBody": "Hi!\n\nI wanted to show you BibleBot – a free Bible companion that really knows the Bible. No sign-up needed, completely anonymous.\n\nIt asks thoughtful questions, explains Bible passages in context and accompanies you honestly – even on difficult topics.\n\nTry it out: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nBest wishes",
-    "copy": "Copy link",
-    "copied": "Link copied! 📋",
-    "qr": "Or just show this QR code:"
-  },
-  "share": {
-    "label": "Share",
-    "shareVia": "Share via",
-    "copied": "Copied! 📋",
-    "copiedShort": "Copied!",
-    "copiedDesc": "Text copied to clipboard. Share it on WhatsApp, Instagram or wherever you like!",
-    "copyLink": "Copy text",
-    "error": "Copy failed",
-    "impulseTitle": "BibleBot – Impulse of the Day",
-    "chatTitle": "BibleBot – Thought of the Day",
-    "createImage": "Create image ✨",
-    "generating": "Creating…",
-    "imageReady": "Your image is ready to share!",
-    "shareImage": "Share image",
-    "download": "Save",
-    "imageError": "Image creation failed",
-    "imageErrorDesc": "The image could not be created. Please try again later.",
-    "imageSaved": "Text copied! 📋",
-    "imageSavedDesc": "Save the image and share it with the copied text on Instagram, WhatsApp or wherever you like!"
   }
 }

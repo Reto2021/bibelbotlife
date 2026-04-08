@@ -1,8 +1,8 @@
 {
   "nav": {
-    "startNow": "Malite"
+    "startNow": "Bidozie Ugbu a"
   },
-  "loader": "Na-ebugo…",
+  "loader": "Na-ebunata…",
   "hero": {
     "badge": {
       "noLogin": "Enweghị nbanye",
@@ -10,287 +10,709 @@
       "noJudgment": "Enweghị ikpe"
     },
     "title1": "Akwụkwọ Nsọ.",
-    "title2": " Echegharịrị.",
-    "subtitle": "BibleBot maara Akwụkwọ Nsọ – ma na-ajụ ajụjụ kwesịrị ekwesị. Ọ bụghị mmadụ, mana ọ bụ enyi eziokwu.",
+    "title2": " Echiche ọhụrụ.",
+    "subtitle": "BibleBot gị maara Akwụkwọ Nsọ – ma na-ajụ ajụjụ ziri ezi. Ọ bụghị mmadụ, kama ọ bụ ezigbo onye enyi. Maka mkparịta ụka dị mma, ajụjụ miri emi na mkpali n'ezie.",
     "ctaTelegram": "Bido site na Telegram",
     "ctaMore": "Mụtakwuo",
-    "quote": "\"Come to me, all you who are weary and burdened, and I will give you rest.\"",
-    "quoteRef": "– Matthew 11:28"
+    "quote": "«Bịakwutenụ m, unu niile na-arụgbu onwe unu ma na-ebu ibu; m ga-enye unu ume ọhụrụ.»",
+    "quoteRef": "– Matiu 11,28"
   },
   "impulse": {
-    "loading": "Loading daily impulse...",
-    "label": "Impulse of the Day",
-    "deepDive": "What does this mean for me?",
-    "explore": "Read full passage"
+    "loading": "Na-ebunata mkpali ụbọchị...",
+    "label": "Mkpali nke ụbọchị",
+    "deepDive": "Gịnị ka nke a pụtara nye m?",
+    "explore": "Gụọ akụkụ niile"
   },
   "features": {
-    "sectionTitle": "How BibleBot accompanies you",
-    "sectionSubtitle": "Discover the many ways BibleBot can walk alongside you",
+    "sectionTitle": "Otu BibleBot gị si akwado gị",
+    "sectionSubtitle": "Chọpụta ụzọ dị iche iche BibleBot gị nwere ike isi kwado gị",
     "bible": {
-      "title": "Bible passages & interpretation",
-      "desc": "Ask \"What does the Bible say about...?\" and receive relevant verses with context and clear explanation."
+      "title": "Akwụkwọ Nsọ & Nkọwa",
+      "desc": "Jụọ «Gịnị ka Akwụkwọ Nsọ na-ekwu banyere...?» ma nweta amaokwu kwesịrị ekwesị na ihe gbara ya gburugburu na nkọwa doro anya."
     },
     "goals": {
-      "title": "Life planning & goals",
-      "desc": "Discover your calling, set concrete goals, and find out what God might have in store for you."
+      "title": "Atụmatụ Ndụ & Ntọala Ebumnuche",
+      "desc": "Chọpụta ọkpụkpọ gị, setịpụ ebumnuche doro anya ma chọpụta ihe Chineke nwere ike ịnwe maka gị."
     },
     "self": {
-      "title": "Finding yourself",
-      "desc": "Recognize your gifts, strengths, and longings – and what your heart truly needs."
+      "title": "Chọta onwe gị",
+      "desc": "Chọpụta onyinye gị, ike gị na ọchịchọ gị – na ihe obi gị chọrọ n'ezie."
     },
     "faith": {
-      "title": "Faith journey & finding Christ",
-      "desc": "Whether seeking, doubting, or deepening – BibleBot accompanies you on your personal path."
+      "title": "Njem Okwukwe & Ịchọta Kraịst",
+      "desc": "Ma ị na-achọ, na-enwe obi abụọ ma ọ bụ na-eme ka ọ dị omimi – BibleBot gị na-eso gị na njem nke gị."
     },
     "daily": {
-      "title": "Daily impulses & church year",
-      "desc": "Start your day with impulses and let BibleBot guide you through Advent, Lent, and holidays."
+      "title": "Mkpali Ụbọchị & Afọ Chọọchị",
+      "desc": "Bido ụbọchị gị na mkpali ma hapụ onwe gị ka e duzie gị site na Advent, Lent na ezumike."
     },
     "groups": {
-      "title": "Groups & communities",
-      "desc": "Perfect for Bible study groups, church communities, and shared devotions."
+      "title": "Otu & Ọgbakọ",
+      "desc": "Zuru oke maka okirikiri Akwụkwọ Nsọ, otu ọgbakọ na ofufe obodo."
     }
   },
   "coaching": {
-    "badge": "Methodology",
-    "title": "Not just a chatbot – genuine companionship",
-    "subtitle": "BibleBot combines biblical wisdom with proven coaching methods and Positive Psychology.",
-    "journeyTitle": "Personal companionship",
-    "journeyDesc": "BibleBot accompanies you as long as you wish – in free conversation or with an optional 21-day structure.",
-    "week1": "Week 1: Arriving",
-    "week1Desc": "Building trust, listening, understanding your situation. Where are you? What concerns you?",
-    "week2": "Week 2: Deepening",
-    "week2Desc": "Recognizing patterns, clarifying desires, deepening biblical impulses. What do you really want?",
-    "week3": "Week 3: Acting",
-    "week3Desc": "Taking concrete steps, setting goals, initiating change. What's your next step?",
-    "openQuestionsTitle": "Open questions instead of quick answers",
-    "openQuestionsDesc": "BibleBot doesn't give cheap advice. Instead, it asks the questions that truly matter:",
-    "openQ1": "\"What's really behind this desire?\"",
-    "openQ2": "\"How would you know something has changed?\"",
-    "openQ3": "\"What would be a first small step?\"",
-    "honestTitle": "Honest instead of toxic positivity",
-    "honestDesc": "No \"It'll be fine!\" and no sugarcoating. BibleBot is empathetic AND honest:",
-    "honest1": "Also addresses uncomfortable Bible passages",
-    "honest2": "Challenges you to self-reflection",
-    "honest3": "Distinguishes comfort from avoidance",
-    "scienceTitle": "Scientifically grounded",
+    "badge": "Ụzọ e si eme ihe",
+    "title": "Ọ bụghị naanị chatbot – ezigbo onye enyi",
+    "subtitle": "BibleBot gị na-ejikọta amamihe Akwụkwọ Nsọ na usoro nkuzi a nwapụtara na Positive Psychology.",
+    "journeyTitle": "Nkwado Onwe Onye",
+    "journeyDesc": "BibleBot gị na-eso gị ogologo oge ị chọrọ – na mkparịta ụka n'efu ma ọ bụ na nhọrọ nhazi ụbọchị 21.",
+    "week1": "Izu 1: Ịbata",
+    "week1Desc": "Iwulite ntụkwasị obi, ige ntị, ịghọta ọnọdụ gị. Ebee ka ị kwụ? Gịnị na-enye gị nsogbu?",
+    "week2": "Izu 2: Ịme ka ọ dị omimi",
+    "week2Desc": "Ịchọpụta ụkpụrụ, ịkọwa ọchịchọ, ime ka mkpali Akwụkwọ Nsọ dị omimi. Gịnị ka ị chọrọ n'ezie?",
+    "week3": "Izu 3: Ime ihe",
+    "week3Desc": "Ịme ihe doro anya, ịhazi ebumnuche, ịmalite mgbanwe. Gịnị bụ nzọụkwụ gị ọzọ?",
+    "openQuestionsTitle": "Ajụjụ mepere emepe kama ịza ngwa ngwa",
+    "openQuestionsDesc": "BibleBot gị anaghị enye gị ndụmọdụ dị ọnụ ala. Kama, ọ na-ajụ ajụjụ ndị dị mkpa n'ezie:",
+    "openQ1": "«Gịnị n'ezie dị n'azụ ọchịchọ a?»",
+    "openQ2": "«Gịnị ka ị ga-achọpụta na ihe agbanweela?»",
+    "openQ3": "«Gịnị ga-abụ obere nzọụkwụ mbụ?»",
+    "honestTitle": "Eziokwu kama ịbụ onye na-ekwu okwu ọma",
+    "honestDesc": "Enweghị «Ọ ga-adị mma!» na enweghị ịma mma. BibleBot gị nwere mmetụta na eziokwu:",
+    "honest1": "Na-akpọkwa amaokwu Akwụkwọ Nsọ na-adịghị mma",
+    "honest2": "Na-agba ume ịtụgharị uche n'onwe ya",
+    "honest3": "Na-eme ka nkasi obi dị iche na nkwụsị",
+    "scienceTitle": "N'ụzọ sayensị",
     "perma": {
-      "name": "PERMA Model",
+      "name": "PERMA-Model",
       "author": "Seligman",
-      "desc": "Positive emotions, meaning & growth"
+      "desc": "Mmetụta dị mma, ihe ọ pụtara & uto"
     },
     "logo": {
       "name": "Logotherapy",
       "author": "Frankl",
-      "desc": "Finding meaning in difficult times"
+      "desc": "Ịchọta ihe ọ pụtara n'oge ihe isi ike"
     },
     "gratitude": {
-      "name": "Gratitude",
+      "name": "Ekele",
       "author": "Emmons",
-      "desc": "Research-based gratitude practice"
+      "desc": "Omume ekele dabere na nyocha"
     },
     "forgiveness": {
-      "name": "Forgiveness",
+      "name": "Mgbaghara",
       "author": "Worthington",
-      "desc": "REACH model for forgiveness processes"
+      "desc": "REACH-Model maka usoro mgbaghara"
     },
-    "renameTip": "💡 You can give your BibleBot a personal name – so it truly becomes <strong>your</strong> companion."
+    "renameTip": "💡 Ị nwere ike inye BibleBot gị aha nke gị – ka ọ bụrụ onye enyi gị n'ezie."
   },
   "discover": {
-    "badge": "For the curious",
-    "title": "Rediscover faith – without pressure",
-    "subtitle": "More and more people are asking the big questions anew. BibleBot.Life is for everyone who wants to (re)discover faith – honestly, without pathos, and without church jargon.",
+    "badge": "Maka ndị na-achọ ịmata ihe",
+    "title": "Chọpụta okwukwe ọhụrụ – na-enweghị nrụgide",
+    "subtitle": "Ọtụtụ mmadụ na-ajụ ajụjụ ndị dị ukwuu ọhụrụ. BibleBot.Life bụ maka onye ọ bụla chọrọ (ịghọta) okwukwe ọzọ – n'eziokwu, na-enweghị pathos na na-enweghị okwu chọọchị.",
     "doubt": {
-      "title": "You doubt?",
-      "text": "Good. Doubt isn't a flaw – it's the beginning of honest faith. The Bible is full of people who wrestled."
+      "title": "Ị na-enwe obi abụọ?",
+      "text": "Ọ dị mma. Obi abụọ abụghị mmejọ – ha bụ mmalite nke ezi okwukwe. Akwụkwọ Nsọ jupụtara na ndị mmadụ lụrụ ọgụ."
     },
     "search": {
-      "title": "You're searching?",
-      "text": "Maybe you don't even know what for. That's perfectly fine. BibleBot helps you ask the right questions – instead of delivering quick answers."
+      "title": "Ị na-achọ?",
+      "text": "Ikekwe ị maghị ihe ị na-achọ. Nke ahụ dị mma. BibleBot gị na-enyere gị aka ịjụ ajụjụ ziri ezi – kama ịza ngwa ngwa."
     },
     "deepen": {
-      "title": "You want to go deeper?",
-      "text": "You already believe, but want to understand more? Discover the depth of the Bible – historical, personal, surprisingly relevant."
+      "title": "Ị chọrọ ime ka ọ dị omimi?",
+      "text": "Ị kwere na, mana ị chọrọ ịghọta karịa? Chọpụta omimi nke Akwụkwọ Nsọ – akụkọ ihe mere eme, nke onwe, dị mkpa n'ụzọ dị ịtụnanya."
     },
-    "quote": "\"Ask, and it will be given to you; seek, and you will find; knock, and the door will be opened.\"",
-    "quoteRef": "– Matthew 7:7",
-    "quoteText": "Many of us don't talk much about faith. That's okay. But those with questions deserve honest answers – without sermons, without membership, without ulterior motives."
+    "quote": "«Kụọ aka, a ga-emeghekwara gị.»",
+    "quoteRef": "– Matiu 7,7",
+    "quoteText": "Na Switzerland, anyị anaghị ekwu ọtụtụ ihe banyere okwukwe. Nke ahụ adịghị mkpa. Mana onye ọ bụla nwere ajụjụ kwesịrị azịza ziri ezi – na-enweghị nkwusa, na-enweghị otu, na-enweghị ebumnuche zoro ezo."
   },
   "subscribe": {
-    "title": "Daily Bible impulse",
-    "subtitle": "Every morning at 7:00 AM – a verse, a thought, a good start.",
-    "firstName": "Your first name",
-    "firstNameOptional": "(optional)",
-    "firstNamePlaceholder": "e.g. Thomas",
-    "firstNameHint": "So we can greet you personally.",
-    "channelLabel": "How would you like to receive the impulse?",
+    "title": "Mkpali Akwụkwọ Nsọ kwa ụbọchị",
+    "subtitle": "Kwa ụtụtụ n'elekere 07:00 – amaokwu, echiche, mmalite dị mma.",
+    "firstName": "Aha mbụ gị",
+    "firstNameOptional": "(nhọrọ)",
+    "firstNamePlaceholder": "dịka Thomas",
+    "firstNameHint": "Ka anyị wee nwee ike ikele gị n'onwe gị.",
+    "channelLabel": "Kedu ka ị ga-esi nweta mkpali ahụ?",
     "push": "Push",
-    "pushDesc": "Browser notification",
+    "pushDesc": "Ọkwa ihe nchọgharị",
     "telegram": "Telegram",
-    "telegramDesc": "Message via Telegram",
+    "telegramDesc": "Ozi site na Telegram",
     "sms": "SMS",
-    "smsDesc": "Text to your phone",
-    "phoneLabel": "Phone number",
-    "phonePlaceholder": "+1 555 123 4567",
-    "phoneHint": "With country code, e.g. +1 for the US.",
-    "telegramHint": "Click \"Subscribe\" – you'll be redirected to Telegram. Start the bot and type <strong>/daily</strong> to activate the daily impulse.",
-    "pushHint": "After clicking \"Subscribe\", your browser will ask for notification permission. Please allow it to receive the impulse.",
-    "submit": "Subscribe",
-    "submitting": "Subscribing...",
-    "footNote": "No login required. Cancel anytime.",
-    "successTitle": "You're subscribed! 🙏",
-    "successText": "Starting tomorrow at 7:00 AM, you'll receive your personal Bible impulse.",
-    "toastTelegram": "Telegram opened 🙏",
-    "toastTelegramDesc": "Start the bot and type /daily to activate the daily impulse.",
-    "toastSuccess": "Subscribed! 🙏",
-    "toastSuccessDesc": "You'll receive your daily impulse starting tomorrow.",
-    "toastPushPreview": "Push subscription not available in preview",
-    "toastPushPreviewDesc": "Push notifications only work on the published site.",
-    "toastNotSupported": "Not supported",
-    "toastNotSupportedDesc": "Your browser does not support push notifications.",
-    "toastPermDenied": "Permission denied",
-    "toastPermDeniedDesc": "Please allow notifications in your browser settings.",
-    "toastError": "Error",
-    "toastErrorDesc": "Please try again later."
+    "smsDesc": "SMS na ekwentị gị",
+    "phoneLabel": "Nọmba ekwentị",
+    "phonePlaceholder": "+41 79 123 45 67",
+    "phoneHint": "Na koodu obodo, dịka +41 maka Switzerland.",
+    "telegramHint": "Pịa «Debanye aha» – a ga-ebugharị gị na Telegram. Bido bot ahụ ebe ahụ ma dee ** /daily ** iji rụọ ọrụ mkpali kwa ụbọchị.",
+    "pushHint": "Mgbe ịpịrị «Debanye aha», ihe nchọgharị gị ga-ajụ maka ikike maka ọkwa. Biko kwe ka ha nweta mkpali ahụ.",
+    "submit": "Debanye aha",
+    "submitting": "Na-edebanye aha...",
+    "footNote": "Enweghị nbanye achọrọ. Enwere ike ịkagbu ya n'oge ọ bụla.",
+    "successTitle": "Ị debanyere aha! 🙏",
+    "successText": "Site n'ụtụtụ echi n'elekere 07:00, ị ga-enweta mkpali Akwụkwọ Nsọ nke gị.",
+    "toastTelegram": "Telegram mepere 🙏",
+    "toastTelegramDesc": "Bido bot ahụ ma dee /daily iji rụọ ọrụ mkpali kwa ụbọchị.",
+    "toastSuccess": "Debanyere aha! 🙏",
+    "toastSuccessDesc": "Ị ga-enweta mkpali gị kwa ụbọchị site n'ụtụtụ echi.",
+    "toastPushPreview": "Push-Abo adịghị na nlele",
+    "toastPushPreviewDesc": "Ọkwa push na-arụ ọrụ naanị na ibe e bipụtara.",
+    "toastNotSupported": "Anaghị akwado ya",
+    "toastNotSupportedDesc": "Ihe nchọgharị gị anaghị akwado ọkwa push.",
+    "toastPermDenied": "Ikike jụrụ",
+    "toastPermDeniedDesc": "Biko kwe ka ọkwa na ntọala ihe nchọgharị gị.",
+    "toastError": "Njehie",
+    "toastErrorDesc": "Biko gbalịa ọzọ ma emechaa."
   },
   "faq": {
-    "badge": "FAQ",
-    "title": "What you should know about BibleBot",
-    "subtitle": "Transparency matters – especially for theologians, pastors, and critical thinkers.",
-    "q1": "What makes BibleBot different from ChatGPT & Co.?",
-    "q1Generic": "Generic chatbots:",
+    "badge": "Ajụjụ a na-ajụkarị",
+    "title": "Ihe ị kwesịrị ịma gbasara BibleBot gị",
+    "subtitle": "Ịdị n'otu dị mkpa nye anyị – ọkachasị maka ndị ọkà mmụta okpukpe, ndị ndụmọdụ na ndị nwere uche dị oke egwu.",
+    "q1": "Gịnị na-eme ka BibleBot gị dị iche na ChatGPT & Co.?",
+    "q1Generic": "Chatbots izugbe:",
     "q1GenericItems": [
-      "Superficial Bible quotes without context",
-      "No pastoral guardrails",
-      "Avoids uncomfortable texts",
-      "No crisis intervention",
-      "Mixes Bible with esotericism",
-      "No follow-up questions – just confirmation"
+      "Amaokwu Akwụkwọ Nsọ na-adịghị omimi na-enweghị ihe gbara ya gburugburu",
+      "Enweghị nchekwa ndụmọdụ",
+      "Na-ezere ederede na-adịghị mma",
+      "Enweghị ntinye aka n'oge nsogbu",
+      "Na-agwakọta Akwụkwọ Nsọ na esotericism",
+      "Enweghị ajụjụ – naanị nkwenye"
     ],
     "q1Bot": "BibleBot.Life:",
     "q1BotItems": [
-      "5 recognized translations – including uncomfortable passages",
-      "Guardrails AND challenging companionship",
-      "Follow-up questions for self-reflection",
-      "Crisis referrals (emergency helplines)",
-      "Exclusively Christian theology",
-      "Promotes critical thinking as faith maturity"
+      "Ntụgharị asụsụ 5 a ma ama – ọbụna ebe ndị na-adịghị mma",
+      "Nchekwa na nkwado siri ike",
+      "Ajụjụ maka ịtụgharị uche n'onwe ya",
+      "Ntụaka nsogbu (Tel. 143 / 147)",
+      "Naanị nkà mmụta okpukpe Ndị Kraịst",
+      "Na-akwalite echiche dị oke egwu dị ka ntozu okwukwe"
     ],
-    "q2": "Which Bible translations are included?",
-    "q2Intro": "BibleBot works ecumenically with the major German-language Bible editions:",
-    "q2Outro": "All Bible passages include source citations and historical context.",
-    "q3": "What scientific foundations are behind it?",
-    "q3Intro": "The companionship is based on peer-reviewed research in Positive Psychology:",
-    "q4": "How does BibleBot ensure pastoral safety?",
+    "q2": "Kedu ntụgharị asụsụ Akwụkwọ Nsọ ka e debere?",
+    "q2Intro": "BibleBot gị na-arụ ọrụ n'ụzọ dị iche iche na mbipụta Akwụkwọ Nsọ German dị mkpa:",
+    "q2Outro": "A na-enye amaokwu Akwụkwọ Nsọ niile na ntụaka isi iyi na ihe gbara ya gburugburu n'akụkọ ihe mere eme.",
+    "q3": "Kedu ihe ndabere sayensị dị n'azụ ya?",
+    "q3Intro": "Nkwado ahụ dabere na nyocha ndị ọgbọ nyochara nke Positive Psychology:",
+    "q4": "Kedu ka BibleBot gị si hụ na nchekwa ndụmọdụ?",
     "q4Items": [
-      "Suicidal thoughts or crisis → immediate referral to emergency helplines",
-      "No psychological or medical diagnoses",
-      "Respect without arbitrariness – clear biblical positions are taken",
-      "Empathy AND honesty – uncomfortable topics are addressed",
-      "Follow-up questions for self-reflection instead of cheap validation",
-      "No toxic positivity – genuine, honest companionship",
-      "Openly names tensions and difficult texts"
+      "Maka echiche igbu onwe ma ọ bụ nsogbu → ntinye aka ozugbo na Dargebotene Hand (143) na Pro Juventute (147)",
+      "Enweghị nyocha uche ma ọ bụ ahụike",
+      "Nkwanye ùgwù na-enweghị enweghị usoro – a na-ewere ọnọdụ Akwụkwọ Nsọ doro anya",
+      "Mmetụta na eziokwu – a na-ekwukwa okwu ndị na-adịghị mma",
+      "Ajụjụ maka ịtụgharị uche n'onwe ya kama nkwenye dị ọnụ ala",
+      "Enweghị ịdị mma na-egbu egbu – ezigbo nkwado, n'eziokwu",
+      "Na-akpọ esemokwu na ederede siri ike n'ihu ọha"
     ],
-    "q5": "Is BibleBot tied to a specific denomination?",
-    "q5Answer": "No. BibleBot is ecumenically oriented and respects Reformed, Catholic, Free Church, and other Christian traditions equally. When there are denominational differences in interpretation, various perspectives are presented transparently – without favoring any tradition.",
-    "q6": "Does BibleBot replace pastoral care or therapy?",
-    "q6Answer": "No. BibleBot is a digital tool for personal Bible reading and reflection. It does not replace professional pastoral care, theological counseling, or psychological therapy. In serious crises, BibleBot always refers to qualified resources.",
-    "q7": "Isn't BibleBot just a 'feel-good bot'?",
-    "q7Answer": "No. BibleBot comforts where comfort is needed – but it also challenges. Spiritual growth requires friction. BibleBot asks uncomfortable follow-up questions, names difficult Bible texts (Job, Lament Psalms, prophetic criticism), and doesn't shy away from topics like justice, repentance, and responsibility. The prophetic tradition was never comfortable – and neither is BibleBot.",
-    "q8": "Who is behind BibleBot and how is it funded?",
-    "q8Answer": "BibleBot.Life is a private, non-commercial project. It's run on a volunteer basis and funded exclusively through voluntary donations. There's no advertising, no data sales, and no paid features. All donations go directly to covering operating costs (infrastructure, hosting, development). Since BibleBot is a private project, donations are not tax-deductible.",
-    "q9": "How does BibleBot handle my data?",
-    "q9Answer": "BibleBot stores no personal data and no chat histories. Every conversation is anonymous. There's no login, no tracking, and no sharing of data with third parties. Usage is completely anonymous."
+    "q5": "BibleBot gị ọ na-ejikọta na okpukperechi?",
+    "q5Answer": "Mba. BibleBot gị na-elekwasị anya na okpukperechi ma na-akwanyere omenala Ndị Kraịst gbanwere, Katọlik, ụka efu na ndị ọzọ ùgwù n'otu aka ahụ. N'ihe gbasara nkọwa dị iche iche nke okpukperechi, a na-egosipụta echiche dị iche iche n'ụzọ doro anya – na-enweghị ịhọrọ otu omenala.",
+    "q6": "BibleBot gị ọ na-anọchi ndụmọdụ ma ọ bụ ọgwụgwọ?",
+    "q6Answer": "Mba. BibleBot gị bụ ngwaọrụ dijitalụ maka ịgụ Akwụkwọ Nsọ na ịtụgharị uche n'onwe ya. Ọ naghị anọchi ndụmọdụ ọkachamara, ndụmọdụ nkà mmụta okpukpe ma ọ bụ ọgwụgwọ uche. N'ihe gbasara nsogbu siri ike, BibleBot gị na-ezo aka mgbe niile na ebe enyemaka ruru eru.",
+    "q7": "BibleBot gị ọ bụghị naanị «bot na-adị mma»?",
+    "q7Answer": "Mba. BibleBot gị na-akasi obi ebe a chọrọ nkasi obi – mana ọ na-agbakwa ume. Uto ime mmụọ chọrọ esemokwu. BibleBot gị na-ajụ ajụjụ na-adịghị mma, na-akpọ ederede Akwụkwọ Nsọ siri ike (Job, Abụ Ọma mkpesa, nkatọ amụma) ma anaghị atụ egwu isiokwu dị ka ikpe ziri ezi, nchegharị na ọrụ. Omenala amụma adịghị adị mma – BibleBot gị adịghịkwa.",
+    "q8": "Ònye nọ n'azụ BibleBot gị na olee otu e si enweta ego?",
+    "q8Answer": "BibleBot.Life bụ ọrụ nkeonwe, na-abụghị nke azụmahịa. A na-arụ ya n'afọ ofufo ma na-enweta ego naanị site na onyinye afọ ofufo. Enweghị mgbasa ozi, enweghị ire data na enweghị atụmatụ akwụ ụgwọ. Onyinye niile na-aga ozugbo iji kpuchie ụgwọ ọrụ (akụrụngwa, nnabata, mmepe). Ebe ọ bụ na BibleBot na-agba ọsọ dị ka ọrụ nkeonwe, onyinye anaghị ewepụ ụtụ isi.",
+    "q9": "Kedu ka BibleBot gị si eji data m?",
+    "q9Answer": "BibleBot gị anaghị echekwa data nkeonwe ma ọ bụ akụkọ mkparịta ụka. Mkparịta ụka ọ bụla bụ nke amaghị aha. Enweghị nbanye, enweghị nyocha na enweghị nkesa data na ndị ọzọ. Ojiji ahụ bụ nke amaghị aha kpamkpam."
   },
   "donate": {
-    "badge": "Support BibleBot",
-    "title": "Help keep BibleBot free",
-    "subtitle": "BibleBot is a passion project – no ads, no subscriptions, no hidden costs. To keep it that way, I rely on voluntary donations. Every contribution helps cover the ongoing costs for operations and infrastructure.",
-    "bankTitle": "Donate via bank transfer",
-    "bankSubtitle": "Every amount counts – thank you! 🙏",
-    "recipient": "Recipient",
-    "bank": "Bank",
-    "purpose": "Reference",
-    "purposeValue": "Donation BibleBot",
-    "note": "BibleBot.Life is operated as a private project. Donations are therefore not tax-deductible."
+    "badge": "Kwado BibleBot gị",
+    "title": "Nyere aka mee ka BibleBot gị nweere onwe ya",
+    "subtitle": "BibleBot gị bụ ọrụ obi – na-enweghị mgbasa ozi, na-enweghị ndenye aha, na-enweghị ụgwọ zoro ezo. Ka nke a wee dịgide, m dabere na onyinye afọ ofufo. Onyinye ọ bụla na-enyere aka kpuchie ụgwọ ọrụ na akụrụngwa.",
+    "bankTitle": "Nye onyinye site na nnyefe ụlọ akụ",
+    "bankSubtitle": "Ọnụ ego ọ bụla dị mkpa – ekele dị ukwuu! 🙏",
+    "recipient": "Onye nnata",
+    "bank": "Ụlọ akụ",
+    "purpose": "Ebumnuche",
+    "purposeValue": "Onyinye BibleBot",
+    "note": "A na-arụ BibleBot.Life dị ka ọrụ nkeonwe. Ya mere, onyinye anaghị ewepụ ụtụ isi."
+  },
+  "refer": {
+    "badge": "Kekọrịta Okwu Chineke",
+    "title": "Gwa ndị ọzọ gbasara BibleBot",
+    "subtitle": "Ị maara onye chọrọ agbamume ugbu a? Kekọrịta BibleBot – otu ozi nwere ike ime ọtụtụ ihe.",
+    "whatsapp": "Kekọrịta site na WhatsApp",
+    "whatsappMsg": "Hey, achọrọ m igosi gị BibleBot – onye enyi Akwụkwọ Nsọ n'efu nke maara Akwụkwọ Nsọ ma na-ajụ ajụjụ dị mma n'ezie. Enweghị nbanye, amaghị aha, n'eziokwu. Gbalịa ya: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "telegram": "Kekọrịta site na Telegram",
+    "telegramMsg": "Hey, ị maara BibleBot? Onye enyi Akwụkwọ Nsọ nkeonwe n'efu – n'eziokwu, amaghị aha, na-enweghị nbanye. Lelee ya: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "email": "Kekọrịta site na Email",
+    "emailSubject": "Nke a nwere ike ịmasị gị: BibleBot.Life",
+    "emailBody": "Ndewo!\n\nAchọrọ m igosi gị BibleBot – onye enyi Akwụkwọ Nsọ n'efu nke maara Akwụkwọ Nsọ n'ezie. Enweghị ndebanye aha achọrọ, amaghị aha kpamkpam.\n\nỌ na-ajụ ajụjụ dị mma, na-akọwa amaokwu Akwụkwọ Nsọ na ihe gbara ya gburugburu ma na-eso gị n'eziokwu – ọbụna na isiokwu siri ike.\n\nGbalịa ya: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nEkele dị ukwuu",
+    "copy": "Detuo njikọ",
+    "copied": "Njikọ e depụtaghachiri! 📋",
+    "qr": "Ma ọ bụ naanị gosi koodu QR a:"
   },
   "cta": {
-    "title": "You don't have to go through this alone",
-    "subtitle": "Just tell BibleBot what's on your mind. No login, no cost, no judgment – just honest companionship and the wisdom of the Bible.",
-    "button": "Start a conversation"
+    "title": "Ịkwesighi ime nke a naanị gị",
+    "subtitle": "Naanị gwa BibleBot gị ihe na-enye gị nsogbu. Enweghị nbanye, enweghị ụgwọ, enweghị ikpe – naanị ezi nkwado na amamihe nke Akwụkwọ Nsọ.",
+    "button": "Bido mkparịta ụka ugbu a"
   },
   "footer": {
-    "tagline": "Your personal companion for a life with the Bible",
-    "disclaimer": "BibleBot.Life is a digital tool and does not replace professional pastoral care, theological counseling, or psychological therapy. In acute crises, please contact your local emergency helpline.",
-    "impressum": "Imprint",
-    "notes": "Notes",
-    "private": "Private, non-commercial project",
-    "noChat": "No storage of chat data",
-    "noTax": "Donations are not tax-deductible",
-    "datenschutz": "Privacy Policy",
-    "love": "With ❤️ for everyone wondering what Christ thinks.",
-    "forChurches": "For Churches"
+    "tagline": "Onye enyi gị nkeonwe maka ndụ na Akwụkwọ Nsọ",
+    "disclaimer": "BibleBot.Life bụ ngwaọrụ dijitalụ ma anaghị anọchi ndụmọdụ ọkachamara, ndụmọdụ nkà mmụta okpukpe ma ọ bụ ọgwụgwọ uche. N'ihe gbasara nsogbu siri ike, BibleBot gị na-ezo aka mgbe niile na ebe enyemaka ruru eru.",
+    "impressum": "Impressum",
+    "notes": "Ihe ndetu",
+    "private": "Ọrụ nkeonwe, na-abụghị nke azụmahịa",
+    "noChat": "Enweghị nchekwa data mkparịta ụka",
+    "noTax": "Onyinye anaghị ewepụ ụtụ isi",
+    "datenschutz": "Nchekwa data",
+    "love": "Na ❤️ maka onye ọ bụla na-ajụ ihe Kraịst na-eche.",
+    "forChurches": "Maka Ọgbakọ"
   },
   "chat": {
-    "welcome": "Welcome! 🤗\n\nI'm your BibleBot – your personal companion with the Bible, good questions, and real impulses. No pressure, no judgment.\n\nYou can ask me anything – or just share what's on your mind. 💛",
-    "journeyOffer": "💡 **Tip:** I also offer a **21-day journey** – 3 weeks of daily impulses, reflections, and concrete steps. At your own pace.\n\nWould you like to try it?",
-    "suggestion1": "I need an uplifting word right now",
-    "suggestion2": "What does the Bible say when you feel uncertain?",
-    "suggestion3": "I want to find out what I really want",
-    "teaser": "What's on your mind? 💛",
-    "teaserSub": "I'm here – without any judgment.",
-    "openChat": "Open chat",
-    "closeChat": "Close chat",
-    "yourCompanion": "Your personal companion",
-    "journeyComplete": "21 days completed! 🎉",
-    "arriving": "Arriving",
-    "deepening": "Deepening",
-    "acting": "Acting",
-    "renameTip": "Tip: Click the name to rename me ✨",
-    "changeName": "Change name",
-    "placeholder": "Just start typing...",
-    "startVoice": "Start voice input",
-    "stopVoice": "Stop recording",
-    "noVoice": "Your browser does not support voice input.",
-    "writing": "typing...",
-    "shieldBadge": "No login · No judgment · Citations verified",
-    "journeyStart": "Yes, let's go ✨",
-    "journeyLater": "Maybe later",
-    "journeyStartMsg": "Yes, I'd like to start the 21-day journey!",
-    "qaChecking": "Checking citations...",
-    "qaIssue": "{{count}} issue with citations",
-    "qaIssue_plural": "{{count}} issues with citations",
-    "qaOk": "{{count}} citation verified ✓",
-    "qaOk_plural": "{{count}} citations verified ✓",
-    "qaWarning": "⚠️ Accuracy notes:",
-    "errorTooMany": "Too many requests – please wait a moment.",
-    "errorCredits": "AI quota exhausted.",
-    "errorConnect": "Connection error.",
-    "errorTitle": "Error",
-    "errorConnection": "could not be reached.",
-    "errorNoStream": "No stream",
-    "seniorMode": "Senior mode (larger text)",
-    "teaserCta": "Start writing →",
-    "namePlaceholder": "e.g. Eli, Miriam…"
+    "welcome": "Ọ dị mma na ị nọ ebe a 🤗\n\nAbụ m BibleBot gị – onye enyi gị nkeonwe na Akwụkwọ Nsọ, ajụjụ dị mma na mkpali doro anya. Enweghị nrụgide, enweghị nyocha.\n\nỊ nwere ike ịjụ m ihe ọ bụla – ma ọ bụ naanị gwa m ihe na-enye gị nsogbu ugbu a. 💛",
+    "journeyOffer": "💡 **Ndụmọdụ:** Ana m enyekwa **nkwado ụbọchị 21** – izu 3 na mkpali kwa ụbọchị, ntụgharị uche na usoro doro anya. N'ụzọ nke gị kpamkpam.\n\nỊ ga-achọ ịnwale nke a?",
+    "suggestion1": "Achọrọ m okwu na-ewuli elu ugbu a",
+    "suggestion2": "Gịnị ka Akwụkwọ Nsọ na-ekwu mgbe mmadụ na-enwe obi abụọ?",
+    "suggestion3": "Achọrọ m ịchọpụta ihe m chọrọ n'ezie",
+    "teaser": "Gịnị na-enye gị nsogbu ugbu a? 💛",
+    "teaserSub": "Anọ m ebe a – na-enweghị nyocha.",
+    "teaserCta": "Dee ugbu a →",
+    "openChat": "Mepee mkparịta ụka",
+    "closeChat": "Mechie mkparịta ụka",
+    "yourCompanion": "Onye enyi gị nkeonwe",
+    "journeyComplete": "Ụbọchị 21 agwụla! 🎉",
+    "arriving": "Ịbata",
+    "deepening": "Ịme ka ọ dị omimi",
+    "acting": "Ime ihe",
+    "renameTip": "Nye m aha ✨",
+    "namePlaceholder": "dịka Eli, Miriam…",
+    "changeName": "Gbanwee aha",
+    "placeholder": "Naanị dee…",
+    "startVoice": "Bido ntinye olu",
+    "stopVoice": "Kwụsị ndekọ",
+    "noVoice": "Ihe nchọgharị gị anaghị akwado ntinye olu.",
+    "writing": "na-ede…",
+    "shieldBadge": "Enweghị nbanye · Enweghị ikpe · Amaokwu a nwapụtara",
+    "journeyStart": "Ee, bido ✨",
+    "journeyLater": "Ma eleghị anya ma emechaa",
+    "journeyStartMsg": "Ee, achọrọ m ịmalite nkwado ụbọchị 21!",
+    "qaChecking": "A na-enyocha amaokwu…",
+    "qaIssue": "{{count}} ndetu gbasara amaokwu",
+    "qaIssue_plural": "{{count}} ndetu gbasara amaokwu",
+    "qaOk": "{{count}} amaokwu a nwapụtara ✓",
+    "qaOk_plural": "{{count}} amaokwu a nwapụtara ✓",
+    "qaWarning": "⚠️ Ndụmọdụ gbasara izi ezi:",
+    "errorTooMany": "Ọtụtụ arịrịọ – biko chere obere oge.",
+    "errorCredits": "Oke AI agwụla.",
+    "errorConnect": "Njehie na-ejikọta.",
+    "errorTitle": "Njehie",
+    "errorConnection": "enweghị ike iru.",
+    "errorNoStream": "Enweghị iyi",
+    "seniorMode": "Ụdị agadi (nnukwu mkpụrụedemede)"
   },
   "install": {
-    "title": "Install BibleBot",
-    "androidDesc": "Quick access from your home screen",
-    "iosDesc": "Tap \"Share\" → \"Add to Home Screen\"",
-    "button": "Install",
-    "close": "Close"
+    "title": "Wụnye BibleBot",
+    "androidDesc": "Ịnweta ngwa ngwa ozugbo site na ihuenyo ụlọ",
+    "iosDesc": "Pịa «Kekọrịta» → «Na ihuenyo ụlọ»",
+    "button": "Wụnye",
+    "close": "Mechie"
+  },
+  "share": {
+    "label": "Kekọrịta",
+    "shareVia": "Kekọrịta site na",
+    "copied": "E depụtaghachiri! 📋",
+    "copiedShort": "E depụtaghachiri!",
+    "copiedDesc": "E depụtaghachiri ederede na clipboard. Kekọrịta ya ugbu a na WhatsApp, Instagram ma ọ bụ ebe ọ bụla ị chọrọ!",
+    "copyLink": "Detuo ederede",
+    "error": "Ịdepụtaghachi adaghị",
+    "impulseTitle": "BibleBot – Mkpali nke ụbọchị",
+    "chatTitle": "BibleBot – Echiche nke ụbọchị",
+    "createImage": "Mepụta onyonyo ✨",
+    "generating": "Na-emepụta…",
+    "imageReady": "Onyonyo gị adịla njikere maka ịkekọrịta!",
+    "shareImage": "Kekọrịta onyonyo",
+    "download": "Chekwaa",
+    "imageError": "Mepụta onyonyo adaghị",
+    "imageErrorDesc": "Enweghị ike ịmepụta onyonyo ahụ. Biko gbalịa ọzọ ma emechaa.",
+    "imageSaved": "E depụtaghachiri ederede! 📋",
+    "imageSavedDesc": "Chekwaa onyonyo ahụ ma kekọrịta ya na ederede e depụtaghachiri na Instagram, WhatsApp ma ọ bụ ebe ọ bụla ị chọrọ!"
   },
   "darkMode": {
-    "light": "Light mode",
-    "dark": "Dark mode"
+    "light": "Ụdị ọkụ",
+    "dark": "Ụdị gbara ọchịchịrị"
   },
   "impressum": {
-    "back": "Back to home",
-    "title": "Imprint"
+    "back": "Laghachi na ibe ụlọ",
+    "title": "Impressum"
   },
   "datenschutz": {
-    "back": "Back to home",
-    "title": "Privacy Policy"
+    "back": "Laghachi na ibe ụlọ",
+    "title": "Nkwupụta nzuzo"
+  },
+  "tiles": {
+    "sectionTitle": "Gịnị na-enye gị nsogbu?",
+    "sectionSubtitle": "Họrọ isiokwu — BibleBot ga-eso gị",
+    "baptism": {
+      "title": "Chọta amaokwu baptizim",
+      "desc": "Amaokwu zuru oke maka nwa gị",
+      "prompt": "Nyere m aka ịchọta amaokwu baptizim kwesịrị ekwesị. Kedu ụdị nwa ọ bụ na gịnị ka ndị nne na nna chọrọ?"
+    },
+    "condolence": {
+      "title": "Okwu nkasi obi",
+      "desc": "Nkwado maka nkasi obi & ịkwụsị",
+      "prompt": "Achọrọ m okwu nkasi obi maka kaadị iru uju. Ị nwere ike inyere m aka ịhazi ihe kwesịrị ekwesị?"
+    },
+    "wedding": {
+      "title": "Amaokwu agbamakwụkwọ",
+      "desc": "Okwu Akwụkwọ Nsọ maka ịhụnanya gị",
+      "prompt": "Anyị na-achọ amaokwu Akwụkwọ Nsọ mara mma maka agbamakwụkwọ anyị. Kedu amaokwu Akwụkwọ Nsọ dabara na ịhụnanya na mmekọrịta?"
+    },
+    "anxiety": {
+      "title": "Nchegbu & Nchegbu",
+      "desc": "Ịchọta obi ike n'oge ihe isi ike",
+      "prompt": "Ana m alụ ọgụ na nchegbu na nchegbu ugbu a. Gịnị ka Akwụkwọ Nsọ na-ekwu banyere nke a? Enwere amaokwu na-enye obi ike?"
+    },
+    "confession": {
+      "title": "Nkwupụta",
+      "desc": "Chineke na-agbaghara — kwuo ya",
+      "prompt": "Achọrọ m ikwu ihe na-enye m nsogbu. Gịnị ka Akwụkwọ Nsọ na-ekwu banyere mgbaghara na mmalite ọhụrụ?"
+    },
+    "heartbreak": {
+      "title": "Mgbaji obi",
+      "desc": "Ihe Akwụkwọ Nsọ na-ekwu banyere mgbaji obi",
+      "prompt": "Obi m agbajiela. Gịnị ka Akwụkwọ Nsọ na-ekwu banyere mgbaji obi na otu esi achọta olileanya ọzọ?"
+    },
+    "newstart": {
+      "title": "Mmalite ọhụrụ",
+      "desc": "Ike maka oge ọhụrụ na ndụ",
+      "prompt": "Ana m eche mmalite ọhụrụ ihu ma achọrọ m agbamume. Kedu amaokwu Akwụkwọ Nsọ na-ekwu banyere mmalite ọhụrụ?"
+    },
+    "namequiz": {
+      "title": "Ajụjụ baptizim",
+      "desc": "Chọta aha Akwụkwọ Nsọ kwesịrị ekwesị",
+      "prompt": "Ana m achọ aha Akwụkwọ Nsọ maka nwa m. Ị nwere ike inye m ụfọdụ aro ma kọwaa ihe ha pụtara?"
+    },
+    "sleepless": {
+      "title": "Enweghị ụra",
+      "desc": "Ịchọta izu ike n'abalị",
+      "prompt": "Enweghị m ike ihi ụra ma na-echegbu onwe m. Enwere ekpere ma ọ bụ Abụ Ọma na-akasi obi maka abalị?"
+    },
+    "loneliness": {
+      "title": "Ịnọ naanị ya",
+      "desc": "Ị nọghị naanị gị",
+      "prompt": "Ana m enwe owu ọmụma. Gịnị ka Akwụkwọ Nsọ na-ekwu banyere Chineke na-anọnyere anyị mgbe niile?"
+    },
+    "decision": {
+      "title": "Mkpebi siri ike",
+      "desc": "Amamihe maka ụzọ ziri ezi",
+      "prompt": "Ana m eche mkpebi siri ike ihu. Kedu amaokwu Akwụkwọ Nsọ na-enyere m aka ịchọta ụzọ ziri ezi?"
+    },
+    "gratitude": {
+      "title": "Ekele",
+      "desc": "Ekpere ekele nke onwe",
+      "prompt": "Achọrọ m ikele Chineke. Nyere m aka ịhazi ekpere ekele nke onwe."
+    },
+    "lifewheel": {
+      "title": "Ụkwụ ndụ",
+      "desc": "Kedu ka afọ juru gị n'ezie?"
+    },
+    "sevenwhys": {
+      "title": "7 Ihe mere",
+      "desc": "Chọta mgbọrọgwụ kachasị omimi nke ajụjụ gị",
+      "prompt": "Achọrọ m ime mmega ahụ 7-ihe mere. Nke a bụ isiokwu m:"
+    },
+    "anger": {
+      "title": "Iwe & Iwe",
+      "desc": "Mgbe iwe nwere ike ime ka ị gbawaa",
+      "prompt": "Ana m ewe iwe nke ukwuu ma amaghị m ebe m ga-etinye iwe m. Gịnị ka Akwụkwọ Nsọ na-ekwu banyere iwe na otu m ga-esi emeso ya?"
+    },
+    "shame": {
+      "title": "Ihere & Mmehie",
+      "desc": "Mgbe mmetụta ikpe mara na-emeri gị",
+      "prompt": "Ana m enwe ihere nke ukwuu ma na-enwe mmetụta ikpe mara. Gịnị ka Akwụkwọ Nsọ na-ekwu banyere mmehie, mgbaghara na mmalite ọhụrụ?"
+    },
+    "burnout": {
+      "title": "Burnout",
+      "desc": "Mgbe ị na-enweghị ike imezi ihe ọ bụla",
+      "prompt": "M ike gwụrụ m kpamkpam ma gbaa ọkụ. Enweghị m ike imezi ihe ọ bụla. Gịnị ka Akwụkwọ Nsọ na-ekwu banyere izu ike na ntụrụndụ?"
+    },
+    "illness": {
+      "title": "Ọrịa",
+      "desc": "Mgbe nyocha gbanwere ihe niile",
+      "prompt": "Enwetara m nyocha siri ike ma na-atụ egwu. Gịnị ka Akwụkwọ Nsọ na-ekwu banyere ọrịa, ọgwụgwọ na olileanya?"
+    },
+    "financial": {
+      "title": "Nchegbu ego",
+      "desc": "Mgbe ụgwọ na-enye nsogbu",
+      "prompt": "Enwere m nchegbu ego ma amaghị m ihe m ga-eme. Gịnị ka Akwụkwọ Nsọ na-ekwu banyere ego, ntụkwasị obi na inye?"
+    },
+    "meaningcrisis": {
+      "title": "Nsogbu ihe ọ pụtara",
+      "desc": "Gịnị kpatara ihe a niile?",
+      "prompt": "Ana m ajụ onwe m ihe ihe a niile dị mma. Ana m enwe nsogbu ihe ọ pụtara. Gịnị ka Akwụkwọ Nsọ na-ekwu banyere ihe ndụ pụtara?"
+    },
+    "selfdoubt": {
+      "title": "Obi abụọ onwe onye",
+      "desc": "Mgbe ị na-eche na ị dịghị mma",
+      "prompt": "Ana m enwe obi abụọ mgbe niile banyere onwe m ma na-eche na adịghị m mma. Gịnị ka Akwụkwọ Nsọ na-ekwu banyere uru m?"
+    },
+    "calling": {
+      "title": "Ọkpụkpọ",
+      "desc": "Gịnị ka m ga-eji ndụ m mee?",
+      "prompt": "Amaghị m ihe m ga-eji ndụ m mee. Nyere m aka ịchọta ọkpụkpọ m – gịnị ka Akwụkwọ Nsọ na-ekwu banyere nke a?"
+    },
+    "faithdoubt": {
+      "title": "Obi abụọ okwukwe",
+      "desc": "Mgbe okwukwe na-ama jijiji",
+      "prompt": "Enwere m obi abụọ banyere okwukwe m ma amaghị m ma m ka nwere ike ikwere. Gịnị ka Akwụkwọ Nsọ na-ekwu banyere obi abụọ?"
+    },
+    "forgiveness": {
+      "title": "Mgbaghara",
+      "desc": "Mgbe mgbaghara yiri ihe agaghị ekwe omume",
+      "prompt": "Enweghị m ike ịgbaghara onye ọ bụla. Ọ na-egbu mgbu nke ukwuu. Gịnị ka Akwụkwọ Nsọ na-ekwu banyere mgbaghara?"
+    },
+    "familyconflict": {
+      "title": "Esemokwu ezinụlọ",
+      "desc": "Mgbe esemokwu dị n'ezinụlọ",
+      "prompt": "Enwere nnukwu esemokwu n'ezinụlọ m. Gịnị ka Akwụkwọ Nsọ na-ekwu banyere udo ezinụlọ na ime udo?"
+    },
+    "envy": {
+      "title": "Ihe ọjọọ",
+      "desc": "Mgbe ndị ọzọ nwere ihe ka mma",
+      "prompt": "Ana m enwere ndị ọzọ anyaụfụ ma na-atụnyere onwe m mgbe niile. Gịnị ka Akwụkwọ Nsọ na-ekwu banyere anyaụfụ na afọ ojuju?"
+    },
+    "joy": {
+      "title": "Kekọrịta ọṅụ",
+      "desc": "Mgbe ihe dị ebube mere",
+      "prompt": "Ihe dị ebube mere m ma achọrọ m ịkekọrịta ọṅụ m! Gịnị ka Akwụkwọ Nsọ na-ekwu banyere ọṅụ na ekele?"
+    },
+    "prayer": {
+      "title": "Arịrịọ ekpere",
+      "desc": "Na-ekpe ekpere ọnụ",
+      "prompt": "Enwere m arịrịọ ekpere ma achọrọ m ikpe ekpere ọnụ. Soro m n'ekpere."
+    },
+    "bibleverse": {
+      "title": "Ghọta amaokwu",
+      "desc": "Nweta nkọwa amaokwu Akwụkwọ Nsọ",
+      "prompt": "Achọrọ m ịghọta amaokwu Akwụkwọ Nsọ nke ọma. Ị nwere ike inyere m aka itinye ya n'ihe gbara ya gburugburu?"
+    }
+  },
+  "lifeWheel": {
+    "title": "Ụkwụ ndụ gị",
+    "intro": "Tụlee mpaghara ndụ 8 na nha nke 1-10. Chọpụta ebe ị kwụ – ma nweta mkpali Akwụkwọ Nsọ maka mpaghara chọrọ nlebara anya.",
+    "start": "Bido ugbu a",
+    "sliderHint": "Bugharịa ihe mmịfe – 1 = afọ ojuju dị ukwuu, 10 = afọ ojuju dị ukwuu",
+    "showResult": "Gosi nsonaazụ",
+    "average": "Nkezi",
+    "weakestArea": "Nnukwu mkpa",
+    "getImpulse": "Mkpali Akwụkwọ Nsọ maka {{area}}",
+    "reset": "Mee ya ọzọ",
+    "prompt": "Ụkwụ ndụ m na-egosi na m nwere naanị {{score}}/10 isi na mpaghara «{{area}}». Gịnị ka Akwụkwọ Nsọ na-ekwu banyere mpaghara ndụ a? Nye m agbamume na mkpali bara uru.",
+    "areas": {
+      "health": "Ahụike",
+      "relationships": "Mmekọrịta",
+      "career": "Ọrụ",
+      "spirituality": "Ime mmụọ",
+      "finances": "Ego",
+      "family": "Ezinụlọ",
+      "leisure": "Ntụrụndụ",
+      "growth": "Uto onwe onye"
+    },
+    "save": "Chekwaa nsonaazụ",
+    "saved": "E chekwaala!",
+    "history": "Nsonaazụ gara aga",
+    "noHistory": "Enweghị nsonaazụ e chekwaala.",
+    "backToNew": "Ụkwụ ndụ ọhụrụ",
+    "backToList": "Laghachi na ndepụta"
+  },
+  "church": {
+    "badge": "Maka Ọgbakọ",
+    "heroTitle": "BibleBot maka ọgbakọ gị",
+    "heroSubtitle": "Soro ndị otu ọgbakọ gị na amamihe Akwụkwọ Nsọ – dijitalụ, nkeonwe na gburugburu elekere.",
+    "useCasesTitle": "Ojiji",
+    "useCase": {
+      "youth": {
+        "title": "Ọrụ Ndị Ntorobịa",
+        "desc": "Ndị ntorobịa na-achọpụta Akwụkwọ Nsọ n'ụzọ nke ha – na-emekọrịta ihe na na-enweghị ihe mgbochi."
+      },
+      "confirmation": {
+        "title": "Nkwenye",
+        "desc": "Ndị na-akwado na-eme ka ihe ọmụma Akwụkwọ Nsọ dị omimi n'onwe ha na nkwado nkeonwe."
+      },
+      "pastoral": {
+        "title": "Ndụmọdụ",
+        "desc": "Nkwado 24/7 dị ka mgbakwunye na ndụmọdụ nkeonwe."
+      },
+      "bibleStudy": {
+        "title": "Okirikiri Akwụkwọ Nsọ",
+        "desc": "Mkpali na ajụjụ maka mkparịta ụka maka otu na okirikiri ụlọ."
+      }
+    },
+    "pricingTitle": "Ngwugwu Nkwado",
+    "pricingSubtitle": "Kwado BibleBot na ọgbakọ gị na ngwugwu nkwado kwesịrị ekwesị.",
+    "popular": "Ewu ewu",
+    "free": "N'efu",
+    "perYear": "Afọ",
+    "contact": "Kpọtụrụ anyị",
+    "tier": {
+      "free": {
+        "name": "Mkpụrụ Mustard",
+        "size": "Maka obere ọgbakọ & okirikiri ụlọ (ruo ndị otu 50)"
+      },
+      "community": {
+        "name": "Onye enyi njem",
+        "size": "Maka ọgbakọ nwere ndị otu 50–200"
+      },
+      "gemeinde": {
+        "name": "Onye na-ewu àkwà mmiri",
+        "size": "Maka ọgbakọ nwere ndị otu 200–500"
+      },
+      "kirche": {
+        "name": "Ụlọ ọkụ",
+        "size": "Maka nnukwu ọgbakọ & ụlọ ọrụ (ndị otu 500+)"
+      }
+    },
+    "features": {
+      "directoryEntry": "Ntinye ndekọ",
+      "telegramGroup": "Otu Telegram",
+      "partnerPage": "Ibe onye mmekọ nke gị",
+      "badge": "Akara onye mmekọ",
+      "qrFlyer": "QR-Flyer maka ibipụta",
+      "contactForm": "Ụdị kọntaktị",
+      "pastorProfile": "Profaịlụ Pastọ/Onye ozi",
+      "welcomeVideo": "Vidiyo nnabata",
+      "analytics": "Dashboard nyocha",
+      "prioritySupport": "Nkwado kacha mkpa",
+      "multipleProfiles": "Ọtụtụ profaịlụ",
+      "customBranding": "Ngosipụta omenala",
+      "apiAccess": "Ịnweta API",
+      "accountManager": "Onye njikwa akaụntụ nkeonwe"
+    },
+    "viewDirectory": "Lelee ndekọ ọgbakọ",
+    "directoryBadge": "Ndekọ ọgbakọ",
+    "directoryTitle": "Ọgbakọ ndị mmekọ",
+    "directorySubtitle": "Chọta ọgbakọ dị nso gị nke na-atụ aro BibleBot.",
+    "searchPlaceholder": "Chọọ obodo, aha ma ọ bụ okpukperechi...",
+    "noResults": "Enweghị ọgbakọ na ndekọ.",
+    "becomePartner": "Bụrụ onye mmekọ →",
+    "notFound": "Achọtaghị ọgbakọ.",
+    "backToDirectory": "Laghachi na ndekọ",
+    "pastor": "Pastọ/Onye ozi",
+    "serviceTimes": "Oge ofufe",
+    "startChat": "Bido mkparịta ụka",
+    "website": "Weebụsaịtị",
+    "telegramGroup": "Otu Telegram",
+    "contactTitle": "Kpọtụrụ {{name}}",
+    "contactName": "Aha gị (nhọrọ)",
+    "contactEmail": "Adreesị email gị",
+    "contactMessage": "Ozi gị",
+    "contactSend": "Zipu ozi",
+    "contactSuccess": "E zipụla ozi! 🙏",
+    "contactSuccessDesc": "Ọgbakọ ga-akpọtụrụ gị.",
+    "recommendedBy": "Nke {{name}} tụrụ aro",
+    "setup": "Ntọala (otu oge)",
+    "form": {
+      "title": "Nwere mmasị? Dee anyị!",
+      "subtitle": "Anyị ga-akpọtụrụ gị n'ime awa 48.",
+      "name": "Aha gị",
+      "email": "Adreesị email",
+      "churchName": "Aha ọgbakọ",
+      "tier": "Ngwugwu achọrọ",
+      "tierPlaceholder": "Họrọ ngwugwu...",
+      "message": "Ozi gị",
+      "submit": "Zipu arịrịọ",
+      "success": "E zipụla arịrịọ! Anyị ga-akpọtụrụ gị n'oge na-adịghị anya. 🙏",
+      "error": "Njehie na-eziga. Biko gbalịa ọzọ.",
+      "orgType": "Ụdị nzukọ",
+      "orgTypePlaceholder": "Họrọ ụdị...",
+      "orgTypes": {
+        "church": "Ọgbakọ",
+        "careHome": "Ụlọ nlekọta",
+        "seniorHome": "Ụlọ ndị agadi",
+        "hospital": "Ụlọ ọgwụ",
+        "prison": "Ndụmọdụ ụlọ mkpọrọ",
+        "military": "Ndụmọdụ ndị agha"
+      }
+    },
+    "institutionsTitle": "Maka ụlọ ọrụ",
+    "institutionsSubtitle": "BibleBot anaghị eso naanị ọgbakọ – ụlọ nlekọta na ụlọ ndị agadi, ụlọ ọgwụ na ndụmọdụ ụlọ mkpọrọ na-eritekwa uru site na ndụmọdụ dijitalụ.",
+    "institution": {
+      "careHome": {
+        "title": "Ụlọ nlekọta",
+        "desc": "Mkpali Akwụkwọ Nsọ kwa ụbọchị na nkwado maka ndị bi – ọbụlagodi na enweghị onye ndụmọdụ nọ ebe ahụ."
+      },
+      "seniorHome": {
+        "title": "Ụlọ ndị agadi",
+        "desc": "Amaokwu Akwụkwọ Nsọ a ma ama na mkparịta ụka maka ndị agadi – dị mfe ịnweta site na mbadamba ma ọ bụ ekwentị."
+      },
+      "hospital": {
+        "title": "Ụlọ ọgwụ",
+        "desc": "Nkasi obi na nkwado ime mmụọ maka ndị ọrịa n'oge ihe isi ike – dị 24/7 n'akụkụ akwa ọrịa."
+      },
+      "prison": {
+        "title": "Ndụmọdụ ụlọ mkpọrọ",
+        "desc": "Olileanya na nkwado ime mmụọ maka ndị mkpọrọ – onye na-akparịta ụka na nzuzo gburugburu elekere."
+      },
+      "military": {
+        "title": "Ndụmọdụ ndị agha",
+        "desc": "Nkwado ime mmụọ maka ndị agha – dịkwa n'ọrụ ma ọ bụ n'ogige ndị agha."
+      }
+    }
+  },
+  "institutions": {
+    "badge": "Maka ụlọ ọrụ",
+    "heroTitle": "BibleBot maka ụlọ ọrụ gị",
+    "heroSubtitle": "Ndụmọdụ dijitalụ maka ụlọ nlekọta, ụlọ ndị agadi, ụlọ ọgwụ na ụlọ mkpọrọ – nkeonwe, na nzuzo na gburugburu elekere.",
+    "seniorHint": {
+      "title": "Ụdị agadi dị",
+      "desc": "Nnukwu mkpụrụedemede na ọrụ dị mfe – zuru oke maka ndị agadi bi.",
+      "cta": "Nwalee ụdị agadi"
+    },
+    "typesTitle": "Ònye ka BibleBot bụ maka ya?",
+    "useCasesTitle": "Otu esi eji BibleBot",
+    "useCasesSubtitle": "Ngwa bara uru maka ndụ kwa ụbọchị n'ụlọ ọrụ gị.",
+    "pricingTitle": "Ngwugwu Nkwado",
+    "pricingSubtitle": "Ngwugwu ndị ahụ dị ka maka ọgbakọ – gbanwere maka mkpa ụlọ ọrụ.",
+    "linkChurches": "Dịkwa maka ọgbakọ",
+    "type": {
+      "careHome": {
+        "title": "Ụlọ nlekọta",
+        "desc": "Mkpali Akwụkwọ Nsọ kwa ụbọchị na nkwado maka ndị bi – ọbụlagodi na enweghị onye ndụmọdụ nọ ebe ahụ."
+      },
+      "seniorHome": {
+        "title": "Ụlọ ndị agadi",
+        "desc": "Amaokwu Akwụkwọ Nsọ a ma ama na mkparịta ụka maka ndị agadi – dị mfe ịnweta site na mbadamba ma ọ bụ ekwentị."
+      },
+      "hospital": {
+        "title": "Ụlọ ọgwụ",
+        "desc": "Nkasi obi na nkwado ime mmụọ maka ndị ọrịa n'oge ihe isi ike – dị 24/7 n'akụkụ akwa ọrịa."
+      },
+      "prison": {
+        "title": "Ndụmọdụ ụlọ mkpọrọ",
+        "desc": "Olileanya na nkwado ime mmụọ maka ndị mkpọrọ – onye na-akparịta ụka na nzuzo gburugburu elekere."
+      },
+      "military": {
+        "title": "Ndụmọdụ ndị agha",
+        "desc": "Nkwado ime mmụọ maka ndị agha – dịkwa n'ọrụ ma ọ bụ n'ogige ndị agha."
+      }
+    },
+    "useCase": {
+      "dailyImpulse": {
+        "title": "Mkpali kwa ụbọchị",
+        "desc": "Kwa ụtụtụ amaokwu Akwụkwọ Nsọ na ajụjụ ntụgharị uche – na-ebelata ihe mgbochi maka mkparịta ụka ime mmụọ."
+      },
+      "companionship": {
+        "title": "Onye na-akparịta ụka",
+        "desc": "BibleBot na-aza ajụjụ okwukwe n'ụzọ dị nwayọọ na na-enweghị nrụgide oge – zuru oke maka oge owu ọmụma."
+      },
+      "accessibility": {
+        "title": "Ịnweta dị mfe",
+        "desc": "Nnukwu mkpụrụedemede, ọrụ dị mfe site na mbadamba – ọbụna maka ndị nwere nsogbu ngagharị."
+      },
+      "availability": {
+        "title": "Dị 24/7",
+        "desc": "Nkwado ime mmụọ ọbụna n'abalị na ngwụsị izu – mgbe enweghị onye ndụmọdụ dị."
+      }
+    },
+    "tierDesc": {
+      "free": "Ịnweta isi maka ndị bi na ndị ọrịa",
+      "community": "Nkwupụta dị ka onye nkwado, ịnweta na-enweghị mgbasa ozi",
+      "gemeinde": "Ngosipụta akara ngosi, akụkọ ojiji kwa ọnwa",
+      "kirche": "Ọdịnaya nke gị, itinye aka na roadmap, nkwado adịchaghị mma"
+    },
+    "form": {
+      "title": "Nwere mmasị? Kpọtụrụ anyị!",
+      "subtitle": "Anyị ga-akpọtụrụ gị n'ime awa 48.",
+      "name": "Aha gị",
+      "email": "Adreesị email",
+      "institutionName": "Aha ụlọ ọrụ",
+      "type": "Ụdị ụlọ ọrụ",
+      "typePlaceholder": "Biko họrọ...",
+      "tier": "Ngwugwu achọrọ",
+      "tierPlaceholder": "Họrọ ngwugwu...",
+      "message": "Ozi gị",
+      "submit": "Zipu arịrịọ",
+      "success": "E zipụla arịrịọ! Anyị ga-akpọtụrụ gị n'oge na-adịghị anya. 🙏",
+      "error": "Njehie na-eziga. Biko gbalịa ọzọ."
+    }
   },
   "lang": {
     "de": "Deutsch",
@@ -329,427 +751,5 @@
     "ig": "Igbo",
     "zu": "isiZulu",
     "ht": "Kreyòl"
-  },
-  "tiles": {
-    "sectionTitle": "What's on your heart?",
-    "sectionSubtitle": "Choose a topic — BibleBot walks with you",
-    "baptism": {
-      "title": "Find a baptism verse",
-      "desc": "The perfect verse for your child",
-      "prompt": "Help me find a fitting baptism verse. What kind of child is it and what do the parents wish for?"
-    },
-    "condolence": {
-      "title": "Words of comfort",
-      "desc": "Support through grief & farewell",
-      "prompt": "I need comforting words for a condolence card. Can you help me find the right words?"
-    },
-    "wedding": {
-      "title": "Wedding verse",
-      "desc": "Biblical words for your love",
-      "prompt": "We're looking for a beautiful biblical verse for our wedding. Which passages speak about love and partnership?"
-    },
-    "anxiety": {
-      "title": "Fear & worry",
-      "desc": "Finding courage in hard times",
-      "prompt": "I'm struggling with fear and worry right now. What does the Bible say about this? Are there verses that give courage?"
-    },
-    "confession": {
-      "title": "Confession",
-      "desc": "God forgives — speak it out",
-      "prompt": "I want to let go of something that weighs on me. What does the Bible say about forgiveness and new beginnings?"
-    },
-    "heartbreak": {
-      "title": "Heartbreak",
-      "desc": "What the Bible says about heartache",
-      "prompt": "My heart is broken. What does the Bible say about heartbreak and how to find hope again?"
-    },
-    "newstart": {
-      "title": "New beginning",
-      "desc": "Strength for a new chapter",
-      "prompt": "I'm facing a new beginning and need encouragement. Which Bible passages speak about fresh starts?"
-    },
-    "namequiz": {
-      "title": "Name quiz",
-      "desc": "Find the right biblical name",
-      "prompt": "I'm looking for a biblical name for my child. Can you suggest some and explain their meanings?"
-    },
-    "sleepless": {
-      "title": "Sleepless",
-      "desc": "Finding peace at night",
-      "prompt": "I can't sleep and my mind is racing. Is there a calming prayer or psalm for the night?"
-    },
-    "loneliness": {
-      "title": "Loneliness",
-      "desc": "You are never alone",
-      "prompt": "I feel lonely. What does the Bible say about God always being with us?"
-    },
-    "decision": {
-      "title": "Tough decision",
-      "desc": "Wisdom for the right path",
-      "prompt": "I'm facing a difficult decision. Which Bible passages can help me find the right way?"
-    },
-    "gratitude": {
-      "title": "Gratitude",
-      "desc": "A personal prayer of thanks",
-      "prompt": "I want to thank God. Help me write a personal prayer of gratitude."
-    },
-    "lifewheel": {
-      "title": "Life Wheel",
-      "desc": "How satisfied are you really?"
-    },
-    "sevenwhys": {
-      "title": "7 Whys",
-      "desc": "Find the deepest root of your question",
-      "prompt": "I'd like to do the 7 Whys exercise. Here is my topic:"
-    },
-    "anger": {
-      "title": "Anger",
-      "desc": "When you're about to explode",
-      "prompt": "I'm so angry and don't know what to do with my rage. What does the Bible say about anger and how to deal with it?"
-    },
-    "shame": {
-      "title": "Shame & Guilt",
-      "desc": "When guilt is crushing you",
-      "prompt": "I feel so ashamed and guilty. What does the Bible say about guilt, forgiveness, and starting over?"
-    },
-    "burnout": {
-      "title": "Burnout",
-      "desc": "When you just can't go on",
-      "prompt": "I'm totally exhausted and burned out. I just can't anymore. What does the Bible say about rest and recovery?"
-    },
-    "illness": {
-      "title": "Illness",
-      "desc": "When a diagnosis changes everything",
-      "prompt": "I've received a difficult diagnosis and I'm scared. What does the Bible say about illness, healing, and hope?"
-    },
-    "financial": {
-      "title": "Money Worries",
-      "desc": "When bills are piling up",
-      "prompt": "I have financial worries and don't know what to do. What does the Bible say about money, trust, and provision?"
-    },
-    "meaningcrisis": {
-      "title": "Meaning Crisis",
-      "desc": "What's it all for?",
-      "prompt": "I'm wondering what's the point of it all. I'm in a meaning crisis. What does the Bible say about the meaning of life?"
-    },
-    "selfdoubt": {
-      "title": "Self-Doubt",
-      "desc": "When you don't feel good enough",
-      "prompt": "I constantly doubt myself and don't feel good enough. What does the Bible say about my worth?"
-    },
-    "calling": {
-      "title": "Calling",
-      "desc": "What should I do with my life?",
-      "prompt": "I don't know what to do with my life. Help me find my calling — what does the Bible say?"
-    },
-    "faithdoubt": {
-      "title": "Faith Doubts",
-      "desc": "When your faith is shaking",
-      "prompt": "I have doubts about my faith and don't know if I can still believe. What does the Bible say about doubt?"
-    },
-    "forgiveness": {
-      "title": "Forgiveness",
-      "desc": "When forgiving seems impossible",
-      "prompt": "I simply can't forgive someone. It hurts too much. What does the Bible say about forgiveness?"
-    },
-    "familyconflict": {
-      "title": "Family Conflict",
-      "desc": "When family is at war",
-      "prompt": "There's a big conflict in my family. What does the Bible say about family peace and reconciliation?"
-    },
-    "envy": {
-      "title": "Envy",
-      "desc": "When others have it better",
-      "prompt": "I'm envious of others and constantly comparing myself. What does the Bible say about envy and contentment?"
-    },
-    "joy": {
-      "title": "Share Joy",
-      "desc": "When something wonderful happened",
-      "prompt": "Something wonderful happened to me and I want to share my joy! What does the Bible say about joy and gratitude?"
-    },
-    "prayer": {
-      "title": "Prayer Request",
-      "desc": "Pray together",
-      "prompt": "I have a prayer request and would like to pray together. Join me in prayer."
-    },
-    "bibleverse": {
-      "title": "Understand a Verse",
-      "desc": "Get a Bible passage explained",
-      "prompt": "I'd like to understand a Bible passage better. Can you help me put it in context?"
-    }
-  },
-  "lifeWheel": {
-    "title": "Your Life Wheel",
-    "intro": "Rate 8 life areas on a scale of 1-10. Discover where you stand — and receive biblical impulses for the area that needs attention.",
-    "start": "Get started",
-    "sliderHint": "Move the sliders — 1 = very unsatisfied, 10 = very satisfied",
-    "showResult": "Show result",
-    "average": "Average",
-    "weakestArea": "Greatest need",
-    "getImpulse": "Biblical impulse for {{area}}",
-    "reset": "Try again",
-    "prompt": "My life wheel shows that I scored only {{score}}/10 in the area of '{{area}}'. What does the Bible say about this area of life? Give me encouragement and practical impulses.",
-    "areas": {
-      "health": "Health",
-      "relationships": "Relationships",
-      "career": "Career",
-      "spirituality": "Spirituality",
-      "finances": "Finances",
-      "family": "Family",
-      "leisure": "Leisure",
-      "growth": "Personal Growth"
-    },
-    "save": "Save result",
-    "saved": "Saved!",
-    "history": "Previous results",
-    "noHistory": "No saved results yet.",
-    "backToNew": "New Life Wheel",
-    "backToList": "Back to list"
-  },
-  "church": {
-    "badge": "For Churches",
-    "heroTitle": "BibleBot for Your Church",
-    "heroSubtitle": "Accompany your congregation with biblical wisdom – digital, personal, and around the clock.",
-    "useCasesTitle": "Use Cases",
-    "useCase": {
-      "youth": {
-        "title": "Youth Ministry",
-        "desc": "Teens discover the Bible in their own way – interactive and without hesitation."
-      },
-      "confirmation": {
-        "title": "Confirmation",
-        "desc": "Confirmands deepen Bible knowledge independently with personal guidance."
-      },
-      "pastoral": {
-        "title": "Pastoral Care",
-        "desc": "24/7 companionship as a complement to personal pastoral care."
-      },
-      "bibleStudy": {
-        "title": "Bible Study",
-        "desc": "Impulses and discussion starters for groups and home circles."
-      }
-    },
-    "pricingTitle": "Ngwugwu nkwado",
-    "pricingSubtitle": "Kwado BibleBot na chọọchị gị site na ngwugwu nkwado kwesịrị ekwesị.",
-    "popular": "Popular",
-    "free": "Free",
-    "perYear": "year",
-    "contact": "Get in touch",
-    "tier": {
-      "free": {
-        "name": "Mkpụrụ mọsụtadị",
-        "size": "Nweta bot isi mmalite maka ndị otu nịile."
-      },
-      "community": {
-        "name": "Onye njem",
-        "size": "A kpọụrụ chọcọcị dịka onye nkwado na weebụsaịtị & nweta na-enwaghị mgbasa ozi."
-      },
-      "gemeinde": {
-        "name": "Onye na-ewu àkwà mmiri",
-        "size": "Logo na ngalaba bot, akukọ ojiji kwa ọnwa (anịnịm)."
-      },
-      "kirche": {
-        "name": "Ụlọ ìhè",
-        "size": "Njikọta ọdịnaya nke gị (dịka nnọkọ ozizi), mmekọrịta ụzọ, nkwado ọkwa elu."
-      }
-    },
-    "features": {
-      "directoryEntry": "Directory listing",
-      "telegramGroup": "Telegram group",
-      "partnerPage": "Own partner page",
-      "badge": "Partner badge",
-      "qrFlyer": "Printable QR flyer",
-      "contactForm": "Contact form",
-      "pastorProfile": "Pastor profile",
-      "welcomeVideo": "Welcome video",
-      "analytics": "Analytics dashboard",
-      "prioritySupport": "Priority support",
-      "multipleProfiles": "Multiple profiles",
-      "customBranding": "Custom branding",
-      "apiAccess": "API access",
-      "accountManager": "Dedicated account manager"
-    },
-    "viewDirectory": "View church directory",
-    "directoryBadge": "Church Directory",
-    "directoryTitle": "Partner Churches",
-    "directorySubtitle": "Find a church near you that recommends BibleBot.",
-    "searchPlaceholder": "Search by city, name, or denomination...",
-    "noResults": "No churches in the directory yet.",
-    "becomePartner": "Become a partner →",
-    "notFound": "Church not found.",
-    "backToDirectory": "Back to directory",
-    "pastor": "Pastor",
-    "serviceTimes": "Service Times",
-    "startChat": "Start Chat",
-    "website": "Website",
-    "telegramGroup": "Telegram Group",
-    "contactTitle": "Contact {{name}}",
-    "contactName": "Your name (optional)",
-    "contactEmail": "Your email address",
-    "contactMessage": "Your message",
-    "contactSend": "Send message",
-    "contactSuccess": "Message sent! 🙏",
-    "contactSuccessDesc": "The church will get back to you.",
-    "recommendedBy": "Recommended by {{name}}",
-    "setup": "Nhazi (otu oge)",
-    "form": {
-      "title": "Nwere mmasị? Kpọtụrụ anyị!",
-      "subtitle": "Anyị ga-aza n'ime awa 48.",
-      "name": "Aha gị",
-      "email": "Adreesị email",
-      "churchName": "Aha ụka",
-      "tier": "Ngwugwu ị chọrọ",
-      "tierPlaceholder": "Họrọ ngwugwu...",
-      "message": "Ozi gị",
-      "submit": "Ziga ajụjụ",
-      "success": "Ezigara ajụjụ! Anyị ga-akpọtụrụ gị n'oge na-adịghị anya. 🙏",
-      "error": "Njehie n'iziga. Gbalịa ọzọ.",
-      "orgType": "Organization type",
-      "orgTypePlaceholder": "Select type...",
-      "orgTypes": {
-        "church": "Church",
-        "careHome": "Care Home",
-        "seniorHome": "Retirement Home",
-        "hospital": "Hospital",
-        "prison": "Prison Chaplaincy",
-        "military": "Military Chaplaincy"
-      }
-    },
-    "institutionsTitle": "Also for Institutions",
-    "institutionsSubtitle": "BibleBot supports not only churches – care homes, retirement homes, and hospitals also benefit from digital pastoral care.",
-    "institution": {
-      "careHome": {
-        "title": "Care Homes",
-        "desc": "Daily Bible impulses and companionship for residents – even when no chaplain is on site."
-      },
-      "seniorHome": {
-        "title": "Retirement Homes",
-        "desc": "Familiar Bible verses and conversations for seniors – easily accessible via tablet or smartphone."
-      },
-      "hospital": {
-        "title": "Hospitals",
-        "desc": "Comfort and spiritual support for patients in difficult times – available 24/7 at the bedside."
-      },
-      "prison": {
-        "title": "Prison Chaplaincy",
-        "desc": "Hope and spiritual support for inmates – a confidential companion around the clock."
-      },
-      "military": {
-        "title": "Military Chaplaincy",
-        "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
-      }
-    }
-  },
-  "institutions": {
-    "badge": "For Institutions",
-    "heroTitle": "BibleBot for Your Institution",
-    "heroSubtitle": "Digital pastoral care for care homes, retirement homes, hospitals, and correctional facilities – personal, confidential, and around the clock.",
-    "typesTitle": "Who is BibleBot for?",
-    "useCasesTitle": "How BibleBot is Used",
-    "useCasesSubtitle": "Practical applications for daily life in your institution.",
-    "pricingTitle": "Patronage Packages",
-    "pricingSubtitle": "The same packages as for churches – adapted to institutional needs.",
-    "linkChurches": "Also available for churches",
-    "type": {
-      "careHome": {
-        "title": "Care Homes",
-        "desc": "Daily Bible impulses and companionship for residents – even when no chaplain is on site."
-      },
-      "seniorHome": {
-        "title": "Retirement Homes",
-        "desc": "Familiar Bible verses and conversations for seniors – easily accessible via tablet or smartphone."
-      },
-      "hospital": {
-        "title": "Hospitals",
-        "desc": "Comfort and spiritual support for patients in difficult times – available 24/7 at the bedside."
-      },
-      "prison": {
-        "title": "Prison Chaplaincy",
-        "desc": "Hope and spiritual support for inmates – a confidential companion around the clock."
-      },
-      "military": {
-        "title": "Military Chaplaincy",
-        "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
-      }
-    },
-    "useCase": {
-      "dailyImpulse": {
-        "title": "Daily Impulse",
-        "desc": "A Bible verse with reflection question every morning – lowers the barrier for spiritual conversations."
-      },
-      "companionship": {
-        "title": "Conversation Partner",
-        "desc": "BibleBot answers faith questions patiently and without time pressure – ideal for lonely hours."
-      },
-      "accessibility": {
-        "title": "Easy Access",
-        "desc": "Large text, simple tablet interface – also for people with limited mobility."
-      },
-      "availability": {
-        "title": "24/7 Available",
-        "desc": "Spiritual companionship at night and on weekends – when no chaplain is available."
-      }
-    },
-    "tierDesc": {
-      "free": "Basic access for residents and patients",
-      "community": "Mentioned as supporter, ad-free access",
-      "gemeinde": "Logo presence, monthly usage report",
-      "kirche": "Custom content, roadmap co-creation, premium support"
-    },
-    "form": {
-      "title": "Interested? Get in touch!",
-      "subtitle": "We'll get back to you within 48 hours.",
-      "name": "Your name",
-      "email": "Email address",
-      "institutionName": "Institution name",
-      "type": "Type of institution",
-      "typePlaceholder": "Please select...",
-      "tier": "Preferred package",
-      "tierPlaceholder": "Choose package...",
-      "message": "Your message",
-      "submit": "Send inquiry",
-      "success": "Inquiry sent! We'll be in touch soon. 🙏",
-      "error": "Error sending. Please try again."
-    },
-    "seniorHint": {
-      "title": "Ọnọdụ ndị okenye dị",
-      "desc": "Ederede ka ukwuu na nchọgharị dị mfe – ọ kacha mma maka ndị okenye.",
-      "cta": "Nwalee ọnọdụ ndị okenye"
-    }
-  },
-  "refer": {
-    "badge": "Share God's Word",
-    "title": "Recommend BibleBot",
-    "subtitle": "Know someone who could use encouragement? Share BibleBot – one message can make a difference.",
-    "whatsapp": "Share via WhatsApp",
-    "whatsappMsg": "Hey, I wanted to show you BibleBot – a free Bible companion that really knows the Bible and asks great questions. No login, anonymous, honest. Try it out: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
-    "telegram": "Share via Telegram",
-    "telegramMsg": "Hey, do you know BibleBot? A free personal Bible companion – honest, anonymous, no login needed. Check it out: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
-    "email": "Share via email",
-    "emailSubject": "This might interest you: BibleBot.Life",
-    "emailBody": "Hi!\n\nI wanted to show you BibleBot – a free Bible companion that really knows the Bible. No sign-up needed, completely anonymous.\n\nIt asks thoughtful questions, explains Bible passages in context and accompanies you honestly – even on difficult topics.\n\nTry it out: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nBest wishes",
-    "copy": "Copy link",
-    "copied": "Link copied! 📋",
-    "qr": "Or just show this QR code:"
-  },
-  "share": {
-    "label": "Share",
-    "shareVia": "Share via",
-    "copied": "Copied! 📋",
-    "copiedShort": "Copied!",
-    "copiedDesc": "Text copied to clipboard. Share it on WhatsApp, Instagram or wherever you like!",
-    "copyLink": "Copy text",
-    "error": "Copy failed",
-    "impulseTitle": "BibleBot – Impulse of the Day",
-    "chatTitle": "BibleBot – Thought of the Day",
-    "createImage": "Create image ✨",
-    "generating": "Creating…",
-    "imageReady": "Your image is ready to share!",
-    "shareImage": "Share image",
-    "download": "Save",
-    "imageError": "Image creation failed",
-    "imageErrorDesc": "The image could not be created. Please try again later.",
-    "imageSaved": "Text copied! 📋",
-    "imageSavedDesc": "Save the image and share it with the copied text on Instagram, WhatsApp or wherever you like!"
   }
 }
