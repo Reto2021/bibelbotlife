@@ -15,39 +15,38 @@ type TileConfig = {
 };
 
 const tileConfigs: TileConfig[] = [
-  { emoji: "🎡", key: "lifewheel", accentClass: "bg-gradient-to-r from-primary to-secondary", bgClass: "bg-[hsl(32_40%_94%)] dark:bg-[hsl(32_25%_14%)]", special: "lifewheel" },
-  { emoji: "🔍", key: "sevenwhys", accentClass: "bg-gradient-to-r from-secondary to-primary", bgClass: "bg-[hsl(260_30%_94%)] dark:bg-[hsl(260_20%_14%)]", special: "sevenwhys" },
-  { emoji: "🕊️", key: "baptism", accentClass: "bg-primary", bgClass: "bg-[hsl(32_50%_95%)] dark:bg-[hsl(32_30%_16%)]" },
-  { emoji: "💐", key: "condolence", accentClass: "bg-secondary", bgClass: "bg-[hsl(185_30%_94%)] dark:bg-[hsl(185_25%_14%)]" },
-  { emoji: "💍", key: "wedding", accentClass: "bg-primary", bgClass: "bg-[hsl(38_40%_95%)] dark:bg-[hsl(38_25%_15%)]" },
-  { emoji: "😰", key: "anxiety", accentClass: "bg-secondary", bgClass: "bg-[hsl(210_25%_94%)] dark:bg-[hsl(210_20%_14%)]" },
-  { emoji: "🙏", key: "confession", accentClass: "bg-primary", bgClass: "bg-[hsl(30_35%_93%)] dark:bg-[hsl(30_20%_14%)]" },
-  { emoji: "💔", key: "heartbreak", accentClass: "bg-secondary", bgClass: "bg-[hsl(340_25%_94%)] dark:bg-[hsl(340_20%_14%)]" },
-  { emoji: "🌅", key: "newstart", accentClass: "bg-secondary", bgClass: "bg-[hsl(100_25%_93%)] dark:bg-[hsl(100_15%_14%)]" },
-  { emoji: "🤔", key: "namequiz", accentClass: "bg-primary", bgClass: "bg-[hsl(270_20%_94%)] dark:bg-[hsl(270_15%_14%)]" },
-  { emoji: "🌙", key: "sleepless", accentClass: "bg-secondary", bgClass: "bg-[hsl(220_25%_94%)] dark:bg-[hsl(220_18%_14%)]" },
-  { emoji: "🫂", key: "loneliness", accentClass: "bg-primary", bgClass: "bg-[hsl(25_30%_94%)] dark:bg-[hsl(25_20%_14%)]" },
-  { emoji: "⚖️", key: "decision", accentClass: "bg-secondary", bgClass: "bg-[hsl(200_25%_94%)] dark:bg-[hsl(200_18%_14%)]" },
-  { emoji: "🙌", key: "gratitude", accentClass: "bg-primary", bgClass: "bg-[hsl(45_35%_94%)] dark:bg-[hsl(45_20%_14%)]" },
-  // Akute Lebenssituationen
-  { emoji: "😡", key: "anger", accentClass: "bg-secondary", bgClass: "bg-[hsl(0_30%_94%)] dark:bg-[hsl(0_20%_14%)]" },
-  { emoji: "😔", key: "shame", accentClass: "bg-primary", bgClass: "bg-[hsl(280_20%_94%)] dark:bg-[hsl(280_15%_14%)]" },
-  { emoji: "😢", key: "burnout", accentClass: "bg-secondary", bgClass: "bg-[hsl(15_25%_94%)] dark:bg-[hsl(15_18%_14%)]" },
-  { emoji: "🏥", key: "illness", accentClass: "bg-primary", bgClass: "bg-[hsl(190_25%_94%)] dark:bg-[hsl(190_18%_14%)]" },
-  { emoji: "💸", key: "financial", accentClass: "bg-secondary", bgClass: "bg-[hsl(50_25%_94%)] dark:bg-[hsl(50_18%_14%)]" },
-  // Sinnsuche & Identität
-  { emoji: "🤷", key: "meaningcrisis", accentClass: "bg-primary", bgClass: "bg-[hsl(240_20%_94%)] dark:bg-[hsl(240_15%_14%)]" },
-  { emoji: "🪞", key: "selfdoubt", accentClass: "bg-secondary", bgClass: "bg-[hsl(310_20%_94%)] dark:bg-[hsl(310_15%_14%)]" },
-  { emoji: "🧭", key: "calling", accentClass: "bg-primary", bgClass: "bg-[hsl(160_25%_93%)] dark:bg-[hsl(160_18%_14%)]" },
-  { emoji: "⛪", key: "faithdoubt", accentClass: "bg-secondary", bgClass: "bg-[hsl(35_30%_94%)] dark:bg-[hsl(35_20%_14%)]" },
-  // Beziehungen
-  { emoji: "🤝", key: "forgiveness", accentClass: "bg-primary", bgClass: "bg-[hsl(140_25%_93%)] dark:bg-[hsl(140_18%_14%)]" },
-  { emoji: "👪", key: "familyconflict", accentClass: "bg-secondary", bgClass: "bg-[hsl(20_30%_94%)] dark:bg-[hsl(20_20%_14%)]" },
-  { emoji: "🫣", key: "envy", accentClass: "bg-primary", bgClass: "bg-[hsl(55_25%_94%)] dark:bg-[hsl(55_18%_14%)]" },
-  // Positive Trigger
-  { emoji: "🎊", key: "joy", accentClass: "bg-secondary", bgClass: "bg-[hsl(60_35%_94%)] dark:bg-[hsl(60_20%_14%)]" },
-  { emoji: "🙏", key: "prayer", accentClass: "bg-primary", bgClass: "bg-[hsl(275_25%_94%)] dark:bg-[hsl(275_18%_14%)]" },
-  { emoji: "📖", key: "bibleverse", accentClass: "bg-secondary", bgClass: "bg-[hsl(170_25%_93%)] dark:bg-[hsl(170_18%_14%)]" },
+  { emoji: "🎡", key: "lifewheel", accentClass: "bg-gradient-to-r from-primary to-secondary", bgClass: "bg-card", special: "lifewheel" },
+  { emoji: "🔍", key: "sevenwhys", accentClass: "bg-gradient-to-r from-secondary to-primary", bgClass: "bg-card", special: "sevenwhys" },
+  { emoji: "🕊️", key: "baptism", accentClass: "bg-primary", bgClass: "bg-card" },
+  { emoji: "🙏", key: "prayer", accentClass: "bg-primary", bgClass: "bg-card" },
+  { emoji: "💔", key: "heartbreak", accentClass: "bg-secondary", bgClass: "bg-card" },
+  { emoji: "😰", key: "anxiety", accentClass: "bg-secondary", bgClass: "bg-card" },
+  { emoji: "🌅", key: "newstart", accentClass: "bg-secondary", bgClass: "bg-card" },
+  { emoji: "🙌", key: "gratitude", accentClass: "bg-primary", bgClass: "bg-card" },
+];
+
+const moreTileConfigs: TileConfig[] = [
+  { emoji: "💐", key: "condolence", accentClass: "bg-secondary", bgClass: "bg-card" },
+  { emoji: "💍", key: "wedding", accentClass: "bg-primary", bgClass: "bg-card" },
+  { emoji: "🙏", key: "confession", accentClass: "bg-primary", bgClass: "bg-card" },
+  { emoji: "🫂", key: "loneliness", accentClass: "bg-primary", bgClass: "bg-card" },
+  { emoji: "⚖️", key: "decision", accentClass: "bg-secondary", bgClass: "bg-card" },
+  { emoji: "😡", key: "anger", accentClass: "bg-secondary", bgClass: "bg-card" },
+  { emoji: "😔", key: "shame", accentClass: "bg-primary", bgClass: "bg-card" },
+  { emoji: "😢", key: "burnout", accentClass: "bg-secondary", bgClass: "bg-card" },
+  { emoji: "🏥", key: "illness", accentClass: "bg-primary", bgClass: "bg-card" },
+  { emoji: "💸", key: "financial", accentClass: "bg-secondary", bgClass: "bg-card" },
+  { emoji: "🤷", key: "meaningcrisis", accentClass: "bg-primary", bgClass: "bg-card" },
+  { emoji: "🪞", key: "selfdoubt", accentClass: "bg-secondary", bgClass: "bg-card" },
+  { emoji: "🧭", key: "calling", accentClass: "bg-primary", bgClass: "bg-card" },
+  { emoji: "⛪", key: "faithdoubt", accentClass: "bg-secondary", bgClass: "bg-card" },
+  { emoji: "🤝", key: "forgiveness", accentClass: "bg-primary", bgClass: "bg-card" },
+  { emoji: "👪", key: "familyconflict", accentClass: "bg-secondary", bgClass: "bg-card" },
+  { emoji: "🫣", key: "envy", accentClass: "bg-primary", bgClass: "bg-card" },
+  { emoji: "🎊", key: "joy", accentClass: "bg-secondary", bgClass: "bg-card" },
+  { emoji: "📖", key: "bibleverse", accentClass: "bg-secondary", bgClass: "bg-card" },
+  { emoji: "🤔", key: "namequiz", accentClass: "bg-primary", bgClass: "bg-card" },
+  { emoji: "🌙", key: "sleepless", accentClass: "bg-secondary", bgClass: "bg-card" },
 ];
 
 export function EntryTiles() {
