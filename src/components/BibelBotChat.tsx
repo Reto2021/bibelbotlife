@@ -461,9 +461,9 @@ export function BibelBotChat() {
   const hasConversation = messages.length > 0;
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 w-[390px] max-w-[calc(100vw-2rem)] h-[580px] max-h-[calc(100vh-3rem)] bg-card border border-border rounded-2xl shadow-2xl flex flex-col overflow-hidden">
+    <div className={`fixed bottom-6 right-6 z-50 ${s.chatWidth} max-w-[calc(100vw-2rem)] ${s.chatHeight} max-h-[calc(100vh-3rem)] bg-card border border-border rounded-2xl shadow-2xl flex flex-col overflow-hidden`}>
       {/* Header */}
-      <div className="flex items-center justify-between px-4 py-3 border-b border-border bg-primary/5">
+      <div className={`flex items-center justify-between ${s.padding} border-b border-border bg-primary/5`}>
         <div className="flex items-center gap-3">
           <div className="relative">
             <div className="h-9 w-9 rounded-full bg-primary/10 flex items-center justify-center">
