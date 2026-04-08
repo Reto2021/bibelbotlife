@@ -157,6 +157,36 @@ export type Database = {
         }
         Relationships: []
       }
+      church_partnership_inquiries: {
+        Row: {
+          church_name: string | null
+          created_at: string
+          email: string
+          id: string
+          message: string
+          name: string
+          preferred_tier: string | null
+        }
+        Insert: {
+          church_name?: string | null
+          created_at?: string
+          email: string
+          id?: string
+          message: string
+          name: string
+          preferred_tier?: string | null
+        }
+        Update: {
+          church_name?: string | null
+          created_at?: string
+          email?: string
+          id?: string
+          message?: string
+          name?: string
+          preferred_tier?: string | null
+        }
+        Relationships: []
+      }
       daily_broadcast_log: {
         Row: {
           id: string
