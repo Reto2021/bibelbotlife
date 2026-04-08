@@ -10,8 +10,8 @@ type PatronData = {
   custom_bot_name: string | null;
 };
 
-const SPLASH_DURATION_WITH_PATRON = 2500;
-const SPLASH_DURATION_DEFAULT = 1500;
+const SPLASH_DURATION_WITH_PATRON = 4000;
+const SPLASH_DURATION_DEFAULT = 1800;
 
 export function SplashScreen({ onComplete }: { onComplete: () => void }) {
   const { t } = useTranslation();
@@ -61,65 +61,81 @@ export function SplashScreen({ onComplete }: { onComplete: () => void }) {
           key="splash"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
           className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-background"
         >
           {/* Logo */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-            className="flex flex-col items-center gap-3"
+            initial={{ opacity: 0, scale: 0.85, y: 10 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="flex flex-col items-center gap-4"
           >
-            <img src={bibelbotLogo} alt="BibelBot" className="h-20 w-20" width={512} height={512} />
-            <h1 className="text-2xl font-bold text-foreground tracking-tight">
+            <img src={bibelbotLogo} alt="BibelBot" className="h-16 w-16 sm:h-20 sm:w-20" width={512} height={512} />
+            <motion.h1
+              initial={{ opacity: 0, y: 5 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+              className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight"
+            >
               {displayName}
-            </h1>
+            </motion.h1>
           </motion.div>
 
           {/* Patron section */}
           {patron && dataLoaded && (
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.5 }}
-              className="mt-10 flex flex-col items-center gap-3"
+              transition={{ delay: 0.8, duration: 0.6 }}
+              className="mt-12 flex flex-col items-center gap-4"
             >
-              <div className="flex items-center gap-2">
-                <div className="h-px w-8 bg-border" />
-                <span className="text-xs text-muted-foreground uppercase tracking-widest">
+              <div className="flex items-center gap-3">
+                <div className="h-px w-10 bg-border" />
+                <span className="text-xs text-muted-foreground uppercase tracking-[0.2em] font-medium">
                   {t("splash.patronage", "Empfohlen von")}
                 </span>
-                <div className="h-px w-8 bg-border" />
+                <div className="h-px w-10 bg-border" />
               </div>
 
               {patron.logo_url && (
-                <img
+                <motion.img
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 1.2, duration: 0.5 }}
                   src={patron.logo_url}
                   alt={patron.name}
-                  className="h-12 w-auto max-w-[180px] object-contain"
-                  loading="lazy"
+                  className="h-14 w-auto max-w-[200px] object-contain"
+                  loading="eager"
                 />
               )}
-              <span className="text-sm font-medium text-foreground/80">
+              <motion.span
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.4, duration: 0.4 }}
+                className="text-base font-medium text-foreground/80"
+              >
                 {patron.name}
-              </span>
+              </motion.span>
             </motion.div>
           )}
 
-          {/* Subtle loading indicator */}
+          {/* Progress bar */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.5 }}
-            transition={{ delay: 0.6 }}
+            transition={{ delay: 0.8 }}
             className="absolute bottom-12"
           >
-            <div className="h-1 w-16 rounded-full bg-primary/20 overflow-hidden">
+            <div className="h-1 w-20 rounded-full bg-primary/20 overflow-hidden">
               <motion.div
-                className="h-full bg-primary/50 rounded-full"
-                initial={{ x: "-100%" }}
-                animate={{ x: "100%" }}
-                transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut" }}
+                className="h-full bg-primary/40 rounded-full"
+                initial={{ width: "0%" }}
+                animate={{ width: "100%" }}
+                transition={{
+                  duration: patron ? 3.5 : 1.5,
+                  ease: "easeInOut",
+                }}
               />
             </div>
           </motion.div>
