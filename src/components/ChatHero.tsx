@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
+import bibelbotLogo from "@/assets/bibelbot-logo.png";
 import { Search, ArrowRight, Shield, Loader2, Mic, MicOff, Send, Menu, LogIn, X, EyeOff, Heart } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTrack } from "@/components/AnalyticsProvider";
@@ -641,7 +642,10 @@ export function ChatHero() {
                 ) : (
                   <div ref={scrollRef} className="flex-1 overflow-y-auto space-y-4 pb-4 scroll-smooth">
                     {messages.map((msg, i) => (
-                      <div key={i} className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
+                      <div key={i} className={`flex ${msg.role === "user" ? "justify-end" : "justify-start gap-2"}`}>
+                        {msg.role === "assistant" && (
+                          <img src={branding?.logoUrl || bibelbotLogo} alt="" className="h-6 w-6 rounded-full shrink-0 mt-1" />
+                        )}
                         <div className="max-w-[85%] md:max-w-[75%]">
                           <div className={`rounded-2xl px-4 py-3 text-sm leading-relaxed ${
                             msg.role === "user"
