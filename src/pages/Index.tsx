@@ -92,7 +92,7 @@ const Index = () => {
             {user ? (
               <>
                 <Button asChild variant="outline" size="sm" className="hidden sm:inline-flex">
-                  <Link to="/dashboard">
+                  <Link to="/mein-bereich">
                     <User className="h-4 w-4 mr-1" />
                     Mein Bereich
                   </Link>
@@ -176,13 +176,23 @@ const Index = () => {
                 {t("footer.datenschutz")}
               </Link>
               {user ? (
-                <button
-                  onClick={() => { signOut(); setMobileMenuOpen(false); }}
-                  className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-foreground hover:bg-primary/10 transition-colors w-full"
-                >
-                  <LogOut className="h-4 w-4 text-primary" />
-                  {t("auth.logout", "Abmelden")}
-                </button>
+                <>
+                  <Link
+                    to="/mein-bereich"
+                    className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-foreground hover:bg-primary/10 transition-colors"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    <User className="h-4 w-4 text-primary" />
+                    Mein Bereich
+                  </Link>
+                  <button
+                    onClick={() => { signOut(); setMobileMenuOpen(false); }}
+                    className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-foreground hover:bg-primary/10 transition-colors w-full"
+                  >
+                    <LogOut className="h-4 w-4 text-primary" />
+                    {t("auth.logout", "Abmelden")}
+                  </button>
+                </>
               ) : (
                 <Link
                   to="/login"
