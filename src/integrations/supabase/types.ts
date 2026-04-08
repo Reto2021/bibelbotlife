@@ -207,6 +207,7 @@ export type Database = {
           created_at: string
           custom_bot_name: string | null
           denomination: string | null
+          iban: string | null
           id: string
           is_active: boolean
           language: string | null
@@ -217,7 +218,6 @@ export type Database = {
           pastor_photo_url: string | null
           plan_tier: Database["public"]["Enums"]["church_plan_tier"]
           primary_color: string | null
-          qr_iban: string | null
           secondary_color: string | null
           service_times: string | null
           slug: string
@@ -246,6 +246,7 @@ export type Database = {
           created_at?: string
           custom_bot_name?: string | null
           denomination?: string | null
+          iban?: string | null
           id?: string
           is_active?: boolean
           language?: string | null
@@ -256,7 +257,6 @@ export type Database = {
           pastor_photo_url?: string | null
           plan_tier?: Database["public"]["Enums"]["church_plan_tier"]
           primary_color?: string | null
-          qr_iban?: string | null
           secondary_color?: string | null
           service_times?: string | null
           slug: string
@@ -285,6 +285,7 @@ export type Database = {
           created_at?: string
           custom_bot_name?: string | null
           denomination?: string | null
+          iban?: string | null
           id?: string
           is_active?: boolean
           language?: string | null
@@ -295,7 +296,6 @@ export type Database = {
           pastor_photo_url?: string | null
           plan_tier?: Database["public"]["Enums"]["church_plan_tier"]
           primary_color?: string | null
-          qr_iban?: string | null
           secondary_color?: string | null
           service_times?: string | null
           slug?: string
