@@ -221,6 +221,7 @@ const ForChurches = () => {
                         <SelectItem value="Pflegeheim">{t("church.form.orgTypes.careHome")}</SelectItem>
                         <SelectItem value="Altersheim">{t("church.form.orgTypes.seniorHome")}</SelectItem>
                         <SelectItem value="Spital">{t("church.form.orgTypes.hospital")}</SelectItem>
+                        <SelectItem value="Gefängnisseelsorge">{t("church.form.orgTypes.prison")}</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
