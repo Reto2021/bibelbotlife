@@ -80,7 +80,7 @@ export default function ServiceEditor() {
   const totalDuration = blocks.reduce((sum, b) => sum + (b.duration || 0), 0);
 
   const handleSave = async () => {
-    if (!user) return;
+    if (!user || !church) return;
     setSaving(true);
     try {
       const payload = {
@@ -91,7 +91,7 @@ export default function ServiceEditor() {
         tradition: tradition as any,
         blocks: blocks as any,
         created_by: user.id,
-        church_id: "00000000-0000-0000-0000-000000000000", // placeholder
+        church_id: church.id,
       };
 
       if (isNew) {
