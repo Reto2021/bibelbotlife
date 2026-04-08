@@ -1,9 +1,15 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import { Search, ArrowRight, Shield } from "lucide-react";
+import { Search, ArrowRight, Shield, Loader2, Mic, MicOff, Send } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { openBibelBotChat } from "@/lib/chat-events";
 import { useTrack } from "@/components/AnalyticsProvider";
+import { openLifeWheel } from "@/components/LifeWheel";
+import { CHAT_OPEN_EVENT, type ChatMode } from "@/lib/chat-events";
+import ReactMarkdown from "react-markdown";
+import { ShareButton } from "@/components/ShareButton";
+import { useToast } from "@/hooks/use-toast";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
 
 const TYPEWRITER_SPEED = 45;
 const PAUSE_BETWEEN = 2800;
@@ -34,16 +40,104 @@ function getDailyVerse() {
   return DAILY_VERSES[dayOfYear % DAILY_VERSES.length];
 }
 
+type TopicChip = { emoji: string; key: string; special?: "lifewheel" | "sevenwhys" };
+
+const TOPIC_CHIPS: TopicChip[] = [
+  { emoji: "🤔", key: "namequiz" },
+  { emoji: "🎡", key: "lifewheel", special: "lifewheel" },
+  { emoji: "🔍", key: "sevenwhys", special: "sevenwhys" },
+  { emoji: "🙏", key: "prayer" },
+  { emoji: "💔", key: "heartbreak" },
+  { emoji: "😰", key: "anxiety" },
+  { emoji: "🌅", key: "newstart" },
+  { emoji: "🙌", key: "gratitude" },
+  { emoji: "🕊️", key: "baptism" },
+  { emoji: "💐", key: "condolence" },
+  { emoji: "💍", key: "wedding" },
+  { emoji: "🫂", key: "loneliness" },
+  { emoji: "⚖️", key: "decision" },
+  { emoji: "😡", key: "anger" },
+  { emoji: "😢", key: "burnout" },
+  { emoji: "🧭", key: "calling" },
+  { emoji: "⛪", key: "faithdoubt" },
+  { emoji: "🤝", key: "forgiveness" },
+  { emoji: "🎊", key: "joy" },
+  { emoji: "📖", key: "bibleverse" },
+];
+
+const SpeechRecognition =
+  (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+
+function getSpeechLang(lang: string): string {
+  const map: Record<string, string> = { de: "de-CH", en: "en-US", fr: "fr-FR", es: "es-ES" };
+  return map[lang] || "de-CH";
+}
+
+type Message = {
+  role: "user" | "assistant";
+  content: string;
+};
+
+const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/bibelbot-chat`;
+const MESSAGES_KEY = "bibelbot-messages-inline";
+
+function loadMessages(): Message[] {
+  try { const stored = localStorage.getItem(MESSAGES_KEY); if (stored) return JSON.parse(stored); } catch {} return [];
+}
+function saveMessages(msgs: Message[]) {
+  try { localStorage.setItem(MESSAGES_KEY, JSON.stringify(msgs)); } catch {}
+}
+
+const BIBLE_REF_PATTERN = /(\d\.\s?)?(?:Genesis|Exodus|Levitikus|Numeri|Deuteronomium|Josua|Richter|Rut|Samuel|Könige|Chronik|Esra|Nehemia|Ester|Hiob|Psalm|Psalmen|Sprüche|Prediger|Hoheslied|Jesaja|Jeremia|Klagelieder|Ezechiel|Daniel|Hosea|Joel|Amos|Obadja|Jona|Micha|Nahum|Habakuk|Zefanja|Haggai|Sacharja|Maleachi|Matthäus|Markus|Lukas|Johannes|Apostelgeschichte|Römer|Korinther|Galater|Epheser|Philipper|Kolosser|Thessalonicher|Timotheus|Titus|Philemon|Hebräer|Jakobus|Petrus|Judas|Offenbarung|Mose|Mt|Mk|Lk|Joh|Apg|Röm|Kor|Gal|Eph|Phil|Kol|Ps|Spr|Jes|Jer)\s+\d+(?:[,:]\d+(?:[\-–]\d+)?)?/g;
+
+function makeRefsClickable(children: React.ReactNode, onRefClick: (msg: string) => void): React.ReactNode {
+  if (!children) return children;
+  const processNode = (node: React.ReactNode): React.ReactNode => {
+    if (typeof node === "string") {
+      const parts: React.ReactNode[] = [];
+      let lastIndex = 0;
+      const regex = new RegExp(BIBLE_REF_PATTERN.source, "g");
+      let match;
+      while ((match = regex.exec(node)) !== null) {
+        if (match.index > lastIndex) parts.push(node.slice(lastIndex, match.index));
+        const ref = match[0];
+        parts.push(
+          <button key={`ref-${match.index}`} onClick={(e) => { e.preventDefault(); onRefClick(`Erkläre mir ${ref} im Detail`); }} className="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary cursor-pointer font-medium">{ref}</button>
+        );
+        lastIndex = regex.lastIndex;
+      }
+      if (parts.length === 0) return node;
+      if (lastIndex < node.length) parts.push(node.slice(lastIndex));
+      return <>{parts}</>;
+    }
+    if (Array.isArray(node)) return node.map((child, i) => <span key={i}>{processNode(child)}</span>);
+    return node;
+  };
+  if (Array.isArray(children)) return children.map((child, i) => <span key={i}>{processNode(child)}</span>);
+  return processNode(children);
+}
+
 export function ChatHero() {
   const { t, i18n } = useTranslation();
   const [input, setInput] = useState("");
   const [placeholder, setPlaceholder] = useState("");
   const [phraseIndex, setPhraseIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const inputRef = useRef<HTMLInputElement>(null);
   const [isFocused, setIsFocused] = useState(false);
+  const [messages, setMessages] = useState<Message[]>(loadMessages);
+  const [isLoading, setIsLoading] = useState(false);
+  const [chatMode, setChatMode] = useState<ChatMode>("normal");
+  const [isListening, setIsListening] = useState(false);
+  const [showMoreChips, setShowMoreChips] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const chatInputRef = useRef<HTMLTextAreaElement>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const recognitionRef = useRef<any>(null);
   const { track } = useTrack();
+  const { toast } = useToast();
   const dailyVerse = useMemo(() => getDailyVerse(), []);
+
+  const hasConversation = messages.length > 0;
 
   const phrases = [
     t("chatHero.placeholder1"),
@@ -53,178 +147,423 @@ export function ChatHero() {
     t("chatHero.placeholder5"),
   ];
 
-  // Typewriter effect
-  useEffect(() => {
-    if (isFocused) return; // pause animation when user is typing
-
-    const currentPhrase = phrases[phraseIndex];
-    let timeout: ReturnType<typeof setTimeout>;
-
-    if (!isDeleting) {
-      if (placeholder.length < currentPhrase.length) {
-        timeout = setTimeout(() => {
-          setPlaceholder(currentPhrase.slice(0, placeholder.length + 1));
-        }, TYPEWRITER_SPEED);
-      } else {
-        timeout = setTimeout(() => setIsDeleting(true), PAUSE_BETWEEN);
-      }
-    } else {
-      if (placeholder.length > 0) {
-        timeout = setTimeout(() => {
-          setPlaceholder(placeholder.slice(0, -1));
-        }, DELETE_SPEED);
-      } else {
-        setIsDeleting(false);
-        setPhraseIndex((prev) => (prev + 1) % phrases.length);
-      }
-    }
-
-    return () => clearTimeout(timeout);
-  }, [placeholder, isDeleting, phraseIndex, isFocused, phrases]);
-
-  const handleSubmit = useCallback(
-    (e: React.FormEvent) => {
-      e.preventDefault();
-      const text = input.trim();
-      if (!text) return;
-      track("chat_hero_submit", { query: text.slice(0, 50) });
-      openBibelBotChat(text);
-      setInput("");
-    },
-    [input, track]
-  );
-
-  const handleSuggestionClick = useCallback(
-    (suggestion: string) => {
-      track("chat_hero_suggestion", { suggestion: suggestion.slice(0, 50) });
-      openBibelBotChat(suggestion);
-    },
-    [track]
-  );
-
   const suggestions = [
     t("chatHero.suggestion1"),
     t("chatHero.suggestion2"),
     t("chatHero.suggestion3"),
   ];
 
+  // Typewriter effect (only when no conversation)
+  useEffect(() => {
+    if (isFocused || hasConversation) return;
+    const currentPhrase = phrases[phraseIndex];
+    let timeout: ReturnType<typeof setTimeout>;
+    if (!isDeleting) {
+      if (placeholder.length < currentPhrase.length) {
+        timeout = setTimeout(() => setPlaceholder(currentPhrase.slice(0, placeholder.length + 1)), TYPEWRITER_SPEED);
+      } else {
+        timeout = setTimeout(() => setIsDeleting(true), PAUSE_BETWEEN);
+      }
+    } else {
+      if (placeholder.length > 0) {
+        timeout = setTimeout(() => setPlaceholder(placeholder.slice(0, -1)), DELETE_SPEED);
+      } else {
+        setIsDeleting(false);
+        setPhraseIndex((prev) => (prev + 1) % phrases.length);
+      }
+    }
+    return () => clearTimeout(timeout);
+  }, [placeholder, isDeleting, phraseIndex, isFocused, phrases, hasConversation]);
+
+  // Save messages
+  useEffect(() => { if (messages.length > 0) saveMessages(messages); }, [messages]);
+
+  // Scroll to bottom on new messages
+  useEffect(() => { if (scrollRef.current) scrollRef.current.scrollTop = scrollRef.current.scrollHeight; }, [messages]);
+
+  const sendMessage = useCallback(
+    async (text: string) => {
+      if (!text.trim() || isLoading) return;
+      track("chat_hero_submit", { query: text.slice(0, 50) });
+      const userMsg: Message = { role: "user", content: text.trim() };
+      const allMessages = [...messages, userMsg];
+      setMessages(allMessages);
+      setInput("");
+      setIsLoading(true);
+
+      let assistantSoFar = "";
+
+      try {
+        const resp = await fetch(CHAT_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}` },
+          body: JSON.stringify({ messages: allMessages, journeyDay: 1, language: i18n.language, mode: chatMode }),
+        });
+
+        if (!resp.ok) {
+          const errData = await resp.json().catch(() => ({}));
+          const errMsg = resp.status === 429 ? t("chat.errorTooMany") : errData.error || t("chat.errorConnect");
+          toast({ title: t("chat.errorTitle"), description: errMsg, variant: "destructive" });
+          setIsLoading(false);
+          return;
+        }
+
+        if (!resp.body) throw new Error("No stream");
+
+        const reader = resp.body.getReader();
+        const decoder = new TextDecoder();
+        let buffer = "";
+
+        const upsert = (chunk: string) => {
+          assistantSoFar += chunk;
+          setMessages((prev) => {
+            const last = prev[prev.length - 1];
+            if (last?.role === "assistant") {
+              return prev.map((m, i) => i === prev.length - 1 ? { ...m, content: assistantSoFar } : m);
+            }
+            return [...prev, { role: "assistant", content: assistantSoFar }];
+          });
+        };
+
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          buffer += decoder.decode(value, { stream: true });
+          let idx: number;
+          while ((idx = buffer.indexOf("\n")) !== -1) {
+            let line = buffer.slice(0, idx);
+            buffer = buffer.slice(idx + 1);
+            if (line.endsWith("\r")) line = line.slice(0, -1);
+            if (!line.startsWith("data: ")) continue;
+            const json = line.slice(6).trim();
+            if (json === "[DONE]") break;
+            try {
+              const parsed = JSON.parse(json);
+              const content = parsed.choices?.[0]?.delta?.content;
+              if (content) upsert(content);
+            } catch {
+              buffer = line + "\n" + buffer;
+              break;
+            }
+          }
+        }
+      } catch (e) {
+        console.error(e);
+        toast({ title: t("chat.errorTitle"), description: t("chat.errorConnection"), variant: "destructive" });
+      } finally {
+        setIsLoading(false);
+      }
+    },
+    [messages, isLoading, toast, t, i18n.language, chatMode, track]
+  );
+
+  // Listen for external chat open events (from DailyImpulse, LifeWheel, etc.)
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const detail = (e as CustomEvent).detail;
+      const msg = typeof detail === "string" ? detail : detail?.message;
+      const mode: ChatMode = typeof detail === "string" ? "normal" : (detail?.mode || "normal");
+      setChatMode(mode);
+      setTimeout(() => sendMessage(msg), 100);
+    };
+    window.addEventListener(CHAT_OPEN_EVENT, handler);
+    return () => window.removeEventListener(CHAT_OPEN_EVENT, handler);
+  }, [sendMessage]);
+
+  const handleChipClick = (chip: TopicChip) => {
+    track("chip_click", { chip: chip.key });
+    if (chip.special === "lifewheel") {
+      openLifeWheel();
+      return;
+    }
+    const prompt = t(`tiles.${chip.key}.prompt`);
+    if (chip.special === "sevenwhys") {
+      setChatMode("seven-whys");
+    }
+    sendMessage(prompt);
+  };
+
+  const handleSubmit = useCallback(
+    (e: React.FormEvent) => {
+      e.preventDefault();
+      const text = input.trim();
+      if (!text) return;
+      sendMessage(text);
+    },
+    [input, sendMessage]
+  );
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); sendMessage(input); }
+  };
+
+  const startListening = useCallback(() => {
+    if (!SpeechRecognition) return;
+    const recognition = new SpeechRecognition();
+    recognition.lang = getSpeechLang(i18n.language);
+    recognition.continuous = false;
+    recognition.interimResults = true;
+    recognition.onresult = (event: any) => { const transcript = Array.from(event.results).map((r: any) => r[0].transcript).join(""); setInput(transcript); };
+    recognition.onend = () => setIsListening(false);
+    recognition.onerror = () => setIsListening(false);
+    recognitionRef.current = recognition;
+    recognition.start();
+    setIsListening(true);
+  }, [i18n.language]);
+
+  const stopListening = useCallback(() => { recognitionRef.current?.stop(); setIsListening(false); }, []);
+
+  const visibleChips = showMoreChips ? TOPIC_CHIPS : TOPIC_CHIPS.slice(0, 8);
+
   return (
-    <section className="relative py-10 md:py-24 px-4">
-      <div className="container mx-auto max-w-3xl text-center">
-        {/* Trust badge */}
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="mb-8"
-        >
-          <span className="inline-flex items-center gap-3 text-sm font-semibold text-foreground bg-card/80 backdrop-blur-sm border border-border shadow-md px-5 py-2.5 rounded-full">
-            <Shield className="h-4 w-4 text-primary" />
-            <span className="flex items-center gap-2">
-              <span>{t("hero.badge.noLogin")}</span>
-              <span className="text-primary/40">·</span>
-              <span>{t("hero.badge.noData")}</span>
-              <span className="text-primary/40">·</span>
-              <span>{t("hero.badge.noJudgment")}</span>
-            </span>
-          </span>
-        </motion.div>
-
-        {/* Title */}
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-4xl md:text-6xl font-bold text-foreground mb-4 leading-tight"
-        >
-          {t("hero.title1")}
-          <span
-            className="text-transparent bg-clip-text"
-            style={{ backgroundImage: "var(--gradient-cta)" }}
-          >
-            {t("hero.title2")}
-          </span>
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed"
-        >
-          {t("chatHero.subtitle")}
-        </motion.p>
-
-        {/* Search input */}
-        <motion.form
-          onSubmit={handleSubmit}
-          initial={{ opacity: 0, y: 20, scale: 0.97 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="relative max-w-2xl mx-auto mb-8"
-        >
-          <div
-            className={`relative flex items-center bg-card border-2 rounded-2xl shadow-lg transition-all duration-300 ${
-              isFocused
-                ? "border-primary shadow-[0_0_0_4px_hsl(var(--primary)/0.12)]"
-                : "border-border hover:border-primary/40"
-            }`}
-          >
-            <Search className="absolute left-5 h-5 w-5 text-muted-foreground pointer-events-none" />
-            <input
-              ref={inputRef}
-              type="text"
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onFocus={() => setIsFocused(true)}
-              onBlur={() => setIsFocused(false)}
-              placeholder={isFocused ? t("chatHero.focusPlaceholder") : placeholder + "│"}
-              className="w-full bg-transparent pl-12 pr-14 py-4 md:pl-14 md:py-5 text-base md:text-lg text-foreground placeholder:text-muted-foreground/60 focus:outline-none rounded-2xl"
-              aria-label={t("chatHero.ariaLabel")}
-            />
-            <button
-              type="submit"
-              disabled={!input.trim()}
-              className="absolute right-3 h-10 w-10 rounded-xl bg-primary text-primary-foreground flex items-center justify-center transition-all duration-200 hover:bg-primary/90 disabled:opacity-30 disabled:cursor-not-allowed"
-              aria-label={t("chatHero.send")}
+    <section className="relative px-4 min-h-[calc(100vh-64px)] flex flex-col">
+      <div className="container mx-auto max-w-3xl flex-1 flex flex-col">
+        <AnimatePresence mode="wait">
+          {!hasConversation ? (
+            /* ========== LANDING STATE ========== */
+            <motion.div
+              key="landing"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0, y: -20, transition: { duration: 0.3 } }}
+              className="flex-1 flex flex-col justify-center py-8"
             >
-              <ArrowRight className="h-5 w-5" />
-            </button>
-          </div>
-        </motion.form>
+              {/* Trust badge */}
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="mb-6 text-center"
+              >
+                <span className="inline-flex items-center gap-3 text-sm font-semibold text-foreground bg-card/80 backdrop-blur-sm border border-border shadow-md px-5 py-2.5 rounded-full">
+                  <Shield className="h-4 w-4 text-primary" />
+                  <span className="flex items-center gap-2">
+                    <span>{t("hero.badge.noLogin")}</span>
+                    <span className="text-primary/40">·</span>
+                    <span>{t("hero.badge.noData")}</span>
+                    <span className="text-primary/40">·</span>
+                    <span>{t("hero.badge.noJudgment")}</span>
+                  </span>
+                </span>
+              </motion.div>
 
-        {/* Quick suggestions */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="flex flex-wrap justify-center gap-2 mb-12"
-        >
-          {suggestions.map((s, i) => (
-            <button
-              key={i}
-              onClick={() => handleSuggestionClick(s)}
-              className="text-sm px-4 py-2 rounded-full border border-border bg-card/60 text-muted-foreground hover:text-foreground hover:border-primary/40 hover:bg-card transition-all duration-200"
+              {/* Title */}
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="text-4xl md:text-6xl font-bold text-foreground mb-4 leading-tight text-center"
+              >
+                {t("hero.title1")}
+                <span className="text-transparent bg-clip-text" style={{ backgroundImage: "var(--gradient-cta)" }}>
+                  {t("hero.title2")}
+                </span>
+              </motion.h1>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed text-center"
+              >
+                {t("chatHero.subtitle")}
+              </motion.p>
+
+              {/* Search input */}
+              <motion.form
+                onSubmit={handleSubmit}
+                initial={{ opacity: 0, y: 20, scale: 0.97 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="relative max-w-2xl mx-auto mb-6 w-full"
+              >
+                <div className={`relative flex items-center bg-card border-2 rounded-2xl shadow-lg transition-all duration-300 ${
+                  isFocused ? "border-primary shadow-[0_0_0_4px_hsl(var(--primary)/0.12)]" : "border-border hover:border-primary/40"
+                }`}>
+                  <Search className="absolute left-5 h-5 w-5 text-muted-foreground pointer-events-none" />
+                  <input
+                    ref={inputRef}
+                    type="text"
+                    value={input}
+                    onChange={(e) => setInput(e.target.value)}
+                    onFocus={() => setIsFocused(true)}
+                    onBlur={() => setIsFocused(false)}
+                    onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); handleSubmit(e); } }}
+                    placeholder={isFocused ? t("chatHero.focusPlaceholder") : placeholder + "│"}
+                    className="w-full bg-transparent pl-12 pr-24 py-4 md:pl-14 md:py-5 text-base md:text-lg text-foreground placeholder:text-muted-foreground/60 focus:outline-none rounded-2xl"
+                    aria-label={t("chatHero.ariaLabel")}
+                  />
+                  <div className="absolute right-3 flex items-center gap-1.5">
+                    {SpeechRecognition && (
+                      <button
+                        type="button"
+                        onClick={isListening ? stopListening : startListening}
+                        className={`h-9 w-9 rounded-xl flex items-center justify-center transition-all duration-200 ${isListening ? "bg-destructive text-destructive-foreground" : "text-muted-foreground hover:text-foreground hover:bg-muted"}`}
+                        aria-label={isListening ? "Stopp" : "Spracheingabe"}
+                      >
+                        {isListening ? <MicOff className="h-4 w-4" /> : <Mic className="h-4 w-4" />}
+                      </button>
+                    )}
+                    <button
+                      type="submit"
+                      disabled={!input.trim()}
+                      className="h-10 w-10 rounded-xl bg-primary text-primary-foreground flex items-center justify-center transition-all duration-200 hover:bg-primary/90 disabled:opacity-30 disabled:cursor-not-allowed"
+                      aria-label={t("chatHero.send")}
+                    >
+                      <ArrowRight className="h-5 w-5" />
+                    </button>
+                  </div>
+                </div>
+              </motion.form>
+
+              {/* Quick suggestion chips */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="flex flex-wrap justify-center gap-2 mb-6 max-w-2xl mx-auto"
+              >
+                {suggestions.map((s, i) => (
+                  <button
+                    key={i}
+                    onClick={() => sendMessage(s)}
+                    className="text-sm px-4 py-2 rounded-full border border-border bg-card/60 text-muted-foreground hover:text-foreground hover:border-primary/40 hover:bg-card transition-all duration-200"
+                  >
+                    {s}
+                  </button>
+                ))}
+              </motion.div>
+
+              {/* Topic chips */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                className="max-w-2xl mx-auto mb-6"
+              >
+                <p className="text-xs text-muted-foreground text-center mb-3">{t("tiles.sectionTitle")}</p>
+                <div className="flex flex-wrap justify-center gap-1.5">
+                  {visibleChips.map((chip) => (
+                    <button
+                      key={chip.key}
+                      onClick={() => handleChipClick(chip)}
+                      className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full border border-border bg-card/50 text-muted-foreground hover:text-foreground hover:border-primary/30 hover:bg-card transition-all duration-200"
+                    >
+                      <span>{chip.emoji}</span>
+                      <span>{t(`tiles.${chip.key}.title`)}</span>
+                    </button>
+                  ))}
+                  {!showMoreChips && (
+                    <button
+                      onClick={() => setShowMoreChips(true)}
+                      className="text-xs px-3 py-1.5 rounded-full border border-border bg-card/50 text-primary hover:bg-card transition-all duration-200"
+                    >
+                      +{TOPIC_CHIPS.length - 8} {t("tiles.showMore", "mehr")}
+                    </button>
+                  )}
+                </div>
+              </motion.div>
+
+              {/* Bible quote */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.7 }}
+                className="max-w-xl mx-auto"
+              >
+                <div className="bg-card/40 backdrop-blur-sm rounded-xl px-6 py-4 border border-border/50 text-center">
+                  <p className="text-foreground/70 italic text-base leading-relaxed">
+                    {dailyVerse.quote}
+                  </p>
+                  <p className="text-muted-foreground text-sm mt-1.5">– {dailyVerse.ref}</p>
+                </div>
+              </motion.div>
+            </motion.div>
+          ) : (
+            /* ========== CHAT STATE ========== */
+            <motion.div
+              key="chat"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="flex-1 flex flex-col py-4 min-h-0"
             >
-              {s}
-            </button>
-          ))}
-        </motion.div>
+              {/* Messages */}
+              <div ref={scrollRef} className="flex-1 overflow-y-auto space-y-4 pb-4 scroll-smooth">
+                {messages.map((msg, i) => (
+                  <div key={i} className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
+                    <div className="max-w-[85%] md:max-w-[75%]">
+                      <div className={`rounded-2xl px-4 py-3 text-sm leading-relaxed ${
+                        msg.role === "user"
+                          ? "bg-primary text-primary-foreground rounded-br-md"
+                          : "bg-card border border-border text-foreground rounded-bl-md"
+                      }`}>
+                        {msg.role === "assistant" ? (
+                          <div className="prose prose-sm max-w-none dark:prose-invert">
+                            <ReactMarkdown components={{
+                              p: ({ children }) => <p>{makeRefsClickable(children, sendMessage)}</p>,
+                              li: ({ children }) => <li>{makeRefsClickable(children, sendMessage)}</li>,
+                            }}>{msg.content}</ReactMarkdown>
+                          </div>
+                        ) : msg.content}
+                      </div>
+                      {msg.role === "assistant" && (
+                        <div className="flex items-center gap-2 mt-1">
+                          <ShareButton
+                            title={t("share.chatTitle")}
+                            text={msg.content.length > 280 ? msg.content.slice(0, 277) + "…" : msg.content}
+                            variant="icon"
+                            className="ml-auto"
+                          />
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                ))}
 
-        {/* Bible quote */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.7 }}
-          className="max-w-xl mx-auto"
-        >
-          <div className="bg-card/40 backdrop-blur-sm rounded-xl px-6 py-4 border border-border/50">
-            <p className="text-foreground/70 italic text-base leading-relaxed">
-              {dailyVerse.quote}
-            </p>
-            <p className="text-muted-foreground text-sm mt-1.5">– {dailyVerse.ref}</p>
-          </div>
-        </motion.div>
+                {isLoading && messages[messages.length - 1]?.role !== "assistant" && (
+                  <div className="flex justify-start">
+                    <div className="bg-card border border-border rounded-2xl rounded-bl-md px-4 py-3 flex items-center gap-2">
+                      <Loader2 className="h-4 w-4 animate-spin text-muted-foreground" />
+                      <span className="text-xs text-muted-foreground">{t("chat.writing")}</span>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Chat input */}
+              <div className="border-t border-border pt-3 mt-auto">
+                <div className="flex gap-2 items-end">
+                  <Textarea
+                    ref={chatInputRef}
+                    value={input}
+                    onChange={(e) => setInput(e.target.value)}
+                    onKeyDown={handleKeyDown}
+                    placeholder={t("chat.placeholder")}
+                    className="min-h-[40px] max-h-[100px] text-sm resize-none"
+                    rows={1}
+                  />
+                  {SpeechRecognition && (
+                    <Button size="icon" variant={isListening ? "destructive" : "outline"} onClick={isListening ? stopListening : startListening} className="h-10 w-10 shrink-0">
+                      {isListening ? <MicOff className="h-4 w-4" /> : <Mic className="h-4 w-4" />}
+                    </Button>
+                  )}
+                  <Button size="icon" onClick={() => sendMessage(input)} disabled={!input.trim() || isLoading} className="h-10 w-10 shrink-0">
+                    <Send className="h-4 w-4" />
+                  </Button>
+                </div>
+                {/* New chat button */}
+                <div className="flex justify-center mt-2">
+                  <button
+                    onClick={() => { setMessages([]); localStorage.removeItem(MESSAGES_KEY); }}
+                    className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    {t("chat.newChat", "Neues Gespräch starten")}
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </section>
   );
