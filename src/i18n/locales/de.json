@@ -841,6 +841,11 @@
     "generating": "Text wird erstellt…",
     "regenerate": "Neu generieren",
     "downloadPDF": "Als PDF herunterladen",
+    "save": "Speichern",
+    "shareStep": "Mit Seelsorger teilen",
+    "shareDesc": "Erstelle einen Link, den du per E-Mail oder Messenger an deinen Seelsorger senden kannst. Er kann den Text lesen und als PDF herunterladen.",
+    "enableShare": "Link erstellen & kopieren",
+    "disableShare": "Freigabe deaktivieren",
     "micError": "Mikrofon konnte nicht gestartet werden. Bitte Berechtigung erteilen.",
     "needMore": "Bitte nimm zuerst Erinnerungen auf oder schreibe Notizen.",
     "genError": "Fehler bei der Texterstellung. Bitte versuche es erneut."
