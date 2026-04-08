@@ -1,44 +1,50 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { Church, CheckCircle2, ArrowLeft, Send, Users, BarChart3, Palette, Headphones } from "lucide-react";
+import { Church, ArrowLeft, Send, Users, BarChart3, Palette } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { DarkModeToggle } from "@/components/DarkModeToggle";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
 const tiers = [
-  {
-    key: "free",
-    setup: 0,
-    annual: 0,
-    icon: Church,
-    popular: false,
-  },
-  {
-    key: "community",
-    setup: 490,
-    annual: 790,
-    icon: Users,
-    popular: false,
-  },
-  {
-    key: "gemeinde",
-    setup: 990,
-    annual: 1490,
-    icon: BarChart3,
-    popular: true,
-  },
-  {
-    key: "kirche",
-    setup: 1990,
-    annual: 2990,
-    icon: Palette,
-    popular: false,
-  },
+  { key: "free", setup: 0, annual: 0, icon: Church, popular: false },
+  { key: "community", setup: 490, annual: 790, icon: Users, popular: false },
+  { key: "gemeinde", setup: 990, annual: 1490, icon: BarChart3, popular: true },
+  { key: "kirche", setup: 1990, annual: 2990, icon: Palette, popular: false },
 ];
 
 const ForChurches = () => {
   const { t } = useTranslation();
+  const [formData, setFormData] = useState({ name: "", email: "", church_name: "", preferred_tier: "", message: "" });
+  const [sending, setSending] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formData.email || !formData.message) return;
+    setSending(true);
+    try {
+      const { error } = await supabase.from("church_partnership_inquiries").insert({
+        name: formData.name || null,
+        email: formData.email,
+        church_name: formData.church_name || null,
+        preferred_tier: formData.preferred_tier || null,
+        message: formData.message,
+      });
+      if (error) throw error;
+      toast.success(t("church.form.success"));
+      setFormData({ name: "", email: "", church_name: "", preferred_tier: "", message: "" });
+    } catch {
+      toast.error(t("church.form.error"));
+    } finally {
+      setSending(false);
+    }
+  };
 
   return (
     <div className="min-h-screen" style={{ background: "var(--gradient-hero)" }}>
@@ -123,17 +129,92 @@ const ForChurches = () => {
                   <Button
                     className="w-full mt-6"
                     variant={tier.popular ? "default" : "outline"}
-                    asChild
+                    onClick={() => {
+                      setFormData(prev => ({ ...prev, preferred_tier: tier.key }));
+                      document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" });
+                    }}
                   >
-                    <a href="mailto:kontakt@biblebot.life?subject=Church%20Partnership">
-                      <Send className="h-4 w-4 mr-2" />
-                      {t("church.contact")}
-                    </a>
+                    <Send className="h-4 w-4 mr-2" />
+                    {t("church.contact")}
                   </Button>
                 </CardContent>
               </Card>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Contact Form */}
+      <section id="contact-form" className="py-20 px-4 bg-card/40">
+        <div className="container mx-auto max-w-xl">
+          <h2 className="text-3xl font-bold text-foreground text-center mb-4">{t("church.form.title")}</h2>
+          <p className="text-muted-foreground text-center mb-8">{t("church.form.subtitle")}</p>
+
+          <Card className="bg-card/80 border-border">
+            <CardContent className="pt-6">
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="text-sm font-medium text-foreground mb-1 block">{t("church.form.name")}</label>
+                    <Input
+                      value={formData.name}
+                      onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
+                      maxLength={100}
+                    />
+                  </div>
+                  <div>
+                    <label className="text-sm font-medium text-foreground mb-1 block">{t("church.form.email")} *</label>
+                    <Input
+                      type="email"
+                      required
+                      value={formData.email}
+                      onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
+                      maxLength={255}
+                    />
+                  </div>
+                </div>
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="text-sm font-medium text-foreground mb-1 block">{t("church.form.churchName")}</label>
+                    <Input
+                      value={formData.church_name}
+                      onChange={(e) => setFormData(prev => ({ ...prev, church_name: e.target.value }))}
+                      maxLength={200}
+                    />
+                  </div>
+                  <div>
+                    <label className="text-sm font-medium text-foreground mb-1 block">{t("church.form.tier")}</label>
+                    <Select value={formData.preferred_tier} onValueChange={(v) => setFormData(prev => ({ ...prev, preferred_tier: v }))}>
+                      <SelectTrigger>
+                        <SelectValue placeholder={t("church.form.tierPlaceholder")} />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {tiers.map((tier) => (
+                          <SelectItem key={tier.key} value={tier.key}>
+                            {t(`church.tier.${tier.key}.name`)}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </div>
+                </div>
+                <div>
+                  <label className="text-sm font-medium text-foreground mb-1 block">{t("church.form.message")} *</label>
+                  <Textarea
+                    required
+                    value={formData.message}
+                    onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
+                    rows={4}
+                    maxLength={2000}
+                  />
+                </div>
+                <Button type="submit" className="w-full" disabled={sending}>
+                  <Send className="h-4 w-4 mr-2" />
+                  {sending ? "..." : t("church.form.submit")}
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
