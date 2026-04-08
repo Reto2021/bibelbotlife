@@ -71,6 +71,8 @@ export function DailyImpulse() {
   const [isSubscribed, setIsSubscribed] = useState(() => localStorage.getItem(SUBSCRIBED_KEY) === "1");
   const [isSubscribing, setIsSubscribing] = useState(false);
   const [showImagePreview, setShowImagePreview] = useState(false);
+  const [showSmsInput, setShowSmsInput] = useState(false);
+  const [smsPhone, setSmsPhone] = useState("");
 
   useEffect(() => {
     if (impulse) return;
