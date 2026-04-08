@@ -269,7 +269,9 @@
     "errorTitle": "Erreur",
     "errorConnection": "impossible de se connecter.",
     "errorNoStream": "Pas de flux",
-    "seniorMode": "Mode senior (texte agrandi)"
+    "seniorMode": "Mode senior (texte agrandi)",
+    "teaserCta": "Écrire maintenant →",
+    "namePlaceholder": "p.ex. Éli, Miriam…"
   },
   "install": {
     "title": "Installer BibleBot",
@@ -714,5 +716,40 @@
       "desc": "Texte plus grand et navigation simplifiée – idéal pour les résidents âgés.",
       "cta": "Essayer le mode senior"
     }
+  },
+  "refer": {
+    "badge": "Partager la Parole",
+    "title": "Recommander BibleBot",
+    "subtitle": "Vous connaissez quelqu'un qui a besoin d'encouragement? Partagez BibleBot – un message peut faire la différence.",
+    "whatsapp": "Partager via WhatsApp",
+    "whatsappMsg": "Salut, je voulais te montrer BibleBot – un compagnon biblique gratuit qui connaît vraiment la Bible. Sans inscription, anonyme, honnête. Essaie-le: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "telegram": "Partager via Telegram",
+    "telegramMsg": "Salut, tu connais BibleBot? Un compagnon biblique personnel gratuit – honnête, anonyme, sans inscription. Regarde: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "email": "Partager par e-mail",
+    "emailSubject": "Ceci pourrait t'intéresser: BibleBot.Life",
+    "emailBody": "Salut!\n\nJe voulais te montrer BibleBot – un compagnon biblique gratuit. Sans inscription, complètement anonyme.\n\nEssaie-le: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nCordialement",
+    "copy": "Copier le lien",
+    "copied": "Lien copié! 📋",
+    "qr": "Ou montrez simplement ce code QR:"
+  },
+  "share": {
+    "label": "Partager",
+    "shareVia": "Partager via",
+    "copied": "Copié! 📋",
+    "copiedShort": "Copié!",
+    "copiedDesc": "Texte copié. Partagez-le sur WhatsApp, Instagram ou ailleurs!",
+    "copyLink": "Copier le texte",
+    "error": "Échec de la copie",
+    "impulseTitle": "BibleBot – Impulsion du jour",
+    "chatTitle": "BibleBot – Pensée du jour",
+    "createImage": "Créer une image ✨",
+    "generating": "Création…",
+    "imageReady": "Votre image est prête!",
+    "shareImage": "Partager l'image",
+    "download": "Enregistrer",
+    "imageError": "Échec de la création",
+    "imageErrorDesc": "L'image n'a pas pu être créée. Réessayez plus tard.",
+    "imageSaved": "Texte copié! 📋",
+    "imageSavedDesc": "Enregistrez l'image et partagez-la!"
   }
 }

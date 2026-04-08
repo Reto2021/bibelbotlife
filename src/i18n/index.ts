@@ -66,6 +66,7 @@ i18n
     },
     fallbackLng: "de",
     supportedLngs,
+    nonExplicitSupportedLngs: true,
     interpolation: { escapeValue: false },
     detection: {
       order: ["localStorage", "navigator"],

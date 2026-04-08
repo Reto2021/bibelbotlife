@@ -269,7 +269,9 @@
     "errorTitle": "Chyba",
     "errorConnection": "nelze se připojit.",
     "errorNoStream": "Žádný stream",
-    "seniorMode": "Senior mode (larger text)"
+    "seniorMode": "Senior mode (larger text)",
+    "teaserCta": "Psát nyní →",
+    "namePlaceholder": "např. Eli, Miriam…"
   },
   "install": {
     "title": "Nainstalovat BibleBot",
@@ -714,5 +716,40 @@
       "desc": "Větší písmo a zjednodušená navigace – ideální pro starší obyvatele.",
       "cta": "Vyzkoušejte režim pro seniory"
     }
+  },
+  "refer": {
+    "badge": "Sdílet Slovo",
+    "title": "Doporuč BibleBot",
+    "subtitle": "Znáte někoho, kdo potřebuje povzbuzení? Sdílejte BibleBot.",
+    "whatsapp": "Sdílet přes WhatsApp",
+    "whatsappMsg": "Ahoj, chtěl jsem ti ukázat BibleBot – bezplatného biblického průvodce. Vyzkoušej: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "telegram": "Sdílet přes Telegram",
+    "telegramMsg": "Ahoj, znáš BibleBot? Bezplatný osobní biblický průvodce. Podívej se: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "email": "Sdílet e-mailem",
+    "emailSubject": "Tohle by tě mohlo zajímat: BibleBot.Life",
+    "emailBody": "Ahoj!\n\nChtěl jsem ti ukázat BibleBot.\n\nVyzkoušej: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nS pozdravem",
+    "copy": "Kopírovat odkaz",
+    "copied": "Odkaz zkopírován! 📋",
+    "qr": "Nebo ukaž tento QR kód:"
+  },
+  "share": {
+    "label": "Sdílet",
+    "shareVia": "Sdílet přes",
+    "copied": "Zkopírováno! 📋",
+    "copiedShort": "Zkopírováno!",
+    "copiedDesc": "Text zkopírován. Sdílejte na WhatsApp, Instagramu nebo kdekoli!",
+    "copyLink": "Kopírovat text",
+    "error": "Kopírování selhalo",
+    "impulseTitle": "BibleBot – Impuls dne",
+    "chatTitle": "BibleBot – Myšlenka dne",
+    "createImage": "Vytvořit obrázek ✨",
+    "generating": "Vytváření…",
+    "imageReady": "Váš obrázek je připraven!",
+    "shareImage": "Sdílet obrázek",
+    "download": "Uložit",
+    "imageError": "Vytvoření obrázku selhalo",
+    "imageErrorDesc": "Obrázek se nepodařilo vytvořit.",
+    "imageSaved": "Text zkopírován! 📋",
+    "imageSavedDesc": "Uložte obrázek a sdílejte ho!"
   }
 }

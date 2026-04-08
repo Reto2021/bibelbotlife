@@ -269,7 +269,9 @@
     "errorTitle": "Fout",
     "errorConnection": "kon niet worden bereikt.",
     "errorNoStream": "Geen stream",
-    "seniorMode": "Senior mode (larger text)"
+    "seniorMode": "Senior mode (larger text)",
+    "teaserCta": "Nu schrijven →",
+    "namePlaceholder": "bijv. Eli, Miriam…"
   },
   "install": {
     "title": "BibleBot installeren",
@@ -722,5 +724,40 @@
       "desc": "Grotere tekst en vereenvoudigde navigatie – ideaal voor oudere bewoners.",
       "cta": "Probeer seniormodus"
     }
+  },
+  "refer": {
+    "badge": "Gods Woord delen",
+    "title": "Beveel BibleBot aan",
+    "subtitle": "Ken je iemand die bemoediging nodig heeft? Deel BibleBot.",
+    "whatsapp": "Delen via WhatsApp",
+    "whatsappMsg": "Hey, ik wilde je BibleBot laten zien – een gratis bijbelcompagnon. Probeer het: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "telegram": "Delen via Telegram",
+    "telegramMsg": "Hey, ken je BibleBot al? Een gratis persoonlijke bijbelcompagnon. Kijk hier: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "email": "Delen via e-mail",
+    "emailSubject": "Dit is misschien interessant: BibleBot.Life",
+    "emailBody": "Hallo!\n\nIk wilde je BibleBot laten zien.\n\nProbeer het: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nGroeten",
+    "copy": "Link kopiëren",
+    "copied": "Link gekopieerd! 📋",
+    "qr": "Of toon deze QR-code:"
+  },
+  "share": {
+    "label": "Delen",
+    "shareVia": "Delen via",
+    "copied": "Gekopieerd! 📋",
+    "copiedShort": "Gekopieerd!",
+    "copiedDesc": "Tekst gekopieerd. Deel het op WhatsApp, Instagram of waar je wilt!",
+    "copyLink": "Tekst kopiëren",
+    "error": "Kopiëren mislukt",
+    "impulseTitle": "BibleBot – Impuls van de dag",
+    "chatTitle": "BibleBot – Gedachte van de dag",
+    "createImage": "Afbeelding maken ✨",
+    "generating": "Bezig…",
+    "imageReady": "Je afbeelding is klaar!",
+    "shareImage": "Afbeelding delen",
+    "download": "Opslaan",
+    "imageError": "Afbeelding maken mislukt",
+    "imageErrorDesc": "De afbeelding kon niet worden gemaakt.",
+    "imageSaved": "Tekst gekopieerd! 📋",
+    "imageSavedDesc": "Sla de afbeelding op en deel hem!"
   }
 }
