@@ -123,7 +123,10 @@ export function ChatHero() {
   const [showMoreChips, setShowMoreChips] = useState(false);
   const [loginHintDismissed, setLoginHintDismissed] = useState(() => localStorage.getItem("biblebot-login-hint-dismissed") === "1");
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  const [selectedSuggestion, setSelectedSuggestion] = useState(-1);
   const inputRef = useRef<HTMLInputElement>(null);
+  const suggestionsRef = useRef<HTMLDivElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
   const recognitionRef = useRef<any>(null);
   const conversationIdRef = useRef<string | null>(null);
@@ -146,6 +149,39 @@ export function ChatHero() {
     msgPadding: isSenior ? "px-5 py-4" : "px-4 py-3",
     chipText: isSenior ? "text-sm px-4 py-2" : "text-xs px-3 py-1.5",
   };
+  // Autocomplete suggestions
+  const SUGGESTIONS = useMemo(() => {
+    const topics = TOPIC_CHIPS.map(chip => ({
+      type: "topic" as const,
+      emoji: chip.emoji,
+      label: t(`tiles.${chip.key}.label`),
+      prompt: t(`tiles.${chip.key}.prompt`),
+    }));
+    const bibleRefs = [
+      { ref: "Psalm 23", label: t("suggest.psalm23", "Psalm 23 – Der Herr ist mein Hirte") },
+      { ref: "Johannes 3,16", label: t("suggest.joh316", "Johannes 3,16 – So sehr hat Gott die Welt geliebt") },
+      { ref: "Römer 8,28", label: t("suggest.rom828", "Römer 8,28 – Alles zum Besten") },
+      { ref: "Matthäus 11,28", label: t("suggest.mt1128", "Matthäus 11,28 – Kommt her zu mir") },
+      { ref: "Philipper 4,13", label: t("suggest.phil413", "Philipper 4,13 – Ich vermag alles") },
+      { ref: "Jesaja 41,10", label: t("suggest.jes4110", "Jesaja 41,10 – Fürchte dich nicht") },
+      { ref: "1. Korinther 13", label: t("suggest.1kor13", "1. Korinther 13 – Das Hohelied der Liebe") },
+      { ref: "Sprüche 3,5", label: t("suggest.spr35", "Sprüche 3,5 – Vertraue auf den Herrn") },
+      { ref: "Josua 1,9", label: t("suggest.jos19", "Josua 1,9 – Sei stark und mutig") },
+      { ref: "Psalm 46,2", label: t("suggest.ps462", "Psalm 46,2 – Gott ist unsere Zuversicht") },
+    ].map(b => ({
+      type: "bible" as const,
+      emoji: "📖",
+      label: b.label,
+      prompt: `Erkläre mir ${b.ref} im Detail`,
+    }));
+    return [...topics, ...bibleRefs];
+  }, [t]);
+
+  const filteredSuggestions = useMemo(() => {
+    if (!input.trim() || input.trim().length < 2) return [];
+    const q = input.toLowerCase();
+    return SUGGESTIONS.filter(s => s.label.toLowerCase().includes(q) || s.prompt.toLowerCase().includes(q)).slice(0, 6);
+  }, [input, SUGGESTIONS]);
 
   const {
     conversations,
@@ -487,13 +523,34 @@ export function ChatHero() {
                       ref={inputRef}
                       type="text"
                       value={input}
-                      onChange={(e) => setInput(e.target.value)}
-                      onFocus={() => setIsFocused(true)}
-                      onBlur={() => setIsFocused(false)}
-                      onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); handleSubmit(e); } }}
+                      onChange={(e) => { setInput(e.target.value); setShowSuggestions(true); setSelectedSuggestion(-1); }}
+                      onFocus={() => { setIsFocused(true); setShowSuggestions(true); }}
+                      onBlur={() => { setIsFocused(false); setTimeout(() => setShowSuggestions(false), 200); }}
+                      onKeyDown={(e) => {
+                        if (e.key === "ArrowDown" && filteredSuggestions.length > 0) {
+                          e.preventDefault();
+                          setSelectedSuggestion(prev => Math.min(prev + 1, filteredSuggestions.length - 1));
+                        } else if (e.key === "ArrowUp") {
+                          e.preventDefault();
+                          setSelectedSuggestion(prev => Math.max(prev - 1, -1));
+                        } else if (e.key === "Enter") {
+                          e.preventDefault();
+                          if (selectedSuggestion >= 0 && filteredSuggestions[selectedSuggestion]) {
+                            const sg = filteredSuggestions[selectedSuggestion];
+                            setInput("");
+                            setShowSuggestions(false);
+                            sendMessage(sg.prompt);
+                          } else {
+                            handleSubmit(e);
+                          }
+                        } else if (e.key === "Escape") {
+                          setShowSuggestions(false);
+                        }
+                      }}
                       placeholder={isFocused ? t("chatHero.focusPlaceholder") : placeholder + "│"}
                       className="w-full bg-transparent pl-12 pr-24 py-4 md:pl-14 md:py-5 text-base md:text-lg text-foreground placeholder:text-muted-foreground/60 focus:outline-none rounded-2xl"
                       aria-label={t("chatHero.ariaLabel")}
+                      autoComplete="off"
                     />
                     <div className="absolute right-3 flex items-center gap-1.5">
                       {SpeechRecognition && (
@@ -513,7 +570,29 @@ export function ChatHero() {
                         <ArrowRight className="h-5 w-5" />
                       </button>
                     </div>
-                  </div>
+                   </div>
+                  {/* Autocomplete suggestions */}
+                  {showSuggestions && filteredSuggestions.length > 0 && (
+                    <div ref={suggestionsRef} className="absolute left-0 right-0 top-full mt-1 bg-card border border-border rounded-xl shadow-xl z-50 overflow-hidden">
+                      {filteredSuggestions.map((sg, i) => (
+                        <button
+                          key={`${sg.type}-${i}`}
+                          type="button"
+                          onMouseDown={(e) => { e.preventDefault(); setInput(""); setShowSuggestions(false); sendMessage(sg.prompt); }}
+                          onMouseEnter={() => setSelectedSuggestion(i)}
+                          className={`w-full flex items-center gap-3 px-4 py-3 text-left transition-colors ${
+                            i === selectedSuggestion ? "bg-primary/10 text-foreground" : "text-foreground/80 hover:bg-muted"
+                          }`}
+                        >
+                          <span className="text-lg shrink-0">{sg.emoji}</span>
+                          <span className={`${isSenior ? "text-base" : "text-sm"} truncate`}>{sg.label}</span>
+                          <span className={`ml-auto ${isSenior ? "text-sm" : "text-xs"} text-muted-foreground shrink-0`}>
+                            {sg.type === "bible" ? "📖" : "💬"}
+                          </span>
+                        </button>
+                      ))}
+                    </div>
+                  )}
                 </motion.form>
 
                 {/* === CTA Cards === */}
