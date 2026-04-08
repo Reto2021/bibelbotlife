@@ -631,6 +631,10 @@
       "prison": {
         "title": "监狱牧灵",
         "desc": "为被拘留者提供希望和灵性支持——全天候的知心伴侣。"
+      },
+      "military": {
+        "title": "Military Chaplaincy",
+        "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
       }
     }
   },

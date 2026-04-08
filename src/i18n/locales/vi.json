@@ -631,6 +631,10 @@
       "prison": {
         "title": "Tuyên úy nhà tù",
         "desc": "Hy vọng và hỗ trợ tâm linh cho phạm nhân – người đồng hành bảo mật 24/7."
+      },
+      "military": {
+        "title": "Military Chaplaincy",
+        "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
       }
     }
   },

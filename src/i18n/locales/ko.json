@@ -631,6 +631,10 @@
       "prison": {
         "title": "교도소 목회",
         "desc": "수감자를 위한 희망과 영적 돌봄 – 24시간 비밀이 보장되는 동반자."
+      },
+      "military": {
+        "title": "Military Chaplaincy",
+        "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
       }
     }
   },

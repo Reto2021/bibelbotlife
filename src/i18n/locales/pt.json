@@ -631,6 +631,10 @@
       "prison": {
         "title": "Capelania prisional",
         "desc": "Esperança e apoio espiritual para detentos – um companheiro confidencial 24 horas."
+      },
+      "military": {
+        "title": "Military Chaplaincy",
+        "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
       }
     }
   },

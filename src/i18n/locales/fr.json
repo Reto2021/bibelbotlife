@@ -631,6 +631,10 @@
       "prison": {
         "title": "Aumônerie de prison",
         "desc": "Espoir et soutien spirituel pour les détenus – un compagnon confidentiel 24h/24."
+      },
+      "military": {
+        "title": "Aumônerie militaire",
+        "desc": "Accompagnement spirituel pour les membres de l'armée – accessible même en déploiement ou à la caserne."
       }
     }
   },
