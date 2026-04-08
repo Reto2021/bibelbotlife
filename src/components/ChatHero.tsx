@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import { Search, ArrowRight, Shield, Loader2, Mic, MicOff, Send, Menu, LogIn, X } from "lucide-react";
+import { Search, ArrowRight, Shield, Loader2, Mic, MicOff, Send, Menu, LogIn, X, EyeOff, Heart } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTrack } from "@/components/AnalyticsProvider";
 import { openLifeWheel } from "@/components/LifeWheel";
@@ -422,10 +422,12 @@ export function ChatHero() {
                   <span className="inline-flex items-center gap-3 text-sm font-semibold text-foreground bg-card/80 backdrop-blur-sm border border-border shadow-md px-5 py-2.5 rounded-full">
                     <Shield className="h-4 w-4 text-primary" />
                     <span className="flex items-center gap-2">
-                      <span>{t("hero.badge.optionalLogin")}</span>
+                       <span>{t("hero.badge.optionalLogin")}</span>
                       <span className="text-primary/40">·</span>
+                      <EyeOff className="h-3.5 w-3.5 text-primary" />
                       <span>{t("hero.badge.noData")}</span>
                       <span className="text-primary/40">·</span>
+                      <Heart className="h-3.5 w-3.5 text-primary" />
                       <span>{t("hero.badge.noJudgment")}</span>
                     </span>
                   </span>
