@@ -158,9 +158,8 @@ const Index = () => {
         </div>
       </nav>
 
-      <Suspense fallback={<div className="h-20" />}>
-        <DailyImpulse />
-      </Suspense>
+
+
 
       {/* Chat-First Hero */}
       <ChatHero />

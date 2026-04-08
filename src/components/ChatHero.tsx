@@ -5,8 +5,6 @@ import { motion } from "framer-motion";
 import { openBibelBotChat } from "@/lib/chat-events";
 import { useTrack } from "@/components/AnalyticsProvider";
 import { HeroImpulse } from "@/components/HeroImpulse";
-import { openBibelBotChat } from "@/lib/chat-events";
-import { useTrack } from "@/components/AnalyticsProvider";
 
 const TYPEWRITER_SPEED = 45; // ms per char
 const PAUSE_BETWEEN = 2800; // ms pause after full phrase
