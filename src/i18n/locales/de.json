@@ -787,5 +787,8 @@
     "suggestion1": "Wofür steht mein Name?",
     "suggestion2": "Was gibt mir heute Kraft?",
     "suggestion3": "Wofür bin ich dankbar?"
+  },
+  "splash": {
+    "patronage": "Empfohlen von"
   }
 }
