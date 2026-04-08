@@ -5,7 +5,7 @@ import {
 import type { TemplateEntry } from './registry.ts'
 
 const SITE_NAME = "BibleBot.Life"
-const BASE_URL = "https://bibelbot.ch"
+const BASE_URL = "https://biblebot.life"
 
 interface ChurchOnboardingProps {
   churchName?: string

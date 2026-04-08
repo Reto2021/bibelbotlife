@@ -5,7 +5,7 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
-const BASE_URL = "https://bibelbot.ch";
+const BASE_URL = "https://biblebot.life";
 
 serve(async (req) => {
   if (req.method === "OPTIONS") {
