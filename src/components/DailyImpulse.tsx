@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { useTranslation } from "react-i18next";
-import { Sparkles, ChevronRight, BookOpen, Loader2, MessageCircle, Image, Download, Bell, Send } from "lucide-react";
+import { Sparkles, ChevronRight, BookOpen, Loader2, MessageCircle, Image, Download, Bell, Send, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { openBibelBotChat } from "@/lib/chat-events";
 import { ShareButton } from "@/components/ShareButton";
@@ -71,6 +71,8 @@ export function DailyImpulse() {
   const [isSubscribed, setIsSubscribed] = useState(() => localStorage.getItem(SUBSCRIBED_KEY) === "1");
   const [isSubscribing, setIsSubscribing] = useState(false);
   const [showImagePreview, setShowImagePreview] = useState(false);
+  const [showSmsInput, setShowSmsInput] = useState(false);
+  const [smsPhone, setSmsPhone] = useState("");
 
   useEffect(() => {
     if (impulse) return;
@@ -262,6 +264,27 @@ export function DailyImpulse() {
     toast({ title: t("subscribe.toastTelegram"), description: t("subscribe.toastTelegramDesc") });
   }, [toast, t]);
 
+  const handleSubscribeSms = useCallback(async () => {
+    if (smsPhone.length < 8) return;
+    setIsSubscribing(true);
+    try {
+      const resp = await fetch(SUBSCRIBE_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ channel: "sms", phone_number: smsPhone, language: i18n.language }),
+      });
+      if (!resp.ok) throw new Error("Subscribe failed");
+      localStorage.setItem(SUBSCRIBED_KEY, "1");
+      setIsSubscribed(true);
+      setShowSmsInput(false);
+      toast({ title: t("subscribe.toastSuccess"), description: t("subscribe.toastSuccessDesc") });
+    } catch (e) {
+      toast({ title: t("subscribe.toastError"), description: e instanceof Error ? e.message : t("subscribe.toastErrorDesc"), variant: "destructive" });
+    } finally {
+      setIsSubscribing(false);
+    }
+  }, [smsPhone, toast, t, i18n.language]);
+
   if (isLoading) {
     return (
       <div className="bg-primary/10 dark:bg-primary/15 border-b border-primary/20">
@@ -281,11 +304,11 @@ export function DailyImpulse() {
 
   return (
     <div className="bg-primary/10 dark:bg-primary/15 border-b border-primary/20 overflow-hidden">
-      <button
-        onClick={() => setIsExpanded(!isExpanded)}
-        className="w-full container mx-auto px-4 py-3 flex items-center justify-between gap-3 hover:bg-primary/15 dark:hover:bg-primary/20 transition-colors group cursor-pointer"
-      >
-        <div className="flex items-center gap-3 min-w-0">
+      <div className="container mx-auto px-4 py-3 flex items-center justify-between gap-3">
+        <button
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="flex items-center gap-3 min-w-0 hover:opacity-80 transition-opacity group cursor-pointer"
+        >
           <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
             <Sparkles className="h-4 w-4 text-primary" />
           </div>
@@ -296,11 +319,49 @@ export function DailyImpulse() {
             </div>
             <p className="text-sm text-foreground dark:text-foreground font-semibold truncate">{impulse.teaser}</p>
           </div>
-        </div>
-        <ChevronRight
-          className={`h-4 w-4 text-muted-foreground shrink-0 transition-transform duration-300 ${isExpanded ? "rotate-90" : "group-hover:translate-x-0.5"}`}
-        />
-      </button>
+          <ChevronRight
+            className={`h-4 w-4 text-muted-foreground shrink-0 transition-transform duration-300 ${isExpanded ? "rotate-90" : "group-hover:translate-x-0.5"}`}
+          />
+        </button>
+
+        {/* Subscribe buttons always visible in banner */}
+        {!isSubscribed && (
+          <div className="hidden sm:flex items-center gap-1.5 shrink-0">
+            <Button
+              size="sm"
+              onClick={handleSubscribePush}
+              disabled={isSubscribing}
+              className="text-xs h-7 bg-primary hover:bg-primary/90"
+            >
+              {isSubscribing ? <Loader2 className="h-3 w-3 mr-1 animate-spin" /> : <Bell className="h-3 w-3 mr-1" />}
+              Push
+            </Button>
+            <Button
+              size="sm"
+              variant="outline"
+              onClick={handleSubscribeTelegram}
+              className="text-xs h-7 border-primary/30 text-primary hover:bg-primary/10"
+            >
+              <Send className="h-3 w-3 mr-1" />
+              Telegram
+            </Button>
+            <Button
+              size="sm"
+              variant="outline"
+              onClick={() => { setIsExpanded(true); setShowSmsInput(true); }}
+              className="text-xs h-7 border-primary/30 text-primary hover:bg-primary/10"
+            >
+              <Smartphone className="h-3 w-3 mr-1" />
+              SMS
+            </Button>
+          </div>
+        )}
+        {isSubscribed && (
+          <span className="hidden sm:flex text-xs text-primary/70 items-center gap-1 shrink-0">
+            ✓ {t("impulse.alreadySubscribed")}
+          </span>
+        )}
+      </div>
 
       {isExpanded && (
         <div className="container mx-auto px-4 pb-5 animate-fade-up">
@@ -387,7 +448,7 @@ export function DailyImpulse() {
               />
             </div>
 
-            {/* Inline Subscribe CTA */}
+            {/* Inline Subscribe CTA (mobile: shown here, desktop: in banner) */}
             {!isSubscribed && (
               <div className="mt-4 pt-4 border-t border-primary/15">
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
@@ -395,14 +456,14 @@ export function DailyImpulse() {
                     <Bell className="h-3.5 w-3.5 text-primary" />
                     {t("impulse.subscribeCta")}
                   </p>
-                  <div className="flex gap-2">
+                  <div className="flex flex-wrap gap-2">
                     <Button
                       size="sm"
                       onClick={handleSubscribePush}
                       disabled={isSubscribing}
                       className="text-xs h-7 bg-primary hover:bg-primary/90"
                     >
-                      {isSubscribing ? (
+                      {isSubscribing && !showSmsInput ? (
                         <Loader2 className="h-3 w-3 mr-1 animate-spin" />
                       ) : (
                         <Bell className="h-3 w-3 mr-1" />
@@ -418,8 +479,37 @@ export function DailyImpulse() {
                       <Send className="h-3 w-3 mr-1" />
                       Telegram
                     </Button>
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      onClick={() => setShowSmsInput(!showSmsInput)}
+                      className="text-xs h-7 border-primary/30 text-primary hover:bg-primary/10"
+                    >
+                      <Smartphone className="h-3 w-3 mr-1" />
+                      SMS
+                    </Button>
                   </div>
                 </div>
+                {showSmsInput && (
+                  <div className="mt-3 flex items-center gap-2 animate-fade-up">
+                    <input
+                      type="tel"
+                      placeholder={t("subscribe.phonePlaceholder", "+41 79 123 45 67")}
+                      value={smsPhone}
+                      onChange={(e) => setSmsPhone(e.target.value)}
+                      className="flex-1 h-7 text-xs px-3 rounded-md border border-primary/30 bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary"
+                      maxLength={20}
+                    />
+                    <Button
+                      size="sm"
+                      onClick={handleSubscribeSms}
+                      disabled={isSubscribing || smsPhone.length < 8}
+                      className="text-xs h-7 bg-primary hover:bg-primary/90"
+                    >
+                      {isSubscribing && showSmsInput ? <Loader2 className="h-3 w-3 animate-spin" /> : t("subscribe.submit", "Abonnieren")}
+                    </Button>
+                  </div>
+                )}
                 <p className="text-[10px] text-muted-foreground mt-1.5">{t("subscribe.footNote")}</p>
               </div>
             )}
