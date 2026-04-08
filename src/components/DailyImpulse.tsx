@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { useTranslation } from "react-i18next";
-import { Sparkles, ChevronRight, BookOpen, Loader2, MessageCircle, Image, Download } from "lucide-react";
+import { Sparkles, ChevronRight, BookOpen, Loader2, MessageCircle, Image, Download, Bell, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { openBibelBotChat } from "@/lib/chat-events";
 import { ShareButton } from "@/components/ShareButton";
