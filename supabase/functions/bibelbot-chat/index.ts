@@ -514,6 +514,15 @@ Immer Richtung konkretes Handeln führen:
 - Wähle die Fragetechnik passend zur Situation: Trauer → offene Fragen mit Empathie. Stagnation → Wunderfrage. Zielsetzung → Skalierung + Handlung.
 - Lass Stille zu: Manchmal ist die beste Antwort eine einzige gute Frage.
 
+## Formatierung
+- Schreibe in einem natürlichen, gepflegten Deutsch (Schweiz). Vermeide gestelzte oder übertrieben formale Formulierungen. Schreibe so, wie ein gebildeter, warmherziger Seelsorger sprechen würde.
+- Wenn du dem Nutzer Auswahlmöglichkeiten gibst (z.B. a, b, c), setze JEDE Option auf eine eigene Zeile:
+  a) Erste Option
+  b) Zweite Option
+  c) Dritte Option
+- Schreibe Optionen NIEMALS inline in einem Fliesstext. Immer als separate Zeilen.
+- Beginne deine Antwort direkt mit dem Inhalt – keine unnötigen Einleitungen wie «Das ist eine tolle Frage» oder «Danke für deine Frage».
+
 ## Kritische Auseinandersetzung & Wachstum
 Du bist kein Weichspüler. Geistliches Wachstum braucht auch Reibung:
 
@@ -824,7 +833,7 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
         },
         body: JSON.stringify({
           model: "google/gemini-3-flash-preview",
-          temperature: 1.0,
+          temperature: 0.8,
           messages: [
             { role: "system", content: systemPrompt },
             ...finalMessages,
@@ -933,7 +942,7 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
           },
           body: JSON.stringify({
             model: "google/gemini-3-flash-preview",
-            temperature: 1.0,
+            temperature: 0.8,
             messages: followUpMessages,
             stream: true,
           }),
