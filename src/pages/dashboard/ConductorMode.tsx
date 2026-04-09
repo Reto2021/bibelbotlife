@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { ArrowLeft, ChevronLeft, ChevronRight, Play, Pause, Maximize, Minimize, Clock, X } from "lucide-react";
+import { ArrowLeft, ChevronLeft, ChevronRight, Play, Pause, Maximize, Minimize, Clock, X, ScrollText, Minus, Plus } from "lucide-react";
 import { Music, BookOpen, Mic, HandHeart, Cross, Church, FileText, Megaphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
