@@ -53,6 +53,42 @@ export type Database = {
         }
         Relationships: []
       }
+      bible_verses: {
+        Row: {
+          book: string
+          book_number: number
+          chapter: number
+          created_at: string
+          fts: unknown
+          id: string
+          text: string
+          translation: string
+          verse: number
+        }
+        Insert: {
+          book: string
+          book_number: number
+          chapter: number
+          created_at?: string
+          fts?: unknown
+          id?: string
+          text: string
+          translation: string
+          verse: number
+        }
+        Update: {
+          book?: string
+          book_number?: number
+          chapter?: number
+          created_at?: string
+          fts?: unknown
+          id?: string
+          text?: string
+          translation?: string
+          verse?: number
+        }
+        Relationships: []
+      }
       ceremony_drafts: {
         Row: {
           ceremony_type: Database["public"]["Enums"]["ceremony_type"]
@@ -1197,6 +1233,24 @@ export type Database = {
           message: Json
           msg_id: number
           read_ct: number
+        }[]
+      }
+      search_bible_verses: {
+        Args: {
+          book_boost?: string[]
+          result_limit?: number
+          search_query: string
+          translation_filter?: string
+        }
+        Returns: {
+          book: string
+          book_number: number
+          chapter: number
+          id: string
+          rank: number
+          text: string
+          translation: string
+          verse: number
         }[]
       }
     }
