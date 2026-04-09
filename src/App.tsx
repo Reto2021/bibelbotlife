@@ -42,6 +42,7 @@ const EulogyWriter = lazy(() => import("./pages/mein-bereich/EulogyWriter"));
 const SharedDraft = lazy(() => import("./pages/SharedDraft"));
 const AdminDashboard = lazy(() => import("./pages/admin/AdminDashboard"));
 const OutreachAdmin = lazy(() => import("./pages/admin/OutreachAdmin"));
+const BibleSearch = lazy(() => import("./pages/BibleSearch"));
 
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { ProtectedAdminRoute } from "@/components/ProtectedAdminRoute";
@@ -119,6 +120,7 @@ const App = () => {
                   <Route path="/church/:slug" element={<ChurchPartner />} />
                   <Route path="/church-integration/:slug" element={<ChurchIntegration />} />
                   <Route path="/for-institutions" element={<ForInstitutions />} />
+                  <Route path="/bible-search" element={<BibleSearch />} />
                   <Route path="/unsubscribe" element={<Unsubscribe />} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/reset-password" element={<ResetPassword />} />
