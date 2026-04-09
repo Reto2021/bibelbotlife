@@ -198,6 +198,7 @@ export function BibleBotChat() {
   const [journeyDay, setJourneyDay] = useState(getJourneyDay);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [isListening, setIsListening] = useState(false);
   const [isTranscribing, setIsTranscribing] = useState(false);
   const [botName, setBotName] = useState(getBotName);
   const [isEditingName, setIsEditingName] = useState(false);
