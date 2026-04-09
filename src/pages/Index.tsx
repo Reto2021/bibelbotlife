@@ -185,7 +185,7 @@ const Index = () => {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <Users className="h-4 w-4 text-primary" />
-                {t("footer.forChurches")}
+                {t("church.directoryBadge")}
               </Link>
               <Link
                 to="/gebetswand"
