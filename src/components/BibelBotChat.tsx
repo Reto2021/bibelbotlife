@@ -576,7 +576,7 @@ export function BibleBotChat() {
               <div className="animate-fade-up">
                 <div className="flex justify-start">
                   <div className={`max-w-[85%] rounded-2xl rounded-bl-md px-4 py-3 text-base leading-relaxed bg-muted text-foreground`}>
-                    <div className={`prose ${isSenior ? "prose-lg" : "prose-sm"} max-w-none dark:prose-invert`}>
+                    <div className={`prose prose-sm max-w-none dark:prose-invert`}>
                       <ReactMarkdown>{welcomeMessage.content}</ReactMarkdown>
                     </div>
                   </div>
@@ -584,7 +584,7 @@ export function BibleBotChat() {
 
                 <div className="flex flex-col gap-2 mt-4">
                   {suggestions.map((sg, i) => (
-                    <button key={sg} onClick={() => sendMessage(sg)} className={`text-left text-base ${isSenior ? "px-5 py-4" : "px-4 py-2.5"} rounded-xl border border-primary/20 bg-accent/30 hover:bg-accent hover:border-primary/40 text-foreground transition-all duration-200 animate-fade-up`} style={{ animationDelay: `${(i + 1) * 150}ms`, opacity: 0 }}>{sg}</button>
+                    <button key={sg} onClick={() => sendMessage(sg)} className={`text-left text-base px-4 py-3 rounded-xl border border-primary/20 bg-accent/30 hover:bg-accent hover:border-primary/40 text-foreground transition-all duration-200 animate-fade-up`} style={{ animationDelay: `${(i + 1) * 150}ms`, opacity: 0 }}>{sg}</button>
                   ))}
                 </div>
 
@@ -602,7 +602,7 @@ export function BibleBotChat() {
             <div className="max-w-[85%]">
               <div className={`rounded-2xl px-4 py-3 text-base leading-relaxed ${msg.role === "user" ? "bg-primary text-primary-foreground rounded-br-md" : "bg-muted text-foreground rounded-bl-md"}`}>
                 {msg.role === "assistant" ? (
-                  <div className={`prose ${isSenior ? "prose-lg" : "prose-sm"} max-w-none dark:prose-invert`}>
+                  <div className={`prose prose-sm max-w-none dark:prose-invert`}>
                     <ReactMarkdown components={{
                       p: ({ children }) => <p>{makeRefsClickable(children, sendMessage)}</p>,
                       li: ({ children }) => <li>{makeRefsClickable(children, sendMessage)}</li>,
@@ -667,9 +667,9 @@ export function BibleBotChat() {
       </div>
 
       {/* Input */}
-      <div className={`border-t border-border ${isSenior ? "p-4" : "p-3"}`}>
+      <div className={`border-t border-border p-3`}>
         <div className="flex gap-2 items-end">
-          <Textarea ref={textareaRef} value={input} onChange={(e) => setInput(e.target.value)} onKeyDown={handleKeyDown} placeholder={t("chat.placeholder")} className={`${isSenior ? "min-h-[56px] max-h-[120px] text-lg" : "min-h-[40px] max-h-[100px] text-sm"} resize-none`} rows={1} />
+          <Textarea ref={textareaRef} value={input} onChange={(e) => setInput(e.target.value)} onKeyDown={handleKeyDown} placeholder={t("chat.placeholder")} className={`min-h-[40px] max-h-[100px] text-base resize-none`} rows={1} />
           <Button
             size="icon"
             variant={isListening ? "destructive" : "outline"}
