@@ -227,6 +227,7 @@ export function ChatHero() {
   const { user } = useAuth();
   const { branding } = useChurchBranding();
   const { isSenior, toggle: toggleSenior } = useSeniorMode();
+  const tts = useTTS();
   const dailyVerse = useMemo(() => getDailyVerse(), []);
 
   // Senior mode size classes
