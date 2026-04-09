@@ -1,94 +1,98 @@
 
 # Phase 7: Super-Admin Panel
 
-Internes Verwaltungs-Panel für BibleBot.Life-Betreiber. Geschützte Route `/admin` mit Rollen-basiertem Zugang.
+Geschütztes Verwaltungs-Panel für BibleBot.Life-Betreiber unter `/admin`.
 
 ---
 
-## 1. DB: Admin-Rollen-System
+## 1. DB-Migration: Rollen-System
 
-Neue `user_roles` Tabelle (Best Practice — keine Rollen auf Profil-Tabelle):
+**Neue Tabelle `user_roles`** (Rollen separat von Profilen – Best Practice gegen Privilege Escalation):
 
 ```text
 user_roles
 ├── id (uuid, PK)
-├── user_id (uuid, NOT NULL, FK → auth.users)
-├── role (enum: admin, moderator, user)
+├── user_id (uuid, NOT NULL, FK → auth.users, ON DELETE CASCADE)
+├── role (enum app_role: admin, moderator, user)
 ├── UNIQUE(user_id, role)
 ```
 
-Security-Definer-Funktion `has_role(user_id, role)` für RLS-Policies ohne Rekursion.
+**Security-Definer-Funktion** `has_role(user_id, role)` – prüft Rollen ohne RLS-Rekursion.
 
-RLS: Nur Admins können `user_roles` lesen. Kein öffentlicher Zugang.
+**RLS auf `user_roles`:** Nur lesbar für den eigenen User. Kein Insert/Update/Delete via Client.
 
----
+**Neue RLS auf `church_partners`:** Admins können ALLE Gemeinden lesen (auch inaktive) und bearbeiten.
 
-## 2. Admin Dashboard (`/admin`)
-
-Übersichts-Kacheln mit Live-Zahlen:
-
-| Kachel | Datenquelle |
-|---|---|
-| Gemeinden gesamt | `COUNT(church_partners)` |
-| Aktive Abos | `WHERE subscription_status = 'active'` |
-| Ablaufende Abos (30 Tage) | `WHERE subscription_expires_at < now() + 30 days` |
-| Chat-Nachrichten heute | `COUNT(chat_messages) WHERE today` |
-| Tagesimpuls-Abonnenten | `COUNT(daily_subscribers WHERE is_active)` |
-
-Darunter: **Gemeinden-Tabelle** mit Suche, Filter nach Plan-Tier und Status.
-
-Spalten: Name, Stadt, Plan, Status, Abo-Ablauf, Erstellt
+**Neue RLS auf relevanten Tabellen:** Admins können `daily_subscribers`, `analytics_events`, `church_contact_requests` etc. lesen.
 
 ---
 
-## 3. Gemeinde-Detail-Drawer
+## 2. Admin-Dashboard (`/admin`)
 
-Klick auf Gemeinde öffnet Sheet/Drawer mit:
+**Stats-Kacheln** (oben, 4-5 Karten):
+- Gemeinden gesamt
+- Aktive Abos (subscription_status = 'active')
+- Ablaufende Abos (nächste 30 Tage)
+- Tagesimpuls-Abonnenten (daily_subscribers, is_active)
+- Chat-Nachrichten heute
 
-**Tab 1 – Profil:**
-- Name, Slug, Konfession, Stadt, Land
+**Gemeinden-Tabelle** (darunter):
+- Spalten: Name, Stadt, Plan-Tier, Abo-Status, Abo-Ablauf, Erstellt
+- Suche nach Name/Stadt
+- Filter nach Plan-Tier und Abo-Status
+- Sortierung nach Name, Erstellt, Ablauf
+- Klick öffnet Detail-Drawer
+
+---
+
+## 3. Gemeinde-Detail-Drawer (Sheet)
+
+Klick auf eine Gemeinde öffnet rechts einen Drawer mit **3 Tabs**:
+
+**Tab „Profil":**
+- Name, Slug, Konfession, Stadt, Land, Sprache
 - Kontaktperson, E-Mail, Telefon, Website
-- Logo-Vorschau
+- Logo-Vorschau (falls vorhanden)
+- Pastor-Name und -Foto
 
-**Tab 2 – Abo & Billing:**
-- Plan-Tier (änderbar: free/community/gemeinde/kirche)
-- Abo-Status, Start, Ablauf
-- Rechnungsadresse, IBAN
+**Tab „Abo & Billing":**
+- Plan-Tier ändern (Dropdown: free/community/gemeinde/kirche)
+- Abo-Status ändern (trial/active/expired/cancelled)
+- Abo-Start / Abo-Ablauf (Datum-Picker)
+- Rechnungsname, Strasse, PLZ, Stadt, Land
+- Billing-E-Mail, IBAN, Referenz
 - Billing-Intervall (monatlich/jährlich)
 
-**Tab 3 – Nutzung:**
-- Anzahl Services, Team-Mitglieder, Records
+**Tab „Nutzung":**
+- Anzahl Services
+- Anzahl Team-Mitglieder
+- Anzahl Kirchenbuch-Einträge
 - Letzte Aktivität (updated_at)
 
-**Aktionen:**
-- Plan ändern (Dropdown)
-- Abo verlängern (Datum-Picker)
-- Gemeinde deaktivieren/aktivieren (Toggle)
+**Aktionen im Drawer:**
+- Speichern (alle Änderungen)
+- Gemeinde aktivieren/deaktivieren (Toggle)
 
 ---
 
 ## 4. Route-Schutz
 
-- `ProtectedAdminRoute` Komponente prüft `has_role(auth.uid(), 'admin')` via Supabase RPC
-- Kein localStorage/sessionStorage für Admin-Check
-- Nicht-Admins sehen 403 / Redirect
+- `ProtectedAdminRoute` Wrapper prüft Rolle via `supabase.rpc('has_role', ...)` (kein localStorage!)
+- Loading-State während Rollen-Check
+- Nicht-Admins → Redirect auf `/`
+- Admin-Link im Header nur für Admins sichtbar
 
 ---
 
-## 5. Technische Übersicht
+## 5. Dateien & Reihenfolge
 
-| Datei | Änderung |
-|---|---|
-| DB-Migration | `user_roles` Tabelle, `app_role` Enum, `has_role()` Funktion, RLS |
-| `src/pages/admin/AdminDashboard.tsx` | Dashboard mit Kacheln + Gemeinden-Tabelle |
-| `src/pages/admin/ChurchDetailDrawer.tsx` | Sheet mit 3 Tabs |
-| `src/hooks/use-admin.ts` | Hook: Rollen-Check, Gemeinden laden, Stats |
-| `src/components/ProtectedAdminRoute.tsx` | Route-Guard mit RPC-Check |
-| `src/App.tsx` | Route `/admin` registrieren |
+| # | Datei | Beschreibung |
+|---|---|---|
+| 1 | DB-Migration | `user_roles`, `app_role` enum, `has_role()`, RLS-Policies |
+| 2 | `src/hooks/use-admin.ts` | Hook: Rollen-Check, Stats laden, Gemeinden-Liste |
+| 3 | `src/components/ProtectedAdminRoute.tsx` | Route-Guard via RPC |
+| 4 | `src/pages/admin/AdminDashboard.tsx` | Dashboard + Gemeinden-Tabelle |
+| 5 | `src/pages/admin/ChurchDetailDrawer.tsx` | Sheet mit 3 Tabs + Bearbeitung |
+| 6 | `src/App.tsx` | Route `/admin` registrieren |
 
-**Reihenfolge:**
-1. DB-Migration (Rollen-Tabelle + Funktion)
-2. Admin-Route-Schutz
-3. Dashboard mit Stats
-4. Gemeinden-Tabelle mit Suche/Filter
-5. Detail-Drawer mit Bearbeitung
+**Reihenfolge:** Migration → Hook → Route-Guard → Dashboard → Drawer → Route
