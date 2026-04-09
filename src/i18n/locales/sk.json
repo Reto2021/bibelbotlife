@@ -858,6 +858,7 @@
   "splash": {
     "patronage": "Odporúčané"
   },
-  "auth": {},
-  "auth.apple": "Prihlásiť sa cez Apple"
+  "auth": {
+    "apple": "Prihlásiť sa cez Apple"
+  }
 }

@@ -858,6 +858,7 @@
   "splash": {
     "patronage": "Consigliato da"
   },
-  "auth": {},
-  "auth.apple": "Accedi con Apple"
+  "auth": {
+    "apple": "Accedi con Apple"
+  }
 }

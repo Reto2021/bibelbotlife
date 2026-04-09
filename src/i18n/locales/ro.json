@@ -858,6 +858,7 @@
     "needMore": "Vă rugăm să înregistrați mai întâi amintiri sau să scrieți notițe.",
     "genError": "Eroare la generarea textului. Vă rugăm să încercați din nou."
   },
-  "auth": {},
-  "auth.apple": "Conectare cu Apple"
+  "auth": {
+    "apple": "Conectare cu Apple"
+  }
 }

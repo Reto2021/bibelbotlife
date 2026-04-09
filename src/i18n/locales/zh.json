@@ -859,6 +859,7 @@
     "needMore": "请先录制回忆或写下笔记。",
     "genError": "文本生成错误。请重试。"
   },
-  "auth": {},
-  "auth.apple": "使用 Apple 登录"
+  "auth": {
+    "apple": "使用 Apple 登录"
+  }
 }

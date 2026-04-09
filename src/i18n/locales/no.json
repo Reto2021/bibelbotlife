@@ -858,6 +858,7 @@
   "splash": {
     "patronage": "Anbefalt av"
   },
-  "auth": {},
-  "auth.apple": "Logg inn med Apple"
+  "auth": {
+    "apple": "Logg inn med Apple"
+  }
 }

@@ -858,6 +858,7 @@
   "splash": {
     "patronage": "Ikhuthazwe yi"
   },
-  "auth": {},
-  "auth.apple": "Ngena nge-Apple"
+  "auth": {
+    "apple": "Ngena nge-Apple"
+  }
 }

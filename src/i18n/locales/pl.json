@@ -858,6 +858,7 @@
   "splash": {
     "patronage": "Polecane przez"
   },
-  "auth": {},
-  "auth.apple": "Zaloguj się przez Apple"
+  "auth": {
+    "apple": "Zaloguj się przez Apple"
+  }
 }

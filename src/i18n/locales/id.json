@@ -858,6 +858,7 @@
   "splash": {
     "patronage": "Direkomendasikan oleh"
   },
-  "auth": {},
-  "auth.apple": "Masuk dengan Apple"
+  "auth": {
+    "apple": "Masuk dengan Apple"
+  }
 }

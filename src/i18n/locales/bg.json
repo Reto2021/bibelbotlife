@@ -858,6 +858,7 @@
   "splash": {
     "patronage": "Препоръчано от"
   },
-  "auth": {},
-  "auth.apple": "Вход с Apple"
+  "auth": {
+    "apple": "Вход с Apple"
+  }
 }

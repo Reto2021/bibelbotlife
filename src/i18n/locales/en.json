@@ -858,6 +858,7 @@
     "enableShare": "Create & copy link",
     "disableShare": "Disable sharing"
   },
-  "auth": {},
-  "auth.apple": "Sign in with Apple"
+  "auth": {
+    "apple": "Sign in with Apple"
+  }
 }

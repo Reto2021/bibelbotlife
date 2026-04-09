@@ -858,6 +858,7 @@
   "splash": {
     "patronage": "Ndị kwadoro"
   },
-  "auth": {},
-  "auth.apple": "Banye site na Apple"
+  "auth": {
+    "apple": "Banye site na Apple"
+  }
 }

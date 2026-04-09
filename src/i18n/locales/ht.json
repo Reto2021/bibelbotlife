@@ -858,6 +858,7 @@
   "splash": {
     "patronage": "Rekòmande pa"
   },
-  "auth": {},
-  "auth.apple": "Konekte ak Apple"
+  "auth": {
+    "apple": "Konekte ak Apple"
+  }
 }

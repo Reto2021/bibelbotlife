@@ -858,6 +858,7 @@
   "splash": {
     "patronage": "Preporučuje"
   },
-  "auth": {},
-  "auth.apple": "Prijava putem Applea"
+  "auth": {
+    "apple": "Prijava putem Applea"
+  }
 }

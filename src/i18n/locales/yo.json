@@ -858,6 +858,7 @@
   "splash": {
     "patronage": "Ti a ṣe iṣeduro nipasẹ"
   },
-  "auth": {},
-  "auth.apple": "Wọlé pẹ̀lú Apple"
+  "auth": {
+    "apple": "Wọlé pẹ̀lú Apple"
+  }
 }

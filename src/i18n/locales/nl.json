@@ -858,6 +858,7 @@
     "needMore": "Neem eerst herinneringen op of schrijf notities.",
     "genError": "Fout bij het genereren van de tekst. Probeer het opnieuw."
   },
-  "auth": {},
-  "auth.apple": "Inloggen met Apple"
+  "auth": {
+    "apple": "Inloggen met Apple"
+  }
 }

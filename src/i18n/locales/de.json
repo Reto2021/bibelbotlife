@@ -858,6 +858,7 @@
     "needMore": "Bitte nimm zuerst Erinnerungen auf oder schreibe Notizen.",
     "genError": "Fehler bei der Texterstellung. Bitte versuche es erneut."
   },
-  "auth": {},
-  "auth.apple": "Mit Apple anmelden"
+  "auth": {
+    "apple": "Mit Apple anmelden"
+  }
 }

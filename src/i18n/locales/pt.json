@@ -858,6 +858,7 @@
   "splash": {
     "patronage": "Recomendado por"
   },
-  "auth": {},
-  "auth.apple": "Entrar com Apple"
+  "auth": {
+    "apple": "Entrar com Apple"
+  }
 }
