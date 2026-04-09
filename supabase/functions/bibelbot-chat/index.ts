@@ -50,8 +50,12 @@ const BIBLE_API_BASE = "https://bible.helloao.org/api";
 // Map of available German translations
 const BIBLE_TRANSLATIONS: Record<string, { id: string; name: string }> = {
   luther: { id: "deu_l12", name: "Lutherbibel 1912" },
+  luther1912: { id: "deu_l12", name: "Lutherbibel 1912" },
   elberfelder: { id: "deu_elbbk", name: "Elberfelder Übersetzung" },
   schlachter: { id: "deu_sch", name: "Schlachter-Bibel 1951" },
+  schlachter2000: { id: "deu_sch", name: "Schlachter 2000" },
+  kjv: { id: "eng_kjv", name: "King James Version" },
+  web: { id: "eng_web", name: "World English Bible" },
 };
 
 // Standard book ID mapping (German/English name → OSIS ID)
@@ -198,8 +202,8 @@ const BIBLE_LOOKUP_TOOL = {
         },
         translation: {
           type: "string",
-          enum: ["luther", "elberfelder", "schlachter"],
-          description: "Bibelübersetzung. Standard: luther"
+          enum: ["luther", "elberfelder", "schlachter", "kjv", "web"],
+          description: "Bibelübersetzung. Standard: luther. Auch englisch: kjv, web"
         }
       },
       required: ["book", "chapter", "verse_start"]
@@ -222,8 +226,8 @@ const BIBLE_SEARCH_TOOL = {
         },
         translation: {
           type: "string",
-          enum: ["luther1912", "elberfelder", "schlachter2000", "all"],
-          description: "Bibelübersetzung für die Suche. Standard: luther1912. 'all' für alle Übersetzungen."
+          enum: ["luther1912", "elberfelder", "schlachter2000", "kjv", "web", "all"],
+          description: "Bibelübersetzung für die Suche. Standard: luther1912. Englisch: kjv, web. 'all' für alle."
         }
       },
       required: ["query"]
