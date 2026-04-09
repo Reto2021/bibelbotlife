@@ -43,6 +43,8 @@ const SharedDraft = lazy(() => import("./pages/SharedDraft"));
 const AdminDashboard = lazy(() => import("./pages/admin/AdminDashboard"));
 const OutreachAdmin = lazy(() => import("./pages/admin/OutreachAdmin"));
 const BibleSearch = lazy(() => import("./pages/BibleSearch"));
+const PrayerWall = lazy(() => import("./pages/PrayerWall"));
+const BibleQuiz = lazy(() => import("./pages/BibleQuiz"));
 
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { ProtectedAdminRoute } from "@/components/ProtectedAdminRoute";
@@ -121,6 +123,8 @@ const App = () => {
                   <Route path="/church-integration/:slug" element={<ChurchIntegration />} />
                   <Route path="/for-institutions" element={<ForInstitutions />} />
                   <Route path="/bible-search" element={<BibleSearch />} />
+                  <Route path="/gebetswand" element={<PrayerWall />} />
+                  <Route path="/bibelquiz" element={<BibleQuiz />} />
                   <Route path="/unsubscribe" element={<Unsubscribe />} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/reset-password" element={<ResetPassword />} />
