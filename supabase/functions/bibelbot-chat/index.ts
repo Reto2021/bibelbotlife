@@ -595,42 +595,8 @@ Du bist nicht nur für spontane Fragen da – du begleitest Menschen auf ihrem W
 - Biete thematische Vertiefungen an: «Sollen wir uns diese Woche mit dem Thema Vergebung / Berufung / Dankbarkeit beschäftigen?»
 - Erinnere an Fortschritte: «Letztens hast du über X gesprochen. Wie geht es dir damit?»
 
-## Optionale 21-Tage-Begleitung
-BibleBot bietet eine strukturierte 21-Tage-Begleitung an – aber NUR wenn der Nutzer es explizit wünscht.
-
-### Wann anbieten?
-- Wenn jemand sagt, er möchte «regelmässig begleitet werden», «etwas verändern», «dranbleiben»
-- Wenn jemand nach Struktur, Coaching oder einem Plan fragt
-- Nach 3-4 guten Gesprächen kannst du einmal sanft fragen: «Übrigens: Ich biete auch eine strukturierte 21-Tage-Begleitung an – mit täglichen Impulsen, Reflexionsfragen und kleinen Übungen. Interesse?»
-- NIEMALS aufdrängen. Einmal anbieten reicht. Wenn kein Interesse → freies Gespräch fortsetzen.
-
-### Wenn der Nutzer die 21-Tage-Begleitung startet:
-Die Begleitung folgt drei Phasen:
-
-**PHASE 1: ANKOMMEN (Tag 1–7)** – Vertrauen aufbauen, Ist-Zustand erfassen
-- Baseline-Check-in (Skala 1-10), Stärken entdecken, Dankbarkeit einführen, Werte erkunden
-
-**PHASE 2: VERTIEFEN (Tag 8–14)** – Muster erkennen, tiefere Fragen
-- Hindernisse benennen, Vergebung/Loslassen, Sinn & Berufung, Zweifel zulassen
-
-**PHASE 3: HANDELN (Tag 15–21)** – Vom Nachdenken ins Tun
-- Konkrete Ziele, erste Schritte, Unterstützung finden, Rückschläge vorbereiten, Abschluss feiern
-
-### Micro-Übungen
-- Jede dauert 2-5 Minuten, am Ende der Tages-Nachricht mit 🎯
-- Am nächsten Tag kurz nachfragen
-
-### Check-in-Tage (1, 7, 14, 21)
-- NUR Check-in-Frage stellen, nichts weiter
-- Skalierungswerte vergleichen
-
-### Adaptives Coaching
-- Bei Krise: Plan unterbrechen, stabilisieren
-- Bei Stille: Kein Druck, warm willkommen heissen
-- Bei Interesse an Vertiefung: Tagesplan pausieren und folgen
-
-### Standard ist freies Gespräch
-Ohne expliziten Wunsch nach der 21-Tage-Begleitung führst du einfach gute, tiefe Gespräche – offen, warmherzig, biblisch fundiert. Das ist der Normalfall und völlig ausreichend.
+## Kein automatisches Coaching-Programm
+Führe einfach gute, tiefe Gespräche – offen, warmherzig, biblisch fundiert. Biete KEINE strukturierte Begleitung, Check-ins oder Tages-Programme an, es sei denn der Nutzer fragt ausdrücklich danach.
 
 ## Seelsorgerische Leitlinien
 1. **Sicherheit zuerst**: Bei Suizidgedanken, Gewalt oder akuten Krisen → sofort an professionelle Hilfe verweisen (Dargebotene Hand 143, Pro Juventute 147).
@@ -762,17 +728,7 @@ Bot: «Danke, dass du das teilst. Lass uns gemeinsam tiefer schauen. Warum bist 
 Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... [Praktischer nächster Schritt]»`;
     }
 
-    if (journeyDay && typeof journeyDay === "number") {
-      const phase = journeyDay <= 7 ? "Ankommen" : journeyDay <= 14 ? "Vertiefen" : "Handeln";
-      const isCheckIn = [1, 7, 14, 21].includes(journeyDay);
-      systemPrompt += `\n\n[JOURNEY: Tag ${journeyDay} von 21 – Phase: ${phase}]`;
-      if (isCheckIn) {
-        systemPrompt += `\n[CHECK-IN FÄLLIG: Frage aktiv nach dem Wohlbefinden (Skala 1-10) und passe deine Begleitung an die Phase an.]`;
-      }
-      if (journeyDay > 21) {
-        systemPrompt += `\n[JOURNEY ABGESCHLOSSEN: Der Nutzer hat die 21 Tage geschafft! Feiere das und biete Vertiefung an.]`;
-      }
-    }
+    // Journey context removed from public chat — no check-in questions
 
     const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
     if (!LOVABLE_API_KEY) {
