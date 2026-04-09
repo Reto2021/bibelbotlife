@@ -4,12 +4,13 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { SEOHead } from "@/components/SEOHead";
-import { ArrowLeft, Trophy, BookOpen, HelpCircle, Loader2, ChevronRight } from "lucide-react";
+import { ArrowLeft, Trophy, BookOpen, HelpCircle, Loader2, ChevronRight, Gauge } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 type QuizMode = "multiple_choice" | "verse_guess";
+type Difficulty = "easy" | "medium" | "hard";
 
 interface QuizQuestion {
   mode: QuizMode;
@@ -21,7 +22,14 @@ interface QuizQuestion {
   reference: string;
   verse_text?: string;
   hint?: string;
+  difficulty?: Difficulty;
 }
+
+const difficultyConfig: Record<Difficulty, { label: string; emoji: string; desc: string; color: string }> = {
+  easy: { label: "Leicht", emoji: "🟢", desc: "Bücher aus verschiedenen Teilen der Bibel", color: "border-emerald-400 bg-emerald-50 dark:bg-emerald-950/30 text-emerald-700 dark:text-emerald-300" },
+  medium: { label: "Mittel", emoji: "🟡", desc: "Bücher aus dem gleichen Testament", color: "border-amber-400 bg-amber-50 dark:bg-amber-950/30 text-amber-700 dark:text-amber-300" },
+  hard: { label: "Schwer", emoji: "🔴", desc: "Sehr ähnliche Bücher – für Kenner", color: "border-red-400 bg-red-50 dark:bg-red-950/30 text-red-700 dark:text-red-300" },
+};
 
 function getSessionId() {
   let id = localStorage.getItem("biblebot-session");
@@ -34,6 +42,7 @@ function getSessionId() {
 
 export default function BibleQuiz() {
   const [mode, setMode] = useState<QuizMode | null>(null);
+  const [difficulty, setDifficulty] = useState<Difficulty>("medium");
   const [question, setQuestion] = useState<QuizQuestion | null>(null);
   const [loading, setLoading] = useState(false);
   const [selected, setSelected] = useState<string | null>(null);
@@ -41,14 +50,14 @@ export default function BibleQuiz() {
   const [total, setTotal] = useState(0);
   const [showResult, setShowResult] = useState(false);
 
-  const fetchQuestion = useCallback(async (quizMode: QuizMode) => {
+  const fetchQuestion = useCallback(async (quizMode: QuizMode, diff: Difficulty) => {
     setLoading(true);
     setSelected(null);
     setShowResult(false);
 
     try {
       const { data, error } = await supabase.functions.invoke("bible-quiz", {
-        body: { mode: quizMode, translation: "luther1912" },
+        body: { mode: quizMode, translation: "luther1912", difficulty: diff },
       });
 
       if (error) throw error;
@@ -63,7 +72,7 @@ export default function BibleQuiz() {
     setMode(m);
     setScore(0);
     setTotal(0);
-    fetchQuestion(m);
+    fetchQuestion(m, difficulty);
   }
 
   async function handleAnswer(option: string) {
@@ -76,7 +85,6 @@ export default function BibleQuiz() {
     setScore(newScore);
     setTotal(newTotal);
 
-    // Save score every 5 questions
     if (newTotal % 5 === 0) {
       await supabase.from("quiz_scores").insert({
         session_id: getSessionId(),
@@ -88,7 +96,7 @@ export default function BibleQuiz() {
   }
 
   function nextQuestion() {
-    fetchQuestion(mode!);
+    fetchQuestion(mode!, difficulty);
   }
 
   // Mode selection screen
@@ -108,6 +116,37 @@ export default function BibleQuiz() {
               <h1 className="text-2xl md:text-3xl font-bold text-foreground">🧠 Bibelquiz</h1>
             </div>
 
+            {/* Difficulty selector */}
+            <div className="mb-8">
+              <div className="flex items-center gap-2 mb-3">
+                <Gauge className="h-4 w-4 text-muted-foreground" />
+                <span className="text-sm font-medium text-foreground">Schwierigkeitsgrad</span>
+              </div>
+              <div className="grid grid-cols-3 gap-2">
+                {(["easy", "medium", "hard"] as const).map((d) => {
+                  const cfg = difficultyConfig[d];
+                  const isActive = difficulty === d;
+                  return (
+                    <button
+                      key={d}
+                      onClick={() => setDifficulty(d)}
+                      className={cn(
+                        "rounded-xl border-2 p-3 text-center transition-all",
+                        isActive
+                          ? cfg.color + " ring-1 ring-offset-1 ring-offset-background"
+                          : "border-border bg-card hover:border-muted-foreground/30"
+                      )}
+                    >
+                      <span className="text-lg block mb-0.5">{cfg.emoji}</span>
+                      <span className={cn("text-sm font-semibold block", !isActive && "text-foreground")}>{cfg.label}</span>
+                      <span className={cn("text-[11px] leading-tight block mt-0.5", !isActive && "text-muted-foreground")}>{cfg.desc}</span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Mode selection */}
             <div className="space-y-4">
               <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}>
                 <Card
@@ -151,6 +190,8 @@ export default function BibleQuiz() {
     );
   }
 
+  const diffCfg = difficultyConfig[difficulty];
+
   // Quiz screen
   return (
     <>
@@ -165,6 +206,9 @@ export default function BibleQuiz() {
             <div className="flex items-center gap-2">
               <Trophy className="h-4 w-4 text-primary" />
               <span className="font-semibold text-foreground">{score}/{total}</span>
+              <Badge variant="outline" className="text-xs">
+                {diffCfg.emoji} {diffCfg.label}
+              </Badge>
               <Badge variant="secondary" className="text-xs">
                 {mode === "multiple_choice" ? "Multiple Choice" : "Vers erraten"}
               </Badge>
