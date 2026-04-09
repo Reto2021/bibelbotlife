@@ -179,13 +179,29 @@ const Index = () => {
                 <Building2 className="h-4 w-4 text-primary" />
                 {t("institutions.badge")}
               </Link>
-              <Link
+               <Link
                 to="/churches"
                 className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-foreground hover:bg-primary/10 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <Users className="h-4 w-4 text-primary" />
                 {t("footer.forChurches")}
+              </Link>
+              <Link
+                to="/gebetswand"
+                className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-foreground hover:bg-primary/10 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <HandHeart className="h-4 w-4 text-primary" />
+                {t("nav.prayerWall", "Gebetswand")}
+              </Link>
+              <Link
+                to="/bibelquiz"
+                className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-foreground hover:bg-primary/10 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <GraduationCap className="h-4 w-4 text-primary" />
+                {t("nav.bibleQuiz", "Bibelquiz")}
               </Link>
               <Link
                 to="/impressum"
