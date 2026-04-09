@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -46,6 +46,13 @@ const difficultyConfig: Record<Difficulty, { label: string; emoji: string; desc:
   hard: { label: "Schwer", emoji: "🔴", desc: "Sehr ähnliche Bücher – für Kenner", color: "border-red-400 bg-red-50 dark:bg-red-950/30 text-red-700 dark:text-red-300" },
 };
 
+interface HighscoreEntry {
+  score: number;
+  total_questions: number;
+  quiz_mode: string;
+  created_at: string;
+}
+
 export default function BibleQuiz() {
   const [mode, setMode] = useState<QuizMode | null>(null);
   const [difficulty, setDifficulty] = useState<Difficulty>("medium");
@@ -53,6 +60,20 @@ export default function BibleQuiz() {
   const [loading, setLoading] = useState(false);
   const [selected, setSelected] = useState<string | null>(null);
   const [score, setScore] = useState(0);
+  const [highscores, setHighscores] = useState<HighscoreEntry[]>([]);
+
+  useEffect(() => {
+    supabase
+      .from("quiz_scores")
+      .select("score, total_questions, quiz_mode, created_at")
+      .gte("total_questions", ROUND_SIZE)
+      .order("score", { ascending: false })
+      .order("created_at", { ascending: true })
+      .limit(10)
+      .then(({ data }) => {
+        if (data) setHighscores(data);
+      });
+  }, [mode]);
   const [total, setTotal] = useState(0);
   const [showResult, setShowResult] = useState(false);
   const [answers, setAnswers] = useState<AnswerRecord[]>([]);
