@@ -1428,6 +1428,28 @@ export type Database = {
         Args: { payload: Json; queue_name: string }
         Returns: number
       }
+      get_shared_draft: {
+        Args: { p_token: string }
+        Returns: {
+          ceremony_type: Database["public"]["Enums"]["ceremony_type"]
+          created_at: string
+          form_data: Json | null
+          generated_text: string | null
+          id: string
+          is_shared: boolean
+          person_name: string | null
+          share_token: string | null
+          transcripts: Json | null
+          updated_at: string
+          user_id: string
+        }[]
+        SetofOptions: {
+          from: "*"
+          to: "ceremony_drafts"
+          isOneToOne: false
+          isSetofReturn: true
+        }
+      }
       has_role: {
         Args: {
           _role: Database["public"]["Enums"]["app_role"]

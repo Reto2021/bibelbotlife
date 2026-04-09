@@ -110,13 +110,11 @@ export function useSharedDraft(shareToken: string | undefined) {
     enabled: !!shareToken,
     queryFn: async () => {
       const { data, error } = await supabase
-        .from("ceremony_drafts")
-        .select("*")
-        .eq("share_token", shareToken!)
-        .eq("is_shared", true)
-        .single();
+        .rpc("get_shared_draft", { p_token: shareToken! } as any);
       if (error) throw error;
-      return data;
+      const drafts = data as any[];
+      if (!drafts || drafts.length === 0) throw new Error("Draft not found");
+      return drafts[0];
     },
   });
 }
