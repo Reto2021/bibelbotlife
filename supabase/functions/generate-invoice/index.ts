@@ -103,7 +103,7 @@ Deno.serve(async (req) => {
     }
 
     // Generate PDF as HTML → convert later if needed; for now return structured data
-    const pdfHtml = generateInvoiceHtml(invoice, church, items);
+    const pdfHtml = generateInvoiceHtml(invoice, church, billing, items);
 
     // Store HTML as a file for now (can be converted to PDF via browser/puppeteer)
     const fileName = `${church_id}/${invoice.invoice_number}.html`;
