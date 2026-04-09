@@ -784,6 +784,47 @@
       "error": "发送失败。请重试。"
     }
   },
+  "chatHero": {
+    "ariaLabel": "向 BibleBot 提问",
+    "focusPlaceholder": "写下你的问题…",
+    "placeholder1": "什么让我真正心存感激？",
+    "placeholder2": "我如何找到内心的平静？",
+    "placeholder3": "什么给我带来希望？",
+    "placeholder4": "我的心渴望什么？",
+    "placeholder5": "我今天能做好事吗？",
+    "send": "发送",
+    "subtitle": "提出你的问题——公开、诚实，无需登录。",
+    "suggestion1": "我的名字代表什么？",
+    "suggestion2": "什么能给我今天的力量？",
+    "suggestion3": "我为谁感到感激？"
+  },
+  "splash": {
+    "patronage": "推荐人"
+  },
+  "meta": {
+    "forChurchesDesc": "BibleBot 是您教会的合作伙伴：青少年事工、坚信礼、教牧关怀和查经小组。免费至高级。",
+    "forChurchesTitle": "BibleBot 助力教会 – 数字教牧关怀与圣经指导",
+    "homeDesc": "BibleBot 提供 5 种圣经译本、教练方法和教牧关怀。匿名、免费，支持 36 种语言。",
+    "homeTitle": "BibleBot – 你的个人圣经伴侣 | 免费且匿名",
+    "loginDesc": "登录 BibleBot 以准备您的个人仪式。",
+    "loginTitle": "登录 – BibleBot"
+  },
+  "meinBereich": {
+    "title": "我的区域",
+    "subtitle": "准备你的个人仪式并与你的牧师分享。",
+    "sidebarLabel": "我的区域",
+    "overview": "概览",
+    "funeral": "悼词",
+    "wedding": "婚礼",
+    "baptismCeremony": "洗礼",
+    "confirmation": "坚信礼",
+    "logout": "退出",
+    "comingSoon": "即将推出",
+    "funeralDesc": "创建生平，记录回忆并与牧师分享。",
+    "weddingDesc": "撰写结婚誓词，选择歌曲并计划庆祝活动。",
+    "baptismDesc": "表达洗礼愿望并与教会一起准备流程。",
+    "confirmationDesc": "寻找坚信礼经文并准备个人文本。"
+  },
   "eulogy": {
     "pageTitle": "悼词 – 创建生平 | BibleBot",
     "pageDesc": "记录对逝去亲人的回忆，并为悼词撰写一份美丽的生平文本。",
@@ -817,46 +858,5 @@
     "micError": "麦克风无法启动。请授予权限。",
     "needMore": "请先录制回忆或写下笔记。",
     "genError": "文本生成错误。请重试。"
-  },
-  "meinBereich": {
-    "title": "我的区域",
-    "subtitle": "准备你的个人仪式并与你的牧师分享。",
-    "sidebarLabel": "我的区域",
-    "overview": "概览",
-    "funeral": "悼词",
-    "wedding": "婚礼",
-    "baptismCeremony": "洗礼",
-    "confirmation": "坚信礼",
-    "logout": "退出",
-    "comingSoon": "即将推出",
-    "funeralDesc": "创建生平，记录回忆并与牧师分享。",
-    "weddingDesc": "撰写结婚誓词，选择歌曲并计划庆祝活动。",
-    "baptismDesc": "表达洗礼愿望并与教会一起准备流程。",
-    "confirmationDesc": "寻找坚信礼经文并准备个人文本。"
-  },
-  "chatHero": {
-    "ariaLabel": "向 BibleBot 提问",
-    "focusPlaceholder": "写下你的问题…",
-    "placeholder1": "什么让我真正心存感激？",
-    "placeholder2": "我如何找到内心的平静？",
-    "placeholder3": "什么给我带来希望？",
-    "placeholder4": "我的心渴望什么？",
-    "placeholder5": "我今天能做好事吗？",
-    "send": "发送",
-    "subtitle": "提出你的问题——公开、诚实，无需登录。",
-    "suggestion1": "我的名字代表什么？",
-    "suggestion2": "什么能给我今天的力量？",
-    "suggestion3": "我为谁感到感激？"
-  },
-  "meta": {
-    "forChurchesDesc": "BibleBot 是您教会的合作伙伴：青少年事工、坚信礼、教牧关怀和查经小组。免费至高级。",
-    "forChurchesTitle": "BibleBot 助力教会 – 数字教牧关怀与圣经指导",
-    "homeDesc": "BibleBot 提供 5 种圣经译本、教练方法和教牧关怀。匿名、免费，支持 36 种语言。",
-    "homeTitle": "BibleBot – 你的个人圣经伴侣 | 免费且匿名",
-    "loginDesc": "登录 BibleBot 以准备您的个人仪式。",
-    "loginTitle": "登录 – BibleBot"
-  },
-  "splash": {
-    "patronage": "推荐人"
   }
 }

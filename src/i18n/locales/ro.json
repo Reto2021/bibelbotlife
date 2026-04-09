@@ -218,6 +218,21 @@
     "purposeValue": "Donație BibleBot",
     "note": "BibleBot este operat ca proiect privat. Donațiile nu sunt deductibile fiscal."
   },
+  "refer": {
+    "badge": "Share God's Word",
+    "title": "Recommend BibleBot",
+    "subtitle": "Know someone who could use encouragement? Share BibleBot – one message can make a difference.",
+    "whatsapp": "Share via WhatsApp",
+    "whatsappMsg": "Hey, I wanted to show you BibleBot – a free Bible companion that really knows the Bible and asks great questions. No login, anonymous, honest. Try it out: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "telegram": "Share via Telegram",
+    "telegramMsg": "Hey, do you know BibleBot? A free personal Bible companion – honest, anonymous, no login needed. Check it out: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "email": "Share via email",
+    "emailSubject": "This might interest you: BibleBot.Life",
+    "emailBody": "Hi!\n\nI wanted to show you BibleBot – a free Bible companion that really knows the Bible. No sign-up needed, completely anonymous.\n\nIt asks thoughtful questions, explains Bible passages in context and accompanies you honestly – even on difficult topics.\n\nTry it out: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nBest wishes",
+    "copy": "Copy link",
+    "copied": "Link copied! 📋",
+    "qr": "Or just show this QR code:"
+  },
   "cta": {
     "title": "Nu trebuie să treci singur prin asta",
     "subtitle": "Spune-i BibleBot ce te preocupă. Fără autentificare, fără costuri, fără judecată – doar însoțire sinceră și înțelepciunea Bibliei.",
@@ -284,6 +299,26 @@
     "iosDesc": "Apasă \"Partajare\" → \"Adaugă pe ecranul de start\"",
     "button": "Instalează",
     "close": "Închide"
+  },
+  "share": {
+    "label": "Share",
+    "shareVia": "Share via",
+    "copied": "Copied! 📋",
+    "copiedShort": "Copied!",
+    "copiedDesc": "Text copied to clipboard. Share it on WhatsApp, Instagram or wherever you like!",
+    "copyLink": "Copy text",
+    "error": "Copy failed",
+    "impulseTitle": "BibleBot – Impulse of the Day",
+    "chatTitle": "BibleBot – Thought of the Day",
+    "createImage": "Create image ✨",
+    "generating": "Creating…",
+    "imageReady": "Your image is ready to share!",
+    "shareImage": "Share image",
+    "download": "Save",
+    "imageError": "Image creation failed",
+    "imageErrorDesc": "The image could not be created. Please try again later.",
+    "imageSaved": "Text copied! 📋",
+    "imageSavedDesc": "Save the image and share it with the copied text on Instagram, WhatsApp or wherever you like!"
   },
   "darkMode": {
     "light": "Mod luminos",
@@ -537,14 +572,6 @@
     "backToNew": "New Life Wheel",
     "backToList": "Back to list"
   },
-  "referral": {
-    "title": "Cunoști pe cineva care ar putea folosi BibleBot?",
-    "subtitle": "Împărtășește BibleBot cu prietenii și familia.",
-    "shareText": "Descoperă BibleBot.Life – companionul tău personal pentru Biblie. Gratuit, anonim, în 10 limbi.",
-    "copied": "Link copiat!",
-    "copyLink": "Copiază linkul",
-    "shareButton": "Partajează"
-  },
   "church": {
     "badge": "Pentru Biserici",
     "heroTitle": "BibleBot pentru Biserica ta",
@@ -756,40 +783,46 @@
       "cta": "Încercați modul senior"
     }
   },
-  "refer": {
-    "badge": "Share God's Word",
-    "title": "Recommend BibleBot",
-    "subtitle": "Know someone who could use encouragement? Share BibleBot – one message can make a difference.",
-    "whatsapp": "Share via WhatsApp",
-    "whatsappMsg": "Hey, I wanted to show you BibleBot – a free Bible companion that really knows the Bible and asks great questions. No login, anonymous, honest. Try it out: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
-    "telegram": "Share via Telegram",
-    "telegramMsg": "Hey, do you know BibleBot? A free personal Bible companion – honest, anonymous, no login needed. Check it out: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
-    "email": "Share via email",
-    "emailSubject": "This might interest you: BibleBot.Life",
-    "emailBody": "Hi!\n\nI wanted to show you BibleBot – a free Bible companion that really knows the Bible. No sign-up needed, completely anonymous.\n\nIt asks thoughtful questions, explains Bible passages in context and accompanies you honestly – even on difficult topics.\n\nTry it out: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nBest wishes",
-    "copy": "Copy link",
-    "copied": "Link copied! 📋",
-    "qr": "Or just show this QR code:"
+  "chatHero": {
+    "ariaLabel": "Pune o întrebare lui BibleBot",
+    "focusPlaceholder": "Scrie întrebarea ta…",
+    "placeholder1": "Ce mă face cu adevărat recunoscător?",
+    "placeholder2": "Cum găsesc pacea interioară?",
+    "placeholder3": "Ce îmi dă speranță?",
+    "placeholder4": "Ce își dorește inima mea?",
+    "placeholder5": "Ce bine pot face azi?",
+    "send": "Trimite",
+    "subtitle": "Pune întrebarea ta – deschis, sincer, fără înregistrare.",
+    "suggestion1": "Ce înseamnă numele meu?",
+    "suggestion2": "Ce îmi dă putere azi?",
+    "suggestion3": "Pentru ce sunt recunoscător?"
   },
-  "share": {
-    "label": "Share",
-    "shareVia": "Share via",
-    "copied": "Copied! 📋",
-    "copiedShort": "Copied!",
-    "copiedDesc": "Text copied to clipboard. Share it on WhatsApp, Instagram or wherever you like!",
-    "copyLink": "Copy text",
-    "error": "Copy failed",
-    "impulseTitle": "BibleBot – Impulse of the Day",
-    "chatTitle": "BibleBot – Thought of the Day",
-    "createImage": "Create image ✨",
-    "generating": "Creating…",
-    "imageReady": "Your image is ready to share!",
-    "shareImage": "Share image",
-    "download": "Save",
-    "imageError": "Image creation failed",
-    "imageErrorDesc": "The image could not be created. Please try again later.",
-    "imageSaved": "Text copied! 📋",
-    "imageSavedDesc": "Save the image and share it with the copied text on Instagram, WhatsApp or wherever you like!"
+  "splash": {
+    "patronage": "Recomandat de"
+  },
+  "meta": {
+    "forChurchesDesc": "BibleBot ca partener pentru comunitatea ta: lucrul cu tinerii, confirmarea, consilierea pastorală și grupurile biblice. De la gratuit la Premium.",
+    "forChurchesTitle": "BibleBot pentru Biserici – Consiliere Pastorală Digitală & Ghidare Biblică",
+    "homeDesc": "BibleBot te însoțește cu 5 traduceri biblice, metodologie de coaching și consiliere spirituală. Anonim, gratuit, în 36 de limbi.",
+    "homeTitle": "BibleBot – Ghidul Tău Biblic Personal | Gratuit & Anonim",
+    "loginDesc": "Conectează-te la BibleBot pentru a-ți pregăti ceremoniile personale.",
+    "loginTitle": "Autentificare – BibleBot"
+  },
+  "meinBereich": {
+    "title": "Zona mea",
+    "subtitle": "Pregătește-ți ceremoniile personale și partajează-le cu pastorul tău.",
+    "sidebarLabel": "Zona mea",
+    "overview": "Prezentare generală",
+    "funeral": "Înmormântare",
+    "wedding": "Nuntă",
+    "baptismCeremony": "Botez",
+    "confirmation": "Confirmare",
+    "logout": "Deconectare",
+    "comingSoon": "Disponibil în curând",
+    "funeralDesc": "Creează un CV, păstrează amintiri și partajează-le cu pastorul.",
+    "weddingDesc": "Scrie jurăminte de căsătorie, alege cântece și planifică sărbătoarea.",
+    "baptismDesc": "Formulează dorințe de botez și pregătește procesul cu comunitatea.",
+    "confirmationDesc": "Găsește un verset de confirmare și pregătește texte personale."
   },
   "eulogy": {
     "pageTitle": "Elogiu – Creare CV | BibleBot",
@@ -824,46 +857,5 @@
     "micError": "Microfonul nu a putut fi pornit. Vă rugăm să acordați permisiunea.",
     "needMore": "Vă rugăm să înregistrați mai întâi amintiri sau să scrieți notițe.",
     "genError": "Eroare la generarea textului. Vă rugăm să încercați din nou."
-  },
-  "meinBereich": {
-    "title": "Zona mea",
-    "subtitle": "Pregătește-ți ceremoniile personale și partajează-le cu pastorul tău.",
-    "sidebarLabel": "Zona mea",
-    "overview": "Prezentare generală",
-    "funeral": "Înmormântare",
-    "wedding": "Nuntă",
-    "baptismCeremony": "Botez",
-    "confirmation": "Confirmare",
-    "logout": "Deconectare",
-    "comingSoon": "Disponibil în curând",
-    "funeralDesc": "Creează un CV, păstrează amintiri și partajează-le cu pastorul.",
-    "weddingDesc": "Scrie jurăminte de căsătorie, alege cântece și planifică sărbătoarea.",
-    "baptismDesc": "Formulează dorințe de botez și pregătește procesul cu comunitatea.",
-    "confirmationDesc": "Găsește un verset de confirmare și pregătește texte personale."
-  },
-  "chatHero": {
-    "ariaLabel": "Pune o întrebare lui BibleBot",
-    "focusPlaceholder": "Scrie întrebarea ta…",
-    "placeholder1": "Ce mă face cu adevărat recunoscător?",
-    "placeholder2": "Cum găsesc pacea interioară?",
-    "placeholder3": "Ce îmi dă speranță?",
-    "placeholder4": "Ce își dorește inima mea?",
-    "placeholder5": "Ce bine pot face azi?",
-    "send": "Trimite",
-    "subtitle": "Pune întrebarea ta – deschis, sincer, fără înregistrare.",
-    "suggestion1": "Ce înseamnă numele meu?",
-    "suggestion2": "Ce îmi dă putere azi?",
-    "suggestion3": "Pentru ce sunt recunoscător?"
-  },
-  "meta": {
-    "forChurchesDesc": "BibleBot ca partener pentru comunitatea ta: lucrul cu tinerii, confirmarea, consilierea pastorală și grupurile biblice. De la gratuit la Premium.",
-    "forChurchesTitle": "BibleBot pentru Biserici – Consiliere Pastorală Digitală & Ghidare Biblică",
-    "homeDesc": "BibleBot te însoțește cu 5 traduceri biblice, metodologie de coaching și consiliere spirituală. Anonim, gratuit, în 36 de limbi.",
-    "homeTitle": "BibleBot – Ghidul Tău Biblic Personal | Gratuit & Anonim",
-    "loginDesc": "Conectează-te la BibleBot pentru a-ți pregăti ceremoniile personale.",
-    "loginTitle": "Autentificare – BibleBot"
-  },
-  "splash": {
-    "patronage": "Recomandat de"
   }
 }
