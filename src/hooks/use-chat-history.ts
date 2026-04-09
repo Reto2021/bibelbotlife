@@ -3,6 +3,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/use-auth";
 
 const SESSION_KEY = "bibelbot-session-id";
+const LOCAL_CHAT_HISTORY_KEY = "bibelbot-anon-chat-history-v1";
 
 function getSessionId(): string {
   let id = localStorage.getItem(SESSION_KEY);
@@ -27,6 +28,31 @@ export type ChatMessage = {
   created_at?: string;
 };
 
+type StoredConversation = Conversation & {
+  messages: ChatMessage[];
+};
+
+function loadLocalConversationState(): StoredConversation[] {
+  try {
+    const raw = localStorage.getItem(LOCAL_CHAT_HISTORY_KEY);
+    if (!raw) return [];
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
+function saveLocalConversationState(conversations: StoredConversation[]) {
+  try {
+    localStorage.setItem(LOCAL_CHAT_HISTORY_KEY, JSON.stringify(conversations));
+  } catch {}
+}
+
+function stripMessages(conversations: StoredConversation[]): Conversation[] {
+  return conversations.map(({ messages: _messages, ...conversation }) => conversation);
+}
+
 export function useChatHistory() {
   const [conversations, setConversations] = useState<Conversation[]>([]);
   const [activeConversationId, setActiveConversationId] = useState<string | null>(null);
@@ -50,25 +76,38 @@ export function useChatHistory() {
 
   // Load conversation list - by user_id if logged in, else by session_id
   const loadConversations = useCallback(async () => {
+    if (!user) {
+      const localConversations = loadLocalConversationState()
+        .sort((a, b) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime())
+        .slice(0, 50);
+      setConversations(stripMessages(localConversations));
+      return;
+    }
+
     let query = supabase
       .from("chat_conversations")
       .select("*")
       .order("updated_at", { ascending: false })
       .limit(50);
 
-    if (user) {
-      query = query.eq("user_id", user.id);
-    } else {
-      query = query.eq("session_id", sessionId);
-    }
+    query = query.eq("user_id", user.id);
 
     const { data } = await query;
     if (data) setConversations(data);
-  }, [sessionId, user]);
+  }, [user]);
 
   // Load messages for a conversation
   const loadMessages = useCallback(async (conversationId: string) => {
     setIsLoadingHistory(true);
+
+    if (!user) {
+      const localConversation = loadLocalConversationState().find((conversation) => conversation.id === conversationId);
+      setMessages(localConversation?.messages ?? []);
+      setActiveConversationId(conversationId);
+      setIsLoadingHistory(false);
+      return;
+    }
+
     const { data } = await supabase
       .from("chat_messages")
       .select("*")
@@ -79,11 +118,29 @@ export function useChatHistory() {
     }
     setActiveConversationId(conversationId);
     setIsLoadingHistory(false);
-  }, []);
+  }, [user]);
 
   // Create new conversation
   const createConversation = useCallback(async (firstMessage: string): Promise<string> => {
     const title = firstMessage.length > 60 ? firstMessage.slice(0, 57) + "…" : firstMessage;
+
+    if (!user) {
+      const now = new Date().toISOString();
+      const localConversation: StoredConversation = {
+        id: crypto.randomUUID(),
+        title,
+        created_at: now,
+        updated_at: now,
+        messages: [],
+      };
+
+      const nextConversations = [localConversation, ...loadLocalConversationState()];
+      saveLocalConversationState(nextConversations);
+      setConversations(stripMessages(nextConversations));
+      setActiveConversationId(localConversation.id);
+      return localConversation.id;
+    }
+
     const insertData: any = { session_id: sessionId, title };
     if (user) insertData.user_id = user.id;
 
@@ -100,6 +157,30 @@ export function useChatHistory() {
 
   // Add message to DB
   const addMessage = useCallback(async (conversationId: string, role: "user" | "assistant", content: string) => {
+    if (!user) {
+      const nextConversations = loadLocalConversationState().map((conversation) => {
+        if (conversation.id !== conversationId) return conversation;
+
+        return {
+          ...conversation,
+          updated_at: new Date().toISOString(),
+          messages: [
+            ...conversation.messages,
+            {
+              id: crypto.randomUUID(),
+              role,
+              content,
+              created_at: new Date().toISOString(),
+            },
+          ],
+        };
+      });
+
+      saveLocalConversationState(nextConversations);
+      setConversations(stripMessages(nextConversations));
+      return;
+    }
+
     await supabase.from("chat_messages").insert({
       conversation_id: conversationId,
       role,
@@ -109,10 +190,34 @@ export function useChatHistory() {
       .from("chat_conversations")
       .update({ updated_at: new Date().toISOString() })
       .eq("id", conversationId);
-  }, []);
+  }, [user]);
 
   // Update last assistant message (for streaming)
   const updateLastAssistantMessage = useCallback(async (conversationId: string, content: string) => {
+    if (!user) {
+      const nextConversations = loadLocalConversationState().map((conversation) => {
+        if (conversation.id !== conversationId) return conversation;
+
+        const nextMessages = [...conversation.messages];
+        for (let i = nextMessages.length - 1; i >= 0; i -= 1) {
+          if (nextMessages[i].role === "assistant") {
+            nextMessages[i] = { ...nextMessages[i], content };
+            break;
+          }
+        }
+
+        return {
+          ...conversation,
+          updated_at: new Date().toISOString(),
+          messages: nextMessages,
+        };
+      });
+
+      saveLocalConversationState(nextConversations);
+      setConversations(stripMessages(nextConversations));
+      return;
+    }
+
     const { data } = await supabase
       .from("chat_messages")
       .select("id")
@@ -127,26 +232,44 @@ export function useChatHistory() {
         .update({ content })
         .eq("id", data.id);
     }
-  }, []);
+  }, [user]);
 
   // Update conversation title
   const updateTitle = useCallback(async (conversationId: string, title: string) => {
+    if (!user) {
+      const nextConversations = loadLocalConversationState().map((conversation) =>
+        conversation.id === conversationId
+          ? { ...conversation, title, updated_at: new Date().toISOString() }
+          : conversation
+      );
+      saveLocalConversationState(nextConversations);
+      setConversations(stripMessages(nextConversations));
+      return;
+    }
+
     await supabase
       .from("chat_conversations")
       .update({ title })
       .eq("id", conversationId);
     await loadConversations();
-  }, [loadConversations]);
+  }, [loadConversations, user]);
 
   // Delete conversation
   const deleteConversation = useCallback(async (conversationId: string) => {
-    await supabase.from("chat_conversations").delete().eq("id", conversationId);
+    if (!user) {
+      const nextConversations = loadLocalConversationState().filter((conversation) => conversation.id !== conversationId);
+      saveLocalConversationState(nextConversations);
+      setConversations(stripMessages(nextConversations));
+    } else {
+      await supabase.from("chat_conversations").delete().eq("id", conversationId);
+      await loadConversations();
+    }
+
     if (activeConversationId === conversationId) {
       setActiveConversationId(null);
       setMessages([]);
     }
-    await loadConversations();
-  }, [activeConversationId, loadConversations]);
+  }, [activeConversationId, loadConversations, user]);
 
   // Start new chat
   const startNewChat = useCallback(() => {
@@ -160,6 +283,17 @@ export function useChatHistory() {
       await loadConversations();
       return;
     }
+
+    if (!user) {
+      const normalizedQuery = query.trim().toLowerCase();
+      const filteredConversations = loadLocalConversationState()
+        .filter((conversation) => (conversation.title ?? "").toLowerCase().includes(normalizedQuery))
+        .sort((a, b) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime())
+        .slice(0, 50);
+      setConversations(stripMessages(filteredConversations));
+      return;
+    }
+
     let q = supabase
       .from("chat_conversations")
       .select("*")
@@ -167,15 +301,11 @@ export function useChatHistory() {
       .order("updated_at", { ascending: false })
       .limit(50);
 
-    if (user) {
-      q = q.eq("user_id", user.id);
-    } else {
-      q = q.eq("session_id", sessionId);
-    }
+    q = q.eq("user_id", user.id);
 
     const { data } = await q;
     if (data) setConversations(data);
-  }, [sessionId, user, loadConversations]);
+  }, [user, loadConversations]);
 
   // Initial load + reload when user changes
   useEffect(() => {
