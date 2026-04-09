@@ -39,6 +39,26 @@ export default function ServiceEditor() {
   const [resourcePickerBlockId, setResourcePickerBlockId] = useState<string | null>(null);
   const [templatePickerOpen, setTemplatePickerOpen] = useState(isNew);
   const { data: templates = [] } = useTemplates();
+  const createTemplate = useCreateTemplate();
+  const [saveAsTemplateOpen, setSaveAsTemplateOpen] = useState(false);
+  const [templateName, setTemplateName] = useState("");
+
+  const handleSaveAsTemplate = async () => {
+    if (!templateName.trim() || !user) return;
+    try {
+      await createTemplate.mutateAsync({
+        name: templateName.trim(),
+        tradition: tradition,
+        blocks: blocks,
+        church_id: church?.id,
+      });
+      toast.success(`Vorlage «${templateName.trim()}» gespeichert`);
+      setSaveAsTemplateOpen(false);
+      setTemplateName("");
+    } catch (err: any) {
+      toast.error(err.message || "Fehler beim Speichern der Vorlage");
+    }
+  };
 
   // Load existing service
   useEffect(() => {
