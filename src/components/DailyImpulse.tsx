@@ -59,6 +59,7 @@ export function DailyImpulse() {
   const [showImagePreview, setShowImagePreview] = useState(false);
   const [showSmsInput, setShowSmsInput] = useState(false);
   const [smsPhone, setSmsPhone] = useState("");
+  const tts = useTTS();
 
   useEffect(() => {
     if (impulse) return;
