@@ -732,12 +732,13 @@ export function BibleBotChat() {
             disabled={isTranscribing}
             className={`h-10 w-10 shrink-0 relative`}
             aria-label={isListening ? t("chat.stopVoice") : t("chat.startVoice")}
+            title={isListening ? t("chat.stopVoice") : t("chat.startVoice", "Spracheingabe")}
           >
-            {isTranscribing ? <Loader2 className={`h-4 w-4 animate-spin`} /> : isListening ? <MicOff className="h-4 w-4" /> : <Mic className="h-4 w-4" />}
+            {isTranscribing ? <Loader2 className="h-5 w-5 animate-spin" /> : isListening ? <MicOff className="h-5 w-5" /> : <Mic className="h-5 w-5" />}
             {isListening && <span className="absolute inset-0 rounded-md border-2 border-destructive animate-pulse" />}
           </Button>
-          <Button size="icon" onClick={() => sendMessage(input)} disabled={!input.trim() || isLoading} className={`h-10 w-10 shrink-0`}>
-            <Send className="h-4 w-4" />
+          <Button size="icon" onClick={() => sendMessage(input)} disabled={!input.trim() || isLoading} className={`h-10 w-10 shrink-0`} title={t("chat.send", "Senden")}>
+            <Send className="h-5 w-5" />
           </Button>
         </div>
       </div>
