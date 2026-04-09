@@ -9,7 +9,13 @@ Deno.serve(async (req) => {
   try {
     const { church_id, sender_name, sender_email, message } = await req.json();
 
-    if (!church_id || !sender_email || !message) {
+    const email = typeof sender_email === "string" ? sender_email.trim().toLowerCase() : "";
+    const name = typeof sender_name === "string" ? sender_name.trim().slice(0, 100) : null;
+    const content = typeof message === "string" ? message.trim().slice(0, 5000) : "";
+    const isValidUuid = typeof church_id === "string" && /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(church_id);
+    const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+    if (!isValidUuid || !isValidEmail || content.length < 5) {
       return new Response(JSON.stringify({ error: "Missing required fields" }), {
         status: 400,
         headers: { ...corsHeaders, "Content-Type": "application/json" },
@@ -24,11 +30,11 @@ Deno.serve(async (req) => {
     // Get church info
     const { data: church, error: churchError } = await supabase
       .from("church_partners")
-      .select("name, contact_email")
+      .select("name, contact_email, is_active")
       .eq("id", church_id)
       .single();
 
-    if (churchError || !church) {
+    if (churchError || !church || !church.is_active) {
       return new Response(JSON.stringify({ error: "Church not found" }), {
         status: 404,
         headers: { ...corsHeaders, "Content-Type": "application/json" },
@@ -38,7 +44,7 @@ Deno.serve(async (req) => {
     // Store in DB
     const { error: insertError } = await supabase
       .from("church_contact_requests")
-      .insert({ church_id, sender_name, sender_email, message });
+      .insert({ church_id, sender_name: name, sender_email: email, message: content });
 
     if (insertError) throw insertError;
 
