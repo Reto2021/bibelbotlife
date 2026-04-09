@@ -17,15 +17,15 @@ interface AppLogoProps {
  * when the page is in dark mode (or light mode + invertTheme).
  */
 export const AppLogo = ({ className = "h-10 w-10", invertTheme = false, alt = "BibleBot" }: AppLogoProps) => {
-  // Normal: dark logo in light mode, white logo in dark mode.
-  // invertTheme: white logo in light mode, dark logo in dark mode.
-  const darkClasses = invertTheme ? "dark:block" : "dark:hidden";
-  const whiteClasses = invertTheme ? "dark:hidden" : "hidden dark:block";
+  // Normal:      dark logo visible in light, hidden in dark; white logo hidden in light, visible in dark.
+  // invertTheme: dark logo hidden in light, visible in dark; white logo visible in light, hidden in dark.
+  const darkLogoClasses = invertTheme ? "hidden dark:block" : "dark:hidden";
+  const whiteLogoClasses = invertTheme ? "dark:hidden" : "hidden dark:block";
 
   return (
     <>
-      <img src={bibelbotLogo} alt={alt} className={`${className} ${darkClasses}`} />
-      <img src={bibelbotLogoWhite} alt={alt} className={`${className} ${whiteClasses}`} />
+      <img src={bibelbotLogo} alt={alt} className={`${className} ${darkLogoClasses}`} />
+      <img src={bibelbotLogoWhite} alt={alt} className={`${className} ${whiteLogoClasses}`} />
     </>
   );
 };
