@@ -73,7 +73,7 @@ const Index = () => {
             className="flex items-center space-x-2 hover:opacity-80 transition-opacity cursor-pointer shrink-0"
             aria-label="Scroll to top"
           >
-            <img src={bibelbotLogo} alt="BibleBot" className="h-10 w-10 lg:h-14 lg:w-14" />
+            <AppLogo className="h-10 w-10 lg:h-14 lg:w-14" />
             <div className="flex flex-col">
               <span className="text-lg lg:text-xl font-bold text-foreground leading-tight">BibleBot<span className="text-sm lg:text-base font-normal text-muted-foreground">.Life</span></span>
               <span className="text-[9px] font-medium tracking-[0.2em] uppercase text-muted-foreground/70 hidden lg:block">Everyday Sunday</span>
