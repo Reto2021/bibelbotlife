@@ -207,6 +207,80 @@ export default function BibleQuiz() {
 
   const diffCfg = difficultyConfig[difficulty];
 
+  // Round summary screen
+  if (roundComplete) {
+    const pct = Math.round((score / ROUND_SIZE) * 100);
+    const emoji = pct >= 90 ? "🏆" : pct >= 70 ? "🌟" : pct >= 50 ? "👍" : "💪";
+    const message = pct >= 90 ? "Hervorragend!" : pct >= 70 ? "Sehr gut!" : pct >= 50 ? "Gut gemacht!" : "Weiter üben!";
+
+    return (
+      <>
+        <SEOHead title="Bibelquiz – Ergebnis | BibleBot.Life" description="Dein Quizergebnis" />
+        <div className="min-h-screen bg-background">
+          <div className="container mx-auto max-w-lg px-4 py-8">
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-6">
+              {/* Big result */}
+              <Card className="p-8 text-center">
+                <p className="text-5xl mb-3">{emoji}</p>
+                <h2 className="text-2xl font-bold text-foreground mb-1">{message}</h2>
+                <p className="text-muted-foreground text-sm mb-4">
+                  {diffCfg.emoji} {diffCfg.label} · {mode === "multiple_choice" ? "Multiple Choice" : "Vers erraten"}
+                </p>
+                <div className="flex items-center justify-center gap-6 mb-4">
+                  <div className="text-center">
+                    <p className="text-4xl font-bold text-primary">{score}</p>
+                    <p className="text-xs text-muted-foreground">Richtig</p>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-4xl font-bold text-muted-foreground">{ROUND_SIZE - score}</p>
+                    <p className="text-xs text-muted-foreground">Falsch</p>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-4xl font-bold text-foreground">{pct}%</p>
+                    <p className="text-xs text-muted-foreground">Quote</p>
+                  </div>
+                </div>
+                {/* Progress bar */}
+                <div className="w-full h-3 rounded-full bg-muted overflow-hidden">
+                  <motion.div
+                    initial={{ width: 0 }}
+                    animate={{ width: `${pct}%` }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    className="h-full rounded-full bg-primary"
+                  />
+                </div>
+              </Card>
+
+              {/* Answer list */}
+              <Card className="p-4">
+                <h3 className="font-semibold text-foreground text-sm mb-3">Deine Antworten</h3>
+                <div className="space-y-1.5">
+                  {answers.map((a, i) => (
+                    <div key={i} className="flex items-center gap-2 text-sm">
+                      <span>{a.correct ? "✅" : "❌"}</span>
+                      <span className="text-muted-foreground">{i + 1}.</span>
+                      <span className="text-foreground truncate">{a.reference}</span>
+                    </div>
+                  ))}
+                </div>
+              </Card>
+
+              {/* Actions */}
+              <div className="flex gap-3">
+                <Button variant="outline" className="flex-1" onClick={() => setMode(null)}>
+                  <ArrowLeft className="h-4 w-4 mr-1" /> Menü
+                </Button>
+                <Button className="flex-1" onClick={() => startGame(mode!)}>
+                  <RotateCcw className="h-4 w-4 mr-1" /> Nochmal spielen
+                </Button>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </>
+    );
+  }
+
   // Quiz screen
   return (
     <>
