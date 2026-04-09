@@ -16,6 +16,7 @@ import { toast } from "sonner";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { ResourcePicker } from "@/components/services/ResourcePicker";
 import type { Resource } from "@/hooks/use-resources";
+import { useTemplates, type ServiceTemplate } from "@/hooks/use-templates";
 
 export default function ServiceEditor() {
   const { id } = useParams();
@@ -36,6 +37,8 @@ export default function ServiceEditor() {
   const [bibleBotContext, setBibleBotContext] = useState("");
   const [resourcePickerOpen, setResourcePickerOpen] = useState(false);
   const [resourcePickerBlockId, setResourcePickerBlockId] = useState<string | null>(null);
+  const [templatePickerOpen, setTemplatePickerOpen] = useState(isNew);
+  const { data: templates = [] } = useTemplates();
 
   // Load existing service
   useEffect(() => {
