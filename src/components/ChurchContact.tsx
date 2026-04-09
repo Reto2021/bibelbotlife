@@ -28,11 +28,13 @@ export const ChurchContact = ({ churchId, churchName }: ChurchContactProps) => {
 
     setSending(true);
     try {
-      const { error } = await supabase.from("church_contact_requests").insert({
-        church_id: churchId,
-        sender_name: name || null,
-        sender_email: email,
-        message,
+      const { error } = await supabase.functions.invoke("church-contact", {
+        body: {
+          church_id: churchId,
+          sender_name: name.trim().slice(0, 100) || null,
+          sender_email: email.trim(),
+          message: message.trim().slice(0, 5000),
+        },
       });
 
       if (error) throw error;
