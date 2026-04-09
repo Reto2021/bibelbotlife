@@ -18,9 +18,8 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "
 import { ResourcePicker } from "@/components/services/ResourcePicker";
 import type { Resource } from "@/hooks/use-resources";
 import { useTemplates, useCreateTemplate, type ServiceTemplate } from "@/hooks/use-templates";
-import { exportServicePdf } from "@/lib/export-service-pdf";
+import { exportServicePdf, exportServicePdfBlob } from "@/lib/export-service-pdf";
 import { Label } from "@/components/ui/label";
-import jsPDF from "jspdf";
 
 export default function ServiceEditor() {
   const { id } = useParams();
