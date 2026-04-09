@@ -438,10 +438,15 @@ export function BibleBotChat() {
           }
         }
 
-        if (assistantSoFar) {
+        // Run QA check after streaming is complete
+        if (assistantSoFar && likelyHasCitations(assistantSoFar)) {
+          // Get the current index of the last assistant message
           setMessages((prev) => {
             const lastIdx = prev.length - 1;
-            if (prev[lastIdx]?.role === "assistant") runQA(assistantSoFar, lastIdx);
+            if (prev[lastIdx]?.role === "assistant") {
+              // Schedule QA outside state updater
+              setTimeout(() => runQA(assistantSoFar, lastIdx), 0);
+            }
             return prev;
           });
         }
