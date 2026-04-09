@@ -14,7 +14,7 @@ import { Switch } from "@/components/ui/switch";
 import { toast } from "sonner";
 import {
   Plus, Play, Pause, Upload, Globe, Mail, Users, BarChart3,
-  Loader2, Trash2, RefreshCw, Send, Target,
+  Loader2, Trash2, RefreshCw, Send, Target, Sparkles,
 } from "lucide-react";
 
 // ─── Hooks ───────────────────────────────────────────────
