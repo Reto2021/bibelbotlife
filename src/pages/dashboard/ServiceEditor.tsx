@@ -439,18 +439,31 @@ export default function ServiceEditor() {
             </CardContent>
           </Card>
         ) : (
-          <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
+          <DndContext sensors={sensors} collisionDetection={closestCenter} onDragStart={handleDragStart} onDragOver={handleDragOver} onDragEnd={handleDragEnd} onDragCancel={() => { setActiveId(null); setOverId(null); }}>
             <SortableContext items={blocks.map((b) => b.id)} strategy={verticalListSortingStrategy}>
-              {blocks.map((block) => (
-                <ServiceBlock
-                  key={block.id}
-                  block={block}
-                  onUpdate={updateBlock}
-                  onDelete={deleteBlock}
-                  onAskBibleBot={askBibleBot}
-                  onPickResource={pickResourceForBlock}
-                />
-              ))}
+              {blocks.map((block) => {
+                const activeIndex = activeId ? blocks.findIndex((b) => b.id === activeId) : -1;
+                const thisIndex = blocks.findIndex((b) => b.id === block.id);
+                const showIndicatorBefore = overId === block.id && activeId !== block.id && activeIndex > thisIndex;
+                const showIndicatorAfter = overId === block.id && activeId !== block.id && activeIndex < thisIndex;
+                return (
+                  <div key={block.id}>
+                    {showIndicatorBefore && (
+                      <div className="h-1 rounded-full bg-primary mx-2 my-1 animate-scale-in" />
+                    )}
+                    <ServiceBlock
+                      block={block}
+                      onUpdate={updateBlock}
+                      onDelete={deleteBlock}
+                      onAskBibleBot={askBibleBot}
+                      onPickResource={pickResourceForBlock}
+                    />
+                    {showIndicatorAfter && (
+                      <div className="h-1 rounded-full bg-primary mx-2 my-1 animate-scale-in" />
+                    )}
+                  </div>
+                );
+              })}
             </SortableContext>
           </DndContext>
         )}
