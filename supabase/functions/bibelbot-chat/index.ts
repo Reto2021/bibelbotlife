@@ -806,7 +806,7 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
             { role: "system", content: systemPrompt },
             ...finalMessages,
           ],
-          tools: [BIBLE_LOOKUP_TOOL, BIBLE_SEARCH_TOOL],
+          tools: [BIBLE_LOOKUP_TOOL, BIBLE_SEARCH_TOOL, THEOLOGY_SEARCH_TOOL],
         }),
       }
     );
