@@ -39,8 +39,10 @@ const MeinBereich = lazy(() => import("./pages/MeinBereich"));
 const MeinBereichHome = lazy(() => import("./pages/mein-bereich/MeinBereichHome"));
 const EulogyWriter = lazy(() => import("./pages/mein-bereich/EulogyWriter"));
 const SharedDraft = lazy(() => import("./pages/SharedDraft"));
+const AdminDashboard = lazy(() => import("./pages/admin/AdminDashboard"));
 
 import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { ProtectedAdminRoute } from "@/components/ProtectedAdminRoute";
 
 const queryClient = new QueryClient();
 
@@ -134,6 +136,7 @@ const App = () => {
                     <Route path="abdankung" element={<EulogyWriter />} />
                   </Route>
                   <Route path="/shared/:token" element={<SharedDraft />} />
+                  <Route path="/admin" element={<ProtectedAdminRoute><AdminDashboard /></ProtectedAdminRoute>} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Suspense>
