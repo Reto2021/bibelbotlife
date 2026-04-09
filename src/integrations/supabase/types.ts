@@ -608,6 +608,219 @@ export type Database = {
           },
         ]
       }
+      outreach_campaigns: {
+        Row: {
+          blacklist_domains: string[]
+          booking_url: string | null
+          created_at: string
+          created_by: string
+          id: string
+          max_emails_per_day: number
+          max_emails_per_hour: number
+          name: string
+          send_end_hour: number
+          send_start_hour: number
+          send_weekdays_only: boolean
+          sender_email: string
+          sender_name: string
+          status: Database["public"]["Enums"]["outreach_campaign_status"]
+          target_criteria: Json
+          updated_at: string
+        }
+        Insert: {
+          blacklist_domains?: string[]
+          booking_url?: string | null
+          created_at?: string
+          created_by: string
+          id?: string
+          max_emails_per_day?: number
+          max_emails_per_hour?: number
+          name: string
+          send_end_hour?: number
+          send_start_hour?: number
+          send_weekdays_only?: boolean
+          sender_email: string
+          sender_name?: string
+          status?: Database["public"]["Enums"]["outreach_campaign_status"]
+          target_criteria?: Json
+          updated_at?: string
+        }
+        Update: {
+          blacklist_domains?: string[]
+          booking_url?: string | null
+          created_at?: string
+          created_by?: string
+          id?: string
+          max_emails_per_day?: number
+          max_emails_per_hour?: number
+          name?: string
+          send_end_hour?: number
+          send_start_hour?: number
+          send_weekdays_only?: boolean
+          sender_email?: string
+          sender_name?: string
+          status?: Database["public"]["Enums"]["outreach_campaign_status"]
+          target_criteria?: Json
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      outreach_emails: {
+        Row: {
+          body: string
+          clicked_at: string | null
+          created_at: string
+          id: string
+          lead_id: string
+          opened_at: string | null
+          resend_id: string | null
+          sent_at: string | null
+          sequence_step: number
+          status: Database["public"]["Enums"]["outreach_email_status"]
+          subject: string
+        }
+        Insert: {
+          body: string
+          clicked_at?: string | null
+          created_at?: string
+          id?: string
+          lead_id: string
+          opened_at?: string | null
+          resend_id?: string | null
+          sent_at?: string | null
+          sequence_step: number
+          status?: Database["public"]["Enums"]["outreach_email_status"]
+          subject: string
+        }
+        Update: {
+          body?: string
+          clicked_at?: string | null
+          created_at?: string
+          id?: string
+          lead_id?: string
+          opened_at?: string | null
+          resend_id?: string | null
+          sent_at?: string | null
+          sequence_step?: number
+          status?: Database["public"]["Enums"]["outreach_email_status"]
+          subject?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "outreach_emails_lead_id_fkey"
+            columns: ["lead_id"]
+            isOneToOne: false
+            referencedRelation: "outreach_leads"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      outreach_leads: {
+        Row: {
+          campaign_id: string
+          church_name: string
+          city: string | null
+          contact_name: string | null
+          created_at: string
+          current_step: number
+          denomination: string | null
+          email: string
+          id: string
+          last_contacted_at: string | null
+          personal_note: string | null
+          scraped_data: Json | null
+          source: string
+          status: Database["public"]["Enums"]["outreach_lead_status"]
+          updated_at: string
+          website: string | null
+        }
+        Insert: {
+          campaign_id: string
+          church_name: string
+          city?: string | null
+          contact_name?: string | null
+          created_at?: string
+          current_step?: number
+          denomination?: string | null
+          email: string
+          id?: string
+          last_contacted_at?: string | null
+          personal_note?: string | null
+          scraped_data?: Json | null
+          source?: string
+          status?: Database["public"]["Enums"]["outreach_lead_status"]
+          updated_at?: string
+          website?: string | null
+        }
+        Update: {
+          campaign_id?: string
+          church_name?: string
+          city?: string | null
+          contact_name?: string | null
+          created_at?: string
+          current_step?: number
+          denomination?: string | null
+          email?: string
+          id?: string
+          last_contacted_at?: string | null
+          personal_note?: string | null
+          scraped_data?: Json | null
+          source?: string
+          status?: Database["public"]["Enums"]["outreach_lead_status"]
+          updated_at?: string
+          website?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "outreach_leads_campaign_id_fkey"
+            columns: ["campaign_id"]
+            isOneToOne: false
+            referencedRelation: "outreach_campaigns"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      outreach_sequences: {
+        Row: {
+          body_template: string
+          campaign_id: string
+          created_at: string
+          delay_days: number
+          id: string
+          step_number: number
+          subject_template: string
+          updated_at: string
+        }
+        Insert: {
+          body_template: string
+          campaign_id: string
+          created_at?: string
+          delay_days?: number
+          id?: string
+          step_number: number
+          subject_template: string
+          updated_at?: string
+        }
+        Update: {
+          body_template?: string
+          campaign_id?: string
+          created_at?: string
+          delay_days?: number
+          id?: string
+          step_number?: number
+          subject_template?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "outreach_sequences_campaign_id_fkey"
+            columns: ["campaign_id"]
+            isOneToOne: false
+            referencedRelation: "outreach_campaigns"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       resource_library: {
         Row: {
           church_id: string | null
@@ -998,6 +1211,21 @@ export type Database = {
         | "evangelical"
         | "secular"
       invoice_status: "draft" | "sent" | "paid"
+      outreach_campaign_status: "active" | "paused" | "completed"
+      outreach_email_status:
+        | "pending"
+        | "sent"
+        | "opened"
+        | "clicked"
+        | "replied"
+        | "bounced"
+      outreach_lead_status:
+        | "new"
+        | "contacted"
+        | "replied"
+        | "booked"
+        | "converted"
+        | "unsubscribed"
       record_type: "baptism" | "wedding" | "funeral"
       resource_type: "song" | "prayer" | "reading" | "liturgy" | "other"
       service_status: "draft" | "published" | "archived"
@@ -1156,6 +1384,23 @@ export const Constants = {
         "secular",
       ],
       invoice_status: ["draft", "sent", "paid"],
+      outreach_campaign_status: ["active", "paused", "completed"],
+      outreach_email_status: [
+        "pending",
+        "sent",
+        "opened",
+        "clicked",
+        "replied",
+        "bounced",
+      ],
+      outreach_lead_status: [
+        "new",
+        "contacted",
+        "replied",
+        "booked",
+        "converted",
+        "unsubscribed",
+      ],
       record_type: ["baptism", "wedding", "funeral"],
       resource_type: ["song", "prayer", "reading", "liturgy", "other"],
       service_status: ["draft", "published", "archived"],
