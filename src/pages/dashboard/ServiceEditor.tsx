@@ -50,20 +50,12 @@ export default function ServiceEditor() {
   const [emailRecipient, setEmailRecipient] = useState("");
   const [emailSending, setEmailSending] = useState(false);
 
-  const generatePdfBlob = (): Blob => {
-    // Re-use the same PDF generation logic but return as blob instead of saving
-    const { exportServicePdfBlob } = require("@/lib/export-service-pdf");
-    return exportServicePdfBlob({ title, serviceDate, serviceTime, serviceType, tradition, blocks, churchName: church?.name });
-  };
-
   const uploadPdfAndGetUrl = async (): Promise<string> => {
-    // Generate PDF as blob using jsPDF directly
-    const pdfModule = await import("@/lib/export-service-pdf");
-    const blob = pdfModule.exportServicePdfBlob({ title, serviceDate, serviceTime, serviceType, tradition, blocks, churchName: church?.name });
+    const blob = exportServicePdfBlob({ title, serviceDate, serviceTime, serviceType, tradition, blocks, churchName: church?.name });
     const fileName = `${Date.now()}_${title.replace(/[^a-zA-Z0-9]/g, "_")}.pdf`;
     const { error: uploadError } = await supabase.storage.from("service-pdfs").upload(fileName, blob, { contentType: "application/pdf" });
     if (uploadError) throw uploadError;
-    const { data } = await supabase.storage.from("service-pdfs").createSignedUrl(fileName, 60 * 60 * 24 * 7); // 7 days
+    const { data } = await supabase.storage.from("service-pdfs").createSignedUrl(fileName, 60 * 60 * 24 * 7);
     if (!data?.signedUrl) throw new Error("Signed URL konnte nicht erstellt werden");
     return data.signedUrl;
   };
