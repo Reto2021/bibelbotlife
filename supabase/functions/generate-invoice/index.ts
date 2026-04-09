@@ -39,7 +39,7 @@ Deno.serve(async (req) => {
       });
     }
 
-    // Get church billing data
+    // Get church data
     const { data: church, error: churchErr } = await supabase
       .from("church_partners")
       .select("*")
@@ -52,6 +52,13 @@ Deno.serve(async (req) => {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
     }
+
+    // Get billing data from separate table
+    const { data: billing } = await supabase
+      .from("church_billing")
+      .select("*")
+      .eq("church_id", church_id)
+      .maybeSingle();
 
     // Calculate amount from line items
     const items = line_items && line_items.length > 0
