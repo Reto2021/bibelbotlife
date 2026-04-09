@@ -1235,6 +1235,24 @@ export type Database = {
           read_ct: number
         }[]
       }
+      search_bible_verses: {
+        Args: {
+          book_boost?: string[]
+          result_limit?: number
+          search_query: string
+          translation_filter?: string
+        }
+        Returns: {
+          book: string
+          book_number: number
+          chapter: number
+          id: string
+          rank: number
+          text: string
+          translation: string
+          verse: number
+        }[]
+      }
     }
     Enums: {
       app_role: "admin" | "moderator" | "user"
