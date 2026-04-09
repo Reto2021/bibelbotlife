@@ -455,9 +455,9 @@ export function BibleBotChat() {
             className="animate-in fade-in slide-in-from-right-4 duration-500 bg-card border border-primary/30 rounded-2xl rounded-br-md px-4 py-3 shadow-[0_4px_24px_hsl(var(--primary)/0.2)] max-w-[260px] cursor-pointer hover:shadow-[0_4px_32px_hsl(var(--primary)/0.3)] transition-shadow"
             onClick={() => setIsOpen(true)}
           >
-            <p className={`${s.textSm} text-foreground font-semibold`}>{t("chat.teaser")}</p>
-            <p className={`${s.textXs} text-muted-foreground mt-1`}>{t("chat.teaserSub")}</p>
-            <p className={`${s.textXs} text-primary font-medium mt-2 flex items-center gap-1`}>
+            <p className={`text-sm text-foreground font-semibold`}>{t("chat.teaser")}</p>
+            <p className={`text-xs text-muted-foreground mt-1`}>{t("chat.teaserSub")}</p>
+            <p className={`text-xs text-primary font-medium mt-2 flex items-center gap-1`}>
               <MessageCircle className="h-3 w-3" />
               {t("chat.teaserCta")}
             </p>
@@ -465,11 +465,11 @@ export function BibleBotChat() {
         )}
         <button
           onClick={() => setIsOpen(true)}
-          className={`relative ${s.fabSize} rounded-full bg-primary text-primary-foreground shadow-[0_4px_20px_hsl(var(--primary)/0.4)] hover:shadow-[0_4px_28px_hsl(var(--primary)/0.5)] hover:scale-105 transition-all duration-300 flex items-center justify-center`}
+          className={`relative h-16 w-16 rounded-full bg-primary text-primary-foreground shadow-[0_4px_20px_hsl(var(--primary)/0.4)] hover:shadow-[0_4px_28px_hsl(var(--primary)/0.5)] hover:scale-105 transition-all duration-300 flex items-center justify-center`}
           aria-label={t("chat.openChat")}
         >
           <span className="absolute inset-0 rounded-full bg-primary/30 animate-ping" style={{ animationDuration: "2.5s" }} />
-          <MessageCircle className={`${s.fabIcon} relative z-10`} />
+          <MessageCircle className={`h-7 w-7 relative z-10`} />
         </button>
       </div>
     );
@@ -478,9 +478,9 @@ export function BibleBotChat() {
   const hasConversation = messages.length > 0;
 
   return (
-    <div className={`fixed bottom-6 right-6 z-50 ${s.chatWidth} max-w-[calc(100vw-2rem)] ${s.chatHeight} max-h-[calc(100vh-3rem)] bg-card border border-border rounded-2xl shadow-2xl flex flex-col overflow-hidden`}>
+    <div className={`fixed bottom-6 right-6 z-50 w-[420px] max-w-[calc(100vw-2rem)] h-[600px] max-h-[calc(100vh-3rem)] bg-card border border-border rounded-2xl shadow-2xl flex flex-col overflow-hidden`}>
       {/* Header */}
-      <div className={`flex items-center justify-between ${s.padding} border-b border-border bg-primary/5`}>
+      <div className={`flex items-center justify-between px-4 py-3 border-b border-border bg-primary/5`}>
         <div className="flex items-center gap-3">
           <div className="relative">
             <div className="h-9 w-9 rounded-full bg-primary/10 flex items-center justify-center">
@@ -577,13 +577,13 @@ export function BibleBotChat() {
       </div>
 
       {/* Messages */}
-      <div ref={scrollRef} className={`flex-1 overflow-y-auto ${s.padding} space-y-3`}>
+      <div ref={scrollRef} className={`flex-1 overflow-y-auto px-4 py-3 space-y-3`}>
         {!hasConversation && (
           <div className="space-y-4">
             {showWelcome && (
               <div className="animate-fade-up">
                 <div className="flex justify-start">
-                  <div className={`max-w-[85%] rounded-2xl rounded-bl-md ${s.msgPadding} ${s.text} leading-relaxed bg-muted text-foreground`}>
+                  <div className={`max-w-[85%] rounded-2xl rounded-bl-md px-4 py-3 text-base leading-relaxed bg-muted text-foreground`}>
                     <div className={`prose ${isSenior ? "prose-lg" : "prose-sm"} max-w-none dark:prose-invert`}>
                       <ReactMarkdown>{welcomeMessage.content}</ReactMarkdown>
                     </div>
@@ -592,7 +592,7 @@ export function BibleBotChat() {
 
                 <div className="flex flex-col gap-2 mt-4">
                   {suggestions.map((sg, i) => (
-                    <button key={sg} onClick={() => sendMessage(sg)} className={`text-left ${s.text} ${isSenior ? "px-5 py-4" : "px-4 py-2.5"} rounded-xl border border-primary/20 bg-accent/30 hover:bg-accent hover:border-primary/40 text-foreground transition-all duration-200 animate-fade-up`} style={{ animationDelay: `${(i + 1) * 150}ms`, opacity: 0 }}>{sg}</button>
+                    <button key={sg} onClick={() => sendMessage(sg)} className={`text-left text-base ${isSenior ? "px-5 py-4" : "px-4 py-2.5"} rounded-xl border border-primary/20 bg-accent/30 hover:bg-accent hover:border-primary/40 text-foreground transition-all duration-200 animate-fade-up`} style={{ animationDelay: `${(i + 1) * 150}ms`, opacity: 0 }}>{sg}</button>
                   ))}
                 </div>
 
@@ -608,7 +608,7 @@ export function BibleBotChat() {
         {messages.map((msg, i) => (
           <div key={i} className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
             <div className="max-w-[85%]">
-              <div className={`rounded-2xl ${s.msgPadding} ${s.text} leading-relaxed ${msg.role === "user" ? "bg-primary text-primary-foreground rounded-br-md" : "bg-muted text-foreground rounded-bl-md"}`}>
+              <div className={`rounded-2xl px-4 py-3 text-base leading-relaxed ${msg.role === "user" ? "bg-primary text-primary-foreground rounded-br-md" : "bg-muted text-foreground rounded-bl-md"}`}>
                 {msg.role === "assistant" ? (
                   <div className={`prose ${isSenior ? "prose-lg" : "prose-sm"} max-w-none dark:prose-invert`}>
                     <ReactMarkdown components={{
@@ -666,9 +666,9 @@ export function BibleBotChat() {
 
         {isLoading && messages[messages.length - 1]?.role !== "assistant" && (
           <div className="flex justify-start">
-            <div className={`bg-muted rounded-2xl rounded-bl-md ${s.msgPadding} flex items-center gap-2`}>
-              <Loader2 className={`${s.btnIcon} animate-spin text-muted-foreground`} />
-              <span className={`${s.textXs} text-muted-foreground`}>{t("chat.writing")}</span>
+            <div className={`bg-muted rounded-2xl rounded-bl-md px-4 py-3 flex items-center gap-2`}>
+              <Loader2 className={`h-4 w-4 animate-spin text-muted-foreground`} />
+              <span className={`text-xs text-muted-foreground`}>{t("chat.writing")}</span>
             </div>
           </div>
         )}
@@ -677,19 +677,19 @@ export function BibleBotChat() {
       {/* Input */}
       <div className={`border-t border-border ${isSenior ? "p-4" : "p-3"}`}>
         <div className="flex gap-2 items-end">
-          <Textarea ref={textareaRef} value={input} onChange={(e) => setInput(e.target.value)} onKeyDown={handleKeyDown} placeholder={t("chat.placeholder")} className={`${isSenior ? "min-h-[56px] max-h-[120px] text-lg" : "min-h-[40px] max-h-[100px] text-sm"} resize-none`} rows={s.inputRows} />
+          <Textarea ref={textareaRef} value={input} onChange={(e) => setInput(e.target.value)} onKeyDown={handleKeyDown} placeholder={t("chat.placeholder")} className={`${isSenior ? "min-h-[56px] max-h-[120px] text-lg" : "min-h-[40px] max-h-[100px] text-sm"} resize-none`} rows={1} />
           <Button
             size="icon"
             variant={isListening ? "destructive" : "outline"}
             onClick={isListening ? stopListening : startListening}
             disabled={isTranscribing}
-            className={`${s.btnSize} shrink-0 relative`}
+            className={`h-10 w-10 shrink-0 relative`}
             aria-label={isListening ? t("chat.stopVoice") : t("chat.startVoice")}
           >
-            {isTranscribing ? <Loader2 className={`${s.btnIcon} animate-spin`} /> : isListening ? <MicOff className={s.btnIcon} /> : <Mic className={s.btnIcon} />}
+            {isTranscribing ? <Loader2 className={`h-4 w-4 animate-spin`} /> : isListening ? <MicOff className={s.btnIcon} /> : <Mic className={s.btnIcon} />}
             {isListening && <span className="absolute inset-0 rounded-md border-2 border-destructive animate-pulse" />}
           </Button>
-          <Button size="icon" onClick={() => sendMessage(input)} disabled={!input.trim() || isLoading} className={`${s.btnSize} shrink-0`}>
+          <Button size="icon" onClick={() => sendMessage(input)} disabled={!input.trim() || isLoading} className={`h-10 w-10 shrink-0`}>
             <Send className={s.btnIcon} />
           </Button>
         </div>
