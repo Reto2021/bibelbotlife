@@ -718,6 +718,15 @@ serve(async (req) => {
       systemPrompt += `\n\n[LANGUAGE OVERRIDE: The user's interface is set to ${langNames[lang] || lang}. You MUST respond in ${langNames[lang] || lang}. Adapt Bible quotes to well-known translations in that language. Keep your coaching style and depth identical.]`;
     }
 
+    // Inject preferred translation
+    const TRANSLATION_NAMES: Record<string, string> = {
+      luther1912: "Lutherbibel 1912", elberfelder: "Elberfelder", schlachter2000: "Schlachter 2000",
+      kjv: "King James Version (KJV)", web: "World English Bible (WEB)",
+    };
+    if (preferredTranslation && TRANSLATION_NAMES[preferredTranslation]) {
+      systemPrompt += `\n\n[BEVORZUGTE ÜBERSETZUNG: Der Nutzer hat «${TRANSLATION_NAMES[preferredTranslation]}» als bevorzugte Bibelübersetzung gewählt. Verwende bei lookup_bible_verse und search_bible_verses IMMER diese Übersetzung, es sei denn, der Nutzer fragt explizit nach einer anderen.]`;
+    }
+
     // 7 Whys guided mode
     if (mode === "seven-whys") {
       systemPrompt += `\n\n[7-WARUMS-MODUS – GEFÜHRTER TIEFENCOACHING-PROZESS]
