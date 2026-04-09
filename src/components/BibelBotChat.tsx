@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { useTranslation } from "react-i18next";
-import { Send, X, MessageCircle, Loader2, Mic, MicOff, Pencil, Shield, Sparkles, CheckCircle2, AlertTriangle, Info, Accessibility } from "lucide-react";
+import { Send, X, MessageCircle, Loader2, Mic, MicOff, Pencil, Shield, Sparkles, CheckCircle2, AlertTriangle, Info, Accessibility, BookOpen } from "lucide-react";
 import { useSeniorMode } from "@/hooks/use-senior-mode";
 import { ShareButton } from "@/components/ShareButton";
 import { Button } from "@/components/ui/button";
@@ -206,6 +206,9 @@ export function BibleBotChat() {
   const [showWelcome, setShowWelcome] = useState(false);
   const [showJourneyOffer, setShowJourneyOffer] = useState(false);
   const [showRenameTip, setShowRenameTip] = useState(false);
+  const [preferredTranslation, setPreferredTranslation] = useState(() => {
+    try { return localStorage.getItem("bibelbot-translation") || "auto"; } catch { return "auto"; }
+  });
   const recognitionRef = useRef<any>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
