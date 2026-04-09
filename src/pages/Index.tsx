@@ -12,8 +12,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 // BibleBotChat overlay removed - chat is now inline in ChatHero
-const DailyImpulse = lazy(() => import("@/components/DailyImpulse").then(m => ({ default: m.DailyImpulse })));
-const DailySubscribe = lazy(() => import("@/components/DailySubscribe").then(m => ({ default: m.DailySubscribe })));
+const DailyImpulse = lazy(() => import("@/components/DailyImpulse"));
+const DailySubscribe = lazy(() => import("@/components/DailySubscribe"));
 import { Separator } from "@/components/ui/separator";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
