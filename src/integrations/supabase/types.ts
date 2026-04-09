@@ -857,6 +857,63 @@ export type Database = {
           },
         ]
       }
+      prayer_requests: {
+        Row: {
+          author_name: string | null
+          content: string
+          created_at: string
+          id: string
+          is_anonymous: boolean
+          prayer_count: number
+          session_id: string
+        }
+        Insert: {
+          author_name?: string | null
+          content: string
+          created_at?: string
+          id?: string
+          is_anonymous?: boolean
+          prayer_count?: number
+          session_id: string
+        }
+        Update: {
+          author_name?: string | null
+          content?: string
+          created_at?: string
+          id?: string
+          is_anonymous?: boolean
+          prayer_count?: number
+          session_id?: string
+        }
+        Relationships: []
+      }
+      quiz_scores: {
+        Row: {
+          created_at: string
+          id: string
+          quiz_mode: string
+          score: number
+          session_id: string
+          total_questions: number
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          quiz_mode?: string
+          score?: number
+          session_id: string
+          total_questions?: number
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          quiz_mode?: string
+          score?: number
+          session_id?: string
+          total_questions?: number
+        }
+        Relationships: []
+      }
       resource_library: {
         Row: {
           church_id: string | null
@@ -1217,6 +1274,10 @@ export type Database = {
           _user_id: string
         }
         Returns: boolean
+      }
+      increment_prayer_count: {
+        Args: { request_id: string }
+        Returns: undefined
       }
       move_to_dlq: {
         Args: {
