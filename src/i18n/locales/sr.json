@@ -573,8 +573,8 @@
     "backToList": "Nazad na listu"
   },
   "church": {
-    "badge": "Za zajednice",
-    "heroTitle": "BibleBot za vašu zajednicu",
+    "badge": "За организације",
+    "heroTitle": "BibleBot за вашу организацију",
     "heroSubtitle": "Pratite članove svoje zajednice biblijskom mudrošću – digitalno, lično i 24 sata dnevno.",
     "useCasesTitle": "Mogućnosti primene",
     "useCase": {
@@ -599,24 +599,24 @@
     "pricingSubtitle": "Podržite BibleBot i svoju zajednicu odgovarajućim paketom pokroviteljstva.",
     "popular": "Popularno",
     "free": "Besplatno",
-    "perYear": "godine",
+    "perYear": "особа / годишnje",
     "contact": "Kontaktirajte nas",
     "tier": {
       "free": {
         "name": "Senfkorn (Seme gorušice)",
-        "size": "Za male zajednice i kućne crkve (do 50 članova)"
+        "size": "Za male zajednice i kućne crkve (do 50 osoba)"
       },
       "community": {
         "name": "Wegbegleiter (Saputnik)",
-        "size": "Za zajednice sa 50–200 članova"
+        "size": "Za zajednice sa 50–200 osoba"
       },
       "gemeinde": {
         "name": "Brückenbauer (Graditelj mostova)",
-        "size": "Za zajednice sa 200–500 članova"
+        "size": "Za zajednice sa 200–500 osoba"
       },
       "kirche": {
         "name": "Leuchtturm (Svetionik)",
-        "size": "Za velike zajednice i institucije (500+ članova)"
+        "size": "Za velike zajednice i institucije (500+ osoba)"
       }
     },
     "features": {
@@ -707,7 +707,7 @@
     }
   },
   "institutions": {
-    "badge": "Za institucije",
+    "badge": "За организације",
     "heroTitle": "BibleBot za vašu instituciju",
     "heroSubtitle": "Digitalno duhovno savetovanje za domove za negu, staračke domove, bolnice i ustanove za izvršenje krivičnih sankcija – lično, poverljivo i 24 sata dnevno.",
     "seniorHint": {

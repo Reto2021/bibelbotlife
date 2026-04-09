@@ -535,8 +535,8 @@
     "backToList": "Natrag na popis"
   },
   "church": {
-    "badge": "Za zajednice",
-    "heroTitle": "BibleBot za vašu zajednicu",
+    "badge": "Za organizacije",
+    "heroTitle": "BibleBot za vašu organizaciju",
     "heroSubtitle": "Pratite svoje članove zajednice biblijskom mudrošću – digitalno, osobno i 24 sata dnevno.",
     "useCasesTitle": "Mogućnosti korištenja",
     "useCase": {
@@ -561,24 +561,24 @@
     "pricingSubtitle": "Podržite BibleBot i svoju zajednicu odgovarajućim paketom pokroviteljstva.",
     "popular": "Popularno",
     "free": "Besplatno",
-    "perYear": "godina",
+    "perYear": "osoba / godišnje",
     "contact": "Kontaktirajte nas",
     "tier": {
       "free": {
         "name": "Gorušičino zrno",
-        "size": "Za male zajednice i kućne krugove (do 50 članova)"
+        "size": "Za male zajednice i kućne krugove (do 50 osoba)"
       },
       "community": {
         "name": "Suputnik",
-        "size": "Za zajednice s 50–200 članova"
+        "size": "Za zajednice s 50–200 osoba"
       },
       "gemeinde": {
         "name": "Graditelj mostova",
-        "size": "Za zajednice s 200–500 članova"
+        "size": "Za zajednice s 200–500 osoba"
       },
       "kirche": {
         "name": "Svjetionik",
-        "size": "Za velike zajednice i institucije (500+ članova)"
+        "size": "Za velike zajednice i institucije (500+ osoba)"
       }
     },
     "features": {
@@ -669,7 +669,7 @@
     }
   },
   "institutions": {
-    "badge": "Za institucije",
+    "badge": "Za organizacije",
     "heroTitle": "BibleBot za vašu instituciju",
     "heroSubtitle": "Digitalna duhovna skrb za domove za njegu, domove za starije, bolnice i kazneno-popravne ustanove – osobno, povjerljivo i 24 sata dnevno.",
     "seniorHint": {

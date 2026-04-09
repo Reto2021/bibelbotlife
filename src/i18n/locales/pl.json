@@ -538,8 +538,8 @@
     "backToList": "Back to list"
   },
   "church": {
-    "badge": "Dla Kościołów",
-    "heroTitle": "BibleBot dla Twojego Kościoła",
+    "badge": "Dla organizacji",
+    "heroTitle": "BibleBot dla Twojej organizacji",
     "heroSubtitle": "Towarzysz swojej wspólnocie z biblijną mądrością – cyfrowo, osobiście i całą dobę.",
     "useCasesTitle": "Zastosowania",
     "useCase": {
@@ -564,12 +564,12 @@
     "pricingSubtitle": "Wesprzyj BibleBot i swój kościół odpowiednim pakietem patronackim.",
     "popular": "Popularny",
     "free": "Bezpłatnie",
-    "perYear": "Rok",
+    "perYear": "osób / rok",
     "contact": "Skontaktuj się",
     "tier": {
       "free": {
         "name": "Ziarno gorczycy",
-        "size": "Podstawowy dostęp do bota dla wszystkich członków zboru."
+        "size": "Podstawowy dostęp do bota dla wszystkich osób zboru."
       },
       "community": {
         "name": "Towarzysz drogi",
@@ -672,7 +672,7 @@
     }
   },
   "institutions": {
-    "badge": "For Institutions",
+    "badge": "Dla organizacji",
     "heroTitle": "BibleBot for Your Institution",
     "heroSubtitle": "Digital pastoral care for care homes, retirement homes, hospitals, and correctional facilities – personal, confidential, and around the clock.",
     "typesTitle": "Who is BibleBot for?",

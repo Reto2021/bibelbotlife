@@ -573,8 +573,8 @@
     "backToList": "Padà sí àtòjọ"
   },
   "church": {
-    "badge": "Fún àwọn Ìjọ",
-    "heroTitle": "BibleBot fún Ìjọ yín",
+    "badge": "Fún àwọn àjọ",
+    "heroTitle": "BibleBot fún àjọ rẹ",
     "heroSubtitle": "Bá àwọn ọmọ ìjọ yín rìn pẹ̀lú ọgbọ́n Bíbélì – dígítà, tìrẹ àti 24/7.",
     "useCasesTitle": "Àwọn ọ̀nà àmúlò",
     "useCase": {
@@ -599,7 +599,7 @@
     "pricingSubtitle": "Ṣe àtìlẹ́yìn BibleBot àti ìjọ yín pẹ̀lú ètò tó yẹ.",
     "popular": "Olókìkí",
     "free": "Ọ̀fẹ́",
-    "perYear": "Ọdún",
+    "perYear": "ènìyàn / ọdún",
     "contact": "Kan sí wa",
     "tier": {
       "free": {
@@ -707,7 +707,7 @@
     }
   },
   "institutions": {
-    "badge": "Fún àwọn ilé-iṣẹ́",
+    "badge": "Fún àwọn àjọ",
     "heroTitle": "BibleBot fún ilé-iṣẹ́ yín",
     "heroSubtitle": "Ìtọ́jú ẹ̀mí dígítà fún àwọn ilé ìtọ́jú, ilé àgbàlagbà, ilé ìwòsàn àti ẹ̀wọ̀n – tìrẹ, àṣírí àti 24/7.",
     "seniorHint": {

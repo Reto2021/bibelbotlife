@@ -573,9 +573,9 @@
     "backToList": "Back to list"
   },
   "church": {
-    "badge": "Voor Kerken",
-    "heroTitle": "BibleBot voor uw Kerk",
-    "heroSubtitle": "Begeleid uw gemeente met bijbelse wijsheid – digitaal, persoonlijk en 24 uur per dag.",
+    "badge": "Voor organisaties",
+    "heroTitle": "BibleBot voor uw organisatie",
+    "heroSubtitle": "Begeleid uw team met bijbelse wijsheid – digitaal, persoonlijk en 24/7.",
     "useCasesTitle": "Toepassingen",
     "useCase": {
       "youth": {
@@ -596,19 +596,19 @@
       }
     },
     "pricingTitle": "Patronaatspakketten",
-    "pricingSubtitle": "Ondersteun BibleBot en uw kerk met het juiste patronaatspakket.",
+    "pricingSubtitle": "Steun BibleBot en uw organisatie met het juiste patronaatspakket.",
     "popular": "Populair",
     "free": "Gratis",
-    "perYear": "Jaar",
+    "perYear": "personen / jaar",
     "contact": "Contact opnemen",
     "tier": {
       "free": {
         "name": "Mosterdzaadje",
-        "size": "Basistoegang tot de bot voor alle gemeenteleden."
+        "size": "Basistoegang tot de bot voor alle gemeentepersonen."
       },
       "community": {
         "name": "Reisgenoot",
-        "size": "Vermelding van de kerk als ondersteuner op de website & reclamevrije toegang."
+        "size": "Vermelding van de organisatie als ondersteuner op de website & reclamevrije toegang."
       },
       "gemeinde": {
         "name": "Bruggenbouwer",
@@ -707,8 +707,8 @@
     }
   },
   "institutions": {
-    "badge": "For Institutions",
-    "heroTitle": "BibleBot for Your Institution",
+    "badge": "Voor organisaties",
+    "heroTitle": "BibleBot voor uw organisatie",
     "heroSubtitle": "Digital pastoral care for care homes, retirement homes, hospitals, and correctional facilities – personal, confidential, and around the clock.",
     "typesTitle": "Who is BibleBot for?",
     "useCasesTitle": "How BibleBot is Used",

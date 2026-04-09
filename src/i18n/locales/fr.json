@@ -538,9 +538,9 @@
     "backToList": "Back to list"
   },
   "church": {
-    "badge": "Pour les Églises",
-    "heroTitle": "BibleBot pour votre Église",
-    "heroSubtitle": "Accompagnez vos fidèles avec la sagesse biblique – numérique, personnelle et 24h/24.",
+    "badge": "Pour les organisations",
+    "heroTitle": "BibleBot pour votre organisation",
+    "heroSubtitle": "Accompagnez votre équipe avec la sagesse biblique – numérique, personnelle et 24h/24.",
     "useCasesTitle": "Cas d'utilisation",
     "useCase": {
       "youth": {
@@ -561,15 +561,15 @@
       }
     },
     "pricingTitle": "Formules de parrainage",
-    "pricingSubtitle": "Soutenez BibleBot et votre église avec la formule de parrainage adaptée.",
+    "pricingSubtitle": "Soutenez BibleBot et votre organisation avec le bon forfait de patronage.",
     "popular": "Populaire",
     "free": "Gratuit",
-    "perYear": "An",
+    "perYear": "personnes / an",
     "contact": "Nous contacter",
     "tier": {
       "free": {
         "name": "Grain de moutarde",
-        "size": "Accès de base au bot pour tous les membres de la communauté."
+        "size": "Accès de base au bot pour tous les personnes de la communauté."
       },
       "community": {
         "name": "Compagnon",
@@ -672,8 +672,8 @@
     }
   },
   "institutions": {
-    "badge": "Pour les institutions",
-    "heroTitle": "BibleBot pour votre institution",
+    "badge": "Pour les organisations",
+    "heroTitle": "BibleBot pour votre organisation",
     "heroSubtitle": "Accompagnement spirituel numérique pour les maisons de soins, de retraite, les hôpitaux et les établissements pénitentiaires.",
     "typesTitle": "À qui s'adresse BibleBot?",
     "useCasesTitle": "Comment BibleBot est utilisé",

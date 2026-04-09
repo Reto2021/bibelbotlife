@@ -535,9 +535,9 @@
     "backToList": "Tillbaka till listan"
   },
   "church": {
-    "badge": "För församlingar",
-    "heroTitle": "BibleBot för din församling",
-    "heroSubtitle": "Följ dina församlingsmedlemmar med biblisk visdom – digitalt, personligt och dygnet runt.",
+    "badge": "För organisationer",
+    "heroTitle": "BibleBot för din organisation",
+    "heroSubtitle": "Följ ditt team med biblisk visdom – digitalt, personligt och dygnet runt.",
     "useCasesTitle": "Användningsområden",
     "useCase": {
       "youth": {
@@ -558,27 +558,27 @@
       }
     },
     "pricingTitle": "Patronatspaket",
-    "pricingSubtitle": "Stöd BibleBot och din församling med det passande patronatspaketet.",
+    "pricingSubtitle": "Stöd BibleBot och din organisation med rätt patronatspaket.",
     "popular": "Populär",
     "free": "Gratis",
-    "perYear": "år",
+    "perYear": "personer / år",
     "contact": "Kontakta oss",
     "tier": {
       "free": {
         "name": "Senapsfrö",
-        "size": "För små församlingar & hemgrupper (upp till 50 medlemmar)"
+        "size": "För små organisationer & hemgrupper (upp till 50 personer)"
       },
       "community": {
         "name": "Vägvisare",
-        "size": "För församlingar med 50–200 medlemmar"
+        "size": "För organisationer med 50–200 personer"
       },
       "gemeinde": {
         "name": "Brobyggare",
-        "size": "För församlingar med 200–500 medlemmar"
+        "size": "För organisationer med 200–500 personer"
       },
       "kirche": {
         "name": "Fyr",
-        "size": "För stora församlingar & institutioner (500+ medlemmar)"
+        "size": "För stora organisationer & institutioner (500+ personer)"
       }
     },
     "features": {
@@ -669,8 +669,8 @@
     }
   },
   "institutions": {
-    "badge": "För institutioner",
-    "heroTitle": "BibleBot för din institution",
+    "badge": "För organisationer",
+    "heroTitle": "BibleBot för din organisation",
     "heroSubtitle": "Digital själavård för vårdhem, äldreboenden, sjukhus och kriminalvård – personligt, konfidentiellt och dygnet runt.",
     "seniorHint": {
       "title": "Seniorläge tillgängligt",

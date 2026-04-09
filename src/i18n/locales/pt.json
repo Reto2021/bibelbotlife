@@ -538,9 +538,9 @@
     "backToList": "Back to list"
   },
   "church": {
-    "badge": "Para Igrejas",
-    "heroTitle": "BibleBot para a sua Igreja",
-    "heroSubtitle": "Acompanhe a sua congregação com sabedoria bíblica – digital, pessoal e 24 horas por dia.",
+    "badge": "Para organizações",
+    "heroTitle": "BibleBot para sua organização",
+    "heroSubtitle": "Acompanhe sua equipe com sabedoria bíblica – digital, pessoal e 24 horas por dia.",
     "useCasesTitle": "Casos de uso",
     "useCase": {
       "youth": {
@@ -561,19 +561,19 @@
       }
     },
     "pricingTitle": "Pacotes de patrocínio",
-    "pricingSubtitle": "Apoie o BibleBot e a sua igreja com o pacote de patrocínio certo.",
+    "pricingSubtitle": "Apoie BibleBot e sua organização com o pacote de patronato certo.",
     "popular": "Popular",
     "free": "Grátis",
-    "perYear": "Ano",
+    "perYear": "pessoas / ano",
     "contact": "Contactar",
     "tier": {
       "free": {
         "name": "Grão de mostarda",
-        "size": "Acesso básico ao bot para todos os membros da comunidade."
+        "size": "Acesso básico ao bot para todos os pessoas da comunidade."
       },
       "community": {
         "name": "Companheiro",
-        "size": "Menção da igreja como apoiante no site e acesso sem publicidade."
+        "size": "Menção da organização como apoiante no site e acesso sem publicidade."
       },
       "gemeinde": {
         "name": "Construtor de pontes",
@@ -672,8 +672,8 @@
     }
   },
   "institutions": {
-    "badge": "For Institutions",
-    "heroTitle": "BibleBot for Your Institution",
+    "badge": "Para organizações",
+    "heroTitle": "BibleBot para sua organização",
     "heroSubtitle": "Digital pastoral care for care homes, retirement homes, hospitals, and correctional facilities – personal, confidential, and around the clock.",
     "typesTitle": "Who is BibleBot for?",
     "useCasesTitle": "How BibleBot is Used",

@@ -535,9 +535,9 @@
     "backToList": "Tilbake til listen"
   },
   "church": {
-    "badge": "For menigheter",
-    "heroTitle": "BibleBot for din menighet",
-    "heroSubtitle": "Følg dine menighetsmedlemmer med bibelsk visdom – digitalt, personlig og døgnet rundt.",
+    "badge": "For organisasjoner",
+    "heroTitle": "BibleBot for din organisasjon",
+    "heroSubtitle": "Følg ditt team med bibelsk visdom – digitalt, personlig og døgnet rundt.",
     "useCasesTitle": "Bruksområder",
     "useCase": {
       "youth": {
@@ -558,27 +558,27 @@
       }
     },
     "pricingTitle": "Patronatspakker",
-    "pricingSubtitle": "Støtt BibleBot og din menighet med den passende patronatspakken.",
+    "pricingSubtitle": "Støtt BibleBot og din organisasjon med riktig patronatspakke.",
     "popular": "Populær",
     "free": "Gratis",
-    "perYear": "år",
+    "perYear": "personer / år",
     "contact": "Kontakt oss",
     "tier": {
       "free": {
         "name": "Sennepsfrø",
-        "size": "For små menigheter og husmøter (opptil 50 medlemmer)"
+        "size": "For små organisasjoner og husmøter (opptil 50 personer)"
       },
       "community": {
         "name": "Veileder",
-        "size": "For menigheter med 50–200 medlemmer"
+        "size": "For organisasjoner med 50–200 personer"
       },
       "gemeinde": {
         "name": "Brobygger",
-        "size": "For menigheter med 200–500 medlemmer"
+        "size": "For organisasjoner med 200–500 personer"
       },
       "kirche": {
         "name": "Fyrlykt",
-        "size": "For store menigheter og institusjoner (500+ medlemmer)"
+        "size": "For store organisasjoner og institusjoner (500+ personer)"
       }
     },
     "features": {
@@ -669,8 +669,8 @@
     }
   },
   "institutions": {
-    "badge": "For institusjoner",
-    "heroTitle": "BibleBot for din institusjon",
+    "badge": "For organisasjoner",
+    "heroTitle": "BibleBot for din organisasjon",
     "heroSubtitle": "Digital sjelesorg for pleiehjem, aldershjem, sykehus og kriminalomsorgen – personlig, konfidensielt og døgnet rundt.",
     "seniorHint": {
       "title": "Senior-modus tilgjengelig",

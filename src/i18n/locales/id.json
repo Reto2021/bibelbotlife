@@ -573,8 +573,8 @@
     "backToList": "Kembali ke Daftar"
   },
   "church": {
-    "badge": "Untuk Gereja",
-    "heroTitle": "BibleBot untuk Jemaat Anda",
+    "badge": "Untuk organisasi",
+    "heroTitle": "BibleBot untuk organisasi Anda",
     "heroSubtitle": "Dampingi anggota jemaat Anda dengan kebijaksanaan Alkitab – secara digital, pribadi, dan 24/7.",
     "useCasesTitle": "Kasus Penggunaan",
     "useCase": {
@@ -599,7 +599,7 @@
     "pricingSubtitle": "Dukung BibleBot dan jemaat Anda dengan paket patronase yang sesuai.",
     "popular": "Populer",
     "free": "Gratis",
-    "perYear": "Tahun",
+    "perYear": "orang / tahun",
     "contact": "Hubungi Kami",
     "tier": {
       "free": {
@@ -707,7 +707,7 @@
     }
   },
   "institutions": {
-    "badge": "Untuk Institusi",
+    "badge": "Untuk organisasi",
     "heroTitle": "BibleBot untuk Institusi Anda",
     "heroSubtitle": "Pelayanan pastoral digital untuk panti jompo, panti lansia, rumah sakit, dan lembaga pemasyarakatan – pribadi, rahasia, dan 24/7.",
     "seniorHint": {
