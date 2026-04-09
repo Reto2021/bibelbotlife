@@ -664,7 +664,7 @@ serve(async (req) => {
   }
 
   try {
-    const { messages, journeyDay, language, mode } = await req.json();
+    const { messages, journeyDay, language, mode, preferredTranslation } = await req.json();
 
     if (!messages || !Array.isArray(messages)) {
       return new Response(
