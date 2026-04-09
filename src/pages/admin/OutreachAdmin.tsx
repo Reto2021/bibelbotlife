@@ -671,25 +671,38 @@ export default function OutreachAdmin() {
         </Tabs>
       )}
 
-      {/* ─── Personalized Email Preview Dialog ─── */}
+      {/* ─── Personalized Email Preview/Edit Dialog ─── */}
       <Dialog open={personalizePreviewOpen} onOpenChange={setPersonalizePreviewOpen}>
         <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2">
               <Wand2 className="h-5 w-5 text-primary" />
-              Personalisierte E-Mail – Vorschau
+              Personalisierte E-Mail – Vorschau & Bearbeitung
             </DialogTitle>
           </DialogHeader>
           {personalizedEmail && (
             <div className="space-y-4">
               <div>
                 <Label className="text-xs text-muted-foreground">Betreff</Label>
-                <p className="font-medium text-foreground">{personalizedEmail.subject}</p>
+                <Input
+                  value={personalizedEmail.subject}
+                  onChange={(e) => setPersonalizedEmail({ ...personalizedEmail, subject: e.target.value })}
+                  className="mt-1"
+                />
               </div>
               <div>
-                <Label className="text-xs text-muted-foreground">E-Mail-Text</Label>
+                <Label className="text-xs text-muted-foreground">E-Mail-Text (HTML)</Label>
+                <Textarea
+                  value={personalizedEmail.body}
+                  onChange={(e) => setPersonalizedEmail({ ...personalizedEmail, body: e.target.value })}
+                  rows={12}
+                  className="mt-1 font-mono text-xs"
+                />
+              </div>
+              <div>
+                <Label className="text-xs text-muted-foreground mb-1 block">Vorschau</Label>
                 <div
-                  className="mt-1 border rounded-lg p-4 bg-card text-sm prose prose-sm max-w-none"
+                  className="border rounded-lg p-4 bg-card text-sm prose prose-sm max-w-none"
                   dangerouslySetInnerHTML={{ __html: personalizedEmail.body }}
                 />
               </div>
