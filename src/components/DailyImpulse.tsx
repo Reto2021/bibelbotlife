@@ -291,7 +291,7 @@ export function DailyImpulse() {
     }
   }, [subscriberId, toast, t]);
 
-
+  if (isLoading) {
     return (
       <div className="bg-primary/10 dark:bg-primary/15 border-b border-primary/20">
         <div className="container mx-auto px-4 py-3 flex items-center gap-3">
