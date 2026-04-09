@@ -7,27 +7,7 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type",
 };
 
-const AI_GATEWAY = "https://ai.gateway.lovable.dev/v1";
-
-async function getEmbedding(text: string, apiKey: string): Promise<number[]> {
-  const resp = await fetch(`${AI_GATEWAY}/embeddings`, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${apiKey}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      model: "google/text-embedding-004",
-      input: text,
-    }),
-  });
-  if (!resp.ok) {
-    const err = await resp.text();
-    throw new Error(`Embedding failed (${resp.status}): ${err}`);
-  }
-  const data = await resp.json();
-  return data.data[0].embedding;
-}
+const AI_GATEWAY = "https://ai.gateway.lovable.dev/v1/chat/completions";
 
 serve(async (req) => {
   if (req.method === "OPTIONS") {
@@ -48,53 +28,33 @@ serve(async (req) => {
 
   try {
     const body = await req.json();
-    const mode = body.mode || "embed";
+    const mode = body.mode || "import";
 
-    // Mode: embed — embed and store chunks
-    if (mode === "embed") {
+    // Mode: import — store chunks without embeddings (FTS-based retrieval)
+    if (mode === "import") {
       const chunks: { source_type: string; title: string; content: string; metadata?: any }[] = body.chunks;
-      if (!chunks || !Array.isArray(chunks) || chunks.length === 0) {
+      if (!chunks?.length) {
         return new Response(JSON.stringify({ error: "chunks array required" }), {
           status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" },
         });
       }
 
-      let inserted = 0;
-      const errors: string[] = [];
+      const rows = chunks.map(c => ({
+        source_type: c.source_type,
+        title: c.title,
+        content: c.content,
+        metadata: c.metadata || {},
+      }));
 
-      for (const chunk of chunks) {
-        try {
-          const embedding = await getEmbedding(
-            `${chunk.title}\n\n${chunk.content}`,
-            LOVABLE_API_KEY
-          );
+      const { error } = await supabase.from("theology_chunks").insert(rows);
+      if (error) throw error;
 
-          const { error } = await supabase.from("theology_chunks").insert({
-            source_type: chunk.source_type,
-            title: chunk.title,
-            content: chunk.content,
-            metadata: chunk.metadata || {},
-            embedding: JSON.stringify(embedding),
-          });
-
-          if (error) {
-            errors.push(`${chunk.title}: ${error.message}`);
-          } else {
-            inserted++;
-          }
-
-          await new Promise(r => setTimeout(r, 150));
-        } catch (e) {
-          errors.push(`${chunk.title}: ${e instanceof Error ? e.message : "unknown"}`);
-        }
-      }
-
-      return new Response(JSON.stringify({ inserted, errors, total: chunks.length }), {
+      return new Response(JSON.stringify({ inserted: rows.length }), {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
     }
 
-    // Mode: search — vector similarity search
+    // Mode: search — FTS + AI reranking
     if (mode === "search") {
       const query = body.query;
       const filterSource = body.filter_source || null;
@@ -106,57 +66,73 @@ serve(async (req) => {
         });
       }
 
-      const embedding = await getEmbedding(query, LOVABLE_API_KEY);
+      // Step 1: AI-expand search terms
+      let tsTerms = query.split(/\s+/).join(" | ");
+      try {
+        const expandResp = await fetch(AI_GATEWAY, {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${LOVABLE_API_KEY}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            model: "google/gemini-2.5-flash-lite",
+            messages: [
+              {
+                role: "system",
+                content: `Generiere deutsche Suchbegriffe für eine theologische Suche (PostgreSQL FTS).
+Nur einzelne Wörter mit | (OR) getrennt. Viele Synonyme und verwandte theologische Begriffe.
+Antworte NUR mit dem tsquery-String.`
+              },
+              { role: "user", content: query },
+            ],
+            stream: false,
+          }),
+        });
+        if (expandResp.ok) {
+          const d = await expandResp.json();
+          const expanded = d.choices?.[0]?.message?.content?.trim();
+          if (expanded) tsTerms = expanded;
+        }
+      } catch (e) {
+        console.error("Expansion error:", e);
+      }
 
-      const { data, error } = await supabase.rpc("search_theology", {
-        query_embedding: JSON.stringify(embedding),
-        match_threshold: 0.3,
-        match_count: matchCount,
-        filter_source: filterSource,
-      });
-
-      if (error) throw error;
-
-      return new Response(JSON.stringify({ results: data || [] }), {
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-      });
-    }
-
-    // Mode: embed_missing — embed chunks that have no embedding yet
-    if (mode === "embed_missing") {
-      const { data: missing, error: fetchErr } = await supabase
+      // Step 2: FTS search
+      let q = supabase
         .from("theology_chunks")
-        .select("id, title, content")
-        .is("embedding", null)
-        .limit(50);
+        .select("id, source_type, title, content, metadata")
+        .textSearch("content", tsTerms.replace(/\|/g, " | "), { config: "german" })
+        .limit(matchCount * 2); // fetch more, rerank later
 
-      if (fetchErr) throw fetchErr;
-      if (!missing || missing.length === 0) {
-        return new Response(JSON.stringify({ message: "No missing embeddings", count: 0 }), {
+      if (filterSource) {
+        q = q.eq("source_type", filterSource);
+      }
+
+      const { data: ftsResults, error: ftsErr } = await q;
+
+      // Fallback: if FTS returns nothing, try title search
+      if (!ftsResults?.length) {
+        const { data: titleResults } = await supabase
+          .from("theology_chunks")
+          .select("id, source_type, title, content, metadata")
+          .ilike("title", `%${query.split(/\s+/)[0]}%`)
+          .limit(matchCount);
+
+        return new Response(JSON.stringify({ results: titleResults || [] }), {
           headers: { ...corsHeaders, "Content-Type": "application/json" },
         });
       }
 
-      let updated = 0;
-      for (const chunk of missing) {
-        try {
-          const embedding = await getEmbedding(`${chunk.title}\n\n${chunk.content}`, LOVABLE_API_KEY);
-          await supabase.from("theology_chunks").update({
-            embedding: JSON.stringify(embedding),
-          }).eq("id", chunk.id);
-          updated++;
-          await new Promise(r => setTimeout(r, 150));
-        } catch (e) {
-          console.error(`Embed error for ${chunk.id}:`, e);
-        }
-      }
+      // Return top results (skip AI reranking for speed)
+      const results = ftsResults.slice(0, matchCount);
 
-      return new Response(JSON.stringify({ updated, total: missing.length }), {
+      return new Response(JSON.stringify({ results }), {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
     }
 
-    return new Response(JSON.stringify({ error: "Unknown mode" }), {
+    return new Response(JSON.stringify({ error: "Unknown mode. Use 'import' or 'search'" }), {
       status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   } catch (e) {
