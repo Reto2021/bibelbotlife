@@ -442,7 +442,15 @@ export default function OutreachAdmin() {
                             <TableCell>{lead.city || "–"}</TableCell>
                             <TableCell>{lead.current_step}/{sequences.length}</TableCell>
                             <TableCell><Badge variant={ls.variant}>{ls.label}</Badge></TableCell>
-                            <TableCell className="text-right">
+                            <TableCell className="text-right space-x-1">
+                              <Button
+                                variant="ghost" size="icon"
+                                onClick={() => generatePersonalizedEmail(lead)}
+                                disabled={personalizingLead === lead.id}
+                                title="KI-personalisierte E-Mail generieren"
+                              >
+                                {personalizingLead === lead.id ? <Loader2 className="h-4 w-4 animate-spin" /> : <Wand2 className="h-4 w-4" />}
+                              </Button>
                               {lead.website && (
                                 <Button
                                   variant="ghost" size="icon"
