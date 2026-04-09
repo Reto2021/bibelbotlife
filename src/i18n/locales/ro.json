@@ -7,7 +7,8 @@
     "badge": {
       "noLogin": "Fără autentificare",
       "noData": "Fără date",
-      "noJudgment": "Fără judecată"
+      "noJudgment": "Fără judecată",
+      "optionalLogin": "Autentificare opțională"
     },
     "title1": "Biblia.",
     "title2": " Redescoperită.",
@@ -21,7 +22,9 @@
     "loading": "Se încarcă impulsul zilnic...",
     "label": "Impulsul zilei",
     "deepDive": "Ce înseamnă asta pentru mine?",
-    "explore": "Citește pasajul complet"
+    "explore": "Citește pasajul complet",
+    "alreadySubscribed": "Primești inspirația zilnică",
+    "subscribeCta": "Dorești să primești această inspirație zilnic?"
   },
   "features": {
     "sectionTitle": "Cum te însoțește BibleBot",
@@ -151,7 +154,8 @@
     "toastPermDenied": "Permisiune refuzată",
     "toastPermDeniedDesc": "Te rugăm să permiți notificările în setările browserului.",
     "toastError": "Eroare",
-    "toastErrorDesc": "Te rugăm să încerci mai târziu."
+    "toastErrorDesc": "Te rugăm să încerci mai târziu.",
+    "subscribeButton": "Abonează-te la inspo"
   },
   "faq": {
     "badge": "Întrebări frecvente",
@@ -271,7 +275,8 @@
     "errorNoStream": "Niciun stream",
     "seniorMode": "Senior mode (larger text)",
     "teaserCta": "Start writing →",
-    "namePlaceholder": "e.g. Eli, Miriam…"
+    "namePlaceholder": "e.g. Eli, Miriam…",
+    "loginHint": "Conectează-te pentru a păstra conversațiile pe toate dispozitivele"
   },
   "install": {
     "title": "Instalează BibleBot",
@@ -336,7 +341,10 @@
     "baptism": {
       "title": "Găsește un verset de botez",
       "desc": "Versetul perfect pentru copilul tău",
-      "prompt": "Ajută-mă să găsesc un verset potrivit pentru botez. Ce fel de copil este și ce doresc părinții?"
+      "prompt": "Ajută-mă să găsesc un verset potrivit pentru botez. Ce fel de copil este și ce doresc părinții?",
+      "prompt_v1": "Ce înseamnă de fapt botezul?",
+      "prompt_v2": "Povestește-mi despre botez în Biblie – surprinde-mă!",
+      "prompt_v3": "De ce se botează oamenii?"
     },
     "condolence": {
       "title": "Cuvinte de mângâiere",
@@ -351,7 +359,10 @@
     "anxiety": {
       "title": "Frică și grijă",
       "desc": "Găsirea curajului în timpuri grele",
-      "prompt": "Mă lupt cu frica și grija acum. Ce spune Biblia despre asta? Sunt versete care dau curaj?"
+      "prompt": "Mă lupt cu frica și grija acum. Ce spune Biblia despre asta? Sunt versete care dau curaj?",
+      "prompt_v1": "Am anxietate. Ce spune Biblia despre anxietate?",
+      "prompt_v2": "Cum mă poate ajuta credința în anxietate?",
+      "prompt_v3": "Ce personaje biblice au avut și ele anxietate?"
     },
     "confession": {
       "title": "Mărturisire",
@@ -361,7 +372,10 @@
     "heartbreak": {
       "title": "Inimă frântă",
       "desc": "Ce spune Biblia despre durerea de inimă",
-      "prompt": "Inima mea e frântă. Ce spune Biblia despre durerea de inimă și cum să găsești din nou speranța?"
+      "prompt": "Inima mea e frântă. Ce spune Biblia despre durerea de inimă și cum să găsești din nou speranța?",
+      "prompt_v1": "Inima mea este frântă. Ce spune Biblia despre asta?",
+      "prompt_v2": "Cum fac față unei inimi frânte – există ajutor biblic?",
+      "prompt_v3": "Poate Dumnezeu vindeca o inimă frântă?"
     },
     "newstart": {
       "title": "Nou început",
@@ -391,7 +405,10 @@
     "gratitude": {
       "title": "Recunoștință",
       "desc": "O rugăciune personală de mulțumire",
-      "prompt": "Vreau să-I mulțumesc lui Dumnezeu. Ajută-mă să scriu o rugăciune personală de recunoștință."
+      "prompt": "Vreau să-I mulțumesc lui Dumnezeu. Ajută-mă să scriu o rugăciune personală de recunoștință.",
+      "prompt_v1": "Cum pot deveni mai recunoscător?",
+      "prompt_v2": "Ce spune Biblia despre recunoștință?",
+      "prompt_v3": "De ce este recunoștința atât de importantă în credință?"
     },
     "lifewheel": {
       "title": "Roata vieții",
@@ -450,7 +467,10 @@
     "forgiveness": {
       "title": "Iertare",
       "desc": "Când iertarea pare imposibilă",
-      "prompt": "Pur și simplu nu pot ierta pe cineva. Doare prea mult. Ce spune Biblia despre iertare?"
+      "prompt": "Pur și simplu nu pot ierta pe cineva. Doare prea mult. Ce spune Biblia despre iertare?",
+      "prompt_v1": "Ce spune Biblia despre iertare?",
+      "prompt_v2": "Cum pot ierta pe cineva care m-a rănit?",
+      "prompt_v3": "Există limite ale iertării?"
     },
     "familyconflict": {
       "title": "Conflict familial",
@@ -470,12 +490,23 @@
     "prayer": {
       "title": "Cerere de rugăciune",
       "desc": "Rugăciune împreună",
-      "prompt": "Am o cerere de rugăciune și aș vrea să ne rugăm împreună. Roagă-te cu mine."
+      "prompt": "Am o cerere de rugăciune și aș vrea să ne rugăm împreună. Roagă-te cu mine.",
+      "prompt_v1": "Cum pot învăța să mă rog?",
+      "prompt_v2": "Ce spune Biblia despre rugăciune?",
+      "prompt_v3": "De ce Dumnezeu nu răspunde la unele rugăciuni?"
     },
     "bibleverse": {
       "title": "Înțelege un verset",
       "desc": "Primește explicația unui pasaj biblic",
       "prompt": "Aș vrea să înțeleg mai bine un pasaj biblic. Poți să mă ajuți să-l pun în context?"
+    },
+    "biblequiz": {
+      "desc": "Testează-ți cunoștințele biblice într-un mod jucăuș",
+      "title": "Quiz Biblic"
+    },
+    "prayerwall": {
+      "desc": "Împărtășește cereri de rugăciune și roagă-te unul pentru celălalt",
+      "title": "Zidul Rugăciunii"
     }
   },
   "lifeWheel": {
@@ -809,5 +840,30 @@
     "weddingDesc": "Scrie jurăminte de căsătorie, alege cântece și planifică sărbătoarea.",
     "baptismDesc": "Formulează dorințe de botez și pregătește procesul cu comunitatea.",
     "confirmationDesc": "Găsește un verset de confirmare și pregătește texte personale."
+  },
+  "chatHero": {
+    "ariaLabel": "Pune o întrebare lui BibleBot",
+    "focusPlaceholder": "Scrie întrebarea ta…",
+    "placeholder1": "Ce mă face cu adevărat recunoscător?",
+    "placeholder2": "Cum găsesc pacea interioară?",
+    "placeholder3": "Ce îmi dă speranță?",
+    "placeholder4": "Ce își dorește inima mea?",
+    "placeholder5": "Ce bine pot face azi?",
+    "send": "Trimite",
+    "subtitle": "Pune întrebarea ta – deschis, sincer, fără înregistrare.",
+    "suggestion1": "Ce înseamnă numele meu?",
+    "suggestion2": "Ce îmi dă putere azi?",
+    "suggestion3": "Pentru ce sunt recunoscător?"
+  },
+  "meta": {
+    "forChurchesDesc": "BibleBot ca partener pentru comunitatea ta: lucrul cu tinerii, confirmarea, consilierea pastorală și grupurile biblice. De la gratuit la Premium.",
+    "forChurchesTitle": "BibleBot pentru Biserici – Consiliere Pastorală Digitală & Ghidare Biblică",
+    "homeDesc": "BibleBot te însoțește cu 5 traduceri biblice, metodologie de coaching și consiliere spirituală. Anonim, gratuit, în 36 de limbi.",
+    "homeTitle": "BibleBot – Ghidul Tău Biblic Personal | Gratuit & Anonim",
+    "loginDesc": "Conectează-te la BibleBot pentru a-ți pregăti ceremoniile personale.",
+    "loginTitle": "Autentificare – BibleBot"
+  },
+  "splash": {
+    "patronage": "Recomandat de"
   }
 }

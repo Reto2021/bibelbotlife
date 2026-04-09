@@ -7,7 +7,8 @@
     "badge": {
       "noLogin": "Ingen pålogging",
       "noData": "Ingen data",
-      "noJudgment": "Ingen fordømmelse"
+      "noJudgment": "Ingen fordømmelse",
+      "optionalLogin": "Valgfri pålogging"
     },
     "title1": "Bibelen.",
     "title2": " Tenkt på nytt.",
@@ -21,7 +22,9 @@
     "loading": "Dagens impuls lastes...",
     "label": "Dagens impuls",
     "deepDive": "Hva betyr dette for meg?",
-    "explore": "Les hele avsnittet"
+    "explore": "Les hele avsnittet",
+    "alreadySubscribed": "Du mottar daglig inspirasjon",
+    "subscribeCta": "Ønsker du å motta denne inspirasjonen daglig?"
   },
   "features": {
     "sectionTitle": "Hvordan din BibleBot følger deg",
@@ -151,7 +154,8 @@
     "toastPermDenied": "Tillatelse nektet",
     "toastPermDeniedDesc": "Vennligst tillat varslinger i nettleserinnstillingene dine.",
     "toastError": "Feil",
-    "toastErrorDesc": "Vennligst prøv igjen senere."
+    "toastErrorDesc": "Vennligst prøv igjen senere.",
+    "subscribeButton": "Abonner på insprasjon"
   },
   "faq": {
     "badge": "Ofte stilte spørsmål",
@@ -286,7 +290,8 @@
     "errorTitle": "Feil",
     "errorConnection": "kunne ikke nås.",
     "errorNoStream": "Ingen strøm",
-    "seniorMode": "Senior-modus (større skrift)"
+    "seniorMode": "Senior-modus (større skrift)",
+    "loginHint": "Logg på for å beholde samtaler på tvers av enheter"
   },
   "install": {
     "title": "Installer BibleBot",
@@ -333,7 +338,10 @@
     "baptism": {
       "title": "Finn dåpsvers",
       "desc": "Det perfekte verset for ditt barn",
-      "prompt": "Hjelp meg å finne et passende dåpsvers. Hva slags barn er det, og hva ønsker foreldrene?"
+      "prompt": "Hjelp meg å finne et passende dåpsvers. Hva slags barn er det, og hva ønsker foreldrene?",
+      "prompt_v1": "Hva betyr egentlig dåpen?",
+      "prompt_v2": "Fortell meg om dåpen i Bibelen – overrask meg!",
+      "prompt_v3": "Hvorfor blir folk døpt?"
     },
     "condolence": {
       "title": "Trøstende ord",
@@ -348,7 +356,10 @@
     "anxiety": {
       "title": "Angst og bekymringer",
       "desc": "Finn mot i vanskelige tider",
-      "prompt": "Jeg sliter med angst og bekymringer akkurat nå. Hva sier Bibelen om dette? Finnes det vers som gir mot?"
+      "prompt": "Jeg sliter med angst og bekymringer akkurat nå. Hva sier Bibelen om dette? Finnes det vers som gir mot?",
+      "prompt_v1": "Jeg er engstelig. Hva sier Bibelen om angst?",
+      "prompt_v2": "Hvordan kan tro hjelpe meg med angst?",
+      "prompt_v3": "Hvilke bibelske figurer opplevde også angst?"
     },
     "confession": {
       "title": "Bekjennelse",
@@ -358,7 +369,10 @@
     "heartbreak": {
       "title": "Kjærlighetssorg",
       "desc": "Hva Bibelen sier om kjærlighetssorg",
-      "prompt": "Hjertet mitt er knust. Hva sier Bibelen om kjærlighetssorg og hvordan man finner håp igjen?"
+      "prompt": "Hjertet mitt er knust. Hva sier Bibelen om kjærlighetssorg og hvordan man finner håp igjen?",
+      "prompt_v1": "Mitt hjerte er knust. Hva sier Bibelen om det?",
+      "prompt_v2": "Hvordan håndterer jeg kjærlighetssorg – finnes det bibelsk hjelp?",
+      "prompt_v3": "Kan Gud helbrede et knust hjerte?"
     },
     "newstart": {
       "title": "Ny start",
@@ -388,7 +402,10 @@
     "gratitude": {
       "title": "Takknemlighet",
       "desc": "En personlig takkebønn",
-      "prompt": "Jeg vil takke Gud. Hjelp meg å formulere en personlig takkebønn."
+      "prompt": "Jeg vil takke Gud. Hjelp meg å formulere en personlig takkebønn.",
+      "prompt_v1": "Hvordan kan jeg bli mer takknemlig?",
+      "prompt_v2": "Hva sier Bibelen om takknemlighet?",
+      "prompt_v3": "Hvorfor er takknemlighet så viktig i troen?"
     },
     "lifewheel": {
       "title": "Livshjulet",
@@ -447,7 +464,10 @@
     "forgiveness": {
       "title": "Tilgivelse",
       "desc": "Når tilgivelse virker umulig",
-      "prompt": "Jeg kan rett og slett ikke tilgi noen. Det gjør for vondt. Hva sier Bibelen om tilgivelse?"
+      "prompt": "Jeg kan rett og slett ikke tilgi noen. Det gjør for vondt. Hva sier Bibelen om tilgivelse?",
+      "prompt_v1": "Hva sier Bibelen om tilgivelse?",
+      "prompt_v2": "Hvordan kan jeg tilgi noen som har såret meg?",
+      "prompt_v3": "Er det grenser for tilgivelse?"
     },
     "familyconflict": {
       "title": "Familiekonflikt",
@@ -467,12 +487,23 @@
     "prayer": {
       "title": "Bønneemne",
       "desc": "Be sammen",
-      "prompt": "Jeg har et bønneemne og vil be sammen. Følg meg i bønn."
+      "prompt": "Jeg har et bønneemne og vil be sammen. Følg meg i bønn.",
+      "prompt_v1": "Hvordan kan jeg lære å be?",
+      "prompt_v2": "Hva sier Bibelen om bønn?",
+      "prompt_v3": "Hvorfor besvarer ikke Gud noen bønner?"
     },
     "bibleverse": {
       "title": "Forstå vers",
       "desc": "Få et bibelvers forklart",
       "prompt": "Jeg vil forstå et bibelvers bedre. Kan du hjelpe meg med å sette det i kontekst?"
+    },
+    "biblequiz": {
+      "desc": "Test bibelkunnskapene dine på en leken måte",
+      "title": "Bibelquiz"
+    },
+    "prayerwall": {
+      "desc": "Del bønneemner og be for hverandre",
+      "title": "Bønnevegg"
     }
   },
   "lifeWheel": {
@@ -801,5 +832,30 @@
     "weddingDesc": "Skriv ekteskapsløfter, velg sanger og planlegg feiringen.",
     "baptismDesc": "Formuler dåpsønsker og forbered seremonien med menigheten.",
     "confirmationDesc": "Finn konfirmasjonsord og forbered personlige tekster."
+  },
+  "chatHero": {
+    "ariaLabel": "Still et spørsmål til BibleBot",
+    "focusPlaceholder": "Skriv spørsmålet ditt…",
+    "placeholder1": "Hva gjør meg virkelig takknemlig?",
+    "placeholder2": "Hvordan finner jeg indre fred?",
+    "placeholder3": "Hva gir meg håp?",
+    "placeholder4": "Hva ønsker mitt hjerte?",
+    "placeholder5": "Hva godt kan jeg gjøre i dag?",
+    "send": "Send",
+    "subtitle": "Still spørsmålet ditt – åpent, ærlig, uten registrering.",
+    "suggestion1": "Hva står navnet mitt for?",
+    "suggestion2": "Hva gir meg styrke i dag?",
+    "suggestion3": "Hva er jeg takknemlig for?"
+  },
+  "meta": {
+    "forChurchesDesc": "BibleBot som partner for din menighet: ungdomsarbeid, konfirmasjon, sjelesorg og bibelgrupper. Gratis til Premium.",
+    "forChurchesTitle": "BibleBot for menigheter – Digital sjelesorg og bibel veiledning",
+    "homeDesc": "BibleBot følger deg med 5 bibeloversettelser, coaching-metodikk og sjelesorg. Anonymt, gratis, på 36 språk.",
+    "homeTitle": "BibleBot – Din personlige bibel-følgesvenn | Gratis & Anonym",
+    "loginDesc": "Logg inn på BibleBot for å forberede dine personlige seremonier.",
+    "loginTitle": "Logg inn – BibleBot"
+  },
+  "splash": {
+    "patronage": "Anbefalt av"
   }
 }
