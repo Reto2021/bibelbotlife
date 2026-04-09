@@ -580,9 +580,9 @@
     "backToList": "Zurück zur Liste"
   },
   "church": {
-    "badge": "Für Gemeinden",
-    "heroTitle": "BibleBot für Ihre Gemeinde",
-    "heroSubtitle": "Begleiten Sie Ihre Gemeindemitglieder mit biblischer Weisheit – digital, persönlich und rund um die Uhr.",
+    "badge": "Für Organisationen",
+    "heroTitle": "BibleBot für Ihre Organisation",
+    "heroSubtitle": "Begleiten Sie Ihre Mitarbeitenden und Zielgruppen mit biblischer Weisheit – digital, persönlich und rund um die Uhr.",
     "useCasesTitle": "Einsatzmöglichkeiten",
     "useCase": {
       "youth": {
@@ -603,27 +603,27 @@
       }
     },
     "pricingTitle": "Patronats-Pakete",
-    "pricingSubtitle": "Unterstützen Sie BibleBot und Ihre Gemeinde mit dem passenden Patronats-Paket.",
+    "pricingSubtitle": "Unterstützen Sie BibleBot und Ihre Organisation mit dem passenden Patronats-Paket.",
     "popular": "Beliebt",
     "free": "Kostenlos",
-    "perYear": "Jahr",
+    "perYear": "Personen / Jahr",
     "contact": "Kontakt aufnehmen",
     "tier": {
       "free": {
         "name": "Senfkorn",
-        "size": "Für kleine Gemeinden & Hauskreise (bis 50 Mitglieder)"
+        "size": "Für kleine Organisationen & Gruppen (bis 50 Personen)"
       },
       "community": {
         "name": "Wegbegleiter",
-        "size": "Für Gemeinden mit 50–200 Mitgliedern"
+        "size": "Für Organisationen mit 50–200 Personen"
       },
       "gemeinde": {
         "name": "Brückenbauer",
-        "size": "Für Gemeinden mit 200–500 Mitgliedern"
+        "size": "Für Organisationen mit 200–500 Personen"
       },
       "kirche": {
         "name": "Leuchtturm",
-        "size": "Für grosse Gemeinden & Institutionen (500+ Mitglieder)"
+        "size": "Für grosse Organisationen (500+ Personen)"
       }
     },
     "features": {
@@ -642,14 +642,14 @@
       "apiAccess": "API-Zugang",
       "accountManager": "Persönlicher Betreuer"
     },
-    "viewDirectory": "Gemeinde-Verzeichnis ansehen",
-    "directoryBadge": "Gemeinde-Verzeichnis",
-    "directoryTitle": "Partnergemeinden",
-    "directorySubtitle": "Finden Sie eine Gemeinde in Ihrer Nähe, die BibleBot empfiehlt.",
+    "viewDirectory": "Partner-Verzeichnis ansehen",
+    "directoryBadge": "Partner-Verzeichnis",
+    "directoryTitle": "Partner-Organisationen",
+    "directorySubtitle": "Finden Sie eine Organisation in Ihrer Nähe, die BibleBot empfiehlt.",
     "searchPlaceholder": "Ort, Name oder Denomination suchen...",
-    "noResults": "Noch keine Gemeinden im Verzeichnis.",
+    "noResults": "Noch keine Organisationen im Verzeichnis.",
     "becomePartner": "Partner werden →",
-    "notFound": "Gemeinde nicht gefunden.",
+    "notFound": "Organisation nicht gefunden.",
     "backToDirectory": "Zurück zum Verzeichnis",
     "pastor": "Pfarrer/Pastor",
     "serviceTimes": "Gottesdienstzeiten",
@@ -662,7 +662,7 @@
     "contactMessage": "Ihre Nachricht",
     "contactSend": "Nachricht senden",
     "contactSuccess": "Nachricht gesendet! 🙏",
-    "contactSuccessDesc": "Die Gemeinde wird sich bei Ihnen melden.",
+    "contactSuccessDesc": "Die Organisation wird sich bei Ihnen melden.",
     "recommendedBy": "Empfohlen von {{name}}",
     "setup": "Setup (einmalig)",
     "form": {
@@ -670,7 +670,7 @@
       "subtitle": "Wir melden uns innert 48 Stunden.",
       "name": "Ihr Name",
       "email": "E-Mail-Adresse",
-      "churchName": "Name der Gemeinde",
+      "churchName": "Name der Organisation",
       "tier": "Gewünschtes Paket",
       "tierPlaceholder": "Paket wählen...",
       "message": "Ihre Nachricht",
@@ -688,8 +688,8 @@
         "military": "Armeeseelsorge"
       }
     },
-    "institutionsTitle": "Auch für Institutionen",
-    "institutionsSubtitle": "BibleBot begleitet nicht nur Gemeinden – auch Pflege- und Altersheime, Spitäler und die Gefängnisseelsorge profitieren von digitaler Seelsorge.",
+    "institutionsTitle": "Für verschiedenste Organisationen",
+    "institutionsSubtitle": "BibleBot begleitet Gemeinden, Pflege- und Altersheime, Spitäler, die Gefängnisseelsorge und viele weitere Organisationen mit digitaler Seelsorge.",
     "institution": {
       "careHome": {
         "title": "Pflegeheime",
