@@ -384,11 +384,7 @@ export function ChatHero() {
         // Insert placeholder assistant message in DB
         await addMessage(convId, "assistant", "…");
 
-        const reader = resp.body.getReader();
-        const decoder = new TextDecoder();
-        let buffer = "";
-
-        const upsert = (chunk: string) => {
+        const upsertChunk = (chunk: string) => {
           assistantSoFar += chunk;
           setMessages((prev) => {
             const last = prev[prev.length - 1];
@@ -399,26 +395,50 @@ export function ChatHero() {
           });
         };
 
-        while (true) {
-          const { done, value } = await reader.read();
-          if (done) break;
-          buffer += decoder.decode(value, { stream: true });
-          let idx: number;
-          while ((idx = buffer.indexOf("\n")) !== -1) {
-            let line = buffer.slice(0, idx);
-            buffer = buffer.slice(idx + 1);
-            if (line.endsWith("\r")) line = line.slice(0, -1);
+        try {
+          const reader = resp.body.getReader();
+          const decoder = new TextDecoder();
+          let buffer = "";
+
+          while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+            buffer += decoder.decode(value, { stream: true });
+            let idx: number;
+            while ((idx = buffer.indexOf("\n")) !== -1) {
+              let line = buffer.slice(0, idx);
+              buffer = buffer.slice(idx + 1);
+              if (line.endsWith("\r")) line = line.slice(0, -1);
+              if (!line.startsWith("data: ")) continue;
+              const json = line.slice(6).trim();
+              if (json === "[DONE]") break;
+              try {
+                const parsed = JSON.parse(json);
+                const content = parsed.choices?.[0]?.delta?.content;
+                if (content) upsertChunk(content);
+              } catch {
+                buffer = line + "\n" + buffer;
+                break;
+              }
+            }
+          }
+        } catch (streamErr) {
+          console.warn("Stream read failed, using fallback:", streamErr);
+          const fallbackResp = await fetch(CHAT_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}` },
+            body: JSON.stringify({ messages: allMessages, journeyDay: 1, language: i18n.language, mode: chatMode }),
+          });
+          const fullText = await fallbackResp.text();
+          for (const line of fullText.split("\n")) {
             if (!line.startsWith("data: ")) continue;
             const json = line.slice(6).trim();
             if (json === "[DONE]") break;
             try {
               const parsed = JSON.parse(json);
               const content = parsed.choices?.[0]?.delta?.content;
-              if (content) upsert(content);
-            } catch {
-              buffer = line + "\n" + buffer;
-              break;
-            }
+              if (content) upsertChunk(content);
+            } catch { /* skip */ }
           }
         }
 
