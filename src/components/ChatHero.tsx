@@ -109,8 +109,98 @@ function makeRefsClickable(children: React.ReactNode, onRefClick: (msg: string) 
   if (Array.isArray(children)) return children.map((child, i) => <span key={i}>{processNode(child)}</span>);
   return processNode(children);
 }
+// Auto-typing demo that creates a "wow moment" in the first few seconds
+function LiveDemoPreview({ onTryIt }: { onTryIt: () => void }) {
+  const { t } = useTranslation();
+  const userMsg = t("chatDemo.userMsg", "Ich fühle mich allein. Was sagt die Bibel dazu?");
+  const botMsg = t("chatDemo.botMsg", "Du bist nicht allein – auch wenn es sich gerade so anfühlt. In Psalm 23 heisst es: «Der Herr ist mein Hirte, mir wird nichts mangeln.» Das bedeutet, dass Gott dir nahe ist, auch in den dunkelsten Momenten.");
+  const [phase, setPhase] = useState<"user" | "typing" | "bot" | "done">("user");
+  const [botText, setBotText] = useState("");
+  const botCharRef = useRef(0);
 
-export function ChatHero() {
+  useEffect(() => {
+    // Phase 1: Show user bubble, then after 800ms start "typing"
+    const t1 = setTimeout(() => setPhase("typing"), 800);
+    // Phase 2: After 1.5s start typing the bot response
+    const t2 = setTimeout(() => {
+      setPhase("bot");
+      const interval = setInterval(() => {
+        botCharRef.current += 2;
+        if (botCharRef.current >= botMsg.length) {
+          setBotText(botMsg);
+          clearInterval(interval);
+          setTimeout(() => setPhase("done"), 400);
+        } else {
+          setBotText(botMsg.slice(0, botCharRef.current));
+        }
+      }, 20);
+      return () => clearInterval(interval);
+    }, 1500);
+    return () => { clearTimeout(t1); clearTimeout(t2); };
+  }, [botMsg]);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 8 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.3 }}
+      className="max-w-2xl mx-auto w-full mb-5"
+    >
+      <div className="bg-card/50 backdrop-blur-sm rounded-2xl border border-border/60 p-3 sm:p-4 space-y-2.5">
+        {/* User bubble */}
+        <div className="flex justify-end">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.3 }}
+            className="bg-primary/10 border border-primary/15 rounded-2xl rounded-br-md px-3 py-2 max-w-[80%]"
+          >
+            <p className="text-sm text-foreground">{userMsg}</p>
+          </motion.div>
+        </div>
+        {/* Bot bubble */}
+        {(phase === "typing" || phase === "bot" || phase === "done") && (
+          <div className="flex justify-start">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3 }}
+              className="bg-card border border-border rounded-2xl rounded-bl-md px-3 py-2 max-w-[85%] shadow-sm"
+            >
+              {phase === "typing" ? (
+                <div className="flex items-center gap-1 py-1 px-1">
+                  {[0, 1, 2].map((i) => (
+                    <motion.div
+                      key={i}
+                      className="w-1.5 h-1.5 rounded-full bg-muted-foreground/40"
+                      animate={{ opacity: [0.3, 1, 0.3] }}
+                      transition={{ duration: 0.8, repeat: Infinity, delay: i * 0.2 }}
+                    />
+                  ))}
+                </div>
+              ) : (
+                <p className="text-sm text-foreground/90 leading-relaxed">{botText}</p>
+              )}
+            </motion.div>
+          </div>
+        )}
+        {/* CTA */}
+        {phase === "done" && (
+          <motion.button
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            onClick={onTryIt}
+            className="w-full text-center text-xs text-primary font-semibold hover:underline cursor-pointer pt-1"
+          >
+            {t("chatDemo.cta", "Starte jetzt dein eigenes Gespräch →")}
+          </motion.button>
+        )}
+      </div>
+    </motion.div>
+  );
+}
+
+
   const { t, i18n } = useTranslation();
   const [input, setInput] = useState("");
   const [placeholder, setPlaceholder] = useState("");
@@ -466,31 +556,15 @@ export function ChatHero() {
                 key="landing"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                exit={{ opacity: 0, y: -20, transition: { duration: 0.3 } }}
-                className="flex-1 flex flex-col justify-center py-8"
+                exit={{ opacity: 0, y: -20, transition: { duration: 0.2 } }}
+                className="flex-1 flex flex-col justify-center py-4 sm:py-8"
               >
-                {/* Trust badge */}
-                <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="mb-6 text-center">
-                  <span className="inline-flex items-center gap-3 text-sm font-semibold text-foreground bg-card/80 backdrop-blur-sm border border-border shadow-md px-5 py-2.5 rounded-full">
-                    <Shield className="h-4 w-4 text-primary" />
-                    <span className="flex items-center gap-2">
-                       <span>{t("hero.badge.optionalLogin")}</span>
-                      <span className="text-primary/40">·</span>
-                      <EyeOff className="h-3.5 w-3.5 text-primary" />
-                      <span>{t("hero.badge.noData")}</span>
-                      <span className="text-primary/40">·</span>
-                      <Heart className="h-3.5 w-3.5 text-primary" />
-                      <span>{t("hero.badge.noJudgment")}</span>
-                    </span>
-                  </span>
-                </motion.div>
-
-                {/* Title */}
+                {/* Title – instant, no delay */}
                 <motion.h1
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1 }}
-                  className="text-4xl md:text-6xl font-bold text-foreground mb-4 leading-tight text-center"
+                  transition={{ duration: 0.4 }}
+                  className="text-3xl sm:text-4xl md:text-6xl font-bold text-foreground mb-2 sm:mb-3 leading-tight text-center"
                 >
                   {t("hero.title1")}
                   <span className="text-transparent bg-clip-text" style={{ backgroundImage: "var(--gradient-cta)" }}>
@@ -498,22 +572,27 @@ export function ChatHero() {
                   </span>
                 </motion.h1>
 
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed text-center"
-                >
-                  {t("chatHero.subtitle")}
-                </motion.p>
+                {/* Compact trust badges – inline */}
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3, delay: 0.1 }} className="mb-4 sm:mb-6 text-center">
+                  <span className="inline-flex items-center gap-2 text-[11px] sm:text-xs text-muted-foreground">
+                    <Shield className="h-3 w-3 text-primary shrink-0" />
+                    <span>{t("hero.badge.optionalLogin")}</span>
+                    <span className="text-primary/30">·</span>
+                    <EyeOff className="h-3 w-3 text-primary shrink-0" />
+                    <span>{t("hero.badge.noData")}</span>
+                    <span className="text-primary/30">·</span>
+                    <Heart className="h-3 w-3 text-primary shrink-0" />
+                    <span>{t("hero.badge.noJudgment")}</span>
+                  </span>
+                </motion.div>
 
-                {/* Search input */}
+                {/* Search input – appears fast */}
                 <motion.form
                   onSubmit={handleSubmit}
-                  initial={{ opacity: 0, y: 20, scale: 0.97 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                  className="relative max-w-2xl mx-auto mb-6 w-full"
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.15 }}
+                  className="relative max-w-2xl mx-auto mb-5 w-full"
                 >
                   <div className={`relative flex items-center bg-card border-2 rounded-2xl shadow-lg transition-all duration-300 ${
                     isFocused ? "border-primary shadow-[0_0_0_4px_hsl(var(--primary)/0.12)]" : "border-border hover:border-primary/40"
@@ -595,12 +674,12 @@ export function ChatHero() {
                   )}
                 </motion.form>
 
-                {/* === CTA Cards === */}
+                {/* === Quick CTAs – compact row === */}
                 <motion.div
-                  initial={{ opacity: 0, y: 15 }}
+                  initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.4 }}
-                  className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-2xl mx-auto mb-8 w-full"
+                  transition={{ duration: 0.4, delay: 0.25 }}
+                  className="grid grid-cols-3 gap-2 max-w-2xl mx-auto mb-5 w-full"
                 >
                   {[
                     { emoji: "😰", title: t("quickCta.anxiety", "Was tun bei Angst?"), prompt: t("tiles.anxiety.prompt", "Ich habe Angst und weiss nicht weiter. Was sagt die Bibel dazu?") },
@@ -610,104 +689,71 @@ export function ChatHero() {
                     <button
                       key={card.title}
                       onClick={() => sendMessage(card.prompt)}
-                      className="group flex items-center gap-3 sm:flex-col sm:items-center sm:text-center bg-card/70 backdrop-blur-sm border border-border rounded-xl px-4 py-3 sm:px-5 sm:py-5 hover:border-primary/40 hover:shadow-md hover:bg-card transition-all duration-300 cursor-pointer"
+                      className="group flex items-center gap-2 bg-card/70 backdrop-blur-sm border border-border rounded-xl px-3 py-2.5 hover:border-primary/40 hover:shadow-md hover:bg-card transition-all duration-200 cursor-pointer"
                     >
-                      <span className="text-2xl sm:text-3xl shrink-0">{card.emoji}</span>
-                      <span className="text-sm sm:text-base font-semibold text-foreground group-hover:text-primary transition-colors">{card.title}</span>
+                      <span className="text-lg sm:text-xl shrink-0">{card.emoji}</span>
+                      <span className="text-xs sm:text-sm font-medium text-foreground group-hover:text-primary transition-colors text-left leading-tight">{card.title}</span>
                     </button>
                   ))}
                 </motion.div>
 
-                {/* === Chat Demo Preview === */}
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.55 }}
-                  className="max-w-2xl mx-auto w-full mb-6"
-                >
-                  <div className="bg-card/50 backdrop-blur-sm rounded-2xl border border-border/60 p-4 sm:p-5 space-y-3">
-                    <p className="text-[10px] uppercase tracking-widest text-muted-foreground/60 text-center font-semibold mb-2">{t("chatDemo.label", "So sieht ein Gespräch aus")}</p>
-                    {/* User bubble */}
-                    <div className="flex justify-end">
-                      <div className="bg-primary/10 border border-primary/15 rounded-2xl rounded-br-md px-4 py-2.5 max-w-[80%]">
-                        <p className="text-sm text-foreground">{t("chatDemo.userMsg", "Ich fühle mich allein. Was sagt die Bibel dazu?")}</p>
-                      </div>
-                    </div>
-                    {/* Bot bubble */}
-                    <div className="flex justify-start">
-                      <div className="bg-card border border-border rounded-2xl rounded-bl-md px-4 py-2.5 max-w-[85%] shadow-sm">
-                        <p className="text-sm text-foreground/90 leading-relaxed">{t("chatDemo.botMsg", "Du bist nicht allein – auch wenn es sich gerade so anfühlt. In Psalm 23 heisst es: «Der Herr ist mein Hirte, mir wird nichts mangeln.» Das bedeutet, dass Gott dir nahe ist, auch in den dunkelsten Momenten. Möchtest du, dass wir diese Stelle gemeinsam vertiefen?")}</p>
-                      </div>
-                    </div>
-                    {/* CTA to start */}
-                    <button
-                      onClick={() => inputRef.current?.focus()}
-                      className="w-full text-center text-xs text-primary font-medium hover:underline cursor-pointer pt-1"
-                    >
-                      {t("chatDemo.cta", "Starte jetzt dein eigenes Gespräch →")}
-                    </button>
-                  </div>
-                </motion.div>
+                {/* === Live Demo – auto-typing wow moment === */}
+                <LiveDemoPreview onTryIt={() => inputRef.current?.focus()} />
 
-                {/* === Social Proof === */}
+                {/* === Social Proof – inline compact === */}
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  transition={{ duration: 0.5, delay: 0.65 }}
-                  className="flex flex-wrap justify-center gap-4 sm:gap-8 mb-6 max-w-2xl mx-auto"
+                  transition={{ duration: 0.3, delay: 0.4 }}
+                  className="flex justify-center gap-6 sm:gap-10 mb-4 max-w-2xl mx-auto"
                 >
                   {[
-                    { value: "2'500+", label: t("social.conversations", "Gespräche geführt") },
+                    { value: "2'500+", label: t("social.conversations", "Gespräche") },
                     { value: "36", label: t("social.languages", "Sprachen") },
-                    { value: "5", label: t("social.bibles", "Bibelübersetzungen") },
+                    { value: "5", label: t("social.bibles", "Bibeln") },
                   ].map((stat) => (
                     <div key={stat.label} className="text-center">
-                      <p className="text-xl sm:text-2xl font-bold text-primary">{stat.value}</p>
-                      <p className="text-xs text-muted-foreground">{stat.label}</p>
+                      <p className="text-lg sm:text-xl font-bold text-primary">{stat.value}</p>
+                      <p className="text-[10px] sm:text-xs text-muted-foreground">{stat.label}</p>
                     </div>
                   ))}
                 </motion.div>
 
-                {/* Topic chips (collapsed) */}
-                <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.75 }} className="max-w-2xl mx-auto mb-6">
-                  <p className="text-xs text-muted-foreground text-center mb-3">{t("tiles.sectionTitle")}</p>
+                {/* Topic chips */}
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3, delay: 0.5 }} className="max-w-2xl mx-auto mb-4">
                   <div className="flex flex-wrap justify-center gap-1.5">
                     {visibleChips.map((chip) => (
                       <button
                         key={chip.key}
                         onClick={() => handleChipClick(chip)}
-                        className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full border border-border bg-card/50 text-muted-foreground hover:text-foreground hover:border-primary/30 hover:bg-card transition-all duration-200"
+                        className="inline-flex items-center gap-1 text-[11px] px-2.5 py-1 rounded-full border border-border bg-card/50 text-muted-foreground hover:text-foreground hover:border-primary/30 hover:bg-card transition-all duration-200"
                       >
                         <span>{chip.emoji}</span>
                         <span>{t(`tiles.${chip.key}.title`)}</span>
                       </button>
                     ))}
                     {!showMoreChips && (
-                      <button onClick={() => setShowMoreChips(true)} className="text-xs px-3 py-1.5 rounded-full border border-border bg-card/50 text-primary hover:bg-card transition-all duration-200">
+                      <button onClick={() => setShowMoreChips(true)} className="text-[11px] px-2.5 py-1 rounded-full border border-border bg-card/50 text-primary hover:bg-card transition-all duration-200">
                         +{TOPIC_CHIPS.length - 8} {t("tiles.showMore", "mehr")}
                       </button>
                     )}
                   </div>
                 </motion.div>
 
-                {/* Bible quote */}
-                <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.85 }} className="max-w-2xl mx-auto w-full">
+                {/* Bible quote – compact */}
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4, delay: 0.6 }} className="max-w-2xl mx-auto w-full">
                   <button
                     onClick={() => sendMessage(`Erkläre mir diesen Bibelvers im Detail: ${dailyVerse.quote} (${dailyVerse.ref}) – Wer hat das geschrieben? In welchem Kontext? Was bedeutet das für mein Leben heute?`)}
-                    className="relative w-full bg-card/60 backdrop-blur-sm rounded-2xl px-8 py-6 border border-primary/10 text-center shadow-sm overflow-hidden cursor-pointer hover:border-primary/30 hover:shadow-md transition-all duration-300 group"
+                    className="relative w-full bg-card/40 backdrop-blur-sm rounded-xl px-6 py-4 border border-primary/10 text-center overflow-hidden cursor-pointer hover:border-primary/30 hover:shadow-md transition-all duration-300 group"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.03] to-transparent pointer-events-none group-hover:from-primary/[0.06] transition-all duration-300" />
-                    <div className="relative">
-                      <p className="text-foreground/80 italic text-base sm:text-lg leading-relaxed font-serif">{dailyVerse.quote}</p>
-                      <p className="text-primary/60 text-sm mt-2 font-medium tracking-wide">– {dailyVerse.ref}</p>
-                      <p className="text-xs text-muted-foreground mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">{t("impulse.deepDive", "Vers erkunden →")}</p>
-                    </div>
+                    <p className="text-foreground/70 italic text-sm sm:text-base leading-relaxed font-serif">{dailyVerse.quote}</p>
+                    <p className="text-primary/50 text-xs mt-1.5 font-medium">– {dailyVerse.ref}</p>
                   </button>
                 </motion.div>
 
                 {/* Previous conversations hint */}
                 {conversations.length > 0 && (
-                  <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9 }} className="text-center mt-6">
+                  <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7 }} className="text-center mt-4">
                     <button onClick={() => setSidebarOpen(true)} className="text-xs text-muted-foreground hover:text-foreground transition-colors underline underline-offset-2">
                       {t("chat.previousChats", { count: conversations.length, defaultValue: `${conversations.length} frühere Gespräche` })}
                     </button>
