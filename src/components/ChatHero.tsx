@@ -248,7 +248,7 @@ export function ChatHero() {
     const topics = TOPIC_CHIPS.map(chip => ({
       type: "topic" as const,
       emoji: chip.emoji,
-      label: t(`tiles.${chip.key}.label`),
+      label: t(`tiles.${chip.key}.title`),
       prompt: t(`tiles.${chip.key}.prompt`),
     }));
     const bibleRefs = [
