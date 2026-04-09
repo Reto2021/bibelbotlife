@@ -288,7 +288,7 @@ export default function BibleQuiz() {
       <div className="min-h-screen bg-background">
         <div className="container mx-auto max-w-lg px-4 py-8">
           {/* Header */}
-          <div className="flex items-center justify-between mb-8">
+          <div className="flex items-center justify-between mb-3">
             <Button variant="ghost" size="sm" onClick={() => setMode(null)}>
               <ArrowLeft className="h-4 w-4 mr-1" /> Zurück
             </Button>
@@ -298,9 +298,16 @@ export default function BibleQuiz() {
               <Badge variant="outline" className="text-xs">
                 {diffCfg.emoji} {diffCfg.label}
               </Badge>
-              <Badge variant="secondary" className="text-xs">
-                {mode === "multiple_choice" ? "Multiple Choice" : "Vers erraten"}
-              </Badge>
+            </div>
+          </div>
+          {/* Progress bar */}
+          <div className="flex items-center gap-2 mb-6">
+            <span className="text-xs text-muted-foreground whitespace-nowrap">Frage {total + (showResult ? 0 : 1)}/{ROUND_SIZE}</span>
+            <div className="flex-1 h-1.5 rounded-full bg-muted overflow-hidden">
+              <div
+                className="h-full rounded-full bg-primary transition-all duration-300"
+                style={{ width: `${(total / ROUND_SIZE) * 100}%` }}
+              />
             </div>
           </div>
 
