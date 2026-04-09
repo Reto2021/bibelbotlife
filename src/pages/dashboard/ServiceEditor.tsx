@@ -2,7 +2,7 @@ import { useState, useCallback, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { DndContext, closestCenter, KeyboardSensor, PointerSensor, useSensor, useSensors, type DragEndEvent } from "@dnd-kit/core";
 import { arrayMove, SortableContext, sortableKeyboardCoordinates, verticalListSortingStrategy } from "@dnd-kit/sortable";
-import { ArrowLeft, Save, Clock, Plus, Play } from "lucide-react";
+import { ArrowLeft, Save, Clock, Plus, Play, Library } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -270,8 +270,16 @@ export default function ServiceEditor() {
             Block hinzufügen
           </CardTitle>
         </CardHeader>
-        <CardContent className="pt-0">
+        <CardContent className="pt-0 space-y-3">
           <BlockPalette onAdd={addBlock} />
+          <Button
+            variant="outline"
+            size="sm"
+            className="w-full gap-1.5"
+            onClick={() => { setResourcePickerBlockId(null); setResourcePickerOpen(true); }}
+          >
+            <Library className="h-4 w-4" /> Aus Bibliothek einfügen
+          </Button>
         </CardContent>
       </Card>
 
@@ -294,6 +302,7 @@ export default function ServiceEditor() {
                   onUpdate={updateBlock}
                   onDelete={deleteBlock}
                   onAskBibleBot={askBibleBot}
+                  onPickResource={pickResourceForBlock}
                 />
               ))}
             </SortableContext>
