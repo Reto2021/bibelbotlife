@@ -14,7 +14,7 @@ import { Switch } from "@/components/ui/switch";
 import { toast } from "sonner";
 import {
   Plus, Play, Pause, Upload, Globe, Mail, Users, BarChart3,
-  Loader2, Trash2, RefreshCw, Send, Target,
+  Loader2, Trash2, RefreshCw, Send, Target, Sparkles,
 } from "lucide-react";
 
 // ─── Hooks ───────────────────────────────────────────────
@@ -233,6 +233,30 @@ export default function OutreachAdmin() {
     }
   };
 
+  // ─── KI Sequenz generieren ─────────────────────────────
+  const [generating, setGenerating] = useState(false);
+  const [genContext, setGenContext] = useState("");
+  const [genDialogOpen, setGenDialogOpen] = useState(false);
+
+  const generateSequence = async () => {
+    if (!selectedCampaignId) return;
+    setGenerating(true);
+    try {
+      const { data, error } = await supabase.functions.invoke("outreach-generate-sequence", {
+        body: { campaign_id: selectedCampaignId, context: genContext || undefined },
+      });
+      if (error) throw error;
+      toast.success(data.message || "Sequenz generiert!");
+      setGenDialogOpen(false);
+      setGenContext("");
+      queryClient.invalidateQueries({ queryKey: ["outreach-sequences"] });
+    } catch (err: any) {
+      toast.error(err.message || "Fehler bei der Generierung");
+    } finally {
+      setGenerating(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background p-6 max-w-7xl mx-auto space-y-6">
       <div className="flex items-center justify-between">
@@ -394,36 +418,67 @@ export default function OutreachAdmin() {
 
           {/* ─── Sequences Tab ──────────────────── */}
           <TabsContent value="sequences" className="space-y-4">
-            <Dialog open={sequenceOpen} onOpenChange={setSequenceOpen}>
-              <DialogTrigger asChild>
-                <Button><Plus className="h-4 w-4 mr-2" />Schritt hinzufügen</Button>
-              </DialogTrigger>
-              <DialogContent className="max-w-2xl">
-                <DialogHeader><DialogTitle>Sequenz-Schritt bearbeiten</DialogTitle></DialogHeader>
-                <div className="space-y-3">
-                  <div className="grid grid-cols-2 gap-3">
-                    <div><Label>Schritt Nr.</Label><Input type="number" min={1} max={5} value={seqForm.step_number} onChange={(e) => setSeqForm({ ...seqForm, step_number: Number(e.target.value) })} /></div>
-                    <div><Label>Wartezeit (Tage)</Label><Input type="number" min={0} value={seqForm.delay_days} onChange={(e) => setSeqForm({ ...seqForm, delay_days: Number(e.target.value) })} /></div>
+            <div className="flex gap-2">
+              <Dialog open={sequenceOpen} onOpenChange={setSequenceOpen}>
+                <DialogTrigger asChild>
+                  <Button variant="outline"><Plus className="h-4 w-4 mr-2" />Schritt hinzufügen</Button>
+                </DialogTrigger>
+                <DialogContent className="max-w-2xl">
+                  <DialogHeader><DialogTitle>Sequenz-Schritt bearbeiten</DialogTitle></DialogHeader>
+                  <div className="space-y-3">
+                    <div className="grid grid-cols-2 gap-3">
+                      <div><Label>Schritt Nr.</Label><Input type="number" min={1} max={5} value={seqForm.step_number} onChange={(e) => setSeqForm({ ...seqForm, step_number: Number(e.target.value) })} /></div>
+                      <div><Label>Wartezeit (Tage)</Label><Input type="number" min={0} value={seqForm.delay_days} onChange={(e) => setSeqForm({ ...seqForm, delay_days: Number(e.target.value) })} /></div>
+                    </div>
+                    <div>
+                      <Label>Betreff</Label>
+                      <Input value={seqForm.subject_template} onChange={(e) => setSeqForm({ ...seqForm, subject_template: e.target.value })} placeholder="Hallo {{contact_name}} – kurze Frage zu {{church_name}}" />
+                    </div>
+                    <div>
+                      <Label>E-Mail-Text (HTML)</Label>
+                      <Textarea
+                        rows={10} value={seqForm.body_template}
+                        onChange={(e) => setSeqForm({ ...seqForm, body_template: e.target.value })}
+                        placeholder="<p>Liebe/r {{contact_name}},</p>&#10;<p>{{personal_note}}</p>&#10;<p>Darf ich Ihnen in 10 Minuten zeigen, wie BibleBot.Life Ihrer Gemeinde helfen kann?</p>&#10;<p><a href='{{booking_url}}'>Termin buchen</a></p>"
+                      />
+                    </div>
+                    <p className="text-xs text-muted-foreground">
+                      Platzhalter: {"{{church_name}}, {{contact_name}}, {{city}}, {{denomination}}, {{personal_note}}, {{booking_url}}, {{sender_name}}"}
+                    </p>
                   </div>
+                  <DialogFooter><Button onClick={saveSequence}>Speichern</Button></DialogFooter>
+                </DialogContent>
+              </Dialog>
+
+              <Dialog open={genDialogOpen} onOpenChange={setGenDialogOpen}>
+                <DialogTrigger asChild>
+                  <Button><Sparkles className="h-4 w-4 mr-2" />KI-Sequenz generieren</Button>
+                </DialogTrigger>
+                <DialogContent>
+                  <DialogHeader>
+                    <DialogTitle>KI-gestützte Sequenz generieren</DialogTitle>
+                  </DialogHeader>
+                  <p className="text-sm text-muted-foreground">
+                    Die KI erstellt eine psychologisch optimierte 5-Schritt-E-Mail-Sequenz basierend auf deiner Kampagne. Bestehende Schritte werden ersetzt.
+                  </p>
                   <div>
-                    <Label>Betreff</Label>
-                    <Input value={seqForm.subject_template} onChange={(e) => setSeqForm({ ...seqForm, subject_template: e.target.value })} placeholder="Hallo {{contact_name}} – kurze Frage zu {{church_name}}" />
-                  </div>
-                  <div>
-                    <Label>E-Mail-Text (HTML)</Label>
+                    <Label>Zusätzlicher Kontext (optional)</Label>
                     <Textarea
-                      rows={10} value={seqForm.body_template}
-                      onChange={(e) => setSeqForm({ ...seqForm, body_template: e.target.value })}
-                      placeholder="<p>Liebe/r {{contact_name}},</p>&#10;<p>{{personal_note}}</p>&#10;<p>Darf ich Ihnen in 10 Minuten zeigen, wie BibleBot.Life Ihrer Gemeinde helfen kann?</p>&#10;<p><a href='{{booking_url}}'>Termin buchen</a></p>"
+                      rows={4}
+                      value={genContext}
+                      onChange={(e) => setGenContext(e.target.value)}
+                      placeholder="z.B. Fokus auf reformierte Gemeinden in der Deutschschweiz, betone den kostenlosen Testmonat..."
                     />
                   </div>
-                  <p className="text-xs text-muted-foreground">
-                    Platzhalter: {"{{church_name}}, {{contact_name}}, {{city}}, {{denomination}}, {{personal_note}}, {{booking_url}}, {{sender_name}}"}
-                  </p>
-                </div>
-                <DialogFooter><Button onClick={saveSequence}>Speichern</Button></DialogFooter>
-              </DialogContent>
-            </Dialog>
+                  <DialogFooter>
+                    <Button onClick={generateSequence} disabled={generating}>
+                      {generating ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : <Sparkles className="h-4 w-4 mr-2" />}
+                      {generating ? "Generiere..." : "Sequenz generieren"}
+                    </Button>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
+            </div>
 
             <div className="space-y-3">
               {sequences.length === 0 && (
