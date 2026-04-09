@@ -184,6 +184,27 @@ export function DailyImpulse() {
     );
   };
 
+  const saveSubscription = (id: string, channel: string) => {
+    localStorage.setItem(SUBSCRIBED_KEY, "1");
+    localStorage.setItem(SUBSCRIBER_ID_KEY, id);
+    localStorage.setItem(SUBSCRIBER_CHANNEL_KEY, channel);
+    setIsSubscribed(true);
+    setSubscriberId(id);
+    setSubscriberChannel(channel);
+    setShowChannels(false);
+    setShowManage(false);
+  };
+
+  const clearSubscription = () => {
+    localStorage.removeItem(SUBSCRIBED_KEY);
+    localStorage.removeItem(SUBSCRIBER_ID_KEY);
+    localStorage.removeItem(SUBSCRIBER_CHANNEL_KEY);
+    setIsSubscribed(false);
+    setSubscriberId(null);
+    setSubscriberChannel(null);
+    setShowManage(false);
+  };
+
   const handleSubscribePush = useCallback(async () => {
     setIsSubscribing(true);
     try {
@@ -210,8 +231,8 @@ export function DailyImpulse() {
         body: JSON.stringify({ channel: "push", push_subscription: pushSubscription.toJSON(), language: i18n.language }),
       });
       if (!resp.ok) throw new Error("Subscribe failed");
-      localStorage.setItem(SUBSCRIBED_KEY, "1");
-      setIsSubscribed(true);
+      const data = await resp.json();
+      saveSubscription(data.subscriber_id || "", "push");
       toast({ title: t("subscribe.toastSuccess"), description: t("subscribe.toastSuccessDesc") });
     } catch (e) {
       toast({ title: t("subscribe.toastError"), description: e instanceof Error ? e.message : t("subscribe.toastErrorDesc"), variant: "destructive" });
@@ -222,8 +243,7 @@ export function DailyImpulse() {
 
   const handleSubscribeTelegram = useCallback(() => {
     window.open(TELEGRAM_LINK, "_blank");
-    localStorage.setItem(SUBSCRIBED_KEY, "1");
-    setIsSubscribed(true);
+    saveSubscription("", "telegram");
     toast({ title: t("subscribe.toastTelegram"), description: t("subscribe.toastTelegramDesc") });
   }, [toast, t]);
 
@@ -237,8 +257,8 @@ export function DailyImpulse() {
         body: JSON.stringify({ channel: "sms", phone_number: smsPhone, language: i18n.language }),
       });
       if (!resp.ok) throw new Error("Subscribe failed");
-      localStorage.setItem(SUBSCRIBED_KEY, "1");
-      setIsSubscribed(true);
+      const data = await resp.json();
+      saveSubscription(data.subscriber_id || "", "sms");
       setShowSmsInput(false);
       toast({ title: t("subscribe.toastSuccess"), description: t("subscribe.toastSuccessDesc") });
     } catch (e) {
