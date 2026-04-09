@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { useTranslation } from "react-i18next";
-import { Sparkles, ChevronRight, BookOpen, Loader2, MessageCircle, Image, Download, Bell, Send, Smartphone, Volume2, VolumeX } from "lucide-react";
+import { Sparkles, ChevronRight, BookOpen, Loader2, MessageCircle, Image, Download, Bell, Send, Smartphone, Volume2, VolumeX, XCircle, Settings2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTTS } from "@/hooks/use-tts";
 import { openBibleBotChat } from "@/lib/chat-events";
@@ -14,6 +14,8 @@ const SUBSCRIBE_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/subscri
 const TELEGRAM_LINK = "https://t.me/meinbibelbot";
 const VAPID_PUBLIC_KEY = "BLMl5bBRzhlza0ozrHEblp3BfKtbyDsbOP-n120rl6teGPFdoyFb77P9WnOZpbFs2hKyfwILmw8WQebJrp_qc7c";
 const SUBSCRIBED_KEY = "bibelbot-daily-subscribed";
+const SUBSCRIBER_ID_KEY = "bibelbot-subscriber-id";
+const SUBSCRIBER_CHANNEL_KEY = "bibelbot-subscriber-channel";
 
 type Impulse = {
   topic: string;
