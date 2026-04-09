@@ -13,6 +13,10 @@ const TRANSLATIONS = [
   { key: "luther1912", apiId: "deu_l12" },
   { key: "schlachter2000", apiId: "deu_sch" },
   { key: "elberfelder", apiId: "deu_elbbk" },
+  { key: "kjv", apiId: "eng_kjv" },
+  { key: "web", apiId: "eng_web" },
+  { key: "niv", apiId: "eng_niv11" },
+  { key: "esv", apiId: "eng_esv16" },
 ];
 
 interface BookInfo {
