@@ -857,5 +857,8 @@
   },
   "splash": {
     "patronage": "Doporučeno"
+  },
+  "auth": {
+    "apple": "Přihlásit se přes Apple"
   }
 }

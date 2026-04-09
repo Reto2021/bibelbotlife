@@ -857,5 +857,8 @@
   },
   "splash": {
     "patronage": "Recomendado por"
+  },
+  "auth": {
+    "apple": "Iniciar sesión con Apple"
   }
 }

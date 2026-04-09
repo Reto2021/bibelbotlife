@@ -857,5 +857,8 @@
     "shareDesc": "Create a link you can send to your pastor via email or messenger. They can read the text and download it as PDF.",
     "enableShare": "Create & copy link",
     "disableShare": "Disable sharing"
+  },
+  "auth": {
+    "apple": "Sign in with Apple"
   }
 }

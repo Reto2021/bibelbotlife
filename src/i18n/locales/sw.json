@@ -857,5 +857,8 @@
   },
   "splash": {
     "patronage": "Imependekezwa na"
+  },
+  "auth": {
+    "apple": "Ingia kwa Apple"
   }
 }

@@ -857,5 +857,8 @@
   },
   "splash": {
     "patronage": "Consigliato da"
+  },
+  "auth": {
+    "apple": "Accedi con Apple"
   }
 }

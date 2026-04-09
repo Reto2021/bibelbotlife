@@ -857,5 +857,8 @@
   },
   "splash": {
     "patronage": "Anbefalet af"
+  },
+  "auth": {
+    "apple": "Log ind med Apple"
   }
 }

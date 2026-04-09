@@ -857,5 +857,8 @@
   },
   "splash": {
     "patronage": "რეკომენდებულია"
+  },
+  "auth": {
+    "apple": "Apple-ით შესვლა"
   }
 }

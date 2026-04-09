@@ -857,5 +857,8 @@
   },
   "splash": {
     "patronage": "Polecane przez"
+  },
+  "auth": {
+    "apple": "Zaloguj się przez Apple"
   }
 }

@@ -857,5 +857,8 @@
   },
   "splash": {
     "patronage": "የሚመከር በ"
+  },
+  "auth": {
+    "apple": "በApple ግባ"
   }
 }

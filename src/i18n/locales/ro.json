@@ -857,5 +857,8 @@
     "micError": "Microfonul nu a putut fi pornit. Vă rugăm să acordați permisiunea.",
     "needMore": "Vă rugăm să înregistrați mai întâi amintiri sau să scrieți notițe.",
     "genError": "Eroare la generarea textului. Vă rugăm să încercați din nou."
+  },
+  "auth": {
+    "apple": "Conectare cu Apple"
   }
 }
