@@ -400,11 +400,7 @@ export function BibleBotChat() {
 
         if (!resp.body) throw new Error(t("chat.errorNoStream"));
 
-        const reader = resp.body.getReader();
-        const decoder = new TextDecoder();
-        let buffer = "";
-
-        const upsert = (chunk: string) => {
+        const upsertChunk = (chunk: string) => {
           assistantSoFar += chunk;
           setMessages((prev) => {
             const last = prev[prev.length - 1];
@@ -415,26 +411,53 @@ export function BibleBotChat() {
           });
         };
 
-        while (true) {
-          const { done, value } = await reader.read();
-          if (done) break;
-          buffer += decoder.decode(value, { stream: true });
-          let idx: number;
-          while ((idx = buffer.indexOf("\n")) !== -1) {
-            let line = buffer.slice(0, idx);
-            buffer = buffer.slice(idx + 1);
-            if (line.endsWith("\r")) line = line.slice(0, -1);
+        // Use streaming if supported, otherwise fall back to reading the full body
+        try {
+          const reader = resp.body.getReader();
+          const decoder = new TextDecoder();
+          let buffer = "";
+
+          while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+            buffer += decoder.decode(value, { stream: true });
+            let idx: number;
+            while ((idx = buffer.indexOf("\n")) !== -1) {
+              let line = buffer.slice(0, idx);
+              buffer = buffer.slice(idx + 1);
+              if (line.endsWith("\r")) line = line.slice(0, -1);
+              if (!line.startsWith("data: ")) continue;
+              const json = line.slice(6).trim();
+              if (json === "[DONE]") break;
+              try {
+                const parsed = JSON.parse(json);
+                const content = parsed.choices?.[0]?.delta?.content;
+                if (content) upsertChunk(content);
+              } catch {
+                buffer = line + "\n" + buffer;
+                break;
+              }
+            }
+          }
+        } catch (streamErr) {
+          // Fallback: re-fetch without streaming for Safari/iOS
+          console.warn("Stream read failed, using fallback:", streamErr);
+          const fallbackResp = await fetch(CHAT_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}` },
+            body: JSON.stringify({ messages: contextMessages, language: i18n.language, mode: chatMode, preferredTranslation: preferredTranslation !== "auto" ? preferredTranslation : undefined }),
+          });
+          const fullText = await fallbackResp.text();
+          const lines = fullText.split("\n");
+          for (const line of lines) {
             if (!line.startsWith("data: ")) continue;
             const json = line.slice(6).trim();
             if (json === "[DONE]") break;
             try {
               const parsed = JSON.parse(json);
               const content = parsed.choices?.[0]?.delta?.content;
-              if (content) upsert(content);
-            } catch {
-              buffer = line + "\n" + buffer;
-              break;
-            }
+              if (content) upsertChunk(content);
+            } catch { /* skip */ }
           }
         }
 
