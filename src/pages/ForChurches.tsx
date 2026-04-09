@@ -279,9 +279,6 @@ const ForChurches = () => {
 
       {/* Footer links */}
       <div className="py-8 text-center space-y-2">
-        <Link to="/for-institutions" className="text-primary hover:underline text-sm font-medium block">
-          {t("institutions.badge")} →
-        </Link>
         <Link to="/churches" className="text-primary hover:underline text-sm font-medium block">
           {t("church.viewDirectory")} →
         </Link>
