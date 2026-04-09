@@ -358,7 +358,7 @@ export function DailyImpulse() {
               <Button
                 size="sm"
                 variant="outline"
-                onClick={generateShareImage}
+                onClick={handleGenerateShareImage}
                 disabled={isGeneratingImage}
                 className="text-xs border-primary/30 text-primary hover:bg-primary/10"
               >
