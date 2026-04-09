@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import { Calendar, Plus, BookOpen, Users, Settings, Home, ListMusic, FileText, Receipt } from "lucide-react";
+import { Calendar, Plus, BookOpen, Users, Settings, Home, ListMusic, FileText, Receipt, LayoutTemplate } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation } from "react-router-dom";
 import {
@@ -26,6 +26,7 @@ const navItems = [
   { title: "Kalender", url: "/dashboard/services", icon: Calendar },
   { title: "Bibliothek", url: "/dashboard/resources", icon: BookOpen },
   { title: "Serien", url: "/dashboard/series", icon: ListMusic },
+  { title: "Vorlagen", url: "/dashboard/templates", icon: LayoutTemplate },
   { title: "Register", url: "/dashboard/records", icon: FileText },
   { title: "Team", url: "/dashboard/team", icon: Users },
   { title: "Rechnungen", url: "/dashboard/invoices", icon: Receipt },

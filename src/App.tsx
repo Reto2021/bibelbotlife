@@ -36,6 +36,7 @@ const TeamPage = lazy(() => import("./pages/dashboard/TeamPage"));
 const SettingsPage = lazy(() => import("./pages/dashboard/SettingsPage"));
 const InvoicesPage = lazy(() => import("./pages/dashboard/InvoicesPage"));
 const ConductorMode = lazy(() => import("./pages/dashboard/ConductorMode"));
+const TemplatesPage = lazy(() => import("./pages/dashboard/TemplatesPage"));
 const MeinBereich = lazy(() => import("./pages/MeinBereich"));
 const MeinBereichHome = lazy(() => import("./pages/mein-bereich/MeinBereichHome"));
 const EulogyWriter = lazy(() => import("./pages/mein-bereich/EulogyWriter"));
@@ -139,6 +140,7 @@ const App = () => {
                     <Route path="team" element={<TeamPage />} />
                     <Route path="settings" element={<SettingsPage />} />
                     <Route path="invoices" element={<InvoicesPage />} />
+                    <Route path="templates" element={<TemplatesPage />} />
                   </Route>
                   <Route path="/mein-bereich" element={<ProtectedRoute><MeinBereich /></ProtectedRoute>}>
                     <Route index element={<MeinBereichHome />} />

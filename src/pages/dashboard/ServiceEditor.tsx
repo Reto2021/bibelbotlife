@@ -16,6 +16,7 @@ import { toast } from "sonner";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { ResourcePicker } from "@/components/services/ResourcePicker";
 import type { Resource } from "@/hooks/use-resources";
+import { useTemplates, type ServiceTemplate } from "@/hooks/use-templates";
 
 export default function ServiceEditor() {
   const { id } = useParams();
@@ -36,6 +37,8 @@ export default function ServiceEditor() {
   const [bibleBotContext, setBibleBotContext] = useState("");
   const [resourcePickerOpen, setResourcePickerOpen] = useState(false);
   const [resourcePickerBlockId, setResourcePickerBlockId] = useState<string | null>(null);
+  const [templatePickerOpen, setTemplatePickerOpen] = useState(isNew);
+  const { data: templates = [] } = useTemplates();
 
   // Load existing service
   useEffect(() => {
@@ -125,7 +128,6 @@ export default function ServiceEditor() {
   }, [resourcePickerBlockId, updateBlock, blocks]);
 
   const addBlockFromResource = useCallback((resource: Resource) => {
-    // Map resource type to block type
     const typeMap: Record<string, BlockType> = {
       song: "song", prayer: "prayer", reading: "reading", liturgy: "liturgy", other: "free",
     };
@@ -140,6 +142,17 @@ export default function ServiceEditor() {
     setBlocks((prev) => [...prev, newBlock]);
     toast.success(`«${resource.title}» hinzugefügt`);
   }, []);
+
+  const applyTemplate = useCallback((template: ServiceTemplate) => {
+    const newBlocks = (template.blocks ?? []).map((b) => ({ ...b, id: crypto.randomUUID() }));
+    setBlocks(newBlocks);
+    setTradition(template.tradition);
+    if (!title || title === "Neuer Gottesdienst") {
+      setTitle(template.name);
+    }
+    setTemplatePickerOpen(false);
+    toast.success(`Vorlage «${template.name}» angewendet`);
+  }, [title]);
 
   const handleSave = async () => {
     if (!user || !church) return;
@@ -362,6 +375,41 @@ export default function ServiceEditor() {
           }
         }}
       />
+
+      {/* Template Picker (shown for new services) */}
+      <Dialog open={templatePickerOpen} onOpenChange={setTemplatePickerOpen}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle>Vorlage auswählen</DialogTitle>
+          </DialogHeader>
+          {templates.length === 0 ? (
+            <div className="text-center py-8 text-muted-foreground">
+              <p className="text-sm">Noch keine Vorlagen vorhanden.</p>
+              <p className="text-xs mt-1">Du kannst Vorlagen unter «Vorlagen» im Menü erstellen.</p>
+            </div>
+          ) : (
+            <div className="space-y-2 max-h-80 overflow-y-auto">
+              {templates.map((t) => (
+                <button
+                  key={t.id}
+                  className="w-full text-left px-4 py-3 rounded-lg hover:bg-muted transition-colors border border-border"
+                  onClick={() => applyTemplate(t)}
+                >
+                  <p className="font-medium text-sm text-foreground">{t.name}</p>
+                  <p className="text-xs text-muted-foreground mt-0.5">
+                    {(t.blocks ?? []).length} Blöcke · {t.tradition === "reformed" ? "Reformiert" : t.tradition === "catholic" ? "Katholisch" : t.tradition === "lutheran" ? "Lutherisch" : t.tradition === "evangelical" ? "Evangelikal" : t.tradition}
+                  </p>
+                </button>
+              ))}
+            </div>
+          )}
+          <div className="flex justify-end">
+            <Button variant="ghost" size="sm" onClick={() => setTemplatePickerOpen(false)}>
+              Ohne Vorlage starten
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
