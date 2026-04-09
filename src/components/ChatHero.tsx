@@ -109,8 +109,98 @@ function makeRefsClickable(children: React.ReactNode, onRefClick: (msg: string) 
   if (Array.isArray(children)) return children.map((child, i) => <span key={i}>{processNode(child)}</span>);
   return processNode(children);
 }
+// Auto-typing demo that creates a "wow moment" in the first few seconds
+function LiveDemoPreview({ onTryIt }: { onTryIt: () => void }) {
+  const { t } = useTranslation();
+  const userMsg = t("chatDemo.userMsg", "Ich fühle mich allein. Was sagt die Bibel dazu?");
+  const botMsg = t("chatDemo.botMsg", "Du bist nicht allein – auch wenn es sich gerade so anfühlt. In Psalm 23 heisst es: «Der Herr ist mein Hirte, mir wird nichts mangeln.» Das bedeutet, dass Gott dir nahe ist, auch in den dunkelsten Momenten.");
+  const [phase, setPhase] = useState<"user" | "typing" | "bot" | "done">("user");
+  const [botText, setBotText] = useState("");
+  const botCharRef = useRef(0);
 
-export function ChatHero() {
+  useEffect(() => {
+    // Phase 1: Show user bubble, then after 800ms start "typing"
+    const t1 = setTimeout(() => setPhase("typing"), 800);
+    // Phase 2: After 1.5s start typing the bot response
+    const t2 = setTimeout(() => {
+      setPhase("bot");
+      const interval = setInterval(() => {
+        botCharRef.current += 2;
+        if (botCharRef.current >= botMsg.length) {
+          setBotText(botMsg);
+          clearInterval(interval);
+          setTimeout(() => setPhase("done"), 400);
+        } else {
+          setBotText(botMsg.slice(0, botCharRef.current));
+        }
+      }, 20);
+      return () => clearInterval(interval);
+    }, 1500);
+    return () => { clearTimeout(t1); clearTimeout(t2); };
+  }, [botMsg]);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 8 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.3 }}
+      className="max-w-2xl mx-auto w-full mb-5"
+    >
+      <div className="bg-card/50 backdrop-blur-sm rounded-2xl border border-border/60 p-3 sm:p-4 space-y-2.5">
+        {/* User bubble */}
+        <div className="flex justify-end">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.3 }}
+            className="bg-primary/10 border border-primary/15 rounded-2xl rounded-br-md px-3 py-2 max-w-[80%]"
+          >
+            <p className="text-sm text-foreground">{userMsg}</p>
+          </motion.div>
+        </div>
+        {/* Bot bubble */}
+        {(phase === "typing" || phase === "bot" || phase === "done") && (
+          <div className="flex justify-start">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3 }}
+              className="bg-card border border-border rounded-2xl rounded-bl-md px-3 py-2 max-w-[85%] shadow-sm"
+            >
+              {phase === "typing" ? (
+                <div className="flex items-center gap-1 py-1 px-1">
+                  {[0, 1, 2].map((i) => (
+                    <motion.div
+                      key={i}
+                      className="w-1.5 h-1.5 rounded-full bg-muted-foreground/40"
+                      animate={{ opacity: [0.3, 1, 0.3] }}
+                      transition={{ duration: 0.8, repeat: Infinity, delay: i * 0.2 }}
+                    />
+                  ))}
+                </div>
+              ) : (
+                <p className="text-sm text-foreground/90 leading-relaxed">{botText}</p>
+              )}
+            </motion.div>
+          </div>
+        )}
+        {/* CTA */}
+        {phase === "done" && (
+          <motion.button
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            onClick={onTryIt}
+            className="w-full text-center text-xs text-primary font-semibold hover:underline cursor-pointer pt-1"
+          >
+            {t("chatDemo.cta", "Starte jetzt dein eigenes Gespräch →")}
+          </motion.button>
+        )}
+      </div>
+    </motion.div>
+  );
+}
+
+
   const { t, i18n } = useTranslation();
   const [input, setInput] = useState("");
   const [placeholder, setPlaceholder] = useState("");
