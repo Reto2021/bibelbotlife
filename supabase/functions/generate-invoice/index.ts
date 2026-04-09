@@ -39,7 +39,7 @@ Deno.serve(async (req) => {
       });
     }
 
-    // Get church billing data
+    // Get church data
     const { data: church, error: churchErr } = await supabase
       .from("church_partners")
       .select("*")
@@ -52,6 +52,13 @@ Deno.serve(async (req) => {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
     }
+
+    // Get billing data from separate table
+    const { data: billing } = await supabase
+      .from("church_billing")
+      .select("*")
+      .eq("church_id", church_id)
+      .maybeSingle();
 
     // Calculate amount from line items
     const items = line_items && line_items.length > 0
@@ -96,7 +103,7 @@ Deno.serve(async (req) => {
     }
 
     // Generate PDF as HTML → convert later if needed; for now return structured data
-    const pdfHtml = generateInvoiceHtml(invoice, church, items);
+    const pdfHtml = generateInvoiceHtml(invoice, church, billing, items);
 
     // Store HTML as a file for now (can be converted to PDF via browser/puppeteer)
     const fileName = `${church_id}/${invoice.invoice_number}.html`;
@@ -138,6 +145,7 @@ Deno.serve(async (req) => {
 function generateInvoiceHtml(
   invoice: any,
   church: any,
+  billing: any,
   items: any[]
 ): string {
   const formatDate = (d: string) => {
@@ -199,10 +207,10 @@ function generateInvoiceHtml(
       ${SENDER.country}
     </div>
     <div class="recipient" style="margin-top:40px">
-      <strong>${church.billing_name || church.name}</strong><br>
-      ${church.billing_street || ""}<br>
-      ${church.billing_zip || ""} ${church.billing_city || church.city || ""}<br>
-      ${church.billing_country || church.country || "CH"}
+      <strong>${billing?.billing_name || church.name}</strong><br>
+      ${billing?.billing_street || ""}<br>
+      ${billing?.billing_zip || ""} ${billing?.billing_city || church.city || ""}<br>
+      ${billing?.billing_country || church.country || "CH"}
     </div>
   </div>
   <div class="invoice-meta">

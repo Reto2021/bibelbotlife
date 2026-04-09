@@ -190,6 +190,69 @@ export type Database = {
           },
         ]
       }
+      church_billing: {
+        Row: {
+          billing_city: string | null
+          billing_country: string | null
+          billing_email: string | null
+          billing_interval: string | null
+          billing_name: string | null
+          billing_reference: string | null
+          billing_street: string | null
+          billing_zip: string | null
+          church_id: string
+          created_at: string
+          iban: string | null
+          id: string
+          updated_at: string
+        }
+        Insert: {
+          billing_city?: string | null
+          billing_country?: string | null
+          billing_email?: string | null
+          billing_interval?: string | null
+          billing_name?: string | null
+          billing_reference?: string | null
+          billing_street?: string | null
+          billing_zip?: string | null
+          church_id: string
+          created_at?: string
+          iban?: string | null
+          id?: string
+          updated_at?: string
+        }
+        Update: {
+          billing_city?: string | null
+          billing_country?: string | null
+          billing_email?: string | null
+          billing_interval?: string | null
+          billing_name?: string | null
+          billing_reference?: string | null
+          billing_street?: string | null
+          billing_zip?: string | null
+          church_id?: string
+          created_at?: string
+          iban?: string | null
+          id?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "church_billing_church_id_fkey"
+            columns: ["church_id"]
+            isOneToOne: true
+            referencedRelation: "church_partners"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "church_billing_church_id_fkey"
+            columns: ["church_id"]
+            isOneToOne: true
+            referencedRelation: "church_partners_public"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       church_contact_requests: {
         Row: {
           church_id: string
@@ -234,14 +297,6 @@ export type Database = {
       }
       church_partners: {
         Row: {
-          billing_city: string | null
-          billing_country: string | null
-          billing_email: string | null
-          billing_interval: string | null
-          billing_name: string | null
-          billing_reference: string | null
-          billing_street: string | null
-          billing_zip: string | null
           city: string | null
           contact_email: string | null
           contact_person: string | null
@@ -250,7 +305,6 @@ export type Database = {
           created_at: string
           custom_bot_name: string | null
           denomination: string | null
-          iban: string | null
           id: string
           is_active: boolean
           language: string | null
@@ -273,14 +327,6 @@ export type Database = {
           welcome_message: string | null
         }
         Insert: {
-          billing_city?: string | null
-          billing_country?: string | null
-          billing_email?: string | null
-          billing_interval?: string | null
-          billing_name?: string | null
-          billing_reference?: string | null
-          billing_street?: string | null
-          billing_zip?: string | null
           city?: string | null
           contact_email?: string | null
           contact_person?: string | null
@@ -289,7 +335,6 @@ export type Database = {
           created_at?: string
           custom_bot_name?: string | null
           denomination?: string | null
-          iban?: string | null
           id?: string
           is_active?: boolean
           language?: string | null
@@ -312,14 +357,6 @@ export type Database = {
           welcome_message?: string | null
         }
         Update: {
-          billing_city?: string | null
-          billing_country?: string | null
-          billing_email?: string | null
-          billing_interval?: string | null
-          billing_name?: string | null
-          billing_reference?: string | null
-          billing_street?: string | null
-          billing_zip?: string | null
           city?: string | null
           contact_email?: string | null
           contact_person?: string | null
@@ -328,7 +365,6 @@ export type Database = {
           created_at?: string
           custom_bot_name?: string | null
           denomination?: string | null
-          iban?: string | null
           id?: string
           is_active?: boolean
           language?: string | null

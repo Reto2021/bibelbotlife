@@ -11,7 +11,7 @@ import { Badge } from "@/components/ui/badge";
 import { useUserChurch } from "@/hooks/use-user-church";
 import { useAuth } from "@/hooks/use-auth";
 import { supabase } from "@/integrations/supabase/client";
-import { useQueryClient } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
 
 const DENOMINATIONS = ["reformiert", "katholisch", "lutherisch", "evangelisch", "freikirchlich", "andere"];
@@ -51,7 +51,10 @@ export default function SettingsPage() {
     primary_color: "",
     secondary_color: "",
     custom_bot_name: "",
-    // Billing fields
+    contact_person: "",
+  });
+
+  const [billingForm, setBillingForm] = useState({
     billing_name: "",
     billing_street: "",
     billing_zip: "",
@@ -60,7 +63,19 @@ export default function SettingsPage() {
     billing_email: "",
     billing_reference: "",
     iban: "",
-    contact_person: "",
+  });
+
+  const { data: billing } = useQuery({
+    queryKey: ["church-billing", church?.id],
+    enabled: !!church?.id,
+    queryFn: async () => {
+      const { data } = await supabase
+        .from("church_billing")
+        .select("*")
+        .eq("church_id", church!.id)
+        .maybeSingle();
+      return data;
+    },
   });
 
   useEffect(() => {
@@ -80,18 +95,25 @@ export default function SettingsPage() {
         primary_color: church.primary_color || "",
         secondary_color: church.secondary_color || "",
         custom_bot_name: church.custom_bot_name || "",
-        billing_name: church.billing_name || "",
-        billing_street: church.billing_street || "",
-        billing_zip: church.billing_zip || "",
-        billing_city: church.billing_city || "",
-        billing_country: church.billing_country || "CH",
-        billing_email: church.billing_email || "",
-        billing_reference: church.billing_reference || "",
-        iban: church.iban || "",
         contact_person: church.contact_person || "",
       });
     }
   }, [church]);
+
+  useEffect(() => {
+    if (billing) {
+      setBillingForm({
+        billing_name: billing.billing_name || "",
+        billing_street: billing.billing_street || "",
+        billing_zip: billing.billing_zip || "",
+        billing_city: billing.billing_city || "",
+        billing_country: billing.billing_country || "CH",
+        billing_email: billing.billing_email || "",
+        billing_reference: billing.billing_reference || "",
+        iban: billing.iban || "",
+      });
+    }
+  }, [billing]);
 
   const handleSave = async () => {
     if (!church) return;
@@ -114,19 +136,29 @@ export default function SettingsPage() {
           primary_color: form.primary_color || null,
           secondary_color: form.secondary_color || null,
           custom_bot_name: form.custom_bot_name || null,
-          billing_name: form.billing_name || null,
-          billing_street: form.billing_street || null,
-          billing_zip: form.billing_zip || null,
-          billing_city: form.billing_city || null,
-          billing_country: form.billing_country || null,
-          billing_email: form.billing_email || null,
-          billing_reference: form.billing_reference || null,
-          iban: form.iban || null,
           contact_person: form.contact_person || null,
         })
         .eq("id", church.id);
       if (error) throw error;
+
+      // Upsert billing
+      const { error: billingError } = await supabase
+        .from("church_billing")
+        .upsert({
+          church_id: church.id,
+          billing_name: billingForm.billing_name || null,
+          billing_street: billingForm.billing_street || null,
+          billing_zip: billingForm.billing_zip || null,
+          billing_city: billingForm.billing_city || null,
+          billing_country: billingForm.billing_country || null,
+          billing_email: billingForm.billing_email || null,
+          billing_reference: billingForm.billing_reference || null,
+          iban: billingForm.iban || null,
+        }, { onConflict: "church_id" });
+      if (billingError) throw billingError;
+
       queryClient.invalidateQueries({ queryKey: ["user-church"] });
+      queryClient.invalidateQueries({ queryKey: ["church-billing", church.id] });
       toast.success(t("settings.saved", "Einstellungen gespeichert"));
     } catch {
       toast.error(t("settings.error", "Fehler beim Speichern"));
@@ -160,6 +192,18 @@ export default function SettingsPage() {
         value={form[key]}
         placeholder={placeholder}
         onChange={(e) => setForm({ ...form, [key]: e.target.value })}
+      />
+    </div>
+  );
+
+  const billingField = (key: keyof typeof billingForm, label: string, type = "text", placeholder = "") => (
+    <div>
+      <Label>{label}</Label>
+      <Input
+        type={type}
+        value={billingForm[key]}
+        placeholder={placeholder}
+        onChange={(e) => setBillingForm({ ...billingForm, [key]: e.target.value })}
       />
     </div>
   );
@@ -288,21 +332,21 @@ export default function SettingsPage() {
 
           {/* Billing address */}
           <h4 className="text-sm font-medium pt-2">{t("settings.billingAddress", "Rechnungsadresse")}</h4>
-          {field("billing_name", t("settings.billingName", "Name / Organisation"))}
-          {field("billing_street", t("settings.billingStreet", "Strasse"))}
+          {billingField("billing_name", t("settings.billingName", "Name / Organisation"))}
+          {billingField("billing_street", t("settings.billingStreet", "Strasse"))}
           <div className="grid grid-cols-3 gap-3">
-            {field("billing_zip", t("settings.billingZip", "PLZ"))}
+            {billingField("billing_zip", t("settings.billingZip", "PLZ"))}
             <div className="col-span-2">
-              {field("billing_city", t("settings.billingCity", "Stadt"))}
+              {billingField("billing_city", t("settings.billingCity", "Stadt"))}
             </div>
           </div>
-          {field("billing_country", t("settings.billingCountry", "Land"))}
-          {field("billing_email", t("settings.billingEmail", "Rechnungs-E-Mail"), "email")}
+          {billingField("billing_country", t("settings.billingCountry", "Land"))}
+          {billingField("billing_email", t("settings.billingEmail", "Rechnungs-E-Mail"), "email")}
 
           {/* Payment */}
           <h4 className="text-sm font-medium pt-2">{t("settings.payment", "Zahlung")}</h4>
-          {field("iban", "IBAN")}
-          {field("billing_reference", t("settings.billingRef", "Referenz / Kostenstelle"))}
+          {billingField("iban", "IBAN")}
+          {billingField("billing_reference", t("settings.billingRef", "Referenz / Kostenstelle"))}
         </CardContent>
       </Card>
 
