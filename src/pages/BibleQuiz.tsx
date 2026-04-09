@@ -220,6 +220,36 @@ export default function BibleQuiz() {
                 </Card>
               </motion.div>
             </div>
+
+            {/* Highscores */}
+            {highscores.length > 0 && (
+              <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="mt-8">
+                <Card className="p-5">
+                  <div className="flex items-center gap-2 mb-4">
+                    <Trophy className="h-5 w-5 text-primary" />
+                    <h3 className="font-semibold text-foreground">Bestenliste</h3>
+                  </div>
+                  <div className="space-y-2">
+                    {highscores.map((hs, i) => {
+                      const medal = i === 0 ? "🥇" : i === 1 ? "🥈" : i === 2 ? "🥉" : `${i + 1}.`;
+                      const pct = Math.round((hs.score / hs.total_questions) * 100);
+                      const date = new Date(hs.created_at).toLocaleDateString("de-CH", { day: "2-digit", month: "2-digit" });
+                      return (
+                        <div key={i} className="flex items-center gap-3 text-sm py-1.5 border-b last:border-0 border-border">
+                          <span className="w-6 text-center font-medium">{medal}</span>
+                          <span className="font-bold text-foreground">{hs.score}/{hs.total_questions}</span>
+                          <span className="text-muted-foreground">({pct}%)</span>
+                          <Badge variant="outline" className="text-[10px] ml-auto">
+                            {hs.quiz_mode === "multiple_choice" ? "MC" : "Vers"}
+                          </Badge>
+                          <span className="text-xs text-muted-foreground">{date}</span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </Card>
+              </motion.div>
+            )}
           </div>
         </div>
       </>
