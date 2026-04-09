@@ -7,7 +7,8 @@
     "badge": {
       "noLogin": "Geen aanmelding",
       "noData": "Geen data",
-      "noJudgment": "Geen oordeel"
+      "noJudgment": "Geen oordeel",
+      "optionalLogin": "Aanmelding opsioneel"
     },
     "title1": "Die Bybel.",
     "title2": " Herbedink.",
@@ -21,7 +22,9 @@
     "loading": "Daaglikse impuls word gelaai...",
     "label": "Impuls van die dag",
     "deepDive": "Wat beteken dit vir my?",
-    "explore": "Lees hele gedeelte"
+    "explore": "Lees hele gedeelte",
+    "alreadySubscribed": "Jy ontvang die daaglikse inspirasie",
+    "subscribeCta": "Ontvang hierdie inspirasie daagliks?"
   },
   "features": {
     "sectionTitle": "Hoe jou BibleBot jou vergesel",
@@ -151,7 +154,8 @@
     "toastPermDenied": "Toestemming geweier",
     "toastPermDeniedDesc": "Laat asseblief kennisgewings toe in jou blaaierinstellings.",
     "toastError": "Fout",
-    "toastErrorDesc": "Probeer asseblief later weer."
+    "toastErrorDesc": "Probeer asseblief later weer.",
+    "subscribeButton": "Teken in vir Inspo"
   },
   "faq": {
     "badge": "Gereelde vrae",
@@ -286,7 +290,8 @@
     "errorTitle": "Fout",
     "errorConnection": "kon nie bereik word nie.",
     "errorNoStream": "Geen stroom",
-    "seniorMode": "Seniormodus (groter lettertipe)"
+    "seniorMode": "Seniormodus (groter lettertipe)",
+    "loginHint": "Meld aan om gesprekke oor alle toestelle te behou"
   },
   "install": {
     "title": "Installeer BibleBot",
@@ -333,7 +338,10 @@
     "baptism": {
       "title": "Vind doopteks",
       "desc": "Die perfekte vers vir jou kind",
-      "prompt": "Help my om 'n gepaste doopteks te vind. Watter soort kind is dit en wat wens die ouers?"
+      "prompt": "Help my om 'n gepaste doopteks te vind. Watter soort kind is dit en wat wens die ouers?",
+      "prompt_v1": "Wat beteken die doop eintlik?",
+      "prompt_v2": "Vertel my van die doop in die Bybel – verras my!",
+      "prompt_v3": "Waarom laat mense hulle doop?"
     },
     "condolence": {
       "title": "Trooswoorde",
@@ -348,7 +356,10 @@
     "anxiety": {
       "title": "Angs & Sorge",
       "desc": "Vind moed in moeilike tye",
-      "prompt": "Ek sukkel tans met angs en sorge. Wat sê die Bybel hieroor? Is daar verse wat moed gee?"
+      "prompt": "Ek sukkel tans met angs en sorge. Wat sê die Bybel hieroor? Is daar verse wat moed gee?",
+      "prompt_v1": "Ek is angstig. Wat sê die Bybel oor angs?",
+      "prompt_v2": "Hoe kan geloof my help met angs?",
+      "prompt_v3": "Watter Bybelse figure was ook angstig?"
     },
     "confession": {
       "title": "Belydenis",
@@ -358,7 +369,10 @@
     "heartbreak": {
       "title": "Liefdesverdriet",
       "desc": "Wat die Bybel oor hartseer sê",
-      "prompt": "My hart is gebreek. Wat sê die Bybel oor liefdesverdriet en hoe 'n mens weer hoop kan vind?"
+      "prompt": "My hart is gebreek. Wat sê die Bybel oor liefdesverdriet en hoe 'n mens weer hoop kan vind?",
+      "prompt_v1": "My hart is gebreek. Wat sê die Bybel hieroor?",
+      "prompt_v2": "Hoe hanteer ek hartseer – is daar Bybelse hulp?",
+      "prompt_v3": "Kan God 'n gebroke hart genees?"
     },
     "newstart": {
       "title": "Nuwe begin",
@@ -388,7 +402,10 @@
     "gratitude": {
       "title": "Dankbaarheid",
       "desc": "'n Persoonlike dankgebed",
-      "prompt": "Ek wil God dank. Help my om 'n persoonlike dankgebed te formuleer."
+      "prompt": "Ek wil God dank. Help my om 'n persoonlike dankgebed te formuleer.",
+      "prompt_v1": "Hoe kan ek dankbaarder word?",
+      "prompt_v2": "Wat sê die Bybel oor dankbaarheid?",
+      "prompt_v3": "Waarom is dankbaarheid so belangrik in die geloof?"
     },
     "lifewheel": {
       "title": "Lewenswiel",
@@ -447,7 +464,10 @@
     "forgiveness": {
       "title": "Vergifnis",
       "desc": "As vergifnis onmoontlik lyk",
-      "prompt": "Ek kan iemand eenvoudig nie vergewe nie. Dit maak te veel seer. Wat sê die Bybel oor vergifnis?"
+      "prompt": "Ek kan iemand eenvoudig nie vergewe nie. Dit maak te veel seer. Wat sê die Bybel oor vergifnis?",
+      "prompt_v1": "Wat sê die Bybel oor vergifnis?",
+      "prompt_v2": "Hoe kan ek iemand vergewe wat my seergemaak het?",
+      "prompt_v3": "Is daar grense aan vergifnis?"
     },
     "familyconflict": {
       "title": "Familiekonflik",
@@ -467,12 +487,23 @@
     "prayer": {
       "title": "Gebedsversoek",
       "desc": "Saam bid",
-      "prompt": "Ek het 'n gebedsversoek en wil saam bid. Vergesel my in gebed."
+      "prompt": "Ek het 'n gebedsversoek en wil saam bid. Vergesel my in gebed.",
+      "prompt_v1": "Hoe kan ek leer bid?",
+      "prompt_v2": "Wat sê die Bybel oor gebed?",
+      "prompt_v3": "Waarom verhoor God sommige gebede nie?"
     },
     "bibleverse": {
       "title": "Vers verstaan",
       "desc": "'n Bybelvers laat verduidelik",
       "prompt": "Ek wil 'n Bybelvers beter verstaan. Kan jy my help om dit in konteks te plaas?"
+    },
+    "biblequiz": {
+      "desc": "Toets jou Bybelkennis speelsgewys",
+      "title": "Bybelvasvra"
+    },
+    "prayerwall": {
+      "desc": "Deel gebedsversoeke & bid vir mekaar",
+      "title": "Gebedsmuur"
     }
   },
   "lifeWheel": {
@@ -801,5 +832,30 @@
     "weddingDesc": "Skryf huweliksbeloftes, kies liedjies en beplan die viering.",
     "baptismDesc": "Formuleer doopwense en berei die proses met die gemeente voor.",
     "confirmationDesc": "Vind 'n bevestigingsvers en berei persoonlike tekste voor."
+  },
+  "chatHero": {
+    "ariaLabel": "Stel 'n vraag aan BibleBot",
+    "focusPlaceholder": "Skryf jou vraag…",
+    "placeholder1": "Wat maak my werklik dankbaar?",
+    "placeholder2": "Hoe vind ek innerlike vrede?",
+    "placeholder3": "Wat gee my hoop?",
+    "placeholder4": "Wat begeer my hart?",
+    "placeholder5": "Wat kan ek vandag goeds doen?",
+    "send": "Stuur",
+    "subtitle": "Stel jou vraag – openlik, eerlik, sonder aanmelding.",
+    "suggestion1": "Waarvoor staan my naam?",
+    "suggestion2": "Wat gee my vandag krag?",
+    "suggestion3": "Waarvoor is ek dankbaar?"
+  },
+  "meta": {
+    "forChurchesDesc": "BibleBot as vennoot vir u gemeente: jeugwerk, bevestiging, berading en Bybelgroepe. Gratis tot Premium.",
+    "forChurchesTitle": "BibleBot vir Gemeentes – Digitale Berading & Bybelbegeleiding",
+    "homeDesc": "BibleBot vergesel jou met 5 Bybelvertalings, afrigtingsmetodiek & berading. Anoniem, gratis, in 36 tale.",
+    "homeTitle": "BibleBot – Jou persoonlike Bybel-metgesel | Gratis & Anoniem",
+    "loginDesc": "Meld aan by BibleBot om jou persoonlike seremonies voor te berei.",
+    "loginTitle": "Meld aan – BibleBot"
+  },
+  "splash": {
+    "patronage": "Aanbeveel deur"
   }
 }
