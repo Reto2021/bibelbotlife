@@ -153,6 +153,60 @@ export function ServiceBlock({ block, onUpdate, onDelete, onAskBibleBot, onPickR
             />
             <span className="text-xs text-muted-foreground">Minuten</span>
           </div>
+          {(block.type === "song" || block.type === "music") && (
+            <div className="mt-2 space-y-2">
+              <div className="flex items-center gap-2">
+                <Link2 className="h-4 w-4 text-muted-foreground shrink-0" />
+                <Input
+                  value={mediaUrl}
+                  onChange={(e) => onUpdate(block.id, { metadata: { ...block.metadata, mediaUrl: e.target.value } })}
+                  placeholder="Spotify, YouTube oder Apple Music Link einfügen..."
+                  className="flex-1 h-7 text-xs"
+                />
+                {mediaUrl && !embedInfo && (
+                  <a href={mediaUrl} target="_blank" rel="noopener noreferrer" className="shrink-0">
+                    <ExternalLink className="h-4 w-4 text-muted-foreground hover:text-primary" />
+                  </a>
+                )}
+              </div>
+              {embedInfo?.type === "youtube" && (
+                <div className="rounded-md overflow-hidden aspect-video max-h-40">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${embedInfo.id}`}
+                    className="w-full h-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    title="YouTube"
+                  />
+                </div>
+              )}
+              {embedInfo?.type === "spotify" && (
+                <div className="rounded-md overflow-hidden">
+                  <iframe
+                    src={`https://open.spotify.com/embed/${embedInfo.kind}/${embedInfo.id}?theme=0`}
+                    className="w-full rounded-lg"
+                    height="80"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"
+                    title="Spotify"
+                  />
+                </div>
+              )}
+              {embedInfo?.type === "apple" && (
+                <div className="rounded-md overflow-hidden">
+                  <iframe
+                    src={`https://embed.music.apple.com/${embedInfo.path}`}
+                    className="w-full rounded-lg"
+                    height="175"
+                    allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+                    loading="lazy"
+                    title="Apple Music"
+                  />
+                </div>
+              )}
+            </div>
+          )}
         </div>
       )}
     </Card>
