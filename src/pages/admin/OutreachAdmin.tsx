@@ -263,6 +263,9 @@ export default function OutreachAdmin() {
   const [personalizePreviewOpen, setPersonalizePreviewOpen] = useState(false);
   const [savingPersonalized, setSavingPersonalized] = useState(false);
 
+  // ─── Bulk Personalisierung ────────────────────────────
+  const [bulkProgress, setBulkProgress] = useState<{ current: number; total: number; success: number; errors: number } | null>(null);
+
   const generatePersonalizedEmail = async (lead: any, stepNumber?: number) => {
     setPersonalizingLead(lead.id);
     try {
@@ -281,6 +284,60 @@ export default function OutreachAdmin() {
     } finally {
       setPersonalizingLead(null);
     }
+  };
+
+  const bulkPersonalize = async (stepNumber?: number) => {
+    if (!selectedCampaignId || leads.length === 0) return;
+
+    // Filter leads that are "new" or "contacted" (skip converted/unsubscribed)
+    const eligibleLeads = leads.filter((l: any) => ["new", "contacted"].includes(l.status));
+    if (eligibleLeads.length === 0) {
+      toast.error("Keine offenen Leads zum Personalisieren");
+      return;
+    }
+
+    const progress = { current: 0, total: eligibleLeads.length, success: 0, errors: 0 };
+    setBulkProgress({ ...progress });
+
+    for (const lead of eligibleLeads) {
+      progress.current++;
+      setBulkProgress({ ...progress });
+
+      try {
+        const targetStep = stepNumber || (lead.current_step + 1) || 1;
+        const { data, error } = await supabase.functions.invoke("outreach-generate-sequence", {
+          body: { mode: "personalize", lead_id: lead.id, step_number: targetStep },
+        });
+        if (error) throw error;
+
+        // Auto-save the personalized email
+        const { error: insertErr } = await supabase.from("outreach_emails").insert({
+          lead_id: data.lead_id,
+          sequence_step: data.step_number,
+          subject: data.subject,
+          body: data.body,
+          status: "pending" as any,
+        });
+        if (insertErr) throw insertErr;
+
+        progress.success++;
+      } catch (err: any) {
+        console.error(`Bulk personalize error for ${lead.church_name}:`, err);
+        progress.errors++;
+      }
+
+      setBulkProgress({ ...progress });
+
+      // Small delay to avoid rate limits
+      if (progress.current < progress.total) {
+        await new Promise((r) => setTimeout(r, 1500));
+      }
+    }
+
+    setBulkProgress(null);
+    toast.success(`${progress.success} E-Mails personalisiert, ${progress.errors} Fehler`);
+    queryClient.invalidateQueries({ queryKey: ["outreach-leads"] });
+    queryClient.invalidateQueries({ queryKey: ["outreach-stats"] });
   };
 
   const savePersonalizedEmail = async () => {
