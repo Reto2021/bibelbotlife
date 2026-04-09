@@ -4,13 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { SEOHead } from "@/components/SEOHead";
-import { ArrowLeft, Trophy, BookOpen, HelpCircle, Loader2, ChevronRight, Gauge } from "lucide-react";
+import { ArrowLeft, Trophy, BookOpen, HelpCircle, Loader2, ChevronRight, Gauge, RotateCcw, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 type QuizMode = "multiple_choice" | "verse_guess";
 type Difficulty = "easy" | "medium" | "hard";
+const ROUND_SIZE = 10;
 
 interface QuizQuestion {
   mode: QuizMode;
@@ -25,11 +26,10 @@ interface QuizQuestion {
   difficulty?: Difficulty;
 }
 
-const difficultyConfig: Record<Difficulty, { label: string; emoji: string; desc: string; color: string }> = {
-  easy: { label: "Leicht", emoji: "🟢", desc: "Bücher aus verschiedenen Teilen der Bibel", color: "border-emerald-400 bg-emerald-50 dark:bg-emerald-950/30 text-emerald-700 dark:text-emerald-300" },
-  medium: { label: "Mittel", emoji: "🟡", desc: "Bücher aus dem gleichen Testament", color: "border-amber-400 bg-amber-50 dark:bg-amber-950/30 text-amber-700 dark:text-amber-300" },
-  hard: { label: "Schwer", emoji: "🔴", desc: "Sehr ähnliche Bücher – für Kenner", color: "border-red-400 bg-red-50 dark:bg-red-950/30 text-red-700 dark:text-red-300" },
-};
+interface AnswerRecord {
+  reference: string;
+  correct: boolean;
+}
 
 function getSessionId() {
   let id = localStorage.getItem("biblebot-session");
@@ -40,6 +40,12 @@ function getSessionId() {
   return id;
 }
 
+const difficultyConfig: Record<Difficulty, { label: string; emoji: string; desc: string; color: string }> = {
+  easy: { label: "Leicht", emoji: "🟢", desc: "Bücher aus verschiedenen Teilen der Bibel", color: "border-emerald-400 bg-emerald-50 dark:bg-emerald-950/30 text-emerald-700 dark:text-emerald-300" },
+  medium: { label: "Mittel", emoji: "🟡", desc: "Bücher aus dem gleichen Testament", color: "border-amber-400 bg-amber-50 dark:bg-amber-950/30 text-amber-700 dark:text-amber-300" },
+  hard: { label: "Schwer", emoji: "🔴", desc: "Sehr ähnliche Bücher – für Kenner", color: "border-red-400 bg-red-50 dark:bg-red-950/30 text-red-700 dark:text-red-300" },
+};
+
 export default function BibleQuiz() {
   const [mode, setMode] = useState<QuizMode | null>(null);
   const [difficulty, setDifficulty] = useState<Difficulty>("medium");
@@ -49,6 +55,8 @@ export default function BibleQuiz() {
   const [score, setScore] = useState(0);
   const [total, setTotal] = useState(0);
   const [showResult, setShowResult] = useState(false);
+  const [answers, setAnswers] = useState<AnswerRecord[]>([]);
+  const [roundComplete, setRoundComplete] = useState(false);
 
   const fetchQuestion = useCallback(async (quizMode: QuizMode, diff: Difficulty) => {
     setLoading(true);
@@ -72,6 +80,8 @@ export default function BibleQuiz() {
     setMode(m);
     setScore(0);
     setTotal(0);
+    setAnswers([]);
+    setRoundComplete(false);
     fetchQuestion(m, difficulty);
   }
 
@@ -84,6 +94,7 @@ export default function BibleQuiz() {
     const newScore = isCorrect ? score + 1 : score;
     setScore(newScore);
     setTotal(newTotal);
+    setAnswers(prev => [...prev, { reference: question?.reference || "", correct: isCorrect }]);
 
     if (newTotal % 5 === 0) {
       await supabase.from("quiz_scores").insert({
@@ -96,6 +107,10 @@ export default function BibleQuiz() {
   }
 
   function nextQuestion() {
+    if (total >= ROUND_SIZE) {
+      setRoundComplete(true);
+      return;
+    }
     fetchQuestion(mode!, difficulty);
   }
 
