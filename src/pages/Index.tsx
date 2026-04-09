@@ -99,8 +99,6 @@ const Index = () => {
                 {t("institutions.badge")}
               </Link>
             </Button>
-              </Link>
-            </Button>
             <LanguageSwitcher />
             <DarkModeToggle />
             {user ? (
