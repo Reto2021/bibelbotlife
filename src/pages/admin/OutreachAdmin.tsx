@@ -263,6 +263,9 @@ export default function OutreachAdmin() {
   const [personalizePreviewOpen, setPersonalizePreviewOpen] = useState(false);
   const [savingPersonalized, setSavingPersonalized] = useState(false);
 
+  // ─── Bulk Personalisierung ────────────────────────────
+  const [bulkProgress, setBulkProgress] = useState<{ current: number; total: number; success: number; errors: number } | null>(null);
+
   const generatePersonalizedEmail = async (lead: any, stepNumber?: number) => {
     setPersonalizingLead(lead.id);
     try {
@@ -281,6 +284,60 @@ export default function OutreachAdmin() {
     } finally {
       setPersonalizingLead(null);
     }
+  };
+
+  const bulkPersonalize = async (stepNumber?: number) => {
+    if (!selectedCampaignId || leads.length === 0) return;
+
+    // Filter leads that are "new" or "contacted" (skip converted/unsubscribed)
+    const eligibleLeads = leads.filter((l: any) => ["new", "contacted"].includes(l.status));
+    if (eligibleLeads.length === 0) {
+      toast.error("Keine offenen Leads zum Personalisieren");
+      return;
+    }
+
+    const progress = { current: 0, total: eligibleLeads.length, success: 0, errors: 0 };
+    setBulkProgress({ ...progress });
+
+    for (const lead of eligibleLeads) {
+      progress.current++;
+      setBulkProgress({ ...progress });
+
+      try {
+        const targetStep = stepNumber || (lead.current_step + 1) || 1;
+        const { data, error } = await supabase.functions.invoke("outreach-generate-sequence", {
+          body: { mode: "personalize", lead_id: lead.id, step_number: targetStep },
+        });
+        if (error) throw error;
+
+        // Auto-save the personalized email
+        const { error: insertErr } = await supabase.from("outreach_emails").insert({
+          lead_id: data.lead_id,
+          sequence_step: data.step_number,
+          subject: data.subject,
+          body: data.body,
+          status: "pending" as any,
+        });
+        if (insertErr) throw insertErr;
+
+        progress.success++;
+      } catch (err: any) {
+        console.error(`Bulk personalize error for ${lead.church_name}:`, err);
+        progress.errors++;
+      }
+
+      setBulkProgress({ ...progress });
+
+      // Small delay to avoid rate limits
+      if (progress.current < progress.total) {
+        await new Promise((r) => setTimeout(r, 1500));
+      }
+    }
+
+    setBulkProgress(null);
+    toast.success(`${progress.success} E-Mails personalisiert, ${progress.errors} Fehler`);
+    queryClient.invalidateQueries({ queryKey: ["outreach-leads"] });
+    queryClient.invalidateQueries({ queryKey: ["outreach-stats"] });
   };
 
   const savePersonalizedEmail = async () => {
@@ -388,7 +445,7 @@ export default function OutreachAdmin() {
 
           {/* ─── Leads Tab ──────────────────────── */}
           <TabsContent value="leads" className="space-y-4">
-            <div className="flex gap-2">
+            <div className="flex gap-2 flex-wrap">
               <Dialog open={importOpen} onOpenChange={setImportOpen}>
                 <DialogTrigger asChild>
                   <Button variant="outline"><Upload className="h-4 w-4 mr-2" />CSV Import</Button>
@@ -410,7 +467,40 @@ export default function OutreachAdmin() {
                   </DialogFooter>
                 </DialogContent>
               </Dialog>
+
+              <Button
+                variant="outline"
+                onClick={() => bulkPersonalize()}
+                disabled={!!bulkProgress || leads.length === 0}
+              >
+                {bulkProgress ? (
+                  <>
+                    <Loader2 className="h-4 w-4 animate-spin mr-2" />
+                    {bulkProgress.current}/{bulkProgress.total} ({bulkProgress.success} ✓ {bulkProgress.errors > 0 ? `, ${bulkProgress.errors} ✗` : ""})
+                  </>
+                ) : (
+                  <>
+                    <Sparkles className="h-4 w-4 mr-2" />
+                    Alle personalisieren
+                  </>
+                )}
+              </Button>
             </div>
+
+            {bulkProgress && (
+              <div className="space-y-1">
+                <div className="w-full bg-border rounded-full h-2">
+                  <div
+                    className="bg-primary h-2 rounded-full transition-all duration-300"
+                    style={{ width: `${(bulkProgress.current / bulkProgress.total) * 100}%` }}
+                  />
+                </div>
+                <p className="text-xs text-muted-foreground">
+                  Personalisiere Lead {bulkProgress.current} von {bulkProgress.total}…
+                  {bulkProgress.errors > 0 && <span className="text-destructive ml-1">({bulkProgress.errors} Fehler)</span>}
+                </p>
+              </div>
+            )}
 
             <Card>
               <CardContent className="p-0">
