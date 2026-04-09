@@ -100,21 +100,6 @@ const ForInstitutions = () => {
         </div>
       </section>
 
-      {/* Senior Mode Hint */}
-      <section className="px-4 pb-4">
-        <div className="container mx-auto max-w-4xl">
-          <div className="bg-primary/5 border border-primary/20 rounded-xl p-5 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
-            <Tablet className="h-8 w-8 text-primary shrink-0" />
-            <div className="flex-1">
-              <p className="font-semibold text-foreground mb-1">{t("institutions.seniorHint.title")}</p>
-              <p className="text-sm text-muted-foreground">{t("institutions.seniorHint.desc")}</p>
-            </div>
-            <a href="/?mode=senior" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors whitespace-nowrap">
-              {t("institutions.seniorHint.cta")}
-            </a>
-          </div>
-        </div>
-      </section>
 
       {/* Institution Types */}
       <section className="py-12 px-4 bg-card/40">
