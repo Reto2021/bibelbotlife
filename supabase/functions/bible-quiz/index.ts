@@ -7,13 +7,82 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
+// Book groups for difficulty-based wrong answers
+const bookGroups: Record<string, string[]> = {
+  pentateuch: ["1. Mose", "2. Mose", "3. Mose", "4. Mose", "5. Mose"],
+  history: ["Josua", "Richter", "Ruth", "1. Samuel", "2. Samuel", "1. Könige", "2. Könige", "1. Chronik", "2. Chronik", "Esra", "Nehemia", "Esther"],
+  wisdom: ["Hiob", "Psalmen", "Sprüche", "Prediger", "Hohelied"],
+  majorProphets: ["Jesaja", "Jeremia", "Klagelieder", "Hesekiel", "Daniel"],
+  minorProphets: ["Hosea", "Joel", "Amos", "Obadja", "Jona", "Micha", "Nahum", "Habakuk", "Zefanja", "Haggai", "Sacharja", "Maleachi"],
+  gospels: ["Matthäus", "Markus", "Lukas", "Johannes"],
+  acts: ["Apostelgeschichte"],
+  pauline: ["Römer", "1. Korinther", "2. Korinther", "Galater", "Epheser", "Philipper", "Kolosser", "1. Thessalonicher", "2. Thessalonicher", "1. Timotheus", "2. Timotheus", "Titus", "Philemon"],
+  general: ["Hebräer", "Jakobus", "1. Petrus", "2. Petrus", "1. Johannes", "2. Johannes", "3. Johannes", "Judas"],
+  revelation: ["Offenbarung"],
+};
+
+const allBibleBooks = Object.values(bookGroups).flat();
+
+// Broader categories for medium difficulty
+const testament: Record<string, string[]> = {
+  ot: [...bookGroups.pentateuch, ...bookGroups.history, ...bookGroups.wisdom, ...bookGroups.majorProphets, ...bookGroups.minorProphets],
+  nt: [...bookGroups.gospels, ...bookGroups.acts, ...bookGroups.pauline, ...bookGroups.general, ...bookGroups.revelation],
+};
+
+function getGroupForBook(book: string): string {
+  for (const [group, books] of Object.entries(bookGroups)) {
+    if (books.includes(book)) return group;
+  }
+  return "unknown";
+}
+
+function getTestamentForBook(book: string): "ot" | "nt" {
+  return testament.ot.includes(book) ? "ot" : "nt";
+}
+
+function pickWrongBooks(correctBook: string, difficulty: string): string[] {
+  const correctGroup = getGroupForBook(correctBook);
+  const correctTestament = getTestamentForBook(correctBook);
+
+  let candidates: string[];
+
+  if (difficulty === "hard") {
+    // Same group first, then same testament
+    const sameGroup = bookGroups[correctGroup]?.filter(b => b !== correctBook) || [];
+    if (sameGroup.length >= 3) {
+      candidates = sameGroup;
+    } else {
+      // Expand to neighboring groups in same testament
+      const sameTest = testament[correctTestament].filter(b => b !== correctBook);
+      candidates = [...sameGroup, ...sameTest.filter(b => !sameGroup.includes(b))];
+    }
+  } else if (difficulty === "medium") {
+    // Same testament but different group
+    const sameTest = testament[correctTestament].filter(b => b !== correctBook);
+    candidates = sameTest;
+  } else {
+    // Easy: different testament
+    const otherTestament = correctTestament === "ot" ? "nt" : "ot";
+    candidates = testament[otherTestament];
+  }
+
+  // Fallback if not enough candidates
+  if (candidates.length < 3) {
+    candidates = allBibleBooks.filter(b => b !== correctBook);
+  }
+
+  return candidates
+    .sort(() => Math.random() - 0.5)
+    .slice(0, 3);
+}
+
 serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
 
   try {
-    const { mode = "multiple_choice", translation = "luther1912" } = await req.json().catch(() => ({}));
+    const { mode = "multiple_choice", translation = "luther1912", difficulty = "medium" } = await req.json().catch(() => ({}));
 
     const supabase = createClient(
       Deno.env.get("SUPABASE_URL")!,
@@ -50,32 +119,13 @@ serve(async (req) => {
     // Pick a random verse
     const randomVerse = versePool[Math.floor(Math.random() * versePool.length)];
 
-    // Full list of Bible books for wrong-answer options
-    const allBibleBooks = [
-      "1. Mose","2. Mose","3. Mose","4. Mose","5. Mose","Josua","Richter","Ruth",
-      "1. Samuel","2. Samuel","1. Könige","2. Könige","1. Chronik","2. Chronik",
-      "Esra","Nehemia","Esther","Hiob","Psalmen","Sprüche","Prediger",
-      "Hohelied","Jesaja","Jeremia","Klagelieder","Hesekiel","Daniel","Hosea",
-      "Joel","Amos","Obadja","Jona","Micha","Nahum","Habakuk","Zefanja",
-      "Haggai","Sacharja","Maleachi","Matthäus","Markus","Lukas","Johannes",
-      "Apostelgeschichte","Römer","1. Korinther","2. Korinther","Galater",
-      "Epheser","Philipper","Kolosser","1. Thessalonicher","2. Thessalonicher",
-      "1. Timotheus","2. Timotheus","Titus","Philemon","Hebräer","Jakobus",
-      "1. Petrus","2. Petrus","1. Johannes","2. Johannes","3. Johannes","Judas","Offenbarung"
-    ];
-
     if (mode === "verse_guess") {
-      // Mode: Show verse text, guess the book
-      // Get 3 wrong book options from the full list
-      const wrongBooks = allBibleBooks
-        .filter(b => b !== randomVerse.book)
-        .sort(() => Math.random() - 0.5)
-        .slice(0, 3);
-
+      const wrongBooks = pickWrongBooks(randomVerse.book, difficulty);
       const options = [...wrongBooks, randomVerse.book].sort(() => Math.random() - 0.5);
 
       return new Response(JSON.stringify({
         mode: "verse_guess",
+        difficulty,
         question: randomVerse.text,
         hint: `Kapitel ${randomVerse.chapter}, Vers ${randomVerse.verse}`,
         options,
@@ -95,12 +145,18 @@ serve(async (req) => {
       });
     }
 
+    const difficultyHint = difficulty === "easy"
+      ? "Stelle eine einfache, faktische Frage."
+      : difficulty === "hard"
+        ? "Stelle eine anspruchsvolle Frage, die tiefes Bibelwissen erfordert. Die falschen Antworten sollen plausibel klingen."
+        : "Stelle eine mittelschwere Frage.";
+
     const prompt = `Du bist ein Bibelquiz-Generator. Erstelle eine Multiple-Choice-Frage auf Deutsch basierend auf diesem Bibelvers:
 
 "${randomVerse.text}" (${randomVerse.book} ${randomVerse.chapter},${randomVerse.verse})
 
 Regeln:
-- Die Frage soll zum Nachdenken anregen
+- ${difficultyHint}
 - 4 Antwortmöglichkeiten (A, B, C, D)
 - Genau eine richtige Antwort
 - Antworte AUSSCHLIESSLICH als JSON:
@@ -136,6 +192,7 @@ explanation = kurze Erklärung warum.`;
 
     return new Response(JSON.stringify({
       mode: "multiple_choice",
+      difficulty,
       question: quiz.question,
       options: quiz.options,
       correct: quiz.options[quiz.correct],
