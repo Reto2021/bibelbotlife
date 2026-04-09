@@ -345,16 +345,7 @@ export function BibleBotChat() {
     }
   }, [isOpen, messages.length, showWelcome]);
 
-  useEffect(() => {
-    if (messages.length >= 3 && journeyDay === 0 && !isJourneyDismissed() && !showJourneyOffer) {
-      const timer = setTimeout(() => setShowJourneyOffer(true), 1500);
-      return () => clearTimeout(timer);
-    }
-    if (messages.length >= 2 && journeyDay === 0 && shouldNudgeJourney() && !showJourneyOffer) {
-      const timer = setTimeout(() => { setShowJourneyOffer(true); markNudgeShown(); }, 3000);
-      return () => clearTimeout(timer);
-    }
-  }, [messages.length, journeyDay, showJourneyOffer]);
+  // Journey offer removed from public chat — only available in login area
 
   useEffect(() => {
     if (messages.length >= 2 && botName === DEFAULT_BOT_NAME && !showRenameTip) {
@@ -695,21 +686,7 @@ export function BibleBotChat() {
           );
         })}
 
-        {showJourneyOffer && journeyDay === 0 && !isLoading && (
-          <div className="animate-fade-up">
-            <div className="flex justify-start">
-              <div className="max-w-[85%] rounded-2xl rounded-bl-md px-4 py-3 text-sm leading-relaxed bg-primary/5 border border-primary/20 text-foreground">
-                <div className="prose prose-sm max-w-none dark:prose-invert">
-                  <ReactMarkdown>{journeyOffer.content}</ReactMarkdown>
-                </div>
-                <div className="flex gap-2 mt-3">
-                  <Button size="sm" className="text-xs h-7" onClick={() => { startJourney(); setJourneyDay(1); setShowJourneyOffer(false); track("journey_start", { day: 1 }); sendMessage(t("chat.journeyStartMsg")); }}>{t("chat.journeyStart")}</Button>
-                  <Button size="sm" variant="ghost" className="text-xs h-7 text-muted-foreground" onClick={() => { setShowJourneyOffer(false); dismissJourney(); }}>{t("chat.journeyLater")}</Button>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
+        {/* Journey offer removed from public chat */}
 
         {isLoading && messages[messages.length - 1]?.role !== "assistant" && (
           <div className="flex justify-start">

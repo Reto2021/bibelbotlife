@@ -762,17 +762,7 @@ Bot: «Danke, dass du das teilst. Lass uns gemeinsam tiefer schauen. Warum bist 
 Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... [Praktischer nächster Schritt]»`;
     }
 
-    if (journeyDay && typeof journeyDay === "number") {
-      const phase = journeyDay <= 7 ? "Ankommen" : journeyDay <= 14 ? "Vertiefen" : "Handeln";
-      const isCheckIn = [1, 7, 14, 21].includes(journeyDay);
-      systemPrompt += `\n\n[JOURNEY: Tag ${journeyDay} von 21 – Phase: ${phase}]`;
-      if (isCheckIn) {
-        systemPrompt += `\n[CHECK-IN FÄLLIG: Frage aktiv nach dem Wohlbefinden (Skala 1-10) und passe deine Begleitung an die Phase an.]`;
-      }
-      if (journeyDay > 21) {
-        systemPrompt += `\n[JOURNEY ABGESCHLOSSEN: Der Nutzer hat die 21 Tage geschafft! Feiere das und biete Vertiefung an.]`;
-      }
-    }
+    // Journey context removed from public chat — no check-in questions
 
     const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
     if (!LOVABLE_API_KEY) {
