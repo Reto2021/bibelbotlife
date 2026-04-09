@@ -23,12 +23,12 @@ export const ChurchBanner = () => {
   const { data: church } = useQuery({
     queryKey: ["church-banner", storedSlug],
     queryFn: async () => {
-      const { data } = await supabase
-        .from("church_partners")
+      const { data } = await (supabase
+        .from("church_partners_public" as any)
         .select("name, slug, logo_url")
         .eq("slug", storedSlug!)
         .eq("is_active", true)
-        .single();
+        .single() as any);
       return data;
     },
     enabled: !!storedSlug && !dismissed,
