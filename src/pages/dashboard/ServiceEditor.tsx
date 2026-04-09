@@ -375,6 +375,41 @@ export default function ServiceEditor() {
           }
         }}
       />
+
+      {/* Template Picker (shown for new services) */}
+      <Dialog open={templatePickerOpen} onOpenChange={setTemplatePickerOpen}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle>Vorlage auswählen</DialogTitle>
+          </DialogHeader>
+          {templates.length === 0 ? (
+            <div className="text-center py-8 text-muted-foreground">
+              <p className="text-sm">Noch keine Vorlagen vorhanden.</p>
+              <p className="text-xs mt-1">Du kannst Vorlagen unter «Vorlagen» im Menü erstellen.</p>
+            </div>
+          ) : (
+            <div className="space-y-2 max-h-80 overflow-y-auto">
+              {templates.map((t) => (
+                <button
+                  key={t.id}
+                  className="w-full text-left px-4 py-3 rounded-lg hover:bg-muted transition-colors border border-border"
+                  onClick={() => applyTemplate(t)}
+                >
+                  <p className="font-medium text-sm text-foreground">{t.name}</p>
+                  <p className="text-xs text-muted-foreground mt-0.5">
+                    {(t.blocks ?? []).length} Blöcke · {t.tradition === "reformed" ? "Reformiert" : t.tradition === "catholic" ? "Katholisch" : t.tradition === "lutheran" ? "Lutherisch" : t.tradition === "evangelical" ? "Evangelikal" : t.tradition}
+                  </p>
+                </button>
+              ))}
+            </div>
+          )}
+          <div className="flex justify-end">
+            <Button variant="ghost" size="sm" onClick={() => setTemplatePickerOpen(false)}>
+              Ohne Vorlage starten
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
