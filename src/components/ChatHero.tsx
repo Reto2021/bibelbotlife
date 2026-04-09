@@ -201,6 +201,7 @@ function LiveDemoPreview({ onTryIt }: { onTryIt: () => void }) {
 }
 
 
+export function ChatHero() {
   const { t, i18n } = useTranslation();
   const [input, setInput] = useState("");
   const [placeholder, setPlaceholder] = useState("");
