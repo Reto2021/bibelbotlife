@@ -7,7 +7,8 @@
     "badge": {
       "noLogin": "Bez logowania",
       "noData": "Bez danych",
-      "noJudgment": "Bez oceniania"
+      "noJudgment": "Bez oceniania",
+      "optionalLogin": "Login opcjonalny"
     },
     "title1": "Biblia.",
     "title2": " Na nowo.",
@@ -21,7 +22,9 @@
     "loading": "Ładowanie impulsu dnia...",
     "label": "Impuls dnia",
     "deepDive": "Co to dla mnie znaczy?",
-    "explore": "Przeczytaj cały fragment"
+    "explore": "Przeczytaj cały fragment",
+    "alreadySubscribed": "Otrzymujesz codzienną inspirację",
+    "subscribeCta": "Czy chcesz otrzymywać tę inspirację codziennie?"
   },
   "features": {
     "sectionTitle": "Jak BibleBot Ci towarzyszy",
@@ -151,7 +154,8 @@
     "toastPermDenied": "Odmowa dostępu",
     "toastPermDeniedDesc": "Zezwól na powiadomienia w ustawieniach przeglądarki.",
     "toastError": "Błąd",
-    "toastErrorDesc": "Spróbuj ponownie później."
+    "toastErrorDesc": "Spróbuj ponownie później.",
+    "subscribeButton": "Subskrybuj inspiracje"
   },
   "faq": {
     "badge": "FAQ",
@@ -271,7 +275,8 @@
     "errorNoStream": "Brak strumienia",
     "seniorMode": "Senior mode (larger text)",
     "teaserCta": "Pisz teraz →",
-    "namePlaceholder": "np. Eli, Miriam…"
+    "namePlaceholder": "np. Eli, Miriam…",
+    "loginHint": "Zaloguj się, aby zachować rozmowy na wszystkich urządzeniach"
   },
   "install": {
     "title": "Zainstaluj BibleBot",
@@ -336,7 +341,10 @@
     "baptism": {
       "title": "Werset na chrzest",
       "desc": "Idealny werset dla twojego dziecka",
-      "prompt": "Pomóż mi znaleźć odpowiedni werset na chrzest. Co to za dziecko i czego życzą sobie rodzice?"
+      "prompt": "Pomóż mi znaleźć odpowiedni werset na chrzest. Co to za dziecko i czego życzą sobie rodzice?",
+      "prompt_v1": "Co właściwie oznacza chrzest?",
+      "prompt_v2": "Opowiedz mi o chrzcie w Biblii – zaskocz mnie!",
+      "prompt_v3": "Dlaczego ludzie się chrzczą?"
     },
     "condolence": {
       "title": "Słowa pocieszenia",
@@ -351,7 +359,10 @@
     "anxiety": {
       "title": "Strach i troska",
       "desc": "Znaleźć odwagę w trudnych chwilach",
-      "prompt": "Zmagam się ze strachem i troską. Co mówi Biblia na ten temat? Czy są wersety dodające odwagi?"
+      "prompt": "Zmagam się ze strachem i troską. Co mówi Biblia na ten temat? Czy są wersety dodające odwagi?",
+      "prompt_v1": "Mam lęk. Co Biblia mówi o lęku?",
+      "prompt_v2": "Jak wiara może mi pomóc w lękach?",
+      "prompt_v3": "Które postaci biblijne również miały lęk?"
     },
     "confession": {
       "title": "Spowiedź",
@@ -361,7 +372,10 @@
     "heartbreak": {
       "title": "Złamane serce",
       "desc": "Co Biblia mówi o bólu serca",
-      "prompt": "Moje serce jest złamane. Co mówi Biblia o złamanym sercu i jak znaleźć nadzieję?"
+      "prompt": "Moje serce jest złamane. Co mówi Biblia o złamanym sercu i jak znaleźć nadzieję?",
+      "prompt_v1": "Moje serce jest złamane. Co Biblia o tym mówi?",
+      "prompt_v2": "Jak radzić sobie ze złamanym sercem – czy jest pomoc biblijna?",
+      "prompt_v3": "Czy Bóg może uzdrowić złamane serce?"
     },
     "newstart": {
       "title": "Nowy początek",
@@ -391,7 +405,10 @@
     "gratitude": {
       "title": "Wdzięczność",
       "desc": "Osobista modlitwa dziękczynna",
-      "prompt": "Chcę podziękować Bogu. Pomóż mi sformułować osobistą modlitwę wdzięczności."
+      "prompt": "Chcę podziękować Bogu. Pomóż mi sformułować osobistą modlitwę wdzięczności.",
+      "prompt_v1": "Jak mogę stać się bardziej wdzięczny?",
+      "prompt_v2": "Co Biblia mówi o wdzięczności?",
+      "prompt_v3": "Dlaczego wdzięczność jest tak ważna w wierze?"
     },
     "lifewheel": {
       "title": "Koło życia",
@@ -450,7 +467,10 @@
     "forgiveness": {
       "title": "Przebaczenie",
       "desc": "Gdy przebaczyć wydaje się niemożliwe",
-      "prompt": "Nie mogę przebaczyć. Co mówi Biblia o przebaczeniu?"
+      "prompt": "Nie mogę przebaczyć. Co mówi Biblia o przebaczeniu?",
+      "prompt_v1": "Co Biblia mówi o przebaczeniu?",
+      "prompt_v2": "Jak mogę wybaczyć komuś, kto mnie skrzywdził?",
+      "prompt_v3": "Czy istnieją granice przebaczenia?"
     },
     "familyconflict": {
       "title": "Konflikt rodzinny",
@@ -470,12 +490,23 @@
     "prayer": {
       "title": "Prośba o modlitwę",
       "desc": "Modlić się razem",
-      "prompt": "Mam prośbę o modlitwę. Towarzysz mi w modlitwie."
+      "prompt": "Mam prośbę o modlitwę. Towarzysz mi w modlitwie.",
+      "prompt_v1": "Jak nauczyć się modlić?",
+      "prompt_v2": "Co Biblia mówi o modlitwie?",
+      "prompt_v3": "Dlaczego Bóg nie wysłuchuje niektórych modlitw?"
     },
     "bibleverse": {
       "title": "Zrozumieć werset",
       "desc": "Wyjaśnienie fragmentu Biblii",
       "prompt": "Chciałbym/Chciałabym lepiej zrozumieć fragment Biblii. Możesz mi pomóc?"
+    },
+    "biblequiz": {
+      "desc": "Sprawdź swoją wiedzę biblijną w zabawny sposób",
+      "title": "Quiz biblijny"
+    },
+    "prayerwall": {
+      "desc": "Udostępniaj intencje modlitewne i módl się za siebie nawzajem",
+      "title": "Ściana Modlitwy"
     }
   },
   "lifeWheel": {
@@ -801,5 +832,30 @@
     "weddingDesc": "Napisz przysięgi małżeńskie, wybierz pieśni i zaplanuj uroczystość.",
     "baptismDesc": "Sformułuj życzenia chrzcielne i przygotuj przebieg z parafią.",
     "confirmationDesc": "Znajdź sentencję bierzmowania i przygotuj osobiste teksty."
+  },
+  "chatHero": {
+    "ariaLabel": "Zadaj pytanie BibleBotowi",
+    "focusPlaceholder": "Napisz swoje pytanie…",
+    "placeholder1": "Co sprawia, że jestem naprawdę wdzięczny?",
+    "placeholder2": "Jak znaleźć wewnętrzny spokój?",
+    "placeholder3": "Co daje mi nadzieję?",
+    "placeholder4": "Czego pragnie moje serce?",
+    "placeholder5": "Co dobrego mogę zrobić dzisiaj?",
+    "send": "Wyślij",
+    "subtitle": "Zadaj swoje pytanie – otwarcie, szczerze, bez rejestracji.",
+    "suggestion1": "Co oznacza moje imię?",
+    "suggestion2": "Co daje mi siłę dzisiaj?",
+    "suggestion3": "Za co jestem wdzięczny?"
+  },
+  "meta": {
+    "forChurchesDesc": "BibleBot jako partner dla Twojej parafii: praca z młodzieżą, bierzmowanie, duszpasterstwo i kręgi biblijne. Od darmowych do premium.",
+    "forChurchesTitle": "BibleBot dla Kościołów – Cyfrowe Duszpasterstwo i Prowadzenie Biblijne",
+    "homeDesc": "BibleBot towarzyszy Ci z 5 tłumaczeniami Biblii, metodologią coachingu i duszpasterstwem. Anonimowo, bezpłatnie, w 36 językach.",
+    "homeTitle": "BibleBot – Twój osobisty towarzysz Biblii | Bezpłatne & Anonimowe",
+    "loginDesc": "Zaloguj się do BibleBot, aby przygotować swoje osobiste ceremonie.",
+    "loginTitle": "Zaloguj się – BibleBot"
+  },
+  "splash": {
+    "patronage": "Polecane przez"
   }
 }

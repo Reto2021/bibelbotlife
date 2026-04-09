@@ -7,7 +7,8 @@
     "badge": {
       "noLogin": "Hakuna Kuingia",
       "noData": "Hakuna Data",
-      "noJudgment": "Hakuna Hukumu"
+      "noJudgment": "Hakuna Hukumu",
+      "optionalLogin": "Kuingia ni hiari"
     },
     "title1": "Biblia.",
     "title2": "Imetafakariwa Upya.",
@@ -21,7 +22,9 @@
     "loading": "Inapakia msukumo wa siku...",
     "label": "Msukumo wa Siku",
     "deepDive": "Je, hii inamaanisha nini kwangu?",
-    "explore": "Soma sehemu nzima"
+    "explore": "Soma sehemu nzima",
+    "alreadySubscribed": "Tayari unapokea msukumo wa kila siku",
+    "subscribeCta": "Pata msukumo huu kila siku?"
   },
   "features": {
     "sectionTitle": "Jinsi BibleBot wako anavyokuongoza",
@@ -151,7 +154,8 @@
     "toastPermDenied": "Ruhusa imekataliwa",
     "toastPermDeniedDesc": "Tafadhali ruhusu arifa katika mipangilio ya kivinjari chako.",
     "toastError": "Hitilafu",
-    "toastErrorDesc": "Tafadhali jaribu tena baadaye."
+    "toastErrorDesc": "Tafadhali jaribu tena baadaye.",
+    "subscribeButton": "Jiandikishe kwa Msukumo"
   },
   "faq": {
     "badge": "Maswali Yanayoulizwa Mara kwa Mara",
@@ -286,7 +290,8 @@
     "errorTitle": "Hitilafu",
     "errorConnection": "haikuweza kufikiwa.",
     "errorNoStream": "Hakuna mkondo",
-    "seniorMode": "Hali ya Wazee (Fonti kubwa)"
+    "seniorMode": "Hali ya Wazee (Fonti kubwa)",
+    "loginHint": "Ingia ili kuwezesha mazungumzo kwenye vifaa vyote"
   },
   "install": {
     "title": "Sakinisha BibleBot",
@@ -371,7 +376,10 @@
     "baptism": {
       "title": "Kutafuta aya ya ubatizo",
       "desc": "Aya kamili kwa mtoto wako",
-      "prompt": "Nisaidie kupata aya inayofaa ya ubatizo. Mtoto ni wa aina gani na wazazi wanatamani nini?"
+      "prompt": "Nisaidie kupata aya inayofaa ya ubatizo. Mtoto ni wa aina gani na wazazi wanatamani nini?",
+      "prompt_v1": "Ubatizo unamaanisha nini hasa?",
+      "prompt_v2": "Nifafanulie kuhusu ubatizo katika Biblia – nishangaze!",
+      "prompt_v3": "Kwa nini watu hubatizwa?"
     },
     "condolence": {
       "title": "Maneno ya Faraja",
@@ -386,7 +394,10 @@
     "anxiety": {
       "title": "Hofu & Wasiwasi",
       "desc": "Kupata ujasiri nyakati ngumu",
-      "prompt": "Ninapambana na hofu na wasiwasi sasa. Biblia inasema nini kuhusu hili? Kuna mistari inayotia moyo?"
+      "prompt": "Ninapambana na hofu na wasiwasi sasa. Biblia inasema nini kuhusu hili? Kuna mistari inayotia moyo?",
+      "prompt_v1": "Nina hofu. Biblia inasema nini kuhusu hofu?",
+      "prompt_v2": "Je, imani inawezaje kunisaidia na hofu?",
+      "prompt_v3": "Ni wahusika gani wa kibiblia pia walikuwa na hofu?"
     },
     "confession": {
       "title": "Kukiri",
@@ -396,7 +407,10 @@
     "heartbreak": {
       "title": "Kuvunjika Moyo",
       "desc": "Biblia inasema nini kuhusu kuvunjika moyo",
-      "prompt": "Moyo wangu umevunjika. Biblia inasema nini kuhusu kuvunjika moyo na jinsi ya kupata tumaini tena?"
+      "prompt": "Moyo wangu umevunjika. Biblia inasema nini kuhusu kuvunjika moyo na jinsi ya kupata tumaini tena?",
+      "prompt_v1": "Moyo wangu umevunjika. Biblia inasema nini kuhusu hili?",
+      "prompt_v2": "Ninawezaje kukabiliana na maumivu ya moyo – je, kuna msaada wa kibiblia?",
+      "prompt_v3": "Je, Mungu anaweza kuponya moyo uliovunjika?"
     },
     "newstart": {
       "title": "Mwanzo Mpya",
@@ -426,7 +440,10 @@
     "gratitude": {
       "title": "Shukrani",
       "desc": "Sala ya shukrani binafsi",
-      "prompt": "Ninataka kumshukuru Mungu. Nisaidie kuunda sala ya shukrani binafsi."
+      "prompt": "Ninataka kumshukuru Mungu. Nisaidie kuunda sala ya shukrani binafsi.",
+      "prompt_v1": "Ninawezaje kuwa mshukuru zaidi?",
+      "prompt_v2": "Biblia inasema nini kuhusu shukrani?",
+      "prompt_v3": "Kwa nini shukrani ni muhimu sana katika imani?"
     },
     "lifewheel": {
       "title": "Gurudumu la Maisha",
@@ -485,7 +502,10 @@
     "forgiveness": {
       "title": "Msamaha",
       "desc": "Msamaha unapoonekana hauwezekani",
-      "prompt": "Siwezi kumsamehe mtu. Inauma sana. Biblia inasema nini kuhusu msamaha?"
+      "prompt": "Siwezi kumsamehe mtu. Inauma sana. Biblia inasema nini kuhusu msamaha?",
+      "prompt_v1": "Biblia inasema nini kuhusu msamaha?",
+      "prompt_v2": "Ninawezaje kumsamehe mtu aliyeniumiza?",
+      "prompt_v3": "Je, kuna mipaka ya msamaha?"
     },
     "familyconflict": {
       "title": "Mzozo wa Familia",
@@ -505,12 +525,23 @@
     "prayer": {
       "title": "Maombi",
       "desc": "Kuomba pamoja",
-      "prompt": "Nina ombi na ninataka kuomba pamoja. Niongoze katika maombi."
+      "prompt": "Nina ombi na ninataka kuomba pamoja. Niongoze katika maombi.",
+      "prompt_v1": "Ninawezaje kujifunza kuomba?",
+      "prompt_v2": "Biblia inasema nini kuhusu maombi?",
+      "prompt_v3": "Kwa nini Mungu haitiki maombi mengine?"
     },
     "bibleverse": {
       "title": "Kuelewa Aya",
       "desc": "Kupata maelezo ya aya ya Biblia",
       "prompt": "Ninataka kuelewa aya ya Biblia vizuri zaidi. Unaweza kunisaidia kuiweka katika muktadha?"
+    },
+    "biblequiz": {
+      "desc": "Jaribu maarifa yako ya Biblia kwa njia ya kufurahisha",
+      "title": "Maswali ya Biblia"
+    },
+    "prayerwall": {
+      "desc": "Shiriki maombi & ombeana",
+      "title": "Ukuta wa Maombi"
     }
   },
   "lifeWheel": {
@@ -801,5 +832,30 @@
     "weddingDesc": "Andika ahadi za ndoa, chagua nyimbo na panga sherehe.",
     "baptismDesc": "Andika matakwa ya ubatizo na uandae utaratibu na jamii.",
     "confirmationDesc": "Pata mstari wa uthibitisho na uandae maandishi ya kibinafsi."
+  },
+  "chatHero": {
+    "ariaLabel": "Uliza swali kwa BibleBot",
+    "focusPlaceholder": "Andika swali lako…",
+    "placeholder1": "Ni nini kinanifanya nishukuru kweli?",
+    "placeholder2": "Ninawezaje kupata amani ya ndani?",
+    "placeholder3": "Ni nini kinanipa matumaini?",
+    "placeholder4": "Moyo wangu unatamani nini?",
+    "placeholder5": "Ninaweza kufanya wema gani leo?",
+    "send": "Tuma",
+    "subtitle": "Uliza swali lako – kwa uwazi, uaminifu, bila kuingia.",
+    "suggestion1": "Jina langu linasimama kwa nini?",
+    "suggestion2": "Ni nini kinanipa nguvu leo?",
+    "suggestion3": "Ninashukuru kwa jambo gani?"
+  },
+  "meta": {
+    "forChurchesDesc": "BibleBot kama mshirika wa kanisa lako: huduma ya vijana, kipaimara, ushauri nasaha na vikundi vya Biblia. Bure hadi Premium.",
+    "forChurchesTitle": "BibleBot kwa Makanisa – Ushauri Nasaha Dijitali & Mwongozo wa Biblia",
+    "homeDesc": "BibleBot inakuongoza na tafsiri 5 za Biblia, mbinu za kufundisha, na ushauri nasaha. Bila kujulikana, bure, kwa lugha 36.",
+    "homeTitle": "BibleBot – Mwenza wako wa Kibiblia | Bure & Bila Kujulikana",
+    "loginDesc": "Ingia kwenye BibleBot ili kuandaa sherehe zako za kibinafsi.",
+    "loginTitle": "Ingia – BibleBot"
+  },
+  "splash": {
+    "patronage": "Imependekezwa na"
   }
 }

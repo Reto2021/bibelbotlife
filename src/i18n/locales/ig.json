@@ -7,7 +7,8 @@
     "badge": {
       "noLogin": "Enweghị nbanye",
       "noData": "Enweghị data",
-      "noJudgment": "Enweghị ikpe"
+      "noJudgment": "Enweghị ikpe",
+      "optionalLogin": "Ndebanye aha nhọrọ"
     },
     "title1": "Akwụkwọ Nsọ.",
     "title2": " Echiche ọhụrụ.",
@@ -21,7 +22,9 @@
     "loading": "Na-ebunata mkpali ụbọchị...",
     "label": "Mkpali nke ụbọchị",
     "deepDive": "Gịnị ka nke a pụtara nye m?",
-    "explore": "Gụọ akụkụ niile"
+    "explore": "Gụọ akụkụ niile",
+    "alreadySubscribed": "Ị na-enweta mkpali kwa ụbọchị",
+    "subscribeCta": "Ị chọrọ ka mkpali a na-erute gị kwa ụbọchị?"
   },
   "features": {
     "sectionTitle": "Otu BibleBot gị si akwado gị",
@@ -151,7 +154,8 @@
     "toastPermDenied": "Ikike jụrụ",
     "toastPermDeniedDesc": "Biko kwe ka ọkwa na ntọala ihe nchọgharị gị.",
     "toastError": "Njehie",
-    "toastErrorDesc": "Biko gbalịa ọzọ ma emechaa."
+    "toastErrorDesc": "Biko gbalịa ọzọ ma emechaa.",
+    "subscribeButton": "Debanye aha maka Inspo"
   },
   "faq": {
     "badge": "Ajụjụ a na-ajụkarị",
@@ -286,7 +290,8 @@
     "errorTitle": "Njehie",
     "errorConnection": "enweghị ike iru.",
     "errorNoStream": "Enweghị iyi",
-    "seniorMode": "Ụdị agadi (nnukwu mkpụrụedemede)"
+    "seniorMode": "Ụdị agadi (nnukwu mkpụrụedemede)",
+    "loginHint": "Banye iji dobe mkparịta ụka n'ofe ngwaọrụ niile"
   },
   "install": {
     "title": "Wụnye BibleBot",
@@ -333,7 +338,10 @@
     "baptism": {
       "title": "Chọta amaokwu baptizim",
       "desc": "Amaokwu zuru oke maka nwa gị",
-      "prompt": "Nyere m aka ịchọta amaokwu baptizim kwesịrị ekwesị. Kedu ụdị nwa ọ bụ na gịnị ka ndị nne na nna chọrọ?"
+      "prompt": "Nyere m aka ịchọta amaokwu baptizim kwesịrị ekwesị. Kedu ụdị nwa ọ bụ na gịnị ka ndị nne na nna chọrọ?",
+      "prompt_v1": "Gịnị ka baptizim pụtara n'ezie?",
+      "prompt_v2": "Gwa m banyere baptizim n'ime Akwụkwọ Nsọ – jiri ya mee m ihe ijuanya!",
+      "prompt_v3": "Gịnị mere ndị mmadụ ji na-eme baptizim?"
     },
     "condolence": {
       "title": "Okwu nkasi obi",
@@ -348,7 +356,10 @@
     "anxiety": {
       "title": "Nchegbu & Nchegbu",
       "desc": "Ịchọta obi ike n'oge ihe isi ike",
-      "prompt": "Ana m alụ ọgụ na nchegbu na nchegbu ugbu a. Gịnị ka Akwụkwọ Nsọ na-ekwu banyere nke a? Enwere amaokwu na-enye obi ike?"
+      "prompt": "Ana m alụ ọgụ na nchegbu na nchegbu ugbu a. Gịnị ka Akwụkwọ Nsọ na-ekwu banyere nke a? Enwere amaokwu na-enye obi ike?",
+      "prompt_v1": "M na-enwe nchekasị. Gịnị ka Akwụkwọ Nsọ na-ekwu maka nchekasị?",
+      "prompt_v2": "Olee otú okwukwe ga-esi nyere m aka n'oge nchekasị?",
+      "prompt_v3": "Ndị gịnị n'ime Akwụkwọ Nsọ nwekwara nchekasị?"
     },
     "confession": {
       "title": "Nkwupụta",
@@ -358,7 +369,10 @@
     "heartbreak": {
       "title": "Mgbaji obi",
       "desc": "Ihe Akwụkwọ Nsọ na-ekwu banyere mgbaji obi",
-      "prompt": "Obi m agbajiela. Gịnị ka Akwụkwọ Nsọ na-ekwu banyere mgbaji obi na otu esi achọta olileanya ọzọ?"
+      "prompt": "Obi m agbajiela. Gịnị ka Akwụkwọ Nsọ na-ekwu banyere mgbaji obi na otu esi achọta olileanya ọzọ?",
+      "prompt_v1": "Obi m agbajiwo. Gịnị ka Akwụkwọ Nsọ na-ekwu gbasara ya?",
+      "prompt_v2": "Olee otú m ga-esi na-emeso nkụda mmụọ – àkwụkwọ nsọ ọ na-enye aka?",
+      "prompt_v3": "Chineke ọ pụrụ ịgwọ obi gbajiri agbaji?"
     },
     "newstart": {
       "title": "Mmalite ọhụrụ",
@@ -388,7 +402,10 @@
     "gratitude": {
       "title": "Ekele",
       "desc": "Ekpere ekele nke onwe",
-      "prompt": "Achọrọ m ikele Chineke. Nyere m aka ịhazi ekpere ekele nke onwe."
+      "prompt": "Achọrọ m ikele Chineke. Nyere m aka ịhazi ekpere ekele nke onwe.",
+      "prompt_v1": "Olee otú m ga-esi nwee ekele karị?",
+      "prompt_v2": "Gịnị ka Akwụkwọ Nsọ na-ekwu maka ekele?",
+      "prompt_v3": "Gịnị mere ekele ji dị ezigbo mkpa n'okwukwe?"
     },
     "lifewheel": {
       "title": "Ụkwụ ndụ",
@@ -447,7 +464,10 @@
     "forgiveness": {
       "title": "Mgbaghara",
       "desc": "Mgbe mgbaghara yiri ihe agaghị ekwe omume",
-      "prompt": "Enweghị m ike ịgbaghara onye ọ bụla. Ọ na-egbu mgbu nke ukwuu. Gịnị ka Akwụkwọ Nsọ na-ekwu banyere mgbaghara?"
+      "prompt": "Enweghị m ike ịgbaghara onye ọ bụla. Ọ na-egbu mgbu nke ukwuu. Gịnị ka Akwụkwọ Nsọ na-ekwu banyere mgbaghara?",
+      "prompt_v1": "Gịnị ka Akwụkwọ Nsọ na-ekwu maka mgbaghara?",
+      "prompt_v2": "Olee otú m ga-esi gbaghara onye merụrụ m ahụ?",
+      "prompt_v3": "E nwere oke na mgbaghara?"
     },
     "familyconflict": {
       "title": "Esemokwu ezinụlọ",
@@ -467,12 +487,23 @@
     "prayer": {
       "title": "Arịrịọ ekpere",
       "desc": "Na-ekpe ekpere ọnụ",
-      "prompt": "Enwere m arịrịọ ekpere ma achọrọ m ikpe ekpere ọnụ. Soro m n'ekpere."
+      "prompt": "Enwere m arịrịọ ekpere ma achọrọ m ikpe ekpere ọnụ. Soro m n'ekpere.",
+      "prompt_v1": "Olee otú m ga-esi amụta ikpe ekpere?",
+      "prompt_v2": "Gịnị ka Akwụkwọ Nsọ na-ekwu banyere ekpere?",
+      "prompt_v3": "Gịnị mere Chineke anaghị aza ekpere ụfọdụ?"
     },
     "bibleverse": {
       "title": "Ghọta amaokwu",
       "desc": "Nweta nkọwa amaokwu Akwụkwọ Nsọ",
       "prompt": "Achọrọ m ịghọta amaokwu Akwụkwọ Nsọ nke ọma. Ị nwere ike inyere m aka itinye ya n'ihe gbara ya gburugburu?"
+    },
+    "biblequiz": {
+      "desc": "Nwalee ihe ọmụma Bible gị n'ụzọ egwuregwu",
+      "title": "Akwụkwọ Nsọ Quiz"
+    },
+    "prayerwall": {
+      "desc": "Kekọrịta arịrịọ ekpere & kpee ekpere maka ibe gị",
+      "title": "Mgbidi Ekpere"
     }
   },
   "lifeWheel": {
@@ -801,5 +832,30 @@
     "weddingDesc": "Dee nkwa agbamakwụkwọ, họrọ abụ ma hazie ememe ahụ.",
     "baptismDesc": "Dezie ọchịchọ baptizim ma kwadebe usoro ya na obodo.",
     "confirmationDesc": "Chọta ilu nkwenye ma kwadebe ederede nkeonwe."
+  },
+  "chatHero": {
+    "ariaLabel": "Jụọ BibleBot ajụjụ",
+    "focusPlaceholder": "Dee ajụjụ gị…",
+    "placeholder1": "Gịnị na-eme ka m nwee ekele n'ezie?",
+    "placeholder2": "Olee otú m ga-esi nweta udo nke ime?",
+    "placeholder3": "Gịnị na-enye m olileanya?",
+    "placeholder4": "Gịnị ka obi m chọrọ?",
+    "placeholder5": "Gịnị ka m ga-eme nke ọma taa?",
+    "send": "Zipụ",
+    "subtitle": "Jụọ ajụjụ gị – n'eziokwu, n'echeghị echiche, na-enweghị ndebanye aha.",
+    "suggestion1": "Gịnị ka aha m pụtara?",
+    "suggestion2": "Gịnị na-enye m ume taa?",
+    "suggestion3": "Gịnị ka m ji ekele?"
+  },
+  "meta": {
+    "forChurchesDesc": "BibleBot dị ka onye mmekọ maka ọgbakọ gị: ọrụ ntorobịa, nkwenye, ndụmọdụ na agụmakwụkwọ Bible. N'efu ruo na adịchaghị.",
+    "forChurchesTitle": "BibleBot maka Ụka – Nduzi Digitaalụ & Nkwado Akwụkwọ Nsọ",
+    "homeDesc": "BibleBot na-eso gị ya na nsụgharị Bible 5, usoro ịzụlite na ndụmọdụ. N'amaghị aha, n'efu, na asụsụ 36.",
+    "homeTitle": "BibleBot – Onye enyemaka Bible gị n'onwe gị | N'efu & N'amaghị Aha",
+    "loginDesc": "Banye na BibleBot iji kwadebe emume nke gị.",
+    "loginTitle": "Banye – BibleBot"
+  },
+  "splash": {
+    "patronage": "Ndị kwadoro"
   }
 }

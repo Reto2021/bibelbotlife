@@ -7,7 +7,8 @@
     "badge": {
       "noLogin": "Bez prijave",
       "noData": "Bez podataka",
-      "noJudgment": "Bez osude"
+      "noJudgment": "Bez osude",
+      "optionalLogin": "Prijava neobavezna"
     },
     "title1": "Biblija.",
     "title2": " Ponovno osmišljena.",
@@ -21,7 +22,9 @@
     "loading": "Učitavanje dnevnog poticaja...",
     "label": "Dnevni poticaj",
     "deepDive": "Što to znači za mene?",
-    "explore": "Pročitajte cijeli odlomak"
+    "explore": "Pročitajte cijeli odlomak",
+    "alreadySubscribed": "Već primate dnevnu inspiraciju",
+    "subscribeCta": "Želite li primati ovu inspiraciju svakodnevno?"
   },
   "features": {
     "sectionTitle": "Kako vas vaš BibleBot prati",
@@ -151,7 +154,8 @@
     "toastPermDenied": "Dopuštenje odbijeno",
     "toastPermDeniedDesc": "Molimo dopustite obavijesti u postavkama preglednika.",
     "toastError": "Greška",
-    "toastErrorDesc": "Molimo pokušajte ponovno kasnije."
+    "toastErrorDesc": "Molimo pokušajte ponovno kasnije.",
+    "subscribeButton": "Pretplati se na inspiraciju"
   },
   "faq": {
     "badge": "Česta pitanja",
@@ -286,7 +290,8 @@
     "errorTitle": "Greška",
     "errorConnection": "nije moguće dohvatiti.",
     "errorNoStream": "Nema streama",
-    "seniorMode": "Način za starije (veći font)"
+    "seniorMode": "Način za starije (veći font)",
+    "loginHint": "Prijavite se kako biste sačuvali razgovore na svim uređajima"
   },
   "install": {
     "title": "Instalirajte BibleBot",
@@ -333,7 +338,10 @@
     "baptism": {
       "title": "Pronađite stih za krštenje",
       "desc": "Savršen stih za vaše dijete",
-      "prompt": "Pomozite mi pronaći odgovarajući stih za krštenje. Kakvo je to dijete i što roditelji žele?"
+      "prompt": "Pomozite mi pronaći odgovarajući stih za krštenje. Kakvo je to dijete i što roditelji žele?",
+      "prompt_v1": "Što zapravo znači krštenje?",
+      "prompt_v2": "Ispričaj mi o krštenju u Bibliji – iznenadi me!",
+      "prompt_v3": "Zašto se ljudi krste?"
     },
     "condolence": {
       "title": "Riječi utjehe",
@@ -348,7 +356,10 @@
     "anxiety": {
       "title": "Anksioznost i brige",
       "desc": "Pronađite hrabrost u teškim vremenima",
-      "prompt": "Trenutno se borim s anksioznošću i brigama. Što Biblija kaže o tome? Postoje li stihovi koji daju hrabrost?"
+      "prompt": "Trenutno se borim s anksioznošću i brigama. Što Biblija kaže o tome? Postoje li stihovi koji daju hrabrost?",
+      "prompt_v1": "Imam anksioznost. Što Biblija kaže o anksioznosti?",
+      "prompt_v2": "Kako mi vjera može pomoći s tjeskobom?",
+      "prompt_v3": "Koje su biblijske figure također imale strah?"
     },
     "confession": {
       "title": "Ispovijed",
@@ -358,7 +369,10 @@
     "heartbreak": {
       "title": "Ljubavni jad",
       "desc": "Što Biblija kaže o slomljenom srcu",
-      "prompt": "Srce mi je slomljeno. Što Biblija kaže o ljubavnom jadu i kako ponovno pronaći nadu?"
+      "prompt": "Srce mi je slomljeno. Što Biblija kaže o ljubavnom jadu i kako ponovno pronaći nadu?",
+      "prompt_v1": "Srce mi je slomljeno. Što Biblija kaže o tome?",
+      "prompt_v2": "Kako se nositi sa slomljenim srcem – postoji li biblijska pomoć?",
+      "prompt_v3": "Može li Bog izliječiti slomljeno srce?"
     },
     "newstart": {
       "title": "Novi početak",
@@ -388,7 +402,10 @@
     "gratitude": {
       "title": "Zahvalnost",
       "desc": "Osobna molitva zahvalnosti",
-      "prompt": "Želim zahvaliti Bogu. Pomozite mi formulirati osobnu molitvu zahvalnosti."
+      "prompt": "Želim zahvaliti Bogu. Pomozite mi formulirati osobnu molitvu zahvalnosti.",
+      "prompt_v1": "Kako mogu postati zahvalniji?",
+      "prompt_v2": "Što Biblija kaže o zahvalnosti?",
+      "prompt_v3": "Zašto je zahvalnost tako važna u vjeri?"
     },
     "lifewheel": {
       "title": "Kolo života",
@@ -447,7 +464,10 @@
     "forgiveness": {
       "title": "Oprost",
       "desc": "Kad se čini nemogućim oprostiti",
-      "prompt": "Jednostavno ne mogu nekome oprostiti. Previše boli. Što Biblija kaže o oprostu?"
+      "prompt": "Jednostavno ne mogu nekome oprostiti. Previše boli. Što Biblija kaže o oprostu?",
+      "prompt_v1": "Što Biblija kaže o oprostu?",
+      "prompt_v2": "Kako mogu oprostiti nekome tko me povrijedio?",
+      "prompt_v3": "Postoje li granice opraštanja?"
     },
     "familyconflict": {
       "title": "Obiteljski sukob",
@@ -467,12 +487,23 @@
     "prayer": {
       "title": "Molitva",
       "desc": "Zajednička molitva",
-      "prompt": "Imam molitvenu nakanu i želim se zajedno moliti. Pratite me u molitvi."
+      "prompt": "Imam molitvenu nakanu i želim se zajedno moliti. Pratite me u molitvi.",
+      "prompt_v1": "Kako naučiti moliti?",
+      "prompt_v2": "Što Biblija kaže o molitvi?",
+      "prompt_v3": "Zašto Bog ne uslišava neke molitve?"
     },
     "bibleverse": {
       "title": "Razumijevanje stiha",
       "desc": "Objašnjenje biblijskog stiha",
       "prompt": "Želim bolje razumjeti biblijski stih. Možete li mi pomoći da ga smjestim u kontekst?"
+    },
+    "biblequiz": {
+      "desc": "Testirajte svoje biblijsko znanje na zabavan način",
+      "title": "Biblijski kviz"
+    },
+    "prayerwall": {
+      "desc": "Podijelite molitvene namjere i molite jedni za druge",
+      "title": "Zid molitve"
     }
   },
   "lifeWheel": {
@@ -801,5 +832,30 @@
     "weddingDesc": "Napišite bračne zavjete, odaberite pjesme i planirajte proslavu.",
     "baptismDesc": "Formulirajte želje za krštenje i pripremite tijek s zajednicom.",
     "confirmationDesc": "Pronađite izreku za potvrdu i pripremite osobne tekstove."
+  },
+  "chatHero": {
+    "ariaLabel": "Pitajte BibleBota pitanje",
+    "focusPlaceholder": "Napišite svoje pitanje…",
+    "placeholder1": "Što me čini istinski zahvalnim?",
+    "placeholder2": "Kako pronaći unutarnji mir?",
+    "placeholder3": "Što mi daje nadu?",
+    "placeholder4": "Što moje srce želi?",
+    "placeholder5": "Što činim dobro danas?",
+    "send": "Pošalji",
+    "subtitle": "Postavite svoje pitanje – otvoreno, iskreno, bez prijave.",
+    "suggestion1": "Što znači moje ime?",
+    "suggestion2": "Što mi daje snagu danas?",
+    "suggestion3": "Na čemu sam zahvalan?"
+  },
+  "meta": {
+    "forChurchesDesc": "BibleBot kao partner za vašu zajednicu: rad s mladima, potvrda, duhovno savjetovanje i biblijski krugovi. Od besplatnog do premium.",
+    "forChurchesTitle": "BibleBot za crkve – Digitalno duhovno savjetovanje i biblijska pratnja",
+    "homeDesc": "BibleBot vas prati s 5 biblijskih prijevoda, metodologijom treniranja i duhovnim savjetovanjem. Anonimno, besplatno, na 36 jezika.",
+    "homeTitle": "BibleBot – Vaš osobni biblijski pratitelj | Besplatno i anonimno",
+    "loginDesc": "Prijavite se na BibleBot kako biste pripremili svoje osobne ceremonije.",
+    "loginTitle": "Prijava – BibleBot"
+  },
+  "splash": {
+    "patronage": "Preporučuje"
   }
 }

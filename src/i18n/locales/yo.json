@@ -7,7 +7,8 @@
     "badge": {
       "noLogin": "Kò sí ìforúkọsílẹ̀",
       "noData": "Kò sí dátà",
-      "noJudgment": "Kò sí ìdájọ́"
+      "noJudgment": "Kò sí ìdájọ́",
+      "optionalLogin": "Wọlé kò dandan"
     },
     "title1": "Bíbélì.",
     "title2": " Tí a tún ronú rẹ̀.",
@@ -21,7 +22,9 @@
     "loading": "Ìmúlọ́ ọjọ́ ń gbékalẹ̀...",
     "label": "Ìmúlọ́ Ọjọ́",
     "deepDive": "Kí ni èyí túmọ̀ sí fún mi?",
-    "explore": "Ka abala kíkún"
+    "explore": "Ka abala kíkún",
+    "alreadySubscribed": "O n gba imisis ti ojoojumọ",
+    "subscribeCta": "Ṣe o fẹ gba imisis yi lojoojumọ?"
   },
   "features": {
     "sectionTitle": "Bí BibleBot ṣe ń bá ọ rìn",
@@ -151,7 +154,8 @@
     "toastPermDenied": "A kọ̀ àṣẹ",
     "toastPermDeniedDesc": "Jọ̀wọ́ gbà àwọn ìfitónilétí nínú ètò aṣàwákiri rẹ.",
     "toastError": "Àṣìṣe",
-    "toastErrorDesc": "Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kan sí i nígbà míì."
+    "toastErrorDesc": "Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kan sí i nígbà míì.",
+    "subscribeButton": "Alabapin si Inspo"
   },
   "faq": {
     "badge": "Àwọn ìbéèrè tí a sábà ń béèrè",
@@ -286,7 +290,8 @@
     "errorTitle": "Àṣìṣe",
     "errorConnection": "kò lè dé.",
     "errorNoStream": "Kò sí ìṣàn",
-    "seniorMode": "Ìpele àgbàlagbà (ọ̀rọ̀ tó tóbi)"
+    "seniorMode": "Ìpele àgbàlagbà (ọ̀rọ̀ tó tóbi)",
+    "loginHint": "Wọlé láti tọ́jú ìjíròrò rẹ lórí gbogbo àwọn ohun èlò"
   },
   "install": {
     "title": "Fi BibleBot sí",
@@ -371,7 +376,10 @@
     "baptism": {
       "title": "Rí ẹsẹ ìrìbọmi",
       "desc": "Ẹsẹ tó péye fún ọmọ rẹ",
-      "prompt": "Ràn mí lọ́wọ́ láti rí ẹsẹ ìrìbọmi tó yẹ. Irú ọmọ wo ni, kí ni àwọn òbí fẹ́?"
+      "prompt": "Ràn mí lọ́wọ́ láti rí ẹsẹ ìrìbọmi tó yẹ. Irú ọmọ wo ni, kí ni àwọn òbí fẹ́?",
+      "prompt_v1": "Kí ni ìrìbọmi túmọ̀ sí gan-an?",
+      "prompt_v2": "Sọ fún mi nípa ìrìbọmi nínú Bíbélì – yà mí lẹ́nu!",
+      "prompt_v3": "Kí nìdí tí àwọn èèyàn fi ń ṣe ìrìbọmi?"
     },
     "condolence": {
       "title": "Ọ̀rọ̀ ìtùnú",
@@ -386,7 +394,10 @@
     "anxiety": {
       "title": "Ìbẹ̀rù àti àníyàn",
       "desc": "Rírí ìgboyà ní àkókò líle",
-      "prompt": "Mo ń jà pẹ̀lú ìbẹ̀rù àti àníyàn báyìí. Kí ni Bíbélì sọ nípa èyí? Ṣé àwọn ẹsẹ tó fún ni ní ìgboyà wà?"
+      "prompt": "Mo ń jà pẹ̀lú ìbẹ̀rù àti àníyàn báyìí. Kí ni Bíbélì sọ nípa èyí? Ṣé àwọn ẹsẹ tó fún ni ní ìgboyà wà?",
+      "prompt_v1": "Mo ní àníyàn. Kí ni Bíbélì sọ nípa àníyàn?",
+      "prompt_v2": "Báwo ni ìgbàgbọ́ ṣe lè ràn mí lọ́wọ́ pẹ̀lú àníyàn?",
+      "prompt_v3": "Àwọn èèyàn Bíbélì wo ni wọ́n tún ní àníyàn?"
     },
     "confession": {
       "title": "Ìjẹ́wọ́",
@@ -396,7 +407,10 @@
     "heartbreak": {
       "title": "Ọkàn fífọ́",
       "desc": "Ohun tí Bíbélì sọ nípa ìrora ọkàn",
-      "prompt": "Ọkàn mi ti fọ́. Kí ni Bíbélì sọ nípa ìrora ọkàn àti bí a ṣe lè rí ìrètí mọ́?"
+      "prompt": "Ọkàn mi ti fọ́. Kí ni Bíbélì sọ nípa ìrora ọkàn àti bí a ṣe lè rí ìrètí mọ́?",
+      "prompt_v1": "Ọkàn mi fọ́. Kí ni Bíbélì sọ nípa èyí?",
+      "prompt_v2": "Báwo ni mo ṣe lè fara da ìdààmú ọkàn – ṣé ìrànlọ́wọ́ Bíbélì wà?",
+      "prompt_v3": "Ǹjẹ́ Ọlọ́run lè wo ọkàn tó fọ́ sàn?"
     },
     "newstart": {
       "title": "Àtúnbẹ̀rẹ̀",
@@ -426,7 +440,10 @@
     "gratitude": {
       "title": "Ìdúpẹ́",
       "desc": "Àdúrà ìdúpẹ́ tìrẹ",
-      "prompt": "Mo fẹ́ dúpẹ́ lọ́wọ́ Ọlọ́run. Ràn mí lọ́wọ́ láti kọ àdúrà ìdúpẹ́ tìrẹ."
+      "prompt": "Mo fẹ́ dúpẹ́ lọ́wọ́ Ọlọ́run. Ràn mí lọ́wọ́ láti kọ àdúrà ìdúpẹ́ tìrẹ.",
+      "prompt_v1": "Báwo ni mo ṣe lè di olóore àwọn diẹ síi?",
+      "prompt_v2": "Kí ni Bíbélì sọ nípa ọpẹ́?",
+      "prompt_v3": "Kí nìdí tí ọpẹ́ fi ṣe pàtàkì nínú ìgbàgbọ́?"
     },
     "lifewheel": {
       "title": "Kẹ̀kẹ́ ìgbésí ayé",
@@ -485,7 +502,10 @@
     "forgiveness": {
       "title": "Ìdáríjì",
       "desc": "Nígbà tí ìdáríjì bá dàbí èyí tí kò ṣeé ṣe",
-      "prompt": "Mi ò lè dáríjì ẹnìkan. Ó ń dùn mi púpọ̀. Kí ni Bíbélì sọ nípa ìdáríjì?"
+      "prompt": "Mi ò lè dáríjì ẹnìkan. Ó ń dùn mi púpọ̀. Kí ni Bíbélì sọ nípa ìdáríjì?",
+      "prompt_v1": "Kí ni Bíbélì sọ nípa ìdáríjì?",
+      "prompt_v2": "Báwo ni mo ṣe lè dárí ji ẹni tó pa mí lára?",
+      "prompt_v3": "Ǹjẹ́ àwọn ààlà kan wà fún ìdáríjì?"
     },
     "familyconflict": {
       "title": "Ìjà nínú ẹbí",
@@ -505,12 +525,23 @@
     "prayer": {
       "title": "Ẹ̀bẹ̀ àdúrà",
       "desc": "Jẹ́ ká gbàdúrà papọ̀",
-      "prompt": "Mo ní ẹ̀bẹ̀ àdúrà mo sì fẹ́ gbàdúrà papọ̀. Bá mi gbàdúrà."
+      "prompt": "Mo ní ẹ̀bẹ̀ àdúrà mo sì fẹ́ gbàdúrà papọ̀. Bá mi gbàdúrà.",
+      "prompt_v1": "Báwo ni mo ṣe lè kọ́ bí mo ṣe ń gbàdúrà?",
+      "prompt_v2": "Kí ni Bíbélì sọ nípa àdúrà?",
+      "prompt_v3": "Kí nìdí tí Ọlọ́run kò fi gbọ́ àwọn àdúrà kan?"
     },
     "bibleverse": {
       "title": "Lóye ẹsẹ kan",
       "desc": "Gba àlàyé abala Bíbélì kan",
       "prompt": "Mo fẹ́ lóye abala Bíbélì kan dáradára. Ṣé o lè ràn mí lọ́wọ́ láti fi sí àyíká rẹ̀?"
+    },
+    "biblequiz": {
+      "desc": "Ẹ dán ìmọ̀ Bíbélì yín wò lọ́nà eré",
+      "title": "Ìdánwò Bíbélì"
+    },
+    "prayerwall": {
+      "desc": "Pín àwọn ìfẹ́ àdúrà & gbàdúrà fúnra yín",
+      "title": "Ògiri Àdúrà"
     }
   },
   "lifeWheel": {
@@ -801,5 +832,30 @@
     "weddingDesc": "Kọ awọn ileri igbeyawo, yan awọn orin, ki o si gbero ayẹyẹ naa.",
     "baptismDesc": "Ṣe agbekalẹ awọn ifẹ iribomi ki o si mura ilana pẹlu agbegbe.",
     "confirmationDesc": "Wa ọrọ ijẹrisi ki o si mura awọn ọrọ ti ara ẹni."
+  },
+  "chatHero": {
+    "ariaLabel": "Béèrè lọ́wọ́ BibleBot",
+    "focusPlaceholder": "Kọ ibeere rẹ…",
+    "placeholder1": "Kí ló mú mi dúpẹ́ gan-an?",
+    "placeholder2": "Báwo ni mo ṣe lè wá àlàáfíà inú?",
+    "placeholder3": "Kí ló fún mi ní ìrètí?",
+    "placeholder4": "Kí ni ọkàn mi fẹ́?",
+    "placeholder5": "Kí ni mo lè ṣe rere lónìí?",
+    "send": "Firanṣẹ",
+    "subtitle": "Béèrè ìbéèrè rẹ – ní gbangba, pẹ̀lú òtítọ́, láìsí ìforúkọsílẹ̀.",
+    "suggestion1": "Kí ni orúkọ mi túmọ̀ sí?",
+    "suggestion2": "Kí ló fún mi lágbára lónìí?",
+    "suggestion3": "Kí ni mo dúpẹ́ fún?"
+  },
+  "meta": {
+    "forChurchesDesc": "BibleBot gẹgẹbi alabaṣepọ fun agbegbe rẹ: iṣẹ ọdọ, iṣeduro, ifunni alufaa, ati awọn iyika Bibeli. Ọfẹ si Ere.",
+    "forChurchesTitle": "BibleBot fun Awọn Ile-ijọsin – Iṣẹ-iranṣẹ Digital & Atilẹyin Bibeli",
+    "homeDesc": "BibleBot tẹle ọ pẹlu awọn itumọ Bibeli 5, ilana ikẹkọ ati ifunni alufaa. Ailorukọ, ọfẹ, ni awọn ede 36.",
+    "homeTitle": "BibleBot – Ẹlẹgbẹ Bibeli Ti ara Rẹ | Ọfẹ & Ailorukọ",
+    "loginDesc": "Wọlé sí BibleBot láti múra àwọn ayẹyẹ tirẹ sílẹ̀.",
+    "loginTitle": "Wọlé – BibleBot"
+  },
+  "splash": {
+    "patronage": "Ti a ṣe iṣeduro nipasẹ"
   }
 }

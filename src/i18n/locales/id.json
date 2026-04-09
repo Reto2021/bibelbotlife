@@ -7,7 +7,8 @@
     "badge": {
       "noLogin": "Tidak Perlu Login",
       "noData": "Tidak Ada Data",
-      "noJudgment": "Tanpa Penghakiman"
+      "noJudgment": "Tanpa Penghakiman",
+      "optionalLogin": "Login opsional"
     },
     "title1": "Alkitab.",
     "title2": " Dipikirkan Ulang.",
@@ -21,7 +22,9 @@
     "loading": "Memuat Renungan Harian...",
     "label": "Renungan Harian",
     "deepDive": "Apa artinya ini bagiku?",
-    "explore": "Baca Bagian Lengkap"
+    "explore": "Baca Bagian Lengkap",
+    "alreadySubscribed": "Anda sudah menerima inspirasi harian",
+    "subscribeCta": "Ingin menerima inspirasi ini setiap hari?"
   },
   "features": {
     "sectionTitle": "Bagaimana BibleBot Anda Mendampingi Anda",
@@ -151,7 +154,8 @@
     "toastPermDenied": "Izin Ditolak",
     "toastPermDeniedDesc": "Harap izinkan notifikasi di pengaturan browser Anda.",
     "toastError": "Kesalahan",
-    "toastErrorDesc": "Silakan coba lagi nanti."
+    "toastErrorDesc": "Silakan coba lagi nanti.",
+    "subscribeButton": "Langganan Inspo"
   },
   "faq": {
     "badge": "Pertanyaan yang Sering Diajukan",
@@ -286,7 +290,8 @@
     "errorTitle": "Kesalahan",
     "errorConnection": "tidak dapat dijangkau.",
     "errorNoStream": "Tidak ada aliran",
-    "seniorMode": "Mode Senior (huruf lebih besar)"
+    "seniorMode": "Mode Senior (huruf lebih besar)",
+    "loginHint": "Masuk untuk menjaga percakapan di seluruh perangkat"
   },
   "install": {
     "title": "Instal BibleBot",
@@ -371,7 +376,10 @@
     "baptism": {
       "title": "Menemukan Ayat Pembaptisan",
       "desc": "Ayat yang sempurna untuk anak Anda",
-      "prompt": "Bantu saya menemukan ayat pembaptisan yang cocok. Anak seperti apa dia dan apa yang orang tua inginkan?"
+      "prompt": "Bantu saya menemukan ayat pembaptisan yang cocok. Anak seperti apa dia dan apa yang orang tua inginkan?",
+      "prompt_v1": "Apa sebenarnya arti baptisan?",
+      "prompt_v2": "Ceritakan tentang baptisan dalam Alkitab – kejutkan saya!",
+      "prompt_v3": "Mengapa orang dibaptis?"
     },
     "condolence": {
       "title": "Kata-kata Penghiburan",
@@ -386,7 +394,10 @@
     "anxiety": {
       "title": "Kecemasan & Kekhawatiran",
       "desc": "Menemukan keberanian di masa sulit",
-      "prompt": "Saat ini saya sedang berjuang dengan kecemasan dan kekhawatiran. Apa kata Alkitab tentang ini? Adakah ayat-ayat yang memberi keberanian?"
+      "prompt": "Saat ini saya sedang berjuang dengan kecemasan dan kekhawatiran. Apa kata Alkitab tentang ini? Adakah ayat-ayat yang memberi keberanian?",
+      "prompt_v1": "Saya cemas. Apa yang Alkitab katakan tentang kecemasan?",
+      "prompt_v2": "Bagaimana iman dapat membantu saya dengan kecemasan?",
+      "prompt_v3": "Tokoh Alkitab mana yang juga memiliki ketakutan?"
     },
     "confession": {
       "title": "Pengakuan",
@@ -396,7 +407,10 @@
     "heartbreak": {
       "title": "Patah Hati",
       "desc": "Apa kata Alkitab tentang patah hati",
-      "prompt": "Hati saya hancur. Apa kata Alkitab tentang patah hati dan bagaimana menemukan harapan lagi?"
+      "prompt": "Hati saya hancur. Apa kata Alkitab tentang patah hati dan bagaimana menemukan harapan lagi?",
+      "prompt_v1": "Hati saya hancur. Apa kata Alkitab tentang ini?",
+      "prompt_v2": "Bagaimana saya menghadapi patah hati – apakah ada bantuan Alkitab?",
+      "prompt_v3": "Dapatkah Tuhan menyembuhkan hati yang hancur?"
     },
     "newstart": {
       "title": "Awal Baru",
@@ -426,7 +440,10 @@
     "gratitude": {
       "title": "Syukur",
       "desc": "Doa Syukur Pribadi",
-      "prompt": "Saya ingin berterima kasih kepada Tuhan. Bantu saya merumuskan doa syukur pribadi."
+      "prompt": "Saya ingin berterima kasih kepada Tuhan. Bantu saya merumuskan doa syukur pribadi.",
+      "prompt_v1": "Bagaimana saya bisa menjadi lebih bersyukur?",
+      "prompt_v2": "Apa yang Alkitab katakan tentang rasa syukur?",
+      "prompt_v3": "Mengapa rasa syukur begitu penting dalam iman?"
     },
     "lifewheel": {
       "title": "Roda Kehidupan",
@@ -485,7 +502,10 @@
     "forgiveness": {
       "title": "Pengampunan",
       "desc": "Ketika memaafkan tampaknya mustahil",
-      "prompt": "Saya tidak bisa memaafkan seseorang. Terlalu sakit. Apa kata Alkitab tentang pengampunan?"
+      "prompt": "Saya tidak bisa memaafkan seseorang. Terlalu sakit. Apa kata Alkitab tentang pengampunan?",
+      "prompt_v1": "Apa yang Alkitab katakan tentang pengampunan?",
+      "prompt_v2": "Bagaimana saya bisa memaafkan seseorang yang telah menyakiti saya?",
+      "prompt_v3": "Apakah ada batasan pengampunan?"
     },
     "familyconflict": {
       "title": "Konflik Keluarga",
@@ -505,12 +525,23 @@
     "prayer": {
       "title": "Permohonan Doa",
       "desc": "Berdoa Bersama",
-      "prompt": "Saya memiliki permohonan doa dan ingin berdoa bersama. Dampingi saya dalam doa."
+      "prompt": "Saya memiliki permohonan doa dan ingin berdoa bersama. Dampingi saya dalam doa.",
+      "prompt_v1": "Bagaimana saya bisa belajar berdoa?",
+      "prompt_v2": "Apa yang Alkitab katakan tentang doa?",
+      "prompt_v3": "Mengapa Tuhan tidak mengabulkan beberapa doa?"
     },
     "bibleverse": {
       "title": "Memahami Ayat",
       "desc": "Meminta penjelasan ayat Alkitab",
       "prompt": "Saya ingin lebih memahami suatu ayat Alkitab. Bisakah Anda membantu saya menempatkannya dalam konteks?"
+    },
+    "biblequiz": {
+      "desc": "Uji pengetahuan Alkitab Anda dengan cara yang menyenangkan",
+      "title": "Kuis Alkitab"
+    },
+    "prayerwall": {
+      "desc": "Bagikan permohonan doa & saling mendoakan",
+      "title": "Dinding Doa"
     }
   },
   "lifeWheel": {
@@ -801,5 +832,30 @@
     "weddingDesc": "Tulis janji pernikahan, pilih lagu, dan rencanakan perayaan.",
     "baptismDesc": "Rumuskan keinginan pembaptisan dan persiapkan prosesi dengan jemaat.",
     "confirmationDesc": "Temukan ayat konfirmasi dan persiapkan teks pribadi."
+  },
+  "chatHero": {
+    "ariaLabel": "Ajukan pertanyaan kepada BibleBot",
+    "focusPlaceholder": "Tulis pertanyaanmu…",
+    "placeholder1": "Apa yang membuat saya sungguh bersyukur?",
+    "placeholder2": "Bagaimana menemukan kedamaian batin?",
+    "placeholder3": "Apa yang memberi saya harapan?",
+    "placeholder4": "Apa yang diinginkan hatiku?",
+    "placeholder5": "Apa yang bisa saya lakukan yang baik hari ini?",
+    "send": "Kirim",
+    "subtitle": "Ajukan pertanyaan Anda – terbuka, jujur, tanpa masuk.",
+    "suggestion1": "Apa arti nama saya?",
+    "suggestion2": "Apa yang memberi saya kekuatan hari ini?",
+    "suggestion3": "Untuk apa saya bersyukur?"
+  },
+  "meta": {
+    "forChurchesDesc": "BibleBot sebagai mitra untuk gereja Anda: pekerjaan pemuda, konfirmasi, konseling pastoral, dan kelompok studi Alkitab. Gratis hingga Premium.",
+    "forChurchesTitle": "BibleBot untuk Gereja – Konseling Pastoral Digital & Pendampingan Alkitab",
+    "homeDesc": "BibleBot menemani Anda dengan 5 terjemahan Alkitab, metodologi pembinaan, dan konseling pastoral. Anonim, gratis, dalam 36 bahasa.",
+    "homeTitle": "BibleBot – Pendamping Alkitab Pribadi Anda | Gratis & Anonim",
+    "loginDesc": "Masuk ke BibleBot untuk mempersiapkan upacara pribadi Anda.",
+    "loginTitle": "Masuk – BibleBot"
+  },
+  "splash": {
+    "patronage": "Direkomendasikan oleh"
   }
 }

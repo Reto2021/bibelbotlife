@@ -7,7 +7,8 @@
     "badge": {
       "noLogin": "Akukho ukungena ngemvume",
       "noData": "Ayikho idatha",
-      "noJudgment": "Akukho ukwahlulela"
+      "noJudgment": "Akukho ukwahlulela",
+      "optionalLogin": "Ukungena ngemvume akuyona imfuneko"
     },
     "title1": "IBhayibheli.",
     "title2": " Kucatshangwe kabusha.",
@@ -21,7 +22,9 @@
     "loading": "Umlayezo wosuku ulayishwa...",
     "label": "Umlayezo Wosuku",
     "deepDive": "Kusho ukuthini lokhu kimi?",
-    "explore": "Funda Isigaba Sonke"
+    "explore": "Funda Isigaba Sonke",
+    "alreadySubscribed": "Usuwuthola ugqozi lwansuku zonke",
+    "subscribeCta": "Uyafuna ukuthola lolu gqozi nsuku zonke?"
   },
   "features": {
     "sectionTitle": "Indlela iBibleBot yakho ikuphelezela ngayo",
@@ -151,7 +154,8 @@
     "toastPermDenied": "Imvume yehliwe",
     "toastPermDeniedDesc": "Sicela uvumele izaziso kuzilungiselelo zesiphequluli sakho.",
     "toastError": "Iphutha",
-    "toastErrorDesc": "Sicela uzame futhi kamuva."
+    "toastErrorDesc": "Sicela uzame futhi kamuva.",
+    "subscribeButton": "Bhalisa i-Inspo"
   },
   "faq": {
     "badge": "Imibuzo Evame Ukubuzwa",
@@ -286,7 +290,8 @@
     "errorTitle": "Iphutha",
     "errorConnection": "ayikwazanga ukufinyelelwa.",
     "errorNoStream": "Akukho ukusakazwa",
-    "seniorMode": "Imodi Yomdala (ifonti enkulu)"
+    "seniorMode": "Imodi Yomdala (ifonti enkulu)",
+    "loginHint": "Ngena ngemvume ukuze ugcine izingxoxo kuwo wonke amadivayisi"
   },
   "install": {
     "title": "Faka iBibleBot",
@@ -371,7 +376,10 @@
     "baptism": {
       "title": "Thola Ivesi Lobhapathizo",
       "desc": "Ivesi eliphelele lengane yakho",
-      "prompt": "Nceda ngithole ivesi lobhapathizo elifanele. Luhlobo luni lwengane futhi abazali bafisani?"
+      "prompt": "Nceda ngithole ivesi lobhapathizo elifanele. Luhlobo luni lwengane futhi abazali bafisani?",
+      "prompt_v1": "Kusho ukuthini ngempela ubhapathizo?",
+      "prompt_v2": "Ngitshele ngobhapathizo eBhayibhelini – ngimangaze!",
+      "prompt_v3": "Kungani abantu babhapathizwa?"
     },
     "condolence": {
       "title": "Amazwi Okududuzeka",
@@ -386,7 +394,10 @@
     "anxiety": {
       "title": "Ukukhathazeka & Ukukhathazeka",
       "desc": "Thola isibindi ngezikhathi ezinzima",
-      "prompt": "Ngingakwazi ukubhekana nokwesaba nokukhathazeka njengamanje. Lithini iBhayibheli ngakho? Kukhona yini amavesi akhuthazayo?"
+      "prompt": "Ngingakwazi ukubhekana nokwesaba nokukhathazeka njengamanje. Lithini iBhayibheli ngakho? Kukhona yini amavesi akhuthazayo?",
+      "prompt_v1": "Nginokukhathazeka. Lithini iBhayibheli ngokukhathazeka?",
+      "prompt_v2": "Ukholo lungangisiza kanjani ekukhathazekeni?",
+      "prompt_v3": "Yimaphi amagama asebhayibhelini abenokukhathazeka?"
     },
     "confession": {
       "title": "Ukuvuma Izono",
@@ -396,7 +407,10 @@
     "heartbreak": {
       "title": "Inhliziyo Ephukile",
       "desc": "Okushoyo iBhayibheli ngentlungu yenhliziyo",
-      "prompt": "Inhliziyo yami ephukile. Lithini iBhayibheli ngenhliziyo ephukile nokuthi ungathola kanjani ithemba futhi?"
+      "prompt": "Inhliziyo yami ephukile. Lithini iBhayibheli ngenhliziyo ephukile nokuthi ungathola kanjani ithemba futhi?",
+      "prompt_v1": "Inhliziyo yami iphukile. Lithini iBhayibheli ngalokhu?",
+      "prompt_v2": "Ngingabhekana kanjani nobuhlungu benhliziyo – ingabe kukhona usizo olusebhayibhelini?",
+      "prompt_v3": "Ingabe uNkulunkulu angayiphilisa inhliziyo ephukile?"
     },
     "newstart": {
       "title": "Isiqalo Esisha",
@@ -426,7 +440,10 @@
     "gratitude": {
       "title": "Ukubonga",
       "desc": "Umthandazo wokubonga womuntu siqu",
-      "prompt": "Ngifuna ukubonga uNkulunkulu. Nceda ngibhale umthandazo wokubonga womuntu siqu."
+      "prompt": "Ngifuna ukubonga uNkulunkulu. Nceda ngibhale umthandazo wokubonga womuntu siqu.",
+      "prompt_v1": "Ngingaqala kanjani ukubonga ngokwengeziwe?",
+      "prompt_v2": "Lithini iBhayibheli ngokubonga?",
+      "prompt_v3": "Kungani ukubonga kubaluleke kangaka ekukholweni?"
     },
     "lifewheel": {
       "title": "Isondo Lempilo",
@@ -485,7 +502,10 @@
     "forgiveness": {
       "title": "Ukuthethelela",
       "desc": "Uma ukuthethelela kubonakala kungenakwenzeka",
-      "prompt": "Angikwazi ukuthethelela umuntu. Kubuhlungu kakhulu. Lithini iBhayibheli ngokuthethelela?"
+      "prompt": "Angikwazi ukuthethelela umuntu. Kubuhlungu kakhulu. Lithini iBhayibheli ngokuthethelela?",
+      "prompt_v1": "Lithini iBhayibheli ngokuthethelela?",
+      "prompt_v2": "Ngingamxolela kanjani umuntu ongiphathile kabi?",
+      "prompt_v3": "Ingabe ikhona imingcele ekuthetheleleni?"
     },
     "familyconflict": {
       "title": "Ukungqubuzana Komndeni",
@@ -505,12 +525,23 @@
     "prayer": {
       "title": "Izicelo Zomthandazo",
       "desc": "Ukuthandaza Ndawonye",
-      "prompt": "Nginokugqugquzela komthandazo futhi ngifuna ukuthandaza ndawonye. Ngiphelezela emthandazweni."
+      "prompt": "Nginokugqugquzela komthandazo futhi ngifuna ukuthandaza ndawonye. Ngiphelezela emthandazweni.",
+      "prompt_v1": "Ngingafunda kanjani ukuthandaza?",
+      "prompt_v2": "Lithini iBhayibheli ngomkhuleko?",
+      "prompt_v3": "Kungani uNkulunkulu engawaphenduli amanye imikhuleko?"
     },
     "bibleverse": {
       "title": "Qonda Ivesi",
       "desc": "Ukuchazwa Kohlelo LweBhayibheli",
       "prompt": "Ngifuna ukuqonda kangcono indawo yeBhayibheli. Ungangisiza kanjani ukulinganisa ekuvulekeni?"
+    },
+    "biblequiz": {
+      "desc": "Hlola ulwazi lwakho lweBhayibheli ngokudlala",
+      "title": "I-Bible Quiz"
+    },
+    "prayerwall": {
+      "desc": "Yabelana ngezicelo zomkhuleko futhi uthandazelane",
+      "title": "Udonga Lomkhuleko"
     }
   },
   "lifeWheel": {
@@ -801,5 +832,30 @@
     "weddingDesc": "Bhala izifungo zomshado, khetha izingoma futhi uhlele umcimbi.",
     "baptismDesc": "Bhala izifiso zobhabhadiso futhi ulungiselele inqubo nebandla.",
     "confirmationDesc": "Thola ivesi lesiqinisekiso futhi ulungiselele imibhalo yomuntu siqu."
+  },
+  "chatHero": {
+    "ariaLabel": "Buza i-BibleBot",
+    "focusPlaceholder": "Bhala umbuzo wakho…",
+    "placeholder1": "Yini engenza ngibonge ngempela?",
+    "placeholder2": "Ngingawuthola kanjani ukuthula kwangaphakathi?",
+    "placeholder3": "Yini enginika ithemba?",
+    "placeholder4": "Yini inhliziyo yami eyifisayo?",
+    "placeholder5": "Yini enhle engingayenza namuhla?",
+    "send": "Thumela",
+    "subtitle": "Buza umbuzo wakho – ngokusobala, ngokwethembeka, ngaphandle kokubhalisa.",
+    "suggestion1": "Igama lami lisho ukuthini?",
+    "suggestion2": "Yini enginika amandla namuhla?",
+    "suggestion3": "Ngingubani ngibonga?"
+  },
+  "meta": {
+    "forChurchesDesc": "IBibleBot njengomlingani wamabandla akho: Umsebenzi wobusha, ukuqinisekiswa, ukuhola komoya namaselaqo eBhayibheli. Mahhala kuya ku-Premium.",
+    "forChurchesTitle": "I-BibleBot yamabandla – Ukuhola Komoya Kwezinhlelo Zangaphakathi & Ukuhambisana KweBhayibheli",
+    "homeDesc": "I-BibleBot ihamba nawe ngemihumusha yeBhayibheli engu-5, indlela yokufundisa nokuqeqesha, nokuhola komoya. Ayaziwa, mahhala, ngezilimi ezingama-36.",
+    "homeTitle": "I-BibleBot – Umngane wakho weBhayibheli siqu | Mahhala & Ayaziwa",
+    "loginDesc": "Ngena ku-BibleBot ukuze ulungiselele imikhosi yakho yangempela.",
+    "loginTitle": "Ngena ngemvume – BibleBot"
+  },
+  "splash": {
+    "patronage": "Ikhuthazwe yi"
   }
 }

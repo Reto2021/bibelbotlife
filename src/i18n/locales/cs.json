@@ -7,7 +7,8 @@
     "badge": {
       "noLogin": "Bez přihlášení",
       "noData": "Žádná data",
-      "noJudgment": "Bez posuzování"
+      "noJudgment": "Bez posuzování",
+      "optionalLogin": "Přihlášení nepovinné"
     },
     "title1": "Bible.",
     "title2": " Nově promyšlená.",
@@ -21,7 +22,9 @@
     "loading": "Načítání denního impulzu...",
     "label": "Impulz dne",
     "deepDive": "Co to pro mě znamená?",
-    "explore": "Přečíst celý úryvek"
+    "explore": "Přečíst celý úryvek",
+    "alreadySubscribed": "Dostáváte denní inspiraci",
+    "subscribeCta": "Chcete tuto inspiraci dostávat denně?"
   },
   "features": {
     "sectionTitle": "Jak tě BibleBot doprovází",
@@ -151,7 +154,8 @@
     "toastPermDenied": "Povolení zamítnuto",
     "toastPermDeniedDesc": "Povol oznámení v nastavení prohlížeče.",
     "toastError": "Chyba",
-    "toastErrorDesc": "Zkus to prosím později."
+    "toastErrorDesc": "Zkus to prosím později.",
+    "subscribeButton": "Přihlásit se k odběru Inspo"
   },
   "faq": {
     "badge": "FAQ",
@@ -271,7 +275,8 @@
     "errorNoStream": "Žádný stream",
     "seniorMode": "Senior mode (larger text)",
     "teaserCta": "Psát nyní →",
-    "namePlaceholder": "např. Eli, Miriam…"
+    "namePlaceholder": "např. Eli, Miriam…",
+    "loginHint": "Přihlaste se, abyste si uchovali konverzace napříč zařízeními"
   },
   "install": {
     "title": "Nainstalovat BibleBot",
@@ -336,7 +341,10 @@
     "baptism": {
       "title": "Verš ke křtu",
       "desc": "Dokonalý verš pro tvé dítě",
-      "prompt": "Pomoz mi najít vhodný verš ke křtu. Jaké je to dítě a co si přejí rodiče?"
+      "prompt": "Pomoz mi najít vhodný verš ke křtu. Jaké je to dítě a co si přejí rodiče?",
+      "prompt_v1": "Co vlastně znamená křest?",
+      "prompt_v2": "Řekněte mi o křtu v Bibli – překvapte mě!",
+      "prompt_v3": "Proč se lidé nechávají křtít?"
     },
     "condolence": {
       "title": "Slova útěchy",
@@ -351,7 +359,10 @@
     "anxiety": {
       "title": "Strach a starosti",
       "desc": "Najít odvahu v těžkých chvílích",
-      "prompt": "Bojuji se strachem a starostmi. Co říká Bible k tomuto tématu? Existují verše, které dodávají odvahu?"
+      "prompt": "Bojuji se strachem a starostmi. Co říká Bible k tomuto tématu? Existují verše, které dodávají odvahu?",
+      "prompt_v1": "Mám úzkost. Co říká Bible o úzkosti?",
+      "prompt_v2": "Jak mi víra může pomoci s úzkostmi?",
+      "prompt_v3": "Které biblické postavy také pociťovaly úzkost?"
     },
     "confession": {
       "title": "Zpověď",
@@ -361,7 +372,10 @@
     "heartbreak": {
       "title": "Zlomené srdce",
       "desc": "Co říká Bible o bolesti srdce",
-      "prompt": "Mám zlomené srdce. Co říká Bible o bolesti srdce a jak znovu najít naději?"
+      "prompt": "Mám zlomené srdce. Co říká Bible o bolesti srdce a jak znovu najít naději?",
+      "prompt_v1": "Srdce se mi zlomilo. Co k tomu říká Bible?",
+      "prompt_v2": "Jak se vypořádat se zlomeným srdcem – existuje biblická pomoc?",
+      "prompt_v3": "Může Bůh uzdravit zlomené srdce?"
     },
     "newstart": {
       "title": "Nový začátek",
@@ -391,7 +405,10 @@
     "gratitude": {
       "title": "Vděčnost",
       "desc": "Osobní děkovná modlitba",
-      "prompt": "Chci poděkovat Bohu. Pomoz mi formulovat osobní modlitbu vděčnosti."
+      "prompt": "Chci poděkovat Bohu. Pomoz mi formulovat osobní modlitbu vděčnosti.",
+      "prompt_v1": "Jak mohu být vděčnější?",
+      "prompt_v2": "Co říká Bible o vděčnosti?",
+      "prompt_v3": "Proč je vděčnost tak důležitá ve víře?"
     },
     "lifewheel": {
       "title": "Kolo života",
@@ -450,7 +467,10 @@
     "forgiveness": {
       "title": "Odpuštění",
       "desc": "Když odpustit se zdá nemožné",
-      "prompt": "Nemůžu odpustit. Co říká Bible o odpuštění?"
+      "prompt": "Nemůžu odpustit. Co říká Bible o odpuštění?",
+      "prompt_v1": "Co říká Bible o odpuštění?",
+      "prompt_v2": "Jak mohu odpustit někomu, kdo mi ublížil?",
+      "prompt_v3": "Existují hranice odpuštění?"
     },
     "familyconflict": {
       "title": "Rodinný konflikt",
@@ -470,12 +490,23 @@
     "prayer": {
       "title": "Modlitební prosba",
       "desc": "Modlit se společně",
-      "prompt": "Mám modlitební prosbu. Doprovoď mě v modlitbě."
+      "prompt": "Mám modlitební prosbu. Doprovoď mě v modlitbě.",
+      "prompt_v1": "Jak se mohu naučit modlit?",
+      "prompt_v2": "Co říká Bible o modlitbě?",
+      "prompt_v3": "Proč Bůh některé modlitby nevyslyší?"
     },
     "bibleverse": {
       "title": "Pochopit verš",
       "desc": "Vysvětlení biblického úryvku",
       "prompt": "Chtěl/a bych lépe pochopit biblický úryvek. Můžeš mi pomoci?"
+    },
+    "biblequiz": {
+      "desc": "Hravě otestujte své biblické znalosti",
+      "title": "Biblický kvíz"
+    },
+    "prayerwall": {
+      "desc": "Sdílejte modlitební úmysly a modlete se jeden za druhého",
+      "title": "Modlitební zeď"
     }
   },
   "lifeWheel": {
@@ -801,5 +832,30 @@
     "weddingDesc": "Napište manželské sliby, vyberte písně a naplánujte oslavu.",
     "baptismDesc": "Formulujte přání ke křtu a připravte průběh s obcí.",
     "confirmationDesc": "Najděte konfirmační verš a připravte osobní texty."
+  },
+  "chatHero": {
+    "ariaLabel": "Položte otázku BibleBotu",
+    "focusPlaceholder": "Napište svou otázku…",
+    "placeholder1": "Co mě opravdu naplňuje vděčností?",
+    "placeholder2": "Jak najdu vnitřní klid?",
+    "placeholder3": "Co mi dává naději?",
+    "placeholder4": "Co si přeje mé srdce?",
+    "placeholder5": "Co dobrého mohu dnes udělat?",
+    "send": "Odeslat",
+    "subtitle": "Zeptejte se – otevřeně, upřímně, bez přihlášení.",
+    "suggestion1": "Co znamená mé jméno?",
+    "suggestion2": "Co mi dnes dává sílu?",
+    "suggestion3": "Za co jsem vděčný?"
+  },
+  "meta": {
+    "forChurchesDesc": "BibleBot jako partner pro vaši komunitu: práce s mládeží, konfirmace, poradenství a biblické kroužky. Zdarma až Premium.",
+    "forChurchesTitle": "BibleBot pro církve – Digitální poradenství a biblická podpora",
+    "homeDesc": "BibleBot vás doprovází s 5 biblickými překlady, koučovací metodikou a poradenstvím. Anonymně, zdarma, ve 36 jazycích.",
+    "homeTitle": "BibleBot – Váš osobní biblický průvodce | Zdarma a anonymně",
+    "loginDesc": "Přihlaste se do BibleBotu a připravte si své osobní obřady.",
+    "loginTitle": "Přihlásit se – BibleBot"
+  },
+  "splash": {
+    "patronage": "Doporučeno"
   }
 }
