@@ -824,7 +824,7 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
         },
         body: JSON.stringify({
           model: "google/gemini-3-flash-preview",
-          temperature: 1.0,
+          temperature: 0.8,
           messages: [
             { role: "system", content: systemPrompt },
             ...finalMessages,
@@ -933,7 +933,7 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
           },
           body: JSON.stringify({
             model: "google/gemini-3-flash-preview",
-            temperature: 1.0,
+            temperature: 0.8,
             messages: followUpMessages,
             stream: true,
           }),

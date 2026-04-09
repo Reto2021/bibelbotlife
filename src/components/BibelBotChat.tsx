@@ -103,8 +103,8 @@ function likelyHasCitations(text: string): boolean {
 function QABadge({ qa, t }: { qa: QAResult | "loading" | "skipped"; t: (key: string, opts?: any) => string }) {
   if (qa === "loading") {
     return (
-      <div className="flex items-center gap-1.5 mt-2 text-xs text-muted-foreground">
-        <Loader2 className="h-3 w-3 animate-spin" />
+      <div className="flex items-center gap-2 mt-2 px-2.5 py-1.5 rounded-lg bg-muted/60 border border-border text-sm text-muted-foreground">
+        <Loader2 className="h-3.5 w-3.5 animate-spin" />
         <span>{t("chat.qaChecking")}</span>
       </div>
     );
@@ -116,8 +116,8 @@ function QABadge({ qa, t }: { qa: QAResult | "loading" | "skipped"; t: (key: str
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger asChild>
-          <div className={`flex items-center gap-1.5 mt-2 text-xs cursor-help ${qa.has_issues ? "text-amber-600 dark:text-amber-400" : "text-emerald-600 dark:text-emerald-400"}`}>
-            {qa.has_issues ? <AlertTriangle className="h-3 w-3" /> : <CheckCircle2 className="h-3 w-3" />}
+          <div className={`flex items-center gap-2 mt-2 px-2.5 py-1.5 rounded-lg border cursor-help text-sm font-medium ${qa.has_issues ? "text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/30 border-amber-200 dark:border-amber-800" : "text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800"}`}>
+            {qa.has_issues ? <AlertTriangle className="h-4 w-4" /> : <CheckCircle2 className="h-4 w-4" />}
             <span>
               {qa.has_issues
                 ? t("chat.qaIssue", { count: qa.issues.length })
@@ -173,21 +173,40 @@ function makeRefsClickable(children: React.ReactNode, onRefClick: (msg: string) 
   return processNode(children);
 }
 
-/** Extract lines like "a) …", "b) …" from assistant text and return { cleanText, options } */
+/** Extract options like "a) …", "b) …" from assistant text — works both line-by-line AND inline */
 function extractOptions(text: string): { cleanText: string; options: string[] } {
-  // Match lines starting with a letter followed by ) — e.g. "a) Foo bar"
-  const optionRegex = /^[a-z]\)\s+.+$/gm;
-  const matches = text.match(optionRegex);
-  if (!matches || matches.length < 2) return { cleanText: text, options: [] };
-  // Remove option lines from text
-  let cleanText = text;
-  for (const m of matches) {
-    cleanText = cleanText.replace(m, "").trim();
+  // First try line-based matching
+  const lineRegex = /^[a-z]\)\s+.+$/gm;
+  const lineMatches = text.match(lineRegex);
+  if (lineMatches && lineMatches.length >= 2) {
+    let cleanText = text;
+    for (const m of lineMatches) {
+      cleanText = cleanText.replace(m, "").trim();
+    }
+    cleanText = cleanText.replace(/\n{3,}/g, "\n\n");
+    const options = lineMatches.map((m) => m.replace(/^[a-z]\)\s+/, "").trim());
+    return { cleanText, options };
   }
-  // Clean up double blank lines
-  cleanText = cleanText.replace(/\n{3,}/g, "\n\n");
-  const options = matches.map((m) => m.replace(/^[a-z]\)\s+/, "").trim());
-  return { cleanText, options };
+  // Fallback: inline options like "**a)** Foo bar? **b)** Baz qux?"
+  // Match patterns: a) ... b) ... or **a)** ... **b)** ...
+  const inlineRegex = /\*{0,2}([a-z])\)\*{0,2}\s+([^]*?)(?=\s*\*{0,2}[a-z]\)\*{0,2}\s|$)/g;
+  const inlineMatches: string[] = [];
+  let match;
+  // Only attempt if we see at least a) and b) in the text
+  if (!/\*{0,2}a\)\*{0,2}\s/.test(text) || !/\*{0,2}b\)\*{0,2}\s/.test(text)) {
+    return { cleanText: text, options: [] };
+  }
+  // Find the start of options block (where "a)" begins)
+  const optionsStart = text.search(/\*{0,2}a\)\*{0,2}\s/);
+  if (optionsStart === -1) return { cleanText: text, options: [] };
+  const beforeOptions = text.slice(0, optionsStart).trim();
+  const optionsText = text.slice(optionsStart);
+  while ((match = inlineRegex.exec(optionsText)) !== null) {
+    const optText = match[2].trim().replace(/\?$/, "").trim();
+    if (optText.length > 5) inlineMatches.push(optText);
+  }
+  if (inlineMatches.length < 2) return { cleanText: text, options: [] };
+  return { cleanText: beforeOptions, options: inlineMatches };
 }
 
 function loadMessages(): Message[] {
