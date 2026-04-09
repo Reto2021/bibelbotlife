@@ -187,8 +187,21 @@ export default function ServiceEditor() {
     setBlocks((prev) => prev.filter((b) => b.id !== id));
   }, []);
 
+  const [activeId, setActiveId] = useState<string | null>(null);
+  const [overId, setOverId] = useState<string | null>(null);
+
+  const handleDragStart = useCallback((event: DragStartEvent) => {
+    setActiveId(String(event.active.id));
+  }, []);
+
+  const handleDragOver = useCallback((event: DragOverEvent) => {
+    setOverId(event.over ? String(event.over.id) : null);
+  }, []);
+
   const handleDragEnd = useCallback((event: DragEndEvent) => {
     const { active, over } = event;
+    setActiveId(null);
+    setOverId(null);
     if (over && active.id !== over.id) {
       setBlocks((prev) => {
         const oldIndex = prev.findIndex((b) => b.id === active.id);
