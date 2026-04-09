@@ -860,5 +860,12 @@
   },
   "auth": {
     "apple": "Banye site na Apple"
+  },
+  "tts": {
+    "male": "Olu nwoke",
+    "female": "Olu nwanyị",
+    "maleShort": "Nw",
+    "femaleShort": "Ny",
+    "voice": "Olu"
   }
 }

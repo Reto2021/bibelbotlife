@@ -860,5 +860,12 @@
   },
   "auth": {
     "apple": "Přihlásit se přes Apple"
+  },
+  "tts": {
+    "male": "Mužský hlas",
+    "female": "Ženský hlas",
+    "maleShort": "M",
+    "femaleShort": "Ž",
+    "voice": "Hlas"
   }
 }

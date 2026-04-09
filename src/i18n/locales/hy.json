@@ -860,5 +860,12 @@
   },
   "auth": {
     "apple": "Մուտք Apple-ով"
+  },
+  "tts": {
+    "male": "Տղամարդու ձայն",
+    "female": "Կնոջ ձայն",
+    "maleShort": "Տ",
+    "femaleShort": "Կ",
+    "voice": "Ձայն"
   }
 }

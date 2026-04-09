@@ -860,5 +860,12 @@
   },
   "auth": {
     "apple": "Conectare cu Apple"
+  },
+  "tts": {
+    "male": "Voce masculină",
+    "female": "Voce feminină",
+    "maleShort": "M",
+    "femaleShort": "F",
+    "voice": "Voce"
   }
 }

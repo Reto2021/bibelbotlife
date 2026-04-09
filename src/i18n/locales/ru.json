@@ -860,5 +860,12 @@
   },
   "auth": {
     "apple": "Войти через Apple"
+  },
+  "tts": {
+    "male": "Мужской голос",
+    "female": "Женский голос",
+    "maleShort": "М",
+    "femaleShort": "Ж",
+    "voice": "Голос"
   }
 }

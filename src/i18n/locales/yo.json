@@ -860,5 +860,12 @@
   },
   "auth": {
     "apple": "Wọlé pẹ̀lú Apple"
+  },
+  "tts": {
+    "male": "Ohùn ọkùnrin",
+    "female": "Ohùn obìnrin",
+    "maleShort": "Ọk",
+    "femaleShort": "Ob",
+    "voice": "Ohùn"
   }
 }

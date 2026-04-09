@@ -860,5 +860,12 @@
   },
   "auth": {
     "apple": "Ingia kwa Apple"
+  },
+  "tts": {
+    "male": "Sauti ya kiume",
+    "female": "Sauti ya kike",
+    "maleShort": "K",
+    "femaleShort": "Ki",
+    "voice": "Sauti"
   }
 }

@@ -863,5 +863,12 @@
   },
   "auth": {
     "apple": "Mag-sign in gamit ang Apple"
+  },
+  "tts": {
+    "male": "Boses lalaki",
+    "female": "Boses babae",
+    "maleShort": "L",
+    "femaleShort": "B",
+    "voice": "Boses"
   }
 }

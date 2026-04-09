@@ -860,5 +860,12 @@
   },
   "auth": {
     "apple": "Prijava putem Applea"
+  },
+  "tts": {
+    "male": "Muški glas",
+    "female": "Ženski glas",
+    "maleShort": "M",
+    "femaleShort": "Ž",
+    "voice": "Glas"
   }
 }

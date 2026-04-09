@@ -860,5 +860,12 @@
   },
   "auth": {
     "apple": "በApple ግባ"
+  },
+  "tts": {
+    "male": "የወንድ ድምጽ",
+    "female": "የሴት ድምጽ",
+    "maleShort": "ወ",
+    "femaleShort": "ሴ",
+    "voice": "ድምጽ"
   }
 }

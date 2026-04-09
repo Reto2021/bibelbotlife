@@ -860,5 +860,12 @@
   },
   "auth": {
     "apple": "Apple-ით შესვლა"
+  },
+  "tts": {
+    "male": "მამაკაცის ხმა",
+    "female": "ქალის ხმა",
+    "maleShort": "მ",
+    "femaleShort": "ქ",
+    "voice": "ხმა"
   }
 }
