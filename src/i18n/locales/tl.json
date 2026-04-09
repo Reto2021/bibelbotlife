@@ -7,7 +7,8 @@
     "badge": {
       "noLogin": "Walang Pag-login",
       "noData": "Walang Data",
-      "noJudgment": "Walang Paghuhusga"
+      "noJudgment": "Walang Paghuhusga",
+      "optionalLogin": "Opsyonal ang pag-log in"
     },
     "title1": "Ang Bibliya.",
     "title2": " Muling Pinag-isipan.",
@@ -21,7 +22,9 @@
     "loading": "Naglo-load ng pang-araw-araw na inspirasyon...",
     "label": "Inspirasyon ng Araw",
     "deepDive": "Ano ang ibig sabihin nito para sa akin?",
-    "explore": "Basahin ang buong seksyon"
+    "explore": "Basahin ang buong seksyon",
+    "alreadySubscribed": "Tumatanggap ka ng pang-araw-araw na inspirasyon",
+    "subscribeCta": "Nais mo bang matanggap ang inspirasyong ito araw-araw?"
   },
   "features": {
     "sectionTitle": "Paano ka Sasamahan ng Iyong BibleBot",
@@ -151,7 +154,8 @@
     "toastPermDenied": "Tinanggihan ang Pahintulot",
     "toastPermDeniedDesc": "Mangyaring payagan ang mga notification sa iyong mga setting ng browser.",
     "toastError": "Error",
-    "toastErrorDesc": "Mangyaring subukang muli sa ibang pagkakataon."
+    "toastErrorDesc": "Mangyaring subukang muli sa ibang pagkakataon.",
+    "subscribeButton": "Mag-subscribe sa Inspirasyon"
   },
   "faq": {
     "badge": "Mga Madalas Itanong",
@@ -286,7 +290,8 @@
     "errorTitle": "Error",
     "errorConnection": "hindi maabot.",
     "errorNoStream": "Walang Stream",
-    "seniorMode": "Senior Mode (mas malaking font)"
+    "seniorMode": "Senior Mode (mas malaking font)",
+    "loginHint": "Mag-log in para mapanatili ang mga pag-uusap sa lahat ng device"
   },
   "install": {
     "title": "I-install ang BibleBot",
@@ -333,7 +338,10 @@
     "baptism": {
       "title": "Maghanap ng Talata sa Binyag",
       "desc": "Ang perpektong talata para sa iyong anak",
-      "prompt": "Tulungan mo akong makahanap ng angkop na talata sa binyag. Anong uri ng bata ito at ano ang nais ng mga magulang?"
+      "prompt": "Tulungan mo akong makahanap ng angkop na talata sa binyag. Anong uri ng bata ito at ano ang nais ng mga magulang?",
+      "prompt_v1": "Ano ba talaga ang kahulugan ng binyag?",
+      "prompt_v2": "Sabihin mo sa akin ang tungkol sa binyag sa Bibliya – sorpresahin mo ako!",
+      "prompt_v3": "Bakit nagpapabinyag ang mga tao?"
     },
     "condolence": {
       "title": "Mga Salita ng Aliw",
@@ -348,7 +356,10 @@
     "anxiety": {
       "title": "Pagkabalisa at Pag-aalala",
       "desc": "Paghahanap ng tapang sa mahirap na panahon",
-      "prompt": "Nahihirapan ako ngayon sa pagkabalisa at pag-aalala. Ano ang sinasabi ng Bibliya tungkol dito? Mayroon bang mga talata na nagbibigay ng tapang?"
+      "prompt": "Nahihirapan ako ngayon sa pagkabalisa at pag-aalala. Ano ang sinasabi ng Bibliya tungkol dito? Mayroon bang mga talata na nagbibigay ng tapang?",
+      "prompt_v1": "Ako ay kinakabahan. Ano ang sinasabi ng Bibliya tungkol sa pakiramdam na kinakabahan?",
+      "prompt_v2": "Paano makakatulong ang pananampalataya sa aking pagkabalisa?",
+      "prompt_v3": "Anong mga tauhan sa Bibliya ang nakaranas din ng pagkabalisa?"
     },
     "confession": {
       "title": "Kumpisal",
@@ -358,7 +369,10 @@
     "heartbreak": {
       "title": "Sakit ng Puso",
       "desc": "Ano ang sinasabi ng Bibliya tungkol sa sakit ng puso",
-      "prompt": "Wasak ang puso ko. Ano ang sinasabi ng Bibliya tungkol sa sakit ng puso at kung paano makahanap muli ng pag-asa?"
+      "prompt": "Wasak ang puso ko. Ano ang sinasabi ng Bibliya tungkol sa sakit ng puso at kung paano makahanap muli ng pag-asa?",
+      "prompt_v1": "Wasak ang puso ko. Ano ang sinasabi ng Bibliya tungkol dito?",
+      "prompt_v2": "Paano ko haharapin ang heartbreak – mayroon bang tulong mula sa Bibliya?",
+      "prompt_v3": "Kaya ba ng Diyos na pagalingin ang pusong wasak?"
     },
     "newstart": {
       "title": "Bagong Simula",
@@ -388,7 +402,10 @@
     "gratitude": {
       "title": "Pasasalamat",
       "desc": "Isang personal na panalangin ng pasasalamat",
-      "prompt": "Gusto kong magpasalamat sa Diyos. Tulungan mo akong bumuo ng isang personal na panalangin ng pasasalamat."
+      "prompt": "Gusto kong magpasalamat sa Diyos. Tulungan mo akong bumuo ng isang personal na panalangin ng pasasalamat.",
+      "prompt_v1": "Paano ako magiging mas mapagpasalamat?",
+      "prompt_v2": "Ano ang sinasabi ng Bibliya tungkol sa pasasalamat?",
+      "prompt_v3": "Bakit napakahalaga ng pasasalamat sa pananampalataya?"
     },
     "lifewheel": {
       "title": "Gulong ng Buhay",
@@ -447,7 +464,10 @@
     "forgiveness": {
       "title": "Pagpapatawad",
       "desc": "Kapag tila imposible ang pagpapatawad",
-      "prompt": "Hindi ko lang mapatawad ang isang tao. Masakit masyado. Ano ang sinasabi ng Bibliya tungkol sa pagpapatawad?"
+      "prompt": "Hindi ko lang mapatawad ang isang tao. Masakit masyado. Ano ang sinasabi ng Bibliya tungkol sa pagpapatawad?",
+      "prompt_v1": "Ano ang sinasabi ng Bibliya tungkol sa pagpapatawad?",
+      "prompt_v2": "Paano ko mapapatawad ang isang taong nakasakit sa akin?",
+      "prompt_v3": "Mayroon bang mga limitasyon sa pagpapatawad?"
     },
     "familyconflict": {
       "title": "Alitan sa Pamilya",
@@ -467,12 +487,23 @@
     "prayer": {
       "title": "Kahilingan sa Panalangin",
       "desc": "Sama-samang manalangin",
-      "prompt": "Mayroon akong kahilingan sa panalangin at gusto kong manalangin nang sama-sama. Samahan mo ako sa panalangin."
+      "prompt": "Mayroon akong kahilingan sa panalangin at gusto kong manalangin nang sama-sama. Samahan mo ako sa panalangin.",
+      "prompt_v1": "Paano ako matututong magdasal?",
+      "prompt_v2": "Ano ang sinasabi ng Bibliya tungkol sa panalangin?",
+      "prompt_v3": "Bakit hindi sinasagot ng Diyos ang ilang panalangin?"
     },
     "bibleverse": {
       "title": "Unawain ang Talata",
       "desc": "Ipaliwanag ang isang talata sa Bibliya",
       "prompt": "Gusto kong mas maunawaan ang isang talata sa Bibliya. Maaari mo ba akong tulungan na ilagay ito sa konteksto?"
+    },
+    "biblequiz": {
+      "desc": "Subukan ang iyong kaalaman sa Bibliya sa mapaglarong paraan",
+      "title": "Pagsusulit sa Bibliya"
+    },
+    "prayerwall": {
+      "desc": "Ibahagi ang mga kahilingan sa panalangin at manalangin para sa isa't isa",
+      "title": "Pader ng Panalangin"
     }
   },
   "lifeWheel": {
@@ -801,5 +832,32 @@
     "weddingDesc": "Sumulat ng mga panata sa kasal, pumili ng mga kanta at planuhin ang pagdiriwang.",
     "baptismDesc": "Bumuo ng mga nais sa binyag at ihanda ang proseso kasama ang komunidad.",
     "confirmationDesc": "Maghanap ng talata para sa kumpil at maghanda ng mga personal na teksto."
+  },
+  "chatHero": {
+    "ariaLabel": "Magtanong sa BibleBot",
+    "focusPlaceholder": "Isulat ang iyong tanong…",
+    "placeholder1": "Ano ang tunay na nagpapasalamat sa akin?",
+    "placeholder2": "Paano ko matutuklasan ang kapayapaan sa kalooban?",
+    "chatHero": {
+      "placeholder3": "Ano ang nagbibigay sa akin ng pag-asa?"
+    },
+    "placeholder4": "Ano ang nais ng aking puso?",
+    "placeholder5": "Ano ang magandang magagawa ko ngayon?",
+    "send": "Ipadala",
+    "subtitle": "Itanong ang iyong katanungan – malaya, tapat, nang walang pag-log in.",
+    "suggestion1": "Ano ang ibig sabihin ng aking pangalan?",
+    "suggestion2": "Ano ang nagpapalakas sa akin ngayon?",
+    "suggestion3": "Para saan ako nagpapasalamat?"
+  },
+  "meta": {
+    "forChurchesDesc": "BibleBot bilang katuwang para sa iyong komunidad: gawaing kabataan, kumpirmasyon, pagpapayo at mga grupo ng Bibliya. Mula libre hanggang premium.",
+    "forChurchesTitle": "BibleBot para sa mga Simbahan – Digital na Pagpapayo at Gabay sa Bibliya",
+    "homeDesc": "Sinamahan ka ng BibleBot na may 5 pagsasalin ng Bibliya, pamamaraan ng pagtuturo, at pagpapayo. Anonymous, libre, sa 36 na wika.",
+    "homeTitle": "BibleBot – Ang Iyong Personal na Kasama sa Bibliya | Libre & Anonymous",
+    "loginDesc": "Mag-log in sa BibleBot upang ihanda ang iyong mga personal na seremonya.",
+    "loginTitle": "Mag-log In – BibleBot"
+  },
+  "splash": {
+    "patronage": "Inirerekomenda ni"
   }
 }
