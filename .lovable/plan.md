@@ -1,102 +1,53 @@
 
-# Cold Outreach Modul (Super-Admin)
+# Theologisches RAG-System für BibelBot
 
-Automatisiertes Lead-Gen & Sequenz-System für Gemeinde-Akquise. Nur für Admins sichtbar.
+## Architektur-Übersicht
+Dokumente → Chunking → Embedding (Gemini) → pgvector-Tabelle → Neues Tool `search_theology` im BibelBot
 
----
+## Phase 1: Datenbank-Setup
+- `pgvector`-Extension aktivieren
+- Tabelle `theology_chunks` erstellen:
+  - `id`, `source_type` (enum: lexikon, kommentar, konfession, seelsorge), `title`, `content`, `metadata` (JSONB), `embedding` (vector(768)), `created_at`
+- HNSW-Index für schnelle Vektorsuche
 
-## 1. Datenbank-Tabellen
+## Phase 2: Wissensquellen aufbereiten & importieren
 
-### `outreach_campaigns`
-- `name`, `status` (active/paused/completed)
-- `sender_name`, `sender_email` (Absender-Konfiguration)
-- `booking_url` (Calendly/Cal.com Link für 10-Min-Demo)
-- `target_criteria` (JSON: Denomination, Region, Grösse)
-- RLS: Nur Admins
+### A) Theologisches Wörterbuch (~100-150 Einträge)
+- KI-generiert: Kernbegriffe wie Gnade, Rechtfertigung, Bund, Trinität, Eschatologie, Taufe, Abendmahl etc.
+- Ökumenisch formuliert, mit konfessionellen Unterschieden wo relevant
+- Import via Edge Function
 
-### `outreach_leads`
-- `campaign_id`, `church_name`, `contact_name`, `email`
-- `website`, `city`, `denomination`
-- `scraped_data` (JSON: personalisierte Infos von der Website)
-- `status` (new → contacted → replied → booked → converted → unsubscribed)
-- `source` (csv_import / web_scrape)
-- RLS: Nur Admins
+### B) Bibelkommentare (klassisch, gemeinfrei)
+- Matthew Henry's Commentary (englisch, gemeinfrei) – online verfügbar als JSON/Text
+- Optional: Luther-Vorreden, Calvin-Institutio-Auszüge
+- Chunking nach Buch/Kapitel, je ca. 500-800 Tokens
 
-### `outreach_sequences`
-- `campaign_id`, `step_number` (1-5)
-- `delay_days` (Wartezeit seit letztem Schritt)
-- `subject_template`, `body_template`
-- Platzhalter: {{church_name}}, {{contact_name}}, {{city}}, {{personal_note}}, {{booking_url}}
+### C) Kirchengeschichte & Konfessionen (~30-50 Einträge)
+- KI-generiert: Übersicht reformiert, lutherisch, katholisch, orthodox, freikirchlich
+- Wichtige Konzile, Bekenntnisschriften, Unterschiede bei Sakramenten, Amtsverständnis etc.
 
-### `outreach_emails`
-- `lead_id`, `sequence_step`, `sent_at`, `opened_at`, `clicked_at`
-- `status` (pending/sent/opened/clicked/replied/bounced)
-- Tracking für Sequenz-Fortschritt
+### D) Seelsorge-Leitfaden (~30-40 Einträge)
+- KI-generiert: Gesprächsführung bei Trauer, Krise, Zweifel, Sucht, Beziehung, Sinnsuche
+- Krisenintervention, Grenzen erkennen, Verweisung an Fachstellen
+- Schweizer Kontext (Dargebotene Hand 143, Pro Juventute 147)
 
----
+## Phase 3: Embedding-Pipeline (Edge Function)
+- `theology-embed` Edge Function:
+  - Nimmt Chunks entgegen, erstellt Embeddings via Gemini (`text-embedding-004`)
+  - Speichert in `theology_chunks` mit Vektoren
+- Batch-Import-Skript für alle Quellen
 
-## 2. Edge Functions
+## Phase 4: Such-Tool im BibelBot
+- Neues Tool `search_theology` mit semantischer Vektorsuche
+- Query → Embedding → Cosine-Similarity-Suche → Top-5 Chunks zurückgeben
+- Bot entscheidet selbst, wann theologisches Hintergrundwissen hilfreich ist
 
-### `outreach-scrape` — Lead-Anreicherung
-- Nimmt Website-URL entgegen
-- Nutzt Firecrawl zum Scrapen
-- KI (Gemini Flash) extrahiert: Pastor-Name, Kontakt-E-Mail, Gemeindegrösse, Besonderheiten
-- Generiert `personal_note` basierend auf Website-Inhalten
-- Speichert angereicherte Daten in `outreach_leads`
+## Phase 5: Content-Generierung
+- Edge Function die per KI die Lexikon/Konfessions/Seelsorge-Einträge generiert
+- Qualitätskontrolle: Stichproben prüfen
+- Iterativ erweiterbar (neue Einträge jederzeit hinzufügbar)
 
-### `outreach-send` — E-Mail-Versand (Cron)
-- Läuft alle 15 Minuten via pg_cron
-- Prüft welche Leads den nächsten Sequenz-Schritt erhalten sollen
-- Personalisiert Templates mit Lead-Daten
-- Versendet via Resend (eigener Account, NICHT über Lovable E-Mail-Infra)
-- Respektiert Tages-/Stundenlimits (konfigurierbar)
-- Nur werktags 8-18 Uhr senden
-
-### `outreach-import` — CSV-Import
-- Nimmt CSV mit Gemeinde-Daten entgegen
-- Parsed und validiert
-- Optional: automatisches Anreichern via Scraping
-
----
-
-## 3. Admin-UI (unter /admin/outreach)
-
-### Kampagnen-Übersicht
-- Liste aktiver Kampagnen mit KPIs (Leads, Gesendet, Geöffnet, Gebucht)
-- Kampagne starten/pausieren/stoppen
-
-### Kampagnen-Editor
-- Absender konfigurieren
-- Zielgruppe definieren (Region, Konfession)
-- Buchungslink hinterlegen
-- Sequenz-Schritte bearbeiten (Subject + Body mit Platzhaltern)
-- Zeitliche Abstände zwischen Schritten
-
-### Lead-Management
-- Tabelle mit allen Leads + Status
-- CSV-Import Button
-- "Scrape & Anreichern" für einzelne Leads
-- Lead-Details mit Sequenz-Verlauf
-
-### Einstellungen
-- Max. E-Mails pro Tag / pro Stunde
-- Sendezeiten (Werktags, Uhrzeiten)
-- Blacklist-Domains
-
----
-
-## 4. Technische Übersicht
-
-| # | Komponente | Beschreibung |
-|---|---|---|
-| 1 | 4 DB-Tabellen | Campaigns, Leads, Sequences, Emails |
-| 2 | 3 Edge Functions | Scrape, Send (Cron), Import |
-| 3 | Admin-UI | Kampagnen, Leads, Sequenzen, Stats |
-| 4 | Firecrawl | Website-Scraping für Lead-Anreicherung |
-| 5 | Resend | E-Mail-Versand (eigener Account) |
-| 6 | Lovable AI | Personalisierung der E-Mails |
-
-**Voraussetzungen:**
-- Firecrawl Connector für Web-Scraping
-- Resend API Key (bereits vorhanden)
-- Separater Resend-Account mit eigener Domain für Cold Outreach
+## Geschätzter Umfang
+- ~300-500 Chunks initial (wächst mit Kommentaren)
+- Embedding-Kosten minimal (Gemini text-embedding ist günstig)
+- 3-4 Implementierungsschritte
