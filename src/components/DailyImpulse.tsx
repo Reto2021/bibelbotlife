@@ -5,10 +5,10 @@ import { Button } from "@/components/ui/button";
 import { openBibleBotChat } from "@/lib/chat-events";
 import { ShareButton } from "@/components/ShareButton";
 import { useToast } from "@/hooks/use-toast";
+import { generateShareImage } from "@/lib/share-image-canvas";
 
 const IMPULSE_CACHE_KEY = "bibelbot-daily-impulse";
 const IMPULSE_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/daily-impulse`;
-const SHARE_IMAGE_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/impulse-share-image`;
 const SUBSCRIBE_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/subscribe-daily`;
 const TELEGRAM_LINK = "https://t.me/meinbibelbot";
 const VAPID_PUBLIC_KEY = "BLMl5bBRzhlza0ozrHEblp3BfKtbyDsbOP-n120rl6teGPFdoyFb77P9WnOZpbFs2hKyfwILmw8WQebJrp_qc7c";
@@ -40,25 +40,8 @@ function cacheImpulse(impulse: Impulse) {
   } catch {}
 }
 
-// Cache share image URL per date
-const SHARE_IMAGE_CACHE_KEY = "bibelbot-share-image";
-
-function getCachedShareImage(): string | null {
-  try {
-    const stored = localStorage.getItem(SHARE_IMAGE_CACHE_KEY);
-    if (!stored) return null;
-    const { url, date } = JSON.parse(stored);
-    const today = new Date().toISOString().slice(0, 10);
-    if (date === today) return url;
-  } catch {}
-  return null;
-}
-
-function cacheShareImage(url: string, date: string) {
-  try {
-    localStorage.setItem(SHARE_IMAGE_CACHE_KEY, JSON.stringify({ url, date }));
-  } catch {}
-}
+// Cache share image blob URL per date
+const SHARE_IMAGE_CACHE_KEY = "bibelbot-share-image-blob";
 
 export function DailyImpulse() {
   const { t, i18n } = useTranslation();
@@ -66,7 +49,8 @@ export function DailyImpulse() {
   const [impulse, setImpulse] = useState<Impulse | null>(getCachedImpulse);
   const [isExpanded, setIsExpanded] = useState(false);
   const [isLoading, setIsLoading] = useState(!impulse);
-  const [shareImageUrl, setShareImageUrl] = useState<string | null>(getCachedShareImage);
+  const [shareImageUrl, setShareImageUrl] = useState<string | null>(null);
+  const [shareBlob, setShareBlob] = useState<Blob | null>(null);
   const [isGeneratingImage, setIsGeneratingImage] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(() => localStorage.getItem(SUBSCRIBED_KEY) === "1");
   const [showChannels, setShowChannels] = useState(false);
@@ -107,39 +91,25 @@ export function DailyImpulse() {
     fetchImpulse();
   }, [impulse]);
 
-  const generateShareImage = useCallback(async () => {
+  const handleGenerateShareImage = useCallback(async () => {
     if (!impulse || isGeneratingImage) return;
 
-    // Check cache first
-    const cached = getCachedShareImage();
-    if (cached) {
-      setShareImageUrl(cached);
+    // Reuse existing blob
+    if (shareImageUrl) {
       setShowImagePreview(true);
       return;
     }
 
     setIsGeneratingImage(true);
     try {
-      const resp = await fetch(SHARE_IMAGE_URL, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
-        },
-        body: JSON.stringify({
-          verse: impulse.verse,
-          reference: impulse.reference,
-          teaser: impulse.teaser,
-          topic: impulse.topic,
-          date: impulse.date,
-        }),
+      const blob = await generateShareImage({
+        verse: impulse.verse,
+        reference: impulse.reference,
+        topic: impulse.topic,
       });
-
-      if (!resp.ok) throw new Error("Generation failed");
-
-      const { imageUrl } = await resp.json();
-      setShareImageUrl(imageUrl);
-      cacheShareImage(imageUrl, impulse.date);
+      const url = URL.createObjectURL(blob);
+      setShareBlob(blob);
+      setShareImageUrl(url);
       setShowImagePreview(true);
     } catch (e) {
       console.error("Failed to generate share image:", e);
@@ -151,18 +121,15 @@ export function DailyImpulse() {
     } finally {
       setIsGeneratingImage(false);
     }
-  }, [impulse, isGeneratingImage, toast, t]);
+  }, [impulse, isGeneratingImage, shareImageUrl, toast, t]);
 
   const shareAsImage = useCallback(async () => {
-    if (!shareImageUrl || !impulse) return;
+    if (!shareBlob || !impulse) return;
 
     const shareText = `${impulse.verse}\n\n– ${impulse.reference}\n\n${impulse.teaser}\n\nbiblebot.life`;
 
-    // Try sharing with image file (Web Share API Level 2)
     try {
-      const response = await fetch(shareImageUrl);
-      const blob = await response.blob();
-      const file = new File([blob], `bibelbot-impuls-${impulse.date}.png`, { type: "image/png" });
+      const file = new File([shareBlob], `bibelbot-impuls-${impulse.date}.png`, { type: "image/png" });
 
       if (navigator.canShare?.({ files: [file] })) {
         await navigator.share({
@@ -174,38 +141,25 @@ export function DailyImpulse() {
       }
     } catch (e) {
       if ((e as Error).name === "AbortError") return;
-      console.log("File share not supported, falling back");
     }
 
-    // Fallback: open image for manual save + copy text
     try {
       await navigator.clipboard.writeText(shareText);
       toast({
         title: t("share.imageSaved"),
         description: t("share.imageSavedDesc"),
       });
-    } catch {
-      // Just show the preview
-    }
-  }, [shareImageUrl, impulse, toast, t]);
+    } catch {}
+  }, [shareBlob, impulse, toast, t]);
 
-  const downloadImage = useCallback(async () => {
+  const downloadImage = useCallback(() => {
     if (!shareImageUrl || !impulse) return;
-    try {
-      const response = await fetch(shareImageUrl);
-      const blob = await response.blob();
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = `bibelbot-impuls-${impulse.date}.png`;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    } catch {
-      // Fallback: open in new tab
-      window.open(shareImageUrl, "_blank");
-    }
+    const a = document.createElement("a");
+    a.href = shareImageUrl;
+    a.download = `bibelbot-impuls-${impulse.date}.png`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
   }, [shareImageUrl, impulse]);
 
   const handleDeepDive = () => {
@@ -404,7 +358,7 @@ export function DailyImpulse() {
               <Button
                 size="sm"
                 variant="outline"
-                onClick={generateShareImage}
+                onClick={handleGenerateShareImage}
                 disabled={isGeneratingImage}
                 className="text-xs border-primary/30 text-primary hover:bg-primary/10"
               >
