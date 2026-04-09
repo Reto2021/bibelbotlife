@@ -549,6 +549,65 @@ export type Database = {
         }
         Relationships: []
       }
+      invoices: {
+        Row: {
+          amount: number
+          church_id: string
+          created_at: string
+          created_by: string
+          currency: string
+          due_date: string
+          id: string
+          invoice_date: string
+          invoice_number: string
+          line_items: Json
+          notes: string | null
+          pdf_url: string | null
+          status: Database["public"]["Enums"]["invoice_status"]
+          updated_at: string
+        }
+        Insert: {
+          amount?: number
+          church_id: string
+          created_at?: string
+          created_by: string
+          currency?: string
+          due_date?: string
+          id?: string
+          invoice_date?: string
+          invoice_number: string
+          line_items?: Json
+          notes?: string | null
+          pdf_url?: string | null
+          status?: Database["public"]["Enums"]["invoice_status"]
+          updated_at?: string
+        }
+        Update: {
+          amount?: number
+          church_id?: string
+          created_at?: string
+          created_by?: string
+          currency?: string
+          due_date?: string
+          id?: string
+          invoice_date?: string
+          invoice_number?: string
+          line_items?: Json
+          notes?: string | null
+          pdf_url?: string | null
+          status?: Database["public"]["Enums"]["invoice_status"]
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "invoices_church_id_fkey"
+            columns: ["church_id"]
+            isOneToOne: false
+            referencedRelation: "church_partners"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       resource_library: {
         Row: {
           church_id: string | null
@@ -938,6 +997,7 @@ export type Database = {
         | "lutheran"
         | "evangelical"
         | "secular"
+      invoice_status: "draft" | "sent" | "paid"
       record_type: "baptism" | "wedding" | "funeral"
       resource_type: "song" | "prayer" | "reading" | "liturgy" | "other"
       service_status: "draft" | "published" | "archived"
@@ -1095,6 +1155,7 @@ export const Constants = {
         "evangelical",
         "secular",
       ],
+      invoice_status: ["draft", "sent", "paid"],
       record_type: ["baptism", "wedding", "funeral"],
       resource_type: ["song", "prayer", "reading", "liturgy", "other"],
       service_status: ["draft", "published", "archived"],
