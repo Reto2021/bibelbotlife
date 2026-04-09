@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { useTranslation } from "react-i18next";
-import { Send, X, MessageCircle, Loader2, Mic, MicOff, Pencil, Shield, Sparkles, CheckCircle2, AlertTriangle, Info, Accessibility } from "lucide-react";
+import { Send, X, MessageCircle, Loader2, Mic, MicOff, Pencil, Shield, Sparkles, CheckCircle2, AlertTriangle, Info, Accessibility, BookOpen } from "lucide-react";
 import { useSeniorMode } from "@/hooks/use-senior-mode";
 import { ShareButton } from "@/components/ShareButton";
 import { Button } from "@/components/ui/button";
@@ -206,6 +206,9 @@ export function BibleBotChat() {
   const [showWelcome, setShowWelcome] = useState(false);
   const [showJourneyOffer, setShowJourneyOffer] = useState(false);
   const [showRenameTip, setShowRenameTip] = useState(false);
+  const [preferredTranslation, setPreferredTranslation] = useState(() => {
+    try { return localStorage.getItem("bibelbot-translation") || "auto"; } catch { return "auto"; }
+  });
   const recognitionRef = useRef<any>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -343,7 +346,7 @@ export function BibleBotChat() {
         const resp = await fetch(CHAT_URL, {
           method: "POST",
           headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}` },
-          body: JSON.stringify({ messages: contextMessages, journeyDay: journeyDay || 1, language: i18n.language, mode: chatMode }),
+          body: JSON.stringify({ messages: contextMessages, journeyDay: journeyDay || 1, language: i18n.language, mode: chatMode, preferredTranslation: preferredTranslation !== "auto" ? preferredTranslation : undefined }),
         });
 
         if (!resp.ok) {
@@ -520,6 +523,30 @@ export function BibleBotChat() {
           </div>
         </div>
         <div className="flex items-center gap-1.5">
+          <div className="relative">
+            <select
+              value={preferredTranslation}
+              onChange={(e) => {
+                const v = e.target.value;
+                setPreferredTranslation(v);
+                try { localStorage.setItem("bibelbot-translation", v); } catch {}
+              }}
+              className="appearance-none bg-transparent text-muted-foreground hover:text-foreground cursor-pointer text-[10px] pr-4 pl-1 py-1 rounded-lg hover:bg-muted/50 transition-colors focus:outline-none focus:ring-1 focus:ring-primary/30"
+              title={t("chat.translationSelect", "Bibelübersetzung")}
+            >
+              <option value="auto">📖 Auto</option>
+              <optgroup label="Deutsch">
+                <option value="luther1912">Luther 1912</option>
+                <option value="schlachter2000">Schlachter 2000</option>
+                <option value="elberfelder">Elberfelder</option>
+              </optgroup>
+              <optgroup label="English">
+                <option value="kjv">KJV</option>
+                <option value="web">WEB</option>
+              </optgroup>
+            </select>
+            <BookOpen className="absolute right-0 top-1/2 -translate-y-1/2 h-3 w-3 text-muted-foreground pointer-events-none" />
+          </div>
           <button
             onClick={toggleSenior}
             className={`p-1.5 rounded-lg transition-colors ${isSenior ? "bg-primary/20 text-primary" : "text-muted-foreground hover:text-foreground"}`}
