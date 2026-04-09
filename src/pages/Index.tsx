@@ -75,8 +75,8 @@ const Index = () => {
           >
             <AppLogo className="h-10 w-10 lg:h-14 lg:w-14" />
             <div className="flex flex-col">
-              <span className="text-lg lg:text-xl font-bold text-foreground leading-tight">BibleBot<span className="text-sm lg:text-base font-normal text-muted-foreground">.Life</span></span>
-              <span className="text-[9px] font-medium tracking-[0.2em] uppercase text-muted-foreground/70 hidden lg:block">Everyday Sunday</span>
+              <span className="text-lg lg:text-xl font-bold text-foreground leading-tight">BibleBot<span className="text-sm lg:text-base font-normal text-muted-foreground dark:text-amber-400">.Life</span></span>
+              <span className="text-[9px] font-medium tracking-[0.2em] uppercase text-muted-foreground/70 dark:text-amber-400/70 hidden lg:block">Everyday Sunday</span>
             </div>
           </button>
           <div className="flex items-center gap-1 lg:gap-2">
@@ -601,9 +601,9 @@ const Index = () => {
         <div className="container mx-auto max-w-4xl">
           <div className="flex items-center justify-center space-x-2 mb-6">
             <AppLogo className="h-10 w-10" invertTheme />
-            <span className="text-2xl font-bold">BibleBot.Life</span>
+            <span className="text-2xl font-bold">BibleBot<span className="dark:text-amber-400">.Life</span></span>
           </div>
-          <p className="text-background/70 mb-4 text-center">{t("footer.tagline")}</p>
+          <p className="text-background/70 dark:text-amber-400/80 mb-4 text-center">{t("footer.tagline")}</p>
           <p className="text-background/50 text-xs mb-6 max-w-2xl mx-auto text-center">{t("footer.disclaimer")}</p>
           
           <div className="border-t border-background/20 pt-6 mt-6">
