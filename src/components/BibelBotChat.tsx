@@ -183,10 +183,6 @@ function saveMessages(msgs: Message[]) {
 }
 
 // Map i18n language code to speech recognition locale
-function getSpeechLang(lang: string): string {
-  const map: Record<string, string> = { de: "de-CH", en: "en-US", fr: "fr-FR", es: "es-ES" };
-  return map[lang] || "de-CH";
-}
 
 export function BibleBotChat() {
   const { t, i18n } = useTranslation();
