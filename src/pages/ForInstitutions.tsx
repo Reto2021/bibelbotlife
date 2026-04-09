@@ -118,18 +118,14 @@ const ForInstitutions = () => {
 
       {/* Institution Types */}
       <section className="py-12 px-4 bg-card/40">
-        <div className="container mx-auto max-w-6xl">
+        <div className="container mx-auto max-w-5xl">
           <h2 className="text-3xl font-bold text-foreground text-center mb-10">{t("institutions.typesTitle")}</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {institutions.map((inst) => (
-              <Card key={inst.key} className="bg-card/80 border-border text-center">
-                <CardHeader>
-                  <inst.icon className="h-10 w-10 text-primary mx-auto mb-2" />
-                  <CardTitle className="text-lg">{t(`institutions.type.${inst.key}.title`)}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground">{t(`institutions.type.${inst.key}.desc`)}</p>
-                </CardContent>
+              <Card key={inst.key} className="bg-card/80 border-border text-center p-4">
+                <inst.icon className="h-8 w-8 text-primary mx-auto mb-3" />
+                <h3 className="text-sm font-semibold text-card-foreground mb-1">{t(`institutions.type.${inst.key}.title`)}</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">{t(`institutions.type.${inst.key}.desc`)}</p>
               </Card>
             ))}
           </div>
