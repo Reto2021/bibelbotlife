@@ -27,7 +27,7 @@ export function SplashScreen({ onComplete }: { onComplete: () => void }) {
     }
 
     supabase
-      .from("church_partners")
+      .from("church_partners_public" as any)
       .select("name, logo_url, plan_tier, custom_bot_name")
       .eq("slug", slug)
       .eq("is_active", true)

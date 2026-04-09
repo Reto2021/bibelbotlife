@@ -19,10 +19,9 @@ const ChurchPartner = () => {
     queryKey: ["church-partner", slug],
     queryFn: async () => {
       const { data, error } = await supabase
-        .from("church_partners")
+        .from("church_partners_public" as any)
         .select("*")
         .eq("slug", slug!)
-        .eq("is_active", true)
         .single();
       if (error) throw error;
       return data;

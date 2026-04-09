@@ -19,9 +19,8 @@ const ChurchDirectory = () => {
     queryKey: ["church-partners"],
     queryFn: async () => {
       const { data, error } = await supabase
-        .from("church_partners")
+        .from("church_partners_public" as any)
         .select("id, slug, name, denomination, city, country, logo_url, plan_tier")
-        .eq("is_active", true)
         .order("name");
       if (error) throw error;
       return data;

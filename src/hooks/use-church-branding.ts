@@ -22,7 +22,7 @@ function getChurchSlug(): string | null {
 
 async function fetchBranding(slug: string): Promise<ChurchBranding | null> {
   const { data } = await supabase
-    .from("church_partners")
+    .from("church_partners_public" as any)
     .select("name, slug, logo_url, custom_bot_name, primary_color, secondary_color, plan_tier")
     .eq("slug", slug)
     .eq("is_active", true)
