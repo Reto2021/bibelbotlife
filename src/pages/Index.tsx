@@ -76,7 +76,7 @@ const Index = () => {
             <AppLogo className="h-10 w-10 lg:h-14 lg:w-14" />
             <div className="flex flex-col">
               <span className="text-lg lg:text-xl font-bold text-foreground leading-tight">BibleBot<span className="text-sm lg:text-base font-normal text-muted-foreground dark:text-amber-400">.Life</span></span>
-              <span className="text-[9px] font-medium tracking-[0.32em] uppercase text-muted-foreground/70 dark:text-amber-400/70 hidden lg:block">Everyday Sunday</span>
+              <span className="text-[9px] font-medium tracking-[0.22em] uppercase text-muted-foreground/70 dark:text-amber-400/70 hidden lg:block">Everyday Sunday</span>
             </div>
           </button>
           <div className="flex items-center gap-1 lg:gap-2">
