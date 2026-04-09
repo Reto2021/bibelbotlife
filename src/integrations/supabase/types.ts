@@ -1467,6 +1467,16 @@ export type Database = {
         Args: { payload: Json; queue_name: string }
         Returns: number
       }
+      get_public_prayers: {
+        Args: never
+        Returns: {
+          content: string
+          created_at: string
+          id: string
+          is_anonymous: boolean
+          prayer_count: number
+        }[]
+      }
       get_shared_draft: {
         Args: { p_token: string }
         Returns: {

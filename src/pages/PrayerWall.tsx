@@ -26,7 +26,6 @@ interface PrayerRequest {
   id: string;
   content: string;
   is_anonymous: boolean;
-  author_name: string | null;
   prayer_count: number;
   created_at: string;
 }
@@ -52,12 +51,8 @@ export default function PrayerWall() {
   }, []);
 
   async function fetchRequests() {
-    const { data } = await supabase
-      .from("prayer_requests")
-      .select("*")
-      .order("created_at", { ascending: false })
-      .limit(50);
-    if (data) setRequests(data);
+    const { data } = await supabase.rpc("get_public_prayers" as any);
+    if (data) setRequests(data as PrayerRequest[]);
     setLoading(false);
   }
 
@@ -203,7 +198,7 @@ export default function PrayerWall() {
                       </p>
                       <div className="flex items-center justify-between mt-3">
                         <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                          <span>{req.is_anonymous ? "Anonym" : (req.author_name || "Jemand")}</span>
+                          <span>{req.is_anonymous ? "Anonym" : "Jemand"}</span>
                           <span>·</span>
                           <span>{timeAgo(req.created_at)}</span>
                         </div>
