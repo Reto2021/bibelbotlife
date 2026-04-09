@@ -88,12 +88,6 @@ const Index = () => {
               </Link>
             </Button>
             <Button asChild variant="ghost" size="sm" className="hidden lg:inline-flex">
-              <Link to="/for-institutions">
-                <Building2 className="h-4 w-4 mr-1" />
-                {t("institutions.badge")}
-              </Link>
-            </Button>
-            <Button asChild variant="ghost" size="sm" className="hidden lg:inline-flex">
               <Link to="/gebetswand">
                 <HandHeart className="h-4 w-4 mr-1" />
                 {t("nav.prayerWall", "Gebetswand")}
@@ -168,14 +162,6 @@ const Index = () => {
               >
                 <Church className="h-4 w-4 text-primary" />
                 {t("church.badge")}
-              </Link>
-              <Link
-                to="/for-institutions"
-                className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-foreground hover:bg-primary/10 transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                <Building2 className="h-4 w-4 text-primary" />
-                {t("institutions.badge")}
               </Link>
                <Link
                 to="/churches"
@@ -641,7 +627,7 @@ const Index = () => {
               <Link to="/impressum" className="hover:text-background/80 underline underline-offset-2">{t("footer.impressum")}</Link>
               <Link to="/datenschutz" className="hover:text-background/80 underline underline-offset-2">{t("footer.datenschutz")}</Link>
               <Link to="/for-churches" className="hover:text-background/80 underline underline-offset-2">{t("footer.forChurches")}</Link>
-              <Link to="/for-institutions" className="hover:text-background/80 underline underline-offset-2">{t("institutions.badge")}</Link>
+              
               <Link to="/churches" className="hover:text-background/80 underline underline-offset-2">{t("church.directoryBadge")}</Link>
             </div>
 
