@@ -38,6 +38,7 @@ const ConductorMode = lazy(() => import("./pages/dashboard/ConductorMode"));
 const MeinBereich = lazy(() => import("./pages/MeinBereich"));
 const MeinBereichHome = lazy(() => import("./pages/mein-bereich/MeinBereichHome"));
 const EulogyWriter = lazy(() => import("./pages/mein-bereich/EulogyWriter"));
+const SharedDraft = lazy(() => import("./pages/SharedDraft"));
 const AdminDashboard = lazy(() => import("./pages/admin/AdminDashboard"));
 
 import { ProtectedRoute } from "@/components/ProtectedRoute";
