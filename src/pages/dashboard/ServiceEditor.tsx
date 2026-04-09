@@ -2,7 +2,7 @@ import { useState, useCallback, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { DndContext, closestCenter, KeyboardSensor, PointerSensor, TouchSensor, useSensor, useSensors, type DragEndEvent, type DragStartEvent, type DragOverEvent, DragOverlay } from "@dnd-kit/core";
 import { arrayMove, SortableContext, sortableKeyboardCoordinates, verticalListSortingStrategy } from "@dnd-kit/sortable";
-import { ArrowLeft, Save, Clock, Plus, Play, Library, BookmarkPlus, FileDown, Mail, Users } from "lucide-react";
+import { ArrowLeft, Save, Clock, Plus, Play, Library, BookmarkPlus, FileDown, Mail, Users, GripVertical } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -465,6 +465,25 @@ export default function ServiceEditor() {
                 );
               })}
             </SortableContext>
+            <DragOverlay dropAnimation={{ duration: 200, easing: "ease" }}>
+              {activeId ? (() => {
+                const activeBlock = blocks.find((b) => b.id === activeId);
+                if (!activeBlock) return null;
+                return (
+                  <div className="rounded-lg border-l-4 border bg-card p-3 shadow-xl ring-2 ring-primary/20 opacity-90 pointer-events-none max-w-md">
+                    <div className="flex items-center gap-2">
+                      <GripVertical className="h-5 w-5 text-muted-foreground" />
+                      <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
+                        {activeBlock.type}
+                      </span>
+                      <span className="text-sm font-medium truncate">
+                        {activeBlock.title || activeBlock.type}
+                      </span>
+                    </div>
+                  </div>
+                );
+              })() : null}
+            </DragOverlay>
           </DndContext>
         )}
       </div>
