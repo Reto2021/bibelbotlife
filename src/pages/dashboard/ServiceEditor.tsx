@@ -2,7 +2,7 @@ import { useState, useCallback, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { DndContext, closestCenter, KeyboardSensor, PointerSensor, useSensor, useSensors, type DragEndEvent } from "@dnd-kit/core";
 import { arrayMove, SortableContext, sortableKeyboardCoordinates, verticalListSortingStrategy } from "@dnd-kit/sortable";
-import { ArrowLeft, Save, Clock, Plus, Play, Library, BookmarkPlus, FileDown } from "lucide-react";
+import { ArrowLeft, Save, Clock, Plus, Play, Library, BookmarkPlus, FileDown, Mail, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -11,13 +11,16 @@ import { ServiceBlock, type ServiceBlockData, type BlockType } from "@/component
 import { BlockPalette } from "@/components/services/BlockPalette";
 import { useAuth } from "@/hooks/use-auth";
 import { useUserChurch } from "@/hooks/use-user-church";
+import { useTeam } from "@/hooks/use-team";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
 import { ResourcePicker } from "@/components/services/ResourcePicker";
 import type { Resource } from "@/hooks/use-resources";
 import { useTemplates, useCreateTemplate, type ServiceTemplate } from "@/hooks/use-templates";
 import { exportServicePdf } from "@/lib/export-service-pdf";
+import { Label } from "@/components/ui/label";
+import jsPDF from "jspdf";
 
 export default function ServiceEditor() {
   const { id } = useParams();
