@@ -562,16 +562,8 @@ export function BibleBotChat() {
             <BookOpen className="absolute right-0 top-1/2 -translate-y-1/2 h-3 w-3 text-muted-foreground pointer-events-none" />
           </div>
           <VoicePicker voice={tts.voice} onChange={tts.setVoice} />
-          <button
-            onClick={toggleSenior}
-            className={`p-1.5 rounded-lg transition-colors ${isSenior ? "bg-primary/20 text-primary" : "text-muted-foreground hover:text-foreground"}`}
-            aria-label={t("chat.seniorMode")}
-            title={t("chat.seniorMode")}
-          >
-            <Accessibility className={isSenior ? "h-5 w-5" : "h-4 w-4"} />
-          </button>
           <button onClick={() => setIsOpen(false)} className="text-muted-foreground hover:text-foreground transition-colors" aria-label={t("chat.closeChat")}>
-            <X className={isSenior ? "h-6 w-6" : "h-5 w-5"} />
+            <X className="h-5 w-5" />
           </button>
         </div>
       </div>
