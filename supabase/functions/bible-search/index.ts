@@ -10,81 +10,87 @@ const corsHeaders = {
 const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY")!;
 const AI_GATEWAY = "https://ai.gateway.lovable.dev/v1/chat/completions";
 
-/** Use AI to understand the semantic intent and generate search terms */
 async function expandQuery(query: string): Promise<{
   tsquery: string;
-  books?: string[];
+  books: string[] | null;
   explanation: string;
 }> {
-  const resp = await fetch(AI_GATEWAY, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${LOVABLE_API_KEY}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      model: "google/gemini-2.5-flash-lite",
-      messages: [
-        {
-          role: "system",
-          content: `Du bist ein Bibel-Suchassistent. Der Nutzer gibt eine Suchanfrage ein. Deine Aufgabe:
-1. Verstehe die semantische Bedeutung der Anfrage
-2. Generiere deutsche Suchbegriffe für PostgreSQL Full-Text-Search (tsquery Format mit | für OR und & für AND)
-3. Optional: Schlage relevante Bücher vor (deutsche Namen)
-4. Gib eine kurze Erklärung was gesucht wird
+  try {
+    const resp = await fetch(AI_GATEWAY, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${LOVABLE_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: "google/gemini-2.5-flash-lite",
+        messages: [
+          {
+            role: "system",
+            content: `Du bist ein Bibel-Suchassistent. Generiere deutsche Suchbegriffe für PostgreSQL Full-Text-Search.
 
-Wichtig: Generiere VIELE synonyme/verwandte Begriffe. Z.B. für "Liebe" auch "lieben", "Nächstenliebe", "Barmherzigkeit", "Güte".
-Für "Schöpfung" auch "erschaffen", "Anfang", "Himmel", "Erde", "Gott schuf".`,
-        },
-        { role: "user", content: query },
-      ],
-      tools: [
-        {
-          type: "function",
-          function: {
-            name: "search_bible",
-            description: "Execute semantic Bible search",
-            parameters: {
-              type: "object",
-              properties: {
-                tsquery: {
-                  type: "string",
-                  description:
-                    "PostgreSQL tsquery string with | for OR, & for AND. Use simple German words. Example: 'Liebe | lieben | Barmherzigkeit | Güte'",
+Regeln für tsquery:
+- Verwende | für OR zwischen Begriffen  
+- Nur einzelne Wörter, keine Phrasen
+- Generiere viele Synonyme und verwandte Begriffe
+- Beispiel: "Liebe | lieben | Barmherzigkeit | Güte | Nächstenliebe"
+- Beispiel: "Schöpfung | erschaffen | Anfang | Himmel | Erde"
+- Keine Sonderzeichen ausser | und &`,
+          },
+          { role: "user", content: query },
+        ],
+        tools: [
+          {
+            type: "function",
+            function: {
+              name: "search_bible",
+              description: "Execute semantic Bible search",
+              parameters: {
+                type: "object",
+                properties: {
+                  tsquery: {
+                    type: "string",
+                    description: "PostgreSQL tsquery: words separated by | (OR). Example: 'Liebe | lieben | Güte'",
+                  },
+                  books: {
+                    type: "array",
+                    items: { type: "string" },
+                    description: "Optional: relevant book names to boost",
+                  },
+                  explanation: {
+                    type: "string",
+                    description: "Brief German explanation of the search intent",
+                  },
                 },
-                books: {
-                  type: "array",
-                  items: { type: "string" },
-                  description:
-                    "Optional relevant book names to filter by (e.g. ['Matthäus', 'Johannes'])",
-                },
-                explanation: {
-                  type: "string",
-                  description: "Brief explanation of the search intent in German",
-                },
+                required: ["tsquery", "explanation"],
+                additionalProperties: false,
               },
-              required: ["tsquery", "explanation"],
-              additionalProperties: false,
             },
           },
-        },
-      ],
-      tool_choice: { type: "function", function: { name: "search_bible" } },
-    }),
-  });
+        ],
+        tool_choice: { type: "function", function: { name: "search_bible" } },
+      }),
+    });
 
-  if (!resp.ok) {
-    console.error("AI query expansion failed:", resp.status);
-    // Fallback: use raw query
-    return { tsquery: query.split(/\s+/).join(" | "), explanation: query };
-  }
+    if (!resp.ok) {
+      console.error("AI expansion failed:", resp.status);
+      return { tsquery: query.split(/\s+/).join(" | "), books: null, explanation: query };
+    }
 
-  const data = await resp.json();
-  const toolCall = data.choices?.[0]?.message?.tool_calls?.[0];
-  if (toolCall) {
-    return JSON.parse(toolCall.function.arguments);
+    const data = await resp.json();
+    const toolCall = data.choices?.[0]?.message?.tool_calls?.[0];
+    if (toolCall) {
+      const parsed = JSON.parse(toolCall.function.arguments);
+      return {
+        tsquery: parsed.tsquery || query.split(/\s+/).join(" | "),
+        books: parsed.books || null,
+        explanation: parsed.explanation || query,
+      };
+    }
+  } catch (e) {
+    console.error("AI expansion error:", e);
   }
-  return { tsquery: query.split(/\s+/).join(" | "), explanation: query };
+  return { tsquery: query.split(/\s+/).join(" | "), books: null, explanation: query };
 }
 
 serve(async (req) => {
@@ -97,7 +103,7 @@ serve(async (req) => {
 
     if (!query || typeof query !== "string" || query.trim().length < 2) {
       return new Response(
-        JSON.stringify({ error: "Query must be at least 2 characters" }),
+        JSON.stringify({ error: "Suchanfrage muss mindestens 2 Zeichen lang sein" }),
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
@@ -109,68 +115,39 @@ serve(async (req) => {
 
     // Step 1: AI-powered query expansion
     const expanded = await expandQuery(query.trim());
-    console.log("Expanded query:", expanded);
+    console.log("Expanded:", expanded.tsquery);
 
-    // Step 2: Full-text search with expanded terms
-    const safeQuery = expanded.tsquery
-      .replace(/[^\w\sÄäÖöÜü|&!()]/g, "")
-      .trim();
-
-    let rpc_query = `SELECT id, book, book_number, chapter, verse, text, translation,
-      ts_rank(fts, to_tsquery('german', $1)) as rank
-      FROM bible_verses
-      WHERE fts @@ to_tsquery('german', $1)`;
-
-    const params: any[] = [safeQuery];
-
-    if (translation && translation !== "all") {
-      rpc_query += ` AND translation = $2`;
-      params.push(translation);
-    }
-
-    if (expanded.books && expanded.books.length > 0) {
-      // Boost results from suggested books but don't exclude others
-      rpc_query += ` ORDER BY CASE WHEN book = ANY($${params.length + 1}) THEN rank * 2 ELSE rank END DESC`;
-      params.push(expanded.books);
-    } else {
-      rpc_query += ` ORDER BY rank DESC`;
-    }
-
-    rpc_query += ` LIMIT $${params.length + 1}`;
-    params.push(Math.min(limit, 50));
-
-    // Use raw SQL via the supabase client
-    const { data: results, error } = await supabase.rpc("exec_bible_search" as any, {
-      search_query: safeQuery,
+    // Step 2: Search using DB function
+    const { data: results, error } = await supabase.rpc("search_bible_verses", {
+      search_query: expanded.tsquery,
       translation_filter: translation === "all" ? null : (translation || null),
-      book_filter: expanded.books || null,
+      book_boost: expanded.books,
       result_limit: Math.min(limit, 50),
     });
 
     if (error) {
-      console.error("Search error, falling back to simple search:", error);
-      // Fallback: simple text search
+      console.error("RPC error, trying fallback:", error);
+      // Fallback: simple textSearch
+      const safeTerms = query.trim().split(/\s+/).slice(0, 5).join(" & ");
       let q = supabase
         .from("bible_verses")
         .select("id, book, book_number, chapter, verse, text, translation")
-        .textSearch("fts", safeQuery, { type: "websearch", config: "german" })
+        .textSearch("fts", safeTerms, { config: "german" })
         .limit(Math.min(limit, 50));
 
       if (translation && translation !== "all") {
         q = q.eq("translation", translation);
       }
 
-      const { data: fallbackResults, error: fbError } = await q;
-      if (fbError) {
-        throw fbError;
-      }
+      const { data: fb, error: fbErr } = await q;
+      if (fbErr) throw fbErr;
 
       return new Response(
         JSON.stringify({
-          results: fallbackResults || [],
+          results: fb || [],
           query: expanded.explanation,
-          expanded_terms: safeQuery,
-          total: fallbackResults?.length || 0,
+          expanded_terms: expanded.tsquery,
+          total: fb?.length || 0,
         }),
         { headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
@@ -180,16 +157,17 @@ serve(async (req) => {
       JSON.stringify({
         results: results || [],
         query: expanded.explanation,
-        expanded_terms: safeQuery,
+        expanded_terms: expanded.tsquery,
         total: results?.length || 0,
       }),
       { headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
   } catch (e) {
     console.error("bible-search error:", e);
+    const status = e instanceof Error && e.message.includes("Rate") ? 429 : 500;
     return new Response(
-      JSON.stringify({ error: e instanceof Error ? e.message : "Unknown error" }),
-      { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      JSON.stringify({ error: e instanceof Error ? e.message : "Unbekannter Fehler" }),
+      { status, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
   }
 });
