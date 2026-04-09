@@ -7,7 +7,8 @@
     "badge": {
       "noLogin": "Không cần đăng nhập",
       "noData": "Không dữ liệu",
-      "noJudgment": "Không phán xét"
+      "noJudgment": "Không phán xét",
+      "optionalLogin": "Đăng nhập tùy chọn"
     },
     "title1": "Kinh Thánh.",
     "title2": " Suy nghĩ lại.",
@@ -23,7 +24,9 @@
     "loading": "Đang tải lời khuyên hàng ngày...",
     "label": "Lời khuyên trong ngày",
     "deepDive": "Điều này có ý nghĩa gì đối với tôi?",
-    "explore": "Đọc toàn bộ đoạn văn"
+    "explore": "Đọc toàn bộ đoạn văn",
+    "alreadySubscribed": "Bạn đang nhận được cảm hứng hàng ngày",
+    "subscribeCta": "Bạn muốn nhận cảm hứng này hàng ngày không?"
   },
   "features": {
     "sectionTitle": "Cách BibleBot của bạn đồng hành cùng bạn",
@@ -153,7 +156,8 @@
     "toastPermDenied": "Quyền bị từ chối",
     "toastPermDeniedDesc": "Vui lòng cho phép thông báo trong cài đặt trình duyệt của bạn.",
     "toastError": "Lỗi",
-    "toastErrorDesc": "Vui lòng thử lại sau."
+    "toastErrorDesc": "Vui lòng thử lại sau.",
+    "subscribeButton": "Đăng ký cảm hứng"
   },
   "faq": {
     "badge": "Những câu hỏi thường gặp",
@@ -288,7 +292,8 @@
     "errorTitle": "Lỗi",
     "errorConnection": "không thể kết nối.",
     "errorNoStream": "Không có luồng",
-    "seniorMode": "Chế độ người cao tuổi (phông chữ lớn hơn)"
+    "seniorMode": "Chế độ người cao tuổi (phông chữ lớn hơn)",
+    "loginHint": "Đăng nhập để giữ các cuộc trò chuyện trên tất cả các thiết bị"
   },
   "install": {
     "title": "Cài đặt BibleBot",
@@ -373,7 +378,10 @@
     "baptism": {
       "title": "Tìm câu nói rửa tội",
       "desc": "Câu thơ hoàn hảo cho con bạn",
-      "prompt": "Giúp tôi tìm một câu rửa tội phù hợp. Đó là đứa trẻ như thế nào và cha mẹ mong muốn gì?"
+      "prompt": "Giúp tôi tìm một câu rửa tội phù hợp. Đó là đứa trẻ như thế nào và cha mẹ mong muốn gì?",
+      "prompt_v1": "Rốt cuộc thì phép báp-têm có ý nghĩa gì?",
+      "prompt_v2": "Hãy kể cho tôi nghe về phép báp-têm trong Kinh Thánh – hãy làm tôi ngạc nhiên!",
+      "prompt_v3": "Tại sao mọi người lại làm phép báp-têm?"
     },
     "condolence": {
       "title": "Lời an ủi",
@@ -388,7 +396,10 @@
     "anxiety": {
       "title": "Lo lắng & Sầu muộn",
       "desc": "Tìm thấy lòng can đảm trong thời điểm khó khăn",
-      "prompt": "Tôi đang phải đối mặt với nỗi sợ hãi và lo lắng. Kinh Thánh nói gì về điều đó? Có những câu nào động viên không?"
+      "prompt": "Tôi đang phải đối mặt với nỗi sợ hãi và lo lắng. Kinh Thánh nói gì về điều đó? Có những câu nào động viên không?",
+      "prompt_v1": "Tôi cảm thấy lo lắng. Kinh Thánh nói gì về sự lo lắng?",
+      "prompt_v2": "Đức tin có thể giúp tôi đối phó với lo lắng như thế nào?",
+      "prompt_v3": "Những nhân vật Kinh Thánh nào cũng đã từng lo lắng?"
     },
     "confession": {
       "title": "Xưng tội",
@@ -398,7 +409,10 @@
     "heartbreak": {
       "title": "Đau khổ vì tình yêu",
       "desc": "Kinh Thánh nói gì về đau khổ vì tình yêu",
-      "prompt": "Trái tim tôi tan nát. Kinh Thánh nói gì về đau khổ vì tình yêu và cách tìm lại hy vọng?"
+      "prompt": "Trái tim tôi tan nát. Kinh Thánh nói gì về đau khổ vì tình yêu và cách tìm lại hy vọng?",
+      "prompt_v1": "Trái tim tôi tan vỡ. Kinh Thánh nói gì về điều này?",
+      "prompt_v2": "Làm thế nào để tôi đối phó với đau khổ vì tình yêu – có sự giúp đỡ nào từ Kinh Thánh không?",
+      "prompt_v3": "Chúa có thể chữa lành một trái tim tan vỡ không?"
     },
     "newstart": {
       "title": "Khởi đầu mới",
@@ -428,7 +442,10 @@
     "gratitude": {
       "title": "Lòng biết ơn",
       "desc": "Một lời cầu nguyện tạ ơn cá nhân",
-      "prompt": "Tôi muốn tạ ơn Chúa. Giúp tôi soạn một lời cầu nguyện tạ ơn cá nhân."
+      "prompt": "Tôi muốn tạ ơn Chúa. Giúp tôi soạn một lời cầu nguyện tạ ơn cá nhân.",
+      "prompt_v1": "Làm thế nào tôi có thể trở nên biết ơn hơn?",
+      "prompt_v2": "Kinh Thánh nói gì về lòng biết ơn?",
+      "prompt_v3": "Tại sao lòng biết ơn lại quan trọng trong đức tin?"
     },
     "lifewheel": {
       "title": "Bánh xe cuộc sống",
@@ -487,7 +504,10 @@
     "forgiveness": {
       "title": "Tha thứ",
       "desc": "Khi tha thứ dường như là không thể",
-      "prompt": "Tôi không thể tha thứ cho ai đó. Điều đó quá đau đớn. Kinh Thánh nói gì về sự tha thứ?"
+      "prompt": "Tôi không thể tha thứ cho ai đó. Điều đó quá đau đớn. Kinh Thánh nói gì về sự tha thứ?",
+      "prompt_v1": "Kinh Thánh nói gì về sự tha thứ?",
+      "prompt_v2": "Làm thế nào tôi có thể tha thứ cho người đã làm tổn thương tôi?",
+      "prompt_v3": "Có giới hạn nào cho sự tha thứ không?"
     },
     "familyconflict": {
       "title": "Xung đột gia đình",
@@ -507,12 +527,23 @@
     "prayer": {
       "title": "Ý cầu nguyện",
       "desc": "Cùng nhau cầu nguyện",
-      "prompt": "Tôi có một ý cầu nguyện và muốn cùng nhau cầu nguyện. Hãy đồng hành cùng tôi trong lời cầu nguyện."
+      "prompt": "Tôi có một ý cầu nguyện và muốn cùng nhau cầu nguyện. Hãy đồng hành cùng tôi trong lời cầu nguyện.",
+      "prompt_v1": "Làm thế nào tôi có thể học cách cầu nguyện?",
+      "prompt_v2": "Kinh Thánh nói gì về lời cầu nguyện?",
+      "prompt_v3": "Tại sao Chúa không nhậm lời một số lời cầu nguyện?"
     },
     "bibleverse": {
       "title": "Hiểu câu Kinh Thánh",
       "desc": "Nhận giải thích một đoạn Kinh Thánh",
       "prompt": "Tôi muốn hiểu rõ hơn một đoạn Kinh Thánh. Bạn có thể giúp tôi đặt nó vào ngữ cảnh không?"
+    },
+    "biblequiz": {
+      "desc": "Kiểm tra kiến thức Kinh Thánh của bạn một cách vui vẻ",
+      "title": "Câu đố Kinh Thánh"
+    },
+    "prayerwall": {
+      "desc": "Chia sẻ ý định cầu nguyện & cầu nguyện cho nhau",
+      "title": "Bức tường cầu nguyện"
     }
   },
   "lifeWheel": {
@@ -803,5 +834,30 @@
     "weddingDesc": "Viết lời thề hôn nhân, chọn bài hát và lên kế hoạch cho buổi lễ.",
     "baptismDesc": "Soạn thảo lời chúc rửa tội và chuẩn bị quy trình với cộng đồng.",
     "confirmationDesc": "Tìm câu kinh thánh cho lễ ban phước và chuẩn bị các văn bản cá nhân."
+  },
+  "chatHero": {
+    "ariaLabel": "Hỏi BibleBot",
+    "focusPlaceholder": "Viết câu hỏi của bạn…",
+    "placeholder1": "Điều gì thực sự làm tôi biết ơn?",
+    "placeholder2": "Làm thế nào để tôi tìm thấy sự bình yên nội tâm?",
+    "placeholder3": "Điều gì mang lại cho tôi hy vọng?",
+    "placeholder4": "Trái tim tôi mong muốn điều gì?",
+    "placeholder5": "Hôm nay tôi có thể làm điều tốt gì?",
+    "send": "Gửi",
+    "subtitle": "Đặt câu hỏi của bạn – một cách cởi mở, trung thực, không cần đăng nhập.",
+    "suggestion1": "Tên tôi có ý nghĩa gì?",
+    "suggestion2": "Điều gì cho tôi sức mạnh hôm nay?",
+    "suggestion3": "Tôi biết ơn điều gì?"
+  },
+  "meta": {
+    "forChurchesDesc": "BibleBot là đối tác cho cộng đồng của bạn: công tác thanh niên, lễ xưng tội, mục vụ và các nhóm học Kinh Thánh. Miễn phí đến Premium.",
+    "forChurchesTitle": "BibleBot dành cho Hội Thánh – Mục Vụ Kỹ Thuật Số & Trợ Giúp Kinh Thánh",
+    "homeDesc": "BibleBot đồng hành cùng bạn với 5 bản dịch Kinh Thánh, phương pháp huấn luyện và mục vụ. Ẩn danh, miễn phí, bằng 36 ngôn ngữ.",
+    "homeTitle": "BibleBot – Người bạn đồng hành Kinh Thánh cá nhân của bạn | Miễn phí & Ẩn danh",
+    "loginDesc": "Đăng nhập vào BibleBot để chuẩn bị các nghi lễ cá nhân của bạn.",
+    "loginTitle": "Đăng nhập – BibleBot"
+  },
+  "splash": {
+    "patronage": "Được giới thiệu bởi"
   }
 }

@@ -7,7 +7,8 @@
     "badge": {
       "noLogin": "无需登录",
       "noData": "不存储数据",
-      "noJudgment": "不评判"
+      "noJudgment": "不评判",
+      "optionalLogin": "可选登录"
     },
     "title1": "《圣经》。",
     "title2": " 重新认识。",
@@ -22,7 +23,9 @@
     "loading": "正在加载每日灵感...",
     "label": "Tagesimpuls",
     "deepDive": "这对我意味着什么？",
-    "explore": "阅读整个章节"
+    "explore": "阅读整个章节",
+    "alreadySubscribed": "您已收到每日灵感",
+    "subscribeCta": "想每天收到这份灵感吗？"
   },
   "features": {
     "sectionTitle": "你的BibleBot如何伴随你",
@@ -152,7 +155,8 @@
     "toastPermDenied": "权限被拒绝",
     "toastPermDeniedDesc": "请在您的浏览器设置中允许通知。",
     "toastError": "错误",
-    "toastErrorDesc": "请稍后重试。"
+    "toastErrorDesc": "请稍后重试。",
+    "subscribeButton": "订阅灵感"
   },
   "faq": {
     "badge": "常见问题",
@@ -287,7 +291,8 @@
     "errorTitle": "错误",
     "errorConnection": "无法连接。",
     "errorNoStream": "无流",
-    "seniorMode": "老年模式（字体更大）"
+    "seniorMode": "老年模式（字体更大）",
+    "loginHint": "登录以在所有设备上保留对话记录"
   },
   "install": {
     "title": "安装 BibleBot",
@@ -372,7 +377,10 @@
     "baptism": {
       "title": "寻找洗礼经文",
       "desc": "为您的孩子选择完美经文",
-      "prompt": "帮我找到合适的洗礼经文。孩子是怎样的？父母有什么愿望？"
+      "prompt": "帮我找到合适的洗礼经文。孩子是怎样的？父母有什么愿望？",
+      "prompt_v1": "洗礼到底意味着什么？",
+      "prompt_v2": "告诉我圣经中的洗礼——让我大吃一惊！",
+      "prompt_v3": "为什么人们要受洗？"
     },
     "condolence": {
       "title": "慰问",
@@ -387,7 +395,10 @@
     "anxiety": {
       "title": "焦虑与担忧",
       "desc": "在艰难时期找到勇气",
-      "prompt": "我正在与焦虑和担忧搏斗。圣经对此有何说法？有没有能给我带来勇气的经文？"
+      "prompt": "我正在与焦虑和担忧搏斗。圣经对此有何说法？有没有能给我带来勇气的经文？",
+      "prompt_v1": "我很焦虑。圣经关于焦虑是怎么说的？",
+      "prompt_v2": "信仰如何帮助我应对焦虑？",
+      "prompt_v3": "圣经中哪些人物也曾焦虑？"
     },
     "confession": {
       "title": "告解",
@@ -397,7 +408,10 @@
     "heartbreak": {
       "title": "失恋",
       "desc": "圣经如何谈论心碎",
-      "prompt": "我的心碎了。圣经如何谈论失恋以及如何重新找到希望？"
+      "prompt": "我的心碎了。圣经如何谈论失恋以及如何重新找到希望？",
+      "prompt_v1": "我的心碎了。圣经对此有什么说法？",
+      "prompt_v2": "我如何处理心碎——圣经有帮助吗？",
+      "prompt_v3": "上帝能治愈破碎的心吗？"
     },
     "newstart": {
       "title": "新的开始",
@@ -427,7 +441,10 @@
     "gratitude": {
       "title": "感恩",
       "desc": "一份个人感谢祷告",
-      "prompt": "我想感谢上帝。请帮助我写一份个人感谢祷告。"
+      "prompt": "我想感谢上帝。请帮助我写一份个人感谢祷告。",
+      "prompt_v1": "我怎样才能变得更感恩？",
+      "prompt_v2": "圣经关于感恩是怎么说的？",
+      "prompt_v3": "为什么感恩在信仰中如此重要？"
     },
     "lifewheel": {
       "title": "生命之轮",
@@ -486,7 +503,10 @@
     "forgiveness": {
       "title": "宽恕",
       "desc": "当宽恕似乎不可能时",
-      "prompt": "我就是无法原谅某人。太痛苦了。圣经如何谈论宽恕？"
+      "prompt": "我就是无法原谅某人。太痛苦了。圣经如何谈论宽恕？",
+      "prompt_v1": "圣经关于饶恕是怎么说的？",
+      "prompt_v2": "我怎样才能饶恕那个伤害我的人？",
+      "prompt_v3": "饶恕有界限吗？"
     },
     "familyconflict": {
       "title": "家庭冲突",
@@ -506,12 +526,23 @@
     "prayer": {
       "title": "代祷事项",
       "desc": "一起祷告",
-      "prompt": "我有一个代祷事项，想一起祷告。请在祷告中陪伴我。"
+      "prompt": "我有一个代祷事项，想一起祷告。请在祷告中陪伴我。",
+      "prompt_v1": "我怎样才能学会祷告？",
+      "prompt_v2": "圣经关于祷告是怎么说的？",
+      "prompt_v3": "为什么上帝不应允某些祷告？"
     },
     "bibleverse": {
       "title": "理解经文",
       "desc": "解释一段圣经经文",
       "prompt": "我想更好地理解一段圣经经文。你能帮我理解它的背景吗？"
+    },
+    "biblequiz": {
+      "desc": "以游戏方式测试你的圣经知识",
+      "title": "圣经问答"
+    },
+    "prayerwall": {
+      "desc": "分享祷告意向，互相代祷",
+      "title": "祷告墙"
     }
   },
   "lifeWheel": {
@@ -802,5 +833,30 @@
     "weddingDesc": "撰写结婚誓词，选择歌曲并计划庆祝活动。",
     "baptismDesc": "表达洗礼愿望并与教会一起准备流程。",
     "confirmationDesc": "寻找坚信礼经文并准备个人文本。"
+  },
+  "chatHero": {
+    "ariaLabel": "向 BibleBot 提问",
+    "focusPlaceholder": "写下你的问题…",
+    "placeholder1": "什么让我真正心存感激？",
+    "placeholder2": "我如何找到内心的平静？",
+    "placeholder3": "什么给我带来希望？",
+    "placeholder4": "我的心渴望什么？",
+    "placeholder5": "我今天能做好事吗？",
+    "send": "发送",
+    "subtitle": "提出你的问题——公开、诚实，无需登录。",
+    "suggestion1": "我的名字代表什么？",
+    "suggestion2": "什么能给我今天的力量？",
+    "suggestion3": "我为谁感到感激？"
+  },
+  "meta": {
+    "forChurchesDesc": "BibleBot 是您教会的合作伙伴：青少年事工、坚信礼、教牧关怀和查经小组。免费至高级。",
+    "forChurchesTitle": "BibleBot 助力教会 – 数字教牧关怀与圣经指导",
+    "homeDesc": "BibleBot 提供 5 种圣经译本、教练方法和教牧关怀。匿名、免费，支持 36 种语言。",
+    "homeTitle": "BibleBot – 你的个人圣经伴侣 | 免费且匿名",
+    "loginDesc": "登录 BibleBot 以准备您的个人仪式。",
+    "loginTitle": "登录 – BibleBot"
+  },
+  "splash": {
+    "patronage": "推荐人"
   }
 }
