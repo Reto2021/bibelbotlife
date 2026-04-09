@@ -580,6 +580,48 @@ export default function OutreachAdmin() {
           </TabsContent>
         </Tabs>
       )}
+
+      {/* ─── Personalized Email Preview Dialog ─── */}
+      <Dialog open={personalizePreviewOpen} onOpenChange={setPersonalizePreviewOpen}>
+        <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-2">
+              <Wand2 className="h-5 w-5 text-primary" />
+              Personalisierte E-Mail – Vorschau
+            </DialogTitle>
+          </DialogHeader>
+          {personalizedEmail && (
+            <div className="space-y-4">
+              <div>
+                <Label className="text-xs text-muted-foreground">Betreff</Label>
+                <p className="font-medium text-foreground">{personalizedEmail.subject}</p>
+              </div>
+              <div>
+                <Label className="text-xs text-muted-foreground">E-Mail-Text</Label>
+                <div
+                  className="mt-1 border rounded-lg p-4 bg-card text-sm prose prose-sm max-w-none"
+                  dangerouslySetInnerHTML={{ __html: personalizedEmail.body }}
+                />
+              </div>
+              <p className="text-xs text-muted-foreground">
+                Schritt {personalizedEmail.step_number} • Lead: {personalizedEmail.lead_id.slice(0, 8)}…
+              </p>
+            </div>
+          )}
+          <DialogFooter className="gap-2">
+            <Button variant="outline" onClick={() => {
+              if (personalizedEmail) generatePersonalizedEmail({ id: personalizedEmail.lead_id }, personalizedEmail.step_number);
+            }} disabled={!!personalizingLead}>
+              {personalizingLead ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : <RefreshCw className="h-4 w-4 mr-2" />}
+              Neu generieren
+            </Button>
+            <Button onClick={savePersonalizedEmail} disabled={savingPersonalized}>
+              {savingPersonalized ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : <Mail className="h-4 w-4 mr-2" />}
+              Als E-Mail speichern
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
