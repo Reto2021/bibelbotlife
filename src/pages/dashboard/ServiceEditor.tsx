@@ -2,7 +2,7 @@ import { useState, useCallback, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { DndContext, closestCenter, KeyboardSensor, PointerSensor, useSensor, useSensors, type DragEndEvent } from "@dnd-kit/core";
 import { arrayMove, SortableContext, sortableKeyboardCoordinates, verticalListSortingStrategy } from "@dnd-kit/sortable";
-import { ArrowLeft, Save, Clock, Plus, Play, Library } from "lucide-react";
+import { ArrowLeft, Save, Clock, Plus, Play, Library, BookmarkPlus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -16,7 +16,7 @@ import { toast } from "sonner";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { ResourcePicker } from "@/components/services/ResourcePicker";
 import type { Resource } from "@/hooks/use-resources";
-import { useTemplates, type ServiceTemplate } from "@/hooks/use-templates";
+import { useTemplates, useCreateTemplate, type ServiceTemplate } from "@/hooks/use-templates";
 
 export default function ServiceEditor() {
   const { id } = useParams();
@@ -39,6 +39,26 @@ export default function ServiceEditor() {
   const [resourcePickerBlockId, setResourcePickerBlockId] = useState<string | null>(null);
   const [templatePickerOpen, setTemplatePickerOpen] = useState(isNew);
   const { data: templates = [] } = useTemplates();
+  const createTemplate = useCreateTemplate();
+  const [saveAsTemplateOpen, setSaveAsTemplateOpen] = useState(false);
+  const [templateName, setTemplateName] = useState("");
+
+  const handleSaveAsTemplate = async () => {
+    if (!templateName.trim() || !user) return;
+    try {
+      await createTemplate.mutateAsync({
+        name: templateName.trim(),
+        tradition: tradition,
+        blocks: blocks,
+        church_id: church?.id,
+      });
+      toast.success(`Vorlage «${templateName.trim()}» gespeichert`);
+      setSaveAsTemplateOpen(false);
+      setTemplateName("");
+    } catch (err: any) {
+      toast.error(err.message || "Fehler beim Speichern der Vorlage");
+    }
+  };
 
   // Load existing service
   useEffect(() => {
@@ -217,6 +237,12 @@ export default function ServiceEditor() {
             <Button variant="outline" onClick={() => navigate(`/dashboard/conductor/${id}`)}>
               <Play className="h-4 w-4 mr-2" />
               Live
+            </Button>
+          )}
+          {blocks.length > 0 && (
+            <Button variant="outline" onClick={() => { setTemplateName(title); setSaveAsTemplateOpen(true); }}>
+              <BookmarkPlus className="h-4 w-4 mr-2" />
+              Als Vorlage
             </Button>
           )}
           <Button onClick={handleSave} disabled={saving}>
@@ -407,6 +433,35 @@ export default function ServiceEditor() {
             <Button variant="ghost" size="sm" onClick={() => setTemplatePickerOpen(false)}>
               Ohne Vorlage starten
             </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
+      {/* Save as Template Dialog */}
+      <Dialog open={saveAsTemplateOpen} onOpenChange={setSaveAsTemplateOpen}>
+        <DialogContent className="sm:max-w-sm">
+          <DialogHeader>
+            <DialogTitle>Als Vorlage speichern</DialogTitle>
+          </DialogHeader>
+          <div className="space-y-4">
+            <div>
+              <label className="text-sm font-medium text-foreground mb-1.5 block">Vorlagenname</label>
+              <Input
+                value={templateName}
+                onChange={(e) => setTemplateName(e.target.value)}
+                placeholder="z.B. Sonntagsgottesdienst"
+                onKeyDown={(e) => e.key === "Enter" && handleSaveAsTemplate()}
+              />
+            </div>
+            <p className="text-xs text-muted-foreground">
+              Alle {blocks.length} Blöcke werden als Vorlage gespeichert.
+            </p>
+            <div className="flex justify-end gap-2">
+              <Button variant="ghost" onClick={() => setSaveAsTemplateOpen(false)}>Abbrechen</Button>
+              <Button onClick={handleSaveAsTemplate} disabled={!templateName.trim() || createTemplate.isPending}>
+                <BookmarkPlus className="h-4 w-4 mr-2" />
+                {createTemplate.isPending ? "Speichern..." : "Speichern"}
+              </Button>
+            </div>
           </div>
         </DialogContent>
       </Dialog>
