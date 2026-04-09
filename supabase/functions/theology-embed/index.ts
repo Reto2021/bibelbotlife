@@ -7,15 +7,18 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type",
 };
 
-const GEMINI_EMBED_URL = "https://generativelanguage.googleapis.com/v1beta/models/text-embedding-004:embedContent";
+const AI_GATEWAY = "https://ai.gateway.lovable.dev/v1";
 
 async function getEmbedding(text: string, apiKey: string): Promise<number[]> {
-  const resp = await fetch(`${GEMINI_EMBED_URL}?key=${apiKey}`, {
+  const resp = await fetch(`${AI_GATEWAY}/embeddings`, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      "Content-Type": "application/json",
+    },
     body: JSON.stringify({
-      content: { parts: [{ text }] },
-      taskType: "RETRIEVAL_DOCUMENT",
+      model: "google/text-embedding-004",
+      input: text,
     }),
   });
   if (!resp.ok) {
@@ -23,21 +26,7 @@ async function getEmbedding(text: string, apiKey: string): Promise<number[]> {
     throw new Error(`Embedding failed (${resp.status}): ${err}`);
   }
   const data = await resp.json();
-  return data.embedding.values;
-}
-
-async function getQueryEmbedding(text: string, apiKey: string): Promise<number[]> {
-  const resp = await fetch(`${GEMINI_EMBED_URL}?key=${apiKey}`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      content: { parts: [{ text }] },
-      taskType: "RETRIEVAL_QUERY",
-    }),
-  });
-  if (!resp.ok) throw new Error(`Query embedding failed: ${resp.status}`);
-  const data = await resp.json();
-  return data.embedding.values;
+  return data.data[0].embedding;
 }
 
 serve(async (req) => {
@@ -45,9 +34,9 @@ serve(async (req) => {
     return new Response(null, { headers: corsHeaders });
   }
 
-  const GEMINI_API_KEY = Deno.env.get("GEMINI_API_KEY");
-  if (!GEMINI_API_KEY) {
-    return new Response(JSON.stringify({ error: "GEMINI_API_KEY not configured" }), {
+  const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
+  if (!LOVABLE_API_KEY) {
+    return new Response(JSON.stringify({ error: "LOVABLE_API_KEY not configured" }), {
       status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   }
@@ -77,7 +66,7 @@ serve(async (req) => {
         try {
           const embedding = await getEmbedding(
             `${chunk.title}\n\n${chunk.content}`,
-            GEMINI_API_KEY
+            LOVABLE_API_KEY
           );
 
           const { error } = await supabase.from("theology_chunks").insert({
@@ -94,8 +83,7 @@ serve(async (req) => {
             inserted++;
           }
 
-          // Rate limit: ~1 req/sec for embedding API
-          await new Promise(r => setTimeout(r, 200));
+          await new Promise(r => setTimeout(r, 150));
         } catch (e) {
           errors.push(`${chunk.title}: ${e instanceof Error ? e.message : "unknown"}`);
         }
@@ -118,7 +106,7 @@ serve(async (req) => {
         });
       }
 
-      const embedding = await getQueryEmbedding(query, GEMINI_API_KEY);
+      const embedding = await getEmbedding(query, LOVABLE_API_KEY);
 
       const { data, error } = await supabase.rpc("search_theology", {
         query_embedding: JSON.stringify(embedding),
@@ -152,12 +140,12 @@ serve(async (req) => {
       let updated = 0;
       for (const chunk of missing) {
         try {
-          const embedding = await getEmbedding(`${chunk.title}\n\n${chunk.content}`, GEMINI_API_KEY);
+          const embedding = await getEmbedding(`${chunk.title}\n\n${chunk.content}`, LOVABLE_API_KEY);
           await supabase.from("theology_chunks").update({
             embedding: JSON.stringify(embedding),
           }).eq("id", chunk.id);
           updated++;
-          await new Promise(r => setTimeout(r, 200));
+          await new Promise(r => setTimeout(r, 150));
         } catch (e) {
           console.error(`Embed error for ${chunk.id}:`, e);
         }
