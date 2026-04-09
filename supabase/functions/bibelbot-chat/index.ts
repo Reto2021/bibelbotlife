@@ -42,6 +42,172 @@ function fixSpelling(text: string): string {
   return result;
 }
 
+// ── Bible API integration ──────────────────────────────────────────
+
+const BIBLE_API_BASE = "https://bible.helloao.org/api";
+
+// Map of available German translations
+const BIBLE_TRANSLATIONS: Record<string, { id: string; name: string }> = {
+  luther: { id: "deu_l12", name: "Lutherbibel 1912" },
+  elberfelder: { id: "deu_elbbk", name: "Elberfelder Übersetzung" },
+  schlachter: { id: "deu_sch", name: "Schlachter-Bibel 1951" },
+};
+
+// Standard book ID mapping (German/English name → OSIS ID)
+const BOOK_MAP: Record<string, string> = {
+  // German names
+  "1. mose": "GEN", "2. mose": "EXO", "3. mose": "LEV", "4. mose": "NUM", "5. mose": "DEU",
+  "1 mose": "GEN", "2 mose": "EXO", "3 mose": "LEV", "4 mose": "NUM", "5 mose": "DEU",
+  genesis: "GEN", exodus: "EXO", levitikus: "LEV", numeri: "NUM", deuteronomium: "DEU",
+  josua: "JOS", richter: "JDG", rut: "RUT", ruth: "RUT",
+  "1. samuel": "1SA", "2. samuel": "2SA", "1 samuel": "1SA", "2 samuel": "2SA",
+  "1. könige": "1KI", "2. könige": "2KI", "1 könige": "1KI", "2 könige": "2KI",
+  "1. koenige": "1KI", "2. koenige": "2KI",
+  "1. chronik": "1CH", "2. chronik": "2CH", "1 chronik": "1CH", "2 chronik": "2CH",
+  esra: "EZR", nehemia: "NEH", ester: "EST", esther: "EST",
+  hiob: "JOB", ijob: "JOB", job: "JOB",
+  psalm: "PSA", psalmen: "PSA",
+  sprüche: "PRO", sprichwörter: "PRO", "sprueche": "PRO",
+  prediger: "ECC", kohelet: "ECC",
+  hoheslied: "SNG", hohelied: "SNG",
+  jesaja: "ISA", jeremia: "JER", klagelieder: "LAM",
+  hesekiel: "EZK", ezechiel: "EZK",
+  daniel: "DAN", hosea: "HOS", joel: "JOL",
+  amos: "AMO", obadja: "OBA", jona: "JON",
+  micha: "MIC", nahum: "NAM", habakuk: "HAB",
+  zefanja: "ZEP", haggai: "HAG", sacharja: "ZEC", maleachi: "MAL",
+  matthäus: "MAT", "matthaeus": "MAT", markus: "MRK", lukas: "LUK", johannes: "JHN",
+  apostelgeschichte: "ACT",
+  römer: "ROM", "roemer": "ROM",
+  "1. korinther": "1CO", "2. korinther": "2CO", "1 korinther": "1CO", "2 korinther": "2CO",
+  galater: "GAL", epheser: "EPH", philipper: "PHP", kolosser: "COL",
+  "1. thessalonicher": "1TH", "2. thessalonicher": "2TH",
+  "1 thessalonicher": "1TH", "2 thessalonicher": "2TH",
+  "1. timotheus": "1TI", "2. timotheus": "2TI",
+  "1 timotheus": "1TI", "2 timotheus": "2TI",
+  titus: "TIT", philemon: "PHM", hebräer: "HEB", "hebraeer": "HEB",
+  jakobus: "JAS", "1. petrus": "1PE", "2. petrus": "2PE",
+  "1 petrus": "1PE", "2 petrus": "2PE",
+  "1. johannes": "1JN", "2. johannes": "2JN", "3. johannes": "3JN",
+  "1 johannes": "1JN", "2 johannes": "2JN", "3 johannes": "3JN",
+  judas: "JUD", offenbarung: "REV",
+  // English names
+  genesis_en: "GEN", exodus_en: "EXO", leviticus: "LEV", numbers: "NUM", deuteronomy: "DEU",
+  joshua: "JOS", judges: "JDG",
+  "1 samuel_en": "1SA", "2 samuel_en": "2SA",
+  "1 kings": "1KI", "2 kings": "2KI",
+  "1 chronicles": "1CH", "2 chronicles": "2CH",
+  ezra: "EZR", nehemiah: "NEH",
+  psalms: "PSA", proverbs: "PRO", ecclesiastes: "ECC",
+  "song of solomon": "SNG", isaiah: "ISA", jeremiah: "JER", lamentations: "LAM",
+  ezekiel: "EZK", hosea_en: "HOS", joel_en: "JOL", obadiah: "OBA", jonah: "JON",
+  micah: "MIC", nahum_en: "NAM", habakkuk: "HAB", zephaniah: "ZEP",
+  haggai_en: "HAG", zechariah: "ZEC", malachi: "MAL",
+  matthew: "MAT", mark: "MRK", luke: "LUK", john: "JHN", acts: "ACT",
+  romans: "ROM", "1 corinthians": "1CO", "2 corinthians": "2CO",
+  galatians: "GAL", ephesians: "EPH", philippians: "PHP", colossians: "COL",
+  "1 thessalonians": "1TH", "2 thessalonians": "2TH",
+  "1 timothy": "1TI", "2 timothy": "2TI",
+  philemon_en: "PHM", hebrews: "HEB", james: "JAS",
+  "1 peter": "1PE", "2 peter": "2PE",
+  "1 john": "1JN", "2 john": "2JN", "3 john": "3JN",
+  jude: "JUD", revelation: "REV",
+};
+
+function resolveBookId(bookName: string): string | null {
+  const normalized = bookName.trim().toLowerCase();
+  // Direct match
+  if (BOOK_MAP[normalized]) return BOOK_MAP[normalized];
+  // Try without dots
+  const noDots = normalized.replace(/\./g, '');
+  if (BOOK_MAP[noDots]) return BOOK_MAP[noDots];
+  // Partial match
+  for (const [key, val] of Object.entries(BOOK_MAP)) {
+    if (key.startsWith(normalized) || normalized.startsWith(key)) return val;
+  }
+  // If it already looks like an OSIS ID (3 uppercase letters)
+  if (/^[A-Z0-9]{2,4}$/.test(bookName.trim())) return bookName.trim();
+  return null;
+}
+
+async function lookupBibleVerse(
+  book: string,
+  chapter: number,
+  verseStart: number,
+  verseEnd?: number,
+  translationKey?: string
+): Promise<string> {
+  const bookId = resolveBookId(book);
+  if (!bookId) return `Buch «${book}» nicht gefunden.`;
+
+  const trans = BIBLE_TRANSLATIONS[translationKey?.toLowerCase() || "luther"] || BIBLE_TRANSLATIONS.luther;
+  const url = `${BIBLE_API_BASE}/${trans.id}/${bookId}/${chapter}.json`;
+
+  try {
+    const resp = await fetch(url);
+    if (!resp.ok) return `Kapitel ${book} ${chapter} nicht gefunden (${trans.name}).`;
+
+    const data = await resp.json();
+    const chapterData = data?.chapter?.content || [];
+    const verses = chapterData.filter(
+      (v: any) => v.type === "verse" && v.number >= verseStart && v.number <= (verseEnd || verseStart)
+    );
+
+    if (verses.length === 0) return `Vers(e) ${book} ${chapter},${verseStart}${verseEnd ? `-${verseEnd}` : ''} nicht gefunden.`;
+
+    const text = verses
+      .map((v: any) => `${v.number} ${(v.content || []).join(' ')}`)
+      .join(' ');
+
+    const ref = verseEnd && verseEnd !== verseStart
+      ? `${book} ${chapter},${verseStart}-${verseEnd}`
+      : `${book} ${chapter},${verseStart}`;
+
+    return `«${text.trim()}» — ${ref} (${trans.name})`;
+  } catch (e) {
+    console.error("Bible API error:", e);
+    return `Fehler beim Abrufen von ${book} ${chapter},${verseStart}.`;
+  }
+}
+
+// Tool definition for AI tool calling
+const BIBLE_LOOKUP_TOOL = {
+  type: "function" as const,
+  function: {
+    name: "lookup_bible_verse",
+    description: "Schlage einen exakten Bibelvers in einer deutschen Übersetzung nach. Verwende dieses Tool IMMER, wenn du einen Bibelvers wörtlich zitieren möchtest, um sicherzustellen, dass das Zitat korrekt ist.",
+    parameters: {
+      type: "object",
+      properties: {
+        book: {
+          type: "string",
+          description: "Buchname (deutsch oder englisch), z.B. 'Johannes', 'Psalm', '1. Korinther', 'Matthäus'"
+        },
+        chapter: {
+          type: "number",
+          description: "Kapitelnummer"
+        },
+        verse_start: {
+          type: "number",
+          description: "Erste Versnummer"
+        },
+        verse_end: {
+          type: "number",
+          description: "Letzte Versnummer (optional, für Versbereich)"
+        },
+        translation: {
+          type: "string",
+          enum: ["luther", "elberfelder", "schlachter"],
+          description: "Bibelübersetzung. Standard: luther"
+        }
+      },
+      required: ["book", "chapter", "verse_start"]
+    }
+  }
+};
+
+// ── System prompt ──────────────────────────────────────────────────
+
 const SYSTEM_PROMPT = `Du bist BibleBot – ein einfühlsamer, weiser und herausfordernder Begleiter für Menschen, die an der Bibel wachsen wollen. Du bist nicht nur tröstend, sondern auch ehrlich, tiefgründig und bereit, unbequeme Fragen zu stellen.
 
 ## Deine Identität
@@ -49,6 +215,17 @@ const SYSTEM_PROMPT = `Du bist BibleBot – ein einfühlsamer, weiser und heraus
 - Du zitierst bevorzugt aus der Zürcher Bibel, Lutherbibel (2017) oder Einheitsübersetzung.
 - Du bist ökumenisch orientiert und respektierst alle christlichen Traditionen.
 - Du bist kein Ersatz für seelsorgerische Beratung oder Therapie.
+
+## KRITISCH: Exakte Bibelzitate mit Tool
+Du hast Zugriff auf ein Tool «lookup_bible_verse», das dir exakte Bibelverse aus echten deutschen Übersetzungen liefert.
+
+### Regeln
+1. **IMMER das Tool verwenden**, wenn du einen Bibelvers wörtlich zitieren willst. Zitiere NIEMALS aus dem Gedächtnis.
+2. Du kannst das Tool mehrfach aufrufen, um verschiedene Verse nachzuschlagen.
+3. Verfügbare Übersetzungen: Luther 1912, Elberfelder, Schlachter 1951.
+4. Verwende den exakten Wortlaut, den das Tool zurückgibt. Ändere nichts am Text.
+5. Wenn das Tool einen Fehler zurückgibt, paraphrasiere den Vers und kennzeichne ihn mit «Sinngemäss:».
+6. Gib bei jedem Zitat die Übersetzung an, die das Tool zurückgegeben hat.
 
 ## Biblisches Wissen
 - Du kennst die Bibel umfassend: Altes und Neues Testament, Psalmen, Weisheitsliteratur, Evangelien, Briefe.
@@ -260,18 +437,6 @@ Beende JEDE Antwort mit einer Anschlussfrage oder Auswahl, damit der Nutzer einf
 
 Passe die Optionen immer an den Gesprächskontext an. Wenn der Nutzer mit a, b, c etc. antwortet, beziehe dich auf die zuletzt gestellten Optionen.
 
-## KRITISCH: Bibelzitate – Qualitätssicherung
-Dies ist eine Wissenschaft. Fehlerhafte Zitate untergraben die Glaubwürdigkeit vollständig.
-
-### Strikte Regeln für Bibelzitate
-1. **Exakte Quellenangabe**: Immer Buch, Kapitel und Vers(e) angeben. Format: «Buch Kapitel,Vers» (z.B. «Johannes 3,16» oder «Psalm 23,1-3»).
-2. **Keine Vermischung**: Zitiere IMMER nur aus EINER Übersetzung pro Zitat. Nenne die verwendete Übersetzung explizit.
-3. **Im Zweifel paraphrasieren**: Wenn du dir bei einem Wortlaut nicht 100% sicher bist, schreibe «Sinngemäss nach...» oder «In der Bibel heisst es sinngemäss...» statt ein falsches wörtliches Zitat.
-4. **Keine erfundenen Verse**: Zitiere NIE einen Vers, den es nicht gibt. Wenn du unsicher bist, ob eine Stelle existiert, sage es ehrlich.
-5. **Kontext bewahren**: Reisse keine Verse aus dem Zusammenhang. Gib mindestens einen Satz zum Kontext.
-6. **Kennzeichnung**: Wörtliche Zitate immer in Anführungszeichen «». Paraphrasen ohne Anführungszeichen.
-7. **Bevorzugte Übersetzungen**: Zürcher Bibel, Lutherbibel 2017, Einheitsübersetzung 2016. Nenne bei jedem Zitat die Übersetzung.
-
 ## Abwechslung & Varianz
 Wenn ein Nutzer ein allgemeines Thema anspricht (z.B. Taufe, Gebet, Angst, Vergebung), wähle JEDES MAL einen anderen Einstieg:
 - Andere Bibelstelle (nicht immer die bekannteste – überrasche!)
@@ -279,6 +444,8 @@ Wenn ein Nutzer ein allgemeines Thema anspricht (z.B. Taufe, Gebet, Angst, Verge
 - Anderer Ton (mal tröstend, mal herausfordernd, mal erzählerisch, mal philosophisch)
 - Andere biblische Figur oder Geschichte als Aufhänger
 Wiederhole dich nie. Selbst bei identischen Fragen soll jede Antwort frisch und überraschend sein.`;
+
+// ── Main handler ───────────────────────────────────────────────────
 
 serve(async (req) => {
   if (req.method === "OPTIONS") {
@@ -426,7 +593,8 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
       finalMessages = recentMessages;
     }
 
-    const response = await fetch(
+    // ── Step 1: Non-streaming call WITH tools to let AI decide which verses to look up ──
+    const initialResponse = await fetch(
       "https://ai.gateway.lovable.dev/v1/chat/completions",
       {
         method: "POST",
@@ -441,50 +609,150 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
             { role: "system", content: systemPrompt },
             ...finalMessages,
           ],
-          stream: true,
+          tools: [BIBLE_LOOKUP_TOOL],
         }),
       }
     );
 
-    if (!response.ok) {
-      if (response.status === 429) {
+    if (!initialResponse.ok) {
+      if (initialResponse.status === 429) {
         return new Response(
           JSON.stringify({ error: "Zu viele Anfragen. Bitte versuche es in einer Minute erneut." }),
           { status: 429, headers: { ...corsHeaders, "Content-Type": "application/json" } }
         );
       }
-      if (response.status === 402) {
+      if (initialResponse.status === 402) {
         return new Response(
           JSON.stringify({ error: "KI-Kontingent erschöpft. Bitte später erneut versuchen." }),
           { status: 402, headers: { ...corsHeaders, "Content-Type": "application/json" } }
         );
       }
-      const text = await response.text();
-      console.error("AI gateway error:", response.status, text);
+      const text = await initialResponse.text();
+      console.error("AI gateway error:", initialResponse.status, text);
       return new Response(
         JSON.stringify({ error: "KI-Fehler aufgetreten" }),
         { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
 
-    // Transform stream to fix spelling in SSE chunks
-    const reader = response.body!.getReader();
-    const decoder = new TextDecoder();
-    const encoder = new TextEncoder();
+    const initialData = await initialResponse.json();
+    const choice = initialData.choices?.[0];
 
-    const stream = new ReadableStream({
-      async pull(controller) {
-        const { done, value } = await reader.read();
-        if (done) {
-          controller.close();
-          return;
+    // Check if the AI wants to call the Bible lookup tool
+    if (choice?.finish_reason === "tool_calls" || choice?.message?.tool_calls?.length > 0) {
+      const toolCalls = choice.message.tool_calls || [];
+      
+      // Execute all tool calls in parallel
+      const toolResults = await Promise.all(
+        toolCalls.map(async (tc: any) => {
+          if (tc.function.name === "lookup_bible_verse") {
+            try {
+              const args = JSON.parse(tc.function.arguments);
+              const result = await lookupBibleVerse(
+                args.book,
+                args.chapter,
+                args.verse_start,
+                args.verse_end,
+                args.translation
+              );
+              return { id: tc.id, result };
+            } catch (e) {
+              console.error("Tool call error:", e);
+              return { id: tc.id, result: "Fehler beim Nachschlagen des Verses." };
+            }
+          }
+          return { id: tc.id, result: "Unbekanntes Tool." };
+        })
+      );
+
+      // ── Step 2: Send tool results back and stream the final response ──
+      const followUpMessages = [
+        { role: "system", content: systemPrompt },
+        ...finalMessages,
+        choice.message, // assistant message with tool_calls
+        ...toolResults.map((tr: any) => ({
+          role: "tool" as const,
+          tool_call_id: tr.id,
+          content: tr.result,
+        })),
+      ];
+
+      const streamResponse = await fetch(
+        "https://ai.gateway.lovable.dev/v1/chat/completions",
+        {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${LOVABLE_API_KEY}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            model: "google/gemini-3-flash-preview",
+            temperature: 1.0,
+            messages: followUpMessages,
+            stream: true,
+          }),
         }
-        let text = decoder.decode(value, { stream: true });
-        // Fix spelling in SSE data lines containing content
-        text = text.replace(/"content":"([^"]*)"/g, (_match, content) => {
-          return `"content":"${fixSpelling(content)}"`;
+      );
+
+      if (!streamResponse.ok) {
+        const errText = await streamResponse.text();
+        console.error("Stream after tool call error:", streamResponse.status, errText);
+        return new Response(
+          JSON.stringify({ error: "KI-Fehler aufgetreten" }),
+          { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+        );
+      }
+
+      // Stream with spelling fix
+      const reader = streamResponse.body!.getReader();
+      const decoder = new TextDecoder();
+      const encoder = new TextEncoder();
+      const stream = new ReadableStream({
+        async pull(controller) {
+          const { done, value } = await reader.read();
+          if (done) { controller.close(); return; }
+          let text = decoder.decode(value, { stream: true });
+          text = text.replace(/"content":"([^"]*)"/g, (_match, content) => {
+            return `"content":"${fixSpelling(content)}"`;
+          });
+          controller.enqueue(encoder.encode(text));
+        },
+      });
+
+      return new Response(stream, {
+        headers: { ...corsHeaders, "Content-Type": "text/event-stream" },
+      });
+    }
+
+    // ── No tool calls: re-stream the response ──
+    // The initial call was non-streaming. We need to stream the final answer.
+    // Since we already have the complete response, convert it to SSE format.
+    const content = choice?.message?.content || "";
+    const fixedContent = fixSpelling(content);
+
+    // Stream it as SSE to maintain the same client interface
+    const encoder = new TextEncoder();
+    const stream = new ReadableStream({
+      start(controller) {
+        // Send as a single chunk in SSE format
+        const sseData = JSON.stringify({
+          choices: [{
+            delta: { content: fixedContent },
+            finish_reason: null,
+          }],
         });
-        controller.enqueue(encoder.encode(text));
+        controller.enqueue(encoder.encode(`data: ${sseData}\n\n`));
+
+        // Send done
+        const doneData = JSON.stringify({
+          choices: [{
+            delta: {},
+            finish_reason: "stop",
+          }],
+        });
+        controller.enqueue(encoder.encode(`data: ${doneData}\n\n`));
+        controller.enqueue(encoder.encode("data: [DONE]\n\n"));
+        controller.close();
       },
     });
 
