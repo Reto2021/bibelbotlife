@@ -53,6 +53,42 @@ export type Database = {
         }
         Relationships: []
       }
+      bible_verses: {
+        Row: {
+          book: string
+          book_number: number
+          chapter: number
+          created_at: string
+          fts: unknown
+          id: string
+          text: string
+          translation: string
+          verse: number
+        }
+        Insert: {
+          book: string
+          book_number: number
+          chapter: number
+          created_at?: string
+          fts?: unknown
+          id?: string
+          text: string
+          translation: string
+          verse: number
+        }
+        Update: {
+          book?: string
+          book_number?: number
+          chapter?: number
+          created_at?: string
+          fts?: unknown
+          id?: string
+          text?: string
+          translation?: string
+          verse?: number
+        }
+        Relationships: []
+      }
       ceremony_drafts: {
         Row: {
           ceremony_type: Database["public"]["Enums"]["ceremony_type"]
