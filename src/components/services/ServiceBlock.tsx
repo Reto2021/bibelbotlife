@@ -67,6 +67,21 @@ interface ServiceBlockProps {
 
 export function ServiceBlock({ block, onUpdate, onDelete, onAskBibleBot, onPickResource }: ServiceBlockProps) {
   const [expanded, setExpanded] = useState(true);
+  const mediaUrl = (block.metadata?.mediaUrl as string) || "";
+
+  const embedInfo = useMemo(() => {
+    if (!mediaUrl) return null;
+    // YouTube
+    const ytMatch = mediaUrl.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([a-zA-Z0-9_-]{11})/);
+    if (ytMatch) return { type: "youtube" as const, id: ytMatch[1] };
+    // Spotify
+    const spMatch = mediaUrl.match(/open\.spotify\.com\/(track|album|playlist)\/([a-zA-Z0-9]+)/);
+    if (spMatch) return { type: "spotify" as const, kind: spMatch[1], id: spMatch[2] };
+    // Apple Music
+    const amMatch = mediaUrl.match(/music\.apple\.com\/([a-z]{2})\/(album|playlist|song)\/[^/]+\/([a-zA-Z0-9.?=&-]+)/);
+    if (amMatch) return { type: "apple" as const, country: amMatch[1], kind: amMatch[2], path: mediaUrl.replace("https://music.apple.com/", "") };
+    return null;
+  }, [mediaUrl]);
   const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({ id: block.id });
 
   const style: React.CSSProperties = {
