@@ -67,39 +67,39 @@ const Index = () => {
       <ChurchBanner />
       {/* Navigation */}
       <nav className="bg-card/80 backdrop-blur-sm border-b border-border sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="flex items-center space-x-2 hover:opacity-80 transition-opacity cursor-pointer"
+            className="flex items-center space-x-2 hover:opacity-80 transition-opacity cursor-pointer shrink-0"
             aria-label="Scroll to top"
           >
-            <img src={bibelbotLogo} alt="BibleBot" className="h-16 w-16" />
+            <img src={bibelbotLogo} alt="BibleBot" className="h-10 w-10 lg:h-14 lg:w-14" />
             <div className="flex flex-col">
-              <span className="text-2xl font-bold text-foreground leading-tight">BibleBot<span className="text-lg font-normal text-muted-foreground">.Life</span></span>
-              <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-muted-foreground/70">Everyday Sunday</span>
+              <span className="text-lg lg:text-xl font-bold text-foreground leading-tight">BibleBot<span className="text-sm lg:text-base font-normal text-muted-foreground">.Life</span></span>
+              <span className="text-[9px] font-medium tracking-[0.2em] uppercase text-muted-foreground/70 hidden lg:block">Everyday Sunday</span>
             </div>
           </button>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1 lg:gap-2">
             {/* Desktop links */}
-            <Button asChild variant="ghost" size="sm" className="hidden sm:inline-flex">
+            <Button asChild variant="ghost" size="sm" className="hidden lg:inline-flex">
               <Link to="/for-churches">
                 <Church className="h-4 w-4 mr-1" />
                 {t("church.badge")}
               </Link>
             </Button>
-            <Button asChild variant="ghost" size="sm" className="hidden sm:inline-flex">
+            <Button asChild variant="ghost" size="sm" className="hidden lg:inline-flex">
               <Link to="/for-institutions">
                 <Building2 className="h-4 w-4 mr-1" />
                 {t("institutions.badge")}
               </Link>
             </Button>
-            <Button asChild variant="ghost" size="sm" className="hidden sm:inline-flex">
+            <Button asChild variant="ghost" size="sm" className="hidden lg:inline-flex">
               <Link to="/gebetswand">
                 <HandHeart className="h-4 w-4 mr-1" />
                 {t("nav.prayerWall", "Gebetswand")}
               </Link>
             </Button>
-            <Button asChild variant="ghost" size="sm" className="hidden sm:inline-flex">
+            <Button asChild variant="ghost" size="sm" className="hidden lg:inline-flex">
               <Link to="/bibelquiz">
                 <GraduationCap className="h-4 w-4 mr-1" />
                 {t("nav.bibleQuiz", "Bibelquiz")}
@@ -110,43 +110,43 @@ const Index = () => {
             {user ? (
               <>
                 {isAdmin && (
-                  <Button asChild variant="ghost" size="sm" className="hidden sm:inline-flex">
+                  <Button asChild variant="ghost" size="sm" className="hidden lg:inline-flex">
                     <Link to="/admin">
                       <Shield className="h-4 w-4 mr-1" />
                       Admin
                     </Link>
                   </Button>
                 )}
-                <Button asChild variant="outline" size="sm" className="hidden sm:inline-flex">
+                <Button asChild variant="outline" size="sm" className="hidden lg:inline-flex">
                   <Link to="/mein-bereich">
                     <User className="h-4 w-4 mr-1" />
                     Mein Bereich
                   </Link>
                 </Button>
-                <Button variant="ghost" size="sm" className="hidden sm:inline-flex" onClick={() => signOut()}>
+                <Button variant="ghost" size="sm" className="hidden lg:inline-flex" onClick={() => signOut()}>
                   <LogOut className="h-4 w-4 mr-1" />
                   {t("auth.logout", "Abmelden")}
                 </Button>
               </>
             ) : (
-              <Button asChild variant="ghost" size="sm" className="hidden sm:inline-flex">
+              <Button asChild variant="ghost" size="sm" className="hidden lg:inline-flex">
                 <Link to="/login">
                   <LogIn className="h-4 w-4 mr-1" />
                   {t("auth.loginShort", "Anmelden")}
                 </Link>
               </Button>
             )}
-            <Button asChild className="hidden sm:inline-flex bg-telegram hover:bg-telegram/90 text-telegram-foreground">
+            <Button asChild className="hidden lg:inline-flex bg-telegram hover:bg-telegram/90 text-telegram-foreground" size="sm">
               <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer">
                 <Send className="h-4 w-4 mr-2" />
                 {t("nav.startNow")}
               </a>
             </Button>
-            {/* Mobile hamburger */}
+            {/* Mobile/tablet hamburger */}
             <Button
               variant="ghost"
               size="icon"
-              className="sm:hidden h-9 w-9"
+              className="lg:hidden h-9 w-9"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Menu"
             >
@@ -154,9 +154,9 @@ const Index = () => {
             </Button>
           </div>
         </div>
-        {/* Mobile menu dropdown */}
+        {/* Mobile/tablet menu dropdown */}
         <div
-          className={`sm:hidden border-t border-border bg-card/95 backdrop-blur-sm overflow-hidden transition-all duration-300 ease-in-out ${
+          className={`lg:hidden border-t border-border bg-card/95 backdrop-blur-sm overflow-hidden transition-all duration-300 ease-in-out ${
             mobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0 border-t-transparent"
           }`}
         >
