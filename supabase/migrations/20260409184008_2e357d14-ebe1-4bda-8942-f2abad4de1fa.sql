@@ -1,0 +1,1 @@
+ALTER TABLE public.quiz_scores ADD COLUMN difficulty text NOT NULL DEFAULT 'medium';
