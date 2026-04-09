@@ -344,9 +344,12 @@ export function DailyImpulse() {
           </div>
         )}
         {isSubscribed && (
-          <span className="hidden sm:flex text-xs text-primary/70 items-center gap-1 shrink-0">
+          <button
+            onClick={() => { setIsExpanded(true); setShowManage(true); }}
+            className="hidden sm:flex text-xs text-primary/70 items-center gap-1 shrink-0 hover:text-primary transition-colors cursor-pointer"
+          >
             ✓ {t("impulse.alreadySubscribed")}
-          </span>
+          </button>
         )}
       </div>
 
