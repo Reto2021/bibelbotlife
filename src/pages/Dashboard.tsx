@@ -18,7 +18,7 @@ import {
 import { useAuth } from "@/hooks/use-auth";
 import { Button } from "@/components/ui/button";
 import { LogOut } from "lucide-react";
-import biblebotLogo from "@/assets/biblebot-logo.png";
+import { AppLogo } from "@/components/AppLogo";
 import { Link } from "react-router-dom";
 
 const navItems = [
@@ -44,7 +44,7 @@ function DashboardSidebar() {
         {/* Logo */}
         <div className="p-4 flex items-center gap-2">
           <Link to="/">
-            <img src={biblebotLogo} alt="BibleBot" className="h-8 w-8" />
+            <AppLogo className="h-8 w-8" />
           </Link>
           {!collapsed && (
             <Link to="/" className="font-bold text-foreground">
