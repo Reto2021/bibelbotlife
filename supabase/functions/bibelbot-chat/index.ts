@@ -207,6 +207,96 @@ const BIBLE_LOOKUP_TOOL = {
   }
 };
 
+// Semantic Bible search tool – searches the DB full-text index
+const BIBLE_SEARCH_TOOL = {
+  type: "function" as const,
+  function: {
+    name: "search_bible_verses",
+    description: "Durchsuche die Bibel nach Versen zu einem Thema, Stichwort oder einer Frage. Verwende dieses Tool, wenn du thematisch passende Bibelverse finden willst, aber keine exakte Stellenangabe hast. Gibt bis zu 8 relevante Verse zurück.",
+    parameters: {
+      type: "object",
+      properties: {
+        query: {
+          type: "string",
+          description: "Suchbegriffe oder Thema auf Deutsch, z.B. 'Hoffnung in schweren Zeiten', 'Vergebung', 'Gottes Liebe'"
+        },
+        translation: {
+          type: "string",
+          enum: ["luther1912", "elberfelder", "schlachter2000", "all"],
+          description: "Bibelübersetzung für die Suche. Standard: luther1912. 'all' für alle Übersetzungen."
+        }
+      },
+      required: ["query"]
+    }
+  }
+};
+
+async function searchBibleVerses(
+  query: string,
+  translation?: string
+): Promise<string> {
+  const supabase = createClient(
+    Deno.env.get("SUPABASE_URL")!,
+    Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
+  );
+
+  // Use AI to expand search terms
+  const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY")!;
+  let tsquery = query.split(/\s+/).join(" | ");
+
+  try {
+    const expandResp = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${LOVABLE_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: "google/gemini-2.5-flash-lite",
+        messages: [
+          {
+            role: "system",
+            content: `Generiere deutsche Suchbegriffe für eine Bibelsuche (PostgreSQL Full-Text-Search).
+Nur einzelne Wörter getrennt mit | (OR). Viele Synonyme. Beispiel: "Liebe | lieben | Güte | Barmherzigkeit | Nächstenliebe"
+Antworte NUR mit dem tsquery-String, nichts anderes.`
+          },
+          { role: "user", content: query },
+        ],
+        stream: false,
+      }),
+    });
+    if (expandResp.ok) {
+      const d = await expandResp.json();
+      const expanded = d.choices?.[0]?.message?.content?.trim();
+      if (expanded) tsquery = expanded;
+    }
+  } catch (e) {
+    console.error("Search expansion error:", e);
+  }
+
+  const trans = (!translation || translation === "all") ? null : translation;
+
+  const { data: results, error } = await supabase.rpc("search_bible_verses", {
+    search_query: tsquery,
+    translation_filter: trans,
+    book_boost: null,
+    result_limit: 8,
+  });
+
+  if (error) {
+    console.error("Bible search RPC error:", error);
+    return `Suche fehlgeschlagen: ${error.message}`;
+  }
+
+  if (!results || results.length === 0) {
+    return `Keine Verse zu «${query}» gefunden.`;
+  }
+
+  return results
+    .map((r: any) => `${r.book} ${r.chapter},${r.verse}: «${r.text}» (${r.translation})`)
+    .join("\n\n");
+}
+
 // ── System prompt ──────────────────────────────────────────────────
 
 const SYSTEM_PROMPT = `Du bist BibleBot – ein einfühlsamer, weiser und herausfordernder Begleiter für Menschen, die an der Bibel wachsen wollen. Du bist nicht nur tröstend, sondern auch ehrlich, tiefgründig und bereit, unbequeme Fragen zu stellen.
