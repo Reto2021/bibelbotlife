@@ -26,14 +26,13 @@ export function SplashScreen({ onComplete }: { onComplete: () => void }) {
       return;
     }
 
-    supabase
+    (supabase
       .from("church_partners_public" as any)
       .select("name, logo_url, plan_tier, custom_bot_name")
       .eq("slug", slug)
-      .eq("is_active", true)
       .neq("plan_tier", "free")
-      .maybeSingle()
-      .then(({ data }) => {
+      .maybeSingle() as any)
+      .then(({ data }: any) => {
         if (data) {
           setPatron({
             name: data.name,

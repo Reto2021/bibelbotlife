@@ -18,11 +18,11 @@ const ChurchPartner = () => {
   const { data: church, isLoading, error } = useQuery({
     queryKey: ["church-partner", slug],
     queryFn: async () => {
-      const { data, error } = await supabase
+      const { data, error } = await (supabase
         .from("church_partners_public" as any)
         .select("*")
         .eq("slug", slug!)
-        .single();
+        .single() as any);
       if (error) throw error;
       return data;
     },
