@@ -88,7 +88,7 @@ export function ServiceBlock({ block, onUpdate, onDelete, onAskBibleBot, onPickR
     <Card
       ref={setNodeRef}
       style={style}
-      className={`border-l-4 ${BLOCK_COLORS[block.type]} ${isDragging ? "shadow-lg" : ""}`}
+      className={`border-l-4 ${BLOCK_COLORS[block.type]} transition-shadow duration-200 ${isDragging ? "ring-2 ring-primary/30 rounded-lg" : ""}`}
     >
       <div className="flex items-center gap-2 p-3">
         <button {...attributes} {...listeners} className="cursor-grab active:cursor-grabbing text-muted-foreground hover:text-foreground">
