@@ -704,7 +704,8 @@
         "title": "Military Chaplaincy",
         "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
       }
-    }
+    },
+    "patronageNote": "BibleBot.Life is een privé, niet-commercieel project. Het wordt op vrijwillige basis beheerd en uitsluitend gefinancierd door donaties. Geen reclame, geen dataverkoop, geen betaalde functies. Alle donaties gaan rechtstreeks naar het dekken van de lopende kosten (infrastructuur, hosting, ontwikkeling). Donaties zijn niet fiscaal aftrekbaar."
   },
   "institutions": {
     "badge": "Voor organisaties",

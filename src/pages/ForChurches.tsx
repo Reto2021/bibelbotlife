@@ -184,6 +184,11 @@ const ForChurches = () => {
               </Card>
             ))}
           </div>
+
+          {/* Transparency note */}
+          <div className="mt-12 max-w-3xl mx-auto text-center bg-card/60 border border-border rounded-xl p-6">
+            <p className="text-sm text-muted-foreground leading-relaxed">{t("church.patronageNote")}</p>
+          </div>
         </div>
       </section>
 

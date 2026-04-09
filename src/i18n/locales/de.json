@@ -711,7 +711,8 @@
         "title": "Armeeseelsorge",
         "desc": "Geistliche Begleitung für Angehörige der Armee – auch im Einsatz oder in der Kaserne erreichbar."
       }
-    }
+    },
+    "patronageNote": "BibleBot.Life ist ein privates, nicht-kommerzielles Projekt. Es wird ehrenamtlich betrieben und finanziert sich ausschliesslich durch freiwillige Spenden. Es gibt keine Werbung, keine Datenverkäufe und keine kostenpflichtigen Features. Alle Spenden fliessen direkt in die Deckung der laufenden Kosten (Infrastruktur, Hosting, Entwicklung). Da BibleBot als privates Projekt läuft, sind Spenden nicht steuerabzugsfähig."
   },
   "institutions": {
     "badge": "Für Organisationen",

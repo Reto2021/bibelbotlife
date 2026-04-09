@@ -666,7 +666,8 @@
         "title": "Katonai lelkészi szolgálat",
         "desc": "Lelki kíséret a hadsereg tagjainak – a bevetésen vagy a laktanyában is elérhető."
       }
-    }
+    },
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
   },
   "institutions": {
     "badge": "Szervezeteknek",

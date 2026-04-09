@@ -666,7 +666,8 @@
         "title": "Ndụmọdụ ndị agha",
         "desc": "Nkwado ime mmụọ maka ndị agha – dịkwa n'ọrụ ma ọ bụ n'ogige ndị agha."
       }
-    }
+    },
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
   },
   "institutions": {
     "badge": "Maka ụlọ ọrụ",

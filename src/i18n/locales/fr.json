@@ -669,7 +669,8 @@
         "title": "Aumônerie militaire",
         "desc": "Accompagnement spirituel pour les membres de l'armée – accessible même en déploiement ou à la caserne."
       }
-    }
+    },
+    "patronageNote": "BibleBot.Life est un projet privé et non commercial. Il est géré bénévolement et financé exclusivement par des dons. Pas de publicité, pas de vente de données, pas de fonctionnalités payantes. Tous les dons servent directement à couvrir les coûts de fonctionnement (infrastructure, hébergement, développement). Les dons ne sont pas déductibles fiscalement."
   },
   "institutions": {
     "badge": "Pour les organisations",
