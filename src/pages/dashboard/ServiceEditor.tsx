@@ -297,50 +297,50 @@ export default function ServiceEditor() {
   return (
     <div className="max-w-4xl mx-auto space-y-6">
       {/* Header */}
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <Button variant="ghost" size="icon" onClick={() => navigate("/dashboard")}>
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+        <div className="flex items-center gap-3 min-w-0">
+          <Button variant="ghost" size="icon" className="shrink-0" onClick={() => navigate("/dashboard")}>
             <ArrowLeft className="h-5 w-5" />
           </Button>
-          <h1 className="text-2xl font-bold text-foreground">
+          <h1 className="text-lg sm:text-2xl font-bold text-foreground truncate">
             {isNew ? "Neuer Gottesdienst" : "Gottesdienst bearbeiten"}
           </h1>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
           {totalDuration > 0 && (
-            <span className="text-sm text-muted-foreground flex items-center gap-1">
-              <Clock className="h-4 w-4" />
-              {totalDuration} Min.
+            <span className="text-xs sm:text-sm text-muted-foreground flex items-center gap-1">
+              <Clock className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+              {totalDuration}'
             </span>
           )}
           {!isNew && (
-            <Button variant="outline" onClick={() => navigate(`/dashboard/conductor/${id}`)}>
-              <Play className="h-4 w-4 mr-2" />
-              Live
+            <Button variant="outline" size="sm" onClick={() => navigate(`/dashboard/conductor/${id}`)}>
+              <Play className="h-4 w-4 sm:mr-1" />
+              <span className="hidden sm:inline">Live</span>
             </Button>
           )}
           {blocks.length > 0 && (
             <>
-              <Button variant="outline" onClick={() => exportServicePdf({
+              <Button variant="outline" size="sm" onClick={() => exportServicePdf({
                 title, serviceDate, serviceTime, serviceType, tradition, blocks,
                 churchName: church?.name,
               })}>
-                <FileDown className="h-4 w-4 mr-2" />
-                PDF
+                <FileDown className="h-4 w-4 sm:mr-1" />
+                <span className="hidden sm:inline">PDF</span>
               </Button>
-              <Button variant="outline" onClick={() => setEmailDialogOpen(true)}>
-                <Mail className="h-4 w-4 mr-2" />
-                E-Mail
+              <Button variant="outline" size="sm" onClick={() => setEmailDialogOpen(true)}>
+                <Mail className="h-4 w-4 sm:mr-1" />
+                <span className="hidden sm:inline">E-Mail</span>
               </Button>
-              <Button variant="outline" onClick={() => { setTemplateName(title); setSaveAsTemplateOpen(true); }}>
-                <BookmarkPlus className="h-4 w-4 mr-2" />
-                Als Vorlage
+              <Button variant="outline" size="sm" onClick={() => { setTemplateName(title); setSaveAsTemplateOpen(true); }}>
+                <BookmarkPlus className="h-4 w-4 sm:mr-1" />
+                <span className="hidden sm:inline">Vorlage</span>
               </Button>
             </>
           )}
-          <Button onClick={handleSave} disabled={saving}>
-            <Save className="h-4 w-4 mr-2" />
-            {saving ? "Speichern..." : "Speichern"}
+          <Button size="sm" onClick={handleSave} disabled={saving}>
+            <Save className="h-4 w-4 sm:mr-1" />
+            <span className="hidden sm:inline">{saving ? "Speichern..." : "Speichern"}</span>
           </Button>
         </div>
       </div>
