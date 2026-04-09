@@ -108,7 +108,7 @@ Regeln:
 correct = Index (0-3) der richtigen Antwort.
 explanation = kurze Erklärung warum.`;
 
-    const aiResp = await fetch("https://api.lovable.dev/v1/chat/completions", {
+    const aiResp = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
