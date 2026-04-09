@@ -465,6 +465,25 @@ export default function ServiceEditor() {
                 );
               })}
             </SortableContext>
+            <DragOverlay dropAnimation={{ duration: 200, easing: "ease" }}>
+              {activeId ? (() => {
+                const activeBlock = blocks.find((b) => b.id === activeId);
+                if (!activeBlock) return null;
+                return (
+                  <div className="rounded-lg border-l-4 border bg-card p-3 shadow-xl ring-2 ring-primary/20 opacity-90 pointer-events-none max-w-md">
+                    <div className="flex items-center gap-2">
+                      <GripVertical className="h-5 w-5 text-muted-foreground" />
+                      <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
+                        {activeBlock.type}
+                      </span>
+                      <span className="text-sm font-medium truncate">
+                        {activeBlock.title || activeBlock.type}
+                      </span>
+                    </div>
+                  </div>
+                );
+              })() : null}
+            </DragOverlay>
           </DndContext>
         )}
       </div>
