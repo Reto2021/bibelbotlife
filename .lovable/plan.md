@@ -1,53 +1,97 @@
 
-# Theologisches RAG-System für BibelBot
 
-## Architektur-Übersicht
-Dokumente → Chunking → Embedding (Gemini) → pgvector-Tabelle → Neues Tool `search_theology` im BibelBot
+# BibleBot.Life — Roadmap Status Review
 
-## Phase 1: Datenbank-Setup
-- `pgvector`-Extension aktivieren
-- Tabelle `theology_chunks` erstellen:
-  - `id`, `source_type` (enum: lexikon, kommentar, konfession, seelsorge), `title`, `content`, `metadata` (JSONB), `embedding` (vector(768)), `created_at`
-- HNSW-Index für schnelle Vektorsuche
+## Übersicht: Was ist gebaut, was fehlt
 
-## Phase 2: Wissensquellen aufbereiten & importieren
+---
 
-### A) Theologisches Wörterbuch (~100-150 Einträge)
-- KI-generiert: Kernbegriffe wie Gnade, Rechtfertigung, Bund, Trinität, Eschatologie, Taufe, Abendmahl etc.
-- Ökumenisch formuliert, mit konfessionellen Unterschieden wo relevant
-- Import via Edge Function
+## 1. Theologisches RAG-System (plan.md)
 
-### B) Bibelkommentare (klassisch, gemeinfrei)
-- Matthew Henry's Commentary (englisch, gemeinfrei) – online verfügbar als JSON/Text
-- Optional: Luther-Vorreden, Calvin-Institutio-Auszüge
-- Chunking nach Buch/Kapitel, je ca. 500-800 Tokens
+| Phase | Status | Details |
+|-------|--------|---------|
+| **Phase 1: DB-Setup** | ✅ Fertig | `theology_chunks` Tabelle existiert, pgvector aktiv, HNSW-Index |
+| **Phase 2: Wissensquellen importieren** | ⚠️ Unklar | Tabelle existiert, aber unklar wie viele Chunks bereits drin sind |
+| **Phase 3: Embedding-Pipeline** | ✅ Fertig | `theology-embed` Edge Function existiert |
+| **Phase 4: Such-Tool im BibelBot** | ✅ Fertig | `search_theology` Tool ist im `bibelbot-chat` integriert, DB-Funktion `search_theology` existiert |
+| **Phase 5: Content-Generierung** | ⚠️ Unklar | Muss geprüft werden, wie viele Einträge generiert wurden |
 
-### C) Kirchengeschichte & Konfessionen (~30-50 Einträge)
-- KI-generiert: Übersicht reformiert, lutherisch, katholisch, orthodox, freikirchlich
-- Wichtige Konzile, Bekenntnisschriften, Unterschiede bei Sakramenten, Amtsverständnis etc.
+**Offener Punkt:** Wie viele Chunks sind in `theology_chunks`? (Wörterbuch, Kommentare, Konfessionen, Seelsorge) — das bestimmt, ob Phase 2/5 komplett sind.
 
-### D) Seelsorge-Leitfaden (~30-40 Einträge)
-- KI-generiert: Gesprächsführung bei Trauer, Krise, Zweifel, Sucht, Beziehung, Sinnsuche
-- Krisenintervention, Grenzen erkennen, Verweisung an Fachstellen
-- Schweizer Kontext (Dargebotene Hand 143, Pro Juventute 147)
+---
 
-## Phase 3: Embedding-Pipeline (Edge Function)
-- `theology-embed` Edge Function:
-  - Nimmt Chunks entgegen, erstellt Embeddings via Gemini (`text-embedding-004`)
-  - Speichert in `theology_chunks` mit Vektoren
-- Batch-Import-Skript für alle Quellen
+## 2. Messeplaner (Gottesdienst-Planung)
 
-## Phase 4: Such-Tool im BibelBot
-- Neues Tool `search_theology` mit semantischer Vektorsuche
-- Query → Embedding → Cosine-Similarity-Suche → Top-5 Chunks zurückgeben
-- Bot entscheidet selbst, wann theologisches Hintergrundwissen hilfreich ist
+| Feature | Status | Datei/Tabelle |
+|---------|--------|---------------|
+| **Dashboard Shell + Routing** | ✅ Fertig | Dashboard mit allen Routes |
+| **Service-Editor (Block-DnD)** | ✅ Fertig | `ServiceEditor.tsx`, `services` Tabelle |
+| **Kalender-Ansicht** | ✅ Fertig | `ServicesCalendar.tsx` |
+| **Vorlagen-System** | ✅ DB ready | `service_templates` Tabelle |
+| **Team-Verwaltung** | ✅ Fertig | `TeamPage.tsx`, `service_team_members` Tabelle |
+| **Conductor Mode** | ✅ Fertig | `ConductorMode.tsx` |
+| **Amtshandlungs-Register** | ✅ Fertig | `RecordsPage.tsx`, `church_records` Tabelle |
+| **Rechnungen** | ✅ Fertig | `InvoicesPage.tsx`, `invoices` Tabelle |
+| **Ressourcen-Bibliothek** | 🔲 Platzhalter | `ResourceLibrary.tsx` zeigt nur "Kommt in nächster Phase" |
+| **Predigtreihen** | 🔲 Platzhalter | `SeriesPage.tsx` zeigt nur "Kommt in nächster Phase" |
+| **Teleprompter** | 🔲 Nicht gebaut | Geplant als Read-only Modus |
+| **Audio-Player** | 🔲 Nicht gebaut | Geplant für Lieder/Musik |
+| **Offline-Fähigkeit (PWA)** | ⚠️ Teilweise | `sw.js` + `manifest.json` existieren, echtes Offline unklar |
+| **Gastzugang** | 🔲 Nicht gebaut | Zeitlich begrenzte Links |
+| **Statistiken & Feedback** | 🔲 Nicht gebaut | Besucherzahlen etc. |
+| **Versionierung** | 🔲 Nicht gebaut | Diff/Rollback |
+| **Budget & Kosten** | 🔲 Nicht gebaut | Kostenstellen |
+| **Gäste-/Teilnehmerverwaltung** | 🔲 Nicht gebaut | RSVP, Sitzplan |
+| **Freiwilligen-Rotation** | 🔲 Nicht gebaut | Auto-Einteilung |
 
-## Phase 5: Content-Generierung
-- Edge Function die per KI die Lexikon/Konfessions/Seelsorge-Einträge generiert
-- Qualitätskontrolle: Stichproben prüfen
-- Iterativ erweiterbar (neue Einträge jederzeit hinzufügbar)
+---
 
-## Geschätzter Umfang
-- ~300-500 Chunks initial (wächst mit Kommentaren)
-- Embedding-Kosten minimal (Gemini text-embedding ist günstig)
-- 3-4 Implementierungsschritte
+## 3. Gemeinde-Partnerschaft
+
+| Feature | Status |
+|---------|--------|
+| **Patronats-Pakete** | ✅ DB + Seiten fertig |
+| **Gemeinde-Branding** | ✅ Fertig (Farben, Logo, Bot-Name) |
+| **Splash-Screen** | ✅ Fertig |
+| **Gemeinde-Verzeichnis** | ✅ Fertig (`ChurchDirectory`) |
+| **Kontaktformular** | ✅ Fertig |
+| **Church Wizard** | ✅ Fertig |
+
+---
+
+## 4. Weitere Features (gebaut)
+
+| Feature | Status |
+|---------|--------|
+| **BibelBot Chat** | ✅ Fertig (mit Tools, RAG, Chat-Historie) |
+| **Bibelsuche** | ✅ Fertig (KJV, WEB, Luther, Schlachter) |
+| **Bibelquiz** | ✅ Fertig |
+| **Tagesimpuls** | ✅ Fertig (inkl. Telegram, E-Mail-Broadcast) |
+| **Social-Sharing-Kacheln** | ✅ Gerade gebaut (Canvas, 1080×1080) |
+| **Gebetswand** | ✅ Fertig |
+| **Abdankungsschreiber** | ✅ Fertig (EulogyWriter) |
+| **Outreach/Akquise** | ✅ Fertig (Scrape, Import, Personalisierung, Bulk, E-Mail-Versand) |
+| **Analytics** | ✅ Fertig |
+| **Auth (E-Mail + Google)** | ✅ Fertig |
+| **Admin Dashboard** | ✅ Fertig |
+| **i18n (30+ Sprachen)** | ✅ Fertig |
+| **Senioren-Modus** | ✅ Fertig |
+| **Transaktionale E-Mails** | ✅ Fertig (Custom Templates) |
+| **Lebensrad** | ✅ Fertig |
+
+---
+
+## Priorisierte offene Punkte
+
+### Sofort prüfbar
+1. **Theology Chunks zählen** — Wie viele Einträge sind in der DB? Sind alle 4 Kategorien abgedeckt?
+
+### Nächste sinnvolle Schritte (nach Priorität)
+1. **Ressourcen-Bibliothek** aktivieren (Lieder, Gebete, Lesungen durchsuchbar)
+2. **Predigtreihen** aktivieren (Serien verwalten)
+3. **Teleprompter/Read-only Modus** im Conductor Mode
+4. **Theology-Content auffüllen** falls Chunks noch dünn sind
+
+### Später (v5–v6 Dimensionen)
+- Gastzugang, Budget, Rotation, Versionierung, Statistiken, RSVP
+
