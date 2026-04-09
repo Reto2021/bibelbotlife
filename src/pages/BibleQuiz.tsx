@@ -50,6 +50,7 @@ interface HighscoreEntry {
   score: number;
   total_questions: number;
   quiz_mode: string;
+  difficulty: string;
   created_at: string;
 }
 
@@ -65,7 +66,7 @@ export default function BibleQuiz() {
   useEffect(() => {
     supabase
       .from("quiz_scores")
-      .select("score, total_questions, quiz_mode, created_at")
+      .select("score, total_questions, quiz_mode, difficulty, created_at")
       .gte("total_questions", ROUND_SIZE)
       .order("score", { ascending: false })
       .order("created_at", { ascending: true })
@@ -123,7 +124,8 @@ export default function BibleQuiz() {
         quiz_mode: mode!,
         score: newScore,
         total_questions: newTotal,
-      });
+        difficulty,
+      } as any);
     }
   }
 
@@ -234,11 +236,13 @@ export default function BibleQuiz() {
                       const medal = i === 0 ? "🥇" : i === 1 ? "🥈" : i === 2 ? "🥉" : `${i + 1}.`;
                       const pct = Math.round((hs.score / hs.total_questions) * 100);
                       const date = new Date(hs.created_at).toLocaleDateString("de-CH", { day: "2-digit", month: "2-digit" });
+                      const diffEmoji = hs.difficulty === "easy" ? "🟢" : hs.difficulty === "hard" ? "🔴" : "🟡";
                       return (
-                        <div key={i} className="flex items-center gap-3 text-sm py-1.5 border-b last:border-0 border-border">
+                        <div key={i} className="flex items-center gap-2 text-sm py-1.5 border-b last:border-0 border-border">
                           <span className="w-6 text-center font-medium">{medal}</span>
                           <span className="font-bold text-foreground">{hs.score}/{hs.total_questions}</span>
                           <span className="text-muted-foreground">({pct}%)</span>
+                          <span className="text-xs" title={hs.difficulty === "easy" ? "Leicht" : hs.difficulty === "hard" ? "Schwer" : "Mittel"}>{diffEmoji}</span>
                           <Badge variant="outline" className="text-[10px] ml-auto">
                             {hs.quiz_mode === "multiple_choice" ? "MC" : "Vers"}
                           </Badge>
