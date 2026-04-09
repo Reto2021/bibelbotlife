@@ -857,5 +857,7 @@
   },
   "splash": {
     "patronage": "Aanbeveel deur"
-  }
+  },
+  "auth": {},
+  "auth.apple": "Meld aan met Apple"
 }

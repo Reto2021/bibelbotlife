@@ -857,5 +857,7 @@
   },
   "splash": {
     "patronage": "Rekommenderas av"
-  }
+  },
+  "auth": {},
+  "auth.apple": "Logga in med Apple"
 }

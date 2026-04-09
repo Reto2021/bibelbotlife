@@ -860,5 +860,7 @@
     "micError": "Hindi masimulan ang mikropono. Mangyaring bigyan ng pahintulot.",
     "needMore": "Mangyaring magtala muna ng mga alaala o magsulat ng mga tala.",
     "genError": "Error sa paglikha ng teksto. Mangyaring subukang muli."
-  }
+  },
+  "auth": {},
+  "auth.apple": "Mag-sign in gamit ang Apple"
 }

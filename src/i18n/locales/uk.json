@@ -857,5 +857,7 @@
   },
   "splash": {
     "patronage": "Рекомендовано"
-  }
+  },
+  "auth": {},
+  "auth.apple": "Увійти через Apple"
 }

@@ -857,5 +857,7 @@
   },
   "splash": {
     "patronage": "Ajánlja"
-  }
+  },
+  "auth": {},
+  "auth.apple": "Bejelentkezés Apple-lel"
 }

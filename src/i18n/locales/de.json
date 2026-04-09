@@ -857,5 +857,7 @@
     "micError": "Mikrofon konnte nicht gestartet werden. Bitte Berechtigung erteilen.",
     "needMore": "Bitte nimm zuerst Erinnerungen auf oder schreibe Notizen.",
     "genError": "Fehler bei der Texterstellung. Bitte versuche es erneut."
-  }
+  },
+  "auth": {},
+  "auth.apple": "Mit Apple anmelden"
 }

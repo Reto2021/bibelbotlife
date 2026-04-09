@@ -857,5 +857,7 @@
   },
   "splash": {
     "patronage": "Suosittelee"
-  }
+  },
+  "auth": {},
+  "auth.apple": "Kirjaudu Applella"
 }

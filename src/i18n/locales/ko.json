@@ -857,5 +857,7 @@
   },
   "splash": {
     "patronage": "후원"
-  }
+  },
+  "auth": {},
+  "auth.apple": "Apple로 로그인"
 }

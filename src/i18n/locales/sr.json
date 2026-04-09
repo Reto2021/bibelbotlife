@@ -857,5 +857,7 @@
   },
   "splash": {
     "patronage": "Preporučuje"
-  }
+  },
+  "auth": {},
+  "auth.apple": "Пријава преко Apple-а"
 }

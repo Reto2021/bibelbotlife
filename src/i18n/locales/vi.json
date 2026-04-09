@@ -859,5 +859,7 @@
     "micError": "Không thể khởi động micro. Vui lòng cấp quyền.",
     "needMore": "Vui lòng ghi lại kỷ niệm hoặc viết ghi chú trước.",
     "genError": "Lỗi khi tạo văn bản. Vui lòng thử lại."
-  }
+  },
+  "auth": {},
+  "auth.apple": "Đăng nhập bằng Apple"
 }

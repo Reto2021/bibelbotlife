@@ -857,5 +857,7 @@
     "micError": "Microfoon kon niet worden gestart. Geef alstublieft toestemming.",
     "needMore": "Neem eerst herinneringen op of schrijf notities.",
     "genError": "Fout bij het genereren van de tekst. Probeer het opnieuw."
-  }
+  },
+  "auth": {},
+  "auth.apple": "Inloggen met Apple"
 }
