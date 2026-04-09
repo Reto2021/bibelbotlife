@@ -520,31 +520,72 @@ export function DailyImpulse() {
               </div>
             )}
 
-            {/* Already subscribed: clickable toggle for channel options */}
+            {/* Already subscribed: manage subscription */}
             {isSubscribed && (
-              <div className="mt-3">
-                <button
-                  onClick={() => setShowChannels(!showChannels)}
-                  className="text-xs text-primary/70 flex items-center gap-1 hover:text-primary transition-colors cursor-pointer"
-                >
-                  ✓ {t("impulse.alreadySubscribed")}
-                </button>
-                {showChannels && (
-                  <div className="mt-3 flex flex-wrap gap-2 animate-fade-up">
+              <div className="mt-3 pt-3 border-t border-primary/15">
+                <div className="flex items-center gap-3 flex-wrap">
+                  <span className="text-xs text-primary/70 flex items-center gap-1">
+                    ✓ {t("impulse.alreadySubscribed")}
+                    {subscriberChannel && (
+                      <span className="text-muted-foreground ml-1">
+                        ({subscriberChannel === "push" ? "Push" : subscriberChannel === "sms" ? "SMS" : "Telegram"})
+                      </span>
+                    )}
+                  </span>
+                  <Button
+                    size="sm"
+                    variant="ghost"
+                    onClick={() => setShowManage(!showManage)}
+                    className="text-xs h-7 text-muted-foreground hover:text-foreground"
+                  >
+                    <Settings2 className="h-3 w-3 mr-1" />
+                    {t("subscribe.manage", "Abo verwalten")}
+                  </Button>
+                </div>
+                {showManage && (
+                  <div className="mt-3 space-y-3 animate-fade-up">
+                    <div>
+                      <p className="text-xs font-medium text-foreground/80 mb-2">
+                        {t("subscribe.switchChannel", "Kanal wechseln:")}
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        <Button
+                          size="sm"
+                          onClick={handleSubscribePush}
+                          disabled={isSubscribing}
+                          variant={subscriberChannel === "push" ? "default" : "outline"}
+                          className={`text-xs h-7 ${subscriberChannel === "push" ? "bg-primary hover:bg-primary/90" : "border-primary/30 text-primary hover:bg-primary/10"}`}
+                        >
+                          {isSubscribing && !showSmsInput ? <Loader2 className="h-3 w-3 mr-1 animate-spin" /> : <Bell className="h-3 w-3 mr-1" />}
+                          Push
+                        </Button>
+                        <Button
+                          size="sm"
+                          onClick={handleSubscribeTelegram}
+                          variant={subscriberChannel === "telegram" ? "default" : "outline"}
+                          className={`text-xs h-7 ${subscriberChannel === "telegram" ? "bg-primary hover:bg-primary/90" : "border-primary/30 text-primary hover:bg-primary/10"}`}
+                        >
+                          <Send className="h-3 w-3 mr-1" /> Telegram
+                        </Button>
+                        <Button
+                          size="sm"
+                          onClick={() => setShowSmsInput(!showSmsInput)}
+                          variant={subscriberChannel === "sms" ? "default" : "outline"}
+                          className={`text-xs h-7 ${subscriberChannel === "sms" ? "bg-primary hover:bg-primary/90" : "border-primary/30 text-primary hover:bg-primary/10"}`}
+                        >
+                          <Smartphone className="h-3 w-3 mr-1" /> SMS
+                        </Button>
+                      </div>
+                    </div>
                     <Button
                       size="sm"
-                      onClick={handleSubscribePush}
-                      disabled={isSubscribing}
-                      className="text-xs h-7 bg-primary hover:bg-primary/90"
+                      variant="ghost"
+                      onClick={handleUnsubscribe}
+                      disabled={isUnsubscribing}
+                      className="text-xs h-7 text-destructive hover:text-destructive hover:bg-destructive/10"
                     >
-                      {isSubscribing && !showSmsInput ? <Loader2 className="h-3 w-3 mr-1 animate-spin" /> : <Bell className="h-3 w-3 mr-1" />}
-                      {t("subscribe.push")}
-                    </Button>
-                    <Button size="sm" variant="outline" onClick={handleSubscribeTelegram} className="text-xs h-7 border-primary/30 text-primary hover:bg-primary/10">
-                      <Send className="h-3 w-3 mr-1" /> Telegram
-                    </Button>
-                    <Button size="sm" variant="outline" onClick={() => setShowSmsInput(!showSmsInput)} className="text-xs h-7 border-primary/30 text-primary hover:bg-primary/10">
-                      <Smartphone className="h-3 w-3 mr-1" /> SMS
+                      {isUnsubscribing ? <Loader2 className="h-3 w-3 mr-1 animate-spin" /> : <XCircle className="h-3 w-3 mr-1" />}
+                      {t("subscribe.unsubscribe", "Abo beenden")}
                     </Button>
                   </div>
                 )}
