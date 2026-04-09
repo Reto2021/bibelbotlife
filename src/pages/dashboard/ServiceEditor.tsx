@@ -128,7 +128,6 @@ export default function ServiceEditor() {
   }, [resourcePickerBlockId, updateBlock, blocks]);
 
   const addBlockFromResource = useCallback((resource: Resource) => {
-    // Map resource type to block type
     const typeMap: Record<string, BlockType> = {
       song: "song", prayer: "prayer", reading: "reading", liturgy: "liturgy", other: "free",
     };
@@ -143,6 +142,17 @@ export default function ServiceEditor() {
     setBlocks((prev) => [...prev, newBlock]);
     toast.success(`«${resource.title}» hinzugefügt`);
   }, []);
+
+  const applyTemplate = useCallback((template: ServiceTemplate) => {
+    const newBlocks = (template.blocks ?? []).map((b) => ({ ...b, id: crypto.randomUUID() }));
+    setBlocks(newBlocks);
+    setTradition(template.tradition);
+    if (!title || title === "Neuer Gottesdienst") {
+      setTitle(template.name);
+    }
+    setTemplatePickerOpen(false);
+    toast.success(`Vorlage «${template.name}» angewendet`);
+  }, [title]);
 
   const handleSave = async () => {
     if (!user || !church) return;
