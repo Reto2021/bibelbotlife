@@ -16,7 +16,7 @@ import { toast } from "sonner";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { ResourcePicker } from "@/components/services/ResourcePicker";
 import type { Resource } from "@/hooks/use-resources";
-import { useTemplates, type ServiceTemplate } from "@/hooks/use-templates";
+import { useTemplates, useCreateTemplate, type ServiceTemplate } from "@/hooks/use-templates";
 
 export default function ServiceEditor() {
   const { id } = useParams();
