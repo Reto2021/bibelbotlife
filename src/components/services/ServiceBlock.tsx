@@ -1,11 +1,11 @@
 import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
-import { GripVertical, Trash2, MessageCircle, Music, BookOpen, Mic, HandHeart, Cross, Church, Megaphone, FileText, ChevronDown, ChevronUp, Library } from "lucide-react";
+import { GripVertical, Trash2, MessageCircle, Music, BookOpen, Mic, HandHeart, Cross, Church, Megaphone, FileText, ChevronDown, ChevronUp, Library, Link2, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 
 export type BlockType = "song" | "reading" | "sermon" | "prayer" | "blessing" | "communion" | "liturgy" | "announcement" | "free" | "music";
 
@@ -67,6 +67,21 @@ interface ServiceBlockProps {
 
 export function ServiceBlock({ block, onUpdate, onDelete, onAskBibleBot, onPickResource }: ServiceBlockProps) {
   const [expanded, setExpanded] = useState(true);
+  const mediaUrl = (block.metadata?.mediaUrl as string) || "";
+
+  const embedInfo = useMemo(() => {
+    if (!mediaUrl) return null;
+    // YouTube
+    const ytMatch = mediaUrl.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([a-zA-Z0-9_-]{11})/);
+    if (ytMatch) return { type: "youtube" as const, id: ytMatch[1] };
+    // Spotify
+    const spMatch = mediaUrl.match(/open\.spotify\.com\/(track|album|playlist)\/([a-zA-Z0-9]+)/);
+    if (spMatch) return { type: "spotify" as const, kind: spMatch[1], id: spMatch[2] };
+    // Apple Music
+    const amMatch = mediaUrl.match(/music\.apple\.com\/([a-z]{2})\/(album|playlist|song)\/[^/]+\/([a-zA-Z0-9.?=&-]+)/);
+    if (amMatch) return { type: "apple" as const, country: amMatch[1], kind: amMatch[2], path: mediaUrl.replace("https://music.apple.com/", "") };
+    return null;
+  }, [mediaUrl]);
   const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({ id: block.id });
 
   const style: React.CSSProperties = {
@@ -138,6 +153,60 @@ export function ServiceBlock({ block, onUpdate, onDelete, onAskBibleBot, onPickR
             />
             <span className="text-xs text-muted-foreground">Minuten</span>
           </div>
+          {(block.type === "song" || block.type === "music") && (
+            <div className="mt-2 space-y-2">
+              <div className="flex items-center gap-2">
+                <Link2 className="h-4 w-4 text-muted-foreground shrink-0" />
+                <Input
+                  value={mediaUrl}
+                  onChange={(e) => onUpdate(block.id, { metadata: { ...block.metadata, mediaUrl: e.target.value } })}
+                  placeholder="Spotify, YouTube oder Apple Music Link einfügen..."
+                  className="flex-1 h-7 text-xs"
+                />
+                {mediaUrl && !embedInfo && (
+                  <a href={mediaUrl} target="_blank" rel="noopener noreferrer" className="shrink-0">
+                    <ExternalLink className="h-4 w-4 text-muted-foreground hover:text-primary" />
+                  </a>
+                )}
+              </div>
+              {embedInfo?.type === "youtube" && (
+                <div className="rounded-md overflow-hidden aspect-video max-h-40">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${embedInfo.id}`}
+                    className="w-full h-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    title="YouTube"
+                  />
+                </div>
+              )}
+              {embedInfo?.type === "spotify" && (
+                <div className="rounded-md overflow-hidden">
+                  <iframe
+                    src={`https://open.spotify.com/embed/${embedInfo.kind}/${embedInfo.id}?theme=0`}
+                    className="w-full rounded-lg"
+                    height="80"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"
+                    title="Spotify"
+                  />
+                </div>
+              )}
+              {embedInfo?.type === "apple" && (
+                <div className="rounded-md overflow-hidden">
+                  <iframe
+                    src={`https://embed.music.apple.com/${embedInfo.path}`}
+                    className="w-full rounded-lg"
+                    height="175"
+                    allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+                    loading="lazy"
+                    title="Apple Music"
+                  />
+                </div>
+              )}
+            </div>
+          )}
         </div>
       )}
     </Card>
