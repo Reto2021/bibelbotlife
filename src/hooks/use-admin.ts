@@ -15,16 +15,17 @@ export function useIsAdmin() {
       return;
     }
 
-    supabase
-      .rpc("has_role", { _user_id: user.id, _role: "admin" })
-      .then(({ data }) => {
+    const check = async () => {
+      try {
+        const { data } = await supabase.rpc("has_role", { _user_id: user.id, _role: "admin" });
         setIsAdmin(!!data);
-        setIsChecking(false);
-      })
-      .catch(() => {
+      } catch {
         setIsAdmin(false);
+      } finally {
         setIsChecking(false);
-      });
+      }
+    };
+    check();
   }, [user]);
 
   return { isAdmin, isChecking };
