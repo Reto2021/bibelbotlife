@@ -257,6 +257,54 @@ export default function OutreachAdmin() {
     }
   };
 
+  // ─── Per-Lead personalisierte E-Mail ──────────────────
+  const [personalizingLead, setPersonalizingLead] = useState<string | null>(null);
+  const [personalizedEmail, setPersonalizedEmail] = useState<{ lead_id: string; step_number: number; subject: string; body: string } | null>(null);
+  const [personalizePreviewOpen, setPersonalizePreviewOpen] = useState(false);
+  const [savingPersonalized, setSavingPersonalized] = useState(false);
+
+  const generatePersonalizedEmail = async (lead: any, stepNumber?: number) => {
+    setPersonalizingLead(lead.id);
+    try {
+      const { data, error } = await supabase.functions.invoke("outreach-generate-sequence", {
+        body: {
+          mode: "personalize",
+          lead_id: lead.id,
+          step_number: stepNumber || undefined,
+        },
+      });
+      if (error) throw error;
+      setPersonalizedEmail(data);
+      setPersonalizePreviewOpen(true);
+    } catch (err: any) {
+      toast.error(err.message || "Fehler bei der Personalisierung");
+    } finally {
+      setPersonalizingLead(null);
+    }
+  };
+
+  const savePersonalizedEmail = async () => {
+    if (!personalizedEmail) return;
+    setSavingPersonalized(true);
+    try {
+      const { error } = await supabase.from("outreach_emails").insert({
+        lead_id: personalizedEmail.lead_id,
+        sequence_step: personalizedEmail.step_number,
+        subject: personalizedEmail.subject,
+        body: personalizedEmail.body,
+        status: "pending" as any,
+      });
+      if (error) throw error;
+      toast.success("Personalisierte E-Mail gespeichert (bereit zum Senden)");
+      setPersonalizePreviewOpen(false);
+      setPersonalizedEmail(null);
+    } catch (err: any) {
+      toast.error(err.message);
+    } finally {
+      setSavingPersonalized(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background p-6 max-w-7xl mx-auto space-y-6">
       <div className="flex items-center justify-between">
