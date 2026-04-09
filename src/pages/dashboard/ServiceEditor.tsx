@@ -47,6 +47,90 @@ export default function ServiceEditor() {
   const createTemplate = useCreateTemplate();
   const [saveAsTemplateOpen, setSaveAsTemplateOpen] = useState(false);
   const [templateName, setTemplateName] = useState("");
+  const [emailDialogOpen, setEmailDialogOpen] = useState(false);
+  const [emailRecipient, setEmailRecipient] = useState("");
+  const [emailSending, setEmailSending] = useState(false);
+
+  const generatePdfBlob = (): Blob => {
+    // Re-use the same PDF generation logic but return as blob instead of saving
+    const { exportServicePdfBlob } = require("@/lib/export-service-pdf");
+    return exportServicePdfBlob({ title, serviceDate, serviceTime, serviceType, tradition, blocks, churchName: church?.name });
+  };
+
+  const uploadPdfAndGetUrl = async (): Promise<string> => {
+    // Generate PDF as blob using jsPDF directly
+    const pdfModule = await import("@/lib/export-service-pdf");
+    const blob = pdfModule.exportServicePdfBlob({ title, serviceDate, serviceTime, serviceType, tradition, blocks, churchName: church?.name });
+    const fileName = `${Date.now()}_${title.replace(/[^a-zA-Z0-9]/g, "_")}.pdf`;
+    const { error: uploadError } = await supabase.storage.from("service-pdfs").upload(fileName, blob, { contentType: "application/pdf" });
+    if (uploadError) throw uploadError;
+    const { data } = await supabase.storage.from("service-pdfs").createSignedUrl(fileName, 60 * 60 * 24 * 7); // 7 days
+    if (!data?.signedUrl) throw new Error("Signed URL konnte nicht erstellt werden");
+    return data.signedUrl;
+  };
+
+  const handleSendEmail = async () => {
+    if (!emailRecipient.trim()) return;
+    setEmailSending(true);
+    try {
+      const downloadUrl = await uploadPdfAndGetUrl();
+      await supabase.functions.invoke("send-transactional-email", {
+        body: {
+          templateName: "service-share",
+          recipientEmail: emailRecipient.trim(),
+          idempotencyKey: `service-share-${id || "new"}-${emailRecipient}-${Date.now()}`,
+          templateData: {
+            serviceTitle: title,
+            serviceDate,
+            churchName: church?.name || "",
+            downloadUrl,
+            senderName: user?.user_metadata?.full_name || user?.email || "",
+          },
+        },
+      });
+      toast.success(`E-Mail an ${emailRecipient} gesendet`);
+      setEmailDialogOpen(false);
+      setEmailRecipient("");
+    } catch (err: any) {
+      toast.error(err.message || "Fehler beim E-Mail-Versand");
+    } finally {
+      setEmailSending(false);
+    }
+  };
+
+  const handleSendToTeam = async () => {
+    const membersWithEmail = (teamMembers || []).filter((m) => m.is_active && m.email);
+    if (membersWithEmail.length === 0) {
+      toast.error("Keine Team-Mitglieder mit E-Mail-Adresse gefunden");
+      return;
+    }
+    setEmailSending(true);
+    try {
+      const downloadUrl = await uploadPdfAndGetUrl();
+      for (const member of membersWithEmail) {
+        await supabase.functions.invoke("send-transactional-email", {
+          body: {
+            templateName: "service-share",
+            recipientEmail: member.email!,
+            idempotencyKey: `service-share-team-${id || "new"}-${member.id}-${Date.now()}`,
+            templateData: {
+              serviceTitle: title,
+              serviceDate,
+              churchName: church?.name || "",
+              downloadUrl,
+              senderName: user?.user_metadata?.full_name || user?.email || "",
+            },
+          },
+        });
+      }
+      toast.success(`Ablauf an ${membersWithEmail.length} Team-Mitglieder gesendet`);
+      setEmailDialogOpen(false);
+    } catch (err: any) {
+      toast.error(err.message || "Fehler beim E-Mail-Versand");
+    } finally {
+      setEmailSending(false);
+    }
+  };
 
   const handleSaveAsTemplate = async () => {
     if (!templateName.trim() || !user) return;
