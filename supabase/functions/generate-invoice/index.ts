@@ -207,10 +207,10 @@ function generateInvoiceHtml(
       ${SENDER.country}
     </div>
     <div class="recipient" style="margin-top:40px">
-      <strong>${church.billing_name || church.name}</strong><br>
-      ${church.billing_street || ""}<br>
-      ${church.billing_zip || ""} ${church.billing_city || church.city || ""}<br>
-      ${church.billing_country || church.country || "CH"}
+      <strong>${billing?.billing_name || church.name}</strong><br>
+      ${billing?.billing_street || ""}<br>
+      ${billing?.billing_zip || ""} ${billing?.billing_city || church.city || ""}<br>
+      ${billing?.billing_country || church.country || "CH"}
     </div>
   </div>
   <div class="invoice-meta">
