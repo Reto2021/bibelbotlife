@@ -436,6 +436,35 @@ export default function ServiceEditor() {
           </div>
         </DialogContent>
       </Dialog>
+      {/* Save as Template Dialog */}
+      <Dialog open={saveAsTemplateOpen} onOpenChange={setSaveAsTemplateOpen}>
+        <DialogContent className="sm:max-w-sm">
+          <DialogHeader>
+            <DialogTitle>Als Vorlage speichern</DialogTitle>
+          </DialogHeader>
+          <div className="space-y-4">
+            <div>
+              <label className="text-sm font-medium text-foreground mb-1.5 block">Vorlagenname</label>
+              <Input
+                value={templateName}
+                onChange={(e) => setTemplateName(e.target.value)}
+                placeholder="z.B. Sonntagsgottesdienst"
+                onKeyDown={(e) => e.key === "Enter" && handleSaveAsTemplate()}
+              />
+            </div>
+            <p className="text-xs text-muted-foreground">
+              Alle {blocks.length} Blöcke werden als Vorlage gespeichert.
+            </p>
+            <div className="flex justify-end gap-2">
+              <Button variant="ghost" onClick={() => setSaveAsTemplateOpen(false)}>Abbrechen</Button>
+              <Button onClick={handleSaveAsTemplate} disabled={!templateName.trim() || createTemplate.isPending}>
+                <BookmarkPlus className="h-4 w-4 mr-2" />
+                {createTemplate.isPending ? "Speichern..." : "Speichern"}
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
