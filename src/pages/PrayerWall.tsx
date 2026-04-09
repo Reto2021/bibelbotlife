@@ -72,6 +72,7 @@ export default function PrayerWall() {
       toast({ title: "Fehler", description: "Bitte versuche es erneut.", variant: "destructive" });
     } else {
       toast({ title: "🙏 Gebetsanliegen geteilt", description: "Danke für dein Vertrauen." });
+      toast({ title: "Wird geprüft", description: "Dein Anliegen wird nach Freigabe sichtbar.", variant: "default" });
       setContent("");
       setAuthorName("");
       fetchRequests();
