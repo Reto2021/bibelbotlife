@@ -82,12 +82,6 @@ const Index = () => {
           <div className="flex items-center gap-1 lg:gap-2">
             {/* Desktop links */}
             <Button asChild variant="ghost" size="sm" className="hidden lg:inline-flex">
-              <Link to="/for-churches">
-                <Church className="h-4 w-4 mr-1" />
-                {t("church.badge")}
-              </Link>
-            </Button>
-            <Button asChild variant="ghost" size="sm" className="hidden lg:inline-flex">
               <Link to="/gebetswand">
                 <HandHeart className="h-4 w-4 mr-1" />
                 {t("nav.prayerWall", "Gebetswand")}
@@ -97,6 +91,14 @@ const Index = () => {
               <Link to="/bibelquiz">
                 <GraduationCap className="h-4 w-4 mr-1" />
                 {t("nav.bibleQuiz", "Bibelquiz")}
+              </Link>
+            </Button>
+            <Button asChild variant="ghost" size="sm" className="hidden lg:inline-flex">
+              <Link to="/for-churches">
+                <Building2 className="h-4 w-4 mr-1" />
+                {t("institutions.badge")}
+              </Link>
+            </Button>
               </Link>
             </Button>
             <LanguageSwitcher />
@@ -156,14 +158,6 @@ const Index = () => {
         >
             <div className="container mx-auto px-4 py-3 flex flex-col gap-1">
               <Link
-                to="/for-churches"
-                className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-foreground hover:bg-primary/10 transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                <Church className="h-4 w-4 text-primary" />
-                {t("church.badge")}
-              </Link>
-               <Link
                 to="/churches"
                 className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-foreground hover:bg-primary/10 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
@@ -186,6 +180,14 @@ const Index = () => {
               >
                 <GraduationCap className="h-4 w-4 text-primary" />
                 {t("nav.bibleQuiz", "Bibelquiz")}
+              </Link>
+              <Link
+                to="/for-churches"
+                className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-foreground hover:bg-primary/10 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <Building2 className="h-4 w-4 text-primary" />
+                {t("institutions.badge")}
               </Link>
               <Link
                 to="/impressum"
