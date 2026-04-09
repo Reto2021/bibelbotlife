@@ -91,39 +91,25 @@ export function DailyImpulse() {
     fetchImpulse();
   }, [impulse]);
 
-  const generateShareImage = useCallback(async () => {
+  const handleGenerateShareImage = useCallback(async () => {
     if (!impulse || isGeneratingImage) return;
 
-    // Check cache first
-    const cached = getCachedShareImage();
-    if (cached) {
-      setShareImageUrl(cached);
+    // Reuse existing blob
+    if (shareImageUrl) {
       setShowImagePreview(true);
       return;
     }
 
     setIsGeneratingImage(true);
     try {
-      const resp = await fetch(SHARE_IMAGE_URL, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
-        },
-        body: JSON.stringify({
-          verse: impulse.verse,
-          reference: impulse.reference,
-          teaser: impulse.teaser,
-          topic: impulse.topic,
-          date: impulse.date,
-        }),
+      const blob = await generateShareImage({
+        verse: impulse.verse,
+        reference: impulse.reference,
+        topic: impulse.topic,
       });
-
-      if (!resp.ok) throw new Error("Generation failed");
-
-      const { imageUrl } = await resp.json();
-      setShareImageUrl(imageUrl);
-      cacheShareImage(imageUrl, impulse.date);
+      const url = URL.createObjectURL(blob);
+      setShareBlob(blob);
+      setShareImageUrl(url);
       setShowImagePreview(true);
     } catch (e) {
       console.error("Failed to generate share image:", e);
@@ -135,7 +121,7 @@ export function DailyImpulse() {
     } finally {
       setIsGeneratingImage(false);
     }
-  }, [impulse, isGeneratingImage, toast, t]);
+  }, [impulse, isGeneratingImage, shareImageUrl, toast, t]);
 
   const shareAsImage = useCallback(async () => {
     if (!shareImageUrl || !impulse) return;
