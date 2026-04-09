@@ -69,10 +69,17 @@ export function ServiceBlock({ block, onUpdate, onDelete, onAskBibleBot, onPickR
   const [expanded, setExpanded] = useState(true);
   const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({ id: block.id });
 
-  const style = {
+  const style: React.CSSProperties = {
     transform: CSS.Transform.toString(transform),
-    transition,
-    opacity: isDragging ? 0.5 : 1,
+    transition: isDragging
+      ? "box-shadow 0.2s ease, transform 0.0s"
+      : transition ?? "transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease",
+    opacity: isDragging ? 0.9 : 1,
+    zIndex: isDragging ? 50 : undefined,
+    scale: isDragging ? "1.02" : undefined,
+    boxShadow: isDragging
+      ? "0 12px 28px -4px rgba(0,0,0,0.25), 0 4px 10px -2px rgba(0,0,0,0.15)"
+      : undefined,
   };
 
   const Icon = BLOCK_ICONS[block.type];
