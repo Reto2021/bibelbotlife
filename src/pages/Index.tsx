@@ -603,9 +603,9 @@ const Index = () => {
         <div className="container mx-auto max-w-4xl">
           <div className="flex items-center justify-center space-x-2 mb-6">
             <AppLogo className="h-10 w-10" invertTheme />
-            <span className="text-2xl font-bold">BibleBot<span className="dark:text-amber-400">.Life</span></span>
+            <span className="text-2xl font-bold">BibleBot<span className="text-muted">.Life</span></span>
           </div>
-          <p className="text-background/70 dark:text-amber-400/80 mb-4 text-center">{t("footer.tagline")}</p>
+          <p className="mb-4 text-center bg-secondary-foreground text-primary-foreground">{t("footer.tagline")}</p>
           <p className="text-background/50 text-xs mb-6 max-w-2xl mx-auto text-center">{t("footer.disclaimer")}</p>
           
           <div className="border-t border-background/20 pt-6 mt-6">
