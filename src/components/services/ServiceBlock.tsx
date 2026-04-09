@@ -1,6 +1,6 @@
 import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
-import { GripVertical, Trash2, MessageCircle, Music, BookOpen, Mic, HandHeart, Cross, Church, Megaphone, FileText, ChevronDown, ChevronUp } from "lucide-react";
+import { GripVertical, Trash2, MessageCircle, Music, BookOpen, Mic, HandHeart, Cross, Church, Megaphone, FileText, ChevronDown, ChevronUp, Library } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -62,9 +62,10 @@ interface ServiceBlockProps {
   onUpdate: (id: string, updates: Partial<ServiceBlockData>) => void;
   onDelete: (id: string) => void;
   onAskBibleBot: (block: ServiceBlockData) => void;
+  onPickResource?: (block: ServiceBlockData) => void;
 }
 
-export function ServiceBlock({ block, onUpdate, onDelete, onAskBibleBot }: ServiceBlockProps) {
+export function ServiceBlock({ block, onUpdate, onDelete, onAskBibleBot, onPickResource }: ServiceBlockProps) {
   const [expanded, setExpanded] = useState(true);
   const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({ id: block.id });
 
@@ -95,6 +96,11 @@ export function ServiceBlock({ block, onUpdate, onDelete, onAskBibleBot }: Servi
           className="flex-1 h-8 text-sm border-0 bg-transparent px-2 focus-visible:ring-1"
         />
         <div className="flex items-center gap-1">
+          {onPickResource && (
+            <Button variant="ghost" size="icon" className="h-7 w-7 text-muted-foreground hover:text-primary" onClick={() => onPickResource(block)} title="Aus Bibliothek">
+              <Library className="h-4 w-4" />
+            </Button>
+          )}
           <Button variant="ghost" size="icon" className="h-7 w-7 text-primary" onClick={() => onAskBibleBot(block)} title="BibleBot fragen">
             <MessageCircle className="h-4 w-4" />
           </Button>
