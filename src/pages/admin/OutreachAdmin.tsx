@@ -233,6 +233,30 @@ export default function OutreachAdmin() {
     }
   };
 
+  // ─── KI Sequenz generieren ─────────────────────────────
+  const [generating, setGenerating] = useState(false);
+  const [genContext, setGenContext] = useState("");
+  const [genDialogOpen, setGenDialogOpen] = useState(false);
+
+  const generateSequence = async () => {
+    if (!selectedCampaignId) return;
+    setGenerating(true);
+    try {
+      const { data, error } = await supabase.functions.invoke("outreach-generate-sequence", {
+        body: { campaign_id: selectedCampaignId, context: genContext || undefined },
+      });
+      if (error) throw error;
+      toast.success(data.message || "Sequenz generiert!");
+      setGenDialogOpen(false);
+      setGenContext("");
+      queryClient.invalidateQueries({ queryKey: ["outreach-sequences"] });
+    } catch (err: any) {
+      toast.error(err.message || "Fehler bei der Generierung");
+    } finally {
+      setGenerating(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background p-6 max-w-7xl mx-auto space-y-6">
       <div className="flex items-center justify-between">
