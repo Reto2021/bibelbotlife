@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import bibelbotLogo from "@/assets/biblebot-logo.png";
 import { Search, ArrowRight, Shield, Loader2, Mic, MicOff, Send, Menu, LogIn, X, EyeOff, Heart, Accessibility, Volume2, VolumeX } from "lucide-react";
 import { useTTS } from "@/hooks/use-tts";
+import { VoicePicker } from "@/components/VoicePicker";
 import { useSeniorMode } from "@/hooks/use-senior-mode";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTrack } from "@/components/AnalyticsProvider";
@@ -891,15 +892,18 @@ export function ChatHero() {
                     </Button>
                   </div>
                   <div className="flex items-center justify-between mt-2">
-                    <button
-                      onClick={toggleSenior}
-                      className={`flex items-center gap-1 p-1.5 rounded-lg transition-colors ${s.textXs} ${isSenior ? "bg-primary/20 text-primary" : "text-muted-foreground hover:text-foreground"}`}
-                      aria-label={t("chat.seniorMode", "Grosse Schrift")}
-                      title={t("chat.seniorMode", "Grosse Schrift")}
-                    >
-                      <Accessibility className={isSenior ? "h-5 w-5" : "h-4 w-4"} />
-                      {isSenior && <span>{t("chat.seniorMode", "Grosse Schrift")}</span>}
-                    </button>
+                    <div className="flex items-center gap-2">
+                      <button
+                        onClick={toggleSenior}
+                        className={`flex items-center gap-1 p-1.5 rounded-lg transition-colors ${s.textXs} ${isSenior ? "bg-primary/20 text-primary" : "text-muted-foreground hover:text-foreground"}`}
+                        aria-label={t("chat.seniorMode", "Grosse Schrift")}
+                        title={t("chat.seniorMode", "Grosse Schrift")}
+                      >
+                        <Accessibility className={isSenior ? "h-5 w-5" : "h-4 w-4"} />
+                        {isSenior && <span>{t("chat.seniorMode", "Grosse Schrift")}</span>}
+                      </button>
+                      <VoicePicker voice={tts.voice} onChange={tts.setVoice} />
+                    </div>
                     <button
                       onClick={() => { startNewChat(); }}
                       className={`${s.textXs} text-muted-foreground hover:text-foreground transition-colors`}
