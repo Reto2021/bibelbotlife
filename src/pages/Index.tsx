@@ -257,13 +257,13 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Chat-First Hero – above the fold */}
-      <ChatHero />
-
-      {/* Daily Impulse – below hero to keep above-the-fold clean */}
+      {/* Daily Impulse – directly under header */}
       <Suspense fallback={<div className="h-20" />}>
         <DailyImpulse />
       </Suspense>
+
+      {/* Chat-First Hero – above the fold */}
+      <ChatHero />
 
       {/* Entry Tiles removed - integrated as chips in ChatHero */}
 
