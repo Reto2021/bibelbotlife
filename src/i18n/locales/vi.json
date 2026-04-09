@@ -706,7 +706,8 @@
         "title": "Mục vụ quân đội",
         "desc": "Đồng hành tâm linh cho quân nhân – có thể liên hệ ngay cả khi đang làm nhiệm vụ hoặc trong doanh trại."
       }
-    }
+    },
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
   },
   "institutions": {
     "badge": "Cho tổ chức",

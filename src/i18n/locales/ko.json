@@ -666,7 +666,8 @@
         "title": "군종 사목",
         "desc": "군인들을 위한 영적 동반 – 임무 중이거나 병영에서도 접근 가능."
       }
-    }
+    },
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
   },
   "institutions": {
     "badge": "조직을 위해",
