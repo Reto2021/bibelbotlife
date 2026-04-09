@@ -678,11 +678,11 @@ export function BibleBotChat() {
             className={`h-10 w-10 shrink-0 relative`}
             aria-label={isListening ? t("chat.stopVoice") : t("chat.startVoice")}
           >
-            {isTranscribing ? <Loader2 className={`h-4 w-4 animate-spin`} /> : isListening ? <MicOff className={s.btnIcon} /> : <Mic className={s.btnIcon} />}
+            {isTranscribing ? <Loader2 className={`h-4 w-4 animate-spin`} /> : isListening ? <MicOff className="h-4 w-4" /> : <Mic className="h-4 w-4" />}
             {isListening && <span className="absolute inset-0 rounded-md border-2 border-destructive animate-pulse" />}
           </Button>
           <Button size="icon" onClick={() => sendMessage(input)} disabled={!input.trim() || isLoading} className={`h-10 w-10 shrink-0`}>
-            <Send className={s.btnIcon} />
+            <Send className="h-4 w-4" />
           </Button>
         </div>
       </div>
