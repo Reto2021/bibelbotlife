@@ -167,7 +167,7 @@ const ForChurches = () => {
                     <p className="text-3xl font-bold text-foreground">
                       {tier.annual === 0 ? "CHF 0.–" : `CHF ${tier.annual.toLocaleString("de-CH")}.–`}
                     </p>
-                    {tier.annual > 0 && <p className="text-xs text-muted-foreground">/{t("church.perYear")}</p>}
+                    {tier.annual > 0 && <p className="text-xs text-muted-foreground">{t("church.perYear")}</p>}
                   </div>
                   <Button
                     className="w-full mt-6"
