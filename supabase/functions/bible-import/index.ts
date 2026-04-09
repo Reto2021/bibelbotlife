@@ -45,7 +45,10 @@ async function fetchChapter(apiId: string, bookId: string, chapter: number): Pro
   for (const item of content) {
     if (item.type === "verse" && item.number && item.content) {
       const text = Array.isArray(item.content)
-        ? item.content.filter((c: any) => typeof c === "string").join(" ")
+        ? item.content
+            .map((c: any) => (typeof c === "string" ? c : c?.text || ""))
+            .filter(Boolean)
+            .join(" ")
         : String(item.content);
       if (text.trim()) {
         verses.push({ number: item.number, text: text.replace(/<[^>]+>/g, "").trim() });
