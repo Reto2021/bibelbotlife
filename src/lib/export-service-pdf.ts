@@ -90,9 +90,9 @@ export function exportServicePdf(options: ExportOptions) {
   const tableData = blocks.map((block, i) => {
     const label = BLOCK_LABELS[block.type] || block.type;
     const dur = block.duration ? `${block.duration}'` : "";
-    const notes = block.notes || "";
-    const content = block.content ? block.content.substring(0, 80) + (block.content.length > 80 ? "..." : "") : "";
-    const details = [block.title, notes, content].filter(Boolean).join("\n");
+    const content = block.content ? block.content.substring(0, 120) + (block.content.length > 120 ? "..." : "") : "";
+    const details = [block.title, content].filter(Boolean).join("\n");
+    return [String(i + 1), label, details, dur];
     return [String(i + 1), label, details, dur];
   });
 
