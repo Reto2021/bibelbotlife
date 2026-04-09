@@ -68,19 +68,17 @@ const Index = () => {
       {/* Navigation */}
       <nav className="bg-card/80 backdrop-blur-sm border-b border-border sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="flex items-center space-x-2">
-            <button
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="hover:opacity-80 transition-opacity cursor-pointer"
-              aria-label="Scroll to top"
-            >
-              <img src={bibelbotLogo} alt="BibleBot" className="h-16 w-16" />
-            </button>
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="flex items-center space-x-2 hover:opacity-80 transition-opacity cursor-pointer"
+            aria-label="Scroll to top"
+          >
+            <img src={bibelbotLogo} alt="BibleBot" className="h-16 w-16" />
             <div className="flex flex-col">
               <span className="text-2xl font-bold text-foreground leading-tight">BibleBot<span className="text-lg font-normal text-muted-foreground">.Life</span></span>
               <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-muted-foreground/70">Everyday Sunday</span>
             </div>
-          </div>
+          </button>
           <div className="flex items-center gap-2">
             {/* Desktop links */}
             <Button asChild variant="ghost" size="sm" className="hidden sm:inline-flex">
