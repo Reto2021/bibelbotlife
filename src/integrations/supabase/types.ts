@@ -1457,6 +1457,30 @@ export type Database = {
         }
         Relationships: []
       }
+      prayer_requests_public: {
+        Row: {
+          content: string | null
+          created_at: string | null
+          id: string | null
+          is_anonymous: boolean | null
+          prayer_count: number | null
+        }
+        Insert: {
+          content?: string | null
+          created_at?: string | null
+          id?: string | null
+          is_anonymous?: boolean | null
+          prayer_count?: number | null
+        }
+        Update: {
+          content?: string | null
+          created_at?: string | null
+          id?: string | null
+          is_anonymous?: boolean | null
+          prayer_count?: number | null
+        }
+        Relationships: []
+      }
     }
     Functions: {
       delete_email: {
