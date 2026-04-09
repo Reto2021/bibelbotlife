@@ -44,7 +44,7 @@ interface ExportOptions {
   churchName?: string;
 }
 
-export function exportServicePdf(options: ExportOptions) {
+function buildServiceDoc(options: ExportOptions): jsPDF {
   const { title, serviceDate, serviceTime, serviceType, tradition, blocks, churchName } = options;
 
   const doc = new jsPDF({ orientation: "portrait", unit: "mm", format: "a4" });
@@ -93,7 +93,6 @@ export function exportServicePdf(options: ExportOptions) {
     const content = block.content ? block.content.substring(0, 120) + (block.content.length > 120 ? "..." : "") : "";
     const details = [block.title, content].filter(Boolean).join("\n");
     return [String(i + 1), label, details, dur];
-    return [String(i + 1), label, details, dur];
   });
 
   autoTable(doc, {
@@ -121,15 +120,10 @@ export function exportServicePdf(options: ExportOptions) {
     },
     margin: { left: margin, right: margin },
     didDrawPage: (data: any) => {
-      // Footer on every page
       const pageHeight = doc.internal.pageSize.getHeight();
       doc.setFontSize(8);
       doc.setTextColor(150, 150, 150);
-      doc.text(
-        `${title} — ${dateFormatted}`,
-        margin,
-        pageHeight - 8
-      );
+      doc.text(`${title} — ${dateFormatted}`, margin, pageHeight - 8);
       doc.text(
         `Seite ${doc.getCurrentPageInfo().pageNumber}`,
         pageWidth - margin,
@@ -148,8 +142,16 @@ export function exportServicePdf(options: ExportOptions) {
     doc.text(`Gesamtdauer: ca. ${totalDuration} Minuten`, margin, finalY + 8);
   }
 
-  // Save
-  const safeTitle = title.replace(/[^a-zA-Z0-9äöüÄÖÜ\- ]/g, "").trim().replace(/\s+/g, "_");
-  const safeDate = serviceDate;
-  doc.save(`${safeDate}_${safeTitle}.pdf`);
+  return doc;
+}
+
+export function exportServicePdf(options: ExportOptions) {
+  const doc = buildServiceDoc(options);
+  const safeTitle = options.title.replace(/[^a-zA-Z0-9äöüÄÖÜ\- ]/g, "").trim().replace(/\s+/g, "_");
+  doc.save(`${options.serviceDate}_${safeTitle}.pdf`);
+}
+
+export function exportServicePdfBlob(options: ExportOptions): Blob {
+  const doc = buildServiceDoc(options);
+  return doc.output("blob");
 }
