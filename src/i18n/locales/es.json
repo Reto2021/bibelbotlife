@@ -7,7 +7,8 @@
     "badge": {
       "noLogin": "Sin registro",
       "noData": "Sin datos",
-      "noJudgment": "Sin juicio"
+      "noJudgment": "Sin juicio",
+      "optionalLogin": "Inicio de sesión opcional"
     },
     "title1": "La Biblia.",
     "title2": " Reinventada.",
@@ -21,7 +22,9 @@
     "loading": "Cargando impulso del día...",
     "label": "Impulso del día",
     "deepDive": "¿Qué significa esto para mí?",
-    "explore": "Leer el pasaje completo"
+    "explore": "Leer el pasaje completo",
+    "alreadySubscribed": "Ya recibes la inspiración diaria",
+    "subscribeCta": "¿Quieres recibir esta inspiración diariamente?"
   },
   "features": {
     "sectionTitle": "Cómo BibleBot te acompaña",
@@ -151,7 +154,8 @@
     "toastPermDenied": "Permiso denegado",
     "toastPermDeniedDesc": "Por favor, permite las notificaciones en la configuración de tu navegador.",
     "toastError": "Error",
-    "toastErrorDesc": "Por favor, inténtalo de nuevo más tarde."
+    "toastErrorDesc": "Por favor, inténtalo de nuevo más tarde.",
+    "subscribeButton": "Suscribirse a Inspo"
   },
   "faq": {
     "badge": "Preguntas frecuentes",
@@ -271,7 +275,8 @@
     "errorNoStream": "Sin flujo",
     "seniorMode": "Senior mode (larger text)",
     "teaserCta": "Escribir ahora →",
-    "namePlaceholder": "p.ej. Eli, Miriam…"
+    "namePlaceholder": "p.ej. Eli, Miriam…",
+    "loginHint": "Inicia sesión para mantener las conversaciones en todos tus dispositivos"
   },
   "install": {
     "title": "Instalar BibleBot",
@@ -336,7 +341,10 @@
     "baptism": {
       "title": "Versículo de bautismo",
       "desc": "El versículo perfecto para tu hijo/a",
-      "prompt": "Ayúdame a encontrar un versículo de bautismo adecuado. ¿Qué tipo de niño/a es y qué desean los padres?"
+      "prompt": "Ayúdame a encontrar un versículo de bautismo adecuado. ¿Qué tipo de niño/a es y qué desean los padres?",
+      "prompt_v1": "¿Qué significa realmente el bautismo?",
+      "prompt_v2": "Háblame del bautismo en la Biblia – ¡sorpréndeme!",
+      "prompt_v3": "¿Por qué la gente se bautiza?"
     },
     "condolence": {
       "title": "Palabras de consuelo",
@@ -351,7 +359,10 @@
     "anxiety": {
       "title": "Miedo y preocupación",
       "desc": "Encontrar valor en tiempos difíciles",
-      "prompt": "Estoy luchando con miedos y preocupaciones. ¿Qué dice la Biblia al respecto? ¿Hay versículos que den valor?"
+      "prompt": "Estoy luchando con miedos y preocupaciones. ¿Qué dice la Biblia al respecto? ¿Hay versículos que den valor?",
+      "prompt_v1": "Tengo ansiedad. ¿Qué dice la Biblia sobre la ansiedad?",
+      "prompt_v2": "¿Cómo puede la fe ayudarme con la ansiedad?",
+      "prompt_v3": "¿Qué personajes bíblicos también tuvieron ansiedad?"
     },
     "confession": {
       "title": "Confesión",
@@ -361,7 +372,10 @@
     "heartbreak": {
       "title": "Desamor",
       "desc": "Lo que la Biblia dice sobre el dolor del corazón",
-      "prompt": "Tengo el corazón roto. ¿Qué dice la Biblia sobre el desamor y cómo encontrar esperanza de nuevo?"
+      "prompt": "Tengo el corazón roto. ¿Qué dice la Biblia sobre el desamor y cómo encontrar esperanza de nuevo?",
+      "prompt_v1": "Tengo el corazón roto. ¿Qué dice la Biblia al respecto?",
+      "prompt_v2": "¿Cómo lidiar con el desamor – hay ayuda bíblica?",
+      "prompt_v3": "¿Puede Dios sanar un corazón roto?"
     },
     "newstart": {
       "title": "Nuevo comienzo",
@@ -391,7 +405,10 @@
     "gratitude": {
       "title": "Gratitud",
       "desc": "Una oración personal de agradecimiento",
-      "prompt": "Quiero dar gracias a Dios. Ayúdame a formular una oración de gratitud personal."
+      "prompt": "Quiero dar gracias a Dios. Ayúdame a formular una oración de gratitud personal.",
+      "prompt_v1": "¿Cómo puedo ser más agradecido?",
+      "prompt_v2": "¿Qué dice la Biblia sobre la gratitud?",
+      "prompt_v3": "¿Por qué es tan importante la gratitud en la fe?"
     },
     "lifewheel": {
       "title": "Rueda de la vida",
@@ -450,7 +467,10 @@
     "forgiveness": {
       "title": "Perdón",
       "desc": "Cuando perdonar parece imposible",
-      "prompt": "No puedo perdonar. ¿Qué dice la Biblia sobre el perdón?"
+      "prompt": "No puedo perdonar. ¿Qué dice la Biblia sobre el perdón?",
+      "prompt_v1": "¿Qué dice la Biblia sobre el perdón?",
+      "prompt_v2": "¿Cómo puedo perdonar a alguien que me ha herido?",
+      "prompt_v3": "¿Hay límites para el perdón?"
     },
     "familyconflict": {
       "title": "Conflicto familiar",
@@ -470,12 +490,23 @@
     "prayer": {
       "title": "Petición de oración",
       "desc": "Orar juntos",
-      "prompt": "Tengo una petición de oración. Acompáñame en la oración."
+      "prompt": "Tengo una petición de oración. Acompáñame en la oración.",
+      "prompt_v1": "¿Cómo puedo aprender a orar?",
+      "prompt_v2": "¿Qué dice la Biblia sobre la oración?",
+      "prompt_v3": "¿Por qué Dios no responde algunas oraciones?"
     },
     "bibleverse": {
       "title": "Entender un versículo",
       "desc": "Explicación de un pasaje",
       "prompt": "Me gustaría entender mejor un pasaje bíblico. ¿Puedes ayudarme?"
+    },
+    "biblequiz": {
+      "desc": "Pon a prueba tus conocimientos bíblicos de forma lúdica",
+      "title": "Quiz Bíblico"
+    },
+    "prayerwall": {
+      "desc": "Comparte peticiones de oración y ora unos por otros",
+      "title": "Muro de Oración"
     }
   },
   "lifeWheel": {
@@ -801,5 +832,30 @@
     "weddingDesc": "Escribe votos matrimoniales, elige canciones y planifica la celebración.",
     "baptismDesc": "Formula deseos de bautismo y prepara el proceso con la comunidad.",
     "confirmationDesc": "Encuentra un versículo de confirmación y prepara textos personales."
+  },
+  "chatHero": {
+    "ariaLabel": "Haz una pregunta a BibleBot",
+    "focusPlaceholder": "Escribe tu pregunta…",
+    "placeholder1": "¿Qué me hace sentir verdaderamente agradecido?",
+    "placeholder2": "¿Cómo puedo encontrar la paz interior?",
+    "placeholder3": "¿Qué me da esperanza?",
+    "placeholder4": "¿Qué desea realmente mi corazón?",
+    "placeholder5": "¿Qué bien puedo hacer hoy?",
+    "send": "Enviar",
+    "subtitle": "Haz tu pregunta – abierta, honesta, sin iniciar sesión.",
+    "suggestion1": "¿Qué significa mi nombre?",
+    "suggestion2": "¿Qué me da fuerza hoy?",
+    "suggestion3": "¿Por qué estoy agradecido?"
+  },
+  "meta": {
+    "forChurchesDesc": "BibleBot como socio para tu comunidad: trabajo juvenil, confirmación, cuidado pastoral y círculos bíblicos. Gratis a Premium.",
+    "forChurchesTitle": "BibleBot para Iglesias – Cuidado Pastoral Digital y Guía Bíblica",
+    "homeDesc": "BibleBot te acompaña con 5 traducciones de la Biblia, metodología de coaching y cuidado pastoral. Anónimo, gratuito, en 36 idiomas.",
+    "homeTitle": "BibleBot – Tu Compañero Bíblico Personal | Gratis y Anónimo",
+    "loginDesc": "Inicia sesión en BibleBot para preparar tus ceremonias personales.",
+    "loginTitle": "Iniciar Sesión – BibleBot"
+  },
+  "splash": {
+    "patronage": "Recomendado por"
   }
 }

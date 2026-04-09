@@ -154,7 +154,8 @@
     "toastPermDenied": "Permission denied",
     "toastPermDeniedDesc": "Please allow notifications in your browser settings.",
     "toastError": "Error",
-    "toastErrorDesc": "Please try again later."
+    "toastErrorDesc": "Please try again later.",
+    "subscribeButton": "Subscribe to Inspo"
   },
   "faq": {
     "badge": "FAQ",

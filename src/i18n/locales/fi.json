@@ -7,7 +7,8 @@
     "badge": {
       "noLogin": "Ei kirjautumista",
       "noData": "Ei tietoja",
-      "noJudgment": "Ei tuomiota"
+      "noJudgment": "Ei tuomiota",
+      "optionalLogin": "Kirjautuminen vapaaehtoista"
     },
     "title1": "Raamattu.",
     "title2": " Uudelleen ajateltuna.",
@@ -21,7 +22,9 @@
     "loading": "Päivän impulssi latautuu...",
     "label": "Päivän impulssi",
     "deepDive": "Mitä tämä tarkoittaa minulle?",
-    "explore": "Lue koko kohta"
+    "explore": "Lue koko kohta",
+    "alreadySubscribed": "Saat päivittäisen inspiraation",
+    "subscribeCta": "Haluatko saada tämän inspiraation päivittäin?"
   },
   "features": {
     "sectionTitle": "Miten BibleBotisi opastaa sinua",
@@ -151,7 +154,8 @@
     "toastPermDenied": "Lupa evätty",
     "toastPermDeniedDesc": "Salli ilmoitukset selaimesi asetuksista.",
     "toastError": "Virhe",
-    "toastErrorDesc": "Yritä myöhemmin uudelleen."
+    "toastErrorDesc": "Yritä myöhemmin uudelleen.",
+    "subscribeButton": "Tilaa Inspo"
   },
   "faq": {
     "badge": "Usein kysytyt kysymykset",
@@ -286,7 +290,8 @@
     "errorTitle": "Virhe",
     "errorConnection": "ei voitu tavoittaa.",
     "errorNoStream": "Ei virtaa",
-    "seniorMode": "Senioritila (suurempi fontti)"
+    "seniorMode": "Senioritila (suurempi fontti)",
+    "loginHint": "Kirjaudu sisään pitääksesi keskustelut tallessa eri laitteilla"
   },
   "install": {
     "title": "Asenna BibleBot",
@@ -333,7 +338,10 @@
     "baptism": {
       "title": "Löydä kastejae",
       "desc": "Täydellinen jae lapsellesi",
-      "prompt": "Auta minua löytämään sopiva kastejae. Millainen lapsi hän on ja mitä vanhemmat toivovat?"
+      "prompt": "Auta minua löytämään sopiva kastejae. Millainen lapsi hän on ja mitä vanhemmat toivovat?",
+      "prompt_v1": "Mitä kaste oikeasti tarkoittaa?",
+      "prompt_v2": "Kerro minulle kasteesta Raamatussa – yllätä minut!",
+      "prompt_v3": "Miksi ihmiset kastetaan?"
     },
     "condolence": {
       "title": "Lohduttavat sanat",
@@ -348,7 +356,10 @@
     "anxiety": {
       "title": "Pelko & huolet",
       "desc": "Löydä rohkeutta vaikeina aikoina",
-      "prompt": "Kamppailen juuri nyt pelkojen ja huolien kanssa. Mitä Raamattu sanoo siitä? Onko jakeita, jotka antavat rohkeutta?"
+      "prompt": "Kamppailen juuri nyt pelkojen ja huolien kanssa. Mitä Raamattu sanoo siitä? Onko jakeita, jotka antavat rohkeutta?",
+      "prompt_v1": "Minulla on ahdistusta. Mitä Raamattu sanoo ahdistuksesta?",
+      "prompt_v2": "Miten usko voi auttaa minua ahdistuksen kanssa?",
+      "prompt_v3": "Mitkä Raamatun henkilöt kokivat myös ahdistusta?"
     },
     "confession": {
       "title": "Tunnustus",
@@ -358,7 +369,10 @@
     "heartbreak": {
       "title": "Sydänsuru",
       "desc": "Mitä Raamattu sanoo sydänsurusta",
-      "prompt": "Sydämeni on särkynyt. Mitä Raamattu sanoo sydänsurusta ja miten löytää toivoa uudelleen?"
+      "prompt": "Sydämeni on särkynyt. Mitä Raamattu sanoo sydänsurusta ja miten löytää toivoa uudelleen?",
+      "prompt_v1": "Sydämeni on särkynyt. Mitä Raamattu sanoo tästä?",
+      "prompt_v2": "Miten selviän sydänsurusta – onko Raamatusta apua?",
+      "prompt_v3": "Voiko Jumala parantaa särkyneen sydämen?"
     },
     "newstart": {
       "title": "Uusi alku",
@@ -388,7 +402,10 @@
     "gratitude": {
       "title": "Kiitollisuus",
       "desc": "Henkilökohtainen kiitosrukous",
-      "prompt": "Haluan kiittää Jumalaa. Auta minua muotoilemaan henkilökohtainen kiitosrukous."
+      "prompt": "Haluan kiittää Jumalaa. Auta minua muotoilemaan henkilökohtainen kiitosrukous.",
+      "prompt_v1": "Miten voin olla kiitollisempi?",
+      "prompt_v2": "Mitä Raamattu sanoo kiitollisuudesta?",
+      "prompt_v3": "Miksi kiitollisuus on niin tärkeää uskossa?"
     },
     "lifewheel": {
       "title": "Elämänpyörä",
@@ -447,7 +464,10 @@
     "forgiveness": {
       "title": "Anteeksianto",
       "desc": "Kun anteeksianto tuntuu mahdottomalta",
-      "prompt": "En yksinkertaisesti voi antaa anteeksi jollekin. Se sattuu liikaa. Mitä Raamattu sanoo anteeksiannosta?"
+      "prompt": "En yksinkertaisesti voi antaa anteeksi jollekin. Se sattuu liikaa. Mitä Raamattu sanoo anteeksiannosta?",
+      "prompt_v1": "Mitä Raamattu sanoo anteeksiannosta?",
+      "prompt_v2": "Miten voin antaa anteeksi jollekin, joka on loukannut minua?",
+      "prompt_v3": "Onko anteeksiannolla rajoja?"
     },
     "familyconflict": {
       "title": "Perheriita",
@@ -467,12 +487,23 @@
     "prayer": {
       "title": "Rukouspyyntö",
       "desc": "Rukoillaan yhdessä",
-      "prompt": "Minulla on rukouspyyntö ja haluan rukoilla yhdessä. Ohjaa minua rukouksessa."
+      "prompt": "Minulla on rukouspyyntö ja haluan rukoilla yhdessä. Ohjaa minua rukouksessa.",
+      "prompt_v1": "Miten voin oppia rukoilemaan?",
+      "prompt_v2": "Mitä Raamattu sanoo rukouksesta?",
+      "prompt_v3": "Miksi Jumala ei vastaa joihinkin rukouksiin?"
     },
     "bibleverse": {
       "title": "Ymmärrä jae",
       "desc": "Selitys Raamatun kohdasta",
       "prompt": "Haluan ymmärtää Raamatun kohtaa paremmin. Voitko auttaa minua sijoittamaan sen kontekstiin?"
+    },
+    "biblequiz": {
+      "desc": "Testaa Raamattu-tietoutesi leikkisästi",
+      "title": "Raamattuvisailu"
+    },
+    "prayerwall": {
+      "desc": "Jaa rukouspyyntöjä ja rukoile toistenne puolesta",
+      "title": "Rukousseinä"
     }
   },
   "lifeWheel": {
@@ -801,5 +832,30 @@
     "weddingDesc": "Kirjoita avioliittolupaukset, valitse laulut ja suunnittele juhla.",
     "baptismDesc": "Muotoile kasteen toiveet ja valmistele seremonia seurakunnan kanssa.",
     "confirmationDesc": "Löydä konfirmaatiolause ja valmistele henkilökohtaiset tekstit."
+  },
+  "chatHero": {
+    "ariaLabel": "Esitä kysymys BibleBotille",
+    "focusPlaceholder": "Kirjoita kysymyksesi…",
+    "placeholder1": "Mikä tekee minusta todella kiitollisen?",
+    "placeholder2": "Miten voin löytää sisäisen rauhan?",
+    "placeholder3": "Mikä antaa minulle toivoa?",
+    "placeholder4": "Mitä sydämeni todella toivoo?",
+    "placeholder5": "Mitä hyvää voin tehdä tänään?",
+    "send": "Lähetä",
+    "subtitle": "Esitä kysymyksesi – avoimesti, rehellisesti, ilman kirjautumista.",
+    "suggestion1": "Mitä nimeni tarkoittaa?",
+    "suggestion2": "Mikä antaa minulle voimaa tänään?",
+    "suggestion3": "Mistä olen kiitollinen?"
+  },
+  "meta": {
+    "forChurchesDesc": "BibleBot kumppanina yhteisöllesi: nuorisotyö, konfirmaatio, sielunhoito ja Raamattupiirit. Ilmainen Premium-tasolle asti.",
+    "forChurchesTitle": "BibleBot seurakunnille – Digitaalinen sielunhoito ja Raamatun ohjaus",
+    "homeDesc": "BibleBot kulkee mukanasi 5 Raamatun käännöksen, valmennusmetodologian ja sielunhoidon kanssa. Anonyymi, ilmainen, 36 kielellä.",
+    "homeTitle": "BibleBot – Henkilökohtainen Raamattu-kumppanisi | Ilmainen & Anonyymi",
+    "loginDesc": "Kirjaudu BibleBotiin valmistellaksesi henkilökohtaiset seremoniasi.",
+    "loginTitle": "Kirjaudu sisään – BibleBot"
+  },
+  "splash": {
+    "patronage": "Suosittelee"
   }
 }
