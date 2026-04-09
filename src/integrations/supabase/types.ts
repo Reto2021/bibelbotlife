@@ -223,6 +223,13 @@ export type Database = {
             referencedRelation: "church_partners"
             referencedColumns: ["id"]
           },
+          {
+            foreignKeyName: "church_contact_requests_church_id_fkey"
+            columns: ["church_id"]
+            isOneToOne: false
+            referencedRelation: "church_partners_public"
+            referencedColumns: ["id"]
+          },
         ]
       }
       church_partners: {
@@ -424,6 +431,13 @@ export type Database = {
             columns: ["church_id"]
             isOneToOne: false
             referencedRelation: "church_partners"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "church_records_church_id_fkey"
+            columns: ["church_id"]
+            isOneToOne: false
+            referencedRelation: "church_partners_public"
             referencedColumns: ["id"]
           },
           {
@@ -640,6 +654,13 @@ export type Database = {
             columns: ["church_id"]
             isOneToOne: false
             referencedRelation: "church_partners"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "invoices_church_id_fkey"
+            columns: ["church_id"]
+            isOneToOne: false
+            referencedRelation: "church_partners_public"
             referencedColumns: ["id"]
           },
         ]
@@ -962,6 +983,13 @@ export type Database = {
             referencedRelation: "church_partners"
             referencedColumns: ["id"]
           },
+          {
+            foreignKeyName: "resource_library_church_id_fkey"
+            columns: ["church_id"]
+            isOneToOne: false
+            referencedRelation: "church_partners_public"
+            referencedColumns: ["id"]
+          },
         ]
       }
       service_series: {
@@ -1004,6 +1032,13 @@ export type Database = {
             columns: ["church_id"]
             isOneToOne: false
             referencedRelation: "church_partners"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "service_series_church_id_fkey"
+            columns: ["church_id"]
+            isOneToOne: false
+            referencedRelation: "church_partners_public"
             referencedColumns: ["id"]
           },
         ]
@@ -1056,6 +1091,13 @@ export type Database = {
             referencedRelation: "church_partners"
             referencedColumns: ["id"]
           },
+          {
+            foreignKeyName: "service_team_members_church_id_fkey"
+            columns: ["church_id"]
+            isOneToOne: false
+            referencedRelation: "church_partners_public"
+            referencedColumns: ["id"]
+          },
         ]
       }
       service_templates: {
@@ -1098,6 +1140,13 @@ export type Database = {
             columns: ["church_id"]
             isOneToOne: false
             referencedRelation: "church_partners"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "service_templates_church_id_fkey"
+            columns: ["church_id"]
+            isOneToOne: false
+            referencedRelation: "church_partners_public"
             referencedColumns: ["id"]
           },
         ]
@@ -1157,6 +1206,13 @@ export type Database = {
             columns: ["church_id"]
             isOneToOne: false
             referencedRelation: "church_partners"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "services_church_id_fkey"
+            columns: ["church_id"]
+            isOneToOne: false
+            referencedRelation: "church_partners_public"
             referencedColumns: ["id"]
           },
           {
@@ -1287,7 +1343,81 @@ export type Database = {
       }
     }
     Views: {
-      [_ in never]: never
+      church_partners_public: {
+        Row: {
+          city: string | null
+          contact_person: string | null
+          country: string | null
+          created_at: string | null
+          custom_bot_name: string | null
+          denomination: string | null
+          id: string | null
+          is_active: boolean | null
+          language: string | null
+          logo_url: string | null
+          name: string | null
+          pastor_name: string | null
+          pastor_photo_url: string | null
+          plan_tier: Database["public"]["Enums"]["church_plan_tier"] | null
+          primary_color: string | null
+          secondary_color: string | null
+          service_times: string | null
+          slug: string | null
+          telegram_group_link: string | null
+          updated_at: string | null
+          website: string | null
+          welcome_message: string | null
+        }
+        Insert: {
+          city?: string | null
+          contact_person?: string | null
+          country?: string | null
+          created_at?: string | null
+          custom_bot_name?: string | null
+          denomination?: string | null
+          id?: string | null
+          is_active?: boolean | null
+          language?: string | null
+          logo_url?: string | null
+          name?: string | null
+          pastor_name?: string | null
+          pastor_photo_url?: string | null
+          plan_tier?: Database["public"]["Enums"]["church_plan_tier"] | null
+          primary_color?: string | null
+          secondary_color?: string | null
+          service_times?: string | null
+          slug?: string | null
+          telegram_group_link?: string | null
+          updated_at?: string | null
+          website?: string | null
+          welcome_message?: string | null
+        }
+        Update: {
+          city?: string | null
+          contact_person?: string | null
+          country?: string | null
+          created_at?: string | null
+          custom_bot_name?: string | null
+          denomination?: string | null
+          id?: string | null
+          is_active?: boolean | null
+          language?: string | null
+          logo_url?: string | null
+          name?: string | null
+          pastor_name?: string | null
+          pastor_photo_url?: string | null
+          plan_tier?: Database["public"]["Enums"]["church_plan_tier"] | null
+          primary_color?: string | null
+          secondary_color?: string | null
+          service_times?: string | null
+          slug?: string | null
+          telegram_group_link?: string | null
+          updated_at?: string | null
+          website?: string | null
+          welcome_message?: string | null
+        }
+        Relationships: []
+      }
     }
     Functions: {
       delete_email: {
