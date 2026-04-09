@@ -391,6 +391,14 @@
       "desc": "Finding peace at night",
       "prompt": "I can't sleep and my mind is racing. Is there a calming prayer or psalm for the night?"
     },
+    "prayerwall": {
+      "title": "Prayer Wall",
+      "desc": "Share prayer requests & pray for each other"
+    },
+    "biblequiz": {
+      "title": "Bible Quiz",
+      "desc": "Test your Bible knowledge playfully"
+    },
     "loneliness": {
       "title": "Loneliness",
       "desc": "You are never alone",
