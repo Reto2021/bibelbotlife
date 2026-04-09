@@ -34,6 +34,7 @@ const SeriesPage = lazy(() => import("./pages/dashboard/SeriesPage"));
 const RecordsPage = lazy(() => import("./pages/dashboard/RecordsPage"));
 const TeamPage = lazy(() => import("./pages/dashboard/TeamPage"));
 const SettingsPage = lazy(() => import("./pages/dashboard/SettingsPage"));
+const InvoicesPage = lazy(() => import("./pages/dashboard/InvoicesPage"));
 const ConductorMode = lazy(() => import("./pages/dashboard/ConductorMode"));
 const MeinBereich = lazy(() => import("./pages/MeinBereich"));
 const MeinBereichHome = lazy(() => import("./pages/mein-bereich/MeinBereichHome"));
@@ -130,6 +131,7 @@ const App = () => {
                     <Route path="records" element={<RecordsPage />} />
                     <Route path="team" element={<TeamPage />} />
                     <Route path="settings" element={<SettingsPage />} />
+                    <Route path="invoices" element={<InvoicesPage />} />
                   </Route>
                   <Route path="/mein-bereich" element={<ProtectedRoute><MeinBereich /></ProtectedRoute>}>
                     <Route index element={<MeinBereichHome />} />
