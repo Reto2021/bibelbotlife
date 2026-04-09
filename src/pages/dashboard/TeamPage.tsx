@@ -13,8 +13,10 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { useTeam, type TeamMember } from "@/hooks/use-team";
 import { useUserChurch } from "@/hooks/use-user-church";
+import { useAuth } from "@/hooks/use-auth";
 import { toast } from "sonner";
 import { Constants } from "@/integrations/supabase/types";
+import { supabase } from "@/integrations/supabase/client";
 
 const ROLES = Constants.public.Enums.team_role;
 const DAYS = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"];
@@ -42,6 +44,7 @@ const emptyForm: FormData = { name: "", email: "", role: "volunteer", is_active:
 export default function TeamPage() {
   const { t } = useTranslation();
   const { data: church } = useUserChurch();
+  const { user } = useAuth();
   const { data: members, isLoading, createMember, updateMember, deleteMember } = useTeam();
   const [dialogOpen, setDialogOpen] = useState(false);
   const [editId, setEditId] = useState<string | null>(null);
@@ -101,6 +104,28 @@ export default function TeamPage() {
           availability: form.availability,
         });
         toast.success(t("team.created", "Mitglied hinzugefügt"));
+
+        // Send invitation email if email is provided
+        if (form.email) {
+          try {
+            await supabase.functions.invoke("send-transactional-email", {
+              body: {
+                templateName: "team-invitation",
+                recipientEmail: form.email,
+                idempotencyKey: `team-invite-${form.email}-${Date.now()}`,
+                templateData: {
+                  churchName: church?.name || "",
+                  role: form.role,
+                  inviterName: user?.user_metadata?.full_name || user?.email || "",
+                  dashboardUrl: `${window.location.origin}/dashboard`,
+                },
+              },
+            });
+            toast.success("Einladungs-E-Mail gesendet");
+          } catch {
+            // Non-critical: member was created, email just didn't send
+          }
+        }
       }
       setDialogOpen(false);
     } catch {

@@ -2,7 +2,7 @@ import { useState, useCallback, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { DndContext, closestCenter, KeyboardSensor, PointerSensor, useSensor, useSensors, type DragEndEvent } from "@dnd-kit/core";
 import { arrayMove, SortableContext, sortableKeyboardCoordinates, verticalListSortingStrategy } from "@dnd-kit/sortable";
-import { ArrowLeft, Save, Clock, Plus, Play, Library, BookmarkPlus, FileDown } from "lucide-react";
+import { ArrowLeft, Save, Clock, Plus, Play, Library, BookmarkPlus, FileDown, Mail, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -11,19 +11,22 @@ import { ServiceBlock, type ServiceBlockData, type BlockType } from "@/component
 import { BlockPalette } from "@/components/services/BlockPalette";
 import { useAuth } from "@/hooks/use-auth";
 import { useUserChurch } from "@/hooks/use-user-church";
+import { useTeam } from "@/hooks/use-team";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
 import { ResourcePicker } from "@/components/services/ResourcePicker";
 import type { Resource } from "@/hooks/use-resources";
 import { useTemplates, useCreateTemplate, type ServiceTemplate } from "@/hooks/use-templates";
-import { exportServicePdf } from "@/lib/export-service-pdf";
+import { exportServicePdf, exportServicePdfBlob } from "@/lib/export-service-pdf";
+import { Label } from "@/components/ui/label";
 
 export default function ServiceEditor() {
   const { id } = useParams();
   const navigate = useNavigate();
   const { user } = useAuth();
   const { data: church } = useUserChurch();
+  const { data: teamMembers } = useTeam();
   const isNew = !id || id === "new";
 
   const [title, setTitle] = useState("Neuer Gottesdienst");
@@ -43,6 +46,82 @@ export default function ServiceEditor() {
   const createTemplate = useCreateTemplate();
   const [saveAsTemplateOpen, setSaveAsTemplateOpen] = useState(false);
   const [templateName, setTemplateName] = useState("");
+  const [emailDialogOpen, setEmailDialogOpen] = useState(false);
+  const [emailRecipient, setEmailRecipient] = useState("");
+  const [emailSending, setEmailSending] = useState(false);
+
+  const uploadPdfAndGetUrl = async (): Promise<string> => {
+    const blob = exportServicePdfBlob({ title, serviceDate, serviceTime, serviceType, tradition, blocks, churchName: church?.name });
+    const fileName = `${Date.now()}_${title.replace(/[^a-zA-Z0-9]/g, "_")}.pdf`;
+    const { error: uploadError } = await supabase.storage.from("service-pdfs").upload(fileName, blob, { contentType: "application/pdf" });
+    if (uploadError) throw uploadError;
+    const { data } = await supabase.storage.from("service-pdfs").createSignedUrl(fileName, 60 * 60 * 24 * 7);
+    if (!data?.signedUrl) throw new Error("Signed URL konnte nicht erstellt werden");
+    return data.signedUrl;
+  };
+
+  const handleSendEmail = async () => {
+    if (!emailRecipient.trim()) return;
+    setEmailSending(true);
+    try {
+      const downloadUrl = await uploadPdfAndGetUrl();
+      await supabase.functions.invoke("send-transactional-email", {
+        body: {
+          templateName: "service-share",
+          recipientEmail: emailRecipient.trim(),
+          idempotencyKey: `service-share-${id || "new"}-${emailRecipient}-${Date.now()}`,
+          templateData: {
+            serviceTitle: title,
+            serviceDate,
+            churchName: church?.name || "",
+            downloadUrl,
+            senderName: user?.user_metadata?.full_name || user?.email || "",
+          },
+        },
+      });
+      toast.success(`E-Mail an ${emailRecipient} gesendet`);
+      setEmailDialogOpen(false);
+      setEmailRecipient("");
+    } catch (err: any) {
+      toast.error(err.message || "Fehler beim E-Mail-Versand");
+    } finally {
+      setEmailSending(false);
+    }
+  };
+
+  const handleSendToTeam = async () => {
+    const membersWithEmail = (teamMembers || []).filter((m) => m.is_active && m.email);
+    if (membersWithEmail.length === 0) {
+      toast.error("Keine Team-Mitglieder mit E-Mail-Adresse gefunden");
+      return;
+    }
+    setEmailSending(true);
+    try {
+      const downloadUrl = await uploadPdfAndGetUrl();
+      for (const member of membersWithEmail) {
+        await supabase.functions.invoke("send-transactional-email", {
+          body: {
+            templateName: "service-share",
+            recipientEmail: member.email!,
+            idempotencyKey: `service-share-team-${id || "new"}-${member.id}-${Date.now()}`,
+            templateData: {
+              serviceTitle: title,
+              serviceDate,
+              churchName: church?.name || "",
+              downloadUrl,
+              senderName: user?.user_metadata?.full_name || user?.email || "",
+            },
+          },
+        });
+      }
+      toast.success(`Ablauf an ${membersWithEmail.length} Team-Mitglieder gesendet`);
+      setEmailDialogOpen(false);
+    } catch (err: any) {
+      toast.error(err.message || "Fehler beim E-Mail-Versand");
+    } finally {
+      setEmailSending(false);
+    }
+  };
 
   const handleSaveAsTemplate = async () => {
     if (!templateName.trim() || !user) return;
@@ -248,6 +327,10 @@ export default function ServiceEditor() {
               })}>
                 <FileDown className="h-4 w-4 mr-2" />
                 PDF
+              </Button>
+              <Button variant="outline" onClick={() => setEmailDialogOpen(true)}>
+                <Mail className="h-4 w-4 mr-2" />
+                E-Mail
               </Button>
               <Button variant="outline" onClick={() => { setTemplateName(title); setSaveAsTemplateOpen(true); }}>
                 <BookmarkPlus className="h-4 w-4 mr-2" />
@@ -471,6 +554,45 @@ export default function ServiceEditor() {
                 <BookmarkPlus className="h-4 w-4 mr-2" />
                 {createTemplate.isPending ? "Speichern..." : "Speichern"}
               </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      {/* Email Share Dialog */}
+      <Dialog open={emailDialogOpen} onOpenChange={setEmailDialogOpen}>
+        <DialogContent className="sm:max-w-sm">
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-2">
+              <Mail className="h-5 w-5" />
+              Ablauf per E-Mail teilen
+            </DialogTitle>
+          </DialogHeader>
+          <div className="space-y-4">
+            <div>
+              <Label>Empfänger E-Mail</Label>
+              <Input
+                type="email"
+                value={emailRecipient}
+                onChange={(e) => setEmailRecipient(e.target.value)}
+                placeholder="empfaenger@beispiel.ch"
+                onKeyDown={(e) => e.key === "Enter" && handleSendEmail()}
+              />
+            </div>
+            <p className="text-xs text-muted-foreground">
+              Der Ablauf wird als PDF generiert und ein Download-Link per E-Mail versendet.
+            </p>
+            <div className="flex flex-col gap-2">
+              <Button onClick={handleSendEmail} disabled={emailSending || !emailRecipient.trim()}>
+                <Mail className="h-4 w-4 mr-2" />
+                {emailSending ? "Sende..." : "E-Mail senden"}
+              </Button>
+              {(teamMembers || []).filter((m) => m.is_active && m.email).length > 0 && (
+                <Button variant="outline" onClick={handleSendToTeam} disabled={emailSending}>
+                  <Users className="h-4 w-4 mr-2" />
+                  {emailSending ? "Sende..." : `An Team senden (${(teamMembers || []).filter((m) => m.is_active && m.email).length})`}
+                </Button>
+              )}
             </div>
           </div>
         </DialogContent>
