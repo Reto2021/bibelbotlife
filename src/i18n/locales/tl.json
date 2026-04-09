@@ -229,9 +229,9 @@
     "email": "Ibahagi sa E-mail",
     "emailSubject": "Maaaring interesado ka dito: BibleBot.Life",
     "emailBody": "Kumusta!\n\nGusto kong ipakita sa iyo ang BibleBot – isang libreng kasama sa Bibliya na talagang nakakaalam ng Bibliya. Walang kinakailangang pagpaparehistro, ganap na anonymous.\n\nNagtatanong ito ng magagandang follow-up na tanong, nagpapaliwanag ng mga talata sa Bibliya sa konteksto at tapat na sinasamahan ka – kahit sa mahirap na mga paksa.\n\nSubukan mo: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nMalugod na pagbati",
-    "copy": "Kopyahin ang Link",
-    "copied": "Nakopya ang Link! 📋",
-    "qr": "O ipakita lang ang QR code na ito:"
+    "copy": "Kopyahin ang link",
+    "copied": "Nakopya na ang link!",
+    "qr": "QR Code"
   },
   "cta": {
     "title": "Hindi mo kailangang pagdaanan ito nang mag-isa",
@@ -847,7 +847,8 @@
     "subtitle": "Itanong ang iyong katanungan – malaya, tapat, nang walang pag-log in.",
     "suggestion1": "Ano ang ibig sabihin ng aking pangalan?",
     "suggestion2": "Ano ang nagpapalakas sa akin ngayon?",
-    "suggestion3": "Para saan ako nagpapasalamat?"
+    "suggestion3": "Para saan ako nagpapasalamat?",
+    "placeholder3": "Ano ang nagbibigay sa akin ng pag-asa?"
   },
   "meta": {
     "forChurchesDesc": "BibleBot bilang katuwang para sa iyong komunidad: gawaing kabataan, kumpirmasyon, pagpapayo at mga grupo ng Bibliya. Mula libre hanggang premium.",
