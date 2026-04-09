@@ -157,7 +157,12 @@
     "toastPermDenied": "Berechtigung verweigert",
     "toastPermDeniedDesc": "Bitte erlaube Benachrichtigungen in deinen Browser-Einstellungen.",
     "toastError": "Fehler",
-    "toastErrorDesc": "Bitte versuche es später erneut."
+    "toastErrorDesc": "Bitte versuche es später erneut.",
+    "manage": "Abo verwalten",
+    "switchChannel": "Kanal wechseln:",
+    "unsubscribe": "Abo beenden",
+    "unsubscribedTitle": "Abgemeldet",
+    "unsubscribedDesc": "Du erhältst keine tägliche Inspiration mehr."
   },
   "faq": {
     "badge": "Häufige Fragen",

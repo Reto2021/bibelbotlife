@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { useTranslation } from "react-i18next";
-import { Sparkles, ChevronRight, BookOpen, Loader2, MessageCircle, Image, Download, Bell, Send, Smartphone, Volume2, VolumeX } from "lucide-react";
+import { Sparkles, ChevronRight, BookOpen, Loader2, MessageCircle, Image, Download, Bell, Send, Smartphone, Volume2, VolumeX, XCircle, Settings2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTTS } from "@/hooks/use-tts";
 import { openBibleBotChat } from "@/lib/chat-events";
@@ -14,6 +14,8 @@ const SUBSCRIBE_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/subscri
 const TELEGRAM_LINK = "https://t.me/meinbibelbot";
 const VAPID_PUBLIC_KEY = "BLMl5bBRzhlza0ozrHEblp3BfKtbyDsbOP-n120rl6teGPFdoyFb77P9WnOZpbFs2hKyfwILmw8WQebJrp_qc7c";
 const SUBSCRIBED_KEY = "bibelbot-daily-subscribed";
+const SUBSCRIBER_ID_KEY = "bibelbot-subscriber-id";
+const SUBSCRIBER_CHANNEL_KEY = "bibelbot-subscriber-channel";
 
 type Impulse = {
   topic: string;
@@ -54,8 +56,12 @@ export function DailyImpulse() {
   const [shareBlob, setShareBlob] = useState<Blob | null>(null);
   const [isGeneratingImage, setIsGeneratingImage] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(() => localStorage.getItem(SUBSCRIBED_KEY) === "1");
+  const [subscriberId, setSubscriberId] = useState<string | null>(() => localStorage.getItem(SUBSCRIBER_ID_KEY));
+  const [subscriberChannel, setSubscriberChannel] = useState<string | null>(() => localStorage.getItem(SUBSCRIBER_CHANNEL_KEY));
   const [showChannels, setShowChannels] = useState(false);
+  const [showManage, setShowManage] = useState(false);
   const [isSubscribing, setIsSubscribing] = useState(false);
+  const [isUnsubscribing, setIsUnsubscribing] = useState(false);
   const [showImagePreview, setShowImagePreview] = useState(false);
   const [showSmsInput, setShowSmsInput] = useState(false);
   const [smsPhone, setSmsPhone] = useState("");
@@ -178,6 +184,27 @@ export function DailyImpulse() {
     );
   };
 
+  const saveSubscription = (id: string, channel: string) => {
+    localStorage.setItem(SUBSCRIBED_KEY, "1");
+    localStorage.setItem(SUBSCRIBER_ID_KEY, id);
+    localStorage.setItem(SUBSCRIBER_CHANNEL_KEY, channel);
+    setIsSubscribed(true);
+    setSubscriberId(id);
+    setSubscriberChannel(channel);
+    setShowChannels(false);
+    setShowManage(false);
+  };
+
+  const clearSubscription = () => {
+    localStorage.removeItem(SUBSCRIBED_KEY);
+    localStorage.removeItem(SUBSCRIBER_ID_KEY);
+    localStorage.removeItem(SUBSCRIBER_CHANNEL_KEY);
+    setIsSubscribed(false);
+    setSubscriberId(null);
+    setSubscriberChannel(null);
+    setShowManage(false);
+  };
+
   const handleSubscribePush = useCallback(async () => {
     setIsSubscribing(true);
     try {
@@ -204,8 +231,8 @@ export function DailyImpulse() {
         body: JSON.stringify({ channel: "push", push_subscription: pushSubscription.toJSON(), language: i18n.language }),
       });
       if (!resp.ok) throw new Error("Subscribe failed");
-      localStorage.setItem(SUBSCRIBED_KEY, "1");
-      setIsSubscribed(true);
+      const data = await resp.json();
+      saveSubscription(data.subscriber_id || "", "push");
       toast({ title: t("subscribe.toastSuccess"), description: t("subscribe.toastSuccessDesc") });
     } catch (e) {
       toast({ title: t("subscribe.toastError"), description: e instanceof Error ? e.message : t("subscribe.toastErrorDesc"), variant: "destructive" });
@@ -216,8 +243,7 @@ export function DailyImpulse() {
 
   const handleSubscribeTelegram = useCallback(() => {
     window.open(TELEGRAM_LINK, "_blank");
-    localStorage.setItem(SUBSCRIBED_KEY, "1");
-    setIsSubscribed(true);
+    saveSubscription("", "telegram");
     toast({ title: t("subscribe.toastTelegram"), description: t("subscribe.toastTelegramDesc") });
   }, [toast, t]);
 
@@ -231,8 +257,8 @@ export function DailyImpulse() {
         body: JSON.stringify({ channel: "sms", phone_number: smsPhone, language: i18n.language }),
       });
       if (!resp.ok) throw new Error("Subscribe failed");
-      localStorage.setItem(SUBSCRIBED_KEY, "1");
-      setIsSubscribed(true);
+      const data = await resp.json();
+      saveSubscription(data.subscriber_id || "", "sms");
       setShowSmsInput(false);
       toast({ title: t("subscribe.toastSuccess"), description: t("subscribe.toastSuccessDesc") });
     } catch (e) {
@@ -241,6 +267,29 @@ export function DailyImpulse() {
       setIsSubscribing(false);
     }
   }, [smsPhone, toast, t, i18n.language]);
+
+  const handleUnsubscribe = useCallback(async () => {
+    if (!subscriberId) {
+      clearSubscription();
+      toast({ title: t("subscribe.unsubscribedTitle", "Abgemeldet"), description: t("subscribe.unsubscribedDesc", "Du erhältst keine tägliche Inspiration mehr.") });
+      return;
+    }
+    setIsUnsubscribing(true);
+    try {
+      const resp = await fetch(SUBSCRIBE_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "unsubscribe", subscriber_id: subscriberId }),
+      });
+      if (!resp.ok) throw new Error("Unsubscribe failed");
+      clearSubscription();
+      toast({ title: t("subscribe.unsubscribedTitle", "Abgemeldet"), description: t("subscribe.unsubscribedDesc", "Du erhältst keine tägliche Inspiration mehr.") });
+    } catch (e) {
+      toast({ title: t("subscribe.toastError"), description: e instanceof Error ? e.message : t("subscribe.toastErrorDesc"), variant: "destructive" });
+    } finally {
+      setIsUnsubscribing(false);
+    }
+  }, [subscriberId, toast, t]);
 
   if (isLoading) {
     return (
@@ -295,9 +344,12 @@ export function DailyImpulse() {
           </div>
         )}
         {isSubscribed && (
-          <span className="hidden sm:flex text-xs text-primary/70 items-center gap-1 shrink-0">
+          <button
+            onClick={() => { setIsExpanded(true); setShowManage(true); }}
+            className="hidden sm:flex text-xs text-primary/70 items-center gap-1 shrink-0 hover:text-primary transition-colors cursor-pointer"
+          >
             ✓ {t("impulse.alreadySubscribed")}
-          </span>
+          </button>
         )}
       </div>
 
@@ -471,31 +523,72 @@ export function DailyImpulse() {
               </div>
             )}
 
-            {/* Already subscribed: clickable toggle for channel options */}
+            {/* Already subscribed: manage subscription */}
             {isSubscribed && (
-              <div className="mt-3">
-                <button
-                  onClick={() => setShowChannels(!showChannels)}
-                  className="text-xs text-primary/70 flex items-center gap-1 hover:text-primary transition-colors cursor-pointer"
-                >
-                  ✓ {t("impulse.alreadySubscribed")}
-                </button>
-                {showChannels && (
-                  <div className="mt-3 flex flex-wrap gap-2 animate-fade-up">
+              <div className="mt-3 pt-3 border-t border-primary/15">
+                <div className="flex items-center gap-3 flex-wrap">
+                  <span className="text-xs text-primary/70 flex items-center gap-1">
+                    ✓ {t("impulse.alreadySubscribed")}
+                    {subscriberChannel && (
+                      <span className="text-muted-foreground ml-1">
+                        ({subscriberChannel === "push" ? "Push" : subscriberChannel === "sms" ? "SMS" : "Telegram"})
+                      </span>
+                    )}
+                  </span>
+                  <Button
+                    size="sm"
+                    variant="ghost"
+                    onClick={() => setShowManage(!showManage)}
+                    className="text-xs h-7 text-muted-foreground hover:text-foreground"
+                  >
+                    <Settings2 className="h-3 w-3 mr-1" />
+                    {t("subscribe.manage", "Abo verwalten")}
+                  </Button>
+                </div>
+                {showManage && (
+                  <div className="mt-3 space-y-3 animate-fade-up">
+                    <div>
+                      <p className="text-xs font-medium text-foreground/80 mb-2">
+                        {t("subscribe.switchChannel", "Kanal wechseln:")}
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        <Button
+                          size="sm"
+                          onClick={handleSubscribePush}
+                          disabled={isSubscribing}
+                          variant={subscriberChannel === "push" ? "default" : "outline"}
+                          className={`text-xs h-7 ${subscriberChannel === "push" ? "bg-primary hover:bg-primary/90" : "border-primary/30 text-primary hover:bg-primary/10"}`}
+                        >
+                          {isSubscribing && !showSmsInput ? <Loader2 className="h-3 w-3 mr-1 animate-spin" /> : <Bell className="h-3 w-3 mr-1" />}
+                          Push
+                        </Button>
+                        <Button
+                          size="sm"
+                          onClick={handleSubscribeTelegram}
+                          variant={subscriberChannel === "telegram" ? "default" : "outline"}
+                          className={`text-xs h-7 ${subscriberChannel === "telegram" ? "bg-primary hover:bg-primary/90" : "border-primary/30 text-primary hover:bg-primary/10"}`}
+                        >
+                          <Send className="h-3 w-3 mr-1" /> Telegram
+                        </Button>
+                        <Button
+                          size="sm"
+                          onClick={() => setShowSmsInput(!showSmsInput)}
+                          variant={subscriberChannel === "sms" ? "default" : "outline"}
+                          className={`text-xs h-7 ${subscriberChannel === "sms" ? "bg-primary hover:bg-primary/90" : "border-primary/30 text-primary hover:bg-primary/10"}`}
+                        >
+                          <Smartphone className="h-3 w-3 mr-1" /> SMS
+                        </Button>
+                      </div>
+                    </div>
                     <Button
                       size="sm"
-                      onClick={handleSubscribePush}
-                      disabled={isSubscribing}
-                      className="text-xs h-7 bg-primary hover:bg-primary/90"
+                      variant="ghost"
+                      onClick={handleUnsubscribe}
+                      disabled={isUnsubscribing}
+                      className="text-xs h-7 text-destructive hover:text-destructive hover:bg-destructive/10"
                     >
-                      {isSubscribing && !showSmsInput ? <Loader2 className="h-3 w-3 mr-1 animate-spin" /> : <Bell className="h-3 w-3 mr-1" />}
-                      {t("subscribe.push")}
-                    </Button>
-                    <Button size="sm" variant="outline" onClick={handleSubscribeTelegram} className="text-xs h-7 border-primary/30 text-primary hover:bg-primary/10">
-                      <Send className="h-3 w-3 mr-1" /> Telegram
-                    </Button>
-                    <Button size="sm" variant="outline" onClick={() => setShowSmsInput(!showSmsInput)} className="text-xs h-7 border-primary/30 text-primary hover:bg-primary/10">
-                      <Smartphone className="h-3 w-3 mr-1" /> SMS
+                      {isUnsubscribing ? <Loader2 className="h-3 w-3 mr-1 animate-spin" /> : <XCircle className="h-3 w-3 mr-1" />}
+                      {t("subscribe.unsubscribe", "Abo beenden")}
                     </Button>
                   </div>
                 )}
