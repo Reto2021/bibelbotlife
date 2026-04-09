@@ -1,5 +1,6 @@
 import { useState, useRef, useCallback, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { openBibleBotChat } from "@/lib/chat-events";
@@ -13,6 +14,7 @@ type TileConfig = {
   accentClass: string;
   bgClass: string;
   special?: "lifewheel" | "sevenwhys";
+  href?: string;
 };
 
 const allTiles: TileConfig[] = [
@@ -45,6 +47,8 @@ const allTiles: TileConfig[] = [
   { emoji: "📖", key: "bibleverse", accentClass: "bg-secondary", bgClass: "bg-card" },
   { emoji: "🤔", key: "namequiz", accentClass: "bg-primary", bgClass: "bg-card" },
   { emoji: "🌙", key: "sleepless", accentClass: "bg-secondary", bgClass: "bg-card" },
+  { emoji: "🙏", key: "prayerwall", accentClass: "bg-gradient-to-r from-primary to-secondary", bgClass: "bg-card", href: "/gebetswand" },
+  { emoji: "🧠", key: "biblequiz", accentClass: "bg-gradient-to-r from-secondary to-primary", bgClass: "bg-card", href: "/bibelquiz" },
 ];
 
 export function EntryTiles() {
@@ -54,6 +58,7 @@ export function EntryTiles() {
 
   const { t } = useTranslation();
   const { track } = useTrack();
+  const navigate = useNavigate();
 
   const checkScroll = useCallback(() => {
     const el = scrollRef.current;
@@ -96,8 +101,10 @@ export function EntryTiles() {
   };
 
   const handleClick = (tile: TileConfig) => {
-    track("tile_click", { tile: tile.key, special: tile.special || "chat" });
-    if (tile.special === "lifewheel") {
+    track("tile_click", { tile: tile.key, special: tile.special || tile.href ? "navigate" : "chat" });
+    if (tile.href) {
+      navigate(tile.href);
+    } else if (tile.special === "lifewheel") {
       openLifeWheel();
     } else if (tile.special === "sevenwhys") {
       openBibleBotChat(getRandomPrompt(tile.key), "seven-whys");
