@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { supabase } from "@/integrations/supabase/client";
-import bibelbotLogo from "@/assets/biblebot-logo.png";
+import { AppLogo } from "@/components/AppLogo";
 
 type PatronData = {
   name: string;
@@ -70,7 +70,7 @@ export function SplashScreen({ onComplete }: { onComplete: () => void }) {
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="flex flex-col items-center gap-4"
           >
-            <img src={bibelbotLogo} alt="BibleBot" className="h-16 w-16 sm:h-20 sm:w-20" width={512} height={512} />
+            <AppLogo className="h-16 w-16 sm:h-20 sm:w-20" />
             <div className="flex flex-col items-center">
               <motion.h1
                 initial={{ opacity: 0, y: 5 }}

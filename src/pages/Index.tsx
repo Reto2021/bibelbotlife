@@ -2,7 +2,7 @@ import { lazy, Suspense, useState } from "react";
 import { SEOHead } from "@/components/SEOHead";
 import { useTranslation } from "react-i18next";
 import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, GraduationCap, Church, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass, Send, Building2, Menu, FileText, ShieldCheck, LogIn, LogOut, User, Shield } from "lucide-react";
-import bibelbotLogo from "@/assets/biblebot-logo.png";
+import { AppLogo } from "@/components/AppLogo";
 import { ChurchBanner } from "@/components/ChurchBanner";
 import { ReferralSection } from "@/components/ReferralSection";
 // EntryTiles removed - chips are now in ChatHero
@@ -600,7 +600,7 @@ const Index = () => {
       <footer className="bg-foreground text-background py-12 px-4">
         <div className="container mx-auto max-w-4xl">
           <div className="flex items-center justify-center space-x-2 mb-6">
-            <img src={bibelbotLogo} alt="BibleBot" className="h-10 w-10" />
+            <AppLogo className="h-10 w-10" forceDark />
             <span className="text-2xl font-bold">BibleBot.Life</span>
           </div>
           <p className="text-background/70 mb-4 text-center">{t("footer.tagline")}</p>

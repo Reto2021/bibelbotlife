@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { Church, ArrowLeft, Search, MapPin } from "lucide-react";
-import bibelbotLogo from "@/assets/biblebot-logo.png";
+import { AppLogo } from "@/components/AppLogo";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -39,7 +39,7 @@ const ChurchDirectory = () => {
       <nav className="bg-card/80 backdrop-blur-sm border-b border-border sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link to="/" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
-            <img src={bibelbotLogo} alt="BibleBot" className="h-8 w-8" />
+            <AppLogo className="h-8 w-8" />
             {t("impressum.back")}
           </Link>
           <div className="flex items-center gap-2">
