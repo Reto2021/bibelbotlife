@@ -80,6 +80,24 @@ const Login = () => {
     }
   };
 
+  const handleApple = async () => {
+    setLoading(true);
+    try {
+      const result = await lovable.auth.signInWithOAuth("apple", {
+        redirect_uri: window.location.origin,
+      });
+      if (result.error) {
+        toast({ title: t("auth.error", "Fehler"), description: String(result.error), variant: "destructive" });
+      }
+      if (result.redirected) return;
+      navigate("/", { replace: true });
+    } catch (err: any) {
+      toast({ title: t("auth.error", "Fehler"), description: err.message, variant: "destructive" });
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const titles: Record<Mode, string> = {
     login: t("auth.loginTitle", "Anmelden"),
     signup: t("auth.signupTitle", "Konto erstellen"),
