@@ -20,14 +20,27 @@ serve(async (req) => {
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
     );
 
-    // Get a random verse
+    // Get a random verse using a random offset for variety
+    const randomOffset = Math.floor(Math.random() * 30000);
     const { data: verses, error } = await supabase
       .from("bible_verses")
       .select("id, book, book_number, chapter, verse, text, translation")
       .eq("translation", translation)
-      .limit(500);
+      .range(randomOffset, randomOffset + 99)
+      .limit(100);
 
-    if (error || !verses?.length) {
+    // Fallback if offset is too high
+    let versePool = verses;
+    if (!versePool?.length) {
+      const { data: fallback } = await supabase
+        .from("bible_verses")
+        .select("id, book, book_number, chapter, verse, text, translation")
+        .eq("translation", translation)
+        .limit(100);
+      versePool = fallback;
+    }
+
+    if (error || !versePool?.length) {
       return new Response(JSON.stringify({ error: "Keine Verse gefunden" }), {
         status: 500,
         headers: { ...corsHeaders, "Content-Type": "application/json" },
@@ -35,13 +48,26 @@ serve(async (req) => {
     }
 
     // Pick a random verse
-    const randomVerse = verses[Math.floor(Math.random() * verses.length)];
+    const randomVerse = versePool[Math.floor(Math.random() * versePool.length)];
+
+    // Full list of Bible books for wrong-answer options
+    const allBibleBooks = [
+      "1. Mose","2. Mose","3. Mose","4. Mose","5. Mose","Josua","Richter","Ruth",
+      "1. Samuel","2. Samuel","1. Könige","2. Könige","1. Chronik","2. Chronik",
+      "Esra","Nehemia","Esther","Hiob","Psalmen","Sprüche","Prediger",
+      "Hohelied","Jesaja","Jeremia","Klagelieder","Hesekiel","Daniel","Hosea",
+      "Joel","Amos","Obadja","Jona","Micha","Nahum","Habakuk","Zefanja",
+      "Haggai","Sacharja","Maleachi","Matthäus","Markus","Lukas","Johannes",
+      "Apostelgeschichte","Römer","1. Korinther","2. Korinther","Galater",
+      "Epheser","Philipper","Kolosser","1. Thessalonicher","2. Thessalonicher",
+      "1. Timotheus","2. Timotheus","Titus","Philemon","Hebräer","Jakobus",
+      "1. Petrus","2. Petrus","1. Johannes","2. Johannes","3. Johannes","Judas","Offenbarung"
+    ];
 
     if (mode === "verse_guess") {
       // Mode: Show verse text, guess the book
-      // Get 3 wrong book options
-      const allBooks = [...new Set(verses.map(v => v.book))];
-      const wrongBooks = allBooks
+      // Get 3 wrong book options from the full list
+      const wrongBooks = allBibleBooks
         .filter(b => b !== randomVerse.book)
         .sort(() => Math.random() - 0.5)
         .slice(0, 3);
