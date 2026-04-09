@@ -1,7 +1,7 @@
 import { lazy, Suspense, useState } from "react";
 import { SEOHead } from "@/components/SEOHead";
 import { useTranslation } from "react-i18next";
-import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, GraduationCap, Church, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass, Send, Building2, Menu, FileText, ShieldCheck, LogIn, LogOut, User } from "lucide-react";
+import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, GraduationCap, Church, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass, Send, Building2, Menu, FileText, ShieldCheck, LogIn, LogOut, User, Shield } from "lucide-react";
 import bibelbotLogo from "@/assets/biblebot-logo.png";
 import { ChurchBanner } from "@/components/ChurchBanner";
 import { ReferralSection } from "@/components/ReferralSection";
@@ -20,6 +20,7 @@ import { Link } from "react-router-dom";
 import { DarkModeToggle } from "@/components/DarkModeToggle";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useAuth } from "@/hooks/use-auth";
+import { useIsAdmin } from "@/hooks/use-admin";
 
 const TELEGRAM_LINK = "https://t.me/meinbibelbot";
 
@@ -34,6 +35,7 @@ const BIBLE_EDITIONS = [
 const Index = () => {
   const { t, i18n } = useTranslation();
   const { user, signOut } = useAuth();
+  const { isAdmin } = useIsAdmin();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const features = [
@@ -97,6 +99,14 @@ const Index = () => {
             <DarkModeToggle />
             {user ? (
               <>
+                {isAdmin && (
+                  <Button asChild variant="ghost" size="sm" className="hidden sm:inline-flex">
+                    <Link to="/admin">
+                      <Shield className="h-4 w-4 mr-1" />
+                      Admin
+                    </Link>
+                  </Button>
+                )}
                 <Button asChild variant="outline" size="sm" className="hidden sm:inline-flex">
                   <Link to="/mein-bereich">
                     <User className="h-4 w-4 mr-1" />
