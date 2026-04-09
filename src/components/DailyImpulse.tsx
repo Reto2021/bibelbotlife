@@ -124,15 +124,12 @@ export function DailyImpulse() {
   }, [impulse, isGeneratingImage, shareImageUrl, toast, t]);
 
   const shareAsImage = useCallback(async () => {
-    if (!shareImageUrl || !impulse) return;
+    if (!shareBlob || !impulse) return;
 
     const shareText = `${impulse.verse}\n\n– ${impulse.reference}\n\n${impulse.teaser}\n\nbiblebot.life`;
 
-    // Try sharing with image file (Web Share API Level 2)
     try {
-      const response = await fetch(shareImageUrl);
-      const blob = await response.blob();
-      const file = new File([blob], `bibelbot-impuls-${impulse.date}.png`, { type: "image/png" });
+      const file = new File([shareBlob], `bibelbot-impuls-${impulse.date}.png`, { type: "image/png" });
 
       if (navigator.canShare?.({ files: [file] })) {
         await navigator.share({
@@ -144,38 +141,25 @@ export function DailyImpulse() {
       }
     } catch (e) {
       if ((e as Error).name === "AbortError") return;
-      console.log("File share not supported, falling back");
     }
 
-    // Fallback: open image for manual save + copy text
     try {
       await navigator.clipboard.writeText(shareText);
       toast({
         title: t("share.imageSaved"),
         description: t("share.imageSavedDesc"),
       });
-    } catch {
-      // Just show the preview
-    }
-  }, [shareImageUrl, impulse, toast, t]);
+    } catch {}
+  }, [shareBlob, impulse, toast, t]);
 
-  const downloadImage = useCallback(async () => {
+  const downloadImage = useCallback(() => {
     if (!shareImageUrl || !impulse) return;
-    try {
-      const response = await fetch(shareImageUrl);
-      const blob = await response.blob();
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = `bibelbot-impuls-${impulse.date}.png`;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    } catch {
-      // Fallback: open in new tab
-      window.open(shareImageUrl, "_blank");
-    }
+    const a = document.createElement("a");
+    a.href = shareImageUrl;
+    a.download = `bibelbot-impuls-${impulse.date}.png`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
   }, [shareImageUrl, impulse]);
 
   const handleDeepDive = () => {
