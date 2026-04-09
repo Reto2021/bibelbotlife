@@ -16,8 +16,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 
-const SpeechRecognition =
-  (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+const STT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/elevenlabs-stt`;
 
 import { CHAT_OPEN_EVENT, type ChatMode } from "@/lib/chat-events";
 export { openBibleBotChat } from "@/lib/chat-events";
@@ -184,10 +183,6 @@ function saveMessages(msgs: Message[]) {
 }
 
 // Map i18n language code to speech recognition locale
-function getSpeechLang(lang: string): string {
-  const map: Record<string, string> = { de: "de-CH", en: "en-US", fr: "fr-FR", es: "es-ES" };
-  return map[lang] || "de-CH";
-}
 
 export function BibleBotChat() {
   const { t, i18n } = useTranslation();
@@ -200,6 +195,7 @@ export function BibleBotChat() {
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isListening, setIsListening] = useState(false);
+  const [isTranscribing, setIsTranscribing] = useState(false);
   const [botName, setBotName] = useState(getBotName);
   const [isEditingName, setIsEditingName] = useState(false);
   const [nameDraft, setNameDraft] = useState("");
@@ -209,7 +205,8 @@ export function BibleBotChat() {
   const [preferredTranslation, setPreferredTranslation] = useState(() => {
     try { return localStorage.getItem("bibelbot-translation") || "auto"; } catch { return "auto"; }
   });
-  const recognitionRef = useRef<any>(null);
+  const mediaRecorderRef = useRef<MediaRecorder | null>(null);
+  const audioChunksRef = useRef<Blob[]>([]);
   const scrollRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const { toast } = useToast();
@@ -255,21 +252,53 @@ export function BibleBotChat() {
     }
   }, []);
 
-  const startListening = useCallback(() => {
-    if (!SpeechRecognition) { toast({ title: t("subscribe.toastNotSupported"), description: t("chat.noVoice"), variant: "destructive" }); return; }
-    const recognition = new SpeechRecognition();
-    recognition.lang = getSpeechLang(i18n.language);
-    recognition.continuous = false;
-    recognition.interimResults = true;
-    recognition.onresult = (event: any) => { const transcript = Array.from(event.results).map((r: any) => r[0].transcript).join(""); setInput(transcript); };
-    recognition.onend = () => setIsListening(false);
-    recognition.onerror = () => setIsListening(false);
-    recognitionRef.current = recognition;
-    recognition.start();
-    setIsListening(true);
+  const startListening = useCallback(async () => {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      const mediaRecorder = new MediaRecorder(stream, { mimeType: MediaRecorder.isTypeSupported("audio/webm") ? "audio/webm" : "audio/mp4" });
+      audioChunksRef.current = [];
+      mediaRecorder.ondataavailable = (e) => { if (e.data.size > 0) audioChunksRef.current.push(e.data); };
+      mediaRecorder.onstop = async () => {
+        stream.getTracks().forEach((t) => t.stop());
+        const audioBlob = new Blob(audioChunksRef.current, { type: mediaRecorder.mimeType });
+        if (audioBlob.size < 1000) { setIsListening(false); return; }
+        setIsTranscribing(true);
+        try {
+          const formData = new FormData();
+          formData.append("audio", audioBlob, "recording.webm");
+          formData.append("language", i18n.language);
+          const resp = await fetch(STT_URL, {
+            method: "POST",
+            headers: {
+              apikey: import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
+              Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+            },
+            body: formData,
+          });
+          if (resp.ok) {
+            const data = await resp.json();
+            if (data.text?.trim()) setInput(data.text.trim());
+          } else {
+            toast({ title: t("chat.errorTitle"), description: t("chat.noVoice"), variant: "destructive" });
+          }
+        } catch {
+          toast({ title: t("chat.errorTitle"), description: t("chat.noVoice"), variant: "destructive" });
+        } finally {
+          setIsTranscribing(false);
+        }
+      };
+      mediaRecorderRef.current = mediaRecorder;
+      mediaRecorder.start();
+      setIsListening(true);
+    } catch {
+      toast({ title: t("subscribe.toastNotSupported"), description: t("chat.noVoice"), variant: "destructive" });
+    }
   }, [toast, t, i18n.language]);
 
-  const stopListening = useCallback(() => { recognitionRef.current?.stop(); setIsListening(false); }, []);
+  const stopListening = useCallback(() => {
+    mediaRecorderRef.current?.stop();
+    setIsListening(false);
+  }, []);
 
   useEffect(() => {
     const alreadyOpened = sessionStorage.getItem(AUTO_OPEN_KEY);
@@ -648,11 +677,17 @@ export function BibleBotChat() {
       <div className={`border-t border-border ${isSenior ? "p-4" : "p-3"}`}>
         <div className="flex gap-2 items-end">
           <Textarea ref={textareaRef} value={input} onChange={(e) => setInput(e.target.value)} onKeyDown={handleKeyDown} placeholder={t("chat.placeholder")} className={`${isSenior ? "min-h-[56px] max-h-[120px] text-lg" : "min-h-[40px] max-h-[100px] text-sm"} resize-none`} rows={s.inputRows} />
-          {SpeechRecognition && (
-            <Button size="icon" variant={isListening ? "destructive" : "outline"} onClick={isListening ? stopListening : startListening} className={`${s.btnSize} shrink-0`} aria-label={isListening ? t("chat.stopVoice") : t("chat.startVoice")}>
-              {isListening ? <MicOff className={s.btnIcon} /> : <Mic className={s.btnIcon} />}
-            </Button>
-          )}
+          <Button
+            size="icon"
+            variant={isListening ? "destructive" : "outline"}
+            onClick={isListening ? stopListening : startListening}
+            disabled={isTranscribing}
+            className={`${s.btnSize} shrink-0 relative`}
+            aria-label={isListening ? t("chat.stopVoice") : t("chat.startVoice")}
+          >
+            {isTranscribing ? <Loader2 className={`${s.btnIcon} animate-spin`} /> : isListening ? <MicOff className={s.btnIcon} /> : <Mic className={s.btnIcon} />}
+            {isListening && <span className="absolute inset-0 rounded-md border-2 border-destructive animate-pulse" />}
+          </Button>
           <Button size="icon" onClick={() => sendMessage(input)} disabled={!input.trim() || isLoading} className={`${s.btnSize} shrink-0`}>
             <Send className={s.btnIcon} />
           </Button>
