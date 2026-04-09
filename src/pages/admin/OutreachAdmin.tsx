@@ -418,9 +418,11 @@ export default function OutreachAdmin() {
 
           {/* ─── Sequences Tab ──────────────────── */}
           <TabsContent value="sequences" className="space-y-4">
-            <Dialog open={sequenceOpen} onOpenChange={setSequenceOpen}>
-              <DialogTrigger asChild>
-                <Button><Plus className="h-4 w-4 mr-2" />Schritt hinzufügen</Button>
+            <div className="flex gap-2">
+              <Dialog open={sequenceOpen} onOpenChange={setSequenceOpen}>
+                <DialogTrigger asChild>
+                  <Button variant="outline"><Plus className="h-4 w-4 mr-2" />Schritt hinzufügen</Button>
+                </DialogTrigger>
               </DialogTrigger>
               <DialogContent className="max-w-2xl">
                 <DialogHeader><DialogTitle>Sequenz-Schritt bearbeiten</DialogTitle></DialogHeader>
