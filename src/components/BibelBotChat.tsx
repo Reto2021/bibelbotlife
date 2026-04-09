@@ -523,6 +523,30 @@ export function BibleBotChat() {
           </div>
         </div>
         <div className="flex items-center gap-1.5">
+          <div className="relative">
+            <select
+              value={preferredTranslation}
+              onChange={(e) => {
+                const v = e.target.value;
+                setPreferredTranslation(v);
+                try { localStorage.setItem("bibelbot-translation", v); } catch {}
+              }}
+              className="appearance-none bg-transparent text-muted-foreground hover:text-foreground cursor-pointer text-[10px] pr-4 pl-1 py-1 rounded-lg hover:bg-muted/50 transition-colors focus:outline-none focus:ring-1 focus:ring-primary/30"
+              title={t("chat.translationSelect", "Bibelübersetzung")}
+            >
+              <option value="auto">📖 Auto</option>
+              <optgroup label="Deutsch">
+                <option value="luther1912">Luther 1912</option>
+                <option value="schlachter2000">Schlachter 2000</option>
+                <option value="elberfelder">Elberfelder</option>
+              </optgroup>
+              <optgroup label="English">
+                <option value="kjv">KJV</option>
+                <option value="web">WEB</option>
+              </optgroup>
+            </select>
+            <BookOpen className="absolute right-0 top-1/2 -translate-y-1/2 h-3 w-3 text-muted-foreground pointer-events-none" />
+          </div>
           <button
             onClick={toggleSenior}
             className={`p-1.5 rounded-lg transition-colors ${isSenior ? "bg-primary/20 text-primary" : "text-muted-foreground hover:text-foreground"}`}
