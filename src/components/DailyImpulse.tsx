@@ -56,8 +56,12 @@ export function DailyImpulse() {
   const [shareBlob, setShareBlob] = useState<Blob | null>(null);
   const [isGeneratingImage, setIsGeneratingImage] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(() => localStorage.getItem(SUBSCRIBED_KEY) === "1");
+  const [subscriberId, setSubscriberId] = useState<string | null>(() => localStorage.getItem(SUBSCRIBER_ID_KEY));
+  const [subscriberChannel, setSubscriberChannel] = useState<string | null>(() => localStorage.getItem(SUBSCRIBER_CHANNEL_KEY));
   const [showChannels, setShowChannels] = useState(false);
+  const [showManage, setShowManage] = useState(false);
   const [isSubscribing, setIsSubscribing] = useState(false);
+  const [isUnsubscribing, setIsUnsubscribing] = useState(false);
   const [showImagePreview, setShowImagePreview] = useState(false);
   const [showSmsInput, setShowSmsInput] = useState(false);
   const [smsPhone, setSmsPhone] = useState("");
