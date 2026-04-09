@@ -17,6 +17,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { ResourcePicker } from "@/components/services/ResourcePicker";
 import type { Resource } from "@/hooks/use-resources";
 import { useTemplates, useCreateTemplate, type ServiceTemplate } from "@/hooks/use-templates";
+import { exportServicePdf } from "@/lib/export-service-pdf";
 
 export default function ServiceEditor() {
   const { id } = useParams();
