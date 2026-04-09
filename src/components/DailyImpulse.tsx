@@ -347,6 +347,25 @@ export function DailyImpulse() {
             )}
 
             <div className="flex flex-wrap gap-2">
+              <Button
+                size="sm"
+                variant="outline"
+                onClick={() => {
+                  if (!impulse) return;
+                  tts.play(`${impulse.verse} – ${impulse.reference}. ${impulse.context}`);
+                }}
+                disabled={tts.isLoading}
+                className="text-xs border-primary/30 text-primary hover:bg-primary/10"
+              >
+                {tts.isLoading ? (
+                  <Loader2 className="h-3 w-3 mr-1.5 animate-spin" />
+                ) : tts.isPlaying ? (
+                  <VolumeX className="h-3 w-3 mr-1.5" />
+                ) : (
+                  <Volume2 className="h-3 w-3 mr-1.5" />
+                )}
+                {tts.isPlaying ? t("impulse.stopAudio", "Stopp") : t("impulse.playAudio", "Vorlesen")}
+              </Button>
               <Button size="sm" variant="outline" onClick={handleDeepDive} className="text-xs border-primary/30 text-primary hover:bg-primary/10">
                 <MessageCircle className="h-3 w-3 mr-1.5" />
                 {t("impulse.deepDive")}
