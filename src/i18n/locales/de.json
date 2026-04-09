@@ -606,24 +606,24 @@
     "pricingSubtitle": "Unterstützen Sie BibleBot und Ihre Organisation mit dem passenden Patronats-Paket.",
     "popular": "Beliebt",
     "free": "Kostenlos",
-    "perYear": "Personen / Jahr",
+    "perYear": "",
     "contact": "Kontakt aufnehmen",
     "tier": {
       "free": {
         "name": "Senfkorn",
-        "size": "Für kleine Organisationen & Gruppen (bis 50 Personen)"
+        "size": "Für kleine Organisationen (bis 50 Personen/Jahr)"
       },
       "community": {
         "name": "Wegbegleiter",
-        "size": "Für Organisationen mit 50–200 Personen"
+        "size": "Für Organisationen mit 50–200 Personen/Jahr"
       },
       "gemeinde": {
         "name": "Brückenbauer",
-        "size": "Für Organisationen mit 200–500 Personen"
+        "size": "Für Organisationen mit 200–500 Personen/Jahr"
       },
       "kirche": {
         "name": "Leuchtturm",
-        "size": "Für grosse Organisationen (500+ Personen)"
+        "size": "Für grosse Organisationen (500+ Personen)/Jahr"
       }
     },
     "features": {
