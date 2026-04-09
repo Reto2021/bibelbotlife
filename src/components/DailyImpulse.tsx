@@ -49,7 +49,8 @@ export function DailyImpulse() {
   const [impulse, setImpulse] = useState<Impulse | null>(getCachedImpulse);
   const [isExpanded, setIsExpanded] = useState(false);
   const [isLoading, setIsLoading] = useState(!impulse);
-  const [shareImageUrl, setShareImageUrl] = useState<string | null>(getCachedShareImage);
+  const [shareImageUrl, setShareImageUrl] = useState<string | null>(null);
+  const [shareBlob, setShareBlob] = useState<Blob | null>(null);
   const [isGeneratingImage, setIsGeneratingImage] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(() => localStorage.getItem(SUBSCRIBED_KEY) === "1");
   const [showChannels, setShowChannels] = useState(false);
