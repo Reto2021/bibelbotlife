@@ -239,6 +239,12 @@ export default function ServiceEditor() {
               Live
             </Button>
           )}
+          {blocks.length > 0 && (
+            <Button variant="outline" onClick={() => { setTemplateName(title); setSaveAsTemplateOpen(true); }}>
+              <BookmarkPlus className="h-4 w-4 mr-2" />
+              Als Vorlage
+            </Button>
+          )}
           <Button onClick={handleSave} disabled={saving}>
             <Save className="h-4 w-4 mr-2" />
             {saving ? "Speichern..." : "Speichern"}
