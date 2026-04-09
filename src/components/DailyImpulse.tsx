@@ -5,10 +5,10 @@ import { Button } from "@/components/ui/button";
 import { openBibleBotChat } from "@/lib/chat-events";
 import { ShareButton } from "@/components/ShareButton";
 import { useToast } from "@/hooks/use-toast";
+import { generateShareImage } from "@/lib/share-image-canvas";
 
 const IMPULSE_CACHE_KEY = "bibelbot-daily-impulse";
 const IMPULSE_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/daily-impulse`;
-const SHARE_IMAGE_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/impulse-share-image`;
 const SUBSCRIBE_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/subscribe-daily`;
 const TELEGRAM_LINK = "https://t.me/meinbibelbot";
 const VAPID_PUBLIC_KEY = "BLMl5bBRzhlza0ozrHEblp3BfKtbyDsbOP-n120rl6teGPFdoyFb77P9WnOZpbFs2hKyfwILmw8WQebJrp_qc7c";
