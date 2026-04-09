@@ -1237,6 +1237,36 @@ export type Database = {
         }
         Relationships: []
       }
+      theology_chunks: {
+        Row: {
+          content: string
+          created_at: string | null
+          embedding: string | null
+          id: string
+          metadata: Json | null
+          source_type: Database["public"]["Enums"]["theology_source_type"]
+          title: string
+        }
+        Insert: {
+          content: string
+          created_at?: string | null
+          embedding?: string | null
+          id?: string
+          metadata?: Json | null
+          source_type: Database["public"]["Enums"]["theology_source_type"]
+          title: string
+        }
+        Update: {
+          content?: string
+          created_at?: string | null
+          embedding?: string | null
+          id?: string
+          metadata?: Json | null
+          source_type?: Database["public"]["Enums"]["theology_source_type"]
+          title?: string
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           id: string
@@ -1314,6 +1344,22 @@ export type Database = {
           verse: number
         }[]
       }
+      search_theology: {
+        Args: {
+          filter_source?: Database["public"]["Enums"]["theology_source_type"]
+          match_count?: number
+          match_threshold?: number
+          query_embedding: string
+        }
+        Returns: {
+          content: string
+          id: string
+          metadata: Json
+          similarity: number
+          source_type: Database["public"]["Enums"]["theology_source_type"]
+          title: string
+        }[]
+      }
     }
     Enums: {
       app_role: "admin" | "moderator" | "user"
@@ -1361,6 +1407,7 @@ export type Database = {
         | "technician"
         | "volunteer"
         | "other"
+      theology_source_type: "lexikon" | "kommentar" | "konfession" | "seelsorge"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -1538,6 +1585,7 @@ export const Constants = {
         "volunteer",
         "other",
       ],
+      theology_source_type: ["lexikon", "kommentar", "konfession", "seelsorge"],
     },
   },
 } as const
