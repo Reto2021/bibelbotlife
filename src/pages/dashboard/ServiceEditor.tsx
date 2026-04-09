@@ -328,6 +328,10 @@ export default function ServiceEditor() {
                 <FileDown className="h-4 w-4 mr-2" />
                 PDF
               </Button>
+              <Button variant="outline" onClick={() => setEmailDialogOpen(true)}>
+                <Mail className="h-4 w-4 mr-2" />
+                E-Mail
+              </Button>
               <Button variant="outline" onClick={() => { setTemplateName(title); setSaveAsTemplateOpen(true); }}>
                 <BookmarkPlus className="h-4 w-4 mr-2" />
                 Als Vorlage
