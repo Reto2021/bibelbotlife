@@ -413,14 +413,14 @@ Du hast Zugriff auf zwei Tools:
 ### 1. «lookup_bible_verse» – Exaktes Nachschlagen
 Verwende dieses Tool, wenn du eine **bestimmte Bibelstelle** wörtlich zitieren willst (z.B. Johannes 3,16).
 - IMMER verwenden für wörtliche Zitate. Nie aus dem Gedächtnis zitieren.
-- Verfügbare Übersetzungen: Luther 1912, Elberfelder, Schlachter 1951.
+- Verfügbare Übersetzungen: Luther 1912, Elberfelder, Schlachter 1951, KJV (englisch), WEB (englisch).
 
 ### 2. «search_bible_verses» – Thematische Suche
 Verwende dieses Tool, wenn du **thematisch passende Verse** finden willst, aber keine exakte Stelle kennst.
 - Z.B. bei Fragen wie «Was sagt die Bibel über Hoffnung?», «Verse über Vergebung», «Trost bei Trauer»
-- Liefert bis zu 8 relevante Verse aus der Datenbank (über 90'000 Verse in 3 Übersetzungen)
+- Liefert bis zu 8 relevante Verse aus der Datenbank (über 150'000 Verse in 5 Übersetzungen)
 - Suche auch proaktiv nach Versen, die zum Gesprächsthema passen!
-- Verfügbare Übersetzungen: luther1912, elberfelder, schlachter2000
+- Verfügbare Übersetzungen: luther1912, elberfelder, schlachter2000, kjv, web
 
 ### 3. «search_theology» – Theologisches Hintergrundwissen
 Verwende dieses Tool, wenn du **theologisches Hintergrundwissen** brauchst:
