@@ -16,8 +16,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 
-const SpeechRecognition =
-  (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+const STT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/elevenlabs-stt`;
 
 import { CHAT_OPEN_EVENT, type ChatMode } from "@/lib/chat-events";
 export { openBibleBotChat } from "@/lib/chat-events";
