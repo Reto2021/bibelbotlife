@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
 import { Plus, Download, Send, FileText, Loader2, Trash2 } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -37,6 +36,19 @@ export default function InvoicesPage() {
   const [lineItems, setLineItems] = useState<LineItem[]>([
     { description: "", quantity: 1, unit_price: 0 },
   ]);
+
+  const { data: billing } = useQuery({
+    queryKey: ["church-billing", church?.id],
+    enabled: !!church?.id,
+    queryFn: async () => {
+      const { data } = await supabase
+        .from("church_billing")
+        .select("*")
+        .eq("church_id", church!.id)
+        .maybeSingle();
+      return data;
+    },
+  });
 
   const { data: invoices = [], isLoading } = useQuery({
     queryKey: ["invoices", church?.id],
@@ -83,7 +95,6 @@ export default function InvoicesPage() {
 
       if (error) throw error;
 
-      // Open the HTML invoice in a new tab for printing/saving as PDF
       if (data?.html) {
         const blob = new Blob([data.html], { type: "text/html" });
         const url = URL.createObjectURL(blob);
@@ -111,7 +122,8 @@ export default function InvoicesPage() {
   };
 
   const handleSendEmail = async (invoice: any) => {
-    if (!church?.billing_email && !church?.contact_email) {
+    const recipientEmail = billing?.billing_email || church?.contact_email;
+    if (!recipientEmail) {
       toast.error("Keine Rechnungs-E-Mail hinterlegt");
       return;
     }
@@ -120,10 +132,10 @@ export default function InvoicesPage() {
       await supabase.functions.invoke("send-transactional-email", {
         body: {
           templateName: "invoice-notification",
-          recipientEmail: church.billing_email || church.contact_email,
+          recipientEmail,
           idempotencyKey: `invoice-${invoice.id}`,
           templateData: {
-            churchName: church.name,
+            churchName: church!.name,
             invoiceNumber: invoice.invoice_number,
             amount: new Intl.NumberFormat("de-CH", { style: "currency", currency: "CHF" }).format(invoice.amount),
             dueDate: new Date(invoice.due_date).toLocaleDateString("de-CH"),
@@ -180,10 +192,10 @@ export default function InvoicesPage() {
 
             <div className="space-y-4">
               <div className="bg-muted/50 rounded-lg p-3 text-sm">
-                <strong>Empfänger:</strong> {church.billing_name || church.name}
-                {church.billing_street && <>, {church.billing_street}</>}
-                {church.billing_zip && <>, {church.billing_zip}</>}
-                {church.billing_city && <> {church.billing_city}</>}
+                <strong>Empfänger:</strong> {billing?.billing_name || church.name}
+                {billing?.billing_street && <>, {billing.billing_street}</>}
+                {billing?.billing_zip && <>, {billing.billing_zip}</>}
+                {billing?.billing_city && <> {billing.billing_city}</>}
               </div>
 
               <div className="space-y-3">

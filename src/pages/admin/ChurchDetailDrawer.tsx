@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useQueryClient } from "@tanstack/react-query";
+import { useQueryClient, useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { useChurchUsageStats } from "@/hooks/use-admin";
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
@@ -22,17 +22,38 @@ export function ChurchDetailDrawer({ church, open, onClose }: Props) {
   const queryClient = useQueryClient();
   const { data: usage } = useChurchUsageStats(church?.id ?? null);
   const [form, setForm] = useState<Partial<Tables<"church_partners">>>({});
+  const [billingForm, setBillingForm] = useState<Partial<Tables<"church_billing">>>({});
   const [saving, setSaving] = useState(false);
+
+  const { data: billing } = useQuery({
+    queryKey: ["church-billing", church?.id],
+    enabled: !!church?.id,
+    queryFn: async () => {
+      const { data } = await supabase
+        .from("church_billing")
+        .select("*")
+        .eq("church_id", church!.id)
+        .maybeSingle();
+      return data;
+    },
+  });
 
   useEffect(() => {
     if (church) setForm({ ...church });
   }, [church]);
 
+  useEffect(() => {
+    if (billing) setBillingForm({ ...billing });
+  }, [billing]);
+
   const set = (key: string, value: any) => setForm((prev) => ({ ...prev, [key]: value }));
+  const setBilling = (key: string, value: any) => setBillingForm((prev) => ({ ...prev, [key]: value }));
 
   const handleSave = async () => {
     if (!church) return;
     setSaving(true);
+
+    // Save church_partners fields
     const { error } = await supabase
       .from("church_partners")
       .update({
@@ -40,27 +61,37 @@ export function ChurchDetailDrawer({ church, open, onClose }: Props) {
         subscription_status: form.subscription_status,
         subscription_started_at: form.subscription_started_at,
         subscription_expires_at: form.subscription_expires_at,
-        billing_name: form.billing_name,
-        billing_street: form.billing_street,
-        billing_zip: form.billing_zip,
-        billing_city: form.billing_city,
-        billing_country: form.billing_country,
-        billing_email: form.billing_email,
-        billing_interval: form.billing_interval,
-        billing_reference: form.billing_reference,
-        iban: form.iban,
         is_active: form.is_active,
         contact_person: form.contact_person,
       })
       .eq("id", church.id);
 
+    // Upsert billing
+    const billingPayload = {
+      church_id: church.id,
+      billing_name: billingForm.billing_name ?? null,
+      billing_street: billingForm.billing_street ?? null,
+      billing_zip: billingForm.billing_zip ?? null,
+      billing_city: billingForm.billing_city ?? null,
+      billing_country: billingForm.billing_country ?? "CH",
+      billing_email: billingForm.billing_email ?? null,
+      billing_interval: billingForm.billing_interval ?? "yearly",
+      billing_reference: billingForm.billing_reference ?? null,
+      iban: billingForm.iban ?? null,
+    };
+
+    const { error: billingError } = await supabase
+      .from("church_billing")
+      .upsert(billingPayload, { onConflict: "church_id" });
+
     setSaving(false);
-    if (error) {
+    if (error || billingError) {
       toast.error("Fehler beim Speichern");
     } else {
       toast.success("Gespeichert");
       queryClient.invalidateQueries({ queryKey: ["admin-churches"] });
       queryClient.invalidateQueries({ queryKey: ["admin-stats"] });
+      queryClient.invalidateQueries({ queryKey: ["church-billing", church.id] });
     }
   };
 
@@ -153,7 +184,7 @@ export function ChurchDetailDrawer({ church, open, onClose }: Props) {
 
             <div className="space-y-2">
               <Label>Billing-Intervall</Label>
-              <Select value={form.billing_interval ?? "yearly"} onValueChange={(v) => set("billing_interval", v)}>
+              <Select value={billingForm.billing_interval ?? "yearly"} onValueChange={(v) => setBilling("billing_interval", v)}>
                 <SelectTrigger><SelectValue /></SelectTrigger>
                 <SelectContent>
                   <SelectItem value="monthly">Monatlich</SelectItem>
@@ -164,18 +195,18 @@ export function ChurchDetailDrawer({ church, open, onClose }: Props) {
 
             <div className="border-t border-border pt-4 space-y-3">
               <h4 className="text-sm font-medium">Rechnungsadresse</h4>
-              <InputField label="Name" value={form.billing_name} onChange={(v) => set("billing_name", v)} />
-              <InputField label="Strasse" value={form.billing_street} onChange={(v) => set("billing_street", v)} />
+              <InputField label="Name" value={billingForm.billing_name} onChange={(v) => setBilling("billing_name", v)} />
+              <InputField label="Strasse" value={billingForm.billing_street} onChange={(v) => setBilling("billing_street", v)} />
               <div className="grid grid-cols-3 gap-2">
-                <InputField label="PLZ" value={form.billing_zip} onChange={(v) => set("billing_zip", v)} />
+                <InputField label="PLZ" value={billingForm.billing_zip} onChange={(v) => setBilling("billing_zip", v)} />
                 <div className="col-span-2">
-                  <InputField label="Stadt" value={form.billing_city} onChange={(v) => set("billing_city", v)} />
+                  <InputField label="Stadt" value={billingForm.billing_city} onChange={(v) => setBilling("billing_city", v)} />
                 </div>
               </div>
-              <InputField label="Land" value={form.billing_country} onChange={(v) => set("billing_country", v)} />
-              <InputField label="E-Mail" value={form.billing_email} onChange={(v) => set("billing_email", v)} />
-              <InputField label="IBAN" value={form.iban} onChange={(v) => set("iban", v)} />
-              <InputField label="Referenz" value={form.billing_reference} onChange={(v) => set("billing_reference", v)} />
+              <InputField label="Land" value={billingForm.billing_country} onChange={(v) => setBilling("billing_country", v)} />
+              <InputField label="E-Mail" value={billingForm.billing_email} onChange={(v) => setBilling("billing_email", v)} />
+              <InputField label="IBAN" value={billingForm.iban} onChange={(v) => setBilling("iban", v)} />
+              <InputField label="Referenz" value={billingForm.billing_reference} onChange={(v) => setBilling("billing_reference", v)} />
             </div>
 
             <div className="flex items-center gap-3 pt-2">
