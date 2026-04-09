@@ -151,11 +151,12 @@ const Index = () => {
               aria-label="Menu"
             >
               {mobileMenuOpen ? <XIcon className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </Button>
           </div>
         </div>
-        {/* Mobile menu dropdown */}
+        {/* Mobile/tablet menu dropdown */}
         <div
-          className={`sm:hidden border-t border-border bg-card/95 backdrop-blur-sm overflow-hidden transition-all duration-300 ease-in-out ${
+          className={`lg:hidden border-t border-border bg-card/95 backdrop-blur-sm overflow-hidden transition-all duration-300 ease-in-out ${
             mobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0 border-t-transparent"
           }`}
         >
