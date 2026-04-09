@@ -600,7 +600,7 @@ const Index = () => {
       <footer className="bg-foreground text-background py-12 px-4">
         <div className="container mx-auto max-w-4xl">
           <div className="flex items-center justify-center space-x-2 mb-6">
-            <AppLogo className="h-10 w-10" forceDark />
+            <AppLogo className="h-10 w-10" invertTheme />
             <span className="text-2xl font-bold">BibleBot.Life</span>
           </div>
           <p className="text-background/70 mb-4 text-center">{t("footer.tagline")}</p>
