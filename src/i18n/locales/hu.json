@@ -7,7 +7,8 @@
     "badge": {
       "noLogin": "Nincs bejelentkezés",
       "noData": "Nincs adat",
-      "noJudgment": "Nincs ítélet"
+      "noJudgment": "Nincs ítélet",
+      "optionalLogin": "Bejelentkezés opcionális"
     },
     "title1": "A Biblia.",
     "title2": " Újragondolva.",
@@ -21,7 +22,9 @@
     "loading": "Napi impulzus betöltése...",
     "label": "A nap impulzusa",
     "deepDive": "Mit jelent ez számomra?",
-    "explore": "Olvassa el a teljes szakaszt"
+    "explore": "Olvassa el a teljes szakaszt",
+    "alreadySubscribed": "Már kapod a napi inspirációt",
+    "subscribeCta": "Szeretnéd megkapni ezt az inspirációt naponta?"
   },
   "features": {
     "sectionTitle": "Hogyan kísér el a BibleBot",
@@ -151,7 +154,8 @@
     "toastPermDenied": "Engedély megtagadva",
     "toastPermDeniedDesc": "Kérjük, engedélyezze az értesítéseket a böngésző beállításaiban.",
     "toastError": "Hiba",
-    "toastErrorDesc": "Kérjük, próbálja meg később."
+    "toastErrorDesc": "Kérjük, próbálja meg később.",
+    "subscribeButton": "Feliratkozás Inspo-ra"
   },
   "faq": {
     "badge": "Gyakran Ismételt Kérdések",
@@ -286,7 +290,8 @@
     "errorTitle": "Hiba",
     "errorConnection": "nem érhető el.",
     "errorNoStream": "Nincs stream",
-    "seniorMode": "Szenior mód (nagyobb betűméret)"
+    "seniorMode": "Szenior mód (nagyobb betűméret)",
+    "loginHint": "Jelentkezz be, hogy beszélgetéseid minden eszközön megmaradjanak"
   },
   "install": {
     "title": "BibleBot telepítése",
@@ -333,7 +338,10 @@
     "baptism": {
       "title": "Keresztelői ige megtalálása",
       "desc": "A tökéletes vers gyermekednek",
-      "prompt": "Segítsen nekem megtalálni egy megfelelő keresztelői igét. Milyen gyermekről van szó, és mit kívánnak a szülők?"
+      "prompt": "Segítsen nekem megtalálni egy megfelelő keresztelői igét. Milyen gyermekről van szó, és mit kívánnak a szülők?",
+      "prompt_v1": "Mit jelent valójában a keresztség?",
+      "prompt_v2": "Mesélj a keresztségről a Bibliában – lepj meg!",
+      "prompt_v3": "Miért keresztelkednek meg az emberek?"
     },
     "condolence": {
       "title": "Vigasztaló szavak",
@@ -348,7 +356,10 @@
     "anxiety": {
       "title": "Szorongás és aggodalmak",
       "desc": "Bátorság megtalálása nehéz időkben",
-      "prompt": "Éppen szorongással és aggodalmakkal küzdök. Mit mond erről a Biblia? Vannak versek, amelyek bátorságot adnak?"
+      "prompt": "Éppen szorongással és aggodalmakkal küzdök. Mit mond erről a Biblia? Vannak versek, amelyek bátorságot adnak?",
+      "prompt_v1": "Szorongok. Mit mond a Biblia a szorongásról?",
+      "prompt_v2": "Hogyan segíthet a hit a szorongásban?",
+      "prompt_v3": "Mely bibliai alakok is szorongtak?"
     },
     "confession": {
       "title": "Gyónás",
@@ -358,7 +369,10 @@
     "heartbreak": {
       "title": "Szívfájdalom",
       "desc": "Amit a Biblia mond a szívfájdalomról",
-      "prompt": "Megtört a szívem. Mit mond a Biblia a szívfájdalomról és arról, hogyan találhatunk újra reményt?"
+      "prompt": "Megtört a szívem. Mit mond a Biblia a szívfájdalomról és arról, hogyan találhatunk újra reményt?",
+      "prompt_v1": "Megtört a szívem. Mit mond erről a Biblia?",
+      "prompt_v2": "Hogyan kezeljem a szívfájdalmat – van bibliai segítség?",
+      "prompt_v3": "Meggyógyíthatja-e Isten a megtört szívet?"
     },
     "newstart": {
       "title": "Újrakezdés",
@@ -388,7 +402,10 @@
     "gratitude": {
       "title": "Hála",
       "desc": "Személyes hálaima",
-      "prompt": "Szeretnék hálát adni Istennek. Segítsen nekem egy személyes hálaima megfogalmazásában."
+      "prompt": "Szeretnék hálát adni Istennek. Segítsen nekem egy személyes hálaima megfogalmazásában.",
+      "prompt_v1": "Hogyan lehetek hálásabb?",
+      "prompt_v2": "Mit mond a Biblia a hálaadásról?",
+      "prompt_v3": "Miért olyan fontos a hála a hitben?"
     },
     "lifewheel": {
       "title": "Életkerék",
@@ -447,7 +464,10 @@
     "forgiveness": {
       "title": "Megbocsátás",
       "desc": "Ha a megbocsátás lehetetlennek tűnik",
-      "prompt": "Egyszerűen nem tudok megbocsátani valakinek. Túl fájdalmas. Mit mond a Biblia a megbocsátásról?"
+      "prompt": "Egyszerűen nem tudok megbocsátani valakinek. Túl fájdalmas. Mit mond a Biblia a megbocsátásról?",
+      "prompt_v1": "Mit mond a Biblia a megbocsátásról?",
+      "prompt_v2": "Hogyan bocsáthatok meg valakinek, aki megbántott engem?",
+      "prompt_v3": "Vannak a megbocsátásnak határai?"
     },
     "familyconflict": {
       "title": "Családi vita",
@@ -467,12 +487,23 @@
     "prayer": {
       "title": "Imakérés",
       "desc": "Együtt imádkozni",
-      "prompt": "Van egy imakérésem, és szeretnék együtt imádkozni. Kísérjen el az imában."
+      "prompt": "Van egy imakérésem, és szeretnék együtt imádkozni. Kísérjen el az imában.",
+      "prompt_v1": "Hogyan tanuljak meg imádkozni?",
+      "prompt_v2": "Mit mond a Biblia az imáról?",
+      "prompt_v3": "Miért nem hallgatja meg Isten néhány imát?"
     },
     "bibleverse": {
       "title": "Vers megértése",
       "desc": "Egy bibliai vers magyarázata",
       "prompt": "Szeretnék jobban megérteni egy bibliai verset. Tudna segíteni nekem kontextusba helyezni?"
+    },
+    "biblequiz": {
+      "desc": "Tesztelje bibliai tudását játékosan",
+      "title": "Bibliai kvíz"
+    },
+    "prayerwall": {
+      "desc": "Oszd meg imakéréseidet és imádkozzatok egymásért",
+      "title": "Imádságfal"
     }
   },
   "lifeWheel": {
@@ -801,5 +832,30 @@
     "weddingDesc": "Esküvői fogadalmak megírása, dalok kiválasztása és az ünnepség megtervezése.",
     "baptismDesc": "Keresztelői kívánságok megfogalmazása és a folyamat előkészítése a gyülekezettel.",
     "confirmationDesc": "Konfirmációs ige megtalálása és személyes szövegek előkészítése."
+  },
+  "chatHero": {
+    "ariaLabel": "Tegyél fel kérdést a BibleBotnak",
+    "focusPlaceholder": "Írd be a kérdésedet…",
+    "placeholder1": "Miért vagyok igazán hálás?",
+    "placeholder2": "Hogyan találhatok belső békét?",
+    "placeholder3": "Mi ad nekem reményt?",
+    "placeholder4": "Mit kíván a szívem?",
+    "placeholder5": "Mit tehetek ma jót?",
+    "send": "Küldés",
+    "subtitle": "Tedd fel kérdésedet – nyíltan, őszintén, bejelentkezés nélkül.",
+    "suggestion1": "Mit jelent a nevem?",
+    "suggestion2": "Mi ad nekem erőt ma?",
+    "suggestion3": "Miért vagyok hálás?"
+  },
+  "meta": {
+    "forChurchesDesc": "A BibleBot, mint partnere az Ön gyülekezetének: ifjúsági munka, konfirmáció, lelkigondozás és bibliai körök. Ingyenestől a prémiumig.",
+    "forChurchesTitle": "BibleBot gyülekezeteknek – Digitális lelkigondozás és bibliai kísérés",
+    "homeDesc": "A BibleBot 5 bibliafordítással, coaching módszertannal és lelkigondozással kíséri Önt. Névtelenül, ingyenesen, 36 nyelven.",
+    "homeTitle": "BibleBot – Személyes Bibliai Kísérőd | Ingyenes és Névtelen",
+    "loginDesc": "Jelentkezz be a BibleBotba, hogy felkészítsd a személyes szertartásaidat.",
+    "loginTitle": "Bejelentkezés – BibleBot"
+  },
+  "splash": {
+    "patronage": "Ajánlja"
   }
 }
