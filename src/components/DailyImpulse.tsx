@@ -1,7 +1,8 @@
 import { useState, useEffect, useCallback } from "react";
 import { useTranslation } from "react-i18next";
-import { Sparkles, ChevronRight, BookOpen, Loader2, MessageCircle, Image, Download, Bell, Send, Smartphone } from "lucide-react";
+import { Sparkles, ChevronRight, BookOpen, Loader2, MessageCircle, Image, Download, Bell, Send, Smartphone, Volume2, VolumeX } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTTS } from "@/hooks/use-tts";
 import { openBibleBotChat } from "@/lib/chat-events";
 import { ShareButton } from "@/components/ShareButton";
 import { useToast } from "@/hooks/use-toast";
@@ -58,6 +59,7 @@ export function DailyImpulse() {
   const [showImagePreview, setShowImagePreview] = useState(false);
   const [showSmsInput, setShowSmsInput] = useState(false);
   const [smsPhone, setSmsPhone] = useState("");
+  const tts = useTTS();
 
   useEffect(() => {
     if (impulse) return;
@@ -345,6 +347,25 @@ export function DailyImpulse() {
             )}
 
             <div className="flex flex-wrap gap-2">
+              <Button
+                size="sm"
+                variant="outline"
+                onClick={() => {
+                  if (!impulse) return;
+                  tts.play(`${impulse.verse} – ${impulse.reference}. ${impulse.context}`);
+                }}
+                disabled={tts.isLoading}
+                className="text-xs border-primary/30 text-primary hover:bg-primary/10"
+              >
+                {tts.isLoading ? (
+                  <Loader2 className="h-3 w-3 mr-1.5 animate-spin" />
+                ) : tts.isPlaying ? (
+                  <VolumeX className="h-3 w-3 mr-1.5" />
+                ) : (
+                  <Volume2 className="h-3 w-3 mr-1.5" />
+                )}
+                {tts.isPlaying ? t("impulse.stopAudio", "Stopp") : t("impulse.playAudio", "Vorlesen")}
+              </Button>
               <Button size="sm" variant="outline" onClick={handleDeepDive} className="text-xs border-primary/30 text-primary hover:bg-primary/10">
                 <MessageCircle className="h-3 w-3 mr-1.5" />
                 {t("impulse.deepDive")}

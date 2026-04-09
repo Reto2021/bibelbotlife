@@ -24,7 +24,9 @@
     "deepDive": "Was bedeutet das für mich?",
     "explore": "Ganzen Abschnitt lesen",
     "subscribeCta": "Diese Inspiration täglich erhalten?",
-    "alreadySubscribed": "Du erhältst die tägliche Inspiration"
+    "alreadySubscribed": "Du erhältst die tägliche Inspiration",
+    "playAudio": "Vorlesen",
+    "stopAudio": "Stopp"
   },
   "features": {
     "sectionTitle": "Wie dein BibleBot dich begleitet",

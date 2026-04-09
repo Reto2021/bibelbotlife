@@ -24,7 +24,9 @@
     "deepDive": "What does this mean for me?",
     "explore": "Read full passage",
     "subscribeCta": "Get this impulse daily?",
-    "alreadySubscribed": "You receive the daily impulse"
+    "alreadySubscribed": "You receive the daily impulse",
+    "playAudio": "Listen",
+    "stopAudio": "Stop"
   },
   "features": {
     "sectionTitle": "How BibleBot accompanies you",
