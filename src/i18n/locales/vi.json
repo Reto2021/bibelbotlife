@@ -785,6 +785,47 @@
       "error": "Lỗi khi gửi. Vui lòng thử lại."
     }
   },
+  "chatHero": {
+    "ariaLabel": "Hỏi BibleBot",
+    "focusPlaceholder": "Viết câu hỏi của bạn…",
+    "placeholder1": "Điều gì thực sự làm tôi biết ơn?",
+    "placeholder2": "Làm thế nào để tôi tìm thấy sự bình yên nội tâm?",
+    "placeholder3": "Điều gì mang lại cho tôi hy vọng?",
+    "placeholder4": "Trái tim tôi mong muốn điều gì?",
+    "placeholder5": "Hôm nay tôi có thể làm điều tốt gì?",
+    "send": "Gửi",
+    "subtitle": "Đặt câu hỏi của bạn – một cách cởi mở, trung thực, không cần đăng nhập.",
+    "suggestion1": "Tên tôi có ý nghĩa gì?",
+    "suggestion2": "Điều gì cho tôi sức mạnh hôm nay?",
+    "suggestion3": "Tôi biết ơn điều gì?"
+  },
+  "splash": {
+    "patronage": "Được giới thiệu bởi"
+  },
+  "meta": {
+    "forChurchesDesc": "BibleBot là đối tác cho cộng đồng của bạn: công tác thanh niên, lễ xưng tội, mục vụ và các nhóm học Kinh Thánh. Miễn phí đến Premium.",
+    "forChurchesTitle": "BibleBot dành cho Hội Thánh – Mục Vụ Kỹ Thuật Số & Trợ Giúp Kinh Thánh",
+    "homeDesc": "BibleBot đồng hành cùng bạn với 5 bản dịch Kinh Thánh, phương pháp huấn luyện và mục vụ. Ẩn danh, miễn phí, bằng 36 ngôn ngữ.",
+    "homeTitle": "BibleBot – Người bạn đồng hành Kinh Thánh cá nhân của bạn | Miễn phí & Ẩn danh",
+    "loginDesc": "Đăng nhập vào BibleBot để chuẩn bị các nghi lễ cá nhân của bạn.",
+    "loginTitle": "Đăng nhập – BibleBot"
+  },
+  "meinBereich": {
+    "title": "Khu vực của tôi",
+    "subtitle": "Chuẩn bị các nghi lễ cá nhân của bạn và chia sẻ chúng với mục sư của bạn.",
+    "sidebarLabel": "Khu vực của tôi",
+    "overview": "Tổng quan",
+    "funeral": "Điếu văn",
+    "wedding": "Đám cưới",
+    "baptismCeremony": "Lễ rửa tội",
+    "confirmation": "Lễ ban phước",
+    "logout": "Đăng xuất",
+    "comingSoon": "Sắp ra mắt",
+    "funeralDesc": "Tạo tiểu sử, lưu giữ kỷ niệm và chia sẻ với mục sư.",
+    "weddingDesc": "Viết lời thề hôn nhân, chọn bài hát và lên kế hoạch cho buổi lễ.",
+    "baptismDesc": "Soạn thảo lời chúc rửa tội và chuẩn bị quy trình với cộng đồng.",
+    "confirmationDesc": "Tìm câu kinh thánh cho lễ ban phước và chuẩn bị các văn bản cá nhân."
+  },
   "eulogy": {
     "pageTitle": "Điếu văn – Tạo tiểu sử | BibleBot",
     "pageDesc": "Lưu giữ những kỷ niệm về người thân yêu và tạo một văn bản tiểu sử đẹp cho điếu văn.",
@@ -818,46 +859,5 @@
     "micError": "Không thể khởi động micro. Vui lòng cấp quyền.",
     "needMore": "Vui lòng ghi lại kỷ niệm hoặc viết ghi chú trước.",
     "genError": "Lỗi khi tạo văn bản. Vui lòng thử lại."
-  },
-  "meinBereich": {
-    "title": "Khu vực của tôi",
-    "subtitle": "Chuẩn bị các nghi lễ cá nhân của bạn và chia sẻ chúng với mục sư của bạn.",
-    "sidebarLabel": "Khu vực của tôi",
-    "overview": "Tổng quan",
-    "funeral": "Điếu văn",
-    "wedding": "Đám cưới",
-    "baptismCeremony": "Lễ rửa tội",
-    "confirmation": "Lễ ban phước",
-    "logout": "Đăng xuất",
-    "comingSoon": "Sắp ra mắt",
-    "funeralDesc": "Tạo tiểu sử, lưu giữ kỷ niệm và chia sẻ với mục sư.",
-    "weddingDesc": "Viết lời thề hôn nhân, chọn bài hát và lên kế hoạch cho buổi lễ.",
-    "baptismDesc": "Soạn thảo lời chúc rửa tội và chuẩn bị quy trình với cộng đồng.",
-    "confirmationDesc": "Tìm câu kinh thánh cho lễ ban phước và chuẩn bị các văn bản cá nhân."
-  },
-  "chatHero": {
-    "ariaLabel": "Hỏi BibleBot",
-    "focusPlaceholder": "Viết câu hỏi của bạn…",
-    "placeholder1": "Điều gì thực sự làm tôi biết ơn?",
-    "placeholder2": "Làm thế nào để tôi tìm thấy sự bình yên nội tâm?",
-    "placeholder3": "Điều gì mang lại cho tôi hy vọng?",
-    "placeholder4": "Trái tim tôi mong muốn điều gì?",
-    "placeholder5": "Hôm nay tôi có thể làm điều tốt gì?",
-    "send": "Gửi",
-    "subtitle": "Đặt câu hỏi của bạn – một cách cởi mở, trung thực, không cần đăng nhập.",
-    "suggestion1": "Tên tôi có ý nghĩa gì?",
-    "suggestion2": "Điều gì cho tôi sức mạnh hôm nay?",
-    "suggestion3": "Tôi biết ơn điều gì?"
-  },
-  "meta": {
-    "forChurchesDesc": "BibleBot là đối tác cho cộng đồng của bạn: công tác thanh niên, lễ xưng tội, mục vụ và các nhóm học Kinh Thánh. Miễn phí đến Premium.",
-    "forChurchesTitle": "BibleBot dành cho Hội Thánh – Mục Vụ Kỹ Thuật Số & Trợ Giúp Kinh Thánh",
-    "homeDesc": "BibleBot đồng hành cùng bạn với 5 bản dịch Kinh Thánh, phương pháp huấn luyện và mục vụ. Ẩn danh, miễn phí, bằng 36 ngôn ngữ.",
-    "homeTitle": "BibleBot – Người bạn đồng hành Kinh Thánh cá nhân của bạn | Miễn phí & Ẩn danh",
-    "loginDesc": "Đăng nhập vào BibleBot để chuẩn bị các nghi lễ cá nhân của bạn.",
-    "loginTitle": "Đăng nhập – BibleBot"
-  },
-  "splash": {
-    "patronage": "Được giới thiệu bởi"
   }
 }
