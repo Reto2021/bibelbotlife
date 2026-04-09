@@ -74,9 +74,21 @@ const Index = () => {
             aria-label="Scroll to top"
           >
             <AppLogo className="h-10 w-10 lg:h-14 lg:w-14" />
-            <div className="flex flex-col">
+            <div className="flex w-max flex-col">
               <span className="text-lg lg:text-xl font-bold text-foreground leading-tight">BibleBot<span className="text-sm lg:text-base font-normal text-muted-foreground dark:text-amber-400">.Life</span></span>
-              <span className="text-[9px] font-medium tracking-[0.22em] uppercase text-muted-foreground/70 dark:text-amber-400/70 hidden lg:block">Everyday Sunday</span>
+              <span
+                className="hidden w-full items-center justify-between text-[9px] font-medium uppercase text-muted-foreground/70 dark:text-amber-400/70 lg:flex"
+                aria-label="Everyday Sunday"
+                role="text"
+              >
+                {"EVERYDAY".split("").map((letter, index) => (
+                  <span key={`everyday-${index}`} aria-hidden="true">{letter}</span>
+                ))}
+                <span className="w-[0.35em] shrink-0" aria-hidden="true" />
+                {"SUNDAY".split("").map((letter, index) => (
+                  <span key={`sunday-${index}`} aria-hidden="true">{letter}</span>
+                ))}
+              </span>
             </div>
           </button>
           <div className="flex items-center gap-1 lg:gap-2">
