@@ -427,6 +427,14 @@
       "desc": "Ruhe finden in der Nacht",
       "prompt": "Ich kann nicht schlafen und mache mir Gedanken. Gibt es ein beruhigendes Gebet oder einen Psalm für die Nacht?"
     },
+    "prayerwall": {
+      "title": "Gebetswand",
+      "desc": "Gebetsanliegen teilen & füreinander beten"
+    },
+    "biblequiz": {
+      "title": "Bibelquiz",
+      "desc": "Teste dein Bibelwissen spielerisch"
+    },
     "loneliness": {
       "title": "Einsamkeit",
       "desc": "Du bist nie allein",
