@@ -535,8 +535,8 @@
     "backToList": "목록으로 돌아가기"
   },
   "church": {
-    "badge": "교회를 위해",
-    "heroTitle": "귀하의 교회를 위한 BibleBot",
+    "badge": "조직을 위해",
+    "heroTitle": "귀하의 조직을 위한 BibleBot",
     "heroSubtitle": "성경적 지혜로 교인들을 동반하세요 – 디지털로, 개인적으로, 24시간 내내.",
     "useCasesTitle": "사용 사례",
     "useCase": {
@@ -561,7 +561,7 @@
     "pricingSubtitle": "적절한 후원 패키지로 BibleBot과 귀하의 교회를 지원하세요.",
     "popular": "인기",
     "free": "무료",
-    "perYear": "년",
+    "perYear": "명 / 년",
     "contact": "문의하기",
     "tier": {
       "free": {
@@ -669,7 +669,7 @@
     }
   },
   "institutions": {
-    "badge": "기관을 위해",
+    "badge": "조직을 위해",
     "heroTitle": "귀하의 기관을 위한 BibleBot",
     "heroSubtitle": "요양원, 노인 요양원, 병원, 교정 시설을 위한 디지털 상담 – 개인적으로, 비밀스럽게, 24시간 내내.",
     "seniorHint": {

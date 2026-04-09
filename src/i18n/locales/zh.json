@@ -574,8 +574,8 @@
     "backToList": "返回列表"
   },
   "church": {
-    "badge": "面向教会",
-    "heroTitle": "BibleBot 助力您的教会",
+    "badge": "面向组织",
+    "heroTitle": "为您的组织提供BibleBot",
     "heroSubtitle": "以圣经智慧伴随您的会众——数字化、个性化、全天候。",
     "useCasesTitle": "应用场景",
     "useCase": {
@@ -600,7 +600,7 @@
     "pricingSubtitle": "选择合适的赞助套餐，支持 BibleBot 和您的教会。",
     "popular": "热门",
     "free": "免费",
-    "perYear": "年",
+    "perYear": "人 / 年",
     "contact": "联系我们",
     "tier": {
       "free": {
@@ -708,7 +708,7 @@
     }
   },
   "institutions": {
-    "badge": "适用于机构",
+    "badge": "面向组织",
     "heroTitle": "BibleBot 助力您的机构",
     "heroSubtitle": "为护理院、养老院、医院和刑事监管提供数字教牧关怀——个性化、保密且全天候。",
     "seniorHint": {

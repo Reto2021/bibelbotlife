@@ -535,8 +535,8 @@
     "backToList": "Vissza a listához"
   },
   "church": {
-    "badge": "Gyülekezeteknek",
-    "heroTitle": "BibleBot az Ön gyülekezete számára",
+    "badge": "Szervezeteknek",
+    "heroTitle": "BibleBot szervezetének",
     "heroSubtitle": "Kísérje el gyülekezeti tagjait bibliai bölcsességgel – digitálisan, személyesen és éjjel-nappal.",
     "useCasesTitle": "Felhasználási lehetőségek",
     "useCase": {
@@ -561,24 +561,24 @@
     "pricingSubtitle": "Támogassa a BibleBotot és gyülekezetét a megfelelő patronátus csomaggal.",
     "popular": "Népszerű",
     "free": "Ingyenes",
-    "perYear": "Év",
+    "perYear": "személy / év",
     "contact": "Kapcsolatfelvétel",
     "tier": {
       "free": {
         "name": "Mustármag",
-        "size": "Kis gyülekezeteknek és házi köröknek (legfeljebb 50 tag)"
+        "size": "Kis szervezeteknek és házi köröknek (legfeljebb 50 személy)"
       },
       "community": {
         "name": "Útitárs",
-        "size": "50–200 tagú gyülekezeteknek"
+        "size": "50–200 személyú szervezeteknek"
       },
       "gemeinde": {
         "name": "Hídépítő",
-        "size": "200–500 tagú gyülekezeteknek"
+        "size": "200–500 személyú szervezeteknek"
       },
       "kirche": {
         "name": "Világítótorony",
-        "size": "Nagy gyülekezeteknek és intézményeknek (500+ tag)"
+        "size": "Nagy szervezeteknek és intézményeknek (500+ személy)"
       }
     },
     "features": {
@@ -669,7 +669,7 @@
     }
   },
   "institutions": {
-    "badge": "Intézményeknek",
+    "badge": "Szervezeteknek",
     "heroTitle": "BibleBot az Ön intézménye számára",
     "heroSubtitle": "Digitális lelkipásztori gondozás idősek otthonai, kórházak és büntetés-végrehajtási intézetek számára – személyesen, bizalmasan és éjjel-nappal.",
     "seniorHint": {

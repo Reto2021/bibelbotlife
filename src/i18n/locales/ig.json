@@ -535,8 +535,8 @@
     "backToList": "Laghachi na ndepụta"
   },
   "church": {
-    "badge": "Maka Ọgbakọ",
-    "heroTitle": "BibleBot maka ọgbakọ gị",
+    "badge": "Maka ụlọ ọrụ",
+    "heroTitle": "BibleBot maka ụlọ ọrụ gị",
     "heroSubtitle": "Soro ndị otu ọgbakọ gị na amamihe Akwụkwọ Nsọ – dijitalụ, nkeonwe na gburugburu elekere.",
     "useCasesTitle": "Ojiji",
     "useCase": {
@@ -561,7 +561,7 @@
     "pricingSubtitle": "Kwado BibleBot na ọgbakọ gị na ngwugwu nkwado kwesịrị ekwesị.",
     "popular": "Ewu ewu",
     "free": "N'efu",
-    "perYear": "Afọ",
+    "perYear": "ndị mmadụ / afọ",
     "contact": "Kpọtụrụ anyị",
     "tier": {
       "free": {

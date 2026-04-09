@@ -540,9 +540,9 @@
     "backToList": "Back to list"
   },
   "church": {
-    "badge": "For Churches",
-    "heroTitle": "BibleBot for Your Church",
-    "heroSubtitle": "Accompany your congregation with biblical wisdom – digital, personal, and around the clock.",
+    "badge": "For Organizations",
+    "heroTitle": "BibleBot for Your Organization",
+    "heroSubtitle": "Accompany your team and community with biblical wisdom – digital, personal, and around the clock.",
     "useCasesTitle": "Use Cases",
     "useCase": {
       "youth": {
@@ -563,27 +563,27 @@
       }
     },
     "pricingTitle": "Patronage Packages",
-    "pricingSubtitle": "Support BibleBot and your church with the right patronage package.",
+    "pricingSubtitle": "Support BibleBot and your organization with the right patronage package.",
     "popular": "Popular",
     "free": "Free",
-    "perYear": "year",
+    "perYear": "people / year",
     "contact": "Get in touch",
     "tier": {
       "free": {
         "name": "Mustard Seed",
-        "size": "For small churches & home groups (up to 50 members)"
+        "size": "For small organizations & groups (up to 50 people)"
       },
       "community": {
         "name": "Companion",
-        "size": "For churches with 50–200 members"
+        "size": "For organizations with 50–200 people"
       },
       "gemeinde": {
         "name": "Bridge Builder",
-        "size": "For churches with 200–500 members"
+        "size": "For organizations with 200–500 people"
       },
       "kirche": {
         "name": "Lighthouse",
-        "size": "For large churches & institutions (500+ members)"
+        "size": "For large organizations & institutions (500+ people)"
       }
     },
     "features": {
@@ -602,14 +602,14 @@
       "apiAccess": "API access",
       "accountManager": "Dedicated account manager"
     },
-    "viewDirectory": "View church directory",
-    "directoryBadge": "Church Directory",
-    "directoryTitle": "Partner Churches",
-    "directorySubtitle": "Find a church near you that recommends BibleBot.",
+    "viewDirectory": "View partner directory",
+    "directoryBadge": "Partner Directory",
+    "directoryTitle": "Partner Organizations",
+    "directorySubtitle": "Find an organization near you that recommends BibleBot.",
     "searchPlaceholder": "Search by city, name, or denomination...",
-    "noResults": "No churches in the directory yet.",
+    "noResults": "No organizations in the directory yet.",
     "becomePartner": "Become a partner →",
-    "notFound": "Church not found.",
+    "notFound": "Organization not found.",
     "backToDirectory": "Back to directory",
     "pastor": "Pastor",
     "serviceTimes": "Service Times",
@@ -622,7 +622,7 @@
     "contactMessage": "Your message",
     "contactSend": "Send message",
     "contactSuccess": "Message sent! 🙏",
-    "contactSuccessDesc": "The church will get back to you.",
+    "contactSuccessDesc": "The organization will get back to you.",
     "recommendedBy": "Recommended by {{name}}",
     "setup": "Setup (one-time)",
     "form": {
@@ -630,7 +630,7 @@
       "subtitle": "We'll get back to you within 48 hours.",
       "name": "Your name",
       "email": "Email address",
-      "churchName": "Church name",
+      "churchName": "Organization name",
       "tier": "Preferred package",
       "tierPlaceholder": "Choose package...",
       "message": "Your message",
@@ -648,8 +648,8 @@
         "military": "Military Chaplaincy"
       }
     },
-    "institutionsTitle": "Also for Institutions",
-    "institutionsSubtitle": "BibleBot supports not only churches – care homes, retirement homes, hospitals, and prison chaplaincy also benefit from digital pastoral care.",
+    "institutionsTitle": "For all kinds of organizations",
+    "institutionsSubtitle": "BibleBot supports churches, care homes, retirement homes, hospitals, prison chaplaincy, and many other organizations with digital pastoral care.",
     "institution": {
       "careHome": {
         "title": "Care Homes",
@@ -674,8 +674,8 @@
     }
   },
   "institutions": {
-    "badge": "For Institutions",
-    "heroTitle": "BibleBot for Your Institution",
+    "badge": "For Organizations",
+    "heroTitle": "BibleBot for Your Organization",
     "heroSubtitle": "Digital pastoral care for care homes, retirement homes, hospitals, and correctional facilities – personal, confidential, and around the clock.",
     "seniorHint": {
       "title": "Senior Mode Available",
@@ -686,8 +686,8 @@
     "useCasesTitle": "How BibleBot is Used",
     "useCasesSubtitle": "Practical applications for daily life in your institution.",
     "pricingTitle": "Patronage Packages",
-    "pricingSubtitle": "The same packages as for churches – adapted to institutional needs.",
-    "linkChurches": "Also available for churches",
+    "pricingSubtitle": "The same packages as for all organizations – adapted to your needs.",
+    "linkChurches": "Also available for other organizations",
     "type": {
       "careHome": {
         "title": "Care Homes",

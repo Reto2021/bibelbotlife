@@ -573,8 +573,8 @@
     "backToList": "ወደ ዝርዝር ተመለስ"
   },
   "church": {
-    "badge": "ለአብያተ ክርስቲያናት",
-    "heroTitle": "BibleBot ለቤተክርስቲያንዎ",
+    "badge": "ለድርጅቶች",
+    "heroTitle": "BibleBot ለድርጅትዎ",
     "heroSubtitle": "የቤተክርስቲያንዎን አባላት በመጽሐፍ ቅዱስ ጥበብ ይመሩ – ዲጂታል፣ ግላዊ እና 24/7።",
     "useCasesTitle": "አጠቃቀም",
     "useCase": {
@@ -599,7 +599,7 @@
     "pricingSubtitle": "BibleBot እና ቤተክርስቲያንዎን በተስማሚ ፓኬጅ ይደግፉ።",
     "popular": "ተወዳጅ",
     "free": "ነጻ",
-    "perYear": "ዓመት",
+    "perYear": "ሰዎች / ዓመት",
     "contact": "ያግኙን",
     "tier": {
       "free": {
@@ -707,7 +707,7 @@
     }
   },
   "institutions": {
-    "badge": "ለተቋማት",
+    "badge": "ለድርጅቶች",
     "heroTitle": "BibleBot ለተቋምዎ",
     "heroSubtitle": "ለእንክብካቤ ቤቶች፣ ለአዛውንት ቤቶች፣ ለሆስፒታሎች እና ለእስር ቤት ዲጂታል ነፍስ አባት አገልግሎት – ግላዊ፣ ሚስጥራዊ እና 24/7።",
     "seniorHint": {

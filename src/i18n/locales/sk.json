@@ -535,8 +535,8 @@
     "backToList": "Späť na zoznam"
   },
   "church": {
-    "badge": "Pre spoločenstvá",
-    "heroTitle": "BibleBot pre vaše spoločenstvo",
+    "badge": "Pre organizácie",
+    "heroTitle": "BibleBot pre vašu organizáciu",
     "heroSubtitle": "Sprevádzajte svojich členov spoločenstva biblickou múdrosťou – digitálne, osobne a nepretržite.",
     "useCasesTitle": "Možnosti použitia",
     "useCase": {
@@ -561,12 +561,12 @@
     "pricingSubtitle": "Podporte BibleBot a vaše spoločenstvo vhodným patronátnym balíčkom.",
     "popular": "Obľúbené",
     "free": "Zadarmo",
-    "perYear": "rok",
+    "perYear": "osôb / rok",
     "contact": "Kontaktovať",
     "tier": {
       "free": {
         "name": "Horčičné zrnko",
-        "size": "Pre malé spoločenstvá a domáce krúžky (do 50 členov)"
+        "size": "Pre malé spoločenstvá a domáce krúžky (do 50 osôb)"
       },
       "community": {
         "name": "Sprievodca",
@@ -578,7 +578,7 @@
       },
       "kirche": {
         "name": "Maják",
-        "size": "Pre veľké spoločenstvá a inštitúcie (500+ členov)"
+        "size": "Pre veľké spoločenstvá a inštitúcie (500+ osôb)"
       }
     },
     "features": {
@@ -669,7 +669,7 @@
     }
   },
   "institutions": {
-    "badge": "Pre inštitúcie",
+    "badge": "Pre organizácie",
     "heroTitle": "BibleBot pre vašu inštitúciu",
     "heroSubtitle": "Digitálna pastoračná starostlivosť pre domovy sociálnych služieb, domovy pre seniorov, nemocnice a väzenskú správu – osobne, dôverne a nepretržite.",
     "seniorHint": {

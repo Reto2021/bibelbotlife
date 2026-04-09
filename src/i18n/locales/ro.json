@@ -573,8 +573,8 @@
     "backToList": "Back to list"
   },
   "church": {
-    "badge": "Pentru Biserici",
-    "heroTitle": "BibleBot pentru Biserica ta",
+    "badge": "Pentru organizații",
+    "heroTitle": "BibleBot pentru organizația dumneavoastră",
     "heroSubtitle": "Însoțește-ți comunitatea cu înțelepciune biblică – digital, personal și non-stop.",
     "useCasesTitle": "Cazuri de utilizare",
     "useCase": {
@@ -599,16 +599,16 @@
     "pricingSubtitle": "Sprijiniți BibleBot și biserica dvs. cu pachetul de patronaj potrivit.",
     "popular": "Popular",
     "free": "Gratuit",
-    "perYear": "An",
+    "perYear": "persoane / an",
     "contact": "Contactați-ne",
     "tier": {
       "free": {
         "name": "Bobul de muștar",
-        "size": "Acces de bază la bot pentru toți membrii comunității."
+        "size": "Acces de bază la bot pentru toți personei comunității."
       },
       "community": {
         "name": "Însoțitor",
-        "size": "Menționarea bisericii ca susținător pe site & acces fără reclame."
+        "size": "Menționarea organizațiii ca susținător pe site & acces fără reclame."
       },
       "gemeinde": {
         "name": "Constructor de poduri",
@@ -707,7 +707,7 @@
     }
   },
   "institutions": {
-    "badge": "For Institutions",
+    "badge": "Pentru organizații",
     "heroTitle": "BibleBot for Your Institution",
     "heroSubtitle": "Digital pastoral care for care homes, retirement homes, hospitals, and correctional facilities – personal, confidential, and around the clock.",
     "typesTitle": "Who is BibleBot for?",

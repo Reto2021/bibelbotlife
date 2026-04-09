@@ -535,9 +535,9 @@
     "backToList": "Zurück zur Liste"
   },
   "church": {
-    "badge": "Für Gemeinden",
-    "heroTitle": "BibleBot für Ihre Gemeinde",
-    "heroSubtitle": "Begleiten Sie Ihre Gemeindemitglieder mit biblischer Weisheit – digital, persönlich und rund um die Uhr.",
+    "badge": "For organisationer",
+    "heroTitle": "BibleBot for din organisation",
+    "heroSubtitle": "Ledsag dit team med bibelsk visdom – digitalt, personligt og døgnet rundt.",
     "useCasesTitle": "Einsatzmöglichkeiten",
     "useCase": {
       "youth": {
@@ -558,27 +558,27 @@
       }
     },
     "pricingTitle": "Patronats-Pakete",
-    "pricingSubtitle": "Unterstützen Sie BibleBot und Ihre Gemeinde mit dem passenden Patronats-Paket.",
+    "pricingSubtitle": "Støt BibleBot og din organisation med den rette patronatspakke.",
     "popular": "Beliebt",
     "free": "Kostenlos",
-    "perYear": "Jahr",
+    "perYear": "personer / år",
     "contact": "Kontakt aufnehmen",
     "tier": {
       "free": {
         "name": "Senfkorn",
-        "size": "Für kleine Gemeinden & Hauskreise (bis 50 Mitglieder)"
+        "size": "Für kleine Organisationen & Gruppen (bis 50 Personen)"
       },
       "community": {
         "name": "Wegbegleiter",
-        "size": "Für Gemeinden mit 50–200 Mitgliedern"
+        "size": "Für Organisationen mit 50–200 Personen"
       },
       "gemeinde": {
         "name": "Brückenbauer",
-        "size": "Für Gemeinden mit 200–500 Mitgliedern"
+        "size": "Für Organisationen mit 200–500 Personen"
       },
       "kirche": {
         "name": "Leuchtturm",
-        "size": "Für grosse Gemeinden & Institutionen (500+ Mitglieder)"
+        "size": "Für grosse Organisationen & Institutionen (500+ Personen)"
       }
     },
     "features": {
@@ -669,8 +669,8 @@
     }
   },
   "institutions": {
-    "badge": "Für Institutionen",
-    "heroTitle": "BibleBot für Ihre Institution",
+    "badge": "For organisationer",
+    "heroTitle": "BibleBot for din organisation",
     "heroSubtitle": "Digitale Seelsorge für Pflegeheime, Altersheime, Spitäler und Justizvollzug – persönlich, vertraulich und rund um die Uhr.",
     "seniorHint": {
       "title": "Senioren-Modus verfügbar",

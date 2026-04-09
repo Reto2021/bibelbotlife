@@ -538,8 +538,8 @@
     "backToList": "Back to list"
   },
   "church": {
-    "badge": "Pro církve",
-    "heroTitle": "BibleBot pro váš sbor",
+    "badge": "Pro organizace",
+    "heroTitle": "BibleBot pro vaši organizaci",
     "heroSubtitle": "Doprovázejte svůj sbor biblickou moudrostí – digitálně, osobně a nepřetržitě.",
     "useCasesTitle": "Případy použití",
     "useCase": {
@@ -564,7 +564,7 @@
     "pricingSubtitle": "Podpořte BibleBot a svůj sbor správným patronátním balíčkem.",
     "popular": "Oblíbené",
     "free": "Zdarma",
-    "perYear": "Rok",
+    "perYear": "osob / rok",
     "contact": "Kontaktujte nás",
     "tier": {
       "free": {
@@ -672,7 +672,7 @@
     }
   },
   "institutions": {
-    "badge": "For Institutions",
+    "badge": "Pro organizace",
     "heroTitle": "BibleBot for Your Institution",
     "heroSubtitle": "Digital pastoral care for care homes, retirement homes, hospitals, and correctional facilities – personal, confidential, and around the clock.",
     "typesTitle": "Who is BibleBot for?",

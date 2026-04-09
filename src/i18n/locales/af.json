@@ -535,8 +535,8 @@
     "backToList": "Terug na lys"
   },
   "church": {
-    "badge": "Vir gemeentes",
-    "heroTitle": "BibleBot vir u gemeente",
+    "badge": "Vir organisasies",
+    "heroTitle": "BibleBot vir u organisasie",
     "heroSubtitle": "Vergesel u gemeentelid met Bybelse wysheid – digitaal, persoonlik en 24/7.",
     "useCasesTitle": "Gebruiksgevalle",
     "useCase": {
@@ -561,7 +561,7 @@
     "pricingSubtitle": "Ondersteun BibleBot en u gemeente met die gepaste patronaatspakket.",
     "popular": "Gewild",
     "free": "Gratis",
-    "perYear": "Jaar",
+    "perYear": "persone / jaar",
     "contact": "Kontak ons",
     "tier": {
       "free": {
@@ -669,7 +669,7 @@
     }
   },
   "institutions": {
-    "badge": "Vir instellings",
+    "badge": "Vir organisasies",
     "heroTitle": "BibleBot vir u instelling",
     "heroSubtitle": "Digitale pastorale sorg vir versorgingsoorde, ouetehuise, hospitale en korrektiewe dienste – persoonlik, vertroulik en 24/7.",
     "seniorHint": {

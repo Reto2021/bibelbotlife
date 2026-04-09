@@ -573,8 +573,8 @@
     "backToList": "Bumalik sa Listahan"
   },
   "church": {
-    "badge": "Para sa mga Simbahan",
-    "heroTitle": "BibleBot para sa Iyong Komunidad",
+    "badge": "Para sa mga organisasyon",
+    "heroTitle": "BibleBot para sa iyong organisasyon",
     "heroSubtitle": "Samahan ang iyong mga miyembro ng komunidad na may karunungan sa Bibliya – digital, personal, at 24/7.",
     "useCasesTitle": "Mga Kaso ng Paggamit",
     "useCase": {
@@ -599,7 +599,7 @@
     "pricingSubtitle": "Suportahan ang BibleBot at ang iyong komunidad gamit ang angkop na pakete ng patronage.",
     "popular": "Sikat",
     "free": "Libre",
-    "perYear": "Taon",
+    "perYear": "tao / taon",
     "contact": "Makipag-ugnayan",
     "tier": {
       "free": {
@@ -707,7 +707,7 @@
     }
   },
   "institutions": {
-    "badge": "Para sa mga Institusyon",
+    "badge": "Para sa mga organisasyon",
     "heroTitle": "BibleBot para sa Iyong Institusyon",
     "heroSubtitle": "Digital na pagpapayo para sa mga bahay-alagaan, bahay-pansamantala, ospital, at pagpapatupad ng hustisya – personal, kumpidensyal, at 24/7.",
     "seniorHint": {

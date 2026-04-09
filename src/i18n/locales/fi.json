@@ -535,8 +535,8 @@
     "backToList": "Takaisin listaan"
   },
   "church": {
-    "badge": "Seurakunnille",
-    "heroTitle": "BibleBot seurakunnallesi",
+    "badge": "Organisaatioille",
+    "heroTitle": "BibleBot organisaatiollesi",
     "heroSubtitle": "Opasta seurakuntalaisiasi raamatullisella viisaudella – digitaalisesti, henkilökohtaisesti ja ympäri vuorokauden.",
     "useCasesTitle": "Käyttötapaukset",
     "useCase": {
@@ -561,7 +561,7 @@
     "pricingSubtitle": "Tue BibleBotia ja seurakuntaasi sopivalla mecenaatti-paketilla.",
     "popular": "Suosittu",
     "free": "Ilmainen",
-    "perYear": "vuosi",
+    "perYear": "henkilöä / vuosi",
     "contact": "Ota yhteyttä",
     "tier": {
       "free": {
@@ -669,7 +669,7 @@
     }
   },
   "institutions": {
-    "badge": "Instituutioille",
+    "badge": "Organisaatioille",
     "heroTitle": "BibleBot laitoksellesi",
     "heroSubtitle": "Digitaalinen sielunhoito hoitokodeille, vanhainkodeille, sairaaloille ja vankiloille – henkilökohtaisesti, luottamuksellisesti ja ympäri vuorokauden.",
     "seniorHint": {

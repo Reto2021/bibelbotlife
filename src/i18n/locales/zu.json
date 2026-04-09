@@ -573,8 +573,8 @@
     "backToList": "Buyela Kuhlu"
   },
   "church": {
-    "badge": "Okwamabandla",
-    "heroTitle": "IBibleBot Yomphakathi Wakho",
+    "badge": "Kwezinhlangano",
+    "heroTitle": "BibleBot yenhlangano yakho",
     "heroSubtitle": "Hambani namalungu omphakathi wenu ngokuhlakanipha kweBhayibheli – ngokwedijithali, ngasese futhi usuku lonke.",
     "useCasesTitle": "Izindlela Zokusetshenziswa",
     "useCase": {
@@ -599,7 +599,7 @@
     "pricingSubtitle": "Sekela i-BibleBot nomphakathi wakho ngephakheji yokuxhasa efanelekile.",
     "popular": "Kuthandwa",
     "free": "Mahhala",
-    "perYear": "Unyaka",
+    "perYear": "abantu / unyaka",
     "contact": "Xhumana Nathi",
     "tier": {
       "free": {
@@ -707,7 +707,7 @@
     }
   },
   "institutions": {
-    "badge": "Okwamakhungo",
+    "badge": "Kwezinhlangano",
     "heroTitle": "IBibleBot Yesikhungo Sakho",
     "heroSubtitle": "Ukungcwele Okwedijithali Kwezindawo Zokunakekelwa, Izindawo Zabantu Abadala, Izibhedlela kanye Nokugcinwa Kwezinhlawsulo – Ngesiqu sokuqala, okuyimfihlo futhi usuku lonke.",
     "seniorHint": {

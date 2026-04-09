@@ -535,8 +535,8 @@
     "backToList": "Retounen nan lis la"
   },
   "church": {
-    "badge": "Pou Legliz",
-    "heroTitle": "BibleBot pou Legliz ou",
+    "badge": "Pou òganizasyon yo",
+    "heroTitle": "BibleBot pou òganizasyon ou",
     "heroSubtitle": "Akonpaye manm legliz ou yo ak sajès biblik – dijitalman, pèsonèlman ak 24/7.",
     "useCasesTitle": "Ka itilizasyon",
     "useCase": {
@@ -561,7 +561,7 @@
     "pricingSubtitle": "Sipòte BibleBot ak legliz ou a ak pakè patwonaj ki apwopriye a.",
     "popular": "Popilè",
     "free": "Gratis",
-    "perYear": "ane",
+    "perYear": "moun / ane",
     "contact": "Kontakte nou",
     "tier": {
       "free": {
@@ -669,7 +669,7 @@
     }
   },
   "institutions": {
-    "badge": "Pou Enstitisyon",
+    "badge": "Pou òganizasyon yo",
     "heroTitle": "BibleBot pou Enstitisyon ou",
     "heroSubtitle": "Konsèy pastoral dijital pou kay swen, kay pou granmoun aje, lopital ak koreksyonèl – pèsonèl, konfidansyèl ak 24/7.",
     "seniorHint": {

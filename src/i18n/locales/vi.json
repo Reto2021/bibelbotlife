@@ -575,8 +575,8 @@
     "backToList": "Quay lại danh sách"
   },
   "church": {
-    "badge": "Dành cho các Hội thánh",
-    "heroTitle": "BibleBot cho Hội thánh của bạn",
+    "badge": "Cho tổ chức",
+    "heroTitle": "BibleBot cho tổ chức của bạn",
     "heroSubtitle": "Đồng hành cùng các thành viên Hội thánh của bạn với sự khôn ngoan của Kinh Thánh – kỹ thuật số, cá nhân và 24/7.",
     "useCasesTitle": "Trường hợp sử dụng",
     "useCase": {
@@ -601,7 +601,7 @@
     "pricingSubtitle": "Hỗ trợ BibleBot và Hội thánh của bạn với gói bảo trợ phù hợp.",
     "popular": "Phổ biến",
     "free": "Miễn phí",
-    "perYear": "năm",
+    "perYear": "người / năm",
     "contact": "Liên hệ",
     "tier": {
       "free": {
@@ -709,7 +709,7 @@
     }
   },
   "institutions": {
-    "badge": "Dành cho các tổ chức",
+    "badge": "Cho tổ chức",
     "heroTitle": "BibleBot cho tổ chức của bạn",
     "heroSubtitle": "Mục vụ kỹ thuật số cho các viện dưỡng lão, bệnh viện, trại giam và các cơ sở y tế – cá nhân, bảo mật và 24/7.",
     "seniorHint": {

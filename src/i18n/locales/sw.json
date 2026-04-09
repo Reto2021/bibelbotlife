@@ -573,8 +573,8 @@
     "backToList": "Rudi kwenye orodha"
   },
   "church": {
-    "badge": "Kwa Jumuiya",
-    "heroTitle": "BibleBot kwa Jumuiya yako",
+    "badge": "Kwa mashirika",
+    "heroTitle": "BibleBot kwa shirika lako",
     "heroSubtitle": "Waongozwe wanajumuiya wako kwa hekima ya kibiblia – kidijitali, kibinafsi na masaa 24.",
     "useCasesTitle": "Matumizi",
     "useCase": {
@@ -599,7 +599,7 @@
     "pricingSubtitle": "Saidia BibleBot na jumuiya yako na kifurushi kinachofaa cha udhamini.",
     "popular": "Maarufu",
     "free": "Bure",
-    "perYear": "mwaka",
+    "perYear": "watu / mwaka",
     "contact": "Wasiliana nasi",
     "tier": {
       "free": {
@@ -707,7 +707,7 @@
     }
   },
   "institutions": {
-    "badge": "Kwa Taasisi",
+    "badge": "Kwa mashirika",
     "heroTitle": "BibleBot kwa Taasisi yako",
     "heroSubtitle": "Ushauri wa kiroho wa kidijitali kwa nyumba za wazee, hospitali na huduma za kisheria – kibinafsi, za siri na masaa 24.",
     "seniorHint": {
