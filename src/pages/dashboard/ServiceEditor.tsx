@@ -349,6 +349,19 @@ export default function ServiceEditor() {
           </div>
         </DialogContent>
       </Dialog>
+
+      {/* Resource Picker */}
+      <ResourcePicker
+        open={resourcePickerOpen}
+        onOpenChange={setResourcePickerOpen}
+        onSelect={(resource) => {
+          if (resourcePickerBlockId) {
+            handleResourceSelected(resource);
+          } else {
+            addBlockFromResource(resource);
+          }
+        }}
+      />
     </div>
   );
 }
