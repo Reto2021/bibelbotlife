@@ -466,31 +466,15 @@ export function ChatHero() {
                 key="landing"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                exit={{ opacity: 0, y: -20, transition: { duration: 0.3 } }}
-                className="flex-1 flex flex-col justify-center py-8"
+                exit={{ opacity: 0, y: -20, transition: { duration: 0.2 } }}
+                className="flex-1 flex flex-col justify-center py-4 sm:py-8"
               >
-                {/* Trust badge */}
-                <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="mb-6 text-center">
-                  <span className="inline-flex items-center gap-3 text-sm font-semibold text-foreground bg-card/80 backdrop-blur-sm border border-border shadow-md px-5 py-2.5 rounded-full">
-                    <Shield className="h-4 w-4 text-primary" />
-                    <span className="flex items-center gap-2">
-                       <span>{t("hero.badge.optionalLogin")}</span>
-                      <span className="text-primary/40">·</span>
-                      <EyeOff className="h-3.5 w-3.5 text-primary" />
-                      <span>{t("hero.badge.noData")}</span>
-                      <span className="text-primary/40">·</span>
-                      <Heart className="h-3.5 w-3.5 text-primary" />
-                      <span>{t("hero.badge.noJudgment")}</span>
-                    </span>
-                  </span>
-                </motion.div>
-
-                {/* Title */}
+                {/* Title – instant, no delay */}
                 <motion.h1
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1 }}
-                  className="text-4xl md:text-6xl font-bold text-foreground mb-4 leading-tight text-center"
+                  transition={{ duration: 0.4 }}
+                  className="text-3xl sm:text-4xl md:text-6xl font-bold text-foreground mb-2 sm:mb-3 leading-tight text-center"
                 >
                   {t("hero.title1")}
                   <span className="text-transparent bg-clip-text" style={{ backgroundImage: "var(--gradient-cta)" }}>
@@ -498,22 +482,27 @@ export function ChatHero() {
                   </span>
                 </motion.h1>
 
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed text-center"
-                >
-                  {t("chatHero.subtitle")}
-                </motion.p>
+                {/* Compact trust badges – inline */}
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3, delay: 0.1 }} className="mb-4 sm:mb-6 text-center">
+                  <span className="inline-flex items-center gap-2 text-[11px] sm:text-xs text-muted-foreground">
+                    <Shield className="h-3 w-3 text-primary shrink-0" />
+                    <span>{t("hero.badge.optionalLogin")}</span>
+                    <span className="text-primary/30">·</span>
+                    <EyeOff className="h-3 w-3 text-primary shrink-0" />
+                    <span>{t("hero.badge.noData")}</span>
+                    <span className="text-primary/30">·</span>
+                    <Heart className="h-3 w-3 text-primary shrink-0" />
+                    <span>{t("hero.badge.noJudgment")}</span>
+                  </span>
+                </motion.div>
 
-                {/* Search input */}
+                {/* Search input – appears fast */}
                 <motion.form
                   onSubmit={handleSubmit}
-                  initial={{ opacity: 0, y: 20, scale: 0.97 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                  className="relative max-w-2xl mx-auto mb-6 w-full"
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.15 }}
+                  className="relative max-w-2xl mx-auto mb-5 w-full"
                 >
                   <div className={`relative flex items-center bg-card border-2 rounded-2xl shadow-lg transition-all duration-300 ${
                     isFocused ? "border-primary shadow-[0_0_0_4px_hsl(var(--primary)/0.12)]" : "border-border hover:border-primary/40"
