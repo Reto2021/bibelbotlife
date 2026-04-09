@@ -70,21 +70,42 @@ serve(async (req) => {
     const targetTranslation = body.translation;
     const startBook = body.start_book || 1;
     const endBook = body.end_book || 66;
+    // Import only a few books per call to avoid timeout
+    const maxBooks = body.max_books || 5;
 
     const translations = targetTranslation
       ? TRANSLATIONS.filter(t => t.key === targetTranslation)
       : TRANSLATIONS;
 
+    if (translations.length === 0) {
+      return new Response(
+        JSON.stringify({ error: `Unknown translation: ${targetTranslation}` }),
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
     let totalInserted = 0;
     const errors: string[] = [];
     const progress: string[] = [];
+    let booksProcessed = 0;
+    let nextBook = 0;
 
     for (const trans of translations) {
       console.log(`Importing ${trans.key}...`);
-      const books = await fetchBooks(trans.apiId);
+      let books: BookInfo[];
+      try {
+        books = await fetchBooks(trans.apiId);
+      } catch (e) {
+        errors.push(`${trans.key}: ${e instanceof Error ? e.message : "fetch failed"}`);
+        continue;
+      }
 
       for (const book of books) {
         if (book.order < startBook || book.order > endBook) continue;
+        if (booksProcessed >= maxBooks) {
+          nextBook = book.order;
+          break;
+        }
 
         for (let ch = 1; ch <= book.numberOfChapters; ch++) {
           const verses = await fetchChapter(trans.apiId, book.id, ch);
@@ -109,20 +130,24 @@ serve(async (req) => {
             totalInserted += rows.length;
           }
 
-          // Small delay
-          await new Promise(r => setTimeout(r, 50));
+          await new Promise(r => setTimeout(r, 30));
         }
 
-        progress.push(`${trans.key}/${book.name}: ${book.numberOfChapters} chapters`);
+        progress.push(`${trans.key}/${book.name}: ${book.numberOfChapters} ch`);
         console.log(`  ${book.name}: done`);
+        booksProcessed++;
       }
+
+      if (booksProcessed >= maxBooks) break;
     }
 
     return new Response(
       JSON.stringify({
         success: true,
         total_inserted: totalInserted,
-        progress: progress.slice(-20),
+        books_processed: booksProcessed,
+        next_book: nextBook > 0 ? nextBook : null,
+        progress,
         errors: errors.slice(0, 20),
       }),
       { headers: { ...corsHeaders, "Content-Type": "application/json" } }
