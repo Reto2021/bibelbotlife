@@ -138,7 +138,7 @@ export type Database = {
           session_id: string
           title: string | null
           updated_at: string
-          user_id: string | null
+          user_id: string
         }
         Insert: {
           created_at?: string
@@ -146,7 +146,7 @@ export type Database = {
           session_id: string
           title?: string | null
           updated_at?: string
-          user_id?: string | null
+          user_id: string
         }
         Update: {
           created_at?: string
@@ -154,7 +154,7 @@ export type Database = {
           session_id?: string
           title?: string | null
           updated_at?: string
-          user_id?: string | null
+          user_id?: string
         }
         Relationships: []
       }
@@ -1470,6 +1470,38 @@ export type Database = {
         Args: { payload: Json; queue_name: string }
         Returns: number
       }
+      get_my_church: {
+        Args: never
+        Returns: {
+          city: string
+          contact_email: string
+          contact_person: string
+          contact_phone: string
+          country: string
+          created_at: string
+          custom_bot_name: string
+          denomination: string
+          id: string
+          is_active: boolean
+          language: string
+          logo_url: string
+          name: string
+          pastor_name: string
+          pastor_photo_url: string
+          plan_tier: Database["public"]["Enums"]["church_plan_tier"]
+          primary_color: string
+          secondary_color: string
+          service_times: string
+          slug: string
+          subscription_expires_at: string
+          subscription_started_at: string
+          subscription_status: string
+          telegram_group_link: string
+          updated_at: string
+          website: string
+          welcome_message: string
+        }[]
+      }
       get_public_prayers: {
         Args: never
         Returns: {
@@ -1513,6 +1545,7 @@ export type Database = {
         Args: { request_id: string }
         Returns: undefined
       }
+      is_church_owner: { Args: { _church_id: string }; Returns: boolean }
       move_to_dlq: {
         Args: {
           dlq_name: string
