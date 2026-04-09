@@ -881,6 +881,19 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
               return { id: tc.id, result: "Fehler bei der Bibelsuche." };
             }
           }
+          if (tc.function.name === "search_theology") {
+            try {
+              const args = JSON.parse(tc.function.arguments);
+              const result = await searchTheology(
+                args.query,
+                args.source_type
+              );
+              return { id: tc.id, result };
+            } catch (e) {
+              console.error("Theology search error:", e);
+              return { id: tc.id, result: "Fehler bei der theologischen Suche." };
+            }
+          }
           return { id: tc.id, result: "Unbekanntes Tool." };
         })
       );
