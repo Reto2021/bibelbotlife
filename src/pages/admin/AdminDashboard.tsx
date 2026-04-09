@@ -1,11 +1,13 @@
 import { useState, useMemo } from "react";
+import { Link } from "react-router-dom";
 import { useAdminStats, useAdminChurches } from "@/hooks/use-admin";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-import { Building2, Users, TrendingUp, AlertTriangle, MessageCircle, Search } from "lucide-react";
+import { Building2, Users, TrendingUp, AlertTriangle, MessageCircle, Search, Target } from "lucide-react";
 import { ChurchDetailDrawer } from "./ChurchDetailDrawer";
 import type { Tables } from "@/integrations/supabase/types";
 
@@ -55,7 +57,12 @@ export default function AdminDashboard() {
   return (
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-8 space-y-8">
-        <h1 className="text-3xl font-bold text-foreground">Admin Dashboard</h1>
+        <div className="flex items-center justify-between">
+          <h1 className="text-3xl font-bold text-foreground">Admin Dashboard</h1>
+          <Button asChild variant="outline">
+            <Link to="/admin/outreach"><Target className="h-4 w-4 mr-2" />Cold Outreach</Link>
+          </Button>
+        </div>
 
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">

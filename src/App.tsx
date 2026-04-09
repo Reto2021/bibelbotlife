@@ -41,6 +41,7 @@ const MeinBereichHome = lazy(() => import("./pages/mein-bereich/MeinBereichHome"
 const EulogyWriter = lazy(() => import("./pages/mein-bereich/EulogyWriter"));
 const SharedDraft = lazy(() => import("./pages/SharedDraft"));
 const AdminDashboard = lazy(() => import("./pages/admin/AdminDashboard"));
+const OutreachAdmin = lazy(() => import("./pages/admin/OutreachAdmin"));
 
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { ProtectedAdminRoute } from "@/components/ProtectedAdminRoute";
@@ -139,6 +140,7 @@ const App = () => {
                   </Route>
                   <Route path="/shared/:token" element={<SharedDraft />} />
                   <Route path="/admin" element={<ProtectedAdminRoute><AdminDashboard /></ProtectedAdminRoute>} />
+                  <Route path="/admin/outreach" element={<ProtectedAdminRoute><OutreachAdmin /></ProtectedAdminRoute>} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Suspense>
