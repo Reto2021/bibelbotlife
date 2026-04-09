@@ -445,7 +445,7 @@ export default function OutreachAdmin() {
 
           {/* ─── Leads Tab ──────────────────────── */}
           <TabsContent value="leads" className="space-y-4">
-            <div className="flex gap-2">
+            <div className="flex gap-2 flex-wrap">
               <Dialog open={importOpen} onOpenChange={setImportOpen}>
                 <DialogTrigger asChild>
                   <Button variant="outline"><Upload className="h-4 w-4 mr-2" />CSV Import</Button>
@@ -467,7 +467,40 @@ export default function OutreachAdmin() {
                   </DialogFooter>
                 </DialogContent>
               </Dialog>
+
+              <Button
+                variant="outline"
+                onClick={() => bulkPersonalize()}
+                disabled={!!bulkProgress || leads.length === 0}
+              >
+                {bulkProgress ? (
+                  <>
+                    <Loader2 className="h-4 w-4 animate-spin mr-2" />
+                    {bulkProgress.current}/{bulkProgress.total} ({bulkProgress.success} ✓ {bulkProgress.errors > 0 ? `, ${bulkProgress.errors} ✗` : ""})
+                  </>
+                ) : (
+                  <>
+                    <Sparkles className="h-4 w-4 mr-2" />
+                    Alle personalisieren
+                  </>
+                )}
+              </Button>
             </div>
+
+            {bulkProgress && (
+              <div className="space-y-1">
+                <div className="w-full bg-border rounded-full h-2">
+                  <div
+                    className="bg-primary h-2 rounded-full transition-all duration-300"
+                    style={{ width: `${(bulkProgress.current / bulkProgress.total) * 100}%` }}
+                  />
+                </div>
+                <p className="text-xs text-muted-foreground">
+                  Personalisiere Lead {bulkProgress.current} von {bulkProgress.total}…
+                  {bulkProgress.errors > 0 && <span className="text-destructive ml-1">({bulkProgress.errors} Fehler)</span>}
+                </p>
+              </div>
+            )}
 
             <Card>
               <CardContent className="p-0">
