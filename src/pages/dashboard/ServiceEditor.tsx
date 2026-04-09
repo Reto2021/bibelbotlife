@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { DndContext, closestCenter, KeyboardSensor, PointerSensor, TouchSensor, useSensor, useSensors, type DragEndEvent } from "@dnd-kit/core";
+import { DndContext, closestCenter, KeyboardSensor, PointerSensor, TouchSensor, useSensor, useSensors, type DragEndEvent, type DragStartEvent, type DragOverEvent, DragOverlay } from "@dnd-kit/core";
 import { arrayMove, SortableContext, sortableKeyboardCoordinates, verticalListSortingStrategy } from "@dnd-kit/sortable";
 import { ArrowLeft, Save, Clock, Plus, Play, Library, BookmarkPlus, FileDown, Mail, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -187,8 +187,21 @@ export default function ServiceEditor() {
     setBlocks((prev) => prev.filter((b) => b.id !== id));
   }, []);
 
+  const [activeId, setActiveId] = useState<string | null>(null);
+  const [overId, setOverId] = useState<string | null>(null);
+
+  const handleDragStart = useCallback((event: DragStartEvent) => {
+    setActiveId(String(event.active.id));
+  }, []);
+
+  const handleDragOver = useCallback((event: DragOverEvent) => {
+    setOverId(event.over ? String(event.over.id) : null);
+  }, []);
+
   const handleDragEnd = useCallback((event: DragEndEvent) => {
     const { active, over } = event;
+    setActiveId(null);
+    setOverId(null);
     if (over && active.id !== over.id) {
       setBlocks((prev) => {
         const oldIndex = prev.findIndex((b) => b.id === active.id);
@@ -426,18 +439,31 @@ export default function ServiceEditor() {
             </CardContent>
           </Card>
         ) : (
-          <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
+          <DndContext sensors={sensors} collisionDetection={closestCenter} onDragStart={handleDragStart} onDragOver={handleDragOver} onDragEnd={handleDragEnd} onDragCancel={() => { setActiveId(null); setOverId(null); }}>
             <SortableContext items={blocks.map((b) => b.id)} strategy={verticalListSortingStrategy}>
-              {blocks.map((block) => (
-                <ServiceBlock
-                  key={block.id}
-                  block={block}
-                  onUpdate={updateBlock}
-                  onDelete={deleteBlock}
-                  onAskBibleBot={askBibleBot}
-                  onPickResource={pickResourceForBlock}
-                />
-              ))}
+              {blocks.map((block) => {
+                const activeIndex = activeId ? blocks.findIndex((b) => b.id === activeId) : -1;
+                const thisIndex = blocks.findIndex((b) => b.id === block.id);
+                const showIndicatorBefore = overId === block.id && activeId !== block.id && activeIndex > thisIndex;
+                const showIndicatorAfter = overId === block.id && activeId !== block.id && activeIndex < thisIndex;
+                return (
+                  <div key={block.id}>
+                    {showIndicatorBefore && (
+                      <div className="h-1 rounded-full bg-primary mx-2 my-1 animate-scale-in" />
+                    )}
+                    <ServiceBlock
+                      block={block}
+                      onUpdate={updateBlock}
+                      onDelete={deleteBlock}
+                      onAskBibleBot={askBibleBot}
+                      onPickResource={pickResourceForBlock}
+                    />
+                    {showIndicatorAfter && (
+                      <div className="h-1 rounded-full bg-primary mx-2 my-1 animate-scale-in" />
+                    )}
+                  </div>
+                );
+              })}
             </SortableContext>
           </DndContext>
         )}
