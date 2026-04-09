@@ -558,6 +558,45 @@ export default function ServiceEditor() {
           </div>
         </DialogContent>
       </Dialog>
+
+      {/* Email Share Dialog */}
+      <Dialog open={emailDialogOpen} onOpenChange={setEmailDialogOpen}>
+        <DialogContent className="sm:max-w-sm">
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-2">
+              <Mail className="h-5 w-5" />
+              Ablauf per E-Mail teilen
+            </DialogTitle>
+          </DialogHeader>
+          <div className="space-y-4">
+            <div>
+              <Label>Empfänger E-Mail</Label>
+              <Input
+                type="email"
+                value={emailRecipient}
+                onChange={(e) => setEmailRecipient(e.target.value)}
+                placeholder="empfaenger@beispiel.ch"
+                onKeyDown={(e) => e.key === "Enter" && handleSendEmail()}
+              />
+            </div>
+            <p className="text-xs text-muted-foreground">
+              Der Ablauf wird als PDF generiert und ein Download-Link per E-Mail versendet.
+            </p>
+            <div className="flex flex-col gap-2">
+              <Button onClick={handleSendEmail} disabled={emailSending || !emailRecipient.trim()}>
+                <Mail className="h-4 w-4 mr-2" />
+                {emailSending ? "Sende..." : "E-Mail senden"}
+              </Button>
+              {(teamMembers || []).filter((m) => m.is_active && m.email).length > 0 && (
+                <Button variant="outline" onClick={handleSendToTeam} disabled={emailSending}>
+                  <Users className="h-4 w-4 mr-2" />
+                  {emailSending ? "Sende..." : `An Team senden (${(teamMembers || []).filter((m) => m.is_active && m.email).length})`}
+                </Button>
+              )}
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
