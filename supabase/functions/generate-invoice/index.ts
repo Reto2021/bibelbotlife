@@ -145,6 +145,7 @@ Deno.serve(async (req) => {
 function generateInvoiceHtml(
   invoice: any,
   church: any,
+  billing: any,
   items: any[]
 ): string {
   const formatDate = (d: string) => {
