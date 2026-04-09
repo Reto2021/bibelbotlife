@@ -1,0 +1,1 @@
+DROP POLICY IF EXISTS "Authenticated users can view prayer requests" ON public.prayer_requests;
