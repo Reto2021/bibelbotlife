@@ -40,25 +40,8 @@ function cacheImpulse(impulse: Impulse) {
   } catch {}
 }
 
-// Cache share image URL per date
-const SHARE_IMAGE_CACHE_KEY = "bibelbot-share-image";
-
-function getCachedShareImage(): string | null {
-  try {
-    const stored = localStorage.getItem(SHARE_IMAGE_CACHE_KEY);
-    if (!stored) return null;
-    const { url, date } = JSON.parse(stored);
-    const today = new Date().toISOString().slice(0, 10);
-    if (date === today) return url;
-  } catch {}
-  return null;
-}
-
-function cacheShareImage(url: string, date: string) {
-  try {
-    localStorage.setItem(SHARE_IMAGE_CACHE_KEY, JSON.stringify({ url, date }));
-  } catch {}
-}
+// Cache share image blob URL per date
+const SHARE_IMAGE_CACHE_KEY = "bibelbot-share-image-blob";
 
 export function DailyImpulse() {
   const { t, i18n } = useTranslation();
