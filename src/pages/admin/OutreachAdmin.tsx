@@ -14,7 +14,7 @@ import { Switch } from "@/components/ui/switch";
 import { toast } from "sonner";
 import {
   Plus, Play, Pause, Upload, Globe, Mail, Users, BarChart3,
-  Loader2, Trash2, RefreshCw, Send, Target, Sparkles,
+  Loader2, Trash2, RefreshCw, Send, Target, Sparkles, Wand2, Eye, Copy,
 } from "lucide-react";
 
 // ─── Hooks ───────────────────────────────────────────────
@@ -257,6 +257,54 @@ export default function OutreachAdmin() {
     }
   };
 
+  // ─── Per-Lead personalisierte E-Mail ──────────────────
+  const [personalizingLead, setPersonalizingLead] = useState<string | null>(null);
+  const [personalizedEmail, setPersonalizedEmail] = useState<{ lead_id: string; step_number: number; subject: string; body: string } | null>(null);
+  const [personalizePreviewOpen, setPersonalizePreviewOpen] = useState(false);
+  const [savingPersonalized, setSavingPersonalized] = useState(false);
+
+  const generatePersonalizedEmail = async (lead: any, stepNumber?: number) => {
+    setPersonalizingLead(lead.id);
+    try {
+      const { data, error } = await supabase.functions.invoke("outreach-generate-sequence", {
+        body: {
+          mode: "personalize",
+          lead_id: lead.id,
+          step_number: stepNumber || undefined,
+        },
+      });
+      if (error) throw error;
+      setPersonalizedEmail(data);
+      setPersonalizePreviewOpen(true);
+    } catch (err: any) {
+      toast.error(err.message || "Fehler bei der Personalisierung");
+    } finally {
+      setPersonalizingLead(null);
+    }
+  };
+
+  const savePersonalizedEmail = async () => {
+    if (!personalizedEmail) return;
+    setSavingPersonalized(true);
+    try {
+      const { error } = await supabase.from("outreach_emails").insert({
+        lead_id: personalizedEmail.lead_id,
+        sequence_step: personalizedEmail.step_number,
+        subject: personalizedEmail.subject,
+        body: personalizedEmail.body,
+        status: "pending" as any,
+      });
+      if (error) throw error;
+      toast.success("Personalisierte E-Mail gespeichert (bereit zum Senden)");
+      setPersonalizePreviewOpen(false);
+      setPersonalizedEmail(null);
+    } catch (err: any) {
+      toast.error(err.message);
+    } finally {
+      setSavingPersonalized(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background p-6 max-w-7xl mx-auto space-y-6">
       <div className="flex items-center justify-between">
@@ -394,7 +442,15 @@ export default function OutreachAdmin() {
                             <TableCell>{lead.city || "–"}</TableCell>
                             <TableCell>{lead.current_step}/{sequences.length}</TableCell>
                             <TableCell><Badge variant={ls.variant}>{ls.label}</Badge></TableCell>
-                            <TableCell className="text-right">
+                            <TableCell className="text-right space-x-1">
+                              <Button
+                                variant="ghost" size="icon"
+                                onClick={() => generatePersonalizedEmail(lead)}
+                                disabled={personalizingLead === lead.id}
+                                title="KI-personalisierte E-Mail generieren"
+                              >
+                                {personalizingLead === lead.id ? <Loader2 className="h-4 w-4 animate-spin" /> : <Wand2 className="h-4 w-4" />}
+                              </Button>
                               {lead.website && (
                                 <Button
                                   variant="ghost" size="icon"
@@ -524,6 +580,48 @@ export default function OutreachAdmin() {
           </TabsContent>
         </Tabs>
       )}
+
+      {/* ─── Personalized Email Preview Dialog ─── */}
+      <Dialog open={personalizePreviewOpen} onOpenChange={setPersonalizePreviewOpen}>
+        <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-2">
+              <Wand2 className="h-5 w-5 text-primary" />
+              Personalisierte E-Mail – Vorschau
+            </DialogTitle>
+          </DialogHeader>
+          {personalizedEmail && (
+            <div className="space-y-4">
+              <div>
+                <Label className="text-xs text-muted-foreground">Betreff</Label>
+                <p className="font-medium text-foreground">{personalizedEmail.subject}</p>
+              </div>
+              <div>
+                <Label className="text-xs text-muted-foreground">E-Mail-Text</Label>
+                <div
+                  className="mt-1 border rounded-lg p-4 bg-card text-sm prose prose-sm max-w-none"
+                  dangerouslySetInnerHTML={{ __html: personalizedEmail.body }}
+                />
+              </div>
+              <p className="text-xs text-muted-foreground">
+                Schritt {personalizedEmail.step_number} • Lead: {personalizedEmail.lead_id.slice(0, 8)}…
+              </p>
+            </div>
+          )}
+          <DialogFooter className="gap-2">
+            <Button variant="outline" onClick={() => {
+              if (personalizedEmail) generatePersonalizedEmail({ id: personalizedEmail.lead_id }, personalizedEmail.step_number);
+            }} disabled={!!personalizingLead}>
+              {personalizingLead ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : <RefreshCw className="h-4 w-4 mr-2" />}
+              Neu generieren
+            </Button>
+            <Button onClick={savePersonalizedEmail} disabled={savingPersonalized}>
+              {savingPersonalized ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : <Mail className="h-4 w-4 mr-2" />}
+              Als E-Mail speichern
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
