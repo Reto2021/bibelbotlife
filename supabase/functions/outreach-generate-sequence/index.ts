@@ -5,26 +5,24 @@ const AI_GATEWAY = "https://ai.gateway.lovable.dev/v1/chat/completions";
 
 // ─── Platzhalter für persönliche Daten (später ersetzen) ───
 const SENDER_PROFILE = {
-  name: "{{DEIN_NAME}}",
-  title: "{{DEIN_TITEL}}",
-  phone: "{{DEINE_TELEFONNUMMER}}",
-  photo_url: "{{DEIN_PORTRAIT_URL}}",
+  name: "Reto Wettstein",
+  title: "Gründer, BibleBot.Life",
+  phone: "+41 56 544 52 00",
+  photo_url: "https://www.reto-wettstein.ch/wp-content/uploads/2022/02/Image-01.jpg",
   signature_html: `
     <p style="margin-top:24px;color:#666;font-size:13px;">
       Herzliche Grüsse<br/>
-      <strong>{{DEIN_NAME}}</strong><br/>
-      {{DEIN_TITEL}}<br/>
-      BibleBot.Life<br/>
-      {{DEINE_TELEFONNUMMER}}
+      <strong>Reto Wettstein</strong><br/>
+      Gründer, BibleBot.Life<br/>
+      +41 56 544 52 00
     </p>
   `,
-  // Testimonials / Social Proof (später mit echten Daten füllen)
   testimonials: [
-    "{{TESTIMONIAL_1}}",
-    "{{TESTIMONIAL_2}}",
-    "{{TESTIMONIAL_3}}",
+    "Die Antworten geben uns regelmässig neue und weite Einsichten, die so manches Mal auch bisherige Sichtweisen revidieren. Das fliesst direkt in die Predigtvorbereitung ein – eine echte Bereicherung.",
+    "BibleBot hilft uns enorm bei Diskussionen mit Gemeindemitgliedern unterschiedlicher theologischer Prägung. Wir können schnell fundierte, differenzierte Antworten geben und Gespräche auf ein tieferes Niveau bringen.",
+    "Seit wir BibleBot nutzen, beschäftigen sich unsere Gemeindemitglieder deutlich häufiger mit der Bibel – auch unter der Woche. Besonders der tägliche Impuls wird sehr geschätzt und sorgt für Gesprächsstoff.",
   ],
-  usp: "BibleBot.Life bringt die Bibel direkt in den Alltag Ihrer Gemeindemitglieder – als persönlicher KI-Assistent, der rund um die Uhr verfügbar ist.",
+  usp: "BibleBot.Life bringt die Bibel direkt in den Alltag Ihrer Gemeindemitglieder – als persönlicher Assistent, der rund um die Uhr verfügbar ist.",
   common_objections: [
     "KI und Glaube passen nicht zusammen",
     "Unsere Gemeinde ist zu klein dafür",
