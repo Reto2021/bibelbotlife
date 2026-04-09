@@ -605,7 +605,7 @@ const Index = () => {
             <AppLogo className="h-10 w-10" invertTheme />
             <span className="text-2xl font-bold">BibleBot<span className="text-muted">.Life</span></span>
           </div>
-          <p className="mb-4 text-center bg-secondary-foreground text-primary-foreground">{t("footer.tagline")}</p>
+          <p className="mb-4 text-center text-primary-foreground bg-muted-foreground">{t("footer.tagline")}</p>
           <p className="text-background/50 text-xs mb-6 max-w-2xl mx-auto text-center">{t("footer.disclaimer")}</p>
           
           <div className="border-t border-background/20 pt-6 mt-6">
