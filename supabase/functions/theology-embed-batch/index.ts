@@ -6,25 +6,29 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type",
 };
 
-// Use Supabase's built-in AI for embeddings via SQL
+// Use Supabase Edge Runtime's built-in gte-small model
+const model = new Supabase.ai.Session("gte-small");
+
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
 
-  const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
-  const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
-  const supabase = createClient(supabaseUrl, serviceKey);
+  const supabase = createClient(
+    Deno.env.get("SUPABASE_URL")!,
+    Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
+  );
 
   try {
     const body = await req.json().catch(() => ({}));
-    const batchSize = body.batch_size || 20;
+    const batchSize = Math.min(body.batch_size || 10, 25);
 
     // Fetch chunks without embeddings
     const { data: chunks, error: fetchErr } = await supabase
       .from("theology_chunks")
       .select("id, title, content")
       .is("embedding", null)
+      .order("id")
       .limit(batchSize);
 
     if (fetchErr) throw fetchErr;
@@ -38,20 +42,25 @@ Deno.serve(async (req) => {
     const errors: string[] = [];
 
     for (const chunk of chunks) {
-      const text = `${chunk.title}: ${chunk.content}`.substring(0, 2000);
-
       try {
-        // Use Supabase's built-in AI embedding via SQL
-        const { error: updateErr } = await supabase.rpc("generate_and_store_embedding", {
-          chunk_id: chunk.id,
-          input_text: text,
+        const text = `${chunk.title}: ${chunk.content}`.substring(0, 512);
+
+        // Generate embedding using built-in gte-small
+        const embedding = await model.run(text, {
+          mean_pool: true,
+          normalize: true,
         });
 
+        // Convert Float32Array to regular array
+        const embeddingArray = Array.from(embedding);
+
+        // Store embedding
+        const { error: updateErr } = await supabase
+          .from("theology_chunks")
+          .update({ embedding: JSON.stringify(embeddingArray) })
+          .eq("id", chunk.id);
+
         if (updateErr) {
-          // Fallback: try direct SQL approach
-          const { error: sqlErr } = await supabase.from("theology_chunks")
-            .update({ embedding: null }) // placeholder
-            .eq("id", chunk.id);
           errors.push(`${chunk.id}: ${updateErr.message}`);
         } else {
           updated++;
@@ -71,7 +80,7 @@ Deno.serve(async (req) => {
       processed: chunks.length,
       updated,
       remaining: count || 0,
-      errors: errors.slice(0, 5),
+      errors: errors.length ? errors.slice(0, 5) : undefined,
     }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
