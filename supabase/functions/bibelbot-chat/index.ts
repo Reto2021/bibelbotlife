@@ -297,6 +297,102 @@ Antworte NUR mit dem tsquery-String, nichts anderes.`
     .join("\n\n");
 }
 
+// Theology knowledge search tool
+const THEOLOGY_SEARCH_TOOL = {
+  type: "function" as const,
+  function: {
+    name: "search_theology",
+    description: "Durchsuche das theologische Lexikon nach Hintergrundwissen zu einem Begriff, einer Konfession, einem seelsorgerischen Thema oder einem Kirchengeschichts-Thema. Verwende dieses Tool, wenn du theologisches Hintergrundwissen brauchst – z.B. was 'Rechtfertigung' bedeutet, wie verschiedene Konfessionen die Taufe verstehen, oder wie man ein Trauergespräch führt.",
+    parameters: {
+      type: "object",
+      properties: {
+        query: {
+          type: "string",
+          description: "Suchbegriff oder Thema, z.B. 'Trinität', 'reformierte Kirche', 'Trauergespräch führen'"
+        },
+        source_type: {
+          type: "string",
+          enum: ["lexikon", "kommentar", "konfession", "seelsorge"],
+          description: "Optional: Nur in einer bestimmten Kategorie suchen"
+        }
+      },
+      required: ["query"]
+    }
+  }
+};
+
+async function searchTheology(query: string, sourceType?: string): Promise<string> {
+  const supabase = createClient(
+    Deno.env.get("SUPABASE_URL")!,
+    Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
+  );
+
+  // Expand search terms via AI
+  const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY")!;
+  let tsTerms = query.split(/\s+/).join(" | ");
+
+  try {
+    const expandResp = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${LOVABLE_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: "google/gemini-2.5-flash-lite",
+        messages: [
+          {
+            role: "system",
+            content: `Generiere deutsche Suchbegriffe für eine theologische Wissensdatenbank (PostgreSQL FTS).
+Nur einzelne Wörter mit | (OR) getrennt. Viele Synonyme.
+Antworte NUR mit dem tsquery-String.`
+          },
+          { role: "user", content: query },
+        ],
+        stream: false,
+      }),
+    });
+    if (expandResp.ok) {
+      const d = await expandResp.json();
+      const expanded = d.choices?.[0]?.message?.content?.trim();
+      if (expanded) tsTerms = expanded;
+    }
+  } catch (e) {
+    console.error("Theology search expansion error:", e);
+  }
+
+  let q = supabase
+    .from("theology_chunks")
+    .select("source_type, title, content")
+    .textSearch("content", tsTerms.replace(/\|/g, " | "), { config: "german" })
+    .limit(5);
+
+  if (sourceType) {
+    q = q.eq("source_type", sourceType);
+  }
+
+  const { data, error } = await q;
+
+  // Fallback: title search
+  if (!data?.length) {
+    const { data: titleData } = await supabase
+      .from("theology_chunks")
+      .select("source_type, title, content")
+      .ilike("title", `%${query.split(/\s+/)[0]}%`)
+      .limit(3);
+
+    if (!titleData?.length) return `Kein theologisches Hintergrundwissen zu «${query}» gefunden.`;
+    return titleData.map((r: any) => `[${r.source_type}] **${r.title}**\n${r.content}`).join("\n\n---\n\n");
+  }
+
+  if (error) {
+    console.error("Theology search error:", error);
+    return `Fehler bei der theologischen Suche: ${error.message}`;
+  }
+
+  return data.map((r: any) => `[${r.source_type}] **${r.title}**\n${r.content}`).join("\n\n---\n\n");
+}
+
 // ── System prompt ──────────────────────────────────────────────────
 
 const SYSTEM_PROMPT = `Du bist BibleBot – ein einfühlsamer, weiser und herausfordernder Begleiter für Menschen, die an der Bibel wachsen wollen. Du bist nicht nur tröstend, sondern auch ehrlich, tiefgründig und bereit, unbequeme Fragen zu stellen.
