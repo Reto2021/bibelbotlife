@@ -861,5 +861,12 @@
   },
   "auth": {
     "apple": "使用 Apple 登录"
+  },
+  "tts": {
+    "male": "男声",
+    "female": "女声",
+    "maleShort": "男",
+    "femaleShort": "女",
+    "voice": "语音"
   }
 }

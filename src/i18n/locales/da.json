@@ -860,5 +860,12 @@
   },
   "auth": {
     "apple": "Log ind med Apple"
+  },
+  "tts": {
+    "male": "Mandlig stemme",
+    "female": "Kvindelig stemme",
+    "maleShort": "M",
+    "femaleShort": "K",
+    "voice": "Stemme"
   }
 }

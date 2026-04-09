@@ -862,5 +862,12 @@
   },
   "auth": {
     "apple": "Mit Apple anmelden"
+  },
+  "tts": {
+    "male": "Männliche Stimme",
+    "female": "Weibliche Stimme",
+    "maleShort": "M",
+    "femaleShort": "W",
+    "voice": "Stimme"
   }
 }

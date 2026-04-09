@@ -860,5 +860,12 @@
   },
   "auth": {
     "apple": "Meld aan met Apple"
+  },
+  "tts": {
+    "male": "Manlike stem",
+    "female": "Vroulike stem",
+    "maleShort": "M",
+    "femaleShort": "V",
+    "voice": "Stem"
   }
 }

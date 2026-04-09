@@ -860,5 +860,12 @@
   },
   "auth": {
     "apple": "Kirjaudu Applella"
+  },
+  "tts": {
+    "male": "Miesääni",
+    "female": "Naisääni",
+    "maleShort": "M",
+    "femaleShort": "N",
+    "voice": "Ääni"
   }
 }

@@ -860,5 +860,12 @@
   },
   "auth": {
     "apple": "Ngena nge-Apple"
+  },
+  "tts": {
+    "male": "Izwi lowesilisa",
+    "female": "Izwi lowesifazane",
+    "maleShort": "S",
+    "femaleShort": "F",
+    "voice": "Izwi"
   }
 }

@@ -860,5 +860,12 @@
   },
   "auth": {
     "apple": "Konekte ak Apple"
+  },
+  "tts": {
+    "male": "Vwa gason",
+    "female": "Vwa fanm",
+    "maleShort": "G",
+    "femaleShort": "F",
+    "voice": "Vwa"
   }
 }

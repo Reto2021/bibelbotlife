@@ -861,5 +861,12 @@
   },
   "auth": {
     "apple": "Σύνδεση με Apple"
+  },
+  "tts": {
+    "male": "Ανδρική φωνή",
+    "female": "Γυναικεία φωνή",
+    "maleShort": "Α",
+    "femaleShort": "Γ",
+    "voice": "Φωνή"
   }
 }

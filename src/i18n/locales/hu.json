@@ -860,5 +860,12 @@
   },
   "auth": {
     "apple": "Bejelentkezés Apple-lel"
+  },
+  "tts": {
+    "male": "Férfi hang",
+    "female": "Női hang",
+    "maleShort": "F",
+    "femaleShort": "N",
+    "voice": "Hang"
   }
 }

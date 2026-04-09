@@ -860,5 +860,12 @@
   },
   "auth": {
     "apple": "Iniciar sesión con Apple"
+  },
+  "tts": {
+    "male": "Voz masculina",
+    "female": "Voz femenina",
+    "maleShort": "M",
+    "femaleShort": "F",
+    "voice": "Voz"
   }
 }

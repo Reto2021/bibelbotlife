@@ -860,5 +860,12 @@
   },
   "auth": {
     "apple": "Пријава преко Apple-а"
+  },
+  "tts": {
+    "male": "Мушки глас",
+    "female": "Женски глас",
+    "maleShort": "М",
+    "femaleShort": "Ж",
+    "voice": "Глас"
   }
 }

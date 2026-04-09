@@ -862,5 +862,12 @@
   },
   "auth": {
     "apple": "Đăng nhập bằng Apple"
+  },
+  "tts": {
+    "male": "Giọng nam",
+    "female": "Giọng nữ",
+    "maleShort": "N",
+    "femaleShort": "Nữ",
+    "voice": "Giọng"
   }
 }

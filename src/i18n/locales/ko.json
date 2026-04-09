@@ -860,5 +860,12 @@
   },
   "auth": {
     "apple": "Apple로 로그인"
+  },
+  "tts": {
+    "male": "남성 목소리",
+    "female": "여성 목소리",
+    "maleShort": "남",
+    "femaleShort": "여",
+    "voice": "목소리"
   }
 }

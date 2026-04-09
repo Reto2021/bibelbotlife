@@ -860,5 +860,12 @@
   },
   "auth": {
     "apple": "Masuk dengan Apple"
+  },
+  "tts": {
+    "male": "Suara pria",
+    "female": "Suara wanita",
+    "maleShort": "P",
+    "femaleShort": "W",
+    "voice": "Suara"
   }
 }
