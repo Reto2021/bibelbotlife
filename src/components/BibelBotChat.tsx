@@ -173,6 +173,23 @@ function makeRefsClickable(children: React.ReactNode, onRefClick: (msg: string) 
   return processNode(children);
 }
 
+/** Extract lines like "a) …", "b) …" from assistant text and return { cleanText, options } */
+function extractOptions(text: string): { cleanText: string; options: string[] } {
+  // Match lines starting with a letter followed by ) — e.g. "a) Foo bar"
+  const optionRegex = /^[a-z]\)\s+.+$/gm;
+  const matches = text.match(optionRegex);
+  if (!matches || matches.length < 2) return { cleanText: text, options: [] };
+  // Remove option lines from text
+  let cleanText = text;
+  for (const m of matches) {
+    cleanText = cleanText.replace(m, "").trim();
+  }
+  // Clean up double blank lines
+  cleanText = cleanText.replace(/\n{3,}/g, "\n\n");
+  const options = matches.map((m) => m.replace(/^[a-z]\)\s+/, "").trim());
+  return { cleanText, options };
+}
+
 function loadMessages(): Message[] {
   try { const stored = localStorage.getItem(MESSAGES_KEY); if (stored) return JSON.parse(stored); } catch {} return [];
 }
