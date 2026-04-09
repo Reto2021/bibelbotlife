@@ -50,6 +50,7 @@ interface HighscoreEntry {
   score: number;
   total_questions: number;
   quiz_mode: string;
+  difficulty: string;
   created_at: string;
 }
 
@@ -65,7 +66,7 @@ export default function BibleQuiz() {
   useEffect(() => {
     supabase
       .from("quiz_scores")
-      .select("score, total_questions, quiz_mode, created_at")
+      .select("score, total_questions, quiz_mode, difficulty, created_at")
       .gte("total_questions", ROUND_SIZE)
       .order("score", { ascending: false })
       .order("created_at", { ascending: true })
@@ -123,7 +124,8 @@ export default function BibleQuiz() {
         quiz_mode: mode!,
         score: newScore,
         total_questions: newTotal,
-      });
+        difficulty,
+      } as any);
     }
   }
 
