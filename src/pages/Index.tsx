@@ -76,18 +76,8 @@ const Index = () => {
             <AppLogo className="h-10 w-10 lg:h-14 lg:w-14" />
             <div className="flex w-max flex-col">
               <span className="text-lg lg:text-xl font-bold text-foreground leading-tight">BibleBot<span className="text-sm lg:text-base font-normal text-muted-foreground dark:text-amber-400">.Life</span></span>
-              <span
-                className="hidden w-full items-center justify-between text-[9px] font-medium uppercase text-muted-foreground/70 dark:text-amber-400/70 lg:flex"
-                aria-label="Everyday Sunday"
-                role="text"
-              >
-                {"EVERYDAY".split("").map((letter, index) => (
-                  <span key={`everyday-${index}`} aria-hidden="true">{letter}</span>
-                ))}
-                <span className="w-[0.35em] shrink-0" aria-hidden="true" />
-                {"SUNDAY".split("").map((letter, index) => (
-                  <span key={`sunday-${index}`} aria-hidden="true">{letter}</span>
-                ))}
+              <span className="hidden pl-[2px] text-[9px] font-medium tracking-[0.18em] uppercase text-muted-foreground/70 dark:text-amber-400/70 lg:block">
+                Everyday Sunday
               </span>
             </div>
           </button>
