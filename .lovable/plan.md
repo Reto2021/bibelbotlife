@@ -1,97 +1,70 @@
 
 
-# BibleBot.Life — Roadmap Status Review
+# Collaboration, File-Sharing & Email-Einladungen für BibleBot
 
-## Übersicht: Was ist gebaut, was fehlt
+## Aktueller Stand
 
----
+**Was bereits existiert:**
+- **Team-Verwaltung** (`TeamPage`): Mitglieder können mit Name, E-Mail, Rolle und Verfügbarkeit erfasst werden — aber rein als Datenbank-Einträge, ohne Einladungs-E-Mails oder Login-Zugang
+- **SharedDraft**: Zeremonien-Entwürfe (Trauerreden etc.) können via Token-Link geteilt werden — ohne Login nötig
+- **Transaktionale E-Mails**: Infrastruktur steht (Queue, Templates für Kontakt-Bestätigung, Church-Onboarding, Rechnungs-Benachrichtigung)
+- **Invite-E-Mail-Template** existiert bereits als Auth-Template (`_shared/email-templates/invite.tsx`), wird aber nicht für Team-Einladungen genutzt
+- **PDF-Export**: Gottesdienstablauf kann als PDF exportiert werden
+- **Keine Dateianhänge** in E-Mails möglich (Lovable-Einschränkung) — aber Download-Links sind möglich
 
-## 1. Theologisches RAG-System (plan.md)
+## Vorgeschlagene Features
 
-| Phase | Status | Details |
-|-------|--------|---------|
-| **Phase 1: DB-Setup** | ✅ Fertig | `theology_chunks` Tabelle existiert, pgvector aktiv, HNSW-Index |
-| **Phase 2: Wissensquellen importieren** | ⚠️ Unklar | Tabelle existiert, aber unklar wie viele Chunks bereits drin sind |
-| **Phase 3: Embedding-Pipeline** | ✅ Fertig | `theology-embed` Edge Function existiert |
-| **Phase 4: Such-Tool im BibelBot** | ✅ Fertig | `search_theology` Tool ist im `bibelbot-chat` integriert, DB-Funktion `search_theology` existiert |
-| **Phase 5: Content-Generierung** | ⚠️ Unklar | Muss geprüft werden, wie viele Einträge generiert wurden |
+### 1. Team-Einladung per E-Mail
+Wenn ein neues Teammitglied im Dashboard erfasst wird und eine E-Mail-Adresse hat, wird automatisch eine Einladungs-E-Mail versendet.
 
-**Offener Punkt:** Wie viele Chunks sind in `theology_chunks`? (Wörterbuch, Kommentare, Konfessionen, Seelsorge) — das bestimmt, ob Phase 2/5 komplett sind.
+- Neues transaktionales E-Mail-Template `team-invitation` erstellen
+- Beim Erstellen eines Teammitglieds `send-transactional-email` aufrufen
+- E-Mail enthält: Gemeindename, Rolle, Link zum Dashboard/Login
+- Registry in `registry.ts` erweitern
 
----
+### 2. Gottesdienst-Ablauf per E-Mail teilen
+Button im ServiceEditor neben dem PDF-Button: "Per E-Mail senden". Öffnet ein kleines Dialog-Formular mit Empfänger-E-Mail.
 
-## 2. Messeplaner (Gottesdienst-Planung)
+- PDF wird in Supabase Storage (`share-images` oder neuer Bucket) hochgeladen
+- Neues Template `service-share` mit Download-Link zum PDF
+- Empfänger erhält E-Mail mit Gottesdienstdetails und PDF-Download-Link
 
-| Feature | Status | Datei/Tabelle |
-|---------|--------|---------------|
-| **Dashboard Shell + Routing** | ✅ Fertig | Dashboard mit allen Routes |
-| **Service-Editor (Block-DnD)** | ✅ Fertig | `ServiceEditor.tsx`, `services` Tabelle |
-| **Kalender-Ansicht** | ✅ Fertig | `ServicesCalendar.tsx` |
-| **Vorlagen-System** | ✅ DB ready | `service_templates` Tabelle |
-| **Team-Verwaltung** | ✅ Fertig | `TeamPage.tsx`, `service_team_members` Tabelle |
-| **Conductor Mode** | ✅ Fertig | `ConductorMode.tsx` |
-| **Amtshandlungs-Register** | ✅ Fertig | `RecordsPage.tsx`, `church_records` Tabelle |
-| **Rechnungen** | ✅ Fertig | `InvoicesPage.tsx`, `invoices` Tabelle |
-| **Ressourcen-Bibliothek** | 🔲 Platzhalter | `ResourceLibrary.tsx` zeigt nur "Kommt in nächster Phase" |
-| **Predigtreihen** | 🔲 Platzhalter | `SeriesPage.tsx` zeigt nur "Kommt in nächster Phase" |
-| **Teleprompter** | 🔲 Nicht gebaut | Geplant als Read-only Modus |
-| **Audio-Player** | 🔲 Nicht gebaut | Geplant für Lieder/Musik |
-| **Offline-Fähigkeit (PWA)** | ⚠️ Teilweise | `sw.js` + `manifest.json` existieren, echtes Offline unklar |
-| **Gastzugang** | 🔲 Nicht gebaut | Zeitlich begrenzte Links |
-| **Statistiken & Feedback** | 🔲 Nicht gebaut | Besucherzahlen etc. |
-| **Versionierung** | 🔲 Nicht gebaut | Diff/Rollback |
-| **Budget & Kosten** | 🔲 Nicht gebaut | Kostenstellen |
-| **Gäste-/Teilnehmerverwaltung** | 🔲 Nicht gebaut | RSVP, Sitzplan |
-| **Freiwilligen-Rotation** | 🔲 Nicht gebaut | Auto-Einteilung |
+### 3. Gottesdienst-Ablauf mit Team teilen
+Ein "An Team senden"-Button, der den Ablauf an alle Team-Mitglieder mit E-Mail-Adresse sendet.
 
----
+- Iteriert über aktive Teammitglieder mit E-Mail
+- Sendet individuelle E-Mails (je eine pro Mitglied, kein Bulk)
+- Verwendet dasselbe `service-share` Template
 
-## 3. Gemeinde-Partnerschaft
+## Technische Umsetzung
 
-| Feature | Status |
-|---------|--------|
-| **Patronats-Pakete** | ✅ DB + Seiten fertig |
-| **Gemeinde-Branding** | ✅ Fertig (Farben, Logo, Bot-Name) |
-| **Splash-Screen** | ✅ Fertig |
-| **Gemeinde-Verzeichnis** | ✅ Fertig (`ChurchDirectory`) |
-| **Kontaktformular** | ✅ Fertig |
-| **Church Wizard** | ✅ Fertig |
+### Schritt 1: E-Mail-Template `team-invitation`
+- Datei: `supabase/functions/_shared/transactional-email-templates/team-invitation.tsx`
+- Props: `churchName`, `role`, `inviterName`, `dashboardUrl`
+- Betreff: "Einladung zum Team von [Gemeinde]"
 
----
+### Schritt 2: E-Mail-Template `service-share`
+- Datei: `supabase/functions/_shared/transactional-email-templates/service-share.tsx`
+- Props: `serviceTitle`, `serviceDate`, `churchName`, `downloadUrl`
+- Betreff: "Gottesdienstablauf: [Titel]"
 
-## 4. Weitere Features (gebaut)
+### Schritt 3: Registry aktualisieren
+- Beide Templates in `registry.ts` registrieren
 
-| Feature | Status |
-|---------|--------|
-| **BibelBot Chat** | ✅ Fertig (mit Tools, RAG, Chat-Historie) |
-| **Bibelsuche** | ✅ Fertig (KJV, WEB, Luther, Schlachter) |
-| **Bibelquiz** | ✅ Fertig |
-| **Tagesimpuls** | ✅ Fertig (inkl. Telegram, E-Mail-Broadcast) |
-| **Social-Sharing-Kacheln** | ✅ Gerade gebaut (Canvas, 1080×1080) |
-| **Gebetswand** | ✅ Fertig |
-| **Abdankungsschreiber** | ✅ Fertig (EulogyWriter) |
-| **Outreach/Akquise** | ✅ Fertig (Scrape, Import, Personalisierung, Bulk, E-Mail-Versand) |
-| **Analytics** | ✅ Fertig |
-| **Auth (E-Mail + Google)** | ✅ Fertig |
-| **Admin Dashboard** | ✅ Fertig |
-| **i18n (30+ Sprachen)** | ✅ Fertig |
-| **Senioren-Modus** | ✅ Fertig |
-| **Transaktionale E-Mails** | ✅ Fertig (Custom Templates) |
-| **Lebensrad** | ✅ Fertig |
+### Schritt 4: TeamPage erweitern
+- Nach `createMember` → `supabase.functions.invoke('send-transactional-email', ...)` aufrufen
+- Toast-Nachricht: "Einladung gesendet"
 
----
+### Schritt 5: ServiceEditor erweitern
+- "E-Mail senden"-Button und Dialog hinzufügen
+- PDF generieren → in Storage hochladen → Signed URL erstellen → E-Mail senden
+- Optional: "An Team senden"-Button
 
-## Priorisierte offene Punkte
+### Schritt 6: Deploy
+- `deploy_edge_functions` für `send-transactional-email`
 
-### Sofort prüfbar
-1. **Theology Chunks zählen** — Wie viele Einträge sind in der DB? Sind alle 4 Kategorien abgedeckt?
-
-### Nächste sinnvolle Schritte (nach Priorität)
-1. **Ressourcen-Bibliothek** aktivieren (Lieder, Gebete, Lesungen durchsuchbar)
-2. **Predigtreihen** aktivieren (Serien verwalten)
-3. **Teleprompter/Read-only Modus** im Conductor Mode
-4. **Theology-Content auffüllen** falls Chunks noch dünn sind
-
-### Später (v5–v6 Dimensionen)
-- Gastzugang, Budget, Rotation, Versionierung, Statistiken, RSVP
+## Einschränkungen
+- **Keine Dateianhänge**: PDFs werden als Download-Link in der E-Mail versendet (via Supabase Storage signed URL)
+- **Kein Echtzeit-Collaboration** (wie Google Docs): Nur Teilen von fertigen Dokumenten
+- **Jede E-Mail geht an genau einen Empfänger** (einzeln getriggert pro Teammitglied)
 
