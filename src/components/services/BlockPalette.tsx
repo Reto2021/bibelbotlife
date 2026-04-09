@@ -1,5 +1,6 @@
 import { Music, BookOpen, Mic, HandHeart, Cross, Church, FileText, Megaphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import type { BlockType } from "./ServiceBlock";
 
 const PALETTE_ITEMS: { type: BlockType; label: string; icon: React.ElementType }[] = [
@@ -21,18 +22,22 @@ interface BlockPaletteProps {
 
 export function BlockPalette({ onAdd }: BlockPaletteProps) {
   return (
-    <div className="flex flex-wrap gap-1.5">
+    <div className="flex flex-wrap gap-1">
       {PALETTE_ITEMS.map((item) => (
-        <Button
-          key={item.type}
-          variant="outline"
-          size="sm"
-          className="h-8 text-xs gap-1.5"
-          onClick={() => onAdd(item.type)}
-        >
-          <item.icon className="h-3.5 w-3.5" />
-          {item.label}
-        </Button>
+        <Tooltip key={item.type}>
+          <TooltipTrigger asChild>
+            <Button
+              variant="outline"
+              size="sm"
+              className="h-8 text-xs gap-1 px-2 sm:px-3"
+              onClick={() => onAdd(item.type)}
+            >
+              <item.icon className="h-3.5 w-3.5 shrink-0" />
+              <span className="hidden sm:inline">{item.label}</span>
+            </Button>
+          </TooltipTrigger>
+          <TooltipContent className="sm:hidden">{item.label}</TooltipContent>
+        </Tooltip>
       ))}
     </div>
   );
