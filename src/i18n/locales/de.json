@@ -714,8 +714,8 @@
     }
   },
   "institutions": {
-    "badge": "Für Institutionen",
-    "heroTitle": "BibleBot für Ihre Institution",
+    "badge": "Für Organisationen",
+    "heroTitle": "BibleBot für Ihre Organisation",
     "heroSubtitle": "Digitale Seelsorge für Pflegeheime, Altersheime, Spitäler und Justizvollzug – persönlich, vertraulich und rund um die Uhr.",
     "seniorHint": {
       "title": "Senioren-Modus verfügbar",
