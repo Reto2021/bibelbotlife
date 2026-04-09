@@ -268,7 +268,30 @@ export function DailyImpulse() {
     }
   }, [smsPhone, toast, t, i18n.language]);
 
-  if (isLoading) {
+  const handleUnsubscribe = useCallback(async () => {
+    if (!subscriberId) {
+      clearSubscription();
+      toast({ title: t("subscribe.unsubscribedTitle", "Abgemeldet"), description: t("subscribe.unsubscribedDesc", "Du erhältst keine tägliche Inspiration mehr.") });
+      return;
+    }
+    setIsUnsubscribing(true);
+    try {
+      const resp = await fetch(SUBSCRIBE_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "unsubscribe", subscriber_id: subscriberId }),
+      });
+      if (!resp.ok) throw new Error("Unsubscribe failed");
+      clearSubscription();
+      toast({ title: t("subscribe.unsubscribedTitle", "Abgemeldet"), description: t("subscribe.unsubscribedDesc", "Du erhältst keine tägliche Inspiration mehr.") });
+    } catch (e) {
+      toast({ title: t("subscribe.toastError"), description: e instanceof Error ? e.message : t("subscribe.toastErrorDesc"), variant: "destructive" });
+    } finally {
+      setIsUnsubscribing(false);
+    }
+  }, [subscriberId, toast, t]);
+
+
     return (
       <div className="bg-primary/10 dark:bg-primary/15 border-b border-primary/20">
         <div className="container mx-auto px-4 py-3 flex items-center gap-3">
