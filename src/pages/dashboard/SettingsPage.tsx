@@ -1,19 +1,18 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { Settings, Save } from "lucide-react";
+import { Save, CreditCard } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Separator } from "@/components/ui/separator";
+import { Badge } from "@/components/ui/badge";
 import { useUserChurch } from "@/hooks/use-user-church";
 import { useAuth } from "@/hooks/use-auth";
 import { supabase } from "@/integrations/supabase/client";
 import { useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
-import { Constants } from "@/integrations/supabase/types";
 
 const DENOMINATIONS = ["reformiert", "katholisch", "lutherisch", "evangelisch", "freikirchlich", "andere"];
 const LANGUAGES = [
@@ -22,6 +21,13 @@ const LANGUAGES = [
   { value: "fr", label: "Français" },
   { value: "it", label: "Italiano" },
 ];
+
+const STATUS_LABELS: Record<string, { label: string; color: string }> = {
+  trial: { label: "Testphase", color: "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200" },
+  active: { label: "Aktiv", color: "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200" },
+  expired: { label: "Abgelaufen", color: "bg-destructive/20 text-destructive" },
+  cancelled: { label: "Gekündigt", color: "bg-muted text-muted-foreground" },
+};
 
 export default function SettingsPage() {
   const { t } = useTranslation();
@@ -45,6 +51,16 @@ export default function SettingsPage() {
     primary_color: "",
     secondary_color: "",
     custom_bot_name: "",
+    // Billing fields
+    billing_name: "",
+    billing_street: "",
+    billing_zip: "",
+    billing_city: "",
+    billing_country: "CH",
+    billing_email: "",
+    billing_reference: "",
+    iban: "",
+    contact_person: "",
   });
 
   useEffect(() => {
@@ -64,6 +80,15 @@ export default function SettingsPage() {
         primary_color: church.primary_color || "",
         secondary_color: church.secondary_color || "",
         custom_bot_name: church.custom_bot_name || "",
+        billing_name: church.billing_name || "",
+        billing_street: church.billing_street || "",
+        billing_zip: church.billing_zip || "",
+        billing_city: church.billing_city || "",
+        billing_country: church.billing_country || "CH",
+        billing_email: church.billing_email || "",
+        billing_reference: church.billing_reference || "",
+        iban: church.iban || "",
+        contact_person: church.contact_person || "",
       });
     }
   }, [church]);
@@ -89,6 +114,15 @@ export default function SettingsPage() {
           primary_color: form.primary_color || null,
           secondary_color: form.secondary_color || null,
           custom_bot_name: form.custom_bot_name || null,
+          billing_name: form.billing_name || null,
+          billing_street: form.billing_street || null,
+          billing_zip: form.billing_zip || null,
+          billing_city: form.billing_city || null,
+          billing_country: form.billing_country || null,
+          billing_email: form.billing_email || null,
+          billing_reference: form.billing_reference || null,
+          iban: form.iban || null,
+          contact_person: form.contact_person || null,
         })
         .eq("id", church.id);
       if (error) throw error;
@@ -129,6 +163,9 @@ export default function SettingsPage() {
       />
     </div>
   );
+
+  const subStatus = church.subscription_status ?? "trial";
+  const statusInfo = STATUS_LABELS[subStatus] ?? STATUS_LABELS.trial;
 
   return (
     <div className="space-y-6">
@@ -187,6 +224,7 @@ export default function SettingsPage() {
           <CardTitle>{t("settings.contact", "Kontakt")}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
+          {field("contact_person", t("settings.contactPerson", "Kontaktperson"))}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {field("contact_email", t("settings.email", "E-Mail"), "email")}
             {field("contact_phone", t("settings.phone", "Telefon"), "tel")}
@@ -201,6 +239,70 @@ export default function SettingsPage() {
               placeholder={t("settings.serviceTimesPlaceholder", "z.B. Sonntag 10:00 Uhr")}
             />
           </div>
+        </CardContent>
+      </Card>
+
+      {/* Billing & Subscription */}
+      <Card>
+        <CardHeader>
+          <div className="flex items-center justify-between">
+            <div>
+              <CardTitle className="flex items-center gap-2">
+                <CreditCard className="h-5 w-5" />
+                {t("settings.billing", "Abonnement & Rechnung")}
+              </CardTitle>
+              <CardDescription>{t("settings.billingDesc", "Rechnungsadresse und Zahlungsinformationen")}</CardDescription>
+            </div>
+            <div className="flex items-center gap-2">
+              <Badge variant="secondary" className={statusInfo.color}>
+                {statusInfo.label}
+              </Badge>
+              <Badge variant="outline">{church.plan_tier}</Badge>
+            </div>
+          </div>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          {/* Subscription info (read-only) */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4 bg-muted/50 rounded-lg">
+            <div>
+              <Label className="text-xs text-muted-foreground">Plan</Label>
+              <p className="text-sm font-medium capitalize">{church.plan_tier}</p>
+            </div>
+            <div>
+              <Label className="text-xs text-muted-foreground">Abo-Start</Label>
+              <p className="text-sm">
+                {church.subscription_started_at
+                  ? new Date(church.subscription_started_at).toLocaleDateString("de-CH")
+                  : "–"}
+              </p>
+            </div>
+            <div>
+              <Label className="text-xs text-muted-foreground">Abo-Ablauf</Label>
+              <p className="text-sm">
+                {church.subscription_expires_at
+                  ? new Date(church.subscription_expires_at).toLocaleDateString("de-CH")
+                  : "–"}
+              </p>
+            </div>
+          </div>
+
+          {/* Billing address */}
+          <h4 className="text-sm font-medium pt-2">{t("settings.billingAddress", "Rechnungsadresse")}</h4>
+          {field("billing_name", t("settings.billingName", "Name / Organisation"))}
+          {field("billing_street", t("settings.billingStreet", "Strasse"))}
+          <div className="grid grid-cols-3 gap-3">
+            {field("billing_zip", t("settings.billingZip", "PLZ"))}
+            <div className="col-span-2">
+              {field("billing_city", t("settings.billingCity", "Stadt"))}
+            </div>
+          </div>
+          {field("billing_country", t("settings.billingCountry", "Land"))}
+          {field("billing_email", t("settings.billingEmail", "Rechnungs-E-Mail"), "email")}
+
+          {/* Payment */}
+          <h4 className="text-sm font-medium pt-2">{t("settings.payment", "Zahlung")}</h4>
+          {field("iban", "IBAN")}
+          {field("billing_reference", t("settings.billingRef", "Referenz / Kostenstelle"))}
         </CardContent>
       </Card>
 
