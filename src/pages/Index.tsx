@@ -95,6 +95,18 @@ const Index = () => {
                 {t("institutions.badge")}
               </Link>
             </Button>
+            <Button asChild variant="ghost" size="sm" className="hidden sm:inline-flex">
+              <Link to="/gebetswand">
+                <HandHeart className="h-4 w-4 mr-1" />
+                {t("nav.prayerWall", "Gebetswand")}
+              </Link>
+            </Button>
+            <Button asChild variant="ghost" size="sm" className="hidden sm:inline-flex">
+              <Link to="/bibelquiz">
+                <GraduationCap className="h-4 w-4 mr-1" />
+                {t("nav.bibleQuiz", "Bibelquiz")}
+              </Link>
+            </Button>
             <LanguageSwitcher />
             <DarkModeToggle />
             {user ? (
