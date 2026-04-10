@@ -39,14 +39,7 @@ export default function SharedDraft() {
       doc.text(doc.splitTextToSize(draft.person_name, maxWidth), pageWidth / 2, 35, { align: "center" });
     }
 
-    const formData = draft.form_data as Record<string, string> | null;
-    if (formData?.personAge) {
-      doc.setFontSize(12);
-      doc.setFont("helvetica", "normal");
-      doc.setTextColor(120);
-      doc.text(formData.personAge, pageWidth / 2, 45, { align: "center" });
-      doc.setTextColor(0);
-    }
+    // form_data no longer returned by hardened RPC
 
     const lineY = 52;
     doc.setDrawColor(180);
@@ -130,11 +123,6 @@ export default function SharedDraft() {
           <Card>
             <CardHeader>
               <CardTitle>{draft.person_name}</CardTitle>
-              {(draft.form_data as Record<string, string> | null)?.personAge && (
-                <p className="text-muted-foreground">
-                  {(draft.form_data as Record<string, string>).personAge}
-                </p>
-              )}
             </CardHeader>
           </Card>
         )}
@@ -158,24 +146,7 @@ export default function SharedDraft() {
           </Card>
         )}
 
-        {/* Show transcripts if shared */}
-        {draft.transcripts && Array.isArray(draft.transcripts) && (draft.transcripts as Array<{ text: string }>).some(t => t.text) && (
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-base">Erinnerungen</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-3">
-              {(draft.transcripts as Array<{ text: string; duration: number }>).map((tr, i) => (
-                tr.text ? (
-                  <div key={i} className="border rounded-lg p-3">
-                    <p className="text-sm text-muted-foreground mb-1">Aufnahme {i + 1}</p>
-                    <p className="text-sm whitespace-pre-wrap">{tr.text}</p>
-                  </div>
-                ) : null
-              ))}
-            </CardContent>
-          </Card>
-        )}
+        {/* transcripts no longer exposed via shared RPC */}
       </main>
 
       <footer className="border-t py-4 text-center text-xs text-muted-foreground">
