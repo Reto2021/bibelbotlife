@@ -243,21 +243,21 @@ export function ChatHero() {
       prompt: t(`tiles.${chip.key}.prompt`),
     }));
     const bibleRefs = [
-      { ref: "Psalm 23", label: t("suggest.psalm23", "Psalm 23 – Der Herr ist mein Hirte") },
-      { ref: "Johannes 3,16", label: t("suggest.joh316", "Johannes 3,16 – So sehr hat Gott die Welt geliebt") },
-      { ref: "Römer 8,28", label: t("suggest.rom828", "Römer 8,28 – Alles zum Besten") },
-      { ref: "Matthäus 11,28", label: t("suggest.mt1128", "Matthäus 11,28 – Kommt her zu mir") },
-      { ref: "Philipper 4,13", label: t("suggest.phil413", "Philipper 4,13 – Ich vermag alles") },
-      { ref: "Jesaja 41,10", label: t("suggest.jes4110", "Jesaja 41,10 – Fürchte dich nicht") },
-      { ref: "1. Korinther 13", label: t("suggest.1kor13", "1. Korinther 13 – Das Hohelied der Liebe") },
-      { ref: "Sprüche 3,5", label: t("suggest.spr35", "Sprüche 3,5 – Vertraue auf den Herrn") },
-      { ref: "Josua 1,9", label: t("suggest.jos19", "Josua 1,9 – Sei stark und mutig") },
-      { ref: "Psalm 46,2", label: t("suggest.ps462", "Psalm 46,2 – Gott ist unsere Zuversicht") },
+      { ref: "Psalm 23", label: t("suggest.psalm23") },
+      { ref: "John 3:16", label: t("suggest.joh316") },
+      { ref: "Romans 8:28", label: t("suggest.rom828") },
+      { ref: "Matthew 11:28", label: t("suggest.mt1128") },
+      { ref: "Philippians 4:13", label: t("suggest.phil413") },
+      { ref: "Isaiah 41:10", label: t("suggest.jes4110") },
+      { ref: "1 Corinthians 13", label: t("suggest.1kor13") },
+      { ref: "Proverbs 3:5", label: t("suggest.spr35") },
+      { ref: "Joshua 1:9", label: t("suggest.jos19") },
+      { ref: "Psalm 46:1", label: t("suggest.ps462") },
     ].map(b => ({
       type: "bible" as const,
       emoji: "📖",
       label: b.label,
-      prompt: `Erkläre mir ${b.ref} im Detail`,
+      prompt: t("suggest.explainDetail", { ref: b.ref }),
     }));
     return [...topics, ...bibleRefs];
   }, [t]);
@@ -758,7 +758,7 @@ export function ChatHero() {
                 {/* Bible quote – compact */}
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4, delay: 0.6 }} className="max-w-2xl mx-auto w-full">
                   <button
-                    onClick={() => sendMessage(`Erkläre mir diesen Bibelvers im Detail: ${dailyVerse.quote} (${dailyVerse.ref}) – Wer hat das geschrieben? In welchem Kontext? Was bedeutet das für mein Leben heute?`)}
+                    onClick={() => sendMessage(t("verseExplain", { quote: dailyVerse.quote, ref: dailyVerse.ref }))}
                     className="relative w-full bg-card/40 backdrop-blur-sm rounded-xl px-6 py-4 border border-primary/10 text-center overflow-hidden cursor-pointer hover:border-primary/30 hover:shadow-md transition-all duration-300 group"
                   >
                     <p className="text-foreground/70 italic text-sm sm:text-base leading-relaxed font-serif">{dailyVerse.quote}</p>
