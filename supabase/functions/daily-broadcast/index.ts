@@ -201,10 +201,10 @@ serve(async (req) => {
       });
     }
 
-    // 3. Group subscribers by language
+    // 3. Group subscribers by base language (de-CH → de)
     const byLang: Record<string, typeof subscribers> = {};
     for (const sub of subscribers) {
-      const lang = sub.language || "de";
+      const lang = (sub.language || "de").split("-")[0].toLowerCase();
       if (!byLang[lang]) byLang[lang] = [];
       byLang[lang].push(sub);
     }
