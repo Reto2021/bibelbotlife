@@ -246,7 +246,7 @@ async function searchBibleVerses(
 
   // Use AI to expand search terms
   const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY")!;
-  let tsquery = query.split(/\s+/).join(" | ");
+  let tsquery = query.split(/\s+/).filter(w => w.length > 0).join(" | ");
 
   try {
     const expandResp = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
@@ -262,7 +262,7 @@ async function searchBibleVerses(
             role: "system",
             content: `Generiere deutsche Suchbegriffe für eine Bibelsuche (PostgreSQL Full-Text-Search).
 Nur einzelne Wörter getrennt mit | (OR). Viele Synonyme. Beispiel: "Liebe | lieben | Güte | Barmherzigkeit | Nächstenliebe"
-Antworte NUR mit dem tsquery-String, nichts anderes.`
+Antworte NUR mit dem tsquery-String, nichts anderes. Keine Anführungszeichen, keine Klammern, keine Sonderzeichen ausser |.`
           },
           { role: "user", content: query },
         ],
@@ -278,9 +278,24 @@ Antworte NUR mit dem tsquery-String, nichts anderes.`
     console.error("Search expansion error:", e);
   }
 
+  // Sanitize tsquery: remove quotes, parens, special chars; keep only words and |
+  tsquery = tsquery
+    .replace(/["""''`()[\]{}<>!@#$%^&*+=~\\;:]/g, ' ')
+    .replace(/\s*\|\s*/g, ' | ')
+    .split(' | ')
+    .map(term => term.trim())
+    .filter(term => term.length > 0 && term !== '|')
+    .join(' | ');
+
+  if (!tsquery) tsquery = query.split(/\s+/).filter(w => w.length > 0).join(" | ");
+
   const trans = (!translation || translation === "all") ? null : translation;
 
-  const { data: results, error } = await supabase.rpc("search_bible_verses", {
+  let results: any[] | null = null;
+  let searchError: any = null;
+
+  // Try the expanded query first, fall back to simple query on syntax error
+  const { data, error } = await supabase.rpc("search_bible_verses", {
     search_query: tsquery,
     translation_filter: trans,
     book_boost: null,
@@ -288,8 +303,22 @@ Antworte NUR mit dem tsquery-String, nichts anderes.`
   });
 
   if (error) {
-    console.error("Bible search RPC error:", error);
-    return `Suche fehlgeschlagen: ${error.message}`;
+    console.error("Bible search RPC error (expanded):", error.message, "tsquery:", tsquery);
+    // Fallback: use the original simple query
+    const fallbackQuery = query.split(/\s+/).filter(w => w.length > 0).join(" | ");
+    const { data: fallbackData, error: fallbackError } = await supabase.rpc("search_bible_verses", {
+      search_query: fallbackQuery,
+      translation_filter: trans,
+      book_boost: null,
+      result_limit: 8,
+    });
+    if (fallbackError) {
+      console.error("Bible search RPC fallback error:", fallbackError.message);
+      return `Keine Verse zu «${query}» gefunden (Suche fehlgeschlagen).`;
+    }
+    results = fallbackData;
+  } else {
+    results = data;
   }
 
   if (!results || results.length === 0) {
@@ -333,7 +362,7 @@ async function searchTheology(query: string, sourceType?: string): Promise<strin
 
   // Expand search terms via AI
   const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY")!;
-  let tsTerms = query.split(/\s+/).join(" | ");
+  let tsTerms = query.split(/\s+/).filter(w => w.length > 0).join(" | ");
 
   try {
     const expandResp = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
@@ -348,7 +377,7 @@ async function searchTheology(query: string, sourceType?: string): Promise<strin
           {
             role: "system",
             content: `Generiere deutsche Suchbegriffe für eine theologische Wissensdatenbank (PostgreSQL FTS).
-Nur einzelne Wörter mit | (OR) getrennt. Viele Synonyme.
+Nur einzelne Wörter mit | (OR) getrennt. Viele Synonyme. Keine Anführungszeichen, keine Klammern, keine Sonderzeichen ausser |.
 Antworte NUR mit dem tsquery-String.`
           },
           { role: "user", content: query },
@@ -364,6 +393,17 @@ Antworte NUR mit dem tsquery-String.`
   } catch (e) {
     console.error("Theology search expansion error:", e);
   }
+
+  // Sanitize tsTerms
+  tsTerms = tsTerms
+    .replace(/["""''`()[\]{}<>!@#$%^&*+=~\\;:]/g, ' ')
+    .replace(/\s*\|\s*/g, ' | ')
+    .split(' | ')
+    .map(term => term.trim())
+    .filter(term => term.length > 0 && term !== '|')
+    .join(' | ');
+
+  if (!tsTerms) tsTerms = query.split(/\s+/).filter(w => w.length > 0).join(" | ");
 
   let q = supabase
     .from("theology_chunks")
