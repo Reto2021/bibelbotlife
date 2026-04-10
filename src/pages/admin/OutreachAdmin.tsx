@@ -288,6 +288,64 @@ export default function OutreachAdmin() {
   const [personalizePreviewOpen, setPersonalizePreviewOpen] = useState(false);
   const [savingPersonalized, setSavingPersonalized] = useState(false);
 
+  // ─── Auto-Discover ────────────────────────────────────
+  const [discoverOpen, setDiscoverOpen] = useState(false);
+  const [discoverQuery, setDiscoverQuery] = useState("");
+  const [discoverCountry, setDiscoverCountry] = useState("ch");
+  const [discoverMax, setDiscoverMax] = useState(10);
+  const [discovering, setDiscovering] = useState(false);
+  const [discoverResults, setDiscoverResults] = useState<any>(null);
+
+  const handleDiscover = async () => {
+    if (!selectedCampaignId || !discoverQuery.trim()) return;
+    setDiscovering(true);
+    setDiscoverResults(null);
+    try {
+      const { data, error } = await supabase.functions.invoke("outreach-discover", {
+        body: {
+          campaign_id: selectedCampaignId,
+          search_query: discoverQuery,
+          country: discoverCountry,
+          max_results: discoverMax,
+        },
+      });
+      if (error) throw error;
+      setDiscoverResults(data);
+      toast.success(`${data.imported} neue Leads importiert, ${data.skipped} Duplikate übersprungen`);
+      queryClient.invalidateQueries({ queryKey: ["outreach-leads"] });
+    } catch (err: any) {
+      toast.error(err.message || "Fehler bei der Suche");
+    } finally {
+      setDiscovering(false);
+    }
+  };
+
+  // ─── Bulk Scrape ──────────────────────────────────────
+  const [bulkScrapeProgress, setBulkScrapeProgress] = useState<{ current: number; total: number; success: number; errors: number } | null>(null);
+
+  const bulkScrape = async () => {
+    const eligible = leads.filter((l: any) => l.website && !l.primary_color);
+    if (!eligible.length) { toast.error("Keine Leads ohne Branding zum Scrapen"); return; }
+    const progress = { current: 0, total: eligible.length, success: 0, errors: 0 };
+    setBulkScrapeProgress({ ...progress });
+    for (const lead of eligible) {
+      progress.current++;
+      setBulkScrapeProgress({ ...progress });
+      try {
+        const { error } = await supabase.functions.invoke("outreach-scrape", {
+          body: { lead_id: lead.id, website: lead.website },
+        });
+        if (error) throw error;
+        progress.success++;
+      } catch { progress.errors++; }
+      setBulkScrapeProgress({ ...progress });
+      if (progress.current < progress.total) await new Promise((r) => setTimeout(r, 2000));
+    }
+    setBulkScrapeProgress(null);
+    toast.success(`${progress.success} Websites gescraped, ${progress.errors} Fehler`);
+    queryClient.invalidateQueries({ queryKey: ["outreach-leads"] });
+  };
+
   // ─── Bulk Personalisierung ────────────────────────────
   const [bulkProgress, setBulkProgress] = useState<{ current: number; total: number; success: number; errors: number } | null>(null);
 
