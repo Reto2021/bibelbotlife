@@ -240,7 +240,7 @@ serve(async (req) => {
         const msg = JSON.stringify({
           title: `🙏 ${impulse.topic}`,
           body: impulse.teaser,
-          url: "https://bibelbotlive.lovable.app",
+          url: "https://bibelbot.ch",
         });
         success = await sendWebPush(sub.push_subscription, msg, vapidPublic, vapidPrivate);
       }
