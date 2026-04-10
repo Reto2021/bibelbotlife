@@ -188,12 +188,22 @@ Deno.serve(async (req) => {
 });
 
 function personalizeTemplate(template: string, lead: any, campaign: any): string {
+  const appUrl = "https://biblebot.life";
   return template
     .replace(/\{\{church_name\}\}/g, lead.church_name || "")
+    .replace(/\{\{churchName\}\}/g, lead.church_name || "")
     .replace(/\{\{contact_name\}\}/g, lead.contact_name || "")
+    .replace(/\{\{contactName\}\}/g, lead.contact_name || "")
+    .replace(/\{\{pastorName\}\}/g, lead.contact_name || "")
     .replace(/\{\{city\}\}/g, lead.city || "")
     .replace(/\{\{denomination\}\}/g, lead.denomination || "")
     .replace(/\{\{personal_note\}\}/g, lead.personal_note || "")
     .replace(/\{\{booking_url\}\}/g, campaign.booking_url || "")
-    .replace(/\{\{sender_name\}\}/g, campaign.sender_name || "");
+    .replace(/\{\{sender_name\}\}/g, campaign.sender_name || "")
+    .replace(/\{\{previewUrl\}\}/g, `${appUrl}/widget-preview/${lead.id}`)
+    .replace(/\{\{screenshotUrl\}\}/g, lead.screenshot_url || "")
+    .replace(/\{\{splashUrl\}\}/g, `${appUrl}/splash/${lead.church_name?.toLowerCase().replace(/\s+/g, "-") || lead.id}`)
+    .replace(/\{\{websiteScore\}\}/g, lead.website_score?.toString() || "?")
+    .replace(/\{\{primaryColor\}\}/g, lead.primary_color || "")
+    .replace(/\{\{logoUrl\}\}/g, lead.logo_url || "");
 }
