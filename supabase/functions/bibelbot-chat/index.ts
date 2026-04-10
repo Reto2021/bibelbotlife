@@ -753,11 +753,22 @@ serve(async (req) => {
 
     // Inject preferred translation
     const TRANSLATION_NAMES: Record<string, string> = {
-      luther1912: "Lutherbibel 1912", elberfelder: "Elberfelder", schlachter2000: "Schlachter 2000",
+      zuercher: "Zürcher Bibel (2007)", zuercher2007: "Zürcher Bibel (2007)",
+      luther2017: "Lutherbibel (2017)", luther: "Lutherbibel (2017)",
+      einheitsuebersetzung: "Einheitsübersetzung (2016)", eu2016: "Einheitsübersetzung (2016)",
+      schlachter2000: "Schlachter 2000", schlachter: "Schlachter 2000",
+      elberfelder2006: "Elberfelder 2006", elberfelder: "Elberfelder 2006",
+      luther1912: "Lutherbibel 1912",
       kjv: "King James Version (KJV)", web: "World English Bible (WEB)",
     };
+    const MODERN_TRANSLATIONS = new Set(["zuercher", "zuercher2007", "luther2017", "luther", "einheitsuebersetzung", "eu2016", "schlachter2000", "schlachter", "elberfelder2006", "elberfelder"]);
     if (preferredTranslation && TRANSLATION_NAMES[preferredTranslation]) {
-      systemPrompt += `\n\n[BEVORZUGTE ÜBERSETZUNG: Der Nutzer hat «${TRANSLATION_NAMES[preferredTranslation]}» als bevorzugte Bibelübersetzung gewählt. Verwende bei lookup_bible_verse und search_bible_verses IMMER diese Übersetzung, es sei denn, der Nutzer fragt explizit nach einer anderen.]`;
+      const isModern = MODERN_TRANSLATIONS.has(preferredTranslation);
+      if (isModern) {
+        systemPrompt += `\n\n[BEVORZUGTE ÜBERSETZUNG: Der Nutzer hat «${TRANSLATION_NAMES[preferredTranslation]}» als bevorzugte Bibelübersetzung gewählt. Dies ist eine moderne Übersetzung – zitiere aus deinem Trainingswissen. Verwende das lookup-Tool nur zur Gegenprüfung mit einer historischen Übersetzung, wenn du dir unsicher bist.]`;
+      } else {
+        systemPrompt += `\n\n[BEVORZUGTE ÜBERSETZUNG: Der Nutzer hat «${TRANSLATION_NAMES[preferredTranslation]}» als bevorzugte Bibelübersetzung gewählt. Verwende bei lookup_bible_verse IMMER diese Übersetzung.]`;
+      }
     }
 
     // 7 Whys guided mode
