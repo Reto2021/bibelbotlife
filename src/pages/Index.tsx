@@ -86,13 +86,13 @@ const Index = () => {
             <Button asChild variant="ghost" size="sm" className="hidden lg:inline-flex">
               <Link to="/gebetswand">
                 <HandHeart className="h-4 w-4 mr-1" />
-                {t("nav.prayerWall", "Gebetswand")}
+                {t("nav.prayerWall")}
               </Link>
             </Button>
             <Button asChild variant="ghost" size="sm" className="hidden lg:inline-flex">
               <Link to="/bibelquiz">
                 <GraduationCap className="h-4 w-4 mr-1" />
-                {t("nav.bibleQuiz", "Bibelquiz")}
+                {t("nav.bibleQuiz")}
               </Link>
             </Button>
             <Button asChild variant="ghost" size="sm" className="hidden lg:inline-flex">
@@ -116,19 +116,19 @@ const Index = () => {
                 <Button asChild variant="outline" size="sm" className="hidden lg:inline-flex">
                   <Link to="/mein-bereich">
                     <User className="h-4 w-4 mr-1" />
-                    Mein Bereich
+                    {t("meinBereichNav")}
                   </Link>
                 </Button>
                 <Button variant="ghost" size="sm" className="hidden lg:inline-flex" onClick={() => signOut()}>
                   <LogOut className="h-4 w-4 mr-1" />
-                  {t("auth.logout", "Abmelden")}
+                  {t("auth.logout")}
                 </Button>
               </>
             ) : (
               <Button asChild variant="ghost" size="sm" className="hidden lg:inline-flex">
                 <Link to="/login">
                   <LogIn className="h-4 w-4 mr-1" />
-                  {t("auth.loginShort", "Anmelden")}
+                  {t("auth.loginShort")}
                 </Link>
               </Button>
             )}
@@ -171,7 +171,7 @@ const Index = () => {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <HandHeart className="h-4 w-4 text-primary" />
-                {t("nav.prayerWall", "Gebetswand")}
+                {t("nav.prayerWall")}
               </Link>
               <Link
                 to="/bibelquiz"
@@ -179,7 +179,7 @@ const Index = () => {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <GraduationCap className="h-4 w-4 text-primary" />
-                {t("nav.bibleQuiz", "Bibelquiz")}
+                {t("nav.bibleQuiz")}
               </Link>
               <Link
                 to="/for-churches"
@@ -213,14 +213,14 @@ const Index = () => {
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     <User className="h-4 w-4 text-primary" />
-                    Mein Bereich
+                    {t("meinBereichNav")}
                   </Link>
                   <button
                     onClick={() => { signOut(); setMobileMenuOpen(false); }}
                     className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-foreground hover:bg-primary/10 transition-colors w-full"
                   >
                     <LogOut className="h-4 w-4 text-primary" />
-                    {t("auth.logout", "Abmelden")}
+                    {t("auth.logout")}
                   </button>
                 </>
               ) : (
@@ -230,7 +230,7 @@ const Index = () => {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <LogIn className="h-4 w-4 text-primary" />
-                  {t("auth.loginShort", "Anmelden")}
+                  {t("auth.loginShort")}
                 </Link>
               )}
               <div className="pt-2 pb-1">
