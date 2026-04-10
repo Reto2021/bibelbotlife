@@ -149,6 +149,7 @@ export default function OutreachAdmin() {
   const { data: leads = [], isLoading: loadingLeads } = useLeads(selectedCampaignId);
   const { data: sequences = [] } = useSequences(selectedCampaignId);
   const { data: stats } = useOutreachStats(selectedCampaignId);
+  const { data: abStats } = useAbTestStats();
 
   // ─── Campaign CRUD ─────────────────────────────────────
   const [campaignForm, setCampaignForm] = useState({
