@@ -770,7 +770,7 @@ export function ChatHero() {
                 {conversations.length > 0 && (
                   <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7 }} className="text-center mt-4">
                     <button onClick={() => setSidebarOpen(true)} className="text-xs text-muted-foreground hover:text-foreground transition-colors underline underline-offset-2">
-                      {t("chat.previousChats", { count: conversations.length, defaultValue: `${conversations.length} frühere Gespräche` })}
+                      {t("chat.previousChats", { count: conversations.length })}
                     </button>
                   </motion.div>
                 )}
