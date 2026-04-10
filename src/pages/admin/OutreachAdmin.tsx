@@ -536,12 +536,13 @@ export default function OutreachAdmin() {
                   <div className="text-center py-12 text-muted-foreground">Noch keine Leads – importiere welche via CSV</div>
                 ) : (
                   <Table>
-                    <TableHeader>
+                     <TableHeader>
                       <TableRow>
                         <TableHead>Gemeinde</TableHead>
                         <TableHead>Kontakt</TableHead>
                         <TableHead>E-Mail</TableHead>
                         <TableHead>Stadt</TableHead>
+                        <TableHead>Score</TableHead>
                         <TableHead>Schritt</TableHead>
                         <TableHead>Status</TableHead>
                         <TableHead className="text-right">Aktionen</TableHead>
