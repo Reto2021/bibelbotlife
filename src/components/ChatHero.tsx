@@ -216,7 +216,11 @@ export function ChatHero() {
   const { branding } = useChurchBranding();
   const { isSenior, toggle: toggleSenior } = useSeniorMode();
   const tts = useTTS();
-  const dailyVerse = useMemo(() => getDailyVerse(), []);
+  const dailyVerseIdx = useMemo(() => getDailyVerseIndex(), []);
+  const dailyVerse = useMemo(() => ({
+    quote: t(`dailyVerses.v${dailyVerseIdx}`),
+    ref: t(`dailyVerses.r${dailyVerseIdx}`),
+  }), [dailyVerseIdx, t]);
 
   // Senior mode size classes
   const s = {
