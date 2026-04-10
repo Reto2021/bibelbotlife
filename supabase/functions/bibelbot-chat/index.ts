@@ -303,8 +303,22 @@ Antworte NUR mit dem tsquery-String, nichts anderes. Keine Anführungszeichen, k
   });
 
   if (error) {
-    console.error("Bible search RPC error:", error);
-    return `Suche fehlgeschlagen: ${error.message}`;
+    console.error("Bible search RPC error (expanded):", error.message, "tsquery:", tsquery);
+    // Fallback: use the original simple query
+    const fallbackQuery = query.split(/\s+/).filter(w => w.length > 0).join(" | ");
+    const { data: fallbackData, error: fallbackError } = await supabase.rpc("search_bible_verses", {
+      search_query: fallbackQuery,
+      translation_filter: trans,
+      book_boost: null,
+      result_limit: 8,
+    });
+    if (fallbackError) {
+      console.error("Bible search RPC fallback error:", fallbackError.message);
+      return `Keine Verse zu «${query}» gefunden (Suche fehlgeschlagen).`;
+    }
+    results = fallbackData;
+  } else {
+    results = data;
   }
 
   if (!results || results.length === 0) {
