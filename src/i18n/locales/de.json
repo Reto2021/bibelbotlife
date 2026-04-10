@@ -192,6 +192,13 @@
     "q2": "Welche Bibelübersetzungen sind hinterlegt?",
     "q2Intro": "Dein BibleBot arbeitet ökumenisch mit den massgeblichen deutschsprachigen Bibelausgaben:",
     "q2Outro": "Alle Bibelstellen werden mit Quellenangabe und historischem Kontext ausgegeben.",
+    "tradition": {
+      "reformed": "Reformiert",
+      "evangelical": "Evangelisch",
+      "catholic": "Katholisch",
+      "freeChurch": "Freikirchlich",
+      "literal": "Wortgetreu"
+    },
     "q3": "Welche wissenschaftlichen Grundlagen stecken dahinter?",
     "q3Intro": "Die Begleitung basiert auf peer-reviewed Forschung der Positiven Psychologie:",
     "q4": "Wie stellt dein BibleBot seelsorgerische Sicherheit sicher?",
