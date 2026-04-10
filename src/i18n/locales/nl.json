@@ -1,6 +1,8 @@
 {
   "nav": {
-    "startNow": "Nu starten"
+    "startNow": "Nu starten",
+    "prayerWall": "Gebedsmuur",
+    "bibleQuiz": "Bijbelquiz"
   },
   "loader": "Laden…",
   "hero": {
@@ -860,7 +862,9 @@
     "genError": "Fout bij het genereren van de tekst. Probeer het opnieuw."
   },
   "auth": {
-    "apple": "Inloggen met Apple"
+    "apple": "Inloggen met Apple",
+    "loginShort": "Inloggen",
+    "logout": "Uitloggen"
   },
   "tts": {
     "male": "Mannelijke stem",
@@ -868,5 +872,11 @@
     "maleShort": "M",
     "femaleShort": "V",
     "voice": "Stem"
+  },
+  "meinBereichNav": "Mijn ruimte",
+  "social": {
+    "conversations": "Gesprekken",
+    "languages": "Talen",
+    "bibles": "Bijbelvertalingen"
   }
 }

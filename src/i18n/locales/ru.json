@@ -1,6 +1,8 @@
 {
   "nav": {
-    "startNow": "Начать сейчас"
+    "startNow": "Начать сейчас",
+    "prayerWall": "Стена молитвы",
+    "bibleQuiz": "Библейская викторина"
   },
   "loader": "Загрузка…",
   "hero": {
@@ -860,7 +862,9 @@
     "patronage": "Рекомендовано"
   },
   "auth": {
-    "apple": "Войти через Apple"
+    "apple": "Войти через Apple",
+    "loginShort": "Войти",
+    "logout": "Выйти"
   },
   "tts": {
     "male": "Мужской голос",
@@ -868,5 +872,11 @@
     "maleShort": "М",
     "femaleShort": "Ж",
     "voice": "Голос"
+  },
+  "meinBereichNav": "Мое пространство",
+  "social": {
+    "conversations": "Бесед",
+    "languages": "Языков",
+    "bibles": "Переводов Библии"
   }
 }

@@ -1,6 +1,8 @@
 {
   "nav": {
-    "startNow": "Começar agora"
+    "startNow": "Começar agora",
+    "prayerWall": "Mural de oração",
+    "bibleQuiz": "Quiz bíblico"
   },
   "loader": "A carregar…",
   "hero": {
@@ -860,7 +862,9 @@
     "patronage": "Recomendado por"
   },
   "auth": {
-    "apple": "Entrar com Apple"
+    "apple": "Entrar com Apple",
+    "loginShort": "Entrar",
+    "logout": "Sair"
   },
   "tts": {
     "male": "Voz masculina",
@@ -868,5 +872,11 @@
     "maleShort": "M",
     "femaleShort": "F",
     "voice": "Voz"
+  },
+  "meinBereichNav": "Meu espaço",
+  "social": {
+    "conversations": "Conversas",
+    "languages": "Idiomas",
+    "bibles": "Traduções bíblicas"
   }
 }

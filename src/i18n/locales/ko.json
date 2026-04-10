@@ -1,6 +1,8 @@
 {
   "nav": {
-    "startNow": "지금 시작하기"
+    "startNow": "지금 시작하기",
+    "prayerWall": "기도의 벽",
+    "bibleQuiz": "성경 퀴즈"
   },
   "loader": "로드 중…",
   "hero": {
@@ -860,7 +862,9 @@
     "patronage": "후원"
   },
   "auth": {
-    "apple": "Apple로 로그인"
+    "apple": "Apple로 로그인",
+    "loginShort": "로그인",
+    "logout": "로그아웃"
   },
   "tts": {
     "male": "남성 목소리",
@@ -868,5 +872,11 @@
     "maleShort": "남",
     "femaleShort": "여",
     "voice": "목소리"
+  },
+  "meinBereichNav": "내 공간",
+  "social": {
+    "conversations": "대화",
+    "languages": "언어",
+    "bibles": "성경 번역"
   }
 }
