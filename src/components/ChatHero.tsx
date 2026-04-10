@@ -108,12 +108,15 @@ function LiveDemoPreview({ onTryIt }: { onTryIt: () => void }) {
   const botCharRef = useRef(0);
 
   useEffect(() => {
-    // Phase 1: Show user bubble, then after 800ms start "typing"
+    setPhase("user");
+    setBotText("");
+    botCharRef.current = 0;
+
+    let interval: ReturnType<typeof setInterval> | undefined;
     const t1 = setTimeout(() => setPhase("typing"), 800);
-    // Phase 2: After 1.5s start typing the bot response
     const t2 = setTimeout(() => {
       setPhase("bot");
-      const interval = setInterval(() => {
+      interval = setInterval(() => {
         botCharRef.current += 2;
         if (botCharRef.current >= botMsg.length) {
           setBotText(botMsg);
@@ -123,10 +126,14 @@ function LiveDemoPreview({ onTryIt }: { onTryIt: () => void }) {
           setBotText(botMsg.slice(0, botCharRef.current));
         }
       }, 20);
-      return () => clearInterval(interval);
     }, 1500);
-    return () => { clearTimeout(t1); clearTimeout(t2); };
-  }, [botMsg]);
+
+    return () => {
+      clearTimeout(t1);
+      clearTimeout(t2);
+      if (interval) clearInterval(interval);
+    };
+  }, [userMsg, botMsg]);
 
   return (
     <motion.div
@@ -697,9 +704,9 @@ export function ChatHero() {
                   className="grid grid-cols-3 gap-2 max-w-2xl mx-auto mb-5 w-full"
                 >
                   {[
-                    { emoji: "😰", title: t("quickCta.anxiety", "Was tun bei Angst?"), prompt: t("tiles.anxiety.prompt", "Ich habe Angst und weiss nicht weiter. Was sagt die Bibel dazu?") },
-                    { emoji: "🙏", title: t("quickCta.prayer", "Ein Gebet für heute"), prompt: t("tiles.prayer.prompt", "Sprich ein Gebet für mich – passend zu meinem Tag.") },
-                    { emoji: "📖", title: t("quickCta.verse", "Bibelvers für mich"), prompt: t("tiles.bibleverse.prompt", "Gib mir einen Bibelvers, der mich heute ermutigt.") },
+                    { emoji: "😰", title: t("tiles.anxiety.title"), prompt: t("tiles.anxiety.prompt") },
+                    { emoji: "🙏", title: t("tiles.prayer.title"), prompt: t("tiles.prayer.prompt") },
+                    { emoji: "📖", title: t("tiles.bibleverse.title"), prompt: t("tiles.bibleverse.prompt") },
                   ].map((card) => (
                     <button
                       key={card.title}
@@ -713,7 +720,7 @@ export function ChatHero() {
                 </motion.div>
 
                 {/* === Live Demo – auto-typing wow moment === */}
-                <LiveDemoPreview onTryIt={() => inputRef.current?.focus()} />
+                <LiveDemoPreview key={i18n.resolvedLanguage || i18n.language} onTryIt={() => inputRef.current?.focus()} />
 
                 {/* === Social Proof – inline compact === */}
                 <motion.div
@@ -723,9 +730,9 @@ export function ChatHero() {
                   className="flex justify-center gap-6 sm:gap-10 mb-4 max-w-2xl mx-auto"
                 >
                   {[
-                    { value: "2'500+", label: t("social.conversations", "Gespräche") },
-                    { value: "36", label: t("social.languages", "Sprachen") },
-                    { value: "5", label: t("social.bibles", "Bibeln") },
+                    { value: "2'500+", label: t("social.conversations", { defaultValue: i18n.language.startsWith("de") ? "Gespräche geführt" : "Conversations" }) },
+                    { value: "36", label: t("social.languages", { defaultValue: i18n.language.startsWith("de") ? "Sprachen" : "Languages" }) },
+                    { value: "5", label: t("social.bibles", { defaultValue: i18n.language.startsWith("de") ? "Bibelübersetzungen" : "Bible translations" }) },
                   ].map((stat) => (
                     <div key={stat.label} className="text-center">
                       <p className="text-lg sm:text-xl font-bold text-primary">{stat.value}</p>
@@ -749,7 +756,7 @@ export function ChatHero() {
                     ))}
                     {!showMoreChips && (
                       <button onClick={() => setShowMoreChips(true)} className="text-[11px] px-2.5 py-1 rounded-full border border-border bg-card/50 text-primary hover:bg-card transition-all duration-200">
-                        +{TOPIC_CHIPS.length - 8} {t("tiles.showMore", "mehr")}
+                        +{TOPIC_CHIPS.length - 8} {t("tiles.showMore", { defaultValue: i18n.language.startsWith("de") ? "mehr" : "more" })}
                       </button>
                     )}
                   </div>
