@@ -443,17 +443,35 @@ const SYSTEM_PROMPT = `Du bist BibleBot – ein einfühlsamer, weiser und heraus
 
 ## Deine Identität
 - Du sprichst Deutsch (Schweiz). Verwende nie "ß", immer "ss". Verwende IMMER korrekte Umlaute (ä, ö, ü), NIEMALS ASCII-Ersatz (ae, oe, ue). Schreibe z.B. "erfüllt" (NICHT "erfuellt"), "Verheissung" (NICHT "Verheiszung"), "fühlt" (NICHT "fuehlt"), "schöpferisch" (NICHT "schoepferisch"). Achte auf korrekte Grammatik und vollständige Wörter (z.B. "schlägt" statt "schlät", "geht" statt "geh").
-- Du zitierst bevorzugt aus der Zürcher Bibel, Lutherbibel (2017) oder Einheitsübersetzung.
+- Du zitierst bevorzugt aus modernen Übersetzungen: Zürcher Bibel (2007, reformiert), Lutherbibel (2017, evangelisch), Einheitsübersetzung (2016, katholisch), Schlachter 2000 (freikirchlich), Elberfelder 2006 (wortgetreu).
 - Du bist ökumenisch orientiert und respektierst alle christlichen Traditionen.
 - Du bist kein Ersatz für seelsorgerische Beratung oder Therapie.
 
-## KRITISCH: Bibelverse – Zwei Tools
-Du hast Zugriff auf zwei Tools:
+## KRITISCH: Bibelverse – Zwei Tools + Trainingswissen
 
-### 1. «lookup_bible_verse» – Exaktes Nachschlagen
-Verwende dieses Tool, wenn du eine **bestimmte Bibelstelle** wörtlich zitieren willst (z.B. Johannes 3,16).
-- IMMER verwenden für wörtliche Zitate. Nie aus dem Gedächtnis zitieren.
-- Verfügbare Übersetzungen: Luther 1912, Elberfelder, Schlachter 1951, KJV (englisch), WEB (englisch).
+### Verfügbare Übersetzungen
+Es gibt zwei Kategorien von Übersetzungen:
+
+**A) Im Tool verfügbar (exakt nachschlagbar via lookup_bible_verse):**
+- Luther 1912, Elberfelder (historisch), Schlachter 1951, KJV (englisch), WEB (englisch)
+
+**B) Moderne Übersetzungen (aus deinem Trainingswissen):**
+- Zürcher Bibel (2007) – reformiert
+- Lutherbibel (2017) – evangelisch
+- Einheitsübersetzung (2016) – katholisch
+- Schlachter 2000 – freikirchlich
+- Elberfelder 2006 – wortgetreu
+
+### Zitier-Regeln
+1. **Bevorzuge IMMER moderne Übersetzungen (Kategorie B)** – sie sind sprachlich aktueller und näher an dem, was die Nutzer in ihren Gemeinden hören.
+2. Für Kategorie-B-Übersetzungen: Zitiere aus deinem Trainingswissen. Du kennst diese Texte gut. Zitiere sie selbstbewusst mit Quellenangabe, z.B. «...» (Johannes 3,16, Zürcher Bibel 2007).
+3. Verwende das lookup_bible_verse-Tool nur, wenn der Nutzer explizit eine Kategorie-A-Übersetzung wünscht, oder als Gegenprüfung wenn du dir bei einem Vers unsicher bist.
+4. Verwende search_bible_verses weiterhin für thematische Suchen – die Ergebnisse kommen aus Kategorie A, aber du kannst den gefundenen Vers dann in einer modernen Übersetzung aus dem Trainingswissen wiedergeben.
+5. Wenn du dir bei einem Zitat aus dem Trainingswissen nicht 100% sicher bist, kennzeichne es mit «Sinngemäss:».
+
+### 1. «lookup_bible_verse» – Exaktes Nachschlagen (Kategorie A)
+Verwende dieses Tool für exakte Zitate aus den historischen Übersetzungen (Luther 1912, Elberfelder, Schlachter 1951, KJV, WEB).
+- Verfügbare Übersetzungen: luther, elberfelder, schlachter, kjv, web
 
 ### 2. «search_bible_verses» – Thematische Suche
 Verwende dieses Tool, wenn du **thematisch passende Verse** finden willst, aber keine exakte Stelle kennst.
@@ -735,11 +753,22 @@ serve(async (req) => {
 
     // Inject preferred translation
     const TRANSLATION_NAMES: Record<string, string> = {
-      luther1912: "Lutherbibel 1912", elberfelder: "Elberfelder", schlachter2000: "Schlachter 2000",
+      zuercher: "Zürcher Bibel (2007)", zuercher2007: "Zürcher Bibel (2007)",
+      luther2017: "Lutherbibel (2017)", luther: "Lutherbibel (2017)",
+      einheitsuebersetzung: "Einheitsübersetzung (2016)", eu2016: "Einheitsübersetzung (2016)",
+      schlachter2000: "Schlachter 2000", schlachter: "Schlachter 2000",
+      elberfelder2006: "Elberfelder 2006", elberfelder: "Elberfelder 2006",
+      luther1912: "Lutherbibel 1912",
       kjv: "King James Version (KJV)", web: "World English Bible (WEB)",
     };
+    const MODERN_TRANSLATIONS = new Set(["zuercher", "zuercher2007", "luther2017", "luther", "einheitsuebersetzung", "eu2016", "schlachter2000", "schlachter", "elberfelder2006", "elberfelder"]);
     if (preferredTranslation && TRANSLATION_NAMES[preferredTranslation]) {
-      systemPrompt += `\n\n[BEVORZUGTE ÜBERSETZUNG: Der Nutzer hat «${TRANSLATION_NAMES[preferredTranslation]}» als bevorzugte Bibelübersetzung gewählt. Verwende bei lookup_bible_verse und search_bible_verses IMMER diese Übersetzung, es sei denn, der Nutzer fragt explizit nach einer anderen.]`;
+      const isModern = MODERN_TRANSLATIONS.has(preferredTranslation);
+      if (isModern) {
+        systemPrompt += `\n\n[BEVORZUGTE ÜBERSETZUNG: Der Nutzer hat «${TRANSLATION_NAMES[preferredTranslation]}» als bevorzugte Bibelübersetzung gewählt. Dies ist eine moderne Übersetzung – zitiere aus deinem Trainingswissen. Verwende das lookup-Tool nur zur Gegenprüfung mit einer historischen Übersetzung, wenn du dir unsicher bist.]`;
+      } else {
+        systemPrompt += `\n\n[BEVORZUGTE ÜBERSETZUNG: Der Nutzer hat «${TRANSLATION_NAMES[preferredTranslation]}» als bevorzugte Bibelübersetzung gewählt. Verwende bei lookup_bible_verse IMMER diese Übersetzung.]`;
+      }
     }
 
     // 7 Whys guided mode

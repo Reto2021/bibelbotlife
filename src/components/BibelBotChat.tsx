@@ -604,10 +604,15 @@ export function BibleBotChat() {
               title={t("chat.translationSelect", "Bibelübersetzung")}
             >
               <option value="auto">📖 Auto</option>
-              <optgroup label="Deutsch">
+              <optgroup label="Moderne Übersetzungen">
+                <option value="zuercher2007">Zürcher Bibel (2007) – Reformiert</option>
+                <option value="luther2017">Lutherbibel (2017) – Evangelisch</option>
+                <option value="einheitsuebersetzung">Einheitsübersetzung (2016) – Katholisch</option>
+                <option value="schlachter2000">Schlachter 2000 – Freikirchlich</option>
+                <option value="elberfelder2006">Elberfelder 2006 – Wortgetreu</option>
+              </optgroup>
+              <optgroup label="Historisch (exakt nachschlagbar)">
                 <option value="luther1912">Luther 1912</option>
-                <option value="schlachter2000">Schlachter 2000</option>
-                <option value="elberfelder">Elberfelder</option>
               </optgroup>
               <optgroup label="English">
                 <option value="kjv">KJV</option>
