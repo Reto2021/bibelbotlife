@@ -1,6 +1,8 @@
 {
   "nav": {
-    "startNow": "Mulai Sekarang"
+    "startNow": "Mulai Sekarang",
+    "prayerWall": "Dinding Doa",
+    "bibleQuiz": "Kuis Alkitab"
   },
   "loader": "Memuat…",
   "hero": {
@@ -24,7 +26,9 @@
     "deepDive": "Apa artinya ini bagiku?",
     "explore": "Baca Bagian Lengkap",
     "alreadySubscribed": "Anda sudah menerima inspirasi harian",
-    "subscribeCta": "Ingin menerima inspirasi ini setiap hari?"
+    "subscribeCta": "Ingin menerima inspirasi ini setiap hari?",
+    "playAudio": "Dengarkan",
+    "stopAudio": "Berhenti"
   },
   "features": {
     "sectionTitle": "Bagaimana BibleBot Anda Mendampingi Anda",
@@ -155,7 +159,12 @@
     "toastPermDeniedDesc": "Harap izinkan notifikasi di pengaturan browser Anda.",
     "toastError": "Kesalahan",
     "toastErrorDesc": "Silakan coba lagi nanti.",
-    "subscribeButton": "Langganan Inspo"
+    "subscribeButton": "Langganan Inspo",
+    "manage": "Kelola Langganan",
+    "switchChannel": "Ganti saluran:",
+    "unsubscribe": "Berhenti berlangganan",
+    "unsubscribedTitle": "Berhenti berlangganan",
+    "unsubscribedDesc": "Anda tidak akan lagi menerima inspirasi harian."
   },
   "faq": {
     "badge": "Pertanyaan yang Sering Diajukan",
@@ -204,7 +213,14 @@
     "q8": "Siapa di balik BibleBot Anda dan bagaimana pendanaannya?",
     "q8Answer": "BibleBot.Life adalah proyek pribadi, non-komersial. Ini dijalankan secara sukarela dan didanai sepenuhnya melalui donasi sukarela. Tidak ada iklan, tidak ada penjualan data, dan tidak ada fitur berbayar. Semua donasi digunakan langsung untuk menutupi biaya operasional (infrastruktur, hosting, pengembangan). Karena BibleBot berjalan sebagai proyek pribadi, donasi tidak dapat dikurangkan dari pajak.",
     "q9": "Bagaimana BibleBot Anda menangani data saya?",
-    "q9Answer": "BibleBot Anda tidak menyimpan data pribadi dan riwayat obrolan. Setiap percakapan bersifat anonim. Tidak ada login, tidak ada pelacakan, dan tidak ada pembagian data dengan pihak ketiga. Penggunaan sepenuhnya anonim."
+    "q9Answer": "BibleBot Anda tidak menyimpan data pribadi dan riwayat obrolan. Setiap percakapan bersifat anonim. Tidak ada login, tidak ada pelacakan, dan tidak ada pembagian data dengan pihak ketiga. Penggunaan sepenuhnya anonim.",
+    "tradition": {
+      "reformed": "Reformasi",
+      "evangelical": "Injili",
+      "catholic": "Katolik",
+      "freeChurch": "Gereja Bebas",
+      "literal": "Kata demi kata"
+    }
   },
   "donate": {
     "badge": "Dukung BibleBot Anda",
@@ -291,7 +307,8 @@
     "errorConnection": "tidak dapat dijangkau.",
     "errorNoStream": "Tidak ada aliran",
     "seniorMode": "Mode Senior (huruf lebih besar)",
-    "loginHint": "Masuk untuk menjaga percakapan di seluruh perangkat"
+    "loginHint": "Masuk untuk menjaga percakapan di seluruh perangkat",
+    "previousChats": "{{count}} percakapan sebelumnya"
   },
   "install": {
     "title": "Instal BibleBot",
@@ -542,7 +559,8 @@
     "prayerwall": {
       "desc": "Bagikan permohonan doa & saling mendoakan",
       "title": "Dinding Doa"
-    }
+    },
+    "showMore": "lainnya"
   },
   "lifeWheel": {
     "title": "Roda Hidup Anda",
@@ -860,7 +878,9 @@
     "patronage": "Direkomendasikan oleh"
   },
   "auth": {
-    "apple": "Masuk dengan Apple"
+    "apple": "Masuk dengan Apple",
+    "loginShort": "Masuk",
+    "logout": "Keluar"
   },
   "tts": {
     "male": "Suara pria",
@@ -868,5 +888,61 @@
     "maleShort": "P",
     "femaleShort": "W",
     "voice": "Suara"
+  },
+  "chatDemo": {
+    "sectionLabel": "Berikut adalah contoh percakapan",
+    "userMsg": "Saya merasa kesepian. Apa yang Alkitab katakan tentang itu?",
+    "botMsg": "Anda tidak sendirian – bahkan ketika terasa begitu. Mazmur 23 mengatakan: 'TUHAN adalah gembalaku, takkan kekurangan aku.' Ini berarti Tuhan dekat dengan Anda, bahkan di saat-saat tergelap. Apakah Anda ingin kita menjelajahi bagian ini bersama?",
+    "cta": "Mulai percakapan Anda sendiri →"
+  },
+  "suggest": {
+    "psalm23": "Mazmur 23 – TUHAN adalah gembalaku",
+    "joh316": "Yohanes 3:16 – Karena begitu besar kasih Allah akan dunia ini",
+    "rom828": "Roma 8:28 – Segala sesuatu bekerja sama untuk kebaikan",
+    "mt1128": "Matius 11:28 – Datanglah kepada-Ku, semua yang letih lesu",
+    "phil413": "Filipi 4:13 – Segala perkara dapat kutanggung",
+    "jes4110": "Yesaya 41:10 – Jangan takut, sebab Aku menyertai engkau",
+    "1kor13": "1 Korintus 13 – Yang terbesar adalah kasih",
+    "spr35": "Amsal 3:5 – Percayalah kepada TUHAN",
+    "jos19": "Yosua 1:9 – Kuatkan dan teguhkanlah hatimu",
+    "ps462": "Mazmur 46:1 – Allah adalah tempat perlindungan dan kekuatan kita",
+    "explainDetail": "Jelaskan {{ref}} secara rinci"
+  },
+  "dailyVerses": {
+    "v0": "\"Datanglah kepada-Ku, semua yang letih lesu dan berbeban berat, Aku akan memberi kelegaan kepadamu.\"",
+    "r0": "Matius 11:28",
+    "v1": "\"Sebab Aku ini mengetahui rancangan-rancangan apa yang ada pada-Ku mengenai kamu, demikianlah firman TUHAN, yaitu rancangan damai sejahtera.\"",
+    "r1": "Yeremia 29:11",
+    "v2": "\"Janganlah takut, sebab Aku menyertai engkau, janganlah bimbang, sebab Aku ini Allahmu.\"",
+    "r2": "Yesaya 41:10",
+    "v3": "\"TUHAN adalah gembalaku, takkan kekurangan aku.\"",
+    "r3": "Mazmur 23:1",
+    "v4": "\"Serahkanlah segala kekuatiranmu kepada-Nya, sebab Ia memelihara kamu.\"",
+    "r4": "1 Petrus 5:7",
+    "v5": "\"Akulah terang dunia; barangsiapa mengikut Aku, ia tidak akan berjalan dalam kegelapan.\"",
+    "r5": "Yohanes 8:12",
+    "v6": "\"Kuatkan dan teguhkanlah hatimu! Janganlah kecut dan tawar hati, sebab TUHAN, Allahmu, menyertai engkau.\"",
+    "r6": "Yosua 1:9",
+    "v7": "\"Tetapi orang-orang yang menanti-nantikan TUHAN mendapat kekuatan baru; mereka seumpama rajawali yang naik terbang dengan kekuatan sayapnya.\"",
+    "r7": "Yesaya 40:31",
+    "v8": "\"Sebab di mana dua atau tiga orang berkumpul dalam nama-Ku, di situ Aku ada di tengah-tengah mereka.\"",
+    "r8": "Matius 18:20",
+    "v9": "\"Kecaplah dan lihatlah, betapa baiknya TUHAN itu! Berbahagialah orang yang berlindung pada-Nya!\"",
+    "r9": "Mazmur 34:8",
+    "v10": "\"Ia menyembuhkan orang-orang yang patah hati dan membalut luka-luka mereka.\"",
+    "r10": "Mazmur 147:3",
+    "v11": "\"Kasih itu sabar, kasih itu murah hati. Ia menanggung segala sesuatu, percaya segala sesuatu, mengharapkan segala sesuatu.\"",
+    "r11": "1 Korintus 13:4–7",
+    "v12": "\"Bersukacitalah dalam pengharapan, sabarlah dalam kesesakan, bertekunlah dalam doa.\"",
+    "r12": "Roma 12:12",
+    "v13": "\"Percayalah kepada TUHAN dengan segenap hatimu, dan janganlah bersandar kepada pengertianmu sendiri.\"",
+    "r13": "Amsal 3:5"
+  },
+  "meinBereichNav": "Area Saya",
+  "verseExplain": "Jelaskan ayat Alkitab ini secara rinci: {{quote}} ({{ref}}) – Siapa yang menulis ini? Dalam konteks apa? Apa artinya bagi hidup saya hari ini?",
+  "social": {
+    "conversations": "Percakapan",
+    "languages": "Bahasa",
+    "bibles": "Terjemahan Alkitab"
   }
 }

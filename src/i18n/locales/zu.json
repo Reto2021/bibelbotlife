@@ -1,6 +1,8 @@
 {
   "nav": {
-    "startNow": "Qala Manje"
+    "startNow": "Qala Manje",
+    "prayerWall": "Udonga Lomkhuleko",
+    "bibleQuiz": "Imibuzo YeBhayibheli"
   },
   "loader": "Iyalayisha…",
   "hero": {
@@ -24,7 +26,9 @@
     "deepDive": "Kusho ukuthini lokhu kimi?",
     "explore": "Funda Isigaba Sonke",
     "alreadySubscribed": "Usuwuthola ugqozi lwansuku zonke",
-    "subscribeCta": "Uyafuna ukuthola lolu gqozi nsuku zonke?"
+    "subscribeCta": "Uyafuna ukuthola lolu gqozi nsuku zonke?",
+    "playAudio": "Lalela",
+    "stopAudio": "Yima"
   },
   "features": {
     "sectionTitle": "Indlela iBibleBot yakho ikuphelezela ngayo",
@@ -155,7 +159,12 @@
     "toastPermDeniedDesc": "Sicela uvumele izaziso kuzilungiselelo zesiphequluli sakho.",
     "toastError": "Iphutha",
     "toastErrorDesc": "Sicela uzame futhi kamuva.",
-    "subscribeButton": "Bhalisa i-Inspo"
+    "subscribeButton": "Bhalisa i-Inspo",
+    "manage": "Phatha okubhaliselwe",
+    "switchChannel": "Shintsha isiteshi:",
+    "unsubscribe": "Khipha okubhaliselwe",
+    "unsubscribedTitle": "Kukhishiwe okubhaliselwe",
+    "unsubscribedDesc": "Ngeke usathola ugqozi lwansuku zonke."
   },
   "faq": {
     "badge": "Imibuzo Evame Ukubuzwa",
@@ -204,7 +213,14 @@
     "q8": "Ubani osemuva kweBibleBot yakho futhi ixhaswa kanjani?",
     "q8Answer": "I-BibleBot.Life iyiphrojekthi yangasese, engenzi inzuzo. Isebenza ngokuzithandela futhi ixhaswa kuphela yiminikelo yokuzithandela. Ayikho imikhangiso, akukho ukuthengiswa kwedatha futhi akukho izici ezikhokhelwayo. Yonke iminikelo ihamba ngqo ekuhlanganisweni kwezindleko zokusebenza (ingqalasizinda, ukubamba, ukuthuthukiswa). Njengoba i-BibleBot isebenza njengephrojekthi yangasese, iminikelo ayikwazi ukudonswa intela.",
     "q9": "I-BibleBot yakho ihamba kanjani nedatha yami?",
-    "q9Answer": "I-BibleBot yakho ayibongi idatha yomuntu siqu nanoma yimaphi amarekhodi engxoxo. Yonke ingxoxo ayaziwa. Akukho ukungena ngemvume, akukho ukulandelela futhi akukho ukwabelana ngedatha nabantu besithathu. Ukusetshenziswa kuyimfihlo ngokuphelele."
+    "q9Answer": "I-BibleBot yakho ayibongi idatha yomuntu siqu nanoma yimaphi amarekhodi engxoxo. Yonke ingxoxo ayaziwa. Akukho ukungena ngemvume, akukho ukulandelela futhi akukho ukwabelana ngedatha nabantu besithathu. Ukusetshenziswa kuyimfihlo ngokuphelele.",
+    "tradition": {
+      "reformed": "Okuguquliwe",
+      "evangelical": "Evangelical",
+      "catholic": "Catholic",
+      "freeChurch": "Isonto Lamahhala",
+      "literal": "Igama-negama"
+    }
   },
   "donate": {
     "badge": "Sekela iBibleBot yakho",
@@ -291,7 +307,8 @@
     "errorConnection": "ayikwazanga ukufinyelelwa.",
     "errorNoStream": "Akukho ukusakazwa",
     "seniorMode": "Imodi Yomdala (ifonti enkulu)",
-    "loginHint": "Ngena ngemvume ukuze ugcine izingxoxo kuwo wonke amadivayisi"
+    "loginHint": "Ngena ngemvume ukuze ugcine izingxoxo kuwo wonke amadivayisi",
+    "previousChats": "Izingxoxo ezingaphambili ezingama-{{count}}"
   },
   "install": {
     "title": "Faka iBibleBot",
@@ -542,7 +559,8 @@
     "prayerwall": {
       "desc": "Yabelana ngezicelo zomkhuleko futhi uthandazelane",
       "title": "Udonga Lomkhuleko"
-    }
+    },
+    "showMore": "okuningi"
   },
   "lifeWheel": {
     "title": "Isondo lempilo yakho",
@@ -860,7 +878,9 @@
     "patronage": "Ikhuthazwe yi"
   },
   "auth": {
-    "apple": "Ngena nge-Apple"
+    "apple": "Ngena nge-Apple",
+    "loginShort": "Ngena",
+    "logout": "Phuma"
   },
   "tts": {
     "male": "Izwi lowesilisa",
@@ -868,5 +888,61 @@
     "maleShort": "S",
     "femaleShort": "F",
     "voice": "Izwi"
+  },
+  "chatDemo": {
+    "sectionLabel": "Nansi indlela ingxoxo ebukeka ngayo",
+    "userMsg": "Ngizizwa ngingedwa. Lithini iBhayibheli ngalokho?",
+    "botMsg": "Awunqedwa – ngisho noma kuzwakala kanjalo. IHubo 23 lithi: 'UJehova ungumalusi wami, angiyikuswela.' Lokhu kusho ukuthi uNkulunkulu useduze nawe, ngisho nasezikhathini ezimnyama kakhulu. Ungathanda yini ukuthi sihlole lesi sigaba ndawonye?",
+    "cta": "Qala ingxoxo yakho →"
+  },
+  "suggest": {
+    "psalm23": "IHubo 23 – UJehova ungumalusi wami",
+    "joh316": "Johane 3:16 – Ngoba uNkulunkulu walithanda izwe",
+    "rom828": "Roma 8:28 – Zonke izinto zisebenzela okuhle",
+    "mt1128": "Mathewu 11:28 – Wozani kimi, nonke nina enikhathele",
+    "phil413": "Filipi 4:13 – Ngingenza zonke izinto",
+    "jes4110": "Isaya 41:10 – Ungesabi, ngoba nginawe",
+    "1kor13": "1 Korinte 13 – Okukhulu uthando",
+    "spr35": "IzAga 3:5 – Thembela kuJehova",
+    "jos19": "Joshuwa 1:9 – Qina ube nesibindi",
+    "ps462": "IHubo 46:1 – UNkulunkulu uyisiphephelo sethu namandla",
+    "explainDetail": "Chaza i-{{ref}} ngemininingwane"
+  },
+  "dailyVerses": {
+    "v0": "\"Wozani kimi, nonke nina enikhathele nenisindwe, ngizoniphumuza.\"",
+    "r0": "Mathewu 11:28",
+    "v1": "\"Ngoba ngiyawazi amacebo enginawo ngani, kusho uJehova, amacebo okuthula.\"",
+    "r1": "Jeremiya 29:11",
+    "v2": "\"Ungesabi, ngoba nginawe; ungesabi, ngoba nginguNkulunkulu wakho.\"",
+    "r2": "Isaya 41:10",
+    "v3": "\"UJehova ungumalusi wami; angiyikuswela.\"",
+    "r3": "IHubo 23:1",
+    "v4": "\"Phonsani konke ukukhathazeka kwenu kuye ngoba uyanikhathalela.\"",
+    "r4": "1 Petru 5:7",
+    "v5": "\"Ngingukukhanya kwezwe. Noma ubani ongilandelayo akasoze ahamba ebumnyameni.\"",
+    "r5": "Johane 8:12",
+    "v6": "\"Qina ube nesibindi! Ungesabi, ngoba uJehova uNkulunkulu wakho unawe.\"",
+    "r6": "Joshuwa 1:9",
+    "v7": "\"Kodwa labo abathembela kuJehova bazovuselela amandla abo; bazondiza ngamaphiko njengezinkozi.\"",
+    "r7": "Isaya 40:31",
+    "v8": "\"Ngoba lapho kukhona ababili noma abathathu bebuthene egameni lami, ngikhona nabo.\"",
+    "r8": "Mathewu 18:20",
+    "v9": "\"Yizwani nibone ukuthi uJehova muhle; ubusisiwe lowo ophephela kuye.\"",
+    "r9": "IHubo 34:8",
+    "v10": "\"Uyelapha abanenhliziyo ephukile futhi ubopha amanxeba abo.\"",
+    "r10": "IHubo 147:3",
+    "v11": "\"Uthando luyabekezela, uthando lunomusa. Lubekezelela zonke izinto, lukholwa zonke izinto, luthemba zonke izinto.\"",
+    "r11": "1 Korinte 13:4–7",
+    "v12": "\"Jabulani ngethemba, bekezani ekuhluphekeni, thembekani emkhulekweni.\"",
+    "r12": "Roma 12:12",
+    "v13": "\"Thembela kuJehova ngayo yonke inhliziyo yakho futhi unganciki ekuqondeni kwakho.\"",
+    "r13": "IzAga 3:5"
+  },
+  "meinBereichNav": "Indawo Yami",
+  "verseExplain": "Chaza leli vesi leBhayibheli ngemininingwane: {{quote}} ({{ref}}) – Ubani olibhalile? Kukuphi umongo? Lisho ukuthini empilweni yami namuhla?",
+  "social": {
+    "conversations": "Izingxoxo",
+    "languages": "Izilimi",
+    "bibles": "Izinguqulo zeBhayibheli"
   }
 }

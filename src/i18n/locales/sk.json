@@ -1,6 +1,8 @@
 {
   "nav": {
-    "startNow": "Začať teraz"
+    "startNow": "Začať teraz",
+    "prayerWall": "Modlitebná stena",
+    "bibleQuiz": "Biblický kvíz"
   },
   "loader": "Načítava sa…",
   "hero": {
@@ -24,7 +26,9 @@
     "deepDive": "Čo to pre mňa znamená?",
     "explore": "Prečítať celý úsek",
     "alreadySubscribed": "Dostávate dennú inšpiráciu",
-    "subscribeCta": "Dostávať túto inšpiráciu denne?"
+    "subscribeCta": "Dostávať túto inšpiráciu denne?",
+    "playAudio": "Počúvať",
+    "stopAudio": "Zastaviť"
   },
   "features": {
     "sectionTitle": "Ako vás váš BibleBot sprevádza",
@@ -155,7 +159,12 @@
     "toastPermDeniedDesc": "Prosím, povoľte upozornenia v nastaveniach prehliadača.",
     "toastError": "Chyba",
     "toastErrorDesc": "Prosím, skúste to neskôr znova.",
-    "subscribeButton": "Prihlásiť sa na odber inšpirácie"
+    "subscribeButton": "Prihlásiť sa na odber inšpirácie",
+    "manage": "Spravovať odber",
+    "switchChannel": "Zmeniť kanál:",
+    "unsubscribe": "Zrušiť odber",
+    "unsubscribedTitle": "Odhlásené",
+    "unsubscribedDesc": "Už nebudete dostávať dennú inšpiráciu."
   },
   "faq": {
     "badge": "Často kladené otázky",
@@ -204,7 +213,14 @@
     "q8": "Kto stojí za vaším BibleBotom a ako je financovaný?",
     "q8Answer": "BibleBot.Life je súkromný, nekomerčný projekt. Je prevádzkovaný dobrovoľne a financovaný výhradne z dobrovoľných darov. Neexistuje žiadna reklama, žiadny predaj dát a žiadne platené funkcie. Všetky dary idú priamo na pokrytie prevádzkových nákladov (infraštruktúra, hosting, vývoj). Keďže BibleBot funguje ako súkromný projekt, dary nie sú daňovo odpočítateľné.",
     "q9": "Ako váš BibleBot zaobchádza s mojimi údajmi?",
-    "q9Answer": "Váš BibleBot neukladá žiadne osobné údaje ani históriu chatu. Každý rozhovor je anonymný. Neexistuje žiadne prihlásenie, žiadne sledovanie a žiadne zdieľanie údajov s tretími stranami. Používanie je úplne anonymné."
+    "q9Answer": "Váš BibleBot neukladá žiadne osobné údaje ani históriu chatu. Každý rozhovor je anonymný. Neexistuje žiadne prihlásenie, žiadne sledovanie a žiadne zdieľanie údajov s tretími stranami. Používanie je úplne anonymné.",
+    "tradition": {
+      "reformed": "Reformovaný",
+      "evangelical": "Evanjelický",
+      "catholic": "Katolícky",
+      "freeChurch": "Slobodná cirkev",
+      "literal": "Doslovne"
+    }
   },
   "donate": {
     "badge": "Podporte svojho BibleBota",
@@ -291,7 +307,8 @@
     "errorConnection": "sa nepodarilo dosiahnuť.",
     "errorNoStream": "Žiadny stream",
     "seniorMode": "Režim pre seniorov (väčšie písmo)",
-    "loginHint": "Prihláste sa, aby ste si uchovali konverzácie na všetkých zariadeniach"
+    "loginHint": "Prihláste sa, aby ste si uchovali konverzácie na všetkých zariadeniach",
+    "previousChats": "{{count}} predchádzajúcich konverzácií"
   },
   "install": {
     "title": "Nainštalovať BibleBot",
@@ -504,7 +521,8 @@
     "prayerwall": {
       "desc": "Zdieľajte modlitebné úmysly a modlite sa za seba navzájom",
       "title": "Modlitebná stena"
-    }
+    },
+    "showMore": "viac"
   },
   "lifeWheel": {
     "title": "Vaše koleso života",
@@ -860,7 +878,9 @@
     "patronage": "Odporúčané"
   },
   "auth": {
-    "apple": "Prihlásiť sa cez Apple"
+    "apple": "Prihlásiť sa cez Apple",
+    "loginShort": "Prihlásiť sa",
+    "logout": "Odhlásiť sa"
   },
   "tts": {
     "male": "Mužský hlas",
@@ -868,5 +888,61 @@
     "maleShort": "M",
     "femaleShort": "Ž",
     "voice": "Hlas"
+  },
+  "chatDemo": {
+    "sectionLabel": "Takto vyzerá konverzácia",
+    "userMsg": "Cítim sa sám. Čo o tom hovorí Biblia?",
+    "botMsg": "Nie si sám – aj keď sa to tak zdá. Žalm 23 hovorí: „Pán je môj pastier, nič mi nechýba.“ To znamená, že Boh je blízko teba, aj v najtemnejších chvíľach. Chceš, aby sme si tento úryvok preštudovali spolu?",
+    "cta": "Začnite vlastnú konverzáciu →"
+  },
+  "suggest": {
+    "psalm23": "Žalm 23 – Pán je môj pastier",
+    "joh316": "Ján 3:16 – Lebo tak Boh miloval svet",
+    "rom828": "Rimanom 8:28 – Všetky veci spolu pôsobia na dobro",
+    "mt1128": "Matúš 11:28 – Poďte ku mne všetci, ktorí ste unavení",
+    "phil413": "Filipanom 4:13 – Všetko môžem",
+    "jes4110": "Izaiáš 41:10 – Neboj sa, lebo som s tebou",
+    "1kor13": "1 Korinťanom 13 – Najväčšia je láska",
+    "spr35": "Príslovia 3:5 – Dôveruj Pánovi",
+    "jos19": "Jozue 1:9 – Buď silný a odvážny",
+    "ps462": "Žalm 46:1 – Boh je naše útočisko a sila",
+    "explainDetail": "Vysvetlite {{ref}} podrobne"
+  },
+  "dailyVerses": {
+    "v0": "„Poďte ku mne všetci, ktorí ste unavení a zaťažení, a ja vám dám odpočinok.“",
+    "r0": "Matúš 11:28",
+    "v1": "„Lebo ja poznám plány, ktoré mám s vami, hovorí Pán, plány pokoja.“",
+    "r1": "Jeremiáš 29:11",
+    "v2": "„Neboj sa, lebo som s tebou; nebuď zdesený, lebo ja som tvoj Boh.“",
+    "r2": "Izaiáš 41:10",
+    "v3": "„Pán je môj pastier; nič mi nechýba.“",
+    "r3": "Žalm 23:1",
+    "v4": "„Všetku svoju úzkosť zložte na neho, lebo on sa o vás stará.“",
+    "r4": "1 Peter 5:7",
+    "v5": "„Ja som svetlo sveta. Kto mňa nasleduje, nebude chodiť v tme.“",
+    "r5": "Ján 8:12",
+    "v6": "„Buď silný a odvážny! Neboj sa, lebo Pán, tvoj Boh, je s tebou.“",
+    "r6": "Jozue 1:9",
+    "v7": "„Ale tí, ktorí dúfajú v Pána, obnovia svoju silu; vznesú sa na krídlach ako orly.“",
+    "r7": "Izaiáš 40:31",
+    "v8": "„Lebo kde sú dvaja alebo traja zhromaždení v mojom mene, tam som ja medzi nimi.“",
+    "r8": "Matúš 18:20",
+    "v9": "„Okúste a uvidíte, že Pán je dobrý; požehnaný je ten, kto sa k nemu utieka.“",
+    "r9": "Žalm 34:8",
+    "v10": "„Uzdravuje zlomených srdcom a obväzuje ich rany.“",
+    "r10": "Žalm 147:3",
+    "v11": "„Láska je trpezlivá, láska je láskavá. Všetko znáša, všetkému verí, vo všetko dúfa.“",
+    "r11": "1 Korinťanom 13:4–7",
+    "v12": "„Radujte sa v nádeji, buďte trpezliví v súžení, vytrvalí v modlitbe.“",
+    "r12": "Rimanom 12:12",
+    "v13": "„Dôveruj Pánovi celým svojím srdcom a nespoliehaj sa na vlastné chápanie.“",
+    "r13": "Príslovia 3:5"
+  },
+  "meinBereichNav": "Moja oblasť",
+  "verseExplain": "Vysvetlite tento biblický verš podrobne: {{quote}} ({{ref}}) – Kto to napísal? V akom kontexte? Čo to znamená pre môj život dnes?",
+  "social": {
+    "conversations": "Konverzácie",
+    "languages": "Jazyky",
+    "bibles": "Preklady Biblie"
   }
 }

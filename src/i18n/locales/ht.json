@@ -1,6 +1,8 @@
 {
   "nav": {
-    "startNow": "Kòmanse kounye a"
+    "startNow": "Kòmanse kounye a",
+    "prayerWall": "Mi priyè",
+    "bibleQuiz": "Kesyon sou Bib la"
   },
   "loader": "Ap chaje…",
   "hero": {
@@ -24,7 +26,9 @@
     "deepDive": "Kisa sa vle di pou mwen?",
     "explore": "Li tout seksyon an",
     "alreadySubscribed": "Ou resevwa enspirasyon chak jou",
-    "subscribeCta": "Vle resevwa enspirasyon sa a chak jou?"
+    "subscribeCta": "Vle resevwa enspirasyon sa a chak jou?",
+    "playAudio": "Koute",
+    "stopAudio": "Sispann"
   },
   "features": {
     "sectionTitle": "Kijan BibleBot ou a akonpaye w",
@@ -155,7 +159,12 @@
     "toastPermDeniedDesc": "Tanpri pèmèt notifikasyon nan paramèt navigatè w la.",
     "toastError": "Erè",
     "toastErrorDesc": "Tanpri eseye ankò pita.",
-    "subscribeButton": "Abòne ak Enspo"
+    "subscribeButton": "Abòne ak Enspo",
+    "manage": "Jere abònman",
+    "switchChannel": "Chanje chanèl:",
+    "unsubscribe": "Dezabòne",
+    "unsubscribedTitle": "Dezabòne",
+    "unsubscribedDesc": "Ou p'ap resevwa plis enspirasyon chak jou."
   },
   "faq": {
     "badge": "Kesyon Souvan Poze",
@@ -204,7 +213,14 @@
     "q8": "Ki moun ki dèyè BibleBot ou a e kijan li finanse?",
     "q8Answer": "BibleBot.Life se yon pwojè prive, ki pa komèsyal. Li opere sou baz volontè epi li finanse sèlman pa don volontè. Pa gen piblisite, pa gen lavant done ak pa gen okenn karakteristik peye. Tout don yo ale dirèkteman nan kouvri depans operasyonèl yo (enfrastrikti, hosting, devlopman). Kòm BibleBot opere kòm yon pwojè prive, don yo pa dediktib taks.",
     "q9": "Kijan BibleBot ou a trete done mwen yo?",
-    "q9Answer": "BibleBot ou a pa estoke okenn done pèsonèl ak okenn istwa chat. Chak konvèsasyon anonim. Pa gen koneksyon, pa gen swiv ak pa gen okenn pataj done ak twazyèm pati. Itilizasyon an konplètman anonim."
+    "q9Answer": "BibleBot ou a pa estoke okenn done pèsonèl ak okenn istwa chat. Chak konvèsasyon anonim. Pa gen koneksyon, pa gen swiv ak pa gen okenn pataj done ak twazyèm pati. Itilizasyon an konplètman anonim.",
+    "tradition": {
+      "reformed": "Refòme",
+      "evangelical": "Evanjelik",
+      "catholic": "Katolik",
+      "freeChurch": "Legliz lib",
+      "literal": "Mo pou mo"
+    }
   },
   "donate": {
     "badge": "Sipòte BibleBot ou a",
@@ -291,7 +307,8 @@
     "errorConnection": "pa t ka rive jwenn.",
     "errorNoStream": "Pa gen kouran",
     "seniorMode": "Mòd Senior (pi gwo font)",
-    "loginHint": "Konekte pou kenbe konvèsasyon yo sou tout aparèy ou yo"
+    "loginHint": "Konekte pou kenbe konvèsasyon yo sou tout aparèy ou yo",
+    "previousChats": "{{count}} konvèsasyon anvan yo"
   },
   "install": {
     "title": "Enstale BibleBot",
@@ -504,7 +521,8 @@
     "prayerwall": {
       "desc": "Pataje demann lapriyè ak priye youn pou lòt",
       "title": "Mi Lapriyè"
-    }
+    },
+    "showMore": "plis"
   },
   "lifeWheel": {
     "title": "Wou Lavi ou",
@@ -860,7 +878,9 @@
     "patronage": "Rekòmande pa"
   },
   "auth": {
-    "apple": "Konekte ak Apple"
+    "apple": "Konekte ak Apple",
+    "loginShort": "Konekte",
+    "logout": "Dekonekte"
   },
   "tts": {
     "male": "Vwa gason",
@@ -868,5 +888,61 @@
     "maleShort": "G",
     "femaleShort": "F",
     "voice": "Vwa"
+  },
+  "chatDemo": {
+    "sectionLabel": "Men kisa yon konvèsasyon sanble",
+    "userMsg": "Mwen santi m pou kont mwen. Kisa Bib la di sou sa?",
+    "botMsg": "Ou pa pou kont ou – menm lè ou santi sa. Sòm 23 di: 'Senyè a se bèje m, mwen p'ap manke anyen.' Sa vle di Bondye toupre w, menm nan moman ki pi nwa yo. Èske w ta renmen nou eksplore pasaj sa a ansanm?",
+    "cta": "Kòmanse pwòp konvèsasyon w →"
+  },
+  "suggest": {
+    "psalm23": "Sòm 23 – Senyè a se bèje m",
+    "joh316": "Jan 3:16 – Paske Bondye tèlman renmen lemonn",
+    "rom828": "Women 8:28 – Tout bagay travay ansanm pou byen",
+    "mt1128": "Matye 11:28 – Vin jwenn mwen, nou tout ki fatige",
+    "phil413": "Filipyen 4:13 – Mwen ka fè tout bagay",
+    "jes4110": "Ezayi 41:10 – Pa pè, paske mwen avèk ou",
+    "1kor13": "1 Korentyen 13 – Pi gran an se lanmou",
+    "spr35": "Pwovèb 3:5 – Mete konfyans ou nan Senyè a",
+    "jos19": "Jozye 1:9 – Fò ak kouraj",
+    "ps462": "Sòm 46:1 – Bondye se refij nou ak fòs nou",
+    "explainDetail": "Eksplike {{ref}} an detay"
+  },
+  "dailyVerses": {
+    "v0": "\"Vin jwenn mwen, nou tout ki fatige ak chay, e m'ap ba nou repo.\"",
+    "r0": "Matye 11:28",
+    "v1": "\"Paske mwen konnen plan mwen genyen pou nou, se sa Senyè a deklare, plan pou lapè.\"",
+    "r1": "Jeremi 29:11",
+    "v2": "\"Pa pè, paske mwen avèk ou; pa dekouraje, paske mwen se Bondye ou.\"",
+    "r2": "Ezayi 41:10",
+    "v3": "\"Senyè a se bèje m; mwen p'ap manke anyen.\"",
+    "r3": "Sòm 23:1",
+    "v4": "\"Jete tout enkyetid nou sou li paske li pran swen nou.\"",
+    "r4": "1 Pyè 5:7",
+    "v5": "\"Mwen se limyè lemonn. Nenpòt moun ki swiv mwen p'ap mache nan fènwa.\"",
+    "r5": "Jan 8:12",
+    "v6": "\"Fò ak kouraj! Pa pè, paske Senyè Bondye ou la avèk ou.\"",
+    "r6": "Jozye 1:9",
+    "v7": "\"Men, moun ki espere nan Senyè a ap renouvle fòs yo; y'ap vole sou zèl tankou èg.\"",
+    "r7": "Ezayi 40:31",
+    "v8": "\"Paske kote de ou twa rasanble nan non mwen, mwen la avèk yo.\"",
+    "r8": "Matye 18:20",
+    "v9": "\"Goute epi wè Senyè a bon; beni moun ki pran refij nan li.\"",
+    "r9": "Sòm 34:8",
+    "v10": "\"Li geri moun ki gen kè kase yo epi li mare blesi yo.\"",
+    "r10": "Sòm 147:3",
+    "v11": "\"Lanmou gen pasyans, lanmou gen bonte. Li sipòte tout bagay, li kwè tout bagay, li espere tout bagay.\"",
+    "r11": "1 Korentyen 13:4–7",
+    "v12": "\"Se pou nou gen kè kontan nan espwa, pasyan nan afliksyon, fidèl nan lapriyè.\"",
+    "r12": "Women 12:12",
+    "v13": "\"Mete konfyans ou nan Senyè a ak tout kè ou epi pa konte sou pwòp konpreyansyon ou.\"",
+    "r13": "Pwovèb 3:5"
+  },
+  "meinBereichNav": "Zòn mwen",
+  "verseExplain": "Eksplike vèsè Bib sa a an detay: {{quote}} ({{ref}}) – Ki moun ki te ekri sa? Nan ki kontèks? Kisa sa vle di pou lavi mwen jodi a?",
+  "social": {
+    "conversations": "Konvèsasyon",
+    "languages": "Lang",
+    "bibles": "Tradiksyon Bib la"
   }
 }

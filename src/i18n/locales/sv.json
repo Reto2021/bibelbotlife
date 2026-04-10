@@ -1,6 +1,8 @@
 {
   "nav": {
-    "startNow": "Starta nu"
+    "startNow": "Starta nu",
+    "prayerWall": "Bönevägg",
+    "bibleQuiz": "Bibelquiz"
   },
   "loader": "Laddar…",
   "hero": {
@@ -24,7 +26,9 @@
     "deepDive": "Vad betyder detta för mig?",
     "explore": "Läs hela avsnittet",
     "alreadySubscribed": "Du tar emot den dagliga inspirationen",
-    "subscribeCta": "Vill du få denna inspiration dagligen?"
+    "subscribeCta": "Vill du få denna inspiration dagligen?",
+    "playAudio": "Lyssna",
+    "stopAudio": "Stoppa"
   },
   "features": {
     "sectionTitle": "Hur din BibleBot följer dig",
@@ -155,7 +159,12 @@
     "toastPermDeniedDesc": "Vänligen tillåt aviseringar i dina webbläsarinställningar.",
     "toastError": "Fel",
     "toastErrorDesc": "Vänligen försök igen senare.",
-    "subscribeButton": "Prenumerera på inspiration"
+    "subscribeButton": "Prenumerera på inspiration",
+    "manage": "Hantera prenumeration",
+    "switchChannel": "Byt kanal:",
+    "unsubscribe": "Avsluta prenumeration",
+    "unsubscribedTitle": "Avregistrerad",
+    "unsubscribedDesc": "Du kommer inte längre att få daglig inspiration."
   },
   "faq": {
     "badge": "Vanliga frågor",
@@ -204,7 +213,14 @@
     "q8": "Vem står bakom din BibleBot och hur finansieras den?",
     "q8Answer": "BibleBot.Life är ett privat, icke-kommersiellt projekt. Det drivs ideellt och finansieras uteslutande genom frivilliga donationer. Det finns ingen reklam, ingen dataförsäljning och inga betalda funktioner. Alla donationer går direkt till att täcka de löpande kostnaderna (infrastruktur, hosting, utveckling). Eftersom BibleBot drivs som ett privat projekt är donationer inte avdragsgilla.",
     "q9": "Hur hanterar din BibleBot mina data?",
-    "q9Answer": "Din BibleBot lagrar inga personliga data och inga chatthistoriker. Varje samtal är anonymt. Det finns ingen inloggning, ingen spårning och ingen vidarebefordran av data till tredje part. Användningen är helt anonym."
+    "q9Answer": "Din BibleBot lagrar inga personliga data och inga chatthistoriker. Varje samtal är anonymt. Det finns ingen inloggning, ingen spårning och ingen vidarebefordran av data till tredje part. Användningen är helt anonym.",
+    "tradition": {
+      "reformed": "Reformert",
+      "evangelical": "Evangelisk",
+      "catholic": "Katolsk",
+      "freeChurch": "Frikyrka",
+      "literal": "Ordagrant"
+    }
   },
   "donate": {
     "badge": "Stöd din BibleBot",
@@ -291,7 +307,8 @@
     "errorConnection": "kunde inte nås.",
     "errorNoStream": "Ingen ström",
     "seniorMode": "Seniorläge (större text)",
-    "loginHint": "Logga in för att behålla konversationer på alla enheter"
+    "loginHint": "Logga in för att behålla konversationer på alla enheter",
+    "previousChats": "{{count}} tidigare konversationer"
   },
   "install": {
     "title": "Installera BibleBot",
@@ -504,7 +521,8 @@
     "prayerwall": {
       "desc": "Dela böneämnen & be för varandra",
       "title": "Bönevägg"
-    }
+    },
+    "showMore": "mer"
   },
   "lifeWheel": {
     "title": "Ditt livshjul",
@@ -860,7 +878,9 @@
     "patronage": "Rekommenderas av"
   },
   "auth": {
-    "apple": "Logga in med Apple"
+    "apple": "Logga in med Apple",
+    "loginShort": "Logga in",
+    "logout": "Logga ut"
   },
   "tts": {
     "male": "Manlig röst",
@@ -868,5 +888,61 @@
     "maleShort": "M",
     "femaleShort": "K",
     "voice": "Röst"
+  },
+  "chatDemo": {
+    "sectionLabel": "Så här ser en konversation ut",
+    "userMsg": "Jag känner mig ensam. Vad säger Bibeln om det?",
+    "botMsg": "Du är inte ensam – även när det känns så. Psaltaren 23 säger: 'Herren är min herde, mig skall intet fattas.' Detta betyder att Gud är nära dig, även i de mörkaste stunderna. Vill du att vi ska utforska detta stycke tillsammans?",
+    "cta": "Starta din egen konversation →"
+  },
+  "suggest": {
+    "psalm23": "Psaltaren 23 – Herren är min herde",
+    "joh316": "Johannes 3:16 – Ty så älskade Gud världen",
+    "rom828": "Romarbrevet 8:28 – Allt samverkar till det bästa",
+    "mt1128": "Matteus 11:28 – Kom till mig, alla ni som är trötta",
+    "phil413": "Filipperbrevet 4:13 – Jag förmår allt",
+    "jes4110": "Jesaja 41:10 – Frukta inte, ty jag är med dig",
+    "1kor13": "1 Korinthierbrevet 13 – Störst av allt är kärleken",
+    "spr35": "Ordspråksboken 3:5 – Förtrösta på Herren",
+    "jos19": "Josua 1:9 – Var stark och modig",
+    "ps462": "Psaltaren 46:1 – Gud är vår tillflykt och styrka",
+    "explainDetail": "Förklara {{ref}} i detalj"
+  },
+  "dailyVerses": {
+    "v0": "\"Kom till mig, alla ni som är trötta och tyngda av bördor, så ska jag ge er vila.\"",
+    "r0": "Matteus 11:28",
+    "v1": "\"Ty jag vet vilka tankar jag har för er, säger Herren, nämligen fridens tankar.\"",
+    "r1": "Jeremia 29:11",
+    "v2": "\"Frukta inte, ty jag är med dig; var inte förskräckt, ty jag är din Gud.\"",
+    "r2": "Jesaja 41:10",
+    "v3": "\"Herren är min herde; mig skall intet fattas.\"",
+    "r3": "Psaltaren 23:1",
+    "v4": "\"Kasta all er oro på honom, ty han har omsorg om er.\"",
+    "r4": "1 Petrus 5:7",
+    "v5": "\"Jag är världens ljus. Den som följer mig skall inte vandra i mörkret.\"",
+    "r5": "Johannes 8:12",
+    "v6": "\"Var stark och modig! Var inte rädd, ty Herren din Gud är med dig.\"",
+    "r6": "Josua 1:9",
+    "v7": "\"Men de som hoppas på Herren får ny kraft; de lyfter med vingar som örnar.\"",
+    "r7": "Jesaja 40:31",
+    "v8": "\"Ty där två eller tre är samlade i mitt namn, där är jag mitt ibland dem.\"",
+    "r8": "Matteus 18:20",
+    "v9": "\"Smaka och se att Herren är god; salig är den som tar sin tillflykt till honom.\"",
+    "r9": "Psaltaren 34:8",
+    "v10": "\"Han helar dem som har ett förkrossat hjärta och förbinder deras sår.\"",
+    "r10": "Psaltaren 147:3",
+    "v11": "\"Kärleken är tålmodig, kärleken är vänlig. Den fördrar allt, tror allt, hoppas allt.\"",
+    "r11": "1 Korinthierbrevet 13:4–7",
+    "v12": "\"Var glada i hoppet, tålmodiga i lidandet, uthålliga i bönen.\"",
+    "r12": "Romarbrevet 12:12",
+    "v13": "\"Förtrösta på Herren av hela ditt hjärta och förlita dig inte på ditt eget förstånd.\"",
+    "r13": "Ordspråksboken 3:5"
+  },
+  "meinBereichNav": "Mitt område",
+  "verseExplain": "Förklara denna bibelvers i detalj: {{quote}} ({{ref}}) – Vem skrev detta? I vilket sammanhang? Vad betyder det för mitt liv idag?",
+  "social": {
+    "conversations": "Konversationer",
+    "languages": "Språk",
+    "bibles": "Bibeloversättningar"
   }
 }

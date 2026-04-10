@@ -1,6 +1,8 @@
 {
   "nav": {
-    "startNow": "Bẹ̀rẹ̀ báyìí"
+    "startNow": "Bẹ̀rẹ̀ báyìí",
+    "prayerWall": "Odi Adura",
+    "bibleQuiz": "Idanwo Bibeli"
   },
   "loader": "Ń gbékalẹ̀…",
   "hero": {
@@ -24,7 +26,9 @@
     "deepDive": "Kí ni èyí túmọ̀ sí fún mi?",
     "explore": "Ka abala kíkún",
     "alreadySubscribed": "O n gba imisis ti ojoojumọ",
-    "subscribeCta": "Ṣe o fẹ gba imisis yi lojoojumọ?"
+    "subscribeCta": "Ṣe o fẹ gba imisis yi lojoojumọ?",
+    "playAudio": "Gbọ́",
+    "stopAudio": "Duro"
   },
   "features": {
     "sectionTitle": "Bí BibleBot ṣe ń bá ọ rìn",
@@ -155,7 +159,12 @@
     "toastPermDeniedDesc": "Jọ̀wọ́ gbà àwọn ìfitónilétí nínú ètò aṣàwákiri rẹ.",
     "toastError": "Àṣìṣe",
     "toastErrorDesc": "Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kan sí i nígbà míì.",
-    "subscribeButton": "Alabapin si Inspo"
+    "subscribeButton": "Alabapin si Inspo",
+    "manage": "Ṣakoso alabapin",
+    "switchChannel": "Yipada ikanni:",
+    "unsubscribe": "Yọ alabapin kuro",
+    "unsubscribedTitle": "Ti yọ alabapin kuro",
+    "unsubscribedDesc": "Iwọ kii yoo gba imisi ojoojumọ mọ."
   },
   "faq": {
     "badge": "Àwọn ìbéèrè tí a sábà ń béèrè",
@@ -204,7 +213,14 @@
     "q8": "Ta ni ó wà lẹ́yìn BibleBot, báwo ni a ṣe ń sanwó rẹ̀?",
     "q8Answer": "BibleBot.Life jẹ́ iṣẹ́ àkànṣe, tí kì í ṣe fún owó. A ń ṣe é lọ́fẹ̀ẹ́ a sì ń sanwó rẹ̀ nípasẹ̀ ẹ̀bùn àtinúwá nìkan. Kò sí ìpolówó, kò sí títà dátà, kò sí ẹ̀ka tí a ń san owó fún. Gbogbo ẹ̀bùn lọ tààrà sí ìbọ́jú ìnáwó ìṣiṣẹ́. Nítorí BibleBot jẹ́ iṣẹ́ àkànṣe, àwọn ẹ̀bùn kò ṣe é yọ kúrò nínú owó orí.",
     "q9": "Báwo ni BibleBot ṣe ń ṣe pẹ̀lú dátà mi?",
-    "q9Answer": "BibleBot kò tọ́jú dátà àkànṣe kankan tàbí ìtàn ìjíròrò. Gbogbo ìjíròrò jẹ́ aláìlórúkọ. Kò sí ìforúkọsílẹ̀, kò sí ìtọpinpin, kò sí pínpín dátà pẹ̀lú ẹlòmíì."
+    "q9Answer": "BibleBot kò tọ́jú dátà àkànṣe kankan tàbí ìtàn ìjíròrò. Gbogbo ìjíròrò jẹ́ aláìlórúkọ. Kò sí ìforúkọsílẹ̀, kò sí ìtọpinpin, kò sí pínpín dátà pẹ̀lú ẹlòmíì.",
+    "tradition": {
+      "reformed": "Atunṣe",
+      "evangelical": "Ihinrere",
+      "catholic": "Katoliki",
+      "freeChurch": "Ijo Ofe",
+      "literal": "Ọrọ-fun-ọrọ"
+    }
   },
   "donate": {
     "badge": "Ṣe àtìlẹ́yìn BibleBot",
@@ -291,7 +307,8 @@
     "errorConnection": "kò lè dé.",
     "errorNoStream": "Kò sí ìṣàn",
     "seniorMode": "Ìpele àgbàlagbà (ọ̀rọ̀ tó tóbi)",
-    "loginHint": "Wọlé láti tọ́jú ìjíròrò rẹ lórí gbogbo àwọn ohun èlò"
+    "loginHint": "Wọlé láti tọ́jú ìjíròrò rẹ lórí gbogbo àwọn ohun èlò",
+    "previousChats": "{{count}} awọn ibaraẹnisọrọ iṣaaju"
   },
   "install": {
     "title": "Fi BibleBot sí",
@@ -542,7 +559,8 @@
     "prayerwall": {
       "desc": "Pín àwọn ìfẹ́ àdúrà & gbàdúrà fúnra yín",
       "title": "Ògiri Àdúrà"
-    }
+    },
+    "showMore": "siwaju sii"
   },
   "lifeWheel": {
     "title": "Kẹ̀kẹ́ ìgbésí ayé rẹ",
@@ -860,7 +878,9 @@
     "patronage": "Ti a ṣe iṣeduro nipasẹ"
   },
   "auth": {
-    "apple": "Wọlé pẹ̀lú Apple"
+    "apple": "Wọlé pẹ̀lú Apple",
+    "loginShort": "Wọle",
+    "logout": "Jade"
   },
   "tts": {
     "male": "Ohùn ọkùnrin",
@@ -868,5 +888,61 @@
     "maleShort": "Ọk",
     "femaleShort": "Ob",
     "voice": "Ohùn"
+  },
+  "chatDemo": {
+    "sectionLabel": "Eyi ni bi ibaraẹnisọrọ ṣe ri",
+    "userMsg": "Mo nikan. Ki ni Bibeli sọ nipa iyẹn?",
+    "botMsg": "Iwọ kii nikan – paapaa nigbati o ba dabi ẹni pe o jẹ bẹ. Orin Dafidi 23 sọ pe: 'Oluwa ni oluṣọ-agutan mi, emi kii yoo fẹ.' Eyi tumọ si pe Ọlọrun wa nitosi rẹ, paapaa ni awọn akoko dudu julọ. Ṣe iwọ yoo fẹ ki a ṣawari ọrọ yii papọ?",
+    "cta": "Bẹrẹ ibaraẹnisọrọ tirẹ →"
+  },
+  "suggest": {
+    "psalm23": "Orin Dafidi 23 – Oluwa ni oluṣọ-agutan mi",
+    "joh316": "Johannu 3:16 – Nitori Ọlọrun fẹran agbaye tobẹẹ",
+    "rom828": "Romu 8:28 – Gbogbo nkan ṣiṣẹ papọ fun rere",
+    "mt1128": "Matteu 11:28 – Wa si ọdọ mi, gbogbo ẹyin ti o rẹwẹsi",
+    "phil413": "Filippi 4:13 – Mo le ṣe gbogbo nkan",
+    "jes4110": "Isaiah 41:10 – Maṣe bẹru, nitori emi wa pẹlu rẹ",
+    "1kor13": "1 Korinti 13 – Ti o tobi julọ ni ifẹ",
+    "spr35": "Owe 3:5 – Gbẹkẹle Oluwa",
+    "jos19": "Joṣua 1:9 – Jẹ alagbara ati onigboya",
+    "ps462": "Orin Dafidi 46:1 – Ọlọrun ni ibi aabo ati agbara wa",
+    "explainDetail": "Ṣalaye {{ref}} ni apejuwe"
+  },
+  "dailyVerses": {
+    "v0": "\"Ẹ wá sọ́dọ̀ mi, gbogbo ẹ̀yin tí ó rẹ̀wẹ̀sì, tí ẹ sì ti di ẹrù, èmi yóò sì fún yín ní ìsinmi.\"",
+    "r0": "Matteu 11:28",
+    "v1": "\"Nitori mo mọ̀ àwọn ètò tí mo ní fún yín, ni Oluwa wí, àwọn ètò fún àlàáfíà.\"",
+    "r1": "Jeremiah 29:11",
+    "v2": "\"Má bẹ̀rù, nitori èmi wà pẹlu rẹ; má ṣe jẹ́ kí ọkàn rẹ dàrú, nitori èmi ni Ọlọrun rẹ.\"",
+    "r2": "Isaiah 41:10",
+    "v3": "\"Oluwa ni oluṣọ-agutan mi; emi kii yoo fẹ.\"",
+    "r3": "Orin Dafidi 23:1",
+    "v4": "\"Ẹ sọ gbogbo aniyan yín lé e lórí nitori ó bìkítà fún yín.\"",
+    "r4": "1 Peteru 5:7",
+    "v5": "\"Emi ni imọlẹ ayé. Ẹnikẹni ti o ba tẹle mi kii yoo rìn ninu òkunkun.\"",
+    "r5": "Johannu 8:12",
+    "v6": "\"Jẹ́ alágbára, kí o sì ní ìgboyà! Má bẹ̀rù, nitori Oluwa Ọlọrun rẹ wà pẹlu rẹ.\"",
+    "r6": "Joṣua 1:9",
+    "v7": "\"Ṣugbọn awọn ti o nireti ninu Oluwa yoo tun agbara wọn ṣe; wọn yoo fò lori iyẹ bi idì.\"",
+    "r7": "Isaiah 40:31",
+    "v8": "\"Nitori níbi tí ènìyàn méjì tàbí mẹ́ta bá ti péjọ ní orúkọ mi, níbẹ̀ ni èmi wà pẹlu wọn.\"",
+    "r8": "Matteu 18:20",
+    "v9": "\"Ẹ tọ́ wò, kí ẹ sì rí i pé Oluwa dára; alábùkún ni ẹni tí ó gbẹ́kẹ̀lé e.\"",
+    "r9": "Orin Dafidi 34:8",
+    "v10": "\"Ó wo àwọn tí ọkàn wọn fọ́ sàn, ó sì di ọgbẹ́ wọn.\"",
+    "r10": "Orin Dafidi 147:3",
+    "v11": "\"Ifẹ ni suuru, ifẹ ni inurere. O farada gbogbo nkan, o gbagbọ gbogbo nkan, o nireti gbogbo nkan.\"",
+    "r11": "1 Korinti 13:4–7",
+    "v12": "\"Ẹ yọ̀ ninu ireti, ẹ ní suuru ninu ipọnju, ẹ jẹ́ olóòótọ́ ninu adura.\"",
+    "r12": "Romu 12:12",
+    "v13": "\"Gbẹkẹle Oluwa pẹlu gbogbo ọkàn rẹ, má sì ṣe gbẹ́kẹ̀lé òye ara rẹ.\"",
+    "r13": "Owe 3:5"
+  },
+  "meinBereichNav": "Agbegbe Mi",
+  "verseExplain": "Ṣalaye ẹsẹ Bibeli yii ni apejuwe: {{quote}} ({{ref}}) – Tani o kọ eyi? Ni ipo wo? Kini o tumọ si fun igbesi aye mi loni?",
+  "social": {
+    "conversations": "Awọn ibaraẹnisọrọ",
+    "languages": "Awọn ede",
+    "bibles": "Awọn itumọ Bibeli"
   }
 }

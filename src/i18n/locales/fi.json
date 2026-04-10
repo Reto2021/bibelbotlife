@@ -1,6 +1,8 @@
 {
   "nav": {
-    "startNow": "Aloita nyt"
+    "startNow": "Aloita nyt",
+    "prayerWall": "Rukousmuuri",
+    "bibleQuiz": "Raamattuvisa"
   },
   "loader": "Ladataan…",
   "hero": {
@@ -24,7 +26,9 @@
     "deepDive": "Mitä tämä tarkoittaa minulle?",
     "explore": "Lue koko kohta",
     "alreadySubscribed": "Saat päivittäisen inspiraation",
-    "subscribeCta": "Haluatko saada tämän inspiraation päivittäin?"
+    "subscribeCta": "Haluatko saada tämän inspiraation päivittäin?",
+    "playAudio": "Kuuntele",
+    "stopAudio": "Pysäytä"
   },
   "features": {
     "sectionTitle": "Miten BibleBotisi opastaa sinua",
@@ -155,7 +159,12 @@
     "toastPermDeniedDesc": "Salli ilmoitukset selaimesi asetuksista.",
     "toastError": "Virhe",
     "toastErrorDesc": "Yritä myöhemmin uudelleen.",
-    "subscribeButton": "Tilaa Inspo"
+    "subscribeButton": "Tilaa Inspo",
+    "manage": "Hallinnoi tilausta",
+    "switchChannel": "Vaihda kanavaa:",
+    "unsubscribe": "Peruuta tilaus",
+    "unsubscribedTitle": "Tilaus peruutettu",
+    "unsubscribedDesc": "Et enää saa päivittäistä inspiraatiota."
   },
   "faq": {
     "badge": "Usein kysytyt kysymykset",
@@ -204,7 +213,14 @@
     "q8": "Kuka BibleBotisi takana on ja miten se rahoitetaan?",
     "q8Answer": "BibleBot.Life on yksityinen, ei-kaupallinen projekti. Sitä ylläpidetään vapaaehtoisvoimin ja rahoitetaan yksinomaan vapaaehtoisilla lahjoituksilla. Ei ole mainoksia, ei tietojen myyntiä eikä maksullisia ominaisuuksia. Kaikki lahjoitukset menevät suoraan juoksevien kulujen (infrastruktuuri, hosting, kehitys) kattamiseen. Koska BibleBot toimii yksityisenä projektina, lahjoitukset eivät ole verovähennyskelpoisia.",
     "q9": "Miten BibleBotisi käsittelee tietojani?",
-    "q9Answer": "BibleBotisi ei tallenna henkilötietoja eikä chat-historiaa. Jokainen keskustelu on anonyymi. Ei ole kirjautumista, ei seurantaa eikä tietojen luovuttamista kolmansille osapuolille. Käyttö on täysin anonyymi."
+    "q9Answer": "BibleBotisi ei tallenna henkilötietoja eikä chat-historiaa. Jokainen keskustelu on anonyymi. Ei ole kirjautumista, ei seurantaa eikä tietojen luovuttamista kolmansille osapuolille. Käyttö on täysin anonyymi.",
+    "tradition": {
+      "reformed": "Reformoitu",
+      "evangelical": "Evankelinen",
+      "catholic": "Katolinen",
+      "freeChurch": "Vapaakirkko",
+      "literal": "Sana sanalta"
+    }
   },
   "donate": {
     "badge": "Tue BibleBotiasi",
@@ -291,7 +307,8 @@
     "errorConnection": "ei voitu tavoittaa.",
     "errorNoStream": "Ei virtaa",
     "seniorMode": "Senioritila (suurempi fontti)",
-    "loginHint": "Kirjaudu sisään pitääksesi keskustelut tallessa eri laitteilla"
+    "loginHint": "Kirjaudu sisään pitääksesi keskustelut tallessa eri laitteilla",
+    "previousChats": "{{count}} edellistä keskustelua"
   },
   "install": {
     "title": "Asenna BibleBot",
@@ -504,7 +521,8 @@
     "prayerwall": {
       "desc": "Jaa rukouspyyntöjä ja rukoile toistenne puolesta",
       "title": "Rukousseinä"
-    }
+    },
+    "showMore": "lisää"
   },
   "lifeWheel": {
     "title": "Elämänpyöräsi",
@@ -860,7 +878,9 @@
     "patronage": "Suosittelee"
   },
   "auth": {
-    "apple": "Kirjaudu Applella"
+    "apple": "Kirjaudu Applella",
+    "loginShort": "Kirjaudu sisään",
+    "logout": "Kirjaudu ulos"
   },
   "tts": {
     "male": "Miesääni",
@@ -868,5 +888,61 @@
     "maleShort": "M",
     "femaleShort": "N",
     "voice": "Ääni"
+  },
+  "chatDemo": {
+    "sectionLabel": "Tältä keskustelu näyttää",
+    "userMsg": "Tunnen itseni yksinäiseksi. Mitä Raamattu sanoo siitä?",
+    "botMsg": "Et ole yksin – vaikka siltä tuntuisi. Psalmi 23 sanoo: 'Herra on minun paimeneni, ei minulta mitään puutu.' Tämä tarkoittaa, että Jumala on lähelläsi, jopa pimeimmissä hetkissä. Haluaisitko, että tutkimme tätä kohtaa yhdessä?",
+    "cta": "Aloita oma keskustelusi →"
+  },
+  "suggest": {
+    "psalm23": "Psalmi 23 – Herra on minun paimeneni",
+    "joh316": "Johannes 3:16 – Sillä niin on Jumala maailmaa rakastanut",
+    "rom828": "Roomalaiskirje 8:28 – Kaikki yhdessä vaikuttaa parhaaksemme",
+    "mt1128": "Matteus 11:28 – Tulkaa minun tyköni kaikki työtätekevät ja raskautetut",
+    "phil413": "Filippiläiskirje 4:13 – Kaiken minä voin hänessä, joka minua vahvistaa",
+    "jes4110": "Jesaja 41:10 – Älä pelkää, sillä minä olen sinun kanssasi",
+    "1kor13": "1. Korinttilaiskirje 13 – Suurin niistä on rakkaus",
+    "spr35": "Sananlaskut 3:5 – Turvaa Herraan kaikesta sydämestäsi",
+    "jos19": "Joosua 1:9 – Ole luja ja rohkea",
+    "ps462": "Psalmi 46:1 – Jumala on turvamme ja voimamme",
+    "explainDetail": "Selitä {{ref}} yksityiskohtaisesti"
+  },
+  "dailyVerses": {
+    "v0": "\"Tulkaa minun tyköni kaikki työtätekevät ja raskautetut, niin minä annan teille levon.\"",
+    "r0": "Matteus 11:28",
+    "v1": "\"Sillä minä tunnen ajatukseni, jotka minulla on teitä kohtaan, sanoo Herra, rauhan ajatukset.\"",
+    "r1": "Jeremia 29:11",
+    "v2": "\"Älä pelkää, sillä minä olen sinun kanssasi; älä hätäänny, sillä minä olen sinun Jumalasi.\"",
+    "r2": "Jesaja 41:10",
+    "v3": "\"Herra on minun paimeneni; ei minulta mitään puutu.\"",
+    "r3": "Psalmi 23:1",
+    "v4": "\"Heittäkää kaikki murheenne hänen päällensä, sillä hän pitää teistä huolen.\"",
+    "r4": "1. Pietarin kirje 5:7",
+    "v5": "\"Minä olen maailman valo. Joka minua seuraa, se ei vaella pimeydessä.\"",
+    "r5": "Johannes 8:12",
+    "v6": "\"Ole luja ja rohkea! Älä pelkää, sillä Herra, sinun Jumalasi, on kanssasi.\"",
+    "r6": "Joosua 1:9",
+    "v7": "\"Mutta ne, jotka Herraa odottavat, saavat uuden voiman; he kohoavat siivillä kuin kotkat.\"",
+    "r7": "Jesaja 40:31",
+    "v8": "\"Sillä missä kaksi tai kolme on kokoontunut minun nimeeni, siellä minä olen heidän keskellään.\"",
+    "r8": "Matteus 18:20",
+    "v9": "\"Maistakaa ja nähkää, että Herra on hyvä; autuas se mies, joka häneen turvaa.\"",
+    "r9": "Psalmi 34:8",
+    "v10": "\"Hän parantaa särkyneet sydämet ja sitoo heidän haavansa.\"",
+    "r10": "Psalmi 147:3",
+    "v11": "\"Rakkaus on pitkämielinen, rakkaus on lempeä. Se kärsii kaiken, uskoo kaiken, toivoo kaiken.\"",
+    "r11": "1. Korinttilaiskirje 13:4–7",
+    "v12": "\"Olkaa iloisia toivossa, kärsivällisiä ahdistuksessa, kestäviä rukouksessa.\"",
+    "r12": "Roomalaiskirje 12:12",
+    "v13": "\"Turvaa Herraan kaikesta sydämestäsi äläkä nojaudu omaan ymmärrykseesi.\"",
+    "r13": "Sananlaskut 3:5"
+  },
+  "meinBereichNav": "Oma alueeni",
+  "verseExplain": "Selitä tämä raamatunjae yksityiskohtaisesti: {{quote}} ({{ref}}) – Kuka tämän kirjoitti? Missä yhteydessä? Mitä se tarkoittaa elämälleni tänään?",
+  "social": {
+    "conversations": "Keskustelut",
+    "languages": "Kielet",
+    "bibles": "Raamatunkäännökset"
   }
 }

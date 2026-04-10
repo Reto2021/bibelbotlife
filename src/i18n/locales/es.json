@@ -26,7 +26,9 @@
     "deepDive": "¿Qué significa esto para mí?",
     "explore": "Leer el pasaje completo",
     "alreadySubscribed": "Ya recibes la inspiración diaria",
-    "subscribeCta": "¿Quieres recibir esta inspiración diariamente?"
+    "subscribeCta": "¿Quieres recibir esta inspiración diariamente?",
+    "playAudio": "Escuchar",
+    "stopAudio": "Detener"
   },
   "features": {
     "sectionTitle": "Cómo BibleBot te acompaña",
@@ -157,7 +159,12 @@
     "toastPermDeniedDesc": "Por favor, permite las notificaciones en la configuración de tu navegador.",
     "toastError": "Error",
     "toastErrorDesc": "Por favor, inténtalo de nuevo más tarde.",
-    "subscribeButton": "Suscribirse a Inspo"
+    "subscribeButton": "Suscribirse a Inspo",
+    "manage": "Gestionar suscripción",
+    "switchChannel": "Cambiar canal:",
+    "unsubscribe": "Cancelar suscripción",
+    "unsubscribedTitle": "Suscripción cancelada",
+    "unsubscribedDesc": "Ya no recibirás inspiración diaria."
   },
   "faq": {
     "badge": "Preguntas frecuentes",
@@ -206,7 +213,14 @@
     "q8": "¿Quién está detrás de BibleBot y cómo se financia?",
     "q8Answer": "BibleBot.Life es un proyecto privado y no comercial. Se gestiona de forma voluntaria y se financia exclusivamente con donaciones voluntarias. No hay publicidad, ni venta de datos, ni funciones de pago. Todas las donaciones cubren directamente los costos operativos (infraestructura, alojamiento, desarrollo).",
     "q9": "¿Cómo maneja BibleBot mis datos?",
-    "q9Answer": "BibleBot no almacena datos personales ni historiales de chat. Cada conversación es anónima. No hay login, no hay seguimiento y no se comparten datos con terceros. El uso es completamente anónimo."
+    "q9Answer": "BibleBot no almacena datos personales ni historiales de chat. Cada conversación es anónima. No hay login, no hay seguimiento y no se comparten datos con terceros. El uso es completamente anónimo.",
+    "tradition": {
+      "reformed": "Reformada",
+      "evangelical": "Evangélica",
+      "catholic": "Católica",
+      "freeChurch": "Iglesia Libre",
+      "literal": "Literal"
+    }
   },
   "donate": {
     "badge": "Apoya a BibleBot",
@@ -278,7 +292,8 @@
     "seniorMode": "Senior mode (larger text)",
     "teaserCta": "Escribir ahora →",
     "namePlaceholder": "p.ej. Eli, Miriam…",
-    "loginHint": "Inicia sesión para mantener las conversaciones en todos tus dispositivos"
+    "loginHint": "Inicia sesión para mantener las conversaciones en todos tus dispositivos",
+    "previousChats": "{{count}} conversaciones anteriores"
   },
   "install": {
     "title": "Instalar BibleBot",
@@ -509,7 +524,8 @@
     "prayerwall": {
       "desc": "Comparte peticiones de oración y ora unos por otros",
       "title": "Muro de Oración"
-    }
+    },
+    "showMore": "más"
   },
   "lifeWheel": {
     "title": "Tu rueda de la vida",
@@ -884,5 +900,49 @@
     "userMsg": "Me siento solo. ¿Qué dice la Biblia al respecto?",
     "botMsg": "No estás solo – aunque lo sientas así. El Salmo 23 dice: «El Señor es mi pastor, nada me faltará.» Esto significa que Dios está cerca de ti, incluso en los momentos más oscuros. ¿Te gustaría explorar este pasaje juntos?",
     "cta": "Comienza tu propia conversación →"
-  }
+  },
+  "suggest": {
+    "psalm23": "Salmo 23 – El Señor es mi pastor",
+    "joh316": "Juan 3:16 – Porque de tal manera amó Dios al mundo",
+    "rom828": "Romanos 8:28 – Todas las cosas obran para bien",
+    "mt1128": "Mateo 11:28 – Venid a mí todos los que estáis trabajados",
+    "phil413": "Filipenses 4:13 – Todo lo puedo en Cristo",
+    "jes4110": "Isaías 41:10 – No temas, porque yo estoy contigo",
+    "1kor13": "1 Corintios 13 – El mayor es el amor",
+    "spr35": "Proverbios 3:5 – Confía en el Señor",
+    "jos19": "Josué 1:9 – Sé fuerte y valiente",
+    "ps462": "Salmo 46:1 – Dios es nuestro amparo y fortaleza",
+    "explainDetail": "Explica {{ref}} en detalle"
+  },
+  "dailyVerses": {
+    "v0": "\"Venid a mí todos los que estáis trabajados y cargados, y yo os haré descansar.\"",
+    "r0": "Mateo 11:28",
+    "v1": "\"Porque yo sé los planes que tengo para vosotros, declara el Señor, planes de paz.\"",
+    "r1": "Jeremías 29:11",
+    "v2": "\"No temas, porque yo estoy contigo; no desmayes, porque yo soy tu Dios.\"",
+    "r2": "Isaías 41:10",
+    "v3": "\"El Señor es mi pastor; nada me faltará.\"",
+    "r3": "Salmo 23:1",
+    "v4": "\"Echad toda vuestra ansiedad sobre él, porque él tiene cuidado de vosotros.\"",
+    "r4": "1 Pedro 5:7",
+    "v5": "\"Yo soy la luz del mundo. El que me sigue no andará en tinieblas.\"",
+    "r5": "Juan 8:12",
+    "v6": "\"¡Sé fuerte y valiente! No tengas miedo, porque el Señor tu Dios está contigo.\"",
+    "r6": "Josué 1:9",
+    "v7": "\"Pero los que esperan en el Señor renovarán sus fuerzas; levantarán alas como las águilas.\"",
+    "r7": "Isaías 40:31",
+    "v8": "\"Porque donde dos o tres se reúnen en mi nombre, allí estoy yo en medio de ellos.\"",
+    "r8": "Mateo 18:20",
+    "v9": "\"Gustad y ved que el Señor es bueno; bienaventurado el hombre que confía en él.\"",
+    "r9": "Salmo 34:8",
+    "v10": "\"Él sana a los quebrantados de corazón y venda sus heridas.\"",
+    "r10": "Salmo 147:3",
+    "v11": "\"El amor es paciente, el amor es bondadoso. Todo lo sufre, todo lo cree, todo lo espera.\"",
+    "r11": "1 Corintios 13:4–7",
+    "v12": "\"Alegraos en la esperanza, sed pacientes en la aflicción, perseverad en la oración.\"",
+    "r12": "Romanos 12:12",
+    "v13": "\"Confía en el Señor de todo corazón y no te apoyes en tu propio entendimiento.\"",
+    "r13": "Proverbios 3:5"
+  },
+  "verseExplain": "Explica este versículo bíblico en detalle: {{quote}} ({{ref}}) – ¿Quién lo escribió? ¿En qué contexto? ¿Qué significa para mi vida hoy?"
 }

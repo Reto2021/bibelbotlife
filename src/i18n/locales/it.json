@@ -26,7 +26,9 @@
     "deepDive": "Cosa significa per me?",
     "explore": "Leggi il brano completo",
     "alreadySubscribed": "Ricevi l'ispirazione quotidiana",
-    "subscribeCta": "Vuoi ricevere questa ispirazione ogni giorno?"
+    "subscribeCta": "Vuoi ricevere questa ispirazione ogni giorno?",
+    "playAudio": "Ascolta",
+    "stopAudio": "Ferma"
   },
   "features": {
     "sectionTitle": "Come BibleBot ti accompagna",
@@ -157,7 +159,12 @@
     "toastPermDeniedDesc": "Consenti le notifiche nelle impostazioni del browser.",
     "toastError": "Errore",
     "toastErrorDesc": "Riprova più tardi.",
-    "subscribeButton": "Iscriviti a Inspo"
+    "subscribeButton": "Iscriviti a Inspo",
+    "manage": "Gestisci abbonamento",
+    "switchChannel": "Cambia canale:",
+    "unsubscribe": "Annulla abbonamento",
+    "unsubscribedTitle": "Annullato",
+    "unsubscribedDesc": "Non riceverai più l'ispirazione quotidiana."
   },
   "faq": {
     "badge": "FAQ",
@@ -206,7 +213,14 @@
     "q8": "Chi c'è dietro BibleBot e come viene finanziato?",
     "q8Answer": "BibleBot.Life è un progetto privato e non commerciale. È gestito su base volontaria e finanziato esclusivamente attraverso donazioni volontarie. Non c'è pubblicità, nessuna vendita di dati e nessuna funzionalità a pagamento.",
     "q9": "Come gestisce BibleBot i miei dati?",
-    "q9Answer": "BibleBot non memorizza dati personali né cronologie di chat. Ogni conversazione è anonima. Non c'è login, nessun tracciamento e nessuna condivisione di dati con terzi."
+    "q9Answer": "BibleBot non memorizza dati personali né cronologie di chat. Ogni conversazione è anonima. Non c'è login, nessun tracciamento e nessuna condivisione di dati con terzi.",
+    "tradition": {
+      "reformed": "Riformata",
+      "evangelical": "Evangelica",
+      "catholic": "Cattolica",
+      "freeChurch": "Chiesa libera",
+      "literal": "Parola per parola"
+    }
   },
   "donate": {
     "badge": "Sostieni BibleBot",
@@ -278,7 +292,8 @@
     "seniorMode": "Senior mode (larger text)",
     "teaserCta": "Scrivi ora →",
     "namePlaceholder": "es. Eli, Miriam…",
-    "loginHint": "Accedi per mantenere le conversazioni su tutti i dispositivi"
+    "loginHint": "Accedi per mantenere le conversazioni su tutti i dispositivi",
+    "previousChats": "{{count}} conversazioni precedenti"
   },
   "install": {
     "title": "Installa BibleBot",
@@ -509,7 +524,8 @@
     "prayerwall": {
       "desc": "Condividi le intenzioni di preghiera & prega l'uno per l'altro",
       "title": "Muro della Preghiera"
-    }
+    },
+    "showMore": "altro"
   },
   "lifeWheel": {
     "title": "La tua ruota della vita",
@@ -884,5 +900,49 @@
     "userMsg": "Mi sento solo. Cosa dice la Bibbia a riguardo?",
     "botMsg": "Non sei solo – anche quando ti senti così. Il Salmo 23 dice: «Il Signore è il mio pastore, non mi mancherà nulla.» Questo significa che Dio è vicino a te, anche nei momenti più bui. Vuoi esplorare questo passo insieme?",
     "cta": "Inizia la tua conversazione →"
-  }
+  },
+  "suggest": {
+    "psalm23": "Salmo 23 – Il Signore è il mio pastore",
+    "joh316": "Giovanni 3:16 – Dio ha tanto amato il mondo",
+    "rom828": "Romani 8:28 – Tutte le cose cooperano al bene",
+    "mt1128": "Matteo 11:28 – Venite a me, voi tutti che siete affaticati",
+    "phil413": "Filippesi 4:13 – Io posso ogni cosa",
+    "jes4110": "Isaia 41:10 – Non temere, perché io sono con te",
+    "1kor13": "1 Corinzi 13 – La più grande è l'amore",
+    "spr35": "Proverbi 3:5 – Confida nel Signore",
+    "jos19": "Giosuè 1:9 – Sii forte e coraggioso",
+    "ps462": "Salmo 46:1 – Dio è il nostro rifugio e la nostra forza",
+    "explainDetail": "Spiega {{ref}} in dettaglio"
+  },
+  "dailyVerses": {
+    "v0": "\"Venite a me, voi tutti che siete affaticati e oppressi, e io vi darò riposo.\"",
+    "r0": "Matteo 11:28",
+    "v1": "\"Poiché io conosco i pensieri che ho per voi, dice il Signore, pensieri di pace.\"",
+    "r1": "Geremia 29:11",
+    "v2": "\"Non temere, perché io sono con te; non ti smarrire, perché io sono il tuo Dio.\"",
+    "r2": "Isaia 41:10",
+    "v3": "\"Il Signore è il mio pastore; nulla mi mancherà.\"",
+    "r3": "Salmo 23:1",
+    "v4": "\"Gettate su di lui ogni vostra preoccupazione, perché egli ha cura di voi.\"",
+    "r4": "1 Pietro 5:7",
+    "v5": "\"Io sono la luce del mondo. Chi mi segue non camminerà nelle tenebre.\"",
+    "r5": "Giovanni 8:12",
+    "v6": "\"Sii forte e coraggioso! Non aver paura, perché il Signore tuo Dio è con te.\"",
+    "r6": "Giosuè 1:9",
+    "v7": "\"Ma quelli che sperano nel Signore rinnoveranno le loro forze; voleranno in alto come aquile.\"",
+    "r7": "Isaia 40:31",
+    "v8": "\"Poiché dove due o tre sono riuniti nel mio nome, lì sono io in mezzo a loro.\"",
+    "r8": "Matteo 18:20",
+    "v9": "\"Gustate e vedete quanto è buono il Signore; beato l'uomo che si rifugia in lui.\"",
+    "r9": "Salmo 34:8",
+    "v10": "\"Egli guarisce i cuori spezzati e fascia le loro ferite.\"",
+    "r10": "Salmo 147:3",
+    "v11": "\"L'amore è paziente, l'amore è benigno. Sopporta ogni cosa, crede ogni cosa, spera ogni cosa.\"",
+    "r11": "1 Corinzi 13:4–7",
+    "v12": "\"Siate gioiosi nella speranza, pazienti nella tribolazione, perseveranti nella preghiera.\"",
+    "r12": "Romani 12:12",
+    "v13": "\"Confida nel Signore con tutto il tuo cuore e non appoggiarti sulla tua intelligenza.\"",
+    "r13": "Proverbi 3:5"
+  },
+  "verseExplain": "Spiega questo versetto biblico in dettaglio: {{quote}} ({{ref}}) – Chi l'ha scritto? In quale contesto? Cosa significa per la mia vita oggi?"
 }
