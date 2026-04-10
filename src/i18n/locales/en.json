@@ -280,7 +280,8 @@
     "errorNoStream": "No stream",
     "seniorMode": "Senior mode (larger text)",
     "teaserCta": "Start writing →",
-    "namePlaceholder": "e.g. Eli, Miriam…"
+    "namePlaceholder": "e.g. Eli, Miriam…",
+    "previousChats": "{{count}} previous conversations"
   },
   "install": {
     "title": "Install BibleBot",
