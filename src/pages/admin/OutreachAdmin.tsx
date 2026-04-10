@@ -530,6 +530,55 @@ export default function OutreachAdmin() {
           {/* ─── Leads Tab ──────────────────────── */}
           <TabsContent value="leads" className="space-y-4">
             <div className="flex gap-2 flex-wrap">
+              {/* Auto-Discover */}
+              <Dialog open={discoverOpen} onOpenChange={setDiscoverOpen}>
+                <DialogTrigger asChild>
+                  <Button><Search className="h-4 w-4 mr-2" />Auto-Discover</Button>
+                </DialogTrigger>
+                <DialogContent className="max-w-lg">
+                  <DialogHeader><DialogTitle>🔍 Kirchen automatisch finden</DialogTitle></DialogHeader>
+                  <p className="text-sm text-muted-foreground">
+                    Sucht im Web nach Kirchen-Websites, extrahiert E-Mail-Kontakte per KI und importiert sie als Leads.
+                  </p>
+                  <div className="space-y-3">
+                    <div>
+                      <Label>Suchbegriff</Label>
+                      <Input
+                        value={discoverQuery}
+                        onChange={(e) => setDiscoverQuery(e.target.value)}
+                        placeholder='z.B. "reformierte Kirche Zürich Kontakt" oder "evangelische Gemeinde Basel"'
+                      />
+                    </div>
+                    <div className="grid grid-cols-2 gap-3">
+                      <div>
+                        <Label>Land</Label>
+                        <Input value={discoverCountry} onChange={(e) => setDiscoverCountry(e.target.value)} placeholder="ch, de, at…" />
+                      </div>
+                      <div>
+                        <Label>Max. Ergebnisse</Label>
+                        <Input type="number" min={1} max={20} value={discoverMax} onChange={(e) => setDiscoverMax(Number(e.target.value))} />
+                      </div>
+                    </div>
+                  </div>
+                  {discoverResults && (
+                    <Card className="bg-muted/50">
+                      <CardContent className="p-3 text-sm space-y-1">
+                        <p>✅ <strong>{discoverResults.imported}</strong> neue Leads importiert</p>
+                        <p>⏭️ <strong>{discoverResults.skipped}</strong> Duplikate übersprungen</p>
+                        <p>📭 <strong>{discoverResults.no_email}</strong> ohne E-Mail</p>
+                        <p>🔎 <strong>{discoverResults.discovered}</strong> Websites analysiert</p>
+                      </CardContent>
+                    </Card>
+                  )}
+                  <DialogFooter>
+                    <Button onClick={handleDiscover} disabled={discovering || !discoverQuery.trim()}>
+                      {discovering ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : <Search className="h-4 w-4 mr-2" />}
+                      {discovering ? "Suche läuft…" : "Suchen & importieren"}
+                    </Button>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
+
               <Dialog open={importOpen} onOpenChange={setImportOpen}>
                 <DialogTrigger asChild>
                   <Button variant="outline"><Upload className="h-4 w-4 mr-2" />CSV Import</Button>
@@ -551,6 +600,25 @@ export default function OutreachAdmin() {
                   </DialogFooter>
                 </DialogContent>
               </Dialog>
+
+              {/* Bulk Scrape */}
+              <Button
+                variant="outline"
+                onClick={bulkScrape}
+                disabled={!!bulkScrapeProgress || leads.filter((l: any) => l.website && !l.primary_color).length === 0}
+              >
+                {bulkScrapeProgress ? (
+                  <>
+                    <Loader2 className="h-4 w-4 animate-spin mr-2" />
+                    Scrape {bulkScrapeProgress.current}/{bulkScrapeProgress.total}
+                  </>
+                ) : (
+                  <>
+                    <Globe className="h-4 w-4 mr-2" />
+                    Alle scrapen ({leads.filter((l: any) => l.website && !l.primary_color).length})
+                  </>
+                )}
+              </Button>
 
               <Button
                 variant="outline"
