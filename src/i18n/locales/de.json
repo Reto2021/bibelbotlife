@@ -1,6 +1,8 @@
 {
   "nav": {
-    "startNow": "Jetzt starten"
+    "startNow": "Jetzt starten",
+    "prayerWall": "Gebetswand",
+    "bibleQuiz": "Bibelquiz"
   },
   "loader": "Wird geladen…",
   "hero": {
@@ -867,8 +869,61 @@
     "genError": "Fehler bei der Texterstellung. Bitte versuche es erneut."
   },
   "auth": {
-    "apple": "Mit Apple anmelden"
+    "apple": "Mit Apple anmelden",
+    "loginShort": "Anmelden",
+    "logout": "Abmelden"
   },
+  "chatDemo": {
+    "sectionLabel": "So sieht ein Gespräch aus",
+    "userMsg": "Ich fühle mich allein. Was sagt die Bibel dazu?",
+    "botMsg": "Du bist nicht allein – auch wenn es sich gerade so anfühlt. In Psalm 23 heisst es: «Der Herr ist mein Hirte, mir wird nichts mangeln.» Das bedeutet, dass Gott dir nahe ist, auch in den dunkelsten Momenten. Möchtest du, dass wir diese Stelle gemeinsam vertiefen?",
+    "cta": "Starte jetzt dein eigenes Gespräch →"
+  },
+  "suggest": {
+    "psalm23": "Psalm 23 – Der Herr ist mein Hirte",
+    "joh316": "Johannes 3,16 – So sehr hat Gott die Welt geliebt",
+    "rom828": "Römer 8,28 – Alles zum Besten",
+    "mt1128": "Matthäus 11,28 – Kommt her zu mir",
+    "phil413": "Philipper 4,13 – Ich vermag alles",
+    "jes4110": "Jesaja 41,10 – Fürchte dich nicht",
+    "1kor13": "1. Korinther 13 – Das Hohelied der Liebe",
+    "spr35": "Sprüche 3,5 – Vertraue auf den Herrn",
+    "jos19": "Josua 1,9 – Sei stark und mutig",
+    "ps462": "Psalm 46,2 – Gott ist unsere Zuversicht",
+    "explainDetail": "Erkläre mir {{ref}} im Detail"
+  },
+  "dailyVerses": {
+    "v0": "«Kommt her zu mir, alle, die ihr mühselig und beladen seid; ich will euch erquicken.»",
+    "r0": "Matthäus 11,28",
+    "v1": "«Denn ich weiss wohl, was ich für Gedanken über euch habe, spricht der Herr: Gedanken des Friedens.»",
+    "r1": "Jeremia 29,11",
+    "v2": "«Fürchte dich nicht, denn ich bin bei dir; hab keine Angst, denn ich bin dein Gott.»",
+    "r2": "Jesaja 41,10",
+    "v3": "«Der Herr ist mein Hirte, mir wird nichts mangeln.»",
+    "r3": "Psalm 23,1",
+    "v4": "«Alle eure Sorge werft auf ihn; denn er sorgt für euch.»",
+    "r4": "1. Petrus 5,7",
+    "v5": "«Ich bin das Licht der Welt. Wer mir nachfolgt, wird nicht in der Finsternis wandeln.»",
+    "r5": "Johannes 8,12",
+    "v6": "«Seid stark und mutig! Fürchtet euch nicht, denn der Herr, euer Gott, ist mit euch.»",
+    "r6": "Josua 1,9",
+    "v7": "«Die auf den Herrn harren, kriegen neue Kraft, dass sie auffahren mit Flügeln wie Adler.»",
+    "r7": "Jesaja 40,31",
+    "v8": "«Denn wo zwei oder drei versammelt sind in meinem Namen, da bin ich mitten unter ihnen.»",
+    "r8": "Matthäus 18,20",
+    "v9": "«Schmecket und sehet, wie freundlich der Herr ist. Wohl dem, der auf ihn trauet!»",
+    "r9": "Psalm 34,9",
+    "v10": "«Er heilt, die zerbrochenen Herzens sind, und verbindet ihre Wunden.»",
+    "r10": "Psalm 147,3",
+    "v11": "«Die Liebe ist langmütig und freundlich. Sie erträgt alles, glaubt alles, hofft alles.»",
+    "r11": "1. Korinther 13,4–7",
+    "v12": "«Seid fröhlich in Hoffnung, geduldig in Trübsal, beharrlich im Gebet.»",
+    "r12": "Römer 12,12",
+    "v13": "«Vertraue auf den Herrn von ganzem Herzen und verlass dich nicht auf deinen Verstand.»",
+    "r13": "Sprüche 3,5"
+  },
+  "meinBereichNav": "Mein Bereich",
+  "verseExplain": "Erkläre mir diesen Bibelvers im Detail: {{quote}} ({{ref}}) – Wer hat das geschrieben? In welchem Kontext? Was bedeutet das für mein Leben heute?",
   "tts": {
     "male": "Männliche Stimme",
     "female": "Weibliche Stimme",
