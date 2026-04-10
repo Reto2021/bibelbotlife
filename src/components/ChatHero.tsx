@@ -72,7 +72,7 @@ const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/bibelbot-cha
 
 const BIBLE_REF_PATTERN = /(\d\.\s?)?(?:Genesis|Exodus|Levitikus|Numeri|Deuteronomium|Josua|Richter|Rut|Samuel|Könige|Chronik|Esra|Nehemia|Ester|Hiob|Psalm|Psalmen|Sprüche|Prediger|Hoheslied|Jesaja|Jeremia|Klagelieder|Ezechiel|Daniel|Hosea|Joel|Amos|Obadja|Jona|Micha|Nahum|Habakuk|Zefanja|Haggai|Sacharja|Maleachi|Matthäus|Markus|Lukas|Johannes|Apostelgeschichte|Römer|Korinther|Galater|Epheser|Philipper|Kolosser|Thessalonicher|Timotheus|Titus|Philemon|Hebräer|Jakobus|Petrus|Judas|Offenbarung|Mose|Mt|Mk|Lk|Joh|Apg|Röm|Kor|Gal|Eph|Phil|Kol|Ps|Spr|Jes|Jer)\s+\d+(?:[,:]\d+(?:[\-–]\d+)?)?/g;
 
-function makeRefsClickable(children: React.ReactNode, onRefClick: (msg: string) => void): React.ReactNode {
+function makeRefsClickable(children: React.ReactNode, onRefClick: (msg: string) => void, explainTemplate?: string): React.ReactNode {
   if (!children) return children;
   const processNode = (node: React.ReactNode): React.ReactNode => {
     if (typeof node === "string") {
@@ -84,7 +84,7 @@ function makeRefsClickable(children: React.ReactNode, onRefClick: (msg: string) 
         if (match.index > lastIndex) parts.push(node.slice(lastIndex, match.index));
         const ref = match[0];
         parts.push(
-          <button key={`ref-${match.index}`} onClick={(e) => { e.preventDefault(); onRefClick(`Erkläre mir ${ref} im Detail`); }} className="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary cursor-pointer font-medium">{ref}</button>
+          <button key={`ref-${match.index}`} onClick={(e) => { e.preventDefault(); onRefClick((explainTemplate || `Explain {{ref}} in detail`).replace("{{ref}}", ref)); }} className="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary cursor-pointer font-medium">{ref}</button>
         );
         lastIndex = regex.lastIndex;
       }
