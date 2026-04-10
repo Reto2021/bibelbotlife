@@ -1517,22 +1517,9 @@ export type Database = {
         Returns: {
           ceremony_type: Database["public"]["Enums"]["ceremony_type"]
           created_at: string
-          form_data: Json | null
-          generated_text: string | null
-          id: string
-          is_shared: boolean
-          person_name: string | null
-          share_token: string | null
-          transcripts: Json | null
-          updated_at: string
-          user_id: string
+          generated_text: string
+          person_name: string
         }[]
-        SetofOptions: {
-          from: "*"
-          to: "ceremony_drafts"
-          isOneToOne: false
-          isSetofReturn: true
-        }
       }
       has_role: {
         Args: {
