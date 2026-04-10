@@ -553,13 +553,39 @@ export default function OutreachAdmin() {
                         const ls = LEAD_STATUS[lead.status] || LEAD_STATUS.new;
                         return (
                           <TableRow key={lead.id}>
-                            <TableCell className="font-medium">{lead.church_name}</TableCell>
+                            <TableCell className="font-medium">
+                              <div className="flex items-center gap-2">
+                                {lead.primary_color && (
+                                  <div className="w-3 h-3 rounded-full border" style={{ background: lead.primary_color }} />
+                                )}
+                                {lead.church_name}
+                              </div>
+                            </TableCell>
                             <TableCell>{lead.contact_name || "–"}</TableCell>
                             <TableCell className="text-sm">{lead.email}</TableCell>
                             <TableCell>{lead.city || "–"}</TableCell>
+                            <TableCell>
+                              {lead.website_score != null ? (
+                                <span className={`text-xs font-medium px-1.5 py-0.5 rounded ${
+                                  lead.website_score >= 7 ? "bg-green-100 text-green-800" :
+                                  lead.website_score >= 5 ? "bg-yellow-100 text-yellow-800" :
+                                  "bg-red-100 text-red-800"
+                                }`}>{lead.website_score}/10</span>
+                              ) : "–"}
+                            </TableCell>
                             <TableCell>{lead.current_step}/{sequences.length}</TableCell>
                             <TableCell><Badge variant={ls.variant}>{ls.label}</Badge></TableCell>
                             <TableCell className="text-right space-x-1">
+                              {lead.primary_color && (
+                                <Button
+                                  variant="ghost" size="icon" asChild
+                                  title="Widget-Vorschau"
+                                >
+                                  <a href={`/widget-preview/${lead.id}`} target="_blank" rel="noopener noreferrer">
+                                    <Eye className="h-4 w-4" />
+                                  </a>
+                                </Button>
+                              )}
                               <Button
                                 variant="ghost" size="icon"
                                 onClick={() => generatePersonalizedEmail(lead)}
