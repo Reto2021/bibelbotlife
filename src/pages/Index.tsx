@@ -468,12 +468,12 @@ const Index = () => {
               <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
                 <p className="mb-4">{t("faq.q2Intro")}</p>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                  {BIBLE_EDITIONS.map((bible) => (
+                  {BIBLE_EDITIONS_DATA.map((bible) => (
                     <div key={bible.name} className="flex items-center gap-3 bg-accent/30 rounded-lg px-4 py-3">
                       <BookOpen className="h-4 w-4 text-primary shrink-0" />
                       <div>
                         <p className="font-medium text-foreground text-sm">{bible.name} ({bible.year})</p>
-                        <p className="text-xs text-muted-foreground">{bible.tradition}</p>
+                        <p className="text-xs text-muted-foreground">{t(`faq.tradition.${bible.traditionKey}`)}</p>
                       </div>
                     </div>
                   ))}
