@@ -125,18 +125,18 @@ ${JSON.stringify(impulse, null, 2)}`;
 
 // ── Format messages ────────────────────────────────────
 const GREETINGS: Record<string, [string, string]> = {
-  de: ["Guten Morgen", "Mehr auf BibleBot.ch"],
-  en: ["Good morning", "More at BibleBot.ch"],
-  fr: ["Bonjour", "Plus sur BibleBot.ch"],
-  es: ["Buenos días", "Más en BibleBot.ch"],
-  it: ["Buongiorno", "Altro su BibleBot.ch"],
-  pt: ["Bom dia", "Mais em BibleBot.ch"],
-  ko: ["좋은 아침", "BibleBot.ch에서 더 보기"],
-  zh: ["早上好", "更多内容请访问 BibleBot.ch"],
+  de: ["Guten Morgen", "Mehr auf BibelBot.ch"],
+  en: ["Good morning", "More at BibelBot.ch"],
+  fr: ["Bonjour", "Plus sur BibelBot.ch"],
+  es: ["Buenos días", "Más en BibelBot.ch"],
+  it: ["Buongiorno", "Altro su BibelBot.ch"],
+  pt: ["Bom dia", "Mais em BibelBot.ch"],
+  ko: ["좋은 아침", "BibelBot.ch에서 더 보기"],
+  zh: ["早上好", "更多内容请访问 BibelBot.ch"],
 };
 
 function getGreeting(lang: string): [string, string] {
-  return GREETINGS[lang] || GREETINGS["en"];
+  return GREETINGS[lang] || GREETINGS["de"];
 }
 
 function formatMessage(impulse: Record<string, string>, firstName?: string, lang = "de"): string {
@@ -157,7 +157,7 @@ ${impulse.context}
 function formatSMS(impulse: Record<string, string>, firstName?: string, lang = "de"): string {
   const [greeting] = getGreeting(lang);
   const name = firstName ? `${greeting}, ${firstName}!` : `${greeting}!`;
-  return `${name} ${impulse.topic}: ${impulse.teaser} - ${impulse.reference} | BibleBot.ch`;
+  return `${name} ${impulse.topic}: ${impulse.teaser} - ${impulse.reference} | BibelBot.ch`;
 }
 
 serve(async (req) => {
