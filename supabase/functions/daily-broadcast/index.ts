@@ -228,7 +228,7 @@ serve(async (req) => {
     let sentCount = 0;
 
     for (const sub of subscribers) {
-      const lang = sub.language || "de";
+      const lang = (sub.language || "de").split("-")[0].toLowerCase();
       const impulse = impulseByLang[lang] || baseImpulse;
       let success = false;
 
