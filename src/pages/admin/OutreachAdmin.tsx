@@ -15,7 +15,7 @@ import { toast } from "sonner";
 import {
   Plus, Play, Pause, Upload, Globe, Mail, Users, BarChart3,
   Loader2, Trash2, RefreshCw, Send, Target, Sparkles, Wand2, Eye, Copy,
-  Palette, ExternalLink,
+  Palette, ExternalLink, Search,
 } from "lucide-react";
 
 // ─── Hooks ───────────────────────────────────────────────
@@ -288,6 +288,64 @@ export default function OutreachAdmin() {
   const [personalizePreviewOpen, setPersonalizePreviewOpen] = useState(false);
   const [savingPersonalized, setSavingPersonalized] = useState(false);
 
+  // ─── Auto-Discover ────────────────────────────────────
+  const [discoverOpen, setDiscoverOpen] = useState(false);
+  const [discoverQuery, setDiscoverQuery] = useState("");
+  const [discoverCountry, setDiscoverCountry] = useState("ch");
+  const [discoverMax, setDiscoverMax] = useState(10);
+  const [discovering, setDiscovering] = useState(false);
+  const [discoverResults, setDiscoverResults] = useState<any>(null);
+
+  const handleDiscover = async () => {
+    if (!selectedCampaignId || !discoverQuery.trim()) return;
+    setDiscovering(true);
+    setDiscoverResults(null);
+    try {
+      const { data, error } = await supabase.functions.invoke("outreach-discover", {
+        body: {
+          campaign_id: selectedCampaignId,
+          search_query: discoverQuery,
+          country: discoverCountry,
+          max_results: discoverMax,
+        },
+      });
+      if (error) throw error;
+      setDiscoverResults(data);
+      toast.success(`${data.imported} neue Leads importiert, ${data.skipped} Duplikate übersprungen`);
+      queryClient.invalidateQueries({ queryKey: ["outreach-leads"] });
+    } catch (err: any) {
+      toast.error(err.message || "Fehler bei der Suche");
+    } finally {
+      setDiscovering(false);
+    }
+  };
+
+  // ─── Bulk Scrape ──────────────────────────────────────
+  const [bulkScrapeProgress, setBulkScrapeProgress] = useState<{ current: number; total: number; success: number; errors: number } | null>(null);
+
+  const bulkScrape = async () => {
+    const eligible = leads.filter((l: any) => l.website && !l.primary_color);
+    if (!eligible.length) { toast.error("Keine Leads ohne Branding zum Scrapen"); return; }
+    const progress = { current: 0, total: eligible.length, success: 0, errors: 0 };
+    setBulkScrapeProgress({ ...progress });
+    for (const lead of eligible) {
+      progress.current++;
+      setBulkScrapeProgress({ ...progress });
+      try {
+        const { error } = await supabase.functions.invoke("outreach-scrape", {
+          body: { lead_id: lead.id, website: lead.website },
+        });
+        if (error) throw error;
+        progress.success++;
+      } catch { progress.errors++; }
+      setBulkScrapeProgress({ ...progress });
+      if (progress.current < progress.total) await new Promise((r) => setTimeout(r, 2000));
+    }
+    setBulkScrapeProgress(null);
+    toast.success(`${progress.success} Websites gescraped, ${progress.errors} Fehler`);
+    queryClient.invalidateQueries({ queryKey: ["outreach-leads"] });
+  };
+
   // ─── Bulk Personalisierung ────────────────────────────
   const [bulkProgress, setBulkProgress] = useState<{ current: number; total: number; success: number; errors: number } | null>(null);
 
@@ -472,6 +530,55 @@ export default function OutreachAdmin() {
           {/* ─── Leads Tab ──────────────────────── */}
           <TabsContent value="leads" className="space-y-4">
             <div className="flex gap-2 flex-wrap">
+              {/* Auto-Discover */}
+              <Dialog open={discoverOpen} onOpenChange={setDiscoverOpen}>
+                <DialogTrigger asChild>
+                  <Button><Search className="h-4 w-4 mr-2" />Auto-Discover</Button>
+                </DialogTrigger>
+                <DialogContent className="max-w-lg">
+                  <DialogHeader><DialogTitle>🔍 Kirchen automatisch finden</DialogTitle></DialogHeader>
+                  <p className="text-sm text-muted-foreground">
+                    Sucht im Web nach Kirchen-Websites, extrahiert E-Mail-Kontakte per KI und importiert sie als Leads.
+                  </p>
+                  <div className="space-y-3">
+                    <div>
+                      <Label>Suchbegriff</Label>
+                      <Input
+                        value={discoverQuery}
+                        onChange={(e) => setDiscoverQuery(e.target.value)}
+                        placeholder='z.B. "reformierte Kirche Zürich Kontakt" oder "evangelische Gemeinde Basel"'
+                      />
+                    </div>
+                    <div className="grid grid-cols-2 gap-3">
+                      <div>
+                        <Label>Land</Label>
+                        <Input value={discoverCountry} onChange={(e) => setDiscoverCountry(e.target.value)} placeholder="ch, de, at…" />
+                      </div>
+                      <div>
+                        <Label>Max. Ergebnisse</Label>
+                        <Input type="number" min={1} max={20} value={discoverMax} onChange={(e) => setDiscoverMax(Number(e.target.value))} />
+                      </div>
+                    </div>
+                  </div>
+                  {discoverResults && (
+                    <Card className="bg-muted/50">
+                      <CardContent className="p-3 text-sm space-y-1">
+                        <p>✅ <strong>{discoverResults.imported}</strong> neue Leads importiert</p>
+                        <p>⏭️ <strong>{discoverResults.skipped}</strong> Duplikate übersprungen</p>
+                        <p>📭 <strong>{discoverResults.no_email}</strong> ohne E-Mail</p>
+                        <p>🔎 <strong>{discoverResults.discovered}</strong> Websites analysiert</p>
+                      </CardContent>
+                    </Card>
+                  )}
+                  <DialogFooter>
+                    <Button onClick={handleDiscover} disabled={discovering || !discoverQuery.trim()}>
+                      {discovering ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : <Search className="h-4 w-4 mr-2" />}
+                      {discovering ? "Suche läuft…" : "Suchen & importieren"}
+                    </Button>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
+
               <Dialog open={importOpen} onOpenChange={setImportOpen}>
                 <DialogTrigger asChild>
                   <Button variant="outline"><Upload className="h-4 w-4 mr-2" />CSV Import</Button>
@@ -494,6 +601,25 @@ export default function OutreachAdmin() {
                 </DialogContent>
               </Dialog>
 
+              {/* Bulk Scrape */}
+              <Button
+                variant="outline"
+                onClick={bulkScrape}
+                disabled={!!bulkScrapeProgress || leads.filter((l: any) => l.website && !l.primary_color).length === 0}
+              >
+                {bulkScrapeProgress ? (
+                  <>
+                    <Loader2 className="h-4 w-4 animate-spin mr-2" />
+                    Scrape {bulkScrapeProgress.current}/{bulkScrapeProgress.total}
+                  </>
+                ) : (
+                  <>
+                    <Globe className="h-4 w-4 mr-2" />
+                    Alle scrapen ({leads.filter((l: any) => l.website && !l.primary_color).length})
+                  </>
+                )}
+              </Button>
+
               <Button
                 variant="outline"
                 onClick={() => bulkPersonalize()}
@@ -512,6 +638,21 @@ export default function OutreachAdmin() {
                 )}
               </Button>
             </div>
+
+            {bulkScrapeProgress && (
+              <div className="space-y-1">
+                <div className="w-full bg-border rounded-full h-2">
+                  <div
+                    className="bg-secondary h-2 rounded-full transition-all duration-300"
+                    style={{ width: `${(bulkScrapeProgress.current / bulkScrapeProgress.total) * 100}%` }}
+                  />
+                </div>
+                <p className="text-xs text-muted-foreground">
+                  Scrape Website {bulkScrapeProgress.current} von {bulkScrapeProgress.total}…
+                  {bulkScrapeProgress.errors > 0 && <span className="text-destructive ml-1">({bulkScrapeProgress.errors} Fehler)</span>}
+                </p>
+              </div>
+            )}
 
             {bulkProgress && (
               <div className="space-y-1">
