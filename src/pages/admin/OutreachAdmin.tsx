@@ -721,8 +721,106 @@ export default function OutreachAdmin() {
               <div className="text-center py-8 text-muted-foreground">Wähle eine Kampagne</div>
             )}
           </TabsContent>
-        </Tabs>
-      )}
+
+          {/* ─── A/B Test Tab ──────────────────── */}
+          <TabsContent value="ab-test" className="space-y-4">
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg flex items-center gap-2">
+                  <Palette className="h-5 w-5" />
+                  A/B-Test: Widget-Farbvarianten
+                </CardTitle>
+                <CardDescription>
+                  Vergleich der Original-Farben vs. optimierte Alternative bei Widget-Previews
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                {abStats ? (
+                  <div className="grid gap-4 md:grid-cols-2">
+                    {(["original", "alternative"] as const).map((v) => {
+                      const s = (abStats as any)[v] || { views: 0, clicks: 0 };
+                      const rate = s.views > 0 ? ((s.clicks / s.views) * 100).toFixed(1) : "0.0";
+                      return (
+                        <Card key={v} className="border-2">
+                          <CardHeader className="pb-2">
+                            <CardTitle className="text-base capitalize">{v === "original" ? "🎨 Original" : "✨ Alternative (+15° Hue)"}</CardTitle>
+                          </CardHeader>
+                          <CardContent className="space-y-2">
+                            <div className="flex justify-between text-sm">
+                              <span className="text-muted-foreground">Views</span>
+                              <span className="font-medium">{s.views}</span>
+                            </div>
+                            <div className="flex justify-between text-sm">
+                              <span className="text-muted-foreground">CTA-Klicks</span>
+                              <span className="font-medium">{s.clicks}</span>
+                            </div>
+                            <div className="flex justify-between text-sm border-t pt-2">
+                              <span className="text-muted-foreground font-medium">Conversion Rate</span>
+                              <span className="font-bold text-primary">{rate}%</span>
+                            </div>
+                          </CardContent>
+                        </Card>
+                      );
+                    })}
+                  </div>
+                ) : (
+                  <p className="text-center text-muted-foreground py-8">Noch keine A/B-Test-Daten vorhanden</p>
+                )}
+              </CardContent>
+            </Card>
+
+            {/* Leads with branding */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-base">Leads mit Branding-Daten</CardTitle>
+              </CardHeader>
+              <CardContent className="p-0">
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>Gemeinde</TableHead>
+                      <TableHead>Farben</TableHead>
+                      <TableHead>Score</TableHead>
+                      <TableHead>Preview</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    {leads.filter((l: any) => l.primary_color).map((lead: any) => (
+                      <TableRow key={lead.id}>
+                        <TableCell className="font-medium">{lead.church_name}</TableCell>
+                        <TableCell>
+                          <div className="flex gap-1">
+                            <div className="w-5 h-5 rounded border" style={{ background: lead.primary_color }} title="Original" />
+                            {lead.ab_variant_color && (
+                              <div className="w-5 h-5 rounded border" style={{ background: lead.ab_variant_color }} title="Alternative" />
+                            )}
+                            {lead.secondary_color && (
+                              <div className="w-5 h-5 rounded border" style={{ background: lead.secondary_color }} title="Secondary" />
+                            )}
+                          </div>
+                        </TableCell>
+                        <TableCell>{lead.website_score ?? "–"}/10</TableCell>
+                        <TableCell>
+                          <Button variant="ghost" size="sm" asChild>
+                            <a href={`/widget-preview/${lead.id}`} target="_blank" rel="noopener noreferrer">
+                              <ExternalLink className="h-3 w-3 mr-1" />Öffnen
+                            </a>
+                          </Button>
+                        </TableCell>
+                      </TableRow>
+                    ))}
+                    {leads.filter((l: any) => l.primary_color).length === 0 && (
+                      <TableRow>
+                        <TableCell colSpan={4} className="text-center text-muted-foreground py-6">
+                          Noch keine Leads mit Branding-Daten. Scrape zuerst Websites.
+                        </TableCell>
+                      </TableRow>
+                    )}
+                  </TableBody>
+                </Table>
+              </CardContent>
+            </Card>
+          </TabsContent>
 
       {/* ─── Personalized Email Preview/Edit Dialog ─── */}
       <Dialog open={personalizePreviewOpen} onOpenChange={setPersonalizePreviewOpen}>
