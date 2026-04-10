@@ -23,30 +23,17 @@ const TYPEWRITER_SPEED = 45;
 const PAUSE_BETWEEN = 2800;
 const DELETE_SPEED = 25;
 
-const DAILY_VERSES = [
-  { quote: "«Kommt her zu mir, alle, die ihr mühselig und beladen seid; ich will euch erquicken.»", ref: "Matthäus 11,28" },
-  { quote: "«Denn ich weiss wohl, was ich für Gedanken über euch habe, spricht der Herr: Gedanken des Friedens.»", ref: "Jeremia 29,11" },
-  { quote: "«Fürchte dich nicht, denn ich bin bei dir; hab keine Angst, denn ich bin dein Gott.»", ref: "Jesaja 41,10" },
-  { quote: "«Der Herr ist mein Hirte, mir wird nichts mangeln.»", ref: "Psalm 23,1" },
-  { quote: "«Alle eure Sorge werft auf ihn; denn er sorgt für euch.»", ref: "1. Petrus 5,7" },
-  { quote: "«Ich bin das Licht der Welt. Wer mir nachfolgt, wird nicht in der Finsternis wandeln.»", ref: "Johannes 8,12" },
-  { quote: "«Seid stark und mutig! Fürchtet euch nicht, denn der Herr, euer Gott, ist mit euch.»", ref: "Josua 1,9" },
-  { quote: "«Die auf den Herrn harren, kriegen neue Kraft, dass sie auffahren mit Flügeln wie Adler.»", ref: "Jesaja 40,31" },
-  { quote: "«Denn wo zwei oder drei versammelt sind in meinem Namen, da bin ich mitten unter ihnen.»", ref: "Matthäus 18,20" },
-  { quote: "«Schmecket und sehet, wie freundlich der Herr ist. Wohl dem, der auf ihn trauet!»", ref: "Psalm 34,9" },
-  { quote: "«Er heilt, die zerbrochenen Herzens sind, und verbindet ihre Wunden.»", ref: "Psalm 147,3" },
-  { quote: "«Die Liebe ist langmütig und freundlich. Sie erträgt alles, glaubt alles, hofft alles.»", ref: "1. Korinther 13,4–7" },
-  { quote: "«Seid fröhlich in Hoffnung, geduldig in Trübsal, beharrlich im Gebet.»", ref: "Römer 12,12" },
-  { quote: "«Vertraue auf den Herrn von ganzem Herzen und verlass dich nicht auf deinen Verstand.»", ref: "Sprüche 3,5" },
-];
+const DAILY_VERSES_COUNT = 14;
 
-function getDailyVerse() {
+function getDailyVerseIndex() {
   const today = new Date();
   const dayOfYear = Math.floor(
     (today.getTime() - new Date(today.getFullYear(), 0, 0).getTime()) / 86400000
   );
-  return DAILY_VERSES[dayOfYear % DAILY_VERSES.length];
+  return dayOfYear % DAILY_VERSES_COUNT;
 }
+
+// getDailyVerse is now a hook-compatible function used inside the component
 
 type TopicChip = { emoji: string; key: string; special?: "lifewheel" | "sevenwhys" };
 
@@ -85,7 +72,7 @@ const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/bibelbot-cha
 
 const BIBLE_REF_PATTERN = /(\d\.\s?)?(?:Genesis|Exodus|Levitikus|Numeri|Deuteronomium|Josua|Richter|Rut|Samuel|Könige|Chronik|Esra|Nehemia|Ester|Hiob|Psalm|Psalmen|Sprüche|Prediger|Hoheslied|Jesaja|Jeremia|Klagelieder|Ezechiel|Daniel|Hosea|Joel|Amos|Obadja|Jona|Micha|Nahum|Habakuk|Zefanja|Haggai|Sacharja|Maleachi|Matthäus|Markus|Lukas|Johannes|Apostelgeschichte|Römer|Korinther|Galater|Epheser|Philipper|Kolosser|Thessalonicher|Timotheus|Titus|Philemon|Hebräer|Jakobus|Petrus|Judas|Offenbarung|Mose|Mt|Mk|Lk|Joh|Apg|Röm|Kor|Gal|Eph|Phil|Kol|Ps|Spr|Jes|Jer)\s+\d+(?:[,:]\d+(?:[\-–]\d+)?)?/g;
 
-function makeRefsClickable(children: React.ReactNode, onRefClick: (msg: string) => void): React.ReactNode {
+function makeRefsClickable(children: React.ReactNode, onRefClick: (msg: string) => void, explainTemplate?: string): React.ReactNode {
   if (!children) return children;
   const processNode = (node: React.ReactNode): React.ReactNode => {
     if (typeof node === "string") {
@@ -97,7 +84,7 @@ function makeRefsClickable(children: React.ReactNode, onRefClick: (msg: string) 
         if (match.index > lastIndex) parts.push(node.slice(lastIndex, match.index));
         const ref = match[0];
         parts.push(
-          <button key={`ref-${match.index}`} onClick={(e) => { e.preventDefault(); onRefClick(`Erkläre mir ${ref} im Detail`); }} className="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary cursor-pointer font-medium">{ref}</button>
+          <button key={`ref-${match.index}`} onClick={(e) => { e.preventDefault(); onRefClick((explainTemplate || `Explain {{ref}} in detail`).replace("{{ref}}", ref)); }} className="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary cursor-pointer font-medium">{ref}</button>
         );
         lastIndex = regex.lastIndex;
       }
@@ -114,8 +101,8 @@ function makeRefsClickable(children: React.ReactNode, onRefClick: (msg: string) 
 // Auto-typing demo that creates a "wow moment" in the first few seconds
 function LiveDemoPreview({ onTryIt }: { onTryIt: () => void }) {
   const { t } = useTranslation();
-  const userMsg = t("chatDemo.userMsg", "Ich fühle mich allein. Was sagt die Bibel dazu?");
-  const botMsg = t("chatDemo.botMsg", "Du bist nicht allein – auch wenn es sich gerade so anfühlt. In Psalm 23 heisst es: «Der Herr ist mein Hirte, mir wird nichts mangeln.» Das bedeutet, dass Gott dir nahe ist, auch in den dunkelsten Momenten.");
+  const userMsg = t("chatDemo.userMsg");
+  const botMsg = t("chatDemo.botMsg");
   const [phase, setPhase] = useState<"user" | "typing" | "bot" | "done">("user");
   const [botText, setBotText] = useState("");
   const botCharRef = useRef(0);
@@ -194,7 +181,7 @@ function LiveDemoPreview({ onTryIt }: { onTryIt: () => void }) {
             onClick={onTryIt}
             className="w-full text-center text-xs text-primary font-semibold hover:underline cursor-pointer pt-1"
           >
-            {t("chatDemo.cta", "Starte jetzt dein eigenes Gespräch →")}
+            {t("chatDemo.cta")}
           </motion.button>
         )}
       </div>
@@ -229,7 +216,11 @@ export function ChatHero() {
   const { branding } = useChurchBranding();
   const { isSenior, toggle: toggleSenior } = useSeniorMode();
   const tts = useTTS();
-  const dailyVerse = useMemo(() => getDailyVerse(), []);
+  const dailyVerseIdx = useMemo(() => getDailyVerseIndex(), []);
+  const dailyVerse = useMemo(() => ({
+    quote: t(`dailyVerses.v${dailyVerseIdx}`),
+    ref: t(`dailyVerses.r${dailyVerseIdx}`),
+  }), [dailyVerseIdx, t]);
 
   // Senior mode size classes
   const s = {
@@ -252,21 +243,21 @@ export function ChatHero() {
       prompt: t(`tiles.${chip.key}.prompt`),
     }));
     const bibleRefs = [
-      { ref: "Psalm 23", label: t("suggest.psalm23", "Psalm 23 – Der Herr ist mein Hirte") },
-      { ref: "Johannes 3,16", label: t("suggest.joh316", "Johannes 3,16 – So sehr hat Gott die Welt geliebt") },
-      { ref: "Römer 8,28", label: t("suggest.rom828", "Römer 8,28 – Alles zum Besten") },
-      { ref: "Matthäus 11,28", label: t("suggest.mt1128", "Matthäus 11,28 – Kommt her zu mir") },
-      { ref: "Philipper 4,13", label: t("suggest.phil413", "Philipper 4,13 – Ich vermag alles") },
-      { ref: "Jesaja 41,10", label: t("suggest.jes4110", "Jesaja 41,10 – Fürchte dich nicht") },
-      { ref: "1. Korinther 13", label: t("suggest.1kor13", "1. Korinther 13 – Das Hohelied der Liebe") },
-      { ref: "Sprüche 3,5", label: t("suggest.spr35", "Sprüche 3,5 – Vertraue auf den Herrn") },
-      { ref: "Josua 1,9", label: t("suggest.jos19", "Josua 1,9 – Sei stark und mutig") },
-      { ref: "Psalm 46,2", label: t("suggest.ps462", "Psalm 46,2 – Gott ist unsere Zuversicht") },
+      { ref: "Psalm 23", label: t("suggest.psalm23") },
+      { ref: "John 3:16", label: t("suggest.joh316") },
+      { ref: "Romans 8:28", label: t("suggest.rom828") },
+      { ref: "Matthew 11:28", label: t("suggest.mt1128") },
+      { ref: "Philippians 4:13", label: t("suggest.phil413") },
+      { ref: "Isaiah 41:10", label: t("suggest.jes4110") },
+      { ref: "1 Corinthians 13", label: t("suggest.1kor13") },
+      { ref: "Proverbs 3:5", label: t("suggest.spr35") },
+      { ref: "Joshua 1:9", label: t("suggest.jos19") },
+      { ref: "Psalm 46:1", label: t("suggest.ps462") },
     ].map(b => ({
       type: "bible" as const,
       emoji: "📖",
       label: b.label,
-      prompt: `Erkläre mir ${b.ref} im Detail`,
+      prompt: t("suggest.explainDetail", { ref: b.ref }),
     }));
     return [...topics, ...bibleRefs];
   }, [t]);
@@ -767,7 +758,7 @@ export function ChatHero() {
                 {/* Bible quote – compact */}
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4, delay: 0.6 }} className="max-w-2xl mx-auto w-full">
                   <button
-                    onClick={() => sendMessage(`Erkläre mir diesen Bibelvers im Detail: ${dailyVerse.quote} (${dailyVerse.ref}) – Wer hat das geschrieben? In welchem Kontext? Was bedeutet das für mein Leben heute?`)}
+                    onClick={() => sendMessage(t("verseExplain", { quote: dailyVerse.quote, ref: dailyVerse.ref }))}
                     className="relative w-full bg-card/40 backdrop-blur-sm rounded-xl px-6 py-4 border border-primary/10 text-center overflow-hidden cursor-pointer hover:border-primary/30 hover:shadow-md transition-all duration-300 group"
                   >
                     <p className="text-foreground/70 italic text-sm sm:text-base leading-relaxed font-serif">{dailyVerse.quote}</p>
@@ -779,7 +770,7 @@ export function ChatHero() {
                 {conversations.length > 0 && (
                   <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7 }} className="text-center mt-4">
                     <button onClick={() => setSidebarOpen(true)} className="text-xs text-muted-foreground hover:text-foreground transition-colors underline underline-offset-2">
-                      {t("chat.previousChats", { count: conversations.length, defaultValue: `${conversations.length} frühere Gespräche` })}
+                      {t("chat.previousChats", { count: conversations.length })}
                     </button>
                   </motion.div>
                 )}
@@ -819,8 +810,8 @@ export function ChatHero() {
                             {msg.role === "assistant" ? (
                               <div className={`prose max-w-none dark:prose-invert ${isSenior ? "prose-lg" : "prose-sm"}`}>
                                 <ReactMarkdown components={{
-                                  p: ({ children }) => <p>{makeRefsClickable(children, sendMessage)}</p>,
-                                  li: ({ children }) => <li>{makeRefsClickable(children, sendMessage)}</li>,
+                                  p: ({ children }) => <p>{makeRefsClickable(children, sendMessage, t("suggest.explainDetail", { ref: "{{ref}}" }))}</p>,
+                                  li: ({ children }) => <li>{makeRefsClickable(children, sendMessage, t("suggest.explainDetail", { ref: "{{ref}}" }))}</li>,
                                 }}>{msg.content}</ReactMarkdown>
                               </div>
                             ) : msg.content}

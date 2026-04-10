@@ -1,6 +1,8 @@
 {
   "nav": {
-    "startNow": "Get started"
+    "startNow": "Get started",
+    "prayerWall": "Prayer Wall",
+    "bibleQuiz": "Bible Quiz"
   },
   "loader": "Loading…",
   "hero": {
@@ -185,6 +187,13 @@
     "q2": "Which Bible translations are included?",
     "q2Intro": "BibleBot works ecumenically with the major German-language Bible editions:",
     "q2Outro": "All Bible passages include source citations and historical context.",
+    "tradition": {
+      "reformed": "Reformed",
+      "evangelical": "Evangelical",
+      "catholic": "Catholic",
+      "freeChurch": "Free Church",
+      "literal": "Word-for-word"
+    },
     "q3": "What scientific foundations are behind it?",
     "q3Intro": "The companionship is based on peer-reviewed research in Positive Psychology:",
     "q4": "How does BibleBot ensure pastoral safety?",
@@ -278,7 +287,8 @@
     "errorNoStream": "No stream",
     "seniorMode": "Senior mode (larger text)",
     "teaserCta": "Start writing →",
-    "namePlaceholder": "e.g. Eli, Miriam…"
+    "namePlaceholder": "e.g. Eli, Miriam…",
+    "previousChats": "{{count}} previous conversations"
   },
   "install": {
     "title": "Install BibleBot",
@@ -862,8 +872,61 @@
     "disableShare": "Disable sharing"
   },
   "auth": {
-    "apple": "Sign in with Apple"
+    "apple": "Sign in with Apple",
+    "loginShort": "Sign in",
+    "logout": "Sign out"
   },
+  "chatDemo": {
+    "sectionLabel": "Here's what a conversation looks like",
+    "userMsg": "I feel alone. What does the Bible say about that?",
+    "botMsg": "You are not alone – even when it feels that way. Psalm 23 says: 'The Lord is my shepherd, I shall not want.' This means that God is near you, even in the darkest moments. Would you like us to explore this passage together?",
+    "cta": "Start your own conversation →"
+  },
+  "suggest": {
+    "psalm23": "Psalm 23 – The Lord is my shepherd",
+    "joh316": "John 3:16 – For God so loved the world",
+    "rom828": "Romans 8:28 – All things work together for good",
+    "mt1128": "Matthew 11:28 – Come to me, all who are weary",
+    "phil413": "Philippians 4:13 – I can do all things",
+    "jes4110": "Isaiah 41:10 – Fear not, for I am with you",
+    "1kor13": "1 Corinthians 13 – The greatest is love",
+    "spr35": "Proverbs 3:5 – Trust in the Lord",
+    "jos19": "Joshua 1:9 – Be strong and courageous",
+    "ps462": "Psalm 46:1 – God is our refuge and strength",
+    "explainDetail": "Explain {{ref}} in detail"
+  },
+  "dailyVerses": {
+    "v0": "\"Come to me, all you who are weary and burdened, and I will give you rest.\"",
+    "r0": "Matthew 11:28",
+    "v1": "\"For I know the plans I have for you, declares the Lord, plans for peace.\"",
+    "r1": "Jeremiah 29:11",
+    "v2": "\"Fear not, for I am with you; be not dismayed, for I am your God.\"",
+    "r2": "Isaiah 41:10",
+    "v3": "\"The Lord is my shepherd; I shall not want.\"",
+    "r3": "Psalm 23:1",
+    "v4": "\"Cast all your anxiety on him because he cares for you.\"",
+    "r4": "1 Peter 5:7",
+    "v5": "\"I am the light of the world. Whoever follows me will not walk in darkness.\"",
+    "r5": "John 8:12",
+    "v6": "\"Be strong and courageous! Do not be afraid, for the Lord your God is with you.\"",
+    "r6": "Joshua 1:9",
+    "v7": "\"But those who hope in the Lord will renew their strength; they will soar on wings like eagles.\"",
+    "r7": "Isaiah 40:31",
+    "v8": "\"For where two or three gather in my name, there am I with them.\"",
+    "r8": "Matthew 18:20",
+    "v9": "\"Taste and see that the Lord is good; blessed is the one who takes refuge in him.\"",
+    "r9": "Psalm 34:8",
+    "v10": "\"He heals the brokenhearted and binds up their wounds.\"",
+    "r10": "Psalm 147:3",
+    "v11": "\"Love is patient, love is kind. It bears all things, believes all things, hopes all things.\"",
+    "r11": "1 Corinthians 13:4–7",
+    "v12": "\"Be joyful in hope, patient in affliction, faithful in prayer.\"",
+    "r12": "Romans 12:12",
+    "v13": "\"Trust in the Lord with all your heart and lean not on your own understanding.\"",
+    "r13": "Proverbs 3:5"
+  },
+  "meinBereichNav": "My Area",
+  "verseExplain": "Explain this Bible verse in detail: {{quote}} ({{ref}}) – Who wrote this? In what context? What does it mean for my life today?",
   "tts": {
     "male": "Male voice",
     "female": "Female voice",
