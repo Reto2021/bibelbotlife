@@ -15,6 +15,7 @@ import { toast } from "sonner";
 import {
   Plus, Play, Pause, Upload, Globe, Mail, Users, BarChart3,
   Loader2, Trash2, RefreshCw, Send, Target, Sparkles, Wand2, Eye, Copy,
+  Palette, ExternalLink,
 } from "lucide-react";
 
 // ─── Hooks ───────────────────────────────────────────────
@@ -96,6 +97,29 @@ function useOutreachStats(campaignId: string | null) {
   });
 }
 
+function useAbTestStats() {
+  return useQuery({
+    queryKey: ["ab-test-stats"],
+    queryFn: async () => {
+      const { data } = await (supabase
+        .from("ab_test_events" as any)
+        .select("variant, event_type") as any);
+      if (!data) return { original: { views: 0, clicks: 0 }, alternative: { views: 0, clicks: 0 } };
+      const stats: Record<string, { views: number; clicks: number }> = {
+        original: { views: 0, clicks: 0 },
+        alternative: { views: 0, clicks: 0 },
+      };
+      data.forEach((e: any) => {
+        const v = e.variant as string;
+        if (!stats[v]) stats[v] = { views: 0, clicks: 0 };
+        if (e.event_type === "view") stats[v].views++;
+        if (e.event_type === "cta_click") stats[v].clicks++;
+      });
+      return stats;
+    },
+  });
+}
+
 // ─── Status badges ───────────────────────────────────────
 const LEAD_STATUS: Record<string, { label: string; variant: "default" | "secondary" | "destructive" | "outline" }> = {
   new: { label: "Neu", variant: "outline" },
@@ -125,6 +149,7 @@ export default function OutreachAdmin() {
   const { data: leads = [], isLoading: loadingLeads } = useLeads(selectedCampaignId);
   const { data: sequences = [] } = useSequences(selectedCampaignId);
   const { data: stats } = useOutreachStats(selectedCampaignId);
+  const { data: abStats } = useAbTestStats();
 
   // ─── Campaign CRUD ─────────────────────────────────────
   const [campaignForm, setCampaignForm] = useState({
@@ -441,6 +466,7 @@ export default function OutreachAdmin() {
             <TabsTrigger value="leads"><Users className="h-4 w-4 mr-1" />Leads ({leads.length})</TabsTrigger>
             <TabsTrigger value="sequences"><Mail className="h-4 w-4 mr-1" />Sequenzen ({sequences.length})</TabsTrigger>
             <TabsTrigger value="stats"><BarChart3 className="h-4 w-4 mr-1" />Statistiken</TabsTrigger>
+            <TabsTrigger value="ab-test"><Palette className="h-4 w-4 mr-1" />A/B-Test</TabsTrigger>
           </TabsList>
 
           {/* ─── Leads Tab ──────────────────────── */}
@@ -510,12 +536,13 @@ export default function OutreachAdmin() {
                   <div className="text-center py-12 text-muted-foreground">Noch keine Leads – importiere welche via CSV</div>
                 ) : (
                   <Table>
-                    <TableHeader>
+                     <TableHeader>
                       <TableRow>
                         <TableHead>Gemeinde</TableHead>
                         <TableHead>Kontakt</TableHead>
                         <TableHead>E-Mail</TableHead>
                         <TableHead>Stadt</TableHead>
+                        <TableHead>Score</TableHead>
                         <TableHead>Schritt</TableHead>
                         <TableHead>Status</TableHead>
                         <TableHead className="text-right">Aktionen</TableHead>
@@ -526,13 +553,39 @@ export default function OutreachAdmin() {
                         const ls = LEAD_STATUS[lead.status] || LEAD_STATUS.new;
                         return (
                           <TableRow key={lead.id}>
-                            <TableCell className="font-medium">{lead.church_name}</TableCell>
+                            <TableCell className="font-medium">
+                              <div className="flex items-center gap-2">
+                                {lead.primary_color && (
+                                  <div className="w-3 h-3 rounded-full border" style={{ background: lead.primary_color }} />
+                                )}
+                                {lead.church_name}
+                              </div>
+                            </TableCell>
                             <TableCell>{lead.contact_name || "–"}</TableCell>
                             <TableCell className="text-sm">{lead.email}</TableCell>
                             <TableCell>{lead.city || "–"}</TableCell>
+                            <TableCell>
+                              {lead.website_score != null ? (
+                                <span className={`text-xs font-medium px-1.5 py-0.5 rounded ${
+                                  lead.website_score >= 7 ? "bg-green-100 text-green-800" :
+                                  lead.website_score >= 5 ? "bg-yellow-100 text-yellow-800" :
+                                  "bg-red-100 text-red-800"
+                                }`}>{lead.website_score}/10</span>
+                              ) : "–"}
+                            </TableCell>
                             <TableCell>{lead.current_step}/{sequences.length}</TableCell>
                             <TableCell><Badge variant={ls.variant}>{ls.label}</Badge></TableCell>
                             <TableCell className="text-right space-x-1">
+                              {lead.primary_color && (
+                                <Button
+                                  variant="ghost" size="icon" asChild
+                                  title="Widget-Vorschau"
+                                >
+                                  <a href={`/widget-preview/${lead.id}`} target="_blank" rel="noopener noreferrer">
+                                    <Eye className="h-4 w-4" />
+                                  </a>
+                                </Button>
+                              )}
                               <Button
                                 variant="ghost" size="icon"
                                 onClick={() => generatePersonalizedEmail(lead)}
@@ -589,7 +642,7 @@ export default function OutreachAdmin() {
                       />
                     </div>
                     <p className="text-xs text-muted-foreground">
-                      Platzhalter: {"{{church_name}}, {{contact_name}}, {{city}}, {{denomination}}, {{personal_note}}, {{booking_url}}, {{sender_name}}"}
+                      Platzhalter: {"{{church_name}}, {{contact_name}}, {{city}}, {{denomination}}, {{personal_note}}, {{booking_url}}, {{sender_name}}, {{previewUrl}}, {{screenshotUrl}}, {{splashUrl}}, {{websiteScore}}, {{primaryColor}}"}
                     </p>
                   </div>
                   <DialogFooter><Button onClick={saveSequence}>Speichern</Button></DialogFooter>
@@ -667,6 +720,106 @@ export default function OutreachAdmin() {
             ) : (
               <div className="text-center py-8 text-muted-foreground">Wähle eine Kampagne</div>
             )}
+          </TabsContent>
+
+          {/* ─── A/B Test Tab ──────────────────── */}
+          <TabsContent value="ab-test" className="space-y-4">
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg flex items-center gap-2">
+                  <Palette className="h-5 w-5" />
+                  A/B-Test: Widget-Farbvarianten
+                </CardTitle>
+                <CardDescription>
+                  Vergleich der Original-Farben vs. optimierte Alternative bei Widget-Previews
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                {abStats ? (
+                  <div className="grid gap-4 md:grid-cols-2">
+                    {(["original", "alternative"] as const).map((v) => {
+                      const s = (abStats as any)[v] || { views: 0, clicks: 0 };
+                      const rate = s.views > 0 ? ((s.clicks / s.views) * 100).toFixed(1) : "0.0";
+                      return (
+                        <Card key={v} className="border-2">
+                          <CardHeader className="pb-2">
+                            <CardTitle className="text-base capitalize">{v === "original" ? "🎨 Original" : "✨ Alternative (+15° Hue)"}</CardTitle>
+                          </CardHeader>
+                          <CardContent className="space-y-2">
+                            <div className="flex justify-between text-sm">
+                              <span className="text-muted-foreground">Views</span>
+                              <span className="font-medium">{s.views}</span>
+                            </div>
+                            <div className="flex justify-between text-sm">
+                              <span className="text-muted-foreground">CTA-Klicks</span>
+                              <span className="font-medium">{s.clicks}</span>
+                            </div>
+                            <div className="flex justify-between text-sm border-t pt-2">
+                              <span className="text-muted-foreground font-medium">Conversion Rate</span>
+                              <span className="font-bold text-primary">{rate}%</span>
+                            </div>
+                          </CardContent>
+                        </Card>
+                      );
+                    })}
+                  </div>
+                ) : (
+                  <p className="text-center text-muted-foreground py-8">Noch keine A/B-Test-Daten vorhanden</p>
+                )}
+              </CardContent>
+            </Card>
+
+            {/* Leads with branding */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-base">Leads mit Branding-Daten</CardTitle>
+              </CardHeader>
+              <CardContent className="p-0">
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>Gemeinde</TableHead>
+                      <TableHead>Farben</TableHead>
+                      <TableHead>Score</TableHead>
+                      <TableHead>Preview</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    {leads.filter((l: any) => l.primary_color).map((lead: any) => (
+                      <TableRow key={lead.id}>
+                        <TableCell className="font-medium">{lead.church_name}</TableCell>
+                        <TableCell>
+                          <div className="flex gap-1">
+                            <div className="w-5 h-5 rounded border" style={{ background: lead.primary_color }} title="Original" />
+                            {lead.ab_variant_color && (
+                              <div className="w-5 h-5 rounded border" style={{ background: lead.ab_variant_color }} title="Alternative" />
+                            )}
+                            {lead.secondary_color && (
+                              <div className="w-5 h-5 rounded border" style={{ background: lead.secondary_color }} title="Secondary" />
+                            )}
+                          </div>
+                        </TableCell>
+                        <TableCell>{lead.website_score ?? "–"}/10</TableCell>
+                        <TableCell>
+                          <Button variant="ghost" size="sm" asChild>
+                            <a href={`/widget-preview/${lead.id}`} target="_blank" rel="noopener noreferrer">
+                              <ExternalLink className="h-3 w-3 mr-1" />Öffnen
+                            </a>
+                          </Button>
+                        </TableCell>
+                      </TableRow>
+                    ))}
+                    {leads.filter((l: any) => l.primary_color).length === 0 && (
+                      <TableRow>
+                        <TableCell colSpan={4} className="text-center text-muted-foreground py-6">
+                          Noch keine Leads mit Branding-Daten. Scrape zuerst Websites.
+                        </TableCell>
+                      </TableRow>
+                    )}
+                  </TableBody>
+                </Table>
+              </CardContent>
+            </Card>
           </TabsContent>
         </Tabs>
       )}

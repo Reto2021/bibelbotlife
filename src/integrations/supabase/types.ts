@@ -14,6 +14,38 @@ export type Database = {
   }
   public: {
     Tables: {
+      ab_test_events: {
+        Row: {
+          created_at: string
+          event_type: string
+          id: string
+          lead_id: string
+          variant: string
+        }
+        Insert: {
+          created_at?: string
+          event_type: string
+          id?: string
+          lead_id: string
+          variant: string
+        }
+        Update: {
+          created_at?: string
+          event_type?: string
+          id?: string
+          lead_id?: string
+          variant?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "ab_test_events_lead_id_fkey"
+            columns: ["lead_id"]
+            isOneToOne: false
+            referencedRelation: "outreach_leads"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       analytics_events: {
         Row: {
           created_at: string
@@ -810,6 +842,8 @@ export type Database = {
       }
       outreach_leads: {
         Row: {
+          ab_variant_chosen: string | null
+          ab_variant_color: string | null
           campaign_id: string
           church_name: string
           city: string | null
@@ -820,14 +854,23 @@ export type Database = {
           email: string
           id: string
           last_contacted_at: string | null
+          logo_url: string | null
           personal_note: string | null
+          primary_color: string | null
+          scraped_branding: Json | null
           scraped_data: Json | null
+          screenshot_url: string | null
+          secondary_color: string | null
           source: string
           status: Database["public"]["Enums"]["outreach_lead_status"]
+          text_color: string | null
           updated_at: string
           website: string | null
+          website_score: number | null
         }
         Insert: {
+          ab_variant_chosen?: string | null
+          ab_variant_color?: string | null
           campaign_id: string
           church_name: string
           city?: string | null
@@ -838,14 +881,23 @@ export type Database = {
           email: string
           id?: string
           last_contacted_at?: string | null
+          logo_url?: string | null
           personal_note?: string | null
+          primary_color?: string | null
+          scraped_branding?: Json | null
           scraped_data?: Json | null
+          screenshot_url?: string | null
+          secondary_color?: string | null
           source?: string
           status?: Database["public"]["Enums"]["outreach_lead_status"]
+          text_color?: string | null
           updated_at?: string
           website?: string | null
+          website_score?: number | null
         }
         Update: {
+          ab_variant_chosen?: string | null
+          ab_variant_color?: string | null
           campaign_id?: string
           church_name?: string
           city?: string | null
@@ -856,12 +908,19 @@ export type Database = {
           email?: string
           id?: string
           last_contacted_at?: string | null
+          logo_url?: string | null
           personal_note?: string | null
+          primary_color?: string | null
+          scraped_branding?: Json | null
           scraped_data?: Json | null
+          screenshot_url?: string | null
+          secondary_color?: string | null
           source?: string
           status?: Database["public"]["Enums"]["outreach_lead_status"]
+          text_color?: string | null
           updated_at?: string
           website?: string | null
+          website_score?: number | null
         }
         Relationships: [
           {
