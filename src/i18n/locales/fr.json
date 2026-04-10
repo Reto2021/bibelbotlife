@@ -1,6 +1,8 @@
 {
   "nav": {
-    "startNow": "Commencer"
+    "startNow": "Commencer",
+    "prayerWall": "Mur de prière",
+    "bibleQuiz": "Quiz biblique"
   },
   "loader": "Chargement…",
   "hero": {
@@ -860,7 +862,9 @@
     "patronage": "Recommandé par"
   },
   "auth": {
-    "apple": "Se connecter avec Apple"
+    "apple": "Se connecter avec Apple",
+    "loginShort": "Connexion",
+    "logout": "Déconnexion"
   },
   "tts": {
     "male": "Voix masculine",
@@ -868,5 +872,17 @@
     "maleShort": "M",
     "femaleShort": "F",
     "voice": "Voix"
+  },
+  "meinBereichNav": "Mon espace",
+  "social": {
+    "conversations": "Conversations",
+    "languages": "Langues",
+    "bibles": "Traductions bibliques"
+  },
+  "chatDemo": {
+    "sectionLabel": "Voici à quoi ressemble une conversation",
+    "userMsg": "Je me sens seul. Que dit la Bible à ce sujet ?",
+    "botMsg": "Tu n'es pas seul – même quand tu le ressens. Le Psaume 23 dit : « L'Éternel est mon berger, je ne manquerai de rien. » Cela signifie que Dieu est proche de toi, même dans les moments les plus sombres. Veux-tu qu'on explore ce passage ensemble ?",
+    "cta": "Commencer votre propre conversation →"
   }
 }

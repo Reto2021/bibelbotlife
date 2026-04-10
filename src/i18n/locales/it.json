@@ -1,6 +1,8 @@
 {
   "nav": {
-    "startNow": "Inizia ora"
+    "startNow": "Inizia ora",
+    "prayerWall": "Muro di preghiera",
+    "bibleQuiz": "Quiz biblico"
   },
   "loader": "Caricamento…",
   "hero": {
@@ -860,7 +862,9 @@
     "patronage": "Consigliato da"
   },
   "auth": {
-    "apple": "Accedi con Apple"
+    "apple": "Accedi con Apple",
+    "loginShort": "Accedi",
+    "logout": "Esci"
   },
   "tts": {
     "male": "Voce maschile",
@@ -868,5 +872,17 @@
     "maleShort": "M",
     "femaleShort": "F",
     "voice": "Voce"
+  },
+  "meinBereichNav": "Il mio spazio",
+  "social": {
+    "conversations": "Conversazioni",
+    "languages": "Lingue",
+    "bibles": "Traduzioni bibliche"
+  },
+  "chatDemo": {
+    "sectionLabel": "Ecco come appare una conversazione",
+    "userMsg": "Mi sento solo. Cosa dice la Bibbia a riguardo?",
+    "botMsg": "Non sei solo – anche quando ti senti così. Il Salmo 23 dice: «Il Signore è il mio pastore, non mi mancherà nulla.» Questo significa che Dio è vicino a te, anche nei momenti più bui. Vuoi esplorare questo passo insieme?",
+    "cta": "Inizia la tua conversazione →"
   }
 }

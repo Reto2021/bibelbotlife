@@ -1,6 +1,8 @@
 {
   "nav": {
-    "startNow": "立即开始"
+    "startNow": "立即开始",
+    "prayerWall": "祈祷墙",
+    "bibleQuiz": "圣经问答"
   },
   "loader": "正在加载...",
   "hero": {
@@ -861,7 +863,9 @@
     "genError": "文本生成错误。请重试。"
   },
   "auth": {
-    "apple": "使用 Apple 登录"
+    "apple": "使用 Apple 登录",
+    "loginShort": "登录",
+    "logout": "退出"
   },
   "tts": {
     "male": "男声",
@@ -869,5 +873,11 @@
     "maleShort": "男",
     "femaleShort": "女",
     "voice": "语音"
+  },
+  "meinBereichNav": "我的空间",
+  "social": {
+    "conversations": "对话",
+    "languages": "语言",
+    "bibles": "圣经译本"
   }
 }

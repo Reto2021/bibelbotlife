@@ -234,6 +234,11 @@
     "purposeValue": "Spende BibleBot",
     "note": "BibleBot.Life wird als privates Projekt betrieben. Spenden sind daher nicht steuerabzugsfähig."
   },
+  "social": {
+    "conversations": "Gespräche geführt",
+    "languages": "Sprachen",
+    "bibles": "Bibelübersetzungen"
+  },
   "refer": {
     "badge": "Gottes Wort teilen",
     "title": "Empfiehl BibleBot weiter",
@@ -390,6 +395,7 @@
   "tiles": {
     "sectionTitle": "Was bewegt dich?",
     "sectionSubtitle": "Wähle ein Thema — der BibleBot begleitet dich",
+    "showMore": "mehr",
     "baptism": {
       "title": "Taufspruch finden",
       "desc": "Der perfekte Vers für dein Kind",
