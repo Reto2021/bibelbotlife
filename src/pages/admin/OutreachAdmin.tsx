@@ -642,7 +642,7 @@ export default function OutreachAdmin() {
                       />
                     </div>
                     <p className="text-xs text-muted-foreground">
-                      Platzhalter: {"{{church_name}}, {{contact_name}}, {{city}}, {{denomination}}, {{personal_note}}, {{booking_url}}, {{sender_name}}"}
+                      Platzhalter: {"{{church_name}}, {{contact_name}}, {{city}}, {{denomination}}, {{personal_note}}, {{booking_url}}, {{sender_name}}, {{previewUrl}}, {{screenshotUrl}}, {{splashUrl}}, {{websiteScore}}, {{primaryColor}}"}
                     </p>
                   </div>
                   <DialogFooter><Button onClick={saveSequence}>Speichern</Button></DialogFooter>
