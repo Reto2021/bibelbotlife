@@ -639,6 +639,21 @@ export default function OutreachAdmin() {
               </Button>
             </div>
 
+            {bulkScrapeProgress && (
+              <div className="space-y-1">
+                <div className="w-full bg-border rounded-full h-2">
+                  <div
+                    className="bg-secondary h-2 rounded-full transition-all duration-300"
+                    style={{ width: `${(bulkScrapeProgress.current / bulkScrapeProgress.total) * 100}%` }}
+                  />
+                </div>
+                <p className="text-xs text-muted-foreground">
+                  Scrape Website {bulkScrapeProgress.current} von {bulkScrapeProgress.total}…
+                  {bulkScrapeProgress.errors > 0 && <span className="text-destructive ml-1">({bulkScrapeProgress.errors} Fehler)</span>}
+                </p>
+              </div>
+            )}
+
             {bulkProgress && (
               <div className="space-y-1">
                 <div className="w-full bg-border rounded-full h-2">
