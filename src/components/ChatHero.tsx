@@ -181,7 +181,7 @@ function LiveDemoPreview({ onTryIt }: { onTryIt: () => void }) {
             onClick={onTryIt}
             className="w-full text-center text-xs text-primary font-semibold hover:underline cursor-pointer pt-1"
           >
-            {t("chatDemo.cta", "Starte jetzt dein eigenes Gespräch →")}
+            {t("chatDemo.cta")}
           </motion.button>
         )}
       </div>
