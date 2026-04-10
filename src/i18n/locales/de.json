@@ -395,6 +395,7 @@
   "tiles": {
     "sectionTitle": "Was bewegt dich?",
     "sectionSubtitle": "Wähle ein Thema — der BibleBot begleitet dich",
+    "showMore": "mehr",
     "baptism": {
       "title": "Taufspruch finden",
       "desc": "Der perfekte Vers für dein Kind",
