@@ -350,6 +350,7 @@
   "tiles": {
     "sectionTitle": "What's on your heart?",
     "sectionSubtitle": "Choose a topic — BibleBot walks with you",
+    "showMore": "more",
     "baptism": {
       "title": "Find a baptism verse",
       "desc": "The perfect verse for your child",
