@@ -466,7 +466,8 @@ export function BibleBotChat() {
           // Use a microtask to ensure state has settled, then find the correct index
           queueMicrotask(() => {
             setMessages((prev) => {
-              const lastAssistantIdx = prev.findLastIndex((m) => m.role === "assistant");
+              let lastAssistantIdx = -1;
+              for (let i = prev.length - 1; i >= 0; i--) { if (prev[i].role === "assistant") { lastAssistantIdx = i; break; } }
               if (lastAssistantIdx >= 0 && !prev[lastAssistantIdx].qa) {
                 setTimeout(() => runQA(prev[lastAssistantIdx].content, lastAssistantIdx), 0);
               }
