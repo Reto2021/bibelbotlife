@@ -187,6 +187,13 @@
     "q2": "Which Bible translations are included?",
     "q2Intro": "BibleBot works ecumenically with the major German-language Bible editions:",
     "q2Outro": "All Bible passages include source citations and historical context.",
+    "tradition": {
+      "reformed": "Reformed",
+      "evangelical": "Evangelical",
+      "catholic": "Catholic",
+      "freeChurch": "Free Church",
+      "literal": "Word-for-word"
+    },
     "q3": "What scientific foundations are behind it?",
     "q3Intro": "The companionship is based on peer-reviewed research in Positive Psychology:",
     "q4": "How does BibleBot ensure pastoral safety?",
