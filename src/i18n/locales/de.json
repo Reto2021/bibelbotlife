@@ -277,6 +277,7 @@
     "acting": "Handeln",
     "renameTip": "Gib mir einen Namen ✨",
     "namePlaceholder": "z.B. Eli, Miriam…",
+    "previousChats": "{{count}} frühere Gespräche",
     "changeName": "Namen ändern",
     "placeholder": "Schreib einfach drauflos...",
     "startVoice": "Spracheingabe starten",
