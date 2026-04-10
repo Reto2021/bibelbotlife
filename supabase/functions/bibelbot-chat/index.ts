@@ -362,7 +362,7 @@ async function searchTheology(query: string, sourceType?: string): Promise<strin
 
   // Expand search terms via AI
   const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY")!;
-  let tsTerms = query.split(/\s+/).join(" | ");
+  let tsTerms = query.split(/\s+/).filter(w => w.length > 0).join(" | ");
 
   try {
     const expandResp = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
@@ -377,7 +377,7 @@ async function searchTheology(query: string, sourceType?: string): Promise<strin
           {
             role: "system",
             content: `Generiere deutsche Suchbegriffe für eine theologische Wissensdatenbank (PostgreSQL FTS).
-Nur einzelne Wörter mit | (OR) getrennt. Viele Synonyme.
+Nur einzelne Wörter mit | (OR) getrennt. Viele Synonyme. Keine Anführungszeichen, keine Klammern, keine Sonderzeichen ausser |.
 Antworte NUR mit dem tsquery-String.`
           },
           { role: "user", content: query },
@@ -393,6 +393,17 @@ Antworte NUR mit dem tsquery-String.`
   } catch (e) {
     console.error("Theology search expansion error:", e);
   }
+
+  // Sanitize tsTerms
+  tsTerms = tsTerms
+    .replace(/["""''`()[\]{}<>!@#$%^&*+=~\\;:]/g, ' ')
+    .replace(/\s*\|\s*/g, ' | ')
+    .split(' | ')
+    .map(term => term.trim())
+    .filter(term => term.length > 0 && term !== '|')
+    .join(' | ');
+
+  if (!tsTerms) tsTerms = query.split(/\s+/).filter(w => w.length > 0).join(" | ");
 
   let q = supabase
     .from("theology_chunks")
