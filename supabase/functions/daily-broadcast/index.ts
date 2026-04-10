@@ -136,7 +136,9 @@ const GREETINGS: Record<string, [string, string]> = {
 };
 
 function getGreeting(lang: string): [string, string] {
-  return GREETINGS[lang] || GREETINGS["de"];
+  // Support locale codes like "de-CH" → "de"
+  const base = lang.split("-")[0].toLowerCase();
+  return GREETINGS[base] || GREETINGS["de"];
 }
 
 function formatMessage(impulse: Record<string, string>, firstName?: string, lang = "de"): string {
