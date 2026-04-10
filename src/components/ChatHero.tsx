@@ -730,9 +730,9 @@ export function ChatHero() {
                   className="flex justify-center gap-6 sm:gap-10 mb-4 max-w-2xl mx-auto"
                 >
                   {[
-                    { value: "2'500+", label: t("social.conversations", { defaultValue: i18n.language.startsWith("de") ? "Gespräche geführt" : "Conversations" }) },
-                    { value: "36", label: t("social.languages", { defaultValue: i18n.language.startsWith("de") ? "Sprachen" : "Languages" }) },
-                    { value: "5", label: t("social.bibles", { defaultValue: i18n.language.startsWith("de") ? "Bibelübersetzungen" : "Bible translations" }) },
+                    { value: "2'500+", label: t("social.conversations") },
+                    { value: "36", label: t("social.languages") },
+                    { value: "5", label: t("social.bibles") },
                   ].map((stat) => (
                     <div key={stat.label} className="text-center">
                       <p className="text-lg sm:text-xl font-bold text-primary">{stat.value}</p>
@@ -756,7 +756,7 @@ export function ChatHero() {
                     ))}
                     {!showMoreChips && (
                       <button onClick={() => setShowMoreChips(true)} className="text-[11px] px-2.5 py-1 rounded-full border border-border bg-card/50 text-primary hover:bg-card transition-all duration-200">
-                        +{TOPIC_CHIPS.length - 8} {t("tiles.showMore", { defaultValue: i18n.language.startsWith("de") ? "mehr" : "more" })}
+                        +{TOPIC_CHIPS.length - 8} {t("tiles.showMore")}
                       </button>
                     )}
                   </div>
