@@ -927,6 +927,11 @@
   },
   "meinBereichNav": "My Area",
   "verseExplain": "Explain this Bible verse in detail: {{quote}} ({{ref}}) – Who wrote this? In what context? What does it mean for my life today?",
+  "social": {
+    "conversations": "Conversations",
+    "languages": "Languages",
+    "bibles": "Bible translations"
+  },
   "tts": {
     "male": "Male voice",
     "female": "Female voice",

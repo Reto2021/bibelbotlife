@@ -64,7 +64,10 @@ i18n
       am: { translation: am }, af: { translation: af }, yo: { translation: yo },
       ig: { translation: ig }, zu: { translation: zu }, ht: { translation: ht },
     },
-    fallbackLng: "de",
+    fallbackLng: (code: string) => {
+      if (!code || code === "de") return ["de"];
+      return ["en", "de"];
+    },
     supportedLngs,
     nonExplicitSupportedLngs: true,
     interpolation: { escapeValue: false },
