@@ -810,8 +810,8 @@ export function ChatHero() {
                             {msg.role === "assistant" ? (
                               <div className={`prose max-w-none dark:prose-invert ${isSenior ? "prose-lg" : "prose-sm"}`}>
                                 <ReactMarkdown components={{
-                                  p: ({ children }) => <p>{makeRefsClickable(children, sendMessage)}</p>,
-                                  li: ({ children }) => <li>{makeRefsClickable(children, sendMessage)}</li>,
+                                  p: ({ children }) => <p>{makeRefsClickable(children, sendMessage, t("suggest.explainDetail", { ref: "{{ref}}" }))}</p>,
+                                  li: ({ children }) => <li>{makeRefsClickable(children, sendMessage, t("suggest.explainDetail", { ref: "{{ref}}" }))}</li>,
                                 }}>{msg.content}</ReactMarkdown>
                               </div>
                             ) : msg.content}
