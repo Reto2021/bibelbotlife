@@ -466,6 +466,7 @@ export default function OutreachAdmin() {
             <TabsTrigger value="leads"><Users className="h-4 w-4 mr-1" />Leads ({leads.length})</TabsTrigger>
             <TabsTrigger value="sequences"><Mail className="h-4 w-4 mr-1" />Sequenzen ({sequences.length})</TabsTrigger>
             <TabsTrigger value="stats"><BarChart3 className="h-4 w-4 mr-1" />Statistiken</TabsTrigger>
+            <TabsTrigger value="ab-test"><Palette className="h-4 w-4 mr-1" />A/B-Test</TabsTrigger>
           </TabsList>
 
           {/* ─── Leads Tab ──────────────────────── */}
