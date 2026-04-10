@@ -462,15 +462,17 @@ export function BibleBotChat() {
         }
 
         // Run QA check after streaming is complete
-        if (assistantSoFar && likelyHasCitations(assistantSoFar)) {
-          // Get the current index of the last assistant message
-          setMessages((prev) => {
-            const lastIdx = prev.length - 1;
-            if (prev[lastIdx]?.role === "assistant") {
-              // Schedule QA outside state updater
-              setTimeout(() => runQA(assistantSoFar, lastIdx), 0);
-            }
-            return prev;
+        if (assistantSoFar) {
+          // Use a microtask to ensure state has settled, then find the correct index
+          queueMicrotask(() => {
+            setMessages((prev) => {
+              let lastAssistantIdx = -1;
+              for (let i = prev.length - 1; i >= 0; i--) { if (prev[i].role === "assistant") { lastAssistantIdx = i; break; } }
+              if (lastAssistantIdx >= 0 && !prev[lastAssistantIdx].qa) {
+                setTimeout(() => runQA(prev[lastAssistantIdx].content, lastAssistantIdx), 0);
+              }
+              return prev;
+            });
           });
         }
       } catch (e) {
