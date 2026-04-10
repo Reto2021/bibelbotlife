@@ -246,7 +246,7 @@ async function searchBibleVerses(
 
   // Use AI to expand search terms
   const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY")!;
-  let tsquery = query.split(/\s+/).join(" | ");
+  let tsquery = query.split(/\s+/).filter(w => w.length > 0).join(" | ");
 
   try {
     const expandResp = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
@@ -262,7 +262,7 @@ async function searchBibleVerses(
             role: "system",
             content: `Generiere deutsche Suchbegriffe für eine Bibelsuche (PostgreSQL Full-Text-Search).
 Nur einzelne Wörter getrennt mit | (OR). Viele Synonyme. Beispiel: "Liebe | lieben | Güte | Barmherzigkeit | Nächstenliebe"
-Antworte NUR mit dem tsquery-String, nichts anderes.`
+Antworte NUR mit dem tsquery-String, nichts anderes. Keine Anführungszeichen, keine Klammern, keine Sonderzeichen ausser |.`
           },
           { role: "user", content: query },
         ],
@@ -278,9 +278,24 @@ Antworte NUR mit dem tsquery-String, nichts anderes.`
     console.error("Search expansion error:", e);
   }
 
+  // Sanitize tsquery: remove quotes, parens, special chars; keep only words and |
+  tsquery = tsquery
+    .replace(/["""''`()[\]{}<>!@#$%^&*+=~\\;:]/g, ' ')
+    .replace(/\s*\|\s*/g, ' | ')
+    .split(' | ')
+    .map(term => term.trim())
+    .filter(term => term.length > 0 && term !== '|')
+    .join(' | ');
+
+  if (!tsquery) tsquery = query.split(/\s+/).filter(w => w.length > 0).join(" | ");
+
   const trans = (!translation || translation === "all") ? null : translation;
 
-  const { data: results, error } = await supabase.rpc("search_bible_verses", {
+  let results: any[] | null = null;
+  let searchError: any = null;
+
+  // Try the expanded query first, fall back to simple query on syntax error
+  const { data, error } = await supabase.rpc("search_bible_verses", {
     search_query: tsquery,
     translation_filter: trans,
     book_boost: null,
