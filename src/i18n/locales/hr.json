@@ -216,10 +216,10 @@
     "q9Answer": "Vaš BibleBot ne pohranjuje osobne podatke niti povijest razgovora. Svaki razgovor je anoniman. Nema prijave, praćenja i prosljeđivanja podataka trećim stranama. Korištenje je potpuno anonimno.",
     "tradition": {
       "reformed": "Reformirani",
-      "evangelistički": "Evangelistički",
-      "katolički": "Katolički",
       "freeChurch": "Slobodna Crkva",
-      "literal": "Doslovno"
+      "literal": "Doslovno",
+      "evangelical": "Evangelistički",
+      "catholic": "Katolički"
     }
   },
   "donate": {

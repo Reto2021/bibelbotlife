@@ -216,10 +216,10 @@
     "q9Answer": "Din BibleBot lagrer ingen personlige data og ingen chat-historikk. Hver samtale er anonym. Det er ingen pålogging, ingen sporing og ingen deling av data med tredjeparter. Bruken er fullstendig anonym.",
     "tradition": {
       "reformed": "Reformert",
-      "evangelisk": "Evangelisk",
       "catholic": "Katolsk",
       "freeChurch": "Frikirke",
-      "literal": "Ordagrant"
+      "literal": "Ordagrant",
+      "evangelical": "Evangelisk"
     }
   },
   "donate": {
