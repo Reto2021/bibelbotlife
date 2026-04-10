@@ -97,6 +97,29 @@ function useOutreachStats(campaignId: string | null) {
   });
 }
 
+function useAbTestStats() {
+  return useQuery({
+    queryKey: ["ab-test-stats"],
+    queryFn: async () => {
+      const { data } = await (supabase
+        .from("ab_test_events" as any)
+        .select("variant, event_type") as any);
+      if (!data) return { original: { views: 0, clicks: 0 }, alternative: { views: 0, clicks: 0 } };
+      const stats: Record<string, { views: number; clicks: number }> = {
+        original: { views: 0, clicks: 0 },
+        alternative: { views: 0, clicks: 0 },
+      };
+      data.forEach((e: any) => {
+        const v = e.variant as string;
+        if (!stats[v]) stats[v] = { views: 0, clicks: 0 };
+        if (e.event_type === "view") stats[v].views++;
+        if (e.event_type === "cta_click") stats[v].clicks++;
+      });
+      return stats;
+    },
+  });
+}
+
 // ─── Status badges ───────────────────────────────────────
 const LEAD_STATUS: Record<string, { label: string; variant: "default" | "secondary" | "destructive" | "outline" }> = {
   new: { label: "Neu", variant: "outline" },
