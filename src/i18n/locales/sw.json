@@ -1,6 +1,8 @@
 {
   "nav": {
-    "startNow": "Anza Sasa"
+    "startNow": "Anza Sasa",
+    "prayerWall": "Ukuta wa Maombi",
+    "bibleQuiz": "Maswali ya Biblia"
   },
   "loader": "Inapakia…",
   "hero": {
@@ -24,7 +26,9 @@
     "deepDive": "Je, hii inamaanisha nini kwangu?",
     "explore": "Soma sehemu nzima",
     "alreadySubscribed": "Tayari unapokea msukumo wa kila siku",
-    "subscribeCta": "Pata msukumo huu kila siku?"
+    "subscribeCta": "Pata msukumo huu kila siku?",
+    "playAudio": "Sikiliza",
+    "stopAudio": "Acha"
   },
   "features": {
     "sectionTitle": "Jinsi BibleBot wako anavyokuongoza",
@@ -155,7 +159,12 @@
     "toastPermDeniedDesc": "Tafadhali ruhusu arifa katika mipangilio ya kivinjari chako.",
     "toastError": "Hitilafu",
     "toastErrorDesc": "Tafadhali jaribu tena baadaye.",
-    "subscribeButton": "Jiandikishe kwa Msukumo"
+    "subscribeButton": "Jiandikishe kwa Msukumo",
+    "manage": "Dhibiti Usajili",
+    "switchChannel": "Badilisha kituo:",
+    "unsubscribe": "Acha Kujisajili",
+    "unsubscribedTitle": "Umeondolewa kwenye orodha ya wanaopokea",
+    "unsubscribedDesc": "Hutapokea tena msukumo wa kila siku."
   },
   "faq": {
     "badge": "Maswali Yanayoulizwa Mara kwa Mara",
@@ -204,7 +213,14 @@
     "q8": "Ni nani aliye nyuma ya BibleBot wako na inafadhiliwaje?",
     "q8Answer": "BibleBot.Life ni mradi wa kibinafsi, usio wa kibiashara. Unaendeshwa kwa kujitolea na hufadhiliwa tu kupitia michango ya hiari. Hakuna matangazo, hakuna mauzo ya data na hakuna vipengele vya kulipia. Michango yote huenda moja kwa moja kufidia gharama za uendeshaji (miundombinu, uhifadhi, maendeleo). Kwa kuwa BibleBot unaendeshwa kama mradi wa kibinafsi, michango haiwezi kukatwa kodi.",
     "q9": "BibleBot wako hushughulikiaje data yangu?",
-    "q9Answer": "BibleBot wako haihifadhi data za kibinafsi wala historia ya mazungumzo. Kila mazungumzo ni ya siri. Hakuna kuingia, hakuna ufuatiliaji na hakuna uhamishaji wa data kwa washirika wengine. Matumizi ni ya siri kabisa."
+    "q9Answer": "BibleBot wako haihifadhi data za kibinafsi wala historia ya mazungumzo. Kila mazungumzo ni ya siri. Hakuna kuingia, hakuna ufuatiliaji na hakuna uhamishaji wa data kwa washirika wengine. Matumizi ni ya siri kabisa.",
+    "tradition": {
+      "reformed": "Marekebisho",
+      "evangelical": "Kiinjili",
+      "catholic": "Katoliki",
+      "freeChurch": "Kanisa Huru",
+      "literal": "Neno kwa neno"
+    }
   },
   "donate": {
     "badge": "Saidia BibleBot wako",
@@ -291,7 +307,8 @@
     "errorConnection": "haikuweza kufikiwa.",
     "errorNoStream": "Hakuna mkondo",
     "seniorMode": "Hali ya Wazee (Fonti kubwa)",
-    "loginHint": "Ingia ili kuwezesha mazungumzo kwenye vifaa vyote"
+    "loginHint": "Ingia ili kuwezesha mazungumzo kwenye vifaa vyote",
+    "previousChats": "Mazungumzo {{count}} yaliyopita"
   },
   "install": {
     "title": "Sakinisha BibleBot",
@@ -542,7 +559,8 @@
     "prayerwall": {
       "desc": "Shiriki maombi & ombeana",
       "title": "Ukuta wa Maombi"
-    }
+    },
+    "showMore": "zaidi"
   },
   "lifeWheel": {
     "title": "Gurudumu lako la Maisha",
@@ -860,7 +878,9 @@
     "patronage": "Imependekezwa na"
   },
   "auth": {
-    "apple": "Ingia kwa Apple"
+    "apple": "Ingia kwa Apple",
+    "loginShort": "Ingia",
+    "logout": "Toka"
   },
   "tts": {
     "male": "Sauti ya kiume",
@@ -868,5 +888,61 @@
     "maleShort": "K",
     "femaleShort": "Ki",
     "voice": "Sauti"
+  },
+  "chatDemo": {
+    "sectionLabel": "Hivi ndivyo mazungumzo yanavyoonekana",
+    "userMsg": "Najisikia mpweke. Biblia inasema nini kuhusu hilo?",
+    "botMsg": "Hauko peke yako – hata kama unajisikia hivyo. Zaburi 23 inasema: 'Bwana ndiye mchungaji wangu, sitapungukiwa.' Hii inamaanisha kwamba Mungu yuko karibu nawe, hata katika nyakati za giza zaidi. Je, ungependa tuchunguze kifungu hiki pamoja?",
+    "cta": "Anzisha mazungumzo yako mwenyewe →"
+  },
+  "suggest": {
+    "psalm23": "Zaburi 23 – Bwana ndiye mchungaji wangu",
+    "joh316": "Yohana 3:16 – Kwa maana Mungu aliupenda ulimwengu",
+    "rom828": "Warumi 8:28 – Mambo yote hufanya kazi pamoja kwa wema",
+    "mt1128": "Mathayo 11:28 – Njooni kwangu, ninyi nyote mnaochoka",
+    "phil413": "Wafilipi 4:13 – Ninaweza kufanya mambo yote",
+    "jes4110": "Isaya 41:10 – Usiogope, kwa maana mimi nipo pamoja nawe",
+    "1kor13": "1 Wakorintho 13 – Kubwa zaidi ni upendo",
+    "spr35": "Mithali 3:5 – Mtumaini Bwana",
+    "jos19": "Yoshua 1:9 – Uwe hodari na jasiri",
+    "ps462": "Zaburi 46:1 – Mungu ndiye kimbilio letu na nguvu zetu",
+    "explainDetail": "Eleza {{ref}} kwa undani"
+  },
+  "dailyVerses": {
+    "v0": "\"Njooni kwangu, ninyi nyote mnaochoka na kulemewa na mizigo, nami nitawapumzisha.\"",
+    "r0": "Mathayo 11:28",
+    "v1": "\"Maana nayajua mawazo ninayowawazia ninyi, asema Bwana, mawazo ya amani.\"",
+    "r1": "Yeremia 29:11",
+    "v2": "\"Usiogope, kwa maana mimi nipo pamoja nawe; usifadhaike, kwa maana mimi ni Mungu wako.\"",
+    "r2": "Isaya 41:10",
+    "v3": "\"Bwana ndiye mchungaji wangu; sitapungukiwa.\"",
+    "r3": "Zaburi 23:1",
+    "v4": "\"Tupeni mahangaiko yenu yote juu yake kwa maana yeye anawajali.\"",
+    "r4": "1 Petro 5:7",
+    "v5": "\"Mimi ndimi nuru ya ulimwengu. Yeye anifuataye hatatembea gizani.\"",
+    "r5": "Yohana 8:12",
+    "v6": "\"Uwe hodari na jasiri! Usiogope, kwa maana Bwana Mungu wako yuko pamoja nawe.\"",
+    "r6": "Yoshua 1:9",
+    "v7": "\"Lakini wale wanaomtumaini Bwana watafanya upya nguvu zao; watapaa juu kwa mabawa kama tai.\"",
+    "r7": "Isaya 40:31",
+    "v8": "\"Kwa maana walipo wawili watatu wamekusanyika kwa jina langu, hapo mimi nipo pamoja nao.\"",
+    "r8": "Mathayo 18:20",
+    "v9": "\"Onjeni muone ya kuwa Bwana ni mwema; heri mtu yule anayemkimbilia.\"",
+    "r9": "Zaburi 34:8",
+    "v10": "\"Huponya waliovunjika moyo na kuwafunga majeraha yao.\"",
+    "r10": "Zaburi 147:3",
+    "v11": "\"Upendo una uvumilivu, upendo una fadhili. Huvumilia mambo yote, huamini mambo yote, hutumaini mambo yote.\"",
+    "r11": "1 Wakorintho 13:4–7",
+    "v12": "\"Furahini katika tumaini, vumilieni katika dhiki, dumuni katika maombi.\"",
+    "r12": "Warumi 12:12",
+    "v13": "\"Mtumaini Bwana kwa moyo wako wote wala usitegemee ufahamu wako mwenyewe.\"",
+    "r13": "Mithali 3:5"
+  },
+  "meinBereichNav": "Eneo Langu",
+  "verseExplain": "Eleza mstari huu wa Biblia kwa undani: {{quote}} ({{ref}}) – Nani aliandika haya? Katika muktadha gani? Inamaanisha nini kwa maisha yangu leo?",
+  "social": {
+    "conversations": "Mazungumzo",
+    "languages": "Lugha",
+    "bibles": "Tafsiri za Biblia"
   }
 }

@@ -1,6 +1,8 @@
 {
   "nav": {
-    "startNow": "Begin nou"
+    "startNow": "Begin nou",
+    "prayerWall": "Gebedsmuur",
+    "bibleQuiz": "Bybelvasvra"
   },
   "loader": "Laai tans…",
   "hero": {
@@ -24,7 +26,9 @@
     "deepDive": "Wat beteken dit vir my?",
     "explore": "Lees hele gedeelte",
     "alreadySubscribed": "Jy ontvang die daaglikse inspirasie",
-    "subscribeCta": "Ontvang hierdie inspirasie daagliks?"
+    "subscribeCta": "Ontvang hierdie inspirasie daagliks?",
+    "playAudio": "Luister",
+    "stopAudio": "Stop"
   },
   "features": {
     "sectionTitle": "Hoe jou BibleBot jou vergesel",
@@ -155,7 +159,12 @@
     "toastPermDeniedDesc": "Laat asseblief kennisgewings toe in jou blaaierinstellings.",
     "toastError": "Fout",
     "toastErrorDesc": "Probeer asseblief later weer.",
-    "subscribeButton": "Teken in vir Inspo"
+    "subscribeButton": "Teken in vir Inspo",
+    "manage": "Bestuur intekening",
+    "switchChannel": "Verander kanaal:",
+    "unsubscribe": "Teken uit",
+    "unsubscribedTitle": "Uitgeteken",
+    "unsubscribedDesc": "Jy sal nie meer daaglikse inspirasie ontvang nie."
   },
   "faq": {
     "badge": "Gereelde vrae",
@@ -204,7 +213,14 @@
     "q8": "Wie staan agter jou BibleBot en hoe word dit gefinansier?",
     "q8Answer": "BibleBot.Life is 'n private, nie-kommersiële projek. Dit word vrywillig bedryf en word uitsluitlik deur vrywillige donasies gefinansier. Daar is geen advertensies, geen dataverkope en geen betaalde funksies nie. Alle donasies vloei direk in die dekking van die lopende koste (infrastruktuur, hosting, ontwikkeling). Aangesien BibleBot as 'n private projek loop, is donasies nie belastingaftrekbaar nie.",
     "q9": "Hoe hanteer jou BibleBot my data?",
-    "q9Answer": "Jou BibleBot stoor geen persoonlike data en geen kletsgeskiedenis nie. Elke gesprek is anoniem. Daar is geen aanmelding, geen dop en geen deel van data met derde partye nie. Die gebruik is heeltemal anoniem."
+    "q9Answer": "Jou BibleBot stoor geen persoonlike data en geen kletsgeskiedenis nie. Elke gesprek is anoniem. Daar is geen aanmelding, geen dop en geen deel van data met derde partye nie. Die gebruik is heeltemal anoniem.",
+    "tradition": {
+      "reformed": "Gereformeerd",
+      "evangelical": "Evangelies",
+      "catholic": "Katoliek",
+      "freeChurch": "Vrye Kerk",
+      "literal": "Woord-vir-woord"
+    }
   },
   "donate": {
     "badge": "Ondersteun jou BibleBot",
@@ -291,7 +307,8 @@
     "errorConnection": "kon nie bereik word nie.",
     "errorNoStream": "Geen stroom",
     "seniorMode": "Seniormodus (groter lettertipe)",
-    "loginHint": "Meld aan om gesprekke oor alle toestelle te behou"
+    "loginHint": "Meld aan om gesprekke oor alle toestelle te behou",
+    "previousChats": "{{count}} vorige gesprekke"
   },
   "install": {
     "title": "Installeer BibleBot",
@@ -504,7 +521,8 @@
     "prayerwall": {
       "desc": "Deel gebedsversoeke & bid vir mekaar",
       "title": "Gebedsmuur"
-    }
+    },
+    "showMore": "meer"
   },
   "lifeWheel": {
     "title": "Jou Lewenswiel",
@@ -860,7 +878,9 @@
     "patronage": "Aanbeveel deur"
   },
   "auth": {
-    "apple": "Meld aan met Apple"
+    "apple": "Meld aan met Apple",
+    "loginShort": "Meld aan",
+    "logout": "Meld af"
   },
   "tts": {
     "male": "Manlike stem",
@@ -868,5 +888,61 @@
     "maleShort": "M",
     "femaleShort": "V",
     "voice": "Stem"
+  },
+  "chatDemo": {
+    "sectionLabel": "Hier is hoe 'n gesprek lyk",
+    "userMsg": "Ek voel alleen. Wat sê die Bybel daaroor?",
+    "botMsg": "Jy is nie alleen nie – selfs al voel dit so. Psalm 23 sê: 'Die Here is my herder, ek sal niks kortkom nie.' Dit beteken dat God naby jou is, selfs in die donkerste oomblikke. Wil jy hê ons moet hierdie gedeelte saam verken?",
+    "cta": "Begin jou eie gesprek →"
+  },
+  "suggest": {
+    "psalm23": "Psalm 23 – Die Here is my herder",
+    "joh316": "Johannes 3:16 – Want so lief het God die wêreld gehad",
+    "rom828": "Romeine 8:28 – Alles werk ten goede mee",
+    "mt1128": "Matteus 11:28 – Kom na My toe, almal wat vermoeid en belas is",
+    "phil413": "Filippense 4:13 – Ek is tot alles in staat",
+    "jes4110": "Jesaja 41:10 – Moenie vrees nie, want Ek is met jou",
+    "1kor13": "1 Korintiërs 13 – Die grootste is die liefde",
+    "spr35": "Spreuke 3:5 – Vertrou op die Here",
+    "jos19": "Josua 1:9 – Wees sterk en vol moed",
+    "ps462": "Psalm 46:1 – God is ons toevlug en sterkte",
+    "explainDetail": "Verduidelik {{ref}} in detail"
+  },
+  "dailyVerses": {
+    "v0": "“Kom na My toe, almal wat vermoeid en belas is, en Ek sal julle rus gee.”",
+    "r0": "Matteus 11:28",
+    "v1": "“Want Ek weet watter gedagtes Ek oor julle koester, spreek die Here, gedagtes van vrede.”",
+    "r1": "Jeremia 29:11",
+    "v2": "“Moenie vrees nie, want Ek is met jou; moenie verskrik wees nie, want Ek is jou God.”",
+    "r2": "Jesaja 41:10",
+    "v3": "“Die Here is my herder; ek sal niks kortkom nie.”",
+    "r3": "Psalm 23:1",
+    "v4": "“Werp al julle sorge op Hom, want Hy sorg vir julle.”",
+    "r4": "1 Petrus 5:7",
+    "v5": "“Ek is die lig van die wêreld. Wie My volg, sal beslis nie in die duisternis wandel nie.”",
+    "r5": "Johannes 8:12",
+    "v6": "“Wees sterk en vol moed! Moenie bang wees nie, want die Here jou God is met jou.”",
+    "r6": "Josua 1:9",
+    "v7": "“Maar die wat op die Here wag, kry nuwe krag; hulle vaar op met vleuels soos arende.”",
+    "r7": "Jesaja 40:31",
+    "v8": "“Want waar twee of drie in my Naam vergader, daar is Ek in hul midde.”",
+    "r8": "Matteus 18:20",
+    "v9": "“Smaak en sien dat die Here goed is; gelukkig is die mens wat by Hom skuil.”",
+    "r9": "Psalm 34:8",
+    "v10": "“Hy genees die wat gebroke is van hart, en verbind hulle wonde.”",
+    "r10": "Psalm 147:3",
+    "v11": "“Die liefde is lankmoedig, die liefde is vriendelik. Dit verdra alles, glo alles, hoop alles.”",
+    "r11": "1 Korintiërs 13:4–7",
+    "v12": "“Verbly julle in die hoop, wees geduldig in verdrukking, volhard in die gebed.”",
+    "r12": "Romeine 12:12",
+    "v13": "“Vertrou op die Here met jou hele hart en steun nie op jou eie insig nie.”",
+    "r13": "Spreuke 3:5"
+  },
+  "meinBereichNav": "My Area",
+  "verseExplain": "Verduidelik hierdie Bybelvers in detail: {{quote}} ({{ref}}) – Wie het dit geskryf? In watter konteks? Wat beteken dit vir my lewe vandag?",
+  "social": {
+    "conversations": "Gesprekke",
+    "languages": "Tale",
+    "bibles": "Bybelvertalings"
   }
 }

@@ -1,6 +1,8 @@
 {
   "nav": {
-    "startNow": "Začít"
+    "startNow": "Začít",
+    "prayerWall": "Modlitební zeď",
+    "bibleQuiz": "Biblický kvíz"
   },
   "loader": "Načítání…",
   "hero": {
@@ -24,7 +26,9 @@
     "deepDive": "Co to pro mě znamená?",
     "explore": "Přečíst celý úryvek",
     "alreadySubscribed": "Dostáváte denní inspiraci",
-    "subscribeCta": "Chcete tuto inspiraci dostávat denně?"
+    "subscribeCta": "Chcete tuto inspiraci dostávat denně?",
+    "playAudio": "Poslechnout",
+    "stopAudio": "Zastavit"
   },
   "features": {
     "sectionTitle": "Jak tě BibleBot doprovází",
@@ -155,7 +159,12 @@
     "toastPermDeniedDesc": "Povol oznámení v nastavení prohlížeče.",
     "toastError": "Chyba",
     "toastErrorDesc": "Zkus to prosím později.",
-    "subscribeButton": "Přihlásit se k odběru Inspo"
+    "subscribeButton": "Přihlásit se k odběru Inspo",
+    "manage": "Spravovat předplatné",
+    "switchChannel": "Změnit kanál:",
+    "unsubscribe": "Odhlásit se",
+    "unsubscribedTitle": "Odhlášeno",
+    "unsubscribedDesc": "Již nebudete dostávat denní inspiraci."
   },
   "faq": {
     "badge": "FAQ",
@@ -204,7 +213,14 @@
     "q8": "Kdo stojí za BibleBot a jak je financován?",
     "q8Answer": "BibleBot.Life je soukromý, nekomerční projekt. Je provozován dobrovolnicky a financován výhradně z dobrovolných darů. Bez reklam, bez prodeje dat, bez placených funkcí.",
     "q9": "Jak BibleBot zachází s mými daty?",
-    "q9Answer": "BibleBot neukládá osobní data ani historii chatů. Každý rozhovor je anonymní. Bez přihlášení, bez sledování, bez sdílení dat s třetími stranami."
+    "q9Answer": "BibleBot neukládá osobní data ani historii chatů. Každý rozhovor je anonymní. Bez přihlášení, bez sledování, bez sdílení dat s třetími stranami.",
+    "tradition": {
+      "reformed": "Reformovaná",
+      "evangelical": "Evangelická",
+      "catholic": "Katolická",
+      "freeChurch": "Svobodná církev",
+      "literal": "Doslovná"
+    }
   },
   "donate": {
     "badge": "Podpoř BibleBot",
@@ -276,7 +292,8 @@
     "seniorMode": "Senior mode (larger text)",
     "teaserCta": "Psát nyní →",
     "namePlaceholder": "např. Eli, Miriam…",
-    "loginHint": "Přihlaste se, abyste si uchovali konverzace napříč zařízeními"
+    "loginHint": "Přihlaste se, abyste si uchovali konverzace napříč zařízeními",
+    "previousChats": "{{count}} předchozích konverzací"
   },
   "install": {
     "title": "Nainstalovat BibleBot",
@@ -507,7 +524,8 @@
     "prayerwall": {
       "desc": "Sdílejte modlitební úmysly a modlete se jeden za druhého",
       "title": "Modlitební zeď"
-    }
+    },
+    "showMore": "více"
   },
   "lifeWheel": {
     "title": "Tvé kolo života",
@@ -860,7 +878,9 @@
     "patronage": "Doporučeno"
   },
   "auth": {
-    "apple": "Přihlásit se přes Apple"
+    "apple": "Přihlásit se přes Apple",
+    "loginShort": "Přihlásit se",
+    "logout": "Odhlásit se"
   },
   "tts": {
     "male": "Mužský hlas",
@@ -868,5 +888,61 @@
     "maleShort": "M",
     "femaleShort": "Ž",
     "voice": "Hlas"
+  },
+  "chatDemo": {
+    "sectionLabel": "Zde je ukázka konverzace",
+    "userMsg": "Cítím se sám. Co o tom říká Bible?",
+    "botMsg": "Nejste sám – i když se to tak může zdát. Žalm 23 říká: „Hospodin je můj pastýř, nebudu mít nedostatek.“ To znamená, že Bůh je vám nablízku, i v těch nejtemnějších chvílích. Chtěli byste, abychom tento úryvek prozkoumali společně?",
+    "cta": "Začněte svou vlastní konverzaci →"
+  },
+  "suggest": {
+    "psalm23": "Žalm 23 – Hospodin je můj pastýř",
+    "joh316": "Jan 3:16 – Neboť tak Bůh miloval svět",
+    "rom828": "Římanům 8:28 – Všechny věci spolupracují k dobrému",
+    "mt1128": "Matouš 11:28 – Pojďte ke mně všichni, kdo jste unavení",
+    "phil413": "Filipským 4:13 – Všechno mohu v Kristu",
+    "jes4110": "Izajáš 41:10 – Neboj se, neboť jsem s tebou",
+    "1kor13": "1. Korintským 13 – Největší je láska",
+    "spr35": "Přísloví 3:5 – Důvěřuj Hospodinu",
+    "jos19": "Jozue 1:9 – Buď silný a odvážný",
+    "ps462": "Žalm 46:1 – Bůh je naše útočiště a síla",
+    "explainDetail": "Vysvětlete {{ref}} podrobně"
+  },
+  "dailyVerses": {
+    "v0": "„Pojďte ke mně všichni, kdo jste unavení a obtížení, a já vám dám odpočinek.“",
+    "r0": "Matouš 11:28",
+    "v1": "„Neboť já znám plány, které mám s vámi, praví Hospodin, plány pokoje.“",
+    "r1": "Jeremiáš 29:11",
+    "v2": "„Neboj se, neboť jsem s tebou; nestrachuj se, neboť já jsem tvůj Bůh.“",
+    "r2": "Izajáš 41:10",
+    "v3": "„Hospodin je můj pastýř; nebudu mít nedostatek.“",
+    "r3": "Žalm 23:1",
+    "v4": "„Všechnu svou úzkost vložte na něho, neboť on se o vás stará.“",
+    "r4": "1. Petr 5:7",
+    "v5": "„Já jsem světlo světa. Kdo mě následuje, nebude chodit ve tmě.“",
+    "r5": "Jan 8:12",
+    "v6": "„Buď silný a odvážný! Neboj se, neboť Hospodin, tvůj Bůh, je s tebou.“",
+    "r6": "Jozue 1:9",
+    "v7": "„Ale ti, kdo doufají v Hospodina, obnoví svou sílu; vznesou se na křídlech jako orli.“",
+    "r7": "Izajáš 40:31",
+    "v8": "„Neboť kde jsou dva nebo tři shromážděni v mém jménu, tam jsem já uprostřed nich.“",
+    "r8": "Matouš 18:20",
+    "v9": "„Okuste a vizte, že Hospodin je dobrý; blahoslavený je ten, kdo se k němu utíká.“",
+    "r9": "Žalm 34:8",
+    "v10": "„Uzdravuje zlomená srdce a obvazuje jejich rány.“",
+    "r10": "Žalm 147:3",
+    "v11": "„Láska je trpělivá, láska je laskavá. Všechno snáší, všemu věří, ve všechno doufá.“",
+    "r11": "1. Korintským 13:4–7",
+    "v12": "„Radujte se v naději, buďte trpěliví v soužení, vytrvalí v modlitbě.“",
+    "r12": "Římanům 12:12",
+    "v13": "„Důvěřuj Hospodinu celým svým srdcem a nespoléhej na své vlastní porozumění.“",
+    "r13": "Přísloví 3:5"
+  },
+  "meinBereichNav": "Moje oblast",
+  "verseExplain": "Vysvětlete tento biblický verš podrobně: {{quote}} ({{ref}}) – Kdo to napsal? V jakém kontextu? Co to znamená pro můj život dnes?",
+  "social": {
+    "conversations": "Konverzace",
+    "languages": "Jazyky",
+    "bibles": "Překlady Bible"
   }
 }

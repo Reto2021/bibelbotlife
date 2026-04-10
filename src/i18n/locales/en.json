@@ -159,7 +159,12 @@
     "toastPermDeniedDesc": "Please allow notifications in your browser settings.",
     "toastError": "Error",
     "toastErrorDesc": "Please try again later.",
-    "subscribeButton": "Subscribe to Inspo"
+    "subscribeButton": "Subscribe to Inspo",
+    "manage": "Manage subscription",
+    "switchChannel": "Switch channel:",
+    "unsubscribe": "Unsubscribe",
+    "unsubscribedTitle": "Unsubscribed",
+    "unsubscribedDesc": "You will no longer receive daily inspiration."
   },
   "faq": {
     "badge": "FAQ",

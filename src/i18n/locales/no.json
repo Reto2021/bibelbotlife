@@ -1,6 +1,8 @@
 {
   "nav": {
-    "startNow": "Start nå"
+    "startNow": "Start nå",
+    "prayerWall": "Bønnevegg",
+    "bibleQuiz": "Bibelquiz"
   },
   "loader": "Laster inn…",
   "hero": {
@@ -24,7 +26,9 @@
     "deepDive": "Hva betyr dette for meg?",
     "explore": "Les hele avsnittet",
     "alreadySubscribed": "Du mottar daglig inspirasjon",
-    "subscribeCta": "Ønsker du å motta denne inspirasjonen daglig?"
+    "subscribeCta": "Ønsker du å motta denne inspirasjonen daglig?",
+    "playAudio": "Lytt",
+    "stopAudio": "Stopp"
   },
   "features": {
     "sectionTitle": "Hvordan din BibleBot følger deg",
@@ -155,7 +159,12 @@
     "toastPermDeniedDesc": "Vennligst tillat varslinger i nettleserinnstillingene dine.",
     "toastError": "Feil",
     "toastErrorDesc": "Vennligst prøv igjen senere.",
-    "subscribeButton": "Abonner på insprasjon"
+    "subscribeButton": "Abonner på insprasjon",
+    "manage": "Administrer abonnement",
+    "switchChannel": "Bytt kanal:",
+    "unsubscribe": "Avslutt abonnement",
+    "unsubscribedTitle": "Avmeldt",
+    "unsubscribedDesc": "Du vil ikke lenger motta daglig inspirasjon."
   },
   "faq": {
     "badge": "Ofte stilte spørsmål",
@@ -204,7 +213,14 @@
     "q8": "Hvem står bak din BibleBot og hvordan finansieres den?",
     "q8Answer": "BibleBot.Life er et privat, ikke-kommersielt prosjekt. Det drives på frivillig basis og finansieres utelukkende gjennom frivillige donasjoner. Det er ingen reklame, ingen salg av data og ingen betalte funksjoner. Alle donasjoner går direkte til å dekke løpende kostnader (infrastruktur, hosting, utvikling). Siden BibleBot drives som et privat prosjekt, er donasjoner ikke fradragsberettigede.",
     "q9": "Hvordan håndterer din BibleBot mine data?",
-    "q9Answer": "Din BibleBot lagrer ingen personlige data og ingen chat-historikk. Hver samtale er anonym. Det er ingen pålogging, ingen sporing og ingen deling av data med tredjeparter. Bruken er fullstendig anonym."
+    "q9Answer": "Din BibleBot lagrer ingen personlige data og ingen chat-historikk. Hver samtale er anonym. Det er ingen pålogging, ingen sporing og ingen deling av data med tredjeparter. Bruken er fullstendig anonym.",
+    "tradition": {
+      "reformed": "Reformert",
+      "evangelisk": "Evangelisk",
+      "catholic": "Katolsk",
+      "freeChurch": "Frikirke",
+      "literal": "Ordagrant"
+    }
   },
   "donate": {
     "badge": "Støtt din BibleBot",
@@ -291,7 +307,8 @@
     "errorConnection": "kunne ikke nås.",
     "errorNoStream": "Ingen strøm",
     "seniorMode": "Senior-modus (større skrift)",
-    "loginHint": "Logg på for å beholde samtaler på tvers av enheter"
+    "loginHint": "Logg på for å beholde samtaler på tvers av enheter",
+    "previousChats": "{{count}} tidligere samtaler"
   },
   "install": {
     "title": "Installer BibleBot",
@@ -504,7 +521,8 @@
     "prayerwall": {
       "desc": "Del bønneemner og be for hverandre",
       "title": "Bønnevegg"
-    }
+    },
+    "showMore": "mer"
   },
   "lifeWheel": {
     "title": "Ditt livshjul",
@@ -860,7 +878,9 @@
     "patronage": "Anbefalt av"
   },
   "auth": {
-    "apple": "Logg inn med Apple"
+    "apple": "Logg inn med Apple",
+    "loginShort": "Logg inn",
+    "logout": "Logg ut"
   },
   "tts": {
     "male": "Mannlig stemme",
@@ -868,5 +888,61 @@
     "maleShort": "M",
     "femaleShort": "K",
     "voice": "Stemme"
+  },
+  "chatDemo": {
+    "sectionLabel": "Slik ser en samtale ut",
+    "userMsg": "Jeg føler meg alene. Hva sier Bibelen om det?",
+    "botMsg": "Du er ikke alene – selv når det føles slik. Salme 23 sier: «Herren er min hyrde, jeg mangler intet.» Dette betyr at Gud er nær deg, selv i de mørkeste øyeblikk. Vil du at vi skal utforske dette skriftstedet sammen?",
+    "cta": "Start din egen samtale →"
+  },
+  "suggest": {
+    "psalm23": "Salme 23 – Herren er min hyrde",
+    "joh316": "Johannes 3:16 – For så høyt har Gud elsket verden",
+    "rom828": "Romerne 8:28 – Alt virker sammen til det gode",
+    "mt1128": "Matteus 11:28 – Kom til meg, alle som strever",
+    "phil413": "Filipperne 4:13 – Alt makter jeg",
+    "jes4110": "Jesaja 41:10 – Frykt ikke, for jeg er med deg",
+    "1kor13": "1 Korinterbrev 13 – Størst av alt er kjærligheten",
+    "spr35": "Ordspråkene 3:5 – Stol på Herren",
+    "jos19": "Josva 1:9 – Vær sterk og modig",
+    "ps462": "Salme 46:1 – Gud er vår tilflukt og styrke",
+    "explainDetail": "Forklar {{ref}} i detalj"
+  },
+  "dailyVerses": {
+    "v0": "«Kom til meg, alle dere som strever og bærer tunge byrder, og jeg vil gi dere hvile.»",
+    "r0": "Matteus 11:28",
+    "v1": "«For jeg vet hvilke tanker jeg har med dere, sier Herren, fredstanker.»",
+    "r1": "Jeremia 29:11",
+    "v2": "«Frykt ikke, for jeg er med deg; vær ikke redd, for jeg er din Gud.»",
+    "r2": "Jesaja 41:10",
+    "v3": "«Herren er min hyrde; jeg mangler intet.»",
+    "r3": "Salme 23:1",
+    "v4": "«Kast all deres bekymring på ham, for han har omsorg for dere.»",
+    "r4": "1 Peter 5:7",
+    "v5": "«Jeg er verdens lys. Den som følger meg, skal ikke vandre i mørket.»",
+    "r5": "Johannes 8:12",
+    "v6": "«Vær sterk og modig! Vær ikke redd, for Herren din Gud er med deg.»",
+    "r6": "Josva 1:9",
+    "v7": "«Men de som venter på Herren, får ny styrke; de løfter vingene som ørner.»",
+    "r7": "Jesaja 40:31",
+    "v8": "«For hvor to eller tre er samlet i mitt navn, der er jeg midt iblant dem.»",
+    "r8": "Matteus 18:20",
+    "v9": "«Smak og se at Herren er god; salig er den som tar sin tilflukt til ham.»",
+    "r9": "Salme 34:8",
+    "v10": "«Han leger dem som har et knust hjerte, og forbinder deres sår.»",
+    "r10": "Salme 147:3",
+    "v11": "«Kjærligheten er tålmodig, kjærligheten er vennlig. Den tåler alt, tror alt, håper alt.»",
+    "r11": "1 Korinterbrev 13:4–7",
+    "v12": "«Gled dere i håpet, vær tålmodige i trengselen, hold ut i bønnen.»",
+    "r12": "Romerne 12:12",
+    "v13": "«Stol på Herren av hele ditt hjerte, og stol ikke på din egen forstand.»",
+    "r13": "Ordspråkene 3:5"
+  },
+  "meinBereichNav": "Mitt område",
+  "verseExplain": "Forklar dette bibelverset i detalj: {{quote}} ({{ref}}) – Hvem skrev dette? I hvilken kontekst? Hva betyr det for mitt liv i dag?",
+  "social": {
+    "conversations": "Samtaler",
+    "languages": "Språk",
+    "bibles": "Bibelske oversettelser"
   }
 }

@@ -26,7 +26,9 @@
     "deepDive": "Wat betekent dit voor mij?",
     "explore": "Volledige passage lezen",
     "alreadySubscribed": "U ontvangt de dagelijkse inspiratie",
-    "subscribeCta": "Deze inspiratie dagelijks ontvangen?"
+    "subscribeCta": "Deze inspiratie dagelijks ontvangen?",
+    "playAudio": "Luister",
+    "stopAudio": "Stop"
   },
   "features": {
     "sectionTitle": "Hoe BibleBot je begeleidt",
@@ -157,7 +159,12 @@
     "toastPermDeniedDesc": "Sta meldingen toe in je browserinstellingen.",
     "toastError": "Fout",
     "toastErrorDesc": "Probeer het later opnieuw.",
-    "subscribeButton": "Inspo abonneren"
+    "subscribeButton": "Inspo abonneren",
+    "manage": "Abonnement beheren",
+    "switchChannel": "Kanaal wijzigen:",
+    "unsubscribe": "Abonnement opzeggen",
+    "unsubscribedTitle": "Afgezegd",
+    "unsubscribedDesc": "Je ontvangt geen dagelijkse inspiratie meer."
   },
   "faq": {
     "badge": "FAQ",
@@ -206,7 +213,14 @@
     "q8": "Wie zit achter BibleBot en hoe wordt het gefinancierd?",
     "q8Answer": "BibleBot is een privé, niet-commercieel project. Het wordt op vrijwillige basis gerund en uitsluitend gefinancierd door vrijwillige donaties. Er is geen reclame, geen dataverkoop en geen betaalde functies.",
     "q9": "Hoe gaat BibleBot om met mijn gegevens?",
-    "q9Answer": "BibleBot slaat geen persoonlijke gegevens en geen chatgeschiedenissen op. Elk gesprek is anoniem. Er is geen login, geen tracking en geen gegevensdeling met derden."
+    "q9Answer": "BibleBot slaat geen persoonlijke gegevens en geen chatgeschiedenissen op. Elk gesprek is anoniem. Er is geen login, geen tracking en geen gegevensdeling met derden.",
+    "tradition": {
+      "reformed": "Gereformeerd",
+      "evangelical": "Evangelisch",
+      "catholic": "Katholiek",
+      "freeChurch": "Vrije Kerk",
+      "literal": "Woord-voor-woord"
+    }
   },
   "donate": {
     "badge": "Steun BibleBot",
@@ -293,7 +307,8 @@
     "seniorMode": "Senior mode (larger text)",
     "teaserCta": "Nu schrijven →",
     "namePlaceholder": "bijv. Eli, Miriam…",
-    "loginHint": "Meld u aan om gesprekken op alle apparaten te behouden"
+    "loginHint": "Meld u aan om gesprekken op alle apparaten te behouden",
+    "previousChats": "{{count}} eerdere gesprekken"
   },
   "install": {
     "title": "BibleBot installeren",
@@ -544,7 +559,8 @@
     "prayerwall": {
       "desc": "Deel gebedsverzoeken & bid voor elkaar",
       "title": "Gebedsmuur"
-    }
+    },
+    "showMore": "meer"
   },
   "lifeWheel": {
     "title": "Je Levenswiel",
@@ -878,5 +894,55 @@
     "conversations": "Gesprekken",
     "languages": "Talen",
     "bibles": "Bijbelvertalingen"
-  }
+  },
+  "chatDemo": {
+    "sectionLabel": "Zo ziet een gesprek eruit",
+    "userMsg": "Ik voel me alleen. Wat zegt de Bijbel daarover?",
+    "botMsg": "Je bent niet alleen – zelfs als het zo voelt. Psalm 23 zegt: 'De Heer is mijn herder, het ontbreekt mij aan niets.' Dit betekent dat God dicht bij je is, zelfs in de donkerste momenten. Zou je willen dat we deze passage samen verkennen?",
+    "cta": "Start je eigen gesprek →"
+  },
+  "suggest": {
+    "psalm23": "Psalm 23 – De Heer is mijn herder",
+    "joh316": "Johannes 3:16 – Want zo lief heeft God de wereld gehad",
+    "rom828": "Romeinen 8:28 – Alle dingen werken mee ten goede",
+    "mt1128": "Mattheüs 11:28 – Kom naar Mij toe, allen die vermoeid en belast zijn",
+    "phil413": "Filippenzen 4:13 – Ik vermag alle dingen",
+    "jes4110": "Jesaja 41:10 – Vrees niet, want Ik ben met u",
+    "1kor13": "1 Korinthe 13 – De grootste is de liefde",
+    "spr35": "Spreuken 3:5 – Vertrouw op de Heer",
+    "jos19": "Jozua 1:9 – Wees sterk en moedig",
+    "ps462": "Psalm 46:1 – God is onze toevlucht en sterkte",
+    "explainDetail": "Leg {{ref}} in detail uit"
+  },
+  "dailyVerses": {
+    "v0": "\"Kom naar Mij toe, allen die vermoeid en belast zijn, en Ik zal u rust geven.\"",
+    "r0": "Mattheüs 11:28",
+    "v1": "\"Want Ik weet welke gedachten Ik over u koester, spreekt de Heer, gedachten van vrede.\"",
+    "r1": "Jeremia 29:11",
+    "v2": "\"Vrees niet, want Ik ben met u; wees niet bevreesd, want Ik ben uw God.\"",
+    "r2": "Jesaja 41:10",
+    "v3": "\"De Heer is mijn herder; het ontbreekt mij aan niets.\"",
+    "r3": "Psalm 23:1",
+    "v4": "\"Werp al uw zorgen op Hem, want Hij zorgt voor u.\"",
+    "r4": "1 Petrus 5:7",
+    "v5": "\"Ik ben het licht der wereld. Wie Mij volgt, zal beslist niet in de duisternis wandelen.\"",
+    "r5": "Johannes 8:12",
+    "v6": "\"Wees sterk en moedig! Wees niet bevreesd, want de Heer, uw God, is met u.\"",
+    "r6": "Jozua 1:9",
+    "v7": "\"Maar wie de Heer verwachten, zullen hun kracht vernieuwen; zij zullen opvaren met vleugels als arenden.\"",
+    "r7": "Jesaja 40:31",
+    "v8": "\"Want waar twee of drie in Mijn Naam bijeengekomen zijn, daar ben Ik in hun midden.\"",
+    "r8": "Mattheüs 18:20",
+    "v9": "\"Proef en zie dat de Heer goed is; welzalig de man die tot Hem de toevlucht neemt.\"",
+    "r9": "Psalm 34:8",
+    "v10": "\"Hij geneest de gebrokenen van hart en verbindt hun wonden.\"",
+    "r10": "Psalm 147:3",
+    "v11": "\"De liefde is geduldig, de liefde is vriendelijk. Zij verdraagt alle dingen, gelooft alle dingen, hoopt alle dingen.\"",
+    "r11": "1 Korinthe 13:4–7",
+    "v12": "\"Verblijd u in de hoop, wees geduldig in de verdrukking, volhard in het gebed.\"",
+    "r12": "Romeinen 12:12",
+    "v13": "\"Vertrouw op de Heer met heel je hart en steun niet op je eigen inzicht.\"",
+    "r13": "Spreuken 3:5"
+  },
+  "verseExplain": "Leg dit Bijbelvers in detail uit: {{quote}} ({{ref}}) – Wie heeft dit geschreven? In welke context? Wat betekent het voor mijn leven vandaag?"
 }

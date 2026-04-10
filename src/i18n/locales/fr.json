@@ -26,7 +26,9 @@
     "deepDive": "Qu'est-ce que ça signifie pour moi ?",
     "explore": "Lire le passage complet",
     "alreadySubscribed": "Tu reçois l'inspiration quotidienne",
-    "subscribeCta": "Recevoir cette inspiration quotidiennement ?"
+    "subscribeCta": "Recevoir cette inspiration quotidiennement ?",
+    "playAudio": "Écouter",
+    "stopAudio": "Arrêter"
   },
   "features": {
     "sectionTitle": "Comment BibleBot vous accompagne",
@@ -157,7 +159,12 @@
     "toastPermDeniedDesc": "Veuillez autoriser les notifications dans les paramètres de votre navigateur.",
     "toastError": "Erreur",
     "toastErrorDesc": "Veuillez réessayer plus tard.",
-    "subscribeButton": "S'abonner à l'Inspo"
+    "subscribeButton": "S'abonner à l'Inspo",
+    "manage": "Gérer l'abonnement",
+    "switchChannel": "Changer de canal :",
+    "unsubscribe": "Se désabonner",
+    "unsubscribedTitle": "Désabonné",
+    "unsubscribedDesc": "Vous ne recevrez plus d'inspiration quotidienne."
   },
   "faq": {
     "badge": "FAQ",
@@ -206,7 +213,14 @@
     "q8": "Qui est derrière BibleBot et comment est-il financé ?",
     "q8Answer": "BibleBot.Life est un projet privé et non commercial. Il est géré bénévolement et financé exclusivement par des dons volontaires. Il n'y a pas de publicité, pas de vente de données et pas de fonctionnalités payantes. Tous les dons couvrent directement les coûts d'exploitation (infrastructure, hébergement, développement).",
     "q9": "Comment BibleBot gère-t-il mes données ?",
-    "q9Answer": "BibleBot ne stocke aucune donnée personnelle ni historique de chat. Chaque conversation est anonyme. Il n'y a pas de login, pas de suivi et pas de partage de données avec des tiers. L'utilisation est entièrement anonyme."
+    "q9Answer": "BibleBot ne stocke aucune donnée personnelle ni historique de chat. Chaque conversation est anonyme. Il n'y a pas de login, pas de suivi et pas de partage de données avec des tiers. L'utilisation est entièrement anonyme.",
+    "tradition": {
+      "reformed": "Réformé",
+      "evangelical": "Évangélique",
+      "catholic": "Catholique",
+      "freeChurch": "Église libre",
+      "literal": "Mot à mot"
+    }
   },
   "donate": {
     "badge": "Soutenir BibleBot",
@@ -278,7 +292,8 @@
     "seniorMode": "Mode senior (texte agrandi)",
     "teaserCta": "Écrire maintenant →",
     "namePlaceholder": "p.ex. Éli, Miriam…",
-    "loginHint": "Connecte-toi pour garder tes conversations sur tous tes appareils"
+    "loginHint": "Connecte-toi pour garder tes conversations sur tous tes appareils",
+    "previousChats": "{{count}} conversations précédentes"
   },
   "install": {
     "title": "Installer BibleBot",
@@ -509,7 +524,8 @@
     "prayerwall": {
       "desc": "Partage tes requêtes de prière et prie les uns pour les autres",
       "title": "Mur de Prière"
-    }
+    },
+    "showMore": "plus"
   },
   "lifeWheel": {
     "title": "Ta roue de la vie",
@@ -884,5 +900,49 @@
     "userMsg": "Je me sens seul. Que dit la Bible à ce sujet ?",
     "botMsg": "Tu n'es pas seul – même quand tu le ressens. Le Psaume 23 dit : « L'Éternel est mon berger, je ne manquerai de rien. » Cela signifie que Dieu est proche de toi, même dans les moments les plus sombres. Veux-tu qu'on explore ce passage ensemble ?",
     "cta": "Commencer votre propre conversation →"
-  }
+  },
+  "suggest": {
+    "psalm23": "Psaume 23 – L'Éternel est mon berger",
+    "joh316": "Jean 3:16 – Car Dieu a tant aimé le monde",
+    "rom828": "Romains 8:28 – Toutes choses concourent au bien",
+    "mt1128": "Matthieu 11:28 – Venez à moi, vous tous qui êtes fatigués",
+    "phil413": "Philippiens 4:13 – Je puis tout par celui qui me fortifie",
+    "jes4110": "Ésaïe 41:10 – Ne crains rien, car je suis avec toi",
+    "1kor13": "1 Corinthiens 13 – La plus grande est l'amour",
+    "spr35": "Proverbes 3:5 – Confie-toi en l'Éternel",
+    "jos19": "Josué 1:9 – Sois fort et courageux",
+    "ps462": "Psaume 46:1 – Dieu est notre refuge et notre force",
+    "explainDetail": "Explique {{ref}} en détail"
+  },
+  "dailyVerses": {
+    "v0": "« Venez à moi, vous tous qui êtes fatigués et chargés, et je vous donnerai du repos. »",
+    "r0": "Matthieu 11:28",
+    "v1": "« Car je connais les projets que j'ai formés sur vous, dit l'Éternel, projets de paix. »",
+    "r1": "Jérémie 29:11",
+    "v2": "« Ne crains rien, car je suis avec toi; ne sois pas effrayé, car je suis ton Dieu. »",
+    "r2": "Ésaïe 41:10",
+    "v3": "« L'Éternel est mon berger; je ne manquerai de rien. »",
+    "r3": "Psaume 23:1",
+    "v4": "« Déchargez-vous sur lui de tous vos soucis, car lui-même prend soin de vous. »",
+    "r4": "1 Pierre 5:7",
+    "v5": "« Je suis la lumière du monde. Celui qui me suit ne marchera point dans les ténèbres. »",
+    "r5": "Jean 8:12",
+    "v6": "« Fortifie-toi et prends courage! Ne crains point, car l'Éternel, ton Dieu, est avec toi. »",
+    "r6": "Josué 1:9",
+    "v7": "« Mais ceux qui se confient en l'Éternel renouvellent leur force; ils prennent leur vol comme les aigles. »",
+    "r7": "Ésaïe 40:31",
+    "v8": "« Car là où deux ou trois sont assemblés en mon nom, je suis au milieu d'eux. »",
+    "r8": "Matthieu 18:20",
+    "v9": "« Goûtez et voyez que l'Éternel est bon! Heureux l'homme qui se réfugie en lui! »",
+    "r9": "Psaume 34:8",
+    "v10": "« Il guérit ceux qui ont le cœur brisé, et il panse leurs blessures. »",
+    "r10": "Psaume 147:3",
+    "v11": "« L'amour est patient, l'amour est doux. Il supporte tout, croit tout, espère tout. »",
+    "r11": "1 Corinthiens 13:4–7",
+    "v12": "« Réjouissez-vous dans l'espérance, soyez patients dans l'affliction, persévérez dans la prière. »",
+    "r12": "Romains 12:12",
+    "v13": "« Confie-toi en l'Éternel de tout ton cœur, et ne t'appuie pas sur ta sagesse. »",
+    "r13": "Proverbes 3:5"
+  },
+  "verseExplain": "Explique ce verset biblique en détail : {{quote}} ({{ref}}) – Qui l'a écrit ? Dans quel contexte ? Qu'est-ce que cela signifie pour ma vie aujourd'hui ?"
 }

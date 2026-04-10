@@ -1,6 +1,8 @@
 {
   "nav": {
-    "startNow": "Jetzt starten"
+    "startNow": "Jetzt starten",
+    "prayerWall": "Bønnevæg",
+    "bibleQuiz": "Bibelsk quiz"
   },
   "loader": "Wird geladen…",
   "hero": {
@@ -24,7 +26,9 @@
     "deepDive": "Was bedeutet das für mich?",
     "explore": "Ganzen Abschnitt lesen",
     "alreadySubscribed": "Du modtager den daglige inspiration",
-    "subscribeCta": "Modtag denne inspiration dagligt?"
+    "subscribeCta": "Modtag denne inspiration dagligt?",
+    "playAudio": "Lyt",
+    "stopAudio": "Stop"
   },
   "features": {
     "sectionTitle": "Wie dein BibleBot dich begleitet",
@@ -155,7 +159,12 @@
     "toastPermDeniedDesc": "Bitte erlaube Benachrichtigungen in deinen Browser-Einstellungen.",
     "toastError": "Fehler",
     "toastErrorDesc": "Bitte versuche es später erneut.",
-    "subscribeButton": "Abonner på Inspo"
+    "subscribeButton": "Abonner på Inspo",
+    "manage": "Administrer abonnement",
+    "switchChannel": "Skift kanal:",
+    "unsubscribe": "Afmeld abonnement",
+    "unsubscribedTitle": "Afmeldt",
+    "unsubscribedDesc": "Du modtager ikke længere daglig inspiration."
   },
   "faq": {
     "badge": "Häufige Fragen",
@@ -204,7 +213,14 @@
     "q8": "Wer steht hinter deinem BibleBot und wie wird es finanziert?",
     "q8Answer": "BibleBot.Life ist ein privates, nicht-kommerzielles Projekt. Es wird ehrenamtlich betrieben und finanziert sich ausschliesslich durch freiwillige Spenden. Es gibt keine Werbung, keine Datenverkäufe und keine kostenpflichtigen Features. Alle Spenden fliessen direkt in die Deckung der laufenden Kosten (Infrastruktur, Hosting, Entwicklung). Da BibleBot als privates Projekt läuft, sind Spenden nicht steuerabzugsfähig.",
     "q9": "Wie geht dein BibleBot mit meinen Daten um?",
-    "q9Answer": "Dein BibleBot speichert keine persönlichen Daten und keine Chatverläufe. Jedes Gespräch ist anonym. Es gibt kein Login, kein Tracking und keine Weitergabe von Daten an Dritte. Die Nutzung ist vollständig anonym."
+    "q9Answer": "Dein BibleBot speichert keine persönlichen Daten und keine Chatverläufe. Jedes Gespräch ist anonym. Es gibt kein Login, kein Tracking und keine Weitergabe von Daten an Dritte. Die Nutzung ist vollständig anonym.",
+    "tradition": {
+      "reformed": "Reformert",
+      "evangelical": "Evangelisk",
+      "catholic": "Katolsk",
+      "freeChurch": "Frikirke",
+      "literal": "Ordret"
+    }
   },
   "donate": {
     "badge": "Unterstütze deinen BibleBot",
@@ -291,7 +307,8 @@
     "errorConnection": "konnte nicht erreicht werden.",
     "errorNoStream": "Kein Stream",
     "seniorMode": "Senioren-Modus (grössere Schrift)",
-    "loginHint": "Log ind for at bevare samtaler på tværs af enheder"
+    "loginHint": "Log ind for at bevare samtaler på tværs af enheder",
+    "previousChats": "{{count}} tidligere samtaler"
   },
   "install": {
     "title": "BibleBot installieren",
@@ -504,7 +521,8 @@
     "prayerwall": {
       "desc": "Del bønneemner & bed for hinanden",
       "title": "Bønnevæg"
-    }
+    },
+    "showMore": "mere"
   },
   "lifeWheel": {
     "title": "Dein Lebensrad",
@@ -860,7 +878,9 @@
     "patronage": "Anbefalet af"
   },
   "auth": {
-    "apple": "Log ind med Apple"
+    "apple": "Log ind med Apple",
+    "loginShort": "Log ind",
+    "logout": "Log ud"
   },
   "tts": {
     "male": "Mandlig stemme",
@@ -868,5 +888,61 @@
     "maleShort": "M",
     "femaleShort": "K",
     "voice": "Stemme"
+  },
+  "chatDemo": {
+    "sectionLabel": "Sådan ser en samtale ud",
+    "userMsg": "Jeg føler mig alene. Hvad siger Bibelen om det?",
+    "botMsg": "Du er ikke alene – selv når det føles sådan. Salme 23 siger: 'Herren er min hyrde, jeg skal intet mangle.' Det betyder, at Gud er nær dig, selv i de mørkeste øjeblikke. Vil du have, at vi udforsker dette skriftsted sammen?",
+    "cta": "Start din egen samtale →"
+  },
+  "suggest": {
+    "psalm23": "Salme 23 – Herren er min hyrde",
+    "joh316": "Johannes 3:16 – For således elskede Gud verden",
+    "rom828": "Romerne 8:28 – Alt virker sammen til det gode",
+    "mt1128": "Matthæus 11:28 – Kom til mig, alle I, som er trætte",
+    "phil413": "Filipperne 4:13 – Jeg formår alt",
+    "jes4110": "Esajas 41:10 – Frygt ikke, for jeg er med dig",
+    "1kor13": "1 Korinther 13 – Størst af alt er kærligheden",
+    "spr35": "Ordsprogene 3:5 – Stol på Herren",
+    "jos19": "Josva 1:9 – Vær stærk og modig",
+    "ps462": "Salme 46:1 – Gud er vores tilflugt og styrke",
+    "explainDetail": "Forklar {{ref}} i detaljer"
+  },
+  "dailyVerses": {
+    "v0": "\"Kom til mig, alle I, som er trætte og tyngede, og jeg vil give jer hvile.\"",
+    "r0": "Matthæus 11:28",
+    "v1": "\"For jeg kender de planer, jeg har med jer, siger Herren, planer om fred.\"",
+    "r1": "Jeremias 29:11",
+    "v2": "\"Frygt ikke, for jeg er med dig; vær ikke forfærdet, for jeg er din Gud.\"",
+    "r2": "Esajas 41:10",
+    "v3": "\"Herren er min hyrde; jeg skal intet mangle.\"",
+    "r3": "Salme 23:1",
+    "v4": "\"Kast al jeres bekymring på ham, for han har omsorg for jer.\"",
+    "r4": "1 Peter 5:7",
+    "v5": "\"Jeg er verdens lys. Den, der følger mig, skal ikke vandre i mørke.\"",
+    "r5": "Johannes 8:12",
+    "v6": "\"Vær stærk og modig! Vær ikke bange, for Herren din Gud er med dig.\"",
+    "r6": "Josva 1:9",
+    "v7": "\"Men de, der håber på Herren, får ny styrke; de løfter vinger som ørne.\"",
+    "r7": "Esajas 40:31",
+    "v8": "\"For hvor to eller tre er forsamlet i mit navn, dér er jeg midt iblandt dem.\"",
+    "r8": "Matthæus 18:20",
+    "v9": "\"Smag og se, at Herren er god; salig er den, der tager sin tilflugt til ham.\"",
+    "r9": "Salme 34:8",
+    "v10": "\"Han helbreder dem, der har et knust hjerte, og forbinder deres sår.\"",
+    "r10": "Salme 147:3",
+    "v11": "\"Kærligheden er tålmodig, kærligheden er venlig. Den tåler alt, tror alt, håber alt.\"",
+    "r11": "1 Korinther 13:4–7",
+    "v12": "\"Vær glade i håbet, tålmodige i trængslen, trofaste i bønnen.\"",
+    "r12": "Romerne 12:12",
+    "v13": "\"Stol på Herren af hele dit hjerte, og støt dig ikke til din egen forstand.\"",
+    "r13": "Ordsprogene 3:5"
+  },
+  "meinBereichNav": "Mit område",
+  "verseExplain": "Forklar dette bibelvers i detaljer: {{quote}} ({{ref}}) – Hvem skrev dette? I hvilken sammenhæng? Hvad betyder det for mit liv i dag?",
+  "social": {
+    "conversations": "Samtaler",
+    "languages": "Sprog",
+    "bibles": "Bibeloversættelser"
   }
 }

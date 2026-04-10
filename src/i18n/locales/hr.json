@@ -1,6 +1,8 @@
 {
   "nav": {
-    "startNow": "Započnite sada"
+    "startNow": "Započnite sada",
+    "prayerWall": "Zid molitve",
+    "bibleQuiz": "Biblijski kviz"
   },
   "loader": "Učitavanje…",
   "hero": {
@@ -24,7 +26,9 @@
     "deepDive": "Što to znači za mene?",
     "explore": "Pročitajte cijeli odlomak",
     "alreadySubscribed": "Već primate dnevnu inspiraciju",
-    "subscribeCta": "Želite li primati ovu inspiraciju svakodnevno?"
+    "subscribeCta": "Želite li primati ovu inspiraciju svakodnevno?",
+    "playAudio": "Slušaj",
+    "stopAudio": "Zaustavi"
   },
   "features": {
     "sectionTitle": "Kako vas vaš BibleBot prati",
@@ -155,7 +159,12 @@
     "toastPermDeniedDesc": "Molimo dopustite obavijesti u postavkama preglednika.",
     "toastError": "Greška",
     "toastErrorDesc": "Molimo pokušajte ponovno kasnije.",
-    "subscribeButton": "Pretplati se na inspiraciju"
+    "subscribeButton": "Pretplati se na inspiraciju",
+    "manage": "Upravljaj pretplatom",
+    "switchChannel": "Promijeni kanal:",
+    "unsubscribe": "Odjavi se",
+    "unsubscribedTitle": "Odjavljeni ste",
+    "unsubscribedDesc": "Više nećete primati dnevnu inspiraciju."
   },
   "faq": {
     "badge": "Česta pitanja",
@@ -204,7 +213,14 @@
     "q8": "Tko stoji iza vašeg BibleBota i kako se financira?",
     "q8Answer": "BibleBot.Life je privatni, nekomercijalni projekt. Vodi se volonterski i financira se isključivo dobrovoljnim donacijama. Nema oglašavanja, prodaje podataka i plaćenih značajki. Sve donacije idu izravno na pokrivanje tekućih troškova (infrastruktura, hosting, razvoj). Budući da BibleBot djeluje kao privatni projekt, donacije nisu porezno priznate.",
     "q9": "Kako vaš BibleBot postupa s mojim podacima?",
-    "q9Answer": "Vaš BibleBot ne pohranjuje osobne podatke niti povijest razgovora. Svaki razgovor je anoniman. Nema prijave, praćenja i prosljeđivanja podataka trećim stranama. Korištenje je potpuno anonimno."
+    "q9Answer": "Vaš BibleBot ne pohranjuje osobne podatke niti povijest razgovora. Svaki razgovor je anoniman. Nema prijave, praćenja i prosljeđivanja podataka trećim stranama. Korištenje je potpuno anonimno.",
+    "tradition": {
+      "reformed": "Reformirani",
+      "evangelistički": "Evangelistički",
+      "katolički": "Katolički",
+      "freeChurch": "Slobodna Crkva",
+      "literal": "Doslovno"
+    }
   },
   "donate": {
     "badge": "Podržite svog BibleBota",
@@ -291,7 +307,8 @@
     "errorConnection": "nije moguće dohvatiti.",
     "errorNoStream": "Nema streama",
     "seniorMode": "Način za starije (veći font)",
-    "loginHint": "Prijavite se kako biste sačuvali razgovore na svim uređajima"
+    "loginHint": "Prijavite se kako biste sačuvali razgovore na svim uređajima",
+    "previousChats": "{{count}} prethodnih razgovora"
   },
   "install": {
     "title": "Instalirajte BibleBot",
@@ -504,7 +521,8 @@
     "prayerwall": {
       "desc": "Podijelite molitvene namjere i molite jedni za druge",
       "title": "Zid molitve"
-    }
+    },
+    "showMore": "više"
   },
   "lifeWheel": {
     "title": "Vaše kolo života",
@@ -860,7 +878,9 @@
     "patronage": "Preporučuje"
   },
   "auth": {
-    "apple": "Prijava putem Applea"
+    "apple": "Prijava putem Applea",
+    "loginShort": "Prijavi se",
+    "logout": "Odjavi se"
   },
   "tts": {
     "male": "Muški glas",
@@ -868,5 +888,61 @@
     "maleShort": "M",
     "femaleShort": "Ž",
     "voice": "Glas"
+  },
+  "chatDemo": {
+    "sectionLabel": "Evo kako izgleda razgovor",
+    "userMsg": "Osjećam se usamljeno. Što Biblija kaže o tome?",
+    "botMsg": "Nisi sam – čak i kad se tako osjećaš. Psalam 23 kaže: 'Gospodin je pastir moj, ništa mi neće nedostajati.' To znači da je Bog blizu tebe, čak i u najmračnijim trenucima. Želiš li da zajedno istražimo ovaj odlomak?",
+    "cta": "Započnite vlastiti razgovor →"
+  },
+  "suggest": {
+    "psalm23": "Psalam 23 – Gospodin je pastir moj",
+    "joh316": "Ivan 3:16 – Jer Bog je tako ljubio svijet",
+    "rom828": "Rimljanima 8:28 – Sve pridonosi dobru",
+    "mt1128": "Matej 11:28 – Dođite k meni svi umorni",
+    "phil413": "Filipljanima 4:13 – Sve mogu u Onome koji mi daje snagu",
+    "jes4110": "Izaija 41:10 – Ne boj se, jer ja sam s tobom",
+    "1kor13": "1 Korinćanima 13 – Najveća je ljubav",
+    "spr35": "Mudre izreke 3:5 – Uzdaj se u Gospodina",
+    "jos19": "Jošua 1:9 – Budi jak i hrabar",
+    "ps462": "Psalam 46:1 – Bog je naše utočište i snaga",
+    "explainDetail": "Objasni {{ref}} detaljno"
+  },
+  "dailyVerses": {
+    "v0": "\"Dođite k meni svi koji ste umorni i opterećeni, i ja ću vas odmoriti.\"",
+    "r0": "Matej 11:28",
+    "v1": "\"Jer ja znam planove koje imam za vas, govori Gospodin, planove mira.\"",
+    "r1": "Jeremija 29:11",
+    "v2": "\"Ne boj se, jer ja sam s tobom; ne plaši se, jer ja sam tvoj Bog.\"",
+    "r2": "Izaija 41:10",
+    "v3": "\"Gospodin je pastir moj; ništa mi neće nedostajati.\"",
+    "r3": "Psalam 23:1",
+    "v4": "\"Svu svoju brigu bacite na njega, jer se on brine za vas.\"",
+    "r4": "1 Petrova 5:7",
+    "v5": "\"Ja sam svjetlo svijeta. Tko mene slijedi, neće hodati u tami.\"",
+    "r5": "Ivan 8:12",
+    "v6": "\"Budi jak i hrabar! Ne boj se, jer Gospodin, tvoj Bog, je s tobom.\"",
+    "r6": "Jošua 1:9",
+    "v7": "\"Ali oni koji se nadaju u Gospodina obnovit će svoju snagu; uzletjet će na krilima kao orlovi.\"",
+    "r7": "Izaija 40:31",
+    "v8": "\"Jer gdje su dvojica ili trojica sabrana u moje ime, ondje sam ja među njima.\"",
+    "r8": "Matej 18:20",
+    "v9": "\"Kušajte i vidite da je Gospodin dobar; blagoslovljen je onaj koji se u njega utječe.\"",
+    "r9": "Psalam 34:8",
+    "v10": "\"On liječi slomljena srca i povija njihove rane.\"",
+    "r10": "Psalam 147:3",
+    "v11": "\"Ljubav je strpljiva, ljubav je dobrostiva. Sve podnosi, sve vjeruje, sve se nada.\"",
+    "r11": "1 Korinćanima 13:4–7",
+    "v12": "\"Budite radosni u nadi, strpljivi u nevolji, ustrajni u molitvi.\"",
+    "r12": "Rimljanima 12:12",
+    "v13": "\"Uzdaj se u Gospodina svim srcem svojim i ne oslanjaj se na vlastiti razum.\"",
+    "r13": "Mudre izreke 3:5"
+  },
+  "meinBereichNav": "Moje područje",
+  "verseExplain": "Objasni ovaj biblijski stih detaljno: {{quote}} ({{ref}}) – Tko je ovo napisao? U kojem kontekstu? Što to znači za moj život danas?",
+  "social": {
+    "conversations": "Razgovori",
+    "languages": "Jezici",
+    "bibles": "Biblijski prijevodi"
   }
 }

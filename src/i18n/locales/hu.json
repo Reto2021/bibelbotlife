@@ -1,6 +1,8 @@
 {
   "nav": {
-    "startNow": "Kezdje most"
+    "startNow": "Kezdje most",
+    "prayerWall": "Imádságfal",
+    "bibleQuiz": "Bibliai kvíz"
   },
   "loader": "Betöltés…",
   "hero": {
@@ -24,7 +26,9 @@
     "deepDive": "Mit jelent ez számomra?",
     "explore": "Olvassa el a teljes szakaszt",
     "alreadySubscribed": "Már kapod a napi inspirációt",
-    "subscribeCta": "Szeretnéd megkapni ezt az inspirációt naponta?"
+    "subscribeCta": "Szeretnéd megkapni ezt az inspirációt naponta?",
+    "playAudio": "Hallgat",
+    "stopAudio": "Leállít"
   },
   "features": {
     "sectionTitle": "Hogyan kísér el a BibleBot",
@@ -155,7 +159,12 @@
     "toastPermDeniedDesc": "Kérjük, engedélyezze az értesítéseket a böngésző beállításaiban.",
     "toastError": "Hiba",
     "toastErrorDesc": "Kérjük, próbálja meg később.",
-    "subscribeButton": "Feliratkozás Inspo-ra"
+    "subscribeButton": "Feliratkozás Inspo-ra",
+    "manage": "Előfizetés kezelése",
+    "switchChannel": "Csatorna váltása:",
+    "unsubscribe": "Leiratkozás",
+    "unsubscribedTitle": "Leiratkozva",
+    "unsubscribedDesc": "Nem fogsz több napi inspirációt kapni."
   },
   "faq": {
     "badge": "Gyakran Ismételt Kérdések",
@@ -204,7 +213,14 @@
     "q8": "Ki áll a BibleBot mögött, és hogyan finanszírozzák?",
     "q8Answer": "A BibleBot.Life egy magán, nem kereskedelmi projekt. Önkéntes alapon működik, és kizárólag önkéntes adományokból finanszírozza magát. Nincs reklám, nincs adatértékesítés és nincsenek fizetős funkciók. Minden adomány közvetlenül a működési költségek (infrastruktúra, tárhely, fejlesztés) fedezésére fordítódik. Mivel a BibleBot magánprojektként működik, az adományok nem vonhatók le az adóból.",
     "q9": "Hogyan kezeli a BibleBot az adataimat?",
-    "q9Answer": "A BibleBot nem tárol személyes adatokat és chat-előzményeket. Minden beszélgetés névtelen. Nincs bejelentkezés, nincs nyomon követés és nincs adatmegosztás harmadik felekkel. A használat teljesen névtelen."
+    "q9Answer": "A BibleBot nem tárol személyes adatokat és chat-előzményeket. Minden beszélgetés névtelen. Nincs bejelentkezés, nincs nyomon követés és nincs adatmegosztás harmadik felekkel. A használat teljesen névtelen.",
+    "tradition": {
+      "reformed": "Református",
+      "evangelical": "Evangélikus",
+      "catholic": "Katolikus",
+      "freeChurch": "Szabadegyház",
+      "literal": "Szó szerinti"
+    }
   },
   "donate": {
     "badge": "Támogassa a BibleBotot",
@@ -291,7 +307,8 @@
     "errorConnection": "nem érhető el.",
     "errorNoStream": "Nincs stream",
     "seniorMode": "Szenior mód (nagyobb betűméret)",
-    "loginHint": "Jelentkezz be, hogy beszélgetéseid minden eszközön megmaradjanak"
+    "loginHint": "Jelentkezz be, hogy beszélgetéseid minden eszközön megmaradjanak",
+    "previousChats": "{{count}} korábbi beszélgetés"
   },
   "install": {
     "title": "BibleBot telepítése",
@@ -504,7 +521,8 @@
     "prayerwall": {
       "desc": "Oszd meg imakéréseidet és imádkozzatok egymásért",
       "title": "Imádságfal"
-    }
+    },
+    "showMore": "több"
   },
   "lifeWheel": {
     "title": "Életkereke",
@@ -860,7 +878,9 @@
     "patronage": "Ajánlja"
   },
   "auth": {
-    "apple": "Bejelentkezés Apple-lel"
+    "apple": "Bejelentkezés Apple-lel",
+    "loginShort": "Bejelentkezés",
+    "logout": "Kijelentkezés"
   },
   "tts": {
     "male": "Férfi hang",
@@ -868,5 +888,61 @@
     "maleShort": "F",
     "femaleShort": "N",
     "voice": "Hang"
+  },
+  "chatDemo": {
+    "sectionLabel": "Így néz ki egy beszélgetés",
+    "userMsg": "Egyedül érzem magam. Mit mond erről a Biblia?",
+    "botMsg": "Nem vagy egyedül – még akkor sem, ha úgy érzed. A 23. zsoltár azt mondja: „Az Úr az én pásztorom, nem szűkölködöm.” Ez azt jelenti, hogy Isten közel van hozzád, még a legsötétebb pillanatokban is. Szeretnéd, ha együtt fedeznénk fel ezt a részt?",
+    "cta": "Kezdje el saját beszélgetését →"
+  },
+  "suggest": {
+    "psalm23": "Zsoltárok 23 – Az Úr az én pásztorom",
+    "joh316": "János 3:16 – Mert úgy szerette Isten a világot",
+    "rom828": "Róma 8:28 – Minden javunkra válik",
+    "mt1128": "Máté 11:28 – Jöjjetek hozzám mindnyájan, akik megfáradtatok",
+    "phil413": "Filippi 4:13 – Mindenre van erőm",
+    "jes4110": "Ézsaiás 41:10 – Ne félj, mert én veled vagyok",
+    "1kor13": "1 Korinthus 13 – A legnagyobb a szeretet",
+    "spr35": "Példabeszédek 3:5 – Bízz az Úrban",
+    "jos19": "Józsué 1:9 – Légy erős és bátor",
+    "ps462": "Zsoltárok 46:1 – Isten a mi menedékünk és erősségünk",
+    "explainDetail": "Magyarázza el részletesen a(z) {{ref}} részt"
+  },
+  "dailyVerses": {
+    "v0": "„Jöjjetek hozzám mindnyájan, akik megfáradtatok és meg vagytok terhelve, és én megnyugtatlak titeket.”",
+    "r0": "Máté 11:28",
+    "v1": "„Mert én tudom, milyen terveim vannak veletek – mondja az Úr –, békességet és nem romlást tervezek.”",
+    "r1": "Jeremiás 29:11",
+    "v2": "„Ne félj, mert én veled vagyok; ne csüggedj, mert én vagyok a te Istened.”",
+    "r2": "Ézsaiás 41:10",
+    "v3": "„Az Úr az én pásztorom; nem szűkölködöm.”",
+    "r3": "Zsoltárok 23:1",
+    "v4": "„Minden gondotokat őrá vessétek, mert ő gondot visel rátok.”",
+    "r4": "1 Péter 5:7",
+    "v5": "„Én vagyok a világ világossága. Aki engem követ, nem jár sötétségben.”",
+    "r5": "János 8:12",
+    "v6": "„Légy erős és bátor! Ne félj, mert az Úr, a te Istened veled van.”",
+    "r6": "Józsué 1:9",
+    "v7": "„De akik az Úrban bíznak, új erőre kapnak; szárnyra kelnek, mint a sasok.”",
+    "r7": "Ézsaiás 40:31",
+    "v8": "„Mert ahol ketten vagy hárman összegyűlnek az én nevemben, ott vagyok közöttük.”",
+    "r8": "Máté 18:20",
+    "v9": "„Kóstoljátok meg és lássátok, hogy jó az Úr; boldog az az ember, aki benne bízik.”",
+    "r9": "Zsoltárok 34:8",
+    "v10": "„Meggyógyítja a megtört szívűeket, és bekötözi sebeiket.”",
+    "r10": "Zsoltárok 147:3",
+    "v11": "„A szeretet türelmes, a szeretet jóságos. Mindent elvisel, mindent elhisz, mindent remél.”",
+    "r11": "1 Korinthus 13:4–7",
+    "v12": "„Örüljetek a reményben, legyetek türelmesek a szenvedésben, állhatatosak az imádságban.”",
+    "r12": "Róma 12:12",
+    "v13": "„Bízz az Úrban teljes szívedből, és ne a saját értelmedre támaszkodj.”",
+    "r13": "Példabeszédek 3:5"
+  },
+  "meinBereichNav": "Saját területem",
+  "verseExplain": "Magyarázza el részletesen ezt a bibliai verset: {{quote}} ({{ref}}) – Ki írta ezt? Milyen összefüggésben? Mit jelent ez az életemre nézve ma?",
+  "social": {
+    "conversations": "Beszélgetések",
+    "languages": "Nyelvek",
+    "bibles": "Bibliafordítások"
   }
 }

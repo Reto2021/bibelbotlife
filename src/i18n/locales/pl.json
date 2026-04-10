@@ -26,7 +26,9 @@
     "deepDive": "Co to dla mnie znaczy?",
     "explore": "Przeczytaj cały fragment",
     "alreadySubscribed": "Otrzymujesz codzienną inspirację",
-    "subscribeCta": "Czy chcesz otrzymywać tę inspirację codziennie?"
+    "subscribeCta": "Czy chcesz otrzymywać tę inspirację codziennie?",
+    "playAudio": "Słuchaj",
+    "stopAudio": "Zatrzymaj"
   },
   "features": {
     "sectionTitle": "Jak BibleBot Ci towarzyszy",
@@ -157,7 +159,12 @@
     "toastPermDeniedDesc": "Zezwól na powiadomienia w ustawieniach przeglądarki.",
     "toastError": "Błąd",
     "toastErrorDesc": "Spróbuj ponownie później.",
-    "subscribeButton": "Subskrybuj inspiracje"
+    "subscribeButton": "Subskrybuj inspiracje",
+    "manage": "Zarządzaj subskrypcją",
+    "switchChannel": "Zmień kanał:",
+    "unsubscribe": "Anuluj subskrypcję",
+    "unsubscribedTitle": "Anulowano subskrypcję",
+    "unsubscribedDesc": "Nie będziesz już otrzymywać codziennych inspiracji."
   },
   "faq": {
     "badge": "FAQ",
@@ -206,7 +213,14 @@
     "q8": "Kto stoi za BibleBot i jak jest finansowany?",
     "q8Answer": "BibleBot.Life to prywatny, niekomercyjny projekt. Jest prowadzony wolontaryjnie i finansowany wyłącznie z dobrowolnych darowizn. Bez reklam, bez sprzedaży danych, bez płatnych funkcji.",
     "q9": "Jak BibleBot obchodzi się z moimi danymi?",
-    "q9Answer": "BibleBot nie przechowuje danych osobowych ani historii czatów. Każda rozmowa jest anonimowa. Brak logowania, śledzenia i udostępniania danych stronom trzecim."
+    "q9Answer": "BibleBot nie przechowuje danych osobowych ani historii czatów. Każda rozmowa jest anonimowa. Brak logowania, śledzenia i udostępniania danych stronom trzecim.",
+    "tradition": {
+      "reformed": "Reformowany",
+      "evangelical": "Ewangelicki",
+      "catholic": "Katolicki",
+      "freeChurch": "Wolny Kościół",
+      "literal": "Dosłownie"
+    }
   },
   "donate": {
     "badge": "Wesprzyj BibleBot",
@@ -278,7 +292,8 @@
     "seniorMode": "Senior mode (larger text)",
     "teaserCta": "Pisz teraz →",
     "namePlaceholder": "np. Eli, Miriam…",
-    "loginHint": "Zaloguj się, aby zachować rozmowy na wszystkich urządzeniach"
+    "loginHint": "Zaloguj się, aby zachować rozmowy na wszystkich urządzeniach",
+    "previousChats": "{{count}} poprzednich rozmów"
   },
   "install": {
     "title": "Zainstaluj BibleBot",
@@ -509,7 +524,8 @@
     "prayerwall": {
       "desc": "Udostępniaj intencje modlitewne i módl się za siebie nawzajem",
       "title": "Ściana Modlitwy"
-    }
+    },
+    "showMore": "więcej"
   },
   "lifeWheel": {
     "title": "Twoje koło życia",
@@ -878,5 +894,55 @@
     "conversations": "Rozmowy",
     "languages": "Języki",
     "bibles": "Tłumaczenia Biblii"
-  }
+  },
+  "chatDemo": {
+    "sectionLabel": "Oto jak wygląda rozmowa",
+    "userMsg": "Czuję się samotny. Co Biblia mówi na ten temat?",
+    "botMsg": "Nie jesteś sam – nawet jeśli tak się czuje. Psalm 23 mówi: „Pan jest moim pasterzem, niczego mi nie zabraknie”. Oznacza to, że Bóg jest blisko ciebie, nawet w najciemniejszych chwilach. Czy chciałbyś, abyśmy razem zbadali ten fragment?",
+    "cta": "Rozpocznij własną rozmowę →"
+  },
+  "suggest": {
+    "psalm23": "Psalm 23 – Pan jest moim pasterzem",
+    "joh316": "Jana 3:16 – Albowiem tak Bóg umiłował świat",
+    "rom828": "Rzymian 8:28 – Wszystko współdziała dla dobra",
+    "mt1128": "Mateusza 11:28 – Przyjdźcie do mnie wszyscy, którzy utrudzeni i obciążeni jesteście",
+    "phil413": "Filipian 4:13 – Wszystko mogę w Tym, który mnie umacnia",
+    "jes4110": "Izajasza 41:10 – Nie bój się, bo Ja jestem z tobą",
+    "1kor13": "1 Koryntian 13 – Największa jest miłość",
+    "spr35": "Przysłów 3:5 – Zaufaj Panu",
+    "jos19": "Jozuego 1:9 – Bądź mocny i odważny",
+    "ps462": "Psalm 46:1 – Bóg jest naszą ucieczką i siłą",
+    "explainDetail": "Wyjaśnij {{ref}} szczegółowo"
+  },
+  "dailyVerses": {
+    "v0": "„Przyjdźcie do mnie wszyscy, którzy utrudzeni i obciążeni jesteście, a Ja wam dam ukojenie.”",
+    "r0": "Mateusza 11:28",
+    "v1": "„Bo Ja znam zamiary, jakie mam wobec was – oświadcza Pan – zamiary pokoju.”",
+    "r1": "Jeremiasza 29:11",
+    "v2": "„Nie bój się, bo Ja jestem z tobą; nie lękaj się, bo Ja jestem twoim Bogiem.”",
+    "r2": "Izajasza 41:10",
+    "v3": "„Pan jest moim pasterzem; niczego mi nie zabraknie.”",
+    "r3": "Psalm 23:1",
+    "v4": "„Wszelką troskę swoją złóżcie na Niego, gdyż On ma o was staranie.”",
+    "r4": "1 Piotra 5:7",
+    "v5": "„Ja jestem światłością świata. Kto idzie za Mną, nie będzie chodził w ciemności.”",
+    "r5": "Jana 8:12",
+    "v6": "„Bądź mocny i odważny! Nie bój się, bo Pan, twój Bóg, jest z tobą.”",
+    "r6": "Jozuego 1:9",
+    "v7": "„Lecz ci, którzy ufają Panu, odzyskają siły; wzbiją się na skrzydłach jak orły.”",
+    "r7": "Izajasza 40:31",
+    "v8": "„Bo gdzie dwaj lub trzej zgromadzeni są w imię moje, tam Ja jestem pośród nich.”",
+    "r8": "Mateusza 18:20",
+    "v9": "„Skosztujcie i zobaczcie, jak dobry jest Pan; błogosławiony człowiek, który w Nim szuka schronienia.”",
+    "r9": "Psalm 34:8",
+    "v10": "„Uzdrowił złamanych na duchu i opatrzył ich rany.”",
+    "r10": "Psalm 147:3",
+    "v11": "„Miłość jest cierpliwa, miłość jest łaskawa. Wszystko znosi, wszystkiemu wierzy, we wszystkim pokłada nadzieję.”",
+    "r11": "1 Koryntian 13:4–7",
+    "v12": "„Radujcie się nadzieją, bądźcie cierpliwi w ucisku, wytrwali w modlitwie.”",
+    "r12": "Rzymian 12:12",
+    "v13": "„Zaufaj Panu całym swoim sercem i nie polegaj na własnym rozumie.”",
+    "r13": "Przysłów 3:5"
+  },
+  "verseExplain": "Wyjaśnij szczegółowo ten werset biblijny: {{quote}} ({{ref}}) – Kto to napisał? W jakim kontekście? Co to oznacza dla mojego życia dzisiaj?"
 }

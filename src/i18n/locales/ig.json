@@ -1,6 +1,8 @@
 {
   "nav": {
-    "startNow": "Bidozie Ugbu a"
+    "startNow": "Bidozie Ugbu a",
+    "prayerWall": "Mgbidi Ekpere",
+    "bibleQuiz": "Ajụjụ Baịbụlụ"
   },
   "loader": "Na-ebunata…",
   "hero": {
@@ -24,7 +26,9 @@
     "deepDive": "Gịnị ka nke a pụtara nye m?",
     "explore": "Gụọ akụkụ niile",
     "alreadySubscribed": "Ị na-enweta mkpali kwa ụbọchị",
-    "subscribeCta": "Ị chọrọ ka mkpali a na-erute gị kwa ụbọchị?"
+    "subscribeCta": "Ị chọrọ ka mkpali a na-erute gị kwa ụbọchị?",
+    "playAudio": "Gee ntị",
+    "stopAudio": "Kwụsị"
   },
   "features": {
     "sectionTitle": "Otu BibleBot gị si akwado gị",
@@ -155,7 +159,12 @@
     "toastPermDeniedDesc": "Biko kwe ka ọkwa na ntọala ihe nchọgharị gị.",
     "toastError": "Njehie",
     "toastErrorDesc": "Biko gbalịa ọzọ ma emechaa.",
-    "subscribeButton": "Debanye aha maka Inspo"
+    "subscribeButton": "Debanye aha maka Inspo",
+    "manage": "Jikwaa ndenye aha",
+    "switchChannel": "Gbanwee ọwa:",
+    "unsubscribe": "Wepụ ndenye aha",
+    "unsubscribedTitle": "Ewepụla ndenye aha",
+    "unsubscribedDesc": "Ị gaghịzi enweta mkpali kwa ụbọchị."
   },
   "faq": {
     "badge": "Ajụjụ a na-ajụkarị",
@@ -204,7 +213,14 @@
     "q8": "Ònye nọ n'azụ BibleBot gị na olee otu e si enweta ego?",
     "q8Answer": "BibleBot.Life bụ ọrụ nkeonwe, na-abụghị nke azụmahịa. A na-arụ ya n'afọ ofufo ma na-enweta ego naanị site na onyinye afọ ofufo. Enweghị mgbasa ozi, enweghị ire data na enweghị atụmatụ akwụ ụgwọ. Onyinye niile na-aga ozugbo iji kpuchie ụgwọ ọrụ (akụrụngwa, nnabata, mmepe). Ebe ọ bụ na BibleBot na-agba ọsọ dị ka ọrụ nkeonwe, onyinye anaghị ewepụ ụtụ isi.",
     "q9": "Kedu ka BibleBot gị si eji data m?",
-    "q9Answer": "BibleBot gị anaghị echekwa data nkeonwe ma ọ bụ akụkọ mkparịta ụka. Mkparịta ụka ọ bụla bụ nke amaghị aha. Enweghị nbanye, enweghị nyocha na enweghị nkesa data na ndị ọzọ. Ojiji ahụ bụ nke amaghị aha kpamkpam."
+    "q9Answer": "BibleBot gị anaghị echekwa data nkeonwe ma ọ bụ akụkọ mkparịta ụka. Mkparịta ụka ọ bụla bụ nke amaghị aha. Enweghị nbanye, enweghị nyocha na enweghị nkesa data na ndị ọzọ. Ojiji ahụ bụ nke amaghị aha kpamkpam.",
+    "tradition": {
+      "reformed": "Ndozigharị",
+      "evangelical": "Oziọma",
+      "catholic": "Katọlik",
+      "freeChurch": "Ụka efu",
+      "literal": "Okwu-na-okwu"
+    }
   },
   "donate": {
     "badge": "Kwado BibleBot gị",
@@ -291,7 +307,8 @@
     "errorConnection": "enweghị ike iru.",
     "errorNoStream": "Enweghị iyi",
     "seniorMode": "Ụdị agadi (nnukwu mkpụrụedemede)",
-    "loginHint": "Banye iji dobe mkparịta ụka n'ofe ngwaọrụ niile"
+    "loginHint": "Banye iji dobe mkparịta ụka n'ofe ngwaọrụ niile",
+    "previousChats": "Mkparịta ụka {{count}} gara aga"
   },
   "install": {
     "title": "Wụnye BibleBot",
@@ -504,7 +521,8 @@
     "prayerwall": {
       "desc": "Kekọrịta arịrịọ ekpere & kpee ekpere maka ibe gị",
       "title": "Mgbidi Ekpere"
-    }
+    },
+    "showMore": "ọzọ"
   },
   "lifeWheel": {
     "title": "Ụkwụ ndụ gị",
@@ -860,7 +878,9 @@
     "patronage": "Ndị kwadoro"
   },
   "auth": {
-    "apple": "Banye site na Apple"
+    "apple": "Banye site na Apple",
+    "loginShort": "Banye",
+    "logout": "Pụọ"
   },
   "tts": {
     "male": "Olu nwoke",
@@ -868,5 +888,61 @@
     "maleShort": "Nw",
     "femaleShort": "Ny",
     "voice": "Olu"
+  },
+  "chatDemo": {
+    "sectionLabel": "Nke a bụ ka mkparịta ụka dị",
+    "userMsg": "Enwere m owu ọmụma. Gịnị ka Baịbụl na-ekwu banyere nke ahụ?",
+    "botMsg": "Ị nọghị naanị gị – ọbụlagodi mgbe ọ dị ka nke ahụ. Abụ Ọma 23 na-ekwu: 'Onyenwe anyị bụ onye ọzụzụ atụrụ m, agaghị m achọ ihe ọ bụla.' Nke a pụtara na Chineke nọ gị nso, ọbụlagodi n'oge kacha gbaa ọchịchịrị. Ị ga-achọ ka anyị nyochaa akụkụ a ọnụ?",
+    "cta": "Bido mkparịta ụka nke gị →"
+  },
+  "suggest": {
+    "psalm23": "Abụ Ọma 23 – Onyenwe anyị bụ onye ọzụzụ atụrụ m",
+    "joh316": "Jọn 3:16 – N'ihi na Chineke hụrụ ụwa n'anya otú a",
+    "rom828": "Ndị Rom 8:28 – Ihe niile na-arụkọ ọrụ maka ọdịmma",
+    "mt1128": "Matiu 11:28 – Bịakwutenụ m, unu niile na-arụgbu onwe unu",
+    "phil413": "Ndị Filipaị 4:13 – M nwere ike ime ihe niile",
+    "jes4110": "Aịsaịa 41:10 – Atụla egwu, n'ihi na m nọnyeere gị",
+    "1kor13": "1 Ndị Kọrịnt 13 – Nke kacha ukwuu bụ ịhụnanya",
+    "spr35": "Ilu 3:5 – Tụkwasị Onyenwe anyị obi",
+    "jos19": "Joshua 1:9 – Dị ike ma nwee obi ike",
+    "ps462": "Abụ Ọma 46:1 – Chineke bụ ebe mgbaba na ike anyị",
+    "explainDetail": "Kọwaa {{ref}} n'ụzọ zuru ezu"
+  },
+  "dailyVerses": {
+    "v0": "\"Bịakwutenụ m, unu niile na-arụgbu onwe unu ma na-ebu ibu, m ga-enyekwa unu izu ike.\"",
+    "r0": "Matiu 11:28",
+    "v1": "\"N'ihi na amaara m atụmatụ m nwere maka unu, ka Onyenwe anyị na-ekwu, atụmatụ maka udo.\"",
+    "r1": "Jeremaịa 29:11",
+    "v2": "\"Atụla egwu, n'ihi na m nọnyeere gị; atụla ụjọ, n'ihi na abụ m Chineke gị.\"",
+    "r2": "Aịsaịa 41:10",
+    "v3": "\"Onyenwe anyị bụ onye ọzụzụ atụrụ m; agaghị m achọ ihe ọ bụla.\"",
+    "r3": "Abụ Ọma 23:1",
+    "v4": "\"Tụkwasị ya nchegbu gị niile n'ihi na ọ na-eche banyere gị.\"",
+    "r4": "1 Pita 5:7",
+    "v5": "\"Abụ m ìhè nke ụwa. Onye ọ bụla na-eso m agaghị ejegharị n'ọchịchịrị.\"",
+    "r5": "Jọn 8:12",
+    "v6": "\"Dị ike ma nwee obi ike! Atụla egwu, n'ihi na Onyenwe anyị Chineke gị nọnyeere gị.\"",
+    "r6": "Joshua 1:9",
+    "v7": "\"Ma ndị na-atụkwasị Onyenwe anyị obi ga-eme ka ike ha dị ọhụrụ; ha ga-efegharị n'elu nku dị ka ugo.\"",
+    "r7": "Aịsaịa 40:31",
+    "v8": "\"N'ihi na ebe mmadụ abụọ ma ọ bụ atọ zukọrọ n'aha m, m nọnyeere ha.\"",
+    "r8": "Matiu 18:20",
+    "v9": "\"Detụ ire ma hụ na Onyenwe anyị dị mma; onye ahụ nke na-achọ mgbaba n'ime ya gọziri agọzi.\"",
+    "r9": "Abụ Ọma 34:8",
+    "v10": "\"Ọ na-agwọ ndị obi gbajiri agbaji ma na-ekekọta ọnya ha.\"",
+    "r10": "Abụ Ọma 147:3",
+    "v11": "\"Ịhụnanya na-enwe ndidi, ịhụnanya na-adị mma. Ọ na-ebu ihe niile, na-ekwere ihe niile, na-atụ anya ihe niile.\"",
+    "r11": "1 Ndị Kọrịnt 13:4–7",
+    "v12": "\"Nwee ọṅụ n'olileanya, nwee ndidi n'ahụhụ, nwee okwukwe n'ekpere.\"",
+    "r12": "Ndị Rom 12:12",
+    "v13": "\"Tụkwasị Onyenwe anyị obi n'obi gị niile ma ghara ịdabere n'ịghọta nke gị.\"",
+    "r13": "Ilu 3:5"
+  },
+  "meinBereichNav": "Mpaghara M",
+  "verseExplain": "Kọwaa amaokwu Baịbụl a n'ụzọ zuru ezu: {{quote}} ({{ref}}) – Onye dere nke a? N'ọnọdụ dị aṅaa? Gịnị ka ọ pụtara maka ndụ m taa?",
+  "social": {
+    "conversations": "Mkparịta ụka",
+    "languages": "Asụsụ",
+    "bibles": "Nsụgharị Baịbụl"
   }
 }

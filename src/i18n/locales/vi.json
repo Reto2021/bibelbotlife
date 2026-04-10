@@ -1,6 +1,8 @@
 {
   "nav": {
-    "startNow": "Bắt đầu ngay"
+    "startNow": "Bắt đầu ngay",
+    "prayerWall": "Tường Cầu Nguyện",
+    "bibleQuiz": "Đố Kinh Thánh"
   },
   "loader": "Đang tải…",
   "hero": {
@@ -26,7 +28,9 @@
     "deepDive": "Điều này có ý nghĩa gì đối với tôi?",
     "explore": "Đọc toàn bộ đoạn văn",
     "alreadySubscribed": "Bạn đang nhận được cảm hứng hàng ngày",
-    "subscribeCta": "Bạn muốn nhận cảm hứng này hàng ngày không?"
+    "subscribeCta": "Bạn muốn nhận cảm hứng này hàng ngày không?",
+    "playAudio": "Nghe",
+    "stopAudio": "Dừng"
   },
   "features": {
     "sectionTitle": "Cách BibleBot của bạn đồng hành cùng bạn",
@@ -157,7 +161,12 @@
     "toastPermDeniedDesc": "Vui lòng cho phép thông báo trong cài đặt trình duyệt của bạn.",
     "toastError": "Lỗi",
     "toastErrorDesc": "Vui lòng thử lại sau.",
-    "subscribeButton": "Đăng ký cảm hứng"
+    "subscribeButton": "Đăng ký cảm hứng",
+    "manage": "Quản lý đăng ký",
+    "switchChannel": "Chuyển kênh:",
+    "unsubscribe": "Hủy đăng ký",
+    "unsubscribedTitle": "Đã hủy đăng ký",
+    "unsubscribedDesc": "Bạn sẽ không nhận được nguồn cảm hứng hàng ngày nữa."
   },
   "faq": {
     "badge": "Những câu hỏi thường gặp",
@@ -206,7 +215,14 @@
     "q8": "Ai đứng sau BibleBot của bạn và nó được tài trợ như thế nào?",
     "q8Answer": "BibleBot.Life là một dự án tư nhân, phi thương mại. Nó được vận hành tình nguyện và chỉ được tài trợ thông qua các khoản quyên góp tự nguyện. Không có quảng cáo, không bán dữ liệu và không có tính năng trả phí. Tất cả các khoản quyên góp trực tiếp trang trải chi phí hoạt động (cơ sở hạ tầng, lưu trữ, phát triển). Vì BibleBot hoạt động như một dự án tư nhân, các khoản quyên góp không được trừ thuế.",
     "q9": "BibleBot của bạn xử lý dữ liệu của tôi như thế nào?",
-    "q9Answer": "BibleBot của bạn không lưu trữ dữ liệu cá nhân hay lịch sử trò chuyện. Mọi cuộc trò chuyện đều ẩn danh. Không có đăng nhập, không theo dõi và không chia sẻ dữ liệu với bên thứ ba. Việc sử dụng hoàn toàn ẩn danh."
+    "q9Answer": "BibleBot của bạn không lưu trữ dữ liệu cá nhân hay lịch sử trò chuyện. Mọi cuộc trò chuyện đều ẩn danh. Không có đăng nhập, không theo dõi và không chia sẻ dữ liệu với bên thứ ba. Việc sử dụng hoàn toàn ẩn danh.",
+    "tradition": {
+      "reformed": "Cải cách",
+      "evangelical": "Tin lành",
+      "catholic": "Công giáo",
+      "freeChurch": "Hội thánh tự do",
+      "literal": "Từng chữ một"
+    }
   },
   "donate": {
     "badge": "Hỗ trợ BibleBot của bạn",
@@ -293,7 +309,8 @@
     "errorConnection": "không thể kết nối.",
     "errorNoStream": "Không có luồng",
     "seniorMode": "Chế độ người cao tuổi (phông chữ lớn hơn)",
-    "loginHint": "Đăng nhập để giữ các cuộc trò chuyện trên tất cả các thiết bị"
+    "loginHint": "Đăng nhập để giữ các cuộc trò chuyện trên tất cả các thiết bị",
+    "previousChats": "{{count}} cuộc trò chuyện trước"
   },
   "install": {
     "title": "Cài đặt BibleBot",
@@ -544,7 +561,8 @@
     "prayerwall": {
       "desc": "Chia sẻ ý định cầu nguyện & cầu nguyện cho nhau",
       "title": "Bức tường cầu nguyện"
-    }
+    },
+    "showMore": "thêm"
   },
   "lifeWheel": {
     "title": "Bánh xe cuộc sống của bạn",
@@ -862,7 +880,9 @@
     "genError": "Lỗi khi tạo văn bản. Vui lòng thử lại."
   },
   "auth": {
-    "apple": "Đăng nhập bằng Apple"
+    "apple": "Đăng nhập bằng Apple",
+    "loginShort": "Đăng nhập",
+    "logout": "Đăng xuất"
   },
   "tts": {
     "male": "Giọng nam",
@@ -870,5 +890,61 @@
     "maleShort": "N",
     "femaleShort": "Nữ",
     "voice": "Giọng"
+  },
+  "chatDemo": {
+    "sectionLabel": "Đây là một ví dụ về cuộc trò chuyện",
+    "userMsg": "Tôi cảm thấy cô đơn. Kinh Thánh nói gì về điều đó?",
+    "botMsg": "Bạn không cô đơn – ngay cả khi cảm thấy như vậy. Thi thiên 23 nói: 'Chúa là Đấng chăn giữ tôi, tôi sẽ chẳng thiếu thốn gì.' Điều này có nghĩa là Đức Chúa Trời ở gần bạn, ngay cả trong những khoảnh khắc tăm tối nhất. Bạn có muốn chúng ta cùng khám phá đoạn Kinh Thánh này không?",
+    "cta": "Bắt đầu cuộc trò chuyện của riêng bạn →"
+  },
+  "suggest": {
+    "psalm23": "Thi thiên 23 – Chúa là Đấng chăn giữ tôi",
+    "joh316": "Giăng 3:16 – Vì Đức Chúa Trời yêu thương thế gian",
+    "rom828": "Rô-ma 8:28 – Mọi sự hiệp lại làm ích",
+    "mt1128": "Ma-thi-ơ 11:28 – Hỡi những kẻ mệt mỏi và gánh nặng, hãy đến cùng ta",
+    "phil413": "Phi-líp 4:13 – Tôi làm được mọi sự",
+    "jes4110": "Ê-sai 41:10 – Đừng sợ, vì ta ở cùng ngươi",
+    "1kor13": "1 Cô-rinh-tô 13 – Điều lớn nhất là tình yêu",
+    "spr35": "Châm ngôn 3:5 – Hãy tin cậy Đức Giê-hô-va",
+    "jos19": "Giô-suê 1:9 – Hãy mạnh dạn và can đảm",
+    "ps462": "Thi thiên 46:1 – Đức Chúa Trời là nơi nương náu và sức mạnh của chúng ta",
+    "explainDetail": "Giải thích {{ref}} chi tiết"
+  },
+  "dailyVerses": {
+    "v0": "\"Hỡi những kẻ mệt mỏi và gánh nặng, hãy đến cùng ta, ta sẽ cho các ngươi được yên nghỉ.\"",
+    "r0": "Ma-thi-ơ 11:28",
+    "v1": "\"Vì ta biết các ý định ta dành cho các ngươi, phán bởi Đức Giê-hô-va, các ý định bình an.\"",
+    "r1": "Giê-rê-mi 29:11",
+    "v2": "\"Đừng sợ, vì ta ở cùng ngươi; chớ kinh khiếp, vì ta là Đức Chúa Trời ngươi.\"",
+    "r2": "Ê-sai 41:10",
+    "v3": "\"Đức Giê-hô-va là Đấng chăn giữ tôi; tôi sẽ chẳng thiếu thốn gì.\"",
+    "r3": "Thi thiên 23:1",
+    "v4": "\"Hãy trao mọi lo lắng của anh em cho Ngài, vì Ngài quan tâm đến anh em.\"",
+    "r4": "1 Phi-e-rơ 5:7",
+    "v5": "\"Ta là sự sáng của thế gian. Ai theo ta sẽ không đi trong bóng tối.\"",
+    "r5": "Giăng 8:12",
+    "v6": "\"Hãy mạnh dạn và can đảm! Đừng sợ hãi, vì Giê-hô-va Đức Chúa Trời ngươi ở cùng ngươi.\"",
+    "r6": "Giô-suê 1:9",
+    "v7": "\"Nhưng những kẻ trông đợi Đức Giê-hô-va sẽ được sức mới; họ sẽ cất cánh bay cao như chim ưng.\"",
+    "r7": "Ê-sai 40:31",
+    "v8": "\"Vì nơi nào có hai ba người nhóm lại nhân danh ta, thì ta ở giữa họ.\"",
+    "r8": "Ma-thi-ơ 18:20",
+    "v9": "\"Hãy nếm thử và xem Đức Giê-hô-va tốt lành dường bao; phước cho người nào nương náu nơi Ngài.\"",
+    "r9": "Thi thiên 34:8",
+    "v10": "\"Ngài chữa lành những tấm lòng tan vỡ và băng bó vết thương của họ.\"",
+    "r10": "Thi thiên 147:3",
+    "v11": "\"Tình yêu thương hay nhịn nhục, tình yêu thương hay nhân từ. Nó chịu đựng mọi sự, tin mọi sự, hy vọng mọi sự.\"",
+    "r11": "1 Cô-rinh-tô 13:4–7",
+    "v12": "\"Hãy vui mừng trong hy vọng, kiên nhẫn trong hoạn nạn, trung tín trong cầu nguyện.\"",
+    "r12": "Rô-ma 12:12",
+    "v13": "\"Hãy hết lòng tin cậy Đức Giê-hô-va, chớ nương cậy sự hiểu biết của con.\"",
+    "r13": "Châm ngôn 3:5"
+  },
+  "meinBereichNav": "Khu vực của tôi",
+  "verseExplain": "Giải thích chi tiết câu Kinh Thánh này: {{quote}} ({{ref}}) – Ai đã viết điều này? Trong bối cảnh nào? Điều đó có ý nghĩa gì đối với cuộc sống của tôi ngày nay?",
+  "social": {
+    "conversations": "Cuộc trò chuyện",
+    "languages": "Ngôn ngữ",
+    "bibles": "Bản dịch Kinh Thánh"
   }
 }

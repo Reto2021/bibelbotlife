@@ -1,6 +1,8 @@
 {
   "nav": {
-    "startNow": "Magsimula Ngayon"
+    "startNow": "Magsimula Ngayon",
+    "prayerWall": "Pader ng Panalangin",
+    "bibleQuiz": "Pagsusulit sa Bibliya"
   },
   "loader": "Naglo-load…",
   "hero": {
@@ -24,7 +26,9 @@
     "deepDive": "Ano ang ibig sabihin nito para sa akin?",
     "explore": "Basahin ang buong seksyon",
     "alreadySubscribed": "Tumatanggap ka ng pang-araw-araw na inspirasyon",
-    "subscribeCta": "Nais mo bang matanggap ang inspirasyong ito araw-araw?"
+    "subscribeCta": "Nais mo bang matanggap ang inspirasyong ito araw-araw?",
+    "playAudio": "Makinig",
+    "stopAudio": "Ihinto"
   },
   "features": {
     "sectionTitle": "Paano ka Sasamahan ng Iyong BibleBot",
@@ -155,7 +159,12 @@
     "toastPermDeniedDesc": "Mangyaring payagan ang mga notification sa iyong mga setting ng browser.",
     "toastError": "Error",
     "toastErrorDesc": "Mangyaring subukang muli sa ibang pagkakataon.",
-    "subscribeButton": "Mag-subscribe sa Inspirasyon"
+    "subscribeButton": "Mag-subscribe sa Inspirasyon",
+    "manage": "Pamahalaan ang Subscription",
+    "switchChannel": "Lumipat ng Channel:",
+    "unsubscribe": "I-unsubscribe",
+    "unsubscribedTitle": "Hindi Naka-subscribe",
+    "unsubscribedDesc": "Hindi ka na makakatanggap ng pang-araw-araw na inspirasyon."
   },
   "faq": {
     "badge": "Mga Madalas Itanong",
@@ -204,7 +213,14 @@
     "q8": "Sino ang nasa likod ng iyong BibleBot at paano ito pinopondohan?",
     "q8Answer": "Ang BibleBot.Life ay isang pribado, hindi komersyal na proyekto. Ito ay pinapatakbo nang boluntaryo at pinopondohan lamang sa pamamagitan ng boluntaryong donasyon. Walang advertising, walang pagbebenta ng data, at walang bayad na feature. Ang lahat ng donasyon ay direktang napupunta sa pagbabayad ng mga kasalukuyang gastos (imprastraktura, hosting, pagpapaunlad). Dahil ang BibleBot ay tumatakbo bilang isang pribadong proyekto, ang mga donasyon ay hindi deductible sa buwis.",
     "q9": "Paano pinangangasiwaan ng iyong BibleBot ang aking data?",
-    "q9Answer": "Hindi nagse-save ang iyong BibleBot ng personal na data o mga kasaysayan ng chat. Ang bawat pag-uusap ay anonymous. Walang pag-login, walang pagsubaybay, at walang pagbabahagi ng data sa mga third party. Ang paggamit ay ganap na anonymous."
+    "q9Answer": "Hindi nagse-save ang iyong BibleBot ng personal na data o mga kasaysayan ng chat. Ang bawat pag-uusap ay anonymous. Walang pag-login, walang pagsubaybay, at walang pagbabahagi ng data sa mga third party. Ang paggamit ay ganap na anonymous.",
+    "tradition": {
+      "reformed": "Repormado",
+      "evangelical": "Ebanghelikal",
+      "catholic": "Katoliko",
+      "freeChurch": "Malayang Simbahan",
+      "literal": "Salita-sa-salita"
+    }
   },
   "donate": {
     "badge": "Suportahan ang Iyong BibleBot",
@@ -291,7 +307,8 @@
     "errorConnection": "hindi maabot.",
     "errorNoStream": "Walang Stream",
     "seniorMode": "Senior Mode (mas malaking font)",
-    "loginHint": "Mag-log in para mapanatili ang mga pag-uusap sa lahat ng device"
+    "loginHint": "Mag-log in para mapanatili ang mga pag-uusap sa lahat ng device",
+    "previousChats": "{{count}} nakaraang pag-uusap"
   },
   "install": {
     "title": "I-install ang BibleBot",
@@ -542,7 +559,8 @@
     "prayerwall": {
       "desc": "Ibahagi ang mga kahilingan sa panalangin at manalangin para sa isa't isa",
       "title": "Pader ng Panalangin"
-    }
+    },
+    "showMore": "higit pa"
   },
   "lifeWheel": {
     "title": "Ang Iyong Gulong ng Buhay",
@@ -863,7 +881,9 @@
     "genError": "Error sa paglikha ng teksto. Mangyaring subukang muli."
   },
   "auth": {
-    "apple": "Mag-sign in gamit ang Apple"
+    "apple": "Mag-sign in gamit ang Apple",
+    "loginShort": "Mag-sign in",
+    "logout": "Mag-sign out"
   },
   "tts": {
     "male": "Boses lalaki",
@@ -871,5 +891,61 @@
     "maleShort": "L",
     "femaleShort": "B",
     "voice": "Boses"
+  },
+  "chatDemo": {
+    "sectionLabel": "Narito kung ano ang hitsura ng isang pag-uusap",
+    "userMsg": "Pakiramdam ko ay nag-iisa. Ano ang sinasabi ng Bibliya tungkol dito?",
+    "botMsg": "Hindi ka nag-iisa – kahit na ganoon ang pakiramdam. Sinasabi ng Salmo 23: 'Ang Panginoon ang aking pastol; hindi ako magkukulang.' Nangangahulugan ito na malapit sa iyo ang Diyos, kahit sa pinakamadilim na sandali. Gusto mo bang pag-aralan natin ang talatang ito nang magkasama?",
+    "cta": "Simulan ang iyong sariling pag-uusap →"
+  },
+  "suggest": {
+    "psalm23": "Salmo 23 – Ang Panginoon ang aking pastol",
+    "joh316": "Juan 3:16 – Sapagkat gayon na lamang ang pag-ibig ng Diyos sa sanlibutan",
+    "rom828": "Roma 8:28 – Ang lahat ng bagay ay gumagawa para sa ikabubuti",
+    "mt1128": "Mateo 11:28 – Lumapit kayo sa akin, kayong lahat na napapagod",
+    "phil413": "Filipos 4:13 – Lahat ng bagay ay magagawa ko",
+    "jes4110": "Isaias 41:10 – Huwag kang matakot, sapagkat ako'y sumasaiyo",
+    "1kor13": "1 Corinto 13 – Ang pinakadakila ay pag-ibig",
+    "spr35": "Kawikaan 3:5 – Magtiwala sa Panginoon",
+    "jos19": "Josue 1:9 – Magpakatatag at magpakatapang",
+    "ps462": "Salmo 46:1 – Ang Diyos ang ating kanlungan at kalakasan",
+    "explainDetail": "Ipaliwanag ang {{ref}} nang detalyado"
+  },
+  "dailyVerses": {
+    "v0": "\"Lumapit kayo sa akin, kayong lahat na napapagod at nabibigatan, at bibigyan ko kayo ng kapahingahan.\"",
+    "r0": "Mateo 11:28",
+    "v1": "\"Sapagkat nalalaman ko ang mga plano ko para sa inyo, sabi ng Panginoon, mga planong pangkapayapaan.\"",
+    "r1": "Jeremias 29:11",
+    "v2": "\"Huwag kang matakot, sapagkat ako'y sumasaiyo; huwag kang manglupaypay, sapagkat ako ang iyong Diyos.\"",
+    "r2": "Isaias 41:10",
+    "v3": "\"Ang Panginoon ang aking pastol; hindi ako magkukulang.\"",
+    "r3": "Salmo 23:1",
+    "v4": "\"Ihagis ninyo sa kanya ang lahat ng inyong kabalisahan, sapagkat siya'y nagmamalasakit sa inyo.\"",
+    "r4": "1 Pedro 5:7",
+    "v5": "\"Ako ang ilaw ng sanlibutan. Ang sumusunod sa akin ay hindi lalakad sa kadiliman.\"",
+    "r5": "Juan 8:12",
+    "v6": "\"Magpakatatag at magpakatapang! Huwag kang matakot, sapagkat ang Panginoon mong Diyos ay sumasaiyo.\"",
+    "r6": "Josue 1:9",
+    "v7": "\"Ngunit ang mga umaasa sa Panginoon ay magbabago ng kanilang lakas; sila'y lilipad na parang agila.\"",
+    "r7": "Isaias 40:31",
+    "v8": "\"Sapagkat kung saan may dalawa o tatlo na nagtitipon sa aking pangalan, naroon ako sa gitna nila.\"",
+    "r8": "Mateo 18:20",
+    "v9": "\"Tikman at tingnan ninyo na mabuti ang Panginoon; mapalad ang nagpapakupkop sa kanya.\"",
+    "r9": "Salmo 34:8",
+    "v10": "\"Pinagagaling niya ang mga may pusong wasak at binibigkisan ang kanilang mga sugat.\"",
+    "r10": "Salmo 147:3",
+    "v11": "\"Ang pag-ibig ay matiyaga, ang pag-ibig ay mabait. Tinitiis ang lahat ng bagay, pinaniniwalaan ang lahat ng bagay, inaasahan ang lahat ng bagay.\"",
+    "r11": "1 Corinto 13:4–7",
+    "v12": "\"Magalak sa pag-asa, maging matiyaga sa kapighatian, maging tapat sa panalangin.\"",
+    "r12": "Roma 12:12",
+    "v13": "\"Magtiwala sa Panginoon nang buong puso at huwag kang manalig sa iyong sariling pang-unawa.\"",
+    "r13": "Kawikaan 3:5"
+  },
+  "meinBereichNav": "Aking Lugar",
+  "verseExplain": "Ipaliwanag ang talatang ito sa Bibliya nang detalyado: {{quote}} ({{ref}}) – Sino ang sumulat nito? Sa anong konteksto? Ano ang ibig sabihin nito para sa aking buhay ngayon?",
+  "social": {
+    "conversations": "Mga Pag-uusap",
+    "languages": "Mga Wika",
+    "bibles": "Mga salin ng Bibliya"
   }
 }

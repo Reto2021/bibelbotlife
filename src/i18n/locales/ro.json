@@ -1,6 +1,8 @@
 {
   "nav": {
-    "startNow": "Începe acum"
+    "startNow": "Începe acum",
+    "prayerWall": "Zidul de rugăciune",
+    "bibleQuiz": "Test biblic"
   },
   "loader": "Se încarcă…",
   "hero": {
@@ -24,7 +26,9 @@
     "deepDive": "Ce înseamnă asta pentru mine?",
     "explore": "Citește pasajul complet",
     "alreadySubscribed": "Primești inspirația zilnică",
-    "subscribeCta": "Dorești să primești această inspirație zilnic?"
+    "subscribeCta": "Dorești să primești această inspirație zilnic?",
+    "playAudio": "Ascultă",
+    "stopAudio": "Oprește"
   },
   "features": {
     "sectionTitle": "Cum te însoțește BibleBot",
@@ -155,7 +159,12 @@
     "toastPermDeniedDesc": "Te rugăm să permiți notificările în setările browserului.",
     "toastError": "Eroare",
     "toastErrorDesc": "Te rugăm să încerci mai târziu.",
-    "subscribeButton": "Abonează-te la inspo"
+    "subscribeButton": "Abonează-te la inspo",
+    "manage": "Gestionează abonamentul",
+    "switchChannel": "Schimbă canalul:",
+    "unsubscribe": "Dezabonare",
+    "unsubscribedTitle": "Dezabonat",
+    "unsubscribedDesc": "Nu vei mai primi inspirație zilnică."
   },
   "faq": {
     "badge": "Întrebări frecvente",
@@ -204,7 +213,14 @@
     "q8": "Cine se află în spatele BibleBot și cum este finanțat?",
     "q8Answer": "BibleBot este un proiect privat, necomercial. Este administrat pe bază de voluntariat și finanțat exclusiv prin donații voluntare. Nu există publicitate, nu se vând date și nu există funcții plătite.",
     "q9": "Cum tratează BibleBot datele mele?",
-    "q9Answer": "BibleBot nu stochează date personale și niciun istoric de chat. Fiecare conversație este anonimă. Nu există autentificare, nu există urmărire și nu se partajează date cu terți."
+    "q9Answer": "BibleBot nu stochează date personale și niciun istoric de chat. Fiecare conversație este anonimă. Nu există autentificare, nu există urmărire și nu se partajează date cu terți.",
+    "tradition": {
+      "reformed": "Reformată",
+      "evangelical": "Evanghelică",
+      "catholic": "Catolică",
+      "freeChurch": "Biserică liberă",
+      "literal": "Cuvânt cu cuvânt"
+    }
   },
   "donate": {
     "badge": "Susține BibleBot",
@@ -291,7 +307,8 @@
     "seniorMode": "Senior mode (larger text)",
     "teaserCta": "Start writing →",
     "namePlaceholder": "e.g. Eli, Miriam…",
-    "loginHint": "Conectează-te pentru a păstra conversațiile pe toate dispozitivele"
+    "loginHint": "Conectează-te pentru a păstra conversațiile pe toate dispozitivele",
+    "previousChats": "{{count}} conversații anterioare"
   },
   "install": {
     "title": "Instalează BibleBot",
@@ -542,7 +559,8 @@
     "prayerwall": {
       "desc": "Împărtășește cereri de rugăciune și roagă-te unul pentru celălalt",
       "title": "Zidul Rugăciunii"
-    }
+    },
+    "showMore": "mai mult"
   },
   "lifeWheel": {
     "title": "Roata ta a vieții",
@@ -860,7 +878,9 @@
     "genError": "Eroare la generarea textului. Vă rugăm să încercați din nou."
   },
   "auth": {
-    "apple": "Conectare cu Apple"
+    "apple": "Conectare cu Apple",
+    "loginShort": "Autentificare",
+    "logout": "Deconectare"
   },
   "tts": {
     "male": "Voce masculină",
@@ -868,5 +888,61 @@
     "maleShort": "M",
     "femaleShort": "F",
     "voice": "Voce"
+  },
+  "chatDemo": {
+    "sectionLabel": "Iată cum arată o conversație",
+    "userMsg": "Mă simt singur. Ce spune Biblia despre asta?",
+    "botMsg": "Nu ești singur – chiar și atunci când simți asta. Psalmul 23 spune: „Domnul este păstorul meu, nu voi duce lipsă de nimic.” Aceasta înseamnă că Dumnezeu este aproape de tine, chiar și în cele mai întunecate momente. Vrei să explorăm împreună acest pasaj?",
+    "cta": "Începe propria ta conversație →"
+  },
+  "suggest": {
+    "psalm23": "Psalmul 23 – Domnul este păstorul meu",
+    "joh316": "Ioan 3:16 – Fiindcă atât de mult a iubit Dumnezeu lumea",
+    "rom828": "Romani 8:28 – Toate lucrurile lucrează împreună spre bine",
+    "mt1128": "Matei 11:28 – Veniți la Mine, toți cei trudiți",
+    "phil413": "Filipeni 4:13 – Pot totul în Hristos",
+    "jes4110": "Isaia 41:10 – Nu te teme, căci Eu sunt cu tine",
+    "1kor13": "1 Corinteni 13 – Cea mai mare este dragostea",
+    "spr35": "Proverbe 3:5 – Încrede-te în Domnul",
+    "jos19": "Iosua 1:9 – Fii tare și curajos",
+    "ps462": "Psalmul 46:1 – Dumnezeu este adăpostul și puterea noastră",
+    "explainDetail": "Explică {{ref}} în detaliu"
+  },
+  "dailyVerses": {
+    "v0": "„Veniți la Mine, toți cei trudiți și împovărați, și Eu vă voi da odihnă.”",
+    "r0": "Matei 11:28",
+    "v1": "„Căci Eu știu planurile pe care le am pentru voi, zice Domnul, planuri de pace.”",
+    "r1": "Ieremia 29:11",
+    "v2": "„Nu te teme, căci Eu sunt cu tine; nu te descuraja, căci Eu sunt Dumnezeul tău.”",
+    "r2": "Isaia 41:10",
+    "v3": "„Domnul este păstorul meu; nu voi duce lipsă de nimic.”",
+    "r3": "Psalmul 23:1",
+    "v4": "„Aruncați-vă toate îngrijorările asupra Lui, căci El are grijă de voi.”",
+    "r4": "1 Petru 5:7",
+    "v5": "„Eu sunt lumina lumii. Cine Mă urmează nu va umbla în întuneric.”",
+    "r5": "Ioan 8:12",
+    "v6": "„Fii tare și curajos! Nu te teme, căci Domnul Dumnezeul tău este cu tine.”",
+    "r6": "Iosua 1:9",
+    "v7": "„Dar cei ce nădăjduiesc în Domnul își vor înnoi puterea; vor zbura cu aripi ca vulturii.”",
+    "r7": "Isaia 40:31",
+    "v8": "„Căci unde sunt doi sau trei adunați în Numele Meu, acolo sunt și Eu în mijlocul lor.”",
+    "r8": "Matei 18:20",
+    "v9": "„Gustați și vedeți că Domnul este bun; fericit este omul care se încrede în El.”",
+    "r9": "Psalmul 34:8",
+    "v10": "„El vindecă pe cei cu inima zdrobită și le leagă rănile.”",
+    "r10": "Psalmul 147:3",
+    "v11": "„Dragostea este răbdătoare, dragostea este bună. Suferă totul, crede totul, speră totul.”",
+    "r11": "1 Corinteni 13:4–7",
+    "v12": "„Bucurați-vă în speranță, fiți răbdători în suferință, perseverenți în rugăciune.”",
+    "r12": "Romani 12:12",
+    "v13": "„Încrede-te în Domnul din toată inima ta și nu te bizui pe înțelegerea ta proprie.”",
+    "r13": "Proverbe 3:5"
+  },
+  "meinBereichNav": "Zona mea",
+  "verseExplain": "Explică în detaliu acest verset biblic: {{quote}} ({{ref}}) – Cine a scris asta? În ce context? Ce înseamnă pentru viața mea de azi?",
+  "social": {
+    "conversations": "Conversații",
+    "languages": "Limbi",
+    "bibles": "Traduceri biblice"
   }
 }
