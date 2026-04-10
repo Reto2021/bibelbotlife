@@ -821,6 +821,8 @@ export default function OutreachAdmin() {
               </CardContent>
             </Card>
           </TabsContent>
+        </Tabs>
+      )}
 
       {/* ─── Personalized Email Preview/Edit Dialog ─── */}
       <Dialog open={personalizePreviewOpen} onOpenChange={setPersonalizePreviewOpen}>
