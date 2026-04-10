@@ -101,8 +101,8 @@ function makeRefsClickable(children: React.ReactNode, onRefClick: (msg: string) 
 // Auto-typing demo that creates a "wow moment" in the first few seconds
 function LiveDemoPreview({ onTryIt }: { onTryIt: () => void }) {
   const { t } = useTranslation();
-  const userMsg = t("chatDemo.userMsg", "Ich fühle mich allein. Was sagt die Bibel dazu?");
-  const botMsg = t("chatDemo.botMsg", "Du bist nicht allein – auch wenn es sich gerade so anfühlt. In Psalm 23 heisst es: «Der Herr ist mein Hirte, mir wird nichts mangeln.» Das bedeutet, dass Gott dir nahe ist, auch in den dunkelsten Momenten.");
+  const userMsg = t("chatDemo.userMsg");
+  const botMsg = t("chatDemo.botMsg");
   const [phase, setPhase] = useState<"user" | "typing" | "bot" | "done">("user");
   const [botText, setBotText] = useState("");
   const botCharRef = useRef(0);
