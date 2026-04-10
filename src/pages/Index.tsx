@@ -24,12 +24,12 @@ import { useIsAdmin } from "@/hooks/use-admin";
 
 const TELEGRAM_LINK = "https://t.me/meinbibelbot";
 
-const BIBLE_EDITIONS = [
-  { name: "Zürcher Bibel", year: "2007", tradition: "Reformiert" },
-  { name: "Lutherbibel", year: "2017", tradition: "Evangelisch" },
-  { name: "Einheitsübersetzung", year: "2016", tradition: "Katholisch" },
-  { name: "Schlachter Bibel", year: "2000", tradition: "Freikirchlich" },
-  { name: "Elberfelder Bibel", year: "2006", tradition: "Wortgetreu" },
+const BIBLE_EDITIONS_DATA = [
+  { name: "Zürcher Bibel", year: "2007", traditionKey: "reformed" },
+  { name: "Lutherbibel", year: "2017", traditionKey: "evangelical" },
+  { name: "Einheitsübersetzung", year: "2016", traditionKey: "catholic" },
+  { name: "Schlachter Bibel", year: "2000", traditionKey: "freeChurch" },
+  { name: "Elberfelder Bibel", year: "2006", traditionKey: "literal" },
 ];
 
 const Index = () => {
