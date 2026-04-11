@@ -663,7 +663,12 @@
         "seniorHome": "Retirement Home",
         "hospital": "Hospital",
         "prison": "Prison Chaplaincy",
-        "military": "Military Chaplaincy"
+        "military": "Military Chaplaincy",
+        "rehaClinic": "Klinika rehabilitacyjna",
+        "psychiatry": "Psychiatria",
+        "burnoutClinic": "Klinika wypalenia",
+        "hospice": "Hospicjum",
+        "counseling": "Poradnia"
       }
     },
     "institutionsTitle": "Również dla instytucji",
@@ -688,6 +693,26 @@
       "military": {
         "title": "Military Chaplaincy",
         "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
+      },
+      "rehaClinic": {
+        "title": "Kliniki rehabilitacyjne",
+        "desc": "Wsparcie duchowe podczas rehabilitacji – dla wewnętrznej siły na drodze powrotnej do życia."
+      },
+      "psychiatry": {
+        "title": "Placówki psychiatryczne",
+        "desc": "Poufne rozmowy duchowe dla pacjentów w opiece psychiatrycznej."
+      },
+      "burnoutClinic": {
+        "title": "Kliniki wypalenia",
+        "desc": "Pytania o sens i wewnętrzna refleksja przy wyczerpaniu."
+      },
+      "hospice": {
+        "title": "Hospicja",
+        "desc": "Towarzyszenie u kresu życia – pocieszające słowa i otwarte ucho."
+      },
+      "counseling": {
+        "title": "Poradnie",
+        "desc": "Uzupełniające impulsy duchowe dla klientów poradnictwa psychospołecznego."
       }
     },
     "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
@@ -1025,5 +1050,9 @@
     "footerChurches": "Dla kościołów",
     "seoTitle": "BibleBot.Life dla kapelanów i coachów życiowych — planuj ceremonie i sesje",
     "seoDesc": "Profesjonalnie planuj pogrzeby, śluby, sesje coachingowe: nagrywanie głosu, generowanie tekstu, teleprompter, kalendarz i współpraca."
+  },
+  "pricing": {
+    "onRequest": "Patronat na zapytanie",
+    "contactUs": "Skontaktuj się z nami"
   }
 }

@@ -698,7 +698,12 @@
         "seniorHome": "የአዛውንት ቤት",
         "hospital": "ሆስፒታል",
         "prison": "የእስር ቤት ነፍስ አባት አገልግሎት",
-        "military": "የሠራዊት ነፍስ አባት አገልግሎት"
+        "military": "የሠራዊት ነፍስ አባት አገልግሎት",
+        "rehaClinic": "የማገገሚያ ክሊኒክ",
+        "psychiatry": "የአእምሮ ህክምና",
+        "burnoutClinic": "የድካም ክሊኒክ",
+        "hospice": "ሆስፒስ",
+        "counseling": "የምክር ማዕከል"
       }
     },
     "institutionsTitle": "ለተቋማትም",
@@ -723,6 +728,26 @@
       "military": {
         "title": "የሠራዊት ነፍስ አባት አገልግሎት",
         "desc": "ለሠራዊት አባላት መንፈሳዊ አጃቢ – በሥራ ላይም ሆነ በሰፈር ውስጥ ተደራሽ።"
+      },
+      "rehaClinic": {
+        "title": "የማገገሚያ ክሊኒኮች",
+        "desc": "በማገገሚያ ጊዜ የመንፈሳዊ ድጋፍ – ወደ ሕይወት ለመመለስ የውስጥ ጥንካሬ።"
+      },
+      "psychiatry": {
+        "title": "የአእምሮ ህክምና ተቋማት",
+        "desc": "ለአእምሮ ህክምና ታካሚዎች ሚስጥራዊ መንፈሳዊ ውይይቶች።"
+      },
+      "burnoutClinic": {
+        "title": "የድካም ክሊኒኮች",
+        "desc": "በድካም ጊዜ የትርጉም ጥያቄዎች እና የውስጥ ማሰላሰል።"
+      },
+      "hospice": {
+        "title": "ሆስፒስ",
+        "desc": "በሕይወት ማብቂያ ላይ አጋርነት – መጽናኛ ቃላት እና በመጨረሻ ቀናት ውስጥ ክፍት ጆሮ።"
+      },
+      "counseling": {
+        "title": "የምክር ማዕከላት",
+        "desc": "ለስነ-ልቦና ማህበራዊ ምክር ተጨማሪ መንፈሳዊ ግፊቶች።"
       }
     },
     "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
@@ -1025,5 +1050,9 @@
     "footerChurches": "ለቤተክርስቲያኖች",
     "seoTitle": "BibleBot.Life ለካህናት እና ለህይወት አሰልጣኞች — ስነ ስርዓቶችን እና ክፍለ ጊዜዎችን ያቅዱ",
     "seoDesc": "የቀብር ሥነ ሥርዓቶችን፣ ሰርግዎችን፣ የአሰልጣኝነት ክፍለ ጊዜዎችን በሙያዊ ያቅዱ፡ የድምጽ ቀረጻ፣ የጽሑፍ ትውልድ፣ ቴሌፕሮምፕተር፣ የቀን መቁጠሪያ እና ትብብር።"
+  },
+  "pricing": {
+    "onRequest": "ድጋፍ በጥያቄ",
+    "contactUs": "ያነጋግሩን"
   }
 }

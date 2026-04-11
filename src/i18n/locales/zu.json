@@ -698,7 +698,12 @@
         "seniorHome": "Ikhaya Labadala",
         "hospital": "Isibhedlela",
         "prison": "Ukungcwele Kwejele",
-        "military": "Ukungcwele Kwebutho"
+        "military": "Ukungcwele Kwebutho",
+        "rehaClinic": "Iklinikhi yokuvuselela",
+        "psychiatry": "Ezengqondo",
+        "burnoutClinic": "Iklinikhi yokukhathala",
+        "hospice": "Ihospisi",
+        "counseling": "Isikhungo sokweluleka"
       }
     },
     "institutionsTitle": "Okwezikhungo futhi",
@@ -723,6 +728,26 @@
       "military": {
         "title": "Ukungcwele Kwebutho",
         "desc": "Ukuphelelezela ngokomoya kwamalungu ebutho – atholakala ngisho nasesivumelwaneni noma esikoleni."
+      },
+      "rehaClinic": {
+        "title": "Amaklinikhi Okuvuselela",
+        "desc": "Ukwesekwa ngokomoya ngesikhathi sokuvuselela."
+      },
+      "psychiatry": {
+        "title": "Izikhungo Zezengqondo",
+        "desc": "Izingxoxo eziyimfihlo zokomoya zeziguli zezengqondo."
+      },
+      "burnoutClinic": {
+        "title": "Amaklinikhi Okukhathala",
+        "desc": "Imibuzo yencazelo nokuzindla kwangaphakathi ngesikhathi sokukhathala."
+      },
+      "hospice": {
+        "title": "Amahospisi",
+        "desc": "Ukuhambisana ekupheleni kokuphila – amazwi aduduza nendlebe evulelekile."
+      },
+      "counseling": {
+        "title": "Izikhungo Zokweluleka",
+        "desc": "Imiphumela yoComoya eyengeziwe yabantu abasebenzisana nokwelulekwa kwezengqondo."
       }
     },
     "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
@@ -1025,5 +1050,9 @@
     "footerChurches": "Emasontweni",
     "seoTitle": "BibleBot.Life Yabefundisi & Abaqeqeshi Bempilo — Hlela Imikhosi & Amaseshini",
     "seoDesc": "Hlela imingcwabo, imishado, amaseshini okuqeqesha ngobungcweti: ukuqopha izwi, ukukhiqizwa kombhalo, i-teleprompter, ikhalenda, nokubambisana."
+  },
+  "pricing": {
+    "onRequest": "Ukuxhaswa ngokucela",
+    "contactUs": "Xhumana nathi"
   }
 }

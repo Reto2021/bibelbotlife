@@ -660,7 +660,12 @@
         "seniorHome": "მოხუცთა თავშესაფარი",
         "hospital": "საავადმყოფო",
         "prison": "ციხის სამღვდელოება",
-        "military": "არმიის სამღვდელოება"
+        "military": "არმიის სამღვდელოება",
+        "rehaClinic": "რეაბილიტაციის კლინიკა",
+        "psychiatry": "ფსიქიატრია",
+        "burnoutClinic": "გადაწვის კლინიკა",
+        "hospice": "ჰოსპისი",
+        "counseling": "კონსულტაციის ცენტრი"
       }
     },
     "institutionsTitle": "ასევე ინსტიტუტებისთვის",
@@ -685,6 +690,26 @@
       "military": {
         "title": "არმიის სამღვდელოება",
         "desc": "სულიერი თანმხლებობა არმიის წევრებისთვის – ხელმისაწვდომი ოპერაციის დროს ან ყაზარმაში."
+      },
+      "rehaClinic": {
+        "title": "რეაბილიტაციის კლინიკები",
+        "desc": "სულიერი მხარდაჭერა რეაბილიტაციის დროს."
+      },
+      "psychiatry": {
+        "title": "ფსიქიატრიული დაწესებულებები",
+        "desc": "კონფიდენციალური სულიერი საუბრები ფსიქიატრიულ მკურნალობაში მყოფი პაციენტებისთვის."
+      },
+      "burnoutClinic": {
+        "title": "გადაწვის კლინიკები",
+        "desc": "აზრის ძიება და შინაგანი ჩაღრმავება გადაღლილობის დროს."
+      },
+      "hospice": {
+        "title": "ჰოსპისები",
+        "desc": "თანხლება სიცოცხლის ბოლოს – ნუგეშისმცემი სიტყვები."
+      },
+      "counseling": {
+        "title": "კონსულტაციის ცენტრები",
+        "desc": "დამატებითი სულიერი იმპულსები ფსიქოსოციალური კონსულტაციის კლიენტებისთვის."
       }
     },
     "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
@@ -1025,5 +1050,9 @@
     "footerChurches": "ეკლესიებისთვის",
     "seoTitle": "BibleBot.Life კაპელანებისა და ცხოვრების მწვრთნელებისთვის — დაგეგმეთ ცერემონიები და სესიები",
     "seoDesc": "დაგეგმეთ დაკრძალვები, ქორწილები, სამწვრთნელო სესიები პროფესიონალურად: ხმის ჩაწერა, ტექსტის გენერაცია, ტელეპრომპტერი, კალენდარი და თანამშრომლობა."
+  },
+  "pricing": {
+    "onRequest": "პატრონაჟი მოთხოვნით",
+    "contactUs": "დაგვიკავშირდით"
   }
 }

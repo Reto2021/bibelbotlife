@@ -699,7 +699,12 @@
         "seniorHome": "养老院",
         "hospital": "医院",
         "prison": "监狱教牧关怀",
-        "military": "军队教牧关怀"
+        "military": "军队教牧关怀",
+        "rehaClinic": "康复诊所",
+        "psychiatry": "精神科",
+        "burnoutClinic": "倦怠诊所",
+        "hospice": "临终关怀",
+        "counseling": "咨询中心"
       }
     },
     "institutionsTitle": "也适用于机构",
@@ -724,6 +729,26 @@
       "military": {
         "title": "军队教牧关怀",
         "desc": "为军队成员提供属灵陪伴——即使在任务中或军营中也能联系上。"
+      },
+      "rehaClinic": {
+        "title": "康复诊所",
+        "desc": "康复期间的灵性支持——为重返生活之路提供内在力量。"
+      },
+      "psychiatry": {
+        "title": "精神科机构",
+        "desc": "为精神科患者提供保密的灵性对话。"
+      },
+      "burnoutClinic": {
+        "title": "倦怠诊所",
+        "desc": "疲惫时的意义追问与内心反思。"
+      },
+      "hospice": {
+        "title": "临终关怀",
+        "desc": "生命尽头的陪伴——安慰的话语和倾听的耳朵。"
+      },
+      "counseling": {
+        "title": "咨询中心",
+        "desc": "为心理社会咨询客户提供补充性灵性启发。"
       }
     },
     "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
@@ -1026,5 +1051,9 @@
     "footerChurches": "适用于教会",
     "seoTitle": "BibleBot.Life 适用于牧师和生活教练 — 规划仪式和会话",
     "seoDesc": "专业规划葬礼、婚礼、辅导会话：语音录制、文本生成、提词器、日历和协作。"
+  },
+  "pricing": {
+    "onRequest": "赞助按需提供",
+    "contactUs": "联系我们"
   }
 }

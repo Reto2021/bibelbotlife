@@ -663,7 +663,12 @@
         "seniorHome": "Retirement Home",
         "hospital": "Hospital",
         "prison": "Prison Chaplaincy",
-        "military": "Military Chaplaincy"
+        "military": "Military Chaplaincy",
+        "rehaClinic": "Clínica de reabilitação",
+        "psychiatry": "Psiquiatria",
+        "burnoutClinic": "Clínica de burnout",
+        "hospice": "Hospício",
+        "counseling": "Centro de aconselhamento"
       }
     },
     "institutionsTitle": "Também para instituições",
@@ -688,6 +693,26 @@
       "military": {
         "title": "Military Chaplaincy",
         "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
+      },
+      "rehaClinic": {
+        "title": "Clínicas de reabilitação",
+        "desc": "Apoio espiritual durante a reabilitação – para força interior no caminho de volta à vida."
+      },
+      "psychiatry": {
+        "title": "Instituições psiquiátricas",
+        "desc": "Conversas espirituais confidenciais para pacientes em cuidados psiquiátricos."
+      },
+      "burnoutClinic": {
+        "title": "Clínicas de burnout",
+        "desc": "Questões de sentido e reflexão interior no esgotamento."
+      },
+      "hospice": {
+        "title": "Hospícios",
+        "desc": "Acompanhamento no final da vida – palavras reconfortantes e um ouvido aberto."
+      },
+      "counseling": {
+        "title": "Centros de aconselhamento",
+        "desc": "Impulsos espirituais complementares para clientes em aconselhamento psicossocial."
       }
     },
     "patronageNote": "BibleBot.Life é um projeto privado e não comercial. É gerido voluntariamente e financiado exclusivamente por doações. Sem publicidade, sem venda de dados, sem funcionalidades pagas. Todas as doações vão diretamente para cobrir custos operacionais (infraestrutura, hospedagem, desenvolvimento). As doações não são dedutíveis de impostos."
@@ -1025,5 +1050,9 @@
     "footerChurches": "Para igrejas",
     "seoTitle": "BibleBot.Life para capelães e life coaches — Planear cerimónias e sessões",
     "seoDesc": "Planeie funerais, casamentos, sessões de coaching: gravação de voz, geração de textos, teleprompter, calendário e colaboração."
+  },
+  "pricing": {
+    "onRequest": "Patrocínio sob consulta",
+    "contactUs": "Entre em contato"
   }
 }

@@ -698,7 +698,12 @@
         "seniorHome": "Ilé àgbàlagbà",
         "hospital": "Ilé ìwòsàn",
         "prison": "Ìtọ́jú ẹ̀mí ẹ̀wọ̀n",
-        "military": "Ìtọ́jú ẹ̀mí ológun"
+        "military": "Ìtọ́jú ẹ̀mí ológun",
+        "rehaClinic": "Ilé-ìwòsàn ìmúpadàbọ̀sípò",
+        "psychiatry": "Àwọn ilé-ìwòsàn ọpọlọ",
+        "burnoutClinic": "Ilé-ìwòsàn àárẹ̀",
+        "hospice": "Hospisi",
+        "counseling": "Ilé ìmọ̀ràn"
       }
     },
     "institutionsTitle": "Fún àwọn ilé-iṣẹ́ pẹ̀lú",
@@ -723,6 +728,26 @@
       "military": {
         "title": "Ìtọ́jú ẹ̀mí ológun",
         "desc": "Alábàáṣiṣẹ́pọ̀ ẹ̀mí fún àwọn ọmọ ogun – tó wà ní ìṣiṣẹ́ tàbí ní ìbùdó."
+      },
+      "rehaClinic": {
+        "title": "Àwọn Ilé-ìwòsàn Ìmúpadàbọ̀sípò",
+        "desc": "Àtìlẹ́yìn ẹ̀mí nígbà ìmúpadàbọ̀sípò."
+      },
+      "psychiatry": {
+        "title": "Àwọn Ilé-ìwòsàn Ọpọlọ",
+        "desc": "Ìfọ̀rọ̀wánilẹ́nuwò ẹ̀mí àdáni fún àwọn aláìsàn."
+      },
+      "burnoutClinic": {
+        "title": "Àwọn Ilé-ìwòsàn Àárẹ̀",
+        "desc": "Ìbéèrè ìtumọ̀ àti ìrònú inú nígbà àárẹ̀."
+      },
+      "hospice": {
+        "title": "Hospisi",
+        "desc": "Ìrànlọ́wọ́ ní ìparí ayé."
+      },
+      "counseling": {
+        "title": "Àwọn Ilé Ìmọ̀ràn",
+        "desc": "Àfikún ìmúlò ẹ̀mí fún àwọn aláàbàárà nínú ìmọ̀ràn."
       }
     },
     "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
@@ -1025,5 +1050,9 @@
     "footerChurches": "Fun Awọn Ile-ijọsin",
     "seoTitle": "BibleBot.Life fun Awọn Alufaa & Awọn Olukọni Igbesi Aye — Gbero Awọn Ayẹyẹ & Awọn Igba",
     "seoDesc": "Gbero awọn isinku, awọn igbeyawo, awọn igba ikẹkọ ni ọjọgbọn: gbigbasilẹ ohun, iran ọrọ, teleprompter, kalẹnda, ati ifowosowopo."
+  },
+  "pricing": {
+    "onRequest": "Ìtìlẹ́yìn lórí ìbéèrè",
+    "contactUs": "Kan sí wa"
   }
 }

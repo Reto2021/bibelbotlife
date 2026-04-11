@@ -698,7 +698,12 @@
         "seniorHome": "Nyumba ya Wazee",
         "hospital": "Hospitali",
         "prison": "Huduma ya Ushauri wa Magereza",
-        "military": "Huduma ya Ushauri wa Jeshi"
+        "military": "Huduma ya Ushauri wa Jeshi",
+        "rehaClinic": "Kliniki ya ukarabati",
+        "psychiatry": "Saikolojia",
+        "burnoutClinic": "Kliniki ya uchovu",
+        "hospice": "Hospisi",
+        "counseling": "Kituo cha ushauri"
       }
     },
     "institutionsTitle": "Pia kwa Taasisi",
@@ -723,6 +728,26 @@
       "military": {
         "title": "Ushauri wa Jeshi",
         "desc": "Uandamani wa kiroho kwa wanachama wa jeshi – inapatikana hata wakati wa operesheni au katika kambi."
+      },
+      "rehaClinic": {
+        "title": "Kliniki za Ukarabati",
+        "desc": "Msaada wa kiroho wakati wa ukarabati."
+      },
+      "psychiatry": {
+        "title": "Vituo vya Saikolojia",
+        "desc": "Mazungumzo ya siri ya kiroho kwa wagonjwa katika huduma ya kisaikolojia."
+      },
+      "burnoutClinic": {
+        "title": "Kliniki za Uchovu",
+        "desc": "Maswali ya maana na kutafakari ndani wakati wa uchovu."
+      },
+      "hospice": {
+        "title": "Hospisi",
+        "desc": "Urafiki mwishoni mwa maisha – maneno ya faraja."
+      },
+      "counseling": {
+        "title": "Vituo vya Ushauri",
+        "desc": "Msukumo wa kiroho wa ziada kwa wateja katika ushauri wa kisaikolojia."
       }
     },
     "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
@@ -1025,5 +1050,9 @@
     "footerChurches": "Kwa Makanisa",
     "seoTitle": "BibleBot.Life kwa Makasisi & Wakufunzi wa Maisha — Panga Sherehe & Vikao",
     "seoDesc": "Panga mazishi, harusi, vikao vya kufundisha kitaalamu: kurekodi sauti, uzalishaji wa maandishi, teleprompter, kalenda, na ushirikiano."
+  },
+  "pricing": {
+    "onRequest": "Udhamini kwa ombi",
+    "contactUs": "Wasiliana nasi"
   }
 }

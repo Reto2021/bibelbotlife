@@ -699,7 +699,12 @@
         "seniorHome": "Γηροκομείο",
         "hospital": "Νοσοκομείο",
         "prison": "Σωφρονιστική Ιεραποστολή",
-        "military": "Στρατιωτική Ιεραποστολή"
+        "military": "Στρατιωτική Ιεραποστολή",
+        "rehaClinic": "Κλινική αποκατάστασης",
+        "psychiatry": "Ψυχιατρική",
+        "burnoutClinic": "Κλινική εξουθένωσης",
+        "hospice": "Ξενώνας φιλοξενίας",
+        "counseling": "Συμβουλευτικό κέντρο"
       }
     },
     "institutionsTitle": "Επίσης για ιδρύματα",
@@ -724,6 +729,26 @@
       "military": {
         "title": "Στρατιωτική Ιεραποστολή",
         "desc": "Πνευματική συνοδεία για τα μέλη του στρατού – προσβάσιμη ακόμα και σε αποστολές ή στο στρατόπεδο."
+      },
+      "rehaClinic": {
+        "title": "Κλινικές αποκατάστασης",
+        "desc": "Πνευματική υποστήριξη κατά την αποκατάσταση."
+      },
+      "psychiatry": {
+        "title": "Ψυχιατρικές μονάδες",
+        "desc": "Εμπιστευτικές πνευματικές συνομιλίες για ασθενείς σε ψυχιατρική φροντίδα."
+      },
+      "burnoutClinic": {
+        "title": "Κλινικές εξουθένωσης",
+        "desc": "Ερωτήματα νοήματος και εσωτερικός στοχασμός κατά την εξάντληση."
+      },
+      "hospice": {
+        "title": "Ξενώνες",
+        "desc": "Συντροφιά στο τέλος της ζωής – παρηγορητικά λόγια στις τελευταίες μέρες."
+      },
+      "counseling": {
+        "title": "Συμβουλευτικά κέντρα",
+        "desc": "Συμπληρωματικές πνευματικές ωθήσεις για πελάτες σε ψυχοκοινωνική συμβουλευτική."
       }
     },
     "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
@@ -1026,5 +1051,9 @@
     "footerChurches": "Για Εκκλησίες",
     "seoTitle": "BibleBot.Life για Ιερείς & Life Coaches — Σχεδιάστε Τελετές & Συνεδρίες",
     "seoDesc": "Σχεδιάστε κηδείες, γάμους, συνεδρίες coaching επαγγελματικά: ηχογράφηση φωνής, δημιουργία κειμένου, teleprompter, ημερολόγιο και συνεργασία."
+  },
+  "pricing": {
+    "onRequest": "Πατρονία κατόπιν αιτήματος",
+    "contactUs": "Επικοινωνήστε μαζί μας"
   }
 }
