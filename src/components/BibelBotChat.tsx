@@ -173,40 +173,49 @@ function makeRefsClickable(children: React.ReactNode, onRefClick: (msg: string) 
   return processNode(children);
 }
 
-/** Extract options like "a) …", "b) …" from assistant text — works both line-by-line AND inline */
+/** Extract options like "a) …", "b) …", "A) …", "1. …", "- **…**" from assistant text */
 function extractOptions(text: string): { cleanText: string; options: string[] } {
-  // First try line-based matching
-  const lineRegex = /^[a-z]\)\s+.+$/gm;
-  const lineMatches = text.match(lineRegex);
-  if (lineMatches && lineMatches.length >= 2) {
-    let cleanText = text;
-    for (const m of lineMatches) {
-      cleanText = cleanText.replace(m, "").trim();
+  // Strategy: try multiple patterns and return the first that yields ≥2 options
+
+  const patterns: { line: RegExp; strip: RegExp }[] = [
+    // a) … / **a)** …  (lowercase)
+    { line: /^(\*{0,2})[a-z]\)\1\s+.+$/gm, strip: /^(\*{0,2})[a-z]\)\1\s+/ },
+    // A) … / **A)** …  (uppercase)
+    { line: /^(\*{0,2})[A-Z]\)\1\s+.+$/gm, strip: /^(\*{0,2})[A-Z]\)\1\s+/ },
+    // 1. … / **1.** …  (numbered)
+    { line: /^(\*{0,2})\d+\.\1\s+.+$/gm, strip: /^(\*{0,2})\d+\.\1\s+/ },
+    // - **…** or - …  (markdown bullet)
+    { line: /^[-–•]\s+.+$/gm, strip: /^[-–•]\s+/ },
+  ];
+
+  for (const { line, strip } of patterns) {
+    line.lastIndex = 0;
+    const matches = text.match(line);
+    if (matches && matches.length >= 2) {
+      let cleanText = text;
+      for (const m of matches) cleanText = cleanText.replace(m, "");
+      cleanText = cleanText.replace(/\n{3,}/g, "\n\n").trim();
+      const options = matches.map((m) =>
+        m.replace(strip, "").replace(/\*{1,2}/g, "").trim()
+      );
+      if (options.every((o) => o.length > 2)) return { cleanText, options };
     }
-    cleanText = cleanText.replace(/\n{3,}/g, "\n\n");
-    const options = lineMatches.map((m) => m.replace(/^[a-z]\)\s+/, "").trim());
-    return { cleanText, options };
   }
-  // Fallback: inline options like "**a)** Foo bar? **b)** Baz qux?"
-  // Match patterns: a) ... b) ... or **a)** ... **b)** ...
-  const inlineRegex = /\*{0,2}([a-z])\)\*{0,2}\s+([^]*?)(?=\s*\*{0,2}[a-z]\)\*{0,2}\s|$)/g;
-  const inlineMatches: string[] = [];
-  let match;
-  // Only attempt if we see at least a) and b) in the text
-  if (!/\*{0,2}a\)\*{0,2}\s/.test(text) || !/\*{0,2}b\)\*{0,2}\s/.test(text)) {
-    return { cleanText: text, options: [] };
+
+  // Inline fallback: "a) Foo b) Bar" or "**a)** Foo **b)** Bar" on a single line
+  const inlineLetterRe = /\*{0,2}[a-zA-Z]\)\*{0,2}\s/;
+  if ((text.match(new RegExp(inlineLetterRe.source, "g")) || []).length >= 2) {
+    const optionsStart = text.search(inlineLetterRe);
+    if (optionsStart === -1) return { cleanText: text, options: [] };
+    const beforeOptions = text.slice(0, optionsStart).trim();
+    const optionsText = text.slice(optionsStart);
+    const splitRe = /\*{0,2}[a-zA-Z]\)\*{0,2}\s+/g;
+    const parts = optionsText.split(splitRe).filter((s) => s.trim().length > 2);
+    const options = parts.map((p) => p.replace(/\*{1,2}/g, "").replace(/[.?!,;]\s*$/, "").trim());
+    if (options.length >= 2) return { cleanText: beforeOptions, options };
   }
-  // Find the start of options block (where "a)" begins)
-  const optionsStart = text.search(/\*{0,2}a\)\*{0,2}\s/);
-  if (optionsStart === -1) return { cleanText: text, options: [] };
-  const beforeOptions = text.slice(0, optionsStart).trim();
-  const optionsText = text.slice(optionsStart);
-  while ((match = inlineRegex.exec(optionsText)) !== null) {
-    const optText = match[2].trim().replace(/\.?\s*$/, "").trim();
-    if (optText.length > 2) inlineMatches.push(optText);
-  }
-  if (inlineMatches.length < 2) return { cleanText: text, options: [] };
-  return { cleanText: beforeOptions, options: inlineMatches };
+
+  return { cleanText: text, options: [] };
 }
 
 function loadMessages(): Message[] {
