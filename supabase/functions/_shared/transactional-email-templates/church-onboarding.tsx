@@ -1,11 +1,12 @@
 import * as React from 'npm:react@18.3.1'
 import {
-  Body, Container, Head, Heading, Html, Preview, Text, Button, Hr, Section, Link,
+  Body, Container, Head, Heading, Html, Img, Preview, Text, Button, Hr, Section, Link,
 } from 'npm:@react-email/components@0.0.22'
 import type { TemplateEntry } from './registry.ts'
 
 const SITE_NAME = "BibleBot.Life"
 const BASE_URL = "https://biblebot.life"
+const LOGO_URL = 'https://swsthxftugjqznqjcfpk.supabase.co/storage/v1/object/public/share-images/email%2Fbiblebot-logo.png'
 
 interface ChurchOnboardingProps {
   churchName?: string
@@ -33,6 +34,12 @@ const ChurchOnboardingEmail = ({
       <Preview>Willkommen bei {SITE_NAME} – Euer Integrations-Kit ist bereit!</Preview>
       <Body style={main}>
         <Container style={container}>
+          <Section style={logoSection}>
+            <Img src={LOGO_URL} alt={SITE_NAME} width="56" height="56" style={logoImg} />
+            <Text style={brandTextStyle}>{SITE_NAME}</Text>
+          </Section>
+          <Hr style={hrGold} />
+
           {/* Header */}
           <Section style={headerSection}>
             <Text style={headerBadge}>🎉 Partnerschaft aktiviert</Text>
@@ -47,7 +54,7 @@ const ChurchOnboardingEmail = ({
             Euer gebrandeter {botName} steht bereit und kann ab sofort von eurer Gemeinde genutzt werden.
           </Text>
 
-          <Hr style={hr} />
+          <Hr style={hrLight} />
 
           {/* 1. Branded Link */}
           <Heading as="h2" style={h2}>🔗 Euer Branded Link</Heading>
@@ -62,7 +69,7 @@ const ChurchOnboardingEmail = ({
           </Text>
 
           {/* 2. QR Code */}
-          <Hr style={hr} />
+          <Hr style={hrLight} />
           <Heading as="h2" style={h2}>📱 QR-Code</Heading>
           <Text style={text}>
             Druckt diesen QR-Code aus für Gemeindebrief, Flyer, Plakate oder den Beamer im Gottesdienst:
@@ -77,7 +84,7 @@ const ChurchOnboardingEmail = ({
           </Text>
 
           {/* 3. Website Widget */}
-          <Hr style={hr} />
+          <Hr style={hrLight} />
           <Heading as="h2" style={h2}>💻 Website-Widget</Heading>
           <Text style={text}>
             Fügt diesen Code-Schnipsel vor dem schliessenden &lt;/body&gt; Tag eurer Website ein.
@@ -90,7 +97,7 @@ const ChurchOnboardingEmail = ({
           </Section>
 
           {/* 4. Integrations-Seite */}
-          <Hr style={hr} />
+          <Hr style={hrLight} />
           <Heading as="h2" style={h2}>📋 Alles auf einen Blick</Heading>
           <Text style={text}>
             Auf eurer persönlichen Integrations-Seite findet ihr alle Assets zum Kopieren und Herunterladen —
@@ -103,7 +110,7 @@ const ChurchOnboardingEmail = ({
           </Section>
 
           {/* Tips */}
-          <Hr style={hr} />
+          <Hr style={hrLight} />
           <Heading as="h2" style={h2}>💡 Tipps für den Start</Heading>
           <Text style={listText}>• <strong>Newsletter:</strong> Branded Link + kurze Beschreibung einfügen</Text>
           <Text style={listText}>• <strong>Gemeindebrief:</strong> QR-Code ausdrucken mit Hinweis «Frag die Bibel»</Text>
@@ -111,7 +118,7 @@ const ChurchOnboardingEmail = ({
           <Text style={listText}>• <strong>Gottesdienst:</strong> QR-Code auf den Beamer – interaktive Bibelarbeit</Text>
           <Text style={listText}>• <strong>Social Media:</strong> Branded Link teilen mit kurzem Teaser</Text>
 
-          <Hr style={hr} />
+          <Hr style={hrLight} />
           <Text style={footer}>
             Bei Fragen sind wir jederzeit für euch da.{'\n'}
             Herzliche Grüsse, das {SITE_NAME} Team
@@ -138,6 +145,10 @@ export const template = {
 
 const main = { backgroundColor: '#ffffff', fontFamily: "'Helvetica Neue', Arial, sans-serif" }
 const container = { padding: '32px 28px', maxWidth: '560px', margin: '0 auto' }
+const logoSection = { textAlign: 'center' as const, marginBottom: '8px' }
+const logoImg = { margin: '0 auto', borderRadius: '12px' }
+const brandTextStyle = { fontSize: '18px', fontWeight: '700' as const, color: '#C8883A', margin: '8px 0 0', letterSpacing: '0.3px' }
+const hrGold = { borderColor: '#C8883A', margin: '16px 0 24px', borderWidth: '2px' }
 const headerSection = { textAlign: 'center' as const, marginBottom: '8px' }
 const headerBadge = {
   display: 'inline-block' as const,
@@ -154,7 +165,7 @@ const h2 = { fontSize: '17px', fontWeight: '600' as const, color: '#1a2a3a', mar
 const text = { fontSize: '15px', color: '#4a5568', lineHeight: '1.6', margin: '0 0 16px' }
 const hint = { fontSize: '13px', color: '#718096', fontStyle: 'italic' as const, margin: '4px 0 0' }
 const listText = { fontSize: '14px', color: '#4a5568', lineHeight: '1.5', margin: '0 0 6px' }
-const hr = { borderColor: '#e2c496', margin: '24px 0' }
+const hrLight = { borderColor: '#e2c496', margin: '24px 0' }
 const footer = { fontSize: '13px', color: '#999999', margin: '0', whiteSpace: 'pre-line' as const }
 const codeBlock = {
   backgroundColor: '#f7f6f3',
@@ -163,13 +174,13 @@ const codeBlock = {
   padding: '14px 16px',
   margin: '0 0 8px',
 }
-const codeText = { fontSize: '14px', color: '#c87d2f', fontFamily: 'monospace', margin: '0', wordBreak: 'break-all' as const }
-const codeTextSmall = { fontSize: '12px', color: '#c87d2f', fontFamily: 'monospace', margin: '0', wordBreak: 'break-all' as const }
+const codeText = { fontSize: '14px', color: '#C8883A', fontFamily: 'monospace', margin: '0', wordBreak: 'break-all' as const }
+const codeTextSmall = { fontSize: '12px', color: '#C8883A', fontFamily: 'monospace', margin: '0', wordBreak: 'break-all' as const }
 const qrSection = { textAlign: 'center' as const, margin: '0 0 8px' }
 const qrImage = { borderRadius: '12px', border: '1px solid #e2e0dc' }
 const buttonSection = { textAlign: 'center' as const, margin: '8px 0' }
 const ctaButton = {
-  backgroundColor: '#c87d2f',
+  backgroundColor: '#C8883A',
   color: '#ffffff',
   fontSize: '15px',
   fontWeight: '600' as const,

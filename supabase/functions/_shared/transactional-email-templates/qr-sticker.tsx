@@ -1,11 +1,12 @@
 import * as React from 'npm:react@18.3.1'
 import {
-  Body, Container, Head, Heading, Html, Preview, Text, Button, Hr, Section, Img, Link,
+  Body, Container, Head, Heading, Html, Img, Preview, Text, Button, Hr, Section, Link,
 } from 'npm:@react-email/components@0.0.22'
 import type { TemplateEntry } from './registry.ts'
 
 const SITE_NAME = "BibleBot.Life"
 const BASE_URL = "https://biblebot.life"
+const LOGO_URL = 'https://swsthxftugjqznqjcfpk.supabase.co/storage/v1/object/public/share-images/email%2Fbiblebot-logo.png'
 
 interface QRStickerEmailProps {
   churchName?: string
@@ -31,6 +32,12 @@ const QRStickerEmail = ({
       <Preview>Euer QR-Sticker für {botName} ist bereit</Preview>
       <Body style={main}>
         <Container style={container}>
+          <Section style={logoSection}>
+            <Img src={LOGO_URL} alt={SITE_NAME} width="56" height="56" style={logoImg} />
+            <Text style={brandTextHeader}>{SITE_NAME}</Text>
+          </Section>
+          <Hr style={hrGold} />
+
           <Heading style={h1}>
             {contactName ? `Hallo ${contactName}` : 'Hallo'}! 👋
           </Heading>
@@ -96,8 +103,12 @@ export const template = {
   },
 } satisfies TemplateEntry
 
-const main = { backgroundColor: '#ffffff', fontFamily: "'Segoe UI', Arial, sans-serif" }
+const main = { backgroundColor: '#ffffff', fontFamily: "'Helvetica Neue', Arial, sans-serif" }
 const container = { padding: '24px 28px', maxWidth: '520px', margin: '0 auto' }
+const logoSection = { textAlign: 'center' as const, marginBottom: '8px' }
+const logoImg = { margin: '0 auto', borderRadius: '12px' }
+const brandTextHeader = { fontSize: '18px', fontWeight: '700' as const, color: '#C8883A', margin: '8px 0 0', letterSpacing: '0.3px' }
+const hrGold = { borderColor: '#C8883A', margin: '16px 0 24px', borderWidth: '2px' }
 const h1 = { fontSize: '22px', fontWeight: '700' as const, color: '#2D2318', margin: '0 0 16px' }
 const text = { fontSize: '15px', color: '#55575d', lineHeight: '1.6', margin: '0 0 20px' }
 
