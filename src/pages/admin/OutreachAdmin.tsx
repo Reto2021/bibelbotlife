@@ -707,21 +707,65 @@ export default function OutreachAdmin() {
                   <div><Label>Max. Leads</Label><Input type="number" min={1} max={20} value={pipelineMax} onChange={(e) => setPipelineMax(Number(e.target.value))} /></div>
                 </div>
 
-                {/* Pipeline Progress Log */}
+                {/* Pipeline Stepper + Progress */}
+                {(pipelineRunning || pipelineStep === "done") && (
+                  <div className="space-y-3">
+                    {/* Step indicators */}
+                    <div className="flex items-center gap-1">
+                      {[
+                        { key: "discover", label: "Discover", icon: "🔍", num: 1 },
+                        { key: "scrape", label: "Scrape", icon: "🌐", num: 2 },
+                        { key: "sequence", label: "Sequenz", icon: "✍️", num: 3 },
+                        { key: "send", label: "Senden", icon: "🚀", num: 4 },
+                      ].map((s, i) => {
+                        const stepOrder = ["discover", "scrape", "sequence", "send"];
+                        const currentIdx = pipelineStep ? stepOrder.indexOf(pipelineStep) : -1;
+                        const thisIdx = stepOrder.indexOf(s.key);
+                        const isDone = pipelineStep === "done" || thisIdx < currentIdx;
+                        const isActive = s.key === pipelineStep && pipelineStep !== "done";
+                        return (
+                          <div key={s.key} className="flex items-center flex-1">
+                            <div className={`flex flex-col items-center flex-1 ${isActive ? "scale-105" : ""}`}>
+                              <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium transition-all duration-300 ${
+                                isDone ? "bg-primary text-primary-foreground" :
+                                isActive ? "bg-primary/20 text-primary ring-2 ring-primary animate-pulse" :
+                                "bg-muted text-muted-foreground"
+                              }`}>
+                                {isDone ? "✓" : s.icon}
+                              </div>
+                              <span className={`text-[10px] mt-1 ${isActive ? "font-semibold text-primary" : isDone ? "text-foreground" : "text-muted-foreground"}`}>
+                                {s.label}
+                              </span>
+                            </div>
+                            {i < 3 && (
+                              <div className={`h-0.5 w-full mx-1 mt-[-12px] rounded transition-all duration-500 ${
+                                thisIdx < currentIdx || pipelineStep === "done" ? "bg-primary" : "bg-border"
+                              }`} />
+                            )}
+                          </div>
+                        );
+                      })}
+                    </div>
+                    {/* Overall progress bar */}
+                    <div className="w-full bg-border rounded-full h-2 overflow-hidden">
+                      <div
+                        className="bg-primary h-2 rounded-full transition-all duration-700 ease-out"
+                        style={{
+                          width: pipelineStep === "done" ? "100%" :
+                            pipelineStep === "send" ? "87%" :
+                            pipelineStep === "sequence" ? "62%" :
+                            pipelineStep === "scrape" ? "37%" :
+                            pipelineStep === "discover" ? "12%" : "0%",
+                        }}
+                      />
+                    </div>
+                  </div>
+                )}
+
+                {/* Pipeline Log */}
                 {pipelineLog.length > 0 && (
-                  <Card className="bg-muted/50">
+                  <Card className="bg-muted/50 max-h-48 overflow-y-auto">
                     <CardContent className="p-3 space-y-1">
-                      {pipelineStep && pipelineStep !== "done" && (
-                        <div className="flex items-center gap-2 mb-2">
-                          <Loader2 className="h-4 w-4 animate-spin text-primary" />
-                          <span className="text-sm font-medium">
-                            {pipelineStep === "discover" && "Schritt 1/4: Discover"}
-                            {pipelineStep === "scrape" && "Schritt 2/4: Scrape"}
-                            {pipelineStep === "sequence" && "Schritt 3/4: Sequenz"}
-                            {pipelineStep === "send" && "Schritt 4/4: Senden"}
-                          </span>
-                        </div>
-                      )}
                       {pipelineLog.map((line, i) => (
                         <p key={i} className="text-xs text-muted-foreground">{line}</p>
                       ))}
