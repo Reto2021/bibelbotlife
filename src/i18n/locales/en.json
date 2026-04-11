@@ -658,11 +658,41 @@
       "orgTypePlaceholder": "Select type...",
       "orgTypes": {
         "church": "Church",
+        "reformed": "Reformed Church",
+        "catholic": "Catholic Church",
+        "lutheran": "Lutheran Church",
+        "evangelical": "Free Church / Evangelical",
+        "freelance": "Freelance / Independent",
         "careHome": "Care Home",
         "seniorHome": "Retirement Home",
         "hospital": "Hospital",
         "prison": "Prison Chaplaincy",
-        "military": "Military Chaplaincy"
+        "military": "Military Chaplaincy",
+        "other": "Other"
+      }
+    },
+    "denominationsTitle": "For all denominations & ceremony leaders",
+    "denominationsSubtitle": "BibleBot is ecumenical – for Reformed, Catholic, Lutheran, and Free Church communities, as well as freelance ceremony officiants.",
+    "denomination": {
+      "reformed": {
+        "title": "Reformed Church",
+        "desc": "Zurich Bible, Reformed liturgy, and sermon support – tailored to your parish."
+      },
+      "catholic": {
+        "title": "Catholic Church",
+        "desc": "Einheitsübersetzung, Mass planning, and sacraments – aligned with Catholic traditions."
+      },
+      "lutheran": {
+        "title": "Lutheran Church",
+        "desc": "Luther Bible, service planning, and pastoral care – for Evangelical-Lutheran congregations."
+      },
+      "evangelical": {
+        "title": "Free Churches",
+        "desc": "Schlachter 2000, worship, and flexible service design – for free church communities."
+      },
+      "freelance": {
+        "title": "Freelance Officiants",
+        "desc": "Funeral speakers, wedding celebrants, and independent ceremony leaders – with biography tools and speech planning."
       }
     },
     "institutionsTitle": "For all kinds of organizations",
