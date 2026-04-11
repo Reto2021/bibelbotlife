@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import bibelbotLogo from "@/assets/biblebot-logo.png";
 import { Search, ArrowRight, Shield, Loader2, Mic, MicOff, Send, Menu, LogIn, X, EyeOff, Heart, Accessibility, Volume2, VolumeX } from "lucide-react";
 import { useTTS } from "@/hooks/use-tts";
-import { VoicePicker } from "@/components/VoicePicker";
+
 import { useSeniorMode } from "@/hooks/use-senior-mode";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTrack } from "@/components/AnalyticsProvider";
