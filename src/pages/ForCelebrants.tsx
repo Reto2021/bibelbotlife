@@ -142,6 +142,9 @@ export default function ForCelebrants() {
                   <div className="mb-6">
                     <span className="text-3xl font-extrabold text-foreground">{plan.price}</span>
                     <span className="text-muted-foreground">{plan.period}</span>
+                    {currency !== "CHF" && (plan as any).priceCHF > 0 && (
+                      <p className="text-[10px] text-muted-foreground/60 mt-1">≈ CHF {(plan as any).priceCHF}.–</p>
+                    )}
                   </div>
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((f, j) => (
