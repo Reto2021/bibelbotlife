@@ -1,4 +1,5 @@
 import { SEOHead } from "@/components/SEOHead";
+import { useCurrency } from "@/hooks/use-currency";
 import { Link } from "react-router-dom";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Button } from "@/components/ui/button";
