@@ -196,7 +196,7 @@ function extractOptions(text: string): { cleanText: string; options: string[] } 
       for (const m of matches) cleanText = cleanText.replace(m, "");
       cleanText = cleanText.replace(/\n{3,}/g, "\n\n").trim();
       const options = matches.map((m) =>
-        m.replace(strip, "").replace(/^\*{1,2}/, "").replace(/\*{1,2}$/, "").trim()
+        m.replace(strip, "").replace(/\*{1,2}/g, "").trim()
       );
       if (options.every((o) => o.length > 2)) return { cleanText, options };
     }
