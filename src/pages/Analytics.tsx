@@ -2,10 +2,12 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import {
   BarChart3, Eye, MousePointer, Users, Smartphone, Monitor, Tablet,
   MessageCircle, Flame, Trophy, Bell, TrendingUp, Download, Globe,
-  Target, CircleDot, Search,
+  Target, CircleDot, Search, Clock, CalendarDays, Building2, Link2,
 } from "lucide-react";
 import {
   BarChart, Bar, XAxis, YAxis, Tooltip as RTooltip, ResponsiveContainer,
@@ -14,7 +16,7 @@ import {
 
 type AnalyticsData = {
   period: { days: number; since: string };
-  summary: { totalPageviews: number; totalEvents: number; uniqueSessions: number };
+  summary: { totalPageviews: number; totalEvents: number; uniqueSessions: number; avgSessionDurationSec?: number };
   topPages: { path: string; count: number }[];
   topEvents: { name: string; count: number }[];
   topReferrers?: { source: string; count: number }[];
@@ -51,9 +53,22 @@ type AnalyticsData = {
     avgScore: number;
     weakestAreas: { area: string; count: number }[];
   };
-  sevenWhys?: {
-    starts: number;
-  };
+  sevenWhys?: { starts: number };
+  // New sections
+  perChurch?: Record<string, {
+    churchName: string;
+    planTier: string;
+    isActive: boolean;
+    pageviews: number;
+    events: number;
+    sessions: number;
+    dailyPageviews: Record<string, number>;
+    topEvents: { name: string; count: number }[];
+  }>;
+  utmSources?: { source: string; count: number }[];
+  utmMediums?: { medium: string; count: number }[];
+  hourlyDistribution?: { hour: number; count: number }[];
+  weekdayDistribution?: { day: string; count: number }[];
 };
 
 const COLORS = [
@@ -82,6 +97,13 @@ const StatCard = ({ icon: Icon, label, value, sub, color = "text-primary" }: {
     </CardContent>
   </Card>
 );
+
+const formatDuration = (sec: number) => {
+  if (sec < 60) return `${sec}s`;
+  const min = Math.floor(sec / 60);
+  const s = sec % 60;
+  return `${min}m ${s}s`;
+};
 
 const Analytics = () => {
   const [key, setKey] = useState("");
@@ -147,29 +169,19 @@ const Analytics = () => {
     rows.push(["Übersicht", "Seitenaufrufe", String(data.summary.totalPageviews)]);
     rows.push(["Übersicht", "Sessions", String(data.summary.uniqueSessions)]);
     rows.push(["Übersicht", "Events", String(data.summary.totalEvents)]);
+    rows.push(["Übersicht", "Ø Verweildauer", formatDuration(data.summary.avgSessionDurationSec || 0)]);
     rows.push(["Chat", "Nutzer", String(data.chat?.uniqueUsers || 0)]);
     rows.push(["Chat", "User-Nachrichten", String(data.chat?.totalUserMessages || 0)]);
     rows.push(["Chat", "Bot-Antworten", String(data.chat?.totalBotMessages || 0)]);
-    rows.push(["Chat", "Ø Nachr./Person", String(data.chat?.avgMessagesPerUser || 0)]);
-    rows.push(["Journey", "Gestartet", String(data.journey?.starts || 0)]);
-    rows.push(["Journey", "Abgeschlossen", String(data.journey?.completes || 0)]);
-    rows.push(["Abonnenten", "Total", String(data.subscribers?.total || 0)]);
-    rows.push(["Abonnenten", "Aktiv", String(data.subscribers?.active || 0)]);
-    Object.entries(data.devices || {}).forEach(([k, v]) => rows.push(["Geräte", k, String(v)]));
-    Object.entries(data.dailyPageviews || {}).forEach(([date, count]) => rows.push(["Seitenaufrufe", date, String(count)]));
-    Object.entries(data.chat?.dailyActivity || {}).forEach(([date, count]) => rows.push(["Chat-Aktivität", date, String(count)]));
     data.topPages?.forEach((p) => rows.push(["Top Seiten", p.path, String(p.count)]));
     data.topEvents?.forEach((e) => rows.push(["Top Events", e.name, String(e.count)]));
-    data.topReferrers?.forEach((r) => rows.push(["Referrer", r.source, String(r.count)]));
-    Object.entries(data.subscribers?.byChannel || {}).forEach(([ch, total]) =>
-      rows.push(["Abonnenten-Kanal", ch, `${total} (aktiv: ${data.subscribers?.activeByChannel?.[ch] || 0})`])
-    );
-    rows.push(["Kacheln", "Total Klicks", String(data.tiles?.totalClicks || 0)]);
-    data.tiles?.topTiles?.forEach((t) => rows.push(["Kacheln", t.tile, String(t.count)]));
-    rows.push(["Lebensrad", "Abschlüsse", String(data.lifewheel?.completions || 0)]);
-    rows.push(["Lebensrad", "Ø Score", String(data.lifewheel?.avgScore || 0)]);
-    data.lifewheel?.weakestAreas?.forEach((a) => rows.push(["Lebensrad – Schwächste", a.area, String(a.count)]));
-    rows.push(["7 Warums", "Gestartet", String(data.sevenWhys?.starts || 0)]);
+    data.utmSources?.forEach((s) => rows.push(["UTM Source", s.source, String(s.count)]));
+    // Per church
+    if (data.perChurch) {
+      Object.entries(data.perChurch).forEach(([slug, c]) => {
+        rows.push(["Gemeinde", `${c.churchName} (${slug})`, `PV:${c.pageviews} Sess:${c.sessions} Evt:${c.events}`]);
+      });
+    }
     const csv = rows.map((r) => r.map((c) => `"${c.replace(/"/g, '""')}"`).join(",")).join("\n");
     const blob = new Blob(["\uFEFF" + csv], { type: "text/csv;charset=utf-8;" });
     const url = URL.createObjectURL(blob);
@@ -180,7 +192,6 @@ const Analytics = () => {
     URL.revokeObjectURL(url);
   };
 
-  // Prepare chart data
   const dailyData = Object.entries(data?.dailyPageviews || {}).map(([date, count]) => ({
     date: date.slice(5),
     Aufrufe: count,
@@ -201,6 +212,12 @@ const Analytics = () => {
     total,
     aktiv: data?.subscribers?.activeByChannel?.[channel] || 0,
   }));
+
+  // Per-church sorted by pageviews
+  const churchList = data?.perChurch
+    ? Object.entries(data.perChurch)
+        .sort(([, a], [, b]) => b.pageviews - a.pageviews)
+    : [];
 
   return (
     <div className="min-h-screen bg-background p-4 md:p-8">
@@ -230,9 +247,10 @@ const Analytics = () => {
         </div>
 
         {/* Summary stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
           <StatCard icon={Eye} label="Seitenaufrufe" value={data?.summary.totalPageviews || 0} />
           <StatCard icon={Users} label="Sessions" value={data?.summary.uniqueSessions || 0} />
+          <StatCard icon={Clock} label="Ø Verweildauer" value={formatDuration(data?.summary.avgSessionDurationSec || 0)} />
           <StatCard icon={MousePointer} label="Events" value={data?.summary.totalEvents || 0} />
           <StatCard icon={MessageCircle} label="Chat-Nutzer" value={data?.chat?.uniqueUsers || 0} sub={`∅ ${data?.chat?.avgMessagesPerUser || 0} Nachr./Person`} />
         </div>
@@ -259,6 +277,158 @@ const Analytics = () => {
             </div>
           </CardContent>
         </Card>
+
+        {/* ════ NEW: Hourly + Weekday Distribution ════ */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-base flex items-center gap-2">
+                <Clock className="h-4 w-4 text-primary" />
+                Tageszeiten
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="h-40">
+                <ResponsiveContainer width="100%" height="100%">
+                  <BarChart data={data?.hourlyDistribution || []}>
+                    <XAxis dataKey="hour" tick={{ fontSize: 9 }} className="fill-muted-foreground" interval={2}
+                      tickFormatter={(h) => `${h}h`} />
+                    <YAxis tick={{ fontSize: 10 }} className="fill-muted-foreground" allowDecimals={false} />
+                    <RTooltip contentStyle={{ background: "hsl(var(--card))", border: "1px solid hsl(var(--border))", borderRadius: 8, fontSize: 12 }}
+                      formatter={(v: number) => [v, "Events"]}
+                      labelFormatter={(h) => `${h}:00 – ${h}:59`} />
+                    <Bar dataKey="count" fill="hsl(var(--chart-3))" radius={[3, 3, 0, 0]} />
+                  </BarChart>
+                </ResponsiveContainer>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-base flex items-center gap-2">
+                <CalendarDays className="h-4 w-4 text-primary" />
+                Wochentage
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="h-40">
+                <ResponsiveContainer width="100%" height="100%">
+                  <BarChart data={data?.weekdayDistribution || []}>
+                    <XAxis dataKey="day" tick={{ fontSize: 11 }} className="fill-muted-foreground" />
+                    <YAxis tick={{ fontSize: 10 }} className="fill-muted-foreground" allowDecimals={false} />
+                    <RTooltip contentStyle={{ background: "hsl(var(--card))", border: "1px solid hsl(var(--border))", borderRadius: 8, fontSize: 12 }}
+                      formatter={(v: number) => [v, "Events"]} />
+                    <Bar dataKey="count" fill="hsl(var(--chart-4))" radius={[3, 3, 0, 0]} />
+                  </BarChart>
+                </ResponsiveContainer>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* ════ NEW: UTM Sources & Mediums ════ */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-base flex items-center gap-2">
+                <Link2 className="h-4 w-4 text-primary" />
+                Traffic-Quellen (UTM Source)
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-2">
+                {data?.utmSources?.map((s) => {
+                  const max = data.utmSources?.[0]?.count || 1;
+                  return (
+                    <div key={s.source} className="space-y-0.5">
+                      <div className="flex justify-between items-center text-sm">
+                        <span className="text-foreground text-xs truncate">{s.source}</span>
+                        <span className="text-muted-foreground text-xs ml-2">{s.count}</span>
+                      </div>
+                      <div className="h-1.5 bg-muted rounded-full overflow-hidden">
+                        <div className="h-full bg-primary rounded-full" style={{ width: `${(s.count / max) * 100}%` }} />
+                      </div>
+                    </div>
+                  );
+                })}
+                {!data?.utmSources?.length && <p className="text-sm text-muted-foreground">Keine UTM-Quellen erfasst</p>}
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-base flex items-center gap-2">
+                <Globe className="h-4 w-4 text-primary" />
+                UTM Medium
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-2">
+                {data?.utmMediums?.map((m) => {
+                  const max = data.utmMediums?.[0]?.count || 1;
+                  return (
+                    <div key={m.medium} className="space-y-0.5">
+                      <div className="flex justify-between items-center text-sm">
+                        <span className="text-foreground text-xs truncate">{m.medium}</span>
+                        <span className="text-muted-foreground text-xs ml-2">{m.count}</span>
+                      </div>
+                      <div className="h-1.5 bg-muted rounded-full overflow-hidden">
+                        <div className="h-full bg-chart-2 rounded-full" style={{ width: `${(m.count / max) * 100}%` }} />
+                      </div>
+                    </div>
+                  );
+                })}
+                {!data?.utmMediums?.length && <p className="text-sm text-muted-foreground">Keine UTM-Medien erfasst</p>}
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* ════ NEW: Per-Church Breakdown ════ */}
+        {churchList.length > 0 && (
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-base flex items-center gap-2">
+                <Building2 className="h-4 w-4 text-primary" />
+                Nutzung pro Gemeinde
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="p-0">
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead>Gemeinde</TableHead>
+                    <TableHead className="text-right">Seitenaufrufe</TableHead>
+                    <TableHead className="text-right">Besucher</TableHead>
+                    <TableHead className="text-right">Events</TableHead>
+                    <TableHead className="hidden md:table-cell">Plan</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {churchList.map(([slug, c]) => (
+                    <TableRow key={slug}>
+                      <TableCell className="font-medium">
+                        <div className="flex items-center gap-2">
+                          {!c.isActive && <span className="h-2 w-2 rounded-full bg-destructive" />}
+                          {c.churchName}
+                          <span className="text-xs text-muted-foreground">({slug})</span>
+                        </div>
+                      </TableCell>
+                      <TableCell className="text-right font-mono">{c.pageviews}</TableCell>
+                      <TableCell className="text-right font-mono">{c.sessions}</TableCell>
+                      <TableCell className="text-right font-mono">{c.events}</TableCell>
+                      <TableCell className="hidden md:table-cell">
+                        <Badge variant="secondary" className="text-xs">{c.planTier}</Badge>
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </CardContent>
+          </Card>
+        )}
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Chat activity */}
@@ -362,7 +532,7 @@ const Analytics = () => {
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={data?.journey?.progressChart || []}>
                   <CartesianGrid strokeDasharray="3 3" className="stroke-border" />
-                  <XAxis dataKey="day" tick={{ fontSize: 10 }} className="fill-muted-foreground" label={{ value: "Tag", position: "insideBottom", offset: -2, fontSize: 10 }} />
+                  <XAxis dataKey="day" tick={{ fontSize: 10 }} className="fill-muted-foreground" />
                   <YAxis tick={{ fontSize: 10 }} className="fill-muted-foreground" allowDecimals={false} />
                   <RTooltip
                     contentStyle={{ background: "hsl(var(--card))", border: "1px solid hsl(var(--border))", borderRadius: 8, fontSize: 12 }}
@@ -375,7 +545,7 @@ const Analytics = () => {
           </CardContent>
         </Card>
 
-        {/* Kachel-Klicks Zeitverlauf */}
+        {/* Kachel-Klicks */}
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-base flex items-center gap-2">
@@ -409,7 +579,6 @@ const Analytics = () => {
 
         {/* Kacheln & Features */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {/* Tile Clicks */}
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-base flex items-center gap-2">
@@ -439,7 +608,6 @@ const Analytics = () => {
             </CardContent>
           </Card>
 
-          {/* LifeWheel */}
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-base flex items-center gap-2">
@@ -471,7 +639,6 @@ const Analytics = () => {
             </CardContent>
           </Card>
 
-          {/* 7 Whys */}
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-base flex items-center gap-2">
@@ -525,7 +692,6 @@ const Analytics = () => {
         </Card>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {/* Top Pages */}
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-base">Top Seiten</CardTitle>
@@ -551,7 +717,6 @@ const Analytics = () => {
             </CardContent>
           </Card>
 
-          {/* Top Events */}
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-base">Top Events</CardTitle>
@@ -578,7 +743,7 @@ const Analytics = () => {
           </Card>
         </div>
 
-        {/* Referrer-Quellen */}
+        {/* Referrer */}
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-base flex items-center gap-2">
@@ -607,7 +772,7 @@ const Analytics = () => {
           </CardContent>
         </Card>
 
-        {/* Referrer-Trend */}
+        {/* Referrer Trend */}
         {(data?.referrerTrend?.length ?? 0) > 1 && (
           <Card>
             <CardHeader className="pb-2">
