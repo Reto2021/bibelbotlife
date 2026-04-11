@@ -8,9 +8,9 @@ import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { Card } from "@/components/ui/card";
 import { SEOHead } from "@/components/SEOHead";
+import { SiteHeader } from "@/components/SiteHeader";
 import { useToast } from "@/hooks/use-toast";
-import { Heart, Send, ArrowLeft } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Heart, Send } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 function getSessionId() {

@@ -1,12 +1,12 @@
 import { useState, useCallback } from "react";
 import { useTranslation } from "react-i18next";
-import { Search, Book, Loader2, ChevronRight, ArrowLeft } from "lucide-react";
+import { Search, Book, Loader2, ChevronRight } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { SEOHead } from "@/components/SEOHead";
-import { Link } from "react-router-dom";
+import { SiteHeader } from "@/components/SiteHeader";
 
 const SEARCH_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/bible-search`;
 
@@ -89,13 +89,10 @@ export default function BibleSearch() {
       />
 
       <div className="min-h-screen bg-background">
+        <SiteHeader />
         <div className="max-w-3xl mx-auto px-4 py-8">
           {/* Header */}
           <div className="mb-8">
-            <Link to="/" className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground mb-4">
-              <ArrowLeft className="w-4 h-4 mr-1" />
-              Zurück
-            </Link>
             <h1 className="text-3xl font-bold text-foreground flex items-center gap-3">
               <Book className="w-8 h-8 text-primary" />
               Semantische Bibelsuche
