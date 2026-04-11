@@ -80,31 +80,38 @@ Deno.serve(async (req) => {
         messages: [
           {
             role: "system",
-            content: `Du extrahierst Kontaktdaten von Kirchen-/Gemeinde-Websites.
+            content: `Du extrahierst Kontaktdaten von Websites. Zielgruppen sind:
+- Kirchen und Gemeinden (reformiert, katholisch, freikirchlich etc.)
+- Seelsorger und Seelsorge-Praxen (Spitalseelsorge, Gefängnisseelsorge, Notfallseelsorge etc.)
+- Life Coaches mit spirituellem/christlichem Fokus
+- Heime und Pflegeeinrichtungen mit Seelsorge-Angebot
+
 Antworte NUR mit einem JSON-Array. Für jede Website ein Objekt:
 [
   {
     "website_index": 1,
-    "church_name": "Name der Gemeinde",
+    "church_name": "Name der Organisation/Person",
     "email": "kontakt@email.ch oder null",
-    "contact_name": "Name Pfarrer/Pastor oder null",
+    "contact_name": "Name der Kontaktperson oder null",
     "city": "Stadt oder null",
     "denomination": "Konfession oder null",
+    "category": "church | chaplain | life_coach | care_home | other",
     "website": "URL der Website",
-    "is_church": true
+    "is_relevant": true
   }
 ]
 
 Regeln:
-- Nur echte Kirchen/Gemeinden einschliessen (is_church: true)
-- Keine Aggregator-Seiten, Verzeichnisse, Nachrichtenportale
-- E-Mail muss eine echte Kontakt-E-Mail sein (kein noreply, kein info@ wenn möglich Pfarrer/Sekretariat bevorzugen)
+- Kirchen, Seelsorger, christliche Life Coaches und Heime mit Seelsorge einschliessen (is_relevant: true)
+- Keine Aggregator-Seiten, Verzeichnisse, Nachrichtenportale, Wikipedia
+- E-Mail muss eine echte Kontakt-E-Mail sein (kein noreply, persönliche E-Mail bevorzugen)
 - Falls keine E-Mail gefunden: email = null
+- "category" korrekt setzen: church (Kirche/Gemeinde), chaplain (Seelsorger), life_coach (Coach), care_home (Heim)
 - Antworte NUR mit dem JSON-Array, keine Erklärung`,
           },
           {
             role: "user",
-            content: `Extrahiere die Kirchenkontakte aus diesen ${results.length} Suchergebnissen:\n\n${batchPrompt}`,
+            content: `Extrahiere die Kontakte aus diesen ${results.length} Suchergebnissen:\n\n${batchPrompt}`,
           },
         ],
         temperature: 0.2,
