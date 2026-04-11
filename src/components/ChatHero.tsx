@@ -956,6 +956,34 @@ export function ChatHero() {
                       </div>
                     ))}
 
+                    {/* Follow-up suggestion buttons */}
+                    {!isLoading && messages.length >= 2 && messages[messages.length - 1]?.role === "assistant" && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 8 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.3, delay: 0.2 }}
+                        className="flex flex-wrap gap-2 px-1"
+                      >
+                        {followUpsLoading ? (
+                          <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                            <Loader2 className="h-3 w-3 animate-spin" />
+                            <span>{t("chat.suggestionsLoading", "Vorschläge laden…")}</span>
+                          </div>
+                        ) : (
+                          followUps.map((fu, i) => (
+                            <button
+                              key={i}
+                              onClick={() => { setFollowUps([]); sendMessage(fu.prompt); }}
+                              className="inline-flex items-center gap-1.5 text-xs px-3 py-2 rounded-xl border border-border bg-card/70 text-foreground/80 hover:border-primary/40 hover:bg-card hover:text-foreground transition-all duration-200 shadow-sm"
+                            >
+                              <span>{fu.emoji}</span>
+                              <span>{fu.label}</span>
+                            </button>
+                          ))
+                        )}
+                      </motion.div>
+                    )}
+
                     {/* Login hint for anonymous users after first exchange */}
                     {!user && messages.length >= 2 && !isLoading && !loginHintDismissed && (
                       <motion.div
