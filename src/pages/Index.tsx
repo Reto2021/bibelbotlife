@@ -1,7 +1,7 @@
 import { lazy, Suspense, useState } from "react";
 import { SEOHead } from "@/components/SEOHead";
 import { useTranslation } from "react-i18next";
-import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, GraduationCap, Church, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass, Send, Building2, Menu, FileText, ShieldCheck, LogIn, LogOut, User, Shield } from "lucide-react";
+import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, GraduationCap, Church, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass, Send, Building2, Menu, FileText, ShieldCheck, LogIn, LogOut, User, Shield, HeartHandshake } from "lucide-react";
 import { AppLogo } from "@/components/AppLogo";
 import { ChurchBanner } from "@/components/ChurchBanner";
 import { ReferralSection } from "@/components/ReferralSection";
@@ -101,6 +101,12 @@ const Index = () => {
                 {t("institutions.badge")}
               </Link>
             </Button>
+            <Button asChild variant="ghost" size="sm" className="hidden lg:inline-flex">
+              <Link to="/fuer-seelsorger">
+                <HeartHandshake className="h-4 w-4 mr-1" />
+                Für Seelsorger
+              </Link>
+            </Button>
             <LanguageSwitcher />
             <DarkModeToggle />
             {user ? (
@@ -188,6 +194,14 @@ const Index = () => {
               >
                 <Building2 className="h-4 w-4 text-primary" />
                 {t("institutions.badge")}
+              </Link>
+              <Link
+                to="/fuer-seelsorger"
+                className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-foreground hover:bg-primary/10 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <HeartHandshake className="h-4 w-4 text-primary" />
+                Für Seelsorger & Coaches
               </Link>
               <Link
                 to="/impressum"
