@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-import { Building2, Users, TrendingUp, AlertTriangle, MessageCircle, Search, Target, Heart, Link } from "lucide-react";
+import { Building2, Users, TrendingUp, AlertTriangle, MessageCircle, Search, Target, Heart, Link as LinkIcon } from "lucide-react";
 import { ChurchDetailDrawer } from "./ChurchDetailDrawer";
 import type { Tables } from "@/integrations/supabase/types";
 
