@@ -185,6 +185,44 @@ export default function ReferralPartner() {
             </CardContent>
           </Card>
 
+          {/* Conversions Table */}
+          {conversions && conversions.length > 0 && (
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2 text-lg">
+                  <History className="h-5 w-5 text-primary" />
+                  Letzte Conversions
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>Datum</TableHead>
+                      <TableHead className="text-right">Betrag</TableHead>
+                      <TableHead className="text-right">Deine Provision</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    {conversions.map((c: any, i: number) => (
+                      <TableRow key={i}>
+                        <TableCell className="text-sm">
+                          {new Date(c.created_at).toLocaleDateString("de-CH")}
+                        </TableCell>
+                        <TableCell className="text-right text-sm">
+                          CHF {Number(c.deal_value).toLocaleString("de-CH", { minimumFractionDigits: 0 })}
+                        </TableCell>
+                        <TableCell className="text-right text-sm font-medium text-primary">
+                          CHF {Number(c.commission_amount).toLocaleString("de-CH", { minimumFractionDigits: 0 })}
+                        </TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </CardContent>
+            </Card>
+          )}
+
           <p className="text-xs text-muted-foreground text-center">
             Teile deinen persönlichen Link mit Kirchgemeinden, die BibleBot.Life
             nutzen möchten. Bei jeder Patronats-Anfrage über deinen Link erhältst
