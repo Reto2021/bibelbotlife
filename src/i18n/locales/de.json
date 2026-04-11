@@ -698,11 +698,41 @@
       "orgTypePlaceholder": "Typ wählen...",
       "orgTypes": {
         "church": "Gemeinde",
+        "reformed": "Reformierte Kirche",
+        "catholic": "Katholische Kirche",
+        "lutheran": "Lutherische Kirche",
+        "evangelical": "Freikirche / Evangelisch",
+        "freelance": "Freischaffend / Unabhängig",
         "careHome": "Pflegeheim",
         "seniorHome": "Altersheim",
         "hospital": "Spital",
         "prison": "Gefängnisseelsorge",
-        "military": "Armeeseelsorge"
+        "military": "Armeeseelsorge",
+        "other": "Andere"
+      }
+    },
+    "denominationsTitle": "Für alle Konfessionen & Zeremonienbegleiter",
+    "denominationsSubtitle": "BibleBot ist ökumenisch – für reformierte, katholische, lutherische und freikirchliche Gemeinden ebenso wie für freischaffende Zeremonienbegleiter.",
+    "denomination": {
+      "reformed": {
+        "title": "Reformierte Kirche",
+        "desc": "Zürcher Bibel, reformierte Liturgie und Predigtbegleitung – massgeschneidert für Ihre Kirchgemeinde."
+      },
+      "catholic": {
+        "title": "Katholische Kirche",
+        "desc": "Einheitsübersetzung, Messplanung und Sakramente – abgestimmt auf katholische Traditionen."
+      },
+      "lutheran": {
+        "title": "Lutherische Kirche",
+        "desc": "Lutherbibel, Gottesdienstplanung und Seelsorge – für evangelisch-lutherische Gemeinden."
+      },
+      "evangelical": {
+        "title": "Freikirchen",
+        "desc": "Schlachter 2000, Lobpreis und flexible Gottesdienstgestaltung – für freikirchliche Gemeinschaften."
+      },
+      "freelance": {
+        "title": "Freischaffende",
+        "desc": "Trauerredner, Hochzeitsredner und unabhängige Zeremonienbegleiter – mit Biografie-Tool und Redeplanung."
       }
     },
     "institutionsTitle": "Für verschiedenste Organisationen",
