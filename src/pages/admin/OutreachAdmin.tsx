@@ -15,7 +15,7 @@ import { toast } from "sonner";
 import {
   Plus, Play, Pause, Upload, Globe, Mail, Users, BarChart3,
   Loader2, Trash2, RefreshCw, Send, Target, Sparkles, Wand2, Eye, Copy,
-  Palette, ExternalLink, Search,
+  Palette, ExternalLink, Search, Rocket,
 } from "lucide-react";
 
 // ─── Hooks ───────────────────────────────────────────────
@@ -445,6 +445,126 @@ export default function OutreachAdmin() {
     }
   };
 
+  // ─── One-Click Pipeline ───────────────────────────────
+  const [pipelineRunning, setPipelineRunning] = useState(false);
+  const [pipelineStep, setPipelineStep] = useState<string | null>(null);
+  const [pipelineOpen, setPipelineOpen] = useState(false);
+  const [pipelineQuery, setPipelineQuery] = useState("");
+  const [pipelineCountry, setPipelineCountry] = useState("ch");
+  const [pipelineMax, setPipelineMax] = useState(10);
+  const [pipelineLog, setPipelineLog] = useState<string[]>([]);
+
+  const runPipeline = async () => {
+    if (!selectedCampaignId || !pipelineQuery.trim()) return;
+    setPipelineRunning(true);
+    setPipelineLog([]);
+    const log = (msg: string) => setPipelineLog((prev) => [...prev, msg]);
+
+    try {
+      // Step 1: Discover
+      setPipelineStep("discover");
+      log("🔍 Suche nach Leads…");
+      const { data: discoverData, error: discoverErr } = await supabase.functions.invoke("outreach-discover", {
+        body: { campaign_id: selectedCampaignId, search_query: pipelineQuery, country: pipelineCountry, max_results: pipelineMax },
+      });
+      if (discoverErr) throw discoverErr;
+      log(`✅ ${discoverData.imported} Leads importiert, ${discoverData.skipped} Duplikate`);
+      await queryClient.invalidateQueries({ queryKey: ["outreach-leads"] });
+
+      if (discoverData.imported === 0) {
+        log("⚠️ Keine neuen Leads gefunden — Pipeline gestoppt");
+        setPipelineStep(null);
+        setPipelineRunning(false);
+        return;
+      }
+
+      // Refetch leads
+      const { data: freshLeads } = await supabase
+        .from("outreach_leads")
+        .select("*")
+        .eq("campaign_id", selectedCampaignId)
+        .order("created_at", { ascending: false });
+      const allLeads = freshLeads || [];
+
+      // Step 2: Bulk Scrape
+      setPipelineStep("scrape");
+      const scrapeable = allLeads.filter((l: any) => l.website && !l.primary_color);
+      log(`🌐 Scrape ${scrapeable.length} Websites…`);
+      let scrapeOk = 0, scrapeErr = 0;
+      for (const lead of scrapeable) {
+        try {
+          const { error } = await supabase.functions.invoke("outreach-scrape", {
+            body: { lead_id: lead.id, website: lead.website },
+          });
+          if (error) throw error;
+          scrapeOk++;
+        } catch { scrapeErr++; }
+        if (scrapeOk + scrapeErr < scrapeable.length) await new Promise((r) => setTimeout(r, 2000));
+      }
+      log(`✅ ${scrapeOk} gescraped, ${scrapeErr} Fehler`);
+      await queryClient.invalidateQueries({ queryKey: ["outreach-leads"] });
+
+      // Step 3: Generate Sequence (if none exists)
+      setPipelineStep("sequence");
+      const { data: existingSeqs } = await supabase
+        .from("outreach_sequences")
+        .select("id")
+        .eq("campaign_id", selectedCampaignId);
+      if (!existingSeqs?.length) {
+        log("✍️ Generiere E-Mail-Sequenz per KI…");
+        const { error: seqErr } = await supabase.functions.invoke("outreach-generate-sequence", {
+          body: { campaign_id: selectedCampaignId },
+        });
+        if (seqErr) throw seqErr;
+        log("✅ Sequenz generiert");
+      } else {
+        log(`⏭️ Sequenz existiert bereits (${existingSeqs.length} Schritte)`);
+      }
+      await queryClient.invalidateQueries({ queryKey: ["outreach-sequences"] });
+
+      // Step 4: Bulk Personalize + Send
+      setPipelineStep("send");
+      const eligibleLeads = allLeads.filter((l: any) => ["new"].includes(l.status));
+      log(`📧 Personalisiere & sende ${eligibleLeads.length} E-Mails…`);
+      let sendOk = 0, sendFail = 0;
+      for (const lead of eligibleLeads) {
+        try {
+          const targetStep = (lead.current_step + 1) || 1;
+          const { data: persData, error: persErr } = await supabase.functions.invoke("outreach-generate-sequence", {
+            body: { mode: "personalize", lead_id: lead.id, step_number: targetStep },
+          });
+          if (persErr) throw persErr;
+          const { error: insertErr } = await supabase.from("outreach_emails").insert({
+            lead_id: persData.lead_id,
+            sequence_step: persData.step_number,
+            subject: persData.subject,
+            body: persData.body,
+            status: "pending" as any,
+          });
+          if (insertErr) throw insertErr;
+          sendOk++;
+        } catch { sendFail++; }
+        if (sendOk + sendFail < eligibleLeads.length) await new Promise((r) => setTimeout(r, 1500));
+      }
+      log(`✅ ${sendOk} E-Mails vorbereitet, ${sendFail} Fehler`);
+
+      // Trigger actual send
+      const { data: sendResult, error: sendErr } = await supabase.functions.invoke("outreach-send", {});
+      if (sendErr) throw sendErr;
+      log(`🚀 ${sendResult.sent} E-Mails versendet!`);
+
+      await queryClient.invalidateQueries({ queryKey: ["outreach-leads", "outreach-stats"] });
+      setPipelineStep("done");
+      log("🎉 Pipeline abgeschlossen!");
+      toast.success("Pipeline komplett!");
+    } catch (err: any) {
+      log(`❌ Fehler: ${err.message || "Unbekannter Fehler"}`);
+      toast.error(err.message || "Pipeline-Fehler");
+    } finally {
+      setPipelineRunning(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background p-6 max-w-7xl mx-auto space-y-6">
       <div className="flex items-center justify-between">
@@ -455,7 +575,86 @@ export default function OutreachAdmin() {
           </h1>
           <p className="text-muted-foreground">Lead-Generierung & E-Mail-Sequenzen</p>
         </div>
-        <div className="flex gap-2">
+        <div className="flex gap-2 flex-wrap">
+          {/* Pipeline Button */}
+          <Dialog open={pipelineOpen} onOpenChange={setPipelineOpen}>
+            <DialogTrigger asChild>
+              <Button variant="default" disabled={!selectedCampaignId}>
+                <Rocket className="h-4 w-4 mr-2" />
+                Auto-Pipeline
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="max-w-lg">
+              <DialogHeader>
+                <DialogTitle>🚀 Auto-Pipeline</DialogTitle>
+              </DialogHeader>
+              <p className="text-sm text-muted-foreground">
+                Führt automatisch alle Schritte durch: Discover → Scrape → Sequenz → Senden
+              </p>
+              <div className="space-y-3">
+                <div>
+                  <Label className="text-xs text-muted-foreground mb-1.5 block">Schnellsuche</Label>
+                  <div className="flex flex-wrap gap-1.5">
+                    {[
+                      { label: "🇨🇭 Kirchen CH", q: "reformierte katholische Kirche Gemeinde Kontakt Pfarrer", c: "ch" },
+                      { label: "⛪ Freikirchen CH", q: "Freikirche evangelische Gemeinde Pastor Kontakt Schweiz", c: "ch" },
+                      { label: "🏥 Spitalseelsorge", q: "Spitalseelsorge Seelsorger Spital Kontakt Schweiz", c: "ch" },
+                      { label: "🙏 Seelsorger CH", q: "Seelsorge Beratung christlich Kontakt Schweiz", c: "ch" },
+                      { label: "🧘 Life Coaches CH", q: "Life Coach spirituell christlich Begleitung Kontakt Schweiz", c: "ch" },
+                      { label: "🏠 Heime CH", q: "Altersheim Pflegeheim Seelsorge Kontakt Schweiz", c: "ch" },
+                    ].map((p) => (
+                      <Button key={p.label} variant="outline" size="sm" className="text-xs h-7"
+                        onClick={() => { setPipelineQuery(p.q); setPipelineCountry(p.c); }}>
+                        {p.label}
+                      </Button>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <Label>Suchbegriff</Label>
+                  <Input value={pipelineQuery} onChange={(e) => setPipelineQuery(e.target.value)}
+                    placeholder='z.B. "reformierte Kirche Zürich Kontakt"' />
+                </div>
+                <div className="grid grid-cols-2 gap-3">
+                  <div><Label>Land</Label><Input value={pipelineCountry} onChange={(e) => setPipelineCountry(e.target.value)} placeholder="ch" /></div>
+                  <div><Label>Max. Leads</Label><Input type="number" min={1} max={20} value={pipelineMax} onChange={(e) => setPipelineMax(Number(e.target.value))} /></div>
+                </div>
+
+                {/* Pipeline Progress Log */}
+                {pipelineLog.length > 0 && (
+                  <Card className="bg-muted/50">
+                    <CardContent className="p-3 space-y-1">
+                      {pipelineStep && pipelineStep !== "done" && (
+                        <div className="flex items-center gap-2 mb-2">
+                          <Loader2 className="h-4 w-4 animate-spin text-primary" />
+                          <span className="text-sm font-medium">
+                            {pipelineStep === "discover" && "Schritt 1/4: Discover"}
+                            {pipelineStep === "scrape" && "Schritt 2/4: Scrape"}
+                            {pipelineStep === "sequence" && "Schritt 3/4: Sequenz"}
+                            {pipelineStep === "send" && "Schritt 4/4: Senden"}
+                          </span>
+                        </div>
+                      )}
+                      {pipelineLog.map((line, i) => (
+                        <p key={i} className="text-xs text-muted-foreground">{line}</p>
+                      ))}
+                    </CardContent>
+                  </Card>
+                )}
+              </div>
+              <DialogFooter>
+                <Button onClick={runPipeline} disabled={pipelineRunning || !pipelineQuery.trim()}
+                  className="w-full">
+                  {pipelineRunning ? (
+                    <><Loader2 className="h-4 w-4 animate-spin mr-2" />Pipeline läuft…</>
+                  ) : (
+                    <><Rocket className="h-4 w-4 mr-2" />Pipeline starten</>
+                  )}
+                </Button>
+              </DialogFooter>
+            </DialogContent>
+          </Dialog>
+
           <Button variant="outline" onClick={triggerSend} disabled={sending}>
             {sending ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : <Send className="h-4 w-4 mr-2" />}
             Jetzt senden
