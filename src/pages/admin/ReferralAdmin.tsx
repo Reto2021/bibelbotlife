@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
-import { Link, Users, TrendingUp, DollarSign, Plus, Copy, ArrowLeft } from "lucide-react";
+import { Link, Users, TrendingUp, DollarSign, Plus, Copy, ArrowLeft, ExternalLink } from "lucide-react";
 import { Link as RouterLink } from "react-router-dom";
 
 export default function ReferralAdmin() {
@@ -135,6 +135,7 @@ export default function ReferralAdmin() {
                     <TableHead className="text-right">Conv.</TableHead>
                     <TableHead className="text-right">Provision</TableHead>
                     <TableHead>Status</TableHead>
+                    <TableHead>Partner-Seite</TableHead>
                     <TableHead></TableHead>
                   </TableRow>
                 </TableHeader>
@@ -147,6 +148,11 @@ export default function ReferralAdmin() {
                       <TableCell className="text-right">{p.total_conversions || 0}</TableCell>
                       <TableCell className="text-right">CHF {Number(p.total_commission || 0).toFixed(0)}</TableCell>
                       <TableCell><Badge variant={p.is_active ? "default" : "secondary"}>{p.is_active ? "Aktiv" : "Inaktiv"}</Badge></TableCell>
+                      <TableCell>
+                        <RouterLink to={`/partner/${p.code}`} target="_blank" className="inline-flex items-center gap-1 text-xs text-primary hover:underline">
+                          <ExternalLink className="h-3 w-3" /> Öffnen
+                        </RouterLink>
+                      </TableCell>
                       <TableCell>
                         <Button size="sm" variant="ghost" onClick={() => copyLink(p.code)}><Copy className="h-3 w-3" /></Button>
                       </TableCell>
