@@ -11,10 +11,29 @@ const getSessionId = (): string => {
   return id;
 };
 
-const getDeviceType = (w: number): string => {
-  if (w < 768) return "mobile";
-  if (w < 1024) return "tablet";
-  return "desktop";
+/** Extract church slug from URL search params (?church=xyz) */
+const getChurchSlug = (): string | null => {
+  const params = new URLSearchParams(window.location.search);
+  return params.get("church") || null;
+};
+
+/** Extract UTM source/medium from URL or infer from context */
+const getUtmParams = (): { utm_source: string | null; utm_medium: string | null } => {
+  const params = new URLSearchParams(window.location.search);
+  let utm_source = params.get("utm_source") || params.get("source") || null;
+  const utm_medium = params.get("utm_medium") || null;
+
+  // Infer source from referrer if not explicitly set
+  if (!utm_source && document.referrer) {
+    try {
+      const ref = new URL(document.referrer);
+      if (ref.hostname !== window.location.hostname) {
+        utm_source = ref.hostname;
+      }
+    } catch { /* ignore */ }
+  }
+
+  return { utm_source, utm_medium };
 };
 
 export const useAnalytics = () => {
@@ -25,6 +44,7 @@ export const useAnalytics = () => {
   const track = useCallback(
     async (eventName: string, eventData: Record<string, unknown> = {}) => {
       try {
+        const { utm_source, utm_medium } = getUtmParams();
         await (supabase.from("analytics_events") as any).insert({
           session_id: sessionId.current,
           event_type: "event",
@@ -34,6 +54,9 @@ export const useAnalytics = () => {
           referrer: document.referrer || null,
           user_agent: navigator.userAgent,
           screen_width: window.innerWidth,
+          church_slug: getChurchSlug(),
+          utm_source,
+          utm_medium,
         });
       } catch {
         // silent fail – analytics should never break the app
@@ -47,6 +70,7 @@ export const useAnalytics = () => {
     if (location.pathname === lastPath.current) return;
     lastPath.current = location.pathname;
 
+    const { utm_source, utm_medium } = getUtmParams();
     (supabase.from("analytics_events") as any)
       .insert({
         session_id: sessionId.current,
@@ -55,6 +79,9 @@ export const useAnalytics = () => {
         referrer: document.referrer || null,
         user_agent: navigator.userAgent,
         screen_width: window.innerWidth,
+        church_slug: getChurchSlug(),
+        utm_source,
+        utm_medium,
       })
       .then(() => {});
   }, [location.pathname]);
