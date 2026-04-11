@@ -1,6 +1,5 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
+import { SiteHeader } from "@/components/SiteHeader";
 
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",
@@ -22,12 +21,8 @@ const Datenschutz = () => {
   }, []);
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SiteHeader />
       <div className="max-w-2xl mx-auto px-4 py-12">
-        <Link to="/" className="inline-flex items-center gap-2 text-primary hover:underline mb-8">
-          <ArrowLeft className="w-4 h-4" />
-          Zurück zur Startseite
-        </Link>
-
         <h1 className="text-3xl font-bold mb-8">Datenschutzerklärung</h1>
 
         <div className="prose prose-neutral dark:prose-invert max-w-none space-y-6">
