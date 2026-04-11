@@ -111,18 +111,14 @@ export default function PrayerWall() {
       />
 
       <div className="min-h-screen bg-background">
+        <SiteHeader />
         <div className="container mx-auto max-w-2xl px-4 py-8">
           {/* Header */}
-          <div className="flex items-center gap-3 mb-8">
-            <Link to="/" className="text-muted-foreground hover:text-foreground transition-colors">
-              <ArrowLeft className="h-5 w-5" />
-            </Link>
-            <div>
-              <h1 className="text-2xl md:text-3xl font-bold text-foreground">🙏 Gebetswand</h1>
-              <p className="text-muted-foreground text-sm mt-1">
-                Teile dein Anliegen – die Gemeinschaft betet mit dir.
-              </p>
-            </div>
+          <div className="mb-8">
+            <h1 className="text-2xl md:text-3xl font-bold text-foreground">🙏 Gebetswand</h1>
+            <p className="text-muted-foreground text-sm mt-1">
+              Teile dein Anliegen – die Gemeinschaft betet mit dir.
+            </p>
           </div>
 
           {/* Submit form */}
