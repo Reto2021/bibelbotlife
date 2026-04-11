@@ -1056,5 +1056,9 @@
     "footerChurches": "For Churches",
     "seoTitle": "BibleBot.Life for Chaplains & Life Coaches — Plan Ceremonies & Sessions",
     "seoDesc": "Plan funerals, weddings, coaching sessions professionally: voice recording, text generation, teleprompter, calendar, and collaboration."
+  },
+  "pricing": {
+    "onRequest": "Prices on request",
+    "contactUs": "Contact us"
   }
 }

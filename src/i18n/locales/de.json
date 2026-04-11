@@ -1056,5 +1056,9 @@
     "footerChurches": "Für Gemeinden",
     "seoTitle": "BibleBot.Life für Seelsorger & Life Coaches — Zeremonien & Sessions planen",
     "seoDesc": "Abdankungen, Trauungen, Coaching-Sessions professionell planen: Sprachaufnahme, Textgenerierung, Teleprompter, Kalender und Zusammenarbeit."
+  },
+  "pricing": {
+    "onRequest": "Preise auf Anfrage",
+    "contactUs": "Kontakt aufnehmen"
   }
 }
