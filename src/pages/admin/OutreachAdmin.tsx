@@ -742,7 +742,129 @@ export default function OutreachAdmin() {
             </DialogContent>
           </Dialog>
 
-          <Button variant="outline" onClick={triggerSend} disabled={sending}>
+          {/* Schedule Button */}
+          <Button
+            variant={scheduleData && (scheduleData as any).is_active ? "default" : "outline"}
+            disabled={!selectedCampaignId}
+            onClick={openScheduleDialog}
+            className="relative"
+          >
+            <Clock className="h-4 w-4 mr-2" />
+            Zeitplan
+            {scheduleData && (scheduleData as any).is_active && (
+              <span className="absolute -top-1 -right-1 h-3 w-3 bg-green-500 rounded-full border-2 border-background" />
+            )}
+          </Button>
+
+          {/* Schedule Dialog */}
+          <Dialog open={scheduleOpen} onOpenChange={setScheduleOpen}>
+            <DialogContent className="max-w-lg">
+              <DialogHeader>
+                <DialogTitle>⏰ Pipeline-Zeitplan</DialogTitle>
+              </DialogHeader>
+              <p className="text-sm text-muted-foreground">
+                Führt die Pipeline automatisch nach Zeitplan aus (Discover → Scrape → Sequenz → Senden).
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <Label className="flex items-center gap-2">
+                    <Calendar className="h-4 w-4" />
+                    Zeitplan aktiv
+                  </Label>
+                  <Switch
+                    checked={scheduleForm.is_active}
+                    onCheckedChange={(v) => setScheduleForm({ ...scheduleForm, is_active: v })}
+                  />
+                </div>
+
+                <div>
+                  <Label>Ausführungszeit</Label>
+                  <Select
+                    value={scheduleForm.cron_expression}
+                    onValueChange={(v) => setScheduleForm({ ...scheduleForm, cron_expression: v })}
+                  >
+                    <SelectTrigger><SelectValue /></SelectTrigger>
+                    <SelectContent>
+                      {CRON_PRESETS.map((p) => (
+                        <SelectItem key={p.value} value={p.value}>{p.label}</SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                <div>
+                  <Label className="text-xs text-muted-foreground mb-1.5 block">Schnellsuche</Label>
+                  <div className="flex flex-wrap gap-1.5">
+                    {[
+                      { label: "🇨🇭 Kirchen CH", q: "reformierte katholische Kirche Gemeinde Kontakt Pfarrer", c: "ch" },
+                      { label: "🏥 Spitalseelsorge", q: "Spitalseelsorge Seelsorger Spital Kontakt Schweiz", c: "ch" },
+                      { label: "🙏 Seelsorger CH", q: "Seelsorge Beratung christlich Kontakt Schweiz", c: "ch" },
+                      { label: "🧘 Life Coaches CH", q: "Life Coach spirituell christlich Begleitung Kontakt Schweiz", c: "ch" },
+                    ].map((p) => (
+                      <Button key={p.label} variant="outline" size="sm" className="text-xs h-7"
+                        onClick={() => { setScheduleForm({ ...scheduleForm, search_query: p.q, country: p.c }); }}>
+                        {p.label}
+                      </Button>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <Label>Suchbegriff</Label>
+                  <Input
+                    value={scheduleForm.search_query}
+                    onChange={(e) => setScheduleForm({ ...scheduleForm, search_query: e.target.value })}
+                    placeholder='z.B. "reformierte Kirche Zürich Kontakt"'
+                  />
+                </div>
+
+                <div className="grid grid-cols-2 gap-3">
+                  <div>
+                    <Label>Land</Label>
+                    <Input value={scheduleForm.country} onChange={(e) => setScheduleForm({ ...scheduleForm, country: e.target.value })} placeholder="ch" />
+                  </div>
+                  <div>
+                    <Label>Max. Leads</Label>
+                    <Input type="number" min={1} max={20} value={scheduleForm.max_results}
+                      onChange={(e) => setScheduleForm({ ...scheduleForm, max_results: Number(e.target.value) })} />
+                  </div>
+                </div>
+
+                {/* Last run info */}
+                {scheduleData && (scheduleData as any).last_run_at && (
+                  <Card className="bg-muted/50">
+                    <CardContent className="p-3 space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs font-medium">Letzter Lauf</span>
+                        <Badge variant={(scheduleData as any).last_run_status === "success" ? "default" : "destructive"}>
+                          {(scheduleData as any).last_run_status}
+                        </Badge>
+                      </div>
+                      <p className="text-xs text-muted-foreground">
+                        {new Date((scheduleData as any).last_run_at).toLocaleString("de-CH")}
+                      </p>
+                      {(scheduleData as any).last_run_log?.slice(-5).map((line: string, i: number) => (
+                        <p key={i} className="text-xs text-muted-foreground">{line}</p>
+                      ))}
+                    </CardContent>
+                  </Card>
+                )}
+              </div>
+              <DialogFooter>
+                {scheduleData && (
+                  <Button variant="outline" onClick={toggleScheduleActive}>
+                    {(scheduleData as any).is_active ? <Pause className="h-4 w-4 mr-2" /> : <Play className="h-4 w-4 mr-2" />}
+                    {(scheduleData as any).is_active ? "Deaktivieren" : "Aktivieren"}
+                  </Button>
+                )}
+                <Button onClick={saveSchedule} disabled={savingSchedule || !scheduleForm.search_query.trim()}>
+                  {savingSchedule ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : <Clock className="h-4 w-4 mr-2" />}
+                  Zeitplan speichern
+                </Button>
+              </DialogFooter>
+            </DialogContent>
+          </Dialog>
+
             {sending ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : <Send className="h-4 w-4 mr-2" />}
             Jetzt senden
           </Button>
