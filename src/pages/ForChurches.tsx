@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { SEOHead } from "@/components/SEOHead";
 import { Link } from "react-router-dom";
-import { Church, ArrowLeft, Send, Handshake, Sprout, Heart, Building2, Hospital, ShieldCheck, Swords, Footprints, TowerControl } from "lucide-react";
+import { Church, ArrowLeft, Send, Handshake, Sprout, Heart, Building2, Hospital, ShieldCheck, Swords, Footprints, TowerControl, Cross, BookOpen, Flame, Users, Sparkles } from "lucide-react";
 import { AppLogo } from "@/components/AppLogo";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -89,8 +89,35 @@ const ForChurches = () => {
         </div>
       </section>
 
+      {/* Denominations & Churches */}
+      <section className="py-16 px-4 bg-card/40">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-3xl font-bold text-foreground text-center mb-4">{t("church.denominationsTitle")}</h2>
+          <p className="text-muted-foreground text-center mb-10 max-w-2xl mx-auto">{t("church.denominationsSubtitle")}</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
+            {([
+              { key: "reformed", icon: BookOpen },
+              { key: "catholic", icon: Cross },
+              { key: "lutheran", icon: Church },
+              { key: "evangelical", icon: Flame },
+              { key: "freelance", icon: Sparkles },
+            ] as const).map((denom) => (
+              <Card key={denom.key} className="bg-card/80 border-border text-center p-4">
+                <CardHeader className="p-0 pb-2">
+                  <denom.icon className="h-7 w-7 text-primary mx-auto mb-1" />
+                  <CardTitle className="text-sm font-semibold leading-tight">{t(`church.denomination.${denom.key}.title`)}</CardTitle>
+                </CardHeader>
+                <CardContent className="p-0">
+                  <p className="text-xs text-muted-foreground leading-snug">{t(`church.denomination.${denom.key}.desc`)}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Use Cases */}
-      <section className="py-12 px-4 bg-card/40">
+      <section className="py-12 px-4">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-3xl font-bold text-foreground text-center mb-10">{t("church.useCasesTitle")}</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -109,7 +136,7 @@ const ForChurches = () => {
       </section>
 
       {/* Institutions */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 bg-card/40">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl font-bold text-foreground text-center mb-4">{t("church.institutionsTitle")}</h2>
           <p className="text-muted-foreground text-center mb-10 max-w-2xl mx-auto">{t("church.institutionsSubtitle")}</p>
