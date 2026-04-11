@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+
 import {
   ArrowLeft, Heart, Mic, FileText, Calendar, Users, Music,
   BookOpen, Sparkles, Monitor, Layout, ChevronDown, Check, ArrowRight
