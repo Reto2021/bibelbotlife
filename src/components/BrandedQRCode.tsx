@@ -9,17 +9,19 @@ interface BrandedQRCodeProps {
 }
 
 /**
- * QR code with a logo centered on top.
+ * QR code with the BibleBot logo always centered on top.
  * Uses error correction level "H" (30% recoverable) so the logo
  * can safely cover the centre without breaking scannability.
+ * The BibleBot logo is ALWAYS used for brand consistency.
  */
 export const BrandedQRCode = ({
   value,
   size = 200,
-  logoUrl,
+  logoUrl: _logoUrl,
   logoSize,
 }: BrandedQRCodeProps) => {
-  const logo = logoUrl || bibelbotLogo;
+  // Always use BibleBot logo — brand consistency
+  const logo = bibelbotLogo;
   const lSize = logoSize || Math.round(size * 0.22);
 
   return (
@@ -32,7 +34,7 @@ export const BrandedQRCode = ({
       />
       <img
         src={logo}
-        alt="Logo"
+        alt="BibleBot"
         className="absolute rounded-md bg-white p-0.5"
         style={{
           width: lSize,

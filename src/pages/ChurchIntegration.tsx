@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { BrandedQRCode } from "@/components/BrandedQRCode";
+import { QRStickerDownload } from "@/components/QRStickerDownload";
 import { useParams, Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
@@ -145,7 +146,7 @@ const ChurchIntegration = () => {
             <CardContent>
               <div className="flex flex-col sm:flex-row items-start gap-4">
                 <div className="bg-white p-3 rounded-xl border shadow-sm">
-                  <BrandedQRCode value={brandedLink} size={160} logoUrl={church.logo_url || undefined} />
+                  <BrandedQRCode value={brandedLink} size={160} />
                 </div>
                 <div className="space-y-2">
                   <p className="text-sm text-muted-foreground">
@@ -164,6 +165,11 @@ const ChurchIntegration = () => {
                     >
                       PNG herunterladen
                     </Button>
+                    <QRStickerDownload
+                      churchName={church.name}
+                      qrUrl={brandedLink}
+                      slug={church.slug}
+                    />
                     <CopyButton text={brandedLink} label="QR-Link kopiert" />
                   </div>
                 </div>
