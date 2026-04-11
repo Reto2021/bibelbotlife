@@ -149,6 +149,11 @@ export default function ReferralAdmin() {
                       <TableCell className="text-right">CHF {Number(p.total_commission || 0).toFixed(0)}</TableCell>
                       <TableCell><Badge variant={p.is_active ? "default" : "secondary"}>{p.is_active ? "Aktiv" : "Inaktiv"}</Badge></TableCell>
                       <TableCell>
+                        <RouterLink to={`/partner/${p.code}`} target="_blank" className="inline-flex items-center gap-1 text-xs text-primary hover:underline">
+                          <ExternalLink className="h-3 w-3" /> Öffnen
+                        </RouterLink>
+                      </TableCell>
+                      <TableCell>
                         <Button size="sm" variant="ghost" onClick={() => copyLink(p.code)}><Copy className="h-3 w-3" /></Button>
                       </TableCell>
                     </TableRow>
