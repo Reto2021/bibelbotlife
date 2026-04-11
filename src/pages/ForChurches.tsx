@@ -61,13 +61,30 @@ const ForChurches = () => {
         });
       }
 
-      // Send confirmation email (fire-and-forget)
+      // Send confirmation email to sender (fire-and-forget)
       supabase.functions.invoke("send-transactional-email", {
         body: {
           templateName: "contact-confirmation",
           recipientEmail: formData.email,
           idempotencyKey: `contact-confirm-${id}`,
           templateData: { name: formData.name || undefined },
+        },
+      });
+
+      // Notify admin (fire-and-forget)
+      supabase.functions.invoke("send-transactional-email", {
+        body: {
+          templateName: "contact-notification",
+          recipientEmail: "kontakt@bibelbot.ch",
+          idempotencyKey: `contact-notify-${id}`,
+          templateData: {
+            senderName: formData.name || undefined,
+            senderEmail: formData.email,
+            organizationType: formData.organization_type || undefined,
+            churchName: formData.church_name || undefined,
+            message: formData.message,
+            source: "Gemeinde-Seite",
+          },
         },
       });
       toast.success(t("church.form.success"));
