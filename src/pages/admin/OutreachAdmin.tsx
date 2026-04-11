@@ -16,6 +16,7 @@ import {
   Plus, Play, Pause, Upload, Globe, Mail, Users, BarChart3,
   Loader2, Trash2, RefreshCw, Send, Target, Sparkles, Wand2, Eye, Copy,
   Palette, ExternalLink, Search, Rocket, Clock, Calendar,
+  Instagram, Facebook, MessageCircle, Youtube,
 } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
