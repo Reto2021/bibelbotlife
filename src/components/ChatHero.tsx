@@ -920,7 +920,7 @@ export function ChatHero() {
                         <Accessibility className={isSenior ? "h-5 w-5" : "h-4 w-4"} />
                         {isSenior && <span>{t("chat.seniorMode", "Grosse Schrift")}</span>}
                       </button>
-                      <VoicePicker voice={tts.voice} onChange={tts.setVoice} />
+                      
                     </div>
                     <button
                       onClick={() => { startNewChat(); }}
