@@ -172,6 +172,41 @@ const ChurchIntegration = () => {
                       slug={church.slug}
                     />
                     <CopyButton text={brandedLink} label="QR-Link kopiert" />
+                    {church.contact_email && (
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        disabled={sendingEmail}
+                        className="gap-1.5"
+                        onClick={async () => {
+                          setSendingEmail(true);
+                          try {
+                            const { error } = await supabase.functions.invoke('send-transactional-email', {
+                              body: {
+                                templateName: 'qr-sticker',
+                                recipientEmail: church.contact_email,
+                                idempotencyKey: `qr-sticker-${church.slug}-${Date.now()}`,
+                                templateData: {
+                                  churchName: church.name,
+                                  slug: church.slug,
+                                  contactName: church.pastor_name || church.contact_person,
+                                  customBotName: church.custom_bot_name,
+                                },
+                              },
+                            });
+                            if (error) throw error;
+                            toast({ title: "E-Mail gesendet!", description: `QR-Sticker wurde an ${church.contact_email} gesendet.` });
+                          } catch (e) {
+                            toast({ title: "Fehler", description: "E-Mail konnte nicht gesendet werden.", variant: "destructive" });
+                          } finally {
+                            setSendingEmail(false);
+                          }
+                        }}
+                      >
+                        {sendingEmail ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Mail className="h-3.5 w-3.5" />}
+                        Per E-Mail senden
+                      </Button>
+                    )}
                   </div>
                 </div>
               </div>
