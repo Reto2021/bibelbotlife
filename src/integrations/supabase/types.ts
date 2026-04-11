@@ -438,6 +438,7 @@ export type Database = {
           message: string
           name: string
           preferred_tier: string | null
+          referral_code: string | null
         }
         Insert: {
           church_name?: string | null
@@ -447,6 +448,7 @@ export type Database = {
           message: string
           name: string
           preferred_tier?: string | null
+          referral_code?: string | null
         }
         Update: {
           church_name?: string | null
@@ -456,6 +458,7 @@ export type Database = {
           message?: string
           name?: string
           preferred_tier?: string | null
+          referral_code?: string | null
         }
         Relationships: []
       }
@@ -1095,6 +1098,129 @@ export type Database = {
           score?: number
           session_id?: string
           total_questions?: number
+        }
+        Relationships: []
+      }
+      referral_clicks: {
+        Row: {
+          created_at: string
+          id: string
+          ip_hash: string | null
+          landing_page: string | null
+          referral_code: string
+          session_id: string | null
+          user_agent: string | null
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          ip_hash?: string | null
+          landing_page?: string | null
+          referral_code: string
+          session_id?: string | null
+          user_agent?: string | null
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          ip_hash?: string | null
+          landing_page?: string | null
+          referral_code?: string
+          session_id?: string | null
+          user_agent?: string | null
+        }
+        Relationships: []
+      }
+      referral_conversions: {
+        Row: {
+          commission_amount: number
+          created_at: string
+          deal_value: number
+          ghl_webhook_response: Json | null
+          ghl_webhook_status: string
+          id: string
+          inquiry_id: string | null
+          partner_id: string
+        }
+        Insert: {
+          commission_amount?: number
+          created_at?: string
+          deal_value?: number
+          ghl_webhook_response?: Json | null
+          ghl_webhook_status?: string
+          id?: string
+          inquiry_id?: string | null
+          partner_id: string
+        }
+        Update: {
+          commission_amount?: number
+          created_at?: string
+          deal_value?: number
+          ghl_webhook_response?: Json | null
+          ghl_webhook_status?: string
+          id?: string
+          inquiry_id?: string | null
+          partner_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "referral_conversions_inquiry_id_fkey"
+            columns: ["inquiry_id"]
+            isOneToOne: false
+            referencedRelation: "church_partnership_inquiries"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "referral_conversions_partner_id_fkey"
+            columns: ["partner_id"]
+            isOneToOne: false
+            referencedRelation: "referral_partners"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      referral_partners: {
+        Row: {
+          code: string
+          commission_rate: number
+          created_at: string
+          email: string
+          ghl_contact_id: string | null
+          id: string
+          is_active: boolean
+          name: string
+          total_clicks: number
+          total_commission: number
+          total_conversions: number
+          updated_at: string
+        }
+        Insert: {
+          code: string
+          commission_rate?: number
+          created_at?: string
+          email: string
+          ghl_contact_id?: string | null
+          id?: string
+          is_active?: boolean
+          name: string
+          total_clicks?: number
+          total_commission?: number
+          total_conversions?: number
+          updated_at?: string
+        }
+        Update: {
+          code?: string
+          commission_rate?: number
+          created_at?: string
+          email?: string
+          ghl_contact_id?: string | null
+          id?: string
+          is_active?: boolean
+          name?: string
+          total_clicks?: number
+          total_commission?: number
+          total_conversions?: number
+          updated_at?: string
         }
         Relationships: []
       }

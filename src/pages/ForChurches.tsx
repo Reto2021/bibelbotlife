@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { getStoredReferralCode } from "@/hooks/useAnalytics";
 import { SEOHead } from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 import { Church, ArrowLeft, Send, Handshake, Sprout, Heart, Building2, Hospital, ShieldCheck, Swords, Footprints, TowerControl, Cross, BookOpen, Flame, Users, Sparkles } from "lucide-react";
@@ -32,6 +33,7 @@ const ForChurches = () => {
     setSending(true);
     try {
       const id = crypto.randomUUID();
+      const referralCode = getStoredReferralCode();
       const { error } = await (supabase.from as any)("church_partnership_inquiries").insert({
         id,
         name: formData.name || null,
@@ -41,8 +43,22 @@ const ForChurches = () => {
           : formData.organization_type ? `[${formData.organization_type}]` : null,
         preferred_tier: formData.preferred_tier || null,
         message: formData.message,
+        referral_code: referralCode,
       });
       if (error) throw error;
+
+      // Fire referral webhook if ref code present
+      if (referralCode) {
+        supabase.functions.invoke("referral-webhook", {
+          body: {
+            referral_code: referralCode,
+            inquiry_id: id,
+            church_name: formData.church_name || formData.organization_type || "Unknown",
+            preferred_tier: formData.preferred_tier || "free",
+          },
+        });
+      }
+
       // Send confirmation email (fire-and-forget)
       supabase.functions.invoke("send-transactional-email", {
         body: {
