@@ -172,6 +172,11 @@ const ChurchIntegration = () => {
                       qrUrl={brandedLink}
                       slug={church.slug}
                     />
+                    <QRFlyerDownload
+                      churchName={church.name}
+                      qrUrl={brandedLink}
+                      slug={church.slug}
+                    />
                     <CopyButton text={brandedLink} label="QR-Link kopiert" />
                     {church.contact_email && (
                       <Button
