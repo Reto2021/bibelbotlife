@@ -2,7 +2,9 @@
   "nav": {
     "startNow": "አሁን ጀምር",
     "prayerWall": "የጸሎት ግድግዳ",
-    "bibleQuiz": "የመጽሐፍ ቅዱስ ጥያቄዎች"
+    "bibleQuiz": "የመጽሐፍ ቅዱስ ጥያቄዎች",
+    "forCelebrants": "ለአማካሪዎች",
+    "forCelebrantsMobile": "ለአማካሪዎች እና አሰልጣኞች"
   },
   "loader": "በመጫን ላይ…",
   "hero": {

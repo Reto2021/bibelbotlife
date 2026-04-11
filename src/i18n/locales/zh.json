@@ -2,7 +2,9 @@
   "nav": {
     "startNow": "立即开始",
     "prayerWall": "祈祷墙",
-    "bibleQuiz": "圣经问答"
+    "bibleQuiz": "圣经问答",
+    "forCelebrants": "牧灵人员",
+    "forCelebrantsMobile": "牧灵人员与教练"
   },
   "loader": "正在加载...",
   "hero": {

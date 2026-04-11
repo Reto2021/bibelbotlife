@@ -2,7 +2,9 @@
   "nav": {
     "startNow": "Commencer",
     "prayerWall": "Mur de prière",
-    "bibleQuiz": "Quiz biblique"
+    "bibleQuiz": "Quiz biblique",
+    "forCelebrants": "Pour aumôniers",
+    "forCelebrantsMobile": "Pour aumôniers et coaches"
   },
   "loader": "Chargement…",
   "hero": {

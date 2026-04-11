@@ -2,7 +2,9 @@
   "nav": {
     "startNow": "Kezdje most",
     "prayerWall": "Imádságfal",
-    "bibleQuiz": "Bibliai kvíz"
+    "bibleQuiz": "Bibliai kvíz",
+    "forCelebrants": "Lelkészeknek",
+    "forCelebrantsMobile": "Lelkészeknek és coachoknak"
   },
   "loader": "Betöltés…",
   "hero": {

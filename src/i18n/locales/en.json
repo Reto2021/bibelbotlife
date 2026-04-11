@@ -2,7 +2,9 @@
   "nav": {
     "startNow": "Get started",
     "prayerWall": "Prayer Wall",
-    "bibleQuiz": "Bible Quiz"
+    "bibleQuiz": "Bible Quiz",
+    "forCelebrants": "For Chaplains",
+    "forCelebrantsMobile": "For Chaplains & Coaches"
   },
   "loader": "Loading…",
   "hero": {

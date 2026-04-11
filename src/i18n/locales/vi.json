@@ -2,7 +2,9 @@
   "nav": {
     "startNow": "Bắt đầu ngay",
     "prayerWall": "Tường Cầu Nguyện",
-    "bibleQuiz": "Đố Kinh Thánh"
+    "bibleQuiz": "Đố Kinh Thánh",
+    "forCelebrants": "Cho tuyên úy",
+    "forCelebrantsMobile": "Cho tuyên úy và huấn luyện viên"
   },
   "loader": "Đang tải…",
   "hero": {

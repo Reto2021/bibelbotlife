@@ -2,7 +2,9 @@
   "nav": {
     "startNow": "Започни сега",
     "prayerWall": "Стена на молитвата",
-    "bibleQuiz": "Библейски тест"
+    "bibleQuiz": "Библейски тест",
+    "forCelebrants": "За духовници",
+    "forCelebrantsMobile": "За духовници и коучове"
   },
   "loader": "Зареждане...",
   "hero": {

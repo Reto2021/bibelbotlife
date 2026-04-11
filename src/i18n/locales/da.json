@@ -2,7 +2,9 @@
   "nav": {
     "startNow": "Jetzt starten",
     "prayerWall": "Bønnevæg",
-    "bibleQuiz": "Bibelsk quiz"
+    "bibleQuiz": "Bibelsk quiz",
+    "forCelebrants": "For sjælesørgere",
+    "forCelebrantsMobile": "For sjælesørgere & coaches"
   },
   "loader": "Wird geladen…",
   "hero": {

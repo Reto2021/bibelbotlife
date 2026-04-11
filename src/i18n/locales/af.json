@@ -2,7 +2,9 @@
   "nav": {
     "startNow": "Begin nou",
     "prayerWall": "Gebedsmuur",
-    "bibleQuiz": "Bybelvasvra"
+    "bibleQuiz": "Bybelvasvra",
+    "forCelebrants": "Vir Sielsorgers",
+    "forCelebrantsMobile": "Vir Sielsorgers & Afrigters"
   },
   "loader": "Laai tans…",
   "hero": {

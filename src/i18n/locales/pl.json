@@ -2,7 +2,9 @@
   "nav": {
     "startNow": "Rozpocznij",
     "prayerWall": "Ściana modlitwy",
-    "bibleQuiz": "Quiz biblijny"
+    "bibleQuiz": "Quiz biblijny",
+    "forCelebrants": "Dla duszpasterzy",
+    "forCelebrantsMobile": "Dla duszpasterzy i coachów"
   },
   "loader": "Ładowanie…",
   "hero": {

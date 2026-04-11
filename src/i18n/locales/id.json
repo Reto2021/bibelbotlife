@@ -2,7 +2,9 @@
   "nav": {
     "startNow": "Mulai Sekarang",
     "prayerWall": "Dinding Doa",
-    "bibleQuiz": "Kuis Alkitab"
+    "bibleQuiz": "Kuis Alkitab",
+    "forCelebrants": "Untuk rohaniwan",
+    "forCelebrantsMobile": "Untuk rohaniwan & pelatih"
   },
   "loader": "Memuat…",
   "hero": {

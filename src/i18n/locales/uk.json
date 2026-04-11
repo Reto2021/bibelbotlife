@@ -2,7 +2,9 @@
   "nav": {
     "startNow": "Почати зараз",
     "prayerWall": "Стіна молитов",
-    "bibleQuiz": "Біблійна вікторина"
+    "bibleQuiz": "Біблійна вікторина",
+    "forCelebrants": "Для капеланів",
+    "forCelebrantsMobile": "Для капеланів та коучів"
   },
   "loader": "Завантаження…",
   "hero": {

@@ -2,7 +2,9 @@
   "nav": {
     "startNow": "Start nå",
     "prayerWall": "Bønnevegg",
-    "bibleQuiz": "Bibelquiz"
+    "bibleQuiz": "Bibelquiz",
+    "forCelebrants": "For sjelesorger",
+    "forCelebrantsMobile": "For sjelesorger og coacher"
   },
   "loader": "Laster inn…",
   "hero": {

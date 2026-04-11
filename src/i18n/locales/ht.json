@@ -2,7 +2,9 @@
   "nav": {
     "startNow": "Kòmanse kounye a",
     "prayerWall": "Mi priyè",
-    "bibleQuiz": "Kesyon sou Bib la"
+    "bibleQuiz": "Kesyon sou Bib la",
+    "forCelebrants": "Pou omonye",
+    "forCelebrantsMobile": "Pou omonye ak antrenè"
   },
   "loader": "Ap chaje…",
   "hero": {
