@@ -2,7 +2,9 @@
   "nav": {
     "startNow": "Počni sada",
     "prayerWall": "Molitva",
-    "bibleQuiz": "Biblijski kviz"
+    "bibleQuiz": "Biblijski kviz",
+    "forCelebrants": "За душебрижнике",
+    "forCelebrantsMobile": "За душебрижнике и тренере"
   },
   "loader": "Učitavanje…",
   "hero": {

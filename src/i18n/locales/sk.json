@@ -2,7 +2,9 @@
   "nav": {
     "startNow": "Začať teraz",
     "prayerWall": "Modlitebná stena",
-    "bibleQuiz": "Biblický kvíz"
+    "bibleQuiz": "Biblický kvíz",
+    "forCelebrants": "Pre duchovných",
+    "forCelebrantsMobile": "Pre duchovných a koučov"
   },
   "loader": "Načítava sa…",
   "hero": {

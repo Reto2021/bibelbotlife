@@ -2,7 +2,9 @@
   "nav": {
     "startNow": "Începe acum",
     "prayerWall": "Zidul de rugăciune",
-    "bibleQuiz": "Test biblic"
+    "bibleQuiz": "Test biblic",
+    "forCelebrants": "Pentru capelani",
+    "forCelebrantsMobile": "Pentru capelani și antrenori"
   },
   "loader": "Se încarcă…",
   "hero": {

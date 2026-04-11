@@ -2,7 +2,9 @@
   "nav": {
     "startNow": "Qala Manje",
     "prayerWall": "Udonga Lomkhuleko",
-    "bibleQuiz": "Imibuzo YeBhayibheli"
+    "bibleQuiz": "Imibuzo YeBhayibheli",
+    "forCelebrants": "Kubachwepheshe",
+    "forCelebrantsMobile": "Kubachwepheshe namacoach"
   },
   "loader": "Iyalayisha…",
   "hero": {

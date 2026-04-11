@@ -2,7 +2,9 @@
   "nav": {
     "startNow": "Սկսել հիմա",
     "prayerWall": "Աղոթքի պատ",
-    "bibleQuiz": "Աստվածաշնչյան վիկտորինա"
+    "bibleQuiz": "Աստվածաշնչյան վիկտորինա",
+    "forCelebrants": "Հոգեադրիdelays",
+    "forCelebrantsMobile": "Հոdelays և մարզիdelays"
   },
   "loader": "Բեռնվում է…",
   "hero": {

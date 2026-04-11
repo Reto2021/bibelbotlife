@@ -2,7 +2,9 @@
   "nav": {
     "startNow": "Aloita nyt",
     "prayerWall": "Rukousmuuri",
-    "bibleQuiz": "Raamattuvisa"
+    "bibleQuiz": "Raamattuvisa",
+    "forCelebrants": "Sielunhoitajille",
+    "forCelebrantsMobile": "Sielunhoitajille ja valmentajille"
   },
   "loader": "Ladataan…",
   "hero": {

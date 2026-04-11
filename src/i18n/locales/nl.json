@@ -2,7 +2,9 @@
   "nav": {
     "startNow": "Nu starten",
     "prayerWall": "Gebedsmuur",
-    "bibleQuiz": "Bijbelquiz"
+    "bibleQuiz": "Bijbelquiz",
+    "forCelebrants": "Voor pastors",
+    "forCelebrantsMobile": "Voor pastors & coaches"
   },
   "loader": "Laden…",
   "hero": {

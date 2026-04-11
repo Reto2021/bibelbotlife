@@ -2,7 +2,9 @@
   "nav": {
     "startNow": "Magsimula Ngayon",
     "prayerWall": "Pader ng Panalangin",
-    "bibleQuiz": "Pagsusulit sa Bibliya"
+    "bibleQuiz": "Pagsusulit sa Bibliya",
+    "forCelebrants": "Para sa mga kapelyan",
+    "forCelebrantsMobile": "Para sa mga kapelyan at mga coach"
   },
   "loader": "Naglo-load…",
   "hero": {

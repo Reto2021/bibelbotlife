@@ -2,7 +2,9 @@
   "nav": {
     "startNow": "Ξεκινήστε τώρα",
     "prayerWall": "Τοίχος Προσευχής",
-    "bibleQuiz": "Κουίζ Αγίας Γραφής"
+    "bibleQuiz": "Κουίζ Αγίας Γραφής",
+    "forCelebrants": "Για ιερείς",
+    "forCelebrantsMobile": "Για ιερείς & προπονητές"
   },
   "loader": "Φορτώνεται…",
   "hero": {

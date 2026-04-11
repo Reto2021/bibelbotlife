@@ -2,7 +2,9 @@
   "nav": {
     "startNow": "Započnite sada",
     "prayerWall": "Zid molitve",
-    "bibleQuiz": "Biblijski kviz"
+    "bibleQuiz": "Biblijski kviz",
+    "forCelebrants": "Za dušobrižnike",
+    "forCelebrantsMobile": "Za dušobrižnike i trenere"
   },
   "loader": "Učitavanje…",
   "hero": {

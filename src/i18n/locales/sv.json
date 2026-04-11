@@ -2,7 +2,9 @@
   "nav": {
     "startNow": "Starta nu",
     "prayerWall": "Bönevägg",
-    "bibleQuiz": "Bibelquiz"
+    "bibleQuiz": "Bibelquiz",
+    "forCelebrants": "För själavårdare",
+    "forCelebrantsMobile": "För själavårdare & coacher"
   },
   "loader": "Laddar…",
   "hero": {
