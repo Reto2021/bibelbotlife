@@ -121,6 +121,23 @@ function useAbTestStats() {
   });
 }
 
+function usePipelineSchedule(campaignId: string | null) {
+  return useQuery({
+    queryKey: ["pipeline-schedule", campaignId],
+    queryFn: async () => {
+      if (!campaignId) return null;
+      const { data, error } = await supabase
+        .from("pipeline_schedules" as any)
+        .select("*")
+        .eq("campaign_id", campaignId)
+        .maybeSingle();
+      if (error) throw error;
+      return data;
+    },
+    enabled: !!campaignId,
+  });
+}
+
 // ─── Status badges ───────────────────────────────────────
 const LEAD_STATUS: Record<string, { label: string; variant: "default" | "secondary" | "destructive" | "outline" }> = {
   new: { label: "Neu", variant: "outline" },
