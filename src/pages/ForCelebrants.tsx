@@ -166,7 +166,7 @@ export default function ForCelebrants() {
             <span className="text-primary">beste Vorbereitung</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-            Von der ersten Sprachnotiz bis zur fertigen Session — planen, dokumentieren und durchführen Sie Zeremonien und Coaching-Sitzungen mit einem einzigen Werkzeug.
+            Von der ersten Sprachnotiz bis zur fertigen Session — planen, dokumentieren und führen Sie Zeremonien und Coaching-Sitzungen mit einem einzigen Werkzeug durch.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Button asChild size="lg" className="text-base px-8">
