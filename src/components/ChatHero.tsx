@@ -284,6 +284,8 @@ export function ChatHero() {
   const { isSenior, toggle: toggleSenior } = useSeniorMode();
   const tts = useTTS();
   const [qaMap, setQaMap] = useState<Record<number, QAResult | "loading" | "skipped">>({});
+  const [followUps, setFollowUps] = useState<{ emoji: string; label: string; prompt: string }[]>([]);
+  const [followUpsLoading, setFollowUpsLoading] = useState(false);
 
   const runQA = useCallback(async (text: string, msgIndex: number) => {
     if (!likelyHasCitations(text)) {
