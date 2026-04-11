@@ -165,6 +165,11 @@ const ChurchIntegration = () => {
                     >
                       PNG herunterladen
                     </Button>
+                    <QRStickerDownload
+                      churchName={church.name}
+                      qrUrl={brandedLink}
+                      slug={church.slug}
+                    />
                     <CopyButton text={brandedLink} label="QR-Link kopiert" />
                   </div>
                 </div>
