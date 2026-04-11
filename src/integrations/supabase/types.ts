@@ -982,6 +982,59 @@ export type Database = {
           },
         ]
       }
+      pipeline_schedules: {
+        Row: {
+          campaign_id: string
+          country: string
+          created_at: string
+          cron_expression: string
+          id: string
+          is_active: boolean
+          last_run_at: string | null
+          last_run_log: string[] | null
+          last_run_status: string | null
+          max_results: number
+          search_query: string
+          updated_at: string
+        }
+        Insert: {
+          campaign_id: string
+          country?: string
+          created_at?: string
+          cron_expression?: string
+          id?: string
+          is_active?: boolean
+          last_run_at?: string | null
+          last_run_log?: string[] | null
+          last_run_status?: string | null
+          max_results?: number
+          search_query: string
+          updated_at?: string
+        }
+        Update: {
+          campaign_id?: string
+          country?: string
+          created_at?: string
+          cron_expression?: string
+          id?: string
+          is_active?: boolean
+          last_run_at?: string | null
+          last_run_log?: string[] | null
+          last_run_status?: string | null
+          max_results?: number
+          search_query?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "pipeline_schedules_campaign_id_fkey"
+            columns: ["campaign_id"]
+            isOneToOne: true
+            referencedRelation: "outreach_campaigns"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       prayer_requests: {
         Row: {
           author_name: string | null

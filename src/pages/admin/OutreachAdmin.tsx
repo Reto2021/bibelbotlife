@@ -15,8 +15,9 @@ import { toast } from "sonner";
 import {
   Plus, Play, Pause, Upload, Globe, Mail, Users, BarChart3,
   Loader2, Trash2, RefreshCw, Send, Target, Sparkles, Wand2, Eye, Copy,
-  Palette, ExternalLink, Search, Rocket,
+  Palette, ExternalLink, Search, Rocket, Clock, Calendar,
 } from "lucide-react";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 // ─── Hooks ───────────────────────────────────────────────
 function useCampaigns() {
@@ -120,6 +121,23 @@ function useAbTestStats() {
   });
 }
 
+function usePipelineSchedule(campaignId: string | null) {
+  return useQuery({
+    queryKey: ["pipeline-schedule", campaignId],
+    queryFn: async () => {
+      if (!campaignId) return null;
+      const { data, error } = await supabase
+        .from("pipeline_schedules" as any)
+        .select("*")
+        .eq("campaign_id", campaignId)
+        .maybeSingle();
+      if (error) throw error;
+      return data;
+    },
+    enabled: !!campaignId,
+  });
+}
+
 // ─── Status badges ───────────────────────────────────────
 const LEAD_STATUS: Record<string, { label: string; variant: "default" | "secondary" | "destructive" | "outline" }> = {
   new: { label: "Neu", variant: "outline" },
@@ -150,7 +168,7 @@ export default function OutreachAdmin() {
   const { data: sequences = [] } = useSequences(selectedCampaignId);
   const { data: stats } = useOutreachStats(selectedCampaignId);
   const { data: abStats } = useAbTestStats();
-
+  const { data: scheduleData, isLoading: loadingSchedule } = usePipelineSchedule(selectedCampaignId);
   // ─── Campaign CRUD ─────────────────────────────────────
   const [campaignForm, setCampaignForm] = useState({
     name: "", sender_name: "BibleBot.Life", sender_email: "",
@@ -565,6 +583,75 @@ export default function OutreachAdmin() {
     }
   };
 
+  // ─── Schedule Management ──────────────────────────────
+  const [scheduleOpen, setScheduleOpen] = useState(false);
+  const [scheduleForm, setScheduleForm] = useState({
+    search_query: "",
+    country: "ch",
+    max_results: 10,
+    cron_expression: "0 9 * * 1-5",
+    is_active: true,
+  });
+  const [savingSchedule, setSavingSchedule] = useState(false);
+
+  const CRON_PRESETS = [
+    { label: "Mo–Fr 9:00", value: "0 9 * * 1-5" },
+    { label: "Täglich 9:00", value: "0 9 * * *" },
+    { label: "Täglich 14:00", value: "0 14 * * *" },
+    { label: "Mo & Do 9:00", value: "0 9 * * 1,4" },
+    { label: "Wöchentlich Mo 9:00", value: "0 9 * * 1" },
+  ];
+
+  const openScheduleDialog = () => {
+    if (scheduleData) {
+      setScheduleForm({
+        search_query: (scheduleData as any).search_query || "",
+        country: (scheduleData as any).country || "ch",
+        max_results: (scheduleData as any).max_results || 10,
+        cron_expression: (scheduleData as any).cron_expression || "0 9 * * 1-5",
+        is_active: (scheduleData as any).is_active ?? true,
+      });
+    }
+    setScheduleOpen(true);
+  };
+
+  const saveSchedule = async () => {
+    if (!selectedCampaignId) return;
+    setSavingSchedule(true);
+    try {
+      if (scheduleData) {
+        const { error } = await (supabase
+          .from("pipeline_schedules" as any)
+          .update(scheduleForm as any)
+          .eq("id", (scheduleData as any).id) as any);
+        if (error) throw error;
+      } else {
+        const { error } = await (supabase
+          .from("pipeline_schedules" as any)
+          .insert({ ...scheduleForm, campaign_id: selectedCampaignId } as any) as any);
+        if (error) throw error;
+      }
+      toast.success("Zeitplan gespeichert");
+      setScheduleOpen(false);
+      queryClient.invalidateQueries({ queryKey: ["pipeline-schedule"] });
+    } catch (err: any) {
+      toast.error(err.message);
+    } finally {
+      setSavingSchedule(false);
+    }
+  };
+
+  const toggleScheduleActive = async () => {
+    if (!scheduleData) return;
+    const newActive = !(scheduleData as any).is_active;
+    await (supabase
+      .from("pipeline_schedules" as any)
+      .update({ is_active: newActive } as any)
+      .eq("id", (scheduleData as any).id) as any);
+    queryClient.invalidateQueries({ queryKey: ["pipeline-schedule"] });
+    toast.success(newActive ? "Zeitplan aktiviert" : "Zeitplan deaktiviert");
+  };
+
   return (
     <div className="min-h-screen bg-background p-6 max-w-7xl mx-auto space-y-6">
       <div className="flex items-center justify-between">
@@ -650,6 +737,129 @@ export default function OutreachAdmin() {
                   ) : (
                     <><Rocket className="h-4 w-4 mr-2" />Pipeline starten</>
                   )}
+                </Button>
+              </DialogFooter>
+            </DialogContent>
+          </Dialog>
+
+          {/* Schedule Button */}
+          <Button
+            variant={scheduleData && (scheduleData as any).is_active ? "default" : "outline"}
+            disabled={!selectedCampaignId}
+            onClick={openScheduleDialog}
+            className="relative"
+          >
+            <Clock className="h-4 w-4 mr-2" />
+            Zeitplan
+            {scheduleData && (scheduleData as any).is_active && (
+              <span className="absolute -top-1 -right-1 h-3 w-3 bg-green-500 rounded-full border-2 border-background" />
+            )}
+          </Button>
+
+          {/* Schedule Dialog */}
+          <Dialog open={scheduleOpen} onOpenChange={setScheduleOpen}>
+            <DialogContent className="max-w-lg">
+              <DialogHeader>
+                <DialogTitle>⏰ Pipeline-Zeitplan</DialogTitle>
+              </DialogHeader>
+              <p className="text-sm text-muted-foreground">
+                Führt die Pipeline automatisch nach Zeitplan aus (Discover → Scrape → Sequenz → Senden).
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <Label className="flex items-center gap-2">
+                    <Calendar className="h-4 w-4" />
+                    Zeitplan aktiv
+                  </Label>
+                  <Switch
+                    checked={scheduleForm.is_active}
+                    onCheckedChange={(v) => setScheduleForm({ ...scheduleForm, is_active: v })}
+                  />
+                </div>
+
+                <div>
+                  <Label>Ausführungszeit</Label>
+                  <Select
+                    value={scheduleForm.cron_expression}
+                    onValueChange={(v) => setScheduleForm({ ...scheduleForm, cron_expression: v })}
+                  >
+                    <SelectTrigger><SelectValue /></SelectTrigger>
+                    <SelectContent>
+                      {CRON_PRESETS.map((p) => (
+                        <SelectItem key={p.value} value={p.value}>{p.label}</SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                <div>
+                  <Label className="text-xs text-muted-foreground mb-1.5 block">Schnellsuche</Label>
+                  <div className="flex flex-wrap gap-1.5">
+                    {[
+                      { label: "🇨🇭 Kirchen CH", q: "reformierte katholische Kirche Gemeinde Kontakt Pfarrer", c: "ch" },
+                      { label: "🏥 Spitalseelsorge", q: "Spitalseelsorge Seelsorger Spital Kontakt Schweiz", c: "ch" },
+                      { label: "🙏 Seelsorger CH", q: "Seelsorge Beratung christlich Kontakt Schweiz", c: "ch" },
+                      { label: "🧘 Life Coaches CH", q: "Life Coach spirituell christlich Begleitung Kontakt Schweiz", c: "ch" },
+                    ].map((p) => (
+                      <Button key={p.label} variant="outline" size="sm" className="text-xs h-7"
+                        onClick={() => { setScheduleForm({ ...scheduleForm, search_query: p.q, country: p.c }); }}>
+                        {p.label}
+                      </Button>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <Label>Suchbegriff</Label>
+                  <Input
+                    value={scheduleForm.search_query}
+                    onChange={(e) => setScheduleForm({ ...scheduleForm, search_query: e.target.value })}
+                    placeholder='z.B. "reformierte Kirche Zürich Kontakt"'
+                  />
+                </div>
+
+                <div className="grid grid-cols-2 gap-3">
+                  <div>
+                    <Label>Land</Label>
+                    <Input value={scheduleForm.country} onChange={(e) => setScheduleForm({ ...scheduleForm, country: e.target.value })} placeholder="ch" />
+                  </div>
+                  <div>
+                    <Label>Max. Leads</Label>
+                    <Input type="number" min={1} max={20} value={scheduleForm.max_results}
+                      onChange={(e) => setScheduleForm({ ...scheduleForm, max_results: Number(e.target.value) })} />
+                  </div>
+                </div>
+
+                {/* Last run info */}
+                {scheduleData && (scheduleData as any).last_run_at && (
+                  <Card className="bg-muted/50">
+                    <CardContent className="p-3 space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs font-medium">Letzter Lauf</span>
+                        <Badge variant={(scheduleData as any).last_run_status === "success" ? "default" : "destructive"}>
+                          {(scheduleData as any).last_run_status}
+                        </Badge>
+                      </div>
+                      <p className="text-xs text-muted-foreground">
+                        {new Date((scheduleData as any).last_run_at).toLocaleString("de-CH")}
+                      </p>
+                      {(scheduleData as any).last_run_log?.slice(-5).map((line: string, i: number) => (
+                        <p key={i} className="text-xs text-muted-foreground">{line}</p>
+                      ))}
+                    </CardContent>
+                  </Card>
+                )}
+              </div>
+              <DialogFooter>
+                {scheduleData && (
+                  <Button variant="outline" onClick={toggleScheduleActive}>
+                    {(scheduleData as any).is_active ? <Pause className="h-4 w-4 mr-2" /> : <Play className="h-4 w-4 mr-2" />}
+                    {(scheduleData as any).is_active ? "Deaktivieren" : "Aktivieren"}
+                  </Button>
+                )}
+                <Button onClick={saveSchedule} disabled={savingSchedule || !scheduleForm.search_query.trim()}>
+                  {savingSchedule ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : <Clock className="h-4 w-4 mr-2" />}
+                  Zeitplan speichern
                 </Button>
               </DialogFooter>
             </DialogContent>
