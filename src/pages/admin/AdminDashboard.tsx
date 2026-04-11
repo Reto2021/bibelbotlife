@@ -60,13 +60,13 @@ export default function AdminDashboard() {
         <div className="flex items-center justify-between">
           <h1 className="text-3xl font-bold text-foreground">Admin Dashboard</h1>
           <Button asChild variant="outline">
-            <RouterLink to="/admin/outreach"><Target className="h-4 w-4 mr-2" />Cold Outreach</RouterLink>
+            <Link to="/admin/outreach"><Target className="h-4 w-4 mr-2" />Cold Outreach</Link>
           </Button>
           <Button asChild variant="outline">
-            <RouterLink to="/admin/referrals"><Link className="h-4 w-4 mr-2" />Referrals</RouterLink>
+            <Link to="/admin/referrals"><LinkIcon className="h-4 w-4 mr-2" />Referrals</Link>
           </Button>
           <Button asChild variant="outline">
-            <RouterLink to="/admin/prayers"><Heart className="h-4 w-4 mr-2" />Gebete</RouterLink>
+            <Link to="/admin/prayers"><Heart className="h-4 w-4 mr-2" />Gebete</Link>
           </Button>
         </div>
 
