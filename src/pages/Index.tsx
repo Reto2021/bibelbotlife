@@ -629,7 +629,7 @@ const Index = () => {
               <Link to="/impressum" className="hover:text-background/80 underline underline-offset-2">{t("footer.impressum")}</Link>
               <Link to="/datenschutz" className="hover:text-background/80 underline underline-offset-2">{t("footer.datenschutz")}</Link>
               <Link to="/for-churches" className="hover:text-background/80 underline underline-offset-2">{t("footer.forChurches")}</Link>
-              
+              <Link to="/fuer-seelsorger" className="hover:text-background/80 underline underline-offset-2">Für Seelsorger & Coaches</Link>
               <Link to="/churches" className="hover:text-background/80 underline underline-offset-2">{t("church.directoryBadge")}</Link>
             </div>
 
