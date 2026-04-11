@@ -135,6 +135,7 @@ export default function ReferralAdmin() {
                     <TableHead className="text-right">Conv.</TableHead>
                     <TableHead className="text-right">Provision</TableHead>
                     <TableHead>Status</TableHead>
+                    <TableHead>Partner-Seite</TableHead>
                     <TableHead></TableHead>
                   </TableRow>
                 </TableHeader>
