@@ -5,7 +5,8 @@ import { SEOHead } from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Copy, Link, MousePointerClick, TrendingUp, DollarSign, QrCode } from "lucide-react";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Copy, Link, MousePointerClick, TrendingUp, DollarSign, QrCode, History } from "lucide-react";
 import { toast } from "sonner";
 import { useState } from "react";
 import { BrandedQRCode } from "@/components/BrandedQRCode";
@@ -26,6 +27,19 @@ export default function ReferralPartner() {
       return data[0];
     },
     enabled: !!code,
+  });
+
+  const { data: conversions } = useQuery({
+    queryKey: ["referral-partner-conversions", code],
+    queryFn: async () => {
+      if (!code) return [];
+      const { data, error } = await (supabase.rpc as any)("get_referral_partner_conversions", {
+        p_code: code,
+      });
+      if (error) throw error;
+      return data || [];
+    },
+    enabled: !!code && !!partner,
   });
 
   const referralLink = `https://biblebot.life/for-churches?ref=${code}`;
@@ -170,6 +184,44 @@ export default function ReferralPartner() {
               </p>
             </CardContent>
           </Card>
+
+          {/* Conversions Table */}
+          {conversions && conversions.length > 0 && (
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2 text-lg">
+                  <History className="h-5 w-5 text-primary" />
+                  Letzte Conversions
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>Datum</TableHead>
+                      <TableHead className="text-right">Betrag</TableHead>
+                      <TableHead className="text-right">Deine Provision</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    {conversions.map((c: any, i: number) => (
+                      <TableRow key={i}>
+                        <TableCell className="text-sm">
+                          {new Date(c.created_at).toLocaleDateString("de-CH")}
+                        </TableCell>
+                        <TableCell className="text-right text-sm">
+                          CHF {Number(c.deal_value).toLocaleString("de-CH", { minimumFractionDigits: 0 })}
+                        </TableCell>
+                        <TableCell className="text-right text-sm font-medium text-primary">
+                          CHF {Number(c.commission_amount).toLocaleString("de-CH", { minimumFractionDigits: 0 })}
+                        </TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </CardContent>
+            </Card>
+          )}
 
           <p className="text-xs text-muted-foreground text-center">
             Teile deinen persönlichen Link mit Kirchgemeinden, die BibleBot.Life
