@@ -524,6 +524,9 @@ export function ChatHero() {
         // Update the DB with final assistant content
         if (assistantSoFar && convId) {
           await updateLastAssistantMessage(convId, assistantSoFar);
+          // Run QA check on the assistant response
+          const assistantMsgIndex = allMessages.length; // index of the assistant message in the messages array
+          runQA(assistantSoFar, assistantMsgIndex);
 
           // Generate AI title after the first exchange (only 1 user + 1 assistant message)
           if (allMessages.length === 1) {
@@ -556,7 +559,7 @@ export function ChatHero() {
         loadConversations();
       }
     },
-    [messages, isLoading, toast, t, i18n.language, chatMode, track, createConversation, addMessage, updateLastAssistantMessage, updateTitle, setMessages, loadConversations]
+    [messages, isLoading, toast, t, i18n.language, chatMode, track, createConversation, addMessage, updateLastAssistantMessage, updateTitle, setMessages, loadConversations, runQA]
   );
 
   // Listen for external chat open events
