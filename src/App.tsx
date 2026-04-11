@@ -51,6 +51,7 @@ const BibleQuiz = lazy(() => import("./pages/BibleQuiz"));
 const WidgetPreview = lazy(() => import("./pages/WidgetPreview"));
 const SplashPage = lazy(() => import("./pages/SplashPage"));
 const ForCelebrants = lazy(() => import("./pages/ForCelebrants"));
+const ReferralPartner = lazy(() => import("./pages/ReferralPartner"));
 
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { ProtectedAdminRoute } from "@/components/ProtectedAdminRoute";
