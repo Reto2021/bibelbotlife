@@ -15,6 +15,7 @@ const featureIcons = [Mic, Sparkles, FileText, Layout, Calendar, Monitor, Music,
 
 export default function ForCelebrants() {
   const { t } = useTranslation();
+  const { formatPrice, currency } = useCurrency();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const features = Array.from({ length: 10 }, (_, i) => ({
