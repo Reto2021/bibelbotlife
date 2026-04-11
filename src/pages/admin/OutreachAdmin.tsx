@@ -1188,6 +1188,36 @@ export default function OutreachAdmin() {
                             <TableCell className="text-sm">{lead.email}</TableCell>
                             <TableCell>{lead.city || "–"}</TableCell>
                             <TableCell>
+                              <div className="flex items-center gap-1">
+                                {lead.instagram_handle && (
+                                  <a href={`https://instagram.com/${lead.instagram_handle}`} target="_blank" rel="noopener noreferrer" title={`@${lead.instagram_handle}`}>
+                                    <Instagram className="h-4 w-4 text-pink-500 hover:text-pink-600" />
+                                  </a>
+                                )}
+                                {lead.facebook_url && (
+                                  <a href={lead.facebook_url} target="_blank" rel="noopener noreferrer" title="Facebook">
+                                    <Facebook className="h-4 w-4 text-blue-600 hover:text-blue-700" />
+                                  </a>
+                                )}
+                                {lead.youtube_url && (
+                                  <a href={lead.youtube_url} target="_blank" rel="noopener noreferrer" title="YouTube">
+                                    <Youtube className="h-4 w-4 text-red-500 hover:text-red-600" />
+                                  </a>
+                                )}
+                                {lead.whatsapp_number && (
+                                  <a href={`https://wa.me/${lead.whatsapp_number.replace(/\+/g, "")}`} target="_blank" rel="noopener noreferrer" title={lead.whatsapp_number}>
+                                    <MessageCircle className="h-4 w-4 text-green-500 hover:text-green-600" />
+                                  </a>
+                                )}
+                                {lead.telegram_username && (
+                                  <a href={`https://t.me/${lead.telegram_username}`} target="_blank" rel="noopener noreferrer" title={`@${lead.telegram_username}`}>
+                                    <Send className="h-4 w-4 text-blue-400 hover:text-blue-500" />
+                                  </a>
+                                )}
+                                {!lead.instagram_handle && !lead.facebook_url && !lead.youtube_url && !lead.whatsapp_number && !lead.telegram_username && "–"}
+                              </div>
+                            </TableCell>
+                            <TableCell>
                               {lead.website_score != null ? (
                                 <span className={`text-xs font-medium px-1.5 py-0.5 rounded ${
                                   lead.website_score >= 7 ? "bg-green-100 text-green-800" :
