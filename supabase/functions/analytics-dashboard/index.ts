@@ -30,13 +30,13 @@ Deno.serve(async (req) => {
   const since = new Date(Date.now() - days * 86400000).toISOString();
 
   // Fetch events + subscribers + telegram messages in parallel
-  const [eventsRes, subscribersRes, telegramRes] = await Promise.all([
+  const [eventsRes, subscribersRes, telegramRes, churchesRes] = await Promise.all([
     supabase
       .from("analytics_events")
       .select("*")
       .gte("created_at", since)
       .order("created_at", { ascending: true })
-      .limit(5000),
+      .limit(10000),
     supabase
       .from("daily_subscribers")
       .select("*"),
@@ -45,6 +45,9 @@ Deno.serve(async (req) => {
       .select("chat_id, role, created_at")
       .order("created_at", { ascending: true })
       .limit(10000),
+    supabase
+      .from("church_partners")
+      .select("id, name, slug, is_active, plan_tier"),
   ]);
 
   if (eventsRes.error) {
@@ -57,6 +60,7 @@ Deno.serve(async (req) => {
   const events = eventsRes.data || [];
   const subscribers = subscribersRes.data || [];
   const telegramMsgs = telegramRes.data || [];
+  const churches = churchesRes.data || [];
 
   // ── Aggregate basic stats ──
   const pageviews = events.filter((e: any) => e.event_type === "pageview");
@@ -118,14 +122,12 @@ Deno.serve(async (req) => {
     .slice(0, 10)
     .map(([flow, count]) => ({ flow, count }));
 
-  // ── Journey (21-Tage-Coaching) stats ──
+  // ── Journey stats ──
   const journeyEvents = customEvents.filter((e: any) =>
     ["journey_start", "journey_progress", "journey_complete"].includes(e.event_name)
   );
   const journeyStarts = journeyEvents.filter((e: any) => e.event_name === "journey_start").length;
   const journeyCompletes = journeyEvents.filter((e: any) => e.event_name === "journey_complete").length;
-
-  // Progress by day
   const progressByDay: Record<number, number> = {};
   journeyEvents
     .filter((e: any) => e.event_name === "journey_progress")
@@ -150,15 +152,8 @@ Deno.serve(async (req) => {
   const uniqueChatters = new Set(telegramMsgs.filter((m: any) => m.role === "user").map((m: any) => m.chat_id));
   const userMessages = telegramMsgs.filter((m: any) => m.role === "user").length;
   const botMessages = telegramMsgs.filter((m: any) => m.role === "assistant").length;
-
-  // Messages per user
-  const msgsPerUser: Record<string, number> = {};
-  telegramMsgs.filter((m: any) => m.role === "user").forEach((m: any) => {
-    msgsPerUser[m.chat_id] = (msgsPerUser[m.chat_id] || 0) + 1;
-  });
   const avgMsgsPerUser = uniqueChatters.size > 0 ? Math.round(userMessages / uniqueChatters.size * 10) / 10 : 0;
 
-  // Daily chat activity
   const dailyChats: Record<string, number> = {};
   telegramMsgs.forEach((m: any) => {
     const day = m.created_at.split("T")[0];
@@ -225,12 +220,115 @@ Deno.serve(async (req) => {
   // ── 7 Whys stats ──
   const sevenWhysStarts = customEvents.filter((e: any) => e.event_name === "seven_whys_start").length;
 
+  // ═══════════════════════════════════════════
+  // ── NEW: Per-church analytics breakdown ──
+  // ═══════════════════════════════════════════
+  const churchSlugs = new Set(events.map((e: any) => e.church_slug).filter(Boolean));
+  const churchSlugMap = new Map(churches.map((c: any) => [c.slug, c]));
+
+  const perChurch: Record<string, any> = {};
+  for (const slug of churchSlugs) {
+    const ce = events.filter((e: any) => e.church_slug === slug);
+    const cpv = ce.filter((e: any) => e.event_type === "pageview");
+    const cevt = ce.filter((e: any) => e.event_type === "event");
+    const cSessions = new Set(ce.map((e: any) => e.session_id));
+    const church = churchSlugMap.get(slug);
+
+    // Daily pageviews for this church
+    const cDaily: Record<string, number> = {};
+    cpv.forEach((e: any) => {
+      const day = e.created_at.split("T")[0];
+      cDaily[day] = (cDaily[day] || 0) + 1;
+    });
+
+    // Top events for this church
+    const cEventCounts: Record<string, number> = {};
+    cevt.forEach((e: any) => {
+      cEventCounts[e.event_name || "unknown"] = (cEventCounts[e.event_name || "unknown"] || 0) + 1;
+    });
+
+    perChurch[slug] = {
+      churchName: church?.name || slug,
+      planTier: church?.plan_tier || "free",
+      isActive: church?.is_active ?? true,
+      pageviews: cpv.length,
+      events: cevt.length,
+      sessions: cSessions.size,
+      dailyPageviews: cDaily,
+      topEvents: Object.entries(cEventCounts)
+        .sort(([, a], [, b]) => (b as number) - (a as number))
+        .slice(0, 5)
+        .map(([name, count]) => ({ name, count })),
+    };
+  }
+
+  // ═══════════════════════════════════════
+  // ── NEW: UTM source breakdown ──
+  // ═══════════════════════════════════════
+  const utmSourceCounts: Record<string, number> = {};
+  const utmMediumCounts: Record<string, number> = {};
+  events.forEach((e: any) => {
+    if (e.utm_source) utmSourceCounts[e.utm_source] = (utmSourceCounts[e.utm_source] || 0) + 1;
+    if (e.utm_medium) utmMediumCounts[e.utm_medium] = (utmMediumCounts[e.utm_medium] || 0) + 1;
+  });
+  const topUtmSources = Object.entries(utmSourceCounts)
+    .sort(([, a], [, b]) => b - a)
+    .slice(0, 10)
+    .map(([source, count]) => ({ source, count }));
+  const topUtmMediums = Object.entries(utmMediumCounts)
+    .sort(([, a], [, b]) => b - a)
+    .slice(0, 10)
+    .map(([medium, count]) => ({ medium, count }));
+
+  // ═══════════════════════════════════════
+  // ── NEW: Hourly distribution ──
+  // ═══════════════════════════════════════
+  const hourly = new Array(24).fill(0);
+  events.forEach((e: any) => {
+    const h = new Date(e.created_at).getHours();
+    hourly[h]++;
+  });
+  const hourlyDistribution = hourly.map((count, hour) => ({ hour, count }));
+
+  // ═══════════════════════════════════════
+  // ── NEW: Weekday distribution ──
+  // ═══════════════════════════════════════
+  const weekdayNames = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
+  const weekdays = new Array(7).fill(0);
+  events.forEach((e: any) => {
+    const d = new Date(e.created_at).getDay();
+    weekdays[d]++;
+  });
+  const weekdayDistribution = weekdays.map((count, i) => ({ day: weekdayNames[i], count }));
+
+  // ═══════════════════════════════════════
+  // ── NEW: Average session duration (approx) ──
+  // ═══════════════════════════════════════
+  const sessionTimestamps: Record<string, number[]> = {};
+  events.forEach((e: any) => {
+    if (!sessionTimestamps[e.session_id]) sessionTimestamps[e.session_id] = [];
+    sessionTimestamps[e.session_id].push(new Date(e.created_at).getTime());
+  });
+  let totalDuration = 0;
+  let countedSessions = 0;
+  for (const ts of Object.values(sessionTimestamps)) {
+    if (ts.length > 1) {
+      const dur = Math.max(...ts) - Math.min(...ts);
+      if (dur < 3600000) { // skip sessions > 1h (likely abandoned)
+        totalDuration += dur;
+        countedSessions++;
+      }
+    }
+  }
+  const avgSessionDurationSec = countedSessions > 0 ? Math.round(totalDuration / countedSessions / 1000) : 0;
+
   const result = {
     period: { days, since },
     summary: {
       totalPageviews: pageviews.length,
       totalEvents: customEvents.length,
       uniqueSessions: sessions.size,
+      avgSessionDurationSec,
     },
     topPages,
     topEvents,
@@ -271,6 +369,12 @@ Deno.serve(async (req) => {
     sevenWhys: {
       starts: sevenWhysStarts,
     },
+    // NEW sections
+    perChurch,
+    utmSources: topUtmSources,
+    utmMediums: topUtmMediums,
+    hourlyDistribution,
+    weekdayDistribution,
   };
 
   return new Response(JSON.stringify(result), {
