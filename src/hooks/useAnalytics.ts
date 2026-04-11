@@ -36,10 +36,54 @@ const getUtmParams = (): { utm_source: string | null; utm_medium: string | null 
   return { utm_source, utm_medium };
 };
 
+/** Capture ?ref=CODE into localStorage (30-day window) and log click */
+const captureReferral = (sessionId: string) => {
+  const params = new URLSearchParams(window.location.search);
+  const ref = params.get("ref");
+  if (!ref) return;
+
+  // Store with expiry (30 days)
+  const expiry = Date.now() + 30 * 24 * 60 * 60 * 1000;
+  localStorage.setItem("bb_ref", JSON.stringify({ code: ref, expiry }));
+
+  // Log click once per session
+  const clickKey = `bb_ref_clicked_${ref}`;
+  if (sessionStorage.getItem(clickKey)) return;
+  sessionStorage.setItem(clickKey, "1");
+
+  (supabase.from as any)("referral_clicks").insert({
+    referral_code: ref,
+    landing_page: window.location.pathname,
+    session_id: sessionId,
+    user_agent: navigator.userAgent,
+  }).then(() => {});
+};
+
+/** Get stored referral code (if not expired) */
+export const getStoredReferralCode = (): string | null => {
+  try {
+    const raw = localStorage.getItem("bb_ref");
+    if (!raw) return null;
+    const { code, expiry } = JSON.parse(raw);
+    if (Date.now() > expiry) {
+      localStorage.removeItem("bb_ref");
+      return null;
+    }
+    return code;
+  } catch {
+    return null;
+  }
+};
+
 export const useAnalytics = () => {
   const location = useLocation();
   const sessionId = useRef(getSessionId());
   const lastPath = useRef<string | null>(null);
+
+  // Capture referral code on mount
+  useEffect(() => {
+    captureReferral(sessionId.current);
+  }, []);
 
   const track = useCallback(
     async (eventName: string, eventData: Record<string, unknown> = {}) => {
