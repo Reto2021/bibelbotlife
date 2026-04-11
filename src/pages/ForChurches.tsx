@@ -5,7 +5,7 @@ import { useAppSetting } from "@/hooks/use-app-setting";
 import { getStoredReferralCode } from "@/hooks/useAnalytics";
 import { SEOHead } from "@/components/SEOHead";
 import { Link } from "react-router-dom";
-import { Church, ArrowLeft, Send, Handshake, Sprout, Heart, Building2, Hospital, ShieldCheck, Swords, Footprints, TowerControl, Cross, BookOpen, Flame, Users, Sparkles } from "lucide-react";
+import { Church, ArrowLeft, Send, Handshake, Sprout, Heart, Building2, Hospital, ShieldCheck, Swords, Footprints, TowerControl, Cross, BookOpen, Flame, Users, Sparkles, Activity, Brain, HeartPulse, Home, MessageSquareHeart } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -152,6 +152,11 @@ const ForChurches = () => {
               { key: "careHome", icon: Building2 },
               { key: "seniorHome", icon: Heart },
               { key: "hospital", icon: Hospital },
+              { key: "rehaClinic", icon: Activity },
+              { key: "psychiatry", icon: Brain },
+              { key: "burnoutClinic", icon: HeartPulse },
+              { key: "hospice", icon: Home },
+              { key: "counseling", icon: MessageSquareHeart },
               { key: "prison", icon: ShieldCheck },
               { key: "military", icon: Swords },
             ] as const).map((inst) => (
@@ -292,6 +297,11 @@ const ForChurches = () => {
                         <SelectItem value="Spital">{t("church.form.orgTypes.hospital")}</SelectItem>
                         <SelectItem value="Gefängnisseelsorge">{t("church.form.orgTypes.prison")}</SelectItem>
                         <SelectItem value="Armeeseelsorge">{t("church.form.orgTypes.military")}</SelectItem>
+                        <SelectItem value="Reha-Klinik">{t("church.form.orgTypes.rehaClinic")}</SelectItem>
+                        <SelectItem value="Psychiatrie">{t("church.form.orgTypes.psychiatry")}</SelectItem>
+                        <SelectItem value="Burnout-Klinik">{t("church.form.orgTypes.burnoutClinic")}</SelectItem>
+                        <SelectItem value="Hospiz">{t("church.form.orgTypes.hospice")}</SelectItem>
+                        <SelectItem value="Beratungsstelle">{t("church.form.orgTypes.counseling")}</SelectItem>
                         <SelectItem value="Andere">{t("church.form.orgTypes.other")}</SelectItem>
                       </SelectContent>
                     </Select>

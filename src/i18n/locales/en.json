@@ -670,6 +670,11 @@
         "hospital": "Hospital",
         "prison": "Prison Chaplaincy",
         "military": "Military Chaplaincy",
+        "rehaClinic": "Rehab Clinic",
+        "psychiatry": "Psychiatry / Psychosomatics",
+        "burnoutClinic": "Burnout Clinic",
+        "hospice": "Hospice",
+        "counseling": "Counseling Center",
         "other": "Other"
       }
     },
@@ -698,7 +703,7 @@
       }
     },
     "institutionsTitle": "For all kinds of organizations",
-    "institutionsSubtitle": "BibleBot supports churches, care homes, retirement homes, hospitals, prison chaplaincy, and many other organizations with digital pastoral care.",
+    "institutionsSubtitle": "BibleBot supports churches, care homes, hospitals, rehab & burnout clinics, psychiatric facilities, hospices, counseling centers, and many more with digital pastoral care.",
     "institution": {
       "careHome": {
         "title": "Care Homes",
@@ -719,6 +724,26 @@
       "military": {
         "title": "Military Chaplaincy",
         "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
+      },
+      "rehaClinic": {
+        "title": "Rehab Clinics",
+        "desc": "Pastoral support during rehabilitation – for inner strength on the road back to life."
+      },
+      "psychiatry": {
+        "title": "Psychiatric Facilities",
+        "desc": "Confidential spiritual conversations for patients in psychiatric care – complementing therapy."
+      },
+      "burnoutClinic": {
+        "title": "Burnout Clinics",
+        "desc": "Questions of meaning and inner reflection during exhaustion – a calm conversation partner without time pressure."
+      },
+      "hospice": {
+        "title": "Hospices",
+        "desc": "End-of-life companionship – comforting words, familiar verses, and a listening ear in the final days."
+      },
+      "counseling": {
+        "title": "Counseling Centers",
+        "desc": "Complementary spiritual impulses for clients in psychosocial or pastoral counseling."
       }
     },
     "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."

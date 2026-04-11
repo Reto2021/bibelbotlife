@@ -710,6 +710,11 @@
         "hospital": "Spital",
         "prison": "Gefängnisseelsorge",
         "military": "Armeeseelsorge",
+        "rehaClinic": "Reha-Klinik",
+        "psychiatry": "Psychiatrie / Psychosomatik",
+        "burnoutClinic": "Burnout-Klinik",
+        "hospice": "Hospiz",
+        "counseling": "Beratungsstelle",
         "other": "Andere"
       }
     },
@@ -738,7 +743,7 @@
       }
     },
     "institutionsTitle": "Für verschiedenste Organisationen",
-    "institutionsSubtitle": "BibleBot begleitet Gemeinden, Pflege- und Altersheime, Spitäler, die Gefängnisseelsorge und viele weitere Organisationen mit digitaler Seelsorge.",
+    "institutionsSubtitle": "BibleBot begleitet Gemeinden, Pflege- und Altersheime, Spitäler, Reha- und Burnout-Kliniken, Psychiatrien, Hospize, Beratungsstellen und viele weitere Organisationen mit digitaler Seelsorge.",
     "institution": {
       "careHome": {
         "title": "Pflegeheime",
@@ -759,6 +764,26 @@
       "military": {
         "title": "Armeeseelsorge",
         "desc": "Geistliche Begleitung für Angehörige der Armee – auch im Einsatz oder in der Kaserne erreichbar."
+      },
+      "rehaClinic": {
+        "title": "Reha-Kliniken",
+        "desc": "Seelsorgerische Begleitung während der Rehabilitation – für innere Stärke auf dem Weg zurück ins Leben."
+      },
+      "psychiatry": {
+        "title": "Psychiatrien",
+        "desc": "Vertrauliche geistliche Gespräche für Patientinnen und Patienten in psychiatrischer Behandlung – ergänzend zur Therapie."
+      },
+      "burnoutClinic": {
+        "title": "Burnout-Kliniken",
+        "desc": "Sinnfragen und innere Einkehr bei Erschöpfung – ein ruhiger Gesprächspartner ohne Zeitdruck."
+      },
+      "hospice": {
+        "title": "Hospize",
+        "desc": "Begleitung am Lebensende – tröstende Worte, vertraute Verse und ein offenes Ohr in den letzten Tagen."
+      },
+      "counseling": {
+        "title": "Beratungsstellen",
+        "desc": "Ergänzende geistliche Impulse für Klienten in psychosozialer oder seelsorgerischer Beratung."
       }
     },
     "patronageNote": "BibleBot.Life ist ein privates, nicht-kommerzielles Projekt. Es wird ehrenamtlich betrieben und finanziert sich ausschliesslich durch freiwillige Spenden. Es gibt keine Werbung, keine Datenverkäufe und keine kostenpflichtigen Features. Alle Spenden fliessen direkt in die Deckung der laufenden Kosten (Infrastruktur, Hosting, Entwicklung). Da BibleBot als privates Projekt läuft, sind Spenden nicht steuerabzugsfähig."
