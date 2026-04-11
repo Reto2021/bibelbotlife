@@ -144,12 +144,7 @@ const ChurchIntegration = () => {
             <CardContent>
               <div className="flex flex-col sm:flex-row items-start gap-4">
                 <div className="bg-white p-3 rounded-xl border shadow-sm">
-                  <img
-                    src={qrCodeUrl}
-                    alt={`QR-Code für ${church.name}`}
-                    className="w-40 h-40"
-                    loading="lazy"
-                  />
+                  <BrandedQRCode value={brandedLink} size={160} logoUrl={church.logo_url || undefined} />
                 </div>
                 <div className="space-y-2">
                   <p className="text-sm text-muted-foreground">

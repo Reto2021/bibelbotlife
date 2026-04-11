@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
-import QRCode from "react-qr-code";
+import { BrandedQRCode } from "@/components/BrandedQRCode";
 
 export default function SplashPage() {
   const { churchSlug } = useParams<{ churchSlug: string }>();
@@ -65,7 +65,7 @@ export default function SplashPage() {
 
       {/* QR Code */}
       <div className="bg-white p-5 rounded-2xl shadow-xl mb-6">
-        <QRCode value={appUrl} size={200} level="M" />
+        <BrandedQRCode value={appUrl} size={200} logoUrl={church.logo_url || undefined} />
       </div>
 
       <p className="text-white/60 text-sm text-center max-w-xs">
