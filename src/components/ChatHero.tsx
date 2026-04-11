@@ -926,6 +926,7 @@ export function ChatHero() {
                               </button>
                               <ShareButton title={t("share.chatTitle")} text={msg.content.length > 280 ? msg.content.slice(0, 277) + "…" : msg.content} variant="icon" className="ml-auto" />
                             </div>
+                            {qaMap[i] && <QABadge qa={qaMap[i]} t={t} />}
                           )}
                         </div>
                       </div>
