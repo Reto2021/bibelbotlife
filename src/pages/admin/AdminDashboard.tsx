@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-import { Building2, Users, TrendingUp, AlertTriangle, MessageCircle, Search, Target, Heart } from "lucide-react";
+import { Building2, Users, TrendingUp, AlertTriangle, MessageCircle, Search, Target, Heart, Link } from "lucide-react";
 import { ChurchDetailDrawer } from "./ChurchDetailDrawer";
 import type { Tables } from "@/integrations/supabase/types";
 
@@ -60,10 +60,13 @@ export default function AdminDashboard() {
         <div className="flex items-center justify-between">
           <h1 className="text-3xl font-bold text-foreground">Admin Dashboard</h1>
           <Button asChild variant="outline">
-            <Link to="/admin/outreach"><Target className="h-4 w-4 mr-2" />Cold Outreach</Link>
+            <RouterLink to="/admin/outreach"><Target className="h-4 w-4 mr-2" />Cold Outreach</RouterLink>
           </Button>
           <Button asChild variant="outline">
-            <Link to="/admin/prayers"><Heart className="h-4 w-4 mr-2" />Gebete</Link>
+            <RouterLink to="/admin/referrals"><Link className="h-4 w-4 mr-2" />Referrals</RouterLink>
+          </Button>
+          <Button asChild variant="outline">
+            <RouterLink to="/admin/prayers"><Heart className="h-4 w-4 mr-2" />Gebete</RouterLink>
           </Button>
         </div>
 
