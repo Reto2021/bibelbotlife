@@ -4,7 +4,7 @@
   "description": "Rediscover the Bible – with good questions, honest companionship and real impulses.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#1A2630",
+  "background_color": "#FFFFFF",
   "theme_color": "#D4911A",
   "orientation": "portrait-primary",
   "icons": [
