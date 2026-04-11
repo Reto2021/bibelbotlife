@@ -112,7 +112,7 @@ export default function ReferralPartner() {
               </div>
               {showQR && (
                 <div className="flex justify-center pt-4">
-                  <BrandedQRCode url={referralLink} size={200} />
+                  <BrandedQRCode value={referralLink} size={200} />
                 </div>
               )}
             </CardContent>
