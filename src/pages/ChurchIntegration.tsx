@@ -4,7 +4,7 @@ import { QRStickerDownload } from "@/components/QRStickerDownload";
 import { useParams, Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
-import { Copy, Check, ArrowLeft, ExternalLink, Code2, Link2, QrCode, Globe } from "lucide-react";
+import { Copy, Check, ArrowLeft, ExternalLink, Code2, Link2, QrCode, Globe, Mail, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
@@ -34,6 +34,7 @@ function CopyButton({ text, label }: { text: string; label?: string }) {
 const ChurchIntegration = () => {
   const { slug } = useParams<{ slug: string }>();
   const { toast } = useToast();
+  const [sendingEmail, setSendingEmail] = useState(false);
 
   const { data: church, isLoading } = useQuery({
     queryKey: ["church-integration", slug],
@@ -171,6 +172,41 @@ const ChurchIntegration = () => {
                       slug={church.slug}
                     />
                     <CopyButton text={brandedLink} label="QR-Link kopiert" />
+                    {church.contact_email && (
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        disabled={sendingEmail}
+                        className="gap-1.5"
+                        onClick={async () => {
+                          setSendingEmail(true);
+                          try {
+                            const { error } = await supabase.functions.invoke('send-transactional-email', {
+                              body: {
+                                templateName: 'qr-sticker',
+                                recipientEmail: church.contact_email,
+                                idempotencyKey: `qr-sticker-${church.slug}-${Date.now()}`,
+                                templateData: {
+                                  churchName: church.name,
+                                  slug: church.slug,
+                                  contactName: church.pastor_name || church.contact_person,
+                                  customBotName: church.custom_bot_name,
+                                },
+                              },
+                            });
+                            if (error) throw error;
+                            toast({ title: "E-Mail gesendet!", description: `QR-Sticker wurde an ${church.contact_email} gesendet.` });
+                          } catch (e) {
+                            toast({ title: "Fehler", description: "E-Mail konnte nicht gesendet werden.", variant: "destructive" });
+                          } finally {
+                            setSendingEmail(false);
+                          }
+                        }}
+                      >
+                        {sendingEmail ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Mail className="h-3.5 w-3.5" />}
+                        Per E-Mail senden
+                      </Button>
+                    )}
                   </div>
                 </div>
               </div>
