@@ -1,4 +1,5 @@
 import { useState, forwardRef } from "react";
+import { BrandedQRCode } from "@/components/BrandedQRCode";
 import { useTranslation } from "react-i18next";
 import { Heart, Send, Mail, Copy, Check, QrCode } from "lucide-react";
 import { Button } from "@/components/ui/button";
