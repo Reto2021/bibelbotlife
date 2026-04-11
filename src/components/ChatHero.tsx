@@ -283,6 +283,27 @@ export function ChatHero() {
   const { branding } = useChurchBranding();
   const { isSenior, toggle: toggleSenior } = useSeniorMode();
   const tts = useTTS();
+  const [qaMap, setQaMap] = useState<Record<number, QAResult | "loading" | "skipped">>({});
+
+  const runQA = useCallback(async (text: string, msgIndex: number) => {
+    if (!likelyHasCitations(text)) {
+      setQaMap((prev) => ({ ...prev, [msgIndex]: "skipped" }));
+      return;
+    }
+    setQaMap((prev) => ({ ...prev, [msgIndex]: "loading" }));
+    try {
+      const resp = await fetch(QA_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}` },
+        body: JSON.stringify({ text }),
+      });
+      if (!resp.ok) { setQaMap((prev) => ({ ...prev, [msgIndex]: "skipped" })); return; }
+      const qaResult: QAResult = await resp.json();
+      setQaMap((prev) => ({ ...prev, [msgIndex]: qaResult }));
+    } catch {
+      setQaMap((prev) => ({ ...prev, [msgIndex]: "skipped" }));
+    }
+  }, []);
   const dailyVerseIdx = useMemo(() => getDailyVerseIndex(), []);
   const dailyVerse = useMemo(() => ({
     quote: t(`dailyVerses.v${dailyVerseIdx}`),
