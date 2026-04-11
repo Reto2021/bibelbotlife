@@ -546,20 +546,22 @@ export default function OutreachAdmin() {
                       <Label className="text-xs text-muted-foreground mb-1.5 block">Schnellsuche</Label>
                       <div className="flex flex-wrap gap-1.5">
                         {[
-                          { label: "🏛️ Kirchen", q: "reformierte Kirche Gemeinde Kontakt Pfarrer" },
-                          { label: "⛪ Freikirchen", q: "Freikirche evangelische Gemeinde Pastor Kontakt" },
-                          { label: "🏥 Spitalseelsorge", q: "Spitalseelsorge Seelsorger Spital Kontakt E-Mail" },
-                          { label: "🏠 Heime", q: "Altersheim Pflegeheim Seelsorge Kontakt" },
-                          { label: "🙏 Seelsorger", q: "Seelsorge Beratung christlich Kontakt" },
-                          { label: "🇦🇹 Österreich", q: "evangelische Pfarrgemeinde Österreich Kontakt" },
-                          { label: "🇩🇪 Deutschland", q: "evangelische Kirchengemeinde Deutschland Kontakt Pfarrer" },
+                          { label: "🇨🇭 Schweiz", q: "reformierte Kirche Kirchgemeinde Pfarramt Schweiz Kontakt", country: "ch" },
+                          { label: "🏛️ Kirchen CH", q: "reformierte katholische Kirche Gemeinde Kontakt Pfarrer", country: "ch" },
+                          { label: "⛪ Freikirchen CH", q: "Freikirche evangelische Gemeinde Pastor Kontakt Schweiz", country: "ch" },
+                          { label: "🏥 Spitalseelsorge CH", q: "Spitalseelsorge Seelsorger Spital Kontakt Schweiz", country: "ch" },
+                          { label: "🏠 Heime CH", q: "Altersheim Pflegeheim Seelsorge Kontakt Schweiz", country: "ch" },
+                          { label: "🙏 Seelsorger CH", q: "Seelsorge Beratung christlich Kontakt Schweiz", country: "ch" },
+                          { label: "🧘 Life Coaches CH", q: "Life Coach spirituell christlich Begleitung Kontakt Schweiz", country: "ch" },
+                          { label: "🇦🇹 Österreich", q: "evangelische Pfarrgemeinde Österreich Kontakt", country: "at" },
+                          { label: "🇩🇪 Deutschland", q: "evangelische Kirchengemeinde Deutschland Kontakt Pfarrer", country: "de" },
                         ].map((preset) => (
                           <Button
                             key={preset.label}
                             variant="outline"
                             size="sm"
                             className="text-xs h-7"
-                            onClick={() => { setDiscoverQuery(preset.q); if (preset.label.includes("🇦🇹")) setDiscoverCountry("at"); if (preset.label.includes("🇩🇪")) setDiscoverCountry("de"); }}
+                            onClick={() => { setDiscoverQuery(preset.q); setDiscoverCountry(preset.country); }}
                           >
                             {preset.label}
                           </Button>
