@@ -48,6 +48,7 @@ export type Database = {
       }
       analytics_events: {
         Row: {
+          church_slug: string | null
           created_at: string
           event_data: Json | null
           event_name: string | null
@@ -58,8 +59,11 @@ export type Database = {
           screen_width: number | null
           session_id: string
           user_agent: string | null
+          utm_medium: string | null
+          utm_source: string | null
         }
         Insert: {
+          church_slug?: string | null
           created_at?: string
           event_data?: Json | null
           event_name?: string | null
@@ -70,8 +74,11 @@ export type Database = {
           screen_width?: number | null
           session_id: string
           user_agent?: string | null
+          utm_medium?: string | null
+          utm_source?: string | null
         }
         Update: {
+          church_slug?: string | null
           created_at?: string
           event_data?: Json | null
           event_name?: string | null
@@ -82,6 +89,8 @@ export type Database = {
           screen_width?: number | null
           session_id?: string
           user_agent?: string | null
+          utm_medium?: string | null
+          utm_source?: string | null
         }
         Relationships: []
       }
