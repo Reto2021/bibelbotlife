@@ -71,6 +71,9 @@ ${SENDER_PROFILE.usp}
 - Schweizer Deutsch: Kein ß, immer "ss" verwenden
 - Du/Sie: Verwende "Sie" (formell)
 - Platzhalter MÜSSEN verwendet werden: {{church_name}}, {{contact_name}}, {{city}}, {{personal_note}}, {{booking_url}}, {{sender_name}}
+- {{screenshotBlock}} MUSS in mindestens Schritt 1, 2 und 4 eingebaut werden (zeigt ein gebrandetes Widget-Bild mit Link zur Live-Vorschau)
+- {{previewUrl}} = Link zur Live-Widget-Vorschau im Branding des Leads
+- {{splashUrl}} = Link zur Splash-Page im Branding des Leads
 - Jede E-Mail MUSS mit einem klaren CTA enden
 - E-Mails als HTML formatieren (einfach, keine aufwändigen Designs)
 - Betreffzeilen: Kurz, persönlich, keine Spam-Wörter

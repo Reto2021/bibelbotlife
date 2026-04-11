@@ -541,12 +541,37 @@ export default function OutreachAdmin() {
                     Sucht im Web nach Kirchen-Websites, extrahiert E-Mail-Kontakte per KI und importiert sie als Leads.
                   </p>
                   <div className="space-y-3">
+                    {/* Preset Search Categories */}
+                    <div>
+                      <Label className="text-xs text-muted-foreground mb-1.5 block">Schnellsuche</Label>
+                      <div className="flex flex-wrap gap-1.5">
+                        {[
+                          { label: "🏛️ Kirchen", q: "reformierte Kirche Gemeinde Kontakt Pfarrer" },
+                          { label: "⛪ Freikirchen", q: "Freikirche evangelische Gemeinde Pastor Kontakt" },
+                          { label: "🏥 Spitalseelsorge", q: "Spitalseelsorge Seelsorger Spital Kontakt E-Mail" },
+                          { label: "🏠 Heime", q: "Altersheim Pflegeheim Seelsorge Kontakt" },
+                          { label: "🙏 Seelsorger", q: "Seelsorge Beratung christlich Kontakt" },
+                          { label: "🇦🇹 Österreich", q: "evangelische Pfarrgemeinde Österreich Kontakt" },
+                          { label: "🇩🇪 Deutschland", q: "evangelische Kirchengemeinde Deutschland Kontakt Pfarrer" },
+                        ].map((preset) => (
+                          <Button
+                            key={preset.label}
+                            variant="outline"
+                            size="sm"
+                            className="text-xs h-7"
+                            onClick={() => { setDiscoverQuery(preset.q); if (preset.label.includes("🇦🇹")) setDiscoverCountry("at"); if (preset.label.includes("🇩🇪")) setDiscoverCountry("de"); }}
+                          >
+                            {preset.label}
+                          </Button>
+                        ))}
+                      </div>
+                    </div>
                     <div>
                       <Label>Suchbegriff</Label>
                       <Input
                         value={discoverQuery}
                         onChange={(e) => setDiscoverQuery(e.target.value)}
-                        placeholder='z.B. "reformierte Kirche Zürich Kontakt" oder "evangelische Gemeinde Basel"'
+                        placeholder='z.B. "reformierte Kirche Zürich Kontakt" oder "Spitalseelsorge Bern"'
                       />
                     </div>
                     <div className="grid grid-cols-2 gap-3">
