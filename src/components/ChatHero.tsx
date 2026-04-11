@@ -284,6 +284,8 @@ export function ChatHero() {
   const { isSenior, toggle: toggleSenior } = useSeniorMode();
   const tts = useTTS();
   const [qaMap, setQaMap] = useState<Record<number, QAResult | "loading" | "skipped">>({});
+  const [followUps, setFollowUps] = useState<{ emoji: string; label: string; prompt: string }[]>([]);
+  const [followUpsLoading, setFollowUpsLoading] = useState(false);
 
   const runQA = useCallback(async (text: string, msgIndex: number) => {
     if (!likelyHasCitations(text)) {
@@ -528,6 +530,26 @@ export function ChatHero() {
           const assistantMsgIndex = allMessages.length; // index of the assistant message in the messages array
           runQA(assistantSoFar, assistantMsgIndex);
 
+          // Generate follow-up suggestions
+          setFollowUps([]);
+          setFollowUpsLoading(true);
+          fetch(CHAT_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}` },
+            body: JSON.stringify({
+              messages: [
+                { role: "user", content: text.trim() },
+                { role: "assistant", content: assistantSoFar.slice(0, 800) },
+              ],
+              mode: "generate_followups",
+              language: i18n.language,
+            }),
+          })
+            .then(r => r.ok ? r.json() : { suggestions: [] })
+            .then(data => setFollowUps(data.suggestions || []))
+            .catch(() => setFollowUps([]))
+            .finally(() => setFollowUpsLoading(false));
+
           // Generate AI title after the first exchange (only 1 user + 1 assistant message)
           if (allMessages.length === 1) {
             try {
@@ -625,6 +647,7 @@ export function ChatHero() {
   const handleNewChat = useCallback(() => {
     startNewChat();
     setSidebarOpen(false);
+    setFollowUps([]);
   }, [startNewChat]);
 
   const visibleChips = showMoreChips ? TOPIC_CHIPS : TOPIC_CHIPS.slice(0, 8);
@@ -933,6 +956,34 @@ export function ChatHero() {
                         </div>
                       </div>
                     ))}
+
+                    {/* Follow-up suggestion buttons */}
+                    {!isLoading && messages.length >= 2 && messages[messages.length - 1]?.role === "assistant" && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 8 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.3, delay: 0.2 }}
+                        className="flex flex-wrap gap-2 px-1"
+                      >
+                        {followUpsLoading ? (
+                          <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                            <Loader2 className="h-3 w-3 animate-spin" />
+                            <span>{t("chat.suggestionsLoading", "Vorschläge laden…")}</span>
+                          </div>
+                        ) : (
+                          followUps.map((fu, i) => (
+                            <button
+                              key={i}
+                              onClick={() => { setFollowUps([]); sendMessage(fu.prompt); }}
+                              className="inline-flex items-center gap-1.5 text-xs px-3 py-2 rounded-xl border border-border bg-card/70 text-foreground/80 hover:border-primary/40 hover:bg-card hover:text-foreground transition-all duration-200 shadow-sm"
+                            >
+                              <span>{fu.emoji}</span>
+                              <span>{fu.label}</span>
+                            </button>
+                          ))
+                        )}
+                      </motion.div>
+                    )}
 
                     {/* Login hint for anonymous users after first exchange */}
                     {!user && messages.length >= 2 && !isLoading && !loginHintDismissed && (
