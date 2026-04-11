@@ -20,12 +20,12 @@ const features = [
   {
     icon: Sparkles,
     title: "KI-gestützte Texterstellung",
-    desc: "Aus Ihren Notizen und Transkripten entstehen einfühlsame Reden für Abdankungen, Trauungen, Taufen und Konfirmationen.",
+    desc: "Aus Ihren Notizen und Transkripten entstehen einfühlsame Reden, Coaching-Zusammenfassungen oder Reflexionstexte.",
   },
   {
     icon: FileText,
     title: "PDF-Export & Teilen",
-    desc: "Fertige Texte als PDF exportieren oder per Sharing-Link direkt an Angehörige und Beteiligte weitergeben.",
+    desc: "Fertige Texte als PDF exportieren oder per Sharing-Link direkt an Klienten, Angehörige und Beteiligte weitergeben.",
   },
   {
     icon: Layout,
@@ -87,7 +87,7 @@ const pricingPlans = [
     popular: false,
   },
   {
-    name: "Seelsorger Pro",
+    name: "Pro",
     price: "CHF 29",
     period: "/ Monat",
     features: [
@@ -110,7 +110,7 @@ const pricingPlans = [
 const faqs = [
   {
     q: "Für wen ist dieses Tool gedacht?",
-    a: "Für freiberufliche Trauerredner, Hochzeitszeremoniemeister, Spitalseelsorger, Pfarrpersonen und alle, die Zeremonien vorbereiten und durchführen.",
+    a: "Für Seelsorger, Life Coaches, freiberufliche Trauerredner, Hochzeitszeremoniemeister, Spitalseelsorger, Pfarrpersonen und alle, die Zeremonien, Workshops oder Coaching-Sessions vorbereiten und durchführen.",
   },
   {
     q: "Werden meine Daten sicher gespeichert?",
@@ -136,8 +136,8 @@ export default function ForCelebrants() {
   return (
     <>
       <SEOHead
-        title="BibleBot.Life für Seelsorger — Zeremonien vorbereiten & durchführen"
-        description="Abdankungen, Trauungen, Taufen professionell planen: Sprachaufnahme, Textgenerierung, Teleprompter, Kalender und Team-Zusammenarbeit."
+        title="BibleBot.Life für Seelsorger & Life Coaches — Zeremonien & Sessions planen"
+        description="Abdankungen, Trauungen, Coaching-Sessions professionell planen: Sprachaufnahme, Textgenerierung, Teleprompter, Kalender und Zusammenarbeit."
       />
 
       {/* Nav */}
@@ -160,13 +160,13 @@ export default function ForCelebrants() {
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-primary/10 via-background to-secondary/10 py-20 md:py-32">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-4">Für Seelsorger & Zeremonienmeister</p>
+          <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-4">Für Seelsorger & Life Coaches</p>
           <h1 className="text-4xl md:text-6xl font-extrabold text-foreground leading-tight mb-6">
-            Jede Zeremonie verdient<br />
+            Jede Begegnung verdient<br />
             <span className="text-primary">beste Vorbereitung</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-            Von der ersten Sprachnotiz bis zum letzten Amen — planen, schreiben und durchführen Sie berührende Zeremonien mit einem einzigen Werkzeug.
+            Von der ersten Sprachnotiz bis zur fertigen Session — planen, dokumentieren und durchführen Sie Zeremonien und Coaching-Sitzungen mit einem einzigen Werkzeug.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Button asChild size="lg" className="text-base px-8">
