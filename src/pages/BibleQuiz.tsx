@@ -415,7 +415,7 @@ export default function BibleQuiz() {
                           showColors && !isSelected && !isCorrect && "opacity-50 border-border bg-card"
                         )}
                       >
-                        <span className="font-medium">{String.fromCharCode(65 + i)}.</span> {opt}
+                        <span className="font-medium text-primary/70">{String.fromCharCode(65 + i)}.</span> {opt.replace(/^[A-D]\)\s*/, "")}
                       </motion.button>
                     );
                   })}
