@@ -60,7 +60,7 @@ export function SiteHeader() {
           <Button asChild variant="ghost" size="sm" className="hidden lg:inline-flex">
             <Link to="/fuer-seelsorger">
               <HeartHandshake className="h-4 w-4 mr-1" />
-              Für Seelsorger
+              {t("nav.forCelebrants")}
             </Link>
           </Button>
           <LanguageSwitcher />
@@ -157,7 +157,7 @@ export function SiteHeader() {
             onClick={() => setMobileMenuOpen(false)}
           >
             <HeartHandshake className="h-4 w-4 text-primary" />
-            Für Seelsorger & Coaches
+            {t("nav.forCelebrantsMobile")}
           </Link>
           <Link
             to="/impressum"
