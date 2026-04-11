@@ -42,11 +42,38 @@ Deno.serve(async (req) => {
     }
 
     // Store in DB
+    const requestId = crypto.randomUUID();
     const { error: insertError } = await supabase
       .from("church_contact_requests")
-      .insert({ church_id, sender_name: name, sender_email: email, message: content });
+      .insert({ id: requestId, church_id, sender_name: name, sender_email: email, message: content });
 
     if (insertError) throw insertError;
+
+    // Send confirmation email to sender
+    await supabase.functions.invoke("send-transactional-email", {
+      body: {
+        templateName: "contact-confirmation",
+        recipientEmail: email,
+        idempotencyKey: `church-contact-confirm-${requestId}`,
+        templateData: { name: name || undefined },
+      },
+    });
+
+    // Notify admin at kontakt@bibelbot.ch
+    await supabase.functions.invoke("send-transactional-email", {
+      body: {
+        templateName: "contact-notification",
+        recipientEmail: "kontakt@bibelbot.ch",
+        idempotencyKey: `church-contact-notify-${requestId}`,
+        templateData: {
+          senderName: name || undefined,
+          senderEmail: email,
+          churchName: church.name,
+          message: content,
+          source: `Gemeinde-Kontaktformular (${church.name})`,
+        },
+      },
+    });
 
     return new Response(JSON.stringify({ success: true }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
