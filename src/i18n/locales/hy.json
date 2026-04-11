@@ -698,7 +698,12 @@
         "seniorHome": "Ծերանոց",
         "hospital": "Հիվանդանոց",
         "prison": "Բանտային հոգևորական ծառայություն",
-        "military": "Բանակային հոգևորական ծառայություն"
+        "military": "Բանակային հոգևորական ծառայություն",
+        "rehaClinic": "Rehab Clinic",
+        "psychiatry": "Psychiatry",
+        "burnoutClinic": "Burnout Clinic",
+        "hospice": "Hospice",
+        "counseling": "Counseling Center"
       }
     },
     "institutionsTitle": "Նաև հաստատությունների համար",
@@ -723,6 +728,26 @@
       "military": {
         "title": "Բանակային հոգևորական ծառայություն",
         "desc": "Հոգևոր ուղեկցություն բանակի անդամների համար՝ հասանելի նաև առաքելության կամ զորանոցում։"
+      },
+      "rehaClinic": {
+        "title": "Rehab Clinics",
+        "desc": "Pastoral support during rehabilitation."
+      },
+      "psychiatry": {
+        "title": "Psychiatric Facilities",
+        "desc": "Confidential spiritual conversations for patients in psychiatric care."
+      },
+      "burnoutClinic": {
+        "title": "Burnout Clinics",
+        "desc": "Questions of meaning and inner reflection during exhaustion."
+      },
+      "hospice": {
+        "title": "Hospices",
+        "desc": "End-of-life companionship."
+      },
+      "counseling": {
+        "title": "Counseling Centers",
+        "desc": "Complementary spiritual impulses for counseling clients."
       }
     },
     "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
@@ -1025,5 +1050,9 @@
     "footerChurches": "Եկեղեցիների համար",
     "seoTitle": "BibleBot.Life եկեղեցականների և կյանքի մարզիչների համար՝ պլանավորել արարողություններ և նիստեր",
     "seoDesc": "Պրոֆեսիոնալ կերպով պլանավորեք հուղարկավորություններ, հարսանիքներ, մարզչական նիստեր՝ ձայնագրում, տեքստի ստեղծում, հեռուստապրոմպտեր, օրացույց և համագործակցություն։"
+  },
+  "pricing": {
+    "onRequest": "Patronage on request",
+    "contactUs": "Contact us"
   }
 }

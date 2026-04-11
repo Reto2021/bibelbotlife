@@ -660,7 +660,12 @@
         "seniorHome": "Aldershjem",
         "hospital": "Sykehus",
         "prison": "Fengselssjelesorg",
-        "military": "Militærsjelesorg"
+        "military": "Militærsjelesorg",
+        "rehaClinic": "Rehabiliteringsklinikk",
+        "psychiatry": "Psykiatri",
+        "burnoutClinic": "Burnout-klinikk",
+        "hospice": "Hospice",
+        "counseling": "Rådgivningssenter"
       }
     },
     "institutionsTitle": "Også for institusjoner",
@@ -685,6 +690,26 @@
       "military": {
         "title": "Militærsjelesorg",
         "desc": "Åndelig veiledning for militært personell – også i tjeneste eller på kasernen."
+      },
+      "rehaClinic": {
+        "title": "Rehabiliteringsklinikker",
+        "desc": "Sjelesorg under rehabilitering – for indre styrke på veien tilbake til livet."
+      },
+      "psychiatry": {
+        "title": "Psykiatriske fasiliteter",
+        "desc": "Konfidensielle åndelige samtaler for pasienter i psykiatrisk behandling."
+      },
+      "burnoutClinic": {
+        "title": "Burnout-klinikker",
+        "desc": "Meningsspørsmål og indre ettertanke ved utmattelse."
+      },
+      "hospice": {
+        "title": "Hospicer",
+        "desc": "Ledsagelse ved livets slutt – trøstende ord og et lyttende øre."
+      },
+      "counseling": {
+        "title": "Rådgivningssentre",
+        "desc": "Supplerende åndelige impulser for klienter i psykososial rådgivning."
       }
     },
     "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
@@ -1025,5 +1050,9 @@
     "footerChurches": "For kirker",
     "seoTitle": "BibleBot.Life for kapellaner og livscoacher – Planlegg seremonier og økter",
     "seoDesc": "Planlegg begravelser, bryllup, coachingøkter profesjonelt: stemmeopptak, tekstgenerering, teleprompter, kalender og samarbeid."
+  },
+  "pricing": {
+    "onRequest": "Patronat på forespørsel",
+    "contactUs": "Kontakt oss"
   }
 }

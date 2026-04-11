@@ -663,7 +663,12 @@
         "seniorHome": "Retirement Home",
         "hospital": "Hospital",
         "prison": "Aumônerie de prison",
-        "military": "Aumônerie militaire"
+        "military": "Aumônerie militaire",
+        "rehaClinic": "Clinique de réhabilitation",
+        "psychiatry": "Psychiatrie",
+        "burnoutClinic": "Clinique de burnout",
+        "hospice": "Hospice",
+        "counseling": "Centre de conseil"
       }
     },
     "institutionsTitle": "Aussi pour les institutions",
@@ -688,6 +693,26 @@
       "military": {
         "title": "Aumônerie militaire",
         "desc": "Accompagnement spirituel pour les membres de l'armée – accessible même en déploiement ou à la caserne."
+      },
+      "rehaClinic": {
+        "title": "Cliniques de réhabilitation",
+        "desc": "Accompagnement spirituel pendant la réhabilitation – pour une force intérieure sur le chemin du retour à la vie."
+      },
+      "psychiatry": {
+        "title": "Établissements psychiatriques",
+        "desc": "Conversations spirituelles confidentielles pour les patients en soins psychiatriques."
+      },
+      "burnoutClinic": {
+        "title": "Cliniques de burnout",
+        "desc": "Questions de sens et recueillement intérieur lors de l'épuisement."
+      },
+      "hospice": {
+        "title": "Hospices",
+        "desc": "Accompagnement en fin de vie – des mots réconfortants et une oreille attentive."
+      },
+      "counseling": {
+        "title": "Centres de conseil",
+        "desc": "Impulsions spirituelles complémentaires pour les clients en conseil psychosocial."
       }
     },
     "patronageNote": "BibleBot.Life est un projet privé et non commercial. Il est géré bénévolement et financé exclusivement par des dons. Pas de publicité, pas de vente de données, pas de fonctionnalités payantes. Tous les dons servent directement à couvrir les coûts de fonctionnement (infrastructure, hébergement, développement). Les dons ne sont pas déductibles fiscalement."
@@ -1025,5 +1050,9 @@
     "footerChurches": "Pour les paroisses",
     "seoTitle": "BibleBot.Life pour aumôniers & life coaches — Planifier cérémonies & sessions",
     "seoDesc": "Planifiez funérailles, mariages, sessions de coaching : enregistrement vocal, génération de textes, téléprompter, calendrier et collaboration."
+  },
+  "pricing": {
+    "onRequest": "Patronage sur demande",
+    "contactUs": "Nous contacter"
   }
 }

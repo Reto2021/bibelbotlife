@@ -660,7 +660,12 @@
         "seniorHome": "Kay pou granmoun aje",
         "hospital": "Lopital",
         "prison": "Pastoral prizon",
-        "military": "Pastoral militè"
+        "military": "Pastoral militè",
+        "rehaClinic": "Klinik reyabilitasyon",
+        "psychiatry": "Psikiyatri",
+        "burnoutClinic": "Klinik epizman",
+        "hospice": "Ospis",
+        "counseling": "Sant konsèy"
       }
     },
     "institutionsTitle": "Tou pou Enstitisyon",
@@ -685,6 +690,26 @@
       "military": {
         "title": "Pastoral militè",
         "desc": "Akonpayman espirityèl pou manm lame a – aksesib menm nan misyon oswa nan kazèn."
+      },
+      "rehaClinic": {
+        "title": "Klinik reyabilitasyon",
+        "desc": "Sipò espirityèl pandan reyabilitasyon."
+      },
+      "psychiatry": {
+        "title": "Etablisman psikiyatrik",
+        "desc": "Konvèsasyon espirityèl konfidansyèl pou pasyan nan swen psikiyatrik."
+      },
+      "burnoutClinic": {
+        "title": "Klinik epizman",
+        "desc": "Kesyon sans ak refleksyon enteryè nan moman fatig."
+      },
+      "hospice": {
+        "title": "Ospis",
+        "desc": "Akonpayeman nan fen lavi a – mo konsolasyon ak yon zòrèy ouvè."
+      },
+      "counseling": {
+        "title": "Sant konsèy",
+        "desc": "Enpilsyon espirityèl konplemantè pou kliyan nan konsèy psikososyal."
       }
     },
     "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
@@ -1025,5 +1050,9 @@
     "footerChurches": "Pou Legliz",
     "seoTitle": "BibleBot.Life pou Aumonye & Coach Lavi — Planifye Seremoni & Sesyon",
     "seoDesc": "Planifye antèman, maryaj, sesyon coaching pwofesyonèl: anrejistreman vokal, jenerasyon tèks, teleprompter, kalandriye, ak kolaborasyon."
+  },
+  "pricing": {
+    "onRequest": "Patronaj sou demann",
+    "contactUs": "Kontakte nou"
   }
 }

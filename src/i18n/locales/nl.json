@@ -698,7 +698,12 @@
         "seniorHome": "Retirement Home",
         "hospital": "Hospital",
         "prison": "Prison Chaplaincy",
-        "military": "Military Chaplaincy"
+        "military": "Military Chaplaincy",
+        "rehaClinic": "Revalidatiekliniek",
+        "psychiatry": "Psychiatrie",
+        "burnoutClinic": "Burnout-kliniek",
+        "hospice": "Hospice",
+        "counseling": "Adviescentrum"
       }
     },
     "institutionsTitle": "Ook voor instellingen",
@@ -723,6 +728,26 @@
       "military": {
         "title": "Military Chaplaincy",
         "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
+      },
+      "rehaClinic": {
+        "title": "Revalidatieklinieken",
+        "desc": "Pastorale ondersteuning tijdens revalidatie – voor innerlijke kracht op weg terug naar het leven."
+      },
+      "psychiatry": {
+        "title": "Psychiatrische instellingen",
+        "desc": "Vertrouwelijke geestelijke gesprekken voor patiënten in de psychiatrische zorg."
+      },
+      "burnoutClinic": {
+        "title": "Burnout-klinieken",
+        "desc": "Zinvragen en innerlijke bezinning bij uitputting."
+      },
+      "hospice": {
+        "title": "Hospices",
+        "desc": "Begeleiding aan het levenseinde – troostende woorden en een luisterend oor."
+      },
+      "counseling": {
+        "title": "Adviescentra",
+        "desc": "Aanvullende geestelijke impulsen voor cliënten in psychosociale begeleiding."
       }
     },
     "patronageNote": "BibleBot.Life is een privé, niet-commercieel project. Het wordt op vrijwillige basis beheerd en uitsluitend gefinancierd door donaties. Geen reclame, geen dataverkoop, geen betaalde functies. Alle donaties gaan rechtstreeks naar het dekken van de lopende kosten (infrastructuur, hosting, ontwikkeling). Donaties zijn niet fiscaal aftrekbaar."
@@ -1025,5 +1050,9 @@
     "footerChurches": "Voor Kerken",
     "seoTitle": "BibleBot.Life voor Kapelaans & Life Coaches — Plan Ceremonies & Sessies",
     "seoDesc": "Plan begrafenissen, bruiloften, coachingsessies professioneel: spraakopname, tekstgeneratie, teleprompter, kalender en samenwerking."
+  },
+  "pricing": {
+    "onRequest": "Patronaat op aanvraag",
+    "contactUs": "Neem contact op"
   }
 }

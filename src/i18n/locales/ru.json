@@ -660,7 +660,12 @@
         "seniorHome": "Дом престарелых",
         "hospital": "Больница",
         "prison": "Тюремное служение",
-        "military": "Военное служение"
+        "military": "Военное служение",
+        "rehaClinic": "Реабилитационная клиника",
+        "psychiatry": "Психиатрия",
+        "burnoutClinic": "Клиника выгорания",
+        "hospice": "Хоспис",
+        "counseling": "Консультационный центр"
       }
     },
     "institutionsTitle": "Также для учреждений",
@@ -685,6 +690,26 @@
       "military": {
         "title": "Военное служение",
         "desc": "Духовное сопровождение для военнослужащих – доступно также в командировке или в казарме."
+      },
+      "rehaClinic": {
+        "title": "Реабилитационные клиники",
+        "desc": "Духовная поддержка во время реабилитации – для внутренней силы на пути обратно к жизни."
+      },
+      "psychiatry": {
+        "title": "Психиатрические учреждения",
+        "desc": "Конфиденциальные духовные беседы для пациентов психиатрической помощи."
+      },
+      "burnoutClinic": {
+        "title": "Клиники выгорания",
+        "desc": "Вопросы смысла и внутреннее размышление при истощении."
+      },
+      "hospice": {
+        "title": "Хосписы",
+        "desc": "Сопровождение в конце жизни – утешительные слова и открытое ухо."
+      },
+      "counseling": {
+        "title": "Консультационные центры",
+        "desc": "Дополнительные духовные импульсы для клиентов психосоциального консультирования."
       }
     },
     "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
@@ -1025,5 +1050,9 @@
     "footerChurches": "Для церквей",
     "seoTitle": "BibleBot.Life для капелланов и лайф-коучей — Планируйте церемонии и сессии",
     "seoDesc": "Профессионально планируйте похороны, свадьбы, коучинговые сессии: запись голоса, генерация текста, телесуфлер, календарь и сотрудничество."
+  },
+  "pricing": {
+    "onRequest": "Патронаж по запросу",
+    "contactUs": "Связаться с нами"
   }
 }

@@ -698,7 +698,12 @@
         "seniorHome": "Panti Lansia",
         "hospital": "Rumah Sakit",
         "prison": "Pelayanan Pastoral Penjara",
-        "military": "Pelayanan Pastoral Militer"
+        "military": "Pelayanan Pastoral Militer",
+        "rehaClinic": "Klinik rehabilitasi",
+        "psychiatry": "Psikiatri",
+        "burnoutClinic": "Klinik burnout",
+        "hospice": "Hospis",
+        "counseling": "Pusat konseling"
       }
     },
     "institutionsTitle": "Juga untuk Institusi",
@@ -723,6 +728,26 @@
       "military": {
         "title": "Pelayanan Pastoral Militer",
         "desc": "Pendampingan rohani bagi anggota militer – dapat dijangkau bahkan dalam misi atau di barak."
+      },
+      "rehaClinic": {
+        "title": "Klinik Rehabilitasi",
+        "desc": "Dukungan spiritual selama rehabilitasi – untuk kekuatan batin dalam perjalanan kembali ke kehidupan."
+      },
+      "psychiatry": {
+        "title": "Fasilitas Psikiatri",
+        "desc": "Percakapan spiritual rahasia untuk pasien dalam perawatan psikiatri."
+      },
+      "burnoutClinic": {
+        "title": "Klinik Burnout",
+        "desc": "Pertanyaan makna dan refleksi batin saat kelelahan."
+      },
+      "hospice": {
+        "title": "Hospis",
+        "desc": "Pendampingan di akhir kehidupan – kata-kata penghiburan dan telinga yang terbuka."
+      },
+      "counseling": {
+        "title": "Pusat Konseling",
+        "desc": "Impuls spiritual pelengkap untuk klien dalam konseling psikososial."
       }
     },
     "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
@@ -1025,5 +1050,9 @@
     "footerChurches": "Untuk Gereja",
     "seoTitle": "BibleBot.Life untuk Pendeta & Pelatih Kehidupan — Rencanakan Upacara & Sesi",
     "seoDesc": "Rencanakan pemakaman, pernikahan, sesi pelatihan secara profesional: perekaman suara, pembuatan teks, teleprompter, kalender, dan kolaborasi."
+  },
+  "pricing": {
+    "onRequest": "Patronase atas permintaan",
+    "contactUs": "Hubungi kami"
   }
 }

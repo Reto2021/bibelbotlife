@@ -660,7 +660,12 @@
         "seniorHome": "Ouetehuis",
         "hospital": "Hospitaal",
         "prison": "Gevangenisbediening",
-        "military": "Militêre bediening"
+        "military": "Militêre bediening",
+        "rehaClinic": "Rehabilitasie-kliniek",
+        "psychiatry": "Psigiatrie",
+        "burnoutClinic": "Uitbrand-kliniek",
+        "hospice": "Hospies",
+        "counseling": "Beradingsentrum"
       }
     },
     "institutionsTitle": "Ook vir instellings",
@@ -685,6 +690,26 @@
       "military": {
         "title": "Militêre bediening",
         "desc": "Geestelike begeleiding vir lede van die weermag – ook in diens of in die kaserne beskikbaar."
+      },
+      "rehaClinic": {
+        "title": "Rehabilitasie-klinieke",
+        "desc": "Pastorale ondersteuning tydens rehabilitasie – vir innerlike krag op pad terug na die lewe."
+      },
+      "psychiatry": {
+        "title": "Psigiatriese fasiliteite",
+        "desc": "Vertroulike geestelike gesprekke vir pasiënte in psigiatriese sorg – aanvullend tot terapie."
+      },
+      "burnoutClinic": {
+        "title": "Uitbrand-klinieke",
+        "desc": "Sinvrae en innerlike inkeer by uitputting – 'n kalm gespreksgenoot sonder tydsdruk."
+      },
+      "hospice": {
+        "title": "Hospies",
+        "desc": "Begeleiding aan die lewenseinde – troostende woorde en 'n oop oor in die laaste dae."
+      },
+      "counseling": {
+        "title": "Beradingsentrums",
+        "desc": "Aanvullende geestelike impulse vir kliënte in psigososiale berading."
       }
     },
     "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
@@ -1025,5 +1050,9 @@
     "footerChurches": "Vir Kerke",
     "seoTitle": "BibleBot.Life vir Kapelane & Lewensafrigters — Beplan Seremonies & Sessies",
     "seoDesc": "Beplan begrafnisse, troues, afrigtingsessies professioneel: stemopname, teksgenerering, teleprompter, kalender en samewerking."
+  },
+  "pricing": {
+    "onRequest": "Patronaat op navraag",
+    "contactUs": "Kontak ons"
   }
 }

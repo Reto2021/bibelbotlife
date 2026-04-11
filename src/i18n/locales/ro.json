@@ -698,7 +698,12 @@
         "seniorHome": "Retirement Home",
         "hospital": "Hospital",
         "prison": "Prison Chaplaincy",
-        "military": "Military Chaplaincy"
+        "military": "Military Chaplaincy",
+        "rehaClinic": "Clinică de reabilitare",
+        "psychiatry": "Psihiatrie",
+        "burnoutClinic": "Clinică de burnout",
+        "hospice": "Hospice",
+        "counseling": "Centru de consiliere"
       }
     },
     "institutionsTitle": "Also for Institutions",
@@ -723,6 +728,26 @@
       "military": {
         "title": "Military Chaplaincy",
         "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
+      },
+      "rehaClinic": {
+        "title": "Clinici de reabilitare",
+        "desc": "Sprijin spiritual în timpul reabilitării."
+      },
+      "psychiatry": {
+        "title": "Instituții psihiatrice",
+        "desc": "Conversații spirituale confidențiale pentru pacienții din îngrijirea psihiatrică."
+      },
+      "burnoutClinic": {
+        "title": "Clinici de burnout",
+        "desc": "Întrebări de sens și reflecție interioară la epuizare."
+      },
+      "hospice": {
+        "title": "Hospice-uri",
+        "desc": "Însoțire la sfârșitul vieții – cuvinte de mângâiere."
+      },
+      "counseling": {
+        "title": "Centre de consiliere",
+        "desc": "Impulsuri spirituale complementare pentru clienții din consilierea psihosocială."
       }
     },
     "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
@@ -1025,5 +1050,9 @@
     "footerChurches": "Pentru Biserici",
     "seoTitle": "BibleBot.Life pentru Capelani și Life Coach-i — Planifică Ceremonii și Sesiuni",
     "seoDesc": "Planifică profesional înmormântări, nunți, sesiuni de coaching: înregistrare vocală, generare de text, teleprompter, calendar și colaborare."
+  },
+  "pricing": {
+    "onRequest": "Patronaj la cerere",
+    "contactUs": "Contactați-ne"
   }
 }

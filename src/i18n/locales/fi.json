@@ -660,7 +660,12 @@
         "seniorHome": "Vanhainkoti",
         "hospital": "Sairaala",
         "prison": "Vankilasielunhoito",
-        "military": "Armeijasielunhoito"
+        "military": "Armeijasielunhoito",
+        "rehaClinic": "Kuntoutusklinikka",
+        "psychiatry": "Psykiatria",
+        "burnoutClinic": "Burnout-klinikka",
+        "hospice": "Saattohoitokoti",
+        "counseling": "Neuvontakeskus"
       }
     },
     "institutionsTitle": "Myös instituutioille",
@@ -685,6 +690,26 @@
       "military": {
         "title": "Armeijasielunhoito",
         "desc": "Hengellistä ohjausta armeijan jäsenille – saatavilla myös tehtävissä tai kasarmilla."
+      },
+      "rehaClinic": {
+        "title": "Kuntoutusklinikat",
+        "desc": "Sielunhoitoa kuntoutuksen aikana – sisäistä voimaa matkalla takaisin elämään."
+      },
+      "psychiatry": {
+        "title": "Psykiatriset laitokset",
+        "desc": "Luottamuksellisia hengellisiä keskusteluja psykiatrisessa hoidossa oleville potilaille."
+      },
+      "burnoutClinic": {
+        "title": "Burnout-klinikat",
+        "desc": "Merkityskysymyksiä ja sisäistä pohdintaa uupumuksen aikana."
+      },
+      "hospice": {
+        "title": "Saattohoitokodit",
+        "desc": "Saattoa elämän loppuvaiheessa – lohduttavia sanoja viimeisinä päivinä."
+      },
+      "counseling": {
+        "title": "Neuvontakeskukset",
+        "desc": "Täydentäviä hengellisiä impulsseja psykososiaalisen neuvonnan asiakkaille."
       }
     },
     "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
@@ -1025,5 +1050,9 @@
     "footerChurches": "Kirkoille",
     "seoTitle": "BibleBot.Life sielunhoitajille ja elämänvalmentajille – Suunnittele seremonioita ja istuntoja",
     "seoDesc": "Suunnittele hautajaisia, häitä, valmennuksia ammattimaisesti: äänitys, tekstin luonti, teleprompteri, kalenteri ja yhteistyö."
+  },
+  "pricing": {
+    "onRequest": "Suojelus pyynnöstä",
+    "contactUs": "Ota yhteyttä"
   }
 }

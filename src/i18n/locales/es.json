@@ -663,7 +663,12 @@
         "seniorHome": "Retirement Home",
         "hospital": "Hospital",
         "prison": "Prison Chaplaincy",
-        "military": "Military Chaplaincy"
+        "military": "Military Chaplaincy",
+        "rehaClinic": "Clínica de rehabilitación",
+        "psychiatry": "Psiquiatría",
+        "burnoutClinic": "Clínica de burnout",
+        "hospice": "Hospicio",
+        "counseling": "Centro de asesoramiento"
       }
     },
     "institutionsTitle": "También para instituciones",
@@ -688,6 +693,26 @@
       "military": {
         "title": "Military Chaplaincy",
         "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
+      },
+      "rehaClinic": {
+        "title": "Clínicas de rehabilitación",
+        "desc": "Acompañamiento espiritual durante la rehabilitación – para fortaleza interior en el camino de regreso a la vida."
+      },
+      "psychiatry": {
+        "title": "Centros psiquiátricos",
+        "desc": "Conversaciones espirituales confidenciales para pacientes en atención psiquiátrica."
+      },
+      "burnoutClinic": {
+        "title": "Clínicas de burnout",
+        "desc": "Preguntas de sentido y reflexión interior durante el agotamiento."
+      },
+      "hospice": {
+        "title": "Hospicios",
+        "desc": "Acompañamiento al final de la vida – palabras reconfortantes y un oído atento."
+      },
+      "counseling": {
+        "title": "Centros de asesoramiento",
+        "desc": "Impulsos espirituales complementarios para clientes en asesoramiento psicosocial."
       }
     },
     "patronageNote": "BibleBot.Life es un proyecto privado y no comercial. Se gestiona de forma voluntaria y se financia exclusivamente con donaciones. No hay publicidad, ni venta de datos, ni funciones de pago. Todas las donaciones se destinan directamente a cubrir los costes operativos (infraestructura, alojamiento, desarrollo). Las donaciones no son deducibles de impuestos."
@@ -1025,5 +1050,9 @@
     "footerChurches": "Para iglesias",
     "seoTitle": "BibleBot.Life para capellanes y life coaches — Planificar ceremonias y sesiones",
     "seoDesc": "Planifique funerales, bodas, sesiones de coaching: grabación de voz, generación de textos, teleprompter, calendario y colaboración."
+  },
+  "pricing": {
+    "onRequest": "Patrocinio a consultar",
+    "contactUs": "Contáctenos"
   }
 }

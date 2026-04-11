@@ -660,7 +660,12 @@
         "seniorHome": "Äldreboende",
         "hospital": "Sjukhus",
         "prison": "Fängelsesjälavård",
-        "military": "Militärsjälavård"
+        "military": "Militärsjälavård",
+        "rehaClinic": "Rehabiliteringsklinik",
+        "psychiatry": "Psykiatri",
+        "burnoutClinic": "Burnout-klinik",
+        "hospice": "Hospice",
+        "counseling": "Rådgivningscenter"
       }
     },
     "institutionsTitle": "Även för institutioner",
@@ -685,6 +690,26 @@
       "military": {
         "title": "Militärsjälavård",
         "desc": "Andlig vägledning för militär personal – även under insats eller på kasernen."
+      },
+      "rehaClinic": {
+        "title": "Rehabiliteringskliniker",
+        "desc": "Själavård under rehabilitering – för inre styrka på vägen tillbaka till livet."
+      },
+      "psychiatry": {
+        "title": "Psykiatriska inrättningar",
+        "desc": "Konfidentiella andliga samtal för patienter i psykiatrisk vård."
+      },
+      "burnoutClinic": {
+        "title": "Burnout-kliniker",
+        "desc": "Meningsfrågor och inre eftertanke vid utmattning."
+      },
+      "hospice": {
+        "title": "Hospice",
+        "desc": "Ledsagning i livets slut – tröstande ord och ett lyssnande öra."
+      },
+      "counseling": {
+        "title": "Rådgivningscentra",
+        "desc": "Kompletterande andliga impulser för klienter i psykosocial rådgivning."
       }
     },
     "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
@@ -1025,5 +1050,9 @@
     "footerChurches": "För kyrkor",
     "seoTitle": "BibleBot.Life för kaplaner och livscoacher — Planera ceremonier och sessioner",
     "seoDesc": "Planera begravningar, bröllop, coachningssessioner professionellt: röstinspelning, textgenerering, teleprompter, kalender och samarbete."
+  },
+  "pricing": {
+    "onRequest": "Patronat på förfrågan",
+    "contactUs": "Kontakta oss"
   }
 }

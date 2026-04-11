@@ -660,7 +660,12 @@
         "seniorHome": "노인 요양원",
         "hospital": "병원",
         "prison": "교도소 상담",
-        "military": "군종 사목"
+        "military": "군종 사목",
+        "rehaClinic": "재활 클리닉",
+        "psychiatry": "정신과",
+        "burnoutClinic": "번아웃 클리닉",
+        "hospice": "호스피스",
+        "counseling": "상담센터"
       }
     },
     "institutionsTitle": "기관을 위해서도",
@@ -685,6 +690,26 @@
       "military": {
         "title": "군종 사목",
         "desc": "군인들을 위한 영적 동반 – 임무 중이거나 병영에서도 접근 가능."
+      },
+      "rehaClinic": {
+        "title": "재활 클리닉",
+        "desc": "재활 중 영적 지원 – 삶으로 돌아가는 길에 내면의 힘을 위해."
+      },
+      "psychiatry": {
+        "title": "정신과 시설",
+        "desc": "정신과 치료 중인 환자를 위한 비밀 영적 대화."
+      },
+      "burnoutClinic": {
+        "title": "번아웃 클리닉",
+        "desc": "탈진 시 의미의 질문과 내면의 성찰."
+      },
+      "hospice": {
+        "title": "호스피스",
+        "desc": "생의 마지막에 동행 – 위로의 말과 열린 귀."
+      },
+      "counseling": {
+        "title": "상담센터",
+        "desc": "심리사회적 상담 고객을 위한 보완적 영적 자극."
       }
     },
     "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
@@ -1025,5 +1050,9 @@
     "footerChurches": "교회를 위한",
     "seoTitle": "BibleBot.Life 목회자 및 라이프 코치를 위한 — 의식 및 세션 계획",
     "seoDesc": "장례식, 결혼식, 코칭 세션을 전문적으로 계획하세요: 음성 녹음, 텍스트 생성, 텔레프롬프터, 달력 및 협업."
+  },
+  "pricing": {
+    "onRequest": "후원 문의",
+    "contactUs": "문의하기"
   }
 }

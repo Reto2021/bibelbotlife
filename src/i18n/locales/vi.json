@@ -700,7 +700,12 @@
         "seniorHome": "Viện dưỡng lão",
         "hospital": "Bệnh viện",
         "prison": "Mục vụ nhà tù",
-        "military": "Mục vụ quân đội"
+        "military": "Mục vụ quân đội",
+        "rehaClinic": "Phòng khám phục hồi chức năng",
+        "psychiatry": "Tâm thần học",
+        "burnoutClinic": "Phòng khám kiệt sức",
+        "hospice": "Nhà chăm sóc cuối đời",
+        "counseling": "Trung tâm tư vấn"
       }
     },
     "institutionsTitle": "Cũng dành cho các tổ chức",
@@ -725,6 +730,26 @@
       "military": {
         "title": "Mục vụ quân đội",
         "desc": "Đồng hành tâm linh cho quân nhân – có thể liên hệ ngay cả khi đang làm nhiệm vụ hoặc trong doanh trại."
+      },
+      "rehaClinic": {
+        "title": "Phòng khám phục hồi",
+        "desc": "Hỗ trợ tâm linh trong quá trình phục hồi."
+      },
+      "psychiatry": {
+        "title": "Cơ sở tâm thần",
+        "desc": "Cuộc trò chuyện tâm linh bí mật cho bệnh nhân tâm thần."
+      },
+      "burnoutClinic": {
+        "title": "Phòng khám kiệt sức",
+        "desc": "Câu hỏi về ý nghĩa và suy ngẫm nội tâm khi kiệt sức."
+      },
+      "hospice": {
+        "title": "Nhà chăm sóc cuối đời",
+        "desc": "Đồng hành cuối đời – lời an ủi và tai lắng nghe."
+      },
+      "counseling": {
+        "title": "Trung tâm tư vấn",
+        "desc": "Xung lực tâm linh bổ sung cho khách hàng tư vấn tâm lý xã hội."
       }
     },
     "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
@@ -1027,5 +1052,9 @@
     "footerChurches": "Dành cho các nhà thờ",
     "seoTitle": "BibleBot.Life dành cho Tuyên úy & Huấn luyện viên Cuộc sống — Lên kế hoạch cho các buổi lễ & buổi học",
     "seoDesc": "Lên kế hoạch đám tang, đám cưới, buổi huấn luyện một cách chuyên nghiệp: ghi âm giọng nói, tạo văn bản, teleprompter, lịch và cộng tác."
+  },
+  "pricing": {
+    "onRequest": "Bảo trợ theo yêu cầu",
+    "contactUs": "Liên hệ với chúng tôi"
   }
 }

@@ -698,7 +698,12 @@
         "seniorHome": "Starački dom",
         "hospital": "Bolnica",
         "prison": "Zatvorski savetnik",
-        "military": "Vojni savetnik"
+        "military": "Vojni savetnik",
+        "rehaClinic": "Рехабилитациона клиника",
+        "psychiatry": "Психијатрија",
+        "burnoutClinic": "Клиника за сагоревање",
+        "hospice": "Хоспис",
+        "counseling": "Саветовалиште"
       }
     },
     "institutionsTitle": "Takođe za institucije",
@@ -723,6 +728,26 @@
       "military": {
         "title": "Vojno duhovno savetovanje",
         "desc": "Duhovna pratnja za pripadnike vojske – dostupno i na terenu ili u kasarni."
+      },
+      "rehaClinic": {
+        "title": "Рехабилитационе клинике",
+        "desc": "Духовна подршка током рехабилитације."
+      },
+      "psychiatry": {
+        "title": "Психијатријске установе",
+        "desc": "Поверљиви духовни разговори за пацијенте у психијатријској нези."
+      },
+      "burnoutClinic": {
+        "title": "Клинике за сагоревање",
+        "desc": "Питања смисла и унутрашњег промишљања код исцрпљености."
+      },
+      "hospice": {
+        "title": "Хосписи",
+        "desc": "Пратња на крају живота."
+      },
+      "counseling": {
+        "title": "Саветовалишта",
+        "desc": "Допунски духовни подстицаји за клијенте у психосоцијалном саветовању."
       }
     },
     "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
@@ -1025,5 +1050,9 @@
     "footerChurches": "Za crkve",
     "seoTitle": "BibleBot.Life za kapelane i životne trenere — Planirajte ceremonije i sesije",
     "seoDesc": "Profesionalno planirajte sahrane, venčanja, koučing sesije: snimanje glasa, generisanje teksta, teleprompter, kalendar i saradnja."
+  },
+  "pricing": {
+    "onRequest": "Патронат на захтев",
+    "contactUs": "Контактирајте нас"
   }
 }

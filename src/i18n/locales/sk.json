@@ -660,7 +660,12 @@
         "seniorHome": "Domov pre seniorov",
         "hospital": "Nemocnica",
         "prison": "Väzenská pastorácia",
-        "military": "Armádna pastorácia"
+        "military": "Armádna pastorácia",
+        "rehaClinic": "Rehabilitačná klinika",
+        "psychiatry": "Psychiatria",
+        "burnoutClinic": "Klinika pre vyhorenie",
+        "hospice": "Hospic",
+        "counseling": "Poradňa"
       }
     },
     "institutionsTitle": "Aj pre inštitúcie",
@@ -685,6 +690,26 @@
       "military": {
         "title": "Armádna pastorácia",
         "desc": "Duchovný sprievod pre príslušníkov armády – dostupný aj v akcii alebo v kasárňach."
+      },
+      "rehaClinic": {
+        "title": "Rehabilitačné kliniky",
+        "desc": "Duchovná podpora počas rehabilitácie."
+      },
+      "psychiatry": {
+        "title": "Psychiatrické zariadenia",
+        "desc": "Dôverné duchovné rozhovory pre pacientov v psychiatrickej starostlivosti."
+      },
+      "burnoutClinic": {
+        "title": "Kliniky pre vyhorenie",
+        "desc": "Otázky zmyslu a vnútorné rozjímanie pri vyčerpaní."
+      },
+      "hospice": {
+        "title": "Hospice",
+        "desc": "Sprevádzanie na konci života."
+      },
+      "counseling": {
+        "title": "Poradne",
+        "desc": "Doplnkové duchovné impulzy pre klientov psychosociálneho poradenstva."
       }
     },
     "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
@@ -1025,5 +1050,9 @@
     "footerChurches": "Pre cirkvi",
     "seoTitle": "BibleBot.Life pre kaplánov a životných koučov — Plánujte obrady a stretnutia",
     "seoDesc": "Profesionálne plánujte pohreby, svadby, koučovacie stretnutia: nahrávanie hlasu, generovanie textu, teleprompter, kalendár a spolupráca."
+  },
+  "pricing": {
+    "onRequest": "Patronát na vyžiadanie",
+    "contactUs": "Kontaktujte nás"
   }
 }

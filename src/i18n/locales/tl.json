@@ -698,7 +698,12 @@
         "seniorHome": "Bahay-Pansamantala",
         "hospital": "Ospital",
         "prison": "Pagpapayo sa Bilangguan",
-        "military": "Pagpapayo sa Militar"
+        "military": "Pagpapayo sa Militar",
+        "rehaClinic": "Klinika ng rehabilitasyon",
+        "psychiatry": "Psikiyatriya",
+        "burnoutClinic": "Klinika ng burnout",
+        "hospice": "Hospice",
+        "counseling": "Sentro ng pagpapayo"
       }
     },
     "institutionsTitle": "Para din sa mga Institusyon",
@@ -723,6 +728,26 @@
       "military": {
         "title": "Pagpapayo sa Militar",
         "desc": "Espirituwal na pagsasama para sa mga miyembro ng militar – maa-access din sa misyon o sa barracks."
+      },
+      "rehaClinic": {
+        "title": "Mga Klinika ng Rehabilitasyon",
+        "desc": "Espirituwal na suporta sa panahon ng rehabilitasyon."
+      },
+      "psychiatry": {
+        "title": "Mga Pasilidad Psikiyatrika",
+        "desc": "Kumpidensyal na espirituwal na pag-uusap para sa mga pasyente."
+      },
+      "burnoutClinic": {
+        "title": "Mga Klinika ng Burnout",
+        "desc": "Mga tanong ng kahulugan at panloob na pagninilay sa pagkahapo."
+      },
+      "hospice": {
+        "title": "Hospice",
+        "desc": "Pagsamahan sa katapusan ng buhay."
+      },
+      "counseling": {
+        "title": "Mga Sentro ng Pagpapayo",
+        "desc": "Karagdagang espirituwal na udyok para sa mga kliyente sa psychosocial counseling."
       }
     },
     "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
@@ -1028,5 +1053,9 @@
     "footerChurches": "Para sa mga Simbahan",
     "seoTitle": "BibleBot.Life para sa mga Chaplain at Life Coach — Magplano ng mga Seremonya at Sesyon",
     "seoDesc": "Magplano ng mga libing, kasal, coaching session nang propesyonal: pagre-record ng boses, pagbuo ng teksto, teleprompter, kalendaryo, at kolaborasyon."
+  },
+  "pricing": {
+    "onRequest": "Patronato sa kahilingan",
+    "contactUs": "Makipag-ugnayan"
   }
 }

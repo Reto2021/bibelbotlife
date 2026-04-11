@@ -660,7 +660,12 @@
         "seniorHome": "Idősek otthona",
         "hospital": "Kórház",
         "prison": "Börtönlelkészi szolgálat",
-        "military": "Katonai lelkészi szolgálat"
+        "military": "Katonai lelkészi szolgálat",
+        "rehaClinic": "Rehabilitációs klinika",
+        "psychiatry": "Pszichiátria",
+        "burnoutClinic": "Kiégés-klinika",
+        "hospice": "Hospice",
+        "counseling": "Tanácsadó központ"
       }
     },
     "institutionsTitle": "Intézményeknek is",
@@ -685,6 +690,26 @@
       "military": {
         "title": "Katonai lelkészi szolgálat",
         "desc": "Lelki kíséret a hadsereg tagjainak – a bevetésen vagy a laktanyában is elérhető."
+      },
+      "rehaClinic": {
+        "title": "Rehabilitációs klinikák",
+        "desc": "Lelki támogatás a rehabilitáció során – belső erőért az életbe való visszatérés útján."
+      },
+      "psychiatry": {
+        "title": "Pszichiátriai intézmények",
+        "desc": "Bizalmas lelki beszélgetések pszichiátriai ellátásban lévő betegek számára."
+      },
+      "burnoutClinic": {
+        "title": "Kiégés-klinikák",
+        "desc": "Értelemkeresés és belső elmélyülés kimerültség idején."
+      },
+      "hospice": {
+        "title": "Hospice-ok",
+        "desc": "Kísérés az élet végén – vigasztaló szavak és nyitott fül."
+      },
+      "counseling": {
+        "title": "Tanácsadó központok",
+        "desc": "Kiegészítő lelki impulzusok pszichoszociális tanácsadás ügyfelei számára."
       }
     },
     "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
@@ -1025,5 +1050,9 @@
     "footerChurches": "Egyházaknak",
     "seoTitle": "BibleBot.Life káplánoknak és életvezetési tanácsadóknak – Szertartások és ülések tervezése",
     "seoDesc": "Tervezzen temetéseket, esküvőket, coaching üléseket professzionálisan: hangfelvétel, szöveggenerálás, súgó, naptár és együttműködés."
+  },
+  "pricing": {
+    "onRequest": "Patronátus igény szerint",
+    "contactUs": "Kapcsolatfelvétel"
   }
 }

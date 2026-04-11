@@ -660,7 +660,12 @@
         "seniorHome": "Altersheim",
         "hospital": "Spital",
         "prison": "Gefängnisseelsorge",
-        "military": "Armeeseelsorge"
+        "military": "Armeeseelsorge",
+        "rehaClinic": "Rehabiliteringsklinik",
+        "psychiatry": "Psykiatri",
+        "burnoutClinic": "Burnout-klinik",
+        "hospice": "Hospice",
+        "counseling": "Rådgivningscenter"
       }
     },
     "institutionsTitle": "Auch für Institutionen",
@@ -685,6 +690,26 @@
       "military": {
         "title": "Armeeseelsorge",
         "desc": "Geistliche Begleitung für Angehörige der Armee – auch im Einsatz oder in der Kaserne erreichbar."
+      },
+      "rehaClinic": {
+        "title": "Rehabiliteringsklinikker",
+        "desc": "Sjælesorg under rehabilitering – for indre styrke på vejen tilbage til livet."
+      },
+      "psychiatry": {
+        "title": "Psykiatriske faciliteter",
+        "desc": "Fortrolige åndelige samtaler for patienter i psykiatrisk behandling."
+      },
+      "burnoutClinic": {
+        "title": "Burnout-klinikker",
+        "desc": "Meningsspørgsmål og indre eftertanke ved udmattelse."
+      },
+      "hospice": {
+        "title": "Hospicer",
+        "desc": "Ledsagelse i livets afslutning – trøstende ord og et lyttende øre."
+      },
+      "counseling": {
+        "title": "Rådgivningscentre",
+        "desc": "Supplerende åndelige impulser for klienter i psykosocial rådgivning."
       }
     },
     "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
@@ -1025,5 +1050,9 @@
     "footerChurches": "Til kirker",
     "seoTitle": "BibleBot.Life til præster og life coaches — Planlæg ceremonier og sessioner",
     "seoDesc": "Planlæg begravelser, bryllupper, coachingsessioner professionelt: stemmeoptagelse, tekstgenerering, teleprompter, kalender og samarbejde."
+  },
+  "pricing": {
+    "onRequest": "Patronat på forespørgsel",
+    "contactUs": "Kontakt os"
   }
 }

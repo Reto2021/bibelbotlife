@@ -660,7 +660,12 @@
         "seniorHome": "Dom za starije",
         "hospital": "Bolnica",
         "prison": "Zatvorska duhovna skrb",
-        "military": "Vojna duhovna skrb"
+        "military": "Vojna duhovna skrb",
+        "rehaClinic": "Rehabilitacijska klinika",
+        "psychiatry": "Psihijatrija",
+        "burnoutClinic": "Klinika za izgaranje",
+        "hospice": "Hospicij",
+        "counseling": "Savjetovalište"
       }
     },
     "institutionsTitle": "Također za institucije",
@@ -685,6 +690,26 @@
       "military": {
         "title": "Vojna duhovna skrb",
         "desc": "Duhovna pratnja za pripadnike vojske – dostupna i na misiji ili u vojarni."
+      },
+      "rehaClinic": {
+        "title": "Rehabilitacijske klinike",
+        "desc": "Duhovna podrška tijekom rehabilitacije."
+      },
+      "psychiatry": {
+        "title": "Psihijatrijske ustanove",
+        "desc": "Povjerljivi duhovni razgovori za pacijente u psihijatrijskoj skrbi."
+      },
+      "burnoutClinic": {
+        "title": "Klinike za izgaranje",
+        "desc": "Pitanja smisla i unutarnje promišljanje kod iscrpljenosti."
+      },
+      "hospice": {
+        "title": "Hospiciji",
+        "desc": "Pratnja na kraju života – utješne riječi i otvoreno uho."
+      },
+      "counseling": {
+        "title": "Savjetovališta",
+        "desc": "Dopunski duhovni poticaji za klijente u psihosocijalnom savjetovanju."
       }
     },
     "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
@@ -1025,5 +1050,9 @@
     "footerChurches": "Za crkve",
     "seoTitle": "BibleBot.Life za kapelane i životne trenere — Planirajte ceremonije i sesije",
     "seoDesc": "Profesionalno planirajte sprovode, vjenčanja, coaching sesije: snimanje glasa, generiranje teksta, teleprompter, kalendar i suradnja."
+  },
+  "pricing": {
+    "onRequest": "Pokroviteljstvo na upit",
+    "contactUs": "Kontaktirajte nas"
   }
 }

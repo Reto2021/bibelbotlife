@@ -660,7 +660,12 @@
         "seniorHome": "Ụlọ ndị agadi",
         "hospital": "Ụlọ ọgwụ",
         "prison": "Ndụmọdụ ụlọ mkpọrọ",
-        "military": "Ndụmọdụ ndị agha"
+        "military": "Ndụmọdụ ndị agha",
+        "rehaClinic": "Ụlọ ọgwụ mgbake",
+        "psychiatry": "Ụlọ ọgwụ uche",
+        "burnoutClinic": "Ụlọ ọgwụ ike gwụrụ",
+        "hospice": "Hospis",
+        "counseling": "Ebe ndụmọdụ"
       }
     },
     "institutionsTitle": "Maka ụlọ ọrụ",
@@ -685,6 +690,26 @@
       "military": {
         "title": "Ndụmọdụ ndị agha",
         "desc": "Nkwado ime mmụọ maka ndị agha – dịkwa n'ọrụ ma ọ bụ n'ogige ndị agha."
+      },
+      "rehaClinic": {
+        "title": "Ụlọ ọgwụ mgbake",
+        "desc": "Nkwado ime mmụọ n'oge mgbake."
+      },
+      "psychiatry": {
+        "title": "Ụlọ ọgwụ uche",
+        "desc": "Mkparịta ụka ime mmụọ nzuzo maka ndị ọrịa."
+      },
+      "burnoutClinic": {
+        "title": "Ụlọ ọgwụ ike gwụrụ",
+        "desc": "Ajụjụ nke isi okwu na echiche n'ime mmụọ."
+      },
+      "hospice": {
+        "title": "Hospis",
+        "desc": "Nlekọta n'oge ikpeazụ ndụ."
+      },
+      "counseling": {
+        "title": "Ebe ndụmọdụ",
+        "desc": "Mkpali ime mmụọ mgbakwunye maka ndị ahịa na ndụmọdụ."
       }
     },
     "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
@@ -1025,5 +1050,9 @@
     "footerChurches": "Maka ụka",
     "seoTitle": "BibleBot.Life maka ndị ụkọchukwu na ndị nkuzi ndụ — Hazie emume na nnọkọ",
     "seoDesc": "Hazi olili ozu, agbamakwụkwọ, nnọkọ nkuzi n'ụzọ ọkachamara: ndekọ olu, mmepụta ederede, teleprompter, kalenda, na mmekọrịta."
+  },
+  "pricing": {
+    "onRequest": "Nkwado na arịrịọ",
+    "contactUs": "Kpọtụrụ anyị"
   }
 }
