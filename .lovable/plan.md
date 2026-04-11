@@ -1,80 +1,77 @@
 
-Ziel: Ich räume jetzt nicht nur den Publisher-Blocker auf, sondern den Security-/Linter-Status komplett sauber auf.
 
-Was ich bereits eingegrenzt habe:
-- Publish-Sichtbarkeit ist bereits öffentlich. Das Problem ist also nicht die Sichtbarkeit der veröffentlichten Seite.
-- Die Gebetswand ist schon auf moderiert öffentlich umgestellt.
-- Im Code sehe ich noch mehrere Stellen, die typischerweise weitere Backend-Warnungen auslösen können, obwohl die App funktional läuft.
+# Hybrid Referral/Affiliate-System: BibleBot.Life + GHL Webhook
 
-Umsetzungsplan
+## Übersicht
 
-1. Exakte Warnungsliste live auslesen
-- Aktuellen Security-Scan und Datenbank-Linter erneut laufen lassen.
-- Jede verbleibende Warnung einer konkreten Ursache zuordnen, statt blind weiterzupatchen.
-- Danach nur noch zwei Kategorien behalten:
-  - echte Probleme, die ich behebe
-  - bewusst öffentliche Fälle, die ich sauber als beabsichtigt dokumentiere
+Einfaches Referral-Tracking direkt in BibleBot.Life, kombiniert mit einem Webhook an GoHighLevel (GHL) bei Conversions (Patronats-Anfrage). Referrer erhalten einen persönlichen Code, Conversions werden getrackt und an GHL gemeldet.
 
-2. Öffentliche Datenzugriffe minimieren
-Ich härte die öffentlichen Lesewege nach dem Prinzip „nur wirklich benötigte Felder“:
-- `church_partners_public` verschlanken, damit nur die Felder öffentlich bleiben, die in Verzeichnis, Partnerseite, Splash, Branding und Integration wirklich gebraucht werden
-- unnötige öffentliche Felder wie interne Metadaten entfernen
-- alle betroffenen Frontend-Abfragen darauf anpassen
+## Schritt 1 — Datenbank: Referral-Tabellen
 
-3. Quiz-Leaderboard sauber trennen
-Aktuell liest das Quiz direkt aus `quiz_scores`, obwohl dort rohe Session-Daten liegen.
-Ich würde:
-- öffentliche Roh-SELECTs auf der Basistabelle entfernen oder stark einschränken
-- einen sicheren öffentlichen Leaderboard-Zugriff über View oder RPC bereitstellen
-- die Quiz-Seite auf diesen sicheren Zugriff umstellen
+Neue Tabellen via Migration:
 
-4. Geteilte Entwürfe härten
-`get_shared_draft` gibt derzeit effektiv einen ganzen Draft zurück.
-Ich würde:
-- die Funktion auf genau die Felder reduzieren, die die öffentliche Shared-Seite wirklich braucht
-- keine unnötigen internen Felder mehr öffentlich zurückgeben
-- den Shared-Draft-Hook und die Typen darauf abstimmen
+- **`referral_partners`** — Affiliate-Partner mit Code, Name, E-Mail, GHL-Contact-ID, Provisionsrate, Status
+- **`referral_clicks`** — Klick-Tracking (ref-Code, Landing-Page, IP-Hash, Timestamp)
+- **`referral_conversions`** — Conversions (Referral-Partner, Inquiry-ID, Deal-Wert, Provisions-Betrag, GHL-Webhook-Status)
 
-5. PrayerWall-Folgewarnungen bereinigen
-Ich prüfe die moderierte Gebetswand nochmals auf Restwarnungen:
-- `get_public_prayers` nur sichere Felder
-- `increment_prayer_count` nur für freigegebene Einträge
-- Policies und Funktionen so abstimmen, dass öffentlich nur das Minimum möglich ist
+RLS: Nur Admins lesen/schreiben (via `has_role`). Klick-Insert offen für anonymous (mit Validierungstrigger).
 
-6. Absichtlich öffentliche Tabellen/Funktionen sauber behandeln
-Einige Dinge sind fachlich bewusst öffentlich, z.B.:
-- Kontaktformular an Gemeinden
-- Tagesimpuls-/Abo-Flows
-- Bibelverse / öffentliche Inhalte
-Wenn diese nach der Härtung weiterhin als Warnung erscheinen, markiere ich sie nur dann als „bewusst öffentlich“, wenn wirklich keine sensitiven Daten offenliegen.
+## Schritt 2 — Frontend: `?ref=CODE` Tracking
 
-7. Frontend nachziehen
-Ich passe danach alle betroffenen Stellen an, damit nichts bricht:
-- `ChurchDirectory.tsx`
-- `ChurchPartner.tsx`
-- `ChurchIntegration.tsx`
-- `ChurchBanner.tsx`
-- `SplashScreen.tsx`
-- `use-church-branding.ts`
-- `BibleQuiz.tsx`
-- `use-ceremony-drafts.ts`
-- ggf. generierte Typen nach den Datenbankänderungen
+- Im `useAnalytics` Hook: `?ref=CODE` aus URL lesen, in `localStorage` speichern (30 Tage Cookie-Window)
+- Klick in `referral_clicks` loggen (einmal pro Session)
+- Ref-Code automatisch an `church_partnership_inquiries`-Insert in `ForChurches.tsx` anhängen (neues Feld `referral_code`)
 
-8. Abschlussprüfung und Publish-Freigabe
-- Security-Scan erneut ausführen
-- Datenbank-Linter erneut ausführen
-- prüfen, dass keine offenen relevanten Warnungen mehr übrig sind
-- danach Publish erneut testen
-- falls der Button trotz sauberem Status noch grau bleibt, ist es sehr wahrscheinlich ein UI-/Cache-Zustand im Review-Security-Dialog; dann räume ich als letzten Schritt gezielt diesen Restzustand auf
+## Schritt 3 — Edge Function: `referral-webhook`
 
-Technische Details
-- Vermutlich nötig: neue Migrationen für Policies, Views und RPCs
-- Keine Änderungen an `src/integrations/supabase/client.ts`
-- Öffentliche Features bleiben möglich, aber nur noch über abgesicherte Views/Funktionen mit minimalem Datenumfang
-- Ich würde zusätzlich die zwei React-Ref-Warnungen (`AppLogo`, `DailyImpulse`) separat bereinigen, weil sie zwar nicht der Security-Blocker sind, aber unnötigen Larm erzeugen
+Neue Edge Function die bei einer Conversion:
+1. Referral-Partner anhand des Codes nachschlägt
+2. Provision berechnet (Default: 10% des Jahresbeitrags)
+3. `referral_conversions` Insert
+4. **Webhook POST an GHL** mit Payload: `{ contact_id, referral_code, church_name, deal_value, commission, event: "new_conversion" }`
+5. GHL-Webhook-URL aus Secrets (`GHL_WEBHOOK_URL`)
 
-Erwartetes Ergebnis
-- sauberer Security-/Linter-Status
-- keine unnötig offenen öffentlichen Datenpfade mehr
-- Publish sollte wieder freigegeben werden
-- falls Lovable den alten Security-Zustand cached, kann ich nach dem Cleanup gezielt den finalen Recheck begleiten
+## Schritt 4 — Admin UI: Referral-Dashboard
+
+Neuer Tab im Admin-Dashboard (`/admin`) oder eigene Seite:
+- Partner-Liste (Code, Klicks, Conversions, Provision)
+- Partner erstellen/bearbeiten (Name, E-Mail, Code, Provisionsrate)
+- Conversion-Log mit GHL-Sync-Status
+- Einfache Statistiken (Klicks → Conversions → Conversion-Rate)
+
+## Schritt 5 — ForChurches.tsx: Referral-Code mitsenden
+
+- Beim Submit der Partnership-Inquiry den gespeicherten Ref-Code aus localStorage mitsenden
+- Nach erfolgreichem Insert: Edge Function `referral-webhook` aufrufen
+
+## Schritt 6 — GHL Secret einrichten
+
+- `GHL_WEBHOOK_URL` als Secret hinzufügen (via `add_secret` Tool)
+- User muss die Webhook-URL aus GHL bereitstellen
+
+## Technische Details
+
+```text
+User klickt Link (?ref=PARTNER123)
+    ↓
+localStorage speichert ref=PARTNER123 (30 Tage)
+referral_clicks INSERT
+    ↓
+User füllt Patronats-Formular aus
+    ↓
+church_partnership_inquiries INSERT (+ referral_code)
+    ↓
+referral-webhook Edge Function
+    ├─ referral_conversions INSERT
+    └─ POST → GHL Webhook (Affiliate-Verwaltung + Auszahlung)
+```
+
+**Migration**: `referral_partners`, `referral_clicks`, `referral_conversions` + Feld `referral_code` auf `church_partnership_inquiries`
+
+**Dateien**:
+- `supabase/functions/referral-webhook/index.ts` (neu)
+- `src/hooks/useAnalytics.ts` (ref-Code Tracking)
+- `src/pages/ForChurches.tsx` (ref-Code mitsenden)
+- `src/pages/admin/AdminDashboard.tsx` (Referral-Tab)
+- DB Migration (3 Tabellen + 1 Spalte)
+
