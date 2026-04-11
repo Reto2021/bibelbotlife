@@ -1,4 +1,5 @@
 import { SEOHead } from "@/components/SEOHead";
+import { useCurrency } from "@/hooks/use-currency";
 import { Link } from "react-router-dom";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Button } from "@/components/ui/button";
@@ -14,6 +15,7 @@ const featureIcons = [Mic, Sparkles, FileText, Layout, Calendar, Monitor, Music,
 
 export default function ForCelebrants() {
   const { t } = useTranslation();
+  const { formatPrice, currency } = useCurrency();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const features = Array.from({ length: 10 }, (_, i) => ({
@@ -43,7 +45,8 @@ export default function ForCelebrants() {
     },
     {
       name: t("celebrants.planPro"),
-      price: t("celebrants.planProPrice"),
+      price: formatPrice(29),
+      priceCHF: 29,
       period: t("celebrants.planProPeriod"),
       features: proFeatures,
       cta: t("celebrants.ctaTrial"),
@@ -139,6 +142,9 @@ export default function ForCelebrants() {
                   <div className="mb-6">
                     <span className="text-3xl font-extrabold text-foreground">{plan.price}</span>
                     <span className="text-muted-foreground">{plan.period}</span>
+                    {currency !== "CHF" && (plan as any).priceCHF > 0 && (
+                      <p className="text-[10px] text-muted-foreground/60 mt-1">≈ CHF {(plan as any).priceCHF}.–</p>
+                    )}
                   </div>
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((f, j) => (

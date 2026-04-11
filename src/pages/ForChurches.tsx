@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useCurrency } from "@/hooks/use-currency";
 import { getStoredReferralCode } from "@/hooks/useAnalytics";
 import { SEOHead } from "@/components/SEOHead";
 import { Link } from "react-router-dom";
@@ -22,6 +23,7 @@ const tiers = [
 
 const ForChurches = () => {
   const { t } = useTranslation();
+  const { formatPrice, currency } = useCurrency();
   const [formData, setFormData] = useState({ name: "", email: "", church_name: "", organization_type: "", preferred_tier: "", message: "" });
   const [sending, setSending] = useState(false);
 
@@ -191,13 +193,18 @@ const ForChurches = () => {
                   <div className="text-center mb-6">
                     {tier.setup > 0 && (
                       <p className="text-sm text-muted-foreground mb-1">
-                        {t("church.setup")}: <span className="font-semibold text-foreground">CHF {tier.setup.toLocaleString("de-CH")}.–</span>
+                        {t("church.setup")}: <span className="font-semibold text-foreground">{formatPrice(tier.setup)}</span>
                       </p>
                     )}
                     <p className="text-3xl font-bold text-foreground">
-                      {tier.annual === 0 ? "CHF 0.–" : `CHF ${tier.annual.toLocaleString("de-CH")}.–`}
+                      {formatPrice(tier.annual)}
                     </p>
                     {tier.annual > 0 && t("church.perYear") ? <p className="text-xs text-muted-foreground">{t("church.perYear")}</p> : null}
+                    {currency !== "CHF" && tier.annual > 0 && (
+                      <p className="text-[10px] text-muted-foreground/60 mt-1">
+                        ≈ CHF {tier.annual.toLocaleString("de-CH")}.–
+                      </p>
+                    )}
                   </div>
                   <Button
                     className="w-full mt-6"
