@@ -189,6 +189,25 @@ Deno.serve(async (req) => {
 
 function personalizeTemplate(template: string, lead: any, campaign: any): string {
   const appUrl = "https://biblebot.life";
+  const previewUrl = `${appUrl}/widget-preview/${lead.id}`;
+  const splashUrl = `${appUrl}/splash/${lead.id}`;
+  const screenshotUrl = lead.screenshot_url || "";
+  const primaryColor = lead.primary_color || "#C8883A";
+
+  // Build a branded screenshot block with clickable link
+  const screenshotBlock = screenshotUrl
+    ? `<div style="margin:24px 0;text-align:center;">
+        <a href="${previewUrl}" target="_blank" style="display:inline-block;border-radius:12px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.15);">
+          <img src="${screenshotUrl}" alt="BibleBot für ${lead.church_name || 'Ihre Gemeinde'}" style="max-width:100%;width:480px;border-radius:12px;" />
+        </a>
+        <p style="margin-top:12px;font-size:13px;color:#666;">
+          <a href="${previewUrl}" style="color:${primaryColor};font-weight:600;text-decoration:none;">
+            → Klicken Sie hier für die Live-Vorschau in Ihrem Design
+          </a>
+        </p>
+      </div>`
+    : "";
+
   return template
     .replace(/\{\{church_name\}\}/g, lead.church_name || "")
     .replace(/\{\{churchName\}\}/g, lead.church_name || "")
@@ -200,10 +219,11 @@ function personalizeTemplate(template: string, lead: any, campaign: any): string
     .replace(/\{\{personal_note\}\}/g, lead.personal_note || "")
     .replace(/\{\{booking_url\}\}/g, campaign.booking_url || "")
     .replace(/\{\{sender_name\}\}/g, campaign.sender_name || "")
-    .replace(/\{\{previewUrl\}\}/g, `${appUrl}/widget-preview/${lead.id}`)
-    .replace(/\{\{screenshotUrl\}\}/g, lead.screenshot_url || "")
-    .replace(/\{\{splashUrl\}\}/g, `${appUrl}/splash/${lead.church_name?.toLowerCase().replace(/\s+/g, "-") || lead.id}`)
+    .replace(/\{\{previewUrl\}\}/g, previewUrl)
+    .replace(/\{\{screenshotUrl\}\}/g, screenshotUrl)
+    .replace(/\{\{splashUrl\}\}/g, splashUrl)
     .replace(/\{\{websiteScore\}\}/g, lead.website_score?.toString() || "?")
-    .replace(/\{\{primaryColor\}\}/g, lead.primary_color || "")
-    .replace(/\{\{logoUrl\}\}/g, lead.logo_url || "");
+    .replace(/\{\{primaryColor\}\}/g, primaryColor)
+    .replace(/\{\{logoUrl\}\}/g, lead.logo_url || "")
+    .replace(/\{\{screenshotBlock\}\}/g, screenshotBlock);
 }
