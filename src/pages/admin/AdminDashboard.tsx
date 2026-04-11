@@ -1,5 +1,6 @@
 import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
+import { useAppSetting, useUpdateAppSetting } from "@/hooks/use-app-setting";
 import { useAdminStats, useAdminChurches } from "@/hooks/use-admin";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -8,6 +9,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { Building2, Users, TrendingUp, AlertTriangle, MessageCircle, Search, Target, Heart, Link as LinkIcon } from "lucide-react";
+import { Switch } from "@/components/ui/switch";
+import { Label } from "@/components/ui/label";
+import { toast } from "sonner";
 import { ChurchDetailDrawer } from "./ChurchDetailDrawer";
 import type { Tables } from "@/integrations/supabase/types";
 
@@ -28,6 +32,8 @@ const STATUS_COLORS: Record<string, string> = {
 export default function AdminDashboard() {
   const { data: stats } = useAdminStats();
   const { data: churches, isLoading } = useAdminChurches();
+  const { value: showPricing, isLoading: pricingLoading } = useAppSetting("show_pricing");
+  const updateSetting = useUpdateAppSetting();
   const [search, setSearch] = useState("");
   const [planFilter, setPlanFilter] = useState("all");
   const [statusFilter, setStatusFilter] = useState("all");
@@ -69,6 +75,30 @@ export default function AdminDashboard() {
             <Link to="/admin/prayers"><Heart className="h-4 w-4 mr-2" />Gebete</Link>
           </Button>
         </div>
+
+        {/* Pricing Toggle */}
+        <Card>
+          <CardContent className="flex items-center justify-between py-4">
+            <div>
+              <Label htmlFor="show-pricing" className="text-sm font-medium">Preise anzeigen</Label>
+              <p className="text-xs text-muted-foreground">Preise auf Gemeinde- und Seelsorger-Seite ein-/ausblenden</p>
+            </div>
+            <Switch
+              id="show-pricing"
+              checked={!!showPricing}
+              disabled={pricingLoading || updateSetting.isPending}
+              onCheckedChange={(checked) => {
+                updateSetting.mutate(
+                  { key: "show_pricing", value: checked },
+                  {
+                    onSuccess: () => toast.success(checked ? "Preise aktiviert" : "Preise ausgeblendet"),
+                    onError: () => toast.error("Fehler beim Speichern"),
+                  }
+                );
+              }}
+            />
+          </CardContent>
+        </Card>
 
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
