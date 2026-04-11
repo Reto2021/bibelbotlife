@@ -29,6 +29,19 @@ export default function ReferralPartner() {
     enabled: !!code,
   });
 
+  const { data: conversions } = useQuery({
+    queryKey: ["referral-partner-conversions", code],
+    queryFn: async () => {
+      if (!code) return [];
+      const { data, error } = await (supabase.rpc as any)("get_referral_partner_conversions", {
+        p_code: code,
+      });
+      if (error) throw error;
+      return data || [];
+    },
+    enabled: !!code && !!partner,
+  });
+
   const referralLink = `https://biblebot.life/for-churches?ref=${code}`;
 
   const copyLink = () => {
