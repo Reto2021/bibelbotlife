@@ -264,12 +264,17 @@ const ForChurches = () => {
                         <SelectValue placeholder={t("church.form.orgTypePlaceholder")} />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="Gemeinde">{t("church.form.orgTypes.church")}</SelectItem>
+                        <SelectItem value="Reformiert">{t("church.form.orgTypes.reformed")}</SelectItem>
+                        <SelectItem value="Katholisch">{t("church.form.orgTypes.catholic")}</SelectItem>
+                        <SelectItem value="Lutherisch">{t("church.form.orgTypes.lutheran")}</SelectItem>
+                        <SelectItem value="Freikirche">{t("church.form.orgTypes.evangelical")}</SelectItem>
+                        <SelectItem value="Freischaffend">{t("church.form.orgTypes.freelance")}</SelectItem>
                         <SelectItem value="Pflegeheim">{t("church.form.orgTypes.careHome")}</SelectItem>
                         <SelectItem value="Altersheim">{t("church.form.orgTypes.seniorHome")}</SelectItem>
                         <SelectItem value="Spital">{t("church.form.orgTypes.hospital")}</SelectItem>
                         <SelectItem value="Gefängnisseelsorge">{t("church.form.orgTypes.prison")}</SelectItem>
                         <SelectItem value="Armeeseelsorge">{t("church.form.orgTypes.military")}</SelectItem>
+                        <SelectItem value="Andere">{t("church.form.orgTypes.other")}</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
