@@ -4,7 +4,7 @@ import { QRStickerDownload } from "@/components/QRStickerDownload";
 import { useParams, Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
-import { Copy, Check, ArrowLeft, ExternalLink, Code2, Link2, QrCode, Globe } from "lucide-react";
+import { Copy, Check, ArrowLeft, ExternalLink, Code2, Link2, QrCode, Globe, Mail, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
