@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
-import { Link, Users, TrendingUp, DollarSign, Plus, Copy, ArrowLeft } from "lucide-react";
+import { Link, Users, TrendingUp, DollarSign, Plus, Copy, ArrowLeft, ExternalLink } from "lucide-react";
 import { Link as RouterLink } from "react-router-dom";
 
 export default function ReferralAdmin() {
