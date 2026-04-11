@@ -583,7 +583,75 @@ export default function OutreachAdmin() {
     }
   };
 
-  return (
+  // ─── Schedule Management ──────────────────────────────
+  const [scheduleOpen, setScheduleOpen] = useState(false);
+  const [scheduleForm, setScheduleForm] = useState({
+    search_query: "",
+    country: "ch",
+    max_results: 10,
+    cron_expression: "0 9 * * 1-5",
+    is_active: true,
+  });
+  const [savingSchedule, setSavingSchedule] = useState(false);
+
+  const CRON_PRESETS = [
+    { label: "Mo–Fr 9:00", value: "0 9 * * 1-5" },
+    { label: "Täglich 9:00", value: "0 9 * * *" },
+    { label: "Täglich 14:00", value: "0 14 * * *" },
+    { label: "Mo & Do 9:00", value: "0 9 * * 1,4" },
+    { label: "Wöchentlich Mo 9:00", value: "0 9 * * 1" },
+  ];
+
+  const openScheduleDialog = () => {
+    if (scheduleData) {
+      setScheduleForm({
+        search_query: (scheduleData as any).search_query || "",
+        country: (scheduleData as any).country || "ch",
+        max_results: (scheduleData as any).max_results || 10,
+        cron_expression: (scheduleData as any).cron_expression || "0 9 * * 1-5",
+        is_active: (scheduleData as any).is_active ?? true,
+      });
+    }
+    setScheduleOpen(true);
+  };
+
+  const saveSchedule = async () => {
+    if (!selectedCampaignId) return;
+    setSavingSchedule(true);
+    try {
+      if (scheduleData) {
+        const { error } = await (supabase
+          .from("pipeline_schedules" as any)
+          .update(scheduleForm as any)
+          .eq("id", (scheduleData as any).id) as any);
+        if (error) throw error;
+      } else {
+        const { error } = await (supabase
+          .from("pipeline_schedules" as any)
+          .insert({ ...scheduleForm, campaign_id: selectedCampaignId } as any) as any);
+        if (error) throw error;
+      }
+      toast.success("Zeitplan gespeichert");
+      setScheduleOpen(false);
+      queryClient.invalidateQueries({ queryKey: ["pipeline-schedule"] });
+    } catch (err: any) {
+      toast.error(err.message);
+    } finally {
+      setSavingSchedule(false);
+    }
+  };
+
+  const toggleScheduleActive = async () => {
+    if (!scheduleData) return;
+    const newActive = !(scheduleData as any).is_active;
+    await (supabase
+      .from("pipeline_schedules" as any)
+      .update({ is_active: newActive } as any)
+      .eq("id", (scheduleData as any).id) as any);
+    queryClient.invalidateQueries({ queryKey: ["pipeline-schedule"] });
+    toast.success(newActive ? "Zeitplan aktiviert" : "Zeitplan deaktiviert");
+  };
+
     <div className="min-h-screen bg-background p-6 max-w-7xl mx-auto space-y-6">
       <div className="flex items-center justify-between">
         <div>
