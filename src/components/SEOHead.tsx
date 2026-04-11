@@ -9,7 +9,7 @@ interface SEOHeadProps {
   path?: string;
 }
 
-const OG_IMAGE_LANGS = ["de", "en", "fr", "es", "it"];
+const OG_IMAGE_LANGS = ["de", "en", "fr", "es", "it", "pt", "nl", "pl", "ru", "ko", "zh"];
 
 export const SEOHead = ({ titleKey, descKey, title, description, path = "" }: SEOHeadProps) => {
   const { t, i18n } = useTranslation();
