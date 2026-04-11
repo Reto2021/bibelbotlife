@@ -530,6 +530,26 @@ export function ChatHero() {
           const assistantMsgIndex = allMessages.length; // index of the assistant message in the messages array
           runQA(assistantSoFar, assistantMsgIndex);
 
+          // Generate follow-up suggestions
+          setFollowUps([]);
+          setFollowUpsLoading(true);
+          fetch(CHAT_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}` },
+            body: JSON.stringify({
+              messages: [
+                { role: "user", content: text.trim() },
+                { role: "assistant", content: assistantSoFar.slice(0, 800) },
+              ],
+              mode: "generate_followups",
+              language: i18n.language,
+            }),
+          })
+            .then(r => r.ok ? r.json() : { suggestions: [] })
+            .then(data => setFollowUps(data.suggestions || []))
+            .catch(() => setFollowUps([]))
+            .finally(() => setFollowUpsLoading(false));
+
           // Generate AI title after the first exchange (only 1 user + 1 assistant message)
           if (allMessages.length === 1) {
             try {
