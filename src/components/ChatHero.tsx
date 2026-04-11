@@ -808,7 +808,7 @@ export function ChatHero() {
                   initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: 0.25 }}
-                  className="grid grid-cols-3 gap-2 max-w-2xl mx-auto mb-5 w-full"
+                  className="grid grid-cols-3 gap-1.5 sm:gap-2 max-w-2xl mx-auto mb-5 w-full"
                 >
                   {[
                     { emoji: "😰", title: t("tiles.anxiety.title"), prompt: t("tiles.anxiety.prompt") },
@@ -818,10 +818,10 @@ export function ChatHero() {
                     <button
                       key={card.title}
                       onClick={() => sendMessage(card.prompt)}
-                      className="group flex items-center gap-2 bg-card/70 backdrop-blur-sm border border-border rounded-xl px-3 py-2.5 hover:border-primary/40 hover:shadow-md hover:bg-card transition-all duration-200 cursor-pointer"
+                      className="group flex items-center gap-1.5 sm:gap-2 bg-card/70 backdrop-blur-sm border border-border rounded-xl px-2 sm:px-3 py-2 sm:py-2.5 hover:border-primary/40 hover:shadow-md hover:bg-card transition-all duration-200 cursor-pointer min-w-0"
                     >
-                      <span className="text-lg sm:text-xl shrink-0">{card.emoji}</span>
-                      <span className="text-xs sm:text-sm font-medium text-foreground group-hover:text-primary transition-colors text-left leading-tight">{card.title}</span>
+                      <span className="text-base sm:text-xl shrink-0">{card.emoji}</span>
+                      <span className="text-[11px] sm:text-sm font-medium text-foreground group-hover:text-primary transition-colors text-left leading-tight truncate">{card.title}</span>
                     </button>
                   ))}
                 </motion.div>
