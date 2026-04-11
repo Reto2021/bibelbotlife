@@ -307,6 +307,7 @@
     "qaOk": "{{count}} Zitat geprüft ✓",
     "qaOk_plural": "{{count}} Zitate geprüft ✓",
     "qaWarning": "⚠️ Hinweise zur Genauigkeit:",
+    "suggestionsLoading": "Vorschläge laden…",
     "errorTooMany": "Zu viele Anfragen – bitte warte kurz.",
     "errorCredits": "KI-Kontingent erschöpft.",
     "errorConnect": "Fehler beim Verbinden.",
