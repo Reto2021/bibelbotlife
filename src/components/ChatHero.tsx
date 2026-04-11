@@ -647,6 +647,7 @@ export function ChatHero() {
   const handleNewChat = useCallback(() => {
     startNewChat();
     setSidebarOpen(false);
+    setFollowUps([]);
   }, [startNewChat]);
 
   const visibleChips = showMoreChips ? TOPIC_CHIPS : TOPIC_CHIPS.slice(0, 8);
