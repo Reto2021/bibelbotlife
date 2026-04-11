@@ -132,7 +132,7 @@ Regeln:
     }
 
     // Filter: only churches with email
-    const validLeads = extracted.filter((e: any) => e.is_church && e.email && e.church_name);
+    const validLeads = extracted.filter((e: any) => e.is_relevant && e.email && e.church_name);
 
     if (!validLeads.length) {
       return new Response(JSON.stringify({ discovered: extracted.length, imported: 0, skipped: extracted.length, leads: extracted }), {
