@@ -1164,6 +1164,7 @@ export default function OutreachAdmin() {
                         <TableHead>Kontakt</TableHead>
                         <TableHead>E-Mail</TableHead>
                         <TableHead>Stadt</TableHead>
+                        <TableHead>Social</TableHead>
                         <TableHead>Score</TableHead>
                         <TableHead>Schritt</TableHead>
                         <TableHead>Status</TableHead>
