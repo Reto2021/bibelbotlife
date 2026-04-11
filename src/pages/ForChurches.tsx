@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useCurrency } from "@/hooks/use-currency";
 import { getStoredReferralCode } from "@/hooks/useAnalytics";
 import { SEOHead } from "@/components/SEOHead";
 import { Link } from "react-router-dom";
