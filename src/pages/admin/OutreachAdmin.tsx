@@ -168,7 +168,7 @@ export default function OutreachAdmin() {
   const { data: sequences = [] } = useSequences(selectedCampaignId);
   const { data: stats } = useOutreachStats(selectedCampaignId);
   const { data: abStats } = useAbTestStats();
-
+  const { data: scheduleData, isLoading: loadingSchedule } = usePipelineSchedule(selectedCampaignId);
   // ─── Campaign CRUD ─────────────────────────────────────
   const [campaignForm, setCampaignForm] = useState({
     name: "", sender_name: "BibleBot.Life", sender_email: "",
