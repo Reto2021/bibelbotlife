@@ -1774,6 +1774,14 @@ export type Database = {
           prayer_count: number
         }[]
       }
+      get_referral_partner_conversions: {
+        Args: { p_code: string }
+        Returns: {
+          commission_amount: number
+          created_at: string
+          deal_value: number
+        }[]
+      }
       get_referral_partner_stats: {
         Args: { p_code: string }
         Returns: {
