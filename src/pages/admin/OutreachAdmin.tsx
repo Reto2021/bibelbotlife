@@ -575,7 +575,86 @@ export default function OutreachAdmin() {
           </h1>
           <p className="text-muted-foreground">Lead-Generierung & E-Mail-Sequenzen</p>
         </div>
-        <div className="flex gap-2">
+        <div className="flex gap-2 flex-wrap">
+          {/* Pipeline Button */}
+          <Dialog open={pipelineOpen} onOpenChange={setPipelineOpen}>
+            <DialogTrigger asChild>
+              <Button variant="default" disabled={!selectedCampaignId}>
+                <Rocket className="h-4 w-4 mr-2" />
+                Auto-Pipeline
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="max-w-lg">
+              <DialogHeader>
+                <DialogTitle>🚀 Auto-Pipeline</DialogTitle>
+              </DialogHeader>
+              <p className="text-sm text-muted-foreground">
+                Führt automatisch alle Schritte durch: Discover → Scrape → Sequenz → Senden
+              </p>
+              <div className="space-y-3">
+                <div>
+                  <Label className="text-xs text-muted-foreground mb-1.5 block">Schnellsuche</Label>
+                  <div className="flex flex-wrap gap-1.5">
+                    {[
+                      { label: "🇨🇭 Kirchen CH", q: "reformierte katholische Kirche Gemeinde Kontakt Pfarrer", c: "ch" },
+                      { label: "⛪ Freikirchen CH", q: "Freikirche evangelische Gemeinde Pastor Kontakt Schweiz", c: "ch" },
+                      { label: "🏥 Spitalseelsorge", q: "Spitalseelsorge Seelsorger Spital Kontakt Schweiz", c: "ch" },
+                      { label: "🙏 Seelsorger CH", q: "Seelsorge Beratung christlich Kontakt Schweiz", c: "ch" },
+                      { label: "🧘 Life Coaches CH", q: "Life Coach spirituell christlich Begleitung Kontakt Schweiz", c: "ch" },
+                      { label: "🏠 Heime CH", q: "Altersheim Pflegeheim Seelsorge Kontakt Schweiz", c: "ch" },
+                    ].map((p) => (
+                      <Button key={p.label} variant="outline" size="sm" className="text-xs h-7"
+                        onClick={() => { setPipelineQuery(p.q); setPipelineCountry(p.c); }}>
+                        {p.label}
+                      </Button>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <Label>Suchbegriff</Label>
+                  <Input value={pipelineQuery} onChange={(e) => setPipelineQuery(e.target.value)}
+                    placeholder='z.B. "reformierte Kirche Zürich Kontakt"' />
+                </div>
+                <div className="grid grid-cols-2 gap-3">
+                  <div><Label>Land</Label><Input value={pipelineCountry} onChange={(e) => setPipelineCountry(e.target.value)} placeholder="ch" /></div>
+                  <div><Label>Max. Leads</Label><Input type="number" min={1} max={20} value={pipelineMax} onChange={(e) => setPipelineMax(Number(e.target.value))} /></div>
+                </div>
+
+                {/* Pipeline Progress Log */}
+                {pipelineLog.length > 0 && (
+                  <Card className="bg-muted/50">
+                    <CardContent className="p-3 space-y-1">
+                      {pipelineStep && pipelineStep !== "done" && (
+                        <div className="flex items-center gap-2 mb-2">
+                          <Loader2 className="h-4 w-4 animate-spin text-primary" />
+                          <span className="text-sm font-medium">
+                            {pipelineStep === "discover" && "Schritt 1/4: Discover"}
+                            {pipelineStep === "scrape" && "Schritt 2/4: Scrape"}
+                            {pipelineStep === "sequence" && "Schritt 3/4: Sequenz"}
+                            {pipelineStep === "send" && "Schritt 4/4: Senden"}
+                          </span>
+                        </div>
+                      )}
+                      {pipelineLog.map((line, i) => (
+                        <p key={i} className="text-xs text-muted-foreground">{line}</p>
+                      ))}
+                    </CardContent>
+                  </Card>
+                )}
+              </div>
+              <DialogFooter>
+                <Button onClick={runPipeline} disabled={pipelineRunning || !pipelineQuery.trim()}
+                  className="w-full">
+                  {pipelineRunning ? (
+                    <><Loader2 className="h-4 w-4 animate-spin mr-2" />Pipeline läuft…</>
+                  ) : (
+                    <><Rocket className="h-4 w-4 mr-2" />Pipeline starten</>
+                  )}
+                </Button>
+              </DialogFooter>
+            </DialogContent>
+          </Dialog>
+
           <Button variant="outline" onClick={triggerSend} disabled={sending}>
             {sending ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : <Send className="h-4 w-4 mr-2" />}
             Jetzt senden
