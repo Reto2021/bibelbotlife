@@ -1,4 +1,5 @@
 import { useState, forwardRef } from "react";
+import { BrandedQRCode } from "@/components/BrandedQRCode";
 import { useTranslation } from "react-i18next";
 import { Heart, Send, Mail, Copy, Check, QrCode } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -107,12 +108,7 @@ export function ReferralSection() {
         <div className="text-center">
           <p className="text-sm text-muted-foreground mb-3">{t("refer.qr")}</p>
           <div className="inline-block bg-white rounded-xl p-4 shadow-md">
-            <img
-              src={`https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=${encodeURIComponent(REFER_URL)}&margin=0&format=svg`}
-              alt="BibleBot QR Code"
-              className="h-40 w-40"
-              loading="lazy"
-            />
+            <BrandedQRCode value={REFER_URL} size={160} />
           </div>
         </div>
       </div>
