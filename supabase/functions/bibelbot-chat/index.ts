@@ -743,6 +743,55 @@ serve(async (req) => {
       });
     }
 
+    // === Generate follow-up suggestions mode ===
+    if (mode === "generate_followups") {
+      const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
+      if (!LOVABLE_API_KEY) throw new Error("LOVABLE_API_KEY is not configured");
+
+      const lang = language || "de";
+      const langInstruction = lang !== "de"
+        ? `Respond in ${lang === "en" ? "English" : lang === "fr" ? "French" : lang === "es" ? "Spanish" : lang}. `
+        : "Antworte auf Deutsch (Schweiz, kein ß). ";
+
+      const followupResp = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${LOVABLE_API_KEY}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          model: "google/gemini-2.5-flash-lite",
+          messages: [
+            {
+              role: "system",
+              content: `${langInstruction}Du generierst genau 4 kurze Follow-up-Vorschläge basierend auf dem Gesprächskontext. Jeder Vorschlag soll den Nutzer einladen, tiefer in ein Thema einzusteigen. Sei kreativ und abwechslungsreich. Antworte AUSSCHLIESSLICH als JSON-Array von Objekten mit "emoji" (1 Emoji) und "label" (max 40 Zeichen) und "prompt" (die tatsächliche Frage/Nachricht). Beispiel: [{"emoji":"🐑","label":"Das Bild des Hirten","prompt":"Erkläre mir das Bild des Hirten in Psalm 23 genauer"},{"emoji":"📜","label":"Historischer Kontext","prompt":"Was ist der historische Kontext von diesem Text?"},{"emoji":"🙏","label":"Gebet dazu","prompt":"Kannst du mir ein Gebet zu diesem Thema formulieren?"},{"emoji":"💡","label":"Etwas ganz anderes","prompt":"Erzähl mir etwas Überraschendes aus der Bibel"}]. Keine Markdown-Codeblöcke, nur reines JSON.`
+            },
+            ...messages.slice(-4),
+          ],
+          stream: false,
+        }),
+      });
+
+      if (!followupResp.ok) {
+        return new Response(JSON.stringify({ suggestions: [] }), {
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+        });
+      }
+
+      const followupData = await followupResp.json();
+      const raw = followupData.choices?.[0]?.message?.content?.trim() || "[]";
+      let suggestions = [];
+      try {
+        const cleaned = raw.replace(/```json\n?/g, "").replace(/```\n?/g, "").trim();
+        suggestions = JSON.parse(cleaned);
+      } catch {
+        suggestions = [];
+      }
+      return new Response(JSON.stringify({ suggestions }), {
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+
     // Inject language instruction and journey context into system prompt
     let systemPrompt = SYSTEM_PROMPT;
     const lang = language || "de";
