@@ -1,9 +1,10 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import bibelbotLogo from "@/assets/biblebot-logo.png";
-import { Search, ArrowRight, Shield, Loader2, Mic, MicOff, Send, Menu, LogIn, X, EyeOff, Heart, Accessibility, Volume2, VolumeX } from "lucide-react";
+import { Search, ArrowRight, Shield, Loader2, Mic, MicOff, Send, Menu, LogIn, X, EyeOff, Heart, Accessibility, Volume2, VolumeX, CheckCircle2, AlertTriangle } from "lucide-react";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { useTTS } from "@/hooks/use-tts";
-import { VoicePicker } from "@/components/VoicePicker";
+
 import { useSeniorMode } from "@/hooks/use-senior-mode";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTrack } from "@/components/AnalyticsProvider";
@@ -69,6 +70,65 @@ function getSpeechLang(lang: string): string {
 }
 
 const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/bibelbot-chat`;
+const QA_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/bibelbot-qa`;
+
+type QAResult = {
+  citations_found: number;
+  issues: { citation: string; problem: string; correction: string }[];
+  has_issues: boolean;
+  summary: string;
+};
+
+function likelyHasCitations(text: string): boolean {
+  const pattern = /(\d\.\s?)?(Genesis|Exodus|Levitikus|Numeri|Deuteronomium|Josua|Richter|Rut|Samuel|Könige|Chronik|Esra|Nehemia|Ester|Hiob|Psalm|Psalmen|Sprüche|Prediger|Hoheslied|Jesaja|Jeremia|Klagelieder|Ezechiel|Daniel|Hosea|Joel|Amos|Obadja|Jona|Micha|Nahum|Habakuk|Zefanja|Haggai|Sacharja|Maleachi|Matthäus|Markus|Lukas|Johannes|Apostelgeschichte|Römer|Korinther|Galater|Epheser|Philipper|Kolosser|Thessalonicher|Timotheus|Titus|Philemon|Hebräer|Jakobus|Petrus|Judas|Offenbarung|Mose|Mt|Mk|Lk|Joh|Apg|Röm|Kor|Gal|Eph|Phil|Kol|Ps|Spr|Jes|Jer|Matthew|Mark|Luke|John|Acts|Romans|Corinthians|Galatians|Ephesians|Philippians|Colossians|Thessalonians|Timothy|Hebrews|James|Peter|Jude|Revelation)\s+\d+/i;
+  return pattern.test(text);
+}
+
+function QABadge({ qa, t }: { qa: QAResult | "loading" | "skipped"; t: (key: string, opts?: any) => string }) {
+  if (qa === "loading") {
+    return (
+      <div className="flex items-center gap-2 mt-2 px-2.5 py-1.5 rounded-lg bg-muted/60 border border-border text-sm text-muted-foreground">
+        <Loader2 className="h-3.5 w-3.5 animate-spin" />
+        <span>{t("chat.qaChecking")}</span>
+      </div>
+    );
+  }
+  if (qa === "skipped") return null;
+  if (qa.citations_found === 0) return null;
+
+  return (
+    <TooltipProvider>
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <div className={`flex items-center gap-2 mt-2 px-2.5 py-1.5 rounded-lg border cursor-help text-sm font-medium ${qa.has_issues ? "text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/30 border-amber-200 dark:border-amber-800" : "text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800"}`}>
+            {qa.has_issues ? <AlertTriangle className="h-4 w-4" /> : <CheckCircle2 className="h-4 w-4" />}
+            <span>
+              {qa.has_issues
+                ? t("chat.qaIssue", { count: qa.issues.length })
+                : t("chat.qaOk", { count: qa.citations_found })}
+            </span>
+          </div>
+        </TooltipTrigger>
+        <TooltipContent side="top" className="max-w-[300px] text-xs">
+          {qa.has_issues ? (
+            <div className="space-y-2">
+              <p className="font-semibold">{t("chat.qaWarning")}</p>
+              {qa.issues.map((issue, i) => (
+                <div key={i} className="border-t border-border pt-1.5">
+                  <p className="font-medium">{issue.citation}</p>
+                  <p className="text-muted-foreground">{issue.problem}</p>
+                  {issue.correction && <p className="text-foreground mt-0.5">→ {issue.correction}</p>}
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p>{qa.summary}</p>
+          )}
+        </TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
+  );
+}
 
 const BIBLE_REF_PATTERN = /(\d\.\s?)?(?:Genesis|Exodus|Levitikus|Numeri|Deuteronomium|Josua|Richter|Rut|Samuel|Könige|Chronik|Esra|Nehemia|Ester|Hiob|Psalm|Psalmen|Sprüche|Prediger|Hoheslied|Jesaja|Jeremia|Klagelieder|Ezechiel|Daniel|Hosea|Joel|Amos|Obadja|Jona|Micha|Nahum|Habakuk|Zefanja|Haggai|Sacharja|Maleachi|Matthäus|Markus|Lukas|Johannes|Apostelgeschichte|Römer|Korinther|Galater|Epheser|Philipper|Kolosser|Thessalonicher|Timotheus|Titus|Philemon|Hebräer|Jakobus|Petrus|Judas|Offenbarung|Mose|Mt|Mk|Lk|Joh|Apg|Röm|Kor|Gal|Eph|Phil|Kol|Ps|Spr|Jes|Jer)\s+\d+(?:[,:]\d+(?:[\-–]\d+)?)?/g;
 
@@ -223,6 +283,27 @@ export function ChatHero() {
   const { branding } = useChurchBranding();
   const { isSenior, toggle: toggleSenior } = useSeniorMode();
   const tts = useTTS();
+  const [qaMap, setQaMap] = useState<Record<number, QAResult | "loading" | "skipped">>({});
+
+  const runQA = useCallback(async (text: string, msgIndex: number) => {
+    if (!likelyHasCitations(text)) {
+      setQaMap((prev) => ({ ...prev, [msgIndex]: "skipped" }));
+      return;
+    }
+    setQaMap((prev) => ({ ...prev, [msgIndex]: "loading" }));
+    try {
+      const resp = await fetch(QA_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}` },
+        body: JSON.stringify({ text }),
+      });
+      if (!resp.ok) { setQaMap((prev) => ({ ...prev, [msgIndex]: "skipped" })); return; }
+      const qaResult: QAResult = await resp.json();
+      setQaMap((prev) => ({ ...prev, [msgIndex]: qaResult }));
+    } catch {
+      setQaMap((prev) => ({ ...prev, [msgIndex]: "skipped" }));
+    }
+  }, []);
   const dailyVerseIdx = useMemo(() => getDailyVerseIndex(), []);
   const dailyVerse = useMemo(() => ({
     quote: t(`dailyVerses.v${dailyVerseIdx}`),
@@ -443,6 +524,9 @@ export function ChatHero() {
         // Update the DB with final assistant content
         if (assistantSoFar && convId) {
           await updateLastAssistantMessage(convId, assistantSoFar);
+          // Run QA check on the assistant response
+          const assistantMsgIndex = allMessages.length; // index of the assistant message in the messages array
+          runQA(assistantSoFar, assistantMsgIndex);
 
           // Generate AI title after the first exchange (only 1 user + 1 assistant message)
           if (allMessages.length === 1) {
@@ -475,7 +559,7 @@ export function ChatHero() {
         loadConversations();
       }
     },
-    [messages, isLoading, toast, t, i18n.language, chatMode, track, createConversation, addMessage, updateLastAssistantMessage, updateTitle, setMessages, loadConversations]
+    [messages, isLoading, toast, t, i18n.language, chatMode, track, createConversation, addMessage, updateLastAssistantMessage, updateTitle, setMessages, loadConversations, runQA]
   );
 
   // Listen for external chat open events
@@ -824,24 +908,27 @@ export function ChatHero() {
                             ) : msg.content}
                           </div>
                           {msg.role === "assistant" && (
-                            <div className="flex items-center gap-2 mt-1">
-                              <button
-                                onClick={() => tts.play(msg.content)}
-                                disabled={tts.isLoading}
-                                className="p-1 rounded-md text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
-                                aria-label={tts.isPlaying ? t("chat.stopAudio", "Stoppen") : t("chat.playAudio", "Vorlesen")}
-                                title={tts.isPlaying ? t("chat.stopAudio", "Stoppen") : t("chat.playAudio", "Vorlesen")}
-                              >
-                                {tts.isLoading ? (
-                                  <Loader2 className="h-3.5 w-3.5 animate-spin" />
-                                ) : tts.isPlaying ? (
-                                  <VolumeX className="h-3.5 w-3.5" />
-                                ) : (
-                                  <Volume2 className="h-3.5 w-3.5" />
-                                )}
-                              </button>
-                              <ShareButton title={t("share.chatTitle")} text={msg.content.length > 280 ? msg.content.slice(0, 277) + "…" : msg.content} variant="icon" className="ml-auto" />
-                            </div>
+                            <>
+                              <div className="flex items-center gap-2 mt-1">
+                                <button
+                                  onClick={() => tts.play(msg.content)}
+                                  disabled={tts.isLoading}
+                                  className="p-1 rounded-md text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
+                                  aria-label={tts.isPlaying ? t("chat.stopAudio", "Stoppen") : t("chat.playAudio", "Vorlesen")}
+                                  title={tts.isPlaying ? t("chat.stopAudio", "Stoppen") : t("chat.playAudio", "Vorlesen")}
+                                >
+                                  {tts.isLoading ? (
+                                    <Loader2 className="h-3.5 w-3.5 animate-spin" />
+                                  ) : tts.isPlaying ? (
+                                    <VolumeX className="h-3.5 w-3.5" />
+                                  ) : (
+                                    <Volume2 className="h-3.5 w-3.5" />
+                                  )}
+                                </button>
+                                <ShareButton title={t("share.chatTitle")} text={msg.content.length > 280 ? msg.content.slice(0, 277) + "…" : msg.content} variant="icon" className="ml-auto" />
+                              </div>
+                              {qaMap[i] && <QABadge qa={qaMap[i]} t={t} />}
+                            </>
                           )}
                         </div>
                       </div>
@@ -920,7 +1007,7 @@ export function ChatHero() {
                         <Accessibility className={isSenior ? "h-5 w-5" : "h-4 w-4"} />
                         {isSenior && <span>{t("chat.seniorMode", "Grosse Schrift")}</span>}
                       </button>
-                      <VoicePicker voice={tts.voice} onChange={tts.setVoice} />
+                      
                     </div>
                     <button
                       onClick={() => { startNewChat(); }}

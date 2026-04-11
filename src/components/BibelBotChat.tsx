@@ -2,7 +2,7 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { Send, X, MessageCircle, Loader2, Mic, MicOff, Pencil, Shield, Sparkles, CheckCircle2, AlertTriangle, Info, BookOpen, Volume2, VolumeX } from "lucide-react";
 import { useTTS } from "@/hooks/use-tts";
-import { VoicePicker } from "@/components/VoicePicker";
+
 import { ShareButton } from "@/components/ShareButton";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -623,7 +623,7 @@ export function BibleBotChat() {
             </select>
             <BookOpen className="absolute right-0 top-1/2 -translate-y-1/2 h-3 w-3 text-muted-foreground pointer-events-none" />
           </div>
-          <VoicePicker voice={tts.voice} onChange={tts.setVoice} />
+          
           <button onClick={() => setIsOpen(false)} className="text-muted-foreground hover:text-foreground transition-colors" aria-label={t("chat.closeChat")}>
             <X className="h-5 w-5" />
           </button>
