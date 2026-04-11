@@ -111,6 +111,37 @@ Deno.serve(async (req) => {
     const textColor = brandingRaw?.colors?.textPrimary || null;
     const logoUrl = brandingRaw?.images?.logo || brandingRaw?.logo || null;
 
+    // Step 1b: Extract social media links from markdown via regex
+    const socialLinks: Record<string, string | null> = {
+      instagram_handle: null,
+      facebook_url: null,
+      whatsapp_number: null,
+      telegram_username: null,
+      youtube_url: null,
+    };
+
+    // Instagram
+    const igMatch = markdown.match(/(?:instagram\.com|instagr\.am)\/([a-zA-Z0-9_.]+)/i);
+    if (igMatch) socialLinks.instagram_handle = igMatch[1];
+
+    // Facebook
+    const fbMatch = markdown.match(/(https?:\/\/(?:www\.)?facebook\.com\/[a-zA-Z0-9._\-/]+)/i);
+    if (fbMatch) socialLinks.facebook_url = fbMatch[1];
+
+    // WhatsApp
+    const waMatch = markdown.match(/(?:wa\.me|api\.whatsapp\.com\/send\?phone=)\/?\+?(\d{8,15})/i);
+    if (waMatch) socialLinks.whatsapp_number = `+${waMatch[1].replace(/^0+/, "")}`;
+
+    // Telegram
+    const tgMatch = markdown.match(/(?:t\.me|telegram\.me)\/([a-zA-Z0-9_]+)/i);
+    if (tgMatch) socialLinks.telegram_username = tgMatch[1];
+
+    // YouTube
+    const ytMatch = markdown.match(/(https?:\/\/(?:www\.)?youtube\.com\/(?:channel|c|@)[a-zA-Z0-9._\-/]+)/i);
+    if (ytMatch) socialLinks.youtube_url = ytMatch[1];
+
+    console.log("Social links extracted:", JSON.stringify(socialLinks));
+
     // Step 2: AI extraction of contact data + website score in one call
     const aiRes = await fetch("https://ai-gateway.lovable.dev/v1/chat/completions", {
       method: "POST",
@@ -133,7 +164,12 @@ Antworte NUR mit einem JSON-Objekt (kein Markdown, keine Erklärung):
   "size_estimate": "klein/mittel/gross oder null",
   "highlights": ["Besonderheit 1", "Besonderheit 2"],
   "personal_note": "Ein persönlicher Satz über die Gemeinde, max 2 Sätze.",
-  "website_score": 5
+  "website_score": 5,
+  "instagram_handle": "Instagram-Benutzername oder null",
+  "facebook_url": "Facebook-Seiten-URL oder null",
+  "whatsapp_number": "WhatsApp-Nummer mit Ländervorwahl oder null",
+  "telegram_username": "Telegram-Benutzername oder null",
+  "youtube_url": "YouTube-Kanal-URL oder null"
 }
 
 website_score: Bewerte das Website-Design auf einer Skala von 1-10 nach:
@@ -141,11 +177,13 @@ website_score: Bewerte das Website-Design auf einer Skala von 1-10 nach:
 - Mobile-Freundlichkeit (schätze anhand des HTML/CSS)
 - Benutzerfreundlichkeit
 - Professioneller Eindruck
-Gib NUR eine Zahl 1-10 als website_score.`,
+Gib NUR eine Zahl 1-10 als website_score.
+
+Extrahiere auch Social-Media-Links (Instagram, Facebook, WhatsApp, Telegram, YouTube) falls vorhanden.`,
           },
           {
             role: "user",
-            content: `Extrahiere Kontaktdaten und bewerte das Design dieser Gemeinde-Website:\n\nURL: ${formattedUrl}\n\nInhalt:\n${markdown.slice(0, 4000)}\n\nBranding-Daten: ${JSON.stringify(brandingRaw).slice(0, 1000)}`,
+            content: `Extrahiere Kontaktdaten, Social-Media-Links und bewerte das Design dieser Gemeinde-Website:\n\nURL: ${formattedUrl}\n\nInhalt:\n${markdown.slice(0, 4000)}\n\nBranding-Daten: ${JSON.stringify(brandingRaw).slice(0, 1000)}`,
           },
         ],
         temperature: 0.3,
@@ -169,6 +207,15 @@ Gib NUR eine Zahl 1-10 als website_score.`,
     // Step 3: Generate A/B variant color
     const abVariantColor = primaryColor ? generateAlternativeColor(primaryColor) : null;
 
+    // Merge social links: prefer regex-extracted, fall back to AI-extracted
+    const finalSocial = {
+      instagram_handle: socialLinks.instagram_handle || extracted.instagram_handle || null,
+      facebook_url: socialLinks.facebook_url || extracted.facebook_url || null,
+      whatsapp_number: socialLinks.whatsapp_number || extracted.whatsapp_number || null,
+      telegram_username: socialLinks.telegram_username || extracted.telegram_username || null,
+      youtube_url: socialLinks.youtube_url || extracted.youtube_url || null,
+    };
+
     // Step 4: Update lead with all data
     const updateData: any = {
       scraped_data: {
@@ -188,6 +235,7 @@ Gib NUR eine Zahl 1-10 als website_score.`,
       logo_url: logoUrl,
       screenshot_url: screenshotUrl,
       ab_variant_color: abVariantColor,
+      ...finalSocial,
     };
 
     if (extracted.contact_name) updateData.contact_name = extracted.contact_name;
@@ -205,6 +253,7 @@ Gib NUR eine Zahl 1-10 als website_score.`,
       websiteScore,
       screenshotUrl,
       abVariantColor,
+      socialLinks: finalSocial,
     }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });

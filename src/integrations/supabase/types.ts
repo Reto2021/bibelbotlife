@@ -864,7 +864,9 @@ export type Database = {
           current_step: number
           denomination: string | null
           email: string
+          facebook_url: string | null
           id: string
+          instagram_handle: string | null
           last_contacted_at: string | null
           logo_url: string | null
           personal_note: string | null
@@ -875,10 +877,13 @@ export type Database = {
           secondary_color: string | null
           source: string
           status: Database["public"]["Enums"]["outreach_lead_status"]
+          telegram_username: string | null
           text_color: string | null
           updated_at: string
           website: string | null
           website_score: number | null
+          whatsapp_number: string | null
+          youtube_url: string | null
         }
         Insert: {
           ab_variant_chosen?: string | null
@@ -891,7 +896,9 @@ export type Database = {
           current_step?: number
           denomination?: string | null
           email: string
+          facebook_url?: string | null
           id?: string
+          instagram_handle?: string | null
           last_contacted_at?: string | null
           logo_url?: string | null
           personal_note?: string | null
@@ -902,10 +909,13 @@ export type Database = {
           secondary_color?: string | null
           source?: string
           status?: Database["public"]["Enums"]["outreach_lead_status"]
+          telegram_username?: string | null
           text_color?: string | null
           updated_at?: string
           website?: string | null
           website_score?: number | null
+          whatsapp_number?: string | null
+          youtube_url?: string | null
         }
         Update: {
           ab_variant_chosen?: string | null
@@ -918,7 +928,9 @@ export type Database = {
           current_step?: number
           denomination?: string | null
           email?: string
+          facebook_url?: string | null
           id?: string
+          instagram_handle?: string | null
           last_contacted_at?: string | null
           logo_url?: string | null
           personal_note?: string | null
@@ -929,10 +941,13 @@ export type Database = {
           secondary_color?: string | null
           source?: string
           status?: Database["public"]["Enums"]["outreach_lead_status"]
+          telegram_username?: string | null
           text_color?: string | null
           updated_at?: string
           website?: string | null
           website_score?: number | null
+          whatsapp_number?: string | null
+          youtube_url?: string | null
         }
         Relationships: [
           {
