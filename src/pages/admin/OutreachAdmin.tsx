@@ -865,6 +865,7 @@ export default function OutreachAdmin() {
             </DialogContent>
           </Dialog>
 
+          <Button variant="outline" onClick={triggerSend} disabled={sending}>
             {sending ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : <Send className="h-4 w-4 mr-2" />}
             Jetzt senden
           </Button>
