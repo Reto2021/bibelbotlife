@@ -908,25 +908,27 @@ export function ChatHero() {
                             ) : msg.content}
                           </div>
                           {msg.role === "assistant" && (
-                            <div className="flex items-center gap-2 mt-1">
-                              <button
-                                onClick={() => tts.play(msg.content)}
-                                disabled={tts.isLoading}
-                                className="p-1 rounded-md text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
-                                aria-label={tts.isPlaying ? t("chat.stopAudio", "Stoppen") : t("chat.playAudio", "Vorlesen")}
-                                title={tts.isPlaying ? t("chat.stopAudio", "Stoppen") : t("chat.playAudio", "Vorlesen")}
-                              >
-                                {tts.isLoading ? (
-                                  <Loader2 className="h-3.5 w-3.5 animate-spin" />
-                                ) : tts.isPlaying ? (
-                                  <VolumeX className="h-3.5 w-3.5" />
-                                ) : (
-                                  <Volume2 className="h-3.5 w-3.5" />
-                                )}
-                              </button>
-                              <ShareButton title={t("share.chatTitle")} text={msg.content.length > 280 ? msg.content.slice(0, 277) + "…" : msg.content} variant="icon" className="ml-auto" />
-                            </div>
-                            {qaMap[i] && <QABadge qa={qaMap[i]} t={t} />}
+                            <>
+                              <div className="flex items-center gap-2 mt-1">
+                                <button
+                                  onClick={() => tts.play(msg.content)}
+                                  disabled={tts.isLoading}
+                                  className="p-1 rounded-md text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
+                                  aria-label={tts.isPlaying ? t("chat.stopAudio", "Stoppen") : t("chat.playAudio", "Vorlesen")}
+                                  title={tts.isPlaying ? t("chat.stopAudio", "Stoppen") : t("chat.playAudio", "Vorlesen")}
+                                >
+                                  {tts.isLoading ? (
+                                    <Loader2 className="h-3.5 w-3.5 animate-spin" />
+                                  ) : tts.isPlaying ? (
+                                    <VolumeX className="h-3.5 w-3.5" />
+                                  ) : (
+                                    <Volume2 className="h-3.5 w-3.5" />
+                                  )}
+                                </button>
+                                <ShareButton title={t("share.chatTitle")} text={msg.content.length > 280 ? msg.content.slice(0, 277) + "…" : msg.content} variant="icon" className="ml-auto" />
+                              </div>
+                              {qaMap[i] && <QABadge qa={qaMap[i]} t={t} />}
+                            </>
                           )}
                         </div>
                       </div>
