@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { BrandedQRCode } from "@/components/BrandedQRCode";
 import { QRStickerDownload } from "@/components/QRStickerDownload";
+import { QRFlyerDownload } from "@/components/QRFlyerDownload";
 import { useParams, Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
@@ -167,6 +168,11 @@ const ChurchIntegration = () => {
                       PNG herunterladen
                     </Button>
                     <QRStickerDownload
+                      churchName={church.name}
+                      qrUrl={brandedLink}
+                      slug={church.slug}
+                    />
+                    <QRFlyerDownload
                       churchName={church.name}
                       qrUrl={brandedLink}
                       slug={church.slug}
