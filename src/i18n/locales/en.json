@@ -284,6 +284,7 @@
     "qaOk": "{{count}} citation verified ✓",
     "qaOk_plural": "{{count}} citations verified ✓",
     "qaWarning": "⚠️ Accuracy notes:",
+    "suggestionsLoading": "Loading suggestions…",
     "errorTooMany": "Too many requests – please wait a moment.",
     "errorCredits": "AI quota exhausted.",
     "errorConnect": "Connection error.",
