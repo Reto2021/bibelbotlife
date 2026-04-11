@@ -44,7 +44,8 @@ export default function ForCelebrants() {
     },
     {
       name: t("celebrants.planPro"),
-      price: t("celebrants.planProPrice"),
+      price: formatPrice(29),
+      priceCHF: 29,
       period: t("celebrants.planProPeriod"),
       features: proFeatures,
       cta: t("celebrants.ctaTrial"),
