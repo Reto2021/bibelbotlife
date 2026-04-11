@@ -34,6 +34,7 @@ function CopyButton({ text, label }: { text: string; label?: string }) {
 const ChurchIntegration = () => {
   const { slug } = useParams<{ slug: string }>();
   const { toast } = useToast();
+  const [sendingEmail, setSendingEmail] = useState(false);
 
   const { data: church, isLoading } = useQuery({
     queryKey: ["church-integration", slug],
