@@ -202,8 +202,8 @@ function extractOptions(text: string): { cleanText: string; options: string[] } 
   const beforeOptions = text.slice(0, optionsStart).trim();
   const optionsText = text.slice(optionsStart);
   while ((match = inlineRegex.exec(optionsText)) !== null) {
-    const optText = match[2].trim().replace(/\?$/, "").trim();
-    if (optText.length > 5) inlineMatches.push(optText);
+    const optText = match[2].trim().replace(/\.?\s*$/, "").trim();
+    if (optText.length > 2) inlineMatches.push(optText);
   }
   if (inlineMatches.length < 2) return { cleanText: text, options: [] };
   return { cleanText: beforeOptions, options: inlineMatches };
@@ -676,7 +676,7 @@ export function BibleBotChat() {
                 ) : msg.content}
               </div>
               {/* Option buttons */}
-              {msg.role === "assistant" && options.length > 0 && isLast && !isLoading && (
+              {msg.role === "assistant" && options.length > 0 && (
                 <div className="flex flex-col gap-1.5 mt-2">
                   {options.map((opt, j) => (
                     <button
