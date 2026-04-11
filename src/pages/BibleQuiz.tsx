@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { SEOHead } from "@/components/SEOHead";
-import { ArrowLeft, Trophy, BookOpen, HelpCircle, Loader2, ChevronRight, Gauge, RotateCcw, Star } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Trophy, BookOpen, HelpCircle, Loader2, ChevronRight, Gauge, RotateCcw, Star, ArrowLeft } from "lucide-react";
+import { SiteHeader } from "@/components/SiteHeader";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 
@@ -146,13 +146,9 @@ export default function BibleQuiz() {
           description="Teste dein Bibelwissen mit Multiple-Choice-Fragen und Vers-Raten."
         />
         <div className="min-h-screen bg-background">
+          <SiteHeader />
           <div className="container mx-auto max-w-lg px-4 py-8">
-            <div className="flex items-center gap-3 mb-10">
-              <Link to="/" className="text-muted-foreground hover:text-foreground transition-colors">
-                <ArrowLeft className="h-5 w-5" />
-              </Link>
-              <h1 className="text-2xl md:text-3xl font-bold text-foreground">🧠 Bibelquiz</h1>
-            </div>
+            <h1 className="text-2xl md:text-3xl font-bold text-foreground mb-10">🧠 Bibelquiz</h1>
 
             {/* Difficulty selector */}
             <div className="mb-8">
@@ -341,6 +337,7 @@ export default function BibleQuiz() {
     <>
       <SEOHead title="Bibelquiz | BibleBot.Life" description="Teste dein Bibelwissen!" />
       <div className="min-h-screen bg-background">
+        <SiteHeader />
         <div className="container mx-auto max-w-lg px-4 py-8">
           {/* Header */}
           <div className="flex items-center justify-between mb-3">

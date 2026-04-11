@@ -1,10 +1,9 @@
 import { SEOHead } from "@/components/SEOHead";
 import { Link } from "react-router-dom";
-import { AppLogo } from "@/components/AppLogo";
+import { SiteHeader } from "@/components/SiteHeader";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { DarkModeToggle } from "@/components/DarkModeToggle";
-import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+
 import {
   ArrowLeft, Heart, Mic, FileText, Calendar, Users, Music,
   BookOpen, Sparkles, Monitor, Layout, ChevronDown, Check, ArrowRight
@@ -141,21 +140,7 @@ export default function ForCelebrants() {
       />
 
       {/* Nav */}
-      <header className="sticky top-0 z-50 bg-background/80 backdrop-blur border-b border-border">
-        <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
-          <Link to="/" className="flex items-center gap-2">
-            <AppLogo className="h-8 w-8" />
-            <span className="font-bold text-lg text-foreground hidden sm:inline">BibleBot.Life</span>
-          </Link>
-          <div className="flex items-center gap-2">
-            <LanguageSwitcher />
-            <DarkModeToggle />
-            <Button asChild variant="outline" size="sm">
-              <Link to="/"><ArrowLeft className="h-4 w-4 mr-1" /> Zurück</Link>
-            </Button>
-          </div>
-        </div>
-      </header>
+      <SiteHeader />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-primary/10 via-background to-secondary/10 py-20 md:py-32">

@@ -4,14 +4,12 @@ import { getStoredReferralCode } from "@/hooks/useAnalytics";
 import { SEOHead } from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 import { Church, ArrowLeft, Send, Handshake, Sprout, Heart, Building2, Hospital, ShieldCheck, Swords, Footprints, TowerControl, Cross, BookOpen, Flame, Users, Sparkles } from "lucide-react";
-import { AppLogo } from "@/components/AppLogo";
+import { SiteHeader } from "@/components/SiteHeader";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { DarkModeToggle } from "@/components/DarkModeToggle";
-import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 
@@ -80,18 +78,7 @@ const ForChurches = () => {
   return (
     <div className="min-h-screen" style={{ background: "var(--gradient-hero)" }}>
       <SEOHead titleKey="meta.forChurchesTitle" descKey="meta.forChurchesDesc" path="/for-churches" />
-      <nav className="bg-card/80 backdrop-blur-sm border-b border-border sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <Link to="/" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
-            <AppLogo className="h-8 w-8" />
-            {t("impressum.back")}
-          </Link>
-          <div className="flex items-center gap-2">
-            <LanguageSwitcher />
-            <DarkModeToggle />
-          </div>
-        </div>
-      </nav>
+      <SiteHeader />
 
       {/* Hero */}
       <section className="py-20 px-4">
