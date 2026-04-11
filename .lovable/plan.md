@@ -1,77 +1,39 @@
 
 
-# Hybrid Referral/Affiliate-System: BibleBot.Life + GHL Webhook
+## Plan: Preise verstecken & "Kontakt aufnehmen"-Button + Admin-Toggle
 
-## Übersicht
+### Übersicht
+Alle Preisangaben auf den Seiten "Für Gemeinden" und "Für Seelsorger" werden ausgeblendet und durch einen "Kontakt aufnehmen"-Button ersetzt. Ein Admin-Setting in der Datenbank steuert, ob Preise sichtbar sind oder nicht.
 
-Einfaches Referral-Tracking direkt in BibleBot.Life, kombiniert mit einem Webhook an GoHighLevel (GHL) bei Conversions (Patronats-Anfrage). Referrer erhalten einen persönlichen Code, Conversions werden getrackt und an GHL gemeldet.
+### 1. Datenbank: App-Settings-Tabelle
+- Neue Tabelle `app_settings` mit Spalten: `key TEXT PRIMARY KEY`, `value JSONB`, `updated_at TIMESTAMPTZ`
+- Eintrag: `key = 'show_pricing'`, `value = false`
+- RLS: SELECT für alle (anon + authenticated), UPDATE nur für Admins via `has_role()`
 
-## Schritt 1 — Datenbank: Referral-Tabellen
+### 2. Hook: `useAppSetting`
+- Neuer Hook `src/hooks/use-app-setting.ts`
+- Liest einen Setting-Key aus `app_settings` per Supabase query
+- Gibt `{ value, isLoading }` zurück
+- Admin-Variante mit Mutation zum Updaten
 
-Neue Tabellen via Migration:
+### 3. ForChurches.tsx anpassen
+- `useAppSetting('show_pricing')` abfragen
+- Wenn `false`: Preise (Setup, Jahresbeitrag, CHF-Referenz) in den Tier-Karten ausblenden
+- Stattdessen Text wie "Preise auf Anfrage" und der bestehende "Kontakt"-Button bleibt
 
-- **`referral_partners`** — Affiliate-Partner mit Code, Name, E-Mail, GHL-Contact-ID, Provisionsrate, Status
-- **`referral_clicks`** — Klick-Tracking (ref-Code, Landing-Page, IP-Hash, Timestamp)
-- **`referral_conversions`** — Conversions (Referral-Partner, Inquiry-ID, Deal-Wert, Provisions-Betrag, GHL-Webhook-Status)
+### 4. ForCelebrants.tsx anpassen
+- Gleiche Logik: Wenn `show_pricing === false`, den Preis (`plan.price`, `plan.period`, CHF-Referenz) ausblenden
+- Button-Text auf "Kontakt aufnehmen" ändern, Link zum Kontaktformular statt `/login`
 
-RLS: Nur Admins lesen/schreiben (via `has_role`). Klick-Insert offen für anonymous (mit Validierungstrigger).
+### 5. Admin-Dashboard: Toggle
+- Im AdminDashboard oder SettingsPage einen Switch "Preise anzeigen" hinzufügen
+- Toggelt `app_settings.show_pricing` zwischen `true`/`false`
 
-## Schritt 2 — Frontend: `?ref=CODE` Tracking
+### 6. i18n
+- Neue Keys: `pricing.onRequest` ("Preise auf Anfrage" / "Prices on request"), `pricing.contactUs` ("Kontakt aufnehmen" / "Contact us")
+- In DE und EN, restliche Sprachen als EN-Fallback
 
-- Im `useAnalytics` Hook: `?ref=CODE` aus URL lesen, in `localStorage` speichern (30 Tage Cookie-Window)
-- Klick in `referral_clicks` loggen (einmal pro Session)
-- Ref-Code automatisch an `church_partnership_inquiries`-Insert in `ForChurches.tsx` anhängen (neues Feld `referral_code`)
-
-## Schritt 3 — Edge Function: `referral-webhook`
-
-Neue Edge Function die bei einer Conversion:
-1. Referral-Partner anhand des Codes nachschlägt
-2. Provision berechnet (Default: 10% des Jahresbeitrags)
-3. `referral_conversions` Insert
-4. **Webhook POST an GHL** mit Payload: `{ contact_id, referral_code, church_name, deal_value, commission, event: "new_conversion" }`
-5. GHL-Webhook-URL aus Secrets (`GHL_WEBHOOK_URL`)
-
-## Schritt 4 — Admin UI: Referral-Dashboard
-
-Neuer Tab im Admin-Dashboard (`/admin`) oder eigene Seite:
-- Partner-Liste (Code, Klicks, Conversions, Provision)
-- Partner erstellen/bearbeiten (Name, E-Mail, Code, Provisionsrate)
-- Conversion-Log mit GHL-Sync-Status
-- Einfache Statistiken (Klicks → Conversions → Conversion-Rate)
-
-## Schritt 5 — ForChurches.tsx: Referral-Code mitsenden
-
-- Beim Submit der Partnership-Inquiry den gespeicherten Ref-Code aus localStorage mitsenden
-- Nach erfolgreichem Insert: Edge Function `referral-webhook` aufrufen
-
-## Schritt 6 — GHL Secret einrichten
-
-- `GHL_WEBHOOK_URL` als Secret hinzufügen (via `add_secret` Tool)
-- User muss die Webhook-URL aus GHL bereitstellen
-
-## Technische Details
-
-```text
-User klickt Link (?ref=PARTNER123)
-    ↓
-localStorage speichert ref=PARTNER123 (30 Tage)
-referral_clicks INSERT
-    ↓
-User füllt Patronats-Formular aus
-    ↓
-church_partnership_inquiries INSERT (+ referral_code)
-    ↓
-referral-webhook Edge Function
-    ├─ referral_conversions INSERT
-    └─ POST → GHL Webhook (Affiliate-Verwaltung + Auszahlung)
-```
-
-**Migration**: `referral_partners`, `referral_clicks`, `referral_conversions` + Feld `referral_code` auf `church_partnership_inquiries`
-
-**Dateien**:
-- `supabase/functions/referral-webhook/index.ts` (neu)
-- `src/hooks/useAnalytics.ts` (ref-Code Tracking)
-- `src/pages/ForChurches.tsx` (ref-Code mitsenden)
-- `src/pages/admin/AdminDashboard.tsx` (Referral-Tab)
-- DB Migration (3 Tabellen + 1 Spalte)
+### Betroffene Dateien
+- **Neu**: Migration für `app_settings`, `src/hooks/use-app-setting.ts`
+- **Geändert**: `ForChurches.tsx`, `ForCelebrants.tsx`, `AdminDashboard.tsx`, `de.json`, `en.json`
 
