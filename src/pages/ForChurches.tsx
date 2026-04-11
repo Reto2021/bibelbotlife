@@ -23,6 +23,7 @@ const tiers = [
 
 const ForChurches = () => {
   const { t } = useTranslation();
+  const { formatPrice, currency } = useCurrency();
   const [formData, setFormData] = useState({ name: "", email: "", church_name: "", organization_type: "", preferred_tier: "", message: "" });
   const [sending, setSending] = useState(false);
 
