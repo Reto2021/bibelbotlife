@@ -288,7 +288,7 @@
     "qaWarning": "⚠️ Accuracy notes:",
     "suggestionsLoading": "Loading suggestions…",
     "errorTooMany": "Too many requests – please wait a moment.",
-    "errorCredits": "AI quota exhausted.",
+    "errorCredits": "Quota exhausted.",
     "errorConnect": "Connection error.",
     "errorTitle": "Error",
     "errorConnection": "could not be reached.",
