@@ -319,6 +319,13 @@ const Analytics = () => {
             sub={`∅ ${data?.chat?.avgMessagesPerUser || 0} Nachr./Person`}
             tooltip="Eindeutige Telegram-Nutzer, die dem Bot geschrieben haben. 'Nachr./Person' = durchschnittliche Anzahl gesendeter Nachrichten pro Nutzer."
           />
+          <StatCard
+            icon={Globe}
+            label="Chat-Nutzer (Web)"
+            value={data?.webChat?.uniqueUsers || 0}
+            sub={`∅ ${data?.webChat?.avgMessagesPerUser || 0} Nachr./Person`}
+            tooltip="Eindeutige Web-Besucher, die den Chat auf der Webseite genutzt haben (pro Browser-Session gezählt)."
+          />
         </div>
 
         {/* Daily pageviews chart */}
