@@ -299,7 +299,7 @@
     "previousChats": "{{count}} previous conversations"
   },
   "install": {
-    "title": "Install companion",
+    "title": "Install BibleBot.Life",
     "androidDesc": "Quick access from your home screen",
     "iosDesc": "Tap \"Share\" → \"Add to Home Screen\"",
     "button": "Install",
