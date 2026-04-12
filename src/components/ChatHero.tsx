@@ -9,7 +9,7 @@ import { useSeniorMode } from "@/hooks/use-senior-mode";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTrack } from "@/components/AnalyticsProvider";
 import { openLifeWheel } from "@/components/LifeWheel";
-import { CHAT_OPEN_EVENT, type ChatMode } from "@/lib/chat-events";
+import { CHAT_OPEN_EVENT, CHAT_RESET_EVENT, type ChatMode } from "@/lib/chat-events";
 import ReactMarkdown from "react-markdown";
 import { ShareButton } from "@/components/ShareButton";
 import { useToast } from "@/hooks/use-toast";
