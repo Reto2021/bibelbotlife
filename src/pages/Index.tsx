@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react";
 import { SEOHead } from "@/components/SEOHead";
 import { useTranslation } from "react-i18next";
-import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, GraduationCap, Church, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass, Send, Building2 } from "lucide-react";
+import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, GraduationCap, Church, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass, Send, Building2, Shield, EyeOff } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { ChurchBanner } from "@/components/ChurchBanner";
 import { ReferralSection } from "@/components/ReferralSection";
@@ -165,105 +165,35 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Coaching-Methodik Section */}
-      <section className="py-20 px-4 bg-card/40">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 text-sm font-medium text-primary bg-primary/10 px-4 py-1.5 rounded-full mb-4">
-              <Brain className="h-4 w-4" />
-              {t("coaching.badge")}
-            </div>
-            <h2 className="text-4xl font-bold text-foreground mb-4">{t("coaching.title")}</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{t("coaching.subtitle")}</p>
-          </div>
-
-          {/* 21-Tage Journey */}
-          <div className="bg-card/80 backdrop-blur-sm rounded-2xl border border-border p-8 mb-10">
-            <div className="flex items-start gap-4 mb-6">
-              <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-                <Calendar className="h-6 w-6 text-primary" />
+      {/* Trust Signals */}
+      <section className="py-14 px-4">
+        <div className="container mx-auto max-w-3xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            {[
+              {
+                icon: Shield,
+                title: "QA-geprüft",
+                text: "Jede Bibelstelle wird automatisch auf Korrektheit geprüft — bei jedem Gespräch.",
+              },
+              {
+                icon: EyeOff,
+                title: "Keine Werbung",
+                text: "Kein Tracking, keine Datenweitergabe, keine Monetarisierung deiner Fragen.",
+              },
+              {
+                icon: Heart,
+                title: "Kein Vorwissen nötig",
+                text: "Du brauchst keine Kirchenmitgliedschaft und kein theologisches Vorwissen.",
+              },
+            ].map((item) => (
+              <div key={item.title} className="flex flex-col items-center gap-3 p-6 rounded-2xl bg-card/60 border border-border">
+                <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                  <item.icon className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="font-semibold text-foreground">{item.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{item.text}</p>
               </div>
-              <div>
-                <h3 className="text-2xl font-bold text-foreground mb-2">{t("coaching.journeyTitle")}</h3>
-                <p className="text-muted-foreground">{t("coaching.journeyDesc")}</p>
-              </div>
-            </div>
-            <div className="grid md:grid-cols-3 gap-6">
-              {[
-                { num: 1, title: t("coaching.week1"), desc: t("coaching.week1Desc") },
-                { num: 2, title: t("coaching.week2"), desc: t("coaching.week2Desc") },
-                { num: 3, title: t("coaching.week3"), desc: t("coaching.week3Desc") },
-              ].map((w) => (
-                <div key={w.num}>
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="h-8 w-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">{w.num}</span>
-                    <span className="font-semibold text-foreground">{w.title}</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{w.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Fragetechniken */}
-          <div className="grid md:grid-cols-2 gap-6 mb-10">
-            <Card className="bg-card/80 border-border">
-              <CardHeader>
-                <div className="h-10 w-10 rounded-lg bg-secondary/10 flex items-center justify-center mb-2">
-                  <MessageCircle className="h-5 w-5 text-secondary" />
-                </div>
-                <CardTitle className="text-lg">{t("coaching.openQuestionsTitle")}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-3">{t("coaching.openQuestionsDesc")}</p>
-                <div className="space-y-2">
-                  {[t("coaching.openQ1"), t("coaching.openQ2"), t("coaching.openQ3")].map((q, i) => (
-                    <p key={i} className="text-sm text-foreground/80 italic pl-3 border-l-2 border-primary/20">{q}</p>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-card/80 border-border">
-              <CardHeader>
-                <div className="h-10 w-10 rounded-lg bg-secondary/10 flex items-center justify-center mb-2">
-                  <Heart className="h-5 w-5 text-secondary" />
-                </div>
-                <CardTitle className="text-lg">{t("coaching.honestTitle")}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-3">{t("coaching.honestDesc")}</p>
-                <div className="space-y-2">
-                  {[t("coaching.honest1"), t("coaching.honest2"), t("coaching.honest3")].map((item, i) => (
-                    <div key={i} className="flex items-start gap-2">
-                      <CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" />
-                      <span className="text-sm text-foreground/80">{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Wissenschaftliche Basis */}
-          <div className="bg-card/80 backdrop-blur-sm rounded-2xl border border-border p-8">
-            <h3 className="text-xl font-bold text-foreground mb-6 text-center">{t("coaching.scienceTitle")}</h3>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {scienceMethods.map((method) => (
-                <div key={method.name} className="text-center">
-                  <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-3">
-                    <method.icon className="h-5 w-5 text-primary" />
-                  </div>
-                  <p className="font-semibold text-foreground text-sm">{method.name}</p>
-                  <p className="text-xs text-muted-foreground">{method.author}</p>
-                  <p className="text-xs text-muted-foreground mt-1">{method.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="mt-8 text-center">
-            <p className="text-sm text-muted-foreground" dangerouslySetInnerHTML={{ __html: t("coaching.renameTip") }} />
+            ))}
           </div>
         </div>
       </section>
@@ -408,6 +338,63 @@ const Index = () => {
                 <AccordionContent className="text-muted-foreground leading-relaxed pb-6">{t(`faq.${key}Answer`)}</AccordionContent>
               </AccordionItem>
             ))}
+
+            <AccordionItem value="methodik" className="bg-card/80 border border-border rounded-xl px-6 data-[state=open]:shadow-md">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
+                Was steckt hinter der Methodik von BibleBot?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+                <p className="mb-4">{t("coaching.subtitle")}</p>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                  {scienceMethods.map((method) => (
+                    <div key={method.name} className="text-center">
+                      <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-2">
+                        <method.icon className="h-5 w-5 text-primary" />
+                      </div>
+                      <p className="font-semibold text-foreground text-sm">{method.name}</p>
+                      <p className="text-xs text-muted-foreground">{method.author}</p>
+                      <p className="text-xs text-muted-foreground mt-1">{method.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="journey" className="bg-card/80 border border-border rounded-xl px-6 data-[state=open]:shadow-md">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
+                Was ist die 21-Tage-Journey?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+                <p className="mb-4">{t("coaching.journeyDesc")}</p>
+                <div className="grid md:grid-cols-3 gap-4">
+                  {[
+                    { num: 1, title: t("coaching.week1"), desc: t("coaching.week1Desc") },
+                    { num: 2, title: t("coaching.week2"), desc: t("coaching.week2Desc") },
+                    { num: 3, title: t("coaching.week3"), desc: t("coaching.week3Desc") },
+                  ].map((w) => (
+                    <div key={w.num}>
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="h-7 w-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold">{w.num}</span>
+                        <span className="font-semibold text-foreground text-sm">{w.title}</span>
+                      </div>
+                      <p className="text-xs text-muted-foreground leading-relaxed">{w.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="glaube-psychologie" className="bg-card/80 border border-border rounded-xl px-6 data-[state=open]:shadow-md">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
+                Verbindet BibleBot Glaube und Psychologie?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+                BibleBot kombiniert biblische Weisheit mit Erkenntnissen aus der evidenzbasierten
+                Psychologie — nicht um den Glauben zu psychologisieren, sondern um ihn alltagsnah
+                zu machen. Die Methoden (PERMA, Logotherapie, Dankbarkeits- und Vergebungsforschung)
+                ergänzen die Bibel, ersetzen sie aber nicht.
+              </AccordionContent>
+            </AccordionItem>
           </Accordion>
         </div>
       </section>
