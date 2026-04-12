@@ -2,10 +2,11 @@ import { useState, useRef, useCallback, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, ChevronDown, ChevronUp } from "lucide-react";
 import { openBibleBotChat } from "@/lib/chat-events";
 import { openLifeWheel } from "@/components/LifeWheel";
 import { useTrack } from "@/components/AnalyticsProvider";
+import { useIsMobile } from "@/hooks/use-mobile";
 import { cn } from "@/lib/utils";
 
 type TileConfig = {
@@ -66,14 +67,18 @@ const allTiles: TileConfig[] = [
   { emoji: "🧠", key: "biblequiz", accentClass: "bg-gradient-to-r from-secondary to-primary", bgClass: "bg-card", href: "/bibelquiz" },
 ];
 
+const MOBILE_INITIAL_COUNT = 9;
+
 export function EntryTiles() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
+  const [showAll, setShowAll] = useState(false);
 
   const { t } = useTranslation();
   const { track } = useTrack();
   const navigate = useNavigate();
+  const isMobile = useIsMobile();
 
   const checkScroll = useCallback(() => {
     const el = scrollRef.current;
@@ -83,6 +88,7 @@ export function EntryTiles() {
   }, []);
 
   useEffect(() => {
+    if (isMobile) return;
     const el = scrollRef.current;
     if (!el) return;
     checkScroll();
@@ -92,7 +98,7 @@ export function EntryTiles() {
       el.removeEventListener("scroll", checkScroll);
       window.removeEventListener("resize", checkScroll);
     };
-  }, [checkScroll]);
+  }, [checkScroll, isMobile]);
 
   const scroll = (direction: "left" | "right") => {
     const el = scrollRef.current;
@@ -102,12 +108,11 @@ export function EntryTiles() {
   };
 
   const getRandomPrompt = (tileKey: string): string => {
-    // Try prompt variants (prompt_v1, prompt_v2, prompt_v3), fall back to single prompt
     const variants: string[] = [];
     for (let i = 1; i <= 3; i++) {
       const key = `tiles.${tileKey}.prompt_v${i}`;
       const val = t(key);
-      if (val !== key) variants.push(val); // i18next returns the key if missing
+      if (val !== key) variants.push(val);
     }
     if (variants.length > 0) {
       return variants[Math.floor(Math.random() * variants.length)];
@@ -128,7 +133,70 @@ export function EntryTiles() {
     }
   };
 
-  // Split tiles into 2 rows
+  // Mobile: wrapping chips layout
+  if (isMobile) {
+    const visibleTiles = showAll ? allTiles : allTiles.slice(0, MOBILE_INITIAL_COUNT);
+    return (
+      <section className="py-8 px-4">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-5">
+            <h2 className="text-2xl font-bold text-foreground mb-2">
+              {t("tiles.sectionTitle")}
+            </h2>
+            <p className="text-muted-foreground text-sm">
+              {t("tiles.sectionSubtitle")}
+            </p>
+          </div>
+
+          <div className="flex flex-wrap gap-2 justify-center">
+            {visibleTiles.map((tile, i) => (
+              <motion.button
+                key={tile.key}
+                onClick={() => handleClick(tile)}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.2, delay: Math.min(i * 0.03, 0.3) }}
+                whileTap={{ scale: 0.95 }}
+                className={cn(
+                  "inline-flex items-center gap-1.5 px-3 py-2 rounded-full border border-border",
+                  "text-sm font-medium text-foreground",
+                  "hover:border-primary/40 hover:bg-primary/5 active:bg-primary/10",
+                  "transition-colors duration-200",
+                  tile.bgClass
+                )}
+              >
+                <span className="text-base" role="img">{tile.emoji}</span>
+                <span className="whitespace-nowrap">{t(`tiles.${tile.key}.title`)}</span>
+              </motion.button>
+            ))}
+          </div>
+
+          {allTiles.length > MOBILE_INITIAL_COUNT && (
+            <div className="flex justify-center mt-4">
+              <button
+                onClick={() => setShowAll(!showAll)}
+                className="flex items-center gap-1.5 text-sm text-primary hover:text-primary/80 font-medium transition-colors"
+              >
+                {showAll ? (
+                  <>
+                    <ChevronUp className="h-4 w-4" />
+                    {t("tiles.showLess", "Weniger anzeigen")}
+                  </>
+                ) : (
+                  <>
+                    <ChevronDown className="h-4 w-4" />
+                    {t("tiles.showMore", "Mehr Themen entdecken")}
+                  </>
+                )}
+              </button>
+            </div>
+          )}
+        </div>
+      </section>
+    );
+  }
+
+  // Desktop: 2-row horizontal carousel
   const half = Math.ceil(allTiles.length / 2);
   const row1 = allTiles.slice(0, half);
   const row2 = allTiles.slice(half);
@@ -145,9 +213,7 @@ export function EntryTiles() {
           </p>
         </div>
 
-        {/* 2-row horizontal carousel */}
         <div className="relative group/carousel">
-          {/* Left arrow */}
           {canScrollLeft && (
             <button
               onClick={() => scroll("left")}
@@ -158,7 +224,6 @@ export function EntryTiles() {
             </button>
           )}
 
-          {/* Right arrow */}
           {canScrollRight && (
             <button
               onClick={() => scroll("right")}
@@ -169,7 +234,6 @@ export function EntryTiles() {
             </button>
           )}
 
-          {/* Fade edges */}
           {canScrollLeft && (
             <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-background to-transparent z-[5] pointer-events-none" />
           )}
@@ -183,7 +247,6 @@ export function EntryTiles() {
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             <div className="flex flex-col gap-3 w-max">
-              {/* Row 1 */}
               <div className="flex gap-3">
                 {row1.map((tile, i) => (
                   <TileCard
@@ -196,7 +259,6 @@ export function EntryTiles() {
                   />
                 ))}
               </div>
-              {/* Row 2 */}
               <div className="flex gap-3">
                 {row2.map((tile, i) => (
                   <TileCard
