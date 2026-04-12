@@ -335,18 +335,18 @@ const zurichParts = (iso: string) => {
   // ═══════════════════════════════════════
   const hourly = new Array(24).fill(0);
   nonHeartbeatEvents.forEach((e: any) => {
-    const h = new Date(e.created_at).getHours();
+    const h = zurichParts(e.created_at).hour;
     hourly[h]++;
   });
   const hourlyDistribution = hourly.map((count, hour) => ({ hour, count }));
 
   // ═══════════════════════════════════════
-  // ── Weekday distribution ──
+  // ── Weekday distribution (Europe/Zurich) ──
   // ═══════════════════════════════════════
   const weekdayNames = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
   const weekdays = new Array(7).fill(0);
   nonHeartbeatEvents.forEach((e: any) => {
-    const d = new Date(e.created_at).getDay();
+    const d = zurichParts(e.created_at).weekday;
     weekdays[d]++;
   });
   const weekdayDistribution = weekdays.map((count, i) => ({ day: weekdayNames[i], count }));
