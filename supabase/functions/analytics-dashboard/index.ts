@@ -130,7 +130,7 @@ const zurichParts = (iso: string) => {
   // Daily pageviews
   const dailyCounts: Record<string, number> = {};
   pageviews.forEach((e: any) => {
-    const day = e.created_at.split("T")[0];
+    const day = zurichParts(e.created_at).date;
     dailyCounts[day] = (dailyCounts[day] || 0) + 1;
   });
 
