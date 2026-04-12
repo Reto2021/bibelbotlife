@@ -739,7 +739,28 @@ const CRISIS_KEYWORDS = [
   // Englisch
   "want to die", "kill myself", "suicide", "end my life", "no reason to live",
   // Französisch
-  "je veux mourir", "me suicider", "plus envie de vivre", "mettre fin"
+  "je veux mourir", "me suicider", "plus envie de vivre", "mettre fin",
+  // Italienisch
+  "voglio morire", "suicidio", "togliermi la vita", "non ce la faccio più",
+  "farla finita", "non voglio più vivere",
+  // Portugiesisch
+  "quero morrer", "suicídio", "tirar minha vida", "não aguento mais",
+  "acabar com tudo", "não quero mais viver",
+  // Spanisch
+  "quiero morir", "suicidio", "quitarme la vida", "no puedo más",
+  "acabar con todo", "no quiero vivir",
+  // Niederländisch
+  "wil dood", "zelfmoord", "niet meer leven", "ik hou het niet meer vol",
+  // Polnisch
+  "chcę umrzeć", "samobójstwo", "nie chcę żyć",
+  // Rumänisch
+  "vreau să mor", "sinucidere", "nu mai vreau să trăiesc",
+  // Kroatisch / Serbisch
+  "želim umrijeti", "samoubojstvo", "ne želim više živjeti",
+  // Ukrainisch
+  "хочу померти", "суїцид", "не хочу жити",
+  // Russisch
+  "хочу умереть", "суицид", "не хочу жить"
 ];
 
 function detectCrisis(text: string): boolean {
@@ -747,10 +768,21 @@ function detectCrisis(text: string): boolean {
   return CRISIS_KEYWORDS.some(kw => lower.includes(kw));
 }
 
-const CRISIS_PREFIX = `🆘 **Wenn du gerade in einer Notlage bist:**
+const CRISIS_PREFIX = `🆘 **Wenn du gerade in einer Notlage bist / If you are in crisis:**
 - 🇨🇭 Die Dargebotene Hand: **143** (24h, kostenlos, anonym)
 - 🇩🇪 Telefonseelsorge: **0800 111 0 111** (kostenlos, 24h)
 - 🇦🇹 Telefonseelsorge: **142** (kostenlos, 24h)
+- 🇮🇹 Telefono Amico: **02 2327 2327** · Telefono Azzurro: **19696**
+- 🇧🇷 CVV — Centro de Valorização da Vida: **188** (24h)
+- 🇵🇹 SOS Voz Amiga: **213 544 545**
+- 🇪🇸 Teléfono de la Esperanza: **717 003 717**
+- 🇳🇱 113 Zelfmoordpreventie: **0800 0113** (24h)
+- 🇵🇱 Telefon Zaufania: **116 123**
+- 🇷🇴 Telefonul Sufletului: **0800 801 200**
+- 🇭🇷 Plavi Telefon: **0800 0551**
+- 🇺🇦 Лайфлайн Україна: **7333** (24h)
+- 🇷🇺 Телефон доверия: **8-800-2000-122**
+- 🌍 International: [findahelpline.com](https://findahelpline.com)
 
 ---
 
