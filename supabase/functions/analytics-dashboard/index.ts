@@ -184,7 +184,7 @@ const zurichParts = (iso: string) => {
 
   const dailyChats: Record<string, number> = {};
   telegramMsgs.forEach((m: any) => {
-    const day = m.created_at.split("T")[0];
+    const day = zurichParts(m.created_at).date;
     dailyChats[day] = (dailyChats[day] || 0) + 1;
   });
 
@@ -198,7 +198,7 @@ const zurichParts = (iso: string) => {
       try { ref = new URL(ref).hostname.replace(/^www\./, ""); } catch { /* keep raw */ }
     }
     referrerCounts[ref] = (referrerCounts[ref] || 0) + 1;
-    const day = e.created_at.split("T")[0];
+    const day = zurichParts(e.created_at).date;
     if (!referrerDaily[day]) referrerDaily[day] = {};
     referrerDaily[day][ref] = (referrerDaily[day][ref] || 0) + 1;
   });
@@ -222,7 +222,7 @@ const zurichParts = (iso: string) => {
   tileClicks.forEach((e: any) => {
     const tile = e.event_data?.tile || "unknown";
     tileClickCounts[tile] = (tileClickCounts[tile] || 0) + 1;
-    const day = e.created_at.split("T")[0];
+    const day = zurichParts(e.created_at).date;
     dailyTileClicks[day] = (dailyTileClicks[day] || 0) + 1;
   });
   const topTiles = Object.entries(tileClickCounts)
@@ -265,7 +265,7 @@ const zurichParts = (iso: string) => {
     // Daily pageviews for this church
     const cDaily: Record<string, number> = {};
     cpv.forEach((e: any) => {
-      const day = e.created_at.split("T")[0];
+      const day = zurichParts(e.created_at).date;
       cDaily[day] = (cDaily[day] || 0) + 1;
     });
 
