@@ -5,7 +5,7 @@ import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, GraduationCap, C
 import { SiteHeader } from "@/components/SiteHeader";
 import { ChurchBanner } from "@/components/ChurchBanner";
 import { ReferralSection } from "@/components/ReferralSection";
-// EntryTiles removed - chips are now in ChatHero
+import { EntryTiles } from "@/components/EntryTiles";
 import { ChatHero } from "@/components/ChatHero";
 import { LifeWheelProvider } from "@/components/LifeWheel";
 import { Button } from "@/components/ui/button";
@@ -70,7 +70,8 @@ const Index = () => {
       {/* Chat-First Hero – above the fold */}
       <ChatHero />
 
-      {/* Entry Tiles removed - integrated as chips in ChatHero */}
+      {/* Entry Tiles — 9 curated topic chips in 3 groups */}
+      <EntryTiles />
 
       {/* Features Section */}
       <section id="features" className="py-20 px-4 bg-card/40">
