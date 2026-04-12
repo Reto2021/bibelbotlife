@@ -111,7 +111,7 @@ const Login = () => {
         <div className="text-center mb-6">
           <Link to="/" className="inline-flex items-center gap-2 text-foreground hover:text-primary transition-colors">
             <AppLogo className="h-10 w-10" />
-            <span className="text-2xl font-bold">{i18n.language.startsWith("de") ? "BibleBot" : "BibleBot"}</span>
+            <span className="text-2xl font-bold">BibleBot<span className="text-base font-normal text-muted-foreground">.Life</span></span>
           </Link>
         </div>
 
