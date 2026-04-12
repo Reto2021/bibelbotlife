@@ -8,6 +8,7 @@ import { openBibleBotChat } from "@/lib/chat-events";
 import { ShareButton } from "@/components/ShareButton";
 import { useToast } from "@/hooks/use-toast";
 import { generateShareImage, fetchAIBackgroundUrl } from "@/lib/share-image-canvas";
+import { useChurchBranding } from "@/hooks/use-church-branding";
 
 const IMPULSE_CACHE_KEY = "bibelbot-daily-impulse";
 const IMPULSE_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/daily-impulse`;
@@ -87,6 +88,7 @@ export function DailyImpulse() {
   const { t, i18n } = useTranslation();
   const { toast } = useToast();
   const isMobile = useIsMobile();
+  const { branding: churchBranding } = useChurchBranding();
   const [collapsed, setCollapsed] = useState(true); // will sync with isMobile on first render
   const [collapsedInitialized, setCollapsedInitialized] = useState(false);
   const [impulse, setImpulse] = useState<Impulse | null>(getCachedImpulse);
@@ -174,6 +176,11 @@ export function DailyImpulse() {
         reference: impulse.reference,
         topic: impulse.topic,
         backgroundUrl: bgUrl || undefined,
+        churchBranding: churchBranding ? {
+          name: churchBranding.churchName,
+          logoUrl: churchBranding.logoUrl,
+          slug: churchBranding.churchSlug,
+        } : undefined,
       });
       const url = URL.createObjectURL(blob);
       setShareBlob(blob);
@@ -192,10 +199,27 @@ export function DailyImpulse() {
     }
   }, [impulse, isGeneratingImage, shareImageUrl, toast, t]);
 
+  const buildShareText = useCallback(() => {
+    if (!impulse) return "";
+    const hashtagBible = t("share.hashtagBible", "#Bible");
+    const topicTag = impulse.topic ? `#${impulse.topic.replace(/\s+/g, "")}` : "";
+    const baseUrl = churchBranding
+      ? `biblebot.life/?church=${churchBranding.churchSlug}`
+      : "biblebot.life";
+    const recommendedBy = churchBranding
+      ? `\n\n📍 ${t("share.recommendedBy", { church: churchBranding.churchName })}`
+      : "";
+    const churchTag = churchBranding
+      ? ` #${churchBranding.churchName.replace(/\s+/g, "")}`
+      : "";
+
+    return `✨ ${impulse.teaser}\n\n«${impulse.verse}»\n— ${impulse.reference}${recommendedBy}\n\n#BibleBotLife #Tagesimpuls ${topicTag} ${hashtagBible}${churchTag}\n${baseUrl}`;
+  }, [impulse, churchBranding, t]);
+
   const shareAsImage = useCallback(async () => {
     if (!shareBlob || !impulse) return;
 
-    const shareText = `${impulse.verse}\n\n– ${impulse.reference}\n\n${impulse.teaser}\n\nbiblebot.life`;
+    const shareText = buildShareText();
 
     try {
       const file = new File([shareBlob], `bibelbot-impuls-${impulse.date}.png`, { type: "image/png" });
@@ -212,14 +236,15 @@ export function DailyImpulse() {
       if ((e as Error).name === "AbortError") return;
     }
 
+    // Clipboard fallback
     try {
       await navigator.clipboard.writeText(shareText);
       toast({
         title: t("share.imageSaved"),
-        description: t("share.imageSavedDesc"),
+        description: t("share.clipboardFallback"),
       });
     } catch {}
-  }, [shareBlob, impulse, toast, t]);
+  }, [shareBlob, impulse, buildShareText, toast, t]);
 
   const downloadImage = useCallback(() => {
     if (!shareImageUrl || !impulse) return;
