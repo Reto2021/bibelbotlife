@@ -265,11 +265,6 @@ export function generateShareImage(options: ShareTileOptions): Promise<Blob> {
       }
     }
 
-    // Small decorative dot
-    ctx.beginPath();
-    ctx.arc(SIZE - PAD, brandY + 20, 6, 0, Math.PI * 2);
-    ctx.fillStyle = GOLD_LIGHT;
-    ctx.fill();
 
     // --- Export ---
     canvas.toBlob(
