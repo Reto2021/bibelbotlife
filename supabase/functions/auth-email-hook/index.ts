@@ -16,13 +16,18 @@ const corsHeaders = {
     'authorization, x-client-info, apikey, content-type, x-lovable-signature, x-lovable-timestamp, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version',
 }
 
-const EMAIL_SUBJECTS: Record<string, string> = {
-  signup: 'Confirm your email',
-  invite: "You've been invited",
-  magiclink: 'Your login link',
-  recovery: 'Reset your password',
-  email_change: 'Confirm your new email',
-  reauthentication: 'Your verification code',
+const EMAIL_SUBJECTS_I18N: Record<string, Record<string, string>> = {
+  de: { signup: 'E-Mail bestätigen – BibleBot.Life', invite: 'Einladung zu BibleBot.Life', magiclink: 'Dein Login-Link – BibleBot.Life', recovery: 'Passwort zurücksetzen – BibleBot.Life', email_change: 'E-Mail-Änderung bestätigen – BibleBot.Life', reauthentication: 'Dein Bestätigungscode – BibleBot.Life' },
+  en: { signup: 'Confirm your email – BibleBot.Life', invite: "You've been invited – BibleBot.Life", magiclink: 'Your login link – BibleBot.Life', recovery: 'Reset your password – BibleBot.Life', email_change: 'Confirm email change – BibleBot.Life', reauthentication: 'Your verification code – BibleBot.Life' },
+  fr: { signup: 'Confirmez votre e-mail – BibleBot.Life', invite: 'Invitation – BibleBot.Life', magiclink: 'Votre lien de connexion – BibleBot.Life', recovery: 'Réinitialiser le mot de passe – BibleBot.Life', email_change: "Changement d'e-mail – BibleBot.Life", reauthentication: 'Code de vérification – BibleBot.Life' },
+  es: { signup: 'Confirma tu correo – BibleBot.Life', invite: 'Invitación – BibleBot.Life', magiclink: 'Tu enlace de acceso – BibleBot.Life', recovery: 'Restablecer contraseña – BibleBot.Life', email_change: 'Cambio de correo – BibleBot.Life', reauthentication: 'Código de verificación – BibleBot.Life' },
+  it: { signup: 'Conferma email – BibleBot.Life', invite: 'Invito – BibleBot.Life', magiclink: 'Link di accesso – BibleBot.Life', recovery: 'Reimposta password – BibleBot.Life', email_change: 'Cambio email – BibleBot.Life', reauthentication: 'Codice di verifica – BibleBot.Life' },
+  pt: { signup: 'Confirme seu e-mail – BibleBot.Life', invite: 'Convite – BibleBot.Life', magiclink: 'Seu link de login – BibleBot.Life', recovery: 'Redefinir senha – BibleBot.Life', email_change: 'Alteração de e-mail – BibleBot.Life', reauthentication: 'Código de verificação – BibleBot.Life' },
+}
+function getSubject(emailType: string, _locale?: string): string {
+  const lang = (_locale || 'de').slice(0, 2).toLowerCase()
+  const subjects = EMAIL_SUBJECTS_I18N[lang] || EMAIL_SUBJECTS_I18N.en
+  return subjects[emailType] || EMAIL_SUBJECTS_I18N.en[emailType] || 'BibleBot.Life'
 }
 
 // Template mapping
@@ -36,7 +41,7 @@ const EMAIL_TEMPLATES: Record<string, React.ComponentType<any>> = {
 }
 
 // Configuration
-const SITE_NAME = "bibelbotlive"
+const SITE_NAME = "bibelbotlife"
 const SENDER_DOMAIN = "notify.biblebot.life"
 const ROOT_DOMAIN = "biblebot.life"
 const FROM_DOMAIN = "notify.biblebot.life" // Domain shown in From address (may be root or sender subdomain)
@@ -46,7 +51,7 @@ const FROM_DOMAIN = "notify.biblebot.life" // Domain shown in From address (may 
 // The sample email uses a fixed placeholder (RFC 6761 .test TLD) so the Go backend
 // can always find-and-replace it with the actual recipient when sending test emails,
 // even if the project's domain has changed since the template was scaffolded.
-const SAMPLE_PROJECT_URL = "https://bibelbotlive.lovable.app"
+const SAMPLE_PROJECT_URL = "https://bibelbotlife.lovable.app"
 const SAMPLE_EMAIL = "user@example.test"
 const SAMPLE_DATA: Record<string, object> = {
   signup: {
@@ -258,7 +263,7 @@ async function handleWebhook(req: Request): Promise<Response> {
       to: payload.data.email,
       from: `${SITE_NAME} <noreply@${FROM_DOMAIN}>`,
       sender_domain: SENDER_DOMAIN,
-      subject: EMAIL_SUBJECTS[emailType] || 'Notification',
+      subject: getSubject(emailType),
       html,
       text,
       purpose: 'transactional',
