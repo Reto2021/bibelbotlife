@@ -16,6 +16,7 @@ import { template as invoiceNotification } from './invoice-notification.tsx'
 import { template as teamInvitation } from './team-invitation.tsx'
 import { template as serviceShare } from './service-share.tsx'
 import { template as qrSticker } from './qr-sticker.tsx'
+import { template as weeklyReport } from './weekly-report.tsx'
 
 export const TEMPLATES: Record<string, TemplateEntry> = {
   'contact-confirmation': contactConfirmation,
@@ -25,4 +26,5 @@ export const TEMPLATES: Record<string, TemplateEntry> = {
   'team-invitation': teamInvitation,
   'service-share': serviceShare,
   'qr-sticker': qrSticker,
+  'weekly-report': weeklyReport,
 }
