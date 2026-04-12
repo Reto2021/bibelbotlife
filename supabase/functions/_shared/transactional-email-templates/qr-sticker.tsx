@@ -21,7 +21,7 @@ const QRStickerEmail = ({
   contactName,
   customBotName,
 }: QRStickerEmailProps) => {
-  const brandedLink = `${BASE_URL}/?church=${slug}`
+  const brandedLink = `${BASE_URL}/?church=${slug}&utm_source=email&utm_medium=qr_sticker`
   const integrationLink = `${BASE_URL}/church-integration/${slug}`
   const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=${encodeURIComponent(brandedLink)}&margin=12&ecc=H`
   const botName = customBotName || 'BibleBot'
