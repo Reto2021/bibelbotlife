@@ -129,12 +129,13 @@ export function generateShareImage(options: ShareTileOptions): Promise<Blob> {
       }
       ctx.drawImage(bgImage, sx, sy, sw, sh, 0, 0, SIZE, SIZE);
 
-      // Dark overlay for text readability
+      // Dark overlay for text readability — stronger gradient
       const overlay = ctx.createLinearGradient(0, 0, 0, SIZE);
-      overlay.addColorStop(0, "rgba(26, 42, 45, 0.40)");
-      overlay.addColorStop(0.3, "rgba(26, 42, 45, 0.50)");
-      overlay.addColorStop(0.65, "rgba(26, 42, 45, 0.68)");
-      overlay.addColorStop(1, "rgba(26, 42, 45, 0.82)");
+      overlay.addColorStop(0, "rgba(20, 30, 32, 0.55)");
+      overlay.addColorStop(0.25, "rgba(20, 30, 32, 0.60)");
+      overlay.addColorStop(0.5, "rgba(20, 30, 32, 0.70)");
+      overlay.addColorStop(0.75, "rgba(20, 30, 32, 0.78)");
+      overlay.addColorStop(1, "rgba(20, 30, 32, 0.88)");
       ctx.fillStyle = overlay;
       ctx.fillRect(0, 0, SIZE, SIZE);
     } else {
@@ -149,18 +150,18 @@ export function generateShareImage(options: ShareTileOptions): Promise<Blob> {
     }
 
     const hasImage = !!bgImage;
-    const textColor = hasImage ? "#F5EDE0" : TEXT_DARK;
-    const textSubtle = hasImage ? "rgba(245,237,224,0.7)" : "rgba(43,62,66,0.65)";
+    const textColor = hasImage ? "#FFFFFF" : TEXT_DARK;
+    const textSubtle = hasImage ? "rgba(255,255,255,0.75)" : "rgba(43,62,66,0.65)";
     const goldAlpha = hasImage ? "rgba(200,136,58,0.35)" : "rgba(200,136,58,0.12)";
-    const brandSubtle = hasImage ? "rgba(245,237,224,0.5)" : "rgba(43,62,66,0.4)";
-    const lineColor = hasImage ? "rgba(200,136,58,0.4)" : "rgba(200,136,58,0.12)";
+    const brandSubtle = hasImage ? "rgba(255,255,255,0.6)" : "rgba(43,62,66,0.4)";
+    const lineColor = hasImage ? "rgba(200,136,58,0.5)" : "rgba(200,136,58,0.12)";
 
     // Helper: apply text shadow on image backgrounds
     const withShadow = (fn: () => void) => {
       if (hasImage) {
-        ctx.shadowColor = "rgba(0,0,0,0.5)";
-        ctx.shadowBlur = 8;
-        ctx.shadowOffsetY = 2;
+        ctx.shadowColor = "rgba(0,0,0,0.7)";
+        ctx.shadowBlur = 12;
+        ctx.shadowOffsetY = 3;
       }
       fn();
       ctx.shadowColor = "transparent";
