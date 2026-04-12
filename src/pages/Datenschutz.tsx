@@ -79,9 +79,9 @@ const Datenschutz = () => {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold mb-2">5. KI-Verarbeitung</h2>
+            <h2 className="text-xl font-semibold mb-2">5. Datenverarbeitung für Chat &amp; Impulse</h2>
             <p className="text-muted-foreground">
-              BibleBot.Life verwendet KI-Modelle (via Lovable AI Gateway) zur Beantwortung von Fragen und zur Erstellung von Impulsen. Ihre Chat-Nachrichten werden an den KI-Dienst übermittelt, dort verarbeitet und nicht dauerhaft gespeichert. Es findet kein Training von KI-Modellen mit Ihren Daten statt.
+              BibleBot.Life verwendet Sprachmodelle zur Beantwortung von Fragen und zur Erstellung von Impulsen. Ihre Chat-Nachrichten werden an den verarbeitenden Dienst übermittelt, dort verarbeitet und nicht dauerhaft gespeichert. Es findet kein Training mit Ihren Daten statt.
             </p>
           </section>
 
@@ -92,7 +92,7 @@ const Datenschutz = () => {
             </p>
             <ul className="text-muted-foreground list-disc pl-6 mt-2 space-y-1">
               <li><strong>Lovable Cloud (Supabase):</strong> Hosting, Datenbank und Authentifizierung (Server in der EU/USA)</li>
-              <li><strong>Lovable AI Gateway:</strong> KI-Verarbeitung für Chat und Impulse</li>
+              <li><strong>Lovable AI Gateway:</strong> Verarbeitung für Chat und Impulse</li>
               <li><strong>ElevenLabs:</strong> Sprachausgabe (Text-to-Speech) und Spracheingabe (Speech-to-Text)</li>
               <li><strong>Resend:</strong> Versand von Transaktions-E-Mails (Bestätigungen, Passwort-Reset)</li>
               <li><strong>Telegram Bot API:</strong> Zustellung des täglichen Impulses an Telegram-Abonnenten</li>
