@@ -1,71 +1,69 @@
 
 
-## Adaptive Antwortlänge für maximale Interaktionsrate
+## Plan: Share-Bild mit Intro-Text, Hashtags und Gemeinde-Sponsoring
 
-### Forschung & Best Practices
+### Was wird gemacht
 
-Aus der Chatbot-UX-Forschung und Praxisdaten:
+Wenn ein Nutzer auf "Bild teilen" klickt, wird automatisch ein passender Intro-Text mit Hashtags generiert und beim Teilen mitgegeben. Bei gesponsorten Gemeinden (church branding aktiv) wird die Gemeinde sowohl im Bild als auch im Share-Text erwähnt.
 
-- **Optimal für Engagement: 80–150 Wörter** pro Nachricht in konversationellen Chats (Intercom, Drift, ChatGPT-Studien). Ab ~200 Wörtern sinkt die Reply-Rate um 30-50%.
-- **Erste Nachricht kürzer** (~80-120 Wörter): Der User muss "reinkommen". Lange Erstantworten schrecken ab.
-- **Vertiefung länger** (150-250 Wörter): Wenn der User bereits 3+ Nachrichten geschrieben hat, akzeptiert er mehr Tiefe.
-- **Schnelle Antworten** (unter 50 Wörter): Gut für Rückfragen, schlecht für inhaltliche Antworten — zu dünn.
-- **Mobile-Faktor**: Auf kleinen Screens (< 500px) wirken 200 Wörter wie eine Textwand. Ideal: max. 2-3 Bildschirmhöhen.
+### Bestandsaufnahme (bereits vorhanden)
 
-### Aktueller Stand
+- `useChurchBranding()` Hook — liefert churchName, logoUrl, primaryColor etc.
+- `ChurchBanner` — zeigt Gemeinde-Banner bei `?church=slug`
+- `BrandedQRCode` — QR-Code mit BibleBot-Logo
+- `QRFlyerDownload`, `QRStickerDownload` — Flyer/Sticker-Download für Gemeinden
+- `SplashScreen` — zeigt Partner-Logo bei Patronat
+- Share-Flow in `DailyImpulse.tsx` → `shareAsImage()` nutzt bereits `navigator.share()` mit Text
 
-Zeile 702: `Halte Antworten fokussiert (ca. 200-400 Wörter)` — statisch, zu lang für den Gesprächseinstieg.
+### Änderungen
 
-### Lösung: Adaptives Längensystem
+**1. Share-Text mit Intro + Hashtags (`src/components/DailyImpulse.tsx`)**
 
-**Signale, die der Edge Function bereits zur Verfügung stehen:**
-- `messages.length` — Gesprächstiefe (wie viele Nachrichten wurden gewechselt?)
-- `messages[messages.length-1].content.length` — Länge der letzten User-Nachricht (kurze Frage → kurze Antwort)
-- `mode` — bereits vorhanden (könnte erweitert werden)
+- `shareAsImage()` erweitern: statt nur Vers + Referenz wird ein vollständiger Post-Text generiert:
+  ```
+  ✨ {teaser}
 
-**Neuer Client-seitiger Signal: `screenWidth`** — wird bereits im Analytics getrackt, muss nur an den Chat übergeben werden.
+  «{verse}»
+  — {reference}
 
-### Adaptive Regeln im System-Prompt
+  #BibleBotLife #Tagesimpuls #{topic} #Bibel
+  biblebot.life
+  ```
+- Bei aktiver Gemeinde-Branding:
+  ```
+  ✨ {teaser}
 
-```text
-## Antwortlänge (ADAPTIV)
-Passe deine Antwortlänge an die Gesprächssituation an:
+  «{verse}»
+  — {reference}
 
-ERSTE ANTWORT (1-2 Nachrichten im Gespräch):
-→ 80-120 Wörter. Kurz, einladend, eine Frage. Der User soll antworten wollen, nicht lesen müssen.
+  📍 Empfohlen von {churchName}
 
-AUFWÄRMPHASE (3-6 Nachrichten):
-→ 120-180 Wörter. Mehr Tiefe, eine Bibelstelle, eine Reflexionsfrage.
+  #BibleBotLife #Tagesimpuls #{topic} #{churchName}
+  biblebot.life/?church={slug}
+  ```
 
-VERTIEFUNGSPHASE (7+ Nachrichten):
-→ 150-250 Wörter. Der User ist engagiert. Hier darfst du ausführlicher werden.
+**2. Gemeinde-Logo + Name im Bild (`src/lib/share-image-canvas.ts`)**
 
-KURZE USER-NACHRICHT (unter 20 Zeichen, z.B. "a", "ja", "mehr"):
-→ Antworte kompakt (60-100 Wörter). Der User will schnell weiter.
+- `ShareTileOptions` erweitern um optionale `churchBranding: { name, logoUrl, slug }`.
+- Im unteren Branding-Bereich: Wenn `churchBranding` vorhanden, neben "BibleBot.Life" ein kleines "Empfohlen von {churchName}" und optional das Gemeinde-Logo anzeigen.
+- Layout: Links "BibleBot.Life" + "Everyday Sunday", rechts unten kleines Gemeinde-Logo + Name.
 
-LANGE USER-NACHRICHT (über 200 Zeichen):
-→ Der User teilt viel. Antworte angemessen ausführlich (150-250 Wörter), aber strukturiert.
+**3. Integration in DailyImpulse**
 
-MOBILE (screenWidth < 500):
-→ Reduziere das obere Limit um 30%. Max. 2 kurze Absätze vor den Optionen.
+- `useChurchBranding()` importieren und Branding-Daten an `generateShareImage()` und `shareAsImage()` weitergeben.
+- Hashtags werden sprachabhängig generiert (DE: #Bibel, EN: #Bible, etc.) mit Basis-Set + topic-basiertem Tag.
 
-GRUNDREGEL: Lieber zu kurz als zu lang. Eine gute Frage am Ende ist wertvoller als ein langer Absatz.
-```
+**4. Clipboard-Fallback**
 
-### Technische Umsetzung
+- Wenn `navigator.share` nicht verfügbar: Text wird in Zwischenablage kopiert mit Toast-Hinweis "Text kopiert — füge ihn beim Posten ein".
 
-**2 Dateien:**
+### Technische Details
 
-1. **`src/components/BibelBotChat.tsx`** — `screenWidth: window.innerWidth` zum Request-Body hinzufügen (1 Zeile)
-
-2. **`supabase/functions/bibelbot-chat/index.ts`**:
-   - `screenWidth` aus dem Request-Body auslesen
-   - Gesprächstiefe (`messages.length`) und letzte User-Nachricht-Länge berechnen
-   - Dynamischen Längenparagraph im System-Prompt einfügen basierend auf diesen Signalen
-   - Zeile 702 (`ca. 200-400 Wörter`) durch die adaptive Anweisung ersetzen
-   - Edge Function deployen
-
-### Kein Tracking nötig
-
-Alles wird pro Request berechnet — kein neues DB-Schema, kein localStorage, keine zusätzliche Komplexität.
+| Datei | Änderung |
+|-------|----------|
+| `src/lib/share-image-canvas.ts` | `ShareTileOptions` + `churchBranding` Feld; Gemeinde-Logo laden + im Canvas unten rechts zeichnen; "Empfohlen von X" Text |
+| `src/components/DailyImpulse.tsx` | `useChurchBranding()` importieren; Share-Text Builder-Funktion mit Hashtags + Gemeinde; an `generateShareImage` + `navigator.share` übergeben |
+| `src/i18n/locales/de.json` | Neue Keys: `share.introPrefix`, `share.recommendedBy`, `share.hashtagBible` |
+| `src/i18n/locales/en.json` | Gleiche Keys auf Englisch |
+| Alle anderen Locale-Dateien | Übersetzte Versionen der neuen Keys |
 
