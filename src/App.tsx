@@ -10,6 +10,7 @@ import { InstallPrompt } from "@/components/InstallPrompt";
 import { AuthProvider } from "@/hooks/use-auth";
 import { SplashScreen } from "@/components/SplashScreen";
 import { useChurchBranding, hexToHsl } from "@/hooks/use-church-branding";
+import ScrollToTop from "@/components/ScrollToTop";
 
 // Lazy-load pages for smaller initial bundle
 const Index = lazy(() => import("./pages/Index"));
@@ -117,6 +118,7 @@ const App = () => {
         <BrowserRouter>
           <AuthProvider>
             <AnalyticsProvider>
+              <ScrollToTop />
               <ChurchColorOverride />
               <Suspense fallback={<PageLoader />}>
                 <Routes>

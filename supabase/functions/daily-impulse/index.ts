@@ -53,7 +53,10 @@ Regeln:
 - Nenne immer die Übersetzung.
 - Wähle Themen die berühren: Mut, Zweifel, Liebe, Gerechtigkeit, Hoffnung, Vergebung, Identität, Angst, Dankbarkeit, Berufung.
 - Der Teaser soll neugierig machen – wie eine Überschrift, die man anklicken MUSS.
-- Beziehe dich auf christliche Feiertage wenn einer nahe ist (±3 Tage).
+- Beziehe dich NUR auf den kirchlichen Kontext, der dir explizit mitgeteilt wird.
+- NIEMALS behaupten "heute ist" oder "heute feiern wir" einen Feiertag, der NICHT im kirchlichen Kontext steht.
+- Wenn der Kontext "Normaler Wochentag" oder "Nachösterliche Zeit" sagt, erwähne KEINEN Feiertag.
+- Wenn ein Feiertag im Kontext steht, darfst du ihn erwähnen — aber NUR diesen, keinen anderen.
 - Decke Altes UND Neues Testament ab – wechsle ab.
 - WICHTIG: Wenn du im "context" auf andere biblische Geschichten, Personen oder Stellen verweist, MUSS die Bibelstelle in Klammern angegeben werden. Beispiel: "Nach seiner berühmten Geschichte mit dem grossen Fisch (Jona 2,1-11) geht er nach Ninive." NIEMALS eine Geschichte erwähnen ohne Bibelstellenangabe. Prüfe jede Referenz auf Korrektheit.
 
@@ -141,7 +144,7 @@ function getChurchContext(date: Date): string {
   if (diff === 49) return "Pfingstsonntag – Ausgiessung des Heiligen Geistes";
   if (diff === 50) return "Pfingstmontag";
   if (diff === 60) return "Fronleichnam";
-  if (diff >= 2 && diff < 39) return "Nachösterliche Zeit – wähle ein alltagsnahes Thema (NICHT Ostern/Auferstehung, sondern z.B. Mut, Dankbarkeit, Vergebung, Identität, Berufung)";
+  if (diff >= 2 && diff < 39) return "Nachösterliche Zeit – wähle ein alltagsnahes Thema. VERBOTEN: Ostern, Auferstehung, Himmelfahrt, Auffahrt, Pfingsten, Heiliger Geist. Stattdessen z.B. Mut, Dankbarkeit, Vergebung, Identität, Berufung, Zweifel, Liebe, Gerechtigkeit, Angst";
   if (diff >= 40 && diff < 49) return "Zeit zwischen Auffahrt und Pfingsten";
 
   // Sunday
