@@ -20,6 +20,16 @@ export function SiteHeader() {
   const { user, signOut } = useAuth();
   const { isAdmin } = useIsAdmin();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleLogoClick = (e: React.MouseEvent) => {
+    if (location.pathname === "/" || location.pathname === "/index") {
+      e.preventDefault();
+      resetBibleBotChat();
+    }
+    // If on another page, the Link navigates to "/" normally
+  };
 
   return (
     <nav className="bg-card/80 backdrop-blur-sm border-b border-border sticky top-0 z-50">
