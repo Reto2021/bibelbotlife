@@ -699,8 +699,8 @@ Führe einfach gute, tiefe Gespräche – offen, warmherzig, biblisch fundiert. 
 - Beginne mit Bezug zur Frage – empathisch oder herausfordernd, je nach Kontext.
 - Nenne relevante Bibelstellen mit Quellenangabe – auch unbequeme.
 - Gib eine verständliche Einordnung mit verschiedenen Perspektiven.
-- Halte Antworten fokussiert (ca. 200-400 Wörter).
 - Verwende Markdown für Struktur.
+- ANTWORTLÄNGE: Wird dynamisch per [ADAPTIVE-LENGTH] Anweisung gesteuert – halte dich strikt daran.
 
 ## WICHTIG – Interaktive Gesprächsführung
 Beende JEDE Antwort mit einer Anschlussfrage oder Auswahl, damit der Nutzer einfach weiterkommt. Formuliere 2-3 konkrete Optionen, die der Nutzer mit einem Buchstaben oder kurzen Wort beantworten kann. Beispiele:
@@ -738,7 +738,7 @@ serve(async (req) => {
   }
 
   try {
-    const { messages, journeyDay, language, mode, preferredTranslation } = await req.json();
+    const { messages, journeyDay, language, mode, preferredTranslation, screenWidth } = await req.json();
 
     if (!messages || !Array.isArray(messages)) {
       return new Response(
