@@ -8,15 +8,28 @@ import {
   BarChart3, Eye, MousePointer, Users, Smartphone, Monitor, Tablet,
   MessageCircle, Flame, Trophy, Bell, TrendingUp, Download, Globe,
   Target, CircleDot, Search, Clock, CalendarDays, Building2, Link2,
+  Info, ArrowDownRight,
 } from "lucide-react";
 import {
   BarChart, Bar, XAxis, YAxis, Tooltip as RTooltip, ResponsiveContainer,
   PieChart, Pie, Cell, AreaChart, Area, CartesianGrid,
 } from "recharts";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 type AnalyticsData = {
   period: { days: number; since: string };
-  summary: { totalPageviews: number; totalEvents: number; uniqueSessions: number; avgSessionDurationSec?: number };
+  summary: {
+    totalPageviews: number;
+    totalEvents: number;
+    uniqueSessions: number;
+    avgSessionDurationSec?: number;
+    bounceRate?: number;
+  };
   topPages: { path: string; count: number }[];
   topEvents: { name: string; count: number }[];
   topReferrers?: { source: string; count: number }[];
@@ -54,7 +67,6 @@ type AnalyticsData = {
     weakestAreas: { area: string; count: number }[];
   };
   sevenWhys?: { starts: number };
-  // New sections
   perChurch?: Record<string, {
     churchName: string;
     planTier: string;
@@ -62,6 +74,7 @@ type AnalyticsData = {
     pageviews: number;
     events: number;
     sessions: number;
+    avgSessionDurationSec?: number;
     dailyPageviews: Record<string, number>;
     topEvents: { name: string; count: number }[];
   }>;
@@ -79,8 +92,9 @@ const COLORS = [
   "hsl(var(--chart-5))",
 ];
 
-const StatCard = ({ icon: Icon, label, value, sub, color = "text-primary" }: {
-  icon: any; label: string; value: string | number; sub?: string; color?: string;
+/** KPI card with optional info tooltip */
+const StatCard = ({ icon: Icon, label, value, sub, tooltip, color = "text-primary" }: {
+  icon: any; label: string; value: string | number; sub?: string; tooltip?: string; color?: string;
 }) => (
   <Card>
     <CardContent className="pt-5 pb-4">
@@ -88,9 +102,23 @@ const StatCard = ({ icon: Icon, label, value, sub, color = "text-primary" }: {
         <div className={`p-2 rounded-xl bg-primary/10 ${color}`}>
           <Icon className="h-5 w-5" />
         </div>
-        <div>
+        <div className="flex-1 min-w-0">
           <p className="text-2xl font-bold text-foreground">{value}</p>
-          <p className="text-xs text-muted-foreground">{label}</p>
+          <div className="flex items-center gap-1">
+            <p className="text-xs text-muted-foreground">{label}</p>
+            {tooltip && (
+              <TooltipProvider delayDuration={200}>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Info className="h-3 w-3 text-muted-foreground/50 cursor-help shrink-0" />
+                  </TooltipTrigger>
+                  <TooltipContent side="bottom" className="max-w-[220px] text-xs">
+                    {tooltip}
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            )}
+          </div>
           {sub && <p className="text-[10px] text-muted-foreground/70">{sub}</p>}
         </div>
       </div>
@@ -247,12 +275,44 @@ const Analytics = () => {
         </div>
 
         {/* Summary stats */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
-          <StatCard icon={Eye} label="Seitenaufrufe" value={data?.summary.totalPageviews || 0} />
-          <StatCard icon={Users} label="Sessions" value={data?.summary.uniqueSessions || 0} />
-          <StatCard icon={Clock} label="Ø Verweildauer" value={formatDuration(data?.summary.avgSessionDurationSec || 0)} />
-          <StatCard icon={MousePointer} label="Events" value={data?.summary.totalEvents || 0} />
-          <StatCard icon={MessageCircle} label="Chat-Nutzer" value={data?.chat?.uniqueUsers || 0} sub={`∅ ${data?.chat?.avgMessagesPerUser || 0} Nachr./Person`} />
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+          <StatCard
+            icon={Eye}
+            label="Seitenaufrufe"
+            value={data?.summary.totalPageviews || 0}
+            tooltip="Gesamtzahl aller geladenen Seiten im Zeitraum. Mehrfachaufrufe durch denselben Besucher zählen einzeln."
+          />
+          <StatCard
+            icon={Users}
+            label="Sessions"
+            value={data?.summary.uniqueSessions || 0}
+            tooltip="Anzahl eindeutiger Browser-Sitzungen. Ein Nutzer der die Seite schliesst und wieder öffnet zählt als neue Session."
+          />
+          <StatCard
+            icon={Clock}
+            label="Ø Verweildauer"
+            value={formatDuration(data?.summary.avgSessionDurationSec || 0)}
+            tooltip="Durchschnittliche Zeit, die ein Besucher auf der Seite verbringt. Wird per Heartbeat alle 30s gemessen — auch wenn nur eine Seite besucht wird."
+          />
+          <StatCard
+            icon={ArrowDownRight}
+            label="Absprungrate"
+            value={`${data?.summary.bounceRate ?? 0}%`}
+            tooltip="Anteil der Besucher, die nur eine einzige Seite ansehen und keine Interaktion ausführen (z.B. Chat, Kachel-Klick)."
+          />
+          <StatCard
+            icon={MousePointer}
+            label="Interaktionen"
+            value={data?.summary.totalEvents || 0}
+            tooltip="Gesamtzahl aller bewussten Nutzer-Aktionen: Kachel-Klicks, Chat-Nachrichten, Quiz-Starts, Lebensrad-Abschlüsse etc."
+          />
+          <StatCard
+            icon={MessageCircle}
+            label="Chat-Nutzer (Telegram)"
+            value={data?.chat?.uniqueUsers || 0}
+            sub={`∅ ${data?.chat?.avgMessagesPerUser || 0} Nachr./Person`}
+            tooltip="Eindeutige Telegram-Nutzer, die dem Bot geschrieben haben. 'Nachr./Person' = durchschnittliche Anzahl gesendeter Nachrichten pro Nutzer."
+          />
         </div>
 
         {/* Daily pageviews chart */}
@@ -402,6 +462,7 @@ const Analytics = () => {
                     <TableHead>Gemeinde</TableHead>
                     <TableHead className="text-right">Seitenaufrufe</TableHead>
                     <TableHead className="text-right">Besucher</TableHead>
+                    <TableHead className="text-right">Ø Verweildauer</TableHead>
                     <TableHead className="text-right">Events</TableHead>
                     <TableHead className="hidden md:table-cell">Plan</TableHead>
                   </TableRow>
@@ -418,6 +479,7 @@ const Analytics = () => {
                       </TableCell>
                       <TableCell className="text-right font-mono">{c.pageviews}</TableCell>
                       <TableCell className="text-right font-mono">{c.sessions}</TableCell>
+                      <TableCell className="text-right font-mono">{formatDuration(c.avgSessionDurationSec || 0)}</TableCell>
                       <TableCell className="text-right font-mono">{c.events}</TableCell>
                       <TableCell className="hidden md:table-cell">
                         <Badge variant="secondary" className="text-xs">{c.planTier}</Badge>
