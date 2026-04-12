@@ -338,7 +338,10 @@
     "imageError": "Vytvorenie obrázka zlyhalo",
     "imageErrorDesc": "Obrázok sa nepodarilo vytvoriť. Skúste to neskôr znova.",
     "imageSaved": "Text skopírovaný! 📋",
-    "imageSavedDesc": "Uložte obrázok a zdieľajte ho so skopírovaným textom na Instagrame, WhatsApp alebo kdekoľvek chcete!"
+    "imageSavedDesc": "Uložte obrázok a zdieľajte ho so skopírovaným textom na Instagrame, WhatsApp alebo kdekoľvek chcete!",
+    "clipboardFallback": "Text skopírovaný — vložte ho pri zverejnení!",
+    "recommendedBy": "Odporúča {{church}}",
+    "hashtagBible": "#Biblia"
   },
   "darkMode": {
     "light": "Svetlý režim",

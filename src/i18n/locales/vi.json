@@ -340,7 +340,10 @@
     "imageError": "Tạo hình ảnh thất bại",
     "imageErrorDesc": "Không thể tạo hình ảnh. Vui lòng thử lại sau.",
     "imageSaved": "Đã sao chép văn bản! 📋",
-    "imageSavedDesc": "Lưu hình ảnh và chia sẻ nó với văn bản đã sao chép trên Instagram, WhatsApp hoặc bất cứ nơi nào bạn muốn!"
+    "imageSavedDesc": "Lưu hình ảnh và chia sẻ nó với văn bản đã sao chép trên Instagram, WhatsApp hoặc bất cứ nơi nào bạn muốn!",
+    "clipboardFallback": "Đã sao chép văn bản — dán khi đăng bài!",
+    "recommendedBy": "Được giới thiệu bởi {{church}}",
+    "hashtagBible": "#KinhThánh"
   },
   "darkMode": {
     "light": "Chế độ sáng",

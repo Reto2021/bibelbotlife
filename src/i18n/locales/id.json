@@ -338,7 +338,10 @@
     "imageError": "Gagal membuat gambar",
     "imageErrorDesc": "Gambar tidak dapat dibuat. Silakan coba lagi nanti.",
     "imageSaved": "Teks disalin! 📋",
-    "imageSavedDesc": "Simpan gambar dan bagikan dengan teks yang disalin di Instagram, WhatsApp, atau di mana pun Anda mau!"
+    "imageSavedDesc": "Simpan gambar dan bagikan dengan teks yang disalin di Instagram, WhatsApp, atau di mana pun Anda mau!",
+    "clipboardFallback": "Teks disalin — tempel saat memposting!",
+    "recommendedBy": "Direkomendasikan oleh {{church}}",
+    "hashtagBible": "#Alkitab"
   },
   "darkMode": {
     "light": "Mode Terang",

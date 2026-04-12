@@ -338,7 +338,10 @@
     "imageError": "Uundaji wa picha umeshindwa",
     "imageErrorDesc": "Picha haikuweza kuundwa. Jaribu tena baadaye.",
     "imageSaved": "Maandishi yamenakiliwa! 📋",
-    "imageSavedDesc": "Hifadhi picha na ushiriki na maandishi yaliyonakiliwa kwenye Instagram, WhatsApp au popote unapotaka!"
+    "imageSavedDesc": "Hifadhi picha na ushiriki na maandishi yaliyonakiliwa kwenye Instagram, WhatsApp au popote unapotaka!",
+    "clipboardFallback": "Maandishi yamenakiliwa — bandika unapochapisha!",
+    "recommendedBy": "Imependekezwa na {{church}}",
+    "hashtagBible": "#Biblia"
   },
   "darkMode": {
     "light": "Hali Nyepesi",

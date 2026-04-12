@@ -338,7 +338,10 @@
     "imageError": "Պատկերի ստեղծումը ձախողվեց",
     "imageErrorDesc": "Պատկերը չհաջողվեց ստեղծել։ Խնդրում ենք փորձել ավելի ուշ։",
     "imageSaved": "Տեքստը պատճենված է։ 📋",
-    "imageSavedDesc": "Պահպանեք պատկերը և կիսվեք այն պատճենված տեքստով Instagram-ում, WhatsApp-ում կամ որտեղ ցանկանում եք։"
+    "imageSavedDesc": "Պահպանեք պատկերը և կիսվեք այն պատճենված տեքստով Instagram-ում, WhatsApp-ում կամ որտեղ ցանկանում եք։",
+    "clipboardFallback": "Տdelays copied — paste it when posting!",
+    "recommendedBy": "Recommended by {{church}}",
+    "hashtagBible": "#Bible"
   },
   "darkMode": {
     "light": "Լուսավոր ռեժիմ",

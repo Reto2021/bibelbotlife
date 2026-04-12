@@ -338,7 +338,10 @@
     "imageError": "Mepụta onyonyo adaghị",
     "imageErrorDesc": "Enweghị ike ịmepụta onyonyo ahụ. Biko gbalịa ọzọ ma emechaa.",
     "imageSaved": "E depụtaghachiri ederede! 📋",
-    "imageSavedDesc": "Chekwaa onyonyo ahụ ma kekọrịta ya na ederede e depụtaghachiri na Instagram, WhatsApp ma ọ bụ ebe ọ bụla ị chọrọ!"
+    "imageSavedDesc": "Chekwaa onyonyo ahụ ma kekọrịta ya na ederede e depụtaghachiri na Instagram, WhatsApp ma ọ bụ ebe ọ bụla ị chọrọ!",
+    "clipboardFallback": "Ederede edere — tinye ya mgbe ị na-ezipu!",
+    "recommendedBy": "Nkwụsịrị site na {{church}}",
+    "hashtagBible": "#Baịbụl"
   },
   "darkMode": {
     "light": "Ụdị ọkụ",

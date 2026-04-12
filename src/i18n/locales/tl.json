@@ -338,7 +338,10 @@
     "imageError": "Nabigo ang paggawa ng larawan",
     "imageErrorDesc": "Hindi nagawa ang larawan. Subukang muli sa ibang pagkakataon.",
     "imageSaved": "Nakopya ang text! 📋",
-    "imageSavedDesc": "I-save ang larawan at ibahagi ito sa nakopyang text sa Instagram, WhatsApp o kung saan mo gusto!"
+    "imageSavedDesc": "I-save ang larawan at ibahagi ito sa nakopyang text sa Instagram, WhatsApp o kung saan mo gusto!",
+    "clipboardFallback": "Nakopya ang teksto — i-paste ito sa pag-post!",
+    "recommendedBy": "Inirerekomenda ng {{church}}",
+    "hashtagBible": "#Bibliya"
   },
   "darkMode": {
     "light": "Maliwanag na Mode",

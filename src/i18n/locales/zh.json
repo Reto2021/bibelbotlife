@@ -339,7 +339,10 @@
     "imageError": "图片创建失败",
     "imageErrorDesc": "无法创建图片。请稍后重试。",
     "imageSaved": "文本已复制！📋",
-    "imageSavedDesc": "保存图片，并将复制的文本分享到Instagram、WhatsApp或任何您想分享的地方！"
+    "imageSavedDesc": "保存图片，并将复制的文本分享到Instagram、WhatsApp或任何您想分享的地方！",
+    "clipboardFallback": "文本已复制 — 发布时粘贴！",
+    "recommendedBy": "由{{church}}推荐",
+    "hashtagBible": "#圣经"
   },
   "darkMode": {
     "light": "浅色模式",

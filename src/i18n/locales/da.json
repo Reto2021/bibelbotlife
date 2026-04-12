@@ -338,7 +338,10 @@
     "imageError": "Billedoprettelse mislykkedes",
     "imageErrorDesc": "Billedet kunne ikke oprettes. Prøv igen senere.",
     "imageSaved": "Tekst kopieret! 📋",
-    "imageSavedDesc": "Gem billedet og del det med den kopierede tekst på Instagram, WhatsApp eller hvor du vil!"
+    "imageSavedDesc": "Gem billedet og del det med den kopierede tekst på Instagram, WhatsApp eller hvor du vil!",
+    "clipboardFallback": "Tekst kopieret — indsæt den når du poster!",
+    "recommendedBy": "Anbefalet af {{church}}",
+    "hashtagBible": "#Bibelen"
   },
   "darkMode": {
     "light": "Lys tilstand",

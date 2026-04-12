@@ -338,7 +338,10 @@
     "imageError": "Bildegenerering mislyktes",
     "imageErrorDesc": "Bildet kunne ikke genereres. Prøv igjen senere.",
     "imageSaved": "Tekst kopiert! 📋",
-    "imageSavedDesc": "Lagre bildet og del det med den kopierte teksten på Instagram, WhatsApp eller hvor du vil!"
+    "imageSavedDesc": "Lagre bildet og del det med den kopierte teksten på Instagram, WhatsApp eller hvor du vil!",
+    "clipboardFallback": "Tekst kopiert — lim inn når du poster!",
+    "recommendedBy": "Anbefalt av {{church}}",
+    "hashtagBible": "#Bibelen"
   },
   "darkMode": {
     "light": "Lys modus",

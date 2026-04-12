@@ -338,7 +338,10 @@
     "imageError": "Prentskepping het misluk",
     "imageErrorDesc": "Die prent kon nie geskep word nie. Probeer asseblief later weer.",
     "imageSaved": "Teks gekopieer! 📋",
-    "imageSavedDesc": "Stoor die prent en deel dit met die gekopieerde teks op Instagram, WhatsApp of waar jy wil!"
+    "imageSavedDesc": "Stoor die prent en deel dit met die gekopieerde teks op Instagram, WhatsApp of waar jy wil!",
+    "clipboardFallback": "Teks gekopieer — plak dit wanneer jy plaas!",
+    "recommendedBy": "Aanbeveel deur {{church}}",
+    "hashtagBible": "#Bybel"
   },
   "darkMode": {
     "light": "Ligte modus",

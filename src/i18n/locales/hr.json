@@ -338,7 +338,10 @@
     "imageError": "Stvaranje slike nije uspjelo",
     "imageErrorDesc": "Slika nije mogla biti stvorena. Pokušajte ponovno kasnije.",
     "imageSaved": "Tekst kopiran! 📋",
-    "imageSavedDesc": "Spremite sliku i podijelite je s kopiranim tekstom na Instagramu, WhatsAppu ili gdje god želite!"
+    "imageSavedDesc": "Spremite sliku i podijelite je s kopiranim tekstom na Instagramu, WhatsAppu ili gdje god želite!",
+    "clipboardFallback": "Tekst kopiran — zalijepite ga pri objavi!",
+    "recommendedBy": "Preporučuje {{church}}",
+    "hashtagBible": "#Biblija"
   },
   "darkMode": {
     "light": "Svijetli način rada",

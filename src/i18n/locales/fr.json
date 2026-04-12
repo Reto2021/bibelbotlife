@@ -949,7 +949,10 @@
     "imageError": "Échec de la création",
     "imageErrorDesc": "L'image n'a pas pu être créée. Réessayez plus tard.",
     "imageSaved": "Texte copié! 📋",
-    "imageSavedDesc": "Enregistrez l'image et partagez-la!"
+    "imageSavedDesc": "Enregistrez l'image et partagez-la!",
+    "clipboardFallback": "Texte copié — collez-le lors de la publication !",
+    "recommendedBy": "Recommandé par {{church}}",
+    "hashtagBible": "#Bible"
   },
   "eulogy": {
     "pageTitle": "Éloge funèbre – Créer un curriculum vitae | votre compagnon",

@@ -338,7 +338,10 @@
     "imageError": "Kuvan luominen epäonnistui",
     "imageErrorDesc": "Kuvaa ei voitu luoda. Yritä myöhemmin uudelleen.",
     "imageSaved": "Teksti kopioitu! 📋",
-    "imageSavedDesc": "Tallenna kuva ja jaa se kopioidun tekstin kanssa Instagramissa, WhatsAppissa tai missä haluat!"
+    "imageSavedDesc": "Tallenna kuva ja jaa se kopioidun tekstin kanssa Instagramissa, WhatsAppissa tai missä haluat!",
+    "clipboardFallback": "Teksti kopioitu — liitä se julkaistaessa!",
+    "recommendedBy": "Suosittelee {{church}}",
+    "hashtagBible": "#Raamattu"
   },
   "darkMode": {
     "light": "Vaalea tila",

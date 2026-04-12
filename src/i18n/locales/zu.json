@@ -338,7 +338,10 @@
     "imageError": "Ukudala isithombe kuhlulekile",
     "imageErrorDesc": "Isithombe asikwazanga ukudala. Sicela uzame futhi kamuva.",
     "imageSaved": "Umbhalo ukopishiwe! 📋",
-    "imageSavedDesc": "Londoloza isithombe bese usabelana ngaso nombhalo okopishiwe ku-Instagram, WhatsApp noma lapho ufuna khona!"
+    "imageSavedDesc": "Londoloza isithombe bese usabelana ngaso nombhalo okopishiwe ku-Instagram, WhatsApp noma lapho ufuna khona!",
+    "clipboardFallback": "Umbhalo ukopishiwe — unamathisele lapho uthumela!",
+    "recommendedBy": "Kuphakanyiswe yi-{{church}}",
+    "hashtagBible": "#IBhayibheli"
   },
   "darkMode": {
     "light": "Imodi Ekhanyayo",
