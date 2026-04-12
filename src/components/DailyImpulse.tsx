@@ -81,7 +81,7 @@ function renderContextWithLinks(text: string): ReactNode[] {
 
   return parts.length > 0 ? parts : [text];
 }
-
+export function DailyImpulse() {
 
   const { t, i18n } = useTranslation();
   const { toast } = useToast();
