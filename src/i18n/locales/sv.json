@@ -529,52 +529,52 @@
     },
     "showMore": "mer",
     "dailywisdom": {
-      "title": "Wisdom for today",
-      "desc": "An encouraging thought for your day",
-      "prompt": "Give me a short, encouraging thought for my day – with a fitting Bible verse.",
-      "prompt_v1": "What's the best advice the Bible has for today?",
-      "prompt_v2": "Give me a Bible wisdom that will carry me through the day.",
-      "prompt_v3": "Surprise me with an encouraging Bible verse for today!"
+      "title": "Dagens visdom",
+      "desc": "En uppmuntrande tanke för din dag",
+      "prompt": "Ge mig en kort, uppmuntrande tanke för min dag – med en passande bibelvers.",
+      "prompt_v1": "Vad är det bästa rådet Bibeln har för idag?",
+      "prompt_v2": "Ge mig en visdom från Bibeln som kan följa mig genom dagen.",
+      "prompt_v3": "Överraska mig med en uppmuntrande bibelvers för idag!"
     },
     "funfact": {
-      "title": "Did you know?",
-      "desc": "Surprising facts from the Bible",
-      "prompt": "Tell me a surprising fact from the Bible that most people don't know!",
-      "prompt_v1": "What's the craziest story in the Bible?",
-      "prompt_v2": "What Bible facts surprise most people?",
-      "prompt_v3": "Tell me something funny or unexpected from the Bible!"
+      "title": "Visste du att?",
+      "desc": "Överraskande fakta från Bibeln",
+      "prompt": "Berätta en överraskande fakta från Bibeln som de flesta inte känner till!",
+      "prompt_v1": "Vad är den galnaste historien i Bibeln?",
+      "prompt_v2": "Vilka fakta från Bibeln överraskar de flesta människor?",
+      "prompt_v3": "Berätta något roligt eller oväntat från Bibeln!"
     },
     "lifehack": {
-      "title": "Life hack",
-      "desc": "Biblical wisdom for family & work",
-      "prompt": "What biblical tip helps in everyday life with family and work? Give me something practical!",
-      "prompt_v1": "How can the Bible help me in a stressful daily life?",
-      "prompt_v2": "What practical life tips are hidden in the Bible?",
-      "prompt_v3": "Give me a concrete tip from the Bible for my daily life!"
+      "title": "Livshack",
+      "desc": "Biblisk visdom för familj & arbete",
+      "prompt": "Vilket bibliskt tips hjälper mig i vardagen med familj och arbete? Ge mig något praktiskt!",
+      "prompt_v1": "Hur kan Bibeln hjälpa mig i en stressig vardag?",
+      "prompt_v2": "Vilka praktiska livstips finns i Bibeln?",
+      "prompt_v3": "Ge mig ett konkret tips från Bibeln för min vardag!"
     },
     "strengths": {
-      "title": "Your strengths",
-      "desc": "Discover what's inside you",
-      "prompt": "Help me discover my personal strengths – what does the Bible say about the gifts every person has?",
-      "prompt_v1": "What strengths do I have according to the Bible?",
-      "prompt_v2": "How can I find out what my gifts and talents are?",
-      "prompt_v3": "What does the Bible say about what makes me special?"
+      "title": "Dina styrkor",
+      "desc": "Upptäck vad som finns inom dig",
+      "prompt": "Hjälp mig att upptäcka mina personliga styrkor – vad säger Bibeln om de gåvor som varje människa har?",
+      "prompt_v1": "Vilka styrkor har jag enligt Bibeln?",
+      "prompt_v2": "Hur kan jag ta reda på vad mina gåvor och talanger är?",
+      "prompt_v3": "Vad säger Bibeln om vad som gör mig speciell?"
     },
     "family": {
-      "title": "Family & everyday life",
-      "desc": "More appreciation in daily life",
-      "prompt": "How can I show my family more appreciation? Give me practical ideas with biblical inspiration.",
-      "prompt_v1": "How do I strengthen my family relationships?",
-      "prompt_v2": "What does the Bible say about a good family life?",
-      "prompt_v3": "Give me an idea for how I can make someone in my family happy today!"
+      "title": "Familj & vardag",
+      "desc": "Mer uppskattning i samlivet",
+      "prompt": "Hur kan jag visa min familj mer uppskattning? Ge mig praktiska idéer med biblisk inspiration.",
+      "prompt_v1": "Hur stärker jag mina familjerelationer?",
+      "prompt_v2": "Vad säger Bibeln om ett gott familjeliv?",
+      "prompt_v3": "Ge mig en idé om hur jag kan glädja någon i min familj idag!"
     },
     "relax": {
-      "title": "Find peace",
-      "desc": "A moment of stillness and calm",
-      "prompt": "I need a moment of peace. Help me unwind – with a calming Bible verse or a short meditation.",
-      "prompt_v1": "Give me a calming psalm for this moment.",
-      "prompt_v2": "How can I find true rest according to the Bible?",
-      "prompt_v3": "Guide me through a short biblical meditation."
+      "title": "Komma till ro",
+      "desc": "Hitta en stunds stillhet och frid",
+      "prompt": "Jag behöver en stunds lugn. Hjälp mig att koppla av – med en lugnande bibelvers eller en kort meditation.",
+      "prompt_v1": "Ge mig en lugnande psalm för detta ögonblick.",
+      "prompt_v2": "Hur kan jag enligt Bibeln finna sann ro?",
+      "prompt_v3": "Led mig genom en kort biblisk meditation."
     }
   },
   "lifeWheel": {

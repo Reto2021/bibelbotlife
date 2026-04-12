@@ -567,52 +567,52 @@
     },
     "showMore": "higit pa",
     "dailywisdom": {
-      "title": "Wisdom for today",
-      "desc": "An encouraging thought for your day",
-      "prompt": "Give me a short, encouraging thought for my day – with a fitting Bible verse.",
-      "prompt_v1": "What's the best advice the Bible has for today?",
-      "prompt_v2": "Give me a Bible wisdom that will carry me through the day.",
-      "prompt_v3": "Surprise me with an encouraging Bible verse for today!"
+      "title": "Karunungan para sa Ngayon",
+      "desc": "Isang nakapagpapatibay na kaisipan para sa iyong araw",
+      "prompt": "Bigyan mo ako ng maikli at nakapagpapatibay na kaisipan para sa aking araw – na may angkop na talata sa Bibliya.",
+      "prompt_v1": "Ano ang pinakamahusay na payo na mayroon ang Bibliya para sa ngayon?",
+      "prompt_v2": "Bigyan mo ako ng karunungan mula sa Bibliya na sasamahan ako sa buong araw.",
+      "prompt_v3": "Sorpresahin mo ako ng isang nakapagpapatibay na talata sa Bibliya para sa ngayon!"
     },
     "funfact": {
-      "title": "Did you know?",
-      "desc": "Surprising facts from the Bible",
-      "prompt": "Tell me a surprising fact from the Bible that most people don't know!",
-      "prompt_v1": "What's the craziest story in the Bible?",
-      "prompt_v2": "What Bible facts surprise most people?",
-      "prompt_v3": "Tell me something funny or unexpected from the Bible!"
+      "title": "Alam mo ba?",
+      "desc": "Nakakagulat na mga katotohanan mula sa Bibliya",
+      "prompt": "Sabihin mo sa akin ang isang nakakagulat na katotohanan mula sa Bibliya na hindi alam ng karamihan sa mga tao!",
+      "prompt_v1": "Ano ang pinakakakaibang kuwento sa Bibliya?",
+      "prompt_v2": "Anong mga katotohanan mula sa Bibliya ang nakakagulat sa karamihan ng mga tao?",
+      "prompt_v3": "Sabihin mo sa akin ang isang bagay na nakakatawa o hindi inaasahan mula sa Bibliya!"
     },
     "lifehack": {
-      "title": "Life hack",
-      "desc": "Biblical wisdom for family & work",
-      "prompt": "What biblical tip helps in everyday life with family and work? Give me something practical!",
-      "prompt_v1": "How can the Bible help me in a stressful daily life?",
-      "prompt_v2": "What practical life tips are hidden in the Bible?",
-      "prompt_v3": "Give me a concrete tip from the Bible for my daily life!"
+      "title": "Life Hack",
+      "desc": "Karunungan ng Bibliya para sa Pamilya at Trabaho",
+      "prompt": "Anong tip sa Bibliya ang makakatulong sa akin sa pang-araw-araw na buhay kasama ang pamilya at trabaho? Bigyan mo ako ng isang bagay na praktikal!",
+      "prompt_v1": "Paano ako matutulungan ng Bibliya sa nakababahalang pang-araw-araw na buhay?",
+      "prompt_v2": "Anong mga praktikal na tip sa buhay ang nasa Bibliya?",
+      "prompt_v3": "Bigyan mo ako ng isang konkretong tip mula sa Bibliya para sa aking pang-araw-araw na buhay!"
     },
     "strengths": {
-      "title": "Your strengths",
-      "desc": "Discover what's inside you",
-      "prompt": "Help me discover my personal strengths – what does the Bible say about the gifts every person has?",
-      "prompt_v1": "What strengths do I have according to the Bible?",
-      "prompt_v2": "How can I find out what my gifts and talents are?",
-      "prompt_v3": "What does the Bible say about what makes me special?"
+      "title": "Ang Iyong mga Kalakasan",
+      "desc": "Tuklasin kung ano ang nasa loob mo",
+      "prompt": "Tulungan mo akong tuklasin ang aking mga personal na kalakasan – ano ang sinasabi ng Bibliya tungkol sa mga kaloob na mayroon ang bawat tao?",
+      "prompt_v1": "Anong mga kalakasan ang mayroon ako ayon sa Bibliya?",
+      "prompt_v2": "Paano ko malalaman kung ano ang aking mga kaloob at talento?",
+      "prompt_v3": "Ano ang sinasabi ng Bibliya tungkol sa kung ano ang nagpapabukod-tangi sa akin?"
     },
     "family": {
-      "title": "Family & everyday life",
-      "desc": "More appreciation in daily life",
-      "prompt": "How can I show my family more appreciation? Give me practical ideas with biblical inspiration.",
-      "prompt_v1": "How do I strengthen my family relationships?",
-      "prompt_v2": "What does the Bible say about a good family life?",
-      "prompt_v3": "Give me an idea for how I can make someone in my family happy today!"
+      "title": "Pamilya at Pang-araw-araw na Buhay",
+      "desc": "Higit na pagpapahalaga sa pamumuhay nang magkasama",
+      "prompt": "Paano ko maipapakita ang higit na pagpapahalaga sa aking pamilya? Bigyan mo ako ng mga praktikal na ideya na may inspirasyon sa Bibliya.",
+      "prompt_v1": "Paano ko mapapalakas ang aking mga relasyon sa pamilya?",
+      "prompt_v2": "Ano ang sinasabi ng Bibliya tungkol sa isang mabuting buhay pampamilya?",
+      "prompt_v3": "Bigyan mo ako ng ideya kung paano ko mapasasaya ang isang tao sa aking pamilya ngayon!"
     },
     "relax": {
-      "title": "Find peace",
-      "desc": "A moment of stillness and calm",
-      "prompt": "I need a moment of peace. Help me unwind – with a calming Bible verse or a short meditation.",
-      "prompt_v1": "Give me a calming psalm for this moment.",
-      "prompt_v2": "How can I find true rest according to the Bible?",
-      "prompt_v3": "Guide me through a short biblical meditation."
+      "title": "Magpahinga",
+      "desc": "Maghanap ng isang sandali ng katahimikan at kapayapaan",
+      "prompt": "Kailangan ko ng isang sandali ng kapayapaan. Tulungan mo akong mag-relax – na may nakapapawing pagod na talata sa Bibliya o isang maikling pagmumuni-muni.",
+      "prompt_v1": "Bigyan mo ako ng nakapapawing pagod na Salmo para sa sandaling ito.",
+      "prompt_v2": "Paano ko mahahanap ang tunay na kapayapaan ayon sa Bibliya?",
+      "prompt_v3": "Gabayan mo ako sa isang maikling pagmumuni-muni sa Bibliya."
     }
   },
   "lifeWheel": {

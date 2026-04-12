@@ -529,52 +529,52 @@
     },
     "showMore": "lisää",
     "dailywisdom": {
-      "title": "Wisdom for today",
-      "desc": "An encouraging thought for your day",
-      "prompt": "Give me a short, encouraging thought for my day – with a fitting Bible verse.",
-      "prompt_v1": "What's the best advice the Bible has for today?",
-      "prompt_v2": "Give me a Bible wisdom that will carry me through the day.",
-      "prompt_v3": "Surprise me with an encouraging Bible verse for today!"
+      "title": "Päivän viisaus",
+      "desc": "Rohkaiseva ajatus päivääsi",
+      "prompt": "Anna minulle lyhyt, rohkaiseva ajatus päivääni – sopivan raamatunjakeen kera.",
+      "prompt_v1": "Mikä on paras neuvo, jonka Raamattu antaa tälle päivälle?",
+      "prompt_v2": "Anna minulle Raamatusta viisaus, joka kuljettaa minua läpi päivän.",
+      "prompt_v3": "Yllätä minut rohkaisevalla raamatunjakeella tälle päivälle!"
     },
     "funfact": {
-      "title": "Did you know?",
-      "desc": "Surprising facts from the Bible",
-      "prompt": "Tell me a surprising fact from the Bible that most people don't know!",
-      "prompt_v1": "What's the craziest story in the Bible?",
-      "prompt_v2": "What Bible facts surprise most people?",
-      "prompt_v3": "Tell me something funny or unexpected from the Bible!"
+      "title": "Tiesitkö jo?",
+      "desc": "Yllättäviä faktoja Raamatusta",
+      "prompt": "Kerro minulle yllättävä fakta Raamatusta, jota useimmat ihmiset eivät tiedä!",
+      "prompt_v1": "Mikä on hulluin tarina Raamatussa?",
+      "prompt_v2": "Mitkä Raamatun faktat yllättävät useimmat ihmiset?",
+      "prompt_v3": "Kerro minulle jotain hauskaa tai odottamatonta Raamatusta!"
     },
     "lifehack": {
-      "title": "Life hack",
-      "desc": "Biblical wisdom for family & work",
-      "prompt": "What biblical tip helps in everyday life with family and work? Give me something practical!",
-      "prompt_v1": "How can the Bible help me in a stressful daily life?",
-      "prompt_v2": "What practical life tips are hidden in the Bible?",
-      "prompt_v3": "Give me a concrete tip from the Bible for my daily life!"
+      "title": "Elämänohje",
+      "desc": "Raamatullista viisautta perheelle ja työlle",
+      "prompt": "Mikä raamatullinen vinkki auttaa minua arjessa perheen ja työn kanssa? Anna minulle jotain käytännöllistä!",
+      "prompt_v1": "Miten Raamattu voi auttaa minua stressaavassa arjessa?",
+      "prompt_v2": "Mitä käytännöllisiä elämänohjeita Raamatussa on?",
+      "prompt_v3": "Anna minulle konkreettinen vinkki Raamatusta arkeeni!"
     },
     "strengths": {
-      "title": "Your strengths",
-      "desc": "Discover what's inside you",
-      "prompt": "Help me discover my personal strengths – what does the Bible say about the gifts every person has?",
-      "prompt_v1": "What strengths do I have according to the Bible?",
-      "prompt_v2": "How can I find out what my gifts and talents are?",
-      "prompt_v3": "What does the Bible say about what makes me special?"
+      "title": "Vahvuutesi",
+      "desc": "Löydä, mitä sinussa on",
+      "prompt": "Auta minua löytämään henkilökohtaiset vahvuuteni – mitä Raamattu sanoo lahjoista, joita jokaisella ihmisellä on?",
+      "prompt_v1": "Mitkä ovat vahvuuteni Raamatun mukaan?",
+      "prompt_v2": "Miten voin selvittää, mitkä ovat lahjani ja kykyni?",
+      "prompt_v3": "Mitä Raamattu sanoo siitä, mikä tekee minusta erityisen?"
     },
     "family": {
-      "title": "Family & everyday life",
-      "desc": "More appreciation in daily life",
-      "prompt": "How can I show my family more appreciation? Give me practical ideas with biblical inspiration.",
-      "prompt_v1": "How do I strengthen my family relationships?",
-      "prompt_v2": "What does the Bible say about a good family life?",
-      "prompt_v3": "Give me an idea for how I can make someone in my family happy today!"
+      "title": "Perhe ja arki",
+      "desc": "Lisää arvostusta yhdessäeloon",
+      "prompt": "Miten voin osoittaa perheelleni enemmän arvostusta? Anna minulle käytännöllisiä ideoita raamatullisella inspiraatiolla.",
+      "prompt_v1": "Miten vahvistan perhesuhteitani?",
+      "prompt_v2": "Mitä Raamattu sanoo hyvästä perhe-elämästä?",
+      "prompt_v3": "Anna minulle idea, miten voin ilahduttaa jotakuta perheessäni tänään!"
     },
     "relax": {
-      "title": "Find peace",
-      "desc": "A moment of stillness and calm",
-      "prompt": "I need a moment of peace. Help me unwind – with a calming Bible verse or a short meditation.",
-      "prompt_v1": "Give me a calming psalm for this moment.",
-      "prompt_v2": "How can I find true rest according to the Bible?",
-      "prompt_v3": "Guide me through a short biblical meditation."
+      "title": "Rauhoitu",
+      "desc": "Löydä hetki hiljaisuutta ja rauhaa",
+      "prompt": "Tarvitsen hetken rauhaa. Auta minua rentoutumaan – rauhoittavalla raamatunjakeella tai lyhyellä meditaatiolla.",
+      "prompt_v1": "Anna minulle rauhoittava psalmi tähän hetkeen.",
+      "prompt_v2": "Miten Raamatun mukaan voi löytää todellisen rauhan?",
+      "prompt_v3": "Ohjaa minut lyhyen raamatullisen meditaation läpi."
     }
   },
   "lifeWheel": {

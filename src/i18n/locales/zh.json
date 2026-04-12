@@ -568,52 +568,52 @@
     },
     "showMore": "更多",
     "dailywisdom": {
-      "title": "Wisdom for today",
-      "desc": "An encouraging thought for your day",
-      "prompt": "Give me a short, encouraging thought for my day – with a fitting Bible verse.",
-      "prompt_v1": "What's the best advice the Bible has for today?",
-      "prompt_v2": "Give me a Bible wisdom that will carry me through the day.",
-      "prompt_v3": "Surprise me with an encouraging Bible verse for today!"
+      "title": "今日智慧",
+      "desc": "一句鼓励的话语，点亮你的一天",
+      "prompt": "给我一句简短、鼓舞人心的话语，并附上一段合适的圣经经文。",
+      "prompt_v1": "圣经对今天最好的建议是什么？",
+      "prompt_v2": "给我一句来自圣经的智慧，伴我度过今天。",
+      "prompt_v3": "用一段鼓舞人心的圣经经文给我一个惊喜！"
     },
     "funfact": {
-      "title": "Did you know?",
-      "desc": "Surprising facts from the Bible",
-      "prompt": "Tell me a surprising fact from the Bible that most people don't know!",
-      "prompt_v1": "What's the craziest story in the Bible?",
-      "prompt_v2": "What Bible facts surprise most people?",
-      "prompt_v3": "Tell me something funny or unexpected from the Bible!"
+      "title": "你知道吗？",
+      "desc": "来自圣经的惊人事实",
+      "prompt": "告诉我一个大多数人不知道的、来自圣经的惊人事实！",
+      "prompt_v1": "圣经中最疯狂的故事是什么？",
+      "prompt_v2": "圣经中哪些事实最让人惊讶？",
+      "prompt_v3": "告诉我一些关于圣经的有趣或意想不到的事情！"
     },
     "lifehack": {
-      "title": "Life hack",
-      "desc": "Biblical wisdom for family & work",
-      "prompt": "What biblical tip helps in everyday life with family and work? Give me something practical!",
-      "prompt_v1": "How can the Bible help me in a stressful daily life?",
-      "prompt_v2": "What practical life tips are hidden in the Bible?",
-      "prompt_v3": "Give me a concrete tip from the Bible for my daily life!"
+      "title": "生活小贴士",
+      "desc": "家庭与职业的圣经智慧",
+      "prompt": "哪条圣经小贴士能帮助我应对家庭和职业的日常生活？给我一些实用的！",
+      "prompt_v1": "圣经如何帮助我应对忙碌的日常生活？",
+      "prompt_v2": "圣经中隐藏着哪些实用的生活小贴士？",
+      "prompt_v3": "给我一个来自圣经的具体建议，用于我的日常生活！"
     },
     "strengths": {
-      "title": "Your strengths",
-      "desc": "Discover what's inside you",
-      "prompt": "Help me discover my personal strengths – what does the Bible say about the gifts every person has?",
-      "prompt_v1": "What strengths do I have according to the Bible?",
-      "prompt_v2": "How can I find out what my gifts and talents are?",
-      "prompt_v3": "What does the Bible say about what makes me special?"
+      "title": "你的优势",
+      "desc": "发现你内在的潜力",
+      "prompt": "帮助我发现我的个人优势——圣经对每个人所拥有的恩赐有什么说法？",
+      "prompt_v1": "根据圣经，我有什么优势？",
+      "prompt_v2": "我如何才能发现我的恩赐和才能？",
+      "prompt_v3": "圣经对我的独特之处有什么说法？"
     },
     "family": {
-      "title": "Family & everyday life",
-      "desc": "More appreciation in daily life",
-      "prompt": "How can I show my family more appreciation? Give me practical ideas with biblical inspiration.",
-      "prompt_v1": "How do I strengthen my family relationships?",
-      "prompt_v2": "What does the Bible say about a good family life?",
-      "prompt_v3": "Give me an idea for how I can make someone in my family happy today!"
+      "title": "家庭与日常生活",
+      "desc": "在共同生活中增加欣赏",
+      "prompt": "我如何才能向我的家人表达更多的欣赏？给我一些受圣经启发的实用想法。",
+      "prompt_v1": "我如何加强我的家庭关系？",
+      "prompt_v2": "圣经对美好的家庭生活有什么说法？",
+      "prompt_v3": "给我一个今天如何让我的家人开心的主意！"
     },
     "relax": {
-      "title": "Find peace",
-      "desc": "A moment of stillness and calm",
-      "prompt": "I need a moment of peace. Help me unwind – with a calming Bible verse or a short meditation.",
-      "prompt_v1": "Give me a calming psalm for this moment.",
-      "prompt_v2": "How can I find true rest according to the Bible?",
-      "prompt_v3": "Guide me through a short biblical meditation."
+      "title": "放松",
+      "desc": "寻找片刻的宁静与和平",
+      "prompt": "我需要片刻的宁静。用一段平静的圣经经文或简短的冥想帮助我放松。",
+      "prompt_v1": "给我一段平静的诗篇。",
+      "prompt_v2": "根据圣经，我如何才能找到真正的平静？",
+      "prompt_v3": "引导我进行一次简短的圣经冥想。"
     }
   },
   "lifeWheel": {

@@ -529,52 +529,52 @@
     },
     "showMore": "ọzọ",
     "dailywisdom": {
-      "title": "Wisdom for today",
-      "desc": "An encouraging thought for your day",
-      "prompt": "Give me a short, encouraging thought for my day – with a fitting Bible verse.",
-      "prompt_v1": "What's the best advice the Bible has for today?",
-      "prompt_v2": "Give me a Bible wisdom that will carry me through the day.",
-      "prompt_v3": "Surprise me with an encouraging Bible verse for today!"
+      "title": "Amamihe maka taa",
+      "desc": "Echiche na-agba ume maka ụbọchị gị",
+      "prompt": "Nye m echiche dị mkpirikpi, na-agba ume maka ụbọchị m – ya na amaokwu Baịbụl dabara adaba.",
+      "prompt_v1": "Gịnị bụ ndụmọdụ kacha mma Baịbụl nwere maka taa?",
+      "prompt_v2": "Nye m amamihe sitere na Baịbụl nke ga-eso m n'ụbọchị niile.",
+      "prompt_v3": "Jiri amaokwu Baịbụl na-agba ume maka taa tụrụ m n'anya!"
     },
     "funfact": {
-      "title": "Did you know?",
-      "desc": "Surprising facts from the Bible",
-      "prompt": "Tell me a surprising fact from the Bible that most people don't know!",
-      "prompt_v1": "What's the craziest story in the Bible?",
-      "prompt_v2": "What Bible facts surprise most people?",
-      "prompt_v3": "Tell me something funny or unexpected from the Bible!"
+      "title": "Ị maara?",
+      "desc": "Eziokwu dị ịtụnanya sitere na Baịbụl",
+      "prompt": "Kọọrọ m eziokwu dị ịtụnanya sitere na Baịbụl nke ọtụtụ mmadụ na-amaghị!",
+      "prompt_v1": "Gịnị bụ akụkọ kacha njọ na Baịbụl?",
+      "prompt_v2": "Kedu eziokwu sitere na Baịbụl na-eju ọtụtụ mmadụ anya?",
+      "prompt_v3": "Kọọrọ m ihe na-atọ ọchị ma ọ bụ ihe a na-atụghị anya ya sitere na Baịbụl!"
     },
     "lifehack": {
-      "title": "Life hack",
-      "desc": "Biblical wisdom for family & work",
-      "prompt": "What biblical tip helps in everyday life with family and work? Give me something practical!",
-      "prompt_v1": "How can the Bible help me in a stressful daily life?",
-      "prompt_v2": "What practical life tips are hidden in the Bible?",
-      "prompt_v3": "Give me a concrete tip from the Bible for my daily life!"
+      "title": "Ndụmọdụ ndụ",
+      "desc": "Amamihe Baịbụl maka ezinụlọ & ọrụ",
+      "prompt": "Kedu ndụmọdụ Baịbụl ga-enyere m aka n'ụbọchị niile na ezinụlọ na ọrụ? Nye m ihe bara uru!",
+      "prompt_v1": "Olee otú Baịbụl ga-esi nyere m aka n'ụbọchị niile na-arụsi ọrụ ike?",
+      "prompt_v2": "Kedu ndụmọdụ ndụ bara uru dị na Baịbụl?",
+      "prompt_v3": "Nye m ndụmọdụ doro anya sitere na Baịbụl maka ndụ m kwa ụbọchị!"
     },
     "strengths": {
-      "title": "Your strengths",
-      "desc": "Discover what's inside you",
-      "prompt": "Help me discover my personal strengths – what does the Bible say about the gifts every person has?",
-      "prompt_v1": "What strengths do I have according to the Bible?",
-      "prompt_v2": "How can I find out what my gifts and talents are?",
-      "prompt_v3": "What does the Bible say about what makes me special?"
+      "title": "Ike gị",
+      "desc": "Chọpụta ihe dị n'ime gị",
+      "prompt": "Nyere m aka ịchọpụta ike m n'onwe m – gịnị ka Baịbụl na-ekwu banyere onyinye ndị mmadụ niile nwere?",
+      "prompt_v1": "Kedu ike m nwere dị ka Baịbụl si kwuo?",
+      "prompt_v2": "Olee otú m ga-esi chọpụta ihe bụ onyinye na talent m?",
+      "prompt_v3": "Gịnị ka Baịbụl na-ekwu banyere ihe na-eme ka m bụrụ onye pụrụ iche?"
     },
     "family": {
-      "title": "Family & everyday life",
-      "desc": "More appreciation in daily life",
-      "prompt": "How can I show my family more appreciation? Give me practical ideas with biblical inspiration.",
-      "prompt_v1": "How do I strengthen my family relationships?",
-      "prompt_v2": "What does the Bible say about a good family life?",
-      "prompt_v3": "Give me an idea for how I can make someone in my family happy today!"
+      "title": "Ezinụlọ & Ndụ kwa ụbọchị",
+      "desc": "Ekele ka ukwuu n'ịdịkọ ọnụ",
+      "prompt": "Olee otú m ga-esi gosi ezinụlọ m ekele ka ukwuu? Nye m echiche bara uru na mkpali Baịbụl.",
+      "prompt_v1": "Olee otú m ga-esi wusie mmekọrịta ezinụlọ m ike?",
+      "prompt_v2": "Gịnị ka Baịbụl na-ekwu banyere ezi ndụ ezinụlọ?",
+      "prompt_v3": "Nye m echiche banyere otú m ga-esi mee ka onye ọ bụla n'ime ezinụlọ m nwee obi ụtọ taa!"
     },
     "relax": {
-      "title": "Find peace",
-      "desc": "A moment of stillness and calm",
-      "prompt": "I need a moment of peace. Help me unwind – with a calming Bible verse or a short meditation.",
-      "prompt_v1": "Give me a calming psalm for this moment.",
-      "prompt_v2": "How can I find true rest according to the Bible?",
-      "prompt_v3": "Guide me through a short biblical meditation."
+      "title": "Izu ike",
+      "desc": "Ịchọta oge ịgbachi nkịtị na udo",
+      "prompt": "Achọrọ m oge izu ike. Nyere m aka izu ike – ya na amaokwu Baịbụl na-enye obi iru ala ma ọ bụ ntụgharị uche dị mkpirikpi.",
+      "prompt_v1": "Nye m Abụ Ọma na-enye obi iru ala maka oge a.",
+      "prompt_v2": "Olee otú m ga-esi chọta ezi udo dị ka Baịbụl si kwuo?",
+      "prompt_v3": "Duru m site na ntụgharị uche Baịbụl dị mkpirikpi."
     }
   },
   "lifeWheel": {

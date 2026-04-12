@@ -567,52 +567,52 @@
     },
     "showMore": "zaidi",
     "dailywisdom": {
-      "title": "Wisdom for today",
-      "desc": "An encouraging thought for your day",
-      "prompt": "Give me a short, encouraging thought for my day – with a fitting Bible verse.",
-      "prompt_v1": "What's the best advice the Bible has for today?",
-      "prompt_v2": "Give me a Bible wisdom that will carry me through the day.",
-      "prompt_v3": "Surprise me with an encouraging Bible verse for today!"
+      "title": "Hekima kwa Leo",
+      "desc": "Wazo la kutia moyo kwa siku yako",
+      "prompt": "Nipe wazo fupi, la kutia moyo kwa siku yangu – na mstari unaofaa wa Biblia.",
+      "prompt_v1": "Ni ushauri gani bora ambao Biblia inao kwa leo?",
+      "prompt_v2": "Nipe hekima kutoka kwa Biblia itakayoniongoza siku nzima.",
+      "prompt_v3": "Nishangaze na mstari wa Biblia wa kutia moyo kwa leo!"
     },
     "funfact": {
-      "title": "Did you know?",
-      "desc": "Surprising facts from the Bible",
-      "prompt": "Tell me a surprising fact from the Bible that most people don't know!",
-      "prompt_v1": "What's the craziest story in the Bible?",
-      "prompt_v2": "What Bible facts surprise most people?",
-      "prompt_v3": "Tell me something funny or unexpected from the Bible!"
+      "title": "Je, Wajua?",
+      "desc": "Mambo ya kushangaza kutoka kwa Biblia",
+      "prompt": "Niambie ukweli wa kushangaza kutoka kwa Biblia ambao watu wengi hawajui!",
+      "prompt_v1": "Ni hadithi gani ya ajabu zaidi katika Biblia?",
+      "prompt_v2": "Ni ukweli gani kutoka kwa Biblia unaowashangaza watu wengi?",
+      "prompt_v3": "Niambie kitu cha kuchekesha au kisichotarajiwa kutoka kwa Biblia!"
     },
     "lifehack": {
-      "title": "Life hack",
-      "desc": "Biblical wisdom for family & work",
-      "prompt": "What biblical tip helps in everyday life with family and work? Give me something practical!",
-      "prompt_v1": "How can the Bible help me in a stressful daily life?",
-      "prompt_v2": "What practical life tips are hidden in the Bible?",
-      "prompt_v3": "Give me a concrete tip from the Bible for my daily life!"
+      "title": "Ujanja wa Maisha",
+      "desc": "Hekima ya Kibiblia kwa Familia na Kazi",
+      "prompt": "Ni ushauri gani wa kibiblia unaonisaidia katika maisha ya kila siku na familia na kazi? Nipe kitu cha vitendo!",
+      "prompt_v1": "Biblia inawezaje kunisaidia katika maisha yenye mkazo ya kila siku?",
+      "prompt_v2": "Ni vidokezo gani vya vitendo vya maisha vilivyofichwa katika Biblia?",
+      "prompt_v3": "Nipe kidokezo maalum kutoka kwa Biblia kwa maisha yangu ya kila siku!"
     },
     "strengths": {
-      "title": "Your strengths",
-      "desc": "Discover what's inside you",
-      "prompt": "Help me discover my personal strengths – what does the Bible say about the gifts every person has?",
-      "prompt_v1": "What strengths do I have according to the Bible?",
-      "prompt_v2": "How can I find out what my gifts and talents are?",
-      "prompt_v3": "What does the Bible say about what makes me special?"
+      "title": "Nguvu Zako",
+      "desc": "Gundua kilicho ndani yako",
+      "prompt": "Nisaidie kugundua nguvu zangu za kibinafsi – Biblia inasema nini kuhusu karama ambazo kila mtu anazo?",
+      "prompt_v1": "Nina nguvu gani kulingana na Biblia?",
+      "prompt_v2": "Ninawezaje kujua ni karama na talanta zangu zipi?",
+      "prompt_v3": "Biblia inasema nini kuhusu kinachonifanya kuwa wa pekee?"
     },
     "family": {
-      "title": "Family & everyday life",
-      "desc": "More appreciation in daily life",
-      "prompt": "How can I show my family more appreciation? Give me practical ideas with biblical inspiration.",
-      "prompt_v1": "How do I strengthen my family relationships?",
-      "prompt_v2": "What does the Bible say about a good family life?",
-      "prompt_v3": "Give me an idea for how I can make someone in my family happy today!"
+      "title": "Familia na Maisha ya Kila Siku",
+      "desc": "Thamani zaidi katika kuishi pamoja",
+      "prompt": "Ninawezaje kuonyesha familia yangu shukrani zaidi? Nipe mawazo ya vitendo na msukumo wa kibiblia.",
+      "prompt_v1": "Ninawezaje kuimarisha uhusiano wangu wa kifamilia?",
+      "prompt_v2": "Biblia inasema nini kuhusu maisha mazuri ya familia?",
+      "prompt_v3": "Nipe wazo la jinsi ninavyoweza kumfurahisha mtu katika familia yangu leo!"
     },
     "relax": {
-      "title": "Find peace",
-      "desc": "A moment of stillness and calm",
-      "prompt": "I need a moment of peace. Help me unwind – with a calming Bible verse or a short meditation.",
-      "prompt_v1": "Give me a calming psalm for this moment.",
-      "prompt_v2": "How can I find true rest according to the Bible?",
-      "prompt_v3": "Guide me through a short biblical meditation."
+      "title": "Kutulia",
+      "desc": "Kupata wakati wa utulivu na amani",
+      "prompt": "Ninahitaji wakati wa utulivu. Nisaidie kutulia – kwa mstari wa Biblia wa kutuliza au tafakari fupi.",
+      "prompt_v1": "Nipe Zaburi ya kutuliza kwa wakati huu.",
+      "prompt_v2": "Ninawezaje kupata amani ya kweli kulingana na Biblia?",
+      "prompt_v3": "Niongoze kupitia tafakari fupi ya kibiblia."
     }
   },
   "lifeWheel": {

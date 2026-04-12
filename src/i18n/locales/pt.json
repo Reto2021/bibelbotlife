@@ -532,52 +532,52 @@
     },
     "showMore": "mais",
     "dailywisdom": {
-      "title": "Wisdom for today",
-      "desc": "An encouraging thought for your day",
-      "prompt": "Give me a short, encouraging thought for my day – with a fitting Bible verse.",
-      "prompt_v1": "What's the best advice the Bible has for today?",
-      "prompt_v2": "Give me a Bible wisdom that will carry me through the day.",
-      "prompt_v3": "Surprise me with an encouraging Bible verse for today!"
+      "title": "Sabedoria para hoje",
+      "desc": "Um pensamento encorajador para o seu dia",
+      "prompt": "Dê-me um pensamento curto e encorajador para o meu dia – com um versículo bíblico adequado.",
+      "prompt_v1": "Qual é o melhor conselho que a Bíblia tem para hoje?",
+      "prompt_v2": "Dê-me uma sabedoria da Bíblia para me acompanhar durante o dia.",
+      "prompt_v3": "Surpreenda-me com um versículo bíblico encorajador para hoje!"
     },
     "funfact": {
-      "title": "Did you know?",
-      "desc": "Surprising facts from the Bible",
-      "prompt": "Tell me a surprising fact from the Bible that most people don't know!",
-      "prompt_v1": "What's the craziest story in the Bible?",
-      "prompt_v2": "What Bible facts surprise most people?",
-      "prompt_v3": "Tell me something funny or unexpected from the Bible!"
+      "title": "Você sabia?",
+      "desc": "Fatos surpreendentes da Bíblia",
+      "prompt": "Conte-me um fato surpreendente da Bíblia que a maioria das pessoas não conhece!",
+      "prompt_v1": "Qual é a história mais louca da Bíblia?",
+      "prompt_v2": "Quais fatos da Bíblia surpreendem a maioria das pessoas?",
+      "prompt_v3": "Conte-me algo engraçado ou inesperado da Bíblia!"
     },
     "lifehack": {
-      "title": "Life hack",
-      "desc": "Biblical wisdom for family & work",
-      "prompt": "What biblical tip helps in everyday life with family and work? Give me something practical!",
-      "prompt_v1": "How can the Bible help me in a stressful daily life?",
-      "prompt_v2": "What practical life tips are hidden in the Bible?",
-      "prompt_v3": "Give me a concrete tip from the Bible for my daily life!"
+      "title": "Dica de vida",
+      "desc": "Sabedoria bíblica para família e trabalho",
+      "prompt": "Que dica bíblica me ajuda no dia a dia com a família e o trabalho? Dê-me algo prático!",
+      "prompt_v1": "Como a Bíblia pode me ajudar no dia a dia estressante?",
+      "prompt_v2": "Que dicas práticas de vida estão na Bíblia?",
+      "prompt_v3": "Dê-me uma dica concreta da Bíblia para o meu dia a dia!"
     },
     "strengths": {
-      "title": "Your strengths",
-      "desc": "Discover what's inside you",
-      "prompt": "Help me discover my personal strengths – what does the Bible say about the gifts every person has?",
-      "prompt_v1": "What strengths do I have according to the Bible?",
-      "prompt_v2": "How can I find out what my gifts and talents are?",
-      "prompt_v3": "What does the Bible say about what makes me special?"
+      "title": "Seus pontos fortes",
+      "desc": "Descubra o que há em você",
+      "prompt": "Ajude-me a descobrir meus pontos fortes pessoais – o que a Bíblia diz sobre os dons que cada pessoa tem?",
+      "prompt_v1": "Quais são meus pontos fortes de acordo com a Bíblia?",
+      "prompt_v2": "Como posso descobrir quais são meus dons e talentos?",
+      "prompt_v3": "O que a Bíblia diz sobre o que me torna especial?"
     },
     "family": {
-      "title": "Family & everyday life",
-      "desc": "More appreciation in daily life",
-      "prompt": "How can I show my family more appreciation? Give me practical ideas with biblical inspiration.",
-      "prompt_v1": "How do I strengthen my family relationships?",
-      "prompt_v2": "What does the Bible say about a good family life?",
-      "prompt_v3": "Give me an idea for how I can make someone in my family happy today!"
+      "title": "Família e dia a dia",
+      "desc": "Mais apreço na convivência",
+      "prompt": "Como posso mostrar mais apreço à minha família? Dê-me ideias práticas com inspiração bíblica.",
+      "prompt_v1": "Como fortaleço meus relacionamentos familiares?",
+      "prompt_v2": "O que a Bíblia diz sobre uma boa vida familiar?",
+      "prompt_v3": "Dê-me uma ideia de como posso alegrar alguém da minha família hoje!"
     },
     "relax": {
-      "title": "Find peace",
-      "desc": "A moment of stillness and calm",
-      "prompt": "I need a moment of peace. Help me unwind – with a calming Bible verse or a short meditation.",
-      "prompt_v1": "Give me a calming psalm for this moment.",
-      "prompt_v2": "How can I find true rest according to the Bible?",
-      "prompt_v3": "Guide me through a short biblical meditation."
+      "title": "Acalmar-se",
+      "desc": "Encontre um momento de silêncio e paz",
+      "prompt": "Preciso de um momento de paz. Ajude-me a relaxar – com um versículo bíblico reconfortante ou uma breve meditação.",
+      "prompt_v1": "Dê-me um salmo reconfortante para este momento.",
+      "prompt_v2": "Como posso encontrar verdadeira paz de acordo com a Bíblia?",
+      "prompt_v3": "Guie-me através de uma breve meditação bíblica."
     }
   },
   "lifeWheel": {

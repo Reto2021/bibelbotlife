@@ -529,52 +529,52 @@
     },
     "showMore": "більше",
     "dailywisdom": {
-      "title": "Wisdom for today",
-      "desc": "An encouraging thought for your day",
-      "prompt": "Give me a short, encouraging thought for my day – with a fitting Bible verse.",
-      "prompt_v1": "What's the best advice the Bible has for today?",
-      "prompt_v2": "Give me a Bible wisdom that will carry me through the day.",
-      "prompt_v3": "Surprise me with an encouraging Bible verse for today!"
+      "title": "Мудрість на сьогодні",
+      "desc": "Надихаюча думка для вашого дня",
+      "prompt": "Дай мені коротку, надихаючу думку на мій день – з відповідним біблійним віршем.",
+      "prompt_v1": "Яка найкраща порада, яку Біблія має на сьогодні?",
+      "prompt_v2": "Дай мені мудрість з Біблії, яка супроводжуватиме мене протягом дня.",
+      "prompt_v3": "Здивуй мене надихаючим біблійним віршем на сьогодні!"
     },
     "funfact": {
-      "title": "Did you know?",
-      "desc": "Surprising facts from the Bible",
-      "prompt": "Tell me a surprising fact from the Bible that most people don't know!",
-      "prompt_v1": "What's the craziest story in the Bible?",
-      "prompt_v2": "What Bible facts surprise most people?",
-      "prompt_v3": "Tell me something funny or unexpected from the Bible!"
+      "title": "Чи знаєте ви?",
+      "desc": "Дивовижні факти з Біблії",
+      "prompt": "Розкажи мені дивовижний факт з Біблії, який більшість людей не знає!",
+      "prompt_v1": "Яка найбожевільніша історія в Біблії?",
+      "prompt_v2": "Які факти з Біблії дивують більшість людей?",
+      "prompt_v3": "Розкажи мені щось смішне або несподіване з Біблії!"
     },
     "lifehack": {
-      "title": "Life hack",
-      "desc": "Biblical wisdom for family & work",
-      "prompt": "What biblical tip helps in everyday life with family and work? Give me something practical!",
-      "prompt_v1": "How can the Bible help me in a stressful daily life?",
-      "prompt_v2": "What practical life tips are hidden in the Bible?",
-      "prompt_v3": "Give me a concrete tip from the Bible for my daily life!"
+      "title": "Лайфхак",
+      "desc": "Біблійна мудрість для сім'ї та роботи",
+      "prompt": "Яка біблійна порада допоможе мені в повсякденному житті з сім'єю та роботою? Дай мені щось практичне!",
+      "prompt_v1": "Як Біблія може допомогти мені в напруженому повсякденному житті?",
+      "prompt_v2": "Які практичні життєві поради містяться в Біблії?",
+      "prompt_v3": "Дай мені конкретну пораду з Біблії для мого повсякденного життя!"
     },
     "strengths": {
-      "title": "Your strengths",
-      "desc": "Discover what's inside you",
-      "prompt": "Help me discover my personal strengths – what does the Bible say about the gifts every person has?",
-      "prompt_v1": "What strengths do I have according to the Bible?",
-      "prompt_v2": "How can I find out what my gifts and talents are?",
-      "prompt_v3": "What does the Bible say about what makes me special?"
+      "title": "Ваші сильні сторони",
+      "desc": "Відкрийте, що в вас приховано",
+      "prompt": "Допоможи мені відкрити мої особисті сильні сторони – що Біблія говорить про дари, які має кожна людина?",
+      "prompt_v1": "Які мої сильні сторони згідно з Біблією?",
+      "prompt_v2": "Як я можу дізнатися, які мої дари та таланти?",
+      "prompt_v3": "Що Біблія говорить про те, що робить мене особливим?"
     },
     "family": {
-      "title": "Family & everyday life",
-      "desc": "More appreciation in daily life",
-      "prompt": "How can I show my family more appreciation? Give me practical ideas with biblical inspiration.",
-      "prompt_v1": "How do I strengthen my family relationships?",
-      "prompt_v2": "What does the Bible say about a good family life?",
-      "prompt_v3": "Give me an idea for how I can make someone in my family happy today!"
+      "title": "Сім'я та повсякденне життя",
+      "desc": "Більше вдячності у співжитті",
+      "prompt": "Як я можу виявити більше вдячності своїй родині? Дай мені практичні ідеї з біблійним натхненням.",
+      "prompt_v1": "Як я можу зміцнити свої сімейні стосунки?",
+      "prompt_v2": "Що Біблія говорить про добре сімейне життя?",
+      "prompt_v3": "Дай мені ідею, як я можу сьогодні порадувати когось у своїй родині!"
     },
     "relax": {
-      "title": "Find peace",
-      "desc": "A moment of stillness and calm",
-      "prompt": "I need a moment of peace. Help me unwind – with a calming Bible verse or a short meditation.",
-      "prompt_v1": "Give me a calming psalm for this moment.",
-      "prompt_v2": "How can I find true rest according to the Bible?",
-      "prompt_v3": "Guide me through a short biblical meditation."
+      "title": "Заспокоїтися",
+      "desc": "Знайти момент тиші та миру",
+      "prompt": "Мені потрібен момент спокою. Допоможи мені розслабитися – з заспокійливим біблійним віршем або короткою медитацією.",
+      "prompt_v1": "Дай мені заспокійливий псалом на цей момент.",
+      "prompt_v2": "Як я можу знайти справжній спокій згідно з Біблією?",
+      "prompt_v3": "Проведи мене через коротку біблійну медитацію."
     }
   },
   "lifeWheel": {

@@ -529,52 +529,52 @@
     },
     "showMore": "meer",
     "dailywisdom": {
-      "title": "Wisdom for today",
-      "desc": "An encouraging thought for your day",
-      "prompt": "Give me a short, encouraging thought for my day – with a fitting Bible verse.",
-      "prompt_v1": "What's the best advice the Bible has for today?",
-      "prompt_v2": "Give me a Bible wisdom that will carry me through the day.",
-      "prompt_v3": "Surprise me with an encouraging Bible verse for today!"
+      "title": "Wysheid vir vandag",
+      "desc": "'n Bemoedigende gedagte vir jou dag",
+      "prompt": "Gee my 'n kort, bemoedigende gedagte vir my dag – met 'n gepaste Bybelvers.",
+      "prompt_v1": "Wat is die beste raad wat die Bybel vir vandag het?",
+      "prompt_v2": "Gee my 'n wysheid uit die Bybel wat my deur die dag sal lei.",
+      "prompt_v3": "Verras my met 'n bemoedigende Bybelvers vir vandag!"
     },
     "funfact": {
-      "title": "Did you know?",
-      "desc": "Surprising facts from the Bible",
-      "prompt": "Tell me a surprising fact from the Bible that most people don't know!",
-      "prompt_v1": "What's the craziest story in the Bible?",
-      "prompt_v2": "What Bible facts surprise most people?",
-      "prompt_v3": "Tell me something funny or unexpected from the Bible!"
+      "title": "Het jy geweet?",
+      "desc": "Verrassende feite uit die Bybel",
+      "prompt": "Vertel my 'n verrassende feit uit die Bybel wat die meeste mense nie ken nie!",
+      "prompt_v1": "Wat is die gekste storie in die Bybel?",
+      "prompt_v2": "Watter feite uit die Bybel verras die meeste mense?",
+      "prompt_v3": "Vertel my iets snaaks of onverwags uit die Bybel!"
     },
     "lifehack": {
-      "title": "Life hack",
-      "desc": "Biblical wisdom for family & work",
-      "prompt": "What biblical tip helps in everyday life with family and work? Give me something practical!",
-      "prompt_v1": "How can the Bible help me in a stressful daily life?",
-      "prompt_v2": "What practical life tips are hidden in the Bible?",
-      "prompt_v3": "Give me a concrete tip from the Bible for my daily life!"
+      "title": "Lewenswenk",
+      "desc": "Bybelse wysheid vir familie & beroep",
+      "prompt": "Watter Bybelse wenk help my in die alledaagse lewe met familie en beroep? Gee my iets prakties!",
+      "prompt_v1": "Hoe kan die Bybel my help in 'n stresvolle alledaagse lewe?",
+      "prompt_v2": "Watter praktiese lewenswenke is in die Bybel?",
+      "prompt_v3": "Gee my 'n konkrete wenk uit die Bybel vir my alledaagse lewe!"
     },
     "strengths": {
-      "title": "Your strengths",
-      "desc": "Discover what's inside you",
-      "prompt": "Help me discover my personal strengths – what does the Bible say about the gifts every person has?",
-      "prompt_v1": "What strengths do I have according to the Bible?",
-      "prompt_v2": "How can I find out what my gifts and talents are?",
-      "prompt_v3": "What does the Bible say about what makes me special?"
+      "title": "Jou Sterkpunte",
+      "desc": "Ontdek wat in jou steek",
+      "prompt": "Help my om my persoonlike sterkpunte te ontdek – wat sê die Bybel oor die gawes wat elke mens het?",
+      "prompt_v1": "Watter sterkpunte het ek volgens die Bybel?",
+      "prompt_v2": "Hoe kan ek uitvind wat my gawes en talente is?",
+      "prompt_v3": "Wat sê die Bybel oor wat my spesiaal maak?"
     },
     "family": {
-      "title": "Family & everyday life",
-      "desc": "More appreciation in daily life",
-      "prompt": "How can I show my family more appreciation? Give me practical ideas with biblical inspiration.",
-      "prompt_v1": "How do I strengthen my family relationships?",
-      "prompt_v2": "What does the Bible say about a good family life?",
-      "prompt_v3": "Give me an idea for how I can make someone in my family happy today!"
+      "title": "Familie & Alledaagse lewe",
+      "desc": "Meer waardering in die saamleef",
+      "prompt": "Hoe kan ek my familie meer waardering toon? Gee my praktiese idees met Bybelse inspirasie.",
+      "prompt_v1": "Hoe versterk ek my familieverhoudings?",
+      "prompt_v2": "Wat sê die Bybel oor 'n goeie gesinslewe?",
+      "prompt_v3": "Gee my 'n idee hoe ek vandag iemand in my familie bly kan maak!"
     },
     "relax": {
-      "title": "Find peace",
-      "desc": "A moment of stillness and calm",
-      "prompt": "I need a moment of peace. Help me unwind – with a calming Bible verse or a short meditation.",
-      "prompt_v1": "Give me a calming psalm for this moment.",
-      "prompt_v2": "How can I find true rest according to the Bible?",
-      "prompt_v3": "Guide me through a short biblical meditation."
+      "title": "Tot rus kom",
+      "desc": "'n Oomblik van stilte en vrede vind",
+      "prompt": "Ek het 'n oomblik van rus nodig. Help my om af te skakel – met 'n kalmerende Bybelvers of 'n kort meditasie.",
+      "prompt_v1": "Gee my 'n kalmerende Psalm vir hierdie oomblik.",
+      "prompt_v2": "Hoe kan ek volgens die Bybel ware rus vind?",
+      "prompt_v3": "Lei my deur 'n kort Bybelse meditasie."
     }
   },
   "lifeWheel": {

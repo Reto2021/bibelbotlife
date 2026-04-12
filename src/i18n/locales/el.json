@@ -568,52 +568,52 @@
     },
     "showMore": "περισσότερα",
     "dailywisdom": {
-      "title": "Wisdom for today",
-      "desc": "An encouraging thought for your day",
-      "prompt": "Give me a short, encouraging thought for my day – with a fitting Bible verse.",
-      "prompt_v1": "What's the best advice the Bible has for today?",
-      "prompt_v2": "Give me a Bible wisdom that will carry me through the day.",
-      "prompt_v3": "Surprise me with an encouraging Bible verse for today!"
+      "title": "Σοφία για σήμερα",
+      "desc": "Μια ενθαρρυντική σκέψη για την ημέρα σου",
+      "prompt": "Δώσε μου μια σύντομη, ενθαρρυντική σκέψη για την ημέρα μου – με ένα κατάλληλο εδάφιο από την Αγία Γραφή.",
+      "prompt_v1": "Ποια είναι η καλύτερη συμβουλή που έχει η Αγία Γραφή για σήμερα;",
+      "prompt_v2": "Δώσε μου μια σοφία από την Αγία Γραφή που θα με συνοδεύει όλη την ημέρα.",
+      "prompt_v3": "Έκπληξέ με με ένα ενθαρρυντικό εδάφιο από την Αγία Γραφή για σήμερα!"
     },
     "funfact": {
-      "title": "Did you know?",
-      "desc": "Surprising facts from the Bible",
-      "prompt": "Tell me a surprising fact from the Bible that most people don't know!",
-      "prompt_v1": "What's the craziest story in the Bible?",
-      "prompt_v2": "What Bible facts surprise most people?",
-      "prompt_v3": "Tell me something funny or unexpected from the Bible!"
+      "title": "Το ήξερες;",
+      "desc": "Εκπληκτικά γεγονότα από την Αγία Γραφή",
+      "prompt": "Πες μου ένα εκπληκτικό γεγονός από την Αγία Γραφή που οι περισσότεροι άνθρωποι δεν γνωρίζουν!",
+      "prompt_v1": "Ποια είναι η πιο τρελή ιστορία στην Αγία Γραφή;",
+      "prompt_v2": "Ποια γεγονότα από την Αγία Γραφή εκπλήσσουν τους περισσότερους ανθρώπους;",
+      "prompt_v3": "Πες μου κάτι αστείο ή απροσδόκητο από την Αγία Γραφή!"
     },
     "lifehack": {
-      "title": "Life hack",
-      "desc": "Biblical wisdom for family & work",
-      "prompt": "What biblical tip helps in everyday life with family and work? Give me something practical!",
-      "prompt_v1": "How can the Bible help me in a stressful daily life?",
-      "prompt_v2": "What practical life tips are hidden in the Bible?",
-      "prompt_v3": "Give me a concrete tip from the Bible for my daily life!"
+      "title": "Συμβουλή ζωής",
+      "desc": "Βιβλική σοφία για την οικογένεια & την εργασία",
+      "prompt": "Ποια βιβλική συμβουλή με βοηθάει στην καθημερινότητα με την οικογένεια και την εργασία; Δώσε μου κάτι πρακτικό!",
+      "prompt_v1": "Πώς μπορεί η Αγία Γραφή να με βοηθήσει στην αγχωτική καθημερινότητα;",
+      "prompt_v2": "Ποιες πρακτικές συμβουλές ζωής κρύβονται στην Αγία Γραφή;",
+      "prompt_v3": "Δώσε μου μια συγκεκριμένη συμβουλή από την Αγία Γραφή για την καθημερινότητά μου!"
     },
     "strengths": {
-      "title": "Your strengths",
-      "desc": "Discover what's inside you",
-      "prompt": "Help me discover my personal strengths – what does the Bible say about the gifts every person has?",
-      "prompt_v1": "What strengths do I have according to the Bible?",
-      "prompt_v2": "How can I find out what my gifts and talents are?",
-      "prompt_v3": "What does the Bible say about what makes me special?"
+      "title": "Τα δυνατά σου σημεία",
+      "desc": "Ανακάλυψε τι κρύβεται μέσα σου",
+      "prompt": "Βοήθησέ με να ανακαλύψω τα προσωπικά μου δυνατά σημεία – τι λέει η Αγία Γραφή για τα χαρίσματα που έχει κάθε άνθρωπος;",
+      "prompt_v1": "Ποια δυνατά σημεία έχω σύμφωνα με την Αγία Γραφή;",
+      "prompt_v2": "Πώς μπορώ να ανακαλύψω ποια είναι τα χαρίσματα και τα ταλέντα μου;",
+      "prompt_v3": "Τι λέει η Αγία Γραφή για το τι με κάνει ξεχωριστό;"
     },
     "family": {
-      "title": "Family & everyday life",
-      "desc": "More appreciation in daily life",
-      "prompt": "How can I show my family more appreciation? Give me practical ideas with biblical inspiration.",
-      "prompt_v1": "How do I strengthen my family relationships?",
-      "prompt_v2": "What does the Bible say about a good family life?",
-      "prompt_v3": "Give me an idea for how I can make someone in my family happy today!"
+      "title": "Οικογένεια & Καθημερινότητα",
+      "desc": "Περισσότερη εκτίμηση στην κοινή ζωή",
+      "prompt": "Πώς μπορώ να δείξω περισσότερη εκτίμηση στην οικογένειά μου; Δώσε μου πρακτικές ιδέες με βιβλική έμπνευση.",
+      "prompt_v1": "Πώς ενισχύω τις οικογενειακές μου σχέσεις;",
+      "prompt_v2": "Τι λέει η Αγία Γραφή για μια καλή οικογενειακή ζωή;",
+      "prompt_v3": "Δώσε μου μια ιδέα για το πώς μπορώ να κάνω κάποιον στην οικογένειά μου χαρούμενο σήμερα!"
     },
     "relax": {
-      "title": "Find peace",
-      "desc": "A moment of stillness and calm",
-      "prompt": "I need a moment of peace. Help me unwind – with a calming Bible verse or a short meditation.",
-      "prompt_v1": "Give me a calming psalm for this moment.",
-      "prompt_v2": "How can I find true rest according to the Bible?",
-      "prompt_v3": "Guide me through a short biblical meditation."
+      "title": "Βρες την ηρεμία",
+      "desc": "Βρες μια στιγμή ησυχίας και ειρήνης",
+      "prompt": "Χρειάζομαι μια στιγμή ηρεμίας. Βοήθησέ με να χαλαρώσω – με ένα χαλαρωτικό εδάφιο από την Αγία Γραφή ή μια σύντομη διαλογισμό.",
+      "prompt_v1": "Δώσε μου έναν χαλαρωτικό ψαλμό για αυτή τη στιγμή.",
+      "prompt_v2": "Πώς μπορώ να βρω αληθινή ηρεμία σύμφωνα με την Αγία Γραφή;",
+      "prompt_v3": "Οδήγησέ με σε έναν σύντομο βιβλικό διαλογισμό."
     }
   },
   "lifeWheel": {

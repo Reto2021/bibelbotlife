@@ -567,52 +567,52 @@
     },
     "showMore": "ավելին",
     "dailywisdom": {
-      "title": "Wisdom for today",
-      "desc": "An encouraging thought for your day",
-      "prompt": "Give me a short, encouraging thought for my day – with a fitting Bible verse.",
-      "prompt_v1": "What's the best advice the Bible has for today?",
-      "prompt_v2": "Give me a Bible wisdom that will carry me through the day.",
-      "prompt_v3": "Surprise me with an encouraging Bible verse for today!"
+      "title": "Իմաստություն այսօրվա համար",
+      "desc": "Մի քաջալերող միտք ձեր օրվա համար",
+      "prompt": "Տվեք ինձ կարճ, քաջալերող միտք իմ օրվա համար՝ համապատասխան աստվածաշնչյան համարով։",
+      "prompt_v1": "Ո՞րն է լավագույն խորհուրդը, որ Աստվածաշունչն ունի այսօրվա համար:",
+      "prompt_v2": "Տվեք ինձ աստվածաշնչյան իմաստություն, որն ինձ կուղեկցի օրվա ընթացքում։",
+      "prompt_v3": "Զարմացրեք ինձ այսօրվա համար քաջալերող աստվածաշնչյան համարով։"
     },
     "funfact": {
-      "title": "Did you know?",
-      "desc": "Surprising facts from the Bible",
-      "prompt": "Tell me a surprising fact from the Bible that most people don't know!",
-      "prompt_v1": "What's the craziest story in the Bible?",
-      "prompt_v2": "What Bible facts surprise most people?",
-      "prompt_v3": "Tell me something funny or unexpected from the Bible!"
+      "title": "Գիտեի՞ք արդեն։",
+      "desc": "Զարմանալի փաստեր Աստվածաշնչից",
+      "prompt": "Պատմեք ինձ Աստվածաշնչից մի զարմանալի փաստ, որը մարդկանց մեծ մասը չգիտի։",
+      "prompt_v1": "Ո՞րն է Աստվածաշնչի ամենախենթ պատմությունը։",
+      "prompt_v2": "Աստվածաշնչի ո՞ր փաստերն են զարմացնում մարդկանց մեծ մասին։",
+      "prompt_v3": "Պատմեք ինձ Աստվածաշնչից մի զվարճալի կամ անսպասելի բան։"
     },
     "lifehack": {
-      "title": "Life hack",
-      "desc": "Biblical wisdom for family & work",
-      "prompt": "What biblical tip helps in everyday life with family and work? Give me something practical!",
-      "prompt_v1": "How can the Bible help me in a stressful daily life?",
-      "prompt_v2": "What practical life tips are hidden in the Bible?",
-      "prompt_v3": "Give me a concrete tip from the Bible for my daily life!"
+      "title": "Կյանքի խորհուրդ",
+      "desc": "Աստվածաշնչյան իմաստություն ընտանիքի և աշխատանքի համար",
+      "prompt": "Ո՞ր աստվածաշնչյան խորհուրդը կօգնի ինձ առօրյա կյանքում ընտանիքի և աշխատանքի հետ։ Տվեք ինձ գործնական բան։",
+      "prompt_v1": "Ինչպե՞ս կարող է Աստվածաշունչն օգնել ինձ սթրեսային առօրյա կյանքում։",
+      "prompt_v2": "Ի՞նչ գործնական կյանքի խորհուրդներ կան Աստվածաշնչում։",
+      "prompt_v3": "Տվեք ինձ Աստվածաշնչից կոնկրետ խորհուրդ իմ առօրյա կյանքի համար։"
     },
     "strengths": {
-      "title": "Your strengths",
-      "desc": "Discover what's inside you",
-      "prompt": "Help me discover my personal strengths – what does the Bible say about the gifts every person has?",
-      "prompt_v1": "What strengths do I have according to the Bible?",
-      "prompt_v2": "How can I find out what my gifts and talents are?",
-      "prompt_v3": "What does the Bible say about what makes me special?"
+      "title": "Ձեր ուժեղ կողմերը",
+      "desc": "Բացահայտեք, թե ինչ կա ձեր մեջ",
+      "prompt": "Օգնեք ինձ բացահայտել իմ անձնական ուժեղ կողմերը. ի՞նչ է ասում Աստվածաշունչը այն պարգևների մասին, որոնք ունի յուրաքանչյուր մարդ։",
+      "prompt_v1": "Ի՞նչ ուժեղ կողմեր ունեմ ես ըստ Աստվածաշնչի։",
+      "prompt_v2": "Ինչպե՞ս կարող եմ պարզել, թե որոնք են իմ պարգևներն ու տաղանդները։",
+      "prompt_v3": "Ի՞նչ է ասում Աստվածաշունչը այն մասին, թե ինչն է ինձ առանձնահատուկ դարձնում։"
     },
     "family": {
-      "title": "Family & everyday life",
-      "desc": "More appreciation in daily life",
-      "prompt": "How can I show my family more appreciation? Give me practical ideas with biblical inspiration.",
-      "prompt_v1": "How do I strengthen my family relationships?",
-      "prompt_v2": "What does the Bible say about a good family life?",
-      "prompt_v3": "Give me an idea for how I can make someone in my family happy today!"
+      "title": "Ընտանիք և առօրյա կյանք",
+      "desc": "Ավելի շատ գնահատանք համատեղ կյանքում",
+      "prompt": "Ինչպե՞ս կարող եմ ավելի շատ գնահատանք ցույց տալ իմ ընտանիքին։ Տվեք ինձ գործնական գաղափարներ աստվածաշնչյան ոգեշնչմամբ։",
+      "prompt_v1": "Ինչպե՞ս ամրապնդել իմ ընտանեկան հարաբերությունները։",
+      "prompt_v2": "Ի՞նչ է ասում Աստվածաշունչը լավ ընտանեկան կյանքի մասին։",
+      "prompt_v3": "Տվեք ինձ մի գաղափար, թե ինչպես կարող եմ այսօր ուրախություն պատճառել իմ ընտանիքի որևէ անդամի։"
     },
     "relax": {
-      "title": "Find peace",
-      "desc": "A moment of stillness and calm",
-      "prompt": "I need a moment of peace. Help me unwind – with a calming Bible verse or a short meditation.",
-      "prompt_v1": "Give me a calming psalm for this moment.",
-      "prompt_v2": "How can I find true rest according to the Bible?",
-      "prompt_v3": "Guide me through a short biblical meditation."
+      "title": "Հանգստանալ",
+      "desc": "Գտնել լռության և խաղաղության մի պահ",
+      "prompt": "Ինձ հանգստի մի պահ է պետք։ Օգնեք ինձ անջատվել՝ հանգստացնող աստվածաշնչյան համարով կամ կարճ մեդիտացիայով։",
+      "prompt_v1": "Տվեք ինձ հանգստացնող սաղմոս այս պահի համար։",
+      "prompt_v2": "Ինչպե՞ս կարող եմ ըստ Աստվածաշնչի իսկական հանգիստ գտնել։",
+      "prompt_v3": "Առաջնորդեք ինձ կարճ աստվածաշնչյան մեդիտացիայի միջոցով։"
     }
   },
   "lifeWheel": {

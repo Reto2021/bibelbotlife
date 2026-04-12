@@ -567,52 +567,52 @@
     },
     "showMore": "okuningi",
     "dailywisdom": {
-      "title": "Wisdom for today",
-      "desc": "An encouraging thought for your day",
-      "prompt": "Give me a short, encouraging thought for my day – with a fitting Bible verse.",
-      "prompt_v1": "What's the best advice the Bible has for today?",
-      "prompt_v2": "Give me a Bible wisdom that will carry me through the day.",
-      "prompt_v3": "Surprise me with an encouraging Bible verse for today!"
+      "title": "Ukuhlakanipha kwansuku zonke",
+      "desc": "Umcabango okhuthazayo wosuku lwakho",
+      "prompt": "Nginike umcabango omfushane, okhuthazayo wosuku lwami – kanye nevesi leBhayibheli elifanele.",
+      "prompt_v1": "Yisiphi iseluleko esihle kakhulu iBhayibheli elinaso sanamuhla?",
+      "prompt_v2": "Nginike ukuhlakanipha okuvela eBhayibhelini okuzongiqondisa usuku lonke.",
+      "prompt_v3": "Ngimangaze ngevesi leBhayibheli elikhuthazayo lanamuhla!"
     },
     "funfact": {
-      "title": "Did you know?",
-      "desc": "Surprising facts from the Bible",
-      "prompt": "Tell me a surprising fact from the Bible that most people don't know!",
-      "prompt_v1": "What's the craziest story in the Bible?",
-      "prompt_v2": "What Bible facts surprise most people?",
-      "prompt_v3": "Tell me something funny or unexpected from the Bible!"
+      "title": "Ubuwazi?",
+      "desc": "Amaqiniso amangalisayo avela eBhayibhelini",
+      "prompt": "Ngitshele iqiniso elimangalisayo elivela eBhayibhelini abantu abaningi abangalazi!",
+      "prompt_v1": "Iyiphi indaba ehlanya kakhulu eBhayibhelini?",
+      "prompt_v2": "Yimaphi amaqiniso aseBhayibhelini amangaza abantu abaningi?",
+      "prompt_v3": "Ngitshele okuthile okuhlekisayo noma okungalindelekile okuvela eBhayibhelini!"
     },
     "lifehack": {
-      "title": "Life hack",
-      "desc": "Biblical wisdom for family & work",
-      "prompt": "What biblical tip helps in everyday life with family and work? Give me something practical!",
-      "prompt_v1": "How can the Bible help me in a stressful daily life?",
-      "prompt_v2": "What practical life tips are hidden in the Bible?",
-      "prompt_v3": "Give me a concrete tip from the Bible for my daily life!"
+      "title": "Iseluleko sempilo",
+      "desc": "Ukuhlakanipha kweBhayibheli komndeni nomsebenzi",
+      "prompt": "Yisiphi iseluleko seBhayibheli esingangisiza empilweni yami yansuku zonke nomndeni nomsebenzi? Nginike okuthile okusebenzisekayo!",
+      "prompt_v1": "IBhayibheli lingangisiza kanjani empilweni yami yansuku zonke ecindezelayo?",
+      "prompt_v2": "Yimaphi amathiphu asebenzayo empilo atholakala eBhayibhelini?",
+      "prompt_v3": "Nginike iseluleko esithile esivela eBhayibhelini sempilo yami yansuku zonke!"
     },
     "strengths": {
-      "title": "Your strengths",
-      "desc": "Discover what's inside you",
-      "prompt": "Help me discover my personal strengths – what does the Bible say about the gifts every person has?",
-      "prompt_v1": "What strengths do I have according to the Bible?",
-      "prompt_v2": "How can I find out what my gifts and talents are?",
-      "prompt_v3": "What does the Bible say about what makes me special?"
+      "title": "Amandla akho",
+      "desc": "Thola okungaphakathi kuwe",
+      "prompt": "Ngisize ngithole amandla ami siqu – lithini iBhayibheli ngezipho umuntu ngamunye anazo?",
+      "prompt_v1": "Yimaphi amandla enginawo ngokweBhayibheli?",
+      "prompt_v2": "Ngingathola kanjani ukuthi yiziphi izipho zami namakhono ami?",
+      "prompt_v3": "Lithini iBhayibheli ngalokho okungenza ngikhetheke?"
     },
     "family": {
-      "title": "Family & everyday life",
-      "desc": "More appreciation in daily life",
-      "prompt": "How can I show my family more appreciation? Give me practical ideas with biblical inspiration.",
-      "prompt_v1": "How do I strengthen my family relationships?",
-      "prompt_v2": "What does the Bible say about a good family life?",
-      "prompt_v3": "Give me an idea for how I can make someone in my family happy today!"
+      "title": "Umndeni nempilo yansuku zonke",
+      "desc": "Ukubonga okwengeziwe ekuhlanganeni",
+      "prompt": "Ngingabonisa kanjani umndeni wami ukubonga okwengeziwe? Nginike imibono esebenzayo enogqozi lweBhayibheli.",
+      "prompt_v1": "Ngingaqinisa kanjani ubudlelwano bomndeni wami?",
+      "prompt_v2": "Lithini iBhayibheli ngempilo yomndeni enhle?",
+      "prompt_v3": "Nginike umbono wokuthi ngingamjabulisa kanjani umuntu emndenini wami namuhla!"
     },
     "relax": {
-      "title": "Find peace",
-      "desc": "A moment of stillness and calm",
-      "prompt": "I need a moment of peace. Help me unwind – with a calming Bible verse or a short meditation.",
-      "prompt_v1": "Give me a calming psalm for this moment.",
-      "prompt_v2": "How can I find true rest according to the Bible?",
-      "prompt_v3": "Guide me through a short biblical meditation."
+      "title": "Phumula",
+      "desc": "Thola umzuzwana wokuthula nokuzola",
+      "prompt": "Ngidinga umzuzwana wokuthula. Ngisize ngikhululeke – ngevesi leBhayibheli eliduduzayo noma ukuzindla okufushane.",
+      "prompt_v1": "Nginike iHubo eliduduzayo ngalo mzuzu.",
+      "prompt_v2": "Ngingathola kanjani ukuthula kwangempela ngokweBhayibheli?",
+      "prompt_v3": "Ngihole ekuzindleni okufushane kweBhayibheli."
     }
   },
   "lifeWheel": {
