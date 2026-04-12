@@ -444,9 +444,60 @@
       "prompt": "Ich stehe vor einem Neuanfang und brauche Ermutigung. Welche Bibelstellen sprechen über Neuanfänge?"
     },
     "namequiz": {
-      "title": "Tauf-Quiz",
-      "desc": "Finde den passenden biblischen Namen",
-      "prompt": "Ich suche einen biblischen Namen für mein Kind. Kannst du mir ein paar Vorschläge machen und ihre Bedeutung erklären?"
+      "title": "Was bedeutet dein Name?",
+      "desc": "Entdecke die biblische Bedeutung deines Namens",
+      "prompt": "Was bedeutet mein Name und hat er eine biblische oder spirituelle Bedeutung? Überrasche mich!",
+      "prompt_v1": "Welche biblischen Namen haben die schönste Bedeutung?",
+      "prompt_v2": "Was bedeutet mein Name – gibt es eine biblische Verbindung?",
+      "prompt_v3": "Erzähl mir die Geschichte hinter meinem Namen!"
+    },
+    "dailywisdom": {
+      "title": "Weisheit für heute",
+      "desc": "Ein ermutigender Gedanke für deinen Tag",
+      "prompt": "Gib mir einen kurzen, ermutigenden Gedanken für meinen Tag – mit einem passenden Bibelvers.",
+      "prompt_v1": "Was ist der beste Rat, den die Bibel für heute hat?",
+      "prompt_v2": "Gib mir eine Weisheit aus der Bibel, die mich durch den Tag begleitet.",
+      "prompt_v3": "Überrasche mich mit einem ermutigenden Bibelvers für heute!"
+    },
+    "funfact": {
+      "title": "Wusstest du schon?",
+      "desc": "Überraschende Fakten aus der Bibel",
+      "prompt": "Erzähl mir eine überraschende Tatsache aus der Bibel, die die meisten Leute nicht kennen!",
+      "prompt_v1": "Was ist die verrückteste Geschichte in der Bibel?",
+      "prompt_v2": "Welche Fakten aus der Bibel überraschen die meisten Menschen?",
+      "prompt_v3": "Erzähl mir etwas Lustiges oder Unerwartetes aus der Bibel!"
+    },
+    "lifehack": {
+      "title": "Lebenstipp",
+      "desc": "Biblische Weisheit für Familie & Beruf",
+      "prompt": "Welcher biblische Tipp hilft mir im Alltag mit Familie und Beruf? Gib mir etwas Praktisches!",
+      "prompt_v1": "Wie kann mir die Bibel im stressigen Alltag helfen?",
+      "prompt_v2": "Welche praktischen Lebenstipps stecken in der Bibel?",
+      "prompt_v3": "Gib mir einen konkreten Tipp aus der Bibel für meinen Alltag!"
+    },
+    "strengths": {
+      "title": "Deine Stärken",
+      "desc": "Entdecke, was in dir steckt",
+      "prompt": "Hilf mir, meine persönlichen Stärken zu entdecken – was sagt die Bibel über die Gaben, die jeder Mensch hat?",
+      "prompt_v1": "Welche Stärken habe ich laut der Bibel?",
+      "prompt_v2": "Wie kann ich herausfinden, was meine Gaben und Talente sind?",
+      "prompt_v3": "Was sagt die Bibel darüber, was mich besonders macht?"
+    },
+    "family": {
+      "title": "Familie & Alltag",
+      "desc": "Mehr Wertschätzung im Zusammenleben",
+      "prompt": "Wie kann ich meiner Familie mehr Wertschätzung zeigen? Gib mir praktische Ideen mit biblischer Inspiration.",
+      "prompt_v1": "Wie stärke ich meine Familienbeziehungen?",
+      "prompt_v2": "Was sagt die Bibel über ein gutes Familienleben?",
+      "prompt_v3": "Gib mir eine Idee, wie ich heute jemandem in meiner Familie eine Freude machen kann!"
+    },
+    "relax": {
+      "title": "Zur Ruhe kommen",
+      "desc": "Einen Moment Stille und Frieden finden",
+      "prompt": "Ich brauche einen Moment der Ruhe. Hilf mir abzuschalten – mit einem beruhigenden Bibelvers oder einer kurzen Meditation.",
+      "prompt_v1": "Gib mir einen beruhigenden Psalm für diesen Moment.",
+      "prompt_v2": "Wie kann ich laut der Bibel echte Ruhe finden?",
+      "prompt_v3": "Führe mich durch eine kurze biblische Meditation."
     },
     "sleepless": {
       "title": "Schlaflos",
