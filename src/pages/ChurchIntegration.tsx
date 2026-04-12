@@ -68,7 +68,9 @@ const ChurchIntegration = () => {
   }
 
   const brandedLink = `${BASE_URL}/?church=${church.slug}`;
-  const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=${encodeURIComponent(brandedLink)}&margin=16`;
+  const qrLink = `${brandedLink}&utm_source=qr_code&utm_medium=print`;
+  const widgetLink = `${brandedLink}&utm_source=widget&utm_medium=embed`;
+  const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=${encodeURIComponent(qrLink)}&margin=16`;
 
   const widgetCode = `<!-- BibleBot Widget für ${church.name} -->
 <script src="${SUPABASE_URL}/functions/v1/church-widget?slug=${church.slug}" defer></script>`;
@@ -148,36 +150,24 @@ const ChurchIntegration = () => {
             <CardContent>
               <div className="flex flex-col sm:flex-row items-start gap-4">
                 <div className="bg-white p-3 rounded-xl border shadow-sm">
-                  <BrandedQRCode value={brandedLink} size={160} />
+                  <BrandedQRCode value={qrLink} size={160} />
                 </div>
                 <div className="space-y-2">
-                  <p className="text-sm text-muted-foreground">
-                    Dieser QR-Code führt direkt zu eurem gebrandeten BibleBot mit Splash-Screen und Kirchenlogo.
+                  <p className="text-xs text-muted-foreground">
+                    QR-Code enthält automatisch UTM-Tracking (<code>utm_source=qr_code</code>)
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      onClick={() => {
-                        const a = document.createElement("a");
-                        a.href = qrCodeUrl;
-                        a.download = `bibelbot-qr-${church.slug}.png`;
-                        a.click();
-                      }}
-                    >
-                      PNG herunterladen
-                    </Button>
                     <QRStickerDownload
                       churchName={church.name}
-                      qrUrl={brandedLink}
+                      qrUrl={qrLink}
                       slug={church.slug}
                     />
                     <QRFlyerDownload
                       churchName={church.name}
-                      qrUrl={brandedLink}
+                      qrUrl={qrLink}
                       slug={church.slug}
                     />
-                    <CopyButton text={brandedLink} label="QR-Link kopiert" />
+                    <CopyButton text={qrLink} label="QR-Link kopiert" />
                     {church.contact_email && (
                       <Button
                         size="sm"

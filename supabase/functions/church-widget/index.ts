@@ -22,7 +22,7 @@ serve(async (req) => {
     });
   }
 
-  const chatUrl = `${BASE_URL}/?church=${encodeURIComponent(slug)}`;
+  const chatUrl = `${BASE_URL}/?church=${encodeURIComponent(slug)}&utm_source=widget&utm_medium=embed`;
 
   // Serve a self-contained JS widget
   const js = `

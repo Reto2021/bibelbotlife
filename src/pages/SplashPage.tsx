@@ -66,8 +66,8 @@ export default function SplashPage() {
   const secondaryColor = church.secondary_color || "#1a5c5c";
   const botName = church.custom_bot_name || "BibleBot";
   const appUrl = church.source === "partner"
-    ? `https://biblebot.life?church=${church.slug}`
-    : `https://biblebot.life/widget-preview/${church.slug}`;
+    ? `https://biblebot.life?church=${church.slug}&utm_source=splash&utm_medium=qr`
+    : `https://biblebot.life/widget-preview/${church.slug}?utm_source=splash&utm_medium=prospect`;
 
   return (
     <div
