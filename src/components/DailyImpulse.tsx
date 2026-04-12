@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, ReactNode } from "react";
+import { useState, useEffect, useCallback, useRef, ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 import { Sparkles, ChevronRight, BookOpen, Loader2, MessageCircle, Image, Download, Bell, Send, Smartphone, Volume2, VolumeX, XCircle, Settings2, ChevronDown, ChevronUp } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -105,6 +105,7 @@ export function DailyImpulse() {
   const [showImagePreview, setShowImagePreview] = useState(false);
   const [showSmsInput, setShowSmsInput] = useState(false);
   const [smsPhone, setSmsPhone] = useState("");
+  const imagePreviewRef = useRef<HTMLDivElement>(null);
   const tts = useTTS();
 
   // Initialise collapse state based on mobile once detected
@@ -153,6 +154,7 @@ export function DailyImpulse() {
     // Reuse existing blob
     if (shareImageUrl) {
       setShowImagePreview(true);
+      setTimeout(() => imagePreviewRef.current?.scrollIntoView({ behavior: "smooth", block: "center" }), 100);
       return;
     }
 
@@ -167,6 +169,7 @@ export function DailyImpulse() {
       setShareBlob(blob);
       setShareImageUrl(url);
       setShowImagePreview(true);
+      setTimeout(() => imagePreviewRef.current?.scrollIntoView({ behavior: "smooth", block: "center" }), 100);
     } catch (e) {
       console.error("Failed to generate share image:", e);
       toast({
@@ -438,7 +441,7 @@ export function DailyImpulse() {
 
             {/* Image Preview */}
             {showImagePreview && shareImageUrl && (
-              <div className="rounded-xl overflow-hidden border border-border shadow-md animate-fade-up">
+              <div ref={imagePreviewRef} className="rounded-xl overflow-hidden border border-border shadow-md animate-fade-up">
                 <img
                   src={shareImageUrl}
                   alt={`${t("share.impulseTitle")} – ${impulse.topic}`}
