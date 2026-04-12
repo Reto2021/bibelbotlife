@@ -9,7 +9,7 @@ import { useSeniorMode } from "@/hooks/use-senior-mode";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTrack } from "@/components/AnalyticsProvider";
 import { openLifeWheel } from "@/components/LifeWheel";
-import { CHAT_OPEN_EVENT, type ChatMode } from "@/lib/chat-events";
+import { CHAT_OPEN_EVENT, CHAT_RESET_EVENT, type ChatMode } from "@/lib/chat-events";
 import ReactMarkdown from "react-markdown";
 import { ShareButton } from "@/components/ShareButton";
 import { useToast } from "@/hooks/use-toast";
@@ -768,6 +768,17 @@ export function ChatHero() {
     window.addEventListener(CHAT_OPEN_EVENT, handler);
     return () => window.removeEventListener(CHAT_OPEN_EVENT, handler);
   }, [sendMessage, startNewChat]);
+
+  // Listen for chat reset (logo click)
+  useEffect(() => {
+    const handler = () => {
+      setChatMode("normal");
+      startNewChat();
+      inputRef.current?.focus();
+    };
+    window.addEventListener(CHAT_RESET_EVENT, handler);
+    return () => window.removeEventListener(CHAT_RESET_EVENT, handler);
+  }, [startNewChat]);
 
   const handleChipClick = (chip: TopicChip) => {
     track("chip_click", { chip: chip.key });

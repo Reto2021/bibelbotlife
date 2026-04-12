@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import {
   Menu, X as XIcon, HandHeart, GraduationCap, Building2, HeartHandshake,
@@ -11,6 +11,7 @@ import { DarkModeToggle } from "@/components/DarkModeToggle";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useAuth } from "@/hooks/use-auth";
 import { useIsAdmin } from "@/hooks/use-admin";
+import { resetBibleBotChat } from "@/lib/chat-events";
 
 const TELEGRAM_LINK = "https://t.me/meinbibelbot";
 
@@ -19,12 +20,23 @@ export function SiteHeader() {
   const { user, signOut } = useAuth();
   const { isAdmin } = useIsAdmin();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleLogoClick = (e: React.MouseEvent) => {
+    if (location.pathname === "/" || location.pathname === "/index") {
+      e.preventDefault();
+      resetBibleBotChat();
+    }
+    // If on another page, the Link navigates to "/" normally
+  };
 
   return (
     <nav className="bg-card/80 backdrop-blur-sm border-b border-border sticky top-0 z-50">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <Link
           to="/"
+          onClick={handleLogoClick}
           className="flex items-center space-x-2 hover:opacity-80 transition-opacity cursor-pointer shrink-0"
         >
           <AppLogo className="h-10 w-10 lg:h-14 lg:w-14" />
