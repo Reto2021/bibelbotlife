@@ -425,9 +425,9 @@ export function DailyImpulse() {
       {isExpanded && (
         <div className="container mx-auto px-4 pb-5 animate-fade-up">
           <div className="ml-11 space-y-4">
-            <blockquote className="border-l-2 border-primary/30 pl-4">
-              <p className="text-foreground/90 italic text-sm leading-relaxed">{impulse.verse}</p>
-              <footer className="flex items-center gap-1.5 mt-1.5 text-xs text-muted-foreground">
+            <blockquote className="border-l-[3px] border-primary/50 pl-4 bg-accent/30 rounded-r-lg py-2">
+              <p className="font-serif text-foreground/90 italic text-[15px] leading-relaxed">{impulse.verse}</p>
+              <footer className="flex items-center gap-1.5 mt-2 text-xs text-muted-foreground font-medium not-italic">
                 <BookOpen className="h-3 w-3" />
                 {impulse.reference}
               </footer>
