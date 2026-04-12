@@ -693,7 +693,7 @@
       "orgType": "Organisationstype",
       "orgTypePlaceholder": "Vælg type...",
       "orgTypes": {
-        "church": "Gemeinde",
+        "church": "Menighed",
         "careHome": "Pflegeheim",
         "seniorHome": "Altersheim",
         "hospital": "Spital",
@@ -717,23 +717,23 @@
     "institution": {
       "careHome": {
         "title": "Pflegeheime",
-        "desc": "Tägliche Bibelimpulse und Begleitung für Bewohnerinnen und Bewohner – auch wenn kein Seelsorger vor Ort ist."
+        "desc": "Daglige bibelimpulser og ledsagelse for beboere – også når ingen sjælesørger er til stede."
       },
       "seniorHome": {
         "title": "Altersheime",
-        "desc": "Vertraute Bibelverse und Gespräche für Seniorinnen und Senioren – einfach zugänglich via Tablet oder Smartphone."
+        "desc": "Velkendte bibelvers og samtaler for ældre – let tilgængelig via tablet eller smartphone."
       },
       "hospital": {
         "title": "Spitäler",
-        "desc": "Trost und geistliche Begleitung für Patienten in schwierigen Zeiten – 24/7 verfügbar am Krankenbett."
+        "desc": "Trøst og åndelig ledsagelse for patienter i svære tider – tilgængelig 24/7."
       },
       "prison": {
         "title": "Gefängnisseelsorge",
-        "desc": "Hoffnung und geistliche Begleitung für Inhaftierte – ein vertraulicher Gesprächspartner rund um die Uhr."
+        "desc": "Håb og åndelig ledsagelse for indsatte – en fortrolig samtalepartner døgnet rundt."
       },
       "military": {
         "title": "Armeeseelsorge",
-        "desc": "Geistliche Begleitung für Angehörige der Armee – auch im Einsatz oder in der Kaserne erreichbar."
+        "desc": "Åndelig ledsagelse for militærpersonel – tilgængelig selv under udsendelse."
       },
       "rehaClinic": {
         "title": "Rehabiliteringsklinikker",
@@ -785,78 +785,78 @@
   "institutions": {
     "badge": "For organisationer",
     "heroTitle": "BibleBot for din organisation",
-    "heroSubtitle": "Digitale Seelsorge für Pflegeheime, Altersheime, Spitäler und Justizvollzug – persönlich, vertraulich und rund um die Uhr.",
+    "heroSubtitle": "Digital sjælesorg for plejehjem, ældreboliger, hospitaler og kriminalforsorg – personligt, fortroligt og døgnet rundt.",
     "seniorHint": {
-      "title": "Senioren-Modus verfügbar",
-      "desc": "Grössere Schrift und vereinfachte Bedienung – ideal für ältere Bewohnerinnen und Bewohner.",
-      "cta": "Senioren-Modus testen"
+      "title": "Seniortilstand tilgængelig",
+      "desc": "Større skrift og forenklet navigation – ideel for ældre beboere.",
+      "cta": "Prøv seniortilstand"
     },
-    "typesTitle": "Für wen ist BibleBot?",
-    "useCasesTitle": "So wird BibleBot eingesetzt",
-    "useCasesSubtitle": "Konkrete Anwendungen für den Alltag in Ihrer Institution.",
-    "pricingTitle": "Patronats-Pakete",
-    "pricingSubtitle": "Dieselben Pakete wie für Gemeinden – angepasst an institutionelle Bedürfnisse.",
-    "linkChurches": "Auch für Gemeinden verfügbar",
+    "typesTitle": "Hvem er BibleBot for?",
+    "useCasesTitle": "Sådan bruges BibleBot",
+    "useCasesSubtitle": "Praktiske anvendelser til hverdagen i din institution.",
+    "pricingTitle": "Patronatspakker",
+    "pricingSubtitle": "Samme pakker som for alle organisationer – tilpasset dine behov.",
+    "linkChurches": "Også tilgængelig for kirker",
     "type": {
       "careHome": {
         "title": "Pflegeheime",
-        "desc": "Tägliche Bibelimpulse und Begleitung für Bewohnerinnen und Bewohner – auch wenn kein Seelsorger vor Ort ist."
+        "desc": "Daglige bibelimpulser og ledsagelse for beboere – også når ingen sjælesørger er til stede."
       },
       "seniorHome": {
         "title": "Altersheime",
-        "desc": "Vertraute Bibelverse und Gespräche für Seniorinnen und Senioren – einfach zugänglich via Tablet oder Smartphone."
+        "desc": "Velkendte bibelvers og samtaler for ældre – let tilgængelig via tablet eller smartphone."
       },
       "hospital": {
         "title": "Spitäler",
-        "desc": "Trost und geistliche Begleitung für Patienten in schwierigen Zeiten – 24/7 verfügbar am Krankenbett."
+        "desc": "Trøst og åndelig ledsagelse for patienter i svære tider – tilgængelig 24/7."
       },
       "prison": {
         "title": "Gefängnisseelsorge",
-        "desc": "Hoffnung und geistliche Begleitung für Inhaftierte – ein vertraulicher Gesprächspartner rund um die Uhr."
+        "desc": "Håb og åndelig ledsagelse for indsatte – en fortrolig samtalepartner døgnet rundt."
       },
       "military": {
         "title": "Armeeseelsorge",
-        "desc": "Geistliche Begleitung für Angehörige der Armee – auch im Einsatz oder in der Kaserne erreichbar."
+        "desc": "Åndelig ledsagelse for militærpersonel – tilgængelig selv under udsendelse."
       }
     },
     "useCase": {
       "dailyImpulse": {
-        "title": "Täglicher Impuls",
-        "desc": "Jeden Morgen ein Bibelvers mit Reflexionsfrage – senkt die Hemmschwelle für spirituelle Gespräche."
+        "title": "Daglig impuls",
+        "desc": "Hver morgen et bibelvers med refleksionsspørgsmål."
       },
       "companionship": {
-        "title": "Gesprächspartner",
-        "desc": "BibleBot beantwortet Glaubensfragen geduldig und ohne Zeitdruck – ideal für einsame Stunden."
+        "title": "Samtalepartner",
+        "desc": "BibleBot besvarer trosspørgsmål tålmodigt og uden tidspres."
       },
       "accessibility": {
-        "title": "Einfacher Zugang",
-        "desc": "Grosse Schrift, einfache Bedienung via Tablet – auch für Menschen mit eingeschränkter Mobilität."
+        "title": "Let adgang",
+        "desc": "Stor skrift, enkel tabletbetjening – også for mennesker med begrænset mobilitet."
       },
       "availability": {
-        "title": "24/7 Verfügbar",
-        "desc": "Geistliche Begleitung auch nachts und am Wochenende – wenn kein Seelsorger erreichbar ist."
+        "title": "24/7 tilgængelig",
+        "desc": "Åndelig ledsagelse også om natten og i weekenden."
       }
     },
     "tierDesc": {
-      "free": "Basis-Zugang für Bewohner und Patienten",
-      "community": "Erwähnung als Unterstützer, werbefreier Zugang",
-      "gemeinde": "Logo-Präsenz, monatlicher Nutzungs-Report",
-      "kirche": "Eigene Inhalte, Roadmap-Mitgestaltung, Premium-Support"
+      "free": "Basisadgang for beboere og patienter",
+      "community": "Nævnt som støtte, reklamefri adgang",
+      "gemeinde": "Logo-tilstedeværelse, månedlig brugsrapport",
+      "kirche": "Eget indhold, roadmap-medbestemmelse, premium-support"
     },
     "form": {
-      "title": "Interesse? Kontaktieren Sie uns!",
-      "subtitle": "Wir melden uns innert 48 Stunden.",
-      "name": "Ihr Name",
-      "email": "E-Mail-Adresse",
-      "institutionName": "Name der Institution",
-      "type": "Art der Institution",
-      "typePlaceholder": "Bitte wählen...",
-      "tier": "Gewünschtes Paket",
-      "tierPlaceholder": "Paket wählen...",
-      "message": "Ihre Nachricht",
-      "submit": "Anfrage senden",
-      "success": "Anfrage gesendet! Wir melden uns bald. 🙏",
-      "error": "Fehler beim Senden. Bitte versuchen Sie es erneut."
+      "title": "Interesseret? Kontakt os!",
+      "subtitle": "Vi vender tilbage inden for 48 timer.",
+      "name": "Dit navn",
+      "email": "E-mailadresse",
+      "institutionName": "Institutionsnavn",
+      "type": "Institutionstype",
+      "typePlaceholder": "Vælg venligst...",
+      "tier": "Ønsket pakke",
+      "tierPlaceholder": "Vælg pakke...",
+      "message": "Din besked",
+      "submit": "Send forespørgsel",
+      "success": "Forespørgsel sendt! Vi kontakter dig snart. 🙏",
+      "error": "Fejl ved afsendelse. Prøv igen."
     }
   },
   "lang": {
