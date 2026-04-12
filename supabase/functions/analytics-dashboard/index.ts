@@ -5,6 +5,25 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
+
+const zurichParts = (iso: string) => {
+  const formatter = new Intl.DateTimeFormat("de-CH", {
+    timeZone: "Europe/Zurich",
+    year: "numeric", month: "2-digit", day: "2-digit",
+    hour: "2-digit", minute: "2-digit", weekday: "short",
+    hour12: false,
+  });
+  const parts = Object.fromEntries(
+    formatter.formatToParts(new Date(iso)).map((p) => [p.type, p.value])
+  );
+  const weekdayMap: Record<string, number> = { So: 0, Mo: 1, Di: 2, Mi: 3, Do: 4, Fr: 5, Sa: 6 };
+  return {
+    date: `${parts.year}-${parts.month}-${parts.day}`,
+    hour: parseInt(parts.hour, 10),
+    weekday: weekdayMap[parts.weekday] ?? new Date(iso).getDay(),
+  };
+};
+
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response("ok", { headers: corsHeaders });
@@ -29,35 +48,40 @@ Deno.serve(async (req) => {
   const days = parseInt(url.searchParams.get("days") || "7");
   const since = new Date(Date.now() - days * 86400000).toISOString();
 
+  // Paginated fetch to overcome Supabase 1000-row default limit
+  const PAGE_SIZE = 1000;
+  const fetchAllEvents = async () => {
+    const allEvents: any[] = [];
+    let from = 0;
+    while (true) {
+      const { data, error } = await supabase
+        .from("analytics_events")
+        .select("*")
+        .gte("created_at", since)
+        .order("created_at", { ascending: true })
+        .range(from, from + PAGE_SIZE - 1);
+      if (error) throw error;
+      if (!data || data.length === 0) break;
+      allEvents.push(...data);
+      if (data.length < PAGE_SIZE) break;
+      from += PAGE_SIZE;
+    }
+    return allEvents;
+  };
+
   // Fetch events + subscribers + telegram messages in parallel
-  const [eventsRes, subscribersRes, telegramRes, churchesRes] = await Promise.all([
-    supabase
-      .from("analytics_events")
-      .select("*")
-      .gte("created_at", since)
-      .order("created_at", { ascending: true })
-      .limit(10000),
-    supabase
-      .from("daily_subscribers")
-      .select("*"),
-    supabase
-      .from("telegram_messages")
+  const [allEvents, subscribersRes, telegramRes, churchesRes] = await Promise.all([
+    fetchAllEvents(),
+    supabase.from("daily_subscribers").select("*"),
+    supabase.from("telegram_messages")
       .select("chat_id, role, created_at")
       .order("created_at", { ascending: true })
       .limit(10000),
-    supabase
-      .from("church_partners")
+    supabase.from("church_partners")
       .select("id, name, slug, is_active, plan_tier"),
   ]);
 
-  if (eventsRes.error) {
-    return new Response(JSON.stringify({ error: eventsRes.error.message }), {
-      status: 500,
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
-    });
-  }
-
-  const events = eventsRes.data || [];
+  const events = allEvents;
   const subscribers = subscribersRes.data || [];
   const telegramMsgs = telegramRes.data || [];
   const churches = churchesRes.data || [];
@@ -105,7 +129,7 @@ Deno.serve(async (req) => {
   // Daily pageviews
   const dailyCounts: Record<string, number> = {};
   pageviews.forEach((e: any) => {
-    const day = e.created_at.split("T")[0];
+    const day = zurichParts(e.created_at).date;
     dailyCounts[day] = (dailyCounts[day] || 0) + 1;
   });
 
@@ -159,7 +183,7 @@ Deno.serve(async (req) => {
 
   const dailyChats: Record<string, number> = {};
   telegramMsgs.forEach((m: any) => {
-    const day = m.created_at.split("T")[0];
+    const day = zurichParts(m.created_at).date;
     dailyChats[day] = (dailyChats[day] || 0) + 1;
   });
 
@@ -173,7 +197,7 @@ Deno.serve(async (req) => {
       try { ref = new URL(ref).hostname.replace(/^www\./, ""); } catch { /* keep raw */ }
     }
     referrerCounts[ref] = (referrerCounts[ref] || 0) + 1;
-    const day = e.created_at.split("T")[0];
+    const day = zurichParts(e.created_at).date;
     if (!referrerDaily[day]) referrerDaily[day] = {};
     referrerDaily[day][ref] = (referrerDaily[day][ref] || 0) + 1;
   });
@@ -197,7 +221,7 @@ Deno.serve(async (req) => {
   tileClicks.forEach((e: any) => {
     const tile = e.event_data?.tile || "unknown";
     tileClickCounts[tile] = (tileClickCounts[tile] || 0) + 1;
-    const day = e.created_at.split("T")[0];
+    const day = zurichParts(e.created_at).date;
     dailyTileClicks[day] = (dailyTileClicks[day] || 0) + 1;
   });
   const topTiles = Object.entries(tileClickCounts)
@@ -240,7 +264,7 @@ Deno.serve(async (req) => {
     // Daily pageviews for this church
     const cDaily: Record<string, number> = {};
     cpv.forEach((e: any) => {
-      const day = e.created_at.split("T")[0];
+      const day = zurichParts(e.created_at).date;
       cDaily[day] = (cDaily[day] || 0) + 1;
     });
 
@@ -310,18 +334,18 @@ Deno.serve(async (req) => {
   // ═══════════════════════════════════════
   const hourly = new Array(24).fill(0);
   nonHeartbeatEvents.forEach((e: any) => {
-    const h = new Date(e.created_at).getHours();
+    const h = zurichParts(e.created_at).hour;
     hourly[h]++;
   });
   const hourlyDistribution = hourly.map((count, hour) => ({ hour, count }));
 
   // ═══════════════════════════════════════
-  // ── Weekday distribution ──
+  // ── Weekday distribution (Europe/Zurich) ──
   // ═══════════════════════════════════════
   const weekdayNames = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
   const weekdays = new Array(7).fill(0);
   nonHeartbeatEvents.forEach((e: any) => {
-    const d = new Date(e.created_at).getDay();
+    const d = zurichParts(e.created_at).weekday;
     weekdays[d]++;
   });
   const weekdayDistribution = weekdays.map((count, i) => ({ day: weekdayNames[i], count }));
