@@ -227,13 +227,13 @@
   "donate": {
     "badge": "Kwado onye enyi gị gị",
     "title": "Nyere aka mee ka onye enyi gị gị nweere onwe ya",
-    "subtitle": "Onye enyi gị gị bụ ọrụ obi – na-enweghị mgbasa ozi, na-enweghị ndenye aha, na-enweghị ụgwọ zoro ezo. Ka nke a wee dịgide, m dabere na onyinye afọ ofufo. Onyinye ọ bụla na-enyere aka kpuchie ụgwọ ọrụ na akụrụngwa.",
+    "subtitle": "BibleBot.Life gị bụ ọrụ obi – na-enweghị mgbasa ozi, na-enweghị ndenye aha, na-enweghị ụgwọ zoro ezo. Ka nke a wee dịgide, m dabere na onyinye afọ ofufo. Onyinye ọ bụla na-enyere aka kpuchie ụgwọ ọrụ na akụrụngwa.",
     "bankTitle": "Nye onyinye site na nnyefe ụlọ akụ",
     "bankSubtitle": "Ọnụ ego ọ bụla dị mkpa – ekele dị ukwuu! 🙏",
     "recipient": "Onye nnata",
     "bank": "Ụlọ akụ",
     "purpose": "Ebumnuche",
-    "purposeValue": "Onyinye onye enyi gị",
+    "purposeValue": "Onyinye BibleBot.Life",
     "note": "A na-arụ BibleBot.Life dị ka ọrụ nkeonwe. Ya mere, onyinye anaghị ewepụ ụtụ isi."
   },
   "refer": {
@@ -241,12 +241,12 @@
     "title": "Gwa ndị ọzọ gbasara onye enyi gị",
     "subtitle": "Ị maara onye chọrọ agbamume ugbu a? Kekọrịta onye enyi gị – otu ozi nwere ike ime ọtụtụ ihe.",
     "whatsapp": "Kekọrịta site na WhatsApp",
-    "whatsappMsg": "Hey, achọrọ m igosi gị onye enyi gị – onye enyi Akwụkwọ Nsọ n'efu nke maara Akwụkwọ Nsọ ma na-ajụ ajụjụ dị mma n'ezie. Enweghị nbanye, amaghị aha, n'eziokwu. Gbalịa ya: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Hey, achọrọ m igosi gị BibleBot.Life – onye enyi Akwụkwọ Nsọ n'efu nke maara Akwụkwọ Nsọ ma na-ajụ ajụjụ dị mma n'ezie. Enweghị nbanye, amaghị aha, n'eziokwu. Gbalịa ya: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Kekọrịta site na Telegram",
-    "telegramMsg": "Hey, ị maara onye enyi gị? Onye enyi Akwụkwọ Nsọ nkeonwe n'efu – n'eziokwu, amaghị aha, na-enweghị nbanye. Lelee ya: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Hey, ị maara BibleBot.Life? Onye enyi Akwụkwọ Nsọ nkeonwe n'efu – n'eziokwu, amaghị aha, na-enweghị nbanye. Lelee ya: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Kekọrịta site na Email",
     "emailSubject": "Nke a nwere ike ịmasị gị: BibleBot.Life",
-    "emailBody": "Ndewo!\n\nAchọrọ m igosi gị onye enyi gị – onye enyi Akwụkwọ Nsọ n'efu nke maara Akwụkwọ Nsọ n'ezie. Enweghị ndebanye aha achọrọ, amaghị aha kpamkpam.\n\nỌ na-ajụ ajụjụ dị mma, na-akọwa amaokwu Akwụkwọ Nsọ na ihe gbara ya gburugburu ma na-eso gị n'eziokwu – ọbụna na isiokwu siri ike.\n\nGbalịa ya: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nEkele dị ukwuu",
+    "emailBody": "Ndewo!\n\nAchọrọ m igosi gị BibleBot.Life – onye enyi Akwụkwọ Nsọ n'efu nke maara Akwụkwọ Nsọ n'ezie. Enweghị ndebanye aha achọrọ, amaghị aha kpamkpam.\n\nỌ na-ajụ ajụjụ dị mma, na-akọwa amaokwu Akwụkwọ Nsọ na ihe gbara ya gburugburu ma na-eso gị n'eziokwu – ọbụna na isiokwu siri ike.\n\nGbalịa ya: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nEkele dị ukwuu",
     "copy": "Detuo njikọ",
     "copied": "Njikọ e depụtaghachiri! 📋",
     "qr": "Ma ọ bụ naanị gosi koodu QR a:"
@@ -314,7 +314,7 @@
     "suggestionsLoading": "Na-ebu aro…"
   },
   "install": {
-    "title": "Wụnye onye enyi gị",
+    "title": "Wụnye BibleBot.Life",
     "androidDesc": "Ịnweta ngwa ngwa ozugbo site na ihuenyo ụlọ",
     "iosDesc": "Pịa «Kekọrịta» → «Na ihuenyo ụlọ»",
     "button": "Wụnye",

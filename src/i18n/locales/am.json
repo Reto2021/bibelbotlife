@@ -227,13 +227,13 @@
   "donate": {
     "badge": "አጃቢህ ድጋፍ",
     "title": "አጃቢህ ነጻ ሆኖ እንዲቀጥል ርዳ",
-    "subtitle": "አጃቢህ የልብ ፕሮጀክት ነው – ማስታወቂያ የለም፣ ምዝገባ የለም፣ ድብቅ ወጪ የለም። እንዲቀጥል ከፈቃደኝ ልገሳዎች ጥገኛ ነኝ። እያንዳንዱ አስተዋፅኦ ለስራ እና ለመሠረተ ልማት ወጪዎች ይረዳል።",
+    "subtitle": "BibleBot.Life የልብ ፕሮጀክት ነው – ማስታወቂያ የለም፣ ምዝገባ የለም፣ ድብቅ ወጪ የለም። እንዲቀጥል ከፈቃደኝ ልገሳዎች ጥገኛ ነኝ። እያንዳንዱ አስተዋፅኦ ለስራ እና ለመሠረተ ልማት ወጪዎች ይረዳል።",
     "bankTitle": "በባንክ ዝውውር ይለግሱ",
     "bankSubtitle": "እያንዳንዱ መጠን ጠቃሚ ነው – ከልብ አመሰግናለሁ! 🙏",
     "recipient": "ተቀባይ",
     "bank": "ባንክ",
     "purpose": "ዓላማ",
-    "purposeValue": "ልገሳ አጃቢህ",
+    "purposeValue": "ልገሳ BibleBot.Life",
     "note": "BibleBot.Life እንደ የግል ፕሮጀክት ይሰራል። ስለዚህ ልገሳዎች ከግብር ቅናሽ አይደሉም።"
   },
   "refer": {
@@ -241,12 +241,12 @@
     "title": "አጃቢህ ለሌሎች አስተዋውቅ",
     "subtitle": "አሁን ማበረታቻ የሚፈልግ ሰው ታውቃለህ? አጃቢህ አጋራ – አንድ መልዕክት ብዙ ለውጥ ሊያመጣ ይችላል።",
     "whatsapp": "በWhatsApp አጋራ",
-    "whatsappMsg": "ሰላም፣ አጃቢህ ልታውቀው ፈለግሁ – መጽሐፍ ቅዱስን የሚያውቅ ነጻ የመጽሐፍ ቅዱስ አጃቢ ነው። መግቢያ የለም፣ ስም-አልባ፣ ታማኝ። ሞክረው: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "ሰላም፣ BibleBot.Life ልታውቀው ፈለግሁ – መጽሐፍ ቅዱስን የሚያውቅ ነጻ የመጽሐፍ ቅዱስ አጃቢ ነው። መግቢያ የለም፣ ስም-አልባ፣ ታማኝ። ሞክረው: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "በTelegram አጋራ",
-    "telegramMsg": "ሰላም፣ አጃቢህ ታውቃለህ? ነጻ ግላዊ የመጽሐፍ ቅዱስ አጃቢ – ታማኝ፣ ስም-አልባ፣ መግቢያ የለም። ተመልከት: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "ሰላም፣ BibleBot.Life ታውቃለህ? ነጻ ግላዊ የመጽሐፍ ቅዱስ አጃቢ – ታማኝ፣ ስም-አልባ፣ መግቢያ የለም። ተመልከት: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "በኢ-ሜይል አጋራ",
     "emailSubject": "ይህ ሊስብህ ይችላል: BibleBot.Life",
-    "emailBody": "ሰላም!\n\nአጃቢህ ልታውቀው ፈለግሁ – መጽሐፍ ቅዱስን በእውነት የሚያውቅ ነጻ የመጽሐፍ ቅዱስ አጃቢ ነው። ምዝገባ አያስፈልግም፣ ሙሉ በሙሉ ስም-አልባ ነው።\n\nሞክረው: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nሰላም",
+    "emailBody": "ሰላም!\n\nBibleBot.Life ልታውቀው ፈለግሁ – መጽሐፍ ቅዱስን በእውነት የሚያውቅ ነጻ የመጽሐፍ ቅዱስ አጃቢ ነው። ምዝገባ አያስፈልግም፣ ሙሉ በሙሉ ስም-አልባ ነው።\n\nሞክረው: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nሰላም",
     "copy": "ሊንክ ቅዳ",
     "copied": "ሊንክ ተቀድቷል! 📋",
     "qr": "ወይም ይህን QR ኮድ አሳይ:"
@@ -314,7 +314,7 @@
     "suggestionsLoading": "ጥቆማዎችን በመጫን ላይ…"
   },
   "install": {
-    "title": "አጃቢህ ጫን",
+    "title": "BibleBot.Life ጫን",
     "androidDesc": "ከመነሻ ገጽ ፈጣን መዳረሻ",
     "iosDesc": "«አጋራ» → «ወደ መነሻ ገጽ ጨምር» ላይ ጠቅ ያድርጉ",
     "button": "ጫን",

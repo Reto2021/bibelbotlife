@@ -227,26 +227,26 @@
   "donate": {
     "badge": "Susține companionul tău",
     "title": "Ajută companionul tău să rămână gratuit",
-    "subtitle": "Companionul tău este un proiect de pasiune – fără reclame, fără abonamente, fără costuri ascunse. Pentru a păstra acest lucru, mă bazez pe donații voluntare.",
+    "subtitle": "BibleBot.Life este un proiect de pasiune – fără reclame, fără abonamente, fără costuri ascunse. Pentru a păstra acest lucru, mă bazez pe donații voluntare.",
     "bankTitle": "Donează prin transfer bancar",
     "bankSubtitle": "Orice sumă contează – mulțumesc! 🙏",
     "recipient": "Destinatar",
     "bank": "Bancă",
     "purpose": "Referință",
-    "purposeValue": "Donație companionul tău",
-    "note": "Companionul tău este operat ca proiect privat. Donațiile nu sunt deductibile fiscal."
+    "purposeValue": "Donație BibleBot.Life",
+    "note": "BibleBot.Life este operat ca proiect privat. Donațiile nu sunt deductibile fiscal."
   },
   "refer": {
     "badge": "Share God's Word",
     "title": "Recommend companionul tău",
     "subtitle": "Know someone who could use encouragement? Share companionul tău – one message can make a difference.",
     "whatsapp": "Share via WhatsApp",
-    "whatsappMsg": "Hey, I wanted to show you companionul tău – a free Bible companion that really knows the Bible and asks great questions. No login, anonymous, honest. Try it out: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Hey, I wanted to show you BibleBot.Life – a free Bible companion that really knows the Bible and asks great questions. No login, anonymous, honest. Try it out: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Share via Telegram",
-    "telegramMsg": "Hey, do you know companionul tău? A free personal Bible companion – honest, anonymous, no login needed. Check it out: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Hey, do you know BibleBot.Life? A free personal Bible companion – honest, anonymous, no login needed. Check it out: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Share via email",
     "emailSubject": "This might interest you: BibleBot.Life",
-    "emailBody": "Hi!\n\nI wanted to show you companionul tău – a free Bible companion that really knows the Bible. No sign-up needed, completely anonymous.\n\nIt asks thoughtful questions, explains Bible passages in context and accompanies you honestly – even on difficult topics.\n\nTry it out: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nBest wishes",
+    "emailBody": "Hi!\n\nI wanted to show you BibleBot.Life – a free Bible companion that really knows the Bible. No sign-up needed, completely anonymous.\n\nIt asks thoughtful questions, explains Bible passages in context and accompanies you honestly – even on difficult topics.\n\nTry it out: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nBest wishes",
     "copy": "Copy link",
     "copied": "Link copied! 📋",
     "qr": "Or just show this QR code:"
@@ -314,7 +314,7 @@
     "suggestionsLoading": "Se încarcă sugestiile…"
   },
   "install": {
-    "title": "Instalează companionul tău",
+    "title": "Instalează BibleBot.Life",
     "androidDesc": "Acces rapid de pe ecranul de start",
     "iosDesc": "Apasă \"Partajare\" → \"Adaugă pe ecranul de start\"",
     "button": "Instalează",

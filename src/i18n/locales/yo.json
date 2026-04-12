@@ -227,13 +227,13 @@
   "donate": {
     "badge": "Ṣe àtìlẹ́yìn alábàáṣiṣẹ́pọ̀ rẹ",
     "title": "Ràn wá lọ́wọ́ kí alábàáṣiṣẹ́pọ̀ rẹ wà lọ́fẹ̀ẹ́",
-    "subtitle": "Alábàáṣiṣẹ́pọ̀ rẹ jẹ́ iṣẹ́ ọkàn – kò sí ìpolówó, kò sí ìforúkọsílẹ̀, kò sí ìnáwó fàfínúkò. Kí ó lè wà bẹ́ẹ̀, mo gbára lé àwọn ẹ̀bùn àtinúwá. Gbogbo ẹ̀bùn ràn wá lọ́wọ́ láti bo ìnáwó ìṣiṣẹ́.",
+    "subtitle": "BibleBot.Life jẹ́ iṣẹ́ ọkàn – kò sí ìpolówó, kò sí ìforúkọsílẹ̀, kò sí ìnáwó fàfínúkò. Kí ó lè wà bẹ́ẹ̀, mo gbára lé àwọn ẹ̀bùn àtinúwá. Gbogbo ẹ̀bùn ràn wá lọ́wọ́ láti bo ìnáwó ìṣiṣẹ́.",
     "bankTitle": "Ṣe ẹ̀bùn nípasẹ̀ ìfowópamọ́sí",
     "bankSubtitle": "Gbogbo iye owó ṣe pàtákì – ó ṣeun! 🙏",
     "recipient": "Olùgbà",
     "bank": "Ilé-ìfowópamọ́",
     "purpose": "Ìdí",
-    "purposeValue": "Ẹ̀bùn alábàáṣiṣẹ́pọ̀ rẹ",
+    "purposeValue": "Ẹ̀bùn BibleBot.Life",
     "note": "BibleBot.Life jẹ́ iṣẹ́ àkànṣe. Nítorí náà àwọn ẹ̀bùn kò ṣe é yọ kúrò nínú owó orí."
   },
   "refer": {
@@ -241,12 +241,12 @@
     "title": "Ṣe ìgbànímọ̀ràn alábàáṣiṣẹ́pọ̀ rẹ",
     "subtitle": "Ṣé o mọ ẹnìkan tó nílò ìwúrí báyìí? Pin alábàáṣiṣẹ́pọ̀ rẹ – ifiranṣẹ́ kan lè ṣe ànfàní púpọ̀.",
     "whatsapp": "Pin nípasẹ̀ WhatsApp",
-    "whatsappMsg": "Hey, mo fẹ́ fi alábàáṣiṣẹ́pọ̀ rẹ hàn ọ́ – alábàáṣiṣẹ́pọ̀ Bíbélì ọ̀fẹ́ tó mọ Bíbélì gan-an. Kò sí ìforúkọsílẹ̀, aláìlórúkọ, olóòtítọ́. Gbìyànjú rẹ̀: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Hey, mo fẹ́ fi BibleBot.Life hàn ọ́ – alábàáṣiṣẹ́pọ̀ Bíbélì ọ̀fẹ́ tó mọ Bíbélì gan-an. Kò sí ìforúkọsílẹ̀, aláìlórúkọ, olóòtítọ́. Gbìyànjú rẹ̀: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Pin nípasẹ̀ Telegram",
-    "telegramMsg": "Hey, ṣé o ti mọ alábàáṣiṣẹ́pọ̀ rẹ? Alábàáṣiṣẹ́pọ̀ Bíbélì ọ̀fẹ́ – olóòtítọ́, aláìlórúkọ, kò sí ìforúkọsílẹ̀. Wo ẹ̀: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Hey, ṣé o ti mọ BibleBot.Life? Alábàáṣiṣẹ́pọ̀ Bíbélì ọ̀fẹ́ – olóòtítọ́, aláìlórúkọ, kò sí ìforúkọsílẹ̀. Wo ẹ̀: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Pin nípasẹ̀ Ímeèlì",
     "emailSubject": "Èyí lè wú ọ lórí: BibleBot.Life",
-    "emailBody": "Bàwo!\n\nMo fẹ́ fi alábàáṣiṣẹ́pọ̀ rẹ hàn ọ́ – alábàáṣiṣẹ́pọ̀ Bíbélì ọ̀fẹ́ tó mọ Bíbélì gan-an. Kò sí ìforúkọsílẹ̀, aláìlórúkọ pátápátá.\n\nGbìyànjú rẹ̀: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nKí a pàdé",
+    "emailBody": "Bàwo!\n\nMo fẹ́ fi BibleBot.Life hàn ọ́ – alábàáṣiṣẹ́pọ̀ Bíbélì ọ̀fẹ́ tó mọ Bíbélì gan-an. Kò sí ìforúkọsílẹ̀, aláìlórúkọ pátápátá.\n\nGbìyànjú rẹ̀: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nKí a pàdé",
     "copy": "Ṣàdàkọ ìjápọ̀",
     "copied": "Ìjápọ̀ ti dì àkọ̀! 📋",
     "qr": "Tàbí fi kóòdù QR yìí hàn:"
@@ -314,7 +314,7 @@
     "suggestionsLoading": "Ń gbé àwọn àbá yọ…"
   },
   "install": {
-    "title": "Fi alábàáṣiṣẹ́pọ̀ rẹ sí",
+    "title": "Fi BibleBot.Life sí",
     "androidDesc": "Ìráyè kíákíá láti ojú iboju ilé",
     "iosDesc": "Tẹ «Pin» → «Fi sí ojú iboju ilé»",
     "button": "Fi sí",

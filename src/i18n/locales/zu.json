@@ -227,13 +227,13 @@
   "donate": {
     "badge": "Sekela iumngane wakho yakho",
     "title": "Siza ukuba iumngane wakho yakho ihlale mahhala",
-    "subtitle": "I-umngane wakho yakho iyiphrojekthi yothando – ngaphandle kokukhangisa, ngaphandle kokubhaliselwa, ngaphandle kwezindleko ezifihliwe. Ukuze ihlale kanjalo, ngithembele eminikelweni yokuzithandela. Yonke imali inceda ukuhlanganisa izindleko ezikhona zokusebenza nengqalasizinda.",
+    "subtitle": "I-BibleBot.Life yakho iyiphrojekthi yothando – ngaphandle kokukhangisa, ngaphandle kokubhaliselwa, ngaphandle kwezindleko ezifihliwe. Ukuze ihlale kanjalo, ngithembele eminikelweni yokuzithandela. Yonke imali inceda ukuhlanganisa izindleko ezikhona zokusebenza nengqalasizinda.",
     "bankTitle": "Nikezela nge-Bank Transfer",
     "bankSubtitle": "Yonke imali ibalulekile – ngiyabonga kakhulu! 🙏",
     "recipient": "Mtholi",
     "bank": "Ibhange",
     "purpose": "Inhloso",
-    "purposeValue": "Nikezela iumngane wakho",
+    "purposeValue": "Nikezela iBibleBot.Life",
     "note": "I-BibleBot.Life isebenza njengephrojekthi yangasese. Ngakho-ke iminikelo ayikwazi ukubuyiselwa intela."
   },
   "refer": {
@@ -241,12 +241,12 @@
     "title": "Phakamisa iumngane wakho",
     "subtitle": "Ukhona umuntu odinga ukukhuthazwa njengamanje? Yabelana nge-umngane wakho – umlayezo owodwa ungenza umehluko omkhulu.",
     "whatsapp": "Yabelana ngeWhatsApp",
-    "whatsappMsg": "Heyi, bengifuna ukukubonisa i-umngane wakho – umngane weBhayibheli wamahhala okwazi iBhayibheli futhi ebuza imibuzo emihle ngempela. Akukho ukungena ngemvume, ayaziwa, iqotho. Zama: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Heyi, bengifuna ukukubonisa i-BibleBot.Life – umngane weBhayibheli wamahhala okwazi iBhayibheli futhi ebuza imibuzo emihle ngempela. Akukho ukungena ngemvume, ayaziwa, iqotho. Zama: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Yabelana ngeTelegram",
-    "telegramMsg": "Heyi, uyayazi i-umngane wakho? Umngane siqu weBhayibheli wamahhala – oqotho, ongaziwa, ongenawo ukungena ngemvume. Buka: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Heyi, uyayazi i-BibleBot.Life? Umngane siqu weBhayibheli wamahhala – oqotho, ongaziwa, ongenawo ukungena ngemvume. Buka: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Yabelana Nge-imeyili",
     "emailSubject": "Lokhu kungase kukuthakazelise: BibleBot.Life",
-    "emailBody": "Sawubona!\n\nBengifuna ukukubonisa i-umngane wakho – umngane weBhayibheli wamahhala okwazi ngempela iBhayibheli. Akukho ukubhaliswa okudingekayo, kuyimfihlo ngokuphelele.\n\nUbuza imibuzo emihle, uchaza izindawo zeBhayibheli kumongo futhi akuphelezela ngokwethembeka – nasezindabeni ezinzima.\n\nZama: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nNgemfiselomihle",
+    "emailBody": "Sawubona!\n\nBengifuna ukukubonisa i-BibleBot.Life – umngane weBhayibheli wamahhala okwazi ngempela iBhayibheli. Akukho ukubhaliswa okudingekayo, kuyimfihlo ngokuphelele.\n\nUbuza imibuzo emihle, uchaza izindawo zeBhayibheli kumongo futhi akuphelezela ngokwethembeka – nasezindabeni ezinzima.\n\nZama: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nNgemfiselomihle",
     "copy": "Kopisha Isixhumanisi",
     "copied": "Kopishiwe isixhumanisi! 📋",
     "qr": "Noma uvele ukhombise le kade ye-QR:"
@@ -314,7 +314,7 @@
     "suggestionsLoading": "Ilayisha iziphakamiso…"
   },
   "install": {
-    "title": "Faka iumngane wakho",
+    "title": "Faka iBibleBot.Life",
     "androidDesc": "Ukufinyelela okusheshayo ngqo kusuka kusikrini sasekhaya",
     "iosDesc": "Thepha ku-\"Yabelana\" → \"Kuya Esikrinini Sasekhaya\"",
     "button": "Faka",

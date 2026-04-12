@@ -227,13 +227,13 @@
   "donate": {
     "badge": "Dukung pendamping Anda Anda",
     "title": "Bantu agar pendamping Anda Anda tetap gratis",
-    "subtitle": "Pendamping Anda Anda adalah proyek yang lahir dari hati – tanpa iklan, tanpa langganan, tanpa biaya tersembunyi. Agar tetap demikian, saya bergantung pada donasi sukarela. Setiap kontribusi membantu menutupi biaya operasional dan infrastruktur.",
+    "subtitle": "BibleBot.Life Anda adalah proyek yang lahir dari hati – tanpa iklan, tanpa langganan, tanpa biaya tersembunyi. Agar tetap demikian, saya bergantung pada donasi sukarela. Setiap kontribusi membantu menutupi biaya operasional dan infrastruktur.",
     "bankTitle": "Donasi melalui Transfer Bank",
     "bankSubtitle": "Setiap jumlah berarti – terima kasih banyak! 🙏",
     "recipient": "Penerima",
     "bank": "Bank",
     "purpose": "Tujuan",
-    "purposeValue": "Donasi pendamping Anda",
+    "purposeValue": "Donasi BibleBot.Life",
     "note": "BibleBot.Life dijalankan sebagai proyek pribadi. Oleh karena itu, donasi tidak dapat dikurangkan dari pajak."
   },
   "refer": {
@@ -241,12 +241,12 @@
     "title": "Rekomendasikan pendamping Anda",
     "subtitle": "Apakah Anda mengenal seseorang yang membutuhkan dorongan? Bagikan pendamping Anda – satu pesan dapat membuat perbedaan besar.",
     "whatsapp": "Bagikan via WhatsApp",
-    "whatsappMsg": "Hai, saya ingin menunjukkan pendamping Anda kepada Anda – pendamping Alkitab gratis yang tahu Alkitab dan mengajukan pertanyaan yang sangat bagus. Tanpa login, anonim, jujur. Coba saja: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Hai, saya ingin menunjukkan BibleBot.Life kepada Anda – pendamping Alkitab gratis yang tahu Alkitab dan mengajukan pertanyaan yang sangat bagus. Tanpa login, anonim, jujur. Coba saja: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Bagikan via Telegram",
-    "telegramMsg": "Hai, sudahkah Anda mengenal pendamping Anda? Pendamping Alkitab pribadi gratis – jujur, anonim, tanpa login. Lihatlah: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Hai, sudahkah Anda mengenal BibleBot.Life? Pendamping Alkitab pribadi gratis – jujur, anonim, tanpa login. Lihatlah: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Bagikan via Email",
     "emailSubject": "Ini mungkin menarik bagi Anda: BibleBot.Life",
-    "emailBody": "Halo!\n\nSaya ingin menunjukkan pendamping Anda kepada Anda – pendamping Alkitab gratis yang benar-benar tahu Alkitab. Tidak perlu mendaftar, sepenuhnya anonim.\n\nIa mengajukan pertanyaan balik yang baik, menjelaskan ayat-ayat Alkitab dalam konteks, dan mendampingi Anda dengan jujur – bahkan dalam topik-topik sulit.\n\nCoba saja: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nSalam hormat",
+    "emailBody": "Halo!\n\nSaya ingin menunjukkan BibleBot.Life kepada Anda – pendamping Alkitab gratis yang benar-benar tahu Alkitab. Tidak perlu mendaftar, sepenuhnya anonim.\n\nIa mengajukan pertanyaan balik yang baik, menjelaskan ayat-ayat Alkitab dalam konteks, dan mendampingi Anda dengan jujur – bahkan dalam topik-topik sulit.\n\nCoba saja: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nSalam hormat",
     "copy": "Salin Tautan",
     "copied": "Tautan disalin! 📋",
     "qr": "Atau cukup tunjukkan kode QR ini:"
@@ -314,7 +314,7 @@
     "suggestionsLoading": "Memuat saran…"
   },
   "install": {
-    "title": "Instal pendamping Anda",
+    "title": "Instal BibleBot.Life",
     "androidDesc": "Akses cepat langsung dari layar utama",
     "iosDesc": "Ketuk «Bagikan» → «Tambah ke Layar Utama»",
     "button": "Instal",

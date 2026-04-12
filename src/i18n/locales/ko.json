@@ -227,13 +227,13 @@
   "donate": {
     "badge": "당신의 동반자 지원하기",
     "title": "당신의 동반자이 무료로 유지되도록 도와주세요",
-    "subtitle": "당신의 당신의 동반자은 광고, 구독, 숨겨진 비용 없이 마음으로 만든 프로젝트입니다. 이것이 유지되려면 자발적인 기부에 의존합니다. 모든 기부금은 운영 및 인프라 비용을 충당하는 데 도움이 됩니다.",
+    "subtitle": "당신의 BibleBot.Life은 광고, 구독, 숨겨진 비용 없이 마음으로 만든 프로젝트입니다. 이것이 유지되려면 자발적인 기부에 의존합니다. 모든 기부금은 운영 및 인프라 비용을 충당하는 데 도움이 됩니다.",
     "bankTitle": "은행 송금으로 기부하기",
     "bankSubtitle": "모든 금액이 중요합니다 – 진심으로 감사합니다! 🙏",
     "recipient": "수취인",
     "bank": "은행",
     "purpose": "목적",
-    "purposeValue": "당신의 동반자 기부",
+    "purposeValue": "BibleBot.Life 기부",
     "note": "BibleBot.Life는 개인 프로젝트로 운영됩니다. 따라서 기부금은 세금 공제 대상이 아닙니다."
   },
   "refer": {
@@ -241,12 +241,12 @@
     "title": "당신의 동반자을 추천하세요",
     "subtitle": "지금 격려가 필요한 사람을 알고 있습니까? 당신의 동반자을 공유하세요 – 메시지 하나가 큰 영향을 미칠 수 있습니다.",
     "whatsapp": "WhatsApp으로 공유",
-    "whatsappMsg": "안녕, 당신의 동반자을 보여주고 싶었어 – 성경을 알고 정말 좋은 질문을 하는 무료 성경 동반자야. 로그인 필요 없고, 익명이고, 정직해. 한번 사용해 봐: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "안녕, BibleBot.Life을 보여주고 싶었어 – 성경을 알고 정말 좋은 질문을 하는 무료 성경 동반자야. 로그인 필요 없고, 익명이고, 정직해. 한번 사용해 봐: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Telegram으로 공유",
-    "telegramMsg": "안녕, 당신의 동반자을 알고 있니? 무료 개인 성경 동반자야 – 정직하고, 익명이고, 로그인 필요 없어. 한번 봐봐: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "안녕, BibleBot.Life을 알고 있니? 무료 개인 성경 동반자야 – 정직하고, 익명이고, 로그인 필요 없어. 한번 봐봐: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "이메일로 공유",
     "emailSubject": "이것이 당신에게 흥미로울 수 있습니다: BibleBot.Life",
-    "emailBody": "안녕하세요!\n\n당신의 동반자을 보여주고 싶었습니다 – 성경을 정말 잘 아는 무료 성경 동반자입니다. 가입 필요 없고, 완전히 익명입니다.\n\n그는 좋은 질문을 하고, 문맥에서 성경 구절을 설명하며, 어려운 주제에서도 정직하게 당신을 동반합니다.\n\n한번 사용해 보세요: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\n안녕히 계세요",
+    "emailBody": "안녕하세요!\n\nBibleBot.Life을 보여주고 싶었습니다 – 성경을 정말 잘 아는 무료 성경 동반자입니다. 가입 필요 없고, 완전히 익명입니다.\n\n그는 좋은 질문을 하고, 문맥에서 성경 구절을 설명하며, 어려운 주제에서도 정직하게 당신을 동반합니다.\n\n한번 사용해 보세요: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\n안녕히 계세요",
     "copy": "링크 복사",
     "copied": "링크 복사됨! 📋",
     "qr": "또는 이 QR 코드를 보여주세요:"
@@ -314,7 +314,7 @@
     "suggestionsLoading": "제안 로딩 중…"
   },
   "install": {
-    "title": "당신의 동반자 설치",
+    "title": "BibleBot.Life 설치",
     "androidDesc": "홈 화면에서 바로 빠른 액세스",
     "iosDesc": "«공유» → «홈 화면에 추가»를 탭하세요",
     "button": "설치",

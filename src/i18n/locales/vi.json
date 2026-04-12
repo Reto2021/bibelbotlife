@@ -229,13 +229,13 @@
   "donate": {
     "badge": "Hỗ trợ người bạn đồng hành của bạn",
     "title": "Hãy giúp người bạn đồng hành của bạn duy trì miễn phí",
-    "subtitle": "Người bạn đồng hành của bạn là một dự án tâm huyết – không quảng cáo, không phí thuê bao, không có chi phí ẩn. Để duy trì điều này, tôi cần sự quyên góp tự nguyện. Mọi đóng góp đều giúp trang trải chi phí hoạt động và cơ sở hạ tầng.",
+    "subtitle": "BibleBot.Life của bạn là một dự án tâm huyết – không quảng cáo, không phí thuê bao, không có chi phí ẩn. Để duy trì điều này, tôi cần sự quyên góp tự nguyện. Mọi đóng góp đều giúp trang trải chi phí hoạt động và cơ sở hạ tầng.",
     "bankTitle": "Quyên góp qua chuyển khoản ngân hàng",
     "bankSubtitle": "Mọi số tiền đều có giá trị – chân thành cảm ơn! 🙏",
     "recipient": "Người nhận",
     "bank": "Ngân hàng",
     "purpose": "Mục đích",
-    "purposeValue": "Quyên góp người bạn đồng hành",
+    "purposeValue": "Quyên góp BibleBot.Life",
     "note": "BibleBot.Life hoạt động như một dự án cá nhân. Do đó, các khoản quyên góp không được giảm trừ thuế."
   },
   "refer": {
@@ -243,12 +243,12 @@
     "title": "Giới thiệu người bạn đồng hành",
     "subtitle": "Bạn có biết ai đó đang cần lời động viên? Hãy chia sẻ người bạn đồng hành – một tin nhắn có thể tạo ra nhiều điều khác biệt.",
     "whatsapp": "Chia sẻ qua WhatsApp",
-    "whatsappMsg": "Chào, mình muốn giới thiệu cho bạn người bạn đồng hành – một người bạn đồng hành Kinh Thánh miễn phí, hiểu Kinh Thánh và đặt những câu hỏi thực sự hay. Không cần đăng nhập, ẩn danh, trung thực. Hãy thử xem: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Chào, mình muốn giới thiệu cho bạn BibleBot.Life – một BibleBot.Life Kinh Thánh miễn phí, hiểu Kinh Thánh và đặt những câu hỏi thực sự hay. Không cần đăng nhập, ẩn danh, trung thực. Hãy thử xem: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Chia sẻ qua Telegram",
-    "telegramMsg": "Chào, bạn đã biết người bạn đồng hành chưa? Một người bạn đồng hành Kinh Thánh cá nhân miễn phí – trung thực, ẩn danh, không cần đăng nhập. Hãy xem thử: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Chào, bạn đã biết BibleBot.Life chưa? Một BibleBot.Life Kinh Thánh cá nhân miễn phí – trung thực, ẩn danh, không cần đăng nhập. Hãy xem thử: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Chia sẻ qua E-mail",
     "emailSubject": "Bạn có thể quan tâm: BibleBot.Life",
-    "emailBody": "Chào bạn!\n\nMình muốn giới thiệu cho bạn người bạn đồng hành – một người bạn đồng hành Kinh Thánh miễn phí, thực sự hiểu Kinh Thánh. Không cần đăng ký, hoàn toàn ẩn danh.\n\nNó đặt ra những câu hỏi hay, giải thích các đoạn Kinh Thánh trong ngữ cảnh và đồng hành cùng bạn một cách trung thực – ngay cả với những chủ đề khó khăn.\n\nHãy thử xem: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nThân ái",
+    "emailBody": "Chào bạn!\n\nMình muốn giới thiệu cho bạn BibleBot.Life – một BibleBot.Life Kinh Thánh miễn phí, thực sự hiểu Kinh Thánh. Không cần đăng ký, hoàn toàn ẩn danh.\n\nNó đặt ra những câu hỏi hay, giải thích các đoạn Kinh Thánh trong ngữ cảnh và đồng hành cùng bạn một cách trung thực – ngay cả với những chủ đề khó khăn.\n\nHãy thử xem: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nThân ái",
     "copy": "Sao chép liên kết",
     "copied": "Đã sao chép liên kết! 📋",
     "qr": "Hoặc chỉ cần hiển thị mã QR này:"
@@ -316,7 +316,7 @@
     "suggestionsLoading": "Đang tải gợi ý…"
   },
   "install": {
-    "title": "Cài đặt người bạn đồng hành",
+    "title": "Cài đặt BibleBot.Life",
     "androidDesc": "Truy cập nhanh chóng trực tiếp từ màn hình chính",
     "iosDesc": "Chạm vào «Chia sẻ» → «Thêm vào Màn hình chính»",
     "button": "Cài đặt",

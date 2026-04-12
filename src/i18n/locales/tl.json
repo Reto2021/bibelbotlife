@@ -227,13 +227,13 @@
   "donate": {
     "badge": "Suportahan ang Iyong ang iyong kasama",
     "title": "Tulungan na Manatiling Libre ang Iyong ang iyong kasama",
-    "subtitle": "Ang iyong ang iyong kasama ay isang proyekto ng puso – nang walang advertising, nang walang subscription, nang walang nakatagong gastos. Upang manatili itong ganoon, umaasa ako sa boluntaryong donasyon. Ang bawat kontribusyon ay nakakatulong upang matugunan ang mga kasalukuyang gastos para sa operasyon at imprastraktura.",
+    "subtitle": "Ang iyong BibleBot.Life ay isang proyekto ng puso – nang walang advertising, nang walang subscription, nang walang nakatagong gastos. Upang manatili itong ganoon, umaasa ako sa boluntaryong donasyon. Ang bawat kontribusyon ay nakakatulong upang matugunan ang mga kasalukuyang gastos para sa operasyon at imprastraktura.",
     "bankTitle": "Donasyon sa pamamagitan ng Bank Transfer",
     "bankSubtitle": "Bawat halaga ay mahalaga – maraming salamat! 🙏",
     "recipient": "Tatanggap",
     "bank": "Bangko",
     "purpose": "Layunin",
-    "purposeValue": "Donasyon ang iyong kasama",
+    "purposeValue": "Donasyon BibleBot.Life",
     "note": "Ang BibleBot.Life ay pinapatakbo bilang isang pribadong proyekto. Samakatuwid, ang mga donasyon ay hindi deductible sa buwis."
   },
   "refer": {
@@ -241,12 +241,12 @@
     "title": "Irekomenda ang ang iyong kasama",
     "subtitle": "May kilala ka bang nangangailangan ng paghihikayat ngayon? Ibahagi ang ang iyong kasama – isang mensahe ay maaaring magdulot ng malaking pagbabago.",
     "whatsapp": "Ibahagi sa WhatsApp",
-    "whatsappMsg": "Uy, gusto kong ipakita sa iyo ang ang iyong kasama – isang libreng kasama sa Bibliya na nakakaalam ng Bibliya at nagtatanong ng talagang magagandang tanong. Walang pag-login, anonymous, tapat. Subukan mo: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Uy, gusto kong ipakita sa iyo ang BibleBot.Life – isang libreng kasama sa Bibliya na nakakaalam ng Bibliya at nagtatanong ng talagang magagandang tanong. Walang pag-login, anonymous, tapat. Subukan mo: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Ibahagi sa Telegram",
-    "telegramMsg": "Uy, alam mo na ba ang ang iyong kasama? Isang libreng personal na kasama sa Bibliya – tapat, anonymous, nang walang pag-login. Tingnan mo: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Uy, alam mo na ba ang BibleBot.Life? Isang libreng personal na kasama sa Bibliya – tapat, anonymous, nang walang pag-login. Tingnan mo: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Ibahagi sa E-mail",
     "emailSubject": "Maaaring interesado ka dito: BibleBot.Life",
-    "emailBody": "Kumusta!\n\nGusto kong ipakita sa iyo ang ang iyong kasama – isang libreng kasama sa Bibliya na talagang nakakaalam ng Bibliya. Walang kinakailangang pagpaparehistro, ganap na anonymous.\n\nNagtatanong ito ng magagandang follow-up na tanong, nagpapaliwanag ng mga talata sa Bibliya sa konteksto at tapat na sinasamahan ka – kahit sa mahirap na mga paksa.\n\nSubukan mo: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nMalugod na pagbati",
+    "emailBody": "Kumusta!\n\nGusto kong ipakita sa iyo ang BibleBot.Life – isang libreng kasama sa Bibliya na talagang nakakaalam ng Bibliya. Walang kinakailangang pagpaparehistro, ganap na anonymous.\n\nNagtatanong ito ng magagandang follow-up na tanong, nagpapaliwanag ng mga talata sa Bibliya sa konteksto at tapat na sinasamahan ka – kahit sa mahirap na mga paksa.\n\nSubukan mo: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nMalugod na pagbati",
     "copy": "Kopyahin ang link",
     "copied": "Nakopya na ang link!",
     "qr": "QR Code"
@@ -314,7 +314,7 @@
     "suggestionsLoading": "Naglo-load ng mga mungkahi…"
   },
   "install": {
-    "title": "I-install ang ang iyong kasama",
+    "title": "I-install ang BibleBot.Life",
     "androidDesc": "Mabilis na pag-access direkta mula sa home screen",
     "iosDesc": "I-tap ang «Ibahagi» → «Idagdag sa Home Screen»",
     "button": "I-install",

@@ -227,13 +227,13 @@
   "donate": {
     "badge": "Támogassa a társadot",
     "title": "Segítsen abban, hogy a társad ingyenes maradjon",
-    "subtitle": "A társad egy szívügy – reklámok, előfizetés és rejtett költségek nélkül. Ahhoz, hogy ez így maradjon, önkéntes adományokra van szükségem. Minden hozzájárulás segít fedezni a működési és infrastrukturális költségeket.",
+    "subtitle": "A BibleBot.Life egy szívügy – reklámok, előfizetés és rejtett költségek nélkül. Ahhoz, hogy ez így maradjon, önkéntes adományokra van szükségem. Minden hozzájárulás segít fedezni a működési és infrastrukturális költségeket.",
     "bankTitle": "Adomány banki átutalással",
     "bankSubtitle": "Minden összeg számít – nagyon köszönjük! 🙏",
     "recipient": "Kedvezményezett",
     "bank": "Bank",
     "purpose": "Közlemény",
-    "purposeValue": "Adomány társad",
+    "purposeValue": "Adomány BibleBot.Life",
     "note": "A BibleBot.Life magánprojektként működik. Az adományok ezért nem vonhatók le az adóból."
   },
   "refer": {
@@ -241,12 +241,12 @@
     "title": "Ajánlja tovább a társadot",
     "subtitle": "Ismer valakit, akinek éppen bátorításra van szüksége? Ossza meg a társadot – egy üzenet sokat jelenthet.",
     "whatsapp": "Megosztás WhatsAppon keresztül",
-    "whatsappMsg": "Szia, meg akartam mutatni neked a társadot – egy ingyenes bibliai társat, aki ismeri a Bibliát és igazán jó kérdéseket tesz fel. Nincs bejelentkezés, névtelen, őszinte. Próbáld ki: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Szia, meg akartam mutatni neked a BibleBot.Lifeot – egy ingyenes bibliai társat, aki ismeri a Bibliát és igazán jó kérdéseket tesz fel. Nincs bejelentkezés, névtelen, őszinte. Próbáld ki: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Megosztás Telegramon keresztül",
-    "telegramMsg": "Szia, ismered már a társadot? Egy ingyenes személyes bibliai társ – őszinte, névtelen, bejelentkezés nélkül. Nézd meg: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Szia, ismered már a BibleBot.Lifeot? Egy ingyenes személyes bibliai társ – őszinte, névtelen, bejelentkezés nélkül. Nézd meg: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Megosztás e-mailben",
     "emailSubject": "Ez érdekelhet: BibleBot.Life",
-    "emailBody": "Szia!\n\nMeg akartam mutatni neked a társadot – egy ingyenes bibliai társat, aki igazán ismeri a Bibliát. Nincs szükség regisztrációra, teljesen névtelen.\n\nJó visszakérdezéseket tesz fel, magyarázza a bibliai verseket kontextusban, és őszintén elkísér – még nehéz témákban is.\n\nPróbáld ki: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nÜdvözlettel",
+    "emailBody": "Szia!\n\nMeg akartam mutatni neked a BibleBot.Lifeot – egy ingyenes bibliai társat, aki igazán ismeri a Bibliát. Nincs szükség regisztrációra, teljesen névtelen.\n\nJó visszakérdezéseket tesz fel, magyarázza a bibliai verseket kontextusban, és őszintén elkísér – még nehéz témákban is.\n\nPróbáld ki: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nÜdvözlettel",
     "copy": "Link másolása",
     "copied": "Link másolva! 📋",
     "qr": "Vagy egyszerűen mutassa meg ezt a QR-kódot:"
@@ -314,7 +314,7 @@
     "suggestionsLoading": "Javaslatok betöltése…"
   },
   "install": {
-    "title": "Társad telepítése",
+    "title": "BibleBot.Life telepítése",
     "androidDesc": "Gyors hozzáférés közvetlenül a kezdőképernyőről",
     "iosDesc": "Koppintson a „Megosztás” → „Hozzáadás a kezdőképernyőhöz” gombra",
     "button": "Telepítés",

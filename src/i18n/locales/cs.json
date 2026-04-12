@@ -227,13 +227,13 @@
   "donate": {
     "badge": "Podpoř tvůj společník",
     "title": "Pomoz udržet tvůj společník zdarma",
-    "subtitle": "Tvůj společník je projekt srdce – bez reklam, bez předplatného, bez skrytých nákladů. Aby to tak zůstalo, spoléhám na dobrovolné dary.",
+    "subtitle": "BibleBot.Life je projekt srdce – bez reklam, bez předplatného, bez skrytých nákladů. Aby to tak zůstalo, spoléhám na dobrovolné dary.",
     "bankTitle": "Daruj bankovním převodem",
     "bankSubtitle": "Každá částka se počítá – srdečně děkuji! 🙏",
     "recipient": "Příjemce",
     "bank": "Banka",
     "purpose": "Účel platby",
-    "purposeValue": "Dar tvůj společník",
+    "purposeValue": "Dar BibleBot.Life",
     "note": "BibleBot.Life je provozován jako soukromý projekt. Dary proto nejsou daňově odečitatelné."
   },
   "cta": {
@@ -299,7 +299,7 @@
     "suggestionsLoading": "Načítání návrhů…"
   },
   "install": {
-    "title": "Nainstalovat tvůj společník",
+    "title": "Nainstalovat BibleBot.Life",
     "androidDesc": "Rychlý přístup z domovské obrazovky",
     "iosDesc": "Klepni na «Sdílet» → «Přidat na plochu»",
     "button": "Nainstalovat",
@@ -921,12 +921,12 @@
     "title": "Doporuč tvůj společník",
     "subtitle": "Znáte někoho, kdo potřebuje povzbuzení? Sdílejte tvůj společník.",
     "whatsapp": "Sdílet přes WhatsApp",
-    "whatsappMsg": "Ahoj, chtěl jsem ti ukázat tvůj společník – bezplatného biblického průvodce. Vyzkoušej: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Ahoj, chtěl jsem ti ukázat BibleBot.Life – bezplatného biblického průvodce. Vyzkoušej: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Sdílet přes Telegram",
-    "telegramMsg": "Ahoj, znáš tvůj společník? Bezplatný osobní biblický průvodce. Podívej se: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Ahoj, znáš BibleBot.Life? Bezplatný osobní biblický průvodce. Podívej se: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Sdílet e-mailem",
     "emailSubject": "Tohle by tě mohlo zajímat: BibleBot.Life",
-    "emailBody": "Ahoj!\n\nChtěl jsem ti ukázat tvůj společník.\n\nVyzkoušej: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nS pozdravem",
+    "emailBody": "Ahoj!\n\nChtěl jsem ti ukázat BibleBot.Life.\n\nVyzkoušej: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nS pozdravem",
     "copy": "Kopírovat odkaz",
     "copied": "Odkaz zkopírován! 📋",
     "qr": "Nebo ukaž tento QR kód:"

@@ -227,13 +227,13 @@
   "donate": {
     "badge": "Saidia mwenza wako wako",
     "title": "Saidia mwenza wako wako kubaki bure",
-    "subtitle": "Mwenza wako wako ni mradi wa moyo – bila matangazo, bila usajili, bila gharama zilizofichwa. Ili iendelee kuwa hivyo, ninategemea michango ya hiari. Kila mchango husaidia kufidia gharama za uendeshaji na miundombinu.",
+    "subtitle": "BibleBot.Life wako ni mradi wa moyo – bila matangazo, bila usajili, bila gharama zilizofichwa. Ili iendelee kuwa hivyo, ninategemea michango ya hiari. Kila mchango husaidia kufidia gharama za uendeshaji na miundombinu.",
     "bankTitle": "Changia kwa Uhamisho wa Benki",
     "bankSubtitle": "Kila mchango huhesabika – asante sana! 🙏",
     "recipient": "Mpokeaji",
     "bank": "Benki",
     "purpose": "Kusudi",
-    "purposeValue": "Mchango mwenza wako",
+    "purposeValue": "Mchango BibleBot.Life",
     "note": "BibleBot.Life inaendeshwa kama mradi wa kibinafsi. Kwa hiyo, michango haiwezi kukatwa kodi."
   },
   "refer": {
@@ -241,12 +241,12 @@
     "title": "Mshauri mwenza wako kwa wengine",
     "subtitle": "Je, unamfahamu mtu anayehitaji kutiwa moyo? Shiriki mwenza wako – ujumbe mmoja unaweza kuleta mabadiliko makubwa.",
     "whatsapp": "Shiriki kupitia WhatsApp",
-    "whatsappMsg": "Habari, nilikuwa nataka kukuonyesha mwenza wako – msaidizi wa Biblia asiye na malipo anayeijua Biblia na huuliza maswali mazuri sana. Hakuna kuingia, siri, mwaminifu. Jaribu: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Habari, nilikuwa nataka kukuonyesha BibleBot.Life – msaidizi wa Biblia asiye na malipo anayeijua Biblia na huuliza maswali mazuri sana. Hakuna kuingia, siri, mwaminifu. Jaribu: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Shiriki kupitia Telegram",
-    "telegramMsg": "Habari, unamjua mwenza wako? Msaidizi wa kibinafsi wa Biblia asiye na malipo – mwaminifu, siri, bila kuingia. Angalia: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Habari, unamjua BibleBot.Life? Msaidizi wa kibinafsi wa Biblia asiye na malipo – mwaminifu, siri, bila kuingia. Angalia: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Shiriki kupitia Barua pepe",
     "emailSubject": "Hii inaweza kukuvutia: BibleBot.Life",
-    "emailBody": "Habari!\n\nNilikuwa nataka kukuonyesha mwenza wako – msaidizi wa Biblia asiye na malipo anayeijua Biblia kweli. Hakuna usajili unaohitajika, siri kabisa.\n\nAnauliza maswali mazuri ya kufuatilia, anaelezea mistari ya Biblia katika muktadha na hukuongoza kwa uaminifu – hata katika mada ngumu.\n\nJaribu: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nSalamu za upendo",
+    "emailBody": "Habari!\n\nNilikuwa nataka kukuonyesha BibleBot.Life – msaidizi wa Biblia asiye na malipo anayeijua Biblia kweli. Hakuna usajili unaohitajika, siri kabisa.\n\nAnauliza maswali mazuri ya kufuatilia, anaelezea mistari ya Biblia katika muktadha na hukuongoza kwa uaminifu – hata katika mada ngumu.\n\nJaribu: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nSalamu za upendo",
     "copy": "Nakili Kiungo",
     "copied": "Kiungo kimenakiliwa! 📋",
     "qr": "Au onyesha tu msimbo huu wa QR:"
@@ -314,7 +314,7 @@
     "suggestionsLoading": "Inapakia mapendekezo…"
   },
   "install": {
-    "title": "Sakinisha mwenza wako",
+    "title": "Sakinisha BibleBot.Life",
     "androidDesc": "Ufikiaji wa haraka moja kwa moja kutoka skrini ya nyumbani",
     "iosDesc": "Gonga «Shiriki» → «Kwa Skrini ya Nyumbani»",
     "button": "Sakinisha",

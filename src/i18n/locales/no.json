@@ -227,13 +227,13 @@
   "donate": {
     "badge": "Støtt din din følgesvenn",
     "title": "Hjelp til å holde din din følgesvenn gratis",
-    "subtitle": "Din din følgesvenn er et hjerteprosjekt – uten reklame, uten abonnement, uten skjulte kostnader. For at det skal forbli slik, er jeg avhengig av frivillige donasjoner. Hvert bidrag hjelper til med å dekke de løpende kostnadene for drift og infrastruktur.",
+    "subtitle": "Din BibleBot.Life er et hjerteprosjekt – uten reklame, uten abonnement, uten skjulte kostnader. For at det skal forbli slik, er jeg avhengig av frivillige donasjoner. Hvert bidrag hjelper til med å dekke de løpende kostnadene for drift og infrastruktur.",
     "bankTitle": "Donasjon via bankoverføring",
     "bankSubtitle": "Hvert beløp teller – tusen takk! 🙏",
     "recipient": "Mottaker",
     "bank": "Bank",
     "purpose": "Formål",
-    "purposeValue": "Donasjon din følgesvenn",
+    "purposeValue": "Donasjon BibleBot.Life",
     "note": "BibleBot.Life drives som et privat prosjekt. Donasjoner er derfor ikke fradragsberettigede."
   },
   "refer": {
@@ -241,12 +241,12 @@
     "title": "Anbefal din følgesvenn videre",
     "subtitle": "Kjenner du noen som trenger oppmuntring akkurat nå? Del din følgesvenn – en melding kan utgjøre en stor forskjell.",
     "whatsapp": "Del via WhatsApp",
-    "whatsappMsg": "Hei, jeg ville vise deg din følgesvenn – en gratis bibel-følgesvenn som kjenner Bibelen og stiller virkelig gode spørsmål. Ingen pålogging, anonym, ærlig. Prøv det: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Hei, jeg ville vise deg BibleBot.Life – en gratis bibel-følgesvenn som kjenner Bibelen og stiller virkelig gode spørsmål. Ingen pålogging, anonym, ærlig. Prøv det: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Del via Telegram",
-    "telegramMsg": "Hei, kjenner du din følgesvenn? En gratis personlig bibel-følgesvenn – ærlig, anonym, uten pålogging. Ta en titt: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Hei, kjenner du BibleBot.Life? En gratis personlig bibel-følgesvenn – ærlig, anonym, uten pålogging. Ta en titt: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Del via e-post",
     "emailSubject": "Dette kan interessere deg: BibleBot.Life",
-    "emailBody": "Hei!\n\nJeg ville vise deg din følgesvenn – en gratis bibel-følgesvenn som virkelig kjenner Bibelen. Ingen registrering nødvendig, helt anonym.\n\nDen stiller gode oppfølgingsspørsmål, forklarer bibelvers i kontekst og følger deg ærlig – også i vanskelige temaer.\n\nPrøv det: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nMvh",
+    "emailBody": "Hei!\n\nJeg ville vise deg BibleBot.Life – en gratis bibel-følgesvenn som virkelig kjenner Bibelen. Ingen registrering nødvendig, helt anonym.\n\nDen stiller gode oppfølgingsspørsmål, forklarer bibelvers i kontekst og følger deg ærlig – også i vanskelige temaer.\n\nPrøv det: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nMvh",
     "copy": "Kopier lenke",
     "copied": "Lenke kopiert! 📋",
     "qr": "Eller vis bare denne QR-koden:"
@@ -314,7 +314,7 @@
     "suggestionsLoading": "Laster forslag…"
   },
   "install": {
-    "title": "Installer din følgesvenn",
+    "title": "Installer BibleBot.Life",
     "androidDesc": "Rask tilgang direkte fra startskjermen",
     "iosDesc": "Trykk på «Del» → «Legg til på Hjem-skjerm»",
     "button": "Installer",

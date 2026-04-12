@@ -227,13 +227,13 @@
   "donate": {
     "badge": "Stöd din din följeslagare",
     "title": "Hjälp till att hålla din din följeslagare gratis",
-    "subtitle": "Din din följeslagare är ett hjärteprojekt – utan reklam, utan prenumeration, utan dolda kostnader. För att det ska förbli så är jag beroende av frivilliga donationer. Varje bidrag hjälper till att täcka de löpande kostnaderna för drift och infrastruktur.",
+    "subtitle": "Din BibleBot.Life är ett hjärteprojekt – utan reklam, utan prenumeration, utan dolda kostnader. För att det ska förbli så är jag beroende av frivilliga donationer. Varje bidrag hjälper till att täcka de löpande kostnaderna för drift och infrastruktur.",
     "bankTitle": "Donera via banköverföring",
     "bankSubtitle": "Varje belopp räknas – stort tack! 🙏",
     "recipient": "Mottagare",
     "bank": "Bank",
     "purpose": "Ändamål",
-    "purposeValue": "Donation din följeslagare",
+    "purposeValue": "Donation BibleBot.Life",
     "note": "BibleBot.Life drivs som ett privat projekt. Donationer är därför inte avdragsgilla."
   },
   "refer": {
@@ -241,12 +241,12 @@
     "title": "Rekommendera din följeslagare",
     "subtitle": "Känner du någon som behöver uppmuntran just nu? Dela din följeslagare – ett meddelande kan göra stor skillnad.",
     "whatsapp": "Dela via WhatsApp",
-    "whatsappMsg": "Hej, jag ville visa dig din följeslagare – en gratis bibelkompanjon som känner Bibeln och ställer riktigt bra frågor. Ingen inloggning, anonym, ärlig. Prova den: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Hej, jag ville visa dig BibleBot.Life – en gratis bibelkompanjon som känner Bibeln och ställer riktigt bra frågor. Ingen inloggning, anonym, ärlig. Prova den: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Dela via Telegram",
-    "telegramMsg": "Hej, känner du till din följeslagare? En gratis personlig bibelkompanjon – ärlig, anonym, utan inloggning. Kolla in den: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Hej, känner du till BibleBot.Life? En gratis personlig bibelkompanjon – ärlig, anonym, utan inloggning. Kolla in den: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Dela via e-post",
     "emailSubject": "Detta kan intressera dig: BibleBot.Life",
-    "emailBody": "Hej!\n\nJag ville visa dig din följeslagare – en gratis bibelkompanjon som verkligen känner Bibeln. Ingen registrering krävs, helt anonym.\n\nDen ställer bra följdfrågor, förklarar bibelställen i kontext och följer dig ärligt – även i svåra ämnen.\n\nProva den: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nMed vänliga hälsningar",
+    "emailBody": "Hej!\n\nJag ville visa dig BibleBot.Life – en gratis bibelkompanjon som verkligen känner Bibeln. Ingen registrering krävs, helt anonym.\n\nDen ställer bra följdfrågor, förklarar bibelställen i kontext och följer dig ärligt – även i svåra ämnen.\n\nProva den: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nMed vänliga hälsningar",
     "copy": "Kopiera länk",
     "copied": "Länk kopierad! 📋",
     "qr": "Eller visa bara denna QR-kod:"
@@ -314,7 +314,7 @@
     "suggestionsLoading": "Laddar förslag…"
   },
   "install": {
-    "title": "Installera din följeslagare",
+    "title": "Installera BibleBot.Life",
     "androidDesc": "Snabb åtkomst direkt från startskärmen",
     "iosDesc": "Tryck på «Dela» → «Lägg till på hemskärmen»",
     "button": "Installera",

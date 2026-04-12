@@ -227,13 +227,13 @@
   "donate": {
     "badge": "Sipòte konpayon ou ou a",
     "title": "Ede kenbe konpayon ou ou a gratis",
-    "subtitle": "Konpayon ou ou a se yon pwojè ki soti nan kè – san piblisite, san abònman, san depans kache. Pou kenbe sa konsa, mwen depann sou don volontè. Chak kontribisyon ede kouvri depans operasyonèl ak enfrastrikti.",
+    "subtitle": "BibleBot.Life ou a se yon pwojè ki soti nan kè – san piblisite, san abònman, san depans kache. Pou kenbe sa konsa, mwen depann sou don volontè. Chak kontribisyon ede kouvri depans operasyonèl ak enfrastrikti.",
     "bankTitle": "Donasyon pa transfè bankè",
     "bankSubtitle": "Chak kantite lajan konte – mèsi anpil! 🙏",
     "recipient": "Benefisyè",
     "bank": "Bank",
     "purpose": "Rezon",
-    "purposeValue": "Donasyon konpayon ou",
+    "purposeValue": "Donasyon BibleBot.Life",
     "note": "BibleBot.Life opere kòm yon pwojè prive. Donasyon yo pa dediktib taks."
   },
   "refer": {
@@ -241,12 +241,12 @@
     "title": "Rekòmande konpayon ou",
     "subtitle": "Ou konnen yon moun ki bezwen ankourajman kounye a? Pataje konpayon ou – yon mesaj ka fè yon gwo diferans.",
     "whatsapp": "Pataje sou WhatsApp",
-    "whatsappMsg": "Hey, mwen te vle montre w konpayon ou – yon konpayon Bib gratis ki konnen Bib la epi ki poze vrèman bon kesyon. Pa gen koneksyon, anonim, onèt. Eseye li: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Hey, mwen te vle montre w BibleBot.Life – yon konpayon Bib gratis ki konnen Bib la epi ki poze vrèman bon kesyon. Pa gen koneksyon, anonim, onèt. Eseye li: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Pataje sou Telegram",
-    "telegramMsg": "Hey, ou konnen konpayon ou? Yon konpayon Bib pèsonèl gratis – onèt, anonim, san koneksyon. Gade: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Hey, ou konnen BibleBot.Life? Yon konpayon Bib pèsonèl gratis – onèt, anonim, san koneksyon. Gade: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Pataje pa imèl",
     "emailSubject": "Sa a ta ka enterese w: BibleBot.Life",
-    "emailBody": "Bonjou!\n\nMwen te vle montre w konpayon ou – yon konpayon Bib gratis ki vrèman konnen Bib la. Pa gen enskripsyon nesesè, konplètman anonim.\n\nLi poze bon kesyon swivi, eksplike pasaj biblik nan kontèks epi akonpaye w onètman – menm nan sijè difisil.\n\nEseye li: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nSalitasyon sensè",
+    "emailBody": "Bonjou!\n\nMwen te vle montre w BibleBot.Life – yon konpayon Bib gratis ki vrèman konnen Bib la. Pa gen enskripsyon nesesè, konplètman anonim.\n\nLi poze bon kesyon swivi, eksplike pasaj biblik nan kontèks epi akonpaye w onètman – menm nan sijè difisil.\n\nEseye li: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nSalitasyon sensè",
     "copy": "Kopye lyen",
     "copied": "Lyen kopye! 📋",
     "qr": "Oswa jis montre kòd QR sa a:"
@@ -314,7 +314,7 @@
     "suggestionsLoading": "Ap chaje sijesyon yo…"
   },
   "install": {
-    "title": "Enstale konpayon ou",
+    "title": "Enstale BibleBot.Life",
     "androidDesc": "Aksè rapid dirèkteman nan ekran lakay ou",
     "iosDesc": "Tape sou «Pataje» → «Ajoute nan ekran lakay»",
     "button": "Enstale",

@@ -227,13 +227,13 @@
   "donate": {
     "badge": "Wesprzyj twój towarzysz",
     "title": "Pomóż utrzymać twój towarzysz za darmo",
-    "subtitle": "Twój towarzysz to projekt z serca – bez reklam, bez abonamentów, bez ukrytych kosztów. Aby tak pozostało, polegam na dobrowolnych darowiznach.",
+    "subtitle": "BibleBot.Life to projekt z serca – bez reklam, bez abonamentów, bez ukrytych kosztów. Aby tak pozostało, polegam na dobrowolnych darowiznach.",
     "bankTitle": "Przekaż darowiznę przelewem",
     "bankSubtitle": "Każda kwota się liczy – serdecznie dziękuję! 🙏",
     "recipient": "Odbiorca",
     "bank": "Bank",
     "purpose": "Tytuł przelewu",
-    "purposeValue": "Darowizna twój towarzysz",
+    "purposeValue": "Darowizna BibleBot.Life",
     "note": "BibleBot.Life jest prowadzony jako projekt prywatny. Darowizny nie podlegają odliczeniu od podatku."
   },
   "cta": {
@@ -299,7 +299,7 @@
     "suggestionsLoading": "Ładowanie sugestii…"
   },
   "install": {
-    "title": "Zainstaluj twój towarzysz",
+    "title": "Zainstaluj BibleBot.Life",
     "androidDesc": "Szybki dostęp z ekranu głównego",
     "iosDesc": "Dotknij «Udostępnij» → «Dodaj do ekranu głównego»",
     "button": "Zainstaluj",
@@ -921,12 +921,12 @@
     "title": "Poleć twój towarzysz",
     "subtitle": "Znasz kogoś, kto potrzebuje zachęty? Udostępnij twój towarzysz.",
     "whatsapp": "Udostępnij przez WhatsApp",
-    "whatsappMsg": "Hej, chciałem ci pokazać twój towarzysz – darmowego towarzysza biblijnego. Wypróbuj: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Hej, chciałem ci pokazać BibleBot.Life – darmowego towarzysza biblijnego. Wypróbuj: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Udostępnij przez Telegram",
-    "telegramMsg": "Hej, znasz twój towarzysz? Darmowy osobisty towarzysz biblijny. Sprawdź: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Hej, znasz BibleBot.Life? Darmowy osobisty towarzysz biblijny. Sprawdź: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Udostępnij mailem",
     "emailSubject": "To może cię zainteresować: BibleBot.Life",
-    "emailBody": "Cześć!\n\nChciałem ci pokazać twój towarzysz.\n\nWypróbuj: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nPozdrawiam",
+    "emailBody": "Cześć!\n\nChciałem ci pokazać BibleBot.Life.\n\nWypróbuj: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nPozdrawiam",
     "copy": "Kopiuj link",
     "copied": "Link skopiowany! 📋",
     "qr": "Lub pokaż ten kod QR:"

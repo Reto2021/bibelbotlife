@@ -227,13 +227,13 @@
   "donate": {
     "badge": "Soutenir votre compagnon",
     "title": "Aidez votre compagnon à rester gratuit",
-    "subtitle": "Votre compagnon est un projet passion – sans publicité, sans abonnement, sans coûts cachés. Pour que cela reste ainsi, je compte sur les dons volontaires. Chaque contribution aide à couvrir les coûts d'exploitation.",
+    "subtitle": "BibleBot.Life est un projet passion – sans publicité, sans abonnement, sans coûts cachés. Pour que cela reste ainsi, je compte sur les dons volontaires. Chaque contribution aide à couvrir les coûts d'exploitation.",
     "bankTitle": "Donner par virement bancaire",
     "bankSubtitle": "Chaque montant compte – merci ! 🙏",
     "recipient": "Bénéficiaire",
     "bank": "Banque",
     "purpose": "Référence",
-    "purposeValue": "Don votre compagnon",
+    "purposeValue": "Don BibleBot.Life",
     "note": "BibleBot.Life est un projet privé. Les dons ne sont donc pas déductibles des impôts."
   },
   "cta": {
@@ -299,7 +299,7 @@
     "suggestionsLoading": "Chargement des suggestions…"
   },
   "install": {
-    "title": "Installer votre compagnon",
+    "title": "Installer BibleBot.Life",
     "androidDesc": "Accès rapide depuis votre écran d'accueil",
     "iosDesc": "Appuyez sur «Partager» → «Sur l'écran d'accueil»",
     "button": "Installer",
@@ -921,12 +921,12 @@
     "title": "Recommander votre compagnon",
     "subtitle": "Vous connaissez quelqu'un qui a besoin d'encouragement? Partagez votre compagnon – un message peut faire la différence.",
     "whatsapp": "Partager via WhatsApp",
-    "whatsappMsg": "Salut, je voulais te montrer votre compagnon – un compagnon biblique gratuit qui connaît vraiment la Bible. Sans inscription, anonyme, honnête. Essaie-le: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Salut, je voulais te montrer BibleBot.Life – un compagnon biblique gratuit qui connaît vraiment la Bible. Sans inscription, anonyme, honnête. Essaie-le: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Partager via Telegram",
-    "telegramMsg": "Salut, tu connais votre compagnon? Un compagnon biblique personnel gratuit – honnête, anonyme, sans inscription. Regarde: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Salut, tu connais BibleBot.Life? Un compagnon biblique personnel gratuit – honnête, anonyme, sans inscription. Regarde: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Partager par e-mail",
     "emailSubject": "Ceci pourrait t'intéresser: BibleBot.Life",
-    "emailBody": "Salut!\n\nJe voulais te montrer votre compagnon – un compagnon biblique gratuit. Sans inscription, complètement anonyme.\n\nEssaie-le: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nCordialement",
+    "emailBody": "Salut!\n\nJe voulais te montrer BibleBot.Life – un compagnon biblique gratuit. Sans inscription, complètement anonyme.\n\nEssaie-le: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nCordialement",
     "copy": "Copier le lien",
     "copied": "Lien copié! 📋",
     "qr": "Ou montrez simplement ce code QR:"

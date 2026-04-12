@@ -227,13 +227,13 @@
   "donate": {
     "badge": "Ondersteun jou jou metgesel",
     "title": "Help om jou jou metgesel gratis te hou",
-    "subtitle": "Jou jou metgesel is 'n hartsprojek – sonder advertensies, sonder intekening, sonder verborge koste. Sodat dit so bly, is ek afhanklik van vrywillige donasies. Elke bydrae help om die lopende koste vir bedryf en infrastruktuur te dek.",
+    "subtitle": "Jou BibleBot.Life is 'n hartsprojek – sonder advertensies, sonder intekening, sonder verborge koste. Sodat dit so bly, is ek afhanklik van vrywillige donasies. Elke bydrae help om die lopende koste vir bedryf en infrastruktuur te dek.",
     "bankTitle": "Skenk via bankoorplasing",
     "bankSubtitle": "Elke bedrag tel – baie dankie! 🙏",
     "recipient": "Ontvanger",
     "bank": "Bank",
     "purpose": "Doel",
-    "purposeValue": "Skenking jou metgesel",
+    "purposeValue": "Skenking BibleBot.Life",
     "note": "BibleBot.Life word as 'n private projek bedryf. Skenkings is dus nie belastingaftrekbaar nie."
   },
   "refer": {
@@ -241,12 +241,12 @@
     "title": "Beveel jou metgesel aan",
     "subtitle": "Ken jy iemand wat nou aanmoediging nodig het? Deel jou metgesel – 'n boodskap kan baie beteken.",
     "whatsapp": "Deel via WhatsApp",
-    "whatsappMsg": "Haai, ek wou jou jou metgesel wys – 'n gratis Bybelmetgesel wat die Bybel ken en regtig goeie vrae vra. Geen aanmelding, anoniem, eerlik. Probeer dit: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Haai, ek wou jou BibleBot.Life wys – 'n gratis Bybelmetgesel wat die Bybel ken en regtig goeie vrae vra. Geen aanmelding, anoniem, eerlik. Probeer dit: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Deel via Telegram",
-    "telegramMsg": "Haai, ken jy al jou metgesel? 'n Gratis persoonlike Bybelmetgesel – eerlik, anoniem, sonder aanmelding. Kyk gerus: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Haai, ken jy al BibleBot.Life? 'n Gratis persoonlike Bybelmetgesel – eerlik, anoniem, sonder aanmelding. Kyk gerus: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Deel via e-pos",
     "emailSubject": "Dit mag jou interesseer: BibleBot.Life",
-    "emailBody": "Hallo!\n\nEk wou jou jou metgesel wys – 'n gratis Bybelmetgesel wat die Bybel regtig ken. Geen aanmelding nodig nie, heeltemal anoniem.\n\nHij vra goeie terugvrae, verduidelik Bybelverse in konteks en vergesel jou eerlik – ook by moeilike onderwerpe.\n\nProbeer dit: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nGroete",
+    "emailBody": "Hallo!\n\nEk wou jou BibleBot.Life wys – 'n gratis Bybelmetgesel wat die Bybel regtig ken. Geen aanmelding nodig nie, heeltemal anoniem.\n\nHij vra goeie terugvrae, verduidelik Bybelverse in konteks en vergesel jou eerlik – ook by moeilike onderwerpe.\n\nProbeer dit: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nGroete",
     "copy": "Kopieer skakel",
     "copied": "Skakel gekopieer! 📋",
     "qr": "Of wys eenvoudig hierdie QR-kode:"
@@ -314,7 +314,7 @@
     "suggestionsLoading": "Laai voorstelle…"
   },
   "install": {
-    "title": "Installeer jou metgesel",
+    "title": "Installeer BibleBot.Life",
     "androidDesc": "Vinnige toegang direk vanaf die tuisskerm",
     "iosDesc": "Tik op «Deel» → «Voeg by tuisskerm»",
     "button": "Installeer",

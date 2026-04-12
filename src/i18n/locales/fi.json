@@ -227,13 +227,13 @@
   "donate": {
     "badge": "Tue kumppanisiiasi",
     "title": "Auta pitämään kumppanisiisi ilmaisena",
-    "subtitle": "Kumppanisiisi on sydänprojekti – ilman mainoksia, ilman tilausta, ilman piilokustannuksia. Jotta se pysyisi sellaisena, olen riippuvainen vapaaehtoisista lahjoituksista. Jokainen panos auttaa kattamaan toiminnan ja infrastruktuurin juoksevat kulut.",
+    "subtitle": "BibleBot.Lifeisi on sydänprojekti – ilman mainoksia, ilman tilausta, ilman piilokustannuksia. Jotta se pysyisi sellaisena, olen riippuvainen vapaaehtoisista lahjoituksista. Jokainen panos auttaa kattamaan toiminnan ja infrastruktuurin juoksevat kulut.",
     "bankTitle": "Lahjoita pankkisiirrolla",
     "bankSubtitle": "Jokainen summa on tärkeä – suuri kiitos! 🙏",
     "recipient": "Vastaanottaja",
     "bank": "Pankki",
     "purpose": "Käyttötarkoitus",
-    "purposeValue": "Lahjoitus kumppanisi",
+    "purposeValue": "Lahjoitus BibleBot.Life",
     "note": "BibleBot.Life toimii yksityisenä projektina. Lahjoitukset eivät siksi ole verovähennyskelpoisia."
   },
   "refer": {
@@ -241,12 +241,12 @@
     "title": "Suosittele kumppanisiia eteenpäin",
     "subtitle": "Tunnetko jonkun, joka tarvitsee juuri nyt rohkaisua? Jaa kumppanisi – yksi viesti voi tehdä paljon.",
     "whatsapp": "Jaa WhatsAppissa",
-    "whatsappMsg": "Hei, halusin näyttää sinulle kumppanisiin – ilmaisen Raamatun kumppanin, joka tuntee Raamatun ja esittää todella hyviä kysymyksiä. Ei kirjautumista, anonyymi, rehellinen. Kokeile: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Hei, halusin näyttää sinulle BibleBot.Lifein – ilmaisen Raamatun kumppanin, joka tuntee Raamatun ja esittää todella hyviä kysymyksiä. Ei kirjautumista, anonyymi, rehellinen. Kokeile: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Jaa Telegramissa",
-    "telegramMsg": "Hei, tunnetko jo kumppanisiin? Ilmainen henkilökohtainen Raamatun kumppani – rehellinen, anonyymi, ilman kirjautumista. Katso: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Hei, tunnetko jo BibleBot.Lifein? Ilmainen henkilökohtainen Raamatun kumppani – rehellinen, anonyymi, ilman kirjautumista. Katso: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Jaa sähköpostilla",
     "emailSubject": "Tämä voisi kiinnostaa sinua: BibleBot.Life",
-    "emailBody": "Hei!\n\nHaluaisin näyttää sinulle kumppanisiin – ilmaisen Raamatun kumppanin, joka todella tuntee Raamatun. Ei vaadi rekisteröitymistä, täysin anonyymi.\n\nSe esittää hyviä lisäkysymyksiä, selittää Raamatun kohtia kontekstissa ja opastaa sinua rehellisesti – myös vaikeissa aiheissa.\n\nKokeile: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nTerveisin",
+    "emailBody": "Hei!\n\nHaluaisin näyttää sinulle BibleBot.Lifein – ilmaisen Raamatun kumppanin, joka todella tuntee Raamatun. Ei vaadi rekisteröitymistä, täysin anonyymi.\n\nSe esittää hyviä lisäkysymyksiä, selittää Raamatun kohtia kontekstissa ja opastaa sinua rehellisesti – myös vaikeissa aiheissa.\n\nKokeile: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nTerveisin",
     "copy": "Kopioi linkki",
     "copied": "Linkki kopioitu! 📋",
     "qr": "Tai näytä vain tämä QR-koodi:"
@@ -314,7 +314,7 @@
     "suggestionsLoading": "Ladataan ehdotuksia…"
   },
   "install": {
-    "title": "Asenna kumppanisi",
+    "title": "Asenna BibleBot.Life",
     "androidDesc": "Nopea pääsy suoraan aloitusnäytöltä",
     "iosDesc": "Napauta «Jaa» → «Lisää Koti-valikkoon»",
     "button": "Asenna",

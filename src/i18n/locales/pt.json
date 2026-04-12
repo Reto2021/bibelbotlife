@@ -227,13 +227,13 @@
   "donate": {
     "badge": "Apoia o o teu companheiro",
     "title": "Ajuda a manter o o teu companheiro gratuito",
-    "subtitle": "O o teu companheiro é um projeto do coração – sem publicidade, sem subscrições, sem custos ocultos. Para que continue assim, dependo de doações voluntárias.",
+    "subtitle": "O BibleBot.Life é um projeto do coração – sem publicidade, sem subscrições, sem custos ocultos. Para que continue assim, dependo de doações voluntárias.",
     "bankTitle": "Doar por transferência bancária",
     "bankSubtitle": "Cada montante conta – muito obrigado! 🙏",
     "recipient": "Destinatário",
     "bank": "Banco",
     "purpose": "Referência",
-    "purposeValue": "Doação o teu companheiro",
+    "purposeValue": "Doação BibleBot.Life",
     "note": "O BibleBot.Life é operado como projeto privado. As doações não são dedutíveis nos impostos."
   },
   "cta": {
@@ -299,7 +299,7 @@
     "suggestionsLoading": "Carregando sugestões…"
   },
   "install": {
-    "title": "Instalar o teu companheiro",
+    "title": "Instalar BibleBot.Life",
     "androidDesc": "Acesso rápido a partir do ecrã inicial",
     "iosDesc": "Toca em «Partilhar» → «Adicionar ao ecrã principal»",
     "button": "Instalar",
@@ -921,12 +921,12 @@
     "title": "Recomendar o o teu companheiro",
     "subtitle": "Conhece alguém que precisa de encorajamento? Partilhe o o teu companheiro.",
     "whatsapp": "Partilhar por WhatsApp",
-    "whatsappMsg": "Olá, queria mostrar-te o o teu companheiro – um companheiro bíblico gratuito. Experimenta: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Olá, queria mostrar-te o BibleBot.Life – um companheiro bíblico gratuito. Experimenta: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Partilhar por Telegram",
-    "telegramMsg": "Olá, conheces o o teu companheiro? Um companheiro bíblico pessoal gratuito. Vê aqui: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Olá, conheces o BibleBot.Life? Um companheiro bíblico pessoal gratuito. Vê aqui: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Partilhar por email",
     "emailSubject": "Isto pode interessar-te: BibleBot.Life",
-    "emailBody": "Olá!\n\nQueria mostrar-te o o teu companheiro.\n\nExperimenta: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nCumprimentos",
+    "emailBody": "Olá!\n\nQueria mostrar-te o BibleBot.Life.\n\nExperimenta: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nCumprimentos",
     "copy": "Copiar link",
     "copied": "Link copiado! 📋",
     "qr": "Ou mostra este código QR:"

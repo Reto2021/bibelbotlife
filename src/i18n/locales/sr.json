@@ -227,13 +227,13 @@
   "donate": {
     "badge": "Podržite vaš vaš pratilac",
     "title": "Pomozite da vaš vaš pratilac ostane besplatan",
-    "subtitle": "Vaš vaš pratilac je projekat iz srca – bez reklama, bez pretplate, bez skrivenih troškova. Da bi tako ostalo, zavisim od dobrovoljnih donacija. Svaki doprinos pomaže u pokrivanju tekućih troškova rada i infrastrukture.",
+    "subtitle": "Vaš BibleBot.Life je projekat iz srca – bez reklama, bez pretplate, bez skrivenih troškova. Da bi tako ostalo, zavisim od dobrovoljnih donacija. Svaki doprinos pomaže u pokrivanju tekućih troškova rada i infrastrukture.",
     "bankTitle": "Donacija putem bankovnog transfera",
     "bankSubtitle": "Svaka suma je važna – hvala vam! 🙏",
     "recipient": "Primalac",
     "bank": "Banka",
     "purpose": "Svrha uplate",
-    "purposeValue": "Donacija vaš pratilac",
+    "purposeValue": "Donacija BibleBot.Life",
     "note": "BibleBot.Life se vodi kao privatni projekat. Stoga donacije nisu odbitne od poreza."
   },
   "refer": {
@@ -241,12 +241,12 @@
     "title": "Preporučite vaš pratilac dalje",
     "subtitle": "Poznajete nekoga kome je potrebna ohrabrenje? Podelite vaš pratilac – jedna poruka može mnogo da promeni.",
     "whatsapp": "Podelite putem WhatsApp-a",
-    "whatsappMsg": "Hej, želeo/la sam da ti pokažem vaš pratilac – besplatnog biblijskog saputnika koji poznaje Bibliju i postavlja zaista dobra pitanja. Bez prijave, anonimno, iskreno. Probaj: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Hej, želeo/la sam da ti pokažem BibleBot.Life – besplatnog biblijskog saputnika koji poznaje Bibliju i postavlja zaista dobra pitanja. Bez prijave, anonimno, iskreno. Probaj: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Podelite putem Telegrama",
-    "telegramMsg": "Hej, znaš li za vaš pratilac? Besplatni lični biblijski saputnik – iskren, anoniman, bez prijave. Pogledaj: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Hej, znaš li za BibleBot.Life? Besplatni lični biblijski saputnik – iskren, anoniman, bez prijave. Pogledaj: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Podelite putem E-maila",
     "emailSubject": "Ovo bi te moglo zanimati: BibleBot.Life",
-    "emailBody": "Zdravo!\n\nŽeleo/la sam da ti pokažem vaš pratilac – besplatnog biblijskog saputnika koji zaista poznaje Bibliju. Nije potrebna prijava, potpuno anonimno.\n\nPostavlja dobra dodatna pitanja, objašnjava biblijske stihove u kontekstu i prati te iskreno – čak i kod teških tema.\n\nProbaj: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nSrdačan pozdrav",
+    "emailBody": "Zdravo!\n\nŽeleo/la sam da ti pokažem BibleBot.Life – besplatnog biblijskog saputnika koji zaista poznaje Bibliju. Nije potrebna prijava, potpuno anonimno.\n\nPostavlja dobra dodatna pitanja, objašnjava biblijske stihove u kontekstu i prati te iskreno – čak i kod teških tema.\n\nProbaj: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nSrdačan pozdrav",
     "copy": "Kopiraj link",
     "copied": "Link kopiran! 📋",
     "qr": "Ili samo pokažite ovaj QR kod:"
@@ -314,7 +314,7 @@
     "suggestionsLoading": "Учитавање предлога…"
   },
   "install": {
-    "title": "Instaliraj vaš pratilac",
+    "title": "Instaliraj BibleBot.Life",
     "androidDesc": "Brz pristup direktno sa početnog ekrana",
     "iosDesc": "Dodirnite «Podeli» → «Dodaj na početni ekran»",
     "button": "Instaliraj",

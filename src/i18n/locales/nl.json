@@ -227,26 +227,26 @@
   "donate": {
     "badge": "Steun je metgezel",
     "title": "Help je metgezel gratis te houden",
-    "subtitle": "Je metgezel is een passieproject – geen advertenties, geen abonnementen, geen verborgen kosten. Om het zo te houden, ben ik afhankelijk van vrijwillige donaties.",
+    "subtitle": "BibleBot.Life is een passieproject – geen advertenties, geen abonnementen, geen verborgen kosten. Om het zo te houden, ben ik afhankelijk van vrijwillige donaties.",
     "bankTitle": "Doneren via bankoverschrijving",
     "bankSubtitle": "Elk bedrag telt – dank je wel! 🙏",
     "recipient": "Ontvanger",
     "bank": "Bank",
     "purpose": "Referentie",
-    "purposeValue": "Donatie je metgezel",
-    "note": "Je metgezel wordt als privéproject uitgevoerd. Donaties zijn daarom niet fiscaal aftrekbaar."
+    "purposeValue": "Donatie BibleBot.Life",
+    "note": "BibleBot.Life wordt als privéproject uitgevoerd. Donaties zijn daarom niet fiscaal aftrekbaar."
   },
   "refer": {
     "badge": "Gods Woord delen",
     "title": "Beveel je metgezel aan",
     "subtitle": "Ken je iemand die bemoediging nodig heeft? Deel je metgezel.",
     "whatsapp": "Delen via WhatsApp",
-    "whatsappMsg": "Hey, ik wilde je je metgezel laten zien – een gratis bijbelcompagnon. Probeer het: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Hey, ik wilde je BibleBot.Life laten zien – een gratis bijbelcompagnon. Probeer het: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Delen via Telegram",
-    "telegramMsg": "Hey, ken je je metgezel al? Een gratis persoonlijke bijbelcompagnon. Kijk hier: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Hey, ken je BibleBot.Life al? Een gratis persoonlijke bijbelcompagnon. Kijk hier: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Delen via e-mail",
     "emailSubject": "Dit is misschien interessant: BibleBot.Life",
-    "emailBody": "Hallo!\n\nIk wilde je je metgezel laten zien.\n\nProbeer het: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nGroeten",
+    "emailBody": "Hallo!\n\nIk wilde je BibleBot.Life laten zien.\n\nProbeer het: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nGroeten",
     "copy": "Link kopiëren",
     "copied": "Link gekopieerd! 📋",
     "qr": "Of toon deze QR-code:"
@@ -314,7 +314,7 @@
     "suggestionsLoading": "Suggesties laden…"
   },
   "install": {
-    "title": "Je metgezel installeren",
+    "title": "BibleBot.Life installeren",
     "androidDesc": "Snelle toegang vanaf je startscherm",
     "iosDesc": "Tik op \"Delen\" → \"Zet op beginscherm\"",
     "button": "Installeren",

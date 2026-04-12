@@ -227,13 +227,13 @@
   "donate": {
     "badge": "Podporte svojho váš sprievodcaa",
     "title": "Pomôžte, aby váš váš sprievodca zostal zadarmo",
-    "subtitle": "Váš váš sprievodca je projekt srdca – bez reklám, bez predplatného, bez skrytých nákladov. Aby to tak zostalo, som odkázaný na dobrovoľné dary. Každý príspevok pomáha pokryť prevádzkové náklady a náklady na infraštruktúru.",
+    "subtitle": "Váš BibleBot.Life je projekt srdca – bez reklám, bez predplatného, bez skrytých nákladov. Aby to tak zostalo, som odkázaný na dobrovoľné dary. Každý príspevok pomáha pokryť prevádzkové náklady a náklady na infraštruktúru.",
     "bankTitle": "Darujte bankovým prevodom",
     "bankSubtitle": "Každá suma sa počíta – srdečná vďaka! 🙏",
     "recipient": "Príjemca",
     "bank": "Banka",
     "purpose": "Účel platby",
-    "purposeValue": "Dar váš sprievodca",
+    "purposeValue": "Dar BibleBot.Life",
     "note": "BibleBot.Life je prevádzkovaný ako súkromný projekt. Dary preto nie sú daňovo odpočítateľné."
   },
   "refer": {
@@ -241,12 +241,12 @@
     "title": "Odporučte váš sprievodca ďalej",
     "subtitle": "Poznáte niekoho, kto práve potrebuje povzbudenie? Zdieľajte váš sprievodca – jedna správa môže veľa zmeniť.",
     "whatsapp": "Zdieľať cez WhatsApp",
-    "whatsappMsg": "Ahoj, chcel som ti ukázať váš sprievodca – bezplatného biblického sprievodcu, ktorý pozná Bibliu a kladie naozaj dobré otázky. Bez prihlásenia, anonymný, úprimný. Skús to: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Ahoj, chcel som ti ukázať BibleBot.Life – bezplatného biblického sprievodcu, ktorý pozná Bibliu a kladie naozaj dobré otázky. Bez prihlásenia, anonymný, úprimný. Skús to: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Zdieľať cez Telegram",
-    "telegramMsg": "Ahoj, poznáš už váš sprievodca? Bezplatný osobný biblický sprievodca – úprimný, anonymný, bez prihlásenia. Pozri sa: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Ahoj, poznáš už BibleBot.Life? Bezplatný osobný biblický sprievodca – úprimný, anonymný, bez prihlásenia. Pozri sa: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Zdieľať cez e-mail",
     "emailSubject": "Toto by ťa mohlo zaujímať: BibleBot.Life",
-    "emailBody": "Ahoj!\n\nChcel som ti ukázať váš sprievodca – bezplatného biblického sprievodcu, ktorý naozaj pozná Bibliu. Nie je potrebné sa prihlasovať, je úplne anonymný.\n\nKladie dobré doplňujúce otázky, vysvetľuje biblické pasáže v kontexte a sprevádza ťa úprimne – aj pri ťažkých témach.\n\nSkús to: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nS pozdravom",
+    "emailBody": "Ahoj!\n\nChcel som ti ukázať BibleBot.Life – bezplatného biblického sprievodcu, ktorý naozaj pozná Bibliu. Nie je potrebné sa prihlasovať, je úplne anonymný.\n\nKladie dobré doplňujúce otázky, vysvetľuje biblické pasáže v kontexte a sprevádza ťa úprimne – aj pri ťažkých témach.\n\nSkús to: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nS pozdravom",
     "copy": "Kopírovať odkaz",
     "copied": "Odkaz skopírovaný! 📋",
     "qr": "Alebo jednoducho ukážte tento QR kód:"
@@ -314,7 +314,7 @@
     "suggestionsLoading": "Načítavanie návrhov…"
   },
   "install": {
-    "title": "Nainštalovať váš sprievodca",
+    "title": "Nainštalovať BibleBot.Life",
     "androidDesc": "Rýchly prístup priamo z domovskej obrazovky",
     "iosDesc": "Ťuknite na „Zdieľať“ → „Na plochu“",
     "button": "Nainštalovať",
