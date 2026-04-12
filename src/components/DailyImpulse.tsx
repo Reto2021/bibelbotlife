@@ -487,8 +487,23 @@ export function DailyImpulse() {
                 </div>
                 <div className="bg-card/80 backdrop-blur-sm p-3 space-y-3">
                   {/* Share text preview */}
-                  <div className="bg-muted/40 rounded-lg p-3 text-xs text-muted-foreground whitespace-pre-line font-mono leading-relaxed max-h-40 overflow-y-auto">
-                    {buildShareText()}
+                  <div className="relative group">
+                    <div className="bg-muted/40 rounded-lg p-3 pr-10 text-xs text-muted-foreground whitespace-pre-line font-mono leading-relaxed max-h-40 overflow-y-auto">
+                      {buildShareText()}
+                    </div>
+                    <Button
+                      size="icon"
+                      variant="ghost"
+                      className="absolute top-2 right-2 h-7 w-7 opacity-60 hover:opacity-100"
+                      onClick={async () => {
+                        try {
+                          await navigator.clipboard.writeText(buildShareText());
+                          toast({ title: t("share.copiedShort") });
+                        } catch {}
+                      }}
+                    >
+                      <Send className="h-3.5 w-3.5" />
+                    </Button>
                   </div>
                   <div className="flex items-center justify-between gap-2">
                     <p className="text-xs text-muted-foreground">{t("share.imageReady")}</p>
