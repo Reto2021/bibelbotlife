@@ -303,7 +303,7 @@
     "qaOk_plural": "{{count}} Sinuri ang mga sipi ✓",
     "qaWarning": "⚠️ Mga Paalala tungkol sa Katumpakan:",
     "errorTooMany": "Masyadong maraming kahilingan – mangyaring maghintay sandali.",
-    "errorCredits": "Naubos ang quota ng AI.",
+    "errorCredits": "Naubos ang quota – subukan ulit mamaya.",
     "errorConnect": "Error sa pagkonekta.",
     "errorTitle": "Error",
     "errorConnection": "hindi maabot.",

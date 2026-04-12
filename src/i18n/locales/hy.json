@@ -303,7 +303,7 @@
     "qaOk_plural": "{{count}} մեջբերումներ ստուգված են ✓",
     "qaWarning": "⚠️ Ճշգրտության վերաբերյալ նշումներ.",
     "errorTooMany": "Շատ հարցումներ՝ խնդրում ենք մի փոքր սպասել։",
-    "errorCredits": "AI-ի քվոտան սպառված է։",
+    "errorCredits": "Քdelays իրագործվել է – փորձեք ավելի ուշ:",
     "errorConnect": "Միացման սխալ։",
     "errorTitle": "Սխալ",
     "errorConnection": "չհաջողվեց հասնել։",

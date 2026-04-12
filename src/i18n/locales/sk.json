@@ -303,7 +303,7 @@
     "qaOk_plural": "{{count}} citátov overených ✓",
     "qaWarning": "⚠️ Poznámky k presnosti:",
     "errorTooMany": "Príliš veľa požiadaviek – prosím, počkajte chvíľu.",
-    "errorCredits": "Kredit AI vyčerpaný.",
+    "errorCredits": "Kvóta vyčerpaná – skúste to neskôr.",
     "errorConnect": "Chyba pri pripojení.",
     "errorTitle": "Chyba",
     "errorConnection": "sa nepodarilo dosiahnuť.",

@@ -286,7 +286,7 @@
     "qaOk_plural": "{{count}} citazioni verificate ✓",
     "qaWarning": "⚠️ Note sulla precisione:",
     "errorTooMany": "Troppe richieste – attendi un momento.",
-    "errorCredits": "Quota IA esaurita.",
+    "errorCredits": "Quota esaurita – riprova più tardi.",
     "errorConnect": "Errore di connessione.",
     "errorTitle": "Errore",
     "errorConnection": "non raggiungibile.",

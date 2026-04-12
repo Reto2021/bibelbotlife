@@ -303,7 +303,7 @@
     "qaOk_plural": "{{count}} Zitate geprüft ✓",
     "qaWarning": "⚠️ Hinweise zur Genauigkeit:",
     "errorTooMany": "Zu viele Anfragen – bitte warte kurz.",
-    "errorCredits": "KI-Kontingent erschöpft.",
+    "errorCredits": "Kvoten er opbrugt – prøv igen senere.",
     "errorConnect": "Fehler beim Verbinden.",
     "errorTitle": "Fehler",
     "errorConnection": "konnte nicht erreicht werden.",

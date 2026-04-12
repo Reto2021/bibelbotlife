@@ -303,7 +303,7 @@
     "qaOk_plural": "{{count}} idézet ellenőrizve ✓",
     "qaWarning": "⚠️ Megjegyzések a pontossághoz:",
     "errorTooMany": "Túl sok kérés – kérjük, várjon egy pillanatot.",
-    "errorCredits": "AI kvóta kimerült.",
+    "errorCredits": "Kvóta kimerült – próbáld újra később.",
     "errorConnect": "Hiba a csatlakozáskor.",
     "errorTitle": "Hiba",
     "errorConnection": "nem érhető el.",

@@ -286,7 +286,7 @@
     "qaOk_plural": "{{count}} citas verificadas ✓",
     "qaWarning": "⚠️ Notas de precisión:",
     "errorTooMany": "Demasiadas solicitudes – por favor espera un momento.",
-    "errorCredits": "Cuota de IA agotada.",
+    "errorCredits": "Cuota agotada – inténtalo más tarde.",
     "errorConnect": "Error de conexión.",
     "errorTitle": "Error",
     "errorConnection": "no se pudo conectar.",

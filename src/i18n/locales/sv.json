@@ -303,7 +303,7 @@
     "qaOk_plural": "{{count}} citat kontrollerade ✓",
     "qaWarning": "⚠️ Anmärkningar om noggrannhet:",
     "errorTooMany": "För många förfrågningar – vänta en stund.",
-    "errorCredits": "AI-kvoten är slut.",
+    "errorCredits": "Kvoten är slut – försök igen senare.",
     "errorConnect": "Fel vid anslutning.",
     "errorTitle": "Fel",
     "errorConnection": "kunde inte nås.",

@@ -303,7 +303,7 @@
     "qaOk_plural": "{{count}}개의 인용문 확인됨 ✓",
     "qaWarning": "⚠️ 정확성에 대한 참고 사항:",
     "errorTooMany": "요청이 너무 많습니다 – 잠시 기다려 주세요.",
-    "errorCredits": "AI 할당량 소진.",
+    "errorCredits": "할당량 소진 – 나중에 다시 시도해 주세요.",
     "errorConnect": "연결 오류.",
     "errorTitle": "오류",
     "errorConnection": "연결할 수 없습니다.",

@@ -303,7 +303,7 @@
     "qaOk_plural": "{{count}} aanhalings nagegaan ✓",
     "qaWarning": "⚠️ Notas oor akkuraatheid:",
     "errorTooMany": "Te veel versoeke – wag asseblief 'n oomblik.",
-    "errorCredits": "KI-kwota uitgeput.",
+    "errorCredits": "Kwota uitgeput – probeer later weer.",
     "errorConnect": "Fout tydens verbinding.",
     "errorTitle": "Fout",
     "errorConnection": "kon nie bereik word nie.",

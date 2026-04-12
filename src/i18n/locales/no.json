@@ -303,7 +303,7 @@
     "qaOk_plural": "{{count}} sitater sjekket ✓",
     "qaWarning": "⚠️ Merknader om nøyaktighet:",
     "errorTooMany": "For mange forespørsler – vent litt.",
-    "errorCredits": "AI-kvote brukt opp.",
+    "errorCredits": "Kvoten er brukt opp – prøv igjen senere.",
     "errorConnect": "Feil ved tilkobling.",
     "errorTitle": "Feil",
     "errorConnection": "kunne ikke nås.",

@@ -303,7 +303,7 @@
     "qaOk_plural": "{{count}} lainausta tarkistettu ✓",
     "qaWarning": "⚠️ Huomautuksia tarkkuudesta:",
     "errorTooMany": "Liian monta pyyntöä – odota hetki.",
-    "errorCredits": "Tekoälykiintiö käytetty.",
+    "errorCredits": "Kiintiö käytetty – yritä myöhemmin uudelleen.",
     "errorConnect": "Virhe yhdistettäessä.",
     "errorTitle": "Virhe",
     "errorConnection": "ei voitu tavoittaa.",

@@ -286,7 +286,7 @@
     "qaOk_plural": "{{count}} cytatów zweryfikowanych ✓",
     "qaWarning": "⚠️ Uwagi dotyczące dokładności:",
     "errorTooMany": "Zbyt wiele zapytań – poczekaj chwilę.",
-    "errorCredits": "Limit AI wyczerpany.",
+    "errorCredits": "Limit wyczerpany – spróbuj później.",
     "errorConnect": "Błąd połączenia.",
     "errorTitle": "Błąd",
     "errorConnection": "nie można nawiązać połączenia.",

@@ -304,7 +304,7 @@
     "qaOk_plural": "{{count}} 引用已核实 ✓",
     "qaWarning": "⚠️ 精确性提示：",
     "errorTooMany": "请求过多——请稍候。",
-    "errorCredits": "AI配额已用尽。",
+    "errorCredits": "配额已用尽——请稍后再试。",
     "errorConnect": "连接错误。",
     "errorTitle": "错误",
     "errorConnection": "无法连接。",

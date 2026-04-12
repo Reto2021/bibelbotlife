@@ -301,7 +301,7 @@
     "qaOk_plural": "{{count}} citări verificate ✓",
     "qaWarning": "⚠️ Note de acuratețe:",
     "errorTooMany": "Prea multe cereri – te rugăm așteaptă un moment.",
-    "errorCredits": "Cota AI epuizată.",
+    "errorCredits": "Cotă epuizată – încercați din nou mai târziu.",
     "errorConnect": "Eroare de conexiune.",
     "errorTitle": "Eroare",
     "errorConnection": "nu a putut fi contactat.",

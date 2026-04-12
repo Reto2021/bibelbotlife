@@ -303,7 +303,7 @@
     "qaOk_plural": "{{count}} ጥቅሶች ተረጋግጠዋል ✓",
     "qaWarning": "⚠️ ስለ ትክክለኛነት ማሳሰቢያዎች:",
     "errorTooMany": "ብዙ ጥያቄዎች – እባክዎ ትንሽ ይጠብቁ።",
-    "errorCredits": "የAI ኮታ ተጠናቅቋል።",
+    "errorCredits": "ኮታ ተጠናቅቋል – እባክዎ ቆይተው ይሞክሩ።",
     "errorConnect": "ግንኙነት ስህተት።",
     "errorTitle": "ስህተት",
     "errorConnection": "ሊደረስ አልቻለም።",

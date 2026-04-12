@@ -305,7 +305,7 @@
     "qaOk_plural": "Đã kiểm tra {{count}} trích dẫn ✓",
     "qaWarning": "⚠️ Lưu ý về độ chính xác:",
     "errorTooMany": "Quá nhiều yêu cầu – vui lòng đợi một chút.",
-    "errorCredits": "Hạn mức AI đã hết.",
+    "errorCredits": "Hạn mức đã hết – vui lòng thử lại sau.",
     "errorConnect": "Lỗi kết nối.",
     "errorTitle": "Lỗi",
     "errorConnection": "không thể kết nối.",

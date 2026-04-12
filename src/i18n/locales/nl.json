@@ -301,7 +301,7 @@
     "qaOk_plural": "{{count}} citaten geverifieerd ✓",
     "qaWarning": "⚠️ Nauwkeurigheidsopmerkingen:",
     "errorTooMany": "Te veel verzoeken – even geduld.",
-    "errorCredits": "AI-tegoed uitgeput.",
+    "errorCredits": "Quotum uitgeput – probeer het later opnieuw.",
     "errorConnect": "Verbindingsfout.",
     "errorTitle": "Fout",
     "errorConnection": "kon niet worden bereikt.",

@@ -303,7 +303,7 @@
     "qaOk_plural": "{{count}} Kutipan diverifikasi ✓",
     "qaWarning": "⚠️ Catatan tentang akurasi:",
     "errorTooMany": "Terlalu banyak permintaan – harap tunggu sebentar.",
-    "errorCredits": "Kuota AI habis.",
+    "errorCredits": "Kuota habis – coba lagi nanti.",
     "errorConnect": "Kesalahan saat menyambungkan.",
     "errorTitle": "Kesalahan",
     "errorConnection": "tidak dapat dijangkau.",

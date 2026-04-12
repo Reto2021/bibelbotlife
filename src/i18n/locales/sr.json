@@ -303,7 +303,7 @@
     "qaOk_plural": "{{count}} citata provereno ✓",
     "qaWarning": "⚠️ Napomene o tačnosti:",
     "errorTooMany": "Previše zahteva – molimo vas sačekajte malo.",
-    "errorCredits": "Kvote AI iscrpljene.",
+    "errorCredits": "Квота исцрпљена – покушајте касније.",
     "errorConnect": "Greška pri povezivanju.",
     "errorTitle": "Greška",
     "errorConnection": "nije bilo moguće uspostaviti vezu.",
