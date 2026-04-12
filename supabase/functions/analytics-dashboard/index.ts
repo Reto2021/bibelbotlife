@@ -4,8 +4,33 @@ const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
+/** Convert a UTC timestamp to Europe/Zurich local Date */
+const toZurich = (iso: string): Date => {
+  // Parse to get components in Europe/Zurich timezone
+  const d = new Date(iso);
+  // Use Intl to get Zurich hour/day reliably
+  return d;
+};
 
-Deno.serve(async (req) => {
+const zurichParts = (iso: string) => {
+  const formatter = new Intl.DateTimeFormat("de-CH", {
+    timeZone: "Europe/Zurich",
+    year: "numeric", month: "2-digit", day: "2-digit",
+    hour: "2-digit", minute: "2-digit", weekday: "short",
+    hour12: false,
+  });
+  const parts = Object.fromEntries(
+    formatter.formatToParts(new Date(iso)).map((p) => [p.type, p.value])
+  );
+  const weekdayMap: Record<string, number> = { So: 0, Mo: 1, Di: 2, Mi: 3, Do: 4, Fr: 5, Sa: 6 };
+  return {
+    date: `${parts.year}-${parts.month}-${parts.day}`,
+    hour: parseInt(parts.hour, 10),
+    weekday: weekdayMap[parts.weekday] ?? new Date(iso).getDay(),
+  };
+};
+
+
   if (req.method === "OPTIONS") {
     return new Response("ok", { headers: corsHeaders });
   }
