@@ -259,7 +259,7 @@
   "footer": {
     "tagline": "Pendamping pribadi Anda untuk hidup bersama Alkitab",
     "disclaimer": "BibleBot.Life adalah alat digital dan tidak menggantikan layanan pastoral profesional, konseling teologis, atau terapi psikologis. Dalam kasus krisis akut, hubungi Dargebotene Hand (Tel. 143) atau Pro Juventute (Tel. 147).",
-    "impressum": "Impressum",
+    "impressum": "Informasi Hukum",
     "notes": "Catatan",
     "private": "Proyek pribadi, non-komersial",
     "noChat": "Tidak ada penyimpanan data obrolan",
@@ -310,7 +310,8 @@
     "errorNoStream": "Tidak ada aliran",
     "seniorMode": "Mode Senior (huruf lebih besar)",
     "loginHint": "Masuk untuk menjaga percakapan di seluruh perangkat",
-    "previousChats": "{{count}} percakapan sebelumnya"
+    "previousChats": "{{count}} percakapan sebelumnya",
+    "suggestionsLoading": "Memuat saran…"
   },
   "install": {
     "title": "Instal BibleBot",
@@ -345,7 +346,7 @@
   },
   "impressum": {
     "back": "Kembali ke Beranda",
-    "title": "Impressum"
+    "title": "Informasi Hukum"
   },
   "datenschutz": {
     "back": "Kembali ke Beranda",
@@ -794,7 +795,13 @@
         "psychiatry": "Psikiatri",
         "burnoutClinic": "Klinik burnout",
         "hospice": "Hospis",
-        "counseling": "Pusat konseling"
+        "counseling": "Pusat konseling",
+        "reformed": "Gereja Reformasi",
+        "catholic": "Gereja Katolik",
+        "lutheran": "Gereja Lutheran",
+        "evangelical": "Gereja Bebas / Injili",
+        "freelance": "Freelance / Independen",
+        "other": "Lainnya"
       }
     },
     "institutionsTitle": "Juga untuk Institusi",
@@ -841,7 +848,31 @@
         "desc": "Impuls spiritual pelengkap untuk klien dalam konseling psikososial."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible.",
+    "denominationsTitle": "Untuk semua denominasi dan pemimpin upacara",
+    "denominationsSubtitle": "BibleBot.Life bersifat ekumenis – untuk komunitas Reformasi, Katolik, Lutheran, dan Gereja Bebas Injili, serta pemimpin upacara freelance.",
+    "denomination": {
+      "reformed": {
+        "title": "Gereja Reformasi",
+        "desc": "Alkitab Zürich, liturgi Reformasi dan dukungan khotbah – disesuaikan untuk jemaat Anda."
+      },
+      "catholic": {
+        "title": "Gereja Katolik",
+        "desc": "Terjemahan Ekumenis, perencanaan misa dan sakramen – sesuai tradisi Katolik."
+      },
+      "lutheran": {
+        "title": "Gereja Lutheran",
+        "desc": "Alkitab Luther, perencanaan ibadah dan pastoral – untuk jemaat Injili-Lutheran."
+      },
+      "evangelical": {
+        "title": "Gereja Bebas",
+        "desc": "Schlachter 2000, pujian dan desain ibadah fleksibel – untuk komunitas Injili bebas."
+      },
+      "freelance": {
+        "title": "Pemimpin Upacara Freelance",
+        "desc": "Pembicara pemakaman, selebrasi pernikahan dan pemimpin upacara independen – dengan alat biografi dan perencanaan pidato."
+      }
+    }
   },
   "institutions": {
     "badge": "Untuk organisasi",

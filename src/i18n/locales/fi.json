@@ -310,7 +310,8 @@
     "errorNoStream": "Ei virtaa",
     "seniorMode": "Senioritila (suurempi fontti)",
     "loginHint": "Kirjaudu sisään pitääksesi keskustelut tallessa eri laitteilla",
-    "previousChats": "{{count}} edellistä keskustelua"
+    "previousChats": "{{count}} edellistä keskustelua",
+    "suggestionsLoading": "Ladataan ehdotuksia…"
   },
   "install": {
     "title": "Asenna BibleBot",
@@ -756,7 +757,13 @@
         "psychiatry": "Psykiatria",
         "burnoutClinic": "Burnout-klinikka",
         "hospice": "Saattohoitokoti",
-        "counseling": "Neuvontakeskus"
+        "counseling": "Neuvontakeskus",
+        "reformed": "Reformoitu kirkko",
+        "catholic": "Katolinen kirkko",
+        "lutheran": "Luterilainen kirkko",
+        "evangelical": "Vapaa kirkko / Evankelinen",
+        "freelance": "Freelance / Riippumaton",
+        "other": "Muu"
       }
     },
     "institutionsTitle": "Myös instituutioille",
@@ -803,7 +810,31 @@
         "desc": "Täydentäviä hengellisiä impulsseja psykososiaalisen neuvonnan asiakkaille."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible.",
+    "denominationsTitle": "Kaikille tunnustuskunnille ja seremoniamestareille",
+    "denominationsSubtitle": "BibleBot.Life on ekumeeninen – reformoiduille, katolisille, luterilaisille ja vapaan kirkon yhteisöille sekä freelance-seremonimestareille.",
+    "denomination": {
+      "reformed": {
+        "title": "Reformoitu kirkko",
+        "desc": "Zürichin Raamattu, reformoitu liturgia ja saarnantuki – räätälöity seurakuntaanne."
+      },
+      "catholic": {
+        "title": "Katolinen kirkko",
+        "desc": "Ekumeeninen käännös, messusuunnittelu ja sakramentit – katolisten perinteiden mukaisesti."
+      },
+      "lutheran": {
+        "title": "Luterilainen kirkko",
+        "desc": "Lutherin Raamattu, jumalanpalvelussuunnittelu ja sielunhoito – evankelisluterilaisille seurakunnille."
+      },
+      "evangelical": {
+        "title": "Vapaat kirkot",
+        "desc": "Schlachter 2000, ylistys ja joustava jumalanpalvelussuunnittelu – vapaan kirkon yhteisöille."
+      },
+      "freelance": {
+        "title": "Freelance-seremonimestarit",
+        "desc": "Hautajaispuhujat, hääseremonimestarit ja riippumattomat vihkijät – biografiatyökaluilla ja puheensuunnittelulla."
+      }
+    }
   },
   "institutions": {
     "badge": "Organisaatioille",

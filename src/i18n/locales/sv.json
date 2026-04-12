@@ -259,7 +259,7 @@
   "footer": {
     "tagline": "Din personliga följeslagare för ett liv med Bibeln",
     "disclaimer": "BibleBot.Life är ett digitalt hjälpmedel och ersätter inte professionell själavård, teologisk rådgivning eller psykologisk terapi. Vid akuta kriser, kontakta Dargebotene Hand (tel. 143) eller Pro Juventute (tel. 147).",
-    "impressum": "Impressum",
+    "impressum": "Juridisk information",
     "notes": "Anmärkningar",
     "private": "Privat, icke-kommersiellt projekt",
     "noChat": "Ingen lagring av chattdata",
@@ -310,7 +310,8 @@
     "errorNoStream": "Ingen ström",
     "seniorMode": "Seniorläge (större text)",
     "loginHint": "Logga in för att behålla konversationer på alla enheter",
-    "previousChats": "{{count}} tidigare konversationer"
+    "previousChats": "{{count}} tidigare konversationer",
+    "suggestionsLoading": "Laddar förslag…"
   },
   "install": {
     "title": "Installera BibleBot",
@@ -345,7 +346,7 @@
   },
   "impressum": {
     "back": "Tillbaka till startsidan",
-    "title": "Impressum"
+    "title": "Juridisk information"
   },
   "datenschutz": {
     "back": "Tillbaka till startsidan",
@@ -756,7 +757,13 @@
         "psychiatry": "Psykiatri",
         "burnoutClinic": "Burnout-klinik",
         "hospice": "Hospice",
-        "counseling": "Rådgivningscenter"
+        "counseling": "Rådgivningscenter",
+        "reformed": "Reformerad kyrka",
+        "catholic": "Katolska kyrkan",
+        "lutheran": "Luthersk kyrka",
+        "evangelical": "Frikyrka / Evangelisk",
+        "freelance": "Frilans / Oberoende",
+        "other": "Övrigt"
       }
     },
     "institutionsTitle": "Även för institutioner",
@@ -803,7 +810,31 @@
         "desc": "Kompletterande andliga impulser för klienter i psykosocial rådgivning."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible.",
+    "denominationsTitle": "För alla trosriktningar och ceremonimästare",
+    "denominationsSubtitle": "BibleBot.Life är ekumenisk – för reformerta, katolska, lutherska och frikyrkoförsamlingar samt frilans ceremonimästare.",
+    "denomination": {
+      "reformed": {
+        "title": "Reformerad kyrka",
+        "desc": "Zürichbibeln, reformerad liturgi och predikostöd – anpassat för er församling."
+      },
+      "catholic": {
+        "title": "Katolska kyrkan",
+        "desc": "Ekumenisk översättning, mässplanering och sakrament – i linje med katolska traditioner."
+      },
+      "lutheran": {
+        "title": "Luthersk kyrka",
+        "desc": "Lutherbibeln, gudstjänstplanering och själavård – för evangelisk-lutherska församlingar."
+      },
+      "evangelical": {
+        "title": "Frikyrkor",
+        "desc": "Schlachter 2000, lovsång och flexibel gudstjänstdesign – för frikyrkoförsamlingar."
+      },
+      "freelance": {
+        "title": "Frilans officialter",
+        "desc": "Begravningstalare, bröllopsofficialter och oberoende ceremonimästare – med biografiska verktyg och talplanering."
+      }
+    }
   },
   "institutions": {
     "badge": "För organisationer",
@@ -1136,7 +1167,7 @@
     "ctaBottom": "Redo för bättre ceremonier?",
     "ctaBottomSub": "Börja gratis — inget kreditkort krävs.",
     "ctaBottomBtn": "Börja gratis nu",
-    "footerImprint": "Impressum",
+    "footerImprint": "Juridisk information",
     "footerPrivacy": "Integritetspolicy",
     "footerChurches": "För kyrkor",
     "seoTitle": "BibleBot.Life för kaplaner och livscoacher — Planera ceremonier och sessioner",

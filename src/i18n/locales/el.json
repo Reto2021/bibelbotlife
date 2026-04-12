@@ -311,7 +311,8 @@
     "errorNoStream": "Χωρίς ροή",
     "seniorMode": "Λειτουργία για ηλικιωμένους (μεγαλύτερη γραμματοσειρά)",
     "loginHint": "Συνδεθείτε για να διατηρήσετε τις συνομιλίες σε όλες τις συσκευές",
-    "previousChats": "{{count}} προηγούμενες συνομιλίες"
+    "previousChats": "{{count}} προηγούμενες συνομιλίες",
+    "suggestionsLoading": "Φόρτωση προτάσεων…"
   },
   "install": {
     "title": "Εγκατάσταση BibleBot",
@@ -795,7 +796,13 @@
         "psychiatry": "Ψυχιατρική",
         "burnoutClinic": "Κλινική εξουθένωσης",
         "hospice": "Ξενώνας φιλοξενίας",
-        "counseling": "Συμβουλευτικό κέντρο"
+        "counseling": "Συμβουλευτικό κέντρο",
+        "reformed": "Μεταρρυθμισμένη Εκκλησία",
+        "catholic": "Καθολική Εκκλησία",
+        "lutheran": "Λουθηρανική Εκκλησία",
+        "evangelical": "Ελεύθερη Εκκλησία / Ευαγγελική",
+        "freelance": "Ελεύθερος επαγγελματίας",
+        "other": "Άλλο"
       }
     },
     "institutionsTitle": "Επίσης για ιδρύματα",
@@ -842,7 +849,31 @@
         "desc": "Συμπληρωματικές πνευματικές ωθήσεις για πελάτες σε ψυχοκοινωνική συμβουλευτική."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible.",
+    "denominationsTitle": "Για όλα τα δόγματα και τους τελετουργούς",
+    "denominationsSubtitle": "Το BibleBot.Life είναι οικουμενικό – για μεταρρυθμισμένες, καθολικές, λουθηρανικές και ελεύθερες ευαγγελικές κοινότητες, καθώς και ελεύθερους επαγγελματίες τελετουργούς.",
+    "denomination": {
+      "reformed": {
+        "title": "Μεταρρυθμισμένη Εκκλησία",
+        "desc": "Βίβλος της Ζυρίχης, μεταρρυθμισμένη λειτουργία και υποστήριξη κηρύγματος – προσαρμοσμένη στην ενορία σας."
+      },
+      "catholic": {
+        "title": "Καθολική Εκκλησία",
+        "desc": "Οικουμενική μετάφραση, σχεδιασμός λειτουργιών και μυστήρια – σε συμφωνία με τις καθολικές παραδόσεις."
+      },
+      "lutheran": {
+        "title": "Λουθηρανική Εκκλησία",
+        "desc": "Βίβλος του Λούθηρου, σχεδιασμός λατρείας και ποιμαντική φροντίδα – για ευαγγελικές-λουθηρανικές κοινότητες."
+      },
+      "evangelical": {
+        "title": "Ελεύθερες Εκκλησίες",
+        "desc": "Schlachter 2000, λατρεία και ευέλικτος σχεδιασμός λειτουργιών – για ελεύθερες ευαγγελικές κοινότητες."
+      },
+      "freelance": {
+        "title": "Ελεύθεροι επαγγελματίες τελετουργοί",
+        "desc": "Επικήδειοι ομιλητές, γαμήλιοι τελετουργοί και ανεξάρτητοι τελεστές – με βιογραφικά εργαλεία και σχεδιασμό ομιλιών."
+      }
+    }
   },
   "institutions": {
     "badge": "Για οργανισμούς",

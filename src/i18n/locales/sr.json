@@ -310,7 +310,8 @@
     "errorNoStream": "Nema strima",
     "seniorMode": "Seniorski režim (veći font)",
     "loginHint": "Prijavite se da biste sačuvali razgovore na svim uređajima",
-    "previousChats": "{{count}} prethodnih razgovora"
+    "previousChats": "{{count}} prethodnih razgovora",
+    "suggestionsLoading": "Учитавање предлога…"
   },
   "install": {
     "title": "Instaliraj BibleBot",
@@ -794,7 +795,13 @@
         "psychiatry": "Психијатрија",
         "burnoutClinic": "Клиника за сагоревање",
         "hospice": "Хоспис",
-        "counseling": "Саветовалиште"
+        "counseling": "Саветовалиште",
+        "reformed": "Реформирана црква",
+        "catholic": "Католичка црква",
+        "lutheran": "Лутеранска црква",
+        "evangelical": "Слободна црква / Евангеоска",
+        "freelance": "Независни",
+        "other": "Остало"
       }
     },
     "institutionsTitle": "Takođe za institucije",
@@ -841,7 +848,31 @@
         "desc": "Допунски духовни подстицаји за клијенте у психосоцијалном саветовању."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible.",
+    "denominationsTitle": "За све вероисповести и водитеље церемонија",
+    "denominationsSubtitle": "BibleBot.Life је екуменски – за реформиране, католичке, лутеранске и слободне евангеоске заједнице, као и за независне водитеље церемонија.",
+    "denomination": {
+      "reformed": {
+        "title": "Реформирана црква",
+        "desc": "Циришка Библија, реформирана литургија и подршка за проповеди – прилагођено вашој парохији."
+      },
+      "catholic": {
+        "title": "Католичка црква",
+        "desc": "Екуменски превод, планирање литургија и сакраменти – у складу са католичким традицијама."
+      },
+      "lutheran": {
+        "title": "Лутеранска црква",
+        "desc": "Лутерова Библија, планирање богослужења и душебрижништво – за евангеличко-лутеранске заједнице."
+      },
+      "evangelical": {
+        "title": "Слободне цркве",
+        "desc": "Schlachter 2000, славље и флексибилан дизајн богослужења – за слободне евангеоске заједнице."
+      },
+      "freelance": {
+        "title": "Независни водитељи",
+        "desc": "Погребни говорници, венчани церемонијари и независни водитељи – са биографским алатима и планирањем говора."
+      }
+    }
   },
   "institutions": {
     "badge": "За организације",

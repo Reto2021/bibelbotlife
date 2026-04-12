@@ -259,7 +259,7 @@
   "footer": {
     "tagline": "Jou persoonlike metgesel vir 'n lewe met die Bybel",
     "disclaimer": "BibleBot.Life is 'n digitale hulpmiddel en vervang nie professionele pastorale sorg, teologiese advies of sielkundige terapie nie. In akute krisisse, kontak asseblief die Dargebotene Hand (Tel. 143) of Pro Juventute (Tel. 147).",
-    "impressum": "Impressum",
+    "impressum": "Regsinligting",
     "notes": "Notas",
     "private": "Private, nie-kommersiële projek",
     "noChat": "Geen stoor van kletsdata nie",
@@ -310,7 +310,8 @@
     "errorNoStream": "Geen stroom",
     "seniorMode": "Seniormodus (groter lettertipe)",
     "loginHint": "Meld aan om gesprekke oor alle toestelle te behou",
-    "previousChats": "{{count}} vorige gesprekke"
+    "previousChats": "{{count}} vorige gesprekke",
+    "suggestionsLoading": "Laai voorstelle…"
   },
   "install": {
     "title": "Installeer BibleBot",
@@ -345,7 +346,7 @@
   },
   "impressum": {
     "back": "Terug na tuisblad",
-    "title": "Impressum"
+    "title": "Regsinligting"
   },
   "datenschutz": {
     "back": "Terug na tuisblad",
@@ -756,7 +757,13 @@
         "psychiatry": "Psigiatrie",
         "burnoutClinic": "Uitbrand-kliniek",
         "hospice": "Hospies",
-        "counseling": "Beradingsentrum"
+        "counseling": "Beradingsentrum",
+        "reformed": "Gereformeerde Kerk",
+        "catholic": "Katolieke Kerk",
+        "lutheran": "Lutherse Kerk",
+        "evangelical": "Vrye Kerk / Evangelies",
+        "freelance": "Vryskut / Onafhanklik",
+        "other": "Ander"
       }
     },
     "institutionsTitle": "Ook vir instellings",
@@ -803,7 +810,31 @@
         "desc": "Aanvullende geestelike impulse vir kliënte in psigososiale berading."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible.",
+    "denominationsTitle": "Vir alle denominasies en seremonieleiners",
+    "denominationsSubtitle": "BibleBot.Life is ekumenies – vir Gereformeerde, Katolieke, Lutherse en Vrye Kerk-gemeenskappe, sowel as vryskut-seremonieleiners.",
+    "denomination": {
+      "reformed": {
+        "title": "Gereformeerde Kerk",
+        "desc": "Zürich-Bybel, Gereformeerde liturgie en preekondersteuning – aangepas vir u gemeente."
+      },
+      "catholic": {
+        "title": "Katolieke Kerk",
+        "desc": "Ekumeniese vertaling, misbeplannung en sakramente – in ooreenstemming met Katolieke tradisies."
+      },
+      "lutheran": {
+        "title": "Lutherse Kerk",
+        "desc": "Luther-Bybel, erediens-beplanning en pastoraat – vir Evangelies-Lutherse gemeentes."
+      },
+      "evangelical": {
+        "title": "Vrye Kerke",
+        "desc": "Schlachter 2000, lofprysing en buigsame erediensontwerp – vir vrye evangeliese gemeenskappe."
+      },
+      "freelance": {
+        "title": "Vryskut-seremonieleiners",
+        "desc": "Begrafnissprekers, trouseremonieleiners en onafhanklike amptenare – met biografiese hulpmiddels en toespraakbeplanning."
+      }
+    }
   },
   "institutions": {
     "badge": "Vir organisasies",

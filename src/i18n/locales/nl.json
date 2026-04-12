@@ -259,14 +259,14 @@
   "footer": {
     "tagline": "Je persoonlijke metgezel voor een leven met de Bijbel",
     "disclaimer": "BibleBot is een hulpmiddel en vervangt geen professionele pastorale zorg, theologisch advies of psychologische therapie. Bel bij acute crises je lokale hulplijn.",
-    "impressum": "Impressum",
+    "impressum": "Colofon",
     "notes": "Opmerkingen",
     "private": "Privé, niet-commercieel project",
     "noChat": "Geen opslag van chatgegevens",
     "noTax": "Donaties zijn niet fiscaal aftrekbaar",
     "datenschutz": "Privacybeleid",
     "love": "Met ❤️ voor iedereen die zich afvraagt wat Christus denkt.",
-    "forChurches": "For Churches"
+    "forChurches": "Voor Kerken"
   },
   "chat": {
     "welcome": "Welkom! 🤗\n\nIk ben je BibleBot – je persoonlijke metgezel met de Bijbel, goede vragen en echte impulsen. Geen druk, geen oordeel.\n\nJe kunt me alles vragen – of gewoon delen wat je bezighoudt. 💛",
@@ -310,7 +310,8 @@
     "teaserCta": "Nu schrijven →",
     "namePlaceholder": "bijv. Eli, Miriam…",
     "loginHint": "Meld u aan om gesprekken op alle apparaten te behouden",
-    "previousChats": "{{count}} eerdere gesprekken"
+    "previousChats": "{{count}} eerdere gesprekken",
+    "suggestionsLoading": "Suggesties laden…"
   },
   "install": {
     "title": "BibleBot installeren",
@@ -345,7 +346,7 @@
   },
   "impressum": {
     "back": "Terug naar startpagina",
-    "title": "Impressum"
+    "title": "Colofon"
   },
   "datenschutz": {
     "back": "Terug naar startpagina",
@@ -794,7 +795,13 @@
         "psychiatry": "Psychiatrie",
         "burnoutClinic": "Burnout-kliniek",
         "hospice": "Hospice",
-        "counseling": "Adviescentrum"
+        "counseling": "Adviescentrum",
+        "reformed": "Gereformeerde Kerk",
+        "catholic": "Katholieke Kerk",
+        "lutheran": "Lutherse Kerk",
+        "evangelical": "Vrije Kerk / Evangelisch",
+        "freelance": "Freelance / Onafhankelijk",
+        "other": "Overig"
       }
     },
     "institutionsTitle": "Ook voor instellingen",
@@ -841,7 +848,31 @@
         "desc": "Aanvullende geestelijke impulsen voor cliënten in psychosociale begeleiding."
       }
     },
-    "patronageNote": "BibleBot.Life is een privé, niet-commercieel project. Het wordt op vrijwillige basis beheerd en uitsluitend gefinancierd door donaties. Geen reclame, geen dataverkoop, geen betaalde functies. Alle donaties gaan rechtstreeks naar het dekken van de lopende kosten (infrastructuur, hosting, ontwikkeling). Donaties zijn niet fiscaal aftrekbaar."
+    "patronageNote": "BibleBot.Life is een privé, niet-commercieel project. Het wordt op vrijwillige basis beheerd en uitsluitend gefinancierd door donaties. Geen reclame, geen dataverkoop, geen betaalde functies. Alle donaties gaan rechtstreeks naar het dekken van de lopende kosten (infrastructuur, hosting, ontwikkeling). Donaties zijn niet fiscaal aftrekbaar.",
+    "denominationsTitle": "Voor alle denominaties en ceremonieleiders",
+    "denominationsSubtitle": "BibleBot.Life is oecumenisch – voor gereformeerde, katholieke, lutherse en vrij-evangelische gemeenschappen, evenals freelance ceremonieleiders.",
+    "denomination": {
+      "reformed": {
+        "title": "Gereformeerde Kerk",
+        "desc": "Zürichse Bijbel, gereformeerde liturgie en preekondersteuning – op maat voor uw gemeente."
+      },
+      "catholic": {
+        "title": "Katholieke Kerk",
+        "desc": "Eenheidsvertaling, misplanning en sacramenten – afgestemd op katholieke tradities."
+      },
+      "lutheran": {
+        "title": "Lutherse Kerk",
+        "desc": "Lutherbijbel, dienstplanning en pastoraat – voor evangelisch-lutherse gemeenten."
+      },
+      "evangelical": {
+        "title": "Vrije Kerken",
+        "desc": "Schlachter 2000, aanbidding en flexibel dienstontwerp – voor vrij-evangelische gemeenschappen."
+      },
+      "freelance": {
+        "title": "Freelance Celebranten",
+        "desc": "Rouwsprekers, huwelijkscelbranten en onafhankelijke ceremonieleiders – met biografische tools en spraakplanning."
+      }
+    }
   },
   "institutions": {
     "badge": "Voor organisaties",

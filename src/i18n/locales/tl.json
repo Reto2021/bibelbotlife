@@ -310,7 +310,8 @@
     "errorNoStream": "Walang Stream",
     "seniorMode": "Senior Mode (mas malaking font)",
     "loginHint": "Mag-log in para mapanatili ang mga pag-uusap sa lahat ng device",
-    "previousChats": "{{count}} nakaraang pag-uusap"
+    "previousChats": "{{count}} nakaraang pag-uusap",
+    "suggestionsLoading": "Naglo-load ng mga mungkahi…"
   },
   "install": {
     "title": "I-install ang BibleBot",
@@ -794,7 +795,13 @@
         "psychiatry": "Psikiyatriya",
         "burnoutClinic": "Klinika ng burnout",
         "hospice": "Hospice",
-        "counseling": "Sentro ng pagpapayo"
+        "counseling": "Sentro ng pagpapayo",
+        "reformed": "Reformed Church",
+        "catholic": "Catholic Church",
+        "lutheran": "Lutheran Church",
+        "evangelical": "Free Church / Evangelical",
+        "freelance": "Freelance / Independent",
+        "other": "Iba pa"
       }
     },
     "institutionsTitle": "Para din sa mga Institusyon",
@@ -841,7 +848,31 @@
         "desc": "Karagdagang espirituwal na udyok para sa mga kliyente sa psychosocial counseling."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible.",
+    "denominationsTitle": "Para sa lahat ng denominasyon at mga tagapanguna ng seremonya",
+    "denominationsSubtitle": "Ang BibleBot.Life ay ecumenical – para sa Reformed, Catholic, Lutheran, at Free Church na mga komunidad, pati na rin mga freelance na tagapanguna ng seremonya.",
+    "denomination": {
+      "reformed": {
+        "title": "Reformed Church",
+        "desc": "Zurich Bible, Reformed liturgy, at tulong sa pangangaral – iniayon para sa inyong parokya."
+      },
+      "catholic": {
+        "title": "Catholic Church",
+        "desc": "Ecumenical translation, pagpaplano ng misa at sakramento – naaayon sa tradisyong Katoliko."
+      },
+      "lutheran": {
+        "title": "Lutheran Church",
+        "desc": "Luther Bible, pagpaplano ng pagsamba at pastoral care – para sa mga Evangelical-Lutheran na komunidad."
+      },
+      "evangelical": {
+        "title": "Free Churches",
+        "desc": "Schlachter 2000, papuri at flexible na disenyo ng pagsamba – para sa mga free church na komunidad."
+      },
+      "freelance": {
+        "title": "Freelance Officiants",
+        "desc": "Mga tagapagsalita sa libing, wedding celebrants at independiyenteng mga tagapanguna ng seremonya – may mga biography tool at pagpaplano ng talumpati."
+      }
+    }
   },
   "institutions": {
     "badge": "Para sa mga organisasyon",
