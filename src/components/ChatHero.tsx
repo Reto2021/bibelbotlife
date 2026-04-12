@@ -867,21 +867,17 @@ export function ChatHero() {
                   )}
                 </motion.form>
 
-                {/* === Quick CTAs – compact row === */}
+                {/* === Quick CTAs – smart rotation === */}
                 <motion.div
                   initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: 0.25 }}
                   className="flex flex-col sm:grid sm:grid-cols-3 gap-2 max-w-2xl mx-auto mb-5 w-full"
                 >
-                  {[
-                    { emoji: "🤔", title: t("tiles.namequiz.title"), desc: t("tiles.namequiz.desc"), prompt: t("tiles.namequiz.prompt") },
-                    { emoji: "☕", title: t("tiles.dailywisdom.title"), desc: t("tiles.dailywisdom.desc"), prompt: t("tiles.dailywisdom.prompt") },
-                    { emoji: "🎲", title: t("tiles.funfact.title"), desc: t("tiles.funfact.desc"), prompt: t("tiles.funfact.prompt") },
-                  ].map((card) => (
+                  {smartQuickCTAs.map((card) => (
                     <button
-                      key={card.title}
-                      onClick={() => sendMessage(card.prompt)}
+                      key={card.key}
+                      onClick={() => { trackTileClick(card.key); sendMessage(card.prompt); }}
                       className="group flex items-center gap-3 sm:gap-2 bg-card/70 backdrop-blur-sm border border-border rounded-xl px-4 sm:px-3 py-3 sm:py-2.5 hover:border-primary/40 hover:shadow-md hover:bg-card transition-all duration-200 cursor-pointer min-w-0"
                     >
                       <span className="text-xl sm:text-xl shrink-0">{card.emoji}</span>
