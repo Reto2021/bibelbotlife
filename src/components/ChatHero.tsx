@@ -824,9 +824,9 @@ export function ChatHero() {
                   className="grid grid-cols-3 gap-1.5 sm:gap-2 max-w-2xl mx-auto mb-5 w-full"
                 >
                   {[
-                    { emoji: "😰", title: t("tiles.anxiety.title"), prompt: t("tiles.anxiety.prompt") },
-                    { emoji: "🙏", title: t("tiles.prayer.title"), prompt: t("tiles.prayer.prompt") },
-                    { emoji: "📖", title: t("tiles.bibleverse.title"), prompt: t("tiles.bibleverse.prompt") },
+                    { emoji: "🤔", title: t("tiles.namequiz.title"), prompt: t("tiles.namequiz.prompt") },
+                    { emoji: "☕", title: t("tiles.dailywisdom.title"), prompt: t("tiles.dailywisdom.prompt") },
+                    { emoji: "🎲", title: t("tiles.funfact.title"), prompt: t("tiles.funfact.prompt") },
                   ].map((card) => (
                     <button
                       key={card.title}
