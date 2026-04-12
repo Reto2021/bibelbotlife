@@ -485,25 +485,31 @@ export function DailyImpulse() {
                     loading="lazy"
                   />
                 </div>
-                <div className="bg-card/80 backdrop-blur-sm p-3 flex items-center justify-between gap-2">
-                  <p className="text-xs text-muted-foreground">{t("share.imageReady")}</p>
-                  <div className="flex gap-2">
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      onClick={downloadImage}
-                      className="text-xs border-primary/30 text-primary hover:bg-primary/10 h-7"
-                    >
-                      <Download className="h-3 w-3 mr-1" />
-                      {t("share.download")}
-                    </Button>
-                    <Button
-                      size="sm"
-                      onClick={shareAsImage}
-                      className="text-xs h-7"
-                    >
-                      {t("share.shareImage")}
-                    </Button>
+                <div className="bg-card/80 backdrop-blur-sm p-3 space-y-3">
+                  {/* Share text preview */}
+                  <div className="bg-muted/40 rounded-lg p-3 text-xs text-muted-foreground whitespace-pre-line font-mono leading-relaxed max-h-40 overflow-y-auto">
+                    {buildShareText()}
+                  </div>
+                  <div className="flex items-center justify-between gap-2">
+                    <p className="text-xs text-muted-foreground">{t("share.imageReady")}</p>
+                    <div className="flex gap-2">
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        onClick={downloadImage}
+                        className="text-xs border-primary/30 text-primary hover:bg-primary/10 h-7"
+                      >
+                        <Download className="h-3 w-3 mr-1" />
+                        {t("share.download")}
+                      </Button>
+                      <Button
+                        size="sm"
+                        onClick={shareAsImage}
+                        className="text-xs h-7"
+                      >
+                        {t("share.shareImage")}
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </div>
