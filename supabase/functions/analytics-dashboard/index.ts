@@ -448,6 +448,12 @@ Deno.serve(async (req) => {
       avgMessagesPerUser: avgMsgsPerUser,
       dailyActivity: dailyChats,
     },
+    webChat: {
+      uniqueUsers: webChatSessions.size,
+      totalMessages: webChatEvents.length,
+      avgMessagesPerUser: webChatAvgPerUser,
+      dailyActivity: webChatDailyCounts,
+    },
     tiles: {
       totalClicks: tileClicks.length,
       topTiles,
