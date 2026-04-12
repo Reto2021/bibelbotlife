@@ -56,6 +56,12 @@ type AnalyticsData = {
     avgMessagesPerUser: number;
     dailyActivity: Record<string, number>;
   };
+  webChat?: {
+    uniqueUsers: number;
+    totalMessages: number;
+    avgMessagesPerUser: number;
+    dailyActivity: Record<string, number>;
+  };
   tiles?: {
     totalClicks: number;
     topTiles: { tile: string; count: number }[];
@@ -235,6 +241,10 @@ const Analytics = () => {
     .sort(([a], [b]) => a.localeCompare(b))
     .map(([date, count]) => ({ date: date.slice(5), Nachrichten: count }));
 
+  const webChatDailyData = Object.entries(data?.webChat?.dailyActivity || {})
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([date, count]) => ({ date: date.slice(5), Nachrichten: count }));
+
   const subscriberData = Object.entries(data?.subscribers?.byChannel || {}).map(([channel, total]) => ({
     channel: channel.charAt(0).toUpperCase() + channel.slice(1),
     total,
@@ -275,7 +285,7 @@ const Analytics = () => {
         </div>
 
         {/* Summary stats */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
           <StatCard
             icon={Eye}
             label="Seitenaufrufe"
@@ -312,6 +322,13 @@ const Analytics = () => {
             value={data?.chat?.uniqueUsers || 0}
             sub={`∅ ${data?.chat?.avgMessagesPerUser || 0} Nachr./Person`}
             tooltip="Eindeutige Telegram-Nutzer, die dem Bot geschrieben haben. 'Nachr./Person' = durchschnittliche Anzahl gesendeter Nachrichten pro Nutzer."
+          />
+          <StatCard
+            icon={Globe}
+            label="Chat-Nutzer (Web)"
+            value={data?.webChat?.uniqueUsers || 0}
+            sub={`∅ ${data?.webChat?.avgMessagesPerUser || 0} Nachr./Person`}
+            tooltip="Eindeutige Web-Besucher, die den Chat auf der Webseite genutzt haben (pro Browser-Session gezählt)."
           />
         </div>
 
@@ -493,23 +510,27 @@ const Analytics = () => {
         )}
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {/* Chat activity */}
+          {/* Telegram Chat activity */}
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-base flex items-center gap-2">
                 <MessageCircle className="h-4 w-4 text-primary" />
-                Chat-Aktivität
+                Telegram-Chat
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="grid grid-cols-2 gap-3 mb-4">
-                <div className="bg-primary/5 rounded-lg p-3 text-center">
-                  <p className="text-xl font-bold text-foreground">{data?.chat?.totalUserMessages || 0}</p>
-                  <p className="text-[10px] text-muted-foreground">User-Nachrichten</p>
+              <div className="grid grid-cols-3 gap-2 mb-4">
+                <div className="bg-primary/5 rounded-lg p-2.5 text-center">
+                  <p className="text-lg font-bold text-foreground">{data?.chat?.uniqueUsers || 0}</p>
+                  <p className="text-[10px] text-muted-foreground">Nutzer</p>
                 </div>
-                <div className="bg-primary/5 rounded-lg p-3 text-center">
-                  <p className="text-xl font-bold text-foreground">{data?.chat?.totalBotMessages || 0}</p>
-                  <p className="text-[10px] text-muted-foreground">Bot-Antworten</p>
+                <div className="bg-primary/5 rounded-lg p-2.5 text-center">
+                  <p className="text-lg font-bold text-foreground">{data?.chat?.totalUserMessages || 0}</p>
+                  <p className="text-[10px] text-muted-foreground">Nachrichten</p>
+                </div>
+                <div className="bg-primary/5 rounded-lg p-2.5 text-center">
+                  <p className="text-lg font-bold text-foreground">{data?.chat?.totalBotMessages || 0}</p>
+                  <p className="text-[10px] text-muted-foreground">Antworten</p>
                 </div>
               </div>
               {chatDailyData.length > 0 && (
@@ -524,6 +545,46 @@ const Analytics = () => {
                   </ResponsiveContainer>
                 </div>
               )}
+              {chatDailyData.length === 0 && <p className="text-sm text-muted-foreground">Keine Telegram-Daten</p>}
+            </CardContent>
+          </Card>
+
+          {/* Web Chat activity */}
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-base flex items-center gap-2">
+                <Globe className="h-4 w-4 text-primary" />
+                Web-Chat
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-3 gap-2 mb-4">
+                <div className="bg-primary/5 rounded-lg p-2.5 text-center">
+                  <p className="text-lg font-bold text-foreground">{data?.webChat?.uniqueUsers || 0}</p>
+                  <p className="text-[10px] text-muted-foreground">Nutzer</p>
+                </div>
+                <div className="bg-primary/5 rounded-lg p-2.5 text-center">
+                  <p className="text-lg font-bold text-foreground">{data?.webChat?.totalMessages || 0}</p>
+                  <p className="text-[10px] text-muted-foreground">Nachrichten</p>
+                </div>
+                <div className="bg-primary/5 rounded-lg p-2.5 text-center">
+                  <p className="text-lg font-bold text-foreground">{data?.webChat?.avgMessagesPerUser || 0}</p>
+                  <p className="text-[10px] text-muted-foreground">∅/Nutzer</p>
+                </div>
+              </div>
+              {webChatDailyData.length > 0 && (
+                <div className="h-32">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <BarChart data={webChatDailyData}>
+                      <XAxis dataKey="date" tick={{ fontSize: 10 }} className="fill-muted-foreground" />
+                      <YAxis tick={{ fontSize: 10 }} className="fill-muted-foreground" allowDecimals={false} />
+                      <RTooltip contentStyle={{ background: "hsl(var(--card))", border: "1px solid hsl(var(--border))", borderRadius: 8, fontSize: 12 }} />
+                      <Bar dataKey="Nachrichten" fill="hsl(var(--chart-3))" radius={[4, 4, 0, 0]} />
+                    </BarChart>
+                  </ResponsiveContainer>
+                </div>
+              )}
+              {webChatDailyData.length === 0 && <p className="text-sm text-muted-foreground">Keine Web-Chat-Daten</p>}
             </CardContent>
           </Card>
 
