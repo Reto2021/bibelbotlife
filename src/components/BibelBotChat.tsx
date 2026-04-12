@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { useTranslation } from "react-i18next";
-import { Send, X, MessageCircle, Loader2, Mic, MicOff, Pencil, Shield, Sparkles, CheckCircle2, AlertTriangle, Info, BookOpen, Volume2, VolumeX } from "lucide-react";
+import { Send, X, MessageCircle, Loader2, Mic, MicOff, Pencil, Shield, Sparkles, CheckCircle2, AlertTriangle, Info, BookOpen, Volume2, VolumeX, ChevronDown } from "lucide-react";
 import { useTTS } from "@/hooks/use-tts";
 
 import { ShareButton } from "@/components/ShareButton";
@@ -267,6 +267,9 @@ export function BibleBotChat() {
   const [preferredTranslation, setPreferredTranslation] = useState(() => {
     try { return localStorage.getItem("bibelbot-translation") || "auto"; } catch { return "auto"; }
   });
+  const [showScrollDown, setShowScrollDown] = useState(false);
+  const [recordingSeconds, setRecordingSeconds] = useState(0);
+  const recordingTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const audioChunksRef = useRef<Blob[]>([]);
   const tts = useTTS();
@@ -336,6 +339,8 @@ export function BibleBotChat() {
       };
       mediaRecorderRef.current = mediaRecorder;
       mediaRecorder.start();
+      setRecordingSeconds(0);
+      recordingTimerRef.current = setInterval(() => setRecordingSeconds((s) => s + 1), 1000);
       setIsListening(true);
     } catch {
       toast({ title: t("subscribe.toastNotSupported"), description: t("chat.noVoice"), variant: "destructive" });
@@ -344,7 +349,9 @@ export function BibleBotChat() {
 
   const stopListening = useCallback(() => {
     mediaRecorderRef.current?.stop();
+    if (recordingTimerRef.current) { clearInterval(recordingTimerRef.current); recordingTimerRef.current = null; }
     setIsListening(false);
+    setRecordingSeconds(0);
   }, []);
 
   useEffect(() => {
@@ -382,7 +389,23 @@ export function BibleBotChat() {
 
   useEffect(() => { if (messages.length > 0) saveMessages(messages); }, [messages]);
   useEffect(() => { if (isOpen) setShowTeaser(false); }, [isOpen]);
-  useEffect(() => { if (scrollRef.current) scrollRef.current.scrollTop = scrollRef.current.scrollHeight; }, [messages, showWelcome]);
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const isNearBottom = el.scrollHeight - el.scrollTop - el.clientHeight < 80;
+    if (isNearBottom) el.scrollTop = el.scrollHeight;
+  }, [messages, showWelcome]);
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const handleScroll = () => {
+      const distFromBottom = el.scrollHeight - el.scrollTop - el.clientHeight;
+      setShowScrollDown(distFromBottom > 120);
+    };
+    el.addEventListener("scroll", handleScroll, { passive: true });
+    return () => el.removeEventListener("scroll", handleScroll);
+  }, [isOpen]);
 
   const handleSaveName = () => {
     const trimmed = nameDraft.trim();
@@ -561,7 +584,7 @@ export function BibleBotChat() {
   const hasConversation = messages.length > 0;
 
   return (
-    <div className={`fixed bottom-6 right-6 z-50 w-[420px] max-w-[calc(100vw-2rem)] h-[600px] max-h-[calc(100vh-3rem)] bg-card border border-border rounded-2xl shadow-2xl flex flex-col overflow-hidden`}>
+    <div className={`fixed bottom-6 right-6 z-50 w-[420px] max-w-[calc(100vw-2rem)] h-[600px] max-h-[calc(100vh-3rem)] bg-card border border-border rounded-2xl shadow-2xl flex flex-col overflow-hidden relative`}>
       {/* Header */}
       <div className={`flex items-center justify-between px-4 py-3 border-b border-border bg-primary/5`}>
         <div className="flex items-center gap-3">
@@ -751,30 +774,51 @@ export function BibleBotChat() {
 
         {isLoading && messages[messages.length - 1]?.role !== "assistant" && (
           <div className="flex justify-start">
-            <div className={`bg-muted rounded-2xl rounded-bl-md px-4 py-3 flex items-center gap-2`}>
-              <Loader2 className={`h-4 w-4 animate-spin text-muted-foreground`} />
-              <span className={`text-xs text-muted-foreground`}>{t("chat.writing")}</span>
+            <div className={`bg-muted rounded-2xl rounded-bl-md px-4 py-3 flex items-center gap-1`}>
+              <span className="h-2 w-2 rounded-full bg-muted-foreground/60 animate-bounce" style={{ animationDelay: "0ms" }} />
+              <span className="h-2 w-2 rounded-full bg-muted-foreground/60 animate-bounce" style={{ animationDelay: "150ms" }} />
+              <span className="h-2 w-2 rounded-full bg-muted-foreground/60 animate-bounce" style={{ animationDelay: "300ms" }} />
             </div>
           </div>
         )}
       </div>
 
+      {/* Scroll-to-bottom button */}
+      {showScrollDown && (
+        <div className="absolute bottom-[70px] left-1/2 -translate-x-1/2 z-10">
+          <button
+            onClick={() => { if (scrollRef.current) scrollRef.current.scrollTop = scrollRef.current.scrollHeight; setShowScrollDown(false); }}
+            className="flex items-center gap-1.5 bg-primary text-primary-foreground text-xs font-medium px-3 py-1.5 rounded-full shadow-lg hover:bg-primary/90 transition-all animate-in fade-in slide-in-from-bottom-2 duration-200"
+          >
+            <ChevronDown className="h-3.5 w-3.5" />
+            {t("chat.scrollDown", "Neueste")}
+          </button>
+        </div>
+      )}
+
       {/* Input */}
       <div className={`border-t border-border p-3`}>
         <div className="flex gap-2 items-end">
           <Textarea ref={textareaRef} value={input} onChange={(e) => setInput(e.target.value)} onKeyDown={handleKeyDown} placeholder={t("chat.placeholder")} className={`min-h-[40px] max-h-[100px] text-base resize-none`} rows={1} />
-          <Button
-            size="icon"
-            variant={isListening ? "destructive" : "outline"}
-            onClick={isListening ? stopListening : startListening}
-            disabled={isTranscribing}
-            className={`h-10 w-10 shrink-0 relative`}
-            aria-label={isListening ? t("chat.stopVoice") : t("chat.startVoice")}
-            title={isListening ? t("chat.stopVoice") : t("chat.startVoice", "Spracheingabe")}
-          >
-            {isTranscribing ? <Loader2 className="h-5 w-5 animate-spin" /> : isListening ? <MicOff className="h-5 w-5" /> : <Mic className="h-5 w-5" />}
-            {isListening && <span className="absolute inset-0 rounded-md border-2 border-destructive animate-pulse" />}
-          </Button>
+          <div className="flex flex-col items-center gap-0.5 shrink-0">
+            <Button
+              size="icon"
+              variant={isListening ? "destructive" : "outline"}
+              onClick={isListening ? stopListening : startListening}
+              disabled={isTranscribing}
+              className={`h-10 w-10 relative`}
+              aria-label={isListening ? t("chat.stopVoice") : t("chat.startVoice")}
+              title={isListening ? t("chat.stopVoice") : t("chat.startVoice", "Spracheingabe")}
+            >
+              {isTranscribing ? <Loader2 className="h-5 w-5 animate-spin" /> : isListening ? <MicOff className="h-5 w-5" /> : <Mic className="h-5 w-5" />}
+              {isListening && <span className="absolute inset-0 rounded-md border-2 border-destructive animate-pulse" />}
+            </Button>
+            {isListening && (
+              <span className="text-[10px] font-mono text-destructive leading-none tabular-nums">
+                {String(Math.floor(recordingSeconds / 60)).padStart(2, "0")}:{String(recordingSeconds % 60).padStart(2, "0")}
+              </span>
+            )}
+          </div>
           <Button size="icon" onClick={() => sendMessage(input)} disabled={!input.trim() || isLoading} className={`h-10 w-10 shrink-0`} title={t("chat.send", "Senden")}>
             <Send className="h-5 w-5" />
           </Button>

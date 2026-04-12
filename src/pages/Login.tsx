@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, Loader2, ArrowLeft } from "lucide-react";
+import { Mail, Loader2, ArrowLeft, Eye, EyeOff } from "lucide-react";
 import { AppLogo } from "@/components/AppLogo";
 import { useToast } from "@/hooks/use-toast";
 import { Link } from "react-router-dom";
@@ -23,6 +23,7 @@ const Login = () => {
   const [mode, setMode] = useState<Mode>("login");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
 
   // Redirect if already logged in
@@ -173,7 +174,12 @@ const Login = () => {
               {mode !== "forgot" && (
                 <div>
                   <Label htmlFor="password">{t("auth.password", "Passwort")}</Label>
-                  <Input id="password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} required minLength={6} />
+                  <div className="relative">
+                    <Input id="password" type={showPassword ? "text" : "password"} value={password} onChange={(e) => setPassword(e.target.value)} required minLength={6} className="pr-10" />
+                    <button type="button" onClick={() => setShowPassword((v) => !v)} className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors" tabIndex={-1} aria-label={showPassword ? t("auth.hidePassword", "Passwort verbergen") : t("auth.showPassword", "Passwort anzeigen")}>
+                      {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                    </button>
+                  </div>
                 </div>
               )}
               <Button type="submit" disabled={loading} className="w-full">
