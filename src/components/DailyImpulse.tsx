@@ -169,6 +169,7 @@ export function DailyImpulse() {
       setShareBlob(blob);
       setShareImageUrl(url);
       setShowImagePreview(true);
+      setTimeout(() => imagePreviewRef.current?.scrollIntoView({ behavior: "smooth", block: "center" }), 100);
     } catch (e) {
       console.error("Failed to generate share image:", e);
       toast({
