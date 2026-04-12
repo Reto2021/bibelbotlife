@@ -105,6 +105,7 @@ export function DailyImpulse() {
   const [showImagePreview, setShowImagePreview] = useState(false);
   const [showSmsInput, setShowSmsInput] = useState(false);
   const [smsPhone, setSmsPhone] = useState("");
+  const imagePreviewRef = useRef<HTMLDivElement>(null);
   const tts = useTTS();
 
   // Initialise collapse state based on mobile once detected
