@@ -10,8 +10,8 @@ type PatronData = {
   custom_bot_name: string | null;
 };
 
-const SPLASH_DURATION_WITH_PATRON = 4000;
-const SPLASH_DURATION_DEFAULT = 1800;
+const SPLASH_DURATION_WITH_PATRON = 5500;
+const SPLASH_DURATION_DEFAULT = 3200;
 
 export function SplashScreen({ onComplete }: { onComplete: () => void }) {
   const { t } = useTranslation();
