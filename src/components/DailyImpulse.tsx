@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useRef, ReactNode } from "react";
 import { useTranslation } from "react-i18next";
-import { Sparkles, ChevronRight, BookOpen, Loader2, MessageCircle, Image, Download, Bell, Send, Smartphone, Volume2, VolumeX, XCircle, Settings2, ChevronDown, ChevronUp } from "lucide-react";
+import { Sparkles, ChevronRight, BookOpen, Loader2, MessageCircle, Image, Download, Bell, Send, Smartphone, Volume2, VolumeX, XCircle, Settings2, ChevronDown, ChevronUp, Copy } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Button } from "@/components/ui/button";
 import { useTTS } from "@/hooks/use-tts";
@@ -502,7 +502,7 @@ export function DailyImpulse() {
                         } catch {}
                       }}
                     >
-                      <Send className="h-3.5 w-3.5" />
+                      <Copy className="h-3.5 w-3.5" />
                     </Button>
                   </div>
                   <div className="flex items-center justify-between gap-2">
