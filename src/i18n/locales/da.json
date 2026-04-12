@@ -595,103 +595,103 @@
   "church": {
     "badge": "For organisationer",
     "heroTitle": "BibleBot for din organisation",
-    "heroSubtitle": "Ledsag dit team med bibelsk visdom – digitalt, personligt og døgnet rundt.",
-    "useCasesTitle": "Einsatzmöglichkeiten",
+    "heroSubtitle": "Ledsag dit team og fællesskab med bibelsk visdom – digitalt, personligt og døgnet rundt.",
+    "useCasesTitle": "Anvendelsesmuligheder",
     "useCase": {
       "youth": {
-        "title": "Jugendarbeit",
-        "desc": "Teens entdecken die Bibel auf ihre eigene Art – interaktiv und ohne Hemmungen."
+        "title": "Ungdomsarbejde",
+        "desc": "Teenagere opdager Bibelen på deres egen måde – interaktivt og uden tøven."
       },
       "confirmation": {
         "title": "Konfirmation",
-        "desc": "Konfirmanden vertiefen Bibelwissen eigenständig mit persönlicher Begleitung."
+        "desc": "Konfirmander fordyber bibelviden selvstændigt med personlig vejledning."
       },
       "pastoral": {
-        "title": "Seelsorge",
-        "desc": "24/7-Begleitung als Ergänzung zur persönlichen Seelsorge."
+        "title": "Sjælesorg",
+        "desc": "24/7 ledsagelse som supplement til personlig sjælesorg."
       },
       "bibleStudy": {
-        "title": "Bibelkreis",
-        "desc": "Impulse und Diskussionsanstösse für Gruppen und Hauskreise."
+        "title": "Bibelgruppe",
+        "desc": "Impulser og diskussionsoplæg for grupper og huskreede."
       }
     },
-    "pricingTitle": "Patronats-Pakete",
-    "pricingSubtitle": "Støt BibleBot og din organisation med den rette patronatspakke.",
-    "popular": "Beliebt",
-    "free": "Kostenlos",
+    "pricingTitle": "Patronatspakker",
+    "pricingSubtitle": "Støt din ledsager og din organisation med den rette patronatspakke.",
+    "popular": "Populær",
+    "free": "Gratis",
     "perYear": "personer / år",
-    "contact": "Kontakt aufnehmen",
+    "contact": "Kontakt os",
     "tier": {
       "free": {
-        "name": "Senfkorn",
-        "size": "Für kleine Organisationen & Gruppen (bis 50 Personen)"
+        "name": "Sennepsfrø",
+        "size": "For små organisationer (op til 50 personer)"
       },
       "community": {
-        "name": "Wegbegleiter",
-        "size": "Für Organisationen mit 50–200 Personen"
+        "name": "Ledsager",
+        "size": "For organisationer med 50–200 personer"
       },
       "gemeinde": {
-        "name": "Brückenbauer",
-        "size": "Für Organisationen mit 200–500 Personen"
+        "name": "Brobygdelays",
+        "size": "For organisationer med 200–500 personer"
       },
       "kirche": {
-        "name": "Leuchtturm",
-        "size": "Für grosse Organisationen & Institutionen (500+ Personen)"
+        "name": "Fyrtårn",
+        "size": "For store organisationer (500+ personer)"
       }
     },
     "features": {
-      "directoryEntry": "Verzeichnis-Eintrag",
+      "directoryEntry": "Kataloindgang",
       "telegramGroup": "Telegram-Gruppe",
-      "partnerPage": "Eigene Partner-Seite",
-      "badge": "Partner-Badge",
-      "qrFlyer": "QR-Flyer zum Drucken",
+      "partnerPage": "Egen partnerside",
+      "badge": "Partnerbadge",
+      "qrFlyer": "QR-flyer til print",
       "contactForm": "Kontaktformular",
-      "pastorProfile": "Pfarrer/Pastor-Profil",
-      "welcomeVideo": "Willkommensvideo",
-      "analytics": "Analytics-Dashboard",
-      "prioritySupport": "Priority-Support",
-      "multipleProfiles": "Mehrere Profile",
-      "customBranding": "Custom Branding",
-      "apiAccess": "API-Zugang",
-      "accountManager": "Persönlicher Betreuer"
+      "pastorProfile": "Præsteprofil",
+      "welcomeVideo": "Velkomstvideo",
+      "analytics": "Analyseovervaagning",
+      "prioritySupport": "Prioriteret support",
+      "multipleProfiles": "Flere profiler",
+      "customBranding": "Tilpasset branding",
+      "apiAccess": "API-adgang",
+      "accountManager": "Dedikeret kontaktperson"
     },
-    "viewDirectory": "Gemeinde-Verzeichnis ansehen",
-    "directoryBadge": "Gemeinde-Verzeichnis",
-    "directoryTitle": "Partnergemeinden",
-    "directorySubtitle": "Finden Sie eine Gemeinde in Ihrer Nähe, die BibleBot empfiehlt.",
-    "searchPlaceholder": "Ort, Name oder Denomination suchen...",
-    "noResults": "Noch keine Gemeinden im Verzeichnis.",
-    "becomePartner": "Partner werden →",
-    "notFound": "Gemeinde nicht gefunden.",
-    "backToDirectory": "Zurück zum Verzeichnis",
-    "pastor": "Pfarrer/Pastor",
-    "serviceTimes": "Gottesdienstzeiten",
-    "startChat": "Chat starten",
-    "website": "Website",
+    "viewDirectory": "Se partneroversigt",
+    "directoryBadge": "Partneroversigt",
+    "directoryTitle": "Partnerorganisationer",
+    "directorySubtitle": "Find en organisation i nærheden, der anbefaler BibleBot.",
+    "searchPlaceholder": "Søg efter by, navn eller trosretning...",
+    "noResults": "Endnu ingen organisationer i oversigten.",
+    "becomePartner": "Bliv partner →",
+    "notFound": "Organisation ikke fundet.",
+    "backToDirectory": "Tilbage til oversigten",
+    "pastor": "Præst",
+    "serviceTimes": "Gudstjenestetider",
+    "startChat": "Start chat",
+    "website": "Hjemmeside",
     "telegramGroup": "Telegram-Gruppe",
-    "contactTitle": "Kontakt zu {{name}}",
-    "contactName": "Ihr Name (optional)",
-    "contactEmail": "Ihre E-Mail-Adresse",
-    "contactMessage": "Ihre Nachricht",
-    "contactSend": "Nachricht senden",
-    "contactSuccess": "Nachricht gesendet! 🙏",
-    "contactSuccessDesc": "Die Gemeinde wird sich bei Ihnen melden.",
-    "recommendedBy": "Empfohlen von {{name}}",
-    "setup": "Setup (einmalig)",
+    "contactTitle": "Kontakt {{name}}",
+    "contactName": "Dit navn (valgfrit)",
+    "contactEmail": "Din e-mailadresse",
+    "contactMessage": "Din besked",
+    "contactSend": "Send besked",
+    "contactSuccess": "Besked sendt! 🙏",
+    "contactSuccessDesc": "Organisationen vender tilbage til dig.",
+    "recommendedBy": "Anbefalet af {{name}}",
+    "setup": "Opsætning (engangs)",
     "form": {
-      "title": "Interesse? Schreiben Sie uns!",
-      "subtitle": "Wir melden uns innert 48 Stunden.",
-      "name": "Ihr Name",
-      "email": "E-Mail-Adresse",
-      "churchName": "Name der Gemeinde",
-      "tier": "Gewünschtes Paket",
-      "tierPlaceholder": "Paket wählen...",
-      "message": "Ihre Nachricht",
-      "submit": "Anfrage senden",
-      "success": "Anfrage gesendet! Wir melden uns bald. 🙏",
-      "error": "Fehler beim Senden. Bitte versuchen Sie es erneut.",
-      "orgType": "Typ der Organisation",
-      "orgTypePlaceholder": "Typ wählen...",
+      "title": "Interesseret? Kontakt os!",
+      "subtitle": "Vi vender tilbage inden for 48 timer.",
+      "name": "Dit navn",
+      "email": "E-mailadresse",
+      "churchName": "Organisationsnavn",
+      "tier": "Ønsket pakke",
+      "tierPlaceholder": "Vælg pakke...",
+      "message": "Din besked",
+      "submit": "Send forespørgsel",
+      "success": "Forespørgsel sendt! Vi kontakter dig snart. 🙏",
+      "error": "Fejl ved afsendelse. Prøv igen.",
+      "orgType": "Organisationstype",
+      "orgTypePlaceholder": "Vælg type...",
       "orgTypes": {
         "church": "Gemeinde",
         "careHome": "Pflegeheim",
@@ -712,8 +712,8 @@
         "other": "Andet"
       }
     },
-    "institutionsTitle": "Auch für Institutionen",
-    "institutionsSubtitle": "BibleBot begleitet nicht nur Gemeinden – auch Pflege- und Altersheime, Spitäler und die Gefängnisseelsorge profitieren von digitaler Seelsorge.",
+    "institutionsTitle": "For forskellige organisationer",
+    "institutionsSubtitle": "BibleBot ledsager menigheder, plejehjem, hospitaler, rehabiliterings- og burnoutklinikker med digital sjælesorg.",
     "institution": {
       "careHome": {
         "title": "Pflegeheime",
@@ -756,7 +756,7 @@
         "desc": "Supplerende åndelige impulser for klienter i psykosocial rådgivning."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible.",
+    "patronageNote": "BibleBot.Life er et privat, ikke-kommercielt projekt drevet frivilligt og finansieret udelukkende gennem donationer.",
     "denominationsTitle": "For alle trosretninger og ceremoniledere",
     "denominationsSubtitle": "BibleBot.Life er økumenisk – for reformerte, katolske, lutherske og frikirkelige fællesskaber samt freelance ceremoniledere.",
     "denomination": {
