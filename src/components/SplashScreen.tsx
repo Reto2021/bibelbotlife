@@ -75,7 +75,7 @@ export function SplashScreen({ onComplete }: { onComplete: () => void }) {
               <motion.h1
                 initial={{ opacity: 0, y: 5 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.5 }}
+                transition={{ delay: 0.5, duration: 0.7 }}
                 className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight"
               >
                 {displayName}
