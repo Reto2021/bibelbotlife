@@ -16,7 +16,7 @@
     },
     "title1": "Biblia.",
     "title2": " Prehodnotená.",
-    "subtitle": "Váš BibleBot pozná Bibliu – a kladie správne otázky. Nie je to človek, ale úprimný spoločník. Pre dobré rozhovory, hlboké otázky a skutočné impulzy.",
+    "subtitle": "Váš Váš sprievodca pozná Bibliu – a kladie správne otázky. Nie je to človek, ale úprimný spoločník. Pre dobré rozhovory, hlboké otázky a skutočné impulzy.",
     "ctaTelegram": "Začať cez Telegram",
     "ctaMore": "Zistiť viac",
     "quote": "«Poďte ku mne všetci, ktorí sa namáhate a ste zaťažení; ja vám dám odpočinok.»",
@@ -33,8 +33,8 @@
     "stopAudio": "Zastaviť"
   },
   "features": {
-    "sectionTitle": "Ako vás váš BibleBot sprevádza",
-    "sectionSubtitle": "Objavte rôznorodé možnosti, ako vás váš BibleBot môže sprevádzať",
+    "sectionTitle": "Ako vás váš Váš sprievodca sprevádza",
+    "sectionSubtitle": "Objavte rôznorodé možnosti, ako vás váš Váš sprievodca môže sprevádzať",
     "bible": {
       "title": "Biblické pasáže a výklad",
       "desc": "Opýtajte sa „Čo hovorí Biblia o...?“ a získajte vhodné verše s kontextom a zrozumiteľným vysvetlením."
@@ -49,7 +49,7 @@
     },
     "faith": {
       "title": "Cesta viery a nájdenie Krista",
-      "desc": "Či už hľadáte, pochybujete alebo prehlbujete – váš BibleBot vás sprevádza na vašej osobnej ceste."
+      "desc": "Či už hľadáte, pochybujete alebo prehlbujete – váš Váš sprievodca vás sprevádza na vašej osobnej ceste."
     },
     "daily": {
       "title": "Denné impulzy a cirkevný rok",
@@ -63,9 +63,9 @@
   "coaching": {
     "badge": "Metodika",
     "title": "Nie je to len chatbot – je to skutočný sprievodca",
-    "subtitle": "Váš BibleBot spája biblickú múdrosť s osvedčenými koučovacími metódami a pozitívnou psychológiou.",
+    "subtitle": "Váš Váš sprievodca spája biblickú múdrosť s osvedčenými koučovacími metódami a pozitívnou psychológiou.",
     "journeyTitle": "Osobné sprevádzanie",
-    "journeyDesc": "Váš BibleBot vás sprevádza tak dlho, ako chcete – vo voľnom rozhovore alebo s voliteľnou 21-dňovou štruktúrou.",
+    "journeyDesc": "Váš Váš sprievodca vás sprevádza tak dlho, ako chcete – vo voľnom rozhovore alebo s voliteľnou 21-dňovou štruktúrou.",
     "week1": "Týždeň 1: Príchod",
     "week1Desc": "Budovanie dôvery, počúvanie, pochopenie vašej situácie. Kde ste? Čo vás trápi?",
     "week2": "Týždeň 2: Prehĺbenie",
@@ -73,12 +73,12 @@
     "week3": "Týždeň 3: Konanie",
     "week3Desc": "Podniknutie konkrétnych krokov, formulovanie cieľov, iniciovanie zmien. Aký je váš ďalší krok?",
     "openQuestionsTitle": "Otvorené otázky namiesto rýchlych odpovedí",
-    "openQuestionsDesc": "Váš BibleBot vám nedáva lacné rady. Namiesto toho kladie otázky, ktoré sú skutočne dôležité:",
+    "openQuestionsDesc": "Váš Váš sprievodca vám nedáva lacné rady. Namiesto toho kladie otázky, ktoré sú skutočne dôležité:",
     "openQ1": "«Čo sa vlastne skrýva za týmto želaním?»",
     "openQ2": "«Podľa čoho by ste si všimli, že sa niečo zmenilo?»",
     "openQ3": "«Aký by bol prvý malý krok?»",
     "honestTitle": "Úprimný namiesto toxicky pozitívneho",
-    "honestDesc": "Žiadne „To bude dobré!“ a žiadne prikrášľovanie. Váš BibleBot je empatický A úprimný:",
+    "honestDesc": "Žiadne „To bude dobré!“ a žiadne prikrášľovanie. Váš Váš sprievodca je empatický A úprimný:",
     "honest1": "Pomenúva aj nepríjemné biblické pasáže",
     "honest2": "Vyzýva k sebareflexii",
     "honest3": "Rozlišuje útechu od potláčania",
@@ -103,7 +103,7 @@
       "author": "Worthington",
       "desc": "REACH model pre procesy odpustenia"
     },
-    "renameTip": "💡 Svojmu BibleBotovi môžete dať vlastné meno – aby sa stal skutočne <strong>vaším</strong> spoločníkom."
+    "renameTip": "💡 Svojmu Váš sprievodcaovi môžete dať vlastné meno – aby sa stal skutočne <strong>vaším</strong> spoločníkom."
   },
   "discover": {
     "badge": "Pre zvedavých",
@@ -115,7 +115,7 @@
     },
     "search": {
       "title": "Hľadáte?",
-      "text": "Možno ani neviete presne, čo. To je úplne v poriadku. Váš BibleBot vám pomôže klásť správne otázky – namiesto toho, aby poskytoval rýchle odpovede."
+      "text": "Možno ani neviete presne, čo. To je úplne v poriadku. Váš Váš sprievodca vám pomôže klásť správne otázky – namiesto toho, aby poskytoval rýchle odpovede."
     },
     "deepen": {
       "title": "Chcete prehĺbiť?",
@@ -170,9 +170,9 @@
   },
   "faq": {
     "badge": "Často kladené otázky",
-    "title": "Čo by ste mali vedieť o svojom BibleBotovi",
+    "title": "Čo by ste mali vedieť o svojom Váš sprievodcaovi",
     "subtitle": "Transparentnosť je pre nás dôležitá – najmä voči teológom, duchovným a kritickým mysliteľom.",
-    "q1": "Čím sa váš BibleBot líši od ChatGPT & Co.?",
+    "q1": "Čím sa váš Váš sprievodca líši od ChatGPT & Co.?",
     "q1Generic": "Generické chatboty:",
     "q1GenericItems": [
       "Povrchné biblické citáty bez kontextu",
@@ -192,11 +192,11 @@
       "Podporuje kritické myslenie ako zrelosť viery"
     ],
     "q2": "Aké biblické preklady sú uložené?",
-    "q2Intro": "Váš BibleBot ekumenicky pracuje s hlavnými nemecky hovoriacimi vydaniami Biblie:",
+    "q2Intro": "Váš Váš sprievodca ekumenicky pracuje s hlavnými nemecky hovoriacimi vydaniami Biblie:",
     "q2Outro": "Všetky biblické pasáže sú uvedené s odkazom na zdroj a historickým kontextom.",
     "q3": "Aké vedecké základy sú za tým?",
     "q3Intro": "Sprevádzanie je založené na recenzovanom výskume pozitívnej psychológie:",
-    "q4": "Ako váš BibleBot zabezpečuje pastoračnú bezpečnosť?",
+    "q4": "Ako váš Váš sprievodca zabezpečuje pastoračnú bezpečnosť?",
     "q4Items": [
       "Pri samovražedných myšlienkach alebo krízach → okamžité presmerovanie na Dargebotene Hand (143) a Pro Juventute (147)",
       "Žiadne psychologické ani medicínske diagnózy",
@@ -206,16 +206,16 @@
       "Žiadna toxická pozitivita – skutočné, úprimné sprevádzanie",
       "Otvorene pomenúva napätia a ťažké texty"
     ],
-    "q5": "Je váš BibleBot viazaný na konfesiu?",
-    "q5Answer": "Nie. Váš BibleBot je ekumenicky orientovaný a rovnako rešpektuje reformované, katolícke, slobodné cirkevné a iné kresťanské tradície. Pri konfesionálne odlišných výkladoch sú rôzne perspektívy transparentne prezentované – bez uprednostňovania jednej tradície.",
-    "q6": "Nahrádza váš BibleBot pastoračnú starostlivosť alebo terapiu?",
-    "q6Answer": "Nie. Váš BibleBot je digitálny nástroj pre osobné čítanie Biblie a reflexiu. Nenahrádza profesionálnu pastoračnú starostlivosť, teologické poradenstvo ani psychologickú terapiu. V prípade vážnych kríz váš BibleBot vždy odkazuje na kvalifikované kontaktné miesta.",
-    "q7": "Nie je váš BibleBot len „bot pre dobrý pocit“?",
-    "q7Answer": "Nie. Váš BibleBot utešuje tam, kde je útecha potrebná – ale aj vyzýva. Duchovný rast potrebuje trenie. Váš BibleBot kladie nepríjemné doplňujúce otázky, pomenúva ťažké biblické texty (Jób, žalmy nárekov, prorocká kritika) a nebojí sa tém ako spravodlivosť, pokánie a zodpovednosť. Prorocká tradícia nikdy nebola pohodlná – a váš BibleBot tiež nie.",
-    "q8": "Kto stojí za vaším BibleBotom a ako je financovaný?",
-    "q8Answer": "BibleBot.Life je súkromný, nekomerčný projekt. Je prevádzkovaný dobrovoľne a financovaný výhradne z dobrovoľných darov. Neexistuje žiadna reklama, žiadny predaj dát a žiadne platené funkcie. Všetky dary idú priamo na pokrytie prevádzkových nákladov (infraštruktúra, hosting, vývoj). Keďže BibleBot funguje ako súkromný projekt, dary nie sú daňovo odpočítateľné.",
-    "q9": "Ako váš BibleBot zaobchádza s mojimi údajmi?",
-    "q9Answer": "Váš BibleBot neukladá žiadne osobné údaje ani históriu chatu. Každý rozhovor je anonymný. Neexistuje žiadne prihlásenie, žiadne sledovanie a žiadne zdieľanie údajov s tretími stranami. Používanie je úplne anonymné.",
+    "q5": "Je váš Váš sprievodca viazaný na konfesiu?",
+    "q5Answer": "Nie. Váš Váš sprievodca je ekumenicky orientovaný a rovnako rešpektuje reformované, katolícke, slobodné cirkevné a iné kresťanské tradície. Pri konfesionálne odlišných výkladoch sú rôzne perspektívy transparentne prezentované – bez uprednostňovania jednej tradície.",
+    "q6": "Nahrádza váš Váš sprievodca pastoračnú starostlivosť alebo terapiu?",
+    "q6Answer": "Nie. Váš Váš sprievodca je digitálny nástroj pre osobné čítanie Biblie a reflexiu. Nenahrádza profesionálnu pastoračnú starostlivosť, teologické poradenstvo ani psychologickú terapiu. V prípade vážnych kríz váš Váš sprievodca vždy odkazuje na kvalifikované kontaktné miesta.",
+    "q7": "Nie je váš Váš sprievodca len „bot pre dobrý pocit“?",
+    "q7Answer": "Nie. Váš Váš sprievodca utešuje tam, kde je útecha potrebná – ale aj vyzýva. Duchovný rast potrebuje trenie. Váš Váš sprievodca kladie nepríjemné doplňujúce otázky, pomenúva ťažké biblické texty (Jób, žalmy nárekov, prorocká kritika) a nebojí sa tém ako spravodlivosť, pokánie a zodpovednosť. Prorocká tradícia nikdy nebola pohodlná – a váš Váš sprievodca tiež nie.",
+    "q8": "Kto stojí za vaším Váš sprievodcaom a ako je financovaný?",
+    "q8Answer": "BibleBot.Life je súkromný, nekomerčný projekt. Je prevádzkovaný dobrovoľne a financovaný výhradne z dobrovoľných darov. Neexistuje žiadna reklama, žiadny predaj dát a žiadne platené funkcie. Všetky dary idú priamo na pokrytie prevádzkových nákladov (infraštruktúra, hosting, vývoj). Keďže Váš sprievodca funguje ako súkromný projekt, dary nie sú daňovo odpočítateľné.",
+    "q9": "Ako váš Váš sprievodca zaobchádza s mojimi údajmi?",
+    "q9Answer": "Váš Váš sprievodca neukladá žiadne osobné údaje ani históriu chatu. Každý rozhovor je anonymný. Neexistuje žiadne prihlásenie, žiadne sledovanie a žiadne zdieľanie údajov s tretími stranami. Používanie je úplne anonymné.",
     "tradition": {
       "reformed": "Reformovaný",
       "evangelical": "Evanjelický",
@@ -225,35 +225,35 @@
     }
   },
   "donate": {
-    "badge": "Podporte svojho BibleBota",
-    "title": "Pomôžte, aby váš BibleBot zostal zadarmo",
-    "subtitle": "Váš BibleBot je projekt srdca – bez reklám, bez predplatného, bez skrytých nákladov. Aby to tak zostalo, som odkázaný na dobrovoľné dary. Každý príspevok pomáha pokryť prevádzkové náklady a náklady na infraštruktúru.",
+    "badge": "Podporte svojho Váš sprievodcaa",
+    "title": "Pomôžte, aby váš Váš sprievodca zostal zadarmo",
+    "subtitle": "Váš Váš sprievodca je projekt srdca – bez reklám, bez predplatného, bez skrytých nákladov. Aby to tak zostalo, som odkázaný na dobrovoľné dary. Každý príspevok pomáha pokryť prevádzkové náklady a náklady na infraštruktúru.",
     "bankTitle": "Darujte bankovým prevodom",
     "bankSubtitle": "Každá suma sa počíta – srdečná vďaka! 🙏",
     "recipient": "Príjemca",
     "bank": "Banka",
     "purpose": "Účel platby",
-    "purposeValue": "Dar BibleBot",
+    "purposeValue": "Dar Váš sprievodca",
     "note": "BibleBot.Life je prevádzkovaný ako súkromný projekt. Dary preto nie sú daňovo odpočítateľné."
   },
   "refer": {
     "badge": "Zdieľajte Božie slovo",
-    "title": "Odporučte BibleBot ďalej",
-    "subtitle": "Poznáte niekoho, kto práve potrebuje povzbudenie? Zdieľajte BibleBot – jedna správa môže veľa zmeniť.",
+    "title": "Odporučte Váš sprievodca ďalej",
+    "subtitle": "Poznáte niekoho, kto práve potrebuje povzbudenie? Zdieľajte Váš sprievodca – jedna správa môže veľa zmeniť.",
     "whatsapp": "Zdieľať cez WhatsApp",
-    "whatsappMsg": "Ahoj, chcel som ti ukázať BibleBot – bezplatného biblického sprievodcu, ktorý pozná Bibliu a kladie naozaj dobré otázky. Bez prihlásenia, anonymný, úprimný. Skús to: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Ahoj, chcel som ti ukázať Váš sprievodca – bezplatného biblického sprievodcu, ktorý pozná Bibliu a kladie naozaj dobré otázky. Bez prihlásenia, anonymný, úprimný. Skús to: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Zdieľať cez Telegram",
-    "telegramMsg": "Ahoj, poznáš už BibleBot? Bezplatný osobný biblický sprievodca – úprimný, anonymný, bez prihlásenia. Pozri sa: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Ahoj, poznáš už Váš sprievodca? Bezplatný osobný biblický sprievodca – úprimný, anonymný, bez prihlásenia. Pozri sa: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Zdieľať cez e-mail",
     "emailSubject": "Toto by ťa mohlo zaujímať: BibleBot.Life",
-    "emailBody": "Ahoj!\n\nChcel som ti ukázať BibleBot – bezplatného biblického sprievodcu, ktorý naozaj pozná Bibliu. Nie je potrebné sa prihlasovať, je úplne anonymný.\n\nKladie dobré doplňujúce otázky, vysvetľuje biblické pasáže v kontexte a sprevádza ťa úprimne – aj pri ťažkých témach.\n\nSkús to: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nS pozdravom",
+    "emailBody": "Ahoj!\n\nChcel som ti ukázať Váš sprievodca – bezplatného biblického sprievodcu, ktorý naozaj pozná Bibliu. Nie je potrebné sa prihlasovať, je úplne anonymný.\n\nKladie dobré doplňujúce otázky, vysvetľuje biblické pasáže v kontexte a sprevádza ťa úprimne – aj pri ťažkých témach.\n\nSkús to: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nS pozdravom",
     "copy": "Kopírovať odkaz",
     "copied": "Odkaz skopírovaný! 📋",
     "qr": "Alebo jednoducho ukážte tento QR kód:"
   },
   "cta": {
     "title": "Nemusíte to prekonávať sami",
-    "subtitle": "Jednoducho napíšte svojmu BibleBotovi, čo vás trápi. Žiadne prihlásenie, žiadne náklady, žiadne súdenie – len úprimné sprevádzanie a múdrosť Biblie.",
+    "subtitle": "Jednoducho napíšte svojmu Váš sprievodcaovi, čo vás trápi. Žiadne prihlásenie, žiadne náklady, žiadne súdenie – len úprimné sprevádzanie a múdrosť Biblie.",
     "button": "Začať rozhovor teraz"
   },
   "footer": {
@@ -269,7 +269,7 @@
     "forChurches": "Pre cirkvi"
   },
   "chat": {
-    "welcome": "Teší ma, že ste tu 🤗\n\nSom váš BibleBot – váš osobný sprievodca s Bibliou, dobrými otázkami a konkrétnymi impulzmi. Žiadny tlak, žiadne hodnotenie.\n\nMôžete sa ma opýtať na čokoľvek – alebo mi jednoducho povedať, čo vás práve trápi. 💛",
+    "welcome": "Teší ma, že ste tu 🤗\n\nSom váš Váš sprievodca – váš osobný sprievodca s Bibliou, dobrými otázkami a konkrétnymi impulzmi. Žiadny tlak, žiadne hodnotenie.\n\nMôžete sa ma opýtať na čokoľvek – alebo mi jednoducho povedať, čo vás práve trápi. 💛",
     "journeyOffer": "💡 **Tip:** Ponúkam aj **21-dňové sprevádzanie** – 3 týždne s dennými impulzmi, reflexiami a konkrétnymi krokmi. Úplne vo vašom tempe.\n\nChcete to vyskúšať?",
     "suggestion1": "Práve teraz potrebujem povzbudivé slovo",
     "suggestion2": "Čo hovorí Biblia, keď sa človek cíti neistý?",
@@ -314,7 +314,7 @@
     "suggestionsLoading": "Načítavanie návrhov…"
   },
   "install": {
-    "title": "Nainštalovať BibleBot",
+    "title": "Nainštalovať Váš sprievodca",
     "androidDesc": "Rýchly prístup priamo z domovskej obrazovky",
     "iosDesc": "Ťuknite na „Zdieľať“ → „Na plochu“",
     "button": "Nainštalovať",
@@ -328,8 +328,8 @@
     "copiedDesc": "Text bol skopírovaný do schránky. Zdieľajte ho teraz na WhatsApp, Instagram alebo kdekoľvek chcete!",
     "copyLink": "Kopírovať text",
     "error": "Kopírovanie zlyhalo",
-    "impulseTitle": "BibleBot – Impulz dňa",
-    "chatTitle": "BibleBot – Myšlienka dňa",
+    "impulseTitle": "Váš sprievodca – Impulz dňa",
+    "chatTitle": "Váš sprievodca – Myšlienka dňa",
     "createImage": "Vytvoriť obrázok ✨",
     "generating": "Generuje sa…",
     "imageReady": "Váš obrázok je pripravený na zdieľanie!",
@@ -354,7 +354,7 @@
   },
   "tiles": {
     "sectionTitle": "Čo vás trápi?",
-    "sectionSubtitle": "Vyberte si tému — BibleBot vás bude sprevádzať",
+    "sectionSubtitle": "Vyberte si tému — Váš sprievodca vás bude sprevádzať",
     "baptism": {
       "title": "Nájsť krstný verš",
       "desc": "Perfektný verš pre vaše dieťa",
@@ -648,7 +648,7 @@
   },
   "church": {
     "badge": "Pre organizácie",
-    "heroTitle": "BibleBot pre vašu organizáciu",
+    "heroTitle": "Váš sprievodca pre vašu organizáciu",
     "heroSubtitle": "Sprevádzajte svojich členov spoločenstva biblickou múdrosťou – digitálne, osobne a nepretržite.",
     "useCasesTitle": "Možnosti použitia",
     "useCase": {
@@ -670,7 +670,7 @@
       }
     },
     "pricingTitle": "Patronátne balíčky",
-    "pricingSubtitle": "Podporte BibleBot a vaše spoločenstvo vhodným patronátnym balíčkom.",
+    "pricingSubtitle": "Podporte Váš sprievodca a vaše spoločenstvo vhodným patronátnym balíčkom.",
     "popular": "Obľúbené",
     "free": "Zadarmo",
     "perYear": "osôb / rok",
@@ -712,7 +712,7 @@
     "viewDirectory": "Zobraziť adresár spoločenstiev",
     "directoryBadge": "Adresár spoločenstiev",
     "directoryTitle": "Partnerské spoločenstvá",
-    "directorySubtitle": "Nájdite spoločenstvo vo vašej blízkosti, ktoré odporúča BibleBot.",
+    "directorySubtitle": "Nájdite spoločenstvo vo vašej blízkosti, ktoré odporúča Váš sprievodca.",
     "searchPlaceholder": "Hľadať miesto, názov alebo denomináciu...",
     "noResults": "Zatiaľ žiadne spoločenstvá v adresári.",
     "becomePartner": "Stať sa partnerom →",
@@ -767,7 +767,7 @@
       }
     },
     "institutionsTitle": "Aj pre inštitúcie",
-    "institutionsSubtitle": "BibleBot nesprevádza len spoločenstvá – aj domovy sociálnych služieb, domovy pre seniorov, nemocnice a väzenská pastorácia profitujú z digitálnej pastoračnej starostlivosti.",
+    "institutionsSubtitle": "Váš sprievodca nesprevádza len spoločenstvá – aj domovy sociálnych služieb, domovy pre seniorov, nemocnice a väzenská pastorácia profitujú z digitálnej pastoračnej starostlivosti.",
     "institution": {
       "careHome": {
         "title": "Domovy sociálnych služieb",
@@ -810,7 +810,7 @@
         "desc": "Doplnkové duchovné impulzy pre klientov psychosociálneho poradenstva."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible.",
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As Váš sprievodca is a private project, donations are not tax-deductible.",
     "denominationsTitle": "Pre všetky vierovyznania a celebrantov",
     "denominationsSubtitle": "BibleBot.Life je ekumenický – pre reformované, katolícke, luteránske a voľné evanjelické komunity, ako aj nezávislých celebrantov.",
     "denomination": {
@@ -838,15 +838,15 @@
   },
   "institutions": {
     "badge": "Pre organizácie",
-    "heroTitle": "BibleBot pre vašu inštitúciu",
+    "heroTitle": "Váš sprievodca pre vašu inštitúciu",
     "heroSubtitle": "Digitálna pastoračná starostlivosť pre domovy sociálnych služieb, domovy pre seniorov, nemocnice a väzenskú správu – osobne, dôverne a nepretržite.",
     "seniorHint": {
       "title": "Režim pre seniorov k dispozícii",
       "desc": "Väčšie písmo a zjednodušené ovládanie – ideálne pre starších obyvateľov.",
       "cta": "Vyskúšať režim pre seniorov"
     },
-    "typesTitle": "Pre koho je BibleBot?",
-    "useCasesTitle": "Ako sa BibleBot používa",
+    "typesTitle": "Pre koho je Váš sprievodca?",
+    "useCasesTitle": "Ako sa Váš sprievodca používa",
     "useCasesSubtitle": "Konkrétne aplikácie pre každodenný život vo vašej inštitúcii.",
     "pricingTitle": "Patronátne balíčky",
     "pricingSubtitle": "Rovnaké balíčky ako pre spoločenstvá – prispôsobené inštitucionálnym potrebám.",
@@ -880,7 +880,7 @@
       },
       "companionship": {
         "title": "Partner na rozhovor",
-        "desc": "BibleBot trpezlivo a bez časového tlaku odpovedá na otázky viery – ideálne pre osamelé chvíle."
+        "desc": "Váš sprievodca trpezlivo a bez časového tlaku odpovedá na otázky viery – ideálne pre osamelé chvíle."
       },
       "accessibility": {
         "title": "Jednoduchý prístup",
@@ -952,7 +952,7 @@
     "ht": "Kreyòl"
   },
   "eulogy": {
-    "pageTitle": "Rozlúčka – Vytvoriť životopis | BibleBot",
+    "pageTitle": "Rozlúčka – Vytvoriť životopis | Váš sprievodca",
     "pageDesc": "Zachovajte spomienky na milovanú osobu a vytvorte krásny životopisný text pre rozlúčku.",
     "title": "Rozlúčka – Životopis",
     "subtitle": "Zachovajte spomienky, vytvorte text, stiahnite ako PDF.",
@@ -1002,7 +1002,7 @@
     "confirmationDesc": "Nájdite birmovné príslovie a pripravte osobné texty."
   },
   "chatHero": {
-    "ariaLabel": "Položte otázku BibleBotovi",
+    "ariaLabel": "Položte otázku Váš sprievodcaovi",
     "focusPlaceholder": "Napíšte svoju otázku…",
     "placeholder1": "Za čo som naozaj vďačný?",
     "placeholder2": "Ako nájdem vnútorný pokoj?",
@@ -1016,12 +1016,12 @@
     "suggestion3": "Za čo som vďačný?"
   },
   "meta": {
-    "forChurchesDesc": "BibleBot ako partner pre vašu cirkev: mládež, konfirmácia, duchovné poradenstvo a biblické krúžky. Od zadarmo po prémiové.",
-    "forChurchesTitle": "BibleBot pre cirkvi – Digitálne duchovné poradenstvo a sprevádzanie Bibliou",
-    "homeDesc": "BibleBot vás sprevádza s 5 biblickými prekladmi, koučingovou metodikou a duchovným poradenstvom. Anonymne, zadarmo, v 36 jazykoch.",
-    "homeTitle": "BibleBot – Váš osobný sprievodca Bibliou | Zadarmo & Anonymne",
-    "loginDesc": "Prihláste sa do BibleBota, aby ste si pripravili svoje osobné obrady.",
-    "loginTitle": "Prihlásenie – BibleBot"
+    "forChurchesDesc": "Váš sprievodca ako partner pre vašu cirkev: mládež, konfirmácia, duchovné poradenstvo a biblické krúžky. Od zadarmo po prémiové.",
+    "forChurchesTitle": "Váš sprievodca pre cirkvi – Digitálne duchovné poradenstvo a sprevádzanie Bibliou",
+    "homeDesc": "Váš sprievodca vás sprevádza s 5 biblickými prekladmi, koučingovou metodikou a duchovným poradenstvom. Anonymne, zadarmo, v 36 jazykoch.",
+    "homeTitle": "Váš sprievodca – Váš osobný sprievodca Bibliou | Zadarmo & Anonymne",
+    "loginDesc": "Prihláste sa do Váš sprievodcaa, aby ste si pripravili svoje osobné obrady.",
+    "loginTitle": "Prihlásenie – Váš sprievodca"
   },
   "splash": {
     "patronage": "Odporúčané"

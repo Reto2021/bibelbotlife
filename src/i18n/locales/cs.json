@@ -16,7 +16,7 @@
     },
     "title1": "Bible.",
     "title2": " Nově promyšlená.",
-    "subtitle": "BibleBot zná Bibli – a klade správné otázky. Ne člověk, ale upřímný společník. Pro hluboké rozhovory, důležité otázky a skutečné impulzy.",
+    "subtitle": "Tvůj společník zná Bibli – a klade správné otázky. Ne člověk, ale upřímný společník. Pro hluboké rozhovory, důležité otázky a skutečné impulzy.",
     "ctaTelegram": "Začít přes Telegram",
     "ctaMore": "Zjistit více",
     "quote": "«Pojďte ke mně všichni, kdo se namáháte a jste obtíženi břemeny, a já vám dám odpočinout.»",
@@ -33,8 +33,8 @@
     "stopAudio": "Zastavit"
   },
   "features": {
-    "sectionTitle": "Jak tě BibleBot doprovází",
-    "sectionSubtitle": "Objevte různé způsoby, jak vás BibleBot může provázet",
+    "sectionTitle": "Jak tě Tvůj společník doprovází",
+    "sectionSubtitle": "Objevte různé způsoby, jak vás Tvůj společník může provázet",
     "bible": {
       "title": "Biblické pasáže a výklad",
       "desc": "Zeptej se «Co říká Bible o...?» a získej relevantní verše s kontextem a srozumitelným vysvětlením."
@@ -49,7 +49,7 @@
     },
     "faith": {
       "title": "Cesta víry a setkání s Kristem",
-      "desc": "Ať hledáš, pochybuješ nebo prohlubujete – BibleBot tě doprovází na tvé osobní cestě."
+      "desc": "Ať hledáš, pochybuješ nebo prohlubujete – Tvůj společník tě doprovází na tvé osobní cestě."
     },
     "daily": {
       "title": "Denní impulzy a liturgický rok",
@@ -63,9 +63,9 @@
   "coaching": {
     "badge": "Metodologie",
     "title": "Nejen chatbot – skutečný doprovod",
-    "subtitle": "BibleBot spojuje biblickou moudrost s osvědčenými metodami koučinku a Pozitivní psychologie.",
+    "subtitle": "Tvůj společník spojuje biblickou moudrost s osvědčenými metodami koučinku a Pozitivní psychologie.",
     "journeyTitle": "Osobní doprovod",
-    "journeyDesc": "BibleBot tě doprovází tak dlouho, jak chceš – ve volném rozhovoru nebo s volitelnou 21denní strukturou.",
+    "journeyDesc": "Tvůj společník tě doprovází tak dlouho, jak chceš – ve volném rozhovoru nebo s volitelnou 21denní strukturou.",
     "week1": "Týden 1: Příchod",
     "week1Desc": "Budování důvěry, naslouchání, pochopení tvé situace. Kde jsi? Co tě trápí?",
     "week2": "Týden 2: Prohlubování",
@@ -73,12 +73,12 @@
     "week3": "Týden 3: Jednání",
     "week3Desc": "Konkrétní kroky, formulování cílů, iniciování změny. Jaký je tvůj další krok?",
     "openQuestionsTitle": "Otevřené otázky místo rychlých odpovědí",
-    "openQuestionsDesc": "BibleBot nedává laciné rady. Místo toho klade otázky, na kterých opravdu záleží:",
+    "openQuestionsDesc": "Tvůj společník nedává laciné rady. Místo toho klade otázky, na kterých opravdu záleží:",
     "openQ1": "«Co se vlastně skrývá za tímto přáním?»",
     "openQ2": "«Jak bys poznal, že se něco změnilo?»",
     "openQ3": "«Jaký by byl první malý krok?»",
     "honestTitle": "Upřímný místo toxicky pozitivní",
-    "honestDesc": "Žádné «Bude to v pohodě!» a žádné přikrašlování. BibleBot je empatický A upřímný:",
+    "honestDesc": "Žádné «Bude to v pohodě!» a žádné přikrašlování. Tvůj společník je empatický A upřímný:",
     "honest1": "Řeší i nepohodlné biblické pasáže",
     "honest2": "Vyzývá k sebereflexi",
     "honest3": "Rozlišuje útěchu od vytěsňování",
@@ -103,7 +103,7 @@
       "author": "Worthington",
       "desc": "Model REACH pro procesy odpuštění"
     },
-    "renameTip": "💡 Můžeš svému BibleBotovi dát osobní jméno – aby se stal opravdu <strong>tvým</strong> společníkem."
+    "renameTip": "💡 Můžeš svému Tvůj společníkovi dát osobní jméno – aby se stal opravdu <strong>tvým</strong> společníkem."
   },
   "discover": {
     "badge": "Pro zvědavé",
@@ -115,7 +115,7 @@
     },
     "search": {
       "title": "Hledáš?",
-      "text": "Možná ani nevíš co. To je naprosto v pořádku. BibleBot ti pomůže klást správné otázky – místo rychlých odpovědí."
+      "text": "Možná ani nevíš co. To je naprosto v pořádku. Tvůj společník ti pomůže klást správné otázky – místo rychlých odpovědí."
     },
     "deepen": {
       "title": "Chceš jít hlouběji?",
@@ -170,9 +170,9 @@
   },
   "faq": {
     "badge": "FAQ",
-    "title": "Co bys měl vědět o BibleBot",
+    "title": "Co bys měl vědět o Tvůj společník",
     "subtitle": "Transparentnost je důležitá – zejména pro teology, duchovní a kritické myslitele.",
-    "q1": "Čím se BibleBot liší od ChatGPT a podobných?",
+    "q1": "Čím se Tvůj společník liší od ChatGPT a podobných?",
     "q1Generic": "Obecné chatboty:",
     "q1GenericItems": [
       "Povrchní biblické citáty bez kontextu",
@@ -192,11 +192,11 @@
       "Podporuje kritické myšlení jako zralost víry"
     ],
     "q2": "Jaké překlady Bible jsou zahrnuty?",
-    "q2Intro": "BibleBot pracuje ekumenicky s hlavními německojazyčnými biblickými vydáními:",
+    "q2Intro": "Tvůj společník pracuje ekumenicky s hlavními německojazyčnými biblickými vydáními:",
     "q2Outro": "Všechny biblické pasáže obsahují citaci zdroje a historický kontext.",
     "q3": "Jaké vědecké základy za tím stojí?",
     "q3Intro": "Doprovod je založen na recenzovaném výzkumu v Pozitivní psychologii:",
-    "q4": "Jak BibleBot zajišťuje pastorační bezpečnost?",
+    "q4": "Jak Tvůj společník zajišťuje pastorační bezpečnost?",
     "q4Items": [
       "Sebevražedné myšlenky nebo krize → okamžité přesměrování na tísňové linky",
       "Žádné psychologické ani lékařské diagnózy",
@@ -206,16 +206,16 @@
       "Žádná toxická pozitivita – autentický, upřímný doprovod",
       "Otevřeně pojmenovává napětí a obtížné texty"
     ],
-    "q5": "Je BibleBot vázán na konkrétní vyznání?",
-    "q5Answer": "Ne. BibleBot je ekumenicky orientován a stejnou měrou respektuje reformované, katolické, svobodné církevní a další křesťanské tradice.",
-    "q6": "Nahrazuje BibleBot pastorační péči nebo terapii?",
-    "q6Answer": "Ne. BibleBot je digitální nástroj pro osobní čtení Bible a reflexi. Nenahrazuje profesionální pastorační péči, teologické poradenství ani psychologickou terapii.",
-    "q7": "Není BibleBot jen ‚bot dobrého pocitu'?",
-    "q7Answer": "Ne. BibleBot utěšuje, kde je útěcha potřeba – ale také vyzývá. Duchovní růst vyžaduje tření. BibleBot klade nepohodlné otázky a nevyhýbá se tématům jako spravedlnost, pokání a odpovědnost.",
-    "q8": "Kdo stojí za BibleBot a jak je financován?",
+    "q5": "Je Tvůj společník vázán na konkrétní vyznání?",
+    "q5Answer": "Ne. Tvůj společník je ekumenicky orientován a stejnou měrou respektuje reformované, katolické, svobodné církevní a další křesťanské tradice.",
+    "q6": "Nahrazuje Tvůj společník pastorační péči nebo terapii?",
+    "q6Answer": "Ne. Tvůj společník je digitální nástroj pro osobní čtení Bible a reflexi. Nenahrazuje profesionální pastorační péči, teologické poradenství ani psychologickou terapii.",
+    "q7": "Není Tvůj společník jen ‚bot dobrého pocitu'?",
+    "q7Answer": "Ne. Tvůj společník utěšuje, kde je útěcha potřeba – ale také vyzývá. Duchovní růst vyžaduje tření. Tvůj společník klade nepohodlné otázky a nevyhýbá se tématům jako spravedlnost, pokání a odpovědnost.",
+    "q8": "Kdo stojí za Tvůj společník a jak je financován?",
     "q8Answer": "BibleBot.Life je soukromý, nekomerční projekt. Je provozován dobrovolnicky a financován výhradně z dobrovolných darů. Bez reklam, bez prodeje dat, bez placených funkcí.",
-    "q9": "Jak BibleBot zachází s mými daty?",
-    "q9Answer": "BibleBot neukládá osobní data ani historii chatů. Každý rozhovor je anonymní. Bez přihlášení, bez sledování, bez sdílení dat s třetími stranami.",
+    "q9": "Jak Tvůj společník zachází s mými daty?",
+    "q9Answer": "Tvůj společník neukládá osobní data ani historii chatů. Každý rozhovor je anonymní. Bez přihlášení, bez sledování, bez sdílení dat s třetími stranami.",
     "tradition": {
       "reformed": "Reformovaná",
       "evangelical": "Evangelická",
@@ -225,20 +225,20 @@
     }
   },
   "donate": {
-    "badge": "Podpoř BibleBot",
-    "title": "Pomoz udržet BibleBot zdarma",
-    "subtitle": "BibleBot je projekt srdce – bez reklam, bez předplatného, bez skrytých nákladů. Aby to tak zůstalo, spoléhám na dobrovolné dary.",
+    "badge": "Podpoř Tvůj společník",
+    "title": "Pomoz udržet Tvůj společník zdarma",
+    "subtitle": "Tvůj společník je projekt srdce – bez reklam, bez předplatného, bez skrytých nákladů. Aby to tak zůstalo, spoléhám na dobrovolné dary.",
     "bankTitle": "Daruj bankovním převodem",
     "bankSubtitle": "Každá částka se počítá – srdečně děkuji! 🙏",
     "recipient": "Příjemce",
     "bank": "Banka",
     "purpose": "Účel platby",
-    "purposeValue": "Dar BibleBot",
+    "purposeValue": "Dar Tvůj společník",
     "note": "BibleBot.Life je provozován jako soukromý projekt. Dary proto nejsou daňově odečitatelné."
   },
   "cta": {
     "title": "Nemusíš tím procházet sám",
-    "subtitle": "Prostě napiš BibleBotovi, co tě trápí. Bez přihlášení, bez nákladů, bez posuzování – jen upřímný doprovod a moudrost Bible.",
+    "subtitle": "Prostě napiš Tvůj společníkovi, co tě trápí. Bez přihlášení, bez nákladů, bez posuzování – jen upřímný doprovod a moudrost Bible.",
     "button": "Začít rozhovor"
   },
   "footer": {
@@ -254,7 +254,7 @@
     "forChurches": "Pro církve"
   },
   "chat": {
-    "welcome": "Vítej! 🤗\n\nJsem tvůj BibleBot – osobní společník s Biblí, dobrými otázkami a konkrétními impulzy. Bez nátlaku, bez posuzování.\n\nMůžeš se mě zeptat na cokoli – nebo mi prostě říct, co tě právě trápí. 💛",
+    "welcome": "Vítej! 🤗\n\nJsem tvůj Tvůj společník – osobní společník s Biblí, dobrými otázkami a konkrétními impulzy. Bez nátlaku, bez posuzování.\n\nMůžeš se mě zeptat na cokoli – nebo mi prostě říct, co tě právě trápí. 💛",
     "journeyOffer": "💡 **Tip:** Nabízím také **21denní cestu** – 3 týdny denních impulzů, reflexí a konkrétních kroků. Tvým tempem.\n\nChceš to vyzkoušet?",
     "suggestion1": "Potřebuji teď povzbudivé slovo",
     "suggestion2": "Co říká Bible, když se cítíš nejistě?",
@@ -299,7 +299,7 @@
     "suggestionsLoading": "Načítání návrhů…"
   },
   "install": {
-    "title": "Nainstalovat BibleBot",
+    "title": "Nainstalovat Tvůj společník",
     "androidDesc": "Rychlý přístup z domovské obrazovky",
     "iosDesc": "Klepni na «Sdílet» → «Přidat na plochu»",
     "button": "Nainstalovat",
@@ -357,7 +357,7 @@
   },
   "tiles": {
     "sectionTitle": "Co tě trápí?",
-    "sectionSubtitle": "Vyber si téma — BibleBot tě doprovází",
+    "sectionSubtitle": "Vyber si téma — Tvůj společník tě doprovází",
     "baptism": {
       "title": "Verš ke křtu",
       "desc": "Dokonalý verš pro tvé dítě",
@@ -651,7 +651,7 @@
   },
   "church": {
     "badge": "Pro organizace",
-    "heroTitle": "BibleBot pro vaši organizaci",
+    "heroTitle": "Tvůj společník pro vaši organizaci",
     "heroSubtitle": "Doprovázejte svůj sbor biblickou moudrostí – digitálně, osobně a nepřetržitě.",
     "useCasesTitle": "Případy použití",
     "useCase": {
@@ -673,7 +673,7 @@
       }
     },
     "pricingTitle": "Patronátní balíčky",
-    "pricingSubtitle": "Podpořte BibleBot a svůj sbor správným patronátním balíčkem.",
+    "pricingSubtitle": "Podpořte Tvůj společník a svůj sbor správným patronátním balíčkem.",
     "popular": "Oblíbené",
     "free": "Zdarma",
     "perYear": "osob / rok",
@@ -715,7 +715,7 @@
     "viewDirectory": "Zobrazit adresář sborů",
     "directoryBadge": "Adresář sborů",
     "directoryTitle": "Partnerské sbory",
-    "directorySubtitle": "Najděte sbor ve vašem okolí, který doporučuje BibleBot.",
+    "directorySubtitle": "Najděte sbor ve vašem okolí, který doporučuje Tvůj společník.",
     "searchPlaceholder": "Hledat podle místa, názvu nebo denominace...",
     "noResults": "V adresáři zatím nejsou žádné sbory.",
     "becomePartner": "Staňte se partnerem →",
@@ -770,7 +770,7 @@
       }
     },
     "institutionsTitle": "Also for Institutions",
-    "institutionsSubtitle": "BibleBot supports not only churches – care homes, retirement homes, and hospitals also benefit from digital pastoral care.",
+    "institutionsSubtitle": "Tvůj společník supports not only churches – care homes, retirement homes, and hospitals also benefit from digital pastoral care.",
     "institution": {
       "careHome": {
         "title": "Care Homes",
@@ -813,7 +813,7 @@
         "desc": "Doplňkové duchovní impulzy pro klienty v psychosociálním poradenství."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible.",
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As Tvůj společník is a private project, donations are not tax-deductible.",
     "denominationsTitle": "Pro všechna vyznání a celebranty",
     "denominationsSubtitle": "BibleBot.Life je ekumenický – pro reformované, katolické, luteránské a volné evangelické komunity, jakož i nezávislé celebranty.",
     "denomination": {
@@ -841,10 +841,10 @@
   },
   "institutions": {
     "badge": "Pro organizace",
-    "heroTitle": "BibleBot for Your Institution",
+    "heroTitle": "Tvůj společník for Your Institution",
     "heroSubtitle": "Digital pastoral care for care homes, retirement homes, hospitals, and correctional facilities – personal, confidential, and around the clock.",
-    "typesTitle": "Who is BibleBot for?",
-    "useCasesTitle": "How BibleBot is Used",
+    "typesTitle": "Who is Tvůj společník for?",
+    "useCasesTitle": "How Tvůj společník is Used",
     "useCasesSubtitle": "Practical applications for daily life in your institution.",
     "pricingTitle": "Patronage Packages",
     "pricingSubtitle": "The same packages as for churches – adapted to institutional needs.",
@@ -878,7 +878,7 @@
       },
       "companionship": {
         "title": "Conversation Partner",
-        "desc": "BibleBot answers faith questions patiently and without time pressure – ideal for lonely hours."
+        "desc": "Tvůj společník answers faith questions patiently and without time pressure – ideal for lonely hours."
       },
       "accessibility": {
         "title": "Easy Access",
@@ -918,15 +918,15 @@
   },
   "refer": {
     "badge": "Sdílet Slovo",
-    "title": "Doporuč BibleBot",
-    "subtitle": "Znáte někoho, kdo potřebuje povzbuzení? Sdílejte BibleBot.",
+    "title": "Doporuč Tvůj společník",
+    "subtitle": "Znáte někoho, kdo potřebuje povzbuzení? Sdílejte Tvůj společník.",
     "whatsapp": "Sdílet přes WhatsApp",
-    "whatsappMsg": "Ahoj, chtěl jsem ti ukázat BibleBot – bezplatného biblického průvodce. Vyzkoušej: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Ahoj, chtěl jsem ti ukázat Tvůj společník – bezplatného biblického průvodce. Vyzkoušej: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Sdílet přes Telegram",
-    "telegramMsg": "Ahoj, znáš BibleBot? Bezplatný osobní biblický průvodce. Podívej se: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Ahoj, znáš Tvůj společník? Bezplatný osobní biblický průvodce. Podívej se: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Sdílet e-mailem",
     "emailSubject": "Tohle by tě mohlo zajímat: BibleBot.Life",
-    "emailBody": "Ahoj!\n\nChtěl jsem ti ukázat BibleBot.\n\nVyzkoušej: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nS pozdravem",
+    "emailBody": "Ahoj!\n\nChtěl jsem ti ukázat Tvůj společník.\n\nVyzkoušej: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nS pozdravem",
     "copy": "Kopírovat odkaz",
     "copied": "Odkaz zkopírován! 📋",
     "qr": "Nebo ukaž tento QR kód:"
@@ -939,8 +939,8 @@
     "copiedDesc": "Text zkopírován. Sdílejte na WhatsApp, Instagramu nebo kdekoli!",
     "copyLink": "Kopírovat text",
     "error": "Kopírování selhalo",
-    "impulseTitle": "BibleBot – Impuls dne",
-    "chatTitle": "BibleBot – Myšlenka dne",
+    "impulseTitle": "Tvůj společník – Impuls dne",
+    "chatTitle": "Tvůj společník – Myšlenka dne",
     "createImage": "Vytvořit obrázek ✨",
     "generating": "Vytváření…",
     "imageReady": "Váš obrázek je připraven!",
@@ -952,7 +952,7 @@
     "imageSavedDesc": "Uložte obrázek a sdílejte ho!"
   },
   "eulogy": {
-    "pageTitle": "Rozloučení – vytvořit životopis | BibleBot",
+    "pageTitle": "Rozloučení – vytvořit životopis | Tvůj společník",
     "pageDesc": "Zaznamenejte vzpomínky na milovanou osobu a vytvořte krásný text životopisu pro rozloučení.",
     "title": "Rozloučení – životopis",
     "subtitle": "Zaznamenejte vzpomínky, vytvořte text, stáhněte jako PDF.",
@@ -1002,7 +1002,7 @@
     "confirmationDesc": "Najděte konfirmační verš a připravte osobní texty."
   },
   "chatHero": {
-    "ariaLabel": "Položte otázku BibleBotu",
+    "ariaLabel": "Položte otázku Tvůj společníku",
     "focusPlaceholder": "Napište svou otázku…",
     "placeholder1": "Co mě opravdu naplňuje vděčností?",
     "placeholder2": "Jak najdu vnitřní klid?",
@@ -1016,12 +1016,12 @@
     "suggestion3": "Za co jsem vděčný?"
   },
   "meta": {
-    "forChurchesDesc": "BibleBot jako partner pro vaši komunitu: práce s mládeží, konfirmace, poradenství a biblické kroužky. Zdarma až Premium.",
-    "forChurchesTitle": "BibleBot pro církve – Digitální poradenství a biblická podpora",
-    "homeDesc": "BibleBot vás doprovází s 5 biblickými překlady, koučovací metodikou a poradenstvím. Anonymně, zdarma, ve 36 jazycích.",
-    "homeTitle": "BibleBot – Váš osobní biblický průvodce | Zdarma a anonymně",
-    "loginDesc": "Přihlaste se do BibleBotu a připravte si své osobní obřady.",
-    "loginTitle": "Přihlásit se – BibleBot"
+    "forChurchesDesc": "Tvůj společník jako partner pro vaši komunitu: práce s mládeží, konfirmace, poradenství a biblické kroužky. Zdarma až Premium.",
+    "forChurchesTitle": "Tvůj společník pro církve – Digitální poradenství a biblická podpora",
+    "homeDesc": "Tvůj společník vás doprovází s 5 biblickými překlady, koučovací metodikou a poradenstvím. Anonymně, zdarma, ve 36 jazycích.",
+    "homeTitle": "Tvůj společník – Váš osobní biblický průvodce | Zdarma a anonymně",
+    "loginDesc": "Přihlaste se do Tvůj společníku a připravte si své osobní obřady.",
+    "loginTitle": "Přihlásit se – Tvůj společník"
   },
   "splash": {
     "patronage": "Doporučeno"

@@ -16,7 +16,7 @@
     },
     "title1": "De Bijbel.",
     "title2": " Opnieuw ontdekt.",
-    "subtitle": "BibleBot is een begeleider die de Bijbel kent – en de juiste vragen stelt. Geen persoon, maar een eerlijke metgezel. Voor zinvolle gesprekken, diepe vragen en echte impulsen.",
+    "subtitle": "Je metgezel is een begeleider die de Bijbel kent – en de juiste vragen stelt. Geen persoon, maar een eerlijke metgezel. Voor zinvolle gesprekken, diepe vragen en echte impulsen.",
     "ctaTelegram": "Start via Telegram",
     "ctaMore": "Meer ontdekken",
     "quote": "\"Kom naar mij, jullie die vermoeid zijn en onder lasten gebukt gaan, dan zal ik jullie rust geven.\"",
@@ -33,8 +33,8 @@
     "stopAudio": "Stop"
   },
   "features": {
-    "sectionTitle": "Hoe BibleBot je begeleidt",
-    "sectionSubtitle": "Ontdek de vele manieren waarop BibleBot je kan begeleiden",
+    "sectionTitle": "Hoe Je metgezel je begeleidt",
+    "sectionSubtitle": "Ontdek de vele manieren waarop Je metgezel je kan begeleiden",
     "bible": {
       "title": "Bijbelpassages & uitleg",
       "desc": "Vraag \"Wat zegt de Bijbel over...?\" en ontvang relevante verzen met context en duidelijke uitleg."
@@ -49,11 +49,11 @@
     },
     "faith": {
       "title": "Geloofsreis & Christus vinden",
-      "desc": "Of je zoekt, twijfelt of verdiept – BibleBot begeleidt je op je persoonlijke weg."
+      "desc": "Of je zoekt, twijfelt of verdiept – Je metgezel begeleidt je op je persoonlijke weg."
     },
     "daily": {
       "title": "Dagelijkse impulsen & kerkelijk jaar",
-      "desc": "Begin je dag met impulsen en laat BibleBot je begeleiden door Advent, Vastentijd en feestdagen."
+      "desc": "Begin je dag met impulsen en laat Je metgezel je begeleiden door Advent, Vastentijd en feestdagen."
     },
     "groups": {
       "title": "Groepen & gemeenschappen",
@@ -63,9 +63,9 @@
   "coaching": {
     "badge": "Methodiek",
     "title": "Niet zomaar een chatbot – echte begeleiding",
-    "subtitle": "BibleBot combineert bijbelse wijsheid met bewezen coachingmethoden en Positieve Psychologie.",
+    "subtitle": "Je metgezel combineert bijbelse wijsheid met bewezen coachingmethoden en Positieve Psychologie.",
     "journeyTitle": "Persoonlijke begeleiding",
-    "journeyDesc": "BibleBot begeleidt je zo lang als je wilt – in vrij gesprek of met een optionele 21-dagenstructuur.",
+    "journeyDesc": "Je metgezel begeleidt je zo lang als je wilt – in vrij gesprek of met een optionele 21-dagenstructuur.",
     "week1": "Week 1: Aankomen",
     "week1Desc": "Vertrouwen opbouwen, luisteren, je situatie begrijpen. Waar sta je? Wat houdt je bezig?",
     "week2": "Week 2: Verdiepen",
@@ -73,12 +73,12 @@
     "week3": "Week 3: Handelen",
     "week3Desc": "Concrete stappen zetten, doelen stellen, verandering in gang zetten. Wat is je volgende stap?",
     "openQuestionsTitle": "Open vragen in plaats van snelle antwoorden",
-    "openQuestionsDesc": "BibleBot geeft geen goedkoop advies. In plaats daarvan stelt het de vragen die er echt toe doen:",
+    "openQuestionsDesc": "Je metgezel geeft geen goedkoop advies. In plaats daarvan stelt het de vragen die er echt toe doen:",
     "openQ1": "\"Wat zit er echt achter dit verlangen?\"",
     "openQ2": "\"Hoe zou je merken dat er iets is veranderd?\"",
     "openQ3": "\"Wat zou een eerste kleine stap kunnen zijn?\"",
     "honestTitle": "Eerlijk in plaats van toxische positiviteit",
-    "honestDesc": "Geen \"Het komt wel goed!\" en geen mooipraterij. BibleBot is empathisch EN eerlijk:",
+    "honestDesc": "Geen \"Het komt wel goed!\" en geen mooipraterij. Je metgezel is empathisch EN eerlijk:",
     "honest1": "Behandelt ook ongemakkelijke bijbelpassages",
     "honest2": "Daagt je uit tot zelfreflectie",
     "honest3": "Onderscheidt troost van vermijding",
@@ -103,19 +103,19 @@
       "author": "Worthington",
       "desc": "REACH-model voor vergevingsprocessen"
     },
-    "renameTip": "💡 Je kunt je BibleBot een persoonlijke naam geven – zodat het echt <strong>jouw</strong> metgezel wordt."
+    "renameTip": "💡 Je kunt je Je metgezel een persoonlijke naam geven – zodat het echt <strong>jouw</strong> metgezel wordt."
   },
   "discover": {
     "badge": "Voor nieuwsgierigen",
     "title": "Geloof herontdekken – zonder druk",
-    "subtitle": "Steeds meer mensen stellen de grote vragen opnieuw. BibleBot is er voor iedereen die geloof wil (her)ontdekken – eerlijk, zonder pathos en zonder kerktaal.",
+    "subtitle": "Steeds meer mensen stellen de grote vragen opnieuw. Je metgezel is er voor iedereen die geloof wil (her)ontdekken – eerlijk, zonder pathos en zonder kerktaal.",
     "doubt": {
       "title": "Je twijfelt?",
       "text": "Goed zo. Twijfel is geen gebrek – het is het begin van eerlijk geloof. De Bijbel staat vol met mensen die worstelden."
     },
     "search": {
       "title": "Je zoekt?",
-      "text": "Misschien weet je niet eens waarnaar. Dat is helemaal oké. BibleBot helpt je de juiste vragen te stellen – in plaats van snelle antwoorden te geven."
+      "text": "Misschien weet je niet eens waarnaar. Dat is helemaal oké. Je metgezel helpt je de juiste vragen te stellen – in plaats van snelle antwoorden te geven."
     },
     "deepen": {
       "title": "Je wilt dieper gaan?",
@@ -170,9 +170,9 @@
   },
   "faq": {
     "badge": "FAQ",
-    "title": "Wat je moet weten over BibleBot",
+    "title": "Wat je moet weten over Je metgezel",
     "subtitle": "Transparantie is belangrijk – vooral voor theologen, pastors en kritische denkers.",
-    "q1": "Wat maakt BibleBot anders dan ChatGPT & Co.?",
+    "q1": "Wat maakt Je metgezel anders dan ChatGPT & Co.?",
     "q1Generic": "Generieke chatbots:",
     "q1GenericItems": [
       "Oppervlakkige bijbelcitaten zonder context",
@@ -182,7 +182,7 @@
       "Mengt Bijbel met esoterie",
       "Geen vervolgvragen – alleen bevestiging"
     ],
-    "q1Bot": "BibleBot:",
+    "q1Bot": "Je metgezel:",
     "q1BotItems": [
       "5 erkende vertalingen – inclusief ongemakkelijke passages",
       "Bescherming EN uitdagende begeleiding",
@@ -192,11 +192,11 @@
       "Bevordert kritisch denken als geloofsvolwassenheid"
     ],
     "q2": "Welke bijbelvertalingen zijn opgenomen?",
-    "q2Intro": "BibleBot werkt oecumenisch met de belangrijkste Duitstalige bijbeledities:",
+    "q2Intro": "Je metgezel werkt oecumenisch met de belangrijkste Duitstalige bijbeledities:",
     "q2Outro": "Alle bijbelpassages bevatten bronvermelding en historische context.",
     "q3": "Welke wetenschappelijke basis zit erachter?",
     "q3Intro": "De begeleiding is gebaseerd op peer-reviewed onderzoek in de Positieve Psychologie:",
-    "q4": "Hoe waarborgt BibleBot pastorale veiligheid?",
+    "q4": "Hoe waarborgt Je metgezel pastorale veiligheid?",
     "q4Items": [
       "Suïcidale gedachten of crisis → directe verwijzing naar hulplijnen",
       "Geen psychologische of medische diagnoses",
@@ -206,16 +206,16 @@
       "Geen toxische positiviteit – oprechte, eerlijke begeleiding",
       "Benoemt openlijk spanningen en moeilijke teksten"
     ],
-    "q5": "Is BibleBot gebonden aan een specifieke denominatie?",
-    "q5Answer": "Nee. BibleBot is oecumenisch georiënteerd en respecteert gereformeerde, katholieke, evangelische en andere christelijke tradities gelijkwaardig. Bij denominatieverschillen worden de verschillende perspectieven transparant gepresenteerd.",
-    "q6": "Vervangt BibleBot pastorale zorg of therapie?",
-    "q6Answer": "Nee. BibleBot is een hulpmiddel voor persoonlijk bijbellezen en reflectie. Het vervangt geen professionele pastorale zorg, theologisch advies of psychologische therapie. Bij ernstige crises verwijst BibleBot altijd naar gekwalificeerde hulp.",
-    "q7": "Is BibleBot niet gewoon een 'feel-good bot'?",
-    "q7Answer": "Nee. BibleBot troost waar troost nodig is – maar daagt ook uit. Spirituele groei vereist wrijving. BibleBot stelt ongemakkelijke vervolgvragen, benoemt moeilijke bijbelteksten en schuwt onderwerpen als gerechtigheid, berouw en verantwoordelijkheid niet.",
-    "q8": "Wie zit achter BibleBot en hoe wordt het gefinancierd?",
-    "q8Answer": "BibleBot is een privé, niet-commercieel project. Het wordt op vrijwillige basis gerund en uitsluitend gefinancierd door vrijwillige donaties. Er is geen reclame, geen dataverkoop en geen betaalde functies.",
-    "q9": "Hoe gaat BibleBot om met mijn gegevens?",
-    "q9Answer": "BibleBot slaat geen persoonlijke gegevens en geen chatgeschiedenissen op. Elk gesprek is anoniem. Er is geen login, geen tracking en geen gegevensdeling met derden.",
+    "q5": "Is Je metgezel gebonden aan een specifieke denominatie?",
+    "q5Answer": "Nee. Je metgezel is oecumenisch georiënteerd en respecteert gereformeerde, katholieke, evangelische en andere christelijke tradities gelijkwaardig. Bij denominatieverschillen worden de verschillende perspectieven transparant gepresenteerd.",
+    "q6": "Vervangt Je metgezel pastorale zorg of therapie?",
+    "q6Answer": "Nee. Je metgezel is een hulpmiddel voor persoonlijk bijbellezen en reflectie. Het vervangt geen professionele pastorale zorg, theologisch advies of psychologische therapie. Bij ernstige crises verwijst Je metgezel altijd naar gekwalificeerde hulp.",
+    "q7": "Is Je metgezel niet gewoon een 'feel-good bot'?",
+    "q7Answer": "Nee. Je metgezel troost waar troost nodig is – maar daagt ook uit. Spirituele groei vereist wrijving. Je metgezel stelt ongemakkelijke vervolgvragen, benoemt moeilijke bijbelteksten en schuwt onderwerpen als gerechtigheid, berouw en verantwoordelijkheid niet.",
+    "q8": "Wie zit achter Je metgezel en hoe wordt het gefinancierd?",
+    "q8Answer": "Je metgezel is een privé, niet-commercieel project. Het wordt op vrijwillige basis gerund en uitsluitend gefinancierd door vrijwillige donaties. Er is geen reclame, geen dataverkoop en geen betaalde functies.",
+    "q9": "Hoe gaat Je metgezel om met mijn gegevens?",
+    "q9Answer": "Je metgezel slaat geen persoonlijke gegevens en geen chatgeschiedenissen op. Elk gesprek is anoniem. Er is geen login, geen tracking en geen gegevensdeling met derden.",
     "tradition": {
       "reformed": "Gereformeerd",
       "evangelical": "Evangelisch",
@@ -225,40 +225,40 @@
     }
   },
   "donate": {
-    "badge": "Steun BibleBot",
-    "title": "Help BibleBot gratis te houden",
-    "subtitle": "BibleBot is een passieproject – geen advertenties, geen abonnementen, geen verborgen kosten. Om het zo te houden, ben ik afhankelijk van vrijwillige donaties.",
+    "badge": "Steun Je metgezel",
+    "title": "Help Je metgezel gratis te houden",
+    "subtitle": "Je metgezel is een passieproject – geen advertenties, geen abonnementen, geen verborgen kosten. Om het zo te houden, ben ik afhankelijk van vrijwillige donaties.",
     "bankTitle": "Doneren via bankoverschrijving",
     "bankSubtitle": "Elk bedrag telt – dank je wel! 🙏",
     "recipient": "Ontvanger",
     "bank": "Bank",
     "purpose": "Referentie",
-    "purposeValue": "Donatie BibleBot",
-    "note": "BibleBot wordt als privéproject uitgevoerd. Donaties zijn daarom niet fiscaal aftrekbaar."
+    "purposeValue": "Donatie Je metgezel",
+    "note": "Je metgezel wordt als privéproject uitgevoerd. Donaties zijn daarom niet fiscaal aftrekbaar."
   },
   "refer": {
     "badge": "Gods Woord delen",
-    "title": "Beveel BibleBot aan",
-    "subtitle": "Ken je iemand die bemoediging nodig heeft? Deel BibleBot.",
+    "title": "Beveel Je metgezel aan",
+    "subtitle": "Ken je iemand die bemoediging nodig heeft? Deel Je metgezel.",
     "whatsapp": "Delen via WhatsApp",
-    "whatsappMsg": "Hey, ik wilde je BibleBot laten zien – een gratis bijbelcompagnon. Probeer het: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Hey, ik wilde je Je metgezel laten zien – een gratis bijbelcompagnon. Probeer het: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Delen via Telegram",
-    "telegramMsg": "Hey, ken je BibleBot al? Een gratis persoonlijke bijbelcompagnon. Kijk hier: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Hey, ken je Je metgezel al? Een gratis persoonlijke bijbelcompagnon. Kijk hier: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Delen via e-mail",
     "emailSubject": "Dit is misschien interessant: BibleBot.Life",
-    "emailBody": "Hallo!\n\nIk wilde je BibleBot laten zien.\n\nProbeer het: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nGroeten",
+    "emailBody": "Hallo!\n\nIk wilde je Je metgezel laten zien.\n\nProbeer het: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nGroeten",
     "copy": "Link kopiëren",
     "copied": "Link gekopieerd! 📋",
     "qr": "Of toon deze QR-code:"
   },
   "cta": {
     "title": "Je hoeft dit niet alleen te doen",
-    "subtitle": "Vertel BibleBot gewoon wat je bezighoudt. Geen login, geen kosten, geen oordeel – alleen eerlijke begeleiding en de wijsheid van de Bijbel.",
+    "subtitle": "Vertel Je metgezel gewoon wat je bezighoudt. Geen login, geen kosten, geen oordeel – alleen eerlijke begeleiding en de wijsheid van de Bijbel.",
     "button": "Start een gesprek"
   },
   "footer": {
     "tagline": "Je persoonlijke metgezel — met de diepte van de Bijbel, zonder voorkennis.",
-    "disclaimer": "BibleBot is een hulpmiddel en vervangt geen professionele pastorale zorg, theologisch advies of psychologische therapie. Bel bij acute crises je lokale hulplijn.",
+    "disclaimer": "Je metgezel is een hulpmiddel en vervangt geen professionele pastorale zorg, theologisch advies of psychologische therapie. Bel bij acute crises je lokale hulplijn.",
     "impressum": "Colofon",
     "notes": "Opmerkingen",
     "private": "Privé, niet-commercieel project",
@@ -269,7 +269,7 @@
     "forChurches": "Voor Kerken"
   },
   "chat": {
-    "welcome": "Welkom! 🤗\n\nIk ben je BibleBot – je persoonlijke metgezel met de Bijbel, goede vragen en echte impulsen. Geen druk, geen oordeel.\n\nJe kunt me alles vragen – of gewoon delen wat je bezighoudt. 💛",
+    "welcome": "Welkom! 🤗\n\nIk ben je Je metgezel – je persoonlijke metgezel met de Bijbel, goede vragen en echte impulsen. Geen druk, geen oordeel.\n\nJe kunt me alles vragen – of gewoon delen wat je bezighoudt. 💛",
     "journeyOffer": "💡 **Tip:** Ik bied ook een **21-dagenreis** aan – 3 weken dagelijkse impulsen, reflecties en concrete stappen. Op je eigen tempo.\n\nWil je het proberen?",
     "suggestion1": "Ik heb nu een bemoedigend woord nodig",
     "suggestion2": "Wat zegt de Bijbel als je je onzeker voelt?",
@@ -314,7 +314,7 @@
     "suggestionsLoading": "Suggesties laden…"
   },
   "install": {
-    "title": "BibleBot installeren",
+    "title": "Je metgezel installeren",
     "androidDesc": "Snelle toegang vanaf je startscherm",
     "iosDesc": "Tik op \"Delen\" → \"Zet op beginscherm\"",
     "button": "Installeren",
@@ -328,8 +328,8 @@
     "copiedDesc": "Tekst gekopieerd. Deel het op WhatsApp, Instagram of waar je wilt!",
     "copyLink": "Tekst kopiëren",
     "error": "Kopiëren mislukt",
-    "impulseTitle": "BibleBot – Impuls van de dag",
-    "chatTitle": "BibleBot – Gedachte van de dag",
+    "impulseTitle": "Je metgezel – Impuls van de dag",
+    "chatTitle": "Je metgezel – Gedachte van de dag",
     "createImage": "Afbeelding maken ✨",
     "generating": "Bezig…",
     "imageReady": "Je afbeelding is klaar!",
@@ -392,7 +392,7 @@
   },
   "tiles": {
     "sectionTitle": "Wat leeft er in je?",
-    "sectionSubtitle": "Kies een thema — BibleBot begeleidt je",
+    "sectionSubtitle": "Kies een thema — Je metgezel begeleidt je",
     "baptism": {
       "title": "Dooptekst vinden",
       "desc": "Het perfecte vers voor je kind",
@@ -686,7 +686,7 @@
   },
   "church": {
     "badge": "Voor organisaties",
-    "heroTitle": "BibleBot voor uw organisatie",
+    "heroTitle": "Je metgezel voor uw organisatie",
     "heroSubtitle": "Begeleid uw team met bijbelse wijsheid – digitaal, persoonlijk en 24/7.",
     "useCasesTitle": "Toepassingen",
     "useCase": {
@@ -708,7 +708,7 @@
       }
     },
     "pricingTitle": "Patronaatspakketten",
-    "pricingSubtitle": "Steun BibleBot en uw organisatie met het juiste patronaatspakket.",
+    "pricingSubtitle": "Steun Je metgezel en uw organisatie met het juiste patronaatspakket.",
     "popular": "Populair",
     "free": "Gratis",
     "perYear": "personen / jaar",
@@ -750,7 +750,7 @@
     "viewDirectory": "Kerkengids bekijken",
     "directoryBadge": "Kerkengids",
     "directoryTitle": "Partnerkerken",
-    "directorySubtitle": "Vind een kerk bij u in de buurt die BibleBot aanbeveelt.",
+    "directorySubtitle": "Vind een kerk bij u in de buurt die Je metgezel aanbeveelt.",
     "searchPlaceholder": "Zoek op plaats, naam of denominatie...",
     "noResults": "Nog geen kerken in de gids.",
     "becomePartner": "Word partner →",
@@ -805,7 +805,7 @@
       }
     },
     "institutionsTitle": "Ook voor instellingen",
-    "institutionsSubtitle": "BibleBot begeleidt ook verzorgingshuizen, bejaardenhuizen en ziekenhuizen met digitale pastorale zorg.",
+    "institutionsSubtitle": "Je metgezel begeleidt ook verzorgingshuizen, bejaardenhuizen en ziekenhuizen met digitale pastorale zorg.",
     "institution": {
       "careHome": {
         "title": "Verzorgingshuizen",
@@ -876,10 +876,10 @@
   },
   "institutions": {
     "badge": "Voor organisaties",
-    "heroTitle": "BibleBot voor uw organisatie",
+    "heroTitle": "Je metgezel voor uw organisatie",
     "heroSubtitle": "Digital pastoral care for care homes, retirement homes, hospitals, and correctional facilities – personal, confidential, and around the clock.",
-    "typesTitle": "Who is BibleBot for?",
-    "useCasesTitle": "How BibleBot is Used",
+    "typesTitle": "Who is Je metgezel for?",
+    "useCasesTitle": "How Je metgezel is Used",
     "useCasesSubtitle": "Practical applications for daily life in your institution.",
     "pricingTitle": "Patronage Packages",
     "pricingSubtitle": "The same packages as for churches – adapted to institutional needs.",
@@ -913,7 +913,7 @@
       },
       "companionship": {
         "title": "Conversation Partner",
-        "desc": "BibleBot answers faith questions patiently and without time pressure – ideal for lonely hours."
+        "desc": "Je metgezel answers faith questions patiently and without time pressure – ideal for lonely hours."
       },
       "accessibility": {
         "title": "Easy Access",
@@ -952,7 +952,7 @@
     }
   },
   "chatHero": {
-    "ariaLabel": "Stel een vraag aan BibleBot",
+    "ariaLabel": "Stel een vraag aan Je metgezel",
     "focusPlaceholder": "Typ uw vraag…",
     "placeholder1": "Waar ben ik echt dankbaar voor?",
     "placeholder2": "Hoe vind ik innerlijke vrede?",
@@ -969,12 +969,12 @@
     "patronage": "Aanbevolen door"
   },
   "meta": {
-    "forChurchesDesc": "BibleBot als partner voor uw gemeente: jeugdwerk, confirmatie, pastorale zorg en Bijbelkringen. Gratis tot Premium.",
-    "forChurchesTitle": "BibleBot voor Kerken – Digitale Pastorale Zorg & Bijbelbegeleiding",
-    "homeDesc": "BibleBot begeleidt u met 5 Bijbelvertalingen, coachingmethodiek en pastorale zorg. Anoniem, gratis, in 36 talen.",
-    "homeTitle": "BibleBot – Uw persoonlijke Bijbelbegeleider | Gratis & Anoniem",
-    "loginDesc": "Meld u aan bij BibleBot om uw persoonlijke ceremonies voor te bereiden.",
-    "loginTitle": "Aanmelden – BibleBot"
+    "forChurchesDesc": "Je metgezel als partner voor uw gemeente: jeugdwerk, confirmatie, pastorale zorg en Bijbelkringen. Gratis tot Premium.",
+    "forChurchesTitle": "Je metgezel voor Kerken – Digitale Pastorale Zorg & Bijbelbegeleiding",
+    "homeDesc": "Je metgezel begeleidt u met 5 Bijbelvertalingen, coachingmethodiek en pastorale zorg. Anoniem, gratis, in 36 talen.",
+    "homeTitle": "Je metgezel – Uw persoonlijke Bijbelbegeleider | Gratis & Anoniem",
+    "loginDesc": "Meld u aan bij Je metgezel om uw persoonlijke ceremonies voor te bereiden.",
+    "loginTitle": "Aanmelden – Je metgezel"
   },
   "meinBereich": {
     "title": "Mijn gebied",
@@ -993,7 +993,7 @@
     "confirmationDesc": "Bevestigingsspreuk vinden en persoonlijke teksten voorbereiden."
   },
   "eulogy": {
-    "pageTitle": "Uitvaart – Levensloop opstellen | BibleBot",
+    "pageTitle": "Uitvaart – Levensloop opstellen | Je metgezel",
     "pageDesc": "Leg herinneringen aan een geliefde vast en stel een mooie levenslooptekst op voor de uitvaart.",
     "title": "Uitvaart – Levensloop",
     "subtitle": "Herinneringen vastleggen, tekst opstellen, als PDF downloaden.",

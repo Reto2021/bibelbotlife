@@ -16,7 +16,7 @@
     },
     "title1": "《圣经》。",
     "title2": " 重新认识。",
-    "subtitle": "你的BibleBot了解圣经，并提出正确的问题。它不是人，但却是诚实的伴侣。带来愉快的对话、深刻的问题和真实的启发。",
+    "subtitle": "你的您的伴侣了解圣经，并提出正确的问题。它不是人，但却是诚实的伴侣。带来愉快的对话、深刻的问题和真实的启发。",
     "ctaTelegram": "在Telegram开始",
     "ctaMore": "了解更多",
     "quote": "“凡劳苦担重担的人，到我这里来，我就使你们得安息。”",
@@ -34,8 +34,8 @@
     "stopAudio": "停止"
   },
   "features": {
-    "sectionTitle": "你的BibleBot如何伴随你",
-    "sectionSubtitle": "探索你的BibleBot伴随你的多种可能性",
+    "sectionTitle": "你的您的伴侣如何伴随你",
+    "sectionSubtitle": "探索你的您的伴侣伴随你的多种可能性",
     "bible": {
       "title": "圣经经文与解释",
       "desc": "问“圣经对...怎么说？”，即可获得相关经文、背景和通俗易懂的解释。"
@@ -50,7 +50,7 @@
     },
     "faith": {
       "title": "信仰之路与寻见基督",
-      "desc": "无论你在寻求、怀疑还是深化信仰——你的BibleBot都会在你的个人道路上伴随你。"
+      "desc": "无论你在寻求、怀疑还是深化信仰——你的您的伴侣都会在你的个人道路上伴随你。"
     },
     "daily": {
       "title": "每日灵感与教会年历",
@@ -64,9 +64,9 @@
   "coaching": {
     "badge": "方法论",
     "title": "不仅仅是一个聊天机器人——而是一个真正的陪伴者",
-    "subtitle": "你的BibleBot将圣经智慧与成熟的辅导方法和积极心理学相结合。",
+    "subtitle": "你的您的伴侣将圣经智慧与成熟的辅导方法和积极心理学相结合。",
     "journeyTitle": "个性化陪伴",
-    "journeyDesc": "你的BibleBot会陪伴你，只要你愿意——通过自由对话或可选的21天结构。",
+    "journeyDesc": "你的您的伴侣会陪伴你，只要你愿意——通过自由对话或可选的21天结构。",
     "week1": "第一周：安顿",
     "week1Desc": "建立信任，倾听，理解你的处境。你身处何处？什么困扰着你？",
     "week2": "第二周：深入",
@@ -74,12 +74,12 @@
     "week3": "第三周：行动",
     "week3Desc": "采取具体步骤，制定目标，启动改变。你的下一步是什么？",
     "openQuestionsTitle": "开放式问题而非快速答案",
-    "openQuestionsDesc": "你的BibleBot不会给你廉价的建议。相反，它会提出真正重要的问题：",
+    "openQuestionsDesc": "你的您的伴侣不会给你廉价的建议。相反，它会提出真正重要的问题：",
     "openQ1": "«这个愿望背后究竟是什么？»",
     "openQ2": "«你会如何察觉到事情已经改变了？»",
     "openQ3": "«第一个小步骤会是什么？»",
     "honestTitle": "诚实而非有毒的积极",
-    "honestDesc": "没有“一切都会好起来的！”也没有粉饰太平。你的BibleBot既富有同情心又诚实：",
+    "honestDesc": "没有“一切都会好起来的！”也没有粉饰太平。你的您的伴侣既富有同情心又诚实：",
     "honest1": "点出不舒服的圣经经文",
     "honest2": "挑战自我反思",
     "honest3": "区分安慰与逃避",
@@ -104,7 +104,7 @@
       "author": "沃辛顿",
       "desc": "宽恕过程的REACH模型"
     },
-    "renameTip": "💡 你可以给你的BibleBot起一个自己的名字——这样它就真正成为<strong>你的</strong>伴侣了。"
+    "renameTip": "💡 你可以给你的您的伴侣起一个自己的名字——这样它就真正成为<strong>你的</strong>伴侣了。"
   },
   "discover": {
     "badge": "献给好奇者",
@@ -116,7 +116,7 @@
     },
     "search": {
       "title": "你在寻找吗？",
-      "text": "也许你甚至不确定自己在寻找什么。这完全没关系。你的BibleBot会帮助你提出正确的问题——而不是提供快速答案。"
+      "text": "也许你甚至不确定自己在寻找什么。这完全没关系。你的您的伴侣会帮助你提出正确的问题——而不是提供快速答案。"
     },
     "deepen": {
       "title": "你想深化吗？",
@@ -171,9 +171,9 @@
   },
   "faq": {
     "badge": "常见问题",
-    "title": "关于你的BibleBot你需要知道什么",
+    "title": "关于你的您的伴侣你需要知道什么",
     "subtitle": "我们重视透明度——尤其是在神学家、牧师和有批判性思维的人面前。",
-    "q1": "你的BibleBot与ChatGPT等有何不同？",
+    "q1": "你的您的伴侣与ChatGPT等有何不同？",
     "q1Generic": "通用聊天机器人：",
     "q1GenericItems": [
       "肤浅的圣经引文，缺乏上下文",
@@ -193,11 +193,11 @@
       "促进批判性思维作为信仰的成熟"
     ],
     "q2": "支持哪些圣经译本？",
-    "q2Intro": "你的BibleBot与主要的德语圣经译本进行普世合作：",
+    "q2Intro": "你的您的伴侣与主要的德语圣经译本进行普世合作：",
     "q2Outro": "所有圣经经文均附有来源和历史背景。",
     "q3": "其背后的科学依据是什么？",
     "q3Intro": "此陪伴基于积极心理学同行评审研究：",
-    "q4": "你的BibleBot如何确保教牧关怀的安全性？",
+    "q4": "你的您的伴侣如何确保教牧关怀的安全性？",
     "q4Items": [
       "对于自杀念头或危机 → 立即转介给 Dargebotene Hand (143) 和 Pro Juventute (147)",
       "不提供心理或医疗诊断",
@@ -207,16 +207,16 @@
       "没有有毒的积极性——真实、诚实的陪伴",
       "公开指出紧张和困难的经文"
     ],
-    "q5": "你的BibleBot是否受宗派约束？",
-    "q5Answer": "否。你的BibleBot秉持普世精神，平等尊重归正宗、天主教、自由教会及其他基督教传统。对于宗派解读上的差异，会透明地呈现不同观点——不偏袒任何一种传统。",
-    "q6": "你的BibleBot能替代牧养关怀或心理治疗吗？",
-    "q6Answer": "否。你的BibleBot是一个个人圣经阅读和反思的数字辅助工具。它不能替代专业的牧养关怀、神学咨询或心理治疗。在严重的危机中，你的BibleBot会始终转介给合格的专业机构。",
-    "q7": "你的BibleBot不只是一个“舒适机器人”吗？",
-    "q7Answer": "绝不是。你的BibleBot会在需要安慰时给予安慰，但它也会提出挑战。属灵成长需要摩擦。你的BibleBot会提出令人不安的反问，指出圣经中困难的经文（约伯记、哀歌、先知批判），并且不回避诸如公义、悔改和责任等主题。先知传统从来都不是舒适的——你的BibleBot也并非如此。",
-    "q8": "你的BibleBot背后是谁，它是如何获得资助的？",
-    "q8Answer": "BibleBot.Life是一个私人、非商业项目。它由义工运营，完全依靠自愿捐款资助。没有广告、没有数据销售، 也没有付费功能。所有捐款直接用于支付运营和基础设施的持续成本。由于BibleBot作为一个私人项目运营，捐款不可抵税。",
-    "q9": "你的BibleBot如何处理我的数据？",
-    "q9Answer": "你的BibleBot不存储任何个人数据和聊天记录。每次对话都是匿名的。没有登录、没有跟踪，也没有将数据分享给第三方。使用完全匿名。",
+    "q5": "你的您的伴侣是否受宗派约束？",
+    "q5Answer": "否。你的您的伴侣秉持普世精神，平等尊重归正宗、天主教、自由教会及其他基督教传统。对于宗派解读上的差异，会透明地呈现不同观点——不偏袒任何一种传统。",
+    "q6": "你的您的伴侣能替代牧养关怀或心理治疗吗？",
+    "q6Answer": "否。你的您的伴侣是一个个人圣经阅读和反思的数字辅助工具。它不能替代专业的牧养关怀、神学咨询或心理治疗。在严重的危机中，你的您的伴侣会始终转介给合格的专业机构。",
+    "q7": "你的您的伴侣不只是一个“舒适机器人”吗？",
+    "q7Answer": "绝不是。你的您的伴侣会在需要安慰时给予安慰，但它也会提出挑战。属灵成长需要摩擦。你的您的伴侣会提出令人不安的反问，指出圣经中困难的经文（约伯记、哀歌、先知批判），并且不回避诸如公义、悔改和责任等主题。先知传统从来都不是舒适的——你的您的伴侣也并非如此。",
+    "q8": "你的您的伴侣背后是谁，它是如何获得资助的？",
+    "q8Answer": "BibleBot.Life是一个私人、非商业项目。它由义工运营，完全依靠自愿捐款资助。没有广告、没有数据销售، 也没有付费功能。所有捐款直接用于支付运营和基础设施的持续成本。由于您的伴侣作为一个私人项目运营，捐款不可抵税。",
+    "q9": "你的您的伴侣如何处理我的数据？",
+    "q9Answer": "你的您的伴侣不存储任何个人数据和聊天记录。每次对话都是匿名的。没有登录、没有跟踪，也没有将数据分享给第三方。使用完全匿名。",
     "tradition": {
       "reformed": "改革宗",
       "evangelical": "福音派",
@@ -226,35 +226,35 @@
     }
   },
   "donate": {
-    "badge": "支持您的BibleBot",
-    "title": "帮助您的BibleBot保持免费",
-    "subtitle": "您的BibleBot是一个充满热情的项目——无广告、无订阅、无隐藏费用。为了保持如此，我依赖自愿捐款。每一份贡献都有助于支付运营和基础设施的持续成本。",
+    "badge": "支持您的您的伴侣",
+    "title": "帮助您的您的伴侣保持免费",
+    "subtitle": "您的您的伴侣是一个充满热情的项目——无广告、无订阅、无隐藏费用。为了保持如此，我依赖自愿捐款。每一份贡献都有助于支付运营和基础设施的持续成本。",
     "bankTitle": "通过银行转账捐款",
     "bankSubtitle": "每一分都重要——万分感谢！🙏",
     "recipient": "收款人",
     "bank": "银行",
     "purpose": "用途",
-    "purposeValue": "捐款 BibleBot",
+    "purposeValue": "捐款 您的伴侣",
     "note": "BibleBot.Life 作为一个私人项目运营。因此，捐款不可免税。"
   },
   "refer": {
     "badge": "分享上帝的话语",
-    "title": "推荐 BibleBot",
-    "subtitle": "您认识需要鼓励的人吗？分享 BibleBot——一条消息可以带来很大改变。",
+    "title": "推荐 您的伴侣",
+    "subtitle": "您认识需要鼓励的人吗？分享 您的伴侣——一条消息可以带来很大改变。",
     "whatsapp": "通过WhatsApp分享",
-    "whatsappMsg": "嘿，我想向你介绍BibleBot——一个免费的圣经伴侣，它了解圣经，并提出真正好的问题。无需登录，匿名，诚实。试试看：https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "嘿，我想向你介绍您的伴侣——一个免费的圣经伴侣，它了解圣经，并提出真正好的问题。无需登录，匿名，诚实。试试看：https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "通过Telegram分享",
-    "telegramMsg": "嘿，你听说过BibleBot吗？一个免费的个人圣经伴侣——诚实、匿名、无需登录。来看看：https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "嘿，你听说过您的伴侣吗？一个免费的个人圣经伴侣——诚实、匿名、无需登录。来看看：https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "通过电子邮件分享",
     "emailSubject": "你可能对此感兴趣：BibleBot.Life",
-    "emailBody": "你好！\n\n我想向你介绍BibleBot——一个免费的圣经伴侣，它真正了解圣经。无需注册，完全匿名。\n\n它会提出好的反问，解释圣经经文的上下文，并诚实地陪伴你——即使是在困难的主题上。\n\n试试看：https://bibelbot.ch?utm_source=refer&utm_medium=email\n\n此致",
+    "emailBody": "你好！\n\n我想向你介绍您的伴侣——一个免费的圣经伴侣，它真正了解圣经。无需注册，完全匿名。\n\n它会提出好的反问，解释圣经经文的上下文，并诚实地陪伴你——即使是在困难的主题上。\n\n试试看：https://bibelbot.ch?utm_source=refer&utm_medium=email\n\n此致",
     "copy": "复制链接",
     "copied": "链接已复制！📋",
     "qr": "或者直接出示这张二维码："
   },
   "cta": {
     "title": "你没必要独自面对",
-    "subtitle": "只需告诉你的BibleBot你在烦恼什么。无需登录，不收费，不评判——只有真诚的陪伴和圣经的智慧。",
+    "subtitle": "只需告诉你的您的伴侣你在烦恼什么。无需登录，不收费，不评判——只有真诚的陪伴和圣经的智慧。",
     "button": "立即开始对话"
   },
   "footer": {
@@ -270,7 +270,7 @@
     "forChurches": "为教会服务"
   },
   "chat": {
-    "welcome": "很高兴你来 🤗\n\n我是你的BibleBot——你的私人伙伴，提供圣经、好的问题和具体的启发。没有压力，没有评判。\n\n你可以问我任何问题——或者只是告诉我你现在正在烦恼什么。💛",
+    "welcome": "很高兴你来 🤗\n\n我是你的您的伴侣——你的私人伙伴，提供圣经、好的问题和具体的启发。没有压力，没有评判。\n\n你可以问我任何问题——或者只是告诉我你现在正在烦恼什么。💛",
     "journeyOffer": "💡 **提示：** 我还提供一份**21天陪伴计划**——3周的每日灵感、反思和具体步骤。完全按照你的节奏。\n\n你想试试看吗？",
     "suggestion1": "我需要一些鼓励的话语",
     "suggestion2": "当感到不确定时，圣经怎么说？",
@@ -315,7 +315,7 @@
     "suggestionsLoading": "加载建议中…"
   },
   "install": {
-    "title": "安装 BibleBot",
+    "title": "安装 您的伴侣",
     "androidDesc": "从主屏幕直接快速访问",
     "iosDesc": "点击“分享”→“添加到主屏幕”",
     "button": "安装",
@@ -329,8 +329,8 @@
     "copiedDesc": "文本已复制到剪贴板。现在可以在WhatsApp、Instagram或您想分享的任何地方分享！",
     "copyLink": "复制文本",
     "error": "复制失败",
-    "impulseTitle": "BibleBot – 每日灵感",
-    "chatTitle": "BibleBot – 每日思索",
+    "impulseTitle": "您的伴侣 – 每日灵感",
+    "chatTitle": "您的伴侣 – 每日思索",
     "createImage": "创建图片 ✨",
     "generating": "正在创建...",
     "imageReady": "您的图片已准备好分享！",
@@ -393,7 +393,7 @@
   },
   "tiles": {
     "sectionTitle": "什么触动了你？",
-    "sectionSubtitle": "选择一个主题——BibleBot会陪伴你",
+    "sectionSubtitle": "选择一个主题——您的伴侣会陪伴你",
     "baptism": {
       "title": "寻找洗礼经文",
       "desc": "为您的孩子选择完美经文",
@@ -687,7 +687,7 @@
   },
   "church": {
     "badge": "面向组织",
-    "heroTitle": "为您的组织提供BibleBot",
+    "heroTitle": "为您的组织提供您的伴侣",
     "heroSubtitle": "以圣经智慧伴随您的会众——数字化、个性化、全天候。",
     "useCasesTitle": "应用场景",
     "useCase": {
@@ -709,7 +709,7 @@
       }
     },
     "pricingTitle": "赞助套餐",
-    "pricingSubtitle": "选择合适的赞助套餐，支持 BibleBot 和您的教会。",
+    "pricingSubtitle": "选择合适的赞助套餐，支持 您的伴侣 和您的教会。",
     "popular": "热门",
     "free": "免费",
     "perYear": "人 / 年",
@@ -751,7 +751,7 @@
     "viewDirectory": "查看教会名录",
     "directoryBadge": "教会名录",
     "directoryTitle": "合作教会",
-    "directorySubtitle": "查找您附近推荐 BibleBot 的教会。",
+    "directorySubtitle": "查找您附近推荐 您的伴侣 的教会。",
     "searchPlaceholder": "搜索地点、名称或宗派...",
     "noResults": "目录中尚无教会。",
     "becomePartner": "成为合作伙伴 →",
@@ -806,7 +806,7 @@
       }
     },
     "institutionsTitle": "也适用于机构",
-    "institutionsSubtitle": "BibleBot 不仅伴随教会——护理院和养老院、医院以及监狱教牧关怀也能从数字教牧关怀中受益。",
+    "institutionsSubtitle": "您的伴侣 不仅伴随教会——护理院和养老院、医院以及监狱教牧关怀也能从数字教牧关怀中受益。",
     "institution": {
       "careHome": {
         "title": "护理院",
@@ -849,7 +849,7 @@
         "desc": "为心理社会咨询客户提供补充性灵性启发。"
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible.",
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As 您的伴侣 is a private project, donations are not tax-deductible.",
     "denominationsTitle": "适用于所有教派和仪式主持人",
     "denominationsSubtitle": "BibleBot.Life是普世教会的——适用于改革宗、天主教、路德宗和自由福音派社区，以及自由职业仪式主持人。",
     "denomination": {
@@ -877,15 +877,15 @@
   },
   "institutions": {
     "badge": "面向组织",
-    "heroTitle": "BibleBot 助力您的机构",
+    "heroTitle": "您的伴侣 助力您的机构",
     "heroSubtitle": "为护理院、养老院、医院和刑事监管提供数字教牧关怀——个性化、保密且全天候。",
     "seniorHint": {
       "title": "提供老年模式",
       "desc": "更大的字体和简化的操作——非常适合老年住户。",
       "cta": "测试老年模式"
     },
-    "typesTitle": "BibleBot 适合谁？",
-    "useCasesTitle": "BibleBot 的应用方式",
+    "typesTitle": "您的伴侣 适合谁？",
+    "useCasesTitle": "您的伴侣 的应用方式",
     "useCasesSubtitle": "您的机构日常运营的具体应用。",
     "pricingTitle": "赞助套餐",
     "pricingSubtitle": "与教会套餐相同——根据机构需求调整。",
@@ -919,7 +919,7 @@
       },
       "companionship": {
         "title": "谈话伙伴",
-        "desc": "BibleBot 耐心解答信仰问题，没有时间压力——是孤独时光的理想选择。"
+        "desc": "您的伴侣 耐心解答信仰问题，没有时间压力——是孤独时光的理想选择。"
       },
       "accessibility": {
         "title": "易于访问",
@@ -953,7 +953,7 @@
     }
   },
   "chatHero": {
-    "ariaLabel": "向 BibleBot 提问",
+    "ariaLabel": "向 您的伴侣 提问",
     "focusPlaceholder": "写下你的问题…",
     "placeholder1": "什么让我真正心存感激？",
     "placeholder2": "我如何找到内心的平静？",
@@ -970,12 +970,12 @@
     "patronage": "推荐人"
   },
   "meta": {
-    "forChurchesDesc": "BibleBot 是您教会的合作伙伴：青少年事工、坚信礼、教牧关怀和查经小组。免费至高级。",
-    "forChurchesTitle": "BibleBot 助力教会 – 数字教牧关怀与圣经指导",
-    "homeDesc": "BibleBot 提供 5 种圣经译本、教练方法和教牧关怀。匿名、免费，支持 36 种语言。",
-    "homeTitle": "BibleBot – 你的个人圣经伴侣 | 免费且匿名",
-    "loginDesc": "登录 BibleBot 以准备您的个人仪式。",
-    "loginTitle": "登录 – BibleBot"
+    "forChurchesDesc": "您的伴侣 是您教会的合作伙伴：青少年事工、坚信礼、教牧关怀和查经小组。免费至高级。",
+    "forChurchesTitle": "您的伴侣 助力教会 – 数字教牧关怀与圣经指导",
+    "homeDesc": "您的伴侣 提供 5 种圣经译本、教练方法和教牧关怀。匿名、免费，支持 36 种语言。",
+    "homeTitle": "您的伴侣 – 你的个人圣经伴侣 | 免费且匿名",
+    "loginDesc": "登录 您的伴侣 以准备您的个人仪式。",
+    "loginTitle": "登录 – 您的伴侣"
   },
   "meinBereich": {
     "title": "我的区域",
@@ -994,7 +994,7 @@
     "confirmationDesc": "寻找坚信礼经文并准备个人文本。"
   },
   "eulogy": {
-    "pageTitle": "悼词 – 创建生平 | BibleBot",
+    "pageTitle": "悼词 – 创建生平 | 您的伴侣",
     "pageDesc": "记录对逝去亲人的回忆，并为悼词撰写一份美丽的生平文本。",
     "title": "悼词 – 生平",
     "subtitle": "记录回忆，创建文本，下载为PDF。",

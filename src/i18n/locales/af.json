@@ -16,7 +16,7 @@
     },
     "title1": "Die Bybel.",
     "title2": " Herbedink.",
-    "subtitle": "Jou BibleBot ken die Bybel – en vra die regte vrae. Nie 'n mens nie, maar 'n eerlike metgesel. Vir goeie gesprekke, diep vrae en ware impulse.",
+    "subtitle": "Jou Jou metgesel ken die Bybel – en vra die regte vrae. Nie 'n mens nie, maar 'n eerlike metgesel. Vir goeie gesprekke, diep vrae en ware impulse.",
     "ctaTelegram": "Begin via Telegram",
     "ctaMore": "Leer meer",
     "quote": "«Kom na My toe, almal wat vermoeid en belas is, en Ek sal julle rus gee.»",
@@ -33,8 +33,8 @@
     "stopAudio": "Stop"
   },
   "features": {
-    "sectionTitle": "Hoe jou BibleBot jou vergesel",
-    "sectionSubtitle": "Ontdek die verskeidenheid maniere waarop jou BibleBot jou kan vergesel",
+    "sectionTitle": "Hoe jou Jou metgesel jou vergesel",
+    "sectionSubtitle": "Ontdek die verskeidenheid maniere waarop jou Jou metgesel jou kan vergesel",
     "bible": {
       "title": "Bybelverse & Uitleg",
       "desc": "Vra «Wat sê die Bybel oor...?» en ontvang toepaslike verse met konteks en verstaanbare verduideliking."
@@ -49,7 +49,7 @@
     },
     "faith": {
       "title": "Geloofspad & Christus vind",
-      "desc": "Of jy soekend, twyfelend of verdiepend is – Jou BibleBot vergesel jou op jou persoonlike pad."
+      "desc": "Of jy soekend, twyfelend of verdiepend is – Jou Jou metgesel vergesel jou op jou persoonlike pad."
     },
     "daily": {
       "title": "Daaglikse impulse & Kerkjaar",
@@ -63,9 +63,9 @@
   "coaching": {
     "badge": "Metodologie",
     "title": "Nie net 'n kletsbot nie – 'n ware begeleiding",
-    "subtitle": "Jou BibleBot verbind Bybelse wysheid met beproefde afrigtingsmetodes en Positiewe Sielkunde.",
+    "subtitle": "Jou Jou metgesel verbind Bybelse wysheid met beproefde afrigtingsmetodes en Positiewe Sielkunde.",
     "journeyTitle": "Persoonlike begeleiding",
-    "journeyDesc": "Jou BibleBot vergesel jou so lank as wat jy wil – in vrye gesprek of met 'n opsionele 21-dae-struktuur.",
+    "journeyDesc": "Jou Jou metgesel vergesel jou so lank as wat jy wil – in vrye gesprek of met 'n opsionele 21-dae-struktuur.",
     "week1": "Week 1: Aankoms",
     "week1Desc": "Bou vertroue, luister, verstaan jou situasie. Waar staan jy? Wat bekommer jou?",
     "week2": "Week 2: Verdieping",
@@ -73,12 +73,12 @@
     "week3": "Week 3: Optrede",
     "week3Desc": "Neem konkrete stappe, formuleer doelwitte, inisieer verandering. Wat is jou volgende stap?",
     "openQuestionsTitle": "Oop vrae in plaas van vinnige antwoorde",
-    "openQuestionsDesc": "Jou BibleBot gee jou nie goedkoop raad nie. In plaas daarvan vra hy die vrae wat regtig saak maak:",
+    "openQuestionsDesc": "Jou Jou metgesel gee jou nie goedkoop raad nie. In plaas daarvan vra hy die vrae wat regtig saak maak:",
     "openQ1": "«Wat lê eintlik agter hierdie wens?»",
     "openQ2": "«Waaraan sou jy agterkom dat iets verander het?»",
     "openQ3": "«Wat sou 'n eerste klein stap wees?»",
     "honestTitle": "Eerlik in plaas van toksies positief",
-    "honestDesc": "Geen «Dit sal regkom!» en geen versagting nie. Jou BibleBot is empaties EN eerlik:",
+    "honestDesc": "Geen «Dit sal regkom!» en geen versagting nie. Jou Jou metgesel is empaties EN eerlik:",
     "honest1": "Noem ook ongemaklike Bybelverse",
     "honest2": "Daag uit tot selfrefleksie",
     "honest3": "Onderskei troos van onderdrukking",
@@ -103,7 +103,7 @@
       "author": "Worthington",
       "desc": "REACH-model vir vergifnisprosesse"
     },
-    "renameTip": "💡 Jy kan jou BibleBot 'n eie naam gee – sodat hy werklik **jou** metgesel word."
+    "renameTip": "💡 Jy kan jou Jou metgesel 'n eie naam gee – sodat hy werklik **jou** metgesel word."
   },
   "discover": {
     "badge": "Vir nuuskieriges",
@@ -115,7 +115,7 @@
     },
     "search": {
       "title": "Soek jy?",
-      "text": "Miskien weet jy nie eers presies waarna nie. Dit is heeltemal in orde. Jou BibleBot help jou om die regte vrae te vra – in plaas van vinnige antwoorde te gee."
+      "text": "Miskien weet jy nie eers presies waarna nie. Dit is heeltemal in orde. Jou Jou metgesel help jou om die regte vrae te vra – in plaas van vinnige antwoorde te gee."
     },
     "deepen": {
       "title": "Wil jy verdiep?",
@@ -170,9 +170,9 @@
   },
   "faq": {
     "badge": "Gereelde vrae",
-    "title": "Wat jy oor jou BibleBot moet weet",
+    "title": "Wat jy oor jou Jou metgesel moet weet",
     "subtitle": "Deursigtigheid is vir ons belangrik – veral teenoor teoloë, beraders en kritiese denkers.",
-    "q1": "Wat onderskei jou BibleBot van ChatGPT & Kie.?",
+    "q1": "Wat onderskei jou Jou metgesel van ChatGPT & Kie.?",
     "q1Generic": "Generiese kletsbots:",
     "q1GenericItems": [
       "Oppervlakkige Bybel aanhalings sonder konteks",
@@ -192,11 +192,11 @@
       "Bevorder kritiese denke as geloofsrypheid"
     ],
     "q2": "Watter Bybelvertalings is ingesluit?",
-    "q2Intro": "Jou BibleBot werk ekumenies met die belangrikste Duitstalige Bybeluitgawes:",
+    "q2Intro": "Jou Jou metgesel werk ekumenies met die belangrikste Duitstalige Bybeluitgawes:",
     "q2Outro": "Alle Bybelverse word met bronverwysing en historiese konteks uitgereik.",
     "q3": "Watter wetenskaplike grondbeginsels lê daaraan ten grondslag?",
     "q3Intro": "Die begeleiding is gebaseer op eweknie-geëvalueerde navorsing van Positiewe Sielkunde:",
-    "q4": "Hoe verseker jou BibleBot pastorale veiligheid?",
+    "q4": "Hoe verseker jou Jou metgesel pastorale veiligheid?",
     "q4Items": [
       "By selfmoordgedagtes of krisisse → onmiddellike verwysing na Dargebotene Hand (143) en Pro Juventute (147)",
       "Geen sielkundige of mediese diagnoses",
@@ -206,16 +206,16 @@
       "Geen toksiese positiwiteit – ware, eerlike begeleiding",
       "Noem spanning en moeilike tekste openlik"
     ],
-    "q5": "Is jou BibleBot konfessioneel gebonde?",
-    "q5Answer": "Nee. Jou BibleBot is ekumenies georiënteerd en respekteer gereformeerde, Katolieke, vrykerklike en ander Christelike tradisies ewe veel. By konfessioneel verskillende uitlegte word verskillende perspektiewe deursigtig voorgestel – sonder om 'n tradisie te bevoordeel.",
-    "q6": "Vervang jou BibleBot pastorale sorg of terapie?",
-    "q6Answer": "Nee. Jou BibleBot is 'n digitale hulpmiddel vir persoonlike Bybellees en refleksie. Dit vervang nie professionele pastorale sorg, teologiese advies of sielkundige terapie nie. By ernstige krisisse verwys jou BibleBot altyd na gekwalifiseerde kontakpunte.",
-    "q7": "Is jou BibleBot nie net 'n «welstand-bot» nie?",
-    "q7Answer": "Nee. Jou BibleBot troos waar troos nodig is – maar hy daag ook uit. Geestelike groei benodig wrywing. Jou BibleBot vra ongemaklike terugvrae, noem moeilike Bybeltekste (Job, Klaagpsalms, profetiese kritiek) en skroom nie vir onderwerpe soos geregtigheid, bekering en verantwoordelikheid nie. Die profetiese tradisie was nooit gemaklik nie – en jou BibleBot ook nie.",
-    "q8": "Wie staan agter jou BibleBot en hoe word dit gefinansier?",
-    "q8Answer": "BibleBot.Life is 'n private, nie-kommersiële projek. Dit word vrywillig bedryf en word uitsluitlik deur vrywillige donasies gefinansier. Daar is geen advertensies, geen dataverkope en geen betaalde funksies nie. Alle donasies vloei direk in die dekking van die lopende koste (infrastruktuur, hosting, ontwikkeling). Aangesien BibleBot as 'n private projek loop, is donasies nie belastingaftrekbaar nie.",
-    "q9": "Hoe hanteer jou BibleBot my data?",
-    "q9Answer": "Jou BibleBot stoor geen persoonlike data en geen kletsgeskiedenis nie. Elke gesprek is anoniem. Daar is geen aanmelding, geen dop en geen deel van data met derde partye nie. Die gebruik is heeltemal anoniem.",
+    "q5": "Is jou Jou metgesel konfessioneel gebonde?",
+    "q5Answer": "Nee. Jou Jou metgesel is ekumenies georiënteerd en respekteer gereformeerde, Katolieke, vrykerklike en ander Christelike tradisies ewe veel. By konfessioneel verskillende uitlegte word verskillende perspektiewe deursigtig voorgestel – sonder om 'n tradisie te bevoordeel.",
+    "q6": "Vervang jou Jou metgesel pastorale sorg of terapie?",
+    "q6Answer": "Nee. Jou Jou metgesel is 'n digitale hulpmiddel vir persoonlike Bybellees en refleksie. Dit vervang nie professionele pastorale sorg, teologiese advies of sielkundige terapie nie. By ernstige krisisse verwys jou Jou metgesel altyd na gekwalifiseerde kontakpunte.",
+    "q7": "Is jou Jou metgesel nie net 'n «welstand-bot» nie?",
+    "q7Answer": "Nee. Jou Jou metgesel troos waar troos nodig is – maar hy daag ook uit. Geestelike groei benodig wrywing. Jou Jou metgesel vra ongemaklike terugvrae, noem moeilike Bybeltekste (Job, Klaagpsalms, profetiese kritiek) en skroom nie vir onderwerpe soos geregtigheid, bekering en verantwoordelikheid nie. Die profetiese tradisie was nooit gemaklik nie – en jou Jou metgesel ook nie.",
+    "q8": "Wie staan agter jou Jou metgesel en hoe word dit gefinansier?",
+    "q8Answer": "BibleBot.Life is 'n private, nie-kommersiële projek. Dit word vrywillig bedryf en word uitsluitlik deur vrywillige donasies gefinansier. Daar is geen advertensies, geen dataverkope en geen betaalde funksies nie. Alle donasies vloei direk in die dekking van die lopende koste (infrastruktuur, hosting, ontwikkeling). Aangesien Jou metgesel as 'n private projek loop, is donasies nie belastingaftrekbaar nie.",
+    "q9": "Hoe hanteer jou Jou metgesel my data?",
+    "q9Answer": "Jou Jou metgesel stoor geen persoonlike data en geen kletsgeskiedenis nie. Elke gesprek is anoniem. Daar is geen aanmelding, geen dop en geen deel van data met derde partye nie. Die gebruik is heeltemal anoniem.",
     "tradition": {
       "reformed": "Gereformeerd",
       "evangelical": "Evangelies",
@@ -225,35 +225,35 @@
     }
   },
   "donate": {
-    "badge": "Ondersteun jou BibleBot",
-    "title": "Help om jou BibleBot gratis te hou",
-    "subtitle": "Jou BibleBot is 'n hartsprojek – sonder advertensies, sonder intekening, sonder verborge koste. Sodat dit so bly, is ek afhanklik van vrywillige donasies. Elke bydrae help om die lopende koste vir bedryf en infrastruktuur te dek.",
+    "badge": "Ondersteun jou Jou metgesel",
+    "title": "Help om jou Jou metgesel gratis te hou",
+    "subtitle": "Jou Jou metgesel is 'n hartsprojek – sonder advertensies, sonder intekening, sonder verborge koste. Sodat dit so bly, is ek afhanklik van vrywillige donasies. Elke bydrae help om die lopende koste vir bedryf en infrastruktuur te dek.",
     "bankTitle": "Skenk via bankoorplasing",
     "bankSubtitle": "Elke bedrag tel – baie dankie! 🙏",
     "recipient": "Ontvanger",
     "bank": "Bank",
     "purpose": "Doel",
-    "purposeValue": "Skenking BibleBot",
+    "purposeValue": "Skenking Jou metgesel",
     "note": "BibleBot.Life word as 'n private projek bedryf. Skenkings is dus nie belastingaftrekbaar nie."
   },
   "refer": {
     "badge": "Deel God se Woord",
-    "title": "Beveel BibleBot aan",
-    "subtitle": "Ken jy iemand wat nou aanmoediging nodig het? Deel BibleBot – 'n boodskap kan baie beteken.",
+    "title": "Beveel Jou metgesel aan",
+    "subtitle": "Ken jy iemand wat nou aanmoediging nodig het? Deel Jou metgesel – 'n boodskap kan baie beteken.",
     "whatsapp": "Deel via WhatsApp",
-    "whatsappMsg": "Haai, ek wou jou BibleBot wys – 'n gratis Bybelmetgesel wat die Bybel ken en regtig goeie vrae vra. Geen aanmelding, anoniem, eerlik. Probeer dit: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Haai, ek wou jou Jou metgesel wys – 'n gratis Bybelmetgesel wat die Bybel ken en regtig goeie vrae vra. Geen aanmelding, anoniem, eerlik. Probeer dit: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Deel via Telegram",
-    "telegramMsg": "Haai, ken jy al BibleBot? 'n Gratis persoonlike Bybelmetgesel – eerlik, anoniem, sonder aanmelding. Kyk gerus: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Haai, ken jy al Jou metgesel? 'n Gratis persoonlike Bybelmetgesel – eerlik, anoniem, sonder aanmelding. Kyk gerus: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Deel via e-pos",
     "emailSubject": "Dit mag jou interesseer: BibleBot.Life",
-    "emailBody": "Hallo!\n\nEk wou jou BibleBot wys – 'n gratis Bybelmetgesel wat die Bybel regtig ken. Geen aanmelding nodig nie, heeltemal anoniem.\n\nHij vra goeie terugvrae, verduidelik Bybelverse in konteks en vergesel jou eerlik – ook by moeilike onderwerpe.\n\nProbeer dit: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nGroete",
+    "emailBody": "Hallo!\n\nEk wou jou Jou metgesel wys – 'n gratis Bybelmetgesel wat die Bybel regtig ken. Geen aanmelding nodig nie, heeltemal anoniem.\n\nHij vra goeie terugvrae, verduidelik Bybelverse in konteks en vergesel jou eerlik – ook by moeilike onderwerpe.\n\nProbeer dit: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nGroete",
     "copy": "Kopieer skakel",
     "copied": "Skakel gekopieer! 📋",
     "qr": "Of wys eenvoudig hierdie QR-kode:"
   },
   "cta": {
     "title": "Jy hoef dit nie alleen deur te maak nie",
-    "subtitle": "Skryf eenvoudig vir jou BibleBot wat jou bekommer. Geen aanmelding, geen koste, geen oordeel – net eerlike begeleiding en die wysheid van die Bybel.",
+    "subtitle": "Skryf eenvoudig vir jou Jou metgesel wat jou bekommer. Geen aanmelding, geen koste, geen oordeel – net eerlike begeleiding en die wysheid van die Bybel.",
     "button": "Begin nou gesprek"
   },
   "footer": {
@@ -269,7 +269,7 @@
     "forChurches": "Vir gemeentes"
   },
   "chat": {
-    "welcome": "Lekker dat jy hier is 🤗\n\nEk is jou BibleBot – jou persoonlike metgesel met die Bybel, goeie vrae en konkrete impulse. Geen druk, geen oordeel nie.\n\nJy kan my enigiets vra – of net vertel wat jou nou besig hou. 💛",
+    "welcome": "Lekker dat jy hier is 🤗\n\nEk is jou Jou metgesel – jou persoonlike metgesel met die Bybel, goeie vrae en konkrete impulse. Geen druk, geen oordeel nie.\n\nJy kan my enigiets vra – of net vertel wat jou nou besig hou. 💛",
     "journeyOffer": "💡 **Wenk:** Ek bied ook 'n **21-dae-begeleiding** aan – 3 weke met daaglikse impulse, refleksies en konkrete stappe. Heeltemal op jou eie pas.\n\nWil jy dit probeer?",
     "suggestion1": "Ek het nou 'n opbouende woord nodig",
     "suggestion2": "Wat sê die Bybel as 'n mens onseker voel?",
@@ -314,7 +314,7 @@
     "suggestionsLoading": "Laai voorstelle…"
   },
   "install": {
-    "title": "Installeer BibleBot",
+    "title": "Installeer Jou metgesel",
     "androidDesc": "Vinnige toegang direk vanaf die tuisskerm",
     "iosDesc": "Tik op «Deel» → «Voeg by tuisskerm»",
     "button": "Installeer",
@@ -328,8 +328,8 @@
     "copiedDesc": "Teks is na die knipbord gekopieer. Deel dit nou op WhatsApp, Instagram of waar jy wil!",
     "copyLink": "Kopieer teks",
     "error": "Kopiëring het misluk",
-    "impulseTitle": "BibleBot – Impuls van die dag",
-    "chatTitle": "BibleBot – Gedagte van die dag",
+    "impulseTitle": "Jou metgesel – Impuls van die dag",
+    "chatTitle": "Jou metgesel – Gedagte van die dag",
     "createImage": "Skep prent ✨",
     "generating": "Word geskep…",
     "imageReady": "Jou prent is gereed om te deel!",
@@ -354,7 +354,7 @@
   },
   "tiles": {
     "sectionTitle": "Wat beweeg jou?",
-    "sectionSubtitle": "Kies 'n onderwerp — die BibleBot vergesel jou",
+    "sectionSubtitle": "Kies 'n onderwerp — die Jou metgesel vergesel jou",
     "baptism": {
       "title": "Vind doopteks",
       "desc": "Die perfekte vers vir jou kind",
@@ -648,7 +648,7 @@
   },
   "church": {
     "badge": "Vir organisasies",
-    "heroTitle": "BibleBot vir u organisasie",
+    "heroTitle": "Jou metgesel vir u organisasie",
     "heroSubtitle": "Vergesel u gemeentelid met Bybelse wysheid – digitaal, persoonlik en 24/7.",
     "useCasesTitle": "Gebruiksgevalle",
     "useCase": {
@@ -670,7 +670,7 @@
       }
     },
     "pricingTitle": "Patronaatspakkette",
-    "pricingSubtitle": "Ondersteun BibleBot en u gemeente met die gepaste patronaatspakket.",
+    "pricingSubtitle": "Ondersteun Jou metgesel en u gemeente met die gepaste patronaatspakket.",
     "popular": "Gewild",
     "free": "Gratis",
     "perYear": "persone / jaar",
@@ -712,7 +712,7 @@
     "viewDirectory": "Sien gemeentegids",
     "directoryBadge": "Gemeentegids",
     "directoryTitle": "Vennootgemeentes",
-    "directorySubtitle": "Vind 'n gemeente naby u wat BibleBot aanbeveel.",
+    "directorySubtitle": "Vind 'n gemeente naby u wat Jou metgesel aanbeveel.",
     "searchPlaceholder": "Soek plek, naam of denominasie...",
     "noResults": "Nog geen gemeentes in die gids nie.",
     "becomePartner": "Word vennoot →",
@@ -767,7 +767,7 @@
       }
     },
     "institutionsTitle": "Ook vir instellings",
-    "institutionsSubtitle": "BibleBot vergesel nie net gemeentes nie – ook versorgings- en ouetehuise, hospitale en die gevangenisbediening baat by digitale pastorale sorg.",
+    "institutionsSubtitle": "Jou metgesel vergesel nie net gemeentes nie – ook versorgings- en ouetehuise, hospitale en die gevangenisbediening baat by digitale pastorale sorg.",
     "institution": {
       "careHome": {
         "title": "Versorgingsoorde",
@@ -810,7 +810,7 @@
         "desc": "Aanvullende geestelike impulse vir kliënte in psigososiale berading."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible.",
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As Jou metgesel is a private project, donations are not tax-deductible.",
     "denominationsTitle": "Vir alle denominasies en seremonieleiners",
     "denominationsSubtitle": "BibleBot.Life is ekumenies – vir Gereformeerde, Katolieke, Lutherse en Vrye Kerk-gemeenskappe, sowel as vryskut-seremonieleiners.",
     "denomination": {
@@ -838,15 +838,15 @@
   },
   "institutions": {
     "badge": "Vir organisasies",
-    "heroTitle": "BibleBot vir u instelling",
+    "heroTitle": "Jou metgesel vir u instelling",
     "heroSubtitle": "Digitale pastorale sorg vir versorgingsoorde, ouetehuise, hospitale en korrektiewe dienste – persoonlik, vertroulik en 24/7.",
     "seniorHint": {
       "title": "Seniormodus beskikbaar",
       "desc": "Groter lettertipe en vereenvoudigde bediening – ideaal vir ouer inwoners.",
       "cta": "Toets seniormodus"
     },
-    "typesTitle": "Vir wie is BibleBot?",
-    "useCasesTitle": "Hoe BibleBot gebruik word",
+    "typesTitle": "Vir wie is Jou metgesel?",
+    "useCasesTitle": "Hoe Jou metgesel gebruik word",
     "useCasesSubtitle": "Konkrete toepassings vir die alledaagse lewe in u instelling.",
     "pricingTitle": "Patronaatspakkette",
     "pricingSubtitle": "Dieselfde pakkette as vir gemeentes – aangepas by institusionele behoeftes.",
@@ -880,7 +880,7 @@
       },
       "companionship": {
         "title": "Gespreksgenoot",
-        "desc": "BibleBot beantwoord geloofsvrae geduldig en sonder tydsdruk – ideaal vir eensame ure."
+        "desc": "Jou metgesel beantwoord geloofsvrae geduldig en sonder tydsdruk – ideaal vir eensame ure."
       },
       "accessibility": {
         "title": "Maklike toegang",
@@ -952,7 +952,7 @@
     "ht": "Kreyòl"
   },
   "eulogy": {
-    "pageTitle": "Eulogie – Skep 'n CV | BibleBot",
+    "pageTitle": "Eulogie – Skep 'n CV | Jou metgesel",
     "pageDesc": "Hou herinneringe van 'n geliefde vas en skep 'n pragtige CV-teks vir die eulogie.",
     "title": "Eulogie – CV",
     "subtitle": "Vang herinneringe vas, skep teks, laai af as PDF.",
@@ -1002,7 +1002,7 @@
     "confirmationDesc": "Vind 'n bevestigingsvers en berei persoonlike tekste voor."
   },
   "chatHero": {
-    "ariaLabel": "Stel 'n vraag aan BibleBot",
+    "ariaLabel": "Stel 'n vraag aan Jou metgesel",
     "focusPlaceholder": "Skryf jou vraag…",
     "placeholder1": "Wat maak my werklik dankbaar?",
     "placeholder2": "Hoe vind ek innerlike vrede?",
@@ -1016,12 +1016,12 @@
     "suggestion3": "Waarvoor is ek dankbaar?"
   },
   "meta": {
-    "forChurchesDesc": "BibleBot as vennoot vir u gemeente: jeugwerk, bevestiging, berading en Bybelgroepe. Gratis tot Premium.",
-    "forChurchesTitle": "BibleBot vir Gemeentes – Digitale Berading & Bybelbegeleiding",
-    "homeDesc": "BibleBot vergesel jou met 5 Bybelvertalings, afrigtingsmetodiek & berading. Anoniem, gratis, in 36 tale.",
-    "homeTitle": "BibleBot – Jou persoonlike Bybel-metgesel | Gratis & Anoniem",
-    "loginDesc": "Meld aan by BibleBot om jou persoonlike seremonies voor te berei.",
-    "loginTitle": "Meld aan – BibleBot"
+    "forChurchesDesc": "Jou metgesel as vennoot vir u gemeente: jeugwerk, bevestiging, berading en Bybelgroepe. Gratis tot Premium.",
+    "forChurchesTitle": "Jou metgesel vir Gemeentes – Digitale Berading & Bybelbegeleiding",
+    "homeDesc": "Jou metgesel vergesel jou met 5 Bybelvertalings, afrigtingsmetodiek & berading. Anoniem, gratis, in 36 tale.",
+    "homeTitle": "Jou metgesel – Jou persoonlike Bybel-metgesel | Gratis & Anoniem",
+    "loginDesc": "Meld aan by Jou metgesel om jou persoonlike seremonies voor te berei.",
+    "loginTitle": "Meld aan – Jou metgesel"
   },
   "splash": {
     "patronage": "Aanbeveel deur"

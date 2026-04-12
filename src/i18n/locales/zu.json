@@ -16,7 +16,7 @@
     },
     "title1": "IBhayibheli.",
     "title2": " Kucatshangwe kabusha.",
-    "subtitle": "I-BibleBot yakho iyaliqonda iBhayibheli – futhi ibuza imibuzo efanele. Hhayi umuntu, kodwa umngane othembekile. Ngezingxoxo ezinhle, imibuzo ejulile kanye nogqozi lwangempela.",
+    "subtitle": "I-Umngane wakho yakho iyaliqonda iBhayibheli – futhi ibuza imibuzo efanele. Hhayi umuntu, kodwa umngane othembekile. Ngezingxoxo ezinhle, imibuzo ejulile kanye nogqozi lwangempela.",
     "ctaTelegram": "Qala ngeTelegram",
     "ctaMore": "Funda okwengeziwe",
     "quote": "«Wozani kimi, nonke nina enikhandlekayo nenisindwe umthwalo; ngiyakuniphumuza.»",
@@ -33,8 +33,8 @@
     "stopAudio": "Yima"
   },
   "features": {
-    "sectionTitle": "Indlela iBibleBot yakho ikuphelezela ngayo",
-    "sectionSubtitle": "Thola amathuba ahlukahlukene okuthi iBibleBot yakho ingakuphelezela kanjani",
+    "sectionTitle": "Indlela iUmngane wakho yakho ikuphelezela ngayo",
+    "sectionSubtitle": "Thola amathuba ahlukahlukene okuthi iUmngane wakho yakho ingakuphelezela kanjani",
     "bible": {
       "title": "Amavesi EBhayibheli Nokuchazwa kwawo",
       "desc": "Buza ukuthi «Lithini iBhayibheli nge...?» bese uthola amavesi afanelekile nomongo kanye nencazelo eqondakalayo."
@@ -49,7 +49,7 @@
     },
     "faith": {
       "title": "Uhambo Lwezenkolo Nokuthola Kristu",
-      "desc": "Noma ngabe ufuna, uyathandabuza noma ujulisa – iBibleBot yakho izokuphelezela ohambweni lwakho lomuntu siqu."
+      "desc": "Noma ngabe ufuna, uyathandabuza noma ujulisa – iUmngane wakho yakho izokuphelezela ohambweni lwakho lomuntu siqu."
     },
     "daily": {
       "title": "Ogqozi Lwansuku Zonke Nemikhosi Yonyaka Yokukhonza",
@@ -63,9 +63,9 @@
   "coaching": {
     "badge": "Indlela",
     "title": "Hhayi nje i-chatbot – umngane wangempela",
-    "subtitle": "I-BibleBot yakho ihlanganisa ukuhlakanipha kweBhayibheli nezindlela zokuphelezela eziqinisekisiwe kanye ne-Positive Psychology.",
+    "subtitle": "I-Umngane wakho yakho ihlanganisa ukuhlakanipha kweBhayibheli nezindlela zokuphelezela eziqinisekisiwe kanye ne-Positive Psychology.",
     "journeyTitle": "Ukuphelezela Komuntu Siqu",
-    "journeyDesc": "I-BibleBot yakho izokuphelezela isikhathi eside njengoba ufisa – ngengxoxo ekhululekile noma nangesakhiwo sezinsuku ezingu-21 ozikhethelayo.",
+    "journeyDesc": "I-Umngane wakho yakho izokuphelezela isikhathi eside njengoba ufisa – ngengxoxo ekhululekile noma nangesakhiwo sezinsuku ezingu-21 ozikhethelayo.",
     "week1": "Isonto 1: Ukufika",
     "week1Desc": "Ukwakha ukwethembana, ukulalela, ukuqonda isimo sakho. Ukuphi? Yini ekukhathazayo?",
     "week2": "Isonto 2: Ukujulisa",
@@ -73,12 +73,12 @@
     "week3": "Isonto 3: Ukwenza",
     "week3Desc": "Ukuthatha izinyathelo ezithile, ukubeka izinhloso, ukugqugquzela ushintsho. Yini isinyathelo sakho esilandelayo?",
     "openQuestionsTitle": "Imibuzo Evulekile Esikhundleni Sezimpendulo Ezisheshayo",
-    "openQuestionsDesc": "I-BibleBot yakho ngeke ikunikeze izeluleko ezingabizi. Esikhundleni salokho, ibuza imibuzo ebaluleke ngempela:",
+    "openQuestionsDesc": "I-Umngane wakho yakho ngeke ikunikeze izeluleko ezingabizi. Esikhundleni salokho, ibuza imibuzo ebaluleke ngempela:",
     "openQ1": "«Yini ngempela ngemuva kwalesi sifiso?»",
     "openQ2": "«Uzokwazi ngani ukuthi kukhona okushintshile?»",
     "openQ3": "«Yisiphi isinyathelo sokuqala esincane?»",
     "honestTitle": "Othembekile esikhundleni sokuba nethemba elinamandla",
-    "honestDesc": "Akukho «Kuzolunga!» futhi akukho ukukuhlehlisa. I-BibleBot yakho izwelana FUTHI ithembekile:",
+    "honestDesc": "Akukho «Kuzolunga!» futhi akukho ukukuhlehlisa. I-Umngane wakho yakho izwelana FUTHI ithembekile:",
     "honest1": "Iphinda futhi ikhulume ngamavesi eBhayibheli angakhululekile",
     "honest2": "Iphonsa inselele ekuzindleni komuntu",
     "honest3": "Ihlukanisa ukududuza nokugwema",
@@ -103,7 +103,7 @@
       "author": "Worthington",
       "desc": "I-REACH-Model yezinqubo zokuthethelela"
     },
-    "renameTip": "💡 Ungaqamba i-BibleBot yakho igama elisha – ukuze ibe umngane wakho wangempela."
+    "renameTip": "💡 Ungaqamba i-Umngane wakho yakho igama elisha – ukuze ibe umngane wakho wangempela."
   },
   "discover": {
     "badge": "Okwabalalali",
@@ -115,7 +115,7 @@
     },
     "search": {
       "title": "Ufuna?",
-      "text": "Mhlawumbe awazi ngisho nokuthi ufunani. Kulungile lokho. I-BibleBot yakho izokusiza ukuthi ubuze imibuzo efanele – esikhundleni sokunikeza izimpendulo ezisheshayo."
+      "text": "Mhlawumbe awazi ngisho nokuthi ufunani. Kulungile lokho. I-Umngane wakho yakho izokusiza ukuthi ubuze imibuzo efanele – esikhundleni sokunikeza izimpendulo ezisheshayo."
     },
     "deepen": {
       "title": "Ufuna ukujulisa?",
@@ -170,9 +170,9 @@
   },
   "faq": {
     "badge": "Imibuzo Evame Ukubuzwa",
-    "title": "Okufanele Ukwazi Nge-BibleBot Yakho",
+    "title": "Okufanele Ukwazi Nge-Umngane wakho Yakho",
     "subtitle": "Ukungafihli kubalulekile kithi – ikakhulukazi kubefundisi, abeluleki bomphefumulo nabacabangi abagxekayo.",
-    "q1": "Yini eyahlukanisa iBibleBot yakho ku-ChatGPT nabanye?",
+    "q1": "Yini eyahlukanisa iUmngane wakho yakho ku-ChatGPT nabanye?",
     "q1Generic": "Ama-chatbot ajwayelekile:",
     "q1GenericItems": [
       "Izingcaphuno zeBhayibheli ezingajulile ngaphandle komongo",
@@ -192,11 +192,11 @@
       "Ikhuthaza ukucabanga okubucayi njengobuvuthiwe bokholo"
     ],
     "q2": "Yiziphi izinguqulo zeBhayibheli ezikhona?",
-    "q2Intro": "I-BibleBot yakho isebenza ngokubambisana nezinguqulo zesiJalimane zeBhayibheli ezibalulekile:",
+    "q2Intro": "I-Umngane wakho yakho isebenza ngokubambisana nezinguqulo zesiJalimane zeBhayibheli ezibalulekile:",
     "q2Outro": "Zonke izindawo zeBhayibheli ziphuma nomthombo nomongo womlando.",
     "q3": "Yiziphi izisekelo zesayensi ezisemva kwayo?",
     "q3Intro": "Ukuphelezela kusekelwe ocwaningweni olubuyekezwe ozakwethu lwe-Positive Psychology:",
-    "q4": "I-BibleBot yakho iqinisekisa kanjani ukuphepha kokwelulekwa?",
+    "q4": "I-Umngane wakho yakho iqinisekisa kanjani ukuphepha kokwelulekwa?",
     "q4Items": [
       "Ngezingcingo zokuzibulala noma izimo ezinzima → ukudluliselwa ngokushesha ku-Dargebotene Hand (143) nase-Pro Juventute (147)",
       "Akukho ukuxilongwa kwengqondo noma kwezokwelapha",
@@ -206,16 +206,16 @@
       "Akukho ukuba nethemba okuyingozi – ukuphelezela okwangempela, koqotho",
       "Ikhomba ukungezwani nemibhalo enzima ngokusobala"
     ],
-    "q5": "Ingabe i-BibleBot yakho ibophezelekile ngokwesonto?",
-    "q5Answer": "Cha. I-BibleBot yakho ihambisana nezinkolo ezahlukene futhi ihlonipha izindinganiso zamaProtestanti, zamaKatolika, zamasonto amahhala nezinye izindinganiso zobuKristu ngokulinganayo. Lapho kunomehluko ezincazelweni zezinkolo, izindlela ezahlukene zikhonjiswa ngokucacile – ngaphandle kokukhetha uhlobo oluthile.",
-    "q6": "Ingabe iBibleBot yakho ithatha indawo yokwelulekwa noma yokwelapha?",
-    "q6Answer": "Cha. I-BibleBot yakho iyithuluzi ledijithali lokufunda iBhayibheli nokuzindla. Ayithathi indawo yokwelulekwa kobuchwepheshe, iseluleko sezenkolo noma ukwelashwa kwengqondo. Esimweni sezimo ezinzima, i-BibleBot yakho ihlale ikukhombisa izindawo ezifanele zokusiza.",
-    "q7": "Ingabe iBibleBot yakho akuyona nje «i-bot ekhululekile»?",
-    "q7Answer": "Cha. I-BibleBot yakho iduduza lapho kudingeka khona induduzo – kodwa futhi iphonsa inselele. Ukukhula ngokomoya kudinga ukungqubuzana. I-BibleBot yakho ibuza imibuzo engakhululekile, ikhomba imibhalo enzima yeBhayibheli (uJobe, amaHubo okulila, ukugxeka kwesiprofetho) futhi ayiesabi izingosi ezifana nokulunga, ukuphenduka nobuqotho. Isiko lesiprofetho alizange libe lula – futhi i-BibleBot yakho nayo ayikho.",
-    "q8": "Ubani osemuva kweBibleBot yakho futhi ixhaswa kanjani?",
-    "q8Answer": "I-BibleBot.Life iyiphrojekthi yangasese, engenzi inzuzo. Isebenza ngokuzithandela futhi ixhaswa kuphela yiminikelo yokuzithandela. Ayikho imikhangiso, akukho ukuthengiswa kwedatha futhi akukho izici ezikhokhelwayo. Yonke iminikelo ihamba ngqo ekuhlanganisweni kwezindleko zokusebenza (ingqalasizinda, ukubamba, ukuthuthukiswa). Njengoba i-BibleBot isebenza njengephrojekthi yangasese, iminikelo ayikwazi ukudonswa intela.",
-    "q9": "I-BibleBot yakho ihamba kanjani nedatha yami?",
-    "q9Answer": "I-BibleBot yakho ayibongi idatha yomuntu siqu nanoma yimaphi amarekhodi engxoxo. Yonke ingxoxo ayaziwa. Akukho ukungena ngemvume, akukho ukulandelela futhi akukho ukwabelana ngedatha nabantu besithathu. Ukusetshenziswa kuyimfihlo ngokuphelele.",
+    "q5": "Ingabe i-Umngane wakho yakho ibophezelekile ngokwesonto?",
+    "q5Answer": "Cha. I-Umngane wakho yakho ihambisana nezinkolo ezahlukene futhi ihlonipha izindinganiso zamaProtestanti, zamaKatolika, zamasonto amahhala nezinye izindinganiso zobuKristu ngokulinganayo. Lapho kunomehluko ezincazelweni zezinkolo, izindlela ezahlukene zikhonjiswa ngokucacile – ngaphandle kokukhetha uhlobo oluthile.",
+    "q6": "Ingabe iUmngane wakho yakho ithatha indawo yokwelulekwa noma yokwelapha?",
+    "q6Answer": "Cha. I-Umngane wakho yakho iyithuluzi ledijithali lokufunda iBhayibheli nokuzindla. Ayithathi indawo yokwelulekwa kobuchwepheshe, iseluleko sezenkolo noma ukwelashwa kwengqondo. Esimweni sezimo ezinzima, i-Umngane wakho yakho ihlale ikukhombisa izindawo ezifanele zokusiza.",
+    "q7": "Ingabe iUmngane wakho yakho akuyona nje «i-bot ekhululekile»?",
+    "q7Answer": "Cha. I-Umngane wakho yakho iduduza lapho kudingeka khona induduzo – kodwa futhi iphonsa inselele. Ukukhula ngokomoya kudinga ukungqubuzana. I-Umngane wakho yakho ibuza imibuzo engakhululekile, ikhomba imibhalo enzima yeBhayibheli (uJobe, amaHubo okulila, ukugxeka kwesiprofetho) futhi ayiesabi izingosi ezifana nokulunga, ukuphenduka nobuqotho. Isiko lesiprofetho alizange libe lula – futhi i-Umngane wakho yakho nayo ayikho.",
+    "q8": "Ubani osemuva kweUmngane wakho yakho futhi ixhaswa kanjani?",
+    "q8Answer": "I-BibleBot.Life iyiphrojekthi yangasese, engenzi inzuzo. Isebenza ngokuzithandela futhi ixhaswa kuphela yiminikelo yokuzithandela. Ayikho imikhangiso, akukho ukuthengiswa kwedatha futhi akukho izici ezikhokhelwayo. Yonke iminikelo ihamba ngqo ekuhlanganisweni kwezindleko zokusebenza (ingqalasizinda, ukubamba, ukuthuthukiswa). Njengoba i-Umngane wakho isebenza njengephrojekthi yangasese, iminikelo ayikwazi ukudonswa intela.",
+    "q9": "I-Umngane wakho yakho ihamba kanjani nedatha yami?",
+    "q9Answer": "I-Umngane wakho yakho ayibongi idatha yomuntu siqu nanoma yimaphi amarekhodi engxoxo. Yonke ingxoxo ayaziwa. Akukho ukungena ngemvume, akukho ukulandelela futhi akukho ukwabelana ngedatha nabantu besithathu. Ukusetshenziswa kuyimfihlo ngokuphelele.",
     "tradition": {
       "reformed": "Okuguquliwe",
       "evangelical": "Evangelical",
@@ -225,35 +225,35 @@
     }
   },
   "donate": {
-    "badge": "Sekela iBibleBot yakho",
-    "title": "Siza ukuba iBibleBot yakho ihlale mahhala",
-    "subtitle": "I-BibleBot yakho iyiphrojekthi yothando – ngaphandle kokukhangisa, ngaphandle kokubhaliselwa, ngaphandle kwezindleko ezifihliwe. Ukuze ihlale kanjalo, ngithembele eminikelweni yokuzithandela. Yonke imali inceda ukuhlanganisa izindleko ezikhona zokusebenza nengqalasizinda.",
+    "badge": "Sekela iUmngane wakho yakho",
+    "title": "Siza ukuba iUmngane wakho yakho ihlale mahhala",
+    "subtitle": "I-Umngane wakho yakho iyiphrojekthi yothando – ngaphandle kokukhangisa, ngaphandle kokubhaliselwa, ngaphandle kwezindleko ezifihliwe. Ukuze ihlale kanjalo, ngithembele eminikelweni yokuzithandela. Yonke imali inceda ukuhlanganisa izindleko ezikhona zokusebenza nengqalasizinda.",
     "bankTitle": "Nikezela nge-Bank Transfer",
     "bankSubtitle": "Yonke imali ibalulekile – ngiyabonga kakhulu! 🙏",
     "recipient": "Mtholi",
     "bank": "Ibhange",
     "purpose": "Inhloso",
-    "purposeValue": "Nikezela iBibleBot",
+    "purposeValue": "Nikezela iUmngane wakho",
     "note": "I-BibleBot.Life isebenza njengephrojekthi yangasese. Ngakho-ke iminikelo ayikwazi ukubuyiselwa intela."
   },
   "refer": {
     "badge": "Yabelana ngezwi likaNkulunkulu",
-    "title": "Phakamisa iBibleBot",
-    "subtitle": "Ukhona umuntu odinga ukukhuthazwa njengamanje? Yabelana nge-BibleBot – umlayezo owodwa ungenza umehluko omkhulu.",
+    "title": "Phakamisa iUmngane wakho",
+    "subtitle": "Ukhona umuntu odinga ukukhuthazwa njengamanje? Yabelana nge-Umngane wakho – umlayezo owodwa ungenza umehluko omkhulu.",
     "whatsapp": "Yabelana ngeWhatsApp",
-    "whatsappMsg": "Heyi, bengifuna ukukubonisa i-BibleBot – umngane weBhayibheli wamahhala okwazi iBhayibheli futhi ebuza imibuzo emihle ngempela. Akukho ukungena ngemvume, ayaziwa, iqotho. Zama: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Heyi, bengifuna ukukubonisa i-Umngane wakho – umngane weBhayibheli wamahhala okwazi iBhayibheli futhi ebuza imibuzo emihle ngempela. Akukho ukungena ngemvume, ayaziwa, iqotho. Zama: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Yabelana ngeTelegram",
-    "telegramMsg": "Heyi, uyayazi i-BibleBot? Umngane siqu weBhayibheli wamahhala – oqotho, ongaziwa, ongenawo ukungena ngemvume. Buka: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Heyi, uyayazi i-Umngane wakho? Umngane siqu weBhayibheli wamahhala – oqotho, ongaziwa, ongenawo ukungena ngemvume. Buka: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Yabelana Nge-imeyili",
     "emailSubject": "Lokhu kungase kukuthakazelise: BibleBot.Life",
-    "emailBody": "Sawubona!\n\nBengifuna ukukubonisa i-BibleBot – umngane weBhayibheli wamahhala okwazi ngempela iBhayibheli. Akukho ukubhaliswa okudingekayo, kuyimfihlo ngokuphelele.\n\nUbuza imibuzo emihle, uchaza izindawo zeBhayibheli kumongo futhi akuphelezela ngokwethembeka – nasezindabeni ezinzima.\n\nZama: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nNgemfiselomihle",
+    "emailBody": "Sawubona!\n\nBengifuna ukukubonisa i-Umngane wakho – umngane weBhayibheli wamahhala okwazi ngempela iBhayibheli. Akukho ukubhaliswa okudingekayo, kuyimfihlo ngokuphelele.\n\nUbuza imibuzo emihle, uchaza izindawo zeBhayibheli kumongo futhi akuphelezela ngokwethembeka – nasezindabeni ezinzima.\n\nZama: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nNgemfiselomihle",
     "copy": "Kopisha Isixhumanisi",
     "copied": "Kopishiwe isixhumanisi! 📋",
     "qr": "Noma uvele ukhombise le kade ye-QR:"
   },
   "cta": {
     "title": "Akudingeki ukuthi uhambe wodwa ngalokhu",
-    "subtitle": "Vele ubhalele iBibleBot yakho, ukuthi yini ekukhathazayo. Akukho ukungena ngemvume, akukho zindleko, akukho kwahlulela – kuphela ukuphelezela okwethembekile nokuhlakanipha kweBhayibheli.",
+    "subtitle": "Vele ubhalele iUmngane wakho yakho, ukuthi yini ekukhathazayo. Akukho ukungena ngemvume, akukho zindleko, akukho kwahlulela – kuphela ukuphelezela okwethembekile nokuhlakanipha kweBhayibheli.",
     "button": "Qala Ingxoxo Manje"
   },
   "footer": {
@@ -269,7 +269,7 @@
     "forChurches": "Okwamabandla"
   },
   "chat": {
-    "welcome": "Kuhle ukuthi ulapha 🤗\n\nNginguBibleBot yakho – umngane wakho siqu neBhayibheli, imibuzo emihle kanye nogqozi oluthile. Akukho ukuphoqelela, akukho ukwahlulela.\n\nUngangibuza noma yini – noma uvele uxoxe ngalokho okukhathazayo njengamanje. 💛",
+    "welcome": "Kuhle ukuthi ulapha 🤗\n\nNginguUmngane wakho yakho – umngane wakho siqu neBhayibheli, imibuzo emihle kanye nogqozi oluthile. Akukho ukuphoqelela, akukho ukwahlulela.\n\nUngangibuza noma yini – noma uvele uxoxe ngalokho okukhathazayo njengamanje. 💛",
     "journeyOffer": "💡 **Iseluleko:** Ngiphinde nginikeze **ukulekelelwa kwezinsuku eziyi-21** – emasontweni amathathu ngezigqozi zansuku zonke, ukuzindla nezinyathelo ezibambekayo. Ngokushesha kwakho.\n\nUngathanda ukukuzama?",
     "suggestion1": "Ngingathanda izwi lokukhuthaza",
     "suggestion2": "Lithini iBhayibheli uma umuntu ezizwa engavikelekile?",
@@ -314,7 +314,7 @@
     "suggestionsLoading": "Ilayisha iziphakamiso…"
   },
   "install": {
-    "title": "Faka iBibleBot",
+    "title": "Faka iUmngane wakho",
     "androidDesc": "Ukufinyelela okusheshayo ngqo kusuka kusikrini sasekhaya",
     "iosDesc": "Thepha ku-\"Yabelana\" → \"Kuya Esikrinini Sasekhaya\"",
     "button": "Faka",
@@ -328,8 +328,8 @@
     "copiedDesc": "Umbhalo ukopishiwe ebhodini lokunamathisela. Wabelane manje ku-WhatsApp, Instagram noma lapho ufuna khona!",
     "copyLink": "Kopisha Umbhalo",
     "error": "Ukukopisha kuhlulekile",
-    "impulseTitle": "BibleBot – Umlayezo Wosuku",
-    "chatTitle": "BibleBot – Umcabango Wosuku",
+    "impulseTitle": "Umngane wakho – Umlayezo Wosuku",
+    "chatTitle": "Umngane wakho – Umcabango Wosuku",
     "createImage": "Dala Isithombe ✨",
     "generating": "Iyaqhubeka nokudala…",
     "imageReady": "Isithombe sakho sesilungele ukwabelana!",
@@ -392,7 +392,7 @@
   },
   "tiles": {
     "sectionTitle": "Yini ekukhathazayo?",
-    "sectionSubtitle": "Khetha isihloko — i-BibleBot izokuphelezela",
+    "sectionSubtitle": "Khetha isihloko — i-Umngane wakho izokuphelezela",
     "baptism": {
       "title": "Thola Ivesi Lobhapathizo",
       "desc": "Ivesi eliphelele lengane yakho",
@@ -686,7 +686,7 @@
   },
   "church": {
     "badge": "Kwezinhlangano",
-    "heroTitle": "BibleBot yenhlangano yakho",
+    "heroTitle": "Umngane wakho yenhlangano yakho",
     "heroSubtitle": "Hambani namalungu omphakathi wenu ngokuhlakanipha kweBhayibheli – ngokwedijithali, ngasese futhi usuku lonke.",
     "useCasesTitle": "Izindlela Zokusetshenziswa",
     "useCase": {
@@ -708,7 +708,7 @@
       }
     },
     "pricingTitle": "Amaphakheji Okuxhasa",
-    "pricingSubtitle": "Sekela i-BibleBot nomphakathi wakho ngephakheji yokuxhasa efanelekile.",
+    "pricingSubtitle": "Sekela i-Umngane wakho nomphakathi wakho ngephakheji yokuxhasa efanelekile.",
     "popular": "Kuthandwa",
     "free": "Mahhala",
     "perYear": "abantu / unyaka",
@@ -750,7 +750,7 @@
     "viewDirectory": "Buka uhla lwamabandla",
     "directoryBadge": "Uhla lwamabandla",
     "directoryTitle": "Amabandla Ahlanganisiwe",
-    "directorySubtitle": "Thola ibandla eduze nawe eliphakamisa i-BibleBot.",
+    "directorySubtitle": "Thola ibandla eduze nawe eliphakamisa i-Umngane wakho.",
     "searchPlaceholder": "Sesha indawo, igama noma isonto...",
     "noResults": "Ayikho amabandla kuluhla okwamanje.",
     "becomePartner": "Yiba Umngane →",
@@ -805,7 +805,7 @@
       }
     },
     "institutionsTitle": "Okwezikhungo futhi",
-    "institutionsSubtitle": "I-BibleBot ayiphelezeli amabandla kuphela – kodwa nezindawo zokunakekelwa kwabantu abadala, izibhedlela kanye nokunakekelwa kwejele kuzuza ekunakekelweni kwedijithali.",
+    "institutionsSubtitle": "I-Umngane wakho ayiphelezeli amabandla kuphela – kodwa nezindawo zokunakekelwa kwabantu abadala, izibhedlela kanye nokunakekelwa kwejele kuzuza ekunakekelweni kwedijithali.",
     "institution": {
       "careHome": {
         "title": "Izindawo Zokunakekelwa",
@@ -848,7 +848,7 @@
         "desc": "Imiphumela yoComoya eyengeziwe yabantu abasebenzisana nokwelulekwa kwezengqondo."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible.",
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As Umngane wakho is a private project, donations are not tax-deductible.",
     "denominationsTitle": "Kuzo zonke izinkolo nabahleli bemicimbi",
     "denominationsSubtitle": "I-BibleBot.Life i-ecumenical – yemiphakathi ye-Reformed, Catholic, Lutheran, ne-Free Church, kanye nabahleli bemicimbi abazimele.",
     "denomination": {
@@ -876,15 +876,15 @@
   },
   "institutions": {
     "badge": "Kwezinhlangano",
-    "heroTitle": "IBibleBot Yesikhungo Sakho",
+    "heroTitle": "IUmngane wakho Yesikhungo Sakho",
     "heroSubtitle": "Ukungcwele Okwedijithali Kwezindawo Zokunakekelwa, Izindawo Zabantu Abadala, Izibhedlela kanye Nokugcinwa Kwezinhlawsulo – Ngesiqu sokuqala, okuyimfihlo futhi usuku lonke.",
     "seniorHint": {
       "title": "Imodi yabantu abadala iyatholakala",
       "desc": "Ifonti enkulu nokusebenza okulula – ilungele izakhamuzi ezindala.",
       "cta": "Zama imodi yabantu abadala"
     },
-    "typesTitle": "Okwakubani iBibleBot?",
-    "useCasesTitle": "I-BibleBot isetshenziswa kanje",
+    "typesTitle": "Okwakubani iUmngane wakho?",
+    "useCasesTitle": "I-Umngane wakho isetshenziswa kanje",
     "useCasesSubtitle": "Izicelo ezithile zempilo yansuku zonke esikhungweni sakho.",
     "pricingTitle": "Amaphakheji Okuxhasa",
     "pricingSubtitle": "Amaphakheji afanayo njengamabandla – ahambisana nezidingo zezikhungo.",
@@ -918,7 +918,7 @@
       },
       "companionship": {
         "title": "Umngane",
-        "desc": "I-BibleBot iphendula imibuzo yokholo ngokubekezela nangaphandle kokuphoqelelwa esikhathini – ilungele izikhathi zokuzimela."
+        "desc": "I-Umngane wakho iphendula imibuzo yokholo ngokubekezela nangaphandle kokuphoqelelwa esikhathini – ilungele izikhathi zokuzimela."
       },
       "accessibility": {
         "title": "Ukufinyelela Okulula",
@@ -952,7 +952,7 @@
     }
   },
   "eulogy": {
-    "pageTitle": "Umngcwabo – Dala umlando wokuphila | BibleBot",
+    "pageTitle": "Umngcwabo – Dala umlando wokuphila | Umngane wakho",
     "pageDesc": "Gcina izinkumbulo zomuntu omthandayo futhi udale umbhalo omuhle we-eulogy.",
     "title": "I-Eulogy – Umlando Wokuphila",
     "subtitle": "Gcina izinkumbulo, dala umbhalo, landa njenge-PDF.",
@@ -1002,7 +1002,7 @@
     "confirmationDesc": "Thola ivesi lesiqinisekiso futhi ulungiselele imibhalo yomuntu siqu."
   },
   "chatHero": {
-    "ariaLabel": "Buza i-BibleBot",
+    "ariaLabel": "Buza i-Umngane wakho",
     "focusPlaceholder": "Bhala umbuzo wakho…",
     "placeholder1": "Yini engenza ngibonge ngempela?",
     "placeholder2": "Ngingawuthola kanjani ukuthula kwangaphakathi?",
@@ -1016,12 +1016,12 @@
     "suggestion3": "Ngingubani ngibonga?"
   },
   "meta": {
-    "forChurchesDesc": "IBibleBot njengomlingani wamabandla akho: Umsebenzi wobusha, ukuqinisekiswa, ukuhola komoya namaselaqo eBhayibheli. Mahhala kuya ku-Premium.",
-    "forChurchesTitle": "I-BibleBot yamabandla – Ukuhola Komoya Kwezinhlelo Zangaphakathi & Ukuhambisana KweBhayibheli",
-    "homeDesc": "I-BibleBot ihamba nawe ngemihumusha yeBhayibheli engu-5, indlela yokufundisa nokuqeqesha, nokuhola komoya. Ayaziwa, mahhala, ngezilimi ezingama-36.",
-    "homeTitle": "I-BibleBot – Umngane wakho weBhayibheli siqu | Mahhala & Ayaziwa",
-    "loginDesc": "Ngena ku-BibleBot ukuze ulungiselele imikhosi yakho yangempela.",
-    "loginTitle": "Ngena ngemvume – BibleBot"
+    "forChurchesDesc": "IUmngane wakho njengomlingani wamabandla akho: Umsebenzi wobusha, ukuqinisekiswa, ukuhola komoya namaselaqo eBhayibheli. Mahhala kuya ku-Premium.",
+    "forChurchesTitle": "I-Umngane wakho yamabandla – Ukuhola Komoya Kwezinhlelo Zangaphakathi & Ukuhambisana KweBhayibheli",
+    "homeDesc": "I-Umngane wakho ihamba nawe ngemihumusha yeBhayibheli engu-5, indlela yokufundisa nokuqeqesha, nokuhola komoya. Ayaziwa, mahhala, ngezilimi ezingama-36.",
+    "homeTitle": "I-Umngane wakho – Umngane wakho weBhayibheli siqu | Mahhala & Ayaziwa",
+    "loginDesc": "Ngena ku-Umngane wakho ukuze ulungiselele imikhosi yakho yangempela.",
+    "loginTitle": "Ngena ngemvume – Umngane wakho"
   },
   "splash": {
     "patronage": "Ikhuthazwe yi"
