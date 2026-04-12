@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback, ReactNode } from "react";
 import { useTranslation } from "react-i18next";
-import { Sparkles, ChevronRight, BookOpen, Loader2, MessageCircle, Image, Download, Bell, Send, Smartphone, Volume2, VolumeX, XCircle, Settings2 } from "lucide-react";
+import { Sparkles, ChevronRight, BookOpen, Loader2, MessageCircle, Image, Download, Bell, Send, Smartphone, Volume2, VolumeX, XCircle, Settings2, ChevronDown, ChevronUp } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 import { Button } from "@/components/ui/button";
 import { useTTS } from "@/hooks/use-tts";
 import { openBibleBotChat } from "@/lib/chat-events";
@@ -85,6 +86,9 @@ export function DailyImpulse() {
 
   const { t, i18n } = useTranslation();
   const { toast } = useToast();
+  const isMobile = useIsMobile();
+  const [collapsed, setCollapsed] = useState(true); // will sync with isMobile on first render
+  const [collapsedInitialized, setCollapsedInitialized] = useState(false);
   const [impulse, setImpulse] = useState<Impulse | null>(getCachedImpulse);
   const [isExpanded, setIsExpanded] = useState(false);
   const [isLoading, setIsLoading] = useState(!impulse);
@@ -102,6 +106,14 @@ export function DailyImpulse() {
   const [showSmsInput, setShowSmsInput] = useState(false);
   const [smsPhone, setSmsPhone] = useState("");
   const tts = useTTS();
+
+  // Initialise collapse state based on mobile once detected
+  useEffect(() => {
+    if (!collapsedInitialized && isMobile !== undefined) {
+      setCollapsed(isMobile);
+      setCollapsedInitialized(true);
+    }
+  }, [isMobile, collapsedInitialized]);
 
   useEffect(() => {
     if (impulse) return;
@@ -346,6 +358,27 @@ export function DailyImpulse() {
 
   return (
     <div className="bg-primary/10 dark:bg-primary/15 border-b border-primary/20 overflow-hidden">
+      {/* Outer collapse toggle */}
+      <button
+        onClick={() => setCollapsed(!collapsed)}
+        className="w-full flex items-center justify-between px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+      >
+        <span className="flex items-center gap-2">
+          <BookOpen className="h-3.5 w-3.5" />
+          <span className="font-medium">Tagesimpuls</span>
+          {collapsed && impulse && (
+            <span className="text-xs opacity-70 truncate max-w-[200px]">
+              · {impulse.reference}
+            </span>
+          )}
+        </span>
+        {collapsed
+          ? <ChevronDown className="h-4 w-4" />
+          : <ChevronUp className="h-4 w-4" />
+        }
+      </button>
+
+      {!collapsed && (<>
       <div className="container mx-auto px-4 py-3 flex items-center justify-between gap-3">
         <button
           onClick={() => setIsExpanded(!isExpanded)}
@@ -634,7 +667,8 @@ export function DailyImpulse() {
             )}
           </div>
         </div>
-      )}
+      )} {/* end isExpanded */}
+      </>)} {/* end !collapsed */}
     </div>
   );
 }

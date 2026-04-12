@@ -62,16 +62,15 @@ const Index = () => {
       {/* Navigation */}
       <SiteHeader />
 
-      {/* Daily Impulse – directly under header */}
-      <Suspense fallback={<div className="h-20" />}>
-        <DailyImpulse />
-      </Suspense>
-
       {/* Chat-First Hero – above the fold */}
       <ChatHero />
 
       {/* Entry Tiles — 9 curated topic chips in 3 groups */}
       <EntryTiles />
+
+      <Suspense fallback={<div className="h-20" />}>
+        <DailyImpulse />
+      </Suspense>
 
       {/* Features Section */}
       <section id="features" className="py-20 px-4 bg-card/40">
