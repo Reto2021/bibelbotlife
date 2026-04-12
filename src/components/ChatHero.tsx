@@ -313,7 +313,7 @@ function LiveDemoPreview({ onTryIt }: { onTryIt: () => void }) {
                   ))}
                 </div>
               ) : (
-                <p className="text-sm text-foreground/90 leading-relaxed">{botText}</p>
+                <p className="font-serif text-sm text-foreground/90 leading-relaxed">{botText}</p>
               )}
             </motion.div>
           </div>
@@ -874,7 +874,7 @@ export function ChatHero() {
         onSearch={searchConversations}
       />
 
-      <section className="relative px-4 min-h-[calc(100vh-64px)] flex flex-col">
+      <section className="relative px-4 min-h-[calc(100vh-64px)] flex flex-col" style={{ backgroundImage: "radial-gradient(circle at 60% 20%, hsl(32 65% 52% / 0.06) 0%, transparent 60%), radial-gradient(circle at 20% 80%, hsl(185 45% 35% / 0.05) 0%, transparent 55%)" }}>
         {/* History toggle button */}
         {conversations.length > 0 && (
           <button
@@ -1135,7 +1135,7 @@ export function ChatHero() {
                               : "bg-card border border-border text-foreground rounded-bl-md"
                           }`}>
                             {msg.role === "assistant" ? (
-                              <div className={`prose max-w-none dark:prose-invert ${isSenior ? "prose-lg" : "prose-sm"}`}>
+                              <div className={`prose max-w-none dark:prose-invert font-serif ${isSenior ? "prose-lg" : "prose-sm"}`}>
                                 <ReactMarkdown components={{
                                   p: ({ children }) => <p>{makeRefsClickable(children, sendMessage, t("suggest.explainDetail", { ref: "{{ref}}" }))}</p>,
                                   li: ({ children }) => <li>{makeRefsClickable(children, sendMessage, t("suggest.explainDetail", { ref: "{{ref}}" }))}</li>,

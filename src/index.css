@@ -149,3 +149,17 @@
 .safe-area-bottom {
   padding-bottom: env(safe-area-inset-bottom, 0px);
 }
+
+/* Serif prose: tune line-height for Lora */
+.font-serif p,
+.font-serif li {
+  line-height: 1.75;
+}
+
+/* Bible verse quotes use warm gold left border */
+blockquote.bible-verse {
+  border-left-color: hsl(var(--primary) / 0.6);
+  background: hsl(var(--accent) / 0.25);
+  border-radius: 0 0.5rem 0.5rem 0;
+  padding: 0.5rem 1rem;
+}

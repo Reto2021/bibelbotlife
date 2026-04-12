@@ -694,7 +694,7 @@ export function BibleBotChat() {
               <div className="animate-fade-up">
                 <div className="flex justify-start">
                   <div className={`max-w-[85%] rounded-2xl rounded-bl-md px-4 py-3 text-base leading-relaxed bg-muted text-foreground`}>
-                    <div className={`prose prose-sm max-w-none dark:prose-invert`}>
+                    <div className={`prose prose-sm max-w-none dark:prose-invert font-serif`}>
                       <ReactMarkdown>{welcomeMessage.content}</ReactMarkdown>
                     </div>
                   </div>
@@ -723,7 +723,7 @@ export function BibleBotChat() {
             <div className="max-w-[85%]">
               <div className={`rounded-2xl px-4 py-3 text-base leading-relaxed ${msg.role === "user" ? "bg-primary text-primary-foreground rounded-br-md" : "bg-muted text-foreground rounded-bl-md"}`}>
                 {msg.role === "assistant" ? (
-                  <div className="prose prose-sm max-w-none dark:prose-invert">
+                  <div className="prose prose-sm max-w-none dark:prose-invert font-serif">
                     <ReactMarkdown components={{
                       p: ({ children }) => <p>{makeRefsClickable(children, sendMessage)}</p>,
                       li: ({ children }) => <li>{makeRefsClickable(children, sendMessage)}</li>,
@@ -781,7 +781,7 @@ export function BibleBotChat() {
           <div className="flex justify-start animate-fade-up">
             <div className="max-w-[85%]">
               <div className="rounded-2xl rounded-bl-md px-4 py-3 text-base leading-relaxed bg-primary/10 border border-primary/20 text-foreground">
-                <div className="prose prose-sm max-w-none dark:prose-invert">
+                <div className="prose prose-sm max-w-none dark:prose-invert font-serif">
                   <ReactMarkdown>{journeyOffer.content}</ReactMarkdown>
                 </div>
               </div>
