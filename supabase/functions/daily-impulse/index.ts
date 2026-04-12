@@ -102,6 +102,7 @@ function getChurchContext(date: Date): string {
   if (month === 12 && (day === 25 || day === 26)) return "Weihnachten – Geburt Jesu Christi";
   if (month === 12 && day === 31) return "Silvester / Jahreswechsel";
   if (month === 1 && day === 1) return "Neujahr – Neuer Anfang";
+  if (month === 1 && day === 2) return "Berchtoldstag – Schweizer Feiertag";
   if (month === 1 && day === 6) return "Dreikönigstag / Epiphanias";
   if (month === 3 && day === 19) return "Josefstag";
   if (month === 8 && day === 1) return "Schweizer Nationalfeiertag";
@@ -135,6 +136,7 @@ function getChurchContext(date: Date): string {
   if (diff === -46) return "Aschermittwoch – Beginn der Fastenzeit";
   if (diff > -46 && diff < -7) return "Fastenzeit – Vorbereitung auf Ostern";
   if (diff === 39) return "Auffahrt / Christi Himmelfahrt";
+  if (diff === 40) return "Auffahrt-Brücke – verlängertes Wochenende nach Himmelfahrt";
   if (diff === 49) return "Pfingstsonntag – Ausgiessung des Heiligen Geistes";
   if (diff === 50) return "Pfingstmontag";
   if (diff === 60) return "Fronleichnam";
