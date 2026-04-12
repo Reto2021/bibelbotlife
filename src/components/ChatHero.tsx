@@ -171,6 +171,57 @@ function makeRefsClickable(children: React.ReactNode, onRefClick: (msg: string) 
   if (Array.isArray(children)) return children.map((child, i) => <span key={i}>{processNode(child)}</span>);
   return processNode(children);
 }
+
+function extractOptions(text: string): { cleanText: string; options: string[] } {
+  const linePatterns: { line: RegExp; strip: RegExp }[] = [
+    { line: /^(\*{0,2})[a-z]\)\1\s+.+$/gm, strip: /^(\*{0,2})[a-z]\)\1\s+/ },
+    { line: /^(\*{0,2})[A-Z]\)\1\s+.+$/gm, strip: /^(\*{0,2})[A-Z]\)\1\s+/ },
+    { line: /^(\*{0,2})\d+[\).]\1\s+.+$/gm, strip: /^(\*{0,2})\d+[\).]\1\s+/ },
+    { line: /^[-–•]\s+.+$/gm, strip: /^[-–•]\s+/ },
+  ];
+
+  for (const { line, strip } of linePatterns) {
+    line.lastIndex = 0;
+    const matches = text.match(line);
+    if (matches && matches.length >= 2) {
+      let cleanText = text;
+      for (const match of matches) cleanText = cleanText.replace(match, "");
+      cleanText = cleanText.replace(/\n{3,}/g, "\n\n").trim();
+      const options = matches
+        .map((match) => match.replace(strip, "").replace(/\*{1,2}/g, "").trim())
+        .filter((option) => option.length > 2);
+
+      if (options.length >= 2) return { cleanText, options };
+    }
+  }
+
+  const flat = text.replace(/\n/g, " ").replace(/\s{2,}/g, " ").trim();
+  const inlineMarkerRe = /(\*{0,2}[a-zA-Z]\)\*{0,2}\s+|\*{0,2}\d+[\).]\*{0,2}\s+)/g;
+  const markers = [...flat.matchAll(inlineMarkerRe)];
+
+  if (markers.length >= 2) {
+    const firstIndex = markers[0].index ?? -1;
+    if (firstIndex >= 0) {
+      const cleanText = flat.slice(0, firstIndex).trim();
+      const options = markers
+        .map((marker, index) => {
+          const start = (marker.index ?? 0) + marker[0].length;
+          const end = index + 1 < markers.length ? (markers[index + 1].index ?? flat.length) : flat.length;
+          return flat
+            .slice(start, end)
+            .replace(/\*{1,2}/g, "")
+            .replace(/[.?!,;:]\s*$/, "")
+            .trim();
+        })
+        .filter((option) => option.length > 2);
+
+      if (options.length >= 2) return { cleanText, options };
+    }
+  }
+
+  return { cleanText: text, options: [] };
+}
+
 // Auto-typing demo that creates a "wow moment" in the first few seconds
 function LiveDemoPreview({ onTryIt }: { onTryIt: () => void }) {
   const { t } = useTranslation();
@@ -923,7 +974,12 @@ export function ChatHero() {
                   </div>
                 ) : (
                   <div ref={scrollRef} className="flex-1 overflow-y-auto space-y-4 pb-4 scroll-smooth">
-                    {messages.map((msg, i) => (
+                    {messages.map((msg, i) => {
+                      const { cleanText, options } = msg.role === "assistant"
+                        ? extractOptions(msg.content)
+                        : { cleanText: msg.content, options: [] as string[] };
+
+                      return (
                       <div key={i} className={`flex ${msg.role === "user" ? "justify-end" : "justify-start gap-2"}`}>
                         {msg.role === "assistant" && (
                           <img src={branding?.logoUrl || bibelbotLogo} alt="" className="h-6 w-6 rounded-full shrink-0 mt-1" />
@@ -939,10 +995,23 @@ export function ChatHero() {
                                 <ReactMarkdown components={{
                                   p: ({ children }) => <p>{makeRefsClickable(children, sendMessage, t("suggest.explainDetail", { ref: "{{ref}}" }))}</p>,
                                   li: ({ children }) => <li>{makeRefsClickable(children, sendMessage, t("suggest.explainDetail", { ref: "{{ref}}" }))}</li>,
-                                }}>{msg.content}</ReactMarkdown>
+                                }}>{cleanText}</ReactMarkdown>
                               </div>
                             ) : msg.content}
                           </div>
+                          {msg.role === "assistant" && options.length > 0 && (
+                            <div className="mt-2 flex flex-col gap-1.5">
+                              {options.map((option, optionIndex) => (
+                                <button
+                                  key={`${i}-${optionIndex}`}
+                                  onClick={() => sendMessage(option)}
+                                  className="text-left text-sm px-3.5 py-2.5 rounded-xl border border-primary/20 bg-accent/30 hover:bg-accent hover:border-primary/40 text-foreground transition-all duration-200"
+                                >
+                                  {option}
+                                </button>
+                              ))}
+                            </div>
+                          )}
                           {msg.role === "assistant" && (
                             <>
                               <div className="flex items-center gap-2 mt-1">
@@ -968,7 +1037,7 @@ export function ChatHero() {
                           )}
                         </div>
                       </div>
-                    ))}
+                    )})}
 
                     {/* Follow-up suggestion buttons */}
                     {!isLoading && messages.length >= 2 && messages[messages.length - 1]?.role === "assistant" && (
