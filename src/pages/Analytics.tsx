@@ -241,6 +241,10 @@ const Analytics = () => {
     .sort(([a], [b]) => a.localeCompare(b))
     .map(([date, count]) => ({ date: date.slice(5), Nachrichten: count }));
 
+  const webChatDailyData = Object.entries(data?.webChat?.dailyActivity || {})
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([date, count]) => ({ date: date.slice(5), Nachrichten: count }));
+
   const subscriberData = Object.entries(data?.subscribers?.byChannel || {}).map(([channel, total]) => ({
     channel: channel.charAt(0).toUpperCase() + channel.slice(1),
     total,
