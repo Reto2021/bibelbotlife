@@ -949,7 +949,10 @@
     "imageError": "Falha ao criar imagem",
     "imageErrorDesc": "Não foi possível criar a imagem.",
     "imageSaved": "Texto copiado! 📋",
-    "imageSavedDesc": "Guarda a imagem e partilha-a!"
+    "imageSavedDesc": "Guarda a imagem e partilha-a!",
+    "clipboardFallback": "Texto copiado — cole ao publicar!",
+    "recommendedBy": "Recomendado por {{church}}",
+    "hashtagBible": "#Bíblia"
   },
   "eulogy": {
     "pageTitle": "Eulogia – Criar biografia | o teu companheiro",

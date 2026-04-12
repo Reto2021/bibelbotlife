@@ -949,7 +949,10 @@
     "imageError": "Creazione immagine fallita",
     "imageErrorDesc": "L'immagine non è stata creata. Riprova più tardi.",
     "imageSaved": "Testo copiato! 📋",
-    "imageSavedDesc": "Salva l'immagine e condividila!"
+    "imageSavedDesc": "Salva l'immagine e condividila!",
+    "clipboardFallback": "Testo copiato — incollalo quando pubblichi!",
+    "recommendedBy": "Consigliato da {{church}}",
+    "hashtagBible": "#Bibbia"
   },
   "eulogy": {
     "pageTitle": "Elogio funebre – Crea un curriculum vitae | il tuo compagno",

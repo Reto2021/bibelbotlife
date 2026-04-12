@@ -338,7 +338,10 @@
     "imageError": "이미지 생성 실패",
     "imageErrorDesc": "이미지를 생성할 수 없습니다. 나중에 다시 시도해 주세요.",
     "imageSaved": "텍스트 복사됨! 📋",
-    "imageSavedDesc": "이미지를 저장하고 복사된 텍스트와 함께 Instagram, WhatsApp 또는 원하는 곳에 공유하세요!"
+    "imageSavedDesc": "이미지를 저장하고 복사된 텍스트와 함께 Instagram, WhatsApp 또는 원하는 곳에 공유하세요!",
+    "clipboardFallback": "텍스트가 복사되었습니다 — 게시할 때 붙여넣으세요!",
+    "recommendedBy": "{{church}} 추천",
+    "hashtagBible": "#성경"
   },
   "darkMode": {
     "light": "밝은 모드",

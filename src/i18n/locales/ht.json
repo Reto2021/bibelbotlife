@@ -338,7 +338,10 @@
     "imageError": "Kreyasyon imaj echwe",
     "imageErrorDesc": "Imaj la pa t ka kreye. Tanpri eseye ankò pita.",
     "imageSaved": "Tèks kopye! 📋",
-    "imageSavedDesc": "Sove imaj la epi pataje li ak tèks kopye a sou Instagram, WhatsApp oswa kote ou vle!"
+    "imageSavedDesc": "Sove imaj la epi pataje li ak tèks kopye a sou Instagram, WhatsApp oswa kote ou vle!",
+    "clipboardFallback": "Tèks kopye — kole l lè w ap poste!",
+    "recommendedBy": "Rekòmande pa {{church}}",
+    "hashtagBible": "#Bib"
   },
   "darkMode": {
     "light": "Mòd limyè",

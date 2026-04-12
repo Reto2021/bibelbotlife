@@ -343,7 +343,10 @@
     "imageError": "Bild-Erstellung fehlgeschlagen",
     "imageErrorDesc": "Das Bild konnte nicht erstellt werden. Versuche es später erneut.",
     "imageSaved": "Text kopiert! 📋",
-    "imageSavedDesc": "Speichere das Bild und teile es mit dem kopierten Text auf Instagram, WhatsApp oder wo du möchtest!"
+    "imageSavedDesc": "Speichere das Bild und teile es mit dem kopierten Text auf Instagram, WhatsApp oder wo du möchtest!",
+    "clipboardFallback": "Text kopiert — füge ihn beim Posten ein!",
+    "recommendedBy": "Empfohlen von {{church}}",
+    "hashtagBible": "#Bibel"
   },
   "darkMode": {
     "light": "Heller Modus",

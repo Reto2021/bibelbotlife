@@ -338,7 +338,10 @@
     "imageError": "ምስል መፍጠር አልተሳካም",
     "imageErrorDesc": "ምስሉ ሊፈጠር አልቻለም። ቆይተው እንደገና ይሞክሩ።",
     "imageSaved": "ጽሑፍ ተቀድቷል! 📋",
-    "imageSavedDesc": "ምስሉን ያስቀምጡ እና ከተቀዳው ጽሑፍ ጋር በInstagram፣ WhatsApp ወይም በፈለጉት ቦታ ያጋሩት!"
+    "imageSavedDesc": "ምስሉን ያስቀምጡ እና ከተቀዳው ጽሑፍ ጋር በInstagram፣ WhatsApp ወይም በፈለጉት ቦታ ያጋሩት!",
+    "clipboardFallback": "ጽሑፍ ተቀድቷል — ሲለጥፉ ይለጥፉት!",
+    "recommendedBy": "በ{{church}} የተመከረ",
+    "hashtagBible": "#መጽሐፍ_ቅዱስ"
   },
   "darkMode": {
     "light": "ብሩህ ሁነታ",

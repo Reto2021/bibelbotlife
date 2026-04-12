@@ -949,7 +949,10 @@
     "imageError": "Nie udało się utworzyć obrazu",
     "imageErrorDesc": "Nie można utworzyć obrazu. Spróbuj później.",
     "imageSaved": "Tekst skopiowany! 📋",
-    "imageSavedDesc": "Zapisz obraz i udostępnij go!"
+    "imageSavedDesc": "Zapisz obraz i udostępnij go!",
+    "clipboardFallback": "Tekst skopiowany — wklej go przy publikacji!",
+    "recommendedBy": "Polecane przez {{church}}",
+    "hashtagBible": "#Biblia"
   },
   "eulogy": {
     "pageTitle": "Mowa pogrzebowa – stwórz życiorys | twój towarzysz",

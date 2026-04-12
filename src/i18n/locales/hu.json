@@ -338,7 +338,10 @@
     "imageError": "Kép létrehozása sikertelen",
     "imageErrorDesc": "A kép nem hozható létre. Kérjük, próbálja meg később.",
     "imageSaved": "Szöveg másolva! 📋",
-    "imageSavedDesc": "Mentse el a képet, és ossza meg a másolt szöveggel Instagramon, WhatsAppon vagy ahol szeretné!"
+    "imageSavedDesc": "Mentse el a képet, és ossza meg a másolt szöveggel Instagramon, WhatsAppon vagy ahol szeretné!",
+    "clipboardFallback": "Szöveg másolva — illeszd be posztoláskor!",
+    "recommendedBy": "Ajánlja: {{church}}",
+    "hashtagBible": "#Biblia"
   },
   "darkMode": {
     "light": "Világos mód",

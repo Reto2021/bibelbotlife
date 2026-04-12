@@ -338,7 +338,10 @@
     "imageError": "Image creation failed",
     "imageErrorDesc": "The image could not be created. Please try again later.",
     "imageSaved": "Text copied! 📋",
-    "imageSavedDesc": "Save the image and share it with the copied text on Instagram, WhatsApp or wherever you like!"
+    "imageSavedDesc": "Save the image and share it with the copied text on Instagram, WhatsApp or wherever you like!",
+    "clipboardFallback": "Text copiat — lipește-l când postezi!",
+    "recommendedBy": "Recomandat de {{church}}",
+    "hashtagBible": "#Biblia"
   },
   "darkMode": {
     "light": "Mod luminos",

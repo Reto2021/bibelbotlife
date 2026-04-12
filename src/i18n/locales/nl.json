@@ -338,7 +338,10 @@
     "imageError": "Afbeelding maken mislukt",
     "imageErrorDesc": "De afbeelding kon niet worden gemaakt.",
     "imageSaved": "Tekst gekopieerd! 📋",
-    "imageSavedDesc": "Sla de afbeelding op en deel hem!"
+    "imageSavedDesc": "Sla de afbeelding op en deel hem!",
+    "clipboardFallback": "Tekst gekopieerd — plak het bij het posten!",
+    "recommendedBy": "Aanbevolen door {{church}}",
+    "hashtagBible": "#Bijbel"
   },
   "darkMode": {
     "light": "Lichte modus",

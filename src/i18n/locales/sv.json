@@ -338,7 +338,10 @@
     "imageError": "Bildskapande misslyckades",
     "imageErrorDesc": "Bilden kunde inte skapas. Försök igen senare.",
     "imageSaved": "Text kopierad! 📋",
-    "imageSavedDesc": "Spara bilden och dela den med den kopierade texten på Instagram, WhatsApp eller var du vill!"
+    "imageSavedDesc": "Spara bilden och dela den med den kopierade texten på Instagram, WhatsApp eller var du vill!",
+    "clipboardFallback": "Text kopierad — klistra in den när du postar!",
+    "recommendedBy": "Rekommenderad av {{church}}",
+    "hashtagBible": "#Bibeln"
   },
   "darkMode": {
     "light": "Ljust läge",

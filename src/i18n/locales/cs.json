@@ -949,7 +949,10 @@
     "imageError": "Vytvoření obrázku selhalo",
     "imageErrorDesc": "Obrázek se nepodařilo vytvořit.",
     "imageSaved": "Text zkopírován! 📋",
-    "imageSavedDesc": "Uložte obrázek a sdílejte ho!"
+    "imageSavedDesc": "Uložte obrázek a sdílejte ho!",
+    "clipboardFallback": "Text zkopírován — vložte ho při zveřejnění!",
+    "recommendedBy": "Doporučeno od {{church}}",
+    "hashtagBible": "#Bible"
   },
   "eulogy": {
     "pageTitle": "Rozloučení – vytvořit životopis | tvůj společník",

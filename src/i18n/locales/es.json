@@ -949,7 +949,10 @@
     "imageError": "Error al crear imagen",
     "imageErrorDesc": "No se pudo crear la imagen. Inténtalo más tarde.",
     "imageSaved": "¡Texto copiado! 📋",
-    "imageSavedDesc": "¡Guarda la imagen y compártela!"
+    "imageSavedDesc": "¡Guarda la imagen y compártela!",
+    "clipboardFallback": "Texto copiado — ¡pégalo al publicar!",
+    "recommendedBy": "Recomendado por {{church}}",
+    "hashtagBible": "#Biblia"
   },
   "eulogy": {
     "pageTitle": "Elogio – Crear biografía | tu compañero",
