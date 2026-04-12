@@ -115,6 +115,20 @@ export function DailySubscribe() {
         <p className="text-muted-foreground">{t("subscribe.subtitle")}</p>
       </div>
 
+      {/* Sample impulse preview */}
+      <div className="mb-6 rounded-xl border border-border bg-muted/40 p-3.5">
+        <p className="text-[10px] font-semibold uppercase tracking-wide text-muted-foreground mb-2">{t("subscribe.previewLabel", "So sieht dein täglicher Impuls aus")}</p>
+        <div className="flex gap-2.5 items-start">
+          <div className="h-7 w-7 rounded-full bg-primary/15 flex items-center justify-center shrink-0 mt-0.5">
+            <Bell className="h-3.5 w-3.5 text-primary" />
+          </div>
+          <div>
+            <p className="text-xs font-semibold text-foreground">{t("subscribe.previewTitle", "BibleBot · Täglicher Impuls")}</p>
+            <p className="text-xs text-muted-foreground mt-0.5 leading-relaxed">{t("subscribe.previewText", "«Fürchte dich nicht, denn ich bin bei dir.» – Jesaja 41,10 · Was macht dir heute Mut?")}</p>
+          </div>
+        </div>
+      </div>
+
       <div className="mb-5">
         <label className="block text-sm font-medium text-foreground mb-1.5">
           {t("subscribe.firstName")} <span className="text-muted-foreground font-normal">{t("subscribe.firstNameOptional")}</span>

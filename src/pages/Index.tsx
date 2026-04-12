@@ -96,6 +96,75 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Audience Split — who is this for? */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-foreground mb-3">{t("audience.title", "Für wen ist BibleBot.Life?")}</h2>
+            <p className="text-muted-foreground">{t("audience.subtitle", "Wähle deinen Weg")}</p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Personal use */}
+            <Card className="bg-card/80 backdrop-blur-sm border-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col">
+              <CardHeader>
+                <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mb-3">
+                  <Heart className="h-6 w-6 text-primary" />
+                </div>
+                <CardTitle className="text-xl">{t("audience.personal.title", "Ich suche persönliche Begleitung")}</CardTitle>
+                <CardDescription className="leading-relaxed">{t("audience.personal.desc", "Fragen zum Glauben, tägliche Impulse, spirituelles Wachstum — ganz in deinem Tempo und ohne Bewertung.")}</CardDescription>
+              </CardHeader>
+              <CardContent className="mt-auto">
+                <ul className="space-y-2 mb-5">
+                  {[
+                    t("audience.personal.f1", "Chat mit Bibelbegleitung"),
+                    t("audience.personal.f2", "21-Tage-Reise"),
+                    t("audience.personal.f3", "Täglicher Impuls per Push / Telegram"),
+                    t("audience.personal.f4", "Persönlicher Gesprächsverlauf"),
+                  ].map((item) => (
+                    <li key={item} className="flex items-center gap-2 text-sm text-foreground/80">
+                      <CheckCircle2 className="h-4 w-4 text-primary shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <Button asChild className="w-full" size="lg">
+                  <a href="#chat">{t("audience.personal.cta", "Jetzt chatten — kostenlos →")}</a>
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Church / celebrant use */}
+            <Card className="bg-card/80 backdrop-blur-sm border-secondary/30 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col">
+              <CardHeader>
+                <div className="h-12 w-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-3">
+                  <Church className="h-6 w-6 text-secondary" />
+                </div>
+                <CardTitle className="text-xl">{t("audience.church.title", "Ich plane Gottesdienste & begleite Menschen")}</CardTitle>
+                <CardDescription className="leading-relaxed">{t("audience.church.desc", "Für Pfarrpersonen, Seelsorger und Gemeindeteams: KI-Unterstützung für Predigtvorbereitung, Teamplanung und mehr.")}</CardDescription>
+              </CardHeader>
+              <CardContent className="mt-auto">
+                <ul className="space-y-2 mb-5">
+                  {[
+                    t("audience.church.f1", "Gottesdienst-Planer mit KI"),
+                    t("audience.church.f2", "Ressourcen-Bibliothek"),
+                    t("audience.church.f3", "Team-Koordination"),
+                    t("audience.church.f4", "Gemeinde-Seite & Verzeichnis"),
+                  ].map((item) => (
+                    <li key={item} className="flex items-center gap-2 text-sm text-foreground/80">
+                      <CheckCircle2 className="h-4 w-4 text-secondary shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <Button asChild variant="outline" className="w-full border-secondary/40 hover:bg-secondary/10 hover:text-secondary" size="lg">
+                  <Link to="/for-churches">{t("audience.church.cta", "Für Gemeinden & Seelsorger →")}</Link>
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Coaching-Methodik Section */}
       <section className="py-20 px-4 bg-card/40">
         <div className="container mx-auto max-w-5xl">

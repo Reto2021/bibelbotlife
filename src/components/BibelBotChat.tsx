@@ -363,12 +363,13 @@ export function BibleBotChat() {
       localStorage.setItem("bibelbot-visited", "1");
     }
 
-    const openDelay = isFirstEverVisit ? 1200 : 3000;
-    const teaserDelay = isFirstEverVisit ? 400 : 1500;
+    const teaserDelay = isFirstEverVisit ? 2000 : 5000;
 
-    const teaserTimer = setTimeout(() => setShowTeaser(true), teaserDelay);
-    const openTimer = setTimeout(() => { setIsOpen(true); setShowTeaser(false); sessionStorage.setItem(AUTO_OPEN_KEY, "1"); }, openDelay);
-    return () => { clearTimeout(teaserTimer); clearTimeout(openTimer); };
+    const teaserTimer = setTimeout(() => {
+      setShowTeaser(true);
+      sessionStorage.setItem(AUTO_OPEN_KEY, "1");
+    }, teaserDelay);
+    return () => { clearTimeout(teaserTimer); };
   }, []);
 
   useEffect(() => {
@@ -378,7 +379,13 @@ export function BibleBotChat() {
     }
   }, [isOpen, messages.length, showWelcome]);
 
-  // Journey offer removed from public chat — only available in login area
+  useEffect(() => {
+    const assistantMessages = messages.filter((m) => m.role === "assistant").length;
+    if (assistantMessages >= 2 && getJourneyDay() === 0 && !showJourneyOffer && !isJourneyDismissed()) {
+      const timer = setTimeout(() => setShowJourneyOffer(true), 1200);
+      return () => clearTimeout(timer);
+    }
+  }, [messages, showJourneyOffer]);
 
   useEffect(() => {
     if (messages.length >= 2 && botName === DEFAULT_BOT_NAME && !showRenameTip) {
@@ -770,7 +777,31 @@ export function BibleBotChat() {
           );
         })}
 
-        {/* Journey offer removed from public chat */}
+        {showJourneyOffer && (
+          <div className="flex justify-start animate-fade-up">
+            <div className="max-w-[85%]">
+              <div className="rounded-2xl rounded-bl-md px-4 py-3 text-base leading-relaxed bg-primary/10 border border-primary/20 text-foreground">
+                <div className="prose prose-sm max-w-none dark:prose-invert">
+                  <ReactMarkdown>{journeyOffer.content}</ReactMarkdown>
+                </div>
+              </div>
+              <div className="flex gap-2 mt-2">
+                <button
+                  onClick={() => { startJourney(); setJourneyDay(1); setShowJourneyOffer(false); sendMessage(t("chat.journeyStart", "Ja, ich möchte die 21-Tage-Begleitung starten!")); }}
+                  className="text-sm px-3.5 py-2 rounded-xl border border-primary/30 bg-primary/10 hover:bg-primary/20 text-primary font-medium transition-all"
+                >
+                  {t("chat.journeyYes", "Ja, gerne!")}
+                </button>
+                <button
+                  onClick={() => { dismissJourney(); setShowJourneyOffer(false); }}
+                  className="text-sm px-3.5 py-2 rounded-xl border border-border hover:bg-muted text-muted-foreground transition-all"
+                >
+                  {t("chat.journeyNo", "Vielleicht später")}
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
 
         {isLoading && messages[messages.length - 1]?.role !== "assistant" && (
           <div className="flex justify-start">

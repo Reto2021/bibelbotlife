@@ -121,7 +121,9 @@ const Login = () => {
             <CardDescription>
               {mode === "forgot"
                 ? t("auth.forgotDesc", "Gib deine E-Mail-Adresse ein.")
-                : t("auth.syncDesc", "Synchronisiere deine Gespräche auf allen Geräten.")}
+                : mode === "signup"
+                  ? t("auth.signupDesc", "Speichere deinen Verlauf, starte deine 21-Tage-Begleitung und erhalte persönliche Impulse.")
+                  : t("auth.syncDesc", "Dein Verlauf und deine Begleitung — auf allen Geräten.")}
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
