@@ -1,328 +1,146 @@
-import { useState, useRef, useCallback, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ChevronLeft, ChevronRight, ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp } from "lucide-react";
+import { useState } from "react";
 import { openBibleBotChat } from "@/lib/chat-events";
 import { openLifeWheel } from "@/components/LifeWheel";
 import { useTrack } from "@/components/AnalyticsProvider";
-import { useIsMobile } from "@/hooks/use-mobile";
+import { useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
 
 type TileConfig = {
   emoji: string;
   key: string;
-  accentClass: string;
-  bgClass: string;
+  label: string;
   special?: "lifewheel" | "sevenwhys";
   href?: string;
 };
 
-const allTiles: TileConfig[] = [
-  // Casual / curiosity-driven (front)
-  { emoji: "🤔", key: "namequiz", accentClass: "bg-primary", bgClass: "bg-card" },
-  { emoji: "☕", key: "dailywisdom", accentClass: "bg-primary", bgClass: "bg-card" },
-  { emoji: "🌅", key: "morningstart", accentClass: "bg-secondary", bgClass: "bg-card" },
-  { emoji: "🎲", key: "funfact", accentClass: "bg-secondary", bgClass: "bg-card" },
-  { emoji: "💡", key: "lifehack", accentClass: "bg-primary", bgClass: "bg-card" },
-  { emoji: "🌟", key: "strengths", accentClass: "bg-secondary", bgClass: "bg-card" },
-  { emoji: "✨", key: "inspiration", accentClass: "bg-primary", bgClass: "bg-card" },
-  { emoji: "🎡", key: "lifewheel", accentClass: "bg-gradient-to-r from-primary to-secondary", bgClass: "bg-card", special: "lifewheel" },
-  { emoji: "👨‍👩‍👧", key: "family", accentClass: "bg-primary", bgClass: "bg-card" },
-  { emoji: "😴", key: "relax", accentClass: "bg-secondary", bgClass: "bg-card" },
-  { emoji: "📜", key: "quoteofday", accentClass: "bg-primary", bgClass: "bg-card" },
-  { emoji: "🙏", key: "thankfulness", accentClass: "bg-secondary", bgClass: "bg-card" },
-  { emoji: "❓", key: "biblesays", accentClass: "bg-primary", bgClass: "bg-card" },
-  // Positive / lighter
-  { emoji: "🙌", key: "gratitude", accentClass: "bg-primary", bgClass: "bg-card" },
-  { emoji: "🎊", key: "joy", accentClass: "bg-secondary", bgClass: "bg-card" },
-  { emoji: "📖", key: "bibleverse", accentClass: "bg-secondary", bgClass: "bg-card" },
-  { emoji: "🔍", key: "sevenwhys", accentClass: "bg-gradient-to-r from-secondary to-primary", bgClass: "bg-card", special: "sevenwhys" },
-  // Deeper topics
-  { emoji: "🙏", key: "prayer", accentClass: "bg-primary", bgClass: "bg-card" },
-  { emoji: "🕊️", key: "baptism", accentClass: "bg-primary", bgClass: "bg-card" },
-  { emoji: "💔", key: "heartbreak", accentClass: "bg-secondary", bgClass: "bg-card" },
-  { emoji: "😰", key: "anxiety", accentClass: "bg-secondary", bgClass: "bg-card" },
-  { emoji: "🌅", key: "newstart", accentClass: "bg-secondary", bgClass: "bg-card" },
-  { emoji: "💐", key: "condolence", accentClass: "bg-secondary", bgClass: "bg-card" },
-  { emoji: "💍", key: "wedding", accentClass: "bg-primary", bgClass: "bg-card" },
-  { emoji: "🙏", key: "confession", accentClass: "bg-primary", bgClass: "bg-card" },
-  { emoji: "🫂", key: "loneliness", accentClass: "bg-primary", bgClass: "bg-card" },
-  { emoji: "⚖️", key: "decision", accentClass: "bg-secondary", bgClass: "bg-card" },
-  { emoji: "😡", key: "anger", accentClass: "bg-secondary", bgClass: "bg-card" },
-  { emoji: "😔", key: "shame", accentClass: "bg-primary", bgClass: "bg-card" },
-  { emoji: "😢", key: "burnout", accentClass: "bg-secondary", bgClass: "bg-card" },
-  { emoji: "🏥", key: "illness", accentClass: "bg-primary", bgClass: "bg-card" },
-  { emoji: "💸", key: "financial", accentClass: "bg-secondary", bgClass: "bg-card" },
-  { emoji: "🤷", key: "meaningcrisis", accentClass: "bg-primary", bgClass: "bg-card" },
-  { emoji: "🪞", key: "selfdoubt", accentClass: "bg-secondary", bgClass: "bg-card" },
-  { emoji: "🧭", key: "calling", accentClass: "bg-primary", bgClass: "bg-card" },
-  { emoji: "⛪", key: "faithdoubt", accentClass: "bg-secondary", bgClass: "bg-card" },
-  { emoji: "🤝", key: "forgiveness", accentClass: "bg-primary", bgClass: "bg-card" },
-  { emoji: "👪", key: "familyconflict", accentClass: "bg-secondary", bgClass: "bg-card" },
-  { emoji: "🫣", key: "envy", accentClass: "bg-primary", bgClass: "bg-card" },
-  { emoji: "🌙", key: "sleepless", accentClass: "bg-secondary", bgClass: "bg-card" },
-  // Navigation tiles
-  { emoji: "🙏", key: "prayerwall", accentClass: "bg-gradient-to-r from-primary to-secondary", bgClass: "bg-card", href: "/gebetswand" },
-  { emoji: "🧠", key: "biblequiz", accentClass: "bg-gradient-to-r from-secondary to-primary", bgClass: "bg-card", href: "/bibelquiz" },
+const PRIMARY_TILES: TileConfig[] = [
+  { emoji: "😰", key: "anxiety",    label: "Ich mache mir Sorgen" },
+  { emoji: "💔", key: "heartbreak", label: "Ich bin verletzt" },
+  { emoji: "🫂", key: "loneliness", label: "Ich fühle mich allein" },
 ];
 
-const MOBILE_INITIAL_COUNT = 9;
+const SECONDARY_TILES: TileConfig[] = [
+  { emoji: "⚖️", key: "decision", label: "Ich stehe vor einer Entscheidung" },
+  { emoji: "🌱", key: "newstart",  label: "Ich will neu anfangen" },
+  { emoji: "🧭", key: "calling",   label: "Was ist mein Weg?" },
+];
+
+const DEEP_TILES: TileConfig[] = [
+  { emoji: "📖", key: "bibleverse", label: "Bibelstelle verstehen" },
+  { emoji: "🔍", key: "sevenwhys",  label: "Warum tue ich das wirklich?", special: "sevenwhys" },
+  { emoji: "🎡", key: "lifewheel",  label: "Wo stehe ich im Leben?", special: "lifewheel" },
+];
+
+const MORE_TILES: TileConfig[] = [
+  { emoji: "🙏", key: "thankfulness",  label: "Dankbarkeit" },
+  { emoji: "😢", key: "burnout",       label: "Erschöpfung" },
+  { emoji: "🤷", key: "meaningcrisis", label: "Sinnkrise" },
+  { emoji: "🪞", key: "selfdoubt",     label: "Selbstzweifel" },
+  { emoji: "😡", key: "anger",         label: "Wut & Ärger" },
+  { emoji: "💸", key: "financial",     label: "Finanzielle Sorgen" },
+  { emoji: "🏥", key: "illness",       label: "Krankheit" },
+  { emoji: "💐", key: "condolence",    label: "Trauer & Verlust" },
+  { emoji: "💍", key: "wedding",       label: "Heirat & Partnerschaft" },
+  { emoji: "🕊️", key: "baptism",      label: "Taufe & Glaubensweg" },
+  { emoji: "⛪", key: "faithdoubt",    label: "Glaubenszweifel" },
+  { emoji: "🤝", key: "forgiveness",   label: "Vergeben & Loslassen" },
+  { emoji: "🌙", key: "sleepless",     label: "Schlaflosigkeit" },
+  { emoji: "🧠", key: "biblequiz",     label: "Bibelquiz", href: "/bibelquiz" },
+  { emoji: "🙏", key: "prayerwall",    label: "Gebetswand", href: "/gebetswand" },
+];
+
+const GROUPS = [
+  { label: "Mir geht etwas nach",    tiles: PRIMARY_TILES,   accent: "text-amber-600 dark:text-amber-400" },
+  { label: "Ich suche Orientierung", tiles: SECONDARY_TILES, accent: "text-teal-600 dark:text-teal-400" },
+  { label: "Ich will tiefer gehen",  tiles: DEEP_TILES,      accent: "text-primary" },
+];
 
 export function EntryTiles() {
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(true);
-  const [showAll, setShowAll] = useState(false);
-
   const { t } = useTranslation();
   const { track } = useTrack();
   const navigate = useNavigate();
-  const isMobile = useIsMobile();
+  const [showMore, setShowMore] = useState(false);
 
-  const checkScroll = useCallback(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-    setCanScrollLeft(el.scrollLeft > 4);
-    setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 4);
-  }, []);
-
-  useEffect(() => {
-    if (isMobile) return;
-    const el = scrollRef.current;
-    if (!el) return;
-    checkScroll();
-    el.addEventListener("scroll", checkScroll, { passive: true });
-    window.addEventListener("resize", checkScroll);
-    return () => {
-      el.removeEventListener("scroll", checkScroll);
-      window.removeEventListener("resize", checkScroll);
-    };
-  }, [checkScroll, isMobile]);
-
-  const scroll = (direction: "left" | "right") => {
-    const el = scrollRef.current;
-    if (!el) return;
-    const scrollAmount = el.clientWidth * 0.7;
-    el.scrollBy({ left: direction === "right" ? scrollAmount : -scrollAmount, behavior: "smooth" });
-  };
-
-  const getRandomPrompt = (tileKey: string): string => {
-    const variants: string[] = [];
+  const getPrompt = (key: string): string => {
     for (let i = 1; i <= 3; i++) {
-      const key = `tiles.${tileKey}.prompt_v${i}`;
-      const val = t(key);
-      if (val !== key) variants.push(val);
+      const k = `tiles.${key}.prompt_v${i}`;
+      const v = t(k);
+      if (v !== k) return v;
     }
-    if (variants.length > 0) {
-      return variants[Math.floor(Math.random() * variants.length)];
-    }
-    return t(`tiles.${tileKey}.prompt`);
+    const fallback = t(`tiles.${key}.prompt`);
+    return fallback !== `tiles.${key}.prompt` ? fallback : key;
   };
 
   const handleClick = (tile: TileConfig) => {
-    track("tile_click", { tile: tile.key, special: tile.special || tile.href ? "navigate" : "chat" });
-    if (tile.href) {
-      navigate(tile.href);
-    } else if (tile.special === "lifewheel") {
-      openLifeWheel();
-    } else if (tile.special === "sevenwhys") {
-      openBibleBotChat(getRandomPrompt(tile.key), "seven-whys");
-    } else {
-      openBibleBotChat(getRandomPrompt(tile.key));
-    }
+    track("tile_click", { tile: tile.key });
+    if (tile.href) { navigate(tile.href); return; }
+    if (tile.special === "lifewheel") { openLifeWheel(); return; }
+    openBibleBotChat(getPrompt(tile.key), tile.special === "sevenwhys" ? "seven-whys" : "normal");
   };
 
-  // Mobile: wrapping chips layout
-  if (isMobile) {
-    const visibleTiles = showAll ? allTiles : allTiles.slice(0, MOBILE_INITIAL_COUNT);
-    return (
-      <section className="py-8 px-4">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-5">
-            <h2 className="text-2xl font-bold text-foreground mb-2">
-              {t("tiles.sectionTitle")}
-            </h2>
-            <p className="text-muted-foreground text-sm">
-              {t("tiles.sectionSubtitle")}
-            </p>
-          </div>
+  return (
+    <section className="py-10 px-4">
+      <div className="container mx-auto max-w-3xl">
 
-          <div className="flex flex-wrap gap-2 justify-center">
-            {visibleTiles.map((tile, i) => (
-              <motion.button
+        {GROUPS.map((group) => (
+          <div key={group.label} className="mb-6">
+            <p className={cn("text-xs font-semibold uppercase tracking-wider mb-3", group.accent)}>
+              {group.label}
+            </p>
+            <div className="grid grid-cols-3 gap-3">
+              {group.tiles.map((tile, i) => (
+                <motion.button
+                  key={tile.key}
+                  onClick={() => handleClick(tile)}
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.2, delay: i * 0.05 }}
+                  whileTap={{ scale: 0.96 }}
+                  className="flex flex-col items-center gap-1.5 p-3 rounded-xl border border-border bg-card hover:border-primary/40 hover:bg-primary/5 transition-colors text-center"
+                >
+                  <span className="text-2xl" role="img">{tile.emoji}</span>
+                  <span className="text-xs font-medium text-foreground leading-tight">
+                    {tile.label}
+                  </span>
+                </motion.button>
+              ))}
+            </div>
+          </div>
+        ))}
+
+        {/* Mehr Themen */}
+        <div className="flex justify-center mt-2">
+          <button
+            onClick={() => setShowMore(!showMore)}
+            className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors"
+          >
+            {showMore ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
+            {showMore ? "Weniger anzeigen" : "Weitere Themen entdecken"}
+          </button>
+        </div>
+
+        {showMore && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            className="mt-4 flex flex-wrap gap-2 justify-center"
+          >
+            {MORE_TILES.map((tile) => (
+              <button
                 key={tile.key}
                 onClick={() => handleClick(tile)}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.2, delay: Math.min(i * 0.03, 0.3) }}
-                whileTap={{ scale: 0.95 }}
-                className={cn(
-                  "inline-flex items-center gap-1.5 px-3 py-2 rounded-full border border-border",
-                  "text-sm font-medium text-foreground",
-                  "hover:border-primary/40 hover:bg-primary/5 active:bg-primary/10",
-                  "transition-colors duration-200",
-                  tile.bgClass
-                )}
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-border text-sm text-foreground hover:border-primary/40 hover:bg-primary/5 transition-colors"
               >
-                <span className="text-base" role="img">{tile.emoji}</span>
-                <span className="whitespace-nowrap">{t(`tiles.${tile.key}.title`)}</span>
-              </motion.button>
-            ))}
-          </div>
-
-          {allTiles.length > MOBILE_INITIAL_COUNT && (
-            <div className="flex justify-center mt-4">
-              <button
-                onClick={() => setShowAll(!showAll)}
-                className="flex items-center gap-1.5 text-sm text-primary hover:text-primary/80 font-medium transition-colors"
-              >
-                {showAll ? (
-                  <>
-                    <ChevronUp className="h-4 w-4" />
-                    {t("tiles.showLess", "Weniger anzeigen")}
-                  </>
-                ) : (
-                  <>
-                    <ChevronDown className="h-4 w-4" />
-                    {t("tiles.showMore", "Mehr Themen entdecken")}
-                  </>
-                )}
+                <span role="img">{tile.emoji}</span>
+                {tile.label}
               </button>
-            </div>
-          )}
-        </div>
-      </section>
-    );
-  }
-
-  // Desktop: 2-row horizontal carousel
-  const half = Math.ceil(allTiles.length / 2);
-  const row1 = allTiles.slice(0, half);
-  const row2 = allTiles.slice(half);
-
-  return (
-    <section className="py-12 px-4">
-      <div className="container mx-auto max-w-5xl">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-            {t("tiles.sectionTitle")}
-          </h2>
-          <p className="text-muted-foreground text-lg">
-            {t("tiles.sectionSubtitle")}
-          </p>
-        </div>
-
-        <div className="relative group/carousel">
-          {canScrollLeft && (
-            <button
-              onClick={() => scroll("left")}
-              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 h-10 w-10 rounded-full bg-card border border-border shadow-md flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/40 transition-all -ml-2 md:-ml-5"
-              aria-label="Nach links scrollen"
-            >
-              <ChevronLeft className="h-5 w-5" />
-            </button>
-          )}
-
-          {canScrollRight && (
-            <button
-              onClick={() => scroll("right")}
-              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 h-10 w-10 rounded-full bg-card border border-border shadow-md flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/40 transition-all -mr-2 md:-mr-5"
-              aria-label="Nach rechts scrollen"
-            >
-              <ChevronRight className="h-5 w-5" />
-            </button>
-          )}
-
-          {canScrollLeft && (
-            <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-background to-transparent z-[5] pointer-events-none" />
-          )}
-          {canScrollRight && (
-            <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-background to-transparent z-[5] pointer-events-none" />
-          )}
-
-          <div
-            ref={scrollRef}
-            className="overflow-x-auto scrollbar-hide"
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-          >
-            <div className="flex flex-col gap-3 w-max">
-              <div className="flex gap-3">
-                {row1.map((tile, i) => (
-                  <TileCard
-                    key={tile.key}
-                    tile={tile}
-                    title={t(`tiles.${tile.key}.title`)}
-                    desc={t(`tiles.${tile.key}.desc`)}
-                    onClick={() => handleClick(tile)}
-                    index={i}
-                  />
-                ))}
-              </div>
-              <div className="flex gap-3">
-                {row2.map((tile, i) => (
-                  <TileCard
-                    key={tile.key}
-                    tile={tile}
-                    title={t(`tiles.${tile.key}.title`)}
-                    desc={t(`tiles.${tile.key}.desc`)}
-                    onClick={() => handleClick(tile)}
-                    index={i}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
+            ))}
+          </motion.div>
+        )}
       </div>
     </section>
-  );
-}
-
-function TileCard({
-  tile,
-  title,
-  desc,
-  onClick,
-  className,
-  index = 0,
-}: {
-  tile: TileConfig;
-  title: string;
-  desc: string;
-  onClick: () => void;
-  className?: string;
-  index?: number;
-}) {
-  return (
-    <motion.button
-      onClick={onClick}
-      initial={{ opacity: 0, y: 12 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-20px" }}
-      transition={{ duration: 0.3, delay: Math.min(index * 0.04, 0.3), ease: "easeOut" }}
-      whileHover={{ y: -3, boxShadow: "0 8px 20px -6px hsl(var(--primary) / 0.12)" }}
-      whileTap={{ scale: 0.97 }}
-      className={cn(
-        "group relative text-left rounded-xl border border-border p-4 cursor-pointer flex-shrink-0 w-[200px] md:w-[220px]",
-        "hover:border-primary/30 transition-colors",
-        tile.bgClass,
-        className
-      )}
-    >
-      <div className="flex items-start gap-3">
-        <span className="text-2xl flex-shrink-0" role="img">
-          {tile.emoji}
-        </span>
-        <div className="min-w-0">
-          <h3 className="font-semibold text-foreground text-sm leading-tight">
-            {title}
-          </h3>
-          <p className="text-muted-foreground text-xs leading-snug mt-0.5 line-clamp-2">
-            {desc}
-          </p>
-        </div>
-      </div>
-    </motion.button>
   );
 }

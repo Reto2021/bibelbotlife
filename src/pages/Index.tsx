@@ -1,13 +1,14 @@
 import { lazy, Suspense } from "react";
 import { SEOHead } from "@/components/SEOHead";
 import { useTranslation } from "react-i18next";
-import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, GraduationCap, Church, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass, Send, Building2 } from "lucide-react";
+import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, GraduationCap, Church, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass, Send, Building2, Shield, EyeOff } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { ChurchBanner } from "@/components/ChurchBanner";
 import { ReferralSection } from "@/components/ReferralSection";
-// EntryTiles removed - chips are now in ChatHero
+import { EntryTiles } from "@/components/EntryTiles";
 import { ChatHero } from "@/components/ChatHero";
-import { LifeWheelProvider } from "@/components/LifeWheel";
+import { LifeWheelProvider, openLifeWheel } from "@/components/LifeWheel";
+import { openBibleBotChat } from "@/lib/chat-events";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { AppLogo } from "@/components/AppLogo";
@@ -62,15 +63,15 @@ const Index = () => {
       {/* Navigation */}
       <SiteHeader />
 
-      {/* Daily Impulse – directly under header */}
-      <Suspense fallback={<div className="h-20" />}>
-        <DailyImpulse />
-      </Suspense>
-
       {/* Chat-First Hero – above the fold */}
       <ChatHero />
 
-      {/* Entry Tiles removed - integrated as chips in ChatHero */}
+      {/* Entry Tiles — 9 curated topic chips in 3 groups */}
+      <EntryTiles />
+
+      <Suspense fallback={<div className="h-20" />}>
+        <DailyImpulse />
+      </Suspense>
 
       {/* Features Section */}
       <section id="features" className="py-20 px-4 bg-card/40">
@@ -96,105 +97,104 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Coaching-Methodik Section */}
-      <section className="py-20 px-4 bg-card/40">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 text-sm font-medium text-primary bg-primary/10 px-4 py-1.5 rounded-full mb-4">
-              <Brain className="h-4 w-4" />
-              {t("coaching.badge")}
-            </div>
-            <h2 className="text-4xl font-bold text-foreground mb-4">{t("coaching.title")}</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{t("coaching.subtitle")}</p>
+      {/* Audience Split — who is this for? */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-foreground mb-3">{t("audience.title", "Für wen ist BibleBot.Life?")}</h2>
+            <p className="text-muted-foreground">{t("audience.subtitle", "Wähle deinen Weg")}</p>
           </div>
-
-          {/* 21-Tage Journey */}
-          <div className="bg-card/80 backdrop-blur-sm rounded-2xl border border-border p-8 mb-10">
-            <div className="flex items-start gap-4 mb-6">
-              <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-                <Calendar className="h-6 w-6 text-primary" />
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-foreground mb-2">{t("coaching.journeyTitle")}</h3>
-                <p className="text-muted-foreground">{t("coaching.journeyDesc")}</p>
-              </div>
-            </div>
-            <div className="grid md:grid-cols-3 gap-6">
-              {[
-                { num: 1, title: t("coaching.week1"), desc: t("coaching.week1Desc") },
-                { num: 2, title: t("coaching.week2"), desc: t("coaching.week2Desc") },
-                { num: 3, title: t("coaching.week3"), desc: t("coaching.week3Desc") },
-              ].map((w) => (
-                <div key={w.num}>
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="h-8 w-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">{w.num}</span>
-                    <span className="font-semibold text-foreground">{w.title}</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{w.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Fragetechniken */}
-          <div className="grid md:grid-cols-2 gap-6 mb-10">
-            <Card className="bg-card/80 border-border">
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Personal use */}
+            <Card className="bg-card/80 backdrop-blur-sm border-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col">
               <CardHeader>
-                <div className="h-10 w-10 rounded-lg bg-secondary/10 flex items-center justify-center mb-2">
-                  <MessageCircle className="h-5 w-5 text-secondary" />
+                <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mb-3">
+                  <Heart className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle className="text-lg">{t("coaching.openQuestionsTitle")}</CardTitle>
+                <CardTitle className="text-xl">{t("audience.personal.title", "Ich suche persönliche Begleitung")}</CardTitle>
+                <CardDescription className="leading-relaxed">{t("audience.personal.desc", "Fragen zum Glauben, tägliche Impulse, spirituelles Wachstum — ganz in deinem Tempo und ohne Bewertung.")}</CardDescription>
               </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-3">{t("coaching.openQuestionsDesc")}</p>
-                <div className="space-y-2">
-                  {[t("coaching.openQ1"), t("coaching.openQ2"), t("coaching.openQ3")].map((q, i) => (
-                    <p key={i} className="text-sm text-foreground/80 italic pl-3 border-l-2 border-primary/20">{q}</p>
+              <CardContent className="mt-auto">
+                <ul className="space-y-2 mb-5">
+                  {[
+                    t("audience.personal.f1", "Chat mit Bibelbegleitung"),
+                    t("audience.personal.f2", "21-Tage-Reise"),
+                    t("audience.personal.f3", "Täglicher Impuls per Push / Telegram"),
+                    t("audience.personal.f4", "Persönlicher Gesprächsverlauf"),
+                  ].map((item) => (
+                    <li key={item} className="flex items-center gap-2 text-sm text-foreground/80">
+                      <CheckCircle2 className="h-4 w-4 text-primary shrink-0" />
+                      {item}
+                    </li>
                   ))}
-                </div>
+                </ul>
+                <Button asChild className="w-full" size="lg">
+                  <a href="#chat">{t("audience.personal.cta", "Jetzt chatten — kostenlos →")}</a>
+                </Button>
               </CardContent>
             </Card>
 
-            <Card className="bg-card/80 border-border">
+            {/* Church / celebrant use */}
+            <Card className="bg-card/80 backdrop-blur-sm border-secondary/30 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col">
               <CardHeader>
-                <div className="h-10 w-10 rounded-lg bg-secondary/10 flex items-center justify-center mb-2">
-                  <Heart className="h-5 w-5 text-secondary" />
+                <div className="h-12 w-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-3">
+                  <Church className="h-6 w-6 text-secondary" />
                 </div>
-                <CardTitle className="text-lg">{t("coaching.honestTitle")}</CardTitle>
+                <CardTitle className="text-xl">{t("audience.church.title", "Ich plane Gottesdienste & begleite Menschen")}</CardTitle>
+                <CardDescription className="leading-relaxed">{t("audience.church.desc", "Für Pfarrpersonen, Seelsorger und Gemeindeteams: KI-Unterstützung für Predigtvorbereitung, Teamplanung und mehr.")}</CardDescription>
               </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-3">{t("coaching.honestDesc")}</p>
-                <div className="space-y-2">
-                  {[t("coaching.honest1"), t("coaching.honest2"), t("coaching.honest3")].map((item, i) => (
-                    <div key={i} className="flex items-start gap-2">
-                      <CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" />
-                      <span className="text-sm text-foreground/80">{item}</span>
-                    </div>
+              <CardContent className="mt-auto">
+                <ul className="space-y-2 mb-5">
+                  {[
+                    t("audience.church.f1", "Gottesdienst-Planer mit KI"),
+                    t("audience.church.f2", "Ressourcen-Bibliothek"),
+                    t("audience.church.f3", "Team-Koordination"),
+                    t("audience.church.f4", "Gemeinde-Seite & Verzeichnis"),
+                  ].map((item) => (
+                    <li key={item} className="flex items-center gap-2 text-sm text-foreground/80">
+                      <CheckCircle2 className="h-4 w-4 text-secondary shrink-0" />
+                      {item}
+                    </li>
                   ))}
-                </div>
+                </ul>
+                <Button asChild variant="outline" className="w-full border-secondary/40 hover:bg-secondary/10 hover:text-secondary" size="lg">
+                  <Link to="/for-churches">{t("audience.church.cta", "Für Gemeinden & Seelsorger →")}</Link>
+                </Button>
               </CardContent>
             </Card>
           </div>
+        </div>
+      </section>
 
-          {/* Wissenschaftliche Basis */}
-          <div className="bg-card/80 backdrop-blur-sm rounded-2xl border border-border p-8">
-            <h3 className="text-xl font-bold text-foreground mb-6 text-center">{t("coaching.scienceTitle")}</h3>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {scienceMethods.map((method) => (
-                <div key={method.name} className="text-center">
-                  <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-3">
-                    <method.icon className="h-5 w-5 text-primary" />
-                  </div>
-                  <p className="font-semibold text-foreground text-sm">{method.name}</p>
-                  <p className="text-xs text-muted-foreground">{method.author}</p>
-                  <p className="text-xs text-muted-foreground mt-1">{method.desc}</p>
+      {/* Trust Signals */}
+      <section className="py-14 px-4">
+        <div className="container mx-auto max-w-3xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            {[
+              {
+                icon: Shield,
+                title: "QA-geprüft",
+                text: "Jede Bibelstelle wird automatisch auf Korrektheit geprüft — bei jedem Gespräch.",
+              },
+              {
+                icon: EyeOff,
+                title: "Keine Werbung",
+                text: "Kein Tracking, keine Datenweitergabe, keine Monetarisierung deiner Fragen.",
+              },
+              {
+                icon: Heart,
+                title: "Kein Vorwissen nötig",
+                text: "Du brauchst keine Kirchenmitgliedschaft und kein theologisches Vorwissen.",
+              },
+            ].map((item) => (
+              <div key={item.title} className="flex flex-col items-center gap-3 p-6 rounded-2xl bg-card/60 border border-border">
+                <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                  <item.icon className="h-6 w-6 text-primary" />
                 </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="mt-8 text-center">
-            <p className="text-sm text-muted-foreground" dangerouslySetInnerHTML={{ __html: t("coaching.renameTip") }} />
+                <h3 className="font-semibold text-foreground">{item.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{item.text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -236,6 +236,64 @@ const Index = () => {
       {/* Subscribe CTA is now integrated in the DailyImpulse banner */}
       {/* Referral / Empfehlen */}
       <ReferralSection />
+
+      {/* LifeWheel & SevenWhys Feature Section */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-primary bg-primary/10 px-4 py-1.5 rounded-full mb-4">
+              <Compass className="h-4 w-4" />
+              Mehr als Antworten
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
+              Zwei Werkzeuge, die tiefer gehen
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Für Momente, in denen du mehr als eine Antwort brauchst.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card className="bg-card/80 border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <CardHeader className="text-center pb-2">
+                <span className="text-5xl mb-3 block">🎡</span>
+                <CardTitle className="text-xl text-card-foreground">Lebensrad-Check</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center space-y-4">
+                <CardDescription className="text-muted-foreground leading-relaxed">
+                  Wie steht es gerade mit Arbeit, Beziehungen, Sinn und Gesundheit?
+                  Das Lebensrad hilft dir in 3 Minuten, Klarheit zu gewinnen — und zeigt,
+                  wo die Bibel direkt anknüpft.
+                </CardDescription>
+                <Button onClick={() => openLifeWheel()} className="w-full">
+                  Lebensrad starten
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card/80 border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <CardHeader className="text-center pb-2">
+                <span className="text-5xl mb-3 block">🔍</span>
+                <CardTitle className="text-xl text-card-foreground">Die 7-Warum-Methode</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center space-y-4">
+                <CardDescription className="text-muted-foreground leading-relaxed">
+                  Warum tue ich das wirklich? Warum fühlt sich das so an?
+                  BibleBot führt dich durch 7 Fragen, die an die Wurzel kommen —
+                  mit biblischer Einordnung an der tiefsten Stelle.
+                </CardDescription>
+                <Button
+                  variant="outline"
+                  onClick={() => openBibleBotChat("Ich möchte die 7-Warum-Methode ausprobieren", "seven-whys")}
+                  className="w-full"
+                >
+                  Tiefer fragen
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
 
       {/* FAQ */}
       <section className="py-20 px-4">
@@ -339,6 +397,63 @@ const Index = () => {
                 <AccordionContent className="text-muted-foreground leading-relaxed pb-6">{t(`faq.${key}Answer`)}</AccordionContent>
               </AccordionItem>
             ))}
+
+            <AccordionItem value="methodik" className="bg-card/80 border border-border rounded-xl px-6 data-[state=open]:shadow-md">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
+                Was steckt hinter der Methodik von BibleBot?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+                <p className="mb-4">{t("coaching.subtitle")}</p>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                  {scienceMethods.map((method) => (
+                    <div key={method.name} className="text-center">
+                      <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-2">
+                        <method.icon className="h-5 w-5 text-primary" />
+                      </div>
+                      <p className="font-semibold text-foreground text-sm">{method.name}</p>
+                      <p className="text-xs text-muted-foreground">{method.author}</p>
+                      <p className="text-xs text-muted-foreground mt-1">{method.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="journey" className="bg-card/80 border border-border rounded-xl px-6 data-[state=open]:shadow-md">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
+                Was ist die 21-Tage-Journey?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+                <p className="mb-4">{t("coaching.journeyDesc")}</p>
+                <div className="grid md:grid-cols-3 gap-4">
+                  {[
+                    { num: 1, title: t("coaching.week1"), desc: t("coaching.week1Desc") },
+                    { num: 2, title: t("coaching.week2"), desc: t("coaching.week2Desc") },
+                    { num: 3, title: t("coaching.week3"), desc: t("coaching.week3Desc") },
+                  ].map((w) => (
+                    <div key={w.num}>
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="h-7 w-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold">{w.num}</span>
+                        <span className="font-semibold text-foreground text-sm">{w.title}</span>
+                      </div>
+                      <p className="text-xs text-muted-foreground leading-relaxed">{w.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="glaube-psychologie" className="bg-card/80 border border-border rounded-xl px-6 data-[state=open]:shadow-md">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
+                Verbindet BibleBot Glaube und Psychologie?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+                BibleBot kombiniert biblische Weisheit mit Erkenntnissen aus der evidenzbasierten
+                Psychologie — nicht um den Glauben zu psychologisieren, sondern um ihn alltagsnah
+                zu machen. Die Methoden (PERMA, Logotherapie, Dankbarkeits- und Vergebungsforschung)
+                ergänzen die Bibel, ersetzen sie aber nicht.
+              </AccordionContent>
+            </AccordionItem>
           </Accordion>
         </div>
       </section>
@@ -360,40 +475,31 @@ const Index = () => {
               <CardTitle className="text-xl">{t("donate.bankTitle")}</CardTitle>
               <CardDescription>{t("donate.bankSubtitle")}</CardDescription>
             </CardHeader>
-            <CardContent className="space-y-4 text-left">
+            <CardContent className="space-y-4">
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {t("donate.subtitle")}
+              </p>
               <div className="space-y-3">
-                <div className="flex justify-between items-center bg-accent/30 rounded-lg px-4 py-3">
-                  <div>
-                    <p className="text-xs text-muted-foreground">{t("donate.recipient")}</p>
-                    <p className="font-medium text-foreground text-sm">Reto Wettstein</p>
-                  </div>
-                </div>
-                <div className="flex justify-between items-center bg-accent/30 rounded-lg px-4 py-3">
-                  <div>
-                    <p className="text-xs text-muted-foreground">IBAN</p>
-                    <p className="font-mono font-medium text-foreground text-sm">CH14 0900 0000 3042 9878 8</p>
-                  </div>
-                  <button
-                    onClick={() => navigator.clipboard.writeText("CH1409000000304298788")}
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                    title="Copy IBAN"
-                  >
-                    <Copy className="h-4 w-4" />
-                  </button>
-                </div>
-                <div className="flex justify-between items-center bg-accent/30 rounded-lg px-4 py-3">
-                  <div>
-                    <p className="text-xs text-muted-foreground">{t("donate.bank")}</p>
-                    <p className="font-medium text-foreground text-sm">PostFinance</p>
-                  </div>
-                </div>
-                <div className="flex justify-between items-center bg-accent/30 rounded-lg px-4 py-3">
-                  <div>
-                    <p className="text-xs text-muted-foreground">{t("donate.purpose")}</p>
-                    <p className="font-medium text-foreground text-sm">{t("donate.purposeValue")}</p>
-                  </div>
-                </div>
+                <Button
+                  className="w-full"
+                  size="lg"
+                  onClick={() => window.open("https://donate.stripe.com/PLACEHOLDER_STRIPE", "_blank")}
+                >
+                  <Heart className="h-4 w-4 mr-2" />
+                  Mit Kreditkarte unterstützen
+                </Button>
+                <Button
+                  variant="outline"
+                  className="w-full"
+                  size="lg"
+                  onClick={() => window.open("https://donate.stripe.com/PLACEHOLDER_TWINT", "_blank")}
+                >
+                  Mit Twint unterstützen
+                </Button>
               </div>
+              <p className="text-xs text-muted-foreground text-center">
+                Sichere Zahlung · Keine Abo-Falle · Jederzeit kündbar
+              </p>
             </CardContent>
           </Card>
 
