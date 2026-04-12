@@ -1,7 +1,7 @@
 {
-  "name": "BibleBot – Your Personal Companion",
-  "short_name": "BibleBot",
-  "description": "Rediscover the Bible – with good questions, honest companionship and real impulses.",
+  "name": "BibleBot.Life – Your Personal Companion",
+  "short_name": "BibleBot.Life",
+  "description": "Your personal companion — with the depth of the Bible, no prior knowledge needed.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#FFFFFF",
