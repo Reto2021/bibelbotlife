@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import {
   Menu, X as XIcon, HandHeart, GraduationCap, Building2, HeartHandshake,
@@ -11,6 +11,7 @@ import { DarkModeToggle } from "@/components/DarkModeToggle";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useAuth } from "@/hooks/use-auth";
 import { useIsAdmin } from "@/hooks/use-admin";
+import { resetBibleBotChat } from "@/lib/chat-events";
 
 const TELEGRAM_LINK = "https://t.me/meinbibelbot";
 
