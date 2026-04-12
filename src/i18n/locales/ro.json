@@ -16,7 +16,7 @@
     },
     "title1": "Biblia.",
     "title2": " Redescoperită.",
-    "subtitle": "BibleBot este un însoțitor care cunoaște Biblia – și pune întrebările potrivite. Nu o persoană, ci un companion sincer. Pentru conversații profunde, întrebări reale și impulsuri autentice.",
+    "subtitle": "Companionul tău este un însoțitor care cunoaște Biblia – și pune întrebările potrivite. Nu o persoană, ci un companion sincer. Pentru conversații profunde, întrebări reale și impulsuri autentice.",
     "ctaTelegram": "Începe pe Telegram",
     "ctaMore": "Află mai multe",
     "quote": "\"Veniți la Mine, toți cei trudiți și împovărați, și Eu vă voi da odihnă.\"",
@@ -33,8 +33,8 @@
     "stopAudio": "Oprește"
   },
   "features": {
-    "sectionTitle": "Cum te însoțește BibleBot",
-    "sectionSubtitle": "Descoperă numeroasele moduri în care BibleBot te poate însoți",
+    "sectionTitle": "Cum te însoțește companionul tău",
+    "sectionSubtitle": "Descoperă numeroasele moduri în care companionul tău te poate însoți",
     "bible": {
       "title": "Pasaje biblice & interpretare",
       "desc": "Întreabă \"Ce spune Biblia despre...?\" și primește versete relevante cu context și explicații clare."
@@ -49,11 +49,11 @@
     },
     "faith": {
       "title": "Călătoria credinței",
-      "desc": "Fie că cauți, te îndoiești sau aprofundezi – BibleBot te însoțește pe drumul tău personal."
+      "desc": "Fie că cauți, te îndoiești sau aprofundezi – companionul tău te însoțește pe drumul tău personal."
     },
     "daily": {
       "title": "Impulsuri zilnice & anul bisericesc",
-      "desc": "Începe-ți ziua cu impulsuri și lasă BibleBot să te ghideze prin Advent, Post și sărbători."
+      "desc": "Începe-ți ziua cu impulsuri și lasă companionul tău să te ghideze prin Advent, Post și sărbători."
     },
     "groups": {
       "title": "Grupuri & comunități",
@@ -63,9 +63,9 @@
   "coaching": {
     "badge": "Metodologie",
     "title": "Nu doar un chatbot – o însoțire autentică",
-    "subtitle": "BibleBot combină înțelepciunea biblică cu metode de coaching dovedite și Psihologia Pozitivă.",
+    "subtitle": "Companionul tău combină înțelepciunea biblică cu metode de coaching dovedite și Psihologia Pozitivă.",
     "journeyTitle": "Însoțire personală",
-    "journeyDesc": "BibleBot te însoțește cât timp dorești – în conversație liberă sau cu o structură opțională de 21 de zile.",
+    "journeyDesc": "Companionul tău te însoțește cât timp dorești – în conversație liberă sau cu o structură opțională de 21 de zile.",
     "week1": "Săptămâna 1: Sosire",
     "week1Desc": "Construirea încrederii, ascultare, înțelegerea situației tale. Unde te afli? Ce te preocupă?",
     "week2": "Săptămâna 2: Aprofundare",
@@ -73,12 +73,12 @@
     "week3": "Săptămâna 3: Acțiune",
     "week3Desc": "Pași concreți, stabilirea obiectivelor, inițierea schimbării. Care este următorul tău pas?",
     "openQuestionsTitle": "Întrebări deschise în loc de răspunsuri rapide",
-    "openQuestionsDesc": "BibleBot nu dă sfaturi ieftine. În schimb, pune întrebările care contează cu adevărat:",
+    "openQuestionsDesc": "Companionul tău nu dă sfaturi ieftine. În schimb, pune întrebările care contează cu adevărat:",
     "openQ1": "\"Ce se ascunde cu adevărat în spatele acestei dorințe?\"",
     "openQ2": "\"Cum ai ști că ceva s-a schimbat?\"",
     "openQ3": "\"Care ar fi un prim pas mic?\"",
     "honestTitle": "Sincer în loc de pozitivitate toxică",
-    "honestDesc": "Fără \"O să fie bine!\" și fără înfrumusețări. BibleBot este empatic ȘI sincer:",
+    "honestDesc": "Fără \"O să fie bine!\" și fără înfrumusețări. Companionul tău este empatic ȘI sincer:",
     "honest1": "Abordează și pasajele biblice incomode",
     "honest2": "Te provoacă la autoreflecție",
     "honest3": "Distinge consolarea de evitare",
@@ -103,19 +103,19 @@
       "author": "Worthington",
       "desc": "Modelul REACH pentru procesele de iertare"
     },
-    "renameTip": "💡 Poți da BibleBot-ului tău un nume personal – astfel devine cu adevărat <strong>al tău</strong>."
+    "renameTip": "💡 Poți da companionul tău-ului tău un nume personal – astfel devine cu adevărat <strong>al tău</strong>."
   },
   "discover": {
     "badge": "Pentru curioși",
     "title": "Redescoperă credința – fără presiune",
-    "subtitle": "Din ce în ce mai mulți oameni pun din nou marile întrebări. BibleBot este pentru toți cei care vor să (re)descopere credința – sincer, fără patos și fără jargon bisericesc.",
+    "subtitle": "Din ce în ce mai mulți oameni pun din nou marile întrebări. Companionul tău este pentru toți cei care vor să (re)descopere credința – sincer, fără patos și fără jargon bisericesc.",
     "doubt": {
       "title": "Te îndoiești?",
       "text": "Bine. Îndoiala nu este un defect – este începutul credinței sincere. Biblia este plină de oameni care s-au luptat."
     },
     "search": {
       "title": "Cauți?",
-      "text": "Poate nici nu știi ce cauți. E perfect în regulă. BibleBot te ajută să pui întrebările potrivite – în loc să dea răspunsuri rapide."
+      "text": "Poate nici nu știi ce cauți. E perfect în regulă. Companionul tău te ajută să pui întrebările potrivite – în loc să dea răspunsuri rapide."
     },
     "deepen": {
       "title": "Vrei să mergi mai adânc?",
@@ -170,9 +170,9 @@
   },
   "faq": {
     "badge": "Întrebări frecvente",
-    "title": "Ce trebuie să știi despre BibleBot",
+    "title": "Ce trebuie să știi despre companionul tău",
     "subtitle": "Transparența contează – mai ales pentru teologi, pastori și gânditori critici.",
-    "q1": "Ce face BibleBot diferit de ChatGPT & Co.?",
+    "q1": "Ce face companionul tău diferit de ChatGPT & Co.?",
     "q1Generic": "Chatboți generici:",
     "q1GenericItems": [
       "Citate biblice superficiale fără context",
@@ -182,7 +182,7 @@
       "Amestecă Biblia cu ezoterismul",
       "Fără întrebări de follow-up – doar confirmare"
     ],
-    "q1Bot": "BibleBot:",
+    "q1Bot": "Companionul tău:",
     "q1BotItems": [
       "5 traduceri recunoscute – inclusiv pasaje incomode",
       "Protecție ȘI însoțire provocatoare",
@@ -192,11 +192,11 @@
       "Promovează gândirea critică ca maturitate a credinței"
     ],
     "q2": "Ce traduceri biblice sunt incluse?",
-    "q2Intro": "BibleBot lucrează ecumenic cu principalele ediții biblice în limba germană:",
+    "q2Intro": "Companionul tău lucrează ecumenic cu principalele ediții biblice în limba germană:",
     "q2Outro": "Toate pasajele biblice includ citări sursă și context istoric.",
     "q3": "Ce fundamente științifice stau la bază?",
     "q3Intro": "Însoțirea se bazează pe cercetări peer-reviewed din Psihologia Pozitivă:",
-    "q4": "Cum asigură BibleBot siguranța pastorală?",
+    "q4": "Cum asigură companionul tău siguranța pastorală?",
     "q4Items": [
       "Gânduri suicidare sau criză → trimitere imediată către linii de urgență",
       "Fără diagnostice psihologice sau medicale",
@@ -206,16 +206,16 @@
       "Fără pozitivitate toxică – însoțire autentică și sinceră",
       "Numește deschis tensiunile și textele dificile"
     ],
-    "q5": "Este BibleBot legat de o anumită confesiune?",
-    "q5Answer": "Nu. BibleBot este orientat ecumenic și respectă în mod egal tradițiile reformate, catolice, evanghelice și alte tradiții creștine. Când există diferențe confesionale, perspectivele sunt prezentate transparent.",
-    "q6": "Înlocuiește BibleBot îngrijirea pastorală sau terapia?",
-    "q6Answer": "Nu. BibleBot este un instrument pentru citirea și reflecția biblică personală. Nu înlocuiește îngrijirea pastorală profesională, consilierea teologică sau terapia psihologică. În crize grave, BibleBot trimite întotdeauna către resurse calificate.",
-    "q7": "Nu este BibleBot doar un 'bot de stare bună'?",
-    "q7Answer": "Nu. BibleBot consolează unde este nevoie – dar și provoacă. Creșterea spirituală necesită fricțiune. BibleBot pune întrebări incomode, numește texte biblice dificile și nu se ferește de subiecte precum dreptatea, pocăința și responsabilitatea.",
-    "q8": "Cine se află în spatele BibleBot și cum este finanțat?",
-    "q8Answer": "BibleBot este un proiect privat, necomercial. Este administrat pe bază de voluntariat și finanțat exclusiv prin donații voluntare. Nu există publicitate, nu se vând date și nu există funcții plătite.",
-    "q9": "Cum tratează BibleBot datele mele?",
-    "q9Answer": "BibleBot nu stochează date personale și niciun istoric de chat. Fiecare conversație este anonimă. Nu există autentificare, nu există urmărire și nu se partajează date cu terți.",
+    "q5": "Este companionul tău legat de o anumită confesiune?",
+    "q5Answer": "Nu. Companionul tău este orientat ecumenic și respectă în mod egal tradițiile reformate, catolice, evanghelice și alte tradiții creștine. Când există diferențe confesionale, perspectivele sunt prezentate transparent.",
+    "q6": "Înlocuiește companionul tău îngrijirea pastorală sau terapia?",
+    "q6Answer": "Nu. Companionul tău este un instrument pentru citirea și reflecția biblică personală. Nu înlocuiește îngrijirea pastorală profesională, consilierea teologică sau terapia psihologică. În crize grave, companionul tău trimite întotdeauna către resurse calificate.",
+    "q7": "Nu este companionul tău doar un 'bot de stare bună'?",
+    "q7Answer": "Nu. Companionul tău consolează unde este nevoie – dar și provoacă. Creșterea spirituală necesită fricțiune. Companionul tău pune întrebări incomode, numește texte biblice dificile și nu se ferește de subiecte precum dreptatea, pocăința și responsabilitatea.",
+    "q8": "Cine se află în spatele companionul tău și cum este finanțat?",
+    "q8Answer": "Companionul tău este un proiect privat, necomercial. Este administrat pe bază de voluntariat și finanțat exclusiv prin donații voluntare. Nu există publicitate, nu se vând date și nu există funcții plătite.",
+    "q9": "Cum tratează companionul tău datele mele?",
+    "q9Answer": "Companionul tău nu stochează date personale și niciun istoric de chat. Fiecare conversație este anonimă. Nu există autentificare, nu există urmărire și nu se partajează date cu terți.",
     "tradition": {
       "reformed": "Reformată",
       "evangelical": "Evanghelică",
@@ -225,40 +225,40 @@
     }
   },
   "donate": {
-    "badge": "Susține BibleBot",
-    "title": "Ajută BibleBot să rămână gratuit",
-    "subtitle": "BibleBot este un proiect de pasiune – fără reclame, fără abonamente, fără costuri ascunse. Pentru a păstra acest lucru, mă bazez pe donații voluntare.",
+    "badge": "Susține companionul tău",
+    "title": "Ajută companionul tău să rămână gratuit",
+    "subtitle": "BibleBot.Life este un proiect de pasiune – fără reclame, fără abonamente, fără costuri ascunse. Pentru a păstra acest lucru, mă bazez pe donații voluntare.",
     "bankTitle": "Donează prin transfer bancar",
     "bankSubtitle": "Orice sumă contează – mulțumesc! 🙏",
     "recipient": "Destinatar",
     "bank": "Bancă",
     "purpose": "Referință",
-    "purposeValue": "Donație BibleBot",
-    "note": "BibleBot este operat ca proiect privat. Donațiile nu sunt deductibile fiscal."
+    "purposeValue": "Donație BibleBot.Life",
+    "note": "BibleBot.Life este operat ca proiect privat. Donațiile nu sunt deductibile fiscal."
   },
   "refer": {
     "badge": "Share God's Word",
-    "title": "Recommend BibleBot",
-    "subtitle": "Know someone who could use encouragement? Share BibleBot – one message can make a difference.",
+    "title": "Recommend companionul tău",
+    "subtitle": "Know someone who could use encouragement? Share companionul tău – one message can make a difference.",
     "whatsapp": "Share via WhatsApp",
-    "whatsappMsg": "Hey, I wanted to show you BibleBot – a free Bible companion that really knows the Bible and asks great questions. No login, anonymous, honest. Try it out: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Hey, I wanted to show you BibleBot.Life – a free Bible companion that really knows the Bible and asks great questions. No login, anonymous, honest. Try it out: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Share via Telegram",
-    "telegramMsg": "Hey, do you know BibleBot? A free personal Bible companion – honest, anonymous, no login needed. Check it out: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Hey, do you know BibleBot.Life? A free personal Bible companion – honest, anonymous, no login needed. Check it out: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Share via email",
     "emailSubject": "This might interest you: BibleBot.Life",
-    "emailBody": "Hi!\n\nI wanted to show you BibleBot – a free Bible companion that really knows the Bible. No sign-up needed, completely anonymous.\n\nIt asks thoughtful questions, explains Bible passages in context and accompanies you honestly – even on difficult topics.\n\nTry it out: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nBest wishes",
+    "emailBody": "Hi!\n\nI wanted to show you BibleBot.Life – a free Bible companion that really knows the Bible. No sign-up needed, completely anonymous.\n\nIt asks thoughtful questions, explains Bible passages in context and accompanies you honestly – even on difficult topics.\n\nTry it out: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nBest wishes",
     "copy": "Copy link",
     "copied": "Link copied! 📋",
     "qr": "Or just show this QR code:"
   },
   "cta": {
     "title": "Nu trebuie să treci singur prin asta",
-    "subtitle": "Spune-i BibleBot ce te preocupă. Fără autentificare, fără costuri, fără judecată – doar însoțire sinceră și înțelepciunea Bibliei.",
+    "subtitle": "Spune-i companionul tău ce te preocupă. Fără autentificare, fără costuri, fără judecată – doar însoțire sinceră și înțelepciunea Bibliei.",
     "button": "Începe o conversație"
   },
   "footer": {
     "tagline": "Companionul tău personal — cu profunzimea Bibliei, fără cunoștințe prealabile.",
-    "disclaimer": "BibleBot este un instrument și nu înlocuiește îngrijirea pastorală profesională, consilierea teologică sau terapia psihologică. În crize acute, contactează linia de urgență locală.",
+    "disclaimer": "Companionul tău este un instrument și nu înlocuiește îngrijirea pastorală profesională, consilierea teologică sau terapia psihologică. În crize acute, contactează linia de urgență locală.",
     "impressum": "Imprimat",
     "notes": "Note",
     "private": "Proiect privat, necomercial",
@@ -269,7 +269,7 @@
     "forChurches": "Pentru Biserici"
   },
   "chat": {
-    "welcome": "Bun venit! 🤗\n\nSunt BibleBot-ul tău – companionul tău personal cu Biblia, întrebări bune și impulsuri reale. Fără presiune, fără judecată.\n\nPoți să mă întrebi orice – sau pur și simplu să împărtășești ce te preocupă. 💛",
+    "welcome": "Bun venit! 🤗\n\nSunt companionul tău-ul tău – companionul tău personal cu Biblia, întrebări bune și impulsuri reale. Fără presiune, fără judecată.\n\nPoți să mă întrebi orice – sau pur și simplu să împărtășești ce te preocupă. 💛",
     "journeyOffer": "💡 **Sfat:** Ofer și o **călătorie de 21 de zile** – 3 săptămâni de impulsuri zilnice, reflecții și pași concreți. În ritmul tău.\n\nVrei să încerci?",
     "suggestion1": "Am nevoie de un cuvânt încurajator acum",
     "suggestion2": "Ce spune Biblia când te simți nesigur?",
@@ -314,7 +314,7 @@
     "suggestionsLoading": "Se încarcă sugestiile…"
   },
   "install": {
-    "title": "Instalează BibleBot",
+    "title": "Instalează BibleBot.Life",
     "androidDesc": "Acces rapid de pe ecranul de start",
     "iosDesc": "Apasă \"Partajare\" → \"Adaugă pe ecranul de start\"",
     "button": "Instalează",
@@ -328,8 +328,8 @@
     "copiedDesc": "Text copied to clipboard. Share it on WhatsApp, Instagram or wherever you like!",
     "copyLink": "Copy text",
     "error": "Copy failed",
-    "impulseTitle": "BibleBot – Impulse of the Day",
-    "chatTitle": "BibleBot – Thought of the Day",
+    "impulseTitle": "Companionul tău – Impulse of the Day",
+    "chatTitle": "Companionul tău – Thought of the Day",
     "createImage": "Create image ✨",
     "generating": "Creating…",
     "imageReady": "Your image is ready to share!",
@@ -392,7 +392,7 @@
   },
   "tiles": {
     "sectionTitle": "Ce te frământă?",
-    "sectionSubtitle": "Alege un subiect — BibleBot te însoțește",
+    "sectionSubtitle": "Alege un subiect — companionul tău te însoțește",
     "baptism": {
       "title": "Găsește un verset de botez",
       "desc": "Versetul perfect pentru copilul tău",
@@ -686,7 +686,7 @@
   },
   "church": {
     "badge": "Pentru organizații",
-    "heroTitle": "BibleBot pentru organizația dumneavoastră",
+    "heroTitle": "Companionul tău pentru organizația dumneavoastră",
     "heroSubtitle": "Însoțește-ți comunitatea cu înțelepciune biblică – digital, personal și non-stop.",
     "useCasesTitle": "Cazuri de utilizare",
     "useCase": {
@@ -708,7 +708,7 @@
       }
     },
     "pricingTitle": "Pachete de patronaj",
-    "pricingSubtitle": "Sprijiniți BibleBot și biserica dvs. cu pachetul de patronaj potrivit.",
+    "pricingSubtitle": "Sprijiniți companionul tău și biserica dvs. cu pachetul de patronaj potrivit.",
     "popular": "Popular",
     "free": "Gratuit",
     "perYear": "persoane / an",
@@ -750,7 +750,7 @@
     "viewDirectory": "Vezi directorul bisericilor",
     "directoryBadge": "Director Biserici",
     "directoryTitle": "Biserici partenere",
-    "directorySubtitle": "Găsiți o biserică lângă dumneavoastră care recomandă BibleBot.",
+    "directorySubtitle": "Găsiți o biserică lângă dumneavoastră care recomandă companionul tău.",
     "searchPlaceholder": "Căutați după loc, nume sau denominație...",
     "noResults": "Nicio biserică în director deocamdată.",
     "becomePartner": "Deveniți partener →",
@@ -805,7 +805,7 @@
       }
     },
     "institutionsTitle": "Also for Institutions",
-    "institutionsSubtitle": "BibleBot supports not only churches – care homes, retirement homes, and hospitals also benefit from digital pastoral care.",
+    "institutionsSubtitle": "Companionul tău supports not only churches – care homes, retirement homes, and hospitals also benefit from digital pastoral care.",
     "institution": {
       "careHome": {
         "title": "Care Homes",
@@ -848,7 +848,7 @@
         "desc": "Impulsuri spirituale complementare pentru clienții din consilierea psihosocială."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible.",
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As companionul tău is a private project, donations are not tax-deductible.",
     "denominationsTitle": "Pentru toate confesiunile și celebranții",
     "denominationsSubtitle": "BibleBot.Life este ecumenic – pentru comunități reformate, catolice, luterane și evanghelice libere, precum și celebranți independenți.",
     "denomination": {
@@ -876,10 +876,10 @@
   },
   "institutions": {
     "badge": "Pentru organizații",
-    "heroTitle": "BibleBot for Your Institution",
+    "heroTitle": "Companionul tău for Your Institution",
     "heroSubtitle": "Digital pastoral care for care homes, retirement homes, hospitals, and correctional facilities – personal, confidential, and around the clock.",
-    "typesTitle": "Who is BibleBot for?",
-    "useCasesTitle": "How BibleBot is Used",
+    "typesTitle": "Who is companionul tău for?",
+    "useCasesTitle": "How companionul tău is Used",
     "useCasesSubtitle": "Practical applications for daily life in your institution.",
     "pricingTitle": "Patronage Packages",
     "pricingSubtitle": "The same packages as for churches – adapted to institutional needs.",
@@ -913,7 +913,7 @@
       },
       "companionship": {
         "title": "Conversation Partner",
-        "desc": "BibleBot answers faith questions patiently and without time pressure – ideal for lonely hours."
+        "desc": "Companionul tău answers faith questions patiently and without time pressure – ideal for lonely hours."
       },
       "accessibility": {
         "title": "Easy Access",
@@ -952,7 +952,7 @@
     }
   },
   "chatHero": {
-    "ariaLabel": "Pune o întrebare lui BibleBot",
+    "ariaLabel": "Pune o întrebare lui companionul tău",
     "focusPlaceholder": "Scrie întrebarea ta…",
     "placeholder1": "Ce mă face cu adevărat recunoscător?",
     "placeholder2": "Cum găsesc pacea interioară?",
@@ -969,12 +969,12 @@
     "patronage": "Recomandat de"
   },
   "meta": {
-    "forChurchesDesc": "BibleBot ca partener pentru comunitatea ta: lucrul cu tinerii, confirmarea, consilierea pastorală și grupurile biblice. De la gratuit la Premium.",
-    "forChurchesTitle": "BibleBot pentru Biserici – Consiliere Pastorală Digitală & Ghidare Biblică",
-    "homeDesc": "BibleBot te însoțește cu 5 traduceri biblice, metodologie de coaching și consiliere spirituală. Anonim, gratuit, în 36 de limbi.",
-    "homeTitle": "BibleBot – Ghidul Tău Biblic Personal | Gratuit & Anonim",
-    "loginDesc": "Conectează-te la BibleBot pentru a-ți pregăti ceremoniile personale.",
-    "loginTitle": "Autentificare – BibleBot"
+    "forChurchesDesc": "Companionul tău ca partener pentru comunitatea ta: lucrul cu tinerii, confirmarea, consilierea pastorală și grupurile biblice. De la gratuit la Premium.",
+    "forChurchesTitle": "Companionul tău pentru Biserici – Consiliere Pastorală Digitală & Ghidare Biblică",
+    "homeDesc": "Companionul tău te însoțește cu 5 traduceri biblice, metodologie de coaching și consiliere spirituală. Anonim, gratuit, în 36 de limbi.",
+    "homeTitle": "Companionul tău – Ghidul Tău Biblic Personal | Gratuit & Anonim",
+    "loginDesc": "Conectează-te la companionul tău pentru a-ți pregăti ceremoniile personale.",
+    "loginTitle": "Autentificare – companionul tău"
   },
   "meinBereich": {
     "title": "Zona mea",
@@ -993,7 +993,7 @@
     "confirmationDesc": "Găsește un verset de confirmare și pregătește texte personale."
   },
   "eulogy": {
-    "pageTitle": "Elogiu – Creare CV | BibleBot",
+    "pageTitle": "Elogiu – Creare CV | companionul tău",
     "pageDesc": "Păstrează amintirile unei persoane dragi și creează un text frumos de CV pentru elogiu.",
     "title": "Elogiu – CV",
     "subtitle": "Păstrează amintiri, creează text, descarcă ca PDF.",

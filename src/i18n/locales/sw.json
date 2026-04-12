@@ -16,7 +16,7 @@
     },
     "title1": "Biblia.",
     "title2": "Imetafakariwa Upya.",
-    "subtitle": "BibleBot wako anaifahamu Biblia – na huuliza maswali sahihi. Si binadamu, lakini ni mwenza mwaminifu. Kwa mazungumzo mazuri, maswali magumu na misukumo halisi.",
+    "subtitle": "Mwenza wako wako anaifahamu Biblia – na huuliza maswali sahihi. Si binadamu, lakini ni mwenza mwaminifu. Kwa mazungumzo mazuri, maswali magumu na misukumo halisi.",
     "ctaTelegram": "Anza kupitia Telegram",
     "ctaMore": "Jifunze zaidi",
     "quote": "«Njooni kwangu nyote msumbukao na kulemewa na mizigo, nami nitawapumzisha.»",
@@ -33,8 +33,8 @@
     "stopAudio": "Acha"
   },
   "features": {
-    "sectionTitle": "Jinsi BibleBot wako anavyokuongoza",
-    "sectionSubtitle": "Gundua fursa mbalimbali za jinsi BibleBot wako anavyoweza kukuongoza",
+    "sectionTitle": "Jinsi mwenza wako wako anavyokuongoza",
+    "sectionSubtitle": "Gundua fursa mbalimbali za jinsi mwenza wako wako anavyoweza kukuongoza",
     "bible": {
       "title": "Maandiko & Tafsiri",
       "desc": "Uliza «Biblia inasema nini kuhusu...?» na upate mistari inayolingana na muktadha na maelezo rahisi kuelewa."
@@ -49,7 +49,7 @@
     },
     "faith": {
       "title": "Safari ya Imani & Kumtafuta Kristo",
-      "desc": "Iwe unatafuta, una mashaka au unataka kuweka imani yako wazi – BibleBot wako atakuongoza katika safari yako binafsi."
+      "desc": "Iwe unatafuta, una mashaka au unataka kuweka imani yako wazi – mwenza wako wako atakuongoza katika safari yako binafsi."
     },
     "daily": {
       "title": "Misukumo ya Kila Siku & Mwaka wa Kanisa",
@@ -63,9 +63,9 @@
   "coaching": {
     "badge": "Mbinu",
     "title": "Sio tu chatbot – mwenza halisi",
-    "subtitle": "BibleBot wako huunganisha hekima ya kibiblia na mbinu za ukufunzaji zilizothibitishwa na Saikolojia Chanya.",
+    "subtitle": "Mwenza wako wako huunganisha hekima ya kibiblia na mbinu za ukufunzaji zilizothibitishwa na Saikolojia Chanya.",
     "journeyTitle": "Uongozaji Binafsi",
-    "journeyDesc": "BibleBot wako atakuongoza muda wote unaotaka – katika mazungumzo huru au kwa hiari ya muundo wa siku 21.",
+    "journeyDesc": "Mwenza wako wako atakuongoza muda wote unaotaka – katika mazungumzo huru au kwa hiari ya muundo wa siku 21.",
     "week1": "Wiki 1: Kufika",
     "week1Desc": "Kujenga uaminifu, kusikiliza, kuelewa hali yako. Uko wapi? Ni nini kinachokusumbua?",
     "week2": "Wiki 2: Kuimarisha",
@@ -73,12 +73,12 @@
     "week3": "Wiki 3: Kutenda",
     "week3Desc": "Kuweka hatua thabiti, kuunda malengo, kuanzisha mabadiliko. Ni hatua gani inayofuata?",
     "openQuestionsTitle": "Maswali wazi badala ya majibu ya haraka",
-    "openQuestionsDesc": "BibleBot wako hakupi ushauri rahisi. Badala yake, huuliza maswali muhimu sana:",
+    "openQuestionsDesc": "Mwenza wako wako hakupi ushauri rahisi. Badala yake, huuliza maswali muhimu sana:",
     "openQ1": "«Ni nini hasa nyuma ya tamaa hii?»",
     "openQ2": "«Utajuaje kuwa kuna kitu kimebadilika?»",
     "openQ3": "«Ni nini kingekuwa hatua ndogo ya kwanza?»",
     "honestTitle": "Mwaminifu badala ya chanya sumu",
-    "honestDesc": "Hakuna «Itakuwa sawa!» na hakuna kupamba mambo. BibleBot wako ana hisia na MWAMINIFU:",
+    "honestDesc": "Hakuna «Itakuwa sawa!» na hakuna kupamba mambo. Mwenza wako wako ana hisia na MWAMINIFU:",
     "honest1": "Anataja hata maandiko magumu ya Biblia",
     "honest2": "Anahamasisha kutafakari mwenywe",
     "honest3": "Anatofautisha faraja na kukana",
@@ -103,7 +103,7 @@
       "author": "Worthington",
       "desc": "Mfumo wa REACH kwa michakato ya msamaha"
     },
-    "renameTip": "💡 Unaweza kumpa BibleBot wako jina lake mwenyewe – ili awe <strong>mwenza wako</strong> kweli."
+    "renameTip": "💡 Unaweza kumpa mwenza wako wako jina lake mwenyewe – ili awe <strong>mwenza wako</strong> kweli."
   },
   "discover": {
     "badge": "Kwa Wadadisi",
@@ -115,7 +115,7 @@
     },
     "search": {
       "title": "Unatafuta?",
-      "text": "Labda hata hujui unatafuta nini. Hiyo ni sawa kabisa. BibleBot wako atakusaidia kuuliza maswali sahihi – badala ya kutoa majibu ya haraka."
+      "text": "Labda hata hujui unatafuta nini. Hiyo ni sawa kabisa. Mwenza wako wako atakusaidia kuuliza maswali sahihi – badala ya kutoa majibu ya haraka."
     },
     "deepen": {
       "title": "Unataka kuimarisha?",
@@ -170,9 +170,9 @@
   },
   "faq": {
     "badge": "Maswali Yanayoulizwa Mara kwa Mara",
-    "title": "Mambo unayopaswa kujua kuhusu BibleBot wako",
+    "title": "Mambo unayopaswa kujua kuhusu mwenza wako wako",
     "subtitle": "Uwazi ni muhimu kwetu – hasa kwa wanatheolojia, washauri wa kiroho na wasomi wakosoaji.",
-    "q1": "Ni nini kinachotofautisha BibleBot wako na ChatGPT & Co.?",
+    "q1": "Ni nini kinachotofautisha mwenza wako wako na ChatGPT & Co.?",
     "q1Generic": "Chatbots za jumla:",
     "q1GenericItems": [
       "Nukuu za Biblia juu juu bila muktadha",
@@ -192,11 +192,11 @@
       "Inakuza fikra muhimu kama ukomavu wa imani"
     ],
     "q2": "Ni tafsiri gani za Biblia zimehifadhiwa?",
-    "q2Intro": "BibleBot wako hufanya kazi kwa umoja na matoleo muhimu ya Biblia ya Kijerumani:",
+    "q2Intro": "Mwenza wako wako hufanya kazi kwa umoja na matoleo muhimu ya Biblia ya Kijerumani:",
     "q2Outro": "Maandiko yote ya Biblia hutolewa na marejeo na muktadha wa kihistoria.",
     "q3": "Ni misingi gani ya kisayansi iliyo nyuma yake?",
     "q3Intro": "Uongozaji unategemea utafiti uliopitiwa na wenza wa Saikolojia Chanya:",
-    "q4": "Jinsi BibleBot wako anahakikisha usalama wa kichungaji?",
+    "q4": "Jinsi mwenza wako wako anahakikisha usalama wa kichungaji?",
     "q4Items": [
       "Katika kesi ya mawazo ya kujiua au shida → uhamisho wa haraka kwa Dargebotene Hand (143) na Pro Juventute (147)",
       "Hakuna uchunguzi wa kisaikolojia au wa kimatibabu",
@@ -206,16 +206,16 @@
       "Hakuna chanya sumu – uongozaji halisi, wa kweli",
       "Inataja mvutano na maandishi magumu waziwazi"
     ],
-    "q5": "Je, BibleBot wako ana uhusiano na dhehebu fulani?",
-    "q5Answer": "Hapana. BibleBot wako ameegemea kwenye ekumene na anaheshimu mapokeo ya Kiprotestanti, Katoliki, makanisa huru na mapokeo mengine ya Kikristo kwa usawa. Katika kesi ya tafsiri tofauti za kidhehebu, mitazamo tofauti huwasilishwa kwa uwazi – bila kupendelea mapokeo yoyote.",
-    "q6": "Je, BibleBot wako anachukua nafasi ya huduma ya kichungaji au tiba?",
-    "q6Answer": "Hapana. BibleBot wako ni chombo cha kidijitali cha kusoma Biblia kibinafsi na kutafakari. Haichukui nafasi ya huduma ya kichungaji, ushauri wa kitheolojia au tiba ya kisaikolojia. Katika shida mbaya, BibleBot wako daima huelekeza kwenye vituo vilivyohitimu.",
-    "q7": "Je, BibleBot wako si tu «bot ya kujisikia vizuri»?",
-    "q7Answer": "Hapana. BibleBot wako hufariji pale faraja inahitajika – lakini pia huchochea. Ukuaji wa kiroho unahitaji msuguano. BibleBot wako huuliza maswali magumu, huonyesha maandishi magumu ya Biblia (Ayubu, Zaburi za Maombolezo, ukosoaji wa kinabii) na haogopi mada kama vile haki, toba na wajibu. Tamaduni ya kinabii haikuwa rahisi kamwe – na BibleBot wako pia si rahisi.",
-    "q8": "Ni nani aliye nyuma ya BibleBot wako na inafadhiliwaje?",
-    "q8Answer": "BibleBot.Life ni mradi wa kibinafsi, usio wa kibiashara. Unaendeshwa kwa kujitolea na hufadhiliwa tu kupitia michango ya hiari. Hakuna matangazo, hakuna mauzo ya data na hakuna vipengele vya kulipia. Michango yote huenda moja kwa moja kufidia gharama za uendeshaji (miundombinu, uhifadhi, maendeleo). Kwa kuwa BibleBot unaendeshwa kama mradi wa kibinafsi, michango haiwezi kukatwa kodi.",
-    "q9": "BibleBot wako hushughulikiaje data yangu?",
-    "q9Answer": "BibleBot wako haihifadhi data za kibinafsi wala historia ya mazungumzo. Kila mazungumzo ni ya siri. Hakuna kuingia, hakuna ufuatiliaji na hakuna uhamishaji wa data kwa washirika wengine. Matumizi ni ya siri kabisa.",
+    "q5": "Je, mwenza wako wako ana uhusiano na dhehebu fulani?",
+    "q5Answer": "Hapana. Mwenza wako wako ameegemea kwenye ekumene na anaheshimu mapokeo ya Kiprotestanti, Katoliki, makanisa huru na mapokeo mengine ya Kikristo kwa usawa. Katika kesi ya tafsiri tofauti za kidhehebu, mitazamo tofauti huwasilishwa kwa uwazi – bila kupendelea mapokeo yoyote.",
+    "q6": "Je, mwenza wako wako anachukua nafasi ya huduma ya kichungaji au tiba?",
+    "q6Answer": "Hapana. Mwenza wako wako ni chombo cha kidijitali cha kusoma Biblia kibinafsi na kutafakari. Haichukui nafasi ya huduma ya kichungaji, ushauri wa kitheolojia au tiba ya kisaikolojia. Katika shida mbaya, mwenza wako wako daima huelekeza kwenye vituo vilivyohitimu.",
+    "q7": "Je, mwenza wako wako si tu «bot ya kujisikia vizuri»?",
+    "q7Answer": "Hapana. Mwenza wako wako hufariji pale faraja inahitajika – lakini pia huchochea. Ukuaji wa kiroho unahitaji msuguano. Mwenza wako wako huuliza maswali magumu, huonyesha maandishi magumu ya Biblia (Ayubu, Zaburi za Maombolezo, ukosoaji wa kinabii) na haogopi mada kama vile haki, toba na wajibu. Tamaduni ya kinabii haikuwa rahisi kamwe – na mwenza wako wako pia si rahisi.",
+    "q8": "Ni nani aliye nyuma ya mwenza wako wako na inafadhiliwaje?",
+    "q8Answer": "BibleBot.Life ni mradi wa kibinafsi, usio wa kibiashara. Unaendeshwa kwa kujitolea na hufadhiliwa tu kupitia michango ya hiari. Hakuna matangazo, hakuna mauzo ya data na hakuna vipengele vya kulipia. Michango yote huenda moja kwa moja kufidia gharama za uendeshaji (miundombinu, uhifadhi, maendeleo). Kwa kuwa mwenza wako unaendeshwa kama mradi wa kibinafsi, michango haiwezi kukatwa kodi.",
+    "q9": "Mwenza wako wako hushughulikiaje data yangu?",
+    "q9Answer": "Mwenza wako wako haihifadhi data za kibinafsi wala historia ya mazungumzo. Kila mazungumzo ni ya siri. Hakuna kuingia, hakuna ufuatiliaji na hakuna uhamishaji wa data kwa washirika wengine. Matumizi ni ya siri kabisa.",
     "tradition": {
       "reformed": "Marekebisho",
       "evangelical": "Kiinjili",
@@ -225,35 +225,35 @@
     }
   },
   "donate": {
-    "badge": "Saidia BibleBot wako",
-    "title": "Saidia BibleBot wako kubaki bure",
-    "subtitle": "BibleBot wako ni mradi wa moyo – bila matangazo, bila usajili, bila gharama zilizofichwa. Ili iendelee kuwa hivyo, ninategemea michango ya hiari. Kila mchango husaidia kufidia gharama za uendeshaji na miundombinu.",
+    "badge": "Saidia mwenza wako wako",
+    "title": "Saidia mwenza wako wako kubaki bure",
+    "subtitle": "BibleBot.Life wako ni mradi wa moyo – bila matangazo, bila usajili, bila gharama zilizofichwa. Ili iendelee kuwa hivyo, ninategemea michango ya hiari. Kila mchango husaidia kufidia gharama za uendeshaji na miundombinu.",
     "bankTitle": "Changia kwa Uhamisho wa Benki",
     "bankSubtitle": "Kila mchango huhesabika – asante sana! 🙏",
     "recipient": "Mpokeaji",
     "bank": "Benki",
     "purpose": "Kusudi",
-    "purposeValue": "Mchango BibleBot",
+    "purposeValue": "Mchango BibleBot.Life",
     "note": "BibleBot.Life inaendeshwa kama mradi wa kibinafsi. Kwa hiyo, michango haiwezi kukatwa kodi."
   },
   "refer": {
     "badge": "Shiriki Neno la Mungu",
-    "title": "Mshauri BibleBot kwa wengine",
-    "subtitle": "Je, unamfahamu mtu anayehitaji kutiwa moyo? Shiriki BibleBot – ujumbe mmoja unaweza kuleta mabadiliko makubwa.",
+    "title": "Mshauri mwenza wako kwa wengine",
+    "subtitle": "Je, unamfahamu mtu anayehitaji kutiwa moyo? Shiriki mwenza wako – ujumbe mmoja unaweza kuleta mabadiliko makubwa.",
     "whatsapp": "Shiriki kupitia WhatsApp",
-    "whatsappMsg": "Habari, nilikuwa nataka kukuonyesha BibleBot – msaidizi wa Biblia asiye na malipo anayeijua Biblia na huuliza maswali mazuri sana. Hakuna kuingia, siri, mwaminifu. Jaribu: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Habari, nilikuwa nataka kukuonyesha BibleBot.Life – msaidizi wa Biblia asiye na malipo anayeijua Biblia na huuliza maswali mazuri sana. Hakuna kuingia, siri, mwaminifu. Jaribu: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Shiriki kupitia Telegram",
-    "telegramMsg": "Habari, unamjua BibleBot? Msaidizi wa kibinafsi wa Biblia asiye na malipo – mwaminifu, siri, bila kuingia. Angalia: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Habari, unamjua BibleBot.Life? Msaidizi wa kibinafsi wa Biblia asiye na malipo – mwaminifu, siri, bila kuingia. Angalia: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Shiriki kupitia Barua pepe",
     "emailSubject": "Hii inaweza kukuvutia: BibleBot.Life",
-    "emailBody": "Habari!\n\nNilikuwa nataka kukuonyesha BibleBot – msaidizi wa Biblia asiye na malipo anayeijua Biblia kweli. Hakuna usajili unaohitajika, siri kabisa.\n\nAnauliza maswali mazuri ya kufuatilia, anaelezea mistari ya Biblia katika muktadha na hukuongoza kwa uaminifu – hata katika mada ngumu.\n\nJaribu: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nSalamu za upendo",
+    "emailBody": "Habari!\n\nNilikuwa nataka kukuonyesha BibleBot.Life – msaidizi wa Biblia asiye na malipo anayeijua Biblia kweli. Hakuna usajili unaohitajika, siri kabisa.\n\nAnauliza maswali mazuri ya kufuatilia, anaelezea mistari ya Biblia katika muktadha na hukuongoza kwa uaminifu – hata katika mada ngumu.\n\nJaribu: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nSalamu za upendo",
     "copy": "Nakili Kiungo",
     "copied": "Kiungo kimenakiliwa! 📋",
     "qr": "Au onyesha tu msimbo huu wa QR:"
   },
   "cta": {
     "title": "Huna haja ya kupitia haya peke yako",
-    "subtitle": "Andika tu kwa BibleBot wako kinachokusumbua. Hakuna kuingia, hakuna gharama, hakuna hukumu – uongozaji wa kweli tu na hekima ya Biblia.",
+    "subtitle": "Andika tu kwa mwenza wako wako kinachokusumbua. Hakuna kuingia, hakuna gharama, hakuna hukumu – uongozaji wa kweli tu na hekima ya Biblia.",
     "button": "Anza mazungumzo sasa"
   },
   "footer": {
@@ -269,7 +269,7 @@
     "forChurches": "Kwa Makanisa"
   },
   "chat": {
-    "welcome": "Nzuri kuwa hapa 🤗\n\nMimi ni BibleBot wako – mwenza wako binafsi na Biblia, maswali mazuri na misukumo thabiti. Hakuna shinikizo, hakuna hukumu.\n\nUnaweza kuniuliza chochote – au kuniambia tu kinachokusumbua. 💛",
+    "welcome": "Nzuri kuwa hapa 🤗\n\nMimi ni mwenza wako wako – mwenza wako binafsi na Biblia, maswali mazuri na misukumo thabiti. Hakuna shinikizo, hakuna hukumu.\n\nUnaweza kuniuliza chochote – au kuniambia tu kinachokusumbua. 💛",
     "journeyOffer": "💡 **Kidokezo:** Pia ninatoa **uongozaji wa siku 21** – wiki 3 zenye misukumo ya kila siku, tafakari na hatua thabiti. Kwa kasi yako mwenyewe.\n\nJe, ungependa kujaribu?",
     "suggestion1": "Ninahitaji neno la kujenga sasa",
     "suggestion2": "Biblia inasema nini mtu anapohisi kutokuwa na uhakika?",
@@ -314,7 +314,7 @@
     "suggestionsLoading": "Inapakia mapendekezo…"
   },
   "install": {
-    "title": "Sakinisha BibleBot",
+    "title": "Sakinisha BibleBot.Life",
     "androidDesc": "Ufikiaji wa haraka moja kwa moja kutoka skrini ya nyumbani",
     "iosDesc": "Gonga «Shiriki» → «Kwa Skrini ya Nyumbani»",
     "button": "Sakinisha",
@@ -328,8 +328,8 @@
     "copiedDesc": "Maandishi yamenakiliwa kwenye ubao wa kunakili. Shiriki sasa kwenye WhatsApp, Instagram au popote unapotaka!",
     "copyLink": "Nakili maandishi",
     "error": "Kunakili kumeshindwa",
-    "impulseTitle": "BibleBot – Msukumo wa Siku",
-    "chatTitle": "BibleBot – Wazo la Siku",
+    "impulseTitle": "Mwenza wako – Msukumo wa Siku",
+    "chatTitle": "Mwenza wako – Wazo la Siku",
     "createImage": "Tengeneza picha ✨",
     "generating": "Inatengenezwa…",
     "imageReady": "Picha yako iko tayari kushirikiwa!",
@@ -392,7 +392,7 @@
   },
   "tiles": {
     "sectionTitle": "Kinachokusumbua nini?",
-    "sectionSubtitle": "Chagua mada — BibleBot atakuongoza",
+    "sectionSubtitle": "Chagua mada — mwenza wako atakuongoza",
     "baptism": {
       "title": "Kutafuta aya ya ubatizo",
       "desc": "Aya kamili kwa mtoto wako",
@@ -686,7 +686,7 @@
   },
   "church": {
     "badge": "Kwa mashirika",
-    "heroTitle": "BibleBot kwa shirika lako",
+    "heroTitle": "Mwenza wako kwa shirika lako",
     "heroSubtitle": "Waongozwe wanajumuiya wako kwa hekima ya kibiblia – kidijitali, kibinafsi na masaa 24.",
     "useCasesTitle": "Matumizi",
     "useCase": {
@@ -708,7 +708,7 @@
       }
     },
     "pricingTitle": "Vifurushi vya Udhamini",
-    "pricingSubtitle": "Saidia BibleBot na jumuiya yako na kifurushi kinachofaa cha udhamini.",
+    "pricingSubtitle": "Saidia mwenza wako na jumuiya yako na kifurushi kinachofaa cha udhamini.",
     "popular": "Maarufu",
     "free": "Bure",
     "perYear": "watu / mwaka",
@@ -750,7 +750,7 @@
     "viewDirectory": "Angalia Orodha ya Jumuiya",
     "directoryBadge": "Orodha ya Jumuiya",
     "directoryTitle": "Jumuiya za Washirika",
-    "directorySubtitle": "Pata jumuiya karibu nawe, inayopendekeza BibleBot.",
+    "directorySubtitle": "Pata jumuiya karibu nawe, inayopendekeza mwenza wako.",
     "searchPlaceholder": "Tafuta eneo, jina au dhehebu...",
     "noResults": "Hakuna jumuiya zilizopatikana bado katika orodha.",
     "becomePartner": "Kuwa Mshirika →",
@@ -805,7 +805,7 @@
       }
     },
     "institutionsTitle": "Pia kwa Taasisi",
-    "institutionsSubtitle": "BibleBot huongozana si tu na jumuiya – bali pia na nyumba za wazee na za kulelea, hospitali na huduma za kichungaji za magereza hunufaika na huduma za kichungaji za kidijitali.",
+    "institutionsSubtitle": "Mwenza wako huongozana si tu na jumuiya – bali pia na nyumba za wazee na za kulelea, hospitali na huduma za kichungaji za magereza hunufaika na huduma za kichungaji za kidijitali.",
     "institution": {
       "careHome": {
         "title": "Nyumba za Walemavu",
@@ -848,7 +848,7 @@
         "desc": "Msukumo wa kiroho wa ziada kwa wateja katika ushauri wa kisaikolojia."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible.",
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As mwenza wako is a private project, donations are not tax-deductible.",
     "denominationsTitle": "Kwa madhehebu yote na viongozi wa sherehe",
     "denominationsSubtitle": "BibleBot.Life ni ya kiekumeni – kwa jumuiya za Marekebisho, Katoliki, Kilutheri na Kanisa Huru, pamoja na viongozi wa sherehe huru.",
     "denomination": {
@@ -876,15 +876,15 @@
   },
   "institutions": {
     "badge": "Kwa mashirika",
-    "heroTitle": "BibleBot kwa Taasisi yako",
+    "heroTitle": "Mwenza wako kwa Taasisi yako",
     "heroSubtitle": "Ushauri wa kiroho wa kidijitali kwa nyumba za wazee, hospitali na huduma za kisheria – kibinafsi, za siri na masaa 24.",
     "seniorHint": {
       "title": "Hali ya Wazee Inapatikana",
       "desc": "Fonti kubwa na matumizi rahisi – bora kwa wakazi wazee.",
       "cta": "Jaribu Hali ya Wazee"
     },
-    "typesTitle": "BibleBot ni kwa ajili ya nani?",
-    "useCasesTitle": "Jinsi BibleBot inavyotumika",
+    "typesTitle": "Mwenza wako ni kwa ajili ya nani?",
+    "useCasesTitle": "Jinsi mwenza wako inavyotumika",
     "useCasesSubtitle": "Maombi halisi kwa maisha ya kila siku katika taasisi yako.",
     "pricingTitle": "Vifurushi vya Ufadhili",
     "pricingSubtitle": "Vifurushi sawa na vile vya jumuiya – vimebadilishwa na mahitaji ya taasisi.",
@@ -918,7 +918,7 @@
       },
       "companionship": {
         "title": "Mshirika wa Mazungumzo",
-        "desc": "BibleBot hujibu maswali ya imani kwa uvumilivu na bila shinikizo la wakati – bora kwa saa za upweke."
+        "desc": "Mwenza wako hujibu maswali ya imani kwa uvumilivu na bila shinikizo la wakati – bora kwa saa za upweke."
       },
       "accessibility": {
         "title": "Ufikiaji Rahisi",
@@ -952,7 +952,7 @@
     }
   },
   "eulogy": {
-    "pageTitle": "Eulogy - Unda Wasifu | BibleBot",
+    "pageTitle": "Eulogy - Unda Wasifu | mwenza wako",
     "pageDesc": "Hifadhi kumbukumbu za mpendwa na uunde maandishi mazuri ya wasifu kwa ajili ya eulogy.",
     "title": "Eulogy - Wasifu",
     "subtitle": "Hifadhi kumbukumbu, unda maandishi, pakua kama PDF.",
@@ -1002,7 +1002,7 @@
     "confirmationDesc": "Pata mstari wa uthibitisho na uandae maandishi ya kibinafsi."
   },
   "chatHero": {
-    "ariaLabel": "Uliza swali kwa BibleBot",
+    "ariaLabel": "Uliza swali kwa mwenza wako",
     "focusPlaceholder": "Andika swali lako…",
     "placeholder1": "Ni nini kinanifanya nishukuru kweli?",
     "placeholder2": "Ninawezaje kupata amani ya ndani?",
@@ -1016,12 +1016,12 @@
     "suggestion3": "Ninashukuru kwa jambo gani?"
   },
   "meta": {
-    "forChurchesDesc": "BibleBot kama mshirika wa kanisa lako: huduma ya vijana, kipaimara, ushauri nasaha na vikundi vya Biblia. Bure hadi Premium.",
-    "forChurchesTitle": "BibleBot kwa Makanisa – Ushauri Nasaha Dijitali & Mwongozo wa Biblia",
-    "homeDesc": "BibleBot inakuongoza na tafsiri 5 za Biblia, mbinu za kufundisha, na ushauri nasaha. Bila kujulikana, bure, kwa lugha 36.",
-    "homeTitle": "BibleBot – Mwenza wako wa Kibiblia | Bure & Bila Kujulikana",
-    "loginDesc": "Ingia kwenye BibleBot ili kuandaa sherehe zako za kibinafsi.",
-    "loginTitle": "Ingia – BibleBot"
+    "forChurchesDesc": "Mwenza wako kama mshirika wa kanisa lako: huduma ya vijana, kipaimara, ushauri nasaha na vikundi vya Biblia. Bure hadi Premium.",
+    "forChurchesTitle": "Mwenza wako kwa Makanisa – Ushauri Nasaha Dijitali & Mwongozo wa Biblia",
+    "homeDesc": "Mwenza wako inakuongoza na tafsiri 5 za Biblia, mbinu za kufundisha, na ushauri nasaha. Bila kujulikana, bure, kwa lugha 36.",
+    "homeTitle": "Mwenza wako – mwenza wako wa Kibiblia | Bure & Bila Kujulikana",
+    "loginDesc": "Ingia kwenye mwenza wako ili kuandaa sherehe zako za kibinafsi.",
+    "loginTitle": "Ingia – mwenza wako"
   },
   "splash": {
     "patronage": "Imependekezwa na"

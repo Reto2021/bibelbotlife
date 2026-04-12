@@ -16,7 +16,7 @@
     },
     "title1": "Alkitab.",
     "title2": " Dipikirkan Ulang.",
-    "subtitle": "BibleBot Anda tahu Alkitab – dan mengajukan pertanyaan yang tepat. Bukan manusia, tapi pendamping yang jujur. Untuk percakapan yang baik, pertanyaan mendalam, dan dorongan sejati.",
+    "subtitle": "Pendamping Anda Anda tahu Alkitab – dan mengajukan pertanyaan yang tepat. Bukan manusia, tapi pendamping yang jujur. Untuk percakapan yang baik, pertanyaan mendalam, dan dorongan sejati.",
     "ctaTelegram": "Mulai via Telegram",
     "ctaMore": "Pelajari Lebih Lanjut",
     "quote": "«Datanglah kepada-Ku, semua yang letih lesu dan berbeban berat; Aku akan memberi kelegaan kepadamu.»",
@@ -33,8 +33,8 @@
     "stopAudio": "Berhenti"
   },
   "features": {
-    "sectionTitle": "Bagaimana BibleBot Anda Mendampingi Anda",
-    "sectionSubtitle": "Temukan berbagai cara bagaimana BibleBot Anda dapat mendukung Anda",
+    "sectionTitle": "Bagaimana pendamping Anda Anda Mendampingi Anda",
+    "sectionSubtitle": "Temukan berbagai cara bagaimana pendamping Anda Anda dapat mendukung Anda",
     "bible": {
       "title": "Ayat Alkitab & Penjelasan",
       "desc": "Tanyakan «Apa kata Alkitab tentang...?» dan dapatkan ayat yang relevan dengan konteks dan penjelasan yang mudah dipahami."
@@ -49,7 +49,7 @@
     },
     "faith": {
       "title": "Perjalanan Iman & Menemukan Kristus",
-      "desc": "Baik mencari, ragu, atau memperdalam – BibleBot Anda mendampingi Anda dalam perjalanan pribadi Anda."
+      "desc": "Baik mencari, ragu, atau memperdalam – pendamping Anda Anda mendampingi Anda dalam perjalanan pribadi Anda."
     },
     "daily": {
       "title": "Dorongan Harian & Tahun Gerejawi",
@@ -63,9 +63,9 @@
   "coaching": {
     "badge": "Metodologi",
     "title": "Bukan sekadar Chatbot – sebuah Pendampingan Sejati",
-    "subtitle": "BibleBot Anda menggabungkan kebijaksanaan alkitabiah dengan metode pembinaan yang terbukti dan Psikologi Positif.",
+    "subtitle": "Pendamping Anda Anda menggabungkan kebijaksanaan alkitabiah dengan metode pembinaan yang terbukti dan Psikologi Positif.",
     "journeyTitle": "Pendampingan Pribadi",
-    "journeyDesc": "BibleBot Anda mendampingi Anda selama Anda mau – dalam percakapan bebas atau dengan struktur 21 hari opsional.",
+    "journeyDesc": "Pendamping Anda Anda mendampingi Anda selama Anda mau – dalam percakapan bebas atau dengan struktur 21 hari opsional.",
     "week1": "Minggu 1: Tiba",
     "week1Desc": "Membangun kepercayaan, mendengarkan, memahami situasi Anda. Di mana posisi Anda? Apa yang mengganggu Anda?",
     "week2": "Minggu 2: Mendalami",
@@ -73,12 +73,12 @@
     "week3": "Minggu 3: Bertindak",
     "week3Desc": "Mengambil langkah konkret, merumuskan tujuan, memulai perubahan. Apa langkah selanjutnya?",
     "openQuestionsTitle": "Pertanyaan Terbuka daripada Jawaban Cepat",
-    "openQuestionsDesc": "BibleBot Anda tidak memberikan nasihat murahan. Sebaliknya, ia mengajukan pertanyaan yang benar-benar penting:",
+    "openQuestionsDesc": "Pendamping Anda Anda tidak memberikan nasihat murahan. Sebaliknya, ia mengajukan pertanyaan yang benar-benar penting:",
     "openQ1": "«Apa sebenarnya di balik keinginan ini?»",
     "openQ2": "«Bagaimana Anda akan tahu bahwa sesuatu telah berubah?»",
     "openQ3": "«Apa langkah kecil pertama?»",
     "honestTitle": "Jujur daripada Positif Beracun",
-    "honestDesc": "Tidak ada «Semua akan baik-baik saja!» dan tidak ada polesan. BibleBot Anda berempati DAN jujur:",
+    "honestDesc": "Tidak ada «Semua akan baik-baik saja!» dan tidak ada polesan. Pendamping Anda Anda berempati DAN jujur:",
     "honest1": "Mengidentifikasi ayat-ayat Alkitab yang tidak nyaman sekalipun",
     "honest2": "Menantang untuk refleksi diri",
     "honest3": "Membedakan penghiburan dari penekanan",
@@ -103,7 +103,7 @@
       "author": "Worthington",
       "desc": "Model REACH untuk Proses Pengampunan"
     },
-    "renameTip": "💡 Anda dapat memberikan nama sendiri pada BibleBot Anda – agar benar-benar menjadi pendamping <strong>Anda</strong>."
+    "renameTip": "💡 Anda dapat memberikan nama sendiri pada pendamping Anda Anda – agar benar-benar menjadi pendamping <strong>Anda</strong>."
   },
   "discover": {
     "badge": "Untuk yang Penasaran",
@@ -115,7 +115,7 @@
     },
     "search": {
       "title": "Anda mencari?",
-      "text": "Mungkin Anda bahkan tidak tahu persis apa yang Anda cari. Itu tidak masalah sama sekali. BibleBot Anda membantu Anda mengajukan pertanyaan yang tepat – daripada memberikan jawaban cepat."
+      "text": "Mungkin Anda bahkan tidak tahu persis apa yang Anda cari. Itu tidak masalah sama sekali. Pendamping Anda Anda membantu Anda mengajukan pertanyaan yang tepat – daripada memberikan jawaban cepat."
     },
     "deepen": {
       "title": "Anda ingin memperdalam?",
@@ -170,9 +170,9 @@
   },
   "faq": {
     "badge": "Pertanyaan yang Sering Diajukan",
-    "title": "Apa yang Perlu Anda Ketahui tentang BibleBot Anda",
+    "title": "Apa yang Perlu Anda Ketahui tentang pendamping Anda Anda",
     "subtitle": "Transparansi penting bagi kami – terutama bagi para teolog, pendeta, dan pemikir kritis.",
-    "q1": "Apa yang membedakan BibleBot Anda dari ChatGPT & Co.?",
+    "q1": "Apa yang membedakan pendamping Anda Anda dari ChatGPT & Co.?",
     "q1Generic": "Chatbot Generik:",
     "q1GenericItems": [
       "Kutipan Alkitab yang dangkal tanpa konteks",
@@ -192,11 +192,11 @@
       "Mendorong pemikiran kritis sebagai kematangan iman"
     ],
     "q2": "Terjemahan Alkitab apa yang tersedia?",
-    "q2Intro": "BibleBot Anda bekerja secara ekumenis dengan edisi Alkitab berbahasa Jerman yang relevan:",
+    "q2Intro": "Pendamping Anda Anda bekerja secara ekumenis dengan edisi Alkitab berbahasa Jerman yang relevan:",
     "q2Outro": "Semua ayat Alkitab disajikan dengan sumber dan konteks historis.",
     "q3": "Apa dasar ilmiah di baliknya?",
     "q3Intro": "Pendampingan ini didasarkan pada penelitian peer-review dari Psikologi Positif:",
-    "q4": "Bagaimana BibleBot Anda memastikan keamanan pastoral?",
+    "q4": "Bagaimana pendamping Anda Anda memastikan keamanan pastoral?",
     "q4Items": [
       "Dalam kasus pikiran bunuh diri atau krisis → segera dialihkan ke Dargebotene Hand (143) dan Pro Juventute (147)",
       "Tidak ada diagnosis psikologis atau medis",
@@ -206,16 +206,16 @@
       "Tidak ada positif beracun – pendampingan yang tulus dan jujur",
       "Mengidentifikasi ketegangan dan teks-teks sulit secara terbuka"
     ],
-    "q5": "Apakah BibleBot Anda terikat pada suatu denominasi?",
-    "q5Answer": "Tidak. BibleBot Anda berorientasi ekumenis dan menghormati tradisi Reformed, Katolik, gereja bebas, dan tradisi Kristen lainnya secara setara. Dalam kasus interpretasi yang berbeda secara denominasi, berbagai perspektif disajikan secara transparan – tanpa mengutamakan satu tradisi pun.",
-    "q6": "Apakah BibleBot Anda menggantikan pelayanan pastoral atau terapi?",
-    "q6Answer": "Tidak. BibleBot Anda adalah alat digital untuk pembacaan Alkitab pribadi dan refleksi. Ini tidak menggantikan pelayanan pastoral profesional, konseling teologis, atau terapi psikologis. Dalam kasus krisis serius, BibleBot Anda selalu merujuk ke tempat bantuan yang berkualitas.",
-    "q7": "Bukankah BibleBot Anda hanya 'bot yang menyenangkan'?",
-    "q7Answer": "Tidak. BibleBot Anda menghibur di mana penghiburan diperlukan – tetapi ia juga menantang. Pertumbuhan rohani membutuhkan gesekan. BibleBot Anda mengajukan pertanyaan balik yang tidak nyaman, mengidentifikasi teks-teks Alkitab yang sulit (Ayub, Mazmur ratapan, kritik profetik) dan tidak menghindar dari topik-topik seperti keadilan, pertobatan, dan tanggung jawab. Tradisi profetik tidak pernah nyaman – dan BibleBot Anda juga tidak.",
-    "q8": "Siapa di balik BibleBot Anda dan bagaimana pendanaannya?",
-    "q8Answer": "BibleBot.Life adalah proyek pribadi, non-komersial. Ini dijalankan secara sukarela dan didanai sepenuhnya melalui donasi sukarela. Tidak ada iklan, tidak ada penjualan data, dan tidak ada fitur berbayar. Semua donasi digunakan langsung untuk menutupi biaya operasional (infrastruktur, hosting, pengembangan). Karena BibleBot berjalan sebagai proyek pribadi, donasi tidak dapat dikurangkan dari pajak.",
-    "q9": "Bagaimana BibleBot Anda menangani data saya?",
-    "q9Answer": "BibleBot Anda tidak menyimpan data pribadi dan riwayat obrolan. Setiap percakapan bersifat anonim. Tidak ada login, tidak ada pelacakan, dan tidak ada pembagian data dengan pihak ketiga. Penggunaan sepenuhnya anonim.",
+    "q5": "Apakah pendamping Anda Anda terikat pada suatu denominasi?",
+    "q5Answer": "Tidak. Pendamping Anda Anda berorientasi ekumenis dan menghormati tradisi Reformed, Katolik, gereja bebas, dan tradisi Kristen lainnya secara setara. Dalam kasus interpretasi yang berbeda secara denominasi, berbagai perspektif disajikan secara transparan – tanpa mengutamakan satu tradisi pun.",
+    "q6": "Apakah pendamping Anda Anda menggantikan pelayanan pastoral atau terapi?",
+    "q6Answer": "Tidak. Pendamping Anda Anda adalah alat digital untuk pembacaan Alkitab pribadi dan refleksi. Ini tidak menggantikan pelayanan pastoral profesional, konseling teologis, atau terapi psikologis. Dalam kasus krisis serius, pendamping Anda Anda selalu merujuk ke tempat bantuan yang berkualitas.",
+    "q7": "Bukankah pendamping Anda Anda hanya 'bot yang menyenangkan'?",
+    "q7Answer": "Tidak. Pendamping Anda Anda menghibur di mana penghiburan diperlukan – tetapi ia juga menantang. Pertumbuhan rohani membutuhkan gesekan. Pendamping Anda Anda mengajukan pertanyaan balik yang tidak nyaman, mengidentifikasi teks-teks Alkitab yang sulit (Ayub, Mazmur ratapan, kritik profetik) dan tidak menghindar dari topik-topik seperti keadilan, pertobatan, dan tanggung jawab. Tradisi profetik tidak pernah nyaman – dan pendamping Anda Anda juga tidak.",
+    "q8": "Siapa di balik pendamping Anda Anda dan bagaimana pendanaannya?",
+    "q8Answer": "BibleBot.Life adalah proyek pribadi, non-komersial. Ini dijalankan secara sukarela dan didanai sepenuhnya melalui donasi sukarela. Tidak ada iklan, tidak ada penjualan data, dan tidak ada fitur berbayar. Semua donasi digunakan langsung untuk menutupi biaya operasional (infrastruktur, hosting, pengembangan). Karena pendamping Anda berjalan sebagai proyek pribadi, donasi tidak dapat dikurangkan dari pajak.",
+    "q9": "Bagaimana pendamping Anda Anda menangani data saya?",
+    "q9Answer": "Pendamping Anda Anda tidak menyimpan data pribadi dan riwayat obrolan. Setiap percakapan bersifat anonim. Tidak ada login, tidak ada pelacakan, dan tidak ada pembagian data dengan pihak ketiga. Penggunaan sepenuhnya anonim.",
     "tradition": {
       "reformed": "Reformasi",
       "evangelical": "Injili",
@@ -225,35 +225,35 @@
     }
   },
   "donate": {
-    "badge": "Dukung BibleBot Anda",
-    "title": "Bantu agar BibleBot Anda tetap gratis",
-    "subtitle": "BibleBot Anda adalah proyek yang lahir dari hati – tanpa iklan, tanpa langganan, tanpa biaya tersembunyi. Agar tetap demikian, saya bergantung pada donasi sukarela. Setiap kontribusi membantu menutupi biaya operasional dan infrastruktur.",
+    "badge": "Dukung pendamping Anda Anda",
+    "title": "Bantu agar pendamping Anda Anda tetap gratis",
+    "subtitle": "BibleBot.Life Anda adalah proyek yang lahir dari hati – tanpa iklan, tanpa langganan, tanpa biaya tersembunyi. Agar tetap demikian, saya bergantung pada donasi sukarela. Setiap kontribusi membantu menutupi biaya operasional dan infrastruktur.",
     "bankTitle": "Donasi melalui Transfer Bank",
     "bankSubtitle": "Setiap jumlah berarti – terima kasih banyak! 🙏",
     "recipient": "Penerima",
     "bank": "Bank",
     "purpose": "Tujuan",
-    "purposeValue": "Donasi BibleBot",
+    "purposeValue": "Donasi BibleBot.Life",
     "note": "BibleBot.Life dijalankan sebagai proyek pribadi. Oleh karena itu, donasi tidak dapat dikurangkan dari pajak."
   },
   "refer": {
     "badge": "Bagikan Firman Tuhan",
-    "title": "Rekomendasikan BibleBot",
-    "subtitle": "Apakah Anda mengenal seseorang yang membutuhkan dorongan? Bagikan BibleBot – satu pesan dapat membuat perbedaan besar.",
+    "title": "Rekomendasikan pendamping Anda",
+    "subtitle": "Apakah Anda mengenal seseorang yang membutuhkan dorongan? Bagikan pendamping Anda – satu pesan dapat membuat perbedaan besar.",
     "whatsapp": "Bagikan via WhatsApp",
-    "whatsappMsg": "Hai, saya ingin menunjukkan BibleBot kepada Anda – pendamping Alkitab gratis yang tahu Alkitab dan mengajukan pertanyaan yang sangat bagus. Tanpa login, anonim, jujur. Coba saja: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Hai, saya ingin menunjukkan BibleBot.Life kepada Anda – pendamping Alkitab gratis yang tahu Alkitab dan mengajukan pertanyaan yang sangat bagus. Tanpa login, anonim, jujur. Coba saja: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Bagikan via Telegram",
-    "telegramMsg": "Hai, sudahkah Anda mengenal BibleBot? Pendamping Alkitab pribadi gratis – jujur, anonim, tanpa login. Lihatlah: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Hai, sudahkah Anda mengenal BibleBot.Life? Pendamping Alkitab pribadi gratis – jujur, anonim, tanpa login. Lihatlah: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Bagikan via Email",
     "emailSubject": "Ini mungkin menarik bagi Anda: BibleBot.Life",
-    "emailBody": "Halo!\n\nSaya ingin menunjukkan BibleBot kepada Anda – pendamping Alkitab gratis yang benar-benar tahu Alkitab. Tidak perlu mendaftar, sepenuhnya anonim.\n\nIa mengajukan pertanyaan balik yang baik, menjelaskan ayat-ayat Alkitab dalam konteks, dan mendampingi Anda dengan jujur – bahkan dalam topik-topik sulit.\n\nCoba saja: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nSalam hormat",
+    "emailBody": "Halo!\n\nSaya ingin menunjukkan BibleBot.Life kepada Anda – pendamping Alkitab gratis yang benar-benar tahu Alkitab. Tidak perlu mendaftar, sepenuhnya anonim.\n\nIa mengajukan pertanyaan balik yang baik, menjelaskan ayat-ayat Alkitab dalam konteks, dan mendampingi Anda dengan jujur – bahkan dalam topik-topik sulit.\n\nCoba saja: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nSalam hormat",
     "copy": "Salin Tautan",
     "copied": "Tautan disalin! 📋",
     "qr": "Atau cukup tunjukkan kode QR ini:"
   },
   "cta": {
     "title": "Anda tidak harus menghadapi ini sendirian",
-    "subtitle": "Cukup tuliskan apa yang mengganggu Anda kepada BibleBot Anda. Tanpa login, tanpa biaya, tanpa penghakiman – hanya pendampingan yang jujur dan kebijaksanaan Alkitab.",
+    "subtitle": "Cukup tuliskan apa yang mengganggu Anda kepada pendamping Anda Anda. Tanpa login, tanpa biaya, tanpa penghakiman – hanya pendampingan yang jujur dan kebijaksanaan Alkitab.",
     "button": "Mulai Obrolan Sekarang"
   },
   "footer": {
@@ -269,7 +269,7 @@
     "forChurches": "Untuk Gereja"
   },
   "chat": {
-    "welcome": "Senang Anda di sini 🤗\n\nSaya BibleBot Anda – pendamping pribadi Anda dengan Alkitab, pertanyaan-pertanyaan bagus, dan inspirasi konkret. Tanpa tekanan, tanpa penilaian.\n\nAnda bisa bertanya apa saja – atau cukup ceritakan apa yang sedang mengganggu Anda. 💛",
+    "welcome": "Senang Anda di sini 🤗\n\nSaya pendamping Anda Anda – pendamping pribadi Anda dengan Alkitab, pertanyaan-pertanyaan bagus, dan inspirasi konkret. Tanpa tekanan, tanpa penilaian.\n\nAnda bisa bertanya apa saja – atau cukup ceritakan apa yang sedang mengganggu Anda. 💛",
     "journeyOffer": "💡 **Tip:** Saya juga menawarkan **pendampingan 21 hari** – 3 minggu dengan inspirasi harian, refleksi, dan langkah-langkah konkret. Sepenuhnya sesuai kecepatan Anda.\n\nApakah Anda ingin mencobanya?",
     "suggestion1": "Saya butuh kata-kata yang membangun",
     "suggestion2": "Apa kata Alkitab jika seseorang merasa tidak yakin?",
@@ -314,7 +314,7 @@
     "suggestionsLoading": "Memuat saran…"
   },
   "install": {
-    "title": "Instal BibleBot",
+    "title": "Instal BibleBot.Life",
     "androidDesc": "Akses cepat langsung dari layar utama",
     "iosDesc": "Ketuk «Bagikan» → «Tambah ke Layar Utama»",
     "button": "Instal",
@@ -328,8 +328,8 @@
     "copiedDesc": "Teks telah disalin ke papan klip. Bagikan sekarang di WhatsApp, Instagram, atau di mana pun Anda mau!",
     "copyLink": "Salin Teks",
     "error": "Gagal menyalin",
-    "impulseTitle": "BibleBot – Renungan Harian",
-    "chatTitle": "BibleBot – Pemikiran Harian",
+    "impulseTitle": "Pendamping Anda – Renungan Harian",
+    "chatTitle": "Pendamping Anda – Pemikiran Harian",
     "createImage": "Buat Gambar ✨",
     "generating": "Membuat…",
     "imageReady": "Gambar Anda siap untuk dibagikan!",
@@ -392,7 +392,7 @@
   },
   "tiles": {
     "sectionTitle": "Apa yang mengganggu Anda?",
-    "sectionSubtitle": "Pilih topik — BibleBot akan mendampingi Anda",
+    "sectionSubtitle": "Pilih topik — pendamping Anda akan mendampingi Anda",
     "baptism": {
       "title": "Menemukan Ayat Pembaptisan",
       "desc": "Ayat yang sempurna untuk anak Anda",
@@ -686,7 +686,7 @@
   },
   "church": {
     "badge": "Untuk organisasi",
-    "heroTitle": "BibleBot untuk organisasi Anda",
+    "heroTitle": "Pendamping Anda untuk organisasi Anda",
     "heroSubtitle": "Dampingi anggota jemaat Anda dengan kebijaksanaan Alkitab – secara digital, pribadi, dan 24/7.",
     "useCasesTitle": "Kasus Penggunaan",
     "useCase": {
@@ -708,7 +708,7 @@
       }
     },
     "pricingTitle": "Paket Patronase",
-    "pricingSubtitle": "Dukung BibleBot dan jemaat Anda dengan paket patronase yang sesuai.",
+    "pricingSubtitle": "Dukung pendamping Anda dan jemaat Anda dengan paket patronase yang sesuai.",
     "popular": "Populer",
     "free": "Gratis",
     "perYear": "orang / tahun",
@@ -750,7 +750,7 @@
     "viewDirectory": "Lihat Direktori Gereja",
     "directoryBadge": "Direktori Gereja",
     "directoryTitle": "Gereja Mitra",
-    "directorySubtitle": "Temukan gereja di dekat Anda yang merekomendasikan BibleBot.",
+    "directorySubtitle": "Temukan gereja di dekat Anda yang merekomendasikan pendamping Anda.",
     "searchPlaceholder": "Cari Lokasi, Nama, atau Denominasi...",
     "noResults": "Belum ada gereja di direktori.",
     "becomePartner": "Jadi Mitra →",
@@ -805,7 +805,7 @@
       }
     },
     "institutionsTitle": "Juga untuk Institusi",
-    "institutionsSubtitle": "BibleBot tidak hanya menemani jemaat – panti jompo, panti lansia, rumah sakit, dan pelayanan pastoral penjara juga mendapat manfaat dari pelayanan pastoral digital.",
+    "institutionsSubtitle": "Pendamping Anda tidak hanya menemani jemaat – panti jompo, panti lansia, rumah sakit, dan pelayanan pastoral penjara juga mendapat manfaat dari pelayanan pastoral digital.",
     "institution": {
       "careHome": {
         "title": "Panti Jompo",
@@ -848,7 +848,7 @@
         "desc": "Impuls spiritual pelengkap untuk klien dalam konseling psikososial."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible.",
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As pendamping Anda is a private project, donations are not tax-deductible.",
     "denominationsTitle": "Untuk semua denominasi dan pemimpin upacara",
     "denominationsSubtitle": "BibleBot.Life bersifat ekumenis – untuk komunitas Reformasi, Katolik, Lutheran, dan Gereja Bebas Injili, serta pemimpin upacara freelance.",
     "denomination": {
@@ -876,15 +876,15 @@
   },
   "institutions": {
     "badge": "Untuk organisasi",
-    "heroTitle": "BibleBot untuk Institusi Anda",
+    "heroTitle": "Pendamping Anda untuk Institusi Anda",
     "heroSubtitle": "Pelayanan pastoral digital untuk panti jompo, panti lansia, rumah sakit, dan lembaga pemasyarakatan – pribadi, rahasia, dan 24/7.",
     "seniorHint": {
       "title": "Mode Senior Tersedia",
       "desc": "Font lebih besar dan pengoperasian yang disederhanakan – ideal untuk penghuni lansia.",
       "cta": "Coba Mode Senior"
     },
-    "typesTitle": "Untuk Siapa BibleBot?",
-    "useCasesTitle": "Bagaimana BibleBot Digunakan",
+    "typesTitle": "Untuk Siapa pendamping Anda?",
+    "useCasesTitle": "Bagaimana pendamping Anda Digunakan",
     "useCasesSubtitle": "Aplikasi konkret untuk kehidupan sehari-hari di institusi Anda.",
     "pricingTitle": "Paket Patronase",
     "pricingSubtitle": "Paket yang sama dengan untuk gereja – disesuaikan dengan kebutuhan institusi.",
@@ -918,7 +918,7 @@
       },
       "companionship": {
         "title": "Mitra Percakapan",
-        "desc": "BibleBot menjawab pertanyaan iman dengan sabar dan tanpa tekanan waktu – ideal untuk saat-saat kesepian."
+        "desc": "Pendamping Anda menjawab pertanyaan iman dengan sabar dan tanpa tekanan waktu – ideal untuk saat-saat kesepian."
       },
       "accessibility": {
         "title": "Akses Mudah",
@@ -952,7 +952,7 @@
     }
   },
   "eulogy": {
-    "pageTitle": "Eulogi – Buat Riwayat Hidup | BibleBot",
+    "pageTitle": "Eulogi – Buat Riwayat Hidup | pendamping Anda",
     "pageDesc": "Abadikan kenangan orang terkasih dan buat teks riwayat hidup yang indah untuk eulogi.",
     "title": "Eulogi – Riwayat Hidup",
     "subtitle": "Abadikan kenangan, buat teks, unduh sebagai PDF.",
@@ -1002,7 +1002,7 @@
     "confirmationDesc": "Temukan ayat konfirmasi dan persiapkan teks pribadi."
   },
   "chatHero": {
-    "ariaLabel": "Ajukan pertanyaan kepada BibleBot",
+    "ariaLabel": "Ajukan pertanyaan kepada pendamping Anda",
     "focusPlaceholder": "Tulis pertanyaanmu…",
     "placeholder1": "Apa yang membuat saya sungguh bersyukur?",
     "placeholder2": "Bagaimana menemukan kedamaian batin?",
@@ -1016,12 +1016,12 @@
     "suggestion3": "Untuk apa saya bersyukur?"
   },
   "meta": {
-    "forChurchesDesc": "BibleBot sebagai mitra untuk gereja Anda: pekerjaan pemuda, konfirmasi, konseling pastoral, dan kelompok studi Alkitab. Gratis hingga Premium.",
-    "forChurchesTitle": "BibleBot untuk Gereja – Konseling Pastoral Digital & Pendampingan Alkitab",
-    "homeDesc": "BibleBot menemani Anda dengan 5 terjemahan Alkitab, metodologi pembinaan, dan konseling pastoral. Anonim, gratis, dalam 36 bahasa.",
-    "homeTitle": "BibleBot – Pendamping Alkitab Pribadi Anda | Gratis & Anonim",
-    "loginDesc": "Masuk ke BibleBot untuk mempersiapkan upacara pribadi Anda.",
-    "loginTitle": "Masuk – BibleBot"
+    "forChurchesDesc": "Pendamping Anda sebagai mitra untuk gereja Anda: pekerjaan pemuda, konfirmasi, konseling pastoral, dan kelompok studi Alkitab. Gratis hingga Premium.",
+    "forChurchesTitle": "Pendamping Anda untuk Gereja – Konseling Pastoral Digital & Pendampingan Alkitab",
+    "homeDesc": "Pendamping Anda menemani Anda dengan 5 terjemahan Alkitab, metodologi pembinaan, dan konseling pastoral. Anonim, gratis, dalam 36 bahasa.",
+    "homeTitle": "Pendamping Anda – Pendamping Alkitab Pribadi Anda | Gratis & Anonim",
+    "loginDesc": "Masuk ke pendamping Anda untuk mempersiapkan upacara pribadi Anda.",
+    "loginTitle": "Masuk – pendamping Anda"
   },
   "splash": {
     "patronage": "Direkomendasikan oleh"

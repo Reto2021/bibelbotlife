@@ -16,7 +16,7 @@
     },
     "title1": "Kinh Thánh.",
     "title2": " Suy nghĩ lại.",
-    "subtitle": "BibleBot của bạn hiểu Kinh Thánh – và đặt những câu hỏi đúng. Không phải con người, nhưng là một người bạn đồng hành trung thực. Để có những cuộc trò chuyện ý nghĩa, những câu hỏi sâu sắc và những động lực thực sự.",
+    "subtitle": "Người bạn đồng hành của bạn hiểu Kinh Thánh – và đặt những câu hỏi đúng. Không phải con người, nhưng là một người bạn đồng hành trung thực. Để có những cuộc trò chuyện ý nghĩa, những câu hỏi sâu sắc và những động lực thực sự.",
     "ctaTelegram": "Bắt đầu qua Telegram",
     "ctaMore": "Tìm hiểu thêm",
     "quote": "«Hỡi những kẻ mệt mỏi và gánh nặng, hãy đến với Ta, Ta sẽ cho các ngươi được an nghỉ.»",
@@ -35,8 +35,8 @@
     "stopAudio": "Dừng"
   },
   "features": {
-    "sectionTitle": "Cách BibleBot của bạn đồng hành cùng bạn",
-    "sectionSubtitle": "Khám phá nhiều cách mà BibleBot có thể đồng hành cùng bạn",
+    "sectionTitle": "Cách người bạn đồng hành của bạn đồng hành cùng bạn",
+    "sectionSubtitle": "Khám phá nhiều cách mà người bạn đồng hành có thể đồng hành cùng bạn",
     "bible": {
       "title": "Kinh Thánh & Chú giải",
       "desc": "Hỏi «Kinh Thánh nói gì về...?» và nhận được những câu phù hợp với ngữ cảnh và giải thích dễ hiểu."
@@ -51,7 +51,7 @@
     },
     "faith": {
       "title": "Con đường đức tin & Tìm thấy Chúa Kitô",
-      "desc": "Dù đang tìm kiếm, nghi ngờ hay đào sâu – BibleBot của bạn sẽ đồng hành cùng bạn trên hành trình cá nhân của bạn."
+      "desc": "Dù đang tìm kiếm, nghi ngờ hay đào sâu – người bạn đồng hành của bạn sẽ đồng hành cùng bạn trên hành trình cá nhân của bạn."
     },
     "daily": {
       "title": "Lời khuyên hàng ngày & Lịch phụng vụ",
@@ -65,9 +65,9 @@
   "coaching": {
     "badge": "Phương pháp",
     "title": "Không chỉ là một chatbot – mà là một người bạn đồng hành thực sự",
-    "subtitle": "BibleBot của bạn kết hợp sự khôn ngoan của Kinh Thánh với các phương pháp huấn luyện đã được kiểm chứng và Tâm lý học Tích cực.",
+    "subtitle": "Người bạn đồng hành của bạn kết hợp sự khôn ngoan của Kinh Thánh với các phương pháp huấn luyện đã được kiểm chứng và Tâm lý học Tích cực.",
     "journeyTitle": "Đồng hành cá nhân",
-    "journeyDesc": "BibleBot của bạn sẽ đồng hành cùng bạn21 ngày đầu tiên bạn muốn – trong cuộc trò chuyện tự do hoặc với một cấu trúc tùy chọn.",
+    "journeyDesc": "Người bạn đồng hành của bạn sẽ đồng hành cùng bạn21 ngày đầu tiên bạn muốn – trong cuộc trò chuyện tự do hoặc với một cấu trúc tùy chọn.",
     "week1": "Tuần 1: Bắt đầu",
     "week1Desc": "Xây dựng niềm tin, lắng nghe, hiểu tình huống của bạn. Bạn đang ở đâu? Điều gì đang làm bạn bận tâm?",
     "week2": "Tuần 2: Đào sâu",
@@ -75,12 +75,12 @@
     "week3": "Tuần 3: Hành động",
     "week3Desc": "Thực hiện các bước cụ thể, đặt mục tiêu, thúc đẩy sự thay đổi. Bước tiếp theo của bạn là gì?",
     "openQuestionsTitle": "Câu hỏi mở thay vì câu trả lời nhanh",
-    "openQuestionsDesc": "BibleBot của bạn không đưa ra những lời khuyên rẻ tiền. Thay vào đó, nó đặt ra những câu hỏi thực sự quan trọng:",
+    "openQuestionsDesc": "Người bạn đồng hành của bạn không đưa ra những lời khuyên rẻ tiền. Thay vào đó, nó đặt ra những câu hỏi thực sự quan trọng:",
     "openQ1": "«Thật ra điều gì đằng sau mong muốn này?»",
     "openQ2": "«Bạn sẽ nhận ra điều gì đã thay đổi?»",
     "openQ3": "«Bước nhỏ đầu tiên là gì?»",
     "honestTitle": "Trung thực thay vì tích cực độc hại",
-    "honestDesc": "Không có «Rồi sẽ ổn thôi!» và không có lời nói ngọt ngào. BibleBot của bạn đồng cảm VÀ trung thực:",
+    "honestDesc": "Không có «Rồi sẽ ổn thôi!» và không có lời nói ngọt ngào. Người bạn đồng hành của bạn đồng cảm VÀ trung thực:",
     "honest1": "Nhắc đến cả những đoạn Kinh Thánh khó nghe",
     "honest2": "Thúc đẩy tự phản tỉnh",
     "honest3": "Phân biệt sự an ủi với sự phủ nhận",
@@ -105,7 +105,7 @@
       "author": "Worthington",
       "desc": "Mô hình REACH cho quá trình tha thứ"
     },
-    "renameTip": "💡 Bạn có thể đặt tên riêng cho BibleBot của mình – để nó thực sự trở thành người bạn đồng hành của bạn."
+    "renameTip": "💡 Bạn có thể đặt tên riêng cho người bạn đồng hành của mình – để nó thực sự trở thành người bạn đồng hành của bạn."
   },
   "discover": {
     "badge": "Dành cho những người tò mò",
@@ -117,7 +117,7 @@
     },
     "search": {
       "title": "Bạn đang tìm kiếm?",
-      "text": "Có thể bạn không biết chính xác mình đang tìm gì. Điều đó hoàn toàn bình thường. BibleBot của bạn giúp bạn đặt ra những câu hỏi đúng – thay vì đưa ra những câu trả lời nhanh chóng."
+      "text": "Có thể bạn không biết chính xác mình đang tìm gì. Điều đó hoàn toàn bình thường. Người bạn đồng hành của bạn giúp bạn đặt ra những câu hỏi đúng – thay vì đưa ra những câu trả lời nhanh chóng."
     },
     "deepen": {
       "title": "Bạn muốn đào sâu?",
@@ -172,9 +172,9 @@
   },
   "faq": {
     "badge": "Những câu hỏi thường gặp",
-    "title": "Những điều bạn nên biết về BibleBot của mình",
+    "title": "Những điều bạn nên biết về người bạn đồng hành của mình",
     "subtitle": "Chúng tôi coi trọng sự minh bạch – đặc biệt đối với các nhà thần học, cố vấn mục vụ và những người có tư duy phản biện.",
-    "q1": "Điều gì phân biệt BibleBot của bạn với ChatGPT & các loại khác?",
+    "q1": "Điều gì phân biệt người bạn đồng hành của bạn với ChatGPT & các loại khác?",
     "q1Generic": "Chatbot chung:",
     "q1GenericItems": [
       "Trích dẫn Kinh Thánh hời hợt không có ngữ cảnh",
@@ -194,11 +194,11 @@
       "Thúc đẩy tư duy phản biện như sự trưởng thành trong đức tin"
     ],
     "q2": "Những bản dịch Kinh Thánh nào được lưu trữ?",
-    "q2Intro": "BibleBot của bạn làm việc theo cách liên giáo phái với các bản Kinh Thánh tiếng Đức quan trọng:",
+    "q2Intro": "Người bạn đồng hành của bạn làm việc theo cách liên giáo phái với các bản Kinh Thánh tiếng Đức quan trọng:",
     "q2Outro": "Tất cả các đoạn Kinh Thánh đều được cung cấp nguồn gốc và ngữ cảnh lịch sử.",
     "q3": "Những cơ sở khoa học nào đằng sau nó?",
     "q3Intro": "Sự đồng hành dựa trên nghiên cứu đã được bình duyệt của Tâm lý học Tích cực:",
-    "q4": "Làm thế nào để BibleBot của bạn đảm bảo an toàn mục vụ?",
+    "q4": "Làm thế nào để người bạn đồng hành của bạn đảm bảo an toàn mục vụ?",
     "q4Items": [
       "Khi có ý định tự tử hoặc khủng hoảng → chuyển ngay đến Dargebotene Hand (143) và Pro Juventute (147)",
       "Không có chẩn đoán tâm lý hoặc y tế",
@@ -208,16 +208,16 @@
       "Không có sự tích cực độc hại – đồng hành chân thành, trung thực",
       "Đề cập công khai những căng thẳng và văn bản khó khăn"
     ],
-    "q5": "BibleBot của bạn có bị ràng buộc giáo phái không?",
-    "q5Answer": "Không. BibleBot của bạn hướng đến liên giáo phái và tôn trọng các truyền thống Cải cách, Công giáo, Giáo hội tự do và các truyền thống Kitô giáo khác như nhau. Đối với các cách giải thích khác nhau về giáo phái, các quan điểm khác nhau được trình bày minh bạch – mà không ưu tiên một truyền thống nào.",
-    "q6": "BibleBot của bạn có thay thế cố vấn mục vụ hoặc liệu pháp không?",
-    "q6Answer": "Không. BibleBot của bạn là một công cụ kỹ thuật số để đọc và suy tư Kinh Thánh cá nhân. Nó không thay thế cố vấn mục vụ chuyên nghiệp, tư vấn thần học hoặc liệu pháp tâm lý. Trong trường hợp khủng hoảng nghiêm trọng, BibleBot của bạn luôn giới thiệu đến các cơ quan có trình độ.",
-    "q7": "BibleBot của bạn không chỉ là một «bot dễ chịu» sao?",
-    "q7Answer": "Không. BibleBot của bạn an ủi khi cần an ủi – nhưng nó cũng thách thức. Sự phát triển tâm linh cần sự cọ xát. BibleBot của bạn đặt ra những câu hỏi khó chịu, nhắc đến những văn bản Kinh Thánh khó khăn (Gióp, Thi thiên than vãn, phê bình tiên tri) và không ngại các chủ đề như công lý, sự ăn năn và trách nhiệm. Truyền thống tiên tri chưa bao giờ dễ chịu – và BibleBot của bạn cũng vậy.",
-    "q8": "Ai đứng sau BibleBot của bạn và nó được tài trợ như thế nào?",
-    "q8Answer": "BibleBot.Life là một dự án tư nhân, phi thương mại. Nó được vận hành tình nguyện và chỉ được tài trợ thông qua các khoản quyên góp tự nguyện. Không có quảng cáo, không bán dữ liệu và không có tính năng trả phí. Tất cả các khoản quyên góp trực tiếp trang trải chi phí hoạt động (cơ sở hạ tầng, lưu trữ, phát triển). Vì BibleBot hoạt động như một dự án tư nhân, các khoản quyên góp không được trừ thuế.",
-    "q9": "BibleBot của bạn xử lý dữ liệu của tôi như thế nào?",
-    "q9Answer": "BibleBot của bạn không lưu trữ dữ liệu cá nhân hay lịch sử trò chuyện. Mọi cuộc trò chuyện đều ẩn danh. Không có đăng nhập, không theo dõi và không chia sẻ dữ liệu với bên thứ ba. Việc sử dụng hoàn toàn ẩn danh.",
+    "q5": "Người bạn đồng hành của bạn có bị ràng buộc giáo phái không?",
+    "q5Answer": "Không. Người bạn đồng hành của bạn hướng đến liên giáo phái và tôn trọng các truyền thống Cải cách, Công giáo, Giáo hội tự do và các truyền thống Kitô giáo khác như nhau. Đối với các cách giải thích khác nhau về giáo phái, các quan điểm khác nhau được trình bày minh bạch – mà không ưu tiên một truyền thống nào.",
+    "q6": "Người bạn đồng hành của bạn có thay thế cố vấn mục vụ hoặc liệu pháp không?",
+    "q6Answer": "Không. Người bạn đồng hành của bạn là một công cụ kỹ thuật số để đọc và suy tư Kinh Thánh cá nhân. Nó không thay thế cố vấn mục vụ chuyên nghiệp, tư vấn thần học hoặc liệu pháp tâm lý. Trong trường hợp khủng hoảng nghiêm trọng, người bạn đồng hành của bạn luôn giới thiệu đến các cơ quan có trình độ.",
+    "q7": "Người bạn đồng hành của bạn không chỉ là một «bot dễ chịu» sao?",
+    "q7Answer": "Không. Người bạn đồng hành của bạn an ủi khi cần an ủi – nhưng nó cũng thách thức. Sự phát triển tâm linh cần sự cọ xát. Người bạn đồng hành của bạn đặt ra những câu hỏi khó chịu, nhắc đến những văn bản Kinh Thánh khó khăn (Gióp, Thi thiên than vãn, phê bình tiên tri) và không ngại các chủ đề như công lý, sự ăn năn và trách nhiệm. Truyền thống tiên tri chưa bao giờ dễ chịu – và người bạn đồng hành của bạn cũng vậy.",
+    "q8": "Ai đứng sau người bạn đồng hành của bạn và nó được tài trợ như thế nào?",
+    "q8Answer": "BibleBot.Life là một dự án tư nhân, phi thương mại. Nó được vận hành tình nguyện và chỉ được tài trợ thông qua các khoản quyên góp tự nguyện. Không có quảng cáo, không bán dữ liệu và không có tính năng trả phí. Tất cả các khoản quyên góp trực tiếp trang trải chi phí hoạt động (cơ sở hạ tầng, lưu trữ, phát triển). Vì người bạn đồng hành hoạt động như một dự án tư nhân, các khoản quyên góp không được trừ thuế.",
+    "q9": "Người bạn đồng hành của bạn xử lý dữ liệu của tôi như thế nào?",
+    "q9Answer": "Người bạn đồng hành của bạn không lưu trữ dữ liệu cá nhân hay lịch sử trò chuyện. Mọi cuộc trò chuyện đều ẩn danh. Không có đăng nhập, không theo dõi và không chia sẻ dữ liệu với bên thứ ba. Việc sử dụng hoàn toàn ẩn danh.",
     "tradition": {
       "reformed": "Cải cách",
       "evangelical": "Tin lành",
@@ -227,35 +227,35 @@
     }
   },
   "donate": {
-    "badge": "Hỗ trợ BibleBot của bạn",
-    "title": "Hãy giúp BibleBot của bạn duy trì miễn phí",
-    "subtitle": "BibleBot của bạn là một dự án tâm huyết – không quảng cáo, không phí thuê bao, không có chi phí ẩn. Để duy trì điều này, tôi cần sự quyên góp tự nguyện. Mọi đóng góp đều giúp trang trải chi phí hoạt động và cơ sở hạ tầng.",
+    "badge": "Hỗ trợ người bạn đồng hành của bạn",
+    "title": "Hãy giúp người bạn đồng hành của bạn duy trì miễn phí",
+    "subtitle": "BibleBot.Life của bạn là một dự án tâm huyết – không quảng cáo, không phí thuê bao, không có chi phí ẩn. Để duy trì điều này, tôi cần sự quyên góp tự nguyện. Mọi đóng góp đều giúp trang trải chi phí hoạt động và cơ sở hạ tầng.",
     "bankTitle": "Quyên góp qua chuyển khoản ngân hàng",
     "bankSubtitle": "Mọi số tiền đều có giá trị – chân thành cảm ơn! 🙏",
     "recipient": "Người nhận",
     "bank": "Ngân hàng",
     "purpose": "Mục đích",
-    "purposeValue": "Quyên góp BibleBot",
+    "purposeValue": "Quyên góp BibleBot.Life",
     "note": "BibleBot.Life hoạt động như một dự án cá nhân. Do đó, các khoản quyên góp không được giảm trừ thuế."
   },
   "refer": {
     "badge": "Chia sẻ Lời Chúa",
-    "title": "Giới thiệu BibleBot",
-    "subtitle": "Bạn có biết ai đó đang cần lời động viên? Hãy chia sẻ BibleBot – một tin nhắn có thể tạo ra nhiều điều khác biệt.",
+    "title": "Giới thiệu người bạn đồng hành",
+    "subtitle": "Bạn có biết ai đó đang cần lời động viên? Hãy chia sẻ người bạn đồng hành – một tin nhắn có thể tạo ra nhiều điều khác biệt.",
     "whatsapp": "Chia sẻ qua WhatsApp",
-    "whatsappMsg": "Chào, mình muốn giới thiệu cho bạn BibleBot – một người bạn đồng hành Kinh Thánh miễn phí, hiểu Kinh Thánh và đặt những câu hỏi thực sự hay. Không cần đăng nhập, ẩn danh, trung thực. Hãy thử xem: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Chào, mình muốn giới thiệu cho bạn BibleBot.Life – một BibleBot.Life Kinh Thánh miễn phí, hiểu Kinh Thánh và đặt những câu hỏi thực sự hay. Không cần đăng nhập, ẩn danh, trung thực. Hãy thử xem: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Chia sẻ qua Telegram",
-    "telegramMsg": "Chào, bạn đã biết BibleBot chưa? Một người bạn đồng hành Kinh Thánh cá nhân miễn phí – trung thực, ẩn danh, không cần đăng nhập. Hãy xem thử: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Chào, bạn đã biết BibleBot.Life chưa? Một BibleBot.Life Kinh Thánh cá nhân miễn phí – trung thực, ẩn danh, không cần đăng nhập. Hãy xem thử: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Chia sẻ qua E-mail",
     "emailSubject": "Bạn có thể quan tâm: BibleBot.Life",
-    "emailBody": "Chào bạn!\n\nMình muốn giới thiệu cho bạn BibleBot – một người bạn đồng hành Kinh Thánh miễn phí, thực sự hiểu Kinh Thánh. Không cần đăng ký, hoàn toàn ẩn danh.\n\nNó đặt ra những câu hỏi hay, giải thích các đoạn Kinh Thánh trong ngữ cảnh và đồng hành cùng bạn một cách trung thực – ngay cả với những chủ đề khó khăn.\n\nHãy thử xem: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nThân ái",
+    "emailBody": "Chào bạn!\n\nMình muốn giới thiệu cho bạn BibleBot.Life – một BibleBot.Life Kinh Thánh miễn phí, thực sự hiểu Kinh Thánh. Không cần đăng ký, hoàn toàn ẩn danh.\n\nNó đặt ra những câu hỏi hay, giải thích các đoạn Kinh Thánh trong ngữ cảnh và đồng hành cùng bạn một cách trung thực – ngay cả với những chủ đề khó khăn.\n\nHãy thử xem: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nThân ái",
     "copy": "Sao chép liên kết",
     "copied": "Đã sao chép liên kết! 📋",
     "qr": "Hoặc chỉ cần hiển thị mã QR này:"
   },
   "cta": {
     "title": "Bạn không cần phải vượt qua điều này một mình",
-    "subtitle": "Chỉ cần viết cho BibleBot của bạn điều đang làm bạn bận tâm. Không đăng nhập, không chi phí, không phán xét – chỉ có sự đồng hành chân thành và sự khôn ngoan của Kinh Thánh.",
+    "subtitle": "Chỉ cần viết cho người bạn đồng hành của bạn điều đang làm bạn bận tâm. Không đăng nhập, không chi phí, không phán xét – chỉ có sự đồng hành chân thành và sự khôn ngoan của Kinh Thánh.",
     "button": "Bắt đầu cuộc trò chuyện ngay"
   },
   "footer": {
@@ -271,7 +271,7 @@
     "forChurches": "Dành cho các Hội thánh"
   },
   "chat": {
-    "welcome": "Chào mừng bạn 🤗\n\nTôi là BibleBot của bạn – người bạn đồng hành cá nhân của bạn với Kinh Thánh, những câu hỏi hay và những lời khuyên cụ thể. Không áp lực, không phán xét.\n\nBạn có thể hỏi tôi bất cứ điều gì – hoặc chỉ đơn giản là kể cho tôi những gì đang làm bạn bận tâm. 💛",
+    "welcome": "Chào mừng bạn 🤗\n\nTôi là người bạn đồng hành của bạn – người bạn đồng hành cá nhân của bạn với Kinh Thánh, những câu hỏi hay và những lời khuyên cụ thể. Không áp lực, không phán xét.\n\nBạn có thể hỏi tôi bất cứ điều gì – hoặc chỉ đơn giản là kể cho tôi những gì đang làm bạn bận tâm. 💛",
     "journeyOffer": "💡 **Mẹo:** Tôi cũng cung cấp **chương trình đồng hành 21 ngày** – 3 tuần với những lời khuyên, suy ngẫm và bước đi cụ thể hàng ngày. Hoàn toàn theo tốc độ của bạn.\n\nBạn có muốn thử không?",
     "suggestion1": "Tôi đang cần một lời động viên",
     "suggestion2": "Kinh Thánh nói gì khi bạn cảm thấy không chắc chắn?",
@@ -316,7 +316,7 @@
     "suggestionsLoading": "Đang tải gợi ý…"
   },
   "install": {
-    "title": "Cài đặt BibleBot",
+    "title": "Cài đặt BibleBot.Life",
     "androidDesc": "Truy cập nhanh chóng trực tiếp từ màn hình chính",
     "iosDesc": "Chạm vào «Chia sẻ» → «Thêm vào Màn hình chính»",
     "button": "Cài đặt",
@@ -330,8 +330,8 @@
     "copiedDesc": "Văn bản đã được sao chép vào bộ nhớ đệm. Chia sẻ nó ngay bây giờ trên WhatsApp, Instagram hoặc bất cứ nơi nào bạn muốn!",
     "copyLink": "Sao chép văn bản",
     "error": "Sao chép thất bại",
-    "impulseTitle": "BibleBot – Lời khuyên trong ngày",
-    "chatTitle": "BibleBot – Suy nghĩ trong ngày",
+    "impulseTitle": "Người bạn đồng hành – Lời khuyên trong ngày",
+    "chatTitle": "Người bạn đồng hành – Suy nghĩ trong ngày",
     "createImage": "Tạo hình ảnh ✨",
     "generating": "Đang tạo…",
     "imageReady": "Hình ảnh của bạn đã sẵn sàng để chia sẻ!",
@@ -394,7 +394,7 @@
   },
   "tiles": {
     "sectionTitle": "Điều gì đang làm bạn bận tâm?",
-    "sectionSubtitle": "Chọn một chủ đề — BibleBot sẽ đồng hành cùng bạn",
+    "sectionSubtitle": "Chọn một chủ đề — người bạn đồng hành sẽ đồng hành cùng bạn",
     "baptism": {
       "title": "Tìm câu nói rửa tội",
       "desc": "Câu thơ hoàn hảo cho con bạn",
@@ -688,7 +688,7 @@
   },
   "church": {
     "badge": "Cho tổ chức",
-    "heroTitle": "BibleBot cho tổ chức của bạn",
+    "heroTitle": "Người bạn đồng hành cho tổ chức của bạn",
     "heroSubtitle": "Đồng hành cùng các thành viên Hội thánh của bạn với sự khôn ngoan của Kinh Thánh – kỹ thuật số, cá nhân và 24/7.",
     "useCasesTitle": "Trường hợp sử dụng",
     "useCase": {
@@ -710,7 +710,7 @@
       }
     },
     "pricingTitle": "Gói bảo trợ",
-    "pricingSubtitle": "Hỗ trợ BibleBot và Hội thánh của bạn với gói bảo trợ phù hợp.",
+    "pricingSubtitle": "Hỗ trợ người bạn đồng hành và Hội thánh của bạn với gói bảo trợ phù hợp.",
     "popular": "Phổ biến",
     "free": "Miễn phí",
     "perYear": "người / năm",
@@ -752,7 +752,7 @@
     "viewDirectory": "Xem danh bạ Hội thánh",
     "directoryBadge": "Danh bạ Hội thánh",
     "directoryTitle": "Hội thánh đối tác",
-    "directorySubtitle": "Tìm một Hội thánh gần bạn, nơi giới thiệu BibleBot.",
+    "directorySubtitle": "Tìm một Hội thánh gần bạn, nơi giới thiệu người bạn đồng hành.",
     "searchPlaceholder": "Tìm kiếm địa điểm, tên hoặc giáo phái...",
     "noResults": "Chưa có Hội thánh nào trong danh bạ.",
     "becomePartner": "Trở thành đối tác →",
@@ -807,7 +807,7 @@
       }
     },
     "institutionsTitle": "Cũng dành cho các tổ chức",
-    "institutionsSubtitle": "BibleBot không chỉ đồng hành cùng các Hội thánh – các viện dưỡng lão, bệnh viện và mục vụ nhà tù cũng được hưởng lợi từ mục vụ kỹ thuật số.",
+    "institutionsSubtitle": "Người bạn đồng hành không chỉ đồng hành cùng các Hội thánh – các viện dưỡng lão, bệnh viện và mục vụ nhà tù cũng được hưởng lợi từ mục vụ kỹ thuật số.",
     "institution": {
       "careHome": {
         "title": "Viện dưỡng lão",
@@ -850,7 +850,7 @@
         "desc": "Xung lực tâm linh bổ sung cho khách hàng tư vấn tâm lý xã hội."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible.",
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As người bạn đồng hành is a private project, donations are not tax-deductible.",
     "denominationsTitle": "Cho mọi giáo phái và người dẫn lễ",
     "denominationsSubtitle": "BibleBot.Life là đại kết – dành cho các cộng đồng Cải cách, Công giáo, Luther và Tin lành tự do, cũng như người dẫn lễ tự do.",
     "denomination": {
@@ -878,15 +878,15 @@
   },
   "institutions": {
     "badge": "Cho tổ chức",
-    "heroTitle": "BibleBot cho tổ chức của bạn",
+    "heroTitle": "Người bạn đồng hành cho tổ chức của bạn",
     "heroSubtitle": "Mục vụ kỹ thuật số cho các viện dưỡng lão, bệnh viện, trại giam và các cơ sở y tế – cá nhân, bảo mật và 24/7.",
     "seniorHint": {
       "title": "Chế độ người cao tuổi có sẵn",
       "desc": "Phông chữ lớn hơn và thao tác đơn giản hơn – lý tưởng cho người cao tuổi.",
       "cta": "Thử chế độ người cao tuổi"
     },
-    "typesTitle": "BibleBot dành cho ai?",
-    "useCasesTitle": "Cách BibleBot được sử dụng",
+    "typesTitle": "Người bạn đồng hành dành cho ai?",
+    "useCasesTitle": "Cách người bạn đồng hành được sử dụng",
     "useCasesSubtitle": "Các ứng dụng cụ thể cho cuộc sống hàng ngày tại tổ chức của bạn.",
     "pricingTitle": "Gói bảo trợ",
     "pricingSubtitle": "Các gói tương tự như cho hội thánh – được điều chỉnh cho nhu cầu của tổ chức.",
@@ -920,7 +920,7 @@
       },
       "companionship": {
         "title": "Bạn đồng hành",
-        "desc": "BibleBot trả lời các câu hỏi đức tin một cách kiên nhẫn và không áp lực thời gian – lý tưởng cho những giờ cô đơn."
+        "desc": "Người bạn đồng hành trả lời các câu hỏi đức tin một cách kiên nhẫn và không áp lực thời gian – lý tưởng cho những giờ cô đơn."
       },
       "accessibility": {
         "title": "Khả năng tiếp cận dễ dàng",
@@ -954,7 +954,7 @@
     }
   },
   "chatHero": {
-    "ariaLabel": "Hỏi BibleBot",
+    "ariaLabel": "Hỏi người bạn đồng hành",
     "focusPlaceholder": "Viết câu hỏi của bạn…",
     "placeholder1": "Điều gì thực sự làm tôi biết ơn?",
     "placeholder2": "Làm thế nào để tôi tìm thấy sự bình yên nội tâm?",
@@ -971,12 +971,12 @@
     "patronage": "Được giới thiệu bởi"
   },
   "meta": {
-    "forChurchesDesc": "BibleBot là đối tác cho cộng đồng của bạn: công tác thanh niên, lễ xưng tội, mục vụ và các nhóm học Kinh Thánh. Miễn phí đến Premium.",
-    "forChurchesTitle": "BibleBot dành cho Hội Thánh – Mục Vụ Kỹ Thuật Số & Trợ Giúp Kinh Thánh",
-    "homeDesc": "BibleBot đồng hành cùng bạn với 5 bản dịch Kinh Thánh, phương pháp huấn luyện và mục vụ. Ẩn danh, miễn phí, bằng 36 ngôn ngữ.",
-    "homeTitle": "BibleBot – Người bạn đồng hành Kinh Thánh cá nhân của bạn | Miễn phí & Ẩn danh",
-    "loginDesc": "Đăng nhập vào BibleBot để chuẩn bị các nghi lễ cá nhân của bạn.",
-    "loginTitle": "Đăng nhập – BibleBot"
+    "forChurchesDesc": "Người bạn đồng hành là đối tác cho cộng đồng của bạn: công tác thanh niên, lễ xưng tội, mục vụ và các nhóm học Kinh Thánh. Miễn phí đến Premium.",
+    "forChurchesTitle": "Người bạn đồng hành dành cho Hội Thánh – Mục Vụ Kỹ Thuật Số & Trợ Giúp Kinh Thánh",
+    "homeDesc": "Người bạn đồng hành đồng hành cùng bạn với 5 bản dịch Kinh Thánh, phương pháp huấn luyện và mục vụ. Ẩn danh, miễn phí, bằng 36 ngôn ngữ.",
+    "homeTitle": "Người bạn đồng hành – người bạn đồng hành Kinh Thánh cá nhân của bạn | Miễn phí & Ẩn danh",
+    "loginDesc": "Đăng nhập vào người bạn đồng hành để chuẩn bị các nghi lễ cá nhân của bạn.",
+    "loginTitle": "Đăng nhập – người bạn đồng hành"
   },
   "meinBereich": {
     "title": "Khu vực của tôi",
@@ -995,7 +995,7 @@
     "confirmationDesc": "Tìm câu kinh thánh cho lễ ban phước và chuẩn bị các văn bản cá nhân."
   },
   "eulogy": {
-    "pageTitle": "Điếu văn – Tạo tiểu sử | BibleBot",
+    "pageTitle": "Điếu văn – Tạo tiểu sử | người bạn đồng hành",
     "pageDesc": "Lưu giữ những kỷ niệm về người thân yêu và tạo một văn bản tiểu sử đẹp cho điếu văn.",
     "title": "Điếu văn – Tiểu sử",
     "subtitle": "Lưu giữ kỷ niệm, tạo văn bản, tải xuống dưới dạng PDF.",

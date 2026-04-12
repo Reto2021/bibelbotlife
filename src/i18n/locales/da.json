@@ -227,7 +227,7 @@
   "donate": {
     "badge": "Støt din ledsager",
     "title": "Hjælp med at holde din ledsager gratis",
-    "subtitle": "Din ledsager er et hjerteprojekt – uden reklame, uden abonnement, uden skjulte omkostninger. For at det forbliver sådan, er jeg afhængig af frivillige donationer.",
+    "subtitle": "BibleBot.Life er et hjerteprojekt – uden reklame, uden abonnement, uden skjulte omkostninger. For at det forbliver sådan, er jeg afhængig af frivillige donationer.",
     "bankTitle": "Doner via bankoverførsel",
     "bankSubtitle": "Ethvert beløb tæller – mange tak! 🙏",
     "recipient": "Modtager",
@@ -241,12 +241,12 @@
     "title": "Anbefal din ledsager videre",
     "subtitle": "Kender du nogen, der har brug for opmuntring? Del din ledsager – en besked kan gøre en stor forskel.",
     "whatsapp": "Del via WhatsApp",
-    "whatsappMsg": "Hej, jeg ville vise dig BibleBot – en gratis bibelledsager, der kender Bibelen og stiller virkelig gode spørgsmål. Intet login, anonymt, ærligt. Prøv det: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Hej, jeg ville vise dig BibleBot.Life – en gratis bibelledsager, der kender Bibelen og stiller virkelig gode spørgsmål. Intet login, anonymt, ærligt. Prøv det: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Del via Telegram",
-    "telegramMsg": "Hej, kender du BibleBot? En gratis personlig bibelledsager – ærlig, anonym, uden login. Tjek det ud: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Hej, kender du BibleBot.Life? En gratis personlig bibelledsager – ærlig, anonym, uden login. Tjek det ud: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Del via e-mail",
     "emailSubject": "Dette kunne interessere dig: BibleBot.Life",
-    "emailBody": "Hej!\n\nJeg ville vise dig BibleBot – en gratis bibelledsager, der virkelig kender Bibelen. Ingen tilmelding nødvendig, helt anonymt.\n\nDen stiller gode opfølgende spørgsmål, forklarer bibelsteder i kontekst og ledsager dig ærligt – også med svære emner.\n\nPrøv det: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nVenlig hilsen",
+    "emailBody": "Hej!\n\nJeg ville vise dig BibleBot.Life – en gratis bibelledsager, der virkelig kender Bibelen. Ingen tilmelding nødvendig, helt anonymt.\n\nDen stiller gode opfølgende spørgsmål, forklarer bibelsteder i kontekst og ledsager dig ærligt – også med svære emner.\n\nPrøv det: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nVenlig hilsen",
     "copy": "Kopier link",
     "copied": "Link kopieret! 📋",
     "qr": "Eller vis bare denne QR-kode:"
@@ -328,8 +328,8 @@
     "copiedDesc": "Tekst kopieret til udklipsholder. Del den på WhatsApp, Instagram eller hvor du vil!",
     "copyLink": "Kopier tekst",
     "error": "Kopiering mislykkedes",
-    "impulseTitle": "BibleBot – Dagens impuls",
-    "chatTitle": "BibleBot – Dagens tanke",
+    "impulseTitle": "Din ledsager – Dagens impuls",
+    "chatTitle": "Din ledsager – Dagens tanke",
     "createImage": "Opret billede ✨",
     "generating": "Opretter…",
     "imageReady": "Dit billede er klar til deling!",
@@ -594,7 +594,7 @@
   },
   "church": {
     "badge": "For organisationer",
-    "heroTitle": "BibleBot for din organisation",
+    "heroTitle": "Din ledsager for din organisation",
     "heroSubtitle": "Ledsag dit team og fællesskab med bibelsk visdom – digitalt, personligt og døgnet rundt.",
     "useCasesTitle": "Anvendelsesmuligheder",
     "useCase": {
@@ -641,7 +641,7 @@
     },
     "features": {
       "directoryEntry": "Kataloindgang",
-      "telegramGroup": "Telegram-Gruppe",
+      "telegramGroup": "Telegram-gruppe",
       "partnerPage": "Egen partnerside",
       "badge": "Partnerbadge",
       "qrFlyer": "QR-flyer til print",
@@ -658,7 +658,7 @@
     "viewDirectory": "Se partneroversigt",
     "directoryBadge": "Partneroversigt",
     "directoryTitle": "Partnerorganisationer",
-    "directorySubtitle": "Find en organisation i nærheden, der anbefaler BibleBot.",
+    "directorySubtitle": "Find en organisation i nærheden, der anbefaler din ledsager.",
     "searchPlaceholder": "Søg efter by, navn eller trosretning...",
     "noResults": "Endnu ingen organisationer i oversigten.",
     "becomePartner": "Bliv partner →",
@@ -668,7 +668,7 @@
     "serviceTimes": "Gudstjenestetider",
     "startChat": "Start chat",
     "website": "Hjemmeside",
-    "telegramGroup": "Telegram-Gruppe",
+    "telegramGroup": "Telegram-gruppe",
     "contactTitle": "Kontakt {{name}}",
     "contactName": "Dit navn (valgfrit)",
     "contactEmail": "Din e-mailadresse",
@@ -697,8 +697,8 @@
         "careHome": "Pflegeheim",
         "seniorHome": "Altersheim",
         "hospital": "Spital",
-        "prison": "Gefängnisseelsorge",
-        "military": "Armeeseelsorge",
+        "prison": "Fængselspastorat",
+        "military": "Militærpastorat",
         "rehaClinic": "Rehabiliteringsklinik",
         "psychiatry": "Psykiatri",
         "burnoutClinic": "Burnout-klinik",
@@ -713,14 +713,14 @@
       }
     },
     "institutionsTitle": "For forskellige organisationer",
-    "institutionsSubtitle": "BibleBot ledsager menigheder, plejehjem, hospitaler, rehabiliterings- og burnoutklinikker med digital sjælesorg.",
+    "institutionsSubtitle": "Din ledsager ledsager menigheder, plejehjem, hospitaler, rehabiliterings- og burnoutklinikker med digital sjælesorg.",
     "institution": {
       "careHome": {
-        "title": "Pflegeheime",
+        "title": "Plejehjem",
         "desc": "Daglige bibelimpulser og ledsagelse for beboere – også når ingen sjælesørger er til stede."
       },
       "seniorHome": {
-        "title": "Altersheime",
+        "title": "Ældreboliger",
         "desc": "Velkendte bibelvers og samtaler for ældre – let tilgængelig via tablet eller smartphone."
       },
       "hospital": {
@@ -728,11 +728,11 @@
         "desc": "Trøst og åndelig ledsagelse for patienter i svære tider – tilgængelig 24/7."
       },
       "prison": {
-        "title": "Gefängnisseelsorge",
+        "title": "Fængselspastorat",
         "desc": "Håb og åndelig ledsagelse for indsatte – en fortrolig samtalepartner døgnet rundt."
       },
       "military": {
-        "title": "Armeeseelsorge",
+        "title": "Militærpastorat",
         "desc": "Åndelig ledsagelse for militærpersonel – tilgængelig selv under udsendelse."
       },
       "rehaClinic": {
@@ -784,26 +784,26 @@
   },
   "institutions": {
     "badge": "For organisationer",
-    "heroTitle": "BibleBot for din organisation",
+    "heroTitle": "Din ledsager for din organisation",
     "heroSubtitle": "Digital sjælesorg for plejehjem, ældreboliger, hospitaler og kriminalforsorg – personligt, fortroligt og døgnet rundt.",
     "seniorHint": {
       "title": "Seniortilstand tilgængelig",
       "desc": "Større skrift og forenklet navigation – ideel for ældre beboere.",
       "cta": "Prøv seniortilstand"
     },
-    "typesTitle": "Hvem er BibleBot for?",
-    "useCasesTitle": "Sådan bruges BibleBot",
+    "typesTitle": "Hvem er din ledsager for?",
+    "useCasesTitle": "Sådan bruges din ledsager",
     "useCasesSubtitle": "Praktiske anvendelser til hverdagen i din institution.",
     "pricingTitle": "Patronatspakker",
     "pricingSubtitle": "Samme pakker som for alle organisationer – tilpasset dine behov.",
     "linkChurches": "Også tilgængelig for kirker",
     "type": {
       "careHome": {
-        "title": "Pflegeheime",
+        "title": "Plejehjem",
         "desc": "Daglige bibelimpulser og ledsagelse for beboere – også når ingen sjælesørger er til stede."
       },
       "seniorHome": {
-        "title": "Altersheime",
+        "title": "Ældreboliger",
         "desc": "Velkendte bibelvers og samtaler for ældre – let tilgængelig via tablet eller smartphone."
       },
       "hospital": {
@@ -811,11 +811,11 @@
         "desc": "Trøst og åndelig ledsagelse for patienter i svære tider – tilgængelig 24/7."
       },
       "prison": {
-        "title": "Gefängnisseelsorge",
+        "title": "Fængselspastorat",
         "desc": "Håb og åndelig ledsagelse for indsatte – en fortrolig samtalepartner døgnet rundt."
       },
       "military": {
-        "title": "Armeeseelsorge",
+        "title": "Militærpastorat",
         "desc": "Åndelig ledsagelse for militærpersonel – tilgængelig selv under udsendelse."
       }
     },
@@ -826,7 +826,7 @@
       },
       "companionship": {
         "title": "Samtalepartner",
-        "desc": "BibleBot besvarer trosspørgsmål tålmodigt og uden tidspres."
+        "desc": "Din ledsager besvarer trosspørgsmål tålmodigt og uden tidspres."
       },
       "accessibility": {
         "title": "Let adgang",
@@ -898,7 +898,7 @@
     "ht": "Kreyòl"
   },
   "eulogy": {
-    "pageTitle": "Begravelse – Opret biografi | BibleBot",
+    "pageTitle": "Begravelse – Opret biografi | din ledsager",
     "pageDesc": "Fasthold minder om en elsket person og opret en smuk biografitekst til begravelsen.",
     "title": "Begravelse – Biografi",
     "subtitle": "Fasthold minder, opret tekst, download som PDF.",
@@ -955,7 +955,7 @@
     "placeholder4": "Hvad ønsker mit hjerte?",
     "placeholder5": "Hvad godt kan jeg gøre i dag?",
     "focusPlaceholder": "Skriv dit spørgsmål…",
-    "ariaLabel": "Stil BibleBot et spørgsmål",
+    "ariaLabel": "Stil din ledsager et spørgsmål",
     "send": "Send",
     "suggestion1": "Hvad betyder mit navn?",
     "suggestion2": "Hvad giver mig styrke i dag?",

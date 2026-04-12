@@ -16,7 +16,7 @@
     },
     "title1": "Raamattu.",
     "title2": " Uudelleen ajateltuna.",
-    "subtitle": "BibleBotisi tuntee Raamatun – ja esittää oikeat kysymykset. Ei ihminen, mutta rehellinen kumppani. Hyviin keskusteluihin, syviin kysymyksiin ja aitoihin impulsseihin.",
+    "subtitle": "Kumppanisiisi tuntee Raamatun – ja esittää oikeat kysymykset. Ei ihminen, mutta rehellinen kumppani. Hyviin keskusteluihin, syviin kysymyksiin ja aitoihin impulsseihin.",
     "ctaTelegram": "Aloita Telegramilla",
     "ctaMore": "Lue lisää",
     "quote": "«Tulkaa minun luokseni, kaikki te työllä rasitetut ja kuormitetut, niin minä annan teille levon.»",
@@ -33,8 +33,8 @@
     "stopAudio": "Pysäytä"
   },
   "features": {
-    "sectionTitle": "Miten BibleBotisi opastaa sinua",
-    "sectionSubtitle": "Tutustu monipuolisiin tapoihin, joilla BibleBotisi voi opastaa sinua",
+    "sectionTitle": "Miten kumppanisiisi opastaa sinua",
+    "sectionSubtitle": "Tutustu monipuolisiin tapoihin, joilla kumppanisiisi voi opastaa sinua",
     "bible": {
       "title": "Raamatunkohdat & tulkinta",
       "desc": "Kysy «Mitä Raamattu sanoo...?» ja saat sopivia jakeita kontekstin ja ymmärrettävän selityksen kera."
@@ -49,7 +49,7 @@
     },
     "faith": {
       "title": "Uskon tie & Kristuksen löytäminen",
-      "desc": "Olitpa etsivä, epäilevä tai syventävä – BibleBotisi opastaa sinua henkilökohtaisella tielläsi."
+      "desc": "Olitpa etsivä, epäilevä tai syventävä – kumppanisiisi opastaa sinua henkilökohtaisella tielläsi."
     },
     "daily": {
       "title": "Päivittäiset impulssit & kirkkovuosi",
@@ -63,9 +63,9 @@
   "coaching": {
     "badge": "Metodologia",
     "title": "Ei vain chatbot – aitoa ohjausta",
-    "subtitle": "BibleBotisi yhdistää raamatullisen viisauden todistettuihin valmennusmenetelmiin ja positiiviseen psykologiaan.",
+    "subtitle": "Kumppanisiisi yhdistää raamatullisen viisauden todistettuihin valmennusmenetelmiin ja positiiviseen psykologiaan.",
     "journeyTitle": "Henkilökohtainen ohjaus",
-    "journeyDesc": "BibleBotisi opastaa sinua niin kauan kuin haluat – vapaassa keskustelussa tai valinnaisella 21 päivän rakenteella.",
+    "journeyDesc": "Kumppanisiisi opastaa sinua niin kauan kuin haluat – vapaassa keskustelussa tai valinnaisella 21 päivän rakenteella.",
     "week1": "Viikko 1: Saapuminen",
     "week1Desc": "Rakenna luottamusta, kuuntele, ymmärrä tilannettasi. Missä olet? Mikä sinua askarruttaa?",
     "week2": "Viikko 2: Syventäminen",
@@ -73,12 +73,12 @@
     "week3": "Viikko 3: Toiminta",
     "week3Desc": "Tee konkreettisia askelia, muotoile tavoitteita, käynnistä muutos. Mikä on seuraava askeleesi?",
     "openQuestionsTitle": "Avoimia kysymyksiä nopeiden vastausten sijaan",
-    "openQuestionsDesc": "BibleBotisi ei anna sinulle halpoja neuvoja. Sen sijaan se esittää kysymyksiä, jotka todella merkitsevät:",
+    "openQuestionsDesc": "Kumppanisiisi ei anna sinulle halpoja neuvoja. Sen sijaan se esittää kysymyksiä, jotka todella merkitsevät:",
     "openQ1": "«Mitä tämän toiveen takana oikeastaan on?»",
     "openQ2": "«Mistä huomaisit, että jokin on muuttunut?»",
     "openQ3": "«Mikä olisi ensimmäinen pieni askel?»",
     "honestTitle": "Rehellinen myrkyllisen positiivisuuden sijaan",
-    "honestDesc": "Ei «Kyllä se siitä!» eikä kaunistelua. BibleBotisi on empaattinen JA rehellinen:",
+    "honestDesc": "Ei «Kyllä se siitä!» eikä kaunistelua. Kumppanisiisi on empaattinen JA rehellinen:",
     "honest1": "Nimeää myös epämukavat raamatunkohdat",
     "honest2": "Haastaa itsetutkiskeluun",
     "honest3": "Erottaa lohdutuksen ja torjunnan",
@@ -103,7 +103,7 @@
       "author": "Worthington",
       "desc": "REACH-malli anteeksiantoprosesseihin"
     },
-    "renameTip": "💡 Voit antaa BibleBotillesi oman nimen – jotta siitä tulee todella <strong>sinun</strong> kumppanisi."
+    "renameTip": "💡 Voit antaa kumppanisiillesi oman nimen – jotta siitä tulee todella <strong>sinun</strong> kumppanisi."
   },
   "discover": {
     "badge": "Uteliaille",
@@ -115,7 +115,7 @@
     },
     "search": {
       "title": "Etsitkö?",
-      "text": "Ehkä et edes tiedä tarkalleen, mitä. Se on täysin ok. BibleBotisi auttaa sinua esittämään oikeat kysymykset – sen sijaan, että antaisi nopeita vastauksia."
+      "text": "Ehkä et edes tiedä tarkalleen, mitä. Se on täysin ok. Kumppanisiisi auttaa sinua esittämään oikeat kysymykset – sen sijaan, että antaisi nopeita vastauksia."
     },
     "deepen": {
       "title": "Haluatko syventää?",
@@ -170,9 +170,9 @@
   },
   "faq": {
     "badge": "Usein kysytyt kysymykset",
-    "title": "Mitä sinun tulisi tietää BibleBotistasi",
+    "title": "Mitä sinun tulisi tietää kumppanisiistasi",
     "subtitle": "Läpinäkyvyys on meille tärkeää – erityisesti teologien, sielunhoitajien ja kriittisten mielien suhteen.",
-    "q1": "Miten BibleBotisi eroaa ChatGPT:stä & kumppaneista?",
+    "q1": "Miten kumppanisiisi eroaa ChatGPT:stä & kumppaneista?",
     "q1Generic": "Yleiset chatbotit:",
     "q1GenericItems": [
       "Pinnallisia Raamatun lainauksia ilman kontekstia",
@@ -192,11 +192,11 @@
       "Edistää kriittistä ajattelua uskon kypsyytenä"
     ],
     "q2": "Mitä Raamatun käännöksiä on käytössä?",
-    "q2Intro": "BibleBotisi toimii ekumeenisesti merkittävimpien saksankielisten Raamatun painosten kanssa:",
+    "q2Intro": "Kumppanisiisi toimii ekumeenisesti merkittävimpien saksankielisten Raamatun painosten kanssa:",
     "q2Outro": "Kaikki Raamatun kohdat annetaan lähdeviitteen ja historiallisen kontekstin kera.",
     "q3": "Mitä tieteellisiä perusteita sen takana on?",
     "q3Intro": "Ohjaus perustuu positiivisen psykologian vertaisarvioituun tutkimukseen:",
-    "q4": "Miten BibleBotisi varmistaa sielunhoidollisen turvallisuuden?",
+    "q4": "Miten kumppanisiisi varmistaa sielunhoidollisen turvallisuuden?",
     "q4Items": [
       "Itsemurha-ajatusten tai kriisien yhteydessä → välitön ohjaus Dargebotene Handiin (143) ja Pro Juventuteen (147)",
       "Ei psykologisia tai lääketieteellisiä diagnooseja",
@@ -206,16 +206,16 @@
       "Ei myrkyllistä positiivisuutta – aitoa, rehellistä ohjausta",
       "Nimeää jännitteet ja vaikeat tekstit avoimesti"
     ],
-    "q5": "Onko BibleBotisi tunnustuksellisesti sidottu?",
-    "q5Answer": "Ei. BibleBotisi on ekumeenisesti suuntautunut ja kunnioittaa yhtä lailla reformoituja, katolisia, vapaakirkollisia ja muita kristillisiä perinteitä. Tunnustuksellisesti erilaisten tulkintojen yhteydessä esitetään läpinäkyvästi eri näkökulmia – suosimatta yhtäkään perinnettä.",
-    "q6": "Korvaako BibleBotisi sielunhoidon tai terapian?",
-    "q6Answer": "Ei. BibleBotisi on digitaalinen apuväline henkilökohtaiseen Raamatun lukemiseen ja pohdintaan. Se ei korvaa ammattimaista sielunhoitoa, teologista neuvontaa tai psykologista terapiaa. Vakavissa kriiseissä BibleBotisi ohjaa aina päteviin yhteyspisteisiin.",
-    "q7": "Eikö BibleBotisi ole vain «hyvän olon botti»?",
-    "q7Answer": "Ei. BibleBotisi lohduttaa, missä lohdutusta tarvitaan – mutta se myös haastaa. Hengellinen kasvu vaatii kitkaa. BibleBotisi esittää epämukavia lisäkysymyksiä, nimeää vaikeita Raamatun tekstejä (Job, valituspsalmit, profeetallinen kritiikki) eikä pelkää aiheita kuten oikeudenmukaisuus, parannus ja vastuu. Profeetallinen perinne ei ole koskaan ollut mukava – eikä BibleBotisikaan.",
-    "q8": "Kuka BibleBotisi takana on ja miten se rahoitetaan?",
-    "q8Answer": "BibleBot.Life on yksityinen, ei-kaupallinen projekti. Sitä ylläpidetään vapaaehtoisvoimin ja rahoitetaan yksinomaan vapaaehtoisilla lahjoituksilla. Ei ole mainoksia, ei tietojen myyntiä eikä maksullisia ominaisuuksia. Kaikki lahjoitukset menevät suoraan juoksevien kulujen (infrastruktuuri, hosting, kehitys) kattamiseen. Koska BibleBot toimii yksityisenä projektina, lahjoitukset eivät ole verovähennyskelpoisia.",
-    "q9": "Miten BibleBotisi käsittelee tietojani?",
-    "q9Answer": "BibleBotisi ei tallenna henkilötietoja eikä chat-historiaa. Jokainen keskustelu on anonyymi. Ei ole kirjautumista, ei seurantaa eikä tietojen luovuttamista kolmansille osapuolille. Käyttö on täysin anonyymi.",
+    "q5": "Onko kumppanisiisi tunnustuksellisesti sidottu?",
+    "q5Answer": "Ei. Kumppanisiisi on ekumeenisesti suuntautunut ja kunnioittaa yhtä lailla reformoituja, katolisia, vapaakirkollisia ja muita kristillisiä perinteitä. Tunnustuksellisesti erilaisten tulkintojen yhteydessä esitetään läpinäkyvästi eri näkökulmia – suosimatta yhtäkään perinnettä.",
+    "q6": "Korvaako kumppanisiisi sielunhoidon tai terapian?",
+    "q6Answer": "Ei. Kumppanisiisi on digitaalinen apuväline henkilökohtaiseen Raamatun lukemiseen ja pohdintaan. Se ei korvaa ammattimaista sielunhoitoa, teologista neuvontaa tai psykologista terapiaa. Vakavissa kriiseissä kumppanisiisi ohjaa aina päteviin yhteyspisteisiin.",
+    "q7": "Eikö kumppanisiisi ole vain «hyvän olon botti»?",
+    "q7Answer": "Ei. Kumppanisiisi lohduttaa, missä lohdutusta tarvitaan – mutta se myös haastaa. Hengellinen kasvu vaatii kitkaa. Kumppanisiisi esittää epämukavia lisäkysymyksiä, nimeää vaikeita Raamatun tekstejä (Job, valituspsalmit, profeetallinen kritiikki) eikä pelkää aiheita kuten oikeudenmukaisuus, parannus ja vastuu. Profeetallinen perinne ei ole koskaan ollut mukava – eikä kumppanisiisikaan.",
+    "q8": "Kuka kumppanisiisi takana on ja miten se rahoitetaan?",
+    "q8Answer": "BibleBot.Life on yksityinen, ei-kaupallinen projekti. Sitä ylläpidetään vapaaehtoisvoimin ja rahoitetaan yksinomaan vapaaehtoisilla lahjoituksilla. Ei ole mainoksia, ei tietojen myyntiä eikä maksullisia ominaisuuksia. Kaikki lahjoitukset menevät suoraan juoksevien kulujen (infrastruktuuri, hosting, kehitys) kattamiseen. Koska kumppanisi toimii yksityisenä projektina, lahjoitukset eivät ole verovähennyskelpoisia.",
+    "q9": "Miten kumppanisiisi käsittelee tietojani?",
+    "q9Answer": "Kumppanisiisi ei tallenna henkilötietoja eikä chat-historiaa. Jokainen keskustelu on anonyymi. Ei ole kirjautumista, ei seurantaa eikä tietojen luovuttamista kolmansille osapuolille. Käyttö on täysin anonyymi.",
     "tradition": {
       "reformed": "Reformoitu",
       "evangelical": "Evankelinen",
@@ -225,35 +225,35 @@
     }
   },
   "donate": {
-    "badge": "Tue BibleBotiasi",
-    "title": "Auta pitämään BibleBotisi ilmaisena",
-    "subtitle": "BibleBotisi on sydänprojekti – ilman mainoksia, ilman tilausta, ilman piilokustannuksia. Jotta se pysyisi sellaisena, olen riippuvainen vapaaehtoisista lahjoituksista. Jokainen panos auttaa kattamaan toiminnan ja infrastruktuurin juoksevat kulut.",
+    "badge": "Tue kumppanisiiasi",
+    "title": "Auta pitämään kumppanisiisi ilmaisena",
+    "subtitle": "BibleBot.Lifeisi on sydänprojekti – ilman mainoksia, ilman tilausta, ilman piilokustannuksia. Jotta se pysyisi sellaisena, olen riippuvainen vapaaehtoisista lahjoituksista. Jokainen panos auttaa kattamaan toiminnan ja infrastruktuurin juoksevat kulut.",
     "bankTitle": "Lahjoita pankkisiirrolla",
     "bankSubtitle": "Jokainen summa on tärkeä – suuri kiitos! 🙏",
     "recipient": "Vastaanottaja",
     "bank": "Pankki",
     "purpose": "Käyttötarkoitus",
-    "purposeValue": "Lahjoitus BibleBot",
+    "purposeValue": "Lahjoitus BibleBot.Life",
     "note": "BibleBot.Life toimii yksityisenä projektina. Lahjoitukset eivät siksi ole verovähennyskelpoisia."
   },
   "refer": {
     "badge": "Jumalan sanan jakaminen",
-    "title": "Suosittele BibleBotia eteenpäin",
-    "subtitle": "Tunnetko jonkun, joka tarvitsee juuri nyt rohkaisua? Jaa BibleBot – yksi viesti voi tehdä paljon.",
+    "title": "Suosittele kumppanisiia eteenpäin",
+    "subtitle": "Tunnetko jonkun, joka tarvitsee juuri nyt rohkaisua? Jaa kumppanisi – yksi viesti voi tehdä paljon.",
     "whatsapp": "Jaa WhatsAppissa",
-    "whatsappMsg": "Hei, halusin näyttää sinulle BibleBotin – ilmaisen Raamatun kumppanin, joka tuntee Raamatun ja esittää todella hyviä kysymyksiä. Ei kirjautumista, anonyymi, rehellinen. Kokeile: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Hei, halusin näyttää sinulle BibleBot.Lifein – ilmaisen Raamatun kumppanin, joka tuntee Raamatun ja esittää todella hyviä kysymyksiä. Ei kirjautumista, anonyymi, rehellinen. Kokeile: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Jaa Telegramissa",
-    "telegramMsg": "Hei, tunnetko jo BibleBotin? Ilmainen henkilökohtainen Raamatun kumppani – rehellinen, anonyymi, ilman kirjautumista. Katso: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Hei, tunnetko jo BibleBot.Lifein? Ilmainen henkilökohtainen Raamatun kumppani – rehellinen, anonyymi, ilman kirjautumista. Katso: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Jaa sähköpostilla",
     "emailSubject": "Tämä voisi kiinnostaa sinua: BibleBot.Life",
-    "emailBody": "Hei!\n\nHaluaisin näyttää sinulle BibleBotin – ilmaisen Raamatun kumppanin, joka todella tuntee Raamatun. Ei vaadi rekisteröitymistä, täysin anonyymi.\n\nSe esittää hyviä lisäkysymyksiä, selittää Raamatun kohtia kontekstissa ja opastaa sinua rehellisesti – myös vaikeissa aiheissa.\n\nKokeile: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nTerveisin",
+    "emailBody": "Hei!\n\nHaluaisin näyttää sinulle BibleBot.Lifein – ilmaisen Raamatun kumppanin, joka todella tuntee Raamatun. Ei vaadi rekisteröitymistä, täysin anonyymi.\n\nSe esittää hyviä lisäkysymyksiä, selittää Raamatun kohtia kontekstissa ja opastaa sinua rehellisesti – myös vaikeissa aiheissa.\n\nKokeile: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nTerveisin",
     "copy": "Kopioi linkki",
     "copied": "Linkki kopioitu! 📋",
     "qr": "Tai näytä vain tämä QR-koodi:"
   },
   "cta": {
     "title": "Sinun ei tarvitse käydä tätä läpi yksin",
-    "subtitle": "Kirjoita BibleBotillesi, mikä sinua askarruttaa. Ei kirjautumista, ei kustannuksia, ei tuomiota – vain rehellistä ohjausta ja Raamatun viisautta.",
+    "subtitle": "Kirjoita kumppanisiillesi, mikä sinua askarruttaa. Ei kirjautumista, ei kustannuksia, ei tuomiota – vain rehellistä ohjausta ja Raamatun viisautta.",
     "button": "Aloita keskustelu nyt"
   },
   "footer": {
@@ -269,7 +269,7 @@
     "forChurches": "Seurakunnille"
   },
   "chat": {
-    "welcome": "Mukava nähdä sinua 🤗\n\nOlen BibleBotisi – henkilökohtainen kumppanisi Raamatun, hyvien kysymysten ja konkreettisten impulssien kanssa. Ei paineita, ei arvostelua.\n\nVoit kysyä minulta mitä tahansa – tai vain kertoa, mikä sinua juuri nyt askarruttaa. 💛",
+    "welcome": "Mukava nähdä sinua 🤗\n\nOlen kumppanisiisi – henkilökohtainen kumppanisi Raamatun, hyvien kysymysten ja konkreettisten impulssien kanssa. Ei paineita, ei arvostelua.\n\nVoit kysyä minulta mitä tahansa – tai vain kertoa, mikä sinua juuri nyt askarruttaa. 💛",
     "journeyOffer": "💡 **Vinkki:** Tarjoan myös **21 päivän ohjausta** – 3 viikkoa päivittäisiä impulsseja, pohdintoja ja konkreettisia askelia. Täysin omaan tahtiisi.\n\nHaluaisitko kokeilla sitä?",
     "suggestion1": "Tarvitsen juuri nyt rakentavan sanan",
     "suggestion2": "Mitä Raamattu sanoo, kun tuntee olonsa epävarmaksi?",
@@ -314,7 +314,7 @@
     "suggestionsLoading": "Ladataan ehdotuksia…"
   },
   "install": {
-    "title": "Asenna BibleBot",
+    "title": "Asenna BibleBot.Life",
     "androidDesc": "Nopea pääsy suoraan aloitusnäytöltä",
     "iosDesc": "Napauta «Jaa» → «Lisää Koti-valikkoon»",
     "button": "Asenna",
@@ -328,8 +328,8 @@
     "copiedDesc": "Teksti kopioitu leikepöydälle. Jaa se nyt WhatsAppissa, Instagramissa tai missä haluat!",
     "copyLink": "Kopioi teksti",
     "error": "Kopiointi epäonnistui",
-    "impulseTitle": "BibleBot – Päivän impulssi",
-    "chatTitle": "BibleBot – Päivän ajatus",
+    "impulseTitle": "Kumppanisi – Päivän impulssi",
+    "chatTitle": "Kumppanisi – Päivän ajatus",
     "createImage": "Luo kuva ✨",
     "generating": "Luodaan…",
     "imageReady": "Kuvasi on valmis jaettavaksi!",
@@ -354,7 +354,7 @@
   },
   "tiles": {
     "sectionTitle": "Mikä sinua liikuttaa?",
-    "sectionSubtitle": "Valitse aihe — BibleBot opastaa sinua",
+    "sectionSubtitle": "Valitse aihe — kumppanisi opastaa sinua",
     "baptism": {
       "title": "Löydä kastejae",
       "desc": "Täydellinen jae lapsellesi",
@@ -648,7 +648,7 @@
   },
   "church": {
     "badge": "Organisaatioille",
-    "heroTitle": "BibleBot organisaatiollesi",
+    "heroTitle": "Kumppanisi organisaatiollesi",
     "heroSubtitle": "Opasta seurakuntalaisiasi raamatullisella viisaudella – digitaalisesti, henkilökohtaisesti ja ympäri vuorokauden.",
     "useCasesTitle": "Käyttötapaukset",
     "useCase": {
@@ -670,7 +670,7 @@
       }
     },
     "pricingTitle": "Mecenaatti-paketit",
-    "pricingSubtitle": "Tue BibleBotia ja seurakuntaasi sopivalla mecenaatti-paketilla.",
+    "pricingSubtitle": "Tue kumppanisiia ja seurakuntaasi sopivalla mecenaatti-paketilla.",
     "popular": "Suosittu",
     "free": "Ilmainen",
     "perYear": "henkilöä / vuosi",
@@ -712,7 +712,7 @@
     "viewDirectory": "Katso seurakuntahakemisto",
     "directoryBadge": "Seurakuntahakemisto",
     "directoryTitle": "Kumppaniseurakunnat",
-    "directorySubtitle": "Löydä seurakunta läheltäsi, joka suosittelee BibleBotia.",
+    "directorySubtitle": "Löydä seurakunta läheltäsi, joka suosittelee kumppanisiia.",
     "searchPlaceholder": "Etsi paikkaa, nimeä tai tunnustusta...",
     "noResults": "Ei vielä seurakuntia hakemistossa.",
     "becomePartner": "Ryhdy kumppaniksi →",
@@ -767,7 +767,7 @@
       }
     },
     "institutionsTitle": "Myös instituutioille",
-    "institutionsSubtitle": "BibleBot ei opasta vain seurakuntia – myös hoito- ja vanhainkodit, sairaalat ja vankilasielunhoito hyötyvät digitaalisesta sielunhoidosta.",
+    "institutionsSubtitle": "Kumppanisi ei opasta vain seurakuntia – myös hoito- ja vanhainkodit, sairaalat ja vankilasielunhoito hyötyvät digitaalisesta sielunhoidosta.",
     "institution": {
       "careHome": {
         "title": "Hoitokodit",
@@ -810,7 +810,7 @@
         "desc": "Täydentäviä hengellisiä impulsseja psykososiaalisen neuvonnan asiakkaille."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible.",
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As kumppanisi is a private project, donations are not tax-deductible.",
     "denominationsTitle": "Kaikille tunnustuskunnille ja seremoniamestareille",
     "denominationsSubtitle": "BibleBot.Life on ekumeeninen – reformoiduille, katolisille, luterilaisille ja vapaan kirkon yhteisöille sekä freelance-seremonimestareille.",
     "denomination": {
@@ -838,15 +838,15 @@
   },
   "institutions": {
     "badge": "Organisaatioille",
-    "heroTitle": "BibleBot laitoksellesi",
+    "heroTitle": "Kumppanisi laitoksellesi",
     "heroSubtitle": "Digitaalinen sielunhoito hoitokodeille, vanhainkodeille, sairaaloille ja vankiloille – henkilökohtaisesti, luottamuksellisesti ja ympäri vuorokauden.",
     "seniorHint": {
       "title": "Senioritila saatavilla",
       "desc": "Suurempi fontti ja yksinkertaistettu käyttö – ihanteellinen vanhemmille asukkaille.",
       "cta": "Kokeile senioritilaa"
     },
-    "typesTitle": "Kenelle BibleBot on tarkoitettu?",
-    "useCasesTitle": "Miten BibleBotia käytetään",
+    "typesTitle": "Kenelle kumppanisi on tarkoitettu?",
+    "useCasesTitle": "Miten kumppanisiia käytetään",
     "useCasesSubtitle": "Konkreettisia sovelluksia laitoksesi arkeen.",
     "pricingTitle": "Mecenaatti-paketit",
     "pricingSubtitle": "Samankaltaiset paketit kuin seurakunnille – mukautettu institutionaalisiin tarpeisiin.",
@@ -880,7 +880,7 @@
       },
       "companionship": {
         "title": "Keskustelukumppani",
-        "desc": "BibleBot vastaa uskonkysymyksiin kärsivällisesti ja ilman aikarajoituksia – ihanteellinen yksinäisiin hetkiin."
+        "desc": "Kumppanisi vastaa uskonkysymyksiin kärsivällisesti ja ilman aikarajoituksia – ihanteellinen yksinäisiin hetkiin."
       },
       "accessibility": {
         "title": "Helppo pääsy",
@@ -952,7 +952,7 @@
     "ht": "Kreyòl"
   },
   "eulogy": {
-    "pageTitle": "Muistopuhe – Elämäkerran luominen | BibleBot",
+    "pageTitle": "Muistopuhe – Elämäkerran luominen | kumppanisi",
     "pageDesc": "Tallenna muistoja rakkaasta ja luo kaunis elämäkerrallinen teksti muistopuhetta varten.",
     "title": "Muistopuhe – Elämäkerta",
     "subtitle": "Tallenna muistoja, luo teksti, lataa PDF-muodossa.",
@@ -1002,7 +1002,7 @@
     "confirmationDesc": "Löydä konfirmaatiolause ja valmistele henkilökohtaiset tekstit."
   },
   "chatHero": {
-    "ariaLabel": "Esitä kysymys BibleBotille",
+    "ariaLabel": "Esitä kysymys kumppanisiille",
     "focusPlaceholder": "Kirjoita kysymyksesi…",
     "placeholder1": "Mikä tekee minusta todella kiitollisen?",
     "placeholder2": "Miten voin löytää sisäisen rauhan?",
@@ -1016,12 +1016,12 @@
     "suggestion3": "Mistä olen kiitollinen?"
   },
   "meta": {
-    "forChurchesDesc": "BibleBot kumppanina yhteisöllesi: nuorisotyö, konfirmaatio, sielunhoito ja Raamattupiirit. Ilmainen Premium-tasolle asti.",
-    "forChurchesTitle": "BibleBot seurakunnille – Digitaalinen sielunhoito ja Raamatun ohjaus",
-    "homeDesc": "BibleBot kulkee mukanasi 5 Raamatun käännöksen, valmennusmetodologian ja sielunhoidon kanssa. Anonyymi, ilmainen, 36 kielellä.",
-    "homeTitle": "BibleBot – Henkilökohtainen Raamattu-kumppanisi | Ilmainen & Anonyymi",
-    "loginDesc": "Kirjaudu BibleBotiin valmistellaksesi henkilökohtaiset seremoniasi.",
-    "loginTitle": "Kirjaudu sisään – BibleBot"
+    "forChurchesDesc": "Kumppanisi kumppanina yhteisöllesi: nuorisotyö, konfirmaatio, sielunhoito ja Raamattupiirit. Ilmainen Premium-tasolle asti.",
+    "forChurchesTitle": "Kumppanisi seurakunnille – Digitaalinen sielunhoito ja Raamatun ohjaus",
+    "homeDesc": "Kumppanisi kulkee mukanasi 5 Raamatun käännöksen, valmennusmetodologian ja sielunhoidon kanssa. Anonyymi, ilmainen, 36 kielellä.",
+    "homeTitle": "Kumppanisi – Henkilökohtainen Raamattu-kumppanisi | Ilmainen & Anonyymi",
+    "loginDesc": "Kirjaudu kumppanisiiin valmistellaksesi henkilökohtaiset seremoniasi.",
+    "loginTitle": "Kirjaudu sisään – kumppanisi"
   },
   "splash": {
     "patronage": "Suosittelee"

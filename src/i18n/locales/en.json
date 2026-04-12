@@ -33,7 +33,7 @@
     "stopAudio": "Stop"
   },
   "features": {
-    "sectionTitle": "How Your companion accompanies you",
+    "sectionTitle": "How your companion accompanies you",
     "sectionSubtitle": "Discover the many ways your companion can walk alongside you",
     "bible": {
       "title": "Bible passages & interpretation",
@@ -49,7 +49,7 @@
     },
     "faith": {
       "title": "Faith journey & finding Christ",
-      "desc": "Whether seeking, doubting, or deepening – Your companion accompanies you on your personal path."
+      "desc": "Whether seeking, doubting, or deepening – your companion accompanies you on your personal path."
     },
     "daily": {
       "title": "Daily impulses & church year",
@@ -103,7 +103,7 @@
       "author": "Worthington",
       "desc": "REACH model for forgiveness processes"
     },
-    "renameTip": "💡 You can give your BibleBot a personal name – so it truly becomes <strong>your</strong> companion."
+    "renameTip": "💡 You can give your your companion a personal name – so it truly becomes <strong>your</strong> companion."
   },
   "discover": {
     "badge": "For the curious",
@@ -216,11 +216,11 @@
     "q5": "Is your companion tied to a specific denomination?",
     "q5Answer": "No. Your companion is ecumenically oriented and respects Reformed, Catholic, Free Church, and other Christian traditions equally. When there are denominational differences in interpretation, various perspectives are presented transparently – without favoring any tradition.",
     "q6": "Does your companion replace pastoral care or therapy?",
-    "q6Answer": "No. Your companion is a digital tool for personal Bible reading and reflection. It does not replace professional pastoral care, theological counseling, or psychological therapy. In serious crises, Your companion always refers to qualified resources.",
+    "q6Answer": "No. Your companion is a digital tool for personal Bible reading and reflection. It does not replace professional pastoral care, theological counseling, or psychological therapy. In serious crises, your companion always refers to qualified resources.",
     "q7": "Isn't this just a 'feel-good tool'?",
     "q7Answer": "No. Your companion comforts where comfort is needed – but it also challenges. Spiritual growth requires friction. Your companion asks uncomfortable follow-up questions, names difficult Bible texts (Job, Lament Psalms, prophetic criticism), and doesn't shy away from topics like justice, repentance, and responsibility. The prophetic tradition was never comfortable – and neither is this tool.",
     "q8": "Who is behind BibleBot.Life and how is it funded?",
-    "q8Answer": "BibleBot.Life is a private, non-commercial project. It's run on a volunteer basis and funded exclusively through voluntary donations. There's no advertising, no data sales, and no paid features. All donations go directly to covering operating costs (infrastructure, hosting, development). Since BibleBot is a private project, donations are not tax-deductible.",
+    "q8Answer": "BibleBot.Life is a private, non-commercial project. It's run on a volunteer basis and funded exclusively through voluntary donations. There's no advertising, no data sales, and no paid features. All donations go directly to covering operating costs (infrastructure, hosting, development). Since your companion is a private project, donations are not tax-deductible.",
     "q9": "How does your companion handle my data?",
     "q9Answer": "Your companion stores no personal data and no chat histories. Every conversation is anonymous. There's no login, no tracking, and no sharing of data with third parties. Usage is completely anonymous."
   },
@@ -299,7 +299,7 @@
     "previousChats": "{{count}} previous conversations"
   },
   "install": {
-    "title": "Install companion",
+    "title": "Install BibleBot.Life",
     "androidDesc": "Quick access from your home screen",
     "iosDesc": "Tap \"Share\" → \"Add to Home Screen\"",
     "button": "Install",
@@ -651,7 +651,7 @@
   },
   "church": {
     "badge": "For Organizations",
-    "heroTitle": "BibleBot for Your Organization",
+    "heroTitle": "Your companion for Your Organization",
     "heroSubtitle": "Accompany your team and community with biblical wisdom – digital, personal, and around the clock.",
     "useCasesTitle": "Use Cases",
     "useCase": {
@@ -715,7 +715,7 @@
     "viewDirectory": "View partner directory",
     "directoryBadge": "Partner Directory",
     "directoryTitle": "Partner Organizations",
-    "directorySubtitle": "Find an organization near you that recommends BibleBot.",
+    "directorySubtitle": "Find an organization near you that recommends your companion.",
     "searchPlaceholder": "Search by city, name, or denomination...",
     "noResults": "No organizations in the directory yet.",
     "becomePartner": "Become a partner →",
@@ -770,7 +770,7 @@
       }
     },
     "denominationsTitle": "For all denominations & ceremony leaders",
-    "denominationsSubtitle": "BibleBot is ecumenical – for Reformed, Catholic, Lutheran, and Free Church communities, as well as freelance ceremony officiants.",
+    "denominationsSubtitle": "Your companion is ecumenical – for Reformed, Catholic, Lutheran, and Free Church communities, as well as freelance ceremony officiants.",
     "denomination": {
       "reformed": {
         "title": "Reformed Church",
@@ -794,7 +794,7 @@
       }
     },
     "institutionsTitle": "For all kinds of organizations",
-    "institutionsSubtitle": "BibleBot supports churches, care homes, hospitals, rehab & burnout clinics, psychiatric facilities, hospices, counseling centers, and many more with digital pastoral care.",
+    "institutionsSubtitle": "Your companion supports churches, care homes, hospitals, rehab & burnout clinics, psychiatric facilities, hospices, counseling centers, and many more with digital pastoral care.",
     "institution": {
       "careHome": {
         "title": "Care Homes",
@@ -837,19 +837,19 @@
         "desc": "Complementary spiritual impulses for clients in psychosocial or pastoral counseling."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As your companion is a private project, donations are not tax-deductible."
   },
   "institutions": {
     "badge": "For Organizations",
-    "heroTitle": "BibleBot for Your Organization",
+    "heroTitle": "Your companion for Your Organization",
     "heroSubtitle": "Digital pastoral care for care homes, retirement homes, hospitals, and correctional facilities – personal, confidential, and around the clock.",
     "seniorHint": {
       "title": "Senior Mode Available",
       "desc": "Larger text and simplified navigation – ideal for elderly residents.",
       "cta": "Try Senior Mode"
     },
-    "typesTitle": "Who is BibleBot for?",
-    "useCasesTitle": "How BibleBot is Used",
+    "typesTitle": "Who is your companion for?",
+    "useCasesTitle": "How your companion is Used",
     "useCasesSubtitle": "Practical applications for daily life in your institution.",
     "pricingTitle": "Patronage Packages",
     "pricingSubtitle": "The same packages as for all organizations – adapted to your needs.",
@@ -883,7 +883,7 @@
       },
       "companionship": {
         "title": "Conversation Partner",
-        "desc": "BibleBot answers faith questions patiently and without time pressure – ideal for lonely hours."
+        "desc": "Your companion answers faith questions patiently and without time pressure – ideal for lonely hours."
       },
       "accessibility": {
         "title": "Easy Access",
@@ -918,15 +918,15 @@
   },
   "refer": {
     "badge": "Share God's Word",
-    "title": "Recommend BibleBot",
-    "subtitle": "Know someone who could use encouragement? Share BibleBot – one message can make a difference.",
+    "title": "Recommend your companion",
+    "subtitle": "Know someone who could use encouragement? Share your companion – one message can make a difference.",
     "whatsapp": "Share via WhatsApp",
-    "whatsappMsg": "Hey, I wanted to show you BibleBot – a free Bible companion that really knows the Bible and asks great questions. No login, anonymous, honest. Try it out: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Hey, I wanted to show you BibleBot.Life – a free Bible companion that really knows the Bible and asks great questions. No login, anonymous, honest. Try it out: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Share via Telegram",
-    "telegramMsg": "Hey, do you know BibleBot? A free personal Bible companion – honest, anonymous, no login needed. Check it out: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Hey, do you know BibleBot.Life? A free personal Bible companion – honest, anonymous, no login needed. Check it out: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Share via email",
     "emailSubject": "This might interest you: BibleBot.Life",
-    "emailBody": "Hi!\n\nI wanted to show you BibleBot – a free Bible companion that really knows the Bible. No sign-up needed, completely anonymous.\n\nIt asks thoughtful questions, explains Bible passages in context and accompanies you honestly – even on difficult topics.\n\nTry it out: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nBest wishes",
+    "emailBody": "Hi!\n\nI wanted to show you BibleBot.Life – a free Bible companion that really knows the Bible. No sign-up needed, completely anonymous.\n\nIt asks thoughtful questions, explains Bible passages in context and accompanies you honestly – even on difficult topics.\n\nTry it out: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nBest wishes",
     "copy": "Copy link",
     "copied": "Link copied! 📋",
     "qr": "Or just show this QR code:"
@@ -939,8 +939,8 @@
     "copiedDesc": "Text copied to clipboard. Share it on WhatsApp, Instagram or wherever you like!",
     "copyLink": "Copy text",
     "error": "Copy failed",
-    "impulseTitle": "BibleBot – Impulse of the Day",
-    "chatTitle": "BibleBot – Thought of the Day",
+    "impulseTitle": "Your companion – Impulse of the Day",
+    "chatTitle": "Your companion – Thought of the Day",
     "createImage": "Create image ✨",
     "generating": "Creating…",
     "imageReady": "Your image is ready to share!",
@@ -959,7 +959,7 @@
     "placeholder4": "How do I find my purpose in life?",
     "placeholder5": "I feel alone. What does Jesus say about that?",
     "focusPlaceholder": "Type your question…",
-    "ariaLabel": "Ask BibleBot a question",
+    "ariaLabel": "Ask your companion a question",
     "send": "Submit",
     "suggestion1": "What does the Bible say about anxiety?",
     "suggestion2": "Help me pray",
@@ -993,7 +993,7 @@
     "confirmationDesc": "Find a confirmation verse and prepare personal texts."
   },
   "eulogy": {
-    "pageTitle": "Funeral – Create Biography | BibleBot",
+    "pageTitle": "Funeral – Create Biography | your companion",
     "pageDesc": "Capture memories of a loved one and create a beautiful biography text for the funeral service.",
     "title": "Funeral – Biography",
     "subtitle": "Capture memories, create text, download as PDF.",

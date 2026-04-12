@@ -16,7 +16,7 @@
     },
     "title1": "Akwụkwọ Nsọ.",
     "title2": " Echiche ọhụrụ.",
-    "subtitle": "BibleBot gị maara Akwụkwọ Nsọ – ma na-ajụ ajụjụ ziri ezi. Ọ bụghị mmadụ, kama ọ bụ ezigbo onye enyi. Maka mkparịta ụka dị mma, ajụjụ miri emi na mkpali n'ezie.",
+    "subtitle": "Onye enyi gị gị maara Akwụkwọ Nsọ – ma na-ajụ ajụjụ ziri ezi. Ọ bụghị mmadụ, kama ọ bụ ezigbo onye enyi. Maka mkparịta ụka dị mma, ajụjụ miri emi na mkpali n'ezie.",
     "ctaTelegram": "Bido site na Telegram",
     "ctaMore": "Mụtakwuo",
     "quote": "«Bịakwutenụ m, unu niile na-arụgbu onwe unu ma na-ebu ibu; m ga-enye unu ume ọhụrụ.»",
@@ -33,8 +33,8 @@
     "stopAudio": "Kwụsị"
   },
   "features": {
-    "sectionTitle": "Otu BibleBot gị si akwado gị",
-    "sectionSubtitle": "Chọpụta ụzọ dị iche iche BibleBot gị nwere ike isi kwado gị",
+    "sectionTitle": "Otu onye enyi gị gị si akwado gị",
+    "sectionSubtitle": "Chọpụta ụzọ dị iche iche onye enyi gị gị nwere ike isi kwado gị",
     "bible": {
       "title": "Akwụkwọ Nsọ & Nkọwa",
       "desc": "Jụọ «Gịnị ka Akwụkwọ Nsọ na-ekwu banyere...?» ma nweta amaokwu kwesịrị ekwesị na ihe gbara ya gburugburu na nkọwa doro anya."
@@ -49,7 +49,7 @@
     },
     "faith": {
       "title": "Njem Okwukwe & Ịchọta Kraịst",
-      "desc": "Ma ị na-achọ, na-enwe obi abụọ ma ọ bụ na-eme ka ọ dị omimi – BibleBot gị na-eso gị na njem nke gị."
+      "desc": "Ma ị na-achọ, na-enwe obi abụọ ma ọ bụ na-eme ka ọ dị omimi – onye enyi gị gị na-eso gị na njem nke gị."
     },
     "daily": {
       "title": "Mkpali Ụbọchị & Afọ Chọọchị",
@@ -63,9 +63,9 @@
   "coaching": {
     "badge": "Ụzọ e si eme ihe",
     "title": "Ọ bụghị naanị chatbot – ezigbo onye enyi",
-    "subtitle": "BibleBot gị na-ejikọta amamihe Akwụkwọ Nsọ na usoro nkuzi a nwapụtara na Positive Psychology.",
+    "subtitle": "Onye enyi gị gị na-ejikọta amamihe Akwụkwọ Nsọ na usoro nkuzi a nwapụtara na Positive Psychology.",
     "journeyTitle": "Nkwado Onwe Onye",
-    "journeyDesc": "BibleBot gị na-eso gị ogologo oge ị chọrọ – na mkparịta ụka n'efu ma ọ bụ na nhọrọ nhazi ụbọchị 21.",
+    "journeyDesc": "Onye enyi gị gị na-eso gị ogologo oge ị chọrọ – na mkparịta ụka n'efu ma ọ bụ na nhọrọ nhazi ụbọchị 21.",
     "week1": "Izu 1: Ịbata",
     "week1Desc": "Iwulite ntụkwasị obi, ige ntị, ịghọta ọnọdụ gị. Ebee ka ị kwụ? Gịnị na-enye gị nsogbu?",
     "week2": "Izu 2: Ịme ka ọ dị omimi",
@@ -73,12 +73,12 @@
     "week3": "Izu 3: Ime ihe",
     "week3Desc": "Ịme ihe doro anya, ịhazi ebumnuche, ịmalite mgbanwe. Gịnị bụ nzọụkwụ gị ọzọ?",
     "openQuestionsTitle": "Ajụjụ mepere emepe kama ịza ngwa ngwa",
-    "openQuestionsDesc": "BibleBot gị anaghị enye gị ndụmọdụ dị ọnụ ala. Kama, ọ na-ajụ ajụjụ ndị dị mkpa n'ezie:",
+    "openQuestionsDesc": "Onye enyi gị gị anaghị enye gị ndụmọdụ dị ọnụ ala. Kama, ọ na-ajụ ajụjụ ndị dị mkpa n'ezie:",
     "openQ1": "«Gịnị n'ezie dị n'azụ ọchịchọ a?»",
     "openQ2": "«Gịnị ka ị ga-achọpụta na ihe agbanweela?»",
     "openQ3": "«Gịnị ga-abụ obere nzọụkwụ mbụ?»",
     "honestTitle": "Eziokwu kama ịbụ onye na-ekwu okwu ọma",
-    "honestDesc": "Enweghị «Ọ ga-adị mma!» na enweghị ịma mma. BibleBot gị nwere mmetụta na eziokwu:",
+    "honestDesc": "Enweghị «Ọ ga-adị mma!» na enweghị ịma mma. Onye enyi gị gị nwere mmetụta na eziokwu:",
     "honest1": "Na-akpọkwa amaokwu Akwụkwọ Nsọ na-adịghị mma",
     "honest2": "Na-agba ume ịtụgharị uche n'onwe ya",
     "honest3": "Na-eme ka nkasi obi dị iche na nkwụsị",
@@ -103,7 +103,7 @@
       "author": "Worthington",
       "desc": "REACH-Model maka usoro mgbaghara"
     },
-    "renameTip": "💡 Ị nwere ike inye BibleBot gị aha nke gị – ka ọ bụrụ onye enyi gị n'ezie."
+    "renameTip": "💡 Ị nwere ike inye onye enyi gị gị aha nke gị – ka ọ bụrụ onye enyi gị n'ezie."
   },
   "discover": {
     "badge": "Maka ndị na-achọ ịmata ihe",
@@ -115,7 +115,7 @@
     },
     "search": {
       "title": "Ị na-achọ?",
-      "text": "Ikekwe ị maghị ihe ị na-achọ. Nke ahụ dị mma. BibleBot gị na-enyere gị aka ịjụ ajụjụ ziri ezi – kama ịza ngwa ngwa."
+      "text": "Ikekwe ị maghị ihe ị na-achọ. Nke ahụ dị mma. Onye enyi gị gị na-enyere gị aka ịjụ ajụjụ ziri ezi – kama ịza ngwa ngwa."
     },
     "deepen": {
       "title": "Ị chọrọ ime ka ọ dị omimi?",
@@ -170,9 +170,9 @@
   },
   "faq": {
     "badge": "Ajụjụ a na-ajụkarị",
-    "title": "Ihe ị kwesịrị ịma gbasara BibleBot gị",
+    "title": "Ihe ị kwesịrị ịma gbasara onye enyi gị gị",
     "subtitle": "Ịdị n'otu dị mkpa nye anyị – ọkachasị maka ndị ọkà mmụta okpukpe, ndị ndụmọdụ na ndị nwere uche dị oke egwu.",
-    "q1": "Gịnị na-eme ka BibleBot gị dị iche na ChatGPT & Co.?",
+    "q1": "Gịnị na-eme ka onye enyi gị gị dị iche na ChatGPT & Co.?",
     "q1Generic": "Chatbots izugbe:",
     "q1GenericItems": [
       "Amaokwu Akwụkwọ Nsọ na-adịghị omimi na-enweghị ihe gbara ya gburugburu",
@@ -192,11 +192,11 @@
       "Na-akwalite echiche dị oke egwu dị ka ntozu okwukwe"
     ],
     "q2": "Kedu ntụgharị asụsụ Akwụkwọ Nsọ ka e debere?",
-    "q2Intro": "BibleBot gị na-arụ ọrụ n'ụzọ dị iche iche na mbipụta Akwụkwọ Nsọ German dị mkpa:",
+    "q2Intro": "Onye enyi gị gị na-arụ ọrụ n'ụzọ dị iche iche na mbipụta Akwụkwọ Nsọ German dị mkpa:",
     "q2Outro": "A na-enye amaokwu Akwụkwọ Nsọ niile na ntụaka isi iyi na ihe gbara ya gburugburu n'akụkọ ihe mere eme.",
     "q3": "Kedu ihe ndabere sayensị dị n'azụ ya?",
     "q3Intro": "Nkwado ahụ dabere na nyocha ndị ọgbọ nyochara nke Positive Psychology:",
-    "q4": "Kedu ka BibleBot gị si hụ na nchekwa ndụmọdụ?",
+    "q4": "Kedu ka onye enyi gị gị si hụ na nchekwa ndụmọdụ?",
     "q4Items": [
       "Maka echiche igbu onwe ma ọ bụ nsogbu → ntinye aka ozugbo na Dargebotene Hand (143) na Pro Juventute (147)",
       "Enweghị nyocha uche ma ọ bụ ahụike",
@@ -206,16 +206,16 @@
       "Enweghị ịdị mma na-egbu egbu – ezigbo nkwado, n'eziokwu",
       "Na-akpọ esemokwu na ederede siri ike n'ihu ọha"
     ],
-    "q5": "BibleBot gị ọ na-ejikọta na okpukperechi?",
-    "q5Answer": "Mba. BibleBot gị na-elekwasị anya na okpukperechi ma na-akwanyere omenala Ndị Kraịst gbanwere, Katọlik, ụka efu na ndị ọzọ ùgwù n'otu aka ahụ. N'ihe gbasara nkọwa dị iche iche nke okpukperechi, a na-egosipụta echiche dị iche iche n'ụzọ doro anya – na-enweghị ịhọrọ otu omenala.",
-    "q6": "BibleBot gị ọ na-anọchi ndụmọdụ ma ọ bụ ọgwụgwọ?",
-    "q6Answer": "Mba. BibleBot gị bụ ngwaọrụ dijitalụ maka ịgụ Akwụkwọ Nsọ na ịtụgharị uche n'onwe ya. Ọ naghị anọchi ndụmọdụ ọkachamara, ndụmọdụ nkà mmụta okpukpe ma ọ bụ ọgwụgwọ uche. N'ihe gbasara nsogbu siri ike, BibleBot gị na-ezo aka mgbe niile na ebe enyemaka ruru eru.",
-    "q7": "BibleBot gị ọ bụghị naanị «bot na-adị mma»?",
-    "q7Answer": "Mba. BibleBot gị na-akasi obi ebe a chọrọ nkasi obi – mana ọ na-agbakwa ume. Uto ime mmụọ chọrọ esemokwu. BibleBot gị na-ajụ ajụjụ na-adịghị mma, na-akpọ ederede Akwụkwọ Nsọ siri ike (Job, Abụ Ọma mkpesa, nkatọ amụma) ma anaghị atụ egwu isiokwu dị ka ikpe ziri ezi, nchegharị na ọrụ. Omenala amụma adịghị adị mma – BibleBot gị adịghịkwa.",
-    "q8": "Ònye nọ n'azụ BibleBot gị na olee otu e si enweta ego?",
-    "q8Answer": "BibleBot.Life bụ ọrụ nkeonwe, na-abụghị nke azụmahịa. A na-arụ ya n'afọ ofufo ma na-enweta ego naanị site na onyinye afọ ofufo. Enweghị mgbasa ozi, enweghị ire data na enweghị atụmatụ akwụ ụgwọ. Onyinye niile na-aga ozugbo iji kpuchie ụgwọ ọrụ (akụrụngwa, nnabata, mmepe). Ebe ọ bụ na BibleBot na-agba ọsọ dị ka ọrụ nkeonwe, onyinye anaghị ewepụ ụtụ isi.",
-    "q9": "Kedu ka BibleBot gị si eji data m?",
-    "q9Answer": "BibleBot gị anaghị echekwa data nkeonwe ma ọ bụ akụkọ mkparịta ụka. Mkparịta ụka ọ bụla bụ nke amaghị aha. Enweghị nbanye, enweghị nyocha na enweghị nkesa data na ndị ọzọ. Ojiji ahụ bụ nke amaghị aha kpamkpam.",
+    "q5": "Onye enyi gị gị ọ na-ejikọta na okpukperechi?",
+    "q5Answer": "Mba. Onye enyi gị gị na-elekwasị anya na okpukperechi ma na-akwanyere omenala Ndị Kraịst gbanwere, Katọlik, ụka efu na ndị ọzọ ùgwù n'otu aka ahụ. N'ihe gbasara nkọwa dị iche iche nke okpukperechi, a na-egosipụta echiche dị iche iche n'ụzọ doro anya – na-enweghị ịhọrọ otu omenala.",
+    "q6": "Onye enyi gị gị ọ na-anọchi ndụmọdụ ma ọ bụ ọgwụgwọ?",
+    "q6Answer": "Mba. Onye enyi gị gị bụ ngwaọrụ dijitalụ maka ịgụ Akwụkwọ Nsọ na ịtụgharị uche n'onwe ya. Ọ naghị anọchi ndụmọdụ ọkachamara, ndụmọdụ nkà mmụta okpukpe ma ọ bụ ọgwụgwọ uche. N'ihe gbasara nsogbu siri ike, onye enyi gị gị na-ezo aka mgbe niile na ebe enyemaka ruru eru.",
+    "q7": "Onye enyi gị gị ọ bụghị naanị «bot na-adị mma»?",
+    "q7Answer": "Mba. Onye enyi gị gị na-akasi obi ebe a chọrọ nkasi obi – mana ọ na-agbakwa ume. Uto ime mmụọ chọrọ esemokwu. Onye enyi gị gị na-ajụ ajụjụ na-adịghị mma, na-akpọ ederede Akwụkwọ Nsọ siri ike (Job, Abụ Ọma mkpesa, nkatọ amụma) ma anaghị atụ egwu isiokwu dị ka ikpe ziri ezi, nchegharị na ọrụ. Omenala amụma adịghị adị mma – onye enyi gị gị adịghịkwa.",
+    "q8": "Ònye nọ n'azụ onye enyi gị gị na olee otu e si enweta ego?",
+    "q8Answer": "BibleBot.Life bụ ọrụ nkeonwe, na-abụghị nke azụmahịa. A na-arụ ya n'afọ ofufo ma na-enweta ego naanị site na onyinye afọ ofufo. Enweghị mgbasa ozi, enweghị ire data na enweghị atụmatụ akwụ ụgwọ. Onyinye niile na-aga ozugbo iji kpuchie ụgwọ ọrụ (akụrụngwa, nnabata, mmepe). Ebe ọ bụ na onye enyi gị na-agba ọsọ dị ka ọrụ nkeonwe, onyinye anaghị ewepụ ụtụ isi.",
+    "q9": "Kedu ka onye enyi gị gị si eji data m?",
+    "q9Answer": "Onye enyi gị gị anaghị echekwa data nkeonwe ma ọ bụ akụkọ mkparịta ụka. Mkparịta ụka ọ bụla bụ nke amaghị aha. Enweghị nbanye, enweghị nyocha na enweghị nkesa data na ndị ọzọ. Ojiji ahụ bụ nke amaghị aha kpamkpam.",
     "tradition": {
       "reformed": "Ndozigharị",
       "evangelical": "Oziọma",
@@ -225,40 +225,40 @@
     }
   },
   "donate": {
-    "badge": "Kwado BibleBot gị",
-    "title": "Nyere aka mee ka BibleBot gị nweere onwe ya",
-    "subtitle": "BibleBot gị bụ ọrụ obi – na-enweghị mgbasa ozi, na-enweghị ndenye aha, na-enweghị ụgwọ zoro ezo. Ka nke a wee dịgide, m dabere na onyinye afọ ofufo. Onyinye ọ bụla na-enyere aka kpuchie ụgwọ ọrụ na akụrụngwa.",
+    "badge": "Kwado onye enyi gị gị",
+    "title": "Nyere aka mee ka onye enyi gị gị nweere onwe ya",
+    "subtitle": "BibleBot.Life gị bụ ọrụ obi – na-enweghị mgbasa ozi, na-enweghị ndenye aha, na-enweghị ụgwọ zoro ezo. Ka nke a wee dịgide, m dabere na onyinye afọ ofufo. Onyinye ọ bụla na-enyere aka kpuchie ụgwọ ọrụ na akụrụngwa.",
     "bankTitle": "Nye onyinye site na nnyefe ụlọ akụ",
     "bankSubtitle": "Ọnụ ego ọ bụla dị mkpa – ekele dị ukwuu! 🙏",
     "recipient": "Onye nnata",
     "bank": "Ụlọ akụ",
     "purpose": "Ebumnuche",
-    "purposeValue": "Onyinye BibleBot",
+    "purposeValue": "Onyinye BibleBot.Life",
     "note": "A na-arụ BibleBot.Life dị ka ọrụ nkeonwe. Ya mere, onyinye anaghị ewepụ ụtụ isi."
   },
   "refer": {
     "badge": "Kekọrịta Okwu Chineke",
-    "title": "Gwa ndị ọzọ gbasara BibleBot",
-    "subtitle": "Ị maara onye chọrọ agbamume ugbu a? Kekọrịta BibleBot – otu ozi nwere ike ime ọtụtụ ihe.",
+    "title": "Gwa ndị ọzọ gbasara onye enyi gị",
+    "subtitle": "Ị maara onye chọrọ agbamume ugbu a? Kekọrịta onye enyi gị – otu ozi nwere ike ime ọtụtụ ihe.",
     "whatsapp": "Kekọrịta site na WhatsApp",
-    "whatsappMsg": "Hey, achọrọ m igosi gị BibleBot – onye enyi Akwụkwọ Nsọ n'efu nke maara Akwụkwọ Nsọ ma na-ajụ ajụjụ dị mma n'ezie. Enweghị nbanye, amaghị aha, n'eziokwu. Gbalịa ya: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Hey, achọrọ m igosi gị BibleBot.Life – onye enyi Akwụkwọ Nsọ n'efu nke maara Akwụkwọ Nsọ ma na-ajụ ajụjụ dị mma n'ezie. Enweghị nbanye, amaghị aha, n'eziokwu. Gbalịa ya: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Kekọrịta site na Telegram",
-    "telegramMsg": "Hey, ị maara BibleBot? Onye enyi Akwụkwọ Nsọ nkeonwe n'efu – n'eziokwu, amaghị aha, na-enweghị nbanye. Lelee ya: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Hey, ị maara BibleBot.Life? Onye enyi Akwụkwọ Nsọ nkeonwe n'efu – n'eziokwu, amaghị aha, na-enweghị nbanye. Lelee ya: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Kekọrịta site na Email",
     "emailSubject": "Nke a nwere ike ịmasị gị: BibleBot.Life",
-    "emailBody": "Ndewo!\n\nAchọrọ m igosi gị BibleBot – onye enyi Akwụkwọ Nsọ n'efu nke maara Akwụkwọ Nsọ n'ezie. Enweghị ndebanye aha achọrọ, amaghị aha kpamkpam.\n\nỌ na-ajụ ajụjụ dị mma, na-akọwa amaokwu Akwụkwọ Nsọ na ihe gbara ya gburugburu ma na-eso gị n'eziokwu – ọbụna na isiokwu siri ike.\n\nGbalịa ya: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nEkele dị ukwuu",
+    "emailBody": "Ndewo!\n\nAchọrọ m igosi gị BibleBot.Life – onye enyi Akwụkwọ Nsọ n'efu nke maara Akwụkwọ Nsọ n'ezie. Enweghị ndebanye aha achọrọ, amaghị aha kpamkpam.\n\nỌ na-ajụ ajụjụ dị mma, na-akọwa amaokwu Akwụkwọ Nsọ na ihe gbara ya gburugburu ma na-eso gị n'eziokwu – ọbụna na isiokwu siri ike.\n\nGbalịa ya: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nEkele dị ukwuu",
     "copy": "Detuo njikọ",
     "copied": "Njikọ e depụtaghachiri! 📋",
     "qr": "Ma ọ bụ naanị gosi koodu QR a:"
   },
   "cta": {
     "title": "Ịkwesighi ime nke a naanị gị",
-    "subtitle": "Naanị gwa BibleBot gị ihe na-enye gị nsogbu. Enweghị nbanye, enweghị ụgwọ, enweghị ikpe – naanị ezi nkwado na amamihe nke Akwụkwọ Nsọ.",
+    "subtitle": "Naanị gwa onye enyi gị gị ihe na-enye gị nsogbu. Enweghị nbanye, enweghị ụgwọ, enweghị ikpe – naanị ezi nkwado na amamihe nke Akwụkwọ Nsọ.",
     "button": "Bido mkparịta ụka ugbu a"
   },
   "footer": {
     "tagline": "Onye enyi gị nkeonwe — na omimi nke Akwụkwọ Nsọ, na-enweghị ihe ọmụma tupu oge.",
-    "disclaimer": "BibleBot.Life bụ ngwaọrụ dijitalụ ma anaghị anọchi ndụmọdụ ọkachamara, ndụmọdụ nkà mmụta okpukpe ma ọ bụ ọgwụgwọ uche. N'ihe gbasara nsogbu siri ike, BibleBot gị na-ezo aka mgbe niile na ebe enyemaka ruru eru.",
+    "disclaimer": "BibleBot.Life bụ ngwaọrụ dijitalụ ma anaghị anọchi ndụmọdụ ọkachamara, ndụmọdụ nkà mmụta okpukpe ma ọ bụ ọgwụgwọ uche. N'ihe gbasara nsogbu siri ike, onye enyi gị gị na-ezo aka mgbe niile na ebe enyemaka ruru eru.",
     "impressum": "Ozi iwu",
     "notes": "Ihe ndetu",
     "private": "Ọrụ nkeonwe, na-abụghị nke azụmahịa",
@@ -269,7 +269,7 @@
     "forChurches": "Maka Ọgbakọ"
   },
   "chat": {
-    "welcome": "Ọ dị mma na ị nọ ebe a 🤗\n\nAbụ m BibleBot gị – onye enyi gị nkeonwe na Akwụkwọ Nsọ, ajụjụ dị mma na mkpali doro anya. Enweghị nrụgide, enweghị nyocha.\n\nỊ nwere ike ịjụ m ihe ọ bụla – ma ọ bụ naanị gwa m ihe na-enye gị nsogbu ugbu a. 💛",
+    "welcome": "Ọ dị mma na ị nọ ebe a 🤗\n\nAbụ m onye enyi gị gị – onye enyi gị nkeonwe na Akwụkwọ Nsọ, ajụjụ dị mma na mkpali doro anya. Enweghị nrụgide, enweghị nyocha.\n\nỊ nwere ike ịjụ m ihe ọ bụla – ma ọ bụ naanị gwa m ihe na-enye gị nsogbu ugbu a. 💛",
     "journeyOffer": "💡 **Ndụmọdụ:** Ana m enyekwa **nkwado ụbọchị 21** – izu 3 na mkpali kwa ụbọchị, ntụgharị uche na usoro doro anya. N'ụzọ nke gị kpamkpam.\n\nỊ ga-achọ ịnwale nke a?",
     "suggestion1": "Achọrọ m okwu na-ewuli elu ugbu a",
     "suggestion2": "Gịnị ka Akwụkwọ Nsọ na-ekwu mgbe mmadụ na-enwe obi abụọ?",
@@ -314,7 +314,7 @@
     "suggestionsLoading": "Na-ebu aro…"
   },
   "install": {
-    "title": "Wụnye BibleBot",
+    "title": "Wụnye BibleBot.Life",
     "androidDesc": "Ịnweta ngwa ngwa ozugbo site na ihuenyo ụlọ",
     "iosDesc": "Pịa «Kekọrịta» → «Na ihuenyo ụlọ»",
     "button": "Wụnye",
@@ -328,8 +328,8 @@
     "copiedDesc": "E depụtaghachiri ederede na clipboard. Kekọrịta ya ugbu a na WhatsApp, Instagram ma ọ bụ ebe ọ bụla ị chọrọ!",
     "copyLink": "Detuo ederede",
     "error": "Ịdepụtaghachi adaghị",
-    "impulseTitle": "BibleBot – Mkpali nke ụbọchị",
-    "chatTitle": "BibleBot – Echiche nke ụbọchị",
+    "impulseTitle": "Onye enyi gị – Mkpali nke ụbọchị",
+    "chatTitle": "Onye enyi gị – Echiche nke ụbọchị",
     "createImage": "Mepụta onyonyo ✨",
     "generating": "Na-emepụta…",
     "imageReady": "Onyonyo gị adịla njikere maka ịkekọrịta!",
@@ -354,7 +354,7 @@
   },
   "tiles": {
     "sectionTitle": "Gịnị na-enye gị nsogbu?",
-    "sectionSubtitle": "Họrọ isiokwu — BibleBot ga-eso gị",
+    "sectionSubtitle": "Họrọ isiokwu — onye enyi gị ga-eso gị",
     "baptism": {
       "title": "Chọta amaokwu baptizim",
       "desc": "Amaokwu zuru oke maka nwa gị",
@@ -648,7 +648,7 @@
   },
   "church": {
     "badge": "Maka ụlọ ọrụ",
-    "heroTitle": "BibleBot maka ụlọ ọrụ gị",
+    "heroTitle": "Onye enyi gị maka ụlọ ọrụ gị",
     "heroSubtitle": "Soro ndị otu ọgbakọ gị na amamihe Akwụkwọ Nsọ – dijitalụ, nkeonwe na gburugburu elekere.",
     "useCasesTitle": "Ojiji",
     "useCase": {
@@ -670,7 +670,7 @@
       }
     },
     "pricingTitle": "Ngwugwu Nkwado",
-    "pricingSubtitle": "Kwado BibleBot na ọgbakọ gị na ngwugwu nkwado kwesịrị ekwesị.",
+    "pricingSubtitle": "Kwado onye enyi gị na ọgbakọ gị na ngwugwu nkwado kwesịrị ekwesị.",
     "popular": "Ewu ewu",
     "free": "N'efu",
     "perYear": "ndị mmadụ / afọ",
@@ -712,7 +712,7 @@
     "viewDirectory": "Lelee ndekọ ọgbakọ",
     "directoryBadge": "Ndekọ ọgbakọ",
     "directoryTitle": "Ọgbakọ ndị mmekọ",
-    "directorySubtitle": "Chọta ọgbakọ dị nso gị nke na-atụ aro BibleBot.",
+    "directorySubtitle": "Chọta ọgbakọ dị nso gị nke na-atụ aro onye enyi gị.",
     "searchPlaceholder": "Chọọ obodo, aha ma ọ bụ okpukperechi...",
     "noResults": "Enweghị ọgbakọ na ndekọ.",
     "becomePartner": "Bụrụ onye mmekọ →",
@@ -767,7 +767,7 @@
       }
     },
     "institutionsTitle": "Maka ụlọ ọrụ",
-    "institutionsSubtitle": "BibleBot anaghị eso naanị ọgbakọ – ụlọ nlekọta na ụlọ ndị agadi, ụlọ ọgwụ na ndụmọdụ ụlọ mkpọrọ na-eritekwa uru site na ndụmọdụ dijitalụ.",
+    "institutionsSubtitle": "Onye enyi gị anaghị eso naanị ọgbakọ – ụlọ nlekọta na ụlọ ndị agadi, ụlọ ọgwụ na ndụmọdụ ụlọ mkpọrọ na-eritekwa uru site na ndụmọdụ dijitalụ.",
     "institution": {
       "careHome": {
         "title": "Ụlọ nlekọta",
@@ -810,7 +810,7 @@
         "desc": "Mkpali ime mmụọ mgbakwunye maka ndị ahịa na ndụmọdụ."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible.",
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As onye enyi gị is a private project, donations are not tax-deductible.",
     "denominationsTitle": "Maka nzuko uka niile na ndi na-achi emume",
     "denominationsSubtitle": "BibleBot.Life bụ ecumenical – maka nzukọ Reformed, Catholic, Lutheran, na Free Church, yana ndi na-achi emume.",
     "denomination": {
@@ -838,15 +838,15 @@
   },
   "institutions": {
     "badge": "Maka ụlọ ọrụ",
-    "heroTitle": "BibleBot maka ụlọ ọrụ gị",
+    "heroTitle": "Onye enyi gị maka ụlọ ọrụ gị",
     "heroSubtitle": "Ndụmọdụ dijitalụ maka ụlọ nlekọta, ụlọ ndị agadi, ụlọ ọgwụ na ụlọ mkpọrọ – nkeonwe, na nzuzo na gburugburu elekere.",
     "seniorHint": {
       "title": "Ụdị agadi dị",
       "desc": "Nnukwu mkpụrụedemede na ọrụ dị mfe – zuru oke maka ndị agadi bi.",
       "cta": "Nwalee ụdị agadi"
     },
-    "typesTitle": "Ònye ka BibleBot bụ maka ya?",
-    "useCasesTitle": "Otu esi eji BibleBot",
+    "typesTitle": "Ònye ka onye enyi gị bụ maka ya?",
+    "useCasesTitle": "Otu esi eji onye enyi gị",
     "useCasesSubtitle": "Ngwa bara uru maka ndụ kwa ụbọchị n'ụlọ ọrụ gị.",
     "pricingTitle": "Ngwugwu Nkwado",
     "pricingSubtitle": "Ngwugwu ndị ahụ dị ka maka ọgbakọ – gbanwere maka mkpa ụlọ ọrụ.",
@@ -880,7 +880,7 @@
       },
       "companionship": {
         "title": "Onye na-akparịta ụka",
-        "desc": "BibleBot na-aza ajụjụ okwukwe n'ụzọ dị nwayọọ na na-enweghị nrụgide oge – zuru oke maka oge owu ọmụma."
+        "desc": "Onye enyi gị na-aza ajụjụ okwukwe n'ụzọ dị nwayọọ na na-enweghị nrụgide oge – zuru oke maka oge owu ọmụma."
       },
       "accessibility": {
         "title": "Ịnweta dị mfe",
@@ -952,9 +952,9 @@
     "ht": "Kreyòl"
   },
   "eulogy": {
-    "pageTitle": "Abdankung – Lebenslauf erstellen | BibleBot",
+    "pageTitle": "Ozi onwu – Mepụta akụkọ ndụ | onye enyi gị",
     "pageDesc": "Debe ncheta onye ị hụrụ n'anya ma mepụta ederede akụkọ ndụ mara mma maka olili ozu.",
-    "title": "Abdankung – Lebenslauf",
+    "title": "Ozi onwu – Akụkọ ndụ",
     "subtitle": "Debe ncheta, mepụta ederede, budata dị ka PDF.",
     "step1": "Banyere onye ahụ nwụrụ anwụ",
     "name": "Aha",
@@ -1002,7 +1002,7 @@
     "confirmationDesc": "Chọta ilu nkwenye ma kwadebe ederede nkeonwe."
   },
   "chatHero": {
-    "ariaLabel": "Jụọ BibleBot ajụjụ",
+    "ariaLabel": "Jụọ onye enyi gị ajụjụ",
     "focusPlaceholder": "Dee ajụjụ gị…",
     "placeholder1": "Gịnị na-eme ka m nwee ekele n'ezie?",
     "placeholder2": "Olee otú m ga-esi nweta udo nke ime?",
@@ -1016,12 +1016,12 @@
     "suggestion3": "Gịnị ka m ji ekele?"
   },
   "meta": {
-    "forChurchesDesc": "BibleBot dị ka onye mmekọ maka ọgbakọ gị: ọrụ ntorobịa, nkwenye, ndụmọdụ na agụmakwụkwọ Bible. N'efu ruo na adịchaghị.",
-    "forChurchesTitle": "BibleBot maka Ụka – Nduzi Digitaalụ & Nkwado Akwụkwọ Nsọ",
-    "homeDesc": "BibleBot na-eso gị ya na nsụgharị Bible 5, usoro ịzụlite na ndụmọdụ. N'amaghị aha, n'efu, na asụsụ 36.",
-    "homeTitle": "BibleBot – Onye enyemaka Bible gị n'onwe gị | N'efu & N'amaghị Aha",
-    "loginDesc": "Banye na BibleBot iji kwadebe emume nke gị.",
-    "loginTitle": "Banye – BibleBot"
+    "forChurchesDesc": "Onye enyi gị dị ka onye mmekọ maka ọgbakọ gị: ọrụ ntorobịa, nkwenye, ndụmọdụ na agụmakwụkwọ Bible. N'efu ruo na adịchaghị.",
+    "forChurchesTitle": "Onye enyi gị maka Ụka – Nduzi Digitaalụ & Nkwado Akwụkwọ Nsọ",
+    "homeDesc": "Onye enyi gị na-eso gị ya na nsụgharị Bible 5, usoro ịzụlite na ndụmọdụ. N'amaghị aha, n'efu, na asụsụ 36.",
+    "homeTitle": "Onye enyi gị – Onye enyemaka Bible gị n'onwe gị | N'efu & N'amaghị Aha",
+    "loginDesc": "Banye na onye enyi gị iji kwadebe emume nke gị.",
+    "loginTitle": "Banye – onye enyi gị"
   },
   "splash": {
     "patronage": "Ndị kwadoro"

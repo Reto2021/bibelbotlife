@@ -16,7 +16,7 @@
     },
     "title1": "A Biblia.",
     "title2": " Újragondolva.",
-    "subtitle": "A BibleBot ismeri a Bibliát – és felteszi a megfelelő kérdéseket. Nem ember, de őszinte társ. Jó beszélgetésekhez, mély kérdésekhez és valódi impulzusokhoz.",
+    "subtitle": "A társad ismeri a Bibliát – és felteszi a megfelelő kérdéseket. Nem ember, de őszinte társ. Jó beszélgetésekhez, mély kérdésekhez és valódi impulzusokhoz.",
     "ctaTelegram": "Kezdés Telegramon keresztül",
     "ctaMore": "Tudjon meg többet",
     "quote": "«Jöjjetek hozzám mindnyájan, akik megfáradtatok és meg vagytok terhelve, és én megnyugtatlak titeket.»",
@@ -33,8 +33,8 @@
     "stopAudio": "Leállít"
   },
   "features": {
-    "sectionTitle": "Hogyan kísér el a BibleBot",
-    "sectionSubtitle": "Fedezze fel a sokféle lehetőséget, ahogyan a BibleBot elkísérheti Önt",
+    "sectionTitle": "Hogyan kísér el a társad",
+    "sectionSubtitle": "Fedezze fel a sokféle lehetőséget, ahogyan a társad elkísérheti Önt",
     "bible": {
       "title": "Bibliai versek és magyarázatok",
       "desc": "Kérdezze meg: „Mit mond a Biblia erről…?” és kapjon megfelelő verseket kontextussal és érthető magyarázattal."
@@ -49,7 +49,7 @@
     },
     "faith": {
       "title": "Hitút és Krisztus megtalálása",
-      "desc": "Akár kereső, kételkedő vagy elmélyedő – a BibleBot elkíséri Önt személyes útján."
+      "desc": "Akár kereső, kételkedő vagy elmélyedő – a társad elkíséri Önt személyes útján."
     },
     "daily": {
       "title": "Napi impulzusok és egyházi év",
@@ -63,9 +63,9 @@
   "coaching": {
     "badge": "Módszertan",
     "title": "Nem csak egy chatbot – valódi kíséret",
-    "subtitle": "A BibleBot ötvözi a bibliai bölcsességet a bevált coaching módszerekkel és a pozitív pszichológiával.",
+    "subtitle": "A társad ötvözi a bibliai bölcsességet a bevált coaching módszerekkel és a pozitív pszichológiával.",
     "journeyTitle": "Személyes kíséret",
-    "journeyDesc": "A BibleBot elkíséri Önt, ameddig csak akarja – szabad beszélgetésben vagy opcionális 21 napos struktúrával.",
+    "journeyDesc": "A társad elkíséri Önt, ameddig csak akarja – szabad beszélgetésben vagy opcionális 21 napos struktúrával.",
     "week1": "1. hét: Megérkezés",
     "week1Desc": "Bizalom építése, meghallgatás, a helyzet megértése. Hol áll? Mi foglalkoztatja?",
     "week2": "2. hét: Elmélyítés",
@@ -73,12 +73,12 @@
     "week3": "3. hét: Cselekvés",
     "week3Desc": "Konkrét lépések megtétele, célok megfogalmazása, változás elindítása. Mi a következő lépés?",
     "openQuestionsTitle": "Nyitott kérdések gyors válaszok helyett",
-    "openQuestionsDesc": "A BibleBot nem ad olcsó tanácsokat. Ehelyett felteszi azokat a kérdéseket, amelyek igazán számítanak:",
+    "openQuestionsDesc": "A társad nem ad olcsó tanácsokat. Ehelyett felteszi azokat a kérdéseket, amelyek igazán számítanak:",
     "openQ1": "«Mi is áll valójában e mögött a vágy mögött?»",
     "openQ2": "«Miből venné észre, hogy valami megváltozott?»",
     "openQ3": "«Mi lenne az első apró lépés?»",
     "honestTitle": "Őszinte, nem toxikus pozitív",
-    "honestDesc": "Nincs „Minden rendben lesz!” és nincs szépítés. A BibleBot empatikus ÉS őszinte:",
+    "honestDesc": "Nincs „Minden rendben lesz!” és nincs szépítés. A társad empatikus ÉS őszinte:",
     "honest1": "Megnevezi a kényelmetlen bibliai verseket is",
     "honest2": "Önreflexióra ösztönöz",
     "honest3": "Megkülönbözteti a vigaszt a elnyomástól",
@@ -103,7 +103,7 @@
       "author": "Worthington",
       "desc": "REACH-modell a megbocsátási folyamatokhoz"
     },
-    "renameTip": "💡 Adhatsz a BibleBotodnak saját nevet – hogy valóban **a te** társad legyen."
+    "renameTip": "💡 Adhatsz a társadodnak saját nevet – hogy valóban **a te** társad legyen."
   },
   "discover": {
     "badge": "Kíváncsiaknak",
@@ -115,7 +115,7 @@
     },
     "search": {
       "title": "Keres?",
-      "text": "Talán még azt sem tudja pontosan, mit. Ez teljesen rendben van. A BibleBot segít Önnek feltenni a megfelelő kérdéseket – ahelyett, hogy gyors válaszokat adna."
+      "text": "Talán még azt sem tudja pontosan, mit. Ez teljesen rendben van. A társad segít Önnek feltenni a megfelelő kérdéseket – ahelyett, hogy gyors válaszokat adna."
     },
     "deepen": {
       "title": "El akar mélyedni?",
@@ -170,9 +170,9 @@
   },
   "faq": {
     "badge": "Gyakran Ismételt Kérdések",
-    "title": "Amit tudnia kell a BibleBotról",
+    "title": "Amit tudnia kell a társadról",
     "subtitle": "Az átláthatóság fontos számunkra – különösen a teológusok, lelkészek és kritikus gondolkodók felé.",
-    "q1": "Miben különbözik a BibleBot a ChatGPT-től és társaitól?",
+    "q1": "Miben különbözik a társad a ChatGPT-től és társaitól?",
     "q1Generic": "Általános chatbotok:",
     "q1GenericItems": [
       "Felületes bibliai idézetek kontextus nélkül",
@@ -192,11 +192,11 @@
       "Kritikus gondolkodás elősegítése a hit érettségéhez"
     ],
     "q2": "Milyen bibliafordítások vannak mögötte?",
-    "q2Intro": "A BibleBot ökumenikus módon dolgozik a legfontosabb német nyelvű bibliai kiadásokkal:",
+    "q2Intro": "A társad ökumenikus módon dolgozik a legfontosabb német nyelvű bibliai kiadásokkal:",
     "q2Outro": "Minden bibliai vers forrásmegjelöléssel és történelmi kontextussal kerül kiadásra.",
     "q3": "Milyen tudományos alapok állnak mögötte?",
     "q3Intro": "A kíséret a pozitív pszichológia szakértők által ellenőrzött kutatásain alapul:",
-    "q4": "Hogyan biztosítja a BibleBot a lelkipásztori biztonságot?",
+    "q4": "Hogyan biztosítja a társad a lelkipásztori biztonságot?",
     "q4Items": [
       "Öngyilkossági gondolatok vagy krízisek esetén → azonnali továbbítás a Dargebotene Hand (143) és a Pro Juventute (147) szervezetekhez",
       "Nincs pszichológiai vagy orvosi diagnózis",
@@ -206,16 +206,16 @@
       "Nincs toxikus pozitivitás – valódi, őszinte kíséret",
       "Nyíltan megnevezi a feszültségeket és a nehéz szövegeket"
     ],
-    "q5": "A BibleBot felekezeti kötődésű?",
-    "q5Answer": "Nem. A BibleBot ökumenikus irányultságú, és egyformán tiszteletben tartja a református, katolikus, szabadegyházi és más keresztény hagyományokat. A felekezetileg eltérő értelmezések esetén a különböző perspektívák átláthatóan kerülnek bemutatásra – anélkül, hogy bármelyik hagyományt előnyben részesítenék.",
-    "q6": "A BibleBot helyettesíti a lelkipásztori gondozást vagy a terápiát?",
-    "q6Answer": "Nem. A BibleBot egy digitális segédeszköz a személyes bibliaolvasáshoz és elmélkedéshez. Nem helyettesíti a professzionális lelkipásztori gondozást, teológiai tanácsadást vagy pszichológiai terápiát. Súlyos krízisek esetén a BibleBot mindig minősített segélyhelyekre utal.",
-    "q7": "A BibleBot nem csak egy „jó érzés bot”?",
-    "q7Answer": "Nem. A BibleBot vigasztal, ahol vigaszra van szükség – de kihívást is jelent. A lelki növekedéshez súrlódás kell. A BibleBot kényelmetlen visszakérdezéseket tesz fel, megnevezi a nehéz bibliai szövegeket (Jób, panaszos zsoltárok, prófétai kritika), és nem riad vissza olyan témáktól, mint az igazságosság, a megtérés és a felelősség. A prófétai hagyomány soha nem volt kényelmes – és a BibleBot sem az.",
-    "q8": "Ki áll a BibleBot mögött, és hogyan finanszírozzák?",
-    "q8Answer": "A BibleBot.Life egy magán, nem kereskedelmi projekt. Önkéntes alapon működik, és kizárólag önkéntes adományokból finanszírozza magát. Nincs reklám, nincs adatértékesítés és nincsenek fizetős funkciók. Minden adomány közvetlenül a működési költségek (infrastruktúra, tárhely, fejlesztés) fedezésére fordítódik. Mivel a BibleBot magánprojektként működik, az adományok nem vonhatók le az adóból.",
-    "q9": "Hogyan kezeli a BibleBot az adataimat?",
-    "q9Answer": "A BibleBot nem tárol személyes adatokat és chat-előzményeket. Minden beszélgetés névtelen. Nincs bejelentkezés, nincs nyomon követés és nincs adatmegosztás harmadik felekkel. A használat teljesen névtelen.",
+    "q5": "A társad felekezeti kötődésű?",
+    "q5Answer": "Nem. A társad ökumenikus irányultságú, és egyformán tiszteletben tartja a református, katolikus, szabadegyházi és más keresztény hagyományokat. A felekezetileg eltérő értelmezések esetén a különböző perspektívák átláthatóan kerülnek bemutatásra – anélkül, hogy bármelyik hagyományt előnyben részesítenék.",
+    "q6": "A társad helyettesíti a lelkipásztori gondozást vagy a terápiát?",
+    "q6Answer": "Nem. A társad egy digitális segédeszköz a személyes bibliaolvasáshoz és elmélkedéshez. Nem helyettesíti a professzionális lelkipásztori gondozást, teológiai tanácsadást vagy pszichológiai terápiát. Súlyos krízisek esetén a társad mindig minősített segélyhelyekre utal.",
+    "q7": "A társad nem csak egy „jó érzés bot”?",
+    "q7Answer": "Nem. A társad vigasztal, ahol vigaszra van szükség – de kihívást is jelent. A lelki növekedéshez súrlódás kell. A társad kényelmetlen visszakérdezéseket tesz fel, megnevezi a nehéz bibliai szövegeket (Jób, panaszos zsoltárok, prófétai kritika), és nem riad vissza olyan témáktól, mint az igazságosság, a megtérés és a felelősség. A prófétai hagyomány soha nem volt kényelmes – és a társad sem az.",
+    "q8": "Ki áll a társad mögött, és hogyan finanszírozzák?",
+    "q8Answer": "A BibleBot.Life egy magán, nem kereskedelmi projekt. Önkéntes alapon működik, és kizárólag önkéntes adományokból finanszírozza magát. Nincs reklám, nincs adatértékesítés és nincsenek fizetős funkciók. Minden adomány közvetlenül a működési költségek (infrastruktúra, tárhely, fejlesztés) fedezésére fordítódik. Mivel a társad magánprojektként működik, az adományok nem vonhatók le az adóból.",
+    "q9": "Hogyan kezeli a társad az adataimat?",
+    "q9Answer": "A társad nem tárol személyes adatokat és chat-előzményeket. Minden beszélgetés névtelen. Nincs bejelentkezés, nincs nyomon követés és nincs adatmegosztás harmadik felekkel. A használat teljesen névtelen.",
     "tradition": {
       "reformed": "Református",
       "evangelical": "Evangélikus",
@@ -225,35 +225,35 @@
     }
   },
   "donate": {
-    "badge": "Támogassa a BibleBotot",
-    "title": "Segítsen abban, hogy a BibleBot ingyenes maradjon",
-    "subtitle": "A BibleBot egy szívügy – reklámok, előfizetés és rejtett költségek nélkül. Ahhoz, hogy ez így maradjon, önkéntes adományokra van szükségem. Minden hozzájárulás segít fedezni a működési és infrastrukturális költségeket.",
+    "badge": "Támogassa a társadot",
+    "title": "Segítsen abban, hogy a társad ingyenes maradjon",
+    "subtitle": "A BibleBot.Life egy szívügy – reklámok, előfizetés és rejtett költségek nélkül. Ahhoz, hogy ez így maradjon, önkéntes adományokra van szükségem. Minden hozzájárulás segít fedezni a működési és infrastrukturális költségeket.",
     "bankTitle": "Adomány banki átutalással",
     "bankSubtitle": "Minden összeg számít – nagyon köszönjük! 🙏",
     "recipient": "Kedvezményezett",
     "bank": "Bank",
     "purpose": "Közlemény",
-    "purposeValue": "Adomány BibleBot",
+    "purposeValue": "Adomány BibleBot.Life",
     "note": "A BibleBot.Life magánprojektként működik. Az adományok ezért nem vonhatók le az adóból."
   },
   "refer": {
     "badge": "Isten szavának megosztása",
-    "title": "Ajánlja tovább a BibleBotot",
-    "subtitle": "Ismer valakit, akinek éppen bátorításra van szüksége? Ossza meg a BibleBotot – egy üzenet sokat jelenthet.",
+    "title": "Ajánlja tovább a társadot",
+    "subtitle": "Ismer valakit, akinek éppen bátorításra van szüksége? Ossza meg a társadot – egy üzenet sokat jelenthet.",
     "whatsapp": "Megosztás WhatsAppon keresztül",
-    "whatsappMsg": "Szia, meg akartam mutatni neked a BibleBotot – egy ingyenes bibliai társat, aki ismeri a Bibliát és igazán jó kérdéseket tesz fel. Nincs bejelentkezés, névtelen, őszinte. Próbáld ki: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Szia, meg akartam mutatni neked a BibleBot.Lifeot – egy ingyenes bibliai társat, aki ismeri a Bibliát és igazán jó kérdéseket tesz fel. Nincs bejelentkezés, névtelen, őszinte. Próbáld ki: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Megosztás Telegramon keresztül",
-    "telegramMsg": "Szia, ismered már a BibleBotot? Egy ingyenes személyes bibliai társ – őszinte, névtelen, bejelentkezés nélkül. Nézd meg: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Szia, ismered már a BibleBot.Lifeot? Egy ingyenes személyes bibliai társ – őszinte, névtelen, bejelentkezés nélkül. Nézd meg: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Megosztás e-mailben",
     "emailSubject": "Ez érdekelhet: BibleBot.Life",
-    "emailBody": "Szia!\n\nMeg akartam mutatni neked a BibleBotot – egy ingyenes bibliai társat, aki igazán ismeri a Bibliát. Nincs szükség regisztrációra, teljesen névtelen.\n\nJó visszakérdezéseket tesz fel, magyarázza a bibliai verseket kontextusban, és őszintén elkísér – még nehéz témákban is.\n\nPróbáld ki: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nÜdvözlettel",
+    "emailBody": "Szia!\n\nMeg akartam mutatni neked a BibleBot.Lifeot – egy ingyenes bibliai társat, aki igazán ismeri a Bibliát. Nincs szükség regisztrációra, teljesen névtelen.\n\nJó visszakérdezéseket tesz fel, magyarázza a bibliai verseket kontextusban, és őszintén elkísér – még nehéz témákban is.\n\nPróbáld ki: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nÜdvözlettel",
     "copy": "Link másolása",
     "copied": "Link másolva! 📋",
     "qr": "Vagy egyszerűen mutassa meg ezt a QR-kódot:"
   },
   "cta": {
     "title": "Nem kell egyedül átvészelnie",
-    "subtitle": "Egyszerűen írja meg a BibleBotnak, mi foglalkoztatja. Nincs bejelentkezés, nincs költség, nincs ítélet – csak őszinte kíséret és a Biblia bölcsessége.",
+    "subtitle": "Egyszerűen írja meg a társadnak, mi foglalkoztatja. Nincs bejelentkezés, nincs költség, nincs ítélet – csak őszinte kíséret és a Biblia bölcsessége.",
     "button": "Kezdje el a beszélgetést most"
   },
   "footer": {
@@ -269,7 +269,7 @@
     "forChurches": "Gyülekezeteknek"
   },
   "chat": {
-    "welcome": "Örülök, hogy itt vagy 🤗\n\nÉn vagyok a BibleBotod – a személyes társad a Bibliával, jó kérdésekkel és konkrét impulzusokkal. Nincs nyomás, nincs ítélet.\n\nBármit megkérdezhetsz tőlem – vagy egyszerűen elmondhatod, mi foglalkoztat éppen. 💛",
+    "welcome": "Örülök, hogy itt vagy 🤗\n\nÉn vagyok a társadod – a személyes társad a Bibliával, jó kérdésekkel és konkrét impulzusokkal. Nincs nyomás, nincs ítélet.\n\nBármit megkérdezhetsz tőlem – vagy egyszerűen elmondhatod, mi foglalkoztat éppen. 💛",
     "journeyOffer": "💡 **Tipp:** Egy **21 napos kíséretet** is kínálok – 3 hét napi impulzusokkal, elmélkedésekkel és konkrét lépésekkel. Teljesen a saját tempódban.\n\nSzeretnéd kipróbálni?",
     "suggestion1": "Éppen egy bátorító szóra van szükségem",
     "suggestion2": "Mit mond a Biblia, ha bizonytalannak érzi magát?",
@@ -314,7 +314,7 @@
     "suggestionsLoading": "Javaslatok betöltése…"
   },
   "install": {
-    "title": "BibleBot telepítése",
+    "title": "BibleBot.Life telepítése",
     "androidDesc": "Gyors hozzáférés közvetlenül a kezdőképernyőről",
     "iosDesc": "Koppintson a „Megosztás” → „Hozzáadás a kezdőképernyőhöz” gombra",
     "button": "Telepítés",
@@ -328,8 +328,8 @@
     "copiedDesc": "A szöveg a vágólapra másolva. Most oszd meg WhatsAppon, Instagramon vagy ahol szeretnéd!",
     "copyLink": "Szöveg másolása",
     "error": "Másolás sikertelen",
-    "impulseTitle": "BibleBot – A nap impulzusa",
-    "chatTitle": "BibleBot – A nap gondolata",
+    "impulseTitle": "Társad – A nap impulzusa",
+    "chatTitle": "Társad – A nap gondolata",
     "createImage": "Kép létrehozása ✨",
     "generating": "Létrehozás folyamatban…",
     "imageReady": "A képed készen áll a megosztásra!",
@@ -354,7 +354,7 @@
   },
   "tiles": {
     "sectionTitle": "Mi foglalkoztat?",
-    "sectionSubtitle": "Válasszon egy témát — a BibleBot elkíséri Önt",
+    "sectionSubtitle": "Válasszon egy témát — a társad elkíséri Önt",
     "baptism": {
       "title": "Keresztelői ige megtalálása",
       "desc": "A tökéletes vers gyermekednek",
@@ -648,7 +648,7 @@
   },
   "church": {
     "badge": "Szervezeteknek",
-    "heroTitle": "BibleBot szervezetének",
+    "heroTitle": "Társad szervezetének",
     "heroSubtitle": "Kísérje el gyülekezeti tagjait bibliai bölcsességgel – digitálisan, személyesen és éjjel-nappal.",
     "useCasesTitle": "Felhasználási lehetőségek",
     "useCase": {
@@ -670,7 +670,7 @@
       }
     },
     "pricingTitle": "Patronátus csomagok",
-    "pricingSubtitle": "Támogassa a BibleBotot és gyülekezetét a megfelelő patronátus csomaggal.",
+    "pricingSubtitle": "Támogassa a társadot és gyülekezetét a megfelelő patronátus csomaggal.",
     "popular": "Népszerű",
     "free": "Ingyenes",
     "perYear": "személy / év",
@@ -712,7 +712,7 @@
     "viewDirectory": "Gyülekezeti címtár megtekintése",
     "directoryBadge": "Gyülekezeti címtár",
     "directoryTitle": "Partnergyülekezetek",
-    "directorySubtitle": "Keressen egy gyülekezetet a közelében, amely ajánlja a BibleBotot.",
+    "directorySubtitle": "Keressen egy gyülekezetet a közelében, amely ajánlja a társadot.",
     "searchPlaceholder": "Hely, név vagy felekezet keresése...",
     "noResults": "Még nincsenek gyülekezetek a címtárban.",
     "becomePartner": "Legyen partner →",
@@ -767,7 +767,7 @@
       }
     },
     "institutionsTitle": "Intézményeknek is",
-    "institutionsSubtitle": "A BibleBot nemcsak gyülekezeteket kísér – az idősek otthonai, kórházak és a börtönlelkészi szolgálat is profitál a digitális lelkipásztori gondozásból.",
+    "institutionsSubtitle": "A társad nemcsak gyülekezeteket kísér – az idősek otthonai, kórházak és a börtönlelkészi szolgálat is profitál a digitális lelkipásztori gondozásból.",
     "institution": {
       "careHome": {
         "title": "Idősek otthonai",
@@ -810,7 +810,7 @@
         "desc": "Kiegészítő lelki impulzusok pszichoszociális tanácsadás ügyfelei számára."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible.",
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As társad is a private project, donations are not tax-deductible.",
     "denominationsTitle": "Minden felekezet és szertartásvezető számára",
     "denominationsSubtitle": "A BibleBot.Life ökumenikus – református, katolikus, evangélikus és szabad egyházi közösségek, valamint független szertartásvezetők számára.",
     "denomination": {
@@ -838,15 +838,15 @@
   },
   "institutions": {
     "badge": "Szervezeteknek",
-    "heroTitle": "BibleBot az Ön intézménye számára",
+    "heroTitle": "Társad az Ön intézménye számára",
     "heroSubtitle": "Digitális lelkipásztori gondozás idősek otthonai, kórházak és büntetés-végrehajtási intézetek számára – személyesen, bizalmasan és éjjel-nappal.",
     "seniorHint": {
       "title": "Szenior mód elérhető",
       "desc": "Nagyobb betűméret és egyszerűsített kezelés – ideális idősebb lakók számára.",
       "cta": "Szenior mód tesztelése"
     },
-    "typesTitle": "Kinek szól a BibleBot?",
-    "useCasesTitle": "Hogyan használják a BibleBotot?",
+    "typesTitle": "Kinek szól a társad?",
+    "useCasesTitle": "Hogyan használják a társadot?",
     "useCasesSubtitle": "Konkrét alkalmazások az intézmény mindennapjaiban.",
     "pricingTitle": "Patronátus csomagok",
     "pricingSubtitle": "Ugyanazok a csomagok, mint a gyülekezetek számára – az intézményi igényekhez igazítva.",
@@ -880,7 +880,7 @@
       },
       "companionship": {
         "title": "Beszélgetőpartner",
-        "desc": "A BibleBot türelmesen és időnyomás nélkül válaszol a hitbeli kérdésekre – ideális magányos órákban."
+        "desc": "A társad türelmesen és időnyomás nélkül válaszol a hitbeli kérdésekre – ideális magányos órákban."
       },
       "accessibility": {
         "title": "Könnyű hozzáférés",
@@ -952,7 +952,7 @@
     "ht": "Kreyòl"
   },
   "eulogy": {
-    "pageTitle": "Gyászbeszéd – Életrajz készítése | BibleBot",
+    "pageTitle": "Gyászbeszéd – Életrajz készítése | társad",
     "pageDesc": "Őrizze meg egy szeretett személy emlékét, és készítsen egy gyönyörű életrajzi szöveget a gyászbeszédhez.",
     "title": "Gyászbeszéd – Életrajz",
     "subtitle": "Emlékek megőrzése, szöveg létrehozása, PDF letöltése.",
@@ -1002,7 +1002,7 @@
     "confirmationDesc": "Konfirmációs ige megtalálása és személyes szövegek előkészítése."
   },
   "chatHero": {
-    "ariaLabel": "Tegyél fel kérdést a BibleBotnak",
+    "ariaLabel": "Tegyél fel kérdést a társadnak",
     "focusPlaceholder": "Írd be a kérdésedet…",
     "placeholder1": "Miért vagyok igazán hálás?",
     "placeholder2": "Hogyan találhatok belső békét?",
@@ -1016,12 +1016,12 @@
     "suggestion3": "Miért vagyok hálás?"
   },
   "meta": {
-    "forChurchesDesc": "A BibleBot, mint partnere az Ön gyülekezetének: ifjúsági munka, konfirmáció, lelkigondozás és bibliai körök. Ingyenestől a prémiumig.",
-    "forChurchesTitle": "BibleBot gyülekezeteknek – Digitális lelkigondozás és bibliai kísérés",
-    "homeDesc": "A BibleBot 5 bibliafordítással, coaching módszertannal és lelkigondozással kíséri Önt. Névtelenül, ingyenesen, 36 nyelven.",
-    "homeTitle": "BibleBot – Személyes Bibliai Kísérőd | Ingyenes és Névtelen",
-    "loginDesc": "Jelentkezz be a BibleBotba, hogy felkészítsd a személyes szertartásaidat.",
-    "loginTitle": "Bejelentkezés – BibleBot"
+    "forChurchesDesc": "A társad, mint partnere az Ön gyülekezetének: ifjúsági munka, konfirmáció, lelkigondozás és bibliai körök. Ingyenestől a prémiumig.",
+    "forChurchesTitle": "Társad gyülekezeteknek – Digitális lelkigondozás és bibliai kísérés",
+    "homeDesc": "A társad 5 bibliafordítással, coaching módszertannal és lelkigondozással kíséri Önt. Névtelenül, ingyenesen, 36 nyelven.",
+    "homeTitle": "Társad – Személyes Bibliai Kísérőd | Ingyenes és Névtelen",
+    "loginDesc": "Jelentkezz be a társadba, hogy felkészítsd a személyes szertartásaidat.",
+    "loginTitle": "Bejelentkezés – társad"
   },
   "splash": {
     "patronage": "Ajánlja"
