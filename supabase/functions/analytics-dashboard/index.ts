@@ -62,10 +62,13 @@ Deno.serve(async (req) => {
   const telegramMsgs = telegramRes.data || [];
   const churches = churchesRes.data || [];
 
+  // Separate heartbeats from real events for counting
+  const nonHeartbeatEvents = events.filter((e: any) => e.event_name !== "heartbeat");
+
   // ── Aggregate basic stats ──
-  const pageviews = events.filter((e: any) => e.event_type === "pageview");
-  const customEvents = events.filter((e: any) => e.event_type === "event");
-  const sessions = new Set(events.map((e: any) => e.session_id));
+  const pageviews = nonHeartbeatEvents.filter((e: any) => e.event_type === "pageview");
+  const customEvents = nonHeartbeatEvents.filter((e: any) => e.event_type === "event");
+  const sessions = new Set(nonHeartbeatEvents.map((e: any) => e.session_id));
 
   // Top pages
   const pageCounts: Record<string, number> = {};
@@ -77,7 +80,7 @@ Deno.serve(async (req) => {
     .slice(0, 10)
     .map(([path, count]) => ({ path, count }));
 
-  // Top events
+  // Top events (exclude heartbeat)
   const eventCounts: Record<string, number> = {};
   customEvents.forEach((e: any) => {
     eventCounts[e.event_name || "unknown"] = (eventCounts[e.event_name || "unknown"] || 0) + 1;
@@ -90,9 +93,9 @@ Deno.serve(async (req) => {
   // Device breakdown
   const devices: Record<string, number> = { mobile: 0, tablet: 0, desktop: 0 };
   const sessionDevices = new Map<string, string>();
-  events.forEach((e: any) => {
-    if (!sessionDevices.has(e.session_id)) {
-      const w = e.screen_width || 1024;
+  nonHeartbeatEvents.forEach((e: any) => {
+    if (!sessionDevices.has(e.session_id) && e.screen_width) {
+      const w = e.screen_width;
       const type = w < 768 ? "mobile" : w < 1024 ? "tablet" : "desktop";
       sessionDevices.set(e.session_id, type);
       devices[type]++;
@@ -221,14 +224,14 @@ Deno.serve(async (req) => {
   const sevenWhysStarts = customEvents.filter((e: any) => e.event_name === "seven_whys_start").length;
 
   // ═══════════════════════════════════════════
-  // ── NEW: Per-church analytics breakdown ──
+  // ── Per-church analytics breakdown ──
   // ═══════════════════════════════════════════
-  const churchSlugs = new Set(events.map((e: any) => e.church_slug).filter(Boolean));
+  const churchSlugs = new Set(nonHeartbeatEvents.map((e: any) => e.church_slug).filter(Boolean));
   const churchSlugMap = new Map(churches.map((c: any) => [c.slug, c]));
 
   const perChurch: Record<string, any> = {};
   for (const slug of churchSlugs) {
-    const ce = events.filter((e: any) => e.church_slug === slug);
+    const ce = nonHeartbeatEvents.filter((e: any) => e.church_slug === slug);
     const cpv = ce.filter((e: any) => e.event_type === "pageview");
     const cevt = ce.filter((e: any) => e.event_type === "event");
     const cSessions = new Set(ce.map((e: any) => e.session_id));
@@ -247,6 +250,27 @@ Deno.serve(async (req) => {
       cEventCounts[e.event_name || "unknown"] = (cEventCounts[e.event_name || "unknown"] || 0) + 1;
     });
 
+    // Per-church session duration using ALL events including heartbeats
+    const churchAllEvents = events.filter((e: any) => e.church_slug === slug);
+    const cSessionTs: Record<string, number[]> = {};
+    churchAllEvents.forEach((e: any) => {
+      if (!cSessionTs[e.session_id]) cSessionTs[e.session_id] = [];
+      cSessionTs[e.session_id].push(new Date(e.created_at).getTime());
+    });
+    let cTotalDur = 0;
+    let cCountedSessions = 0;
+    for (const ts of Object.values(cSessionTs)) {
+      if (ts.length > 1) {
+        const dur = Math.max(...ts) - Math.min(...ts);
+        if (dur < 7200000) { cTotalDur += dur; cCountedSessions++; }
+      } else {
+        // Single-event sessions: assume minimum 30s (one heartbeat)
+        cTotalDur += 30000;
+        cCountedSessions++;
+      }
+    }
+    const cAvgDurSec = cCountedSessions > 0 ? Math.round(cTotalDur / cCountedSessions / 1000) : 0;
+
     perChurch[slug] = {
       churchName: church?.name || slug,
       planTier: church?.plan_tier || "free",
@@ -254,6 +278,7 @@ Deno.serve(async (req) => {
       pageviews: cpv.length,
       events: cevt.length,
       sessions: cSessions.size,
+      avgSessionDurationSec: cAvgDurSec,
       dailyPageviews: cDaily,
       topEvents: Object.entries(cEventCounts)
         .sort(([, a], [, b]) => (b as number) - (a as number))
@@ -263,11 +288,11 @@ Deno.serve(async (req) => {
   }
 
   // ═══════════════════════════════════════
-  // ── NEW: UTM source breakdown ──
+  // ── UTM source breakdown ──
   // ═══════════════════════════════════════
   const utmSourceCounts: Record<string, number> = {};
   const utmMediumCounts: Record<string, number> = {};
-  events.forEach((e: any) => {
+  nonHeartbeatEvents.forEach((e: any) => {
     if (e.utm_source) utmSourceCounts[e.utm_source] = (utmSourceCounts[e.utm_source] || 0) + 1;
     if (e.utm_medium) utmMediumCounts[e.utm_medium] = (utmMediumCounts[e.utm_medium] || 0) + 1;
   });
@@ -281,30 +306,31 @@ Deno.serve(async (req) => {
     .map(([medium, count]) => ({ medium, count }));
 
   // ═══════════════════════════════════════
-  // ── NEW: Hourly distribution ──
+  // ── Hourly distribution ──
   // ═══════════════════════════════════════
   const hourly = new Array(24).fill(0);
-  events.forEach((e: any) => {
+  nonHeartbeatEvents.forEach((e: any) => {
     const h = new Date(e.created_at).getHours();
     hourly[h]++;
   });
   const hourlyDistribution = hourly.map((count, hour) => ({ hour, count }));
 
   // ═══════════════════════════════════════
-  // ── NEW: Weekday distribution ──
+  // ── Weekday distribution ──
   // ═══════════════════════════════════════
   const weekdayNames = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
   const weekdays = new Array(7).fill(0);
-  events.forEach((e: any) => {
+  nonHeartbeatEvents.forEach((e: any) => {
     const d = new Date(e.created_at).getDay();
     weekdays[d]++;
   });
   const weekdayDistribution = weekdays.map((count, i) => ({ day: weekdayNames[i], count }));
 
   // ═══════════════════════════════════════
-  // ── NEW: Average session duration (approx) ──
+  // ── Average session duration (using heartbeats for accuracy) ──
   // ═══════════════════════════════════════
   const sessionTimestamps: Record<string, number[]> = {};
+  // Use ALL events including heartbeats for duration calculation
   events.forEach((e: any) => {
     if (!sessionTimestamps[e.session_id]) sessionTimestamps[e.session_id] = [];
     sessionTimestamps[e.session_id].push(new Date(e.created_at).getTime());
@@ -314,13 +340,37 @@ Deno.serve(async (req) => {
   for (const ts of Object.values(sessionTimestamps)) {
     if (ts.length > 1) {
       const dur = Math.max(...ts) - Math.min(...ts);
-      if (dur < 3600000) { // skip sessions > 1h (likely abandoned)
+      if (dur < 7200000) { // skip sessions > 2h (likely abandoned)
         totalDuration += dur;
         countedSessions++;
       }
+    } else {
+      // Single-event sessions count as ~30s (one heartbeat interval)
+      totalDuration += 30000;
+      countedSessions++;
     }
   }
   const avgSessionDurationSec = countedSessions > 0 ? Math.round(totalDuration / countedSessions / 1000) : 0;
+
+  // ═══════════════════════════════════════
+  // ── Bounce rate: sessions with only 1 pageview and no custom events ──
+  // ═══════════════════════════════════════
+  const sessionPageviewCount: Record<string, number> = {};
+  const sessionEventCount: Record<string, number> = {};
+  pageviews.forEach((e: any) => {
+    sessionPageviewCount[e.session_id] = (sessionPageviewCount[e.session_id] || 0) + 1;
+  });
+  customEvents.forEach((e: any) => {
+    sessionEventCount[e.session_id] = (sessionEventCount[e.session_id] || 0) + 1;
+  });
+  let bounced = 0;
+  const allSessionIds = new Set([...Object.keys(sessionPageviewCount), ...Object.keys(sessionEventCount)]);
+  for (const sid of allSessionIds) {
+    if ((sessionPageviewCount[sid] || 0) <= 1 && (sessionEventCount[sid] || 0) === 0) {
+      bounced++;
+    }
+  }
+  const bounceRate = allSessionIds.size > 0 ? Math.round((bounced / allSessionIds.size) * 100) : 0;
 
   const result = {
     period: { days, since },
@@ -329,6 +379,7 @@ Deno.serve(async (req) => {
       totalEvents: customEvents.length,
       uniqueSessions: sessions.size,
       avgSessionDurationSec,
+      bounceRate,
     },
     topPages,
     topEvents,
@@ -369,7 +420,6 @@ Deno.serve(async (req) => {
     sevenWhys: {
       starts: sevenWhysStarts,
     },
-    // NEW sections
     perChurch,
     utmSources: topUtmSources,
     utmMediums: topUtmMediums,

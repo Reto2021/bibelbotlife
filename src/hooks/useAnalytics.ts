@@ -75,6 +75,9 @@ export const getStoredReferralCode = (): string | null => {
   }
 };
 
+/** Heartbeat interval in ms – sends a ping every 30s while page is visible */
+const HEARTBEAT_INTERVAL_MS = 30_000;
+
 export const useAnalytics = () => {
   const location = useLocation();
   const sessionId = useRef(getSessionId());
@@ -128,6 +131,30 @@ export const useAnalytics = () => {
         utm_medium,
       })
       .then(() => {});
+  }, [location.pathname]);
+
+  // ── Heartbeat: sends a lightweight event every 30s while tab is visible ──
+  useEffect(() => {
+    const sendHeartbeat = () => {
+      if (document.hidden) return; // skip when tab is backgrounded
+      (supabase.from("analytics_events") as any)
+        .insert({
+          session_id: sessionId.current,
+          event_type: "event",
+          event_name: "heartbeat",
+          page_path: location.pathname,
+          referrer: null,
+          user_agent: null,
+          screen_width: null,
+          church_slug: getChurchSlug(),
+          utm_source: null,
+          utm_medium: null,
+        })
+        .then(() => {});
+    };
+
+    const interval = setInterval(sendHeartbeat, HEARTBEAT_INTERVAL_MS);
+    return () => clearInterval(interval);
   }, [location.pathname]);
 
   return { track };
