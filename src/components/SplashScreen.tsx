@@ -142,7 +142,7 @@ export function SplashScreen({ onComplete }: { onComplete: () => void }) {
                 initial={{ width: "0%" }}
                 animate={{ width: "100%" }}
                 transition={{
-                  duration: patron ? 5.0 : 2.8,
+                  duration: patron ? 6.5 : 4.5,
                   ease: "easeInOut",
                 }}
               />
