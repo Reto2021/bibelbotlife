@@ -140,7 +140,7 @@ function getChurchContext(date: Date): string {
   if (diff === 49) return "Pfingstsonntag – Ausgiessung des Heiligen Geistes";
   if (diff === 50) return "Pfingstmontag";
   if (diff === 60) return "Fronleichnam";
-  if (diff >= 2 && diff < 39) return "Osterzeit – Freude über die Auferstehung";
+  if (diff >= 2 && diff < 39) return "Nachösterliche Zeit – wähle ein alltagsnahes Thema (NICHT Ostern/Auferstehung, sondern z.B. Mut, Dankbarkeit, Vergebung, Identität, Berufung)";
   if (diff >= 40 && diff < 49) return "Zeit zwischen Auffahrt und Pfingsten";
 
   // Sunday
