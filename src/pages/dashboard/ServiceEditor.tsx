@@ -493,12 +493,12 @@ export default function ServiceEditor() {
         <DialogContent className="max-w-lg">
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2">
-              💬 BibleBot fragen
+              💬 Begleiter fragen
             </DialogTitle>
           </DialogHeader>
           <div className="space-y-4">
             <p className="text-sm text-muted-foreground">
-              Kopiere diese Anfrage in den BibleBot-Chat:
+              Kopiere diese Anfrage in den Chat:
             </p>
             <div className="bg-muted rounded-lg p-4 text-sm">
               {bibleBotContext}
@@ -521,7 +521,7 @@ export default function ServiceEditor() {
                   setBibleBotOpen(false);
                 }}
               >
-                BibleBot öffnen
+                Chat öffnen
               </Button>
             </div>
           </div>
