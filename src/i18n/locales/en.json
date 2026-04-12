@@ -579,6 +579,46 @@
       "title": "Understand a Verse",
       "desc": "Get a Bible passage explained",
       "prompt": "I'd like to understand a Bible passage better. Can you help me put it in context?"
+    },
+    "quoteofday": {
+      "title": "Quote of the Day",
+      "desc": "An inspiring quote to reflect on",
+      "prompt": "Give me an inspiring Bible quote for today with a brief explanation",
+      "prompt_v1": "Which Bible quote fits especially well for today?",
+      "prompt_v2": "Give me an encouraging quote from the Psalms for today",
+      "prompt_v3": "Which biblical proverb gives me a new perspective today?"
+    },
+    "thankfulness": {
+      "title": "Gratitude Exercise",
+      "desc": "Discover what you can be grateful for",
+      "prompt": "Guide me through a short gratitude exercise. Help me find three things I can be grateful for today",
+      "prompt_v1": "Help me discover gratitude in my everyday life — even in the small things",
+      "prompt_v2": "I want to learn to be more grateful. Give me a practical exercise for that",
+      "prompt_v3": "What does the Bible say about gratitude and how can I practice it today?"
+    },
+    "biblesays": {
+      "title": "What does the Bible say about...",
+      "desc": "Find out what the Bible says about your topic",
+      "prompt": "I want to know what the Bible says about a specific topic. Ask me which topic interests me!",
+      "prompt_v1": "What does the Bible say about friendship?",
+      "prompt_v2": "What does the Bible say about handling money?",
+      "prompt_v3": "What does the Bible say about love and relationships?"
+    },
+    "morningstart": {
+      "title": "Good Morning!",
+      "desc": "Start your day on a positive note",
+      "prompt": "Wish me a good morning and give me an encouraging thought to start my day",
+      "prompt_v1": "Give me a short morning impulse with a fitting Bible verse",
+      "prompt_v2": "How can I start my day mindfully and positively today?",
+      "prompt_v3": "Give me an encouraging morning greeting with a thought from the Bible"
+    },
+    "inspiration": {
+      "title": "Inspire Me",
+      "desc": "Be surprised and inspired",
+      "prompt": "Surprise me with something inspiring — it could be a thought, a story, or an insight from the Bible",
+      "prompt_v1": "Tell me an inspiring story from the Bible that is relevant today",
+      "prompt_v2": "Give me an unexpected, inspiring thought",
+      "prompt_v3": "Which biblical personality can inspire me today and why?"
     }
   },
   "lifeWheel": {

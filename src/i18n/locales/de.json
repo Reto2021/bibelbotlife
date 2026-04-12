@@ -619,6 +619,46 @@
       "title": "Vers verstehen",
       "desc": "Eine Bibelstelle erklärt bekommen",
       "prompt": "Ich möchte eine Bibelstelle besser verstehen. Kannst du mir helfen, sie im Kontext einzuordnen?"
+    },
+    "quoteofday": {
+      "title": "Zitat des Tages",
+      "desc": "Ein inspirierendes Zitat zum Nachdenken",
+      "prompt": "Gib mir ein inspirierendes Zitat aus der Bibel für heute mit einer kurzen Erklärung",
+      "prompt_v1": "Welches Bibelzitat passt besonders gut zu diesem Tag?",
+      "prompt_v2": "Gib mir ein ermutigendes Zitat aus den Psalmen für heute",
+      "prompt_v3": "Welches Sprichwort aus der Bibel schenkt mir heute neue Perspektive?"
+    },
+    "thankfulness": {
+      "title": "Dankbarkeitsübung",
+      "desc": "Entdecke, wofür du dankbar sein kannst",
+      "prompt": "Leite mich durch eine kurze Dankbarkeitsübung. Hilf mir, drei Dinge zu finden, für die ich heute dankbar bin",
+      "prompt_v1": "Hilf mir, Dankbarkeit in meinem Alltag zu entdecken — auch in den kleinen Dingen",
+      "prompt_v2": "Ich möchte lernen, dankbarer zu sein. Gib mir eine praktische Übung dazu",
+      "prompt_v3": "Was sagt die Bibel über Dankbarkeit und wie kann ich das heute umsetzen?"
+    },
+    "biblesays": {
+      "title": "Was sagt die Bibel zu...",
+      "desc": "Finde heraus, was die Bibel zu deinem Thema sagt",
+      "prompt": "Ich möchte wissen, was die Bibel zu einem bestimmten Thema sagt. Frag mich, welches Thema mich interessiert!",
+      "prompt_v1": "Was sagt die Bibel zum Thema Freundschaft?",
+      "prompt_v2": "Was sagt die Bibel über den Umgang mit Geld?",
+      "prompt_v3": "Was sagt die Bibel zum Thema Liebe und Beziehungen?"
+    },
+    "morningstart": {
+      "title": "Guter Morgen!",
+      "desc": "Starte positiv in den Tag",
+      "prompt": "Wünsche mir einen guten Morgen und gib mir einen ermutigenden Gedanken für den Start in den Tag",
+      "prompt_v1": "Gib mir einen kurzen Morgenimpuls mit einem passenden Bibelvers",
+      "prompt_v2": "Wie kann ich meinen Tag heute bewusst und positiv beginnen?",
+      "prompt_v3": "Schenke mir einen ermutigenden Morgengruss mit einem Gedanken aus der Bibel"
+    },
+    "inspiration": {
+      "title": "Inspiriere mich",
+      "desc": "Lass dich überraschen und inspirieren",
+      "prompt": "Überrasche mich mit etwas Inspirierendem — das kann ein Gedanke, eine Geschichte oder eine Einsicht aus der Bibel sein",
+      "prompt_v1": "Erzähl mir eine inspirierende Geschichte aus der Bibel, die heute relevant ist",
+      "prompt_v2": "Gib mir einen unerwarteten, inspirierenden Gedankenanstoss",
+      "prompt_v3": "Welche biblische Persönlichkeit kann mich heute inspirieren und warum?"
     }
   },
   "lifeWheel": {
