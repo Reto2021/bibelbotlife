@@ -769,6 +769,17 @@ export function ChatHero() {
     return () => window.removeEventListener(CHAT_OPEN_EVENT, handler);
   }, [sendMessage, startNewChat]);
 
+  // Listen for chat reset (logo click)
+  useEffect(() => {
+    const handler = () => {
+      setChatMode("normal");
+      startNewChat();
+      inputRef.current?.focus();
+    };
+    window.addEventListener(CHAT_RESET_EVENT, handler);
+    return () => window.removeEventListener(CHAT_RESET_EVENT, handler);
+  }, [startNewChat]);
+
   const handleChipClick = (chip: TopicChip) => {
     track("chip_click", { chip: chip.key });
     if (chip.special === "lifewheel") {
