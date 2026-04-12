@@ -259,7 +259,7 @@
   "footer": {
     "tagline": "Onye enyi gị nkeonwe maka ndụ na Akwụkwọ Nsọ",
     "disclaimer": "BibleBot.Life bụ ngwaọrụ dijitalụ ma anaghị anọchi ndụmọdụ ọkachamara, ndụmọdụ nkà mmụta okpukpe ma ọ bụ ọgwụgwọ uche. N'ihe gbasara nsogbu siri ike, BibleBot gị na-ezo aka mgbe niile na ebe enyemaka ruru eru.",
-    "impressum": "Impressum",
+    "impressum": "Ozi iwu",
     "notes": "Ihe ndetu",
     "private": "Ọrụ nkeonwe, na-abụghị nke azụmahịa",
     "noChat": "Enweghị nchekwa data mkparịta ụka",
@@ -310,7 +310,8 @@
     "errorNoStream": "Enweghị iyi",
     "seniorMode": "Ụdị agadi (nnukwu mkpụrụedemede)",
     "loginHint": "Banye iji dobe mkparịta ụka n'ofe ngwaọrụ niile",
-    "previousChats": "Mkparịta ụka {{count}} gara aga"
+    "previousChats": "Mkparịta ụka {{count}} gara aga",
+    "suggestionsLoading": "Na-ebu aro…"
   },
   "install": {
     "title": "Wụnye BibleBot",
@@ -345,7 +346,7 @@
   },
   "impressum": {
     "back": "Laghachi na ibe ụlọ",
-    "title": "Impressum"
+    "title": "Ozi iwu"
   },
   "datenschutz": {
     "back": "Laghachi na ibe ụlọ",
@@ -756,7 +757,13 @@
         "psychiatry": "Ụlọ ọgwụ uche",
         "burnoutClinic": "Ụlọ ọgwụ ike gwụrụ",
         "hospice": "Hospis",
-        "counseling": "Ebe ndụmọdụ"
+        "counseling": "Ebe ndụmọdụ",
+        "reformed": "Nzukọ Reformed",
+        "catholic": "Nzukọ Katọlik",
+        "lutheran": "Nzukọ Lutheran",
+        "evangelical": "Nzukọ Uka Ehere / Evangelical",
+        "freelance": "Ehere / Onwe",
+        "other": "Ọzọ"
       }
     },
     "institutionsTitle": "Maka ụlọ ọrụ",
@@ -803,7 +810,31 @@
         "desc": "Mkpali ime mmụọ mgbakwunye maka ndị ahịa na ndụmọdụ."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible.",
+    "denominationsTitle": "Maka nzuko uka niile na ndi na-achi emume",
+    "denominationsSubtitle": "BibleBot.Life bụ ecumenical – maka nzukọ Reformed, Catholic, Lutheran, na Free Church, yana ndi na-achi emume.",
+    "denomination": {
+      "reformed": {
+        "title": "Nzukọ Reformed",
+        "desc": "Bible Zürich, liturgy Reformed na nkwado nkuzi – emebere maka nzukọ gị."
+      },
+      "catholic": {
+        "title": "Nzukọ Katọlik",
+        "desc": "Ntụgharị ecumenical, nhazi Mísà na Sacramenti – dabere na omenala Katọlik."
+      },
+      "lutheran": {
+        "title": "Nzukọ Lutheran",
+        "desc": "Bible Luther, nhazi ofufe na nlekọta pastoral – maka nzukọ Evangelical-Lutheran."
+      },
+      "evangelical": {
+        "title": "Nzukọ Uka Ehere",
+        "desc": "Schlachter 2000, otuto na nhazi ofufe dị mfe – maka nzukọ evangelical ehere."
+      },
+      "freelance": {
+        "title": "Ndi Na-achi Emume Ehere",
+        "desc": "Ndi na-ekwu okwu n'olili ozu, ndi na-achi emume agbamakwukwo na ndi na-achi emume – na ngwa akụkọ ndụ na nhazi okwu."
+      }
+    }
   },
   "institutions": {
     "badge": "Maka ụlọ ọrụ",

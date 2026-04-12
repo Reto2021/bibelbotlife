@@ -310,7 +310,8 @@
     "errorNoStream": "Nincs stream",
     "seniorMode": "Szenior mód (nagyobb betűméret)",
     "loginHint": "Jelentkezz be, hogy beszélgetéseid minden eszközön megmaradjanak",
-    "previousChats": "{{count}} korábbi beszélgetés"
+    "previousChats": "{{count}} korábbi beszélgetés",
+    "suggestionsLoading": "Javaslatok betöltése…"
   },
   "install": {
     "title": "BibleBot telepítése",
@@ -756,7 +757,13 @@
         "psychiatry": "Pszichiátria",
         "burnoutClinic": "Kiégés-klinika",
         "hospice": "Hospice",
-        "counseling": "Tanácsadó központ"
+        "counseling": "Tanácsadó központ",
+        "reformed": "Református egyház",
+        "catholic": "Katolikus egyház",
+        "lutheran": "Evangélikus egyház",
+        "evangelical": "Szabad egyház / Evangéliumi",
+        "freelance": "Független",
+        "other": "Egyéb"
       }
     },
     "institutionsTitle": "Intézményeknek is",
@@ -803,7 +810,31 @@
         "desc": "Kiegészítő lelki impulzusok pszichoszociális tanácsadás ügyfelei számára."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible.",
+    "denominationsTitle": "Minden felekezet és szertartásvezető számára",
+    "denominationsSubtitle": "A BibleBot.Life ökumenikus – református, katolikus, evangélikus és szabad egyházi közösségek, valamint független szertartásvezetők számára.",
+    "denomination": {
+      "reformed": {
+        "title": "Református egyház",
+        "desc": "Zürichi Biblia, református liturgia és prédikáció-támogatás – az Ön gyülekezetére szabva."
+      },
+      "catholic": {
+        "title": "Katolikus egyház",
+        "desc": "Ökumenikus fordítás, mise-tervezés és szentségek – a katolikus hagyományoknak megfelelően."
+      },
+      "lutheran": {
+        "title": "Evangélikus egyház",
+        "desc": "Luther-Biblia, istentisztelet-tervezés és lelkigondozás – evangélikus-lutheránus gyülekezetek számára."
+      },
+      "evangelical": {
+        "title": "Szabad egyházak",
+        "desc": "Schlachter 2000, dicsőítés és rugalmas istentisztelet-tervezés – szabad egyházi közösségek számára."
+      },
+      "freelance": {
+        "title": "Független szertartásvezetők",
+        "desc": "Temetési szónokok, esküvői celebránsok és független ceremóniamesterek – biográfiai eszközökkel és beszédtervezéssel."
+      }
+    }
   },
   "institutions": {
     "badge": "Szervezeteknek",

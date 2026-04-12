@@ -251,7 +251,7 @@
     "noTax": "Dary nejsou daňově odečitatelné",
     "datenschutz": "Ochrana osobních údajů",
     "love": "S ❤️ pro všechny, kteří se ptají, co si myslí Kristus.",
-    "forChurches": "For Churches"
+    "forChurches": "Pro církve"
   },
   "chat": {
     "welcome": "Vítej! 🤗\n\nJsem tvůj BibleBot – osobní společník s Biblí, dobrými otázkami a konkrétními impulzy. Bez nátlaku, bez posuzování.\n\nMůžeš se mě zeptat na cokoli – nebo mi prostě říct, co tě právě trápí. 💛",
@@ -295,7 +295,8 @@
     "teaserCta": "Psát nyní →",
     "namePlaceholder": "např. Eli, Miriam…",
     "loginHint": "Přihlaste se, abyste si uchovali konverzace napříč zařízeními",
-    "previousChats": "{{count}} předchozích konverzací"
+    "previousChats": "{{count}} předchozích konverzací",
+    "suggestionsLoading": "Načítání návrhů…"
   },
   "install": {
     "title": "Nainstalovat BibleBot",
@@ -759,7 +760,13 @@
         "psychiatry": "Psychiatrie",
         "burnoutClinic": "Klinika pro vyhoření",
         "hospice": "Hospic",
-        "counseling": "Poradna"
+        "counseling": "Poradna",
+        "reformed": "Reformovaná církev",
+        "catholic": "Katolická církev",
+        "lutheran": "Luteránská církev",
+        "evangelical": "Svobodná církev / Evangelická",
+        "freelance": "Nezávislý",
+        "other": "Jiné"
       }
     },
     "institutionsTitle": "Also for Institutions",
@@ -806,7 +813,31 @@
         "desc": "Doplňkové duchovní impulzy pro klienty v psychosociálním poradenství."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible.",
+    "denominationsTitle": "Pro všechna vyznání a celebranty",
+    "denominationsSubtitle": "BibleBot.Life je ekumenický – pro reformované, katolické, luteránské a volné evangelické komunity, jakož i nezávislé celebranty.",
+    "denomination": {
+      "reformed": {
+        "title": "Reformovaná církev",
+        "desc": "Curyšská bible, reformovaná liturgie a podpora kázání – přizpůsobené vaší farnosti."
+      },
+      "catholic": {
+        "title": "Katolická církev",
+        "desc": "Ekumenický překlad, plánování mší a svátosti – v souladu s katolickými tradicemi."
+      },
+      "lutheran": {
+        "title": "Luteránská církev",
+        "desc": "Lutherova bible, plánování bohoslužeb a pastorační péče – pro evangelicko-luteránské sbory."
+      },
+      "evangelical": {
+        "title": "Svobodné církve",
+        "desc": "Schlachter 2000, chvály a flexibilní design bohoslužeb – pro volné evangelické komunity."
+      },
+      "freelance": {
+        "title": "Nezávislí celebranti",
+        "desc": "Řečníci na pohřbech, svatební celebranti a nezávislí ceremoniáři – s biografickými nástroji a plánováním proslovů."
+      }
+    }
   },
   "institutions": {
     "badge": "Pro organizace",

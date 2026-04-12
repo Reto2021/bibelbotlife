@@ -310,7 +310,8 @@
     "errorNoStream": "Առանց հոսքի",
     "seniorMode": "Տարեցների ռեժիմ (ավելի մեծ տառատեսակ)",
     "loginHint": "Մուտք գործեք՝ զրույցները բոլոր սարքերում պահպանելու համար",
-    "previousChats": "{{count}} նախորդ զրույցներ"
+    "previousChats": "{{count}} նախորդ զրույցներ",
+    "suggestionsLoading": "Առաjarkyunnery barrntsom…"
   },
   "install": {
     "title": "Տեղադրել BibleBot-ը",
@@ -795,7 +796,13 @@
         "psychiatry": "Psychiatry",
         "burnoutClinic": "Burnout Clinic",
         "hospice": "Hospice",
-        "counseling": "Counseling Center"
+        "counseling": "Counseling Center",
+        "reformed": "Barepokhakan Yekeghetsi",
+        "catholic": "Katogike Yekeghetsi",
+        "lutheran": "Lutherakan Yekeghetsi",
+        "evangelical": "Azat Yekeghetsi / Avetaranakan",
+        "freelance": "Ankakh",
+        "other": "Ayl"
       }
     },
     "institutionsTitle": "Նաև հաստատությունների համար",
@@ -842,7 +849,31 @@
         "desc": "Complementary spiritual impulses for counseling clients."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible.",
+    "denominationsTitle": "Bolor havatabanunery ev arehoghapetunery hamar",
+    "denominationsSubtitle": "BibleBot.Life-ey ekumenik e – Reformed, Catholic, Lutheran, Azat Yekeghetsineriy ev ankakh arehoghapahnery hamar.",
+    "denomination": {
+      "reformed": {
+        "title": "Barepokhakan Yekeghetsi",
+        "desc": "Tsyurikhi Astvatsashunh, barepokhakan tsisakarg ev kharozakhanut'yan ajaktsut'yun."
+      },
+      "catholic": {
+        "title": "Katogike Yekeghetsi",
+        "desc": "Ekumenik t'argmanut'yun, Patarag planavorum ev Khordurnery."
+      },
+      "lutheran": {
+        "title": "Lutherakan Yekeghetsi",
+        "desc": "Luther Astvatsashunh, astevaspasman planavorum ev hovvut'yun."
+      },
+      "evangelical": {
+        "title": "Azat Yekeghetsiner",
+        "desc": "Schlachter 2000, govut'yun ev chanton astevaspasman dizayn."
+      },
+      "freelance": {
+        "title": "Ankakh tsisakan mshaker",
+        "desc": "T'aghman khosnaker, harsaknakan celebranty ev ankakh tsisakan mshaker."
+      }
+    }
   },
   "institutions": {
     "badge": "Կազdays համար",

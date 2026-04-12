@@ -310,7 +310,8 @@
     "errorNoStream": "Akukho ukusakazwa",
     "seniorMode": "Imodi Yomdala (ifonti enkulu)",
     "loginHint": "Ngena ngemvume ukuze ugcine izingxoxo kuwo wonke amadivayisi",
-    "previousChats": "Izingxoxo ezingaphambili ezingama-{{count}}"
+    "previousChats": "Izingxoxo ezingaphambili ezingama-{{count}}",
+    "suggestionsLoading": "Ilayisha iziphakamiso…"
   },
   "install": {
     "title": "Faka iBibleBot",
@@ -794,7 +795,13 @@
         "psychiatry": "Ezengqondo",
         "burnoutClinic": "Iklinikhi yokukhathala",
         "hospice": "Ihospisi",
-        "counseling": "Isikhungo sokweluleka"
+        "counseling": "Isikhungo sokweluleka",
+        "reformed": "ISonto le-Reformed",
+        "catholic": "ISonto lamaKatolika",
+        "lutheran": "ISonto lama-Lutheran",
+        "evangelical": "ISonto Elikhululekile / Evangelical",
+        "freelance": "Ozimele / Ongcono",
+        "other": "Okunye"
       }
     },
     "institutionsTitle": "Okwezikhungo futhi",
@@ -841,7 +848,31 @@
         "desc": "Imiphumela yoComoya eyengeziwe yabantu abasebenzisana nokwelulekwa kwezengqondo."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible.",
+    "denominationsTitle": "Kuzo zonke izinkolo nabahleli bemicimbi",
+    "denominationsSubtitle": "I-BibleBot.Life i-ecumenical – yemiphakathi ye-Reformed, Catholic, Lutheran, ne-Free Church, kanye nabahleli bemicimbi abazimele.",
+    "denomination": {
+      "reformed": {
+        "title": "ISonto le-Reformed",
+        "desc": "IBhayibheli lase-Zürich, i-liturgy ye-Reformed nokusekelwa kwentshumayelo – kwenzelwe ibandla lakho."
+      },
+      "catholic": {
+        "title": "ISonto lamaKatolika",
+        "desc": "Ukuhumusha oku-ecumenical, ukuhlela kweMisa namasakramente – ngokuhambelana namasiko amaKatolika."
+      },
+      "lutheran": {
+        "title": "ISonto lama-Lutheran",
+        "desc": "IBhayibheli likaLuther, ukuhlela kwenkonzo nokunakekelwa kwemiphefumulo – yemiphakathi ye-Evangelical-Lutheran."
+      },
+      "evangelical": {
+        "title": "AmaSonto Akhululekile",
+        "desc": "Schlachter 2000, ukudumisa nokuhlela kwenkonzo okugobhozayo – yemiphakathi ye-evangelical ekhululekile."
+      },
+      "freelance": {
+        "title": "Abahleli Bemicimbi Abazimele",
+        "desc": "Izikhulumi zemingcwabo, abahleli bemishado nabahleli bemicimbi abazimele – ngamathuluzi embali yempilo nokuhlela izinkulumo."
+      }
+    }
   },
   "institutions": {
     "badge": "Kwezinhlangano",

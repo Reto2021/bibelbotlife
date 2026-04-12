@@ -266,7 +266,7 @@
     "noTax": "Spenden sind nicht steuerabzugsfähig",
     "datenschutz": "Datenschutz",
     "love": "Mit ❤️ für alle, die sich fragen, was Christus denkt.",
-    "forChurches": "Für Gemeinden"
+    "forChurches": "For Kirker"
   },
   "chat": {
     "welcome": "Schön, dass du da bist 🤗\n\nIch bin dein BibleBot – dein persönlicher Begleiter mit der Bibel, guten Fragen und konkreten Impulsen. Kein Druck, keine Bewertung.\n\nDu kannst mich alles fragen – oder einfach erzählen, was dich gerade beschäftigt. 💛",
@@ -310,7 +310,8 @@
     "errorNoStream": "Kein Stream",
     "seniorMode": "Senioren-Modus (grössere Schrift)",
     "loginHint": "Log ind for at bevare samtaler på tværs af enheder",
-    "previousChats": "{{count}} tidligere samtaler"
+    "previousChats": "{{count}} tidligere samtaler",
+    "suggestionsLoading": "Indlæser forslag…"
   },
   "install": {
     "title": "BibleBot installieren",
@@ -756,7 +757,13 @@
         "psychiatry": "Psykiatri",
         "burnoutClinic": "Burnout-klinik",
         "hospice": "Hospice",
-        "counseling": "Rådgivningscenter"
+        "counseling": "Rådgivningscenter",
+        "reformed": "Reformert kirke",
+        "catholic": "Katolsk kirke",
+        "lutheran": "Luthersk kirke",
+        "evangelical": "Frikirke / Evangelisk",
+        "freelance": "Freelance / Uafhængig",
+        "other": "Andet"
       }
     },
     "institutionsTitle": "Auch für Institutionen",
@@ -803,7 +810,31 @@
         "desc": "Supplerende åndelige impulser for klienter i psykosocial rådgivning."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible.",
+    "denominationsTitle": "For alle trosretninger og ceremoniledere",
+    "denominationsSubtitle": "BibleBot.Life er økumenisk – for reformerte, katolske, lutherske og frikirkelige fællesskaber samt freelance ceremoniledere.",
+    "denomination": {
+      "reformed": {
+        "title": "Reformert kirke",
+        "desc": "Zürich-bibelen, reformert liturgi og prædikenstøtte – tilpasset jeres menighed."
+      },
+      "catholic": {
+        "title": "Katolsk kirke",
+        "desc": "Økumenisk oversættelse, messeplanlægning og sakramenter – i overensstemmelse med katolske traditioner."
+      },
+      "lutheran": {
+        "title": "Luthersk kirke",
+        "desc": "Luther-bibelen, gudstjenesteplanlægning og sjælesorg – for evangelisk-lutherske menigheder."
+      },
+      "evangelical": {
+        "title": "Frikirker",
+        "desc": "Schlachter 2000, lovprisning og fleksibelt gudstjenestedesign – for frikirkelige fællesskaber."
+      },
+      "freelance": {
+        "title": "Freelance ceremonimestre",
+        "desc": "Begravelsestalere, bryllupsceremoniledere og uafhængige officerer – med biografiske værktøjer og taleplanlægning."
+      }
+    }
   },
   "institutions": {
     "badge": "For organisationer",

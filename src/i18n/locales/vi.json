@@ -265,7 +265,7 @@
     "notes": "Ghi chú",
     "private": "Dự án cá nhân, phi lợi nhuận",
     "noChat": "Không lưu trữ dữ liệu trò chuyện",
-    "noTax": "Spenden sind nicht steuerabzugsfähig",
+    "noTax": "Quyên góp không được khấu trừ thuế",
     "datenschutz": "Chính sách bảo mật",
     "love": "Với ❤️ cho tất cả những ai tự hỏi Chúa Kitô nghĩ gì.",
     "forChurches": "Dành cho các Hội thánh"
@@ -312,7 +312,8 @@
     "errorNoStream": "Không có luồng",
     "seniorMode": "Chế độ người cao tuổi (phông chữ lớn hơn)",
     "loginHint": "Đăng nhập để giữ các cuộc trò chuyện trên tất cả các thiết bị",
-    "previousChats": "{{count}} cuộc trò chuyện trước"
+    "previousChats": "{{count}} cuộc trò chuyện trước",
+    "suggestionsLoading": "Đang tải gợi ý…"
   },
   "install": {
     "title": "Cài đặt BibleBot",
@@ -796,7 +797,13 @@
         "psychiatry": "Tâm thần học",
         "burnoutClinic": "Phòng khám kiệt sức",
         "hospice": "Nhà chăm sóc cuối đời",
-        "counseling": "Trung tâm tư vấn"
+        "counseling": "Trung tâm tư vấn",
+        "reformed": "Hội thánh Cải cách",
+        "catholic": "Hội thánh Công giáo",
+        "lutheran": "Hội thánh Luther",
+        "evangelical": "Hội thánh tự do / Tin lành",
+        "freelance": "Tự do / Độc lập",
+        "other": "Khác"
       }
     },
     "institutionsTitle": "Cũng dành cho các tổ chức",
@@ -843,7 +850,31 @@
         "desc": "Xung lực tâm linh bổ sung cho khách hàng tư vấn tâm lý xã hội."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible.",
+    "denominationsTitle": "Cho mọi giáo phái và người dẫn lễ",
+    "denominationsSubtitle": "BibleBot.Life là đại kết – dành cho các cộng đồng Cải cách, Công giáo, Luther và Tin lành tự do, cũng như người dẫn lễ tự do.",
+    "denomination": {
+      "reformed": {
+        "title": "Hội thánh Cải cách",
+        "desc": "Kinh Thánh Zürich, phụng vụ Cải cách và hỗ trợ giảng đạo – phù hợp với giáo xứ của bạn."
+      },
+      "catholic": {
+        "title": "Hội thánh Công giáo",
+        "desc": "Bản dịch Đại kết, kế hoạch Thánh lễ và Bí tích – phù hợp với truyền thống Công giáo."
+      },
+      "lutheran": {
+        "title": "Hội thánh Luther",
+        "desc": "Kinh Thánh Luther, kế hoạch thờ phượng và chăm sóc mục vụ – dành cho các cộng đồng Tin Lành-Luther."
+      },
+      "evangelical": {
+        "title": "Hội thánh tự do",
+        "desc": "Schlachter 2000, thờ phượng và thiết kế linh hoạt – dành cho các cộng đồng Tin lành tự do."
+      },
+      "freelance": {
+        "title": "Người dẫn lễ tự do",
+        "desc": "Diễn giả tang lễ, người dẫn lễ cưới và người chủ trì lễ độc lập – với công cụ tiểu sử và lập kế hoạch bài phát biểu."
+      }
+    }
   },
   "institutions": {
     "badge": "Cho tổ chức",

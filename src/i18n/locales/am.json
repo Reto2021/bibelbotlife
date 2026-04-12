@@ -310,7 +310,8 @@
     "errorNoStream": "ምንም ዥረት",
     "seniorMode": "የአዛውንት ሁነታ (ትልቅ ጽሑፍ)",
     "loginHint": "በሁሉም መሳሪያዎች ላይ ውይይቶችን ለማስቀመጥ ይግቡ",
-    "previousChats": "{{count}} ቀደም ሲል የተደረጉ ውይይቶች"
+    "previousChats": "{{count}} ቀደም ሲል የተደረጉ ውይይቶች",
+    "suggestionsLoading": "ጥቆማዎችን በመጫን ላይ…"
   },
   "install": {
     "title": "BibleBot ጫን",
@@ -794,7 +795,13 @@
         "psychiatry": "የአእምሮ ህክምና",
         "burnoutClinic": "የድካም ክሊኒክ",
         "hospice": "ሆስፒስ",
-        "counseling": "የምክር ማዕከል"
+        "counseling": "የምክር ማዕከል",
+        "reformed": "የተሃድሶ ቤተ ክርስቲያን",
+        "catholic": "ካቶሊክ ቤተ ክርስቲያን",
+        "lutheran": "ሉተራን ቤተ ክርስቲያን",
+        "evangelical": "ነጻ ቤተ ክርስቲያን / ወንጌላዊ",
+        "freelance": "ነጻ / ገለልተኛ",
+        "other": "ሌላ"
       }
     },
     "institutionsTitle": "ለተቋማትም",
@@ -841,7 +848,31 @@
         "desc": "ለስነ-ልቦና ማህበራዊ ምክር ተጨማሪ መንፈሳዊ ግፊቶች።"
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible.",
+    "denominationsTitle": "ለሁሉም ሃይማኖቶች እና ሥርዓተ ግብር መሪዎች",
+    "denominationsSubtitle": "BibleBot.Life ኢኩመኒካዊ ነው – ለተሃድሶ፣ ካቶሊክ፣ ሉተራን እና ነጻ ወንጌላዊ ማኅበረሰቦች፣ እንዲሁም ነጻ ሥርዓተ ግብር መሪዎች።",
+    "denomination": {
+      "reformed": {
+        "title": "የተሃድሶ ቤተ ክርስቲያን",
+        "desc": "የዙሪክ መጽሐፍ ቅዱስ፣ የተሃድሶ ሥርዓተ ቅዳሴ እና የስብከት ድጋፍ – ለደብርዎ የተስማማ።"
+      },
+      "catholic": {
+        "title": "ካቶሊክ ቤተ ክርስቲያን",
+        "desc": "ኢኩመኒካዊ ትርጉም፣ የቅዳሴ እቅድ እና ምስጢራት – ከካቶሊክ ወጎች ጋር የሚጣጣም።"
+      },
+      "lutheran": {
+        "title": "ሉተራን ቤተ ክርስቲያን",
+        "desc": "የሉተር መጽሐፍ ቅዱስ፣ የአምልኮ እቅድ እና ነፍስ ክንክን – ለወንጌላዊ-ሉተራን ማኅበረሰቦች።"
+      },
+      "evangelical": {
+        "title": "ነጻ ቤተ ክርስቲያኖች",
+        "desc": "Schlachter 2000፣ ምስጋና እና ተለዋዋጭ የአምልኮ ንድፍ – ለነጻ ወንጌላዊ ማኅበረሰቦች።"
+      },
+      "freelance": {
+        "title": "ነጻ ሥርዓተ ግብር መሪዎች",
+        "desc": "የቀብር ተናጋሪዎች፣ የሰርግ ሥርዓት መሪዎች እና ገለልተኛ ሥርዓተ ግብር መሪዎች – ከሕይወት ታሪክ መሣሪያዎች እና ንግግር ማቀድ ጋር።"
+      }
+    }
   },
   "institutions": {
     "badge": "ለድርጅቶች",

@@ -266,7 +266,7 @@
     "noTax": "Donațiile nu sunt deductibile fiscal",
     "datenschutz": "Politica de confidențialitate",
     "love": "Cu ❤️ pentru toți cei care se întreabă ce gândește Hristos.",
-    "forChurches": "For Churches"
+    "forChurches": "Pentru Biserici"
   },
   "chat": {
     "welcome": "Bun venit! 🤗\n\nSunt BibleBot-ul tău – companionul tău personal cu Biblia, întrebări bune și impulsuri reale. Fără presiune, fără judecată.\n\nPoți să mă întrebi orice – sau pur și simplu să împărtășești ce te preocupă. 💛",
@@ -310,7 +310,8 @@
     "teaserCta": "Start writing →",
     "namePlaceholder": "e.g. Eli, Miriam…",
     "loginHint": "Conectează-te pentru a păstra conversațiile pe toate dispozitivele",
-    "previousChats": "{{count}} conversații anterioare"
+    "previousChats": "{{count}} conversații anterioare",
+    "suggestionsLoading": "Se încarcă sugestiile…"
   },
   "install": {
     "title": "Instalează BibleBot",
@@ -794,7 +795,13 @@
         "psychiatry": "Psihiatrie",
         "burnoutClinic": "Clinică de burnout",
         "hospice": "Hospice",
-        "counseling": "Centru de consiliere"
+        "counseling": "Centru de consiliere",
+        "reformed": "Biserica reformată",
+        "catholic": "Biserica catolică",
+        "lutheran": "Biserica luterană",
+        "evangelical": "Biserică liberă / Evanghelică",
+        "freelance": "Independent",
+        "other": "Altele"
       }
     },
     "institutionsTitle": "Also for Institutions",
@@ -841,7 +848,31 @@
         "desc": "Impulsuri spirituale complementare pentru clienții din consilierea psihosocială."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible.",
+    "denominationsTitle": "Pentru toate confesiunile și celebranții",
+    "denominationsSubtitle": "BibleBot.Life este ecumenic – pentru comunități reformate, catolice, luterane și evanghelice libere, precum și celebranți independenți.",
+    "denomination": {
+      "reformed": {
+        "title": "Biserica reformată",
+        "desc": "Biblia de la Zürich, liturgie reformată și sprijin pentru predici – adaptate parohiei dumneavoastră."
+      },
+      "catholic": {
+        "title": "Biserica catolică",
+        "desc": "Traducere ecumenică, planificarea slujbelor și sacramente – în conformitate cu tradițiile catolice."
+      },
+      "lutheran": {
+        "title": "Biserica luterană",
+        "desc": "Biblia lui Luther, planificarea slujbelor și pastoral – pentru comunitățile evanghelico-luterane."
+      },
+      "evangelical": {
+        "title": "Biserici libere",
+        "desc": "Schlachter 2000, laudă și design flexibil al slujbelor – pentru comunitățile evanghelice libere."
+      },
+      "freelance": {
+        "title": "Celebranți independenți",
+        "desc": "Vorbitori funebri, celebranți de nuntă și oficianți independenți – cu instrumente biografice și planificare de discursuri."
+      }
+    }
   },
   "institutions": {
     "badge": "Pentru organizații",

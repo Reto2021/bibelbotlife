@@ -310,7 +310,8 @@
     "errorNoStream": "스트림 없음",
     "seniorMode": "시니어 모드 (큰 글꼴)",
     "loginHint": "모든 기기에서 대화를 유지하려면 로그인하세요",
-    "previousChats": "이전 대화 {{count}}개"
+    "previousChats": "이전 대화 {{count}}개",
+    "suggestionsLoading": "제안 로딩 중…"
   },
   "install": {
     "title": "BibleBot 설치",
@@ -756,7 +757,13 @@
         "psychiatry": "정신과",
         "burnoutClinic": "번아웃 클리닉",
         "hospice": "호스피스",
-        "counseling": "상담센터"
+        "counseling": "상담센터",
+        "reformed": "개혁교회",
+        "catholic": "가톨릭 교회",
+        "lutheran": "루터교회",
+        "evangelical": "자유교회 / 복음주의",
+        "freelance": "프리랜서 / 독립",
+        "other": "기타"
       }
     },
     "institutionsTitle": "기관을 위해서도",
@@ -803,7 +810,31 @@
         "desc": "심리사회적 상담 고객을 위한 보완적 영적 자극."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible.",
+    "denominationsTitle": "모든 교파 및 예식 집전자를 위해",
+    "denominationsSubtitle": "BibleBot.Life는 에큐메니컬입니다 – 개혁교회, 가톨릭, 루터교, 자유교회 공동체 및 프리랜서 예식 집전자를 위한 것입니다.",
+    "denomination": {
+      "reformed": {
+        "title": "개혁교회",
+        "desc": "취리히 성경, 개혁교회 예배, 설교 지원 – 귀하의 교구에 맞춤."
+      },
+      "catholic": {
+        "title": "가톨릭 교회",
+        "desc": "에큐메니컬 번역, 미사 계획 및 성사 – 가톨릭 전통에 부합."
+      },
+      "lutheran": {
+        "title": "루터교회",
+        "desc": "루터 성경, 예배 계획 및 목회 – 복음주의 루터교 공동체를 위해."
+      },
+      "evangelical": {
+        "title": "자유교회",
+        "desc": "Schlachter 2000, 찬양 및 유연한 예배 설계 – 자유교회 공동체를 위해."
+      },
+      "freelance": {
+        "title": "프리랜서 집전자",
+        "desc": "장례 연사, 결혼식 집전자 및 독립 예식 집전자 – 전기 도구 및 연설 계획 포함."
+      }
+    }
   },
   "institutions": {
     "badge": "조직을 위해",

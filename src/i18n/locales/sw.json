@@ -259,7 +259,7 @@
   "footer": {
     "tagline": "Mwenza wako wa kibinafsi kwa maisha na Biblia",
     "disclaimer": "BibleBot.Life ni chombo cha kidijitali na haichukui nafasi ya huduma ya kichungaji, ushauri wa kitheolojia au tiba ya kisaikolojia. Katika shida kali, wasiliana na Dargebotene Hand (Simu. 143) au Pro Juventute (Simu. 147).",
-    "impressum": "Impressum",
+    "impressum": "Taarifa za kisheria",
     "notes": "Vidokezo",
     "private": "Mradi wa kibinafsi, usio wa kibiashara",
     "noChat": "Hakuna uhifadhi wa data za mazungumzo",
@@ -310,7 +310,8 @@
     "errorNoStream": "Hakuna mkondo",
     "seniorMode": "Hali ya Wazee (Fonti kubwa)",
     "loginHint": "Ingia ili kuwezesha mazungumzo kwenye vifaa vyote",
-    "previousChats": "Mazungumzo {{count}} yaliyopita"
+    "previousChats": "Mazungumzo {{count}} yaliyopita",
+    "suggestionsLoading": "Inapakia mapendekezo…"
   },
   "install": {
     "title": "Sakinisha BibleBot",
@@ -345,7 +346,7 @@
   },
   "impressum": {
     "back": "Rudi Mwanzo",
-    "title": "Impressum"
+    "title": "Taarifa za kisheria"
   },
   "datenschutz": {
     "back": "Rudi Mwanzo",
@@ -794,7 +795,13 @@
         "psychiatry": "Saikolojia",
         "burnoutClinic": "Kliniki ya uchovu",
         "hospice": "Hospisi",
-        "counseling": "Kituo cha ushauri"
+        "counseling": "Kituo cha ushauri",
+        "reformed": "Kanisa la Marekebisho",
+        "catholic": "Kanisa Katoliki",
+        "lutheran": "Kanisa la Kilutheri",
+        "evangelical": "Kanisa Huru / Kiinjili",
+        "freelance": "Huru / Huru",
+        "other": "Nyingine"
       }
     },
     "institutionsTitle": "Pia kwa Taasisi",
@@ -841,7 +848,31 @@
         "desc": "Msukumo wa kiroho wa ziada kwa wateja katika ushauri wa kisaikolojia."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible.",
+    "denominationsTitle": "Kwa madhehebu yote na viongozi wa sherehe",
+    "denominationsSubtitle": "BibleBot.Life ni ya kiekumeni – kwa jumuiya za Marekebisho, Katoliki, Kilutheri na Kanisa Huru, pamoja na viongozi wa sherehe huru.",
+    "denomination": {
+      "reformed": {
+        "title": "Kanisa la Marekebisho",
+        "desc": "Biblia ya Zurich, liturujia ya marekebisho na msaada wa mahubiri – imeundwa kwa parokia yako."
+      },
+      "catholic": {
+        "title": "Kanisa Katoliki",
+        "desc": "Tafsiri ya kiekumeni, mpango wa misa na sakramenti – kulingana na mila ya Katoliki."
+      },
+      "lutheran": {
+        "title": "Kanisa la Kilutheri",
+        "desc": "Biblia ya Luther, mpango wa ibada na huduma ya kichungaji – kwa jumuiya za Kiinjili-Kilutheri."
+      },
+      "evangelical": {
+        "title": "Makanisa Huru",
+        "desc": "Schlachter 2000, sifa na muundo rahisi wa ibada – kwa jumuiya za kiinjili huru."
+      },
+      "freelance": {
+        "title": "Viongozi Huru wa Sherehe",
+        "desc": "Wasemaji wa mazishi, washereheshaji wa harusi na maafisa huru wa sherehe – na zana za wasifu na mpango wa hotuba."
+      }
+    }
   },
   "institutions": {
     "badge": "Kwa mashirika",

@@ -310,7 +310,8 @@
     "errorNoStream": "Kò sí ìṣàn",
     "seniorMode": "Ìpele àgbàlagbà (ọ̀rọ̀ tó tóbi)",
     "loginHint": "Wọlé láti tọ́jú ìjíròrò rẹ lórí gbogbo àwọn ohun èlò",
-    "previousChats": "{{count}} awọn ibaraẹnisọrọ iṣaaju"
+    "previousChats": "{{count}} awọn ibaraẹnisọrọ iṣaaju",
+    "suggestionsLoading": "Ń gbé àwọn àbá yọ…"
   },
   "install": {
     "title": "Fi BibleBot sí",
@@ -794,7 +795,13 @@
         "psychiatry": "Àwọn ilé-ìwòsàn ọpọlọ",
         "burnoutClinic": "Ilé-ìwòsàn àárẹ̀",
         "hospice": "Hospisi",
-        "counseling": "Ilé ìmọ̀ràn"
+        "counseling": "Ilé ìmọ̀ràn",
+        "reformed": "Ṣọ́ọ̀ṣì Reformed",
+        "catholic": "Ṣọ́ọ̀ṣì Kátólíìkì",
+        "lutheran": "Ṣọ́ọ̀ṣì Lutheran",
+        "evangelical": "Ṣọ́ọ̀ṣì Ọ̀fẹ́ / Evangelical",
+        "freelance": "Alágbàṣe / Aládánidá",
+        "other": "Mìíràn"
       }
     },
     "institutionsTitle": "Fún àwọn ilé-iṣẹ́ pẹ̀lú",
@@ -841,7 +848,31 @@
         "desc": "Àfikún ìmúlò ẹ̀mí fún àwọn aláàbàárà nínú ìmọ̀ràn."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible.",
+    "denominationsTitle": "Fún gbogbo ẹ̀sìn àti aṣáájú ayẹyẹ",
+    "denominationsSubtitle": "BibleBot.Life jẹ́ ecumenical – fún àwọn àjọ Reformed, Catholic, Lutheran, àti Free Church, àti àwọn aṣáájú ayẹyẹ alágbàṣe.",
+    "denomination": {
+      "reformed": {
+        "title": "Ṣọ́ọ̀ṣì Reformed",
+        "desc": "Bíbélì Zürich, ìsìn Reformed àti àtìlẹ́yìn ìwàásù – tí a ṣe fún ìjọ rẹ."
+      },
+      "catholic": {
+        "title": "Ṣọ́ọ̀ṣì Kátólíìkì",
+        "desc": "Ìtumọ̀ ecumenical, ìgbékalẹ̀ Mísà àti sacramenti – ní ìbámu pẹ̀lú àṣà Kátólíìkì."
+      },
+      "lutheran": {
+        "title": "Ṣọ́ọ̀ṣì Lutheran",
+        "desc": "Bíbélì Luther, ìgbékalẹ̀ ìsìn àti ìtọ́jú pastoral – fún àwọn àjọ Evangelical-Lutheran."
+      },
+      "evangelical": {
+        "title": "Ṣọ́ọ̀ṣì Ọ̀fẹ́",
+        "desc": "Schlachter 2000, ìyìn àti àgbékalẹ̀ ìsìn tí ó rọrùn – fún àwọn àjọ evangelical ọ̀fẹ́."
+      },
+      "freelance": {
+        "title": "Aṣáájú Ayẹyẹ Alágbàṣe",
+        "desc": "Àwọn agbọ̀rọ̀ ìsìnkú, celebranti ìgbéyàwó àti aṣáájú ayẹyẹ aládánidá – pẹ̀lú àwọn irinṣẹ́ ìtàn ìgbésí-ayé àti ìgbékalẹ̀ ọ̀rọ̀."
+      }
+    }
   },
   "institutions": {
     "badge": "Fún àwọn àjọ",

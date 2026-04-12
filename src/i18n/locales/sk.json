@@ -310,7 +310,8 @@
     "errorNoStream": "Žiadny stream",
     "seniorMode": "Režim pre seniorov (väčšie písmo)",
     "loginHint": "Prihláste sa, aby ste si uchovali konverzácie na všetkých zariadeniach",
-    "previousChats": "{{count}} predchádzajúcich konverzácií"
+    "previousChats": "{{count}} predchádzajúcich konverzácií",
+    "suggestionsLoading": "Načítavanie návrhov…"
   },
   "install": {
     "title": "Nainštalovať BibleBot",
@@ -756,7 +757,13 @@
         "psychiatry": "Psychiatria",
         "burnoutClinic": "Klinika pre vyhorenie",
         "hospice": "Hospic",
-        "counseling": "Poradňa"
+        "counseling": "Poradňa",
+        "reformed": "Reformovaná cirkev",
+        "catholic": "Katolícka cirkev",
+        "lutheran": "Luteránska cirkev",
+        "evangelical": "Slobodná cirkev / Evanjelická",
+        "freelance": "Nezávislý",
+        "other": "Iné"
       }
     },
     "institutionsTitle": "Aj pre inštitúcie",
@@ -803,7 +810,31 @@
         "desc": "Doplnkové duchovné impulzy pre klientov psychosociálneho poradenstva."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible.",
+    "denominationsTitle": "Pre všetky vierovyznania a celebrantov",
+    "denominationsSubtitle": "BibleBot.Life je ekumenický – pre reformované, katolícke, luteránske a voľné evanjelické komunity, ako aj nezávislých celebrantov.",
+    "denomination": {
+      "reformed": {
+        "title": "Reformovaná cirkev",
+        "desc": "Zürichská biblia, reformovaná liturgia a podpora kázní – prispôsobené vašej farnosti."
+      },
+      "catholic": {
+        "title": "Katolícka cirkev",
+        "desc": "Ekumenický preklad, plánovanie omší a sviatosti – v súlade s katolíckymi tradíciami."
+      },
+      "lutheran": {
+        "title": "Luteránska cirkev",
+        "desc": "Lutherova biblia, plánovanie bohoslužieb a pastoračná starostlivosť – pre evanjelicko-luteránske zbory."
+      },
+      "evangelical": {
+        "title": "Slobodné cirkvi",
+        "desc": "Schlachter 2000, chvály a flexibilný dizajn bohoslužieb – pre voľné evanjelické komunity."
+      },
+      "freelance": {
+        "title": "Nezávislí celebranti",
+        "desc": "Pohrební rečníci, svadobní celebranti a nezávislí ceremoniári – s biografickými nástrojmi a plánovaním prejavov."
+      }
+    }
   },
   "institutions": {
     "badge": "Pre organizácie",

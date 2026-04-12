@@ -310,7 +310,8 @@
     "errorNoStream": "არ არის ნაკადი",
     "seniorMode": "ხანდაზმულთა რეჟიმი (უფრო დიდი შრიფტი)",
     "loginHint": "შედით სისტემაში, რათა შეინარჩუნოთ საუბრები ყველა მოწყობილობაზე",
-    "previousChats": "{{count}} წინა საუბარი"
+    "previousChats": "{{count}} წინა საუბარი",
+    "suggestionsLoading": "შემოთავაზებების ჩატვირთვა…"
   },
   "install": {
     "title": "BibleBot-ის ინსტალაცია",
@@ -756,7 +757,13 @@
         "psychiatry": "ფსიქიატრია",
         "burnoutClinic": "გადაწვის კლინიკა",
         "hospice": "ჰოსპისი",
-        "counseling": "კონსულტაციის ცენტრი"
+        "counseling": "კონსულტაციის ცენტრი",
+        "reformed": "რეფორმირებული ეკლესია",
+        "catholic": "კათოლიკური ეკლესია",
+        "lutheran": "ლუთერანული ეკლესია",
+        "evangelical": "თავისუფალი ეკლესია / სახარებისმიერი",
+        "freelance": "თავისუფალი / დამოუკიდებელი",
+        "other": "სხვა"
       }
     },
     "institutionsTitle": "ასევე ინსტიტუტებისთვის",
@@ -803,7 +810,31 @@
         "desc": "დამატებითი სულიერი იმპულსები ფსიქოსოციალური კონსულტაციის კლიენტებისთვის."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible.",
+    "denominationsTitle": "ყველა კონფესიისა და ცერემონიალთა ხელმძღვანელებისთვის",
+    "denominationsSubtitle": "BibleBot.Life ეკუმენურია – რეფორმირებული, კათოლიკური, ლუთერანული და თავისუფალი სახარებისმიერი თემებისთვის, ასევე თავისუფალი ცერემონიალთა ხელმძღვანელებისთვის.",
+    "denomination": {
+      "reformed": {
+        "title": "რეფორმირებული ეკლესია",
+        "desc": "ციურიხის ბიბლია, რეფორმირებული ლიტურგია და ქადაგების მხარდაჭერა – თქვენი სამრევლოსთვის მორგებული."
+      },
+      "catholic": {
+        "title": "კათოლიკური ეკლესია",
+        "desc": "ეკუმენური თარგმანი, მესის დაგეგმვა და საიდუმლოებები – კათოლიკურ ტრადიციებთან შესაბამისი."
+      },
+      "lutheran": {
+        "title": "ლუთერანული ეკლესია",
+        "desc": "ლუთერის ბიბლია, ღვთისმსახურების დაგეგმვა და სულიერი მოძღვრება – ევანგელისტურ-ლუთერანული თემებისთვის."
+      },
+      "evangelical": {
+        "title": "თავისუფალი ეკლესიები",
+        "desc": "Schlachter 2000, ქება და მოქნილი ღვთისმსახურების დიზაინი – თავისუფალი სახარებისმიერი თემებისთვის."
+      },
+      "freelance": {
+        "title": "თავისუფალი ცერემონიალთა ხელმძღვანელები",
+        "desc": "სამგლოვიარო ორატორები, საქორწინო ცელებრანტები და დამოუკიდებელი ცერემონიამეისტრები – ბიოგრაფიული ინსტრუმენტებითა და სიტყვის დაგეგმვით."
+      }
+    }
   },
   "institutions": {
     "badge": "ორგანიზაციებისთვის",

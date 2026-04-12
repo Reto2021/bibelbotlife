@@ -310,7 +310,8 @@
     "errorNoStream": "Pa gen kouran",
     "seniorMode": "Mòd Senior (pi gwo font)",
     "loginHint": "Konekte pou kenbe konvèsasyon yo sou tout aparèy ou yo",
-    "previousChats": "{{count}} konvèsasyon anvan yo"
+    "previousChats": "{{count}} konvèsasyon anvan yo",
+    "suggestionsLoading": "Ap chaje sijesyon yo…"
   },
   "install": {
     "title": "Enstale BibleBot",
@@ -756,7 +757,13 @@
         "psychiatry": "Psikiyatri",
         "burnoutClinic": "Klinik epizman",
         "hospice": "Ospis",
-        "counseling": "Sant konsèy"
+        "counseling": "Sant konsèy",
+        "reformed": "Legliz Refòme",
+        "catholic": "Legliz Katolik",
+        "lutheran": "Legliz Literyen",
+        "evangelical": "Legliz Lib / Evanjelik",
+        "freelance": "Endepandan",
+        "other": "Lòt"
       }
     },
     "institutionsTitle": "Tou pou Enstitisyon",
@@ -803,7 +810,31 @@
         "desc": "Enpilsyon espirityèl konplemantè pou kliyan nan konsèy psikososyal."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible.",
+    "denominationsTitle": "Pou tout denominasyon ak lidè seremoni",
+    "denominationsSubtitle": "BibleBot.Life se ekimenik – pou kominote Refòme, Katolik, Literyen ak Legliz Lib, ansanm ak lidè seremoni endepandan.",
+    "denomination": {
+      "reformed": {
+        "title": "Legliz Refòme",
+        "desc": "Bib Zürich, litiji Refòme ak sipò prediksyon – adapte pou pawas ou."
+      },
+      "catholic": {
+        "title": "Legliz Katolik",
+        "desc": "Tradiksyon ekimenik, planifikasyon Lamès ak sakraman – selon tradisyon Katolik."
+      },
+      "lutheran": {
+        "title": "Legliz Literyen",
+        "desc": "Bib Luther, planifikasyon sèvis ak swen pastoral – pou kominote Evanjelik-Literyen."
+      },
+      "evangelical": {
+        "title": "Legliz Lib",
+        "desc": "Schlachter 2000, lwanj ak konsepsyon fleksib sèvis – pou kominote evanjelik lib."
+      },
+      "freelance": {
+        "title": "Lidè Seremoni Endepandan",
+        "desc": "Oratè lantèman, celebran maryaj ak ofisyèl seremoni endepandan – ak zouti byografi ak planifikasyon diskou."
+      }
+    }
   },
   "institutions": {
     "badge": "Pou òganizasyon yo",

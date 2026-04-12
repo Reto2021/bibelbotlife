@@ -311,7 +311,8 @@
     "errorNoStream": "无流",
     "seniorMode": "老年模式（字体更大）",
     "loginHint": "登录以在所有设备上保留对话记录",
-    "previousChats": "{{count}} 次之前的对话"
+    "previousChats": "{{count}} 次之前的对话",
+    "suggestionsLoading": "加载建议中…"
   },
   "install": {
     "title": "安装 BibleBot",
@@ -795,7 +796,13 @@
         "psychiatry": "精神科",
         "burnoutClinic": "倦怠诊所",
         "hospice": "临终关怀",
-        "counseling": "咨询中心"
+        "counseling": "咨询中心",
+        "reformed": "改革宗教会",
+        "catholic": "天主教会",
+        "lutheran": "路德宗教会",
+        "evangelical": "自由教会 / 福音派",
+        "freelance": "自由职业 / 独立",
+        "other": "其他"
       }
     },
     "institutionsTitle": "也适用于机构",
@@ -842,7 +849,31 @@
         "desc": "为心理社会咨询客户提供补充性灵性启发。"
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible.",
+    "denominationsTitle": "适用于所有教派和仪式主持人",
+    "denominationsSubtitle": "BibleBot.Life是普世教会的——适用于改革宗、天主教、路德宗和自由福音派社区，以及自由职业仪式主持人。",
+    "denomination": {
+      "reformed": {
+        "title": "改革宗教会",
+        "desc": "苏黎世圣经、改革宗礼仪和讲道支持——为您的教区量身定制。"
+      },
+      "catholic": {
+        "title": "天主教会",
+        "desc": "普世翻译、弥撒规划和圣事——符合天主教传统。"
+      },
+      "lutheran": {
+        "title": "路德宗教会",
+        "desc": "路德圣经、崇拜规划和牧灵——为福音路德宗社区服务。"
+      },
+      "evangelical": {
+        "title": "自由教会",
+        "desc": "Schlachter 2000、赞美和灵活的崇拜设计——为自由福音派社区服务。"
+      },
+      "freelance": {
+        "title": "自由职业主持人",
+        "desc": "丧礼演讲者、婚礼主持人和独立仪式主持人——配备传记工具和演讲规划。"
+      }
+    }
   },
   "institutions": {
     "badge": "面向组织",
