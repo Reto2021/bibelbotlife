@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 import { Sparkles, ChevronRight, BookOpen, Loader2, MessageCircle, Image, Download, Bell, Send, Smartphone, Volume2, VolumeX, XCircle, Settings2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -46,7 +46,43 @@ function cacheImpulse(impulse: Impulse) {
 // Cache share image blob URL per date
 const SHARE_IMAGE_CACHE_KEY = "bibelbot-share-image-blob";
 
+// Parse Bible references like (Jona 2,1-11) or (1. Mose 3,15) in text and make them clickable
+const BIBLE_REF_REGEX = /\((\d?\.\s?)?([A-ZÄÖÜa-zäöü]+(?:\s[A-ZÄÖÜa-zäöü]+)?)\s+(\d+[,:]\d+(?:[–-]\d+)?(?:[.;,]\s?\d+)?(?:\s*\([^)]*\))?)\)/g;
+
+function renderContextWithLinks(text: string): ReactNode[] {
+  const parts: ReactNode[] = [];
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+  const regex = new RegExp(BIBLE_REF_REGEX.source, 'g');
+
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.slice(lastIndex, match.index));
+    }
+    const fullMatch = match[0]; // e.g. "(Jona 2,1-11)"
+    const innerRef = fullMatch.slice(1, -1); // strip parens
+    const searchQuery = encodeURIComponent(innerRef);
+    parts.push(
+      <a
+        key={match.index}
+        href={`/bibel?q=${searchQuery}`}
+        className="text-primary underline underline-offset-2 hover:text-primary/80 transition-colors"
+        title={innerRef}
+      >
+        {fullMatch}
+      </a>
+    );
+    lastIndex = match.index + fullMatch.length;
+  }
+
+  if (lastIndex < text.length) {
+    parts.push(text.slice(lastIndex));
+  }
+
+  return parts.length > 0 ? parts : [text];
+}
 export function DailyImpulse() {
+
   const { t, i18n } = useTranslation();
   const { toast } = useToast();
   const [impulse, setImpulse] = useState<Impulse | null>(getCachedImpulse);
@@ -363,7 +399,9 @@ export function DailyImpulse() {
                 {impulse.reference}
               </footer>
             </blockquote>
-            <p className="text-sm text-muted-foreground leading-relaxed">{impulse.context}</p>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              {renderContextWithLinks(impulse.context)}
+            </p>
 
             {/* Image Preview */}
             {showImagePreview && shareImageUrl && (

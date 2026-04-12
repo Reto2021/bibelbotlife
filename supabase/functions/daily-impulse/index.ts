@@ -55,6 +55,7 @@ Regeln:
 - Der Teaser soll neugierig machen – wie eine Überschrift, die man anklicken MUSS.
 - Beziehe dich auf christliche Feiertage wenn einer nahe ist (±3 Tage).
 - Decke Altes UND Neues Testament ab – wechsle ab.
+- WICHTIG: Wenn du im "context" auf andere biblische Geschichten, Personen oder Stellen verweist, MUSS die Bibelstelle in Klammern angegeben werden. Beispiel: "Nach seiner berühmten Geschichte mit dem grossen Fisch (Jona 2,1-11) geht er nach Ninive." NIEMALS eine Geschichte erwähnen ohne Bibelstellenangabe. Prüfe jede Referenz auf Korrektheit.
 
 WICHTIG – Grammatikregeln für den Teaser:
 - Der Teaser MUSS grammatikalisch korrektes Schweizer Hochdeutsch sein.
