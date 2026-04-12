@@ -441,13 +441,15 @@ export function DailyImpulse() {
 
             {/* Image Preview */}
             {showImagePreview && shareImageUrl && (
-              <div ref={imagePreviewRef} className="rounded-xl overflow-hidden border border-border shadow-md animate-fade-up">
-                <img
-                  src={shareImageUrl}
-                  alt={`${t("share.impulseTitle")} – ${impulse.topic}`}
-                  className="w-full max-h-80 object-cover"
-                  loading="lazy"
-                />
+              <div ref={imagePreviewRef} className="rounded-xl overflow-hidden border border-border shadow-md animate-fade-up bg-card">
+                <div className="flex justify-center bg-muted/20 p-3 sm:p-4">
+                  <img
+                    src={shareImageUrl}
+                    alt={`${t("share.impulseTitle")} – ${impulse.topic}`}
+                    className="w-full max-w-[520px] h-auto rounded-lg object-contain"
+                    loading="lazy"
+                  />
+                </div>
                 <div className="bg-card/80 backdrop-blur-sm p-3 flex items-center justify-between gap-2">
                   <p className="text-xs text-muted-foreground">{t("share.imageReady")}</p>
                   <div className="flex gap-2">
