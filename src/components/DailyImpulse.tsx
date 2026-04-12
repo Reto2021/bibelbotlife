@@ -160,10 +160,20 @@ export function DailyImpulse() {
 
     setIsGeneratingImage(true);
     try {
+      // First fetch AI-generated background image
+      const bgUrl = await fetchAIBackgroundUrl({
+        verse: impulse.verse,
+        reference: impulse.reference,
+        topic: impulse.topic,
+        teaser: impulse.teaser,
+        date: impulse.date,
+      });
+
       const blob = await generateShareImage({
         verse: impulse.verse,
         reference: impulse.reference,
         topic: impulse.topic,
+        backgroundUrl: bgUrl || undefined,
       });
       const url = URL.createObjectURL(blob);
       setShareBlob(blob);
