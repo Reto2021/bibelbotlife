@@ -18,14 +18,26 @@ type TileConfig = {
 };
 
 const allTiles: TileConfig[] = [
+  // Casual / curiosity-driven (front)
+  { emoji: "🤔", key: "namequiz", accentClass: "bg-primary", bgClass: "bg-card" },
+  { emoji: "☕", key: "dailywisdom", accentClass: "bg-primary", bgClass: "bg-card" },
+  { emoji: "🎲", key: "funfact", accentClass: "bg-secondary", bgClass: "bg-card" },
+  { emoji: "💡", key: "lifehack", accentClass: "bg-primary", bgClass: "bg-card" },
+  { emoji: "🌟", key: "strengths", accentClass: "bg-secondary", bgClass: "bg-card" },
   { emoji: "🎡", key: "lifewheel", accentClass: "bg-gradient-to-r from-primary to-secondary", bgClass: "bg-card", special: "lifewheel" },
+  { emoji: "👨‍👩‍👧", key: "family", accentClass: "bg-primary", bgClass: "bg-card" },
+  { emoji: "😴", key: "relax", accentClass: "bg-secondary", bgClass: "bg-card" },
+  // Positive / lighter
+  { emoji: "🙌", key: "gratitude", accentClass: "bg-primary", bgClass: "bg-card" },
+  { emoji: "🎊", key: "joy", accentClass: "bg-secondary", bgClass: "bg-card" },
+  { emoji: "📖", key: "bibleverse", accentClass: "bg-secondary", bgClass: "bg-card" },
   { emoji: "🔍", key: "sevenwhys", accentClass: "bg-gradient-to-r from-secondary to-primary", bgClass: "bg-card", special: "sevenwhys" },
-  { emoji: "🕊️", key: "baptism", accentClass: "bg-primary", bgClass: "bg-card" },
+  // Deeper topics
   { emoji: "🙏", key: "prayer", accentClass: "bg-primary", bgClass: "bg-card" },
+  { emoji: "🕊️", key: "baptism", accentClass: "bg-primary", bgClass: "bg-card" },
   { emoji: "💔", key: "heartbreak", accentClass: "bg-secondary", bgClass: "bg-card" },
   { emoji: "😰", key: "anxiety", accentClass: "bg-secondary", bgClass: "bg-card" },
   { emoji: "🌅", key: "newstart", accentClass: "bg-secondary", bgClass: "bg-card" },
-  { emoji: "🙌", key: "gratitude", accentClass: "bg-primary", bgClass: "bg-card" },
   { emoji: "💐", key: "condolence", accentClass: "bg-secondary", bgClass: "bg-card" },
   { emoji: "💍", key: "wedding", accentClass: "bg-primary", bgClass: "bg-card" },
   { emoji: "🙏", key: "confession", accentClass: "bg-primary", bgClass: "bg-card" },
@@ -43,10 +55,8 @@ const allTiles: TileConfig[] = [
   { emoji: "🤝", key: "forgiveness", accentClass: "bg-primary", bgClass: "bg-card" },
   { emoji: "👪", key: "familyconflict", accentClass: "bg-secondary", bgClass: "bg-card" },
   { emoji: "🫣", key: "envy", accentClass: "bg-primary", bgClass: "bg-card" },
-  { emoji: "🎊", key: "joy", accentClass: "bg-secondary", bgClass: "bg-card" },
-  { emoji: "📖", key: "bibleverse", accentClass: "bg-secondary", bgClass: "bg-card" },
-  { emoji: "🤔", key: "namequiz", accentClass: "bg-primary", bgClass: "bg-card" },
   { emoji: "🌙", key: "sleepless", accentClass: "bg-secondary", bgClass: "bg-card" },
+  // Navigation tiles
   { emoji: "🙏", key: "prayerwall", accentClass: "bg-gradient-to-r from-primary to-secondary", bgClass: "bg-card", href: "/gebetswand" },
   { emoji: "🧠", key: "biblequiz", accentClass: "bg-gradient-to-r from-secondary to-primary", bgClass: "bg-card", href: "/bibelquiz" },
 ];

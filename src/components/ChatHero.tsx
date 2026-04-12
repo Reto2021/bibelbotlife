@@ -39,14 +39,24 @@ function getDailyVerseIndex() {
 type TopicChip = { emoji: string; key: string; special?: "lifewheel" | "sevenwhys" };
 
 const TOPIC_CHIPS: TopicChip[] = [
+  // Casual / curiosity-driven (front)
   { emoji: "🤔", key: "namequiz" },
+  { emoji: "☕", key: "dailywisdom" },
+  { emoji: "🎲", key: "funfact" },
+  { emoji: "💡", key: "lifehack" },
+  { emoji: "🌟", key: "strengths" },
   { emoji: "🎡", key: "lifewheel", special: "lifewheel" },
+  { emoji: "👨‍👩‍👧", key: "family" },
+  { emoji: "😴", key: "relax" },
+  // Deeper topics
+  { emoji: "🙌", key: "gratitude" },
+  { emoji: "🎊", key: "joy" },
+  { emoji: "📖", key: "bibleverse" },
   { emoji: "🔍", key: "sevenwhys", special: "sevenwhys" },
   { emoji: "🙏", key: "prayer" },
   { emoji: "💔", key: "heartbreak" },
   { emoji: "😰", key: "anxiety" },
   { emoji: "🌅", key: "newstart" },
-  { emoji: "🙌", key: "gratitude" },
   { emoji: "🕊️", key: "baptism" },
   { emoji: "💐", key: "condolence" },
   { emoji: "💍", key: "wedding" },
@@ -57,8 +67,6 @@ const TOPIC_CHIPS: TopicChip[] = [
   { emoji: "🧭", key: "calling" },
   { emoji: "⛪", key: "faithdoubt" },
   { emoji: "🤝", key: "forgiveness" },
-  { emoji: "🎊", key: "joy" },
-  { emoji: "📖", key: "bibleverse" },
 ];
 
 const SpeechRecognition =
