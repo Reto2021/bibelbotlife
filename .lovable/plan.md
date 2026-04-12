@@ -1,39 +1,37 @@
 
 
-## Plan: Preise verstecken & "Kontakt aufnehmen"-Button + Admin-Toggle
+## Plan: Einstiegs-Chips für Alltags-Nutzer optimieren
 
-### Übersicht
-Alle Preisangaben auf den Seiten "Für Gemeinden" und "Für Seelsorger" werden ausgeblendet und durch einen "Kontakt aufnehmen"-Button ersetzt. Ein Admin-Setting in der Datenbank steuert, ob Preise sichtbar sind oder nicht.
+### Problem
+Die aktuellen Topic-Chips sind stark auf Sorgen und religiöse Themen ausgerichtet (Herzschmerz, Angst, Burnout, Glaubenszweifel...). ~80% der Besucher kommen ohne akutes Anliegen und finden keinen niederschwelligen Einstieg.
 
-### 1. Datenbank: App-Settings-Tabelle
-- Neue Tabelle `app_settings` mit Spalten: `key TEXT PRIMARY KEY`, `value JSONB`, `updated_at TIMESTAMPTZ`
-- Eintrag: `key = 'show_pricing'`, `value = false`
-- RLS: SELECT für alle (anon + authenticated), UPDATE nur für Admins via `has_role()`
+### Lösung
+Die Chip-Liste neu strukturieren in **zwei Gruppen**, wobei die ersten ~8 Chips bewusst neugierig-leicht sind und die tieferen Themen danach kommen.
 
-### 2. Hook: `useAppSetting`
-- Neuer Hook `src/hooks/use-app-setting.ts`
-- Liest einen Setting-Key aus `app_settings` per Supabase query
-- Gibt `{ value, isLoading }` zurück
-- Admin-Variante mit Mutation zum Updaten
+**Neue "leichte" Einstiegs-Chips (vorne platziert):**
 
-### 3. ForChurches.tsx anpassen
-- `useAppSetting('show_pricing')` abfragen
-- Wenn `false`: Preise (Setup, Jahresbeitrag, CHF-Referenz) in den Tier-Karten ausblenden
-- Stattdessen Text wie "Preise auf Anfrage" und der bestehende "Kontakt"-Button bleibt
+| Emoji | Key | Titel (DE) | Prompt-Idee |
+|-------|-----|-----------|-------------|
+| 🤔 | `namequiz` | Was bedeutet dein Name? | (existiert bereits) |
+| ☕ | `dailywisdom` | Weisheit für heute | "Gib mir einen kurzen, ermutigenden Gedanken für meinen Tag" |
+| 🎲 | `funfact` | Wusstest du schon? | "Erzähl mir eine überraschende Tatsache aus der Bibel" |
+| 💡 | `lifehack` | Lebenstipp | "Welcher biblische Tipp hilft im Alltag mit Familie und Beruf?" |
+| 🌟 | `strengths` | Deine Stärken | "Hilf mir, meine persönlichen Stärken zu entdecken" |
+| 🎡 | `lifewheel` | Lebensrad | (existiert bereits) |
+| 👨‍👩‍👧 | `family` | Familie & Alltag | "Wie kann ich meiner Familie mehr Wertschätzung zeigen?" |
+| 😴 | `relax` | Zur Ruhe kommen | "Ich brauche einen Moment der Ruhe. Hilf mir abzuschalten" |
 
-### 4. ForCelebrants.tsx anpassen
-- Gleiche Logik: Wenn `show_pricing === false`, den Preis (`plan.price`, `plan.period`, CHF-Referenz) ausblenden
-- Button-Text auf "Kontakt aufnehmen" ändern, Link zum Kontaktformular statt `/login`
+Danach folgen die bestehenden tieferen Themen (prayer, heartbreak, anxiety, etc.).
 
-### 5. Admin-Dashboard: Toggle
-- Im AdminDashboard oder SettingsPage einen Switch "Preise anzeigen" hinzufügen
-- Toggelt `app_settings.show_pricing` zwischen `true`/`false`
+### Umsetzung
 
-### 6. i18n
-- Neue Keys: `pricing.onRequest` ("Preise auf Anfrage" / "Prices on request"), `pricing.contactUs` ("Kontakt aufnehmen" / "Contact us")
-- In DE und EN, restliche Sprachen als EN-Fallback
+1. **`ChatHero.tsx`** — `TOPIC_CHIPS` Array neu ordnen: leichte Chips zuerst, tiefere Themen danach
+2. **`EntryTiles.tsx`** — `allTiles` Array analog umordnen und neue Tiles hinzufügen
+3. **`de.json` + `en.json`** — Neue `tiles.*` Keys für Titel, Beschreibung und Prompt-Varianten
+4. **Alle anderen Locale-Dateien** — Per Script übersetzen (34 Sprachen)
 
 ### Betroffene Dateien
-- **Neu**: Migration für `app_settings`, `src/hooks/use-app-setting.ts`
-- **Geändert**: `ForChurches.tsx`, `ForCelebrants.tsx`, `AdminDashboard.tsx`, `de.json`, `en.json`
+- `src/components/ChatHero.tsx` (TOPIC_CHIPS Reihenfolge + neue Einträge)
+- `src/components/EntryTiles.tsx` (allTiles Reihenfolge + neue Einträge)
+- `src/i18n/locales/de.json`, `en.json` + 32 weitere Locale-Dateien
 
