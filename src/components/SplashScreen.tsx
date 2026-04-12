@@ -65,9 +65,9 @@ export function SplashScreen({ onComplete }: { onComplete: () => void }) {
         >
           {/* Logo */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.85, y: 10 }}
+            initial={{ opacity: 0, scale: 0.8, y: 15 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
+            transition={{ duration: 1.0, ease: "easeOut" }}
             className="flex flex-col items-center gap-4"
           >
             <AppLogo className="h-16 w-16 sm:h-20 sm:w-20" />
