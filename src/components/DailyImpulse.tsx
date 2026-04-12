@@ -441,7 +441,7 @@ export function DailyImpulse() {
 
             {/* Image Preview */}
             {showImagePreview && shareImageUrl && (
-              <div className="rounded-xl overflow-hidden border border-border shadow-md animate-fade-up">
+              <div ref={imagePreviewRef} className="rounded-xl overflow-hidden border border-border shadow-md animate-fade-up">
                 <img
                   src={shareImageUrl}
                   alt={`${t("share.impulseTitle")} – ${impulse.topic}`}
