@@ -98,6 +98,18 @@ function likelyHasCitations(text: string): boolean {
 }
 
 function QABadge({ qa, t }: { qa: QAResult | "loading" | "skipped"; t: (key: string, opts?: any) => string }) {
+  const [showExtended, setShowExtended] = useState(() => {
+    return !localStorage.getItem("biblebot-qa-explained");
+  });
+
+  useEffect(() => {
+    if (showExtended && qa !== "loading" && qa !== "skipped" && typeof qa === "object" && !qa.has_issues) {
+      localStorage.setItem("biblebot-qa-explained", "1");
+      const timer = setTimeout(() => setShowExtended(false), 9000);
+      return () => clearTimeout(timer);
+    }
+  }, [showExtended, qa]);
+
   if (qa === "loading") {
     return (
       <div className="flex items-center gap-2 mt-2 px-2.5 py-1.5 rounded-lg bg-muted/60 border border-border text-sm text-muted-foreground">
@@ -118,7 +130,9 @@ function QABadge({ qa, t }: { qa: QAResult | "loading" | "skipped"; t: (key: str
             <span>
               {qa.has_issues
                 ? t("chat.qaIssue", { count: qa.issues.length })
-                : t("chat.qaOk", { count: qa.citations_found })}
+                : showExtended
+                  ? `BibleBot prüft jede Bibelstelle automatisch. ${qa.citations_found} Stelle(n) in dieser Antwort geprüft und bestätigt.`
+                  : t("chat.qaOk", { count: qa.citations_found })}
             </span>
           </div>
         </TooltipTrigger>
