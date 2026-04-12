@@ -177,18 +177,15 @@ function makeRefsClickable(children: React.ReactNode, onRefClick: (msg: string) 
 function extractOptions(text: string): { cleanText: string; options: string[] } {
   // Strategy: try multiple patterns and return the first that yields ≥2 options
 
-  const patterns: { line: RegExp; strip: RegExp }[] = [
-    // a) … / **a)** …  (lowercase)
+  // --- 1. Line-start patterns (each option on its own line) ---
+  const linePatterns: { line: RegExp; strip: RegExp }[] = [
     { line: /^(\*{0,2})[a-z]\)\1\s+.+$/gm, strip: /^(\*{0,2})[a-z]\)\1\s+/ },
-    // A) … / **A)** …  (uppercase)
     { line: /^(\*{0,2})[A-Z]\)\1\s+.+$/gm, strip: /^(\*{0,2})[A-Z]\)\1\s+/ },
-    // 1. … / **1.** …  (numbered)
     { line: /^(\*{0,2})\d+\.\1\s+.+$/gm, strip: /^(\*{0,2})\d+\.\1\s+/ },
-    // - **…** or - …  (markdown bullet)
     { line: /^[-–•]\s+.+$/gm, strip: /^[-–•]\s+/ },
   ];
 
-  for (const { line, strip } of patterns) {
+  for (const { line, strip } of linePatterns) {
     line.lastIndex = 0;
     const matches = text.match(line);
     if (matches && matches.length >= 2) {
@@ -202,17 +199,37 @@ function extractOptions(text: string): { cleanText: string; options: string[] } 
     }
   }
 
-  // Inline fallback: "a) Foo b) Bar" or "**a)** Foo **b)** Bar" on a single line
-  const inlineLetterRe = /\*{0,2}[a-zA-Z]\)\*{0,2}\s/;
-  if ((text.match(new RegExp(inlineLetterRe.source, "g")) || []).length >= 2) {
-    const optionsStart = text.search(inlineLetterRe);
-    if (optionsStart === -1) return { cleanText: text, options: [] };
-    const beforeOptions = text.slice(0, optionsStart).trim();
-    const optionsText = text.slice(optionsStart);
-    const splitRe = /\*{0,2}[a-zA-Z]\)\*{0,2}\s+/g;
-    const parts = optionsText.split(splitRe).filter((s) => s.trim().length > 2);
-    const options = parts.map((p) => p.replace(/\*{1,2}/g, "").replace(/[.?!,;]\s*$/, "").trim());
-    if (options.length >= 2) return { cleanText: beforeOptions, options };
+  // --- 2. Inline / mixed: a) … b) … c) … anywhere in text (even mid-paragraph or across lines) ---
+  // Flatten to single line for robust matching
+  const flat = text.replace(/\n/g, " ").replace(/\s{2,}/g, " ");
+  const inlineRe = /\*{0,2}[a-zA-Z]\)\*{0,2}\s/g;
+  const inlineMatches = flat.match(inlineRe);
+  if (inlineMatches && inlineMatches.length >= 2) {
+    const firstIdx = flat.search(inlineRe);
+    if (firstIdx >= 0) {
+      const beforeOptions = flat.slice(0, firstIdx).trim();
+      const optionsText = flat.slice(firstIdx);
+      // Split on each letter-paren marker
+      const splitRe = /\*{0,2}[a-zA-Z]\)\*{0,2}\s+/g;
+      const parts = optionsText.split(splitRe).filter((s) => s.trim().length > 2);
+      const options = parts.map((p) => p.replace(/\*{1,2}/g, "").replace(/[.?!,;]\s*$/, "").trim());
+      if (options.length >= 2) return { cleanText: beforeOptions, options };
+    }
+  }
+
+  // --- 3. Numbered inline: 1) … 2) … 3) … ---
+  const numInlineRe = /\*{0,2}\d+\)\*{0,2}\s/g;
+  const numMatches = flat.match(numInlineRe);
+  if (numMatches && numMatches.length >= 2) {
+    const firstIdx = flat.search(numInlineRe);
+    if (firstIdx >= 0) {
+      const beforeOptions = flat.slice(0, firstIdx).trim();
+      const optionsText = flat.slice(firstIdx);
+      const splitRe = /\*{0,2}\d+\)\*{0,2}\s+/g;
+      const parts = optionsText.split(splitRe).filter((s) => s.trim().length > 2);
+      const options = parts.map((p) => p.replace(/\*{1,2}/g, "").replace(/[.?!,;]\s*$/, "").trim());
+      if (options.length >= 2) return { cleanText: beforeOptions, options };
+    }
   }
 
   return { cleanText: text, options: [] };
