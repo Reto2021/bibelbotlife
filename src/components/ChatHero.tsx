@@ -42,12 +42,17 @@ const TOPIC_CHIPS: TopicChip[] = [
   // Casual / curiosity-driven (front)
   { emoji: "🤔", key: "namequiz" },
   { emoji: "☕", key: "dailywisdom" },
+  { emoji: "🌅", key: "morningstart" },
   { emoji: "🎲", key: "funfact" },
   { emoji: "💡", key: "lifehack" },
   { emoji: "🌟", key: "strengths" },
+  { emoji: "✨", key: "inspiration" },
   { emoji: "🎡", key: "lifewheel", special: "lifewheel" },
   { emoji: "👨‍👩‍👧", key: "family" },
   { emoji: "😴", key: "relax" },
+  { emoji: "📜", key: "quoteofday" },
+  { emoji: "🙏", key: "thankfulness" },
+  { emoji: "❓", key: "biblesays" },
   // Deeper topics
   { emoji: "🙌", key: "gratitude" },
   { emoji: "🎊", key: "joy" },
