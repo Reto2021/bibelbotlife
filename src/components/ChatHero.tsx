@@ -872,20 +872,23 @@ export function ChatHero() {
                   initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: 0.25 }}
-                  className="grid grid-cols-3 gap-1.5 sm:gap-2 max-w-2xl mx-auto mb-5 w-full"
+                  className="flex flex-col sm:grid sm:grid-cols-3 gap-2 max-w-2xl mx-auto mb-5 w-full"
                 >
                   {[
-                    { emoji: "🤔", title: t("tiles.namequiz.title"), prompt: t("tiles.namequiz.prompt") },
-                    { emoji: "☕", title: t("tiles.dailywisdom.title"), prompt: t("tiles.dailywisdom.prompt") },
-                    { emoji: "🎲", title: t("tiles.funfact.title"), prompt: t("tiles.funfact.prompt") },
+                    { emoji: "🤔", title: t("tiles.namequiz.title"), desc: t("tiles.namequiz.desc"), prompt: t("tiles.namequiz.prompt") },
+                    { emoji: "☕", title: t("tiles.dailywisdom.title"), desc: t("tiles.dailywisdom.desc"), prompt: t("tiles.dailywisdom.prompt") },
+                    { emoji: "🎲", title: t("tiles.funfact.title"), desc: t("tiles.funfact.desc"), prompt: t("tiles.funfact.prompt") },
                   ].map((card) => (
                     <button
                       key={card.title}
                       onClick={() => sendMessage(card.prompt)}
-                      className="group flex items-center gap-1.5 sm:gap-2 bg-card/70 backdrop-blur-sm border border-border rounded-xl px-2 sm:px-3 py-2 sm:py-2.5 hover:border-primary/40 hover:shadow-md hover:bg-card transition-all duration-200 cursor-pointer min-w-0"
+                      className="group flex items-center gap-3 sm:gap-2 bg-card/70 backdrop-blur-sm border border-border rounded-xl px-4 sm:px-3 py-3 sm:py-2.5 hover:border-primary/40 hover:shadow-md hover:bg-card transition-all duration-200 cursor-pointer min-w-0"
                     >
-                      <span className="text-base sm:text-xl shrink-0">{card.emoji}</span>
-                      <span className="text-[11px] sm:text-sm font-medium text-foreground group-hover:text-primary transition-colors text-left leading-tight truncate">{card.title}</span>
+                      <span className="text-xl sm:text-xl shrink-0">{card.emoji}</span>
+                      <div className="text-left min-w-0">
+                        <span className="text-sm sm:text-sm font-medium text-foreground group-hover:text-primary transition-colors leading-tight block">{card.title}</span>
+                        <span className="text-xs text-muted-foreground leading-snug line-clamp-1 sm:hidden block">{card.desc}</span>
+                      </div>
                     </button>
                   ))}
                 </motion.div>
