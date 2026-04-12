@@ -7,7 +7,8 @@ import { ChurchBanner } from "@/components/ChurchBanner";
 import { ReferralSection } from "@/components/ReferralSection";
 import { EntryTiles } from "@/components/EntryTiles";
 import { ChatHero } from "@/components/ChatHero";
-import { LifeWheelProvider } from "@/components/LifeWheel";
+import { LifeWheelProvider, openLifeWheel } from "@/components/LifeWheel";
+import { openBibleBotChat } from "@/lib/chat-events";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { AppLogo } from "@/components/AppLogo";
@@ -235,6 +236,64 @@ const Index = () => {
       {/* Subscribe CTA is now integrated in the DailyImpulse banner */}
       {/* Referral / Empfehlen */}
       <ReferralSection />
+
+      {/* LifeWheel & SevenWhys Feature Section */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-primary bg-primary/10 px-4 py-1.5 rounded-full mb-4">
+              <Compass className="h-4 w-4" />
+              Mehr als Antworten
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
+              Zwei Werkzeuge, die tiefer gehen
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Für Momente, in denen du mehr als eine Antwort brauchst.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card className="bg-card/80 border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <CardHeader className="text-center pb-2">
+                <span className="text-5xl mb-3 block">🎡</span>
+                <CardTitle className="text-xl text-card-foreground">Lebensrad-Check</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center space-y-4">
+                <CardDescription className="text-muted-foreground leading-relaxed">
+                  Wie steht es gerade mit Arbeit, Beziehungen, Sinn und Gesundheit?
+                  Das Lebensrad hilft dir in 3 Minuten, Klarheit zu gewinnen — und zeigt,
+                  wo die Bibel direkt anknüpft.
+                </CardDescription>
+                <Button onClick={() => openLifeWheel()} className="w-full">
+                  Lebensrad starten
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card/80 border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <CardHeader className="text-center pb-2">
+                <span className="text-5xl mb-3 block">🔍</span>
+                <CardTitle className="text-xl text-card-foreground">Die 7-Warum-Methode</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center space-y-4">
+                <CardDescription className="text-muted-foreground leading-relaxed">
+                  Warum tue ich das wirklich? Warum fühlt sich das so an?
+                  BibleBot führt dich durch 7 Fragen, die an die Wurzel kommen —
+                  mit biblischer Einordnung an der tiefsten Stelle.
+                </CardDescription>
+                <Button
+                  variant="outline"
+                  onClick={() => openBibleBotChat("Ich möchte die 7-Warum-Methode ausprobieren", "seven-whys")}
+                  className="w-full"
+                >
+                  Tiefer fragen
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
 
       {/* FAQ */}
       <section className="py-20 px-4">
