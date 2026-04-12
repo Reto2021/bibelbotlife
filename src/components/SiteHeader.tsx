@@ -36,6 +36,7 @@ export function SiteHeader() {
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <Link
           to="/"
+          onClick={handleLogoClick}
           className="flex items-center space-x-2 hover:opacity-80 transition-opacity cursor-pointer shrink-0"
         >
           <AppLogo className="h-10 w-10 lg:h-14 lg:w-14" />
