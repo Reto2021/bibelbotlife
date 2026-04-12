@@ -189,8 +189,12 @@ Deno.serve(async (req) => {
 
 function personalizeTemplate(template: string, lead: any, campaign: any): string {
   const appUrl = "https://biblebot.life";
-  const previewUrl = `${appUrl}/widget-preview/${lead.id}`;
-  const splashUrl = `${appUrl}/splash/${lead.id}`;
+  const utm = `utm_source=outreach&utm_medium=email&utm_campaign=${encodeURIComponent(campaign.name || campaign.id)}`;
+  const previewUrl = `${appUrl}/widget-preview/${lead.id}?${utm}`;
+  const splashUrl = `${appUrl}/splash/${lead.id}?${utm}`;
+  const bookingUrl = campaign.booking_url
+    ? `${campaign.booking_url}${campaign.booking_url.includes("?") ? "&" : "?"}${utm}`
+    : "";
   const screenshotUrl = lead.screenshot_url || "";
   const primaryColor = lead.primary_color || "#C8883A";
 
@@ -217,7 +221,7 @@ function personalizeTemplate(template: string, lead: any, campaign: any): string
     .replace(/\{\{city\}\}/g, lead.city || "")
     .replace(/\{\{denomination\}\}/g, lead.denomination || "")
     .replace(/\{\{personal_note\}\}/g, lead.personal_note || "")
-    .replace(/\{\{booking_url\}\}/g, campaign.booking_url || "")
+    .replace(/\{\{booking_url\}\}/g, bookingUrl)
     .replace(/\{\{sender_name\}\}/g, campaign.sender_name || "")
     .replace(/\{\{previewUrl\}\}/g, previewUrl)
     .replace(/\{\{screenshotUrl\}\}/g, screenshotUrl)
