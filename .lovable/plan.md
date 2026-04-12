@@ -1,37 +1,39 @@
 
 
-## Plan: Einstiegs-Chips für Alltags-Nutzer optimieren
+## Problem
+Die `getChurchContext()`-Funktion in `daily-impulse/index.ts` berechnet Ostern nicht dynamisch. Stattdessen gibt sie für den gesamten März und April pauschal "mögliche Fastenzeit oder Osterzeit" zurück. Das ist falsch — Ostern 2026 war am 5. April, der 12. April ist bereits die 2. Woche nach Ostern.
 
-### Problem
-Die aktuellen Topic-Chips sind stark auf Sorgen und religiöse Themen ausgerichtet (Herzschmerz, Angst, Burnout, Glaubenszweifel...). ~80% der Besucher kommen ohne akutes Anliegen und finden keinen niederschwelligen Einstieg.
+## Lösung
+Die Oster-Berechnung dynamisch machen mit dem Gauss'schen Algorithmus (Computus), und daraus alle beweglichen Feiertage ableiten.
 
-### Lösung
-Die Chip-Liste neu strukturieren in **zwei Gruppen**, wobei die ersten ~8 Chips bewusst neugierig-leicht sind und die tieferen Themen danach kommen.
+## Technische Umsetzung
 
-**Neue "leichte" Einstiegs-Chips (vorne platziert):**
+**Datei:** `supabase/functions/daily-impulse/index.ts`
 
-| Emoji | Key | Titel (DE) | Prompt-Idee |
-|-------|-----|-----------|-------------|
-| 🤔 | `namequiz` | Was bedeutet dein Name? | (existiert bereits) |
-| ☕ | `dailywisdom` | Weisheit für heute | "Gib mir einen kurzen, ermutigenden Gedanken für meinen Tag" |
-| 🎲 | `funfact` | Wusstest du schon? | "Erzähl mir eine überraschende Tatsache aus der Bibel" |
-| 💡 | `lifehack` | Lebenstipp | "Welcher biblische Tipp hilft im Alltag mit Familie und Beruf?" |
-| 🌟 | `strengths` | Deine Stärken | "Hilf mir, meine persönlichen Stärken zu entdecken" |
-| 🎡 | `lifewheel` | Lebensrad | (existiert bereits) |
-| 👨‍👩‍👧 | `family` | Familie & Alltag | "Wie kann ich meiner Familie mehr Wertschätzung zeigen?" |
-| 😴 | `relax` | Zur Ruhe kommen | "Ich brauche einen Moment der Ruhe. Hilf mir abzuschalten" |
+**1. Neue Funktion `computeEaster(year)`** — Berechnet Ostersonntag für ein beliebiges Jahr (Anonymous Gregorian algorithm).
 
-Danach folgen die bestehenden tieferen Themen (prayer, heartbreak, anxiety, etc.).
+**2. `getChurchContext()` komplett überarbeiten** — Bewegliche Feiertage relativ zu Ostern berechnen:
 
-### Umsetzung
+| Tage relativ zu Ostern | Feiertag |
+|---|---|
+| -46 | Aschermittwoch (Beginn Fastenzeit) |
+| -7 | Palmsonntag |
+| -3 bis -1 | Karfreitag, Karsamstag |
+| 0 | Ostersonntag |
+| +1 | Ostermontag |
+| +39 | Auffahrt / Christi Himmelfahrt |
+| +49 | Pfingstsonntag |
+| +50 | Pfingstmontag |
+| +60 | Fronleichnam |
 
-1. **`ChatHero.tsx`** — `TOPIC_CHIPS` Array neu ordnen: leichte Chips zuerst, tiefere Themen danach
-2. **`EntryTiles.tsx`** — `allTiles` Array analog umordnen und neue Tiles hinzufügen
-3. **`de.json` + `en.json`** — Neue `tiles.*` Keys für Titel, Beschreibung und Prompt-Varianten
-4. **Alle anderen Locale-Dateien** — Per Script übersetzen (34 Sprachen)
+**3. Logik:** Heutiges Datum wird als Differenz zu Ostern berechnet → passender Kontext wird zurückgegeben. Feste Feiertage (Weihnachten etc.) bleiben wie bisher.
 
-### Betroffene Dateien
-- `src/components/ChatHero.tsx` (TOPIC_CHIPS Reihenfolge + neue Einträge)
-- `src/components/EntryTiles.tsx` (allTiles Reihenfolge + neue Einträge)
-- `src/i18n/locales/de.json`, `en.json` + 32 weitere Locale-Dateien
+**4. Die vage Zeile `if (month >= 3 && month <= 4)` wird entfernt** und durch präzise Bereiche ersetzt:
+- Fastenzeit: Aschermittwoch bis Palmsonntag
+- Karwoche: Palmsonntag bis Karsamstag  
+- Ostern: Ostersonntag + Ostermontag
+- Osterzeit: Ostermontag+1 bis Auffahrt-1
+- usw.
+
+Eine Datei, ca. 40 Zeilen neuer Code, Rest bleibt gleich. Edge Function wird danach deployed.
 
