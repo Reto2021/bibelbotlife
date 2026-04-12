@@ -10,8 +10,8 @@ type PatronData = {
   custom_bot_name: string | null;
 };
 
-const SPLASH_DURATION_WITH_PATRON = 5500;
-const SPLASH_DURATION_DEFAULT = 3200;
+const SPLASH_DURATION_WITH_PATRON = 7000;
+const SPLASH_DURATION_DEFAULT = 5000;
 
 export function SplashScreen({ onComplete }: { onComplete: () => void }) {
   const { t } = useTranslation();
@@ -142,7 +142,7 @@ export function SplashScreen({ onComplete }: { onComplete: () => void }) {
                 initial={{ width: "0%" }}
                 animate={{ width: "100%" }}
                 transition={{
-                  duration: patron ? 5.0 : 2.8,
+                  duration: patron ? 6.5 : 4.5,
                   ease: "easeInOut",
                 }}
               />
