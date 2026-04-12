@@ -81,14 +81,7 @@ Deno.serve(async (req) => {
       .select("id, name, slug, is_active, plan_tier"),
   ]);
 
-  if (eventsRes.error) {
-    return new Response(JSON.stringify({ error: eventsRes.error.message }), {
-      status: 500,
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
-    });
-  }
-
-  const events = eventsRes.data || [];
+  const events = allEvents;
   const subscribers = subscribersRes.data || [];
   const telegramMsgs = telegramRes.data || [];
   const churches = churchesRes.data || [];
