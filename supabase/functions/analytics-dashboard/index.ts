@@ -48,24 +48,36 @@ Deno.serve(async (req) => {
   const days = parseInt(url.searchParams.get("days") || "7");
   const since = new Date(Date.now() - days * 86400000).toISOString();
 
+  // Paginated fetch to overcome Supabase 1000-row default limit
+  const PAGE_SIZE = 1000;
+  const fetchAllEvents = async () => {
+    const allEvents: any[] = [];
+    let from = 0;
+    while (true) {
+      const { data, error } = await supabase
+        .from("analytics_events")
+        .select("*")
+        .gte("created_at", since)
+        .order("created_at", { ascending: true })
+        .range(from, from + PAGE_SIZE - 1);
+      if (error) throw error;
+      if (!data || data.length === 0) break;
+      allEvents.push(...data);
+      if (data.length < PAGE_SIZE) break;
+      from += PAGE_SIZE;
+    }
+    return allEvents;
+  };
+
   // Fetch events + subscribers + telegram messages in parallel
-  const [eventsRes, subscribersRes, telegramRes, churchesRes] = await Promise.all([
-    supabase
-      .from("analytics_events")
-      .select("*")
-      .gte("created_at", since)
-      .order("created_at", { ascending: true })
-      .limit(50000),
-    supabase
-      .from("daily_subscribers")
-      .select("*"),
-    supabase
-      .from("telegram_messages")
+  const [allEvents, subscribersRes, telegramRes, churchesRes] = await Promise.all([
+    fetchAllEvents(),
+    supabase.from("daily_subscribers").select("*"),
+    supabase.from("telegram_messages")
       .select("chat_id, role, created_at")
       .order("created_at", { ascending: true })
       .limit(10000),
-    supabase
-      .from("church_partners")
+    supabase.from("church_partners")
       .select("id, name, slug, is_active, plan_tier"),
   ]);
 
