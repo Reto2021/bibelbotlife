@@ -1,48 +1,71 @@
 
 
-## Problem
+## Adaptive Antwortlänge für maximale Interaktionsrate
 
-Die KI stellt am Ende der Antwort eine spannende Reflexionsfrage im Fliesstext (z.B. "Was denkst du, warum wir lieber an unseren Sorgen festhalten?"), aber die darauf folgenden Optionen (a/b/c Buttons) sind unabhängige Gesprächs-Weiterleitungen, die nicht auf diese Frage eingehen. Das verwirrt den Nutzer — er erwartet, dass die Buttons Antworten oder Vertiefungen der gestellten Frage sind.
+### Forschung & Best Practices
 
-## Ursache
+Aus der Chatbot-UX-Forschung und Praxisdaten:
 
-Im System-Prompt (`supabase/functions/bibelbot-chat/index.ts`, Zeile 568-600) gibt es zwei widersprüchliche Anweisungen:
-1. "Stelle pro Antwort 1-2 gezielte Fragen" (Zeile 569)
-2. "Beende JEDE Antwort mit mindestens 2 Optionen a), b), c)" (Zeile 598)
+- **Optimal für Engagement: 80–150 Wörter** pro Nachricht in konversationellen Chats (Intercom, Drift, ChatGPT-Studien). Ab ~200 Wörtern sinkt die Reply-Rate um 30-50%.
+- **Erste Nachricht kürzer** (~80-120 Wörter): Der User muss "reinkommen". Lange Erstantworten schrecken ab.
+- **Vertiefung länger** (150-250 Wörter): Wenn der User bereits 3+ Nachrichten geschrieben hat, akzeptiert er mehr Tiefe.
+- **Schnelle Antworten** (unter 50 Wörter): Gut für Rückfragen, schlecht für inhaltliche Antworten — zu dünn.
+- **Mobile-Faktor**: Auf kleinen Screens (< 500px) wirken 200 Wörter wie eine Textwand. Ideal: max. 2-3 Bildschirmhöhen.
 
-Die KI macht beides: eine offene Frage im Text + separate Optionen danach. Da die Optionen nach der Frage kommen, wirken sie wie Antwortmöglichkeiten — sind es aber nicht.
+### Aktueller Stand
 
-## Lösung
+Zeile 702: `Halte Antworten fokussiert (ca. 200-400 Wörter)` — statisch, zu lang für den Gesprächseinstieg.
 
-Den System-Prompt anpassen, damit Frage und Optionen **eine Einheit** bilden:
+### Lösung: Adaptives Längensystem
 
-**Neue Regel im Prompt (ersetzt Zeile 568-600):**
+**Signale, die der Edge Function bereits zur Verfügung stehen:**
+- `messages.length` — Gesprächstiefe (wie viele Nachrichten wurden gewechselt?)
+- `messages[messages.length-1].content.length` — Länge der letzten User-Nachricht (kurze Frage → kurze Antwort)
+- `mode` — bereits vorhanden (könnte erweitert werden)
 
-> Wenn du eine Reflexionsfrage stellst, müssen die Optionen (a/b/c) als mögliche Antworten oder Vertiefungen **dieser Frage** dienen. Die Frage bildet die Überleitung zu den Optionen.
->
-> **Beispiel RICHTIG:**
-> Was denkst du — warum halten wir manchmal lieber an unseren Sorgen fest?
->
-> a) Vielleicht weil Sorgen uns ein Gefühl von Kontrolle geben
-> b) Ich glaube, es fällt mir schwer loszulassen, weil ich Angst habe
-> c) Lass uns anschauen, was die Bibel dazu sagt
->
-> **Beispiel FALSCH:**
-> Was denkst du — warum halten wir manchmal lieber an unseren Sorgen fest?
->
-> a) Lass uns über Dankbarkeit sprechen
-> b) Möchtest du einen Psalm dazu hören?
-> c) Erzähl mir mehr über dein Anliegen
+**Neuer Client-seitiger Signal: `screenWidth`** — wird bereits im Analytics getrackt, muss nur an den Chat übergeben werden.
 
-Ausserdem: eine Option soll immer eine "freie Antwort"-Einladung sein (z.B. "Ich möchte frei darauf antworten"), damit der Nutzer nicht in ein Multiple-Choice-Schema gezwungen wird.
+### Adaptive Regeln im System-Prompt
 
-## Technische Umsetzung
+```text
+## Antwortlänge (ADAPTIV)
+Passe deine Antwortlänge an die Gesprächssituation an:
 
-**1 Datei:** `supabase/functions/bibelbot-chat/index.ts`
+ERSTE ANTWORT (1-2 Nachrichten im Gespräch):
+→ 80-120 Wörter. Kurz, einladend, eine Frage. Der User soll antworten wollen, nicht lesen müssen.
 
-- Zeile 568-600: Die Abschnitte "Wichtig" und "PFLICHT: Immer Optionen anbieten" zusammenführen und neu formulieren
-- Kernregel: "Deine Reflexionsfrage AM ENDE der Antwort ist gleichzeitig die Einleitung zu den Optionen. Die Optionen sind mögliche Reaktionen auf diese Frage."
-- Zusatz: "Eine der Optionen soll immer eine offene Einladung sein, frei zu antworten"
+AUFWÄRMPHASE (3-6 Nachrichten):
+→ 120-180 Wörter. Mehr Tiefe, eine Bibelstelle, eine Reflexionsfrage.
 
-**Deployment:** Edge Function wird nach Änderung automatisch deployed.
+VERTIEFUNGSPHASE (7+ Nachrichten):
+→ 150-250 Wörter. Der User ist engagiert. Hier darfst du ausführlicher werden.
+
+KURZE USER-NACHRICHT (unter 20 Zeichen, z.B. "a", "ja", "mehr"):
+→ Antworte kompakt (60-100 Wörter). Der User will schnell weiter.
+
+LANGE USER-NACHRICHT (über 200 Zeichen):
+→ Der User teilt viel. Antworte angemessen ausführlich (150-250 Wörter), aber strukturiert.
+
+MOBILE (screenWidth < 500):
+→ Reduziere das obere Limit um 30%. Max. 2 kurze Absätze vor den Optionen.
+
+GRUNDREGEL: Lieber zu kurz als zu lang. Eine gute Frage am Ende ist wertvoller als ein langer Absatz.
+```
+
+### Technische Umsetzung
+
+**2 Dateien:**
+
+1. **`src/components/BibelBotChat.tsx`** — `screenWidth: window.innerWidth` zum Request-Body hinzufügen (1 Zeile)
+
+2. **`supabase/functions/bibelbot-chat/index.ts`**:
+   - `screenWidth` aus dem Request-Body auslesen
+   - Gesprächstiefe (`messages.length`) und letzte User-Nachricht-Länge berechnen
+   - Dynamischen Längenparagraph im System-Prompt einfügen basierend auf diesen Signalen
+   - Zeile 702 (`ca. 200-400 Wörter`) durch die adaptive Anweisung ersetzen
+   - Edge Function deployen
+
+### Kein Tracking nötig
+
+Alles wird pro Request berechnet — kein neues DB-Schema, kein localStorage, keine zusätzliche Komplexität.
 
