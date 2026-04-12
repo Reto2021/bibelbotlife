@@ -613,6 +613,46 @@
       "prompt_v1": "Bigyan mo ako ng nakapapawing pagod na Salmo para sa sandaling ito.",
       "prompt_v2": "Paano ko mahahanap ang tunay na kapayapaan ayon sa Bibliya?",
       "prompt_v3": "Gabayan mo ako sa isang maikling pagmumuni-muni sa Bibliya."
+    },
+    "quoteofday": {
+      "title": "Sipi ng Araw",
+      "desc": "Isang nakaka-inspire na sipi para pag-isipan",
+      "prompt": "Bigyan mo ako ng isang nakaka-inspire na sipi mula sa Bibliya para sa araw na ito na may maikling paliwanag",
+      "prompt_v1": "Anong sipi sa Bibliya ang partikular na angkop para sa araw na ito?",
+      "prompt_v2": "Bigyan mo ako ng isang nakapagpapatibay na sipi mula sa Mga Awit para sa araw na ito",
+      "prompt_v3": "Anong kawikaan mula sa Bibliya ang nagbibigay sa akin ng bagong pananaw ngayon?"
+    },
+    "thankfulness": {
+      "title": "Pagsasanay sa Pagpapasalamat",
+      "desc": "Tuklasin kung ano ang maaari mong ipagpasalamat",
+      "prompt": "Gabayan mo ako sa isang maikling pagsasanay sa pagpapasalamat. Tulungan mo akong makahanap ng tatlong bagay na ipinagpapasalamat ko ngayon",
+      "prompt_v1": "Tulungan mo akong matuklasan ang pasasalamat sa aking pang-araw-araw na buhay — kahit sa maliliit na bagay",
+      "prompt_v2": "Gusto kong matuto na maging mas mapagpasalamat. Bigyan mo ako ng praktikal na pagsasanay para dito",
+      "prompt_v3": "Ano ang sinasabi ng Bibliya tungkol sa pasasalamat at paano ko ito maisasagawa ngayon?"
+    },
+    "biblesays": {
+      "title": "Ano ang Sinasabi ng Bibliya tungkol sa...",
+      "desc": "Alamin kung ano ang sinasabi ng Bibliya tungkol sa iyong paksa",
+      "prompt": "Gusto kong malaman kung ano ang sinasabi ng Bibliya tungkol sa isang partikular na paksa. Tanungin mo ako kung anong paksa ang interesado ako!",
+      "prompt_v1": "Ano ang sinasabi ng Bibliya tungkol sa pagkakaibigan?",
+      "prompt_v2": "Ano ang sinasabi ng Bibliya tungkol sa pamamahala ng pera?",
+      "prompt_v3": "Ano ang sinasabi ng Bibliya tungkol sa pag-ibig at relasyon?"
+    },
+    "morningstart": {
+      "title": "Magandang Umaga!",
+      "desc": "Simulan ang araw nang positibo",
+      "prompt": "Batiin mo ako ng magandang umaga at bigyan mo ako ng nakapagpapatibay na kaisipan para sa pagsisimula ng araw",
+      "prompt_v1": "Bigyan mo ako ng maikling inspirasyon sa umaga na may angkop na talata sa Bibliya",
+      "prompt_v2": "Paano ko sisimulan ang aking araw nang may layunin at positibo ngayon?",
+      "prompt_v3": "Bigyan mo ako ng nakapagpapatibay na pagbati sa umaga na may kaisipan mula sa Bibliya"
+    },
+    "inspiration": {
+      "title": "Bigyan Mo Ako ng Inspirasyon",
+      "desc": "Hayaan mong sorpresahin ka at bigyan ng inspirasyon",
+      "prompt": "Sorpresahin mo ako ng isang bagay na nakaka-inspire — maaaring ito ay isang kaisipan, isang kuwento, o isang pananaw mula sa Bibliya",
+      "prompt_v1": "Sabihin mo sa akin ang isang nakaka-inspire na kuwento mula sa Bibliya na may kaugnayan ngayon",
+      "prompt_v2": "Bigyan mo ako ng hindi inaasahang, nakaka-inspire na ideya",
+      "prompt_v3": "Anong biblikal na personalidad ang maaaring magbigay sa akin ng inspirasyon ngayon at bakit?"
     }
   },
   "lifeWheel": {

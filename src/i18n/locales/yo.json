@@ -613,6 +613,46 @@
       "prompt_v1": "Fún mi ní Sáàmù tó ń tùnù fún àkókò yìí.",
       "prompt_v2": "Báwo ni mo ṣe lè rí ìsinmi tòótọ́ gẹ́gẹ́ bí Bíbélì?",
       "prompt_v3": "Tọ́ mi sọ́nà nípasẹ̀ àṣàrò Bíbélì kúkúrú kan."
+    },
+    "quoteofday": {
+      "title": "Ọ̀rọ̀ Ọjọ́",
+      "desc": "Ọ̀rọ̀ ìṣírí fún àròjinlẹ̀",
+      "prompt": "Fún mi ní ọ̀rọ̀ ìṣírí láti inú Bíbélì fún òní pẹ̀lú àlàyé kúkúrú kan",
+      "prompt_v1": "Èwo nínú àwọn ọ̀rọ̀ Bíbélì ló bá ọjọ́ òní mu jùlọ?",
+      "prompt_v2": "Fún mi ní ọ̀rọ̀ ìṣírí láti inú Sáàmù fún òní",
+      "prompt_v3": "Ọ̀rọ̀ òwe wo láti inú Bíbélì ló lè fún mi ní ìran tuntun lónìí?"
+    },
+    "thankfulness": {
+      "title": "Ìdánilẹ́kọ̀ọ́ Ọpẹ́",
+      "desc": "Ṣe àwárí ohun tí o lè dúpẹ́ fún",
+      "prompt": "Darí mi nínú ìdánilẹ́kọ̀ọ́ ọpẹ́ kúkúrú kan. Ràn mí lọ́wọ́ láti wá ohun mẹ́ta tí mo lè dúpẹ́ fún lónìí",
+      "prompt_v1": "Ràn mí lọ́wọ́ láti ṣàwárí ọpẹ́ nínú ìgbésí ayé mi ojoojúmọ́ — àní nínú àwọn ohun kékeré pẹ̀lú",
+      "prompt_v2": "Mo fẹ́ kọ́ bí mo ṣe lè dúpẹ́ sí i. Fún mi ní ìdánilẹ́kọ̀ọ́ tó wúlò fún èyí",
+      "prompt_v3": "Kí ni Bíbélì sọ nípa ọpẹ́ àti báwo ni mo ṣe lè fi sílò lónìí?"
+    },
+    "biblesays": {
+      "title": "Kí ni Bíbélì sọ nípa...",
+      "desc": "Ṣe àwárí ohun tí Bíbélì sọ nípa kókó ọ̀rọ̀ rẹ",
+      "prompt": "Mo fẹ́ mọ ohun tí Bíbélì sọ nípa kókó ọ̀rọ̀ kan pàtó. Béèrè lọ́wọ́ mi kókó ọ̀rọ̀ wo ni ó fẹ́ mọ̀!",
+      "prompt_v1": "Kí ni Bíbélì sọ nípa ọ̀rẹ́?",
+      "prompt_v2": "Kí ni Bíbélì sọ nípa bí a ṣe ń lo owó?",
+      "prompt_v3": "Kí ni Bíbélì sọ nípa ìfẹ́ àti ìbáṣepọ̀?"
+    },
+    "morningstart": {
+      "title": "Ẹ kú àárọ̀!",
+      "desc": "Bẹ̀rẹ̀ ọjọ́ rẹ pẹ̀lú ìrètí",
+      "prompt": "Kí mi ní ẹ kú àárọ̀, kí o sì fún mi ní èrò ìṣírí fún ìbẹ̀rẹ̀ ọjọ́",
+      "prompt_v1": "Fún mi ní ìṣírí àárọ̀ kúkúrú pẹ̀lú ẹsẹ Bíbélì tó bá a mu",
+      "prompt_v2": "Báwo ni mo ṣe lè bẹ̀rẹ̀ ọjọ́ mi lónìí pẹ̀lú ìmọ̀ àti ìrètí?",
+      "prompt_v3": "Fún mi ní ìkíni àárọ̀ ìṣírí pẹ̀lú èrò láti inú Bíbélì"
+    },
+    "inspiration": {
+      "title": "Fún mi ní ìmísí",
+      "desc": "Jẹ́ kí ó yà ọ́ lẹ́nu, kí o sì fún ọ ní ìmísí",
+      "prompt": "Yà mí lẹ́nu pẹ̀lú ohun kan tó fúnni ní ìmísí — èyí lè jẹ́ èrò, ìtàn tàbí òye láti inú Bíbélì",
+      "prompt_v1": "Sọ ìtàn ìṣírí kan fún mi láti inú Bíbélì tó wúlò lónìí",
+      "prompt_v2": "Fún mi ní èrò ìṣírí tí kò sí nílò",
+      "prompt_v3": "Èwo nínú àwọn ènìyàn Bíbélì ló lè fún mi ní ìmísí lónìí àti ìdí rẹ̀?"
     }
   },
   "lifeWheel": {

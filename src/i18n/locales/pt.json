@@ -578,6 +578,46 @@
       "prompt_v1": "Dê-me um salmo reconfortante para este momento.",
       "prompt_v2": "Como posso encontrar verdadeira paz de acordo com a Bíblia?",
       "prompt_v3": "Guie-me através de uma breve meditação bíblica."
+    },
+    "quoteofday": {
+      "title": "Citação do dia",
+      "desc": "Uma citação inspiradora para refletir",
+      "prompt": "Dê-me uma citação inspiradora da Bíblia para hoje com uma breve explicação",
+      "prompt_v1": "Qual citação bíblica se encaixa particularmente bem neste dia?",
+      "prompt_v2": "Dê-me uma citação encorajadora dos Salmos para hoje",
+      "prompt_v3": "Qual provérbio da Bíblia me dá uma nova perspectiva hoje?"
+    },
+    "thankfulness": {
+      "title": "Exercício de gratidão",
+      "desc": "Descubra pelo que você pode ser grato",
+      "prompt": "Guie-me através de um breve exercício de gratidão. Ajude-me a encontrar três coisas pelas quais sou grato hoje",
+      "prompt_v1": "Ajude-me a descobrir a gratidão no meu dia a dia — mesmo nas pequenas coisas",
+      "prompt_v2": "Quero aprender a ser mais grato. Dê-me um exercício prático para isso",
+      "prompt_v3": "O que a Bíblia diz sobre a gratidão e como posso aplicá-la hoje?"
+    },
+    "biblesays": {
+      "title": "O que a Bíblia diz sobre...",
+      "desc": "Descubra o que a Bíblia diz sobre o seu tema",
+      "prompt": "Quero saber o que a Bíblia diz sobre um determinado tema. Pergunte-me qual tema me interessa!",
+      "prompt_v1": "O que a Bíblia diz sobre a amizade?",
+      "prompt_v2": "O que a Bíblia diz sobre o gerenciamento de dinheiro?",
+      "prompt_v3": "O que a Bíblia diz sobre o amor e os relacionamentos?"
+    },
+    "morningstart": {
+      "title": "Bom dia!",
+      "desc": "Comece o dia positivamente",
+      "prompt": "Deseje-me um bom dia e dê-me um pensamento encorajador para começar o dia",
+      "prompt_v1": "Dê-me uma breve inspiração matinal com um versículo bíblico adequado",
+      "prompt_v2": "Como posso começar meu dia de forma consciente e positiva hoje?",
+      "prompt_v3": "Dê-me uma saudação matinal encorajadora com um pensamento da Bíblia"
+    },
+    "inspiration": {
+      "title": "Inspire-me",
+      "desc": "Deixe-se surpreender e inspirar",
+      "prompt": "Surpreenda-me com algo inspirador — pode ser um pensamento, uma história ou uma percepção da Bíblia",
+      "prompt_v1": "Conte-me uma história inspiradora da Bíblia que seja relevante hoje",
+      "prompt_v2": "Dê-me um estímulo inesperado e inspirador",
+      "prompt_v3": "Qual personalidade bíblica pode me inspirar hoje e por quê?"
     }
   },
   "lifeWheel": {

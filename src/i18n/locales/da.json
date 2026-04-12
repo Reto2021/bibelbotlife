@@ -575,6 +575,46 @@
       "prompt_v1": "Giv mig en beroligende salme til dette øjeblik.",
       "prompt_v2": "Hvordan kan jeg ifølge Bibelen finde ægte ro?",
       "prompt_v3": "Før mig gennem en kort bibelsk meditation."
+    },
+    "quoteofday": {
+      "title": "Dagens citat",
+      "desc": "Et inspirerende citat til eftertanke",
+      "prompt": "Giv mig et inspirerende citat fra Bibelen til i dag med en kort forklaring",
+      "prompt_v1": "Hvilket bibelcitat passer særligt godt til denne dag?",
+      "prompt_v2": "Giv mig et opmuntrende citat fra Salmernes Bog til i dag",
+      "prompt_v3": "Hvilket ordsprog fra Bibelen giver mig et nyt perspektiv i dag?"
+    },
+    "thankfulness": {
+      "title": "Taknemmelighedsøvelse",
+      "desc": "Opdag, hvad du kan være taknemmelig for",
+      "prompt": "Led mig gennem en kort taknemmelighedsøvelse. Hjælp mig med at finde tre ting, jeg er taknemmelig for i dag",
+      "prompt_v1": "Hjælp mig med at opdage taknemmelighed i min hverdag – også i de små ting",
+      "prompt_v2": "Jeg vil gerne lære at være mere taknemmelig. Giv mig en praktisk øvelse til det",
+      "prompt_v3": "Hvad siger Bibelen om taknemmelighed, og hvordan kan jeg omsætte det i dag?"
+    },
+    "biblesays": {
+      "title": "Hvad siger Bibelen om...",
+      "desc": "Find ud af, hvad Bibelen siger om dit emne",
+      "prompt": "Jeg vil gerne vide, hvad Bibelen siger om et bestemt emne. Spørg mig, hvilket emne der interesserer mig!",
+      "prompt_v1": "Hvad siger Bibelen om venskab?",
+      "prompt_v2": "Hvad siger Bibelen om håndtering af penge?",
+      "prompt_v3": "Hvad siger Bibelen om kærlighed og relationer?"
+    },
+    "morningstart": {
+      "title": "Godmorgen!",
+      "desc": "Start dagen positivt",
+      "prompt": "Ønsk mig godmorgen og giv mig en opmuntrende tanke til at starte dagen med",
+      "prompt_v1": "Giv mig en kort morgenimpuls med et passende bibelvers",
+      "prompt_v2": "Hvordan kan jeg starte min dag bevidst og positivt i dag?",
+      "prompt_v3": "Giv mig en opmuntrende morgenhilsen med en tanke fra Bibelen"
+    },
+    "inspiration": {
+      "title": "Inspirer mig",
+      "desc": "Lad dig overraske og inspirere",
+      "prompt": "Overrask mig med noget inspirerende – det kan være en tanke, en historie eller en indsigt fra Bibelen",
+      "prompt_v1": "Fortæl mig en inspirerende historie fra Bibelen, der er relevant i dag",
+      "prompt_v2": "Giv mig en uventet, inspirerende tankevækker",
+      "prompt_v3": "Hvilken bibelsk personlighed kan inspirere mig i dag, og hvorfor?"
     }
   },
   "lifeWheel": {

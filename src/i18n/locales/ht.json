@@ -575,6 +575,46 @@
       "prompt_v1": "Ban m yon sòm kalman pou moman sa a.",
       "prompt_v2": "Kijan mwen ka jwenn vrè lapè dapre Bib la?",
       "prompt_v3": "Gide m atravè yon kout meditasyon biblik."
+    },
+    "quoteofday": {
+      "title": "Sitasyon jounen an",
+      "desc": "Yon sitasyon enspirasyon pou reflechi",
+      "prompt": "Ban m yon sitasyon enspirasyon nan Bib la pou jodi a ak yon ti eksplikasyon",
+      "prompt_v1": "Ki sitasyon biblik ki pi apwopriye pou jodi a?",
+      "prompt_v2": "Ban m yon sitasyon ankourajan nan Sòm yo pou jodi a",
+      "prompt_v3": "Ki pwovèb nan Bib la ki ka ban m yon nouvo pèspektiv jodi a?"
+    },
+    "thankfulness": {
+      "title": "Egzèsis rekonesans",
+      "desc": "Dekouvri sa ou ka rekonesan pou",
+      "prompt": "Gide m nan yon ti egzèsis rekonesans. Ede m jwenn twa bagay mwen rekonesan pou jodi a",
+      "prompt_v1": "Ede m dekouvri rekonesans nan lavi chak jou mwen — menm nan ti bagay yo",
+      "prompt_v2": "Mwen vle aprann gen plis rekonesans. Ban m yon egzèsis pratik pou sa",
+      "prompt_v3": "Kisa Bib la di sou rekonesans e kijan mwen ka aplike sa jodi a?"
+    },
+    "biblesays": {
+      "title": "Kisa Bib la di sou...",
+      "desc": "Chèche konnen kisa Bib la di sou sijè ou a",
+      "prompt": "Mwen vle konnen kisa Bib la di sou yon sijè espesifik. Mande m ki sijè ki enterese m!",
+      "prompt_v1": "Kisa Bib la di sou amitye?",
+      "prompt_v2": "Kisa Bib la di sou jesyon lajan?",
+      "prompt_v3": "Kisa Bib la di sou lanmou ak relasyon?"
+    },
+    "morningstart": {
+      "title": "Bonjou!",
+      "desc": "Kòmanse jounen an pozitivman",
+      "prompt": "Swete m bonjou epi ban m yon panse ankourajan pou kòmanse jounen an",
+      "prompt_v1": "Ban m yon ti enspirasyon maten ak yon vèsè biblik apwopriye",
+      "prompt_v2": "Kijan mwen ka kòmanse jounen mwen konsyans ak pozitivman jodi a?",
+      "prompt_v3": "Ban m yon bonjou ankourajan ak yon panse ki soti nan Bib la"
+    },
+    "inspiration": {
+      "title": "Enspire m",
+      "desc": "Kite w sipriz ak enspire",
+      "prompt": "Sipriz mwen ak yon bagay enspirasyon — sa ka yon panse, yon istwa oswa yon insight ki soti nan Bib la",
+      "prompt_v1": "Rakonte m yon istwa enspirasyon nan Bib la ki enpòtan jodi a",
+      "prompt_v2": "Ban m yon panse enspirasyon inatandi",
+      "prompt_v3": "Ki pèsonaj biblik ki ka enspire m jodi a e poukisa?"
     }
   },
   "lifeWheel": {

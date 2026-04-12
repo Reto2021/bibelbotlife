@@ -575,6 +575,46 @@
       "prompt_v1": "Daj mi upokojujúci žalm na túto chvíľu.",
       "prompt_v2": "Ako môžem podľa Biblie nájsť skutočný pokoj?",
       "prompt_v3": "Preveď ma krátkou biblickou meditáciou."
+    },
+    "quoteofday": {
+      "title": "Citát dňa",
+      "desc": "Inšpiratívny citát na zamyslenie",
+      "prompt": "Daj mi inšpiratívny citát z Biblie na dnes s krátkym vysvetlením",
+      "prompt_v1": "Ktorý biblický citát sa obzvlášť hodí k dnešnému dňu?",
+      "prompt_v2": "Daj mi povzbudivý citát zo žalmov na dnes",
+      "prompt_v3": "Ktoré príslovie z Biblie mi dnes dá novú perspektívu?"
+    },
+    "thankfulness": {
+      "title": "Cvičenie vďačnosti",
+      "desc": "Objav, za čo môžeš byť vďačný",
+      "prompt": "Preveď ma krátkym cvičením vďačnosti. Pomôž mi nájsť tri veci, za ktoré som dnes vďačný",
+      "prompt_v1": "Pomôž mi objaviť vďačnosť v mojom každodennom živote — aj v maličkostiach",
+      "prompt_v2": "Chcem sa naučiť byť vďačnejší. Daj mi na to praktické cvičenie",
+      "prompt_v3": "Čo hovorí Biblia o vďačnosti a ako to môžem dnes uplatniť?"
+    },
+    "biblesays": {
+      "title": "Čo hovorí Biblia o...",
+      "desc": "Zisti, čo hovorí Biblia o tvojej téme",
+      "prompt": "Chcem vedieť, čo hovorí Biblia o určitej téme. Spýtaj sa ma, ktorá téma ma zaujíma!",
+      "prompt_v1": "Čo hovorí Biblia o priateľstve?",
+      "prompt_v2": "Čo hovorí Biblia o zaobchádzaní s peniazmi?",
+      "prompt_v3": "Čo hovorí Biblia o láske a vzťahoch?"
+    },
+    "morningstart": {
+      "title": "Dobré ráno!",
+      "desc": "Začni deň pozitívne",
+      "prompt": "Popraj mi dobré ráno a daj mi povzbudivú myšlienku na začiatok dňa",
+      "prompt_v1": "Daj mi krátky ranný impulz s vhodným biblickým veršom",
+      "prompt_v2": "Ako môžem dnes začať svoj deň vedome a pozitívne?",
+      "prompt_v3": "Daj mi povzbudivý ranný pozdrav s myšlienkou z Biblie"
+    },
+    "inspiration": {
+      "title": "Inšpiruj ma",
+      "desc": "Nechaj sa prekvapiť a inšpirovať",
+      "prompt": "Prekvap ma niečím inšpiratívnym — môže to byť myšlienka, príbeh alebo poznatok z Biblie",
+      "prompt_v1": "Povedz mi inšpiratívny príbeh z Biblie, ktorý je dnes relevantný",
+      "prompt_v2": "Daj mi neočakávaný, inšpiratívny podnet na zamyslenie",
+      "prompt_v3": "Ktorá biblická osobnosť ma dnes môže inšpirovať a prečo?"
     }
   },
   "lifeWheel": {

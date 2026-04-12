@@ -613,6 +613,46 @@
       "prompt_v1": "Berikan saya Mazmur yang menenangkan untuk saat ini.",
       "prompt_v2": "Bagaimana saya bisa menemukan kedamaian sejati menurut Alkitab?",
       "prompt_v3": "Bimbing saya melalui meditasi Alkitab singkat."
+    },
+    "quoteofday": {
+      "title": "Kutipan Hari Ini",
+      "desc": "Kutipan inspiratif untuk direnungkan",
+      "prompt": "Berikan saya kutipan inspiratif dari Alkitab untuk hari ini dengan penjelasan singkat",
+      "prompt_v1": "Kutipan Alkitab mana yang sangat cocok untuk hari ini?",
+      "prompt_v2": "Berikan saya kutipan yang menguatkan dari Mazmur untuk hari ini",
+      "prompt_v3": "Amsal dari Alkitab mana yang memberi saya perspektif baru hari ini?"
+    },
+    "thankfulness": {
+      "title": "Latihan Syukur",
+      "desc": "Temukan apa yang bisa Anda syukuri",
+      "prompt": "Bimbing saya melalui latihan syukur singkat. Bantu saya menemukan tiga hal yang saya syukuri hari ini",
+      "prompt_v1": "Bantu saya menemukan rasa syukur dalam kehidupan sehari-hari saya — bahkan dalam hal-hal kecil",
+      "prompt_v2": "Saya ingin belajar untuk lebih bersyukur. Berikan saya latihan praktis untuk itu",
+      "prompt_v3": "Apa yang Alkitab katakan tentang rasa syukur dan bagaimana saya bisa menerapkannya hari ini?"
+    },
+    "biblesays": {
+      "title": "Apa Kata Alkitab tentang...",
+      "desc": "Cari tahu apa yang Alkitab katakan tentang topik Anda",
+      "prompt": "Saya ingin tahu apa yang Alkitab katakan tentang topik tertentu. Tanyakan kepada saya topik apa yang menarik minat saya!",
+      "prompt_v1": "Apa kata Alkitab tentang persahabatan?",
+      "prompt_v2": "Apa kata Alkitab tentang pengelolaan uang?",
+      "prompt_v3": "Apa kata Alkitab tentang cinta dan hubungan?"
+    },
+    "morningstart": {
+      "title": "Selamat Pagi!",
+      "desc": "Mulai hari Anda dengan positif",
+      "prompt": "Ucapkan selamat pagi kepada saya dan berikan saya pemikiran yang menguatkan untuk memulai hari",
+      "prompt_v1": "Berikan saya dorongan pagi singkat dengan ayat Alkitab yang sesuai",
+      "prompt_v2": "Bagaimana saya bisa memulai hari saya dengan sadar dan positif hari ini?",
+      "prompt_v3": "Berikan saya salam pagi yang menguatkan dengan pemikiran dari Alkitab"
+    },
+    "inspiration": {
+      "title": "Inspirasi Saya",
+      "desc": "Biarkan diri Anda terkejut dan terinspirasi",
+      "prompt": "Kejutkan saya dengan sesuatu yang inspiratif — itu bisa berupa pemikiran, cerita, atau wawasan dari Alkitab",
+      "prompt_v1": "Ceritakan kepada saya kisah inspiratif dari Alkitab yang relevan hari ini",
+      "prompt_v2": "Berikan saya pemikiran inspiratif yang tak terduga",
+      "prompt_v3": "Tokoh Alkitab mana yang bisa menginspirasi saya hari ini dan mengapa?"
     }
   },
   "lifeWheel": {

@@ -575,6 +575,46 @@
       "prompt_v1": "Adj egy megnyugtató zsoltárt erre a pillanatra.",
       "prompt_v2": "Hogyan találhatok igazi nyugalmat a Biblia szerint?",
       "prompt_v3": "Vezess végig egy rövid bibliai meditáción."
+    },
+    "quoteofday": {
+      "title": "A nap idézete",
+      "desc": "Egy inspiráló idézet elgondolkodásra",
+      "prompt": "Adj nekem egy inspiráló idézetet a Bibliából mára, rövid magyarázattal",
+      "prompt_v1": "Melyik bibliai idézet illik különösen jól ehhez a naphoz?",
+      "prompt_v2": "Adj nekem egy bátorító idézetet a Zsoltárokból mára",
+      "prompt_v3": "Melyik bibliai mondás ad nekem új perspektívát ma?"
+    },
+    "thankfulness": {
+      "title": "Hála gyakorlat",
+      "desc": "Fedezd fel, miért lehetsz hálás",
+      "prompt": "Vezess végig egy rövid hála gyakorlaton. Segíts megtalálni három dolgot, amiért ma hálás lehetek",
+      "prompt_v1": "Segíts felfedezni a hálát a mindennapjaimban – még a kis dolgokban is",
+      "prompt_v2": "Szeretnék hálásabb lenni. Adj nekem egy gyakorlati feladatot ehhez",
+      "prompt_v3": "Mit mond a Biblia a hálaadásról, és hogyan tudom ezt ma megvalósítani?"
+    },
+    "biblesays": {
+      "title": "Mit mond a Biblia...",
+      "desc": "Tudd meg, mit mond a Biblia a témádról",
+      "prompt": "Szeretném tudni, mit mond a Biblia egy bizonyos témáról. Kérdezd meg, melyik téma érdekel!",
+      "prompt_v1": "Mit mond a Biblia a barátságról?",
+      "prompt_v2": "Mit mond a Biblia a pénz kezeléséről?",
+      "prompt_v3": "Mit mond a Biblia a szerelemről és a kapcsolatokról?"
+    },
+    "morningstart": {
+      "title": "Jó reggelt!",
+      "desc": "Kezdd pozitívan a napot",
+      "prompt": "Kívánj nekem jó reggelt, és adj egy bátorító gondolatot a nap kezdetéhez",
+      "prompt_v1": "Adj nekem egy rövid reggeli impulzust egy megfelelő bibliai verssel",
+      "prompt_v2": "Hogyan kezdhetem tudatosan és pozitívan a napomat ma?",
+      "prompt_v3": "Adj nekem egy bátorító reggeli üdvözletet egy bibliai gondolattal"
+    },
+    "inspiration": {
+      "title": "Inspirálj engem",
+      "desc": "Hagyd, hogy meglepjenek és inspiráljanak",
+      "prompt": "Lepj meg valami inspirálóval – ez lehet egy gondolat, egy történet vagy egy bibliai felismerés",
+      "prompt_v1": "Mesélj nekem egy inspiráló bibliai történetet, ami ma is aktuális",
+      "prompt_v2": "Adj nekem egy váratlan, inspiráló gondolatébresztőt",
+      "prompt_v3": "Melyik bibliai személyiség inspirálhat engem ma és miért?"
     }
   },
   "lifeWheel": {

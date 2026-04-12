@@ -613,6 +613,46 @@
       "prompt_v1": "Dă-mi un psalm liniștitor pentru acest moment.",
       "prompt_v2": "Cum pot găsi liniștea adevărată conform Bibliei?",
       "prompt_v3": "Ghidează-mă printr-o scurtă meditație biblică."
+    },
+    "quoteofday": {
+      "title": "Citatul zilei",
+      "desc": "Un citat inspirațional pentru reflecție",
+      "prompt": "Dă-mi un citat inspirațional din Biblie pentru astăzi, cu o scurtă explicație",
+      "prompt_v1": "Ce citat biblic se potrivește cel mai bine acestei zile?",
+      "prompt_v2": "Dă-mi un citat încurajator din Psalmi pentru astăzi",
+      "prompt_v3": "Ce proverb din Biblie îmi oferă o nouă perspectivă astăzi?"
+    },
+    "thankfulness": {
+      "title": "Exercițiu de recunoștință",
+      "desc": "Descoperă pentru ce poți fi recunoscător",
+      "prompt": "Ghidează-mă printr-un scurt exercițiu de recunoștință. Ajută-mă să găsesc trei lucruri pentru care sunt recunoscător astăzi",
+      "prompt_v1": "Ajută-mă să descopăr recunoștința în viața mea de zi cu zi — chiar și în lucrurile mici",
+      "prompt_v2": "Vreau să învăț să fiu mai recunoscător. Dă-mi un exercițiu practic pentru asta",
+      "prompt_v3": "Ce spune Biblia despre recunoștință și cum pot aplica asta astăzi?"
+    },
+    "biblesays": {
+      "title": "Ce spune Biblia despre...",
+      "desc": "Află ce spune Biblia despre subiectul tău",
+      "prompt": "Vreau să știu ce spune Biblia despre un anumit subiect. Întreabă-mă ce subiect mă interesează!",
+      "prompt_v1": "Ce spune Biblia despre prietenie?",
+      "prompt_v2": "Ce spune Biblia despre gestionarea banilor?",
+      "prompt_v3": "Ce spune Biblia despre dragoste și relații?"
+    },
+    "morningstart": {
+      "title": "Bună dimineața!",
+      "desc": "Începe-ți ziua pozitiv",
+      "prompt": "Urează-mi bună dimineața și dă-mi un gând încurajator pentru a începe ziua",
+      "prompt_v1": "Dă-mi un scurt impuls de dimineață cu un verset biblic potrivit",
+      "prompt_v2": "Cum pot să-mi încep ziua de astăzi conștient și pozitiv?",
+      "prompt_v3": "Oferă-mi un salut de dimineață încurajator cu un gând din Biblie"
+    },
+    "inspiration": {
+      "title": "Inspiră-mă",
+      "desc": "Lasă-te surprins și inspirat",
+      "prompt": "Surprinde-mă cu ceva inspirațional — poate fi un gând, o poveste sau o perspectivă din Biblie",
+      "prompt_v1": "Spune-mi o poveste inspirațională din Biblie care este relevantă astăzi",
+      "prompt_v2": "Dă-mi o idee neașteptată și inspirațională",
+      "prompt_v3": "Ce personalitate biblică mă poate inspira astăzi și de ce?"
     }
   },
   "lifeWheel": {

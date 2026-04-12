@@ -613,6 +613,46 @@
       "prompt_v1": "Nipe Zaburi ya kutuliza kwa wakati huu.",
       "prompt_v2": "Ninawezaje kupata amani ya kweli kulingana na Biblia?",
       "prompt_v3": "Niongoze kupitia tafakari fupi ya kibiblia."
+    },
+    "quoteofday": {
+      "title": "Nukuu ya Siku",
+      "desc": "Nukuu ya kutia moyo ya kutafakari",
+      "prompt": "Nipe nukuu ya kutia moyo kutoka kwa Biblia kwa leo na maelezo mafupi",
+      "prompt_v1": "Ni nukuu gani ya Biblia inayofaa sana kwa siku hii?",
+      "prompt_v2": "Nipe nukuu ya kutia moyo kutoka kwa Zaburi kwa leo",
+      "prompt_v3": "Ni methali gani kutoka kwa Biblia inanipa mtazamo mpya leo?"
+    },
+    "thankfulness": {
+      "title": "Zoezi la Shukrani",
+      "desc": "Gundua unachoweza kushukuru",
+      "prompt": "Niongoze kupitia zoezi fupi la shukrani. Nisaidie kupata mambo matatu ninayoshukuru leo",
+      "prompt_v1": "Nisaidie kugundua shukrani katika maisha yangu ya kila siku — hata katika mambo madogo",
+      "prompt_v2": "Ninataka kujifunza kushukuru zaidi. Nipe zoezi la kivitendo",
+      "prompt_v3": "Biblia inasema nini kuhusu shukrani na ninawezaje kuitumia leo?"
+    },
+    "biblesays": {
+      "title": "Biblia inasema nini kuhusu...",
+      "desc": "Gundua Biblia inasema nini kuhusu mada yako",
+      "prompt": "Ninataka kujua Biblia inasema nini kuhusu mada fulani. Niulize ni mada gani inanivutia!",
+      "prompt_v1": "Biblia inasema nini kuhusu urafiki?",
+      "prompt_v2": "Biblia inasema nini kuhusu usimamizi wa pesa?",
+      "prompt_v3": "Biblia inasema nini kuhusu upendo na mahusiano?"
+    },
+    "morningstart": {
+      "title": "Habari za asubuhi!",
+      "desc": "Anza siku kwa chanya",
+      "prompt": "Nitakie asubuhi njema na unipe wazo la kutia moyo kwa kuanza siku",
+      "prompt_v1": "Nipe msukumo mfupi wa asubuhi na aya inayofaa ya Biblia",
+      "prompt_v2": "Ninawezaje kuanza siku yangu leo kwa uangalifu na chanya?",
+      "prompt_v3": "Nipe salamu ya asubuhi yenye kutia moyo na wazo kutoka kwa Biblia"
+    },
+    "inspiration": {
+      "title": "Nitie moyo",
+      "desc": "Acha ushangazwe na kutiwa moyo",
+      "prompt": "Nishangaze na kitu cha kutia moyo — inaweza kuwa wazo, hadithi au ufahamu kutoka kwa Biblia",
+      "prompt_v1": "Nisimulie hadithi ya kutia moyo kutoka kwa Biblia ambayo inafaa leo",
+      "prompt_v2": "Nipe msukumo usiotarajiwa, wenye kutia moyo",
+      "prompt_v3": "Ni mtu gani wa kibiblia anaweza kunipa msukumo leo na kwa nini?"
     }
   },
   "lifeWheel": {

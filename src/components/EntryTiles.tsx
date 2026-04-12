@@ -21,12 +21,17 @@ const allTiles: TileConfig[] = [
   // Casual / curiosity-driven (front)
   { emoji: "🤔", key: "namequiz", accentClass: "bg-primary", bgClass: "bg-card" },
   { emoji: "☕", key: "dailywisdom", accentClass: "bg-primary", bgClass: "bg-card" },
+  { emoji: "🌅", key: "morningstart", accentClass: "bg-secondary", bgClass: "bg-card" },
   { emoji: "🎲", key: "funfact", accentClass: "bg-secondary", bgClass: "bg-card" },
   { emoji: "💡", key: "lifehack", accentClass: "bg-primary", bgClass: "bg-card" },
   { emoji: "🌟", key: "strengths", accentClass: "bg-secondary", bgClass: "bg-card" },
+  { emoji: "✨", key: "inspiration", accentClass: "bg-primary", bgClass: "bg-card" },
   { emoji: "🎡", key: "lifewheel", accentClass: "bg-gradient-to-r from-primary to-secondary", bgClass: "bg-card", special: "lifewheel" },
   { emoji: "👨‍👩‍👧", key: "family", accentClass: "bg-primary", bgClass: "bg-card" },
   { emoji: "😴", key: "relax", accentClass: "bg-secondary", bgClass: "bg-card" },
+  { emoji: "📜", key: "quoteofday", accentClass: "bg-primary", bgClass: "bg-card" },
+  { emoji: "🙏", key: "thankfulness", accentClass: "bg-secondary", bgClass: "bg-card" },
+  { emoji: "❓", key: "biblesays", accentClass: "bg-primary", bgClass: "bg-card" },
   // Positive / lighter
   { emoji: "🙌", key: "gratitude", accentClass: "bg-primary", bgClass: "bg-card" },
   { emoji: "🎊", key: "joy", accentClass: "bg-secondary", bgClass: "bg-card" },

@@ -575,6 +575,46 @@
       "prompt_v1": "Nye m Abụ Ọma na-enye obi iru ala maka oge a.",
       "prompt_v2": "Olee otú m ga-esi chọta ezi udo dị ka Baịbụl si kwuo?",
       "prompt_v3": "Duru m site na ntụgharị uche Baịbụl dị mkpirikpi."
+    },
+    "quoteofday": {
+      "title": "Okwu nke ụbọchị",
+      "desc": "Okwu na-akpali akpali maka ịtụgharị uche",
+      "prompt": "Nye m okwu na-akpali akpali site na Bible maka taa na nkọwa dị mkpirikpi",
+      "prompt_v1": "Olee okwu Bible kacha mma maka ụbọchị a?",
+      "prompt_v2": "Nye m okwu na-agba ume site na Abụ Ọma maka taa",
+      "prompt_v3": "Olee ilu si na Bible ga-enye m echiche ọhụrụ taa?"
+    },
+    "thankfulness": {
+      "title": "Omume ekele",
+      "desc": "Chọpụta ihe ị ga-ekele maka ya",
+      "prompt": "Duru m site na omume ekele dị mkpirikpi. Nyere m aka ịchọta ihe atọ m ga-ekele maka taa",
+      "prompt_v1": "Nyere m aka ịchọta ekele n'ime ndụ m kwa ụbọchị — ọbụna n'ime obere ihe",
+      "prompt_v2": "Achọrọ m ịmụta ịbụ onye nwere ekele karịa. Nye m omume bara uru maka nke ahụ",
+      "prompt_v3": "Gịnị ka Bible na-ekwu banyere ekele na olee otú m ga-esi tinye nke ahụ n'ọrụ taa?"
+    },
+    "biblesays": {
+      "title": "Gịnị ka Bible na-ekwu banyere...",
+      "desc": "Chọpụta ihe Bible na-ekwu banyere isiokwu gị",
+      "prompt": "Achọrọ m ịma ihe Bible na-ekwu banyere otu isiokwu. Jụọ m isiokwu m nwere mmasị na ya!",
+      "prompt_v1": "Gịnị ka Bible na-ekwu banyere ọbụbụenyi?",
+      "prompt_v2": "Gịnị ka Bible na-ekwu banyere njikwa ego?",
+      "prompt_v3": "Gịnị ka Bible na-ekwu banyere ịhụnanya na mmekọrịta?"
+    },
+    "morningstart": {
+      "title": "Ụtụtụ ọma!",
+      "desc": "Bido ụbọchị gị n'ụzọ dị mma",
+      "prompt": "Chọọ m ụtụtụ ọma ma nye m echiche na-agba ume maka mmalite nke ụbọchị",
+      "prompt_v1": "Nye m mkpirikpi mkpali ụtụtụ na amaokwu Bible kwesịrị ekwesị",
+      "prompt_v2": "Olee otú m ga-esi bido ụbọchị m taa n'ụzọ dị mma na nke maara ihe?",
+      "prompt_v3": "Nye m ekele ụtụtụ na-agba ume na echiche sitere na Bible"
+    },
+    "inspiration": {
+      "title": "Kpalie m",
+      "desc": "Ka ihe tụrụ gị n'anya ma kpalie gị",
+      "prompt": "Tụrụ m n'anya na ihe na-akpali akpali — nke ahụ nwere ike ịbụ echiche, akụkọ ma ọ bụ nghọta sitere na Bible",
+      "prompt_v1": "Kọọrọ m akụkọ na-akpali akpali sitere na Bible nke dị mkpa taa",
+      "prompt_v2": "Nye m echiche na-akpali akpali na-atụghị anya ya",
+      "prompt_v3": "Olee onye Bible nwere ike ịkpali m taa na ihe kpatara ya?"
     }
   },
   "lifeWheel": {
