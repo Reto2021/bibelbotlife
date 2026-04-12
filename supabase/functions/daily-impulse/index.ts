@@ -65,11 +65,37 @@ WICHTIG – Grammatikregeln für den Teaser:
 - SCHLECHTE Teaser (NIEMALS so schreiben): "Vergessen Gottes deine Fehler wirklich?", "Lohnen des Vertrauens sich?", "Verändern Gottes Worte alles?"
 - Prüfe jeden Teaser: Würde ein Schweizer diesen Satz natürlich so sagen? Wenn nein, formuliere um.`;
 
-// Major Christian holidays (approximate, some move yearly)
+// Compute Easter Sunday for a given year (Anonymous Gregorian algorithm)
+function computeEaster(year: number): Date {
+  const a = year % 19;
+  const b = Math.floor(year / 100);
+  const c = year % 100;
+  const d = Math.floor(b / 4);
+  const e = b % 4;
+  const f = Math.floor((b + 8) / 25);
+  const g = Math.floor((b - f + 1) / 3);
+  const h = (19 * a + b - d - g + 15) % 30;
+  const i = Math.floor(c / 4);
+  const k = c % 4;
+  const l = (32 + 2 * e + 2 * i - h - k) % 7;
+  const m = Math.floor((a + 11 * h + 22 * l) / 451);
+  const month = Math.floor((h + l - 7 * m + 114) / 31);
+  const day = ((h + l - 7 * m + 114) % 31) + 1;
+  return new Date(year, month - 1, day);
+}
+
+function daysBetween(a: Date, b: Date): number {
+  const msPerDay = 86400000;
+  const utcA = Date.UTC(a.getFullYear(), a.getMonth(), a.getDate());
+  const utcB = Date.UTC(b.getFullYear(), b.getMonth(), b.getDate());
+  return Math.round((utcA - utcB) / msPerDay);
+}
+
 function getChurchContext(date: Date): string {
   const month = date.getMonth() + 1;
   const day = date.getDate();
   const dayOfWeek = date.getDay();
+  const year = date.getFullYear();
 
   // Fixed holidays
   if (month === 12 && day >= 1 && day <= 24) return "Adventszeit – Vorbereitung auf Weihnachten";
@@ -83,10 +109,25 @@ function getChurchContext(date: Date): string {
   if (month === 11 && day === 1) return "Allerheiligen";
   if (month === 11 && day >= 20) return "Ewigkeitssonntag / Totengedenken naht";
 
-  // Seasonal context
-  if (month >= 3 && month <= 4) return "Frühling / mögliche Fastenzeit oder Osterzeit";
-  if (month === 5) return "Auffahrt / Pfingsten naht";
-  if (month === 6) return "Pfingstzeit / Sommeranfang";
+  // Movable feasts relative to Easter
+  const easter = computeEaster(year);
+  const diff = daysBetween(date, easter); // positive = after Easter, negative = before
+
+  if (diff === 0) return "Ostersonntag – Auferstehung Jesu Christi";
+  if (diff === 1) return "Ostermontag";
+  if (diff === -1) return "Karsamstag – Grabesruhe";
+  if (diff === -2) return "Karfreitag – Kreuzigung Jesu";
+  if (diff === -3) return "Gründonnerstag – Letztes Abendmahl";
+  if (diff === -7) return "Palmsonntag – Einzug in Jerusalem";
+  if (diff >= -6 && diff <= -4) return "Karwoche";
+  if (diff === -46) return "Aschermittwoch – Beginn der Fastenzeit";
+  if (diff > -46 && diff < -7) return "Fastenzeit – Vorbereitung auf Ostern";
+  if (diff === 39) return "Auffahrt / Christi Himmelfahrt";
+  if (diff === 49) return "Pfingstsonntag – Ausgiessung des Heiligen Geistes";
+  if (diff === 50) return "Pfingstmontag";
+  if (diff === 60) return "Fronleichnam";
+  if (diff >= 2 && diff < 39) return "Osterzeit – Freude über die Auferstehung";
+  if (diff >= 40 && diff < 49) return "Zeit zwischen Auffahrt und Pfingsten";
 
   // Sunday
   if (dayOfWeek === 0) return "Sonntag – Tag der Ruhe und Besinnung";
