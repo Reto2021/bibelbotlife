@@ -61,7 +61,7 @@ const zurichParts = (iso: string) => {
       .select("*")
       .gte("created_at", since)
       .order("created_at", { ascending: true })
-      .limit(10000),
+      .limit(50000),
     supabase
       .from("daily_subscribers")
       .select("*"),
