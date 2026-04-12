@@ -1,7 +1,6 @@
 /**
  * Generates a 1080×1080 social sharing tile with Bible verse + BibleBot.Life branding.
- * Features a beautiful background image from Unsplash matched to the verse topic.
- * Pure Canvas API — no server call needed (image from Unsplash Source).
+ * Uses AI-generated background image from edge function, with canvas text overlay.
  */
 
 const SIZE = 1080;
@@ -12,6 +11,8 @@ const CONTENT_W = SIZE - PAD * 2;
 const GOLD = "#C8883A";
 const GOLD_LIGHT = "#E8C088";
 const PETROL = "#3D7A80";
+const BG_CREAM = "#FAF5ED";
+const TEXT_DARK = "#2B3E42";
 
 type ShareTileOptions = {
   verse: string;
@@ -19,57 +20,42 @@ type ShareTileOptions = {
   topic?: string;
   personalNote?: string;
   dark?: boolean;
+  /** Pre-fetched background image URL (from AI generation) */
+  backgroundUrl?: string;
 };
 
-// Map German topics to evocative English search terms for beautiful photos
-const TOPIC_IMAGE_MAP: Record<string, string> = {
-  hoffnung: "golden sunrise mountains hope light",
-  liebe: "warm sunset couple silhouette love",
-  glaube: "cathedral light rays faith spiritual",
-  vergebung: "calm lake reflection peaceful forgiveness",
-  frieden: "peaceful meadow morning mist calm",
-  freude: "joyful sunlight flowers meadow bright",
-  trost: "gentle rain window comfort cozy",
-  mut: "mountain peak summit courage brave",
-  dankbarkeit: "harvest golden wheat field gratitude",
-  geduld: "still water zen stones patience calm",
-  demut: "quiet forest path humble nature",
-  weisheit: "ancient library books wisdom light",
-  treue: "oak tree roots strong faithful",
-  güte: "kind hands gentle warmth care",
-  barmherzigkeit: "open arms embrace mercy compassion",
-  stärke: "rocky cliff ocean waves strength",
-  gemeinschaft: "warm gathering candlelight community",
-  gebet: "hands prayer light spiritual serene",
-  zweifel: "fog clearing morning light doubt hope",
-  angst: "storm passing rainbow courage calm",
-  trauer: "gentle rain autumn leaves memorial",
-  heilung: "spring blossom new growth healing",
-  vertrauen: "child hand trust safety warmth",
-  wahrheit: "clear sky horizon truth clarity",
-  licht: "golden hour sunbeam forest light",
-  segen: "abundant harvest blessing golden field",
-  schöpfung: "majestic nature landscape creation beauty",
-  ewigkeit: "starry night sky eternity universe",
-  erlösung: "dawn breaking darkness redemption light",
-  freiheit: "birds flying open sky freedom",
-};
+const SHARE_IMAGE_FN_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/impulse-share-image`;
 
-function getImageQuery(topic?: string): string {
-  if (!topic) return "peaceful nature golden light spiritual";
-  const key = topic.toLowerCase().replace(/[^a-zäöüß]/g, "");
-  return TOPIC_IMAGE_MAP[key] || `${topic} nature peaceful spiritual golden`;
+/**
+ * Fetch an AI-generated background image URL for the given impulse.
+ * Returns the public URL or null on failure.
+ */
+export async function fetchAIBackgroundUrl(impulse: {
+  verse: string;
+  reference: string;
+  topic?: string;
+  teaser?: string;
+  date: string;
+}): Promise<string | null> {
+  try {
+    const resp = await fetch(SHARE_IMAGE_FN_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        verse: impulse.verse,
+        reference: impulse.reference,
+        topic: impulse.topic || "Faith",
+        teaser: impulse.teaser || "",
+        date: impulse.date,
+      }),
+    });
+    if (!resp.ok) return null;
+    const data = await resp.json();
+    return data.imageUrl || null;
+  } catch {
+    return null;
+  }
 }
-
-// Curated Unsplash photo IDs for reliability (beautiful, emotional, landscape/nature)
-const FALLBACK_PHOTO_IDS = [
-  "WLUHO9A_xik", // golden sunset
-  "ln5drpv_ImI", // morning mist mountains
-  "1Z2niiBPg5A", // golden wheat field
-  "qMehmIyaXvY", // peaceful lake
-  "pZXg_ObLOM4", // warm forest light
-  "iqeG5xA96M4", // sunrise meadow
-];
 
 function loadImage(src: string): Promise<HTMLImageElement> {
   return new Promise((resolve, reject) => {
@@ -85,7 +71,6 @@ function wrapText(
   ctx: CanvasRenderingContext2D,
   text: string,
   maxWidth: number,
-  lineHeight: number
 ): string[] {
   const words = text.split(" ");
   const lines: string[] = [];
@@ -105,7 +90,7 @@ function wrapText(
 }
 
 export function generateShareImage(options: ShareTileOptions): Promise<Blob> {
-  const { verse, reference, topic, personalNote } = options;
+  const { verse, reference, topic, personalNote, backgroundUrl } = options;
 
   return new Promise(async (resolve, reject) => {
     const canvas = document.createElement("canvas");
@@ -113,25 +98,18 @@ export function generateShareImage(options: ShareTileOptions): Promise<Blob> {
     canvas.height = SIZE;
     const ctx = canvas.getContext("2d")!;
 
-    // --- Try to load a background image ---
+    // --- Try to load background image ---
     let bgImage: HTMLImageElement | null = null;
-    try {
-      const query = getImageQuery(topic);
-      // Use Unsplash source for a topic-matched image
-      const imgUrl = `https://source.unsplash.com/1080x1080/?${encodeURIComponent(query)}`;
-      bgImage = await loadImage(imgUrl);
-    } catch {
-      // Try a fallback curated photo
+    if (backgroundUrl) {
       try {
-        const fallbackId = FALLBACK_PHOTO_IDS[Math.floor(Math.random() * FALLBACK_PHOTO_IDS.length)];
-        bgImage = await loadImage(`https://images.unsplash.com/photo-${fallbackId}?w=1080&h=1080&fit=crop&auto=format`);
+        bgImage = await loadImage(backgroundUrl);
       } catch {
-        // No image — continue with solid background
+        console.warn("Failed to load AI background, using fallback");
       }
     }
 
     if (bgImage) {
-      // Draw image covering the full canvas
+      // Draw image covering the full canvas (center crop)
       const imgAspect = bgImage.width / bgImage.height;
       let sx = 0, sy = 0, sw = bgImage.width, sh = bgImage.height;
       if (imgAspect > 1) {
@@ -143,17 +121,17 @@ export function generateShareImage(options: ShareTileOptions): Promise<Blob> {
       }
       ctx.drawImage(bgImage, sx, sy, sw, sh, 0, 0, SIZE, SIZE);
 
-      // Dark overlay for text readability — gradient from bottom
+      // Dark overlay for text readability
       const overlay = ctx.createLinearGradient(0, 0, 0, SIZE);
-      overlay.addColorStop(0, "rgba(26, 42, 45, 0.45)");
-      overlay.addColorStop(0.35, "rgba(26, 42, 45, 0.55)");
-      overlay.addColorStop(0.7, "rgba(26, 42, 45, 0.72)");
-      overlay.addColorStop(1, "rgba(26, 42, 45, 0.85)");
+      overlay.addColorStop(0, "rgba(26, 42, 45, 0.40)");
+      overlay.addColorStop(0.3, "rgba(26, 42, 45, 0.50)");
+      overlay.addColorStop(0.65, "rgba(26, 42, 45, 0.68)");
+      overlay.addColorStop(1, "rgba(26, 42, 45, 0.82)");
       ctx.fillStyle = overlay;
       ctx.fillRect(0, 0, SIZE, SIZE);
     } else {
-      // Fallback: warm cream background
-      ctx.fillStyle = "#FAF5ED";
+      // Fallback: warm cream background with subtle gradient
+      ctx.fillStyle = BG_CREAM;
       ctx.fillRect(0, 0, SIZE, SIZE);
       const grad = ctx.createRadialGradient(SIZE * 0.3, SIZE * 0.2, 0, SIZE * 0.5, SIZE * 0.5, SIZE * 0.8);
       grad.addColorStop(0, "rgba(200,136,58,0.08)");
@@ -163,11 +141,24 @@ export function generateShareImage(options: ShareTileOptions): Promise<Blob> {
     }
 
     const hasImage = !!bgImage;
-    const textColor = hasImage ? "#F5EDE0" : "#2B3E42";
+    const textColor = hasImage ? "#F5EDE0" : TEXT_DARK;
     const textSubtle = hasImage ? "rgba(245,237,224,0.7)" : "rgba(43,62,66,0.65)";
     const goldAlpha = hasImage ? "rgba(200,136,58,0.35)" : "rgba(200,136,58,0.12)";
     const brandSubtle = hasImage ? "rgba(245,237,224,0.5)" : "rgba(43,62,66,0.4)";
     const lineColor = hasImage ? "rgba(200,136,58,0.4)" : "rgba(200,136,58,0.12)";
+
+    // Helper: apply text shadow on image backgrounds
+    const withShadow = (fn: () => void) => {
+      if (hasImage) {
+        ctx.shadowColor = "rgba(0,0,0,0.5)";
+        ctx.shadowBlur = 8;
+        ctx.shadowOffsetY = 2;
+      }
+      fn();
+      ctx.shadowColor = "transparent";
+      ctx.shadowBlur = 0;
+      ctx.shadowOffsetY = 0;
+    };
 
     // --- Decorative top accent line ---
     ctx.fillStyle = GOLD;
@@ -179,7 +170,7 @@ export function generateShareImage(options: ShareTileOptions): Promise<Blob> {
       ctx.font = "600 28px 'Inter', 'Segoe UI', system-ui, sans-serif";
       ctx.fillStyle = GOLD_LIGHT;
       ctx.textBaseline = "top";
-      ctx.fillText(topic.toUpperCase(), PAD, y);
+      withShadow(() => ctx.fillText(topic.toUpperCase(), PAD, y));
       y += 50;
     }
 
@@ -196,38 +187,20 @@ export function generateShareImage(options: ShareTileOptions): Promise<Blob> {
     ctx.fillStyle = textColor;
     ctx.textBaseline = "top";
 
-    // Add text shadow for image backgrounds
-    if (hasImage) {
-      ctx.shadowColor = "rgba(0,0,0,0.5)";
-      ctx.shadowBlur = 8;
-      ctx.shadowOffsetX = 0;
-      ctx.shadowOffsetY = 2;
-    }
-
-    const verseLines = wrapText(ctx, verse, CONTENT_W, verseLineHeight);
-    for (const line of verseLines) {
-      ctx.fillText(line, PAD, y);
-      y += verseLineHeight;
-    }
-
-    // Reset shadow
-    ctx.shadowColor = "transparent";
-    ctx.shadowBlur = 0;
-    ctx.shadowOffsetX = 0;
-    ctx.shadowOffsetY = 0;
+    const verseLines = wrapText(ctx, verse, CONTENT_W);
+    withShadow(() => {
+      for (const line of verseLines) {
+        ctx.fillText(line, PAD, y);
+        y += verseLineHeight;
+      }
+    });
 
     y += 20;
 
     // --- Reference ---
     ctx.font = "500 26px 'Inter', 'Segoe UI', system-ui, sans-serif";
     ctx.fillStyle = hasImage ? GOLD_LIGHT : PETROL;
-    if (hasImage) {
-      ctx.shadowColor = "rgba(0,0,0,0.4)";
-      ctx.shadowBlur = 6;
-    }
-    ctx.fillText(`— ${reference}`, PAD, y);
-    ctx.shadowColor = "transparent";
-    ctx.shadowBlur = 0;
+    withShadow(() => ctx.fillText(`— ${reference}`, PAD, y));
     y += 50;
 
     // --- Personal note ---
@@ -239,7 +212,7 @@ export function generateShareImage(options: ShareTileOptions): Promise<Blob> {
 
       ctx.font = `400 28px 'Inter', 'Segoe UI', system-ui, sans-serif`;
       ctx.fillStyle = textSubtle;
-      const noteLines = wrapText(ctx, personalNote, CONTENT_W, 38);
+      const noteLines = wrapText(ctx, personalNote, CONTENT_W);
       for (const line of noteLines) {
         ctx.fillText(line, PAD, y);
         y += 38;
@@ -255,13 +228,7 @@ export function generateShareImage(options: ShareTileOptions): Promise<Blob> {
     ctx.font = "700 30px 'Inter', 'Segoe UI', system-ui, sans-serif";
     ctx.fillStyle = GOLD;
     ctx.textBaseline = "top";
-    if (hasImage) {
-      ctx.shadowColor = "rgba(0,0,0,0.4)";
-      ctx.shadowBlur = 4;
-    }
-    ctx.fillText("BibleBot.Life", PAD, brandY);
-    ctx.shadowColor = "transparent";
-    ctx.shadowBlur = 0;
+    withShadow(() => ctx.fillText("BibleBot.Life", PAD, brandY));
 
     ctx.font = "400 22px 'Inter', 'Segoe UI', system-ui, sans-serif";
     ctx.fillStyle = brandSubtle;
