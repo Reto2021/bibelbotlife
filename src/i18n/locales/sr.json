@@ -613,6 +613,46 @@
       "prompt_v1": "Dajte mi umirujući psalam za ovaj trenutak.",
       "prompt_v2": "Kako mogu pronaći pravi mir prema Bibliji?",
       "prompt_v3": "Provedite me kroz kratku biblijsku meditaciju."
+    },
+    "quoteofday": {
+      "title": "Citat dana",
+      "desc": "Inspirativni citat za razmišljanje",
+      "prompt": "Daj mi inspirativni citat iz Biblije za danas sa kratkim objašnjenjem",
+      "prompt_v1": "Koji biblijski citat posebno dobro odgovara današnjem danu?",
+      "prompt_v2": "Daj mi ohrabrujući citat iz Psalama za danas",
+      "prompt_v3": "Koja izreka iz Biblije mi danas daje novu perspektivu?"
+    },
+    "thankfulness": {
+      "title": "Vežba zahvalnosti",
+      "desc": "Otkrij na čemu možeš biti zahvalan",
+      "prompt": "Vodi me kroz kratku vežbu zahvalnosti. Pomozi mi da pronađem tri stvari na kojima sam danas zahvalan",
+      "prompt_v1": "Pomozi mi da otkrijem zahvalnost u svom svakodnevnom životu — čak i u malim stvarima",
+      "prompt_v2": "Želim da naučim da budem zahvalniji. Daj mi praktičnu vežbu za to",
+      "prompt_v3": "Šta Biblija kaže o zahvalnosti i kako to mogu primeniti danas?"
+    },
+    "biblesays": {
+      "title": "Šta Biblija kaže o...",
+      "desc": "Saznaj šta Biblija kaže o tvojoj temi",
+      "prompt": "Želim da znam šta Biblija kaže o određenoj temi. Pitaj me koja me tema zanima!",
+      "prompt_v1": "Šta Biblija kaže o prijateljstvu?",
+      "prompt_v2": "Šta Biblija kaže o upravljanju novcem?",
+      "prompt_v3": "Šta Biblija kaže o ljubavi i vezama?"
+    },
+    "morningstart": {
+      "title": "Dobro jutro!",
+      "desc": "Započnite dan pozitivno",
+      "prompt": "Poželi mi dobro jutro i daj mi ohrabrujuću misao za početak dana",
+      "prompt_v1": "Daj mi kratak jutarnji impuls sa odgovarajućim biblijskim stihom",
+      "prompt_v2": "Kako mogu danas svesno i pozitivno započeti dan?",
+      "prompt_v3": "Podari mi ohrabrujući jutarnji pozdrav sa mišlju iz Biblije"
+    },
+    "inspiration": {
+      "title": "Inspiriši me",
+      "desc": "Dozvoli da te iznenade i inspirišu",
+      "prompt": "Iznenadi me nečim inspirativnim — to može biti misao, priča ili uvid iz Biblije",
+      "prompt_v1": "Ispričaj mi inspirativnu priču iz Biblije koja je danas relevantna",
+      "prompt_v2": "Daj mi neočekivani, inspirativni podsticaj za razmišljanje",
+      "prompt_v3": "Koja biblijska ličnost me danas može inspirisati i zašto?"
     }
   },
   "lifeWheel": {

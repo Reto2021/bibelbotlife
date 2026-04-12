@@ -575,6 +575,46 @@
       "prompt_v1": "Anna minulle rauhoittava psalmi tähän hetkeen.",
       "prompt_v2": "Miten Raamatun mukaan voi löytää todellisen rauhan?",
       "prompt_v3": "Ohjaa minut lyhyen raamatullisen meditaation läpi."
+    },
+    "quoteofday": {
+      "title": "Päivän lainaus",
+      "desc": "Inspiroiva lainaus pohdittavaksi",
+      "prompt": "Anna minulle inspiroiva lainaus Raamatusta tälle päivälle lyhyellä selityksellä",
+      "prompt_v1": "Mikä Raamatun lainaus sopii erityisen hyvin tähän päivään?",
+      "prompt_v2": "Anna minulle rohkaiseva lainaus Psalmeista tälle päivälle",
+      "prompt_v3": "Mikä Raamatun sananlasku antaa minulle uuden näkökulman tänään?"
+    },
+    "thankfulness": {
+      "title": "Kiitollisuusharjoitus",
+      "desc": "Löydä asioita, joista voit olla kiitollinen",
+      "prompt": "Ohjaa minua lyhyen kiitollisuusharjoituksen läpi. Auta minua löytämään kolme asiaa, joista olen kiitollinen tänään",
+      "prompt_v1": "Auta minua löytämään kiitollisuutta arjessani – myös pienissä asioissa",
+      "prompt_v2": "Haluan oppia olemaan kiitollisempi. Anna minulle käytännön harjoitus siihen",
+      "prompt_v3": "Mitä Raamattu sanoo kiitollisuudesta ja miten voin toteuttaa sitä tänään?"
+    },
+    "biblesays": {
+      "title": "Mitä Raamattu sanoo...",
+      "desc": "Ota selvää, mitä Raamattu sanoo aiheestasi",
+      "prompt": "Haluan tietää, mitä Raamattu sanoo tietystä aiheesta. Kysy minulta, mikä aihe minua kiinnostaa!",
+      "prompt_v1": "Mitä Raamattu sanoo ystävyydestä?",
+      "prompt_v2": "Mitä Raamattu sanoo rahan käsittelystä?",
+      "prompt_v3": "Mitä Raamattu sanoo rakkaudesta ja ihmissuhteista?"
+    },
+    "morningstart": {
+      "title": "Hyvää huomenta!",
+      "desc": "Aloita päivä positiivisesti",
+      "prompt": "Toivota minulle hyvää huomenta ja anna minulle rohkaiseva ajatus päivän aloitukseen",
+      "prompt_v1": "Anna minulle lyhyt aamuhartaus sopivalla Raamatun jakeella",
+      "prompt_v2": "Miten voin aloittaa päiväni tietoisesti ja positiivisesti tänään?",
+      "prompt_v3": "Anna minulle rohkaiseva aamutervehdys Raamatun ajatuksella"
+    },
+    "inspiration": {
+      "title": "Inspiroi minua",
+      "desc": "Anna itsesi yllättyä ja inspiroitua",
+      "prompt": "Yllätä minut jollakin inspiroivalla – se voi olla ajatus, tarina tai oivallus Raamatusta",
+      "prompt_v1": "Kerro minulle inspiroiva tarina Raamatusta, joka on ajankohtainen tänään",
+      "prompt_v2": "Anna minulle odottamaton, inspiroiva ajatus",
+      "prompt_v3": "Mikä Raamatun henkilö voi inspiroida minua tänään ja miksi?"
     }
   },
   "lifeWheel": {

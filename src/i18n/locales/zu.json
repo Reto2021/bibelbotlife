@@ -613,6 +613,46 @@
       "prompt_v1": "Nginike iHubo eliduduzayo ngalo mzuzu.",
       "prompt_v2": "Ngingathola kanjani ukuthula kwangempela ngokweBhayibheli?",
       "prompt_v3": "Ngihole ekuzindleni okufushane kweBhayibheli."
+    },
+    "quoteofday": {
+      "title": "Isicaphuno Sosuku",
+      "desc": "Isicaphuno esikhuthazayo sokucabanga",
+      "prompt": "Nginike isicaphuno esikhuthazayo esivela eBhayibhelini sanamuhla nencazelo emfushane",
+      "prompt_v1": "Yisiphi isicaphuno seBhayibheli esifaneleka kakhulu lolu suku?",
+      "prompt_v2": "Nginike isicaphuno esikhuthazayo esivela kumaHubo sanamuhla",
+      "prompt_v3": "Yisiphi isaga esivela eBhayibhelini esinganginika umbono omusha namuhla?"
+    },
+    "thankfulness": {
+      "title": "Ukuzijwayeza Kokubonga",
+      "desc": "Thola ukuthi yini ongabonga ngayo",
+      "prompt": "Ngiholele ekuzijwayezeni okufushane kokubonga. Ngisize ngithole izinto ezintathu engibonga ngazo namuhla",
+      "prompt_v1": "Ngisize ngithole ukubonga empilweni yami yansuku zonke — ngisho nasezintweni ezincane",
+      "prompt_v2": "Ngifuna ukufunda ukubonga kakhulu. Nginike umsebenzi osebenzayo wokwenza lokho",
+      "prompt_v3": "Lithini iBhayibheli ngokubonga futhi ngingakusebenzisa kanjani lokho namuhla?"
+    },
+    "biblesays": {
+      "title": "Lithini iBhayibheli ngo...",
+      "desc": "Thola ukuthi lithini iBhayibheli ngesihloko sakho",
+      "prompt": "Ngifuna ukwazi ukuthi lithini iBhayibheli ngesihloko esithile. Ngibuze ukuthi yisiphi isihloko enginesithakazelo kuso!",
+      "prompt_v1": "Lithini iBhayibheli ngobungane?",
+      "prompt_v2": "Lithini iBhayibheli ngokuphatha imali?",
+      "prompt_v3": "Lithini iBhayibheli ngothando nobudlelwane?"
+    },
+    "morningstart": {
+      "title": "Sawubona!",
+      "desc": "Qala usuku ngendlela enhle",
+      "prompt": "Ngifisele sawubona futhi unginike umcabango okhuthazayo wokuqala usuku",
+      "prompt_v1": "Nginike umqondo omfushane wasekuseni onevesi leBhayibheli elifanele",
+      "prompt_v2": "Ngingaluqala kanjani usuku lwami namuhla ngokuqaphela nangendlela enhle?",
+      "prompt_v3": "Nginike ukubingelela okukhuthazayo kwasekuseni ngomcabango ovela eBhayibhelini"
+    },
+    "inspiration": {
+      "title": "Ngihehe",
+      "desc": "Zivumele umangale futhi ukhuthazwe",
+      "prompt": "Ngangimangaze ngento ekhuthazayo — lokho kungaba umcabango, indaba noma ukuqonda okuvela eBhayibhelini",
+      "prompt_v1": "Ngiqashele indaba ekhuthazayo evela eBhayibhelini efanele namuhla",
+      "prompt_v2": "Nginike umcabango ongajwayelekile, okhuthazayo",
+      "prompt_v3": "Yimuphi umuntu waseBhayibhelini ongangikhuthaza namuhla futhi kungani?"
     }
   },
   "lifeWheel": {

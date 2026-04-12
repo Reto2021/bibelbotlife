@@ -578,6 +578,46 @@
       "prompt_v1": "Daj mi uspokajający psalm na tę chwilę.",
       "prompt_v2": "Jak według Biblii mogę znaleźć prawdziwy spokój?",
       "prompt_v3": "Poprowadź mnie przez krótką biblijną medytację."
+    },
+    "quoteofday": {
+      "title": "Cytat dnia",
+      "desc": "Inspirujący cytat do przemyślenia",
+      "prompt": "Podaj mi inspirujący cytat z Biblii na dziś z krótkim wyjaśnieniem",
+      "prompt_v1": "Jaki cytat biblijny szczególnie pasuje do dzisiejszego dnia?",
+      "prompt_v2": "Podaj mi dziś zachęcający cytat z Psalmów",
+      "prompt_v3": "Jakie przysłowie z Biblii daje mi dziś nową perspektywę?"
+    },
+    "thankfulness": {
+      "title": "Ćwiczenie wdzięczności",
+      "desc": "Odkryj, za co możesz być wdzięczny",
+      "prompt": "Poprowadź mnie przez krótkie ćwiczenie wdzięczności. Pomóż mi znaleźć trzy rzeczy, za które jestem dziś wdzięczny",
+      "prompt_v1": "Pomóż mi odkryć wdzięczność w moim codziennym życiu — także w drobnych rzeczach",
+      "prompt_v2": "Chcę nauczyć się być bardziej wdzięczny. Daj mi praktyczne ćwiczenie",
+      "prompt_v3": "Co Biblia mówi o wdzięczności i jak mogę to zastosować dzisiaj?"
+    },
+    "biblesays": {
+      "title": "Co Biblia mówi o...",
+      "desc": "Dowiedz się, co Biblia mówi na Twój temat",
+      "prompt": "Chcę wiedzieć, co Biblia mówi na konkretny temat. Zapytaj mnie, jaki temat mnie interesuje!",
+      "prompt_v1": "Co Biblia mówi o przyjaźni?",
+      "prompt_v2": "Co Biblia mówi o zarządzaniu pieniędzmi?",
+      "prompt_v3": "Co Biblia mówi o miłości i związkach?"
+    },
+    "morningstart": {
+      "title": "Dzień dobry!",
+      "desc": "Rozpocznij dzień pozytywnie",
+      "prompt": "Życz mi dobrego ranka i daj mi zachęcającą myśl na początek dnia",
+      "prompt_v1": "Daj mi krótką poranną inspirację z odpowiednim wersetem biblijnym",
+      "prompt_v2": "Jak mogę świadomie i pozytywnie rozpocząć dzisiejszy dzień?",
+      "prompt_v3": "Daj mi zachęcające poranne pozdrowienie z myślą z Biblii"
+    },
+    "inspiration": {
+      "title": "Zainspiruj mnie",
+      "desc": "Daj się zaskoczyć i zainspirować",
+      "prompt": "Zaskocz mnie czymś inspirującym — może to być myśl, historia lub wgląd z Biblii",
+      "prompt_v1": "Opowiedz mi inspirującą historię z Biblii, która jest dziś aktualna",
+      "prompt_v2": "Daj mi nieoczekiwany, inspirujący impuls do myślenia",
+      "prompt_v3": "Jaka postać biblijna może mnie dziś zainspirować i dlaczego?"
     }
   },
   "lifeWheel": {

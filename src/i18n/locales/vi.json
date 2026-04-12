@@ -615,6 +615,46 @@
       "prompt_v1": "Hãy cho tôi một Thi thiên an ủi cho khoảnh khắc này.",
       "prompt_v2": "Theo Kinh Thánh, làm thế nào tôi có thể tìm thấy sự bình yên thực sự?",
       "prompt_v3": "Hãy hướng dẫn tôi qua một bài thiền Kinh Thánh ngắn."
+    },
+    "quoteofday": {
+      "title": "Trích dẫn trong ngày",
+      "desc": "Một câu trích dẫn đầy cảm hứng để suy ngẫm",
+      "prompt": "Hãy cho tôi một câu trích dẫn đầy cảm hứng từ Kinh Thánh cho ngày hôm nay kèm theo lời giải thích ngắn gọn",
+      "prompt_v1": "Câu trích dẫn Kinh Thánh nào đặc biệt phù hợp với ngày hôm nay?",
+      "prompt_v2": "Hãy cho tôi một câu trích dẫn đầy khích lệ từ Thi thiên cho ngày hôm nay",
+      "prompt_v3": "Câu châm ngôn nào từ Kinh Thánh mang lại cho tôi một góc nhìn mới hôm nay?"
+    },
+    "thankfulness": {
+      "title": "Bài tập lòng biết ơn",
+      "desc": "Khám phá những điều bạn có thể biết ơn",
+      "prompt": "Hãy hướng dẫn tôi một bài tập lòng biết ơn ngắn gọn. Giúp tôi tìm ba điều tôi biết ơn hôm nay",
+      "prompt_v1": "Hãy giúp tôi khám phá lòng biết ơn trong cuộc sống hàng ngày của mình — ngay cả trong những điều nhỏ nhặt",
+      "prompt_v2": "Tôi muốn học cách biết ơn hơn. Hãy cho tôi một bài tập thực hành",
+      "prompt_v3": "Kinh Thánh nói gì về lòng biết ơn và làm thế nào tôi có thể thực hành điều đó hôm nay?"
+    },
+    "biblesays": {
+      "title": "Kinh Thánh nói gì về...",
+      "desc": "Tìm hiểu Kinh Thánh nói gì về chủ đề của bạn",
+      "prompt": "Tôi muốn biết Kinh Thánh nói gì về một chủ đề cụ thể. Hãy hỏi tôi chủ đề nào tôi quan tâm!",
+      "prompt_v1": "Kinh Thánh nói gì về tình bạn?",
+      "prompt_v2": "Kinh Thánh nói gì về việc quản lý tiền bạc?",
+      "prompt_v3": "Kinh Thánh nói gì về tình yêu và các mối quan hệ?"
+    },
+    "morningstart": {
+      "title": "Chào buổi sáng!",
+      "desc": "Bắt đầu ngày mới một cách tích cực",
+      "prompt": "Chúc tôi một buổi sáng tốt lành và cho tôi một suy nghĩ khích lệ để bắt đầu ngày mới",
+      "prompt_v1": "Hãy cho tôi một lời nhắc nhở buổi sáng ngắn gọn với một câu Kinh Thánh phù hợp",
+      "prompt_v2": "Làm thế nào tôi có thể bắt đầu ngày mới một cách có ý thức và tích cực hôm nay?",
+      "prompt_v3": "Hãy tặng tôi một lời chào buổi sáng đầy khích lệ với một suy nghĩ từ Kinh Thánh"
+    },
+    "inspiration": {
+      "title": "Truyền cảm hứng cho tôi",
+      "desc": "Hãy để bản thân ngạc nhiên và được truyền cảm hứng",
+      "prompt": "Hãy làm tôi ngạc nhiên với một điều gì đó đầy cảm hứng — đó có thể là một suy nghĩ, một câu chuyện hoặc một cái nhìn sâu sắc từ Kinh Thánh",
+      "prompt_v1": "Hãy kể cho tôi một câu chuyện đầy cảm hứng từ Kinh Thánh có liên quan đến ngày hôm nay",
+      "prompt_v2": "Hãy cho tôi một suy nghĩ bất ngờ, đầy cảm hứng",
+      "prompt_v3": "Nhân vật Kinh Thánh nào có thể truyền cảm hứng cho tôi hôm nay và tại sao?"
     }
   },
   "lifeWheel": {

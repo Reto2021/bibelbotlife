@@ -613,6 +613,46 @@
       "prompt_v1": "Geef me een kalmerende Psalm voor dit moment.",
       "prompt_v2": "Hoe kan ik volgens de Bijbel echte rust vinden?",
       "prompt_v3": "Leid me door een korte Bijbelse meditatie."
+    },
+    "quoteofday": {
+      "title": "Citaat van de dag",
+      "desc": "Een inspirerend citaat om over na te denken",
+      "prompt": "Geef me vandaag een inspirerend citaat uit de Bijbel met een korte uitleg",
+      "prompt_v1": "Welk Bijbelcitaat past vandaag bijzonder goed?",
+      "prompt_v2": "Geef me vandaag een bemoedigend citaat uit de Psalmen",
+      "prompt_v3": "Welk spreekwoord uit de Bijbel geeft me vandaag een nieuw perspectief?"
+    },
+    "thankfulness": {
+      "title": "Dankbaarheidsoefening",
+      "desc": "Ontdek waar je dankbaar voor kunt zijn",
+      "prompt": "Begeleid me door een korte dankbaarheidsoefening. Help me drie dingen te vinden waar ik vandaag dankbaar voor ben",
+      "prompt_v1": "Help me dankbaarheid te ontdekken in mijn dagelijks leven — ook in de kleine dingen",
+      "prompt_v2": "Ik wil leren dankbaarder te zijn. Geef me hiervoor een praktische oefening",
+      "prompt_v3": "Wat zegt de Bijbel over dankbaarheid en hoe kan ik dat vandaag toepassen?"
+    },
+    "biblesays": {
+      "title": "Wat zegt de Bijbel over...",
+      "desc": "Ontdek wat de Bijbel zegt over jouw onderwerp",
+      "prompt": "Ik wil weten wat de Bijbel zegt over een bepaald onderwerp. Vraag me welk onderwerp me interesseert!",
+      "prompt_v1": "Wat zegt de Bijbel over vriendschap?",
+      "prompt_v2": "Wat zegt de Bijbel over omgaan met geld?",
+      "prompt_v3": "Wat zegt de Bijbel over liefde en relaties?"
+    },
+    "morningstart": {
+      "title": "Goedemorgen!",
+      "desc": "Begin de dag positief",
+      "prompt": "Wens me een goede morgen en geef me een bemoedigende gedachte voor de start van de dag",
+      "prompt_v1": "Geef me een korte ochtendimpuls met een passende Bijbeltekst",
+      "prompt_v2": "Hoe kan ik mijn dag vandaag bewust en positief beginnen?",
+      "prompt_v3": "Geef me een bemoedigende ochtendgroet met een gedachte uit de Bijbel"
+    },
+    "inspiration": {
+      "title": "Inspireer me",
+      "desc": "Laat je verrassen en inspireren",
+      "prompt": "Verras me met iets inspirerends — dat kan een gedachte, een verhaal of een inzicht uit de Bijbel zijn",
+      "prompt_v1": "Vertel me een inspirerend verhaal uit de Bijbel dat vandaag relevant is",
+      "prompt_v2": "Geef me een onverwachte, inspirerende gedachte",
+      "prompt_v3": "Welke Bijbelse persoonlijkheid kan me vandaag inspireren en waarom?"
     }
   },
   "lifeWheel": {
