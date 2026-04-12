@@ -569,52 +569,52 @@
     },
     "showMore": "thêm",
     "dailywisdom": {
-      "title": "Wisdom for today",
-      "desc": "An encouraging thought for your day",
-      "prompt": "Give me a short, encouraging thought for my day – with a fitting Bible verse.",
-      "prompt_v1": "What's the best advice the Bible has for today?",
-      "prompt_v2": "Give me a Bible wisdom that will carry me through the day.",
-      "prompt_v3": "Surprise me with an encouraging Bible verse for today!"
+      "title": "Lời khôn ngoan mỗi ngày",
+      "desc": "Một suy nghĩ khích lệ cho ngày của bạn",
+      "prompt": "Hãy cho tôi một suy nghĩ ngắn gọn, khích lệ cho ngày của tôi – kèm theo một câu Kinh Thánh phù hợp.",
+      "prompt_v1": "Lời khuyên tốt nhất mà Kinh Thánh dành cho hôm nay là gì?",
+      "prompt_v2": "Hãy cho tôi một lời khôn ngoan từ Kinh Thánh để đồng hành cùng tôi suốt cả ngày.",
+      "prompt_v3": "Hãy làm tôi ngạc nhiên với một câu Kinh Thánh khích lệ cho hôm nay!"
     },
     "funfact": {
-      "title": "Did you know?",
-      "desc": "Surprising facts from the Bible",
-      "prompt": "Tell me a surprising fact from the Bible that most people don't know!",
-      "prompt_v1": "What's the craziest story in the Bible?",
-      "prompt_v2": "What Bible facts surprise most people?",
-      "prompt_v3": "Tell me something funny or unexpected from the Bible!"
+      "title": "Bạn có biết không?",
+      "desc": "Những sự thật bất ngờ từ Kinh Thánh",
+      "prompt": "Hãy kể cho tôi một sự thật bất ngờ từ Kinh Thánh mà hầu hết mọi người không biết!",
+      "prompt_v1": "Câu chuyện điên rồ nhất trong Kinh Thánh là gì?",
+      "prompt_v2": "Những sự thật nào từ Kinh Thánh làm hầu hết mọi người ngạc nhiên?",
+      "prompt_v3": "Hãy kể cho tôi điều gì đó vui nhộn hoặc bất ngờ từ Kinh Thánh!"
     },
     "lifehack": {
-      "title": "Life hack",
-      "desc": "Biblical wisdom for family & work",
-      "prompt": "What biblical tip helps in everyday life with family and work? Give me something practical!",
-      "prompt_v1": "How can the Bible help me in a stressful daily life?",
-      "prompt_v2": "What practical life tips are hidden in the Bible?",
-      "prompt_v3": "Give me a concrete tip from the Bible for my daily life!"
+      "title": "Mẹo sống",
+      "desc": "Sự khôn ngoan của Kinh Thánh cho gia đình & công việc",
+      "prompt": "Mẹo Kinh Thánh nào giúp tôi trong cuộc sống hàng ngày với gia đình và công việc? Hãy cho tôi một điều gì đó thực tế!",
+      "prompt_v1": "Kinh Thánh có thể giúp tôi như thế nào trong cuộc sống hàng ngày đầy căng thẳng?",
+      "prompt_v2": "Những mẹo sống thực tế nào có trong Kinh Thánh?",
+      "prompt_v3": "Hãy cho tôi một mẹo cụ thể từ Kinh Thánh cho cuộc sống hàng ngày của tôi!"
     },
     "strengths": {
-      "title": "Your strengths",
-      "desc": "Discover what's inside you",
-      "prompt": "Help me discover my personal strengths – what does the Bible say about the gifts every person has?",
-      "prompt_v1": "What strengths do I have according to the Bible?",
-      "prompt_v2": "How can I find out what my gifts and talents are?",
-      "prompt_v3": "What does the Bible say about what makes me special?"
+      "title": "Điểm mạnh của bạn",
+      "desc": "Khám phá những gì ẩn chứa bên trong bạn",
+      "prompt": "Hãy giúp tôi khám phá những điểm mạnh cá nhân của mình – Kinh Thánh nói gì về những ân tứ mà mỗi người có?",
+      "prompt_v1": "Theo Kinh Thánh, tôi có những điểm mạnh nào?",
+      "prompt_v2": "Làm thế nào tôi có thể tìm ra những ân tứ và tài năng của mình?",
+      "prompt_v3": "Kinh Thánh nói gì về điều làm tôi đặc biệt?"
     },
     "family": {
-      "title": "Family & everyday life",
-      "desc": "More appreciation in daily life",
-      "prompt": "How can I show my family more appreciation? Give me practical ideas with biblical inspiration.",
-      "prompt_v1": "How do I strengthen my family relationships?",
-      "prompt_v2": "What does the Bible say about a good family life?",
-      "prompt_v3": "Give me an idea for how I can make someone in my family happy today!"
+      "title": "Gia đình & Cuộc sống hàng ngày",
+      "desc": "Thêm sự trân trọng trong cuộc sống chung",
+      "prompt": "Làm thế nào tôi có thể thể hiện sự trân trọng hơn với gia đình mình? Hãy cho tôi những ý tưởng thực tế với cảm hứng từ Kinh Thánh.",
+      "prompt_v1": "Làm thế nào để tôi củng cố mối quan hệ gia đình?",
+      "prompt_v2": "Kinh Thánh nói gì về một cuộc sống gia đình tốt đẹp?",
+      "prompt_v3": "Hãy cho tôi một ý tưởng để làm ai đó trong gia đình tôi vui vẻ hôm nay!"
     },
     "relax": {
-      "title": "Find peace",
-      "desc": "A moment of stillness and calm",
-      "prompt": "I need a moment of peace. Help me unwind – with a calming Bible verse or a short meditation.",
-      "prompt_v1": "Give me a calming psalm for this moment.",
-      "prompt_v2": "How can I find true rest according to the Bible?",
-      "prompt_v3": "Guide me through a short biblical meditation."
+      "title": "Tìm sự bình yên",
+      "desc": "Tìm một khoảnh khắc tĩnh lặng và bình an",
+      "prompt": "Tôi cần một khoảnh khắc bình yên. Hãy giúp tôi thư giãn – với một câu Kinh Thánh an ủi hoặc một bài thiền ngắn.",
+      "prompt_v1": "Hãy cho tôi một Thi thiên an ủi cho khoảnh khắc này.",
+      "prompt_v2": "Theo Kinh Thánh, làm thế nào tôi có thể tìm thấy sự bình yên thực sự?",
+      "prompt_v3": "Hãy hướng dẫn tôi qua một bài thiền Kinh Thánh ngắn."
     }
   },
   "lifeWheel": {

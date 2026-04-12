@@ -567,52 +567,52 @@
     },
     "showMore": "lainnya",
     "dailywisdom": {
-      "title": "Wisdom for today",
-      "desc": "An encouraging thought for your day",
-      "prompt": "Give me a short, encouraging thought for my day – with a fitting Bible verse.",
-      "prompt_v1": "What's the best advice the Bible has for today?",
-      "prompt_v2": "Give me a Bible wisdom that will carry me through the day.",
-      "prompt_v3": "Surprise me with an encouraging Bible verse for today!"
+      "title": "Hikmat untuk Hari Ini",
+      "desc": "Sebuah pemikiran yang menguatkan untuk harimu",
+      "prompt": "Berikan saya pemikiran singkat yang menguatkan untuk hari saya – dengan ayat Alkitab yang sesuai.",
+      "prompt_v1": "Apa nasihat terbaik yang Alkitab miliki untuk hari ini?",
+      "prompt_v2": "Berikan saya hikmat dari Alkitab yang akan menemani saya sepanjang hari.",
+      "prompt_v3": "Kejutkan saya dengan ayat Alkitab yang menguatkan untuk hari ini!"
     },
     "funfact": {
-      "title": "Did you know?",
-      "desc": "Surprising facts from the Bible",
-      "prompt": "Tell me a surprising fact from the Bible that most people don't know!",
-      "prompt_v1": "What's the craziest story in the Bible?",
-      "prompt_v2": "What Bible facts surprise most people?",
-      "prompt_v3": "Tell me something funny or unexpected from the Bible!"
+      "title": "Tahukah Anda?",
+      "desc": "Fakta mengejutkan dari Alkitab",
+      "prompt": "Ceritakan kepada saya fakta mengejutkan dari Alkitab yang kebanyakan orang tidak tahu!",
+      "prompt_v1": "Apa kisah paling gila dalam Alkitab?",
+      "prompt_v2": "Fakta Alkitab apa yang paling mengejutkan banyak orang?",
+      "prompt_v3": "Ceritakan sesuatu yang lucu atau tidak terduga dari Alkitab!"
     },
     "lifehack": {
-      "title": "Life hack",
-      "desc": "Biblical wisdom for family & work",
-      "prompt": "What biblical tip helps in everyday life with family and work? Give me something practical!",
-      "prompt_v1": "How can the Bible help me in a stressful daily life?",
-      "prompt_v2": "What practical life tips are hidden in the Bible?",
-      "prompt_v3": "Give me a concrete tip from the Bible for my daily life!"
+      "title": "Kiat Hidup",
+      "desc": "Hikmat Alkitab untuk Keluarga & Pekerjaan",
+      "prompt": "Kiat Alkitab apa yang membantu saya dalam kehidupan sehari-hari dengan keluarga dan pekerjaan? Berikan saya sesuatu yang praktis!",
+      "prompt_v1": "Bagaimana Alkitab dapat membantu saya dalam kehidupan sehari-hari yang penuh tekanan?",
+      "prompt_v2": "Kiat hidup praktis apa yang ada dalam Alkitab?",
+      "prompt_v3": "Berikan saya kiat konkret dari Alkitab untuk kehidupan sehari-hari saya!"
     },
     "strengths": {
-      "title": "Your strengths",
-      "desc": "Discover what's inside you",
-      "prompt": "Help me discover my personal strengths – what does the Bible say about the gifts every person has?",
-      "prompt_v1": "What strengths do I have according to the Bible?",
-      "prompt_v2": "How can I find out what my gifts and talents are?",
-      "prompt_v3": "What does the Bible say about what makes me special?"
+      "title": "Kekuatan Anda",
+      "desc": "Temukan apa yang ada di dalam diri Anda",
+      "prompt": "Bantu saya menemukan kekuatan pribadi saya – apa yang Alkitab katakan tentang karunia yang dimiliki setiap orang?",
+      "prompt_v1": "Apa kekuatan yang saya miliki menurut Alkitab?",
+      "prompt_v2": "Bagaimana saya bisa mengetahui apa karunia dan bakat saya?",
+      "prompt_v3": "Apa yang Alkitab katakan tentang apa yang membuat saya istimewa?"
     },
     "family": {
-      "title": "Family & everyday life",
-      "desc": "More appreciation in daily life",
-      "prompt": "How can I show my family more appreciation? Give me practical ideas with biblical inspiration.",
-      "prompt_v1": "How do I strengthen my family relationships?",
-      "prompt_v2": "What does the Bible say about a good family life?",
-      "prompt_v3": "Give me an idea for how I can make someone in my family happy today!"
+      "title": "Keluarga & Kehidupan Sehari-hari",
+      "desc": "Lebih banyak penghargaan dalam kebersamaan",
+      "prompt": "Bagaimana saya bisa menunjukkan lebih banyak penghargaan kepada keluarga saya? Berikan saya ide-ide praktis dengan inspirasi Alkitab.",
+      "prompt_v1": "Bagaimana saya memperkuat hubungan keluarga saya?",
+      "prompt_v2": "Apa yang Alkitab katakan tentang kehidupan keluarga yang baik?",
+      "prompt_v3": "Berikan saya ide bagaimana saya bisa menyenangkan seseorang di keluarga saya hari ini!"
     },
     "relax": {
-      "title": "Find peace",
-      "desc": "A moment of stillness and calm",
-      "prompt": "I need a moment of peace. Help me unwind – with a calming Bible verse or a short meditation.",
-      "prompt_v1": "Give me a calming psalm for this moment.",
-      "prompt_v2": "How can I find true rest according to the Bible?",
-      "prompt_v3": "Guide me through a short biblical meditation."
+      "title": "Tenangkan Diri",
+      "desc": "Menemukan momen keheningan dan kedamaian",
+      "prompt": "Saya butuh momen ketenangan. Bantu saya untuk bersantai – dengan ayat Alkitab yang menenangkan atau meditasi singkat.",
+      "prompt_v1": "Berikan saya Mazmur yang menenangkan untuk saat ini.",
+      "prompt_v2": "Bagaimana saya bisa menemukan kedamaian sejati menurut Alkitab?",
+      "prompt_v3": "Bimbing saya melalui meditasi Alkitab singkat."
     }
   },
   "lifeWheel": {

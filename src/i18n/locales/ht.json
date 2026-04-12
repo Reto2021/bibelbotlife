@@ -529,52 +529,52 @@
     },
     "showMore": "plis",
     "dailywisdom": {
-      "title": "Wisdom for today",
-      "desc": "An encouraging thought for your day",
-      "prompt": "Give me a short, encouraging thought for my day – with a fitting Bible verse.",
-      "prompt_v1": "What's the best advice the Bible has for today?",
-      "prompt_v2": "Give me a Bible wisdom that will carry me through the day.",
-      "prompt_v3": "Surprise me with an encouraging Bible verse for today!"
+      "title": "Sajès pou jodi a",
+      "desc": "Yon panse ankourajan pou jounen ou",
+      "prompt": "Ban m yon panse kout, ankourajan pou jounen m – ak yon vèsè biblik ki apwopriye.",
+      "prompt_v1": "Ki pi bon konsèy Bib la genyen pou jodi a?",
+      "prompt_v2": "Ban m yon sajès nan Bib la ki ka akonpaye m pandan jounen an.",
+      "prompt_v3": "Sipriz mwen ak yon vèsè biblik ankourajan pou jodi a!"
     },
     "funfact": {
-      "title": "Did you know?",
-      "desc": "Surprising facts from the Bible",
-      "prompt": "Tell me a surprising fact from the Bible that most people don't know!",
-      "prompt_v1": "What's the craziest story in the Bible?",
-      "prompt_v2": "What Bible facts surprise most people?",
-      "prompt_v3": "Tell me something funny or unexpected from the Bible!"
+      "title": "Èske w te konnen?",
+      "desc": "Reyalite etonan ki soti nan Bib la",
+      "prompt": "Rakonte m yon reyalite etonan ki soti nan Bib la ke pifò moun pa konnen!",
+      "prompt_v1": "Ki istwa ki pi fou nan Bib la?",
+      "prompt_v2": "Ki reyalite ki soti nan Bib la ki etone pifò moun?",
+      "prompt_v3": "Rakonte m yon bagay amizan oswa inatandi ki soti nan Bib la!"
     },
     "lifehack": {
-      "title": "Life hack",
-      "desc": "Biblical wisdom for family & work",
-      "prompt": "What biblical tip helps in everyday life with family and work? Give me something practical!",
-      "prompt_v1": "How can the Bible help me in a stressful daily life?",
-      "prompt_v2": "What practical life tips are hidden in the Bible?",
-      "prompt_v3": "Give me a concrete tip from the Bible for my daily life!"
+      "title": "Konsèy pou lavi",
+      "desc": "Sajès biblik pou fanmi ak travay",
+      "prompt": "Ki konsèy biblik ki ka ede m nan lavi chak jou ak fanmi ak travay? Ban m yon bagay pratik!",
+      "prompt_v1": "Kijan Bib la ka ede m nan lavi chak jou ki gen estrès?",
+      "prompt_v2": "Ki konsèy pratik pou lavi ki nan Bib la?",
+      "prompt_v3": "Ban m yon konsèy konkrè ki soti nan Bib la pou lavi chak jou mwen!"
     },
     "strengths": {
-      "title": "Your strengths",
-      "desc": "Discover what's inside you",
-      "prompt": "Help me discover my personal strengths – what does the Bible say about the gifts every person has?",
-      "prompt_v1": "What strengths do I have according to the Bible?",
-      "prompt_v2": "How can I find out what my gifts and talents are?",
-      "prompt_v3": "What does the Bible say about what makes me special?"
+      "title": "Fòs ou",
+      "desc": "Dekouvri sa ki nan ou",
+      "prompt": "Ede m dekouvri fòs pèsonèl mwen – kisa Bib la di sou don chak moun genyen?",
+      "prompt_v1": "Ki fòs mwen genyen dapre Bib la?",
+      "prompt_v2": "Kijan mwen ka dekouvri ki don ak talan mwen genyen?",
+      "prompt_v3": "Kisa Bib la di sou sa ki fè m espesyal?"
     },
     "family": {
-      "title": "Family & everyday life",
-      "desc": "More appreciation in daily life",
-      "prompt": "How can I show my family more appreciation? Give me practical ideas with biblical inspiration.",
-      "prompt_v1": "How do I strengthen my family relationships?",
-      "prompt_v2": "What does the Bible say about a good family life?",
-      "prompt_v3": "Give me an idea for how I can make someone in my family happy today!"
+      "title": "Fanmi ak lavi chak jou",
+      "desc": "Plis apresyasyon nan viv ansanm",
+      "prompt": "Kijan mwen ka montre fanmi m plis apresyasyon? Ban m ide pratik ak enspirasyon biblik.",
+      "prompt_v1": "Kijan mwen ka ranfòse relasyon fanmi mwen?",
+      "prompt_v2": "Kisa Bib la di sou yon bon lavi fanmi?",
+      "prompt_v3": "Ban m yon ide kijan mwen ka fè yon moun nan fanmi m plezi jodi a!"
     },
     "relax": {
-      "title": "Find peace",
-      "desc": "A moment of stillness and calm",
-      "prompt": "I need a moment of peace. Help me unwind – with a calming Bible verse or a short meditation.",
-      "prompt_v1": "Give me a calming psalm for this moment.",
-      "prompt_v2": "How can I find true rest according to the Bible?",
-      "prompt_v3": "Guide me through a short biblical meditation."
+      "title": "Jwenn lapè",
+      "desc": "Jwenn yon moman silans ak lapè",
+      "prompt": "Mwen bezwen yon moman lapè. Ede m dekonekte – ak yon vèsè biblik kalman oswa yon kout meditasyon.",
+      "prompt_v1": "Ban m yon sòm kalman pou moman sa a.",
+      "prompt_v2": "Kijan mwen ka jwenn vrè lapè dapre Bib la?",
+      "prompt_v3": "Gide m atravè yon kout meditasyon biblik."
     }
   },
   "lifeWheel": {

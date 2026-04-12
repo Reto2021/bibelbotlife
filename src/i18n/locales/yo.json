@@ -567,52 +567,52 @@
     },
     "showMore": "siwaju sii",
     "dailywisdom": {
-      "title": "Wisdom for today",
-      "desc": "An encouraging thought for your day",
-      "prompt": "Give me a short, encouraging thought for my day – with a fitting Bible verse.",
-      "prompt_v1": "What's the best advice the Bible has for today?",
-      "prompt_v2": "Give me a Bible wisdom that will carry me through the day.",
-      "prompt_v3": "Surprise me with an encouraging Bible verse for today!"
+      "title": "Ọgbọ́n fún òní",
+      "desc": "Èrò ìṣírí fún ọjọ́ rẹ",
+      "prompt": "Fún mi ní èrò ìṣírí kúkúrú kan fún ọjọ́ mi – pẹ̀lú ẹsẹ Bíbélì tó bá a mu.",
+      "prompt_v1": "Kí ni ìmọ̀ràn tó dára jù lọ tí Bíbélì ní fún òní?",
+      "prompt_v2": "Fún mi ní ọgbọ́n kan láti inú Bíbélì tí yóò tẹ̀lé mi lọ títí di òpin ọjọ́.",
+      "prompt_v3": "Yà mí lẹ́nu pẹ̀lú ẹsẹ Bíbélì tó ń fúnni níṣìírí fún òní!"
     },
     "funfact": {
-      "title": "Did you know?",
-      "desc": "Surprising facts from the Bible",
-      "prompt": "Tell me a surprising fact from the Bible that most people don't know!",
-      "prompt_v1": "What's the craziest story in the Bible?",
-      "prompt_v2": "What Bible facts surprise most people?",
-      "prompt_v3": "Tell me something funny or unexpected from the Bible!"
+      "title": "Ṣé o mọ̀?",
+      "desc": "Àwọn òtítọ́ tó yà lẹ́nu láti inú Bíbélì",
+      "prompt": "Sọ fún mi ní òtítọ́ kan tó yà lẹ́nu láti inú Bíbélì tí ọ̀pọ̀ èèyàn kò mọ̀!",
+      "prompt_v1": "Kí ni ìtàn tó yàtọ̀ jù lọ nínú Bíbélì?",
+      "prompt_v2": "Àwọn òtítọ́ wo láti inú Bíbélì ló máa ń yà ọ̀pọ̀ èèyàn lẹ́nu jù lọ?",
+      "prompt_v3": "Sọ fún mi ní ohun kan tó fani mọ́ra tàbí ohun tí a kò retí láti inú Bíbélì!"
     },
     "lifehack": {
-      "title": "Life hack",
-      "desc": "Biblical wisdom for family & work",
-      "prompt": "What biblical tip helps in everyday life with family and work? Give me something practical!",
-      "prompt_v1": "How can the Bible help me in a stressful daily life?",
-      "prompt_v2": "What practical life tips are hidden in the Bible?",
-      "prompt_v3": "Give me a concrete tip from the Bible for my daily life!"
+      "title": "Ìmọ̀ràn ìgbésí ayé",
+      "desc": "Ọgbọ́n Bíbélì fún ìdílé àti iṣẹ́",
+      "prompt": "Ìmọ̀ràn Bíbélì wo ló lè ràn mí lọ́wọ́ nínú ìgbésí ayé ojoojúmọ́ pẹ̀lú ìdílé àti iṣẹ́? Fún mi ní ohun tó wúlò!",
+      "prompt_v1": "Báwo ni Bíbélì ṣe lè ràn mí lọ́wọ́ nínú ìgbésí ayé ojoojúmọ́ tó kún fún wàhálà?",
+      "prompt_v2": "Àwọn ìgbésí ayé tó wúlò wo ló wà nínú Bíbélì?",
+      "prompt_v3": "Fún mi ní ìmọ̀ràn kan pàtó láti inú Bíbélì fún ìgbésí ayé mi ojoojúmọ́!"
     },
     "strengths": {
-      "title": "Your strengths",
-      "desc": "Discover what's inside you",
-      "prompt": "Help me discover my personal strengths – what does the Bible say about the gifts every person has?",
-      "prompt_v1": "What strengths do I have according to the Bible?",
-      "prompt_v2": "How can I find out what my gifts and talents are?",
-      "prompt_v3": "What does the Bible say about what makes me special?"
+      "title": "Àwọn agbára rẹ",
+      "desc": "Ṣe àwárí ohun tó wà nínú rẹ",
+      "prompt": "Ràn mí lọ́wọ́ láti ṣe àwárí àwọn agbára ti ara ẹni – kí ni Bíbélì sọ nípa àwọn ẹ̀bùn tí gbogbo èèyàn ní?",
+      "prompt_v1": "Àwọn agbára wo ni mo ní gẹ́gẹ́ bí Bíbélì?",
+      "prompt_v2": "Báwo ni mo ṣe lè mọ̀ pé kí ni àwọn ẹ̀bùn àti tàiwà mi?",
+      "prompt_v3": "Kí ni Bíbélì sọ nípa ohun tó jẹ́ kí n jẹ́ ẹni pàtó?"
     },
     "family": {
-      "title": "Family & everyday life",
-      "desc": "More appreciation in daily life",
-      "prompt": "How can I show my family more appreciation? Give me practical ideas with biblical inspiration.",
-      "prompt_v1": "How do I strengthen my family relationships?",
-      "prompt_v2": "What does the Bible say about a good family life?",
-      "prompt_v3": "Give me an idea for how I can make someone in my family happy today!"
+      "title": "Ìdílé àti ìgbésí ayé ojoojúmọ́",
+      "desc": "Ìmọrírì púpọ̀ sí i nínú ìgbésí ayé papọ̀",
+      "prompt": "Báwo ni mo ṣe lè fi ìfẹ́ hàn sí ìdílé mi? Fún mi ní àwọn èrò tó wúlò pẹ̀lú ìmísí Bíbélì.",
+      "prompt_v1": "Báwo ni mo ṣe lè mú kí àjọṣe ìdílé mi lágbára sí i?",
+      "prompt_v2": "Kí ni Bíbélì sọ nípa ìgbésí ayé ìdílé tó dára?",
+      "prompt_v3": "Fún mi ní èrò kan, báwo ni mo ṣe lè mú inú ẹnikẹ́ni nínú ìdílé mi dùn lónìí!"
     },
     "relax": {
-      "title": "Find peace",
-      "desc": "A moment of stillness and calm",
-      "prompt": "I need a moment of peace. Help me unwind – with a calming Bible verse or a short meditation.",
-      "prompt_v1": "Give me a calming psalm for this moment.",
-      "prompt_v2": "How can I find true rest according to the Bible?",
-      "prompt_v3": "Guide me through a short biblical meditation."
+      "title": "Láti sinmi",
+      "desc": "Láti rí àkókò ìdákẹ́jẹ́ àti àlàáfíà",
+      "prompt": "Mo nílò àkókò ìdákẹ́jẹ́. Ràn mí lọ́wọ́ láti sinmi – pẹ̀lú ẹsẹ Bíbélì tó ń tùnù tàbí àṣàrò kúkúrú kan.",
+      "prompt_v1": "Fún mi ní Sáàmù tó ń tùnù fún àkókò yìí.",
+      "prompt_v2": "Báwo ni mo ṣe lè rí ìsinmi tòótọ́ gẹ́gẹ́ bí Bíbélì?",
+      "prompt_v3": "Tọ́ mi sọ́nà nípasẹ̀ àṣàrò Bíbélì kúkúrú kan."
     }
   },
   "lifeWheel": {

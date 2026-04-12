@@ -529,52 +529,52 @@
     },
     "showMore": "több",
     "dailywisdom": {
-      "title": "Wisdom for today",
-      "desc": "An encouraging thought for your day",
-      "prompt": "Give me a short, encouraging thought for my day – with a fitting Bible verse.",
-      "prompt_v1": "What's the best advice the Bible has for today?",
-      "prompt_v2": "Give me a Bible wisdom that will carry me through the day.",
-      "prompt_v3": "Surprise me with an encouraging Bible verse for today!"
+      "title": "A nap bölcsessége",
+      "desc": "Egy bátorító gondolat a napodhoz",
+      "prompt": "Adj egy rövid, bátorító gondolatot a napomhoz – egy megfelelő bibliai verssel.",
+      "prompt_v1": "Mi a legjobb tanács, amit a Biblia adhat mára?",
+      "prompt_v2": "Adj egy bölcsességet a Bibliából, ami elkísér a nap folyamán.",
+      "prompt_v3": "Lepj meg egy bátorító bibliai verssel mára!"
     },
     "funfact": {
-      "title": "Did you know?",
-      "desc": "Surprising facts from the Bible",
-      "prompt": "Tell me a surprising fact from the Bible that most people don't know!",
-      "prompt_v1": "What's the craziest story in the Bible?",
-      "prompt_v2": "What Bible facts surprise most people?",
-      "prompt_v3": "Tell me something funny or unexpected from the Bible!"
+      "title": "Tudtad már?",
+      "desc": "Meglepő tények a Bibliából",
+      "prompt": "Mesélj egy meglepő tényt a Bibliából, amit a legtöbb ember nem ismer!",
+      "prompt_v1": "Mi a legőrültebb történet a Bibliában?",
+      "prompt_v2": "Mely bibliai tények lepik meg a legtöbb embert?",
+      "prompt_v3": "Mesélj valami vicceset vagy váratlant a Bibliából!"
     },
     "lifehack": {
-      "title": "Life hack",
-      "desc": "Biblical wisdom for family & work",
-      "prompt": "What biblical tip helps in everyday life with family and work? Give me something practical!",
-      "prompt_v1": "How can the Bible help me in a stressful daily life?",
-      "prompt_v2": "What practical life tips are hidden in the Bible?",
-      "prompt_v3": "Give me a concrete tip from the Bible for my daily life!"
+      "title": "Életvezetési tipp",
+      "desc": "Bibliai bölcsesség a családnak és a munkának",
+      "prompt": "Melyik bibliai tipp segít a mindennapokban a családdal és a munkával? Adj valami gyakorlatiasat!",
+      "prompt_v1": "Hogyan segíthet a Biblia a stresszes mindennapokban?",
+      "prompt_v2": "Milyen gyakorlati életvezetési tippek vannak a Bibliában?",
+      "prompt_v3": "Adj egy konkrét tippet a Bibliából a mindennapjaimhoz!"
     },
     "strengths": {
-      "title": "Your strengths",
-      "desc": "Discover what's inside you",
-      "prompt": "Help me discover my personal strengths – what does the Bible say about the gifts every person has?",
-      "prompt_v1": "What strengths do I have according to the Bible?",
-      "prompt_v2": "How can I find out what my gifts and talents are?",
-      "prompt_v3": "What does the Bible say about what makes me special?"
+      "title": "Erősségeid",
+      "desc": "Fedezd fel, mi rejlik benned",
+      "prompt": "Segíts felfedezni a személyes erősségeimet – mit mond a Biblia az ajándékokról, amelyek minden emberben megvannak?",
+      "prompt_v1": "Milyen erősségeim vannak a Biblia szerint?",
+      "prompt_v2": "Hogyan tudom megtudni, mik az ajándékaim és tehetségeim?",
+      "prompt_v3": "Mit mond a Biblia arról, ami különlegessé tesz engem?"
     },
     "family": {
-      "title": "Family & everyday life",
-      "desc": "More appreciation in daily life",
-      "prompt": "How can I show my family more appreciation? Give me practical ideas with biblical inspiration.",
-      "prompt_v1": "How do I strengthen my family relationships?",
-      "prompt_v2": "What does the Bible say about a good family life?",
-      "prompt_v3": "Give me an idea for how I can make someone in my family happy today!"
+      "title": "Család és mindennapok",
+      "desc": "Több megbecsülés az együttélésben",
+      "prompt": "Hogyan mutathatok több megbecsülést a családomnak? Adj gyakorlati ötleteket bibliai inspirációval.",
+      "prompt_v1": "Hogyan erősíthetem a családi kapcsolataimat?",
+      "prompt_v2": "Mit mond a Biblia a jó családi életről?",
+      "prompt_v3": "Adj egy ötletet, hogyan szerezhetek ma örömet valakinek a családomban!"
     },
     "relax": {
-      "title": "Find peace",
-      "desc": "A moment of stillness and calm",
-      "prompt": "I need a moment of peace. Help me unwind – with a calming Bible verse or a short meditation.",
-      "prompt_v1": "Give me a calming psalm for this moment.",
-      "prompt_v2": "How can I find true rest according to the Bible?",
-      "prompt_v3": "Guide me through a short biblical meditation."
+      "title": "Nyugalomra lelni",
+      "desc": "Egy pillanatnyi csend és béke megtalálása",
+      "prompt": "Szükségem van egy pillanatnyi nyugalomra. Segíts kikapcsolódni – egy megnyugtató bibliai verssel vagy egy rövid meditációval.",
+      "prompt_v1": "Adj egy megnyugtató zsoltárt erre a pillanatra.",
+      "prompt_v2": "Hogyan találhatok igazi nyugalmat a Biblia szerint?",
+      "prompt_v3": "Vezess végig egy rövid bibliai meditáción."
     }
   },
   "lifeWheel": {

@@ -567,52 +567,52 @@
     },
     "showMore": "mai mult",
     "dailywisdom": {
-      "title": "Wisdom for today",
-      "desc": "An encouraging thought for your day",
-      "prompt": "Give me a short, encouraging thought for my day – with a fitting Bible verse.",
-      "prompt_v1": "What's the best advice the Bible has for today?",
-      "prompt_v2": "Give me a Bible wisdom that will carry me through the day.",
-      "prompt_v3": "Surprise me with an encouraging Bible verse for today!"
+      "title": "Înțelepciune pentru azi",
+      "desc": "Un gând încurajator pentru ziua ta",
+      "prompt": "Dă-mi un gând scurt și încurajator pentru ziua mea – cu un verset biblic potrivit.",
+      "prompt_v1": "Care este cel mai bun sfat pe care Biblia îl are pentru azi?",
+      "prompt_v2": "Dă-mi o înțelepciune din Biblie care să mă însoțească pe parcursul zilei.",
+      "prompt_v3": "Surprinde-mă cu un verset biblic încurajator pentru azi!"
     },
     "funfact": {
-      "title": "Did you know?",
-      "desc": "Surprising facts from the Bible",
-      "prompt": "Tell me a surprising fact from the Bible that most people don't know!",
-      "prompt_v1": "What's the craziest story in the Bible?",
-      "prompt_v2": "What Bible facts surprise most people?",
-      "prompt_v3": "Tell me something funny or unexpected from the Bible!"
+      "title": "Știai că?",
+      "desc": "Fapte surprinzătoare din Biblie",
+      "prompt": "Spune-mi un fapt surprinzător din Biblie pe care majoritatea oamenilor nu-l cunosc!",
+      "prompt_v1": "Care este cea mai nebună poveste din Biblie?",
+      "prompt_v2": "Ce fapte din Biblie surprind majoritatea oamenilor?",
+      "prompt_v3": "Spune-mi ceva amuzant sau neașteptat din Biblie!"
     },
     "lifehack": {
-      "title": "Life hack",
-      "desc": "Biblical wisdom for family & work",
-      "prompt": "What biblical tip helps in everyday life with family and work? Give me something practical!",
-      "prompt_v1": "How can the Bible help me in a stressful daily life?",
-      "prompt_v2": "What practical life tips are hidden in the Bible?",
-      "prompt_v3": "Give me a concrete tip from the Bible for my daily life!"
+      "title": "Sfaturi de viață",
+      "desc": "Înțelepciune biblică pentru familie și carieră",
+      "prompt": "Ce sfat biblic mă ajută în viața de zi cu zi cu familia și la serviciu? Dă-mi ceva practic!",
+      "prompt_v1": "Cum mă poate ajuta Biblia în viața de zi cu zi stresantă?",
+      "prompt_v2": "Ce sfaturi practice de viață se găsesc în Biblie?",
+      "prompt_v3": "Dă-mi un sfat concret din Biblie pentru viața mea de zi cu zi!"
     },
     "strengths": {
-      "title": "Your strengths",
-      "desc": "Discover what's inside you",
-      "prompt": "Help me discover my personal strengths – what does the Bible say about the gifts every person has?",
-      "prompt_v1": "What strengths do I have according to the Bible?",
-      "prompt_v2": "How can I find out what my gifts and talents are?",
-      "prompt_v3": "What does the Bible say about what makes me special?"
+      "title": "Punctele tale forte",
+      "desc": "Descoperă ce se află în tine",
+      "prompt": "Ajută-mă să-mi descopăr punctele forte personale – ce spune Biblia despre darurile pe care le are fiecare om?",
+      "prompt_v1": "Ce puncte forte am conform Bibliei?",
+      "prompt_v2": "Cum pot afla care sunt darurile și talentele mele?",
+      "prompt_v3": "Ce spune Biblia despre ceea ce mă face special?"
     },
     "family": {
-      "title": "Family & everyday life",
-      "desc": "More appreciation in daily life",
-      "prompt": "How can I show my family more appreciation? Give me practical ideas with biblical inspiration.",
-      "prompt_v1": "How do I strengthen my family relationships?",
-      "prompt_v2": "What does the Bible say about a good family life?",
-      "prompt_v3": "Give me an idea for how I can make someone in my family happy today!"
+      "title": "Familie și viața de zi cu zi",
+      "desc": "Mai multă apreciere în conviețuire",
+      "prompt": "Cum pot arăta mai multă apreciere familiei mele? Dă-mi idei practice cu inspirație biblică.",
+      "prompt_v1": "Cum îmi întăresc relațiile de familie?",
+      "prompt_v2": "Ce spune Biblia despre o viață de familie bună?",
+      "prompt_v3": "Dă-mi o idee cum pot face pe cineva din familia mea fericit azi!"
     },
     "relax": {
-      "title": "Find peace",
-      "desc": "A moment of stillness and calm",
-      "prompt": "I need a moment of peace. Help me unwind – with a calming Bible verse or a short meditation.",
-      "prompt_v1": "Give me a calming psalm for this moment.",
-      "prompt_v2": "How can I find true rest according to the Bible?",
-      "prompt_v3": "Guide me through a short biblical meditation."
+      "title": "Găsește-ți liniștea",
+      "desc": "Găsește un moment de liniște și pace",
+      "prompt": "Am nevoie de un moment de liniște. Ajută-mă să mă deconectez – cu un verset biblic liniștitor sau o scurtă meditație.",
+      "prompt_v1": "Dă-mi un psalm liniștitor pentru acest moment.",
+      "prompt_v2": "Cum pot găsi liniștea adevărată conform Bibliei?",
+      "prompt_v3": "Ghidează-mă printr-o scurtă meditație biblică."
     }
   },
   "lifeWheel": {
