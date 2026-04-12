@@ -275,12 +275,44 @@ const Analytics = () => {
         </div>
 
         {/* Summary stats */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
-          <StatCard icon={Eye} label="Seitenaufrufe" value={data?.summary.totalPageviews || 0} />
-          <StatCard icon={Users} label="Sessions" value={data?.summary.uniqueSessions || 0} />
-          <StatCard icon={Clock} label="Ø Verweildauer" value={formatDuration(data?.summary.avgSessionDurationSec || 0)} />
-          <StatCard icon={MousePointer} label="Events" value={data?.summary.totalEvents || 0} />
-          <StatCard icon={MessageCircle} label="Chat-Nutzer" value={data?.chat?.uniqueUsers || 0} sub={`∅ ${data?.chat?.avgMessagesPerUser || 0} Nachr./Person`} />
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+          <StatCard
+            icon={Eye}
+            label="Seitenaufrufe"
+            value={data?.summary.totalPageviews || 0}
+            tooltip="Gesamtzahl aller geladenen Seiten im Zeitraum. Mehrfachaufrufe durch denselben Besucher zählen einzeln."
+          />
+          <StatCard
+            icon={Users}
+            label="Sessions"
+            value={data?.summary.uniqueSessions || 0}
+            tooltip="Anzahl eindeutiger Browser-Sitzungen. Ein Nutzer der die Seite schliesst und wieder öffnet zählt als neue Session."
+          />
+          <StatCard
+            icon={Clock}
+            label="Ø Verweildauer"
+            value={formatDuration(data?.summary.avgSessionDurationSec || 0)}
+            tooltip="Durchschnittliche Zeit, die ein Besucher auf der Seite verbringt. Wird per Heartbeat alle 30s gemessen — auch wenn nur eine Seite besucht wird."
+          />
+          <StatCard
+            icon={ArrowDownRight}
+            label="Absprungrate"
+            value={`${data?.summary.bounceRate ?? 0}%`}
+            tooltip="Anteil der Besucher, die nur eine einzige Seite ansehen und keine Interaktion ausführen (z.B. Chat, Kachel-Klick)."
+          />
+          <StatCard
+            icon={MousePointer}
+            label="Interaktionen"
+            value={data?.summary.totalEvents || 0}
+            tooltip="Gesamtzahl aller bewussten Nutzer-Aktionen: Kachel-Klicks, Chat-Nachrichten, Quiz-Starts, Lebensrad-Abschlüsse etc."
+          />
+          <StatCard
+            icon={MessageCircle}
+            label="Chat-Nutzer (Telegram)"
+            value={data?.chat?.uniqueUsers || 0}
+            sub={`∅ ${data?.chat?.avgMessagesPerUser || 0} Nachr./Person`}
+            tooltip="Eindeutige Telegram-Nutzer, die dem Bot geschrieben haben. 'Nachr./Person' = durchschnittliche Anzahl gesendeter Nachrichten pro Nutzer."
+          />
         </div>
 
         {/* Daily pageviews chart */}
