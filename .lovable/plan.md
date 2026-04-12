@@ -1,39 +1,48 @@
 
 
 ## Problem
-Die `getChurchContext()`-Funktion in `daily-impulse/index.ts` berechnet Ostern nicht dynamisch. Stattdessen gibt sie für den gesamten März und April pauschal "mögliche Fastenzeit oder Osterzeit" zurück. Das ist falsch — Ostern 2026 war am 5. April, der 12. April ist bereits die 2. Woche nach Ostern.
+
+Die KI stellt am Ende der Antwort eine spannende Reflexionsfrage im Fliesstext (z.B. "Was denkst du, warum wir lieber an unseren Sorgen festhalten?"), aber die darauf folgenden Optionen (a/b/c Buttons) sind unabhängige Gesprächs-Weiterleitungen, die nicht auf diese Frage eingehen. Das verwirrt den Nutzer — er erwartet, dass die Buttons Antworten oder Vertiefungen der gestellten Frage sind.
+
+## Ursache
+
+Im System-Prompt (`supabase/functions/bibelbot-chat/index.ts`, Zeile 568-600) gibt es zwei widersprüchliche Anweisungen:
+1. "Stelle pro Antwort 1-2 gezielte Fragen" (Zeile 569)
+2. "Beende JEDE Antwort mit mindestens 2 Optionen a), b), c)" (Zeile 598)
+
+Die KI macht beides: eine offene Frage im Text + separate Optionen danach. Da die Optionen nach der Frage kommen, wirken sie wie Antwortmöglichkeiten — sind es aber nicht.
 
 ## Lösung
-Die Oster-Berechnung dynamisch machen mit dem Gauss'schen Algorithmus (Computus), und daraus alle beweglichen Feiertage ableiten.
+
+Den System-Prompt anpassen, damit Frage und Optionen **eine Einheit** bilden:
+
+**Neue Regel im Prompt (ersetzt Zeile 568-600):**
+
+> Wenn du eine Reflexionsfrage stellst, müssen die Optionen (a/b/c) als mögliche Antworten oder Vertiefungen **dieser Frage** dienen. Die Frage bildet die Überleitung zu den Optionen.
+>
+> **Beispiel RICHTIG:**
+> Was denkst du — warum halten wir manchmal lieber an unseren Sorgen fest?
+>
+> a) Vielleicht weil Sorgen uns ein Gefühl von Kontrolle geben
+> b) Ich glaube, es fällt mir schwer loszulassen, weil ich Angst habe
+> c) Lass uns anschauen, was die Bibel dazu sagt
+>
+> **Beispiel FALSCH:**
+> Was denkst du — warum halten wir manchmal lieber an unseren Sorgen fest?
+>
+> a) Lass uns über Dankbarkeit sprechen
+> b) Möchtest du einen Psalm dazu hören?
+> c) Erzähl mir mehr über dein Anliegen
+
+Ausserdem: eine Option soll immer eine "freie Antwort"-Einladung sein (z.B. "Ich möchte frei darauf antworten"), damit der Nutzer nicht in ein Multiple-Choice-Schema gezwungen wird.
 
 ## Technische Umsetzung
 
-**Datei:** `supabase/functions/daily-impulse/index.ts`
+**1 Datei:** `supabase/functions/bibelbot-chat/index.ts`
 
-**1. Neue Funktion `computeEaster(year)`** — Berechnet Ostersonntag für ein beliebiges Jahr (Anonymous Gregorian algorithm).
+- Zeile 568-600: Die Abschnitte "Wichtig" und "PFLICHT: Immer Optionen anbieten" zusammenführen und neu formulieren
+- Kernregel: "Deine Reflexionsfrage AM ENDE der Antwort ist gleichzeitig die Einleitung zu den Optionen. Die Optionen sind mögliche Reaktionen auf diese Frage."
+- Zusatz: "Eine der Optionen soll immer eine offene Einladung sein, frei zu antworten"
 
-**2. `getChurchContext()` komplett überarbeiten** — Bewegliche Feiertage relativ zu Ostern berechnen:
-
-| Tage relativ zu Ostern | Feiertag |
-|---|---|
-| -46 | Aschermittwoch (Beginn Fastenzeit) |
-| -7 | Palmsonntag |
-| -3 bis -1 | Karfreitag, Karsamstag |
-| 0 | Ostersonntag |
-| +1 | Ostermontag |
-| +39 | Auffahrt / Christi Himmelfahrt |
-| +49 | Pfingstsonntag |
-| +50 | Pfingstmontag |
-| +60 | Fronleichnam |
-
-**3. Logik:** Heutiges Datum wird als Differenz zu Ostern berechnet → passender Kontext wird zurückgegeben. Feste Feiertage (Weihnachten etc.) bleiben wie bisher.
-
-**4. Die vage Zeile `if (month >= 3 && month <= 4)` wird entfernt** und durch präzise Bereiche ersetzt:
-- Fastenzeit: Aschermittwoch bis Palmsonntag
-- Karwoche: Palmsonntag bis Karsamstag  
-- Ostern: Ostersonntag + Ostermontag
-- Osterzeit: Ostermontag+1 bis Auffahrt-1
-- usw.
-
-Eine Datei, ca. 40 Zeilen neuer Code, Rest bleibt gleich. Edge Function wird danach deployed.
+**Deployment:** Edge Function wird nach Änderung automatisch deployed.
 
