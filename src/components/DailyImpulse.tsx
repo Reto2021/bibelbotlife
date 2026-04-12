@@ -363,7 +363,9 @@ export function DailyImpulse() {
                 {impulse.reference}
               </footer>
             </blockquote>
-            <p className="text-sm text-muted-foreground leading-relaxed">{impulse.context}</p>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              {renderContextWithLinks(impulse.context)}
+            </p>
 
             {/* Image Preview */}
             {showImagePreview && shareImageUrl && (
