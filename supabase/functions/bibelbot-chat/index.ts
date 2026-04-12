@@ -699,8 +699,8 @@ Führe einfach gute, tiefe Gespräche – offen, warmherzig, biblisch fundiert. 
 - Beginne mit Bezug zur Frage – empathisch oder herausfordernd, je nach Kontext.
 - Nenne relevante Bibelstellen mit Quellenangabe – auch unbequeme.
 - Gib eine verständliche Einordnung mit verschiedenen Perspektiven.
-- Halte Antworten fokussiert (ca. 200-400 Wörter).
 - Verwende Markdown für Struktur.
+- ANTWORTLÄNGE: Wird dynamisch per [ADAPTIVE-LENGTH] Anweisung gesteuert – halte dich strikt daran.
 
 ## WICHTIG – Interaktive Gesprächsführung
 Beende JEDE Antwort mit einer Anschlussfrage oder Auswahl, damit der Nutzer einfach weiterkommt. Formuliere 2-3 konkrete Optionen, die der Nutzer mit einem Buchstaben oder kurzen Wort beantworten kann. Beispiele:
@@ -738,7 +738,7 @@ serve(async (req) => {
   }
 
   try {
-    const { messages, journeyDay, language, mode, preferredTranslation } = await req.json();
+    const { messages, journeyDay, language, mode, preferredTranslation, screenWidth } = await req.json();
 
     if (!messages || !Array.isArray(messages)) {
       return new Response(
@@ -841,7 +841,30 @@ serve(async (req) => {
       systemPrompt += `\n\n[LANGUAGE OVERRIDE: The user's interface is set to ${langNames[lang] || lang}. You MUST respond in ${langNames[lang] || lang}. Adapt Bible quotes to well-known translations in that language. Keep your coaching style and depth identical.]`;
     }
 
-    // Inject preferred translation
+    // === Adaptive response length ===
+    const msgCount = messages.filter((m: { role: string }) => m.role === "user").length;
+    const lastUserMsg = [...messages].reverse().find((m: { role: string }) => m.role === "user");
+    const lastUserLen = lastUserMsg?.content?.length || 0;
+    const isMobile = typeof screenWidth === "number" && screenWidth < 500;
+    const mobileSuffix = isMobile ? " Du schreibst für ein kleines Display – max. 2 kurze Absätze vor den Optionen." : "";
+
+    let lengthInstruction: string;
+    if (lastUserLen < 20) {
+      lengthInstruction = `[ADAPTIVE-LENGTH] Der User hat sehr kurz geantwortet (${lastUserLen} Zeichen). Antworte kompakt: 60-100 Wörter. Schnell zum Punkt.${mobileSuffix}`;
+    } else if (msgCount <= 2) {
+      lengthInstruction = `[ADAPTIVE-LENGTH] Gesprächsbeginn (${msgCount} User-Nachrichten). Antworte kurz und einladend: 80-120 Wörter. Der User soll antworten wollen, nicht lesen müssen.${mobileSuffix}`;
+    } else if (msgCount <= 6) {
+      lengthInstruction = `[ADAPTIVE-LENGTH] Aufwärmphase (${msgCount} User-Nachrichten). 120-180 Wörter. Mehr Tiefe, eine Bibelstelle, eine Reflexionsfrage.${mobileSuffix}`;
+    } else {
+      const maxWords = isMobile ? 175 : 250;
+      lengthInstruction = `[ADAPTIVE-LENGTH] Vertiefungsphase (${msgCount} User-Nachrichten). 150-${maxWords} Wörter. Der User ist engagiert, du darfst ausführlicher werden.${mobileSuffix}`;
+    }
+    if (lastUserLen > 200) {
+      lengthInstruction = `[ADAPTIVE-LENGTH] Der User hat ausführlich geschrieben (${lastUserLen} Zeichen). Antworte angemessen: 150-${isMobile ? 175 : 250} Wörter, aber strukturiert.${mobileSuffix}`;
+    }
+    systemPrompt += `\n\n${lengthInstruction}\nGRUNDREGEL: Lieber zu kurz als zu lang. Eine gute Frage am Ende ist wertvoller als ein langer Absatz.`;
+
+
     const TRANSLATION_NAMES: Record<string, string> = {
       zuercher: "Zürcher Bibel (2007)", zuercher2007: "Zürcher Bibel (2007)",
       luther2017: "Lutherbibel (2017)", luther: "Lutherbibel (2017)",
