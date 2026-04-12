@@ -462,6 +462,7 @@ const Analytics = () => {
                     <TableHead>Gemeinde</TableHead>
                     <TableHead className="text-right">Seitenaufrufe</TableHead>
                     <TableHead className="text-right">Besucher</TableHead>
+                    <TableHead className="text-right">Ø Verweildauer</TableHead>
                     <TableHead className="text-right">Events</TableHead>
                     <TableHead className="hidden md:table-cell">Plan</TableHead>
                   </TableRow>
@@ -478,6 +479,7 @@ const Analytics = () => {
                       </TableCell>
                       <TableCell className="text-right font-mono">{c.pageviews}</TableCell>
                       <TableCell className="text-right font-mono">{c.sessions}</TableCell>
+                      <TableCell className="text-right font-mono">{formatDuration(c.avgSessionDurationSec || 0)}</TableCell>
                       <TableCell className="text-right font-mono">{c.events}</TableCell>
                       <TableCell className="hidden md:table-cell">
                         <Badge variant="secondary" className="text-xs">{c.planTier}</Badge>
