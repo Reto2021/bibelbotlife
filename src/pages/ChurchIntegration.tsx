@@ -77,7 +77,7 @@ const ChurchIntegration = () => {
 
   const iframeCode = `<!-- BibleBot Inline für ${church.name} -->
 <iframe
-  src="${brandedLink}"
+  src="${widgetLink}"
   style="width:100%;height:600px;border:none;border-radius:12px;"
   loading="lazy"
   title="BibleBot"
