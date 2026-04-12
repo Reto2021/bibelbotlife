@@ -83,7 +83,7 @@ export function SplashScreen({ onComplete }: { onComplete: () => void }) {
               <motion.span
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.5, duration: 0.5 }}
+                transition={{ delay: 0.9, duration: 0.7 }}
                 className="text-[10px] sm:text-xs font-medium tracking-[0.25em] uppercase text-muted-foreground/70 mt-1"
               >
                 Everyday Sunday
