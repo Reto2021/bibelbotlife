@@ -14,6 +14,12 @@ const PETROL = "#3D7A80";
 const BG_CREAM = "#FAF5ED";
 const TEXT_DARK = "#2B3E42";
 
+type ChurchBrandingInfo = {
+  name: string;
+  logoUrl?: string | null;
+  slug: string;
+};
+
 type ShareTileOptions = {
   verse: string;
   reference: string;
@@ -22,6 +28,8 @@ type ShareTileOptions = {
   dark?: boolean;
   /** Pre-fetched background image URL (from AI generation) */
   backgroundUrl?: string;
+  /** Church branding for sponsored instances */
+  churchBranding?: ChurchBrandingInfo;
 };
 
 const SHARE_IMAGE_FN_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/impulse-share-image`;
@@ -90,7 +98,7 @@ function wrapText(
 }
 
 export function generateShareImage(options: ShareTileOptions): Promise<Blob> {
-  const { verse, reference, topic, personalNote, backgroundUrl } = options;
+  const { verse, reference, topic, personalNote, backgroundUrl, churchBranding } = options;
 
   return new Promise(async (resolve, reject) => {
     const canvas = document.createElement("canvas");
@@ -220,7 +228,7 @@ export function generateShareImage(options: ShareTileOptions): Promise<Blob> {
     }
 
     // --- Bottom branding bar ---
-    const brandY = SIZE - 90;
+    const brandY = churchBranding ? SIZE - 110 : SIZE - 90;
 
     ctx.fillStyle = lineColor;
     ctx.fillRect(PAD, brandY - 20, CONTENT_W, 1);
@@ -233,6 +241,28 @@ export function generateShareImage(options: ShareTileOptions): Promise<Blob> {
     ctx.font = "400 22px 'Inter', 'Segoe UI', system-ui, sans-serif";
     ctx.fillStyle = brandSubtle;
     ctx.fillText("Everyday Sunday", PAD, brandY + 38);
+
+    // --- Church branding (sponsor) ---
+    if (churchBranding) {
+      const sponsorY = brandY + 70;
+      ctx.font = "400 20px 'Inter', 'Segoe UI', system-ui, sans-serif";
+      ctx.fillStyle = brandSubtle;
+      const sponsorText = `Empfohlen von ${churchBranding.name}`;
+      withShadow(() => ctx.fillText(sponsorText, PAD, sponsorY));
+
+      // Load and draw church logo if available
+      if (churchBranding.logoUrl) {
+        try {
+          const churchLogo = await loadImage(churchBranding.logoUrl);
+          const logoSize = 36;
+          const textWidth = ctx.measureText(sponsorText).width;
+          const logoX = PAD + textWidth + 12;
+          ctx.drawImage(churchLogo, logoX, sponsorY - 6, logoSize, logoSize);
+        } catch {
+          // Logo load failed, text alone is fine
+        }
+      }
+    }
 
     // Small decorative dot
     ctx.beginPath();
