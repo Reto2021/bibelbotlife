@@ -551,6 +551,19 @@ export function ChatHero() {
     conversationIdRef.current = activeConversationId;
   }, [activeConversationId]);
 
+  // Re-run QA checks when loading a historical conversation
+  useEffect(() => {
+    if (isLoadingHistory || messages.length === 0) return;
+    // Clear old QA map when conversation changes
+    setQaMap({});
+    // Run QA on all assistant messages
+    messages.forEach((msg, idx) => {
+      if (msg.role === "assistant") {
+        runQA(msg.content, idx);
+      }
+    });
+  }, [activeConversationId]); // only when conversation switches
+
   const hasConversation = messages.length > 0;
 
   const phrases = [
