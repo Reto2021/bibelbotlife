@@ -187,6 +187,23 @@ Deno.serve(async (req) => {
     dailyChats[day] = (dailyChats[day] || 0) + 1;
   });
 
+  // ── Web Chat stats (from analytics_events: chat_hero_submit) ──
+  const webChatEvents = customEvents.filter((e: any) => e.event_name === "chat_hero_submit");
+  const webChatSessions = new Set(webChatEvents.map((e: any) => e.session_id));
+  const webChatDailyCounts: Record<string, number> = {};
+  webChatEvents.forEach((e: any) => {
+    const day = zurichParts(e.created_at).date;
+    webChatDailyCounts[day] = (webChatDailyCounts[day] || 0) + 1;
+  });
+  // Messages per session for web chat
+  const webChatMsgPerSession: Record<string, number> = {};
+  webChatEvents.forEach((e: any) => {
+    webChatMsgPerSession[e.session_id] = (webChatMsgPerSession[e.session_id] || 0) + 1;
+  });
+  const webChatAvgPerUser = webChatSessions.size > 0
+    ? Math.round(webChatEvents.length / webChatSessions.size * 10) / 10
+    : 0;
+
   // ── Referrer stats ──
   const referrerCounts: Record<string, number> = {};
   const referrerDaily: Record<string, Record<string, number>> = {};
