@@ -154,6 +154,7 @@ export function DailyImpulse() {
     // Reuse existing blob
     if (shareImageUrl) {
       setShowImagePreview(true);
+      setTimeout(() => imagePreviewRef.current?.scrollIntoView({ behavior: "smooth", block: "center" }), 100);
       return;
     }
 
