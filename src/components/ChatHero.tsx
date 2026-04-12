@@ -388,6 +388,113 @@ export function ChatHero() {
     msgPadding: isSenior ? "px-5 py-4" : "px-4 py-3",
     chipText: isSenior ? "text-sm px-4 py-2" : "text-xs px-3 py-1.5",
   };
+  // ── Smart Quick-CTA rotation ───────────────────────────────────
+  const TILE_CLICKS_KEY = "bibelbot-tile-clicks";
+
+  const getTileClicks = useCallback((): Record<string, { count: number; last: number }> => {
+    try {
+      const raw = localStorage.getItem(TILE_CLICKS_KEY);
+      return raw ? JSON.parse(raw) : {};
+    } catch { return {}; }
+  }, []);
+
+  const trackTileClick = useCallback((key: string) => {
+    try {
+      const clicks = getTileClicks();
+      clicks[key] = { count: (clicks[key]?.count || 0) + 1, last: Date.now() };
+      localStorage.setItem(TILE_CLICKS_KEY, JSON.stringify(clicks));
+    } catch {}
+    track("tile_click", { tile: key, source: "quick_cta" });
+  }, [getTileClicks, track]);
+
+  // Pool of light/casual tiles suitable for Quick CTAs
+  const CTA_POOL: { emoji: string; key: string }[] = useMemo(() => [
+    { emoji: "🤔", key: "namequiz" },
+    { emoji: "☕", key: "dailywisdom" },
+    { emoji: "🎲", key: "funfact" },
+    { emoji: "🌅", key: "morningstart" },
+    { emoji: "💡", key: "lifehack" },
+    { emoji: "🌟", key: "strengths" },
+    { emoji: "✨", key: "inspiration" },
+    { emoji: "📜", key: "quoteofday" },
+    { emoji: "🙏", key: "thankfulness" },
+    { emoji: "❓", key: "biblesays" },
+    { emoji: "🙌", key: "gratitude" },
+    { emoji: "🎊", key: "joy" },
+  ], []);
+
+  const smartQuickCTAs = useMemo(() => {
+    const clicks = getTileClicks();
+    const hasHistory = Object.keys(clicks).length > 0;
+
+    if (!hasHistory) {
+      // First-time user: show defaults
+      return [
+        { emoji: "🤔", key: "namequiz" },
+        { emoji: "☕", key: "dailywisdom" },
+        { emoji: "🎲", key: "funfact" },
+      ].map(c => ({
+        ...c,
+        title: t(`tiles.${c.key}.title`),
+        desc: t(`tiles.${c.key}.desc`),
+        prompt: t(`tiles.${c.key}.prompt`),
+      }));
+    }
+
+    // Returning user: 1 familiar (most clicked) + 2 fresh (not yet clicked or least clicked)
+    const poolWithScores = CTA_POOL.map(tile => ({
+      ...tile,
+      count: clicks[tile.key]?.count || 0,
+      last: clicks[tile.key]?.last || 0,
+    }));
+
+    // Pick the favorite (most clicked, most recent as tiebreaker)
+    const clicked = poolWithScores.filter(t => t.count > 0).sort((a, b) => b.count - a.count || b.last - a.last);
+    const unclicked = poolWithScores.filter(t => t.count === 0);
+
+    // Use day-of-year as seed for daily rotation of fresh tiles
+    const today = new Date();
+    const dayOfYear = Math.floor((today.getTime() - new Date(today.getFullYear(), 0, 0).getTime()) / 86400000);
+
+    const selected: { emoji: string; key: string }[] = [];
+
+    // 1 familiar tile (favorite)
+    if (clicked.length > 0) {
+      selected.push(clicked[0]);
+    }
+
+    // Fill remaining 2-3 slots with fresh/unclicked tiles, rotated daily
+    const freshPool = unclicked.length >= 2 ? unclicked : [
+      ...unclicked,
+      ...clicked.slice(1).sort((a, b) => a.last - b.last), // least recently used
+    ];
+
+    const needed = 3 - selected.length;
+    for (let i = 0; i < needed && freshPool.length > 0; i++) {
+      const idx = (dayOfYear + i) % freshPool.length;
+      const pick = freshPool.splice(idx, 1)[0];
+      if (pick && !selected.find(s => s.key === pick.key)) {
+        selected.push(pick);
+      } else if (freshPool.length > 0) {
+        // If we picked a duplicate, grab the next one
+        selected.push(freshPool.splice(0, 1)[0]);
+      }
+    }
+
+    // Ensure we always have 3
+    while (selected.length < 3) {
+      const fallback = CTA_POOL.find(t => !selected.find(s => s.key === t.key));
+      if (fallback) selected.push(fallback); else break;
+    }
+
+    return selected.map(c => ({
+      ...c,
+      title: t(`tiles.${c.key}.title`),
+      desc: t(`tiles.${c.key}.desc`),
+      prompt: t(`tiles.${c.key}.prompt`),
+    }));
+  }, [t, getTileClicks, CTA_POOL]);
+
   // Autocomplete suggestions
   const SUGGESTIONS = useMemo(() => {
     const topics = TOPIC_CHIPS.map(chip => ({
@@ -867,21 +974,17 @@ export function ChatHero() {
                   )}
                 </motion.form>
 
-                {/* === Quick CTAs – compact row === */}
+                {/* === Quick CTAs – smart rotation === */}
                 <motion.div
                   initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: 0.25 }}
                   className="flex flex-col sm:grid sm:grid-cols-3 gap-2 max-w-2xl mx-auto mb-5 w-full"
                 >
-                  {[
-                    { emoji: "🤔", title: t("tiles.namequiz.title"), desc: t("tiles.namequiz.desc"), prompt: t("tiles.namequiz.prompt") },
-                    { emoji: "☕", title: t("tiles.dailywisdom.title"), desc: t("tiles.dailywisdom.desc"), prompt: t("tiles.dailywisdom.prompt") },
-                    { emoji: "🎲", title: t("tiles.funfact.title"), desc: t("tiles.funfact.desc"), prompt: t("tiles.funfact.prompt") },
-                  ].map((card) => (
+                  {smartQuickCTAs.map((card) => (
                     <button
-                      key={card.title}
-                      onClick={() => sendMessage(card.prompt)}
+                      key={card.key}
+                      onClick={() => { trackTileClick(card.key); sendMessage(card.prompt); }}
                       className="group flex items-center gap-3 sm:gap-2 bg-card/70 backdrop-blur-sm border border-border rounded-xl px-4 sm:px-3 py-3 sm:py-2.5 hover:border-primary/40 hover:shadow-md hover:bg-card transition-all duration-200 cursor-pointer min-w-0"
                     >
                       <span className="text-xl sm:text-xl shrink-0">{card.emoji}</span>
