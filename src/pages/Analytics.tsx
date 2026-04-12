@@ -56,6 +56,12 @@ type AnalyticsData = {
     avgMessagesPerUser: number;
     dailyActivity: Record<string, number>;
   };
+  webChat?: {
+    uniqueUsers: number;
+    totalMessages: number;
+    avgMessagesPerUser: number;
+    dailyActivity: Record<string, number>;
+  };
   tiles?: {
     totalClicks: number;
     topTiles: { tile: string; count: number }[];
