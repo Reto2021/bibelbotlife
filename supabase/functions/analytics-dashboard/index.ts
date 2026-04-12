@@ -4,13 +4,7 @@ const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
-/** Convert a UTC timestamp to Europe/Zurich local Date */
-const toZurich = (iso: string): Date => {
-  // Parse to get components in Europe/Zurich timezone
-  const d = new Date(iso);
-  // Use Intl to get Zurich hour/day reliably
-  return d;
-};
+
 
 const zurichParts = (iso: string) => {
   const formatter = new Intl.DateTimeFormat("de-CH", {
