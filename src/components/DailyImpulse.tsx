@@ -7,7 +7,7 @@ import { useTTS } from "@/hooks/use-tts";
 import { openBibleBotChat } from "@/lib/chat-events";
 import { ShareButton } from "@/components/ShareButton";
 import { useToast } from "@/hooks/use-toast";
-import { generateShareImage } from "@/lib/share-image-canvas";
+import { generateShareImage, fetchAIBackgroundUrl } from "@/lib/share-image-canvas";
 
 const IMPULSE_CACHE_KEY = "bibelbot-daily-impulse";
 const IMPULSE_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/daily-impulse`;
