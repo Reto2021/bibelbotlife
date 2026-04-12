@@ -9,15 +9,10 @@ import {
   Head,
   Heading,
   Html,
-  Img,
   Link,
   Preview,
-  Section,
   Text,
-  Hr,
 } from 'npm:@react-email/components@0.0.22'
-
-const LOGO_URL = 'https://swsthxftugjqznqjcfpk.supabase.co/storage/v1/object/public/share-images/email%2Fbiblebot-logo.png'
 
 interface SignupEmailProps {
   siteName: string
@@ -32,32 +27,31 @@ export const SignupEmail = ({
   recipient,
   confirmationUrl,
 }: SignupEmailProps) => (
-  <Html lang="de" dir="ltr">
+  <Html lang="en" dir="ltr">
     <Head />
-    <Preview>E-Mail bestätigen – {siteName}</Preview>
+    <Preview>Confirm your email for {siteName}</Preview>
     <Body style={main}>
       <Container style={container}>
-        <Section style={logoSection}>
-          <Img src={LOGO_URL} alt={siteName} width="56" height="56" style={logoImg} />
-          <Text style={brandText}>{siteName}</Text>
-        </Section>
-        <Hr style={hrGold} />
-        <Heading style={h1}>Willkommen bei {siteName}! ✨</Heading>
+        <Heading style={h1}>Confirm your email</Heading>
         <Text style={text}>
-          Schön, dass du dabei bist! Bitte bestätige deine E-Mail-Adresse (
+          Thanks for signing up for{' '}
+          <Link href={siteUrl} style={link}>
+            <strong>{siteName}</strong>
+          </Link>
+          !
+        </Text>
+        <Text style={text}>
+          Please confirm your email address (
           <Link href={`mailto:${recipient}`} style={link}>
             {recipient}
           </Link>
-          ), um loszulegen:
+          ) by clicking the button below:
         </Text>
-        <Section style={buttonSection}>
-          <Button style={button} href={confirmationUrl}>
-            E-Mail bestätigen
-          </Button>
-        </Section>
-        <Hr style={hrLight} />
+        <Button style={button} href={confirmationUrl}>
+          Verify Email
+        </Button>
         <Text style={footer}>
-          Falls du kein Konto erstellt hast, kannst du diese E-Mail ignorieren.
+          If you didn't create an account, you can safely ignore this email.
         </Text>
       </Container>
     </Body>
@@ -66,16 +60,27 @@ export const SignupEmail = ({
 
 export default SignupEmail
 
-const main = { backgroundColor: '#ffffff', fontFamily: "'Helvetica Neue', Arial, sans-serif" }
-const container = { padding: '32px 28px', maxWidth: '520px', margin: '0 auto' }
-const logoSection = { textAlign: 'center' as const, marginBottom: '8px' }
-const logoImg = { margin: '0 auto', borderRadius: '12px' }
-const brandText = { fontSize: '18px', fontWeight: '700' as const, color: '#C8883A', margin: '8px 0 0', letterSpacing: '0.3px' }
-const hrGold = { borderColor: '#C8883A', margin: '16px 0 24px', borderWidth: '2px' }
-const h1 = { fontSize: '22px', fontWeight: 'bold' as const, color: '#1a2a3a', margin: '0 0 20px' }
-const text = { fontSize: '15px', color: '#4a5568', lineHeight: '1.6', margin: '0 0 24px' }
-const link = { color: '#C8883A', textDecoration: 'underline' }
-const buttonSection = { textAlign: 'center' as const, margin: '0 0 24px' }
-const button = { backgroundColor: '#C8883A', color: '#ffffff', fontSize: '15px', borderRadius: '8px', padding: '12px 28px', textDecoration: 'none', fontWeight: 'bold' as const }
-const hrLight = { borderColor: '#e2c496', margin: '24px 0' }
-const footer = { fontSize: '12px', color: '#999999', margin: '0' }
+const main = { backgroundColor: '#ffffff', fontFamily: 'Arial, sans-serif' }
+const container = { padding: '20px 25px' }
+const h1 = {
+  fontSize: '22px',
+  fontWeight: 'bold' as const,
+  color: '#000000',
+  margin: '0 0 20px',
+}
+const text = {
+  fontSize: '14px',
+  color: '#55575d',
+  lineHeight: '1.5',
+  margin: '0 0 25px',
+}
+const link = { color: 'inherit', textDecoration: 'underline' }
+const button = {
+  backgroundColor: '#000000',
+  color: '#ffffff',
+  fontSize: '14px',
+  borderRadius: '8px',
+  padding: '12px 20px',
+  textDecoration: 'none',
+}
+const footer = { fontSize: '12px', color: '#999999', margin: '30px 0 0' }

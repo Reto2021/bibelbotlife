@@ -9,14 +9,9 @@ import {
   Head,
   Heading,
   Html,
-  Img,
   Preview,
-  Section,
   Text,
-  Hr,
 } from 'npm:@react-email/components@0.0.22'
-
-const LOGO_URL = 'https://swsthxftugjqznqjcfpk.supabase.co/storage/v1/object/public/share-images/email%2Fbiblebot-logo.png'
 
 interface RecoveryEmailProps {
   siteName: string
@@ -27,28 +22,22 @@ export const RecoveryEmail = ({
   siteName,
   confirmationUrl,
 }: RecoveryEmailProps) => (
-  <Html lang="de" dir="ltr">
+  <Html lang="en" dir="ltr">
     <Head />
-    <Preview>Passwort zurücksetzen – {siteName}</Preview>
+    <Preview>Reset your password for {siteName}</Preview>
     <Body style={main}>
       <Container style={container}>
-        <Section style={logoSection}>
-          <Img src={LOGO_URL} alt={siteName} width="56" height="56" style={logoImg} />
-          <Text style={brandText}>{siteName}</Text>
-        </Section>
-        <Hr style={hrGold} />
-        <Heading style={h1}>Passwort zurücksetzen</Heading>
+        <Heading style={h1}>Reset your password</Heading>
         <Text style={text}>
-          Wir haben eine Anfrage erhalten, dein Passwort für {siteName} zurückzusetzen. Klicke auf den Button, um ein neues Passwort zu wählen.
+          We received a request to reset your password for {siteName}. Click
+          the button below to choose a new password.
         </Text>
-        <Section style={buttonSection}>
-          <Button style={button} href={confirmationUrl}>
-            Neues Passwort wählen
-          </Button>
-        </Section>
-        <Hr style={hrLight} />
+        <Button style={button} href={confirmationUrl}>
+          Reset Password
+        </Button>
         <Text style={footer}>
-          Falls du kein neues Passwort angefordert hast, kannst du diese E-Mail ignorieren. Dein Passwort bleibt unverändert.
+          If you didn't request a password reset, you can safely ignore this
+          email. Your password will not be changed.
         </Text>
       </Container>
     </Body>
@@ -57,15 +46,26 @@ export const RecoveryEmail = ({
 
 export default RecoveryEmail
 
-const main = { backgroundColor: '#ffffff', fontFamily: "'Helvetica Neue', Arial, sans-serif" }
-const container = { padding: '32px 28px', maxWidth: '520px', margin: '0 auto' }
-const logoSection = { textAlign: 'center' as const, marginBottom: '8px' }
-const logoImg = { margin: '0 auto', borderRadius: '12px' }
-const brandText = { fontSize: '18px', fontWeight: '700' as const, color: '#C8883A', margin: '8px 0 0', letterSpacing: '0.3px' }
-const hrGold = { borderColor: '#C8883A', margin: '16px 0 24px', borderWidth: '2px' }
-const h1 = { fontSize: '22px', fontWeight: 'bold' as const, color: '#1a2a3a', margin: '0 0 20px' }
-const text = { fontSize: '15px', color: '#4a5568', lineHeight: '1.6', margin: '0 0 24px' }
-const buttonSection = { textAlign: 'center' as const, margin: '0 0 24px' }
-const button = { backgroundColor: '#C8883A', color: '#ffffff', fontSize: '15px', borderRadius: '8px', padding: '12px 28px', textDecoration: 'none', fontWeight: 'bold' as const }
-const hrLight = { borderColor: '#e2c496', margin: '24px 0' }
-const footer = { fontSize: '12px', color: '#999999', margin: '0' }
+const main = { backgroundColor: '#ffffff', fontFamily: 'Arial, sans-serif' }
+const container = { padding: '20px 25px' }
+const h1 = {
+  fontSize: '22px',
+  fontWeight: 'bold' as const,
+  color: '#000000',
+  margin: '0 0 20px',
+}
+const text = {
+  fontSize: '14px',
+  color: '#55575d',
+  lineHeight: '1.5',
+  margin: '0 0 25px',
+}
+const button = {
+  backgroundColor: '#000000',
+  color: '#ffffff',
+  fontSize: '14px',
+  borderRadius: '8px',
+  padding: '12px 20px',
+  textDecoration: 'none',
+}
+const footer = { fontSize: '12px', color: '#999999', margin: '30px 0 0' }

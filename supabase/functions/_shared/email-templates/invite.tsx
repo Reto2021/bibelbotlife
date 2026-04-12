@@ -9,15 +9,10 @@ import {
   Head,
   Heading,
   Html,
-  Img,
   Link,
   Preview,
-  Section,
   Text,
-  Hr,
 } from 'npm:@react-email/components@0.0.22'
-
-const LOGO_URL = 'https://swsthxftugjqznqjcfpk.supabase.co/storage/v1/object/public/share-images/email%2Fbiblebot-logo.png'
 
 interface InviteEmailProps {
   siteName: string
@@ -30,30 +25,26 @@ export const InviteEmail = ({
   siteUrl,
   confirmationUrl,
 }: InviteEmailProps) => (
-  <Html lang="de" dir="ltr">
+  <Html lang="en" dir="ltr">
     <Head />
-    <Preview>Einladung zu {siteName}</Preview>
+    <Preview>You've been invited to join {siteName}</Preview>
     <Body style={main}>
       <Container style={container}>
-        <Section style={logoSection}>
-          <Img src={LOGO_URL} alt={siteName} width="56" height="56" style={logoImg} />
-          <Text style={brandText}>{siteName}</Text>
-        </Section>
-        <Hr style={hrGold} />
-        <Heading style={h1}>Du bist eingeladen! ✨</Heading>
+        <Heading style={h1}>You've been invited</Heading>
         <Text style={text}>
-          Du wurdest eingeladen,{' '}
-          <Link href={siteUrl} style={link}><strong>{siteName}</strong></Link>{' '}
-          beizutreten. Klicke auf den Button, um die Einladung anzunehmen.
+          You've been invited to join{' '}
+          <Link href={siteUrl} style={link}>
+            <strong>{siteName}</strong>
+          </Link>
+          . Click the button below to accept the invitation and create your
+          account.
         </Text>
-        <Section style={buttonSection}>
-          <Button style={button} href={confirmationUrl}>
-            Einladung annehmen
-          </Button>
-        </Section>
-        <Hr style={hrLight} />
+        <Button style={button} href={confirmationUrl}>
+          Accept Invitation
+        </Button>
         <Text style={footer}>
-          Falls du diese Einladung nicht erwartet hast, kannst du diese E-Mail ignorieren.
+          If you weren't expecting this invitation, you can safely ignore this
+          email.
         </Text>
       </Container>
     </Body>
@@ -62,16 +53,27 @@ export const InviteEmail = ({
 
 export default InviteEmail
 
-const main = { backgroundColor: '#ffffff', fontFamily: "'Helvetica Neue', Arial, sans-serif" }
-const container = { padding: '32px 28px', maxWidth: '520px', margin: '0 auto' }
-const logoSection = { textAlign: 'center' as const, marginBottom: '8px' }
-const logoImg = { margin: '0 auto', borderRadius: '12px' }
-const brandText = { fontSize: '18px', fontWeight: '700' as const, color: '#C8883A', margin: '8px 0 0', letterSpacing: '0.3px' }
-const hrGold = { borderColor: '#C8883A', margin: '16px 0 24px', borderWidth: '2px' }
-const h1 = { fontSize: '22px', fontWeight: 'bold' as const, color: '#1a2a3a', margin: '0 0 20px' }
-const text = { fontSize: '15px', color: '#4a5568', lineHeight: '1.6', margin: '0 0 24px' }
-const link = { color: '#C8883A', textDecoration: 'underline' }
-const buttonSection = { textAlign: 'center' as const, margin: '0 0 24px' }
-const button = { backgroundColor: '#C8883A', color: '#ffffff', fontSize: '15px', borderRadius: '8px', padding: '12px 28px', textDecoration: 'none', fontWeight: 'bold' as const }
-const hrLight = { borderColor: '#e2c496', margin: '24px 0' }
-const footer = { fontSize: '12px', color: '#999999', margin: '0' }
+const main = { backgroundColor: '#ffffff', fontFamily: 'Arial, sans-serif' }
+const container = { padding: '20px 25px' }
+const h1 = {
+  fontSize: '22px',
+  fontWeight: 'bold' as const,
+  color: '#000000',
+  margin: '0 0 20px',
+}
+const text = {
+  fontSize: '14px',
+  color: '#55575d',
+  lineHeight: '1.5',
+  margin: '0 0 25px',
+}
+const link = { color: 'inherit', textDecoration: 'underline' }
+const button = {
+  backgroundColor: '#000000',
+  color: '#ffffff',
+  fontSize: '14px',
+  borderRadius: '8px',
+  padding: '12px 20px',
+  textDecoration: 'none',
+}
+const footer = { fontSize: '12px', color: '#999999', margin: '30px 0 0' }
