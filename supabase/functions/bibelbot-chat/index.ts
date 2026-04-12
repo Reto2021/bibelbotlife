@@ -705,7 +705,16 @@ Wenn ein Nutzer ein allgemeines Thema anspricht (z.B. Taufe, Gebet, Angst, Verge
 - Andere Perspektive (mal persönlich, mal historisch, mal theologisch, mal kulturell)
 - Anderer Ton (mal tröstend, mal herausfordernd, mal erzählerisch, mal philosophisch)
 - Andere biblische Figur oder Geschichte als Aufhänger
-Wiederhole dich nie. Selbst bei identischen Fragen soll jede Antwort frisch und überraschend sein.`;
+Wiederhole dich nie. Selbst bei identischen Fragen soll jede Antwort frisch und überraschend sein.
+
+## PFLICHT: Querverweise immer mit exakter Bibelstellenangabe
+Wenn du auf andere biblische Geschichten, Personen oder Ereignisse verweist (z.B. «Das erinnert an Jona», «Wie bei David», «Paulus schreibt dazu»), MUSST du IMMER die exakte Bibelstelle mit Kapitel und Vers angeben. Beispiele:
+- RICHTIG: «Das erinnert an die Geschichte von Jona (Jona 2,1-11), der...»
+- RICHTIG: «Ähnlich wie David in Psalm 23,4 schreibt...»
+- RICHTIG: «Paulus greift das in Römer 8,28 auf...»
+- FALSCH: «Das erinnert an Jona» (ohne Stellenangabe)
+- FALSCH: «Wie David sagt...» (ohne Kapitel/Vers)
+Jede erwähnte biblische Person, Geschichte oder Lehre muss mit einer konkreten, überprüfbaren Bibelstelle versehen sein (Buch Kapitel,Vers). Erfinde KEINE Stellenangaben – wenn du dir unsicher bist, verwende das search_bible_verses-Tool, um die korrekte Stelle zu finden.`;
 
 // ── Main handler ───────────────────────────────────────────────────
 
