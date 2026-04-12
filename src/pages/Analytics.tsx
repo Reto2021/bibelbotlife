@@ -8,15 +8,28 @@ import {
   BarChart3, Eye, MousePointer, Users, Smartphone, Monitor, Tablet,
   MessageCircle, Flame, Trophy, Bell, TrendingUp, Download, Globe,
   Target, CircleDot, Search, Clock, CalendarDays, Building2, Link2,
+  Info, ArrowDownRight,
 } from "lucide-react";
 import {
   BarChart, Bar, XAxis, YAxis, Tooltip as RTooltip, ResponsiveContainer,
   PieChart, Pie, Cell, AreaChart, Area, CartesianGrid,
 } from "recharts";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 type AnalyticsData = {
   period: { days: number; since: string };
-  summary: { totalPageviews: number; totalEvents: number; uniqueSessions: number; avgSessionDurationSec?: number };
+  summary: {
+    totalPageviews: number;
+    totalEvents: number;
+    uniqueSessions: number;
+    avgSessionDurationSec?: number;
+    bounceRate?: number;
+  };
   topPages: { path: string; count: number }[];
   topEvents: { name: string; count: number }[];
   topReferrers?: { source: string; count: number }[];
@@ -54,7 +67,6 @@ type AnalyticsData = {
     weakestAreas: { area: string; count: number }[];
   };
   sevenWhys?: { starts: number };
-  // New sections
   perChurch?: Record<string, {
     churchName: string;
     planTier: string;
@@ -62,6 +74,7 @@ type AnalyticsData = {
     pageviews: number;
     events: number;
     sessions: number;
+    avgSessionDurationSec?: number;
     dailyPageviews: Record<string, number>;
     topEvents: { name: string; count: number }[];
   }>;
@@ -79,8 +92,9 @@ const COLORS = [
   "hsl(var(--chart-5))",
 ];
 
-const StatCard = ({ icon: Icon, label, value, sub, color = "text-primary" }: {
-  icon: any; label: string; value: string | number; sub?: string; color?: string;
+/** KPI card with optional info tooltip */
+const StatCard = ({ icon: Icon, label, value, sub, tooltip, color = "text-primary" }: {
+  icon: any; label: string; value: string | number; sub?: string; tooltip?: string; color?: string;
 }) => (
   <Card>
     <CardContent className="pt-5 pb-4">
@@ -88,9 +102,23 @@ const StatCard = ({ icon: Icon, label, value, sub, color = "text-primary" }: {
         <div className={`p-2 rounded-xl bg-primary/10 ${color}`}>
           <Icon className="h-5 w-5" />
         </div>
-        <div>
+        <div className="flex-1 min-w-0">
           <p className="text-2xl font-bold text-foreground">{value}</p>
-          <p className="text-xs text-muted-foreground">{label}</p>
+          <div className="flex items-center gap-1">
+            <p className="text-xs text-muted-foreground">{label}</p>
+            {tooltip && (
+              <TooltipProvider delayDuration={200}>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Info className="h-3 w-3 text-muted-foreground/50 cursor-help shrink-0" />
+                  </TooltipTrigger>
+                  <TooltipContent side="bottom" className="max-w-[220px] text-xs">
+                    {tooltip}
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            )}
+          </div>
           {sub && <p className="text-[10px] text-muted-foreground/70">{sub}</p>}
         </div>
       </div>
