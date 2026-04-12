@@ -641,7 +641,7 @@
     },
     "features": {
       "directoryEntry": "Kataloindgang",
-      "telegramGroup": "Telegram-Gruppe",
+      "telegramGroup": "Telegram-gruppe",
       "partnerPage": "Egen partnerside",
       "badge": "Partnerbadge",
       "qrFlyer": "QR-flyer til print",
@@ -668,7 +668,7 @@
     "serviceTimes": "Gudstjenestetider",
     "startChat": "Start chat",
     "website": "Hjemmeside",
-    "telegramGroup": "Telegram-Gruppe",
+    "telegramGroup": "Telegram-gruppe",
     "contactTitle": "Kontakt {{name}}",
     "contactName": "Dit navn (valgfrit)",
     "contactEmail": "Din e-mailadresse",
@@ -697,8 +697,8 @@
         "careHome": "Pflegeheim",
         "seniorHome": "Altersheim",
         "hospital": "Spital",
-        "prison": "Gefängnisseelsorge",
-        "military": "Armeeseelsorge",
+        "prison": "Fængselspastorat",
+        "military": "Militærpastorat",
         "rehaClinic": "Rehabiliteringsklinik",
         "psychiatry": "Psykiatri",
         "burnoutClinic": "Burnout-klinik",
@@ -716,11 +716,11 @@
     "institutionsSubtitle": "BibleBot ledsager menigheder, plejehjem, hospitaler, rehabiliterings- og burnoutklinikker med digital sjælesorg.",
     "institution": {
       "careHome": {
-        "title": "Pflegeheime",
+        "title": "Plejehjem",
         "desc": "Daglige bibelimpulser og ledsagelse for beboere – også når ingen sjælesørger er til stede."
       },
       "seniorHome": {
-        "title": "Altersheime",
+        "title": "Ældreboliger",
         "desc": "Velkendte bibelvers og samtaler for ældre – let tilgængelig via tablet eller smartphone."
       },
       "hospital": {
@@ -728,11 +728,11 @@
         "desc": "Trøst og åndelig ledsagelse for patienter i svære tider – tilgængelig 24/7."
       },
       "prison": {
-        "title": "Gefängnisseelsorge",
+        "title": "Fængselspastorat",
         "desc": "Håb og åndelig ledsagelse for indsatte – en fortrolig samtalepartner døgnet rundt."
       },
       "military": {
-        "title": "Armeeseelsorge",
+        "title": "Militærpastorat",
         "desc": "Åndelig ledsagelse for militærpersonel – tilgængelig selv under udsendelse."
       },
       "rehaClinic": {
@@ -799,11 +799,11 @@
     "linkChurches": "Også tilgængelig for kirker",
     "type": {
       "careHome": {
-        "title": "Pflegeheime",
+        "title": "Plejehjem",
         "desc": "Daglige bibelimpulser og ledsagelse for beboere – også når ingen sjælesørger er til stede."
       },
       "seniorHome": {
-        "title": "Altersheime",
+        "title": "Ældreboliger",
         "desc": "Velkendte bibelvers og samtaler for ældre – let tilgængelig via tablet eller smartphone."
       },
       "hospital": {
@@ -811,11 +811,11 @@
         "desc": "Trøst og åndelig ledsagelse for patienter i svære tider – tilgængelig 24/7."
       },
       "prison": {
-        "title": "Gefängnisseelsorge",
+        "title": "Fængselspastorat",
         "desc": "Håb og åndelig ledsagelse for indsatte – en fortrolig samtalepartner døgnet rundt."
       },
       "military": {
-        "title": "Armeeseelsorge",
+        "title": "Militærpastorat",
         "desc": "Åndelig ledsagelse for militærpersonel – tilgængelig selv under udsendelse."
       }
     },
