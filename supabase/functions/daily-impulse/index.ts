@@ -109,6 +109,18 @@ function getChurchContext(date: Date): string {
   if (month === 11 && day === 1) return "Allerheiligen";
   if (month === 11 && day >= 20) return "Ewigkeitssonntag / Totengedenken naht";
 
+  // Eidgenössischer Dank-, Buss- und Bettag (3. Sonntag im September)
+  if (month === 9 && dayOfWeek === 0) {
+    // Count which Sunday this is in September
+    const sundayNum = Math.ceil(day / 7);
+    if (sundayNum === 3) return "Eidgenössischer Dank-, Buss- und Bettag";
+  }
+
+  // Reformationssonntag (letzter Sonntag im Oktober)
+  if (month === 10 && dayOfWeek === 0 && day + 7 > 31) {
+    return "Reformationssonntag – Gedenken an die Reformation";
+  }
+
   // Movable feasts relative to Easter
   const easter = computeEaster(year);
   const diff = daysBetween(date, easter); // positive = after Easter, negative = before
