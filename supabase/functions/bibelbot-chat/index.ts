@@ -730,6 +730,32 @@ Wenn du auf andere biblische Geschichten, Personen oder Ereignisse verweist (z.B
 - FALSCH: «Wie David sagt...» (ohne Kapitel/Vers)
 Jede erwähnte biblische Person, Geschichte oder Lehre muss mit einer konkreten, überprüfbaren Bibelstelle versehen sein (Buch Kapitel,Vers). Erfinde KEINE Stellenangaben – wenn du dir unsicher bist, verwende das search_bible_verses-Tool, um die korrekte Stelle zu finden.`;
 
+// ── Crisis detection ───────────────────────────────────────────────
+const CRISIS_KEYWORDS = [
+  // Deutsch
+  "sterben will", "nicht mehr leben", "suizid", "selbstmord", "umbringen",
+  "ich halte es nicht mehr aus", "keinen ausweg mehr", "alles beenden",
+  "mir das leben nehmen", "ich will nicht mehr",
+  // Englisch
+  "want to die", "kill myself", "suicide", "end my life", "no reason to live",
+  // Französisch
+  "je veux mourir", "me suicider", "plus envie de vivre", "mettre fin"
+];
+
+function detectCrisis(text: string): boolean {
+  const lower = text.toLowerCase();
+  return CRISIS_KEYWORDS.some(kw => lower.includes(kw));
+}
+
+const CRISIS_PREFIX = `🆘 **Wenn du gerade in einer Notlage bist:**
+- 🇨🇭 Die Dargebotene Hand: **143** (24h, kostenlos, anonym)
+- 🇩🇪 Telefonseelsorge: **0800 111 0 111** (kostenlos, 24h)
+- 🇦🇹 Telefonseelsorge: **142** (kostenlos, 24h)
+
+---
+
+`;
+
 // ── Main handler ───────────────────────────────────────────────────
 
 serve(async (req) => {
@@ -739,6 +765,10 @@ serve(async (req) => {
 
   try {
     const { messages, journeyDay, language, mode, preferredTranslation, screenWidth } = await req.json();
+
+    // Crisis check on latest user message
+    const latestUserMsg = [...messages].reverse().find((m: { role: string }) => m.role === "user");
+    const isCrisisMessage = latestUserMsg ? detectCrisis(latestUserMsg.content) : false;
 
     if (!messages || !Array.isArray(messages)) {
       return new Response(
@@ -1100,7 +1130,14 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
       const reader = streamResponse.body!.getReader();
       const decoder = new TextDecoder();
       const encoder = new TextEncoder();
+      let chunkIndex = 0;
       const stream = new ReadableStream({
+        async start(controller) {
+          if (isCrisisMessage) {
+            const crisisSSE = JSON.stringify({ choices: [{ delta: { content: CRISIS_PREFIX }, finish_reason: null }] });
+            controller.enqueue(encoder.encode(`data: ${crisisSSE}\n\n`));
+          }
+        },
         async pull(controller) {
           const { done, value } = await reader.read();
           if (done) { controller.close(); return; }
@@ -1108,6 +1145,7 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
           text = text.replace(/"content":"([^"]*)"/g, (_match, content) => {
             return `"content":"${fixSpelling(content)}"`;
           });
+          chunkIndex++;
           controller.enqueue(encoder.encode(text));
         },
       });
@@ -1125,12 +1163,13 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
 
     // Stream it as SSE to maintain the same client interface
     const encoder = new TextEncoder();
+    const finalContent = isCrisisMessage ? CRISIS_PREFIX + fixedContent : fixedContent;
     const stream = new ReadableStream({
       start(controller) {
         // Send as a single chunk in SSE format
         const sseData = JSON.stringify({
           choices: [{
-            delta: { content: fixedContent },
+            delta: { content: finalContent },
             finish_reason: null,
           }],
         });
