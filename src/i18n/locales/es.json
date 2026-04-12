@@ -33,8 +33,8 @@
     "stopAudio": "Detener"
   },
   "features": {
-    "sectionTitle": "Cómo Tu compañero te acompaña",
-    "sectionSubtitle": "Descubre las muchas formas en que Tu compañero puede caminar contigo",
+    "sectionTitle": "Cómo tu compañero te acompaña",
+    "sectionSubtitle": "Descubre las muchas formas en que tu compañero puede caminar contigo",
     "bible": {
       "title": "Pasajes bíblicos e interpretación",
       "desc": "Pregunta «¿Qué dice la Biblia sobre...?» y recibe versículos relevantes con contexto y explicación clara."
@@ -49,11 +49,11 @@
     },
     "faith": {
       "title": "Camino de fe y encontrar a Cristo",
-      "desc": "Ya sea buscando, dudando o profundizando – Tu compañero te acompaña en tu camino personal."
+      "desc": "Ya sea buscando, dudando o profundizando – tu compañero te acompaña en tu camino personal."
     },
     "daily": {
       "title": "Impulsos diarios y año litúrgico",
-      "desc": "Comienza tu día con impulsos y deja que Tu compañero te guíe a través del Adviento, la Cuaresma y las festividades."
+      "desc": "Comienza tu día con impulsos y deja que tu compañero te guíe a través del Adviento, la Cuaresma y las festividades."
     },
     "groups": {
       "title": "Grupos y comunidades",
@@ -103,7 +103,7 @@
       "author": "Worthington",
       "desc": "Modelo REACH para procesos de perdón"
     },
-    "renameTip": "💡 Puedes darle un nombre personal a tu Tu compañero – para que sea verdaderamente <strong>tu</strong> compañero."
+    "renameTip": "💡 Puedes darle un nombre personal a tu tu compañero – para que sea verdaderamente <strong>tu</strong> compañero."
   },
   "discover": {
     "badge": "Para los curiosos",
@@ -170,9 +170,9 @@
   },
   "faq": {
     "badge": "Preguntas frecuentes",
-    "title": "Lo que debes saber sobre Tu compañero",
+    "title": "Lo que debes saber sobre tu compañero",
     "subtitle": "La transparencia es importante – especialmente para teólogos, pastores y pensadores críticos.",
-    "q1": "¿Qué diferencia a Tu compañero de ChatGPT y otros?",
+    "q1": "¿Qué diferencia a tu compañero de ChatGPT y otros?",
     "q1Generic": "Chatbots genéricos:",
     "q1GenericItems": [
       "Citas bíblicas superficiales sin contexto",
@@ -196,7 +196,7 @@
     "q2Outro": "Todos los pasajes bíblicos incluyen referencias y contexto histórico.",
     "q3": "¿Cuáles son las bases científicas?",
     "q3Intro": "El acompañamiento se basa en investigación revisada por pares en Psicología Positiva:",
-    "q4": "¿Cómo garantiza Tu compañero la seguridad pastoral?",
+    "q4": "¿Cómo garantiza tu compañero la seguridad pastoral?",
     "q4Items": [
       "Pensamientos suicidas o crisis → derivación inmediata a líneas de emergencia",
       "Sin diagnósticos psicológicos ni médicos",
@@ -206,15 +206,15 @@
       "Sin positividad tóxica – acompañamiento genuino y honesto",
       "Nombra abiertamente tensiones y textos difíciles"
     ],
-    "q5": "¿Está Tu compañero vinculado a una confesión específica?",
+    "q5": "¿Está tu compañero vinculado a una confesión específica?",
     "q5Answer": "No. Tu compañero es ecuménico y respeta las tradiciones reformada, católica, evangélica libre y otras tradiciones cristianas por igual. Cuando hay diferencias confesionales de interpretación, se presentan las diversas perspectivas de manera transparente – sin favorecer ninguna tradición.",
-    "q6": "¿Sustituye Tu compañero la atención pastoral o la terapia?",
-    "q6Answer": "No. Tu compañero es una herramienta digital para la lectura personal de la Biblia y la reflexión. No sustituye la atención pastoral profesional, el asesoramiento teológico ni la terapia psicológica. En crisis graves, Tu compañero siempre deriva a recursos cualificados.",
-    "q7": "¿No es Tu compañero simplemente un 'bot de bienestar'?",
+    "q6": "¿Sustituye tu compañero la atención pastoral o la terapia?",
+    "q6Answer": "No. Tu compañero es una herramienta digital para la lectura personal de la Biblia y la reflexión. No sustituye la atención pastoral profesional, el asesoramiento teológico ni la terapia psicológica. En crisis graves, tu compañero siempre deriva a recursos cualificados.",
+    "q7": "¿No es tu compañero simplemente un 'bot de bienestar'?",
     "q7Answer": "No. Tu compañero consuela cuando el consuelo es necesario – pero también desafía. El crecimiento espiritual requiere fricción. Tu compañero hace preguntas de seguimiento incómodas, nombra textos bíblicos difíciles (Job, Salmos de lamentación, crítica profética) y no rehúye temas como la justicia, el arrepentimiento y la responsabilidad.",
-    "q8": "¿Quién está detrás de Tu compañero y cómo se financia?",
+    "q8": "¿Quién está detrás de tu compañero y cómo se financia?",
     "q8Answer": "BibleBot.Life es un proyecto privado y no comercial. Se gestiona de forma voluntaria y se financia exclusivamente con donaciones voluntarias. No hay publicidad, ni venta de datos, ni funciones de pago. Todas las donaciones cubren directamente los costos operativos (infraestructura, alojamiento, desarrollo).",
-    "q9": "¿Cómo maneja Tu compañero mis datos?",
+    "q9": "¿Cómo maneja tu compañero mis datos?",
     "q9Answer": "Tu compañero no almacena datos personales ni historiales de chat. Cada conversación es anónima. No hay login, no hay seguimiento y no se comparten datos con terceros. El uso es completamente anónimo.",
     "tradition": {
       "reformed": "Reformada",
@@ -225,20 +225,20 @@
     }
   },
   "donate": {
-    "badge": "Apoya a Tu compañero",
-    "title": "Ayuda a mantener Tu compañero gratuito",
+    "badge": "Apoya a tu compañero",
+    "title": "Ayuda a mantener tu compañero gratuito",
     "subtitle": "Tu compañero es un proyecto de corazón – sin publicidad, sin suscripción, sin costos ocultos. Para que siga así, dependo de donaciones voluntarias. Cada contribución ayuda a cubrir los costos operativos.",
     "bankTitle": "Donar por transferencia bancaria",
     "bankSubtitle": "¡Cada cantidad cuenta – muchas gracias! 🙏",
     "recipient": "Beneficiario",
     "bank": "Banco",
     "purpose": "Referencia",
-    "purposeValue": "Donación Tu compañero",
+    "purposeValue": "Donación tu compañero",
     "note": "BibleBot.Life funciona como proyecto privado. Las donaciones no son deducibles de impuestos."
   },
   "cta": {
     "title": "No tienes que pasar por esto solo",
-    "subtitle": "Simplemente cuéntale a Tu compañero lo que te preocupa. Sin registro, sin costo, sin juicio – solo acompañamiento honesto y la sabiduría de la Biblia.",
+    "subtitle": "Simplemente cuéntale a tu compañero lo que te preocupa. Sin registro, sin costo, sin juicio – solo acompañamiento honesto y la sabiduría de la Biblia.",
     "button": "Iniciar conversación"
   },
   "footer": {
@@ -254,7 +254,7 @@
     "forChurches": "Para Iglesias"
   },
   "chat": {
-    "welcome": "¡Bienvenido/a! 🤗\n\nSoy tu Tu compañero – tu compañero personal con la Biblia, buenas preguntas e impulsos reales. Sin presión, sin juicio.\n\nPuedes preguntarme lo que quieras – o simplemente compartir lo que te preocupa. 💛",
+    "welcome": "¡Bienvenido/a! 🤗\n\nSoy tu tu compañero – tu compañero personal con la Biblia, buenas preguntas e impulsos reales. Sin presión, sin juicio.\n\nPuedes preguntarme lo que quieras – o simplemente compartir lo que te preocupa. 💛",
     "journeyOffer": "💡 **Consejo:** También ofrezco un **recorrido de 21 días** – 3 semanas de impulsos diarios, reflexiones y pasos concretos. A tu propio ritmo.\n\n¿Te gustaría probarlo?",
     "suggestion1": "Necesito una palabra de ánimo ahora",
     "suggestion2": "¿Qué dice la Biblia cuando te sientes inseguro?",
@@ -299,7 +299,7 @@
     "suggestionsLoading": "Cargando sugerencias…"
   },
   "install": {
-    "title": "Instalar Tu compañero",
+    "title": "Instalar tu compañero",
     "androidDesc": "Acceso rápido desde tu pantalla de inicio",
     "iosDesc": "Toca «Compartir» → «Añadir a pantalla de inicio»",
     "button": "Instalar",
@@ -357,7 +357,7 @@
   },
   "tiles": {
     "sectionTitle": "¿Qué te preocupa?",
-    "sectionSubtitle": "Elige un tema — Tu compañero te acompaña",
+    "sectionSubtitle": "Elige un tema — tu compañero te acompaña",
     "baptism": {
       "title": "Versículo de bautismo",
       "desc": "El versículo perfecto para tu hijo/a",
@@ -673,7 +673,7 @@
       }
     },
     "pricingTitle": "Paquetes de patrocinio",
-    "pricingSubtitle": "Apoye Tu compañero y su organización con el paquete de patrocinio adecuado.",
+    "pricingSubtitle": "Apoye tu compañero y su organización con el paquete de patrocinio adecuado.",
     "popular": "Popular",
     "free": "Gratis",
     "perYear": "personas / año",
@@ -715,7 +715,7 @@
     "viewDirectory": "Ver directorio de iglesias",
     "directoryBadge": "Directorio de Iglesias",
     "directoryTitle": "Iglesias asociadas",
-    "directorySubtitle": "Encuentra una iglesia cerca de ti que recomiende Tu compañero.",
+    "directorySubtitle": "Encuentra una iglesia cerca de ti que recomiende tu compañero.",
     "searchPlaceholder": "Buscar por lugar, nombre o denominación...",
     "noResults": "Aún no hay iglesias en el directorio.",
     "becomePartner": "Ser socio →",
@@ -843,8 +843,8 @@
     "badge": "Para organizaciones",
     "heroTitle": "Tu compañero para su organización",
     "heroSubtitle": "Digital pastoral care for care homes, retirement homes, hospitals, and correctional facilities – personal, confidential, and around the clock.",
-    "typesTitle": "Who is Tu compañero for?",
-    "useCasesTitle": "How Tu compañero is Used",
+    "typesTitle": "Who is tu compañero for?",
+    "useCasesTitle": "How tu compañero is Used",
     "useCasesSubtitle": "Practical applications for daily life in your institution.",
     "pricingTitle": "Patronage Packages",
     "pricingSubtitle": "The same packages as for churches – adapted to institutional needs.",
@@ -918,15 +918,15 @@
   },
   "refer": {
     "badge": "Comparte la Palabra",
-    "title": "Recomienda Tu compañero",
-    "subtitle": "¿Conoces a alguien que necesite ánimo? Comparte Tu compañero – un mensaje puede marcar la diferencia.",
+    "title": "Recomienda tu compañero",
+    "subtitle": "¿Conoces a alguien que necesite ánimo? Comparte tu compañero – un mensaje puede marcar la diferencia.",
     "whatsapp": "Compartir por WhatsApp",
-    "whatsappMsg": "Hola, quería mostrarte Tu compañero – un compañero bíblico gratuito. Sin registro, anónimo, honesto. Pruébalo: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Hola, quería mostrarte tu compañero – un compañero bíblico gratuito. Sin registro, anónimo, honesto. Pruébalo: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Compartir por Telegram",
-    "telegramMsg": "Hola, ¿conoces Tu compañero? Un compañero bíblico personal gratuito. Échale un vistazo: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Hola, ¿conoces tu compañero? Un compañero bíblico personal gratuito. Échale un vistazo: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Compartir por correo",
     "emailSubject": "Esto podría interesarte: BibleBot.Life",
-    "emailBody": "¡Hola!\n\nQuería mostrarte Tu compañero – un compañero bíblico gratuito.\n\nPruébalo: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nSaludos",
+    "emailBody": "¡Hola!\n\nQuería mostrarte tu compañero – un compañero bíblico gratuito.\n\nPruébalo: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nSaludos",
     "copy": "Copiar enlace",
     "copied": "¡Enlace copiado! 📋",
     "qr": "O muestra este código QR:"
@@ -952,7 +952,7 @@
     "imageSavedDesc": "¡Guarda la imagen y compártela!"
   },
   "eulogy": {
-    "pageTitle": "Elogio – Crear biografía | Tu compañero",
+    "pageTitle": "Elogio – Crear biografía | tu compañero",
     "pageDesc": "Conserva los recuerdos de un ser querido y crea un hermoso texto biográfico para el elogio.",
     "title": "Elogio – Biografía",
     "subtitle": "Captura recuerdos, crea texto, descarga como PDF.",
@@ -1002,7 +1002,7 @@
     "confirmationDesc": "Encuentra un versículo de confirmación y prepara textos personales."
   },
   "chatHero": {
-    "ariaLabel": "Haz una pregunta a Tu compañero",
+    "ariaLabel": "Haz una pregunta a tu compañero",
     "focusPlaceholder": "Escribe tu pregunta…",
     "placeholder1": "¿Qué me hace sentir verdaderamente agradecido?",
     "placeholder2": "¿Cómo puedo encontrar la paz interior?",
@@ -1020,8 +1020,8 @@
     "forChurchesTitle": "Tu compañero para Iglesias – Cuidado Pastoral Digital y Guía Bíblica",
     "homeDesc": "Tu compañero te acompaña con 5 traducciones de la Biblia, metodología de coaching y cuidado pastoral. Anónimo, gratuito, en 36 idiomas.",
     "homeTitle": "Tu compañero – Tu Compañero Bíblico Personal | Gratis y Anónimo",
-    "loginDesc": "Inicia sesión en Tu compañero para preparar tus ceremonias personales.",
-    "loginTitle": "Iniciar Sesión – Tu compañero"
+    "loginDesc": "Inicia sesión en tu compañero para preparar tus ceremonias personales.",
+    "loginTitle": "Iniciar Sesión – tu compañero"
   },
   "splash": {
     "patronage": "Recomendado por"

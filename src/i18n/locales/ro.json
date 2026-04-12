@@ -33,8 +33,8 @@
     "stopAudio": "Oprește"
   },
   "features": {
-    "sectionTitle": "Cum te însoțește Companionul tău",
-    "sectionSubtitle": "Descoperă numeroasele moduri în care Companionul tău te poate însoți",
+    "sectionTitle": "Cum te însoțește companionul tău",
+    "sectionSubtitle": "Descoperă numeroasele moduri în care companionul tău te poate însoți",
     "bible": {
       "title": "Pasaje biblice & interpretare",
       "desc": "Întreabă \"Ce spune Biblia despre...?\" și primește versete relevante cu context și explicații clare."
@@ -49,11 +49,11 @@
     },
     "faith": {
       "title": "Călătoria credinței",
-      "desc": "Fie că cauți, te îndoiești sau aprofundezi – Companionul tău te însoțește pe drumul tău personal."
+      "desc": "Fie că cauți, te îndoiești sau aprofundezi – companionul tău te însoțește pe drumul tău personal."
     },
     "daily": {
       "title": "Impulsuri zilnice & anul bisericesc",
-      "desc": "Începe-ți ziua cu impulsuri și lasă Companionul tău să te ghideze prin Advent, Post și sărbători."
+      "desc": "Începe-ți ziua cu impulsuri și lasă companionul tău să te ghideze prin Advent, Post și sărbători."
     },
     "groups": {
       "title": "Grupuri & comunități",
@@ -103,7 +103,7 @@
       "author": "Worthington",
       "desc": "Modelul REACH pentru procesele de iertare"
     },
-    "renameTip": "💡 Poți da Companionul tău-ului tău un nume personal – astfel devine cu adevărat <strong>al tău</strong>."
+    "renameTip": "💡 Poți da companionul tău-ului tău un nume personal – astfel devine cu adevărat <strong>al tău</strong>."
   },
   "discover": {
     "badge": "Pentru curioși",
@@ -170,9 +170,9 @@
   },
   "faq": {
     "badge": "Întrebări frecvente",
-    "title": "Ce trebuie să știi despre Companionul tău",
+    "title": "Ce trebuie să știi despre companionul tău",
     "subtitle": "Transparența contează – mai ales pentru teologi, pastori și gânditori critici.",
-    "q1": "Ce face Companionul tău diferit de ChatGPT & Co.?",
+    "q1": "Ce face companionul tău diferit de ChatGPT & Co.?",
     "q1Generic": "Chatboți generici:",
     "q1GenericItems": [
       "Citate biblice superficiale fără context",
@@ -196,7 +196,7 @@
     "q2Outro": "Toate pasajele biblice includ citări sursă și context istoric.",
     "q3": "Ce fundamente științifice stau la bază?",
     "q3Intro": "Însoțirea se bazează pe cercetări peer-reviewed din Psihologia Pozitivă:",
-    "q4": "Cum asigură Companionul tău siguranța pastorală?",
+    "q4": "Cum asigură companionul tău siguranța pastorală?",
     "q4Items": [
       "Gânduri suicidare sau criză → trimitere imediată către linii de urgență",
       "Fără diagnostice psihologice sau medicale",
@@ -206,15 +206,15 @@
       "Fără pozitivitate toxică – însoțire autentică și sinceră",
       "Numește deschis tensiunile și textele dificile"
     ],
-    "q5": "Este Companionul tău legat de o anumită confesiune?",
+    "q5": "Este companionul tău legat de o anumită confesiune?",
     "q5Answer": "Nu. Companionul tău este orientat ecumenic și respectă în mod egal tradițiile reformate, catolice, evanghelice și alte tradiții creștine. Când există diferențe confesionale, perspectivele sunt prezentate transparent.",
-    "q6": "Înlocuiește Companionul tău îngrijirea pastorală sau terapia?",
-    "q6Answer": "Nu. Companionul tău este un instrument pentru citirea și reflecția biblică personală. Nu înlocuiește îngrijirea pastorală profesională, consilierea teologică sau terapia psihologică. În crize grave, Companionul tău trimite întotdeauna către resurse calificate.",
-    "q7": "Nu este Companionul tău doar un 'bot de stare bună'?",
+    "q6": "Înlocuiește companionul tău îngrijirea pastorală sau terapia?",
+    "q6Answer": "Nu. Companionul tău este un instrument pentru citirea și reflecția biblică personală. Nu înlocuiește îngrijirea pastorală profesională, consilierea teologică sau terapia psihologică. În crize grave, companionul tău trimite întotdeauna către resurse calificate.",
+    "q7": "Nu este companionul tău doar un 'bot de stare bună'?",
     "q7Answer": "Nu. Companionul tău consolează unde este nevoie – dar și provoacă. Creșterea spirituală necesită fricțiune. Companionul tău pune întrebări incomode, numește texte biblice dificile și nu se ferește de subiecte precum dreptatea, pocăința și responsabilitatea.",
-    "q8": "Cine se află în spatele Companionul tău și cum este finanțat?",
+    "q8": "Cine se află în spatele companionul tău și cum este finanțat?",
     "q8Answer": "Companionul tău este un proiect privat, necomercial. Este administrat pe bază de voluntariat și finanțat exclusiv prin donații voluntare. Nu există publicitate, nu se vând date și nu există funcții plătite.",
-    "q9": "Cum tratează Companionul tău datele mele?",
+    "q9": "Cum tratează companionul tău datele mele?",
     "q9Answer": "Companionul tău nu stochează date personale și niciun istoric de chat. Fiecare conversație este anonimă. Nu există autentificare, nu există urmărire și nu se partajează date cu terți.",
     "tradition": {
       "reformed": "Reformată",
@@ -225,35 +225,35 @@
     }
   },
   "donate": {
-    "badge": "Susține Companionul tău",
-    "title": "Ajută Companionul tău să rămână gratuit",
+    "badge": "Susține companionul tău",
+    "title": "Ajută companionul tău să rămână gratuit",
     "subtitle": "Companionul tău este un proiect de pasiune – fără reclame, fără abonamente, fără costuri ascunse. Pentru a păstra acest lucru, mă bazez pe donații voluntare.",
     "bankTitle": "Donează prin transfer bancar",
     "bankSubtitle": "Orice sumă contează – mulțumesc! 🙏",
     "recipient": "Destinatar",
     "bank": "Bancă",
     "purpose": "Referință",
-    "purposeValue": "Donație Companionul tău",
+    "purposeValue": "Donație companionul tău",
     "note": "Companionul tău este operat ca proiect privat. Donațiile nu sunt deductibile fiscal."
   },
   "refer": {
     "badge": "Share God's Word",
-    "title": "Recommend Companionul tău",
-    "subtitle": "Know someone who could use encouragement? Share Companionul tău – one message can make a difference.",
+    "title": "Recommend companionul tău",
+    "subtitle": "Know someone who could use encouragement? Share companionul tău – one message can make a difference.",
     "whatsapp": "Share via WhatsApp",
-    "whatsappMsg": "Hey, I wanted to show you Companionul tău – a free Bible companion that really knows the Bible and asks great questions. No login, anonymous, honest. Try it out: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Hey, I wanted to show you companionul tău – a free Bible companion that really knows the Bible and asks great questions. No login, anonymous, honest. Try it out: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Share via Telegram",
-    "telegramMsg": "Hey, do you know Companionul tău? A free personal Bible companion – honest, anonymous, no login needed. Check it out: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Hey, do you know companionul tău? A free personal Bible companion – honest, anonymous, no login needed. Check it out: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Share via email",
     "emailSubject": "This might interest you: BibleBot.Life",
-    "emailBody": "Hi!\n\nI wanted to show you Companionul tău – a free Bible companion that really knows the Bible. No sign-up needed, completely anonymous.\n\nIt asks thoughtful questions, explains Bible passages in context and accompanies you honestly – even on difficult topics.\n\nTry it out: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nBest wishes",
+    "emailBody": "Hi!\n\nI wanted to show you companionul tău – a free Bible companion that really knows the Bible. No sign-up needed, completely anonymous.\n\nIt asks thoughtful questions, explains Bible passages in context and accompanies you honestly – even on difficult topics.\n\nTry it out: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nBest wishes",
     "copy": "Copy link",
     "copied": "Link copied! 📋",
     "qr": "Or just show this QR code:"
   },
   "cta": {
     "title": "Nu trebuie să treci singur prin asta",
-    "subtitle": "Spune-i Companionul tău ce te preocupă. Fără autentificare, fără costuri, fără judecată – doar însoțire sinceră și înțelepciunea Bibliei.",
+    "subtitle": "Spune-i companionul tău ce te preocupă. Fără autentificare, fără costuri, fără judecată – doar însoțire sinceră și înțelepciunea Bibliei.",
     "button": "Începe o conversație"
   },
   "footer": {
@@ -269,7 +269,7 @@
     "forChurches": "Pentru Biserici"
   },
   "chat": {
-    "welcome": "Bun venit! 🤗\n\nSunt Companionul tău-ul tău – companionul tău personal cu Biblia, întrebări bune și impulsuri reale. Fără presiune, fără judecată.\n\nPoți să mă întrebi orice – sau pur și simplu să împărtășești ce te preocupă. 💛",
+    "welcome": "Bun venit! 🤗\n\nSunt companionul tău-ul tău – companionul tău personal cu Biblia, întrebări bune și impulsuri reale. Fără presiune, fără judecată.\n\nPoți să mă întrebi orice – sau pur și simplu să împărtășești ce te preocupă. 💛",
     "journeyOffer": "💡 **Sfat:** Ofer și o **călătorie de 21 de zile** – 3 săptămâni de impulsuri zilnice, reflecții și pași concreți. În ritmul tău.\n\nVrei să încerci?",
     "suggestion1": "Am nevoie de un cuvânt încurajator acum",
     "suggestion2": "Ce spune Biblia când te simți nesigur?",
@@ -314,7 +314,7 @@
     "suggestionsLoading": "Se încarcă sugestiile…"
   },
   "install": {
-    "title": "Instalează Companionul tău",
+    "title": "Instalează companionul tău",
     "androidDesc": "Acces rapid de pe ecranul de start",
     "iosDesc": "Apasă \"Partajare\" → \"Adaugă pe ecranul de start\"",
     "button": "Instalează",
@@ -392,7 +392,7 @@
   },
   "tiles": {
     "sectionTitle": "Ce te frământă?",
-    "sectionSubtitle": "Alege un subiect — Companionul tău te însoțește",
+    "sectionSubtitle": "Alege un subiect — companionul tău te însoțește",
     "baptism": {
       "title": "Găsește un verset de botez",
       "desc": "Versetul perfect pentru copilul tău",
@@ -708,7 +708,7 @@
       }
     },
     "pricingTitle": "Pachete de patronaj",
-    "pricingSubtitle": "Sprijiniți Companionul tău și biserica dvs. cu pachetul de patronaj potrivit.",
+    "pricingSubtitle": "Sprijiniți companionul tău și biserica dvs. cu pachetul de patronaj potrivit.",
     "popular": "Popular",
     "free": "Gratuit",
     "perYear": "persoane / an",
@@ -750,7 +750,7 @@
     "viewDirectory": "Vezi directorul bisericilor",
     "directoryBadge": "Director Biserici",
     "directoryTitle": "Biserici partenere",
-    "directorySubtitle": "Găsiți o biserică lângă dumneavoastră care recomandă Companionul tău.",
+    "directorySubtitle": "Găsiți o biserică lângă dumneavoastră care recomandă companionul tău.",
     "searchPlaceholder": "Căutați după loc, nume sau denominație...",
     "noResults": "Nicio biserică în director deocamdată.",
     "becomePartner": "Deveniți partener →",
@@ -848,7 +848,7 @@
         "desc": "Impulsuri spirituale complementare pentru clienții din consilierea psihosocială."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As Companionul tău is a private project, donations are not tax-deductible.",
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As companionul tău is a private project, donations are not tax-deductible.",
     "denominationsTitle": "Pentru toate confesiunile și celebranții",
     "denominationsSubtitle": "BibleBot.Life este ecumenic – pentru comunități reformate, catolice, luterane și evanghelice libere, precum și celebranți independenți.",
     "denomination": {
@@ -878,8 +878,8 @@
     "badge": "Pentru organizații",
     "heroTitle": "Companionul tău for Your Institution",
     "heroSubtitle": "Digital pastoral care for care homes, retirement homes, hospitals, and correctional facilities – personal, confidential, and around the clock.",
-    "typesTitle": "Who is Companionul tău for?",
-    "useCasesTitle": "How Companionul tău is Used",
+    "typesTitle": "Who is companionul tău for?",
+    "useCasesTitle": "How companionul tău is Used",
     "useCasesSubtitle": "Practical applications for daily life in your institution.",
     "pricingTitle": "Patronage Packages",
     "pricingSubtitle": "The same packages as for churches – adapted to institutional needs.",
@@ -952,7 +952,7 @@
     }
   },
   "chatHero": {
-    "ariaLabel": "Pune o întrebare lui Companionul tău",
+    "ariaLabel": "Pune o întrebare lui companionul tău",
     "focusPlaceholder": "Scrie întrebarea ta…",
     "placeholder1": "Ce mă face cu adevărat recunoscător?",
     "placeholder2": "Cum găsesc pacea interioară?",
@@ -973,8 +973,8 @@
     "forChurchesTitle": "Companionul tău pentru Biserici – Consiliere Pastorală Digitală & Ghidare Biblică",
     "homeDesc": "Companionul tău te însoțește cu 5 traduceri biblice, metodologie de coaching și consiliere spirituală. Anonim, gratuit, în 36 de limbi.",
     "homeTitle": "Companionul tău – Ghidul Tău Biblic Personal | Gratuit & Anonim",
-    "loginDesc": "Conectează-te la Companionul tău pentru a-ți pregăti ceremoniile personale.",
-    "loginTitle": "Autentificare – Companionul tău"
+    "loginDesc": "Conectează-te la companionul tău pentru a-ți pregăti ceremoniile personale.",
+    "loginTitle": "Autentificare – companionul tău"
   },
   "meinBereich": {
     "title": "Zona mea",
@@ -993,7 +993,7 @@
     "confirmationDesc": "Găsește un verset de confirmare și pregătește texte personale."
   },
   "eulogy": {
-    "pageTitle": "Elogiu – Creare CV | Companionul tău",
+    "pageTitle": "Elogiu – Creare CV | companionul tău",
     "pageDesc": "Păstrează amintirile unei persoane dragi și creează un text frumos de CV pentru elogiu.",
     "title": "Elogiu – CV",
     "subtitle": "Păstrează amintiri, creează text, descarcă ca PDF.",

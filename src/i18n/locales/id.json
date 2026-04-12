@@ -33,8 +33,8 @@
     "stopAudio": "Berhenti"
   },
   "features": {
-    "sectionTitle": "Bagaimana Pendamping Anda Anda Mendampingi Anda",
-    "sectionSubtitle": "Temukan berbagai cara bagaimana Pendamping Anda Anda dapat mendukung Anda",
+    "sectionTitle": "Bagaimana pendamping Anda Anda Mendampingi Anda",
+    "sectionSubtitle": "Temukan berbagai cara bagaimana pendamping Anda Anda dapat mendukung Anda",
     "bible": {
       "title": "Ayat Alkitab & Penjelasan",
       "desc": "Tanyakan «Apa kata Alkitab tentang...?» dan dapatkan ayat yang relevan dengan konteks dan penjelasan yang mudah dipahami."
@@ -49,7 +49,7 @@
     },
     "faith": {
       "title": "Perjalanan Iman & Menemukan Kristus",
-      "desc": "Baik mencari, ragu, atau memperdalam – Pendamping Anda Anda mendampingi Anda dalam perjalanan pribadi Anda."
+      "desc": "Baik mencari, ragu, atau memperdalam – pendamping Anda Anda mendampingi Anda dalam perjalanan pribadi Anda."
     },
     "daily": {
       "title": "Dorongan Harian & Tahun Gerejawi",
@@ -103,7 +103,7 @@
       "author": "Worthington",
       "desc": "Model REACH untuk Proses Pengampunan"
     },
-    "renameTip": "💡 Anda dapat memberikan nama sendiri pada Pendamping Anda Anda – agar benar-benar menjadi pendamping <strong>Anda</strong>."
+    "renameTip": "💡 Anda dapat memberikan nama sendiri pada pendamping Anda Anda – agar benar-benar menjadi pendamping <strong>Anda</strong>."
   },
   "discover": {
     "badge": "Untuk yang Penasaran",
@@ -170,9 +170,9 @@
   },
   "faq": {
     "badge": "Pertanyaan yang Sering Diajukan",
-    "title": "Apa yang Perlu Anda Ketahui tentang Pendamping Anda Anda",
+    "title": "Apa yang Perlu Anda Ketahui tentang pendamping Anda Anda",
     "subtitle": "Transparansi penting bagi kami – terutama bagi para teolog, pendeta, dan pemikir kritis.",
-    "q1": "Apa yang membedakan Pendamping Anda Anda dari ChatGPT & Co.?",
+    "q1": "Apa yang membedakan pendamping Anda Anda dari ChatGPT & Co.?",
     "q1Generic": "Chatbot Generik:",
     "q1GenericItems": [
       "Kutipan Alkitab yang dangkal tanpa konteks",
@@ -196,7 +196,7 @@
     "q2Outro": "Semua ayat Alkitab disajikan dengan sumber dan konteks historis.",
     "q3": "Apa dasar ilmiah di baliknya?",
     "q3Intro": "Pendampingan ini didasarkan pada penelitian peer-review dari Psikologi Positif:",
-    "q4": "Bagaimana Pendamping Anda Anda memastikan keamanan pastoral?",
+    "q4": "Bagaimana pendamping Anda Anda memastikan keamanan pastoral?",
     "q4Items": [
       "Dalam kasus pikiran bunuh diri atau krisis → segera dialihkan ke Dargebotene Hand (143) dan Pro Juventute (147)",
       "Tidak ada diagnosis psikologis atau medis",
@@ -206,15 +206,15 @@
       "Tidak ada positif beracun – pendampingan yang tulus dan jujur",
       "Mengidentifikasi ketegangan dan teks-teks sulit secara terbuka"
     ],
-    "q5": "Apakah Pendamping Anda Anda terikat pada suatu denominasi?",
+    "q5": "Apakah pendamping Anda Anda terikat pada suatu denominasi?",
     "q5Answer": "Tidak. Pendamping Anda Anda berorientasi ekumenis dan menghormati tradisi Reformed, Katolik, gereja bebas, dan tradisi Kristen lainnya secara setara. Dalam kasus interpretasi yang berbeda secara denominasi, berbagai perspektif disajikan secara transparan – tanpa mengutamakan satu tradisi pun.",
-    "q6": "Apakah Pendamping Anda Anda menggantikan pelayanan pastoral atau terapi?",
-    "q6Answer": "Tidak. Pendamping Anda Anda adalah alat digital untuk pembacaan Alkitab pribadi dan refleksi. Ini tidak menggantikan pelayanan pastoral profesional, konseling teologis, atau terapi psikologis. Dalam kasus krisis serius, Pendamping Anda Anda selalu merujuk ke tempat bantuan yang berkualitas.",
-    "q7": "Bukankah Pendamping Anda Anda hanya 'bot yang menyenangkan'?",
-    "q7Answer": "Tidak. Pendamping Anda Anda menghibur di mana penghiburan diperlukan – tetapi ia juga menantang. Pertumbuhan rohani membutuhkan gesekan. Pendamping Anda Anda mengajukan pertanyaan balik yang tidak nyaman, mengidentifikasi teks-teks Alkitab yang sulit (Ayub, Mazmur ratapan, kritik profetik) dan tidak menghindar dari topik-topik seperti keadilan, pertobatan, dan tanggung jawab. Tradisi profetik tidak pernah nyaman – dan Pendamping Anda Anda juga tidak.",
-    "q8": "Siapa di balik Pendamping Anda Anda dan bagaimana pendanaannya?",
-    "q8Answer": "BibleBot.Life adalah proyek pribadi, non-komersial. Ini dijalankan secara sukarela dan didanai sepenuhnya melalui donasi sukarela. Tidak ada iklan, tidak ada penjualan data, dan tidak ada fitur berbayar. Semua donasi digunakan langsung untuk menutupi biaya operasional (infrastruktur, hosting, pengembangan). Karena Pendamping Anda berjalan sebagai proyek pribadi, donasi tidak dapat dikurangkan dari pajak.",
-    "q9": "Bagaimana Pendamping Anda Anda menangani data saya?",
+    "q6": "Apakah pendamping Anda Anda menggantikan pelayanan pastoral atau terapi?",
+    "q6Answer": "Tidak. Pendamping Anda Anda adalah alat digital untuk pembacaan Alkitab pribadi dan refleksi. Ini tidak menggantikan pelayanan pastoral profesional, konseling teologis, atau terapi psikologis. Dalam kasus krisis serius, pendamping Anda Anda selalu merujuk ke tempat bantuan yang berkualitas.",
+    "q7": "Bukankah pendamping Anda Anda hanya 'bot yang menyenangkan'?",
+    "q7Answer": "Tidak. Pendamping Anda Anda menghibur di mana penghiburan diperlukan – tetapi ia juga menantang. Pertumbuhan rohani membutuhkan gesekan. Pendamping Anda Anda mengajukan pertanyaan balik yang tidak nyaman, mengidentifikasi teks-teks Alkitab yang sulit (Ayub, Mazmur ratapan, kritik profetik) dan tidak menghindar dari topik-topik seperti keadilan, pertobatan, dan tanggung jawab. Tradisi profetik tidak pernah nyaman – dan pendamping Anda Anda juga tidak.",
+    "q8": "Siapa di balik pendamping Anda Anda dan bagaimana pendanaannya?",
+    "q8Answer": "BibleBot.Life adalah proyek pribadi, non-komersial. Ini dijalankan secara sukarela dan didanai sepenuhnya melalui donasi sukarela. Tidak ada iklan, tidak ada penjualan data, dan tidak ada fitur berbayar. Semua donasi digunakan langsung untuk menutupi biaya operasional (infrastruktur, hosting, pengembangan). Karena pendamping Anda berjalan sebagai proyek pribadi, donasi tidak dapat dikurangkan dari pajak.",
+    "q9": "Bagaimana pendamping Anda Anda menangani data saya?",
     "q9Answer": "Pendamping Anda Anda tidak menyimpan data pribadi dan riwayat obrolan. Setiap percakapan bersifat anonim. Tidak ada login, tidak ada pelacakan, dan tidak ada pembagian data dengan pihak ketiga. Penggunaan sepenuhnya anonim.",
     "tradition": {
       "reformed": "Reformasi",
@@ -225,35 +225,35 @@
     }
   },
   "donate": {
-    "badge": "Dukung Pendamping Anda Anda",
-    "title": "Bantu agar Pendamping Anda Anda tetap gratis",
+    "badge": "Dukung pendamping Anda Anda",
+    "title": "Bantu agar pendamping Anda Anda tetap gratis",
     "subtitle": "Pendamping Anda Anda adalah proyek yang lahir dari hati – tanpa iklan, tanpa langganan, tanpa biaya tersembunyi. Agar tetap demikian, saya bergantung pada donasi sukarela. Setiap kontribusi membantu menutupi biaya operasional dan infrastruktur.",
     "bankTitle": "Donasi melalui Transfer Bank",
     "bankSubtitle": "Setiap jumlah berarti – terima kasih banyak! 🙏",
     "recipient": "Penerima",
     "bank": "Bank",
     "purpose": "Tujuan",
-    "purposeValue": "Donasi Pendamping Anda",
+    "purposeValue": "Donasi pendamping Anda",
     "note": "BibleBot.Life dijalankan sebagai proyek pribadi. Oleh karena itu, donasi tidak dapat dikurangkan dari pajak."
   },
   "refer": {
     "badge": "Bagikan Firman Tuhan",
-    "title": "Rekomendasikan Pendamping Anda",
-    "subtitle": "Apakah Anda mengenal seseorang yang membutuhkan dorongan? Bagikan Pendamping Anda – satu pesan dapat membuat perbedaan besar.",
+    "title": "Rekomendasikan pendamping Anda",
+    "subtitle": "Apakah Anda mengenal seseorang yang membutuhkan dorongan? Bagikan pendamping Anda – satu pesan dapat membuat perbedaan besar.",
     "whatsapp": "Bagikan via WhatsApp",
-    "whatsappMsg": "Hai, saya ingin menunjukkan Pendamping Anda kepada Anda – pendamping Alkitab gratis yang tahu Alkitab dan mengajukan pertanyaan yang sangat bagus. Tanpa login, anonim, jujur. Coba saja: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Hai, saya ingin menunjukkan pendamping Anda kepada Anda – pendamping Alkitab gratis yang tahu Alkitab dan mengajukan pertanyaan yang sangat bagus. Tanpa login, anonim, jujur. Coba saja: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Bagikan via Telegram",
-    "telegramMsg": "Hai, sudahkah Anda mengenal Pendamping Anda? Pendamping Alkitab pribadi gratis – jujur, anonim, tanpa login. Lihatlah: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Hai, sudahkah Anda mengenal pendamping Anda? Pendamping Alkitab pribadi gratis – jujur, anonim, tanpa login. Lihatlah: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Bagikan via Email",
     "emailSubject": "Ini mungkin menarik bagi Anda: BibleBot.Life",
-    "emailBody": "Halo!\n\nSaya ingin menunjukkan Pendamping Anda kepada Anda – pendamping Alkitab gratis yang benar-benar tahu Alkitab. Tidak perlu mendaftar, sepenuhnya anonim.\n\nIa mengajukan pertanyaan balik yang baik, menjelaskan ayat-ayat Alkitab dalam konteks, dan mendampingi Anda dengan jujur – bahkan dalam topik-topik sulit.\n\nCoba saja: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nSalam hormat",
+    "emailBody": "Halo!\n\nSaya ingin menunjukkan pendamping Anda kepada Anda – pendamping Alkitab gratis yang benar-benar tahu Alkitab. Tidak perlu mendaftar, sepenuhnya anonim.\n\nIa mengajukan pertanyaan balik yang baik, menjelaskan ayat-ayat Alkitab dalam konteks, dan mendampingi Anda dengan jujur – bahkan dalam topik-topik sulit.\n\nCoba saja: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nSalam hormat",
     "copy": "Salin Tautan",
     "copied": "Tautan disalin! 📋",
     "qr": "Atau cukup tunjukkan kode QR ini:"
   },
   "cta": {
     "title": "Anda tidak harus menghadapi ini sendirian",
-    "subtitle": "Cukup tuliskan apa yang mengganggu Anda kepada Pendamping Anda Anda. Tanpa login, tanpa biaya, tanpa penghakiman – hanya pendampingan yang jujur dan kebijaksanaan Alkitab.",
+    "subtitle": "Cukup tuliskan apa yang mengganggu Anda kepada pendamping Anda Anda. Tanpa login, tanpa biaya, tanpa penghakiman – hanya pendampingan yang jujur dan kebijaksanaan Alkitab.",
     "button": "Mulai Obrolan Sekarang"
   },
   "footer": {
@@ -269,7 +269,7 @@
     "forChurches": "Untuk Gereja"
   },
   "chat": {
-    "welcome": "Senang Anda di sini 🤗\n\nSaya Pendamping Anda Anda – pendamping pribadi Anda dengan Alkitab, pertanyaan-pertanyaan bagus, dan inspirasi konkret. Tanpa tekanan, tanpa penilaian.\n\nAnda bisa bertanya apa saja – atau cukup ceritakan apa yang sedang mengganggu Anda. 💛",
+    "welcome": "Senang Anda di sini 🤗\n\nSaya pendamping Anda Anda – pendamping pribadi Anda dengan Alkitab, pertanyaan-pertanyaan bagus, dan inspirasi konkret. Tanpa tekanan, tanpa penilaian.\n\nAnda bisa bertanya apa saja – atau cukup ceritakan apa yang sedang mengganggu Anda. 💛",
     "journeyOffer": "💡 **Tip:** Saya juga menawarkan **pendampingan 21 hari** – 3 minggu dengan inspirasi harian, refleksi, dan langkah-langkah konkret. Sepenuhnya sesuai kecepatan Anda.\n\nApakah Anda ingin mencobanya?",
     "suggestion1": "Saya butuh kata-kata yang membangun",
     "suggestion2": "Apa kata Alkitab jika seseorang merasa tidak yakin?",
@@ -314,7 +314,7 @@
     "suggestionsLoading": "Memuat saran…"
   },
   "install": {
-    "title": "Instal Pendamping Anda",
+    "title": "Instal pendamping Anda",
     "androidDesc": "Akses cepat langsung dari layar utama",
     "iosDesc": "Ketuk «Bagikan» → «Tambah ke Layar Utama»",
     "button": "Instal",
@@ -392,7 +392,7 @@
   },
   "tiles": {
     "sectionTitle": "Apa yang mengganggu Anda?",
-    "sectionSubtitle": "Pilih topik — Pendamping Anda akan mendampingi Anda",
+    "sectionSubtitle": "Pilih topik — pendamping Anda akan mendampingi Anda",
     "baptism": {
       "title": "Menemukan Ayat Pembaptisan",
       "desc": "Ayat yang sempurna untuk anak Anda",
@@ -708,7 +708,7 @@
       }
     },
     "pricingTitle": "Paket Patronase",
-    "pricingSubtitle": "Dukung Pendamping Anda dan jemaat Anda dengan paket patronase yang sesuai.",
+    "pricingSubtitle": "Dukung pendamping Anda dan jemaat Anda dengan paket patronase yang sesuai.",
     "popular": "Populer",
     "free": "Gratis",
     "perYear": "orang / tahun",
@@ -750,7 +750,7 @@
     "viewDirectory": "Lihat Direktori Gereja",
     "directoryBadge": "Direktori Gereja",
     "directoryTitle": "Gereja Mitra",
-    "directorySubtitle": "Temukan gereja di dekat Anda yang merekomendasikan Pendamping Anda.",
+    "directorySubtitle": "Temukan gereja di dekat Anda yang merekomendasikan pendamping Anda.",
     "searchPlaceholder": "Cari Lokasi, Nama, atau Denominasi...",
     "noResults": "Belum ada gereja di direktori.",
     "becomePartner": "Jadi Mitra →",
@@ -848,7 +848,7 @@
         "desc": "Impuls spiritual pelengkap untuk klien dalam konseling psikososial."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As Pendamping Anda is a private project, donations are not tax-deductible.",
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As pendamping Anda is a private project, donations are not tax-deductible.",
     "denominationsTitle": "Untuk semua denominasi dan pemimpin upacara",
     "denominationsSubtitle": "BibleBot.Life bersifat ekumenis – untuk komunitas Reformasi, Katolik, Lutheran, dan Gereja Bebas Injili, serta pemimpin upacara freelance.",
     "denomination": {
@@ -883,8 +883,8 @@
       "desc": "Font lebih besar dan pengoperasian yang disederhanakan – ideal untuk penghuni lansia.",
       "cta": "Coba Mode Senior"
     },
-    "typesTitle": "Untuk Siapa Pendamping Anda?",
-    "useCasesTitle": "Bagaimana Pendamping Anda Digunakan",
+    "typesTitle": "Untuk Siapa pendamping Anda?",
+    "useCasesTitle": "Bagaimana pendamping Anda Digunakan",
     "useCasesSubtitle": "Aplikasi konkret untuk kehidupan sehari-hari di institusi Anda.",
     "pricingTitle": "Paket Patronase",
     "pricingSubtitle": "Paket yang sama dengan untuk gereja – disesuaikan dengan kebutuhan institusi.",
@@ -952,7 +952,7 @@
     }
   },
   "eulogy": {
-    "pageTitle": "Eulogi – Buat Riwayat Hidup | Pendamping Anda",
+    "pageTitle": "Eulogi – Buat Riwayat Hidup | pendamping Anda",
     "pageDesc": "Abadikan kenangan orang terkasih dan buat teks riwayat hidup yang indah untuk eulogi.",
     "title": "Eulogi – Riwayat Hidup",
     "subtitle": "Abadikan kenangan, buat teks, unduh sebagai PDF.",
@@ -1002,7 +1002,7 @@
     "confirmationDesc": "Temukan ayat konfirmasi dan persiapkan teks pribadi."
   },
   "chatHero": {
-    "ariaLabel": "Ajukan pertanyaan kepada Pendamping Anda",
+    "ariaLabel": "Ajukan pertanyaan kepada pendamping Anda",
     "focusPlaceholder": "Tulis pertanyaanmu…",
     "placeholder1": "Apa yang membuat saya sungguh bersyukur?",
     "placeholder2": "Bagaimana menemukan kedamaian batin?",
@@ -1020,8 +1020,8 @@
     "forChurchesTitle": "Pendamping Anda untuk Gereja – Konseling Pastoral Digital & Pendampingan Alkitab",
     "homeDesc": "Pendamping Anda menemani Anda dengan 5 terjemahan Alkitab, metodologi pembinaan, dan konseling pastoral. Anonim, gratis, dalam 36 bahasa.",
     "homeTitle": "Pendamping Anda – Pendamping Alkitab Pribadi Anda | Gratis & Anonim",
-    "loginDesc": "Masuk ke Pendamping Anda untuk mempersiapkan upacara pribadi Anda.",
-    "loginTitle": "Masuk – Pendamping Anda"
+    "loginDesc": "Masuk ke pendamping Anda untuk mempersiapkan upacara pribadi Anda.",
+    "loginTitle": "Masuk – pendamping Anda"
   },
   "splash": {
     "patronage": "Direkomendasikan oleh"

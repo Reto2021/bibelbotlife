@@ -16,7 +16,7 @@
     },
     "title1": "Bibelen.",
     "title2": " Tenkt på nytt.",
-    "subtitle": "Din Din følgesvenn kjenner Bibelen – og stiller de riktige spørsmålene. Ikke et menneske, men en ærlig følgesvenn. For gode samtaler, dype spørsmål og ekte impulser.",
+    "subtitle": "Din din følgesvenn kjenner Bibelen – og stiller de riktige spørsmålene. Ikke et menneske, men en ærlig følgesvenn. For gode samtaler, dype spørsmål og ekte impulser.",
     "ctaTelegram": "Start via Telegram",
     "ctaMore": "Lær mer",
     "quote": "«Kom til meg, alle dere som strever og bærer tunge byrder, og jeg vil gi dere hvile.»",
@@ -33,8 +33,8 @@
     "stopAudio": "Stopp"
   },
   "features": {
-    "sectionTitle": "Hvordan din Din følgesvenn følger deg",
-    "sectionSubtitle": "Oppdag de mange måtene din Din følgesvenn kan følge deg på",
+    "sectionTitle": "Hvordan din din følgesvenn følger deg",
+    "sectionSubtitle": "Oppdag de mange måtene din din følgesvenn kan følge deg på",
     "bible": {
       "title": "Bibelvers og tolkning",
       "desc": "Spør «Hva sier Bibelen om...?» og få passende vers med kontekst og forståelig forklaring."
@@ -49,7 +49,7 @@
     },
     "faith": {
       "title": "Troens vei og finne Kristus",
-      "desc": "Enten du søker, tviler eller ønsker å fordype deg – din Din følgesvenn følger deg på din personlige vei."
+      "desc": "Enten du søker, tviler eller ønsker å fordype deg – din din følgesvenn følger deg på din personlige vei."
     },
     "daily": {
       "title": "Daglige impulser og kirkeår",
@@ -63,9 +63,9 @@
   "coaching": {
     "badge": "Metodikk",
     "title": "Ikke bare en chatbot – en ekte følgesvenn",
-    "subtitle": "Din Din følgesvenn kombinerer bibelsk visdom med velprøvde coachingmetoder og positiv psykologi.",
+    "subtitle": "Din din følgesvenn kombinerer bibelsk visdom med velprøvde coachingmetoder og positiv psykologi.",
     "journeyTitle": "Personlig veiledning",
-    "journeyDesc": "Din Din følgesvenn følger deg så lenge du vil – i fri samtale eller med en valgfri 21-dagers struktur.",
+    "journeyDesc": "Din din følgesvenn følger deg så lenge du vil – i fri samtale eller med en valgfri 21-dagers struktur.",
     "week1": "Uke 1: Ankomst",
     "week1Desc": "Bygge tillit, lytte, forstå din situasjon. Hvor står du? Hva opptar deg?",
     "week2": "Uke 2: Fordypning",
@@ -73,12 +73,12 @@
     "week3": "Uke 3: Handling",
     "week3Desc": "Ta konkrete skritt, formulere mål, starte endring. Hva er ditt neste skritt?",
     "openQuestionsTitle": "Åpne spørsmål i stedet for raske svar",
-    "openQuestionsDesc": "Din Din følgesvenn gir deg ingen billige råd. I stedet stiller den spørsmålene som virkelig teller:",
+    "openQuestionsDesc": "Din din følgesvenn gir deg ingen billige råd. I stedet stiller den spørsmålene som virkelig teller:",
     "openQ1": "«Hva ligger egentlig bak dette ønsket?»",
     "openQ2": "«Hvordan ville du merke at noe har endret seg?»",
     "openQ3": "«Hva ville være et første lite skritt?»",
     "honestTitle": "Ærlig i stedet for giftig positiv",
-    "honestDesc": "Ingen «Det ordner seg!» og ingen bortforklaringer. Din Din følgesvenn er empatisk OG ærlig:",
+    "honestDesc": "Ingen «Det ordner seg!» og ingen bortforklaringer. Din din følgesvenn er empatisk OG ærlig:",
     "honest1": "Nevner også ubehagelige bibelvers",
     "honest2": "Utfordrer til selvrefleksjon",
     "honest3": "Skiller trøst fra fortrengning",
@@ -103,7 +103,7 @@
       "author": "Worthington",
       "desc": "REACH-modellen for tilgivelsesprosesser"
     },
-    "renameTip": "💡 Du kan gi din Din følgesvenn et eget navn – slik at den virkelig blir <strong>din</strong> følgesvenn."
+    "renameTip": "💡 Du kan gi din din følgesvenn et eget navn – slik at den virkelig blir <strong>din</strong> følgesvenn."
   },
   "discover": {
     "badge": "For nysgjerrige",
@@ -115,7 +115,7 @@
     },
     "search": {
       "title": "Du søker?",
-      "text": "Kanskje vet du ikke engang nøyaktig hva du leter etter. Det er helt greit. Din Din følgesvenn hjelper deg med å stille de riktige spørsmålene – i stedet for å gi raske svar."
+      "text": "Kanskje vet du ikke engang nøyaktig hva du leter etter. Det er helt greit. Din din følgesvenn hjelper deg med å stille de riktige spørsmålene – i stedet for å gi raske svar."
     },
     "deepen": {
       "title": "Du vil fordype deg?",
@@ -170,9 +170,9 @@
   },
   "faq": {
     "badge": "Ofte stilte spørsmål",
-    "title": "Hva du bør vite om din Din følgesvenn",
+    "title": "Hva du bør vite om din din følgesvenn",
     "subtitle": "Åpenhet er viktig for oss – spesielt overfor teologer, sjelesørgere og kritiske hoder.",
-    "q1": "Hva skiller din Din følgesvenn fra ChatGPT & Co.?",
+    "q1": "Hva skiller din din følgesvenn fra ChatGPT & Co.?",
     "q1Generic": "Generiske chatroboter:",
     "q1GenericItems": [
       "Overfladiske bibelsitater uten kontekst",
@@ -192,11 +192,11 @@
       "Fremmer kritisk tenkning som trosmodenhet"
     ],
     "q2": "Hvilke bibeloversettelser er lagret?",
-    "q2Intro": "Din Din følgesvenn arbeider økumenisk med de viktigste tyskspråklige bibelutgavene:",
+    "q2Intro": "Din din følgesvenn arbeider økumenisk med de viktigste tyskspråklige bibelutgavene:",
     "q2Outro": "Alle bibelvers gis med kildehenvisning og historisk kontekst.",
     "q3": "Hvilke vitenskapelige grunnlag ligger bak?",
     "q3Intro": "Veiledningen er basert på fagfellevurdert forskning innen positiv psykologi:",
-    "q4": "Hvordan sikrer din Din følgesvenn sjelesørgerisk trygghet?",
+    "q4": "Hvordan sikrer din din følgesvenn sjelesørgerisk trygghet?",
     "q4Items": [
       "Ved selvmordstanker eller kriser → umiddelbar videresending til Dargebotene Hand (143) og Pro Juventute (147)",
       "Ingen psykologiske eller medisinske diagnoser",
@@ -206,16 +206,16 @@
       "Ingen giftig positivitet – ekte, ærlig veiledning",
       "Nevner spenninger og vanskelige tekster åpent"
     ],
-    "q5": "Er din Din følgesvenn konfesjonelt bundet?",
-    "q5Answer": "Nei. Din Din følgesvenn er økumenisk orientert og respekterer reformerte, katolske, frikirkelige og andre kristne tradisjoner like mye. Ved konfesjonelt forskjellige tolkninger presenteres ulike perspektiver transparent – uten å favorisere en tradisjon.",
-    "q6": "Erstatter din Din følgesvenn sjelesorg eller terapi?",
-    "q6Answer": "Nei. Din Din følgesvenn er et digitalt hjelpemiddel for personlig bibellesning og refleksjon. Den erstatter ikke profesjonell sjelesorg, teologisk veiledning eller psykologisk terapi. Ved alvorlige kriser henviser din Din følgesvenn alltid til kvalifiserte kontaktpunkter.",
-    "q7": "Er din Din følgesvenn ikke bare en «velvære-bot»?",
-    "q7Answer": "Nei. Din Din følgesvenn trøster der trøst er nødvendig – men den utfordrer også. Åndelig vekst krever friksjon. Din Din følgesvenn stiller ubehagelige oppfølgingsspørsmål, nevner vanskelige bibeltekster (Job, klagesalmer, profetisk kritikk) og viker ikke unna temaer som rettferdighet, omvendelse og ansvar. Den profetiske tradisjonen var aldri behagelig – og din Din følgesvenn er det heller ikke.",
-    "q8": "Hvem står bak din Din følgesvenn og hvordan finansieres den?",
-    "q8Answer": "BibleBot.Life er et privat, ikke-kommersielt prosjekt. Det drives på frivillig basis og finansieres utelukkende gjennom frivillige donasjoner. Det er ingen reklame, ingen salg av data og ingen betalte funksjoner. Alle donasjoner går direkte til å dekke løpende kostnader (infrastruktur, hosting, utvikling). Siden Din følgesvenn drives som et privat prosjekt, er donasjoner ikke fradragsberettigede.",
-    "q9": "Hvordan håndterer din Din følgesvenn mine data?",
-    "q9Answer": "Din Din følgesvenn lagrer ingen personlige data og ingen chat-historikk. Hver samtale er anonym. Det er ingen pålogging, ingen sporing og ingen deling av data med tredjeparter. Bruken er fullstendig anonym.",
+    "q5": "Er din din følgesvenn konfesjonelt bundet?",
+    "q5Answer": "Nei. Din din følgesvenn er økumenisk orientert og respekterer reformerte, katolske, frikirkelige og andre kristne tradisjoner like mye. Ved konfesjonelt forskjellige tolkninger presenteres ulike perspektiver transparent – uten å favorisere en tradisjon.",
+    "q6": "Erstatter din din følgesvenn sjelesorg eller terapi?",
+    "q6Answer": "Nei. Din din følgesvenn er et digitalt hjelpemiddel for personlig bibellesning og refleksjon. Den erstatter ikke profesjonell sjelesorg, teologisk veiledning eller psykologisk terapi. Ved alvorlige kriser henviser din din følgesvenn alltid til kvalifiserte kontaktpunkter.",
+    "q7": "Er din din følgesvenn ikke bare en «velvære-bot»?",
+    "q7Answer": "Nei. Din din følgesvenn trøster der trøst er nødvendig – men den utfordrer også. Åndelig vekst krever friksjon. Din din følgesvenn stiller ubehagelige oppfølgingsspørsmål, nevner vanskelige bibeltekster (Job, klagesalmer, profetisk kritikk) og viker ikke unna temaer som rettferdighet, omvendelse og ansvar. Den profetiske tradisjonen var aldri behagelig – og din din følgesvenn er det heller ikke.",
+    "q8": "Hvem står bak din din følgesvenn og hvordan finansieres den?",
+    "q8Answer": "BibleBot.Life er et privat, ikke-kommersielt prosjekt. Det drives på frivillig basis og finansieres utelukkende gjennom frivillige donasjoner. Det er ingen reklame, ingen salg av data og ingen betalte funksjoner. Alle donasjoner går direkte til å dekke løpende kostnader (infrastruktur, hosting, utvikling). Siden din følgesvenn drives som et privat prosjekt, er donasjoner ikke fradragsberettigede.",
+    "q9": "Hvordan håndterer din din følgesvenn mine data?",
+    "q9Answer": "Din din følgesvenn lagrer ingen personlige data og ingen chat-historikk. Hver samtale er anonym. Det er ingen pålogging, ingen sporing og ingen deling av data med tredjeparter. Bruken er fullstendig anonym.",
     "tradition": {
       "reformed": "Reformert",
       "catholic": "Katolsk",
@@ -225,35 +225,35 @@
     }
   },
   "donate": {
-    "badge": "Støtt din Din følgesvenn",
-    "title": "Hjelp til å holde din Din følgesvenn gratis",
-    "subtitle": "Din Din følgesvenn er et hjerteprosjekt – uten reklame, uten abonnement, uten skjulte kostnader. For at det skal forbli slik, er jeg avhengig av frivillige donasjoner. Hvert bidrag hjelper til med å dekke de løpende kostnadene for drift og infrastruktur.",
+    "badge": "Støtt din din følgesvenn",
+    "title": "Hjelp til å holde din din følgesvenn gratis",
+    "subtitle": "Din din følgesvenn er et hjerteprosjekt – uten reklame, uten abonnement, uten skjulte kostnader. For at det skal forbli slik, er jeg avhengig av frivillige donasjoner. Hvert bidrag hjelper til med å dekke de løpende kostnadene for drift og infrastruktur.",
     "bankTitle": "Donasjon via bankoverføring",
     "bankSubtitle": "Hvert beløp teller – tusen takk! 🙏",
     "recipient": "Mottaker",
     "bank": "Bank",
     "purpose": "Formål",
-    "purposeValue": "Donasjon Din følgesvenn",
+    "purposeValue": "Donasjon din følgesvenn",
     "note": "BibleBot.Life drives som et privat prosjekt. Donasjoner er derfor ikke fradragsberettigede."
   },
   "refer": {
     "badge": "Del Guds ord",
-    "title": "Anbefal Din følgesvenn videre",
-    "subtitle": "Kjenner du noen som trenger oppmuntring akkurat nå? Del Din følgesvenn – en melding kan utgjøre en stor forskjell.",
+    "title": "Anbefal din følgesvenn videre",
+    "subtitle": "Kjenner du noen som trenger oppmuntring akkurat nå? Del din følgesvenn – en melding kan utgjøre en stor forskjell.",
     "whatsapp": "Del via WhatsApp",
-    "whatsappMsg": "Hei, jeg ville vise deg Din følgesvenn – en gratis bibel-følgesvenn som kjenner Bibelen og stiller virkelig gode spørsmål. Ingen pålogging, anonym, ærlig. Prøv det: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Hei, jeg ville vise deg din følgesvenn – en gratis bibel-følgesvenn som kjenner Bibelen og stiller virkelig gode spørsmål. Ingen pålogging, anonym, ærlig. Prøv det: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Del via Telegram",
-    "telegramMsg": "Hei, kjenner du Din følgesvenn? En gratis personlig bibel-følgesvenn – ærlig, anonym, uten pålogging. Ta en titt: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Hei, kjenner du din følgesvenn? En gratis personlig bibel-følgesvenn – ærlig, anonym, uten pålogging. Ta en titt: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Del via e-post",
     "emailSubject": "Dette kan interessere deg: BibleBot.Life",
-    "emailBody": "Hei!\n\nJeg ville vise deg Din følgesvenn – en gratis bibel-følgesvenn som virkelig kjenner Bibelen. Ingen registrering nødvendig, helt anonym.\n\nDen stiller gode oppfølgingsspørsmål, forklarer bibelvers i kontekst og følger deg ærlig – også i vanskelige temaer.\n\nPrøv det: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nMvh",
+    "emailBody": "Hei!\n\nJeg ville vise deg din følgesvenn – en gratis bibel-følgesvenn som virkelig kjenner Bibelen. Ingen registrering nødvendig, helt anonym.\n\nDen stiller gode oppfølgingsspørsmål, forklarer bibelvers i kontekst og følger deg ærlig – også i vanskelige temaer.\n\nPrøv det: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nMvh",
     "copy": "Kopier lenke",
     "copied": "Lenke kopiert! 📋",
     "qr": "Eller vis bare denne QR-koden:"
   },
   "cta": {
     "title": "Du trenger ikke å gå gjennom dette alene",
-    "subtitle": "Skriv til din Din følgesvenn hva som opptar deg. Ingen pålogging, ingen kostnader, ingen fordømmelse – bare ærlig veiledning og Bibelens visdom.",
+    "subtitle": "Skriv til din din følgesvenn hva som opptar deg. Ingen pålogging, ingen kostnader, ingen fordømmelse – bare ærlig veiledning og Bibelens visdom.",
     "button": "Start samtale nå"
   },
   "footer": {
@@ -269,7 +269,7 @@
     "forChurches": "For menigheter"
   },
   "chat": {
-    "welcome": "Så hyggelig at du er her 🤗\n\nJeg er din Din følgesvenn – din personlige følgesvenn med Bibelen, gode spørsmål og konkrete impulser. Ingen press, ingen vurdering.\n\nDu kan spørre meg om alt – eller bare fortelle hva som opptar deg akkurat nå. 💛",
+    "welcome": "Så hyggelig at du er her 🤗\n\nJeg er din din følgesvenn – din personlige følgesvenn med Bibelen, gode spørsmål og konkrete impulser. Ingen press, ingen vurdering.\n\nDu kan spørre meg om alt – eller bare fortelle hva som opptar deg akkurat nå. 💛",
     "journeyOffer": "💡 **Tips:** Jeg tilbyr også en **21-dagers veiledning** – 3 uker med daglige impulser, refleksjoner og konkrete skritt. Helt i ditt tempo.\n\nVil du prøve det?",
     "suggestion1": "Jeg trenger et oppmuntrende ord akkurat nå",
     "suggestion2": "Hva sier Bibelen når man føler seg usikker?",
@@ -314,7 +314,7 @@
     "suggestionsLoading": "Laster forslag…"
   },
   "install": {
-    "title": "Installer Din følgesvenn",
+    "title": "Installer din følgesvenn",
     "androidDesc": "Rask tilgang direkte fra startskjermen",
     "iosDesc": "Trykk på «Del» → «Legg til på Hjem-skjerm»",
     "button": "Installer",
@@ -354,7 +354,7 @@
   },
   "tiles": {
     "sectionTitle": "Hva opptar deg?",
-    "sectionSubtitle": "Velg et tema — Din følgesvenn følger deg",
+    "sectionSubtitle": "Velg et tema — din følgesvenn følger deg",
     "baptism": {
       "title": "Finn dåpsvers",
       "desc": "Det perfekte verset for ditt barn",
@@ -670,7 +670,7 @@
       }
     },
     "pricingTitle": "Patronatspakker",
-    "pricingSubtitle": "Støtt Din følgesvenn og din organisasjon med riktig patronatspakke.",
+    "pricingSubtitle": "Støtt din følgesvenn og din organisasjon med riktig patronatspakke.",
     "popular": "Populær",
     "free": "Gratis",
     "perYear": "personer / år",
@@ -712,7 +712,7 @@
     "viewDirectory": "Se menighetskatalog",
     "directoryBadge": "Menighetskatalog",
     "directoryTitle": "Partnermenigheter",
-    "directorySubtitle": "Finn en menighet i nærheten som anbefaler Din følgesvenn.",
+    "directorySubtitle": "Finn en menighet i nærheten som anbefaler din følgesvenn.",
     "searchPlaceholder": "Søk sted, navn eller kirkesamfunn...",
     "noResults": "Ingen menigheter i katalogen ennå.",
     "becomePartner": "Bli partner →",
@@ -810,7 +810,7 @@
         "desc": "Supplerende åndelige impulser for klienter i psykososial rådgivning."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As Din følgesvenn is a private project, donations are not tax-deductible.",
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As din følgesvenn is a private project, donations are not tax-deductible.",
     "denominationsTitle": "For alle trosretninger og seremonimestere",
     "denominationsSubtitle": "BibleBot.Life er økumenisk – for reformerte, katolske, lutherske og frikirkelige fellesskap samt frilans seremonimestere.",
     "denomination": {
@@ -845,8 +845,8 @@
       "desc": "Større skrift og forenklet betjening – ideelt for eldre beboere.",
       "cta": "Test senior-modus"
     },
-    "typesTitle": "Hvem er Din følgesvenn for?",
-    "useCasesTitle": "Slik brukes Din følgesvenn",
+    "typesTitle": "Hvem er din følgesvenn for?",
+    "useCasesTitle": "Slik brukes din følgesvenn",
     "useCasesSubtitle": "Konkrete anvendelser for hverdagen i din institusjon.",
     "pricingTitle": "Patronatspakker",
     "pricingSubtitle": "De samme pakkene som for menigheter – tilpasset institusjonelle behov.",
@@ -952,7 +952,7 @@
     "ht": "Kreyòl"
   },
   "eulogy": {
-    "pageTitle": "Minnetale – Lag en biografi | Din følgesvenn",
+    "pageTitle": "Minnetale – Lag en biografi | din følgesvenn",
     "pageDesc": "Ta vare på minner om en kjær person og lag en vakker biografi for minnetalen.",
     "title": "Minnetale – Biografi",
     "subtitle": "Ta vare på minner, lag tekst, last ned som PDF.",
@@ -1002,7 +1002,7 @@
     "confirmationDesc": "Finn konfirmasjonsord og forbered personlige tekster."
   },
   "chatHero": {
-    "ariaLabel": "Still et spørsmål til Din følgesvenn",
+    "ariaLabel": "Still et spørsmål til din følgesvenn",
     "focusPlaceholder": "Skriv spørsmålet ditt…",
     "placeholder1": "Hva gjør meg virkelig takknemlig?",
     "placeholder2": "Hvordan finner jeg indre fred?",
@@ -1020,8 +1020,8 @@
     "forChurchesTitle": "Din følgesvenn for menigheter – Digital sjelesorg og bibel veiledning",
     "homeDesc": "Din følgesvenn følger deg med 5 bibeloversettelser, coaching-metodikk og sjelesorg. Anonymt, gratis, på 36 språk.",
     "homeTitle": "Din følgesvenn – Din personlige bibel-følgesvenn | Gratis & Anonym",
-    "loginDesc": "Logg inn på Din følgesvenn for å forberede dine personlige seremonier.",
-    "loginTitle": "Logg inn – Din følgesvenn"
+    "loginDesc": "Logg inn på din følgesvenn for å forberede dine personlige seremonier.",
+    "loginTitle": "Logg inn – din følgesvenn"
   },
   "splash": {
     "patronage": "Anbefalt av"

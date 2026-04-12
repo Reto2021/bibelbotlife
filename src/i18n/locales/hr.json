@@ -16,7 +16,7 @@
     },
     "title1": "Biblija.",
     "title2": " Ponovno osmišljena.",
-    "subtitle": "Vaš Vaš pratitelj poznaje Bibliju – i postavlja prava pitanja. Nije čovjek, ali je iskren pratitelj. Za dobre razgovore, duboka pitanja i stvarne poticaje.",
+    "subtitle": "Vaš vaš pratitelj poznaje Bibliju – i postavlja prava pitanja. Nije čovjek, ali je iskren pratitelj. Za dobre razgovore, duboka pitanja i stvarne poticaje.",
     "ctaTelegram": "Započnite putem Telegrama",
     "ctaMore": "Saznajte više",
     "quote": "«Dođite k meni svi koji ste umorni i opterećeni, i ja ću vas odmoriti.»",
@@ -33,8 +33,8 @@
     "stopAudio": "Zaustavi"
   },
   "features": {
-    "sectionTitle": "Kako vas vaš Vaš pratitelj prati",
-    "sectionSubtitle": "Otkrijte raznolike načine na koje vas vaš Vaš pratitelj može pratiti",
+    "sectionTitle": "Kako vas vaš vaš pratitelj prati",
+    "sectionSubtitle": "Otkrijte raznolike načine na koje vas vaš vaš pratitelj može pratiti",
     "bible": {
       "title": "Biblijski stihovi i tumačenje",
       "desc": "Pitajte «Što Biblija kaže o...?» i primite odgovarajuće stihove s kontekstom i razumljivim objašnjenjem."
@@ -49,7 +49,7 @@
     },
     "faith": {
       "title": "Put vjere i pronalaženje Krista",
-      "desc": "Bilo da tražite, sumnjate ili produbljujete – vaš Vaš pratitelj vas prati na vašem osobnom putu."
+      "desc": "Bilo da tražite, sumnjate ili produbljujete – vaš vaš pratitelj vas prati na vašem osobnom putu."
     },
     "daily": {
       "title": "Dnevni poticaji i crkvena godina",
@@ -63,9 +63,9 @@
   "coaching": {
     "badge": "Metodologija",
     "title": "Nije samo chatbot – prava pratnja",
-    "subtitle": "Vaš Vaš pratitelj kombinira biblijsku mudrost s provjerenim coaching metodama i pozitivnom psihologijom.",
+    "subtitle": "Vaš vaš pratitelj kombinira biblijsku mudrost s provjerenim coaching metodama i pozitivnom psihologijom.",
     "journeyTitle": "Osobna pratnja",
-    "journeyDesc": "Vaš Vaš pratitelj vas prati koliko god želite – u slobodnom razgovoru ili s opcionalnom 21-dnevnom strukturom.",
+    "journeyDesc": "Vaš vaš pratitelj vas prati koliko god želite – u slobodnom razgovoru ili s opcionalnom 21-dnevnom strukturom.",
     "week1": "Tjedan 1: Dolazak",
     "week1Desc": "Izgradnja povjerenja, slušanje, razumijevanje vaše situacije. Gdje ste? Što vas muči?",
     "week2": "Tjedan 2: Produbljivanje",
@@ -73,12 +73,12 @@
     "week3": "Tjedan 3: Djelovanje",
     "week3Desc": "Poduzimanje konkretnih koraka, formuliranje ciljeva, poticanje promjena. Koji je vaš sljedeći korak?",
     "openQuestionsTitle": "Otvorena pitanja umjesto brzih odgovora",
-    "openQuestionsDesc": "Vaš Vaš pratitelj vam ne daje jeftine savjete. Umjesto toga, postavlja pitanja koja su zaista važna:",
+    "openQuestionsDesc": "Vaš vaš pratitelj vam ne daje jeftine savjete. Umjesto toga, postavlja pitanja koja su zaista važna:",
     "openQ1": "«Što se zapravo krije iza ove želje?»",
     "openQ2": "«Po čemu biste primijetili da se nešto promijenilo?»",
     "openQ3": "«Koji bi bio prvi mali korak?»",
     "honestTitle": "Iskreno umjesto toksično pozitivno",
-    "honestDesc": "Nema «Bit će dobro!» i nema uljepšavanja. Vaš Vaš pratitelj je empatičan I iskren:",
+    "honestDesc": "Nema «Bit će dobro!» i nema uljepšavanja. Vaš vaš pratitelj je empatičan I iskren:",
     "honest1": "Imenuje i neugodne biblijske stihove",
     "honest2": "Izaziva na samorefleksiju",
     "honest3": "Razlikuje utjehu od potiskivanja",
@@ -103,7 +103,7 @@
       "author": "Worthington",
       "desc": "REACH model za procese oprosta"
     },
-    "renameTip": "💡 Možete svom Vaš pratitelju dati vlastito ime – kako bi zaista postao <strong>vaš</strong> pratitelj."
+    "renameTip": "💡 Možete svom vaš pratitelju dati vlastito ime – kako bi zaista postao <strong>vaš</strong> pratitelj."
   },
   "discover": {
     "badge": "Za znatiželjne",
@@ -115,7 +115,7 @@
     },
     "search": {
       "title": "Tražite?",
-      "text": "Možda ni ne znate točno što. To je potpuno u redu. Vaš Vaš pratitelj vam pomaže postaviti prava pitanja – umjesto da daje brze odgovore."
+      "text": "Možda ni ne znate točno što. To je potpuno u redu. Vaš vaš pratitelj vam pomaže postaviti prava pitanja – umjesto da daje brze odgovore."
     },
     "deepen": {
       "title": "Želite produbiti?",
@@ -170,9 +170,9 @@
   },
   "faq": {
     "badge": "Česta pitanja",
-    "title": "Što trebate znati o svom Vaš pratitelju",
+    "title": "Što trebate znati o svom vaš pratitelju",
     "subtitle": "Transparentnost nam je važna – posebno prema teolozima, duhovnicima i kritičnim umovima.",
-    "q1": "Po čemu se vaš Vaš pratitelj razlikuje od ChatGPT-a i sličnih?",
+    "q1": "Po čemu se vaš vaš pratitelj razlikuje od ChatGPT-a i sličnih?",
     "q1Generic": "Generički chatboti:",
     "q1GenericItems": [
       "Površni biblijski citati bez konteksta",
@@ -192,11 +192,11 @@
       "Potiče kritičko razmišljanje kao zrelost vjere"
     ],
     "q2": "Koje su biblijske verzije pohranjene?",
-    "q2Intro": "Vaš Vaš pratitelj ekumenski radi s relevantnim njemačkim izdanjima Biblije:",
+    "q2Intro": "Vaš vaš pratitelj ekumenski radi s relevantnim njemačkim izdanjima Biblije:",
     "q2Outro": "Svi biblijski stihovi prikazani su s izvorom i povijesnim kontekstom.",
     "q3": "Koje su znanstvene osnove iza toga?",
     "q3Intro": "Pratnja se temelji na recenziranom istraživanju pozitivne psihologije:",
-    "q4": "Kako vaš Vaš pratitelj osigurava duhovnu sigurnost?",
+    "q4": "Kako vaš vaš pratitelj osigurava duhovnu sigurnost?",
     "q4Items": [
       "U slučaju suicidalnih misli ili kriza → odmah preusmjeravanje na Dargebotene Hand (143) i Pro Juventute (147)",
       "Nema psiholoških ili medicinskih dijagnoza",
@@ -206,16 +206,16 @@
       "Nema toksične pozitivnosti – stvarna, iskrena pratnja",
       "Otvoreno imenuje napetosti i teške tekstove"
     ],
-    "q5": "Je li vaš Vaš pratitelj konfesionalno vezan?",
-    "q5Answer": "Ne. Vaš Vaš pratitelj je ekumenski orijentiran i jednako poštuje reformirane, katoličke, slobodne crkvene i druge kršćanske tradicije. U slučaju konfesionalno različitih tumačenja, različite perspektive su transparentno prikazane – bez favoriziranja jedne tradicije.",
-    "q6": "Zamjenjuje li vaš Vaš pratitelj duhovnu skrb ili terapiju?",
-    "q6Answer": "Ne. Vaš Vaš pratitelj je digitalni alat za osobno čitanje Biblije i razmišljanje. Ne zamjenjuje profesionalnu duhovnu skrb, teološko savjetovanje ili psihološku terapiju. U ozbiljnim krizama, vaš Vaš pratitelj uvijek upućuje na kvalificirane kontakt točke.",
-    "q7": "Nije li vaš Vaš pratitelj samo «bot za dobro raspoloženje»?",
-    "q7Answer": "Ne. Vaš Vaš pratitelj tješi tamo gdje je utjeha potrebna – ali i izaziva. Duhovni rast zahtijeva trenje. Vaš Vaš pratitelj postavlja neugodna dodatna pitanja, imenuje teške biblijske tekstove (Job, psalmi tužaljki, proročka kritika) i ne boji se tema poput pravde, pokajanja i odgovornosti. Proročka tradicija nikada nije bila ugodna – pa tako ni vaš Vaš pratitelj.",
-    "q8": "Tko stoji iza vašeg Vaš pratitelja i kako se financira?",
-    "q8Answer": "BibleBot.Life je privatni, nekomercijalni projekt. Vodi se volonterski i financira se isključivo dobrovoljnim donacijama. Nema oglašavanja, prodaje podataka i plaćenih značajki. Sve donacije idu izravno na pokrivanje tekućih troškova (infrastruktura, hosting, razvoj). Budući da Vaš pratitelj djeluje kao privatni projekt, donacije nisu porezno priznate.",
-    "q9": "Kako vaš Vaš pratitelj postupa s mojim podacima?",
-    "q9Answer": "Vaš Vaš pratitelj ne pohranjuje osobne podatke niti povijest razgovora. Svaki razgovor je anoniman. Nema prijave, praćenja i prosljeđivanja podataka trećim stranama. Korištenje je potpuno anonimno.",
+    "q5": "Je li vaš vaš pratitelj konfesionalno vezan?",
+    "q5Answer": "Ne. Vaš vaš pratitelj je ekumenski orijentiran i jednako poštuje reformirane, katoličke, slobodne crkvene i druge kršćanske tradicije. U slučaju konfesionalno različitih tumačenja, različite perspektive su transparentno prikazane – bez favoriziranja jedne tradicije.",
+    "q6": "Zamjenjuje li vaš vaš pratitelj duhovnu skrb ili terapiju?",
+    "q6Answer": "Ne. Vaš vaš pratitelj je digitalni alat za osobno čitanje Biblije i razmišljanje. Ne zamjenjuje profesionalnu duhovnu skrb, teološko savjetovanje ili psihološku terapiju. U ozbiljnim krizama, vaš vaš pratitelj uvijek upućuje na kvalificirane kontakt točke.",
+    "q7": "Nije li vaš vaš pratitelj samo «bot za dobro raspoloženje»?",
+    "q7Answer": "Ne. Vaš vaš pratitelj tješi tamo gdje je utjeha potrebna – ali i izaziva. Duhovni rast zahtijeva trenje. Vaš vaš pratitelj postavlja neugodna dodatna pitanja, imenuje teške biblijske tekstove (Job, psalmi tužaljki, proročka kritika) i ne boji se tema poput pravde, pokajanja i odgovornosti. Proročka tradicija nikada nije bila ugodna – pa tako ni vaš vaš pratitelj.",
+    "q8": "Tko stoji iza vašeg vaš pratitelja i kako se financira?",
+    "q8Answer": "BibleBot.Life je privatni, nekomercijalni projekt. Vodi se volonterski i financira se isključivo dobrovoljnim donacijama. Nema oglašavanja, prodaje podataka i plaćenih značajki. Sve donacije idu izravno na pokrivanje tekućih troškova (infrastruktura, hosting, razvoj). Budući da vaš pratitelj djeluje kao privatni projekt, donacije nisu porezno priznate.",
+    "q9": "Kako vaš vaš pratitelj postupa s mojim podacima?",
+    "q9Answer": "Vaš vaš pratitelj ne pohranjuje osobne podatke niti povijest razgovora. Svaki razgovor je anoniman. Nema prijave, praćenja i prosljeđivanja podataka trećim stranama. Korištenje je potpuno anonimno.",
     "tradition": {
       "reformed": "Reformirani",
       "freeChurch": "Slobodna Crkva",
@@ -225,35 +225,35 @@
     }
   },
   "donate": {
-    "badge": "Podržite svog Vaš pratitelja",
-    "title": "Pomozite da vaš Vaš pratitelj ostane besplatan",
-    "subtitle": "Vaš Vaš pratitelj je projekt iz srca – bez reklama, bez pretplate, bez skrivenih troškova. Da bi tako ostalo, ovisim o dobrovoljnim donacijama. Svaki doprinos pomaže pokriti tekuće troškove rada i infrastrukture.",
+    "badge": "Podržite svog vaš pratitelja",
+    "title": "Pomozite da vaš vaš pratitelj ostane besplatan",
+    "subtitle": "Vaš vaš pratitelj je projekt iz srca – bez reklama, bez pretplate, bez skrivenih troškova. Da bi tako ostalo, ovisim o dobrovoljnim donacijama. Svaki doprinos pomaže pokriti tekuće troškove rada i infrastrukture.",
     "bankTitle": "Donirajte bankovnim prijenosom",
     "bankSubtitle": "Svaki iznos se računa – hvala vam puno! 🙏",
     "recipient": "Primatelj",
     "bank": "Banka",
     "purpose": "Svrha",
-    "purposeValue": "Donacija Vaš pratitelj",
+    "purposeValue": "Donacija vaš pratitelj",
     "note": "BibleBot.Life se vodi kao privatni projekt. Donacije stoga nisu porezno priznate."
   },
   "refer": {
     "badge": "Podijelite Božju riječ",
-    "title": "Preporučite Vaš pratitelj dalje",
-    "subtitle": "Poznajete li nekoga kome je potrebna ohrabrenje? Podijelite Vaš pratitelj – jedna poruka može puno značiti.",
+    "title": "Preporučite vaš pratitelj dalje",
+    "subtitle": "Poznajete li nekoga kome je potrebna ohrabrenje? Podijelite vaš pratitelj – jedna poruka može puno značiti.",
     "whatsapp": "Podijelite putem WhatsAppa",
-    "whatsappMsg": "Hej, htio sam ti pokazati Vaš pratitelj – besplatnog biblijskog pratitelja koji poznaje Bibliju i postavlja zaista dobra pitanja. Bez prijave, anonimno, iskreno. Probaj: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Hej, htio sam ti pokazati vaš pratitelj – besplatnog biblijskog pratitelja koji poznaje Bibliju i postavlja zaista dobra pitanja. Bez prijave, anonimno, iskreno. Probaj: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Podijelite putem Telegrama",
-    "telegramMsg": "Hej, znaš li za Vaš pratitelj? Besplatni osobni biblijski pratitelj – iskren, anoniman, bez prijave. Pogledaj: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Hej, znaš li za vaš pratitelj? Besplatni osobni biblijski pratitelj – iskren, anoniman, bez prijave. Pogledaj: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Podijelite putem e-pošte",
     "emailSubject": "Ovo bi vas moglo zanimati: BibleBot.Life",
-    "emailBody": "Zdravo!\n\nHtio sam ti pokazati Vaš pratitelj – besplatnog biblijskog pratitelja koji zaista poznaje Bibliju. Nije potrebna prijava, potpuno anonimno.\n\nPostavlja dobra dodatna pitanja, objašnjava biblijske stihove u kontekstu i iskreno vas prati – čak i kod teških tema.\n\nProbaj: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nSrdačan pozdrav",
+    "emailBody": "Zdravo!\n\nHtio sam ti pokazati vaš pratitelj – besplatnog biblijskog pratitelja koji zaista poznaje Bibliju. Nije potrebna prijava, potpuno anonimno.\n\nPostavlja dobra dodatna pitanja, objašnjava biblijske stihove u kontekstu i iskreno vas prati – čak i kod teških tema.\n\nProbaj: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nSrdačan pozdrav",
     "copy": "Kopiraj poveznicu",
     "copied": "Poveznica kopirana! 📋",
     "qr": "Ili jednostavno pokažite ovaj QR kod:"
   },
   "cta": {
     "title": "Ne morate to prolaziti sami",
-    "subtitle": "Jednostavno napišite svom Vaš pratitelju što vas muči. Bez prijave, bez troškova, bez osude – samo iskrena pratnja i mudrost Biblije.",
+    "subtitle": "Jednostavno napišite svom vaš pratitelju što vas muči. Bez prijave, bez troškova, bez osude – samo iskrena pratnja i mudrost Biblije.",
     "button": "Započnite razgovor sada"
   },
   "footer": {
@@ -269,7 +269,7 @@
     "forChurches": "Za zajednice"
   },
   "chat": {
-    "welcome": "Drago mi je što ste ovdje 🤗\n\nJa sam vaš Vaš pratitelj – vaš osobni pratitelj s Biblijom, dobrim pitanjima i konkretnim poticajima. Bez pritiska, bez osude.\n\nMožete me pitati bilo što – ili jednostavno ispričati što vas trenutno muči. 💛",
+    "welcome": "Drago mi je što ste ovdje 🤗\n\nJa sam vaš vaš pratitelj – vaš osobni pratitelj s Biblijom, dobrim pitanjima i konkretnim poticajima. Bez pritiska, bez osude.\n\nMožete me pitati bilo što – ili jednostavno ispričati što vas trenutno muči. 💛",
     "journeyOffer": "💡 **Savjet:** Nudim i **21-dnevnu pratnju** – 3 tjedna s dnevnim poticajima, razmišljanjima i konkretnim koracima. Potpuno vašim tempom.\n\nŽelite li to isprobati?",
     "suggestion1": "Trenutno mi treba ohrabrujuća riječ",
     "suggestion2": "Što Biblija kaže kada se osjećate nesigurno?",
@@ -314,7 +314,7 @@
     "suggestionsLoading": "Učitavanje prijedloga…"
   },
   "install": {
-    "title": "Instalirajte Vaš pratitelj",
+    "title": "Instalirajte vaš pratitelj",
     "androidDesc": "Brzi pristup izravno s početnog zaslona",
     "iosDesc": "Dodirnite «Podijeli» → «Dodaj na početni zaslon»",
     "button": "Instaliraj",
@@ -354,7 +354,7 @@
   },
   "tiles": {
     "sectionTitle": "Što vas muči?",
-    "sectionSubtitle": "Odaberite temu — Vaš pratitelj će vas pratiti",
+    "sectionSubtitle": "Odaberite temu — vaš pratitelj će vas pratiti",
     "baptism": {
       "title": "Pronađite stih za krštenje",
       "desc": "Savršen stih za vaše dijete",
@@ -670,7 +670,7 @@
       }
     },
     "pricingTitle": "Paketi pokroviteljstva",
-    "pricingSubtitle": "Podržite Vaš pratitelj i svoju zajednicu odgovarajućim paketom pokroviteljstva.",
+    "pricingSubtitle": "Podržite vaš pratitelj i svoju zajednicu odgovarajućim paketom pokroviteljstva.",
     "popular": "Popularno",
     "free": "Besplatno",
     "perYear": "osoba / godišnje",
@@ -712,7 +712,7 @@
     "viewDirectory": "Pogledajte imenik zajednica",
     "directoryBadge": "Imenik zajednica",
     "directoryTitle": "Partnerske zajednice",
-    "directorySubtitle": "Pronađite zajednicu u svojoj blizini koja preporučuje Vaš pratitelj.",
+    "directorySubtitle": "Pronađite zajednicu u svojoj blizini koja preporučuje vaš pratitelj.",
     "searchPlaceholder": "Pretražite mjesto, ime ili denominaciju...",
     "noResults": "Još nema zajednica u imeniku.",
     "becomePartner": "Postanite partner →",
@@ -810,7 +810,7 @@
         "desc": "Dopunski duhovni poticaji za klijente u psihosocijalnom savjetovanju."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As Vaš pratitelj is a private project, donations are not tax-deductible.",
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As vaš pratitelj is a private project, donations are not tax-deductible.",
     "denominationsTitle": "Za sve vjeroispovijesti i voditelje ceremonija",
     "denominationsSubtitle": "BibleBot.Life je ekumenski – za reformirane, katoličke, luteranske i slobodne evangeličke zajednice, kao i za nezavisne voditelje ceremonija.",
     "denomination": {
@@ -845,8 +845,8 @@
       "desc": "Veći font i pojednostavljeno korištenje – idealno za starije stanovnike.",
       "cta": "Isprobajte način za starije"
     },
-    "typesTitle": "Za koga je Vaš pratitelj?",
-    "useCasesTitle": "Kako se Vaš pratitelj koristi",
+    "typesTitle": "Za koga je vaš pratitelj?",
+    "useCasesTitle": "Kako se vaš pratitelj koristi",
     "useCasesSubtitle": "Konkretne primjene za svakodnevni život u vašoj instituciji.",
     "pricingTitle": "Paketi pokroviteljstva",
     "pricingSubtitle": "Isti paketi kao za zajednice – prilagođeni institucionalnim potrebama.",
@@ -952,7 +952,7 @@
     "ht": "Kreyòl"
   },
   "eulogy": {
-    "pageTitle": "Posmrtni govor – Kreirajte životopis | Vaš pratitelj",
+    "pageTitle": "Posmrtni govor – Kreirajte životopis | vaš pratitelj",
     "pageDesc": "Zabilježite uspomene na voljenu osobu i kreirajte prekrasan tekst životopisa za posmrtni govor.",
     "title": "Posmrtni govor – Životopis",
     "subtitle": "Zabilježite uspomene, kreirajte tekst, preuzmite kao PDF.",
@@ -1002,7 +1002,7 @@
     "confirmationDesc": "Pronađite izreku za potvrdu i pripremite osobne tekstove."
   },
   "chatHero": {
-    "ariaLabel": "Pitajte Vaš pratitelja pitanje",
+    "ariaLabel": "Pitajte vaš pratitelja pitanje",
     "focusPlaceholder": "Napišite svoje pitanje…",
     "placeholder1": "Što me čini istinski zahvalnim?",
     "placeholder2": "Kako pronaći unutarnji mir?",
@@ -1020,8 +1020,8 @@
     "forChurchesTitle": "Vaš pratitelj za crkve – Digitalno duhovno savjetovanje i biblijska pratnja",
     "homeDesc": "Vaš pratitelj vas prati s 5 biblijskih prijevoda, metodologijom treniranja i duhovnim savjetovanjem. Anonimno, besplatno, na 36 jezika.",
     "homeTitle": "Vaš pratitelj – Vaš osobni biblijski pratitelj | Besplatno i anonimno",
-    "loginDesc": "Prijavite se na Vaš pratitelj kako biste pripremili svoje osobne ceremonije.",
-    "loginTitle": "Prijava – Vaš pratitelj"
+    "loginDesc": "Prijavite se na vaš pratitelj kako biste pripremili svoje osobne ceremonije.",
+    "loginTitle": "Prijava – vaš pratitelj"
   },
   "splash": {
     "patronage": "Preporučuje"

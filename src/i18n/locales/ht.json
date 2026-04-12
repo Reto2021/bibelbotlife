@@ -33,8 +33,8 @@
     "stopAudio": "Sispann"
   },
   "features": {
-    "sectionTitle": "Kijan Konpayon ou ou a akonpaye w",
-    "sectionSubtitle": "Dekouvri divès fason Konpayon ou ou a ka akonpaye w",
+    "sectionTitle": "Kijan konpayon ou ou a akonpaye w",
+    "sectionSubtitle": "Dekouvri divès fason konpayon ou ou a ka akonpaye w",
     "bible": {
       "title": "Vèsè Biblik & Entèpretasyon",
       "desc": "Mande «Kisa Bib la di sou...?» epi resevwa vèsè ki apwopriye ak kontèks ak yon eksplikasyon fasil pou konprann."
@@ -49,7 +49,7 @@
     },
     "faith": {
       "title": "Chemen Lafwa & Jwenn Kris la",
-      "desc": "Kit w ap chèche, w ap doute oswa w ap apwofondi – Konpayon ou ou a akonpaye w sou chemen pèsonèl ou."
+      "desc": "Kit w ap chèche, w ap doute oswa w ap apwofondi – konpayon ou ou a akonpaye w sou chemen pèsonèl ou."
     },
     "daily": {
       "title": "Enspirasyon chak jou & Ane Litijik",
@@ -103,7 +103,7 @@
       "author": "Worthington",
       "desc": "Modèl REACH pou pwosesis padon"
     },
-    "renameTip": "💡 Ou ka bay Konpayon ou ou a yon non pa w – pou li vrèman vin <strong>konpayon ou</strong>."
+    "renameTip": "💡 Ou ka bay konpayon ou ou a yon non pa w – pou li vrèman vin <strong>konpayon ou</strong>."
   },
   "discover": {
     "badge": "Pou Kirye",
@@ -170,9 +170,9 @@
   },
   "faq": {
     "badge": "Kesyon Souvan Poze",
-    "title": "Kisa ou ta dwe konnen sou Konpayon ou ou a",
+    "title": "Kisa ou ta dwe konnen sou konpayon ou ou a",
     "subtitle": "Transparans enpòtan pou nou – espesyalman pou teolojyen, konseye espirityèl ak moun ki gen lespri kritik.",
-    "q1": "Kisa ki diferansye Konpayon ou ou a ak ChatGPT & Co.?",
+    "q1": "Kisa ki diferansye konpayon ou ou a ak ChatGPT & Co.?",
     "q1Generic": "Chatbots jenerik:",
     "q1GenericItems": [
       "Sitasyon biblik sipèfisyèl san kontèks",
@@ -196,7 +196,7 @@
     "q2Outro": "Tout pasaj biblik yo bay ak referans sous ak kontèks istorik.",
     "q3": "Ki baz syantifik ki dèyè sa a?",
     "q3Intro": "Akonpayman an baze sou rechèch revize pa kanmarad nan Sikoloji Pozitif:",
-    "q4": "Kijan Konpayon ou ou a asire sekirite pastoral?",
+    "q4": "Kijan konpayon ou ou a asire sekirite pastoral?",
     "q4Items": [
       "Nan ka panse swisid oswa kriz → redireksyon imedya nan Dargebotene Hand (143) ak Pro Juventute (147)",
       "Pa gen dyagnostik sikolojik oswa medikal",
@@ -206,15 +206,15 @@
       "Pa gen pozitivite toksik – vrè, onèt akonpayman",
       "Nonmen tansyon ak tèks difisil ouvètman"
     ],
-    "q5": "Èske Konpayon ou ou a gen yon afilyasyon konfesyonèl?",
+    "q5": "Èske konpayon ou ou a gen yon afilyasyon konfesyonèl?",
     "q5Answer": "Non. Konpayon ou ou a oryante ekumenikman epi li respekte tradisyon refòme, katolik, legliz lib ak lòt tradisyon kretyen egalman. Nan ka entèpretasyon konfesyonèl diferan, divès pèspektiv yo prezante transparan – san yo pa favorize yon tradisyon.",
-    "q6": "Èske Konpayon ou ou a ranplase konsèy espirityèl oswa terapi?",
-    "q6Answer": "Non. Konpayon ou ou a se yon zouti dijital pou lekti Bib pèsonèl ak refleksyon. Li pa ranplase konsèy espirityèl pwofesyonèl, konsèy teyolojik oswa terapi sikolojik. Nan ka kriz grav, Konpayon ou ou a toujou refere w nan resous kalifye.",
-    "q7": "Èske Konpayon ou ou a pa jis yon «bot byennèt»?",
-    "q7Answer": "Non. Konpayon ou ou a konsole kote konsolasyon nesesè – men li defi tou. Kwasans espirityèl bezwen friksyon. Konpayon ou ou a poze kesyon swivi ki alèz, nonmen tèks biblik difisil (Jòb, Sòm plenn, kritik pwofetik) epi li pa pè sijè tankou jistis, repantans ak responsablite. Tradisyon pwofetik la pa janm te alèz – e Konpayon ou ou a tou pa.",
-    "q8": "Ki moun ki dèyè Konpayon ou ou a e kijan li finanse?",
-    "q8Answer": "BibleBot.Life se yon pwojè prive, ki pa komèsyal. Li opere sou baz volontè epi li finanse sèlman pa don volontè. Pa gen piblisite, pa gen lavant done ak pa gen okenn karakteristik peye. Tout don yo ale dirèkteman nan kouvri depans operasyonèl yo (enfrastrikti, hosting, devlopman). Kòm Konpayon ou opere kòm yon pwojè prive, don yo pa dediktib taks.",
-    "q9": "Kijan Konpayon ou ou a trete done mwen yo?",
+    "q6": "Èske konpayon ou ou a ranplase konsèy espirityèl oswa terapi?",
+    "q6Answer": "Non. Konpayon ou ou a se yon zouti dijital pou lekti Bib pèsonèl ak refleksyon. Li pa ranplase konsèy espirityèl pwofesyonèl, konsèy teyolojik oswa terapi sikolojik. Nan ka kriz grav, konpayon ou ou a toujou refere w nan resous kalifye.",
+    "q7": "Èske konpayon ou ou a pa jis yon «bot byennèt»?",
+    "q7Answer": "Non. Konpayon ou ou a konsole kote konsolasyon nesesè – men li defi tou. Kwasans espirityèl bezwen friksyon. Konpayon ou ou a poze kesyon swivi ki alèz, nonmen tèks biblik difisil (Jòb, Sòm plenn, kritik pwofetik) epi li pa pè sijè tankou jistis, repantans ak responsablite. Tradisyon pwofetik la pa janm te alèz – e konpayon ou ou a tou pa.",
+    "q8": "Ki moun ki dèyè konpayon ou ou a e kijan li finanse?",
+    "q8Answer": "BibleBot.Life se yon pwojè prive, ki pa komèsyal. Li opere sou baz volontè epi li finanse sèlman pa don volontè. Pa gen piblisite, pa gen lavant done ak pa gen okenn karakteristik peye. Tout don yo ale dirèkteman nan kouvri depans operasyonèl yo (enfrastrikti, hosting, devlopman). Kòm konpayon ou opere kòm yon pwojè prive, don yo pa dediktib taks.",
+    "q9": "Kijan konpayon ou ou a trete done mwen yo?",
     "q9Answer": "Konpayon ou ou a pa estoke okenn done pèsonèl ak okenn istwa chat. Chak konvèsasyon anonim. Pa gen koneksyon, pa gen swiv ak pa gen okenn pataj done ak twazyèm pati. Itilizasyon an konplètman anonim.",
     "tradition": {
       "reformed": "Refòme",
@@ -225,35 +225,35 @@
     }
   },
   "donate": {
-    "badge": "Sipòte Konpayon ou ou a",
-    "title": "Ede kenbe Konpayon ou ou a gratis",
+    "badge": "Sipòte konpayon ou ou a",
+    "title": "Ede kenbe konpayon ou ou a gratis",
     "subtitle": "Konpayon ou ou a se yon pwojè ki soti nan kè – san piblisite, san abònman, san depans kache. Pou kenbe sa konsa, mwen depann sou don volontè. Chak kontribisyon ede kouvri depans operasyonèl ak enfrastrikti.",
     "bankTitle": "Donasyon pa transfè bankè",
     "bankSubtitle": "Chak kantite lajan konte – mèsi anpil! 🙏",
     "recipient": "Benefisyè",
     "bank": "Bank",
     "purpose": "Rezon",
-    "purposeValue": "Donasyon Konpayon ou",
+    "purposeValue": "Donasyon konpayon ou",
     "note": "BibleBot.Life opere kòm yon pwojè prive. Donasyon yo pa dediktib taks."
   },
   "refer": {
     "badge": "Pataje Pawòl Bondye a",
-    "title": "Rekòmande Konpayon ou",
-    "subtitle": "Ou konnen yon moun ki bezwen ankourajman kounye a? Pataje Konpayon ou – yon mesaj ka fè yon gwo diferans.",
+    "title": "Rekòmande konpayon ou",
+    "subtitle": "Ou konnen yon moun ki bezwen ankourajman kounye a? Pataje konpayon ou – yon mesaj ka fè yon gwo diferans.",
     "whatsapp": "Pataje sou WhatsApp",
-    "whatsappMsg": "Hey, mwen te vle montre w Konpayon ou – yon konpayon Bib gratis ki konnen Bib la epi ki poze vrèman bon kesyon. Pa gen koneksyon, anonim, onèt. Eseye li: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Hey, mwen te vle montre w konpayon ou – yon konpayon Bib gratis ki konnen Bib la epi ki poze vrèman bon kesyon. Pa gen koneksyon, anonim, onèt. Eseye li: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Pataje sou Telegram",
-    "telegramMsg": "Hey, ou konnen Konpayon ou? Yon konpayon Bib pèsonèl gratis – onèt, anonim, san koneksyon. Gade: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Hey, ou konnen konpayon ou? Yon konpayon Bib pèsonèl gratis – onèt, anonim, san koneksyon. Gade: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Pataje pa imèl",
     "emailSubject": "Sa a ta ka enterese w: BibleBot.Life",
-    "emailBody": "Bonjou!\n\nMwen te vle montre w Konpayon ou – yon konpayon Bib gratis ki vrèman konnen Bib la. Pa gen enskripsyon nesesè, konplètman anonim.\n\nLi poze bon kesyon swivi, eksplike pasaj biblik nan kontèks epi akonpaye w onètman – menm nan sijè difisil.\n\nEseye li: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nSalitasyon sensè",
+    "emailBody": "Bonjou!\n\nMwen te vle montre w konpayon ou – yon konpayon Bib gratis ki vrèman konnen Bib la. Pa gen enskripsyon nesesè, konplètman anonim.\n\nLi poze bon kesyon swivi, eksplike pasaj biblik nan kontèks epi akonpaye w onètman – menm nan sijè difisil.\n\nEseye li: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nSalitasyon sensè",
     "copy": "Kopye lyen",
     "copied": "Lyen kopye! 📋",
     "qr": "Oswa jis montre kòd QR sa a:"
   },
   "cta": {
     "title": "Ou pa bezwen pase sa poukont ou",
-    "subtitle": "Jis ekri Konpayon ou ou a sa k ap okipe w. Pa gen koneksyon, pa gen depans, pa gen jijman – sèlman akonpayman onèt ak sajès Bib la.",
+    "subtitle": "Jis ekri konpayon ou ou a sa k ap okipe w. Pa gen koneksyon, pa gen depans, pa gen jijman – sèlman akonpayman onèt ak sajès Bib la.",
     "button": "Kòmanse konvèsasyon kounye a"
   },
   "footer": {
@@ -269,7 +269,7 @@
     "forChurches": "Pou Legliz"
   },
   "chat": {
-    "welcome": "Ala bèl ou la 🤗\n\nMwen se Konpayon ou ou a – konpayon pèsonèl ou ak Bib la, bon kesyon ak enspirasyon konkrè. Pa gen presyon, pa gen jijman.\n\nOu ka mande m tout bagay – oswa jis di m sa k ap okipe w kounye a. 💛",
+    "welcome": "Ala bèl ou la 🤗\n\nMwen se konpayon ou ou a – konpayon pèsonèl ou ak Bib la, bon kesyon ak enspirasyon konkrè. Pa gen presyon, pa gen jijman.\n\nOu ka mande m tout bagay – oswa jis di m sa k ap okipe w kounye a. 💛",
     "journeyOffer": "💡 **Konsèy:** Mwen ofri tou yon **akonpayman 21 jou** – 3 semèn ak enspirasyon chak jou, refleksyon ak etap konkrè. Nan pwòp ritm ou.\n\nOu ta renmen eseye sa?",
     "suggestion1": "Mwen bezwen yon mo ankourajan kounye a",
     "suggestion2": "Kisa Bib la di lè yon moun santi l ensèten?",
@@ -314,7 +314,7 @@
     "suggestionsLoading": "Ap chaje sijesyon yo…"
   },
   "install": {
-    "title": "Enstale Konpayon ou",
+    "title": "Enstale konpayon ou",
     "androidDesc": "Aksè rapid dirèkteman nan ekran lakay ou",
     "iosDesc": "Tape sou «Pataje» → «Ajoute nan ekran lakay»",
     "button": "Enstale",
@@ -354,7 +354,7 @@
   },
   "tiles": {
     "sectionTitle": "Kisa k ap okipe w?",
-    "sectionSubtitle": "Chwazi yon sijè — Konpayon ou ap akonpaye w",
+    "sectionSubtitle": "Chwazi yon sijè — konpayon ou ap akonpaye w",
     "baptism": {
       "title": "Jwenn yon vèsè batèm",
       "desc": "Vèsè pafè a pou pitit ou",
@@ -670,7 +670,7 @@
       }
     },
     "pricingTitle": "Pakè Patwonaj",
-    "pricingSubtitle": "Sipòte Konpayon ou ak legliz ou a ak pakè patwonaj ki apwopriye a.",
+    "pricingSubtitle": "Sipòte konpayon ou ak legliz ou a ak pakè patwonaj ki apwopriye a.",
     "popular": "Popilè",
     "free": "Gratis",
     "perYear": "moun / ane",
@@ -712,7 +712,7 @@
     "viewDirectory": "Gade anyè legliz",
     "directoryBadge": "Anyè Legliz",
     "directoryTitle": "Legliz Patnè",
-    "directorySubtitle": "Jwenn yon legliz toupre w ki rekòmande Konpayon ou.",
+    "directorySubtitle": "Jwenn yon legliz toupre w ki rekòmande konpayon ou.",
     "searchPlaceholder": "Chèche kote, non oswa denominasyon...",
     "noResults": "Pa gen legliz nan anyè a ankò.",
     "becomePartner": "Vin patnè →",
@@ -810,7 +810,7 @@
         "desc": "Enpilsyon espirityèl konplemantè pou kliyan nan konsèy psikososyal."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As Konpayon ou is a private project, donations are not tax-deductible.",
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As konpayon ou is a private project, donations are not tax-deductible.",
     "denominationsTitle": "Pou tout denominasyon ak lidè seremoni",
     "denominationsSubtitle": "BibleBot.Life se ekimenik – pou kominote Refòme, Katolik, Literyen ak Legliz Lib, ansanm ak lidè seremoni endepandan.",
     "denomination": {
@@ -845,8 +845,8 @@
       "desc": "Pi gwo font ak operasyon senplifye – ideyal pou rezidan ki pi gran yo.",
       "cta": "Eseye mòd Senior"
     },
-    "typesTitle": "Pou ki moun Konpayon ou ye?",
-    "useCasesTitle": "Kijan Konpayon ou itilize",
+    "typesTitle": "Pou ki moun konpayon ou ye?",
+    "useCasesTitle": "Kijan konpayon ou itilize",
     "useCasesSubtitle": "Aplikasyon konkrè pou lavi chak jou nan enstitisyon ou.",
     "pricingTitle": "Pakè Patwonaj",
     "pricingSubtitle": "Menm pakè yo tankou pou legliz – adapte ak bezwen enstitisyonèl.",
@@ -952,7 +952,7 @@
     "ht": "Kreyòl"
   },
   "eulogy": {
-    "pageTitle": "Omaj – Kreye yon Biyografi | Konpayon ou",
+    "pageTitle": "Omaj – Kreye yon Biyografi | konpayon ou",
     "pageDesc": "Kenbe memwa yon moun ou renmen vivan epi kreye yon bèl tèks biyografi pou omaj la.",
     "title": "Omaj – Biyografi",
     "subtitle": "Kenbe memwa, kreye tèks, telechaje kòm PDF.",
@@ -1002,7 +1002,7 @@
     "confirmationDesc": "Jwenn yon vèsè konfimasyon epi prepare tèks pèsonèl."
   },
   "chatHero": {
-    "ariaLabel": "Poze yon kesyon nan Konpayon ou",
+    "ariaLabel": "Poze yon kesyon nan konpayon ou",
     "focusPlaceholder": "Ekri kesyon ou a…",
     "placeholder1": "Kisa ki fè m vrèman rekonesan?",
     "placeholder2": "Kijan pou m jwenn lapè enteryè?",
@@ -1020,8 +1020,8 @@
     "forChurchesTitle": "Konpayon ou pou Legliz – Konsèy Espirityèl Dijital & Akonpayman Biblik",
     "homeDesc": "Konpayon ou akonpaye w avèk 5 tradiksyon Bib la, metodoloji coaching, ak konsèy espirityèl. Anonim, gratis, nan 36 lang.",
     "homeTitle": "Konpayon ou – Konpayon Biblik Pèsonèl ou | Gratis & Anonim",
-    "loginDesc": "Konekte sou Konpayon ou pou prepare seremoni pèsonèl ou.",
-    "loginTitle": "Konekte – Konpayon ou"
+    "loginDesc": "Konekte sou konpayon ou pou prepare seremoni pèsonèl ou.",
+    "loginTitle": "Konekte – konpayon ou"
   },
   "splash": {
     "patronage": "Rekòmande pa"

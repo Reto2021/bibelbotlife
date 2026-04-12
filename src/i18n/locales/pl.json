@@ -33,8 +33,8 @@
     "stopAudio": "Zatrzymaj"
   },
   "features": {
-    "sectionTitle": "Jak Twój towarzysz Ci towarzyszy",
-    "sectionSubtitle": "Odkryj różne sposoby, w jakie Twój towarzysz może iść z Tobą",
+    "sectionTitle": "Jak twój towarzysz Ci towarzyszy",
+    "sectionSubtitle": "Odkryj różne sposoby, w jakie twój towarzysz może iść z Tobą",
     "bible": {
       "title": "Fragmenty biblijne i interpretacja",
       "desc": "Zapytaj «Co mówi Biblia o...?» i otrzymaj odpowiednie wersety z kontekstem i jasnym wyjaśnieniem."
@@ -49,11 +49,11 @@
     },
     "faith": {
       "title": "Droga wiary i spotkanie z Chrystusem",
-      "desc": "Czy szukasz, wątpisz czy pogłębiasz – Twój towarzysz towarzyszy Ci na Twojej osobistej drodze."
+      "desc": "Czy szukasz, wątpisz czy pogłębiasz – twój towarzysz towarzyszy Ci na Twojej osobistej drodze."
     },
     "daily": {
       "title": "Codzienne impulsy i rok liturgiczny",
-      "desc": "Zacznij dzień od impulsów i pozwól Twój towarzyszowi towarzyszyć Ci przez Adwent, Wielki Post i święta."
+      "desc": "Zacznij dzień od impulsów i pozwól twój towarzyszowi towarzyszyć Ci przez Adwent, Wielki Post i święta."
     },
     "groups": {
       "title": "Grupy i wspólnoty",
@@ -103,7 +103,7 @@
       "author": "Worthington",
       "desc": "Model REACH dla procesów przebaczenia"
     },
-    "renameTip": "💡 Możesz nadać swojemu Twój towarzyszowi osobiste imię – żeby naprawdę stał się <strong>Twoim</strong> towarzyszem."
+    "renameTip": "💡 Możesz nadać swojemu twój towarzyszowi osobiste imię – żeby naprawdę stał się <strong>Twoim</strong> towarzyszem."
   },
   "discover": {
     "badge": "Dla ciekawych",
@@ -170,9 +170,9 @@
   },
   "faq": {
     "badge": "FAQ",
-    "title": "Co powinieneś wiedzieć o Twój towarzysz",
+    "title": "Co powinieneś wiedzieć o twój towarzysz",
     "subtitle": "Przejrzystość jest ważna – szczególnie dla teologów, duszpasterzy i krytycznych umysłów.",
-    "q1": "Co wyróżnia Twój towarzysz od ChatGPT i podobnych?",
+    "q1": "Co wyróżnia twój towarzysz od ChatGPT i podobnych?",
     "q1Generic": "Ogólne chatboty:",
     "q1GenericItems": [
       "Powierzchowne cytaty biblijne bez kontekstu",
@@ -196,7 +196,7 @@
     "q2Outro": "Wszystkie fragmenty biblijne zawierają oznaczenie źródła i kontekst historyczny.",
     "q3": "Jakie podstawy naukowe za tym stoją?",
     "q3Intro": "Towarzyszenie opiera się na recenzowanych badaniach z zakresu Psychologii Pozytywnej:",
-    "q4": "Jak Twój towarzysz zapewnia bezpieczeństwo duszpasterskie?",
+    "q4": "Jak twój towarzysz zapewnia bezpieczeństwo duszpasterskie?",
     "q4Items": [
       "Myśli samobójcze lub kryzys → natychmiastowe przekierowanie do numerów alarmowych",
       "Brak diagnoz psychologicznych ani medycznych",
@@ -206,15 +206,15 @@
       "Brak toksycznej pozytywności – autentyczne, uczciwe towarzyszenie",
       "Otwarcie nazywa napięcia i trudne teksty"
     ],
-    "q5": "Czy Twój towarzysz jest związany z konkretnym wyznaniem?",
+    "q5": "Czy twój towarzysz jest związany z konkretnym wyznaniem?",
     "q5Answer": "Nie. Twój towarzysz jest ekumeniczny i szanuje tradycje reformowane, katolickie, wolnokościelne i inne chrześcijańskie w równym stopniu.",
-    "q6": "Czy Twój towarzysz zastępuje opiekę duszpasterską lub terapię?",
+    "q6": "Czy twój towarzysz zastępuje opiekę duszpasterską lub terapię?",
     "q6Answer": "Nie. Twój towarzysz jest narzędziem cyfrowym do osobistej lektury biblijnej i refleksji. Nie zastępuje profesjonalnej opieki duszpasterskiej, doradztwa teologicznego ani terapii psychologicznej.",
-    "q7": "Czy Twój towarzysz to po prostu 'bot dobrego samopoczucia'?",
+    "q7": "Czy twój towarzysz to po prostu 'bot dobrego samopoczucia'?",
     "q7Answer": "Nie. Twój towarzysz pociesza, gdy potrzeba pocieszenia – ale też stawia wyzwania. Duchowy wzrost wymaga tarcia. Twój towarzysz zadaje niewygodne pytania i nie unika tematów jak sprawiedliwość, nawrócenie i odpowiedzialność.",
-    "q8": "Kto stoi za Twój towarzysz i jak jest finansowany?",
+    "q8": "Kto stoi za twój towarzysz i jak jest finansowany?",
     "q8Answer": "BibleBot.Life to prywatny, niekomercyjny projekt. Jest prowadzony wolontaryjnie i finansowany wyłącznie z dobrowolnych darowizn. Bez reklam, bez sprzedaży danych, bez płatnych funkcji.",
-    "q9": "Jak Twój towarzysz obchodzi się z moimi danymi?",
+    "q9": "Jak twój towarzysz obchodzi się z moimi danymi?",
     "q9Answer": "Twój towarzysz nie przechowuje danych osobowych ani historii czatów. Każda rozmowa jest anonimowa. Brak logowania, śledzenia i udostępniania danych stronom trzecim.",
     "tradition": {
       "reformed": "Reformowany",
@@ -225,20 +225,20 @@
     }
   },
   "donate": {
-    "badge": "Wesprzyj Twój towarzysz",
-    "title": "Pomóż utrzymać Twój towarzysz za darmo",
+    "badge": "Wesprzyj twój towarzysz",
+    "title": "Pomóż utrzymać twój towarzysz za darmo",
     "subtitle": "Twój towarzysz to projekt z serca – bez reklam, bez abonamentów, bez ukrytych kosztów. Aby tak pozostało, polegam na dobrowolnych darowiznach.",
     "bankTitle": "Przekaż darowiznę przelewem",
     "bankSubtitle": "Każda kwota się liczy – serdecznie dziękuję! 🙏",
     "recipient": "Odbiorca",
     "bank": "Bank",
     "purpose": "Tytuł przelewu",
-    "purposeValue": "Darowizna Twój towarzysz",
+    "purposeValue": "Darowizna twój towarzysz",
     "note": "BibleBot.Life jest prowadzony jako projekt prywatny. Darowizny nie podlegają odliczeniu od podatku."
   },
   "cta": {
     "title": "Nie musisz przez to przechodzić sam",
-    "subtitle": "Po prostu napisz Twój towarzyszowi, co Cię zajmuje. Bez logowania, bez kosztów, bez oceniania – tylko uczciwe towarzyszenie i mądrość Biblii.",
+    "subtitle": "Po prostu napisz twój towarzyszowi, co Cię zajmuje. Bez logowania, bez kosztów, bez oceniania – tylko uczciwe towarzyszenie i mądrość Biblii.",
     "button": "Rozpocznij rozmowę"
   },
   "footer": {
@@ -254,7 +254,7 @@
     "forChurches": "Dla Kościołów"
   },
   "chat": {
-    "welcome": "Witaj! 🤗\n\nJestem Twoim Twój towarzyszem – osobistym towarzyszem z Biblią, dobrymi pytaniami i konkretnymi impulsami. Bez presji, bez oceniania.\n\nMożesz mnie zapytać o wszystko – lub po prostu opowiedzieć, co Cię teraz zajmuje. 💛",
+    "welcome": "Witaj! 🤗\n\nJestem Twoim twój towarzyszem – osobistym towarzyszem z Biblią, dobrymi pytaniami i konkretnymi impulsami. Bez presji, bez oceniania.\n\nMożesz mnie zapytać o wszystko – lub po prostu opowiedzieć, co Cię teraz zajmuje. 💛",
     "journeyOffer": "💡 **Wskazówka:** Oferuję też **podróż 21 dni** – 3 tygodnie codziennych impulsów, refleksji i konkretnych kroków. W Twoim tempie.\n\nChcesz spróbować?",
     "suggestion1": "Potrzebuję teraz budującego słowa",
     "suggestion2": "Co mówi Biblia, gdy czujesz się niepewnie?",
@@ -299,7 +299,7 @@
     "suggestionsLoading": "Ładowanie sugestii…"
   },
   "install": {
-    "title": "Zainstaluj Twój towarzysz",
+    "title": "Zainstaluj twój towarzysz",
     "androidDesc": "Szybki dostęp z ekranu głównego",
     "iosDesc": "Dotknij «Udostępnij» → «Dodaj do ekranu głównego»",
     "button": "Zainstaluj",
@@ -357,7 +357,7 @@
   },
   "tiles": {
     "sectionTitle": "Co cię porusza?",
-    "sectionSubtitle": "Wybierz temat — Twój towarzysz towarzyszy ci",
+    "sectionSubtitle": "Wybierz temat — twój towarzysz towarzyszy ci",
     "baptism": {
       "title": "Werset na chrzest",
       "desc": "Idealny werset dla twojego dziecka",
@@ -673,7 +673,7 @@
       }
     },
     "pricingTitle": "Pakiety patronackie",
-    "pricingSubtitle": "Wesprzyj Twój towarzysz i swój kościół odpowiednim pakietem patronackim.",
+    "pricingSubtitle": "Wesprzyj twój towarzysz i swój kościół odpowiednim pakietem patronackim.",
     "popular": "Popularny",
     "free": "Bezpłatnie",
     "perYear": "osób / rok",
@@ -715,7 +715,7 @@
     "viewDirectory": "Zobacz katalog kościołów",
     "directoryBadge": "Katalog Kościołów",
     "directoryTitle": "Kościoły partnerskie",
-    "directorySubtitle": "Znajdź kościół w pobliżu, który poleca Twój towarzysz.",
+    "directorySubtitle": "Znajdź kościół w pobliżu, który poleca twój towarzysz.",
     "searchPlaceholder": "Szukaj według miejsca, nazwy lub wyznania...",
     "noResults": "Brak kościołów w katalogu.",
     "becomePartner": "Zostań partnerem →",
@@ -813,7 +813,7 @@
         "desc": "Uzupełniające impulsy duchowe dla klientów poradnictwa psychospołecznego."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As Twój towarzysz is a private project, donations are not tax-deductible.",
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As twój towarzysz is a private project, donations are not tax-deductible.",
     "denominationsTitle": "Dla wszystkich wyznań i celebrantów",
     "denominationsSubtitle": "BibleBot.Life jest ekumeniczny – dla wspólnot reformowanych, katolickich, luterańskich i wolnych kościołów, a także niezależnych celebrantów.",
     "denomination": {
@@ -843,8 +843,8 @@
     "badge": "Dla organizacji",
     "heroTitle": "Twój towarzysz for Your Institution",
     "heroSubtitle": "Digital pastoral care for care homes, retirement homes, hospitals, and correctional facilities – personal, confidential, and around the clock.",
-    "typesTitle": "Who is Twój towarzysz for?",
-    "useCasesTitle": "How Twój towarzysz is Used",
+    "typesTitle": "Who is twój towarzysz for?",
+    "useCasesTitle": "How twój towarzysz is Used",
     "useCasesSubtitle": "Practical applications for daily life in your institution.",
     "pricingTitle": "Patronage Packages",
     "pricingSubtitle": "The same packages as for churches – adapted to institutional needs.",
@@ -918,15 +918,15 @@
   },
   "refer": {
     "badge": "Podziel się Słowem",
-    "title": "Poleć Twój towarzysz",
-    "subtitle": "Znasz kogoś, kto potrzebuje zachęty? Udostępnij Twój towarzysz.",
+    "title": "Poleć twój towarzysz",
+    "subtitle": "Znasz kogoś, kto potrzebuje zachęty? Udostępnij twój towarzysz.",
     "whatsapp": "Udostępnij przez WhatsApp",
-    "whatsappMsg": "Hej, chciałem ci pokazać Twój towarzysz – darmowego towarzysza biblijnego. Wypróbuj: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Hej, chciałem ci pokazać twój towarzysz – darmowego towarzysza biblijnego. Wypróbuj: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Udostępnij przez Telegram",
-    "telegramMsg": "Hej, znasz Twój towarzysz? Darmowy osobisty towarzysz biblijny. Sprawdź: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Hej, znasz twój towarzysz? Darmowy osobisty towarzysz biblijny. Sprawdź: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Udostępnij mailem",
     "emailSubject": "To może cię zainteresować: BibleBot.Life",
-    "emailBody": "Cześć!\n\nChciałem ci pokazać Twój towarzysz.\n\nWypróbuj: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nPozdrawiam",
+    "emailBody": "Cześć!\n\nChciałem ci pokazać twój towarzysz.\n\nWypróbuj: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nPozdrawiam",
     "copy": "Kopiuj link",
     "copied": "Link skopiowany! 📋",
     "qr": "Lub pokaż ten kod QR:"
@@ -952,7 +952,7 @@
     "imageSavedDesc": "Zapisz obraz i udostępnij go!"
   },
   "eulogy": {
-    "pageTitle": "Mowa pogrzebowa – stwórz życiorys | Twój towarzysz",
+    "pageTitle": "Mowa pogrzebowa – stwórz życiorys | twój towarzysz",
     "pageDesc": "Zachowaj wspomnienia o ukochanej osobie i stwórz piękny tekst życiorysu na mowę pogrzebową.",
     "title": "Mowa pogrzebowa – życiorys",
     "subtitle": "Zachowaj wspomnienia, stwórz tekst, pobierz jako PDF.",
@@ -1002,7 +1002,7 @@
     "confirmationDesc": "Znajdź sentencję bierzmowania i przygotuj osobiste teksty."
   },
   "chatHero": {
-    "ariaLabel": "Zadaj pytanie Twój towarzyszowi",
+    "ariaLabel": "Zadaj pytanie twój towarzyszowi",
     "focusPlaceholder": "Napisz swoje pytanie…",
     "placeholder1": "Co sprawia, że jestem naprawdę wdzięczny?",
     "placeholder2": "Jak znaleźć wewnętrzny spokój?",
@@ -1020,8 +1020,8 @@
     "forChurchesTitle": "Twój towarzysz dla Kościołów – Cyfrowe Duszpasterstwo i Prowadzenie Biblijne",
     "homeDesc": "Twój towarzysz towarzyszy Ci z 5 tłumaczeniami Biblii, metodologią coachingu i duszpasterstwem. Anonimowo, bezpłatnie, w 36 językach.",
     "homeTitle": "Twój towarzysz – Twój osobisty towarzysz Biblii | Bezpłatne & Anonimowe",
-    "loginDesc": "Zaloguj się do Twój towarzysz, aby przygotować swoje osobiste ceremonie.",
-    "loginTitle": "Zaloguj się – Twój towarzysz"
+    "loginDesc": "Zaloguj się do twój towarzysz, aby przygotować swoje osobiste ceremonie.",
+    "loginTitle": "Zaloguj się – twój towarzysz"
   },
   "splash": {
     "patronage": "Polecane przez"
