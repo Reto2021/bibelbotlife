@@ -429,40 +429,31 @@ const Index = () => {
               <CardTitle className="text-xl">{t("donate.bankTitle")}</CardTitle>
               <CardDescription>{t("donate.bankSubtitle")}</CardDescription>
             </CardHeader>
-            <CardContent className="space-y-4 text-left">
+            <CardContent className="space-y-4">
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {t("donate.subtitle")}
+              </p>
               <div className="space-y-3">
-                <div className="flex justify-between items-center bg-accent/30 rounded-lg px-4 py-3">
-                  <div>
-                    <p className="text-xs text-muted-foreground">{t("donate.recipient")}</p>
-                    <p className="font-medium text-foreground text-sm">Reto Wettstein</p>
-                  </div>
-                </div>
-                <div className="flex justify-between items-center bg-accent/30 rounded-lg px-4 py-3">
-                  <div>
-                    <p className="text-xs text-muted-foreground">IBAN</p>
-                    <p className="font-mono font-medium text-foreground text-sm">CH14 0900 0000 3042 9878 8</p>
-                  </div>
-                  <button
-                    onClick={() => navigator.clipboard.writeText("CH1409000000304298788")}
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                    title="Copy IBAN"
-                  >
-                    <Copy className="h-4 w-4" />
-                  </button>
-                </div>
-                <div className="flex justify-between items-center bg-accent/30 rounded-lg px-4 py-3">
-                  <div>
-                    <p className="text-xs text-muted-foreground">{t("donate.bank")}</p>
-                    <p className="font-medium text-foreground text-sm">PostFinance</p>
-                  </div>
-                </div>
-                <div className="flex justify-between items-center bg-accent/30 rounded-lg px-4 py-3">
-                  <div>
-                    <p className="text-xs text-muted-foreground">{t("donate.purpose")}</p>
-                    <p className="font-medium text-foreground text-sm">{t("donate.purposeValue")}</p>
-                  </div>
-                </div>
+                <Button
+                  className="w-full"
+                  size="lg"
+                  onClick={() => window.open("https://donate.stripe.com/PLACEHOLDER_STRIPE", "_blank")}
+                >
+                  <Heart className="h-4 w-4 mr-2" />
+                  Mit Kreditkarte unterstützen
+                </Button>
+                <Button
+                  variant="outline"
+                  className="w-full"
+                  size="lg"
+                  onClick={() => window.open("https://donate.stripe.com/PLACEHOLDER_TWINT", "_blank")}
+                >
+                  Mit Twint unterstützen
+                </Button>
               </div>
+              <p className="text-xs text-muted-foreground text-center">
+                Sichere Zahlung · Keine Abo-Falle · Jederzeit kündbar
+              </p>
             </CardContent>
           </Card>
 
