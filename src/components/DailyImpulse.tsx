@@ -247,14 +247,17 @@ export function DailyImpulse() {
   }, [shareBlob, impulse, buildShareText, toast, t]);
 
   const downloadImage = useCallback(() => {
-    if (!shareImageUrl || !impulse) return;
+    if (!shareBlob || !impulse) return;
+    const url = URL.createObjectURL(shareBlob);
     const a = document.createElement("a");
-    a.href = shareImageUrl;
+    a.href = url;
     a.download = `bibelbot-impuls-${impulse.date}.png`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
-  }, [shareImageUrl, impulse]);
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    toast({ title: t("share.imageSaved") });
+  }, [shareBlob, impulse, toast, t]);
 
   const handleDeepDive = () => {
     if (!impulse) return;
