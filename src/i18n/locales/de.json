@@ -234,7 +234,10 @@
     "bank": "Bank",
     "purpose": "Verwendungszweck",
     "purposeValue": "Spende BibleBot.Life",
-    "note": "BibleBot.Life wird als privates Projekt betrieben. Spenden sind daher nicht steuerabzugsfähig."
+    "note": "BibleBot.Life wird als privates Projekt betrieben. Spenden sind daher nicht steuerabzugsfähig.",
+    "creditCard": "Mit Kreditkarte unterstützen",
+    "twint": "Mit Twint unterstützen",
+    "secureNote": "Sichere Zahlung · Keine Abo-Falle · Jederzeit kündbar"
   },
   "social": {
     "conversations": "Gespräche geführt",
@@ -271,7 +274,8 @@
     "noTax": "Spenden sind nicht steuerabzugsfähig",
     "datenschutz": "Datenschutz",
     "love": "Mit ❤️ für alle, die sich fragen, was Christus denkt.",
-    "forChurches": "Für Gemeinden"
+    "forChurches": "Für Gemeinden",
+    "forCelebrants": "Für Seelsorger & Coaches"
   },
   "chat": {
     "welcome": "Schön, dass du da bist 🤗\n\nIch bin dein Begleiter – dein persönlicher Begleiter mit der Bibel, guten Fragen und konkreten Impulsen. Kein Druck, keine Bewertung.\n\nDu kannst mich alles fragen – oder einfach erzählen, was dich gerade beschäftigt. 💛",
@@ -396,7 +400,8 @@
     "yo": "Yorùbá",
     "ig": "Igbo",
     "zu": "isiZulu",
-    "ht": "Kreyòl"
+    "ht": "Kreyòl",
+    "he": "Hebräisch"
   },
   "tiles": {
     "sectionTitle": "Was bewegt dich?",
@@ -1278,33 +1283,5 @@
       "q": "Verbindet BibleBot Glaube und Psychologie?",
       "a": "BibleBot kombiniert biblische Weisheit mit Erkenntnissen aus der evidenzbasierten Psychologie — nicht um den Glauben zu psychologisieren, sondern um ihn alltagsnah zu machen. Die Methoden (PERMA, Logotherapie, Dankbarkeits- und Vergebungsforschung) ergänzen die Bibel, ersetzen sie aber nicht."
     }
-  },
-  "donate": {
-    "badge": "Unterstütze deinen Begleiter",
-    "title": "Hilf mit, dass dein Begleiter kostenlos bleibt",
-    "subtitle": "Dein Begleiter ist ein Herzensprojekt – ohne Werbung, ohne Abo, ohne versteckte Kosten. Damit das so bleibt, bin ich auf freiwillige Spenden angewiesen. Jeder Beitrag hilft, die laufenden Kosten für Betrieb und Infrastruktur zu decken.",
-    "bankTitle": "Spende per Banküberweisung",
-    "bankSubtitle": "Jeder Betrag zählt – herzlichen Dank! 🙏",
-    "recipient": "Empfänger",
-    "bank": "Bank",
-    "purpose": "Verwendungszweck",
-    "purposeValue": "Spende BibleBot.Life",
-    "note": "BibleBot.Life wird als privates Projekt betrieben. Spenden sind daher nicht steuerabzugsfähig.",
-    "creditCard": "Mit Kreditkarte unterstützen",
-    "twint": "Mit Twint unterstützen",
-    "secureNote": "Sichere Zahlung · Keine Abo-Falle · Jederzeit kündbar"
-  },
-  "footer": {
-    "tagline": "Dein persönlicher Begleiter — mit der Tiefe der Bibel, ohne Vorkenntnisse.",
-    "disclaimer": "BibleBot.Life ist ein digitales Hilfsmittel und ersetzt keine professionelle Seelsorge, theologische Beratung oder psychologische Therapie. Bei akuten Krisen wende dich an die Dargebotene Hand (Tel. 143) oder Pro Juventute (Tel. 147).",
-    "impressum": "Impressum",
-    "notes": "Hinweise",
-    "private": "Privates, nicht-kommerzielles Projekt",
-    "noChat": "Keine Speicherung von Chatdaten",
-    "noTax": "Spenden sind nicht steuerabzugsfähig",
-    "datenschutz": "Datenschutz",
-    "love": "Mit ❤️ für alle, die sich fragen, was Christus denkt.",
-    "forChurches": "Für Gemeinden",
-    "forCelebrants": "Für Seelsorger & Coaches"
   }
 }
