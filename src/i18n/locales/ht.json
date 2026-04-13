@@ -1301,7 +1301,11 @@
       "title": "Examen (Ignace)",
       "desc": "Revizyon chak jou Ignace de Loyola a: Reflechi sou jounen ou an 5 etap.",
       "cta": "Kòmanse Examen"
-    }
+    },
+    "myFavorites": "Prefere mwen yo",
+    "addFavorite": "Ajoute nan prefere",
+    "removeFavorite": "Retire nan prefere",
+    "favoriteTip": "Klike sou etwal la pou sove zouti prefere ou yo pou aksè rapid"
   },
   "trust": {
     "noAds": {

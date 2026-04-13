@@ -1282,7 +1282,11 @@
       "title": "Examen (იგნატი)",
       "desc": "იგნატი ლოიოლას დღის მიმოხილვა: იფიქრე შენს დღეზე 5 ნაბიჯად.",
       "cta": "დაიწყე Examen"
-    }
+    },
+    "myFavorites": "My Favorites",
+    "addFavorite": "Add to favorites",
+    "removeFavorite": "Remove from favorites",
+    "favoriteTip": "Click the star to save your favorite tools for quick access"
   },
   "audience": {
     "title": "ვისთვის არის BibleBot.Life?",

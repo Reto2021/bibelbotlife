@@ -1280,7 +1280,11 @@
       "title": "Examen (Ignatius)",
       "desc": "Ignatius av Loyolas velprøvde daglige tilbakeblikk: Reflekter over dagen din i 5 trinn.",
       "cta": "Start Examen"
-    }
+    },
+    "myFavorites": "Mine favoritter",
+    "addFavorite": "Legg til som favoritt",
+    "removeFavorite": "Fjern fra favoritter",
+    "favoriteTip": "Klikk på stjernen for å lagre favoritverktøyene dine for rask tilgang"
   },
   "audience": {
     "title": "Hvem er BibleBot.Life for?",

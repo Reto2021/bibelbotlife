@@ -1280,7 +1280,11 @@
       "title": "Examen (Ignace)",
       "desc": "La relecture quotidienne éprouvée d'Ignace de Loyola : Réfléchissez à votre journée en 5 étapes.",
       "cta": "Commencer l'Examen"
-    }
+    },
+    "myFavorites": "Mes favoris",
+    "addFavorite": "Ajouter aux favoris",
+    "removeFavorite": "Retirer des favoris",
+    "favoriteTip": "Clique sur l'étoile pour sauvegarder tes outils préférés en accès rapide"
   },
   "audience": {
     "title": "Pour qui est BibleBot.Life ?",

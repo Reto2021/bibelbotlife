@@ -7,11 +7,13 @@ import { ChurchBanner } from "@/components/ChurchBanner";
 import { ReferralSection } from "@/components/ReferralSection";
 import { EntryTiles } from "@/components/EntryTiles";
 import { ChatHero } from "@/components/ChatHero";
-import { LifeWheelProvider, openLifeWheel } from "@/components/LifeWheel";
-import { openBibleBotChat } from "@/lib/chat-events";
+import { LifeWheelProvider } from "@/components/LifeWheel";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { AppLogo } from "@/components/AppLogo";
+import { ToolCard, useToolDefs, FavoriteToolsBar } from "@/components/ToolCards";
+import { useFavoriteTools } from "@/hooks/use-favorite-tools";
+import { useAuth } from "@/hooks/use-auth";
 
 // BibleBotChat overlay removed - chat is now inline in ChatHero
 const DailyImpulse = lazy(() => import("@/components/DailyImpulse"));
@@ -29,6 +31,49 @@ const BIBLE_EDITIONS_DATA = [
   { name: "Schlachter Bibel", year: "2000", traditionKey: "freeChurch" },
   { name: "Elberfelder Bibel", year: "2006", traditionKey: "literal" },
 ];
+
+const ToolsSection = () => {
+  const { t } = useTranslation();
+  const tools = useToolDefs();
+  const { user } = useAuth();
+  const { toggleFavorite, isFavorite } = useFavoriteTools();
+
+  return (
+    <section className="py-16 px-4">
+      <div className="container mx-auto max-w-4xl">
+        <div className="text-center mb-10">
+          <div className="inline-flex items-center gap-2 text-sm font-medium text-primary bg-primary/10 px-4 py-1.5 rounded-full mb-4">
+            <Compass className="h-4 w-4" />
+            {t("tools.badge")}
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
+            {t("tools.title")}
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            {t("tools.subtitle")}
+          </p>
+          {user && (
+            <p className="text-xs text-muted-foreground mt-2">
+              <Star className="inline h-3 w-3 text-primary mr-1" />
+              {t("tools.favoriteTip")}
+            </p>
+          )}
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {tools.map((tool) => (
+            <ToolCard
+              key={tool.id}
+              tool={tool}
+              isFavorite={isFavorite(tool.id)}
+              isLoggedIn={!!user}
+              onToggleFavorite={() => toggleFavorite(tool.id)}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
 
 const Index = () => {
   const { t, i18n } = useTranslation();
@@ -215,154 +260,11 @@ const Index = () => {
       {/* Referral / Empfehlen */}
       <ReferralSection />
 
-      {/* LifeWheel & SevenWhys Feature Section */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 text-sm font-medium text-primary bg-primary/10 px-4 py-1.5 rounded-full mb-4">
-              <Compass className="h-4 w-4" />
-              {t("tools.badge")}
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-              {t("tools.title")}
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              {t("tools.subtitle")}
-            </p>
-          </div>
+      {/* Favorite Tools Quick Access */}
+      <FavoriteToolsBar />
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Card className="bg-card/80 border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <CardHeader className="text-center pb-2">
-                <span className="text-5xl mb-3 block">🎡</span>
-                <CardTitle className="text-xl text-card-foreground">{t("tools.lifewheel.title")}</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center space-y-4">
-                <CardDescription className="text-muted-foreground leading-relaxed">
-                  {t("tools.lifewheel.desc")}
-                </CardDescription>
-                <Button onClick={() => openLifeWheel()} className="w-full">
-                  {t("tools.lifewheel.cta")}
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-card/80 border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <CardHeader className="text-center pb-2">
-                <span className="text-5xl mb-3 block">🔍</span>
-                <CardTitle className="text-xl text-card-foreground">{t("tools.sevenwhys.title")}</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center space-y-4">
-                <CardDescription className="text-muted-foreground leading-relaxed">
-                  {t("tools.sevenwhys.desc")}
-                </CardDescription>
-                <Button
-                  variant="outline"
-                  onClick={() => openBibleBotChat("Ich möchte die 7-Warum-Methode ausprobieren", "seven-whys")}
-                  className="w-full"
-                >
-                  {t("tools.sevenwhys.cta")}
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-card/80 border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <CardHeader className="text-center pb-2">
-                <span className="text-5xl mb-3 block">🙏</span>
-                <CardTitle className="text-xl text-card-foreground">{t("tools.gratitude.title")}</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center space-y-4">
-                <CardDescription className="text-muted-foreground leading-relaxed">
-                  {t("tools.gratitude.desc")}
-                </CardDescription>
-                <Button
-                  variant="outline"
-                  onClick={() => openBibleBotChat("Ich möchte das Dankbarkeitstagebuch ausprobieren. Bitte frag mich nach drei Dingen, für die ich heute dankbar bin, und finde dann passende Bibelverse dazu.", "gratitude")}
-                  className="w-full"
-                >
-                  {t("tools.gratitude.cta")}
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-card/80 border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <CardHeader className="text-center pb-2">
-                <span className="text-5xl mb-3 block">📖</span>
-                <CardTitle className="text-xl text-card-foreground">{t("tools.lectio.title")}</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center space-y-4">
-                <CardDescription className="text-muted-foreground leading-relaxed">
-                  {t("tools.lectio.desc")}
-                </CardDescription>
-                <Button
-                  variant="outline"
-                  onClick={() => openBibleBotChat("Ich möchte Lectio Divina ausprobieren. Bitte führe mich durch die vier Schritte: Lectio (Lesen), Meditatio (Meditieren), Oratio (Beten), Contemplatio (Ruhen). Wähle einen passenden Bibeltext für mich.", "lectio")}
-                  className="w-full"
-                >
-                  {t("tools.lectio.cta")}
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-card/80 border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <CardHeader className="text-center pb-2">
-                <span className="text-5xl mb-3 block">✉️</span>
-                <CardTitle className="text-xl text-card-foreground">{t("tools.forgiveness.title")}</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center space-y-4">
-                <CardDescription className="text-muted-foreground leading-relaxed">
-                  {t("tools.forgiveness.desc")}
-                </CardDescription>
-                <Button
-                  variant="outline"
-                  onClick={() => openBibleBotChat("Ich möchte einen Vergebungsbrief schreiben. Bitte begleite mich Schritt für Schritt — mit biblischen Impulsen und einfühlsam.", "forgiveness")}
-                  className="w-full"
-                >
-                  {t("tools.forgiveness.cta")}
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-card/80 border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <CardHeader className="text-center pb-2">
-                <span className="text-5xl mb-3 block">🧭</span>
-                <CardTitle className="text-xl text-card-foreground">{t("tools.values.title")}</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center space-y-4">
-                <CardDescription className="text-muted-foreground leading-relaxed">
-                  {t("tools.values.desc")}
-                </CardDescription>
-                <Button
-                  variant="outline"
-                  onClick={() => openBibleBotChat("Ich möchte meinen Werte-Kompass entdecken. Hilf mir herauszufinden, was mir wirklich wichtig ist — und zeige mir, was die Bibel zu meinen Kernwerten sagt.", "values")}
-                  className="w-full"
-                >
-                  {t("tools.values.cta")}
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-card/80 border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <CardHeader className="text-center pb-2">
-                <span className="text-5xl mb-3 block">🕯️</span>
-                <CardTitle className="text-xl text-card-foreground">{t("tools.examen.title")}</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center space-y-4">
-                <CardDescription className="text-muted-foreground leading-relaxed">
-                  {t("tools.examen.desc")}
-                </CardDescription>
-                <Button
-                  variant="outline"
-                  onClick={() => openBibleBotChat("Ich möchte das Ignatianische Examen machen. Bitte führe mich durch die 5 Schritte: 1) Stille werden und Gottes Gegenwart spüren, 2) Dankbarkeit für den Tag, 3) Rückblick auf den Tag, 4) Was hat mich berührt oder belastet?, 5) Ausblick auf morgen mit einem Gebet.", "examen")}
-                  className="w-full"
-                >
-                  {t("tools.examen.cta")}
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+      {/* Tools Section */}
+      <ToolsSection />
 
       {/* FAQ */}
       <section className="py-20 px-4">

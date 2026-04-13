@@ -1301,7 +1301,11 @@
       "title": "Examen (Ignác)",
       "desc": "Osvědčený denní přehled Ignáce z Loyoly: Zamyslete se nad svým dnem v 5 krocích.",
       "cta": "Začít Examen"
-    }
+    },
+    "myFavorites": "Mé oblíbené",
+    "addFavorite": "Přidat do oblíbených",
+    "removeFavorite": "Odebrat z oblíbených",
+    "favoriteTip": "Klikni na hvězdičku pro uložení oblíbených nástrojů k rychlému přístupu"
   },
   "trust": {
     "noAds": {

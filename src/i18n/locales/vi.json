@@ -1303,7 +1303,11 @@
       "title": "Xét mình (Inhã)",
       "desc": "Bài xét mình hàng ngày của Thánh Inhã Loyola: Suy ngẫm về ngày của bạn qua 5 bước.",
       "cta": "Bắt đầu xét mình"
-    }
+    },
+    "myFavorites": "Yêu thích của tôi",
+    "addFavorite": "Thêm vào yêu thích",
+    "removeFavorite": "Xóa khỏi yêu thích",
+    "favoriteTip": "Nhấp vào ngôi sao để lưu các công cụ yêu thích để truy cập nhanh"
   },
   "trust": {
     "noAds": {

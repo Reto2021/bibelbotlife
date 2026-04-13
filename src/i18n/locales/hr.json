@@ -1301,7 +1301,11 @@
       "title": "Examen (Ignacije)",
       "desc": "Provjereni dnevni pregled Ignacija Lojolskog: Razmislite o svom danu u 5 koraka.",
       "cta": "Započni Examen"
-    }
+    },
+    "myFavorites": "Moji favoriti",
+    "addFavorite": "Dodaj u favorite",
+    "removeFavorite": "Ukloni iz favorita",
+    "favoriteTip": "Klikni na zvjezdicu za spremanje omiljenih alata za brzi pristup"
   },
   "trust": {
     "noAds": {

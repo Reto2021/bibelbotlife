@@ -1301,7 +1301,11 @@
       "title": "Examen (Ignacio)",
       "desc": "La revisión diaria probada de Ignacio de Loyola: Reflexiona sobre tu día en 5 pasos.",
       "cta": "Iniciar Examen"
-    }
+    },
+    "myFavorites": "Mis favoritos",
+    "addFavorite": "Añadir a favoritos",
+    "removeFavorite": "Quitar de favoritos",
+    "favoriteTip": "Haz clic en la estrella para guardar tus herramientas favoritas como acceso rápido"
   },
   "trust": {
     "noAds": {

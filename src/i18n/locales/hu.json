@@ -1301,7 +1301,11 @@
       "title": "Examen (Ignác)",
       "desc": "Loyolai Szent Ignác kipróbált napi áttekintése: Gondold végig a napodat 5 lépésben.",
       "cta": "Examen indítása"
-    }
+    },
+    "myFavorites": "Kedvenceim",
+    "addFavorite": "Hozzáadás a kedvencekhez",
+    "removeFavorite": "Eltávolítás a kedvencekből",
+    "favoriteTip": "Kattints a csillagra, hogy elmentsd kedvenc eszközeidet gyors eléréshez"
   },
   "trust": {
     "noAds": {

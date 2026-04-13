@@ -1280,7 +1280,11 @@
       "title": "Examen (Ignatius)",
       "desc": "Die beproefde daaglikse terugblik van Ignatius van Loyola: Reflekteer oor jou dag in 5 stappe.",
       "cta": "Begin Examen"
-    }
+    },
+    "myFavorites": "My gunstelinge",
+    "addFavorite": "Voeg by gunstelinge",
+    "removeFavorite": "Verwyder uit gunstelinge",
+    "favoriteTip": "Klik op die ster om jou gunsteling-gereedskap te stoor vir vinnige toegang"
   },
   "audience": {
     "title": "Vir wie is BibleBot.Life?",

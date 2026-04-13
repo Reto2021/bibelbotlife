@@ -1301,7 +1301,11 @@
       "title": "Examen (Ignatius)",
       "desc": "De beproefde dagelijkse terugblik van Ignatius van Loyola: Reflecteer op je dag in 5 stappen.",
       "cta": "Start Examen"
-    }
+    },
+    "myFavorites": "Mijn favorieten",
+    "addFavorite": "Toevoegen aan favorieten",
+    "removeFavorite": "Verwijderen uit favorieten",
+    "favoriteTip": "Klik op de ster om je favoriete tools op te slaan voor snelle toegang"
   },
   "trust": {
     "noAds": {

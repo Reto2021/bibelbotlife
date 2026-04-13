@@ -1301,7 +1301,11 @@
       "title": "Examen (Ignatius)",
       "desc": "Tinjauan harian Ignatius dari Loyola yang terbukti: Renungkan harimu dalam 5 langkah.",
       "cta": "Mulai Examen"
-    }
+    },
+    "myFavorites": "Favorit saya",
+    "addFavorite": "Tambahkan ke favorit",
+    "removeFavorite": "Hapus dari favorit",
+    "favoriteTip": "Klik bintang untuk menyimpan alat favorit kamu untuk akses cepat"
   },
   "trust": {
     "noAds": {

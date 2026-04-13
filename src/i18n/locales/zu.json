@@ -1301,7 +1301,11 @@
       "title": "Examen (Ignatius)",
       "desc": "Ukubuyekeza kwansuku zonke kuka-Ignatius waseLoyola: Cabanga ngosuku lwakho ngezinyathelo ezi-5.",
       "cta": "Qala Examen"
-    }
+    },
+    "myFavorites": "Izintandokazi zami",
+    "addFavorite": "Engeza ezintandokazini",
+    "removeFavorite": "Susa ezintandokazini",
+    "favoriteTip": "Chofoza inkanyezi ukuze ugcine amathuluzi owathandayo ukuze ufinyelele ngokushesha"
   },
   "trust": {
     "noAds": {

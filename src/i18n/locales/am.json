@@ -1301,7 +1301,11 @@
       "title": "Examen (Ignatius)",
       "desc": "የኢግናቲየስ ሎዮላ የዕለት ግምገማ፡ በ5 ደረጃዎች ቀንህን አስብ።",
       "cta": "Examen ጀምር"
-    }
+    },
+    "myFavorites": "ተወዳጆቼ",
+    "addFavorite": "ወደ ተወዳጆች ያክሉ",
+    "removeFavorite": "ከተወዳጆች ያስወግዱ",
+    "favoriteTip": "ተወዳጅ መሣሪያዎችን ለፈጣን መዳረሻ ለማስቀመጥ ኮከቡን ጠቅ ያድርጉ"
   },
   "trust": {
     "noAds": {
