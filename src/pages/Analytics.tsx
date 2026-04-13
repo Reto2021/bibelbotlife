@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import {
   BarChart, Bar, XAxis, YAxis, Tooltip as RTooltip, ResponsiveContainer,
-  PieChart, Pie, Cell, AreaChart, Area, CartesianGrid,
+  PieChart, Pie, Cell, AreaChart, Area, CartesianGrid, LineChart, Line, Legend,
 } from "recharts";
 import {
   Tooltip,
