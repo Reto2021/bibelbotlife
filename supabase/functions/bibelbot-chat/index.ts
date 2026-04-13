@@ -1236,6 +1236,9 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
       throw new Error("LOVABLE_API_KEY is not configured");
     }
 
+    // Build language-aware Bible tools
+    const bibleTools = buildBibleTools(lang);
+
     // If conversation exceeds 50 messages, summarize older ones
     let finalMessages = messages;
     if (messages.length > 50) {
