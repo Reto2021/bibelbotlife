@@ -471,7 +471,7 @@ const Index = () => {
                 { icon: Code2, key: "purposeItem1" },
                 { icon: Server, key: "purposeItem2" },
                 { icon: Globe, key: "purposeItem3" },
-                { icon: HeadphonesIcon, key: "purposeItem4" },
+                { icon: Headphones, key: "purposeItem4" },
                 { icon: ClipboardList, key: "purposeItem5" },
                 { icon: BookHeart, key: "purposeItem6" },
               ].map(({ icon: Icon, key }) => (
