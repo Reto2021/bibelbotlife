@@ -16,7 +16,7 @@
     },
     "title1": "La Bible.",
     "title2": " Repensée.",
-    "subtitle": "Votre compagnon personnel connaît la Bible – et pose les bonnes questions. Pas un humain, mais un compagnon honnête. Pour de bonnes conversations, des questions profondes et de vraies impulsions.",
+    "subtitle": "Votre compagnon personnel connaît la Bible – et pose les bonnes questions. Pas un humain, mais un compagnon honnête. Pour de bonnes conversations, des questions profondes et de véritables impulsions.",
     "ctaTelegram": "Commencer via Telegram",
     "ctaMore": "En savoir plus",
     "quote": "«Venez à moi, vous tous qui êtes fatigués et chargés, et je vous donnerai du repos.»",
@@ -49,7 +49,7 @@
     },
     "faith": {
       "title": "Chemin de foi et découverte du Christ",
-      "desc": "Que vous soyez en quête, en doute ou en approfondissement – Votre compagnon vous accompagne sur votre chemin personnel."
+      "desc": "Que vous soyez en quête, en doute ou en approfondissement – votre compagnon vous accompagne sur votre chemin personnel."
     },
     "daily": {
       "title": "Impulsions quotidiennes et année liturgique",
@@ -69,7 +69,7 @@
     "week1": "Semaine 1 : Arrivée",
     "week1Desc": "Établir la confiance, écouter, comprendre votre situation. Où en êtes-vous ? Qu'est-ce qui vous préoccupe ?",
     "week2": "Semaine 2 : Approfondissement",
-    "week2Desc": "Reconnaître les schémas, clarifier les désirs, approfondir les impulsions bibliques. Que voulez-vous vraiment ?",
+    "week2Desc": "Identifier les schémas, clarifier les désirs, approfondir les impulsions bibliques. Que voulez-vous vraiment ?",
     "week3": "Semaine 3 : Agir",
     "week3Desc": "Prendre des mesures concrètes, formuler des objectifs, initier le changement. Quelle est votre prochaine étape ?",
     "openQuestionsTitle": "Questions ouvertes au lieu de réponses rapides",
@@ -77,12 +77,12 @@
     "openQ1": "«Qu'est-ce qui se cache réellement derrière ce désir ?»",
     "openQ2": "«À quoi verriez-vous que quelque chose a changé ?»",
     "openQ3": "«Quelle serait une première petite étape ?»",
-    "honestTitle": "Honnête au lieu de toxiquement positif",
+    "honestTitle": "Honnête plutôt que toxiquement positif",
     "honestDesc": "Pas de «Ça ira !» et pas d'enjolivement. Votre compagnon est empathique ET honnête :",
     "honest1": "Nomme aussi les passages bibliques inconfortables",
-    "honest2": "Défie à l'auto-réflexion",
-    "honest3": "Distingue le réconfort de la répression",
-    "scienceTitle": "Basé sur des preuves scientifiques",
+    "honest2": "Invite à l'auto-réflexion",
+    "honest3": "Distingue le réconfort du refoulement",
+    "scienceTitle": "Fondé scientifiquement",
     "perma": {
       "name": "Modèle PERMA",
       "author": "Seligman",
@@ -96,7 +96,7 @@
     "gratitude": {
       "name": "Gratitude",
       "author": "Emmons",
-      "desc": "Pratique de gratitude basée sur la recherche"
+      "desc": "Pratique de la gratitude basée sur la recherche"
     },
     "forgiveness": {
       "name": "Pardon",
@@ -130,7 +130,7 @@
     "subtitle": "Chaque matin à 7h00 – un verset, une pensée, un bon départ.",
     "firstName": "Votre prénom",
     "firstNameOptional": "(facultatif)",
-    "firstNamePlaceholder": "par exemple, Thomas",
+    "firstNamePlaceholder": "par ex. Thomas",
     "firstNameHint": "Pour que nous puissions vous saluer personnellement.",
     "channelLabel": "Comment souhaitez-vous recevoir l'impulsion ?",
     "push": "Notification",
@@ -141,8 +141,8 @@
     "smsDesc": "SMS sur votre téléphone portable",
     "phoneLabel": "Numéro de téléphone portable",
     "phonePlaceholder": "+41 79 123 45 67",
-    "phoneHint": "Avec l'indicatif du pays, par exemple +41 pour la Suisse.",
-    "telegramHint": "Cliquez sur «S'inscrire» – vous serez redirigé vers Telegram. Démarrez votre compagnon là-bas et écrivez <strong>/daily</strong> pour activer l'impulsion quotidienne.",
+    "phoneHint": "Avec l'indicatif du pays, par ex. +41 pour la Suisse.",
+    "telegramHint": "Cliquez sur «S'inscrire» – vous serez redirigé vers Telegram. Lancez-y votre compagnon et écrivez <strong>/daily</strong> pour activer l'impulsion quotidienne.",
     "pushHint": "Après avoir cliqué sur «S'inscrire», votre navigateur demandera l'autorisation. Veuillez autoriser les notifications pour recevoir l'impulsion.",
     "subscribeButton": "S'abonner à l'inspiration",
     "submit": "S'inscrire",
@@ -151,7 +151,7 @@
     "successTitle": "Vous êtes inscrit ! 🙏",
     "successText": "À partir de demain à 7h00, vous recevrez votre impulsion biblique personnelle.",
     "toastTelegram": "Telegram ouvert 🙏",
-    "toastTelegramDesc": "Démarrez votre compagnon et écrivez /daily pour activer l'impulsion quotidienne.",
+    "toastTelegramDesc": "Lancez votre compagnon et écrivez /daily pour activer l'impulsion quotidienne.",
     "toastSuccess": "Inscrit ! 🙏",
     "toastSuccessDesc": "Vous recevrez votre impulsion quotidienne à partir de demain.",
     "toastPushPreview": "Notifications non disponibles en prévisualisation",
@@ -207,27 +207,27 @@
     "q4Items": [
       "En cas de pensées suicidaires ou de crises → renvoi immédiat à La Main Tendue (143) et Pro Juventute (147)",
       "Pas de diagnostics psychologiques ou médicaux",
-      "Respect sans arbitraire – des positions bibliques claires sont prises",
+      "Respect sans arbitraire – des positions bibliques claires sont adoptées",
       "Empathie ET honnêteté – même les sujets inconfortables sont abordés",
       "Questions de suivi pour l'auto-réflexion au lieu d'une confirmation bon marché",
-      "Pas de positivité toxique – un accompagnement réel et honnête",
+      "Pas de positivité toxique – un accompagnement authentique et honnête",
       "Nomme ouvertement les tensions et les textes difficiles"
     ],
     "q5": "Votre compagnon est-il lié à une confession ?",
-    "q5Answer": "Non. Votre compagnon est œcuménique et respecte également les traditions réformées, catholiques, libres et autres traditions chrétiennes. En cas d'interprétations confessionnelles différentes, diverses perspectives sont présentées de manière transparente – sans privilégier une tradition.",
+    "q5Answer": "Non. Votre compagnon est œcuménique et respecte également les traditions réformées, catholiques, des églises libres et autres traditions chrétiennes. En cas d'interprétations confessionnelles différentes, diverses perspectives sont présentées de manière transparente – sans privilégier une tradition.",
     "q6": "Votre compagnon remplace-t-il le conseil pastoral ou la thérapie ?",
     "q6Answer": "Non. Votre compagnon est un outil numérique pour la lecture et la réflexion bibliques personnelles. Il ne remplace pas le conseil pastoral professionnel, le conseil théologique ou la thérapie psychologique. En cas de crises graves, votre compagnon renvoie toujours à des points de contact qualifiés.",
     "q7": "Votre compagnon n'est-il pas simplement un «outil de bien-être» ?",
-    "q7Answer": "Non. Votre compagnon console là où le réconfort est nécessaire – mais il défie aussi. La croissance spirituelle a besoin de friction. Votre compagnon pose des questions inconfortables, nomme des textes bibliques difficiles (Job, Psaumes de lamentation, critique prophétique) et n'hésite pas devant des sujets comme la justice, la repentance et la responsabilité. La tradition prophétique n'a jamais été confortable – et cet outil de bien-être non plus.",
+    "q7Answer": "Non. Votre compagnon réconforte là où le réconfort est nécessaire – mais il met aussi au défi. La croissance spirituelle a besoin de friction. Votre compagnon pose des questions inconfortables, nomme des textes bibliques difficiles (Job, Psaumes de lamentation, critique prophétique) et n'hésite pas à aborder des sujets tels que la justice, la repentance et la responsabilité. La tradition prophétique n'a jamais été confortable – et cet outil de bien-être non plus.",
     "q8": "Qui est derrière votre compagnon et comment est-il financé ?",
     "q8Answer": "BibleBot.Life est un projet privé et non commercial. Il est géré bénévolement et financé exclusivement par des dons volontaires. Il n'y a pas de publicité, pas de vente de données et pas de fonctionnalités payantes. Tous les dons sont directement affectés à la couverture des coûts de fonctionnement (infrastructure, hébergement, développement). Comme BibleBot est un projet privé, les dons ne sont pas déductibles des impôts.",
     "q9": "Comment votre compagnon gère-t-il mes données ?",
-    "q9Answer": "Votre compagnon ne stocke aucune donnée personnelle ni aucun historique de chat. Chaque conversation est anonyme. Il n'y a pas de connexion, pas de suivi et pas de partage de données avec des tiers. L'utilisation est entièrement anonyme."
+    "q9Answer": "Votre compagnon ne stocke aucune donnée personnelle ni aucun historique de chat. Chaque conversation est anonyme. Il n'y a pas de connexion, pas de suivi et pas de transmission de données à des tiers. L'utilisation est entièrement anonyme."
   },
   "donate": {
     "badge": "Soutenez votre compagnon",
     "title": "Aidez à ce que votre compagnon reste gratuit",
-    "subtitle": "Votre compagnon est un projet passionné – sans publicité, sans abonnement, sans coûts cachés. Pour que cela reste ainsi, je dépends de dons volontaires. Chaque contribution aide à couvrir les coûts de fonctionnement et d'infrastructure.",
+    "subtitle": "Votre compagnon est un projet passionné – sans publicité, sans abonnement, sans frais cachés. Pour que cela reste ainsi, je dépends de dons volontaires. Chaque contribution aide à couvrir les coûts de fonctionnement et d'infrastructure.",
     "bankTitle": "Don par virement bancaire",
     "bankSubtitle": "Chaque montant compte – merci beaucoup ! 🙏",
     "recipient": "Bénéficiaire",
@@ -251,10 +251,10 @@
     "whatsapp": "Partager via WhatsApp",
     "whatsappMsg": "Salut, je voulais te montrer quelque chose – un compagnon biblique gratuit qui connaît la Bible et pose de très bonnes questions. Pas de connexion, anonyme, honnête. Essaie : https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Partager via Telegram",
-    "telegramMsg": "Salut, connais-tu BibleBot.Life ? Un compagnon biblique personnel gratuit – honnête, anonyme, sans connexion. Jette un coup d'œil : https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Salut, connais-tu BibleBot.Life ? Un compagnon biblique personnel gratuit – honnête, anonyme, sans connexion. Jette un œil : https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Partager par e-mail",
     "emailSubject": "Cela pourrait vous intéresser : BibleBot.Life",
-    "emailBody": "Bonjour !\n\nJe voulais vous montrer BibleBot – un compagnon biblique gratuit qui connaît vraiment la Bible. Aucune inscription nécessaire, entièrement anonyme.\n\nIl pose de bonnes questions de suivi, explique les passages bibliques dans leur contexte et vous accompagne honnêtement – même sur des sujets difficiles.\n\nEssayez-le : https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nCordialement",
+    "emailBody": "Bonjour !\n\nJe voulais vous montrer BibleBot – un compagnon biblique gratuit qui connaît vraiment la Bible. Aucune inscription nécessaire, complètement anonyme.\n\nIl pose de bonnes questions de suivi, explique les passages bibliques dans leur contexte et vous accompagne honnêtement – même sur des sujets difficiles.\n\nEssayez-le : https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nCordialement",
     "copy": "Copier le lien",
     "copied": "Lien copié ! 📋",
     "qr": "Ou montrez simplement ce code QR :"
@@ -270,7 +270,7 @@
     "impressum": "Mentions légales",
     "notes": "Notes",
     "private": "Projet privé et non commercial",
-    "noChat": "Aucune donnée de chat stockée",
+    "noChat": "Pas de stockage des données de chat",
     "noTax": "Les dons ne sont pas déductibles des impôts",
     "datenschutz": "Protection des données",
     "love": "Avec ❤️ pour tous ceux qui se demandent ce que le Christ pense.",
@@ -278,9 +278,9 @@
     "forCelebrants": "Pour les célébrants et les coachs"
   },
   "chat": {
-    "welcome": "Heureux de vous voir 🤗\n\nJe suis votre compagnon – votre compagnon personnel avec la Bible, de bonnes questions et des impulsions concrètes. Pas de pression, pas de jugement.\n\nVous pouvez me demander n'importe quoi – ou simplement me dire ce qui vous préoccupe. 💛",
+    "welcome": "Heureux de vous voir 🤗\n\nJe suis votre compagnon – votre compagnon personnel avec la Bible, de bonnes questions et des impulsions concrètes. Pas de pression, pas de jugement.\n\nVous pouvez me poser toutes les questions – ou simplement me dire ce qui vous préoccupe en ce moment. 💛",
     "journeyOffer": "💡 **Conseil :** Je propose également un **accompagnement de 21 jours** – 3 semaines avec des impulsions quotidiennes, des réflexions et des étapes concrètes. À votre rythme.\n\nVoulez-vous essayer ?",
-    "suggestion1": "J'ai besoin d'un mot encourageant en ce moment",
+    "suggestion1": "J'ai besoin d'un mot d'encouragement en ce moment",
     "suggestion2": "Que dit la Bible quand on se sent incertain ?",
     "suggestion3": "Je veux découvrir ce que je veux vraiment",
     "teaser": "Qu'est-ce qui vous préoccupe en ce moment ? 💛",
@@ -294,7 +294,7 @@
     "deepening": "Approfondissement",
     "acting": "Action",
     "renameTip": "Donnez-moi un nom ✨",
-    "namePlaceholder": "par exemple, Élie, Myriam…",
+    "namePlaceholder": "par ex. Élie, Myriam…",
     "previousChats": "{{count}} conversations précédentes",
     "changeName": "Changer de nom",
     "placeholder": "Écrivez simplement...",
@@ -365,42 +365,42 @@
     "title": "Déclaration de confidentialité"
   },
   "lang": {
-    "de": "Deutsch",
-    "en": "English",
+    "de": "Allemand",
+    "en": "Anglais",
     "fr": "Français",
-    "es": "Español",
-    "it": "Italiano",
-    "pl": "Polski",
-    "cs": "Čeština",
-    "pt": "Português",
-    "nl": "Nederlands",
-    "ro": "Română",
-    "da": "Dansk",
-    "no": "Norsk",
-    "sv": "Svenska",
-    "fi": "Suomi",
-    "el": "Ελληνικά",
-    "hr": "Hrvatski",
-    "sr": "Srpski",
-    "hu": "Magyar",
-    "sk": "Slovenčina",
-    "bg": "Български",
-    "ru": "Русский",
-    "uk": "Українська",
-    "ka": "ქართული",
-    "hy": "Հայերեն",
-    "ko": "한국어",
+    "es": "Espagnol",
+    "it": "Italien",
+    "pl": "Polonais",
+    "cs": "Tchèque",
+    "pt": "Portugais",
+    "nl": "Néerlandais",
+    "ro": "Roumain",
+    "da": "Danois",
+    "no": "Norvégien",
+    "sv": "Suédois",
+    "fi": "Finnois",
+    "el": "Grec",
+    "hr": "Croate",
+    "sr": "Serbe",
+    "hu": "Hongrois",
+    "sk": "Slovaque",
+    "bg": "Bulgare",
+    "ru": "Russe",
+    "uk": "Ukrainien",
+    "ka": "Géorgien",
+    "hy": "Arménien",
+    "ko": "Coréen",
     "tl": "Filipino",
-    "id": "Bahasa Indonesia",
-    "vi": "Tiếng Việt",
-    "zh": "中文",
-    "sw": "Kiswahili",
-    "am": "አማርኛ",
+    "id": "Indonésien",
+    "vi": "Vietnamien",
+    "zh": "Chinois",
+    "sw": "Swahili",
+    "am": "Amharique",
     "af": "Afrikaans",
-    "yo": "Yorùbá",
+    "yo": "Yoruba",
     "ig": "Igbo",
-    "zu": "isiZulu",
-    "ht": "Kreyòl"
+    "zu": "Zoulou",
+    "ht": "Créole"
   },
   "tiles": {
     "sectionTitle": "Qu'est-ce qui vous préoccupe ?",
@@ -410,7 +410,7 @@
       "title": "Trouver un verset de baptême",
       "desc": "Le verset parfait pour votre enfant",
       "prompt": "Aidez-moi à trouver un verset de baptême approprié. Quel genre d'enfant est-ce et que souhaitent les parents ?",
-      "prompt_v1": "Que signifie le baptême, en fait ?",
+      "prompt_v1": "Que signifie réellement le baptême ?",
       "prompt_v2": "Parlez-moi du baptême dans la Bible – surprenez-moi !",
       "prompt_v3": "Pourquoi les gens se font-ils baptiser ?"
     },
@@ -448,7 +448,7 @@
     "newstart": {
       "title": "Nouveau départ",
       "desc": "Force pour une nouvelle étape de vie",
-      "prompt": "Je suis face à un nouveau départ et j'ai besoin d'encouragement. Quels passages bibliques parlent des nouveaux départs ?"
+      "prompt": "Je suis face à un nouveau départ et j'ai besoin d'encouragement. Quels passages bibliques parlent de nouveaux départs ?"
     },
     "namequiz": {
       "title": "Que signifie votre nom ?",
@@ -467,7 +467,7 @@
       "prompt_v3": "Surprenez-moi avec un verset biblique encourageant pour aujourd'hui !"
     },
     "funfact": {
-      "title": "Saviez-vous que ?",
+      "title": "Le saviez-vous ?",
       "desc": "Faits surprenants de la Bible",
       "prompt": "Racontez-moi un fait surprenant de la Bible que la plupart des gens ne connaissent pas !",
       "prompt_v1": "Quelle est l'histoire la plus folle de la Bible ?",
@@ -479,7 +479,7 @@
       "desc": "Sagesse biblique pour la famille et le travail",
       "prompt": "Quel conseil biblique m'aide au quotidien avec ma famille et mon travail ? Donnez-moi quelque chose de pratique !",
       "prompt_v1": "Comment la Bible peut-elle m'aider dans le stress quotidien ?",
-      "prompt_v2": "Quels conseils pratiques de vie se trouvent dans la Bible ?",
+      "prompt_v2": "Quelles astuces de vie pratiques se trouvent dans la Bible ?",
       "prompt_v3": "Donnez-moi un conseil concret de la Bible pour ma vie quotidienne !"
     },
     "strengths": {
@@ -544,7 +544,7 @@
     "sevenwhys": {
       "title": "7 Pourquoi",
       "desc": "Trouvez la racine la plus profonde de votre question",
-      "prompt": "Je veux faire l'exercice des 7 pourquoi. Voici mon sujet :"
+      "prompt": "Je veux faire l'exercice des 7 Pourquoi. Voici mon sujet :"
     },
     "anger": {
       "title": "Colère et fureur",
@@ -568,8 +568,8 @@
     },
     "financial": {
       "title": "Soucis financiers",
-      "desc": "Quand les factures s'accumulent",
-      "prompt": "J'ai des soucis financiers et je ne sais pas quoi faire. Que dit la Bible sur l'argent, la confiance et la providence ?"
+      "desc": "Quand les factures pèsent",
+      "prompt": "J'ai des soucis financiers et je ne sais pas quoi faire. Que dit la Bible sur l'argent, la confiance et la provision ?"
     },
     "meaningcrisis": {
       "title": "Crise de sens",
@@ -587,7 +587,7 @@
       "prompt": "Je ne sais pas quoi faire de ma vie. Aidez-moi à trouver ma vocation – que dit la Bible à ce sujet ?"
     },
     "faithdoubt": {
-      "title": "Doute de foi",
+      "title": "Doutes de foi",
       "desc": "Quand la foi vacille",
       "prompt": "J'ai des doutes sur ma foi et je ne sais pas si je peux encore croire. Que dit la Bible sur le doute ?"
     },
@@ -601,8 +601,8 @@
     },
     "familyconflict": {
       "title": "Conflit familial",
-      "desc": "Quand ça craque dans la famille",
-      "prompt": "Il y a de gros conflits dans ma famille. Que dit la Bible sur la paix familiale et la réconciliation ?"
+      "desc": "Quand il y a des tensions dans la famille",
+      "prompt": "Il y a de grandes disputes dans ma famille. Que dit la Bible sur la paix familiale et la réconciliation ?"
     },
     "envy": {
       "title": "Envie",
@@ -631,7 +631,7 @@
       "title": "Citation du jour",
       "desc": "Une citation inspirante pour la réflexion",
       "prompt": "Donnez-moi une citation inspirante de la Bible pour aujourd'hui avec une courte explication",
-      "prompt_v1": "Quelle citation biblique convient particulièrement bien à cette journée ?",
+      "prompt_v1": "Quelle citation biblique convient particulièrement bien à ce jour ?",
       "prompt_v2": "Donnez-moi une citation encourageante des Psaumes pour aujourd'hui",
       "prompt_v3": "Quel proverbe de la Bible me donne une nouvelle perspective aujourd'hui ?"
     },
@@ -639,7 +639,7 @@
       "title": "Exercice de gratitude",
       "desc": "Découvrez de quoi vous pouvez être reconnaissant",
       "prompt": "Guide-moi à travers un court exercice de gratitude. Aide-moi à trouver trois choses pour lesquelles je suis reconnaissant aujourd'hui",
-      "prompt_v1": "Aide-moi à découvrir la gratitude dans ma vie quotidienne — même dans les petites choses",
+      "prompt_v1": "Aidez-moi à découvrir la gratitude dans ma vie quotidienne — même dans les petites choses",
       "prompt_v2": "Je veux apprendre à être plus reconnaissant. Donnez-moi un exercice pratique pour cela",
       "prompt_v3": "Que dit la Bible sur la gratitude et comment puis-je la mettre en pratique aujourd'hui ?"
     },
@@ -712,7 +712,7 @@
       },
       "pastoral": {
         "title": "Pastorale",
-        "desc": "Accompagnement 24h/24 et 7j/7 en complément de la pastorale personnelle."
+        "desc": "Accompagnement 24h/24 et 7j/7 en complément du conseil pastoral personnel."
       },
       "bibleStudy": {
         "title": "Cercle biblique",
@@ -720,7 +720,7 @@
       }
     },
     "pricingTitle": "Forfaits de parrainage",
-    "pricingSubtitle": "Soutenez BibleBot et votre organisation avec le forfait de parrainage adapté.",
+    "pricingSubtitle": "Soutenez BibleBot et votre organisation avec le forfait de parrainage approprié.",
     "popular": "Populaire",
     "free": "Gratuit",
     "perYear": "",
@@ -744,7 +744,7 @@
       }
     },
     "features": {
-      "directoryEntry": "Entrée dans l'annuaire",
+      "directoryEntry": "Inscription au répertoire",
       "telegramGroup": "Groupe Telegram",
       "partnerPage": "Page partenaire dédiée",
       "badge": "Badge partenaire",
@@ -759,15 +759,15 @@
       "apiAccess": "Accès API",
       "accountManager": "Gestionnaire de compte personnel"
     },
-    "viewDirectory": "Voir l'annuaire des partenaires",
-    "directoryBadge": "Annuaire des partenaires",
+    "viewDirectory": "Voir le répertoire des partenaires",
+    "directoryBadge": "Répertoire des partenaires",
     "directoryTitle": "Organisations partenaires",
     "directorySubtitle": "Trouvez une organisation près de chez vous qui recommande BibleBot.",
     "searchPlaceholder": "Rechercher lieu, nom ou dénomination...",
-    "noResults": "Aucune organisation dans l'annuaire pour l'instant.",
+    "noResults": "Aucune organisation dans le répertoire pour l'instant.",
     "becomePartner": "Devenir partenaire →",
     "notFound": "Organisation non trouvée.",
-    "backToDirectory": "Retour à l'annuaire",
+    "backToDirectory": "Retour au répertoire",
     "pastor": "Pasteur/Prêtre",
     "serviceTimes": "Horaires des services",
     "startChat": "Démarrer le chat",
@@ -783,7 +783,7 @@
     "recommendedBy": "Recommandé par {{name}}",
     "setup": "Configuration (une fois)",
     "form": {
-      "title": "Intéressé(e) ? Écrivez-nous !",
+      "title": "Intéressé ? Écrivez-nous !",
       "subtitle": "Nous vous répondrons dans les 48 heures.",
       "name": "Votre nom",
       "email": "Adresse e-mail",
@@ -817,7 +817,7 @@
       }
     },
     "denominationsTitle": "Pour toutes les confessions et accompagnateurs de cérémonies",
-    "denominationsSubtitle": "BibleBot est œcuménique – pour les communautés réformées, catholiques, luthériennes et libres, ainsi que pour les accompagnateurs de cérémonies indépendants.",
+    "denominationsSubtitle": "BibleBot est œcuménique – pour les communautés réformées, catholiques, luthériennes et des églises libres, ainsi que pour les accompagnateurs de cérémonies indépendants.",
     "denomination": {
       "reformed": {
         "title": "Église réformée",
@@ -833,7 +833,7 @@
       },
       "evangelical": {
         "title": "Églises libres",
-        "desc": "Schlachter 2000, louange et organisation flexible du culte – pour les communautés d'églises libres."
+        "desc": "Schlachter 2000, louange et conception flexible du culte – pour les communautés des églises libres."
       },
       "freelance": {
         "title": "Indépendants",
@@ -841,7 +841,7 @@
       }
     },
     "institutionsTitle": "Pour diverses organisations",
-    "institutionsSubtitle": "BibleBot accompagne les communautés, les maisons de retraite, les hôpitaux, les cliniques de rééducation et de burnout, les psychiatries, les hospices, les centres de conseil et de nombreuses autres organisations avec une pastorale numérique.",
+    "institutionsSubtitle": "BibleBot accompagne les communautés, les maisons de retraite, les hôpitaux, les cliniques de rééducation et de burnout, les psychiatries, les hospices, les centres de conseil et de nombreuses autres organisations avec un soutien pastoral numérique.",
     "institution": {
       "careHome": {
         "title": "Maisons de retraite",
@@ -889,13 +889,13 @@
   "institutions": {
     "badge": "Pour les organisations",
     "heroTitle": "BibleBot pour votre organisation",
-    "heroSubtitle": "Pastorale numérique pour les maisons de retraite, les hôpitaux et les établissements pénitentiaires – personnelle, confidentielle et 24h/24.",
+    "heroSubtitle": "Soutien pastoral numérique pour les maisons de retraite, les hôpitaux et les établissements pénitentiaires – personnel, confidentiel et 24h/24.",
     "seniorHint": {
       "title": "Mode senior disponible",
       "desc": "Police plus grande et utilisation simplifiée – idéal pour les résidents âgés.",
       "cta": "Tester le mode senior"
     },
-    "typesTitle": "Pour qui est BibleBot ?",
+    "typesTitle": "À qui s'adresse BibleBot ?",
     "useCasesTitle": "Comment BibleBot est utilisé",
     "useCasesSubtitle": "Applications concrètes pour le quotidien de votre institution.",
     "pricingTitle": "Forfaits de parrainage",
@@ -926,11 +926,11 @@
     "useCase": {
       "dailyImpulse": {
         "title": "Impulsion quotidienne",
-        "desc": "Chaque matin, un verset biblique avec une question de réflexion – abaisse le seuil pour les conversations spirituelles."
+        "desc": "Chaque matin, un verset biblique avec une question de réflexion – abaisse le seuil d'inhibition pour les conversations spirituelles."
       },
       "companionship": {
         "title": "Interlocuteur",
-        "desc": "BibleBot répond patiemment aux questions de foi et sans pression de temps – idéal pour les heures de solitude."
+        "desc": "BibleBot répond aux questions de foi patiemment et sans pression de temps – idéal pour les heures de solitude."
       },
       "accessibility": {
         "title": "Accès facile",
@@ -948,7 +948,7 @@
       "kirche": "Contenu personnalisé, participation à la feuille de route, support premium"
     },
     "form": {
-      "title": "Intéressé(e) ? Contactez-nous !",
+      "title": "Intéressé ? Contactez-nous !",
       "subtitle": "Nous vous répondrons dans les 48 heures.",
       "name": "Votre nom",
       "email": "Adresse e-mail",
@@ -982,9 +982,9 @@
   },
   "meta": {
     "homeTitle": "BibleBot.Life – Votre compagnon personnel | Avec la profondeur de la Bible",
-    "homeDesc": "Votre compagnon personnel — avec la profondeur de la Bible, sans connaissances préalables. 5 traductions, coaching, pastorale. Anonyme, gratuit, 36 langues.",
-    "forChurchesTitle": "BibleBot.Life pour les communautés – Pastorale numérique et accompagnement biblique",
-    "forChurchesDesc": "BibleBot.Life comme partenaire pour votre communauté : travail de jeunesse, confirmation, pastorale et cercles bibliques. Gratuit à Premium.",
+    "homeDesc": "Votre compagnon personnel — avec la profondeur de la Bible, sans connaissances préalables. 5 traductions, coaching, conseil pastoral. Anonyme, gratuit, 36 langues.",
+    "forChurchesTitle": "BibleBot.Life pour les communautés – Soutien pastoral numérique et accompagnement biblique",
+    "forChurchesDesc": "BibleBot.Life en tant que partenaire pour votre communauté : travail de jeunesse, confirmation, conseil pastoral et cercles bibliques. Gratuit à Premium.",
     "loginTitle": "Connexion – BibleBot.Life",
     "loginDesc": "Connectez-vous pour préparer vos cérémonies personnelles."
   },
@@ -1000,7 +1000,7 @@
     "logout": "Déconnexion",
     "comingSoon": "Bientôt disponible",
     "funeralDesc": "Créez un curriculum vitae, enregistrez des souvenirs et partagez-les avec le pasteur.",
-    "weddingDesc": "Écrivez des vœux de mariage, choisissez des chants et planifiez la célébration.",
+    "weddingDesc": "Écrivez des vœux de mariage, choisissez des chansons et planifiez la célébration.",
     "baptismDesc": "Formulez des souhaits de baptême et préparez le déroulement avec la communauté.",
     "confirmationDesc": "Trouvez un verset de confirmation et préparez des textes personnels."
   },
@@ -1013,11 +1013,11 @@
     "name": "Nom",
     "namePlaceholder": "Prénom et nom de famille",
     "age": "Dates de vie",
-    "agePlaceholder": "par exemple, 1942–2026",
+    "agePlaceholder": "par ex. 1942–2026",
     "step2": "Enregistrer les souvenirs",
     "step2Desc": "Parlez librement de la personne décédée – qu'est-ce qui était important, qu'est-ce qui reste en mémoire ? Vous pouvez faire plusieurs enregistrements.",
     "startRecording": "Démarrer l'enregistrement",
-    "addRecording": "Ajouter un autre enregistrement",
+    "addRecording": "Ajouter un enregistrement",
     "stop": "Arrêter",
     "recording": "Enregistrement",
     "transcript": "Transcription (modifiable)",
@@ -1081,7 +1081,7 @@
     "r7": "Ésaïe 40,31",
     "v8": "«Car là où deux ou trois sont assemblés en mon nom, je suis au milieu d'eux.»",
     "r8": "Matthieu 18,20",
-    "v9": "«Sentez et voyez combien l'Éternel est bon ! Heureux l'homme qui se confie en lui !»",
+    "v9": "«Goûtez et voyez combien l'Éternel est bon ! Heureux l'homme qui se confie en lui !»",
     "r9": "Psaume 34,9",
     "v10": "«Il guérit ceux qui ont le cœur brisé, et il panse leurs blessures.»",
     "r10": "Psaume 147,3",
@@ -1122,7 +1122,7 @@
     "f3Title": "Exportation PDF et partage",
     "f3Desc": "Exportez les textes finis en PDF ou partagez-les directement avec les clients, les proches et les participants via un lien de partage.",
     "f4Title": "Modèles par confession",
-    "f4Desc": "Modèles de déroulement préétablis pour les catholiques, réformés, luthériens, églises libres et laïques — prêts à l'emploi.",
+    "f4Desc": "Modèles de déroulement pré-établis pour les catholiques, réformés, luthériens, églises libres et laïques — prêts à l'emploi.",
     "f5Title": "Calendrier et planification",
     "f5Desc": "Toutes les cérémonies en un coup d'œil : vue mensuelle, hebdomadaire et quotidienne. Ne perdez plus jamais le fil.",
     "f6Title": "Téléprompteur / Mode Chef d'orchestre",
@@ -1132,8 +1132,8 @@
     "f8Title": "Équipe et collaboration",
     "f8Desc": "Intégrez musiciens, lecteurs, techniciens. Attribuez des rôles, vérifiez les disponibilités, planifiez ensemble.",
     "f9Title": "Bibliothèque de ressources",
-    "f9Desc": "Chants, prières, lectures et textes liturgiques — consultables, avec des balises, s'enrichissant à chaque cérémonie.",
-    "f10Title": "Livre d'église et registre",
+    "f9Desc": "Chants, prières, lectures et textes liturgiques — consultables, avec des tags, s'enrichissant à chaque cérémonie.",
+    "f10Title": "Registre paroissial et registres",
     "f10Desc": "Documentez soigneusement les baptêmes, mariages et obsèques. Toutes les données en un seul endroit.",
     "pricingTitle": "Prix simples",
     "pricingSubtitle": "Commencez gratuitement. Mettez à niveau si vous avez besoin de plus.",
@@ -1146,7 +1146,7 @@
     "pf1": "Créer des textes de cérémonie",
     "pf2": "Enregistrement vocal et transcription",
     "pf3": "Exportation PDF",
-    "pf4": "Partage par lien",
+    "pf4": "Partager par lien",
     "pf5": "1 projet actif",
     "pf6": "Tout ce qui est inclus dans Personnel",
     "pf7": "Projets illimités",
@@ -1156,13 +1156,13 @@
     "pf11": "Bibliothèque de modèles",
     "pf12": "Collaboration d'équipe",
     "pf13": "Bibliothèque de ressources",
-    "pf14": "Livre d'église / Registre",
+    "pf14": "Registre paroissial / Registres",
     "pf15": "Support prioritaire",
     "ctaFree": "Commencer maintenant",
     "ctaTrial": "Essai gratuit de 14 jours",
     "faqTitle": "Questions fréquentes",
     "faq1q": "À qui s'adresse cet outil ?",
-    "faq1a": "Aux pasteurs, coachs de vie, orateurs funéraires indépendants, maîtres de cérémonie de mariage, aumôniers d'hôpital, ministres du culte et à tous ceux qui préparent et mènent des cérémonies, des ateliers ou des séances de coaching.",
+    "faq1a": "Aux pasteurs, coachs de vie, orateurs funéraires indépendants, maîtres de cérémonie de mariage, aumôniers d'hôpital, pasteurs et à tous ceux qui préparent et mènent des cérémonies, des ateliers ou des séances de coaching.",
     "faq2q": "Mes données sont-elles stockées en toute sécurité ?",
     "faq2a": "Oui. Toutes les données sont stockées de manière cryptée en Suisse. Seul vous avez accès à votre contenu.",
     "faq3q": "Quelles langues sont prises en charge ?",
@@ -1172,12 +1172,12 @@
     "faq5q": "Ai-je besoin de connaissances techniques ?",
     "faq5a": "Non. L'utilisation est intuitive et conçue pour les personnes qui veulent se concentrer sur le contenu — pas sur la technologie.",
     "ctaBottom": "Prêt pour de meilleures cérémonies ?",
-    "ctaBottomSub": "Commencez gratuitement — aucune carte de crédit nécessaire.",
+    "ctaBottomSub": "Commencez gratuitement — pas de carte de crédit nécessaire.",
     "ctaBottomBtn": "Commencer gratuitement maintenant",
     "footerImprint": "Mentions légales",
     "footerPrivacy": "Confidentialité",
     "footerChurches": "Pour les communautés",
-    "seoTitle": "BibleBot.Life pour les célébrants et les coachs de vie — Planifier des cérémonies et des sessions",
+    "seoTitle": "BibleBot.Life pour les célébrants et les coachs de vie — Planifier les cérémonies et les sessions",
     "seoDesc": "Planifiez professionnellement les obsèques, les mariages, les séances de coaching : enregistrement vocal, génération de texte, téléprompteur, calendrier et collaboration."
   },
   "pricing": {
@@ -1195,7 +1195,7 @@
       "heartbreak": "J'ai le cœur brisé",
       "loneliness": "Je me sens seul",
       "decision": "Je suis face à une décision",
-      "newstart": "Je veux un nouveau départ",
+      "newstart": "Je veux prendre un nouveau départ",
       "calling": "Quel est mon chemin ?",
       "bibleverse": "Comprendre un passage biblique",
       "sevenwhys": "Pourquoi est-ce que je fais ça vraiment ?",
@@ -1210,7 +1210,7 @@
       "condolence": "Deuil et perte",
       "wedding": "Mariage et partenariat",
       "baptism": "Baptême et chemin de foi",
-      "faithdoubt": "Doute de foi",
+      "faithdoubt": "Doutes de foi",
       "forgiveness": "Pardonner et lâcher prise",
       "sleepless": "Insomnie",
       "biblequiz": "Quiz biblique",
@@ -1240,33 +1240,33 @@
     "lifewheel": {
       "title": "Bilan de la roue de la vie",
       "desc": "Comment se portent actuellement le travail, les relations, le sens et la santé ? La roue de la vie vous aide en 3 minutes à y voir plus clair — et montre où la Bible s'y rattache directement.",
-      "cta": "Démarrer la roue de la vie"
+      "cta": "Lancer la roue de la vie"
     },
     "sevenwhys": {
-      "title": "La méthode des 7 pourquoi",
+      "title": "La méthode des 7 Pourquoi",
       "desc": "Pourquoi est-ce que je fais ça vraiment ? Pourquoi est-ce que je ressens ça ? BibleBot vous guide à travers 7 questions qui vont à la racine — avec une contextualisation biblique au point le plus profond.",
       "cta": "Poser des questions plus profondes"
     }
   },
   "audience": {
-    "title": "Pour qui est BibleBot.Life ?",
+    "title": "À qui s'adresse BibleBot.Life ?",
     "subtitle": "Choisissez votre chemin",
     "personal": {
       "title": "Je cherche un accompagnement personnel",
       "desc": "Questions sur la foi, impulsions quotidiennes, croissance spirituelle — à votre rythme et sans jugement.",
       "f1": "Chat avec accompagnement biblique",
       "f2": "Voyage de 21 jours",
-      "f3": "Impulsion quotidienne par push / Telegram",
-      "f4": "Historique de conversation personnel",
+      "f3": "Impulsion quotidienne par Push / Telegram",
+      "f4": "Historique des conversations personnelles",
       "cta": "Chattez maintenant — gratuitement →"
     },
     "church": {
       "title": "Je planifie des cultes et accompagne des personnes",
-      "desc": "Pour les pasteurs, les aumôniers et les équipes paroissiales : soutien par l'IA pour la préparation des sermons, la planification d'équipe et plus encore.",
+      "desc": "Pour les pasteurs, les aumôniers et les équipes paroissiales : soutien IA pour la préparation des sermons, la planification d'équipe et plus encore.",
       "f1": "Planificateur de culte avec IA",
       "f2": "Bibliothèque de ressources",
       "f3": "Coordination d'équipe",
-      "f4": "Page de communauté et annuaire",
+      "f4": "Page de la communauté et répertoire",
       "cta": "Pour les communautés et les aumôniers →"
     }
   },
@@ -1279,7 +1279,7 @@
       "q": "Qu'est-ce que le parcours de 21 jours ?"
     },
     "faithPsych": {
-      "q": "BibleBot combine-t-il foi et psychologie ?",
+      "q": "BibleBot combine-t-il la foi et la psychologie ?",
       "a": "BibleBot combine la sagesse biblique avec les connaissances de la psychologie basée sur des preuves — non pas pour psychologiser la foi, mais pour la rendre pertinente au quotidien. Les méthodes (PERMA, logothérapie, recherche sur la gratitude et le pardon) complètent la Bible, mais ne la remplacent pas."
     }
   }

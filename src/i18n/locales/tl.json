@@ -3,53 +3,53 @@
     "startNow": "Magsimula Ngayon",
     "prayerWall": "Pader ng Panalangin",
     "bibleQuiz": "Pagsusulit sa Bibliya",
-    "forCelebrants": "Para sa mga kapelyan",
-    "forCelebrantsMobile": "Para sa mga kapelyan at mga coach"
+    "forCelebrants": "Para sa mga Tagapangasiwa",
+    "forCelebrantsMobile": "Para sa mga Tagapangasiwa at Coach"
   },
   "loader": "Naglo-load…",
   "hero": {
     "badge": {
-      "noLogin": "Walang Pag-login",
+      "noLogin": "Walang kinakailangang pag-login",
+      "optionalLogin": "Opsyonal ang pag-login",
       "noData": "Walang Data",
-      "noJudgment": "Walang Paghuhusga",
-      "optionalLogin": "Opsyonal ang pag-log in"
+      "noJudgment": "Walang Paghuhusga"
     },
     "title1": "Ang Bibliya.",
-    "title2": " Muling Pinag-isipan.",
-    "subtitle": "Alam ng iyong ang iyong kasama ang Bibliya – at nagtatanong ng tamang mga tanong. Hindi tao, ngunit isang tapat na kasama. Para sa magagandang pag-uusap, malalim na tanong, at tunay na inspirasyon.",
+    "title2": " Muling Inisip.",
+    "subtitle": "Ang iyong personal na kasama ay nakakaalam ng Bibliya – at nagtatanong ng tamang mga tanong. Hindi tao, ngunit isang tapat na kasama. Para sa magagandang pag-uusap, malalim na tanong, at tunay na inspirasyon.",
     "ctaTelegram": "Magsimula sa Telegram",
-    "ctaMore": "Matuto Pa",
-    "quote": "«Lumapit kayo sa akin, kayong lahat na napapagod at nabibigatan, at bibigyan ko kayo ng kapahingahan.»",
+    "ctaMore": "Matuto pa",
+    "quote": "«Lumapit kayo sa akin, kayong lahat na napapagod at nabibigatan; bibigyan ko kayo ng kapahingahan.»",
     "quoteRef": "– Mateo 11,28"
   },
   "impulse": {
-    "loading": "Naglo-load ng pang-araw-araw na inspirasyon...",
+    "loading": "Naglo-load ng inspirasyon...",
     "label": "Inspirasyon ng Araw",
     "deepDive": "Ano ang ibig sabihin nito para sa akin?",
     "explore": "Basahin ang buong seksyon",
-    "alreadySubscribed": "Tumatanggap ka ng pang-araw-araw na inspirasyon",
-    "subscribeCta": "Nais mo bang matanggap ang inspirasyong ito araw-araw?",
-    "playAudio": "Makinig",
+    "subscribeCta": "Gusto mo bang matanggap ang inspirasyong ito araw-araw?",
+    "alreadySubscribed": "Natatanggap mo ang pang-araw-araw na inspirasyon",
+    "playAudio": "Basahin nang malakas",
     "stopAudio": "Ihinto"
   },
   "features": {
-    "sectionTitle": "Ano ang inaalok ng iyong kasama",
-    "sectionSubtitle": "Tuklasin ang maraming paraan kung paano ka matutulungan ng iyong personal na kasama",
+    "sectionTitle": "Paano ka sinusuportahan ng iyong kasama",
+    "sectionSubtitle": "Tuklasin ang iba't ibang posibilidad na inaalok sa iyo ng iyong personal na kasama",
     "bible": {
-      "title": "Mga Talata sa Bibliya at Interpretasyon",
-      "desc": "Magtanong ng «Ano ang sinasabi ng Bibliya tungkol sa...?» at makakuha ng angkop na mga talata na may konteksto at madaling maunawaan na paliwanag."
+      "title": "Mga Sipi sa Bibliya at Interpretasyon",
+      "desc": "Magtanong ng «Ano ang sinasabi ng Bibliya tungkol sa...?» at makakuha ng mga kaugnay na talata na may konteksto at madaling maunawaan na paliwanag."
     },
     "goals": {
       "title": "Pagpaplano ng Buhay at Pagtatakda ng Layunin",
-      "desc": "Tuklasin ang iyong bokasyon, magtakda ng konkretong mga layunin, at alamin kung ano ang maaaring plano ng Diyos para sa iyo."
+      "desc": "Tuklasin ang iyong bokasyon, magtakda ng konkretong layunin, at alamin kung ano ang maaaring plano ng Diyos para sa iyo."
     },
     "self": {
       "title": "Hanapin ang Iyong Sarili",
-      "desc": "Kilalanin ang iyong mga kaloob, kalakasan, at pagnanasa – at kung ano talaga ang kailangan ng iyong puso."
+      "desc": "Kilalanin ang iyong mga kaloob, lakas, at pagnanasa – at kung ano ang tunay na kailangan ng iyong puso."
     },
     "faith": {
-      "title": "Paglalakbay sa Pananampalataya at Paghahanap kay Kristo",
-      "desc": "Naghahanap man, nagdududa, o nagpapalalim – Sasamahan ka ng iyong ang iyong kasama sa iyong personal na paglalakbay."
+      "title": "Landas ng Pananampalataya at Paghahanap kay Kristo",
+      "desc": "Naghahanap man, nagdududa, o nagpapalalim – Sasamahan ka ng iyong kasama sa iyong personal na landas."
     },
     "daily": {
       "title": "Pang-araw-araw na Inspirasyon at Taon ng Simbahan",
@@ -57,32 +57,32 @@
     },
     "groups": {
       "title": "Mga Grupo at Komunidad",
-      "desc": "Perpekto para sa mga pag-aaral ng Bibliya, mga grupo ng simbahan, at mga debosyon ng komunidad."
+      "desc": "Perpekto para sa mga pag-aaral sa Bibliya, mga grupo ng simbahan, at mga debosyon ng komunidad."
     }
   },
   "coaching": {
     "badge": "Metodolohiya",
-    "title": "Hindi lang isang Chatbot – isang Tunay na Kasama",
-    "subtitle": "Pinagsasama ng iyong ang iyong kasama ang karunungan ng Bibliya sa mga napatunayang pamamaraan ng coaching at Positive Psychology.",
+    "title": "Hindi lang isang chat – isang tunay na kasama",
+    "subtitle": "Pinagsasama ng iyong kasama ang karunungan ng Bibliya sa mga napatunayang pamamaraan ng coaching at Positibong Sikolohiya.",
     "journeyTitle": "Personal na Pagsasama",
-    "journeyDesc": "Sasamahan ka ng iyong ang iyong kasama hangga't gusto mo – sa libreng pag-uusap o sa isang opsyonal na 21-araw na istraktura.",
+    "journeyDesc": "Sasama ka ng iyong kasama hangga't gusto mo – sa libreng pag-uusap o sa isang opsyonal na 21-araw na istraktura.",
     "week1": "Linggo 1: Pagdating",
-    "week1Desc": "Pagbuo ng tiwala, pakikinig, pag-unawa sa iyong sitwasyon. Nasaan ka? Ano ang bumabagabag sa iyo?",
+    "week1Desc": "Bumuo ng tiwala, makinig, unawain ang iyong sitwasyon. Nasaan ka? Ano ang bumabagabag sa iyo?",
     "week2": "Linggo 2: Pagpapalalim",
-    "week2Desc": "Pagkilala sa mga pattern, paglilinaw ng mga kagustuhan, pagpapalalim ng mga inspirasyon sa Bibliya. Ano ba talaga ang gusto mo?",
-    "week3": "Linggo 3: Pagkilos",
-    "week3Desc": "Pagtatakda ng konkretong mga hakbang, pagbabalangkas ng mga layunin, pagsisimula ng pagbabago. Ano ang iyong susunod na hakbang?",
+    "week2Desc": "Kilalanin ang mga pattern, linawin ang mga hangarin, palalimin ang mga inspirasyon sa Bibliya. Ano ba talaga ang gusto mo?",
+    "week3": "Linggo 3: Kumilos",
+    "week3Desc": "Gumawa ng konkretong hakbang, bumuo ng mga layunin, simulan ang pagbabago. Ano ang iyong susunod na hakbang?",
     "openQuestionsTitle": "Mga Bukas na Tanong sa Halip na Mabilis na Sagot",
-    "openQuestionsDesc": "Hindi ka bibigyan ng iyong ang iyong kasama ng murang payo. Sa halip, nagtatanong ito ng mga tanong na talagang mahalaga:",
-    "openQ1": "«Ano ba talaga ang nasa likod ng kagustuhang ito?»",
+    "openQuestionsDesc": "Hindi ka bibigyan ng iyong kasama ng murang payo. Sa halip, itatanong niya ang mga tanong na talagang mahalaga:",
+    "openQ1": "«Ano ba talaga ang nasa likod ng hangaring ito?»",
     "openQ2": "«Paano mo malalaman na may nagbago?»",
     "openQ3": "«Ano ang magiging unang maliit na hakbang?»",
-    "honestTitle": "Tapat sa Halip na Toxic Positive",
-    "honestDesc": "Walang «Magiging maayos din!» at walang pagpapaganda ng katotohanan. Ang iyong ang iyong kasama ay may empatiya AT tapat:",
-    "honest1": "Pinangalanan din ang hindi komportableng mga talata sa Bibliya",
+    "honestTitle": "Tapat sa Halip na Toxic Positibo",
+    "honestDesc": "Walang «Magiging maayos din!» at walang pagpapaganda. Ang iyong kasama ay may empatiya AT tapat:",
+    "honest1": "Binabanggit din ang hindi komportableng mga sipi sa Bibliya",
     "honest2": "Hinihikayat ang pagsusuri sa sarili",
-    "honest3": "Pinagkaiba ang aliw sa pagtanggi",
-    "scienceTitle": "Batay sa Agham",
+    "honest3": "Pinagkaiba ang ginhawa sa pagtanggi",
+    "scienceTitle": "Batay sa Siyensiya",
     "perma": {
       "name": "PERMA Model",
       "author": "Seligman",
@@ -96,26 +96,26 @@
     "gratitude": {
       "name": "Pasasalamat",
       "author": "Emmons",
-      "desc": "Pananaliksik na Batay sa Pagsasanay ng Pasasalamat"
+      "desc": "Pagsasanay sa Pasasalamat Batay sa Pananaliksik"
     },
     "forgiveness": {
       "name": "Pagpapatawad",
       "author": "Worthington",
       "desc": "REACH Model para sa Proseso ng Pagpapatawad"
     },
-    "renameTip": "💡 Maaari mong bigyan ng sariling pangalan ang iyong ang iyong kasama – upang maging tunay na <strong>iyong</strong> kasama."
+    "renameTip": "💡 Maaari mong bigyan ng sariling pangalan ang iyong kasama – upang maging tunay na <strong>iyong</strong> kasama."
   },
   "discover": {
     "badge": "Para sa mga Mausisa",
-    "title": "Muling Tuklasin ang Pananampalataya – Nang Walang Presyon",
-    "subtitle": "Parami nang parami ang mga tao ang muling nagtatanong ng malalaking tanong. Ang BibleBot.Life ay para sa lahat na gustong (muling) tuklasin ang pananampalataya – tapat, nang walang pathos at walang jargon ng simbahan.",
+    "title": "Muling Tuklasin ang Pananampalataya – Nang Walang Pressure",
+    "subtitle": "Parami nang parami ang mga tao ang muling nagtatanong ng malalaking tanong. Ang BibleBot.Life ay para sa lahat na gustong (muling) tuklasin ang pananampalataya – tapat, walang pathos, at walang jargon ng simbahan.",
     "doubt": {
       "title": "Nagdududa ka ba?",
       "text": "Mabuti. Ang pagdududa ay hindi pagkakamali – ito ang simula ng tapat na pananampalataya. Ang Bibliya ay puno ng mga taong nagpumilit."
     },
     "search": {
       "title": "Naghahanap ka ba?",
-      "text": "Marahil hindi mo alam kung ano ang hinahanap mo. Ayos lang iyon. Tutulungan ka ng iyong ang iyong kasama na magtanong ng tamang mga tanong – sa halip na magbigay ng mabilis na sagot."
+      "text": "Marahil hindi mo alam kung ano ang hinahanap mo. Ayos lang iyon. Tutulungan ka ng iyong kasama na magtanong ng tamang mga tanong – sa halip na magbigay ng mabilis na sagot."
     },
     "deepen": {
       "title": "Gusto mo bang palalimin?",
@@ -123,60 +123,60 @@
     },
     "quote": "«Kumatok kayo, at bubuksan sa inyo.»",
     "quoteRef": "– Mateo 7,7",
-    "quoteText": "Sa Switzerland, hindi kami gaanong nag-uusap tungkol sa pananampalataya. Hindi rin naman kailangan. Ngunit ang sinumang may tanong ay karapat-dapat sa tapat na sagot – nang walang sermon, nang walang pagiging miyembro, nang walang nakatagong motibo."
+    "quoteText": "Sa Switzerland, hindi kami gaanong nag-uusap tungkol sa pananampalataya. Hindi rin naman kailangan. Ngunit ang sinumang may tanong ay karapat-dapat sa tapat na sagot – walang sermon, walang pagiging miyembro, walang nakatagong motibo."
   },
   "subscribe": {
     "title": "Pang-araw-araw na Inspirasyon sa Bibliya",
     "subtitle": "Tuwing umaga ng 7:00 AM – isang talata, isang kaisipan, isang magandang simula.",
-    "firstName": "Ang Iyong Pangalan",
+    "firstName": "Ang iyong pangalan",
     "firstNameOptional": "(opsyonal)",
     "firstNamePlaceholder": "hal. Thomas",
-    "firstNameHint": "Upang personal ka naming batiin.",
+    "firstNameHint": "Para personal ka naming mabati.",
     "channelLabel": "Paano mo gustong matanggap ang inspirasyon?",
-    "push": "Push",
-    "pushDesc": "Notification ng Browser",
+    "push": "Abiso",
+    "pushDesc": "Direktang matanggap sa browser",
     "telegram": "Telegram",
     "telegramDesc": "Mensahe sa pamamagitan ng Telegram",
     "sms": "SMS",
-    "smsDesc": "SMS sa iyong cellphone",
-    "phoneLabel": "Numero ng Cellphone",
+    "smsDesc": "SMS sa iyong mobile phone",
+    "phoneLabel": "Numero ng Mobile",
     "phonePlaceholder": "+41 79 123 45 67",
     "phoneHint": "May country code, hal. +41 para sa Switzerland.",
-    "telegramHint": "I-click ang «Mag-subscribe» – ire-redirect ka sa Telegram. Simulan ang bot doon at i-type ang <strong>/daily</strong> upang i-activate ang pang-araw-araw na inspirasyon.",
-    "pushHint": "Pagkatapos i-click ang «Mag-subscribe», hihingi ang iyong browser ng pahintulot para sa mga notification. Mangyaring payagan ito upang matanggap ang inspirasyon.",
+    "telegramHint": "I-click ang «Mag-subscribe» – ire-redirect ka sa Telegram. Simulan ang iyong kasama doon at i-type ang <strong>/daily</strong> upang i-activate ang pang-araw-araw na inspirasyon.",
+    "pushHint": "Pagkatapos i-click ang «Mag-subscribe», hihingi ng pahintulot ang iyong browser. Mangyaring payagan ang mga abiso upang matanggap ang inspirasyon.",
+    "subscribeButton": "Mag-subscribe sa Inspo",
     "submit": "Mag-subscribe",
-    "submitting": "Nagsu-subscribe...",
-    "footNote": "Walang kinakailangang pag-login. Maaaring mag-unsubscribe anumang oras.",
+    "submitting": "Nagpapadala...",
+    "footNote": "Walang kinakailangang pag-login. Maaaring kanselahin anumang oras.",
     "successTitle": "Naka-subscribe ka na! 🙏",
     "successText": "Simula bukas ng 7:00 AM, matatanggap mo ang iyong personal na inspirasyon sa Bibliya.",
     "toastTelegram": "Binuksan ang Telegram 🙏",
-    "toastTelegramDesc": "Simulan ang bot at i-type ang /daily upang i-activate ang pang-araw-araw na inspirasyon.",
+    "toastTelegramDesc": "Simulan ang iyong kasama at i-type ang /daily upang i-activate ang pang-araw-araw na inspirasyon.",
     "toastSuccess": "Naka-subscribe! 🙏",
     "toastSuccessDesc": "Matatanggap mo ang iyong pang-araw-araw na inspirasyon simula bukas.",
-    "toastPushPreview": "Hindi available ang Push Subscription sa Preview",
-    "toastPushPreviewDesc": "Gumagana lang ang mga push notification sa na-publish na pahina.",
+    "toastPushPreview": "Hindi gumagana ang mga abiso sa preview",
+    "toastPushPreviewDesc": "Gumagana lang ang mga abiso sa nai-publish na pahina.",
     "toastNotSupported": "Hindi Suportado",
-    "toastNotSupportedDesc": "Hindi sinusuportahan ng iyong browser ang mga push notification.",
+    "toastNotSupportedDesc": "Hindi sinusuportahan ng iyong browser ang mga abiso sa browser.",
     "toastPermDenied": "Tinanggihan ang Pahintulot",
-    "toastPermDeniedDesc": "Mangyaring payagan ang mga notification sa iyong mga setting ng browser.",
+    "toastPermDeniedDesc": "Mangyaring payagan ang mga abiso sa iyong mga setting ng browser.",
     "toastError": "Error",
     "toastErrorDesc": "Mangyaring subukang muli sa ibang pagkakataon.",
-    "subscribeButton": "Mag-subscribe sa Inspirasyon",
     "manage": "Pamahalaan ang Subscription",
-    "switchChannel": "Lumipat ng Channel:",
+    "switchChannel": "Palitan ang Channel:",
     "unsubscribe": "I-unsubscribe",
-    "unsubscribedTitle": "Hindi Naka-subscribe",
+    "unsubscribedTitle": "Naka-unsubscribe",
     "unsubscribedDesc": "Hindi ka na makakatanggap ng pang-araw-araw na inspirasyon."
   },
   "faq": {
     "badge": "Mga Madalas Itanong",
-    "title": "Ano ang Dapat Mong Malaman Tungkol sa Iyong ang iyong kasama",
-    "subtitle": "Mahalaga sa amin ang transparency – lalo na sa mga teologo, tagapayo, at kritikal na isip.",
-    "q1": "Ano ang pinagkaiba ng iyong ang iyong kasama sa ChatGPT & Co.?",
+    "title": "Ano ang Dapat Mong Malaman Tungkol sa Iyong Kasama",
+    "subtitle": "Mahalaga sa amin ang transparency – lalo na sa mga teologo, tagapangasiwa, at kritikal na isip.",
+    "q1": "Ano ang pinagkaiba ng iyong kasama sa ChatGPT & Co.?",
     "q1Generic": "Mga Generic na Chatbot:",
     "q1GenericItems": [
-      "Mababaw na mga sipi ng Bibliya nang walang konteksto",
-      "Walang mga gabay sa pagpapayo",
+      "Mababaw na mga sipi sa Bibliya nang walang konteksto",
+      "Walang mga gabay sa pangangasiwa",
       "Iniiwasan ang hindi komportableng mga teksto",
       "Walang interbensyon sa krisis",
       "Pinaghahalo ang Bibliya sa esoterismo",
@@ -184,7 +184,7 @@
     ],
     "q1Bot": "BibleBot.Life:",
     "q1BotItems": [
-      "5 kinikilalang pagsasalin – kasama ang hindi komportableng mga talata",
+      "5 kinikilalang pagsasalin – maging ang hindi komportableng mga sipi",
       "Mga gabay AT mapaghamong pagsasama",
       "Mga follow-up na tanong para sa pagsusuri sa sarili",
       "Mga sanggunian sa krisis (Tel. 143 / 147)",
@@ -192,73 +192,81 @@
       "Nagtataguyod ng kritikal na pag-iisip bilang kapanahunan ng pananampalataya"
     ],
     "q2": "Anong mga pagsasalin ng Bibliya ang kasama?",
-    "q2Intro": "Ang iyong ang iyong kasama ay gumagana nang ekumenikal sa mga pangunahing edisyon ng Bibliya sa wikang Aleman:",
-    "q2Outro": "Ang lahat ng mga talata sa Bibliya ay ibinibigay na may sanggunian at makasaysayang konteksto.",
-    "q3": "Anong mga siyentipikong batayan ang nasa likod nito?",
-    "q3Intro": "Ang pagsasama ay batay sa pananaliksik na peer-reviewed ng Positive Psychology:",
-    "q4": "Paano tinitiyak ng iyong ang iyong kasama ang kaligtasan sa pagpapayo?",
-    "q4Items": [
-      "Sa kaso ng mga pag-iisip ng pagpapakamatay o krisis → agarang pag-redirect sa Dargebotene Hand (143) at Pro Juventute (147)",
-      "Walang sikolohikal o medikal na diagnosis",
-      "Respeto nang walang pagiging arbitraryo – malinaw na mga posisyon sa Bibliya ang kinukuha",
-      "Empatiya AT Katapatan – tinatalakay din ang hindi komportableng mga paksa",
-      "Mga follow-up na tanong para sa pagsusuri sa sarili sa halip na murang kumpirmasyon",
-      "Walang toxic positivity – tunay, tapat na pagsasama",
-      "Malinaw na pinangalanan ang mga tensyon at mahirap na teksto"
-    ],
-    "q5": "Nakakabit ba ang iyong ang iyong kasama sa isang denominasyon?",
-    "q5Answer": "Hindi. Ang iyong ang iyong kasama ay ekumenikal at pantay na nirerespeto ang mga Reformed, Katoliko, Free Church, at iba pang tradisyong Kristiyano. Sa kaso ng magkakaibang interpretasyon ng denominasyon, ang iba't ibang pananaw ay malinaw na ipinapakita – nang walang pinapaboran na tradisyon.",
-    "q6": "Pinapalitan ba ng iyong ang iyong kasama ang pagpapayo o therapy?",
-    "q6Answer": "Hindi. Ang iyong ang iyong kasama ay isang digital na tool para sa personal na pagbabasa at pagmumuni-muni ng Bibliya. Hindi nito pinapalitan ang propesyonal na pagpapayo, teolohikal na payo, o sikolohikal na therapy. Sa kaso ng malubhang krisis, palaging tinutukoy ng iyong ang iyong kasama ang mga kwalipikadong ahensya ng tulong.",
-    "q7": "Hindi ba ang iyong ang iyong kasama ay isang «feel-good bot» lang?",
-    "q7Answer": "Hindi. Ang iyong ang iyong kasama ay nagbibigay ng aliw kung saan kailangan ang aliw – ngunit naghahamon din ito. Ang espirituwal na paglago ay nangangailangan ng pagsubok. Ang iyong ang iyong kasama ay nagtatanong ng hindi komportableng mga follow-up na tanong, pinangalanan ang mahirap na mga teksto sa Bibliya (Job, mga salmo ng pagtangis, propetikong kritisismo) at hindi natatakot sa mga paksa tulad ng katarungan, pagsisisi, at responsibilidad. Ang tradisyong propetiko ay hindi kailanman naging komportable – at ang iyong ang iyong kasama din.",
-    "q8": "Sino ang nasa likod ng iyong ang iyong kasama at paano ito pinopondohan?",
-    "q8Answer": "Ang BibleBot.Life ay isang pribado, hindi komersyal na proyekto. Ito ay pinapatakbo nang boluntaryo at pinopondohan lamang sa pamamagitan ng boluntaryong donasyon. Walang advertising, walang pagbebenta ng data, at walang bayad na feature. Ang lahat ng donasyon ay direktang napupunta sa pagbabayad ng mga kasalukuyang gastos (imprastraktura, hosting, pagpapaunlad). Dahil ang ang iyong kasama ay tumatakbo bilang isang pribadong proyekto, ang mga donasyon ay hindi deductible sa buwis.",
-    "q9": "Paano pinangangasiwaan ng iyong ang iyong kasama ang aking data?",
-    "q9Answer": "Hindi nagse-save ang iyong ang iyong kasama ng personal na data o mga kasaysayan ng chat. Ang bawat pag-uusap ay anonymous. Walang pag-login, walang pagsubaybay, at walang pagbabahagi ng data sa mga third party. Ang paggamit ay ganap na anonymous.",
+    "q2Intro": "Ang iyong kasama ay gumagana nang ekumenikal sa mga pangunahing edisyon ng Bibliya sa wikang Aleman:",
+    "q2Outro": "Ang lahat ng mga sipi sa Bibliya ay ibinibigay na may sanggunian sa pinagmulan at makasaysayang konteksto.",
     "tradition": {
       "reformed": "Repormado",
-      "evangelical": "Ebanghelikal",
+      "evangelical": "Ebangheliko",
       "catholic": "Katoliko",
       "freeChurch": "Malayang Simbahan",
-      "literal": "Salita-sa-salita"
-    }
+      "literal": "Literal"
+    },
+    "q3": "Anong mga batayan sa siyensiya ang nasa likod nito?",
+    "q3Intro": "Ang pagsasama ay batay sa peer-reviewed na pananaliksik sa Positibong Sikolohiya:",
+    "q4": "Paano tinitiyak ng iyong kasama ang kaligtasan sa pangangasiwa?",
+    "q4Items": [
+      "Sa kaso ng pag-iisip ng pagpapakamatay o krisis → agarang pag-refer sa Dargebotene Hand (143) at Pro Juventute (147)",
+      "Walang sikolohikal o medikal na diagnosis",
+      "Paggalang nang walang pagiging arbitraryo – malinaw na posisyon sa Bibliya ang kinukuha",
+      "Empatiya AT Katapatan – maging ang hindi komportableng mga bagay ay tinatalakay",
+      "Mga follow-up na tanong para sa pagsusuri sa sarili sa halip na murang kumpirmasyon",
+      "Walang toxic positivity – tunay, tapat na pagsasama",
+      "Malinaw na binabanggit ang mga tensyon at mahirap na teksto"
+    ],
+    "q5": "Nakagapos ba ang iyong kasama sa isang denominasyon?",
+    "q5Answer": "Hindi. Ang iyong kasama ay ekumenikal at pantay na gumagalang sa mga tradisyong Repormado, Katoliko, Malayang Simbahan, at iba pang Kristiyano. Sa kaso ng magkakaibang interpretasyon ng denominasyon, ang iba't ibang pananaw ay malinaw na ipinapakita – nang walang pagpabor sa isang tradisyon.",
+    "q6": "Pinapalitan ba ng iyong kasama ang pangangasiwa o therapy?",
+    "q6Answer": "Hindi. Ang iyong kasama ay isang digital na tool para sa personal na pagbabasa at pagmumuni-muni sa Bibliya. Hindi nito pinapalitan ang propesyonal na pangangasiwa, teolohikal na payo, o sikolohikal na therapy. Sa kaso ng malubhang krisis, palaging ire-refer ng iyong kasama sa mga kwalipikadong ahensya.",
+    "q7": "Hindi ba ang iyong kasama ay isang «tool na pampaginhawa» lang?",
+    "q7Answer": "Hindi. Ang iyong kasama ay nagbibigay ng ginhawa kung saan kailangan ang ginhawa – ngunit naghahamon din ito. Ang espirituwal na paglago ay nangangailangan ng pagpupunyagi. Ang iyong kasama ay nagtatanong ng hindi komportableng mga follow-up na tanong, binabanggit ang mahirap na mga teksto sa Bibliya (Job, mga salmo ng pagtangis, propetikong kritisismo) at hindi natatakot sa mga paksa tulad ng katarungan, pagsisisi, at responsibilidad. Ang tradisyong propetiko ay hindi kailanman naging komportable – at hindi rin ang tool na pampaginhawa na ito.",
+    "q8": "Sino ang nasa likod ng iyong kasama at paano ito pinopondohan?",
+    "q8Answer": "Ang BibleBot.Life ay isang pribado, hindi komersyal na proyekto. Ito ay pinapatakbo nang boluntaryo at pinopondohan lamang sa pamamagitan ng boluntaryong donasyon. Walang advertising, walang pagbebenta ng data, at walang bayad na feature. Ang lahat ng donasyon ay direktang napupunta sa pagbabayad ng mga kasalukuyang gastos (imprastraktura, hosting, pagpapaunlad). Dahil ang BibleBot ay tumatakbo bilang isang pribadong proyekto, ang mga donasyon ay hindi deductible sa buwis.",
+    "q9": "Paano pinangangasiwaan ng iyong kasama ang aking data?",
+    "q9Answer": "Hindi nag-iimbak ang iyong kasama ng personal na data o kasaysayan ng chat. Ang bawat pag-uusap ay anonymous. Walang pag-login, walang pagsubaybay, at walang pagbabahagi ng data sa mga third party. Ang paggamit ay ganap na anonymous."
   },
   "donate": {
-    "badge": "Suportahan ang Iyong ang iyong kasama",
-    "title": "Tulungan na Manatiling Libre ang Iyong ang iyong kasama",
-    "subtitle": "Ang iyong BibleBot.Life ay isang proyekto ng puso – nang walang advertising, nang walang subscription, nang walang nakatagong gastos. Upang manatili itong ganoon, umaasa ako sa boluntaryong donasyon. Ang bawat kontribusyon ay nakakatulong upang matugunan ang mga kasalukuyang gastos para sa operasyon at imprastraktura.",
-    "bankTitle": "Donasyon sa pamamagitan ng Bank Transfer",
+    "badge": "Suportahan ang iyong kasama",
+    "title": "Tulungan na manatiling libre ang iyong kasama",
+    "subtitle": "Ang iyong kasama ay isang proyekto ng puso – walang advertising, walang subscription, walang nakatagong gastos. Upang manatili itong ganoon, umaasa ako sa boluntaryong donasyon. Ang bawat kontribusyon ay nakakatulong upang matugunan ang mga kasalukuyang gastos para sa operasyon at imprastraktura.",
+    "bankTitle": "Mag-donate sa pamamagitan ng bank transfer",
     "bankSubtitle": "Bawat halaga ay mahalaga – maraming salamat! 🙏",
     "recipient": "Tatanggap",
     "bank": "Bangko",
-    "purpose": "Layunin",
+    "purpose": "Layunin ng pagbabayad",
     "purposeValue": "Donasyon BibleBot.Life",
-    "note": "Ang BibleBot.Life ay pinapatakbo bilang isang pribadong proyekto. Samakatuwid, ang mga donasyon ay hindi deductible sa buwis."
+    "note": "Ang BibleBot.Life ay pinapatakbo bilang isang pribadong proyekto. Samakatuwid, ang mga donasyon ay hindi deductible sa buwis.",
+    "creditCard": "Suportahan sa pamamagitan ng credit card",
+    "twint": "Suportahan sa pamamagitan ng Twint",
+    "secureNote": "Secure na pagbabayad · Walang bitag ng subscription · Maaaring kanselahin anumang oras"
+  },
+  "social": {
+    "conversations": "Mga pag-uusap na naganap",
+    "languages": "Mga Wika",
+    "bibles": "Mga Pagsasalin ng Bibliya"
   },
   "refer": {
     "badge": "Ibahagi ang Salita ng Diyos",
-    "title": "Irekomenda ang ang iyong kasama",
-    "subtitle": "May kilala ka bang nangangailangan ng paghihikayat ngayon? Ibahagi ang ang iyong kasama – isang mensahe ay maaaring magdulot ng malaking pagbabago.",
+    "title": "Irekomenda ang iyong kasama",
+    "subtitle": "May kilala ka bang nangangailangan ng paghihikayat? Ibahagi ang iyong kasama – malaki ang magagawa ng isang mensahe.",
     "whatsapp": "Ibahagi sa WhatsApp",
-    "whatsappMsg": "Uy, gusto kong ipakita sa iyo ang BibleBot.Life – isang libreng kasama sa Bibliya na nakakaalam ng Bibliya at nagtatanong ng talagang magagandang tanong. Walang pag-login, anonymous, tapat. Subukan mo: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Uy, gusto kong ipakita sa iyo ang isang bagay – isang libreng kasama sa Bibliya na nakakaalam ng Bibliya at nagtatanong ng talagang magagandang tanong. Walang pag-login, anonymous, tapat. Subukan mo: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Ibahagi sa Telegram",
-    "telegramMsg": "Uy, alam mo na ba ang BibleBot.Life? Isang libreng personal na kasama sa Bibliya – tapat, anonymous, nang walang pag-login. Tingnan mo: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Uy, kilala mo na ba ang BibleBot.Life? Isang libreng personal na kasama sa Bibliya – tapat, anonymous, walang pag-login. Tingnan mo: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Ibahagi sa E-mail",
     "emailSubject": "Maaaring interesado ka dito: BibleBot.Life",
-    "emailBody": "Kumusta!\n\nGusto kong ipakita sa iyo ang BibleBot.Life – isang libreng kasama sa Bibliya na talagang nakakaalam ng Bibliya. Walang kinakailangang pagpaparehistro, ganap na anonymous.\n\nNagtatanong ito ng magagandang follow-up na tanong, nagpapaliwanag ng mga talata sa Bibliya sa konteksto at tapat na sinasamahan ka – kahit sa mahirap na mga paksa.\n\nSubukan mo: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nMalugod na pagbati",
-    "copy": "Kopyahin ang link",
-    "copied": "Nakopya na ang link!",
-    "qr": "QR Code"
+    "emailBody": "Kumusta!\n\nGusto kong ipakita sa iyo ang BibleBot – isang libreng kasama sa Bibliya na talagang nakakaalam ng Bibliya. Walang kinakailangang pagpaparehistro, ganap na anonymous.\n\nNagtatanong siya ng magagandang follow-up na tanong, nagpapaliwanag ng mga sipi sa Bibliya sa konteksto at tapat na sinasamahan ka – maging sa mahirap na paksa.\n\nSubukan mo: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nPagbati",
+    "copy": "Kopyahin ang Link",
+    "copied": "Nakopya ang Link! 📋",
+    "qr": "O ipakita lang ang QR code na ito:"
   },
   "cta": {
-    "title": "Hindi mo kailangang pagdaanan ito nang mag-isa",
-    "subtitle": "I-type lang sa iyong ang iyong kasama kung ano ang bumabagabag sa iyo. Walang pag-login, walang gastos, walang paghuhusga – tanging tapat na pagsasama at ang karunungan ng Bibliya.",
+    "title": "Hindi mo kailangang harapin ito nang mag-isa",
+    "subtitle": "Isulat lang sa iyong kasama kung ano ang bumabagabag sa iyo. Walang pag-login, walang gastos, walang paghuhusga – tanging tapat na pagsasama at ang karunungan ng Bibliya.",
     "button": "Magsimula ng Pag-uusap Ngayon"
   },
   "footer": {
-    "tagline": "Ang iyong personal na kasama — na may lalim ng Bibliya, walang kailangang paunang kaalaman.",
-    "disclaimer": "Ang BibleBot.Life ay isang digital na tool at hindi pinapalitan ang propesyonal na pagpapayo, teolohikal na payo, o sikolohikal na therapy. Sa kaso ng matinding krisis, sumangguni sa Dargebotene Hand (Tel. 143) o Pro Juventute (Tel. 147).",
+    "tagline": "Ang iyong personal na kasama — na may lalim ng Bibliya, nang walang paunang kaalaman.",
+    "disclaimer": "Ang BibleBot.Life ay isang digital na tool at hindi pinapalitan ang propesyonal na pangangasiwa, teolohikal na payo, o sikolohikal na therapy. Sa kaso ng matinding krisis, sumangguni sa Dargebotene Hand (Tel. 143) o Pro Juventute (Tel. 147).",
     "impressum": "Imprenta",
     "notes": "Mga Tala",
     "private": "Pribado, hindi komersyal na proyekto",
@@ -266,80 +274,81 @@
     "noTax": "Ang mga donasyon ay hindi deductible sa buwis",
     "datenschutz": "Patakaran sa Privacy",
     "love": "May ❤️ para sa lahat na nagtatanong kung ano ang iniisip ni Kristo.",
-    "forChurches": "Para sa mga Simbahan"
+    "forChurches": "Para sa mga Simbahan",
+    "forCelebrants": "Para sa mga Tagapangasiwa at Coach"
   },
   "chat": {
-    "welcome": "Masaya akong nandito ka 🤗\n\nAko ang iyong ang iyong kasama – ang iyong personal na kasama sa Bibliya, magagandang tanong, at konkretong inspirasyon. Walang presyon, walang paghuhusga.\n\nMaaari mo akong tanungin ng kahit ano – o sabihin lang kung ano ang bumabagabag sa iyo. 💛",
-    "journeyOffer": "💡 **Tip:** Nag-aalok din ako ng **21-araw na pagsasama** – 3 linggo na may pang-araw-araw na inspirasyon, pagmumuni-muni, at konkretong mga hakbang. Sa sarili mong bilis.\n\nGusto mo bang subukan ito?",
+    "welcome": "Masaya akong nandito ka 🤗\n\nAko ang iyong kasama – ang iyong personal na kasama na may Bibliya, magagandang tanong, at konkretong inspirasyon. Walang pressure, walang paghuhusga.\n\nMaaari mo akong tanungin ng kahit ano – o sabihin lang kung ano ang bumabagabag sa iyo. 💛",
+    "journeyOffer": "💡 **Tip:** Nag-aalok din ako ng **21-araw na pagsasama** – 3 linggo na may pang-araw-araw na inspirasyon, pagmumuni-muni, at konkretong hakbang. Sa sarili mong bilis.\n\nGusto mo bang subukan ito?",
     "suggestion1": "Kailangan ko ng nakapagpapatibay na salita ngayon",
-    "suggestion2": "Ano ang sinasabi ng Bibliya kapag hindi ka sigurado?",
+    "suggestion2": "Ano ang sinasabi ng Bibliya kapag nakakaramdam ka ng kawalan ng katiyakan?",
     "suggestion3": "Gusto kong malaman kung ano talaga ang gusto ko",
     "teaser": "Ano ang bumabagabag sa iyo ngayon? 💛",
     "teaserSub": "Nandito ako – nang walang paghuhusga.",
-    "teaserCta": "Sumulat Ngayon →",
+    "teaserCta": "Sumulat ngayon →",
     "openChat": "Buksan ang Chat",
     "closeChat": "Isara ang Chat",
-    "yourCompanion": "Ang Iyong Personal na Kasama",
+    "yourCompanion": "Ang iyong personal na kasama",
     "journeyComplete": "Tapos na ang 21 araw! 🎉",
     "arriving": "Pagdating",
     "deepening": "Pagpapalalim",
-    "acting": "Pagkilos",
+    "acting": "Kumilos",
     "renameTip": "Bigyan mo ako ng pangalan ✨",
     "namePlaceholder": "hal. Eli, Miriam…",
-    "changeName": "Baguhin ang Pangalan",
-    "placeholder": "Magsimula lang sa pagta-type...",
-    "startVoice": "Simulan ang Voice Input",
-    "stopVoice": "Itigil ang Pagre-record",
-    "noVoice": "Hindi sinusuportahan ng iyong browser ang voice input.",
+    "previousChats": "{{count}} nakaraang pag-uusap",
+    "changeName": "Palitan ang Pangalan",
+    "placeholder": "Magsimula lang magsulat...",
+    "startVoice": "Simulan ang pag-input ng boses",
+    "stopVoice": "Ihinto ang pagre-record",
+    "noVoice": "Hindi sinusuportahan ng iyong browser ang pag-input ng boses.",
     "writing": "nagsusulat...",
-    "shieldBadge": "Walang Pag-login · Walang Paghuhusga · Sinuri ang mga Sipi",
+    "shieldBadge": "Walang Pag-login · Walang Paghuhusga · Mga Sipi na Sinuri",
+    "loginHint": "Mag-log in upang mapanatili ang mga pag-uusap sa lahat ng device",
     "journeyStart": "Oo, simulan ✨",
     "journeyLater": "Marahil sa ibang pagkakataon",
     "journeyStartMsg": "Oo, gusto kong simulan ang 21-araw na pagsasama!",
     "qaChecking": "Sinusuri ang mga sipi...",
-    "qaIssue": "{{count}} Paalala tungkol sa mga sipi",
-    "qaIssue_plural": "{{count}} Mga Paalala tungkol sa mga sipi",
-    "qaOk": "{{count}} Sinuri ang sipi ✓",
-    "qaOk_plural": "{{count}} Sinuri ang mga sipi ✓",
-    "qaWarning": "⚠️ Mga Paalala tungkol sa Katumpakan:",
+    "qaIssue": "{{count}} tala sa mga sipi",
+    "qaIssue_plural": "{{count}} tala sa mga sipi",
+    "qaOk": "{{count}} sipi na sinuri ✓",
+    "qaOk_plural": "{{count}} sipi na sinuri ✓",
+    "qaWarning": "⚠️ Mga Tala sa Katumpakan:",
+    "suggestionsLoading": "Naglo-load ng mga mungkahi…",
     "errorTooMany": "Masyadong maraming kahilingan – mangyaring maghintay sandali.",
-    "errorCredits": "Naubos ang quota – subukan ulit mamaya.",
+    "errorCredits": "Naubos ang quota – mangyaring subukang muli sa ibang pagkakataon.",
     "errorConnect": "Error sa pagkonekta.",
     "errorTitle": "Error",
     "errorConnection": "hindi maabot.",
     "errorNoStream": "Walang Stream",
-    "seniorMode": "Senior Mode (mas malaking font)",
-    "loginHint": "Mag-log in para mapanatili ang mga pag-uusap sa lahat ng device",
-    "previousChats": "{{count}} nakaraang pag-uusap",
-    "suggestionsLoading": "Naglo-load ng mga mungkahi…"
+    "seniorMode": "Senior Mode (mas malaking font)"
   },
   "install": {
-    "title": "I-install ang BibleBot.Life",
-    "androidDesc": "Mabilis na pag-access direkta mula sa home screen",
+    "title": "I-install ang BibleBot",
+    "androidDesc": "Mabilis na access direkta mula sa home screen",
     "iosDesc": "I-tap ang «Ibahagi» → «Idagdag sa Home Screen»",
     "button": "I-install",
     "close": "Isara"
   },
   "share": {
     "label": "Ibahagi",
-    "shareVia": "Ibahagi sa pamamaguan ng",
+    "shareVia": "Ibahagi sa pamamagitan ng",
     "copied": "Nakopya! 📋",
     "copiedShort": "Nakopya!",
     "copiedDesc": "Nakopya ang text sa clipboard. Ibahagi ito ngayon sa WhatsApp, Instagram o kung saan mo gusto!",
-    "copyLink": "Kopyahin ang Link",
+    "copyLink": "Kopyahin ang Text",
     "error": "Nabigo ang pagkopya",
-    "impulseTitle": "Ang iyong kasama – Inspirasyon ng Araw",
-    "chatTitle": "Ang iyong kasama – Kaisipan ng Araw",
+    "impulseTitle": "BibleBot – Inspirasyon ng Araw",
+    "chatTitle": "BibleBot – Kaisipan ng Araw",
     "createImage": "Gumawa ng Larawan ✨",
     "generating": "Gumagawa…",
     "imageReady": "Handa na ang iyong larawan para ibahagi!",
     "shareImage": "Ibahagi ang Larawan",
     "download": "I-save",
     "imageError": "Nabigo ang paggawa ng larawan",
-    "imageErrorDesc": "Hindi nagawa ang larawan. Subukang muli sa ibang pagkakataon.",
-    "imageSaved": "Nakopya ang text! 📋",
-    "imageSavedDesc": "I-save ang larawan at ibahagi ito sa nakopyang text sa Instagram, WhatsApp o kung saan mo gusto!",
-    "clipboardFallback": "Nakopya ang teksto — i-paste ito sa pag-post!",
+    "imageErrorDesc": "Hindi nagawa ang larawan. Mangyaring subukang muli sa ibang pagkakataon.",
+    "imageSaved": "Nakopya ang Text! 📋",
+    "imageSavedDesc": "I-save ang larawan at ibahagi ito gamit ang nakopyang text sa Instagram, WhatsApp o kung saan mo gusto!",
+    "clipboardFallback": "Nakopya ang text — i-paste ito kapag nagpo-post!",
     "recommendedBy": "Inirerekomenda ng {{church}}",
     "hashtagBible": "#Bibliya"
   },
@@ -356,102 +365,159 @@
     "title": "Patakaran sa Privacy"
   },
   "lang": {
-    "de": "Deutsch",
-    "en": "English",
-    "fr": "Français",
-    "es": "Español",
-    "it": "Italiano",
-    "pl": "Polski",
-    "cs": "Čeština",
-    "pt": "Português",
-    "nl": "Nederlands",
-    "ro": "Română",
-    "da": "Dansk",
-    "no": "Norsk",
-    "sv": "Svenska",
-    "fi": "Suomi",
-    "el": "Ελληνικά",
-    "hr": "Hrvatski",
-    "sr": "Srpski",
-    "hu": "Magyar",
-    "sk": "Slovenčina",
-    "bg": "Български",
-    "ru": "Русский",
-    "uk": "Українська",
-    "ka": "ქართული",
-    "hy": "Հայերեն",
-    "ko": "한국어",
+    "de": "Aleman",
+    "en": "Ingles",
+    "fr": "Pranses",
+    "es": "Espanyol",
+    "it": "Italyano",
+    "pl": "Polako",
+    "cs": "Czech",
+    "pt": "Portuges",
+    "nl": "Dutch",
+    "ro": "Romanian",
+    "da": "Danish",
+    "no": "Norwegian",
+    "sv": "Swedish",
+    "fi": "Finnish",
+    "el": "Griyego",
+    "hr": "Croatian",
+    "sr": "Serbian",
+    "hu": "Hungarian",
+    "sk": "Slovak",
+    "bg": "Bulgarian",
+    "ru": "Russian",
+    "uk": "Ukrainian",
+    "ka": "Georgian",
+    "hy": "Armenian",
+    "ko": "Korean",
     "tl": "Filipino",
-    "id": "Bahasa Indonesia",
-    "vi": "Tiếng Việt",
-    "zh": "中文",
-    "sw": "Kiswahili",
-    "am": "አማርኛ",
+    "id": "Indonesian",
+    "vi": "Vietnamese",
+    "zh": "Chinese",
+    "sw": "Swahili",
+    "am": "Amharic",
     "af": "Afrikaans",
-    "yo": "Yorùbá",
+    "yo": "Yoruba",
     "ig": "Igbo",
-    "zu": "isiZulu",
+    "zu": "Zulu",
     "ht": "Kreyòl"
   },
   "tiles": {
     "sectionTitle": "Ano ang bumabagabag sa iyo?",
-    "sectionSubtitle": "Pumili ng paksa — sasamahan ka ng ang iyong kasama",
+    "sectionSubtitle": "Pumili ng isang paksa — sasamahan ka ng BibleBot",
+    "showMore": "higit pa",
     "baptism": {
       "title": "Maghanap ng Talata sa Binyag",
       "desc": "Ang perpektong talata para sa iyong anak",
       "prompt": "Tulungan mo akong makahanap ng angkop na talata sa binyag. Anong uri ng bata ito at ano ang nais ng mga magulang?",
-      "prompt_v1": "Ano ba talaga ang kahulugan ng binyag?",
+      "prompt_v1": "Ano ba talaga ang ibig sabihin ng binyag?",
       "prompt_v2": "Sabihin mo sa akin ang tungkol sa binyag sa Bibliya – sorpresahin mo ako!",
       "prompt_v3": "Bakit nagpapabinyag ang mga tao?"
     },
     "condolence": {
-      "title": "Mga Salita ng Aliw",
+      "title": "Mga Salita ng Pag-aliw",
       "desc": "Pagsasama sa pakikiramay at pamamaalam",
-      "prompt": "Kailangan ko ng mga salita ng aliw para sa isang condolence card. Maaari mo ba akong tulungan na bumuo ng isang bagay na angkop?"
+      "prompt": "Kailangan ko ng mga salita ng pag-aliw para sa isang condolence card. Matutulungan mo ba akong bumuo ng isang bagay na angkop?"
     },
     "wedding": {
       "title": "Talata sa Kasal",
       "desc": "Mga salita sa Bibliya para sa inyong pag-ibig",
-      "prompt": "Naghahanap kami ng magandang talata sa Bibliya para sa aming kasal. Anong mga talata sa Bibliya ang angkop sa pag-ibig at pakikipag-ugnayan?"
+      "prompt": "Naghahanap kami ng magandang talata sa Bibliya para sa aming kasal. Anong mga sipi sa Bibliya ang angkop sa pag-ibig at pakikipag-ugnayan?"
     },
     "anxiety": {
       "title": "Pagkabalisa at Pag-aalala",
-      "desc": "Paghahanap ng tapang sa mahirap na panahon",
-      "prompt": "Nahihirapan ako ngayon sa pagkabalisa at pag-aalala. Ano ang sinasabi ng Bibliya tungkol dito? Mayroon bang mga talata na nagbibigay ng tapang?",
-      "prompt_v1": "Ako ay kinakabahan. Ano ang sinasabi ng Bibliya tungkol sa pakiramdam na kinakabahan?",
-      "prompt_v2": "Paano makakatulong ang pananampalataya sa aking pagkabalisa?",
-      "prompt_v3": "Anong mga tauhan sa Bibliya ang nakaranas din ng pagkabalisa?"
+      "desc": "Maghanap ng lakas sa mahihirap na panahon",
+      "prompt": "Nahihirapan ako sa pagkabalisa at pag-aalala. Ano ang sinasabi ng Bibliya tungkol dito? Mayroon bang mga talata na nagbibigay ng lakas?",
+      "prompt_v1": "Natatakot ako. Ano ang sinasabi ng Bibliya tungkol sa takot?",
+      "prompt_v2": "Paano makakatulong ang pananampalataya sa aking mga takot?",
+      "prompt_v3": "Aling mga tauhan sa Bibliya ang nakaramdam din ng takot?"
     },
     "confession": {
-      "title": "Kumpisal",
-      "desc": "Nagpapatawad ang Diyos — sabihin mo",
+      "title": "Pangungumpisal",
+      "desc": "Pinapatawad ng Diyos — sabihin mo",
       "prompt": "Gusto kong maglabas ng isang bagay na bumabagabag sa akin. Ano ang sinasabi ng Bibliya tungkol sa pagpapatawad at bagong simula?"
     },
     "heartbreak": {
-      "title": "Sakit ng Puso",
-      "desc": "Ano ang sinasabi ng Bibliya tungkol sa sakit ng puso",
-      "prompt": "Wasak ang puso ko. Ano ang sinasabi ng Bibliya tungkol sa sakit ng puso at kung paano makahanap muli ng pag-asa?",
+      "title": "Pighati",
+      "desc": "Ano ang sinasabi ng Bibliya tungkol sa pighati",
+      "prompt": "Wasak ang puso ko. Ano ang sinasabi ng Bibliya tungkol sa pighati at kung paano muling makahanap ng pag-asa?",
       "prompt_v1": "Wasak ang puso ko. Ano ang sinasabi ng Bibliya tungkol dito?",
-      "prompt_v2": "Paano ko haharapin ang heartbreak – mayroon bang tulong mula sa Bibliya?",
-      "prompt_v3": "Kaya ba ng Diyos na pagalingin ang pusong wasak?"
+      "prompt_v2": "Paano ko haharapin ang pighati – mayroon bang tulong sa Bibliya?",
+      "prompt_v3": "Maaari bang pagalingin ng Diyos ang isang wasak na puso?"
     },
     "newstart": {
       "title": "Bagong Simula",
       "desc": "Lakas para sa isang bagong yugto ng buhay",
-      "prompt": "Nakaharap ako sa isang bagong simula at kailangan ko ng paghihikayat. Anong mga talata sa Bibliya ang nagsasalita tungkol sa mga bagong simula?"
+      "prompt": "Nakaharap ako sa isang bagong simula at kailangan ko ng paghihikayat. Anong mga sipi sa Bibliya ang nagsasalita tungkol sa mga bagong simula?"
     },
     "namequiz": {
-      "title": "What does your name mean?",
-      "desc": "Discover the biblical meaning of your name",
-      "prompt": "What does my name mean and does it have a biblical or spiritual significance? Surprise me!",
-      "prompt_v1": "Which biblical names have the most beautiful meanings?",
-      "prompt_v2": "What does my name mean – is there a biblical connection?",
-      "prompt_v3": "Tell me the story behind my name!"
+      "title": "Ano ang Ibig Sabihin ng Iyong Pangalan?",
+      "desc": "Tuklasin ang kahulugan ng iyong pangalan sa Bibliya",
+      "prompt": "Ano ang ibig sabihin ng aking pangalan at mayroon ba itong kahulugan sa Bibliya o espirituwal? Sorpresahin mo ako!",
+      "prompt_v1": "Aling mga pangalan sa Bibliya ang may pinakamagandang kahulugan?",
+      "prompt_v2": "Ano ang ibig sabihin ng aking pangalan – mayroon bang koneksyon sa Bibliya?",
+      "prompt_v3": "Sabihin mo sa akin ang kuwento sa likod ng aking pangalan!"
+    },
+    "dailywisdom": {
+      "title": "Karunungan para Ngayon",
+      "desc": "Isang nakapagpapatibay na kaisipan para sa iyong araw",
+      "prompt": "Bigyan mo ako ng maikli, nakapagpapatibay na kaisipan para sa aking araw – na may angkop na talata sa Bibliya.",
+      "prompt_v1": "Ano ang pinakamahusay na payo na mayroon ang Bibliya para ngayon?",
+      "prompt_v2": "Bigyan mo ako ng karunungan mula sa Bibliya na sasamahan ako sa buong araw.",
+      "prompt_v3": "Sorpresahin mo ako ng isang nakapagpapatibay na talata sa Bibliya para ngayon!"
+    },
+    "funfact": {
+      "title": "Alam mo ba?",
+      "desc": "Mga Nakakagulat na Katotohanan mula sa Bibliya",
+      "prompt": "Sabihin mo sa akin ang isang nakakagulat na katotohanan mula sa Bibliya na hindi alam ng karamihan!",
+      "prompt_v1": "Ano ang pinakakakaibang kuwento sa Bibliya?",
+      "prompt_v2": "Anong mga katotohanan mula sa Bibliya ang nakakagulat sa karamihan ng tao?",
+      "prompt_v3": "Sabihin mo sa akin ang isang bagay na nakakatawa o hindi inaasahan mula sa Bibliya!"
+    },
+    "lifehack": {
+      "title": "Life Hack",
+      "desc": "Karunungan sa Bibliya para sa Pamilya at Trabaho",
+      "prompt": "Anong tip sa Bibliya ang makakatulong sa akin sa pang-araw-araw na buhay kasama ang pamilya at trabaho? Bigyan mo ako ng isang bagay na praktikal!",
+      "prompt_v1": "Paano makakatulong sa akin ang Bibliya sa abalang pang-araw-araw na buhay?",
+      "prompt_v2": "Anong mga praktikal na life hack ang nasa Bibliya?",
+      "prompt_v3": "Bigyan mo ako ng isang konkretong tip mula sa Bibliya para sa aking pang-araw-araw na buhay!"
+    },
+    "strengths": {
+      "title": "Ang Iyong mga Lakas",
+      "desc": "Tuklasin kung ano ang nasa loob mo",
+      "prompt": "Tulungan mo akong tuklasin ang aking personal na lakas – ano ang sinasabi ng Bibliya tungkol sa mga kaloob na mayroon ang bawat tao?",
+      "prompt_v1": "Anong mga lakas ang mayroon ako ayon sa Bibliya?",
+      "prompt_v2": "Paano ko malalaman kung ano ang aking mga kaloob at talento?",
+      "prompt_v3": "Ano ang sinasabi ng Bibliya tungkol sa kung ano ang nagpapabukod-tangi sa akin?"
+    },
+    "family": {
+      "title": "Pamilya at Pang-araw-araw na Buhay",
+      "desc": "Higit na Pagpapahalaga sa Pagsasama",
+      "prompt": "Paano ko maipapakita ang higit na pagpapahalaga sa aking pamilya? Bigyan mo ako ng praktikal na ideya na may inspirasyon sa Bibliya.",
+      "prompt_v1": "Paano ko palalakasin ang aking mga relasyon sa pamilya?",
+      "prompt_v2": "Ano ang sinasabi ng Bibliya tungkol sa isang magandang buhay pamilya?",
+      "prompt_v3": "Bigyan mo ako ng ideya kung paano ko mapasaya ang isang miyembro ng aking pamilya ngayon!"
+    },
+    "relax": {
+      "title": "Magpahinga",
+      "desc": "Maghanap ng Sandali ng Katahimikan at Kapayapaan",
+      "prompt": "Kailangan ko ng sandali ng katahimikan. Tulungan mo akong mag-relax – na may nakapapawing-damdaming talata sa Bibliya o isang maikling pagmumuni-muni.",
+      "prompt_v1": "Bigyan mo ako ng nakapapawing-damdaming salmo para sa sandaling ito.",
+      "prompt_v2": "Paano ako makakahanap ng tunay na kapahingahan ayon sa Bibliya?",
+      "prompt_v3": "Gabayan mo ako sa isang maikling pagmumuni-muni sa Bibliya."
     },
     "sleepless": {
       "title": "Walang Tulog",
-      "desc": "Paghahanap ng kapayapaan sa gabi",
+      "desc": "Maghanap ng Kapayapaan sa Gabi",
       "prompt": "Hindi ako makatulog at nag-iisip. Mayroon bang nakapapawing-damdaming panalangin o salmo para sa gabi?"
+    },
+    "prayerwall": {
+      "title": "Pader ng Panalangin",
+      "desc": "Ibahagi ang mga kahilingan sa panalangin at manalangin para sa isa't isa"
+    },
+    "biblequiz": {
+      "title": "Pagsusulit sa Bibliya",
+      "desc": "Subukan ang iyong kaalaman sa Bibliya sa masayang paraan"
     },
     "loneliness": {
       "title": "Kalungkutan",
@@ -460,12 +526,12 @@
     },
     "decision": {
       "title": "Mahirap na Desisyon",
-      "desc": "Karunungan para sa tamang landas",
-      "prompt": "Nakaharap ako sa isang mahirap na desisyon. Anong mga talata sa Bibliya ang makakatulong sa akin na makahanap ng tamang landas?"
+      "desc": "Karunungan para sa Tamang Landas",
+      "prompt": "Nakaharap ako sa isang mahirap na desisyon. Anong mga sipi sa Bibliya ang makakatulong sa akin na makahanap ng tamang landas?"
     },
     "gratitude": {
       "title": "Pasasalamat",
-      "desc": "Isang personal na panalangin ng pasasalamat",
+      "desc": "Isang Personal na Panalangin ng Pasasalamat",
       "prompt": "Gusto kong magpasalamat sa Diyos. Tulungan mo akong bumuo ng isang personal na panalangin ng pasasalamat.",
       "prompt_v1": "Paano ako magiging mas mapagpasalamat?",
       "prompt_v2": "Ano ang sinasabi ng Bibliya tungkol sa pasasalamat?",
@@ -488,12 +554,12 @@
     "shame": {
       "title": "Kahihiyan at Pagkakasala",
       "desc": "Kapag dinudurog ka ng pagkakasala",
-      "prompt": "Labis akong nahihiya at nakakaramdam ng pagkakasala. Ano ang sinasabi ng Bibliya tungkol sa pagkakasala, pagpapatawad, at isang bagong simula?"
+      "prompt": "Nahihiya ako at nakakaramdam ng pagkakasala. Ano ang sinasabi ng Bibliya tungkol sa pagkakasala, pagpapatawad, at bagong simula?"
     },
     "burnout": {
       "title": "Burnout",
       "desc": "Kapag hindi mo na kaya",
-      "prompt": "Lubos akong pagod at ubos na. Hindi ko na lang kaya. Ano ang sinasabi ng Bibliya tungkol sa pahinga at pagpapahinga?"
+      "prompt": "Pagod na pagod ako at ubos na. Hindi ko na talaga kaya. Ano ang sinasabi ng Bibliya tungkol sa pahinga at pagpapahinga?"
     },
     "illness": {
       "title": "Sakit",
@@ -501,19 +567,19 @@
       "prompt": "Nakakuha ako ng mahirap na diagnosis at natatakot ako. Ano ang sinasabi ng Bibliya tungkol sa sakit, pagpapagaling, at pag-asa?"
     },
     "financial": {
-      "title": "Mga Problema sa Pananalapi",
+      "title": "Mga Problema sa Pera",
       "desc": "Kapag mabigat ang mga bayarin",
       "prompt": "Mayroon akong mga problema sa pananalapi at hindi ko alam kung ano ang gagawin. Ano ang sinasabi ng Bibliya tungkol sa pera, tiwala, at probisyon?"
     },
     "meaningcrisis": {
       "title": "Krisis sa Kahulugan",
       "desc": "Para saan ang lahat ng ito?",
-      "prompt": "Nagtataka ako kung para saan ang lahat ng ito. Nasa krisis ako ng kahulugan. Ano ang sinasabi ng Bibliya tungkol sa kahulugan ng buhay?"
+      "prompt": "Nagtatanong ako kung para saan ang lahat ng ito. Nasa krisis ako ng kahulugan. Ano ang sinasabi ng Bibliya tungkol sa kahulugan ng buhay?"
     },
     "selfdoubt": {
       "title": "Pagdududa sa Sarili",
-      "desc": "Kapag hindi mo nararamdaman na sapat ka",
-      "prompt": "Patuloy akong nagdududa sa aking sarili at hindi ko nararamdaman na sapat ako. Ano ang sinasabi ng Bibliya tungkol sa aking halaga?"
+      "desc": "Kapag pakiramdam mo ay hindi ka sapat",
+      "prompt": "Patuloy akong nagdududa sa sarili at pakiramdam ko ay hindi ako sapat. Ano ang sinasabi ng Bibliya tungkol sa aking halaga?"
     },
     "calling": {
       "title": "Bokasyon",
@@ -528,7 +594,7 @@
     "forgiveness": {
       "title": "Pagpapatawad",
       "desc": "Kapag tila imposible ang pagpapatawad",
-      "prompt": "Hindi ko lang mapatawad ang isang tao. Masakit masyado. Ano ang sinasabi ng Bibliya tungkol sa pagpapatawad?",
+      "prompt": "Hindi ko lang mapatawad ang isang tao. Masyado itong masakit. Ano ang sinasabi ng Bibliya tungkol sa pagpapatawad?",
       "prompt_v1": "Ano ang sinasabi ng Bibliya tungkol sa pagpapatawad?",
       "prompt_v2": "Paano ko mapapatawad ang isang taong nakasakit sa akin?",
       "prompt_v3": "Mayroon bang mga limitasyon sa pagpapatawad?"
@@ -540,7 +606,7 @@
     },
     "envy": {
       "title": "Inggit",
-      "desc": "Kapag mas maganda ang buhay ng iba",
+      "desc": "Kapag mas maganda ang iba",
       "prompt": "Nainggit ako sa iba at patuloy akong naghahambing. Ano ang sinasabi ng Bibliya tungkol sa inggit at kasiyahan?"
     },
     "joy": {
@@ -550,92 +616,35 @@
     },
     "prayer": {
       "title": "Kahilingan sa Panalangin",
-      "desc": "Sama-samang manalangin",
-      "prompt": "Mayroon akong kahilingan sa panalangin at gusto kong manalangin nang sama-sama. Samahan mo ako sa panalangin.",
-      "prompt_v1": "Paano ako matututong magdasal?",
+      "desc": "Manalangin nang magkasama",
+      "prompt": "Mayroon akong kahilingan sa panalangin at gusto kong manalangin nang magkasama. Samahan mo ako sa panalangin.",
+      "prompt_v1": "Paano ako matututong manalangin?",
       "prompt_v2": "Ano ang sinasabi ng Bibliya tungkol sa panalangin?",
       "prompt_v3": "Bakit hindi sinasagot ng Diyos ang ilang panalangin?"
     },
     "bibleverse": {
       "title": "Unawain ang Talata",
-      "desc": "Ipaliwanag ang isang talata sa Bibliya",
-      "prompt": "Gusto kong mas maunawaan ang isang talata sa Bibliya. Maaari mo ba akong tulungan na ilagay ito sa konteksto?"
-    },
-    "biblequiz": {
-      "desc": "Subukan ang iyong kaalaman sa Bibliya sa mapaglarong paraan",
-      "title": "Pagsusulit sa Bibliya"
-    },
-    "prayerwall": {
-      "desc": "Ibahagi ang mga kahilingan sa panalangin at manalangin para sa isa't isa",
-      "title": "Pader ng Panalangin"
-    },
-    "showMore": "higit pa",
-    "dailywisdom": {
-      "title": "Karunungan para sa Ngayon",
-      "desc": "Isang nakapagpapatibay na kaisipan para sa iyong araw",
-      "prompt": "Bigyan mo ako ng maikli at nakapagpapatibay na kaisipan para sa aking araw – na may angkop na talata sa Bibliya.",
-      "prompt_v1": "Ano ang pinakamahusay na payo na mayroon ang Bibliya para sa ngayon?",
-      "prompt_v2": "Bigyan mo ako ng karunungan mula sa Bibliya na sasamahan ako sa buong araw.",
-      "prompt_v3": "Sorpresahin mo ako ng isang nakapagpapatibay na talata sa Bibliya para sa ngayon!"
-    },
-    "funfact": {
-      "title": "Alam mo ba?",
-      "desc": "Nakakagulat na mga katotohanan mula sa Bibliya",
-      "prompt": "Sabihin mo sa akin ang isang nakakagulat na katotohanan mula sa Bibliya na hindi alam ng karamihan sa mga tao!",
-      "prompt_v1": "Ano ang pinakakakaibang kuwento sa Bibliya?",
-      "prompt_v2": "Anong mga katotohanan mula sa Bibliya ang nakakagulat sa karamihan ng mga tao?",
-      "prompt_v3": "Sabihin mo sa akin ang isang bagay na nakakatawa o hindi inaasahan mula sa Bibliya!"
-    },
-    "lifehack": {
-      "title": "Life Hack",
-      "desc": "Karunungan ng Bibliya para sa Pamilya at Trabaho",
-      "prompt": "Anong tip sa Bibliya ang makakatulong sa akin sa pang-araw-araw na buhay kasama ang pamilya at trabaho? Bigyan mo ako ng isang bagay na praktikal!",
-      "prompt_v1": "Paano ako matutulungan ng Bibliya sa nakababahalang pang-araw-araw na buhay?",
-      "prompt_v2": "Anong mga praktikal na tip sa buhay ang nasa Bibliya?",
-      "prompt_v3": "Bigyan mo ako ng isang konkretong tip mula sa Bibliya para sa aking pang-araw-araw na buhay!"
-    },
-    "strengths": {
-      "title": "Ang Iyong mga Kalakasan",
-      "desc": "Tuklasin kung ano ang nasa loob mo",
-      "prompt": "Tulungan mo akong tuklasin ang aking mga personal na kalakasan – ano ang sinasabi ng Bibliya tungkol sa mga kaloob na mayroon ang bawat tao?",
-      "prompt_v1": "Anong mga kalakasan ang mayroon ako ayon sa Bibliya?",
-      "prompt_v2": "Paano ko malalaman kung ano ang aking mga kaloob at talento?",
-      "prompt_v3": "Ano ang sinasabi ng Bibliya tungkol sa kung ano ang nagpapabukod-tangi sa akin?"
-    },
-    "family": {
-      "title": "Pamilya at Pang-araw-araw na Buhay",
-      "desc": "Higit na pagpapahalaga sa pamumuhay nang magkasama",
-      "prompt": "Paano ko maipapakita ang higit na pagpapahalaga sa aking pamilya? Bigyan mo ako ng mga praktikal na ideya na may inspirasyon sa Bibliya.",
-      "prompt_v1": "Paano ko mapapalakas ang aking mga relasyon sa pamilya?",
-      "prompt_v2": "Ano ang sinasabi ng Bibliya tungkol sa isang mabuting buhay pampamilya?",
-      "prompt_v3": "Bigyan mo ako ng ideya kung paano ko mapasasaya ang isang tao sa aking pamilya ngayon!"
-    },
-    "relax": {
-      "title": "Magpahinga",
-      "desc": "Maghanap ng isang sandali ng katahimikan at kapayapaan",
-      "prompt": "Kailangan ko ng isang sandali ng kapayapaan. Tulungan mo akong mag-relax – na may nakapapawing pagod na talata sa Bibliya o isang maikling pagmumuni-muni.",
-      "prompt_v1": "Bigyan mo ako ng nakapapawing pagod na Salmo para sa sandaling ito.",
-      "prompt_v2": "Paano ko mahahanap ang tunay na kapayapaan ayon sa Bibliya?",
-      "prompt_v3": "Gabayan mo ako sa isang maikling pagmumuni-muni sa Bibliya."
+      "desc": "Ipaliwanag ang isang sipi sa Bibliya",
+      "prompt": "Gusto kong mas maunawaan ang isang sipi sa Bibliya. Matutulungan mo ba akong ilagay ito sa konteksto?"
     },
     "quoteofday": {
       "title": "Sipi ng Araw",
-      "desc": "Isang nakaka-inspire na sipi para pag-isipan",
-      "prompt": "Bigyan mo ako ng isang nakaka-inspire na sipi mula sa Bibliya para sa araw na ito na may maikling paliwanag",
-      "prompt_v1": "Anong sipi sa Bibliya ang partikular na angkop para sa araw na ito?",
-      "prompt_v2": "Bigyan mo ako ng isang nakapagpapatibay na sipi mula sa Mga Awit para sa araw na ito",
-      "prompt_v3": "Anong kawikaan mula sa Bibliya ang nagbibigay sa akin ng bagong pananaw ngayon?"
+      "desc": "Isang nakapagbibigay-inspirasyong sipi para sa pagmumuni-muni",
+      "prompt": "Bigyan mo ako ng isang nakapagbibigay-inspirasyong sipi mula sa Bibliya para ngayon na may maikling paliwanag",
+      "prompt_v1": "Aling sipi sa Bibliya ang partikular na angkop sa araw na ito?",
+      "prompt_v2": "Bigyan mo ako ng nakapagpapatibay na sipi mula sa mga Salmo para ngayon",
+      "prompt_v3": "Aling kasabihan mula sa Bibliya ang nagbibigay sa akin ng bagong pananaw ngayon?"
     },
     "thankfulness": {
-      "title": "Pagsasanay sa Pagpapasalamat",
+      "title": "Pagsasanay sa Pasasalamat",
       "desc": "Tuklasin kung ano ang maaari mong ipagpasalamat",
-      "prompt": "Gabayan mo ako sa isang maikling pagsasanay sa pagpapasalamat. Tulungan mo akong makahanap ng tatlong bagay na ipinagpapasalamat ko ngayon",
-      "prompt_v1": "Tulungan mo akong matuklasan ang pasasalamat sa aking pang-araw-araw na buhay — kahit sa maliliit na bagay",
-      "prompt_v2": "Gusto kong matuto na maging mas mapagpasalamat. Bigyan mo ako ng praktikal na pagsasanay para dito",
+      "prompt": "Gabayan mo ako sa isang maikling pagsasanay sa pasasalamat. Tulungan mo akong makahanap ng tatlong bagay na ipinagpapasalamat ko ngayon",
+      "prompt_v1": "Tulungan mo akong tuklasin ang pasasalamat sa aking pang-araw-araw na buhay — maging sa maliliit na bagay",
+      "prompt_v2": "Gusto kong matutong maging mas mapagpasalamat. Bigyan mo ako ng praktikal na ehersisyo para dito",
       "prompt_v3": "Ano ang sinasabi ng Bibliya tungkol sa pasasalamat at paano ko ito maisasagawa ngayon?"
     },
     "biblesays": {
-      "title": "Ano ang Sinasabi ng Bibliya tungkol sa...",
+      "title": "Ano ang Sinasabi ng Bibliya Tungkol sa...",
       "desc": "Alamin kung ano ang sinasabi ng Bibliya tungkol sa iyong paksa",
       "prompt": "Gusto kong malaman kung ano ang sinasabi ng Bibliya tungkol sa isang partikular na paksa. Tanungin mo ako kung anong paksa ang interesado ako!",
       "prompt_v1": "Ano ang sinasabi ng Bibliya tungkol sa pagkakaibigan?",
@@ -644,32 +653,32 @@
     },
     "morningstart": {
       "title": "Magandang Umaga!",
-      "desc": "Simulan ang araw nang positibo",
-      "prompt": "Batiin mo ako ng magandang umaga at bigyan mo ako ng nakapagpapatibay na kaisipan para sa pagsisimula ng araw",
+      "desc": "Simulan ang Araw nang Positibo",
+      "prompt": "Batiin mo ako ng magandang umaga at bigyan mo ako ng nakapagpapatibay na kaisipan para sa simula ng araw",
       "prompt_v1": "Bigyan mo ako ng maikling inspirasyon sa umaga na may angkop na talata sa Bibliya",
-      "prompt_v2": "Paano ko sisimulan ang aking araw nang may layunin at positibo ngayon?",
+      "prompt_v2": "Paano ko masisimulan ang aking araw nang may kamalayan at positibo ngayon?",
       "prompt_v3": "Bigyan mo ako ng nakapagpapatibay na pagbati sa umaga na may kaisipan mula sa Bibliya"
     },
     "inspiration": {
-      "title": "Bigyan Mo Ako ng Inspirasyon",
-      "desc": "Hayaan mong sorpresahin ka at bigyan ng inspirasyon",
-      "prompt": "Sorpresahin mo ako ng isang bagay na nakaka-inspire — maaaring ito ay isang kaisipan, isang kuwento, o isang pananaw mula sa Bibliya",
-      "prompt_v1": "Sabihin mo sa akin ang isang nakaka-inspire na kuwento mula sa Bibliya na may kaugnayan ngayon",
-      "prompt_v2": "Bigyan mo ako ng hindi inaasahang, nakaka-inspire na ideya",
-      "prompt_v3": "Anong biblikal na personalidad ang maaaring magbigay sa akin ng inspirasyon ngayon at bakit?"
+      "title": "Bigyan mo ako ng Inspirasyon",
+      "desc": "Hayaan mong sorpresahin at bigyan ka ng inspirasyon",
+      "prompt": "Sorpresahin mo ako ng isang bagay na nakapagbibigay-inspirasyon — maaaring ito ay isang kaisipan, isang kuwento, o isang pananaw mula sa Bibliya",
+      "prompt_v1": "Sabihin mo sa akin ang isang nakapagbibigay-inspirasyong kuwento mula sa Bibliya na may kaugnayan ngayon",
+      "prompt_v2": "Bigyan mo ako ng hindi inaasahang, nakapagbibigay-inspirasyong kaisipan",
+      "prompt_v3": "Aling tauhan sa Bibliya ang makapagbibigay-inspirasyon sa akin ngayon at bakit?"
     }
   },
   "lifeWheel": {
     "title": "Ang Iyong Gulong ng Buhay",
-    "intro": "I-rate ang 8 bahagi ng buhay sa isang scale na 1-10. Alamin kung nasaan ka – at makakuha ng mga inspirasyon sa Bibliya para sa bahagi na nangangailangan ng atensyon.",
+    "intro": "I-rate ang 8 bahagi ng buhay sa isang sukat na 1-10. Alamin kung nasaan ka — at makakuha ng inspirasyon sa Bibliya para sa bahagi na nangangailangan ng pansin.",
     "start": "Magsimula Ngayon",
     "sliderHint": "Ilipat ang mga slider — 1 = lubhang hindi nasisiyahan, 10 = lubhang nasisiyahan",
     "showResult": "Ipakita ang Resulta",
     "average": "Average",
     "weakestArea": "Pinakamalaking Pangangailangan",
     "getImpulse": "Inspirasyon sa Bibliya para sa {{area}}",
-    "reset": "Gawin Muli",
-    "prompt": "Ipinapakita ng aking gulong ng buhay na sa bahagi ng «{{area}}» ay mayroon lamang akong {{score}}/10 puntos. Ano ang sinasabi ng Bibliya tungkol sa bahaging ito ng buhay? Bigyan mo ako ng paghihikayat at praktikal na inspirasyon.",
+    "reset": "Gawin muli",
+    "prompt": "Ipinapakita ng aking Gulong ng Buhay na sa bahagi ng «{{area}}» ay mayroon lamang akong {{score}}/10 puntos. Ano ang sinasabi ng Bibliya tungkol sa bahaging ito ng buhay? Bigyan mo ako ng paghihikayat at praktikal na inspirasyon.",
     "areas": {
       "health": "Kalusugan",
       "relationships": "Mga Relasyon",
@@ -688,22 +697,22 @@
     "backToList": "Bumalik sa Listahan"
   },
   "church": {
-    "badge": "Para sa mga organisasyon",
-    "heroTitle": "Ang iyong kasama para sa iyong organisasyon",
-    "heroSubtitle": "Samahan ang iyong mga miyembro ng komunidad na may karunungan sa Bibliya – digital, personal, at 24/7.",
+    "badge": "Para sa mga Organisasyon",
+    "heroTitle": "BibleBot para sa Iyong Organisasyon",
+    "heroSubtitle": "Samahan ang iyong mga empleyado at target na grupo ng karunungan sa Bibliya – digital, personal, at 24/7.",
     "useCasesTitle": "Mga Kaso ng Paggamit",
     "useCase": {
       "youth": {
         "title": "Gawaing Kabataan",
-        "desc": "Natutuklasan ng mga kabataan ang Bibliya sa kanilang sariling paraan – interactive at walang pag-aalinlangan."
+        "desc": "Natutuklasan ng mga kabataan ang Bibliya sa kanilang sariling paraan – interactive at walang pag-aatubili."
       },
       "confirmation": {
         "title": "Kumpirmasyon",
         "desc": "Pinapalalim ng mga kumpirmado ang kaalaman sa Bibliya nang mag-isa na may personal na pagsasama."
       },
       "pastoral": {
-        "title": "Pagpapayo",
-        "desc": "24/7 na pagsasama bilang karagdagan sa personal na pagpapayo."
+        "title": "Pangangasiwa",
+        "desc": "24/7 na pagsasama bilang pandagdag sa personal na pangangasiwa."
       },
       "bibleStudy": {
         "title": "Pag-aaral ng Bibliya",
@@ -711,436 +720,427 @@
       }
     },
     "pricingTitle": "Mga Pakete ng Patronage",
-    "pricingSubtitle": "Suportahan ang ang iyong kasama at ang iyong komunidad gamit ang angkop na pakete ng patronage.",
+    "pricingSubtitle": "Suportahan ang BibleBot at ang iyong organisasyon gamit ang angkop na pakete ng patronage.",
     "popular": "Sikat",
     "free": "Libre",
-    "perYear": "tao / taon",
+    "perYear": "",
     "contact": "Makipag-ugnayan",
     "tier": {
       "free": {
         "name": "Buto ng Mustasa",
-        "size": "Para sa maliliit na komunidad at home group (hanggang 50 miyembro)"
+        "size": "Para sa maliliit na organisasyon (hanggang 50 tao/taon)"
       },
       "community": {
         "name": "Kasama sa Paglalakbay",
-        "size": "Para sa mga komunidad na may 50–200 miyembro"
+        "size": "Para sa mga organisasyon na may 50–200 tao/taon"
       },
       "gemeinde": {
         "name": "Tagapagtayo ng Tulay",
-        "size": "Para sa mga komunidad na may 200–500 miyembro"
+        "size": "Para sa mga organisasyon na may 200–500 tao/taon"
       },
       "kirche": {
         "name": "Parola",
-        "size": "Para sa malalaking komunidad at institusyon (500+ miyembro)"
+        "size": "Para sa malalaking organisasyon (500+ tao)/taon"
       }
     },
     "features": {
       "directoryEntry": "Entry sa Direktoryo",
       "telegramGroup": "Grupo sa Telegram",
       "partnerPage": "Sariling Pahina ng Partner",
-      "badge": "Badge ng Partner",
+      "badge": "Partner Badge",
       "qrFlyer": "QR Flyer para sa Pag-print",
-      "contactForm": "Form ng Contact",
+      "contactForm": "Form ng Pakikipag-ugnayan",
       "pastorProfile": "Profile ng Pastor/Pari",
       "welcomeVideo": "Welcome Video",
       "analytics": "Analytics Dashboard",
       "prioritySupport": "Priority Support",
       "multipleProfiles": "Maraming Profile",
-      "customBranding": "Pasadyang Branding",
+      "customBranding": "Custom Branding",
       "apiAccess": "API Access",
-      "accountManager": "Personal na Account Manager"
+      "accountManager": "Personal na Manager ng Account"
     },
-    "viewDirectory": "Tingnan ang Direktoryo ng Komunidad",
-    "directoryBadge": "Direktoryo ng Komunidad",
-    "directoryTitle": "Mga Partner na Komunidad",
-    "directorySubtitle": "Maghanap ng komunidad na malapit sa iyo na nagrerekomenda ng ang iyong kasama.",
-    "searchPlaceholder": "Maghanap ng Lokasyon, Pangalan o Denominasyon...",
-    "noResults": "Wala pang komunidad sa direktoryo.",
+    "viewDirectory": "Tingnan ang Direktoryo ng Partner",
+    "directoryBadge": "Direktoryo ng Partner",
+    "directoryTitle": "Mga Organisasyon ng Partner",
+    "directorySubtitle": "Maghanap ng organisasyon malapit sa iyo na nagrerekomenda ng BibleBot.",
+    "searchPlaceholder": "Maghanap ng lugar, pangalan o denominasyon...",
+    "noResults": "Wala pang organisasyon sa direktoryo.",
     "becomePartner": "Maging Partner →",
-    "notFound": "Hindi Nahanap ang Komunidad.",
+    "notFound": "Hindi Nahanap ang Organisasyon.",
     "backToDirectory": "Bumalik sa Direktoryo",
     "pastor": "Pastor/Pari",
-    "serviceTimes": "Mga Oras ng Pagsamba",
+    "serviceTimes": "Mga Oras ng Serbisyo",
     "startChat": "Simulan ang Chat",
     "website": "Website",
     "telegramGroup": "Grupo sa Telegram",
     "contactTitle": "Makipag-ugnayan kay {{name}}",
-    "contactName": "Ang Iyong Pangalan (opsyonal)",
-    "contactEmail": "Ang Iyong E-mail Address",
-    "contactMessage": "Ang Iyong Mensahe",
+    "contactName": "Ang iyong pangalan (opsyonal)",
+    "contactEmail": "Ang iyong E-mail address",
+    "contactMessage": "Ang iyong mensahe",
     "contactSend": "Ipadala ang Mensahe",
     "contactSuccess": "Naipadala ang Mensahe! 🙏",
-    "contactSuccessDesc": "Makikipag-ugnayan sa iyo ang komunidad.",
+    "contactSuccessDesc": "Makikipag-ugnayan sa iyo ang organisasyon.",
     "recommendedBy": "Inirerekomenda ni {{name}}",
     "setup": "Setup (isang beses)",
     "form": {
-      "title": "Interesado? Sumulat sa Amin!",
+      "title": "Interesado? Sumulat sa amin!",
       "subtitle": "Makikipag-ugnayan kami sa loob ng 48 oras.",
-      "name": "Ang Iyong Pangalan",
-      "email": "E-mail Address",
-      "churchName": "Pangalan ng Komunidad",
-      "tier": "Gusto mong Pakete",
-      "tierPlaceholder": "Pumili ng Pakete...",
-      "message": "Ang Iyong Mensahe",
+      "name": "Ang iyong pangalan",
+      "email": "E-mail address",
+      "churchName": "Pangalan ng Organisasyon",
+      "tier": "Nais na Pakete",
+      "tierPlaceholder": "Pumili ng pakete...",
+      "message": "Ang iyong mensahe",
       "submit": "Ipadala ang Kahilingan",
       "success": "Naipadala ang Kahilingan! Makikipag-ugnayan kami sa lalong madaling panahon. 🙏",
       "error": "Error sa pagpapadala. Mangyaring subukang muli.",
       "orgType": "Uri ng Organisasyon",
-      "orgTypePlaceholder": "Pumili ng Uri...",
+      "orgTypePlaceholder": "Pumili ng uri...",
       "orgTypes": {
-        "church": "Komunidad",
-        "careHome": "Bahay-Alagaan",
-        "seniorHome": "Bahay-Pansamantala",
-        "hospital": "Ospital",
-        "prison": "Pagpapayo sa Bilangguan",
-        "military": "Pagpapayo sa Militar",
-        "rehaClinic": "Klinika ng rehabilitasyon",
-        "psychiatry": "Psikiyatriya",
-        "burnoutClinic": "Klinika ng burnout",
-        "hospice": "Hospice",
-        "counseling": "Sentro ng pagpapayo",
-        "reformed": "Reformed Church",
-        "catholic": "Catholic Church",
-        "lutheran": "Lutheran Church",
-        "evangelical": "Free Church / Evangelical",
+        "church": "Simbahan",
+        "reformed": "Repormadong Simbahan",
+        "catholic": "Katolikong Simbahan",
+        "lutheran": "Lutheranong Simbahan",
+        "evangelical": "Malayang Simbahan / Ebangheliko",
         "freelance": "Freelance / Independent",
+        "careHome": "Care Home",
+        "seniorHome": "Senior Home",
+        "hospital": "Ospital",
+        "prison": "Pangangasiwa sa Bilangguan",
+        "military": "Pangangasiwa sa Militar",
+        "rehaClinic": "Rehab Clinic",
+        "psychiatry": "Psychiatry / Psychosomatics",
+        "burnoutClinic": "Burnout Clinic",
+        "hospice": "Hospice",
+        "counseling": "Counseling Center",
         "other": "Iba pa"
       }
     },
-    "institutionsTitle": "Para din sa mga Institusyon",
-    "institutionsSubtitle": "Hindi lang sinasamahan ng ang iyong kasama ang mga komunidad – nakikinabang din ang mga bahay-alagaan, bahay-pansamantala, ospital, at pagpapayo sa bilangguan sa digital na pagpapayo.",
-    "institution": {
-      "careHome": {
-        "title": "Mga Bahay-Alagaan",
-        "desc": "Pang-araw-araw na inspirasyon sa Bibliya at pagsasama para sa mga residente – kahit walang tagapayo sa lugar."
-      },
-      "seniorHome": {
-        "title": "Mga Bahay-Pansamantala",
-        "desc": "Pamilyar na mga talata sa Bibliya at pag-uusap para sa mga senior – madaling ma-access sa pamamagitan ng tablet o smartphone."
-      },
-      "hospital": {
-        "title": "Mga Ospital",
-        "desc": "Aliw at espirituwal na pagsasama para sa mga pasyente sa mahirap na panahon – available 24/7 sa tabi ng kama."
-      },
-      "prison": {
-        "title": "Pagpapayo sa Bilangguan",
-        "desc": "Pag-asa at espirituwal na pagsasama para sa mga bilanggo – isang kumpidensyal na kausap sa buong orasan."
-      },
-      "military": {
-        "title": "Pagpapayo sa Militar",
-        "desc": "Espirituwal na pagsasama para sa mga miyembro ng militar – maa-access din sa misyon o sa barracks."
-      },
-      "rehaClinic": {
-        "title": "Mga Klinika ng Rehabilitasyon",
-        "desc": "Espirituwal na suporta sa panahon ng rehabilitasyon."
-      },
-      "psychiatry": {
-        "title": "Mga Pasilidad Psikiyatrika",
-        "desc": "Kumpidensyal na espirituwal na pag-uusap para sa mga pasyente."
-      },
-      "burnoutClinic": {
-        "title": "Mga Klinika ng Burnout",
-        "desc": "Mga tanong ng kahulugan at panloob na pagninilay sa pagkahapo."
-      },
-      "hospice": {
-        "title": "Hospice",
-        "desc": "Pagsamahan sa katapusan ng buhay."
-      },
-      "counseling": {
-        "title": "Mga Sentro ng Pagpapayo",
-        "desc": "Karagdagang espirituwal na udyok para sa mga kliyente sa psychosocial counseling."
-      }
-    },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As ang iyong kasama is a private project, donations are not tax-deductible.",
-    "denominationsTitle": "Para sa lahat ng denominasyon at mga tagapanguna ng seremonya",
-    "denominationsSubtitle": "Ang BibleBot.Life ay ecumenical – para sa Reformed, Catholic, Lutheran, at Free Church na mga komunidad, pati na rin mga freelance na tagapanguna ng seremonya.",
+    "denominationsTitle": "Para sa Lahat ng Denominasyon at Tagapangasiwa ng Seremonya",
+    "denominationsSubtitle": "Ang BibleBot ay ekumenikal – para sa mga Repormado, Katoliko, Lutheran, at Malayang Simbahan, gayundin para sa mga freelance na tagapangasiwa ng seremonya.",
     "denomination": {
       "reformed": {
-        "title": "Reformed Church",
-        "desc": "Zurich Bible, Reformed liturgy, at tulong sa pangangaral – iniayon para sa inyong parokya."
+        "title": "Repormadong Simbahan",
+        "desc": "Zürcher Bibel, Repormadong Liturhiya at Pagsasama sa Pangangaral – iniangkop para sa iyong parokya."
       },
       "catholic": {
-        "title": "Catholic Church",
-        "desc": "Ecumenical translation, pagpaplano ng misa at sakramento – naaayon sa tradisyong Katoliko."
+        "title": "Katolikong Simbahan",
+        "desc": "Einheitsübersetzung, Pagpaplano ng Misa at Sakramento – iniangkop sa mga tradisyong Katoliko."
       },
       "lutheran": {
-        "title": "Lutheran Church",
-        "desc": "Luther Bible, pagpaplano ng pagsamba at pastoral care – para sa mga Evangelical-Lutheran na komunidad."
+        "title": "Lutheranong Simbahan",
+        "desc": "Lutherbibel, Pagpaplano ng Serbisyo at Pangangasiwa – para sa mga Lutheranong Ebangheliko."
       },
       "evangelical": {
-        "title": "Free Churches",
-        "desc": "Schlachter 2000, papuri at flexible na disenyo ng pagsamba – para sa mga free church na komunidad."
+        "title": "Malayang Simbahan",
+        "desc": "Schlachter 2000, Pagsamba at Flexible na Pagpaplano ng Serbisyo – para sa mga komunidad ng Malayang Simbahan."
       },
       "freelance": {
-        "title": "Freelance Officiants",
-        "desc": "Mga tagapagsalita sa libing, wedding celebrants at independiyenteng mga tagapanguna ng seremonya – may mga biography tool at pagpaplano ng talumpati."
+        "title": "Freelance",
+        "desc": "Mga Tagapagsalita sa Libing, Tagapagsalita sa Kasal at Independent na Tagapangasiwa ng Seremonya – na may tool sa Biograpiya at Pagpaplano ng Talumpati."
       }
-    }
-  },
-  "institutions": {
-    "badge": "Para sa mga organisasyon",
-    "heroTitle": "Ang iyong kasama para sa Iyong Institusyon",
-    "heroSubtitle": "Digital na pagpapayo para sa mga bahay-alagaan, bahay-pansamantala, ospital, at pagpapatupad ng hustisya – personal, kumpidensyal, at 24/7.",
-    "seniorHint": {
-      "title": "Available ang Senior Mode",
-      "desc": "Mas malaking font at pinasimpleng operasyon – perpekto para sa mga nakatatandang residente.",
-      "cta": "Subukan ang Senior Mode"
     },
-    "typesTitle": "Para Kanino ang ang iyong kasama?",
-    "useCasesTitle": "Paano Ginagamit ang ang iyong kasama",
-    "useCasesSubtitle": "Mga konkretong aplikasyon para sa pang-araw-araw na buhay sa iyong institusyon.",
-    "pricingTitle": "Mga Pakete ng Patronage",
-    "pricingSubtitle": "Parehong mga pakete tulad ng para sa mga komunidad – inangkop sa mga pangangailangan ng institusyon.",
-    "linkChurches": "Available din para sa mga komunidad",
-    "type": {
+    "institutionsTitle": "Para sa Iba't Ibang Organisasyon",
+    "institutionsSubtitle": "Sinasamahan ng BibleBot ang mga simbahan, care at senior homes, ospital, rehab at burnout clinics, psychiatry, hospices, counseling centers at marami pang ibang organisasyon na may digital na pangangasiwa.",
+    "institution": {
       "careHome": {
-        "title": "Mga Bahay-Alagaan",
-        "desc": "Pang-araw-araw na inspirasyon sa Bibliya at pagsasama para sa mga residente – kahit walang tagapayo sa lugar."
+        "title": "Care Homes",
+        "desc": "Pang-araw-araw na inspirasyon sa Bibliya at pagsasama para sa mga residente – kahit walang tagapangasiwa sa lugar."
       },
       "seniorHome": {
-        "title": "Mga Bahay-Pansamantala",
+        "title": "Senior Homes",
         "desc": "Pamilyar na mga talata sa Bibliya at pag-uusap para sa mga senior – madaling ma-access sa pamamagitan ng tablet o smartphone."
       },
       "hospital": {
         "title": "Mga Ospital",
-        "desc": "Aliw at espirituwal na pagsasama para sa mga pasyente sa mahirap na panahon – available 24/7 sa tabi ng kama."
+        "desc": "Pag-aliw at espirituwal na pagsasama para sa mga pasyente sa mahihirap na panahon – 24/7 na magagamit sa tabi ng kama."
       },
       "prison": {
-        "title": "Pagpapayo sa Bilangguan",
+        "title": "Pangangasiwa sa Bilangguan",
         "desc": "Pag-asa at espirituwal na pagsasama para sa mga bilanggo – isang kumpidensyal na kausap sa buong orasan."
       },
       "military": {
-        "title": "Pagpapayo sa Militar",
-        "desc": "Espirituwal na pagsasama para sa mga miyembro ng militar – maa-access din sa misyon o sa barracks."
+        "title": "Pangangasiwa sa Militar",
+        "desc": "Espirituwal na pagsasama para sa mga miyembro ng militar – magagamit din sa misyon o sa baraks."
+      },
+      "rehaClinic": {
+        "title": "Rehab Clinics",
+        "desc": "Pangangasiwa sa panahon ng rehabilitasyon – para sa panloob na lakas sa pagbabalik sa buhay."
+      },
+      "psychiatry": {
+        "title": "Psychiatry",
+        "desc": "Kumpidensyal na espirituwal na pag-uusap para sa mga pasyente sa psychiatric treatment – bilang pandagdag sa therapy."
+      },
+      "burnoutClinic": {
+        "title": "Burnout Clinics",
+        "desc": "Mga tanong sa kahulugan at panloob na pagmumuni-muni sa pagkapagod – isang tahimik na kausap nang walang pressure sa oras."
+      },
+      "hospice": {
+        "title": "Hospices",
+        "desc": "Pagsasama sa pagtatapos ng buhay – mga salita ng pag-aliw, pamilyar na mga talata, at isang bukas na tainga sa mga huling araw."
+      },
+      "counseling": {
+        "title": "Counseling Centers",
+        "desc": "Karagdagang espirituwal na inspirasyon para sa mga kliyente sa psychosocial o pastoral counseling."
+      }
+    },
+    "patronageNote": "Ang BibleBot.Life ay isang pribado, hindi komersyal na proyekto. Ito ay pinapatakbo nang boluntaryo at pinopondohan lamang sa pamamagitan ng boluntaryong donasyon. Walang advertising, walang pagbebenta ng data, at walang bayad na feature. Ang lahat ng donasyon ay direktang napupunta sa pagbabayad ng mga kasalukuyang gastos (imprastraktura, hosting, pagpapaunlad). Dahil ang BibleBot ay tumatakbo bilang isang pribadong proyekto, ang mga donasyon ay hindi deductible sa buwis."
+  },
+  "institutions": {
+    "badge": "Para sa mga Organisasyon",
+    "heroTitle": "BibleBot para sa Iyong Organisasyon",
+    "heroSubtitle": "Digital na pangangasiwa para sa mga care homes, senior homes, ospital, at correctional facilities – personal, kumpidensyal, at 24/7.",
+    "seniorHint": {
+      "title": "Magagamit ang Senior Mode",
+      "desc": "Mas malaking font at pinasimpleng operasyon – perpekto para sa mga matatandang residente.",
+      "cta": "Subukan ang Senior Mode"
+    },
+    "typesTitle": "Para kanino ang BibleBot?",
+    "useCasesTitle": "Paano ginagamit ang BibleBot",
+    "useCasesSubtitle": "Mga konkretong aplikasyon para sa pang-araw-araw na buhay sa iyong institusyon.",
+    "pricingTitle": "Mga Pakete ng Patronage",
+    "pricingSubtitle": "Parehong mga pakete tulad ng para sa mga simbahan – iniangkop sa mga pangangailangan ng institusyon.",
+    "linkChurches": "Magagamit din para sa mga simbahan",
+    "type": {
+      "careHome": {
+        "title": "Care Homes",
+        "desc": "Pang-araw-araw na inspirasyon sa Bibliya at pagsasama para sa mga residente – kahit walang tagapangasiwa sa lugar."
+      },
+      "seniorHome": {
+        "title": "Senior Homes",
+        "desc": "Pamilyar na mga talata sa Bibliya at pag-uusap para sa mga senior – madaling ma-access sa pamamagitan ng tablet o smartphone."
+      },
+      "hospital": {
+        "title": "Mga Ospital",
+        "desc": "Pag-aliw at espirituwal na pagsasama para sa mga pasyente sa mahihirap na panahon – 24/7 na magagamit sa tabi ng kama."
+      },
+      "prison": {
+        "title": "Pangangasiwa sa Bilangguan",
+        "desc": "Pag-asa at espirituwal na pagsasama para sa mga bilanggo – isang kumpidensyal na kausap sa buong orasan."
+      },
+      "military": {
+        "title": "Pangangasiwa sa Militar",
+        "desc": "Espirituwal na pagsasama para sa mga miyembro ng militar – magagamit din sa misyon o sa baraks."
       }
     },
     "useCase": {
       "dailyImpulse": {
         "title": "Pang-araw-araw na Inspirasyon",
-        "desc": "Bawat umaga isang talata sa Bibliya na may tanong sa pagmumuni-muni – binabawasan ang pag-aalinlangan para sa espirituwal na pag-uusap."
+        "desc": "Tuwing umaga isang talata sa Bibliya na may tanong sa pagmumuni-muni – binabawasan ang pag-aatubili para sa espirituwal na pag-uusap."
       },
       "companionship": {
-        "title": "Kasama sa Pag-uusap",
-        "desc": "Sinagot ng ang iyong kasama ang mga tanong sa pananampalataya nang may pasensya at walang presyon ng oras – perpekto para sa malungkot na oras."
+        "title": "Kausap",
+        "desc": "Sinusagot ng BibleBot ang mga tanong sa pananampalataya nang may pasensya at walang pressure sa oras – perpekto para sa malungkot na oras."
       },
       "accessibility": {
-        "title": "Madaling Pag-access",
-        "desc": "Malaking font, madaling operasyon sa pamamagitan ng tablet – para din sa mga taong may limitadong mobility."
+        "title": "Madaling Access",
+        "desc": "Malaking font, madaling operasyon sa pamamagitan ng tablet – maging para sa mga taong may limitadong mobility."
       },
       "availability": {
-        "title": "Available 24/7",
-        "desc": "Espirituwal na pagsasama kahit sa gabi at sa katapusan ng linggo – kapag walang tagapayo na available."
+        "title": "24/7 Magagamit",
+        "desc": "Espirituwal na pagsasama maging sa gabi at sa katapusan ng linggo – kapag walang tagapangasiwa na magagamit."
       }
     },
     "tierDesc": {
-      "free": "Pangunahing pag-access para sa mga residente at pasyente",
-      "community": "Pagbanggit bilang tagasuporta, walang ad na pag-access",
-      "gemeinde": "Pagpapakita ng logo, buwanang ulat ng paggamit",
-      "kirche": "Sariling nilalaman, paglahok sa roadmap, premium na suporta"
+      "free": "Pangunahing access para sa mga residente at pasyente",
+      "community": "Pagbanggit bilang tagasuporta, walang ad na access",
+      "gemeinde": "Logo presence, buwanang ulat ng paggamit",
+      "kirche": "Sariling nilalaman, paglahok sa roadmap, premium support"
     },
     "form": {
-      "title": "Interesado? Makipag-ugnayan sa Amin!",
+      "title": "Interesado? Makipag-ugnayan sa amin!",
       "subtitle": "Makikipag-ugnayan kami sa loob ng 48 oras.",
-      "name": "Ang Iyong Pangalan",
-      "email": "E-mail Address",
+      "name": "Ang iyong pangalan",
+      "email": "E-mail address",
       "institutionName": "Pangalan ng Institusyon",
       "type": "Uri ng Institusyon",
-      "typePlaceholder": "Mangyaring Pumili...",
-      "tier": "Gusto mong Pakete",
-      "tierPlaceholder": "Pumili ng Pakete...",
-      "message": "Ang Iyong Mensahe",
+      "typePlaceholder": "Mangyaring pumili...",
+      "tier": "Nais na Pakete",
+      "tierPlaceholder": "Pumili ng pakete...",
+      "message": "Ang iyong mensahe",
       "submit": "Ipadala ang Kahilingan",
       "success": "Naipadala ang Kahilingan! Makikipag-ugnayan kami sa lalong madaling panahon. 🙏",
       "error": "Error sa pagpapadala. Mangyaring subukang muli."
     }
   },
   "chatHero": {
-    "ariaLabel": "Magtanong sa ang iyong kasama",
-    "focusPlaceholder": "Isulat ang iyong tanong…",
-    "placeholder1": "Ano ang tunay na nagpapasalamat sa akin?",
-    "placeholder2": "Paano ko matutuklasan ang kapayapaan sa kalooban?",
-    "chatHero": {
-      "placeholder3": "Ano ang nagbibigay sa akin ng pag-asa?"
-    },
+    "subtitle": "Itanong ang iyong tanong – bukas, tapat, nang walang pagpaparehistro.",
+    "placeholder1": "Ano ang talagang ipinagpapasalamat ko?",
+    "placeholder2": "Paano ako makakahanap ng panloob na kapayapaan?",
+    "placeholder3": "Ano ang nagbibigay sa akin ng pag-asa?",
     "placeholder4": "Ano ang nais ng aking puso?",
-    "placeholder5": "Ano ang magandang magagawa ko ngayon?",
+    "placeholder5": "Ano ang magagawa kong mabuti ngayon?",
+    "focusPlaceholder": "Isulat ang iyong tanong…",
+    "ariaLabel": "Magtanong sa BibleBot",
     "send": "Ipadala",
-    "subtitle": "Itanong ang iyong katanungan – malaya, tapat, nang walang pag-log in.",
     "suggestion1": "Ano ang ibig sabihin ng aking pangalan?",
-    "suggestion2": "Ano ang nagpapalakas sa akin ngayon?",
-    "suggestion3": "Para saan ako nagpapasalamat?",
-    "placeholder3": "Ano ang nagbibigay sa akin ng pag-asa?"
+    "suggestion2": "Ano ang nagbibigay sa akin ng lakas ngayon?",
+    "suggestion3": "Ano ang ipinagpapasalamat ko?"
   },
   "splash": {
-    "patronage": "Inirerekomenda ni"
+    "patronage": "Inirerekomenda ng"
   },
   "meta": {
-    "forChurchesDesc": "Ang iyong kasama bilang katuwang para sa iyong komunidad: gawaing kabataan, kumpirmasyon, pagpapayo at mga grupo ng Bibliya. Mula libre hanggang premium.",
-    "forChurchesTitle": "Ang iyong kasama para sa mga Simbahan – Digital na Pagpapayo at Gabay sa Bibliya",
-    "homeDesc": "Sinamahan ka ng ang iyong kasama na may 5 pagsasalin ng Bibliya, pamamaraan ng pagtuturo, at pagpapayo. Anonymous, libre, sa 36 na wika.",
-    "homeTitle": "Ang iyong kasama – Ang Iyong Personal na Kasama sa Bibliya | Libre & Anonymous",
-    "loginDesc": "Mag-log in sa ang iyong kasama upang ihanda ang iyong mga personal na seremonya.",
-    "loginTitle": "Mag-log In – ang iyong kasama"
+    "homeTitle": "BibleBot.Life – Ang Iyong Personal na Kasama | Na may Lalim ng Bibliya",
+    "homeDesc": "Ang iyong personal na kasama — na may lalim ng Bibliya, nang walang paunang kaalaman. 5 pagsasalin, coaching, pangangasiwa. Anonymous, libre, 36 wika.",
+    "forChurchesTitle": "BibleBot.Life para sa mga Simbahan – Digital na Pangangasiwa at Pagsasama sa Bibliya",
+    "forChurchesDesc": "BibleBot.Life bilang partner para sa iyong simbahan: gawaing kabataan, kumpirmasyon, pangangasiwa at pag-aaral sa Bibliya. Libre hanggang Premium.",
+    "loginTitle": "Mag-log in – BibleBot.Life",
+    "loginDesc": "Mag-log in upang ihanda ang iyong personal na seremonya."
   },
   "meinBereich": {
     "title": "Aking Lugar",
-    "subtitle": "Ihanda ang iyong personal na mga seremonya at ibahagi ang mga ito sa iyong pastor.",
+    "subtitle": "Ihanda ang iyong personal na seremonya at ibahagi ito sa iyong tagapangasiwa.",
     "sidebarLabel": "Aking Lugar",
     "overview": "Pangkalahatang-ideya",
-    "funeral": "Eulogy",
+    "funeral": "Libing",
     "wedding": "Kasal",
     "baptismCeremony": "Binyag",
-    "confirmation": "Kumpil",
+    "confirmation": "Kumpirmasyon",
     "logout": "Mag-log out",
     "comingSoon": "Malapit na",
-    "funeralDesc": "Gumawa ng talambuhay, panatilihin ang mga alaala at ibahagi sa pastor.",
+    "funeralDesc": "Gumawa ng resume, itala ang mga alaala at ibahagi sa tagapangasiwa.",
     "weddingDesc": "Sumulat ng mga panata sa kasal, pumili ng mga kanta at planuhin ang pagdiriwang.",
-    "baptismDesc": "Bumuo ng mga nais sa binyag at ihanda ang proseso kasama ang komunidad.",
-    "confirmationDesc": "Maghanap ng talata para sa kumpil at maghanda ng mga personal na teksto."
+    "baptismDesc": "Bumuo ng mga kahilingan sa binyag at ihanda ang proseso sa komunidad.",
+    "confirmationDesc": "Maghanap ng talata sa kumpirmasyon at ihanda ang personal na teksto."
   },
   "eulogy": {
-    "pageTitle": "Eulogy – Gumawa ng Talambuhay | ang iyong kasama",
-    "pageDesc": "Panatilihin ang mga alaala ng isang minamahal at lumikha ng isang magandang teksto ng talambuhay para sa eulogy.",
-    "title": "Eulogy – Talambuhay",
-    "subtitle": "Panatilihin ang mga alaala, lumikha ng teksto, i-download bilang PDF.",
-    "step1": "Tungkol sa namatay na tao",
+    "pageTitle": "Libing – Gumawa ng Resume | BibleBot",
+    "pageDesc": "Itala ang mga alaala ng isang mahal sa buhay at gumawa ng magandang text ng resume para sa libing.",
+    "title": "Libing – Resume",
+    "subtitle": "Itala ang mga alaala, gumawa ng text, i-download bilang PDF.",
+    "step1": "Tungkol sa namatay",
     "name": "Pangalan",
     "namePlaceholder": "Pangalan at Apelyido",
     "age": "Mga Petsa ng Buhay",
     "agePlaceholder": "hal. 1942–2026",
-    "step2": "Magtala ng mga alaala",
-    "step2Desc": "Malayang magsalaysay tungkol sa namatay na tao – ano ang mahalaga, ano ang nananatili sa alaala? Maaari kang gumawa ng maraming pagtatala.",
-    "startRecording": "Simulan ang Pagtatala",
-    "addRecording": "Magdagdag ng Pagtatala",
+    "step2": "Itala ang mga Alaala",
+    "step2Desc": "Malayang magkuwento tungkol sa namatay – ano ang mahalaga, ano ang nananatili sa alaala? Maaari kang gumawa ng maraming recording.",
+    "startRecording": "Simulan ang Pagre-record",
+    "addRecording": "Magdagdag ng Iba pang Recording",
     "stop": "Ihinto",
-    "recording": "Pagtatala",
-    "transcript": "Transkripsyon (naa-edit)",
-    "transcriptPlaceholder": "Awtomatikong nililikha ang transkripsyon habang nagtatala. Maaari mo itong i-edit dito.",
+    "recording": "Pagre-record",
+    "transcript": "Transcript (naa-edit)",
+    "transcriptPlaceholder": "Awtomatikong ginagawa ang transcript habang nagre-record. Maaari mo itong i-edit dito.",
     "additionalNotes": "Karagdagang Tala",
     "notesPlaceholder": "Trabaho, libangan, mahahalagang pangyayari sa buhay, natatanging katangian…",
-    "step3": "Lumikha at I-download ang Teksto",
-    "generate": "Lumikha ng Teksto ng Talambuhay",
-    "generating": "Nililikha ang teksto…",
-    "regenerate": "Muling Buuin",
+    "step3": "Gumawa at I-download ang Text",
+    "generate": "Gumawa ng Text ng Resume",
+    "generating": "Gumagawa ng text…",
+    "regenerate": "Muling Bumuo",
     "downloadPDF": "I-download bilang PDF",
     "save": "I-save",
-    "shareStep": "Ibahagi sa Pastor",
-    "shareDesc": "Gumawa ng link na maaari mong ipadala sa iyong pastor sa pamamagitan ng email o messenger. Maaari niyang basahin ang teksto at i-download ito bilang PDF.",
-    "enableShare": "Lumikha at Kopyahin ang Link",
+    "shareStep": "Ibahagi sa Tagapangasiwa",
+    "shareDesc": "Gumawa ng link na maaari mong ipadala sa iyong tagapangasiwa sa pamamagitan ng e-mail o messenger. Maaari niyang basahin ang text at i-download bilang PDF.",
+    "enableShare": "Gumawa at Kopyahin ang Link",
     "disableShare": "I-disable ang Pagbabahagi",
     "micError": "Hindi masimulan ang mikropono. Mangyaring bigyan ng pahintulot.",
-    "needMore": "Mangyaring magtala muna ng mga alaala o magsulat ng mga tala.",
-    "genError": "Error sa paglikha ng teksto. Mangyaring subukang muli."
+    "needMore": "Mangyaring mag-record muna ng mga alaala o magsulat ng mga tala.",
+    "genError": "Error sa paggawa ng text. Mangyaring subukang muli."
   },
   "auth": {
-    "apple": "Mag-sign in gamit ang Apple",
-    "loginShort": "Mag-sign in",
-    "logout": "Mag-sign out"
+    "apple": "Mag-log in gamit ang Apple",
+    "loginShort": "Mag-log in",
+    "logout": "Mag-log out"
   },
+  "chatDemo": {
+    "userMsg": "Nalulungkot ako. Ano ang sinasabi ng Bibliya tungkol dito?",
+    "botMsg": "Hindi ka nag-iisa – kahit na ganoon ang pakiramdam mo ngayon. Sa Salmo 23, sinasabi: «Ang Panginoon ang aking pastol; hindi ako magkukulang.» Nangangahulugan ito na malapit sa iyo ang Diyos, maging sa pinakamadilim na sandali. Gusto mo bang palalimin natin ang siping ito nang magkasama?",
+    "cta": "Simulan ang iyong sariling pag-uusap ngayon →"
+  },
+  "suggest": {
+    "psalm23": "Salmo 23 – Ang Panginoon ang Aking Pastol",
+    "joh316": "Juan 3,16 – Gayon na lamang ang pag-ibig ng Diyos sa sanlibutan",
+    "rom828": "Roma 8,28 – Lahat para sa ikabubuti",
+    "mt1128": "Mateo 11,28 – Lumapit kayo sa akin",
+    "phil413": "Filipos 4,13 – Lahat ay kaya kong gawin",
+    "jes4110": "Isaias 41,10 – Huwag kang matakot",
+    "1kor13": "1 Corinto 13 – Ang Awit ng Pag-ibig",
+    "spr35": "Kawikaan 3,5 – Magtiwala sa Panginoon",
+    "jos19": "Josue 1,9 – Magpakatatag at magpakatapang",
+    "ps462": "Salmo 46,2 – Ang Diyos ang ating kanlungan",
+    "explainDetail": "Ipaliwanag sa akin ang {{ref}} nang detalyado"
+  },
+  "dailyVerses": {
+    "v0": "«Lumapit kayo sa akin, kayong lahat na napapagod at nabibigatan; bibigyan ko kayo ng kapahingahan.»",
+    "r0": "Mateo 11,28",
+    "v1": "«Sapagkat nalalaman ko ang mga panukala na aking inilagay sa inyo, sabi ng Panginoon, mga panukala ng kapayapaan.»",
+    "r1": "Jeremias 29,11",
+    "v2": "«Huwag kang matakot, sapagkat ako'y sumasaiyo; huwag kang mangamba, sapagkat ako ang iyong Diyos.»",
+    "r2": "Isaias 41,10",
+    "v3": "«Ang Panginoon ang aking pastol; hindi ako magkukulang.»",
+    "r3": "Salmo 23,1",
+    "v4": "«Ihagis ninyo sa kanya ang lahat ng inyong alalahanin; sapagkat siya ang nagmamalasakit sa inyo.»",
+    "r4": "1 Pedro 5,7",
+    "v5": "«Ako ang ilaw ng sanlibutan. Ang sumusunod sa akin ay hindi lalakad sa kadiliman.»",
+    "r5": "Juan 8,12",
+    "v6": "«Magpakatatag at magpakatapang! Huwag kayong matakot, sapagkat ang Panginoon ninyong Diyos ay sumasainyo.»",
+    "r6": "Josue 1,9",
+    "v7": "«Ngunit ang mga naghihintay sa Panginoon ay magkakaroon ng bagong lakas, sila'y lilipad na parang agila.»",
+    "r7": "Isaias 40,31",
+    "v8": "«Sapagkat kung saan may dalawa o tatlo na nagkakatipon sa aking pangalan, doon ako sa gitna nila.»",
+    "r8": "Mateo 18,20",
+    "v9": "«Tikman ninyo at tingnan kung gaano kabuti ang Panginoon. Mapalad ang taong nagtitiwala sa kanya!»",
+    "r9": "Salmo 34,9",
+    "v10": "«Pinagagaling niya ang mga may pusong wasak, at binibigkis ang kanilang mga sugat.»",
+    "r10": "Salmo 147,3",
+    "v11": "«Ang pag-ibig ay matiyaga at mabait. Lahat ay tinitiis, lahat ay pinaniniwalaan, lahat ay inaasahan.»",
+    "r11": "1 Corinto 13,4–7",
+    "v12": "«Magalak sa pag-asa, maging matiyaga sa kapighatian, maging matatag sa panalangin.»",
+    "r12": "Roma 12,12",
+    "v13": "«Magtiwala ka sa Panginoon nang buong puso at huwag kang umasa sa iyong sariling pag-unawa.»",
+    "r13": "Kawikaan 3,5"
+  },
+  "meinBereichNav": "Aking Lugar",
+  "verseExplain": "Ipaliwanag sa akin ang talatang ito sa Bibliya nang detalyado: {{quote}} ({{ref}}) – Sino ang sumulat nito? Sa anong konteksto? Ano ang ibig sabihin nito para sa aking buhay ngayon?",
   "tts": {
-    "male": "Boses lalaki",
-    "female": "Boses babae",
+    "male": "Boses ng Lalaki",
+    "female": "Boses ng Babae",
     "maleShort": "L",
     "femaleShort": "B",
     "voice": "Boses"
   },
-  "chatDemo": {
-    "sectionLabel": "Narito kung ano ang hitsura ng isang pag-uusap",
-    "userMsg": "Pakiramdam ko ay nag-iisa. Ano ang sinasabi ng Bibliya tungkol dito?",
-    "botMsg": "Hindi ka nag-iisa – kahit na ganoon ang pakiramdam. Sinasabi ng Salmo 23: 'Ang Panginoon ang aking pastol; hindi ako magkukulang.' Nangangahulugan ito na malapit sa iyo ang Diyos, kahit sa pinakamadilim na sandali. Gusto mo bang pag-aralan natin ang talatang ito nang magkasama?",
-    "cta": "Simulan ang iyong sariling pag-uusap →"
-  },
-  "suggest": {
-    "psalm23": "Salmo 23 – Ang Panginoon ang aking pastol",
-    "joh316": "Juan 3:16 – Sapagkat gayon na lamang ang pag-ibig ng Diyos sa sanlibutan",
-    "rom828": "Roma 8:28 – Ang lahat ng bagay ay gumagawa para sa ikabubuti",
-    "mt1128": "Mateo 11:28 – Lumapit kayo sa akin, kayong lahat na napapagod",
-    "phil413": "Filipos 4:13 – Lahat ng bagay ay magagawa ko",
-    "jes4110": "Isaias 41:10 – Huwag kang matakot, sapagkat ako'y sumasaiyo",
-    "1kor13": "1 Corinto 13 – Ang pinakadakila ay pag-ibig",
-    "spr35": "Kawikaan 3:5 – Magtiwala sa Panginoon",
-    "jos19": "Josue 1:9 – Magpakatatag at magpakatapang",
-    "ps462": "Salmo 46:1 – Ang Diyos ang ating kanlungan at kalakasan",
-    "explainDetail": "Ipaliwanag ang {{ref}} nang detalyado"
-  },
-  "dailyVerses": {
-    "v0": "\"Lumapit kayo sa akin, kayong lahat na napapagod at nabibigatan, at bibigyan ko kayo ng kapahingahan.\"",
-    "r0": "Mateo 11:28",
-    "v1": "\"Sapagkat nalalaman ko ang mga plano ko para sa inyo, sabi ng Panginoon, mga planong pangkapayapaan.\"",
-    "r1": "Jeremias 29:11",
-    "v2": "\"Huwag kang matakot, sapagkat ako'y sumasaiyo; huwag kang manglupaypay, sapagkat ako ang iyong Diyos.\"",
-    "r2": "Isaias 41:10",
-    "v3": "\"Ang Panginoon ang aking pastol; hindi ako magkukulang.\"",
-    "r3": "Salmo 23:1",
-    "v4": "\"Ihagis ninyo sa kanya ang lahat ng inyong kabalisahan, sapagkat siya'y nagmamalasakit sa inyo.\"",
-    "r4": "1 Pedro 5:7",
-    "v5": "\"Ako ang ilaw ng sanlibutan. Ang sumusunod sa akin ay hindi lalakad sa kadiliman.\"",
-    "r5": "Juan 8:12",
-    "v6": "\"Magpakatatag at magpakatapang! Huwag kang matakot, sapagkat ang Panginoon mong Diyos ay sumasaiyo.\"",
-    "r6": "Josue 1:9",
-    "v7": "\"Ngunit ang mga umaasa sa Panginoon ay magbabago ng kanilang lakas; sila'y lilipad na parang agila.\"",
-    "r7": "Isaias 40:31",
-    "v8": "\"Sapagkat kung saan may dalawa o tatlo na nagtitipon sa aking pangalan, naroon ako sa gitna nila.\"",
-    "r8": "Mateo 18:20",
-    "v9": "\"Tikman at tingnan ninyo na mabuti ang Panginoon; mapalad ang nagpapakupkop sa kanya.\"",
-    "r9": "Salmo 34:8",
-    "v10": "\"Pinagagaling niya ang mga may pusong wasak at binibigkisan ang kanilang mga sugat.\"",
-    "r10": "Salmo 147:3",
-    "v11": "\"Ang pag-ibig ay matiyaga, ang pag-ibig ay mabait. Tinitiis ang lahat ng bagay, pinaniniwalaan ang lahat ng bagay, inaasahan ang lahat ng bagay.\"",
-    "r11": "1 Corinto 13:4–7",
-    "v12": "\"Magalak sa pag-asa, maging matiyaga sa kapighatian, maging tapat sa panalangin.\"",
-    "r12": "Roma 12:12",
-    "v13": "\"Magtiwala sa Panginoon nang buong puso at huwag kang manalig sa iyong sariling pang-unawa.\"",
-    "r13": "Kawikaan 3:5"
-  },
-  "meinBereichNav": "Aking Lugar",
-  "verseExplain": "Ipaliwanag ang talatang ito sa Bibliya nang detalyado: {{quote}} ({{ref}}) – Sino ang sumulat nito? Sa anong konteksto? Ano ang ibig sabihin nito para sa aking buhay ngayon?",
-  "social": {
-    "conversations": "Mga Pag-uusap",
-    "languages": "Mga Wika",
-    "bibles": "Mga salin ng Bibliya"
-  },
   "celebrants": {
-    "badge": "Para sa mga Chaplain at Life Coach",
+    "badge": "Para sa mga Tagapangasiwa at Life Coach",
     "heroTitle1": "Bawat pagtatagpo ay nararapat",
-    "heroTitle2": "ng pinakamahusay na paghahanda",
-    "heroSubtitle": "Mula sa unang voice note hanggang sa natapos na sesyon — planuhin, idokumento, at magsagawa ng mga seremonya at coaching session gamit ang isang tool.",
+    "heroTitle2": "pinakamahusay na paghahanda",
+    "heroSubtitle": "Mula sa unang voice note hanggang sa natapos na sesyon — planuhin, idokumento, at isagawa ang mga seremonya at coaching session gamit ang isang tool.",
     "ctaStart": "Magsimula nang libre",
     "ctaFeatures": "Tuklasin ang mga feature",
-    "painTitle": "Pamilyar ba ito?",
-    "pain1": "Mga oras ng paghahanda para sa bawat seremonya?",
-    "pain2": "Nawawala ang mga tala sa papel sa pinakamahalagang sandali?",
-    "pain3": "Walang sistema para sa mga kanta, pagbasa, at pagkakasunod-sunod ng serbisyo?",
+    "painTitle": "Alam mo ba ito?",
+    "pain1": "Oras-oras na paghahanda para sa bawat seremonya?",
+    "pain2": "Mga tala sa papel na nawawala sa pinakamahalagang sandali?",
+    "pain3": "Walang sistema para sa mga kanta, pagbasa, at daloy?",
     "pain4": "Mahirap makipag-ugnayan sa mga musikero at katulong?",
     "featuresTitle": "Lahat ng kailangan mo",
-    "featuresSubtitle": "Isang maingat na sistema para sa buong workflow — mula sa paghahanda hanggang sa pagpapatupad.",
+    "featuresSubtitle": "Isang mahusay na sistema para sa buong proseso — mula sa paghahanda hanggang sa pagpapatupad.",
     "f1Title": "Pagre-record ng Boses at Transkripsyon",
-    "f1Desc": "Mag-record ng mga pag-uusap, makakuha ng awtomatikong transkripsyon — ang pundasyon para sa paglipat ng mga teksto ng seremonya.",
-    "f2Title": "Matalinong Paggawa ng Teksto",
-    "f2Desc": "Mula sa iyong mga tala at transkripsyon, lumikha ng mga empathetic na talumpati, buod ng coaching, o mga teksto ng pagmumuni-muni.",
+    "f1Desc": "Mag-record ng mga pag-uusap, awtomatikong i-transcribe — ang batayan para sa mga nakakaantig na teksto ng seremonya.",
+    "f2Title": "Matalinong Paglikha ng Teksto",
+    "f2Desc": "Mula sa iyong mga tala at transkripsyon, lumalabas ang mga sensitibong talumpati, buod ng coaching, o mga teksto ng pagmumuni-muni.",
     "f3Title": "PDF Export at Pagbabahagi",
-    "f3Desc": "I-export ang mga natapos na teksto bilang PDF o ibahagi sa pamamagitan ng link nang direkta sa mga kliyente, kamag-anak, at kalahok.",
-    "f4Title": "Mga Template bawat Denominasyon",
-    "f4Desc": "Mga pre-built na template ng workflow para sa Katoliko, Reformed, Lutheran, Evangelical, at Sekular — handa nang gamitin.",
+    "f3Desc": "I-export ang mga natapos na teksto bilang PDF o ibahagi ang mga ito nang direkta sa mga kliyente, kamag-anak, at mga kasangkot sa pamamagitan ng link ng pagbabahagi.",
+    "f4Title": "Mga Template ayon sa Denominasyon",
+    "f4Desc": "Mga pre-made na template ng daloy para sa Katoliko, Repormado, Lutheran, Malayang Simbahan, at sekular — handa nang gamitin.",
     "f5Title": "Kalendaryo at Pagpaplano",
-    "f5Desc": "Lahat ng seremonya sa isang sulyap: buwanan, lingguhan, at pang-araw-araw na view. Huwag nang mawalan ng track muli.",
+    "f5Desc": "Pangkalahatang-ideya ng lahat ng seremonya: buwanan, lingguhan, at pang-araw-araw na view. Hindi na muling mawawalan ng track.",
     "f6Title": "Teleprompter / Conductor Mode",
-    "f6Desc": "Live mode para sa pagpapatupad: dumaan sa serbisyo nang block by block, basahin ang mga teksto, tingnan ang mga pahiwatig ng musika — walang abala.",
+    "f6Desc": "Live mode para sa pagpapatupad: dumaan sa daloy ng block by block, basahin ang mga teksto, tingnan ang mga cue ng musika — walang distraction.",
     "f7Title": "Pagsasama ng Musika",
-    "f7Desc": "Isama ang mga kanta at piraso ng musika nang direkta sa pagkakasunod-sunod ng serbisyo. Ipinapakita sa iyo ng Conductor Mode kung kailan tumutugtog ang bawat piraso.",
-    "f8Title": "Team at Kolaborasyon",
+    "f7Desc": "Direktang isama ang mga kanta at piraso ng musika sa daloy. Ipapakita sa iyo ng Conductor Mode kung kailan tutugtog ang bawat piraso.",
+    "f8Title": "Team at Pakikipagtulungan",
     "f8Desc": "Isama ang mga musikero, lektor, technician. Magtalaga ng mga tungkulin, suriin ang availability, magplano nang magkasama.",
-    "f9Title": "Library ng Mapagkukunan",
-    "f9Desc": "Mga kanta, panalangin, pagbasa, at mga tekstong liturhiko — nahahanap, may tag, lumalaki sa bawat seremonya.",
-    "f10Title": "Rehistro ng Simbahan",
+    "f9Title": "Library ng Mga Mapagkukunan",
+    "f9Desc": "Mga kanta, panalangin, pagbasa, at mga teksto ng liturhiya — mahahanap, may mga tag, lumalaki sa bawat seremonya.",
+    "f10Title": "Aklat ng Simbahan at Rehistro",
     "f10Desc": "Maayos na idokumento ang mga binyag, kasal, at libing. Lahat ng data sa isang lugar.",
-    "pricingTitle": "Simpleng pagpepresyo",
-    "pricingSubtitle": "Magsimula nang libre. Mag-upgrade kapag kailangan mo ng higit pa.",
+    "pricingTitle": "Simpleng Presyo",
+    "pricingSubtitle": "Magsimula nang libre. Mag-upgrade kung kailangan mo ng higit pa.",
     "planPersonal": "Personal",
     "planFree": "Libre",
     "planPro": "Pro",
     "planProPrice": "CHF 29",
-    "planProPeriod": "/ buwan",
+    "planProPeriod": "/ Buwan",
     "recommended": "Inirerekomenda",
     "pf1": "Gumawa ng mga teksto ng seremonya",
     "pf2": "Pagre-record ng boses at transkripsyon",
@@ -1149,38 +1149,137 @@
     "pf5": "1 aktibong proyekto",
     "pf6": "Lahat mula sa Personal",
     "pf7": "Walang limitasyong proyekto",
-    "pf8": "Planner ng serbisyo na may kalendaryo",
-    "pf9": "Conductor Mode (teleprompter)",
+    "pf8": "Tagaplano ng serbisyo na may kalendaryo",
+    "pf9": "Conductor Mode (Teleprompter)",
     "pf10": "Pagsasama ng musika",
     "pf11": "Library ng template",
-    "pf12": "Kolaborasyon ng team",
+    "pf12": "Pakikipagtulungan ng koponan",
     "pf13": "Library ng mapagkukunan",
-    "pf14": "Rehistro ng simbahan",
+    "pf14": "Aklat ng simbahan / rehistro",
     "pf15": "Priority support",
-    "ctaFree": "Magsimula",
-    "ctaTrial": "14-araw na libreng pagsubok",
+    "ctaFree": "Magsimula ngayon",
+    "ctaTrial": "Libreng 14-araw na pagsubok",
     "faqTitle": "Mga Madalas Itanong",
     "faq1q": "Para kanino ang tool na ito?",
-    "faq1a": "Para sa mga chaplain, life coach, freelance funeral speaker, wedding celebrant, hospital chaplain, pastor, at sinumang naghahanda at nagsasagawa ng mga seremonya, workshop, o coaching session.",
-    "faq2q": "Ligtas ba ang aking data?",
-    "faq2a": "Oo. Lahat ng data ay naka-encrypt at nakaimbak sa Switzerland. Ikaw lang ang may access sa iyong nilalaman.",
+    "faq1a": "Para sa mga tagapangasiwa, life coach, freelance na tagapagsalita sa libing, tagapangasiwa ng seremonya ng kasal, tagapangasiwa ng ospital, mga pastor, at lahat ng naghahanda at nagsasagawa ng mga seremonya, workshop, o coaching session.",
+    "faq2q": "Ligtas bang naiimbak ang aking data?",
+    "faq2a": "Oo. Ang lahat ng data ay naka-encrypt at naiimbak sa Switzerland. Ikaw lang ang may access sa iyong nilalaman.",
     "faq3q": "Anong mga wika ang sinusuportahan?",
-    "faq3a": "Ang interface ay available sa 36 na wika. Ang mga teksto ay maaaring gawin sa anumang wika.",
-    "faq4q": "Maaari ko bang gamitin ang Conductor Mode sa isang tablet?",
-    "faq4a": "Oo! Ang buong app ay na-optimize bilang isang PWA para sa mobile — perpekto sa isang tablet sa lectern.",
-    "faq5q": "Kailangan ko ba ng mga teknikal na kasanayan?",
-    "faq5a": "Hindi. Ang interface ay intuitive at idinisenyo para sa mga taong gustong tumuon sa nilalaman — hindi sa teknolohiya.",
-    "ctaBottom": "Handa na para sa mas mahusay na mga seremonya?",
+    "faq3a": "Ang user interface ay magagamit sa 36 na wika. Maaaring gawin ang mga teksto sa anumang wika.",
+    "faq4q": "Maaari ko bang gamitin ang Conductor Mode sa tablet?",
+    "faq4a": "Oo! Ang buong app ay mobile-optimized bilang isang PWA — perpekto sa tablet sa pulpito.",
+    "faq5q": "Kailangan ko ba ng teknikal na kaalaman?",
+    "faq5a": "Hindi. Ang operasyon ay intuitive at ginawa para sa mga taong gustong mag-focus sa nilalaman — hindi sa teknolohiya.",
+    "ctaBottom": "Handa na para sa mas mahusay na seremonya?",
     "ctaBottomSub": "Magsimula nang libre — walang kinakailangang credit card.",
     "ctaBottomBtn": "Magsimula nang libre ngayon",
-    "footerImprint": "Legal na Paunawa",
+    "footerImprint": "Imprenta",
     "footerPrivacy": "Patakaran sa Privacy",
     "footerChurches": "Para sa mga Simbahan",
-    "seoTitle": "BibleBot.Life para sa mga Chaplain at Life Coach — Magplano ng mga Seremonya at Sesyon",
-    "seoDesc": "Magplano ng mga libing, kasal, coaching session nang propesyonal: pagre-record ng boses, pagbuo ng teksto, teleprompter, kalendaryo, at kolaborasyon."
+    "seoTitle": "BibleBot.Life para sa mga Tagapangasiwa at Life Coach — Pagpaplano ng Seremonya at Sesyon",
+    "seoDesc": "Propesyonal na pagpaplano ng mga libing, kasal, coaching session: pagre-record ng boses, pagbuo ng teksto, teleprompter, kalendaryo, at pakikipagtulungan."
   },
   "pricing": {
-    "onRequest": "Patronato sa kahilingan",
-    "contactUs": "Makipag-ugnayan"
+    "onRequest": "Patronage sa kahilingan",
+    "contactUs": "Makipag-ugnayan sa amin"
+  },
+  "entryTiles": {
+    "groups": {
+      "emotional": "May bumabagabag sa akin",
+      "orientation": "Naghahanap ako ng direksyon",
+      "deep": "Gusto kong mas lumalim"
+    },
+    "labels": {
+      "anxiety": "Nag-aalala ako",
+      "heartbreak": "Nasasaktan ako",
+      "loneliness": "Nalulungkot ako",
+      "decision": "Nakaharap ako sa isang desisyon",
+      "newstart": "Gusto kong magsimulang muli",
+      "calling": "Ano ang aking landas?",
+      "bibleverse": "Unawain ang talata sa Bibliya",
+      "sevenwhys": "Bakit ko ba talaga ginagawa ito?",
+      "lifewheel": "Nasaan ako sa buhay?",
+      "thankfulness": "Pasasalamat",
+      "burnout": "Pagkapagod",
+      "meaningcrisis": "Krisis sa kahulugan",
+      "selfdoubt": "Pagdududa sa sarili",
+      "anger": "Galit at Poot",
+      "financial": "Mga problema sa pananalapi",
+      "illness": "Sakit",
+      "condolence": "Pighati at Pagkawala",
+      "wedding": "Kasal at Pakikipag-ugnayan",
+      "baptism": "Binyag at Landas ng Pananampalataya",
+      "faithdoubt": "Pagdududa sa pananampalataya",
+      "forgiveness": "Pagpapatawad at Pagpapalaya",
+      "sleepless": "Insomnia",
+      "biblequiz": "Pagsusulit sa Bibliya",
+      "prayerwall": "Pader ng Panalangin"
+    },
+    "showMore": "Tuklasin ang higit pang paksa",
+    "showLess": "Ipakita ang mas kaunti"
+  },
+  "trust": {
+    "qa": {
+      "title": "QA-Sinuri",
+      "text": "Ang bawat sipi sa Bibliya ay awtomatikong sinusuri para sa kawastuhan — sa bawat pag-uusap."
+    },
+    "noAds": {
+      "title": "Walang Ad",
+      "text": "Walang pagsubaybay, walang pagbabahagi ng data, walang pagkakakitaan ng iyong mga tanong."
+    },
+    "noExpertise": {
+      "title": "Walang Kinakailangang Paunang Kaalaman",
+      "text": "Hindi mo kailangan ng pagiging miyembro ng simbahan o teolohikal na paunang kaalaman."
+    }
+  },
+  "tools": {
+    "badge": "Higit pa sa mga sagot",
+    "title": "Dalawang tool na mas malalim",
+    "subtitle": "Para sa mga sandali kung saan kailangan mo ng higit pa sa isang sagot.",
+    "lifewheel": {
+      "title": "Pagsusuri ng Gulong ng Buhay",
+      "desc": "Kumusta ang trabaho, relasyon, kahulugan, at kalusugan? Ang Gulong ng Buhay ay tumutulong sa iyo na magkaroon ng kalinawan sa loob ng 3 minuto — at ipinapakita kung saan direktang kumokonekta ang Bibliya.",
+      "cta": "Simulan ang Gulong ng Buhay"
+    },
+    "sevenwhys": {
+      "title": "Ang 7-Bakit na Paraan",
+      "desc": "Bakit ko ba talaga ginagawa ito? Bakit ganito ang pakiramdam? Gagabayan ka ng BibleBot sa 7 tanong na umabot sa ugat — na may pag-uuri sa Bibliya sa pinakamalalim na punto.",
+      "cta": "Magtanong nang mas malalim"
+    }
+  },
+  "audience": {
+    "title": "Para kanino ang BibleBot.Life?",
+    "subtitle": "Piliin ang iyong landas",
+    "personal": {
+      "title": "Naghahanap ako ng personal na pagsasama",
+      "desc": "Mga tanong tungkol sa pananampalataya, pang-araw-araw na inspirasyon, espirituwal na paglago — sa sarili mong bilis at walang paghuhusga.",
+      "f1": "Chat na may pagsasama sa Bibliya",
+      "f2": "21-araw na paglalakbay",
+      "f3": "Pang-araw-araw na inspirasyon sa pamamagitan ng Push / Telegram",
+      "f4": "Personal na kasaysayan ng pag-uusap",
+      "cta": "Mag-chat ngayon — libre →"
+    },
+    "church": {
+      "title": "Nagpaplano ako ng mga serbisyo at sinasamahan ang mga tao",
+      "desc": "Para sa mga pastor, tagapangasiwa, at team ng simbahan: Suporta ng AI para sa paghahanda ng sermon, pagpaplano ng team, at higit pa.",
+      "f1": "Tagaplano ng serbisyo na may AI",
+      "f2": "Library ng mapagkukunan",
+      "f3": "Koordinasyon ng team",
+      "f4": "Pahina ng simbahan at direktoryo",
+      "cta": "Para sa mga simbahan at tagapangasiwa →"
+    }
+  },
+  "faqExtra": {
+    "methodik": {
+      "q": "Ano ang nasa likod ng metodolohiya ng BibleBot?",
+      "a": ""
+    },
+    "journey": {
+      "q": "Ano ang 21-araw na Paglalakbay?"
+    },
+    "faithPsych": {
+      "q": "Pinagsasama ba ng BibleBot ang pananampalataya at sikolohiya?",
+      "a": "Pinagsasama ng BibleBot ang karunungan sa Bibliya sa mga pananaw mula sa sikolohiyang batay sa ebidensya — hindi upang gawing sikolohikal ang pananampalataya, kundi upang gawin itong may kaugnayan sa pang-araw-araw na buhay. Ang mga pamamaraan (PERMA, Logotherapy, pananaliksik sa pasasalamat at pagpapatawad) ay nagpupuno sa Bibliya, ngunit hindi ito pinapalitan."
+    }
   }
 }
