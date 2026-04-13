@@ -659,7 +659,7 @@ export function DailyImpulse() {
                     <Button
                       size="sm"
                       onClick={handleSubscribeSms}
-                      disabled={isSubscribing || smsPhone.length < 8}
+                      disabled={isSubscribing || !smsPhone.replace(/\s/g, "").startsWith("+41") || smsPhone.replace(/\s/g, "").length < 12}
                       className="text-xs h-7 bg-primary hover:bg-primary/90"
                     >
                       {isSubscribing && showSmsInput ? <Loader2 className="h-3 w-3 animate-spin" /> : t("subscribe.submit", "Abonnieren")}

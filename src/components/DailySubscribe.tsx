@@ -183,7 +183,7 @@ export function DailySubscribe() {
         </div>
       )}
 
-      <Button onClick={handleSubscribe} disabled={!selectedChannel || isLoading || (selectedChannel === "sms" && phone.length < 8)} className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 text-base" size="lg">
+      <Button onClick={handleSubscribe} disabled={!selectedChannel || isLoading || (selectedChannel === "sms" && (!phone.replace(/\s/g, "").startsWith("+41") || phone.replace(/\s/g, "").length < 12))} className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 text-base" size="lg">
         {isLoading ? (
           <><Loader2 className="h-4 w-4 mr-2 animate-spin" />{t("subscribe.submitting")}</>
         ) : (
