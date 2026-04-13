@@ -493,11 +493,36 @@ const Analytics = () => {
                   </TableRow>
                 </TableHeader>
                 <TableBody>
-                  {churchList.map(([slug, c]) => (
+                  {churchList.map(([slug, c]) => {
+                    // Anomaly detection: check if latest week dropped >50% vs previous
+                    const trend = c.weeklyTrend || [];
+                    let anomaly = false;
+                    let dropPct = 0;
+                    if (trend.length >= 2) {
+                      const prev = trend[trend.length - 2].sessions;
+                      const curr = trend[trend.length - 1].sessions;
+                      if (prev > 0) {
+                        dropPct = Math.round(((prev - curr) / prev) * 100);
+                        anomaly = dropPct > 50;
+                      }
+                    }
+                    return (
                     <TableRow key={slug}>
                       <TableCell className="font-medium">
                         <div className="flex items-center gap-2">
                           {!c.isActive && <span className="h-2 w-2 rounded-full bg-destructive" />}
+                          {anomaly && (
+                            <TooltipProvider delayDuration={200}>
+                              <Tooltip>
+                                <TooltipTrigger asChild>
+                                  <AlertTriangle className="h-4 w-4 text-amber-500 shrink-0" />
+                                </TooltipTrigger>
+                                <TooltipContent side="right" className="max-w-[220px] text-xs">
+                                  Traffic-Einbruch: Besucher sind um {dropPct}% gegenüber der Vorwoche gesunken
+                                </TooltipContent>
+                              </Tooltip>
+                            </TooltipProvider>
+                          )}
                           {c.churchName}
                           <span className="text-xs text-muted-foreground">({slug})</span>
                         </div>
@@ -510,7 +535,8 @@ const Analytics = () => {
                         <Badge variant="secondary" className="text-xs">{c.planTier}</Badge>
                       </TableCell>
                     </TableRow>
-                  ))}
+                    );
+                  })}
                 </TableBody>
               </Table>
             </CardContent>
