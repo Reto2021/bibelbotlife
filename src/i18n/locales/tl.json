@@ -1299,6 +1299,11 @@
       "title": "Kompas ng mga halaga",
       "desc": "Ano ang tunay na mahalaga sa iyo? Tuklasin ang iyong mga pangunahing halaga — at ano ang sinasabi ng Bibliya.",
       "cta": "Tuklasin ang mga halaga"
+    },
+    "examen": {
+      "title": "Examen (Ignacio)",
+      "desc": "Ang napatunayang pang-araw-araw na pagsusuri ni Ignacio ng Loyola: Pagnilayan ang iyong araw sa 5 hakbang.",
+      "cta": "Simulan ang Examen"
     }
   },
   "trust": {

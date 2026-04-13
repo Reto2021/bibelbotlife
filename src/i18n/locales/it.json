@@ -1275,6 +1275,11 @@
       "title": "Bussola dei valori",
       "desc": "Cosa è veramente importante per te? Scopri i tuoi valori fondamentali — e cosa dice la Bibbia.",
       "cta": "Scopri i valori"
+    },
+    "examen": {
+      "title": "Esame (Ignazio)",
+      "desc": "La revisione quotidiana di Ignazio di Loyola: Rifletti sulla tua giornata in 5 passi.",
+      "cta": "Inizia Esame"
     }
   },
   "audience": {

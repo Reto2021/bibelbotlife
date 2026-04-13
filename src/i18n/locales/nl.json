@@ -1296,6 +1296,11 @@
       "title": "Waardencompas",
       "desc": "Wat is echt belangrijk voor jou? Ontdek je kernwaarden — en wat de Bijbel erover zegt.",
       "cta": "Ontdek waarden"
+    },
+    "examen": {
+      "title": "Examen (Ignatius)",
+      "desc": "De beproefde dagelijkse terugblik van Ignatius van Loyola: Reflecteer op je dag in 5 stappen.",
+      "cta": "Start Examen"
     }
   },
   "trust": {

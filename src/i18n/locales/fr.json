@@ -1275,6 +1275,11 @@
       "title": "Boussole des valeurs",
       "desc": "Qu'est-ce qui compte vraiment pour vous ? Découvrez vos valeurs fondamentales — et ce que la Bible en dit.",
       "cta": "Découvrir ses valeurs"
+    },
+    "examen": {
+      "title": "Examen (Ignace)",
+      "desc": "La relecture quotidienne éprouvée d'Ignace de Loyola : Réfléchissez à votre journée en 5 étapes.",
+      "cta": "Commencer l'Examen"
     }
   },
   "audience": {

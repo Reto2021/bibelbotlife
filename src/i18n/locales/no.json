@@ -1275,6 +1275,11 @@
       "title": "Verdikompass",
       "desc": "Hva er virkelig viktig for deg? Oppdag dine kjerneverdier — og hva Bibelen sier om dem.",
       "cta": "Oppdag verdier"
+    },
+    "examen": {
+      "title": "Examen (Ignatius)",
+      "desc": "Ignatius av Loyolas velprøvde daglige tilbakeblikk: Reflekter over dagen din i 5 trinn.",
+      "cta": "Start Examen"
     }
   },
   "audience": {

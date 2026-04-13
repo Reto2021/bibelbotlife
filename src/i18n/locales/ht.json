@@ -1296,6 +1296,11 @@
       "title": "Konpa valè",
       "desc": "Kisa ki vrèman enpòtan pou ou? Dekouvri valè fondamantal ou yo — e sa Bib la di sou yo.",
       "cta": "Dekouvri valè"
+    },
+    "examen": {
+      "title": "Examen (Ignace)",
+      "desc": "Revizyon chak jou Ignace de Loyola a: Reflechi sou jounen ou an 5 etap.",
+      "cta": "Kòmanse Examen"
     }
   },
   "trust": {

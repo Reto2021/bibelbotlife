@@ -1296,6 +1296,11 @@
       "title": "Værdi-kompas",
       "desc": "Hvad er virkelig vigtigt for dig? Opdag dine kerneværdier — og hvad Bibelen siger om dem.",
       "cta": "Opdag værdier"
+    },
+    "examen": {
+      "title": "Examen (Ignatius)",
+      "desc": "Ignatius af Loyolas gennemprøvede daglige tilbageblik: Reflekter over din dag i 5 trin.",
+      "cta": "Start Examen"
     }
   },
   "trust": {

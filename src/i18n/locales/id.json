@@ -1296,6 +1296,11 @@
       "title": "Kompas nilai",
       "desc": "Apa yang benar-benar penting bagimu? Temukan nilai-nilai intimu — dan apa yang Alkitab katakan tentangnya.",
       "cta": "Temukan nilai"
+    },
+    "examen": {
+      "title": "Examen (Ignatius)",
+      "desc": "Tinjauan harian Ignatius dari Loyola yang terbukti: Renungkan harimu dalam 5 langkah.",
+      "cta": "Mulai Examen"
     }
   },
   "trust": {

@@ -1296,6 +1296,11 @@
       "title": "Értékiránytű",
       "desc": "Mi igazán fontos számodra? Fedezd fel alapértékeidet — és mit mond róluk a Biblia.",
       "cta": "Értékek felfedezése"
+    },
+    "examen": {
+      "title": "Examen (Ignác)",
+      "desc": "Loyolai Szent Ignác kipróbált napi áttekintése: Gondold végig a napodat 5 lépésben.",
+      "cta": "Examen indítása"
     }
   },
   "trust": {

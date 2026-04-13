@@ -1275,6 +1275,11 @@
       "title": "Arzhekner kompas",
       "desc": "Inch e k'ez irapes karevorvum? Haidtnir k'o himnakan arzhekner.",
       "cta": "Haidtnir arzhekner"
+    },
+    "examen": {
+      "title": "Examen (Ignatius)",
+      "desc": "Իgnatiusi Loyolai oravakan veralutsume: Mtatse or orvat 5 k'aylov.",
+      "cta": "Sksel Examen"
     }
   },
   "audience": {
