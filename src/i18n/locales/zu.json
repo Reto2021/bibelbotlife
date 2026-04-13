@@ -722,12 +722,12 @@
         "desc": "Imibono yezingxoxo nezithombe zamaqembu namasela asendlini."
       }
     },
-    "pricingTitle": "Amaphakheji Okuxhasa",
-    "pricingSubtitle": "Sekela i-umngane wakho nomphakathi wakho ngephakheji yokuxhasa efanelekile.",
-    "popular": "Kuthandwa",
+    "pricingTitle": "Sponsorship Packages",
+    "pricingSubtitle": "BibleBot.Life is free and ad-free. Organizations can support the project through sponsorship and receive additional features.",
+    "popular": "Recommended",
     "free": "Mahhala",
     "perYear": "abantu / unyaka",
-    "contact": "Xhumana Nathi",
+    "contact": "Request sponsorship",
     "tier": {
       "free": {
         "name": "Imbewu Yesinapi",
@@ -784,9 +784,9 @@
     "contactSuccess": "Umlayezo uthunyelwe! 🙏",
     "contactSuccessDesc": "Ibandla lizoxhumana nawe.",
     "recommendedBy": "Kusikiswe ngu-{{name}}",
-    "setup": "Ukumisa (kanye kuphela)",
+    "setup": "",
     "form": {
-      "title": "Unentshisekelo? Sibhalele!",
+      "title": "Interested in sponsoring?",
       "subtitle": "Sizoxhumana nawe kungakapheli amahora angama-48.",
       "name": "Igama lakho",
       "email": "Ikheli Le-imeyili",
@@ -794,7 +794,7 @@
       "tier": "Ipakeji efiselekayo",
       "tierPlaceholder": "Khetha ipakeji...",
       "message": "Umlayezo wakho",
-      "submit": "Thumela Isicelo",
+      "submit": "Send sponsorship request",
       "success": "Isicelo Sithunyelwe! Sizoxhumana nawe ngokushesha. 🙏",
       "error": "Iphutha ekuthumeleni. Sicela uzame futhi.",
       "orgType": "Uhlobo Lwenhlangano",
@@ -863,7 +863,7 @@
         "desc": "Imiphumela yoComoya eyengeziwe yabantu abasebenzisana nokwelulekwa kwezengqondo."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As umngane wakho is a private project, donations are not tax-deductible.",
+    "patronageNote": "BibleBot.Life is run by a non-profit association and funded exclusively through voluntary donations and sponsorships. There is no advertising, no data sales, and no paid features. All contributions go directly toward development, technical operations, global distribution, and community management. Donations may be tax-deductible depending on your jurisdiction.",
     "denominationsTitle": "Kuzo zonke izinkolo nabahleli bemicimbi",
     "denominationsSubtitle": "I-BibleBot.Life i-ecumenical – yemiphakathi ye-Reformed, Catholic, Lutheran, ne-Free Church, kanye nabahleli bemicimbi abazimele.",
     "denomination": {
@@ -1143,13 +1143,12 @@
     "f9Desc": "Izingoma, imithandazo, izifundo, nemibhalo yenkonzo — efundekayo, enamathegi, ekhula ngomkhosi ngamunye.",
     "f10Title": "Irejista Yesonto",
     "f10Desc": "Bhala phansi kahle ubhapathizo, imishado, nemingcwabo. Yonke idatha endaweni eyodwa.",
-    "pricingTitle": "Intengo elula",
-    "pricingSubtitle": "Qala mahhala. Thuthukisa uma udinga okwengeziwe.",
+    "pricingTitle": "Free & supported by donations",
+    "pricingSubtitle": "Start for free. All Pro features are made possible through sponsorship.",
     "planPersonal": "Okomuntu siqu",
     "planFree": "Mahhala",
     "planPro": "I-Pro",
-    "planProPrice": "CHF 29",
-    "planProPeriod": "/ ngenyanga",
+    "planProPeriod": "",
     "recommended": "Kunconyiwe",
     "pf1": "Dala imibhalo yomkhosi",
     "pf2": "Ukuqopha izwi nokubhala phansi",
@@ -1167,7 +1166,7 @@
     "pf14": "Irejista yesonto",
     "pf15": "Ukusekelwa okubalulekile",
     "ctaFree": "Qala",
-    "ctaTrial": "Isivivinyo samahhala sezinsuku eziyi-14",
+    "ctaTrial": "Request sponsorship",
     "faqTitle": "Imibuzo Ebuzwa Njalo",
     "faq1q": "Leli thuluzi elikabani?",
     "faq1a": "Okwabefundisi, abaqeqeshi bempilo, abakhulumi bomngcwabo abazimele, abashadisi, abefundisi basesibhedlela, abefundisi, nanoma ubani olungiselela futhi eqhuba imikhosi, ama-workshop, noma amaseshini okuqeqesha.",
@@ -1186,7 +1185,9 @@
     "footerPrivacy": "Inqubomgomo Yobumfihlo",
     "footerChurches": "Emasontweni",
     "seoTitle": "BibleBot.Life Yabefundisi & Abaqeqeshi Bempilo — Hlela Imikhosi & Amaseshini",
-    "seoDesc": "Hlela imingcwabo, imishado, amaseshini okuqeqesha ngobungcweti: ukuqopha izwi, ukukhiqizwa kombhalo, i-teleprompter, ikhalenda, nokubambisana."
+    "seoDesc": "Hlela imingcwabo, imishado, amaseshini okuqeqesha ngobungcweti: ukuqopha izwi, ukukhiqizwa kombhalo, i-teleprompter, ikhalenda, nokubambisana.",
+    "planProSupported": "Made possible by donations",
+    "ctaSponsor": "Request sponsorship"
   },
   "pricing": {
     "onRequest": "Ukuxhaswa ngokucela",

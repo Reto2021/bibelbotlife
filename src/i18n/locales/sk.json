@@ -683,12 +683,12 @@
         "desc": "Impulzy a podnety na diskusiu pre skupiny a domáce krúžky."
       }
     },
-    "pricingTitle": "Patronátne balíčky",
-    "pricingSubtitle": "Podporte váš sprievodca a vaše spoločenstvo vhodným patronátnym balíčkom.",
-    "popular": "Obľúbené",
+    "pricingTitle": "Sponsorship Packages",
+    "pricingSubtitle": "BibleBot.Life is free and ad-free. Organizations can support the project through sponsorship and receive additional features.",
+    "popular": "Recommended",
     "free": "Zadarmo",
     "perYear": "osôb / rok",
-    "contact": "Kontaktovať",
+    "contact": "Request sponsorship",
     "tier": {
       "free": {
         "name": "Horčičné zrnko",
@@ -745,9 +745,9 @@
     "contactSuccess": "Správa odoslaná! 🙏",
     "contactSuccessDesc": "Spoločenstvo sa vám ozve.",
     "recommendedBy": "Odporúča {{name}}",
-    "setup": "Nastavenie (jednorazové)",
+    "setup": "",
     "form": {
-      "title": "Záujem? Napíšte nám!",
+      "title": "Interested in sponsoring?",
       "subtitle": "Ozveme sa do 48 hodín.",
       "name": "Vaše meno",
       "email": "E-mailová adresa",
@@ -755,7 +755,7 @@
       "tier": "Želaný balíček",
       "tierPlaceholder": "Vybrať balíček...",
       "message": "Vaša správa",
-      "submit": "Odoslať žiadosť",
+      "submit": "Send sponsorship request",
       "success": "Žiadosť odoslaná! Čoskoro sa vám ozveme. 🙏",
       "error": "Chyba pri odosielaní. Prosím, skúste to znova.",
       "orgType": "Typ organizácie",
@@ -824,7 +824,7 @@
         "desc": "Doplnkové duchovné impulzy pre klientov psychosociálneho poradenstva."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As váš sprievodca is a private project, donations are not tax-deductible.",
+    "patronageNote": "BibleBot.Life is run by a non-profit association and funded exclusively through voluntary donations and sponsorships. There is no advertising, no data sales, and no paid features. All contributions go directly toward development, technical operations, global distribution, and community management. Donations may be tax-deductible depending on your jurisdiction.",
     "denominationsTitle": "Pre všetky vierovyznania a celebrantov",
     "denominationsSubtitle": "BibleBot.Life je ekumenický – pre reformované, katolícke, luteránske a voľné evanjelické komunity, ako aj nezávislých celebrantov.",
     "denomination": {
@@ -1143,13 +1143,12 @@
     "f9Desc": "Piesne, modlitby, čítania a liturgické texty — vyhľadávateľné, označené, rastúce s každým obradom.",
     "f10Title": "Cirkevný register",
     "f10Desc": "Úhľadne dokumentujte krsty, svadby a pohreby. Všetky údaje na jednom mieste.",
-    "pricingTitle": "Jednoduché ceny",
-    "pricingSubtitle": "Začnite zadarmo. Vylepšite, keď budete potrebovať viac.",
+    "pricingTitle": "Free & supported by donations",
+    "pricingSubtitle": "Start for free. All Pro features are made possible through sponsorship.",
     "planPersonal": "Osobné",
     "planFree": "Zadarmo",
     "planPro": "Pro",
-    "planProPrice": "29 CHF",
-    "planProPeriod": "/ mesiac",
+    "planProPeriod": "",
     "recommended": "Odporúčané",
     "pf1": "Vytvárajte texty obradov",
     "pf2": "Nahrávanie hlasu a prepis",
@@ -1167,7 +1166,7 @@
     "pf14": "Cirkevný register",
     "pf15": "Prioritná podpora",
     "ctaFree": "Začať",
-    "ctaTrial": "14-dňová bezplatná skúšobná verzia",
+    "ctaTrial": "Request sponsorship",
     "faqTitle": "Často kladené otázky",
     "faq1q": "Pre koho je tento nástroj určený?",
     "faq1a": "Pre kaplánov, životných koučov, nezávislých pohrebných rečníkov, svadobných celebrantov, nemocničných kaplánov, pastorov a kohokoľvek, kto pripravuje a vedie obrady, workshopy alebo koučovacie stretnutia.",
@@ -1186,7 +1185,9 @@
     "footerPrivacy": "Zásady ochrany osobných údajov",
     "footerChurches": "Pre cirkvi",
     "seoTitle": "BibleBot.Life pre kaplánov a životných koučov — Plánujte obrady a stretnutia",
-    "seoDesc": "Profesionálne plánujte pohreby, svadby, koučovacie stretnutia: nahrávanie hlasu, generovanie textu, teleprompter, kalendár a spolupráca."
+    "seoDesc": "Profesionálne plánujte pohreby, svadby, koučovacie stretnutia: nahrávanie hlasu, generovanie textu, teleprompter, kalendár a spolupráca.",
+    "planProSupported": "Made possible by donations",
+    "ctaSponsor": "Request sponsorship"
   },
   "pricing": {
     "onRequest": "Patronát na vyžiadanie",

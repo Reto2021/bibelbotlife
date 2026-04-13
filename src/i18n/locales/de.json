@@ -727,12 +727,12 @@
         "desc": "Impulse und Diskussionsanstösse für Gruppen und Hauskreise."
       }
     },
-    "pricingTitle": "Patronats-Pakete",
-    "pricingSubtitle": "Unterstützen Sie BibleBot und Ihre Organisation mit dem passenden Patronats-Paket.",
-    "popular": "Beliebt",
+    "pricingTitle": "Sponsoring-Pakete",
+    "pricingSubtitle": "BibleBot.Life ist kostenlos und werbefrei. Organisationen können das Projekt durch Sponsoring unterstützen und erhalten dafür zusätzliche Features.",
+    "popular": "Empfohlen",
     "free": "Kostenlos",
     "perYear": "",
-    "contact": "Kontakt aufnehmen",
+    "contact": "Sponsoring anfragen",
     "tier": {
       "free": {
         "name": "Senfkorn",
@@ -789,9 +789,9 @@
     "contactSuccess": "Nachricht gesendet! 🙏",
     "contactSuccessDesc": "Die Organisation wird sich bei Ihnen melden.",
     "recommendedBy": "Empfohlen von {{name}}",
-    "setup": "Setup (einmalig)",
+    "setup": "",
     "form": {
-      "title": "Interesse? Schreiben Sie uns!",
+      "title": "Interesse an einem Sponsoring?",
       "subtitle": "Wir melden uns innert 48 Stunden.",
       "name": "Ihr Name",
       "email": "E-Mail-Adresse",
@@ -799,7 +799,7 @@
       "tier": "Gewünschtes Paket",
       "tierPlaceholder": "Paket wählen...",
       "message": "Ihre Nachricht",
-      "submit": "Anfrage senden",
+      "submit": "Spendenanfrage senden",
       "success": "Anfrage gesendet! Wir melden uns bald. 🙏",
       "error": "Fehler beim Senden. Bitte versuchen Sie es erneut.",
       "orgType": "Typ der Organisation",
@@ -892,7 +892,7 @@
         "desc": "Ergänzende geistliche Impulse für Klienten in psychosozialer oder seelsorgerischer Beratung."
       }
     },
-    "patronageNote": "BibleBot.Life ist ein privates, nicht-kommerzielles Projekt. Es wird ehrenamtlich betrieben und finanziert sich ausschliesslich durch freiwillige Spenden. Es gibt keine Werbung, keine Datenverkäufe und keine kostenpflichtigen Features. Alle Spenden fliessen direkt in die Deckung der laufenden Kosten (Infrastruktur, Hosting, Entwicklung). Da BibleBot als privates Projekt läuft, sind Spenden nicht steuerabzugsfähig."
+    "patronageNote": "BibleBot.Life wird von einem gemeinnützigen Verein getragen und finanziert sich ausschliesslich durch freiwillige Spenden und Sponsorings. Es gibt keine Werbung, keine Datenverkäufe und keine kostenpflichtigen Features. Alle Beiträge fliessen direkt in die Weiterentwicklung, den technischen Betrieb, die weltweite Verbreitung und das Community-Management. Spenden können je nach Kanton steuerlich abzugsfähig sein."
   },
   "institutions": {
     "badge": "Für Organisationen",
@@ -1143,13 +1143,13 @@
     "f9Desc": "Lieder, Gebete, Lesungen und Liturgietexte — durchsuchbar, mit Tags, wachsend mit jeder Zeremonie.",
     "f10Title": "Kirchenbuch & Register",
     "f10Desc": "Taufen, Trauungen und Abdankungen sauber dokumentieren. Alle Daten an einem Ort.",
-    "pricingTitle": "Einfache Preise",
-    "pricingSubtitle": "Starten Sie kostenlos. Upgraden Sie, wenn Sie mehr brauchen.",
+    "pricingTitle": "Kostenlos & unterstützt durch Spenden",
+    "pricingSubtitle": "Starten Sie kostenlos. Alle Pro-Features werden durch Sponsoring ermöglicht.",
     "planPersonal": "Persönlich",
     "planFree": "Kostenlos",
     "planPro": "Pro",
-    "planProPrice": "CHF 29",
-    "planProPeriod": "/ Monat",
+    "planProSupported": "Durch Spenden ermöglicht",
+    "planProPeriod": "",
     "recommended": "Empfohlen",
     "pf1": "Zeremonie-Texte erstellen",
     "pf2": "Sprachaufnahme & Transkription",
@@ -1167,7 +1167,8 @@
     "pf14": "Kirchenbuch / Register",
     "pf15": "Prioritäts-Support",
     "ctaFree": "Jetzt starten",
-    "ctaTrial": "14 Tage kostenlos testen",
+    "ctaSponsor": "Sponsoring anfragen",
+    "ctaTrial": "Sponsoring anfragen",
     "faqTitle": "Häufige Fragen",
     "faq1q": "Für wen ist dieses Tool gedacht?",
     "faq1a": "Für Seelsorger, Life Coaches, freiberufliche Trauerredner, Hochzeitszeremoniemeister, Spitalseelsorger, Pfarrpersonen und alle, die Zeremonien, Workshops oder Coaching-Sessions vorbereiten und durchführen.",

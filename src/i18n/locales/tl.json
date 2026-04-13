@@ -722,12 +722,12 @@
         "desc": "Mga inspirasyon at pampasigla sa diskusyon para sa mga grupo at home group."
       }
     },
-    "pricingTitle": "Mga Pakete ng Patronage",
-    "pricingSubtitle": "Suportahan ang ang iyong kasama at ang iyong komunidad gamit ang angkop na pakete ng patronage.",
-    "popular": "Sikat",
+    "pricingTitle": "Sponsorship Packages",
+    "pricingSubtitle": "BibleBot.Life is free and ad-free. Organizations can support the project through sponsorship and receive additional features.",
+    "popular": "Recommended",
     "free": "Libre",
     "perYear": "tao / taon",
-    "contact": "Makipag-ugnayan",
+    "contact": "Request sponsorship",
     "tier": {
       "free": {
         "name": "Buto ng Mustasa",
@@ -784,9 +784,9 @@
     "contactSuccess": "Naipadala ang Mensahe! 🙏",
     "contactSuccessDesc": "Makikipag-ugnayan sa iyo ang komunidad.",
     "recommendedBy": "Inirerekomenda ni {{name}}",
-    "setup": "Setup (isang beses)",
+    "setup": "",
     "form": {
-      "title": "Interesado? Sumulat sa Amin!",
+      "title": "Interested in sponsoring?",
       "subtitle": "Makikipag-ugnayan kami sa loob ng 48 oras.",
       "name": "Ang Iyong Pangalan",
       "email": "E-mail Address",
@@ -794,7 +794,7 @@
       "tier": "Gusto mong Pakete",
       "tierPlaceholder": "Pumili ng Pakete...",
       "message": "Ang Iyong Mensahe",
-      "submit": "Ipadala ang Kahilingan",
+      "submit": "Send sponsorship request",
       "success": "Naipadala ang Kahilingan! Makikipag-ugnayan kami sa lalong madaling panahon. 🙏",
       "error": "Error sa pagpapadala. Mangyaring subukang muli.",
       "orgType": "Uri ng Organisasyon",
@@ -863,7 +863,7 @@
         "desc": "Karagdagang espirituwal na udyok para sa mga kliyente sa psychosocial counseling."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As ang iyong kasama is a private project, donations are not tax-deductible.",
+    "patronageNote": "BibleBot.Life is run by a non-profit association and funded exclusively through voluntary donations and sponsorships. There is no advertising, no data sales, and no paid features. All contributions go directly toward development, technical operations, global distribution, and community management. Donations may be tax-deductible depending on your jurisdiction.",
     "denominationsTitle": "Para sa lahat ng denominasyon at mga tagapanguna ng seremonya",
     "denominationsSubtitle": "Ang BibleBot.Life ay ecumenical – para sa Reformed, Catholic, Lutheran, at Free Church na mga komunidad, pati na rin mga freelance na tagapanguna ng seremonya.",
     "denomination": {
@@ -1146,13 +1146,12 @@
     "f9Desc": "Mga kanta, panalangin, pagbasa, at mga tekstong liturhiko — nahahanap, may tag, lumalaki sa bawat seremonya.",
     "f10Title": "Rehistro ng Simbahan",
     "f10Desc": "Maayos na idokumento ang mga binyag, kasal, at libing. Lahat ng data sa isang lugar.",
-    "pricingTitle": "Simpleng pagpepresyo",
-    "pricingSubtitle": "Magsimula nang libre. Mag-upgrade kapag kailangan mo ng higit pa.",
+    "pricingTitle": "Free & supported by donations",
+    "pricingSubtitle": "Start for free. All Pro features are made possible through sponsorship.",
     "planPersonal": "Personal",
     "planFree": "Libre",
     "planPro": "Pro",
-    "planProPrice": "CHF 29",
-    "planProPeriod": "/ buwan",
+    "planProPeriod": "",
     "recommended": "Inirerekomenda",
     "pf1": "Gumawa ng mga teksto ng seremonya",
     "pf2": "Pagre-record ng boses at transkripsyon",
@@ -1170,7 +1169,7 @@
     "pf14": "Rehistro ng simbahan",
     "pf15": "Priority support",
     "ctaFree": "Magsimula",
-    "ctaTrial": "14-araw na libreng pagsubok",
+    "ctaTrial": "Request sponsorship",
     "faqTitle": "Mga Madalas Itanong",
     "faq1q": "Para kanino ang tool na ito?",
     "faq1a": "Para sa mga chaplain, life coach, freelance funeral speaker, wedding celebrant, hospital chaplain, pastor, at sinumang naghahanda at nagsasagawa ng mga seremonya, workshop, o coaching session.",
@@ -1189,7 +1188,9 @@
     "footerPrivacy": "Patakaran sa Privacy",
     "footerChurches": "Para sa mga Simbahan",
     "seoTitle": "BibleBot.Life para sa mga Chaplain at Life Coach — Magplano ng mga Seremonya at Sesyon",
-    "seoDesc": "Magplano ng mga libing, kasal, coaching session nang propesyonal: pagre-record ng boses, pagbuo ng teksto, teleprompter, kalendaryo, at kolaborasyon."
+    "seoDesc": "Magplano ng mga libing, kasal, coaching session nang propesyonal: pagre-record ng boses, pagbuo ng teksto, teleprompter, kalendaryo, at kolaborasyon.",
+    "planProSupported": "Made possible by donations",
+    "ctaSponsor": "Request sponsorship"
   },
   "pricing": {
     "onRequest": "Patronato sa kahilingan",

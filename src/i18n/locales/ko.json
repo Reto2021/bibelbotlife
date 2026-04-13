@@ -683,12 +683,12 @@
         "desc": "그룹 및 가정 모임을 위한 영감과 토론 시작점."
       }
     },
-    "pricingTitle": "후원 패키지",
-    "pricingSubtitle": "적절한 후원 패키지로 당신의 동반자과 귀하의 교회를 지원하세요.",
-    "popular": "인기",
+    "pricingTitle": "Sponsorship Packages",
+    "pricingSubtitle": "BibleBot.Life is free and ad-free. Organizations can support the project through sponsorship and receive additional features.",
+    "popular": "Recommended",
     "free": "무료",
     "perYear": "명 / 년",
-    "contact": "문의하기",
+    "contact": "Request sponsorship",
     "tier": {
       "free": {
         "name": "겨자씨",
@@ -745,9 +745,9 @@
     "contactSuccess": "메시지 전송됨! 🙏",
     "contactSuccessDesc": "교회에서 연락을 드릴 것입니다.",
     "recommendedBy": "{{name}} 추천",
-    "setup": "설정 (1회)",
+    "setup": "",
     "form": {
-      "title": "관심 있으십니까? 저희에게 연락하세요!",
+      "title": "Interested in sponsoring?",
       "subtitle": "48시간 이내에 연락드리겠습니다.",
       "name": "이름",
       "email": "이메일 주소",
@@ -755,7 +755,7 @@
       "tier": "원하는 패키지",
       "tierPlaceholder": "패키지 선택...",
       "message": "메시지",
-      "submit": "문의 보내기",
+      "submit": "Send sponsorship request",
       "success": "문의 전송됨! 곧 연락드리겠습니다. 🙏",
       "error": "전송 오류. 다시 시도해 주세요.",
       "orgType": "조직 유형",
@@ -824,7 +824,7 @@
         "desc": "심리사회적 상담 고객을 위한 보완적 영적 자극."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As 당신의 동반자 is a private project, donations are not tax-deductible.",
+    "patronageNote": "BibleBot.Life is run by a non-profit association and funded exclusively through voluntary donations and sponsorships. There is no advertising, no data sales, and no paid features. All contributions go directly toward development, technical operations, global distribution, and community management. Donations may be tax-deductible depending on your jurisdiction.",
     "denominationsTitle": "모든 교파 및 예식 집전자를 위해",
     "denominationsSubtitle": "BibleBot.Life는 에큐메니컬입니다 – 개혁교회, 가톨릭, 루터교, 자유교회 공동체 및 프리랜서 예식 집전자를 위한 것입니다.",
     "denomination": {
@@ -1143,13 +1143,12 @@
     "f9Desc": "노래, 기도, 독서, 전례 텍스트 — 검색 가능하고, 태그가 지정되어 있으며, 모든 의식과 함께 성장합니다.",
     "f10Title": "교회 등록부",
     "f10Desc": "세례, 결혼, 장례를 깔끔하게 문서화하세요. 모든 데이터가 한 곳에.",
-    "pricingTitle": "간단한 가격 책정",
-    "pricingSubtitle": "무료로 시작하세요. 더 필요할 때 업그레이드하세요.",
+    "pricingTitle": "Free & supported by donations",
+    "pricingSubtitle": "Start for free. All Pro features are made possible through sponsorship.",
     "planPersonal": "개인",
     "planFree": "무료",
     "planPro": "프로",
-    "planProPrice": "CHF 29",
-    "planProPeriod": "/ 월",
+    "planProPeriod": "",
     "recommended": "추천",
     "pf1": "의식 텍스트 생성",
     "pf2": "음성 녹음 및 전사",
@@ -1167,7 +1166,7 @@
     "pf14": "교회 등록부",
     "pf15": "우선 지원",
     "ctaFree": "시작하기",
-    "ctaTrial": "14일 무료 체험",
+    "ctaTrial": "Request sponsorship",
     "faqTitle": "자주 묻는 질문",
     "faq1q": "이 도구는 누구를 위한 것인가요?",
     "faq1a": "목회자, 라이프 코치, 프리랜서 장례 연설가, 결혼식 주례자, 병원 목회자, 목사, 그리고 의식, 워크숍 또는 코칭 세션을 준비하고 진행하는 모든 사람을 위한 것입니다.",
@@ -1186,7 +1185,9 @@
     "footerPrivacy": "개인 정보 보호 정책",
     "footerChurches": "교회를 위한",
     "seoTitle": "BibleBot.Life 목회자 및 라이프 코치를 위한 — 의식 및 세션 계획",
-    "seoDesc": "장례식, 결혼식, 코칭 세션을 전문적으로 계획하세요: 음성 녹음, 텍스트 생성, 텔레프롬프터, 달력 및 협업."
+    "seoDesc": "장례식, 결혼식, 코칭 세션을 전문적으로 계획하세요: 음성 녹음, 텍스트 생성, 텔레프롬프터, 달력 및 협업.",
+    "planProSupported": "Made possible by donations",
+    "ctaSponsor": "Request sponsorship"
   },
   "pricing": {
     "onRequest": "후원 문의",

@@ -723,12 +723,12 @@
         "desc": "Παρορμήσεις και ερεθίσματα για συζήτηση για ομάδες και οικιακούς κύκλους."
       }
     },
-    "pricingTitle": "Πακέτα Πατρονίας",
-    "pricingSubtitle": "Υποστηρίξτε το ο σύντροφός σας και την κοινότητά σας με το κατάλληλο πακέτο πατρονίας.",
-    "popular": "Δημοφιλές",
+    "pricingTitle": "Sponsorship Packages",
+    "pricingSubtitle": "BibleBot.Life is free and ad-free. Organizations can support the project through sponsorship and receive additional features.",
+    "popular": "Recommended",
     "free": "Δωρεάν",
     "perYear": "άτομα / έτος",
-    "contact": "Επικοινωνία",
+    "contact": "Request sponsorship",
     "tier": {
       "free": {
         "name": "Σιναπόσπορος",
@@ -785,9 +785,9 @@
     "contactSuccess": "Το μήνυμα εστάλη! 🙏",
     "contactSuccessDesc": "Η κοινότητα θα επικοινωνήσει μαζί σας.",
     "recommendedBy": "Συνιστάται από τον/την {{name}}",
-    "setup": "Ρύθμιση (μία φορά)",
+    "setup": "",
     "form": {
-      "title": "Ενδιαφέρεστε; Γράψτε μας!",
+      "title": "Interested in sponsoring?",
       "subtitle": "Θα επικοινωνήσουμε μαζί σας εντός 48 ωρών.",
       "name": "Το όνομά σας",
       "email": "Διεύθυνση E-mail",
@@ -795,7 +795,7 @@
       "tier": "Επιθυμητό πακέτο",
       "tierPlaceholder": "Επιλέξτε πακέτο...",
       "message": "Το μήνυμά σας",
-      "submit": "Αποστολή αιτήματος",
+      "submit": "Send sponsorship request",
       "success": "Το αίτημα στάλθηκε! Θα επικοινωνήσουμε σύντομα. 🙏",
       "error": "Σφάλμα κατά την αποστολή. Παρακαλώ δοκιμάστε ξανά.",
       "orgType": "Τύπος Οργανισμού",
@@ -864,7 +864,7 @@
         "desc": "Συμπληρωματικές πνευματικές ωθήσεις για πελάτες σε ψυχοκοινωνική συμβουλευτική."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As ο σύντροφός σας is a private project, donations are not tax-deductible.",
+    "patronageNote": "BibleBot.Life is run by a non-profit association and funded exclusively through voluntary donations and sponsorships. There is no advertising, no data sales, and no paid features. All contributions go directly toward development, technical operations, global distribution, and community management. Donations may be tax-deductible depending on your jurisdiction.",
     "denominationsTitle": "Για όλα τα δόγματα και τους τελετουργούς",
     "denominationsSubtitle": "Το BibleBot.Life είναι οικουμενικό – για μεταρρυθμισμένες, καθολικές, λουθηρανικές και ελεύθερες ευαγγελικές κοινότητες, καθώς και ελεύθερους επαγγελματίες τελετουργούς.",
     "denomination": {
@@ -1144,13 +1144,12 @@
     "f9Desc": "Τραγούδια, προσευχές, αναγνώσεις και λειτουργικά κείμενα — με δυνατότητα αναζήτησης, με ετικέτες, που μεγαλώνουν με κάθε τελετή.",
     "f10Title": "Εκκλησιαστικό Μητρώο",
     "f10Desc": "Καταγράψτε τακτοποιημένα βαπτίσεις, γάμους και κηδείες. Όλα τα δεδομένα σε ένα μέρος.",
-    "pricingTitle": "Απλή τιμολόγηση",
-    "pricingSubtitle": "Ξεκινήστε δωρεάν. Αναβαθμίστε όταν χρειάζεστε περισσότερα.",
+    "pricingTitle": "Free & supported by donations",
+    "pricingSubtitle": "Start for free. All Pro features are made possible through sponsorship.",
     "planPersonal": "Προσωπικό",
     "planFree": "Δωρεάν",
     "planPro": "Pro",
-    "planProPrice": "CHF 29",
-    "planProPeriod": "/ μήνα",
+    "planProPeriod": "",
     "recommended": "Συνιστάται",
     "pf1": "Δημιουργία κειμένων τελετών",
     "pf2": "Ηχογράφηση & μεταγραφή φωνής",
@@ -1168,7 +1167,7 @@
     "pf14": "Εκκλησιαστικό μητρώο",
     "pf15": "Προτεραιότητα υποστήριξης",
     "ctaFree": "Ξεκινήστε",
-    "ctaTrial": "14-ήμερη δωρεάν δοκιμή",
+    "ctaTrial": "Request sponsorship",
     "faqTitle": "Συχνές Ερωτήσεις",
     "faq1q": "Για ποιον είναι αυτό το εργαλείο;",
     "faq1a": "Για ιερείς, life coaches, ανεξάρτητους ομιλητές κηδειών, τελεστές γάμων, νοσοκομειακούς ιερείς, πάστορες και οποιονδήποτε προετοιμάζει και διεξάγει τελετές, εργαστήρια ή συνεδρίες coaching.",
@@ -1187,7 +1186,9 @@
     "footerPrivacy": "Πολιτική Απορρήτου",
     "footerChurches": "Για Εκκλησίες",
     "seoTitle": "BibleBot.Life για Ιερείς & Life Coaches — Σχεδιάστε Τελετές & Συνεδρίες",
-    "seoDesc": "Σχεδιάστε κηδείες, γάμους, συνεδρίες coaching επαγγελματικά: ηχογράφηση φωνής, δημιουργία κειμένου, teleprompter, ημερολόγιο και συνεργασία."
+    "seoDesc": "Σχεδιάστε κηδείες, γάμους, συνεδρίες coaching επαγγελματικά: ηχογράφηση φωνής, δημιουργία κειμένου, teleprompter, ημερολόγιο και συνεργασία.",
+    "planProSupported": "Made possible by donations",
+    "ctaSponsor": "Request sponsorship"
   },
   "pricing": {
     "onRequest": "Πατρονία κατόπιν αιτήματος",

@@ -683,12 +683,12 @@
         "desc": "Impulsseja ja keskustelunaiheita ryhmille ja kotipiireille."
       }
     },
-    "pricingTitle": "Mecenaatti-paketit",
-    "pricingSubtitle": "Tue kumppanisiia ja seurakuntaasi sopivalla mecenaatti-paketilla.",
-    "popular": "Suosittu",
+    "pricingTitle": "Sponsorship Packages",
+    "pricingSubtitle": "BibleBot.Life is free and ad-free. Organizations can support the project through sponsorship and receive additional features.",
+    "popular": "Recommended",
     "free": "Ilmainen",
     "perYear": "henkilöä / vuosi",
-    "contact": "Ota yhteyttä",
+    "contact": "Request sponsorship",
     "tier": {
       "free": {
         "name": "Sinapinsiemen",
@@ -745,9 +745,9 @@
     "contactSuccess": "Viesti lähetetty! 🙏",
     "contactSuccessDesc": "Seurakunta ottaa sinuun yhteyttä.",
     "recommendedBy": "Suosittelee {{name}}",
-    "setup": "Asennus (kertaluonteinen)",
+    "setup": "",
     "form": {
-      "title": "Kiinnostuitko? Kirjoita meille!",
+      "title": "Interested in sponsoring?",
       "subtitle": "Otamme yhteyttä 48 tunnin kuluessa.",
       "name": "Nimesi",
       "email": "Sähköpostiosoite",
@@ -755,7 +755,7 @@
       "tier": "Haluttu paketti",
       "tierPlaceholder": "Valitse paketti...",
       "message": "Viestisi",
-      "submit": "Lähetä pyyntö",
+      "submit": "Send sponsorship request",
       "success": "Pyyntö lähetetty! Otamme pian yhteyttä. 🙏",
       "error": "Virhe lähetyksessä. Yritä uudelleen.",
       "orgType": "Organisaation tyyppi",
@@ -824,7 +824,7 @@
         "desc": "Täydentäviä hengellisiä impulsseja psykososiaalisen neuvonnan asiakkaille."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As kumppanisi is a private project, donations are not tax-deductible.",
+    "patronageNote": "BibleBot.Life is run by a non-profit association and funded exclusively through voluntary donations and sponsorships. There is no advertising, no data sales, and no paid features. All contributions go directly toward development, technical operations, global distribution, and community management. Donations may be tax-deductible depending on your jurisdiction.",
     "denominationsTitle": "Kaikille tunnustuskunnille ja seremoniamestareille",
     "denominationsSubtitle": "BibleBot.Life on ekumeeninen – reformoiduille, katolisille, luterilaisille ja vapaan kirkon yhteisöille sekä freelance-seremonimestareille.",
     "denomination": {
@@ -1143,13 +1143,12 @@
     "f9Desc": "Lauluja, rukouksia, lukemuksia ja liturgisia tekstejä – haettavissa, tagattuja, kasvaa jokaisen seremonian myötä.",
     "f10Title": "Kirkon rekisteri",
     "f10Desc": "Dokumentoi siististi kasteet, häät ja hautajaiset. Kaikki tiedot yhdessä paikassa.",
-    "pricingTitle": "Yksinkertainen hinnoittelu",
-    "pricingSubtitle": "Aloita ilmaiseksi. Päivitä, kun tarvitset enemmän.",
+    "pricingTitle": "Free & supported by donations",
+    "pricingSubtitle": "Start for free. All Pro features are made possible through sponsorship.",
     "planPersonal": "Henkilökohtainen",
     "planFree": "Ilmainen",
     "planPro": "Pro",
-    "planProPrice": "CHF 29",
-    "planProPeriod": "/ kk",
+    "planProPeriod": "",
     "recommended": "Suositeltu",
     "pf1": "Luo seremonian tekstejä",
     "pf2": "Äänitys ja transkriptio",
@@ -1167,7 +1166,7 @@
     "pf14": "Kirkon rekisteri",
     "pf15": "Prioriteettituki",
     "ctaFree": "Aloita",
-    "ctaTrial": "14 päivän ilmainen kokeilu",
+    "ctaTrial": "Request sponsorship",
     "faqTitle": "Usein kysytyt kysymykset",
     "faq1q": "Kenelle tämä työkalu on tarkoitettu?",
     "faq1a": "Sielunhoitajille, elämänvalmentajille, freelance-hautajaispuhujille, hääjuhlien järjestäjille, sairaalasielunhoitajille, pastoreille ja kaikille, jotka valmistautuvat ja toteuttavat seremonioita, työpajoja tai valmennuksia.",
@@ -1186,7 +1185,9 @@
     "footerPrivacy": "Tietosuojakäytäntö",
     "footerChurches": "Kirkoille",
     "seoTitle": "BibleBot.Life sielunhoitajille ja elämänvalmentajille – Suunnittele seremonioita ja istuntoja",
-    "seoDesc": "Suunnittele hautajaisia, häitä, valmennuksia ammattimaisesti: äänitys, tekstin luonti, teleprompteri, kalenteri ja yhteistyö."
+    "seoDesc": "Suunnittele hautajaisia, häitä, valmennuksia ammattimaisesti: äänitys, tekstin luonti, teleprompteri, kalenteri ja yhteistyö.",
+    "planProSupported": "Made possible by donations",
+    "ctaSponsor": "Request sponsorship"
   },
   "pricing": {
     "onRequest": "Suojelus pyynnöstä",

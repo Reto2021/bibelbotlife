@@ -683,12 +683,12 @@
         "desc": "Impulser og diskussionsoplæg for grupper og huskreede."
       }
     },
-    "pricingTitle": "Patronatspakker",
-    "pricingSubtitle": "Støt din ledsager og din organisation med den rette patronatspakke.",
-    "popular": "Populær",
+    "pricingTitle": "Sponsorship Packages",
+    "pricingSubtitle": "BibleBot.Life is free and ad-free. Organizations can support the project through sponsorship and receive additional features.",
+    "popular": "Recommended",
     "free": "Gratis",
     "perYear": "personer / år",
-    "contact": "Kontakt os",
+    "contact": "Request sponsorship",
     "tier": {
       "free": {
         "name": "Sennepsfrø",
@@ -745,9 +745,9 @@
     "contactSuccess": "Besked sendt! 🙏",
     "contactSuccessDesc": "Organisationen vender tilbage til dig.",
     "recommendedBy": "Anbefalet af {{name}}",
-    "setup": "Opsætning (engangs)",
+    "setup": "",
     "form": {
-      "title": "Interesseret? Kontakt os!",
+      "title": "Interested in sponsoring?",
       "subtitle": "Vi vender tilbage inden for 48 timer.",
       "name": "Dit navn",
       "email": "E-mailadresse",
@@ -755,7 +755,7 @@
       "tier": "Ønsket pakke",
       "tierPlaceholder": "Vælg pakke...",
       "message": "Din besked",
-      "submit": "Send forespørgsel",
+      "submit": "Send sponsorship request",
       "success": "Forespørgsel sendt! Vi kontakter dig snart. 🙏",
       "error": "Fejl ved afsendelse. Prøv igen.",
       "orgType": "Organisationstype",
@@ -824,7 +824,7 @@
         "desc": "Supplerende åndelige impulser for klienter i psykosocial rådgivning."
       }
     },
-    "patronageNote": "BibleBot.Life er et privat, ikke-kommercielt projekt drevet frivilligt og finansieret udelukkende gennem donationer.",
+    "patronageNote": "BibleBot.Life is run by a non-profit association and funded exclusively through voluntary donations and sponsorships. There is no advertising, no data sales, and no paid features. All contributions go directly toward development, technical operations, global distribution, and community management. Donations may be tax-deductible depending on your jurisdiction.",
     "denominationsTitle": "For alle trosretninger og ceremoniledere",
     "denominationsSubtitle": "BibleBot.Life er økumenisk – for reformerte, katolske, lutherske og frikirkelige fællesskaber samt freelance ceremoniledere.",
     "denomination": {
@@ -1143,13 +1143,12 @@
     "f9Desc": "Sange, bønner, læsninger og liturgiske tekster – søgbare, taggede, voksende med hver ceremoni.",
     "f10Title": "Kirkebog",
     "f10Desc": "Dokumenter dåb, bryllupper og begravelser pænt. Alle data på ét sted.",
-    "pricingTitle": "Enkel prissætning",
-    "pricingSubtitle": "Start gratis. Opgrader, når du har brug for mere.",
+    "pricingTitle": "Free & supported by donations",
+    "pricingSubtitle": "Start for free. All Pro features are made possible through sponsorship.",
     "planPersonal": "Personlig",
     "planFree": "Gratis",
     "planPro": "Pro",
-    "planProPrice": "CHF 29",
-    "planProPeriod": "/ måned",
+    "planProPeriod": "",
     "recommended": "Anbefalet",
     "pf1": "Opret ceremonitekster",
     "pf2": "Stemmeoptagelse & transskription",
@@ -1167,7 +1166,7 @@
     "pf14": "Kirkebog",
     "pf15": "Prioriteret support",
     "ctaFree": "Kom i gang",
-    "ctaTrial": "14-dages gratis prøveperiode",
+    "ctaTrial": "Request sponsorship",
     "faqTitle": "Ofte stillede spørgsmål",
     "faq1q": "Hvem er dette værktøj til?",
     "faq1a": "Til præster, life coaches, freelance begravelsestaler, bryllupscelebranter, hospitalspræster, præster og alle, der forbereder og afholder ceremonier, workshops eller coachingsessioner.",
@@ -1186,7 +1185,9 @@
     "footerPrivacy": "Fortrolighedspolitik",
     "footerChurches": "Til kirker",
     "seoTitle": "BibleBot.Life til præster og life coaches — Planlæg ceremonier og sessioner",
-    "seoDesc": "Planlæg begravelser, bryllupper, coachingsessioner professionelt: stemmeoptagelse, tekstgenerering, teleprompter, kalender og samarbejde."
+    "seoDesc": "Planlæg begravelser, bryllupper, coachingsessioner professionelt: stemmeoptagelse, tekstgenerering, teleprompter, kalender og samarbejde.",
+    "planProSupported": "Made possible by donations",
+    "ctaSponsor": "Request sponsorship"
   },
   "pricing": {
     "onRequest": "Patronat på forespørgsel",

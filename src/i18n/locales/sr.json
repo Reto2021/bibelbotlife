@@ -722,12 +722,12 @@
         "desc": "Impulsi i podsticaji za diskusiju za grupe i kućne crkve."
       }
     },
-    "pricingTitle": "Paketi pokroviteljstva",
-    "pricingSubtitle": "Podržite vaš pratilac i svoju zajednicu odgovarajućim paketom pokroviteljstva.",
-    "popular": "Popularno",
+    "pricingTitle": "Sponsorship Packages",
+    "pricingSubtitle": "BibleBot.Life is free and ad-free. Organizations can support the project through sponsorship and receive additional features.",
+    "popular": "Recommended",
     "free": "Besplatno",
     "perYear": "особа / годишnje",
-    "contact": "Kontaktirajte nas",
+    "contact": "Request sponsorship",
     "tier": {
       "free": {
         "name": "Senfkorn (Seme gorušice)",
@@ -784,9 +784,9 @@
     "contactSuccess": "Poruka poslata! 🙏",
     "contactSuccessDesc": "Zajednica će vam se javiti.",
     "recommendedBy": "Preporučuje {{name}}",
-    "setup": "Podešavanje (jednokratno)",
+    "setup": "",
     "form": {
-      "title": "Zainteresovani? Pišite nam!",
+      "title": "Interested in sponsoring?",
       "subtitle": "Javićemo vam se u roku od 48 sati.",
       "name": "Vaše ime",
       "email": "E-mail adresa",
@@ -794,7 +794,7 @@
       "tier": "Željeni paket",
       "tierPlaceholder": "Izaberite paket...",
       "message": "Vaša poruka",
-      "submit": "Pošalji upit",
+      "submit": "Send sponsorship request",
       "success": "Upit poslat! Uskoro ćemo vam se javiti. 🙏",
       "error": "Greška pri slanju. Molimo vas pokušajte ponovo.",
       "orgType": "Vrsta organizacije",
@@ -863,7 +863,7 @@
         "desc": "Допунски духовни подстицаји за клијенте у психосоцијалном саветовању."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As vaš pratilac is a private project, donations are not tax-deductible.",
+    "patronageNote": "BibleBot.Life is run by a non-profit association and funded exclusively through voluntary donations and sponsorships. There is no advertising, no data sales, and no paid features. All contributions go directly toward development, technical operations, global distribution, and community management. Donations may be tax-deductible depending on your jurisdiction.",
     "denominationsTitle": "За све вероисповести и водитеље церемонија",
     "denominationsSubtitle": "BibleBot.Life је екуменски – за реформиране, католичке, лутеранске и слободне евангеоске заједнице, као и за независне водитеље церемонија.",
     "denomination": {
@@ -1143,13 +1143,12 @@
     "f9Desc": "Pesme, molitve, čitanja i liturgijski tekstovi — pretraživi, označeni, rastu sa svakom ceremonijom.",
     "f10Title": "Crkveni registar",
     "f10Desc": "Uredno dokumentujte krštenja, venčanja i sahrane. Svi podaci na jednom mestu.",
-    "pricingTitle": "Jednostavne cene",
-    "pricingSubtitle": "Započnite besplatno. Nadogradite kada vam zatreba više.",
+    "pricingTitle": "Free & supported by donations",
+    "pricingSubtitle": "Start for free. All Pro features are made possible through sponsorship.",
     "planPersonal": "Lično",
     "planFree": "Besplatno",
     "planPro": "Pro",
-    "planProPrice": "CHF 29",
-    "planProPeriod": "/ mesečno",
+    "planProPeriod": "",
     "recommended": "Preporučeno",
     "pf1": "Kreirajte tekstove ceremonija",
     "pf2": "Snimanje glasa i transkripcija",
@@ -1167,7 +1166,7 @@
     "pf14": "Crkveni registar",
     "pf15": "Prioritetna podrška",
     "ctaFree": "Započnite",
-    "ctaTrial": "14-dnevna besplatna proba",
+    "ctaTrial": "Request sponsorship",
     "faqTitle": "Često postavljana pitanja",
     "faq1q": "Kome je namenjen ovaj alat?",
     "faq1a": "Za kapelane, životne trenere, slobodne govornike na sahranama, venčane celebrante, bolničke kapelane, pastore i sve koji pripremaju i vode ceremonije, radionice ili koučing sesije.",
@@ -1186,7 +1185,9 @@
     "footerPrivacy": "Politika privatnosti",
     "footerChurches": "Za crkve",
     "seoTitle": "BibleBot.Life za kapelane i životne trenere — Planirajte ceremonije i sesije",
-    "seoDesc": "Profesionalno planirajte sahrane, venčanja, koučing sesije: snimanje glasa, generisanje teksta, teleprompter, kalendar i saradnja."
+    "seoDesc": "Profesionalno planirajte sahrane, venčanja, koučing sesije: snimanje glasa, generisanje teksta, teleprompter, kalendar i saradnja.",
+    "planProSupported": "Made possible by donations",
+    "ctaSponsor": "Request sponsorship"
   },
   "pricing": {
     "onRequest": "Патронат на захтев",

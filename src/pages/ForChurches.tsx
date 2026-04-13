@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useCurrency } from "@/hooks/use-currency";
-import { useAppSetting } from "@/hooks/use-app-setting";
 import { getStoredReferralCode } from "@/hooks/useAnalytics";
 import { SEOHead } from "@/components/SEOHead";
 import { Link } from "react-router-dom";
@@ -16,16 +14,14 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 
 const tiers = [
-  { key: "free", setup: 0, annual: 0, icon: Sprout, popular: false },
-  { key: "community", setup: 490, annual: 790, icon: Footprints, popular: false },
-  { key: "gemeinde", setup: 990, annual: 1490, icon: Handshake, popular: true },
-  { key: "kirche", setup: 1990, annual: 2990, icon: TowerControl, popular: false },
+  { key: "free", icon: Sprout, popular: false },
+  { key: "community", icon: Footprints, popular: false },
+  { key: "gemeinde", icon: Handshake, popular: true },
+  { key: "kirche", icon: TowerControl, popular: false },
 ];
 
 const ForChurches = () => {
   const { t } = useTranslation();
-  const { formatPrice, currency } = useCurrency();
-  const { value: showPricing } = useAppSetting("show_pricing");
   const [formData, setFormData] = useState({ name: "", email: "", church_name: "", organization_type: "", preferred_tier: "", message: "" });
   const [sending, setSending] = useState(false);
 
@@ -214,30 +210,8 @@ const ForChurches = () => {
                   <p className="text-xs text-muted-foreground">{t(`church.tier.${tier.key}.size`)}</p>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-center mb-6">
-                    {showPricing ? (
-                      <>
-                        {tier.setup > 0 && (
-                          <p className="text-sm text-muted-foreground mb-1">
-                            {t("church.setup")}: <span className="font-semibold text-foreground">{formatPrice(tier.setup)}</span>
-                          </p>
-                        )}
-                        <p className="text-3xl font-bold text-foreground">
-                          {formatPrice(tier.annual)}
-                        </p>
-                        {tier.annual > 0 && t("church.perYear") ? <p className="text-xs text-muted-foreground">{t("church.perYear")}</p> : null}
-                        {currency !== "CHF" && tier.annual > 0 && (
-                          <p className="text-[10px] text-muted-foreground/60 mt-1">
-                            ≈ CHF {tier.annual.toLocaleString("de-CH")}.–
-                          </p>
-                        )}
-                      </>
-                    ) : (
-                      <p className="text-lg font-semibold text-muted-foreground">{t("pricing.onRequest")}</p>
-                    )}
-                  </div>
                   <Button
-                    className="w-full mt-6"
+                    className="w-full mt-4"
                     variant={tier.popular ? "default" : "outline"}
                     onClick={() => {
                       setFormData(prev => ({ ...prev, preferred_tier: tier.key }));

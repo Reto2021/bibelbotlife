@@ -683,12 +683,12 @@
         "desc": "Enspirasyon ak sijesyon diskisyon pou gwoup ak gwoup lakay."
       }
     },
-    "pricingTitle": "Pakè Patwonaj",
-    "pricingSubtitle": "Sipòte konpayon ou ak legliz ou a ak pakè patwonaj ki apwopriye a.",
-    "popular": "Popilè",
+    "pricingTitle": "Sponsorship Packages",
+    "pricingSubtitle": "BibleBot.Life is free and ad-free. Organizations can support the project through sponsorship and receive additional features.",
+    "popular": "Recommended",
     "free": "Gratis",
     "perYear": "moun / ane",
-    "contact": "Kontakte nou",
+    "contact": "Request sponsorship",
     "tier": {
       "free": {
         "name": "Grennen moutad",
@@ -745,9 +745,9 @@
     "contactSuccess": "Mesaj voye! 🙏",
     "contactSuccessDesc": "Legliz la ap kontakte w.",
     "recommendedBy": "Rekòmande pa {{name}}",
-    "setup": "Enstalasyon (yon sèl fwa)",
+    "setup": "",
     "form": {
-      "title": "Enterese? Ekri nou!",
+      "title": "Interested in sponsoring?",
       "subtitle": "N ap kontakte w nan 48 èdtan.",
       "name": "Non ou",
       "email": "Adrès imèl",
@@ -755,7 +755,7 @@
       "tier": "Pakè ou vle",
       "tierPlaceholder": "Chwazi pakè...",
       "message": "Mesaj ou",
-      "submit": "Voye demann",
+      "submit": "Send sponsorship request",
       "success": "Demann voye! N ap kontakte w byento. 🙏",
       "error": "Erè pandan voye. Tanpri eseye ankò.",
       "orgType": "Tip òganizasyon",
@@ -824,7 +824,7 @@
         "desc": "Enpilsyon espirityèl konplemantè pou kliyan nan konsèy psikososyal."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As konpayon ou is a private project, donations are not tax-deductible.",
+    "patronageNote": "BibleBot.Life is run by a non-profit association and funded exclusively through voluntary donations and sponsorships. There is no advertising, no data sales, and no paid features. All contributions go directly toward development, technical operations, global distribution, and community management. Donations may be tax-deductible depending on your jurisdiction.",
     "denominationsTitle": "Pou tout denominasyon ak lidè seremoni",
     "denominationsSubtitle": "BibleBot.Life se ekimenik – pou kominote Refòme, Katolik, Literyen ak Legliz Lib, ansanm ak lidè seremoni endepandan.",
     "denomination": {
@@ -1143,13 +1143,12 @@
     "f9Desc": "Chante, priyè, lekti, ak tèks litijik — ki ka chèche, tag, k ap grandi ak chak seremoni.",
     "f10Title": "Rejis Legliz",
     "f10Desc": "Dokimante batèm, maryaj, ak antèman avèk presizyon. Tout done nan yon sèl kote.",
-    "pricingTitle": "Pri senp",
-    "pricingSubtitle": "Kòmanse gratis. Amelyore lè ou bezwen plis.",
+    "pricingTitle": "Free & supported by donations",
+    "pricingSubtitle": "Start for free. All Pro features are made possible through sponsorship.",
     "planPersonal": "Pèsonèl",
     "planFree": "Gratis",
     "planPro": "Pro",
-    "planProPrice": "CHF 29",
-    "planProPeriod": "/ mwa",
+    "planProPeriod": "",
     "recommended": "Rekòmande",
     "pf1": "Kreye tèks seremoni",
     "pf2": "Anrejistreman vokal & transkripsyon",
@@ -1167,7 +1166,7 @@
     "pf14": "Rejis legliz",
     "pf15": "Sipò priyorite",
     "ctaFree": "Kòmanse",
-    "ctaTrial": "Esè gratis 14 jou",
+    "ctaTrial": "Request sponsorship",
     "faqTitle": "Kesyon yo Poze Souvan",
     "faq1q": "Pou kiyès zouti sa a ye?",
     "faq1a": "Pou aumonye, coach lavi, oratè antèman endepandan, selebran maryaj, aumonye lopital, pastè, ak nenpòt moun ki prepare epi fè seremoni, atelye, oswa sesyon coaching.",
@@ -1186,7 +1185,9 @@
     "footerPrivacy": "Règleman sou Konfidansyalite",
     "footerChurches": "Pou Legliz",
     "seoTitle": "BibleBot.Life pou Aumonye & Coach Lavi — Planifye Seremoni & Sesyon",
-    "seoDesc": "Planifye antèman, maryaj, sesyon coaching pwofesyonèl: anrejistreman vokal, jenerasyon tèks, teleprompter, kalandriye, ak kolaborasyon."
+    "seoDesc": "Planifye antèman, maryaj, sesyon coaching pwofesyonèl: anrejistreman vokal, jenerasyon tèks, teleprompter, kalandriye, ak kolaborasyon.",
+    "planProSupported": "Made possible by donations",
+    "ctaSponsor": "Request sponsorship"
   },
   "pricing": {
     "onRequest": "Patronaj sou demann",

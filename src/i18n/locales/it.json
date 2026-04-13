@@ -727,12 +727,12 @@
         "desc": "Impulsi e spunti di discussione per gruppi e circoli domestici."
       }
     },
-    "pricingTitle": "Pacchetti di patronato",
-    "pricingSubtitle": "Sostieni BibleBot e la tua organizzazione con il pacchetto di patronato adatto.",
-    "popular": "Popolare",
+    "pricingTitle": "Pacchetti di sponsorizzazione",
+    "pricingSubtitle": "BibleBot.Life è gratuito e senza pubblicità. Le organizzazioni possono sostenere il progetto tramite sponsorizzazione e ricevere funzionalità aggiuntive.",
+    "popular": "Consigliato",
     "free": "Gratuito",
     "perYear": "",
-    "contact": "Contattaci",
+    "contact": "Richiedi sponsorizzazione",
     "tier": {
       "free": {
         "name": "Grano di senape",
@@ -789,9 +789,9 @@
     "contactSuccess": "Messaggio inviato! 🙏",
     "contactSuccessDesc": "L'organizzazione ti contatterà.",
     "recommendedBy": "Consigliato da {{name}}",
-    "setup": "Configurazione (una tantum)",
+    "setup": "",
     "form": {
-      "title": "Interessato? Scrivici!",
+      "title": "Interessati a sponsorizzare?",
       "subtitle": "Ti contatteremo entro 48 ore.",
       "name": "Il tuo nome",
       "email": "Indirizzo e-mail",
@@ -799,7 +799,7 @@
       "tier": "Pacchetto desiderato",
       "tierPlaceholder": "Scegli pacchetto...",
       "message": "Il tuo messaggio",
-      "submit": "Invia richiesta",
+      "submit": "Invia richiesta di donazione",
       "success": "Richiesta inviata! Ti contatteremo presto. 🙏",
       "error": "Errore durante l'invio. Riprova.",
       "orgType": "Tipo di organizzazione",
@@ -892,7 +892,7 @@
         "desc": "Impulsi spirituali complementari per i clienti in consulenza psicosociale o pastorale."
       }
     },
-    "patronageNote": "BibleBot.Life è un progetto privato e non commerciale. È gestito su base volontaria e si finanzia esclusivamente tramite donazioni volontarie. Non ci sono pubblicità, nessuna vendita di dati e nessuna funzionalità a pagamento. Tutte le donazioni vanno direttamente a coprire i costi correnti (infrastruttura, hosting, sviluppo). Poiché BibleBot è un progetto privato, le donazioni non sono deducibili dalle tasse."
+    "patronageNote": "BibleBot.Life è gestito da un'associazione senza scopo di lucro e finanziato esclusivamente da donazioni e sponsorizzazioni volontarie. Nessuna pubblicità, nessuna vendita di dati, nessuna funzionalità a pagamento. Tutti i contributi vanno direttamente allo sviluppo, alle operazioni tecniche, alla distribuzione globale e alla gestione della comunità. Le donazioni possono essere deducibili dalle tasse a seconda della giurisdizione."
   },
   "institutions": {
     "badge": "Per organizzazioni",
@@ -1143,13 +1143,12 @@
     "f9Desc": "Canti, preghiere, letture e testi liturgici — ricercabili, con tag, che crescono con ogni cerimonia.",
     "f10Title": "Libro della chiesa e registro",
     "f10Desc": "Documenta accuratamente battesimi, matrimoni e funerali. Tutti i dati in un unico luogo.",
-    "pricingTitle": "Prezzi semplici",
-    "pricingSubtitle": "Inizia gratuitamente. Aggiorna quando hai bisogno di più.",
+    "pricingTitle": "Gratuito e sostenuto da donazioni",
+    "pricingSubtitle": "Inizia gratis. Tutte le funzionalità Pro sono rese possibili dalla sponsorizzazione.",
     "planPersonal": "Personale",
     "planFree": "Gratuito",
     "planPro": "Pro",
-    "planProPrice": "CHF 29",
-    "planProPeriod": "/ mese",
+    "planProPeriod": "",
     "recommended": "Consigliato",
     "pf1": "Crea testi per cerimonie",
     "pf2": "Registrazione vocale e trascrizione",
@@ -1167,7 +1166,7 @@
     "pf14": "Libro della chiesa / Registro",
     "pf15": "Supporto prioritario",
     "ctaFree": "Inizia ora",
-    "ctaTrial": "Prova gratuita di 14 giorni",
+    "ctaTrial": "Richiedi sponsorizzazione",
     "faqTitle": "Domande frequenti",
     "faq1q": "Per chi è pensato questo strumento?",
     "faq1a": "Per pastori, life coach, oratori funebri freelance, maestri di cerimonie nuziali, pastori ospedalieri, parroci e tutti coloro che preparano e conducono cerimonie, workshop o sessioni di coaching.",
@@ -1186,7 +1185,9 @@
     "footerPrivacy": "Privacy",
     "footerChurches": "Per le comunità",
     "seoTitle": "BibleBot.Life per pastori e life coach — Pianifica cerimonie e sessioni",
-    "seoDesc": "Pianifica funerali, matrimoni, sessioni di coaching in modo professionale: registrazione vocale, generazione di testi, teleprompter, calendario e collaborazione."
+    "seoDesc": "Pianifica funerali, matrimoni, sessioni di coaching in modo professionale: registrazione vocale, generazione di testi, teleprompter, calendario e collaborazione.",
+    "planProSupported": "Reso possibile dalle donazioni",
+    "ctaSponsor": "Richiedi sponsorizzazione"
   },
   "pricing": {
     "onRequest": "Patronato su richiesta",

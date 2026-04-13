@@ -722,12 +722,12 @@
         "desc": "Inspirasi dan pemicu diskusi untuk kelompok dan kelompok sel."
       }
     },
-    "pricingTitle": "Paket Patronase",
-    "pricingSubtitle": "Dukung pendamping Anda dan jemaat Anda dengan paket patronase yang sesuai.",
-    "popular": "Populer",
+    "pricingTitle": "Sponsorship Packages",
+    "pricingSubtitle": "BibleBot.Life is free and ad-free. Organizations can support the project through sponsorship and receive additional features.",
+    "popular": "Recommended",
     "free": "Gratis",
     "perYear": "orang / tahun",
-    "contact": "Hubungi Kami",
+    "contact": "Request sponsorship",
     "tier": {
       "free": {
         "name": "Biji Sesawi",
@@ -784,9 +784,9 @@
     "contactSuccess": "Pesan Terkirim! 🙏",
     "contactSuccessDesc": "Gereja akan menghubungi Anda.",
     "recommendedBy": "Direkomendasikan oleh {{name}}",
-    "setup": "Pengaturan (satu kali)",
+    "setup": "",
     "form": {
-      "title": "Tertarik? Hubungi Kami!",
+      "title": "Interested in sponsoring?",
       "subtitle": "Kami akan menghubungi Anda dalam waktu 48 jam.",
       "name": "Nama Anda",
       "email": "Alamat Email",
@@ -794,7 +794,7 @@
       "tier": "Paket yang Diinginkan",
       "tierPlaceholder": "Pilih paket...",
       "message": "Pesan Anda",
-      "submit": "Kirim Permintaan",
+      "submit": "Send sponsorship request",
       "success": "Permintaan terkirim! Kami akan segera menghubungi Anda. 🙏",
       "error": "Kesalahan saat mengirim. Silakan coba lagi.",
       "orgType": "Jenis Organisasi",
@@ -863,7 +863,7 @@
         "desc": "Impuls spiritual pelengkap untuk klien dalam konseling psikososial."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As pendamping Anda is a private project, donations are not tax-deductible.",
+    "patronageNote": "BibleBot.Life is run by a non-profit association and funded exclusively through voluntary donations and sponsorships. There is no advertising, no data sales, and no paid features. All contributions go directly toward development, technical operations, global distribution, and community management. Donations may be tax-deductible depending on your jurisdiction.",
     "denominationsTitle": "Untuk semua denominasi dan pemimpin upacara",
     "denominationsSubtitle": "BibleBot.Life bersifat ekumenis – untuk komunitas Reformasi, Katolik, Lutheran, dan Gereja Bebas Injili, serta pemimpin upacara freelance.",
     "denomination": {
@@ -1143,13 +1143,12 @@
     "f9Desc": "Lagu, doa, bacaan, dan teks liturgi — dapat dicari, diberi tag, berkembang dengan setiap upacara.",
     "f10Title": "Daftar Gereja",
     "f10Desc": "Dokumentasikan pembaptisan, pernikahan, dan pemakaman dengan rapi. Semua data di satu tempat.",
-    "pricingTitle": "Harga sederhana",
-    "pricingSubtitle": "Mulai gratis. Tingkatkan saat Anda membutuhkan lebih banyak.",
+    "pricingTitle": "Free & supported by donations",
+    "pricingSubtitle": "Start for free. All Pro features are made possible through sponsorship.",
     "planPersonal": "Pribadi",
     "planFree": "Gratis",
     "planPro": "Pro",
-    "planProPrice": "CHF 29",
-    "planProPeriod": "/ bulan",
+    "planProPeriod": "",
     "recommended": "Direkomendasikan",
     "pf1": "Buat teks upacara",
     "pf2": "Perekaman & transkripsi suara",
@@ -1167,7 +1166,7 @@
     "pf14": "Daftar gereja",
     "pf15": "Dukungan prioritas",
     "ctaFree": "Mulai",
-    "ctaTrial": "Uji coba gratis 14 hari",
+    "ctaTrial": "Request sponsorship",
     "faqTitle": "Pertanyaan yang Sering Diajukan",
     "faq1q": "Untuk siapa alat ini?",
     "faq1a": "Untuk pendeta, pelatih kehidupan, pembicara pemakaman lepas, perayaan pernikahan, pendeta rumah sakit, pastor, dan siapa saja yang mempersiapkan dan melakukan upacara, lokakarya, atau sesi pelatihan.",
@@ -1186,7 +1185,9 @@
     "footerPrivacy": "Kebijakan Privasi",
     "footerChurches": "Untuk Gereja",
     "seoTitle": "BibleBot.Life untuk Pendeta & Pelatih Kehidupan — Rencanakan Upacara & Sesi",
-    "seoDesc": "Rencanakan pemakaman, pernikahan, sesi pelatihan secara profesional: perekaman suara, pembuatan teks, teleprompter, kalender, dan kolaborasi."
+    "seoDesc": "Rencanakan pemakaman, pernikahan, sesi pelatihan secara profesional: perekaman suara, pembuatan teks, teleprompter, kalender, dan kolaborasi.",
+    "planProSupported": "Made possible by donations",
+    "ctaSponsor": "Request sponsorship"
   },
   "pricing": {
     "onRequest": "Patronase atas permintaan",

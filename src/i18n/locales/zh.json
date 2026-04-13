@@ -723,12 +723,12 @@
         "desc": "为小组和家庭聚会提供启发和讨论点。"
       }
     },
-    "pricingTitle": "赞助套餐",
-    "pricingSubtitle": "选择合适的赞助套餐，支持 您的伴侣 和您的教会。",
-    "popular": "热门",
+    "pricingTitle": "Sponsorship Packages",
+    "pricingSubtitle": "BibleBot.Life is free and ad-free. Organizations can support the project through sponsorship and receive additional features.",
+    "popular": "Recommended",
     "free": "免费",
     "perYear": "人 / 年",
-    "contact": "联系我们",
+    "contact": "Request sponsorship",
     "tier": {
       "free": {
         "name": "芥菜种（Senfkorn）",
@@ -785,9 +785,9 @@
     "contactSuccess": "消息已发送！🙏",
     "contactSuccessDesc": "教会将尽快与您联系。",
     "recommendedBy": "{{name}}推荐",
-    "setup": "设置（一次性）",
+    "setup": "",
     "form": {
-      "title": "感兴趣？请联系我们！",
+      "title": "Interested in sponsoring?",
       "subtitle": "我们将在48小时内回复。",
       "name": "您的姓名",
       "email": "电子邮件地址",
@@ -795,7 +795,7 @@
       "tier": "期望的套餐",
       "tierPlaceholder": "选择套餐...",
       "message": "您的消息",
-      "submit": "发送请求",
+      "submit": "Send sponsorship request",
       "success": "请求已发送！我们将尽快与您联系。🙏",
       "error": "发送失败。请重试。",
       "orgType": "组织类型",
@@ -864,7 +864,7 @@
         "desc": "为心理社会咨询客户提供补充性灵性启发。"
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As 您的伴侣 is a private project, donations are not tax-deductible.",
+    "patronageNote": "BibleBot.Life is run by a non-profit association and funded exclusively through voluntary donations and sponsorships. There is no advertising, no data sales, and no paid features. All contributions go directly toward development, technical operations, global distribution, and community management. Donations may be tax-deductible depending on your jurisdiction.",
     "denominationsTitle": "适用于所有教派和仪式主持人",
     "denominationsSubtitle": "BibleBot.Life是普世教会的——适用于改革宗、天主教、路德宗和自由福音派社区，以及自由职业仪式主持人。",
     "denomination": {
@@ -1144,13 +1144,12 @@
     "f9Desc": "歌曲、祈祷文、读物和礼仪文本——可搜索、带标签，并随着每一次仪式而增长。",
     "f10Title": "教会登记",
     "f10Desc": "整齐地记录洗礼、婚礼和葬礼。所有数据集中在一处。",
-    "pricingTitle": "简单定价",
-    "pricingSubtitle": "免费开始。需要更多时再升级。",
+    "pricingTitle": "Free & supported by donations",
+    "pricingSubtitle": "Start for free. All Pro features are made possible through sponsorship.",
     "planPersonal": "个人版",
     "planFree": "免费版",
     "planPro": "专业版",
-    "planProPrice": "29 瑞士法郎",
-    "planProPeriod": "/ 月",
+    "planProPeriod": "",
     "recommended": "推荐",
     "pf1": "创建仪式文本",
     "pf2": "语音录制与转录",
@@ -1168,7 +1167,7 @@
     "pf14": "教会登记",
     "pf15": "优先支持",
     "ctaFree": "开始使用",
-    "ctaTrial": "14天免费试用",
+    "ctaTrial": "Request sponsorship",
     "faqTitle": "常见问题",
     "faq1q": "这个工具是为谁准备的？",
     "faq1a": "适用于牧师、生活教练、自由丧礼司仪、婚礼主持人、医院牧师、牧师以及任何准备和主持仪式、研讨会或辅导会话的人。",
@@ -1187,7 +1186,9 @@
     "footerPrivacy": "隐私政策",
     "footerChurches": "适用于教会",
     "seoTitle": "BibleBot.Life 适用于牧师和生活教练 — 规划仪式和会话",
-    "seoDesc": "专业规划葬礼、婚礼、辅导会话：语音录制、文本生成、提词器、日历和协作。"
+    "seoDesc": "专业规划葬礼、婚礼、辅导会话：语音录制、文本生成、提词器、日历和协作。",
+    "planProSupported": "Made possible by donations",
+    "ctaSponsor": "Request sponsorship"
   },
   "pricing": {
     "onRequest": "赞助按需提供",

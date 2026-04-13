@@ -722,12 +722,12 @@
         "desc": "ለቡድኖች እና ለቤት ክበቦች ማነቃቂያዎች እና የውይይት ማስጀመሪያዎች።"
       }
     },
-    "pricingTitle": "የድጋፍ ፓኬጆች",
-    "pricingSubtitle": "አጃቢህ እና ቤተክርስቲያንዎን በተስማሚ ፓኬጅ ይደግፉ።",
-    "popular": "ተወዳጅ",
+    "pricingTitle": "Sponsorship Packages",
+    "pricingSubtitle": "BibleBot.Life is free and ad-free. Organizations can support the project through sponsorship and receive additional features.",
+    "popular": "Recommended",
     "free": "ነጻ",
     "perYear": "ሰዎች / ዓመት",
-    "contact": "ያግኙን",
+    "contact": "Request sponsorship",
     "tier": {
       "free": {
         "name": "የሰናፍጭ ዘር",
@@ -784,9 +784,9 @@
     "contactSuccess": "መልዕክት ተልኳል! 🙏",
     "contactSuccessDesc": "ቤተክርስቲያኑ ያገኙዎታል።",
     "recommendedBy": "በ{{name}} የተመከረ",
-    "setup": "ማዋቀር (አንድ ጊዜ)",
+    "setup": "",
     "form": {
-      "title": "ፍላጎት አለዎት? ይጻፉልን!",
+      "title": "Interested in sponsoring?",
       "subtitle": "በ48 ሰዓታት ውስጥ እናገኝዎታለን።",
       "name": "ስምዎ",
       "email": "ኢ-ሜይል አድራሻ",
@@ -794,7 +794,7 @@
       "tier": "የሚፈለግ ፓኬጅ",
       "tierPlaceholder": "ፓኬጅ ይምረጡ...",
       "message": "መልዕክትዎ",
-      "submit": "ጥያቄ ላክ",
+      "submit": "Send sponsorship request",
       "success": "ጥያቄ ተልኳል! በቅርቡ እናገኝዎታለን። 🙏",
       "error": "ስህተት። እባክዎ እንደገና ይሞክሩ።",
       "orgType": "የድርጅት ዓይነት",
@@ -863,7 +863,7 @@
         "desc": "ለስነ-ልቦና ማህበራዊ ምክር ተጨማሪ መንፈሳዊ ግፊቶች።"
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As አጃቢህ is a private project, donations are not tax-deductible.",
+    "patronageNote": "BibleBot.Life is run by a non-profit association and funded exclusively through voluntary donations and sponsorships. There is no advertising, no data sales, and no paid features. All contributions go directly toward development, technical operations, global distribution, and community management. Donations may be tax-deductible depending on your jurisdiction.",
     "denominationsTitle": "ለሁሉም ሃይማኖቶች እና ሥርዓተ ግብር መሪዎች",
     "denominationsSubtitle": "BibleBot.Life ኢኩመኒካዊ ነው – ለተሃድሶ፣ ካቶሊክ፣ ሉተራን እና ነጻ ወንጌላዊ ማኅበረሰቦች፣ እንዲሁም ነጻ ሥርዓተ ግብር መሪዎች።",
     "denomination": {
@@ -1143,13 +1143,12 @@
     "f9Desc": "ዘፈኖች፣ ጸሎቶች፣ ንባቦች እና የአምልኮ ጽሑፎች — ሊፈለጉ የሚችሉ፣ መለያ የተሰጣቸው፣ በእያንዳንዱ ስነ ስርዓት የሚያድጉ።",
     "f10Title": "የቤተክርስቲያን መዝገብ",
     "f10Desc": "ጥምቀቶችን፣ ሰርግዎችን እና የቀብር ሥነ ሥርዓቶችን በጥንቃቄ ይመዝግቡ። ሁሉም መረጃ በአንድ ቦታ።",
-    "pricingTitle": "ቀላል ዋጋ",
-    "pricingSubtitle": "በነጻ ይጀምሩ። ተጨማሪ ሲፈልጉ ያሻሽሉ።",
+    "pricingTitle": "Free & supported by donations",
+    "pricingSubtitle": "Start for free. All Pro features are made possible through sponsorship.",
     "planPersonal": "የግል",
     "planFree": "ነጻ",
     "planPro": "ፕሮ",
-    "planProPrice": "CHF 29",
-    "planProPeriod": "/ በወር",
+    "planProPeriod": "",
     "recommended": "የሚመከር",
     "pf1": "የስነ ስርዓት ጽሑፎችን ይፍጠሩ",
     "pf2": "የድምጽ ቀረጻ እና ግልባጭ",
@@ -1167,7 +1166,7 @@
     "pf14": "የቤተክርስቲያን መዝገብ",
     "pf15": "ቅድሚያ የሚሰጠው ድጋፍ",
     "ctaFree": "ይጀምሩ",
-    "ctaTrial": "የ14-ቀን ነጻ ሙከራ",
+    "ctaTrial": "Request sponsorship",
     "faqTitle": "ተደጋግሞ የሚነሱ ጥያቄዎች",
     "faq1q": "ይህ መሳሪያ ለማን ነው?",
     "faq1a": "ለካህናት፣ ለህይወት አሰልጣኞች፣ ለነጻ የቀብር ሥነ ሥርዓት ተናጋሪዎች፣ ለሰርግ አክባሪዎች፣ ለሆስፒታል ካህናት፣ ለፓስተሮች እና ስነ ስርዓቶችን፣ ወርክሾፖችን ወይም የአሰልጣኝነት ክፍለ ጊዜዎችን ለሚያዘጋጁ እና ለሚያካሂዱ ሁሉ ነው።",
@@ -1186,7 +1185,9 @@
     "footerPrivacy": "የግላዊነት ፖሊሲ",
     "footerChurches": "ለቤተክርስቲያኖች",
     "seoTitle": "BibleBot.Life ለካህናት እና ለህይወት አሰልጣኞች — ስነ ስርዓቶችን እና ክፍለ ጊዜዎችን ያቅዱ",
-    "seoDesc": "የቀብር ሥነ ሥርዓቶችን፣ ሰርግዎችን፣ የአሰልጣኝነት ክፍለ ጊዜዎችን በሙያዊ ያቅዱ፡ የድምጽ ቀረጻ፣ የጽሑፍ ትውልድ፣ ቴሌፕሮምፕተር፣ የቀን መቁጠሪያ እና ትብብር።"
+    "seoDesc": "የቀብር ሥነ ሥርዓቶችን፣ ሰርግዎችን፣ የአሰልጣኝነት ክፍለ ጊዜዎችን በሙያዊ ያቅዱ፡ የድምጽ ቀረጻ፣ የጽሑፍ ትውልድ፣ ቴሌፕሮምፕተር፣ የቀን መቁጠሪያ እና ትብብር።",
+    "planProSupported": "Made possible by donations",
+    "ctaSponsor": "Request sponsorship"
   },
   "pricing": {
     "onRequest": "ድጋፍ በጥያቄ",

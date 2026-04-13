@@ -727,12 +727,12 @@
         "desc": "Խթաններ և քննարկման թեմաներ խմբերի և տնային խմբակների համար։"
       }
     },
-    "pricingTitle": "Հովանավորության փաթեթներ",
-    "pricingSubtitle": "Աջակցեք BibleBot-ին և ձեր կազմակերպությանը համապատասխան հովանավորության փաթեթով։",
-    "popular": "Հանրաճանաչ",
+    "pricingTitle": "Sponsorship Packages",
+    "pricingSubtitle": "BibleBot.Life is free and ad-free. Organizations can support the project through sponsorship and receive additional features.",
+    "popular": "Recommended",
     "free": "Անվճար",
     "perYear": "",
-    "contact": "Կապ հաստատել",
+    "contact": "Request sponsorship",
     "tier": {
       "free": {
         "name": "Մանանեխի հատիկ",
@@ -789,9 +789,9 @@
     "contactSuccess": "Հաղորդագրությունն ուղարկված է։ 🙏",
     "contactSuccessDesc": "Կազմակերպությունը կկապվի ձեզ հետ։",
     "recommendedBy": "Խորհուրդ է տրվում {{name}}-ի կողմից",
-    "setup": "Կարգավորում (մեկանգամյա)",
+    "setup": "",
     "form": {
-      "title": "Հետաքրքրվա՞ծ եք։ Գրեք մեզ։",
+      "title": "Interested in sponsoring?",
       "subtitle": "Մենք կկապվենք ձեզ հետ 48 ժամվա ընթացքում։",
       "name": "Ձեր անունը",
       "email": "Էլ. փոստի հասցե",
@@ -799,7 +799,7 @@
       "tier": "Ցանկալի փաթեթ",
       "tierPlaceholder": "Ընտրել փաթեթ…",
       "message": "Ձեր հաղորդագրությունը",
-      "submit": "Ուղարկել հարցում",
+      "submit": "Send sponsorship request",
       "success": "Հարցումն ուղարկված է։ Մենք շուտով կկապվենք ձեզ հետ։ 🙏",
       "error": "Սխալ ուղարկելիս։ Խնդրում ենք կրկին փորձել։",
       "orgType": "Կազմակերպության տեսակը",
@@ -892,7 +892,7 @@
         "desc": "Լրացուցիչ հոգևոր խթաններ հաճախորդների համար հոգեսոցիալական կամ հոգևորական խորհրդատվության մեջ։"
       }
     },
-    "patronageNote": "BibleBot.Life-ը մասնավոր, ոչ առևտրային նախագիծ է։ Այն գործում է կամավորական հիմունքներով և ֆինանսավորվում է բացառապես կամավոր նվիրատվություններով։ Չկա գովազդ, տվյալների վաճառք և վճարովի գործառույթներ։ Բոլոր նվիրատվությունները ուղղակիորեն օգտագործվում են ընթացիկ ծախսերը (ենթակառուցվածք, հոսթինգ, մշակում) ծածկելու համար։ Քանի որ BibleBot-ը գործում է որպես մասնավոր նախագիծ, նվիրատվությունները հարկային արտոնություններ չունեն։"
+    "patronageNote": "BibleBot.Life is run by a non-profit association and funded exclusively through voluntary donations and sponsorships. There is no advertising, no data sales, and no paid features. All contributions go directly toward development, technical operations, global distribution, and community management. Donations may be tax-deductible depending on your jurisdiction."
   },
   "institutions": {
     "badge": "Կազմակերպությունների համար",
@@ -1143,13 +1143,12 @@
     "f9Desc": "Երգեր, աղոթքներ, ընթերցումներ և պատարագի տեքստեր՝ որոնելի, պիտակներով, աճող յուրաքանչյուր արարողության հետ։",
     "f10Title": "Եկեղեցական գիրք և գրանցամատյան",
     "f10Desc": "Մկրտություններ, ամուսնություններ և հուղարկավորություններ մաքուր փաստաթղթավորել։ Բոլոր տվյալները մեկ տեղում։",
-    "pricingTitle": "Պարզ գներ",
-    "pricingSubtitle": "Սկսեք անվճար։ Թարմացրեք, եթե ավելին է պետք։",
+    "pricingTitle": "Free & supported by donations",
+    "pricingSubtitle": "Start for free. All Pro features are made possible through sponsorship.",
     "planPersonal": "Անձնական",
     "planFree": "Անվճար",
     "planPro": "Պրո",
-    "planProPrice": "29 CHF",
-    "planProPeriod": "/ ամիս",
+    "planProPeriod": "",
     "recommended": "Խորհուրդ է տրվում",
     "pf1": "Ստեղծել արարողությունների տեքստեր",
     "pf2": "Ձայնագրում և տրանսկրիպցիա",
@@ -1167,7 +1166,7 @@
     "pf14": "Եկեղեցական գիրք / Գրանցամատյան",
     "pf15": "Առաջնահերթ աջակցություն",
     "ctaFree": "Սկսել հիմա",
-    "ctaTrial": "14 օր անվճար փորձաշրջան",
+    "ctaTrial": "Request sponsorship",
     "faqTitle": "Հաճախ տրվող հարցեր",
     "faq1q": "Ու՞մ համար է նախատեսված այս գործիքը։",
     "faq1a": "Հոգևորականների, կյանքի մարզիչների, ազատ աշխատող սգո խոսնակների, հարսանեկան արարողությունների վարողների, հիվանդանոցային հոգևորականների, քահանաների և բոլոր նրանց համար, ովքեր նախապատրաստում և անցկացնում են արարողություններ, սեմինարներ կամ մարզչական նիստեր։",
@@ -1186,7 +1185,9 @@
     "footerPrivacy": "Գաղտնիության քաղաքականություն",
     "footerChurches": "Եկեղեցիների համար",
     "seoTitle": "BibleBot.Life հոգևորականների և կյանքի մարզիչների համար՝ արարողություններ և նիստեր պլանավորել",
-    "seoDesc": "Հուղարկավորություններ, ամուսնություններ, մարզչական նիստեր պրոֆեսիոնալ կերպով պլանավորել. ձայնագրում, տեքստի ստեղծում, հեռուստապրոմպտեր, օրացույց և համագործակցություն։"
+    "seoDesc": "Հուղարկավորություններ, ամուսնություններ, մարզչական նիստեր պրոֆեսիոնալ կերպով պլանավորել. ձայնագրում, տեքստի ստեղծում, հեռուստապրոմպտեր, օրացույց և համագործակցություն։",
+    "planProSupported": "Made possible by donations",
+    "ctaSponsor": "Request sponsorship"
   },
   "pricing": {
     "onRequest": "Հովանավորություն ըստ հարցման",
