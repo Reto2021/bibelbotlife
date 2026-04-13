@@ -7,11 +7,13 @@ import { ChurchBanner } from "@/components/ChurchBanner";
 import { ReferralSection } from "@/components/ReferralSection";
 import { EntryTiles } from "@/components/EntryTiles";
 import { ChatHero } from "@/components/ChatHero";
-import { LifeWheelProvider, openLifeWheel } from "@/components/LifeWheel";
-import { openBibleBotChat } from "@/lib/chat-events";
+import { LifeWheelProvider } from "@/components/LifeWheel";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { AppLogo } from "@/components/AppLogo";
+import { ToolCard, useToolDefs, FavoriteToolsBar } from "@/components/ToolCards";
+import { useFavoriteTools } from "@/hooks/use-favorite-tools";
+import { useAuth } from "@/hooks/use-auth";
 
 // BibleBotChat overlay removed - chat is now inline in ChatHero
 const DailyImpulse = lazy(() => import("@/components/DailyImpulse"));
