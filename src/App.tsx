@@ -136,6 +136,7 @@ const App = () => {
           <AuthProvider>
             <AnalyticsProvider>
               <ScrollToTop />
+              <DirectionManager />
               <ChurchColorOverride />
               <Suspense fallback={<PageLoader />}>
                 <Routes>
