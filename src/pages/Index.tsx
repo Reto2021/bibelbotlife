@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react";
 import { SEOHead } from "@/components/SEOHead";
 import { useTranslation } from "react-i18next";
-import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, GraduationCap, Church, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass, Send, Building2, Shield, EyeOff } from "lucide-react";
+import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, GraduationCap, Church, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass, Send, Building2, Shield, EyeOff, Code2, Server, Globe, Headphones, ClipboardList, BookHeart } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { ChurchBanner } from "@/components/ChurchBanner";
 import { ReferralSection } from "@/components/ReferralSection";
@@ -463,7 +463,27 @@ const Index = () => {
             </CardContent>
           </Card>
 
-          <p className="text-sm text-muted-foreground mt-6">{t("donate.note")}</p>
+          {/* Verwendungszwecke */}
+          <div className="mt-10 max-w-lg mx-auto text-left">
+            <h3 className="text-lg font-semibold text-foreground mb-4 text-center">{t("donate.purposeHeading")}</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {[
+                { icon: Code2, key: "purposeItem1" },
+                { icon: Server, key: "purposeItem2" },
+                { icon: Globe, key: "purposeItem3" },
+                { icon: Headphones, key: "purposeItem4" },
+                { icon: ClipboardList, key: "purposeItem5" },
+                { icon: BookHeart, key: "purposeItem6" },
+              ].map(({ icon: Icon, key }) => (
+                <div key={key} className="flex items-start gap-3 p-3 rounded-lg bg-muted/50">
+                  <Icon className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+                  <span className="text-sm text-muted-foreground">{t(`donate.${key}`)}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <p className="text-sm text-muted-foreground mt-8">{t("donate.note")}</p>
         </div>
       </section>
 
