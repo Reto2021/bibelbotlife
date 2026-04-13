@@ -45,6 +45,7 @@ const LANGS = [
   { code: "tl", flag: "🇵🇭" },
   // Middle East
   { code: "ar", flag: "🇸🇦" },
+  { code: "he", flag: "🇮🇱" },
   // Africa
   { code: "sw", flag: "🇰🇪" },
   { code: "am", flag: "🇪🇹" },
