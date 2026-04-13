@@ -23,10 +23,36 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      (_event, session) => {
+      async (event, session) => {
         setSession(session);
         setUser(session?.user ?? null);
         setIsLoading(false);
+
+        // After OAuth signup, link church membership if consent was stored
+        if (event === "SIGNED_IN" && session?.user) {
+          const consent = sessionStorage.getItem("biblebot-church-consent");
+          const slug = localStorage.getItem("biblebot-church");
+          if (consent !== null && slug) {
+            sessionStorage.removeItem("biblebot-church-consent");
+            try {
+              const { data: church } = await (supabase
+                .from("church_partners_public" as any)
+                .select("id")
+                .eq("slug", slug)
+                .maybeSingle() as any);
+              if (church?.id) {
+                await supabase.from("church_members").upsert({
+                  user_id: session.user.id,
+                  church_id: church.id,
+                  consent_contact: consent === "1",
+                  source_slug: slug,
+                } as any, { onConflict: "user_id,church_id" });
+              }
+            } catch {
+              // silent — non-critical
+            }
+          }
+        }
       }
     );
 

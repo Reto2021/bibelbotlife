@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { Save, CreditCard, Bell } from "lucide-react";
+import { Save, CreditCard, Bell, Users } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
 import { Switch } from "@/components/ui/switch";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { useUserChurch } from "@/hooks/use-user-church";
 import { useAuth } from "@/hooks/use-auth";
 import { supabase } from "@/integrations/supabase/client";
@@ -427,6 +428,86 @@ export default function SettingsPage() {
           </div>
         </CardContent>
       </Card>
+
+      {/* Members Section */}
+      <MembersSection churchId={church?.id} />
     </div>
+  );
+}
+
+function MembersSection({ churchId }: { churchId?: string }) {
+  const { t } = useTranslation();
+
+  const { data: members, isLoading } = useQuery({
+    queryKey: ["church-members", churchId],
+    enabled: !!churchId,
+    queryFn: async () => {
+      const { data, error } = await (supabase
+        .from("church_member_details" as any)
+        .select("*")
+        .eq("church_id", churchId!) as any);
+      if (error) throw error;
+      return (data ?? []) as Array<{
+        id: string;
+        user_id: string;
+        consent_contact: boolean;
+        source_slug: string | null;
+        created_at: string;
+        email: string | null;
+        full_name: string | null;
+      }>;
+    },
+  });
+
+  const totalMembers = members?.length ?? 0;
+  const consentedMembers = members?.filter((m) => m.consent_contact) ?? [];
+
+  return (
+    <Card>
+      <CardHeader>
+        <div className="flex items-center gap-2">
+          <Users className="h-5 w-5 text-primary" />
+          <CardTitle>{t("settings.members", "Mitglieder")}</CardTitle>
+        </div>
+        <CardDescription>
+          {t("settings.membersDesc", "Nutzer, die sich über deinen Gemeinde-Link registriert haben.")}
+        </CardDescription>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        <div className="flex gap-4">
+          <div className="bg-muted rounded-lg p-4 flex-1 text-center">
+            <div className="text-2xl font-bold">{totalMembers}</div>
+            <div className="text-xs text-muted-foreground">{t("settings.totalMembers", "Gesamt")}</div>
+          </div>
+          <div className="bg-muted rounded-lg p-4 flex-1 text-center">
+            <div className="text-2xl font-bold">{consentedMembers.length}</div>
+            <div className="text-xs text-muted-foreground">{t("settings.consentedMembers", "Mit Kontakt-Erlaubnis")}</div>
+          </div>
+        </div>
+
+        {consentedMembers.length > 0 && (
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead>{t("settings.memberName", "Name")}</TableHead>
+                <TableHead>{t("settings.memberEmail", "E-Mail")}</TableHead>
+                <TableHead>{t("settings.memberSince", "Dabei seit")}</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {consentedMembers.map((m) => (
+                <TableRow key={m.id}>
+                  <TableCell>{m.full_name || "–"}</TableCell>
+                  <TableCell>{m.email || "–"}</TableCell>
+                  <TableCell>{new Date(m.created_at).toLocaleDateString()}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        )}
+
+        {isLoading && <p className="text-muted-foreground text-sm">{t("loader", "Wird geladen…")}</p>}
+      </CardContent>
+    </Card>
   );
 }
