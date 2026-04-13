@@ -234,7 +234,10 @@
     "bank": "Bangko",
     "purpose": "Layunin",
     "purposeValue": "Donasyon BibleBot.Life",
-    "note": "Ang BibleBot.Life ay pinapatakbo bilang isang pribadong proyekto. Samakatuwid, ang mga donasyon ay hindi deductible sa buwis."
+    "note": "Ang BibleBot.Life ay pinapatakbo bilang isang pribadong proyekto. Samakatuwid, ang mga donasyon ay hindi deductible sa buwis.",
+    "creditCard": "Suportahan gamit ang Credit Card",
+    "secureNote": "Secure na Pagbabayad · Walang bitag ng subscription · Maaaring kanselahin anumang oras",
+    "twint": "Suportahan gamit ang Twint"
   },
   "refer": {
     "badge": "Ibahagi ang Salita ng Diyos",
@@ -266,7 +269,8 @@
     "noTax": "Ang mga donasyon ay hindi deductible sa buwis",
     "datenschutz": "Patakaran sa Privacy",
     "love": "May ❤️ para sa lahat na nagtatanong kung ano ang iniisip ni Kristo.",
-    "forChurches": "Para sa mga Simbahan"
+    "forChurches": "Para sa mga Simbahan",
+    "forCelebrants": "Para sa mga Pastor at Coach"
   },
   "chat": {
     "welcome": "Masaya akong nandito ka 🤗\n\nAko ang iyong ang iyong kasama – ang iyong personal na kasama sa Bibliya, magagandang tanong, at konkretong inspirasyon. Walang presyon, walang paghuhusga.\n\nMaaari mo akong tanungin ng kahit ano – o sabihin lang kung ano ang bumabagabag sa iyo. 💛",
@@ -1182,5 +1186,104 @@
   "pricing": {
     "onRequest": "Patronato sa kahilingan",
     "contactUs": "Makipag-ugnayan"
+  },
+  "audience": {
+    "church": {
+      "cta": "Para sa mga Simbahan at Pastor →",
+      "desc": "Para sa mga pastor, tagapayo, at pangkat ng simbahan: Suporta ng AI para sa paghahanda ng sermon, pagpaplano ng koponan, at marami pa.",
+      "f1": "Tagaplano ng Serbisyo na may AI",
+      "f2": "Library ng mga Mapagkukunan",
+      "f3": "Koordinasyon ng Koponan",
+      "f4": "Pahina at Direktoryo ng Simbahan",
+      "title": "Nagpaplano ako ng mga serbisyo at sinasamahan ang mga tao"
+    },
+    "personal": {
+      "cta": "Makipag-chat ngayon — libre →",
+      "desc": "Mga tanong tungkol sa pananampalataya, pang-araw-araw na inspirasyon, espirituwal na paglago — sa sarili mong bilis at walang paghuhusga.",
+      "f1": "Makipag-chat sa Gabay sa Bibliya",
+      "f2": "21-Araw na Paglalakbay",
+      "f3": "Pang-araw-araw na Inspirasyon sa pamamagitan ng Push / Telegram",
+      "f4": "Personal na Kasaysayan ng Pag-uusap",
+      "title": "Naghahanap ako ng personal na gabay"
+    },
+    "subtitle": "Piliin ang iyong landas",
+    "title": "Para kanino ang BibleBot.Life?"
+  },
+  "entryTiles": {
+    "groups": {
+      "deep": "Gusto kong lumalim",
+      "emotional": "May bumabagabag sa akin",
+      "orientation": "Naghahanap ako ng direksyon"
+    },
+    "labels": {
+      "anger": "Galit at Poot",
+      "anxiety": "Nag-aalala ako",
+      "baptism": "Binyag at Paglalakbay sa Pananampalataya",
+      "biblequiz": "Pagsusulit sa Bibliya",
+      "bibleverse": "Unawain ang Talata sa Bibliya",
+      "burnout": "Pagkapagod",
+      "calling": "Ano ang aking landas?",
+      "condolence": "Pagluluksa at Pagkawala",
+      "decision": "Nakaharap ako sa isang desisyon",
+      "faithdoubt": "Pagdududa sa Pananampalataya",
+      "financial": "Mga Alalahanin sa Pinansyal",
+      "forgiveness": "Pagpapatawad at Pagpapakawala",
+      "heartbreak": "Nasasaktan ako",
+      "illness": "Sakit",
+      "lifewheel": "Saan ako nakatayo sa buhay?",
+      "loneliness": "Pakiramdam ko ay nag-iisa ako",
+      "meaningcrisis": "Krisis sa Kahulugan",
+      "newstart": "Gusto kong magsimulang muli",
+      "prayerwall": "Pader ng Panalangin",
+      "selfdoubt": "Pagdududa sa Sarili",
+      "sevenwhys": "Bakit ko ba talaga ginagawa ito?",
+      "sleepless": "Hindi Makatulog",
+      "thankfulness": "Pasasalamat",
+      "wedding": "Kasal at Pagsasama"
+    },
+    "showLess": "Ipakita ang Mas Kaunti",
+    "showMore": "Tuklasin ang Higit pang mga Paksa"
+  },
+  "faqExtra": {
+    "faithPsych": {
+      "a": "Pinagsasama ng BibleBot ang karunungan ng Bibliya sa mga insight mula sa evidence-based na sikolohiya — hindi para gawing sikolohikal ang pananampalataya, kundi para gawin itong praktikal sa pang-araw-araw na buhay. Ang mga pamamaraan (PERMA, Logotherapy, pananaliksik sa pasasalamat at pagpapatawad) ay bumubuo sa Bibliya, ngunit hindi ito pinapalitan.",
+      "q": "Pinagsasama ba ng BibleBot ang Pananampalataya at Sikolohiya?"
+    },
+    "journey": {
+      "q": "Ano ang 21-Araw na Paglalakbay?"
+    },
+    "methodik": {
+      "a": "",
+      "q": "Ano ang nasa likod ng pamamaraan ng BibleBot?"
+    }
+  },
+  "tools": {
+    "badge": "Higit pa sa mga Sagot",
+    "lifewheel": {
+      "cta": "Simulan ang Gulong ng Buhay",
+      "desc": "Kumusta ang trabaho, relasyon, kahulugan, at kalusugan? Tutulungan ka ng Gulong ng Buhay sa loob ng 3 minuto upang magkaroon ng kalinawan — at ipapakita kung saan direktang kumokonekta ang Bibliya.",
+      "title": "Pagsusuri ng Gulong ng Buhay"
+    },
+    "sevenwhys": {
+      "cta": "Magtanong nang Mas Malalim",
+      "desc": "Bakit ko ba talaga ginagawa ito? Bakit ganito ang pakiramdam? Gagabayan ka ng BibleBot sa 7 tanong na umabot sa ugat — na may pagpapaliwanag sa Bibliya sa pinakamalalim na punto.",
+      "title": "Ang 7-Bakit na Pamamaraan"
+    },
+    "subtitle": "Para sa mga sandali kung kailan kailangan mo ng higit pa sa isang sagot.",
+    "title": "Dalawang Kasangkapan na Lumalalim"
+  },
+  "trust": {
+    "noAds": {
+      "text": "Walang pagsubaybay, walang pagbabahagi ng data, walang pagkakakitaan ng iyong mga tanong.",
+      "title": "Walang Ad"
+    },
+    "noExpertise": {
+      "text": "Hindi mo kailangan ng pagiging miyembro ng simbahan o teolohikal na kaalaman.",
+      "title": "Walang Kinakailangang Paunang Kaalaman"
+    },
+    "qa": {
+      "text": "Ang bawat talata sa Bibliya ay awtomatikong sinusuri para sa kawastuhan — sa bawat pag-uusap.",
+      "title": "Sinuri ng QA"
+    }
   }
 }

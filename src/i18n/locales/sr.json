@@ -234,7 +234,10 @@
     "bank": "Banka",
     "purpose": "Svrha uplate",
     "purposeValue": "Donacija BibleBot.Life",
-    "note": "BibleBot.Life se vodi kao privatni projekat. Stoga donacije nisu odbitne od poreza."
+    "note": "BibleBot.Life se vodi kao privatni projekat. Stoga donacije nisu odbitne od poreza.",
+    "creditCard": "Podržite kreditnom karticom",
+    "secureNote": "Sigurno plaćanje · Bez pretplate · Može se otkazati u bilo kom trenutku",
+    "twint": "Podržite Twint-om"
   },
   "refer": {
     "badge": "Podelite Božju Reč",
@@ -266,7 +269,8 @@
     "noTax": "Donacije nisu odbitne od poreza",
     "datenschutz": "Zaštita podataka",
     "love": "S ❤️ za sve koji se pitaju šta Hrist misli.",
-    "forChurches": "Za crkve"
+    "forChurches": "Za crkve",
+    "forCelebrants": "Za pastore i trenere"
   },
   "chat": {
     "welcome": "Drago mi je što ste ovde 🤗\n\nJa sam vaš vaš pratilac – vaš lični pratilac sa Biblijom, dobrim pitanjima i konkretnim podsticajima. Bez pritiska, bez procene.\n\nMožete me pitati bilo šta – ili jednostavno ispričati šta vas trenutno muči. 💛",
@@ -1179,5 +1183,104 @@
   "pricing": {
     "onRequest": "Патронат на захтев",
     "contactUs": "Контактирајте нас"
+  },
+  "audience": {
+    "church": {
+      "cta": "Za zajednice i pastore →",
+      "desc": "Za pastore, duhovne vođe i timove zajednice: AI podrška za pripremu propovedi, planiranje tima i još mnogo toga.",
+      "f1": "Planer bogosluženja sa AI",
+      "f2": "Biblioteka resursa",
+      "f3": "Koordinacija tima",
+      "f4": "Stranica zajednice i imenik",
+      "title": "Planiram bogosluženja i pratim ljude"
+    },
+    "personal": {
+      "cta": "Ćaskajte sada — besplatno →",
+      "desc": "Pitanja o veri, dnevni impulsi, duhovni rast — sve u vašem tempu i bez osude.",
+      "f1": "Ćaskanje uz biblijsko vođenje",
+      "f2": "21-dnevno putovanje",
+      "f3": "Dnevni impuls putem push / Telegrama",
+      "f4": "Lična istorija razgovora",
+      "title": "Tražim lično vođenje"
+    },
+    "subtitle": "Izaberite svoj put",
+    "title": "Za koga je BibleBot.Life?"
+  },
+  "entryTiles": {
+    "groups": {
+      "deep": "Želim da idem dublje",
+      "emotional": "Nešto me muči",
+      "orientation": "Tražim orijentaciju"
+    },
+    "labels": {
+      "anger": "Bes i ljutnja",
+      "anxiety": "Brinem se",
+      "baptism": "Krštenje i put vere",
+      "biblequiz": "Biblijski kviz",
+      "bibleverse": "Razumevanje biblijskog stiha",
+      "burnout": "Iscrpljenost",
+      "calling": "Koji je moj put?",
+      "condolence": "Tuga i gubitak",
+      "decision": "Pred odlukom sam",
+      "faithdoubt": "Sumnje u veru",
+      "financial": "Finansijske brige",
+      "forgiveness": "Opraštanje i otpuštanje",
+      "heartbreak": "Povređen sam",
+      "illness": "Bolest",
+      "lifewheel": "Gde sam u životu?",
+      "loneliness": "Osećam se usamljeno",
+      "meaningcrisis": "Kriza smisla",
+      "newstart": "Želim novi početak",
+      "prayerwall": "Zid molitve",
+      "selfdoubt": "Sumnja u sebe",
+      "sevenwhys": "Zašto to zaista radim?",
+      "sleepless": "Nesanica",
+      "thankfulness": "Zahvalnost",
+      "wedding": "Brak i partnerstvo"
+    },
+    "showLess": "Prikaži manje",
+    "showMore": "Otkrijte više tema"
+  },
+  "faqExtra": {
+    "faithPsych": {
+      "a": "BibleBot kombinuje biblijsku mudrost sa uvidima iz psihologije zasnovane na dokazima — ne da bi psihologizovao veru, već da bi je učinio relevantnom za svakodnevni život. Metode (PERMA, logoterapija, istraživanje zahvalnosti i oproštaja) dopunjuju Bibliju, ali je ne zamenjuju.",
+      "q": "Da li BibleBot povezuje veru i psihologiju?"
+    },
+    "journey": {
+      "q": "Šta je 21-dnevno putovanje?"
+    },
+    "methodik": {
+      "a": "",
+      "q": "Šta stoji iza metodologije BibleBot-a?"
+    }
+  },
+  "tools": {
+    "badge": "Više od odgovora",
+    "lifewheel": {
+      "cta": "Pokreni točak života",
+      "desc": "Kako stoje stvari sa poslom, odnosima, smislom i zdravljem? Točak života vam pomaže da za 3 minuta steknete jasnoću — i pokazuje gde se Biblija direktno nadovezuje.",
+      "title": "Provera točka života"
+    },
+    "sevenwhys": {
+      "cta": "Postavi dublja pitanja",
+      "desc": "Zašto to zaista radim? Zašto se tako osećam? BibleBot vas vodi kroz 7 pitanja koja idu do korena — sa biblijskim objašnjenjem na najdubljem mestu.",
+      "title": "Metoda 7 zašto"
+    },
+    "subtitle": "Za trenutke kada vam je potrebno više od odgovora.",
+    "title": "Dva alata koja idu dublje"
+  },
+  "trust": {
+    "noAds": {
+      "text": "Bez praćenja, bez deljenja podataka, bez monetizacije vaših pitanja.",
+      "title": "Bez reklama"
+    },
+    "noExpertise": {
+      "text": "Nije vam potrebno članstvo u crkvi niti teološko predznanje.",
+      "title": "Nije potrebno predznanje"
+    },
+    "qa": {
+      "text": "Svaki biblijski stih se automatski proverava na tačnost — pri svakom razgovoru.",
+      "title": "QA-provereno"
+    }
   }
 }

@@ -234,7 +234,10 @@
     "bank": "Bank",
     "purpose": "Közlemény",
     "purposeValue": "Adomány BibleBot.Life",
-    "note": "A BibleBot.Life magánprojektként működik. Az adományok ezért nem vonhatók le az adóból."
+    "note": "A BibleBot.Life magánprojektként működik. Az adományok ezért nem vonhatók le az adóból.",
+    "creditCard": "Támogatás hitelkártyával",
+    "secureNote": "Biztonságos fizetés · Nincs előfizetési csapda · Bármikor lemondható",
+    "twint": "Támogatás Twinttel"
   },
   "refer": {
     "badge": "Isten szavának megosztása",
@@ -266,7 +269,8 @@
     "noTax": "Az adományok nem vonhatók le az adóból",
     "datenschutz": "Adatvédelem",
     "love": "❤️-vel mindazoknak, akik azon gondolkodnak, mit gondol Krisztus.",
-    "forChurches": "Gyülekezeteknek"
+    "forChurches": "Gyülekezeteknek",
+    "forCelebrants": "Lelkipásztoroknak és coachoknak"
   },
   "chat": {
     "welcome": "Örülök, hogy itt vagy 🤗\n\nÉn vagyok a társadod – a személyes társad a Bibliával, jó kérdésekkel és konkrét impulzusokkal. Nincs nyomás, nincs ítélet.\n\nBármit megkérdezhetsz tőlem – vagy egyszerűen elmondhatod, mi foglalkoztat éppen. 💛",
@@ -1179,5 +1183,104 @@
   "pricing": {
     "onRequest": "Patronátus igény szerint",
     "contactUs": "Kapcsolatfelvétel"
+  },
+  "audience": {
+    "church": {
+      "cta": "Gyülekezeteknek és lelkipásztoroknak →",
+      "desc": "Lelkészeknek, lelkipásztoroknak és gyülekezeti csapatoknak: AI-támogatás prédikációk előkészítéséhez, csapattervezéshez és még sok máshoz.",
+      "f1": "Istentisztelet-tervező AI-val",
+      "f2": "Erőforrás-könyvtár",
+      "f3": "Csapatkoordináció",
+      "f4": "Gyülekezeti oldal és címtár",
+      "title": "Istentiszteleteket tervezek és embereket kísérek"
+    },
+    "personal": {
+      "cta": "Csevegés most — ingyenes →",
+      "desc": "Kérdések a hitről, napi impulzusok, spirituális növekedés — a saját tempódban és ítélkezés nélkül.",
+      "f1": "Csevegés bibliai kísérettel",
+      "f2": "21 napos utazás",
+      "f3": "Napi impulzus push / Telegram üzenetben",
+      "f4": "Személyes beszélgetési előzmények",
+      "title": "Személyes kíséretet keresek"
+    },
+    "subtitle": "Válaszd ki az utadat",
+    "title": "Kinek szól a BibleBot.Life?"
+  },
+  "entryTiles": {
+    "groups": {
+      "deep": "Mélyebbre akarok menni",
+      "emotional": "Valami foglalkoztat",
+      "orientation": "Tájékozódást keresek"
+    },
+    "labels": {
+      "anger": "Harag és düh",
+      "anxiety": "Aggódom",
+      "baptism": "Keresztség és hitút",
+      "biblequiz": "Bibliai kvíz",
+      "bibleverse": "Bibliai vers megértése",
+      "burnout": "Kimerültség",
+      "calling": "Mi az én utam?",
+      "condolence": "Gyász és veszteség",
+      "decision": "Döntés előtt állok",
+      "faithdoubt": "Hitetlenség",
+      "financial": "Pénzügyi gondok",
+      "forgiveness": "Megbocsátás és elengedés",
+      "heartbreak": "Megsérültem",
+      "illness": "Betegség",
+      "lifewheel": "Hol tartok az életben?",
+      "loneliness": "Magányosnak érzem magam",
+      "meaningcrisis": "Értelmetlenség válsága",
+      "newstart": "Újrakezdést akarok",
+      "prayerwall": "Imádfal",
+      "selfdoubt": "Önbizalomhiány",
+      "sevenwhys": "Miért teszem ezt valójában?",
+      "sleepless": "Álmatlanság",
+      "thankfulness": "Hála",
+      "wedding": "Házasság és párkapcsolat"
+    },
+    "showLess": "Kevesebb megjelenítése",
+    "showMore": "További témák felfedezése"
+  },
+  "faqExtra": {
+    "faithPsych": {
+      "a": "A BibleBot ötvözi a bibliai bölcsességet a bizonyítékokon alapuló pszichológia felismeréseivel — nem azért, hogy a hitet pszichologizálja, hanem hogy mindennapi életre alkalmazhatóvá tegye. A módszerek (PERMA, logoterápia, hála- és megbocsátáskutatás) kiegészítik a Bibliát, de nem helyettesítik azt.",
+      "q": "Összekapcsolja a BibleBot a hitet és a pszichológiát?"
+    },
+    "journey": {
+      "q": "Mi az a 21 napos utazás?"
+    },
+    "methodik": {
+      "a": "",
+      "q": "Mi áll a BibleBot módszertana mögött?"
+    }
+  },
+  "tools": {
+    "badge": "Több mint válaszok",
+    "lifewheel": {
+      "cta": "Életkerék indítása",
+      "desc": "Hogyan állsz a munkával, kapcsolatokkal, értelemmel és egészséggel? Az életkerék 3 perc alatt segít tisztán látni — és megmutatja, hol kapcsolódik közvetlenül a Biblia.",
+      "title": "Életkerék-ellenőrzés"
+    },
+    "sevenwhys": {
+      "cta": "Mélyebbre kérdezni",
+      "desc": "Miért teszem ezt valójában? Miért érzem így magam? A BibleBot 7 kérdésen keresztül vezet el a gyökerekhez — bibliai értelmezéssel a legmélyebb ponton.",
+      "title": "A 7 miért módszer"
+    },
+    "subtitle": "Azoknak a pillanatoknak, amikor többre van szükséged, mint egy válaszra.",
+    "title": "Két eszköz, ami mélyebbre megy"
+  },
+  "trust": {
+    "noAds": {
+      "text": "Nincs nyomon követés, nincs adatmegosztás, nincs kérdéseid monetizálása.",
+      "title": "Nincs reklám"
+    },
+    "noExpertise": {
+      "text": "Nincs szükséged egyháztagságra és teológiai előismeretekre.",
+      "title": "Nincs szükség előismeretekre"
+    },
+    "qa": {
+      "text": "Minden bibliai vers automatikusan ellenőrzésre kerül a helyesség szempontjából — minden beszélgetés során.",
+      "title": "QA-ellenőrzött"
+    }
   }
 }

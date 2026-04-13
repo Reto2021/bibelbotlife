@@ -235,7 +235,10 @@
     "bank": "银行",
     "purpose": "用途",
     "purposeValue": "捐款 BibleBot.Life",
-    "note": "BibleBot.Life 作为一个私人项目运营。因此，捐款不可免税。"
+    "note": "BibleBot.Life 作为一个私人项目运营。因此，捐款不可免税。",
+    "creditCard": "使用信用卡支持",
+    "secureNote": "安全支付 · 无订阅陷阱 · 随时取消",
+    "twint": "使用Twint支持"
   },
   "refer": {
     "badge": "分享上帝的话语",
@@ -267,7 +270,8 @@
     "noTax": "捐款不可抵税",
     "datenschutz": "数据保护",
     "love": "怀着❤️，献给所有想知道基督想法的人。",
-    "forChurches": "为教会服务"
+    "forChurches": "为教会服务",
+    "forCelebrants": "致牧者和教练"
   },
   "chat": {
     "welcome": "很高兴你来 🤗\n\n我是你的您的伴侣——你的私人伙伴，提供圣经、好的问题和具体的启发。没有压力，没有评判。\n\n你可以问我任何问题——或者只是告诉我你现在正在烦恼什么。💛",
@@ -1180,5 +1184,104 @@
   "pricing": {
     "onRequest": "赞助按需提供",
     "contactUs": "联系我们"
+  },
+  "audience": {
+    "church": {
+      "cta": "致教会和牧者 →",
+      "desc": "为牧师、牧者和教会团队提供人工智能支持：用于讲道准备、团队规划等。",
+      "f1": "人工智能礼拜计划器",
+      "f2": "资源库",
+      "f3": "团队协调",
+      "f4": "教会页面和目录",
+      "title": "我计划礼拜并陪伴人们"
+    },
+    "personal": {
+      "cta": "立即聊天 — 免费 →",
+      "desc": "关于信仰的问题、每日灵感、灵性成长 — 按照你的节奏，不带评判。",
+      "f1": "与BibleBot聊天",
+      "f2": "21天旅程",
+      "f3": "通过推送/Telegram获取每日灵感",
+      "f4": "个人对话历史",
+      "title": "我寻求个人陪伴"
+    },
+    "subtitle": "选择你的道路",
+    "title": "BibleBot.Life适合谁？"
+  },
+  "entryTiles": {
+    "groups": {
+      "deep": "我想深入了解",
+      "emotional": "我有些情绪",
+      "orientation": "我寻求方向"
+    },
+    "labels": {
+      "anger": "愤怒与烦恼",
+      "anxiety": "我担心",
+      "baptism": "洗礼与信仰之路",
+      "biblequiz": "圣经问答",
+      "bibleverse": "理解圣经经文",
+      "burnout": "精疲力尽",
+      "calling": "我的道路是什么？",
+      "condolence": "悲伤与失落",
+      "decision": "我面临一个决定",
+      "faithdoubt": "信仰疑虑",
+      "financial": "财务担忧",
+      "forgiveness": "宽恕与放下",
+      "heartbreak": "我受伤了",
+      "illness": "疾病",
+      "lifewheel": "我的人生处于何种境地？",
+      "loneliness": "我感到孤独",
+      "meaningcrisis": "意义危机",
+      "newstart": "我想重新开始",
+      "prayerwall": "祷告墙",
+      "selfdoubt": "自我怀疑",
+      "sevenwhys": "我为什么真的这样做？",
+      "sleepless": "失眠",
+      "thankfulness": "感恩",
+      "wedding": "婚姻与伴侣关系"
+    },
+    "showLess": "显示更少",
+    "showMore": "发现更多主题"
+  },
+  "faqExtra": {
+    "faithPsych": {
+      "a": "BibleBot将圣经智慧与基于证据的心理学见解相结合 — 并非为了将信仰心理化，而是为了使其贴近日常生活。这些方法（PERMA、意义疗法、感恩和宽恕研究）补充了圣经，但并未取代它。",
+      "q": "BibleBot是否结合了信仰和心理学？"
+    },
+    "journey": {
+      "q": "什么是21天旅程？"
+    },
+    "methodik": {
+      "a": "",
+      "q": "BibleBot的方法论背后是什么？"
+    }
+  },
+  "tools": {
+    "badge": "不仅仅是答案",
+    "lifewheel": {
+      "cta": "开始生命之轮",
+      "desc": "工作、人际关系、意义和健康状况如何？生命之轮在3分钟内帮助你获得清晰的认识 — 并展示圣经直接关联的地方。",
+      "title": "生命之轮检查"
+    },
+    "sevenwhys": {
+      "cta": "深入提问",
+      "desc": "我为什么真的这样做？为什么会有这种感觉？BibleBot通过7个问题引导你找到根源 — 在最深处提供圣经的解释。",
+      "title": "7个为什么方法"
+    },
+    "subtitle": "在需要更多答案的时刻。",
+    "title": "两个深入的工具"
+  },
+  "trust": {
+    "noAds": {
+      "text": "无追踪，无数据共享，无将你的问题货币化。",
+      "title": "无广告"
+    },
+    "noExpertise": {
+      "text": "你不需要教会成员身份，也不需要神学预备知识。",
+      "title": "无需预备知识"
+    },
+    "qa": {
+      "text": "每段圣经经文都会在每次对话中自动检查其正确性。",
+      "title": "质量保证检查"
+    }
   }
 }

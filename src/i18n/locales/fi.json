@@ -234,7 +234,10 @@
     "bank": "Pankki",
     "purpose": "Käyttötarkoitus",
     "purposeValue": "Lahjoitus BibleBot.Life",
-    "note": "BibleBot.Life toimii yksityisenä projektina. Lahjoitukset eivät siksi ole verovähennyskelpoisia."
+    "note": "BibleBot.Life toimii yksityisenä projektina. Lahjoitukset eivät siksi ole verovähennyskelpoisia.",
+    "creditCard": "Tue luottokortilla",
+    "secureNote": "Turvallinen maksu · Ei tilausansaa · Peruutettavissa milloin tahansa",
+    "twint": "Tue Twintillä"
   },
   "refer": {
     "badge": "Jumalan sanan jakaminen",
@@ -266,7 +269,8 @@
     "noTax": "Lahjoitukset eivät ole verovähennyskelpoisia",
     "datenschutz": "Tietosuojakäytäntö",
     "love": "❤️:lla kaikille, jotka miettivät, mitä Kristus ajattelee.",
-    "forChurches": "Seurakunnille"
+    "forChurches": "Seurakunnille",
+    "forCelebrants": "Sielunhoitajille ja valmentajille"
   },
   "chat": {
     "welcome": "Mukava nähdä sinua 🤗\n\nOlen kumppanisiisi – henkilökohtainen kumppanisi Raamatun, hyvien kysymysten ja konkreettisten impulssien kanssa. Ei paineita, ei arvostelua.\n\nVoit kysyä minulta mitä tahansa – tai vain kertoa, mikä sinua juuri nyt askarruttaa. 💛",
@@ -1179,5 +1183,104 @@
   "pricing": {
     "onRequest": "Suojelus pyynnöstä",
     "contactUs": "Ota yhteyttä"
+  },
+  "audience": {
+    "church": {
+      "cta": "Seurakunnille ja sielunhoitajille →",
+      "desc": "Papeille, sielunhoitajille ja seurakuntatiimeille: tekoälytukea saarnan valmisteluun, tiimisuunnitteluun ja muuhun.",
+      "f1": "Jumalanpalveluksen suunnittelija tekoälyllä",
+      "f2": "Resurssikirjasto",
+      "f3": "Tiimin koordinointi",
+      "f4": "Seurakunnan sivu ja hakemisto",
+      "title": "Suunnittelen jumalanpalveluksia ja ohjaan ihmisiä"
+    },
+    "personal": {
+      "cta": "Keskustele nyt – ilmaiseksi →",
+      "desc": "Kysymyksiä uskosta, päivittäisiä impulsseja, hengellistä kasvua – omassa tahdissasi ja ilman tuomitsemista.",
+      "f1": "Keskustele Raamatun ohjauksella",
+      "f2": "21 päivän matka",
+      "f3": "Päivittäinen impulssi push-ilmoituksella / Telegramilla",
+      "f4": "Henkilökohtainen keskusteluhistoria",
+      "title": "Etsin henkilökohtaista ohjausta"
+    },
+    "subtitle": "Valitse polkusi",
+    "title": "Kenelle BibleBot.Life on tarkoitettu?"
+  },
+  "entryTiles": {
+    "groups": {
+      "deep": "Haluan syventyä",
+      "emotional": "Jokin painaa mieltäni",
+      "orientation": "Etsin suuntaa"
+    },
+    "labels": {
+      "anger": "Viha ja ärsytys",
+      "anxiety": "Olen huolissani",
+      "baptism": "Kaste ja uskonpolku",
+      "biblequiz": "Raamattuvisa",
+      "bibleverse": "Raamatunkohdan ymmärtäminen",
+      "burnout": "Uupumus",
+      "calling": "Mikä on minun tieni?",
+      "condolence": "Suru ja menetys",
+      "decision": "Olen päätöksen edessä",
+      "faithdoubt": "Uskon epäilykset",
+      "financial": "Taloudelliset huolet",
+      "forgiveness": "Anteeksianto ja irti päästäminen",
+      "heartbreak": "Olen loukkaantunut",
+      "illness": "Sairaus",
+      "lifewheel": "Missä olen elämässä?",
+      "loneliness": "Tunnen itseni yksinäiseksi",
+      "meaningcrisis": "Merkityskriisi",
+      "newstart": "Haluan aloittaa alusta",
+      "prayerwall": "Rukousmuuri",
+      "selfdoubt": "Itseluottamuksen puute",
+      "sevenwhys": "Miksi teen tämän todella?",
+      "sleepless": "Unettomuus",
+      "thankfulness": "Kiitollisuus",
+      "wedding": "Avioliitto ja parisuhde"
+    },
+    "showLess": "Näytä vähemmän",
+    "showMore": "Löydä lisää aiheita"
+  },
+  "faqExtra": {
+    "faithPsych": {
+      "a": "BibleBot yhdistää raamatullisen viisauden näyttöön perustuvan psykologian oivalluksiin – ei psykologisoidakseen uskoa, vaan tehdäkseen siitä arkipäiväisempää. Menetelmät (PERMA, logoterapia, kiitollisuus- ja anteeksiantotutkimus) täydentävät Raamattua, mutta eivät korvaa sitä.",
+      "q": "Yhdistääkö BibleBot uskon ja psykologian?"
+    },
+    "journey": {
+      "q": "Mikä on 21 päivän matka?"
+    },
+    "methodik": {
+      "a": "",
+      "q": "Mitä BibleBotin metodologian takana on?"
+    }
+  },
+  "tools": {
+    "badge": "Enemmän kuin vastauksia",
+    "lifewheel": {
+      "cta": "Aloita elämänpyörä",
+      "desc": "Miten menee työn, ihmissuhteiden, tarkoituksen ja terveyden kanssa? Elämänpyörä auttaa sinua saamaan selkeyttä 3 minuutissa – ja näyttää, mihin Raamattu suoraan liittyy.",
+      "title": "Elämänpyörä-tarkistus"
+    },
+    "sevenwhys": {
+      "cta": "Kysy syvemmin",
+      "desc": "Miksi teen tämän todella? Miksi tämä tuntuu tältä? BibleBot opastaa sinua 7 kysymyksen läpi, jotka menevät juurille – raamatullisella selityksellä syvimmässä kohdassa.",
+      "title": "7 miksi -menetelmä"
+    },
+    "subtitle": "Hetkiin, jolloin tarvitset enemmän kuin vastauksen.",
+    "title": "Kaksi työkalua, jotka menevät syvemmälle"
+  },
+  "trust": {
+    "noAds": {
+      "text": "Ei seurantaa, ei tietojen jakamista, ei kysymystesi kaupallistamista.",
+      "title": "Ei mainoksia"
+    },
+    "noExpertise": {
+      "text": "Et tarvitse kirkon jäsenyyttä tai teologista ennakkotietoa.",
+      "title": "Ei ennakkotietoa tarvita"
+    },
+    "qa": {
+      "text": "Jokainen raamatunkohta tarkistetaan automaattisesti oikeellisuuden varalta – jokaisessa keskustelussa.",
+      "title": "QA-tarkistettu"
+    }
   }
 }

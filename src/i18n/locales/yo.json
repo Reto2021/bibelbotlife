@@ -234,7 +234,10 @@
     "bank": "Ilé-ìfowópamọ́",
     "purpose": "Ìdí",
     "purposeValue": "Ẹ̀bùn BibleBot.Life",
-    "note": "BibleBot.Life jẹ́ iṣẹ́ àkànṣe. Nítorí náà àwọn ẹ̀bùn kò ṣe é yọ kúrò nínú owó orí."
+    "note": "BibleBot.Life jẹ́ iṣẹ́ àkànṣe. Nítorí náà àwọn ẹ̀bùn kò ṣe é yọ kúrò nínú owó orí.",
+    "creditCard": "Ṣe atilẹyin pẹlu kaadi kirẹditi",
+    "secureNote": "Ìsanwó tó dájú · Kò sí ìdẹkùn àbùdá · O lè fagilé nígbàkúgbà",
+    "twint": "Ṣe atilẹyin pẹlu Twint"
   },
   "refer": {
     "badge": "Pin ọ̀rọ̀ Ọlọ́run",
@@ -266,7 +269,8 @@
     "noTax": "Àwọn ẹ̀bùn kò ṣe é yọ kúrò nínú owó orí",
     "datenschutz": "Ìlànà Àṣírí",
     "love": "Pẹ̀lú ❤️ fún gbogbo ẹni tó ń ṣe àrídájú ohun tí Krístì rò.",
-    "forChurches": "Fún àwọn Ìjọ"
+    "forChurches": "Fún àwọn Ìjọ",
+    "forCelebrants": "Fún àwọn Olùṣọ́-àgùntàn & Àwọn Olùkọ́ni"
   },
   "chat": {
     "welcome": "Ẹ kú àbọ̀ 🤗\n\nÈmi ni alábàáṣiṣẹ́pọ̀ rẹ rẹ – alábàáṣiṣẹ́pọ̀ tìrẹ pẹ̀lú Bíbélì, àwọn ìbéèrè rere àti àwọn ìmúlọ́ gidi. Kò sí ìfipámú, kò sí ìdájọ́.\n\nO lè béèrè ohunkóhun – tàbí sọ ohun tó ń ṣe ọ́ lọ́kàn. 💛",
@@ -1179,5 +1183,104 @@
   "pricing": {
     "onRequest": "Ìtìlẹ́yìn lórí ìbéèrè",
     "contactUs": "Kan sí wa"
+  },
+  "audience": {
+    "church": {
+      "cta": "Fún àwọn ìjọ àti àwọn olùṣọ́-àgùntàn →",
+      "desc": "Fún àwọn olùṣọ́-àgùntàn, àwọn olùṣọ́-àgùntàn àti àwọn ẹgbẹ́ ìjọ: Ìrànlọ́wọ́ AI fún ìgbàsílẹ̀ ìwàásù, ètò ẹgbẹ́ àti púpọ̀ sí i.",
+      "f1": "Olùgbékalẹ̀ ìsìn pẹ̀lú AI",
+      "f2": "Ilé-ìkàwé àwọn ohun èlò",
+      "f3": "Ìṣàkóso ẹgbẹ́",
+      "f4": "Ojúewé ìjọ & ìtọ́ka",
+      "title": "Mo ṣètò àwọn ìsìn & mo bá àwọn ènìyàn lọ"
+    },
+    "personal": {
+      "cta": "Bá wa sọ̀rọ̀ nísinsìnyí — lọ́fẹ̀ẹ́ →",
+      "desc": "Àwọn ìbéèrè nípa ìgbàgbọ́, àwọn ìrántí ojoojúmọ́, ìdàgbàsókè tẹ̀mí — ní ìwọ̀nba tirẹ̀ àti láìsí ìdájọ́.",
+      "f1": "Bá BibleBot sọ̀rọ̀",
+      "f2": "Ìrìn-àjò ọjọ́ 21",
+      "f3": "Ìrántí ojoojúmọ́ nípasẹ̀ ìfìwéránṣẹ́ / Telegram",
+      "f4": "Ìtàn ìjíròrò ti ara ẹni",
+      "title": "Mo ń wá ìtọ́sọ́nà ti ara ẹni"
+    },
+    "subtitle": "Yan ọ̀nà rẹ",
+    "title": "Fún ta ni BibleBot.Life?"
+  },
+  "entryTiles": {
+    "groups": {
+      "deep": "Mo fẹ́ lọ sí ìsàlẹ̀",
+      "emotional": "Ohun kan ń yọ mí lẹ́nu",
+      "orientation": "Mo ń wá ìtọ́sọ́nà"
+    },
+    "labels": {
+      "anger": "Ìbínú & Ìbínú",
+      "anxiety": "Mo ń ṣe àníyàn",
+      "baptism": "Ìrìbọmi & Ọ̀nà Ìgbàgbọ́",
+      "biblequiz": "Ìdánwò Bíbélì",
+      "bibleverse": "Lóye ẹsẹ Bíbélì",
+      "burnout": "Àárẹ̀",
+      "calling": "Kí ni ọ̀nà mi?",
+      "condolence": "Ìbànújẹ́ & Ìpàdánù",
+      "decision": "Mo dojú kọ ìpinnu kan",
+      "faithdoubt": "Àníyàn ìgbàgbọ́",
+      "financial": "Àwọn ìṣòro owó",
+      "forgiveness": "Ìdáríjì & Ìgbàgbé",
+      "heartbreak": "Ọkàn mi gbọgbẹ́",
+      "illness": "Àìsàn",
+      "lifewheel": "Níbo ni mo wà nínú ìgbésí ayé?",
+      "loneliness": "Mo nìkan wà",
+      "meaningcrisis": "Ìṣòro ìtumọ̀",
+      "newstart": "Mo fẹ́ bẹ̀rẹ̀ tuntun",
+      "prayerwall": "Ògiri àdúrà",
+      "selfdoubt": "Àníyàn ara ẹni",
+      "sevenwhys": "Kí nìdí tí mo fi ń ṣe èyí gan-an?",
+      "sleepless": "Àìsùn",
+      "thankfulness": "Ìmoore",
+      "wedding": "Ìgbéyàwó & Ìbáṣepọ̀"
+    },
+    "showLess": "Fi díẹ̀ hàn",
+    "showMore": "Ṣe àwárí àwọn kókó-ọ̀rọ̀ mìíràn"
+  },
+  "faqExtra": {
+    "faithPsych": {
+      "a": "BibleBot parapọ̀ ọgbọ́n Bíbélì pẹ̀lú àwọn òye láti inú ìmọ̀-ìjìnlẹ̀ ọpọlọ tí ó dá lórí ẹ̀rí — kì í ṣe láti sọ ìgbàgbọ́ di ìmọ̀-ìjìnlẹ̀ ọpọlọ, ṣùgbọ́n láti mú un wá sí ìgbésí ayé ojoojúmọ́. Àwọn ọ̀nà (PERMA, Logotherapy, ìwádìí ìmoore àti ìdáríjì) ṣe àfikún Bíbélì, ṣùgbọ́n wọn kò rọ́pò rẹ̀.",
+      "q": "Ṣé BibleBot parapọ̀ ìgbàgbọ́ àti ìmọ̀-ìjìnlẹ̀ ọpọlọ?"
+    },
+    "journey": {
+      "q": "Kí ni Ìrìn-àjò Ọjọ́ 21?"
+    },
+    "methodik": {
+      "a": "",
+      "q": "Kí ni ó wà lẹ́yìn ọ̀nà BibleBot?"
+    }
+  },
+  "tools": {
+    "badge": "Jù àwọn ìdáhùn lọ",
+    "lifewheel": {
+      "cta": "Bẹ̀rẹ̀ kẹ̀kẹ́ ìgbésí ayé",
+      "desc": "Báwo ni iṣẹ́, àwọn ìbáṣepọ̀, ìtumọ̀ àti ìlera ṣe rí nísinsìnyí? Kẹ̀kẹ́ ìgbésí ayé ràn ọ́ lọ́wọ́ láti ní òye nínú ìṣẹ́jú 3 — ó sì fi hàn níbi tí Bíbélì ti so mọ́ tààrà.",
+      "title": "Ayẹwo Kẹ̀kẹ́ Ìgbésí Ayé"
+    },
+    "sevenwhys": {
+      "cta": "Béèrè síwájú sí i",
+      "desc": "Kí nìdí tí mo fi ń ṣe èyí gan-an? Kí nìdí tí ó fi rí báyìí? BibleBot yóò tọ́ ọ lọ́nà nípasẹ̀ àwọn ìbéèrè 7 tí ó lọ sí ìdí — pẹ̀lú ìtọ́ka Bíbélì níbi tí ó jinlẹ̀ jù lọ.",
+      "title": "Ọ̀nà Ìdí 7"
+    },
+    "subtitle": "Fún àwọn àkókò tí o nílò jù ìdáhùn kan lọ.",
+    "title": "Àwọn ohun èlò méjì tí ó lọ jinlẹ̀ sí i"
+  },
+  "trust": {
+    "noAds": {
+      "text": "Kò sí títọ́pa, kò sí pípín data, kò sí ìfowópamọ́ àwọn ìbéèrè rẹ.",
+      "title": "Kò sí ìpolówó"
+    },
+    "noExpertise": {
+      "text": "O kò nílò ìjẹ́mímọ́ ìjọ tàbí ìmọ̀-ìmọ̀-ẹ̀kọ́ ìsìn tẹ́lẹ̀.",
+      "title": "Kò sí ìmọ̀ tẹ́lẹ̀ tí ó nílò"
+    },
+    "qa": {
+      "text": "Gbogbo ẹsẹ Bíbélì ni a yẹwò fún ìtọ́jú nípa ti ara ẹni — ní gbogbo ìjíròrò.",
+      "title": "Ayẹwo QA"
+    }
   }
 }

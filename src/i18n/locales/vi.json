@@ -236,7 +236,10 @@
     "bank": "Ngân hàng",
     "purpose": "Mục đích",
     "purposeValue": "Quyên góp BibleBot.Life",
-    "note": "BibleBot.Life hoạt động như một dự án cá nhân. Do đó, các khoản quyên góp không được giảm trừ thuế."
+    "note": "BibleBot.Life hoạt động như một dự án cá nhân. Do đó, các khoản quyên góp không được giảm trừ thuế.",
+    "creditCard": "Hỗ trợ bằng thẻ tín dụng",
+    "secureNote": "Thanh toán an toàn · Không có bẫy đăng ký · Có thể hủy bất cứ lúc nào",
+    "twint": "Hỗ trợ bằng Twint"
   },
   "refer": {
     "badge": "Chia sẻ Lời Chúa",
@@ -268,7 +271,8 @@
     "noTax": "Quyên góp không được khấu trừ thuế",
     "datenschutz": "Chính sách bảo mật",
     "love": "Với ❤️ cho tất cả những ai tự hỏi Chúa Kitô nghĩ gì.",
-    "forChurches": "Dành cho các Hội thánh"
+    "forChurches": "Dành cho các Hội thánh",
+    "forCelebrants": "Dành cho Mục sư & Huấn luyện viên"
   },
   "chat": {
     "welcome": "Chào mừng bạn 🤗\n\nTôi là người bạn đồng hành của bạn – người bạn đồng hành cá nhân của bạn với Kinh Thánh, những câu hỏi hay và những lời khuyên cụ thể. Không áp lực, không phán xét.\n\nBạn có thể hỏi tôi bất cứ điều gì – hoặc chỉ đơn giản là kể cho tôi những gì đang làm bạn bận tâm. 💛",
@@ -1181,5 +1185,104 @@
   "pricing": {
     "onRequest": "Bảo trợ theo yêu cầu",
     "contactUs": "Liên hệ với chúng tôi"
+  },
+  "audience": {
+    "church": {
+      "cta": "Dành cho Giáo đoàn & Mục sư →",
+      "desc": "Dành cho các mục sư, người chăn sóc và đội ngũ giáo đoàn: Hỗ trợ AI để chuẩn bị bài giảng, lập kế hoạch nhóm và nhiều hơn nữa.",
+      "f1": "Công cụ lập kế hoạch thờ phượng bằng AI",
+      "f2": "Thư viện tài nguyên",
+      "f3": "Phối hợp nhóm",
+      "f4": "Trang & danh bạ giáo đoàn",
+      "title": "Tôi lên kế hoạch thờ phượng & đồng hành cùng mọi người"
+    },
+    "personal": {
+      "cta": "Trò chuyện ngay — miễn phí →",
+      "desc": "Các câu hỏi về đức tin, những lời khích lệ hàng ngày, sự phát triển tâm linh — theo tốc độ của bạn và không phán xét.",
+      "f1": "Trò chuyện với sự hướng dẫn của Kinh Thánh",
+      "f2": "Hành trình 21 ngày",
+      "f3": "Lời khích lệ hàng ngày qua Push / Telegram",
+      "f4": "Lịch sử trò chuyện cá nhân",
+      "title": "Tôi tìm kiếm sự đồng hành cá nhân"
+    },
+    "subtitle": "Chọn con đường của bạn",
+    "title": "BibleBot.Life dành cho ai?"
+  },
+  "entryTiles": {
+    "groups": {
+      "deep": "Tôi muốn đi sâu hơn",
+      "emotional": "Có điều gì đó đang ám ảnh tôi",
+      "orientation": "Tôi đang tìm kiếm định hướng"
+    },
+    "labels": {
+      "anger": "Giận dữ & Bực bội",
+      "anxiety": "Tôi lo lắng",
+      "baptism": "Báp-têm & Hành trình đức tin",
+      "biblequiz": "Đố vui Kinh Thánh",
+      "bibleverse": "Hiểu một câu Kinh Thánh",
+      "burnout": "Kiệt sức",
+      "calling": "Con đường của tôi là gì?",
+      "condolence": "Tang tóc & Mất mát",
+      "decision": "Tôi đang đứng trước một quyết định",
+      "faithdoubt": "Nghi ngờ đức tin",
+      "financial": "Lo lắng về tài chính",
+      "forgiveness": "Tha thứ & Buông bỏ",
+      "heartbreak": "Tôi bị tổn thương",
+      "illness": "Bệnh tật",
+      "lifewheel": "Tôi đang ở đâu trong cuộc sống?",
+      "loneliness": "Tôi cảm thấy cô đơn",
+      "meaningcrisis": "Khủng hoảng ý nghĩa",
+      "newstart": "Tôi muốn bắt đầu lại",
+      "prayerwall": "Bức tường cầu nguyện",
+      "selfdoubt": "Tự nghi ngờ",
+      "sevenwhys": "Tại sao tôi thực sự làm điều đó?",
+      "sleepless": "Mất ngủ",
+      "thankfulness": "Lòng biết ơn",
+      "wedding": "Hôn nhân & Quan hệ đối tác"
+    },
+    "showLess": "Hiển thị ít hơn",
+    "showMore": "Khám phá thêm chủ đề"
+  },
+  "faqExtra": {
+    "faithPsych": {
+      "a": "BibleBot kết hợp sự khôn ngoan của Kinh Thánh với những hiểu biết từ tâm lý học dựa trên bằng chứng — không phải để tâm lý hóa đức tin, mà để làm cho nó gần gũi với cuộc sống hàng ngày. Các phương pháp (PERMA, Liệu pháp ý nghĩa, nghiên cứu về lòng biết ơn và sự tha thứ) bổ sung cho Kinh Thánh, nhưng không thay thế nó.",
+      "q": "BibleBot có kết nối đức tin và tâm lý học không?"
+    },
+    "journey": {
+      "q": "Hành trình 21 ngày là gì?"
+    },
+    "methodik": {
+      "a": "",
+      "q": "Phương pháp của BibleBot là gì?"
+    }
+  },
+  "tools": {
+    "badge": "Hơn cả câu trả lời",
+    "lifewheel": {
+      "cta": "Bắt đầu Bánh xe cuộc sống",
+      "desc": "Công việc, các mối quan hệ, ý nghĩa và sức khỏe của bạn hiện tại như thế nào? Bánh xe cuộc sống giúp bạn có được sự rõ ràng trong 3 phút — và cho thấy Kinh Thánh liên quan trực tiếp đến đâu.",
+      "title": "Kiểm tra Bánh xe cuộc sống"
+    },
+    "sevenwhys": {
+      "cta": "Hỏi sâu hơn",
+      "desc": "Tại sao tôi thực sự làm điều đó? Tại sao nó lại cảm thấy như vậy? BibleBot sẽ hướng dẫn bạn qua 7 câu hỏi đi đến tận gốc rễ — với sự phân loại Kinh Thánh ở điểm sâu nhất.",
+      "title": "Phương pháp 7 Tại sao"
+    },
+    "subtitle": "Dành cho những khoảnh khắc bạn cần nhiều hơn một câu trả lời.",
+    "title": "Hai công cụ đi sâu hơn"
+  },
+  "trust": {
+    "noAds": {
+      "text": "Không theo dõi, không chia sẻ dữ liệu, không kiếm tiền từ câu hỏi của bạn.",
+      "title": "Không quảng cáo"
+    },
+    "noExpertise": {
+      "text": "Bạn không cần phải là thành viên nhà thờ hay có kiến thức thần học trước.",
+      "title": "Không cần kiến thức trước"
+    },
+    "qa": {
+      "text": "Mỗi câu Kinh Thánh được tự động kiểm tra tính chính xác — trong mỗi cuộc trò chuyện.",
+      "title": "Đã kiểm tra QA"
+    }
   }
 }

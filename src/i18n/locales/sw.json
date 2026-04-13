@@ -234,7 +234,10 @@
     "bank": "Benki",
     "purpose": "Kusudi",
     "purposeValue": "Mchango BibleBot.Life",
-    "note": "BibleBot.Life inaendeshwa kama mradi wa kibinafsi. Kwa hiyo, michango haiwezi kukatwa kodi."
+    "note": "BibleBot.Life inaendeshwa kama mradi wa kibinafsi. Kwa hiyo, michango haiwezi kukatwa kodi.",
+    "creditCard": "Saidia kwa Kadi ya Mkopo",
+    "secureNote": "Malipo salama · Hakuna mtego wa usajili · Unaweza kughairi wakati wowote",
+    "twint": "Saidia kwa Twint"
   },
   "refer": {
     "badge": "Shiriki Neno la Mungu",
@@ -266,7 +269,8 @@
     "noTax": "Michango haiwezi kukatwa kodi",
     "datenschutz": "Sera ya Faragha",
     "love": "Kwa ❤️ kwa wote wanaojiuliza Kristo anafikiria nini.",
-    "forChurches": "Kwa Makanisa"
+    "forChurches": "Kwa Makanisa",
+    "forCelebrants": "Kwa Wachungaji na Makocha"
   },
   "chat": {
     "welcome": "Nzuri kuwa hapa 🤗\n\nMimi ni mwenza wako wako – mwenza wako binafsi na Biblia, maswali mazuri na misukumo thabiti. Hakuna shinikizo, hakuna hukumu.\n\nUnaweza kuniuliza chochote – au kuniambia tu kinachokusumbua. 💛",
@@ -1179,5 +1183,104 @@
   "pricing": {
     "onRequest": "Udhamini kwa ombi",
     "contactUs": "Wasiliana nasi"
+  },
+  "audience": {
+    "church": {
+      "cta": "Kwa Jumuiya na Wachungaji →",
+      "desc": "Kwa wachungaji, washauri wa kiroho, na timu za kanisa: Msaada wa AI kwa maandalizi ya mahubiri, upangaji wa timu, na zaidi.",
+      "f1": "Mpangaji wa Ibada na AI",
+      "f2": "Maktaba ya Rasilimali",
+      "f3": "Uratibu wa Timu",
+      "f4": "Ukurasa wa Jumuiya na Saraka",
+      "title": "Ninapanga ibada na kuongozana na watu"
+    },
+    "personal": {
+      "cta": "Piga gumzo sasa — bila malipo →",
+      "desc": "Maswali kuhusu imani, msukumo wa kila siku, ukuaji wa kiroho — kwa kasi yako mwenyewe na bila hukumu.",
+      "f1": "Piga gumzo na mwongozo wa Biblia",
+      "f2": "Safari ya Siku 21",
+      "f3": "Msukumo wa Kila Siku kupitia Push / Telegram",
+      "f4": "Historia ya Mazungumzo ya Kibinafsi",
+      "title": "Natafuta mwongozo wa kibinafsi"
+    },
+    "subtitle": "Chagua njia yako",
+    "title": "BibleBot.Life ni kwa ajili ya nani?"
+  },
+  "entryTiles": {
+    "groups": {
+      "deep": "Nataka kwenda ndani zaidi",
+      "emotional": "Kuna kitu kinanisumbua",
+      "orientation": "Natafuta mwelekeo"
+    },
+    "labels": {
+      "anger": "Hasira na Kukasirika",
+      "anxiety": "Nina wasiwasi",
+      "baptism": "Ubatizo na Safari ya Imani",
+      "biblequiz": "Maswali ya Biblia",
+      "bibleverse": "Kuelewa Aya ya Biblia",
+      "burnout": "Uchovu",
+      "calling": "Njia yangu ni ipi?",
+      "condolence": "Maombolezo na Kupoteza",
+      "decision": "Ninakabiliwa na uamuzi",
+      "faithdoubt": "Mashaka ya Imani",
+      "financial": "Wasiwasi wa Kifedha",
+      "forgiveness": "Kusamehe na Kuachilia",
+      "heartbreak": "Nimejeruhiwa",
+      "illness": "Ugonjwa",
+      "lifewheel": "Niko wapi maishani?",
+      "loneliness": "Najisikia mpweke",
+      "meaningcrisis": "Mgogoro wa Maana",
+      "newstart": "Nataka kuanza upya",
+      "prayerwall": "Ukuta wa Maombi",
+      "selfdoubt": "Kujitilia Mashaka",
+      "sevenwhys": "Kwa nini ninafanya hivi kweli?",
+      "sleepless": "Kukosa Usingizi",
+      "thankfulness": "Shukrani",
+      "wedding": "Ndoa na Ushirikiano"
+    },
+    "showLess": "Onyesha Chache",
+    "showMore": "Gundua Mada Zaidi"
+  },
+  "faqExtra": {
+    "faithPsych": {
+      "a": "BibleBot inachanganya hekima ya kibiblia na maarifa kutoka kwa saikolojia inayotegemea ushahidi — si kwa ajili ya kusaikolojia imani, bali kuifanya iweze kutumika katika maisha ya kila siku. Mbinu (PERMA, Logotherapy, utafiti wa shukrani na msamaha) zinakamilisha Biblia, lakini haziibadilishi.",
+      "q": "Je, BibleBot inaunganisha imani na saikolojia?"
+    },
+    "journey": {
+      "q": "Safari ya Siku 21 ni nini?"
+    },
+    "methodik": {
+      "a": "",
+      "q": "Ni nini nyuma ya mbinu ya BibleBot?"
+    }
+  },
+  "tools": {
+    "badge": "Zaidi ya Majibu",
+    "lifewheel": {
+      "cta": "Anza Gurudumu la Maisha",
+      "desc": "Je, mambo yakoje sasa na kazi, mahusiano, maana, na afya? Gurudumu la Maisha linakusaidia kupata uwazi ndani ya dakika 3 — na linaonyesha jinsi Biblia inavyohusiana moja kwa moja.",
+      "title": "Ukaguzi wa Gurudumu la Maisha"
+    },
+    "sevenwhys": {
+      "cta": "Uliza kwa Undani Zaidi",
+      "desc": "Kwa nini ninafanya hivi kweli? Kwa nini inajisikia hivi? BibleBot inakuongoza kupitia maswali 7 yanayofikia mzizi — na ufafanuzi wa kibiblia katika sehemu ya ndani kabisa.",
+      "title": "Mbinu ya Kwa Nini Saba"
+    },
+    "subtitle": "Kwa nyakati ambazo unahitaji zaidi ya jibu.",
+    "title": "Zana Mbili Zinazoenda Ndani Zaidi"
+  },
+  "trust": {
+    "noAds": {
+      "text": "Hakuna ufuatiliaji, hakuna kushiriki data, hakuna kutengeneza pesa kutokana na maswali yako.",
+      "title": "Hakuna Matangazo"
+    },
+    "noExpertise": {
+      "text": "Huhitaji uanachama wa kanisa au ujuzi wa awali wa theolojia.",
+      "title": "Hakuna Ujuzi wa Awali Unaohitajika"
+    },
+    "qa": {
+      "text": "Kila aya ya Biblia inakaguliwa kiotomatiki kwa usahihi — katika kila mazungumzo.",
+      "title": "Imekaguliwa na QA"
+    }
   }
 }

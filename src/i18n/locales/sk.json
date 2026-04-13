@@ -234,7 +234,10 @@
     "bank": "Banka",
     "purpose": "Účel platby",
     "purposeValue": "Dar BibleBot.Life",
-    "note": "BibleBot.Life je prevádzkovaný ako súkromný projekt. Dary preto nie sú daňovo odpočítateľné."
+    "note": "BibleBot.Life je prevádzkovaný ako súkromný projekt. Dary preto nie sú daňovo odpočítateľné.",
+    "creditCard": "Podporte kreditnou kartou",
+    "secureNote": "Bezpečná platba · Žiadne predplatné · Zrušenie kedykoľvek",
+    "twint": "Podporte cez Twint"
   },
   "refer": {
     "badge": "Zdieľajte Božie slovo",
@@ -266,7 +269,8 @@
     "noTax": "Dary nie sú daňovo odpočítateľné",
     "datenschutz": "Ochrana údajov",
     "love": "S ❤️ pre všetkých, ktorí sa pýtajú, čo si myslí Kristus.",
-    "forChurches": "Pre cirkvi"
+    "forChurches": "Pre cirkvi",
+    "forCelebrants": "Pre pastorov a koučov"
   },
   "chat": {
     "welcome": "Teší ma, že ste tu 🤗\n\nSom váš váš sprievodca – váš osobný sprievodca s Bibliou, dobrými otázkami a konkrétnymi impulzmi. Žiadny tlak, žiadne hodnotenie.\n\nMôžete sa ma opýtať na čokoľvek – alebo mi jednoducho povedať, čo vás práve trápi. 💛",
@@ -1179,5 +1183,104 @@
   "pricing": {
     "onRequest": "Patronát na vyžiadanie",
     "contactUs": "Kontaktujte nás"
+  },
+  "audience": {
+    "church": {
+      "cta": "Pre farnosti a pastorov →",
+      "desc": "Pre farárov, pastorov a farské tímy: AI podpora pre prípravu kázní, plánovanie tímu a ďalšie.",
+      "f1": "Plánovač bohoslužieb s AI",
+      "f2": "Knižnica zdrojov",
+      "f3": "Koordinácia tímu",
+      "f4": "Farská stránka a adresár",
+      "title": "Plánujem bohoslužby a sprevádzam ľudí"
+    },
+    "personal": {
+      "cta": "Chatujte teraz – zadarmo →",
+      "desc": "Otázky o viere, denné impulzy, duchovný rast – vlastným tempom a bez posudzovania.",
+      "f1": "Chat s biblickým sprievodom",
+      "f2": "21-dňová cesta",
+      "f3": "Denný impulz cez push / Telegram",
+      "f4": "Osobná história rozhovorov",
+      "title": "Hľadám osobné sprevádzanie"
+    },
+    "subtitle": "Vyberte si svoju cestu",
+    "title": "Pre koho je BibleBot.Life?"
+  },
+  "entryTiles": {
+    "groups": {
+      "deep": "Chcem ísť hlbšie",
+      "emotional": "Niečo ma trápi",
+      "orientation": "Hľadám orientáciu"
+    },
+    "labels": {
+      "anger": "Hnev a zlosť",
+      "anxiety": "Mám obavy",
+      "baptism": "Krst a cesta viery",
+      "biblequiz": "Biblický kvíz",
+      "bibleverse": "Pochopiť biblický verš",
+      "burnout": "Vyčerpanosť",
+      "calling": "Aká je moja cesta?",
+      "condolence": "Smútok a strata",
+      "decision": "Stojím pred rozhodnutím",
+      "faithdoubt": "Pochybnosti o viere",
+      "financial": "Finančné starosti",
+      "forgiveness": "Odpustenie a pustenie",
+      "heartbreak": "Som zranený",
+      "illness": "Choroba",
+      "lifewheel": "Kde som v živote?",
+      "loneliness": "Cítim sa sám",
+      "meaningcrisis": "Kríza zmyslu",
+      "newstart": "Chcem začať odznova",
+      "prayerwall": "Modlitebná stena",
+      "selfdoubt": "Pochybnosti o sebe",
+      "sevenwhys": "Prečo to naozaj robím?",
+      "sleepless": "Nespavosť",
+      "thankfulness": "Vďačnosť",
+      "wedding": "Manželstvo a partnerstvo"
+    },
+    "showLess": "Zobraziť menej",
+    "showMore": "Objavte ďalšie témy"
+  },
+  "faqExtra": {
+    "faithPsych": {
+      "a": "BibleBot kombinuje biblickú múdrosť s poznatkami z psychológie založenej na dôkazoch – nie s cieľom psychologizovať vieru, ale aby ju priblížil každodennému životu. Metódy (PERMA, logoterapia, výskum vďačnosti a odpustenia) dopĺňajú Bibliu, ale nenahrádzajú ju.",
+      "q": "Spája BibleBot vieru a psychológiu?"
+    },
+    "journey": {
+      "q": "Čo je 21-dňová cesta?"
+    },
+    "methodik": {
+      "a": "",
+      "q": "Čo stojí za metodikou BibleBot?"
+    }
+  },
+  "tools": {
+    "badge": "Viac ako odpovede",
+    "lifewheel": {
+      "cta": "Spustiť koleso života",
+      "desc": "Ako je to s prácou, vzťahmi, zmyslom a zdravím? Koleso života vám za 3 minúty pomôže získať jasnosť – a ukáže, kde sa Biblia priamo napája.",
+      "title": "Kontrola kolesa života"
+    },
+    "sevenwhys": {
+      "cta": "Pýtať sa hlbšie",
+      "desc": "Prečo to naozaj robím? Prečo sa to takto cíti? BibleBot vás prevedie 7 otázkami, ktoré idú ku koreňu – s biblickým zaradením na najhlbšom mieste.",
+      "title": "Metóda 7 prečo"
+    },
+    "subtitle": "Pre chvíle, keď potrebujete viac ako len odpoveď.",
+    "title": "Dva nástroje, ktoré idú hlbšie"
+  },
+  "trust": {
+    "noAds": {
+      "text": "Žiadne sledovanie, žiadne zdieľanie údajov, žiadna monetizácia vašich otázok.",
+      "title": "Žiadna reklama"
+    },
+    "noExpertise": {
+      "text": "Nepotrebujete cirkevné členstvo ani teologické predchádzajúce znalosti.",
+      "title": "Nie sú potrebné predchádzajúce znalosti"
+    },
+    "qa": {
+      "text": "Každý biblický verš je automaticky kontrolovaný na správnosť – pri každom rozhovore.",
+      "title": "QA-overené"
+    }
   }
 }

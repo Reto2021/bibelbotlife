@@ -234,7 +234,10 @@
     "bank": "Ibhange",
     "purpose": "Inhloso",
     "purposeValue": "Nikezela iBibleBot.Life",
-    "note": "I-BibleBot.Life isebenza njengephrojekthi yangasese. Ngakho-ke iminikelo ayikwazi ukubuyiselwa intela."
+    "note": "I-BibleBot.Life isebenza njengephrojekthi yangasese. Ngakho-ke iminikelo ayikwazi ukubuyiselwa intela.",
+    "creditCard": "Sekela ngekhadi lesikweletu",
+    "secureNote": "Inkokhelo ephephile · Akukho ukubhalisa okukhohlisayo · Ungakhansela noma nini",
+    "twint": "Sekela nge-Twint"
   },
   "refer": {
     "badge": "Yabelana ngezwi likaNkulunkulu",
@@ -266,7 +269,8 @@
     "noTax": "Iminikelo ayikhokhelwa intela",
     "datenschutz": "Inqubomgomo Yemfihlo",
     "love": "Ngo ❤️ yabo bonke abazibuza ukuthi uKristu ucabangani.",
-    "forChurches": "Okwamabandla"
+    "forChurches": "Okwamabandla",
+    "forCelebrants": "Kubelusi nabaqeqeshi"
   },
   "chat": {
     "welcome": "Kuhle ukuthi ulapha 🤗\n\nNginguumngane wakho yakho – umngane wakho siqu neBhayibheli, imibuzo emihle kanye nogqozi oluthile. Akukho ukuphoqelela, akukho ukwahlulela.\n\nUngangibuza noma yini – noma uvele uxoxe ngalokho okukhathazayo njengamanje. 💛",
@@ -1179,5 +1183,104 @@
   "pricing": {
     "onRequest": "Ukuxhaswa ngokucela",
     "contactUs": "Xhumana nathi"
+  },
+  "audience": {
+    "church": {
+      "cta": "Okomakhelana namasonto nabefundisi →",
+      "desc": "Kubefundisi, abelusi namalungu esonto: Ukwesekwa kwe-AI ekulungiseleleni intshumayelo, ukuhlela ithimba nokunye okuningi.",
+      "f1": "Umhleli wenkonzo nge-AI",
+      "f2": "Umtapo wolwazi wezinsiza",
+      "f3": "Ukuhlanganisa ithimba",
+      "f4": "Ikhasi lesonto nomkhombandlela",
+      "title": "Ngihlela izinkonzo futhi ngihamba nabantu"
+    },
+    "personal": {
+      "cta": "Xoxa manje — mahhala →",
+      "desc": "Imibuzo mayelana nokholo, izikhuthazo zansuku zonke, ukukhula ngokomoya — ngejubane lakho nangaphandle kokwahlulela.",
+      "f1": "Xoxa nosizo lweBhayibheli",
+      "f2": "Uhambo lwezinsuku ezingama-21",
+      "f3": "Isikhuthazo sansuku zonke nge-Push / Telegram",
+      "f4": "Umlando wengxoxo yomuntu siqu",
+      "title": "Ngifuna ukwesekwa komuntu siqu"
+    },
+    "subtitle": "Khetha indlela yakho",
+    "title": "I-BibleBot.Life ingeyobani?"
+  },
+  "entryTiles": {
+    "groups": {
+      "deep": "Ngifuna ukujula",
+      "emotional": "Kukhona okungikhathazayo",
+      "orientation": "Ngifuna isiqondiso"
+    },
+    "labels": {
+      "anger": "Ulwazi nentukuthelo",
+      "anxiety": "Ngikhathazekile",
+      "baptism": "Ukubhapathizwa nendlela yokholo",
+      "biblequiz": "Imibuzo yeBhayibheli",
+      "bibleverse": "Qonda ivesi leBhayibheli",
+      "burnout": "Ukukhathala",
+      "calling": "Iyiphi indlela yami?",
+      "condolence": "Ukudabuka nokulahlekelwa",
+      "decision": "Ngibhekene nesinqumo",
+      "faithdoubt": "Ukungabaza okholweni",
+      "financial": "Izinkinga zezimali",
+      "forgiveness": "Ukuthethelela nokuyeka",
+      "heartbreak": "Ngilimele",
+      "illness": "Ukugula",
+      "lifewheel": "Ngikuphi empilweni?",
+      "loneliness": "Ngizizwa ngingedwa",
+      "meaningcrisis": "Inkinga yencazelo",
+      "newstart": "Ngifuna ukuqala kabusha",
+      "prayerwall": "Udonga lomkhuleko",
+      "selfdoubt": "Ukuzingabaza",
+      "sevenwhys": "Kungani ngikwenza lokhu ngempela?",
+      "sleepless": "Ukungalali",
+      "thankfulness": "Ukubonga",
+      "wedding": "Umshado nobuhlobo"
+    },
+    "showLess": "Bonisa okuncane",
+    "showMore": "Thola izihloko ezengeziwe"
+  },
+  "faqExtra": {
+    "faithPsych": {
+      "a": "I-BibleBot ihlanganisa ukuhlakanipha kweBhayibheli nolwazi oluvela ku-psychology esekelwe ebufakazini — hhayi ukwenza ukholo lube yi-psychological, kodwa ukulwenza lufaneleke empilweni yansuku zonke. Izindlela (i-PERMA, i-Logotherapy, ucwaningo lokubonga nokuthethelela) zihambisana neBhayibheli, kodwa azilifaki esikhundleni.",
+      "q": "Ingabe i-BibleBot ihlanganisa ukholo ne-psychology?"
+    },
+    "journey": {
+      "q": "Luyini uhambo lwezinsuku ezingama-21?"
+    },
+    "methodik": {
+      "a": "",
+      "q": "Yini ngemuva kwendlela ye-BibleBot?"
+    }
+  },
+  "tools": {
+    "badge": "Okungaphezu kwezimpendulo",
+    "lifewheel": {
+      "cta": "Qala isondo lempilo",
+      "desc": "Kunjani umsebenzi, ubudlelwano, injongo nempilo? Isondo lempilo likusiza ukuthi uthole ukucaca ngemizuzu emi-3 — futhi likhombisa lapho iBhayibheli lihambisana khona ngqo.",
+      "title": "Ukuhlolwa kwesondo lempilo"
+    },
+    "sevenwhys": {
+      "cta": "Buza ngokujulile",
+      "desc": "Kungani ngikwenza lokhu ngempela? Kungani kuzwakala kanjena? I-BibleBot ikuhola ngemibuzo engu-7 efika empandeni — ngencazelo yeBhayibheli endaweni ejulile.",
+      "title": "Indlela Yezizathu Eziyisikhombisa"
+    },
+    "subtitle": "Ezikhathini lapho udinga okungaphezu kwempendulo.",
+    "title": "Amathuluzi amabili ajula kakhulu"
+  },
+  "trust": {
+    "noAds": {
+      "text": "Akukho ukulandelela, akukho ukwabelana ngedatha, akukho ukwenza imali ngemibuzo yakho.",
+      "title": "Akukho ukukhangisa"
+    },
+    "noExpertise": {
+      "text": "Awudingi ubulungu besonto noma ulwazi lwezenkolo.",
+      "title": "Akukho lwazi oludingekayo"
+    },
+    "qa": {
+      "text": "Yonke indawo yeBhayibheli ihlolwa ngokuzenzakalelayo ukuze kuqinisekiswe ukunemba — ngaso sonke isikhathi lapho kuxoxwa.",
+      "title": "Ihlolwe yi-QA"
+    }
   }
 }

@@ -234,7 +234,10 @@
     "bank": "Bank",
     "purpose": "Rezon",
     "purposeValue": "Donasyon BibleBot.Life",
-    "note": "BibleBot.Life opere kòm yon pwojè prive. Donasyon yo pa dediktib taks."
+    "note": "BibleBot.Life opere kòm yon pwojè prive. Donasyon yo pa dediktib taks.",
+    "creditCard": "Sipòte ak kat kredi",
+    "secureNote": "Peman an sekirite · Pa gen pyèj abònman · Anile nenpòt lè",
+    "twint": "Sipòte ak Twint"
   },
   "refer": {
     "badge": "Pataje Pawòl Bondye a",
@@ -266,7 +269,8 @@
     "noTax": "Donasyon yo pa dediktib taks",
     "datenschutz": "Règleman sou enfòmasyon prive",
     "love": "Avèk ❤️ pou tout moun ki mande kisa Kris panse.",
-    "forChurches": "Pou Legliz"
+    "forChurches": "Pou Legliz",
+    "forCelebrants": "Pou Pastè ak Antrenè"
   },
   "chat": {
     "welcome": "Ala bèl ou la 🤗\n\nMwen se konpayon ou ou a – konpayon pèsonèl ou ak Bib la, bon kesyon ak enspirasyon konkrè. Pa gen presyon, pa gen jijman.\n\nOu ka mande m tout bagay – oswa jis di m sa k ap okipe w kounye a. 💛",
@@ -1179,5 +1183,104 @@
   "pricing": {
     "onRequest": "Patronaj sou demann",
     "contactUs": "Kontakte nou"
+  },
+  "audience": {
+    "church": {
+      "cta": "Pou Legliz ak Pastè →",
+      "desc": "Pou pastè, konseye, ak ekip legliz yo: sipò AI pou preparasyon prèch, planifikasyon ekip, ak plis ankò.",
+      "f1": "Planifikatè sèvis adorasyon ak AI",
+      "f2": "Bibliyotèk resous",
+      "f3": "Kowòdinasyon ekip",
+      "f4": "Paj legliz ak anyè",
+      "title": "Mwen planifye sèvis adorasyon ak akonpaye moun"
+    },
+    "personal": {
+      "cta": "Chat kounye a — gratis →",
+      "desc": "Kesyon sou lafwa, enspirasyon chak jou, kwasans espirityèl — nan pwòp vitès ou ak san jijman.",
+      "f1": "Chat ak akonpayman biblik",
+      "f2": "Vwayaj 21 jou",
+      "f3": "Enspirasyon chak jou atravè notifikasyon pouse / Telegram",
+      "f4": "Istorik konvèsasyon pèsonèl",
+      "title": "Mwen chèche akonpayman pèsonèl"
+    },
+    "subtitle": "Chwazi chemen ou",
+    "title": "Pou kiyès BibleBot.Life ye?"
+  },
+  "entryTiles": {
+    "groups": {
+      "deep": "Mwen vle ale pi fon",
+      "emotional": "Yon bagay ap deranje m",
+      "orientation": "Mwen chèche direksyon"
+    },
+    "labels": {
+      "anger": "Kòlè ak fache",
+      "anxiety": "Mwen enkyete m",
+      "baptism": "Batèm ak chemen lafwa",
+      "biblequiz": "Kwiz biblik",
+      "bibleverse": "Konprann yon vèsè biblik",
+      "burnout": "Epuizman",
+      "calling": "Ki chemen mwen?",
+      "condolence": "Dey ak pèt",
+      "decision": "Mwen devan yon desizyon",
+      "faithdoubt": "Dout lafwa",
+      "financial": "Enkyetid finansye",
+      "forgiveness": "Padone ak lage",
+      "heartbreak": "Mwen blese",
+      "illness": "Maladi",
+      "lifewheel": "Ki kote mwen ye nan lavi a?",
+      "loneliness": "Mwen santi m pou kont mwen",
+      "meaningcrisis": "Kriz sans",
+      "newstart": "Mwen vle kòmanse ankò",
+      "prayerwall": "Mi lapriyè",
+      "selfdoubt": "Dout sou tèt mwen",
+      "sevenwhys": "Poukisa mwen fè sa vrèman?",
+      "sleepless": "Lensomni",
+      "thankfulness": "Rekonesans",
+      "wedding": "Maryaj ak patenarya"
+    },
+    "showLess": "Montre mwens",
+    "showMore": "Dekouvri plis sijè"
+  },
+  "faqExtra": {
+    "faithPsych": {
+      "a": "BibleBot konbine sajès biblik ak apèsi ki soti nan sikoloji ki baze sou prèv — pa pou sikolojize lafwa, men pou rann li aksesib nan lavi chak jou. Metòd yo (PERMA, Logoterapi, rechèch sou rekonesans ak padon) konplete Bib la, men yo pa ranplase li.",
+      "q": "Èske BibleBot konekte lafwa ak sikoloji?"
+    },
+    "journey": {
+      "q": "Ki sa ki vwayaj 21 jou a?"
+    },
+    "methodik": {
+      "a": "",
+      "q": "Ki sa ki dèyè metodoloji BibleBot?"
+    }
+  },
+  "tools": {
+    "badge": "Plis pase repons",
+    "lifewheel": {
+      "cta": "Kòmanse wou lavi a",
+      "desc": "Ki jan travay, relasyon, sans, ak sante ye kounye a? Wou lavi a ede ou jwenn klè nan 3 minit — epi montre ki kote Bib la konekte dirèkteman.",
+      "title": "Tcheke wou lavi a"
+    },
+    "sevenwhys": {
+      "cta": "Poze kesyon pi fon",
+      "desc": "Poukisa mwen fè sa vrèman? Poukisa sa santi konsa? BibleBot gide ou atravè 7 kesyon ki ale nan rasin pwoblèm nan — ak yon klasifikasyon biblik nan pwen ki pi pwofon an.",
+      "title": "Metòd 7 Poukisa yo"
+    },
+    "subtitle": "Pou moman kote ou bezwen plis pase yon repons.",
+    "title": "De zouti ki ale pi fon"
+  },
+  "trust": {
+    "noAds": {
+      "text": "Pa gen swivi, pa gen pataj done, pa gen monetizasyon kesyon ou yo.",
+      "title": "Pa gen piblisite"
+    },
+    "noExpertise": {
+      "text": "Ou pa bezwen manm legliz oswa konesans teyolojik anvan.",
+      "title": "Pa gen konesans anvan ki nesesè"
+    },
+    "qa": {
+      "text": "Chak vèsè biblik verifye otomatikman pou kòrèktid — nan chak konvèsasyon.",
+      "title": "QA-verifye"
+    }
   }
 }

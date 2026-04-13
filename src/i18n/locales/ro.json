@@ -234,7 +234,10 @@
     "bank": "Bancă",
     "purpose": "Referință",
     "purposeValue": "Donație BibleBot.Life",
-    "note": "BibleBot.Life este operat ca proiect privat. Donațiile nu sunt deductibile fiscal."
+    "note": "BibleBot.Life este operat ca proiect privat. Donațiile nu sunt deductibile fiscal.",
+    "creditCard": "Susține cu cardul de credit",
+    "secureNote": "Plată securizată · Fără capcană de abonament · Anulabil oricând",
+    "twint": "Susține cu Twint"
   },
   "refer": {
     "badge": "Share God's Word",
@@ -266,7 +269,8 @@
     "noTax": "Donațiile nu sunt deductibile fiscal",
     "datenschutz": "Politica de confidențialitate",
     "love": "Cu ❤️ pentru toți cei care se întreabă ce gândește Hristos.",
-    "forChurches": "Pentru Biserici"
+    "forChurches": "Pentru Biserici",
+    "forCelebrants": "Pentru pastori și antrenori"
   },
   "chat": {
     "welcome": "Bun venit! 🤗\n\nSunt companionul tău-ul tău – companionul tău personal cu Biblia, întrebări bune și impulsuri reale. Fără presiune, fără judecată.\n\nPoți să mă întrebi orice – sau pur și simplu să împărtășești ce te preocupă. 💛",
@@ -1179,5 +1183,104 @@
   "pricing": {
     "onRequest": "Patronaj la cerere",
     "contactUs": "Contactați-ne"
+  },
+  "audience": {
+    "church": {
+      "cta": "Pentru comunități și pastori →",
+      "desc": "Pentru pastori, consilieri spirituali și echipe comunitare: suport AI pentru pregătirea predicilor, planificarea echipei și multe altele.",
+      "f1": "Planificator de servicii divine cu AI",
+      "f2": "Bibliotecă de resurse",
+      "f3": "Coordonare de echipă",
+      "f4": "Pagina comunității și director",
+      "title": "Planific slujbe și însoțesc oameni"
+    },
+    "personal": {
+      "cta": "Chat acum — gratuit →",
+      "desc": "Întrebări despre credință, impulsuri zilnice, creștere spirituală — în ritmul tău și fără judecată.",
+      "f1": "Chat cu însoțire biblică",
+      "f2": "Călătorie de 21 de zile",
+      "f3": "Impuls zilnic prin Push / Telegram",
+      "f4": "Istoricul conversațiilor personale",
+      "title": "Caut însoțire personală"
+    },
+    "subtitle": "Alege-ți calea",
+    "title": "Pentru cine este BibleBot.Life?"
+  },
+  "entryTiles": {
+    "groups": {
+      "deep": "Vreau să aprofundez",
+      "emotional": "Mă afectează ceva",
+      "orientation": "Caut orientare"
+    },
+    "labels": {
+      "anger": "Furie și enervare",
+      "anxiety": "Îmi fac griji",
+      "baptism": "Botez și drumul credinței",
+      "biblequiz": "Test biblic",
+      "bibleverse": "Înțelege un verset biblic",
+      "burnout": "Epuizare",
+      "calling": "Care este calea mea?",
+      "condolence": "Doliu și pierdere",
+      "decision": "Sunt în fața unei decizii",
+      "faithdoubt": "Îndoieli de credință",
+      "financial": "Griji financiare",
+      "forgiveness": "Iertare și eliberare",
+      "heartbreak": "Sunt rănit",
+      "illness": "Boală",
+      "lifewheel": "Unde mă aflu în viață?",
+      "loneliness": "Mă simt singur",
+      "meaningcrisis": "Criză de sens",
+      "newstart": "Vreau să o iau de la capăt",
+      "prayerwall": "Zidul rugăciunii",
+      "selfdoubt": "Îndoială de sine",
+      "sevenwhys": "De ce fac asta cu adevărat?",
+      "sleepless": "Insomnie",
+      "thankfulness": "Recunoștință",
+      "wedding": "Căsătorie și parteneriat"
+    },
+    "showLess": "Afișează mai puțin",
+    "showMore": "Descoperă mai multe subiecte"
+  },
+  "faqExtra": {
+    "faithPsych": {
+      "a": "BibleBot combină înțelepciunea biblică cu descoperirile psihologiei bazate pe dovezi — nu pentru a psihologiza credința, ci pentru a o face relevantă pentru viața de zi cu zi. Metodele (PERMA, Logoterapie, cercetarea recunoștinței și a iertării) completează Biblia, dar nu o înlocuiesc.",
+      "q": "BibleBot conectează credința și psihologia?"
+    },
+    "journey": {
+      "q": "Ce este călătoria de 21 de zile?"
+    },
+    "methodik": {
+      "a": "",
+      "q": "Ce se află în spatele metodologiei BibleBot?"
+    }
+  },
+  "tools": {
+    "badge": "Mai mult decât răspunsuri",
+    "lifewheel": {
+      "cta": "Începe Roata Vieții",
+      "desc": "Cum stai cu munca, relațiile, sensul și sănătatea? Roata Vieții te ajută în 3 minute să obții claritate — și arată unde se conectează direct Biblia.",
+      "title": "Verificarea Roții Vieții"
+    },
+    "sevenwhys": {
+      "cta": "Întreabă mai profund",
+      "desc": "De ce fac asta cu adevărat? De ce mă simt așa? BibleBot te ghidează prin 7 întrebări care ajung la rădăcină — cu o clasificare biblică la cel mai profund nivel.",
+      "title": "Metoda celor 7 De Ce"
+    },
+    "subtitle": "Pentru momentele în care ai nevoie de mai mult decât un răspuns.",
+    "title": "Două instrumente care merg mai adânc"
+  },
+  "trust": {
+    "noAds": {
+      "text": "Fără urmărire, fără partajare de date, fără monetizarea întrebărilor tale.",
+      "title": "Fără publicitate"
+    },
+    "noExpertise": {
+      "text": "Nu ai nevoie de apartenență la biserică și nici de cunoștințe teologice prealabile.",
+      "title": "Nu este necesară nicio cunoștință prealabilă"
+    },
+    "qa": {
+      "text": "Fiecare verset biblic este verificat automat pentru corectitudine — la fiecare conversație.",
+      "title": "Verificat QA"
+    }
   }
 }

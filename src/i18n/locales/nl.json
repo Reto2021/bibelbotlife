@@ -234,7 +234,10 @@
     "bank": "Bank",
     "purpose": "Referentie",
     "purposeValue": "Donatie BibleBot.Life",
-    "note": "BibleBot.Life wordt als privéproject uitgevoerd. Donaties zijn daarom niet fiscaal aftrekbaar."
+    "note": "BibleBot.Life wordt als privéproject uitgevoerd. Donaties zijn daarom niet fiscaal aftrekbaar.",
+    "creditCard": "Steun met creditcard",
+    "secureNote": "Veilige betaling · Geen abonnementsval · Altijd opzegbaar",
+    "twint": "Steun met Twint"
   },
   "refer": {
     "badge": "Gods Woord delen",
@@ -266,7 +269,8 @@
     "noTax": "Donaties zijn niet fiscaal aftrekbaar",
     "datenschutz": "Privacybeleid",
     "love": "Met ❤️ voor iedereen die zich afvraagt wat Christus denkt.",
-    "forChurches": "Voor Kerken"
+    "forChurches": "Voor Kerken",
+    "forCelebrants": "Voor pastores & coaches"
   },
   "chat": {
     "welcome": "Welkom! 🤗\n\nIk ben je je metgezel – je persoonlijke metgezel met de Bijbel, goede vragen en echte impulsen. Geen druk, geen oordeel.\n\nJe kunt me alles vragen – of gewoon delen wat je bezighoudt. 💛",
@@ -1179,5 +1183,104 @@
   "pricing": {
     "onRequest": "Patronaat op aanvraag",
     "contactUs": "Neem contact op"
+  },
+  "audience": {
+    "church": {
+      "cta": "Voor gemeenten & pastores →",
+      "desc": "Voor predikanten, pastores en gemeenteteams: AI-ondersteuning voor preekvoorbereiding, teamplanning en meer.",
+      "f1": "Dienstplanner met AI",
+      "f2": "Bronnenbibliotheek",
+      "f3": "Teamcoördinatie",
+      "f4": "Gemeentepagina & gids",
+      "title": "Ik plan diensten & begeleid mensen"
+    },
+    "personal": {
+      "cta": "Chat nu — gratis →",
+      "desc": "Vragen over geloof, dagelijkse impulsen, spirituele groei — helemaal in jouw tempo en zonder oordeel.",
+      "f1": "Chat met Bijbelbegeleiding",
+      "f2": "21-dagenreis",
+      "f3": "Dagelijkse impuls via push / Telegram",
+      "f4": "Persoonlijke gespreksgeschiedenis",
+      "title": "Ik zoek persoonlijke begeleiding"
+    },
+    "subtitle": "Kies jouw weg",
+    "title": "Voor wie is BibleBot.Life?"
+  },
+  "entryTiles": {
+    "groups": {
+      "deep": "Ik wil dieper gaan",
+      "emotional": "Er zit me iets dwars",
+      "orientation": "Ik zoek oriëntatie"
+    },
+    "labels": {
+      "anger": "Woede & ergernis",
+      "anxiety": "Ik maak me zorgen",
+      "baptism": "Doop & geloofsweg",
+      "biblequiz": "Bijbelquiz",
+      "bibleverse": "Bijbeltekst begrijpen",
+      "burnout": "Uitputting",
+      "calling": "Wat is mijn weg?",
+      "condolence": "Rouw & verlies",
+      "decision": "Ik sta voor een beslissing",
+      "faithdoubt": "Geloofstwijfel",
+      "financial": "Financiële zorgen",
+      "forgiveness": "Vergeven & loslaten",
+      "heartbreak": "Ik ben gekwetst",
+      "illness": "Ziekte",
+      "lifewheel": "Waar sta ik in het leven?",
+      "loneliness": "Ik voel me alleen",
+      "meaningcrisis": "Zinloosheidscrisis",
+      "newstart": "Ik wil opnieuw beginnen",
+      "prayerwall": "Gebedsmuur",
+      "selfdoubt": "Zelfvertwijfeling",
+      "sevenwhys": "Waarom doe ik dit echt?",
+      "sleepless": "Slapeloosheid",
+      "thankfulness": "Dankbaarheid",
+      "wedding": "Huwelijk & partnerschap"
+    },
+    "showLess": "Minder tonen",
+    "showMore": "Meer onderwerpen ontdekken"
+  },
+  "faqExtra": {
+    "faithPsych": {
+      "a": "BibleBot combineert Bijbelse wijsheid met inzichten uit evidence-based psychologie — niet om het geloof te psychologiseren, maar om het alledaags te maken. De methoden (PERMA, logotherapie, dankbaarheids- en vergevingonderzoek) vullen de Bijbel aan, maar vervangen deze niet.",
+      "q": "Verbindt BibleBot geloof en psychologie?"
+    },
+    "journey": {
+      "q": "Wat is de 21-dagenreis?"
+    },
+    "methodik": {
+      "a": "",
+      "q": "Wat zit er achter de methodiek van BibleBot?"
+    }
+  },
+  "tools": {
+    "badge": "Meer dan antwoorden",
+    "lifewheel": {
+      "cta": "Levenswiel starten",
+      "desc": "Hoe staat het met werk, relaties, zingeving en gezondheid? Het levenswiel helpt je in 3 minuten duidelijkheid te krijgen — en toont waar de Bijbel direct aansluit.",
+      "title": "Levenswiel-check"
+    },
+    "sevenwhys": {
+      "cta": "Dieper vragen",
+      "desc": "Waarom doe ik dit echt? Waarom voelt dit zo? BibleBot leidt je door 7 vragen die tot de kern komen — met Bijbelse duiding op het diepste punt.",
+      "title": "De 7-Waarom-methode"
+    },
+    "subtitle": "Voor momenten waarop je meer dan een antwoord nodig hebt.",
+    "title": "Twee hulpmiddelen die dieper gaan"
+  },
+  "trust": {
+    "noAds": {
+      "text": "Geen tracking, geen gegevensdeling, geen monetarisering van je vragen.",
+      "title": "Geen reclame"
+    },
+    "noExpertise": {
+      "text": "Je hebt geen kerkelijk lidmaatschap en geen theologische voorkennis nodig.",
+      "title": "Geen voorkennis nodig"
+    },
+    "qa": {
+      "text": "Elke Bijbeltekst wordt automatisch gecontroleerd op correctheid — bij elk gesprek.",
+      "title": "QA-gecontroleerd"
+    }
   }
 }

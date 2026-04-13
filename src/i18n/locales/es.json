@@ -234,7 +234,10 @@
     "bank": "Banco",
     "purpose": "Referencia",
     "purposeValue": "Donación BibleBot.Life",
-    "note": "BibleBot.Life funciona como proyecto privado. Las donaciones no son deducibles de impuestos."
+    "note": "BibleBot.Life funciona como proyecto privado. Las donaciones no son deducibles de impuestos.",
+    "creditCard": "Apoyar con tarjeta de crédito",
+    "secureNote": "Pago seguro · Sin trampas de suscripción · Cancelable en cualquier momento",
+    "twint": "Apoyar con Twint"
   },
   "cta": {
     "title": "No tienes que pasar por esto solo",
@@ -251,7 +254,8 @@
     "noTax": "Las donaciones no son deducibles de impuestos",
     "datenschutz": "Política de privacidad",
     "love": "Con ❤️ para todos los que se preguntan qué piensa Cristo.",
-    "forChurches": "Para Iglesias"
+    "forChurches": "Para Iglesias",
+    "forCelebrants": "Para pastores y coaches"
   },
   "chat": {
     "welcome": "¡Bienvenido/a! 🤗\n\nSoy tu tu compañero – tu compañero personal con la Biblia, buenas preguntas e impulsos reales. Sin presión, sin juicio.\n\nPuedes preguntarme lo que quieras – o simplemente compartir lo que te preocupa. 💛",
@@ -1179,5 +1183,104 @@
   "pricing": {
     "onRequest": "Patrocinio a consultar",
     "contactUs": "Contáctenos"
+  },
+  "audience": {
+    "church": {
+      "cta": "Para iglesias y pastores →",
+      "desc": "Para pastores, consejeros y equipos de la iglesia: apoyo de IA para la preparación de sermones, planificación de equipos y más.",
+      "f1": "Planificador de servicios con IA",
+      "f2": "Biblioteca de recursos",
+      "f3": "Coordinación de equipos",
+      "f4": "Página y directorio de la iglesia",
+      "title": "Planifico servicios y acompaño a personas"
+    },
+    "personal": {
+      "cta": "Chatea ahora — gratis →",
+      "desc": "Preguntas sobre la fe, impulsos diarios, crecimiento espiritual — a tu propio ritmo y sin juicios.",
+      "f1": "Chat con acompañamiento bíblico",
+      "f2": "Viaje de 21 días",
+      "f3": "Impulso diario por Push / Telegram",
+      "f4": "Historial de conversación personal",
+      "title": "Busco acompañamiento personal"
+    },
+    "subtitle": "Elige tu camino",
+    "title": "¿Para quién es BibleBot.Life?"
+  },
+  "entryTiles": {
+    "groups": {
+      "deep": "Quiero profundizar",
+      "emotional": "Algo me afecta",
+      "orientation": "Busco orientación"
+    },
+    "labels": {
+      "anger": "Ira y enojo",
+      "anxiety": "Me preocupo",
+      "baptism": "Bautismo y camino de fe",
+      "biblequiz": "Quiz bíblico",
+      "bibleverse": "Entender un versículo bíblico",
+      "burnout": "Agotamiento",
+      "calling": "¿Cuál es mi camino?",
+      "condolence": "Duelo y pérdida",
+      "decision": "Estoy ante una decisión",
+      "faithdoubt": "Dudas de fe",
+      "financial": "Preocupaciones financieras",
+      "forgiveness": "Perdonar y soltar",
+      "heartbreak": "Estoy herido",
+      "illness": "Enfermedad",
+      "lifewheel": "¿Dónde estoy en la vida?",
+      "loneliness": "Me siento solo",
+      "meaningcrisis": "Crisis de sentido",
+      "newstart": "Quiero empezar de nuevo",
+      "prayerwall": "Muro de oración",
+      "selfdoubt": "Dudas de uno mismo",
+      "sevenwhys": "¿Por qué hago esto realmente?",
+      "sleepless": "Insomnio",
+      "thankfulness": "Gratitud",
+      "wedding": "Matrimonio y pareja"
+    },
+    "showLess": "Mostrar menos",
+    "showMore": "Descubrir más temas"
+  },
+  "faqExtra": {
+    "faithPsych": {
+      "a": "BibleBot combina la sabiduría bíblica con conocimientos de la psicología basada en la evidencia, no para psicologizar la fe, sino para hacerla relevante para la vida cotidiana. Los métodos (PERMA, logoterapia, investigación sobre la gratitud y el perdón) complementan la Biblia, pero no la reemplazan.",
+      "q": "¿BibleBot conecta fe y psicología?"
+    },
+    "journey": {
+      "q": "¿Qué es el Viaje de 21 días?"
+    },
+    "methodik": {
+      "a": "",
+      "q": "¿Qué hay detrás de la metodología de BibleBot?"
+    }
+  },
+  "tools": {
+    "badge": "Más que respuestas",
+    "lifewheel": {
+      "cta": "Iniciar Rueda de la Vida",
+      "desc": "¿Cómo están el trabajo, las relaciones, el propósito y la salud en este momento? La Rueda de la Vida te ayuda a obtener claridad en 3 minutos, y muestra dónde la Biblia se conecta directamente.",
+      "title": "Chequeo de la Rueda de la Vida"
+    },
+    "sevenwhys": {
+      "cta": "Preguntar más a fondo",
+      "desc": "¿Por qué hago esto realmente? ¿Por qué se siente así? BibleBot te guía a través de 7 preguntas que llegan a la raíz, con una clasificación bíblica en el punto más profundo.",
+      "title": "El método de los 7 porqués"
+    },
+    "subtitle": "Para momentos en los que necesitas más que una respuesta.",
+    "title": "Dos herramientas que van más allá"
+  },
+  "trust": {
+    "noAds": {
+      "text": "Sin seguimiento, sin intercambio de datos, sin monetización de tus preguntas.",
+      "title": "Sin publicidad"
+    },
+    "noExpertise": {
+      "text": "No necesitas ser miembro de una iglesia ni tener conocimientos teológicos previos.",
+      "title": "No se requieren conocimientos previos"
+    },
+    "qa": {
+      "text": "Cada pasaje bíblico se verifica automáticamente para su corrección, en cada conversación.",
+      "title": "Control de calidad verificado"
+    }
   }
 }

@@ -234,7 +234,10 @@
     "bank": "Bank",
     "purpose": "Reference",
     "purposeValue": "Donation BibleBot.Life",
-    "note": "BibleBot.Life drives som et privat projekt. Donationer er derfor ikke fradragsberettigede."
+    "note": "BibleBot.Life drives som et privat projekt. Donationer er derfor ikke fradragsberettigede.",
+    "creditCard": "Støt med kreditkort",
+    "secureNote": "Sikker betaling · Ingen abonnementsfælde · Kan opsiges når som helst",
+    "twint": "Støt med Twint"
   },
   "refer": {
     "badge": "Del Guds ord",
@@ -266,7 +269,8 @@
     "noTax": "Donationer er ikke fradragsberettigede",
     "datenschutz": "Privatlivspolitik",
     "love": "Med ❤️ for alle, der undrer sig over, hvad Kristus tænker.",
-    "forChurches": "For Kirker"
+    "forChurches": "For Kirker",
+    "forCelebrants": "Til sjælesørgere og coaches"
   },
   "chat": {
     "welcome": "Velkommen! 🤗\n\nJeg er din personlige ledsager med Bibelen, gode spørgsmål og konkrete impulser. Intet pres, ingen dom.\n\nDu kan spørge mig om alt – eller bare fortælle, hvad der optager dig. 💛",
@@ -1125,5 +1129,104 @@
   "pricing": {
     "onRequest": "Patronat på forespørgsel",
     "contactUs": "Kontakt os"
+  },
+  "audience": {
+    "church": {
+      "cta": "Til menigheder og sjælesørgere →",
+      "desc": "Til præster, sjælesørgere og menighedsteam: AI-støtte til prædikenforberedelse, teamplanlægning og mere.",
+      "f1": "Gudstjenesteplanlægger med AI",
+      "f2": "Ressourcebibliotek",
+      "f3": "Teamkoordinering",
+      "f4": "Menighedsside og register",
+      "title": "Jeg planlægger gudstjenester og ledsager mennesker"
+    },
+    "personal": {
+      "cta": "Chat nu — gratis →",
+      "desc": "Spørgsmål om tro, daglige impulser, åndelig vækst — i dit eget tempo og uden bedømmelse.",
+      "f1": "Chat med bibelvejledning",
+      "f2": "21-dages rejse",
+      "f3": "Daglig impuls via push / Telegram",
+      "f4": "Personlig samtalehistorik",
+      "title": "Jeg søger personlig vejledning"
+    },
+    "subtitle": "Vælg din vej",
+    "title": "Hvem er BibleBot.Life for?"
+  },
+  "entryTiles": {
+    "groups": {
+      "deep": "Jeg vil gå dybere",
+      "emotional": "Noget påvirker mig",
+      "orientation": "Jeg søger retning"
+    },
+    "labels": {
+      "anger": "Vrede og irritation",
+      "anxiety": "Jeg er bekymret",
+      "baptism": "Dåb og trosrejse",
+      "biblequiz": "Bibelquiz",
+      "bibleverse": "Forstå et bibelvers",
+      "burnout": "Udbrændthed",
+      "calling": "Hvad er min vej?",
+      "condolence": "Sorg og tab",
+      "decision": "Jeg står over for en beslutning",
+      "faithdoubt": "Tvivl på troen",
+      "financial": "Økonomiske bekymringer",
+      "forgiveness": "Tilgive og give slip",
+      "heartbreak": "Jeg er såret",
+      "illness": "Sygdom",
+      "lifewheel": "Hvor står jeg i livet?",
+      "loneliness": "Jeg føler mig alene",
+      "meaningcrisis": "Meningskrise",
+      "newstart": "Jeg vil starte på ny",
+      "prayerwall": "Bønnevæg",
+      "selfdoubt": "Selvtvivl",
+      "sevenwhys": "Hvorfor gør jeg virkelig dette?",
+      "sleepless": "Søvnløshed",
+      "thankfulness": "Taknemmelighed",
+      "wedding": "Bryllup og partnerskab"
+    },
+    "showLess": "Vis mindre",
+    "showMore": "Opdag flere emner"
+  },
+  "faqExtra": {
+    "faithPsych": {
+      "a": "BibleBot kombinerer bibelsk visdom med indsigt fra evidensbaseret psykologi — ikke for at psykologisere troen, men for at gøre den relevant i hverdagen. Metoderne (PERMA, Logoterapi, taknemmeligheds- og tilgivelsesforskning) supplerer Bibelen, men erstatter den ikke.",
+      "q": "Forbinder BibleBot tro og psykologi?"
+    },
+    "journey": {
+      "q": "Hvad er 21-dages rejsen?"
+    },
+    "methodik": {
+      "a": "",
+      "q": "Hvad ligger bag BibleBots metodik?"
+    }
+  },
+  "tools": {
+    "badge": "Mere end svar",
+    "lifewheel": {
+      "cta": "Start livshjulet",
+      "desc": "Hvordan står det til med arbejde, relationer, mening og sundhed? Livshjulet hjælper dig på 3 minutter med at få klarhed — og viser, hvor Bibelen direkte knytter an.",
+      "title": "Livshjul-tjek"
+    },
+    "sevenwhys": {
+      "cta": "Spørg dybere",
+      "desc": "Hvorfor gør jeg virkelig dette? Hvorfor føles det sådan? BibleBot fører dig gennem 7 spørgsmål, der går til roden — med bibelsk kontekst på det dybeste sted.",
+      "title": "De 7-hvorfor-metoden"
+    },
+    "subtitle": "Til øjeblikke, hvor du har brug for mere end et svar.",
+    "title": "To værktøjer, der går dybere"
+  },
+  "trust": {
+    "noAds": {
+      "text": "Ingen sporing, ingen datadeling, ingen monetarisering af dine spørgsmål.",
+      "title": "Ingen reklamer"
+    },
+    "noExpertise": {
+      "text": "Du behøver ikke at være kirkemedlem eller have teologisk forhåndsviden.",
+      "title": "Ingen forhåndsviden nødvendig"
+    },
+    "qa": {
+      "text": "Hvert bibelvers kontrolleres automatisk for korrekthed — ved hver samtale.",
+      "title": "QA-godkendt"
+    }
   }
 }
