@@ -147,6 +147,8 @@ export const template = {
     mobile: 52,
     tablet: 12,
     desktop: 25,
+    webChatUsers: 18,
+    webChatMessages: 47,
   },
 } satisfies TemplateEntry
 
