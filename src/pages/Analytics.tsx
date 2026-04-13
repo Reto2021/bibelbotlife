@@ -8,7 +8,7 @@ import {
   BarChart3, Eye, MousePointer, Users, Smartphone, Monitor, Tablet,
   MessageCircle, Flame, Trophy, Bell, TrendingUp, Download, Globe,
   Target, CircleDot, Search, Clock, CalendarDays, Building2, Link2,
-  Info, ArrowDownRight,
+  Info, ArrowDownRight, AlertTriangle,
 } from "lucide-react";
 import {
   BarChart, Bar, XAxis, YAxis, Tooltip as RTooltip, ResponsiveContainer,
@@ -85,6 +85,7 @@ type AnalyticsData = {
     topEvents: { name: string; count: number }[];
     utmSources?: { source: string; count: number }[];
     utmMediums?: { medium: string; count: number }[];
+    weeklyTrend?: { week: string; pageviews: number; sessions: number; events: number }[];
     funnel?: {
       widgetVisits: number;
       chatStarts: number;
