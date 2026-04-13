@@ -101,8 +101,8 @@ const Index = () => {
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold text-foreground mb-3">{t("audience.title", "Für wen ist BibleBot.Life?")}</h2>
-            <p className="text-muted-foreground">{t("audience.subtitle", "Wähle deinen Weg")}</p>
+            <h2 className="text-3xl font-bold text-foreground mb-3">{t("audience.title")}</h2>
+            <p className="text-muted-foreground">{t("audience.subtitle")}</p>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {/* Personal use */}
@@ -111,25 +111,20 @@ const Index = () => {
                 <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mb-3">
                   <Heart className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle className="text-xl">{t("audience.personal.title", "Ich suche persönliche Begleitung")}</CardTitle>
-                <CardDescription className="leading-relaxed">{t("audience.personal.desc", "Fragen zum Glauben, tägliche Impulse, spirituelles Wachstum — ganz in deinem Tempo und ohne Bewertung.")}</CardDescription>
+                <CardTitle className="text-xl">{t("audience.personal.title")}</CardTitle>
+                <CardDescription className="leading-relaxed">{t("audience.personal.desc")}</CardDescription>
               </CardHeader>
               <CardContent className="mt-auto">
                 <ul className="space-y-2 mb-5">
-                  {[
-                    t("audience.personal.f1", "Chat mit Bibelbegleitung"),
-                    t("audience.personal.f2", "21-Tage-Reise"),
-                    t("audience.personal.f3", "Täglicher Impuls per Push / Telegram"),
-                    t("audience.personal.f4", "Persönlicher Gesprächsverlauf"),
-                  ].map((item) => (
-                    <li key={item} className="flex items-center gap-2 text-sm text-foreground/80">
+                  {(["f1", "f2", "f3", "f4"] as const).map((f) => (
+                    <li key={f} className="flex items-center gap-2 text-sm text-foreground/80">
                       <CheckCircle2 className="h-4 w-4 text-primary shrink-0" />
-                      {item}
+                      {t(`audience.personal.${f}`)}
                     </li>
                   ))}
                 </ul>
                 <Button asChild className="w-full" size="lg">
-                  <a href="#chat">{t("audience.personal.cta", "Jetzt chatten — kostenlos →")}</a>
+                  <a href="#chat">{t("audience.personal.cta")}</a>
                 </Button>
               </CardContent>
             </Card>
@@ -140,25 +135,20 @@ const Index = () => {
                 <div className="h-12 w-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-3">
                   <Church className="h-6 w-6 text-secondary" />
                 </div>
-                <CardTitle className="text-xl">{t("audience.church.title", "Ich plane Gottesdienste & begleite Menschen")}</CardTitle>
-                <CardDescription className="leading-relaxed">{t("audience.church.desc", "Für Pfarrpersonen, Seelsorger und Gemeindeteams: KI-Unterstützung für Predigtvorbereitung, Teamplanung und mehr.")}</CardDescription>
+                <CardTitle className="text-xl">{t("audience.church.title")}</CardTitle>
+                <CardDescription className="leading-relaxed">{t("audience.church.desc")}</CardDescription>
               </CardHeader>
               <CardContent className="mt-auto">
                 <ul className="space-y-2 mb-5">
-                  {[
-                    t("audience.church.f1", "Gottesdienst-Planer mit KI"),
-                    t("audience.church.f2", "Ressourcen-Bibliothek"),
-                    t("audience.church.f3", "Team-Koordination"),
-                    t("audience.church.f4", "Gemeinde-Seite & Verzeichnis"),
-                  ].map((item) => (
-                    <li key={item} className="flex items-center gap-2 text-sm text-foreground/80">
+                  {(["f1", "f2", "f3", "f4"] as const).map((f) => (
+                    <li key={f} className="flex items-center gap-2 text-sm text-foreground/80">
                       <CheckCircle2 className="h-4 w-4 text-secondary shrink-0" />
-                      {item}
+                      {t(`audience.church.${f}`)}
                     </li>
                   ))}
                 </ul>
                 <Button asChild variant="outline" className="w-full border-secondary/40 hover:bg-secondary/10 hover:text-secondary" size="lg">
-                  <Link to="/for-churches">{t("audience.church.cta", "Für Gemeinden & Seelsorger →")}</Link>
+                  <Link to="/for-churches">{t("audience.church.cta")}</Link>
                 </Button>
               </CardContent>
             </Card>
@@ -170,29 +160,17 @@ const Index = () => {
       <section className="py-14 px-4">
         <div className="container mx-auto max-w-3xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-            {[
-              {
-                icon: Shield,
-                title: "QA-geprüft",
-                text: "Jede Bibelstelle wird automatisch auf Korrektheit geprüft — bei jedem Gespräch.",
-              },
-              {
-                icon: EyeOff,
-                title: "Keine Werbung",
-                text: "Kein Tracking, keine Datenweitergabe, keine Monetarisierung deiner Fragen.",
-              },
-              {
-                icon: Heart,
-                title: "Kein Vorwissen nötig",
-                text: "Du brauchst keine Kirchenmitgliedschaft und kein theologisches Vorwissen.",
-              },
-            ].map((item) => (
-              <div key={item.title} className="flex flex-col items-center gap-3 p-6 rounded-2xl bg-card/60 border border-border">
+            {([
+              { icon: Shield, key: "qa" },
+              { icon: EyeOff, key: "noAds" },
+              { icon: Heart, key: "noExpertise" },
+            ] as const).map((item) => (
+              <div key={item.key} className="flex flex-col items-center gap-3 p-6 rounded-2xl bg-card/60 border border-border">
                 <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center">
                   <item.icon className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-semibold text-foreground">{item.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{item.text}</p>
+                <h3 className="font-semibold text-foreground">{t(`trust.${item.key}.title`)}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{t(`trust.${item.key}.text`)}</p>
               </div>
             ))}
           </div>
@@ -243,13 +221,13 @@ const Index = () => {
           <div className="text-center mb-10">
             <div className="inline-flex items-center gap-2 text-sm font-medium text-primary bg-primary/10 px-4 py-1.5 rounded-full mb-4">
               <Compass className="h-4 w-4" />
-              Mehr als Antworten
+              {t("tools.badge")}
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-              Zwei Werkzeuge, die tiefer gehen
+              {t("tools.title")}
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Für Momente, in denen du mehr als eine Antwort brauchst.
+              {t("tools.subtitle")}
             </p>
           </div>
 
@@ -257,16 +235,14 @@ const Index = () => {
             <Card className="bg-card/80 border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
               <CardHeader className="text-center pb-2">
                 <span className="text-5xl mb-3 block">🎡</span>
-                <CardTitle className="text-xl text-card-foreground">Lebensrad-Check</CardTitle>
+                <CardTitle className="text-xl text-card-foreground">{t("tools.lifewheel.title")}</CardTitle>
               </CardHeader>
               <CardContent className="text-center space-y-4">
                 <CardDescription className="text-muted-foreground leading-relaxed">
-                  Wie steht es gerade mit Arbeit, Beziehungen, Sinn und Gesundheit?
-                  Das Lebensrad hilft dir in 3 Minuten, Klarheit zu gewinnen — und zeigt,
-                  wo die Bibel direkt anknüpft.
+                  {t("tools.lifewheel.desc")}
                 </CardDescription>
                 <Button onClick={() => openLifeWheel()} className="w-full">
-                  Lebensrad starten
+                  {t("tools.lifewheel.cta")}
                 </Button>
               </CardContent>
             </Card>
@@ -274,20 +250,18 @@ const Index = () => {
             <Card className="bg-card/80 border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
               <CardHeader className="text-center pb-2">
                 <span className="text-5xl mb-3 block">🔍</span>
-                <CardTitle className="text-xl text-card-foreground">Die 7-Warum-Methode</CardTitle>
+                <CardTitle className="text-xl text-card-foreground">{t("tools.sevenwhys.title")}</CardTitle>
               </CardHeader>
               <CardContent className="text-center space-y-4">
                 <CardDescription className="text-muted-foreground leading-relaxed">
-                  Warum tue ich das wirklich? Warum fühlt sich das so an?
-                  BibleBot führt dich durch 7 Fragen, die an die Wurzel kommen —
-                  mit biblischer Einordnung an der tiefsten Stelle.
+                  {t("tools.sevenwhys.desc")}
                 </CardDescription>
                 <Button
                   variant="outline"
                   onClick={() => openBibleBotChat("Ich möchte die 7-Warum-Methode ausprobieren", "seven-whys")}
                   className="w-full"
                 >
-                  Tiefer fragen
+                  {t("tools.sevenwhys.cta")}
                 </Button>
               </CardContent>
             </Card>
