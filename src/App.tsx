@@ -11,6 +11,9 @@ import { AuthProvider } from "@/hooks/use-auth";
 import { SplashScreen } from "@/components/SplashScreen";
 import { useChurchBranding, hexToHsl } from "@/hooks/use-church-branding";
 import ScrollToTop from "@/components/ScrollToTop";
+import { useTranslation } from "react-i18next";
+
+const RTL_LANGUAGES = ["ar", "he", "fa", "ur"];
 
 // Lazy-load pages for smaller initial bundle
 const Index = lazy(() => import("./pages/Index"));
@@ -74,6 +77,20 @@ function shouldShowSplash(): boolean {
     !!localStorage.getItem("biblebot-church");
   const isFirstSession = !sessionStorage.getItem("biblebot-splash-shown");
   return isFirstSession && (isStandalone || hasChurchParam);
+}
+
+/** Sets dir="rtl" on <html> when an RTL language is active */
+function DirectionManager() {
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    const lang = i18n.language?.split("-")[0] ?? "de";
+    const isRtl = RTL_LANGUAGES.includes(lang);
+    document.documentElement.dir = isRtl ? "rtl" : "ltr";
+    document.documentElement.lang = lang;
+  }, [i18n.language]);
+
+  return null;
 }
 
 /** Applies church branding colors as CSS custom properties */
