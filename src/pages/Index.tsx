@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react";
 import { SEOHead } from "@/components/SEOHead";
 import { useTranslation } from "react-i18next";
-import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, GraduationCap, Church, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass, Send, Building2, Shield, EyeOff } from "lucide-react";
+import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, GraduationCap, Church, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass, Send, Building2, Shield, EyeOff, Code2, Server, Globe, Headphones, ClipboardList, BookHeart } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { ChurchBanner } from "@/components/ChurchBanner";
 import { ReferralSection } from "@/components/ReferralSection";
