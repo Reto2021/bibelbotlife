@@ -332,7 +332,8 @@
     "errorTitle": "Erreur",
     "errorConnection": "n'a pas pu être atteint.",
     "errorNoStream": "Pas de flux",
-    "seniorMode": "Mode senior (police plus grande)"
+    "seniorMode": "Mode senior (police plus grande)",
+    "newChat": "Nouvelle conversation"
   },
   "install": {
     "title": "Installer BibleBot",

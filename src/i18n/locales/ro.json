@@ -327,7 +327,8 @@
     "namePlaceholder": "e.g. Eli, Miriam…",
     "loginHint": "Conectează-te pentru a păstra conversațiile pe toate dispozitivele",
     "previousChats": "{{count}} conversații anterioare",
-    "suggestionsLoading": "Se încarcă sugestiile…"
+    "suggestionsLoading": "Se încarcă sugestiile…",
+    "newChat": "Conversație nouă"
   },
   "install": {
     "title": "Instalează BibleBot.Life",

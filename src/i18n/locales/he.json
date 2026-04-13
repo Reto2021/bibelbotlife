@@ -312,7 +312,8 @@
     "seniorMode": "מצב מבוגרים (טקסט גדול יותר)",
     "teaserCta": "התחל לכתוב ←",
     "namePlaceholder": "לדוגמה: אלי, מרים…",
-    "previousChats": "{{count}} שיחות קודמות"
+    "previousChats": "{{count}} שיחות קודמות",
+    "newChat": "שיחה חדשה"
   },
   "install": {
     "title": "התקן את BibleBot.Life",

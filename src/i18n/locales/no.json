@@ -332,7 +332,8 @@
     "errorTitle": "Feil",
     "errorConnection": "kunne ikke nås.",
     "errorNoStream": "Ingen strøm",
-    "seniorMode": "Senior-modus (større skrift)"
+    "seniorMode": "Senior-modus (større skrift)",
+    "newChat": "Ny samtale"
   },
   "install": {
     "title": "Installer BibleBot",

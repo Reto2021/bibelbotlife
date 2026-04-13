@@ -312,7 +312,8 @@
     "namePlaceholder": "např. Eli, Miriam…",
     "loginHint": "Přihlaste se, abyste si uchovali konverzace napříč zařízeními",
     "previousChats": "{{count}} předchozích konverzací",
-    "suggestionsLoading": "Načítání návrhů…"
+    "suggestionsLoading": "Načítání návrhů…",
+    "newChat": "Nová konverzace"
   },
   "install": {
     "title": "Nainstalovat BibleBot.Life",

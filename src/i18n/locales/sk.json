@@ -327,7 +327,8 @@
     "seniorMode": "Režim pre seniorov (väčšie písmo)",
     "loginHint": "Prihláste sa, aby ste si uchovali konverzácie na všetkých zariadeniach",
     "previousChats": "{{count}} predchádzajúcich konverzácií",
-    "suggestionsLoading": "Načítavanie návrhov…"
+    "suggestionsLoading": "Načítavanie návrhov…",
+    "newChat": "Nový rozhovor"
   },
   "install": {
     "title": "Nainštalovať BibleBot.Life",

@@ -327,7 +327,8 @@
     "seniorMode": "Imodi Yomdala (ifonti enkulu)",
     "loginHint": "Ngena ngemvume ukuze ugcine izingxoxo kuwo wonke amadivayisi",
     "previousChats": "Izingxoxo ezingaphambili ezingama-{{count}}",
-    "suggestionsLoading": "Ilayisha iziphakamiso…"
+    "suggestionsLoading": "Ilayisha iziphakamiso…",
+    "newChat": "Ingxoxo entsha"
   },
   "install": {
     "title": "Faka iBibleBot.Life",

@@ -327,7 +327,8 @@
     "seniorMode": "Mode Senior (huruf lebih besar)",
     "loginHint": "Masuk untuk menjaga percakapan di seluruh perangkat",
     "previousChats": "{{count}} percakapan sebelumnya",
-    "suggestionsLoading": "Memuat saran…"
+    "suggestionsLoading": "Memuat saran…",
+    "newChat": "Percakapan baru"
   },
   "install": {
     "title": "Instal BibleBot.Life",

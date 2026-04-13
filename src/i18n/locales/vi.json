@@ -329,7 +329,8 @@
     "seniorMode": "Chế độ người cao tuổi (phông chữ lớn hơn)",
     "loginHint": "Đăng nhập để giữ các cuộc trò chuyện trên tất cả các thiết bị",
     "previousChats": "{{count}} cuộc trò chuyện trước",
-    "suggestionsLoading": "Đang tải gợi ý…"
+    "suggestionsLoading": "Đang tải gợi ý…",
+    "newChat": "Cuộc trò chuyện mới"
   },
   "install": {
     "title": "Cài đặt BibleBot.Life",

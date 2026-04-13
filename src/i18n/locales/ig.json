@@ -332,7 +332,8 @@
     "errorTitle": "Njehie",
     "errorConnection": "enweghị ike iru.",
     "errorNoStream": "Ọ dịghị iyi",
-    "seniorMode": "Ụdị okenye (nnukwu mkpụrụedemede) "
+    "seniorMode": "Ụdị okenye (nnukwu mkpụrụedemede) ",
+    "newChat": "Mkparịta ụka ọhụrụ"
   },
   "install": {
     "title": "Wụnye BibleBot",

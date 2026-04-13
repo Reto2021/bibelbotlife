@@ -327,7 +327,8 @@
     "seniorMode": "Szenior mód (nagyobb betűméret)",
     "loginHint": "Jelentkezz be, hogy beszélgetéseid minden eszközön megmaradjanak",
     "previousChats": "{{count}} korábbi beszélgetés",
-    "suggestionsLoading": "Javaslatok betöltése…"
+    "suggestionsLoading": "Javaslatok betöltése…",
+    "newChat": "Új beszélgetés"
   },
   "install": {
     "title": "BibleBot.Life telepítése",

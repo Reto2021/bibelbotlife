@@ -327,7 +327,8 @@
     "seniorMode": "Seniorläge (större text)",
     "loginHint": "Logga in för att behålla konversationer på alla enheter",
     "previousChats": "{{count}} tidigare konversationer",
-    "suggestionsLoading": "Laddar förslag…"
+    "suggestionsLoading": "Laddar förslag…",
+    "newChat": "Nytt samtal"
   },
   "install": {
     "title": "Installera BibleBot.Life",

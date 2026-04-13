@@ -327,7 +327,8 @@
     "seniorMode": "Mòd Senior (pi gwo font)",
     "loginHint": "Konekte pou kenbe konvèsasyon yo sou tout aparèy ou yo",
     "previousChats": "{{count}} konvèsasyon anvan yo",
-    "suggestionsLoading": "Ap chaje sijesyon yo…"
+    "suggestionsLoading": "Ap chaje sijesyon yo…",
+    "newChat": "Nouvo konvèsasyon"
   },
   "install": {
     "title": "Enstale BibleBot.Life",
