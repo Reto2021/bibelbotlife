@@ -259,10 +259,6 @@ const Index = () => {
       {/* Subscribe CTA is now integrated in the DailyImpulse banner */}
       {/* Referral / Empfehlen */}
       <ReferralSection />
-
-      {/* Favorite Tools Quick Access */}
-      <FavoriteToolsBar />
-
       {/* Tools Section */}
       <ToolsSection />
 

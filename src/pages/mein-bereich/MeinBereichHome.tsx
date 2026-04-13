@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Cross, Heart, Baby, BookHeart, ArrowRight } from "lucide-react";
 import { SEOHead } from "@/components/SEOHead";
+import { FavoriteToolsBar } from "@/components/ToolCards";
 
 const MeinBereichHome = () => {
   const { t } = useTranslation();
