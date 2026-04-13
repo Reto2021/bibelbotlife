@@ -45,14 +45,15 @@ const TRANSLATIONS = [
   { key: "mod", apiId: "heb_mod", language: "he" },
   // Korean
   { key: "krv", apiId: "kor_old", language: "ko" },
-  // Chinese — not available on this API
+  // Chinese
+  { key: "cuv", apiId: "cmn_cu1", language: "zh" },
   // Danish
   { key: "det", apiId: "dan_det", language: "da" },
   // Swedish
   { key: "fol", apiId: "swe_fol", language: "sv" },
   // Finnish
   { key: "fin", apiId: "fin_bib", language: "fi" },
-  // Greek
+  // Greek — not available
   // Hungarian
   { key: "hun", apiId: "hun_bib", language: "hu" },
   // Croatian
@@ -79,6 +80,7 @@ const TRANSLATIONS = [
   // Haitian Creole
   { key: "hat", apiId: "hat_pds", language: "ht" },
   // Norwegian
+  { key: "nob", apiId: "nob_lbb", language: "no" },
   // Bulgarian — not available
 ];
 
