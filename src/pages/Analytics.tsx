@@ -85,6 +85,11 @@ type AnalyticsData = {
     topEvents: { name: string; count: number }[];
     utmSources?: { source: string; count: number }[];
     utmMediums?: { medium: string; count: number }[];
+    funnel?: {
+      widgetVisits: number;
+      chatStarts: number;
+      contactRequests: number;
+    };
   }>;
   utmSources?: { source: string; count: number }[];
   utmMediums?: { medium: string; count: number }[];
