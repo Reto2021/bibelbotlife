@@ -1296,6 +1296,11 @@
       "title": "Dira ya thamani",
       "desc": "Nini muhimu kweli kwako? Gundua thamani zako za msingi — na Biblia inasema nini kuzihusu.",
       "cta": "Gundua thamani"
+    },
+    "examen": {
+      "title": "Examen (Ignatius)",
+      "desc": "Mapitio ya kila siku ya Ignatius wa Loyola: Tafakari siku yako katika hatua 5.",
+      "cta": "Anza Examen"
     }
   },
   "trust": {

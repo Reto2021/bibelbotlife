@@ -1275,6 +1275,11 @@
       "title": "Values Compass",
       "desc": "What truly matters to you in life? Discover your core values — and what the Bible says about them. Clarity in 5 minutes.",
       "cta": "Discover values"
+    },
+    "examen": {
+      "title": "Examen (Ignatius)",
+      "desc": "The proven daily review by Ignatius of Loyola: Reflect on your day in 5 steps — gratitude, review, what touched or burdened you, and a prayer for tomorrow.",
+      "cta": "Start Examen"
     }
   },
   "audience": {

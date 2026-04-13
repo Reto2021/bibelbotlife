@@ -1296,6 +1296,11 @@
       "title": "Kompas hodnot",
       "desc": "Co je pro tebe skutečně důležité? Objevte své základní hodnoty — a co o nich říká Bible.",
       "cta": "Objevit hodnoty"
+    },
+    "examen": {
+      "title": "Examen (Ignác)",
+      "desc": "Osvědčený denní přehled Ignáce z Loyoly: Zamyslete se nad svým dnem v 5 krocích.",
+      "cta": "Začít Examen"
     }
   },
   "trust": {

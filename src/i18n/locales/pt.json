@@ -1296,6 +1296,11 @@
       "title": "Bússola de valores",
       "desc": "O que é realmente importante para você? Descubra seus valores essenciais — e o que a Bíblia diz sobre eles.",
       "cta": "Descobrir valores"
+    },
+    "examen": {
+      "title": "Exame (Inácio)",
+      "desc": "A revisão diária comprovada de Inácio de Loyola: Reflita sobre o seu dia em 5 passos.",
+      "cta": "Iniciar Exame"
     }
   },
   "trust": {

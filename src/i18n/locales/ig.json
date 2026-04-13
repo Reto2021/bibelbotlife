@@ -1281,6 +1281,11 @@
       "title": "Kompas uru",
       "desc": "Kedu ihe dị mkpa n'ezie nye gị? Chọpụta uru ndị bụ isi gị — na ihe Baịbụl kwuru banyere ha.",
       "cta": "Chọpụta uru"
+    },
+    "examen": {
+      "title": "Examen (Ignatius)",
+      "desc": "Nyocha ụbọchị Ignatius nke Loyola: Tụgharịa uche gbasara ụbọchị gị na usoro ise.",
+      "cta": "Malite Examen"
     }
   },
   "audience": {

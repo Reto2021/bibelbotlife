@@ -1296,6 +1296,11 @@
       "title": "Kompas wartości",
       "desc": "Co jest dla ciebie naprawdę ważne? Odkryj swoje kluczowe wartości — i co mówi o nich Biblia.",
       "cta": "Odkryj wartości"
+    },
+    "examen": {
+      "title": "Examen (Ignacy)",
+      "desc": "Sprawdzony dzienny przegląd Ignacego Loyoli: Przemyśl swój dzień w 5 krokach.",
+      "cta": "Rozpocznij Examen"
     }
   },
   "trust": {

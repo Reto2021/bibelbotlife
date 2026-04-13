@@ -1296,6 +1296,11 @@
       "title": "Brújula de valores",
       "desc": "¿Qué es realmente importante para ti? Descubre tus valores esenciales — y qué dice la Biblia sobre ellos.",
       "cta": "Descubrir valores"
+    },
+    "examen": {
+      "title": "Examen (Ignacio)",
+      "desc": "La revisión diaria probada de Ignacio de Loyola: Reflexiona sobre tu día en 5 pasos.",
+      "cta": "Iniciar Examen"
     }
   },
   "trust": {

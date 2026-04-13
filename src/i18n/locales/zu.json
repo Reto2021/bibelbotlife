@@ -1296,6 +1296,11 @@
       "title": "Ikhompasi yamagugu",
       "desc": "Yini ebaluleke ngempela kuwe? Thola amagugu akho ayisisekelo — nokuthi iBhayibheli lithini ngawo.",
       "cta": "Thola amagugu"
+    },
+    "examen": {
+      "title": "Examen (Ignatius)",
+      "desc": "Ukubuyekeza kwansuku zonke kuka-Ignatius waseLoyola: Cabanga ngosuku lwakho ngezinyathelo ezi-5.",
+      "cta": "Qala Examen"
     }
   },
   "trust": {

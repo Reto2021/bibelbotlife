@@ -1275,6 +1275,11 @@
       "title": "Waarde-kompas",
       "desc": "Wat is werklik belangrik vir jou? Ontdek jou kernwaardes — en wat die Bybel daaroor sê. Duidelikheid in 5 minute.",
       "cta": "Ontdek waardes"
+    },
+    "examen": {
+      "title": "Examen (Ignatius)",
+      "desc": "Die beproefde daaglikse terugblik van Ignatius van Loyola: Reflekteer oor jou dag in 5 stappe.",
+      "cta": "Begin Examen"
     }
   },
   "audience": {

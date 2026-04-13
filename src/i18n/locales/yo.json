@@ -1296,6 +1296,11 @@
       "title": "Kọ́mpásì iye",
       "desc": "Kí ni ó ṣe pàtàkì gan-an fún ọ? Ṣàwárí àwọn iye pàtàkì rẹ — àti ohun tí Bíbélì sọ.",
       "cta": "Ṣàwárí iye"
+    },
+    "examen": {
+      "title": "Examen (Ignatius)",
+      "desc": "Àtúnyẹ̀wò ojoojúmọ́ Ignatius ti Loyola: Ronú nípa ọjọ́ rẹ ní ìgbésẹ̀ márùn-ún.",
+      "cta": "Bẹ̀rẹ̀ Examen"
     }
   },
   "trust": {

@@ -1296,6 +1296,11 @@
       "title": "Arvokompassi",
       "desc": "Mikä on sinulle todella tärkeää? Löydä ydinarvosi — ja mitä Raamattu sanoo niistä.",
       "cta": "Löydä arvot"
+    },
+    "examen": {
+      "title": "Examen (Ignatius)",
+      "desc": "Ignatius Loyolan koettu päivittäinen katsaus: Pohdi päivääsi 5 askeleessa.",
+      "cta": "Aloita Examen"
     }
   },
   "trust": {

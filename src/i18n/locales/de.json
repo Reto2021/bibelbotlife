@@ -1275,6 +1275,11 @@
       "title": "Werte-Kompass",
       "desc": "Was ist dir wirklich wichtig im Leben? Finde deine Kernwerte — und entdecke, was die Bibel dazu sagt. Klarheit in 5 Minuten.",
       "cta": "Werte entdecken"
+    },
+    "examen": {
+      "title": "Examen (Ignatius)",
+      "desc": "Der bewährte Tagesrückblick des Ignatius von Loyola: In 5 Schritten den Tag reflektieren — Dankbarkeit, Rückblick, Berührungen und ein Gebet für morgen.",
+      "cta": "Examen starten"
     }
   },
   "audience": {

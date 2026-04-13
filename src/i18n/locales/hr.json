@@ -1296,6 +1296,11 @@
       "title": "Kompas vrijednosti",
       "desc": "Što vam je zaista važno? Otkrijte svoje temeljne vrijednosti — i što Biblija kaže o njima.",
       "cta": "Otkrijte vrijednosti"
+    },
+    "examen": {
+      "title": "Examen (Ignacije)",
+      "desc": "Provjereni dnevni pregled Ignacija Lojolskog: Razmislite o svom danu u 5 koraka.",
+      "cta": "Započni Examen"
     }
   },
   "trust": {

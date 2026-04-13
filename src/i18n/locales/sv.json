@@ -1296,6 +1296,11 @@
       "title": "Värdekompass",
       "desc": "Vad är verkligen viktigt för dig? Upptäck dina kärnvärden — och vad Bibeln säger om dem.",
       "cta": "Upptäck värden"
+    },
+    "examen": {
+      "title": "Examen (Ignatius)",
+      "desc": "Ignatius av Loyolas beprövade dagliga återblick: Reflektera över din dag i 5 steg.",
+      "cta": "Starta Examen"
     }
   },
   "trust": {
