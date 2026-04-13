@@ -204,8 +204,8 @@ export function DailyImpulse() {
     const hashtagBible = t("share.hashtagBible", "#Bible");
     const topicTag = impulse.topic ? `#${impulse.topic.replace(/\s+/g, "")}` : "";
     const baseUrl = churchBranding
-      ? `biblebot.life/?church=${churchBranding.churchSlug}`
-      : "biblebot.life";
+      ? `biblebot.life/?church=${churchBranding.churchSlug}&utm_source=branded_link&utm_medium=share`
+      : "biblebot.life/?utm_source=branded_link&utm_medium=share";
     const recommendedBy = churchBranding
       ? `\n\n📍 ${t("share.recommendedBy", { church: churchBranding.churchName })}`
       : "";
