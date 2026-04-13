@@ -465,7 +465,7 @@ const Analytics = () => {
           </Card>
         </div>
 
-        {/* ════ NEW: Per-Church Breakdown ════ */}
+        {/* ════ Per-Church Breakdown ════ */}
         {churchList.length > 0 && (
           <Card>
             <CardHeader className="pb-2">
@@ -507,6 +507,72 @@ const Analytics = () => {
                   ))}
                 </TableBody>
               </Table>
+            </CardContent>
+          </Card>
+        )}
+
+        {/* ════ Per-Church UTM Breakdown ════ */}
+        {churchList.filter(([, c]) => (c.utmSources?.length || 0) > 0 || (c.utmMediums?.length || 0) > 0).length > 0 && (
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-base flex items-center gap-2">
+                <Link2 className="h-4 w-4 text-primary" />
+                Traffic-Kanäle pro Gemeinde
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-6">
+                {churchList
+                  .filter(([, c]) => (c.utmSources?.length || 0) > 0 || (c.utmMediums?.length || 0) > 0)
+                  .map(([slug, c]) => (
+                  <div key={slug} className="space-y-3">
+                    <div className="flex items-center gap-2">
+                      <h3 className="text-sm font-semibold text-foreground">{c.churchName}</h3>
+                      <Badge variant="outline" className="text-[10px]">{slug}</Badge>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {/* UTM Sources */}
+                      <div className="space-y-1.5">
+                        <p className="text-xs font-medium text-muted-foreground mb-1">Quellen (utm_source)</p>
+                        {c.utmSources?.map((s) => {
+                          const max = c.utmSources?.[0]?.count || 1;
+                          return (
+                            <div key={s.source} className="space-y-0.5">
+                              <div className="flex justify-between items-center">
+                                <span className="text-xs text-foreground truncate">{s.source}</span>
+                                <span className="text-xs text-muted-foreground ml-2">{s.count}</span>
+                              </div>
+                              <div className="h-1.5 bg-muted rounded-full overflow-hidden">
+                                <div className="h-full bg-primary rounded-full" style={{ width: `${(s.count / max) * 100}%` }} />
+                              </div>
+                            </div>
+                          );
+                        })}
+                        {!c.utmSources?.length && <p className="text-xs text-muted-foreground">–</p>}
+                      </div>
+                      {/* UTM Mediums */}
+                      <div className="space-y-1.5">
+                        <p className="text-xs font-medium text-muted-foreground mb-1">Medien (utm_medium)</p>
+                        {c.utmMediums?.map((m) => {
+                          const max = c.utmMediums?.[0]?.count || 1;
+                          return (
+                            <div key={m.medium} className="space-y-0.5">
+                              <div className="flex justify-between items-center">
+                                <span className="text-xs text-foreground truncate">{m.medium}</span>
+                                <span className="text-xs text-muted-foreground ml-2">{m.count}</span>
+                              </div>
+                              <div className="h-1.5 bg-muted rounded-full overflow-hidden">
+                                <div className="h-full bg-chart-2 rounded-full" style={{ width: `${(m.count / max) * 100}%` }} />
+                              </div>
+                            </div>
+                          );
+                        })}
+                        {!c.utmMediums?.length && <p className="text-xs text-muted-foreground">–</p>}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </CardContent>
           </Card>
         )}
