@@ -82,6 +82,7 @@ type AnalyticsData = {
     sessions: number;
     avgSessionDurationSec?: number;
     dailyPageviews: Record<string, number>;
+    weeklyTrend?: { week: string; pageviews: number; sessions: number; events: number }[];
     topEvents: { name: string; count: number }[];
     utmSources?: { source: string; count: number }[];
     utmMediums?: { medium: string; count: number }[];
