@@ -715,12 +715,12 @@
         "desc": "Àwọn ìmúlọ́ àti àwọn ìbẹ̀rẹ̀ ìjíròrò fún àwọn ẹgbẹ́ àti àwọn ẹgbẹ́ ilé."
       }
     },
-    "pricingTitle": "Àwọn ètò àtìlẹ́yìn",
-    "pricingSubtitle": "Ṣe àtìlẹ́yìn alábàáṣiṣẹ́pọ̀ rẹ àti ìjọ yín pẹ̀lú ètò tó yẹ.",
-    "popular": "Olókìkí",
+    "pricingTitle": "Sponsorship Packages",
+    "pricingSubtitle": "BibleBot.Life is free and ad-free. Organizations can support the project through sponsorship and receive additional features.",
+    "popular": "Recommended",
     "free": "Ọ̀fẹ́",
     "perYear": "ènìyàn / ọdún",
-    "contact": "Kan sí wa",
+    "contact": "Request sponsorship",
     "tier": {
       "free": {
         "name": "Irúgbìn ewékó",
@@ -777,9 +777,9 @@
     "contactSuccess": "Ifiranṣẹ́ ti ránṣẹ́! 🙏",
     "contactSuccessDesc": "Ìjọ náà yóò kàn sí yín.",
     "recommendedBy": "Tí {{name}} ṣe ìgbànímọ̀ràn rẹ̀",
-    "setup": "Ìtọ́jú (ẹ̀ẹ̀kan)",
+    "setup": "",
     "form": {
-      "title": "Ṣé o ní ìfẹ́? Kọ sí wa!",
+      "title": "Interested in sponsoring?",
       "subtitle": "A óò kàn sí yín láàárín wákàtí 48.",
       "name": "Orúkọ yín",
       "email": "Àdírẹ́sì ímeèlì",
@@ -787,7 +787,7 @@
       "tier": "Ètò tí ẹ fẹ́",
       "tierPlaceholder": "Yan ètò...",
       "message": "Ifiranṣẹ́ yín",
-      "submit": "Fi ìbéèrè ránṣẹ́",
+      "submit": "Send sponsorship request",
       "success": "Ìbéèrè ti ránṣẹ́! A óò kàn sí yín láìpẹ́. 🙏",
       "error": "Àṣìṣe. Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kan sí i.",
       "orgType": "Irú àjọ",
@@ -856,7 +856,7 @@
         "desc": "Àfikún ìmúlò ẹ̀mí fún àwọn aláàbàárà nínú ìmọ̀ràn."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As alábàáṣiṣẹ́pọ̀ rẹ is a private project, donations are not tax-deductible.",
+    "patronageNote": "BibleBot.Life is run by a non-profit association and funded exclusively through voluntary donations and sponsorships. There is no advertising, no data sales, and no paid features. All contributions go directly toward development, technical operations, global distribution, and community management. Donations may be tax-deductible depending on your jurisdiction.",
     "denominationsTitle": "Fún gbogbo ẹ̀sìn àti aṣáájú ayẹyẹ",
     "denominationsSubtitle": "BibleBot.Life jẹ́ ecumenical – fún àwọn àjọ Reformed, Catholic, Lutheran, àti Free Church, àti àwọn aṣáájú ayẹyẹ alágbàṣe.",
     "denomination": {
@@ -1136,13 +1136,12 @@
     "f9Desc": "Awọn orin, awọn adura, awọn kika, ati awọn ọrọ liturgical — wiwa, ti a samisi, ti n dagba pẹlu gbogbo ayẹyẹ.",
     "f10Title": "Iwe Iforukọsilẹ Ile-ijọsin",
     "f10Desc": "Ṣe akọsilẹ daradara awọn baptisi, awọn igbeyawo, ati awọn isinku. Gbogbo data ni ibi kan.",
-    "pricingTitle": "Iye owo ti o rọrun",
-    "pricingSubtitle": "Bẹrẹ fun ọfẹ. Ṣe igbesoke nigbati o ba nilo diẹ sii.",
+    "pricingTitle": "Free & supported by donations",
+    "pricingSubtitle": "Start for free. All Pro features are made possible through sponsorship.",
     "planPersonal": "Ti ara ẹni",
     "planFree": "Ọfẹ",
     "planPro": "Pro",
-    "planProPrice": "CHF 29",
-    "planProPeriod": "/ oṣu",
+    "planProPeriod": "",
     "recommended": "Ti a ṣe iṣeduro",
     "pf1": "Ṣẹda awọn ọrọ ayẹyẹ",
     "pf2": "Gbigbasilẹ ohun & itumọ",
@@ -1160,7 +1159,7 @@
     "pf14": "Iwe iforukọsilẹ ile-ijọsin",
     "pf15": "Atilẹyin pataki",
     "ctaFree": "Bẹrẹ",
-    "ctaTrial": "Idanwo ọfẹ ọjọ 14",
+    "ctaTrial": "Request sponsorship",
     "faqTitle": "Awọn ibeere Nigbagbogbo",
     "faq1q": "Fun tani ohun elo yii?",
     "faq1a": "Fun awọn alufaa, awọn olukọni igbesi aye, awọn agbọrọsọ isinku aladani, awọn olufẹ igbeyawo, awọn alufaa ile-iwosan, awọn pastọ, ati ẹnikẹni ti o ngbaradi ati ti n ṣe awọn ayẹyẹ, awọn idanileko, tabi awọn igba ikẹkọ.",
@@ -1179,7 +1178,9 @@
     "footerPrivacy": "Ilana Asiri",
     "footerChurches": "Fun Awọn Ile-ijọsin",
     "seoTitle": "BibleBot.Life fun Awọn Alufaa & Awọn Olukọni Igbesi Aye — Gbero Awọn Ayẹyẹ & Awọn Igba",
-    "seoDesc": "Gbero awọn isinku, awọn igbeyawo, awọn igba ikẹkọ ni ọjọgbọn: gbigbasilẹ ohun, iran ọrọ, teleprompter, kalẹnda, ati ifowosowopo."
+    "seoDesc": "Gbero awọn isinku, awọn igbeyawo, awọn igba ikẹkọ ni ọjọgbọn: gbigbasilẹ ohun, iran ọrọ, teleprompter, kalẹnda, ati ifowosowopo.",
+    "planProSupported": "Made possible by donations",
+    "ctaSponsor": "Request sponsorship"
   },
   "pricing": {
     "onRequest": "Ìtìlẹ́yìn lórí ìbéèrè",

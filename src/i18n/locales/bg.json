@@ -676,12 +676,12 @@
         "desc": "Импулси и теми за дискусия за групи и домашни кръжоци."
       }
     },
-    "pricingTitle": "Патронажни пакети",
-    "pricingSubtitle": "Подкрепете вашият спътник и вашата общност с подходящия патронажен пакет.",
-    "popular": "Популярно",
+    "pricingTitle": "Sponsorship Packages",
+    "pricingSubtitle": "BibleBot.Life is free and ad-free. Organizations can support the project through sponsorship and receive additional features.",
+    "popular": "Recommended",
     "free": "Безплатно",
     "perYear": "лица / година",
-    "contact": "Свържете се",
+    "contact": "Request sponsorship",
     "tier": {
       "free": {
         "name": "Синапено зърно",
@@ -738,9 +738,9 @@
     "contactSuccess": "Съобщението е изпратено! 🙏",
     "contactSuccessDesc": "Общността ще се свърже с вас.",
     "recommendedBy": "Препоръчано от {{name}}",
-    "setup": "Настройка (еднократна)",
+    "setup": "",
     "form": {
-      "title": "Интересувате ли се? Пишете ни!",
+      "title": "Interested in sponsoring?",
       "subtitle": "Ще се свържем с вас до 48 часа.",
       "name": "Вашето име",
       "email": "Имейл адрес",
@@ -748,7 +748,7 @@
       "tier": "Желан пакет",
       "tierPlaceholder": "Изберете пакет...",
       "message": "Вашето съобщение",
-      "submit": "Изпрати запитване",
+      "submit": "Send sponsorship request",
       "success": "Запитването е изпратено! Скоро ще се свържем с вас. 🙏",
       "error": "Грешка при изпращане. Моля, опитайте отново.",
       "orgType": "Тип организация",
@@ -817,7 +817,7 @@
         "desc": "Допълнителни духовни импулси за клиенти в психосоциално консултиране."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As вашият спътник is a private project, donations are not tax-deductible.",
+    "patronageNote": "BibleBot.Life is run by a non-profit association and funded exclusively through voluntary donations and sponsorships. There is no advertising, no data sales, and no paid features. All contributions go directly toward development, technical operations, global distribution, and community management. Donations may be tax-deductible depending on your jurisdiction.",
     "denominationsTitle": "За всички вероизповедания и водещи на церемонии",
     "denominationsSubtitle": "BibleBot.Life е екуменически – за реформирани, католически, лутерански и свободни евангелски общности, както и за независими водещи на церемонии.",
     "denomination": {
@@ -1136,13 +1136,12 @@
     "f9Desc": "Песни, молитви, четения и литургични текстове — с възможност за търсене, тагове, нарастващи с всяка церемония.",
     "f10Title": "Църковен регистър",
     "f10Desc": "Подредено документирайте кръщения, сватби и погребения. Всички данни на едно място.",
-    "pricingTitle": "Лесно ценообразуване",
-    "pricingSubtitle": "Започнете безплатно. Надстройте, когато имате нужда от повече.",
+    "pricingTitle": "Free & supported by donations",
+    "pricingSubtitle": "Start for free. All Pro features are made possible through sponsorship.",
     "planPersonal": "Личен",
     "planFree": "Безплатно",
     "planPro": "Професионален",
-    "planProPrice": "29 CHF",
-    "planProPeriod": "/ месец",
+    "planProPeriod": "",
     "recommended": "Препоръчително",
     "pf1": "Създаване на текстове за церемонии",
     "pf2": "Гласов запис и транскрипция",
@@ -1160,7 +1159,7 @@
     "pf14": "Църковен регистър",
     "pf15": "Приоритетна поддръжка",
     "ctaFree": "Започнете",
-    "ctaTrial": "14-дневен безплатен пробен период",
+    "ctaTrial": "Request sponsorship",
     "faqTitle": "Често задавани въпроси",
     "faq1q": "За кого е предназначен този инструмент?",
     "faq1a": "За капелани, лайф коучове, независими погребални говорители, сватбени водещи, болнични капелани, пастори и всеки, който подготвя и провежда церемонии, семинари или коучинг сесии.",
@@ -1179,7 +1178,9 @@
     "footerPrivacy": "Политика за поверителност",
     "footerChurches": "За църкви",
     "seoTitle": "BibleBot.Life за капелани и лайф коучове — Планирайте церемонии и сесии",
-    "seoDesc": "Планирайте професионално погребения, сватби, коучинг сесии: гласов запис, генериране на текст, телесуфльор, календар и сътрудничество."
+    "seoDesc": "Планирайте професионално погребения, сватби, коучинг сесии: гласов запис, генериране на текст, телесуфльор, календар и сътрудничество.",
+    "planProSupported": "Made possible by donations",
+    "ctaSponsor": "Request sponsorship"
   },
   "pricing": {
     "onRequest": "Патронаж при запитване",

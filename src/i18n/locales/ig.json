@@ -726,12 +726,12 @@
         "desc": "Mkpali na isiokwu mkparịta ụka maka otu na okirikiri ụlọ."
       }
     },
-    "pricingTitle": "Ngwugwu Nkwado",
-    "pricingSubtitle": "Kwado BibleBot na òtù gị na ngwugwu nkwado kwesịrị ekwesị.",
-    "popular": "Ewu ewu",
+    "pricingTitle": "Sponsorship Packages",
+    "pricingSubtitle": "BibleBot.Life is free and ad-free. Organizations can support the project through sponsorship and receive additional features.",
+    "popular": "Recommended",
     "free": "N'efu",
     "perYear": "",
-    "contact": "Kpọtụrụ anyị",
+    "contact": "Request sponsorship",
     "tier": {
       "free": {
         "name": "Mkpụrụ Mustard",
@@ -788,9 +788,9 @@
     "contactSuccess": "Ozi e zitere! 🙏",
     "contactSuccessDesc": "Òtù ahụ ga-akpọtụrụ gị.",
     "recommendedBy": "Nke {{name}} tụrụ aro",
-    "setup": "Ntọala (otu oge)",
+    "setup": "",
     "form": {
-      "title": "Nwere mmasị? Dee anyị!",
+      "title": "Interested in sponsoring?",
       "subtitle": "Anyị ga-akpọtụrụ gị n'ime awa 48.",
       "name": "Aha gị",
       "email": "Adreesị e-mail",
@@ -798,7 +798,7 @@
       "tier": "Ngwugwu achọrọ",
       "tierPlaceholder": "Họrọ ngwugwu...",
       "message": "Ozi gị",
-      "submit": "Zipu arịrịọ",
+      "submit": "Send sponsorship request",
       "success": "Arịrịọ e zitere! Anyị ga-akpọtụrụ gị n'oge na-adịghị anya. 🙏",
       "error": "Njehie izipu. Biko gbalịa ọzọ.",
       "orgType": "Ụdị òtù",
@@ -891,7 +891,7 @@
         "desc": "Mkpali ime mmụọ na-agbakwunye maka ndị ahịa na ndụmọdụ psychosocial ma ọ bụ nlekọta mmadụ."
       }
     },
-    "patronageNote": "BibleBot.Life bụ ọrụ onwe onye, ​​na-abụghị nke azụmahịa. A na-arụ ya n'afọ ofufo ma na-akwado ya naanị site na onyinye afọ ofufo. Ọ dịghị mgbasa ozi, ọ dịghị ire data na ọ dịghị atụmatụ akwụ ụgwọ. Onyinye niile na-aga ozugbo iji kpuchie ụgwọ ọrụ na akụrụngwa (akụrụngwa, nnabata, mmepe). Ebe ọ bụ na BibleBot na-arụ ọrụ dị ka ọrụ onwe onye, ​​onyinye anaghị ewepụ ụtụ isi."
+    "patronageNote": "BibleBot.Life is run by a non-profit association and funded exclusively through voluntary donations and sponsorships. There is no advertising, no data sales, and no paid features. All contributions go directly toward development, technical operations, global distribution, and community management. Donations may be tax-deductible depending on your jurisdiction."
   },
   "institutions": {
     "badge": "Maka Òtù",
@@ -1142,13 +1142,12 @@
     "f9Desc": "Abụ, ekpere, ọgụgụ na ederede liturgy – enwere ike ịchọta, na mkpado, na-eto eto na ememe ọ bụla.",
     "f10Title": "Akwụkwọ Chọọchị & Ndebanye aha",
     "f10Desc": "Dekọọ baptism, agbamakwụkwọ na olili ozu n'ụzọ dị ọcha. Data niile n'otu ebe.",
-    "pricingTitle": "Ọnụ ahịa dị mfe",
-    "pricingSubtitle": "Bido n'efu. Bulie elu mgbe ị chọrọ ihe karịa.",
+    "pricingTitle": "Free & supported by donations",
+    "pricingSubtitle": "Start for free. All Pro features are made possible through sponsorship.",
     "planPersonal": "Onwe onye",
     "planFree": "N'efu",
     "planPro": "Pro",
-    "planProPrice": "CHF 29",
-    "planProPeriod": "/ ọnwa",
+    "planProPeriod": "",
     "recommended": "A tụrụ aro",
     "pf1": "Mepụta ederede ememe",
     "pf2": "Ndekọ olu & ndekọ",
@@ -1166,7 +1165,7 @@
     "pf14": "Akwụkwọ Chọọchị / Ndebanye aha",
     "pf15": "Nkwado kacha mkpa",
     "ctaFree": "Bido ugbu a",
-    "ctaTrial": "Nwalee n'efu ụbọchị 14",
+    "ctaTrial": "Request sponsorship",
     "faqTitle": "Ajụjụ Ndị A Na-ajụkarị",
     "faq1q": "Ònye ka ngwá ọrụ a bụ maka ya?",
     "faq1a": "Maka ndị na-elekọta mmadụ, ndị nkuzi ndụ, ndị na-ekwu okwu olili ozu n'onwe ha, ndị na-eme ememe agbamakwụkwọ, ndị na-elekọta ụlọ ọgwụ, ndị ụkọchukwu na onye ọ bụla na-akwadebe ma na-eme ememe, ogbako ma ọ bụ nnọkọ nkuzi.",
@@ -1185,7 +1184,9 @@
     "footerPrivacy": "Nchekwa data",
     "footerChurches": "Maka Ọgbakọ",
     "seoTitle": "BibleBot.Life maka Ndị Na-elekọta Mmụọ & Ndị Nkuzi Ndụ — Hazie Ememe & Nnọkọ",
-    "seoDesc": "Hazi olili ozu, agbamakwụkwọ, nnọkọ nkuzi n'ụzọ ọkachamara: ndekọ olu, mmepụta ederede, teleprompter, kalenda na mmekọrịta."
+    "seoDesc": "Hazi olili ozu, agbamakwụkwọ, nnọkọ nkuzi n'ụzọ ọkachamara: ndekọ olu, mmepụta ederede, teleprompter, kalenda na mmekọrịta.",
+    "planProSupported": "Made possible by donations",
+    "ctaSponsor": "Request sponsorship"
   },
   "pricing": {
     "onRequest": "Nkwado na arịrịọ",

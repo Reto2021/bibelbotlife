@@ -715,12 +715,12 @@
         "desc": "Impulsuri și subiecte de discuție pentru grupuri și întâlniri casnice."
       }
     },
-    "pricingTitle": "Pachete de patronaj",
-    "pricingSubtitle": "Sprijiniți companionul tău și biserica dvs. cu pachetul de patronaj potrivit.",
-    "popular": "Popular",
+    "pricingTitle": "Sponsorship Packages",
+    "pricingSubtitle": "BibleBot.Life is free and ad-free. Organizations can support the project through sponsorship and receive additional features.",
+    "popular": "Recommended",
     "free": "Gratuit",
     "perYear": "persoane / an",
-    "contact": "Contactați-ne",
+    "contact": "Request sponsorship",
     "tier": {
       "free": {
         "name": "Bobul de muștar",
@@ -777,9 +777,9 @@
     "contactSuccess": "Mesaj trimis! 🙏",
     "contactSuccessDesc": "Biserica vă va contacta în curând.",
     "recommendedBy": "Recomandat de {{name}}",
-    "setup": "Configurare (unică)",
+    "setup": "",
     "form": {
-      "title": "Interesat? Contactați-ne!",
+      "title": "Interested in sponsoring?",
       "subtitle": "Vă răspundem în 48 de ore.",
       "name": "Numele dvs.",
       "email": "Adresă de e-mail",
@@ -787,7 +787,7 @@
       "tier": "Pachetul preferat",
       "tierPlaceholder": "Alegeți pachetul...",
       "message": "Mesajul dvs.",
-      "submit": "Trimite cererea",
+      "submit": "Send sponsorship request",
       "success": "Cerere trimisă! Vă contactăm curând. 🙏",
       "error": "Eroare la trimitere. Încercați din nou.",
       "orgType": "Organization type",
@@ -856,7 +856,7 @@
         "desc": "Impulsuri spirituale complementare pentru clienții din consilierea psihosocială."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As companionul tău is a private project, donations are not tax-deductible.",
+    "patronageNote": "BibleBot.Life is run by a non-profit association and funded exclusively through voluntary donations and sponsorships. There is no advertising, no data sales, and no paid features. All contributions go directly toward development, technical operations, global distribution, and community management. Donations may be tax-deductible depending on your jurisdiction.",
     "denominationsTitle": "Pentru toate confesiunile și celebranții",
     "denominationsSubtitle": "BibleBot.Life este ecumenic – pentru comunități reformate, catolice, luterane și evanghelice libere, precum și celebranți independenți.",
     "denomination": {
@@ -1136,13 +1136,12 @@
     "f9Desc": "Cântece, rugăciuni, lecturi și texte liturgice — căutabile, etichetate, în creștere cu fiecare ceremonie.",
     "f10Title": "Registrul Bisericii",
     "f10Desc": "Documentează cu grijă botezurile, nunțile și înmormântările. Toate datele într-un singur loc.",
-    "pricingTitle": "Prețuri simple",
-    "pricingSubtitle": "Începe gratuit. Fă upgrade când ai nevoie de mai mult.",
+    "pricingTitle": "Free & supported by donations",
+    "pricingSubtitle": "Start for free. All Pro features are made possible through sponsorship.",
     "planPersonal": "Personal",
     "planFree": "Gratuit",
     "planPro": "Pro",
-    "planProPrice": "29 CHF",
-    "planProPeriod": "/ lună",
+    "planProPeriod": "",
     "recommended": "Recomandat",
     "pf1": "Creează texte de ceremonie",
     "pf2": "Înregistrare vocală și transcriere",
@@ -1160,7 +1159,7 @@
     "pf14": "Registrul bisericii",
     "pf15": "Suport prioritar",
     "ctaFree": "Începe",
-    "ctaTrial": "Probă gratuită de 14 zile",
+    "ctaTrial": "Request sponsorship",
     "faqTitle": "Întrebări Frecvente",
     "faq1q": "Cui se adresează acest instrument?",
     "faq1a": "Capelanilor, life coach-ilor, vorbitorilor funerari independenți, oficiantilor de nunți, capelanilor de spital, pastorilor și oricui pregătește și conduce ceremonii, ateliere sau sesiuni de coaching.",
@@ -1179,7 +1178,9 @@
     "footerPrivacy": "Politica de Confidențialitate",
     "footerChurches": "Pentru Biserici",
     "seoTitle": "BibleBot.Life pentru Capelani și Life Coach-i — Planifică Ceremonii și Sesiuni",
-    "seoDesc": "Planifică profesional înmormântări, nunți, sesiuni de coaching: înregistrare vocală, generare de text, teleprompter, calendar și colaborare."
+    "seoDesc": "Planifică profesional înmormântări, nunți, sesiuni de coaching: înregistrare vocală, generare de text, teleprompter, calendar și colaborare.",
+    "planProSupported": "Made possible by donations",
+    "ctaSponsor": "Request sponsorship"
   },
   "pricing": {
     "onRequest": "Patronaj la cerere",

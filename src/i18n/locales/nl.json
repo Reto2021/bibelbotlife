@@ -715,12 +715,12 @@
         "desc": "Impulsen en gespreksstarters voor groepen en huiskringen."
       }
     },
-    "pricingTitle": "Patronaatspakketten",
-    "pricingSubtitle": "Steun je metgezel en uw organisatie met het juiste patronaatspakket.",
-    "popular": "Populair",
+    "pricingTitle": "Sponsorpakketten",
+    "pricingSubtitle": "BibleBot.Life is gratis en zonder advertenties. Organisaties kunnen het project steunen door sponsoring en ontvangen extra functies.",
+    "popular": "Aanbevolen",
     "free": "Gratis",
     "perYear": "personen / jaar",
-    "contact": "Contact opnemen",
+    "contact": "Sponsoring aanvragen",
     "tier": {
       "free": {
         "name": "Mosterdzaadje",
@@ -777,9 +777,9 @@
     "contactSuccess": "Bericht verzonden! 🙏",
     "contactSuccessDesc": "De kerk neemt contact met u op.",
     "recommendedBy": "Aanbevolen door {{name}}",
-    "setup": "Setup (eenmalig)",
+    "setup": "",
     "form": {
-      "title": "Geïnteresseerd? Neem contact op!",
+      "title": "Interesse in sponsoring?",
       "subtitle": "We reageren binnen 48 uur.",
       "name": "Uw naam",
       "email": "E-mailadres",
@@ -787,7 +787,7 @@
       "tier": "Gewenst pakket",
       "tierPlaceholder": "Kies pakket...",
       "message": "Uw bericht",
-      "submit": "Aanvraag versturen",
+      "submit": "Donatieverzoek verzenden",
       "success": "Aanvraag verzonden! We nemen contact op. 🙏",
       "error": "Fout bij verzenden. Probeer het opnieuw.",
       "orgType": "Organization type",
@@ -856,7 +856,7 @@
         "desc": "Aanvullende geestelijke impulsen voor cliënten in psychosociale begeleiding."
       }
     },
-    "patronageNote": "BibleBot.Life is een privé, niet-commercieel project. Het wordt op vrijwillige basis beheerd en uitsluitend gefinancierd door donaties. Geen reclame, geen dataverkoop, geen betaalde functies. Alle donaties gaan rechtstreeks naar het dekken van de lopende kosten (infrastructuur, hosting, ontwikkeling). Donaties zijn niet fiscaal aftrekbaar.",
+    "patronageNote": "BibleBot.Life wordt beheerd door een non-profitvereniging en wordt uitsluitend gefinancierd door vrijwillige donaties en sponsoring. Geen reclame, geen dataverkoop, geen betaalde functies. Alle bijdragen gaan rechtstreeks naar ontwikkeling, technisch beheer, wereldwijde verspreiding en communitybeheer. Donaties kunnen fiscaal aftrekbaar zijn afhankelijk van uw jurisdictie.",
     "denominationsTitle": "Voor alle denominaties en ceremonieleiders",
     "denominationsSubtitle": "BibleBot.Life is oecumenisch – voor gereformeerde, katholieke, lutherse en vrij-evangelische gemeenschappen, evenals freelance ceremonieleiders.",
     "denomination": {
@@ -1136,13 +1136,12 @@
     "f9Desc": "Liederen, gebeden, lezingen en liturgische teksten — doorzoekbaar, getagd, groeiend met elke ceremonie.",
     "f10Title": "Kerkregister",
     "f10Desc": "Documenteer doopfeesten, bruiloften en begrafenissen netjes. Alle gegevens op één plek.",
-    "pricingTitle": "Eenvoudige prijzen",
-    "pricingSubtitle": "Begin gratis. Upgrade wanneer je meer nodig hebt.",
+    "pricingTitle": "Gratis & ondersteund door donaties",
+    "pricingSubtitle": "Begin gratis. Alle Pro-functies worden mogelijk gemaakt door sponsoring.",
     "planPersonal": "Persoonlijk",
     "planFree": "Gratis",
     "planPro": "Pro",
-    "planProPrice": "CHF 29",
-    "planProPeriod": "/ maand",
+    "planProPeriod": "",
     "recommended": "Aanbevolen",
     "pf1": "Ceremonieteksten maken",
     "pf2": "Spraakopname & transcriptie",
@@ -1160,7 +1159,7 @@
     "pf14": "Kerkregister",
     "pf15": "Prioritaire ondersteuning",
     "ctaFree": "Beginnen",
-    "ctaTrial": "14 dagen gratis proefperiode",
+    "ctaTrial": "Sponsoring aanvragen",
     "faqTitle": "Veelgestelde vragen",
     "faq1q": "Voor wie is deze tool?",
     "faq1a": "Voor kapelaans, life coaches, freelance uitvaartsprekers, trouwambtenaren, ziekenhuiskapelaans, pastoors en iedereen die ceremonies, workshops of coachingsessies voorbereidt en uitvoert.",
@@ -1179,7 +1178,9 @@
     "footerPrivacy": "Privacybeleid",
     "footerChurches": "Voor Kerken",
     "seoTitle": "BibleBot.Life voor Kapelaans & Life Coaches — Plan Ceremonies & Sessies",
-    "seoDesc": "Plan begrafenissen, bruiloften, coachingsessies professioneel: spraakopname, tekstgeneratie, teleprompter, kalender en samenwerking."
+    "seoDesc": "Plan begrafenissen, bruiloften, coachingsessies professioneel: spraakopname, tekstgeneratie, teleprompter, kalender en samenwerking.",
+    "planProSupported": "Mogelijk gemaakt door donaties",
+    "ctaSponsor": "Sponsoring aanvragen"
   },
   "pricing": {
     "onRequest": "Patronaat op aanvraag",

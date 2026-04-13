@@ -720,12 +720,12 @@
         "desc": "Impulsions et sujets de discussion pour les groupes et les groupes de maison."
       }
     },
-    "pricingTitle": "Forfaits de parrainage",
-    "pricingSubtitle": "Soutenez BibleBot et votre organisation avec le forfait de parrainage adapté.",
-    "popular": "Populaire",
+    "pricingTitle": "Paquets de sponsoring",
+    "pricingSubtitle": "BibleBot.Life est gratuit et sans publicité. Les organisations peuvent soutenir le projet par un sponsoring et bénéficier de fonctionnalités supplémentaires.",
+    "popular": "Recommandé",
     "free": "Gratuit",
     "perYear": "",
-    "contact": "Contacter",
+    "contact": "Demander un sponsoring",
     "tier": {
       "free": {
         "name": "Graine de moutarde",
@@ -782,9 +782,9 @@
     "contactSuccess": "Message envoyé ! 🙏",
     "contactSuccessDesc": "L'organisation vous contactera.",
     "recommendedBy": "Recommandé par {{name}}",
-    "setup": "Configuration (une fois)",
+    "setup": "",
     "form": {
-      "title": "Intéressé(e) ? Écrivez-nous !",
+      "title": "Intéressé par un sponsoring ?",
       "subtitle": "Nous vous répondrons dans les 48 heures.",
       "name": "Votre nom",
       "email": "Adresse e-mail",
@@ -792,7 +792,7 @@
       "tier": "Forfait souhaité",
       "tierPlaceholder": "Choisir un forfait...",
       "message": "Votre message",
-      "submit": "Envoyer la demande",
+      "submit": "Envoyer une demande de don",
       "success": "Demande envoyée ! Nous vous contacterons bientôt. 🙏",
       "error": "Erreur lors de l'envoi. Veuillez réessayer.",
       "orgType": "Type d'organisation",
@@ -885,7 +885,7 @@
         "desc": "Impulsions spirituelles complémentaires pour les clients en conseil psychosocial ou pastoral."
       }
     },
-    "patronageNote": "BibleBot.Life est un projet privé et non commercial. Il est géré bénévolement et financé exclusivement par des dons volontaires. Il n'y a pas de publicité, pas de vente de données et pas de fonctionnalités payantes. Tous les dons sont directement affectés à la couverture des coûts de fonctionnement (infrastructure, hébergement, développement). Comme BibleBot est un projet privé, les dons ne sont pas déductibles des impôts."
+    "patronageNote": "BibleBot.Life est porté par une association à but non lucratif et financé exclusivement par des dons et sponsorings volontaires. Pas de publicité, pas de vente de données, pas de fonctionnalités payantes. Toutes les contributions sont directement investies dans le développement, l'exploitation technique, la diffusion mondiale et la gestion communautaire. Les dons peuvent être déductibles des impôts selon votre juridiction."
   },
   "institutions": {
     "badge": "Pour les organisations",
@@ -1136,13 +1136,12 @@
     "f9Desc": "Chants, prières, lectures et textes liturgiques — consultables, avec des balises, s'enrichissant à chaque cérémonie.",
     "f10Title": "Livre d'église et registre",
     "f10Desc": "Documentez soigneusement les baptêmes, mariages et obsèques. Toutes les données en un seul endroit.",
-    "pricingTitle": "Prix simples",
-    "pricingSubtitle": "Commencez gratuitement. Mettez à niveau si vous avez besoin de plus.",
+    "pricingTitle": "Gratuit & soutenu par des dons",
+    "pricingSubtitle": "Commencez gratuitement. Toutes les fonctionnalités Pro sont rendues possibles grâce au sponsoring.",
     "planPersonal": "Personnel",
     "planFree": "Gratuit",
     "planPro": "Pro",
-    "planProPrice": "CHF 29",
-    "planProPeriod": "/ mois",
+    "planProPeriod": "",
     "recommended": "Recommandé",
     "pf1": "Créer des textes de cérémonie",
     "pf2": "Enregistrement vocal et transcription",
@@ -1160,7 +1159,7 @@
     "pf14": "Livre d'église / Registre",
     "pf15": "Support prioritaire",
     "ctaFree": "Commencer maintenant",
-    "ctaTrial": "Essai gratuit de 14 jours",
+    "ctaTrial": "Demander un sponsoring",
     "faqTitle": "Questions fréquentes",
     "faq1q": "À qui s'adresse cet outil ?",
     "faq1a": "Aux pasteurs, coachs de vie, orateurs funéraires indépendants, maîtres de cérémonie de mariage, aumôniers d'hôpital, ministres du culte et à tous ceux qui préparent et mènent des cérémonies, des ateliers ou des séances de coaching.",
@@ -1179,7 +1178,9 @@
     "footerPrivacy": "Confidentialité",
     "footerChurches": "Pour les communautés",
     "seoTitle": "BibleBot.Life pour les célébrants et les coachs de vie — Planifier des cérémonies et des sessions",
-    "seoDesc": "Planifiez professionnellement les obsèques, les mariages, les séances de coaching : enregistrement vocal, génération de texte, téléprompteur, calendrier et collaboration."
+    "seoDesc": "Planifiez professionnellement les obsèques, les mariages, les séances de coaching : enregistrement vocal, génération de texte, téléprompteur, calendrier et collaboration.",
+    "planProSupported": "Rendu possible par les dons",
+    "ctaSponsor": "Demander un sponsoring"
   },
   "pricing": {
     "onRequest": "Parrainage sur demande",

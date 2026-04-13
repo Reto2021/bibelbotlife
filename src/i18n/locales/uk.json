@@ -676,12 +676,12 @@
         "desc": "Імпульси та ідеї для обговорення для груп та домашніх гуртків."
       }
     },
-    "pricingTitle": "Патронатні пакети",
-    "pricingSubtitle": "Підтримайте ваш супутник та вашу громаду за допомогою відповідного патронатного пакету.",
-    "popular": "Популярний",
+    "pricingTitle": "Sponsorship Packages",
+    "pricingSubtitle": "BibleBot.Life is free and ad-free. Organizations can support the project through sponsorship and receive additional features.",
+    "popular": "Recommended",
     "free": "Безкоштовно",
     "perYear": "осіб / рік",
-    "contact": "Зв'язатися",
+    "contact": "Request sponsorship",
     "tier": {
       "free": {
         "name": "Гірчичне зерно",
@@ -738,9 +738,9 @@
     "contactSuccess": "Повідомлення надіслано! 🙏",
     "contactSuccessDesc": "Громада зв'яжеться з вами.",
     "recommendedBy": "Рекомендовано {{name}}",
-    "setup": "Налаштування (одноразово)",
+    "setup": "",
     "form": {
-      "title": "Зацікавлені? Напишіть нам!",
+      "title": "Interested in sponsoring?",
       "subtitle": "Ми зв'яжемося з вами протягом 48 годин.",
       "name": "Ваше ім'я",
       "email": "Електронна адреса",
@@ -748,7 +748,7 @@
       "tier": "Бажаний пакет",
       "tierPlaceholder": "Виберіть пакет...",
       "message": "Ваше повідомлення",
-      "submit": "Надіслати запит",
+      "submit": "Send sponsorship request",
       "success": "Запит надіслано! Ми скоро зв'яжемося з вами. 🙏",
       "error": "Помилка надсилання. Будь ласка, спробуйте ще раз.",
       "orgType": "Тип організації",
@@ -817,7 +817,7 @@
         "desc": "Додаткові духовні імпульси для клієнтів психосоціального консультування."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As ваш супутник is a private project, donations are not tax-deductible.",
+    "patronageNote": "BibleBot.Life is run by a non-profit association and funded exclusively through voluntary donations and sponsorships. There is no advertising, no data sales, and no paid features. All contributions go directly toward development, technical operations, global distribution, and community management. Donations may be tax-deductible depending on your jurisdiction.",
     "denominationsTitle": "Для всіх конфесій та ведучих церемоній",
     "denominationsSubtitle": "BibleBot.Life екуменічний – для реформатських, католицьких, лютеранських та вільних євангельських громад, а також незалежних ведучих церемоній.",
     "denomination": {
@@ -1136,13 +1136,12 @@
     "f9Desc": "Пісні, молитви, читання та літургійні тексти — з можливістю пошуку, тегами, що зростають з кожною церемонією.",
     "f10Title": "Церковний реєстр",
     "f10Desc": "Акуратно документуйте хрещення, весілля та похорони. Всі дані в одному місці.",
-    "pricingTitle": "Просте ціноутворення",
-    "pricingSubtitle": "Почніть безкоштовно. Оновіть, коли вам знадобиться більше.",
+    "pricingTitle": "Free & supported by donations",
+    "pricingSubtitle": "Start for free. All Pro features are made possible through sponsorship.",
     "planPersonal": "Особистий",
     "planFree": "Безкоштовно",
     "planPro": "Про",
-    "planProPrice": "29 CHF",
-    "planProPeriod": "/ місяць",
+    "planProPeriod": "",
     "recommended": "Рекомендовано",
     "pf1": "Створюйте тексти церемоній",
     "pf2": "Запис голосу та транскрипція",
@@ -1160,7 +1159,7 @@
     "pf14": "Церковний реєстр",
     "pf15": "Пріоритетна підтримка",
     "ctaFree": "Почати",
-    "ctaTrial": "14-денна безкоштовна пробна версія",
+    "ctaTrial": "Request sponsorship",
     "faqTitle": "Часті запитання",
     "faq1q": "Для кого цей інструмент?",
     "faq1a": "Для капеланів, лайф-коучів, незалежних похоронних промовців, весільних церемоніймейстерів, лікарняних капеланів, пасторів та всіх, хто готує та проводить церемонії, майстер-класи або коучингові сесії.",
@@ -1179,7 +1178,9 @@
     "footerPrivacy": "Політика конфіденційності",
     "footerChurches": "Для церков",
     "seoTitle": "BibleBot.Life для капеланів та лайф-коучів — Плануйте церемонії та сесії",
-    "seoDesc": "Професійно плануйте похорони, весілля, коучингові сесії: запис голосу, генерація тексту, телесуфлер, календар та співпраця."
+    "seoDesc": "Професійно плануйте похорони, весілля, коучингові сесії: запис голосу, генерація тексту, телесуфлер, календар та співпраця.",
+    "planProSupported": "Made possible by donations",
+    "ctaSponsor": "Request sponsorship"
   },
   "pricing": {
     "onRequest": "Патронаж за запитом",

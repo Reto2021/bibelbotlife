@@ -677,12 +677,12 @@
         "desc": "Impulsy i tematy do dyskusji dla grup i kółek domowych."
       }
     },
-    "pricingTitle": "Pakiety patronackie",
-    "pricingSubtitle": "Wesprzyj twój towarzysz i swój kościół odpowiednim pakietem patronackim.",
-    "popular": "Popularny",
+    "pricingTitle": "Pakiety sponsorskie",
+    "pricingSubtitle": "BibleBot.Life jest bezpłatny i bez reklam. Organizacje mogą wspierać projekt poprzez sponsoring i otrzymywać dodatkowe funkcje.",
+    "popular": "Polecane",
     "free": "Bezpłatnie",
     "perYear": "osób / rok",
-    "contact": "Skontaktuj się",
+    "contact": "Zapytaj o sponsoring",
     "tier": {
       "free": {
         "name": "Ziarno gorczycy",
@@ -739,9 +739,9 @@
     "contactSuccess": "Wiadomość wysłana! 🙏",
     "contactSuccessDesc": "Kościół skontaktuje się z Tobą.",
     "recommendedBy": "Polecany przez {{name}}",
-    "setup": "Konfiguracja (jednorazowa)",
+    "setup": "",
     "form": {
-      "title": "Zainteresowany? Skontaktuj się!",
+      "title": "Zainteresowany sponsoringiem?",
       "subtitle": "Odpowiemy w ciągu 48 godzin.",
       "name": "Twoje imię",
       "email": "Adres e-mail",
@@ -749,7 +749,7 @@
       "tier": "Preferowany pakiet",
       "tierPlaceholder": "Wybierz pakiet...",
       "message": "Twoja wiadomość",
-      "submit": "Wyślij zapytanie",
+      "submit": "Wyślij prośbę o darowiznę",
       "success": "Zapytanie wysłane! Skontaktujemy się wkrótce. 🙏",
       "error": "Błąd wysyłania. Spróbuj ponownie.",
       "orgType": "Organization type",
@@ -818,7 +818,7 @@
         "desc": "Uzupełniające impulsy duchowe dla klientów poradnictwa psychospołecznego."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As twój towarzysz is a private project, donations are not tax-deductible.",
+    "patronageNote": "BibleBot.Life jest prowadzony przez stowarzyszenie non-profit i finansowany wyłącznie z dobrowolnych darowizn i sponsoringu. Bez reklam, bez sprzedaży danych, bez płatnych funkcji. Wszystkie wpłaty trafiają bezpośrednio na rozwój, obsługę techniczną, globalną dystrybucję i zarządzanie społecznością. Darowizny mogą być odliczane od podatku w zależności od jurysdykcji.",
     "denominationsTitle": "Dla wszystkich wyznań i celebrantów",
     "denominationsSubtitle": "BibleBot.Life jest ekumeniczny – dla wspólnot reformowanych, katolickich, luterańskich i wolnych kościołów, a także niezależnych celebrantów.",
     "denomination": {
@@ -1136,13 +1136,12 @@
     "f9Desc": "Pieśni, modlitwy, czytania i teksty liturgiczne — z możliwością wyszukiwania, tagowania, rosnące z każdą ceremonią.",
     "f10Title": "Rejestr kościelny",
     "f10Desc": "Starannie dokumentuj chrzty, śluby i pogrzeby. Wszystkie dane w jednym miejscu.",
-    "pricingTitle": "Proste ceny",
-    "pricingSubtitle": "Zacznij za darmo. Uaktualnij, gdy potrzebujesz więcej.",
+    "pricingTitle": "Bezpłatne i wspierane przez darowizny",
+    "pricingSubtitle": "Zacznij za darmo. Wszystkie funkcje Pro są możliwe dzięki sponsoringowi.",
     "planPersonal": "Osobisty",
     "planFree": "Darmowy",
     "planPro": "Pro",
-    "planProPrice": "29 CHF",
-    "planProPeriod": "/ miesiąc",
+    "planProPeriod": "",
     "recommended": "Polecane",
     "pf1": "Tworzenie tekstów ceremonii",
     "pf2": "Nagrywanie głosu i transkrypcja",
@@ -1160,7 +1159,7 @@
     "pf14": "Rejestr kościelny",
     "pf15": "Priorytetowe wsparcie",
     "ctaFree": "Rozpocznij",
-    "ctaTrial": "14-dniowy bezpłatny okres próbny",
+    "ctaTrial": "Zapytaj o sponsoring",
     "faqTitle": "Często zadawane pytania",
     "faq1q": "Dla kogo jest to narzędzie?",
     "faq1a": "Dla kapelanów, coachów życiowych, niezależnych mówców pogrzebowych, celebransów ślubnych, kapelanów szpitalnych, pastorów i każdego, kto przygotowuje i prowadzi ceremonie, warsztaty lub sesje coachingowe.",
@@ -1179,7 +1178,9 @@
     "footerPrivacy": "Polityka prywatności",
     "footerChurches": "Dla kościołów",
     "seoTitle": "BibleBot.Life dla kapelanów i coachów życiowych — planuj ceremonie i sesje",
-    "seoDesc": "Profesjonalnie planuj pogrzeby, śluby, sesje coachingowe: nagrywanie głosu, generowanie tekstu, teleprompter, kalendarz i współpraca."
+    "seoDesc": "Profesjonalnie planuj pogrzeby, śluby, sesje coachingowe: nagrywanie głosu, generowanie tekstu, teleprompter, kalendarz i współpraca.",
+    "planProSupported": "Możliwe dzięki darowiznom",
+    "ctaSponsor": "Zapytaj o sponsoring"
   },
   "pricing": {
     "onRequest": "Patronat na zapytanie",

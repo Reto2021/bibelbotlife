@@ -715,12 +715,12 @@
         "desc": "Misukumo na hoja za majadiliano kwa vikundi na miduara ya nyumbani."
       }
     },
-    "pricingTitle": "Vifurushi vya Udhamini",
-    "pricingSubtitle": "Saidia mwenza wako na jumuiya yako na kifurushi kinachofaa cha udhamini.",
-    "popular": "Maarufu",
+    "pricingTitle": "Sponsorship Packages",
+    "pricingSubtitle": "BibleBot.Life is free and ad-free. Organizations can support the project through sponsorship and receive additional features.",
+    "popular": "Recommended",
     "free": "Bure",
     "perYear": "watu / mwaka",
-    "contact": "Wasiliana nasi",
+    "contact": "Request sponsorship",
     "tier": {
       "free": {
         "name": "Mbegu ya Haradali",
@@ -777,9 +777,9 @@
     "contactSuccess": "Ujumbe umetuma! 🙏",
     "contactSuccessDesc": "Jumuiya itawasiliana nawe.",
     "recommendedBy": "Inapendekezwa na {{name}}",
-    "setup": "Kusanidi (mara moja)",
+    "setup": "",
     "form": {
-      "title": "Una nia? Tuandikie!",
+      "title": "Interested in sponsoring?",
       "subtitle": "Tutajibu ndani ya masaa 48.",
       "name": "Jina lako",
       "email": "Anwani ya Barua pepe",
@@ -787,7 +787,7 @@
       "tier": "Kifurushi kinachotakiwa",
       "tierPlaceholder": "Chagua kifurushi...",
       "message": "Ujumbe wako",
-      "submit": "Tuma Ombi",
+      "submit": "Send sponsorship request",
       "success": "Ombi limetumwa! Tutawasiliana nawe hivi karibuni. 🙏",
       "error": "Hitilafu wakati wa kutuma. Tafadhali jaribu tena.",
       "orgType": "Aina ya Shirika",
@@ -856,7 +856,7 @@
         "desc": "Msukumo wa kiroho wa ziada kwa wateja katika ushauri wa kisaikolojia."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As mwenza wako is a private project, donations are not tax-deductible.",
+    "patronageNote": "BibleBot.Life is run by a non-profit association and funded exclusively through voluntary donations and sponsorships. There is no advertising, no data sales, and no paid features. All contributions go directly toward development, technical operations, global distribution, and community management. Donations may be tax-deductible depending on your jurisdiction.",
     "denominationsTitle": "Kwa madhehebu yote na viongozi wa sherehe",
     "denominationsSubtitle": "BibleBot.Life ni ya kiekumeni – kwa jumuiya za Marekebisho, Katoliki, Kilutheri na Kanisa Huru, pamoja na viongozi wa sherehe huru.",
     "denomination": {
@@ -1136,13 +1136,12 @@
     "f9Desc": "Nyimbo, sala, masomo, na maandishi ya kiliturujia — yanayoweza kutafutwa, yenye vitambulisho, yanayokua kwa kila sherehe.",
     "f10Title": "Rejista ya Kanisa",
     "f10Desc": "Andika kwa uangalifu ubatizo, harusi, na mazishi. Data zote katika sehemu moja.",
-    "pricingTitle": "Bei rahisi",
-    "pricingSubtitle": "Anza bure. Pata toleo jipya unapo hitaji zaidi.",
+    "pricingTitle": "Free & supported by donations",
+    "pricingSubtitle": "Start for free. All Pro features are made possible through sponsorship.",
     "planPersonal": "Binafsi",
     "planFree": "Bure",
     "planPro": "Pro",
-    "planProPrice": "CHF 29",
-    "planProPeriod": "/ mwezi",
+    "planProPeriod": "",
     "recommended": "Inapendekezwa",
     "pf1": "Unda maandishi ya sherehe",
     "pf2": "Kurekodi sauti & unukuzi",
@@ -1160,7 +1159,7 @@
     "pf14": "Rejista ya kanisa",
     "pf15": "Msaada wa kipaumbele",
     "ctaFree": "Anza",
-    "ctaTrial": "Jaribio la bure la siku 14",
+    "ctaTrial": "Request sponsorship",
     "faqTitle": "Maswali Yanayoulizwa Mara kwa Mara",
     "faq1q": "Zana hii ni ya nani?",
     "faq1a": "Kwa makasisi, wakufunzi wa maisha, wasemaji wa mazishi huru, waendesha harusi, makasisi wa hospitali, wachungaji, na mtu yeyote anayeandaa na kufanya sherehe, warsha, au vikao vya kufundisha.",
@@ -1179,7 +1178,9 @@
     "footerPrivacy": "Sera ya Faragha",
     "footerChurches": "Kwa Makanisa",
     "seoTitle": "BibleBot.Life kwa Makasisi & Wakufunzi wa Maisha — Panga Sherehe & Vikao",
-    "seoDesc": "Panga mazishi, harusi, vikao vya kufundisha kitaalamu: kurekodi sauti, uzalishaji wa maandishi, teleprompter, kalenda, na ushirikiano."
+    "seoDesc": "Panga mazishi, harusi, vikao vya kufundisha kitaalamu: kurekodi sauti, uzalishaji wa maandishi, teleprompter, kalenda, na ushirikiano.",
+    "planProSupported": "Made possible by donations",
+    "ctaSponsor": "Request sponsorship"
   },
   "pricing": {
     "onRequest": "Udhamini kwa ombi",

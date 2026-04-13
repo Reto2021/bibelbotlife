@@ -676,12 +676,12 @@
         "desc": "Impulzusok és vitaindítók csoportok és házi körök számára."
       }
     },
-    "pricingTitle": "Patronátus csomagok",
-    "pricingSubtitle": "Támogassa a társadot és gyülekezetét a megfelelő patronátus csomaggal.",
-    "popular": "Népszerű",
+    "pricingTitle": "Sponsorship Packages",
+    "pricingSubtitle": "BibleBot.Life is free and ad-free. Organizations can support the project through sponsorship and receive additional features.",
+    "popular": "Recommended",
     "free": "Ingyenes",
     "perYear": "személy / év",
-    "contact": "Kapcsolatfelvétel",
+    "contact": "Request sponsorship",
     "tier": {
       "free": {
         "name": "Mustármag",
@@ -738,9 +738,9 @@
     "contactSuccess": "Üzenet elküldve! 🙏",
     "contactSuccessDesc": "A gyülekezet felveszi Önnel a kapcsolatot.",
     "recommendedBy": "Ajánlja: {{name}}",
-    "setup": "Beállítás (egyszeri)",
+    "setup": "",
     "form": {
-      "title": "Érdekli? Írjon nekünk!",
+      "title": "Interested in sponsoring?",
       "subtitle": "48 órán belül felvesszük Önnel a kapcsolatot.",
       "name": "Az Ön neve",
       "email": "E-mail cím",
@@ -748,7 +748,7 @@
       "tier": "Kívánt csomag",
       "tierPlaceholder": "Csomag kiválasztása...",
       "message": "Az Ön üzenete",
-      "submit": "Kérés küldése",
+      "submit": "Send sponsorship request",
       "success": "Kérés elküldve! Hamarosan felvesszük Önnel a kapcsolatot. 🙏",
       "error": "Hiba történt a küldés során. Kérjük, próbálja újra.",
       "orgType": "Szervezet típusa",
@@ -817,7 +817,7 @@
         "desc": "Kiegészítő lelki impulzusok pszichoszociális tanácsadás ügyfelei számára."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As társad is a private project, donations are not tax-deductible.",
+    "patronageNote": "BibleBot.Life is run by a non-profit association and funded exclusively through voluntary donations and sponsorships. There is no advertising, no data sales, and no paid features. All contributions go directly toward development, technical operations, global distribution, and community management. Donations may be tax-deductible depending on your jurisdiction.",
     "denominationsTitle": "Minden felekezet és szertartásvezető számára",
     "denominationsSubtitle": "A BibleBot.Life ökumenikus – református, katolikus, evangélikus és szabad egyházi közösségek, valamint független szertartásvezetők számára.",
     "denomination": {
@@ -1136,13 +1136,12 @@
     "f9Desc": "Dalok, imák, olvasmányok és liturgikus szövegek – kereshető, címkézett, minden szertartással bővülő.",
     "f10Title": "Egyházi anyakönyv",
     "f10Desc": "Gondosan dokumentálja a keresztelőket, esküvőket és temetéseket. Minden adat egy helyen.",
-    "pricingTitle": "Egyszerű árazás",
-    "pricingSubtitle": "Kezdje ingyen. Frissítsen, ha többre van szüksége.",
+    "pricingTitle": "Free & supported by donations",
+    "pricingSubtitle": "Start for free. All Pro features are made possible through sponsorship.",
     "planPersonal": "Személyes",
     "planFree": "Ingyenes",
     "planPro": "Pro",
-    "planProPrice": "CHF 29",
-    "planProPeriod": "/ hónap",
+    "planProPeriod": "",
     "recommended": "Ajánlott",
     "pf1": "Szertartási szövegek létrehozása",
     "pf2": "Hangfelvétel és átírás",
@@ -1160,7 +1159,7 @@
     "pf14": "Egyházi anyakönyv",
     "pf15": "Prioritásos támogatás",
     "ctaFree": "Kezdje el",
-    "ctaTrial": "14 napos ingyenes próba",
+    "ctaTrial": "Request sponsorship",
     "faqTitle": "Gyakran Ismételt Kérdések",
     "faq1q": "Kinek szól ez az eszköz?",
     "faq1a": "Káplánoknak, életvezetési tanácsadóknak, szabadúszó temetési szónokoknak, esküvői szertartásvezetőknek, kórházi káplánoknak, lelkészeknek és mindenkinek, aki szertartásokat, workshopokat vagy coaching üléseket készít elő és vezet.",
@@ -1179,7 +1178,9 @@
     "footerPrivacy": "Adatvédelmi irányelvek",
     "footerChurches": "Egyházaknak",
     "seoTitle": "BibleBot.Life káplánoknak és életvezetési tanácsadóknak – Szertartások és ülések tervezése",
-    "seoDesc": "Tervezzen temetéseket, esküvőket, coaching üléseket professzionálisan: hangfelvétel, szöveggenerálás, súgó, naptár és együttműködés."
+    "seoDesc": "Tervezzen temetéseket, esküvőket, coaching üléseket professzionálisan: hangfelvétel, szöveggenerálás, súgó, naptár és együttműködés.",
+    "planProSupported": "Made possible by donations",
+    "ctaSponsor": "Request sponsorship"
   },
   "pricing": {
     "onRequest": "Patronátus igény szerint",

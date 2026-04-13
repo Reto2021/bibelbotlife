@@ -677,12 +677,12 @@
         "desc": "דחפים ומתחילים לדיון לקבוצות ולחוגי בית."
       }
     },
-    "pricingTitle": "חבילות חסות",
-    "pricingSubtitle": "תמוך במלווה שלך ובארגון שלך עם חבילת החסות הנכונה.",
-    "popular": "פופולרי",
+    "pricingTitle": "Sponsorship Packages",
+    "pricingSubtitle": "BibleBot.Life is free and ad-free. Organizations can support the project through sponsorship and receive additional features.",
+    "popular": "Recommended",
     "free": "חינם",
     "perYear": "אנשים / שנה",
-    "contact": "צור קשר",
+    "contact": "Request sponsorship",
     "tier": {
       "free": {
         "name": "גרגר חרדל",
@@ -739,9 +739,9 @@
     "contactSuccess": "ההודעה נשלחה! 🙏",
     "contactSuccessDesc": "הארגון יחזור אליך.",
     "recommendedBy": "מומלץ על ידי {{name}}",
-    "setup": "הגדרה (חד פעמית)",
+    "setup": "",
     "form": {
-      "title": "מעוניין? צור קשר!",
+      "title": "Interested in sponsoring?",
       "subtitle": "נחזור אליך תוך 48 שעות.",
       "name": "שמך",
       "email": "כתובת דוא\"ל",
@@ -749,7 +749,7 @@
       "tier": "חבילה מועדפת",
       "tierPlaceholder": "בחר חבילה...",
       "message": "ההודעה שלך",
-      "submit": "שלח פנייה",
+      "submit": "Send sponsorship request",
       "success": "הפנייה נשלחה! נהיה בקשר בקרוב. 🙏",
       "error": "שגיאה בשליחה. אנא נסה שוב.",
       "orgType": "סוג ארגון",
@@ -842,7 +842,7 @@
         "desc": "דחפים רוחניים משלימים ללקוחות בייעוץ פסיכו-סוציאלי או פסטורלי."
       }
     },
-    "patronageNote": "BibleBot.Life הוא פרויקט פרטי, לא מסחרי. הוא מנוהל על בסיס התנדבותי וממומן אך ורק באמצעות תרומות. אין פרסומות, אין מכירת נתונים ואין תכונות בתשלום. כל התרומות מיועדות ישירות לכיסוי עלויות התפעול (תשתית, אירוח, פיתוח). מכיוון שהמלווה שלך הוא פרויקט פרטי, תרומות אינן ניתנות לניכוי מס."
+    "patronageNote": "BibleBot.Life is run by a non-profit association and funded exclusively through voluntary donations and sponsorships. There is no advertising, no data sales, and no paid features. All contributions go directly toward development, technical operations, global distribution, and community management. Donations may be tax-deductible depending on your jurisdiction."
   },
   "institutions": {
     "badge": "לארגונים",
@@ -1136,13 +1136,12 @@
     "f9Desc": "שירים, תפילות, קריאות וטקסטים ליטורגיים — ניתנים לחיפוש, מתויגים, גדלים עם כל טקס.",
     "f10Title": "רישום כנסייה",
     "f10Desc": "תעדו בקפידה טבילות, חתונות והלוויות. כל הנתונים במקום אחד.",
-    "pricingTitle": "תמחור פשוט",
-    "pricingSubtitle": "התחילו בחינם. שדרגו כשאתם צריכים יותר.",
+    "pricingTitle": "Free & supported by donations",
+    "pricingSubtitle": "Start for free. All Pro features are made possible through sponsorship.",
     "planPersonal": "אישי",
     "planFree": "חינם",
     "planPro": "פרו",
-    "planProPrice": "29 פר״ש",
-    "planProPeriod": "/ חודש",
+    "planProPeriod": "",
     "recommended": "מומלץ",
     "pf1": "יצירת טקסטים לטקס",
     "pf2": "הקלטה ותמלול קולי",
@@ -1160,7 +1159,7 @@
     "pf14": "רישום כנסייה",
     "pf15": "תמיכה עדיפות",
     "ctaFree": "התחילו",
-    "ctaTrial": "ניסיון חינם ל-14 יום",
+    "ctaTrial": "Request sponsorship",
     "faqTitle": "שאלות נפוצות",
     "faq1q": "למי מיועד הכלי הזה?",
     "faq1a": "לכמרים, מאמני חיים, דוברי הלוויות עצמאיים, עורכי חתונות, כמרים בבתי חולים, כמרים, וכל מי שמכין ומנהל טקסים, סדנאות או מפגשי אימון.",
@@ -1179,7 +1178,9 @@
     "footerPrivacy": "מדיניות פרטיות",
     "footerChurches": "לכנסיות",
     "seoTitle": "BibleBot.Life לכמרים ומאמני חיים — תכנון טקסים ומפגשים",
-    "seoDesc": "תכננו הלוויות, חתונות, מפגשי אימון באופן מקצועי: הקלטה קולית, יצירת טקסט, טלפרומפטר, יומן ושיתוף פעולה."
+    "seoDesc": "תכננו הלוויות, חתונות, מפגשי אימון באופן מקצועי: הקלטה קולית, יצירת טקסט, טלפרומפטר, יומן ושיתוף פעולה.",
+    "planProSupported": "Made possible by donations",
+    "ctaSponsor": "Request sponsorship"
   },
   "pricing": {
     "onRequest": "חסות לפי בקשה",

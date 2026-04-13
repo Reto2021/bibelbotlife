@@ -720,12 +720,12 @@
         "desc": "იმპულსები და დისკუსიის საწყისები ჯგუფებისა და სახლის წრეებისთვის."
       }
     },
-    "pricingTitle": "პატრონაჟის პაკეტები",
-    "pricingSubtitle": "მხარი დაუჭირეთ BibleBot-ს და თქვენს ორგანიზაციას შესაბამისი პატრონაჟის პაკეტით.",
-    "popular": "პოპულარული",
+    "pricingTitle": "Sponsorship Packages",
+    "pricingSubtitle": "BibleBot.Life is free and ad-free. Organizations can support the project through sponsorship and receive additional features.",
+    "popular": "Recommended",
     "free": "უფასო",
     "perYear": "",
-    "contact": "დაგვიკავშირდით",
+    "contact": "Request sponsorship",
     "tier": {
       "free": {
         "name": "მდოგვის მარცვალი",
@@ -782,9 +782,9 @@
     "contactSuccess": "შეტყობინება გაგზავნილია! 🙏",
     "contactSuccessDesc": "ორგანიზაცია დაგიკავშირდებათ.",
     "recommendedBy": "რეკომენდებულია {{name}}-ის მიერ",
-    "setup": "დაყენება (ერთჯერადი)",
+    "setup": "",
     "form": {
-      "title": "დაინტერესებული ხართ? მოგვწერეთ!",
+      "title": "Interested in sponsoring?",
       "subtitle": "ჩვენ დაგიკავშირდებით 48 საათის განმავლობაში.",
       "name": "თქვენი სახელი",
       "email": "ელექტრონული ფოსტის მისამართი",
@@ -792,7 +792,7 @@
       "tier": "სასურველი პაკეტი",
       "tierPlaceholder": "აირჩიეთ პაკეტი...",
       "message": "თქვენი შეტყობინება",
-      "submit": "მოთხოვნის გაგზავნა",
+      "submit": "Send sponsorship request",
       "success": "მოთხოვნა გაგზავნილია! მალე დაგიკავშირდებით. 🙏",
       "error": "გაგზავნის შეცდომა. გთხოვთ, სცადოთ ხელახლა.",
       "orgType": "ორგანიზაციის ტიპი",
@@ -885,7 +885,7 @@
         "desc": "დამატებითი სულიერი იმპულსები კლიენტებისთვის ფსიქოსოციალურ ან სამღვდელო კონსულტაციაში."
       }
     },
-    "patronageNote": "BibleBot.Life არის კერძო, არაკომერციული პროექტი. ის მოხალისეობრივად იმართება და ფინანსდება მხოლოდ ნებაყოფლობითი შემოწირულობებით. არ არის რეკლამა, მონაცემთა გაყიდვა და ფასიანი ფუნქციები. ყველა შემოწირულობა პირდაპირ მიდის მიმდინარე ხარჯების (ინფრასტრუქტურა, ჰოსტინგი, განვითარება) დასაფარად. რადგან BibleBot კერძო პროექტად მუშაობს, შემოწირულობები არ არის საგადასახადო შეღავათიანი."
+    "patronageNote": "BibleBot.Life is run by a non-profit association and funded exclusively through voluntary donations and sponsorships. There is no advertising, no data sales, and no paid features. All contributions go directly toward development, technical operations, global distribution, and community management. Donations may be tax-deductible depending on your jurisdiction."
   },
   "institutions": {
     "badge": "ორგანიზაციებისთვის",
@@ -1136,13 +1136,12 @@
     "f9Desc": "სიმღერები, ლოცვები, საკითხავები და ლიტურგიული ტექსტები — საძიებო, ტეგებით, იზრდება ყოველი ცერემონიით.",
     "f10Title": "საეკლესიო წიგნი და რეესტრი",
     "f10Desc": "ნათლობების, ქორწინებების და დაკრძალვების ზუსტი დოკუმენტირება. ყველა მონაცემი ერთ ადგილას.",
-    "pricingTitle": "მარტივი ფასები",
-    "pricingSubtitle": "დაიწყეთ უფასოდ. განაახლეთ, თუ მეტი გჭირდებათ.",
+    "pricingTitle": "Free & supported by donations",
+    "pricingSubtitle": "Start for free. All Pro features are made possible through sponsorship.",
     "planPersonal": "პირადი",
     "planFree": "უფასო",
     "planPro": "პრო",
-    "planProPrice": "CHF 29",
-    "planProPeriod": "/ თვე",
+    "planProPeriod": "",
     "recommended": "რეკომენდებულია",
     "pf1": "ცერემონიის ტექსტების შექმნა",
     "pf2": "ხმოვანი ჩაწერა და ტრანსკრიფცია",
@@ -1160,7 +1159,7 @@
     "pf14": "საეკლესიო წიგნი / რეესტრი",
     "pf15": "პრიორიტეტული მხარდაჭერა",
     "ctaFree": "დაიწყე ახლავე",
-    "ctaTrial": "14 დღე უფასო საცდელი პერიოდი",
+    "ctaTrial": "Request sponsorship",
     "faqTitle": "ხშირად დასმული კითხვები",
     "faq1q": "ვისთვის არის განკუთვნილი ეს ინსტრუმენტი?",
     "faq1a": "მღვდელთმსახურთათვის, ცხოვრების მწვრთნელებისთვის, თავისუფალი სამგლოვიარო ორატორებისთვის, საქორწინო ცერემონიის ოსტატებისთვის, საავადმყოფოს მღვდელთმსახურთათვის, მღვდლებისთვის და ყველასთვის, ვინც ამზადებს და ატარებს ცერემონიებს, ვორქშოფებს ან ქოუჩინგის სესიებს.",
@@ -1181,7 +1180,9 @@
     "footerPrivacy": "კონფიდენციალურობის პოლიტიკა",
     "footerChurches": "ეკლესიებისთვის",
     "seoTitle": "BibleBot.Life მღვდელთმსახურთათვის და ცხოვრების მწვრთნელებისთვის — ცერემონიების და სესიების დაგეგმვა",
-    "seoDesc": "დაკრძალვების, ქორწინებების, ქოუჩინგის სესიების პროფესიონალური დაგეგმვა: ხმოვანი ჩაწერა, ტექსტის გენერირება, ტელეპრომპტერი, კალენდარი და თანამშრომლობა."
+    "seoDesc": "დაკრძალვების, ქორწინებების, ქოუჩინგის სესიების პროფესიონალური დაგეგმვა: ხმოვანი ჩაწერა, ტექსტის გენერირება, ტელეპრომპტერი, კალენდარი და თანამშრომლობა.",
+    "planProSupported": "Made possible by donations",
+    "ctaSponsor": "Request sponsorship"
   },
   "pricing": {
     "onRequest": "პატრონაჟი მოთხოვნით",

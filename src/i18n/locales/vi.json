@@ -717,12 +717,12 @@
         "desc": "Lời khuyên và gợi ý thảo luận cho các nhóm và nhóm nhỏ."
       }
     },
-    "pricingTitle": "Gói bảo trợ",
-    "pricingSubtitle": "Hỗ trợ người bạn đồng hành và Hội thánh của bạn với gói bảo trợ phù hợp.",
-    "popular": "Phổ biến",
+    "pricingTitle": "Sponsorship Packages",
+    "pricingSubtitle": "BibleBot.Life is free and ad-free. Organizations can support the project through sponsorship and receive additional features.",
+    "popular": "Recommended",
     "free": "Miễn phí",
     "perYear": "người / năm",
-    "contact": "Liên hệ",
+    "contact": "Request sponsorship",
     "tier": {
       "free": {
         "name": "Hạt cải",
@@ -779,9 +779,9 @@
     "contactSuccess": "Đã gửi tin nhắn! 🙏",
     "contactSuccessDesc": "Hội thánh sẽ liên hệ với bạn.",
     "recommendedBy": "Được {{name}} giới thiệu",
-    "setup": "Thiết lập (một lần)",
+    "setup": "",
     "form": {
-      "title": "Bạn quan tâm? Viết thư cho chúng tôi!",
+      "title": "Interested in sponsoring?",
       "subtitle": "Chúng tôi sẽ trả lời trong vòng 48 giờ.",
       "name": "Tên của bạn",
       "email": "Địa chỉ E-mail",
@@ -789,7 +789,7 @@
       "tier": "Gói mong muốn",
       "tierPlaceholder": "Chọn gói...",
       "message": "Tin nhắn của bạn",
-      "submit": "Gửi yêu cầu",
+      "submit": "Send sponsorship request",
       "success": "Yêu cầu đã được gửi! Chúng tôi sẽ liên hệ sớm. 🙏",
       "error": "Lỗi khi gửi. Vui lòng thử lại.",
       "orgType": "Loại tổ chức",
@@ -858,7 +858,7 @@
         "desc": "Xung lực tâm linh bổ sung cho khách hàng tư vấn tâm lý xã hội."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As người bạn đồng hành is a private project, donations are not tax-deductible.",
+    "patronageNote": "BibleBot.Life is run by a non-profit association and funded exclusively through voluntary donations and sponsorships. There is no advertising, no data sales, and no paid features. All contributions go directly toward development, technical operations, global distribution, and community management. Donations may be tax-deductible depending on your jurisdiction.",
     "denominationsTitle": "Cho mọi giáo phái và người dẫn lễ",
     "denominationsSubtitle": "BibleBot.Life là đại kết – dành cho các cộng đồng Cải cách, Công giáo, Luther và Tin lành tự do, cũng như người dẫn lễ tự do.",
     "denomination": {
@@ -1138,13 +1138,12 @@
     "f9Desc": "Các bài hát, lời cầu nguyện, bài đọc và văn bản phụng vụ — có thể tìm kiếm, được gắn thẻ, phát triển theo mỗi buổi lễ.",
     "f10Title": "Sổ đăng ký nhà thờ",
     "f10Desc": "Ghi lại gọn gàng các lễ rửa tội, đám cưới và đám tang. Tất cả dữ liệu ở một nơi.",
-    "pricingTitle": "Giá cả đơn giản",
-    "pricingSubtitle": "Bắt đầu miễn phí. Nâng cấp khi bạn cần nhiều hơn.",
+    "pricingTitle": "Free & supported by donations",
+    "pricingSubtitle": "Start for free. All Pro features are made possible through sponsorship.",
     "planPersonal": "Cá nhân",
     "planFree": "Miễn phí",
     "planPro": "Chuyên nghiệp",
-    "planProPrice": "29 CHF",
-    "planProPeriod": "/ tháng",
+    "planProPeriod": "",
     "recommended": "Được đề xuất",
     "pf1": "Tạo văn bản buổi lễ",
     "pf2": "Ghi âm giọng nói & chuyển giọng nói thành văn bản",
@@ -1162,7 +1161,7 @@
     "pf14": "Sổ đăng ký nhà thờ",
     "pf15": "Hỗ trợ ưu tiên",
     "ctaFree": "Bắt đầu",
-    "ctaTrial": "Dùng thử miễn phí 14 ngày",
+    "ctaTrial": "Request sponsorship",
     "faqTitle": "Các câu hỏi thường gặp",
     "faq1q": "Công cụ này dành cho ai?",
     "faq1a": "Dành cho các tuyên úy, huấn luyện viên cuộc sống, người nói tang lễ tự do, người tổ chức đám cưới, tuyên úy bệnh viện, mục sư và bất kỳ ai chuẩn bị và thực hiện các buổi lễ, hội thảo hoặc buổi huấn luyện.",
@@ -1181,7 +1180,9 @@
     "footerPrivacy": "Chính sách bảo mật",
     "footerChurches": "Dành cho các nhà thờ",
     "seoTitle": "BibleBot.Life dành cho Tuyên úy & Huấn luyện viên Cuộc sống — Lên kế hoạch cho các buổi lễ & buổi học",
-    "seoDesc": "Lên kế hoạch đám tang, đám cưới, buổi huấn luyện một cách chuyên nghiệp: ghi âm giọng nói, tạo văn bản, teleprompter, lịch và cộng tác."
+    "seoDesc": "Lên kế hoạch đám tang, đám cưới, buổi huấn luyện một cách chuyên nghiệp: ghi âm giọng nói, tạo văn bản, teleprompter, lịch và cộng tác.",
+    "planProSupported": "Made possible by donations",
+    "ctaSponsor": "Request sponsorship"
   },
   "pricing": {
     "onRequest": "Bảo trợ theo yêu cầu",
