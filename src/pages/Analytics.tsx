@@ -749,7 +749,8 @@ const Analytics = () => {
           );
         })()}
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {/* Telegram Chat activity */}
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-base flex items-center gap-2">
