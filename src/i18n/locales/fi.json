@@ -1276,7 +1276,27 @@
       "title": "7 miksi -menetelmä"
     },
     "subtitle": "Hetkiin, jolloin tarvitset enemmän kuin vastauksen.",
-    "title": "Kaksi työkalua, jotka menevät syvemmälle"
+    "title": "Työkalut jotka menevät syvemmälle",
+    "gratitude": {
+      "title": "Kiitollisuuspäiväkirja",
+      "desc": "Mainitse kolme asiaa, joista olet kiitollinen tänään — ja BibleBot löytää sopivia psalmeja ja jakeita.",
+      "cta": "Harjoita kiitollisuutta"
+    },
+    "lectio": {
+      "title": "Lectio Divina",
+      "desc": "Ohjattu meditatiivinen Raamatun lukeminen neljässä vaiheessa: Lue, Meditoi, Rukoile, Lepää.",
+      "cta": "Aloita meditaatio"
+    },
+    "forgiveness": {
+      "title": "Anteeksiantokirje",
+      "desc": "BibleBot opastaa sinua askel askeleelta anteeksiantokirjeen kirjoittamisessa — raamatullisin virikkein.",
+      "cta": "Aloita kirje"
+    },
+    "values": {
+      "title": "Arvokompassi",
+      "desc": "Mikä on sinulle todella tärkeää? Löydä ydinarvosi — ja mitä Raamattu sanoo niistä.",
+      "cta": "Löydä arvot"
+    }
   },
   "trust": {
     "noAds": {

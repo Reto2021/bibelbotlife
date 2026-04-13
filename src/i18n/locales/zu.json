@@ -1276,7 +1276,27 @@
       "title": "Indlela Yezizathu Eziyisikhombisa"
     },
     "subtitle": "Ezikhathini lapho udinga okungaphezu kwempendulo.",
-    "title": "Amathuluzi amabili ajula kakhulu"
+    "title": "Amathuluzi ahamba ajule",
+    "gratitude": {
+      "title": "Idayari yokubonga",
+      "desc": "Bala izinto ezintathu ozibongayo namhlanje — BibleBot uzothola amahubo namavesi afanelekile.",
+      "cta": "Zijwayeze ukubonga"
+    },
+    "lectio": {
+      "title": "Lectio Divina",
+      "desc": "Ukufunda iBhayibheli okuhlelekile ngezinyathelo ezine: Funda, Zindla, Thandaza, Phumula.",
+      "cta": "Qala ukuzindla"
+    },
+    "forgiveness": {
+      "title": "Incwadi yokuthethelela",
+      "desc": "BibleBot ikuhola isinyathelo ngesinyathelo ekubhaleni incwadi yokuthethelela — ngezifundo zeBhayibheli.",
+      "cta": "Qala incwadi"
+    },
+    "values": {
+      "title": "Ikhompasi yamagugu",
+      "desc": "Yini ebaluleke ngempela kuwe? Thola amagugu akho ayisisekelo — nokuthi iBhayibheli lithini ngawo.",
+      "cta": "Thola amagugu"
+    }
   },
   "trust": {
     "noAds": {

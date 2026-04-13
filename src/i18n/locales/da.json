@@ -1276,7 +1276,27 @@
       "title": "De 7-hvorfor-metoden"
     },
     "subtitle": "Til øjeblikke, hvor du har brug for mere end et svar.",
-    "title": "To værktøjer, der går dybere"
+    "title": "Værktøjer der går dybere",
+    "gratitude": {
+      "title": "Taknemlighedsdagbog",
+      "desc": "Nævn tre ting du er taknemmelig for i dag — og BibleBot finder passende salmer og vers.",
+      "cta": "Øv taknemmelighed"
+    },
+    "lectio": {
+      "title": "Lectio Divina",
+      "desc": "Guidet meditativ bibellæsning i fire trin: Læs, Mediter, Bed, Hvil.",
+      "cta": "Start meditation"
+    },
+    "forgiveness": {
+      "title": "Tilgivelsesbrev",
+      "desc": "BibleBot guider dig trin for trin gennem at skrive et tilgivelsesbrev — med bibelske impulser.",
+      "cta": "Begynd brev"
+    },
+    "values": {
+      "title": "Værdi-kompas",
+      "desc": "Hvad er virkelig vigtigt for dig? Opdag dine kerneværdier — og hvad Bibelen siger om dem.",
+      "cta": "Opdag værdier"
+    }
   },
   "trust": {
     "noAds": {

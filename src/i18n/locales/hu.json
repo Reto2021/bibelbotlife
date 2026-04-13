@@ -1276,7 +1276,27 @@
       "title": "A 7 miért módszer"
     },
     "subtitle": "Azoknak a pillanatoknak, amikor többre van szükséged, mint egy válaszra.",
-    "title": "Két eszköz, ami mélyebbre megy"
+    "title": "Eszközök, amelyek mélyebbre mennek",
+    "gratitude": {
+      "title": "Hálananapló",
+      "desc": "Nevezz meg három dolgot, amiért ma hálás vagy — és a BibleBot megtalálja a megfelelő zsoltárokat és verseket.",
+      "cta": "Gyakorold a hálát"
+    },
+    "lectio": {
+      "title": "Lectio Divina",
+      "desc": "Vezetett meditatív bibliaolvasás négy lépésben: Olvass, Meditálj, Imádkozz, Pihenj.",
+      "cta": "Meditáció indítása"
+    },
+    "forgiveness": {
+      "title": "Megbocsátó levél",
+      "desc": "A BibleBot lépésről lépésre végigvezet egy megbocsátó levél megírásán — bibliai impulzusokkal.",
+      "cta": "Levél írása"
+    },
+    "values": {
+      "title": "Értékiránytű",
+      "desc": "Mi igazán fontos számodra? Fedezd fel alapértékeidet — és mit mond róluk a Biblia.",
+      "cta": "Értékek felfedezése"
+    }
   },
   "trust": {
     "noAds": {

@@ -1276,7 +1276,27 @@
       "title": "De 7-Waarom-methode"
     },
     "subtitle": "Voor momenten waarop je meer dan een antwoord nodig hebt.",
-    "title": "Twee hulpmiddelen die dieper gaan"
+    "title": "Hulpmiddelen die dieper gaan",
+    "gratitude": {
+      "title": "Dankbaarheidsdagboek",
+      "desc": "Noem drie dingen waarvoor je vandaag dankbaar bent — en BibleBot vindt passende psalmen en verzen.",
+      "cta": "Oefen dankbaarheid"
+    },
+    "lectio": {
+      "title": "Lectio Divina",
+      "desc": "Begeleide meditatieve bijbellezing in vier stappen: Lezen, Mediteren, Bidden, Rusten.",
+      "cta": "Start meditatie"
+    },
+    "forgiveness": {
+      "title": "Vergiffenisbrief",
+      "desc": "BibleBot begeleidt je stap voor stap bij het schrijven van een vergiffenisbrief — met bijbelse impulsen.",
+      "cta": "Begin brief"
+    },
+    "values": {
+      "title": "Waardencompas",
+      "desc": "Wat is echt belangrijk voor jou? Ontdek je kernwaarden — en wat de Bijbel erover zegt.",
+      "cta": "Ontdek waarden"
+    }
   },
   "trust": {
     "noAds": {

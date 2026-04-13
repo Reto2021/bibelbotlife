@@ -1250,7 +1250,7 @@
   },
   "tools": {
     "badge": "Karịa azịza",
-    "title": "Ngwá ọrụ abụọ na-aga omimi",
+    "title": "Ngwá ọrụ na-aga n'ime",
     "subtitle": "Maka oge ị chọrọ ihe karịa azịza.",
     "lifewheel": {
       "title": "Nyocha Wheel Ndụ",
@@ -1261,6 +1261,26 @@
       "title": "Ụzọ 7-Ihe mere",
       "desc": "Gịnị mere m ji eme nke a n'ezie? Gịnị mere ọ na-adị m otú a? BibleBot na-eduzi gị site na ajụjụ 7 na-eru mgbọrọgwụ – na nkọwa Baịbụl n'ebe kachasị omimi.",
       "cta": "Jụọ ajụjụ miri emi"
+    },
+    "gratitude": {
+      "title": "Akwụkwọ ekele",
+      "desc": "Kpọọ ihe atọ ị na-ekele maka taa — BibleBot ga-achọta Abụ Ọma na nkeji ndị kwesịrị.",
+      "cta": "Mee ekele"
+    },
+    "lectio": {
+      "title": "Lectio Divina",
+      "desc": "Ọgụgụ Baịbụl nchekwa n'usoro anọ: Gụọ, Tụgharịa, Kpee ekpere, Zuru ike.",
+      "cta": "Malite nchekwa"
+    },
+    "forgiveness": {
+      "title": "Akwụkwọ mgbaghara",
+      "desc": "BibleBot na-edu gị nzọ ụkwụ site na nzọ ụkwụ iji dee akwụkwọ mgbaghara.",
+      "cta": "Malite akwụkwọ"
+    },
+    "values": {
+      "title": "Kompas uru",
+      "desc": "Kedu ihe dị mkpa n'ezie nye gị? Chọpụta uru ndị bụ isi gị — na ihe Baịbụl kwuru banyere ha.",
+      "cta": "Chọpụta uru"
     }
   },
   "audience": {

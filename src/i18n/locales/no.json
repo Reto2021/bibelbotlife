@@ -1244,7 +1244,7 @@
   },
   "tools": {
     "badge": "Mer enn svar",
-    "title": "To verktøy som går dypere",
+    "title": "Verktøy som går dypere",
     "subtitle": "For øyeblikk der du trenger mer enn et svar.",
     "lifewheel": {
       "title": "Livshjul-sjekk",
@@ -1255,6 +1255,26 @@
       "title": "7-hvorfor-metoden",
       "desc": "Hvorfor gjør jeg egentlig dette? Hvorfor føles det slik? BibleBot leder deg gjennom 7 spørsmål som går til roten – med bibelsk kontekst på det dypeste punktet.",
       "cta": "Spør dypere"
+    },
+    "gratitude": {
+      "title": "Takknemlighetsdagbok",
+      "desc": "Nevn tre ting du er takknemlig for i dag — og BibleBot finner passende salmer og vers.",
+      "cta": "Øv takknemlighet"
+    },
+    "lectio": {
+      "title": "Lectio Divina",
+      "desc": "Veiledet meditativ bibellesning i fire trinn: Les, Mediter, Be, Hvil.",
+      "cta": "Start meditasjon"
+    },
+    "forgiveness": {
+      "title": "Tilgivelsesbrev",
+      "desc": "BibleBot guider deg steg for steg gjennom å skrive et tilgivelsesbrev — med bibelske impulser.",
+      "cta": "Begynn brev"
+    },
+    "values": {
+      "title": "Verdikompass",
+      "desc": "Hva er virkelig viktig for deg? Oppdag dine kjerneverdier — og hva Bibelen sier om dem.",
+      "cta": "Oppdag verdier"
     }
   },
   "audience": {

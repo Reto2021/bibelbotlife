@@ -1276,7 +1276,27 @@
       "title": "7-Varför-metoden"
     },
     "subtitle": "För stunder när du behöver mer än ett svar.",
-    "title": "Två verktyg som går djupare"
+    "title": "Verktyg som går djupare",
+    "gratitude": {
+      "title": "Tacksamhetsdagbok",
+      "desc": "Nämn tre saker du är tacksam för idag — och BibleBot hittar passande psalmer och verser.",
+      "cta": "Öva tacksamhet"
+    },
+    "lectio": {
+      "title": "Lectio Divina",
+      "desc": "Guidad meditativ bibelläsning i fyra steg: Läs, Meditera, Be, Vila.",
+      "cta": "Starta meditation"
+    },
+    "forgiveness": {
+      "title": "Förlåtelsebrev",
+      "desc": "BibleBot guidar dig steg för steg genom att skriva ett förlåtelsebrev — med bibliska impulser.",
+      "cta": "Börja brev"
+    },
+    "values": {
+      "title": "Värdekompass",
+      "desc": "Vad är verkligen viktigt för dig? Upptäck dina kärnvärden — och vad Bibeln säger om dem.",
+      "cta": "Upptäck värden"
+    }
   },
   "trust": {
     "noAds": {

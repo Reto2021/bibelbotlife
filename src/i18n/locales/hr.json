@@ -1276,7 +1276,27 @@
       "title": "Metoda 7 zašto"
     },
     "subtitle": "Za trenutke kada trebate više od odgovora.",
-    "title": "Dva alata koja idu dublje"
+    "title": "Alati koji idu dublje",
+    "gratitude": {
+      "title": "Dnevnik zahvalnosti",
+      "desc": "Navedite tri stvari za koje ste danas zahvalni — a BibleBot pronalazi odgovarajuće psalme i stihove.",
+      "cta": "Vježbajte zahvalnost"
+    },
+    "lectio": {
+      "title": "Lectio Divina",
+      "desc": "Vođeno meditativno čitanje Biblije u četiri koraka: Čitaj, Meditiraj, Moli, Počivaj.",
+      "cta": "Započni meditaciju"
+    },
+    "forgiveness": {
+      "title": "Pismo oprosta",
+      "desc": "BibleBot vas vodi korak po korak kroz pisanje pisma oprosta — s biblijskim impulsima.",
+      "cta": "Započni pismo"
+    },
+    "values": {
+      "title": "Kompas vrijednosti",
+      "desc": "Što vam je zaista važno? Otkrijte svoje temeljne vrijednosti — i što Biblija kaže o njima.",
+      "cta": "Otkrijte vrijednosti"
+    }
   },
   "trust": {
     "noAds": {

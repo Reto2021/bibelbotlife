@@ -1276,7 +1276,27 @@
       "title": "Mbinu ya Kwa Nini Saba"
     },
     "subtitle": "Kwa nyakati ambazo unahitaji zaidi ya jibu.",
-    "title": "Zana Mbili Zinazoenda Ndani Zaidi"
+    "title": "Zana zinazokwenda kwa kina",
+    "gratitude": {
+      "title": "Daftari la shukrani",
+      "desc": "Taja mambo matatu unayoshukuru leo — na BibleBot itapata zaburi na aya zinazofaa.",
+      "cta": "Fanya mazoezi ya shukrani"
+    },
+    "lectio": {
+      "title": "Lectio Divina",
+      "desc": "Usomaji wa Biblia wa kutafakari katika hatua nne: Soma, Tafakari, Omba, Pumzika.",
+      "cta": "Anza kutafakari"
+    },
+    "forgiveness": {
+      "title": "Barua ya msamaha",
+      "desc": "BibleBot inakuongoza hatua kwa hatua kuandika barua ya msamaha — na msukumo wa kibiblia.",
+      "cta": "Anza barua"
+    },
+    "values": {
+      "title": "Dira ya thamani",
+      "desc": "Nini muhimu kweli kwako? Gundua thamani zako za msingi — na Biblia inasema nini kuzihusu.",
+      "cta": "Gundua thamani"
+    }
   },
   "trust": {
     "noAds": {

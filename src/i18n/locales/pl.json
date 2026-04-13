@@ -1276,7 +1276,27 @@
       "title": "Metoda 7 pytań „Dlaczego”"
     },
     "subtitle": "Na chwile, gdy potrzebujesz czegoś więcej niż odpowiedzi.",
-    "title": "Dwa narzędzia, które idą głębiej"
+    "title": "Narzędzia sięgające głębiej",
+    "gratitude": {
+      "title": "Dziennik wdzięczności",
+      "desc": "Wymień trzy rzeczy, za które jesteś dziś wdzięczny — a BibleBot znajdzie odpowiednie psalmy i wersety.",
+      "cta": "Ćwicz wdzięczność"
+    },
+    "lectio": {
+      "title": "Lectio Divina",
+      "desc": "Prowadzona medytacyjna lektura Biblii w czterech krokach: Czytaj, Medytuj, Módl się, Odpoczywaj.",
+      "cta": "Rozpocznij medytację"
+    },
+    "forgiveness": {
+      "title": "List przebaczenia",
+      "desc": "BibleBot prowadzi cię krok po kroku przez pisanie listu przebaczenia — z biblijnymi impulsami.",
+      "cta": "Zacznij list"
+    },
+    "values": {
+      "title": "Kompas wartości",
+      "desc": "Co jest dla ciebie naprawdę ważne? Odkryj swoje kluczowe wartości — i co mówi o nich Biblia.",
+      "cta": "Odkryj wartości"
+    }
   },
   "trust": {
     "noAds": {

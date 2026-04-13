@@ -1279,7 +1279,27 @@
       "title": "Ang 7-Bakit na Pamamaraan"
     },
     "subtitle": "Para sa mga sandali kung kailan kailangan mo ng higit pa sa isang sagot.",
-    "title": "Dalawang Kasangkapan na Lumalalim"
+    "title": "Mga kasangkapan na mas malalim",
+    "gratitude": {
+      "title": "Talaarawan ng pasasalamat",
+      "desc": "Magbanggit ng tatlong bagay na ipinagpapasalamat mo ngayon — at maghahanap ang BibleBot ng angkop na mga salmo at talata.",
+      "cta": "Magsanay ng pasasalamat"
+    },
+    "lectio": {
+      "title": "Lectio Divina",
+      "desc": "Gabay na meditasyong pagbabasa ng Bibliya sa apat na hakbang: Basahin, Pagnilayan, Manalangin, Magpahinga.",
+      "cta": "Simulan ang meditasyon"
+    },
+    "forgiveness": {
+      "title": "Liham ng pagpapatawad",
+      "desc": "Gagabayan ka ng BibleBot hakbang-hakbang sa pagsulat ng liham ng pagpapatawad — na may biblikal na inspirasyon.",
+      "cta": "Simulan ang liham"
+    },
+    "values": {
+      "title": "Kompas ng mga halaga",
+      "desc": "Ano ang tunay na mahalaga sa iyo? Tuklasin ang iyong mga pangunahing halaga — at ano ang sinasabi ng Bibliya.",
+      "cta": "Tuklasin ang mga halaga"
+    }
   },
   "trust": {
     "noAds": {
