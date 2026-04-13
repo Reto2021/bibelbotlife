@@ -324,6 +324,14 @@ Deno.serve(async (req) => {
       if (e.utm_medium) cUtmMediums[e.utm_medium] = (cUtmMediums[e.utm_medium] || 0) + 1;
     });
 
+    // Funnel: widget visits → chat starts → contact requests
+    const widgetVisits = ce.filter((e: any) => e.utm_source === "widget").length;
+    const chatStarts = cevt.filter((e: any) => e.event_name === "chat_hero_submit").length;
+    const churchId = church?.id;
+    const contactReqs = churchId
+      ? contactRequests.filter((cr: any) => cr.church_id === churchId).length
+      : 0;
+
     perChurch[slug] = {
       churchName: church?.name || slug,
       planTier: church?.plan_tier || "free",
@@ -345,6 +353,11 @@ Deno.serve(async (req) => {
         .sort(([, a], [, b]) => b - a)
         .slice(0, 10)
         .map(([medium, count]) => ({ medium, count })),
+      funnel: {
+        widgetVisits,
+        chatStarts,
+        contactRequests: contactReqs,
+      },
     };
   }
 
