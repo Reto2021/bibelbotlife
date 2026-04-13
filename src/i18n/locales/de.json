@@ -416,7 +416,7 @@
     "showMore": "mehr",
     "baptism": {
       "title": "Taufspruch finden",
-      "desc": "Der perfekte Vers für dein Kind",
+      "desc": "Der perfekte Vers für mein Kind",
       "prompt": "Hilf mir, einen passenden Taufspruch zu finden. Was für ein Kind ist es und was wünschen sich die Eltern?",
       "prompt_v1": "Was bedeutet die Taufe eigentlich?",
       "prompt_v2": "Erzähl mir von der Taufe in der Bibel – überrasche mich!",
@@ -460,7 +460,7 @@
     },
     "namequiz": {
       "title": "Was bedeutet mein Name?",
-      "desc": "Entdecke die biblische Bedeutung deines Namens",
+      "desc": "Entdecke die biblische Bedeutung meines Namens",
       "prompt": "Was bedeutet mein Name und hat er eine biblische oder spirituelle Bedeutung? Überrasche mich!",
       "prompt_v1": "Welche biblischen Namen haben die schönste Bedeutung?",
       "prompt_v2": "Was bedeutet mein Name – gibt es eine biblische Verbindung?",
@@ -468,7 +468,7 @@
     },
     "dailywisdom": {
       "title": "Weisheit für heute",
-      "desc": "Ein ermutigender Gedanke für deinen Tag",
+      "desc": "Ein ermutigender Gedanke für meinen Tag",
       "prompt": "Gib mir einen kurzen, ermutigenden Gedanken für meinen Tag – mit einem passenden Bibelvers.",
       "prompt_v1": "Was ist der beste Rat, den die Bibel für heute hat?",
       "prompt_v2": "Gib mir eine Weisheit aus der Bibel, die mich durch den Tag begleitet.",
@@ -491,8 +491,8 @@
       "prompt_v3": "Gib mir einen konkreten Tipp aus der Bibel für meinen Alltag!"
     },
     "strengths": {
-      "title": "Deine Stärken",
-      "desc": "Entdecke, was in dir steckt",
+      "title": "Meine Stärken",
+      "desc": "Entdecke, was in mir steckt",
       "prompt": "Hilf mir, meine persönlichen Stärken zu entdecken – was sagt die Bibel über die Gaben, die jeder Mensch hat?",
       "prompt_v1": "Welche Stärken habe ich laut der Bibel?",
       "prompt_v2": "Wie kann ich herausfinden, was meine Gaben und Talente sind?",
@@ -551,7 +551,7 @@
     },
     "sevenwhys": {
       "title": "7 Warums",
-      "desc": "Finde die tiefste Wurzel deiner Frage",
+      "desc": "Finde die tiefste Wurzel meiner Frage",
       "prompt": "Ich möchte die 7-Warums-Übung machen. Hier ist mein Thema:"
     },
     "anger": {
