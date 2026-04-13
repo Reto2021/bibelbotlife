@@ -1304,7 +1304,11 @@
       "title": "Examen (Ignacio)",
       "desc": "Ang napatunayang pang-araw-araw na pagsusuri ni Ignacio ng Loyola: Pagnilayan ang iyong araw sa 5 hakbang.",
       "cta": "Simulan ang Examen"
-    }
+    },
+    "myFavorites": "Aking mga paborito",
+    "addFavorite": "Idagdag sa mga paborito",
+    "removeFavorite": "Alisin sa mga paborito",
+    "favoriteTip": "I-click ang bituin para i-save ang mga paboritong tool para sa mabilis na access"
   },
   "trust": {
     "noAds": {

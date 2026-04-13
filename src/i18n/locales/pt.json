@@ -1301,7 +1301,11 @@
       "title": "Exame (Inácio)",
       "desc": "A revisão diária comprovada de Inácio de Loyola: Reflita sobre o seu dia em 5 passos.",
       "cta": "Iniciar Exame"
-    }
+    },
+    "myFavorites": "Meus favoritos",
+    "addFavorite": "Adicionar aos favoritos",
+    "removeFavorite": "Remover dos favoritos",
+    "favoriteTip": "Clica na estrela para guardar as tuas ferramentas favoritas como acesso rápido"
   },
   "trust": {
     "noAds": {

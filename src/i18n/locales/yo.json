@@ -1301,7 +1301,11 @@
       "title": "Examen (Ignatius)",
       "desc": "Àtúnyẹ̀wò ojoojúmọ́ Ignatius ti Loyola: Ronú nípa ọjọ́ rẹ ní ìgbésẹ̀ márùn-ún.",
       "cta": "Bẹ̀rẹ̀ Examen"
-    }
+    },
+    "myFavorites": "Awọn ayanfẹ mi",
+    "addFavorite": "Fi kun si ayanfẹ",
+    "removeFavorite": "Yọ kuro ninu ayanfẹ",
+    "favoriteTip": "Tẹ irawọ lati fi awọn irinṣẹ ayanfẹ rẹ pamọ fun iwọle ni iyara"
   },
   "trust": {
     "noAds": {

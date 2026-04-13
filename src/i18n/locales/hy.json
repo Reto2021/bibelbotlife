@@ -1280,7 +1280,11 @@
       "title": "Examen (Ignatius)",
       "desc": "Իgnatiusi Loyolai oravakan veralutsume: Mtatse or orvat 5 k'aylov.",
       "cta": "Sksel Examen"
-    }
+    },
+    "myFavorites": "My Favorites",
+    "addFavorite": "Add to favorites",
+    "removeFavorite": "Remove from favorites",
+    "favoriteTip": "Click the star to save your favorite tools for quick access"
   },
   "audience": {
     "title": "Ու՞մ համար է BibleBot.Life-ը։",

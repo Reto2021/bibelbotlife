@@ -1301,7 +1301,11 @@
       "title": "Examen (Ignatius)",
       "desc": "Ignatius af Loyolas gennemprøvede daglige tilbageblik: Reflekter over din dag i 5 trin.",
       "cta": "Start Examen"
-    }
+    },
+    "myFavorites": "Mine favoritter",
+    "addFavorite": "Tilføj til favoritter",
+    "removeFavorite": "Fjern fra favoritter",
+    "favoriteTip": "Klik på stjernen for at gemme dine yndlingsværktøjer til hurtig adgang"
   },
   "trust": {
     "noAds": {

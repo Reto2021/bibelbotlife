@@ -1280,7 +1280,11 @@
       "title": "Examen (Ignatius)",
       "desc": "Der bewährte Tagesrückblick des Ignatius von Loyola: In 5 Schritten den Tag reflektieren — Dankbarkeit, Rückblick, Berührungen und ein Gebet für morgen.",
       "cta": "Examen starten"
-    }
+    },
+    "myFavorites": "Meine Favoriten",
+    "addFavorite": "Als Favorit hinzufügen",
+    "removeFavorite": "Aus Favoriten entfernen",
+    "favoriteTip": "Klicke auf den Stern, um deine Lieblings-Werkzeuge als Schnellzugriff zu speichern"
   },
   "audience": {
     "title": "Für wen ist BibleBot.Life?",

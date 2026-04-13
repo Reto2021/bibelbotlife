@@ -1280,7 +1280,11 @@
       "title": "Esame (Ignazio)",
       "desc": "La revisione quotidiana di Ignazio di Loyola: Rifletti sulla tua giornata in 5 passi.",
       "cta": "Inizia Esame"
-    }
+    },
+    "myFavorites": "I miei preferiti",
+    "addFavorite": "Aggiungi ai preferiti",
+    "removeFavorite": "Rimuovi dai preferiti",
+    "favoriteTip": "Clicca sulla stella per salvare i tuoi strumenti preferiti per un accesso rapido"
   },
   "audience": {
     "title": "Per chi è BibleBot.Life?",

@@ -1280,7 +1280,11 @@
       "title": "Examen (Ignatius)",
       "desc": "The proven daily review by Ignatius of Loyola: Reflect on your day in 5 steps — gratitude, review, what touched or burdened you, and a prayer for tomorrow.",
       "cta": "Start Examen"
-    }
+    },
+    "myFavorites": "My Favorites",
+    "addFavorite": "Add to favorites",
+    "removeFavorite": "Remove from favorites",
+    "favoriteTip": "Click the star to save your favorite tools for quick access"
   },
   "audience": {
     "title": "Who is BibleBot.Life for?",

@@ -1301,7 +1301,11 @@
       "title": "Examen (Ignatius)",
       "desc": "Ignatius Loyolan koettu päivittäinen katsaus: Pohdi päivääsi 5 askeleessa.",
       "cta": "Aloita Examen"
-    }
+    },
+    "myFavorites": "Suosikkini",
+    "addFavorite": "Lisää suosikkeihin",
+    "removeFavorite": "Poista suosikeista",
+    "favoriteTip": "Napsauta tähteä tallentaaksesi suosikkityökalusi nopeaa käyttöä varten"
   },
   "trust": {
     "noAds": {

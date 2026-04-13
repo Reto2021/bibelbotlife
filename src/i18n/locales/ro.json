@@ -1301,7 +1301,11 @@
       "title": "Examen (Ignațiu)",
       "desc": "Revizuirea zilnică dovedită a lui Ignațiu de Loyola: Reflectează asupra zilei tale în 5 pași.",
       "cta": "Începe Examen"
-    }
+    },
+    "myFavorites": "Favoritele mele",
+    "addFavorite": "Adaugă la favorite",
+    "removeFavorite": "Elimină din favorite",
+    "favoriteTip": "Apasă pe stea pentru a salva instrumentele tale favorite pentru acces rapid"
   },
   "trust": {
     "noAds": {

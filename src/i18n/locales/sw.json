@@ -1301,7 +1301,11 @@
       "title": "Examen (Ignatius)",
       "desc": "Mapitio ya kila siku ya Ignatius wa Loyola: Tafakari siku yako katika hatua 5.",
       "cta": "Anza Examen"
-    }
+    },
+    "myFavorites": "Vipendwa vyangu",
+    "addFavorite": "Ongeza kwenye vipendwa",
+    "removeFavorite": "Ondoa kutoka vipendwa",
+    "favoriteTip": "Bonyeza nyota ili kuhifadhi zana unazozipenda kwa ufikiaji wa haraka"
   },
   "trust": {
     "noAds": {

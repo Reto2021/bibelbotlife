@@ -1301,7 +1301,11 @@
       "title": "Examen (Ignacy)",
       "desc": "Sprawdzony dzienny przegląd Ignacego Loyoli: Przemyśl swój dzień w 5 krokach.",
       "cta": "Rozpocznij Examen"
-    }
+    },
+    "myFavorites": "Moje ulubione",
+    "addFavorite": "Dodaj do ulubionych",
+    "removeFavorite": "Usuń z ulubionych",
+    "favoriteTip": "Kliknij gwiazdkę, aby zapisać ulubione narzędzia do szybkiego dostępu"
   },
   "trust": {
     "noAds": {

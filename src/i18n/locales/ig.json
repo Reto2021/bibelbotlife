@@ -1286,7 +1286,11 @@
       "title": "Examen (Ignatius)",
       "desc": "Nyocha ụbọchị Ignatius nke Loyola: Tụgharịa uche gbasara ụbọchị gị na usoro ise.",
       "cta": "Malite Examen"
-    }
+    },
+    "myFavorites": "Ndị m masịrị",
+    "addFavorite": "Tinye na ndị masịrị",
+    "removeFavorite": "Wepu na ndị masịrị",
+    "favoriteTip": "Pịa kpakpando iji chekwaa ngwaọrụ ị masịrị maka nnweta ngwa ngwa"
   },
   "audience": {
     "title": "Ònye ka BibleBot.Life bụ maka ya?",
