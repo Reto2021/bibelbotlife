@@ -94,6 +94,17 @@ const WeeklyReportEmail = ({
           <Text style={emptyText}>Keine Seitenaufrufe</Text>
         )}
 
+        {/* Web Chat */}
+        {(webChatUsers > 0 || webChatMessages > 0) && (
+          <>
+            <Heading as="h3" style={sectionHeading}>💬 Web-Chat</Heading>
+            <Text style={deviceText}>
+              {webChatUsers} Nutzer · {webChatMessages} Nachrichten
+              {webChatUsers > 0 ? ` · ∅ ${Math.round(webChatMessages / webChatUsers * 10) / 10} pro Nutzer` : ''}
+            </Text>
+          </>
+        )}
+
         {/* Devices */}
         <Heading as="h3" style={sectionHeading}>📱 Geräte</Heading>
         <Text style={deviceText}>
