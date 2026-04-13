@@ -677,12 +677,12 @@
         "desc": "Impulses and discussion starters for groups and home circles."
       }
     },
-    "pricingTitle": "Patronage Packages",
-    "pricingSubtitle": "Support your companion and your organization with the right patronage package.",
-    "popular": "Popular",
+    "pricingTitle": "Sponsorship Packages",
+    "pricingSubtitle": "BibleBot.Life is free and ad-free. Organizations can support the project through sponsorship and receive additional features.",
+    "popular": "Recommended",
     "free": "Free",
-    "perYear": "people / year",
-    "contact": "Get in touch",
+    "perYear": "",
+    "contact": "Request sponsorship",
     "tier": {
       "free": {
         "name": "Mustard Seed",
@@ -739,9 +739,9 @@
     "contactSuccess": "Message sent! 🙏",
     "contactSuccessDesc": "The organization will get back to you.",
     "recommendedBy": "Recommended by {{name}}",
-    "setup": "Setup (one-time)",
+    "setup": "",
     "form": {
-      "title": "Interested? Get in touch!",
+      "title": "Interested in sponsoring?",
       "subtitle": "We'll get back to you within 48 hours.",
       "name": "Your name",
       "email": "Email address",
@@ -749,7 +749,7 @@
       "tier": "Preferred package",
       "tierPlaceholder": "Choose package...",
       "message": "Your message",
-      "submit": "Send inquiry",
+      "submit": "Send sponsorship request",
       "success": "Inquiry sent! We'll be in touch soon. 🙏",
       "error": "Error sending. Please try again.",
       "orgType": "Organization type",
@@ -842,7 +842,7 @@
         "desc": "Complementary spiritual impulses for clients in psychosocial or pastoral counseling."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As your companion is a private project, donations are not tax-deductible."
+    "patronageNote": "BibleBot.Life is run by a non-profit association and funded exclusively through voluntary donations and sponsorships. There is no advertising, no data sales, and no paid features. All contributions go directly toward development, technical operations, global distribution, and community management. Donations may be tax-deductible depending on your jurisdiction."
   },
   "institutions": {
     "badge": "For Organizations",
