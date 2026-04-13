@@ -374,7 +374,7 @@ const Index = () => {
 
             <AccordionItem value="methodik" className="bg-card/80 border border-border rounded-xl px-6 data-[state=open]:shadow-md">
               <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
-                Was steckt hinter der Methodik von BibleBot?
+                {t("faqExtra.methodik.q")}
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
                 <p className="mb-4">{t("coaching.subtitle")}</p>
@@ -395,7 +395,7 @@ const Index = () => {
 
             <AccordionItem value="journey" className="bg-card/80 border border-border rounded-xl px-6 data-[state=open]:shadow-md">
               <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
-                Was ist die 21-Tage-Journey?
+                {t("faqExtra.journey.q")}
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
                 <p className="mb-4">{t("coaching.journeyDesc")}</p>
@@ -419,13 +419,10 @@ const Index = () => {
 
             <AccordionItem value="glaube-psychologie" className="bg-card/80 border border-border rounded-xl px-6 data-[state=open]:shadow-md">
               <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
-                Verbindet BibleBot Glaube und Psychologie?
+                {t("faqExtra.faithPsych.q")}
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
-                BibleBot kombiniert biblische Weisheit mit Erkenntnissen aus der evidenzbasierten
-                Psychologie — nicht um den Glauben zu psychologisieren, sondern um ihn alltagsnah
-                zu machen. Die Methoden (PERMA, Logotherapie, Dankbarkeits- und Vergebungsforschung)
-                ergänzen die Bibel, ersetzen sie aber nicht.
+                {t("faqExtra.faithPsych.a")}
               </AccordionContent>
             </AccordionItem>
           </Accordion>
@@ -460,7 +457,7 @@ const Index = () => {
                   onClick={() => window.open("https://donate.stripe.com/PLACEHOLDER_STRIPE", "_blank")}
                 >
                   <Heart className="h-4 w-4 mr-2" />
-                  Mit Kreditkarte unterstützen
+                  {t("donate.creditCard")}
                 </Button>
                 <Button
                   variant="outline"
@@ -468,11 +465,11 @@ const Index = () => {
                   size="lg"
                   onClick={() => window.open("https://donate.stripe.com/PLACEHOLDER_TWINT", "_blank")}
                 >
-                  Mit Twint unterstützen
+                  {t("donate.twint")}
                 </Button>
               </div>
               <p className="text-xs text-muted-foreground text-center">
-                Sichere Zahlung · Keine Abo-Falle · Jederzeit kündbar
+                {t("donate.secureNote")}
               </p>
             </CardContent>
           </Card>
@@ -526,7 +523,7 @@ const Index = () => {
               <Link to="/impressum" className="hover:text-background/80 underline underline-offset-2">{t("footer.impressum")}</Link>
               <Link to="/datenschutz" className="hover:text-background/80 underline underline-offset-2">{t("footer.datenschutz")}</Link>
               <Link to="/for-churches" className="hover:text-background/80 underline underline-offset-2">{t("footer.forChurches")}</Link>
-              <Link to="/fuer-seelsorger" className="hover:text-background/80 underline underline-offset-2">Für Seelsorger & Coaches</Link>
+              <Link to="/fuer-seelsorger" className="hover:text-background/80 underline underline-offset-2">{t("footer.forCelebrants")}</Link>
               <Link to="/churches" className="hover:text-background/80 underline underline-offset-2">{t("church.directoryBadge")}</Link>
             </div>
 
