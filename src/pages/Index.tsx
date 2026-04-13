@@ -11,7 +11,7 @@ import { LifeWheelProvider } from "@/components/LifeWheel";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { AppLogo } from "@/components/AppLogo";
-import { ToolCard, useToolDefs, FavoriteToolsBar } from "@/components/ToolCards";
+import { ToolCard, useToolDefs } from "@/components/ToolCards";
 import { useFavoriteTools } from "@/hooks/use-favorite-tools";
 import { useAuth } from "@/hooks/use-auth";
 
@@ -259,10 +259,6 @@ const Index = () => {
       {/* Subscribe CTA is now integrated in the DailyImpulse banner */}
       {/* Referral / Empfehlen */}
       <ReferralSection />
-
-      {/* Favorite Tools Quick Access */}
-      <FavoriteToolsBar />
-
       {/* Tools Section */}
       <ToolsSection />
 

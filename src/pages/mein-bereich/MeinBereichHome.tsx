@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Cross, Heart, Baby, BookHeart, ArrowRight } from "lucide-react";
 import { SEOHead } from "@/components/SEOHead";
+import { FavoriteToolsBar } from "@/components/ToolCards";
 
 const MeinBereichHome = () => {
   const { t } = useTranslation();
@@ -45,6 +46,8 @@ const MeinBereichHome = () => {
         <h1 className="text-xl md:text-2xl font-bold">{t("meinBereich.title")}</h1>
         <p className="text-sm text-muted-foreground mt-1">{t("meinBereich.subtitle")}</p>
       </div>
+
+      <FavoriteToolsBar />
 
       <div className="grid gap-3 sm:grid-cols-2">
         {ceremonies.map((c) => (
