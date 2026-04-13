@@ -472,11 +472,9 @@ const Index = () => {
         <div className="container mx-auto text-center max-w-4xl">
           <h2 className="text-4xl font-bold text-primary-foreground mb-6">{t("cta.title")}</h2>
           <p className="text-xl text-primary-foreground/90 mb-8">{t("cta.subtitle")}</p>
-          <Button asChild size="lg" className="bg-card text-foreground hover:bg-card/90 px-8 py-4 text-lg font-semibold">
-            <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer">
-              <Send className="h-5 w-5 mr-2" />
+          <Button size="lg" className="bg-card text-foreground hover:bg-card/90 px-8 py-4 text-lg font-semibold" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }}>
+              <MessageCircle className="h-5 w-5 mr-2" />
               {t("cta.button")}
-            </a>
           </Button>
         </div>
       </section>
