@@ -38,12 +38,13 @@ import yo from "./locales/yo.json";
 import ig from "./locales/ig.json";
 import zu from "./locales/zu.json";
 import ht from "./locales/ht.json";
+import ar from "./locales/ar.json";
 
 const supportedLngs = [
   "de", "en", "fr", "es", "it", "pl", "cs", "pt", "nl", "ro",
   "da", "no", "sv", "fi", "el", "hr", "sr", "hu", "sk", "bg",
   "ru", "uk", "ka", "hy", "ko", "tl", "id", "vi", "zh",
-  "sw", "am", "af", "yo", "ig", "zu", "ht",
+  "sw", "am", "af", "yo", "ig", "zu", "ht", "ar",
 ];
 
 i18n
