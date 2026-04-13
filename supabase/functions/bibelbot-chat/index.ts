@@ -62,7 +62,7 @@ const LANGUAGE_BIBLES: Record<string, { translations: Record<string, { id: strin
   en: {
     default: "bsb",
     translations: {
-      bsb: { id: "eng_bsb", name: "Berean Standard Bible (2022)" },
+      bsb: { id: "BSB", name: "Berean Standard Bible (2022)" },
       web: { id: "eng_web", name: "World English Bible" },
       kjv: { id: "eng_kjv", name: "King James Version" },
     },
@@ -70,50 +70,50 @@ const LANGUAGE_BIBLES: Record<string, { translations: Record<string, { id: strin
   fr: {
     default: "lsg",
     translations: {
-      lsg: { id: "fraLSG", name: "Louis Segond 1910" },
+      lsg: { id: "fra_lsg", name: "Louis Segond 1910" },
     },
   },
   es: {
-    default: "rv09",
+    default: "vbl",
     translations: {
-      rv09: { id: "spa_rv09", name: "Reina-Valera 1909" },
+      vbl: { id: "spa_vbl", name: "Versión Biblia Libre (2018)" },
+      rv09: { id: "spa_r09", name: "Reina-Valera 1909" },
     },
   },
   it: {
     default: "riv",
     translations: {
       riv: { id: "ita_riv", name: "Riveduta (Luzzi) 1927" },
-      diodati: { id: "ita_diod", name: "Diodati 1607" },
     },
   },
   pt: {
-    default: "arc",
+    default: "blj",
     translations: {
-      arc: { id: "por_arc", name: "Almeida Revista e Corrigida" },
+      blj: { id: "por_blj", name: "Bíblia Livre" },
     },
   },
   nl: {
-    default: "sv",
+    default: "nbg",
     translations: {
-      sv: { id: "nld_sv", name: "Statenvertaling" },
+      nbg: { id: "nld_nbg", name: "NBG-vertaling 1951" },
     },
   },
   pl: {
-    default: "bg",
+    default: "ubg",
     translations: {
-      bg: { id: "pol_bg", name: "Biblia Gdańska" },
+      ubg: { id: "pol_ubg", name: "Święta Biblia (UBG)" },
     },
   },
   cs: {
-    default: "kr",
+    default: "nkb",
     translations: {
-      kr: { id: "ces_kr", name: "Kralická Bible" },
+      nkb: { id: "ces_nkb", name: "Nova Bible Kralicka" },
     },
   },
   ro: {
     default: "corn",
     translations: {
-      corn: { id: "ron_corn", name: "Cornilescu 1924" },
+      corn: { id: "ron_924", name: "Cornilescu 1924" },
     },
   },
   ru: {
@@ -123,165 +123,117 @@ const LANGUAGE_BIBLES: Record<string, { translations: Record<string, { id: strin
     },
   },
   uk: {
-    default: "ogi",
+    default: "ukr96",
     translations: {
-      ogi: { id: "ukr_ogi", name: "Огієнко 1962" },
+      ukr96: { id: "ukr_1996", name: "Біблія 1996" },
     },
   },
   ar: {
     default: "vd",
     translations: {
-      vd: { id: "arb_vd", name: "Van Dyck 1865" },
+      vd: { id: "arb_vdv", name: "الكتاب المقدس (Van Dyck)" },
     },
   },
   he: {
     default: "mod",
     translations: {
-      mod: { id: "heb_mod", name: "Hebrew Modern" },
+      mod: { id: "heb_mod", name: "תנ״ך עברי מודרני" },
     },
   },
   ko: {
     default: "krv",
     translations: {
-      krv: { id: "kor_krv", name: "개역한글 (Korean RV)" },
-    },
-  },
-  zh: {
-    default: "cuv",
-    translations: {
-      cuv: { id: "zho_cuv", name: "和合本 (Chinese Union Version)" },
+      krv: { id: "kor_old", name: "한국어 성경" },
     },
   },
   da: {
-    default: "bib",
+    default: "det",
     translations: {
-      bib: { id: "dan_bib", name: "Bibelen 1871" },
-    },
-  },
-  no: {
-    default: "b30",
-    translations: {
-      b30: { id: "nor_b30", name: "Bibelen 1930" },
+      det: { id: "dan_det", name: "Hellig Bibel" },
     },
   },
   sv: {
-    default: "svb",
+    default: "fol",
     translations: {
-      svb: { id: "swe_svb", name: "Karl XII Bibel" },
+      fol: { id: "swe_fol", name: "Svenska Folkbibeln" },
     },
   },
   fi: {
-    default: "pr",
+    default: "fin",
     translations: {
-      pr: { id: "fin_pr", name: "Pyhä Raamattu 1933/38" },
-    },
-  },
-  el: {
-    default: "vam",
-    translations: {
-      vam: { id: "ell_vam", name: "Vamvas 1850" },
+      fin: { id: "fin_bib", name: "Elävä uutinen" },
     },
   },
   hu: {
-    default: "kar",
+    default: "hun",
     translations: {
-      kar: { id: "hun_kar", name: "Károli 1590" },
+      hun: { id: "hun_bib", name: "Nádej pre každého" },
     },
   },
   hr: {
-    default: "sar",
+    default: "iva",
     translations: {
-      sar: { id: "hrv_sar", name: "Šarić" },
+      iva: { id: "hrv_iva", name: "Sveta Biblija" },
     },
   },
   sr: {
-    default: "kar",
+    default: "srp",
     translations: {
-      kar: { id: "srp_kar", name: "Karadžić 1868" },
+      srp: { id: "srp_865", name: "Sveta Biblija" },
     },
   },
   sk: {
-    default: "roh",
+    default: "slk",
     translations: {
-      roh: { id: "slk_roh", name: "Roháčkova Biblia" },
-    },
-  },
-  bg: {
-    default: "bpb",
-    translations: {
-      bpb: { id: "bul_bpb", name: "Protestant Bible 1940" },
-    },
-  },
-  ka: {
-    default: "geo",
-    translations: {
-      geo: { id: "kat_geo", name: "Georgian Bible" },
-    },
-  },
-  hy: {
-    default: "ara",
-    translations: {
-      ara: { id: "hye_ara", name: "Ararat Bible" },
-    },
-  },
-  tl: {
-    default: "adb",
-    translations: {
-      adb: { id: "tgl_adb", name: "Ang Biblia 1905" },
-    },
-  },
-  id: {
-    default: "tb",
-    translations: {
-      tb: { id: "ind_tb", name: "Alkitab Terjemahan Baru" },
+      slk: { id: "slk_bib", name: "Nádej pre každého" },
     },
   },
   vi: {
-    default: "vb",
+    default: "vie",
     translations: {
-      vb: { id: "vie_vb", name: "Vietnamese Bible 1934" },
+      vie: { id: "vie_1934", name: "Kinh Thánh 1934" },
+    },
+  },
+  id: {
+    default: "ayt",
+    translations: {
+      ayt: { id: "ind_ayt", name: "Alkitab Yang Terbuka" },
+    },
+  },
+  tl: {
+    default: "tgl",
+    translations: {
+      tgl: { id: "tgl_ulb", name: "Banal na Bibliya" },
     },
   },
   sw: {
-    default: "suv",
+    default: "swa",
     translations: {
-      suv: { id: "swh_suv", name: "Swahili Union Version" },
+      swa: { id: "swh_swa", name: "Biblia Takatifu" },
     },
   },
   am: {
-    default: "amb",
+    default: "amh",
     translations: {
-      amb: { id: "amh_amb", name: "Amharic Bible" },
-    },
-  },
-  af: {
-    default: "a53",
-    translations: {
-      a53: { id: "afr_a53", name: "Afrikaans 1953" },
+      amh: { id: "amh_amh", name: "መጽሐፍ ቅዱስ" },
     },
   },
   yo: {
-    default: "bib",
+    default: "yor",
     translations: {
-      bib: { id: "yor_bib", name: "Bibeli Yorùbá" },
+      yor: { id: "yor_bib", name: "Bíbélì Mímọ́" },
     },
   },
   ig: {
-    default: "bib",
+    default: "ibo",
     translations: {
-      bib: { id: "ibo_bib", name: "Igbo Bible" },
-    },
-  },
-  zu: {
-    default: "zul",
-    translations: {
-      zul: { id: "zul_zul", name: "iBhayibheli" },
+      ibo: { id: "ibo_bib", name: "Baịbụlụ Nsọ" },
     },
   },
   ht: {
-    default: "hcb",
+    default: "hat",
     translations: {
-      hcb: { id: "hat_hcb", name: "Haitian Creole Bible" },
+      hat: { id: "hat_pds", name: "Bib La" },
     },
   },
 };
