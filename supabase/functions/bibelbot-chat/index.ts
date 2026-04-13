@@ -427,65 +427,62 @@ async function lookupBibleVerse(
   }
 }
 
-// Tool definition for AI tool calling
-const BIBLE_LOOKUP_TOOL = {
-  type: "function" as const,
-  function: {
-    name: "lookup_bible_verse",
-    description: "Schlage einen exakten Bibelvers in einer deutschen Übersetzung nach. Verwende dieses Tool IMMER, wenn du einen Bibelvers wörtlich zitieren möchtest, um sicherzustellen, dass das Zitat korrekt ist.",
-    parameters: {
-      type: "object",
-      properties: {
-        book: {
-          type: "string",
-          description: "Buchname (deutsch oder englisch), z.B. 'Johannes', 'Psalm', '1. Korinther', 'Matthäus'"
-        },
-        chapter: {
-          type: "number",
-          description: "Kapitelnummer"
-        },
-        verse_start: {
-          type: "number",
-          description: "Erste Versnummer"
-        },
-        verse_end: {
-          type: "number",
-          description: "Letzte Versnummer (optional, für Versbereich)"
-        },
-        translation: {
-          type: "string",
-          enum: ["luther", "elberfelder", "schlachter", "kjv", "web"],
-          description: "Bibelübersetzung. Standard: luther. Auch englisch: kjv, web"
-        }
-      },
-      required: ["book", "chapter", "verse_start"]
-    }
-  }
-};
+// Tool definitions – built dynamically based on language
+function buildBibleTools(lang: string) {
+  const langBibles = LANGUAGE_BIBLES[lang] || LANGUAGE_BIBLES["en"];
+  const translationKeys = Object.keys(langBibles.translations);
 
-// Semantic Bible search tool – searches the DB full-text index
-const BIBLE_SEARCH_TOOL = {
-  type: "function" as const,
-  function: {
-    name: "search_bible_verses",
-    description: "Durchsuche die Bibel nach Versen zu einem Thema, Stichwort oder einer Frage. Verwende dieses Tool, wenn du thematisch passende Bibelverse finden willst, aber keine exakte Stellenangabe hast. Gibt bis zu 8 relevante Verse zurück.",
-    parameters: {
-      type: "object",
-      properties: {
-        query: {
-          type: "string",
-          description: "Suchbegriffe oder Thema auf Deutsch, z.B. 'Hoffnung in schweren Zeiten', 'Vergebung', 'Gottes Liebe'"
+  const BIBLE_LOOKUP_TOOL = {
+    type: "function" as const,
+    function: {
+      name: "lookup_bible_verse",
+      description: "Look up an exact Bible verse in a specific translation. Use this tool whenever you want to quote a Bible verse verbatim.",
+      parameters: {
+        type: "object",
+        properties: {
+          book: {
+            type: "string",
+            description: "Book name (in any language), e.g. 'John', 'Psalm', '1 Corinthians', 'Genesis'"
+          },
+          chapter: { type: "number", description: "Chapter number" },
+          verse_start: { type: "number", description: "Start verse number" },
+          verse_end: { type: "number", description: "End verse number (optional, for range)" },
+          translation: {
+            type: "string",
+            enum: translationKeys,
+            description: `Bible translation. Default: ${langBibles.default}. Available: ${translationKeys.join(", ")}`
+          }
         },
-        translation: {
-          type: "string",
-          enum: ["luther1912", "elberfelder", "schlachter2000", "kjv", "web", "all"],
-          description: "Bibelübersetzung für die Suche. Standard: luther1912. Englisch: kjv, web. 'all' für alle."
-        }
-      },
-      required: ["query"]
+        required: ["book", "chapter", "verse_start"]
+      }
     }
-  }
-};
+  };
+
+  const BIBLE_SEARCH_TOOL = {
+    type: "function" as const,
+    function: {
+      name: "search_bible_verses",
+      description: "Search the Bible for verses about a topic, keyword or question. Returns up to 8 relevant verses.",
+      parameters: {
+        type: "object",
+        properties: {
+          query: {
+            type: "string",
+            description: "Search terms or topic in the user's language"
+          },
+          translation: {
+            type: "string",
+            enum: [...translationKeys, "all"],
+            description: `Translation filter. Default: all.`
+          }
+        },
+        required: ["query"]
+      }
+    }
+  };
+
+  return { BIBLE_LOOKUP_TOOL, BIBLE_SEARCH_TOOL };
+}
 
 async function searchBibleVerses(
   query: string,
