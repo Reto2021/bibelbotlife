@@ -1,13 +1,14 @@
-import { useState, useEffect, useCallback, ReactNode } from "react";
+import { useState, useEffect, useCallback, useRef, ReactNode } from "react";
 import { useTranslation } from "react-i18next";
-import { Sparkles, ChevronRight, BookOpen, Loader2, MessageCircle, Image, Download, Bell, Send, Smartphone, Volume2, VolumeX, XCircle, Settings2, ChevronDown, ChevronUp } from "lucide-react";
+import { Sparkles, ChevronRight, BookOpen, Loader2, MessageCircle, Image, Download, Bell, Send, Smartphone, Volume2, VolumeX, XCircle, Settings2, ChevronDown, ChevronUp, Copy } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Button } from "@/components/ui/button";
 import { useTTS } from "@/hooks/use-tts";
 import { openBibleBotChat } from "@/lib/chat-events";
 import { ShareButton } from "@/components/ShareButton";
 import { useToast } from "@/hooks/use-toast";
-import { generateShareImage } from "@/lib/share-image-canvas";
+import { generateShareImage, fetchAIBackgroundUrl } from "@/lib/share-image-canvas";
+import { useChurchBranding } from "@/hooks/use-church-branding";
 
 const IMPULSE_CACHE_KEY = "bibelbot-daily-impulse";
 const IMPULSE_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/daily-impulse`;
@@ -87,6 +88,7 @@ export function DailyImpulse() {
   const { t, i18n } = useTranslation();
   const { toast } = useToast();
   const isMobile = useIsMobile();
+  const { branding: churchBranding } = useChurchBranding();
   const [collapsed, setCollapsed] = useState(true); // will sync with isMobile on first render
   const [collapsedInitialized, setCollapsedInitialized] = useState(false);
   const [impulse, setImpulse] = useState<Impulse | null>(getCachedImpulse);
@@ -105,6 +107,7 @@ export function DailyImpulse() {
   const [showImagePreview, setShowImagePreview] = useState(false);
   const [showSmsInput, setShowSmsInput] = useState(false);
   const [smsPhone, setSmsPhone] = useState("");
+  const imagePreviewRef = useRef<HTMLDivElement>(null);
   const tts = useTTS();
 
   // Initialise collapse state based on mobile once detected
@@ -153,20 +156,37 @@ export function DailyImpulse() {
     // Reuse existing blob
     if (shareImageUrl) {
       setShowImagePreview(true);
+      setTimeout(() => imagePreviewRef.current?.scrollIntoView({ behavior: "smooth", block: "center" }), 100);
       return;
     }
 
     setIsGeneratingImage(true);
     try {
+      // First fetch AI-generated background image
+      const bgUrl = await fetchAIBackgroundUrl({
+        verse: impulse.verse,
+        reference: impulse.reference,
+        topic: impulse.topic,
+        teaser: impulse.teaser,
+        date: impulse.date,
+      });
+
       const blob = await generateShareImage({
         verse: impulse.verse,
         reference: impulse.reference,
         topic: impulse.topic,
+        backgroundUrl: bgUrl || undefined,
+        churchBranding: churchBranding ? {
+          name: churchBranding.churchName,
+          logoUrl: churchBranding.logoUrl,
+          slug: churchBranding.churchSlug,
+        } : undefined,
       });
       const url = URL.createObjectURL(blob);
       setShareBlob(blob);
       setShareImageUrl(url);
       setShowImagePreview(true);
+      setTimeout(() => imagePreviewRef.current?.scrollIntoView({ behavior: "smooth", block: "center" }), 100);
     } catch (e) {
       console.error("Failed to generate share image:", e);
       toast({
@@ -179,10 +199,27 @@ export function DailyImpulse() {
     }
   }, [impulse, isGeneratingImage, shareImageUrl, toast, t]);
 
+  const buildShareText = useCallback(() => {
+    if (!impulse) return "";
+    const hashtagBible = t("share.hashtagBible", "#Bible");
+    const topicTag = impulse.topic ? `#${impulse.topic.replace(/\s+/g, "")}` : "";
+    const baseUrl = churchBranding
+      ? `biblebot.life/?church=${churchBranding.churchSlug}&utm_source=branded_link&utm_medium=share`
+      : "biblebot.life/?utm_source=branded_link&utm_medium=share";
+    const recommendedBy = churchBranding
+      ? `\n\n📍 ${t("share.recommendedBy", { church: churchBranding.churchName })}`
+      : "";
+    const churchTag = churchBranding
+      ? ` #${churchBranding.churchName.replace(/\s+/g, "")}`
+      : "";
+
+    return `✨ ${impulse.teaser}\n\n«${impulse.verse}»\n— ${impulse.reference}${recommendedBy}\n\n#BibleBotLife #Tagesimpuls ${topicTag} ${hashtagBible}${churchTag}\n${baseUrl}`;
+  }, [impulse, churchBranding, t]);
+
   const shareAsImage = useCallback(async () => {
     if (!shareBlob || !impulse) return;
 
-    const shareText = `${impulse.verse}\n\n– ${impulse.reference}\n\n${impulse.teaser}\n\nbiblebot.life`;
+    const shareText = buildShareText();
 
     try {
       const file = new File([shareBlob], `bibelbot-impuls-${impulse.date}.png`, { type: "image/png" });
@@ -199,14 +236,15 @@ export function DailyImpulse() {
       if ((e as Error).name === "AbortError") return;
     }
 
+    // Clipboard fallback
     try {
       await navigator.clipboard.writeText(shareText);
       toast({
         title: t("share.imageSaved"),
-        description: t("share.imageSavedDesc"),
+        description: t("share.clipboardFallback"),
       });
     } catch {}
-  }, [shareBlob, impulse, toast, t]);
+  }, [shareBlob, impulse, buildShareText, toast, t]);
 
   const downloadImage = useCallback(() => {
     if (!shareImageUrl || !impulse) return;
@@ -438,32 +476,55 @@ export function DailyImpulse() {
 
             {/* Image Preview */}
             {showImagePreview && shareImageUrl && (
-              <div className="rounded-xl overflow-hidden border border-border shadow-md animate-fade-up">
-                <img
-                  src={shareImageUrl}
-                  alt={`${t("share.impulseTitle")} – ${impulse.topic}`}
-                  className="w-full max-h-80 object-cover"
-                  loading="lazy"
-                />
-                <div className="bg-card/80 backdrop-blur-sm p-3 flex items-center justify-between gap-2">
-                  <p className="text-xs text-muted-foreground">{t("share.imageReady")}</p>
-                  <div className="flex gap-2">
+              <div ref={imagePreviewRef} className="rounded-xl overflow-hidden border border-border shadow-md animate-fade-up bg-card">
+                <div className="flex justify-center bg-muted/20 p-3 sm:p-4">
+                  <img
+                    src={shareImageUrl}
+                    alt={`${t("share.impulseTitle")} – ${impulse.topic}`}
+                    className="w-full max-w-[520px] h-auto rounded-lg object-contain"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="bg-card/80 backdrop-blur-sm p-3 space-y-3">
+                  {/* Share text preview */}
+                  <div className="relative group">
+                    <div className="bg-muted/40 rounded-lg p-3 pr-10 text-xs text-muted-foreground whitespace-pre-line font-mono leading-relaxed max-h-40 overflow-y-auto">
+                      {buildShareText()}
+                    </div>
                     <Button
-                      size="sm"
-                      variant="outline"
-                      onClick={downloadImage}
-                      className="text-xs border-primary/30 text-primary hover:bg-primary/10 h-7"
+                      size="icon"
+                      variant="ghost"
+                      className="absolute top-2 right-2 h-7 w-7 opacity-60 hover:opacity-100"
+                      onClick={async () => {
+                        try {
+                          await navigator.clipboard.writeText(buildShareText());
+                          toast({ title: t("share.copiedShort") });
+                        } catch {}
+                      }}
                     >
-                      <Download className="h-3 w-3 mr-1" />
-                      {t("share.download")}
+                      <Copy className="h-3.5 w-3.5" />
                     </Button>
-                    <Button
-                      size="sm"
-                      onClick={shareAsImage}
-                      className="text-xs h-7"
-                    >
-                      {t("share.shareImage")}
-                    </Button>
+                  </div>
+                  <div className="flex items-center justify-between gap-2">
+                    <p className="text-xs text-muted-foreground">{t("share.imageReady")}</p>
+                    <div className="flex gap-2">
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        onClick={downloadImage}
+                        className="text-xs border-primary/30 text-primary hover:bg-primary/10 h-7"
+                      >
+                        <Download className="h-3 w-3 mr-1" />
+                        {t("share.download")}
+                      </Button>
+                      <Button
+                        size="sm"
+                        onClick={shareAsImage}
+                        className="text-xs h-7"
+                      >
+                        {t("share.shareImage")}
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </div>

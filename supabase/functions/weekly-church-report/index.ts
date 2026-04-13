@@ -70,7 +70,8 @@ Deno.serve(async (req) => {
     });
     const topSources = Object.entries(utmCounts)
       .sort(([, a], [, b]) => b - a)
-      .slice(0, 5);
+      .slice(0, 5)
+      .map(([name, count]) => ({ name, count }));
 
     // Top pages
     const pageCounts: Record<string, number> = {};
@@ -79,84 +80,29 @@ Deno.serve(async (req) => {
     });
     const topPages = Object.entries(pageCounts)
       .sort(([, a], [, b]) => b - a)
-      .slice(0, 5);
+      .slice(0, 5)
+      .map(([path, count]) => ({ path, count }));
 
     // Devices
-    const deviceCounts: Record<string, number> = { Mobile: 0, Tablet: 0, Desktop: 0 };
+    const deviceCounts = { mobile: 0, tablet: 0, desktop: 0 };
     const seenSessions = new Set();
     churchEvents.forEach((e: any) => {
       if (!seenSessions.has(e.session_id)) {
         seenSessions.add(e.session_id);
         const w = e.screen_width || 1024;
-        if (w < 768) deviceCounts["Mobile"]++;
-        else if (w < 1024) deviceCounts["Tablet"]++;
-        else deviceCounts["Desktop"]++;
+        if (w < 768) deviceCounts.mobile++;
+        else if (w < 1024) deviceCounts.tablet++;
+        else deviceCounts.desktop++;
       }
     });
 
-    // Build HTML email
+    // Web chat stats (chat_hero_submit events for this church)
+    const webChatEvents = customEvts.filter((e: any) => e.event_name === "chat_hero_submit");
+    const webChatSessions = new Set(webChatEvents.map((e: any) => e.session_id));
+
     const botName = church.custom_bot_name || "BibleBot";
-    const sourceRows = topSources.length > 0
-      ? topSources.map(([s, c]) => `<tr><td style="padding:4px 8px;border-bottom:1px solid #eee">${s}</td><td style="padding:4px 8px;border-bottom:1px solid #eee;text-align:right">${c}</td></tr>`).join("")
-      : `<tr><td colspan="2" style="padding:8px;color:#888">Keine Quellen erfasst</td></tr>`;
 
-    const pageRows = topPages.length > 0
-      ? topPages.map(([p, c]) => `<tr><td style="padding:4px 8px;border-bottom:1px solid #eee;font-family:monospace;font-size:12px">${p}</td><td style="padding:4px 8px;border-bottom:1px solid #eee;text-align:right">${c}</td></tr>`).join("")
-      : `<tr><td colspan="2" style="padding:8px;color:#888">Keine Seitenaufrufe</td></tr>`;
-
-    const html = `
-<!DOCTYPE html>
-<html><head><meta charset="utf-8"></head>
-<body style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;max-width:600px;margin:0 auto;padding:20px;color:#333">
-  <div style="text-align:center;margin-bottom:24px">
-    <h1 style="font-size:22px;color:#C8883A;margin:0">📊 Wöchentlicher ${botName}-Report</h1>
-    <p style="color:#888;font-size:13px;margin:4px 0">${periodLabel}</p>
-    <p style="color:#666;font-size:14px;margin:4px 0">${church.name}</p>
-  </div>
-
-  <table style="width:100%;border-collapse:collapse;margin-bottom:24px">
-    <tr>
-      <td style="padding:16px;background:#f8f4ef;border-radius:8px;text-align:center;width:33%">
-        <div style="font-size:28px;font-weight:bold;color:#C8883A">${pageviews.length}</div>
-        <div style="font-size:12px;color:#888">Seitenaufrufe</div>
-      </td>
-      <td style="width:8px"></td>
-      <td style="padding:16px;background:#f8f4ef;border-radius:8px;text-align:center;width:33%">
-        <div style="font-size:28px;font-weight:bold;color:#C8883A">${sessions.size}</div>
-        <div style="font-size:12px;color:#888">Besucher</div>
-      </td>
-      <td style="width:8px"></td>
-      <td style="padding:16px;background:#f8f4ef;border-radius:8px;text-align:center;width:33%">
-        <div style="font-size:28px;font-weight:bold;color:#C8883A">${customEvts.length}</div>
-        <div style="font-size:12px;color:#888">Interaktionen</div>
-      </td>
-    </tr>
-  </table>
-
-  <h3 style="font-size:15px;border-bottom:2px solid #C8883A;padding-bottom:6px">🔗 Traffic-Quellen</h3>
-  <table style="width:100%;border-collapse:collapse;margin-bottom:20px;font-size:13px">
-    <tr style="background:#f5f5f5"><th style="padding:6px 8px;text-align:left">Quelle</th><th style="padding:6px 8px;text-align:right">Aufrufe</th></tr>
-    ${sourceRows}
-  </table>
-
-  <h3 style="font-size:15px;border-bottom:2px solid #C8883A;padding-bottom:6px">📄 Top Seiten</h3>
-  <table style="width:100%;border-collapse:collapse;margin-bottom:20px;font-size:13px">
-    <tr style="background:#f5f5f5"><th style="padding:6px 8px;text-align:left">Seite</th><th style="padding:6px 8px;text-align:right">Aufrufe</th></tr>
-    ${pageRows}
-  </table>
-
-  <h3 style="font-size:15px;border-bottom:2px solid #C8883A;padding-bottom:6px">📱 Geräte</h3>
-  <p style="font-size:13px;color:#666">
-    Mobile: ${deviceCounts["Mobile"]} · Tablet: ${deviceCounts["Tablet"]} · Desktop: ${deviceCounts["Desktop"]}
-  </p>
-
-  <div style="text-align:center;margin-top:32px;padding:16px;background:#f8f4ef;border-radius:8px">
-    <p style="font-size:13px;color:#666;margin:0">Dieser Report wurde automatisch von <strong>${botName}</strong> erstellt.</p>
-    <p style="font-size:12px;color:#999;margin:4px 0">Powered by BibleBot.Life</p>
-  </div>
-</body></html>`;
-
-    // Send via transactional email function
+    // Send via transactional email template
     try {
       const emailRes = await fetch(`${supabaseUrl}/functions/v1/send-transactional-email`, {
         method: "POST",
@@ -165,13 +111,24 @@ Deno.serve(async (req) => {
           "Authorization": `Bearer ${serviceKey}`,
         },
         body: JSON.stringify({
-          templateName: "church-weekly-report",
+          templateName: "weekly-report",
           recipientEmail: church.contact_email,
           idempotencyKey: `weekly-report-${church.slug}-${new Date().toISOString().split("T")[0]}`,
-          templateData: {},
-          // Override with raw HTML since we build it here
-          rawHtml: html,
-          rawSubject: `📊 ${botName} Wochenbericht – ${periodLabel}`,
+          templateData: {
+            churchName: church.name,
+            botName,
+            periodLabel,
+            pageviews: pageviews.length,
+            sessions: sessions.size,
+            interactions: customEvts.length,
+            topSources,
+            topPages,
+            mobile: deviceCounts.mobile,
+            tablet: deviceCounts.tablet,
+            desktop: deviceCounts.desktop,
+            webChatUsers: webChatSessions.size,
+            webChatMessages: webChatEvents.length,
+          },
         }),
       });
 

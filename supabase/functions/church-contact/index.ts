@@ -1,5 +1,9 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
-import { corsHeaders } from "https://esm.sh/@supabase/supabase-js@2/cors";
+
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+};
 
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") {
@@ -27,10 +31,10 @@ Deno.serve(async (req) => {
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
     );
 
-    // Get church info
+    // Get church info including notify_on_contact
     const { data: church, error: churchError } = await supabase
       .from("church_partners")
-      .select("name, contact_email, is_active")
+      .select("name, contact_email, is_active, notify_on_contact, slug")
       .eq("id", church_id)
       .single();
 
@@ -74,6 +78,47 @@ Deno.serve(async (req) => {
         },
       },
     });
+
+    // Notify the church itself if enabled
+    if (church.notify_on_contact && church.contact_email) {
+      await supabase.functions.invoke("send-transactional-email", {
+        body: {
+          templateName: "contact-notification",
+          recipientEmail: church.contact_email,
+          idempotencyKey: `church-contact-church-notify-${requestId}`,
+          templateData: {
+            senderName: name || undefined,
+            senderEmail: email,
+            churchName: church.name,
+            message: content,
+            source: `Kontaktformular auf BibleBot.Life`,
+          },
+        },
+      });
+    }
+
+    // Check if first contact → send first-contact-notification
+    const { count: existingCount } = await supabase
+      .from("church_contact_requests")
+      .select("id", { count: "exact", head: true })
+      .eq("church_id", church_id);
+
+    if ((existingCount ?? 0) <= 1 && church.contact_email) {
+      await supabase.functions.invoke("send-transactional-email", {
+        body: {
+          templateName: "first-contact-notification",
+          recipientEmail: church.contact_email,
+          idempotencyKey: `first-contact-${church_id}`,
+          templateData: {
+            churchName: church.name,
+            senderName: name || undefined,
+            senderEmail: email,
+            message: content,
+            slug: church.slug,
+          },
+        },
+      });
+    }
 
     return new Response(JSON.stringify({ success: true }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },

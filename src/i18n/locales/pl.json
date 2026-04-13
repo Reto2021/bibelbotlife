@@ -16,7 +16,7 @@
     },
     "title1": "Biblia.",
     "title2": " Na nowo.",
-    "subtitle": "BibleBot zna Biblię – i zadaje właściwe pytania. Nie człowiek, ale uczciwy towarzysz. Do głębokich rozmów, ważnych pytań i prawdziwych impulsów.",
+    "subtitle": "Twój towarzysz zna Biblię – i zadaje właściwe pytania. Nie człowiek, ale uczciwy towarzysz. Do głębokich rozmów, ważnych pytań i prawdziwych impulsów.",
     "ctaTelegram": "Rozpocznij przez Telegram",
     "ctaMore": "Dowiedz się więcej",
     "quote": "«Przyjdźcie do Mnie wszyscy, którzy utrudzeni i obciążeni jesteście, a Ja was pokrzepię.»",
@@ -33,8 +33,8 @@
     "stopAudio": "Zatrzymaj"
   },
   "features": {
-    "sectionTitle": "Jak BibleBot Ci towarzyszy",
-    "sectionSubtitle": "Odkryj różne sposoby, w jakie BibleBot może iść z Tobą",
+    "sectionTitle": "Co oferuje ci twój towarzysz",
+    "sectionSubtitle": "Odkryj wiele sposobów, w jakie twój osobisty towarzysz może cię wesprzeć",
     "bible": {
       "title": "Fragmenty biblijne i interpretacja",
       "desc": "Zapytaj «Co mówi Biblia o...?» i otrzymaj odpowiednie wersety z kontekstem i jasnym wyjaśnieniem."
@@ -49,11 +49,11 @@
     },
     "faith": {
       "title": "Droga wiary i spotkanie z Chrystusem",
-      "desc": "Czy szukasz, wątpisz czy pogłębiasz – BibleBot towarzyszy Ci na Twojej osobistej drodze."
+      "desc": "Czy szukasz, wątpisz czy pogłębiasz – twój towarzysz towarzyszy Ci na Twojej osobistej drodze."
     },
     "daily": {
       "title": "Codzienne impulsy i rok liturgiczny",
-      "desc": "Zacznij dzień od impulsów i pozwól BibleBotowi towarzyszyć Ci przez Adwent, Wielki Post i święta."
+      "desc": "Zacznij dzień od impulsów i pozwól twój towarzyszowi towarzyszyć Ci przez Adwent, Wielki Post i święta."
     },
     "groups": {
       "title": "Grupy i wspólnoty",
@@ -63,9 +63,9 @@
   "coaching": {
     "badge": "Metodologia",
     "title": "Nie tylko chatbot – prawdziwe towarzyszenie",
-    "subtitle": "BibleBot łączy biblijną mądrość ze sprawdzonymi metodami coachingowymi i Psychologią Pozytywną.",
+    "subtitle": "Twój towarzysz łączy biblijną mądrość ze sprawdzonymi metodami coachingowymi i Psychologią Pozytywną.",
     "journeyTitle": "Osobiste towarzyszenie",
-    "journeyDesc": "BibleBot towarzyszy Ci tak długo, jak chcesz – w swobodnej rozmowie lub z opcjonalną strukturą 21 dni.",
+    "journeyDesc": "Twój towarzysz towarzyszy Ci tak długo, jak chcesz – w swobodnej rozmowie lub z opcjonalną strukturą 21 dni.",
     "week1": "Tydzień 1: Przybycie",
     "week1Desc": "Budowanie zaufania, słuchanie, zrozumienie Twojej sytuacji. Gdzie jesteś? Co Cię niepokoi?",
     "week2": "Tydzień 2: Pogłębianie",
@@ -73,12 +73,12 @@
     "week3": "Tydzień 3: Działanie",
     "week3Desc": "Konkretne kroki, formułowanie celów, inicjowanie zmian. Jaki jest Twój następny krok?",
     "openQuestionsTitle": "Otwarte pytania zamiast szybkich odpowiedzi",
-    "openQuestionsDesc": "BibleBot nie daje tanich rad. Zamiast tego zadaje pytania, które naprawdę się liczą:",
+    "openQuestionsDesc": "Twój towarzysz nie daje tanich rad. Zamiast tego zadaje pytania, które naprawdę się liczą:",
     "openQ1": "«Co tak naprawdę kryje się za tym pragnieniem?»",
     "openQ2": "«Po czym poznasz, że coś się zmieniło?»",
     "openQ3": "«Jaki byłby pierwszy mały krok?»",
     "honestTitle": "Uczciwy zamiast toksycznie pozytywny",
-    "honestDesc": "Żadnego «Będzie dobrze!» i żadnego upiększania. BibleBot jest empatyczny I uczciwy:",
+    "honestDesc": "Żadnego «Będzie dobrze!» i żadnego upiększania. Twój towarzysz jest empatyczny I uczciwy:",
     "honest1": "Porusza też niewygodne fragmenty biblijne",
     "honest2": "Zachęca do autorefleksji",
     "honest3": "Rozróżnia pocieszenie od wypierania",
@@ -103,7 +103,7 @@
       "author": "Worthington",
       "desc": "Model REACH dla procesów przebaczenia"
     },
-    "renameTip": "💡 Możesz nadać swojemu BibleBotowi osobiste imię – żeby naprawdę stał się <strong>Twoim</strong> towarzyszem."
+    "renameTip": "💡 Możesz nadać swojemu twój towarzyszowi osobiste imię – żeby naprawdę stał się <strong>Twoim</strong> towarzyszem."
   },
   "discover": {
     "badge": "Dla ciekawych",
@@ -115,7 +115,7 @@
     },
     "search": {
       "title": "Szukasz?",
-      "text": "Może nawet nie wiesz czego. To zupełnie w porządku. BibleBot pomoże Ci zadać właściwe pytania – zamiast dawać szybkie odpowiedzi."
+      "text": "Może nawet nie wiesz czego. To zupełnie w porządku. Twój towarzysz pomoże Ci zadać właściwe pytania – zamiast dawać szybkie odpowiedzi."
     },
     "deepen": {
       "title": "Chcesz pogłębić?",
@@ -170,9 +170,9 @@
   },
   "faq": {
     "badge": "FAQ",
-    "title": "Co powinieneś wiedzieć o BibleBot",
+    "title": "Co powinieneś wiedzieć o twój towarzysz",
     "subtitle": "Przejrzystość jest ważna – szczególnie dla teologów, duszpasterzy i krytycznych umysłów.",
-    "q1": "Co wyróżnia BibleBot od ChatGPT i podobnych?",
+    "q1": "Co wyróżnia twój towarzysz od ChatGPT i podobnych?",
     "q1Generic": "Ogólne chatboty:",
     "q1GenericItems": [
       "Powierzchowne cytaty biblijne bez kontekstu",
@@ -192,11 +192,11 @@
       "Promuje krytyczne myślenie jako dojrzałość wiary"
     ],
     "q2": "Jakie tłumaczenia Biblii są zawarte?",
-    "q2Intro": "BibleBot pracuje ekumenicznie z głównymi niemieckojęzycznymi wydaniami biblijnymi:",
+    "q2Intro": "Twój towarzysz pracuje ekumenicznie z głównymi niemieckojęzycznymi wydaniami biblijnymi:",
     "q2Outro": "Wszystkie fragmenty biblijne zawierają oznaczenie źródła i kontekst historyczny.",
     "q3": "Jakie podstawy naukowe za tym stoją?",
     "q3Intro": "Towarzyszenie opiera się na recenzowanych badaniach z zakresu Psychologii Pozytywnej:",
-    "q4": "Jak BibleBot zapewnia bezpieczeństwo duszpasterskie?",
+    "q4": "Jak twój towarzysz zapewnia bezpieczeństwo duszpasterskie?",
     "q4Items": [
       "Myśli samobójcze lub kryzys → natychmiastowe przekierowanie do numerów alarmowych",
       "Brak diagnoz psychologicznych ani medycznych",
@@ -206,16 +206,16 @@
       "Brak toksycznej pozytywności – autentyczne, uczciwe towarzyszenie",
       "Otwarcie nazywa napięcia i trudne teksty"
     ],
-    "q5": "Czy BibleBot jest związany z konkretnym wyznaniem?",
-    "q5Answer": "Nie. BibleBot jest ekumeniczny i szanuje tradycje reformowane, katolickie, wolnokościelne i inne chrześcijańskie w równym stopniu.",
-    "q6": "Czy BibleBot zastępuje opiekę duszpasterską lub terapię?",
-    "q6Answer": "Nie. BibleBot jest narzędziem cyfrowym do osobistej lektury biblijnej i refleksji. Nie zastępuje profesjonalnej opieki duszpasterskiej, doradztwa teologicznego ani terapii psychologicznej.",
-    "q7": "Czy BibleBot to po prostu 'bot dobrego samopoczucia'?",
-    "q7Answer": "Nie. BibleBot pociesza, gdy potrzeba pocieszenia – ale też stawia wyzwania. Duchowy wzrost wymaga tarcia. BibleBot zadaje niewygodne pytania i nie unika tematów jak sprawiedliwość, nawrócenie i odpowiedzialność.",
-    "q8": "Kto stoi za BibleBot i jak jest finansowany?",
+    "q5": "Czy twój towarzysz jest związany z konkretnym wyznaniem?",
+    "q5Answer": "Nie. Twój towarzysz jest ekumeniczny i szanuje tradycje reformowane, katolickie, wolnokościelne i inne chrześcijańskie w równym stopniu.",
+    "q6": "Czy twój towarzysz zastępuje opiekę duszpasterską lub terapię?",
+    "q6Answer": "Nie. Twój towarzysz jest narzędziem cyfrowym do osobistej lektury biblijnej i refleksji. Nie zastępuje profesjonalnej opieki duszpasterskiej, doradztwa teologicznego ani terapii psychologicznej.",
+    "q7": "Czy twój towarzysz to po prostu 'bot dobrego samopoczucia'?",
+    "q7Answer": "Nie. Twój towarzysz pociesza, gdy potrzeba pocieszenia – ale też stawia wyzwania. Duchowy wzrost wymaga tarcia. Twój towarzysz zadaje niewygodne pytania i nie unika tematów jak sprawiedliwość, nawrócenie i odpowiedzialność.",
+    "q8": "Kto stoi za twój towarzysz i jak jest finansowany?",
     "q8Answer": "BibleBot.Life to prywatny, niekomercyjny projekt. Jest prowadzony wolontaryjnie i finansowany wyłącznie z dobrowolnych darowizn. Bez reklam, bez sprzedaży danych, bez płatnych funkcji.",
-    "q9": "Jak BibleBot obchodzi się z moimi danymi?",
-    "q9Answer": "BibleBot nie przechowuje danych osobowych ani historii czatów. Każda rozmowa jest anonimowa. Brak logowania, śledzenia i udostępniania danych stronom trzecim.",
+    "q9": "Jak twój towarzysz obchodzi się z moimi danymi?",
+    "q9Answer": "Twój towarzysz nie przechowuje danych osobowych ani historii czatów. Każda rozmowa jest anonimowa. Brak logowania, śledzenia i udostępniania danych stronom trzecim.",
     "tradition": {
       "reformed": "Reformowany",
       "evangelical": "Ewangelicki",
@@ -225,24 +225,24 @@
     }
   },
   "donate": {
-    "badge": "Wesprzyj BibleBot",
-    "title": "Pomóż utrzymać BibleBot za darmo",
-    "subtitle": "BibleBot to projekt z serca – bez reklam, bez abonamentów, bez ukrytych kosztów. Aby tak pozostało, polegam na dobrowolnych darowiznach.",
+    "badge": "Wesprzyj twój towarzysz",
+    "title": "Pomóż utrzymać twój towarzysz za darmo",
+    "subtitle": "BibleBot.Life to projekt z serca – bez reklam, bez abonamentów, bez ukrytych kosztów. Aby tak pozostało, polegam na dobrowolnych darowiznach.",
     "bankTitle": "Przekaż darowiznę przelewem",
     "bankSubtitle": "Każda kwota się liczy – serdecznie dziękuję! 🙏",
     "recipient": "Odbiorca",
     "bank": "Bank",
     "purpose": "Tytuł przelewu",
-    "purposeValue": "Darowizna BibleBot",
+    "purposeValue": "Darowizna BibleBot.Life",
     "note": "BibleBot.Life jest prowadzony jako projekt prywatny. Darowizny nie podlegają odliczeniu od podatku."
   },
   "cta": {
     "title": "Nie musisz przez to przechodzić sam",
-    "subtitle": "Po prostu napisz BibleBotowi, co Cię zajmuje. Bez logowania, bez kosztów, bez oceniania – tylko uczciwe towarzyszenie i mądrość Biblii.",
+    "subtitle": "Po prostu napisz twój towarzyszowi, co Cię zajmuje. Bez logowania, bez kosztów, bez oceniania – tylko uczciwe towarzyszenie i mądrość Biblii.",
     "button": "Rozpocznij rozmowę"
   },
   "footer": {
-    "tagline": "Twój osobisty towarzysz na drodze z Biblią",
+    "tagline": "Twój osobisty towarzysz — z głębią Biblii, bez wcześniejszej wiedzy.",
     "disclaimer": "BibleBot.Life jest narzędziem cyfrowym i nie zastępuje profesjonalnej opieki duszpasterskiej, doradztwa teologicznego ani terapii psychologicznej. W sytuacjach kryzysowych skontaktuj się z lokalnym numerem alarmowym.",
     "impressum": "Nota prawna",
     "notes": "Informacje",
@@ -251,10 +251,10 @@
     "noTax": "Darowizny nie podlegają odliczeniu od podatku",
     "datenschutz": "Polityka prywatności",
     "love": "Z ❤️ dla wszystkich, którzy zastanawiają się, co myśli Chrystus.",
-    "forChurches": "For Churches"
+    "forChurches": "Dla Kościołów"
   },
   "chat": {
-    "welcome": "Witaj! 🤗\n\nJestem Twoim BibleBotem – osobistym towarzyszem z Biblią, dobrymi pytaniami i konkretnymi impulsami. Bez presji, bez oceniania.\n\nMożesz mnie zapytać o wszystko – lub po prostu opowiedzieć, co Cię teraz zajmuje. 💛",
+    "welcome": "Witaj! 🤗\n\nJestem Twoim twój towarzyszem – osobistym towarzyszem z Biblią, dobrymi pytaniami i konkretnymi impulsami. Bez presji, bez oceniania.\n\nMożesz mnie zapytać o wszystko – lub po prostu opowiedzieć, co Cię teraz zajmuje. 💛",
     "journeyOffer": "💡 **Wskazówka:** Oferuję też **podróż 21 dni** – 3 tygodnie codziennych impulsów, refleksji i konkretnych kroków. W Twoim tempie.\n\nChcesz spróbować?",
     "suggestion1": "Potrzebuję teraz budującego słowa",
     "suggestion2": "Co mówi Biblia, gdy czujesz się niepewnie?",
@@ -286,7 +286,7 @@
     "qaOk_plural": "{{count}} cytatów zweryfikowanych ✓",
     "qaWarning": "⚠️ Uwagi dotyczące dokładności:",
     "errorTooMany": "Zbyt wiele zapytań – poczekaj chwilę.",
-    "errorCredits": "Limit AI wyczerpany.",
+    "errorCredits": "Limit wyczerpany – spróbuj później.",
     "errorConnect": "Błąd połączenia.",
     "errorTitle": "Błąd",
     "errorConnection": "nie można nawiązać połączenia.",
@@ -295,10 +295,11 @@
     "teaserCta": "Pisz teraz →",
     "namePlaceholder": "np. Eli, Miriam…",
     "loginHint": "Zaloguj się, aby zachować rozmowy na wszystkich urządzeniach",
-    "previousChats": "{{count}} poprzednich rozmów"
+    "previousChats": "{{count}} poprzednich rozmów",
+    "suggestionsLoading": "Ładowanie sugestii…"
   },
   "install": {
-    "title": "Zainstaluj BibleBot",
+    "title": "Zainstaluj BibleBot.Life",
     "androidDesc": "Szybki dostęp z ekranu głównego",
     "iosDesc": "Dotknij «Udostępnij» → «Dodaj do ekranu głównego»",
     "button": "Zainstaluj",
@@ -356,7 +357,7 @@
   },
   "tiles": {
     "sectionTitle": "Co cię porusza?",
-    "sectionSubtitle": "Wybierz temat — BibleBot towarzyszy ci",
+    "sectionSubtitle": "Wybierz temat — twój towarzysz towarzyszy ci",
     "baptism": {
       "title": "Werset na chrzest",
       "desc": "Idealny werset dla twojego dziecka",
@@ -650,7 +651,7 @@
   },
   "church": {
     "badge": "Dla organizacji",
-    "heroTitle": "BibleBot dla Twojej organizacji",
+    "heroTitle": "Twój towarzysz dla Twojej organizacji",
     "heroSubtitle": "Towarzysz swojej wspólnocie z biblijną mądrością – cyfrowo, osobiście i całą dobę.",
     "useCasesTitle": "Zastosowania",
     "useCase": {
@@ -672,7 +673,7 @@
       }
     },
     "pricingTitle": "Pakiety patronackie",
-    "pricingSubtitle": "Wesprzyj BibleBot i swój kościół odpowiednim pakietem patronackim.",
+    "pricingSubtitle": "Wesprzyj twój towarzysz i swój kościół odpowiednim pakietem patronackim.",
     "popular": "Popularny",
     "free": "Bezpłatnie",
     "perYear": "osób / rok",
@@ -714,7 +715,7 @@
     "viewDirectory": "Zobacz katalog kościołów",
     "directoryBadge": "Katalog Kościołów",
     "directoryTitle": "Kościoły partnerskie",
-    "directorySubtitle": "Znajdź kościół w pobliżu, który poleca BibleBot.",
+    "directorySubtitle": "Znajdź kościół w pobliżu, który poleca twój towarzysz.",
     "searchPlaceholder": "Szukaj według miejsca, nazwy lub wyznania...",
     "noResults": "Brak kościołów w katalogu.",
     "becomePartner": "Zostań partnerem →",
@@ -759,11 +760,17 @@
         "psychiatry": "Psychiatria",
         "burnoutClinic": "Klinika wypalenia",
         "hospice": "Hospicjum",
-        "counseling": "Poradnia"
+        "counseling": "Poradnia",
+        "reformed": "Kościół reformowany",
+        "catholic": "Kościół katolicki",
+        "lutheran": "Kościół luterański",
+        "evangelical": "Kościół wolny / Ewangeliczny",
+        "freelance": "Niezależny",
+        "other": "Inne"
       }
     },
     "institutionsTitle": "Również dla instytucji",
-    "institutionsSubtitle": "BibleBot wspiera także domy opieki, domy starców i szpitale z cyfrową opieką duszpasterską.",
+    "institutionsSubtitle": "Twój towarzysz wspiera także domy opieki, domy starców i szpitale z cyfrową opieką duszpasterską.",
     "institution": {
       "careHome": {
         "title": "Domy opieki",
@@ -806,14 +813,38 @@
         "desc": "Uzupełniające impulsy duchowe dla klientów poradnictwa psychospołecznego."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As twój towarzysz is a private project, donations are not tax-deductible.",
+    "denominationsTitle": "Dla wszystkich wyznań i celebrantów",
+    "denominationsSubtitle": "BibleBot.Life jest ekumeniczny – dla wspólnot reformowanych, katolickich, luterańskich i wolnych kościołów, a także niezależnych celebrantów.",
+    "denomination": {
+      "reformed": {
+        "title": "Kościół reformowany",
+        "desc": "Biblia Zuryska, liturgia reformowana i wsparcie kaznodziejskie – dostosowane do Twojej parafii."
+      },
+      "catholic": {
+        "title": "Kościół katolicki",
+        "desc": "Przekład ekumeniczny, planowanie mszy i sakramenty – zgodne z tradycjami katolickimi."
+      },
+      "lutheran": {
+        "title": "Kościół luterański",
+        "desc": "Biblia Lutra, planowanie nabożeństw i duszpasterstwo – dla wspólnot ewangelicko-luterańskich."
+      },
+      "evangelical": {
+        "title": "Kościoły wolne",
+        "desc": "Schlachter 2000, uwielbienie i elastyczne projektowanie nabożeństw – dla wspólnot ewangelicznych."
+      },
+      "freelance": {
+        "title": "Niezależni celebranci",
+        "desc": "Mówcy pogrzebowi, celebranci ślubni i niezależni oficjele ceremonii – z narzędziami biograficznymi i planowaniem mów."
+      }
+    }
   },
   "institutions": {
     "badge": "Dla organizacji",
-    "heroTitle": "BibleBot for Your Institution",
+    "heroTitle": "Twój towarzysz for Your Institution",
     "heroSubtitle": "Digital pastoral care for care homes, retirement homes, hospitals, and correctional facilities – personal, confidential, and around the clock.",
-    "typesTitle": "Who is BibleBot for?",
-    "useCasesTitle": "How BibleBot is Used",
+    "typesTitle": "Who is twój towarzysz for?",
+    "useCasesTitle": "How twój towarzysz is Used",
     "useCasesSubtitle": "Practical applications for daily life in your institution.",
     "pricingTitle": "Patronage Packages",
     "pricingSubtitle": "The same packages as for churches – adapted to institutional needs.",
@@ -847,7 +878,7 @@
       },
       "companionship": {
         "title": "Conversation Partner",
-        "desc": "BibleBot answers faith questions patiently and without time pressure – ideal for lonely hours."
+        "desc": "Twój towarzysz answers faith questions patiently and without time pressure – ideal for lonely hours."
       },
       "accessibility": {
         "title": "Easy Access",
@@ -887,15 +918,15 @@
   },
   "refer": {
     "badge": "Podziel się Słowem",
-    "title": "Poleć BibleBot",
-    "subtitle": "Znasz kogoś, kto potrzebuje zachęty? Udostępnij BibleBot.",
+    "title": "Poleć twój towarzysz",
+    "subtitle": "Znasz kogoś, kto potrzebuje zachęty? Udostępnij twój towarzysz.",
     "whatsapp": "Udostępnij przez WhatsApp",
-    "whatsappMsg": "Hej, chciałem ci pokazać BibleBot – darmowego towarzysza biblijnego. Wypróbuj: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Hej, chciałem ci pokazać BibleBot.Life – darmowego towarzysza biblijnego. Wypróbuj: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Udostępnij przez Telegram",
-    "telegramMsg": "Hej, znasz BibleBot? Darmowy osobisty towarzysz biblijny. Sprawdź: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Hej, znasz BibleBot.Life? Darmowy osobisty towarzysz biblijny. Sprawdź: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Udostępnij mailem",
     "emailSubject": "To może cię zainteresować: BibleBot.Life",
-    "emailBody": "Cześć!\n\nChciałem ci pokazać BibleBot.\n\nWypróbuj: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nPozdrawiam",
+    "emailBody": "Cześć!\n\nChciałem ci pokazać BibleBot.Life.\n\nWypróbuj: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nPozdrawiam",
     "copy": "Kopiuj link",
     "copied": "Link skopiowany! 📋",
     "qr": "Lub pokaż ten kod QR:"
@@ -908,8 +939,8 @@
     "copiedDesc": "Tekst skopiowany. Udostępnij na WhatsApp, Instagramie lub gdziekolwiek!",
     "copyLink": "Kopiuj tekst",
     "error": "Kopiowanie nie powiodło się",
-    "impulseTitle": "BibleBot – Impuls dnia",
-    "chatTitle": "BibleBot – Myśl dnia",
+    "impulseTitle": "Twój towarzysz – Impuls dnia",
+    "chatTitle": "Twój towarzysz – Myśl dnia",
     "createImage": "Utwórz obraz ✨",
     "generating": "Tworzenie…",
     "imageReady": "Twój obraz jest gotowy!",
@@ -918,10 +949,13 @@
     "imageError": "Nie udało się utworzyć obrazu",
     "imageErrorDesc": "Nie można utworzyć obrazu. Spróbuj później.",
     "imageSaved": "Tekst skopiowany! 📋",
-    "imageSavedDesc": "Zapisz obraz i udostępnij go!"
+    "imageSavedDesc": "Zapisz obraz i udostępnij go!",
+    "clipboardFallback": "Tekst skopiowany — wklej go przy publikacji!",
+    "recommendedBy": "Polecane przez {{church}}",
+    "hashtagBible": "#Biblia"
   },
   "eulogy": {
-    "pageTitle": "Mowa pogrzebowa – stwórz życiorys | BibleBot",
+    "pageTitle": "Mowa pogrzebowa – stwórz życiorys | twój towarzysz",
     "pageDesc": "Zachowaj wspomnienia o ukochanej osobie i stwórz piękny tekst życiorysu na mowę pogrzebową.",
     "title": "Mowa pogrzebowa – życiorys",
     "subtitle": "Zachowaj wspomnienia, stwórz tekst, pobierz jako PDF.",
@@ -971,7 +1005,7 @@
     "confirmationDesc": "Znajdź sentencję bierzmowania i przygotuj osobiste teksty."
   },
   "chatHero": {
-    "ariaLabel": "Zadaj pytanie BibleBotowi",
+    "ariaLabel": "Zadaj pytanie twój towarzyszowi",
     "focusPlaceholder": "Napisz swoje pytanie…",
     "placeholder1": "Co sprawia, że jestem naprawdę wdzięczny?",
     "placeholder2": "Jak znaleźć wewnętrzny spokój?",
@@ -985,12 +1019,12 @@
     "suggestion3": "Za co jestem wdzięczny?"
   },
   "meta": {
-    "forChurchesDesc": "BibleBot jako partner dla Twojej parafii: praca z młodzieżą, bierzmowanie, duszpasterstwo i kręgi biblijne. Od darmowych do premium.",
-    "forChurchesTitle": "BibleBot dla Kościołów – Cyfrowe Duszpasterstwo i Prowadzenie Biblijne",
-    "homeDesc": "BibleBot towarzyszy Ci z 5 tłumaczeniami Biblii, metodologią coachingu i duszpasterstwem. Anonimowo, bezpłatnie, w 36 językach.",
-    "homeTitle": "BibleBot – Twój osobisty towarzysz Biblii | Bezpłatne & Anonimowe",
-    "loginDesc": "Zaloguj się do BibleBot, aby przygotować swoje osobiste ceremonie.",
-    "loginTitle": "Zaloguj się – BibleBot"
+    "forChurchesDesc": "Twój towarzysz jako partner dla Twojej parafii: praca z młodzieżą, bierzmowanie, duszpasterstwo i kręgi biblijne. Od darmowych do premium.",
+    "forChurchesTitle": "Twój towarzysz dla Kościołów – Cyfrowe Duszpasterstwo i Prowadzenie Biblijne",
+    "homeDesc": "Twój towarzysz towarzyszy Ci z 5 tłumaczeniami Biblii, metodologią coachingu i duszpasterstwem. Anonimowo, bezpłatnie, w 36 językach.",
+    "homeTitle": "Twój towarzysz – Twój osobisty towarzysz Biblii | Bezpłatne & Anonimowe",
+    "loginDesc": "Zaloguj się do twój towarzysz, aby przygotować swoje osobiste ceremonie.",
+    "loginTitle": "Zaloguj się – twój towarzysz"
   },
   "splash": {
     "patronage": "Polecane przez"
@@ -1079,7 +1113,7 @@
     "featuresSubtitle": "Przemyślany system dla całego przepływu pracy — od przygotowania do wykonania.",
     "f1Title": "Nagrywanie głosu i transkrypcja",
     "f1Desc": "Nagrywaj rozmowy, uzyskuj automatyczne transkrypcje — podstawa do tworzenia wzruszających tekstów ceremonii.",
-    "f2Title": "Tworzenie tekstów wspomagane AI",
+    "f2Title": "Inteligentne tworzenie tekstów",
     "f2Desc": "Na podstawie notatek i transkrypcji twórz empatyczne przemówienia, podsumowania coachingowe lub teksty refleksyjne.",
     "f3Title": "Eksport PDF i udostępnianie",
     "f3Desc": "Eksportuj gotowe teksty jako PDF lub udostępniaj za pomocą linku bezpośrednio klientom, krewnym i uczestnikom.",

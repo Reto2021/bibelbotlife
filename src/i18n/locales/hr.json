@@ -16,7 +16,7 @@
     },
     "title1": "Biblija.",
     "title2": " Ponovno osmišljena.",
-    "subtitle": "Vaš BibleBot poznaje Bibliju – i postavlja prava pitanja. Nije čovjek, ali je iskren pratitelj. Za dobre razgovore, duboka pitanja i stvarne poticaje.",
+    "subtitle": "Vaš vaš pratitelj poznaje Bibliju – i postavlja prava pitanja. Nije čovjek, ali je iskren pratitelj. Za dobre razgovore, duboka pitanja i stvarne poticaje.",
     "ctaTelegram": "Započnite putem Telegrama",
     "ctaMore": "Saznajte više",
     "quote": "«Dođite k meni svi koji ste umorni i opterećeni, i ja ću vas odmoriti.»",
@@ -33,8 +33,8 @@
     "stopAudio": "Zaustavi"
   },
   "features": {
-    "sectionTitle": "Kako vas vaš BibleBot prati",
-    "sectionSubtitle": "Otkrijte raznolike načine na koje vas vaš BibleBot može pratiti",
+    "sectionTitle": "Što ti tvoj pratitelj nudi",
+    "sectionSubtitle": "Otkrij mnoge načine na koje te tvoj osobni pratitelj može podržati",
     "bible": {
       "title": "Biblijski stihovi i tumačenje",
       "desc": "Pitajte «Što Biblija kaže o...?» i primite odgovarajuće stihove s kontekstom i razumljivim objašnjenjem."
@@ -49,7 +49,7 @@
     },
     "faith": {
       "title": "Put vjere i pronalaženje Krista",
-      "desc": "Bilo da tražite, sumnjate ili produbljujete – vaš BibleBot vas prati na vašem osobnom putu."
+      "desc": "Bilo da tražite, sumnjate ili produbljujete – vaš vaš pratitelj vas prati na vašem osobnom putu."
     },
     "daily": {
       "title": "Dnevni poticaji i crkvena godina",
@@ -63,9 +63,9 @@
   "coaching": {
     "badge": "Metodologija",
     "title": "Nije samo chatbot – prava pratnja",
-    "subtitle": "Vaš BibleBot kombinira biblijsku mudrost s provjerenim coaching metodama i pozitivnom psihologijom.",
+    "subtitle": "Vaš vaš pratitelj kombinira biblijsku mudrost s provjerenim coaching metodama i pozitivnom psihologijom.",
     "journeyTitle": "Osobna pratnja",
-    "journeyDesc": "Vaš BibleBot vas prati koliko god želite – u slobodnom razgovoru ili s opcionalnom 21-dnevnom strukturom.",
+    "journeyDesc": "Vaš vaš pratitelj vas prati koliko god želite – u slobodnom razgovoru ili s opcionalnom 21-dnevnom strukturom.",
     "week1": "Tjedan 1: Dolazak",
     "week1Desc": "Izgradnja povjerenja, slušanje, razumijevanje vaše situacije. Gdje ste? Što vas muči?",
     "week2": "Tjedan 2: Produbljivanje",
@@ -73,12 +73,12 @@
     "week3": "Tjedan 3: Djelovanje",
     "week3Desc": "Poduzimanje konkretnih koraka, formuliranje ciljeva, poticanje promjena. Koji je vaš sljedeći korak?",
     "openQuestionsTitle": "Otvorena pitanja umjesto brzih odgovora",
-    "openQuestionsDesc": "Vaš BibleBot vam ne daje jeftine savjete. Umjesto toga, postavlja pitanja koja su zaista važna:",
+    "openQuestionsDesc": "Vaš vaš pratitelj vam ne daje jeftine savjete. Umjesto toga, postavlja pitanja koja su zaista važna:",
     "openQ1": "«Što se zapravo krije iza ove želje?»",
     "openQ2": "«Po čemu biste primijetili da se nešto promijenilo?»",
     "openQ3": "«Koji bi bio prvi mali korak?»",
     "honestTitle": "Iskreno umjesto toksično pozitivno",
-    "honestDesc": "Nema «Bit će dobro!» i nema uljepšavanja. Vaš BibleBot je empatičan I iskren:",
+    "honestDesc": "Nema «Bit će dobro!» i nema uljepšavanja. Vaš vaš pratitelj je empatičan I iskren:",
     "honest1": "Imenuje i neugodne biblijske stihove",
     "honest2": "Izaziva na samorefleksiju",
     "honest3": "Razlikuje utjehu od potiskivanja",
@@ -103,7 +103,7 @@
       "author": "Worthington",
       "desc": "REACH model za procese oprosta"
     },
-    "renameTip": "💡 Možete svom BibleBotu dati vlastito ime – kako bi zaista postao <strong>vaš</strong> pratitelj."
+    "renameTip": "💡 Možete svom vaš pratitelju dati vlastito ime – kako bi zaista postao <strong>vaš</strong> pratitelj."
   },
   "discover": {
     "badge": "Za znatiželjne",
@@ -115,7 +115,7 @@
     },
     "search": {
       "title": "Tražite?",
-      "text": "Možda ni ne znate točno što. To je potpuno u redu. Vaš BibleBot vam pomaže postaviti prava pitanja – umjesto da daje brze odgovore."
+      "text": "Možda ni ne znate točno što. To je potpuno u redu. Vaš vaš pratitelj vam pomaže postaviti prava pitanja – umjesto da daje brze odgovore."
     },
     "deepen": {
       "title": "Želite produbiti?",
@@ -170,9 +170,9 @@
   },
   "faq": {
     "badge": "Česta pitanja",
-    "title": "Što trebate znati o svom BibleBotu",
+    "title": "Što trebate znati o svom vaš pratitelju",
     "subtitle": "Transparentnost nam je važna – posebno prema teolozima, duhovnicima i kritičnim umovima.",
-    "q1": "Po čemu se vaš BibleBot razlikuje od ChatGPT-a i sličnih?",
+    "q1": "Po čemu se vaš vaš pratitelj razlikuje od ChatGPT-a i sličnih?",
     "q1Generic": "Generički chatboti:",
     "q1GenericItems": [
       "Površni biblijski citati bez konteksta",
@@ -192,11 +192,11 @@
       "Potiče kritičko razmišljanje kao zrelost vjere"
     ],
     "q2": "Koje su biblijske verzije pohranjene?",
-    "q2Intro": "Vaš BibleBot ekumenski radi s relevantnim njemačkim izdanjima Biblije:",
+    "q2Intro": "Vaš vaš pratitelj ekumenski radi s relevantnim njemačkim izdanjima Biblije:",
     "q2Outro": "Svi biblijski stihovi prikazani su s izvorom i povijesnim kontekstom.",
     "q3": "Koje su znanstvene osnove iza toga?",
     "q3Intro": "Pratnja se temelji na recenziranom istraživanju pozitivne psihologije:",
-    "q4": "Kako vaš BibleBot osigurava duhovnu sigurnost?",
+    "q4": "Kako vaš vaš pratitelj osigurava duhovnu sigurnost?",
     "q4Items": [
       "U slučaju suicidalnih misli ili kriza → odmah preusmjeravanje na Dargebotene Hand (143) i Pro Juventute (147)",
       "Nema psiholoških ili medicinskih dijagnoza",
@@ -206,16 +206,16 @@
       "Nema toksične pozitivnosti – stvarna, iskrena pratnja",
       "Otvoreno imenuje napetosti i teške tekstove"
     ],
-    "q5": "Je li vaš BibleBot konfesionalno vezan?",
-    "q5Answer": "Ne. Vaš BibleBot je ekumenski orijentiran i jednako poštuje reformirane, katoličke, slobodne crkvene i druge kršćanske tradicije. U slučaju konfesionalno različitih tumačenja, različite perspektive su transparentno prikazane – bez favoriziranja jedne tradicije.",
-    "q6": "Zamjenjuje li vaš BibleBot duhovnu skrb ili terapiju?",
-    "q6Answer": "Ne. Vaš BibleBot je digitalni alat za osobno čitanje Biblije i razmišljanje. Ne zamjenjuje profesionalnu duhovnu skrb, teološko savjetovanje ili psihološku terapiju. U ozbiljnim krizama, vaš BibleBot uvijek upućuje na kvalificirane kontakt točke.",
-    "q7": "Nije li vaš BibleBot samo «bot za dobro raspoloženje»?",
-    "q7Answer": "Ne. Vaš BibleBot tješi tamo gdje je utjeha potrebna – ali i izaziva. Duhovni rast zahtijeva trenje. Vaš BibleBot postavlja neugodna dodatna pitanja, imenuje teške biblijske tekstove (Job, psalmi tužaljki, proročka kritika) i ne boji se tema poput pravde, pokajanja i odgovornosti. Proročka tradicija nikada nije bila ugodna – pa tako ni vaš BibleBot.",
-    "q8": "Tko stoji iza vašeg BibleBota i kako se financira?",
-    "q8Answer": "BibleBot.Life je privatni, nekomercijalni projekt. Vodi se volonterski i financira se isključivo dobrovoljnim donacijama. Nema oglašavanja, prodaje podataka i plaćenih značajki. Sve donacije idu izravno na pokrivanje tekućih troškova (infrastruktura, hosting, razvoj). Budući da BibleBot djeluje kao privatni projekt, donacije nisu porezno priznate.",
-    "q9": "Kako vaš BibleBot postupa s mojim podacima?",
-    "q9Answer": "Vaš BibleBot ne pohranjuje osobne podatke niti povijest razgovora. Svaki razgovor je anoniman. Nema prijave, praćenja i prosljeđivanja podataka trećim stranama. Korištenje je potpuno anonimno.",
+    "q5": "Je li vaš vaš pratitelj konfesionalno vezan?",
+    "q5Answer": "Ne. Vaš vaš pratitelj je ekumenski orijentiran i jednako poštuje reformirane, katoličke, slobodne crkvene i druge kršćanske tradicije. U slučaju konfesionalno različitih tumačenja, različite perspektive su transparentno prikazane – bez favoriziranja jedne tradicije.",
+    "q6": "Zamjenjuje li vaš vaš pratitelj duhovnu skrb ili terapiju?",
+    "q6Answer": "Ne. Vaš vaš pratitelj je digitalni alat za osobno čitanje Biblije i razmišljanje. Ne zamjenjuje profesionalnu duhovnu skrb, teološko savjetovanje ili psihološku terapiju. U ozbiljnim krizama, vaš vaš pratitelj uvijek upućuje na kvalificirane kontakt točke.",
+    "q7": "Nije li vaš vaš pratitelj samo «bot za dobro raspoloženje»?",
+    "q7Answer": "Ne. Vaš vaš pratitelj tješi tamo gdje je utjeha potrebna – ali i izaziva. Duhovni rast zahtijeva trenje. Vaš vaš pratitelj postavlja neugodna dodatna pitanja, imenuje teške biblijske tekstove (Job, psalmi tužaljki, proročka kritika) i ne boji se tema poput pravde, pokajanja i odgovornosti. Proročka tradicija nikada nije bila ugodna – pa tako ni vaš vaš pratitelj.",
+    "q8": "Tko stoji iza vašeg vaš pratitelja i kako se financira?",
+    "q8Answer": "BibleBot.Life je privatni, nekomercijalni projekt. Vodi se volonterski i financira se isključivo dobrovoljnim donacijama. Nema oglašavanja, prodaje podataka i plaćenih značajki. Sve donacije idu izravno na pokrivanje tekućih troškova (infrastruktura, hosting, razvoj). Budući da vaš pratitelj djeluje kao privatni projekt, donacije nisu porezno priznate.",
+    "q9": "Kako vaš vaš pratitelj postupa s mojim podacima?",
+    "q9Answer": "Vaš vaš pratitelj ne pohranjuje osobne podatke niti povijest razgovora. Svaki razgovor je anoniman. Nema prijave, praćenja i prosljeđivanja podataka trećim stranama. Korištenje je potpuno anonimno.",
     "tradition": {
       "reformed": "Reformirani",
       "freeChurch": "Slobodna Crkva",
@@ -225,39 +225,39 @@
     }
   },
   "donate": {
-    "badge": "Podržite svog BibleBota",
-    "title": "Pomozite da vaš BibleBot ostane besplatan",
-    "subtitle": "Vaš BibleBot je projekt iz srca – bez reklama, bez pretplate, bez skrivenih troškova. Da bi tako ostalo, ovisim o dobrovoljnim donacijama. Svaki doprinos pomaže pokriti tekuće troškove rada i infrastrukture.",
+    "badge": "Podržite svog vaš pratitelja",
+    "title": "Pomozite da vaš vaš pratitelj ostane besplatan",
+    "subtitle": "Vaš BibleBot.Life je projekt iz srca – bez reklama, bez pretplate, bez skrivenih troškova. Da bi tako ostalo, ovisim o dobrovoljnim donacijama. Svaki doprinos pomaže pokriti tekuće troškove rada i infrastrukture.",
     "bankTitle": "Donirajte bankovnim prijenosom",
     "bankSubtitle": "Svaki iznos se računa – hvala vam puno! 🙏",
     "recipient": "Primatelj",
     "bank": "Banka",
     "purpose": "Svrha",
-    "purposeValue": "Donacija BibleBot",
+    "purposeValue": "Donacija BibleBot.Life",
     "note": "BibleBot.Life se vodi kao privatni projekt. Donacije stoga nisu porezno priznate."
   },
   "refer": {
     "badge": "Podijelite Božju riječ",
-    "title": "Preporučite BibleBot dalje",
-    "subtitle": "Poznajete li nekoga kome je potrebna ohrabrenje? Podijelite BibleBot – jedna poruka može puno značiti.",
+    "title": "Preporučite vaš pratitelj dalje",
+    "subtitle": "Poznajete li nekoga kome je potrebna ohrabrenje? Podijelite vaš pratitelj – jedna poruka može puno značiti.",
     "whatsapp": "Podijelite putem WhatsAppa",
-    "whatsappMsg": "Hej, htio sam ti pokazati BibleBot – besplatnog biblijskog pratitelja koji poznaje Bibliju i postavlja zaista dobra pitanja. Bez prijave, anonimno, iskreno. Probaj: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Hej, htio sam ti pokazati BibleBot.Life – besplatnog biblijskog pratitelja koji poznaje Bibliju i postavlja zaista dobra pitanja. Bez prijave, anonimno, iskreno. Probaj: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Podijelite putem Telegrama",
-    "telegramMsg": "Hej, znaš li za BibleBot? Besplatni osobni biblijski pratitelj – iskren, anoniman, bez prijave. Pogledaj: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Hej, znaš li za BibleBot.Life? Besplatni osobni biblijski pratitelj – iskren, anoniman, bez prijave. Pogledaj: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Podijelite putem e-pošte",
     "emailSubject": "Ovo bi vas moglo zanimati: BibleBot.Life",
-    "emailBody": "Zdravo!\n\nHtio sam ti pokazati BibleBot – besplatnog biblijskog pratitelja koji zaista poznaje Bibliju. Nije potrebna prijava, potpuno anonimno.\n\nPostavlja dobra dodatna pitanja, objašnjava biblijske stihove u kontekstu i iskreno vas prati – čak i kod teških tema.\n\nProbaj: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nSrdačan pozdrav",
+    "emailBody": "Zdravo!\n\nHtio sam ti pokazati BibleBot.Life – besplatnog biblijskog pratitelja koji zaista poznaje Bibliju. Nije potrebna prijava, potpuno anonimno.\n\nPostavlja dobra dodatna pitanja, objašnjava biblijske stihove u kontekstu i iskreno vas prati – čak i kod teških tema.\n\nProbaj: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nSrdačan pozdrav",
     "copy": "Kopiraj poveznicu",
     "copied": "Poveznica kopirana! 📋",
     "qr": "Ili jednostavno pokažite ovaj QR kod:"
   },
   "cta": {
     "title": "Ne morate to prolaziti sami",
-    "subtitle": "Jednostavno napišite svom BibleBotu što vas muči. Bez prijave, bez troškova, bez osude – samo iskrena pratnja i mudrost Biblije.",
+    "subtitle": "Jednostavno napišite svom vaš pratitelju što vas muči. Bez prijave, bez troškova, bez osude – samo iskrena pratnja i mudrost Biblije.",
     "button": "Započnite razgovor sada"
   },
   "footer": {
-    "tagline": "Vaš osobni pratitelj za život s Biblijom",
+    "tagline": "Vaš osobni pratitelj — s dubinom Biblije, bez predznanja.",
     "disclaimer": "BibleBot.Life je digitalni alat i ne zamjenjuje profesionalnu duhovnu skrb, teološko savjetovanje ili psihološku terapiju. U akutnim krizama obratite se Dargebotene Hand (Tel. 143) ili Pro Juventute (Tel. 147).",
     "impressum": "Impresum",
     "notes": "Napomene",
@@ -269,7 +269,7 @@
     "forChurches": "Za zajednice"
   },
   "chat": {
-    "welcome": "Drago mi je što ste ovdje 🤗\n\nJa sam vaš BibleBot – vaš osobni pratitelj s Biblijom, dobrim pitanjima i konkretnim poticajima. Bez pritiska, bez osude.\n\nMožete me pitati bilo što – ili jednostavno ispričati što vas trenutno muči. 💛",
+    "welcome": "Drago mi je što ste ovdje 🤗\n\nJa sam vaš vaš pratitelj – vaš osobni pratitelj s Biblijom, dobrim pitanjima i konkretnim poticajima. Bez pritiska, bez osude.\n\nMožete me pitati bilo što – ili jednostavno ispričati što vas trenutno muči. 💛",
     "journeyOffer": "💡 **Savjet:** Nudim i **21-dnevnu pratnju** – 3 tjedna s dnevnim poticajima, razmišljanjima i konkretnim koracima. Potpuno vašim tempom.\n\nŽelite li to isprobati?",
     "suggestion1": "Trenutno mi treba ohrabrujuća riječ",
     "suggestion2": "Što Biblija kaže kada se osjećate nesigurno?",
@@ -303,17 +303,18 @@
     "qaOk_plural": "{{count}} citata provjereno ✓",
     "qaWarning": "⚠️ Napomene o točnosti:",
     "errorTooMany": "Previše zahtjeva – molimo pričekajte kratko.",
-    "errorCredits": "AI kvota iscrpljena.",
+    "errorCredits": "Kvota iscrpljena – pokušajte ponovno kasnije.",
     "errorConnect": "Greška pri povezivanju.",
     "errorTitle": "Greška",
     "errorConnection": "nije moguće dohvatiti.",
     "errorNoStream": "Nema streama",
     "seniorMode": "Način za starije (veći font)",
     "loginHint": "Prijavite se kako biste sačuvali razgovore na svim uređajima",
-    "previousChats": "{{count}} prethodnih razgovora"
+    "previousChats": "{{count}} prethodnih razgovora",
+    "suggestionsLoading": "Učitavanje prijedloga…"
   },
   "install": {
-    "title": "Instalirajte BibleBot",
+    "title": "Instalirajte BibleBot.Life",
     "androidDesc": "Brzi pristup izravno s početnog zaslona",
     "iosDesc": "Dodirnite «Podijeli» → «Dodaj na početni zaslon»",
     "button": "Instaliraj",
@@ -327,8 +328,8 @@
     "copiedDesc": "Tekst je kopiran u međuspremnik. Podijelite ga sada na WhatsAppu, Instagramu ili gdje god želite!",
     "copyLink": "Kopiraj tekst",
     "error": "Kopiranje nije uspjelo",
-    "impulseTitle": "BibleBot – Dnevni poticaj",
-    "chatTitle": "BibleBot – Misao dana",
+    "impulseTitle": "Vaš pratitelj – Dnevni poticaj",
+    "chatTitle": "Vaš pratitelj – Misao dana",
     "createImage": "Stvori sliku ✨",
     "generating": "Stvaranje…",
     "imageReady": "Vaša slika je spremna za dijeljenje!",
@@ -337,7 +338,10 @@
     "imageError": "Stvaranje slike nije uspjelo",
     "imageErrorDesc": "Slika nije mogla biti stvorena. Pokušajte ponovno kasnije.",
     "imageSaved": "Tekst kopiran! 📋",
-    "imageSavedDesc": "Spremite sliku i podijelite je s kopiranim tekstom na Instagramu, WhatsAppu ili gdje god želite!"
+    "imageSavedDesc": "Spremite sliku i podijelite je s kopiranim tekstom na Instagramu, WhatsAppu ili gdje god želite!",
+    "clipboardFallback": "Tekst kopiran — zalijepite ga pri objavi!",
+    "recommendedBy": "Preporučuje {{church}}",
+    "hashtagBible": "#Biblija"
   },
   "darkMode": {
     "light": "Svijetli način rada",
@@ -353,7 +357,7 @@
   },
   "tiles": {
     "sectionTitle": "Što vas muči?",
-    "sectionSubtitle": "Odaberite temu — BibleBot će vas pratiti",
+    "sectionSubtitle": "Odaberite temu — vaš pratitelj će vas pratiti",
     "baptism": {
       "title": "Pronađite stih za krštenje",
       "desc": "Savršen stih za vaše dijete",
@@ -647,7 +651,7 @@
   },
   "church": {
     "badge": "Za organizacije",
-    "heroTitle": "BibleBot za vašu organizaciju",
+    "heroTitle": "Vaš pratitelj za vašu organizaciju",
     "heroSubtitle": "Pratite svoje članove zajednice biblijskom mudrošću – digitalno, osobno i 24 sata dnevno.",
     "useCasesTitle": "Mogućnosti korištenja",
     "useCase": {
@@ -669,7 +673,7 @@
       }
     },
     "pricingTitle": "Paketi pokroviteljstva",
-    "pricingSubtitle": "Podržite BibleBot i svoju zajednicu odgovarajućim paketom pokroviteljstva.",
+    "pricingSubtitle": "Podržite vaš pratitelj i svoju zajednicu odgovarajućim paketom pokroviteljstva.",
     "popular": "Popularno",
     "free": "Besplatno",
     "perYear": "osoba / godišnje",
@@ -711,7 +715,7 @@
     "viewDirectory": "Pogledajte imenik zajednica",
     "directoryBadge": "Imenik zajednica",
     "directoryTitle": "Partnerske zajednice",
-    "directorySubtitle": "Pronađite zajednicu u svojoj blizini koja preporučuje BibleBot.",
+    "directorySubtitle": "Pronađite zajednicu u svojoj blizini koja preporučuje vaš pratitelj.",
     "searchPlaceholder": "Pretražite mjesto, ime ili denominaciju...",
     "noResults": "Još nema zajednica u imeniku.",
     "becomePartner": "Postanite partner →",
@@ -756,11 +760,17 @@
         "psychiatry": "Psihijatrija",
         "burnoutClinic": "Klinika za izgaranje",
         "hospice": "Hospicij",
-        "counseling": "Savjetovalište"
+        "counseling": "Savjetovalište",
+        "reformed": "Reformirana crkva",
+        "catholic": "Katolička crkva",
+        "lutheran": "Luteranska crkva",
+        "evangelical": "Slobodna crkva / Evangelička",
+        "freelance": "Nezavisni",
+        "other": "Ostalo"
       }
     },
     "institutionsTitle": "Također za institucije",
-    "institutionsSubtitle": "BibleBot ne prati samo zajednice – domovi za njegu i starije osobe, bolnice i zatvorska duhovna skrb također profitiraju od digitalne duhovne skrbi.",
+    "institutionsSubtitle": "Vaš pratitelj ne prati samo zajednice – domovi za njegu i starije osobe, bolnice i zatvorska duhovna skrb također profitiraju od digitalne duhovne skrbi.",
     "institution": {
       "careHome": {
         "title": "Domovi za njegu",
@@ -803,19 +813,43 @@
         "desc": "Dopunski duhovni poticaji za klijente u psihosocijalnom savjetovanju."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As vaš pratitelj is a private project, donations are not tax-deductible.",
+    "denominationsTitle": "Za sve vjeroispovijesti i voditelje ceremonija",
+    "denominationsSubtitle": "BibleBot.Life je ekumenski – za reformirane, katoličke, luteranske i slobodne evangeličke zajednice, kao i za nezavisne voditelje ceremonija.",
+    "denomination": {
+      "reformed": {
+        "title": "Reformirana crkva",
+        "desc": "Ciriška Biblija, reformirana liturgija i podrška za propovijedi – prilagođeno vašoj župi."
+      },
+      "catholic": {
+        "title": "Katolička crkva",
+        "desc": "Ekumenski prijevod, planiranje misa i sakramenti – u skladu s katoličkim tradicijama."
+      },
+      "lutheran": {
+        "title": "Luteranska crkva",
+        "desc": "Lutherova Biblija, planiranje bogoslužja i dušobrižništvo – za evangeličko-luteranske zajednice."
+      },
+      "evangelical": {
+        "title": "Slobodne crkve",
+        "desc": "Schlachter 2000, slavljenje i fleksibilan dizajn bogoslužja – za slobodne evangeličke zajednice."
+      },
+      "freelance": {
+        "title": "Nezavisni voditelji",
+        "desc": "Pogrebni govornici, vjenčani celebranti i nezavisni ceremonijari – s biografskim alatima i planiranjem govora."
+      }
+    }
   },
   "institutions": {
     "badge": "Za organizacije",
-    "heroTitle": "BibleBot za vašu instituciju",
+    "heroTitle": "Vaš pratitelj za vašu instituciju",
     "heroSubtitle": "Digitalna duhovna skrb za domove za njegu, domove za starije, bolnice i kazneno-popravne ustanove – osobno, povjerljivo i 24 sata dnevno.",
     "seniorHint": {
       "title": "Dostupan način za starije",
       "desc": "Veći font i pojednostavljeno korištenje – idealno za starije stanovnike.",
       "cta": "Isprobajte način za starije"
     },
-    "typesTitle": "Za koga je BibleBot?",
-    "useCasesTitle": "Kako se BibleBot koristi",
+    "typesTitle": "Za koga je vaš pratitelj?",
+    "useCasesTitle": "Kako se vaš pratitelj koristi",
     "useCasesSubtitle": "Konkretne primjene za svakodnevni život u vašoj instituciji.",
     "pricingTitle": "Paketi pokroviteljstva",
     "pricingSubtitle": "Isti paketi kao za zajednice – prilagođeni institucionalnim potrebama.",
@@ -849,7 +883,7 @@
       },
       "companionship": {
         "title": "Sugovornik",
-        "desc": "BibleBot strpljivo odgovara na pitanja vjere i bez vremenskog pritiska – idealno za usamljene sate."
+        "desc": "Vaš pratitelj strpljivo odgovara na pitanja vjere i bez vremenskog pritiska – idealno za usamljene sate."
       },
       "accessibility": {
         "title": "Jednostavan pristup",
@@ -921,7 +955,7 @@
     "ht": "Kreyòl"
   },
   "eulogy": {
-    "pageTitle": "Posmrtni govor – Kreirajte životopis | BibleBot",
+    "pageTitle": "Posmrtni govor – Kreirajte životopis | vaš pratitelj",
     "pageDesc": "Zabilježite uspomene na voljenu osobu i kreirajte prekrasan tekst životopisa za posmrtni govor.",
     "title": "Posmrtni govor – Životopis",
     "subtitle": "Zabilježite uspomene, kreirajte tekst, preuzmite kao PDF.",
@@ -971,7 +1005,7 @@
     "confirmationDesc": "Pronađite izreku za potvrdu i pripremite osobne tekstove."
   },
   "chatHero": {
-    "ariaLabel": "Pitajte BibleBota pitanje",
+    "ariaLabel": "Pitajte vaš pratitelja pitanje",
     "focusPlaceholder": "Napišite svoje pitanje…",
     "placeholder1": "Što me čini istinski zahvalnim?",
     "placeholder2": "Kako pronaći unutarnji mir?",
@@ -985,12 +1019,12 @@
     "suggestion3": "Na čemu sam zahvalan?"
   },
   "meta": {
-    "forChurchesDesc": "BibleBot kao partner za vašu zajednicu: rad s mladima, potvrda, duhovno savjetovanje i biblijski krugovi. Od besplatnog do premium.",
-    "forChurchesTitle": "BibleBot za crkve – Digitalno duhovno savjetovanje i biblijska pratnja",
-    "homeDesc": "BibleBot vas prati s 5 biblijskih prijevoda, metodologijom treniranja i duhovnim savjetovanjem. Anonimno, besplatno, na 36 jezika.",
-    "homeTitle": "BibleBot – Vaš osobni biblijski pratitelj | Besplatno i anonimno",
-    "loginDesc": "Prijavite se na BibleBot kako biste pripremili svoje osobne ceremonije.",
-    "loginTitle": "Prijava – BibleBot"
+    "forChurchesDesc": "Vaš pratitelj kao partner za vašu zajednicu: rad s mladima, potvrda, duhovno savjetovanje i biblijski krugovi. Od besplatnog do premium.",
+    "forChurchesTitle": "Vaš pratitelj za crkve – Digitalno duhovno savjetovanje i biblijska pratnja",
+    "homeDesc": "Vaš pratitelj vas prati s 5 biblijskih prijevoda, metodologijom treniranja i duhovnim savjetovanjem. Anonimno, besplatno, na 36 jezika.",
+    "homeTitle": "Vaš pratitelj – Vaš osobni biblijski pratitelj | Besplatno i anonimno",
+    "loginDesc": "Prijavite se na vaš pratitelj kako biste pripremili svoje osobne ceremonije.",
+    "loginTitle": "Prijava – vaš pratitelj"
   },
   "splash": {
     "patronage": "Preporučuje"
@@ -1079,7 +1113,7 @@
     "featuresSubtitle": "Promišljen sustav za cijeli radni proces — od pripreme do izvedbe.",
     "f1Title": "Snimanje glasa i transkripcija",
     "f1Desc": "Snimajte razgovore, dobivajte automatske transkripcije — temelj za dirljive tekstove ceremonija.",
-    "f2Title": "Stvaranje teksta uz pomoć umjetne inteligencije",
+    "f2Title": "Inteligentno stvaranje teksta",
     "f2Desc": "Iz svojih bilješki i transkripcija, stvarajte empatične govore, sažetke coachinga ili tekstove za razmišljanje.",
     "f3Title": "PDF izvoz i dijeljenje",
     "f3Desc": "Izvezite gotove tekstove kao PDF ili ih podijelite putem veze izravno s klijentima, rodbinom i sudionicima.",

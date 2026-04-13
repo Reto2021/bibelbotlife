@@ -44,22 +44,26 @@ Deno.serve(async (req) => {
     }
 
     // Generate AI image
-    const imagePrompt = `Create a modern, artistic, Instagram-worthy social media image (1080x1920 portrait/story format) for a daily Bible verse inspiration card. 
+    const imagePrompt = `Create a 1080x1080 square artistic background image for a Bible verse sharing card.
 
-Theme/Topic: "${topic || 'Faith'}"
-Mood: Contemplative, hopeful, modern
+Theme: "${topic || 'Faith'}"
 
-Style requirements:
-- Abstract, artistic background with warm golden and deep blue tones
-- Modern minimalist aesthetic that young adults (20-35) would share on Instagram Stories
-- Atmospheric, dreamy quality - think golden hour light, soft gradients, organic textures
-- NO text, NO letters, NO words, NO typography on the image
-- NO people, NO faces
-- Clean, elevated, magazine-quality composition
-- Subtle spiritual symbolism (light rays, nature elements, geometric patterns)
-- Color palette: warm gold (#D4911A), deep navy (#1a1a2e), soft cream, touches of amber
+CRITICAL REQUIREMENTS:
+- ABSOLUTELY NO text, letters, words, or typography anywhere in the image
+- NO people, NO faces, NO hands
+- The image will have dark text overlaid on it, so keep the overall image DARK and moody
+- Use deep, rich tones: dark navy (#0f1a2e), deep teal (#1a3a3a), muted warm amber accents
+- Avoid bright/light areas especially in the top-left quadrant and bottom strip (text will go there)
 
-This should look like a premium wellness/spirituality brand post - sophisticated, not churchy.`;
+Style:
+- Abstract, atmospheric, contemplative — like a meditation app background
+- Soft light rays, gentle bokeh, organic textures, subtle nature elements
+- Think: dark moody landscape photography meets abstract art
+- Golden hour warmth filtered through deep shadow
+- Ethereal, cinematic quality — premium wellness brand aesthetic
+- Subtle depth with layered gradients and atmospheric haze
+
+The image must work as a dark canvas where white/cream text will be highly readable on top.`;
 
     const aiResponse = await fetch(
       "https://ai.gateway.lovable.dev/v1/chat/completions",

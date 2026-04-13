@@ -16,7 +16,7 @@
     },
     "title1": "Ang Bibliya.",
     "title2": " Muling Pinag-isipan.",
-    "subtitle": "Alam ng iyong BibleBot ang Bibliya – at nagtatanong ng tamang mga tanong. Hindi tao, ngunit isang tapat na kasama. Para sa magagandang pag-uusap, malalim na tanong, at tunay na inspirasyon.",
+    "subtitle": "Alam ng iyong ang iyong kasama ang Bibliya – at nagtatanong ng tamang mga tanong. Hindi tao, ngunit isang tapat na kasama. Para sa magagandang pag-uusap, malalim na tanong, at tunay na inspirasyon.",
     "ctaTelegram": "Magsimula sa Telegram",
     "ctaMore": "Matuto Pa",
     "quote": "«Lumapit kayo sa akin, kayong lahat na napapagod at nabibigatan, at bibigyan ko kayo ng kapahingahan.»",
@@ -33,8 +33,8 @@
     "stopAudio": "Ihinto"
   },
   "features": {
-    "sectionTitle": "Paano ka Sasamahan ng Iyong BibleBot",
-    "sectionSubtitle": "Tuklasin ang iba't ibang paraan kung paano ka sasamahan ng iyong BibleBot",
+    "sectionTitle": "Ano ang inaalok ng iyong kasama",
+    "sectionSubtitle": "Tuklasin ang maraming paraan kung paano ka matutulungan ng iyong personal na kasama",
     "bible": {
       "title": "Mga Talata sa Bibliya at Interpretasyon",
       "desc": "Magtanong ng «Ano ang sinasabi ng Bibliya tungkol sa...?» at makakuha ng angkop na mga talata na may konteksto at madaling maunawaan na paliwanag."
@@ -49,7 +49,7 @@
     },
     "faith": {
       "title": "Paglalakbay sa Pananampalataya at Paghahanap kay Kristo",
-      "desc": "Naghahanap man, nagdududa, o nagpapalalim – Sasamahan ka ng iyong BibleBot sa iyong personal na paglalakbay."
+      "desc": "Naghahanap man, nagdududa, o nagpapalalim – Sasamahan ka ng iyong ang iyong kasama sa iyong personal na paglalakbay."
     },
     "daily": {
       "title": "Pang-araw-araw na Inspirasyon at Taon ng Simbahan",
@@ -63,9 +63,9 @@
   "coaching": {
     "badge": "Metodolohiya",
     "title": "Hindi lang isang Chatbot – isang Tunay na Kasama",
-    "subtitle": "Pinagsasama ng iyong BibleBot ang karunungan ng Bibliya sa mga napatunayang pamamaraan ng coaching at Positive Psychology.",
+    "subtitle": "Pinagsasama ng iyong ang iyong kasama ang karunungan ng Bibliya sa mga napatunayang pamamaraan ng coaching at Positive Psychology.",
     "journeyTitle": "Personal na Pagsasama",
-    "journeyDesc": "Sasamahan ka ng iyong BibleBot hangga't gusto mo – sa libreng pag-uusap o sa isang opsyonal na 21-araw na istraktura.",
+    "journeyDesc": "Sasamahan ka ng iyong ang iyong kasama hangga't gusto mo – sa libreng pag-uusap o sa isang opsyonal na 21-araw na istraktura.",
     "week1": "Linggo 1: Pagdating",
     "week1Desc": "Pagbuo ng tiwala, pakikinig, pag-unawa sa iyong sitwasyon. Nasaan ka? Ano ang bumabagabag sa iyo?",
     "week2": "Linggo 2: Pagpapalalim",
@@ -73,12 +73,12 @@
     "week3": "Linggo 3: Pagkilos",
     "week3Desc": "Pagtatakda ng konkretong mga hakbang, pagbabalangkas ng mga layunin, pagsisimula ng pagbabago. Ano ang iyong susunod na hakbang?",
     "openQuestionsTitle": "Mga Bukas na Tanong sa Halip na Mabilis na Sagot",
-    "openQuestionsDesc": "Hindi ka bibigyan ng iyong BibleBot ng murang payo. Sa halip, nagtatanong ito ng mga tanong na talagang mahalaga:",
+    "openQuestionsDesc": "Hindi ka bibigyan ng iyong ang iyong kasama ng murang payo. Sa halip, nagtatanong ito ng mga tanong na talagang mahalaga:",
     "openQ1": "«Ano ba talaga ang nasa likod ng kagustuhang ito?»",
     "openQ2": "«Paano mo malalaman na may nagbago?»",
     "openQ3": "«Ano ang magiging unang maliit na hakbang?»",
     "honestTitle": "Tapat sa Halip na Toxic Positive",
-    "honestDesc": "Walang «Magiging maayos din!» at walang pagpapaganda ng katotohanan. Ang iyong BibleBot ay may empatiya AT tapat:",
+    "honestDesc": "Walang «Magiging maayos din!» at walang pagpapaganda ng katotohanan. Ang iyong ang iyong kasama ay may empatiya AT tapat:",
     "honest1": "Pinangalanan din ang hindi komportableng mga talata sa Bibliya",
     "honest2": "Hinihikayat ang pagsusuri sa sarili",
     "honest3": "Pinagkaiba ang aliw sa pagtanggi",
@@ -103,7 +103,7 @@
       "author": "Worthington",
       "desc": "REACH Model para sa Proseso ng Pagpapatawad"
     },
-    "renameTip": "💡 Maaari mong bigyan ng sariling pangalan ang iyong BibleBot – upang maging tunay na <strong>iyong</strong> kasama."
+    "renameTip": "💡 Maaari mong bigyan ng sariling pangalan ang iyong ang iyong kasama – upang maging tunay na <strong>iyong</strong> kasama."
   },
   "discover": {
     "badge": "Para sa mga Mausisa",
@@ -115,7 +115,7 @@
     },
     "search": {
       "title": "Naghahanap ka ba?",
-      "text": "Marahil hindi mo alam kung ano ang hinahanap mo. Ayos lang iyon. Tutulungan ka ng iyong BibleBot na magtanong ng tamang mga tanong – sa halip na magbigay ng mabilis na sagot."
+      "text": "Marahil hindi mo alam kung ano ang hinahanap mo. Ayos lang iyon. Tutulungan ka ng iyong ang iyong kasama na magtanong ng tamang mga tanong – sa halip na magbigay ng mabilis na sagot."
     },
     "deepen": {
       "title": "Gusto mo bang palalimin?",
@@ -170,9 +170,9 @@
   },
   "faq": {
     "badge": "Mga Madalas Itanong",
-    "title": "Ano ang Dapat Mong Malaman Tungkol sa Iyong BibleBot",
+    "title": "Ano ang Dapat Mong Malaman Tungkol sa Iyong ang iyong kasama",
     "subtitle": "Mahalaga sa amin ang transparency – lalo na sa mga teologo, tagapayo, at kritikal na isip.",
-    "q1": "Ano ang pinagkaiba ng iyong BibleBot sa ChatGPT & Co.?",
+    "q1": "Ano ang pinagkaiba ng iyong ang iyong kasama sa ChatGPT & Co.?",
     "q1Generic": "Mga Generic na Chatbot:",
     "q1GenericItems": [
       "Mababaw na mga sipi ng Bibliya nang walang konteksto",
@@ -192,11 +192,11 @@
       "Nagtataguyod ng kritikal na pag-iisip bilang kapanahunan ng pananampalataya"
     ],
     "q2": "Anong mga pagsasalin ng Bibliya ang kasama?",
-    "q2Intro": "Ang iyong BibleBot ay gumagana nang ekumenikal sa mga pangunahing edisyon ng Bibliya sa wikang Aleman:",
+    "q2Intro": "Ang iyong ang iyong kasama ay gumagana nang ekumenikal sa mga pangunahing edisyon ng Bibliya sa wikang Aleman:",
     "q2Outro": "Ang lahat ng mga talata sa Bibliya ay ibinibigay na may sanggunian at makasaysayang konteksto.",
     "q3": "Anong mga siyentipikong batayan ang nasa likod nito?",
     "q3Intro": "Ang pagsasama ay batay sa pananaliksik na peer-reviewed ng Positive Psychology:",
-    "q4": "Paano tinitiyak ng iyong BibleBot ang kaligtasan sa pagpapayo?",
+    "q4": "Paano tinitiyak ng iyong ang iyong kasama ang kaligtasan sa pagpapayo?",
     "q4Items": [
       "Sa kaso ng mga pag-iisip ng pagpapakamatay o krisis → agarang pag-redirect sa Dargebotene Hand (143) at Pro Juventute (147)",
       "Walang sikolohikal o medikal na diagnosis",
@@ -206,16 +206,16 @@
       "Walang toxic positivity – tunay, tapat na pagsasama",
       "Malinaw na pinangalanan ang mga tensyon at mahirap na teksto"
     ],
-    "q5": "Nakakabit ba ang iyong BibleBot sa isang denominasyon?",
-    "q5Answer": "Hindi. Ang iyong BibleBot ay ekumenikal at pantay na nirerespeto ang mga Reformed, Katoliko, Free Church, at iba pang tradisyong Kristiyano. Sa kaso ng magkakaibang interpretasyon ng denominasyon, ang iba't ibang pananaw ay malinaw na ipinapakita – nang walang pinapaboran na tradisyon.",
-    "q6": "Pinapalitan ba ng iyong BibleBot ang pagpapayo o therapy?",
-    "q6Answer": "Hindi. Ang iyong BibleBot ay isang digital na tool para sa personal na pagbabasa at pagmumuni-muni ng Bibliya. Hindi nito pinapalitan ang propesyonal na pagpapayo, teolohikal na payo, o sikolohikal na therapy. Sa kaso ng malubhang krisis, palaging tinutukoy ng iyong BibleBot ang mga kwalipikadong ahensya ng tulong.",
-    "q7": "Hindi ba ang iyong BibleBot ay isang «feel-good bot» lang?",
-    "q7Answer": "Hindi. Ang iyong BibleBot ay nagbibigay ng aliw kung saan kailangan ang aliw – ngunit naghahamon din ito. Ang espirituwal na paglago ay nangangailangan ng pagsubok. Ang iyong BibleBot ay nagtatanong ng hindi komportableng mga follow-up na tanong, pinangalanan ang mahirap na mga teksto sa Bibliya (Job, mga salmo ng pagtangis, propetikong kritisismo) at hindi natatakot sa mga paksa tulad ng katarungan, pagsisisi, at responsibilidad. Ang tradisyong propetiko ay hindi kailanman naging komportable – at ang iyong BibleBot din.",
-    "q8": "Sino ang nasa likod ng iyong BibleBot at paano ito pinopondohan?",
-    "q8Answer": "Ang BibleBot.Life ay isang pribado, hindi komersyal na proyekto. Ito ay pinapatakbo nang boluntaryo at pinopondohan lamang sa pamamagitan ng boluntaryong donasyon. Walang advertising, walang pagbebenta ng data, at walang bayad na feature. Ang lahat ng donasyon ay direktang napupunta sa pagbabayad ng mga kasalukuyang gastos (imprastraktura, hosting, pagpapaunlad). Dahil ang BibleBot ay tumatakbo bilang isang pribadong proyekto, ang mga donasyon ay hindi deductible sa buwis.",
-    "q9": "Paano pinangangasiwaan ng iyong BibleBot ang aking data?",
-    "q9Answer": "Hindi nagse-save ang iyong BibleBot ng personal na data o mga kasaysayan ng chat. Ang bawat pag-uusap ay anonymous. Walang pag-login, walang pagsubaybay, at walang pagbabahagi ng data sa mga third party. Ang paggamit ay ganap na anonymous.",
+    "q5": "Nakakabit ba ang iyong ang iyong kasama sa isang denominasyon?",
+    "q5Answer": "Hindi. Ang iyong ang iyong kasama ay ekumenikal at pantay na nirerespeto ang mga Reformed, Katoliko, Free Church, at iba pang tradisyong Kristiyano. Sa kaso ng magkakaibang interpretasyon ng denominasyon, ang iba't ibang pananaw ay malinaw na ipinapakita – nang walang pinapaboran na tradisyon.",
+    "q6": "Pinapalitan ba ng iyong ang iyong kasama ang pagpapayo o therapy?",
+    "q6Answer": "Hindi. Ang iyong ang iyong kasama ay isang digital na tool para sa personal na pagbabasa at pagmumuni-muni ng Bibliya. Hindi nito pinapalitan ang propesyonal na pagpapayo, teolohikal na payo, o sikolohikal na therapy. Sa kaso ng malubhang krisis, palaging tinutukoy ng iyong ang iyong kasama ang mga kwalipikadong ahensya ng tulong.",
+    "q7": "Hindi ba ang iyong ang iyong kasama ay isang «feel-good bot» lang?",
+    "q7Answer": "Hindi. Ang iyong ang iyong kasama ay nagbibigay ng aliw kung saan kailangan ang aliw – ngunit naghahamon din ito. Ang espirituwal na paglago ay nangangailangan ng pagsubok. Ang iyong ang iyong kasama ay nagtatanong ng hindi komportableng mga follow-up na tanong, pinangalanan ang mahirap na mga teksto sa Bibliya (Job, mga salmo ng pagtangis, propetikong kritisismo) at hindi natatakot sa mga paksa tulad ng katarungan, pagsisisi, at responsibilidad. Ang tradisyong propetiko ay hindi kailanman naging komportable – at ang iyong ang iyong kasama din.",
+    "q8": "Sino ang nasa likod ng iyong ang iyong kasama at paano ito pinopondohan?",
+    "q8Answer": "Ang BibleBot.Life ay isang pribado, hindi komersyal na proyekto. Ito ay pinapatakbo nang boluntaryo at pinopondohan lamang sa pamamagitan ng boluntaryong donasyon. Walang advertising, walang pagbebenta ng data, at walang bayad na feature. Ang lahat ng donasyon ay direktang napupunta sa pagbabayad ng mga kasalukuyang gastos (imprastraktura, hosting, pagpapaunlad). Dahil ang ang iyong kasama ay tumatakbo bilang isang pribadong proyekto, ang mga donasyon ay hindi deductible sa buwis.",
+    "q9": "Paano pinangangasiwaan ng iyong ang iyong kasama ang aking data?",
+    "q9Answer": "Hindi nagse-save ang iyong ang iyong kasama ng personal na data o mga kasaysayan ng chat. Ang bawat pag-uusap ay anonymous. Walang pag-login, walang pagsubaybay, at walang pagbabahagi ng data sa mga third party. Ang paggamit ay ganap na anonymous.",
     "tradition": {
       "reformed": "Repormado",
       "evangelical": "Ebanghelikal",
@@ -225,39 +225,39 @@
     }
   },
   "donate": {
-    "badge": "Suportahan ang Iyong BibleBot",
-    "title": "Tulungan na Manatiling Libre ang Iyong BibleBot",
-    "subtitle": "Ang iyong BibleBot ay isang proyekto ng puso – nang walang advertising, nang walang subscription, nang walang nakatagong gastos. Upang manatili itong ganoon, umaasa ako sa boluntaryong donasyon. Ang bawat kontribusyon ay nakakatulong upang matugunan ang mga kasalukuyang gastos para sa operasyon at imprastraktura.",
+    "badge": "Suportahan ang Iyong ang iyong kasama",
+    "title": "Tulungan na Manatiling Libre ang Iyong ang iyong kasama",
+    "subtitle": "Ang iyong BibleBot.Life ay isang proyekto ng puso – nang walang advertising, nang walang subscription, nang walang nakatagong gastos. Upang manatili itong ganoon, umaasa ako sa boluntaryong donasyon. Ang bawat kontribusyon ay nakakatulong upang matugunan ang mga kasalukuyang gastos para sa operasyon at imprastraktura.",
     "bankTitle": "Donasyon sa pamamagitan ng Bank Transfer",
     "bankSubtitle": "Bawat halaga ay mahalaga – maraming salamat! 🙏",
     "recipient": "Tatanggap",
     "bank": "Bangko",
     "purpose": "Layunin",
-    "purposeValue": "Donasyon BibleBot",
+    "purposeValue": "Donasyon BibleBot.Life",
     "note": "Ang BibleBot.Life ay pinapatakbo bilang isang pribadong proyekto. Samakatuwid, ang mga donasyon ay hindi deductible sa buwis."
   },
   "refer": {
     "badge": "Ibahagi ang Salita ng Diyos",
-    "title": "Irekomenda ang BibleBot",
-    "subtitle": "May kilala ka bang nangangailangan ng paghihikayat ngayon? Ibahagi ang BibleBot – isang mensahe ay maaaring magdulot ng malaking pagbabago.",
+    "title": "Irekomenda ang ang iyong kasama",
+    "subtitle": "May kilala ka bang nangangailangan ng paghihikayat ngayon? Ibahagi ang ang iyong kasama – isang mensahe ay maaaring magdulot ng malaking pagbabago.",
     "whatsapp": "Ibahagi sa WhatsApp",
-    "whatsappMsg": "Uy, gusto kong ipakita sa iyo ang BibleBot – isang libreng kasama sa Bibliya na nakakaalam ng Bibliya at nagtatanong ng talagang magagandang tanong. Walang pag-login, anonymous, tapat. Subukan mo: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Uy, gusto kong ipakita sa iyo ang BibleBot.Life – isang libreng kasama sa Bibliya na nakakaalam ng Bibliya at nagtatanong ng talagang magagandang tanong. Walang pag-login, anonymous, tapat. Subukan mo: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Ibahagi sa Telegram",
-    "telegramMsg": "Uy, alam mo na ba ang BibleBot? Isang libreng personal na kasama sa Bibliya – tapat, anonymous, nang walang pag-login. Tingnan mo: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Uy, alam mo na ba ang BibleBot.Life? Isang libreng personal na kasama sa Bibliya – tapat, anonymous, nang walang pag-login. Tingnan mo: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Ibahagi sa E-mail",
     "emailSubject": "Maaaring interesado ka dito: BibleBot.Life",
-    "emailBody": "Kumusta!\n\nGusto kong ipakita sa iyo ang BibleBot – isang libreng kasama sa Bibliya na talagang nakakaalam ng Bibliya. Walang kinakailangang pagpaparehistro, ganap na anonymous.\n\nNagtatanong ito ng magagandang follow-up na tanong, nagpapaliwanag ng mga talata sa Bibliya sa konteksto at tapat na sinasamahan ka – kahit sa mahirap na mga paksa.\n\nSubukan mo: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nMalugod na pagbati",
+    "emailBody": "Kumusta!\n\nGusto kong ipakita sa iyo ang BibleBot.Life – isang libreng kasama sa Bibliya na talagang nakakaalam ng Bibliya. Walang kinakailangang pagpaparehistro, ganap na anonymous.\n\nNagtatanong ito ng magagandang follow-up na tanong, nagpapaliwanag ng mga talata sa Bibliya sa konteksto at tapat na sinasamahan ka – kahit sa mahirap na mga paksa.\n\nSubukan mo: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nMalugod na pagbati",
     "copy": "Kopyahin ang link",
     "copied": "Nakopya na ang link!",
     "qr": "QR Code"
   },
   "cta": {
     "title": "Hindi mo kailangang pagdaanan ito nang mag-isa",
-    "subtitle": "I-type lang sa iyong BibleBot kung ano ang bumabagabag sa iyo. Walang pag-login, walang gastos, walang paghuhusga – tanging tapat na pagsasama at ang karunungan ng Bibliya.",
+    "subtitle": "I-type lang sa iyong ang iyong kasama kung ano ang bumabagabag sa iyo. Walang pag-login, walang gastos, walang paghuhusga – tanging tapat na pagsasama at ang karunungan ng Bibliya.",
     "button": "Magsimula ng Pag-uusap Ngayon"
   },
   "footer": {
-    "tagline": "Ang iyong personal na kasama para sa isang buhay na may Bibliya",
+    "tagline": "Ang iyong personal na kasama — na may lalim ng Bibliya, walang kailangang paunang kaalaman.",
     "disclaimer": "Ang BibleBot.Life ay isang digital na tool at hindi pinapalitan ang propesyonal na pagpapayo, teolohikal na payo, o sikolohikal na therapy. Sa kaso ng matinding krisis, sumangguni sa Dargebotene Hand (Tel. 143) o Pro Juventute (Tel. 147).",
     "impressum": "Imprenta",
     "notes": "Mga Tala",
@@ -269,7 +269,7 @@
     "forChurches": "Para sa mga Simbahan"
   },
   "chat": {
-    "welcome": "Masaya akong nandito ka 🤗\n\nAko ang iyong BibleBot – ang iyong personal na kasama sa Bibliya, magagandang tanong, at konkretong inspirasyon. Walang presyon, walang paghuhusga.\n\nMaaari mo akong tanungin ng kahit ano – o sabihin lang kung ano ang bumabagabag sa iyo. 💛",
+    "welcome": "Masaya akong nandito ka 🤗\n\nAko ang iyong ang iyong kasama – ang iyong personal na kasama sa Bibliya, magagandang tanong, at konkretong inspirasyon. Walang presyon, walang paghuhusga.\n\nMaaari mo akong tanungin ng kahit ano – o sabihin lang kung ano ang bumabagabag sa iyo. 💛",
     "journeyOffer": "💡 **Tip:** Nag-aalok din ako ng **21-araw na pagsasama** – 3 linggo na may pang-araw-araw na inspirasyon, pagmumuni-muni, at konkretong mga hakbang. Sa sarili mong bilis.\n\nGusto mo bang subukan ito?",
     "suggestion1": "Kailangan ko ng nakapagpapatibay na salita ngayon",
     "suggestion2": "Ano ang sinasabi ng Bibliya kapag hindi ka sigurado?",
@@ -303,17 +303,18 @@
     "qaOk_plural": "{{count}} Sinuri ang mga sipi ✓",
     "qaWarning": "⚠️ Mga Paalala tungkol sa Katumpakan:",
     "errorTooMany": "Masyadong maraming kahilingan – mangyaring maghintay sandali.",
-    "errorCredits": "Naubos ang quota ng AI.",
+    "errorCredits": "Naubos ang quota – subukan ulit mamaya.",
     "errorConnect": "Error sa pagkonekta.",
     "errorTitle": "Error",
     "errorConnection": "hindi maabot.",
     "errorNoStream": "Walang Stream",
     "seniorMode": "Senior Mode (mas malaking font)",
     "loginHint": "Mag-log in para mapanatili ang mga pag-uusap sa lahat ng device",
-    "previousChats": "{{count}} nakaraang pag-uusap"
+    "previousChats": "{{count}} nakaraang pag-uusap",
+    "suggestionsLoading": "Naglo-load ng mga mungkahi…"
   },
   "install": {
-    "title": "I-install ang BibleBot",
+    "title": "I-install ang BibleBot.Life",
     "androidDesc": "Mabilis na pag-access direkta mula sa home screen",
     "iosDesc": "I-tap ang «Ibahagi» → «Idagdag sa Home Screen»",
     "button": "I-install",
@@ -327,8 +328,8 @@
     "copiedDesc": "Nakopya ang text sa clipboard. Ibahagi ito ngayon sa WhatsApp, Instagram o kung saan mo gusto!",
     "copyLink": "Kopyahin ang Link",
     "error": "Nabigo ang pagkopya",
-    "impulseTitle": "BibleBot – Inspirasyon ng Araw",
-    "chatTitle": "BibleBot – Kaisipan ng Araw",
+    "impulseTitle": "Ang iyong kasama – Inspirasyon ng Araw",
+    "chatTitle": "Ang iyong kasama – Kaisipan ng Araw",
     "createImage": "Gumawa ng Larawan ✨",
     "generating": "Gumagawa…",
     "imageReady": "Handa na ang iyong larawan para ibahagi!",
@@ -337,7 +338,10 @@
     "imageError": "Nabigo ang paggawa ng larawan",
     "imageErrorDesc": "Hindi nagawa ang larawan. Subukang muli sa ibang pagkakataon.",
     "imageSaved": "Nakopya ang text! 📋",
-    "imageSavedDesc": "I-save ang larawan at ibahagi ito sa nakopyang text sa Instagram, WhatsApp o kung saan mo gusto!"
+    "imageSavedDesc": "I-save ang larawan at ibahagi ito sa nakopyang text sa Instagram, WhatsApp o kung saan mo gusto!",
+    "clipboardFallback": "Nakopya ang teksto — i-paste ito sa pag-post!",
+    "recommendedBy": "Inirerekomenda ng {{church}}",
+    "hashtagBible": "#Bibliya"
   },
   "darkMode": {
     "light": "Maliwanag na Mode",
@@ -391,7 +395,7 @@
   },
   "tiles": {
     "sectionTitle": "Ano ang bumabagabag sa iyo?",
-    "sectionSubtitle": "Pumili ng paksa — sasamahan ka ng BibleBot",
+    "sectionSubtitle": "Pumili ng paksa — sasamahan ka ng ang iyong kasama",
     "baptism": {
       "title": "Maghanap ng Talata sa Binyag",
       "desc": "Ang perpektong talata para sa iyong anak",
@@ -685,7 +689,7 @@
   },
   "church": {
     "badge": "Para sa mga organisasyon",
-    "heroTitle": "BibleBot para sa iyong organisasyon",
+    "heroTitle": "Ang iyong kasama para sa iyong organisasyon",
     "heroSubtitle": "Samahan ang iyong mga miyembro ng komunidad na may karunungan sa Bibliya – digital, personal, at 24/7.",
     "useCasesTitle": "Mga Kaso ng Paggamit",
     "useCase": {
@@ -707,7 +711,7 @@
       }
     },
     "pricingTitle": "Mga Pakete ng Patronage",
-    "pricingSubtitle": "Suportahan ang BibleBot at ang iyong komunidad gamit ang angkop na pakete ng patronage.",
+    "pricingSubtitle": "Suportahan ang ang iyong kasama at ang iyong komunidad gamit ang angkop na pakete ng patronage.",
     "popular": "Sikat",
     "free": "Libre",
     "perYear": "tao / taon",
@@ -742,14 +746,14 @@
       "analytics": "Analytics Dashboard",
       "prioritySupport": "Priority Support",
       "multipleProfiles": "Maraming Profile",
-      "customBranding": "Custom Branding",
+      "customBranding": "Pasadyang Branding",
       "apiAccess": "API Access",
       "accountManager": "Personal na Account Manager"
     },
     "viewDirectory": "Tingnan ang Direktoryo ng Komunidad",
     "directoryBadge": "Direktoryo ng Komunidad",
     "directoryTitle": "Mga Partner na Komunidad",
-    "directorySubtitle": "Maghanap ng komunidad na malapit sa iyo na nagrerekomenda ng BibleBot.",
+    "directorySubtitle": "Maghanap ng komunidad na malapit sa iyo na nagrerekomenda ng ang iyong kasama.",
     "searchPlaceholder": "Maghanap ng Lokasyon, Pangalan o Denominasyon...",
     "noResults": "Wala pang komunidad sa direktoryo.",
     "becomePartner": "Maging Partner →",
@@ -794,11 +798,17 @@
         "psychiatry": "Psikiyatriya",
         "burnoutClinic": "Klinika ng burnout",
         "hospice": "Hospice",
-        "counseling": "Sentro ng pagpapayo"
+        "counseling": "Sentro ng pagpapayo",
+        "reformed": "Reformed Church",
+        "catholic": "Catholic Church",
+        "lutheran": "Lutheran Church",
+        "evangelical": "Free Church / Evangelical",
+        "freelance": "Freelance / Independent",
+        "other": "Iba pa"
       }
     },
     "institutionsTitle": "Para din sa mga Institusyon",
-    "institutionsSubtitle": "Hindi lang sinasamahan ng BibleBot ang mga komunidad – nakikinabang din ang mga bahay-alagaan, bahay-pansamantala, ospital, at pagpapayo sa bilangguan sa digital na pagpapayo.",
+    "institutionsSubtitle": "Hindi lang sinasamahan ng ang iyong kasama ang mga komunidad – nakikinabang din ang mga bahay-alagaan, bahay-pansamantala, ospital, at pagpapayo sa bilangguan sa digital na pagpapayo.",
     "institution": {
       "careHome": {
         "title": "Mga Bahay-Alagaan",
@@ -841,19 +851,43 @@
         "desc": "Karagdagang espirituwal na udyok para sa mga kliyente sa psychosocial counseling."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As ang iyong kasama is a private project, donations are not tax-deductible.",
+    "denominationsTitle": "Para sa lahat ng denominasyon at mga tagapanguna ng seremonya",
+    "denominationsSubtitle": "Ang BibleBot.Life ay ecumenical – para sa Reformed, Catholic, Lutheran, at Free Church na mga komunidad, pati na rin mga freelance na tagapanguna ng seremonya.",
+    "denomination": {
+      "reformed": {
+        "title": "Reformed Church",
+        "desc": "Zurich Bible, Reformed liturgy, at tulong sa pangangaral – iniayon para sa inyong parokya."
+      },
+      "catholic": {
+        "title": "Catholic Church",
+        "desc": "Ecumenical translation, pagpaplano ng misa at sakramento – naaayon sa tradisyong Katoliko."
+      },
+      "lutheran": {
+        "title": "Lutheran Church",
+        "desc": "Luther Bible, pagpaplano ng pagsamba at pastoral care – para sa mga Evangelical-Lutheran na komunidad."
+      },
+      "evangelical": {
+        "title": "Free Churches",
+        "desc": "Schlachter 2000, papuri at flexible na disenyo ng pagsamba – para sa mga free church na komunidad."
+      },
+      "freelance": {
+        "title": "Freelance Officiants",
+        "desc": "Mga tagapagsalita sa libing, wedding celebrants at independiyenteng mga tagapanguna ng seremonya – may mga biography tool at pagpaplano ng talumpati."
+      }
+    }
   },
   "institutions": {
     "badge": "Para sa mga organisasyon",
-    "heroTitle": "BibleBot para sa Iyong Institusyon",
+    "heroTitle": "Ang iyong kasama para sa Iyong Institusyon",
     "heroSubtitle": "Digital na pagpapayo para sa mga bahay-alagaan, bahay-pansamantala, ospital, at pagpapatupad ng hustisya – personal, kumpidensyal, at 24/7.",
     "seniorHint": {
       "title": "Available ang Senior Mode",
       "desc": "Mas malaking font at pinasimpleng operasyon – perpekto para sa mga nakatatandang residente.",
       "cta": "Subukan ang Senior Mode"
     },
-    "typesTitle": "Para Kanino ang BibleBot?",
-    "useCasesTitle": "Paano Ginagamit ang BibleBot",
+    "typesTitle": "Para Kanino ang ang iyong kasama?",
+    "useCasesTitle": "Paano Ginagamit ang ang iyong kasama",
     "useCasesSubtitle": "Mga konkretong aplikasyon para sa pang-araw-araw na buhay sa iyong institusyon.",
     "pricingTitle": "Mga Pakete ng Patronage",
     "pricingSubtitle": "Parehong mga pakete tulad ng para sa mga komunidad – inangkop sa mga pangangailangan ng institusyon.",
@@ -887,7 +921,7 @@
       },
       "companionship": {
         "title": "Kasama sa Pag-uusap",
-        "desc": "Sinagot ng BibleBot ang mga tanong sa pananampalataya nang may pasensya at walang presyon ng oras – perpekto para sa malungkot na oras."
+        "desc": "Sinagot ng ang iyong kasama ang mga tanong sa pananampalataya nang may pasensya at walang presyon ng oras – perpekto para sa malungkot na oras."
       },
       "accessibility": {
         "title": "Madaling Pag-access",
@@ -921,7 +955,7 @@
     }
   },
   "chatHero": {
-    "ariaLabel": "Magtanong sa BibleBot",
+    "ariaLabel": "Magtanong sa ang iyong kasama",
     "focusPlaceholder": "Isulat ang iyong tanong…",
     "placeholder1": "Ano ang tunay na nagpapasalamat sa akin?",
     "placeholder2": "Paano ko matutuklasan ang kapayapaan sa kalooban?",
@@ -941,12 +975,12 @@
     "patronage": "Inirerekomenda ni"
   },
   "meta": {
-    "forChurchesDesc": "BibleBot bilang katuwang para sa iyong komunidad: gawaing kabataan, kumpirmasyon, pagpapayo at mga grupo ng Bibliya. Mula libre hanggang premium.",
-    "forChurchesTitle": "BibleBot para sa mga Simbahan – Digital na Pagpapayo at Gabay sa Bibliya",
-    "homeDesc": "Sinamahan ka ng BibleBot na may 5 pagsasalin ng Bibliya, pamamaraan ng pagtuturo, at pagpapayo. Anonymous, libre, sa 36 na wika.",
-    "homeTitle": "BibleBot – Ang Iyong Personal na Kasama sa Bibliya | Libre & Anonymous",
-    "loginDesc": "Mag-log in sa BibleBot upang ihanda ang iyong mga personal na seremonya.",
-    "loginTitle": "Mag-log In – BibleBot"
+    "forChurchesDesc": "Ang iyong kasama bilang katuwang para sa iyong komunidad: gawaing kabataan, kumpirmasyon, pagpapayo at mga grupo ng Bibliya. Mula libre hanggang premium.",
+    "forChurchesTitle": "Ang iyong kasama para sa mga Simbahan – Digital na Pagpapayo at Gabay sa Bibliya",
+    "homeDesc": "Sinamahan ka ng ang iyong kasama na may 5 pagsasalin ng Bibliya, pamamaraan ng pagtuturo, at pagpapayo. Anonymous, libre, sa 36 na wika.",
+    "homeTitle": "Ang iyong kasama – Ang Iyong Personal na Kasama sa Bibliya | Libre & Anonymous",
+    "loginDesc": "Mag-log in sa ang iyong kasama upang ihanda ang iyong mga personal na seremonya.",
+    "loginTitle": "Mag-log In – ang iyong kasama"
   },
   "meinBereich": {
     "title": "Aking Lugar",
@@ -965,7 +999,7 @@
     "confirmationDesc": "Maghanap ng talata para sa kumpil at maghanda ng mga personal na teksto."
   },
   "eulogy": {
-    "pageTitle": "Eulogy – Gumawa ng Talambuhay | BibleBot",
+    "pageTitle": "Eulogy – Gumawa ng Talambuhay | ang iyong kasama",
     "pageDesc": "Panatilihin ang mga alaala ng isang minamahal at lumikha ng isang magandang teksto ng talambuhay para sa eulogy.",
     "title": "Eulogy – Talambuhay",
     "subtitle": "Panatilihin ang mga alaala, lumikha ng teksto, i-download bilang PDF.",
@@ -1082,7 +1116,7 @@
     "featuresSubtitle": "Isang maingat na sistema para sa buong workflow — mula sa paghahanda hanggang sa pagpapatupad.",
     "f1Title": "Pagre-record ng Boses at Transkripsyon",
     "f1Desc": "Mag-record ng mga pag-uusap, makakuha ng awtomatikong transkripsyon — ang pundasyon para sa paglipat ng mga teksto ng seremonya.",
-    "f2Title": "Paggawa ng Teksto na Tinulungan ng AI",
+    "f2Title": "Matalinong Paggawa ng Teksto",
     "f2Desc": "Mula sa iyong mga tala at transkripsyon, lumikha ng mga empathetic na talumpati, buod ng coaching, o mga teksto ng pagmumuni-muni.",
     "f3Title": "PDF Export at Pagbabahagi",
     "f3Desc": "I-export ang mga natapos na teksto bilang PDF o ibahagi sa pamamagitan ng link nang direkta sa mga kliyente, kamag-anak, at kalahok.",

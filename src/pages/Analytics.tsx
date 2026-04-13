@@ -8,15 +8,28 @@ import {
   BarChart3, Eye, MousePointer, Users, Smartphone, Monitor, Tablet,
   MessageCircle, Flame, Trophy, Bell, TrendingUp, Download, Globe,
   Target, CircleDot, Search, Clock, CalendarDays, Building2, Link2,
+  Info, ArrowDownRight, AlertTriangle,
 } from "lucide-react";
 import {
   BarChart, Bar, XAxis, YAxis, Tooltip as RTooltip, ResponsiveContainer,
   PieChart, Pie, Cell, AreaChart, Area, CartesianGrid,
 } from "recharts";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 type AnalyticsData = {
   period: { days: number; since: string };
-  summary: { totalPageviews: number; totalEvents: number; uniqueSessions: number; avgSessionDurationSec?: number };
+  summary: {
+    totalPageviews: number;
+    totalEvents: number;
+    uniqueSessions: number;
+    avgSessionDurationSec?: number;
+    bounceRate?: number;
+  };
   topPages: { path: string; count: number }[];
   topEvents: { name: string; count: number }[];
   topReferrers?: { source: string; count: number }[];
@@ -43,6 +56,12 @@ type AnalyticsData = {
     avgMessagesPerUser: number;
     dailyActivity: Record<string, number>;
   };
+  webChat?: {
+    uniqueUsers: number;
+    totalMessages: number;
+    avgMessagesPerUser: number;
+    dailyActivity: Record<string, number>;
+  };
   tiles?: {
     totalClicks: number;
     topTiles: { tile: string; count: number }[];
@@ -54,7 +73,6 @@ type AnalyticsData = {
     weakestAreas: { area: string; count: number }[];
   };
   sevenWhys?: { starts: number };
-  // New sections
   perChurch?: Record<string, {
     churchName: string;
     planTier: string;
@@ -62,8 +80,17 @@ type AnalyticsData = {
     pageviews: number;
     events: number;
     sessions: number;
+    avgSessionDurationSec?: number;
     dailyPageviews: Record<string, number>;
     topEvents: { name: string; count: number }[];
+    utmSources?: { source: string; count: number }[];
+    utmMediums?: { medium: string; count: number }[];
+    weeklyTrend?: { week: string; pageviews: number; sessions: number; events: number }[];
+    funnel?: {
+      widgetVisits: number;
+      chatStarts: number;
+      contactRequests: number;
+    };
   }>;
   utmSources?: { source: string; count: number }[];
   utmMediums?: { medium: string; count: number }[];
@@ -79,8 +106,9 @@ const COLORS = [
   "hsl(var(--chart-5))",
 ];
 
-const StatCard = ({ icon: Icon, label, value, sub, color = "text-primary" }: {
-  icon: any; label: string; value: string | number; sub?: string; color?: string;
+/** KPI card with optional info tooltip */
+const StatCard = ({ icon: Icon, label, value, sub, tooltip, color = "text-primary" }: {
+  icon: any; label: string; value: string | number; sub?: string; tooltip?: string; color?: string;
 }) => (
   <Card>
     <CardContent className="pt-5 pb-4">
@@ -88,9 +116,23 @@ const StatCard = ({ icon: Icon, label, value, sub, color = "text-primary" }: {
         <div className={`p-2 rounded-xl bg-primary/10 ${color}`}>
           <Icon className="h-5 w-5" />
         </div>
-        <div>
+        <div className="flex-1 min-w-0">
           <p className="text-2xl font-bold text-foreground">{value}</p>
-          <p className="text-xs text-muted-foreground">{label}</p>
+          <div className="flex items-center gap-1">
+            <p className="text-xs text-muted-foreground">{label}</p>
+            {tooltip && (
+              <TooltipProvider delayDuration={200}>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Info className="h-3 w-3 text-muted-foreground/50 cursor-help shrink-0" />
+                  </TooltipTrigger>
+                  <TooltipContent side="bottom" className="max-w-[220px] text-xs">
+                    {tooltip}
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            )}
+          </div>
           {sub && <p className="text-[10px] text-muted-foreground/70">{sub}</p>}
         </div>
       </div>
@@ -207,6 +249,10 @@ const Analytics = () => {
     .sort(([a], [b]) => a.localeCompare(b))
     .map(([date, count]) => ({ date: date.slice(5), Nachrichten: count }));
 
+  const webChatDailyData = Object.entries(data?.webChat?.dailyActivity || {})
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([date, count]) => ({ date: date.slice(5), Nachrichten: count }));
+
   const subscriberData = Object.entries(data?.subscribers?.byChannel || {}).map(([channel, total]) => ({
     channel: channel.charAt(0).toUpperCase() + channel.slice(1),
     total,
@@ -247,12 +293,51 @@ const Analytics = () => {
         </div>
 
         {/* Summary stats */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
-          <StatCard icon={Eye} label="Seitenaufrufe" value={data?.summary.totalPageviews || 0} />
-          <StatCard icon={Users} label="Sessions" value={data?.summary.uniqueSessions || 0} />
-          <StatCard icon={Clock} label="Ø Verweildauer" value={formatDuration(data?.summary.avgSessionDurationSec || 0)} />
-          <StatCard icon={MousePointer} label="Events" value={data?.summary.totalEvents || 0} />
-          <StatCard icon={MessageCircle} label="Chat-Nutzer" value={data?.chat?.uniqueUsers || 0} sub={`∅ ${data?.chat?.avgMessagesPerUser || 0} Nachr./Person`} />
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
+          <StatCard
+            icon={Eye}
+            label="Seitenaufrufe"
+            value={data?.summary.totalPageviews || 0}
+            tooltip="Gesamtzahl aller geladenen Seiten im Zeitraum. Mehrfachaufrufe durch denselben Besucher zählen einzeln."
+          />
+          <StatCard
+            icon={Users}
+            label="Sessions"
+            value={data?.summary.uniqueSessions || 0}
+            tooltip="Anzahl eindeutiger Browser-Sitzungen. Ein Nutzer der die Seite schliesst und wieder öffnet zählt als neue Session."
+          />
+          <StatCard
+            icon={Clock}
+            label="Ø Verweildauer"
+            value={formatDuration(data?.summary.avgSessionDurationSec || 0)}
+            tooltip="Durchschnittliche Zeit, die ein Besucher auf der Seite verbringt. Wird per Heartbeat alle 30s gemessen — auch wenn nur eine Seite besucht wird."
+          />
+          <StatCard
+            icon={ArrowDownRight}
+            label="Absprungrate"
+            value={`${data?.summary.bounceRate ?? 0}%`}
+            tooltip="Anteil der Besucher, die nur eine einzige Seite ansehen und keine Interaktion ausführen (z.B. Chat, Kachel-Klick)."
+          />
+          <StatCard
+            icon={MousePointer}
+            label="Interaktionen"
+            value={data?.summary.totalEvents || 0}
+            tooltip="Gesamtzahl aller bewussten Nutzer-Aktionen: Kachel-Klicks, Chat-Nachrichten, Quiz-Starts, Lebensrad-Abschlüsse etc."
+          />
+          <StatCard
+            icon={MessageCircle}
+            label="Chat-Nutzer (Telegram)"
+            value={data?.chat?.uniqueUsers || 0}
+            sub={`∅ ${data?.chat?.avgMessagesPerUser || 0} Nachr./Person`}
+            tooltip="Eindeutige Telegram-Nutzer, die dem Bot geschrieben haben. 'Nachr./Person' = durchschnittliche Anzahl gesendeter Nachrichten pro Nutzer."
+          />
+          <StatCard
+            icon={Globe}
+            label="Chat-Nutzer (Web)"
+            value={data?.webChat?.uniqueUsers || 0}
+            sub={`∅ ${data?.webChat?.avgMessagesPerUser || 0} Nachr./Person`}
+            tooltip="Eindeutige Web-Besucher, die den Chat auf der Webseite genutzt haben (pro Browser-Session gezählt)."
+          />
         </div>
 
         {/* Daily pageviews chart */}
@@ -386,7 +471,7 @@ const Analytics = () => {
           </Card>
         </div>
 
-        {/* ════ NEW: Per-Church Breakdown ════ */}
+        {/* ════ Per-Church Breakdown ════ */}
         {churchList.length > 0 && (
           <Card>
             <CardHeader className="pb-2">
@@ -402,52 +487,204 @@ const Analytics = () => {
                     <TableHead>Gemeinde</TableHead>
                     <TableHead className="text-right">Seitenaufrufe</TableHead>
                     <TableHead className="text-right">Besucher</TableHead>
+                    <TableHead className="text-right">Ø Verweildauer</TableHead>
                     <TableHead className="text-right">Events</TableHead>
                     <TableHead className="hidden md:table-cell">Plan</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
-                  {churchList.map(([slug, c]) => (
+                  {churchList.map(([slug, c]) => {
+                    // Anomaly detection: check if latest week dropped >50% vs previous
+                    const trend = c.weeklyTrend || [];
+                    let anomaly = false;
+                    let dropPct = 0;
+                    if (trend.length >= 2) {
+                      const prev = trend[trend.length - 2].sessions;
+                      const curr = trend[trend.length - 1].sessions;
+                      if (prev > 0) {
+                        dropPct = Math.round(((prev - curr) / prev) * 100);
+                        anomaly = dropPct > 50;
+                      }
+                    }
+                    return (
                     <TableRow key={slug}>
                       <TableCell className="font-medium">
                         <div className="flex items-center gap-2">
                           {!c.isActive && <span className="h-2 w-2 rounded-full bg-destructive" />}
+                          {anomaly && (
+                            <TooltipProvider delayDuration={200}>
+                              <Tooltip>
+                                <TooltipTrigger asChild>
+                                  <AlertTriangle className="h-4 w-4 text-amber-500 shrink-0" />
+                                </TooltipTrigger>
+                                <TooltipContent side="right" className="max-w-[220px] text-xs">
+                                  Traffic-Einbruch: Besucher sind um {dropPct}% gegenüber der Vorwoche gesunken
+                                </TooltipContent>
+                              </Tooltip>
+                            </TooltipProvider>
+                          )}
                           {c.churchName}
                           <span className="text-xs text-muted-foreground">({slug})</span>
                         </div>
                       </TableCell>
                       <TableCell className="text-right font-mono">{c.pageviews}</TableCell>
                       <TableCell className="text-right font-mono">{c.sessions}</TableCell>
+                      <TableCell className="text-right font-mono">{formatDuration(c.avgSessionDurationSec || 0)}</TableCell>
                       <TableCell className="text-right font-mono">{c.events}</TableCell>
                       <TableCell className="hidden md:table-cell">
                         <Badge variant="secondary" className="text-xs">{c.planTier}</Badge>
                       </TableCell>
                     </TableRow>
-                  ))}
+                    );
+                  })}
                 </TableBody>
               </Table>
             </CardContent>
           </Card>
         )}
 
+        {/* ════ Per-Church UTM Breakdown ════ */}
+        {churchList.filter(([, c]) => (c.utmSources?.length || 0) > 0 || (c.utmMediums?.length || 0) > 0).length > 0 && (
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-base flex items-center gap-2">
+                <Link2 className="h-4 w-4 text-primary" />
+                Traffic-Kanäle pro Gemeinde
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-6">
+                {churchList
+                  .filter(([, c]) => (c.utmSources?.length || 0) > 0 || (c.utmMediums?.length || 0) > 0)
+                  .map(([slug, c]) => (
+                  <div key={slug} className="space-y-3">
+                    <div className="flex items-center gap-2">
+                      <h3 className="text-sm font-semibold text-foreground">{c.churchName}</h3>
+                      <Badge variant="outline" className="text-[10px]">{slug}</Badge>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {/* UTM Sources */}
+                      <div className="space-y-1.5">
+                        <p className="text-xs font-medium text-muted-foreground mb-1">Quellen (utm_source)</p>
+                        {c.utmSources?.map((s) => {
+                          const max = c.utmSources?.[0]?.count || 1;
+                          return (
+                            <div key={s.source} className="space-y-0.5">
+                              <div className="flex justify-between items-center">
+                                <span className="text-xs text-foreground truncate">{s.source}</span>
+                                <span className="text-xs text-muted-foreground ml-2">{s.count}</span>
+                              </div>
+                              <div className="h-1.5 bg-muted rounded-full overflow-hidden">
+                                <div className="h-full bg-primary rounded-full" style={{ width: `${(s.count / max) * 100}%` }} />
+                              </div>
+                            </div>
+                          );
+                        })}
+                        {!c.utmSources?.length && <p className="text-xs text-muted-foreground">–</p>}
+                      </div>
+                      {/* UTM Mediums */}
+                      <div className="space-y-1.5">
+                        <p className="text-xs font-medium text-muted-foreground mb-1">Medien (utm_medium)</p>
+                        {c.utmMediums?.map((m) => {
+                          const max = c.utmMediums?.[0]?.count || 1;
+                          return (
+                            <div key={m.medium} className="space-y-0.5">
+                              <div className="flex justify-between items-center">
+                                <span className="text-xs text-foreground truncate">{m.medium}</span>
+                                <span className="text-xs text-muted-foreground ml-2">{m.count}</span>
+                              </div>
+                              <div className="h-1.5 bg-muted rounded-full overflow-hidden">
+                                <div className="h-full bg-chart-2 rounded-full" style={{ width: `${(m.count / max) * 100}%` }} />
+                              </div>
+                            </div>
+                          );
+                        })}
+                        {!c.utmMediums?.length && <p className="text-xs text-muted-foreground">–</p>}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        )}
+
+        {/* ════ Conversion Funnel pro Gemeinde ════ */}
+        {churchList.filter(([, c]) => (c.funnel?.widgetVisits || 0) + (c.funnel?.chatStarts || 0) + (c.funnel?.contactRequests || 0) > 0).length > 0 && (
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-base flex items-center gap-2">
+                <TrendingUp className="h-4 w-4 text-primary" />
+                Conversion-Funnel pro Gemeinde
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-5">
+                {churchList
+                  .filter(([, c]) => (c.funnel?.widgetVisits || 0) + (c.funnel?.chatStarts || 0) + (c.funnel?.contactRequests || 0) > 0)
+                  .map(([slug, c]) => {
+                    const f = c.funnel!;
+                    const max = Math.max(f.widgetVisits, f.chatStarts, f.contactRequests, 1);
+                    const steps = [
+                      { label: "Widget-Besuch", value: f.widgetVisits, color: "bg-primary" },
+                      { label: "Chat-Start", value: f.chatStarts, color: "bg-chart-2" },
+                      { label: "Kontaktanfrage", value: f.contactRequests, color: "bg-chart-3" },
+                    ];
+                    const convChat = f.widgetVisits > 0 ? Math.round((f.chatStarts / f.widgetVisits) * 100) : 0;
+                    const convContact = f.chatStarts > 0 ? Math.round((f.contactRequests / f.chatStarts) * 100) : 0;
+                    return (
+                      <div key={slug} className="space-y-2">
+                        <div className="flex items-center gap-2">
+                          <h3 className="text-sm font-semibold text-foreground">{c.churchName}</h3>
+                          <Badge variant="outline" className="text-[10px]">{slug}</Badge>
+                        </div>
+                        <div className="space-y-1.5">
+                          {steps.map((step) => (
+                            <div key={step.label} className="space-y-0.5">
+                              <div className="flex justify-between items-center">
+                                <span className="text-xs text-foreground">{step.label}</span>
+                                <span className="text-xs font-mono text-muted-foreground">{step.value}</span>
+                              </div>
+                              <div className="h-2 bg-muted rounded-full overflow-hidden">
+                                <div className={`h-full ${step.color} rounded-full transition-all`} style={{ width: `${(step.value / max) * 100}%` }} />
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                        <div className="flex gap-4 text-[10px] text-muted-foreground">
+                          <span>Widget → Chat: <strong className="text-foreground">{convChat}%</strong></span>
+                          <span>Chat → Kontakt: <strong className="text-foreground">{convContact}%</strong></span>
+                        </div>
+                      </div>
+                    );
+                  })}
+              </div>
+            </CardContent>
+          </Card>
+        )}
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {/* Chat activity */}
+          {/* Telegram Chat activity */}
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-base flex items-center gap-2">
                 <MessageCircle className="h-4 w-4 text-primary" />
-                Chat-Aktivität
+                Telegram-Chat
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="grid grid-cols-2 gap-3 mb-4">
-                <div className="bg-primary/5 rounded-lg p-3 text-center">
-                  <p className="text-xl font-bold text-foreground">{data?.chat?.totalUserMessages || 0}</p>
-                  <p className="text-[10px] text-muted-foreground">User-Nachrichten</p>
+              <div className="grid grid-cols-3 gap-2 mb-4">
+                <div className="bg-primary/5 rounded-lg p-2.5 text-center">
+                  <p className="text-lg font-bold text-foreground">{data?.chat?.uniqueUsers || 0}</p>
+                  <p className="text-[10px] text-muted-foreground">Nutzer</p>
                 </div>
-                <div className="bg-primary/5 rounded-lg p-3 text-center">
-                  <p className="text-xl font-bold text-foreground">{data?.chat?.totalBotMessages || 0}</p>
-                  <p className="text-[10px] text-muted-foreground">Bot-Antworten</p>
+                <div className="bg-primary/5 rounded-lg p-2.5 text-center">
+                  <p className="text-lg font-bold text-foreground">{data?.chat?.totalUserMessages || 0}</p>
+                  <p className="text-[10px] text-muted-foreground">Nachrichten</p>
+                </div>
+                <div className="bg-primary/5 rounded-lg p-2.5 text-center">
+                  <p className="text-lg font-bold text-foreground">{data?.chat?.totalBotMessages || 0}</p>
+                  <p className="text-[10px] text-muted-foreground">Antworten</p>
                 </div>
               </div>
               {chatDailyData.length > 0 && (
@@ -462,6 +699,46 @@ const Analytics = () => {
                   </ResponsiveContainer>
                 </div>
               )}
+              {chatDailyData.length === 0 && <p className="text-sm text-muted-foreground">Keine Telegram-Daten</p>}
+            </CardContent>
+          </Card>
+
+          {/* Web Chat activity */}
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-base flex items-center gap-2">
+                <Globe className="h-4 w-4 text-primary" />
+                Web-Chat
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-3 gap-2 mb-4">
+                <div className="bg-primary/5 rounded-lg p-2.5 text-center">
+                  <p className="text-lg font-bold text-foreground">{data?.webChat?.uniqueUsers || 0}</p>
+                  <p className="text-[10px] text-muted-foreground">Nutzer</p>
+                </div>
+                <div className="bg-primary/5 rounded-lg p-2.5 text-center">
+                  <p className="text-lg font-bold text-foreground">{data?.webChat?.totalMessages || 0}</p>
+                  <p className="text-[10px] text-muted-foreground">Nachrichten</p>
+                </div>
+                <div className="bg-primary/5 rounded-lg p-2.5 text-center">
+                  <p className="text-lg font-bold text-foreground">{data?.webChat?.avgMessagesPerUser || 0}</p>
+                  <p className="text-[10px] text-muted-foreground">∅/Nutzer</p>
+                </div>
+              </div>
+              {webChatDailyData.length > 0 && (
+                <div className="h-32">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <BarChart data={webChatDailyData}>
+                      <XAxis dataKey="date" tick={{ fontSize: 10 }} className="fill-muted-foreground" />
+                      <YAxis tick={{ fontSize: 10 }} className="fill-muted-foreground" allowDecimals={false} />
+                      <RTooltip contentStyle={{ background: "hsl(var(--card))", border: "1px solid hsl(var(--border))", borderRadius: 8, fontSize: 12 }} />
+                      <Bar dataKey="Nachrichten" fill="hsl(var(--chart-3))" radius={[4, 4, 0, 0]} />
+                    </BarChart>
+                  </ResponsiveContainer>
+                </div>
+              )}
+              {webChatDailyData.length === 0 && <p className="text-sm text-muted-foreground">Keine Web-Chat-Daten</p>}
             </CardContent>
           </Card>
 

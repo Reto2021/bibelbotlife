@@ -16,7 +16,7 @@
     },
     "title1": "성경.",
     "title2": " 새롭게 생각하다.",
-    "subtitle": "당신의 BibleBot은 성경을 알고 올바른 질문을 합니다. 사람이 아닌 정직한 동반자입니다. 좋은 대화, 깊은 질문, 진정한 영감을 위해.",
+    "subtitle": "당신의 당신의 동반자은 성경을 알고 올바른 질문을 합니다. 사람이 아닌 정직한 동반자입니다. 좋은 대화, 깊은 질문, 진정한 영감을 위해.",
     "ctaTelegram": "Telegram으로 시작하기",
     "ctaMore": "더 알아보기",
     "quote": "«수고하고 무거운 짐 진 자들아 다 내게로 오라 내가 너희를 쉬게 하리라.»",
@@ -33,8 +33,8 @@
     "stopAudio": "정지"
   },
   "features": {
-    "sectionTitle": "BibleBot이 당신을 돕는 방법",
-    "sectionSubtitle": "BibleBot이 당신을 도울 수 있는 다양한 방법을 알아보세요",
+    "sectionTitle": "당신의 동반자가 제공하는 것",
+    "sectionSubtitle": "개인 동반자가 당신을 지원할 수 있는 다양한 방법을 발견하세요",
     "bible": {
       "title": "성경 구절 및 해석",
       "desc": "«성경은 ...에 대해 무엇이라고 말합니까?»라고 질문하고, 문맥과 이해하기 쉬운 설명이 포함된 적절한 구절을 받으세요."
@@ -49,7 +49,7 @@
     },
     "faith": {
       "title": "신앙의 길 & 그리스도를 찾기",
-      "desc": "찾고 있든, 의심하고 있든, 심화하고 있든 – 당신의 BibleBot은 당신의 개인적인 길을 동반합니다."
+      "desc": "찾고 있든, 의심하고 있든, 심화하고 있든 – 당신의 당신의 동반자은 당신의 개인적인 길을 동반합니다."
     },
     "daily": {
       "title": "매일의 영감 & 교회력",
@@ -63,9 +63,9 @@
   "coaching": {
     "badge": "방법론",
     "title": "단순한 챗봇이 아닌 진정한 동반자",
-    "subtitle": "당신의 BibleBot은 성경적 지혜와 검증된 코칭 방법, 긍정 심리학을 결합합니다.",
+    "subtitle": "당신의 당신의 동반자은 성경적 지혜와 검증된 코칭 방법, 긍정 심리학을 결합합니다.",
     "journeyTitle": "개인적인 동반",
-    "journeyDesc": "당신의 BibleBot은 당신이 원하는 만큼 당신을 동반합니다 – 자유로운 대화 또는 선택적인 21일 구조로.",
+    "journeyDesc": "당신의 당신의 동반자은 당신이 원하는 만큼 당신을 동반합니다 – 자유로운 대화 또는 선택적인 21일 구조로.",
     "week1": "1주차: 적응하기",
     "week1Desc": "신뢰를 쌓고, 경청하고, 당신의 상황을 이해합니다. 당신은 어디에 서 있습니까? 무엇이 당신을 괴롭힙니까?",
     "week2": "2주차: 심화하기",
@@ -73,12 +73,12 @@
     "week3": "3주차: 행동하기",
     "week3Desc": "구체적인 단계를 설정하고, 목표를 공식화하고, 변화를 시작합니다. 당신의 다음 단계는 무엇입니까?",
     "openQuestionsTitle": "빠른 답변 대신 열린 질문",
-    "openQuestionsDesc": "당신의 BibleBot은 값싼 조언을 주지 않습니다. 대신, 진정으로 중요한 질문을 합니다:",
+    "openQuestionsDesc": "당신의 당신의 동반자은 값싼 조언을 주지 않습니다. 대신, 진정으로 중요한 질문을 합니다:",
     "openQ1": "«이 소원 뒤에는 무엇이 숨어 있습니까?»",
     "openQ2": "«무엇이 변했다고 어떻게 알 수 있습니까?»",
     "openQ3": "«첫 번째 작은 단계는 무엇일까요?»",
     "honestTitle": "독성 긍정 대신 정직함",
-    "honestDesc": "«다 잘 될 거야!»나 미화는 없습니다. 당신의 BibleBot은 공감적이고 정직합니다:",
+    "honestDesc": "«다 잘 될 거야!»나 미화는 없습니다. 당신의 당신의 동반자은 공감적이고 정직합니다:",
     "honest1": "불편한 성경 구절도 언급합니다",
     "honest2": "자기 성찰을 촉구합니다",
     "honest3": "위로와 회피를 구별합니다",
@@ -103,7 +103,7 @@
       "author": "워딩턴",
       "desc": "용서 과정을 위한 REACH 모델"
     },
-    "renameTip": "💡 당신은 당신의 BibleBot에게 자신만의 이름을 줄 수 있습니다 – 진정으로 <strong>당신의</strong> 동반자가 되도록."
+    "renameTip": "💡 당신은 당신의 당신의 동반자에게 자신만의 이름을 줄 수 있습니다 – 진정으로 <strong>당신의</strong> 동반자가 되도록."
   },
   "discover": {
     "badge": "궁금한 사람들을 위해",
@@ -115,7 +115,7 @@
     },
     "search": {
       "title": "찾고 있습니까?",
-      "text": "무엇을 찾고 있는지 정확히 모를 수도 있습니다. 괜찮습니다. 당신의 BibleBot은 빠른 답변을 제공하는 대신 올바른 질문을 하도록 돕습니다."
+      "text": "무엇을 찾고 있는지 정확히 모를 수도 있습니다. 괜찮습니다. 당신의 당신의 동반자은 빠른 답변을 제공하는 대신 올바른 질문을 하도록 돕습니다."
     },
     "deepen": {
       "title": "심화하고 싶습니까?",
@@ -170,9 +170,9 @@
   },
   "faq": {
     "badge": "자주 묻는 질문",
-    "title": "BibleBot에 대해 알아야 할 사항",
+    "title": "당신의 동반자에 대해 알아야 할 사항",
     "subtitle": "투명성은 우리에게 중요합니다 – 특히 신학자, 상담사, 비판적인 사람들에게.",
-    "q1": "BibleBot과 ChatGPT & Co.의 차이점은 무엇입니까?",
+    "q1": "당신의 동반자과 ChatGPT & Co.의 차이점은 무엇입니까?",
     "q1Generic": "일반 챗봇:",
     "q1GenericItems": [
       "문맥 없는 피상적인 성경 인용",
@@ -192,11 +192,11 @@
       "신앙 성숙으로서 비판적 사고 촉진"
     ],
     "q2": "어떤 성경 번역본이 저장되어 있습니까?",
-    "q2Intro": "당신의 BibleBot은 주요 독일어 성경 번역본과 함께 에큐메니컬하게 작동합니다:",
+    "q2Intro": "당신의 당신의 동반자은 주요 독일어 성경 번역본과 함께 에큐메니컬하게 작동합니다:",
     "q2Outro": "모든 성경 구절은 출처와 역사적 문맥과 함께 제공됩니다.",
     "q3": "어떤 과학적 근거가 있습니까?",
     "q3Intro": "동반은 긍정 심리학의 동료 심사 연구를 기반으로 합니다:",
-    "q4": "BibleBot은 상담 안전을 어떻게 보장합니까?",
+    "q4": "당신의 동반자은 상담 안전을 어떻게 보장합니까?",
     "q4Items": [
       "자살 충동 또는 위기 시 → 즉시 Dargebotene Hand (143) 및 Pro Juventute (147)로 연결",
       "심리적 또는 의학적 진단 없음",
@@ -206,16 +206,16 @@
       "독성 긍정 없음 – 진정하고 정직한 동반",
       "긴장과 어려운 텍스트를 공개적으로 언급"
     ],
-    "q5": "BibleBot은 교파에 묶여 있습니까?",
-    "q5Answer": "아니요. 당신의 BibleBot은 에큐메니컬 지향적이며 개혁교회, 가톨릭, 자유교회 및 기타 기독교 전통을 동등하게 존중합니다. 교파적으로 다른 해석의 경우, 다양한 관점이 투명하게 제시됩니다 – 어떤 전통도 선호하지 않습니다.",
-    "q6": "BibleBot이 상담이나 치료를 대체합니까?",
-    "q6Answer": "아니요. 당신의 BibleBot은 개인 성경 읽기와 성찰을 위한 디지털 도구입니다. 전문 상담, 신학적 조언 또는 심리 치료를 대체하지 않습니다. 심각한 위기 시, 당신의 BibleBot은 항상 자격을 갖춘 기관으로 안내합니다.",
-    "q7": "BibleBot은 단순히 «웰빙 봇»이 아닙니까?",
-    "q7Answer": "아니요. 당신의 BibleBot은 위로가 필요한 곳에서 위로하지만, 또한 도전합니다. 영적 성장은 마찰을 필요로 합니다. 당신의 BibleBot은 불편한 질문을 하고, 어려운 성경 텍스트 (욥기, 애가 시편, 예언자적 비판)를 언급하며, 정의, 회개, 책임과 같은 주제를 피하지 않습니다. 예언자적 전통은 결코 편안하지 않았으며, 당신의 BibleBot도 마찬가지입니다.",
-    "q8": "BibleBot 뒤에는 누가 있으며 어떻게 자금을 조달합니까?",
-    "q8Answer": "BibleBot.Life는 비영리 개인 프로젝트입니다. 자원봉사로 운영되며 전적으로 자발적인 기부로 자금을 조달합니다. 광고, 데이터 판매, 유료 기능은 없습니다. 모든 기부금은 운영 비용 (인프라, 호스팅, 개발)을 충당하는 데 직접 사용됩니다. BibleBot은 개인 프로젝트로 운영되므로 기부금은 세금 공제 대상이 아닙니다.",
-    "q9": "BibleBot은 내 데이터를 어떻게 처리합니까?",
-    "q9Answer": "당신의 BibleBot은 개인 데이터나 채팅 기록을 저장하지 않습니다. 모든 대화는 익명입니다. 로그인, 추적, 제3자에게 데이터 공유는 없습니다. 사용은 완전히 익명입니다.",
+    "q5": "당신의 동반자은 교파에 묶여 있습니까?",
+    "q5Answer": "아니요. 당신의 당신의 동반자은 에큐메니컬 지향적이며 개혁교회, 가톨릭, 자유교회 및 기타 기독교 전통을 동등하게 존중합니다. 교파적으로 다른 해석의 경우, 다양한 관점이 투명하게 제시됩니다 – 어떤 전통도 선호하지 않습니다.",
+    "q6": "당신의 동반자이 상담이나 치료를 대체합니까?",
+    "q6Answer": "아니요. 당신의 당신의 동반자은 개인 성경 읽기와 성찰을 위한 디지털 도구입니다. 전문 상담, 신학적 조언 또는 심리 치료를 대체하지 않습니다. 심각한 위기 시, 당신의 당신의 동반자은 항상 자격을 갖춘 기관으로 안내합니다.",
+    "q7": "당신의 동반자은 단순히 «웰빙 봇»이 아닙니까?",
+    "q7Answer": "아니요. 당신의 당신의 동반자은 위로가 필요한 곳에서 위로하지만, 또한 도전합니다. 영적 성장은 마찰을 필요로 합니다. 당신의 당신의 동반자은 불편한 질문을 하고, 어려운 성경 텍스트 (욥기, 애가 시편, 예언자적 비판)를 언급하며, 정의, 회개, 책임과 같은 주제를 피하지 않습니다. 예언자적 전통은 결코 편안하지 않았으며, 당신의 당신의 동반자도 마찬가지입니다.",
+    "q8": "당신의 동반자 뒤에는 누가 있으며 어떻게 자금을 조달합니까?",
+    "q8Answer": "BibleBot.Life는 비영리 개인 프로젝트입니다. 자원봉사로 운영되며 전적으로 자발적인 기부로 자금을 조달합니다. 광고, 데이터 판매, 유료 기능은 없습니다. 모든 기부금은 운영 비용 (인프라, 호스팅, 개발)을 충당하는 데 직접 사용됩니다. 당신의 동반자은 개인 프로젝트로 운영되므로 기부금은 세금 공제 대상이 아닙니다.",
+    "q9": "당신의 동반자은 내 데이터를 어떻게 처리합니까?",
+    "q9Answer": "당신의 당신의 동반자은 개인 데이터나 채팅 기록을 저장하지 않습니다. 모든 대화는 익명입니다. 로그인, 추적, 제3자에게 데이터 공유는 없습니다. 사용은 완전히 익명입니다.",
     "tradition": {
       "reformed": "개혁교회",
       "evangelical": "복음주의",
@@ -225,39 +225,39 @@
     }
   },
   "donate": {
-    "badge": "BibleBot 지원하기",
-    "title": "BibleBot이 무료로 유지되도록 도와주세요",
-    "subtitle": "당신의 BibleBot은 광고, 구독, 숨겨진 비용 없이 마음으로 만든 프로젝트입니다. 이것이 유지되려면 자발적인 기부에 의존합니다. 모든 기부금은 운영 및 인프라 비용을 충당하는 데 도움이 됩니다.",
+    "badge": "당신의 동반자 지원하기",
+    "title": "당신의 동반자이 무료로 유지되도록 도와주세요",
+    "subtitle": "당신의 BibleBot.Life은 광고, 구독, 숨겨진 비용 없이 마음으로 만든 프로젝트입니다. 이것이 유지되려면 자발적인 기부에 의존합니다. 모든 기부금은 운영 및 인프라 비용을 충당하는 데 도움이 됩니다.",
     "bankTitle": "은행 송금으로 기부하기",
     "bankSubtitle": "모든 금액이 중요합니다 – 진심으로 감사합니다! 🙏",
     "recipient": "수취인",
     "bank": "은행",
     "purpose": "목적",
-    "purposeValue": "BibleBot 기부",
+    "purposeValue": "BibleBot.Life 기부",
     "note": "BibleBot.Life는 개인 프로젝트로 운영됩니다. 따라서 기부금은 세금 공제 대상이 아닙니다."
   },
   "refer": {
     "badge": "하나님의 말씀 나누기",
-    "title": "BibleBot을 추천하세요",
-    "subtitle": "지금 격려가 필요한 사람을 알고 있습니까? BibleBot을 공유하세요 – 메시지 하나가 큰 영향을 미칠 수 있습니다.",
+    "title": "당신의 동반자을 추천하세요",
+    "subtitle": "지금 격려가 필요한 사람을 알고 있습니까? 당신의 동반자을 공유하세요 – 메시지 하나가 큰 영향을 미칠 수 있습니다.",
     "whatsapp": "WhatsApp으로 공유",
-    "whatsappMsg": "안녕, BibleBot을 보여주고 싶었어 – 성경을 알고 정말 좋은 질문을 하는 무료 성경 동반자야. 로그인 필요 없고, 익명이고, 정직해. 한번 사용해 봐: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "안녕, BibleBot.Life을 보여주고 싶었어 – 성경을 알고 정말 좋은 질문을 하는 무료 성경 동반자야. 로그인 필요 없고, 익명이고, 정직해. 한번 사용해 봐: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Telegram으로 공유",
-    "telegramMsg": "안녕, BibleBot을 알고 있니? 무료 개인 성경 동반자야 – 정직하고, 익명이고, 로그인 필요 없어. 한번 봐봐: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "안녕, BibleBot.Life을 알고 있니? 무료 개인 성경 동반자야 – 정직하고, 익명이고, 로그인 필요 없어. 한번 봐봐: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "이메일로 공유",
     "emailSubject": "이것이 당신에게 흥미로울 수 있습니다: BibleBot.Life",
-    "emailBody": "안녕하세요!\n\nBibleBot을 보여주고 싶었습니다 – 성경을 정말 잘 아는 무료 성경 동반자입니다. 가입 필요 없고, 완전히 익명입니다.\n\n그는 좋은 질문을 하고, 문맥에서 성경 구절을 설명하며, 어려운 주제에서도 정직하게 당신을 동반합니다.\n\n한번 사용해 보세요: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\n안녕히 계세요",
+    "emailBody": "안녕하세요!\n\nBibleBot.Life을 보여주고 싶었습니다 – 성경을 정말 잘 아는 무료 성경 동반자입니다. 가입 필요 없고, 완전히 익명입니다.\n\n그는 좋은 질문을 하고, 문맥에서 성경 구절을 설명하며, 어려운 주제에서도 정직하게 당신을 동반합니다.\n\n한번 사용해 보세요: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\n안녕히 계세요",
     "copy": "링크 복사",
     "copied": "링크 복사됨! 📋",
     "qr": "또는 이 QR 코드를 보여주세요:"
   },
   "cta": {
     "title": "혼자서 이겨낼 필요 없습니다",
-    "subtitle": "당신을 괴롭히는 것을 BibleBot에게 말하세요. 로그인, 비용, 판단 없이 – 오직 정직한 동반과 성경의 지혜만 있습니다.",
+    "subtitle": "당신을 괴롭히는 것을 당신의 동반자에게 말하세요. 로그인, 비용, 판단 없이 – 오직 정직한 동반과 성경의 지혜만 있습니다.",
     "button": "지금 대화 시작하기"
   },
   "footer": {
-    "tagline": "성경과 함께하는 삶을 위한 당신의 개인 동반자",
+    "tagline": "당신의 개인 동반자 — 성경의 깊이와 함께, 사전 지식 없이도.",
     "disclaimer": "BibleBot.Life는 디지털 도구이며 전문 상담, 신학적 조언 또는 심리 치료를 대체하지 않습니다. 심각한 위기 시에는 Dargebotene Hand (전화 143) 또는 Pro Juventute (전화 147)에 문의하십시오.",
     "impressum": "법적 고지",
     "notes": "참고",
@@ -269,7 +269,7 @@
     "forChurches": "교회를 위해"
   },
   "chat": {
-    "welcome": "오신 것을 환영합니다 🤗\n\n저는 당신의 BibleBot입니다 – 성경, 좋은 질문, 구체적인 영감을 가진 당신의 개인 동반자입니다. 압력도, 판단도 없습니다.\n\n무엇이든 물어보거나, 지금 당신을 괴롭히는 것을 말할 수 있습니다. 💛",
+    "welcome": "오신 것을 환영합니다 🤗\n\n저는 당신의 당신의 동반자입니다 – 성경, 좋은 질문, 구체적인 영감을 가진 당신의 개인 동반자입니다. 압력도, 판단도 없습니다.\n\n무엇이든 물어보거나, 지금 당신을 괴롭히는 것을 말할 수 있습니다. 💛",
     "journeyOffer": "💡 **팁:** 저는 또한 **21일 동반**을 제공합니다 – 매일 영감, 성찰, 구체적인 단계가 포함된 3주. 당신의 속도에 맞춰.\n\n시도해 보시겠습니까?",
     "suggestion1": "지금 격려의 말이 필요해요",
     "suggestion2": "불안할 때 성경은 무엇이라고 말합니까?",
@@ -303,17 +303,18 @@
     "qaOk_plural": "{{count}}개의 인용문 확인됨 ✓",
     "qaWarning": "⚠️ 정확성에 대한 참고 사항:",
     "errorTooMany": "요청이 너무 많습니다 – 잠시 기다려 주세요.",
-    "errorCredits": "AI 할당량 소진.",
+    "errorCredits": "할당량 소진 – 나중에 다시 시도해 주세요.",
     "errorConnect": "연결 오류.",
     "errorTitle": "오류",
     "errorConnection": "연결할 수 없습니다.",
     "errorNoStream": "스트림 없음",
     "seniorMode": "시니어 모드 (큰 글꼴)",
     "loginHint": "모든 기기에서 대화를 유지하려면 로그인하세요",
-    "previousChats": "이전 대화 {{count}}개"
+    "previousChats": "이전 대화 {{count}}개",
+    "suggestionsLoading": "제안 로딩 중…"
   },
   "install": {
-    "title": "BibleBot 설치",
+    "title": "BibleBot.Life 설치",
     "androidDesc": "홈 화면에서 바로 빠른 액세스",
     "iosDesc": "«공유» → «홈 화면에 추가»를 탭하세요",
     "button": "설치",
@@ -327,8 +328,8 @@
     "copiedDesc": "텍스트가 클립보드에 복사되었습니다. 지금 WhatsApp, Instagram 또는 원하는 곳에 공유하세요!",
     "copyLink": "텍스트 복사",
     "error": "복사 실패",
-    "impulseTitle": "BibleBot – 오늘의 영감",
-    "chatTitle": "BibleBot – 오늘의 생각",
+    "impulseTitle": "당신의 동반자 – 오늘의 영감",
+    "chatTitle": "당신의 동반자 – 오늘의 생각",
     "createImage": "이미지 만들기 ✨",
     "generating": "생성 중…",
     "imageReady": "이미지가 공유할 준비가 되었습니다!",
@@ -337,7 +338,10 @@
     "imageError": "이미지 생성 실패",
     "imageErrorDesc": "이미지를 생성할 수 없습니다. 나중에 다시 시도해 주세요.",
     "imageSaved": "텍스트 복사됨! 📋",
-    "imageSavedDesc": "이미지를 저장하고 복사된 텍스트와 함께 Instagram, WhatsApp 또는 원하는 곳에 공유하세요!"
+    "imageSavedDesc": "이미지를 저장하고 복사된 텍스트와 함께 Instagram, WhatsApp 또는 원하는 곳에 공유하세요!",
+    "clipboardFallback": "텍스트가 복사되었습니다 — 게시할 때 붙여넣으세요!",
+    "recommendedBy": "{{church}} 추천",
+    "hashtagBible": "#성경"
   },
   "darkMode": {
     "light": "밝은 모드",
@@ -353,7 +357,7 @@
   },
   "tiles": {
     "sectionTitle": "무엇이 당신을 움직입니까?",
-    "sectionSubtitle": "주제를 선택하세요 — BibleBot이 당신을 동반합니다",
+    "sectionSubtitle": "주제를 선택하세요 — 당신의 동반자이 당신을 동반합니다",
     "baptism": {
       "title": "세례 구절 찾기",
       "desc": "자녀를 위한 완벽한 구절",
@@ -647,7 +651,7 @@
   },
   "church": {
     "badge": "조직을 위해",
-    "heroTitle": "귀하의 조직을 위한 BibleBot",
+    "heroTitle": "귀하의 조직을 위한 당신의 동반자",
     "heroSubtitle": "성경적 지혜로 교인들을 동반하세요 – 디지털로, 개인적으로, 24시간 내내.",
     "useCasesTitle": "사용 사례",
     "useCase": {
@@ -669,7 +673,7 @@
       }
     },
     "pricingTitle": "후원 패키지",
-    "pricingSubtitle": "적절한 후원 패키지로 BibleBot과 귀하의 교회를 지원하세요.",
+    "pricingSubtitle": "적절한 후원 패키지로 당신의 동반자과 귀하의 교회를 지원하세요.",
     "popular": "인기",
     "free": "무료",
     "perYear": "명 / 년",
@@ -711,7 +715,7 @@
     "viewDirectory": "교회 디렉토리 보기",
     "directoryBadge": "교회 디렉토리",
     "directoryTitle": "파트너 교회",
-    "directorySubtitle": "BibleBot을 추천하는 가까운 교회를 찾으세요.",
+    "directorySubtitle": "당신의 동반자을 추천하는 가까운 교회를 찾으세요.",
     "searchPlaceholder": "장소, 이름 또는 교파 검색...",
     "noResults": "아직 디렉토리에 교회가 없습니다.",
     "becomePartner": "파트너 되기 →",
@@ -756,11 +760,17 @@
         "psychiatry": "정신과",
         "burnoutClinic": "번아웃 클리닉",
         "hospice": "호스피스",
-        "counseling": "상담센터"
+        "counseling": "상담센터",
+        "reformed": "개혁교회",
+        "catholic": "가톨릭 교회",
+        "lutheran": "루터교회",
+        "evangelical": "자유교회 / 복음주의",
+        "freelance": "프리랜서 / 독립",
+        "other": "기타"
       }
     },
     "institutionsTitle": "기관을 위해서도",
-    "institutionsSubtitle": "BibleBot은 교회뿐만 아니라 요양원, 노인 요양원, 병원, 교도소 상담도 디지털 상담의 혜택을 받습니다.",
+    "institutionsSubtitle": "당신의 동반자은 교회뿐만 아니라 요양원, 노인 요양원, 병원, 교도소 상담도 디지털 상담의 혜택을 받습니다.",
     "institution": {
       "careHome": {
         "title": "요양원",
@@ -803,19 +813,43 @@
         "desc": "심리사회적 상담 고객을 위한 보완적 영적 자극."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As 당신의 동반자 is a private project, donations are not tax-deductible.",
+    "denominationsTitle": "모든 교파 및 예식 집전자를 위해",
+    "denominationsSubtitle": "BibleBot.Life는 에큐메니컬입니다 – 개혁교회, 가톨릭, 루터교, 자유교회 공동체 및 프리랜서 예식 집전자를 위한 것입니다.",
+    "denomination": {
+      "reformed": {
+        "title": "개혁교회",
+        "desc": "취리히 성경, 개혁교회 예배, 설교 지원 – 귀하의 교구에 맞춤."
+      },
+      "catholic": {
+        "title": "가톨릭 교회",
+        "desc": "에큐메니컬 번역, 미사 계획 및 성사 – 가톨릭 전통에 부합."
+      },
+      "lutheran": {
+        "title": "루터교회",
+        "desc": "루터 성경, 예배 계획 및 목회 – 복음주의 루터교 공동체를 위해."
+      },
+      "evangelical": {
+        "title": "자유교회",
+        "desc": "Schlachter 2000, 찬양 및 유연한 예배 설계 – 자유교회 공동체를 위해."
+      },
+      "freelance": {
+        "title": "프리랜서 집전자",
+        "desc": "장례 연사, 결혼식 집전자 및 독립 예식 집전자 – 전기 도구 및 연설 계획 포함."
+      }
+    }
   },
   "institutions": {
     "badge": "조직을 위해",
-    "heroTitle": "귀하의 기관을 위한 BibleBot",
+    "heroTitle": "귀하의 기관을 위한 당신의 동반자",
     "heroSubtitle": "요양원, 노인 요양원, 병원, 교정 시설을 위한 디지털 상담 – 개인적으로, 비밀스럽게, 24시간 내내.",
     "seniorHint": {
       "title": "시니어 모드 사용 가능",
       "desc": "큰 글꼴과 간소화된 조작 – 노인 거주자에게 이상적입니다.",
       "cta": "시니어 모드 테스트"
     },
-    "typesTitle": "BibleBot은 누구를 위한 것입니까?",
-    "useCasesTitle": "BibleBot 사용 방법",
+    "typesTitle": "당신의 동반자은 누구를 위한 것입니까?",
+    "useCasesTitle": "당신의 동반자 사용 방법",
     "useCasesSubtitle": "귀하의 기관에서 일상생활을 위한 구체적인 응용 프로그램.",
     "pricingTitle": "후원 패키지",
     "pricingSubtitle": "교회와 동일한 패키지 – 기관의 필요에 맞게 조정됨.",
@@ -849,7 +883,7 @@
       },
       "companionship": {
         "title": "동반자",
-        "desc": "BibleBot은 신앙 질문에 인내심을 가지고 시간 압박 없이 답변합니다 – 외로운 시간에 이상적입니다."
+        "desc": "당신의 동반자은 신앙 질문에 인내심을 가지고 시간 압박 없이 답변합니다 – 외로운 시간에 이상적입니다."
       },
       "accessibility": {
         "title": "쉬운 접근성",
@@ -921,7 +955,7 @@
     "ht": "Kreyòl"
   },
   "eulogy": {
-    "pageTitle": "추도문 – 전기 작성 | BibleBot",
+    "pageTitle": "추도문 – 전기 작성 | 당신의 동반자",
     "pageDesc": "사랑하는 사람의 추억을 간직하고 추도식을 위한 아름다운 전기 텍스트를 만드세요.",
     "title": "추도문 – 전기",
     "subtitle": "추억을 간직하고, 텍스트를 만들고, PDF로 다운로드하세요.",
@@ -985,12 +1019,12 @@
     "suggestion3": "무엇에 감사하고 있나요?"
   },
   "meta": {
-    "forChurchesDesc": "BibleBot은 교회 사역의 파트너가 됩니다: 청소년, 견진성사, 목회 상담 및 성경 공부. 무료부터 프리미엄까지.",
-    "forChurchesTitle": "교회를 위한 BibleBot – 디지털 목회 상담 및 성경 동행",
-    "homeDesc": "BibleBot은 5가지 성경 번역, 코칭 방법론, 목회 상담으로 여러분과 동행합니다. 36개 언어로 익명, 무료로 제공됩니다.",
-    "homeTitle": "BibleBot – 당신의 개인 성경 동반자 | 무료 & 익명",
-    "loginDesc": "개인적인 의식을 준비하려면 BibleBot에 로그인하세요.",
-    "loginTitle": "로그인 – BibleBot"
+    "forChurchesDesc": "당신의 동반자은 교회 사역의 파트너가 됩니다: 청소년, 견진성사, 목회 상담 및 성경 공부. 무료부터 프리미엄까지.",
+    "forChurchesTitle": "교회를 위한 당신의 동반자 – 디지털 목회 상담 및 성경 동행",
+    "homeDesc": "당신의 동반자은 5가지 성경 번역, 코칭 방법론, 목회 상담으로 여러분과 동행합니다. 36개 언어로 익명, 무료로 제공됩니다.",
+    "homeTitle": "당신의 동반자 – 당신의 개인 성경 동반자 | 무료 & 익명",
+    "loginDesc": "개인적인 의식을 준비하려면 당신의 동반자에 로그인하세요.",
+    "loginTitle": "로그인 – 당신의 동반자"
   },
   "splash": {
     "patronage": "후원"
@@ -1079,7 +1113,7 @@
     "featuresSubtitle": "준비부터 실행까지 전체 워크플로우를 위한 사려 깊은 시스템.",
     "f1Title": "음성 녹음 및 전사",
     "f1Desc": "대화를 녹음하고 자동 전사를 받으세요 — 감동적인 의식 텍스트의 기반입니다.",
-    "f2Title": "AI 지원 텍스트 생성",
+    "f2Title": "스마트 텍스트 생성",
     "f2Desc": "메모와 전사본을 바탕으로 공감적인 연설, 코칭 요약 또는 성찰 텍스트를 만드세요.",
     "f3Title": "PDF 내보내기 및 공유",
     "f3Desc": "완성된 텍스트를 PDF로 내보내거나 링크를 통해 고객, 친척 및 참가자와 직접 공유하세요.",

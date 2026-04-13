@@ -23,7 +23,7 @@ const ChurchOnboardingEmail = ({
   contactName,
   planTier = 'community',
 }: ChurchOnboardingProps) => {
-  const brandedLink = `${BASE_URL}/?church=${slug}`
+  const brandedLink = `${BASE_URL}/?church=${slug}&utm_source=email&utm_medium=onboarding`
   const integrationPageLink = `${BASE_URL}/church-integration/${slug}`
   const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(brandedLink)}&margin=12`
   const botName = customBotName || 'BibleBot'

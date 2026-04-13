@@ -16,7 +16,7 @@
     },
     "title1": "Bibeln.",
     "title2": " Nytt tänkande.",
-    "subtitle": "Din BibleBot känner Bibeln – och ställer de rätta frågorna. Ingen människa, men en ärlig följeslagare. För goda samtal, djupa frågor och äkta impulser.",
+    "subtitle": "Din din följeslagare känner Bibeln – och ställer de rätta frågorna. Ingen människa, men en ärlig följeslagare. För goda samtal, djupa frågor och äkta impulser.",
     "ctaTelegram": "Starta via Telegram",
     "ctaMore": "Läs mer",
     "quote": "«Kom till mig, alla ni som är trötta och tyngda av bördor, så ska jag ge er vila.»",
@@ -33,8 +33,8 @@
     "stopAudio": "Stoppa"
   },
   "features": {
-    "sectionTitle": "Hur din BibleBot följer dig",
-    "sectionSubtitle": "Upptäck de många sätt din BibleBot kan följa dig på",
+    "sectionTitle": "Vad din följeslagare erbjuder dig",
+    "sectionSubtitle": "Upptäck de många sätt din personliga följeslagare kan stödja dig",
     "bible": {
       "title": "Bibelställen & tolkning",
       "desc": "Fråga «Vad säger Bibeln om...?» och få passande verser med kontext och en förståelig förklaring."
@@ -49,7 +49,7 @@
     },
     "faith": {
       "title": "Tro & hitta Kristus",
-      "desc": "Oavsett om du söker, tvivlar eller vill fördjupa dig – din BibleBot följer dig på din personliga väg."
+      "desc": "Oavsett om du söker, tvivlar eller vill fördjupa dig – din din följeslagare följer dig på din personliga väg."
     },
     "daily": {
       "title": "Dagliga impulser & kyrkoår",
@@ -63,9 +63,9 @@
   "coaching": {
     "badge": "Metodik",
     "title": "Inte bara en chatbot – en äkta följeslagare",
-    "subtitle": "Din BibleBot kombinerar biblisk visdom med beprövade coachningsmetoder och positiv psykologi.",
+    "subtitle": "Din din följeslagare kombinerar biblisk visdom med beprövade coachningsmetoder och positiv psykologi.",
     "journeyTitle": "Personlig vägledning",
-    "journeyDesc": "Din BibleBot följer dig så länge du vill – i fria samtal eller med en valfri 21-dagarsstruktur.",
+    "journeyDesc": "Din din följeslagare följer dig så länge du vill – i fria samtal eller med en valfri 21-dagarsstruktur.",
     "week1": "Vecka 1: Ankomst",
     "week1Desc": "Bygga förtroende, lyssna, förstå din situation. Var står du? Vad bekymrar dig?",
     "week2": "Vecka 2: Fördjupning",
@@ -73,12 +73,12 @@
     "week3": "Vecka 3: Handling",
     "week3Desc": "Ta konkreta steg, formulera mål, initiera förändring. Vad är ditt nästa steg?",
     "openQuestionsTitle": "Öppna frågor istället för snabba svar",
-    "openQuestionsDesc": "Din BibleBot ger dig inga billiga råd. Istället ställer den de frågor som verkligen räknas:",
+    "openQuestionsDesc": "Din din följeslagare ger dig inga billiga råd. Istället ställer den de frågor som verkligen räknas:",
     "openQ1": "«Vad ligger egentligen bakom denna önskan?»",
     "openQ2": "«Hur skulle du märka att något har förändrats?»",
     "openQ3": "«Vad skulle vara ett första litet steg?»",
     "honestTitle": "Ärlig istället för toxiskt positiv",
-    "honestDesc": "Inget «Det ordnar sig!» och ingen försköning. Din BibleBot är empatisk OCH ärlig:",
+    "honestDesc": "Inget «Det ordnar sig!» och ingen försköning. Din din följeslagare är empatisk OCH ärlig:",
     "honest1": "Nämnar även obekväma bibelställen",
     "honest2": "Utmanar till självreflektion",
     "honest3": "Skiljer tröst från förträngning",
@@ -103,7 +103,7 @@
       "author": "Worthington",
       "desc": "REACH-modellen för förlåtelseprocesser"
     },
-    "renameTip": "💡 Du kan ge din BibleBot ett eget namn – så att den verkligen blir <strong>din</strong> följeslagare."
+    "renameTip": "💡 Du kan ge din din följeslagare ett eget namn – så att den verkligen blir <strong>din</strong> följeslagare."
   },
   "discover": {
     "badge": "För nyfikna",
@@ -115,7 +115,7 @@
     },
     "search": {
       "title": "Du söker?",
-      "text": "Kanske vet du inte ens exakt vad du söker. Det är helt okej. Din BibleBot hjälper dig att ställa de rätta frågorna – istället för att ge snabba svar."
+      "text": "Kanske vet du inte ens exakt vad du söker. Det är helt okej. Din din följeslagare hjälper dig att ställa de rätta frågorna – istället för att ge snabba svar."
     },
     "deepen": {
       "title": "Du vill fördjupa dig?",
@@ -170,9 +170,9 @@
   },
   "faq": {
     "badge": "Vanliga frågor",
-    "title": "Vad du bör veta om din BibleBot",
+    "title": "Vad du bör veta om din din följeslagare",
     "subtitle": "Transparens är viktigt för oss – särskilt gentemot teologer, själavårdare och kritiska tänkare.",
-    "q1": "Vad skiljer din BibleBot från ChatGPT & Co.?",
+    "q1": "Vad skiljer din din följeslagare från ChatGPT & Co.?",
     "q1Generic": "Generiska chatbots:",
     "q1GenericItems": [
       "Ytliga bibelcitat utan kontext",
@@ -192,11 +192,11 @@
       "Främjar kritiskt tänkande som trosmognad"
     ],
     "q2": "Vilka bibelöversättningar används?",
-    "q2Intro": "Din BibleBot arbetar ekumeniskt med de viktigaste tyskspråkiga bibelutgåvorna:",
+    "q2Intro": "Din din följeslagare arbetar ekumeniskt med de viktigaste tyskspråkiga bibelutgåvorna:",
     "q2Outro": "Alla bibelställen anges med källhänvisning och historisk kontext.",
     "q3": "Vilka vetenskapliga grunder ligger bakom?",
     "q3Intro": "Vägledningen baseras på peer-reviewed forskning inom positiv psykologi:",
-    "q4": "Hur säkerställer din BibleBot själavårdande säkerhet?",
+    "q4": "Hur säkerställer din din följeslagare själavårdande säkerhet?",
     "q4Items": [
       "Vid självmordstankar eller kriser → omedelbar hänvisning till Dargebotene Hand (143) och Pro Juventute (147)",
       "Inga psykologiska eller medicinska diagnoser",
@@ -206,16 +206,16 @@
       "Ingen toxisk positivitet – äkta, ärlig vägledning",
       "Benämner spänningar och svåra texter öppet"
     ],
-    "q5": "Är din BibleBot konfessionellt bunden?",
-    "q5Answer": "Nej. Din BibleBot är ekumeniskt inriktad och respekterar reformerta, katolska, frikyrkliga och andra kristna traditioner lika mycket. Vid konfessionellt olika tolkningar presenteras olika perspektiv transparent – utan att favorisera en tradition.",
-    "q6": "Ersätter din BibleBot själavård eller terapi?",
-    "q6Answer": "Nej. Din BibleBot är ett digitalt hjälpmedel för personlig bibelläsning och reflektion. Den ersätter inte professionell själavård, teologisk rådgivning eller psykologisk terapi. Vid allvarliga kriser hänvisar din BibleBot alltid till kvalificerade kontaktpunkter.",
-    "q7": "Är din BibleBot inte bara en «må-bra-bot»?",
-    "q7Answer": "Nej. Din BibleBot tröstar där tröst behövs – men den utmanar också. Andlig tillväxt kräver friktion. Din BibleBot ställer obekväma följdfrågor, nämner svåra bibeltexter (Job, klagopsalmer, profetisk kritik) och drar sig inte för ämnen som rättvisa, omvändelse och ansvar. Den profetiska traditionen var aldrig bekväm – och din BibleBot är det inte heller.",
-    "q8": "Vem står bakom din BibleBot och hur finansieras den?",
-    "q8Answer": "BibleBot.Life är ett privat, icke-kommersiellt projekt. Det drivs ideellt och finansieras uteslutande genom frivilliga donationer. Det finns ingen reklam, ingen dataförsäljning och inga betalda funktioner. Alla donationer går direkt till att täcka de löpande kostnaderna (infrastruktur, hosting, utveckling). Eftersom BibleBot drivs som ett privat projekt är donationer inte avdragsgilla.",
-    "q9": "Hur hanterar din BibleBot mina data?",
-    "q9Answer": "Din BibleBot lagrar inga personliga data och inga chatthistoriker. Varje samtal är anonymt. Det finns ingen inloggning, ingen spårning och ingen vidarebefordran av data till tredje part. Användningen är helt anonym.",
+    "q5": "Är din din följeslagare konfessionellt bunden?",
+    "q5Answer": "Nej. Din din följeslagare är ekumeniskt inriktad och respekterar reformerta, katolska, frikyrkliga och andra kristna traditioner lika mycket. Vid konfessionellt olika tolkningar presenteras olika perspektiv transparent – utan att favorisera en tradition.",
+    "q6": "Ersätter din din följeslagare själavård eller terapi?",
+    "q6Answer": "Nej. Din din följeslagare är ett digitalt hjälpmedel för personlig bibelläsning och reflektion. Den ersätter inte professionell själavård, teologisk rådgivning eller psykologisk terapi. Vid allvarliga kriser hänvisar din din följeslagare alltid till kvalificerade kontaktpunkter.",
+    "q7": "Är din din följeslagare inte bara en «må-bra-bot»?",
+    "q7Answer": "Nej. Din din följeslagare tröstar där tröst behövs – men den utmanar också. Andlig tillväxt kräver friktion. Din din följeslagare ställer obekväma följdfrågor, nämner svåra bibeltexter (Job, klagopsalmer, profetisk kritik) och drar sig inte för ämnen som rättvisa, omvändelse och ansvar. Den profetiska traditionen var aldrig bekväm – och din din följeslagare är det inte heller.",
+    "q8": "Vem står bakom din din följeslagare och hur finansieras den?",
+    "q8Answer": "BibleBot.Life är ett privat, icke-kommersiellt projekt. Det drivs ideellt och finansieras uteslutande genom frivilliga donationer. Det finns ingen reklam, ingen dataförsäljning och inga betalda funktioner. Alla donationer går direkt till att täcka de löpande kostnaderna (infrastruktur, hosting, utveckling). Eftersom din följeslagare drivs som ett privat projekt är donationer inte avdragsgilla.",
+    "q9": "Hur hanterar din din följeslagare mina data?",
+    "q9Answer": "Din din följeslagare lagrar inga personliga data och inga chatthistoriker. Varje samtal är anonymt. Det finns ingen inloggning, ingen spårning och ingen vidarebefordran av data till tredje part. Användningen är helt anonym.",
     "tradition": {
       "reformed": "Reformert",
       "evangelical": "Evangelisk",
@@ -225,41 +225,41 @@
     }
   },
   "donate": {
-    "badge": "Stöd din BibleBot",
-    "title": "Hjälp till att hålla din BibleBot gratis",
-    "subtitle": "Din BibleBot är ett hjärteprojekt – utan reklam, utan prenumeration, utan dolda kostnader. För att det ska förbli så är jag beroende av frivilliga donationer. Varje bidrag hjälper till att täcka de löpande kostnaderna för drift och infrastruktur.",
+    "badge": "Stöd din din följeslagare",
+    "title": "Hjälp till att hålla din din följeslagare gratis",
+    "subtitle": "Din BibleBot.Life är ett hjärteprojekt – utan reklam, utan prenumeration, utan dolda kostnader. För att det ska förbli så är jag beroende av frivilliga donationer. Varje bidrag hjälper till att täcka de löpande kostnaderna för drift och infrastruktur.",
     "bankTitle": "Donera via banköverföring",
     "bankSubtitle": "Varje belopp räknas – stort tack! 🙏",
     "recipient": "Mottagare",
     "bank": "Bank",
     "purpose": "Ändamål",
-    "purposeValue": "Donation BibleBot",
+    "purposeValue": "Donation BibleBot.Life",
     "note": "BibleBot.Life drivs som ett privat projekt. Donationer är därför inte avdragsgilla."
   },
   "refer": {
     "badge": "Dela Guds ord",
-    "title": "Rekommendera BibleBot",
-    "subtitle": "Känner du någon som behöver uppmuntran just nu? Dela BibleBot – ett meddelande kan göra stor skillnad.",
+    "title": "Rekommendera din följeslagare",
+    "subtitle": "Känner du någon som behöver uppmuntran just nu? Dela din följeslagare – ett meddelande kan göra stor skillnad.",
     "whatsapp": "Dela via WhatsApp",
-    "whatsappMsg": "Hej, jag ville visa dig BibleBot – en gratis bibelkompanjon som känner Bibeln och ställer riktigt bra frågor. Ingen inloggning, anonym, ärlig. Prova den: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Hej, jag ville visa dig BibleBot.Life – en gratis bibelkompanjon som känner Bibeln och ställer riktigt bra frågor. Ingen inloggning, anonym, ärlig. Prova den: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Dela via Telegram",
-    "telegramMsg": "Hej, känner du till BibleBot? En gratis personlig bibelkompanjon – ärlig, anonym, utan inloggning. Kolla in den: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Hej, känner du till BibleBot.Life? En gratis personlig bibelkompanjon – ärlig, anonym, utan inloggning. Kolla in den: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Dela via e-post",
     "emailSubject": "Detta kan intressera dig: BibleBot.Life",
-    "emailBody": "Hej!\n\nJag ville visa dig BibleBot – en gratis bibelkompanjon som verkligen känner Bibeln. Ingen registrering krävs, helt anonym.\n\nDen ställer bra följdfrågor, förklarar bibelställen i kontext och följer dig ärligt – även i svåra ämnen.\n\nProva den: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nMed vänliga hälsningar",
+    "emailBody": "Hej!\n\nJag ville visa dig BibleBot.Life – en gratis bibelkompanjon som verkligen känner Bibeln. Ingen registrering krävs, helt anonym.\n\nDen ställer bra följdfrågor, förklarar bibelställen i kontext och följer dig ärligt – även i svåra ämnen.\n\nProva den: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nMed vänliga hälsningar",
     "copy": "Kopiera länk",
     "copied": "Länk kopierad! 📋",
     "qr": "Eller visa bara denna QR-kod:"
   },
   "cta": {
     "title": "Du behöver inte gå igenom detta ensam",
-    "subtitle": "Skriv bara till din BibleBot vad som bekymrar dig. Ingen inloggning, inga kostnader, ingen dömande – bara ärlig vägledning och Bibelns visdom.",
+    "subtitle": "Skriv bara till din din följeslagare vad som bekymrar dig. Ingen inloggning, inga kostnader, ingen dömande – bara ärlig vägledning och Bibelns visdom.",
     "button": "Starta samtal nu"
   },
   "footer": {
-    "tagline": "Din personliga följeslagare för ett liv med Bibeln",
+    "tagline": "Din personliga följeslagare — med Bibelns djup, utan förkunskaper.",
     "disclaimer": "BibleBot.Life är ett digitalt hjälpmedel och ersätter inte professionell själavård, teologisk rådgivning eller psykologisk terapi. Vid akuta kriser, kontakta Dargebotene Hand (tel. 143) eller Pro Juventute (tel. 147).",
-    "impressum": "Impressum",
+    "impressum": "Juridisk information",
     "notes": "Anmärkningar",
     "private": "Privat, icke-kommersiellt projekt",
     "noChat": "Ingen lagring av chattdata",
@@ -269,7 +269,7 @@
     "forChurches": "För församlingar"
   },
   "chat": {
-    "welcome": "Kul att du är här 🤗\n\nJag är din BibleBot – din personliga följeslagare med Bibeln, goda frågor och konkreta impulser. Ingen press, ingen bedömning.\n\nDu kan fråga mig vad som helst – eller bara berätta vad som bekymrar dig just nu. 💛",
+    "welcome": "Kul att du är här 🤗\n\nJag är din din följeslagare – din personliga följeslagare med Bibeln, goda frågor och konkreta impulser. Ingen press, ingen bedömning.\n\nDu kan fråga mig vad som helst – eller bara berätta vad som bekymrar dig just nu. 💛",
     "journeyOffer": "💡 **Tips:** Jag erbjuder också en **21-dagars vägledning** – 3 veckor med dagliga impulser, reflektioner och konkreta steg. Helt i din egen takt.\n\nVill du prova det?",
     "suggestion1": "Jag behöver ett uppmuntrande ord just nu",
     "suggestion2": "Vad säger Bibeln när man känner sig osäker?",
@@ -303,17 +303,18 @@
     "qaOk_plural": "{{count}} citat kontrollerade ✓",
     "qaWarning": "⚠️ Anmärkningar om noggrannhet:",
     "errorTooMany": "För många förfrågningar – vänta en stund.",
-    "errorCredits": "AI-kvoten är slut.",
+    "errorCredits": "Kvoten är slut – försök igen senare.",
     "errorConnect": "Fel vid anslutning.",
     "errorTitle": "Fel",
     "errorConnection": "kunde inte nås.",
     "errorNoStream": "Ingen ström",
     "seniorMode": "Seniorläge (större text)",
     "loginHint": "Logga in för att behålla konversationer på alla enheter",
-    "previousChats": "{{count}} tidigare konversationer"
+    "previousChats": "{{count}} tidigare konversationer",
+    "suggestionsLoading": "Laddar förslag…"
   },
   "install": {
-    "title": "Installera BibleBot",
+    "title": "Installera BibleBot.Life",
     "androidDesc": "Snabb åtkomst direkt från startskärmen",
     "iosDesc": "Tryck på «Dela» → «Lägg till på hemskärmen»",
     "button": "Installera",
@@ -327,8 +328,8 @@
     "copiedDesc": "Texten har kopierats till urklipp. Dela den nu på WhatsApp, Instagram eller var du vill!",
     "copyLink": "Kopiera text",
     "error": "Kopiering misslyckades",
-    "impulseTitle": "BibleBot – Dagens impuls",
-    "chatTitle": "BibleBot – Dagens tanke",
+    "impulseTitle": "Din följeslagare – Dagens impuls",
+    "chatTitle": "Din följeslagare – Dagens tanke",
     "createImage": "Skapa bild ✨",
     "generating": "Skapar…",
     "imageReady": "Din bild är redo att delas!",
@@ -337,7 +338,10 @@
     "imageError": "Bildskapande misslyckades",
     "imageErrorDesc": "Bilden kunde inte skapas. Försök igen senare.",
     "imageSaved": "Text kopierad! 📋",
-    "imageSavedDesc": "Spara bilden och dela den med den kopierade texten på Instagram, WhatsApp eller var du vill!"
+    "imageSavedDesc": "Spara bilden och dela den med den kopierade texten på Instagram, WhatsApp eller var du vill!",
+    "clipboardFallback": "Text kopierad — klistra in den när du postar!",
+    "recommendedBy": "Rekommenderad av {{church}}",
+    "hashtagBible": "#Bibeln"
   },
   "darkMode": {
     "light": "Ljust läge",
@@ -345,7 +349,7 @@
   },
   "impressum": {
     "back": "Tillbaka till startsidan",
-    "title": "Impressum"
+    "title": "Juridisk information"
   },
   "datenschutz": {
     "back": "Tillbaka till startsidan",
@@ -353,7 +357,7 @@
   },
   "tiles": {
     "sectionTitle": "Vad rör dig?",
-    "sectionSubtitle": "Välj ett ämne — BibleBot följer dig",
+    "sectionSubtitle": "Välj ett ämne — din följeslagare följer dig",
     "baptism": {
       "title": "Hitta dopvers",
       "desc": "Den perfekta versen för ditt barn",
@@ -647,7 +651,7 @@
   },
   "church": {
     "badge": "För organisationer",
-    "heroTitle": "BibleBot för din organisation",
+    "heroTitle": "Din följeslagare för din organisation",
     "heroSubtitle": "Följ ditt team med biblisk visdom – digitalt, personligt och dygnet runt.",
     "useCasesTitle": "Användningsområden",
     "useCase": {
@@ -669,7 +673,7 @@
       }
     },
     "pricingTitle": "Patronatspaket",
-    "pricingSubtitle": "Stöd BibleBot och din organisation med rätt patronatspaket.",
+    "pricingSubtitle": "Stöd din följeslagare och din organisation med rätt patronatspaket.",
     "popular": "Populär",
     "free": "Gratis",
     "perYear": "personer / år",
@@ -711,7 +715,7 @@
     "viewDirectory": "Visa församlingskatalog",
     "directoryBadge": "Församlingskatalog",
     "directoryTitle": "Partnerförsamlingar",
-    "directorySubtitle": "Hitta en församling nära dig som rekommenderar BibleBot.",
+    "directorySubtitle": "Hitta en församling nära dig som rekommenderar din följeslagare.",
     "searchPlaceholder": "Sök ort, namn eller samfund...",
     "noResults": "Inga församlingar i katalogen ännu.",
     "becomePartner": "Bli partner →",
@@ -756,11 +760,17 @@
         "psychiatry": "Psykiatri",
         "burnoutClinic": "Burnout-klinik",
         "hospice": "Hospice",
-        "counseling": "Rådgivningscenter"
+        "counseling": "Rådgivningscenter",
+        "reformed": "Reformerad kyrka",
+        "catholic": "Katolska kyrkan",
+        "lutheran": "Luthersk kyrka",
+        "evangelical": "Frikyrka / Evangelisk",
+        "freelance": "Frilans / Oberoende",
+        "other": "Övrigt"
       }
     },
     "institutionsTitle": "Även för institutioner",
-    "institutionsSubtitle": "BibleBot följer inte bara församlingar – även vård- och äldreboenden, sjukhus och fängelsesjälavården drar nytta av digital själavård.",
+    "institutionsSubtitle": "Din följeslagare följer inte bara församlingar – även vård- och äldreboenden, sjukhus och fängelsesjälavården drar nytta av digital själavård.",
     "institution": {
       "careHome": {
         "title": "Vårdhem",
@@ -803,19 +813,43 @@
         "desc": "Kompletterande andliga impulser för klienter i psykosocial rådgivning."
       }
     },
-    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As BibleBot is a private project, donations are not tax-deductible."
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As din följeslagare is a private project, donations are not tax-deductible.",
+    "denominationsTitle": "För alla trosriktningar och ceremonimästare",
+    "denominationsSubtitle": "BibleBot.Life är ekumenisk – för reformerta, katolska, lutherska och frikyrkoförsamlingar samt frilans ceremonimästare.",
+    "denomination": {
+      "reformed": {
+        "title": "Reformerad kyrka",
+        "desc": "Zürichbibeln, reformerad liturgi och predikostöd – anpassat för er församling."
+      },
+      "catholic": {
+        "title": "Katolska kyrkan",
+        "desc": "Ekumenisk översättning, mässplanering och sakrament – i linje med katolska traditioner."
+      },
+      "lutheran": {
+        "title": "Luthersk kyrka",
+        "desc": "Lutherbibeln, gudstjänstplanering och själavård – för evangelisk-lutherska församlingar."
+      },
+      "evangelical": {
+        "title": "Frikyrkor",
+        "desc": "Schlachter 2000, lovsång och flexibel gudstjänstdesign – för frikyrkoförsamlingar."
+      },
+      "freelance": {
+        "title": "Frilans officialter",
+        "desc": "Begravningstalare, bröllopsofficialter och oberoende ceremonimästare – med biografiska verktyg och talplanering."
+      }
+    }
   },
   "institutions": {
     "badge": "För organisationer",
-    "heroTitle": "BibleBot för din organisation",
+    "heroTitle": "Din följeslagare för din organisation",
     "heroSubtitle": "Digital själavård för vårdhem, äldreboenden, sjukhus och kriminalvård – personligt, konfidentiellt och dygnet runt.",
     "seniorHint": {
       "title": "Seniorläge tillgängligt",
       "desc": "Större text och förenklad användning – idealiskt för äldre boende.",
       "cta": "Testa seniorläge"
     },
-    "typesTitle": "Vem är BibleBot för?",
-    "useCasesTitle": "Så används BibleBot",
+    "typesTitle": "Vem är din följeslagare för?",
+    "useCasesTitle": "Så används din följeslagare",
     "useCasesSubtitle": "Konkreta tillämpningar för vardagen i din institution.",
     "pricingTitle": "Patronatspaket",
     "pricingSubtitle": "Samma paket som för församlingar – anpassade till institutionella behov.",
@@ -849,7 +883,7 @@
       },
       "companionship": {
         "title": "Samtalspartner",
-        "desc": "BibleBot svarar tålmodigt på trosfrågor och utan tidspress – idealiskt för ensamma stunder."
+        "desc": "Din följeslagare svarar tålmodigt på trosfrågor och utan tidspress – idealiskt för ensamma stunder."
       },
       "accessibility": {
         "title": "Enkel åtkomst",
@@ -921,7 +955,7 @@
     "ht": "Kreyòl"
   },
   "eulogy": {
-    "pageTitle": "Begravning – Skapa en levnadsbeskrivning | BibleBot",
+    "pageTitle": "Begravning – Skapa en levnadsbeskrivning | din följeslagare",
     "pageDesc": "Fånga minnen av en älskad person och skapa en vacker levnadsbeskrivning för begravningen.",
     "title": "Begravning – Levnadsbeskrivning",
     "subtitle": "Fånga minnen, skapa text, ladda ner som PDF.",
@@ -971,7 +1005,7 @@
     "confirmationDesc": "Hitta ett konfirmationsord och förbered personliga texter."
   },
   "chatHero": {
-    "ariaLabel": "Ställ en fråga till BibleBot",
+    "ariaLabel": "Ställ en fråga till din följeslagare",
     "focusPlaceholder": "Skriv din fråga…",
     "placeholder1": "Vad gör mig verkligen tacksam?",
     "placeholder2": "Hur hittar jag inre frid?",
@@ -985,12 +1019,12 @@
     "suggestion3": "Vad är jag tacksam för?"
   },
   "meta": {
-    "forChurchesDesc": "BibleBot som partner för din församling: ungdomsarbete, konfirmation, själavård och bibelcirklar. Gratis till Premium.",
-    "forChurchesTitle": "BibleBot för församlingar – Digital själavård & bibelhandledning",
-    "homeDesc": "BibleBot följer dig med 5 bibelöversättningar, coachingmetodik och själavård. Anonymt, gratis, på 36 språk.",
-    "homeTitle": "BibleBot – Din personliga bibelkompis | Gratis & Anonym",
-    "loginDesc": "Logga in på BibleBot för att förbereda dina personliga ceremonier.",
-    "loginTitle": "Logga in – BibleBot"
+    "forChurchesDesc": "Din följeslagare som partner för din församling: ungdomsarbete, konfirmation, själavård och bibelcirklar. Gratis till Premium.",
+    "forChurchesTitle": "Din följeslagare för församlingar – Digital själavård & bibelhandledning",
+    "homeDesc": "Din följeslagare följer dig med 5 bibelöversättningar, coachingmetodik och själavård. Anonymt, gratis, på 36 språk.",
+    "homeTitle": "Din följeslagare – Din personliga bibelkompis | Gratis & Anonym",
+    "loginDesc": "Logga in på din följeslagare för att förbereda dina personliga ceremonier.",
+    "loginTitle": "Logga in – din följeslagare"
   },
   "splash": {
     "patronage": "Rekommenderas av"
@@ -1079,7 +1113,7 @@
     "featuresSubtitle": "Ett genomtänkt system för hela arbetsflödet — från förberedelse till utförande.",
     "f1Title": "Röstinspelning & Transkription",
     "f1Desc": "Spela in samtal, få automatiska transkriptioner — grunden för rörande ceremonitexter.",
-    "f2Title": "AI-assisterad textskapande",
+    "f2Title": "Intelligent textskapande",
     "f2Desc": "Från dina anteckningar och transkriptioner, skapa empatiska tal, coachningssammanfattningar eller reflektionstexter.",
     "f3Title": "PDF-export & Delning",
     "f3Desc": "Exportera färdiga texter som PDF eller dela via länk direkt med klienter, släktingar och deltagare.",
@@ -1136,7 +1170,7 @@
     "ctaBottom": "Redo för bättre ceremonier?",
     "ctaBottomSub": "Börja gratis — inget kreditkort krävs.",
     "ctaBottomBtn": "Börja gratis nu",
-    "footerImprint": "Impressum",
+    "footerImprint": "Juridisk information",
     "footerPrivacy": "Integritetspolicy",
     "footerChurches": "För kyrkor",
     "seoTitle": "BibleBot.Life för kaplaner och livscoacher — Planera ceremonier och sessioner",

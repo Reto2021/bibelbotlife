@@ -10,8 +10,8 @@ type PatronData = {
   custom_bot_name: string | null;
 };
 
-const SPLASH_DURATION_WITH_PATRON = 4000;
-const SPLASH_DURATION_DEFAULT = 1800;
+const SPLASH_DURATION_WITH_PATRON = 7000;
+const SPLASH_DURATION_DEFAULT = 5000;
 
 export function SplashScreen({ onComplete }: { onComplete: () => void }) {
   const { t } = useTranslation();
@@ -60,14 +60,14 @@ export function SplashScreen({ onComplete }: { onComplete: () => void }) {
           key="splash"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.6, ease: "easeInOut" }}
+          transition={{ duration: 0.9, ease: "easeInOut" }}
           className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-background"
         >
           {/* Logo */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.85, y: 10 }}
+            initial={{ opacity: 0, scale: 0.8, y: 15 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
+            transition={{ duration: 1.0, ease: "easeOut" }}
             className="flex flex-col items-center gap-4"
           >
             <AppLogo className="h-16 w-16 sm:h-20 sm:w-20" />
@@ -75,7 +75,7 @@ export function SplashScreen({ onComplete }: { onComplete: () => void }) {
               <motion.h1
                 initial={{ opacity: 0, y: 5 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.5 }}
+                transition={{ delay: 0.5, duration: 0.7 }}
                 className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight"
               >
                 {displayName}
@@ -83,7 +83,7 @@ export function SplashScreen({ onComplete }: { onComplete: () => void }) {
               <motion.span
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.5, duration: 0.5 }}
+                transition={{ delay: 0.9, duration: 0.7 }}
                 className="text-[10px] sm:text-xs font-medium tracking-[0.25em] uppercase text-muted-foreground/70 mt-1"
               >
                 Everyday Sunday
@@ -142,7 +142,7 @@ export function SplashScreen({ onComplete }: { onComplete: () => void }) {
                 initial={{ width: "0%" }}
                 animate={{ width: "100%" }}
                 transition={{
-                  duration: patron ? 3.5 : 1.5,
+                  duration: patron ? 6.5 : 4.5,
                   ease: "easeInOut",
                 }}
               />

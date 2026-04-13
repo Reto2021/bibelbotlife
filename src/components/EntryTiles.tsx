@@ -17,45 +17,45 @@ type TileConfig = {
 };
 
 const PRIMARY_TILES: TileConfig[] = [
-  { emoji: "😰", key: "anxiety",    label: "Ich mache mir Sorgen" },
-  { emoji: "💔", key: "heartbreak", label: "Ich bin verletzt" },
-  { emoji: "🫂", key: "loneliness", label: "Ich fühle mich allein" },
+  { emoji: "😰", key: "anxiety",    label: "anxiety" },
+  { emoji: "💔", key: "heartbreak", label: "heartbreak" },
+  { emoji: "🫂", key: "loneliness", label: "loneliness" },
 ];
 
 const SECONDARY_TILES: TileConfig[] = [
-  { emoji: "⚖️", key: "decision", label: "Ich stehe vor einer Entscheidung" },
-  { emoji: "🌱", key: "newstart",  label: "Ich will neu anfangen" },
-  { emoji: "🧭", key: "calling",   label: "Was ist mein Weg?" },
+  { emoji: "⚖️", key: "decision", label: "decision" },
+  { emoji: "🌱", key: "newstart",  label: "newstart" },
+  { emoji: "🧭", key: "calling",   label: "calling" },
 ];
 
 const DEEP_TILES: TileConfig[] = [
-  { emoji: "📖", key: "bibleverse", label: "Bibelstelle verstehen" },
-  { emoji: "🔍", key: "sevenwhys",  label: "Warum tue ich das wirklich?", special: "sevenwhys" },
-  { emoji: "🎡", key: "lifewheel",  label: "Wo stehe ich im Leben?", special: "lifewheel" },
+  { emoji: "📖", key: "bibleverse", label: "bibleverse" },
+  { emoji: "🔍", key: "sevenwhys",  label: "sevenwhys", special: "sevenwhys" },
+  { emoji: "🎡", key: "lifewheel",  label: "lifewheel", special: "lifewheel" },
 ];
 
 const MORE_TILES: TileConfig[] = [
-  { emoji: "🙏", key: "thankfulness",  label: "Dankbarkeit" },
-  { emoji: "😢", key: "burnout",       label: "Erschöpfung" },
-  { emoji: "🤷", key: "meaningcrisis", label: "Sinnkrise" },
-  { emoji: "🪞", key: "selfdoubt",     label: "Selbstzweifel" },
-  { emoji: "😡", key: "anger",         label: "Wut & Ärger" },
-  { emoji: "💸", key: "financial",     label: "Finanzielle Sorgen" },
-  { emoji: "🏥", key: "illness",       label: "Krankheit" },
-  { emoji: "💐", key: "condolence",    label: "Trauer & Verlust" },
-  { emoji: "💍", key: "wedding",       label: "Heirat & Partnerschaft" },
-  { emoji: "🕊️", key: "baptism",      label: "Taufe & Glaubensweg" },
-  { emoji: "⛪", key: "faithdoubt",    label: "Glaubenszweifel" },
-  { emoji: "🤝", key: "forgiveness",   label: "Vergeben & Loslassen" },
-  { emoji: "🌙", key: "sleepless",     label: "Schlaflosigkeit" },
-  { emoji: "🧠", key: "biblequiz",     label: "Bibelquiz", href: "/bibelquiz" },
-  { emoji: "🙏", key: "prayerwall",    label: "Gebetswand", href: "/gebetswand" },
+  { emoji: "🙏", key: "thankfulness",  label: "thankfulness" },
+  { emoji: "😢", key: "burnout",       label: "burnout" },
+  { emoji: "🤷", key: "meaningcrisis", label: "meaningcrisis" },
+  { emoji: "🪞", key: "selfdoubt",     label: "selfdoubt" },
+  { emoji: "😡", key: "anger",         label: "anger" },
+  { emoji: "💸", key: "financial",     label: "financial" },
+  { emoji: "🏥", key: "illness",       label: "illness" },
+  { emoji: "💐", key: "condolence",    label: "condolence" },
+  { emoji: "💍", key: "wedding",       label: "wedding" },
+  { emoji: "🕊️", key: "baptism",      label: "baptism" },
+  { emoji: "⛪", key: "faithdoubt",    label: "faithdoubt" },
+  { emoji: "🤝", key: "forgiveness",   label: "forgiveness" },
+  { emoji: "🌙", key: "sleepless",     label: "sleepless" },
+  { emoji: "🧠", key: "biblequiz",     label: "biblequiz", href: "/bibelquiz" },
+  { emoji: "🙏", key: "prayerwall",    label: "prayerwall", href: "/gebetswand" },
 ];
 
 const GROUPS = [
-  { label: "Mir geht etwas nach",    tiles: PRIMARY_TILES,   accent: "text-amber-600 dark:text-amber-400" },
-  { label: "Ich suche Orientierung", tiles: SECONDARY_TILES, accent: "text-teal-600 dark:text-teal-400" },
-  { label: "Ich will tiefer gehen",  tiles: DEEP_TILES,      accent: "text-primary" },
+  { labelKey: "emotional",    tiles: PRIMARY_TILES,   accent: "text-amber-600 dark:text-amber-400" },
+  { labelKey: "orientation",  tiles: SECONDARY_TILES, accent: "text-teal-600 dark:text-teal-400" },
+  { labelKey: "deep",         tiles: DEEP_TILES,      accent: "text-primary" },
 ];
 
 export function EntryTiles() {
@@ -86,9 +86,9 @@ export function EntryTiles() {
       <div className="container mx-auto max-w-3xl">
 
         {GROUPS.map((group) => (
-          <div key={group.label} className="mb-6">
+          <div key={group.labelKey} className="mb-6">
             <p className={cn("text-xs font-semibold uppercase tracking-wider mb-3", group.accent)}>
-              {group.label}
+              {t(`entryTiles.groups.${group.labelKey}`)}
             </p>
             <div className="grid grid-cols-3 gap-3">
               {group.tiles.map((tile, i) => (
@@ -103,7 +103,7 @@ export function EntryTiles() {
                 >
                   <span className="text-2xl" role="img">{tile.emoji}</span>
                   <span className="text-xs font-medium text-foreground leading-tight">
-                    {tile.label}
+                    {t(`entryTiles.labels.${tile.label}`)}
                   </span>
                 </motion.button>
               ))}
@@ -118,7 +118,7 @@ export function EntryTiles() {
             className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors"
           >
             {showMore ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
-            {showMore ? "Weniger anzeigen" : "Weitere Themen entdecken"}
+            {showMore ? t("entryTiles.showLess") : t("entryTiles.showMore")}
           </button>
         </div>
 
@@ -135,7 +135,7 @@ export function EntryTiles() {
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-border text-sm text-foreground hover:border-primary/40 hover:bg-primary/5 transition-colors"
               >
                 <span role="img">{tile.emoji}</span>
-                {tile.label}
+                {t(`entryTiles.labels.${tile.label}`)}
               </button>
             ))}
           </motion.div>
