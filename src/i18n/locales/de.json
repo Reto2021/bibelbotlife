@@ -25,8 +25,11 @@
   "impulse": {
     "loading": "Inspiration wird geladen...",
     "label": "Inspiration des Tages",
+    "collapseLabel": "Tagesimpuls",
     "deepDive": "Was bedeutet das für mich?",
     "explore": "Ganzen Abschnitt lesen",
+    "deepDivePrompt": "Der Tagesimpuls ist \"{{topic}}\" mit {{reference}}. Erkläre mir diese Stelle: Wer hat das geschrieben? In welcher Situation? Was kommt davor und danach? Und was bedeutet das für mein Leben heute?",
+    "explorePrompt": "Lies mir den ganzen Abschnitt rund um {{reference}} vor und erkläre mir den Zusammenhang. Ich möchte die Geschichte dahinter verstehen.",
     "subscribeCta": "Diese Inspiration täglich erhalten?",
     "alreadySubscribed": "Du erhältst die tägliche Inspiration",
     "playAudio": "Vorlesen",
