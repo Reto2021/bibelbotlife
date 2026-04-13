@@ -1244,7 +1244,7 @@
   },
   "tools": {
     "badge": "More than answers",
-    "title": "Two tools that go deeper",
+    "title": "Tools that go deeper",
     "subtitle": "For moments when you need more than just an answer.",
     "lifewheel": {
       "title": "Life Wheel Check",
@@ -1255,6 +1255,26 @@
       "title": "The 7-Why Method",
       "desc": "Why do I really do this? Why does it feel this way? Your companion guides you through 7 questions that get to the root — with biblical context at the deepest point.",
       "cta": "Go deeper"
+    },
+    "gratitude": {
+      "title": "Gratitude Journal",
+      "desc": "Name three things you're grateful for today — and BibleBot finds matching Psalms and verses. A daily ritual that shifts your perspective.",
+      "cta": "Practice gratitude"
+    },
+    "lectio": {
+      "title": "Lectio Divina",
+      "desc": "Guided meditative Bible reading in four steps: Read, Meditate, Pray, Rest. A centuries-old practice, freshly accompanied.",
+      "cta": "Start meditation"
+    },
+    "forgiveness": {
+      "title": "Forgiveness Letter",
+      "desc": "BibleBot guides you through writing a forgiveness letter — step by step, with biblical impulses and without pressure.",
+      "cta": "Begin letter"
+    },
+    "values": {
+      "title": "Values Compass",
+      "desc": "What truly matters to you in life? Discover your core values — and what the Bible says about them. Clarity in 5 minutes.",
+      "cta": "Discover values"
     }
   },
   "audience": {
