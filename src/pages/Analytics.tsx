@@ -85,6 +85,11 @@ type AnalyticsData = {
     topEvents: { name: string; count: number }[];
     utmSources?: { source: string; count: number }[];
     utmMediums?: { medium: string; count: number }[];
+    funnel?: {
+      widgetVisits: number;
+      chatStarts: number;
+      contactRequests: number;
+    };
   }>;
   utmSources?: { source: string; count: number }[];
   utmMediums?: { medium: string; count: number }[];
@@ -572,6 +577,60 @@ const Analytics = () => {
                     </div>
                   </div>
                 ))}
+              </div>
+            </CardContent>
+          </Card>
+        )}
+
+        {/* ════ Conversion Funnel pro Gemeinde ════ */}
+        {churchList.filter(([, c]) => (c.funnel?.widgetVisits || 0) + (c.funnel?.chatStarts || 0) + (c.funnel?.contactRequests || 0) > 0).length > 0 && (
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-base flex items-center gap-2">
+                <TrendingUp className="h-4 w-4 text-primary" />
+                Conversion-Funnel pro Gemeinde
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-5">
+                {churchList
+                  .filter(([, c]) => (c.funnel?.widgetVisits || 0) + (c.funnel?.chatStarts || 0) + (c.funnel?.contactRequests || 0) > 0)
+                  .map(([slug, c]) => {
+                    const f = c.funnel!;
+                    const max = Math.max(f.widgetVisits, f.chatStarts, f.contactRequests, 1);
+                    const steps = [
+                      { label: "Widget-Besuch", value: f.widgetVisits, color: "bg-primary" },
+                      { label: "Chat-Start", value: f.chatStarts, color: "bg-chart-2" },
+                      { label: "Kontaktanfrage", value: f.contactRequests, color: "bg-chart-3" },
+                    ];
+                    const convChat = f.widgetVisits > 0 ? Math.round((f.chatStarts / f.widgetVisits) * 100) : 0;
+                    const convContact = f.chatStarts > 0 ? Math.round((f.contactRequests / f.chatStarts) * 100) : 0;
+                    return (
+                      <div key={slug} className="space-y-2">
+                        <div className="flex items-center gap-2">
+                          <h3 className="text-sm font-semibold text-foreground">{c.churchName}</h3>
+                          <Badge variant="outline" className="text-[10px]">{slug}</Badge>
+                        </div>
+                        <div className="space-y-1.5">
+                          {steps.map((step) => (
+                            <div key={step.label} className="space-y-0.5">
+                              <div className="flex justify-between items-center">
+                                <span className="text-xs text-foreground">{step.label}</span>
+                                <span className="text-xs font-mono text-muted-foreground">{step.value}</span>
+                              </div>
+                              <div className="h-2 bg-muted rounded-full overflow-hidden">
+                                <div className={`h-full ${step.color} rounded-full transition-all`} style={{ width: `${(step.value / max) * 100}%` }} />
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                        <div className="flex gap-4 text-[10px] text-muted-foreground">
+                          <span>Widget → Chat: <strong className="text-foreground">{convChat}%</strong></span>
+                          <span>Chat → Kontakt: <strong className="text-foreground">{convContact}%</strong></span>
+                        </div>
+                      </div>
+                    );
+                  })}
               </div>
             </CardContent>
           </Card>
