@@ -22,6 +22,8 @@ interface WeeklyReportProps {
   mobile?: number
   tablet?: number
   desktop?: number
+  webChatUsers?: number
+  webChatMessages?: number
 }
 
 const WeeklyReportEmail = ({
@@ -36,6 +38,8 @@ const WeeklyReportEmail = ({
   mobile = 0,
   tablet = 0,
   desktop = 0,
+  webChatUsers = 0,
+  webChatMessages = 0,
 }: WeeklyReportProps) => (
   <Html lang="de" dir="ltr">
     <Head />
