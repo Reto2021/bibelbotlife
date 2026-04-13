@@ -637,7 +637,118 @@ const Analytics = () => {
           </Card>
         )}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {/* ════ Wochen-Trend pro Gemeinde ════ */}
+        {(() => {
+          // Build unified weekly trend data: one row per week, one line per church
+          const churchesWithTrend = churchList.filter(([, c]) => c.weeklyTrend && c.weeklyTrend.length > 1);
+          if (churchesWithTrend.length === 0) return null;
+
+          // Collect all weeks
+          const allWeeks = new Set<string>();
+          churchesWithTrend.forEach(([, c]) => c.weeklyTrend!.forEach((w) => allWeeks.add(w.week)));
+          const sortedWeeks = Array.from(allWeeks).sort();
+
+          const trendData = sortedWeeks.map((week) => {
+            const row: Record<string, string | number> = { week };
+            churchesWithTrend.forEach(([slug, c]) => {
+              const entry = c.weeklyTrend!.find((w) => w.week === week);
+              row[c.churchName] = entry?.sessions || 0;
+            });
+            return row;
+          });
+
+          const trendColors = [
+            "hsl(var(--primary))",
+            "hsl(var(--chart-2))",
+            "hsl(var(--chart-3))",
+            "hsl(var(--chart-4))",
+            "hsl(var(--chart-5))",
+          ];
+
+          return (
+            <Card>
+              <CardHeader className="pb-2">
+                <CardTitle className="text-base flex items-center gap-2">
+                  <TrendingUp className="h-4 w-4 text-primary" />
+                  Wochen-Trend pro Gemeinde (Besucher)
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="h-64">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <LineChart data={trendData}>
+                      <CartesianGrid strokeDasharray="3 3" className="stroke-border" />
+                      <XAxis dataKey="week" tick={{ fontSize: 10 }} className="fill-muted-foreground" />
+                      <YAxis tick={{ fontSize: 10 }} className="fill-muted-foreground" allowDecimals={false} />
+                      <RTooltip
+                        contentStyle={{
+                          background: "hsl(var(--card))",
+                          border: "1px solid hsl(var(--border))",
+                          borderRadius: 8,
+                          fontSize: 12,
+                        }}
+                      />
+                      <Legend wrapperStyle={{ fontSize: 11 }} />
+                      {churchesWithTrend.map(([, c], i) => (
+                        <Line
+                          key={c.churchName}
+                          type="monotone"
+                          dataKey={c.churchName}
+                          stroke={trendColors[i % trendColors.length]}
+                          strokeWidth={2}
+                          dot={{ r: 3 }}
+                          activeDot={{ r: 5 }}
+                        />
+                      ))}
+                    </LineChart>
+                  </ResponsiveContainer>
+                </div>
+
+                {/* Tabelle mit Wochen-Details */}
+                <div className="mt-4 overflow-x-auto">
+                  <Table>
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead className="text-xs">Gemeinde</TableHead>
+                        {sortedWeeks.map((w) => (
+                          <TableHead key={w} className="text-xs text-center">{w}</TableHead>
+                        ))}
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                      {churchesWithTrend.map(([slug, c]) => (
+                        <TableRow key={slug}>
+                          <TableCell className="text-xs font-medium">{c.churchName}</TableCell>
+                          {sortedWeeks.map((week) => {
+                            const entry = c.weeklyTrend!.find((w) => w.week === week);
+                            const prev = c.weeklyTrend!.find((w) => {
+                              const idx = sortedWeeks.indexOf(week);
+                              return idx > 0 && w.week === sortedWeeks[idx - 1];
+                            });
+                            const change = entry && prev && prev.sessions > 0
+                              ? Math.round(((entry.sessions - prev.sessions) / prev.sessions) * 100)
+                              : null;
+                            return (
+                              <TableCell key={week} className="text-xs text-center font-mono">
+                                {entry?.sessions || 0}
+                                {change !== null && change !== 0 && (
+                                  <span className={`ml-1 text-[10px] ${change > 0 ? "text-green-600" : "text-destructive"}`}>
+                                    {change > 0 ? "+" : ""}{change}%
+                                  </span>
+                                )}
+                              </TableCell>
+                            );
+                          })}
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </div>
+              </CardContent>
+            </Card>
+          );
+        })()}
+
           {/* Telegram Chat activity */}
           <Card>
             <CardHeader className="pb-2">
