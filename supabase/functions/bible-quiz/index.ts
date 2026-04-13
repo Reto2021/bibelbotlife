@@ -82,19 +82,20 @@ serve(async (req) => {
   }
 
   try {
-    const { mode = "multiple_choice", translation = "luther1912", difficulty = "medium" } = await req.json().catch(() => ({}));
+    const { mode = "multiple_choice", translation = "luther1912", difficulty = "medium", language = "de" } = await req.json().catch(() => ({}));
 
     const supabase = createClient(
       Deno.env.get("SUPABASE_URL")!,
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
     );
 
-    // Get a random verse using a random offset for variety
+    // Get a random verse using a random offset for variety, filtered by language
     const randomOffset = Math.floor(Math.random() * 30000);
     const { data: verses, error } = await supabase
       .from("bible_verses")
       .select("id, book, book_number, chapter, verse, text, translation")
       .eq("translation", translation)
+      .eq("language", language)
       .range(randomOffset, randomOffset + 99)
       .limit(100);
 
@@ -105,6 +106,7 @@ serve(async (req) => {
         .from("bible_verses")
         .select("id, book, book_number, chapter, verse, text, translation")
         .eq("translation", translation)
+        .eq("language", language)
         .limit(100);
       versePool = fallback;
     }
