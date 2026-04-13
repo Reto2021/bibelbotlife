@@ -1,6 +1,4 @@
 import { SEOHead } from "@/components/SEOHead";
-import { useCurrency } from "@/hooks/use-currency";
-import { useAppSetting } from "@/hooks/use-app-setting";
 import { Link } from "react-router-dom";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Button } from "@/components/ui/button";
@@ -16,9 +14,7 @@ const featureIcons = [Mic, Sparkles, FileText, Layout, Calendar, Monitor, Music,
 
 export default function ForCelebrants() {
   const { t } = useTranslation();
-  const { formatPrice, currency } = useCurrency();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const { value: showPricing } = useAppSetting("show_pricing");
 
   const features = Array.from({ length: 10 }, (_, i) => ({
     icon: featureIcons[i],
@@ -40,19 +36,18 @@ export default function ForCelebrants() {
     {
       name: t("celebrants.planPersonal"),
       price: t("celebrants.planFree"),
-      period: "",
       features: personalFeatures,
       cta: t("celebrants.ctaFree"),
       popular: false,
+      isPaid: false,
     },
     {
       name: t("celebrants.planPro"),
-      price: formatPrice(29),
-      priceCHF: 29,
-      period: t("celebrants.planProPeriod"),
+      price: t("celebrants.planProSupported"),
       features: proFeatures,
-      cta: t("celebrants.ctaTrial"),
+      cta: t("celebrants.ctaSponsor"),
       popular: true,
+      isPaid: true,
     },
   ];
 
@@ -142,17 +137,7 @@ export default function ForCelebrants() {
                 <CardContent className="p-8">
                   <h3 className="text-xl font-bold text-foreground mb-2">{plan.name}</h3>
                   <div className="mb-6">
-                    {showPricing ? (
-                      <>
-                        <span className="text-3xl font-extrabold text-foreground">{plan.price}</span>
-                        <span className="text-muted-foreground">{plan.period}</span>
-                        {currency !== "CHF" && (plan as any).priceCHF > 0 && (
-                          <p className="text-[10px] text-muted-foreground/60 mt-1">≈ CHF {(plan as any).priceCHF}.–</p>
-                        )}
-                      </>
-                    ) : (
-                      <span className="text-lg font-semibold text-muted-foreground">{(plan as any).priceCHF > 0 ? t("pricing.onRequest") : plan.price}</span>
-                    )}
+                    <span className="text-3xl font-extrabold text-foreground">{plan.price}</span>
                   </div>
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((f, j) => (
@@ -163,10 +148,10 @@ export default function ForCelebrants() {
                     ))}
                   </ul>
                   <Button asChild className="w-full" variant={plan.popular ? "default" : "outline"}>
-                    {showPricing || !(plan as any).priceCHF ? (
-                      <Link to="/login">{plan.cta}</Link>
+                    {plan.isPaid ? (
+                      <Link to="/for-churches#contact-form">{plan.cta}</Link>
                     ) : (
-                      <Link to="/for-churches#contact-form">{t("pricing.contactUs")}</Link>
+                      <Link to="/login">{plan.cta}</Link>
                     )}
                   </Button>
                 </CardContent>
