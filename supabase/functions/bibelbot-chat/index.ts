@@ -1342,7 +1342,8 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
                 args.chapter,
                 args.verse_start,
                 args.verse_end,
-                args.translation
+                args.translation,
+                lang
               );
               return { id: tc.id, result };
             } catch (e) {
@@ -1355,7 +1356,8 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
               const args = JSON.parse(tc.function.arguments);
               const result = await searchBibleVerses(
                 args.query,
-                args.translation
+                args.translation,
+                lang
               );
               return { id: tc.id, result };
             } catch (e) {
