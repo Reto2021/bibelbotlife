@@ -354,6 +354,51 @@ export type Database = {
           },
         ]
       }
+      church_members: {
+        Row: {
+          church_id: string
+          consent_contact: boolean
+          created_at: string
+          id: string
+          source_slug: string | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          church_id: string
+          consent_contact?: boolean
+          created_at?: string
+          id?: string
+          source_slug?: string | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          church_id?: string
+          consent_contact?: boolean
+          created_at?: string
+          id?: string
+          source_slug?: string | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "church_members_church_id_fkey"
+            columns: ["church_id"]
+            isOneToOne: false
+            referencedRelation: "church_partners"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "church_members_church_id_fkey"
+            columns: ["church_id"]
+            isOneToOne: false
+            referencedRelation: "church_partners_public"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       church_partners: {
         Row: {
           city: string | null
@@ -1668,6 +1713,34 @@ export type Database = {
       }
     }
     Views: {
+      church_member_details: {
+        Row: {
+          church_id: string | null
+          consent_contact: boolean | null
+          created_at: string | null
+          email: string | null
+          full_name: string | null
+          id: string | null
+          source_slug: string | null
+          user_id: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "church_members_church_id_fkey"
+            columns: ["church_id"]
+            isOneToOne: false
+            referencedRelation: "church_partners"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "church_members_church_id_fkey"
+            columns: ["church_id"]
+            isOneToOne: false
+            referencedRelation: "church_partners_public"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       church_partners_public: {
         Row: {
           city: string | null
