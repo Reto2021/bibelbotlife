@@ -327,7 +327,8 @@
     "seniorMode": "Ìpele àgbàlagbà (ọ̀rọ̀ tó tóbi)",
     "loginHint": "Wọlé láti tọ́jú ìjíròrò rẹ lórí gbogbo àwọn ohun èlò",
     "previousChats": "{{count}} awọn ibaraẹnisọrọ iṣaaju",
-    "suggestionsLoading": "Ń gbé àwọn àbá yọ…"
+    "suggestionsLoading": "Ń gbé àwọn àbá yọ…",
+    "newChat": "Ìjíròrò tuntun"
   },
   "install": {
     "title": "Fi BibleBot.Life sí",

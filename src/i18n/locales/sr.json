@@ -327,7 +327,8 @@
     "seniorMode": "Seniorski režim (veći font)",
     "loginHint": "Prijavite se da biste sačuvali razgovore na svim uređajima",
     "previousChats": "{{count}} prethodnih razgovora",
-    "suggestionsLoading": "Учитавање предлога…"
+    "suggestionsLoading": "Учитавање предлога…",
+    "newChat": "Нови разговор"
   },
   "install": {
     "title": "Instaliraj BibleBot.Life",

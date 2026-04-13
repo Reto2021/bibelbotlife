@@ -332,7 +332,8 @@
     "errorTitle": "خطأ",
     "errorConnection": "تعذر الوصول.",
     "errorNoStream": "لا يوجد بث",
-    "seniorMode": "وضع كبار السن (خط أكبر)"
+    "seniorMode": "وضع كبار السن (خط أكبر)",
+    "newChat": "محادثة جديدة"
   },
   "install": {
     "title": "تثبيت BibleBot",

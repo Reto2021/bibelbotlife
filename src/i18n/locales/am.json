@@ -327,7 +327,8 @@
     "seniorMode": "የአዛውንት ሁነታ (ትልቅ ጽሑፍ)",
     "loginHint": "በሁሉም መሳሪያዎች ላይ ውይይቶችን ለማስቀመጥ ይግቡ",
     "previousChats": "{{count}} ቀደም ሲል የተደረጉ ውይይቶች",
-    "suggestionsLoading": "ጥቆማዎችን በመጫን ላይ…"
+    "suggestionsLoading": "ጥቆማዎችን በመጫን ላይ…",
+    "newChat": "አዲስ ውይይት"
   },
   "install": {
     "title": "BibleBot.Life ጫን",

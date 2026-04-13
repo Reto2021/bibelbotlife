@@ -327,7 +327,8 @@
     "seniorMode": "Senior Mode (mas malaking font)",
     "loginHint": "Mag-log in para mapanatili ang mga pag-uusap sa lahat ng device",
     "previousChats": "{{count}} nakaraang pag-uusap",
-    "suggestionsLoading": "Naglo-load ng mga mungkahi…"
+    "suggestionsLoading": "Naglo-load ng mga mungkahi…",
+    "newChat": "Bagong usapan"
   },
   "install": {
     "title": "I-install ang BibleBot.Life",

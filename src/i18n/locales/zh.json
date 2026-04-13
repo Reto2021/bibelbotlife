@@ -328,7 +328,8 @@
     "seniorMode": "老年模式（字体更大）",
     "loginHint": "登录以在所有设备上保留对话记录",
     "previousChats": "{{count}} 次之前的对话",
-    "suggestionsLoading": "加载建议中…"
+    "suggestionsLoading": "加载建议中…",
+    "newChat": "新对话"
   },
   "install": {
     "title": "安装 BibleBot.Life",

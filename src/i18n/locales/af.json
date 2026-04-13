@@ -332,7 +332,8 @@
     "errorTitle": "Fout",
     "errorConnection": "kon nie bereik word nie.",
     "errorNoStream": "Geen stroom",
-    "seniorMode": "Seniormodus (groter lettertipe)"
+    "seniorMode": "Seniormodus (groter lettertipe)",
+    "newChat": "Nuwe gesprek"
   },
   "install": {
     "title": "Installeer BibleBot",

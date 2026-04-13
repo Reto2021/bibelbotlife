@@ -327,7 +327,8 @@
     "namePlaceholder": "bijv. Eli, Miriam…",
     "loginHint": "Meld u aan om gesprekken op alle apparaten te behouden",
     "previousChats": "{{count}} eerdere gesprekken",
-    "suggestionsLoading": "Suggesties laden…"
+    "suggestionsLoading": "Suggesties laden…",
+    "newChat": "Nieuw gesprek"
   },
   "install": {
     "title": "BibleBot.Life installeren",

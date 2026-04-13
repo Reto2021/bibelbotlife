@@ -327,7 +327,8 @@
     "seniorMode": "Режим для літніх людей (більший шрифт)",
     "loginHint": "Увійдіть, щоб зберігати розмови на всіх пристроях",
     "previousChats": "{{count}} попередніх розмов",
-    "suggestionsLoading": "Завантаження пропозицій…"
+    "suggestionsLoading": "Завантаження пропозицій…",
+    "newChat": "Нова розмова"
   },
   "install": {
     "title": "Встановити BibleBot.Life",

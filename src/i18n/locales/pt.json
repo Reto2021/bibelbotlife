@@ -312,7 +312,8 @@
     "namePlaceholder": "ex. Eli, Miriam…",
     "loginHint": "Faça login para manter conversas em todos os dispositivos",
     "previousChats": "{{count}} conversas anteriores",
-    "suggestionsLoading": "Carregando sugestões…"
+    "suggestionsLoading": "Carregando sugestões…",
+    "newChat": "Nova conversa"
   },
   "install": {
     "title": "Instalar BibleBot.Life",

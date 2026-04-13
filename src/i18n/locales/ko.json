@@ -327,7 +327,8 @@
     "seniorMode": "시니어 모드 (큰 글꼴)",
     "loginHint": "모든 기기에서 대화를 유지하려면 로그인하세요",
     "previousChats": "이전 대화 {{count}}개",
-    "suggestionsLoading": "제안 로딩 중…"
+    "suggestionsLoading": "제안 로딩 중…",
+    "newChat": "새 대화"
   },
   "install": {
     "title": "BibleBot.Life 설치",

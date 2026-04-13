@@ -332,7 +332,8 @@
     "errorTitle": "Սխալ",
     "errorConnection": "չհաջողվեց միանալ։",
     "errorNoStream": "Հոսք չկա",
-    "seniorMode": "Տարեցների ռեժիմ (ավելի մեծ տառատեսակ)"
+    "seniorMode": "Տարեցների ռեժիմ (ավելի մեծ տառատեսակ)",
+    "newChat": "Նոdelays զրույց"
   },
   "install": {
     "title": "Տեղադրել BibleBot-ը",

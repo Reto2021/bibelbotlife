@@ -327,7 +327,8 @@
     "seniorMode": "Seniortilstand (større skrift)",
     "loginHint": "Log ind for at bevare samtaler på tværs af enheder",
     "previousChats": "{{count}} tidligere samtaler",
-    "suggestionsLoading": "Indlæser forslag…"
+    "suggestionsLoading": "Indlæser forslag…",
+    "newChat": "Ny samtale"
   },
   "install": {
     "title": "Installer ledsager",

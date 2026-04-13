@@ -327,7 +327,8 @@
     "seniorMode": "Hali ya Wazee (Fonti kubwa)",
     "loginHint": "Ingia ili kuwezesha mazungumzo kwenye vifaa vyote",
     "previousChats": "Mazungumzo {{count}} yaliyopita",
-    "suggestionsLoading": "Inapakia mapendekezo…"
+    "suggestionsLoading": "Inapakia mapendekezo…",
+    "newChat": "Mazungumzo mapya"
   },
   "install": {
     "title": "Sakinisha BibleBot.Life",

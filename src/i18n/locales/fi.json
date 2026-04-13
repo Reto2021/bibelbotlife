@@ -327,7 +327,8 @@
     "seniorMode": "Senioritila (suurempi fontti)",
     "loginHint": "Kirjaudu sisään pitääksesi keskustelut tallessa eri laitteilla",
     "previousChats": "{{count}} edellistä keskustelua",
-    "suggestionsLoading": "Ladataan ehdotuksia…"
+    "suggestionsLoading": "Ladataan ehdotuksia…",
+    "newChat": "Uusi keskustelu"
   },
   "install": {
     "title": "Asenna BibleBot.Life",
