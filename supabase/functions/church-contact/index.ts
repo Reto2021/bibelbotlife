@@ -30,7 +30,7 @@ Deno.serve(async (req) => {
     // Get church info
     const { data: church, error: churchError } = await supabase
       .from("church_partners")
-      .select("name, contact_email, is_active")
+      .select("name, slug, contact_email, is_active")
       .eq("id", church_id)
       .single();
 
@@ -40,6 +40,14 @@ Deno.serve(async (req) => {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
     }
+
+    // Check if this is the first contact request for this church
+    const { count: existingCount } = await supabase
+      .from("church_contact_requests")
+      .select("id", { count: "exact", head: true })
+      .eq("church_id", church_id);
+
+    const isFirstContact = (existingCount ?? 0) === 0;
 
     // Store in DB
     const requestId = crypto.randomUUID();
@@ -74,6 +82,24 @@ Deno.serve(async (req) => {
         },
       },
     });
+
+    // If first contact request and church has a contact email, notify the church
+    if (isFirstContact && church.contact_email) {
+      await supabase.functions.invoke("send-transactional-email", {
+        body: {
+          templateName: "first-contact-notification",
+          recipientEmail: church.contact_email,
+          idempotencyKey: `first-contact-${church_id}`,
+          templateData: {
+            churchName: church.name,
+            senderName: name || undefined,
+            senderEmail: email,
+            message: content,
+            slug: church.slug,
+          },
+        },
+      });
+    }
 
     return new Response(JSON.stringify({ success: true }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
