@@ -1,4 +1,1286 @@
 {
-  "error": "Invalid JSON from AI",
-  "raw": "{\"nav\":{\"startNow\":\"Kezdd el most\",\"prayerWall\":\"Imádságfal\",\"bibleQuiz\":\"Biblia kvíz\",\"forCelebrants\":\"Lelkészeknek\",\"forCelebrantsMobile\":\"Lelkészeknek és coachoknak\"},\"loader\":\"Betöltés…\",\"hero\":{\"badge\":{\"noLogin\":\"Nincs szükség bejelentkezésre\",\"optionalLogin\":\"Bejelentkezés opcionális\",\"noData\":\"Nincs adat\",\"noJudgment\":\"Nincs ítélet\"},\"title1\":\"A Biblia.\",\"title2\":\" Újragondolva.\",\"subtitle\":\"Személyes társad ismeri a Bibliát – és felteszi a megfelelő kérdéseket. Nem ember, de őszinte tár"
+  "nav": {
+    "startNow": "Kezdje most",
+    "prayerWall": "Imádságfal",
+    "bibleQuiz": "Bibliai kvíz",
+    "forCelebrants": "Lelkészeknek",
+    "forCelebrantsMobile": "Lelkészeknek és coachoknak"
+  },
+  "loader": "Betöltés…",
+  "hero": {
+    "badge": {
+      "noLogin": "Nincs bejelentkezés",
+      "noData": "Nincs adat",
+      "noJudgment": "Nincs ítélet",
+      "optionalLogin": "Bejelentkezés opcionális"
+    },
+    "title1": "A Biblia.",
+    "title2": " Újragondolva.",
+    "subtitle": "A társad ismeri a Bibliát – és felteszi a megfelelő kérdéseket. Nem ember, de őszinte társ. Jó beszélgetésekhez, mély kérdésekhez és valódi impulzusokhoz.",
+    "ctaTelegram": "Kezdés Telegramon keresztül",
+    "ctaMore": "Tudjon meg többet",
+    "quote": "«Jöjjetek hozzám mindnyájan, akik megfáradtatok és meg vagytok terhelve, és én megnyugtatlak titeket.»",
+    "quoteRef": "– Máté 11,28"
+  },
+  "impulse": {
+    "loading": "Napi impulzus betöltése...",
+    "label": "A nap impulzusa",
+    "deepDive": "Mit jelent ez számomra?",
+    "explore": "Olvassa el a teljes szakaszt",
+    "alreadySubscribed": "Már kapod a napi inspirációt",
+    "subscribeCta": "Szeretnéd megkapni ezt az inspirációt naponta?",
+    "playAudio": "Hallgat",
+    "stopAudio": "Leállít"
+  },
+  "features": {
+    "sectionTitle": "Amit a társad kínál neked",
+    "sectionSubtitle": "Fedezd fel a sok módot, ahogyan személyes társad támogathat téged",
+    "bible": {
+      "title": "Bibliai versek és magyarázatok",
+      "desc": "Kérdezze meg: „Mit mond a Biblia erről…?” és kapjon megfelelő verseket kontextussal és érthető magyarázattal."
+    },
+    "goals": {
+      "title": "Élet tervezése és célkitűzés",
+      "desc": "Fedezze fel hivatását, tűzzön ki konkrét célokat, és derítse ki, mit tervezhet Isten Önnel."
+    },
+    "self": {
+      "title": "Önmagára találás",
+      "desc": "Ismerje fel ajándékait, erősségeit és vágyait – és azt, amire a szíve igazán vágyik."
+    },
+    "faith": {
+      "title": "Hitút és Krisztus megtalálása",
+      "desc": "Akár kereső, kételkedő vagy elmélyedő – a társad elkíséri Önt személyes útján."
+    },
+    "daily": {
+      "title": "Napi impulzusok és egyházi év",
+      "desc": "Kezdje a napját impulzusokkal, és kísérje el az advent, a nagyböjt és az ünnepek során."
+    },
+    "groups": {
+      "title": "Csoportok és gyülekezetek",
+      "desc": "Tökéletes bibliai körök, gyülekezeti csoportok és közösségi áhítatok számára."
+    }
+  },
+  "coaching": {
+    "badge": "Módszertan",
+    "title": "Nem csak egy chatbot – valódi kíséret",
+    "subtitle": "A társad ötvözi a bibliai bölcsességet a bevált coaching módszerekkel és a pozitív pszichológiával.",
+    "journeyTitle": "Személyes kíséret",
+    "journeyDesc": "A társad elkíséri Önt, ameddig csak akarja – szabad beszélgetésben vagy opcionális 21 napos struktúrával.",
+    "week1": "1. hét: Megérkezés",
+    "week1Desc": "Bizalom építése, meghallgatás, a helyzet megértése. Hol áll? Mi foglalkoztatja?",
+    "week2": "2. hét: Elmélyítés",
+    "week2Desc": "Minták felismerése, vágyak tisztázása, bibliai impulzusok elmélyítése. Mit akar valójában?",
+    "week3": "3. hét: Cselekvés",
+    "week3Desc": "Konkrét lépések megtétele, célok megfogalmazása, változás elindítása. Mi a következő lépés?",
+    "openQuestionsTitle": "Nyitott kérdések gyors válaszok helyett",
+    "openQuestionsDesc": "A társad nem ad olcsó tanácsokat. Ehelyett felteszi azokat a kérdéseket, amelyek igazán számítanak:",
+    "openQ1": "«Mi is áll valójában e mögött a vágy mögött?»",
+    "openQ2": "«Miből venné észre, hogy valami megváltozott?»",
+    "openQ3": "«Mi lenne az első apró lépés?»",
+    "honestTitle": "Őszinte, nem toxikus pozitív",
+    "honestDesc": "Nincs „Minden rendben lesz!” és nincs szépítés. A társad empatikus ÉS őszinte:",
+    "honest1": "Megnevezi a kényelmetlen bibliai verseket is",
+    "honest2": "Önreflexióra ösztönöz",
+    "honest3": "Megkülönbözteti a vigaszt a elnyomástól",
+    "scienceTitle": "Tudományosan megalapozott",
+    "perma": {
+      "name": "PERMA-modell",
+      "author": "Seligman",
+      "desc": "Pozitív érzelmek, értelem és növekedés"
+    },
+    "logo": {
+      "name": "Logoterápia",
+      "author": "Frankl",
+      "desc": "Értelemkeresés nehéz időkben"
+    },
+    "gratitude": {
+      "name": "Hála",
+      "author": "Emmons",
+      "desc": "Kutatásalapú hála gyakorlat"
+    },
+    "forgiveness": {
+      "name": "Megbocsátás",
+      "author": "Worthington",
+      "desc": "REACH-modell a megbocsátási folyamatokhoz"
+    },
+    "renameTip": "💡 Adhatsz a társadodnak saját nevet – hogy valóban **a te** társad legyen."
+  },
+  "discover": {
+    "badge": "Kíváncsiaknak",
+    "title": "Fedezze fel újra a hitet – nyomás nélkül",
+    "subtitle": "Egyre több ember teszi fel újra a nagy kérdéseket. A BibleBot.Life mindazoknak szól, akik (újra) fel akarják fedezni a hitet – őszintén, pátosz és egyházi zsargon nélkül.",
+    "doubt": {
+      "title": "Kételkedik?",
+      "text": "Jó. A kétség nem hiba – az őszinte hit kezdete. A Biblia tele van emberekkel, akik küzdöttek."
+    },
+    "search": {
+      "title": "Keres?",
+      "text": "Talán még azt sem tudja pontosan, mit. Ez teljesen rendben van. A társad segít Önnek feltenni a megfelelő kérdéseket – ahelyett, hogy gyors válaszokat adna."
+    },
+    "deepen": {
+      "title": "El akar mélyedni?",
+      "text": "Már hisz, de többet akar érteni? Fedezze fel a Biblia mélységét – történelmileg, személyesen, meglepően relevánsan."
+    },
+    "quote": "«Zörgessetek, és megnyittatik nektek.»",
+    "quoteRef": "– Máté 7,7",
+    "quoteText": "Svájcban nem sokat beszélünk a hitről. Nem is kell. De aki kérdez, az őszinte válaszokat érdemel – prédikáció, tagság és hátsó szándék nélkül."
+  },
+  "subscribe": {
+    "title": "Napi bibliai impulzus",
+    "subtitle": "Minden reggel 7:00-kor – egy vers, egy gondolat, egy jó kezdet.",
+    "firstName": "Keresztneved",
+    "firstNameOptional": "(opcionális)",
+    "firstNamePlaceholder": "pl. Tamás",
+    "firstNameHint": "Hogy személyesen üdvözölhessük Önt.",
+    "channelLabel": "Hogyan szeretné megkapni az impulzust?",
+    "push": "Push",
+    "pushDesc": "Böngésző értesítés",
+    "telegram": "Telegram",
+    "telegramDesc": "Üzenet Telegramon keresztül",
+    "sms": "SMS",
+    "smsDesc": "SMS a telefonjára",
+    "phoneLabel": "Telefonszám",
+    "phonePlaceholder": "+36 20 123 4567",
+    "phoneHint": "Országkóddal, pl. +36 Magyarországra.",
+    "telegramHint": "Kattintson a „Feliratkozás” gombra – átirányítjuk a Telegramra. Indítsa el ott a botot, és írja be a <strong>/daily</strong> parancsot a napi impulzus aktiválásához.",
+    "pushHint": "A „Feliratkozás” gombra kattintás után a böngészője engedélyt kér az értesítésekhez. Kérjük, engedélyezze azokat az impulzus fogadásához.",
+    "submit": "Feliratkozás",
+    "submitting": "Feliratkozás folyamatban...",
+    "footNote": "Nincs szükség bejelentkezésre. Bármikor lemondható.",
+    "successTitle": "Feliratkozott! 🙏",
+    "successText": "Holnaptól reggel 7:00-kor megkapja személyes bibliai impulzusát.",
+    "toastTelegram": "Telegram megnyitva 🙏",
+    "toastTelegramDesc": "Indítsa el a botot, és írja be a /daily parancsot a napi impulzus aktiválásához.",
+    "toastSuccess": "Feliratkozva! 🙏",
+    "toastSuccessDesc": "Holnaptól megkapja napi impulzusát.",
+    "toastPushPreview": "Push-előfizetés nem előnézetben",
+    "toastPushPreviewDesc": "A push értesítések csak a közzétett oldalon működnek.",
+    "toastNotSupported": "Nem támogatott",
+    "toastNotSupportedDesc": "Böngészője nem támogatja a push értesítéseket.",
+    "toastPermDenied": "Engedély megtagadva",
+    "toastPermDeniedDesc": "Kérjük, engedélyezze az értesítéseket a böngésző beállításaiban.",
+    "toastError": "Hiba",
+    "toastErrorDesc": "Kérjük, próbálja meg később.",
+    "subscribeButton": "Feliratkozás Inspo-ra",
+    "manage": "Előfizetés kezelése",
+    "switchChannel": "Csatorna váltása:",
+    "unsubscribe": "Leiratkozás",
+    "unsubscribedTitle": "Leiratkozva",
+    "unsubscribedDesc": "Nem fogsz több napi inspirációt kapni."
+  },
+  "faq": {
+    "badge": "Gyakran Ismételt Kérdések",
+    "title": "Amit tudnia kell a társadról",
+    "subtitle": "Az átláthatóság fontos számunkra – különösen a teológusok, lelkészek és kritikus gondolkodók felé.",
+    "q1": "Miben különbözik a társad a ChatGPT-től és társaitól?",
+    "q1Generic": "Általános chatbotok:",
+    "q1GenericItems": [
+      "Felületes bibliai idézetek kontextus nélkül",
+      "Nincs lelkipásztori védőkorlát",
+      "Kényelmetlen szövegek elkerülése",
+      "Nincs krízisintervenció",
+      "Biblia és ezoterika keverése",
+      "Nincs visszakérdezés – csak megerősítés"
+    ],
+    "q1Bot": "BibleBot.Life:",
+    "q1BotItems": [
+      "5 elismert fordítás – kényelmetlen részek is",
+      "Védőkorlátok ÉS kihívást jelentő kíséret",
+      "Visszakérdezés az önreflexióhoz",
+      "Krízisre utalások (Tel. 143 / 147)",
+      "Kizárólag keresztény teológia",
+      "Kritikus gondolkodás elősegítése a hit érettségéhez"
+    ],
+    "q2": "Milyen bibliafordítások vannak mögötte?",
+    "q2Intro": "A társad ökumenikus módon dolgozik a legfontosabb német nyelvű bibliai kiadásokkal:",
+    "q2Outro": "Minden bibliai vers forrásmegjelöléssel és történelmi kontextussal kerül kiadásra.",
+    "q3": "Milyen tudományos alapok állnak mögötte?",
+    "q3Intro": "A kíséret a pozitív pszichológia szakértők által ellenőrzött kutatásain alapul:",
+    "q4": "Hogyan biztosítja a társad a lelkipásztori biztonságot?",
+    "q4Items": [
+      "Öngyilkossági gondolatok vagy krízisek esetén → azonnali továbbítás a Dargebotene Hand (143) és a Pro Juventute (147) szervezetekhez",
+      "Nincs pszichológiai vagy orvosi diagnózis",
+      "Tisztelet a tetszőlegesség nélkül – világos bibliai álláspontok elfogadása",
+      "Empátia ÉS őszinteség – a kényelmetlen dolgok is szóba kerülnek",
+      "Visszakérdezés az önreflexióhoz az olcsó megerősítés helyett",
+      "Nincs toxikus pozitivitás – valódi, őszinte kíséret",
+      "Nyíltan megnevezi a feszültségeket és a nehéz szövegeket"
+    ],
+    "q5": "A társad felekezeti kötődésű?",
+    "q5Answer": "Nem. A társad ökumenikus irányultságú, és egyformán tiszteletben tartja a református, katolikus, szabadegyházi és más keresztény hagyományokat. A felekezetileg eltérő értelmezések esetén a különböző perspektívák átláthatóan kerülnek bemutatásra – anélkül, hogy bármelyik hagyományt előnyben részesítenék.",
+    "q6": "A társad helyettesíti a lelkipásztori gondozást vagy a terápiát?",
+    "q6Answer": "Nem. A társad egy digitális segédeszköz a személyes bibliaolvasáshoz és elmélkedéshez. Nem helyettesíti a professzionális lelkipásztori gondozást, teológiai tanácsadást vagy pszichológiai terápiát. Súlyos krízisek esetén a társad mindig minősített segélyhelyekre utal.",
+    "q7": "A társad nem csak egy „jó érzés bot”?",
+    "q7Answer": "Nem. A társad vigasztal, ahol vigaszra van szükség – de kihívást is jelent. A lelki növekedéshez súrlódás kell. A társad kényelmetlen visszakérdezéseket tesz fel, megnevezi a nehéz bibliai szövegeket (Jób, panaszos zsoltárok, prófétai kritika), és nem riad vissza olyan témáktól, mint az igazságosság, a megtérés és a felelősség. A prófétai hagyomány soha nem volt kényelmes – és a társad sem az.",
+    "q8": "Ki áll a társad mögött, és hogyan finanszírozzák?",
+    "q8Answer": "A BibleBot.Life egy magán, nem kereskedelmi projekt. Önkéntes alapon működik, és kizárólag önkéntes adományokból finanszírozza magát. Nincs reklám, nincs adatértékesítés és nincsenek fizetős funkciók. Minden adomány közvetlenül a működési költségek (infrastruktúra, tárhely, fejlesztés) fedezésére fordítódik. Mivel a társad magánprojektként működik, az adományok nem vonhatók le az adóból.",
+    "q9": "Hogyan kezeli a társad az adataimat?",
+    "q9Answer": "A társad nem tárol személyes adatokat és chat-előzményeket. Minden beszélgetés névtelen. Nincs bejelentkezés, nincs nyomon követés és nincs adatmegosztás harmadik felekkel. A használat teljesen névtelen.",
+    "tradition": {
+      "reformed": "Református",
+      "evangelical": "Evangélikus",
+      "catholic": "Katolikus",
+      "freeChurch": "Szabadegyház",
+      "literal": "Szó szerinti"
+    }
+  },
+  "donate": {
+    "badge": "Támogassa a társadot",
+    "title": "Segítsen abban, hogy a társad ingyenes maradjon",
+    "subtitle": "A BibleBot.Life egy szívügy – reklámok, előfizetés és rejtett költségek nélkül. Ahhoz, hogy ez így maradjon, önkéntes adományokra van szükségem. Minden hozzájárulás segít fedezni a működési és infrastrukturális költségeket.",
+    "bankTitle": "Adomány banki átutalással",
+    "bankSubtitle": "Minden összeg számít – nagyon köszönjük! 🙏",
+    "recipient": "Kedvezményezett",
+    "bank": "Bank",
+    "purpose": "Közlemény",
+    "purposeValue": "Adomány BibleBot.Life",
+    "note": "A BibleBot.Life magánprojektként működik. Az adományok ezért nem vonhatók le az adóból.",
+    "creditCard": "Támogatás hitelkártyával",
+    "secureNote": "Biztonságos fizetés · Nincs előfizetési csapda · Bármikor lemondható",
+    "twint": "Támogatás Twinttel"
+  },
+  "refer": {
+    "badge": "Isten szavának megosztása",
+    "title": "Ajánlja tovább a társadot",
+    "subtitle": "Ismer valakit, akinek éppen bátorításra van szüksége? Ossza meg a társadot – egy üzenet sokat jelenthet.",
+    "whatsapp": "Megosztás WhatsAppon keresztül",
+    "whatsappMsg": "Szia, meg akartam mutatni neked a BibleBot.Lifeot – egy ingyenes bibliai társat, aki ismeri a Bibliát és igazán jó kérdéseket tesz fel. Nincs bejelentkezés, névtelen, őszinte. Próbáld ki: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "telegram": "Megosztás Telegramon keresztül",
+    "telegramMsg": "Szia, ismered már a BibleBot.Lifeot? Egy ingyenes személyes bibliai társ – őszinte, névtelen, bejelentkezés nélkül. Nézd meg: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "email": "Megosztás e-mailben",
+    "emailSubject": "Ez érdekelhet: BibleBot.Life",
+    "emailBody": "Szia!\n\nMeg akartam mutatni neked a BibleBot.Lifeot – egy ingyenes bibliai társat, aki igazán ismeri a Bibliát. Nincs szükség regisztrációra, teljesen névtelen.\n\nJó visszakérdezéseket tesz fel, magyarázza a bibliai verseket kontextusban, és őszintén elkísér – még nehéz témákban is.\n\nPróbáld ki: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nÜdvözlettel",
+    "copy": "Link másolása",
+    "copied": "Link másolva! 📋",
+    "qr": "Vagy egyszerűen mutassa meg ezt a QR-kódot:"
+  },
+  "cta": {
+    "title": "Nem kell egyedül átvészelnie",
+    "subtitle": "Egyszerűen írja meg a társadnak, mi foglalkoztatja. Nincs bejelentkezés, nincs költség, nincs ítélet – csak őszinte kíséret és a Biblia bölcsessége.",
+    "button": "Kezdje el a beszélgetést most"
+  },
+  "footer": {
+    "tagline": "Személyes társad — a Biblia mélységével, előzetes tudás nélkül.",
+    "disclaimer": "A BibleBot.Life egy digitális segédeszköz, és nem helyettesíti a professzionális lelkipásztori gondozást, teológiai tanácsadást vagy pszichológiai terápiát. Akut krízisek esetén forduljon a Dargebotene Hand (Tel. 143) vagy a Pro Juventute (Tel. 147) szervezetekhez.",
+    "impressum": "Impresszum",
+    "notes": "Megjegyzések",
+    "private": "Magán, nem kereskedelmi projekt",
+    "noChat": "Nincs chatadat tárolása",
+    "noTax": "Az adományok nem vonhatók le az adóból",
+    "datenschutz": "Adatvédelem",
+    "love": "❤️-vel mindazoknak, akik azon gondolkodnak, mit gondol Krisztus.",
+    "forChurches": "Gyülekezeteknek",
+    "forCelebrants": "Lelkipásztoroknak és coachoknak"
+  },
+  "chat": {
+    "welcome": "Örülök, hogy itt vagy 🤗\n\nÉn vagyok a társadod – a személyes társad a Bibliával, jó kérdésekkel és konkrét impulzusokkal. Nincs nyomás, nincs ítélet.\n\nBármit megkérdezhetsz tőlem – vagy egyszerűen elmondhatod, mi foglalkoztat éppen. 💛",
+    "journeyOffer": "💡 **Tipp:** Egy **21 napos kíséretet** is kínálok – 3 hét napi impulzusokkal, elmélkedésekkel és konkrét lépésekkel. Teljesen a saját tempódban.\n\nSzeretnéd kipróbálni?",
+    "suggestion1": "Éppen egy bátorító szóra van szükségem",
+    "suggestion2": "Mit mond a Biblia, ha bizonytalannak érzi magát?",
+    "suggestion3": "Szeretném megtudni, mit akarok valójában",
+    "teaser": "Mi foglalkoztat éppen? 💛",
+    "teaserSub": "Itt vagyok – ítélet nélkül.",
+    "teaserCta": "Írj most →",
+    "openChat": "Chat megnyitása",
+    "closeChat": "Chat bezárása",
+    "yourCompanion": "Személyes társad",
+    "journeyComplete": "21 nap kész! 🎉",
+    "arriving": "Megérkezés",
+    "deepening": "Elmélyítés",
+    "acting": "Cselekvés",
+    "renameTip": "Adj nevet nekem ✨",
+    "namePlaceholder": "pl. Éli, Mirjam…",
+    "changeName": "Név módosítása",
+    "placeholder": "Csak írj bátran...",
+    "startVoice": "Hangbevitel indítása",
+    "stopVoice": "Felvétel leállítása",
+    "noVoice": "Böngészője nem támogatja a hangbevitelt.",
+    "writing": "ír...",
+    "shieldBadge": "Nincs bejelentkezés · Nincs ítélet · Idézetek ellenőrizve",
+    "journeyStart": "Igen, kezdjük ✨",
+    "journeyLater": "Talán később",
+    "journeyStartMsg": "Igen, szeretném elkezdeni a 21 napos kíséretet!",
+    "qaChecking": "Idézetek ellenőrzése...",
+    "qaIssue": "{{count}} megjegyzés az idézetekhez",
+    "qaIssue_plural": "{{count}} megjegyzés az idézetekhez",
+    "qaOk": "{{count}} idézet ellenőrizve ✓",
+    "qaOk_plural": "{{count}} idézet ellenőrizve ✓",
+    "qaWarning": "⚠️ Megjegyzések a pontossághoz:",
+    "errorTooMany": "Túl sok kérés – kérjük, várjon egy pillanatot.",
+    "errorCredits": "Kvóta kimerült – próbáld újra később.",
+    "errorConnect": "Hiba a csatlakozáskor.",
+    "errorTitle": "Hiba",
+    "errorConnection": "nem érhető el.",
+    "errorNoStream": "Nincs stream",
+    "seniorMode": "Szenior mód (nagyobb betűméret)",
+    "loginHint": "Jelentkezz be, hogy beszélgetéseid minden eszközön megmaradjanak",
+    "previousChats": "{{count}} korábbi beszélgetés",
+    "suggestionsLoading": "Javaslatok betöltése…"
+  },
+  "install": {
+    "title": "BibleBot.Life telepítése",
+    "androidDesc": "Gyors hozzáférés közvetlenül a kezdőképernyőről",
+    "iosDesc": "Koppintson a „Megosztás” → „Hozzáadás a kezdőképernyőhöz” gombra",
+    "button": "Telepítés",
+    "close": "Bezárás"
+  },
+  "share": {
+    "label": "Megosztás",
+    "shareVia": "Megosztás ezen keresztül",
+    "copied": "Másolva! 📋",
+    "copiedShort": "Másolva!",
+    "copiedDesc": "A szöveg a vágólapra másolva. Most oszd meg WhatsAppon, Instagramon vagy ahol szeretnéd!",
+    "copyLink": "Szöveg másolása",
+    "error": "Másolás sikertelen",
+    "impulseTitle": "Társad – A nap impulzusa",
+    "chatTitle": "Társad – A nap gondolata",
+    "createImage": "Kép létrehozása ✨",
+    "generating": "Létrehozás folyamatban…",
+    "imageReady": "A képed készen áll a megosztásra!",
+    "shareImage": "Kép megosztása",
+    "download": "Mentés",
+    "imageError": "Kép létrehozása sikertelen",
+    "imageErrorDesc": "A kép nem hozható létre. Kérjük, próbálja meg később.",
+    "imageSaved": "Szöveg másolva! 📋",
+    "imageSavedDesc": "Mentse el a képet, és ossza meg a másolt szöveggel Instagramon, WhatsAppon vagy ahol szeretné!",
+    "clipboardFallback": "Szöveg másolva — illeszd be posztoláskor!",
+    "recommendedBy": "Ajánlja: {{church}}",
+    "hashtagBible": "#Biblia"
+  },
+  "darkMode": {
+    "light": "Világos mód",
+    "dark": "Sötét mód"
+  },
+  "impressum": {
+    "back": "Vissza a kezdőlapra",
+    "title": "Impresszum"
+  },
+  "datenschutz": {
+    "back": "Vissza a kezdőlapra",
+    "title": "Adatvédelmi nyilatkozat"
+  },
+  "tiles": {
+    "sectionTitle": "Mi foglalkoztat?",
+    "sectionSubtitle": "Válasszon egy témát — a társad elkíséri Önt",
+    "baptism": {
+      "title": "Keresztelői ige megtalálása",
+      "desc": "A tökéletes vers gyermekednek",
+      "prompt": "Segítsen nekem megtalálni egy megfelelő keresztelői igét. Milyen gyermekről van szó, és mit kívánnak a szülők?",
+      "prompt_v1": "Mit jelent valójában a keresztség?",
+      "prompt_v2": "Mesélj a keresztségről a Bibliában – lepj meg!",
+      "prompt_v3": "Miért keresztelkednek meg az emberek?"
+    },
+    "condolence": {
+      "title": "Vigasztaló szavak",
+      "desc": "Részvétnyilvánítás és búcsú kísérése",
+      "prompt": "Vigasztaló szavakra van szükségem egy részvétnyilvánító kártyához. Tudna segíteni nekem valami megfelelő megfogalmazásában?"
+    },
+    "wedding": {
+      "title": "Esküvői ige",
+      "desc": "Bibliai szavak szerelmetekhez",
+      "prompt": "Szép bibliai igét keresünk esküvőnkre. Mely bibliai versek illenek a szerelemhez és a partnerséghez?"
+    },
+    "anxiety": {
+      "title": "Szorongás és aggodalmak",
+      "desc": "Bátorság megtalálása nehéz időkben",
+      "prompt": "Éppen szorongással és aggodalmakkal küzdök. Mit mond erről a Biblia? Vannak versek, amelyek bátorságot adnak?",
+      "prompt_v1": "Szorongok. Mit mond a Biblia a szorongásról?",
+      "prompt_v2": "Hogyan segíthet a hit a szorongásban?",
+      "prompt_v3": "Mely bibliai alakok is szorongtak?"
+    },
+    "confession": {
+      "title": "Gyónás",
+      "desc": "Isten megbocsát — mondd ki",
+      "prompt": "Szeretnék megszabadulni valamitől, ami nyomaszt. Mit mond a Biblia a megbocsátásról és az újrakezdésről?"
+    },
+    "heartbreak": {
+      "title": "Szívfájdalom",
+      "desc": "Amit a Biblia mond a szívfájdalomról",
+      "prompt": "Megtört a szívem. Mit mond a Biblia a szívfájdalomról és arról, hogyan találhatunk újra reményt?",
+      "prompt_v1": "Megtört a szívem. Mit mond erről a Biblia?",
+      "prompt_v2": "Hogyan kezeljem a szívfájdalmat – van bibliai segítség?",
+      "prompt_v3": "Meggyógyíthatja-e Isten a megtört szívet?"
+    },
+    "newstart": {
+      "title": "Újrakezdés",
+      "desc": "Erő egy új életszakaszhoz",
+      "prompt": "Újrakezdés előtt állok, és bátorításra van szükségem. Mely bibliai versek szólnak az újrakezdésről?"
+    },
+    "namequiz": {
+      "title": "What does your name mean?",
+      "desc": "Discover the biblical meaning of your name",
+      "prompt": "What does my name mean and does it have a biblical or spiritual significance? Surprise me!",
+      "prompt_v1": "Which biblical names have the most beautiful meanings?",
+      "prompt_v2": "What does my name mean – is there a biblical connection?",
+      "prompt_v3": "Tell me the story behind my name!"
+    },
+    "sleepless": {
+      "title": "Álmatlan",
+      "desc": "Nyugalom megtalálása éjszaka",
+      "prompt": "Nem tudok aludni, és gondolkodom. Van-e nyugtató ima vagy zsoltár az éjszakára?"
+    },
+    "loneliness": {
+      "title": "Magány",
+      "desc": "Soha nem vagy egyedül",
+      "prompt": "Magányosnak érzem magam. Mit mond a Biblia arról, hogy Isten mindig velünk van?"
+    },
+    "decision": {
+      "title": "Nehéz döntés",
+      "desc": "Bölcsesség a helyes úthoz",
+      "prompt": "Nehéz döntés előtt állok. Mely bibliai versek segítenek megtalálni a helyes utat?"
+    },
+    "gratitude": {
+      "title": "Hála",
+      "desc": "Személyes hálaima",
+      "prompt": "Szeretnék hálát adni Istennek. Segítsen nekem egy személyes hálaima megfogalmazásában.",
+      "prompt_v1": "Hogyan lehetek hálásabb?",
+      "prompt_v2": "Mit mond a Biblia a hálaadásról?",
+      "prompt_v3": "Miért olyan fontos a hála a hitben?"
+    },
+    "lifewheel": {
+      "title": "Életkerék",
+      "desc": "Mennyire vagy elégedett valójában?"
+    },
+    "sevenwhys": {
+      "title": "7 Miért",
+      "desc": "Találd meg kérdésed legmélyebb gyökerét",
+      "prompt": "Szeretném elvégezni a 7 miért gyakorlatot. Itt van a témám:"
+    },
+    "anger": {
+      "title": "Harag és düh",
+      "desc": "Ha felrobbanhatnál a dühtől",
+      "prompt": "Nagyon dühös vagyok, és nem tudom, mit kezdjek a haragommal. Mit mond a Biblia a haragról és annak kezeléséről?"
+    },
+    "shame": {
+      "title": "Szégyen és bűntudat",
+      "desc": "Ha a bűntudat elnyom",
+      "prompt": "Nagyon szégyellem magam, és bűnösnek érzem magam. Mit mond a Biblia a bűnről, a megbocsátásról és az újrakezdésről?"
+    },
+    "burnout": {
+      "title": "Kiégés",
+      "desc": "Ha egyszerűen nem bírod tovább",
+      "prompt": "Teljesen kimerültem és kiégtem. Egyszerűen nem bírom tovább. Mit mond a Biblia a pihenésről és a felépülésről?"
+    },
+    "illness": {
+      "title": "Betegség",
+      "desc": "Ha egy diagnózis mindent megváltoztat",
+      "prompt": "Nehéz diagnózist kaptam, és félek. Mit mond a Biblia a betegségről, a gyógyulásról és a reményről?"
+    },
+    "financial": {
+      "title": "Pénzügyi gondok",
+      "desc": "Ha a számlák nyomnak",
+      "prompt": "Pénzügyi gondjaim vannak, és nem tudom, mit tegyek. Mit mond a Biblia a pénzről, a bizalomról és a gondviselésről?"
+    },
+    "meaningcrisis": {
+      "title": "Értelemválság",
+      "desc": "Miért is van ez az egész?",
+      "prompt": "Azon gondolkodom, miért is van ez az egész. Értelemválságban vagyok. Mit mond a Biblia az élet értelméről?"
+    },
+    "selfdoubt": {
+      "title": "Önbizalomhiány",
+      "desc": "Ha nem érzed magad elég jónak",
+      "prompt": "Állandóan kételkedem magamban, és nem érzem magam elég jónak. Mit mond a Biblia az értékemről?"
+    },
+    "calling": {
+      "title": "Hivatás",
+      "desc": "Mit kezdjek az életemmel?",
+      "prompt": "Nem tudom, mit kezdjek az életemmel. Segítsen megtalálni a hivatásomat – mit mond erről a Biblia?"
+    },
+    "faithdoubt": {
+      "title": "Hitbeli kétségek",
+      "desc": "Ha a hit meginog",
+      "prompt": "Kétségeim vannak a hitemmel kapcsolatban, és nem tudom, tudok-e még hinni. Mit mond a Biblia a kétségekről?"
+    },
+    "forgiveness": {
+      "title": "Megbocsátás",
+      "desc": "Ha a megbocsátás lehetetlennek tűnik",
+      "prompt": "Egyszerűen nem tudok megbocsátani valakinek. Túl fájdalmas. Mit mond a Biblia a megbocsátásról?",
+      "prompt_v1": "Mit mond a Biblia a megbocsátásról?",
+      "prompt_v2": "Hogyan bocsáthatok meg valakinek, aki megbántott engem?",
+      "prompt_v3": "Vannak a megbocsátásnak határai?"
+    },
+    "familyconflict": {
+      "title": "Családi vita",
+      "desc": "Ha a családban feszültség van",
+      "prompt": "Nagy vita van a családomban. Mit mond a Biblia a családi békéről és a megbékélésről?"
+    },
+    "envy": {
+      "title": "Irigység",
+      "desc": "Ha másoknak jobban megy",
+      "prompt": "Irigykedem másokra, és állandóan összehasonlítom magam. Mit mond a Biblia az irigységről és az elégedettségről?"
+    },
+    "joy": {
+      "title": "Öröm megosztása",
+      "desc": "Ha valami csodálatos történt",
+      "prompt": "Valami csodálatos történt velem, és szeretném megosztani az örömömet! Mit mond a Biblia az örömről és a háláról?"
+    },
+    "prayer": {
+      "title": "Imakérés",
+      "desc": "Együtt imádkozni",
+      "prompt": "Van egy imakérésem, és szeretnék együtt imádkozni. Kísérjen el az imában.",
+      "prompt_v1": "Hogyan tanuljak meg imádkozni?",
+      "prompt_v2": "Mit mond a Biblia az imáról?",
+      "prompt_v3": "Miért nem hallgatja meg Isten néhány imát?"
+    },
+    "bibleverse": {
+      "title": "Vers megértése",
+      "desc": "Egy bibliai vers magyarázata",
+      "prompt": "Szeretnék jobban megérteni egy bibliai verset. Tudna segíteni nekem kontextusba helyezni?"
+    },
+    "biblequiz": {
+      "desc": "Tesztelje bibliai tudását játékosan",
+      "title": "Bibliai kvíz"
+    },
+    "prayerwall": {
+      "desc": "Oszd meg imakéréseidet és imádkozzatok egymásért",
+      "title": "Imádságfal"
+    },
+    "showMore": "több",
+    "dailywisdom": {
+      "title": "A nap bölcsessége",
+      "desc": "Egy bátorító gondolat a napodhoz",
+      "prompt": "Adj egy rövid, bátorító gondolatot a napomhoz – egy megfelelő bibliai verssel.",
+      "prompt_v1": "Mi a legjobb tanács, amit a Biblia adhat mára?",
+      "prompt_v2": "Adj egy bölcsességet a Bibliából, ami elkísér a nap folyamán.",
+      "prompt_v3": "Lepj meg egy bátorító bibliai verssel mára!"
+    },
+    "funfact": {
+      "title": "Tudtad már?",
+      "desc": "Meglepő tények a Bibliából",
+      "prompt": "Mesélj egy meglepő tényt a Bibliából, amit a legtöbb ember nem ismer!",
+      "prompt_v1": "Mi a legőrültebb történet a Bibliában?",
+      "prompt_v2": "Mely bibliai tények lepik meg a legtöbb embert?",
+      "prompt_v3": "Mesélj valami vicceset vagy váratlant a Bibliából!"
+    },
+    "lifehack": {
+      "title": "Életvezetési tipp",
+      "desc": "Bibliai bölcsesség a családnak és a munkának",
+      "prompt": "Melyik bibliai tipp segít a mindennapokban a családdal és a munkával? Adj valami gyakorlatiasat!",
+      "prompt_v1": "Hogyan segíthet a Biblia a stresszes mindennapokban?",
+      "prompt_v2": "Milyen gyakorlati életvezetési tippek vannak a Bibliában?",
+      "prompt_v3": "Adj egy konkrét tippet a Bibliából a mindennapjaimhoz!"
+    },
+    "strengths": {
+      "title": "Erősségeid",
+      "desc": "Fedezd fel, mi rejlik benned",
+      "prompt": "Segíts felfedezni a személyes erősségeimet – mit mond a Biblia az ajándékokról, amelyek minden emberben megvannak?",
+      "prompt_v1": "Milyen erősségeim vannak a Biblia szerint?",
+      "prompt_v2": "Hogyan tudom megtudni, mik az ajándékaim és tehetségeim?",
+      "prompt_v3": "Mit mond a Biblia arról, ami különlegessé tesz engem?"
+    },
+    "family": {
+      "title": "Család és mindennapok",
+      "desc": "Több megbecsülés az együttélésben",
+      "prompt": "Hogyan mutathatok több megbecsülést a családomnak? Adj gyakorlati ötleteket bibliai inspirációval.",
+      "prompt_v1": "Hogyan erősíthetem a családi kapcsolataimat?",
+      "prompt_v2": "Mit mond a Biblia a jó családi életről?",
+      "prompt_v3": "Adj egy ötletet, hogyan szerezhetek ma örömet valakinek a családomban!"
+    },
+    "relax": {
+      "title": "Nyugalomra lelni",
+      "desc": "Egy pillanatnyi csend és béke megtalálása",
+      "prompt": "Szükségem van egy pillanatnyi nyugalomra. Segíts kikapcsolódni – egy megnyugtató bibliai verssel vagy egy rövid meditációval.",
+      "prompt_v1": "Adj egy megnyugtató zsoltárt erre a pillanatra.",
+      "prompt_v2": "Hogyan találhatok igazi nyugalmat a Biblia szerint?",
+      "prompt_v3": "Vezess végig egy rövid bibliai meditáción."
+    },
+    "quoteofday": {
+      "title": "A nap idézete",
+      "desc": "Egy inspiráló idézet elgondolkodásra",
+      "prompt": "Adj nekem egy inspiráló idézetet a Bibliából mára, rövid magyarázattal",
+      "prompt_v1": "Melyik bibliai idézet illik különösen jól ehhez a naphoz?",
+      "prompt_v2": "Adj nekem egy bátorító idézetet a Zsoltárokból mára",
+      "prompt_v3": "Melyik bibliai mondás ad nekem új perspektívát ma?"
+    },
+    "thankfulness": {
+      "title": "Hála gyakorlat",
+      "desc": "Fedezd fel, miért lehetsz hálás",
+      "prompt": "Vezess végig egy rövid hála gyakorlaton. Segíts megtalálni három dolgot, amiért ma hálás lehetek",
+      "prompt_v1": "Segíts felfedezni a hálát a mindennapjaimban – még a kis dolgokban is",
+      "prompt_v2": "Szeretnék hálásabb lenni. Adj nekem egy gyakorlati feladatot ehhez",
+      "prompt_v3": "Mit mond a Biblia a hálaadásról, és hogyan tudom ezt ma megvalósítani?"
+    },
+    "biblesays": {
+      "title": "Mit mond a Biblia...",
+      "desc": "Tudd meg, mit mond a Biblia a témádról",
+      "prompt": "Szeretném tudni, mit mond a Biblia egy bizonyos témáról. Kérdezd meg, melyik téma érdekel!",
+      "prompt_v1": "Mit mond a Biblia a barátságról?",
+      "prompt_v2": "Mit mond a Biblia a pénz kezeléséről?",
+      "prompt_v3": "Mit mond a Biblia a szerelemről és a kapcsolatokról?"
+    },
+    "morningstart": {
+      "title": "Jó reggelt!",
+      "desc": "Kezdd pozitívan a napot",
+      "prompt": "Kívánj nekem jó reggelt, és adj egy bátorító gondolatot a nap kezdetéhez",
+      "prompt_v1": "Adj nekem egy rövid reggeli impulzust egy megfelelő bibliai verssel",
+      "prompt_v2": "Hogyan kezdhetem tudatosan és pozitívan a napomat ma?",
+      "prompt_v3": "Adj nekem egy bátorító reggeli üdvözletet egy bibliai gondolattal"
+    },
+    "inspiration": {
+      "title": "Inspirálj engem",
+      "desc": "Hagyd, hogy meglepjenek és inspiráljanak",
+      "prompt": "Lepj meg valami inspirálóval – ez lehet egy gondolat, egy történet vagy egy bibliai felismerés",
+      "prompt_v1": "Mesélj nekem egy inspiráló bibliai történetet, ami ma is aktuális",
+      "prompt_v2": "Adj nekem egy váratlan, inspiráló gondolatébresztőt",
+      "prompt_v3": "Melyik bibliai személyiség inspirálhat engem ma és miért?"
+    }
+  },
+  "lifeWheel": {
+    "title": "Életkereke",
+    "intro": "Értékeljen 8 életterületet egy 1-10-es skálán. Tudja meg, hol áll – és kapjon bibliai impulzusokat arra a területre, amely figyelmet igényel.",
+    "start": "Kezdje most",
+    "sliderHint": "Mozgassa a csúszkákat — 1 = nagyon elégedetlen, 10 = nagyon elégedett",
+    "showResult": "Eredmény megjelenítése",
+    "average": "Átlag",
+    "weakestArea": "Legnagyobb szükség",
+    "getImpulse": "Bibliai impulzus a(z) {{area}} területre",
+    "reset": "Újra csinálni",
+    "prompt": "Életkerekem azt mutatja, hogy a(z) „{{area}}” területen csak {{score}}/10 pontom van. Mit mond a Biblia erről az életterületről? Adjon bátorítást és gyakorlati impulzusokat.",
+    "areas": {
+      "health": "Egészség",
+      "relationships": "Kapcsolatok",
+      "career": "Karrier",
+      "spirituality": "Spiritualitás",
+      "finances": "Pénzügyek",
+      "family": "Család",
+      "leisure": "Szabadidő",
+      "growth": "Személyes fejlődés"
+    },
+    "save": "Eredmény mentése",
+    "saved": "Mentve!",
+    "history": "Korábbi eredmények",
+    "noHistory": "Még nincsenek mentett eredmények.",
+    "backToNew": "Új életkerék",
+    "backToList": "Vissza a listához"
+  },
+  "church": {
+    "badge": "Szervezeteknek",
+    "heroTitle": "Társad szervezetének",
+    "heroSubtitle": "Kísérje el gyülekezeti tagjait bibliai bölcsességgel – digitálisan, személyesen és éjjel-nappal.",
+    "useCasesTitle": "Felhasználási lehetőségek",
+    "useCase": {
+      "youth": {
+        "title": "Ifjúsági munka",
+        "desc": "A tinédzserek saját módjukon fedezik fel a Bibliát – interaktívan és gátlások nélkül."
+      },
+      "confirmation": {
+        "title": "Konfirmáció",
+        "desc": "A konfirmandusok önállóan mélyítik el bibliai tudásukat személyes kísérettel."
+      },
+      "pastoral": {
+        "title": "Lelkipásztori gondozás",
+        "desc": "24/7 kíséret a személyes lelkipásztori gondozás kiegészítéseként."
+      },
+      "bibleStudy": {
+        "title": "Bibliai kör",
+        "desc": "Impulzusok és vitaindítók csoportok és házi körök számára."
+      }
+    },
+    "pricingTitle": "Patronátus csomagok",
+    "pricingSubtitle": "Támogassa a társadot és gyülekezetét a megfelelő patronátus csomaggal.",
+    "popular": "Népszerű",
+    "free": "Ingyenes",
+    "perYear": "személy / év",
+    "contact": "Kapcsolatfelvétel",
+    "tier": {
+      "free": {
+        "name": "Mustármag",
+        "size": "Kis szervezeteknek és házi köröknek (legfeljebb 50 személy)"
+      },
+      "community": {
+        "name": "Útitárs",
+        "size": "50–200 személyú szervezeteknek"
+      },
+      "gemeinde": {
+        "name": "Hídépítő",
+        "size": "200–500 személyú szervezeteknek"
+      },
+      "kirche": {
+        "name": "Világítótorony",
+        "size": "Nagy szervezeteknek és intézményeknek (500+ személy)"
+      }
+    },
+    "features": {
+      "directoryEntry": "Címtárbejegyzés",
+      "telegramGroup": "Telegram csoport",
+      "partnerPage": "Saját partneroldal",
+      "badge": "Partnerjelvény",
+      "qrFlyer": "Nyomtatható QR-szórólap",
+      "contactForm": "Kapcsolatfelvételi űrlap",
+      "pastorProfile": "Lelkész/Pásztor profil",
+      "welcomeVideo": "Üdvözlő videó",
+      "analytics": "Analitikai irányítópult",
+      "prioritySupport": "Prioritásos támogatás",
+      "multipleProfiles": "Több profil",
+      "customBranding": "Egyedi márkaépítés",
+      "apiAccess": "API hozzáférés",
+      "accountManager": "Személyes kapcsolattartó"
+    },
+    "viewDirectory": "Gyülekezeti címtár megtekintése",
+    "directoryBadge": "Gyülekezeti címtár",
+    "directoryTitle": "Partnergyülekezetek",
+    "directorySubtitle": "Keressen egy gyülekezetet a közelében, amely ajánlja a társadot.",
+    "searchPlaceholder": "Hely, név vagy felekezet keresése...",
+    "noResults": "Még nincsenek gyülekezetek a címtárban.",
+    "becomePartner": "Legyen partner →",
+    "notFound": "Gyülekezet nem található.",
+    "backToDirectory": "Vissza a címtárhoz",
+    "pastor": "Lelkész/Pásztor",
+    "serviceTimes": "Istentiszteleti idők",
+    "startChat": "Chat indítása",
+    "website": "Weboldal",
+    "telegramGroup": "Telegram csoport",
+    "contactTitle": "Kapcsolatfelvétel {{name}}",
+    "contactName": "Az Ön neve (opcionális)",
+    "contactEmail": "Az Ön e-mail címe",
+    "contactMessage": "Az Ön üzenete",
+    "contactSend": "Üzenet küldése",
+    "contactSuccess": "Üzenet elküldve! 🙏",
+    "contactSuccessDesc": "A gyülekezet felveszi Önnel a kapcsolatot.",
+    "recommendedBy": "Ajánlja: {{name}}",
+    "setup": "Beállítás (egyszeri)",
+    "form": {
+      "title": "Érdekli? Írjon nekünk!",
+      "subtitle": "48 órán belül felvesszük Önnel a kapcsolatot.",
+      "name": "Az Ön neve",
+      "email": "E-mail cím",
+      "churchName": "Gyülekezet neve",
+      "tier": "Kívánt csomag",
+      "tierPlaceholder": "Csomag kiválasztása...",
+      "message": "Az Ön üzenete",
+      "submit": "Kérés küldése",
+      "success": "Kérés elküldve! Hamarosan felvesszük Önnel a kapcsolatot. 🙏",
+      "error": "Hiba történt a küldés során. Kérjük, próbálja újra.",
+      "orgType": "Szervezet típusa",
+      "orgTypePlaceholder": "Típus kiválasztása...",
+      "orgTypes": {
+        "church": "Gyülekezet",
+        "careHome": "Idősek otthona",
+        "seniorHome": "Idősek otthona",
+        "hospital": "Kórház",
+        "prison": "Börtönlelkészi szolgálat",
+        "military": "Katonai lelkészi szolgálat",
+        "rehaClinic": "Rehabilitációs klinika",
+        "psychiatry": "Pszichiátria",
+        "burnoutClinic": "Kiégés-klinika",
+        "hospice": "Hospice",
+        "counseling": "Tanácsadó központ",
+        "reformed": "Református egyház",
+        "catholic": "Katolikus egyház",
+        "lutheran": "Evangélikus egyház",
+        "evangelical": "Szabad egyház / Evangéliumi",
+        "freelance": "Független",
+        "other": "Egyéb"
+      }
+    },
+    "institutionsTitle": "Intézményeknek is",
+    "institutionsSubtitle": "A társad nemcsak gyülekezeteket kísér – az idősek otthonai, kórházak és a börtönlelkészi szolgálat is profitál a digitális lelkipásztori gondozásból.",
+    "institution": {
+      "careHome": {
+        "title": "Idősek otthonai",
+        "desc": "Napi bibliai impulzusok és kíséret a lakók számára – akkor is, ha nincs lelkész a helyszínen."
+      },
+      "seniorHome": {
+        "title": "Idősek otthonai",
+        "desc": "Ismert bibliai versek és beszélgetések az idősek számára – könnyen hozzáférhető tableten vagy okostelefonon keresztül."
+      },
+      "hospital": {
+        "title": "Kórházak",
+        "desc": "Vigasz és lelki kíséret a betegeknek nehéz időkben – 24/7 elérhető az ágy mellett."
+      },
+      "prison": {
+        "title": "Börtönlelkészi szolgálat",
+        "desc": "Remény és lelki kíséret a fogvatartottaknak – egy bizalmas beszélgetőpartner éjjel-nappal."
+      },
+      "military": {
+        "title": "Katonai lelkészi szolgálat",
+        "desc": "Lelki kíséret a hadsereg tagjainak – a bevetésen vagy a laktanyában is elérhető."
+      },
+      "rehaClinic": {
+        "title": "Rehabilitációs klinikák",
+        "desc": "Lelki támogatás a rehabilitáció során – belső erőért az életbe való visszatérés útján."
+      },
+      "psychiatry": {
+        "title": "Pszichiátriai intézmények",
+        "desc": "Bizalmas lelki beszélgetések pszichiátriai ellátásban lévő betegek számára."
+      },
+      "burnoutClinic": {
+        "title": "Kiégés-klinikák",
+        "desc": "Értelemkeresés és belső elmélyülés kimerültség idején."
+      },
+      "hospice": {
+        "title": "Hospice-ok",
+        "desc": "Kísérés az élet végén – vigasztaló szavak és nyitott fül."
+      },
+      "counseling": {
+        "title": "Tanácsadó központok",
+        "desc": "Kiegészítő lelki impulzusok pszichoszociális tanácsadás ügyfelei számára."
+      }
+    },
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As társad is a private project, donations are not tax-deductible.",
+    "denominationsTitle": "Minden felekezet és szertartásvezető számára",
+    "denominationsSubtitle": "A BibleBot.Life ökumenikus – református, katolikus, evangélikus és szabad egyházi közösségek, valamint független szertartásvezetők számára.",
+    "denomination": {
+      "reformed": {
+        "title": "Református egyház",
+        "desc": "Zürichi Biblia, református liturgia és prédikáció-támogatás – az Ön gyülekezetére szabva."
+      },
+      "catholic": {
+        "title": "Katolikus egyház",
+        "desc": "Ökumenikus fordítás, mise-tervezés és szentségek – a katolikus hagyományoknak megfelelően."
+      },
+      "lutheran": {
+        "title": "Evangélikus egyház",
+        "desc": "Luther-Biblia, istentisztelet-tervezés és lelkigondozás – evangélikus-lutheránus gyülekezetek számára."
+      },
+      "evangelical": {
+        "title": "Szabad egyházak",
+        "desc": "Schlachter 2000, dicsőítés és rugalmas istentisztelet-tervezés – szabad egyházi közösségek számára."
+      },
+      "freelance": {
+        "title": "Független szertartásvezetők",
+        "desc": "Temetési szónokok, esküvői celebránsok és független ceremóniamesterek – biográfiai eszközökkel és beszédtervezéssel."
+      }
+    }
+  },
+  "institutions": {
+    "badge": "Szervezeteknek",
+    "heroTitle": "Társad az Ön intézménye számára",
+    "heroSubtitle": "Digitális lelkipásztori gondozás idősek otthonai, kórházak és büntetés-végrehajtási intézetek számára – személyesen, bizalmasan és éjjel-nappal.",
+    "seniorHint": {
+      "title": "Szenior mód elérhető",
+      "desc": "Nagyobb betűméret és egyszerűsített kezelés – ideális idősebb lakók számára.",
+      "cta": "Szenior mód tesztelése"
+    },
+    "typesTitle": "Kinek szól a társad?",
+    "useCasesTitle": "Hogyan használják a társadot?",
+    "useCasesSubtitle": "Konkrét alkalmazások az intézmény mindennapjaiban.",
+    "pricingTitle": "Patronátus csomagok",
+    "pricingSubtitle": "Ugyanazok a csomagok, mint a gyülekezetek számára – az intézményi igényekhez igazítva.",
+    "linkChurches": "Gyülekezetek számára is elérhető",
+    "type": {
+      "careHome": {
+        "title": "Idősek otthonai",
+        "desc": "Napi bibliai impulzusok és kíséret a lakók számára – akkor is, ha nincs lelkész a helyszínen."
+      },
+      "seniorHome": {
+        "title": "Idősek otthonai",
+        "desc": "Ismert bibliai versek és beszélgetések az idősek számára – könnyen hozzáférhető tableten vagy okostelefonon keresztül."
+      },
+      "hospital": {
+        "title": "Kórházak",
+        "desc": "Vigasz és lelki kíséret a betegeknek nehéz időkben – 24/7 elérhető az ágy mellett."
+      },
+      "prison": {
+        "title": "Börtönlelkészi szolgálat",
+        "desc": "Remény és lelki kíséret a fogvatartottaknak – egy bizalmas beszélgetőpartner éjjel-nappal."
+      },
+      "military": {
+        "title": "Katonai lelkészi szolgálat",
+        "desc": "Lelki kíséret a hadsereg tagjainak – a bevetésen vagy a laktanyában is elérhető."
+      }
+    },
+    "useCase": {
+      "dailyImpulse": {
+        "title": "Napi impulzus",
+        "desc": "Minden reggel egy bibliai vers reflexiós kérdéssel – csökkenti a spirituális beszélgetések küszöbét."
+      },
+      "companionship": {
+        "title": "Beszélgetőpartner",
+        "desc": "A társad türelmesen és időnyomás nélkül válaszol a hitbeli kérdésekre – ideális magányos órákban."
+      },
+      "accessibility": {
+        "title": "Könnyű hozzáférés",
+        "desc": "Nagy betűméret, egyszerű kezelés tableten keresztül – mozgáskorlátozottak számára is."
+      },
+      "availability": {
+        "title": "24/7 elérhető",
+        "desc": "Lelki kíséret éjszaka és hétvégén is – amikor nincs elérhető lelkész."
+      }
+    },
+    "tierDesc": {
+      "free": "Alap hozzáférés a lakók és betegek számára",
+      "community": "Megemlítés támogatóként, reklámmentes hozzáférés",
+      "gemeinde": "Logó megjelenítése, havi használati jelentés",
+      "kirche": "Saját tartalom, útiterv-alakítás, prémium támogatás"
+    },
+    "form": {
+      "title": "Érdekli? Vegye fel velünk a kapcsolatot!",
+      "subtitle": "48 órán belül felvesszük Önnel a kapcsolatot.",
+      "name": "Az Ön neve",
+      "email": "E-mail cím",
+      "institutionName": "Intézmény neve",
+      "type": "Intézmény típusa",
+      "typePlaceholder": "Kérjük, válasszon...",
+      "tier": "Kívánt csomag",
+      "tierPlaceholder": "Csomag kiválasztása...",
+      "message": "Az Ön üzenete",
+      "submit": "Kérés küldése",
+      "success": "Kérés elküldve! Hamarosan felvesszük Önnel a kapcsolatot. 🙏",
+      "error": "Hiba történt a küldés során. Kérjük, próbálja újra."
+    }
+  },
+  "lang": {
+    "de": "Deutsch",
+    "en": "English",
+    "fr": "Français",
+    "es": "Español",
+    "it": "Italiano",
+    "pl": "Polski",
+    "cs": "Čeština",
+    "pt": "Português",
+    "nl": "Nederlands",
+    "ro": "Română",
+    "da": "Dansk",
+    "no": "Norsk",
+    "sv": "Svenska",
+    "fi": "Suomi",
+    "el": "Ελληνικά",
+    "hr": "Hrvatski",
+    "sr": "Srpski",
+    "hu": "Magyar",
+    "sk": "Slovenčina",
+    "bg": "Български",
+    "ru": "Русский",
+    "uk": "Українська",
+    "ka": "ქართული",
+    "hy": "Հայերեն",
+    "ko": "한국어",
+    "tl": "Filipino",
+    "id": "Bahasa Indonesia",
+    "vi": "Tiếng Việt",
+    "zh": "中文",
+    "sw": "Kiswahili",
+    "am": "አማርኛ",
+    "af": "Afrikaans",
+    "yo": "Yorùbá",
+    "ig": "Igbo",
+    "zu": "isiZulu",
+    "ht": "Kreyòl"
+  },
+  "eulogy": {
+    "pageTitle": "Gyászbeszéd – Életrajz készítése | társad",
+    "pageDesc": "Őrizze meg egy szeretett személy emlékét, és készítsen egy gyönyörű életrajzi szöveget a gyászbeszédhez.",
+    "title": "Gyászbeszéd – Életrajz",
+    "subtitle": "Emlékek megőrzése, szöveg létrehozása, PDF letöltése.",
+    "step1": "Az elhunyt személyről",
+    "name": "Név",
+    "namePlaceholder": "Keresztnév és vezetéknév",
+    "age": "Életrajzi adatok",
+    "agePlaceholder": "pl. 1942–2026",
+    "step2": "Emlékek rögzítése",
+    "step2Desc": "Meséljen szabadon az elhunyt személyről – mi volt fontos, mi marad meg az emlékezetben? Több felvételt is készíthet.",
+    "startRecording": "Felvétel indítása",
+    "addRecording": "További felvétel",
+    "stop": "Stop",
+    "recording": "Felvétel",
+    "transcript": "Átirat (szerkeszthető)",
+    "transcriptPlaceholder": "Az átirat automatikusan létrejön a felvétel során. Itt szerkesztheti.",
+    "additionalNotes": "További megjegyzések",
+    "notesPlaceholder": "Foglalkozás, hobbik, fontos életesemények, különleges jellemvonások…",
+    "step3": "Szöveg létrehozása és letöltése",
+    "generate": "Életrajzi szöveg létrehozása",
+    "generating": "Szöveg létrehozása…",
+    "regenerate": "Újragenerálás",
+    "downloadPDF": "Letöltés PDF-ként",
+    "save": "Mentés",
+    "shareStep": "Megosztás lelkésszel",
+    "shareDesc": "Hozzon létre egy linket, amelyet e-mailben vagy üzenetküldőn keresztül elküldhet lelkészének. Elolvashatja a szöveget, és letöltheti PDF-ként.",
+    "enableShare": "Link létrehozása és másolása",
+    "disableShare": "Megosztás kikapcsolása",
+    "micError": "A mikrofon nem indítható el. Kérjük, adja meg az engedélyt.",
+    "needMore": "Kérjük, először rögzítsen emlékeket vagy írjon jegyzeteket.",
+    "genError": "Hiba a szöveg létrehozásakor. Kérjük, próbálja újra."
+  },
+  "meinBereich": {
+    "title": "Saját terület",
+    "subtitle": "Készítse elő személyes szertartásait, és ossza meg lelkészével.",
+    "sidebarLabel": "Saját terület",
+    "overview": "Áttekintés",
+    "funeral": "Gyászszertartás",
+    "wedding": "Esküvő",
+    "baptismCeremony": "Keresztelő",
+    "confirmation": "Konfirmáció",
+    "logout": "Kijelentkezés",
+    "comingSoon": "Hamarosan elérhető",
+    "funeralDesc": "Életrajz készítése, emlékek megőrzése és megosztása a lelkésszel.",
+    "weddingDesc": "Esküvői fogadalmak megírása, dalok kiválasztása és az ünnepség megtervezése.",
+    "baptismDesc": "Keresztelői kívánságok megfogalmazása és a folyamat előkészítése a gyülekezettel.",
+    "confirmationDesc": "Konfirmációs ige megtalálása és személyes szövegek előkészítése."
+  },
+  "chatHero": {
+    "ariaLabel": "Tegyél fel kérdést a társadnak",
+    "focusPlaceholder": "Írd be a kérdésedet…",
+    "placeholder1": "Miért vagyok igazán hálás?",
+    "placeholder2": "Hogyan találhatok belső békét?",
+    "placeholder3": "Mi ad nekem reményt?",
+    "placeholder4": "Mit kíván a szívem?",
+    "placeholder5": "Mit tehetek ma jót?",
+    "send": "Küldés",
+    "subtitle": "Tedd fel kérdésedet – nyíltan, őszintén, bejelentkezés nélkül.",
+    "suggestion1": "Mit jelent a nevem?",
+    "suggestion2": "Mi ad nekem erőt ma?",
+    "suggestion3": "Miért vagyok hálás?"
+  },
+  "meta": {
+    "forChurchesDesc": "A társad, mint partnere az Ön gyülekezetének: ifjúsági munka, konfirmáció, lelkigondozás és bibliai körök. Ingyenestől a prémiumig.",
+    "forChurchesTitle": "Társad gyülekezeteknek – Digitális lelkigondozás és bibliai kísérés",
+    "homeDesc": "A társad 5 bibliafordítással, coaching módszertannal és lelkigondozással kíséri Önt. Névtelenül, ingyenesen, 36 nyelven.",
+    "homeTitle": "Társad – Személyes Bibliai Kísérőd | Ingyenes és Névtelen",
+    "loginDesc": "Jelentkezz be a társadba, hogy felkészítsd a személyes szertartásaidat.",
+    "loginTitle": "Bejelentkezés – társad"
+  },
+  "splash": {
+    "patronage": "Ajánlja"
+  },
+  "auth": {
+    "apple": "Bejelentkezés Apple-lel",
+    "loginShort": "Bejelentkezés",
+    "logout": "Kijelentkezés"
+  },
+  "tts": {
+    "male": "Férfi hang",
+    "female": "Női hang",
+    "maleShort": "F",
+    "femaleShort": "N",
+    "voice": "Hang"
+  },
+  "chatDemo": {
+    "sectionLabel": "Így néz ki egy beszélgetés",
+    "userMsg": "Egyedül érzem magam. Mit mond erről a Biblia?",
+    "botMsg": "Nem vagy egyedül – még akkor sem, ha úgy érzed. A 23. zsoltár azt mondja: „Az Úr az én pásztorom, nem szűkölködöm.” Ez azt jelenti, hogy Isten közel van hozzád, még a legsötétebb pillanatokban is. Szeretnéd, ha együtt fedeznénk fel ezt a részt?",
+    "cta": "Kezdje el saját beszélgetését →"
+  },
+  "suggest": {
+    "psalm23": "Zsoltárok 23 – Az Úr az én pásztorom",
+    "joh316": "János 3:16 – Mert úgy szerette Isten a világot",
+    "rom828": "Róma 8:28 – Minden javunkra válik",
+    "mt1128": "Máté 11:28 – Jöjjetek hozzám mindnyájan, akik megfáradtatok",
+    "phil413": "Filippi 4:13 – Mindenre van erőm",
+    "jes4110": "Ézsaiás 41:10 – Ne félj, mert én veled vagyok",
+    "1kor13": "1 Korinthus 13 – A legnagyobb a szeretet",
+    "spr35": "Példabeszédek 3:5 – Bízz az Úrban",
+    "jos19": "Józsué 1:9 – Légy erős és bátor",
+    "ps462": "Zsoltárok 46:1 – Isten a mi menedékünk és erősségünk",
+    "explainDetail": "Magyarázza el részletesen a(z) {{ref}} részt"
+  },
+  "dailyVerses": {
+    "v0": "„Jöjjetek hozzám mindnyájan, akik megfáradtatok és meg vagytok terhelve, és én megnyugtatlak titeket.”",
+    "r0": "Máté 11:28",
+    "v1": "„Mert én tudom, milyen terveim vannak veletek – mondja az Úr –, békességet és nem romlást tervezek.”",
+    "r1": "Jeremiás 29:11",
+    "v2": "„Ne félj, mert én veled vagyok; ne csüggedj, mert én vagyok a te Istened.”",
+    "r2": "Ézsaiás 41:10",
+    "v3": "„Az Úr az én pásztorom; nem szűkölködöm.”",
+    "r3": "Zsoltárok 23:1",
+    "v4": "„Minden gondotokat őrá vessétek, mert ő gondot visel rátok.”",
+    "r4": "1 Péter 5:7",
+    "v5": "„Én vagyok a világ világossága. Aki engem követ, nem jár sötétségben.”",
+    "r5": "János 8:12",
+    "v6": "„Légy erős és bátor! Ne félj, mert az Úr, a te Istened veled van.”",
+    "r6": "Józsué 1:9",
+    "v7": "„De akik az Úrban bíznak, új erőre kapnak; szárnyra kelnek, mint a sasok.”",
+    "r7": "Ézsaiás 40:31",
+    "v8": "„Mert ahol ketten vagy hárman összegyűlnek az én nevemben, ott vagyok közöttük.”",
+    "r8": "Máté 18:20",
+    "v9": "„Kóstoljátok meg és lássátok, hogy jó az Úr; boldog az az ember, aki benne bízik.”",
+    "r9": "Zsoltárok 34:8",
+    "v10": "„Meggyógyítja a megtört szívűeket, és bekötözi sebeiket.”",
+    "r10": "Zsoltárok 147:3",
+    "v11": "„A szeretet türelmes, a szeretet jóságos. Mindent elvisel, mindent elhisz, mindent remél.”",
+    "r11": "1 Korinthus 13:4–7",
+    "v12": "„Örüljetek a reményben, legyetek türelmesek a szenvedésben, állhatatosak az imádságban.”",
+    "r12": "Róma 12:12",
+    "v13": "„Bízz az Úrban teljes szívedből, és ne a saját értelmedre támaszkodj.”",
+    "r13": "Példabeszédek 3:5"
+  },
+  "meinBereichNav": "Saját területem",
+  "verseExplain": "Magyarázza el részletesen ezt a bibliai verset: {{quote}} ({{ref}}) – Ki írta ezt? Milyen összefüggésben? Mit jelent ez az életemre nézve ma?",
+  "social": {
+    "conversations": "Beszélgetések",
+    "languages": "Nyelvek",
+    "bibles": "Bibliafordítások"
+  },
+  "celebrants": {
+    "badge": "Káplánoknak és életvezetési tanácsadóknak",
+    "heroTitle1": "Minden találkozás megérdemli",
+    "heroTitle2": "a legjobb felkészülést",
+    "heroSubtitle": "Az első hangjegyzetektől a befejezett foglalkozásig – tervezzen, dokumentáljon és vezessen szertartásokat és coaching üléseket egyetlen eszközzel.",
+    "ctaStart": "Kezdje ingyen",
+    "ctaFeatures": "Fedezze fel a funkciókat",
+    "painTitle": "Ismerősen hangzik?",
+    "pain1": "Órákig tartó felkészülés minden egyes szertartásra?",
+    "pain2": "A papírjegyzetek hiányoznak a legfontosabb pillanatban?",
+    "pain3": "Nincs rendszer a dalok, olvasmányok és a szertartás rendje számára?",
+    "pain4": "Nehéz a koordináció a zenészekkel és segítőkkel?",
+    "featuresTitle": "Minden, amire szüksége van",
+    "featuresSubtitle": "Átgondolt rendszer a teljes munkafolyamathoz – az előkészítéstől a végrehajtásig.",
+    "f1Title": "Hangfelvétel és átírás",
+    "f1Desc": "Rögzítse a beszélgetéseket, kapjon automatikus átiratokat – az alapja a megható szertartási szövegeknek.",
+    "f2Title": "Intelligens szövegalkotás",
+    "f2Desc": "Jegyzetekből és átiratokból hozzon létre empatikus beszédeket, coaching összefoglalókat vagy reflexiós szövegeket.",
+    "f3Title": "PDF exportálás és megosztás",
+    "f3Desc": "Exportálja a kész szövegeket PDF-ként, vagy ossza meg linkkel közvetlenül az ügyfelekkel, rokonokkal és résztvevőkkel.",
+    "f4Title": "Sablonok felekezetenként",
+    "f4Desc": "Előre elkészített munkafolyamat-sablonok katolikus, református, evangélikus és világi célokra – azonnal használható.",
+    "f5Title": "Naptár és tervezés",
+    "f5Desc": "Minden szertartás egy pillantásra: havi, heti és napi nézetek. Soha többé ne veszítse el a fonalat.",
+    "f6Title": "Súgó / Karmester mód",
+    "f6Desc": "Élő mód a végrehajtáshoz: menjen végig a szertartáson blokkonként, olvassa el a szövegeket, nézze meg a zenei jelzéseket – zavartalanul.",
+    "f7Title": "Zenei integráció",
+    "f7Desc": "Integrálja a dalokat és zenei darabokat közvetlenül a szertartás rendjébe. A Karmester mód megmutatja, mikor szólal meg az egyes darabok.",
+    "f8Title": "Csapat és együttműködés",
+    "f8Desc": "Vonjon be zenészeket, felolvasókat, technikusokat. Osszon ki szerepeket, ellenőrizze a rendelkezésre állást, tervezzen együtt.",
+    "f9Title": "Erőforrás könyvtár",
+    "f9Desc": "Dalok, imák, olvasmányok és liturgikus szövegek – kereshető, címkézett, minden szertartással bővülő.",
+    "f10Title": "Egyházi anyakönyv",
+    "f10Desc": "Gondosan dokumentálja a keresztelőket, esküvőket és temetéseket. Minden adat egy helyen.",
+    "pricingTitle": "Egyszerű árazás",
+    "pricingSubtitle": "Kezdje ingyen. Frissítsen, ha többre van szüksége.",
+    "planPersonal": "Személyes",
+    "planFree": "Ingyenes",
+    "planPro": "Pro",
+    "planProPrice": "CHF 29",
+    "planProPeriod": "/ hónap",
+    "recommended": "Ajánlott",
+    "pf1": "Szertartási szövegek létrehozása",
+    "pf2": "Hangfelvétel és átírás",
+    "pf3": "PDF exportálás",
+    "pf4": "Megosztás linkkel",
+    "pf5": "1 aktív projekt",
+    "pf6": "Minden, ami a Személyes csomagban van",
+    "pf7": "Korlátlan projektek",
+    "pf8": "Szertartástervező naptárral",
+    "pf9": "Karmester mód (súgó)",
+    "pf10": "Zenei integráció",
+    "pf11": "Sablonkönyvtár",
+    "pf12": "Csapatmunka",
+    "pf13": "Erőforrás könyvtár",
+    "pf14": "Egyházi anyakönyv",
+    "pf15": "Prioritásos támogatás",
+    "ctaFree": "Kezdje el",
+    "ctaTrial": "14 napos ingyenes próba",
+    "faqTitle": "Gyakran Ismételt Kérdések",
+    "faq1q": "Kinek szól ez az eszköz?",
+    "faq1a": "Káplánoknak, életvezetési tanácsadóknak, szabadúszó temetési szónokoknak, esküvői szertartásvezetőknek, kórházi káplánoknak, lelkészeknek és mindenkinek, aki szertartásokat, workshopokat vagy coaching üléseket készít elő és vezet.",
+    "faq2q": "Biztonságosan tárolják az adataimat?",
+    "faq2a": "Igen. Minden adat titkosítva van és Svájcban tárolódik. Csak Ön fér hozzá a tartalmához.",
+    "faq3q": "Milyen nyelvek támogatottak?",
+    "faq3a": "Az interfész 36 nyelven érhető el. A szövegek bármilyen nyelven létrehozhatók.",
+    "faq4q": "Használhatom a Karmester módot tableten?",
+    "faq4a": "Igen! Az egész alkalmazás PWA-ként van optimalizálva mobilra – tökéletes tableten az emelvényen.",
+    "faq5q": "Szükségem van technikai ismeretekre?",
+    "faq5a": "Nem. Az interfész intuitív és olyan emberek számára készült, akik a tartalomra akarnak koncentrálni – nem a technológiára.",
+    "ctaBottom": "Készen áll a jobb szertartásokra?",
+    "ctaBottomSub": "Kezdje ingyen – hitelkártya nélkül.",
+    "ctaBottomBtn": "Kezdje el ingyen most",
+    "footerImprint": "Impresszum",
+    "footerPrivacy": "Adatvédelmi irányelvek",
+    "footerChurches": "Egyházaknak",
+    "seoTitle": "BibleBot.Life káplánoknak és életvezetési tanácsadóknak – Szertartások és ülések tervezése",
+    "seoDesc": "Tervezzen temetéseket, esküvőket, coaching üléseket professzionálisan: hangfelvétel, szöveggenerálás, súgó, naptár és együttműködés."
+  },
+  "pricing": {
+    "onRequest": "Patronátus igény szerint",
+    "contactUs": "Kapcsolatfelvétel"
+  },
+  "audience": {
+    "church": {
+      "cta": "Gyülekezeteknek és lelkipásztoroknak →",
+      "desc": "Lelkészeknek, lelkipásztoroknak és gyülekezeti csapatoknak: AI-támogatás prédikációk előkészítéséhez, csapattervezéshez és még sok máshoz.",
+      "f1": "Istentisztelet-tervező AI-val",
+      "f2": "Erőforrás-könyvtár",
+      "f3": "Csapatkoordináció",
+      "f4": "Gyülekezeti oldal és címtár",
+      "title": "Istentiszteleteket tervezek és embereket kísérek"
+    },
+    "personal": {
+      "cta": "Csevegés most — ingyenes →",
+      "desc": "Kérdések a hitről, napi impulzusok, spirituális növekedés — a saját tempódban és ítélkezés nélkül.",
+      "f1": "Csevegés bibliai kísérettel",
+      "f2": "21 napos utazás",
+      "f3": "Napi impulzus push / Telegram üzenetben",
+      "f4": "Személyes beszélgetési előzmények",
+      "title": "Személyes kíséretet keresek"
+    },
+    "subtitle": "Válaszd ki az utadat",
+    "title": "Kinek szól a BibleBot.Life?"
+  },
+  "entryTiles": {
+    "groups": {
+      "deep": "Mélyebbre akarok menni",
+      "emotional": "Valami foglalkoztat",
+      "orientation": "Tájékozódást keresek"
+    },
+    "labels": {
+      "anger": "Harag és düh",
+      "anxiety": "Aggódom",
+      "baptism": "Keresztség és hitút",
+      "biblequiz": "Bibliai kvíz",
+      "bibleverse": "Bibliai vers megértése",
+      "burnout": "Kimerültség",
+      "calling": "Mi az én utam?",
+      "condolence": "Gyász és veszteség",
+      "decision": "Döntés előtt állok",
+      "faithdoubt": "Hitetlenség",
+      "financial": "Pénzügyi gondok",
+      "forgiveness": "Megbocsátás és elengedés",
+      "heartbreak": "Megsérültem",
+      "illness": "Betegség",
+      "lifewheel": "Hol tartok az életben?",
+      "loneliness": "Magányosnak érzem magam",
+      "meaningcrisis": "Értelmetlenség válsága",
+      "newstart": "Újrakezdést akarok",
+      "prayerwall": "Imádfal",
+      "selfdoubt": "Önbizalomhiány",
+      "sevenwhys": "Miért teszem ezt valójában?",
+      "sleepless": "Álmatlanság",
+      "thankfulness": "Hála",
+      "wedding": "Házasság és párkapcsolat"
+    },
+    "showLess": "Kevesebb megjelenítése",
+    "showMore": "További témák felfedezése"
+  },
+  "faqExtra": {
+    "faithPsych": {
+      "a": "A BibleBot ötvözi a bibliai bölcsességet a bizonyítékokon alapuló pszichológia felismeréseivel — nem azért, hogy a hitet pszichologizálja, hanem hogy mindennapi életre alkalmazhatóvá tegye. A módszerek (PERMA, logoterápia, hála- és megbocsátáskutatás) kiegészítik a Bibliát, de nem helyettesítik azt.",
+      "q": "Összekapcsolja a BibleBot a hitet és a pszichológiát?"
+    },
+    "journey": {
+      "q": "Mi az a 21 napos utazás?"
+    },
+    "methodik": {
+      "a": "",
+      "q": "Mi áll a BibleBot módszertana mögött?"
+    }
+  },
+  "tools": {
+    "badge": "Több mint válaszok",
+    "lifewheel": {
+      "cta": "Életkerék indítása",
+      "desc": "Hogyan állsz a munkával, kapcsolatokkal, értelemmel és egészséggel? Az életkerék 3 perc alatt segít tisztán látni — és megmutatja, hol kapcsolódik közvetlenül a Biblia.",
+      "title": "Életkerék-ellenőrzés"
+    },
+    "sevenwhys": {
+      "cta": "Mélyebbre kérdezni",
+      "desc": "Miért teszem ezt valójában? Miért érzem így magam? A BibleBot 7 kérdésen keresztül vezet el a gyökerekhez — bibliai értelmezéssel a legmélyebb ponton.",
+      "title": "A 7 miért módszer"
+    },
+    "subtitle": "Azoknak a pillanatoknak, amikor többre van szükséged, mint egy válaszra.",
+    "title": "Két eszköz, ami mélyebbre megy"
+  },
+  "trust": {
+    "noAds": {
+      "text": "Nincs nyomon követés, nincs adatmegosztás, nincs kérdéseid monetizálása.",
+      "title": "Nincs reklám"
+    },
+    "noExpertise": {
+      "text": "Nincs szükséged egyháztagságra és teológiai előismeretekre.",
+      "title": "Nincs szükség előismeretekre"
+    },
+    "qa": {
+      "text": "Minden bibliai vers automatikusan ellenőrzésre kerül a helyesség szempontjából — minden beszélgetés során.",
+      "title": "QA-ellenőrzött"
+    }
+  }
 }

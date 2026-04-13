@@ -43,6 +43,8 @@ const LANGS = [
   { code: "vi", flag: "🇻🇳" },
   { code: "id", flag: "🇮🇩" },
   { code: "tl", flag: "🇵🇭" },
+  // Middle East
+  { code: "ar", flag: "🇸🇦" },
   // Africa
   { code: "sw", flag: "🇰🇪" },
   { code: "am", flag: "🇪🇹" },

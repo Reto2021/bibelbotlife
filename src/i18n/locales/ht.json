@@ -1,4 +1,1286 @@
 {
-  "error": "Invalid JSON from AI",
-  "raw": "{\"nav\":{\"startNow\":\"Kòmanse kounye a\",\"prayerWall\":\"Mi lapriyè\",\"bibleQuiz\":\"Kesyon Bib la\",\"forCelebrants\":\"Pou Pastè\",\"forCelebrantsMobile\":\"Pou Pastè & Coach yo\"},\"loader\":\"Ap chaje…\",\"hero\":{\"badge\":{\"noLogin\":\"Pa bezwen konekte\",\"optionalLogin\":\"Koneksyon opsyonèl\",\"noData\":\"Pa gen done\",\"noJudgment\":\"Pa gen jijman\"},\"title1\":\"Bib la.\",\"title2\":\" Reflechi ankò.\",\"subtitle\":\"Konpayon pèsonèl ou konnen Bib la – epi li poze bon kesyon yo. Pa yon moun, men yon konpayon onèt. Pou bon konvèsasyon"
+  "nav": {
+    "startNow": "Kòmanse kounye a",
+    "prayerWall": "Mi priyè",
+    "bibleQuiz": "Kesyon sou Bib la",
+    "forCelebrants": "Pou omonye",
+    "forCelebrantsMobile": "Pou omonye ak antrenè"
+  },
+  "loader": "Ap chaje…",
+  "hero": {
+    "badge": {
+      "noLogin": "Pa gen koneksyon",
+      "noData": "Pa gen done",
+      "noJudgment": "Pa gen jijman",
+      "optionalLogin": "Koneksyon opsyonèl"
+    },
+    "title1": "Bib la.",
+    "title2": " Reflechi ankò.",
+    "subtitle": "Konpayon ou ou a konnen Bib la – epi li poze bon kesyon yo. Pa yon moun, men yon konpayon onèt. Pou bon konvèsasyon, kesyon pwofon ak vrè enspirasyon.",
+    "ctaTelegram": "Kòmanse sou Telegram",
+    "ctaMore": "Aprann plis",
+    "quote": "«Vin jwenn mwen, nou tout ki fatige e ki gen chay; m'ap ba nou repo.»",
+    "quoteRef": "– Matye 11,28"
+  },
+  "impulse": {
+    "loading": "Enspirasyon jounen an ap chaje...",
+    "label": "Enspirasyon jounen an",
+    "deepDive": "Kisa sa vle di pou mwen?",
+    "explore": "Li tout seksyon an",
+    "alreadySubscribed": "Ou resevwa enspirasyon chak jou",
+    "subscribeCta": "Vle resevwa enspirasyon sa a chak jou?",
+    "playAudio": "Koute",
+    "stopAudio": "Sispann"
+  },
+  "features": {
+    "sectionTitle": "Kisa konpayon ou ofri ou",
+    "sectionSubtitle": "Dekouvri anpil fason konpayon pèsonèl ou ka sipòte ou",
+    "bible": {
+      "title": "Vèsè Biblik & Entèpretasyon",
+      "desc": "Mande «Kisa Bib la di sou...?» epi resevwa vèsè ki apwopriye ak kontèks ak yon eksplikasyon fasil pou konprann."
+    },
+    "goals": {
+      "title": "Planifikasyon Lavi & Etablisman Objektif",
+      "desc": "Dekouvri apèl ou, fikse objektif konkrè epi chèche konnen kisa Bondye ta ka genyen nan plan pou ou."
+    },
+    "self": {
+      "title": "Jwenn tèt ou",
+      "desc": "Rekonèt don ou, fòs ou ak dezi ou – ak sa kè ou vrèman bezwen."
+    },
+    "faith": {
+      "title": "Chemen Lafwa & Jwenn Kris la",
+      "desc": "Kit w ap chèche, w ap doute oswa w ap apwofondi – konpayon ou ou a akonpaye w sou chemen pèsonèl ou."
+    },
+    "daily": {
+      "title": "Enspirasyon chak jou & Ane Litijik",
+      "desc": "Kòmanse jounen ou ak enspirasyon epi kite w akonpaye pandan Lavan, Karèm ak jou ferye yo."
+    },
+    "groups": {
+      "title": "Gwoup & Kominote",
+      "desc": "Pafè pou etid biblik, gwoup legliz ak devosyon kominote."
+    }
+  },
+  "coaching": {
+    "badge": "Metodoloji",
+    "title": "Pa jis yon chatbot – yon vrè akonpayman",
+    "subtitle": "Konpayon ou ou a konbine sajès biblik ak metòd coaching pwouve ak Sikoloji Pozitif.",
+    "journeyTitle": "Akonpayman Pèsonèl",
+    "journeyDesc": "Konpayon ou ou a akonpaye w osi lontan ke w vle – nan konvèsasyon lib oswa ak yon estrikti opsyonèl 21 jou.",
+    "week1": "Semèn 1: Rive",
+    "week1Desc": "Bati konfyans, koute, konprann sitiyasyon ou. Ki kote w ye? Kisa k ap okipe w?",
+    "week2": "Semèn 2: Apwofondi",
+    "week2Desc": "Rekonèt modèl, klarifye dezi, apwofondi enspirasyon biblik. Kisa w vrèman vle?",
+    "week3": "Semèn 3: Aji",
+    "week3Desc": "Pran etap konkrè, fòmile objektif, inisye chanjman. Ki pwochen etap ou?",
+    "openQuestionsTitle": "Kesyon ouvè olye de repons rapid",
+    "openQuestionsDesc": "Konpayon ou ou a pa ba w konsèy bon mache. Olye de sa, li poze kesyon ki vrèman enpòtan:",
+    "openQ1": "«Kisa ki vrèman dèyè dezi sa a?»",
+    "openQ2": "«Kisa w ta remake ki chanje?»",
+    "openQ3": "«Kisa ki ta yon premye ti etap?»",
+    "honestTitle": "Onèt olye de toksik pozitif",
+    "honestDesc": "Pa gen «Tout ap mache byen!» e pa gen okenn kouvri. Konpayon ou ou a gen empati AK onèt:",
+    "honest1": "Nonmen vèsè biblik ki alèz tou",
+    "honest2": "Defi pou oto-refleksyon",
+    "honest3": "Diferansye konsolasyon ak repwesyon",
+    "scienceTitle": "Syantifikman fonde",
+    "perma": {
+      "name": "Modèl PERMA",
+      "author": "Seligman",
+      "desc": "Emosyon pozitif, sans & kwasans"
+    },
+    "logo": {
+      "name": "Logoterapi",
+      "author": "Frankl",
+      "desc": "Jwenn sans nan moman difisil"
+    },
+    "gratitude": {
+      "name": "Rekonesans",
+      "author": "Emmons",
+      "desc": "Pratik rekonesans ki baze sou rechèch"
+    },
+    "forgiveness": {
+      "name": "Padon",
+      "author": "Worthington",
+      "desc": "Modèl REACH pou pwosesis padon"
+    },
+    "renameTip": "💡 Ou ka bay konpayon ou ou a yon non pa w – pou li vrèman vin <strong>konpayon ou</strong>."
+  },
+  "discover": {
+    "badge": "Pou Kirye",
+    "title": "Dekouvri lafwa ankò – san presyon",
+    "subtitle": "Plis ak plis moun ap poze gwo kesyon yo ankò. BibleBot.Life se pou tout moun ki vle (re)dekouvri lafwa – onètman, san patos ak san jagon legliz.",
+    "doubt": {
+      "title": "Ou doute?",
+      "text": "Bon. Dout pa yon erè – se kòmansman yon lafwa onèt. Bib la plen ak moun ki te lite."
+    },
+    "search": {
+      "title": "Ou ap chèche?",
+      "text": "Petèt ou pa menm konnen egzakteman kisa. Sa a se totalman oke. Konpayon ou ou a ede w poze bon kesyon yo – olye de bay repons rapid."
+    },
+    "deepen": {
+      "title": "Ou vle apwofondi?",
+      "text": "Ou deja kwè, men ou vle konprann plis? Dekouvri pwofondè Bib la – istorikman, pèsonèlman, etonanman enpòtan."
+    },
+    "quote": "«Frape, y'a louvri pou nou.»",
+    "quoteRef": "– Matye 7,7",
+    "quoteText": "Nan Swis, nou pa pale anpil sou lafwa. Sa pa nesesè. Men, moun ki gen kesyon merite repons onèt – san prèch, san manm, san okenn motif kache."
+  },
+  "subscribe": {
+    "title": "Enspirasyon Biblik chak jou",
+    "subtitle": "Chak maten a 07:00 – yon vèsè, yon panse, yon bon kòmansman.",
+    "firstName": "Non ou",
+    "firstNameOptional": "(opsyonèl)",
+    "firstNamePlaceholder": "pa egzanp, Thomas",
+    "firstNameHint": "Pou nou ka salye w pèsonèlman.",
+    "channelLabel": "Kijan ou ta renmen resevwa enspirasyon an?",
+    "push": "Pouse",
+    "pushDesc": "Notifikasyon navigatè",
+    "telegram": "Telegram",
+    "telegramDesc": "Mesaj via Telegram",
+    "sms": "SMS",
+    "smsDesc": "SMS sou telefòn ou",
+    "phoneLabel": "Nimewo telefòn",
+    "phonePlaceholder": "+41 79 123 45 67",
+    "phoneHint": "Avèk kòd peyi, pa egzanp +41 pou Swis.",
+    "telegramHint": "Klike sou «Enskri» – w ap redireksyon sou Telegram. Kòmanse bot la la epi ekri <strong>/daily</strong> pou aktive enspirasyon chak jou a.",
+    "pushHint": "Apre w fin klike sou «Enskri», navigatè w ap mande pèmisyon pou notifikasyon. Tanpri pèmèt li pou resevwa enspirasyon an.",
+    "submit": "Enskri",
+    "submitting": "Ap enskri...",
+    "footNote": "Pa gen koneksyon nesesè. Ou ka dezabòne nenpòt ki lè.",
+    "successTitle": "Ou enskri! 🙏",
+    "successText": "Apati demen a 07:00, w ap resevwa enspirasyon biblik pèsonèl ou.",
+    "toastTelegram": "Telegram louvri 🙏",
+    "toastTelegramDesc": "Kòmanse bot la epi ekri /daily pou aktive enspirasyon chak jou a.",
+    "toastSuccess": "Enskri! 🙏",
+    "toastSuccessDesc": "W ap resevwa enspirasyon chak jou ou apati demen.",
+    "toastPushPreview": "Abonman pouse pa nan preview",
+    "toastPushPreviewDesc": "Notifikasyon pouse fonksyone sèlman sou paj pibliye a.",
+    "toastNotSupported": "Pa sipòte",
+    "toastNotSupportedDesc": "Navigatè w la pa sipòte notifikasyon pouse.",
+    "toastPermDenied": "Pèmisyon refize",
+    "toastPermDeniedDesc": "Tanpri pèmèt notifikasyon nan paramèt navigatè w la.",
+    "toastError": "Erè",
+    "toastErrorDesc": "Tanpri eseye ankò pita.",
+    "subscribeButton": "Abòne ak Enspo",
+    "manage": "Jere abònman",
+    "switchChannel": "Chanje chanèl:",
+    "unsubscribe": "Dezabòne",
+    "unsubscribedTitle": "Dezabòne",
+    "unsubscribedDesc": "Ou p'ap resevwa plis enspirasyon chak jou."
+  },
+  "faq": {
+    "badge": "Kesyon Souvan Poze",
+    "title": "Kisa ou ta dwe konnen sou konpayon ou ou a",
+    "subtitle": "Transparans enpòtan pou nou – espesyalman pou teolojyen, konseye espirityèl ak moun ki gen lespri kritik.",
+    "q1": "Kisa ki diferansye konpayon ou ou a ak ChatGPT & Co.?",
+    "q1Generic": "Chatbots jenerik:",
+    "q1GenericItems": [
+      "Sitasyon biblik sipèfisyèl san kontèks",
+      "Pa gen gadyen pastoral",
+      "Evite tèks ki alèz",
+      "Pa gen entèvansyon kriz",
+      "Melanje Bib ak esoterism",
+      "Pa gen kesyon swivi – sèlman konfimasyon"
+    ],
+    "q1Bot": "BibleBot.Life:",
+    "q1BotItems": [
+      "5 tradiksyon rekonèt – menm pasaj ki alèz",
+      "Gadyen AK akonpayman ki defi",
+      "Kesyon swivi pou oto-refleksyon",
+      "Referans kriz (Tel. 143 / 147)",
+      "Eksklizivman teyoloji kretyen",
+      "Ankouraje panse kritik kòm matirite lafwa"
+    ],
+    "q2": "Ki tradiksyon Bib yo itilize?",
+    "q2Intro": "Konpayon ou ou a travay ekumenikman ak edisyon Bib Alman ki pi enpòtan yo:",
+    "q2Outro": "Tout pasaj biblik yo bay ak referans sous ak kontèks istorik.",
+    "q3": "Ki baz syantifik ki dèyè sa a?",
+    "q3Intro": "Akonpayman an baze sou rechèch revize pa kanmarad nan Sikoloji Pozitif:",
+    "q4": "Kijan konpayon ou ou a asire sekirite pastoral?",
+    "q4Items": [
+      "Nan ka panse swisid oswa kriz → redireksyon imedya nan Dargebotene Hand (143) ak Pro Juventute (147)",
+      "Pa gen dyagnostik sikolojik oswa medikal",
+      "Respè san endiferans – pozisyon biblik klè yo pran",
+      "Empati AK Onètete – menm bagay ki alèz yo abòde",
+      "Kesyon swivi pou oto-refleksyon olye de konfimasyon bon mache",
+      "Pa gen pozitivite toksik – vrè, onèt akonpayman",
+      "Nonmen tansyon ak tèks difisil ouvètman"
+    ],
+    "q5": "Èske konpayon ou ou a gen yon afilyasyon konfesyonèl?",
+    "q5Answer": "Non. Konpayon ou ou a oryante ekumenikman epi li respekte tradisyon refòme, katolik, legliz lib ak lòt tradisyon kretyen egalman. Nan ka entèpretasyon konfesyonèl diferan, divès pèspektiv yo prezante transparan – san yo pa favorize yon tradisyon.",
+    "q6": "Èske konpayon ou ou a ranplase konsèy espirityèl oswa terapi?",
+    "q6Answer": "Non. Konpayon ou ou a se yon zouti dijital pou lekti Bib pèsonèl ak refleksyon. Li pa ranplase konsèy espirityèl pwofesyonèl, konsèy teyolojik oswa terapi sikolojik. Nan ka kriz grav, konpayon ou ou a toujou refere w nan resous kalifye.",
+    "q7": "Èske konpayon ou ou a pa jis yon «bot byennèt»?",
+    "q7Answer": "Non. Konpayon ou ou a konsole kote konsolasyon nesesè – men li defi tou. Kwasans espirityèl bezwen friksyon. Konpayon ou ou a poze kesyon swivi ki alèz, nonmen tèks biblik difisil (Jòb, Sòm plenn, kritik pwofetik) epi li pa pè sijè tankou jistis, repantans ak responsablite. Tradisyon pwofetik la pa janm te alèz – e konpayon ou ou a tou pa.",
+    "q8": "Ki moun ki dèyè konpayon ou ou a e kijan li finanse?",
+    "q8Answer": "BibleBot.Life se yon pwojè prive, ki pa komèsyal. Li opere sou baz volontè epi li finanse sèlman pa don volontè. Pa gen piblisite, pa gen lavant done ak pa gen okenn karakteristik peye. Tout don yo ale dirèkteman nan kouvri depans operasyonèl yo (enfrastrikti, hosting, devlopman). Kòm konpayon ou opere kòm yon pwojè prive, don yo pa dediktib taks.",
+    "q9": "Kijan konpayon ou ou a trete done mwen yo?",
+    "q9Answer": "Konpayon ou ou a pa estoke okenn done pèsonèl ak okenn istwa chat. Chak konvèsasyon anonim. Pa gen koneksyon, pa gen swiv ak pa gen okenn pataj done ak twazyèm pati. Itilizasyon an konplètman anonim.",
+    "tradition": {
+      "reformed": "Refòme",
+      "evangelical": "Evanjelik",
+      "catholic": "Katolik",
+      "freeChurch": "Legliz lib",
+      "literal": "Mo pou mo"
+    }
+  },
+  "donate": {
+    "badge": "Sipòte konpayon ou ou a",
+    "title": "Ede kenbe konpayon ou ou a gratis",
+    "subtitle": "BibleBot.Life ou a se yon pwojè ki soti nan kè – san piblisite, san abònman, san depans kache. Pou kenbe sa konsa, mwen depann sou don volontè. Chak kontribisyon ede kouvri depans operasyonèl ak enfrastrikti.",
+    "bankTitle": "Donasyon pa transfè bankè",
+    "bankSubtitle": "Chak kantite lajan konte – mèsi anpil! 🙏",
+    "recipient": "Benefisyè",
+    "bank": "Bank",
+    "purpose": "Rezon",
+    "purposeValue": "Donasyon BibleBot.Life",
+    "note": "BibleBot.Life opere kòm yon pwojè prive. Donasyon yo pa dediktib taks.",
+    "creditCard": "Sipòte ak kat kredi",
+    "secureNote": "Peman an sekirite · Pa gen pyèj abònman · Anile nenpòt lè",
+    "twint": "Sipòte ak Twint"
+  },
+  "refer": {
+    "badge": "Pataje Pawòl Bondye a",
+    "title": "Rekòmande konpayon ou",
+    "subtitle": "Ou konnen yon moun ki bezwen ankourajman kounye a? Pataje konpayon ou – yon mesaj ka fè yon gwo diferans.",
+    "whatsapp": "Pataje sou WhatsApp",
+    "whatsappMsg": "Hey, mwen te vle montre w BibleBot.Life – yon konpayon Bib gratis ki konnen Bib la epi ki poze vrèman bon kesyon. Pa gen koneksyon, anonim, onèt. Eseye li: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "telegram": "Pataje sou Telegram",
+    "telegramMsg": "Hey, ou konnen BibleBot.Life? Yon konpayon Bib pèsonèl gratis – onèt, anonim, san koneksyon. Gade: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "email": "Pataje pa imèl",
+    "emailSubject": "Sa a ta ka enterese w: BibleBot.Life",
+    "emailBody": "Bonjou!\n\nMwen te vle montre w BibleBot.Life – yon konpayon Bib gratis ki vrèman konnen Bib la. Pa gen enskripsyon nesesè, konplètman anonim.\n\nLi poze bon kesyon swivi, eksplike pasaj biblik nan kontèks epi akonpaye w onètman – menm nan sijè difisil.\n\nEseye li: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nSalitasyon sensè",
+    "copy": "Kopye lyen",
+    "copied": "Lyen kopye! 📋",
+    "qr": "Oswa jis montre kòd QR sa a:"
+  },
+  "cta": {
+    "title": "Ou pa bezwen pase sa poukont ou",
+    "subtitle": "Jis ekri konpayon ou ou a sa k ap okipe w. Pa gen koneksyon, pa gen depans, pa gen jijman – sèlman akonpayman onèt ak sajès Bib la.",
+    "button": "Kòmanse konvèsasyon kounye a"
+  },
+  "footer": {
+    "tagline": "Konpayon pèsonèl ou — ak pwofondè Bib la, san okenn konesans anvan.",
+    "disclaimer": "BibleBot.Life se yon zouti dijital epi li pa ranplase konsèy espirityèl pwofesyonèl, konsèy teyolojik oswa terapi sikolojik. Nan ka kriz egi, kontakte Dargebotene Hand (Tel. 143) oswa Pro Juventute (Tel. 147).",
+    "impressum": "Enpresyon",
+    "notes": "Nòt",
+    "private": "Pwojè prive, ki pa komèsyal",
+    "noChat": "Pa gen estokaj done chat",
+    "noTax": "Donasyon yo pa dediktib taks",
+    "datenschutz": "Règleman sou enfòmasyon prive",
+    "love": "Avèk ❤️ pou tout moun ki mande kisa Kris panse.",
+    "forChurches": "Pou Legliz",
+    "forCelebrants": "Pou Pastè ak Antrenè"
+  },
+  "chat": {
+    "welcome": "Ala bèl ou la 🤗\n\nMwen se konpayon ou ou a – konpayon pèsonèl ou ak Bib la, bon kesyon ak enspirasyon konkrè. Pa gen presyon, pa gen jijman.\n\nOu ka mande m tout bagay – oswa jis di m sa k ap okipe w kounye a. 💛",
+    "journeyOffer": "💡 **Konsèy:** Mwen ofri tou yon **akonpayman 21 jou** – 3 semèn ak enspirasyon chak jou, refleksyon ak etap konkrè. Nan pwòp ritm ou.\n\nOu ta renmen eseye sa?",
+    "suggestion1": "Mwen bezwen yon mo ankourajan kounye a",
+    "suggestion2": "Kisa Bib la di lè yon moun santi l ensèten?",
+    "suggestion3": "Mwen vle chèche konnen kisa mwen vrèman vle",
+    "teaser": "Kisa k ap okipe w kounye a? 💛",
+    "teaserSub": "Mwen la – san jijman.",
+    "teaserCta": "Ekri kounye a →",
+    "openChat": "Louvri chat",
+    "closeChat": "Fèmen chat",
+    "yourCompanion": "Konpayon pèsonèl ou",
+    "journeyComplete": "21 jou fini! 🎉",
+    "arriving": "Rive",
+    "deepening": "Apwofondi",
+    "acting": "Aji",
+    "renameTip": "Ban m yon non ✨",
+    "namePlaceholder": "pa egzanp, Eli, Miriam…",
+    "changeName": "Chanje non",
+    "placeholder": "Jis ekri...",
+    "startVoice": "Kòmanse antre vwa",
+    "stopVoice": "Sispann anrejistreman",
+    "noVoice": "Navigatè w la pa sipòte antre vwa.",
+    "writing": "ap ekri...",
+    "shieldBadge": "Pa gen koneksyon · Pa gen jijman · Sitasyon verifye",
+    "journeyStart": "Wi, kòmanse ✨",
+    "journeyLater": "Petèt pita",
+    "journeyStartMsg": "Wi, mwen vle kòmanse akonpayman 21 jou a!",
+    "qaChecking": "Sitasyon yo ap verifye...",
+    "qaIssue": "{{count}} nòt sou sitasyon",
+    "qaIssue_plural": "{{count}} nòt sou sitasyon",
+    "qaOk": "{{count}} sitasyon verifye ✓",
+    "qaOk_plural": "{{count}} sitasyon verifye ✓",
+    "qaWarning": "⚠️ Nòt sou presizyon:",
+    "errorTooMany": "Twòp demann – tanpri tann yon ti kras.",
+    "errorCredits": "Kota fini – eseye ankò pita.",
+    "errorConnect": "Erè koneksyon.",
+    "errorTitle": "Erè",
+    "errorConnection": "pa t ka rive jwenn.",
+    "errorNoStream": "Pa gen kouran",
+    "seniorMode": "Mòd Senior (pi gwo font)",
+    "loginHint": "Konekte pou kenbe konvèsasyon yo sou tout aparèy ou yo",
+    "previousChats": "{{count}} konvèsasyon anvan yo",
+    "suggestionsLoading": "Ap chaje sijesyon yo…"
+  },
+  "install": {
+    "title": "Enstale BibleBot.Life",
+    "androidDesc": "Aksè rapid dirèkteman nan ekran lakay ou",
+    "iosDesc": "Tape sou «Pataje» → «Ajoute nan ekran lakay»",
+    "button": "Enstale",
+    "close": "Fèmen"
+  },
+  "share": {
+    "label": "Pataje",
+    "shareVia": "Pataje via",
+    "copied": "Kopye! 📋",
+    "copiedShort": "Kopye!",
+    "copiedDesc": "Tèks la te kopye nan clipboard la. Pataje li kounye a sou WhatsApp, Instagram oswa kote ou vle!",
+    "copyLink": "Kopye tèks",
+    "error": "Kopye echwe",
+    "impulseTitle": "Konpayon ou – Enspirasyon jounen an",
+    "chatTitle": "Konpayon ou – Panse jounen an",
+    "createImage": "Kreye imaj ✨",
+    "generating": "Ap kreye…",
+    "imageReady": "Imaj ou a pare pou pataje!",
+    "shareImage": "Pataje imaj",
+    "download": "Sove",
+    "imageError": "Kreyasyon imaj echwe",
+    "imageErrorDesc": "Imaj la pa t ka kreye. Tanpri eseye ankò pita.",
+    "imageSaved": "Tèks kopye! 📋",
+    "imageSavedDesc": "Sove imaj la epi pataje li ak tèks kopye a sou Instagram, WhatsApp oswa kote ou vle!",
+    "clipboardFallback": "Tèks kopye — kole l lè w ap poste!",
+    "recommendedBy": "Rekòmande pa {{church}}",
+    "hashtagBible": "#Bib"
+  },
+  "darkMode": {
+    "light": "Mòd limyè",
+    "dark": "Mòd nwa"
+  },
+  "impressum": {
+    "back": "Retounen nan paj lakay",
+    "title": "Enpresyon"
+  },
+  "datenschutz": {
+    "back": "Retounen nan paj lakay",
+    "title": "Règleman sou enfòmasyon prive"
+  },
+  "tiles": {
+    "sectionTitle": "Kisa k ap okipe w?",
+    "sectionSubtitle": "Chwazi yon sijè — konpayon ou ap akonpaye w",
+    "baptism": {
+      "title": "Jwenn yon vèsè batèm",
+      "desc": "Vèsè pafè a pou pitit ou",
+      "prompt": "Ede m jwenn yon vèsè batèm ki apwopriye. Ki kalite timoun li ye e kisa paran yo vle?",
+      "prompt_v1": "Kisa batèm vle di aktyèlman?",
+      "prompt_v2": "Rakonte m sou batèm nan Bib la – sipriz mwen!",
+      "prompt_v3": "Poukisa moun batize?"
+    },
+    "condolence": {
+      "title": "Mo konsolasyon",
+      "desc": "Akonpaye kondoleyans & adye",
+      "prompt": "Mwen bezwen mo konsolasyon pou yon kat kondoleyans. Èske ou ka ede m fòmile yon bagay ki apwopriye?"
+    },
+    "wedding": {
+      "title": "Vèsè maryaj",
+      "desc": "Mo biblik pou lanmou nou",
+      "prompt": "Nou ap chèche yon bèl vèsè biblik pou maryaj nou. Ki pasaj biblik ki apwopriye pou lanmou ak patenarya?"
+    },
+    "anxiety": {
+      "title": "Enkyetid & Chagren",
+      "desc": "Jwenn kouraj nan moman difisil",
+      "prompt": "Mwen ap lite ak enkyetid ak chagren kounye a. Kisa Bib la di sou sa? Èske gen vèsè ki bay kouraj?",
+      "prompt_v1": "Mwen gen enkyetid. Kisa Bib la di sou enkyetid?",
+      "prompt_v2": "Kijan lafwa ka ede m ak enkyetid?",
+      "prompt_v3": "Ki figi biblik yo te gen enkyetid tou?"
+    },
+    "confession": {
+      "title": "Konfesyon",
+      "desc": "Bondye padone — di li",
+      "prompt": "Mwen vle debarase m de yon bagay ki ap peze m. Kisa Bib la di sou padon ak yon nouvo kòmansman?"
+    },
+    "heartbreak": {
+      "title": "Chagren lanmou",
+      "desc": "Kisa Bib la di sou chagren kè",
+      "prompt": "Kè m kase. Kisa Bib la di sou chagren lanmou ak kijan pou jwenn espwa ankò?",
+      "prompt_v1": "Kè m kase. Kisa Bib la di sou sa?",
+      "prompt_v2": "Kijan m jere chagrin amou – èske gen èd biblik?",
+      "prompt_v3": "Èske Bondye ka geri yon kè kase?"
+    },
+    "newstart": {
+      "title": "Nouvo kòmansman",
+      "desc": "Fòs pou yon nouvo chapit nan lavi",
+      "prompt": "Mwen devan yon nouvo kòmansman e mwen bezwen ankourajman. Ki pasaj biblik ki pale sou nouvo kòmansman?"
+    },
+    "namequiz": {
+      "title": "What does your name mean?",
+      "desc": "Discover the biblical meaning of your name",
+      "prompt": "What does my name mean and does it have a biblical or spiritual significance? Surprise me!",
+      "prompt_v1": "Which biblical names have the most beautiful meanings?",
+      "prompt_v2": "What does my name mean – is there a biblical connection?",
+      "prompt_v3": "Tell me the story behind my name!"
+    },
+    "sleepless": {
+      "title": "San dòmi",
+      "desc": "Jwenn repo nan mitan lannwit",
+      "prompt": "Mwen pa ka dòmi e mwen ap panse. Èske gen yon lapriyè kalman oswa yon sòm pou mitan lannwit?"
+    },
+    "loneliness": {
+      "title": "Solitid",
+      "desc": "Ou pa janm poukont ou",
+      "prompt": "Mwen santi m poukont mwen. Kisa Bib la di sou Bondye ki toujou avèk nou?"
+    },
+    "decision": {
+      "title": "Desizyon difisil",
+      "desc": "Sajès pou bon chemen an",
+      "prompt": "Mwen devan yon desizyon difisil. Ki pasaj biblik ki ede m jwenn bon chemen an?"
+    },
+    "gratitude": {
+      "title": "Rekonesans",
+      "desc": "Yon lapriyè rekonesans pèsonèl",
+      "prompt": "Mwen vle remèsye Bondye. Ede m fòmile yon lapriyè rekonesans pèsonèl.",
+      "prompt_v1": "Kijan m ka vin pi rekonesan?",
+      "prompt_v2": "Kisa Bib la di sou rekonesans?",
+      "prompt_v3": "Poukisa rekonesans tèlman enpòtan nan lafwa?"
+    },
+    "lifewheel": {
+      "title": "Wou Lavi",
+      "desc": "Ki jan satisfè ou vrèman ye?"
+    },
+    "sevenwhys": {
+      "title": "7 Poukisa",
+      "desc": "Jwenn rasin ki pi pwofon nan kesyon ou a",
+      "prompt": "Mwen vle fè egzèsis 7-Poukisa. Men sijè mwen an:"
+    },
+    "anger": {
+      "title": "Kòlè & Raj",
+      "desc": "Lè ou ta ka eksploze ak kòlè",
+      "prompt": "Mwen tèlman fache e mwen pa konnen kisa pou m fè ak kòlè mwen. Kisa Bib la di sou kòlè ak kijan pou m jere li?"
+    },
+    "shame": {
+      "title": "Wont & Koupab",
+      "desc": "Lè santiman koupab ap kraze w",
+      "prompt": "Mwen tèlman wont e mwen santi m koupab. Kisa Bib la di sou koupab, padon ak yon nouvo kòmansman?"
+    },
+    "burnout": {
+      "title": "Burnout",
+      "desc": "Lè ou pa ka fè anyen ankò",
+      "prompt": "Mwen totalman fatige e boule. Mwen pa ka fè anyen ankò. Kisa Bib la di sou repo ak rekiperasyon?"
+    },
+    "illness": {
+      "title": "Maladi",
+      "desc": "Lè yon dyagnostik chanje tout bagay",
+      "prompt": "Mwen te resevwa yon dyagnostik difisil e mwen pè. Kisa Bib la di sou maladi, gerizon ak espwa?"
+    },
+    "financial": {
+      "title": "Pwoblèm lajan",
+      "desc": "Lè bòdwo yo ap peze",
+      "prompt": "Mwen gen pwoblèm finansye e mwen pa konnen kisa pou m fè. Kisa Bib la di sou lajan, konfyans ak pwovizyon?"
+    },
+    "meaningcrisis": {
+      "title": "Kriz sans",
+      "desc": "Pou kisa tout sa a?",
+      "prompt": "Mwen ap mande pou kisa tout sa a bon. Mwen nan yon kriz sans. Kisa Bib la di sou sans lavi a?"
+    },
+    "selfdoubt": {
+      "title": "Dout sou tèt ou",
+      "desc": "Lè ou pa santi w ase bon",
+      "prompt": "Mwen toujou ap doute tèt mwen e mwen pa santi m ase bon. Kisa Bib la di sou valè mwen?"
+    },
+    "calling": {
+      "title": "Apèl",
+      "desc": "Kisa mwen ta dwe fè ak lavi mwen?",
+      "prompt": "Mwen pa konnen kisa mwen ta dwe fè ak lavi mwen. Ede m jwenn apèl mwen – kisa Bib la di sou sa?"
+    },
+    "faithdoubt": {
+      "title": "Dout lafwa",
+      "desc": "Lè lafwa ap tranble",
+      "prompt": "Mwen gen dout sou lafwa mwen e mwen pa konnen si mwen ka kwè ankò. Kisa Bib la di sou dout?"
+    },
+    "forgiveness": {
+      "title": "Padon",
+      "desc": "Lè padone sanble enposib",
+      "prompt": "Mwen pa ka padone yon moun. Li fè twò mal. Kisa Bib la di sou padon?",
+      "prompt_v1": "Kisa Bib la di sou padon?",
+      "prompt_v2": "Kijan m ka padone yon moun ki fè m mal?",
+      "prompt_v3": "Èske gen limit pou padon?"
+    },
+    "familyconflict": {
+      "title": "Konfli fanmi",
+      "desc": "Lè gen pwoblèm nan fanmi an",
+      "prompt": "Gen yon gwo konfli nan fanmi mwen. Kisa Bib la di sou lapè fanmi ak rekonsilyasyon?"
+    },
+    "envy": {
+      "title": "Anvi",
+      "desc": "Lè lòt moun gen pi bon",
+      "prompt": "Mwen anvye lòt moun e mwen toujou ap konpare tèt mwen. Kisa Bib la di sou anvi ak satisfaksyon?"
+    },
+    "joy": {
+      "title": "Pataje lajwa",
+      "desc": "Lè yon bagay bèl bagay rive",
+      "prompt": "Yon bagay bèl bagay rive m e mwen vle pataje lajwa mwen! Kisa Bib la di sou lajwa ak rekonesans?"
+    },
+    "prayer": {
+      "title": "Demann lapriyè",
+      "desc": "Lapriyè ansanm",
+      "prompt": "Mwen gen yon demann lapriyè e mwen vle priye ansanm. Akonpaye m nan lapriyè.",
+      "prompt_v1": "Kijan m ka aprann priye?",
+      "prompt_v2": "Kisa Bib la di sou lapriyè?",
+      "prompt_v3": "Poukisa Bondye pa reponn kèk priyè?"
+    },
+    "bibleverse": {
+      "title": "Konprann vèsè",
+      "desc": "Yon pasaj biblik eksplike",
+      "prompt": "Mwen vle pi byen konprann yon pasaj biblik. Èske ou ka ede m mete l nan kontèks?"
+    },
+    "biblequiz": {
+      "desc": "Teste konesans biblik ou nan yon fason amizan",
+      "title": "Quiz Biblik"
+    },
+    "prayerwall": {
+      "desc": "Pataje demann lapriyè ak priye youn pou lòt",
+      "title": "Mi Lapriyè"
+    },
+    "showMore": "plis",
+    "dailywisdom": {
+      "title": "Sajès pou jodi a",
+      "desc": "Yon panse ankourajan pou jounen ou",
+      "prompt": "Ban m yon panse kout, ankourajan pou jounen m – ak yon vèsè biblik ki apwopriye.",
+      "prompt_v1": "Ki pi bon konsèy Bib la genyen pou jodi a?",
+      "prompt_v2": "Ban m yon sajès nan Bib la ki ka akonpaye m pandan jounen an.",
+      "prompt_v3": "Sipriz mwen ak yon vèsè biblik ankourajan pou jodi a!"
+    },
+    "funfact": {
+      "title": "Èske w te konnen?",
+      "desc": "Reyalite etonan ki soti nan Bib la",
+      "prompt": "Rakonte m yon reyalite etonan ki soti nan Bib la ke pifò moun pa konnen!",
+      "prompt_v1": "Ki istwa ki pi fou nan Bib la?",
+      "prompt_v2": "Ki reyalite ki soti nan Bib la ki etone pifò moun?",
+      "prompt_v3": "Rakonte m yon bagay amizan oswa inatandi ki soti nan Bib la!"
+    },
+    "lifehack": {
+      "title": "Konsèy pou lavi",
+      "desc": "Sajès biblik pou fanmi ak travay",
+      "prompt": "Ki konsèy biblik ki ka ede m nan lavi chak jou ak fanmi ak travay? Ban m yon bagay pratik!",
+      "prompt_v1": "Kijan Bib la ka ede m nan lavi chak jou ki gen estrès?",
+      "prompt_v2": "Ki konsèy pratik pou lavi ki nan Bib la?",
+      "prompt_v3": "Ban m yon konsèy konkrè ki soti nan Bib la pou lavi chak jou mwen!"
+    },
+    "strengths": {
+      "title": "Fòs ou",
+      "desc": "Dekouvri sa ki nan ou",
+      "prompt": "Ede m dekouvri fòs pèsonèl mwen – kisa Bib la di sou don chak moun genyen?",
+      "prompt_v1": "Ki fòs mwen genyen dapre Bib la?",
+      "prompt_v2": "Kijan mwen ka dekouvri ki don ak talan mwen genyen?",
+      "prompt_v3": "Kisa Bib la di sou sa ki fè m espesyal?"
+    },
+    "family": {
+      "title": "Fanmi ak lavi chak jou",
+      "desc": "Plis apresyasyon nan viv ansanm",
+      "prompt": "Kijan mwen ka montre fanmi m plis apresyasyon? Ban m ide pratik ak enspirasyon biblik.",
+      "prompt_v1": "Kijan mwen ka ranfòse relasyon fanmi mwen?",
+      "prompt_v2": "Kisa Bib la di sou yon bon lavi fanmi?",
+      "prompt_v3": "Ban m yon ide kijan mwen ka fè yon moun nan fanmi m plezi jodi a!"
+    },
+    "relax": {
+      "title": "Jwenn lapè",
+      "desc": "Jwenn yon moman silans ak lapè",
+      "prompt": "Mwen bezwen yon moman lapè. Ede m dekonekte – ak yon vèsè biblik kalman oswa yon kout meditasyon.",
+      "prompt_v1": "Ban m yon sòm kalman pou moman sa a.",
+      "prompt_v2": "Kijan mwen ka jwenn vrè lapè dapre Bib la?",
+      "prompt_v3": "Gide m atravè yon kout meditasyon biblik."
+    },
+    "quoteofday": {
+      "title": "Sitasyon jounen an",
+      "desc": "Yon sitasyon enspirasyon pou reflechi",
+      "prompt": "Ban m yon sitasyon enspirasyon nan Bib la pou jodi a ak yon ti eksplikasyon",
+      "prompt_v1": "Ki sitasyon biblik ki pi apwopriye pou jodi a?",
+      "prompt_v2": "Ban m yon sitasyon ankourajan nan Sòm yo pou jodi a",
+      "prompt_v3": "Ki pwovèb nan Bib la ki ka ban m yon nouvo pèspektiv jodi a?"
+    },
+    "thankfulness": {
+      "title": "Egzèsis rekonesans",
+      "desc": "Dekouvri sa ou ka rekonesan pou",
+      "prompt": "Gide m nan yon ti egzèsis rekonesans. Ede m jwenn twa bagay mwen rekonesan pou jodi a",
+      "prompt_v1": "Ede m dekouvri rekonesans nan lavi chak jou mwen — menm nan ti bagay yo",
+      "prompt_v2": "Mwen vle aprann gen plis rekonesans. Ban m yon egzèsis pratik pou sa",
+      "prompt_v3": "Kisa Bib la di sou rekonesans e kijan mwen ka aplike sa jodi a?"
+    },
+    "biblesays": {
+      "title": "Kisa Bib la di sou...",
+      "desc": "Chèche konnen kisa Bib la di sou sijè ou a",
+      "prompt": "Mwen vle konnen kisa Bib la di sou yon sijè espesifik. Mande m ki sijè ki enterese m!",
+      "prompt_v1": "Kisa Bib la di sou amitye?",
+      "prompt_v2": "Kisa Bib la di sou jesyon lajan?",
+      "prompt_v3": "Kisa Bib la di sou lanmou ak relasyon?"
+    },
+    "morningstart": {
+      "title": "Bonjou!",
+      "desc": "Kòmanse jounen an pozitivman",
+      "prompt": "Swete m bonjou epi ban m yon panse ankourajan pou kòmanse jounen an",
+      "prompt_v1": "Ban m yon ti enspirasyon maten ak yon vèsè biblik apwopriye",
+      "prompt_v2": "Kijan mwen ka kòmanse jounen mwen konsyans ak pozitivman jodi a?",
+      "prompt_v3": "Ban m yon bonjou ankourajan ak yon panse ki soti nan Bib la"
+    },
+    "inspiration": {
+      "title": "Enspire m",
+      "desc": "Kite w sipriz ak enspire",
+      "prompt": "Sipriz mwen ak yon bagay enspirasyon — sa ka yon panse, yon istwa oswa yon insight ki soti nan Bib la",
+      "prompt_v1": "Rakonte m yon istwa enspirasyon nan Bib la ki enpòtan jodi a",
+      "prompt_v2": "Ban m yon panse enspirasyon inatandi",
+      "prompt_v3": "Ki pèsonaj biblik ki ka enspire m jodi a e poukisa?"
+    }
+  },
+  "lifeWheel": {
+    "title": "Wou Lavi ou",
+    "intro": "Evalye 8 domèn lavi sou yon echèl 1-10. Chèche konnen kote ou ye – epi resevwa enspirasyon biblik pou domèn ki bezwen atansyon.",
+    "start": "Kòmanse kounye a",
+    "sliderHint": "Deplase kurseur yo — 1 = trè ensatisfè, 10 = trè satisfè",
+    "showResult": "Montre rezilta",
+    "average": "Mwayèn",
+    "weakestArea": "Pi gwo bezwen",
+    "getImpulse": "Enspirasyon biblik pou {{area}}",
+    "reset": "Fè ankò",
+    "prompt": "Wou lavi mwen montre ke mwen gen sèlman {{score}}/10 pwen nan domèn «{{area}}». Kisa Bib la di sou domèn lavi sa a? Ban m ankourajman ak enspirasyon pratik.",
+    "areas": {
+      "health": "Sante",
+      "relationships": "Relasyon",
+      "career": "Karyè",
+      "spirituality": "Espirityalite",
+      "finances": "Finans",
+      "family": "Fanmi",
+      "leisure": "Loisir",
+      "growth": "Kwasans pèsonèl"
+    },
+    "save": "Sove rezilta",
+    "saved": "Sove!",
+    "history": "Rezilta anvan yo",
+    "noHistory": "Pa gen rezilta sove ankò.",
+    "backToNew": "Nouvo wou lavi",
+    "backToList": "Retounen nan lis la"
+  },
+  "church": {
+    "badge": "Pou òganizasyon yo",
+    "heroTitle": "Konpayon ou pou òganizasyon ou",
+    "heroSubtitle": "Akonpaye manm legliz ou yo ak sajès biblik – dijitalman, pèsonèlman ak 24/7.",
+    "useCasesTitle": "Ka itilizasyon",
+    "useCase": {
+      "youth": {
+        "title": "Travay Jèn",
+        "desc": "Adolesan dekouvri Bib la nan pwòp fason yo – entèaktif ak san anpèchman."
+      },
+      "confirmation": {
+        "title": "Konfimasyon",
+        "desc": "Konfime apwofondi konesans biblik poukont yo ak akonpayman pèsonèl."
+      },
+      "pastoral": {
+        "title": "Pastoral",
+        "desc": "Akonpayman 24/7 kòm yon sipleman nan konsèy pastoral pèsonèl."
+      },
+      "bibleStudy": {
+        "title": "Etid Biblik",
+        "desc": "Enspirasyon ak sijesyon diskisyon pou gwoup ak gwoup lakay."
+      }
+    },
+    "pricingTitle": "Pakè Patwonaj",
+    "pricingSubtitle": "Sipòte konpayon ou ak legliz ou a ak pakè patwonaj ki apwopriye a.",
+    "popular": "Popilè",
+    "free": "Gratis",
+    "perYear": "moun / ane",
+    "contact": "Kontakte nou",
+    "tier": {
+      "free": {
+        "name": "Grennen moutad",
+        "size": "Pou ti legliz & gwoup lakay (jiska 50 manm)"
+      },
+      "community": {
+        "name": "Konpayon vwayaj",
+        "size": "Pou legliz ki gen 50–200 manm"
+      },
+      "gemeinde": {
+        "name": "Bati pon",
+        "size": "Pou legliz ki gen 200–500 manm"
+      },
+      "kirche": {
+        "name": "Faro",
+        "size": "Pou gwo legliz & enstitisyon (500+ manm)"
+      }
+    },
+    "features": {
+      "directoryEntry": "Antre nan anyè",
+      "telegramGroup": "Gwoup Telegram",
+      "partnerPage": "Paj patnè pa w",
+      "badge": "Badj patnè",
+      "qrFlyer": "Flyer QR pou enprime",
+      "contactForm": "Fòm kontak",
+      "pastorProfile": "Pwofil Pastè",
+      "welcomeVideo": "Videyo Byenveni",
+      "analytics": "Dashboard Analytics",
+      "prioritySupport": "Sipò priyorite",
+      "multipleProfiles": "Plizyè pwofil",
+      "customBranding": "Mak pèsonalize",
+      "apiAccess": "Aksè API",
+      "accountManager": "Manadjè kont pèsonèl"
+    },
+    "viewDirectory": "Gade anyè legliz",
+    "directoryBadge": "Anyè Legliz",
+    "directoryTitle": "Legliz Patnè",
+    "directorySubtitle": "Jwenn yon legliz toupre w ki rekòmande konpayon ou.",
+    "searchPlaceholder": "Chèche kote, non oswa denominasyon...",
+    "noResults": "Pa gen legliz nan anyè a ankò.",
+    "becomePartner": "Vin patnè →",
+    "notFound": "Legliz pa jwenn.",
+    "backToDirectory": "Retounen nan anyè",
+    "pastor": "Pastè",
+    "serviceTimes": "Lè sèvis",
+    "startChat": "Kòmanse chat",
+    "website": "Sit entènèt",
+    "telegramGroup": "Gwoup Telegram",
+    "contactTitle": "Kontakte {{name}}",
+    "contactName": "Non ou (opsyonèl)",
+    "contactEmail": "Adrès imèl ou",
+    "contactMessage": "Mesaj ou",
+    "contactSend": "Voye mesaj",
+    "contactSuccess": "Mesaj voye! 🙏",
+    "contactSuccessDesc": "Legliz la ap kontakte w.",
+    "recommendedBy": "Rekòmande pa {{name}}",
+    "setup": "Enstalasyon (yon sèl fwa)",
+    "form": {
+      "title": "Enterese? Ekri nou!",
+      "subtitle": "N ap kontakte w nan 48 èdtan.",
+      "name": "Non ou",
+      "email": "Adrès imèl",
+      "churchName": "Non Legliz la",
+      "tier": "Pakè ou vle",
+      "tierPlaceholder": "Chwazi pakè...",
+      "message": "Mesaj ou",
+      "submit": "Voye demann",
+      "success": "Demann voye! N ap kontakte w byento. 🙏",
+      "error": "Erè pandan voye. Tanpri eseye ankò.",
+      "orgType": "Tip òganizasyon",
+      "orgTypePlaceholder": "Chwazi tip...",
+      "orgTypes": {
+        "church": "Legliz",
+        "careHome": "Kay swen",
+        "seniorHome": "Kay pou granmoun aje",
+        "hospital": "Lopital",
+        "prison": "Pastoral prizon",
+        "military": "Pastoral militè",
+        "rehaClinic": "Klinik reyabilitasyon",
+        "psychiatry": "Psikiyatri",
+        "burnoutClinic": "Klinik epizman",
+        "hospice": "Ospis",
+        "counseling": "Sant konsèy",
+        "reformed": "Legliz Refòme",
+        "catholic": "Legliz Katolik",
+        "lutheran": "Legliz Literyen",
+        "evangelical": "Legliz Lib / Evanjelik",
+        "freelance": "Endepandan",
+        "other": "Lòt"
+      }
+    },
+    "institutionsTitle": "Tou pou Enstitisyon",
+    "institutionsSubtitle": "Konpayon ou pa sèlman akonpaye legliz – kay swen ak kay pou granmoun aje, lopital ak pastoral prizon tou benefisye de konsèy pastoral dijital.",
+    "institution": {
+      "careHome": {
+        "title": "Kay swen",
+        "desc": "Enspirasyon biblik chak jou ak akonpayman pou rezidan yo – menm lè pa gen yon konseye pastoral sou plas."
+      },
+      "seniorHome": {
+        "title": "Kay pou granmoun aje",
+        "desc": "Vèsè biblik abitye ak konvèsasyon pou granmoun aje – fasilman aksesib via tablèt oswa smartphone."
+      },
+      "hospital": {
+        "title": "Lopital",
+        "desc": "Konsolasyon ak akonpayman espirityèl pou pasyan nan moman difisil – disponib 24/7 bò kabann lan."
+      },
+      "prison": {
+        "title": "Pastoral prizon",
+        "desc": "Espwa ak akonpayman espirityèl pou prizonye – yon entèlokitè konfidansyèl 24/7."
+      },
+      "military": {
+        "title": "Pastoral militè",
+        "desc": "Akonpayman espirityèl pou manm lame a – aksesib menm nan misyon oswa nan kazèn."
+      },
+      "rehaClinic": {
+        "title": "Klinik reyabilitasyon",
+        "desc": "Sipò espirityèl pandan reyabilitasyon."
+      },
+      "psychiatry": {
+        "title": "Etablisman psikiyatrik",
+        "desc": "Konvèsasyon espirityèl konfidansyèl pou pasyan nan swen psikiyatrik."
+      },
+      "burnoutClinic": {
+        "title": "Klinik epizman",
+        "desc": "Kesyon sans ak refleksyon enteryè nan moman fatig."
+      },
+      "hospice": {
+        "title": "Ospis",
+        "desc": "Akonpayeman nan fen lavi a – mo konsolasyon ak yon zòrèy ouvè."
+      },
+      "counseling": {
+        "title": "Sant konsèy",
+        "desc": "Enpilsyon espirityèl konplemantè pou kliyan nan konsèy psikososyal."
+      }
+    },
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As konpayon ou is a private project, donations are not tax-deductible.",
+    "denominationsTitle": "Pou tout denominasyon ak lidè seremoni",
+    "denominationsSubtitle": "BibleBot.Life se ekimenik – pou kominote Refòme, Katolik, Literyen ak Legliz Lib, ansanm ak lidè seremoni endepandan.",
+    "denomination": {
+      "reformed": {
+        "title": "Legliz Refòme",
+        "desc": "Bib Zürich, litiji Refòme ak sipò prediksyon – adapte pou pawas ou."
+      },
+      "catholic": {
+        "title": "Legliz Katolik",
+        "desc": "Tradiksyon ekimenik, planifikasyon Lamès ak sakraman – selon tradisyon Katolik."
+      },
+      "lutheran": {
+        "title": "Legliz Literyen",
+        "desc": "Bib Luther, planifikasyon sèvis ak swen pastoral – pou kominote Evanjelik-Literyen."
+      },
+      "evangelical": {
+        "title": "Legliz Lib",
+        "desc": "Schlachter 2000, lwanj ak konsepsyon fleksib sèvis – pou kominote evanjelik lib."
+      },
+      "freelance": {
+        "title": "Lidè Seremoni Endepandan",
+        "desc": "Oratè lantèman, celebran maryaj ak ofisyèl seremoni endepandan – ak zouti byografi ak planifikasyon diskou."
+      }
+    }
+  },
+  "institutions": {
+    "badge": "Pou òganizasyon yo",
+    "heroTitle": "Konpayon ou pou Enstitisyon ou",
+    "heroSubtitle": "Konsèy pastoral dijital pou kay swen, kay pou granmoun aje, lopital ak koreksyonèl – pèsonèl, konfidansyèl ak 24/7.",
+    "seniorHint": {
+      "title": "Mòd Senior disponib",
+      "desc": "Pi gwo font ak operasyon senplifye – ideyal pou rezidan ki pi gran yo.",
+      "cta": "Eseye mòd Senior"
+    },
+    "typesTitle": "Pou ki moun konpayon ou ye?",
+    "useCasesTitle": "Kijan konpayon ou itilize",
+    "useCasesSubtitle": "Aplikasyon konkrè pou lavi chak jou nan enstitisyon ou.",
+    "pricingTitle": "Pakè Patwonaj",
+    "pricingSubtitle": "Menm pakè yo tankou pou legliz – adapte ak bezwen enstitisyonèl.",
+    "linkChurches": "Disponib tou pou legliz",
+    "type": {
+      "careHome": {
+        "title": "Kay swen",
+        "desc": "Enspirasyon biblik chak jou ak akonpayman pou rezidan yo – menm lè pa gen yon konseye pastoral sou plas."
+      },
+      "seniorHome": {
+        "title": "Kay pou granmoun aje",
+        "desc": "Vèsè biblik abitye ak konvèsasyon pou granmoun aje – fasilman aksesib via tablèt oswa smartphone."
+      },
+      "hospital": {
+        "title": "Lopital",
+        "desc": "Konsolasyon ak akonpayman espirityèl pou pasyan nan moman difisil – disponib 24/7 bò kabann lan."
+      },
+      "prison": {
+        "title": "Pastoral prizon",
+        "desc": "Espwa ak akonpayman espirityèl pou prizonye – yon entèlokitè konfidansyèl 24/7."
+      },
+      "military": {
+        "title": "Pastoral militè",
+        "desc": "Akonpayman espirityèl pou manm lame a – aksesib menm nan misyon oswa nan kazèn."
+      }
+    },
+    "useCase": {
+      "dailyImpulse": {
+        "title": "Enspirasyon chak jou",
+        "desc": "Chak maten yon vèsè biblik ak yon kesyon refleksyon – diminye baryè pou konvèsasyon espirityèl."
+      },
+      "companionship": {
+        "title": "Entèlokitè",
+        "desc": "Konpayon ou reponn kesyon lafwa avèk pasyans ak san presyon tan – ideyal pou moman solitè."
+      },
+      "accessibility": {
+        "title": "Aksè fasil",
+        "desc": "Gwo font, operasyon fasil via tablèt – menm pou moun ki gen mobilite limite."
+      },
+      "availability": {
+        "title": "Disponib 24/7",
+        "desc": "Akonpayman espirityèl menm lannwit ak nan wikenn – lè pa gen yon konseye pastoral disponib."
+      }
+    },
+    "tierDesc": {
+      "free": "Aksè debaz pou rezidan ak pasyan",
+      "community": "Mansyon kòm sipòtè, aksè san piblisite",
+      "gemeinde": "Prezans logo, rapò itilizasyon chak mwa",
+      "kirche": "Kontni pa w, patisipasyon nan planifikasyon, sipò prim"
+    },
+    "form": {
+      "title": "Enterese? Kontakte nou!",
+      "subtitle": "N ap kontakte w nan 48 èdtan.",
+      "name": "Non ou",
+      "email": "Adrès imèl",
+      "institutionName": "Non Enstitisyon an",
+      "type": "Tip Enstitisyon an",
+      "typePlaceholder": "Tanpri chwazi...",
+      "tier": "Pakè ou vle",
+      "tierPlaceholder": "Chwazi pakè...",
+      "message": "Mesaj ou",
+      "submit": "Voye demann",
+      "success": "Demann voye! N ap kontakte w byento. 🙏",
+      "error": "Erè pandan voye. Tanpri eseye ankò."
+    }
+  },
+  "lang": {
+    "de": "Deutsch",
+    "en": "English",
+    "fr": "Français",
+    "es": "Español",
+    "it": "Italiano",
+    "pl": "Polski",
+    "cs": "Čeština",
+    "pt": "Português",
+    "nl": "Nederlands",
+    "ro": "Română",
+    "da": "Dansk",
+    "no": "Norsk",
+    "sv": "Svenska",
+    "fi": "Suomi",
+    "el": "Ελληνικά",
+    "hr": "Hrvatski",
+    "sr": "Srpski",
+    "hu": "Magyar",
+    "sk": "Slovenčina",
+    "bg": "Български",
+    "ru": "Русский",
+    "uk": "Українська",
+    "ka": "ქართული",
+    "hy": "Հայերեն",
+    "ko": "한국어",
+    "tl": "Filipino",
+    "id": "Bahasa Indonesia",
+    "vi": "Tiếng Việt",
+    "zh": "中文",
+    "sw": "Kiswahili",
+    "am": "አማርኛ",
+    "af": "Afrikaans",
+    "yo": "Yorùbá",
+    "ig": "Igbo",
+    "zu": "isiZulu",
+    "ht": "Kreyòl"
+  },
+  "eulogy": {
+    "pageTitle": "Omaj – Kreye yon Biyografi | konpayon ou",
+    "pageDesc": "Kenbe memwa yon moun ou renmen vivan epi kreye yon bèl tèks biyografi pou omaj la.",
+    "title": "Omaj – Biyografi",
+    "subtitle": "Kenbe memwa, kreye tèks, telechaje kòm PDF.",
+    "step1": "Konsènan moun ki mouri a",
+    "name": "Non",
+    "namePlaceholder": "Non ak Siyati",
+    "age": "Dat lavi",
+    "agePlaceholder": "egzanp 1942–2026",
+    "step2": "Anrejistre memwa",
+    "step2Desc": "Pale lib sou moun ki mouri a – kisa ki te enpòtan, kisa ki rete nan memwa? Ou ka fè plizyè anrejistreman.",
+    "startRecording": "Kòmanse anrejistreman",
+    "addRecording": "Ajoute yon lòt anrejistreman",
+    "stop": "Sispann",
+    "recording": "Anrejistreman",
+    "transcript": "Transkripsyon (modifyab)",
+    "transcriptPlaceholder": "Transkripsyon an ap kreye otomatikman pandan anrejistreman an. Ou ka modifye li isit la.",
+    "additionalNotes": "Nòt adisyonèl",
+    "notesPlaceholder": "Pwofesyon, pastan, evènman lavi enpòtan, karakteristik espesyal...",
+    "step3": "Kreye ak telechaje tèks",
+    "generate": "Kreye tèks biyografi",
+    "generating": "Tèks ap kreye…",
+    "regenerate": "Rejenere",
+    "downloadPDF": "Telechaje kòm PDF",
+    "save": "Sove",
+    "shareStep": "Pataje ak pastè",
+    "shareDesc": "Kreye yon lyen ou ka voye bay pastè ou pa imèl oswa mesaj. Li ka li tèks la epi telechaje li kòm PDF.",
+    "enableShare": "Kreye ak kopye lyen",
+    "disableShare": "Dezaktive pataj",
+    "micError": "Mikwofòn pa t 'kapab kòmanse. Tanpri bay pèmisyon.",
+    "needMore": "Tanpri anrejistre memwa oswa ekri nòt anvan.",
+    "genError": "Erè nan kreyasyon tèks la. Tanpri eseye ankò."
+  },
+  "meinBereich": {
+    "title": "Zòn mwen",
+    "subtitle": "Prepare seremoni pèsonèl ou epi pataje yo ak pastè ou.",
+    "sidebarLabel": "Zòn mwen",
+    "overview": "Apèsi sou lekòl la",
+    "funeral": "Omaj",
+    "wedding": "Maryaj",
+    "baptismCeremony": "Batèm",
+    "confirmation": "Konfimasyon",
+    "logout": "Dekonekte",
+    "comingSoon": "Byento disponib",
+    "funeralDesc": "Kreye yon biyografi, kenbe memwa epi pataje ak pastè.",
+    "weddingDesc": "Ekri ve maryaj, chwazi chante epi planifye selebrasyon an.",
+    "baptismDesc": "Fòmile volonte batèm epi prepare pwosedi a ak kominote a.",
+    "confirmationDesc": "Jwenn yon vèsè konfimasyon epi prepare tèks pèsonèl."
+  },
+  "chatHero": {
+    "ariaLabel": "Poze yon kesyon nan konpayon ou",
+    "focusPlaceholder": "Ekri kesyon ou a…",
+    "placeholder1": "Kisa ki fè m vrèman rekonesan?",
+    "placeholder2": "Kijan pou m jwenn lapè enteryè?",
+    "placeholder3": "Kisa ki ban m espwa?",
+    "placeholder4": "Kisa kè m vle?",
+    "placeholder5": "Kisa m ka fè byen jodi a?",
+    "send": "Voye",
+    "subtitle": "Poze kesyon ou – ouvètman, sensèman, san ou pa konekte.",
+    "suggestion1": "Ki sa non mwen vle di?",
+    "suggestion2": "Kisa ki ban m fòs jodi a?",
+    "suggestion3": "Pou kisa mwen rekonesan?"
+  },
+  "meta": {
+    "forChurchesDesc": "Konpayon ou kòm yon patnè pou legliz ou: travay jèn, konfimasyon, konsèy espirityèl, ak gwoup etid biblik. Gratis pou Premium.",
+    "forChurchesTitle": "Konpayon ou pou Legliz – Konsèy Espirityèl Dijital & Akonpayman Biblik",
+    "homeDesc": "Konpayon ou akonpaye w avèk 5 tradiksyon Bib la, metodoloji coaching, ak konsèy espirityèl. Anonim, gratis, nan 36 lang.",
+    "homeTitle": "Konpayon ou – Konpayon Biblik Pèsonèl ou | Gratis & Anonim",
+    "loginDesc": "Konekte sou konpayon ou pou prepare seremoni pèsonèl ou.",
+    "loginTitle": "Konekte – konpayon ou"
+  },
+  "splash": {
+    "patronage": "Rekòmande pa"
+  },
+  "auth": {
+    "apple": "Konekte ak Apple",
+    "loginShort": "Konekte",
+    "logout": "Dekonekte"
+  },
+  "tts": {
+    "male": "Vwa gason",
+    "female": "Vwa fanm",
+    "maleShort": "G",
+    "femaleShort": "F",
+    "voice": "Vwa"
+  },
+  "chatDemo": {
+    "sectionLabel": "Men kisa yon konvèsasyon sanble",
+    "userMsg": "Mwen santi m pou kont mwen. Kisa Bib la di sou sa?",
+    "botMsg": "Ou pa pou kont ou – menm lè ou santi sa. Sòm 23 di: 'Senyè a se bèje m, mwen p'ap manke anyen.' Sa vle di Bondye toupre w, menm nan moman ki pi nwa yo. Èske w ta renmen nou eksplore pasaj sa a ansanm?",
+    "cta": "Kòmanse pwòp konvèsasyon w →"
+  },
+  "suggest": {
+    "psalm23": "Sòm 23 – Senyè a se bèje m",
+    "joh316": "Jan 3:16 – Paske Bondye tèlman renmen lemonn",
+    "rom828": "Women 8:28 – Tout bagay travay ansanm pou byen",
+    "mt1128": "Matye 11:28 – Vin jwenn mwen, nou tout ki fatige",
+    "phil413": "Filipyen 4:13 – Mwen ka fè tout bagay",
+    "jes4110": "Ezayi 41:10 – Pa pè, paske mwen avèk ou",
+    "1kor13": "1 Korentyen 13 – Pi gran an se lanmou",
+    "spr35": "Pwovèb 3:5 – Mete konfyans ou nan Senyè a",
+    "jos19": "Jozye 1:9 – Fò ak kouraj",
+    "ps462": "Sòm 46:1 – Bondye se refij nou ak fòs nou",
+    "explainDetail": "Eksplike {{ref}} an detay"
+  },
+  "dailyVerses": {
+    "v0": "\"Vin jwenn mwen, nou tout ki fatige ak chay, e m'ap ba nou repo.\"",
+    "r0": "Matye 11:28",
+    "v1": "\"Paske mwen konnen plan mwen genyen pou nou, se sa Senyè a deklare, plan pou lapè.\"",
+    "r1": "Jeremi 29:11",
+    "v2": "\"Pa pè, paske mwen avèk ou; pa dekouraje, paske mwen se Bondye ou.\"",
+    "r2": "Ezayi 41:10",
+    "v3": "\"Senyè a se bèje m; mwen p'ap manke anyen.\"",
+    "r3": "Sòm 23:1",
+    "v4": "\"Jete tout enkyetid nou sou li paske li pran swen nou.\"",
+    "r4": "1 Pyè 5:7",
+    "v5": "\"Mwen se limyè lemonn. Nenpòt moun ki swiv mwen p'ap mache nan fènwa.\"",
+    "r5": "Jan 8:12",
+    "v6": "\"Fò ak kouraj! Pa pè, paske Senyè Bondye ou la avèk ou.\"",
+    "r6": "Jozye 1:9",
+    "v7": "\"Men, moun ki espere nan Senyè a ap renouvle fòs yo; y'ap vole sou zèl tankou èg.\"",
+    "r7": "Ezayi 40:31",
+    "v8": "\"Paske kote de ou twa rasanble nan non mwen, mwen la avèk yo.\"",
+    "r8": "Matye 18:20",
+    "v9": "\"Goute epi wè Senyè a bon; beni moun ki pran refij nan li.\"",
+    "r9": "Sòm 34:8",
+    "v10": "\"Li geri moun ki gen kè kase yo epi li mare blesi yo.\"",
+    "r10": "Sòm 147:3",
+    "v11": "\"Lanmou gen pasyans, lanmou gen bonte. Li sipòte tout bagay, li kwè tout bagay, li espere tout bagay.\"",
+    "r11": "1 Korentyen 13:4–7",
+    "v12": "\"Se pou nou gen kè kontan nan espwa, pasyan nan afliksyon, fidèl nan lapriyè.\"",
+    "r12": "Women 12:12",
+    "v13": "\"Mete konfyans ou nan Senyè a ak tout kè ou epi pa konte sou pwòp konpreyansyon ou.\"",
+    "r13": "Pwovèb 3:5"
+  },
+  "meinBereichNav": "Zòn mwen",
+  "verseExplain": "Eksplike vèsè Bib sa a an detay: {{quote}} ({{ref}}) – Ki moun ki te ekri sa? Nan ki kontèks? Kisa sa vle di pou lavi mwen jodi a?",
+  "social": {
+    "conversations": "Konvèsasyon",
+    "languages": "Lang",
+    "bibles": "Tradiksyon Bib la"
+  },
+  "celebrants": {
+    "badge": "Pou Aumonye ak Coach Lavi yo",
+    "heroTitle1": "Chak rankont merite",
+    "heroTitle2": "pi bon preparasyon an",
+    "heroSubtitle": "Depi premye nòt vokal la rive nan sesyon an fini — planifye, dokimante, epi fè seremoni ak sesyon coaching ak yon sèl zouti.",
+    "ctaStart": "Kòmanse gratis",
+    "ctaFeatures": "Dekouvri karakteristik yo",
+    "painTitle": "Son abitye?",
+    "pain1": "Orè preparasyon pou chak seremoni?",
+    "pain2": "Nòt papye ki manke nan moman ki pi enpòtan an?",
+    "pain3": "Pa gen sistèm pou chante, lekti, ak lòd sèvis?",
+    "pain4": "Difisil pou kowòdone ak mizisyen ak èd?",
+    "featuresTitle": "Tout sa ou bezwen",
+    "featuresSubtitle": "Yon sistèm byen panse pou tout workflow la — soti nan preparasyon rive nan ekzekisyon.",
+    "f1Title": "Anrejistreman Vokal & Transkripsyon",
+    "f1Desc": "Anrejistre konvèsasyon, jwenn transkripsyon otomatik — fondasyon pou tèks seremoni ki manyen.",
+    "f2Title": "Kreyasyon tèks entelijan",
+    "f2Desc": "Soti nan nòt ou ak transkripsyon, kreye diskou empatik, rezime coaching, oswa tèks refleksyon.",
+    "f3Title": "Ekspòtasyon PDF & Pataje",
+    "f3Desc": "Ekspòte tèks fini kòm PDF oswa pataje atravè lyen dirèkteman ak kliyan, fanmi, ak patisipan yo.",
+    "f4Title": "Modèl pa Denominasyon",
+    "f4Desc": "Modèl workflow pre-bati pou Katolik, Refòme, Lutheran, Evanjelik, ak Sekilè — pare pou itilize.",
+    "f5Title": "Kalandriye & Planifikasyon",
+    "f5Desc": "Tout seremoni yo an yon kout je: gade chak mwa, chak semèn, ak chak jou. Pa janm pèdi tras ankò.",
+    "f6Title": "Teleprompter / Mòd Kondiktè",
+    "f6Desc": "Mòd vivan pou ekzekisyon: ale nan sèvis la blòk pa blòk, li tèks, wè endikasyon mizik — san distraksyon.",
+    "f7Title": "Entegrasyon Mizik",
+    "f7Desc": "Entegre chante ak moso mizik dirèkteman nan lòd sèvis la. Mòd Kondiktè a montre w lè chak moso jwe.",
+    "f8Title": "Ekip & Kolaborasyon",
+    "f8Desc": "Enplike mizisyen, lektè, teknisyen. Asiyen wòl, tcheke disponiblite, planifye ansanm.",
+    "f9Title": "Bibliyotèk Resous",
+    "f9Desc": "Chante, priyè, lekti, ak tèks litijik — ki ka chèche, tag, k ap grandi ak chak seremoni.",
+    "f10Title": "Rejis Legliz",
+    "f10Desc": "Dokimante batèm, maryaj, ak antèman avèk presizyon. Tout done nan yon sèl kote.",
+    "pricingTitle": "Pri senp",
+    "pricingSubtitle": "Kòmanse gratis. Amelyore lè ou bezwen plis.",
+    "planPersonal": "Pèsonèl",
+    "planFree": "Gratis",
+    "planPro": "Pro",
+    "planProPrice": "CHF 29",
+    "planProPeriod": "/ mwa",
+    "recommended": "Rekòmande",
+    "pf1": "Kreye tèks seremoni",
+    "pf2": "Anrejistreman vokal & transkripsyon",
+    "pf3": "Ekspòtasyon PDF",
+    "pf4": "Pataje atravè lyen",
+    "pf5": "1 pwojè aktif",
+    "pf6": "Tout bagay ki soti nan Pèsonèl",
+    "pf7": "Pwojè san limit",
+    "pf8": "Planifikatè sèvis ak kalandriye",
+    "pf9": "Mòd Kondiktè (teleprompter)",
+    "pf10": "Entegrasyon mizik",
+    "pf11": "Bibliyotèk modèl",
+    "pf12": "Kolaborasyon ekip",
+    "pf13": "Bibliyotèk resous",
+    "pf14": "Rejis legliz",
+    "pf15": "Sipò priyorite",
+    "ctaFree": "Kòmanse",
+    "ctaTrial": "Esè gratis 14 jou",
+    "faqTitle": "Kesyon yo Poze Souvan",
+    "faq1q": "Pou kiyès zouti sa a ye?",
+    "faq1a": "Pou aumonye, coach lavi, oratè antèman endepandan, selebran maryaj, aumonye lopital, pastè, ak nenpòt moun ki prepare epi fè seremoni, atelye, oswa sesyon coaching.",
+    "faq2q": "Èske done mwen yo estoke an sekirite?",
+    "faq2a": "Wi. Tout done yo chiffres epi estoke nan Swis. Se sèlman ou ki gen aksè a kontni ou.",
+    "faq3q": "Ki lang yo sipòte?",
+    "faq3a": "Entèfas la disponib nan 36 lang. Tèks yo ka kreye nan nenpòt lang.",
+    "faq4q": "Èske mwen ka itilize Mòd Kondiktè sou yon tablèt?",
+    "faq4a": "Wi! Tout aplikasyon an optimize kòm yon PWA pou mobil — pafè sou yon tablèt nan lektè a.",
+    "faq5q": "Èske mwen bezwen konpetans teknik?",
+    "faq5a": "Non. Entèfas la entwisyon epi fèt pou moun ki vle konsantre sou kontni — pa teknoloji.",
+    "ctaBottom": "Pare pou pi bon seremoni?",
+    "ctaBottomSub": "Kòmanse gratis — pa gen kat kredi ki nesesè.",
+    "ctaBottomBtn": "Kòmanse gratis kounye a",
+    "footerImprint": "Avi Legal",
+    "footerPrivacy": "Règleman sou Konfidansyalite",
+    "footerChurches": "Pou Legliz",
+    "seoTitle": "BibleBot.Life pou Aumonye & Coach Lavi — Planifye Seremoni & Sesyon",
+    "seoDesc": "Planifye antèman, maryaj, sesyon coaching pwofesyonèl: anrejistreman vokal, jenerasyon tèks, teleprompter, kalandriye, ak kolaborasyon."
+  },
+  "pricing": {
+    "onRequest": "Patronaj sou demann",
+    "contactUs": "Kontakte nou"
+  },
+  "audience": {
+    "church": {
+      "cta": "Pou Legliz ak Pastè →",
+      "desc": "Pou pastè, konseye, ak ekip legliz yo: sipò AI pou preparasyon prèch, planifikasyon ekip, ak plis ankò.",
+      "f1": "Planifikatè sèvis adorasyon ak AI",
+      "f2": "Bibliyotèk resous",
+      "f3": "Kowòdinasyon ekip",
+      "f4": "Paj legliz ak anyè",
+      "title": "Mwen planifye sèvis adorasyon ak akonpaye moun"
+    },
+    "personal": {
+      "cta": "Chat kounye a — gratis →",
+      "desc": "Kesyon sou lafwa, enspirasyon chak jou, kwasans espirityèl — nan pwòp vitès ou ak san jijman.",
+      "f1": "Chat ak akonpayman biblik",
+      "f2": "Vwayaj 21 jou",
+      "f3": "Enspirasyon chak jou atravè notifikasyon pouse / Telegram",
+      "f4": "Istorik konvèsasyon pèsonèl",
+      "title": "Mwen chèche akonpayman pèsonèl"
+    },
+    "subtitle": "Chwazi chemen ou",
+    "title": "Pou kiyès BibleBot.Life ye?"
+  },
+  "entryTiles": {
+    "groups": {
+      "deep": "Mwen vle ale pi fon",
+      "emotional": "Yon bagay ap deranje m",
+      "orientation": "Mwen chèche direksyon"
+    },
+    "labels": {
+      "anger": "Kòlè ak fache",
+      "anxiety": "Mwen enkyete m",
+      "baptism": "Batèm ak chemen lafwa",
+      "biblequiz": "Kwiz biblik",
+      "bibleverse": "Konprann yon vèsè biblik",
+      "burnout": "Epuizman",
+      "calling": "Ki chemen mwen?",
+      "condolence": "Dey ak pèt",
+      "decision": "Mwen devan yon desizyon",
+      "faithdoubt": "Dout lafwa",
+      "financial": "Enkyetid finansye",
+      "forgiveness": "Padone ak lage",
+      "heartbreak": "Mwen blese",
+      "illness": "Maladi",
+      "lifewheel": "Ki kote mwen ye nan lavi a?",
+      "loneliness": "Mwen santi m pou kont mwen",
+      "meaningcrisis": "Kriz sans",
+      "newstart": "Mwen vle kòmanse ankò",
+      "prayerwall": "Mi lapriyè",
+      "selfdoubt": "Dout sou tèt mwen",
+      "sevenwhys": "Poukisa mwen fè sa vrèman?",
+      "sleepless": "Lensomni",
+      "thankfulness": "Rekonesans",
+      "wedding": "Maryaj ak patenarya"
+    },
+    "showLess": "Montre mwens",
+    "showMore": "Dekouvri plis sijè"
+  },
+  "faqExtra": {
+    "faithPsych": {
+      "a": "BibleBot konbine sajès biblik ak apèsi ki soti nan sikoloji ki baze sou prèv — pa pou sikolojize lafwa, men pou rann li aksesib nan lavi chak jou. Metòd yo (PERMA, Logoterapi, rechèch sou rekonesans ak padon) konplete Bib la, men yo pa ranplase li.",
+      "q": "Èske BibleBot konekte lafwa ak sikoloji?"
+    },
+    "journey": {
+      "q": "Ki sa ki vwayaj 21 jou a?"
+    },
+    "methodik": {
+      "a": "",
+      "q": "Ki sa ki dèyè metodoloji BibleBot?"
+    }
+  },
+  "tools": {
+    "badge": "Plis pase repons",
+    "lifewheel": {
+      "cta": "Kòmanse wou lavi a",
+      "desc": "Ki jan travay, relasyon, sans, ak sante ye kounye a? Wou lavi a ede ou jwenn klè nan 3 minit — epi montre ki kote Bib la konekte dirèkteman.",
+      "title": "Tcheke wou lavi a"
+    },
+    "sevenwhys": {
+      "cta": "Poze kesyon pi fon",
+      "desc": "Poukisa mwen fè sa vrèman? Poukisa sa santi konsa? BibleBot gide ou atravè 7 kesyon ki ale nan rasin pwoblèm nan — ak yon klasifikasyon biblik nan pwen ki pi pwofon an.",
+      "title": "Metòd 7 Poukisa yo"
+    },
+    "subtitle": "Pou moman kote ou bezwen plis pase yon repons.",
+    "title": "De zouti ki ale pi fon"
+  },
+  "trust": {
+    "noAds": {
+      "text": "Pa gen swivi, pa gen pataj done, pa gen monetizasyon kesyon ou yo.",
+      "title": "Pa gen piblisite"
+    },
+    "noExpertise": {
+      "text": "Ou pa bezwen manm legliz oswa konesans teyolojik anvan.",
+      "title": "Pa gen konesans anvan ki nesesè"
+    },
+    "qa": {
+      "text": "Chak vèsè biblik verifye otomatikman pou kòrèktid — nan chak konvèsasyon.",
+      "title": "QA-verifye"
+    }
+  }
 }

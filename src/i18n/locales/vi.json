@@ -1,4 +1,1288 @@
 {
-  "error": "Invalid JSON from AI",
-  "raw": "{\"nav\":{\"startNow\":\"Bắt đầu ngay\",\"prayerWall\":\"Bức tường cầu nguyện\",\"bibleQuiz\":\"Đố Kinh Thánh\",\"forCelebrants\":\"Dành cho người cử hành\",\"forCelebrantsMobile\":\"Dành cho người cử hành & Huấn luyện viên\"},\"loader\":\"Đang tải…\",\"hero\":{\"badge\":{\"noLogin\":\"Không cần đăng nhập\",\"optionalLogin\":\"Đăng nhập tùy chọn\",\"noData\":\"Không có dữ liệu\",\"noJudgment\":\"Không phán xét\"},\"title1\":\"Kinh Thánh.\",\"title2\":\" Suy nghĩ lại.\",\"subtitle\":\"Người bạn đồng hành cá nhân của bạn hiểu Kinh Thánh – và đặt ra nhữn"
+  "nav": {
+    "startNow": "Bắt đầu ngay",
+    "prayerWall": "Tường Cầu Nguyện",
+    "bibleQuiz": "Đố Kinh Thánh",
+    "forCelebrants": "Cho tuyên úy",
+    "forCelebrantsMobile": "Cho tuyên úy và huấn luyện viên"
+  },
+  "loader": "Đang tải…",
+  "hero": {
+    "badge": {
+      "noLogin": "Không cần đăng nhập",
+      "noData": "Không dữ liệu",
+      "noJudgment": "Không phán xét",
+      "optionalLogin": "Đăng nhập tùy chọn"
+    },
+    "title1": "Kinh Thánh.",
+    "title2": " Suy nghĩ lại.",
+    "subtitle": "Người bạn đồng hành của bạn hiểu Kinh Thánh – và đặt những câu hỏi đúng. Không phải con người, nhưng là một người bạn đồng hành trung thực. Để có những cuộc trò chuyện ý nghĩa, những câu hỏi sâu sắc và những động lực thực sự.",
+    "ctaTelegram": "Bắt đầu qua Telegram",
+    "ctaMore": "Tìm hiểu thêm",
+    "quote": "«Hỡi những kẻ mệt mỏi và gánh nặng, hãy đến với Ta, Ta sẽ cho các ngươi được an nghỉ.»",
+    "quoteRef": "– Ma-thi-ơ 11,28",
+    "ctaInstagram": "Bắt đầu qua Instagram",
+    "ctaWhatsapp": "Bắt đầu qua WhatsApp"
+  },
+  "impulse": {
+    "loading": "Đang tải lời khuyên hàng ngày...",
+    "label": "Lời khuyên trong ngày",
+    "deepDive": "Điều này có ý nghĩa gì đối với tôi?",
+    "explore": "Đọc toàn bộ đoạn văn",
+    "alreadySubscribed": "Bạn đang nhận được cảm hứng hàng ngày",
+    "subscribeCta": "Bạn muốn nhận cảm hứng này hàng ngày không?",
+    "playAudio": "Nghe",
+    "stopAudio": "Dừng"
+  },
+  "features": {
+    "sectionTitle": "Người bạn đồng hành mang đến cho bạn điều gì",
+    "sectionSubtitle": "Khám phá nhiều cách mà người bạn đồng hành cá nhân có thể hỗ trợ bạn",
+    "bible": {
+      "title": "Kinh Thánh & Chú giải",
+      "desc": "Hỏi «Kinh Thánh nói gì về...?» và nhận được những câu phù hợp với ngữ cảnh và giải thích dễ hiểu."
+    },
+    "goals": {
+      "title": "Kế hoạch cuộc sống & Đặt mục tiêu",
+      "desc": "Khám phá ơn gọi của bạn, đặt mục tiêu cụ thể và tìm hiểu xem Chúa có thể có kế hoạch gì với bạn."
+    },
+    "self": {
+      "title": "Tìm thấy chính mình",
+      "desc": "Nhận ra những ân tứ, điểm mạnh và khao khát của bạn – và điều trái tim bạn thực sự cần."
+    },
+    "faith": {
+      "title": "Con đường đức tin & Tìm thấy Chúa Kitô",
+      "desc": "Dù đang tìm kiếm, nghi ngờ hay đào sâu – người bạn đồng hành của bạn sẽ đồng hành cùng bạn trên hành trình cá nhân của bạn."
+    },
+    "daily": {
+      "title": "Lời khuyên hàng ngày & Lịch phụng vụ",
+      "desc": "Bắt đầu ngày mới với những lời khuyên và để bản thân được đồng hành qua Mùa Vọng, Mùa Chay và các ngày lễ."
+    },
+    "groups": {
+      "title": "Nhóm & Hội thánh",
+      "desc": "Hoàn hảo cho các nhóm học Kinh Thánh, nhóm Hội thánh và thờ phượng chung."
+    }
+  },
+  "coaching": {
+    "badge": "Phương pháp",
+    "title": "Không chỉ là một chatbot – mà là một người bạn đồng hành thực sự",
+    "subtitle": "Người bạn đồng hành của bạn kết hợp sự khôn ngoan của Kinh Thánh với các phương pháp huấn luyện đã được kiểm chứng và Tâm lý học Tích cực.",
+    "journeyTitle": "Đồng hành cá nhân",
+    "journeyDesc": "Người bạn đồng hành của bạn sẽ đồng hành cùng bạn21 ngày đầu tiên bạn muốn – trong cuộc trò chuyện tự do hoặc với một cấu trúc tùy chọn.",
+    "week1": "Tuần 1: Bắt đầu",
+    "week1Desc": "Xây dựng niềm tin, lắng nghe, hiểu tình huống của bạn. Bạn đang ở đâu? Điều gì đang làm bạn bận tâm?",
+    "week2": "Tuần 2: Đào sâu",
+    "week2Desc": "Nhận diện các mẫu, làm rõ mong muốn, đào sâu những lời khuyên từ Kinh Thánh. Bạn thực sự muốn gì?",
+    "week3": "Tuần 3: Hành động",
+    "week3Desc": "Thực hiện các bước cụ thể, đặt mục tiêu, thúc đẩy sự thay đổi. Bước tiếp theo của bạn là gì?",
+    "openQuestionsTitle": "Câu hỏi mở thay vì câu trả lời nhanh",
+    "openQuestionsDesc": "Người bạn đồng hành của bạn không đưa ra những lời khuyên rẻ tiền. Thay vào đó, nó đặt ra những câu hỏi thực sự quan trọng:",
+    "openQ1": "«Thật ra điều gì đằng sau mong muốn này?»",
+    "openQ2": "«Bạn sẽ nhận ra điều gì đã thay đổi?»",
+    "openQ3": "«Bước nhỏ đầu tiên là gì?»",
+    "honestTitle": "Trung thực thay vì tích cực độc hại",
+    "honestDesc": "Không có «Rồi sẽ ổn thôi!» và không có lời nói ngọt ngào. Người bạn đồng hành của bạn đồng cảm VÀ trung thực:",
+    "honest1": "Nhắc đến cả những đoạn Kinh Thánh khó nghe",
+    "honest2": "Thúc đẩy tự phản tỉnh",
+    "honest3": "Phân biệt sự an ủi với sự phủ nhận",
+    "scienceTitle": "Dựa trên khoa học",
+    "perma": {
+      "name": "Mô hình PERMA",
+      "author": "Seligman",
+      "desc": "Cảm xúc tích cực, Ý nghĩa & Phát triển"
+    },
+    "logo": {
+      "name": "Liệu pháp ý nghĩa",
+      "author": "Frankl",
+      "desc": "Tìm ý nghĩa trong thời kỳ khó khăn"
+    },
+    "gratitude": {
+      "name": "Lòng biết ơn",
+      "author": "Emmons",
+      "desc": "Thực hành lòng biết ơn dựa trên nghiên cứu"
+    },
+    "forgiveness": {
+      "name": "Sự tha thứ",
+      "author": "Worthington",
+      "desc": "Mô hình REACH cho quá trình tha thứ"
+    },
+    "renameTip": "💡 Bạn có thể đặt tên riêng cho người bạn đồng hành của mình – để nó thực sự trở thành người bạn đồng hành của bạn."
+  },
+  "discover": {
+    "badge": "Dành cho những người tò mò",
+    "title": "Khám phá lại đức tin – không áp lực",
+    "subtitle": "Ngày càng nhiều người đặt ra những câu hỏi lớn. BibleBot.Life dành cho tất cả những ai muốn (lại) khám phá đức tin – trung thực, không hoa mỹ và không dùng biệt ngữ nhà thờ.",
+    "doubt": {
+      "title": "Bạn nghi ngờ?",
+      "text": "Tốt thôi. Nghi ngờ không phải là lỗi lầm – đó là sự khởi đầu của đức tin chân thật. Kinh Thánh đầy những người đã từng đấu tranh."
+    },
+    "search": {
+      "title": "Bạn đang tìm kiếm?",
+      "text": "Có thể bạn không biết chính xác mình đang tìm gì. Điều đó hoàn toàn bình thường. Người bạn đồng hành của bạn giúp bạn đặt ra những câu hỏi đúng – thay vì đưa ra những câu trả lời nhanh chóng."
+    },
+    "deepen": {
+      "title": "Bạn muốn đào sâu?",
+      "text": "Bạn đã tin, nhưng muốn hiểu nhiều hơn? Khám phá chiều sâu của Kinh Thánh – về mặt lịch sử, cá nhân, và có liên quan đáng ngạc nhiên."
+    },
+    "quote": "«Hãy gõ, thì cửa sẽ mở cho các ngươi.»",
+    "quoteRef": "– Ma-thi-ơ 7,7",
+    "quoteText": "Ở Thụy Sĩ, chúng ta không nói nhiều về đức tin. Điều đó cũng không cần thiết. Nhưng ai có câu hỏi, xứng đáng nhận được những câu trả lời trung thực – không giảng đạo, không thành viên, không có động cơ ngầm."
+  },
+  "subscribe": {
+    "title": "Lời khuyên Kinh Thánh hàng ngày",
+    "subtitle": "Mỗi sáng lúc 07:00 – một câu Kinh Thánh, một suy nghĩ, một khởi đầu tốt đẹp.",
+    "firstName": "Tên của bạn",
+    "firstNameOptional": "(tùy chọn)",
+    "firstNamePlaceholder": "ví dụ: Thomas",
+    "firstNameHint": "Để chúng tôi có thể chào bạn một cách thân mật.",
+    "channelLabel": "Bạn muốn nhận lời khuyên bằng cách nào?",
+    "push": "Thông báo đẩy",
+    "pushDesc": "Thông báo trình duyệt",
+    "telegram": "Telegram",
+    "telegramDesc": "Tin nhắn qua Telegram",
+    "sms": "SMS",
+    "smsDesc": "SMS đến điện thoại của bạn",
+    "phoneLabel": "Số điện thoại di động",
+    "phonePlaceholder": "+41 79 123 45 67",
+    "phoneHint": "Với mã quốc gia, ví dụ: +41 cho Thụy Sĩ.",
+    "telegramHint": "Nhấp vào «Đăng ký» – bạn sẽ được chuyển hướng đến Telegram. Bắt đầu bot ở đó và nhập **_daily** để kích hoạt lời khuyên hàng ngày.",
+    "pushHint": "Sau khi nhấp vào «Đăng ký», trình duyệt của bạn sẽ yêu cầu quyền nhận thông báo. Vui lòng cho phép để nhận lời khuyên.",
+    "submit": "Đăng ký",
+    "submitting": "Đang đăng ký...",
+    "footNote": "Không cần đăng nhập. Có thể hủy đăng ký bất cứ lúc nào.",
+    "successTitle": "Bạn đã đăng ký! 🙏",
+    "successText": "Từ ngày mai lúc 07:00, bạn sẽ nhận được lời khuyên Kinh Thánh cá nhân của mình.",
+    "toastTelegram": "Đã mở Telegram 🙏",
+    "toastTelegramDesc": "Khởi động bot và nhập /daily để kích hoạt lời khuyên hàng ngày.",
+    "toastSuccess": "Đã đăng ký! 🙏",
+    "toastSuccessDesc": "Bạn sẽ nhận được lời khuyên hàng ngày từ ngày mai.",
+    "toastPushPreview": "Đăng ký đẩy không có trong bản xem trước",
+    "toastPushPreviewDesc": "Thông báo đẩy chỉ hoạt động trên trang đã xuất bản.",
+    "toastNotSupported": "Không được hỗ trợ",
+    "toastNotSupportedDesc": "Trình duyệt của bạn không hỗ trợ thông báo đẩy.",
+    "toastPermDenied": "Quyền bị từ chối",
+    "toastPermDeniedDesc": "Vui lòng cho phép thông báo trong cài đặt trình duyệt của bạn.",
+    "toastError": "Lỗi",
+    "toastErrorDesc": "Vui lòng thử lại sau.",
+    "subscribeButton": "Đăng ký cảm hứng",
+    "manage": "Quản lý đăng ký",
+    "switchChannel": "Chuyển kênh:",
+    "unsubscribe": "Hủy đăng ký",
+    "unsubscribedTitle": "Đã hủy đăng ký",
+    "unsubscribedDesc": "Bạn sẽ không nhận được nguồn cảm hứng hàng ngày nữa."
+  },
+  "faq": {
+    "badge": "Những câu hỏi thường gặp",
+    "title": "Những điều bạn nên biết về người bạn đồng hành của mình",
+    "subtitle": "Chúng tôi coi trọng sự minh bạch – đặc biệt đối với các nhà thần học, cố vấn mục vụ và những người có tư duy phản biện.",
+    "q1": "Điều gì phân biệt người bạn đồng hành của bạn với ChatGPT & các loại khác?",
+    "q1Generic": "Chatbot chung:",
+    "q1GenericItems": [
+      "Trích dẫn Kinh Thánh hời hợt không có ngữ cảnh",
+      "Không có hướng dẫn mục vụ",
+      "Tránh các văn bản khó chịu",
+      "Không can thiệp khủng hoảng",
+      "Kết hợp Kinh Thánh với chủ nghĩa thần bí",
+      "Không hỏi lại – chỉ xác nhận"
+    ],
+    "q1Bot": "BibleBot.Life:",
+    "q1BotItems": [
+      "5 bản dịch được công nhận – cả những đoạn khó nghe",
+      "Hướng dẫn VÀ đồng hành đầy thử thách",
+      "Hỏi lại để tự phản tỉnh",
+      "Tham khảo khủng hoảng (Điện thoại 143 / 147)",
+      "Chỉ thần học Thiên Chúa giáo",
+      "Thúc đẩy tư duy phản biện như sự trưởng thành trong đức tin"
+    ],
+    "q2": "Những bản dịch Kinh Thánh nào được lưu trữ?",
+    "q2Intro": "Người bạn đồng hành của bạn làm việc theo cách liên giáo phái với các bản Kinh Thánh tiếng Đức quan trọng:",
+    "q2Outro": "Tất cả các đoạn Kinh Thánh đều được cung cấp nguồn gốc và ngữ cảnh lịch sử.",
+    "q3": "Những cơ sở khoa học nào đằng sau nó?",
+    "q3Intro": "Sự đồng hành dựa trên nghiên cứu đã được bình duyệt của Tâm lý học Tích cực:",
+    "q4": "Làm thế nào để người bạn đồng hành của bạn đảm bảo an toàn mục vụ?",
+    "q4Items": [
+      "Khi có ý định tự tử hoặc khủng hoảng → chuyển ngay đến Dargebotene Hand (143) và Pro Juventute (147)",
+      "Không có chẩn đoán tâm lý hoặc y tế",
+      "Tôn trọng không tùy tiện – lập trường Kinh Thánh rõ ràng được thể hiện",
+      "Đồng cảm VÀ trung thực – cả những điều khó chịu cũng được đề cập",
+      "Hỏi lại để tự phản tỉnh thay vì xác nhận rẻ tiền",
+      "Không có sự tích cực độc hại – đồng hành chân thành, trung thực",
+      "Đề cập công khai những căng thẳng và văn bản khó khăn"
+    ],
+    "q5": "Người bạn đồng hành của bạn có bị ràng buộc giáo phái không?",
+    "q5Answer": "Không. Người bạn đồng hành của bạn hướng đến liên giáo phái và tôn trọng các truyền thống Cải cách, Công giáo, Giáo hội tự do và các truyền thống Kitô giáo khác như nhau. Đối với các cách giải thích khác nhau về giáo phái, các quan điểm khác nhau được trình bày minh bạch – mà không ưu tiên một truyền thống nào.",
+    "q6": "Người bạn đồng hành của bạn có thay thế cố vấn mục vụ hoặc liệu pháp không?",
+    "q6Answer": "Không. Người bạn đồng hành của bạn là một công cụ kỹ thuật số để đọc và suy tư Kinh Thánh cá nhân. Nó không thay thế cố vấn mục vụ chuyên nghiệp, tư vấn thần học hoặc liệu pháp tâm lý. Trong trường hợp khủng hoảng nghiêm trọng, người bạn đồng hành của bạn luôn giới thiệu đến các cơ quan có trình độ.",
+    "q7": "Người bạn đồng hành của bạn không chỉ là một «bot dễ chịu» sao?",
+    "q7Answer": "Không. Người bạn đồng hành của bạn an ủi khi cần an ủi – nhưng nó cũng thách thức. Sự phát triển tâm linh cần sự cọ xát. Người bạn đồng hành của bạn đặt ra những câu hỏi khó chịu, nhắc đến những văn bản Kinh Thánh khó khăn (Gióp, Thi thiên than vãn, phê bình tiên tri) và không ngại các chủ đề như công lý, sự ăn năn và trách nhiệm. Truyền thống tiên tri chưa bao giờ dễ chịu – và người bạn đồng hành của bạn cũng vậy.",
+    "q8": "Ai đứng sau người bạn đồng hành của bạn và nó được tài trợ như thế nào?",
+    "q8Answer": "BibleBot.Life là một dự án tư nhân, phi thương mại. Nó được vận hành tình nguyện và chỉ được tài trợ thông qua các khoản quyên góp tự nguyện. Không có quảng cáo, không bán dữ liệu và không có tính năng trả phí. Tất cả các khoản quyên góp trực tiếp trang trải chi phí hoạt động (cơ sở hạ tầng, lưu trữ, phát triển). Vì người bạn đồng hành hoạt động như một dự án tư nhân, các khoản quyên góp không được trừ thuế.",
+    "q9": "Người bạn đồng hành của bạn xử lý dữ liệu của tôi như thế nào?",
+    "q9Answer": "Người bạn đồng hành của bạn không lưu trữ dữ liệu cá nhân hay lịch sử trò chuyện. Mọi cuộc trò chuyện đều ẩn danh. Không có đăng nhập, không theo dõi và không chia sẻ dữ liệu với bên thứ ba. Việc sử dụng hoàn toàn ẩn danh.",
+    "tradition": {
+      "reformed": "Cải cách",
+      "evangelical": "Tin lành",
+      "catholic": "Công giáo",
+      "freeChurch": "Hội thánh tự do",
+      "literal": "Từng chữ một"
+    }
+  },
+  "donate": {
+    "badge": "Hỗ trợ người bạn đồng hành của bạn",
+    "title": "Hãy giúp người bạn đồng hành của bạn duy trì miễn phí",
+    "subtitle": "BibleBot.Life của bạn là một dự án tâm huyết – không quảng cáo, không phí thuê bao, không có chi phí ẩn. Để duy trì điều này, tôi cần sự quyên góp tự nguyện. Mọi đóng góp đều giúp trang trải chi phí hoạt động và cơ sở hạ tầng.",
+    "bankTitle": "Quyên góp qua chuyển khoản ngân hàng",
+    "bankSubtitle": "Mọi số tiền đều có giá trị – chân thành cảm ơn! 🙏",
+    "recipient": "Người nhận",
+    "bank": "Ngân hàng",
+    "purpose": "Mục đích",
+    "purposeValue": "Quyên góp BibleBot.Life",
+    "note": "BibleBot.Life hoạt động như một dự án cá nhân. Do đó, các khoản quyên góp không được giảm trừ thuế.",
+    "creditCard": "Hỗ trợ bằng thẻ tín dụng",
+    "secureNote": "Thanh toán an toàn · Không có bẫy đăng ký · Có thể hủy bất cứ lúc nào",
+    "twint": "Hỗ trợ bằng Twint"
+  },
+  "refer": {
+    "badge": "Chia sẻ Lời Chúa",
+    "title": "Giới thiệu người bạn đồng hành",
+    "subtitle": "Bạn có biết ai đó đang cần lời động viên? Hãy chia sẻ người bạn đồng hành – một tin nhắn có thể tạo ra nhiều điều khác biệt.",
+    "whatsapp": "Chia sẻ qua WhatsApp",
+    "whatsappMsg": "Chào, mình muốn giới thiệu cho bạn BibleBot.Life – một BibleBot.Life Kinh Thánh miễn phí, hiểu Kinh Thánh và đặt những câu hỏi thực sự hay. Không cần đăng nhập, ẩn danh, trung thực. Hãy thử xem: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "telegram": "Chia sẻ qua Telegram",
+    "telegramMsg": "Chào, bạn đã biết BibleBot.Life chưa? Một BibleBot.Life Kinh Thánh cá nhân miễn phí – trung thực, ẩn danh, không cần đăng nhập. Hãy xem thử: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "email": "Chia sẻ qua E-mail",
+    "emailSubject": "Bạn có thể quan tâm: BibleBot.Life",
+    "emailBody": "Chào bạn!\n\nMình muốn giới thiệu cho bạn BibleBot.Life – một BibleBot.Life Kinh Thánh miễn phí, thực sự hiểu Kinh Thánh. Không cần đăng ký, hoàn toàn ẩn danh.\n\nNó đặt ra những câu hỏi hay, giải thích các đoạn Kinh Thánh trong ngữ cảnh và đồng hành cùng bạn một cách trung thực – ngay cả với những chủ đề khó khăn.\n\nHãy thử xem: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nThân ái",
+    "copy": "Sao chép liên kết",
+    "copied": "Đã sao chép liên kết! 📋",
+    "qr": "Hoặc chỉ cần hiển thị mã QR này:"
+  },
+  "cta": {
+    "title": "Bạn không cần phải vượt qua điều này một mình",
+    "subtitle": "Chỉ cần viết cho người bạn đồng hành của bạn điều đang làm bạn bận tâm. Không đăng nhập, không chi phí, không phán xét – chỉ có sự đồng hành chân thành và sự khôn ngoan của Kinh Thánh.",
+    "button": "Bắt đầu cuộc trò chuyện ngay"
+  },
+  "footer": {
+    "tagline": "Người bạn đồng hành cá nhân — với chiều sâu của Kinh Thánh, không cần kiến thức trước.",
+    "disclaimer": "BibleBot.Life là một công cụ kỹ thuật số và không thay thế cho việc tư vấn tâm linh chuyên nghiệp, tư vấn thần học hoặc liệu pháp tâm lý. Trong các trường hợp khủng hoảng nghiêm trọng, vui lòng liên hệ Dargebotene Hand (ĐT 143) hoặc Pro Juventute (ĐT 147).",
+    "impressum": "Thông tin pháp lý",
+    "notes": "Ghi chú",
+    "private": "Dự án cá nhân, phi lợi nhuận",
+    "noChat": "Không lưu trữ dữ liệu trò chuyện",
+    "noTax": "Quyên góp không được khấu trừ thuế",
+    "datenschutz": "Chính sách bảo mật",
+    "love": "Với ❤️ cho tất cả những ai tự hỏi Chúa Kitô nghĩ gì.",
+    "forChurches": "Dành cho các Hội thánh",
+    "forCelebrants": "Dành cho Mục sư & Huấn luyện viên"
+  },
+  "chat": {
+    "welcome": "Chào mừng bạn 🤗\n\nTôi là người bạn đồng hành của bạn – người bạn đồng hành cá nhân của bạn với Kinh Thánh, những câu hỏi hay và những lời khuyên cụ thể. Không áp lực, không phán xét.\n\nBạn có thể hỏi tôi bất cứ điều gì – hoặc chỉ đơn giản là kể cho tôi những gì đang làm bạn bận tâm. 💛",
+    "journeyOffer": "💡 **Mẹo:** Tôi cũng cung cấp **chương trình đồng hành 21 ngày** – 3 tuần với những lời khuyên, suy ngẫm và bước đi cụ thể hàng ngày. Hoàn toàn theo tốc độ của bạn.\n\nBạn có muốn thử không?",
+    "suggestion1": "Tôi đang cần một lời động viên",
+    "suggestion2": "Kinh Thánh nói gì khi bạn cảm thấy không chắc chắn?",
+    "suggestion3": "Tôi muốn tìm hiểu xem mình thực sự muốn gì",
+    "teaser": "Điều gì đang làm bạn bận tâm? 💛",
+    "teaserSub": "Tôi ở đây – hoàn toàn không phán xét.",
+    "teaserCta": "Viết ngay →",
+    "openChat": "Mở trò chuyện",
+    "closeChat": "Đóng trò chuyện",
+    "yourCompanion": "Người bạn đồng hành cá nhân của bạn",
+    "journeyComplete": "Hoàn thành 21 ngày! 🎉",
+    "arriving": "Đến",
+    "deepening": "Đào sâu",
+    "acting": "Hành động",
+    "renameTip": "Đặt tên cho tôi ✨",
+    "namePlaceholder": "ví dụ: Eli, Miriam…",
+    "changeName": "Đổi tên",
+    "placeholder": "Chỉ cần viết thôi...",
+    "startVoice": "Bắt đầu nhập liệu bằng giọng nói",
+    "stopVoice": "Dừng ghi âm",
+    "noVoice": "Trình duyệt của bạn không hỗ trợ nhập liệu bằng giọng nói.",
+    "writing": "đang viết...",
+    "shieldBadge": "Không đăng nhập · Không phán xét · Trích dẫn được kiểm tra",
+    "journeyStart": "Vâng, bắt đầu ✨",
+    "journeyLater": "Có thể sau",
+    "journeyStartMsg": "Vâng, tôi muốn bắt đầu chương trình đồng hành 21 ngày!",
+    "qaChecking": "Đang kiểm tra trích dẫn...",
+    "qaIssue": "{{count}} lưu ý về trích dẫn",
+    "qaIssue_plural": "{{count}} lưu ý về trích dẫn",
+    "qaOk": "Đã kiểm tra {{count}} trích dẫn ✓",
+    "qaOk_plural": "Đã kiểm tra {{count}} trích dẫn ✓",
+    "qaWarning": "⚠️ Lưu ý về độ chính xác:",
+    "errorTooMany": "Quá nhiều yêu cầu – vui lòng đợi một chút.",
+    "errorCredits": "Hạn mức đã hết – vui lòng thử lại sau.",
+    "errorConnect": "Lỗi kết nối.",
+    "errorTitle": "Lỗi",
+    "errorConnection": "không thể kết nối.",
+    "errorNoStream": "Không có luồng",
+    "seniorMode": "Chế độ người cao tuổi (phông chữ lớn hơn)",
+    "loginHint": "Đăng nhập để giữ các cuộc trò chuyện trên tất cả các thiết bị",
+    "previousChats": "{{count}} cuộc trò chuyện trước",
+    "suggestionsLoading": "Đang tải gợi ý…"
+  },
+  "install": {
+    "title": "Cài đặt BibleBot.Life",
+    "androidDesc": "Truy cập nhanh chóng trực tiếp từ màn hình chính",
+    "iosDesc": "Chạm vào «Chia sẻ» → «Thêm vào Màn hình chính»",
+    "button": "Cài đặt",
+    "close": "Đóng"
+  },
+  "share": {
+    "label": "Chia sẻ",
+    "shareVia": "Chia sẻ qua",
+    "copied": "Đã sao chép! 📋",
+    "copiedShort": "Đã sao chép!",
+    "copiedDesc": "Văn bản đã được sao chép vào bộ nhớ đệm. Chia sẻ nó ngay bây giờ trên WhatsApp, Instagram hoặc bất cứ nơi nào bạn muốn!",
+    "copyLink": "Sao chép văn bản",
+    "error": "Sao chép thất bại",
+    "impulseTitle": "Người bạn đồng hành – Lời khuyên trong ngày",
+    "chatTitle": "Người bạn đồng hành – Suy nghĩ trong ngày",
+    "createImage": "Tạo hình ảnh ✨",
+    "generating": "Đang tạo…",
+    "imageReady": "Hình ảnh của bạn đã sẵn sàng để chia sẻ!",
+    "shareImage": "Chia sẻ hình ảnh",
+    "download": "Lưu",
+    "imageError": "Tạo hình ảnh thất bại",
+    "imageErrorDesc": "Không thể tạo hình ảnh. Vui lòng thử lại sau.",
+    "imageSaved": "Đã sao chép văn bản! 📋",
+    "imageSavedDesc": "Lưu hình ảnh và chia sẻ nó với văn bản đã sao chép trên Instagram, WhatsApp hoặc bất cứ nơi nào bạn muốn!",
+    "clipboardFallback": "Đã sao chép văn bản — dán khi đăng bài!",
+    "recommendedBy": "Được giới thiệu bởi {{church}}",
+    "hashtagBible": "#KinhThánh"
+  },
+  "darkMode": {
+    "light": "Chế độ sáng",
+    "dark": "Chế độ tối"
+  },
+  "impressum": {
+    "back": "Trở về trang chủ",
+    "title": "Thông tin pháp lý"
+  },
+  "datenschutz": {
+    "back": "Trở về trang chủ",
+    "title": "Chính sách bảo mật"
+  },
+  "lang": {
+    "de": "Deutsch",
+    "en": "English",
+    "fr": "Français",
+    "es": "Español",
+    "it": "Italiano",
+    "pl": "Polski",
+    "cs": "Čeština",
+    "pt": "Português",
+    "nl": "Nederlands",
+    "ro": "Română",
+    "da": "Dansk",
+    "no": "Norsk",
+    "sv": "Svenska",
+    "fi": "Suomi",
+    "el": "Ελληνικά",
+    "hr": "Hrvatski",
+    "sr": "Srpski",
+    "hu": "Magyar",
+    "sk": "Slovenčina",
+    "bg": "Български",
+    "ru": "Русский",
+    "uk": "Українська",
+    "ka": "ქართული",
+    "hy": "Հայերեն",
+    "ko": "한국어",
+    "tl": "Filipino",
+    "id": "Bahasa Indonesia",
+    "vi": "Tiếng Việt",
+    "zh": "中文",
+    "sw": "Kiswahili",
+    "am": "አማርኛ",
+    "af": "Afrikaans",
+    "yo": "Yorùbá",
+    "ig": "Igbo",
+    "zu": "isiZulu",
+    "ht": "Kreyòl"
+  },
+  "tiles": {
+    "sectionTitle": "Điều gì đang làm bạn bận tâm?",
+    "sectionSubtitle": "Chọn một chủ đề — người bạn đồng hành sẽ đồng hành cùng bạn",
+    "baptism": {
+      "title": "Tìm câu nói rửa tội",
+      "desc": "Câu thơ hoàn hảo cho con bạn",
+      "prompt": "Giúp tôi tìm một câu rửa tội phù hợp. Đó là đứa trẻ như thế nào và cha mẹ mong muốn gì?",
+      "prompt_v1": "Rốt cuộc thì phép báp-têm có ý nghĩa gì?",
+      "prompt_v2": "Hãy kể cho tôi nghe về phép báp-têm trong Kinh Thánh – hãy làm tôi ngạc nhiên!",
+      "prompt_v3": "Tại sao mọi người lại làm phép báp-têm?"
+    },
+    "condolence": {
+      "title": "Lời an ủi",
+      "desc": "Đồng hành lời chia buồn & tạm biệt",
+      "prompt": "Tôi cần những lời an ủi cho một tấm thiệp chia buồn. Bạn có thể giúp tôi soạn một cái gì đó phù hợp không?"
+    },
+    "wedding": {
+      "title": "Câu nói cho đám cưới",
+      "desc": "Lời Kinh Thánh cho tình yêu của bạn",
+      "prompt": "Chúng tôi đang tìm một câu Kinh Thánh đẹp cho đám cưới của mình. Đoạn Kinh Thánh nào phù hợp với tình yêu và mối quan hệ?"
+    },
+    "anxiety": {
+      "title": "Lo lắng & Sầu muộn",
+      "desc": "Tìm thấy lòng can đảm trong thời điểm khó khăn",
+      "prompt": "Tôi đang phải đối mặt với nỗi sợ hãi và lo lắng. Kinh Thánh nói gì về điều đó? Có những câu nào động viên không?",
+      "prompt_v1": "Tôi cảm thấy lo lắng. Kinh Thánh nói gì về sự lo lắng?",
+      "prompt_v2": "Đức tin có thể giúp tôi đối phó với lo lắng như thế nào?",
+      "prompt_v3": "Những nhân vật Kinh Thánh nào cũng đã từng lo lắng?"
+    },
+    "confession": {
+      "title": "Xưng tội",
+      "desc": "Chúa tha thứ — hãy nói ra",
+      "prompt": "Tôi muốn nói ra điều gì đó đang làm tôi nặng lòng. Kinh Thánh nói gì về sự tha thứ và khởi đầu mới?"
+    },
+    "heartbreak": {
+      "title": "Đau khổ vì tình yêu",
+      "desc": "Kinh Thánh nói gì về đau khổ vì tình yêu",
+      "prompt": "Trái tim tôi tan nát. Kinh Thánh nói gì về đau khổ vì tình yêu và cách tìm lại hy vọng?",
+      "prompt_v1": "Trái tim tôi tan vỡ. Kinh Thánh nói gì về điều này?",
+      "prompt_v2": "Làm thế nào để tôi đối phó với đau khổ vì tình yêu – có sự giúp đỡ nào từ Kinh Thánh không?",
+      "prompt_v3": "Chúa có thể chữa lành một trái tim tan vỡ không?"
+    },
+    "newstart": {
+      "title": "Khởi đầu mới",
+      "desc": "Sức mạnh cho một giai đoạn mới của cuộc đời",
+      "prompt": "Tôi đang đứng trước một khởi đầu mới và cần được động viên. Đoạn Kinh Thánh nào nói về khởi đầu mới?"
+    },
+    "namequiz": {
+      "title": "What does your name mean?",
+      "desc": "Discover the biblical meaning of your name",
+      "prompt": "What does my name mean and does it have a biblical or spiritual significance? Surprise me!",
+      "prompt_v1": "Which biblical names have the most beautiful meanings?",
+      "prompt_v2": "What does my name mean – is there a biblical connection?",
+      "prompt_v3": "Tell me the story behind my name!"
+    },
+    "sleepless": {
+      "title": "Mất ngủ",
+      "desc": "Tìm sự bình yên vào ban đêm",
+      "prompt": "Tôi không ngủ được và đang suy nghĩ. Có lời cầu nguyện hay Thi thiên nào trấn an cho ban đêm không?"
+    },
+    "loneliness": {
+      "title": "Cô đơn",
+      "desc": "Bạn không bao giờ cô đơn",
+      "prompt": "Tôi cảm thấy cô đơn. Kinh Thánh nói gì về việc Chúa luôn ở với chúng ta?"
+    },
+    "decision": {
+      "title": "Quyết định khó khăn",
+      "desc": "Sự khôn ngoan để đi đúng đường",
+      "prompt": "Tôi đang đứng trước một quyết định khó khăn. Đoạn Kinh Thánh nào giúp tôi tìm ra con đường đúng đắn?"
+    },
+    "gratitude": {
+      "title": "Lòng biết ơn",
+      "desc": "Một lời cầu nguyện tạ ơn cá nhân",
+      "prompt": "Tôi muốn tạ ơn Chúa. Giúp tôi soạn một lời cầu nguyện tạ ơn cá nhân.",
+      "prompt_v1": "Làm thế nào tôi có thể trở nên biết ơn hơn?",
+      "prompt_v2": "Kinh Thánh nói gì về lòng biết ơn?",
+      "prompt_v3": "Tại sao lòng biết ơn lại quan trọng trong đức tin?"
+    },
+    "lifewheel": {
+      "title": "Bánh xe cuộc sống",
+      "desc": "Bạn thực sự hài lòng đến mức nào?"
+    },
+    "sevenwhys": {
+      "title": "7 Tại sao",
+      "desc": "Tìm gốc rễ sâu xa nhất của câu hỏi của bạn",
+      "prompt": "Tôi muốn thực hiện bài tập 7 Tại sao. Đây là chủ đề của tôi:"
+    },
+    "anger": {
+      "title": "Giận dữ & Nộ khí",
+      "desc": "Khi bạn có thể bùng nổ vì giận dữ",
+      "prompt": "Tôi rất tức giận và không biết phải làm gì với cơn giận của mình. Kinh Thánh nói gì về sự giận dữ và cách tôi có thể đối phó với nó?"
+    },
+    "shame": {
+      "title": "Xấu hổ & Tội lỗi",
+      "desc": "Khi cảm giác tội lỗi đè nặng bạn",
+      "prompt": "Tôi quá xấu hổ và cảm thấy tội lỗi. Kinh Thánh nói gì về tội lỗi, sự tha thứ và một khởi đầu mới?"
+    },
+    "burnout": {
+      "title": "Kiệt sức",
+      "desc": "Khi bạn không thể làm gì được nữa",
+      "prompt": "Tôi hoàn toàn kiệt sức và cạn kiệt. Tôi không thể làm gì được nữa. Kinh Thánh nói gì về sự nghỉ ngơi và hồi phục?"
+    },
+    "illness": {
+      "title": "Bệnh tật",
+      "desc": "Khi một chẩn đoán thay đổi mọi thứ",
+      "prompt": "Tôi đã nhận được một chẩn đoán khó khăn và sợ hãi. Kinh Thánh nói gì về bệnh tật, sự chữa lành và hy vọng?"
+    },
+    "financial": {
+      "title": "Lo lắng về tiền bạc",
+      "desc": "Khi hóa đơn đè nặng",
+      "prompt": "Tôi có những lo lắng về tài chính và không biết phải làm gì. Kinh Thánh nói gì về tiền bạc, sự tin cậy và sự cung cấp?"
+    },
+    "meaningcrisis": {
+      "title": "Khủng hoảng ý nghĩa",
+      "desc": "Tất cả những điều này để làm gì?",
+      "prompt": "Tôi tự hỏi tất cả những điều này có ý nghĩa gì. Tôi đang ở trong một cuộc khủng hoảng ý nghĩa. Kinh Thánh nói gì về ý nghĩa cuộc sống?"
+    },
+    "selfdoubt": {
+      "title": "Tự ti",
+      "desc": "Khi bạn cảm thấy mình không đủ tốt",
+      "prompt": "Tôi luôn nghi ngờ bản thân và cảm thấy mình không đủ tốt. Kinh Thánh nói gì về giá trị của tôi?"
+    },
+    "calling": {
+      "title": "Ơn gọi",
+      "desc": "Tôi nên làm gì với cuộc đời mình?",
+      "prompt": "Tôi không biết mình nên làm gì với cuộc đời mình. Giúp tôi tìm ra ơn gọi của mình – Kinh Thánh nói gì về điều đó?"
+    },
+    "faithdoubt": {
+      "title": "Nghi ngờ đức tin",
+      "desc": "Khi đức tin lung lay",
+      "prompt": "Tôi nghi ngờ đức tin của mình và không biết liệu tôi có thể tin nữa hay không. Kinh Thánh nói gì về sự nghi ngờ?"
+    },
+    "forgiveness": {
+      "title": "Tha thứ",
+      "desc": "Khi tha thứ dường như là không thể",
+      "prompt": "Tôi không thể tha thứ cho ai đó. Điều đó quá đau đớn. Kinh Thánh nói gì về sự tha thứ?",
+      "prompt_v1": "Kinh Thánh nói gì về sự tha thứ?",
+      "prompt_v2": "Làm thế nào tôi có thể tha thứ cho người đã làm tổn thương tôi?",
+      "prompt_v3": "Có giới hạn nào cho sự tha thứ không?"
+    },
+    "familyconflict": {
+      "title": "Xung đột gia đình",
+      "desc": "Khi gia đình có vấn đề",
+      "prompt": "Có một cuộc cãi vã lớn trong gia đình tôi. Kinh Thánh nói gì về sự hòa thuận và hòa giải trong gia đình?"
+    },
+    "envy": {
+      "title": "Đố kỵ",
+      "desc": "Khi người khác có điều tốt hơn",
+      "prompt": "Tôi đố kỵ với người khác và luôn so sánh bản thân. Kinh Thánh nói gì về sự đố kỵ và sự hài lòng?"
+    },
+    "joy": {
+      "title": "Chia sẻ niềm vui",
+      "desc": "Khi điều gì đó tuyệt vời xảy ra",
+      "prompt": "Một điều tuyệt vời đã xảy ra với tôi và tôi muốn chia sẻ niềm vui của mình! Kinh Thánh nói gì về niềm vui và lòng biết ơn?"
+    },
+    "prayer": {
+      "title": "Ý cầu nguyện",
+      "desc": "Cùng nhau cầu nguyện",
+      "prompt": "Tôi có một ý cầu nguyện và muốn cùng nhau cầu nguyện. Hãy đồng hành cùng tôi trong lời cầu nguyện.",
+      "prompt_v1": "Làm thế nào tôi có thể học cách cầu nguyện?",
+      "prompt_v2": "Kinh Thánh nói gì về lời cầu nguyện?",
+      "prompt_v3": "Tại sao Chúa không nhậm lời một số lời cầu nguyện?"
+    },
+    "bibleverse": {
+      "title": "Hiểu câu Kinh Thánh",
+      "desc": "Nhận giải thích một đoạn Kinh Thánh",
+      "prompt": "Tôi muốn hiểu rõ hơn một đoạn Kinh Thánh. Bạn có thể giúp tôi đặt nó vào ngữ cảnh không?"
+    },
+    "biblequiz": {
+      "desc": "Kiểm tra kiến thức Kinh Thánh của bạn một cách vui vẻ",
+      "title": "Câu đố Kinh Thánh"
+    },
+    "prayerwall": {
+      "desc": "Chia sẻ ý định cầu nguyện & cầu nguyện cho nhau",
+      "title": "Bức tường cầu nguyện"
+    },
+    "showMore": "thêm",
+    "dailywisdom": {
+      "title": "Lời khôn ngoan mỗi ngày",
+      "desc": "Một suy nghĩ khích lệ cho ngày của bạn",
+      "prompt": "Hãy cho tôi một suy nghĩ ngắn gọn, khích lệ cho ngày của tôi – kèm theo một câu Kinh Thánh phù hợp.",
+      "prompt_v1": "Lời khuyên tốt nhất mà Kinh Thánh dành cho hôm nay là gì?",
+      "prompt_v2": "Hãy cho tôi một lời khôn ngoan từ Kinh Thánh để đồng hành cùng tôi suốt cả ngày.",
+      "prompt_v3": "Hãy làm tôi ngạc nhiên với một câu Kinh Thánh khích lệ cho hôm nay!"
+    },
+    "funfact": {
+      "title": "Bạn có biết không?",
+      "desc": "Những sự thật bất ngờ từ Kinh Thánh",
+      "prompt": "Hãy kể cho tôi một sự thật bất ngờ từ Kinh Thánh mà hầu hết mọi người không biết!",
+      "prompt_v1": "Câu chuyện điên rồ nhất trong Kinh Thánh là gì?",
+      "prompt_v2": "Những sự thật nào từ Kinh Thánh làm hầu hết mọi người ngạc nhiên?",
+      "prompt_v3": "Hãy kể cho tôi điều gì đó vui nhộn hoặc bất ngờ từ Kinh Thánh!"
+    },
+    "lifehack": {
+      "title": "Mẹo sống",
+      "desc": "Sự khôn ngoan của Kinh Thánh cho gia đình & công việc",
+      "prompt": "Mẹo Kinh Thánh nào giúp tôi trong cuộc sống hàng ngày với gia đình và công việc? Hãy cho tôi một điều gì đó thực tế!",
+      "prompt_v1": "Kinh Thánh có thể giúp tôi như thế nào trong cuộc sống hàng ngày đầy căng thẳng?",
+      "prompt_v2": "Những mẹo sống thực tế nào có trong Kinh Thánh?",
+      "prompt_v3": "Hãy cho tôi một mẹo cụ thể từ Kinh Thánh cho cuộc sống hàng ngày của tôi!"
+    },
+    "strengths": {
+      "title": "Điểm mạnh của bạn",
+      "desc": "Khám phá những gì ẩn chứa bên trong bạn",
+      "prompt": "Hãy giúp tôi khám phá những điểm mạnh cá nhân của mình – Kinh Thánh nói gì về những ân tứ mà mỗi người có?",
+      "prompt_v1": "Theo Kinh Thánh, tôi có những điểm mạnh nào?",
+      "prompt_v2": "Làm thế nào tôi có thể tìm ra những ân tứ và tài năng của mình?",
+      "prompt_v3": "Kinh Thánh nói gì về điều làm tôi đặc biệt?"
+    },
+    "family": {
+      "title": "Gia đình & Cuộc sống hàng ngày",
+      "desc": "Thêm sự trân trọng trong cuộc sống chung",
+      "prompt": "Làm thế nào tôi có thể thể hiện sự trân trọng hơn với gia đình mình? Hãy cho tôi những ý tưởng thực tế với cảm hứng từ Kinh Thánh.",
+      "prompt_v1": "Làm thế nào để tôi củng cố mối quan hệ gia đình?",
+      "prompt_v2": "Kinh Thánh nói gì về một cuộc sống gia đình tốt đẹp?",
+      "prompt_v3": "Hãy cho tôi một ý tưởng để làm ai đó trong gia đình tôi vui vẻ hôm nay!"
+    },
+    "relax": {
+      "title": "Tìm sự bình yên",
+      "desc": "Tìm một khoảnh khắc tĩnh lặng và bình an",
+      "prompt": "Tôi cần một khoảnh khắc bình yên. Hãy giúp tôi thư giãn – với một câu Kinh Thánh an ủi hoặc một bài thiền ngắn.",
+      "prompt_v1": "Hãy cho tôi một Thi thiên an ủi cho khoảnh khắc này.",
+      "prompt_v2": "Theo Kinh Thánh, làm thế nào tôi có thể tìm thấy sự bình yên thực sự?",
+      "prompt_v3": "Hãy hướng dẫn tôi qua một bài thiền Kinh Thánh ngắn."
+    },
+    "quoteofday": {
+      "title": "Trích dẫn trong ngày",
+      "desc": "Một câu trích dẫn đầy cảm hứng để suy ngẫm",
+      "prompt": "Hãy cho tôi một câu trích dẫn đầy cảm hứng từ Kinh Thánh cho ngày hôm nay kèm theo lời giải thích ngắn gọn",
+      "prompt_v1": "Câu trích dẫn Kinh Thánh nào đặc biệt phù hợp với ngày hôm nay?",
+      "prompt_v2": "Hãy cho tôi một câu trích dẫn đầy khích lệ từ Thi thiên cho ngày hôm nay",
+      "prompt_v3": "Câu châm ngôn nào từ Kinh Thánh mang lại cho tôi một góc nhìn mới hôm nay?"
+    },
+    "thankfulness": {
+      "title": "Bài tập lòng biết ơn",
+      "desc": "Khám phá những điều bạn có thể biết ơn",
+      "prompt": "Hãy hướng dẫn tôi một bài tập lòng biết ơn ngắn gọn. Giúp tôi tìm ba điều tôi biết ơn hôm nay",
+      "prompt_v1": "Hãy giúp tôi khám phá lòng biết ơn trong cuộc sống hàng ngày của mình — ngay cả trong những điều nhỏ nhặt",
+      "prompt_v2": "Tôi muốn học cách biết ơn hơn. Hãy cho tôi một bài tập thực hành",
+      "prompt_v3": "Kinh Thánh nói gì về lòng biết ơn và làm thế nào tôi có thể thực hành điều đó hôm nay?"
+    },
+    "biblesays": {
+      "title": "Kinh Thánh nói gì về...",
+      "desc": "Tìm hiểu Kinh Thánh nói gì về chủ đề của bạn",
+      "prompt": "Tôi muốn biết Kinh Thánh nói gì về một chủ đề cụ thể. Hãy hỏi tôi chủ đề nào tôi quan tâm!",
+      "prompt_v1": "Kinh Thánh nói gì về tình bạn?",
+      "prompt_v2": "Kinh Thánh nói gì về việc quản lý tiền bạc?",
+      "prompt_v3": "Kinh Thánh nói gì về tình yêu và các mối quan hệ?"
+    },
+    "morningstart": {
+      "title": "Chào buổi sáng!",
+      "desc": "Bắt đầu ngày mới một cách tích cực",
+      "prompt": "Chúc tôi một buổi sáng tốt lành và cho tôi một suy nghĩ khích lệ để bắt đầu ngày mới",
+      "prompt_v1": "Hãy cho tôi một lời nhắc nhở buổi sáng ngắn gọn với một câu Kinh Thánh phù hợp",
+      "prompt_v2": "Làm thế nào tôi có thể bắt đầu ngày mới một cách có ý thức và tích cực hôm nay?",
+      "prompt_v3": "Hãy tặng tôi một lời chào buổi sáng đầy khích lệ với một suy nghĩ từ Kinh Thánh"
+    },
+    "inspiration": {
+      "title": "Truyền cảm hứng cho tôi",
+      "desc": "Hãy để bản thân ngạc nhiên và được truyền cảm hứng",
+      "prompt": "Hãy làm tôi ngạc nhiên với một điều gì đó đầy cảm hứng — đó có thể là một suy nghĩ, một câu chuyện hoặc một cái nhìn sâu sắc từ Kinh Thánh",
+      "prompt_v1": "Hãy kể cho tôi một câu chuyện đầy cảm hứng từ Kinh Thánh có liên quan đến ngày hôm nay",
+      "prompt_v2": "Hãy cho tôi một suy nghĩ bất ngờ, đầy cảm hứng",
+      "prompt_v3": "Nhân vật Kinh Thánh nào có thể truyền cảm hứng cho tôi hôm nay và tại sao?"
+    }
+  },
+  "lifeWheel": {
+    "title": "Bánh xe cuộc sống của bạn",
+    "intro": "Đánh giá 8 lĩnh vực cuộc sống trên thang điểm 1-10. Tìm hiểu vị trí của bạn — và nhận được những lời khuyên Kinh Thánh cho lĩnh vực cần được quan tâm.",
+    "start": "Bắt đầu ngay",
+    "sliderHint": "Di chuyển các thanh trượt — 1 = rất không hài lòng, 10 = rất hài lòng",
+    "showResult": "Hiển thị kết quả",
+    "average": "Trung bình",
+    "weakestArea": "Nhu cầu lớn nhất",
+    "getImpulse": "Lời khuyên Kinh Thánh cho {{area}}",
+    "reset": "Làm lại",
+    "prompt": "Bánh xe cuộc sống của tôi cho thấy tôi chỉ có {{score}}/10 điểm trong lĩnh vực «{{area}}». Kinh Thánh nói gì về lĩnh vực cuộc sống này? Hãy cho tôi lời động viên và những lời khuyên thực tế.",
+    "areas": {
+      "health": "Sức khỏe",
+      "relationships": "Mối quan hệ",
+      "career": "Sự nghiệp",
+      "spirituality": "Tâm linh",
+      "finances": "Tài chính",
+      "family": "Gia đình",
+      "leisure": "Giải trí",
+      "growth": "Phát triển cá nhân"
+    },
+    "save": "Lưu kết quả",
+    "saved": "Đã lưu!",
+    "history": "Kết quả trước đây",
+    "noHistory": "Chưa có kết quả nào được lưu.",
+    "backToNew": "Bánh xe cuộc sống mới",
+    "backToList": "Quay lại danh sách"
+  },
+  "church": {
+    "badge": "Cho tổ chức",
+    "heroTitle": "Người bạn đồng hành cho tổ chức của bạn",
+    "heroSubtitle": "Đồng hành cùng các thành viên Hội thánh của bạn với sự khôn ngoan của Kinh Thánh – kỹ thuật số, cá nhân và 24/7.",
+    "useCasesTitle": "Trường hợp sử dụng",
+    "useCase": {
+      "youth": {
+        "title": "Công tác thanh niên",
+        "desc": "Thanh thiếu niên khám phá Kinh Thánh theo cách riêng của họ – tương tác và không ngần ngại."
+      },
+      "confirmation": {
+        "title": "Rửa tội",
+        "desc": "Các ứng cử viên rửa tội đào sâu kiến thức Kinh Thánh độc lập với sự đồng hành cá nhân."
+      },
+      "pastoral": {
+        "title": "Mục vụ",
+        "desc": "Đồng hành 24/7 như một sự bổ sung cho mục vụ cá nhân."
+      },
+      "bibleStudy": {
+        "title": "Nhóm học Kinh Thánh",
+        "desc": "Lời khuyên và gợi ý thảo luận cho các nhóm và nhóm nhỏ."
+      }
+    },
+    "pricingTitle": "Gói bảo trợ",
+    "pricingSubtitle": "Hỗ trợ người bạn đồng hành và Hội thánh của bạn với gói bảo trợ phù hợp.",
+    "popular": "Phổ biến",
+    "free": "Miễn phí",
+    "perYear": "người / năm",
+    "contact": "Liên hệ",
+    "tier": {
+      "free": {
+        "name": "Hạt cải",
+        "size": "Dành cho các hội nhỏ & nhóm gia đình (dưới 50 thành viên)"
+      },
+      "community": {
+        "name": "Người dẫn đường",
+        "size": "Dành cho các hội có 50–200 thành viên"
+      },
+      "gemeinde": {
+        "name": "Người xây cầu",
+        "size": "Dành cho các hội có 200–500 thành viên"
+      },
+      "kirche": {
+        "name": "Ngọn hải đăng",
+        "size": "Dành cho các hội lớn & tổ chức (hơn 500 thành viên)"
+      }
+    },
+    "features": {
+      "directoryEntry": "Mục lục vào danh bạ",
+      "telegramGroup": "Nhóm Telegram",
+      "partnerPage": "Trang đối tác riêng",
+      "badge": "Huy hiệu đối tác",
+      "qrFlyer": "Tờ rơi QR để in",
+      "contactForm": "Mẫu liên hệ",
+      "pastorProfile": "Hồ sơ mục sư/linh mục",
+      "welcomeVideo": "Video chào mừng",
+      "analytics": "Bảng điều khiển phân tích",
+      "prioritySupport": "Hỗ trợ ưu tiên",
+      "multipleProfiles": "Nhiều hồ sơ",
+      "customBranding": "Thương hiệu tùy chỉnh",
+      "apiAccess": "Truy cập API",
+      "accountManager": "Người quản lý tài khoản cá nhân"
+    },
+    "viewDirectory": "Xem danh bạ Hội thánh",
+    "directoryBadge": "Danh bạ Hội thánh",
+    "directoryTitle": "Hội thánh đối tác",
+    "directorySubtitle": "Tìm một Hội thánh gần bạn, nơi giới thiệu người bạn đồng hành.",
+    "searchPlaceholder": "Tìm kiếm địa điểm, tên hoặc giáo phái...",
+    "noResults": "Chưa có Hội thánh nào trong danh bạ.",
+    "becomePartner": "Trở thành đối tác →",
+    "notFound": "Không tìm thấy Hội thánh.",
+    "backToDirectory": "Trở về danh bạ",
+    "pastor": "Mục sư/Linh mục",
+    "serviceTimes": "Thời gian lễ/buổi thờ phượng",
+    "startChat": "Bắt đầu trò chuyện",
+    "website": "Trang web",
+    "telegramGroup": "Nhóm Telegram",
+    "contactTitle": "Liên hệ với {{name}}",
+    "contactName": "Tên của bạn (tùy chọn)",
+    "contactEmail": "Địa chỉ E-mail của bạn",
+    "contactMessage": "Tin nhắn của bạn",
+    "contactSend": "Gửi tin nhắn",
+    "contactSuccess": "Đã gửi tin nhắn! 🙏",
+    "contactSuccessDesc": "Hội thánh sẽ liên hệ với bạn.",
+    "recommendedBy": "Được {{name}} giới thiệu",
+    "setup": "Thiết lập (một lần)",
+    "form": {
+      "title": "Bạn quan tâm? Viết thư cho chúng tôi!",
+      "subtitle": "Chúng tôi sẽ trả lời trong vòng 48 giờ.",
+      "name": "Tên của bạn",
+      "email": "Địa chỉ E-mail",
+      "churchName": "Tên Hội thánh",
+      "tier": "Gói mong muốn",
+      "tierPlaceholder": "Chọn gói...",
+      "message": "Tin nhắn của bạn",
+      "submit": "Gửi yêu cầu",
+      "success": "Yêu cầu đã được gửi! Chúng tôi sẽ liên hệ sớm. 🙏",
+      "error": "Lỗi khi gửi. Vui lòng thử lại.",
+      "orgType": "Loại tổ chức",
+      "orgTypePlaceholder": "Chọn loại...",
+      "orgTypes": {
+        "church": "Hội thánh",
+        "careHome": "Viện dưỡng lão",
+        "seniorHome": "Viện dưỡng lão",
+        "hospital": "Bệnh viện",
+        "prison": "Mục vụ nhà tù",
+        "military": "Mục vụ quân đội",
+        "rehaClinic": "Phòng khám phục hồi chức năng",
+        "psychiatry": "Tâm thần học",
+        "burnoutClinic": "Phòng khám kiệt sức",
+        "hospice": "Nhà chăm sóc cuối đời",
+        "counseling": "Trung tâm tư vấn",
+        "reformed": "Hội thánh Cải cách",
+        "catholic": "Hội thánh Công giáo",
+        "lutheran": "Hội thánh Luther",
+        "evangelical": "Hội thánh tự do / Tin lành",
+        "freelance": "Tự do / Độc lập",
+        "other": "Khác"
+      }
+    },
+    "institutionsTitle": "Cũng dành cho các tổ chức",
+    "institutionsSubtitle": "Người bạn đồng hành không chỉ đồng hành cùng các Hội thánh – các viện dưỡng lão, bệnh viện và mục vụ nhà tù cũng được hưởng lợi từ mục vụ kỹ thuật số.",
+    "institution": {
+      "careHome": {
+        "title": "Viện dưỡng lão",
+        "desc": "Lời khuyên Kinh Thánh hàng ngày và sự đồng hành cho cư dân – ngay cả khi không có mục sư tại chỗ."
+      },
+      "seniorHome": {
+        "title": "Viện dưỡng lão",
+        "desc": "Những câu Kinh Thánh quen thuộc và những cuộc trò chuyện cho người cao tuổi – dễ dàng tiếp cận qua máy tính bảng hoặc điện thoại thông minh."
+      },
+      "hospital": {
+        "title": "Bệnh viện",
+        "desc": "Sự an ủi và đồng hành tâm linh cho bệnh nhân trong thời điểm khó khăn – có sẵn 24/7 tại giường bệnh."
+      },
+      "prison": {
+        "title": "Mục vụ nhà tù",
+        "desc": "Hy vọng và đồng hành tâm linh cho tù nhân – một người bạn trò chuyện đáng tin cậy 24/7."
+      },
+      "military": {
+        "title": "Mục vụ quân đội",
+        "desc": "Đồng hành tâm linh cho quân nhân – có thể liên hệ ngay cả khi đang làm nhiệm vụ hoặc trong doanh trại."
+      },
+      "rehaClinic": {
+        "title": "Phòng khám phục hồi",
+        "desc": "Hỗ trợ tâm linh trong quá trình phục hồi."
+      },
+      "psychiatry": {
+        "title": "Cơ sở tâm thần",
+        "desc": "Cuộc trò chuyện tâm linh bí mật cho bệnh nhân tâm thần."
+      },
+      "burnoutClinic": {
+        "title": "Phòng khám kiệt sức",
+        "desc": "Câu hỏi về ý nghĩa và suy ngẫm nội tâm khi kiệt sức."
+      },
+      "hospice": {
+        "title": "Nhà chăm sóc cuối đời",
+        "desc": "Đồng hành cuối đời – lời an ủi và tai lắng nghe."
+      },
+      "counseling": {
+        "title": "Trung tâm tư vấn",
+        "desc": "Xung lực tâm linh bổ sung cho khách hàng tư vấn tâm lý xã hội."
+      }
+    },
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As người bạn đồng hành is a private project, donations are not tax-deductible.",
+    "denominationsTitle": "Cho mọi giáo phái và người dẫn lễ",
+    "denominationsSubtitle": "BibleBot.Life là đại kết – dành cho các cộng đồng Cải cách, Công giáo, Luther và Tin lành tự do, cũng như người dẫn lễ tự do.",
+    "denomination": {
+      "reformed": {
+        "title": "Hội thánh Cải cách",
+        "desc": "Kinh Thánh Zürich, phụng vụ Cải cách và hỗ trợ giảng đạo – phù hợp với giáo xứ của bạn."
+      },
+      "catholic": {
+        "title": "Hội thánh Công giáo",
+        "desc": "Bản dịch Đại kết, kế hoạch Thánh lễ và Bí tích – phù hợp với truyền thống Công giáo."
+      },
+      "lutheran": {
+        "title": "Hội thánh Luther",
+        "desc": "Kinh Thánh Luther, kế hoạch thờ phượng và chăm sóc mục vụ – dành cho các cộng đồng Tin Lành-Luther."
+      },
+      "evangelical": {
+        "title": "Hội thánh tự do",
+        "desc": "Schlachter 2000, thờ phượng và thiết kế linh hoạt – dành cho các cộng đồng Tin lành tự do."
+      },
+      "freelance": {
+        "title": "Người dẫn lễ tự do",
+        "desc": "Diễn giả tang lễ, người dẫn lễ cưới và người chủ trì lễ độc lập – với công cụ tiểu sử và lập kế hoạch bài phát biểu."
+      }
+    }
+  },
+  "institutions": {
+    "badge": "Cho tổ chức",
+    "heroTitle": "Người bạn đồng hành cho tổ chức của bạn",
+    "heroSubtitle": "Mục vụ kỹ thuật số cho các viện dưỡng lão, bệnh viện, trại giam và các cơ sở y tế – cá nhân, bảo mật và 24/7.",
+    "seniorHint": {
+      "title": "Chế độ người cao tuổi có sẵn",
+      "desc": "Phông chữ lớn hơn và thao tác đơn giản hơn – lý tưởng cho người cao tuổi.",
+      "cta": "Thử chế độ người cao tuổi"
+    },
+    "typesTitle": "Người bạn đồng hành dành cho ai?",
+    "useCasesTitle": "Cách người bạn đồng hành được sử dụng",
+    "useCasesSubtitle": "Các ứng dụng cụ thể cho cuộc sống hàng ngày tại tổ chức của bạn.",
+    "pricingTitle": "Gói bảo trợ",
+    "pricingSubtitle": "Các gói tương tự như cho hội thánh – được điều chỉnh cho nhu cầu của tổ chức.",
+    "linkChurches": "Cũng có sẵn cho các hội thánh",
+    "type": {
+      "careHome": {
+        "title": "Viện dưỡng lão",
+        "desc": "Lời khuyên Kinh Thánh hàng ngày và sự đồng hành cho cư dân – ngay cả khi không có mục sư tại chỗ."
+      },
+      "seniorHome": {
+        "title": "Viện dưỡng lão",
+        "desc": "Những câu Kinh Thánh quen thuộc và những cuộc trò chuyện cho người cao tuổi – dễ dàng tiếp cận qua máy tính bảng hoặc điện thoại thông minh."
+      },
+      "hospital": {
+        "title": "Bệnh viện",
+        "desc": "Sự an ủi và đồng hành tâm linh cho bệnh nhân trong thời điểm khó khăn – có sẵn 24/7 tại giường bệnh."
+      },
+      "prison": {
+        "title": "Mục vụ nhà tù",
+        "desc": "Hy vọng và đồng hành tâm linh cho tù nhân – một người bạn trò chuyện đáng tin cậy 24/7."
+      },
+      "military": {
+        "title": "Mục vụ quân đội",
+        "desc": "Đồng hành tâm linh cho quân nhân – có thể liên hệ ngay cả khi đang làm nhiệm vụ hoặc trong doanh trại."
+      }
+    },
+    "useCase": {
+      "dailyImpulse": {
+        "title": "Cảm hứng hàng ngày",
+        "desc": "Mỗi sáng một câu Kinh Thánh với câu hỏi suy ngẫm – giảm rào cản cho các cuộc trò chuyện tâm linh."
+      },
+      "companionship": {
+        "title": "Bạn đồng hành",
+        "desc": "Người bạn đồng hành trả lời các câu hỏi đức tin một cách kiên nhẫn và không áp lực thời gian – lý tưởng cho những giờ cô đơn."
+      },
+      "accessibility": {
+        "title": "Khả năng tiếp cận dễ dàng",
+        "desc": "Chữ lớn, thao tác đơn giản qua máy tính bảng – cũng dành cho những người bị hạn chế khả năng di chuyển."
+      },
+      "availability": {
+        "title": "Sẵn sàng 24/7",
+        "desc": "Đồng hành tâm linh cả ban đêm và cuối tuần – khi không có mục sư."
+      }
+    },
+    "tierDesc": {
+      "free": "Truy cập cơ bản cho cư dân và bệnh nhân",
+      "community": "Được đề cập là người hỗ trợ, truy cập không quảng cáo",
+      "gemeinde": "Logo hiện diện, báo cáo sử dụng hàng tháng",
+      "kirche": "Nội dung riêng, tham gia lập kế hoạch, hỗ trợ ưu tiên"
+    },
+    "form": {
+      "title": "Bạn quan tâm? Liên hệ với chúng tôi!",
+      "subtitle": "Chúng tôi sẽ trả lời trong vòng 48 giờ.",
+      "name": "Tên của bạn",
+      "email": "Địa chỉ E-mail",
+      "institutionName": "Tên tổ chức",
+      "type": "Loại tổ chức",
+      "typePlaceholder": "Vui lòng chọn...",
+      "tier": "Gói mong muốn",
+      "tierPlaceholder": "Chọn gói...",
+      "message": "Tin nhắn của bạn",
+      "submit": "Gửi yêu cầu",
+      "success": "Yêu cầu đã được gửi! Chúng tôi sẽ liên hệ sớm. 🙏",
+      "error": "Lỗi khi gửi. Vui lòng thử lại."
+    }
+  },
+  "chatHero": {
+    "ariaLabel": "Hỏi người bạn đồng hành",
+    "focusPlaceholder": "Viết câu hỏi của bạn…",
+    "placeholder1": "Điều gì thực sự làm tôi biết ơn?",
+    "placeholder2": "Làm thế nào để tôi tìm thấy sự bình yên nội tâm?",
+    "placeholder3": "Điều gì mang lại cho tôi hy vọng?",
+    "placeholder4": "Trái tim tôi mong muốn điều gì?",
+    "placeholder5": "Hôm nay tôi có thể làm điều tốt gì?",
+    "send": "Gửi",
+    "subtitle": "Đặt câu hỏi của bạn – một cách cởi mở, trung thực, không cần đăng nhập.",
+    "suggestion1": "Tên tôi có ý nghĩa gì?",
+    "suggestion2": "Điều gì cho tôi sức mạnh hôm nay?",
+    "suggestion3": "Tôi biết ơn điều gì?"
+  },
+  "splash": {
+    "patronage": "Được giới thiệu bởi"
+  },
+  "meta": {
+    "forChurchesDesc": "Người bạn đồng hành là đối tác cho cộng đồng của bạn: công tác thanh niên, lễ xưng tội, mục vụ và các nhóm học Kinh Thánh. Miễn phí đến Premium.",
+    "forChurchesTitle": "Người bạn đồng hành dành cho Hội Thánh – Mục Vụ Kỹ Thuật Số & Trợ Giúp Kinh Thánh",
+    "homeDesc": "Người bạn đồng hành đồng hành cùng bạn với 5 bản dịch Kinh Thánh, phương pháp huấn luyện và mục vụ. Ẩn danh, miễn phí, bằng 36 ngôn ngữ.",
+    "homeTitle": "Người bạn đồng hành – người bạn đồng hành Kinh Thánh cá nhân của bạn | Miễn phí & Ẩn danh",
+    "loginDesc": "Đăng nhập vào người bạn đồng hành để chuẩn bị các nghi lễ cá nhân của bạn.",
+    "loginTitle": "Đăng nhập – người bạn đồng hành"
+  },
+  "meinBereich": {
+    "title": "Khu vực của tôi",
+    "subtitle": "Chuẩn bị các nghi lễ cá nhân của bạn và chia sẻ chúng với mục sư của bạn.",
+    "sidebarLabel": "Khu vực của tôi",
+    "overview": "Tổng quan",
+    "funeral": "Điếu văn",
+    "wedding": "Đám cưới",
+    "baptismCeremony": "Lễ rửa tội",
+    "confirmation": "Lễ ban phước",
+    "logout": "Đăng xuất",
+    "comingSoon": "Sắp ra mắt",
+    "funeralDesc": "Tạo tiểu sử, lưu giữ kỷ niệm và chia sẻ với mục sư.",
+    "weddingDesc": "Viết lời thề hôn nhân, chọn bài hát và lên kế hoạch cho buổi lễ.",
+    "baptismDesc": "Soạn thảo lời chúc rửa tội và chuẩn bị quy trình với cộng đồng.",
+    "confirmationDesc": "Tìm câu kinh thánh cho lễ ban phước và chuẩn bị các văn bản cá nhân."
+  },
+  "eulogy": {
+    "pageTitle": "Điếu văn – Tạo tiểu sử | người bạn đồng hành",
+    "pageDesc": "Lưu giữ những kỷ niệm về người thân yêu và tạo một văn bản tiểu sử đẹp cho điếu văn.",
+    "title": "Điếu văn – Tiểu sử",
+    "subtitle": "Lưu giữ kỷ niệm, tạo văn bản, tải xuống dưới dạng PDF.",
+    "step1": "Về người đã khuất",
+    "name": "Tên",
+    "namePlaceholder": "Họ và tên",
+    "age": "Ngày sinh – Ngày mất",
+    "agePlaceholder": "Ví dụ: 1942–2026",
+    "step2": "Ghi lại kỷ niệm",
+    "step2Desc": "Hãy thoải mái kể về người đã khuất – điều gì là quan trọng, điều gì còn đọng lại trong ký ức? Bạn có thể ghi âm nhiều lần.",
+    "startRecording": "Bắt đầu ghi âm",
+    "addRecording": "Ghi âm thêm",
+    "stop": "Dừng",
+    "recording": "Đang ghi âm",
+    "transcript": "Bản ghi (có thể chỉnh sửa)",
+    "transcriptPlaceholder": "Bản ghi sẽ tự động được tạo trong quá trình ghi âm. Bạn có thể chỉnh sửa nó ở đây.",
+    "additionalNotes": "Ghi chú bổ sung",
+    "notesPlaceholder": "Nghề nghiệp, sở thích, sự kiện quan trọng trong đời, đặc điểm tính cách đặc biệt…",
+    "step3": "Tạo & tải xuống văn bản",
+    "generate": "Tạo văn bản tiểu sử",
+    "generating": "Đang tạo văn bản…",
+    "regenerate": "Tạo lại",
+    "downloadPDF": "Tải xuống dưới dạng PDF",
+    "save": "Lưu",
+    "shareStep": "Chia sẻ với mục sư",
+    "shareDesc": "Tạo một liên kết mà bạn có thể gửi cho mục sư của mình qua email hoặc tin nhắn. Ông ấy có thể đọc văn bản và tải xuống dưới dạng PDF.",
+    "enableShare": "Tạo & sao chép liên kết",
+    "disableShare": "Tắt chia sẻ",
+    "micError": "Không thể khởi động micro. Vui lòng cấp quyền.",
+    "needMore": "Vui lòng ghi lại kỷ niệm hoặc viết ghi chú trước.",
+    "genError": "Lỗi khi tạo văn bản. Vui lòng thử lại."
+  },
+  "auth": {
+    "apple": "Đăng nhập bằng Apple",
+    "loginShort": "Đăng nhập",
+    "logout": "Đăng xuất"
+  },
+  "tts": {
+    "male": "Giọng nam",
+    "female": "Giọng nữ",
+    "maleShort": "N",
+    "femaleShort": "Nữ",
+    "voice": "Giọng"
+  },
+  "chatDemo": {
+    "sectionLabel": "Đây là một ví dụ về cuộc trò chuyện",
+    "userMsg": "Tôi cảm thấy cô đơn. Kinh Thánh nói gì về điều đó?",
+    "botMsg": "Bạn không cô đơn – ngay cả khi cảm thấy như vậy. Thi thiên 23 nói: 'Chúa là Đấng chăn giữ tôi, tôi sẽ chẳng thiếu thốn gì.' Điều này có nghĩa là Đức Chúa Trời ở gần bạn, ngay cả trong những khoảnh khắc tăm tối nhất. Bạn có muốn chúng ta cùng khám phá đoạn Kinh Thánh này không?",
+    "cta": "Bắt đầu cuộc trò chuyện của riêng bạn →"
+  },
+  "suggest": {
+    "psalm23": "Thi thiên 23 – Chúa là Đấng chăn giữ tôi",
+    "joh316": "Giăng 3:16 – Vì Đức Chúa Trời yêu thương thế gian",
+    "rom828": "Rô-ma 8:28 – Mọi sự hiệp lại làm ích",
+    "mt1128": "Ma-thi-ơ 11:28 – Hỡi những kẻ mệt mỏi và gánh nặng, hãy đến cùng ta",
+    "phil413": "Phi-líp 4:13 – Tôi làm được mọi sự",
+    "jes4110": "Ê-sai 41:10 – Đừng sợ, vì ta ở cùng ngươi",
+    "1kor13": "1 Cô-rinh-tô 13 – Điều lớn nhất là tình yêu",
+    "spr35": "Châm ngôn 3:5 – Hãy tin cậy Đức Giê-hô-va",
+    "jos19": "Giô-suê 1:9 – Hãy mạnh dạn và can đảm",
+    "ps462": "Thi thiên 46:1 – Đức Chúa Trời là nơi nương náu và sức mạnh của chúng ta",
+    "explainDetail": "Giải thích {{ref}} chi tiết"
+  },
+  "dailyVerses": {
+    "v0": "\"Hỡi những kẻ mệt mỏi và gánh nặng, hãy đến cùng ta, ta sẽ cho các ngươi được yên nghỉ.\"",
+    "r0": "Ma-thi-ơ 11:28",
+    "v1": "\"Vì ta biết các ý định ta dành cho các ngươi, phán bởi Đức Giê-hô-va, các ý định bình an.\"",
+    "r1": "Giê-rê-mi 29:11",
+    "v2": "\"Đừng sợ, vì ta ở cùng ngươi; chớ kinh khiếp, vì ta là Đức Chúa Trời ngươi.\"",
+    "r2": "Ê-sai 41:10",
+    "v3": "\"Đức Giê-hô-va là Đấng chăn giữ tôi; tôi sẽ chẳng thiếu thốn gì.\"",
+    "r3": "Thi thiên 23:1",
+    "v4": "\"Hãy trao mọi lo lắng của anh em cho Ngài, vì Ngài quan tâm đến anh em.\"",
+    "r4": "1 Phi-e-rơ 5:7",
+    "v5": "\"Ta là sự sáng của thế gian. Ai theo ta sẽ không đi trong bóng tối.\"",
+    "r5": "Giăng 8:12",
+    "v6": "\"Hãy mạnh dạn và can đảm! Đừng sợ hãi, vì Giê-hô-va Đức Chúa Trời ngươi ở cùng ngươi.\"",
+    "r6": "Giô-suê 1:9",
+    "v7": "\"Nhưng những kẻ trông đợi Đức Giê-hô-va sẽ được sức mới; họ sẽ cất cánh bay cao như chim ưng.\"",
+    "r7": "Ê-sai 40:31",
+    "v8": "\"Vì nơi nào có hai ba người nhóm lại nhân danh ta, thì ta ở giữa họ.\"",
+    "r8": "Ma-thi-ơ 18:20",
+    "v9": "\"Hãy nếm thử và xem Đức Giê-hô-va tốt lành dường bao; phước cho người nào nương náu nơi Ngài.\"",
+    "r9": "Thi thiên 34:8",
+    "v10": "\"Ngài chữa lành những tấm lòng tan vỡ và băng bó vết thương của họ.\"",
+    "r10": "Thi thiên 147:3",
+    "v11": "\"Tình yêu thương hay nhịn nhục, tình yêu thương hay nhân từ. Nó chịu đựng mọi sự, tin mọi sự, hy vọng mọi sự.\"",
+    "r11": "1 Cô-rinh-tô 13:4–7",
+    "v12": "\"Hãy vui mừng trong hy vọng, kiên nhẫn trong hoạn nạn, trung tín trong cầu nguyện.\"",
+    "r12": "Rô-ma 12:12",
+    "v13": "\"Hãy hết lòng tin cậy Đức Giê-hô-va, chớ nương cậy sự hiểu biết của con.\"",
+    "r13": "Châm ngôn 3:5"
+  },
+  "meinBereichNav": "Khu vực của tôi",
+  "verseExplain": "Giải thích chi tiết câu Kinh Thánh này: {{quote}} ({{ref}}) – Ai đã viết điều này? Trong bối cảnh nào? Điều đó có ý nghĩa gì đối với cuộc sống của tôi ngày nay?",
+  "social": {
+    "conversations": "Cuộc trò chuyện",
+    "languages": "Ngôn ngữ",
+    "bibles": "Bản dịch Kinh Thánh"
+  },
+  "celebrants": {
+    "badge": "Dành cho Tuyên úy & Huấn luyện viên Cuộc sống",
+    "heroTitle1": "Mỗi cuộc gặp gỡ đều xứng đáng",
+    "heroTitle2": "sự chuẩn bị tốt nhất",
+    "heroSubtitle": "Từ ghi chú giọng nói đầu tiên đến buổi học hoàn chỉnh — lên kế hoạch, ghi lại và thực hiện các buổi lễ và buổi huấn luyện bằng một công cụ duy nhất.",
+    "ctaStart": "Bắt đầu miễn phí",
+    "ctaFeatures": "Khám phá tính năng",
+    "painTitle": "Nghe có quen không?",
+    "pain1": "Hàng giờ chuẩn bị cho mỗi buổi lễ?",
+    "pain2": "Ghi chú trên giấy bị thiếu vào thời điểm quan trọng nhất?",
+    "pain3": "Không có hệ thống cho các bài hát, bài đọc và thứ tự phục vụ?",
+    "pain4": "Khó phối hợp với nhạc sĩ và người trợ giúp?",
+    "featuresTitle": "Mọi thứ bạn cần",
+    "featuresSubtitle": "Một hệ thống chu đáo cho toàn bộ quy trình làm việc — từ chuẩn bị đến thực hiện.",
+    "f1Title": "Ghi âm & Chuyển giọng nói thành văn bản",
+    "f1Desc": "Ghi lại cuộc trò chuyện, nhận bản ghi tự động — nền tảng để tạo văn bản buổi lễ cảm động.",
+    "f2Title": "Tạo văn bản thông minh",
+    "f2Desc": "Từ ghi chú và bản ghi của bạn, tạo các bài phát biểu đồng cảm, tóm tắt huấn luyện hoặc văn bản phản ánh.",
+    "f3Title": "Xuất & Chia sẻ PDF",
+    "f3Desc": "Xuất văn bản đã hoàn thành dưới dạng PDF hoặc chia sẻ qua liên kết trực tiếp với khách hàng, người thân và người tham gia.",
+    "f4Title": "Mẫu theo giáo phái",
+    "f4Desc": "Các mẫu quy trình làm việc được xây dựng sẵn cho Công giáo, Cải cách, Luther, Tin lành và Thế tục — sẵn sàng sử dụng.",
+    "f5Title": "Lịch & Lập kế hoạch",
+    "f5Desc": "Tất cả các buổi lễ trong nháy mắt: chế độ xem hàng tháng, hàng tuần và hàng ngày. Không bao giờ mất dấu nữa.",
+    "f6Title": "Chế độ Teleprompter / Người điều khiển",
+    "f6Desc": "Chế độ trực tiếp để thực hiện: xem xét từng khối dịch vụ, đọc văn bản, xem tín hiệu âm nhạc — không bị phân tâm.",
+    "f7Title": "Tích hợp âm nhạc",
+    "f7Desc": "Tích hợp các bài hát và bản nhạc trực tiếp vào thứ tự phục vụ. Chế độ Người điều khiển cho bạn biết khi nào mỗi bản nhạc phát.",
+    "f8Title": "Đội ngũ & Hợp tác",
+    "f8Desc": "Thu hút nhạc sĩ, người đọc, kỹ thuật viên. Phân công vai trò, kiểm tra tính khả dụng, cùng nhau lên kế hoạch.",
+    "f9Title": "Thư viện tài nguyên",
+    "f9Desc": "Các bài hát, lời cầu nguyện, bài đọc và văn bản phụng vụ — có thể tìm kiếm, được gắn thẻ, phát triển theo mỗi buổi lễ.",
+    "f10Title": "Sổ đăng ký nhà thờ",
+    "f10Desc": "Ghi lại gọn gàng các lễ rửa tội, đám cưới và đám tang. Tất cả dữ liệu ở một nơi.",
+    "pricingTitle": "Giá cả đơn giản",
+    "pricingSubtitle": "Bắt đầu miễn phí. Nâng cấp khi bạn cần nhiều hơn.",
+    "planPersonal": "Cá nhân",
+    "planFree": "Miễn phí",
+    "planPro": "Chuyên nghiệp",
+    "planProPrice": "29 CHF",
+    "planProPeriod": "/ tháng",
+    "recommended": "Được đề xuất",
+    "pf1": "Tạo văn bản buổi lễ",
+    "pf2": "Ghi âm giọng nói & chuyển giọng nói thành văn bản",
+    "pf3": "Xuất PDF",
+    "pf4": "Chia sẻ qua liên kết",
+    "pf5": "1 dự án đang hoạt động",
+    "pf6": "Mọi thứ từ Cá nhân",
+    "pf7": "Dự án không giới hạn",
+    "pf8": "Công cụ lập kế hoạch dịch vụ với lịch",
+    "pf9": "Chế độ Người điều khiển (teleprompter)",
+    "pf10": "Tích hợp âm nhạc",
+    "pf11": "Thư viện mẫu",
+    "pf12": "Hợp tác nhóm",
+    "pf13": "Thư viện tài nguyên",
+    "pf14": "Sổ đăng ký nhà thờ",
+    "pf15": "Hỗ trợ ưu tiên",
+    "ctaFree": "Bắt đầu",
+    "ctaTrial": "Dùng thử miễn phí 14 ngày",
+    "faqTitle": "Các câu hỏi thường gặp",
+    "faq1q": "Công cụ này dành cho ai?",
+    "faq1a": "Dành cho các tuyên úy, huấn luyện viên cuộc sống, người nói tang lễ tự do, người tổ chức đám cưới, tuyên úy bệnh viện, mục sư và bất kỳ ai chuẩn bị và thực hiện các buổi lễ, hội thảo hoặc buổi huấn luyện.",
+    "faq2q": "Dữ liệu của tôi có được lưu trữ an toàn không?",
+    "faq2a": "Có. Tất cả dữ liệu được mã hóa và lưu trữ tại Thụy Sĩ. Chỉ bạn mới có quyền truy cập vào nội dung của mình.",
+    "faq3q": "Những ngôn ngữ nào được hỗ trợ?",
+    "faq3a": "Giao diện có sẵn bằng 36 ngôn ngữ. Văn bản có thể được tạo bằng bất kỳ ngôn ngữ nào.",
+    "faq4q": "Tôi có thể sử dụng Chế độ Người điều khiển trên máy tính bảng không?",
+    "faq4a": "Có! Toàn bộ ứng dụng được tối ưu hóa dưới dạng PWA cho thiết bị di động — hoàn hảo trên máy tính bảng tại bục giảng.",
+    "faq5q": "Tôi có cần kỹ năng kỹ thuật không?",
+    "faq5a": "Không. Giao diện trực quan và được thiết kế cho những người muốn tập trung vào nội dung — không phải công nghệ.",
+    "ctaBottom": "Sẵn sàng cho những buổi lễ tốt đẹp hơn?",
+    "ctaBottomSub": "Bắt đầu miễn phí — không cần thẻ tín dụng.",
+    "ctaBottomBtn": "Bắt đầu miễn phí ngay bây giờ",
+    "footerImprint": "Thông báo pháp lý",
+    "footerPrivacy": "Chính sách bảo mật",
+    "footerChurches": "Dành cho các nhà thờ",
+    "seoTitle": "BibleBot.Life dành cho Tuyên úy & Huấn luyện viên Cuộc sống — Lên kế hoạch cho các buổi lễ & buổi học",
+    "seoDesc": "Lên kế hoạch đám tang, đám cưới, buổi huấn luyện một cách chuyên nghiệp: ghi âm giọng nói, tạo văn bản, teleprompter, lịch và cộng tác."
+  },
+  "pricing": {
+    "onRequest": "Bảo trợ theo yêu cầu",
+    "contactUs": "Liên hệ với chúng tôi"
+  },
+  "audience": {
+    "church": {
+      "cta": "Dành cho Giáo đoàn & Mục sư →",
+      "desc": "Dành cho các mục sư, người chăn sóc và đội ngũ giáo đoàn: Hỗ trợ AI để chuẩn bị bài giảng, lập kế hoạch nhóm và nhiều hơn nữa.",
+      "f1": "Công cụ lập kế hoạch thờ phượng bằng AI",
+      "f2": "Thư viện tài nguyên",
+      "f3": "Phối hợp nhóm",
+      "f4": "Trang & danh bạ giáo đoàn",
+      "title": "Tôi lên kế hoạch thờ phượng & đồng hành cùng mọi người"
+    },
+    "personal": {
+      "cta": "Trò chuyện ngay — miễn phí →",
+      "desc": "Các câu hỏi về đức tin, những lời khích lệ hàng ngày, sự phát triển tâm linh — theo tốc độ của bạn và không phán xét.",
+      "f1": "Trò chuyện với sự hướng dẫn của Kinh Thánh",
+      "f2": "Hành trình 21 ngày",
+      "f3": "Lời khích lệ hàng ngày qua Push / Telegram",
+      "f4": "Lịch sử trò chuyện cá nhân",
+      "title": "Tôi tìm kiếm sự đồng hành cá nhân"
+    },
+    "subtitle": "Chọn con đường của bạn",
+    "title": "BibleBot.Life dành cho ai?"
+  },
+  "entryTiles": {
+    "groups": {
+      "deep": "Tôi muốn đi sâu hơn",
+      "emotional": "Có điều gì đó đang ám ảnh tôi",
+      "orientation": "Tôi đang tìm kiếm định hướng"
+    },
+    "labels": {
+      "anger": "Giận dữ & Bực bội",
+      "anxiety": "Tôi lo lắng",
+      "baptism": "Báp-têm & Hành trình đức tin",
+      "biblequiz": "Đố vui Kinh Thánh",
+      "bibleverse": "Hiểu một câu Kinh Thánh",
+      "burnout": "Kiệt sức",
+      "calling": "Con đường của tôi là gì?",
+      "condolence": "Tang tóc & Mất mát",
+      "decision": "Tôi đang đứng trước một quyết định",
+      "faithdoubt": "Nghi ngờ đức tin",
+      "financial": "Lo lắng về tài chính",
+      "forgiveness": "Tha thứ & Buông bỏ",
+      "heartbreak": "Tôi bị tổn thương",
+      "illness": "Bệnh tật",
+      "lifewheel": "Tôi đang ở đâu trong cuộc sống?",
+      "loneliness": "Tôi cảm thấy cô đơn",
+      "meaningcrisis": "Khủng hoảng ý nghĩa",
+      "newstart": "Tôi muốn bắt đầu lại",
+      "prayerwall": "Bức tường cầu nguyện",
+      "selfdoubt": "Tự nghi ngờ",
+      "sevenwhys": "Tại sao tôi thực sự làm điều đó?",
+      "sleepless": "Mất ngủ",
+      "thankfulness": "Lòng biết ơn",
+      "wedding": "Hôn nhân & Quan hệ đối tác"
+    },
+    "showLess": "Hiển thị ít hơn",
+    "showMore": "Khám phá thêm chủ đề"
+  },
+  "faqExtra": {
+    "faithPsych": {
+      "a": "BibleBot kết hợp sự khôn ngoan của Kinh Thánh với những hiểu biết từ tâm lý học dựa trên bằng chứng — không phải để tâm lý hóa đức tin, mà để làm cho nó gần gũi với cuộc sống hàng ngày. Các phương pháp (PERMA, Liệu pháp ý nghĩa, nghiên cứu về lòng biết ơn và sự tha thứ) bổ sung cho Kinh Thánh, nhưng không thay thế nó.",
+      "q": "BibleBot có kết nối đức tin và tâm lý học không?"
+    },
+    "journey": {
+      "q": "Hành trình 21 ngày là gì?"
+    },
+    "methodik": {
+      "a": "",
+      "q": "Phương pháp của BibleBot là gì?"
+    }
+  },
+  "tools": {
+    "badge": "Hơn cả câu trả lời",
+    "lifewheel": {
+      "cta": "Bắt đầu Bánh xe cuộc sống",
+      "desc": "Công việc, các mối quan hệ, ý nghĩa và sức khỏe của bạn hiện tại như thế nào? Bánh xe cuộc sống giúp bạn có được sự rõ ràng trong 3 phút — và cho thấy Kinh Thánh liên quan trực tiếp đến đâu.",
+      "title": "Kiểm tra Bánh xe cuộc sống"
+    },
+    "sevenwhys": {
+      "cta": "Hỏi sâu hơn",
+      "desc": "Tại sao tôi thực sự làm điều đó? Tại sao nó lại cảm thấy như vậy? BibleBot sẽ hướng dẫn bạn qua 7 câu hỏi đi đến tận gốc rễ — với sự phân loại Kinh Thánh ở điểm sâu nhất.",
+      "title": "Phương pháp 7 Tại sao"
+    },
+    "subtitle": "Dành cho những khoảnh khắc bạn cần nhiều hơn một câu trả lời.",
+    "title": "Hai công cụ đi sâu hơn"
+  },
+  "trust": {
+    "noAds": {
+      "text": "Không theo dõi, không chia sẻ dữ liệu, không kiếm tiền từ câu hỏi của bạn.",
+      "title": "Không quảng cáo"
+    },
+    "noExpertise": {
+      "text": "Bạn không cần phải là thành viên nhà thờ hay có kiến thức thần học trước.",
+      "title": "Không cần kiến thức trước"
+    },
+    "qa": {
+      "text": "Mỗi câu Kinh Thánh được tự động kiểm tra tính chính xác — trong mỗi cuộc trò chuyện.",
+      "title": "Đã kiểm tra QA"
+    }
+  }
 }

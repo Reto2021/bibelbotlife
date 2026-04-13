@@ -38,12 +38,13 @@ import yo from "./locales/yo.json";
 import ig from "./locales/ig.json";
 import zu from "./locales/zu.json";
 import ht from "./locales/ht.json";
+import ar from "./locales/ar.json";
 
 const supportedLngs = [
   "de", "en", "fr", "es", "it", "pl", "cs", "pt", "nl", "ro",
   "da", "no", "sv", "fi", "el", "hr", "sr", "hu", "sk", "bg",
   "ru", "uk", "ka", "hy", "ko", "tl", "id", "vi", "zh",
-  "sw", "am", "af", "yo", "ig", "zu", "ht",
+  "sw", "am", "af", "yo", "ig", "zu", "ht", "ar",
 ];
 
 i18n
@@ -63,6 +64,7 @@ i18n
       vi: { translation: vi }, zh: { translation: zh }, sw: { translation: sw },
       am: { translation: am }, af: { translation: af }, yo: { translation: yo },
       ig: { translation: ig }, zu: { translation: zu }, ht: { translation: ht },
+      ar: { translation: ar },
     },
     fallbackLng: (code: string) => {
       if (!code || code === "de") return ["de"];

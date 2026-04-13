@@ -1,4 +1,1286 @@
 {
-  "error": "Invalid JSON from AI",
-  "raw": "{\"nav\":{\"startNow\":\"Începe acum\",\"prayerWall\":\"Zidul rugăciunii\",\"bibleQuiz\":\"Test biblic\",\"forCelebrants\":\"Pentru slujitori\",\"forCelebrantsMobile\":\"Pentru slujitori și antrenori\"},\"loader\":\"Se încarcă…\",\"hero\":{\"badge\":{\"noLogin\":\"Nu este necesară autentificarea\",\"optionalLogin\":\"Autentificare opțională\",\"noData\":\"Fără date\",\"noJudgment\":\"Fără judecată\"},\"title1\":\"Biblia.\",\"title2\":\" Regândită.\",\"subtitle\":\"Ghidul tău personal cunoaște Biblia – și pune întrebările potrivite. Nu este o persoană,"
+  "nav": {
+    "startNow": "Începe acum",
+    "prayerWall": "Zidul de rugăciune",
+    "bibleQuiz": "Test biblic",
+    "forCelebrants": "Pentru capelani",
+    "forCelebrantsMobile": "Pentru capelani și antrenori"
+  },
+  "loader": "Se încarcă…",
+  "hero": {
+    "badge": {
+      "noLogin": "Fără autentificare",
+      "noData": "Fără date",
+      "noJudgment": "Fără judecată",
+      "optionalLogin": "Autentificare opțională"
+    },
+    "title1": "Biblia.",
+    "title2": " Redescoperită.",
+    "subtitle": "Companionul tău este un însoțitor care cunoaște Biblia – și pune întrebările potrivite. Nu o persoană, ci un companion sincer. Pentru conversații profunde, întrebări reale și impulsuri autentice.",
+    "ctaTelegram": "Începe pe Telegram",
+    "ctaMore": "Află mai multe",
+    "quote": "\"Veniți la Mine, toți cei trudiți și împovărați, și Eu vă voi da odihnă.\"",
+    "quoteRef": "– Matei 11:28"
+  },
+  "impulse": {
+    "loading": "Se încarcă impulsul zilnic...",
+    "label": "Impulsul zilei",
+    "deepDive": "Ce înseamnă asta pentru mine?",
+    "explore": "Citește pasajul complet",
+    "alreadySubscribed": "Primești inspirația zilnică",
+    "subscribeCta": "Dorești să primești această inspirație zilnic?",
+    "playAudio": "Ascultă",
+    "stopAudio": "Oprește"
+  },
+  "features": {
+    "sectionTitle": "Ce îți oferă companionul tău",
+    "sectionSubtitle": "Descoperă numeroasele moduri în care companionul tău personal te poate sprijini",
+    "bible": {
+      "title": "Pasaje biblice & interpretare",
+      "desc": "Întreabă \"Ce spune Biblia despre...?\" și primește versete relevante cu context și explicații clare."
+    },
+    "goals": {
+      "title": "Planificarea vieții & obiective",
+      "desc": "Descoperă-ți chemarea, stabilește obiective concrete și află ce ar putea avea Dumnezeu pregătit pentru tine."
+    },
+    "self": {
+      "title": "Descoperirea de sine",
+      "desc": "Recunoaște-ți darurile, punctele forte și dorințele – și ce are cu adevărat nevoie inima ta."
+    },
+    "faith": {
+      "title": "Călătoria credinței",
+      "desc": "Fie că cauți, te îndoiești sau aprofundezi – companionul tău te însoțește pe drumul tău personal."
+    },
+    "daily": {
+      "title": "Impulsuri zilnice & anul bisericesc",
+      "desc": "Începe-ți ziua cu impulsuri și lasă companionul tău să te ghideze prin Advent, Post și sărbători."
+    },
+    "groups": {
+      "title": "Grupuri & comunități",
+      "desc": "Perfect pentru grupuri de studiu biblic, comunități bisericești și devoțiuni comune."
+    }
+  },
+  "coaching": {
+    "badge": "Metodologie",
+    "title": "Nu doar un chatbot – o însoțire autentică",
+    "subtitle": "Companionul tău combină înțelepciunea biblică cu metode de coaching dovedite și Psihologia Pozitivă.",
+    "journeyTitle": "Însoțire personală",
+    "journeyDesc": "Companionul tău te însoțește cât timp dorești – în conversație liberă sau cu o structură opțională de 21 de zile.",
+    "week1": "Săptămâna 1: Sosire",
+    "week1Desc": "Construirea încrederii, ascultare, înțelegerea situației tale. Unde te afli? Ce te preocupă?",
+    "week2": "Săptămâna 2: Aprofundare",
+    "week2Desc": "Recunoașterea tiparelor, clarificarea dorințelor, aprofundarea impulsurilor biblice. Ce îți dorești cu adevărat?",
+    "week3": "Săptămâna 3: Acțiune",
+    "week3Desc": "Pași concreți, stabilirea obiectivelor, inițierea schimbării. Care este următorul tău pas?",
+    "openQuestionsTitle": "Întrebări deschise în loc de răspunsuri rapide",
+    "openQuestionsDesc": "Companionul tău nu dă sfaturi ieftine. În schimb, pune întrebările care contează cu adevărat:",
+    "openQ1": "\"Ce se ascunde cu adevărat în spatele acestei dorințe?\"",
+    "openQ2": "\"Cum ai ști că ceva s-a schimbat?\"",
+    "openQ3": "\"Care ar fi un prim pas mic?\"",
+    "honestTitle": "Sincer în loc de pozitivitate toxică",
+    "honestDesc": "Fără \"O să fie bine!\" și fără înfrumusețări. Companionul tău este empatic ȘI sincer:",
+    "honest1": "Abordează și pasajele biblice incomode",
+    "honest2": "Te provoacă la autoreflecție",
+    "honest3": "Distinge consolarea de evitare",
+    "scienceTitle": "Fundamentat științific",
+    "perma": {
+      "name": "Modelul PERMA",
+      "author": "Seligman",
+      "desc": "Emoții pozitive, sens și creștere"
+    },
+    "logo": {
+      "name": "Logoterapie",
+      "author": "Frankl",
+      "desc": "Găsirea sensului în timpuri dificile"
+    },
+    "gratitude": {
+      "name": "Recunoștință",
+      "author": "Emmons",
+      "desc": "Practică a recunoștinței bazată pe cercetare"
+    },
+    "forgiveness": {
+      "name": "Iertare",
+      "author": "Worthington",
+      "desc": "Modelul REACH pentru procesele de iertare"
+    },
+    "renameTip": "💡 Poți da companionul tău-ului tău un nume personal – astfel devine cu adevărat <strong>al tău</strong>."
+  },
+  "discover": {
+    "badge": "Pentru curioși",
+    "title": "Redescoperă credința – fără presiune",
+    "subtitle": "Din ce în ce mai mulți oameni pun din nou marile întrebări. Companionul tău este pentru toți cei care vor să (re)descopere credința – sincer, fără patos și fără jargon bisericesc.",
+    "doubt": {
+      "title": "Te îndoiești?",
+      "text": "Bine. Îndoiala nu este un defect – este începutul credinței sincere. Biblia este plină de oameni care s-au luptat."
+    },
+    "search": {
+      "title": "Cauți?",
+      "text": "Poate nici nu știi ce cauți. E perfect în regulă. Companionul tău te ajută să pui întrebările potrivite – în loc să dea răspunsuri rapide."
+    },
+    "deepen": {
+      "title": "Vrei să mergi mai adânc?",
+      "text": "Crezi deja, dar vrei să înțelegi mai mult? Descoperă profunzimea Bibliei – istorică, personală, surprinzător de actuală."
+    },
+    "quote": "\"Cereți și vi se va da; căutați și veți găsi; bateți și vi se va deschide.\"",
+    "quoteRef": "– Matei 7:7",
+    "quoteText": "Mulți dintre noi nu vorbim prea mult despre credință. E în regulă. Dar cine are întrebări merită răspunsuri sincere – fără predici, fără obligații, fără scopuri ascunse."
+  },
+  "subscribe": {
+    "title": "Impuls biblic zilnic",
+    "subtitle": "În fiecare dimineață la ora 7:00 – un verset, un gând, un început bun.",
+    "firstName": "Prenumele tău",
+    "firstNameOptional": "(opțional)",
+    "firstNamePlaceholder": "ex. Andrei",
+    "firstNameHint": "Ca să te putem saluta personal.",
+    "channelLabel": "Cum dorești să primești impulsul?",
+    "push": "Push",
+    "pushDesc": "Notificare browser",
+    "telegram": "Telegram",
+    "telegramDesc": "Mesaj prin Telegram",
+    "sms": "SMS",
+    "smsDesc": "SMS pe telefon",
+    "phoneLabel": "Număr de telefon",
+    "phonePlaceholder": "+40 712 345 678",
+    "phoneHint": "Cu prefixul țării, ex. +40 pentru România.",
+    "telegramHint": "Apasă \"Abonează-te\" – vei fi redirecționat către Telegram. Pornește botul și scrie <strong>/daily</strong> pentru a activa impulsul zilnic.",
+    "pushHint": "După ce apeși \"Abonează-te\", browserul va cere permisiunea pentru notificări. Te rugăm să o permiți.",
+    "submit": "Abonează-te",
+    "submitting": "Se abonează...",
+    "footNote": "Fără autentificare. Anulează oricând.",
+    "successTitle": "Ești abonat! 🙏",
+    "successText": "Începând de mâine la ora 7:00, vei primi impulsul tău biblic personal.",
+    "toastTelegram": "Telegram deschis 🙏",
+    "toastTelegramDesc": "Pornește botul și scrie /daily pentru a activa impulsul zilnic.",
+    "toastSuccess": "Abonat! 🙏",
+    "toastSuccessDesc": "Vei primi impulsul zilnic începând de mâine.",
+    "toastPushPreview": "Abonamentul push nu este disponibil în previzualizare",
+    "toastPushPreviewDesc": "Notificările push funcționează doar pe site-ul publicat.",
+    "toastNotSupported": "Nesuportat",
+    "toastNotSupportedDesc": "Browserul tău nu acceptă notificări push.",
+    "toastPermDenied": "Permisiune refuzată",
+    "toastPermDeniedDesc": "Te rugăm să permiți notificările în setările browserului.",
+    "toastError": "Eroare",
+    "toastErrorDesc": "Te rugăm să încerci mai târziu.",
+    "subscribeButton": "Abonează-te la inspo",
+    "manage": "Gestionează abonamentul",
+    "switchChannel": "Schimbă canalul:",
+    "unsubscribe": "Dezabonare",
+    "unsubscribedTitle": "Dezabonat",
+    "unsubscribedDesc": "Nu vei mai primi inspirație zilnică."
+  },
+  "faq": {
+    "badge": "Întrebări frecvente",
+    "title": "Ce trebuie să știi despre companionul tău",
+    "subtitle": "Transparența contează – mai ales pentru teologi, pastori și gânditori critici.",
+    "q1": "Ce face companionul tău diferit de ChatGPT & Co.?",
+    "q1Generic": "Chatboți generici:",
+    "q1GenericItems": [
+      "Citate biblice superficiale fără context",
+      "Fără protecție pastorală",
+      "Evită textele incomode",
+      "Fără intervenție în criză",
+      "Amestecă Biblia cu ezoterismul",
+      "Fără întrebări de follow-up – doar confirmare"
+    ],
+    "q1Bot": "Companionul tău:",
+    "q1BotItems": [
+      "5 traduceri recunoscute – inclusiv pasaje incomode",
+      "Protecție ȘI însoțire provocatoare",
+      "Întrebări de follow-up pentru autoreflecție",
+      "Referințe de criză (linii de urgență)",
+      "Exclusiv teologie creștină",
+      "Promovează gândirea critică ca maturitate a credinței"
+    ],
+    "q2": "Ce traduceri biblice sunt incluse?",
+    "q2Intro": "Companionul tău lucrează ecumenic cu principalele ediții biblice în limba germană:",
+    "q2Outro": "Toate pasajele biblice includ citări sursă și context istoric.",
+    "q3": "Ce fundamente științifice stau la bază?",
+    "q3Intro": "Însoțirea se bazează pe cercetări peer-reviewed din Psihologia Pozitivă:",
+    "q4": "Cum asigură companionul tău siguranța pastorală?",
+    "q4Items": [
+      "Gânduri suicidare sau criză → trimitere imediată către linii de urgență",
+      "Fără diagnostice psihologice sau medicale",
+      "Respect fără arbitraritate – se iau poziții biblice clare",
+      "Empatie ȘI sinceritate – subiectele incomode sunt abordate",
+      "Întrebări de follow-up pentru autoreflecție în loc de validare ieftină",
+      "Fără pozitivitate toxică – însoțire autentică și sinceră",
+      "Numește deschis tensiunile și textele dificile"
+    ],
+    "q5": "Este companionul tău legat de o anumită confesiune?",
+    "q5Answer": "Nu. Companionul tău este orientat ecumenic și respectă în mod egal tradițiile reformate, catolice, evanghelice și alte tradiții creștine. Când există diferențe confesionale, perspectivele sunt prezentate transparent.",
+    "q6": "Înlocuiește companionul tău îngrijirea pastorală sau terapia?",
+    "q6Answer": "Nu. Companionul tău este un instrument pentru citirea și reflecția biblică personală. Nu înlocuiește îngrijirea pastorală profesională, consilierea teologică sau terapia psihologică. În crize grave, companionul tău trimite întotdeauna către resurse calificate.",
+    "q7": "Nu este companionul tău doar un 'bot de stare bună'?",
+    "q7Answer": "Nu. Companionul tău consolează unde este nevoie – dar și provoacă. Creșterea spirituală necesită fricțiune. Companionul tău pune întrebări incomode, numește texte biblice dificile și nu se ferește de subiecte precum dreptatea, pocăința și responsabilitatea.",
+    "q8": "Cine se află în spatele companionul tău și cum este finanțat?",
+    "q8Answer": "Companionul tău este un proiect privat, necomercial. Este administrat pe bază de voluntariat și finanțat exclusiv prin donații voluntare. Nu există publicitate, nu se vând date și nu există funcții plătite.",
+    "q9": "Cum tratează companionul tău datele mele?",
+    "q9Answer": "Companionul tău nu stochează date personale și niciun istoric de chat. Fiecare conversație este anonimă. Nu există autentificare, nu există urmărire și nu se partajează date cu terți.",
+    "tradition": {
+      "reformed": "Reformată",
+      "evangelical": "Evanghelică",
+      "catholic": "Catolică",
+      "freeChurch": "Biserică liberă",
+      "literal": "Cuvânt cu cuvânt"
+    }
+  },
+  "donate": {
+    "badge": "Susține companionul tău",
+    "title": "Ajută companionul tău să rămână gratuit",
+    "subtitle": "BibleBot.Life este un proiect de pasiune – fără reclame, fără abonamente, fără costuri ascunse. Pentru a păstra acest lucru, mă bazez pe donații voluntare.",
+    "bankTitle": "Donează prin transfer bancar",
+    "bankSubtitle": "Orice sumă contează – mulțumesc! 🙏",
+    "recipient": "Destinatar",
+    "bank": "Bancă",
+    "purpose": "Referință",
+    "purposeValue": "Donație BibleBot.Life",
+    "note": "BibleBot.Life este operat ca proiect privat. Donațiile nu sunt deductibile fiscal.",
+    "creditCard": "Susține cu cardul de credit",
+    "secureNote": "Plată securizată · Fără capcană de abonament · Anulabil oricând",
+    "twint": "Susține cu Twint"
+  },
+  "refer": {
+    "badge": "Share God's Word",
+    "title": "Recommend companionul tău",
+    "subtitle": "Know someone who could use encouragement? Share companionul tău – one message can make a difference.",
+    "whatsapp": "Share via WhatsApp",
+    "whatsappMsg": "Hey, I wanted to show you BibleBot.Life – a free Bible companion that really knows the Bible and asks great questions. No login, anonymous, honest. Try it out: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "telegram": "Share via Telegram",
+    "telegramMsg": "Hey, do you know BibleBot.Life? A free personal Bible companion – honest, anonymous, no login needed. Check it out: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "email": "Share via email",
+    "emailSubject": "This might interest you: BibleBot.Life",
+    "emailBody": "Hi!\n\nI wanted to show you BibleBot.Life – a free Bible companion that really knows the Bible. No sign-up needed, completely anonymous.\n\nIt asks thoughtful questions, explains Bible passages in context and accompanies you honestly – even on difficult topics.\n\nTry it out: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nBest wishes",
+    "copy": "Copy link",
+    "copied": "Link copied! 📋",
+    "qr": "Or just show this QR code:"
+  },
+  "cta": {
+    "title": "Nu trebuie să treci singur prin asta",
+    "subtitle": "Spune-i companionul tău ce te preocupă. Fără autentificare, fără costuri, fără judecată – doar însoțire sinceră și înțelepciunea Bibliei.",
+    "button": "Începe o conversație"
+  },
+  "footer": {
+    "tagline": "Companionul tău personal — cu profunzimea Bibliei, fără cunoștințe prealabile.",
+    "disclaimer": "Companionul tău este un instrument și nu înlocuiește îngrijirea pastorală profesională, consilierea teologică sau terapia psihologică. În crize acute, contactează linia de urgență locală.",
+    "impressum": "Imprimat",
+    "notes": "Note",
+    "private": "Proiect privat, necomercial",
+    "noChat": "Fără stocarea datelor de chat",
+    "noTax": "Donațiile nu sunt deductibile fiscal",
+    "datenschutz": "Politica de confidențialitate",
+    "love": "Cu ❤️ pentru toți cei care se întreabă ce gândește Hristos.",
+    "forChurches": "Pentru Biserici",
+    "forCelebrants": "Pentru pastori și antrenori"
+  },
+  "chat": {
+    "welcome": "Bun venit! 🤗\n\nSunt companionul tău-ul tău – companionul tău personal cu Biblia, întrebări bune și impulsuri reale. Fără presiune, fără judecată.\n\nPoți să mă întrebi orice – sau pur și simplu să împărtășești ce te preocupă. 💛",
+    "journeyOffer": "💡 **Sfat:** Ofer și o **călătorie de 21 de zile** – 3 săptămâni de impulsuri zilnice, reflecții și pași concreți. În ritmul tău.\n\nVrei să încerci?",
+    "suggestion1": "Am nevoie de un cuvânt încurajator acum",
+    "suggestion2": "Ce spune Biblia când te simți nesigur?",
+    "suggestion3": "Vreau să descopăr ce îmi doresc cu adevărat",
+    "teaser": "Ce te preocupă? 💛",
+    "teaserSub": "Sunt aici – fără judecată.",
+    "openChat": "Deschide chatul",
+    "closeChat": "Închide chatul",
+    "yourCompanion": "Companionul tău personal",
+    "journeyComplete": "21 de zile completate! 🎉",
+    "arriving": "Sosire",
+    "deepening": "Aprofundare",
+    "acting": "Acțiune",
+    "renameTip": "Sfat: Apasă pe nume pentru a mă redenumi ✨",
+    "changeName": "Schimbă numele",
+    "placeholder": "Începe să scrii...",
+    "startVoice": "Pornește introducerea vocală",
+    "stopVoice": "Oprește înregistrarea",
+    "noVoice": "Browserul tău nu acceptă introducerea vocală.",
+    "writing": "scrie...",
+    "shieldBadge": "Fără login · Fără judecată · Citări verificate",
+    "journeyStart": "Da, să începem ✨",
+    "journeyLater": "Poate mai târziu",
+    "journeyStartMsg": "Da, vreau să încep călătoria de 21 de zile!",
+    "qaChecking": "Se verifică citările...",
+    "qaIssue": "{{count}} problemă cu citările",
+    "qaIssue_plural": "{{count}} probleme cu citările",
+    "qaOk": "{{count}} citare verificată ✓",
+    "qaOk_plural": "{{count}} citări verificate ✓",
+    "qaWarning": "⚠️ Note de acuratețe:",
+    "errorTooMany": "Prea multe cereri – te rugăm așteaptă un moment.",
+    "errorCredits": "Cotă epuizată – încercați din nou mai târziu.",
+    "errorConnect": "Eroare de conexiune.",
+    "errorTitle": "Eroare",
+    "errorConnection": "nu a putut fi contactat.",
+    "errorNoStream": "Niciun stream",
+    "seniorMode": "Senior mode (larger text)",
+    "teaserCta": "Start writing →",
+    "namePlaceholder": "e.g. Eli, Miriam…",
+    "loginHint": "Conectează-te pentru a păstra conversațiile pe toate dispozitivele",
+    "previousChats": "{{count}} conversații anterioare",
+    "suggestionsLoading": "Se încarcă sugestiile…"
+  },
+  "install": {
+    "title": "Instalează BibleBot.Life",
+    "androidDesc": "Acces rapid de pe ecranul de start",
+    "iosDesc": "Apasă \"Partajare\" → \"Adaugă pe ecranul de start\"",
+    "button": "Instalează",
+    "close": "Închide"
+  },
+  "share": {
+    "label": "Share",
+    "shareVia": "Share via",
+    "copied": "Copied! 📋",
+    "copiedShort": "Copied!",
+    "copiedDesc": "Text copied to clipboard. Share it on WhatsApp, Instagram or wherever you like!",
+    "copyLink": "Copy text",
+    "error": "Copy failed",
+    "impulseTitle": "Companionul tău – Impulse of the Day",
+    "chatTitle": "Companionul tău – Thought of the Day",
+    "createImage": "Create image ✨",
+    "generating": "Creating…",
+    "imageReady": "Your image is ready to share!",
+    "shareImage": "Share image",
+    "download": "Save",
+    "imageError": "Image creation failed",
+    "imageErrorDesc": "The image could not be created. Please try again later.",
+    "imageSaved": "Text copied! 📋",
+    "imageSavedDesc": "Save the image and share it with the copied text on Instagram, WhatsApp or wherever you like!",
+    "clipboardFallback": "Text copiat — lipește-l când postezi!",
+    "recommendedBy": "Recomandat de {{church}}",
+    "hashtagBible": "#Biblia"
+  },
+  "darkMode": {
+    "light": "Mod luminos",
+    "dark": "Mod întunecat"
+  },
+  "impressum": {
+    "back": "Înapoi la pagina principală",
+    "title": "Imprimat"
+  },
+  "datenschutz": {
+    "back": "Înapoi la pagina principală",
+    "title": "Politica de confidențialitate"
+  },
+  "lang": {
+    "de": "Deutsch",
+    "en": "English",
+    "fr": "Français",
+    "es": "Español",
+    "it": "Italiano",
+    "pl": "Polski",
+    "cs": "Čeština",
+    "pt": "Português",
+    "nl": "Nederlands",
+    "ro": "Română",
+    "da": "Dansk",
+    "no": "Norsk",
+    "sv": "Svenska",
+    "fi": "Suomi",
+    "el": "Ελληνικά",
+    "hr": "Hrvatski",
+    "sr": "Srpski",
+    "hu": "Magyar",
+    "sk": "Slovenčina",
+    "bg": "Български",
+    "ru": "Русский",
+    "uk": "Українська",
+    "ka": "ქართული",
+    "hy": "Հայերեն",
+    "ko": "한국어",
+    "tl": "Filipino",
+    "id": "Bahasa Indonesia",
+    "vi": "Tiếng Việt",
+    "zh": "中文",
+    "sw": "Kiswahili",
+    "am": "አማርኛ",
+    "af": "Afrikaans",
+    "yo": "Yorùbá",
+    "ig": "Igbo",
+    "zu": "isiZulu",
+    "ht": "Kreyòl"
+  },
+  "tiles": {
+    "sectionTitle": "Ce te frământă?",
+    "sectionSubtitle": "Alege un subiect — companionul tău te însoțește",
+    "baptism": {
+      "title": "Găsește un verset de botez",
+      "desc": "Versetul perfect pentru copilul tău",
+      "prompt": "Ajută-mă să găsesc un verset potrivit pentru botez. Ce fel de copil este și ce doresc părinții?",
+      "prompt_v1": "Ce înseamnă de fapt botezul?",
+      "prompt_v2": "Povestește-mi despre botez în Biblie – surprinde-mă!",
+      "prompt_v3": "De ce se botează oamenii?"
+    },
+    "condolence": {
+      "title": "Cuvinte de mângâiere",
+      "desc": "Sprijin în durere și despărțire",
+      "prompt": "Am nevoie de cuvinte de mângâiere pentru un card de condoleanțe. Poți să mă ajuți să găsesc cuvintele potrivite?"
+    },
+    "wedding": {
+      "title": "Verset de nuntă",
+      "desc": "Cuvinte biblice pentru iubirea voastră",
+      "prompt": "Căutăm un verset biblic frumos pentru nunta noastră. Ce pasaje vorbesc despre iubire și parteneriat?"
+    },
+    "anxiety": {
+      "title": "Frică și grijă",
+      "desc": "Găsirea curajului în timpuri grele",
+      "prompt": "Mă lupt cu frica și grija acum. Ce spune Biblia despre asta? Sunt versete care dau curaj?",
+      "prompt_v1": "Am anxietate. Ce spune Biblia despre anxietate?",
+      "prompt_v2": "Cum mă poate ajuta credința în anxietate?",
+      "prompt_v3": "Ce personaje biblice au avut și ele anxietate?"
+    },
+    "confession": {
+      "title": "Mărturisire",
+      "desc": "Dumnezeu iartă — spune-o",
+      "prompt": "Vreau să las ceva care mă apasă. Ce spune Biblia despre iertare și un nou început?"
+    },
+    "heartbreak": {
+      "title": "Inimă frântă",
+      "desc": "Ce spune Biblia despre durerea de inimă",
+      "prompt": "Inima mea e frântă. Ce spune Biblia despre durerea de inimă și cum să găsești din nou speranța?",
+      "prompt_v1": "Inima mea este frântă. Ce spune Biblia despre asta?",
+      "prompt_v2": "Cum fac față unei inimi frânte – există ajutor biblic?",
+      "prompt_v3": "Poate Dumnezeu vindeca o inimă frântă?"
+    },
+    "newstart": {
+      "title": "Nou început",
+      "desc": "Putere pentru un capitol nou",
+      "prompt": "Sunt în fața unui nou început și am nevoie de încurajare. Ce pasaje biblice vorbesc despre un start proaspăt?"
+    },
+    "namequiz": {
+      "title": "What does your name mean?",
+      "desc": "Discover the biblical meaning of your name",
+      "prompt": "What does my name mean and does it have a biblical or spiritual significance? Surprise me!",
+      "prompt_v1": "Which biblical names have the most beautiful meanings?",
+      "prompt_v2": "What does my name mean – is there a biblical connection?",
+      "prompt_v3": "Tell me the story behind my name!"
+    },
+    "sleepless": {
+      "title": "Noapte nedormită",
+      "desc": "Găsirea liniștii noaptea",
+      "prompt": "Nu pot dormi și gândurile mele nu se opresc. Există o rugăciune sau un psalm liniștitor pentru noapte?"
+    },
+    "loneliness": {
+      "title": "Singurătate",
+      "desc": "Nu ești niciodată singur",
+      "prompt": "Mă simt singur. Ce spune Biblia despre faptul că Dumnezeu este mereu cu noi?"
+    },
+    "decision": {
+      "title": "Decizie dificilă",
+      "desc": "Înțelepciune pentru drumul corect",
+      "prompt": "Sunt în fața unei decizii dificile. Ce pasaje biblice mă pot ajuta să găsesc drumul corect?"
+    },
+    "gratitude": {
+      "title": "Recunoștință",
+      "desc": "O rugăciune personală de mulțumire",
+      "prompt": "Vreau să-I mulțumesc lui Dumnezeu. Ajută-mă să scriu o rugăciune personală de recunoștință.",
+      "prompt_v1": "Cum pot deveni mai recunoscător?",
+      "prompt_v2": "Ce spune Biblia despre recunoștință?",
+      "prompt_v3": "De ce este recunoștința atât de importantă în credință?"
+    },
+    "lifewheel": {
+      "title": "Roata vieții",
+      "desc": "Cât de mulțumit ești cu adevărat?"
+    },
+    "sevenwhys": {
+      "title": "7 De ce-uri",
+      "desc": "Găsește rădăcina cea mai profundă a întrebării tale",
+      "prompt": "Aș vrea să fac exercițiul 7 De ce-uri. Iată subiectul meu:"
+    },
+    "anger": {
+      "title": "Furie",
+      "desc": "Când ești pe punctul de a exploda",
+      "prompt": "Sunt atât de furios și nu știu ce să fac cu mânia mea. Ce spune Biblia despre furie?"
+    },
+    "shame": {
+      "title": "Rușine și vinovăție",
+      "desc": "Când vinovăția te copleșește",
+      "prompt": "Mă simt atât de rușinat și vinovat. Ce spune Biblia despre vinovăție, iertare și un nou început?"
+    },
+    "burnout": {
+      "title": "Burnout",
+      "desc": "Când pur și simplu nu mai poți",
+      "prompt": "Sunt total epuizat. Ce spune Biblia despre odihnă și recuperare?"
+    },
+    "illness": {
+      "title": "Boală",
+      "desc": "Când un diagnostic schimbă totul",
+      "prompt": "Am primit un diagnostic dificil și mi-e frică. Ce spune Biblia despre boală, vindecare și speranță?"
+    },
+    "financial": {
+      "title": "Griji financiare",
+      "desc": "Când facturile se adună",
+      "prompt": "Am griji financiare. Ce spune Biblia despre bani, încredere și purtare de grijă?"
+    },
+    "meaningcrisis": {
+      "title": "Criză de sens",
+      "desc": "La ce bun totul?",
+      "prompt": "Mă întreb care este sensul a toate. Ce spune Biblia despre sensul vieții?"
+    },
+    "selfdoubt": {
+      "title": "Îndoială de sine",
+      "desc": "Când nu te simți suficient de bun",
+      "prompt": "Mă îndoiesc constant de mine și nu mă simt suficient de bun. Ce spune Biblia despre valoarea mea?"
+    },
+    "calling": {
+      "title": "Chemare",
+      "desc": "Ce ar trebui să fac cu viața mea?",
+      "prompt": "Nu știu ce să fac cu viața mea. Ajută-mă să-mi găsesc chemarea – ce spune Biblia?"
+    },
+    "faithdoubt": {
+      "title": "Îndoieli de credință",
+      "desc": "Când credința ta se clatină",
+      "prompt": "Am îndoieli despre credința mea. Ce spune Biblia despre îndoială?"
+    },
+    "forgiveness": {
+      "title": "Iertare",
+      "desc": "Când iertarea pare imposibilă",
+      "prompt": "Pur și simplu nu pot ierta pe cineva. Doare prea mult. Ce spune Biblia despre iertare?",
+      "prompt_v1": "Ce spune Biblia despre iertare?",
+      "prompt_v2": "Cum pot ierta pe cineva care m-a rănit?",
+      "prompt_v3": "Există limite ale iertării?"
+    },
+    "familyconflict": {
+      "title": "Conflict familial",
+      "desc": "Când familia e în război",
+      "prompt": "Există un mare conflict în familia mea. Ce spune Biblia despre pacea familiei și reconciliere?"
+    },
+    "envy": {
+      "title": "Invidie",
+      "desc": "Când alții o duc mai bine",
+      "prompt": "Sunt invidios pe alții și mă compar constant. Ce spune Biblia despre invidie și mulțumire?"
+    },
+    "joy": {
+      "title": "Împărtășește bucuria",
+      "desc": "Când s-a întâmplat ceva minunat",
+      "prompt": "Mi s-a întâmplat ceva minunat și vreau să-mi împărtășesc bucuria! Ce spune Biblia despre bucurie și recunoștință?"
+    },
+    "prayer": {
+      "title": "Cerere de rugăciune",
+      "desc": "Rugăciune împreună",
+      "prompt": "Am o cerere de rugăciune și aș vrea să ne rugăm împreună. Roagă-te cu mine.",
+      "prompt_v1": "Cum pot învăța să mă rog?",
+      "prompt_v2": "Ce spune Biblia despre rugăciune?",
+      "prompt_v3": "De ce Dumnezeu nu răspunde la unele rugăciuni?"
+    },
+    "bibleverse": {
+      "title": "Înțelege un verset",
+      "desc": "Primește explicația unui pasaj biblic",
+      "prompt": "Aș vrea să înțeleg mai bine un pasaj biblic. Poți să mă ajuți să-l pun în context?"
+    },
+    "biblequiz": {
+      "desc": "Testează-ți cunoștințele biblice într-un mod jucăuș",
+      "title": "Quiz Biblic"
+    },
+    "prayerwall": {
+      "desc": "Împărtășește cereri de rugăciune și roagă-te unul pentru celălalt",
+      "title": "Zidul Rugăciunii"
+    },
+    "showMore": "mai mult",
+    "dailywisdom": {
+      "title": "Înțelepciune pentru azi",
+      "desc": "Un gând încurajator pentru ziua ta",
+      "prompt": "Dă-mi un gând scurt și încurajator pentru ziua mea – cu un verset biblic potrivit.",
+      "prompt_v1": "Care este cel mai bun sfat pe care Biblia îl are pentru azi?",
+      "prompt_v2": "Dă-mi o înțelepciune din Biblie care să mă însoțească pe parcursul zilei.",
+      "prompt_v3": "Surprinde-mă cu un verset biblic încurajator pentru azi!"
+    },
+    "funfact": {
+      "title": "Știai că?",
+      "desc": "Fapte surprinzătoare din Biblie",
+      "prompt": "Spune-mi un fapt surprinzător din Biblie pe care majoritatea oamenilor nu-l cunosc!",
+      "prompt_v1": "Care este cea mai nebună poveste din Biblie?",
+      "prompt_v2": "Ce fapte din Biblie surprind majoritatea oamenilor?",
+      "prompt_v3": "Spune-mi ceva amuzant sau neașteptat din Biblie!"
+    },
+    "lifehack": {
+      "title": "Sfaturi de viață",
+      "desc": "Înțelepciune biblică pentru familie și carieră",
+      "prompt": "Ce sfat biblic mă ajută în viața de zi cu zi cu familia și la serviciu? Dă-mi ceva practic!",
+      "prompt_v1": "Cum mă poate ajuta Biblia în viața de zi cu zi stresantă?",
+      "prompt_v2": "Ce sfaturi practice de viață se găsesc în Biblie?",
+      "prompt_v3": "Dă-mi un sfat concret din Biblie pentru viața mea de zi cu zi!"
+    },
+    "strengths": {
+      "title": "Punctele tale forte",
+      "desc": "Descoperă ce se află în tine",
+      "prompt": "Ajută-mă să-mi descopăr punctele forte personale – ce spune Biblia despre darurile pe care le are fiecare om?",
+      "prompt_v1": "Ce puncte forte am conform Bibliei?",
+      "prompt_v2": "Cum pot afla care sunt darurile și talentele mele?",
+      "prompt_v3": "Ce spune Biblia despre ceea ce mă face special?"
+    },
+    "family": {
+      "title": "Familie și viața de zi cu zi",
+      "desc": "Mai multă apreciere în conviețuire",
+      "prompt": "Cum pot arăta mai multă apreciere familiei mele? Dă-mi idei practice cu inspirație biblică.",
+      "prompt_v1": "Cum îmi întăresc relațiile de familie?",
+      "prompt_v2": "Ce spune Biblia despre o viață de familie bună?",
+      "prompt_v3": "Dă-mi o idee cum pot face pe cineva din familia mea fericit azi!"
+    },
+    "relax": {
+      "title": "Găsește-ți liniștea",
+      "desc": "Găsește un moment de liniște și pace",
+      "prompt": "Am nevoie de un moment de liniște. Ajută-mă să mă deconectez – cu un verset biblic liniștitor sau o scurtă meditație.",
+      "prompt_v1": "Dă-mi un psalm liniștitor pentru acest moment.",
+      "prompt_v2": "Cum pot găsi liniștea adevărată conform Bibliei?",
+      "prompt_v3": "Ghidează-mă printr-o scurtă meditație biblică."
+    },
+    "quoteofday": {
+      "title": "Citatul zilei",
+      "desc": "Un citat inspirațional pentru reflecție",
+      "prompt": "Dă-mi un citat inspirațional din Biblie pentru astăzi, cu o scurtă explicație",
+      "prompt_v1": "Ce citat biblic se potrivește cel mai bine acestei zile?",
+      "prompt_v2": "Dă-mi un citat încurajator din Psalmi pentru astăzi",
+      "prompt_v3": "Ce proverb din Biblie îmi oferă o nouă perspectivă astăzi?"
+    },
+    "thankfulness": {
+      "title": "Exercițiu de recunoștință",
+      "desc": "Descoperă pentru ce poți fi recunoscător",
+      "prompt": "Ghidează-mă printr-un scurt exercițiu de recunoștință. Ajută-mă să găsesc trei lucruri pentru care sunt recunoscător astăzi",
+      "prompt_v1": "Ajută-mă să descopăr recunoștința în viața mea de zi cu zi — chiar și în lucrurile mici",
+      "prompt_v2": "Vreau să învăț să fiu mai recunoscător. Dă-mi un exercițiu practic pentru asta",
+      "prompt_v3": "Ce spune Biblia despre recunoștință și cum pot aplica asta astăzi?"
+    },
+    "biblesays": {
+      "title": "Ce spune Biblia despre...",
+      "desc": "Află ce spune Biblia despre subiectul tău",
+      "prompt": "Vreau să știu ce spune Biblia despre un anumit subiect. Întreabă-mă ce subiect mă interesează!",
+      "prompt_v1": "Ce spune Biblia despre prietenie?",
+      "prompt_v2": "Ce spune Biblia despre gestionarea banilor?",
+      "prompt_v3": "Ce spune Biblia despre dragoste și relații?"
+    },
+    "morningstart": {
+      "title": "Bună dimineața!",
+      "desc": "Începe-ți ziua pozitiv",
+      "prompt": "Urează-mi bună dimineața și dă-mi un gând încurajator pentru a începe ziua",
+      "prompt_v1": "Dă-mi un scurt impuls de dimineață cu un verset biblic potrivit",
+      "prompt_v2": "Cum pot să-mi încep ziua de astăzi conștient și pozitiv?",
+      "prompt_v3": "Oferă-mi un salut de dimineață încurajator cu un gând din Biblie"
+    },
+    "inspiration": {
+      "title": "Inspiră-mă",
+      "desc": "Lasă-te surprins și inspirat",
+      "prompt": "Surprinde-mă cu ceva inspirațional — poate fi un gând, o poveste sau o perspectivă din Biblie",
+      "prompt_v1": "Spune-mi o poveste inspirațională din Biblie care este relevantă astăzi",
+      "prompt_v2": "Dă-mi o idee neașteptată și inspirațională",
+      "prompt_v3": "Ce personalitate biblică mă poate inspira astăzi și de ce?"
+    }
+  },
+  "lifeWheel": {
+    "title": "Roata ta a vieții",
+    "intro": "Evaluează 8 domenii ale vieții pe o scală de la 1 la 10. Descoperă unde te afli — și primește impulsuri biblice pentru domeniul care are nevoie de atenție.",
+    "start": "Începe",
+    "sliderHint": "Mișcă glisoarele — 1 = foarte nemulțumit, 10 = foarte mulțumit",
+    "showResult": "Arată rezultatul",
+    "average": "Medie",
+    "weakestArea": "Cea mai mare nevoie",
+    "getImpulse": "Impuls biblic pentru {{area}}",
+    "reset": "Încearcă din nou",
+    "prompt": "Roata mea a vieții arată că am obținut doar {{score}}/10 în domeniul '{{area}}'. Ce spune Biblia despre acest domeniu al vieții? Dă-mi încurajare și impulsuri practice.",
+    "areas": {
+      "health": "Sănătate",
+      "relationships": "Relații",
+      "career": "Carieră",
+      "spirituality": "Spiritualitate",
+      "finances": "Finanțe",
+      "family": "Familie",
+      "leisure": "Timp liber",
+      "growth": "Dezvoltare personală"
+    },
+    "save": "Save result",
+    "saved": "Saved!",
+    "history": "Previous results",
+    "noHistory": "No saved results yet.",
+    "backToNew": "New Life Wheel",
+    "backToList": "Back to list"
+  },
+  "church": {
+    "badge": "Pentru organizații",
+    "heroTitle": "Companionul tău pentru organizația dumneavoastră",
+    "heroSubtitle": "Însoțește-ți comunitatea cu înțelepciune biblică – digital, personal și non-stop.",
+    "useCasesTitle": "Cazuri de utilizare",
+    "useCase": {
+      "youth": {
+        "title": "Lucrul cu tinerii",
+        "desc": "Tinerii descoperă Biblia în felul lor – interactiv și fără ezitare."
+      },
+      "confirmation": {
+        "title": "Confirmare",
+        "desc": "Confirmanzii își aprofundează cunoștințele biblice independent cu îndrumare personală."
+      },
+      "pastoral": {
+        "title": "Îngrijire pastorală",
+        "desc": "Însoțire 24/7 ca supliment la îngrijirea pastorală personală."
+      },
+      "bibleStudy": {
+        "title": "Studiu biblic",
+        "desc": "Impulsuri și subiecte de discuție pentru grupuri și întâlniri casnice."
+      }
+    },
+    "pricingTitle": "Pachete de patronaj",
+    "pricingSubtitle": "Sprijiniți companionul tău și biserica dvs. cu pachetul de patronaj potrivit.",
+    "popular": "Popular",
+    "free": "Gratuit",
+    "perYear": "persoane / an",
+    "contact": "Contactați-ne",
+    "tier": {
+      "free": {
+        "name": "Bobul de muștar",
+        "size": "Acces de bază la bot pentru toți personei comunității."
+      },
+      "community": {
+        "name": "Însoțitor",
+        "size": "Menționarea organizațiii ca susținător pe site & acces fără reclame."
+      },
+      "gemeinde": {
+        "name": "Constructor de poduri",
+        "size": "Logo în interfața botului, raport lunar de utilizare (anonimizat)."
+      },
+      "kirche": {
+        "name": "Far",
+        "size": "Integrarea conținutului propriu (ex. arhivă de predici), co-creare a foii de parcurs, suport premium."
+      }
+    },
+    "features": {
+      "directoryEntry": "Înscriere în director",
+      "telegramGroup": "Grup Telegram",
+      "partnerPage": "Pagină proprie de partener",
+      "badge": "Insignă de partener",
+      "qrFlyer": "Fluturaș QR printabil",
+      "contactForm": "Formular de contact",
+      "pastorProfile": "Profil pastor",
+      "welcomeVideo": "Video de bun venit",
+      "analytics": "Panou de analiză",
+      "prioritySupport": "Suport prioritar",
+      "multipleProfiles": "Profile multiple",
+      "customBranding": "Branding personalizat",
+      "apiAccess": "Acces API",
+      "accountManager": "Manager de cont personal"
+    },
+    "viewDirectory": "Vezi directorul bisericilor",
+    "directoryBadge": "Director Biserici",
+    "directoryTitle": "Biserici partenere",
+    "directorySubtitle": "Găsiți o biserică lângă dumneavoastră care recomandă companionul tău.",
+    "searchPlaceholder": "Căutați după loc, nume sau denominație...",
+    "noResults": "Nicio biserică în director deocamdată.",
+    "becomePartner": "Deveniți partener →",
+    "notFound": "Biserica nu a fost găsită.",
+    "backToDirectory": "Înapoi la director",
+    "pastor": "Pastor",
+    "serviceTimes": "Orele slujbelor",
+    "startChat": "Începe conversația",
+    "website": "Website",
+    "telegramGroup": "Grup Telegram",
+    "contactTitle": "Contactați {{name}}",
+    "contactName": "Numele dumneavoastră (opțional)",
+    "contactEmail": "Adresa de e-mail",
+    "contactMessage": "Mesajul dumneavoastră",
+    "contactSend": "Trimite mesajul",
+    "contactSuccess": "Mesaj trimis! 🙏",
+    "contactSuccessDesc": "Biserica vă va contacta în curând.",
+    "recommendedBy": "Recomandat de {{name}}",
+    "setup": "Configurare (unică)",
+    "form": {
+      "title": "Interesat? Contactați-ne!",
+      "subtitle": "Vă răspundem în 48 de ore.",
+      "name": "Numele dvs.",
+      "email": "Adresă de e-mail",
+      "churchName": "Numele bisericii",
+      "tier": "Pachetul preferat",
+      "tierPlaceholder": "Alegeți pachetul...",
+      "message": "Mesajul dvs.",
+      "submit": "Trimite cererea",
+      "success": "Cerere trimisă! Vă contactăm curând. 🙏",
+      "error": "Eroare la trimitere. Încercați din nou.",
+      "orgType": "Organization type",
+      "orgTypePlaceholder": "Select type...",
+      "orgTypes": {
+        "church": "Church",
+        "careHome": "Care Home",
+        "seniorHome": "Retirement Home",
+        "hospital": "Hospital",
+        "prison": "Prison Chaplaincy",
+        "military": "Military Chaplaincy",
+        "rehaClinic": "Clinică de reabilitare",
+        "psychiatry": "Psihiatrie",
+        "burnoutClinic": "Clinică de burnout",
+        "hospice": "Hospice",
+        "counseling": "Centru de consiliere",
+        "reformed": "Biserica reformată",
+        "catholic": "Biserica catolică",
+        "lutheran": "Biserica luterană",
+        "evangelical": "Biserică liberă / Evanghelică",
+        "freelance": "Independent",
+        "other": "Altele"
+      }
+    },
+    "institutionsTitle": "Also for Institutions",
+    "institutionsSubtitle": "Companionul tău supports not only churches – care homes, retirement homes, and hospitals also benefit from digital pastoral care.",
+    "institution": {
+      "careHome": {
+        "title": "Care Homes",
+        "desc": "Daily Bible impulses and companionship for residents – even when no chaplain is on site."
+      },
+      "seniorHome": {
+        "title": "Retirement Homes",
+        "desc": "Familiar Bible verses and conversations for seniors – easily accessible via tablet or smartphone."
+      },
+      "hospital": {
+        "title": "Hospitals",
+        "desc": "Comfort and spiritual support for patients in difficult times – available 24/7 at the bedside."
+      },
+      "prison": {
+        "title": "Prison Chaplaincy",
+        "desc": "Hope and spiritual support for inmates – a confidential companion around the clock."
+      },
+      "military": {
+        "title": "Military Chaplaincy",
+        "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
+      },
+      "rehaClinic": {
+        "title": "Clinici de reabilitare",
+        "desc": "Sprijin spiritual în timpul reabilitării."
+      },
+      "psychiatry": {
+        "title": "Instituții psihiatrice",
+        "desc": "Conversații spirituale confidențiale pentru pacienții din îngrijirea psihiatrică."
+      },
+      "burnoutClinic": {
+        "title": "Clinici de burnout",
+        "desc": "Întrebări de sens și reflecție interioară la epuizare."
+      },
+      "hospice": {
+        "title": "Hospice-uri",
+        "desc": "Însoțire la sfârșitul vieții – cuvinte de mângâiere."
+      },
+      "counseling": {
+        "title": "Centre de consiliere",
+        "desc": "Impulsuri spirituale complementare pentru clienții din consilierea psihosocială."
+      }
+    },
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As companionul tău is a private project, donations are not tax-deductible.",
+    "denominationsTitle": "Pentru toate confesiunile și celebranții",
+    "denominationsSubtitle": "BibleBot.Life este ecumenic – pentru comunități reformate, catolice, luterane și evanghelice libere, precum și celebranți independenți.",
+    "denomination": {
+      "reformed": {
+        "title": "Biserica reformată",
+        "desc": "Biblia de la Zürich, liturgie reformată și sprijin pentru predici – adaptate parohiei dumneavoastră."
+      },
+      "catholic": {
+        "title": "Biserica catolică",
+        "desc": "Traducere ecumenică, planificarea slujbelor și sacramente – în conformitate cu tradițiile catolice."
+      },
+      "lutheran": {
+        "title": "Biserica luterană",
+        "desc": "Biblia lui Luther, planificarea slujbelor și pastoral – pentru comunitățile evanghelico-luterane."
+      },
+      "evangelical": {
+        "title": "Biserici libere",
+        "desc": "Schlachter 2000, laudă și design flexibil al slujbelor – pentru comunitățile evanghelice libere."
+      },
+      "freelance": {
+        "title": "Celebranți independenți",
+        "desc": "Vorbitori funebri, celebranți de nuntă și oficianți independenți – cu instrumente biografice și planificare de discursuri."
+      }
+    }
+  },
+  "institutions": {
+    "badge": "Pentru organizații",
+    "heroTitle": "Companionul tău for Your Institution",
+    "heroSubtitle": "Digital pastoral care for care homes, retirement homes, hospitals, and correctional facilities – personal, confidential, and around the clock.",
+    "typesTitle": "Who is companionul tău for?",
+    "useCasesTitle": "How companionul tău is Used",
+    "useCasesSubtitle": "Practical applications for daily life in your institution.",
+    "pricingTitle": "Patronage Packages",
+    "pricingSubtitle": "The same packages as for churches – adapted to institutional needs.",
+    "linkChurches": "Also available for churches",
+    "type": {
+      "careHome": {
+        "title": "Care Homes",
+        "desc": "Daily Bible impulses and companionship for residents – even when no chaplain is on site."
+      },
+      "seniorHome": {
+        "title": "Retirement Homes",
+        "desc": "Familiar Bible verses and conversations for seniors – easily accessible via tablet or smartphone."
+      },
+      "hospital": {
+        "title": "Hospitals",
+        "desc": "Comfort and spiritual support for patients in difficult times – available 24/7 at the bedside."
+      },
+      "prison": {
+        "title": "Prison Chaplaincy",
+        "desc": "Hope and spiritual support for inmates – a confidential companion around the clock."
+      },
+      "military": {
+        "title": "Military Chaplaincy",
+        "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
+      }
+    },
+    "useCase": {
+      "dailyImpulse": {
+        "title": "Daily Impulse",
+        "desc": "A Bible verse with reflection question every morning – lowers the barrier for spiritual conversations."
+      },
+      "companionship": {
+        "title": "Conversation Partner",
+        "desc": "Companionul tău answers faith questions patiently and without time pressure – ideal for lonely hours."
+      },
+      "accessibility": {
+        "title": "Easy Access",
+        "desc": "Large text, simple tablet interface – also for people with limited mobility."
+      },
+      "availability": {
+        "title": "24/7 Available",
+        "desc": "Spiritual companionship at night and on weekends – when no chaplain is available."
+      }
+    },
+    "tierDesc": {
+      "free": "Basic access for residents and patients",
+      "community": "Mentioned as supporter, ad-free access",
+      "gemeinde": "Logo presence, monthly usage report",
+      "kirche": "Custom content, roadmap co-creation, premium support"
+    },
+    "form": {
+      "title": "Interested? Get in touch!",
+      "subtitle": "We'll get back to you within 48 hours.",
+      "name": "Your name",
+      "email": "Email address",
+      "institutionName": "Institution name",
+      "type": "Type of institution",
+      "typePlaceholder": "Please select...",
+      "tier": "Preferred package",
+      "tierPlaceholder": "Choose package...",
+      "message": "Your message",
+      "submit": "Send inquiry",
+      "success": "Inquiry sent! We'll be in touch soon. 🙏",
+      "error": "Error sending. Please try again."
+    },
+    "seniorHint": {
+      "title": "Mod senior disponibil",
+      "desc": "Text mai mare și navigare simplificată – ideal pentru rezidenții vârstnici.",
+      "cta": "Încercați modul senior"
+    }
+  },
+  "chatHero": {
+    "ariaLabel": "Pune o întrebare lui companionul tău",
+    "focusPlaceholder": "Scrie întrebarea ta…",
+    "placeholder1": "Ce mă face cu adevărat recunoscător?",
+    "placeholder2": "Cum găsesc pacea interioară?",
+    "placeholder3": "Ce îmi dă speranță?",
+    "placeholder4": "Ce își dorește inima mea?",
+    "placeholder5": "Ce bine pot face azi?",
+    "send": "Trimite",
+    "subtitle": "Pune întrebarea ta – deschis, sincer, fără înregistrare.",
+    "suggestion1": "Ce înseamnă numele meu?",
+    "suggestion2": "Ce îmi dă putere azi?",
+    "suggestion3": "Pentru ce sunt recunoscător?"
+  },
+  "splash": {
+    "patronage": "Recomandat de"
+  },
+  "meta": {
+    "forChurchesDesc": "Companionul tău ca partener pentru comunitatea ta: lucrul cu tinerii, confirmarea, consilierea pastorală și grupurile biblice. De la gratuit la Premium.",
+    "forChurchesTitle": "Companionul tău pentru Biserici – Consiliere Pastorală Digitală & Ghidare Biblică",
+    "homeDesc": "Companionul tău te însoțește cu 5 traduceri biblice, metodologie de coaching și consiliere spirituală. Anonim, gratuit, în 36 de limbi.",
+    "homeTitle": "Companionul tău – Ghidul Tău Biblic Personal | Gratuit & Anonim",
+    "loginDesc": "Conectează-te la companionul tău pentru a-ți pregăti ceremoniile personale.",
+    "loginTitle": "Autentificare – companionul tău"
+  },
+  "meinBereich": {
+    "title": "Zona mea",
+    "subtitle": "Pregătește-ți ceremoniile personale și partajează-le cu pastorul tău.",
+    "sidebarLabel": "Zona mea",
+    "overview": "Prezentare generală",
+    "funeral": "Înmormântare",
+    "wedding": "Nuntă",
+    "baptismCeremony": "Botez",
+    "confirmation": "Confirmare",
+    "logout": "Deconectare",
+    "comingSoon": "Disponibil în curând",
+    "funeralDesc": "Creează un CV, păstrează amintiri și partajează-le cu pastorul.",
+    "weddingDesc": "Scrie jurăminte de căsătorie, alege cântece și planifică sărbătoarea.",
+    "baptismDesc": "Formulează dorințe de botez și pregătește procesul cu comunitatea.",
+    "confirmationDesc": "Găsește un verset de confirmare și pregătește texte personale."
+  },
+  "eulogy": {
+    "pageTitle": "Elogiu – Creare CV | companionul tău",
+    "pageDesc": "Păstrează amintirile unei persoane dragi și creează un text frumos de CV pentru elogiu.",
+    "title": "Elogiu – CV",
+    "subtitle": "Păstrează amintiri, creează text, descarcă ca PDF.",
+    "step1": "Despre persoana decedată",
+    "name": "Nume",
+    "namePlaceholder": "Prenume și Nume de familie",
+    "age": "Date de viață",
+    "agePlaceholder": "ex. 1942–2026",
+    "step2": "Înregistrează amintiri",
+    "step2Desc": "Vorbește liber despre persoana decedată – ce a fost important, ce rămâne în amintire? Poți face mai multe înregistrări.",
+    "startRecording": "Începe înregistrarea",
+    "addRecording": "Adaugă înregistrare",
+    "stop": "Oprește",
+    "recording": "Înregistrare",
+    "transcript": "Transcrierea (editabilă)",
+    "transcriptPlaceholder": "Transcrierea este creată automat în timpul înregistrării. O poți edita aici.",
+    "additionalNotes": "Note suplimentare",
+    "notesPlaceholder": "Profesie, hobby-uri, evenimente importante din viață, trăsături speciale de caracter…",
+    "step3": "Creează și descarcă textul",
+    "generate": "Creează textul CV-ului",
+    "generating": "Se creează textul…",
+    "regenerate": "Regenerează",
+    "downloadPDF": "Descarcă ca PDF",
+    "save": "Salvează",
+    "shareStep": "Partajează cu pastorul",
+    "shareDesc": "Creează un link pe care îl poți trimite prin e-mail sau mesager pastorului tău. El poate citi textul și îl poate descărca ca PDF.",
+    "enableShare": "Creează și copiază linkul",
+    "disableShare": "Dezactivează partajarea",
+    "micError": "Microfonul nu a putut fi pornit. Vă rugăm să acordați permisiunea.",
+    "needMore": "Vă rugăm să înregistrați mai întâi amintiri sau să scrieți notițe.",
+    "genError": "Eroare la generarea textului. Vă rugăm să încercați din nou."
+  },
+  "auth": {
+    "apple": "Conectare cu Apple",
+    "loginShort": "Autentificare",
+    "logout": "Deconectare"
+  },
+  "tts": {
+    "male": "Voce masculină",
+    "female": "Voce feminină",
+    "maleShort": "M",
+    "femaleShort": "F",
+    "voice": "Voce"
+  },
+  "chatDemo": {
+    "sectionLabel": "Iată cum arată o conversație",
+    "userMsg": "Mă simt singur. Ce spune Biblia despre asta?",
+    "botMsg": "Nu ești singur – chiar și atunci când simți asta. Psalmul 23 spune: „Domnul este păstorul meu, nu voi duce lipsă de nimic.” Aceasta înseamnă că Dumnezeu este aproape de tine, chiar și în cele mai întunecate momente. Vrei să explorăm împreună acest pasaj?",
+    "cta": "Începe propria ta conversație →"
+  },
+  "suggest": {
+    "psalm23": "Psalmul 23 – Domnul este păstorul meu",
+    "joh316": "Ioan 3:16 – Fiindcă atât de mult a iubit Dumnezeu lumea",
+    "rom828": "Romani 8:28 – Toate lucrurile lucrează împreună spre bine",
+    "mt1128": "Matei 11:28 – Veniți la Mine, toți cei trudiți",
+    "phil413": "Filipeni 4:13 – Pot totul în Hristos",
+    "jes4110": "Isaia 41:10 – Nu te teme, căci Eu sunt cu tine",
+    "1kor13": "1 Corinteni 13 – Cea mai mare este dragostea",
+    "spr35": "Proverbe 3:5 – Încrede-te în Domnul",
+    "jos19": "Iosua 1:9 – Fii tare și curajos",
+    "ps462": "Psalmul 46:1 – Dumnezeu este adăpostul și puterea noastră",
+    "explainDetail": "Explică {{ref}} în detaliu"
+  },
+  "dailyVerses": {
+    "v0": "„Veniți la Mine, toți cei trudiți și împovărați, și Eu vă voi da odihnă.”",
+    "r0": "Matei 11:28",
+    "v1": "„Căci Eu știu planurile pe care le am pentru voi, zice Domnul, planuri de pace.”",
+    "r1": "Ieremia 29:11",
+    "v2": "„Nu te teme, căci Eu sunt cu tine; nu te descuraja, căci Eu sunt Dumnezeul tău.”",
+    "r2": "Isaia 41:10",
+    "v3": "„Domnul este păstorul meu; nu voi duce lipsă de nimic.”",
+    "r3": "Psalmul 23:1",
+    "v4": "„Aruncați-vă toate îngrijorările asupra Lui, căci El are grijă de voi.”",
+    "r4": "1 Petru 5:7",
+    "v5": "„Eu sunt lumina lumii. Cine Mă urmează nu va umbla în întuneric.”",
+    "r5": "Ioan 8:12",
+    "v6": "„Fii tare și curajos! Nu te teme, căci Domnul Dumnezeul tău este cu tine.”",
+    "r6": "Iosua 1:9",
+    "v7": "„Dar cei ce nădăjduiesc în Domnul își vor înnoi puterea; vor zbura cu aripi ca vulturii.”",
+    "r7": "Isaia 40:31",
+    "v8": "„Căci unde sunt doi sau trei adunați în Numele Meu, acolo sunt și Eu în mijlocul lor.”",
+    "r8": "Matei 18:20",
+    "v9": "„Gustați și vedeți că Domnul este bun; fericit este omul care se încrede în El.”",
+    "r9": "Psalmul 34:8",
+    "v10": "„El vindecă pe cei cu inima zdrobită și le leagă rănile.”",
+    "r10": "Psalmul 147:3",
+    "v11": "„Dragostea este răbdătoare, dragostea este bună. Suferă totul, crede totul, speră totul.”",
+    "r11": "1 Corinteni 13:4–7",
+    "v12": "„Bucurați-vă în speranță, fiți răbdători în suferință, perseverenți în rugăciune.”",
+    "r12": "Romani 12:12",
+    "v13": "„Încrede-te în Domnul din toată inima ta și nu te bizui pe înțelegerea ta proprie.”",
+    "r13": "Proverbe 3:5"
+  },
+  "meinBereichNav": "Zona mea",
+  "verseExplain": "Explică în detaliu acest verset biblic: {{quote}} ({{ref}}) – Cine a scris asta? În ce context? Ce înseamnă pentru viața mea de azi?",
+  "social": {
+    "conversations": "Conversații",
+    "languages": "Limbi",
+    "bibles": "Traduceri biblice"
+  },
+  "celebrants": {
+    "badge": "Pentru Capelani și Life Coach-i",
+    "heroTitle1": "Fiecare întâlnire merită",
+    "heroTitle2": "cea mai bună pregătire",
+    "heroSubtitle": "De la prima notă vocală la sesiunea finalizată — planifică, documentează și desfășoară ceremonii și sesiuni de coaching cu un singur instrument.",
+    "ctaStart": "Începe gratuit",
+    "ctaFeatures": "Descoperă funcționalitățile",
+    "painTitle": "Sună familiar?",
+    "pain1": "Ore de pregătire pentru fiecare ceremonie în parte?",
+    "pain2": "Notițe pe hârtie lipsă în cel mai important moment?",
+    "pain3": "Fără un sistem pentru cântece, lecturi și ordinea serviciului?",
+    "pain4": "Dificil de coordonat cu muzicienii și ajutoarele?",
+    "featuresTitle": "Tot ce ai nevoie",
+    "featuresSubtitle": "Un sistem bine gândit pentru întregul flux de lucru — de la pregătire la execuție.",
+    "f1Title": "Înregistrare vocală și Transcriere",
+    "f1Desc": "Înregistrează conversații, obține transcrieri automate — fundamentul pentru texte emoționante de ceremonie.",
+    "f2Title": "Creare inteligentă de texte",
+    "f2Desc": "Din notițele și transcrierile tale, creează discursuri empatice, rezumate de coaching sau texte de reflecție.",
+    "f3Title": "Export PDF și Partajare",
+    "f3Desc": "Exportă textele finalizate ca PDF sau partajează-le prin link direct cu clienții, rudele și participanții.",
+    "f4Title": "Șabloane pe Denominație",
+    "f4Desc": "Șabloane de flux de lucru predefinite pentru Catolici, Reformați, Luterani, Evanghelici și Seculari — gata de utilizare.",
+    "f5Title": "Calendar și Planificare",
+    "f5Desc": "Toate ceremoniile dintr-o privire: vizualizări lunare, săptămânale și zilnice. Nu mai pierde niciodată evidența.",
+    "f6Title": "Teleprompter / Mod Dirijor",
+    "f6Desc": "Mod live pentru execuție: parcurge serviciul bloc cu bloc, citește texte, vezi indicațiile muzicale — fără distragere.",
+    "f7Title": "Integrare Muzicală",
+    "f7Desc": "Integrează cântece și piese muzicale direct în ordinea serviciului. Modul Dirijor îți arată când se cântă fiecare piesă.",
+    "f8Title": "Echipă și Colaborare",
+    "f8Desc": "Implică muzicieni, lectori, tehnicieni. Atribuie roluri, verifică disponibilitatea, planifică împreună.",
+    "f9Title": "Bibliotecă de Resurse",
+    "f9Desc": "Cântece, rugăciuni, lecturi și texte liturgice — căutabile, etichetate, în creștere cu fiecare ceremonie.",
+    "f10Title": "Registrul Bisericii",
+    "f10Desc": "Documentează cu grijă botezurile, nunțile și înmormântările. Toate datele într-un singur loc.",
+    "pricingTitle": "Prețuri simple",
+    "pricingSubtitle": "Începe gratuit. Fă upgrade când ai nevoie de mai mult.",
+    "planPersonal": "Personal",
+    "planFree": "Gratuit",
+    "planPro": "Pro",
+    "planProPrice": "29 CHF",
+    "planProPeriod": "/ lună",
+    "recommended": "Recomandat",
+    "pf1": "Creează texte de ceremonie",
+    "pf2": "Înregistrare vocală și transcriere",
+    "pf3": "Export PDF",
+    "pf4": "Partajează prin link",
+    "pf5": "1 proiect activ",
+    "pf6": "Totul din Personal",
+    "pf7": "Proiecte nelimitate",
+    "pf8": "Planificator de servicii cu calendar",
+    "pf9": "Mod Dirijor (teleprompter)",
+    "pf10": "Integrare muzicală",
+    "pf11": "Bibliotecă de șabloane",
+    "pf12": "Colaborare în echipă",
+    "pf13": "Bibliotecă de resurse",
+    "pf14": "Registrul bisericii",
+    "pf15": "Suport prioritar",
+    "ctaFree": "Începe",
+    "ctaTrial": "Probă gratuită de 14 zile",
+    "faqTitle": "Întrebări Frecvente",
+    "faq1q": "Cui se adresează acest instrument?",
+    "faq1a": "Capelanilor, life coach-ilor, vorbitorilor funerari independenți, oficiantilor de nunți, capelanilor de spital, pastorilor și oricui pregătește și conduce ceremonii, ateliere sau sesiuni de coaching.",
+    "faq2q": "Datele mele sunt stocate în siguranță?",
+    "faq2a": "Da. Toate datele sunt criptate și stocate în Elveția. Doar tu ai acces la conținutul tău.",
+    "faq3q": "Ce limbi sunt suportate?",
+    "faq3a": "Interfața este disponibilă în 36 de limbi. Textele pot fi create în orice limbă.",
+    "faq4q": "Pot folosi Modul Dirijor pe o tabletă?",
+    "faq4a": "Da! Întreaga aplicație este optimizată ca PWA pentru mobil — perfectă pe o tabletă la amvon.",
+    "faq5q": "Am nevoie de abilități tehnice?",
+    "faq5a": "Nu. Interfața este intuitivă și concepută pentru persoanele care doresc să se concentreze pe conținut — nu pe tehnologie.",
+    "ctaBottom": "Ești pregătit pentru ceremonii mai bune?",
+    "ctaBottomSub": "Începe gratuit — nu este necesar un card de credit.",
+    "ctaBottomBtn": "Începe gratuit acum",
+    "footerImprint": "Mențiuni Legale",
+    "footerPrivacy": "Politica de Confidențialitate",
+    "footerChurches": "Pentru Biserici",
+    "seoTitle": "BibleBot.Life pentru Capelani și Life Coach-i — Planifică Ceremonii și Sesiuni",
+    "seoDesc": "Planifică profesional înmormântări, nunți, sesiuni de coaching: înregistrare vocală, generare de text, teleprompter, calendar și colaborare."
+  },
+  "pricing": {
+    "onRequest": "Patronaj la cerere",
+    "contactUs": "Contactați-ne"
+  },
+  "audience": {
+    "church": {
+      "cta": "Pentru comunități și pastori →",
+      "desc": "Pentru pastori, consilieri spirituali și echipe comunitare: suport AI pentru pregătirea predicilor, planificarea echipei și multe altele.",
+      "f1": "Planificator de servicii divine cu AI",
+      "f2": "Bibliotecă de resurse",
+      "f3": "Coordonare de echipă",
+      "f4": "Pagina comunității și director",
+      "title": "Planific slujbe și însoțesc oameni"
+    },
+    "personal": {
+      "cta": "Chat acum — gratuit →",
+      "desc": "Întrebări despre credință, impulsuri zilnice, creștere spirituală — în ritmul tău și fără judecată.",
+      "f1": "Chat cu însoțire biblică",
+      "f2": "Călătorie de 21 de zile",
+      "f3": "Impuls zilnic prin Push / Telegram",
+      "f4": "Istoricul conversațiilor personale",
+      "title": "Caut însoțire personală"
+    },
+    "subtitle": "Alege-ți calea",
+    "title": "Pentru cine este BibleBot.Life?"
+  },
+  "entryTiles": {
+    "groups": {
+      "deep": "Vreau să aprofundez",
+      "emotional": "Mă afectează ceva",
+      "orientation": "Caut orientare"
+    },
+    "labels": {
+      "anger": "Furie și enervare",
+      "anxiety": "Îmi fac griji",
+      "baptism": "Botez și drumul credinței",
+      "biblequiz": "Test biblic",
+      "bibleverse": "Înțelege un verset biblic",
+      "burnout": "Epuizare",
+      "calling": "Care este calea mea?",
+      "condolence": "Doliu și pierdere",
+      "decision": "Sunt în fața unei decizii",
+      "faithdoubt": "Îndoieli de credință",
+      "financial": "Griji financiare",
+      "forgiveness": "Iertare și eliberare",
+      "heartbreak": "Sunt rănit",
+      "illness": "Boală",
+      "lifewheel": "Unde mă aflu în viață?",
+      "loneliness": "Mă simt singur",
+      "meaningcrisis": "Criză de sens",
+      "newstart": "Vreau să o iau de la capăt",
+      "prayerwall": "Zidul rugăciunii",
+      "selfdoubt": "Îndoială de sine",
+      "sevenwhys": "De ce fac asta cu adevărat?",
+      "sleepless": "Insomnie",
+      "thankfulness": "Recunoștință",
+      "wedding": "Căsătorie și parteneriat"
+    },
+    "showLess": "Afișează mai puțin",
+    "showMore": "Descoperă mai multe subiecte"
+  },
+  "faqExtra": {
+    "faithPsych": {
+      "a": "BibleBot combină înțelepciunea biblică cu descoperirile psihologiei bazate pe dovezi — nu pentru a psihologiza credința, ci pentru a o face relevantă pentru viața de zi cu zi. Metodele (PERMA, Logoterapie, cercetarea recunoștinței și a iertării) completează Biblia, dar nu o înlocuiesc.",
+      "q": "BibleBot conectează credința și psihologia?"
+    },
+    "journey": {
+      "q": "Ce este călătoria de 21 de zile?"
+    },
+    "methodik": {
+      "a": "",
+      "q": "Ce se află în spatele metodologiei BibleBot?"
+    }
+  },
+  "tools": {
+    "badge": "Mai mult decât răspunsuri",
+    "lifewheel": {
+      "cta": "Începe Roata Vieții",
+      "desc": "Cum stai cu munca, relațiile, sensul și sănătatea? Roata Vieții te ajută în 3 minute să obții claritate — și arată unde se conectează direct Biblia.",
+      "title": "Verificarea Roții Vieții"
+    },
+    "sevenwhys": {
+      "cta": "Întreabă mai profund",
+      "desc": "De ce fac asta cu adevărat? De ce mă simt așa? BibleBot te ghidează prin 7 întrebări care ajung la rădăcină — cu o clasificare biblică la cel mai profund nivel.",
+      "title": "Metoda celor 7 De Ce"
+    },
+    "subtitle": "Pentru momentele în care ai nevoie de mai mult decât un răspuns.",
+    "title": "Două instrumente care merg mai adânc"
+  },
+  "trust": {
+    "noAds": {
+      "text": "Fără urmărire, fără partajare de date, fără monetizarea întrebărilor tale.",
+      "title": "Fără publicitate"
+    },
+    "noExpertise": {
+      "text": "Nu ai nevoie de apartenență la biserică și nici de cunoștințe teologice prealabile.",
+      "title": "Nu este necesară nicio cunoștință prealabilă"
+    },
+    "qa": {
+      "text": "Fiecare verset biblic este verificat automat pentru corectitudine — la fiecare conversație.",
+      "title": "Verificat QA"
+    }
+  }
 }

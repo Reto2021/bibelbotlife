@@ -9,38 +9,38 @@
   "loader": "Ladataan…",
   "hero": {
     "badge": {
-      "noLogin": "Ei vaadi kirjautumista",
-      "optionalLogin": "Kirjautuminen valinnainen",
+      "noLogin": "Ei kirjautumista",
       "noData": "Ei tietoja",
-      "noJudgment": "Ei tuomitsemista"
+      "noJudgment": "Ei tuomiota",
+      "optionalLogin": "Kirjautuminen vapaaehtoista"
     },
     "title1": "Raamattu.",
     "title2": " Uudelleen ajateltuna.",
-    "subtitle": "Henkilökohtainen kumppanisi tuntee Raamatun – ja esittää oikeat kysymykset. Ei ihminen, mutta rehellinen kumppani. Hyviin keskusteluihin, syvällisiin kysymyksiin ja aitoihin impulsseihin.",
-    "ctaTelegram": "Aloita Telegramissa",
+    "subtitle": "Kumppanisiisi tuntee Raamatun – ja esittää oikeat kysymykset. Ei ihminen, mutta rehellinen kumppani. Hyviin keskusteluihin, syviin kysymyksiin ja aitoihin impulsseihin.",
+    "ctaTelegram": "Aloita Telegramilla",
     "ctaMore": "Lue lisää",
-    "quote": "«Tulkaa minun luokseni, kaikki te työn ja kuormien uuvuttamat, niin minä annan teille levon.»",
+    "quote": "«Tulkaa minun luokseni, kaikki te työllä rasitetut ja kuormitetut, niin minä annan teille levon.»",
     "quoteRef": "– Matteus 11:28"
   },
   "impulse": {
-    "loading": "Inspiraatiota ladataan...",
-    "label": "Päivän inspiraatio",
+    "loading": "Päivän impulssi latautuu...",
+    "label": "Päivän impulssi",
     "deepDive": "Mitä tämä tarkoittaa minulle?",
     "explore": "Lue koko kohta",
-    "subscribeCta": "Haluatko tämän inspiraation päivittäin?",
     "alreadySubscribed": "Saat päivittäisen inspiraation",
-    "playAudio": "Lue ääneen",
+    "subscribeCta": "Haluatko saada tämän inspiraation päivittäin?",
+    "playAudio": "Kuuntele",
     "stopAudio": "Pysäytä"
   },
   "features": {
-    "sectionTitle": "Näin kumppanisi tukee sinua",
-    "sectionSubtitle": "Tutustu monipuolisiin mahdollisuuksiin, joita henkilökohtainen kumppanisi tarjoaa sinulle",
+    "sectionTitle": "Mitä kumppanisi tarjoaa sinulle",
+    "sectionSubtitle": "Tutustu moniin tapoihin, joilla henkilökohtainen kumppanisi voi tukea sinua",
     "bible": {
-      "title": "Raamatunkohdat ja selitykset",
+      "title": "Raamatunkohdat & tulkinta",
       "desc": "Kysy «Mitä Raamattu sanoo...?» ja saat sopivia jakeita kontekstin ja ymmärrettävän selityksen kera."
     },
     "goals": {
-      "title": "Elämän suunnittelu ja tavoitteiden asettaminen",
+      "title": "Elämän suunnittelu & tavoitteiden asettaminen",
       "desc": "Löydä kutsumuksesi, aseta konkreettisia tavoitteita ja selvitä, mitä Jumalalla voisi olla mielessäsi."
     },
     "self": {
@@ -48,45 +48,45 @@
       "desc": "Tunnista lahjasi, vahvuutesi ja kaipauksesi – ja mitä sydämesi todella tarvitsee."
     },
     "faith": {
-      "title": "Uskonpolku ja Kristuksen löytäminen",
-      "desc": "Olitpa etsivä, epäilevä tai syventävä – kumppanisi kulkee kanssasi henkilökohtaisella polullasi."
+      "title": "Uskon tie & Kristuksen löytäminen",
+      "desc": "Olitpa etsivä, epäilevä tai syventävä – kumppanisiisi opastaa sinua henkilökohtaisella tielläsi."
     },
     "daily": {
-      "title": "Päivittäiset impulssit ja kirkkovuosi",
-      "desc": "Aloita päiväsi impulsseilla ja anna itsesi kulkea adventin, paastonajan ja juhlapyhien läpi."
+      "title": "Päivittäiset impulssit & kirkkovuosi",
+      "desc": "Aloita päiväsi impulsseilla ja anna itsesi tulla opastetuksi adventin, paastonajan ja juhlapyhien läpi."
     },
     "groups": {
-      "title": "Ryhmät ja seurakunnat",
-      "desc": "Täydellinen raamattupiireille, seurakuntaryhmille ja yhteisöllisille hartauksille."
+      "title": "Ryhmät & seurakunnat",
+      "desc": "Täydellinen raamattupiireille, seurakuntaryhmille ja yhteisille hartauksille."
     }
   },
   "coaching": {
     "badge": "Metodologia",
-    "title": "Ei vain chat – aitoa kumppanuutta",
-    "subtitle": "Kumppanisi yhdistää Raamatun viisauden todistettuihin valmennusmenetelmiin ja positiiviseen psykologiaan.",
-    "journeyTitle": "Henkilökohtainen kumppanuus",
-    "journeyDesc": "Kumppanisi kulkee kanssasi niin kauan kuin haluat – vapaassa keskustelussa tai valinnaisella 21 päivän rakenteella.",
+    "title": "Ei vain chatbot – aitoa ohjausta",
+    "subtitle": "Kumppanisiisi yhdistää raamatullisen viisauden todistettuihin valmennusmenetelmiin ja positiiviseen psykologiaan.",
+    "journeyTitle": "Henkilökohtainen ohjaus",
+    "journeyDesc": "Kumppanisiisi opastaa sinua niin kauan kuin haluat – vapaassa keskustelussa tai valinnaisella 21 päivän rakenteella.",
     "week1": "Viikko 1: Saapuminen",
     "week1Desc": "Rakenna luottamusta, kuuntele, ymmärrä tilannettasi. Missä olet? Mikä sinua askarruttaa?",
     "week2": "Viikko 2: Syventäminen",
-    "week2Desc": "Tunnista kaavoja, selvennä toiveita, syvennä Raamatun impulsseja. Mitä todella haluat?",
+    "week2Desc": "Tunnista malleja, selvennä toiveita, syvennä raamatullisia impulsseja. Mitä todella haluat?",
     "week3": "Viikko 3: Toiminta",
     "week3Desc": "Tee konkreettisia askelia, muotoile tavoitteita, käynnistä muutos. Mikä on seuraava askeleesi?",
     "openQuestionsTitle": "Avoimia kysymyksiä nopeiden vastausten sijaan",
-    "openQuestionsDesc": "Kumppanisi ei anna sinulle halpoja neuvoja. Sen sijaan hän esittää kysymyksiä, jotka todella merkitsevät:",
+    "openQuestionsDesc": "Kumppanisiisi ei anna sinulle halpoja neuvoja. Sen sijaan se esittää kysymyksiä, jotka todella merkitsevät:",
     "openQ1": "«Mitä tämän toiveen takana oikeastaan on?»",
     "openQ2": "«Mistä huomaisit, että jokin on muuttunut?»",
     "openQ3": "«Mikä olisi ensimmäinen pieni askel?»",
     "honestTitle": "Rehellinen myrkyllisen positiivisuuden sijaan",
-    "honestDesc": "Ei «Kyllä se siitä!» eikä kaunistelua. Kumppanisi on empaattinen JA rehellinen:",
-    "honest1": "Nimeää myös epämiellyttäviä Raamatunkohtia",
+    "honestDesc": "Ei «Kyllä se siitä!» eikä kaunistelua. Kumppanisiisi on empaattinen JA rehellinen:",
+    "honest1": "Nimeää myös epämukavat raamatunkohdat",
     "honest2": "Haastaa itsetutkiskeluun",
     "honest3": "Erottaa lohdutuksen ja torjunnan",
     "scienceTitle": "Tieteellisesti perusteltu",
     "perma": {
       "name": "PERMA-malli",
       "author": "Seligman",
-      "desc": "Positiiviset tunteet, merkitys ja kasvu"
+      "desc": "Positiiviset tunteet, merkitys & kasvu"
     },
     "logo": {
       "name": "Logoterapia",
@@ -101,9 +101,9 @@
     "forgiveness": {
       "name": "Anteeksianto",
       "author": "Worthington",
-      "desc": "REACH-malli anteeksiantoprosesseille"
+      "desc": "REACH-malli anteeksiantoprosesseihin"
     },
-    "renameTip": "💡 Voit antaa kumppanillesi oman nimen – jotta hänestä tulee todella <strong>sinun</strong> kumppanisi."
+    "renameTip": "💡 Voit antaa kumppanisiillesi oman nimen – jotta siitä tulee todella <strong>sinun</strong> kumppanisi."
   },
   "discover": {
     "badge": "Uteliaille",
@@ -115,119 +115,119 @@
     },
     "search": {
       "title": "Etsitkö?",
-      "text": "Ehkä et edes tiedä tarkalleen, mitä. Se on täysin okei. Kumppanisi auttaa sinua esittämään oikeat kysymykset – sen sijaan, että antaisi nopeita vastauksia."
+      "text": "Ehkä et edes tiedä tarkalleen, mitä. Se on täysin ok. Kumppanisiisi auttaa sinua esittämään oikeat kysymykset – sen sijaan, että antaisi nopeita vastauksia."
     },
     "deepen": {
       "title": "Haluatko syventää?",
-      "text": "Uskot jo, mutta haluat ymmärtää enemmän? Tutustu Raamatun syvyyteen – historiallisesti, henkilökohtaisesti, yllättävän relevantisti."
+      "text": "Uskotko jo, mutta haluat ymmärtää enemmän? Tutustu Raamatun syvyyteen – historiallisesti, henkilökohtaisesti, yllättävän relevantisti."
     },
     "quote": "«Koluttakaa, niin teille avataan.»",
     "quoteRef": "– Matteus 7:7",
-    "quoteText": "Sveitsissä emme puhu paljon uskosta. Sen ei tarvitsekaan olla niin. Mutta kysymyksiä esittävät ansaitsevat rehellisiä vastauksia – ilman saarnaa, ilman jäsenyyttä, ilman taka-ajatuksia."
+    "quoteText": "Sveitsissä emme puhu paljon uskosta. Sitä ei tarvitsekaan. Mutta ne, joilla on kysyttävää, ansaitsevat rehellisiä vastauksia – ilman saarnaa, ilman jäsenyyttä, ilman taka-ajatuksia."
   },
   "subscribe": {
     "title": "Päivittäinen Raamatun impulssi",
-    "subtitle": "Joka aamu klo 7:00 – jae, ajatus, hyvä alku.",
+    "subtitle": "Joka aamu klo 07:00 – jae, ajatus, hyvä alku.",
     "firstName": "Etunimesi",
     "firstNameOptional": "(valinnainen)",
-    "firstNamePlaceholder": "esim. Tuomas",
+    "firstNamePlaceholder": "esim. Thomas",
     "firstNameHint": "Jotta voimme tervehtiä sinua henkilökohtaisesti.",
     "channelLabel": "Miten haluat vastaanottaa impulssin?",
-    "push": "Ilmoitus",
-    "pushDesc": "Vastaanota suoraan selaimeen",
+    "push": "Push",
+    "pushDesc": "Selaimen ilmoitus",
     "telegram": "Telegram",
     "telegramDesc": "Viesti Telegramin kautta",
     "sms": "SMS",
     "smsDesc": "SMS puhelimeesi",
-    "phoneLabel": "Matkapuhelinnumero",
-    "phonePlaceholder": "+358 40 123 4567",
-    "phoneHint": "Maakoodilla, esim. +358 Suomelle.",
-    "telegramHint": "Napsauta «Tilaa» – sinut ohjataan Telegramiin. Käynnistä kumppanisi siellä ja kirjoita <strong>/daily</strong> aktivoidaksesi päivittäisen impulssin.",
-    "pushHint": "Napsautettuasi «Tilaa» selaimesi pyytää lupaa. Salli ilmoitukset saadaksesi impulssin.",
-    "subscribeButton": "Tilaa inspiraatio",
+    "phoneLabel": "Puhelinnumero",
+    "phonePlaceholder": "+41 79 123 45 67",
+    "phoneHint": "Maakoodilla, esim. +41 Sveitsille.",
+    "telegramHint": "Napsauta «Tilaa» – sinut ohjataan Telegramiin. Käynnistä botti siellä ja kirjoita <strong>/daily</strong> aktivoidaksesi päivittäisen impulssin.",
+    "pushHint": "Napsautettuasi «Tilaa» selaimesi pyytää lupaa ilmoituksiin. Salli se saadaksesi impulssin.",
     "submit": "Tilaa",
     "submitting": "Tilataan...",
-    "footNote": "Ei vaadi kirjautumista. Peruutettavissa milloin tahansa.",
+    "footNote": "Ei vaadi kirjautumista. Voit peruuttaa tilauksen milloin tahansa.",
     "successTitle": "Olet tilannut! 🙏",
-    "successText": "Huomisesta alkaen klo 7:00 saat henkilökohtaisen Raamatun impulssin.",
+    "successText": "Huomisesta alkaen klo 07:00 saat henkilökohtaisen Raamatun impulssisi.",
     "toastTelegram": "Telegram avattu 🙏",
-    "toastTelegramDesc": "Käynnistä kumppanisi ja kirjoita /daily aktivoidaksesi päivittäisen impulssin.",
+    "toastTelegramDesc": "Käynnistä botti ja kirjoita /daily aktivoidaksesi päivittäisen impulssin.",
     "toastSuccess": "Tilattu! 🙏",
     "toastSuccessDesc": "Saat päivittäisen impulssisi huomisesta alkaen.",
-    "toastPushPreview": "Ilmoitukset eivät näy esikatselussa",
-    "toastPushPreviewDesc": "Ilmoitukset toimivat vain julkaistulla sivulla.",
+    "toastPushPreview": "Push-tilaus ei esikatselussa",
+    "toastPushPreviewDesc": "Push-ilmoitukset toimivat vain julkaistulla sivulla.",
     "toastNotSupported": "Ei tuettu",
-    "toastNotSupportedDesc": "Selaimesi ei tue selaimen ilmoituksia.",
+    "toastNotSupportedDesc": "Selaimesi ei tue push-ilmoituksia.",
     "toastPermDenied": "Lupa evätty",
     "toastPermDeniedDesc": "Salli ilmoitukset selaimesi asetuksista.",
     "toastError": "Virhe",
     "toastErrorDesc": "Yritä myöhemmin uudelleen.",
+    "subscribeButton": "Tilaa Inspo",
     "manage": "Hallinnoi tilausta",
     "switchChannel": "Vaihda kanavaa:",
     "unsubscribe": "Peruuta tilaus",
     "unsubscribedTitle": "Tilaus peruutettu",
-    "unsubscribedDesc": "Et saa enää päivittäistä inspiraatiota."
+    "unsubscribedDesc": "Et enää saa päivittäistä inspiraatiota."
   },
   "faq": {
     "badge": "Usein kysytyt kysymykset",
-    "title": "Mitä sinun tulee tietää kumppanistasi",
-    "subtitle": "Läpinäkyvyys on meille tärkeää – erityisesti teologeja, sielunhoitajia ja kriittisiä mieliä kohtaan.",
-    "q1": "Mitä kumppanisi erottaa ChatGPT:stä ja vastaavista?",
+    "title": "Mitä sinun tulisi tietää kumppanisiistasi",
+    "subtitle": "Läpinäkyvyys on meille tärkeää – erityisesti teologien, sielunhoitajien ja kriittisten mielien suhteen.",
+    "q1": "Miten kumppanisiisi eroaa ChatGPT:stä & kumppaneista?",
     "q1Generic": "Yleiset chatbotit:",
     "q1GenericItems": [
       "Pinnallisia Raamatun lainauksia ilman kontekstia",
-      "Ei sielunhoidollisia suojauksia",
-      "Välttää epämiellyttäviä tekstejä",
-      "Ei kriisitoimenpiteitä",
+      "Ei sielunhoidollisia suojakaiteita",
+      "Välttää epämukavia tekstejä",
+      "Ei kriisi-interventiota",
       "Sekoittaa Raamatun esoteriaan",
       "Ei lisäkysymyksiä – vain vahvistusta"
     ],
     "q1Bot": "BibleBot.Life:",
     "q1BotItems": [
-      "5 tunnustettua käännöstä – myös epämiellyttäviä kohtia",
-      "Suojaukset JA haastava kumppanuus",
+      "5 hyväksyttyä käännöstä – myös epämukavat kohdat",
+      "Suojakaiteet JA haastava ohjaus",
       "Lisäkysymyksiä itsetutkiskeluun",
-      "Kriisiviittaukset (Puh. 112)",
+      "Kriisiviittaukset (puh. 143 / 147)",
       "Yksinomaan kristillinen teologia",
       "Edistää kriittistä ajattelua uskon kypsyytenä"
     ],
-    "q2": "Mitkä Raamatun käännökset ovat käytössä?",
-    "q2Intro": "Kumppanisi työskentelee ekumeenisesti merkittävimpien saksankielisten Raamatun painosten kanssa:",
-    "q2Outro": "Kaikki Raamatunkohdat annetaan lähdeviitteineen ja historiallisessa kontekstissa.",
+    "q2": "Mitä Raamatun käännöksiä on käytössä?",
+    "q2Intro": "Kumppanisiisi toimii ekumeenisesti merkittävimpien saksankielisten Raamatun painosten kanssa:",
+    "q2Outro": "Kaikki Raamatun kohdat annetaan lähdeviitteen ja historiallisen kontekstin kera.",
+    "q3": "Mitä tieteellisiä perusteita sen takana on?",
+    "q3Intro": "Ohjaus perustuu positiivisen psykologian vertaisarvioituun tutkimukseen:",
+    "q4": "Miten kumppanisiisi varmistaa sielunhoidollisen turvallisuuden?",
+    "q4Items": [
+      "Itsemurha-ajatusten tai kriisien yhteydessä → välitön ohjaus Dargebotene Handiin (143) ja Pro Juventuteen (147)",
+      "Ei psykologisia tai lääketieteellisiä diagnooseja",
+      "Kunnioitus ilman mielivaltaisuutta – selkeät raamatulliset kannat otetaan",
+      "Empatia JA rehellisyys – myös epämukavista asioista puhutaan",
+      "Lisäkysymyksiä itsetutkiskeluun halvan vahvistuksen sijaan",
+      "Ei myrkyllistä positiivisuutta – aitoa, rehellistä ohjausta",
+      "Nimeää jännitteet ja vaikeat tekstit avoimesti"
+    ],
+    "q5": "Onko kumppanisiisi tunnustuksellisesti sidottu?",
+    "q5Answer": "Ei. Kumppanisiisi on ekumeenisesti suuntautunut ja kunnioittaa yhtä lailla reformoituja, katolisia, vapaakirkollisia ja muita kristillisiä perinteitä. Tunnustuksellisesti erilaisten tulkintojen yhteydessä esitetään läpinäkyvästi eri näkökulmia – suosimatta yhtäkään perinnettä.",
+    "q6": "Korvaako kumppanisiisi sielunhoidon tai terapian?",
+    "q6Answer": "Ei. Kumppanisiisi on digitaalinen apuväline henkilökohtaiseen Raamatun lukemiseen ja pohdintaan. Se ei korvaa ammattimaista sielunhoitoa, teologista neuvontaa tai psykologista terapiaa. Vakavissa kriiseissä kumppanisiisi ohjaa aina päteviin yhteyspisteisiin.",
+    "q7": "Eikö kumppanisiisi ole vain «hyvän olon botti»?",
+    "q7Answer": "Ei. Kumppanisiisi lohduttaa, missä lohdutusta tarvitaan – mutta se myös haastaa. Hengellinen kasvu vaatii kitkaa. Kumppanisiisi esittää epämukavia lisäkysymyksiä, nimeää vaikeita Raamatun tekstejä (Job, valituspsalmit, profeetallinen kritiikki) eikä pelkää aiheita kuten oikeudenmukaisuus, parannus ja vastuu. Profeetallinen perinne ei ole koskaan ollut mukava – eikä kumppanisiisikaan.",
+    "q8": "Kuka kumppanisiisi takana on ja miten se rahoitetaan?",
+    "q8Answer": "BibleBot.Life on yksityinen, ei-kaupallinen projekti. Sitä ylläpidetään vapaaehtoisvoimin ja rahoitetaan yksinomaan vapaaehtoisilla lahjoituksilla. Ei ole mainoksia, ei tietojen myyntiä eikä maksullisia ominaisuuksia. Kaikki lahjoitukset menevät suoraan juoksevien kulujen (infrastruktuuri, hosting, kehitys) kattamiseen. Koska kumppanisi toimii yksityisenä projektina, lahjoitukset eivät ole verovähennyskelpoisia.",
+    "q9": "Miten kumppanisiisi käsittelee tietojani?",
+    "q9Answer": "Kumppanisiisi ei tallenna henkilötietoja eikä chat-historiaa. Jokainen keskustelu on anonyymi. Ei ole kirjautumista, ei seurantaa eikä tietojen luovuttamista kolmansille osapuolille. Käyttö on täysin anonyymi.",
     "tradition": {
       "reformed": "Reformoitu",
       "evangelical": "Evankelinen",
       "catholic": "Katolinen",
-      "freeChurch": "Vapaakirkollinen",
-      "literal": "Sanatarkka"
-    },
-    "q3": "Mitkä tieteelliset perusteet ovat taustalla?",
-    "q3Intro": "Kumppanuus perustuu positiivisen psykologian vertaisarvioituun tutkimukseen:",
-    "q4": "Miten kumppanisi varmistaa sielunhoidollisen turvallisuuden?",
-    "q4Items": [
-      "Itsemurha-ajatusten tai kriisien yhteydessä → välitön ohjaus kriisipuhelimeen (esim. Mieli ry)",
-      "Ei psykologisia tai lääketieteellisiä diagnooseja",
-      "Kunnioitus ilman mielivaltaisuutta – selkeät Raamatun mukaiset kannat otetaan",
-      "Empatia JA rehellisyys – myös epämiellyttävät asiat otetaan puheeksi",
-      "Lisäkysymyksiä itsetutkiskeluun halvan vahvistuksen sijaan",
-      "Ei myrkyllistä positiivisuutta – aitoa, rehellistä kumppanuutta",
-      "Nimeää jännitteet ja vaikeat tekstit avoimesti"
-    ],
-    "q5": "Onko kumppanisi sidottu tiettyyn tunnustukseen?",
-    "q5Answer": "Ei. Kumppanisi on ekumeenisesti suuntautunut ja kunnioittaa reformoituja, katolisia, vapaakirkollisia ja muita kristillisiä perinteitä yhtä lailla. Konfessionaalisesti erilaisten tulkintojen yhteydessä esitetään eri näkökulmia läpinäkyvästi – suosimatta yhtään perinnettä.",
-    "q6": "Korvaako kumppanisi sielunhoidon tai terapian?",
-    "q6Answer": "Ei. Kumppanisi on digitaalinen apuväline henkilökohtaiseen Raamatun lukemiseen ja pohdintaan. Se ei korvaa ammatillista sielunhoitoa, teologista neuvontaa tai psykologista terapiaa. Vakavissa kriiseissä kumppanisi ohjaa aina päteviin avunantajiin.",
-    "q7": "Eikö kumppanisi ole vain «hyvän olon työkalu»?",
-    "q7Answer": "Ei. Kumppanisi lohduttaa, missä lohdutusta tarvitaan – mutta se myös haastaa. Hengellinen kasvu tarvitsee kitkaa. Kumppanisi esittää epämiellyttäviä lisäkysymyksiä, nimeää vaikeita Raamatun tekstejä (Job, valituspsalmit, profeetallinen kritiikki) eikä pelkää aiheita kuten oikeudenmukaisuus, parannus ja vastuu. Profeetallinen perinne ei ole koskaan ollut mukava – eikä tämä hyvän olon työkalukaan.",
-    "q8": "Kuka on kumppanisi takana ja miten se rahoitetaan?",
-    "q8Answer": "BibleBot.Life on yksityinen, ei-kaupallinen projekti. Sitä ylläpidetään vapaaehtoisvoimin ja rahoitetaan yksinomaan vapaaehtoisilla lahjoituksilla. Ei ole mainoksia, ei tietojen myyntiä eikä maksullisia ominaisuuksia. Kaikki lahjoitukset menevät suoraan juoksevien kulujen (infrastruktuuri, hosting, kehitys) kattamiseen. Koska BibleBot toimii yksityisenä projektina, lahjoitukset eivät ole verovähennyskelpoisia.",
-    "q9": "Miten kumppanisi käsittelee tietojani?",
-    "q9Answer": "Kumppanisi ei tallenna henkilötietoja eikä chat-historiaa. Jokainen keskustelu on anonyymi. Ei ole kirjautumista, ei seurantaa eikä tietojen luovuttamista kolmansille osapuolille. Käyttö on täysin anonyymiä."
+      "freeChurch": "Vapaakirkko",
+      "literal": "Sana sanalta"
+    }
   },
   "donate": {
-    "badge": "Tue kumppaniasi",
-    "title": "Auta pitämään kumppanisi ilmaisena",
-    "subtitle": "Kumppanisi on sydänprojekti – ilman mainoksia, ilman tilausta, ilman piilokustannuksia. Jotta se pysyy sellaisena, olen riippuvainen vapaaehtoisista lahjoituksista. Jokainen panos auttaa kattamaan toiminnan ja infrastruktuurin juoksevat kulut.",
+    "badge": "Tue kumppanisiiasi",
+    "title": "Auta pitämään kumppanisiisi ilmaisena",
+    "subtitle": "BibleBot.Lifeisi on sydänprojekti – ilman mainoksia, ilman tilausta, ilman piilokustannuksia. Jotta se pysyisi sellaisena, olen riippuvainen vapaaehtoisista lahjoituksista. Jokainen panos auttaa kattamaan toiminnan ja infrastruktuurin juoksevat kulut.",
     "bankTitle": "Lahjoita pankkisiirrolla",
     "bankSubtitle": "Jokainen summa on tärkeä – suuri kiitos! 🙏",
     "recipient": "Vastaanottaja",
@@ -236,37 +236,32 @@
     "purposeValue": "Lahjoitus BibleBot.Life",
     "note": "BibleBot.Life toimii yksityisenä projektina. Lahjoitukset eivät siksi ole verovähennyskelpoisia.",
     "creditCard": "Tue luottokortilla",
-    "twint": "Tue Twintillä",
-    "secureNote": "Turvallinen maksu · Ei tilausansaa · Peruutettavissa milloin tahansa"
-  },
-  "social": {
-    "conversations": "Keskusteluja käyty",
-    "languages": "Kieliä",
-    "bibles": "Raamatun käännöksiä"
+    "secureNote": "Turvallinen maksu · Ei tilausansaa · Peruutettavissa milloin tahansa",
+    "twint": "Tue Twintillä"
   },
   "refer": {
-    "badge": "Jaa Jumalan sanaa",
-    "title": "Suosittele kumppaniasi eteenpäin",
-    "subtitle": "Tunnetko jonkun, joka tarvitsee rohkaisua? Jaa kumppanisi – yksi viesti voi vaikuttaa paljon.",
+    "badge": "Jumalan sanan jakaminen",
+    "title": "Suosittele kumppanisiia eteenpäin",
+    "subtitle": "Tunnetko jonkun, joka tarvitsee juuri nyt rohkaisua? Jaa kumppanisi – yksi viesti voi tehdä paljon.",
     "whatsapp": "Jaa WhatsAppissa",
-    "whatsappMsg": "Hei, halusin näyttää sinulle jotain – ilmainen Raamatun kumppani, joka tuntee Raamatun ja esittää todella hyviä kysymyksiä. Ei kirjautumista, anonyymi, rehellinen. Kokeile: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Hei, halusin näyttää sinulle BibleBot.Lifein – ilmaisen Raamatun kumppanin, joka tuntee Raamatun ja esittää todella hyviä kysymyksiä. Ei kirjautumista, anonyymi, rehellinen. Kokeile: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Jaa Telegramissa",
-    "telegramMsg": "Hei, tunnetko jo BibleBot.Life:n? Ilmainen henkilökohtainen Raamatun kumppani – rehellinen, anonyymi, ilman kirjautumista. Katso: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
-    "email": "Jaa sähköpostitse",
+    "telegramMsg": "Hei, tunnetko jo BibleBot.Lifein? Ilmainen henkilökohtainen Raamatun kumppani – rehellinen, anonyymi, ilman kirjautumista. Katso: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "email": "Jaa sähköpostilla",
     "emailSubject": "Tämä voisi kiinnostaa sinua: BibleBot.Life",
-    "emailBody": "Hei!\n\nHaluaisin näyttää sinulle BibleBotin – ilmaisen Raamatun kumppanin, joka todella tuntee Raamatun. Ei vaadi rekisteröitymistä, täysin anonyymi.\n\nHän esittää hyviä lisäkysymyksiä, selittää Raamatunkohtia kontekstissa ja kulkee kanssasi rehellisesti – myös vaikeissa aiheissa.\n\nKokeile: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nTerveisin",
+    "emailBody": "Hei!\n\nHaluaisin näyttää sinulle BibleBot.Lifein – ilmaisen Raamatun kumppanin, joka todella tuntee Raamatun. Ei vaadi rekisteröitymistä, täysin anonyymi.\n\nSe esittää hyviä lisäkysymyksiä, selittää Raamatun kohtia kontekstissa ja opastaa sinua rehellisesti – myös vaikeissa aiheissa.\n\nKokeile: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nTerveisin",
     "copy": "Kopioi linkki",
     "copied": "Linkki kopioitu! 📋",
     "qr": "Tai näytä vain tämä QR-koodi:"
   },
   "cta": {
     "title": "Sinun ei tarvitse käydä tätä läpi yksin",
-    "subtitle": "Kirjoita kumppanillesi, mikä sinua askarruttaa. Ei kirjautumista, ei kustannuksia, ei tuomitsemista – vain rehellistä kumppanuutta ja Raamatun viisautta.",
+    "subtitle": "Kirjoita kumppanisiillesi, mikä sinua askarruttaa. Ei kirjautumista, ei kustannuksia, ei tuomiota – vain rehellistä ohjausta ja Raamatun viisautta.",
     "button": "Aloita keskustelu nyt"
   },
   "footer": {
     "tagline": "Henkilökohtainen kumppanisi — Raamatun syvyydellä, ilman ennakkotietoja.",
-    "disclaimer": "BibleBot.Life on digitaalinen apuväline eikä korvaa ammatillista sielunhoitoa, teologista neuvontaa tai psykologista terapiaa. Akuuteissa kriiseissä ota yhteyttä kriisipuhelimeen (esim. Mieli ry).",
+    "disclaimer": "BibleBot.Life on digitaalinen apuväline eikä korvaa ammattimaista sielunhoitoa, teologista neuvontaa tai psykologista terapiaa. Akuuteissa kriiseissä ota yhteyttä Dargebotene Handiin (puh. 143) tai Pro Juventuteen (puh. 147).",
     "impressum": "Julkaisutiedot",
     "notes": "Huomautuksia",
     "private": "Yksityinen, ei-kaupallinen projekti",
@@ -278,8 +273,8 @@
     "forCelebrants": "Sielunhoitajille ja valmentajille"
   },
   "chat": {
-    "welcome": "Mukavaa, että olet täällä 🤗\n\nOlen kumppanisi – henkilökohtainen kumppanisi Raamatun, hyvien kysymysten ja konkreettisten impulssien kanssa. Ei paineita, ei arvostelua.\n\nVoit kysyä minulta mitä tahansa – tai vain kertoa, mikä sinua juuri nyt askarruttaa. 💛",
-    "journeyOffer": "💡 **Vinkki:** Tarjoan myös **21 päivän kumppanuutta** – 3 viikkoa päivittäisiä impulsseja, pohdintoja ja konkreettisia askelia. Täysin omassa tahdissasi.\n\nHaluatko kokeilla sitä?",
+    "welcome": "Mukava nähdä sinua 🤗\n\nOlen kumppanisiisi – henkilökohtainen kumppanisi Raamatun, hyvien kysymysten ja konkreettisten impulssien kanssa. Ei paineita, ei arvostelua.\n\nVoit kysyä minulta mitä tahansa – tai vain kertoa, mikä sinua juuri nyt askarruttaa. 💛",
+    "journeyOffer": "💡 **Vinkki:** Tarjoan myös **21 päivän ohjausta** – 3 viikkoa päivittäisiä impulsseja, pohdintoja ja konkreettisia askelia. Täysin omaan tahtiisi.\n\nHaluaisitko kokeilla sitä?",
     "suggestion1": "Tarvitsen juuri nyt rakentavan sanan",
     "suggestion2": "Mitä Raamattu sanoo, kun tuntee olonsa epävarmaksi?",
     "suggestion3": "Haluan selvittää, mitä todella haluan",
@@ -294,36 +289,36 @@
     "deepening": "Syventäminen",
     "acting": "Toiminta",
     "renameTip": "Anna minulle nimi ✨",
-    "namePlaceholder": "esim. Eli, Mirjam…",
-    "previousChats": "{{count}} aikaisempaa keskustelua",
+    "namePlaceholder": "esim. Eli, Miriam…",
     "changeName": "Vaihda nimi",
-    "placeholder": "Kirjoita vain…",
-    "startVoice": "Aloita äänisyöte",
+    "placeholder": "Kirjoita vain...",
+    "startVoice": "Aloita puheentunnistus",
     "stopVoice": "Pysäytä tallennus",
-    "noVoice": "Selaimesi ei tue äänisyötettä.",
+    "noVoice": "Selaimesi ei tue puheentunnistusta.",
     "writing": "kirjoittaa...",
-    "shieldBadge": "Ei kirjautumista · Ei tuomitsemista · Lainaukset tarkistettu",
-    "loginHint": "Kirjaudu sisään säilyttääksesi keskustelut kaikilla laitteilla",
+    "shieldBadge": "Ei kirjautumista · Ei tuomiota · Lainaukset tarkistettu",
     "journeyStart": "Kyllä, aloita ✨",
     "journeyLater": "Ehkä myöhemmin",
-    "journeyStartMsg": "Kyllä, haluan aloittaa 21 päivän kumppanuuden!",
+    "journeyStartMsg": "Kyllä, haluan aloittaa 21 päivän ohjauksen!",
     "qaChecking": "Lainauksia tarkistetaan...",
     "qaIssue": "{{count}} huomautus lainauksista",
     "qaIssue_plural": "{{count}} huomautusta lainauksista",
     "qaOk": "{{count}} lainaus tarkistettu ✓",
     "qaOk_plural": "{{count}} lainausta tarkistettu ✓",
     "qaWarning": "⚠️ Huomautuksia tarkkuudesta:",
-    "suggestionsLoading": "Ladataan ehdotuksia…",
     "errorTooMany": "Liian monta pyyntöä – odota hetki.",
-    "errorCredits": "Kiintiö ylittynyt – yritä myöhemmin.",
+    "errorCredits": "Kiintiö käytetty – yritä myöhemmin uudelleen.",
     "errorConnect": "Virhe yhdistettäessä.",
     "errorTitle": "Virhe",
     "errorConnection": "ei voitu tavoittaa.",
     "errorNoStream": "Ei virtaa",
-    "seniorMode": "Senioritila (suurempi fontti)"
+    "seniorMode": "Senioritila (suurempi fontti)",
+    "loginHint": "Kirjaudu sisään pitääksesi keskustelut tallessa eri laitteilla",
+    "previousChats": "{{count}} edellistä keskustelua",
+    "suggestionsLoading": "Ladataan ehdotuksia…"
   },
   "install": {
-    "title": "Asenna BibleBot",
+    "title": "Asenna BibleBot.Life",
     "androidDesc": "Nopea pääsy suoraan aloitusnäytöltä",
     "iosDesc": "Napauta «Jaa» → «Lisää Koti-valikkoon»",
     "button": "Asenna",
@@ -334,11 +329,11 @@
     "shareVia": "Jaa kautta",
     "copied": "Kopioitu! 📋",
     "copiedShort": "Kopioitu!",
-    "copiedDesc": "Teksti on kopioitu leikepöydälle. Jaa se nyt WhatsAppissa, Instagramissa tai missä haluat!",
+    "copiedDesc": "Teksti kopioitu leikepöydälle. Jaa se nyt WhatsAppissa, Instagramissa tai missä haluat!",
     "copyLink": "Kopioi teksti",
     "error": "Kopiointi epäonnistui",
-    "impulseTitle": "BibleBot – Päivän impulssi",
-    "chatTitle": "BibleBot – Päivän ajatus",
+    "impulseTitle": "Kumppanisi – Päivän impulssi",
+    "chatTitle": "Kumppanisi – Päivän ajatus",
     "createImage": "Luo kuva ✨",
     "generating": "Luodaan…",
     "imageReady": "Kuvasi on valmis jaettavaksi!",
@@ -348,7 +343,7 @@
     "imageErrorDesc": "Kuvaa ei voitu luoda. Yritä myöhemmin uudelleen.",
     "imageSaved": "Teksti kopioitu! 📋",
     "imageSavedDesc": "Tallenna kuva ja jaa se kopioidun tekstin kanssa Instagramissa, WhatsAppissa tai missä haluat!",
-    "clipboardFallback": "Teksti kopioitu – liitä se julkaistessasi!",
+    "clipboardFallback": "Teksti kopioitu — liitä se julkaistaessa!",
     "recommendedBy": "Suosittelee {{church}}",
     "hashtagBible": "#Raamattu"
   },
@@ -364,160 +359,65 @@
     "back": "Takaisin etusivulle",
     "title": "Tietosuojakäytäntö"
   },
-  "lang": {
-    "de": "Saksa",
-    "en": "Englanti",
-    "fr": "Ranska",
-    "es": "Espanja",
-    "it": "Italia",
-    "pl": "Puola",
-    "cs": "Tšekki",
-    "pt": "Portugali",
-    "nl": "Hollanti",
-    "ro": "Romania",
-    "da": "Tanska",
-    "no": "Norja",
-    "sv": "Ruotsi",
-    "fi": "Suomi",
-    "el": "Kreikka",
-    "hr": "Kroatia",
-    "sr": "Serbia",
-    "hu": "Unkari",
-    "sk": "Slovakki",
-    "bg": "Bulgaria",
-    "ru": "Venäjä",
-    "uk": "Ukraina",
-    "ka": "Georgia",
-    "hy": "Armenia",
-    "ko": "Korea",
-    "tl": "Filippiiniläinen",
-    "id": "Indonesia",
-    "vi": "Vietnam",
-    "zh": "Kiina",
-    "sw": "Swahili",
-    "am": "Amhara",
-    "af": "Afrikaans",
-    "yo": "Joruba",
-    "ig": "Igbo",
-    "zu": "Zulu",
-    "ht": "Haiti"
-  },
   "tiles": {
     "sectionTitle": "Mikä sinua liikuttaa?",
-    "sectionSubtitle": "Valitse aihe — BibleBot kulkee kanssasi",
-    "showMore": "lisää",
+    "sectionSubtitle": "Valitse aihe — kumppanisi opastaa sinua",
     "baptism": {
       "title": "Löydä kastejae",
       "desc": "Täydellinen jae lapsellesi",
       "prompt": "Auta minua löytämään sopiva kastejae. Millainen lapsi hän on ja mitä vanhemmat toivovat?",
-      "prompt_v1": "Mitä kaste oikeastaan tarkoittaa?",
+      "prompt_v1": "Mitä kaste oikeasti tarkoittaa?",
       "prompt_v2": "Kerro minulle kasteesta Raamatussa – yllätä minut!",
       "prompt_v3": "Miksi ihmiset kastetaan?"
     },
     "condolence": {
       "title": "Lohduttavat sanat",
-      "desc": "Osanotto ja jäähyväiset",
+      "desc": "Osanotto & jäähyväiset",
       "prompt": "Tarvitsen lohduttavia sanoja surukorttiin. Voitko auttaa minua muotoilemaan jotain sopivaa?"
     },
     "wedding": {
       "title": "Hääjae",
-      "desc": "Raamatun sanat rakkaudellenne",
-      "prompt": "Etsimme kaunista raamatullista jaetta häihimme. Mitkä Raamatunkohdat sopivat rakkauteen ja parisuhteeseen?"
+      "desc": "Raamatullisia sanoja rakkaudellenne",
+      "prompt": "Etsimme kaunista raamatullista jaetta häihimme. Mitkä Raamatun kohdat sopivat rakkauteen ja parisuhteeseen?"
     },
     "anxiety": {
-      "title": "Ahdistus ja huolet",
+      "title": "Pelko & huolet",
       "desc": "Löydä rohkeutta vaikeina aikoina",
-      "prompt": "Kamppailen juuri nyt ahdistuksen ja huolien kanssa. Mitä Raamattu sanoo siitä? Onko jakeita, jotka antavat rohkeutta?",
-      "prompt_v1": "Olen peloissani. Mitä Raamattu sanoo pelosta?",
-      "prompt_v2": "Miten usko voi auttaa minua ahdistuksessa?",
-      "prompt_v3": "Millä Raamatun henkilöillä oli myös pelkoja?"
+      "prompt": "Kamppailen juuri nyt pelkojen ja huolien kanssa. Mitä Raamattu sanoo siitä? Onko jakeita, jotka antavat rohkeutta?",
+      "prompt_v1": "Minulla on ahdistusta. Mitä Raamattu sanoo ahdistuksesta?",
+      "prompt_v2": "Miten usko voi auttaa minua ahdistuksen kanssa?",
+      "prompt_v3": "Mitkä Raamatun henkilöt kokivat myös ahdistusta?"
     },
     "confession": {
       "title": "Tunnustus",
-      "desc": "Jumala antaa anteeksi – sano se ääneen",
-      "prompt": "Haluan päästä eroon jostain, mikä minua painaa. Mitä Raamattu sanoo anteeksiannosta ja uudesta alusta?"
+      "desc": "Jumala antaa anteeksi — sano se ääneen",
+      "prompt": "Haluan päästä eroon jostakin, mikä painaa mieltäni. Mitä Raamattu sanoo anteeksiannosta ja uudesta alusta?"
     },
     "heartbreak": {
       "title": "Sydänsuru",
       "desc": "Mitä Raamattu sanoo sydänsurusta",
       "prompt": "Sydämeni on särkynyt. Mitä Raamattu sanoo sydänsurusta ja miten löytää toivoa uudelleen?",
-      "prompt_v1": "Sydämeni on särkynyt. Mitä Raamattu sanoo siitä?",
-      "prompt_v2": "Miten käsittelen sydänsurua – onko Raamatusta apua?",
+      "prompt_v1": "Sydämeni on särkynyt. Mitä Raamattu sanoo tästä?",
+      "prompt_v2": "Miten selviän sydänsurusta – onko Raamatusta apua?",
       "prompt_v3": "Voiko Jumala parantaa särkyneen sydämen?"
     },
     "newstart": {
       "title": "Uusi alku",
       "desc": "Voimaa uuteen elämänvaiheeseen",
-      "prompt": "Olen uuden alun edessä ja tarvitsen rohkaisua. Mitkä Raamatunkohdat puhuvat uusista aluista?"
+      "prompt": "Olen uuden alun edessä ja tarvitsen rohkaisua. Mitkä Raamatun kohdat puhuvat uusista aluista?"
     },
     "namequiz": {
-      "title": "Mitä nimesi tarkoittaa?",
-      "desc": "Löydä nimesi raamatullinen merkitys",
-      "prompt": "Mitä nimeni tarkoittaa ja onko sillä raamatullinen tai hengellinen merkitys? Yllätä minut!",
-      "prompt_v1": "Millä Raamatun nimillä on kaunein merkitys?",
-      "prompt_v2": "Mitä nimeni tarkoittaa – onko sillä raamatullinen yhteys?",
-      "prompt_v3": "Kerro minulle tarina nimeni takana!"
-    },
-    "dailywisdom": {
-      "title": "Päivän viisaus",
-      "desc": "Rohkaiseva ajatus päivääsi",
-      "prompt": "Anna minulle lyhyt, rohkaiseva ajatus päivääni – sopivan Raamatun jakeen kera.",
-      "prompt_v1": "Mikä on paras neuvo, jonka Raamattu antaa tälle päivälle?",
-      "prompt_v2": "Anna minulle viisaus Raamatusta, joka kulkee kanssani läpi päivän.",
-      "prompt_v3": "Yllätä minut rohkaisevalla Raamatun jakeella tälle päivälle!"
-    },
-    "funfact": {
-      "title": "Tiesitkö jo?",
-      "desc": "Yllättäviä faktoja Raamatusta",
-      "prompt": "Kerro minulle yllättävä fakta Raamatusta, jota useimmat ihmiset eivät tiedä!",
-      "prompt_v1": "Mikä on Raamatun hulluin tarina?",
-      "prompt_v2": "Mitkä Raamatun faktat yllättävät useimmat ihmiset?",
-      "prompt_v3": "Kerro minulle jotain hauskaa tai odottamatonta Raamatusta!"
-    },
-    "lifehack": {
-      "title": "Elämänvinkki",
-      "desc": "Raamatun viisaus perheelle ja työlle",
-      "prompt": "Mikä raamatullinen vinkki auttaa minua arjessa perheen ja työn kanssa? Anna minulle jotain käytännöllistä!",
-      "prompt_v1": "Miten Raamattu voi auttaa minua stressaavassa arjessa?",
-      "prompt_v2": "Mitä käytännöllisiä elämänvinkkejä Raamatussa on?",
-      "prompt_v3": "Anna minulle konkreettinen vinkki Raamatusta arkeeni!"
-    },
-    "strengths": {
-      "title": "Vahvuutesi",
-      "desc": "Löydä, mitä sinussa on",
-      "prompt": "Auta minua löytämään henkilökohtaiset vahvuuteni – mitä Raamattu sanoo lahjoista, joita jokaisella ihmisellä on?",
-      "prompt_v1": "Mitkä ovat vahvuuteni Raamatun mukaan?",
-      "prompt_v2": "Miten voin selvittää, mitkä ovat lahjani ja kykyni?",
-      "prompt_v3": "Mitä Raamattu sanoo siitä, mikä tekee minusta erityisen?"
-    },
-    "family": {
-      "title": "Perhe ja arki",
-      "desc": "Lisää arvostusta yhdessäelämiseen",
-      "prompt": "Miten voin osoittaa perheelleni enemmän arvostusta? Anna minulle käytännön ideoita raamatullisella inspiraatiolla.",
-      "prompt_v1": "Miten vahvistan perhesuhteitani?",
-      "prompt_v2": "Mitä Raamattu sanoo hyvästä perhe-elämästä?",
-      "prompt_v3": "Anna minulle idea, miten voin ilahduttaa jotakuta perheessäni tänään!"
-    },
-    "relax": {
-      "title": "Rauhoittuminen",
-      "desc": "Löydä hetki hiljaisuutta ja rauhaa",
-      "prompt": "Tarvitsen hetken rauhaa. Auta minua rentoutumaan – rauhoittavalla Raamatun jakeella tai lyhyellä meditaatiolla.",
-      "prompt_v1": "Anna minulle rauhoittava psalmi tähän hetkeen.",
-      "prompt_v2": "Miten Raamatun mukaan voi löytää todellisen rauhan?",
-      "prompt_v3": "Ohjaa minut lyhyen raamatullisen meditaation läpi."
+      "title": "What does your name mean?",
+      "desc": "Discover the biblical meaning of your name",
+      "prompt": "What does my name mean and does it have a biblical or spiritual significance? Surprise me!",
+      "prompt_v1": "Which biblical names have the most beautiful meanings?",
+      "prompt_v2": "What does my name mean – is there a biblical connection?",
+      "prompt_v3": "Tell me the story behind my name!"
     },
     "sleepless": {
       "title": "Uneton",
       "desc": "Löydä rauhaa yöllä",
       "prompt": "En saa unta ja mietin asioita. Onko olemassa rauhoittavaa rukousta tai psalmia yöksi?"
-    },
-    "prayerwall": {
-      "title": "Rukousmuuri",
-      "desc": "Jaa rukouspyyntöjä ja rukoile toistenne puolesta"
-    },
-    "biblequiz": {
-      "title": "Raamattuvisa",
-      "desc": "Testaa Raamatun tietosi leikkisästi"
     },
     "loneliness": {
       "title": "Yksinäisyys",
@@ -527,7 +427,7 @@
     "decision": {
       "title": "Vaikea päätös",
       "desc": "Viisautta oikealle tielle",
-      "prompt": "Olen vaikean päätöksen edessä. Mitkä Raamatunkohdat auttavat minua löytämään oikean tien?"
+      "prompt": "Olen vaikean päätöksen edessä. Mitkä Raamatun kohdat auttavat minua löytämään oikean tien?"
     },
     "gratitude": {
       "title": "Kiitollisuus",
@@ -542,24 +442,24 @@
       "desc": "Kuinka tyytyväinen olet todella?"
     },
     "sevenwhys": {
-      "title": "7 Miksi-kysymystä",
+      "title": "7 Miksiä",
       "desc": "Löydä kysymyksesi syvin juuri",
-      "prompt": "Haluan tehdä 7 Miksi-harjoituksen. Tässä on aiheeni:"
+      "prompt": "Haluan tehdä 7 miksiä -harjoituksen. Tässä on aiheeni:"
     },
     "anger": {
-      "title": "Viha ja suuttumus",
-      "desc": "Kun voisit räjähtää vihasta",
+      "title": "Viha & suuttumus",
+      "desc": "Kun olet räjähtämäisilläsi vihasta",
       "prompt": "Olen niin vihainen enkä tiedä, mitä tehdä vihalleni. Mitä Raamattu sanoo vihasta ja miten voin käsitellä sitä?"
     },
     "shame": {
-      "title": "Häpeä ja syyllisyys",
+      "title": "Häpeä & syyllisyys",
       "desc": "Kun syyllisyys painaa sinua",
       "prompt": "Häpeän niin paljon ja tunnen itseni syylliseksi. Mitä Raamattu sanoo syyllisyydestä, anteeksiannosta ja uudesta alusta?"
     },
     "burnout": {
       "title": "Burnout",
       "desc": "Kun et enää jaksa",
-      "prompt": "Olen täysin uupunut ja loppuunpalanut. En vain jaksa enää. Mitä Raamattu sanoo levosta ja palautumisesta?"
+      "prompt": "Olen täysin uupunut ja loppuunpalanut. En yksinkertaisesti jaksa enää. Mitä Raamattu sanoo levosta ja virkistyksestä?"
     },
     "illness": {
       "title": "Sairaus",
@@ -574,7 +474,7 @@
     "meaningcrisis": {
       "title": "Merkityskriisi",
       "desc": "Mitä varten kaikki tämä?",
-      "prompt": "Mietin, mihin kaikki tämä on hyväksi. Olen merkityskriisissä. Mitä Raamattu sanoo elämän tarkoituksesta?"
+      "prompt": "Mietin, mitä varten kaikki tämä on. Olen merkityskriisissä. Mitä Raamattu sanoo elämän tarkoituksesta?"
     },
     "selfdoubt": {
       "title": "Itseluottamuksen puute",
@@ -594,7 +494,7 @@
     "forgiveness": {
       "title": "Anteeksianto",
       "desc": "Kun anteeksianto tuntuu mahdottomalta",
-      "prompt": "En vain voi antaa anteeksi jollekin. Se sattuu liikaa. Mitä Raamattu sanoo anteeksiannosta?",
+      "prompt": "En yksinkertaisesti voi antaa anteeksi jollekin. Se sattuu liikaa. Mitä Raamattu sanoo anteeksiannosta?",
       "prompt_v1": "Mitä Raamattu sanoo anteeksiannosta?",
       "prompt_v2": "Miten voin antaa anteeksi jollekin, joka on loukannut minua?",
       "prompt_v3": "Onko anteeksiannolla rajoja?"
@@ -602,7 +502,7 @@
     "familyconflict": {
       "title": "Perheriita",
       "desc": "Kun perheessä riidellään",
-      "prompt": "Perheessäni on suuri riita. Mitä Raamattu sanoo perherauhasta ja sovinnosta?"
+      "prompt": "Perheessäni on suuri riita. Mitä Raamattu sanoo perheen rauhasta ja sovinnosta?"
     },
     "envy": {
       "title": "Kateus",
@@ -616,8 +516,8 @@
     },
     "prayer": {
       "title": "Rukouspyyntö",
-      "desc": "Rukoilkaa yhdessä",
-      "prompt": "Minulla on rukouspyyntö ja haluan rukoilla yhdessä. Kulje kanssani rukouksessa.",
+      "desc": "Rukoillaan yhdessä",
+      "prompt": "Minulla on rukouspyyntö ja haluan rukoilla yhdessä. Ohjaa minua rukouksessa.",
       "prompt_v1": "Miten voin oppia rukoilemaan?",
       "prompt_v2": "Mitä Raamattu sanoo rukouksesta?",
       "prompt_v3": "Miksi Jumala ei vastaa joihinkin rukouksiin?"
@@ -627,58 +527,115 @@
       "desc": "Selitys Raamatun kohdasta",
       "prompt": "Haluan ymmärtää Raamatun kohtaa paremmin. Voitko auttaa minua sijoittamaan sen kontekstiin?"
     },
+    "biblequiz": {
+      "desc": "Testaa Raamattu-tietoutesi leikkisästi",
+      "title": "Raamattuvisailu"
+    },
+    "prayerwall": {
+      "desc": "Jaa rukouspyyntöjä ja rukoile toistenne puolesta",
+      "title": "Rukousseinä"
+    },
+    "showMore": "lisää",
+    "dailywisdom": {
+      "title": "Päivän viisaus",
+      "desc": "Rohkaiseva ajatus päivääsi",
+      "prompt": "Anna minulle lyhyt, rohkaiseva ajatus päivääni – sopivan raamatunjakeen kera.",
+      "prompt_v1": "Mikä on paras neuvo, jonka Raamattu antaa tälle päivälle?",
+      "prompt_v2": "Anna minulle Raamatusta viisaus, joka kuljettaa minua läpi päivän.",
+      "prompt_v3": "Yllätä minut rohkaisevalla raamatunjakeella tälle päivälle!"
+    },
+    "funfact": {
+      "title": "Tiesitkö jo?",
+      "desc": "Yllättäviä faktoja Raamatusta",
+      "prompt": "Kerro minulle yllättävä fakta Raamatusta, jota useimmat ihmiset eivät tiedä!",
+      "prompt_v1": "Mikä on hulluin tarina Raamatussa?",
+      "prompt_v2": "Mitkä Raamatun faktat yllättävät useimmat ihmiset?",
+      "prompt_v3": "Kerro minulle jotain hauskaa tai odottamatonta Raamatusta!"
+    },
+    "lifehack": {
+      "title": "Elämänohje",
+      "desc": "Raamatullista viisautta perheelle ja työlle",
+      "prompt": "Mikä raamatullinen vinkki auttaa minua arjessa perheen ja työn kanssa? Anna minulle jotain käytännöllistä!",
+      "prompt_v1": "Miten Raamattu voi auttaa minua stressaavassa arjessa?",
+      "prompt_v2": "Mitä käytännöllisiä elämänohjeita Raamatussa on?",
+      "prompt_v3": "Anna minulle konkreettinen vinkki Raamatusta arkeeni!"
+    },
+    "strengths": {
+      "title": "Vahvuutesi",
+      "desc": "Löydä, mitä sinussa on",
+      "prompt": "Auta minua löytämään henkilökohtaiset vahvuuteni – mitä Raamattu sanoo lahjoista, joita jokaisella ihmisellä on?",
+      "prompt_v1": "Mitkä ovat vahvuuteni Raamatun mukaan?",
+      "prompt_v2": "Miten voin selvittää, mitkä ovat lahjani ja kykyni?",
+      "prompt_v3": "Mitä Raamattu sanoo siitä, mikä tekee minusta erityisen?"
+    },
+    "family": {
+      "title": "Perhe ja arki",
+      "desc": "Lisää arvostusta yhdessäeloon",
+      "prompt": "Miten voin osoittaa perheelleni enemmän arvostusta? Anna minulle käytännöllisiä ideoita raamatullisella inspiraatiolla.",
+      "prompt_v1": "Miten vahvistan perhesuhteitani?",
+      "prompt_v2": "Mitä Raamattu sanoo hyvästä perhe-elämästä?",
+      "prompt_v3": "Anna minulle idea, miten voin ilahduttaa jotakuta perheessäni tänään!"
+    },
+    "relax": {
+      "title": "Rauhoitu",
+      "desc": "Löydä hetki hiljaisuutta ja rauhaa",
+      "prompt": "Tarvitsen hetken rauhaa. Auta minua rentoutumaan – rauhoittavalla raamatunjakeella tai lyhyellä meditaatiolla.",
+      "prompt_v1": "Anna minulle rauhoittava psalmi tähän hetkeen.",
+      "prompt_v2": "Miten Raamatun mukaan voi löytää todellisen rauhan?",
+      "prompt_v3": "Ohjaa minut lyhyen raamatullisen meditaation läpi."
+    },
     "quoteofday": {
       "title": "Päivän lainaus",
       "desc": "Inspiroiva lainaus pohdittavaksi",
       "prompt": "Anna minulle inspiroiva lainaus Raamatusta tälle päivälle lyhyellä selityksellä",
       "prompt_v1": "Mikä Raamatun lainaus sopii erityisen hyvin tähän päivään?",
-      "prompt_v2": "Anna minulle rohkaiseva lainaus psalmeista tälle päivälle",
+      "prompt_v2": "Anna minulle rohkaiseva lainaus Psalmeista tälle päivälle",
       "prompt_v3": "Mikä Raamatun sananlasku antaa minulle uuden näkökulman tänään?"
     },
     "thankfulness": {
       "title": "Kiitollisuusharjoitus",
-      "desc": "Löydä, mistä voit olla kiitollinen",
-      "prompt": "Ohjaa minut lyhyen kiitollisuusharjoituksen läpi. Auta minua löytämään kolme asiaa, joista olen tänään kiitollinen",
+      "desc": "Löydä asioita, joista voit olla kiitollinen",
+      "prompt": "Ohjaa minua lyhyen kiitollisuusharjoituksen läpi. Auta minua löytämään kolme asiaa, joista olen kiitollinen tänään",
       "prompt_v1": "Auta minua löytämään kiitollisuutta arjessani – myös pienissä asioissa",
       "prompt_v2": "Haluan oppia olemaan kiitollisempi. Anna minulle käytännön harjoitus siihen",
       "prompt_v3": "Mitä Raamattu sanoo kiitollisuudesta ja miten voin toteuttaa sitä tänään?"
     },
     "biblesays": {
       "title": "Mitä Raamattu sanoo...",
-      "desc": "Selvitä, mitä Raamattu sanoo aiheestasi",
+      "desc": "Ota selvää, mitä Raamattu sanoo aiheestasi",
       "prompt": "Haluan tietää, mitä Raamattu sanoo tietystä aiheesta. Kysy minulta, mikä aihe minua kiinnostaa!",
       "prompt_v1": "Mitä Raamattu sanoo ystävyydestä?",
       "prompt_v2": "Mitä Raamattu sanoo rahan käsittelystä?",
-      "prompt_v3": "Mitä Raamattu sanoo rakkaudesta ja suhteista?"
+      "prompt_v3": "Mitä Raamattu sanoo rakkaudesta ja ihmissuhteista?"
     },
     "morningstart": {
       "title": "Hyvää huomenta!",
       "desc": "Aloita päivä positiivisesti",
       "prompt": "Toivota minulle hyvää huomenta ja anna minulle rohkaiseva ajatus päivän aloitukseen",
-      "prompt_v1": "Anna minulle lyhyt aamuimpulssi sopivan Raamatun jakeen kera",
+      "prompt_v1": "Anna minulle lyhyt aamuhartaus sopivalla Raamatun jakeella",
       "prompt_v2": "Miten voin aloittaa päiväni tietoisesti ja positiivisesti tänään?",
-      "prompt_v3": "Anna minulle rohkaiseva aamutervehdys Raamatun ajatuksen kera"
+      "prompt_v3": "Anna minulle rohkaiseva aamutervehdys Raamatun ajatuksella"
     },
     "inspiration": {
       "title": "Inspiroi minua",
       "desc": "Anna itsesi yllättyä ja inspiroitua",
-      "prompt": "Yllätä minut jollain inspiroivalla – se voi olla ajatus, tarina tai oivallus Raamatusta",
-      "prompt_v1": "Kerro minulle inspiroiva tarina Raamatusta, joka on relevantti tänään",
+      "prompt": "Yllätä minut jollakin inspiroivalla – se voi olla ajatus, tarina tai oivallus Raamatusta",
+      "prompt_v1": "Kerro minulle inspiroiva tarina Raamatusta, joka on ajankohtainen tänään",
       "prompt_v2": "Anna minulle odottamaton, inspiroiva ajatus",
       "prompt_v3": "Mikä Raamatun henkilö voi inspiroida minua tänään ja miksi?"
     }
   },
   "lifeWheel": {
     "title": "Elämänpyöräsi",
-    "intro": "Arvioi 8 elämänaluetta asteikolla 1-10. Selvitä, missä olet – ja saa raamatullisia impulsseja alueelle, joka tarvitsee huomiota.",
+    "intro": "Arvioi 8 elämänaluetta asteikolla 1-10. Selvitä, missä olet – ja saat raamatullisia impulsseja alueelle, joka tarvitsee huomiota.",
     "start": "Aloita nyt",
     "sliderHint": "Siirrä liukusäätimiä – 1 = erittäin tyytymätön, 10 = erittäin tyytyväinen",
     "showResult": "Näytä tulos",
     "average": "Keskiarvo",
     "weakestArea": "Suurin tarve",
-    "getImpulse": "Raamatullinen impulssi alueelle {{area}}",
+    "getImpulse": "Raamatullinen impulssi {{area}}",
     "reset": "Tee uudelleen",
-    "prompt": "Elämänpyöräni osoittaa, että minulla on alueella «{{area}}» vain {{score}}/10 pistettä. Mitä Raamattu sanoo tästä elämänalueesta? Anna minulle rohkaisua ja käytännön impulsseja.",
+    "prompt": "Elämänpyöräni osoittaa, että minulla on vain {{score}}/10 pistettä alueella «{{area}}». Mitä Raamattu sanoo tästä elämänalueesta? Anna minulle rohkaisua ja käytännön impulsseja.",
     "areas": {
       "health": "Terveys",
       "relationships": "Suhteet",
@@ -692,23 +649,23 @@
     "save": "Tallenna tulos",
     "saved": "Tallennettu!",
     "history": "Aiemmat tulokset",
-    "noHistory": "Ei tallennettuja tuloksia vielä.",
+    "noHistory": "Ei vielä tallennettuja tuloksia.",
     "backToNew": "Uusi elämänpyörä",
     "backToList": "Takaisin listaan"
   },
   "church": {
     "badge": "Organisaatioille",
-    "heroTitle": "BibleBot organisaatiollesi",
-    "heroSubtitle": "Kulje työntekijöidesi ja kohderyhmiesi kanssa Raamatun viisaudella – digitaalisesti, henkilökohtaisesti ja ympäri vuorokauden.",
-    "useCasesTitle": "Käyttötarkoitukset",
+    "heroTitle": "Kumppanisi organisaatiollesi",
+    "heroSubtitle": "Opasta seurakuntalaisiasi raamatullisella viisaudella – digitaalisesti, henkilökohtaisesti ja ympäri vuorokauden.",
+    "useCasesTitle": "Käyttötapaukset",
     "useCase": {
       "youth": {
         "title": "Nuorisotyö",
-        "desc": "Nuoret tutustuvat Raamattuun omalla tavallaan – interaktiivisesti ja ilman estoja."
+        "desc": "Nuoret löytävät Raamatun omalla tavallaan – interaktiivisesti ja ilman estoja."
       },
       "confirmation": {
         "title": "Konfirmaatio",
-        "desc": "Konfirmoitavat syventävät Raamatun tuntemustaan itsenäisesti henkilökohtaisen ohjauksen avulla."
+        "desc": "Konfirmoitavat syventävät Raamatun tuntemusta itsenäisesti henkilökohtaisella ohjauksella."
       },
       "pastoral": {
         "title": "Sielunhoito",
@@ -719,28 +676,28 @@
         "desc": "Impulsseja ja keskustelunaiheita ryhmille ja kotipiireille."
       }
     },
-    "pricingTitle": "Patronointipaketit",
-    "pricingSubtitle": "Tue BibleBotia ja organisaatiotasi sopivalla patronointipaketilla.",
+    "pricingTitle": "Mecenaatti-paketit",
+    "pricingSubtitle": "Tue kumppanisiia ja seurakuntaasi sopivalla mecenaatti-paketilla.",
     "popular": "Suosittu",
     "free": "Ilmainen",
-    "perYear": "",
+    "perYear": "henkilöä / vuosi",
     "contact": "Ota yhteyttä",
     "tier": {
       "free": {
         "name": "Sinapinsiemen",
-        "size": "Pienille organisaatioille (enintään 50 henkilöä/vuosi)"
+        "size": "Pienille seurakunnille & kotipiireille (alle 50 jäsentä)"
       },
       "community": {
         "name": "Matkakumppani",
-        "size": "Organisaatioille, joissa 50–200 henkilöä/vuosi"
+        "size": "Seurakunnille, joissa 50–200 jäsentä"
       },
       "gemeinde": {
         "name": "Sillanrakentaja",
-        "size": "Organisaatioille, joissa 200–500 henkilöä/vuosi"
+        "size": "Seurakunnille, joissa 200–500 jäsentä"
       },
       "kirche": {
         "name": "Majakka",
-        "size": "Suurille organisaatioille (yli 500 henkilöä)/vuosi"
+        "size": "Suurille seurakunnille & instituutioille (yli 500 jäsentä)"
       }
     },
     "features": {
@@ -752,21 +709,21 @@
       "contactForm": "Yhteydenottolomake",
       "pastorProfile": "Pappi/pastori-profiili",
       "welcomeVideo": "Tervetulovideo",
-      "analytics": "Analytiikan hallintapaneeli",
+      "analytics": "Analytiikka-hallintapaneeli",
       "prioritySupport": "Prioriteettituki",
       "multipleProfiles": "Useita profiileja",
       "customBranding": "Mukautettu brändäys",
-      "apiAccess": "API-käyttö",
+      "apiAccess": "API-käyttöoikeus",
       "accountManager": "Henkilökohtainen yhteyshenkilö"
     },
-    "viewDirectory": "Katso kumppanihakemisto",
-    "directoryBadge": "Kumppanihakemisto",
-    "directoryTitle": "Kumppaniorganisaatiot",
-    "directorySubtitle": "Löydä organisaatio läheltäsi, joka suosittelee BibleBotia.",
+    "viewDirectory": "Katso seurakuntahakemisto",
+    "directoryBadge": "Seurakuntahakemisto",
+    "directoryTitle": "Kumppaniseurakunnat",
+    "directorySubtitle": "Löydä seurakunta läheltäsi, joka suosittelee kumppanisiia.",
     "searchPlaceholder": "Etsi paikkaa, nimeä tai tunnustusta...",
-    "noResults": "Ei organisaatioita hakemistossa vielä.",
+    "noResults": "Ei vielä seurakuntia hakemistossa.",
     "becomePartner": "Ryhdy kumppaniksi →",
-    "notFound": "Organisaatiota ei löydy.",
+    "notFound": "Seurakuntaa ei löytynyt.",
     "backToDirectory": "Takaisin hakemistoon",
     "pastor": "Pappi/pastori",
     "serviceTimes": "Jumalanpalvelusajat",
@@ -779,15 +736,15 @@
     "contactMessage": "Viestisi",
     "contactSend": "Lähetä viesti",
     "contactSuccess": "Viesti lähetetty! 🙏",
-    "contactSuccessDesc": "Organisaatio ottaa sinuun yhteyttä.",
+    "contactSuccessDesc": "Seurakunta ottaa sinuun yhteyttä.",
     "recommendedBy": "Suosittelee {{name}}",
     "setup": "Asennus (kertaluonteinen)",
     "form": {
-      "title": "Kiinnostunut? Kirjoita meille!",
+      "title": "Kiinnostuitko? Kirjoita meille!",
       "subtitle": "Otamme yhteyttä 48 tunnin kuluessa.",
       "name": "Nimesi",
       "email": "Sähköpostiosoite",
-      "churchName": "Organisaation nimi",
+      "churchName": "Seurakunnan nimi",
       "tier": "Haluttu paketti",
       "tierPlaceholder": "Valitse paketti...",
       "message": "Viestisi",
@@ -798,54 +755,30 @@
       "orgTypePlaceholder": "Valitse tyyppi...",
       "orgTypes": {
         "church": "Seurakunta",
-        "reformed": "Reformoitu kirkko",
-        "catholic": "Katolinen kirkko",
-        "lutheran": "Luterilainen kirkko",
-        "evangelical": "Vapaakirkko / Evankelinen",
-        "freelance": "Freelance / Riippumaton",
         "careHome": "Hoitokoti",
         "seniorHome": "Vanhainkoti",
         "hospital": "Sairaala",
         "prison": "Vankilasielunhoito",
         "military": "Armeijasielunhoito",
         "rehaClinic": "Kuntoutusklinikka",
-        "psychiatry": "Psykiatria / Psykosomatiikka",
+        "psychiatry": "Psykiatria",
         "burnoutClinic": "Burnout-klinikka",
-        "hospice": "Hospice",
-        "counseling": "Neuvontapiste",
+        "hospice": "Saattohoitokoti",
+        "counseling": "Neuvontakeskus",
+        "reformed": "Reformoitu kirkko",
+        "catholic": "Katolinen kirkko",
+        "lutheran": "Luterilainen kirkko",
+        "evangelical": "Vapaa kirkko / Evankelinen",
+        "freelance": "Freelance / Riippumaton",
         "other": "Muu"
       }
     },
-    "denominationsTitle": "Kaikille tunnustuksille ja seremonianvetäjille",
-    "denominationsSubtitle": "BibleBot on ekumeeninen – reformoiduille, katolisille, luterilaisille ja vapaakirkollisille seurakunnille sekä freelance-seremonianvetäjille.",
-    "denomination": {
-      "reformed": {
-        "title": "Reformoitu kirkko",
-        "desc": "Zürichin Raamattu, reformoitu liturgia ja saarnan tuki – räätälöity seurakunnallesi."
-      },
-      "catholic": {
-        "title": "Katolinen kirkko",
-        "desc": "Yhtenäiskäännös, messusuunnittelu ja sakramentit – katolisten perinteiden mukaisesti."
-      },
-      "lutheran": {
-        "title": "Luterilainen kirkko",
-        "desc": "Lutherin Raamattu, jumalanpalvelussuunnittelu ja sielunhoito – evankelis-luterilaisille seurakunnille."
-      },
-      "evangelical": {
-        "title": "Vapaakirkot",
-        "desc": "Schlachter 2000, ylistys ja joustava jumalanpalvelussuunnittelu – vapaakirkollisille yhteisöille."
-      },
-      "freelance": {
-        "title": "Freelance",
-        "desc": "Hautajaispuhujat, hääpuhujat ja riippumattomat seremonianvetäjät – elämäkertatyökalulla ja puhesuunnittelulla."
-      }
-    },
-    "institutionsTitle": "Erilaisille organisaatioille",
-    "institutionsSubtitle": "BibleBot kulkee seurakuntien, hoito- ja vanhainkotien, sairaaloiden, kuntoutus- ja burnout-klinikoiden, psykiatrioiden, hospicien, neuvontapisteiden ja monien muiden organisaatioiden kanssa digitaalisen sielunhoidon avulla.",
+    "institutionsTitle": "Myös instituutioille",
+    "institutionsSubtitle": "Kumppanisi ei opasta vain seurakuntia – myös hoito- ja vanhainkodit, sairaalat ja vankilasielunhoito hyötyvät digitaalisesta sielunhoidosta.",
     "institution": {
       "careHome": {
         "title": "Hoitokodit",
-        "desc": "Päivittäiset Raamatun impulssit ja tuki asukkaille – myös silloin, kun sielunhoitajaa ei ole paikalla."
+        "desc": "Päivittäiset Raamatun impulssit ja ohjaus asukkaille – myös silloin, kun sielunhoitajaa ei ole paikalla."
       },
       "seniorHome": {
         "title": "Vanhainkodit",
@@ -853,58 +786,82 @@
       },
       "hospital": {
         "title": "Sairaalat",
-        "desc": "Lohdutusta ja hengellistä tukea potilaille vaikeina aikoina – saatavilla 24/7 sairaalavuoteen äärellä."
+        "desc": "Lohdutusta ja hengellistä ohjausta potilaille vaikeina aikoina – saatavilla 24/7 sairaalavuoteen äärellä."
       },
       "prison": {
         "title": "Vankilasielunhoito",
-        "desc": "Toivoa ja hengellistä tukea vangeille – luottamuksellinen keskustelukumppani ympäri vuorokauden."
+        "desc": "Toivoa ja hengellistä ohjausta vangeille – luottamuksellinen keskustelukumppani ympäri vuorokauden."
       },
       "military": {
         "title": "Armeijasielunhoito",
-        "desc": "Hengellistä tukea armeijan jäsenille – saatavilla myös tehtävissä tai kasarmilla."
+        "desc": "Hengellistä ohjausta armeijan jäsenille – saatavilla myös tehtävissä tai kasarmilla."
       },
       "rehaClinic": {
         "title": "Kuntoutusklinikat",
-        "desc": "Sielunhoidollista tukea kuntoutuksen aikana – sisäistä voimaa matkalla takaisin elämään."
+        "desc": "Sielunhoitoa kuntoutuksen aikana – sisäistä voimaa matkalla takaisin elämään."
       },
       "psychiatry": {
-        "title": "Psykiatriat",
-        "desc": "Luottamuksellisia hengellisiä keskusteluja potilaille psykiatrisessa hoidossa – terapian täydennykseksi."
+        "title": "Psykiatriset laitokset",
+        "desc": "Luottamuksellisia hengellisiä keskusteluja psykiatrisessa hoidossa oleville potilaille."
       },
       "burnoutClinic": {
         "title": "Burnout-klinikat",
-        "desc": "Merkityskysymyksiä ja sisäistä pohdintaa uupumuksen yhteydessä – rauhallinen keskustelukumppani ilman aikarajoituksia."
+        "desc": "Merkityskysymyksiä ja sisäistä pohdintaa uupumuksen aikana."
       },
       "hospice": {
-        "title": "Hospicet",
-        "desc": "Tukea elämän loppuvaiheessa – lohduttavia sanoja, tuttuja jakeita ja kuunteleva korva viimeisinä päivinä."
+        "title": "Saattohoitokodit",
+        "desc": "Saattoa elämän loppuvaiheessa – lohduttavia sanoja viimeisinä päivinä."
       },
       "counseling": {
-        "title": "Neuvontapisteet",
-        "desc": "Täydentäviä hengellisiä impulsseja asiakkaille psykososiaalisessa tai sielunhoidollisessa neuvonnassa."
+        "title": "Neuvontakeskukset",
+        "desc": "Täydentäviä hengellisiä impulsseja psykososiaalisen neuvonnan asiakkaille."
       }
     },
-    "patronageNote": "BibleBot.Life on yksityinen, ei-kaupallinen projekti. Sitä ylläpidetään vapaaehtoisvoimin ja rahoitetaan yksinomaan vapaaehtoisilla lahjoituksilla. Ei ole mainoksia, ei tietojen myyntiä eikä maksullisia ominaisuuksia. Kaikki lahjoitukset menevät suoraan juoksevien kulujen (infrastruktuuri, hosting, kehitys) kattamiseen. Koska BibleBot toimii yksityisenä projektina, lahjoitukset eivät ole verovähennyskelpoisia."
+    "patronageNote": "BibleBot.Life is a private, non-commercial project. It is run on a voluntary basis and funded exclusively through donations. There is no advertising, no data sales, and no paid features. All donations go directly toward covering running costs (infrastructure, hosting, development). As kumppanisi is a private project, donations are not tax-deductible.",
+    "denominationsTitle": "Kaikille tunnustuskunnille ja seremoniamestareille",
+    "denominationsSubtitle": "BibleBot.Life on ekumeeninen – reformoiduille, katolisille, luterilaisille ja vapaan kirkon yhteisöille sekä freelance-seremonimestareille.",
+    "denomination": {
+      "reformed": {
+        "title": "Reformoitu kirkko",
+        "desc": "Zürichin Raamattu, reformoitu liturgia ja saarnantuki – räätälöity seurakuntaanne."
+      },
+      "catholic": {
+        "title": "Katolinen kirkko",
+        "desc": "Ekumeeninen käännös, messusuunnittelu ja sakramentit – katolisten perinteiden mukaisesti."
+      },
+      "lutheran": {
+        "title": "Luterilainen kirkko",
+        "desc": "Lutherin Raamattu, jumalanpalvelussuunnittelu ja sielunhoito – evankelisluterilaisille seurakunnille."
+      },
+      "evangelical": {
+        "title": "Vapaat kirkot",
+        "desc": "Schlachter 2000, ylistys ja joustava jumalanpalvelussuunnittelu – vapaan kirkon yhteisöille."
+      },
+      "freelance": {
+        "title": "Freelance-seremonimestarit",
+        "desc": "Hautajaispuhujat, hääseremonimestarit ja riippumattomat vihkijät – biografiatyökaluilla ja puheensuunnittelulla."
+      }
+    }
   },
   "institutions": {
     "badge": "Organisaatioille",
-    "heroTitle": "BibleBot organisaatiollesi",
+    "heroTitle": "Kumppanisi laitoksellesi",
     "heroSubtitle": "Digitaalinen sielunhoito hoitokodeille, vanhainkodeille, sairaaloille ja vankiloille – henkilökohtaisesti, luottamuksellisesti ja ympäri vuorokauden.",
     "seniorHint": {
       "title": "Senioritila saatavilla",
       "desc": "Suurempi fontti ja yksinkertaistettu käyttö – ihanteellinen vanhemmille asukkaille.",
-      "cta": "Testaa senioritilaa"
+      "cta": "Kokeile senioritilaa"
     },
-    "typesTitle": "Kenelle BibleBot on tarkoitettu?",
-    "useCasesTitle": "Näin BibleBotia käytetään",
-    "useCasesSubtitle": "Konkreettisia sovelluksia arkeen laitoksessasi.",
-    "pricingTitle": "Patronointipaketit",
-    "pricingSubtitle": "Samankaltaiset paketit kuin seurakunnille – mukautettu laitosten tarpeisiin.",
+    "typesTitle": "Kenelle kumppanisi on tarkoitettu?",
+    "useCasesTitle": "Miten kumppanisiia käytetään",
+    "useCasesSubtitle": "Konkreettisia sovelluksia laitoksesi arkeen.",
+    "pricingTitle": "Mecenaatti-paketit",
+    "pricingSubtitle": "Samankaltaiset paketit kuin seurakunnille – mukautettu institutionaalisiin tarpeisiin.",
     "linkChurches": "Saatavilla myös seurakunnille",
     "type": {
       "careHome": {
         "title": "Hoitokodit",
-        "desc": "Päivittäiset Raamatun impulssit ja tuki asukkaille – myös silloin, kun sielunhoitajaa ei ole paikalla."
+        "desc": "Päivittäiset Raamatun impulssit ja ohjaus asukkaille – myös silloin, kun sielunhoitajaa ei ole paikalla."
       },
       "seniorHome": {
         "title": "Vanhainkodit",
@@ -912,25 +869,25 @@
       },
       "hospital": {
         "title": "Sairaalat",
-        "desc": "Lohdutusta ja hengellistä tukea potilaille vaikeina aikoina – saatavilla 24/7 sairaalavuoteen äärellä."
+        "desc": "Lohdutusta ja hengellistä ohjausta potilaille vaikeina aikoina – saatavilla 24/7 sairaalavuoteen äärellä."
       },
       "prison": {
         "title": "Vankilasielunhoito",
-        "desc": "Toivoa ja hengellistä tukea vangeille – luottamuksellinen keskustelukumppani ympäri vuorokauden."
+        "desc": "Toivoa ja hengellistä ohjausta vangeille – luottamuksellinen keskustelukumppani ympäri vuorokauden."
       },
       "military": {
         "title": "Armeijasielunhoito",
-        "desc": "Hengellistä tukea armeijan jäsenille – saatavilla myös tehtävissä tai kasarmilla."
+        "desc": "Hengellistä ohjausta armeijan jäsenille – saatavilla myös tehtävissä tai kasarmilla."
       }
     },
     "useCase": {
       "dailyImpulse": {
         "title": "Päivittäinen impulssi",
-        "desc": "Joka aamu Raamatun jae ja pohdintakysymys – alentaa kynnystä hengellisiin keskusteluihin."
+        "desc": "Joka aamu Raamatun jae pohdintakysymyksen kera – alentaa kynnystä hengellisiin keskusteluihin."
       },
       "companionship": {
         "title": "Keskustelukumppani",
-        "desc": "BibleBot vastaa uskonkysymyksiin kärsivällisesti ja ilman aikarajoituksia – ihanteellinen yksinäisiin hetkiin."
+        "desc": "Kumppanisi vastaa uskonkysymyksiin kärsivällisesti ja ilman aikarajoituksia – ihanteellinen yksinäisiin hetkiin."
       },
       "accessibility": {
         "title": "Helppo pääsy",
@@ -938,7 +895,7 @@
       },
       "availability": {
         "title": "Saatavilla 24/7",
-        "desc": "Hengellistä tukea myös öisin ja viikonloppuisin – kun sielunhoitajaa ei ole tavoitettavissa."
+        "desc": "Hengellistä ohjausta myös yöllä ja viikonloppuisin – kun sielunhoitajaa ei ole tavoitettavissa."
       }
     },
     "tierDesc": {
@@ -948,7 +905,7 @@
       "kirche": "Oma sisältö, tiekartan muokkaus, premium-tuki"
     },
     "form": {
-      "title": "Kiinnostunut? Ota yhteyttä!",
+      "title": "Kiinnostuitko? Ota meihin yhteyttä!",
       "subtitle": "Otamme yhteyttä 48 tunnin kuluessa.",
       "name": "Nimesi",
       "email": "Sähköpostiosoite",
@@ -963,56 +920,53 @@
       "error": "Virhe lähetyksessä. Yritä uudelleen."
     }
   },
-  "chatHero": {
-    "subtitle": "Esitä kysymyksesi – avoimesti, rehellisesti, ilman rekisteröitymistä.",
-    "placeholder1": "Mistä olen todella kiitollinen?",
-    "placeholder2": "Miten löydän sisäisen rauhan?",
-    "placeholder3": "Mikä antaa minulle toivoa?",
-    "placeholder4": "Mitä sydämeni toivoo?",
-    "placeholder5": "Mitä hyvää voin tehdä tänään?",
-    "focusPlaceholder": "Kirjoita kysymyksesi…",
-    "ariaLabel": "Esitä kysymys BibleBotille",
-    "send": "Lähetä",
-    "suggestion1": "Mitä nimeni tarkoittaa?",
-    "suggestion2": "Mikä antaa minulle voimaa tänään?",
-    "suggestion3": "Mistä olen kiitollinen?"
-  },
-  "splash": {
-    "patronage": "Suosittelee"
-  },
-  "meta": {
-    "homeTitle": "BibleBot.Life – Henkilökohtainen kumppanisi | Raamatun syvyydellä",
-    "homeDesc": "Henkilökohtainen kumppanisi — Raamatun syvyydellä, ilman ennakkotietoja. 5 käännöstä, valmennus, sielunhoito. Anonyymi, ilmainen, 36 kieltä.",
-    "forChurchesTitle": "BibleBot.Life seurakunnille – Digitaalinen sielunhoito ja Raamatun tuki",
-    "forChurchesDesc": "BibleBot.Life kumppanina seurakunnallesi: nuorisotyö, konfirmaatio, sielunhoito ja raamattupiirit. Ilmainen premium-tasolle asti.",
-    "loginTitle": "Kirjaudu sisään – BibleBot.Life",
-    "loginDesc": "Kirjaudu sisään valmistellaksesi henkilökohtaisia seremonioitasi."
-  },
-  "meinBereich": {
-    "title": "Oma alue",
-    "subtitle": "Valmistele henkilökohtaiset seremoniasi ja jaa ne sielunhoitajasi kanssa.",
-    "sidebarLabel": "Oma alue",
-    "overview": "Yleiskatsaus",
-    "funeral": "Hautajaiset",
-    "wedding": "Häät",
-    "baptismCeremony": "Kaste",
-    "confirmation": "Konfirmaatio",
-    "logout": "Kirjaudu ulos",
-    "comingSoon": "Tulossa pian",
-    "funeralDesc": "Luo elämäkerta, tallenna muistoja ja jaa ne sielunhoitajan kanssa.",
-    "weddingDesc": "Kirjoita häävalat, valitse lauluja ja suunnittele juhla.",
-    "baptismDesc": "Muotoile kastetoiveet ja valmistele seremonia seurakunnan kanssa.",
-    "confirmationDesc": "Löydä konfirmaatiojae ja valmistele henkilökohtaiset tekstit."
+  "lang": {
+    "de": "Deutsch",
+    "en": "English",
+    "fr": "Français",
+    "es": "Español",
+    "it": "Italiano",
+    "pl": "Polski",
+    "cs": "Čeština",
+    "pt": "Português",
+    "nl": "Nederlands",
+    "ro": "Română",
+    "da": "Dansk",
+    "no": "Norsk",
+    "sv": "Svenska",
+    "fi": "Suomi",
+    "el": "Ελληνικά",
+    "hr": "Hrvatski",
+    "sr": "Srpski",
+    "hu": "Magyar",
+    "sk": "Slovenčina",
+    "bg": "Български",
+    "ru": "Русский",
+    "uk": "Українська",
+    "ka": "ქართული",
+    "hy": "Հայերեն",
+    "ko": "한국어",
+    "tl": "Filipino",
+    "id": "Bahasa Indonesia",
+    "vi": "Tiếng Việt",
+    "zh": "中文",
+    "sw": "Kiswahili",
+    "am": "አማርኛ",
+    "af": "Afrikaans",
+    "yo": "Yorùbá",
+    "ig": "Igbo",
+    "zu": "isiZulu",
+    "ht": "Kreyòl"
   },
   "eulogy": {
-    "pageTitle": "Hautajaiset – Luo elämäkerta | BibleBot",
-    "pageDesc": "Tallenna muistoja rakkaasta ihmisestä ja luo kaunis elämäkerta hautajaisiin.",
-    "title": "Hautajaiset – Elämäkerta",
+    "pageTitle": "Muistopuhe – Elämäkerran luominen | kumppanisi",
+    "pageDesc": "Tallenna muistoja rakkaasta ja luo kaunis elämäkerrallinen teksti muistopuhetta varten.",
+    "title": "Muistopuhe – Elämäkerta",
     "subtitle": "Tallenna muistoja, luo teksti, lataa PDF-muodossa.",
     "step1": "Vainajasta",
     "name": "Nimi",
     "namePlaceholder": "Etunimi ja sukunimi",
-    "age": "Elämän tiedot",
+    "age": "Elinaika",
     "agePlaceholder": "esim. 1942–2026",
     "step2": "Tallenna muistoja",
     "step2Desc": "Kerro vapaasti vainajasta – mikä oli tärkeää, mikä jää mieleen? Voit tehdä useita tallenteita.",
@@ -1021,79 +975,69 @@
     "stop": "Pysäytä",
     "recording": "Tallennus",
     "transcript": "Transkriptio (muokattavissa)",
-    "transcriptPlaceholder": "Transkriptio luodaan automaattisesti tallennuksen aikana. Voit muokata sitä täällä.",
-    "additionalNotes": "Lisähuomautuksia",
+    "transcriptPlaceholder": "Transkriptio luodaan automaattisesti tallennuksen aikana. Voit muokata sitä tässä.",
+    "additionalNotes": "Lisähuomautukset",
     "notesPlaceholder": "Ammatti, harrastukset, tärkeät elämäntapahtumat, erityiset luonteenpiirteet…",
     "step3": "Luo ja lataa teksti",
-    "generate": "Luo elämäkertateksti",
+    "generate": "Luo elämäkerrallinen teksti",
     "generating": "Tekstiä luodaan…",
     "regenerate": "Luo uudelleen",
     "downloadPDF": "Lataa PDF-muodossa",
     "save": "Tallenna",
-    "shareStep": "Jaa sielunhoitajan kanssa",
-    "shareDesc": "Luo linkki, jonka voit lähettää sähköpostitse tai viestillä sielunhoitajallesi. Hän voi lukea tekstin ja ladata sen PDF-muodossa.",
+    "shareStep": "Jaa papin kanssa",
+    "shareDesc": "Luo linkki, jonka voit lähettää sähköpostitse tai viestillä papillesi. Hän voi lukea tekstin ja ladata sen PDF-muodossa.",
     "enableShare": "Luo ja kopioi linkki",
     "disableShare": "Poista jakaminen käytöstä",
     "micError": "Mikrofonia ei voitu käynnistää. Anna lupa.",
     "needMore": "Ole hyvä ja tallenna ensin muistoja tai kirjoita muistiinpanoja.",
     "genError": "Virhe tekstin luomisessa. Yritä uudelleen."
   },
+  "meinBereich": {
+    "title": "Oma alue",
+    "subtitle": "Valmistele henkilökohtaiset seremoniasi ja jaa ne papillesi.",
+    "sidebarLabel": "Oma alue",
+    "overview": "Yleiskatsaus",
+    "funeral": "Muistopuhe",
+    "wedding": "Häät",
+    "baptismCeremony": "Kaste",
+    "confirmation": "Konfirmaatio",
+    "logout": "Kirjaudu ulos",
+    "comingSoon": "Tulossa pian",
+    "funeralDesc": "Luo elämäkerta, tallenna muistoja ja jaa ne papin kanssa.",
+    "weddingDesc": "Kirjoita avioliittolupaukset, valitse laulut ja suunnittele juhla.",
+    "baptismDesc": "Muotoile kasteen toiveet ja valmistele seremonia seurakunnan kanssa.",
+    "confirmationDesc": "Löydä konfirmaatiolause ja valmistele henkilökohtaiset tekstit."
+  },
+  "chatHero": {
+    "ariaLabel": "Esitä kysymys kumppanisiille",
+    "focusPlaceholder": "Kirjoita kysymyksesi…",
+    "placeholder1": "Mikä tekee minusta todella kiitollisen?",
+    "placeholder2": "Miten voin löytää sisäisen rauhan?",
+    "placeholder3": "Mikä antaa minulle toivoa?",
+    "placeholder4": "Mitä sydämeni todella toivoo?",
+    "placeholder5": "Mitä hyvää voin tehdä tänään?",
+    "send": "Lähetä",
+    "subtitle": "Esitä kysymyksesi – avoimesti, rehellisesti, ilman kirjautumista.",
+    "suggestion1": "Mitä nimeni tarkoittaa?",
+    "suggestion2": "Mikä antaa minulle voimaa tänään?",
+    "suggestion3": "Mistä olen kiitollinen?"
+  },
+  "meta": {
+    "forChurchesDesc": "Kumppanisi kumppanina yhteisöllesi: nuorisotyö, konfirmaatio, sielunhoito ja Raamattupiirit. Ilmainen Premium-tasolle asti.",
+    "forChurchesTitle": "Kumppanisi seurakunnille – Digitaalinen sielunhoito ja Raamatun ohjaus",
+    "homeDesc": "Kumppanisi kulkee mukanasi 5 Raamatun käännöksen, valmennusmetodologian ja sielunhoidon kanssa. Anonyymi, ilmainen, 36 kielellä.",
+    "homeTitle": "Kumppanisi – Henkilökohtainen Raamattu-kumppanisi | Ilmainen & Anonyymi",
+    "loginDesc": "Kirjaudu kumppanisiiin valmistellaksesi henkilökohtaiset seremoniasi.",
+    "loginTitle": "Kirjaudu sisään – kumppanisi"
+  },
+  "splash": {
+    "patronage": "Suosittelee"
+  },
   "auth": {
-    "apple": "Kirjaudu sisään Applella",
+    "apple": "Kirjaudu Applella",
     "loginShort": "Kirjaudu sisään",
     "logout": "Kirjaudu ulos"
   },
-  "chatDemo": {
-    "sectionLabel": "Näin keskustelu näyttää",
-    "userMsg": "Tunnen itseni yksinäiseksi. Mitä Raamattu sanoo siitä?",
-    "botMsg": "Et ole yksin – vaikka juuri nyt tuntuisi siltä. Psalmissa 23 sanotaan: «Herra on minun paimeneni, ei minulta mitään puutu.» Tämä tarkoittaa, että Jumala on lähelläsi, myös synkimpinä hetkinä. Haluatko, että syvennämme tätä kohtaa yhdessä?",
-    "cta": "Aloita oma keskustelusi nyt →"
-  },
-  "suggest": {
-    "psalm23": "Psalmi 23 – Herra on minun paimeneni",
-    "joh316": "Johannes 3:16 – Sillä niin on Jumala maailmaa rakastanut",
-    "rom828": "Roomalaiskirje 8:28 – Kaikki parhaaksi",
-    "mt1128": "Matteus 11:28 – Tulkaa minun luokseni",
-    "phil413": "Filippiläiskirje 4:13 – Kaiken minä voin",
-    "jes4110": "Jesaja 41:10 – Älä pelkää",
-    "1kor13": "1. Korinttilaiskirje 13 – Rakkauden ylistyslaulu",
-    "spr35": "Sananlaskut 3:5 – Turvaa Herraan",
-    "jos19": "Joosua 1:9 – Ole vahva ja rohkea",
-    "ps462": "Psalmi 46:2 – Jumala on meidän turvamme",
-    "explainDetail": "Selitä minulle {{ref}} yksityiskohtaisesti"
-  },
-  "dailyVerses": {
-    "v0": "«Tulkaa minun luokseni, kaikki te työn ja kuormien uuvuttamat, niin minä annan teille levon.»",
-    "r0": "Matteus 11:28",
-    "v1": "«Sillä minä tiedän, mitkä ajatukseni ovat teitä kohtaan, sanoo Herra: rauhan ajatuksia.»",
-    "r1": "Jeremia 29:11",
-    "v2": "«Älä pelkää, sillä minä olen sinun kanssasi; älä arkaile, sillä minä olen sinun Jumalasi.»",
-    "r2": "Jesaja 41:10",
-    "v3": "«Herra on minun paimeneni, ei minulta mitään puutu.»",
-    "r3": "Psalmi 23:1",
-    "v4": "«Kaikki teidän murheenne heittäkää hänen päällensä; sillä hän pitää teistä huolen.»",
-    "r4": "1. Pietarin kirje 5:7",
-    "v5": "«Minä olen maailman valo. Joka minua seuraa, se ei vaella pimeydessä.»",
-    "r5": "Johannes 8:12",
-    "v6": "«Olkaa vahvoja ja rohkeita! Älkää pelätkö, sillä Herra, teidän Jumalanne, on kanssanne.»",
-    "r6": "Joosua 1:9",
-    "v7": "«Mutta ne, jotka Herraa odottavat, saavat uuden voiman, he kohoavat siivillä kuin kotkat.»",
-    "r7": "Jesaja 40:31",
-    "v8": "«Sillä missä kaksi tai kolme on kokoontunut minun nimeeni, siellä minä olen heidän keskellään.»",
-    "r8": "Matteus 18:20",
-    "v9": "«Maistakaa ja nähkää, kuinka hyvä Herra on. Autuas se mies, joka häneen turvaa!»",
-    "r9": "Psalmi 34:9",
-    "v10": "«Hän parantaa särkyneet sydämet ja sitoo heidän haavansa.»",
-    "r10": "Psalmi 147:3",
-    "v11": "«Rakkaus on pitkämielinen, rakkaus on lempeä. Se kärsii kaiken, uskoo kaiken, toivoo kaiken.»",
-    "r11": "1. Korinttilaiskirje 13:4–7",
-    "v12": "«Olkaa iloisia toivossa, kärsivällisiä ahdistuksessa, kestäviä rukouksessa.»",
-    "r12": "Roomalaiskirje 12:12",
-    "v13": "«Turvaa Herraan kaikesta sydämestäsi äläkä nojaa omaan ymmärrykseesi.»",
-    "r13": "Sananlaskut 3:5"
-  },
-  "meinBereichNav": "Oma alue",
-  "verseExplain": "Selitä minulle tämä Raamatun jae yksityiskohtaisesti: {{quote}} ({{ref}}) – Kuka tämän kirjoitti? Missä kontekstissa? Mitä tämä tarkoittaa elämälleni tänään?",
   "tts": {
     "male": "Miesääni",
     "female": "Naisääni",
@@ -1101,186 +1045,242 @@
     "femaleShort": "N",
     "voice": "Ääni"
   },
+  "chatDemo": {
+    "sectionLabel": "Tältä keskustelu näyttää",
+    "userMsg": "Tunnen itseni yksinäiseksi. Mitä Raamattu sanoo siitä?",
+    "botMsg": "Et ole yksin – vaikka siltä tuntuisi. Psalmi 23 sanoo: 'Herra on minun paimeneni, ei minulta mitään puutu.' Tämä tarkoittaa, että Jumala on lähelläsi, jopa pimeimmissä hetkissä. Haluaisitko, että tutkimme tätä kohtaa yhdessä?",
+    "cta": "Aloita oma keskustelusi →"
+  },
+  "suggest": {
+    "psalm23": "Psalmi 23 – Herra on minun paimeneni",
+    "joh316": "Johannes 3:16 – Sillä niin on Jumala maailmaa rakastanut",
+    "rom828": "Roomalaiskirje 8:28 – Kaikki yhdessä vaikuttaa parhaaksemme",
+    "mt1128": "Matteus 11:28 – Tulkaa minun tyköni kaikki työtätekevät ja raskautetut",
+    "phil413": "Filippiläiskirje 4:13 – Kaiken minä voin hänessä, joka minua vahvistaa",
+    "jes4110": "Jesaja 41:10 – Älä pelkää, sillä minä olen sinun kanssasi",
+    "1kor13": "1. Korinttilaiskirje 13 – Suurin niistä on rakkaus",
+    "spr35": "Sananlaskut 3:5 – Turvaa Herraan kaikesta sydämestäsi",
+    "jos19": "Joosua 1:9 – Ole luja ja rohkea",
+    "ps462": "Psalmi 46:1 – Jumala on turvamme ja voimamme",
+    "explainDetail": "Selitä {{ref}} yksityiskohtaisesti"
+  },
+  "dailyVerses": {
+    "v0": "\"Tulkaa minun tyköni kaikki työtätekevät ja raskautetut, niin minä annan teille levon.\"",
+    "r0": "Matteus 11:28",
+    "v1": "\"Sillä minä tunnen ajatukseni, jotka minulla on teitä kohtaan, sanoo Herra, rauhan ajatukset.\"",
+    "r1": "Jeremia 29:11",
+    "v2": "\"Älä pelkää, sillä minä olen sinun kanssasi; älä hätäänny, sillä minä olen sinun Jumalasi.\"",
+    "r2": "Jesaja 41:10",
+    "v3": "\"Herra on minun paimeneni; ei minulta mitään puutu.\"",
+    "r3": "Psalmi 23:1",
+    "v4": "\"Heittäkää kaikki murheenne hänen päällensä, sillä hän pitää teistä huolen.\"",
+    "r4": "1. Pietarin kirje 5:7",
+    "v5": "\"Minä olen maailman valo. Joka minua seuraa, se ei vaella pimeydessä.\"",
+    "r5": "Johannes 8:12",
+    "v6": "\"Ole luja ja rohkea! Älä pelkää, sillä Herra, sinun Jumalasi, on kanssasi.\"",
+    "r6": "Joosua 1:9",
+    "v7": "\"Mutta ne, jotka Herraa odottavat, saavat uuden voiman; he kohoavat siivillä kuin kotkat.\"",
+    "r7": "Jesaja 40:31",
+    "v8": "\"Sillä missä kaksi tai kolme on kokoontunut minun nimeeni, siellä minä olen heidän keskellään.\"",
+    "r8": "Matteus 18:20",
+    "v9": "\"Maistakaa ja nähkää, että Herra on hyvä; autuas se mies, joka häneen turvaa.\"",
+    "r9": "Psalmi 34:8",
+    "v10": "\"Hän parantaa särkyneet sydämet ja sitoo heidän haavansa.\"",
+    "r10": "Psalmi 147:3",
+    "v11": "\"Rakkaus on pitkämielinen, rakkaus on lempeä. Se kärsii kaiken, uskoo kaiken, toivoo kaiken.\"",
+    "r11": "1. Korinttilaiskirje 13:4–7",
+    "v12": "\"Olkaa iloisia toivossa, kärsivällisiä ahdistuksessa, kestäviä rukouksessa.\"",
+    "r12": "Roomalaiskirje 12:12",
+    "v13": "\"Turvaa Herraan kaikesta sydämestäsi äläkä nojaudu omaan ymmärrykseesi.\"",
+    "r13": "Sananlaskut 3:5"
+  },
+  "meinBereichNav": "Oma alueeni",
+  "verseExplain": "Selitä tämä raamatunjae yksityiskohtaisesti: {{quote}} ({{ref}}) – Kuka tämän kirjoitti? Missä yhteydessä? Mitä se tarkoittaa elämälleni tänään?",
+  "social": {
+    "conversations": "Keskustelut",
+    "languages": "Kielet",
+    "bibles": "Raamatunkäännökset"
+  },
   "celebrants": {
-    "badge": "Sielunhoitajille ja Life Coacheille",
+    "badge": "Sielunhoitajille ja elämänvalmentajille",
     "heroTitle1": "Jokainen kohtaaminen ansaitsee",
     "heroTitle2": "parhaan valmistelun",
-    "heroSubtitle": "Ensimmäisestä äänimuistiosta valmiiseen sessioon – suunnittele, dokumentoi ja toteuta seremonioita ja valmennussessioita yhdellä työkalulla.",
+    "heroSubtitle": "Ensimmäisestä äänimuistiosta valmiiseen istuntoon – suunnittele, dokumentoi ja toteuta seremonioita ja valmennuksia yhdellä työkalulla.",
     "ctaStart": "Aloita ilmaiseksi",
     "ctaFeatures": "Tutustu ominaisuuksiin",
-    "painTitle": "Tiedätkö tämän?",
+    "painTitle": "Kuulostaako tutulta?",
     "pain1": "Tuntikausien valmistelu jokaiseen seremoniaan?",
-    "pain2": "Muistiinpanot paperilla, jotka puuttuvat tärkeimmällä hetkellä?",
-    "pain3": "Ei järjestelmää lauluille, lukemuksille ja kululle?",
+    "pain2": "Paperimuistiinpanot hukassa tärkeimmällä hetkellä?",
+    "pain3": "Ei järjestelmää lauluille, lukemuksille ja jumalanpalvelusjärjestykselle?",
     "pain4": "Vaikea koordinoida muusikoiden ja avustajien kanssa?",
     "featuresTitle": "Kaikki mitä tarvitset",
-    "featuresSubtitle": "Harkittu järjestelmä koko prosessille – valmistelusta toteutukseen.",
-    "f1Title": "Äänitallennus ja transkriptio",
-    "f1Desc": "Tallenna keskusteluja, anna ne transkriboida automaattisesti – pohja koskettaville seremonian teksteille.",
-    "f2Title": "Älykäs tekstin luominen",
-    "f2Desc": "Muistiinpanoistasi ja transkriptioistasi syntyy empaattisia puheita, valmennuksen yhteenvetoja tai pohdintatekstejä.",
+    "featuresSubtitle": "Harkittu järjestelmä koko työnkulkuun – valmistelusta toteutukseen.",
+    "f1Title": "Äänitys ja transkriptio",
+    "f1Desc": "Tallenna keskusteluja, saat automaattiset transkriptiot – perusta liikuttaville seremonian teksteille.",
+    "f2Title": "Älykäs tekstin luonti",
+    "f2Desc": "Luo muistiinpanoistasi ja transkriptioistasi empaattisia puheita, valmennusyhteenvetoja tai pohdintatekstejä.",
     "f3Title": "PDF-vienti ja jakaminen",
-    "f3Desc": "Vie valmiit tekstit PDF-muodossa tai jaa ne jakolinkin kautta suoraan asiakkaille, omaisille ja osallistujille.",
-    "f4Title": "Mallit tunnustuksen mukaan",
-    "f4Desc": "Valmiit kulkumallit katolisille, reformoiduille, luterilaisille, vapaakirkollisille ja maallisille – heti käyttövalmiina.",
+    "f3Desc": "Vie valmiit tekstit PDF-muodossa tai jaa linkin kautta suoraan asiakkaille, sukulaisille ja osallistujille.",
+    "f4Title": "Mallit uskontokunnittain",
+    "f4Desc": "Valmiit työnkulun mallit katolisille, reformoiduille, luterilaisille, evankelisille ja maallisille – käyttövalmiina.",
     "f5Title": "Kalenteri ja suunnittelu",
-    "f5Desc": "Kaikki seremoniat yhdellä silmäyksellä: kuukausi-, viikko- ja päivänäkymä. Älä koskaan menetä yleiskuvaa.",
-    "f6Title": "Teleprompteri / Kapellimestaritila",
-    "f6Desc": "Live-tila toteutukseen: käy läpi kulku lohko lohkolta, lue tekstejä, näe musiikkivihjeet – häiriöttömästi.",
+    "f5Desc": "Kaikki seremoniat yhdellä silmäyksellä: kuukausi-, viikko- ja päivänäkymät. Älä koskaan menetä lankaa uudelleen.",
+    "f6Title": "Teleprompteri / Johtajatila",
+    "f6Desc": "Live-tila toteutukseen: käy läpi palvelu lohko kerrallaan, lue tekstejä, näe musiikkivihjeet – häiriöttömästi.",
     "f7Title": "Musiikin integrointi",
-    "f7Desc": "Integroi lauluja ja musiikkikappaleita suoraan kulkuun. Kapellimestaritila näyttää, milloin mikäkin kappale soi.",
+    "f7Desc": "Integroi lauluja ja musiikkikappaleita suoraan jumalanpalvelusjärjestykseen. Johtajatila näyttää, milloin mikäkin kappale soi.",
     "f8Title": "Tiimi ja yhteistyö",
     "f8Desc": "Ota mukaan muusikoita, lukijoita, teknikoita. Määritä rooleja, tarkista saatavuus, suunnittele yhdessä.",
     "f9Title": "Resurssikirjasto",
-    "f9Desc": "Lauluja, rukouksia, lukemuksia ja liturgisia tekstejä – haettavissa, tageilla, kasvaa jokaisen seremonian myötä.",
-    "f10Title": "Kirkonkirja ja rekisteri",
-    "f10Desc": "Dokumentoi kasteet, avioliitot ja hautajaiset siististi. Kaikki tiedot yhdessä paikassa.",
-    "pricingTitle": "Yksinkertaiset hinnat",
+    "f9Desc": "Lauluja, rukouksia, lukemuksia ja liturgisia tekstejä – haettavissa, tagattuja, kasvaa jokaisen seremonian myötä.",
+    "f10Title": "Kirkon rekisteri",
+    "f10Desc": "Dokumentoi siististi kasteet, häät ja hautajaiset. Kaikki tiedot yhdessä paikassa.",
+    "pricingTitle": "Yksinkertainen hinnoittelu",
     "pricingSubtitle": "Aloita ilmaiseksi. Päivitä, kun tarvitset enemmän.",
     "planPersonal": "Henkilökohtainen",
     "planFree": "Ilmainen",
     "planPro": "Pro",
-    "planProPrice": "29 CHF",
-    "planProPeriod": "/ kuukausi",
+    "planProPrice": "CHF 29",
+    "planProPeriod": "/ kk",
     "recommended": "Suositeltu",
     "pf1": "Luo seremonian tekstejä",
-    "pf2": "Äänitallennus ja transkriptio",
+    "pf2": "Äänitys ja transkriptio",
     "pf3": "PDF-vienti",
     "pf4": "Jaa linkin kautta",
     "pf5": "1 aktiivinen projekti",
     "pf6": "Kaikki henkilökohtaisesta",
     "pf7": "Rajoittamaton määrä projekteja",
-    "pf8": "Jumalanpalvelussuunnittelija kalenterilla",
-    "pf9": "Kapellimestaritila (teleprompteri)",
+    "pf8": "Palvelusuunnittelija kalenterilla",
+    "pf9": "Johtajatila (teleprompteri)",
     "pf10": "Musiikin integrointi",
     "pf11": "Mallikirjasto",
     "pf12": "Tiimityöskentely",
     "pf13": "Resurssikirjasto",
-    "pf14": "Kirkonkirja / Rekisteri",
+    "pf14": "Kirkon rekisteri",
     "pf15": "Prioriteettituki",
-    "ctaFree": "Aloita nyt",
-    "ctaTrial": "Kokeile 14 päivää ilmaiseksi",
+    "ctaFree": "Aloita",
+    "ctaTrial": "14 päivän ilmainen kokeilu",
     "faqTitle": "Usein kysytyt kysymykset",
     "faq1q": "Kenelle tämä työkalu on tarkoitettu?",
-    "faq1a": "Sielunhoitajille, life coacheille, freelance-hautajaispuhujille, hääseremoniamestareille, sairaalasielunhoitajille, papeille ja kaikille, jotka valmistautuvat ja toteuttavat seremonioita, työpajoja tai valmennussessioita.",
-    "faq2q": "Tallennetaanko tietoni turvallisesti?",
-    "faq2a": "Kyllä. Kaikki tiedot tallennetaan salattuna Sveitsissä. Vain sinulla on pääsy sisältöösi.",
+    "faq1a": "Sielunhoitajille, elämänvalmentajille, freelance-hautajaispuhujille, hääjuhlien järjestäjille, sairaalasielunhoitajille, pastoreille ja kaikille, jotka valmistautuvat ja toteuttavat seremonioita, työpajoja tai valmennuksia.",
+    "faq2q": "Onko tietoni tallennettu turvallisesti?",
+    "faq2a": "Kyllä. Kaikki tiedot on salattu ja tallennettu Sveitsiin. Vain sinulla on pääsy sisältöösi.",
     "faq3q": "Mitä kieliä tuetaan?",
-    "faq3a": "Käyttöliittymä on saatavilla 36 kielellä. Tekstejä voidaan luoda millä tahansa kielellä.",
-    "faq4q": "Voinko käyttää kapellimestaritilaa myös tabletilla?",
-    "faq4a": "Kyllä! Koko sovellus on mobiilioptimoitu PWA:na – täydellinen tabletilla puhujapöydällä.",
+    "faq3a": "Käyttöliittymä on saatavilla 36 kielellä. Tekstejä voi luoda millä tahansa kielellä.",
+    "faq4q": "Voinko käyttää johtajatilaa tabletilla?",
+    "faq4a": "Kyllä! Koko sovellus on optimoitu PWA:na mobiililaitteille – täydellinen tabletilla lukupöydällä.",
     "faq5q": "Tarvitsenko teknisiä taitoja?",
-    "faq5a": "Ei. Käyttö on intuitiivista ja suunniteltu ihmisille, jotka haluavat keskittyä sisältöön – ei tekniikkaan.",
-    "faqBottom": "Valmis parempiin seremonioihin?",
+    "faq5a": "Ei. Käyttöliittymä on intuitiivinen ja suunniteltu ihmisille, jotka haluavat keskittyä sisältöön – eivät teknologiaan.",
+    "ctaBottom": "Valmiina parempiin seremonioihin?",
     "ctaBottomSub": "Aloita ilmaiseksi – luottokorttia ei tarvita.",
-    "ctaBottomBtn": "Aloita nyt ilmaiseksi",
-    "footerImprint": "Julkaisutiedot",
-    "footerPrivacy": "Tietosuoja",
-    "footerChurches": "Seurakunnille",
-    "seoTitle": "BibleBot.Life sielunhoitajille ja Life Coacheille — Seremonioiden ja sessioiden suunnittelu",
-    "seoDesc": "Hautajaisten, häiden, valmennussessioiden ammattimainen suunnittelu: äänitallennus, tekstin luominen, teleprompteri, kalenteri ja yhteistyö."
+    "ctaBottomBtn": "Aloita ilmaiseksi nyt",
+    "footerImprint": "Oikeudellinen huomautus",
+    "footerPrivacy": "Tietosuojakäytäntö",
+    "footerChurches": "Kirkoille",
+    "seoTitle": "BibleBot.Life sielunhoitajille ja elämänvalmentajille – Suunnittele seremonioita ja istuntoja",
+    "seoDesc": "Suunnittele hautajaisia, häitä, valmennuksia ammattimaisesti: äänitys, tekstin luonti, teleprompteri, kalenteri ja yhteistyö."
   },
   "pricing": {
-    "onRequest": "Patronointi pyynnöstä",
+    "onRequest": "Suojelus pyynnöstä",
     "contactUs": "Ota yhteyttä"
   },
-  "entryTiles": {
-    "groups": {
-      "emotional": "Jokin painaa mieltäni",
-      "orientation": "Etsin suuntaa",
-      "deep": "Haluan syventyä"
-    },
-    "labels": {
-      "anxiety": "Olen huolissani",
-      "heartbreak": "Olen loukkaantunut",
-      "loneliness": "Tunnen itseni yksinäiseksi",
-      "decision": "Olen päätöksen edessä",
-      "newstart": "Haluan aloittaa alusta",
-      "calling": "Mikä on minun tieni?",
-      "bibleverse": "Ymmärrä Raamatun jae",
-      "sevenwhys": "Miksi teen tämän todella?",
-      "lifewheel": "Missä olen elämässä?",
-      "thankfulness": "Kiitollisuus",
-      "burnout": "Uupumus",
-      "meaningcrisis": "Merkityskriisi",
-      "selfdoubt": "Itseluottamuksen puute",
-      "anger": "Viha ja suuttumus",
-      "financial": "Taloudelliset huolet",
-      "illness": "Sairaus",
-      "condolence": "Suru ja menetys",
-      "wedding": "Avioliitto ja parisuhde",
-      "baptism": "Kaste ja uskonpolku",
-      "faithdoubt": "Uskon epäilykset",
-      "forgiveness": "Anteeksianto ja irti päästäminen",
-      "sleepless": "Unettomuus",
-      "biblequiz": "Raamattuvisa",
-      "prayerwall": "Rukousmuuri"
-    },
-    "showMore": "Tutustu muihin aiheisiin",
-    "showLess": "Näytä vähemmän"
-  },
-  "trust": {
-    "qa": {
-      "title": "QA-tarkistettu",
-      "text": "Jokainen Raamatun kohta tarkistetaan automaattisesti oikeellisuuden varalta – jokaisessa keskustelussa."
-    },
-    "noAds": {
-      "title": "Ei mainoksia",
-      "text": "Ei seurantaa, ei tietojen jakamista, ei kysymystesi kaupallistamista."
-    },
-    "noExpertise": {
-      "title": "Ei ennakkotietoja tarvita",
-      "text": "Et tarvitse kirkon jäsenyyttä tai teologista ennakkotietoa."
-    }
-  },
-  "tools": {
-    "badge": "Enemmän kuin vastauksia",
-    "title": "Kaksi työkalua, jotka menevät syvemmälle",
-    "subtitle": "Hetkiin, jolloin tarvitset enemmän kuin vastauksen.",
-    "lifewheel": {
-      "title": "Elämänpyörä-tarkistus",
-      "desc": "Miten menee työn, suhteiden, tarkoituksen ja terveyden kanssa? Elämänpyörä auttaa sinua saamaan selkeyttä 3 minuutissa – ja näyttää, mihin Raamattu suoraan liittyy.",
-      "cta": "Aloita elämänpyörä"
-    },
-    "sevenwhys": {
-      "title": "7 Miksi-menetelmä",
-      "desc": "Miksi teen tämän todella? Miksi tämä tuntuu tältä? BibleBot ohjaa sinua 7 kysymyksen läpi, jotka menevät juureen – raamatullisella luokituksella syvimmässä kohdassa.",
-      "cta": "Kysy syvemmin"
-    }
-  },
   "audience": {
-    "title": "Kenelle BibleBot.Life on tarkoitettu?",
-    "subtitle": "Valitse polkusi",
+    "church": {
+      "cta": "Seurakunnille ja sielunhoitajille →",
+      "desc": "Papeille, sielunhoitajille ja seurakuntatiimeille: tekoälytukea saarnan valmisteluun, tiimisuunnitteluun ja muuhun.",
+      "f1": "Jumalanpalveluksen suunnittelija tekoälyllä",
+      "f2": "Resurssikirjasto",
+      "f3": "Tiimin koordinointi",
+      "f4": "Seurakunnan sivu ja hakemisto",
+      "title": "Suunnittelen jumalanpalveluksia ja ohjaan ihmisiä"
+    },
     "personal": {
-      "title": "Etsin henkilökohtaista ohjausta",
-      "desc": "Uskon kysymykset, päivittäiset impulssit, hengellinen kasvu – täysin omassa tahdissasi ja ilman arvostelua.",
-      "f1": "Chat Raamatun ohjauksella",
+      "cta": "Keskustele nyt – ilmaiseksi →",
+      "desc": "Kysymyksiä uskosta, päivittäisiä impulsseja, hengellistä kasvua – omassa tahdissasi ja ilman tuomitsemista.",
+      "f1": "Keskustele Raamatun ohjauksella",
       "f2": "21 päivän matka",
       "f3": "Päivittäinen impulssi push-ilmoituksella / Telegramilla",
       "f4": "Henkilökohtainen keskusteluhistoria",
-      "cta": "Chattaa nyt – ilmaiseksi →"
+      "title": "Etsin henkilökohtaista ohjausta"
     },
-    "church": {
-      "title": "Suunnittelen jumalanpalveluksia ja ohjaan ihmisiä",
-      "desc": "Papeille, sielunhoitajille ja seurakuntatiimeille: tekoälytuki saarnan valmisteluun, tiimisuunnitteluun ja muuhun.",
-      "f1": "Jumalanpalvelussuunnittelija tekoälyllä",
-      "f2": "Resurssikirjasto",
-      "f3": "Tiimikoordinointi",
-      "f4": "Seurakuntasivu ja hakemisto",
-      "cta": "Seurakunnille ja sielunhoitajille →"
-    }
+    "subtitle": "Valitse polkusi",
+    "title": "Kenelle BibleBot.Life on tarkoitettu?"
+  },
+  "entryTiles": {
+    "groups": {
+      "deep": "Haluan syventyä",
+      "emotional": "Jokin painaa mieltäni",
+      "orientation": "Etsin suuntaa"
+    },
+    "labels": {
+      "anger": "Viha ja ärsytys",
+      "anxiety": "Olen huolissani",
+      "baptism": "Kaste ja uskonpolku",
+      "biblequiz": "Raamattuvisa",
+      "bibleverse": "Raamatunkohdan ymmärtäminen",
+      "burnout": "Uupumus",
+      "calling": "Mikä on minun tieni?",
+      "condolence": "Suru ja menetys",
+      "decision": "Olen päätöksen edessä",
+      "faithdoubt": "Uskon epäilykset",
+      "financial": "Taloudelliset huolet",
+      "forgiveness": "Anteeksianto ja irti päästäminen",
+      "heartbreak": "Olen loukkaantunut",
+      "illness": "Sairaus",
+      "lifewheel": "Missä olen elämässä?",
+      "loneliness": "Tunnen itseni yksinäiseksi",
+      "meaningcrisis": "Merkityskriisi",
+      "newstart": "Haluan aloittaa alusta",
+      "prayerwall": "Rukousmuuri",
+      "selfdoubt": "Itseluottamuksen puute",
+      "sevenwhys": "Miksi teen tämän todella?",
+      "sleepless": "Unettomuus",
+      "thankfulness": "Kiitollisuus",
+      "wedding": "Avioliitto ja parisuhde"
+    },
+    "showLess": "Näytä vähemmän",
+    "showMore": "Löydä lisää aiheita"
   },
   "faqExtra": {
-    "methodik": {
-      "q": "Mitä BibleBotin metodologian takana on?",
-      "a": ""
+    "faithPsych": {
+      "a": "BibleBot yhdistää raamatullisen viisauden näyttöön perustuvan psykologian oivalluksiin – ei psykologisoidakseen uskoa, vaan tehdäkseen siitä arkipäiväisempää. Menetelmät (PERMA, logoterapia, kiitollisuus- ja anteeksiantotutkimus) täydentävät Raamattua, mutta eivät korvaa sitä.",
+      "q": "Yhdistääkö BibleBot uskon ja psykologian?"
     },
     "journey": {
       "q": "Mikä on 21 päivän matka?"
     },
-    "faithPsych": {
-      "q": "Yhdistääkö BibleBot uskon ja psykologian?",
-      "a": "BibleBot yhdistää Raamatun viisauden näyttöön perustuvan psykologian oivalluksiin – ei psykologisoidakseen uskoa, vaan tehdäkseen siitä arkeen sopivan. Menetelmät (PERMA, logoterapia, kiitollisuus- ja anteeksiantotutkimus) täydentävät Raamattua, mutta eivät korvaa sitä."
+    "methodik": {
+      "a": "",
+      "q": "Mitä BibleBotin metodologian takana on?"
+    }
+  },
+  "tools": {
+    "badge": "Enemmän kuin vastauksia",
+    "lifewheel": {
+      "cta": "Aloita elämänpyörä",
+      "desc": "Miten menee työn, ihmissuhteiden, tarkoituksen ja terveyden kanssa? Elämänpyörä auttaa sinua saamaan selkeyttä 3 minuutissa – ja näyttää, mihin Raamattu suoraan liittyy.",
+      "title": "Elämänpyörä-tarkistus"
+    },
+    "sevenwhys": {
+      "cta": "Kysy syvemmin",
+      "desc": "Miksi teen tämän todella? Miksi tämä tuntuu tältä? BibleBot opastaa sinua 7 kysymyksen läpi, jotka menevät juurille – raamatullisella selityksellä syvimmässä kohdassa.",
+      "title": "7 miksi -menetelmä"
+    },
+    "subtitle": "Hetkiin, jolloin tarvitset enemmän kuin vastauksen.",
+    "title": "Kaksi työkalua, jotka menevät syvemmälle"
+  },
+  "trust": {
+    "noAds": {
+      "text": "Ei seurantaa, ei tietojen jakamista, ei kysymystesi kaupallistamista.",
+      "title": "Ei mainoksia"
+    },
+    "noExpertise": {
+      "text": "Et tarvitse kirkon jäsenyyttä tai teologista ennakkotietoa.",
+      "title": "Ei ennakkotietoa tarvita"
+    },
+    "qa": {
+      "text": "Jokainen raamatunkohta tarkistetaan automaattisesti oikeellisuuden varalta – jokaisessa keskustelussa.",
+      "title": "QA-tarkistettu"
     }
   }
 }

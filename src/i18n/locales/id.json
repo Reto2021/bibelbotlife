@@ -234,7 +234,10 @@
     "bank": "Bank",
     "purpose": "Tujuan",
     "purposeValue": "Donasi BibleBot.Life",
-    "note": "BibleBot.Life dijalankan sebagai proyek pribadi. Oleh karena itu, donasi tidak dapat dikurangkan dari pajak."
+    "note": "BibleBot.Life dijalankan sebagai proyek pribadi. Oleh karena itu, donasi tidak dapat dikurangkan dari pajak.",
+    "creditCard": "Dukung dengan Kartu Kredit",
+    "secureNote": "Pembayaran Aman · Tanpa Langganan Jebakan · Dapat Dibatalkan Kapan Saja",
+    "twint": "Dukung dengan Twint"
   },
   "refer": {
     "badge": "Bagikan Firman Tuhan",
@@ -266,7 +269,8 @@
     "noTax": "Donasi tidak dapat dikurangkan dari pajak",
     "datenschutz": "Privasi Data",
     "love": "Dengan ❤️ untuk semua yang bertanya-tanya apa yang Kristus pikirkan.",
-    "forChurches": "Untuk Gereja"
+    "forChurches": "Untuk Gereja",
+    "forCelebrants": "Untuk Pendeta & Pelatih"
   },
   "chat": {
     "welcome": "Senang Anda di sini 🤗\n\nSaya pendamping Anda Anda – pendamping pribadi Anda dengan Alkitab, pertanyaan-pertanyaan bagus, dan inspirasi konkret. Tanpa tekanan, tanpa penilaian.\n\nAnda bisa bertanya apa saja – atau cukup ceritakan apa yang sedang mengganggu Anda. 💛",
@@ -1179,5 +1183,104 @@
   "pricing": {
     "onRequest": "Patronase atas permintaan",
     "contactUs": "Hubungi kami"
+  },
+  "audience": {
+    "church": {
+      "cta": "Untuk Gereja & Pendeta →",
+      "desc": "Untuk pendeta, konselor, dan tim gereja: Dukungan AI untuk persiapan khotbah, perencanaan tim, dan lainnya.",
+      "f1": "Perencana Ibadah dengan AI",
+      "f2": "Perpustakaan Sumber Daya",
+      "f3": "Koordinasi Tim",
+      "f4": "Halaman & Direktori Gereja",
+      "title": "Saya merencanakan ibadah & mendampingi orang"
+    },
+    "personal": {
+      "cta": "Chat sekarang — gratis →",
+      "desc": "Pertanyaan tentang iman, inspirasi harian, pertumbuhan spiritual — sesuai kecepatan Anda dan tanpa penilaian.",
+      "f1": "Chat dengan Pendampingan Alkitab",
+      "f2": "Perjalanan 21 Hari",
+      "f3": "Inspirasi Harian via Push / Telegram",
+      "f4": "Riwayat Percakapan Pribadi",
+      "title": "Saya mencari pendampingan pribadi"
+    },
+    "subtitle": "Pilih jalan Anda",
+    "title": "Untuk siapa BibleBot.Life?"
+  },
+  "entryTiles": {
+    "groups": {
+      "deep": "Saya ingin mendalami",
+      "emotional": "Ada sesuatu yang mengganggu saya",
+      "orientation": "Saya mencari orientasi"
+    },
+    "labels": {
+      "anger": "Kemarahan & Kekesalan",
+      "anxiety": "Saya khawatir",
+      "baptism": "Baptisan & Perjalanan Iman",
+      "biblequiz": "Kuis Alkitab",
+      "bibleverse": "Memahami Ayat Alkitab",
+      "burnout": "Kelelahan",
+      "calling": "Apa jalan saya?",
+      "condolence": "Duka & Kehilangan",
+      "decision": "Saya dihadapkan pada keputusan",
+      "faithdoubt": "Keraguan Iman",
+      "financial": "Masalah Keuangan",
+      "forgiveness": "Memaafkan & Melepaskan",
+      "heartbreak": "Saya terluka",
+      "illness": "Penyakit",
+      "lifewheel": "Di mana posisi saya dalam hidup?",
+      "loneliness": "Saya merasa sendiri",
+      "meaningcrisis": "Krisis Makna",
+      "newstart": "Saya ingin memulai yang baru",
+      "prayerwall": "Dinding Doa",
+      "selfdoubt": "Keraguan Diri",
+      "sevenwhys": "Mengapa saya benar-benar melakukan ini?",
+      "sleepless": "Insomnia",
+      "thankfulness": "Syukur",
+      "wedding": "Pernikahan & Kemitraan"
+    },
+    "showLess": "Tampilkan Lebih Sedikit",
+    "showMore": "Temukan Topik Lainnya"
+  },
+  "faqExtra": {
+    "faithPsych": {
+      "a": "BibleBot menggabungkan hikmat Alkitab dengan wawasan dari psikologi berbasis bukti — bukan untuk mempsikologikan iman, tetapi untuk membuatnya relevan dalam kehidupan sehari-hari. Metode-metode (PERMA, Logoterapi, penelitian rasa syukur dan pengampunan) melengkapi Alkitab, tetapi tidak menggantikannya.",
+      "q": "Apakah BibleBot menggabungkan iman dan psikologi?"
+    },
+    "journey": {
+      "q": "Apa itu Perjalanan 21 Hari?"
+    },
+    "methodik": {
+      "a": "",
+      "q": "Apa yang ada di balik metodologi BibleBot?"
+    }
+  },
+  "tools": {
+    "badge": "Lebih dari Sekadar Jawaban",
+    "lifewheel": {
+      "cta": "Mulai Roda Kehidupan",
+      "desc": "Bagaimana keadaan pekerjaan, hubungan, makna, dan kesehatan saat ini? Roda Kehidupan membantu Anda mendapatkan kejelasan dalam 3 menit — dan menunjukkan di mana Alkitab secara langsung terhubung.",
+      "title": "Cek Roda Kehidupan"
+    },
+    "sevenwhys": {
+      "cta": "Tanyakan Lebih Dalam",
+      "desc": "Mengapa saya benar-benar melakukan ini? Mengapa rasanya seperti ini? BibleBot memandu Anda melalui 7 pertanyaan yang sampai ke akar masalah — dengan klasifikasi Alkitab di titik terdalam.",
+      "title": "Metode 7 Mengapa"
+    },
+    "subtitle": "Untuk saat-saat ketika Anda membutuhkan lebih dari sekadar jawaban.",
+    "title": "Dua Alat yang Mendalam"
+  },
+  "trust": {
+    "noAds": {
+      "text": "Tidak ada pelacakan, tidak ada pembagian data, tidak ada monetisasi pertanyaan Anda.",
+      "title": "Tanpa Iklan"
+    },
+    "noExpertise": {
+      "text": "Anda tidak memerlukan keanggotaan gereja atau pengetahuan teologis sebelumnya.",
+      "title": "Tidak Perlu Pengetahuan Sebelumnya"
+    },
+    "qa": {
+      "text": "Setiap ayat Alkitab secara otomatis diperiksa keakuratannya — setiap kali percakapan.",
+      "title": "Teruji QA"
+    }
   }
 }
