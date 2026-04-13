@@ -47,6 +47,8 @@ const MeinBereichHome = () => {
         <p className="text-sm text-muted-foreground mt-1">{t("meinBereich.subtitle")}</p>
       </div>
 
+      <FavoriteToolsBar />
+
       <div className="grid gap-3 sm:grid-cols-2">
         {ceremonies.map((c) => (
           <Card
