@@ -1244,7 +1244,7 @@
   },
   "tools": {
     "badge": "Meer as antwoorde",
-    "title": "Twee instrumente wat dieper gaan",
+    "title": "Werktuie wat dieper gaan",
     "subtitle": "Vir oomblikke wanneer jy meer as 'n antwoord nodig het.",
     "lifewheel": {
       "title": "Lewenswiel-kontrole",
@@ -1255,6 +1255,26 @@
       "title": "Die 7-Waarom-metode",
       "desc": "Waarom doen ek dit regtig? Waarom voel dit so? BibleBot lei jou deur 7 vrae wat tot die wortel kom — met Bybelse plasing op die diepste punt.",
       "cta": "Vra dieper"
+    },
+    "gratitude": {
+      "title": "Dankbaarheidsdagboek",
+      "desc": "Noem drie dinge waarvoor jy vandag dankbaar is — en BibleBot vind passende Psalms en verse. 'n Daaglikse ritueel wat jou perspektief verander.",
+      "cta": "Oefen dankbaarheid"
+    },
+    "lectio": {
+      "title": "Lectio Divina",
+      "desc": "Begeleide meditatiewe Bybellees in vier stappe: Lees, Mediteer, Bid, Rus. 'n Eeue-oue praktyk, vars begelei.",
+      "cta": "Begin meditasie"
+    },
+    "forgiveness": {
+      "title": "Vergifnisbrief",
+      "desc": "BibleBot begelei jou stap vir stap deur die skryf van 'n vergifnisbrief — met Bybelse impulse en sonder druk.",
+      "cta": "Begin brief"
+    },
+    "values": {
+      "title": "Waarde-kompas",
+      "desc": "Wat is werklik belangrik vir jou? Ontdek jou kernwaardes — en wat die Bybel daaroor sê. Duidelikheid in 5 minute.",
+      "cta": "Ontdek waardes"
     }
   },
   "audience": {

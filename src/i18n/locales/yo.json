@@ -1276,7 +1276,27 @@
       "title": "Ọ̀nà Ìdí 7"
     },
     "subtitle": "Fún àwọn àkókò tí o nílò jù ìdáhùn kan lọ.",
-    "title": "Àwọn ohun èlò méjì tí ó lọ jinlẹ̀ sí i"
+    "title": "Àwọn irinṣẹ́ tó jinlẹ̀ sí i",
+    "gratitude": {
+      "title": "Ìwé ìdúpẹ́",
+      "desc": "Sọ nǹkan mẹ́ta tí o dupẹ́ fún lónìí — BibleBot yóò wá sáàmù àti ẹsẹ tó bá mu.",
+      "cta": "Ṣe àdánwò ìdúpẹ́"
+    },
+    "lectio": {
+      "title": "Lectio Divina",
+      "desc": "Kíkà Bíbélì àṣàrò nínú ìgbésẹ̀ mẹ́rin: Ka, Ronú, Gbàdúrà, Sinmi.",
+      "cta": "Bẹ̀rẹ̀ àṣàrò"
+    },
+    "forgiveness": {
+      "title": "Lẹ́tà ìdáríjì",
+      "desc": "BibleBot yóò darí rẹ lọ́nà ìgbésẹ̀ láti kọ lẹ́tà ìdáríjì — pẹ̀lú ìtọ́ni Bíbélì.",
+      "cta": "Bẹ̀rẹ̀ lẹ́tà"
+    },
+    "values": {
+      "title": "Kọ́mpásì iye",
+      "desc": "Kí ni ó ṣe pàtàkì gan-an fún ọ? Ṣàwárí àwọn iye pàtàkì rẹ — àti ohun tí Bíbélì sọ.",
+      "cta": "Ṣàwárí iye"
+    }
   },
   "trust": {
     "noAds": {

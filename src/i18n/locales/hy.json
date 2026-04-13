@@ -1244,7 +1244,7 @@
   },
   "tools": {
     "badge": "Ավելին, քան պատասխաններ",
-    "title": "Երկու գործիք, որոնք ավելի խորն են գնում",
+    "title": "Գործիdelays որ delays delays",
     "subtitle": "Այն պահերի համար, երբ ձեզ մեկ պատասխանից ավելին է պետք։",
     "lifewheel": {
       "title": "Կյանքի անիվի ստուգում",
@@ -1255,6 +1255,26 @@
       "title": "7-Ինչու մեթոդը",
       "desc": "Ինչո՞ւ եմ ես իրականում դա անում։ Ինչո՞ւ է դա այդպես զգացվում։ BibleBot-ը ձեզ կառաջնորդի 7 հարցի միջոցով, որոնք կհասնեն արմատին՝ աստվածաշնչյան մեկնաբանությամբ ամենախորը կետում։",
       "cta": "Ավելի խորը հարցեր տալ"
+    },
+    "gratitude": {
+      "title": "Երdelays oper",
+      "desc": "Նdelays erdelay oper.",
+      "cta": "Pratikir erdelay"
+    },
+    "lectio": {
+      "title": "Lectio Divina",
+      "desc": "Arajnordvats khorhrdatsakan Astvatsashnchakan kart'um ch'ors k'aylov.",
+      "cta": "Sksel khorhrdats"
+    },
+    "forgiveness": {
+      "title": "Neroghutyun naman",
+      "desc": "BibleBot k'ez k'ayl ar k'ayl arajnordvum e neroghutyun namak grel.",
+      "cta": "Sksel namak"
+    },
+    "values": {
+      "title": "Arzhekner kompas",
+      "desc": "Inch e k'ez irapes karevorvum? Haidtnir k'o himnakan arzhekner.",
+      "cta": "Haidtnir arzhekner"
     }
   },
   "audience": {

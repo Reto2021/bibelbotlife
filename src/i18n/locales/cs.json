@@ -1276,7 +1276,27 @@
       "title": "Metoda 7 proč"
     },
     "subtitle": "Pro chvíle, kdy potřebujete víc než jen odpověď.",
-    "title": "Dva nástroje, které jdou hlouběji"
+    "title": "Nástroje, které jdou hlouběji",
+    "gratitude": {
+      "title": "Deník vděčnosti",
+      "desc": "Jmenuj tři věci, za které jsi dnes vděčný — a BibleBot najde odpovídající žalmy a verše.",
+      "cta": "Cvič vděčnost"
+    },
+    "lectio": {
+      "title": "Lectio Divina",
+      "desc": "Vedené meditativní čtení Bible ve čtyřech krocích: Číst, Meditovat, Modlit se, Odpočívat.",
+      "cta": "Začít meditaci"
+    },
+    "forgiveness": {
+      "title": "Dopis odpuštění",
+      "desc": "BibleBot tě provede krok za krokem psaním dopisu odpuštění — s biblickými impulzy.",
+      "cta": "Začít dopis"
+    },
+    "values": {
+      "title": "Kompas hodnot",
+      "desc": "Co je pro tebe skutečně důležité? Objevte své základní hodnoty — a co o nich říká Bible.",
+      "cta": "Objevit hodnoty"
+    }
   },
   "trust": {
     "noAds": {

@@ -1278,7 +1278,27 @@
       "title": "Phương pháp 7 Tại sao"
     },
     "subtitle": "Dành cho những khoảnh khắc bạn cần nhiều hơn một câu trả lời.",
-    "title": "Hai công cụ đi sâu hơn"
+    "title": "Công cụ đi sâu hơn",
+    "gratitude": {
+      "title": "Nhật ký biết ơn",
+      "desc": "Kể ba điều bạn biết ơn hôm nay — và BibleBot tìm thánh vịnh và câu Kinh Thánh phù hợp.",
+      "cta": "Thực hành biết ơn"
+    },
+    "lectio": {
+      "title": "Lectio Divina",
+      "desc": "Đọc Kinh Thánh thiền định có hướng dẫn trong bốn bước: Đọc, Suy niệm, Cầu nguyện, Nghỉ ngơi.",
+      "cta": "Bắt đầu thiền định"
+    },
+    "forgiveness": {
+      "title": "Thư tha thứ",
+      "desc": "BibleBot hướng dẫn bạn từng bước viết thư tha thứ — với cảm hứng từ Kinh Thánh.",
+      "cta": "Bắt đầu thư"
+    },
+    "values": {
+      "title": "La bàn giá trị",
+      "desc": "Điều gì thực sự quan trọng với bạn? Khám phá giá trị cốt lõi — và Kinh Thánh nói gì về chúng.",
+      "cta": "Khám phá giá trị"
+    }
   },
   "trust": {
     "noAds": {

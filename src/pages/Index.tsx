@@ -231,7 +231,7 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Card className="bg-card/80 border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
               <CardHeader className="text-center pb-2">
                 <span className="text-5xl mb-3 block">🎡</span>
@@ -262,6 +262,82 @@ const Index = () => {
                   className="w-full"
                 >
                   {t("tools.sevenwhys.cta")}
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card/80 border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <CardHeader className="text-center pb-2">
+                <span className="text-5xl mb-3 block">🙏</span>
+                <CardTitle className="text-xl text-card-foreground">{t("tools.gratitude.title")}</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center space-y-4">
+                <CardDescription className="text-muted-foreground leading-relaxed">
+                  {t("tools.gratitude.desc")}
+                </CardDescription>
+                <Button
+                  variant="outline"
+                  onClick={() => openBibleBotChat("Ich möchte das Dankbarkeitstagebuch ausprobieren. Bitte frag mich nach drei Dingen, für die ich heute dankbar bin, und finde dann passende Bibelverse dazu.", "gratitude")}
+                  className="w-full"
+                >
+                  {t("tools.gratitude.cta")}
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card/80 border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <CardHeader className="text-center pb-2">
+                <span className="text-5xl mb-3 block">📖</span>
+                <CardTitle className="text-xl text-card-foreground">{t("tools.lectio.title")}</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center space-y-4">
+                <CardDescription className="text-muted-foreground leading-relaxed">
+                  {t("tools.lectio.desc")}
+                </CardDescription>
+                <Button
+                  variant="outline"
+                  onClick={() => openBibleBotChat("Ich möchte Lectio Divina ausprobieren. Bitte führe mich durch die vier Schritte: Lectio (Lesen), Meditatio (Meditieren), Oratio (Beten), Contemplatio (Ruhen). Wähle einen passenden Bibeltext für mich.", "lectio")}
+                  className="w-full"
+                >
+                  {t("tools.lectio.cta")}
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card/80 border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <CardHeader className="text-center pb-2">
+                <span className="text-5xl mb-3 block">✉️</span>
+                <CardTitle className="text-xl text-card-foreground">{t("tools.forgiveness.title")}</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center space-y-4">
+                <CardDescription className="text-muted-foreground leading-relaxed">
+                  {t("tools.forgiveness.desc")}
+                </CardDescription>
+                <Button
+                  variant="outline"
+                  onClick={() => openBibleBotChat("Ich möchte einen Vergebungsbrief schreiben. Bitte begleite mich Schritt für Schritt — mit biblischen Impulsen und einfühlsam.", "forgiveness")}
+                  className="w-full"
+                >
+                  {t("tools.forgiveness.cta")}
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card/80 border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <CardHeader className="text-center pb-2">
+                <span className="text-5xl mb-3 block">🧭</span>
+                <CardTitle className="text-xl text-card-foreground">{t("tools.values.title")}</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center space-y-4">
+                <CardDescription className="text-muted-foreground leading-relaxed">
+                  {t("tools.values.desc")}
+                </CardDescription>
+                <Button
+                  variant="outline"
+                  onClick={() => openBibleBotChat("Ich möchte meinen Werte-Kompass entdecken. Hilf mir herauszufinden, was mir wirklich wichtig ist — und zeige mir, was die Bibel zu meinen Kernwerten sagt.", "values")}
+                  className="w-full"
+                >
+                  {t("tools.values.cta")}
                 </Button>
               </CardContent>
             </Card>

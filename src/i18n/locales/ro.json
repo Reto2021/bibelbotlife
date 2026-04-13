@@ -1276,7 +1276,27 @@
       "title": "Metoda celor 7 De Ce"
     },
     "subtitle": "Pentru momentele în care ai nevoie de mai mult decât un răspuns.",
-    "title": "Două instrumente care merg mai adânc"
+    "title": "Instrumente care merg mai adânc",
+    "gratitude": {
+      "title": "Jurnal de recunoștință",
+      "desc": "Numește trei lucruri pentru care ești recunoscător astăzi — și BibleBot găsește psalmi și versete potrivite.",
+      "cta": "Practică recunoștința"
+    },
+    "lectio": {
+      "title": "Lectio Divina",
+      "desc": "Citire biblică meditativă ghidată în patru pași: Citește, Meditează, Roagă-te, Odihnește-te.",
+      "cta": "Începe meditația"
+    },
+    "forgiveness": {
+      "title": "Scrisoare de iertare",
+      "desc": "BibleBot te ghidează pas cu pas în scrierea unei scrisori de iertare — cu impulsuri biblice.",
+      "cta": "Începe scrisoarea"
+    },
+    "values": {
+      "title": "Busola valorilor",
+      "desc": "Ce este cu adevărat important pentru tine? Descoperă valorile tale fundamentale — și ce spune Biblia.",
+      "cta": "Descoperă valori"
+    }
   },
   "trust": {
     "noAds": {

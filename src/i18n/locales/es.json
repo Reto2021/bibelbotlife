@@ -1276,7 +1276,27 @@
       "title": "El método de los 7 porqués"
     },
     "subtitle": "Para momentos en los que necesitas más que una respuesta.",
-    "title": "Dos herramientas que van más allá"
+    "title": "Herramientas que van más profundo",
+    "gratitude": {
+      "title": "Diario de gratitud",
+      "desc": "Nombra tres cosas por las que estás agradecido hoy — y BibleBot encuentra salmos y versículos apropiados.",
+      "cta": "Practicar gratitud"
+    },
+    "lectio": {
+      "title": "Lectio Divina",
+      "desc": "Lectura bíblica meditativa guiada en cuatro pasos: Leer, Meditar, Orar, Descansar.",
+      "cta": "Iniciar meditación"
+    },
+    "forgiveness": {
+      "title": "Carta de perdón",
+      "desc": "BibleBot te guía paso a paso para escribir una carta de perdón — con impulsos bíblicos y sin presión.",
+      "cta": "Comenzar carta"
+    },
+    "values": {
+      "title": "Brújula de valores",
+      "desc": "¿Qué es realmente importante para ti? Descubre tus valores esenciales — y qué dice la Biblia sobre ellos.",
+      "cta": "Descubrir valores"
+    }
   },
   "trust": {
     "noAds": {

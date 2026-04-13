@@ -1276,7 +1276,27 @@
       "title": "Metode 7 Mengapa"
     },
     "subtitle": "Untuk saat-saat ketika Anda membutuhkan lebih dari sekadar jawaban.",
-    "title": "Dua Alat yang Mendalam"
+    "title": "Alat yang menggali lebih dalam",
+    "gratitude": {
+      "title": "Jurnal syukur",
+      "desc": "Sebutkan tiga hal yang kamu syukuri hari ini — dan BibleBot menemukan mazmur dan ayat yang cocok.",
+      "cta": "Berlatih bersyukur"
+    },
+    "lectio": {
+      "title": "Lectio Divina",
+      "desc": "Pembacaan Alkitab meditatif terpandu dalam empat langkah: Baca, Renungkan, Berdoa, Istirahat.",
+      "cta": "Mulai meditasi"
+    },
+    "forgiveness": {
+      "title": "Surat pengampunan",
+      "desc": "BibleBot membimbingmu langkah demi langkah menulis surat pengampunan — dengan dorongan Alkitab.",
+      "cta": "Mulai surat"
+    },
+    "values": {
+      "title": "Kompas nilai",
+      "desc": "Apa yang benar-benar penting bagimu? Temukan nilai-nilai intimu — dan apa yang Alkitab katakan tentangnya.",
+      "cta": "Temukan nilai"
+    }
   },
   "trust": {
     "noAds": {

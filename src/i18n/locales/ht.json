@@ -1276,7 +1276,27 @@
       "title": "Metòd 7 Poukisa yo"
     },
     "subtitle": "Pou moman kote ou bezwen plis pase yon repons.",
-    "title": "De zouti ki ale pi fon"
+    "title": "Zouti ki ale pi fon",
+    "gratitude": {
+      "title": "Jounal rekonesans",
+      "desc": "Site twa bagay ou rekonesan pou jodi a — epi BibleBot jwenn sòm ak vèsè ki apwopriye.",
+      "cta": "Pratike rekonesans"
+    },
+    "lectio": {
+      "title": "Lectio Divina",
+      "desc": "Lekti meditativ Bib la gide nan kat etap: Li, Medite, Priye, Repoze.",
+      "cta": "Kòmanse meditasyon"
+    },
+    "forgiveness": {
+      "title": "Lèt padon",
+      "desc": "BibleBot gide w etap pa etap nan ekri yon lèt padon — ak enpilsyon biblik.",
+      "cta": "Kòmanse lèt"
+    },
+    "values": {
+      "title": "Konpa valè",
+      "desc": "Kisa ki vrèman enpòtan pou ou? Dekouvri valè fondamantal ou yo — e sa Bib la di sou yo.",
+      "cta": "Dekouvri valè"
+    }
   },
   "trust": {
     "noAds": {

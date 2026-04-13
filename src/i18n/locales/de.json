@@ -1244,7 +1244,7 @@
   },
   "tools": {
     "badge": "Mehr als Antworten",
-    "title": "Zwei Werkzeuge, die tiefer gehen",
+    "title": "Werkzeuge, die tiefer gehen",
     "subtitle": "Für Momente, in denen du mehr als eine Antwort brauchst.",
     "lifewheel": {
       "title": "Lebensrad-Check",
@@ -1255,6 +1255,26 @@
       "title": "Die 7-Warum-Methode",
       "desc": "Warum tue ich das wirklich? Warum fühlt sich das so an? BibleBot führt dich durch 7 Fragen, die an die Wurzel kommen — mit biblischer Einordnung an der tiefsten Stelle.",
       "cta": "Tiefer fragen"
+    },
+    "gratitude": {
+      "title": "Dankbarkeitstagebuch",
+      "desc": "Nenne drei Dinge, für die du heute dankbar bist — und BibleBot findet passende Psalmen und Verse dazu. Ein tägliches Ritual, das den Blick verändert.",
+      "cta": "Dankbarkeit üben"
+    },
+    "lectio": {
+      "title": "Lectio Divina",
+      "desc": "Geführtes meditatives Bibellesen in vier Schritten: Lesen, Meditieren, Beten, Ruhen. Eine jahrhundertealte Praxis, neu begleitet.",
+      "cta": "Meditation starten"
+    },
+    "forgiveness": {
+      "title": "Vergebungsbrief",
+      "desc": "BibleBot begleitet dich beim Formulieren eines Vergebungsbriefs — Schritt für Schritt, mit biblischen Impulsen und ohne Druck.",
+      "cta": "Brief beginnen"
+    },
+    "values": {
+      "title": "Werte-Kompass",
+      "desc": "Was ist dir wirklich wichtig im Leben? Finde deine Kernwerte — und entdecke, was die Bibel dazu sagt. Klarheit in 5 Minuten.",
+      "cta": "Werte entdecken"
     }
   },
   "audience": {

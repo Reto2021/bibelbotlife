@@ -1244,7 +1244,7 @@
   },
   "tools": {
     "badge": "Più che risposte",
-    "title": "Due strumenti che vanno più a fondo",
+    "title": "Strumenti che vanno più in profondità",
     "subtitle": "Per i momenti in cui hai bisogno di più di una risposta.",
     "lifewheel": {
       "title": "Controllo della ruota della vita",
@@ -1255,6 +1255,26 @@
       "title": "Il metodo dei 7 perché",
       "desc": "Perché lo faccio davvero? Perché mi sento così? BibleBot ti guida attraverso 7 domande che vanno alla radice — con una classificazione biblica nel punto più profondo.",
       "cta": "Chiedi più a fondo"
+    },
+    "gratitude": {
+      "title": "Diario della gratitudine",
+      "desc": "Nomina tre cose per cui sei grato oggi — e BibleBot trova salmi e versetti appropriati.",
+      "cta": "Pratica gratitudine"
+    },
+    "lectio": {
+      "title": "Lectio Divina",
+      "desc": "Lettura biblica meditativa guidata in quattro passi: Leggere, Meditare, Pregare, Riposare.",
+      "cta": "Inizia meditazione"
+    },
+    "forgiveness": {
+      "title": "Lettera di perdono",
+      "desc": "BibleBot ti guida passo dopo passo nella scrittura di una lettera di perdono — con impulsi biblici.",
+      "cta": "Inizia lettera"
+    },
+    "values": {
+      "title": "Bussola dei valori",
+      "desc": "Cosa è veramente importante per te? Scopri i tuoi valori fondamentali — e cosa dice la Bibbia.",
+      "cta": "Scopri i valori"
     }
   },
   "audience": {
