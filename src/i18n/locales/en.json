@@ -25,8 +25,11 @@
   "impulse": {
     "loading": "Loading daily impulse...",
     "label": "Impulse of the Day",
+    "collapseLabel": "Daily Impulse",
     "deepDive": "What does this mean for me?",
     "explore": "Read full passage",
+    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
+    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it.",
     "subscribeCta": "Get this impulse daily?",
     "alreadySubscribed": "You receive the daily impulse",
     "playAudio": "Listen",
@@ -141,7 +144,9 @@
     "smsDesc": "Text to your phone",
     "phoneLabel": "Phone number",
     "phonePlaceholder": "+1 555 123 4567",
-    "phoneHint": "With country code, e.g. +1 for the US.",
+    "phoneHint": "SMS is only available for Swiss numbers (+41).",
+    "smsSwissOnly": "Swiss numbers only",
+    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41).",
     "telegramHint": "Click \"Subscribe\" – you'll be redirected to Telegram. Start your companion and type <strong>/daily</strong> to activate the daily impulse.",
     "pushHint": "After clicking \"Subscribe\", your browser will ask for notification permission. Please allow it to receive the impulse.",
     "submit": "Subscribe",
@@ -964,7 +969,8 @@
     "imageSavedDesc": "Save the image and share it with the copied text on Instagram, WhatsApp or wherever you like!",
     "clipboardFallback": "Text copied — paste it when posting!",
     "recommendedBy": "Recommended by {{church}}",
-    "hashtagBible": "#Bible"
+    "hashtagBible": "#Bible",
+    "hashtagImpulse": "#DailyImpulse"
   },
   "chatHero": {
     "subtitle": "Ask your question – open, honest, no sign-up needed.",

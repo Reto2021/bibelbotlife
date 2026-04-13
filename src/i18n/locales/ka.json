@@ -30,7 +30,10 @@
     "subscribeCta": "გსურთ ამ შთაგონების ყოველდღიურად მიღება?",
     "alreadySubscribed": "თქვენ იღებთ ყოველდღიურ შთაგონებას",
     "playAudio": "წაიკითხე ხმამაღლა",
-    "stopAudio": "შეაჩერე"
+    "stopAudio": "შეაჩერე",
+    "collapseLabel": "დღის იმპულსი",
+    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
+    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
   },
   "features": {
     "sectionTitle": "ასე გეხმარებათ თქვენი თანამგზავრი",
@@ -141,7 +144,7 @@
     "smsDesc": "SMS თქვენს ტელეფონზე",
     "phoneLabel": "მობილურის ნომერი",
     "phonePlaceholder": "+41 79 123 45 67",
-    "phoneHint": "ქვეყნის კოდით, მაგ. +41 შვეიცარიისთვის.",
+    "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "დააჭირეთ „გამოწერა“ – გადამისამართდებით Telegram-ზე. იქ დაიწყეთ თქვენი თანამგზავრი და დაწერეთ <strong>/daily</strong>, რათა გაააქტიუროთ ყოველდღიური იმპულსი.",
     "pushHint": "„გამოწერა“ ღილაკზე დაჭერის შემდეგ თქვენი ბრაუზერი მოითხოვს ნებართვას. გთხოვთ, დაუშვათ შეტყობინებები იმპულსის მისაღებად.",
     "subscribeButton": "გამოიწერე ინსპირაცია",
@@ -166,7 +169,9 @@
     "switchChannel": "არხის შეცვლა:",
     "unsubscribe": "გამოწერის გაუქმება",
     "unsubscribedTitle": "გამოწერის გაუქმება",
-    "unsubscribedDesc": "თქვენ აღარ მიიღებთ ყოველდღიურ შთაგონებას."
+    "unsubscribedDesc": "თქვენ აღარ მიიღებთ ყოველდღიურ შთაგონებას.",
+    "smsSwissOnly": "Swiss numbers only",
+    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
   },
   "faq": {
     "badge": "ხშირად დასმული კითხვები",
@@ -357,7 +362,8 @@
     "imageSavedDesc": "შეინახეთ სურათი და გააზიარეთ კოპირებული ტექსტით Instagram-ზე, WhatsApp-ზე ან სადაც გსურთ!",
     "clipboardFallback": "ტექსტი კოპირებულია — ჩასვით პოსტისას!",
     "recommendedBy": "რეკომენდებულია {{church}}-ის მიერ",
-    "hashtagBible": "#ბიბლია"
+    "hashtagBible": "#ბიბლია",
+    "hashtagImpulse": "#DailyImpulse"
   },
   "darkMode": {
     "light": "ღია რეჟიმი",

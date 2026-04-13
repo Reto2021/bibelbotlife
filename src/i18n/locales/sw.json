@@ -30,7 +30,10 @@
     "alreadySubscribed": "Tayari unapokea msukumo wa kila siku",
     "subscribeCta": "Pata msukumo huu kila siku?",
     "playAudio": "Sikiliza",
-    "stopAudio": "Acha"
+    "stopAudio": "Acha",
+    "collapseLabel": "Msukumo wa leo",
+    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
+    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
   },
   "features": {
     "sectionTitle": "Mwenzako anakupa nini",
@@ -141,7 +144,7 @@
     "smsDesc": "SMS kwenye simu yako",
     "phoneLabel": "Namba ya Simu",
     "phonePlaceholder": "+41 79 123 45 67",
-    "phoneHint": "Na msimbo wa nchi, k.m. +41 kwa Uswisi.",
+    "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "Bofya «Jiandikishe» – utaelekezwa kwenye Telegram. Anzisha bot huko na uandike <strong>/daily</strong> ili kuwezesha msukumo wa kila siku.",
     "pushHint": "Baada ya kubofya «Jiandikishe», kivinjari chako kitaomba ruhusa ya arifa. Tafadhali iruhusu ili upokee msukumo.",
     "submit": "Jiandikishe",
@@ -166,7 +169,9 @@
     "switchChannel": "Badilisha kituo:",
     "unsubscribe": "Acha Kujisajili",
     "unsubscribedTitle": "Umeondolewa kwenye orodha ya wanaopokea",
-    "unsubscribedDesc": "Hutapokea tena msukumo wa kila siku."
+    "unsubscribedDesc": "Hutapokea tena msukumo wa kila siku.",
+    "smsSwissOnly": "Swiss numbers only",
+    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
   },
   "faq": {
     "badge": "Maswali Yanayoulizwa Mara kwa Mara",
@@ -352,7 +357,8 @@
     "imageSavedDesc": "Hifadhi picha na ushiriki na maandishi yaliyonakiliwa kwenye Instagram, WhatsApp au popote unapotaka!",
     "clipboardFallback": "Maandishi yamenakiliwa — bandika unapochapisha!",
     "recommendedBy": "Imependekezwa na {{church}}",
-    "hashtagBible": "#Biblia"
+    "hashtagBible": "#Biblia",
+    "hashtagImpulse": "#DailyImpulse"
   },
   "darkMode": {
     "light": "Hali Nyepesi",

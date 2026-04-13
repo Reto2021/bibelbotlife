@@ -16,7 +16,7 @@ export function DailySubscribe() {
   const { t, i18n } = useTranslation();
   const [selectedChannel, setSelectedChannel] = useState<Channel | null>(null);
   const [firstName, setFirstName] = useState("");
-  const [phone, setPhone] = useState("");
+  const [phone, setPhone] = useState("+41 ");
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
@@ -29,6 +29,13 @@ export function DailySubscribe() {
   const handleSubscribe = async () => {
     if (!selectedChannel) return;
 
+    if (selectedChannel === "sms") {
+      const cleaned = phone.replace(/\s/g, "");
+      if (!cleaned.startsWith("+41") || cleaned.length < 12) {
+        toast({ title: t("subscribe.smsSwissOnly", "Swiss numbers only"), description: t("subscribe.smsSwissOnlyDesc", "SMS is only available for Swiss numbers (+41)."), variant: "destructive" });
+        return;
+      }
+    }
     setIsLoading(true);
     try {
       if (selectedChannel === "telegram") {
@@ -176,7 +183,7 @@ export function DailySubscribe() {
         </div>
       )}
 
-      <Button onClick={handleSubscribe} disabled={!selectedChannel || isLoading || (selectedChannel === "sms" && phone.length < 8)} className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 text-base" size="lg">
+      <Button onClick={handleSubscribe} disabled={!selectedChannel || isLoading || (selectedChannel === "sms" && (!phone.replace(/\s/g, "").startsWith("+41") || phone.replace(/\s/g, "").length < 12))} className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 text-base" size="lg">
         {isLoading ? (
           <><Loader2 className="h-4 w-4 mr-2 animate-spin" />{t("subscribe.submitting")}</>
         ) : (

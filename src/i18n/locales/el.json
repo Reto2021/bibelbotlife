@@ -31,7 +31,10 @@
     "alreadySubscribed": "Λαμβάνετε την καθημερινή έμπνευση",
     "subscribeCta": "Θέλετε να λαμβάνετε αυτήν την έμπνευση καθημερινά;",
     "playAudio": "Ακούστε",
-    "stopAudio": "Σταματήστε"
+    "stopAudio": "Σταματήστε",
+    "collapseLabel": "Ώθηση της ημέρας",
+    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
+    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
   },
   "features": {
     "sectionTitle": "Τι σου προσφέρει ο σύντροφός σου",
@@ -142,7 +145,7 @@
     "smsDesc": "SMS στο κινητό σας",
     "phoneLabel": "Αριθμός κινητού",
     "phonePlaceholder": "+30 691 123 4567",
-    "phoneHint": "Με κωδικό χώρας, π.χ. +30 για την Ελλάδα.",
+    "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "Κάντε κλικ στο «Εγγραφή» – θα μεταφερθείτε στο Telegram. Ξεκινήστε το bot εκεί και γράψτε <strong>/daily</strong> για να ενεργοποιήσετε την καθημερινή παρόρμηση.",
     "pushHint": "Μετά το κλικ στο «Εγγραφή» ο browser σας θα ζητήσει άδεια για ειδοποιήσεις. Παρακαλώ επιτρέψτε το για να λάβετε την παρόρμηση.",
     "submit": "Εγγραφή",
@@ -167,7 +170,9 @@
     "switchChannel": "Αλλαγή καναλιού:",
     "unsubscribe": "Διαγραφή συνδρομής",
     "unsubscribedTitle": "Έχετε διαγραφεί",
-    "unsubscribedDesc": "Δεν θα λαμβάνετε πλέον καθημερινή έμπνευση."
+    "unsubscribedDesc": "Δεν θα λαμβάνετε πλέον καθημερινή έμπνευση.",
+    "smsSwissOnly": "Swiss numbers only",
+    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
   },
   "faq": {
     "badge": "Συχνές ερωτήσεις",
@@ -353,7 +358,8 @@
     "imageSavedDesc": "Αποθηκεύστε την εικόνα και μοιραστείτε την με το αντιγραμμένο κείμενο στο Instagram, το WhatsApp ή όπου θέλετε!",
     "clipboardFallback": "Το κείμενο αντιγράφηκε — επικολλήστε το όταν δημοσιεύετε!",
     "recommendedBy": "Προτείνεται από {{church}}",
-    "hashtagBible": "#Βίβλος"
+    "hashtagBible": "#Βίβλος",
+    "hashtagImpulse": "#DailyImpulse"
   },
   "darkMode": {
     "light": "Φωτεινή λειτουργία",

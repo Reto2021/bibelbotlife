@@ -30,7 +30,10 @@
     "subscribeCta": "Ønsker du å motta denne inspirasjonen daglig?",
     "alreadySubscribed": "Du mottar daglig inspirasjon",
     "playAudio": "Les høyt",
-    "stopAudio": "Stopp"
+    "stopAudio": "Stopp",
+    "collapseLabel": "Daglig impuls",
+    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
+    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
   },
   "features": {
     "sectionTitle": "Slik støtter din følgesvenn deg",
@@ -141,7 +144,7 @@
     "smsDesc": "SMS til din mobil",
     "phoneLabel": "Mobilnummer",
     "phonePlaceholder": "+47 912 34 567",
-    "phoneHint": "Med landskode, f.eks. +47 for Norge.",
+    "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "Klikk på «Meld deg på» – du blir videresendt til Telegram. Start din følgesvenn der og skriv <strong>/daily</strong> for å aktivere den daglige impulsen.",
     "pushHint": "Etter å ha klikket på «Meld deg på» vil nettleseren din be om tillatelse. Vennligst tillat varsler for å motta impulsen.",
     "subscribeButton": "Abonner på inspirasjon",
@@ -166,7 +169,9 @@
     "switchChannel": "Bytt kanal:",
     "unsubscribe": "Avslutt abonnement",
     "unsubscribedTitle": "Avmeldt",
-    "unsubscribedDesc": "Du mottar ikke lenger daglig inspirasjon."
+    "unsubscribedDesc": "Du mottar ikke lenger daglig inspirasjon.",
+    "smsSwissOnly": "Swiss numbers only",
+    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
   },
   "faq": {
     "badge": "Ofte stilte spørsmål",
@@ -357,7 +362,8 @@
     "imageSavedDesc": "Lagre bildet og del det med den kopierte teksten på Instagram, WhatsApp eller hvor du vil!",
     "clipboardFallback": "Tekst kopiert – lim den inn når du poster!",
     "recommendedBy": "Anbefalt av {{church}}",
-    "hashtagBible": "#Bibel"
+    "hashtagBible": "#Bibel",
+    "hashtagImpulse": "#DagligImpuls"
   },
   "darkMode": {
     "light": "Lys modus",

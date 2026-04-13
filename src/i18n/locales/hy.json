@@ -30,7 +30,10 @@
     "subscribeCta": "Ստանալ այս ներշնչանքը ամեն օր։",
     "alreadySubscribed": "Դուք ստանում եք ամենօրյա ներշնչանքը",
     "playAudio": "Կարդալ բարձրաձայն",
-    "stopAudio": "Դադարեցնել"
+    "stopAudio": "Դադարեցնել",
+    "collapseLabel": "Օdelays մղում",
+    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
+    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
   },
   "features": {
     "sectionTitle": "Այսպես է ձեզ աջակցում ձեր ուղեկիցը",
@@ -141,7 +144,7 @@
     "smsDesc": "SMS ձեր հեռախոսին",
     "phoneLabel": "Հեռախոսահամար",
     "phonePlaceholder": "+41 79 123 45 67",
-    "phoneHint": "Երկրի կոդով, օրինակ՝ +41 Շվեյցարիայի համար։",
+    "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "Սեղմեք «Գրանցվել»՝ ձեզ կուղղորդի Telegram։ Այնտեղ սկսեք ձեր ուղեկցին և գրեք <strong>/daily</strong>՝ ամենօրյա խթանն ակտիվացնելու համար։",
     "pushHint": "«Գրանցվել» սեղմելուց հետո ձեր բրաուզերը թույլտվություն կխնդրի։ Խնդրում ենք թույլատրել ծանուցումները՝ խթանը ստանալու համար։",
     "subscribeButton": "Բաժանորդագրվել Inspo-ին",
@@ -166,7 +169,9 @@
     "switchChannel": "Փոխել ալիքը.",
     "unsubscribe": "Չեղարկել բաժանորդագրությունը",
     "unsubscribedTitle": "Բաժանորդագրությունը չեղարկված է",
-    "unsubscribedDesc": "Դուք այլևս չեք ստանա ամենօրյա ներշնչանք։"
+    "unsubscribedDesc": "Դուք այլևս չեք ստանա ամենօրյա ներշնչանք։",
+    "smsSwissOnly": "Swiss numbers only",
+    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
   },
   "faq": {
     "badge": "Հաճախ տրվող հարցեր",
@@ -357,7 +362,8 @@
     "imageSavedDesc": "Պահպանեք պատկերը և կիսվեք այն պատճենված տեքստով Instagram-ում, WhatsApp-ում կամ որտեղ ցանկանում եք։",
     "clipboardFallback": "Տեքստը պատճենված է՝ տեղադրեք այն հրապարակելիս։",
     "recommendedBy": "Խորհուրդ է տրվում {{church}}-ի կողմից",
-    "hashtagBible": "#Աստվածաշունչ"
+    "hashtagBible": "#Աստվածաշունչ",
+    "hashtagImpulse": "#DailyImpulse"
   },
   "darkMode": {
     "light": "Լուսավոր ռեժիմ",

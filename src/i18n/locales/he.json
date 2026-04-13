@@ -30,7 +30,10 @@
     "subscribeCta": "לקבל את ההשראה הזו מדי יום?",
     "alreadySubscribed": "אתה מקבל את ההשראה היומית",
     "playAudio": "האזן",
-    "stopAudio": "עצור"
+    "stopAudio": "עצור",
+    "collapseLabel": "דחף היום",
+    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
+    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
   },
   "features": {
     "sectionTitle": "מה המלווה שלך מציע",
@@ -141,7 +144,7 @@
     "smsDesc": "הודעת טקסט לטלפון שלך",
     "phoneLabel": "מספר טלפון",
     "phonePlaceholder": "+1 555 123 4567",
-    "phoneHint": "עם קידומת מדינה, לדוגמה +1 לארה\"ב.",
+    "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "לחץ על \"הירשם\" – תועבר לטלגרם. הפעל את המלווה שלך והקלד <strong>/daily</strong> כדי להפעיל את ההשראה היומית.",
     "pushHint": "לאחר לחיצה על \"הירשם\", הדפדפן שלך יבקש אישור להתראות. אנא אפשר זאת כדי לקבל את ההשראה.",
     "submit": "הירשם",
@@ -166,7 +169,9 @@
     "switchChannel": "שנה ערוץ:",
     "unsubscribe": "בטל מנוי",
     "unsubscribedTitle": "מנוי בוטל",
-    "unsubscribedDesc": "לא תקבל עוד השראה יומית."
+    "unsubscribedDesc": "לא תקבל עוד השראה יומית.",
+    "smsSwissOnly": "Swiss numbers only",
+    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
   },
   "faq": {
     "badge": "שאלות נפוצות",
@@ -964,7 +969,8 @@
     "imageSavedDesc": "שמור את התמונה ושתף אותה עם הטקסט שהועתק ב-Instagram, WhatsApp או בכל מקום שתרצה!",
     "clipboardFallback": "הטקסט הועתק — הדבק אותו בעת הפרסום!",
     "recommendedBy": "מומלץ על ידי {{church}}",
-    "hashtagBible": "#תנ״ך"
+    "hashtagBible": "#תנ״ך",
+    "hashtagImpulse": "#דחף_היום"
   },
   "chatHero": {
     "subtitle": "שאל את שאלתך – בפתיחות, בכנות, ללא צורך בהרשמה.",

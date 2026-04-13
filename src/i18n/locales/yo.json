@@ -30,7 +30,10 @@
     "alreadySubscribed": "O n gba imisis ti ojoojumọ",
     "subscribeCta": "Ṣe o fẹ gba imisis yi lojoojumọ?",
     "playAudio": "Gbọ́",
-    "stopAudio": "Duro"
+    "stopAudio": "Duro",
+    "collapseLabel": "Ìmísí ọjọ́",
+    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
+    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
   },
   "features": {
     "sectionTitle": "Ohun tí alábàáṣiṣẹ́pọ̀ rẹ ń fún ọ",
@@ -141,7 +144,7 @@
     "smsDesc": "SMS sí fóònù rẹ",
     "phoneLabel": "Nọ́mbà fóònù",
     "phonePlaceholder": "+234 801 234 5678",
-    "phoneHint": "Pẹ̀lú kóòdù orílẹ̀-èdè, bíi +234 fún Nàìjíríà.",
+    "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "Tẹ «Forúkọsílẹ̀» – wọ́n yóò darí ọ sí Telegram. Bẹ̀rẹ̀ bot náà kí o sì kọ <strong>/daily</strong> láti mú ìmúlọ́ ojoojúmọ́ ṣiṣẹ́.",
     "pushHint": "Lẹ́yìn tí o bá tẹ «Forúkọsílẹ̀», aṣàwákiri rẹ yóò béèrè fún àṣẹ ìfitónilétí. Jọ̀wọ́ gbà á láti gba ìmúlọ́ náà.",
     "submit": "Forúkọsílẹ̀",
@@ -166,7 +169,9 @@
     "switchChannel": "Yipada ikanni:",
     "unsubscribe": "Yọ alabapin kuro",
     "unsubscribedTitle": "Ti yọ alabapin kuro",
-    "unsubscribedDesc": "Iwọ kii yoo gba imisi ojoojumọ mọ."
+    "unsubscribedDesc": "Iwọ kii yoo gba imisi ojoojumọ mọ.",
+    "smsSwissOnly": "Swiss numbers only",
+    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
   },
   "faq": {
     "badge": "Àwọn ìbéèrè tí a sábà ń béèrè",
@@ -352,7 +357,8 @@
     "imageSavedDesc": "Fipamọ́ àwòrán náà kí o sì pin rẹ̀ pẹ̀lú ọ̀rọ̀ tí a dì àkọ̀ ní Instagram, WhatsApp tàbí ibikíbi!",
     "clipboardFallback": "Ọ̀rọ̀ ti dà kọ́pì — fi sí ibi tí o bá ń fi sílẹ̀!",
     "recommendedBy": "A ṣe ìmọ̀ràn láti {{church}}",
-    "hashtagBible": "#Bíbélì"
+    "hashtagBible": "#Bíbélì",
+    "hashtagImpulse": "#DailyImpulse"
   },
   "darkMode": {
     "light": "Ìpele ìmọ́lẹ̀",

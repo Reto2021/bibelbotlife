@@ -30,7 +30,10 @@
     "subscribeCta": "Recevoir cette inspiration quotidiennement ?",
     "alreadySubscribed": "Vous recevez l'inspiration quotidienne",
     "playAudio": "Lire à voix haute",
-    "stopAudio": "Arrêter"
+    "stopAudio": "Arrêter",
+    "collapseLabel": "Impulsion du jour",
+    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
+    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
   },
   "features": {
     "sectionTitle": "Comment votre compagnon vous soutient",
@@ -141,7 +144,7 @@
     "smsDesc": "SMS sur votre téléphone portable",
     "phoneLabel": "Numéro de téléphone portable",
     "phonePlaceholder": "+41 79 123 45 67",
-    "phoneHint": "Avec l'indicatif du pays, par exemple +41 pour la Suisse.",
+    "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "Cliquez sur «S'inscrire» – vous serez redirigé vers Telegram. Démarrez votre compagnon là-bas et écrivez <strong>/daily</strong> pour activer l'impulsion quotidienne.",
     "pushHint": "Après avoir cliqué sur «S'inscrire», votre navigateur demandera l'autorisation. Veuillez autoriser les notifications pour recevoir l'impulsion.",
     "subscribeButton": "S'abonner à l'inspiration",
@@ -166,7 +169,9 @@
     "switchChannel": "Changer de canal :",
     "unsubscribe": "Annuler l'abonnement",
     "unsubscribedTitle": "Désabonné",
-    "unsubscribedDesc": "Vous ne recevrez plus d'inspiration quotidienne."
+    "unsubscribedDesc": "Vous ne recevrez plus d'inspiration quotidienne.",
+    "smsSwissOnly": "Numéros suisses uniquement",
+    "smsSwissOnlyDesc": "Les SMS ne sont disponibles que pour les numéros suisses (+41)."
   },
   "faq": {
     "badge": "Questions fréquentes",
@@ -357,7 +362,8 @@
     "imageSavedDesc": "Enregistrez l'image et partagez-la avec le texte copié sur Instagram, WhatsApp ou où vous voulez !",
     "clipboardFallback": "Texte copié — collez-le lors de la publication !",
     "recommendedBy": "Recommandé par {{church}}",
-    "hashtagBible": "#Bible"
+    "hashtagBible": "#Bible",
+    "hashtagImpulse": "#ImpulsionDuJour"
   },
   "darkMode": {
     "light": "Mode clair",

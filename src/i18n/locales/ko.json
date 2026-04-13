@@ -30,7 +30,10 @@
     "alreadySubscribed": "매일의 영감을 받고 있습니다",
     "subscribeCta": "매일 이 영감을 받으시겠습니까?",
     "playAudio": "듣기",
-    "stopAudio": "정지"
+    "stopAudio": "정지",
+    "collapseLabel": "오늘의 영감",
+    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
+    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
   },
   "features": {
     "sectionTitle": "당신의 동반자가 제공하는 것",
@@ -141,7 +144,7 @@
     "smsDesc": "휴대폰으로 SMS",
     "phoneLabel": "휴대폰 번호",
     "phonePlaceholder": "+41 79 123 45 67",
-    "phoneHint": "국가 코드 포함, 예: 스위스의 경우 +41.",
+    "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "«구독»을 클릭하면 텔레그램으로 리디렉션됩니다. 거기서 봇을 시작하고 <strong>/daily</strong>를 입력하여 매일 영감을 활성화하세요.",
     "pushHint": "«구독»을 클릭하면 브라우저가 알림 권한을 요청합니다. 영감을 받으려면 허용해 주세요.",
     "submit": "구독",
@@ -166,7 +169,9 @@
     "switchChannel": "채널 변경:",
     "unsubscribe": "구독 취소",
     "unsubscribedTitle": "구독 취소됨",
-    "unsubscribedDesc": "더 이상 매일 영감을 받지 못할 것입니다."
+    "unsubscribedDesc": "더 이상 매일 영감을 받지 못할 것입니다.",
+    "smsSwissOnly": "Swiss numbers only",
+    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
   },
   "faq": {
     "badge": "자주 묻는 질문",
@@ -352,7 +357,8 @@
     "imageSavedDesc": "이미지를 저장하고 복사된 텍스트와 함께 Instagram, WhatsApp 또는 원하는 곳에 공유하세요!",
     "clipboardFallback": "텍스트가 복사되었습니다 — 게시할 때 붙여넣으세요!",
     "recommendedBy": "{{church}} 추천",
-    "hashtagBible": "#성경"
+    "hashtagBible": "#성경",
+    "hashtagImpulse": "#오늘의영감"
   },
   "darkMode": {
     "light": "밝은 모드",

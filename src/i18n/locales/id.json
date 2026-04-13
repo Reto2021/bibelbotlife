@@ -30,7 +30,10 @@
     "alreadySubscribed": "Anda sudah menerima inspirasi harian",
     "subscribeCta": "Ingin menerima inspirasi ini setiap hari?",
     "playAudio": "Dengarkan",
-    "stopAudio": "Berhenti"
+    "stopAudio": "Berhenti",
+    "collapseLabel": "Inspirasi hari ini",
+    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
+    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
   },
   "features": {
     "sectionTitle": "Apa yang pendampingmu tawarkan",
@@ -141,7 +144,7 @@
     "smsDesc": "SMS ke ponsel Anda",
     "phoneLabel": "Nomor Telepon",
     "phonePlaceholder": "+41 79 123 45 67",
-    "phoneHint": "Dengan kode negara, misalnya +41 untuk Swiss.",
+    "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "Klik «Daftar» – Anda akan diarahkan ke Telegram. Mulai bot di sana dan tulis <strong>/daily</strong> untuk mengaktifkan renungan harian.",
     "pushHint": "Setelah mengklik «Daftar», browser Anda akan meminta izin untuk notifikasi. Harap izinkan untuk menerima renungan.",
     "submit": "Daftar",
@@ -166,7 +169,9 @@
     "switchChannel": "Ganti saluran:",
     "unsubscribe": "Berhenti berlangganan",
     "unsubscribedTitle": "Berhenti berlangganan",
-    "unsubscribedDesc": "Anda tidak akan lagi menerima inspirasi harian."
+    "unsubscribedDesc": "Anda tidak akan lagi menerima inspirasi harian.",
+    "smsSwissOnly": "Swiss numbers only",
+    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
   },
   "faq": {
     "badge": "Pertanyaan yang Sering Diajukan",
@@ -352,7 +357,8 @@
     "imageSavedDesc": "Simpan gambar dan bagikan dengan teks yang disalin di Instagram, WhatsApp, atau di mana pun Anda mau!",
     "clipboardFallback": "Teks disalin — tempel saat memposting!",
     "recommendedBy": "Direkomendasikan oleh {{church}}",
-    "hashtagBible": "#Alkitab"
+    "hashtagBible": "#Alkitab",
+    "hashtagImpulse": "#DailyImpulse"
   },
   "darkMode": {
     "light": "Mode Terang",

@@ -30,7 +30,10 @@
     "alreadySubscribed": "U ontvangt de dagelijkse inspiratie",
     "subscribeCta": "Deze inspiratie dagelijks ontvangen?",
     "playAudio": "Luister",
-    "stopAudio": "Stop"
+    "stopAudio": "Stop",
+    "collapseLabel": "Dagimpuls",
+    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
+    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
   },
   "features": {
     "sectionTitle": "Wat je metgezel je biedt",
@@ -141,7 +144,7 @@
     "smsDesc": "Sms naar je telefoon",
     "phoneLabel": "Telefoonnummer",
     "phonePlaceholder": "+31 6 12345678",
-    "phoneHint": "Met landcode, bijv. +31 voor Nederland.",
+    "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "Klik op \"Abonneren\" – je wordt doorgestuurd naar Telegram. Start de bot en typ <strong>/daily</strong> om de dagelijkse impuls te activeren.",
     "pushHint": "Na het klikken op \"Abonneren\" vraagt je browser om toestemming voor meldingen. Sta dit toe om de impuls te ontvangen.",
     "submit": "Abonneren",
@@ -166,7 +169,9 @@
     "switchChannel": "Kanaal wijzigen:",
     "unsubscribe": "Abonnement opzeggen",
     "unsubscribedTitle": "Afgezegd",
-    "unsubscribedDesc": "Je ontvangt geen dagelijkse inspiratie meer."
+    "unsubscribedDesc": "Je ontvangt geen dagelijkse inspiratie meer.",
+    "smsSwissOnly": "Swiss numbers only",
+    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
   },
   "faq": {
     "badge": "FAQ",
@@ -352,7 +357,8 @@
     "imageSavedDesc": "Sla de afbeelding op en deel hem!",
     "clipboardFallback": "Tekst gekopieerd — plak het bij het posten!",
     "recommendedBy": "Aanbevolen door {{church}}",
-    "hashtagBible": "#Bijbel"
+    "hashtagBible": "#Bijbel",
+    "hashtagImpulse": "#Dagimpuls"
   },
   "darkMode": {
     "light": "Lichte modus",

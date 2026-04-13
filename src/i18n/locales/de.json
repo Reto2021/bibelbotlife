@@ -25,8 +25,11 @@
   "impulse": {
     "loading": "Inspiration wird geladen...",
     "label": "Inspiration des Tages",
+    "collapseLabel": "Tagesimpuls",
     "deepDive": "Was bedeutet das für mich?",
     "explore": "Ganzen Abschnitt lesen",
+    "deepDivePrompt": "Der Tagesimpuls ist \"{{topic}}\" mit {{reference}}. Erkläre mir diese Stelle: Wer hat das geschrieben? In welcher Situation? Was kommt davor und danach? Und was bedeutet das für mein Leben heute?",
+    "explorePrompt": "Lies mir den ganzen Abschnitt rund um {{reference}} vor und erkläre mir den Zusammenhang. Ich möchte die Geschichte dahinter verstehen.",
     "subscribeCta": "Diese Inspiration täglich erhalten?",
     "alreadySubscribed": "Du erhältst die tägliche Inspiration",
     "playAudio": "Vorlesen",
@@ -141,7 +144,9 @@
     "smsDesc": "SMS auf dein Handy",
     "phoneLabel": "Handynummer",
     "phonePlaceholder": "+41 79 123 45 67",
-    "phoneHint": "Mit Ländervorwahl, z.B. +41 für die Schweiz.",
+    "phoneHint": "SMS nur für Schweizer Nummern (+41).",
+    "smsSwissOnly": "Nur Schweizer Nummern",
+    "smsSwissOnlyDesc": "SMS ist nur für Schweizer Nummern (+41) verfügbar.",
     "telegramHint": "Klicke auf «Anmelden» – du wirst zu Telegram weitergeleitet. Starte dort deinen Begleiter und schreibe <strong>/daily</strong>, um den täglichen Impuls zu aktivieren.",
     "pushHint": "Nach dem Klick auf «Anmelden» fragt dein Browser nach der Berechtigung. Bitte erlaube Benachrichtigungen, um den Impuls zu erhalten.",
     "subscribeButton": "Inspo abonnieren",
@@ -357,7 +362,8 @@
     "imageSavedDesc": "Speichere das Bild und teile es mit dem kopierten Text auf Instagram, WhatsApp oder wo du möchtest!",
     "clipboardFallback": "Text kopiert — füge ihn beim Posten ein!",
     "recommendedBy": "Empfohlen von {{church}}",
-    "hashtagBible": "#Bibel"
+    "hashtagBible": "#Bibel",
+    "hashtagImpulse": "#Tagesimpuls"
   },
   "darkMode": {
     "light": "Heller Modus",

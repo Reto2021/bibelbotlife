@@ -32,7 +32,10 @@
     "alreadySubscribed": "Bạn đang nhận được cảm hứng hàng ngày",
     "subscribeCta": "Bạn muốn nhận cảm hứng này hàng ngày không?",
     "playAudio": "Nghe",
-    "stopAudio": "Dừng"
+    "stopAudio": "Dừng",
+    "collapseLabel": "Cảm hứng hôm nay",
+    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
+    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
   },
   "features": {
     "sectionTitle": "Người bạn đồng hành mang đến cho bạn điều gì",
@@ -143,7 +146,7 @@
     "smsDesc": "SMS đến điện thoại của bạn",
     "phoneLabel": "Số điện thoại di động",
     "phonePlaceholder": "+41 79 123 45 67",
-    "phoneHint": "Với mã quốc gia, ví dụ: +41 cho Thụy Sĩ.",
+    "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "Nhấp vào «Đăng ký» – bạn sẽ được chuyển hướng đến Telegram. Bắt đầu bot ở đó và nhập **_daily** để kích hoạt lời khuyên hàng ngày.",
     "pushHint": "Sau khi nhấp vào «Đăng ký», trình duyệt của bạn sẽ yêu cầu quyền nhận thông báo. Vui lòng cho phép để nhận lời khuyên.",
     "submit": "Đăng ký",
@@ -168,7 +171,9 @@
     "switchChannel": "Chuyển kênh:",
     "unsubscribe": "Hủy đăng ký",
     "unsubscribedTitle": "Đã hủy đăng ký",
-    "unsubscribedDesc": "Bạn sẽ không nhận được nguồn cảm hứng hàng ngày nữa."
+    "unsubscribedDesc": "Bạn sẽ không nhận được nguồn cảm hứng hàng ngày nữa.",
+    "smsSwissOnly": "Swiss numbers only",
+    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
   },
   "faq": {
     "badge": "Những câu hỏi thường gặp",
@@ -354,7 +359,8 @@
     "imageSavedDesc": "Lưu hình ảnh và chia sẻ nó với văn bản đã sao chép trên Instagram, WhatsApp hoặc bất cứ nơi nào bạn muốn!",
     "clipboardFallback": "Đã sao chép văn bản — dán khi đăng bài!",
     "recommendedBy": "Được giới thiệu bởi {{church}}",
-    "hashtagBible": "#KinhThánh"
+    "hashtagBible": "#KinhThánh",
+    "hashtagImpulse": "#DailyImpulse"
   },
   "darkMode": {
     "light": "Chế độ sáng",

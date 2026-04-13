@@ -30,7 +30,10 @@
     "alreadySubscribed": "Tumatanggap ka ng pang-araw-araw na inspirasyon",
     "subscribeCta": "Nais mo bang matanggap ang inspirasyong ito araw-araw?",
     "playAudio": "Makinig",
-    "stopAudio": "Ihinto"
+    "stopAudio": "Ihinto",
+    "collapseLabel": "Impulso ng araw",
+    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
+    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
   },
   "features": {
     "sectionTitle": "Ano ang inaalok ng iyong kasama",
@@ -141,7 +144,7 @@
     "smsDesc": "SMS sa iyong cellphone",
     "phoneLabel": "Numero ng Cellphone",
     "phonePlaceholder": "+41 79 123 45 67",
-    "phoneHint": "May country code, hal. +41 para sa Switzerland.",
+    "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "I-click ang «Mag-subscribe» – ire-redirect ka sa Telegram. Simulan ang bot doon at i-type ang <strong>/daily</strong> upang i-activate ang pang-araw-araw na inspirasyon.",
     "pushHint": "Pagkatapos i-click ang «Mag-subscribe», hihingi ang iyong browser ng pahintulot para sa mga notification. Mangyaring payagan ito upang matanggap ang inspirasyon.",
     "submit": "Mag-subscribe",
@@ -166,7 +169,9 @@
     "switchChannel": "Lumipat ng Channel:",
     "unsubscribe": "I-unsubscribe",
     "unsubscribedTitle": "Hindi Naka-subscribe",
-    "unsubscribedDesc": "Hindi ka na makakatanggap ng pang-araw-araw na inspirasyon."
+    "unsubscribedDesc": "Hindi ka na makakatanggap ng pang-araw-araw na inspirasyon.",
+    "smsSwissOnly": "Swiss numbers only",
+    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
   },
   "faq": {
     "badge": "Mga Madalas Itanong",
@@ -352,7 +357,8 @@
     "imageSavedDesc": "I-save ang larawan at ibahagi ito sa nakopyang text sa Instagram, WhatsApp o kung saan mo gusto!",
     "clipboardFallback": "Nakopya ang teksto — i-paste ito sa pag-post!",
     "recommendedBy": "Inirerekomenda ng {{church}}",
-    "hashtagBible": "#Bibliya"
+    "hashtagBible": "#Bibliya",
+    "hashtagImpulse": "#DailyImpulse"
   },
   "darkMode": {
     "light": "Maliwanag na Mode",

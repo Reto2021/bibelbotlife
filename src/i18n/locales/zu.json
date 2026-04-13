@@ -30,7 +30,10 @@
     "alreadySubscribed": "Usuwuthola ugqozi lwansuku zonke",
     "subscribeCta": "Uyafuna ukuthola lolu gqozi nsuku zonke?",
     "playAudio": "Lalela",
-    "stopAudio": "Yima"
+    "stopAudio": "Yima",
+    "collapseLabel": "Isipho sosuku",
+    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
+    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
   },
   "features": {
     "sectionTitle": "Umngane wakho ukupha ini",
@@ -141,7 +144,7 @@
     "smsDesc": "I-SMS efonini yakho",
     "phoneLabel": "Inombolo Yocingo",
     "phonePlaceholder": "+41 79 123 45 67",
-    "phoneHint": "Ngenombolo yezwe, isb. +41 yeSwitzerland.",
+    "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "Chofoza ku-\"Bhalisa\" – uzodluliselwa kuTelegram. Qala i-bot lapho bese ubhala <strong>/daily</strong> ukuze uvule umlayezo wansuku zonke.",
     "pushHint": "Ngemuva kokuchofoza ku-\"Bhalisa\", isiphequluli sakho sizocela imvume yezaziso. Sicela uyivumele ukuze uthole umlayezo.",
     "submit": "Bhalisa",
@@ -166,7 +169,9 @@
     "switchChannel": "Shintsha isiteshi:",
     "unsubscribe": "Khipha okubhaliselwe",
     "unsubscribedTitle": "Kukhishiwe okubhaliselwe",
-    "unsubscribedDesc": "Ngeke usathola ugqozi lwansuku zonke."
+    "unsubscribedDesc": "Ngeke usathola ugqozi lwansuku zonke.",
+    "smsSwissOnly": "Swiss numbers only",
+    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
   },
   "faq": {
     "badge": "Imibuzo Evame Ukubuzwa",
@@ -352,7 +357,8 @@
     "imageSavedDesc": "Londoloza isithombe bese usabelana ngaso nombhalo okopishiwe ku-Instagram, WhatsApp noma lapho ufuna khona!",
     "clipboardFallback": "Umbhalo ukopishiwe — unamathisele lapho uthumela!",
     "recommendedBy": "Kuphakanyiswe yi-{{church}}",
-    "hashtagBible": "#IBhayibheli"
+    "hashtagBible": "#IBhayibheli",
+    "hashtagImpulse": "#DailyImpulse"
   },
   "darkMode": {
     "light": "Imodi Ekhanyayo",

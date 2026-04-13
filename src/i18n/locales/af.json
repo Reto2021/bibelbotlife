@@ -30,7 +30,10 @@
     "subscribeCta": "Wil jy hierdie inspirasie daagliks ontvang?",
     "alreadySubscribed": "Jy ontvang die daaglikse inspirasie",
     "playAudio": "Lees voor",
-    "stopAudio": "Stop"
+    "stopAudio": "Stop",
+    "collapseLabel": "Daaglikse impuls",
+    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
+    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
   },
   "features": {
     "sectionTitle": "Hoe jou metgesel jou ondersteun",
@@ -141,7 +144,7 @@
     "smsDesc": "SMS na jou selfoon",
     "phoneLabel": "Selfoonnommer",
     "phonePlaceholder": "+41 79 123 45 67",
-    "phoneHint": "Met landkode, bv. +41 vir Switserland.",
+    "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "Klik op «Teken in» – jy sal na Telegram herlei word. Begin jou metgesel daar en tik <strong>/daily</strong> om die daaglikse impuls te aktiveer.",
     "pushHint": "Nadat jy op «Teken in» geklik het, sal jou blaaier vir toestemming vra. Laat asseblief kennisgewings toe om die impuls te ontvang.",
     "subscribeButton": "Teken in vir Inspo",
@@ -166,7 +169,9 @@
     "switchChannel": "Verander kanaal:",
     "unsubscribe": "Kanselleer intekening",
     "unsubscribedTitle": "Uitgeteken",
-    "unsubscribedDesc": "Jy sal nie meer daaglikse inspirasie ontvang nie."
+    "unsubscribedDesc": "Jy sal nie meer daaglikse inspirasie ontvang nie.",
+    "smsSwissOnly": "Swiss numbers only",
+    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
   },
   "faq": {
     "badge": "Gereelde vrae",
@@ -357,7 +362,8 @@
     "imageSavedDesc": "Stoor die prent en deel dit met die gekopieerde teks op Instagram, WhatsApp of waar jy wil!",
     "clipboardFallback": "Teks gekopieer — plak dit wanneer jy plaas!",
     "recommendedBy": "Aanbeveel deur {{church}}",
-    "hashtagBible": "#Bybel"
+    "hashtagBible": "#Bybel",
+    "hashtagImpulse": "#DailyImpulse"
   },
   "darkMode": {
     "light": "Ligte modus",

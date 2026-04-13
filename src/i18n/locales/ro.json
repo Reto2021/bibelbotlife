@@ -30,7 +30,10 @@
     "alreadySubscribed": "Primești inspirația zilnică",
     "subscribeCta": "Dorești să primești această inspirație zilnic?",
     "playAudio": "Ascultă",
-    "stopAudio": "Oprește"
+    "stopAudio": "Oprește",
+    "collapseLabel": "Impulsul zilei",
+    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
+    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
   },
   "features": {
     "sectionTitle": "Ce îți oferă companionul tău",
@@ -141,7 +144,7 @@
     "smsDesc": "SMS pe telefon",
     "phoneLabel": "Număr de telefon",
     "phonePlaceholder": "+40 712 345 678",
-    "phoneHint": "Cu prefixul țării, ex. +40 pentru România.",
+    "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "Apasă \"Abonează-te\" – vei fi redirecționat către Telegram. Pornește botul și scrie <strong>/daily</strong> pentru a activa impulsul zilnic.",
     "pushHint": "După ce apeși \"Abonează-te\", browserul va cere permisiunea pentru notificări. Te rugăm să o permiți.",
     "submit": "Abonează-te",
@@ -166,7 +169,9 @@
     "switchChannel": "Schimbă canalul:",
     "unsubscribe": "Dezabonare",
     "unsubscribedTitle": "Dezabonat",
-    "unsubscribedDesc": "Nu vei mai primi inspirație zilnică."
+    "unsubscribedDesc": "Nu vei mai primi inspirație zilnică.",
+    "smsSwissOnly": "Swiss numbers only",
+    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
   },
   "faq": {
     "badge": "Întrebări frecvente",
@@ -352,7 +357,8 @@
     "imageSavedDesc": "Save the image and share it with the copied text on Instagram, WhatsApp or wherever you like!",
     "clipboardFallback": "Text copiat — lipește-l când postezi!",
     "recommendedBy": "Recomandat de {{church}}",
-    "hashtagBible": "#Biblia"
+    "hashtagBible": "#Biblia",
+    "hashtagImpulse": "#DailyImpulse"
   },
   "darkMode": {
     "light": "Mod luminos",
