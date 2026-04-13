@@ -365,7 +365,10 @@
     "baptism": {
       "title": "Find et dåbsvers",
       "desc": "Det perfekte vers til dit barn",
-      "prompt": "Hjælp mig med at finde et passende dåbsvers. Hvad slags barn er det, og hvad ønsker forældrene?"
+      "prompt": "Hjælp mig med at finde et passende dåbsvers. Hvad slags barn er det, og hvad ønsker forældrene?",
+      "prompt_v1": "Hvad betyder dåben egentlig?",
+      "prompt_v2": "Fortæl mig om dåben i Bibelen – overrask mig!",
+      "prompt_v3": "Hvorfor lader mennesker sig døbe?"
     },
     "condolence": {
       "title": "Trøstende ord",
@@ -380,7 +383,10 @@
     "anxiety": {
       "title": "Angst & bekymring",
       "desc": "Finde mod i svære tider",
-      "prompt": "Jeg kæmper med angst og bekymringer lige nu. Hvad siger Bibelen om det?"
+      "prompt": "Jeg kæmper med angst og bekymringer lige nu. Hvad siger Bibelen om det?",
+      "prompt_v1": "Jeg er bange. Hvad siger Bibelen om angst?",
+      "prompt_v2": "Hvordan kan troen hjælpe mig med angst?",
+      "prompt_v3": "Hvilke bibelske personer var også bange?"
     },
     "confession": {
       "title": "Bekendelse",
@@ -390,7 +396,10 @@
     "heartbreak": {
       "title": "Hjertesorg",
       "desc": "Hvad Bibelen siger om hjertesorg",
-      "prompt": "Mit hjerte er knust. Hvad siger Bibelen om hjertesorg og hvordan man finder håb igen?"
+      "prompt": "Mit hjerte er knust. Hvad siger Bibelen om hjertesorg og hvordan man finder håb igen?",
+      "prompt_v1": "Mit hjerte er knust. Hvad siger Bibelen?",
+      "prompt_v2": "Hvordan håndterer jeg hjertesorg – er der bibelsk hjælp?",
+      "prompt_v3": "Kan Gud hele et knust hjerte?"
     },
     "newstart": {
       "title": "Ny begyndelse",
@@ -400,7 +409,10 @@
     "namequiz": {
       "title": "Hvad betyder dit navn?",
       "desc": "Opdag den bibelske betydning af dit navn",
-      "prompt": "Hvad betyder mit navn, og har det en bibelsk eller åndelig betydning? Overrask mig!"
+      "prompt": "Hvad betyder mit navn, og har det en bibelsk eller åndelig betydning? Overrask mig!",
+      "prompt_v1": "Hvilke bibelske navne har den smukkeste betydning?",
+      "prompt_v2": "Hvad betyder mit navn – er der en bibelsk forbindelse?",
+      "prompt_v3": "Fortæl mig historien bag mit navn!"
     },
     "sleepless": {
       "title": "Søvnløs",
@@ -420,7 +432,10 @@
     "gratitude": {
       "title": "Taknemmelighed",
       "desc": "En personlig takkebøn",
-      "prompt": "Jeg vil takke Gud. Hjælp mig med at formulere en personlig takkebøn."
+      "prompt": "Jeg vil takke Gud. Hjælp mig med at formulere en personlig takkebøn.",
+      "prompt_v1": "Hvordan kan jeg blive mere taknemlig?",
+      "prompt_v2": "Hvad siger Bibelen om taknemmelighed?",
+      "prompt_v3": "Hvorfor er taknemmelighed så vigtig i troen?"
     },
     "lifewheel": {
       "title": "Livshjul",
@@ -479,7 +494,10 @@
     "forgiveness": {
       "title": "Tilgivelse",
       "desc": "Når tilgivelse synes umulig",
-      "prompt": "Jeg kan simpelthen ikke tilgive nogen. Det gør for ondt. Hvad siger Bibelen om tilgivelse?"
+      "prompt": "Jeg kan simpelthen ikke tilgive nogen. Det gør for ondt. Hvad siger Bibelen om tilgivelse?",
+      "prompt_v1": "Hvad siger Bibelen om tilgivelse?",
+      "prompt_v2": "Hvordan kan jeg tilgive en, der har såret mig?",
+      "prompt_v3": "Er der grænser for tilgivelse?"
     },
     "familyconflict": {
       "title": "Familiekonflikt",
@@ -499,7 +517,10 @@
     "prayer": {
       "title": "Bønneønske",
       "desc": "Bed sammen",
-      "prompt": "Jeg har et bønneønske og vil gerne bede sammen. Følg mig i bøn."
+      "prompt": "Jeg har et bønneønske og vil gerne bede sammen. Følg mig i bøn.",
+      "prompt_v1": "Hvordan kan jeg lære at bede?",
+      "prompt_v2": "Hvad siger Bibelen om bøn?",
+      "prompt_v3": "Hvorfor bønhører Gud ikke alle bønner?"
     },
     "bibleverse": {
       "title": "Forstå et vers",
@@ -518,57 +539,90 @@
     "dailywisdom": {
       "title": "Visdom for i dag",
       "desc": "En opmuntrende tanke til din dag",
-      "prompt": "Giv mig en kort, opmuntrende tanke til min dag – med et passende bibelvers."
+      "prompt": "Giv mig en kort, opmuntrende tanke til min dag – med et passende bibelvers.",
+      "prompt_v1": "Hvad er det bedste råd, Bibelen har til i dag?",
+      "prompt_v2": "Giv mig en visdom fra Bibelen, der følger mig hele dagen.",
+      "prompt_v3": "Overrask mig med et opmuntrende bibelvers til i dag!"
     },
     "funfact": {
       "title": "Vidste du det?",
       "desc": "Overraskende fakta fra Bibelen",
-      "prompt": "Fortæl mig en overraskende kendsgerning fra Bibelen, som de fleste ikke kender!"
+      "prompt": "Fortæl mig en overraskende kendsgerning fra Bibelen, som de fleste ikke kender!",
+      "prompt_v1": "Hvad er den mest skøre historie i Bibelen?",
+      "prompt_v2": "Hvilke fakta fra Bibelen overrasker de fleste?",
+      "prompt_v3": "Fortæl mig noget sjovt eller uventet fra Bibelen!"
     },
     "lifehack": {
       "title": "Livstip",
       "desc": "Bibelsk visdom for familie & arbejde",
-      "prompt": "Hvilket bibelsk tip hjælper i hverdagen med familie og arbejde? Giv mig noget praktisk!"
+      "prompt": "Hvilket bibelsk tip hjælper i hverdagen med familie og arbejde? Giv mig noget praktisk!",
+      "prompt_v1": "Hvordan kan Bibelen hjælpe mig i en stresset hverdag?",
+      "prompt_v2": "Hvilke praktiske livstips gemmer sig i Bibelen?",
+      "prompt_v3": "Giv mig et konkret tip fra Bibelen til min hverdag!"
     },
     "strengths": {
       "title": "Dine styrker",
       "desc": "Opdag hvad der bor i dig",
-      "prompt": "Hjælp mig med at opdage mine personlige styrker – hvad siger Bibelen om de gaver, ethvert menneske har?"
+      "prompt": "Hjælp mig med at opdage mine personlige styrker – hvad siger Bibelen om de gaver, ethvert menneske har?",
+      "prompt_v1": "Hvilke styrker har jeg ifølge Bibelen?",
+      "prompt_v2": "Hvordan kan jeg finde ud af, hvad mine gaver og talenter er?",
+      "prompt_v3": "Hvad siger Bibelen om det, der gør mig speciel?"
     },
     "family": {
       "title": "Familie & hverdag",
       "desc": "Mere påskønnelse i hverdagen",
-      "prompt": "Hvordan kan jeg vise min familie mere påskønnelse? Giv mig praktiske idéer med bibelsk inspiration."
+      "prompt": "Hvordan kan jeg vise min familie mere påskønnelse? Giv mig praktiske idéer med bibelsk inspiration.",
+      "prompt_v1": "Hvordan styrker jeg mine familierelationer?",
+      "prompt_v2": "Hvad siger Bibelen om et godt familieliv?",
+      "prompt_v3": "Giv mig en idé til at glæde nogen i min familie i dag!"
     },
     "relax": {
       "title": "Find ro",
       "desc": "Et øjeblik af stilhed og fred",
-      "prompt": "Jeg har brug for et øjeblik af ro. Hjælp mig med at koble af – med et beroligende bibelvers eller en kort meditation."
+      "prompt": "Jeg har brug for et øjeblik af ro. Hjælp mig med at koble af – med et beroligende bibelvers eller en kort meditation.",
+      "prompt_v1": "Giv mig en beroligende salme til dette øjeblik.",
+      "prompt_v2": "Hvordan kan jeg finde ægte ro ifølge Bibelen?",
+      "prompt_v3": "Guid mig gennem en kort bibelsk meditation."
     },
     "quoteofday": {
       "title": "Dagens citat",
       "desc": "Et inspirerende citat at reflektere over",
-      "prompt": "Giv mig et inspirerende bibelcitat for i dag med en kort forklaring"
+      "prompt": "Giv mig et inspirerende bibelcitat for i dag med en kort forklaring",
+      "prompt_v1": "Hvilket bibelcitat passer særligt godt til denne dag?",
+      "prompt_v2": "Giv mig et opmuntrende citat fra Salmerne til i dag",
+      "prompt_v3": "Hvilket ordsprog fra Bibelen giver mig nyt perspektiv i dag?"
     },
     "thankfulness": {
       "title": "Taknemmeligheds­øvelse",
       "desc": "Opdag hvad du kan være taknemmelig for",
-      "prompt": "Guide mig gennem en kort taknemmeligheds­øvelse. Hjælp mig med at finde tre ting, jeg kan være taknemmelig for i dag"
+      "prompt": "Guide mig gennem en kort taknemmeligheds­øvelse. Hjælp mig med at finde tre ting, jeg kan være taknemmelig for i dag",
+      "prompt_v1": "Hjælp mig med at opdage taknemmelighed i hverdagen – også i de små ting",
+      "prompt_v2": "Jeg vil gerne lære at være mere taknemlig. Giv mig en praktisk øvelse",
+      "prompt_v3": "Hvad siger Bibelen om taknemmelighed, og hvordan kan jeg bruge det i dag?"
     },
     "biblesays": {
       "title": "Hvad siger Bibelen om...",
       "desc": "Find ud af hvad Bibelen siger om dit emne",
-      "prompt": "Jeg vil gerne vide hvad Bibelen siger om et bestemt emne. Spørg mig hvilket emne der interesserer mig!"
+      "prompt": "Jeg vil gerne vide hvad Bibelen siger om et bestemt emne. Spørg mig hvilket emne der interesserer mig!",
+      "prompt_v1": "Hvad siger Bibelen om venskab?",
+      "prompt_v2": "Hvad siger Bibelen om omgang med penge?",
+      "prompt_v3": "Hvad siger Bibelen om kærlighed og relationer?"
     },
     "morningstart": {
       "title": "God morgen!",
       "desc": "Start din dag positivt",
-      "prompt": "Ønsk mig god morgen og giv mig en opmuntrende tanke til at starte dagen"
+      "prompt": "Ønsk mig god morgen og giv mig en opmuntrende tanke til at starte dagen",
+      "prompt_v1": "Giv mig en kort morgenimpuls med et passende bibelvers",
+      "prompt_v2": "Hvordan kan jeg starte min dag bevidst og positivt i dag?",
+      "prompt_v3": "Giv mig en opmuntrende morgenhilsen med en tanke fra Bibelen"
     },
     "inspiration": {
       "title": "Inspirer mig",
       "desc": "Lad dig overraske og inspirere",
-      "prompt": "Overrask mig med noget inspirerende — det kan være en tanke, en historie eller en indsigt fra Bibelen"
+      "prompt": "Overrask mig med noget inspirerende — det kan være en tanke, en historie eller en indsigt fra Bibelen",
+      "prompt_v1": "Fortæl mig en inspirerende historie fra Bibelen, der er relevant i dag",
+      "prompt_v2": "Giv mig en uventet, inspirerende tanke",
+      "prompt_v3": "Hvilken bibelsk personlighed kan inspirere mig i dag og hvorfor?"
     }
   },
   "lifeWheel": {
@@ -701,9 +755,9 @@
       "orgTypePlaceholder": "Vælg type...",
       "orgTypes": {
         "church": "Menighed",
-        "careHome": "Pflegeheim",
-        "seniorHome": "Altersheim",
-        "hospital": "Spital",
+        "careHome": "Plejehjem",
+        "seniorHome": "Ældrebolig",
+        "hospital": "Hospital",
         "prison": "Fængselspastorat",
         "military": "Militærpastorat",
         "rehaClinic": "Rehabiliteringsklinik",
@@ -731,7 +785,7 @@
         "desc": "Velkendte bibelvers og samtaler for ældre – let tilgængelig via tablet eller smartphone."
       },
       "hospital": {
-        "title": "Spitäler",
+        "title": "Hospital",
         "desc": "Trøst og åndelig ledsagelse for patienter i svære tider – tilgængelig 24/7."
       },
       "prison": {
@@ -814,7 +868,7 @@
         "desc": "Velkendte bibelvers og samtaler for ældre – let tilgængelig via tablet eller smartphone."
       },
       "hospital": {
-        "title": "Spitäler",
+        "title": "Hospital",
         "desc": "Trøst og åndelig ledsagelse for patienter i svære tider – tilgængelig 24/7."
       },
       "prison": {
