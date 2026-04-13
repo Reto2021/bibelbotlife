@@ -213,7 +213,8 @@ export function DailyImpulse() {
       ? ` #${churchBranding.churchName.replace(/\s+/g, "")}`
       : "";
 
-    return `✨ ${impulse.teaser}\n\n«${impulse.verse}»\n— ${impulse.reference}${recommendedBy}\n\n#BibleBotLife #Tagesimpuls ${topicTag} ${hashtagBible}${churchTag}\n${baseUrl}`;
+    const hashtagImpulse = t("share.hashtagImpulse", "#DailyImpulse");
+    return `✨ ${impulse.teaser}\n\n«${impulse.verse}»\n— ${impulse.reference}${recommendedBy}\n\n#BibleBotLife ${hashtagImpulse} ${topicTag} ${hashtagBible}${churchTag}\n${baseUrl}`;
   }, [impulse, churchBranding, t]);
 
   const shareAsImage = useCallback(async () => {
@@ -262,14 +263,21 @@ export function DailyImpulse() {
   const handleDeepDive = () => {
     if (!impulse) return;
     openBibleBotChat(
-      `Der Tagesimpuls ist "${impulse.topic}" mit ${impulse.reference}. Erkläre mir diese Stelle: Wer hat das geschrieben? In welcher Situation? Was kommt davor und danach? Und was bedeutet das für mein Leben heute?`
+      t("impulse.deepDivePrompt", {
+        topic: impulse.topic,
+        reference: impulse.reference,
+        defaultValue: `The daily impulse is "{{topic}}" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?`,
+      })
     );
   };
 
   const handleExploreVerse = () => {
     if (!impulse) return;
     openBibleBotChat(
-      `Lies mir den ganzen Abschnitt rund um ${impulse.reference} vor und erkläre mir den Zusammenhang. Ich möchte die Geschichte dahinter verstehen.`
+      t("impulse.explorePrompt", {
+        reference: impulse.reference,
+        defaultValue: `Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it.`,
+      })
     );
   };
 
@@ -337,13 +345,17 @@ export function DailyImpulse() {
   }, [toast, t]);
 
   const handleSubscribeSms = useCallback(async () => {
-    if (smsPhone.length < 8) return;
+    const cleaned = smsPhone.replace(/\s/g, "");
+    if (!cleaned.startsWith("+41") || cleaned.length < 12) {
+      toast({ title: t("subscribe.smsSwissOnly", "Nur Schweizer Nummern"), description: t("subscribe.smsSwissOnlyDesc", "SMS ist nur für Schweizer Nummern (+41) verfügbar."), variant: "destructive" });
+      return;
+    }
     setIsSubscribing(true);
     try {
       const resp = await fetch(SUBSCRIBE_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ channel: "sms", phone_number: smsPhone, language: i18n.language }),
+        body: JSON.stringify({ channel: "sms", phone_number: cleaned, language: i18n.language }),
       });
       if (!resp.ok) throw new Error("Subscribe failed");
       const data = await resp.json();
@@ -406,7 +418,7 @@ export function DailyImpulse() {
       >
         <span className="flex items-center gap-2">
           <BookOpen className="h-3.5 w-3.5" />
-          <span className="font-medium">Tagesimpuls</span>
+          <span className="font-medium">{t("impulse.collapseLabel", "Daily Impulse")}</span>
           {collapsed && impulse && (
             <span className="text-xs opacity-70 truncate max-w-[200px]">
               · {impulse.reference}
