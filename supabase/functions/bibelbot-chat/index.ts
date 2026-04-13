@@ -47,16 +47,267 @@ function fixSpelling(text: string): string {
 
 const BIBLE_API_BASE = "https://bible.helloao.org/api";
 
-// Map of available German translations
-const BIBLE_TRANSLATIONS: Record<string, { id: string; name: string }> = {
-  luther: { id: "deu_l12", name: "Lutherbibel 1912" },
-  luther1912: { id: "deu_l12", name: "Lutherbibel 1912" },
-  elberfelder: { id: "deu_elbbk", name: "Elberfelder Übersetzung" },
-  schlachter: { id: "deu_sch", name: "Schlachter-Bibel 1951" },
-  schlachter2000: { id: "deu_sch", name: "Schlachter 2000" },
-  kjv: { id: "eng_kjv", name: "King James Version" },
-  web: { id: "eng_web", name: "World English Bible" },
+// Map of available translations per language (modern first, classic fallback)
+const LANGUAGE_BIBLES: Record<string, { translations: Record<string, { id: string; name: string }>; default: string }> = {
+  de: {
+    default: "luther",
+    translations: {
+      luther: { id: "deu_l12", name: "Lutherbibel 1912" },
+      luther1912: { id: "deu_l12", name: "Lutherbibel 1912" },
+      elberfelder: { id: "deu_elbbk", name: "Elberfelder Übersetzung" },
+      schlachter: { id: "deu_sch", name: "Schlachter-Bibel 1951" },
+      schlachter2000: { id: "deu_sch", name: "Schlachter 2000" },
+    },
+  },
+  en: {
+    default: "bsb",
+    translations: {
+      bsb: { id: "eng_bsb", name: "Berean Standard Bible (2022)" },
+      web: { id: "eng_web", name: "World English Bible" },
+      kjv: { id: "eng_kjv", name: "King James Version" },
+    },
+  },
+  fr: {
+    default: "lsg",
+    translations: {
+      lsg: { id: "fraLSG", name: "Louis Segond 1910" },
+    },
+  },
+  es: {
+    default: "rv09",
+    translations: {
+      rv09: { id: "spa_rv09", name: "Reina-Valera 1909" },
+    },
+  },
+  it: {
+    default: "riv",
+    translations: {
+      riv: { id: "ita_riv", name: "Riveduta (Luzzi) 1927" },
+      diodati: { id: "ita_diod", name: "Diodati 1607" },
+    },
+  },
+  pt: {
+    default: "arc",
+    translations: {
+      arc: { id: "por_arc", name: "Almeida Revista e Corrigida" },
+    },
+  },
+  nl: {
+    default: "sv",
+    translations: {
+      sv: { id: "nld_sv", name: "Statenvertaling" },
+    },
+  },
+  pl: {
+    default: "bg",
+    translations: {
+      bg: { id: "pol_bg", name: "Biblia Gdańska" },
+    },
+  },
+  cs: {
+    default: "kr",
+    translations: {
+      kr: { id: "ces_kr", name: "Kralická Bible" },
+    },
+  },
+  ro: {
+    default: "corn",
+    translations: {
+      corn: { id: "ron_corn", name: "Cornilescu 1924" },
+    },
+  },
+  ru: {
+    default: "syn",
+    translations: {
+      syn: { id: "rus_syn", name: "Синодальный перевод 1876" },
+    },
+  },
+  uk: {
+    default: "ogi",
+    translations: {
+      ogi: { id: "ukr_ogi", name: "Огієнко 1962" },
+    },
+  },
+  ar: {
+    default: "vd",
+    translations: {
+      vd: { id: "arb_vd", name: "Van Dyck 1865" },
+    },
+  },
+  he: {
+    default: "mod",
+    translations: {
+      mod: { id: "heb_mod", name: "Hebrew Modern" },
+    },
+  },
+  ko: {
+    default: "krv",
+    translations: {
+      krv: { id: "kor_krv", name: "개역한글 (Korean RV)" },
+    },
+  },
+  zh: {
+    default: "cuv",
+    translations: {
+      cuv: { id: "zho_cuv", name: "和合本 (Chinese Union Version)" },
+    },
+  },
+  da: {
+    default: "bib",
+    translations: {
+      bib: { id: "dan_bib", name: "Bibelen 1871" },
+    },
+  },
+  no: {
+    default: "b30",
+    translations: {
+      b30: { id: "nor_b30", name: "Bibelen 1930" },
+    },
+  },
+  sv: {
+    default: "svb",
+    translations: {
+      svb: { id: "swe_svb", name: "Karl XII Bibel" },
+    },
+  },
+  fi: {
+    default: "pr",
+    translations: {
+      pr: { id: "fin_pr", name: "Pyhä Raamattu 1933/38" },
+    },
+  },
+  el: {
+    default: "vam",
+    translations: {
+      vam: { id: "ell_vam", name: "Vamvas 1850" },
+    },
+  },
+  hu: {
+    default: "kar",
+    translations: {
+      kar: { id: "hun_kar", name: "Károli 1590" },
+    },
+  },
+  hr: {
+    default: "sar",
+    translations: {
+      sar: { id: "hrv_sar", name: "Šarić" },
+    },
+  },
+  sr: {
+    default: "kar",
+    translations: {
+      kar: { id: "srp_kar", name: "Karadžić 1868" },
+    },
+  },
+  sk: {
+    default: "roh",
+    translations: {
+      roh: { id: "slk_roh", name: "Roháčkova Biblia" },
+    },
+  },
+  bg: {
+    default: "bpb",
+    translations: {
+      bpb: { id: "bul_bpb", name: "Protestant Bible 1940" },
+    },
+  },
+  ka: {
+    default: "geo",
+    translations: {
+      geo: { id: "kat_geo", name: "Georgian Bible" },
+    },
+  },
+  hy: {
+    default: "ara",
+    translations: {
+      ara: { id: "hye_ara", name: "Ararat Bible" },
+    },
+  },
+  tl: {
+    default: "adb",
+    translations: {
+      adb: { id: "tgl_adb", name: "Ang Biblia 1905" },
+    },
+  },
+  id: {
+    default: "tb",
+    translations: {
+      tb: { id: "ind_tb", name: "Alkitab Terjemahan Baru" },
+    },
+  },
+  vi: {
+    default: "vb",
+    translations: {
+      vb: { id: "vie_vb", name: "Vietnamese Bible 1934" },
+    },
+  },
+  sw: {
+    default: "suv",
+    translations: {
+      suv: { id: "swh_suv", name: "Swahili Union Version" },
+    },
+  },
+  am: {
+    default: "amb",
+    translations: {
+      amb: { id: "amh_amb", name: "Amharic Bible" },
+    },
+  },
+  af: {
+    default: "a53",
+    translations: {
+      a53: { id: "afr_a53", name: "Afrikaans 1953" },
+    },
+  },
+  yo: {
+    default: "bib",
+    translations: {
+      bib: { id: "yor_bib", name: "Bibeli Yorùbá" },
+    },
+  },
+  ig: {
+    default: "bib",
+    translations: {
+      bib: { id: "ibo_bib", name: "Igbo Bible" },
+    },
+  },
+  zu: {
+    default: "zul",
+    translations: {
+      zul: { id: "zul_zul", name: "iBhayibheli" },
+    },
+  },
+  ht: {
+    default: "hcb",
+    translations: {
+      hcb: { id: "hat_hcb", name: "Haitian Creole Bible" },
+    },
+  },
 };
+
+// Resolve translation for a given language
+function getTranslation(lang: string, translationKey?: string): { id: string; name: string } {
+  const langBibles = LANGUAGE_BIBLES[lang] || LANGUAGE_BIBLES["en"];
+  if (translationKey) {
+    const t = langBibles.translations[translationKey.toLowerCase()];
+    if (t) return t;
+    // Try across all languages (e.g. user explicitly asks for "kjv")
+    for (const lb of Object.values(LANGUAGE_BIBLES)) {
+      const found = lb.translations[translationKey.toLowerCase()];
+      if (found) return found;
+    }
+  }
+  return langBibles.translations[langBibles.default];
+}
+
+// Legacy flat map for backward compat
+const BIBLE_TRANSLATIONS: Record<string, { id: string; name: string }> = {};
+for (const lb of Object.values(LANGUAGE_BIBLES)) {
+  for (const [k, v] of Object.entries(lb.translations)) {
+    BIBLE_TRANSLATIONS[k] = v;
+  }
+}
 
 // Standard book ID mapping (German/English name → OSIS ID)
 const BOOK_MAP: Record<string, string> = {
@@ -140,12 +391,13 @@ async function lookupBibleVerse(
   chapter: number,
   verseStart: number,
   verseEnd?: number,
-  translationKey?: string
+  translationKey?: string,
+  lang?: string
 ): Promise<string> {
   const bookId = resolveBookId(book);
   if (!bookId) return `Buch «${book}» nicht gefunden.`;
 
-  const trans = BIBLE_TRANSLATIONS[translationKey?.toLowerCase() || "luther"] || BIBLE_TRANSLATIONS.luther;
+  const trans = getTranslation(lang || "de", translationKey);
   const url = `${BIBLE_API_BASE}/${trans.id}/${bookId}/${chapter}.json`;
 
   try {
