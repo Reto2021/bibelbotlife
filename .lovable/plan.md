@@ -1,69 +1,87 @@
 
 
-## Plan: Share-Bild mit Intro-Text, Hashtags und Gemeinde-Sponsoring
+## Plan: Mehrsprachige Bibelübersetzungen — Moderne Versionen bevorzugen
 
-### Was wird gemacht
+### Übersicht
 
-Wenn ein Nutzer auf "Bild teilen" klickt, wird automatisch ein passender Intro-Text mit Hashtags generiert und beim Teilen mitgegeben. Bei gesponsorten Gemeinden (church branding aktiv) wird die Gemeinde sowohl im Bild als auch im Share-Text erwähnt.
+Jede der 38 App-Sprachen bekommt mindestens eine eigene Bibelübersetzung. Wo möglich werden **moderne, frei lizenzierte Versionen** bevorzugt (Public Domain oder Creative Commons). Ältere Übersetzungen dienen als Fallback.
 
-### Bestandsaufnahme (bereits vorhanden)
+### Recherche-Ergebnis: Beste verfügbare Übersetzungen pro Sprache
 
-- `useChurchBranding()` Hook — liefert churchName, logoUrl, primaryColor etc.
-- `ChurchBanner` — zeigt Gemeinde-Banner bei `?church=slug`
-- `BrandedQRCode` — QR-Code mit BibleBot-Logo
-- `QRFlyerDownload`, `QRStickerDownload` — Flyer/Sticker-Download für Gemeinden
-- `SplashScreen` — zeigt Partner-Logo bei Patronat
-- Share-Flow in `DailyImpulse.tsx` → `shareAsImage()` nutzt bereits `navigator.share()` mit Text
+Alle Übersetzungen auf der bereits genutzten API (bible.helloao.org) oder ebible.org verfügbar — keine neuen APIs nötig.
 
-### Änderungen
+**Strategie: Modern first, Classic fallback**
 
-**1. Share-Text mit Intro + Hashtags (`src/components/DailyImpulse.tsx`)**
+| Sprache | Code | Primär (modern, frei) | Fallback (älter) | Quelle |
+|---------|------|----------------------|-------------------|--------|
+| **Deutsch** | de | Schlachter, Luther 1912, Elberfelder | — | ✅ Bereits aktiv |
+| **Englisch** | en | **BSB** (Berean Standard, 2022, PD), **WEB** (modern, PD) | KJV (1611) | helloao |
+| **Französisch** | fr | **SBL** (Sainte Bible Libre, PD, modern) | Louis Segond 1910 | ebible/helloao |
+| **Spanisch** | es | **VBL** (Versión Biblia Libre, 2018, CC) | Reina-Valera 1909 | ebible/helloao |
+| **Italienisch** | it | — | Diodati / Riveduta 1927 | helloao |
+| **Portugiesisch** | pt | **APEE** (Almeida 2015, wenn frei) | Almeida RC 1911 | helloao |
+| **Niederländisch** | nl | — | Statenvertaling | helloao |
+| **Polnisch** | pl | **UBG** (Uwspółcześniona BG, 2017, frei) | Biblia Gdańska 1632 | helloao |
+| **Tschechisch** | cs | — | Kralická Bible | helloao |
+| **Rumänisch** | ro | — | Cornilescu 1924 | helloao |
+| **Russisch** | ru | — | Synodal 1876 | helloao |
+| **Ukrainisch** | uk | — | Ogienko 1962 | helloao |
+| **Arabisch** | ar | — | Van Dyck 1865 | helloao |
+| **Hebräisch** | he | — | Hebrew Modern / Tanakh | helloao |
+| **Koreanisch** | ko | — | Korean RV 1961 | helloao |
+| **Chinesisch** | zh | — | Chinese Union Version 1919 | helloao |
+| **Alle anderen** | * | FBV (Free Bible Version) als Fallback wenn sprachspezifische Version fehlt | WEB (World English Bible) als Universal-Fallback | ebible |
 
-- `shareAsImage()` erweitern: statt nur Vers + Referenz wird ein vollständiger Post-Text generiert:
-  ```
-  ✨ {teaser}
+**Wichtige Funde:**
+- **BSB** (Berean Standard Bible, 2022): Seit April 2023 vollständig Public Domain. Moderne, genaue englische Übersetzung — wird primäre EN-Quelle.
+- **Free Bible Version (FBV)**: Modernes Englisch, CC BY-SA, auf ebible.org — guter universeller Fallback.
+- **Versión Biblia Libre (VBL)**: Moderne spanische Übersetzung (2018), CC-lizenziert.
+- **Sainte Bible Libre (SBL)**: Moderne französische Übersetzung, Public Domain.
+- Für viele Sprachen (IT, NL, RO, RU, AR, HE, KO, ZH) gibt es leider **keine modernen frei lizenzierten** Vollbibeln — dort bleiben die klassischen Versionen die beste Option.
 
-  «{verse}»
-  — {reference}
+### Implementierung (3 Phasen)
 
-  #BibleBotLife #Tagesimpuls #{topic} #Bibel
-  biblebot.life
-  ```
-- Bei aktiver Gemeinde-Branding:
-  ```
-  ✨ {teaser}
-
-  «{verse}»
-  — {reference}
-
-  📍 Empfohlen von {churchName}
-
-  #BibleBotLife #Tagesimpuls #{topic} #{churchName}
-  biblebot.life/?church={slug}
-  ```
-
-**2. Gemeinde-Logo + Name im Bild (`src/lib/share-image-canvas.ts`)**
-
-- `ShareTileOptions` erweitern um optionale `churchBranding: { name, logoUrl, slug }`.
-- Im unteren Branding-Bereich: Wenn `churchBranding` vorhanden, neben "BibleBot.Life" ein kleines "Empfohlen von {churchName}" und optional das Gemeinde-Logo anzeigen.
-- Layout: Links "BibleBot.Life" + "Everyday Sunday", rechts unten kleines Gemeinde-Logo + Name.
-
-**3. Integration in DailyImpulse**
-
-- `useChurchBranding()` importieren und Branding-Daten an `generateShareImage()` und `shareAsImage()` weitergeben.
-- Hashtags werden sprachabhängig generiert (DE: #Bibel, EN: #Bible, etc.) mit Basis-Set + topic-basiertem Tag.
-
-**4. Clipboard-Fallback**
-
-- Wenn `navigator.share` nicht verfügbar: Text wird in Zwischenablage kopiert mit Toast-Hinweis "Text kopiert — füge ihn beim Posten ein".
-
-### Technische Details
+**Phase 1: Chat-Zitate sprachabhängig machen**
 
 | Datei | Änderung |
 |-------|----------|
-| `src/lib/share-image-canvas.ts` | `ShareTileOptions` + `churchBranding` Feld; Gemeinde-Logo laden + im Canvas unten rechts zeichnen; "Empfohlen von X" Text |
-| `src/components/DailyImpulse.tsx` | `useChurchBranding()` importieren; Share-Text Builder-Funktion mit Hashtags + Gemeinde; an `generateShareImage` + `navigator.share` übergeben |
-| `src/i18n/locales/de.json` | Neue Keys: `share.introPrefix`, `share.recommendedBy`, `share.hashtagBible` |
-| `src/i18n/locales/en.json` | Gleiche Keys auf Englisch |
-| Alle anderen Locale-Dateien | Übersetzte Versionen der neuen Keys |
+| `supabase/functions/bibelbot-chat/index.ts` | Neue `LANGUAGE_BIBLES` Map mit Sprache → Translation-IDs (primär + fallback). System-Prompt passt sich der Nutzersprache an. `lookupBibleVerse()` erhält `language` Parameter. |
+
+Beispiel-Mapping:
+```text
+en → BSB (primär), WEB (fallback), KJV (klassisch)
+fr → SBL (primär), fraLSG (fallback)
+es → VBL (primär), spa_rv09 (fallback)
+it → ita_riv (einzige Option)
+...
+```
+
+**Phase 2: Datenbank + Import erweitern**
+
+| Datei | Änderung |
+|-------|----------|
+| DB-Migration | `ALTER TABLE bible_verses ADD COLUMN language TEXT DEFAULT 'de'`; Index auf `(language, translation)` |
+| `supabase/functions/bible-import/index.ts` | TRANSLATIONS-Array mit allen 38 Sprachen erweitern. API-IDs gegen live API validieren. Import pro Sprache mit Fortschritts-Logging. |
+| `supabase/functions/bible-search/index.ts` | Sprach-Parameter durchreichen. FTS-Config pro Sprache (`english`, `french`, `spanish`, `simple` als Fallback). System-Prompt der Suchexpansion sprachabhängig machen. |
+
+**Phase 3: UI-Integration**
+
+| Datei | Änderung |
+|-------|----------|
+| `src/pages/BibleSearch.tsx` | Übersetzungs-Dropdown zeigt nur Bibeln der aktuellen UI-Sprache |
+| `src/pages/BibleQuiz.tsx` | `language` Parameter an Edge Function senden |
+| `src/components/DailyImpulse.tsx` | Sprachabhängige Vers-Auswahl |
+| `supabase/functions/bible-quiz/index.ts` | Quiz-Fragen in Nutzersprache generieren |
+| `supabase/functions/daily-impulse/index.ts` | Tagesimpuls-Verse in passender Sprache |
+
+### Validierungsschritt
+
+Vor dem Massenimport wird ein Validierungsscript die API-IDs aller geplanten Übersetzungen gegen `available_translations.json` prüfen und fehlerhafte IDs melden.
+
+### Aufwand & Risiken
+
+- **DB-Grösse**: ca. 2-3 Mio Zeilen (machbar innerhalb Supabase-Limits)
+- **Import**: Einmalig 4-8h im Hintergrund, batchweise
+- **FTS-Qualität**: Nicht alle Sprachen haben Postgres-FTS-Konfigurationen → `simple` als Fallback
+- **Sprachen ohne moderne Bibel**: Für ca. 25 von 38 Sprachen bleibt die klassische Version die einzige Option — das ist völlig in Ordnung, da diese Texte bewährt und anerkannt sind
 
