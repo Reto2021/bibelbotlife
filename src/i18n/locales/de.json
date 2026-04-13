@@ -360,7 +360,8 @@
     "imageSavedDesc": "Speichere das Bild und teile es mit dem kopierten Text auf Instagram, WhatsApp oder wo du möchtest!",
     "clipboardFallback": "Text kopiert — füge ihn beim Posten ein!",
     "recommendedBy": "Empfohlen von {{church}}",
-    "hashtagBible": "#Bibel"
+    "hashtagBible": "#Bibel",
+    "hashtagImpulse": "#Tagesimpuls"
   },
   "darkMode": {
     "light": "Heller Modus",
