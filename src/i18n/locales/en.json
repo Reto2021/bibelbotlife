@@ -1179,5 +1179,132 @@
   "pricing": {
     "onRequest": "Patronage on request",
     "contactUs": "Contact us"
+  },
+  "entryTiles": {
+    "groups": {
+      "emotional": "Something's weighing on me",
+      "orientation": "I'm looking for direction",
+      "deep": "I want to go deeper"
+    },
+    "labels": {
+      "anxiety": "I'm worried",
+      "heartbreak": "I'm hurting",
+      "loneliness": "I feel alone",
+      "decision": "I'm facing a decision",
+      "newstart": "I want a fresh start",
+      "calling": "What's my path?",
+      "bibleverse": "Understand a verse",
+      "sevenwhys": "Why do I really do this?",
+      "lifewheel": "Where do I stand in life?",
+      "thankfulness": "Gratitude",
+      "burnout": "Exhaustion",
+      "meaningcrisis": "Meaning crisis",
+      "selfdoubt": "Self-doubt",
+      "anger": "Anger & frustration",
+      "financial": "Financial worries",
+      "illness": "Illness",
+      "condolence": "Grief & loss",
+      "wedding": "Marriage & partnership",
+      "baptism": "Baptism & faith journey",
+      "faithdoubt": "Faith doubts",
+      "forgiveness": "Forgiving & letting go",
+      "sleepless": "Sleeplessness",
+      "biblequiz": "Bible Quiz",
+      "prayerwall": "Prayer Wall"
+    },
+    "showMore": "Discover more topics",
+    "showLess": "Show less"
+  },
+  "trust": {
+    "qa": {
+      "title": "QA-verified",
+      "text": "Every Bible citation is automatically checked for accuracy — in every conversation."
+    },
+    "noAds": {
+      "title": "No advertising",
+      "text": "No tracking, no data sharing, no monetization of your questions."
+    },
+    "noExpertise": {
+      "title": "No prior knowledge needed",
+      "text": "You don't need church membership or theological expertise."
+    }
+  },
+  "tools": {
+    "badge": "More than answers",
+    "title": "Two tools that go deeper",
+    "subtitle": "For moments when you need more than just an answer.",
+    "lifewheel": {
+      "title": "Life Wheel Check",
+      "desc": "How are things with work, relationships, purpose, and health? The Life Wheel helps you gain clarity in 3 minutes — and shows where the Bible connects directly.",
+      "cta": "Start Life Wheel"
+    },
+    "sevenwhys": {
+      "title": "The 7-Why Method",
+      "desc": "Why do I really do this? Why does it feel this way? Your companion guides you through 7 questions that get to the root — with biblical context at the deepest point.",
+      "cta": "Go deeper"
+    }
+  },
+  "audience": {
+    "title": "Who is BibleBot.Life for?",
+    "subtitle": "Choose your path",
+    "personal": {
+      "title": "I'm looking for personal companionship",
+      "desc": "Questions about faith, daily impulses, spiritual growth — at your own pace and without judgment.",
+      "f1": "Chat with Bible companionship",
+      "f2": "21-day journey",
+      "f3": "Daily impulse via Push / Telegram",
+      "f4": "Personal conversation history",
+      "cta": "Start chatting — free →"
+    },
+    "church": {
+      "title": "I plan services & accompany people",
+      "desc": "For pastors, chaplains, and church teams: support for sermon preparation, team planning, and more.",
+      "f1": "Service planner",
+      "f2": "Resource library",
+      "f3": "Team coordination",
+      "f4": "Church page & directory",
+      "cta": "For Churches & Chaplains →"
+    }
+  },
+  "faqExtra": {
+    "methodik": {
+      "q": "What's behind BibleBot's methodology?",
+      "a": ""
+    },
+    "journey": {
+      "q": "What is the 21-day journey?"
+    },
+    "faithPsych": {
+      "q": "Does BibleBot combine faith and psychology?",
+      "a": "BibleBot combines biblical wisdom with insights from evidence-based psychology — not to psychologize faith, but to make it practical for everyday life. The methods (PERMA, logotherapy, gratitude and forgiveness research) complement the Bible, but don't replace it."
+    }
+  },
+  "donate": {
+    "badge": "Support your companion",
+    "title": "Help keep your companion free",
+    "subtitle": "This is a passion project – no ads, no subscriptions, no hidden costs. To keep it that way, I rely on voluntary donations. Every contribution helps cover the ongoing costs for operations and infrastructure.",
+    "bankTitle": "Donate via bank transfer",
+    "bankSubtitle": "Every amount counts – thank you! 🙏",
+    "recipient": "Recipient",
+    "bank": "Bank",
+    "purpose": "Reference",
+    "purposeValue": "Donation BibleBot.Life",
+    "note": "BibleBot.Life is operated as a private project. Donations are therefore not tax-deductible.",
+    "creditCard": "Support with credit card",
+    "twint": "Support with Twint",
+    "secureNote": "Secure payment · No subscription trap · Cancel anytime"
+  },
+  "footer": {
+    "tagline": "Your personal companion — with the depth of the Bible, no prior knowledge needed.",
+    "disclaimer": "BibleBot.Life is a digital tool and does not replace professional pastoral care, theological counseling, or psychological therapy. In acute crises, please contact your local emergency helpline.",
+    "impressum": "Imprint",
+    "notes": "Notes",
+    "private": "Private, non-commercial project",
+    "noChat": "No storage of chat data",
+    "noTax": "Donations are not tax-deductible",
+    "datenschutz": "Privacy Policy",
+    "love": "With ❤️ for everyone wondering what Christ thinks.",
+    "forChurches": "For Churches",
+    "forCelebrants": "For Chaplains & Coaches"
   }
 }

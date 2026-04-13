@@ -1179,5 +1179,132 @@
   "pricing": {
     "onRequest": "Patronat auf Anfrage",
     "contactUs": "Kontakt aufnehmen"
+  },
+  "entryTiles": {
+    "groups": {
+      "emotional": "Mir geht etwas nach",
+      "orientation": "Ich suche Orientierung",
+      "deep": "Ich will tiefer gehen"
+    },
+    "labels": {
+      "anxiety": "Ich mache mir Sorgen",
+      "heartbreak": "Ich bin verletzt",
+      "loneliness": "Ich fühle mich allein",
+      "decision": "Ich stehe vor einer Entscheidung",
+      "newstart": "Ich will neu anfangen",
+      "calling": "Was ist mein Weg?",
+      "bibleverse": "Bibelstelle verstehen",
+      "sevenwhys": "Warum tue ich das wirklich?",
+      "lifewheel": "Wo stehe ich im Leben?",
+      "thankfulness": "Dankbarkeit",
+      "burnout": "Erschöpfung",
+      "meaningcrisis": "Sinnkrise",
+      "selfdoubt": "Selbstzweifel",
+      "anger": "Wut & Ärger",
+      "financial": "Finanzielle Sorgen",
+      "illness": "Krankheit",
+      "condolence": "Trauer & Verlust",
+      "wedding": "Heirat & Partnerschaft",
+      "baptism": "Taufe & Glaubensweg",
+      "faithdoubt": "Glaubenszweifel",
+      "forgiveness": "Vergeben & Loslassen",
+      "sleepless": "Schlaflosigkeit",
+      "biblequiz": "Bibelquiz",
+      "prayerwall": "Gebetswand"
+    },
+    "showMore": "Weitere Themen entdecken",
+    "showLess": "Weniger anzeigen"
+  },
+  "trust": {
+    "qa": {
+      "title": "QA-geprüft",
+      "text": "Jede Bibelstelle wird automatisch auf Korrektheit geprüft — bei jedem Gespräch."
+    },
+    "noAds": {
+      "title": "Keine Werbung",
+      "text": "Kein Tracking, keine Datenweitergabe, keine Monetarisierung deiner Fragen."
+    },
+    "noExpertise": {
+      "title": "Kein Vorwissen nötig",
+      "text": "Du brauchst keine Kirchenmitgliedschaft und kein theologisches Vorwissen."
+    }
+  },
+  "tools": {
+    "badge": "Mehr als Antworten",
+    "title": "Zwei Werkzeuge, die tiefer gehen",
+    "subtitle": "Für Momente, in denen du mehr als eine Antwort brauchst.",
+    "lifewheel": {
+      "title": "Lebensrad-Check",
+      "desc": "Wie steht es gerade mit Arbeit, Beziehungen, Sinn und Gesundheit? Das Lebensrad hilft dir in 3 Minuten, Klarheit zu gewinnen — und zeigt, wo die Bibel direkt anknüpft.",
+      "cta": "Lebensrad starten"
+    },
+    "sevenwhys": {
+      "title": "Die 7-Warum-Methode",
+      "desc": "Warum tue ich das wirklich? Warum fühlt sich das so an? BibleBot führt dich durch 7 Fragen, die an die Wurzel kommen — mit biblischer Einordnung an der tiefsten Stelle.",
+      "cta": "Tiefer fragen"
+    }
+  },
+  "audience": {
+    "title": "Für wen ist BibleBot.Life?",
+    "subtitle": "Wähle deinen Weg",
+    "personal": {
+      "title": "Ich suche persönliche Begleitung",
+      "desc": "Fragen zum Glauben, tägliche Impulse, spirituelles Wachstum — ganz in deinem Tempo und ohne Bewertung.",
+      "f1": "Chat mit Bibelbegleitung",
+      "f2": "21-Tage-Reise",
+      "f3": "Täglicher Impuls per Push / Telegram",
+      "f4": "Persönlicher Gesprächsverlauf",
+      "cta": "Jetzt chatten — kostenlos →"
+    },
+    "church": {
+      "title": "Ich plane Gottesdienste & begleite Menschen",
+      "desc": "Für Pfarrpersonen, Seelsorger und Gemeindeteams: KI-Unterstützung für Predigtvorbereitung, Teamplanung und mehr.",
+      "f1": "Gottesdienst-Planer mit KI",
+      "f2": "Ressourcen-Bibliothek",
+      "f3": "Team-Koordination",
+      "f4": "Gemeinde-Seite & Verzeichnis",
+      "cta": "Für Gemeinden & Seelsorger →"
+    }
+  },
+  "faqExtra": {
+    "methodik": {
+      "q": "Was steckt hinter der Methodik von BibleBot?",
+      "a": ""
+    },
+    "journey": {
+      "q": "Was ist die 21-Tage-Journey?"
+    },
+    "faithPsych": {
+      "q": "Verbindet BibleBot Glaube und Psychologie?",
+      "a": "BibleBot kombiniert biblische Weisheit mit Erkenntnissen aus der evidenzbasierten Psychologie — nicht um den Glauben zu psychologisieren, sondern um ihn alltagsnah zu machen. Die Methoden (PERMA, Logotherapie, Dankbarkeits- und Vergebungsforschung) ergänzen die Bibel, ersetzen sie aber nicht."
+    }
+  },
+  "donate": {
+    "badge": "Unterstütze deinen Begleiter",
+    "title": "Hilf mit, dass dein Begleiter kostenlos bleibt",
+    "subtitle": "Dein Begleiter ist ein Herzensprojekt – ohne Werbung, ohne Abo, ohne versteckte Kosten. Damit das so bleibt, bin ich auf freiwillige Spenden angewiesen. Jeder Beitrag hilft, die laufenden Kosten für Betrieb und Infrastruktur zu decken.",
+    "bankTitle": "Spende per Banküberweisung",
+    "bankSubtitle": "Jeder Betrag zählt – herzlichen Dank! 🙏",
+    "recipient": "Empfänger",
+    "bank": "Bank",
+    "purpose": "Verwendungszweck",
+    "purposeValue": "Spende BibleBot.Life",
+    "note": "BibleBot.Life wird als privates Projekt betrieben. Spenden sind daher nicht steuerabzugsfähig.",
+    "creditCard": "Mit Kreditkarte unterstützen",
+    "twint": "Mit Twint unterstützen",
+    "secureNote": "Sichere Zahlung · Keine Abo-Falle · Jederzeit kündbar"
+  },
+  "footer": {
+    "tagline": "Dein persönlicher Begleiter — mit der Tiefe der Bibel, ohne Vorkenntnisse.",
+    "disclaimer": "BibleBot.Life ist ein digitales Hilfsmittel und ersetzt keine professionelle Seelsorge, theologische Beratung oder psychologische Therapie. Bei akuten Krisen wende dich an die Dargebotene Hand (Tel. 143) oder Pro Juventute (Tel. 147).",
+    "impressum": "Impressum",
+    "notes": "Hinweise",
+    "private": "Privates, nicht-kommerzielles Projekt",
+    "noChat": "Keine Speicherung von Chatdaten",
+    "noTax": "Spenden sind nicht steuerabzugsfähig",
+    "datenschutz": "Datenschutz",
+    "love": "Mit ❤️ für alle, die sich fragen, was Christus denkt.",
+    "forChurches": "Für Gemeinden",
+    "forCelebrants": "Für Seelsorger & Coaches"
   }
 }
