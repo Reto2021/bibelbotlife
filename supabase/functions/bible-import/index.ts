@@ -10,13 +10,70 @@ const corsHeaders = {
 const BIBLE_API = "https://bible.helloao.org/api";
 
 const TRANSLATIONS = [
-  { key: "luther1912", apiId: "deu_l12" },
-  { key: "schlachter2000", apiId: "deu_sch" },
-  { key: "elberfelder", apiId: "deu_elbbk" },
-  { key: "kjv", apiId: "eng_kjv" },
-  { key: "web", apiId: "eng_web" },
-  { key: "niv", apiId: "eng_niv11" },
-  { key: "esv", apiId: "eng_esv16" },
+  // German
+  { key: "luther1912", apiId: "deu_l12", language: "de" },
+  { key: "schlachter2000", apiId: "deu_sch", language: "de" },
+  { key: "elberfelder", apiId: "deu_elbbk", language: "de" },
+  // English
+  { key: "bsb", apiId: "eng_bsb", language: "en" },
+  { key: "web", apiId: "eng_web", language: "en" },
+  { key: "kjv", apiId: "eng_kjv", language: "en" },
+  // French
+  { key: "lsg", apiId: "fraLSG", language: "fr" },
+  // Spanish
+  { key: "rv09", apiId: "spa_rv09", language: "es" },
+  // Italian
+  { key: "riv", apiId: "ita_riv", language: "it" },
+  // Portuguese
+  { key: "arc", apiId: "por_arc", language: "pt" },
+  // Dutch
+  { key: "sv", apiId: "nld_sv", language: "nl" },
+  // Polish
+  { key: "bg", apiId: "pol_bg", language: "pl" },
+  // Czech
+  { key: "kr", apiId: "ces_kr", language: "cs" },
+  // Romanian
+  { key: "corn", apiId: "ron_corn", language: "ro" },
+  // Russian
+  { key: "syn", apiId: "rus_syn", language: "ru" },
+  // Ukrainian
+  { key: "ogi", apiId: "ukr_ogi", language: "uk" },
+  // Arabic
+  { key: "vd", apiId: "arb_vd", language: "ar" },
+  // Korean
+  { key: "krv", apiId: "kor_krv", language: "ko" },
+  // Chinese
+  { key: "cuv", apiId: "zho_cuv", language: "zh" },
+  // Danish
+  { key: "bib", apiId: "dan_bib", language: "da" },
+  // Norwegian
+  { key: "b30", apiId: "nor_b30", language: "no" },
+  // Swedish
+  { key: "svb", apiId: "swe_svb", language: "sv" },
+  // Finnish
+  { key: "pr", apiId: "fin_pr", language: "fi" },
+  // Greek
+  { key: "vam", apiId: "ell_vam", language: "el" },
+  // Hungarian
+  { key: "kar", apiId: "hun_kar", language: "hu" },
+  // Croatian
+  { key: "sar", apiId: "hrv_sar", language: "hr" },
+  // Serbian
+  { key: "srp_kar", apiId: "srp_kar", language: "sr" },
+  // Slovak
+  { key: "roh", apiId: "slk_roh", language: "sk" },
+  // Bulgarian
+  { key: "bpb", apiId: "bul_bpb", language: "bg" },
+  // Vietnamese
+  { key: "vb", apiId: "vie_vb", language: "vi" },
+  // Indonesian
+  { key: "tb", apiId: "ind_tb", language: "id" },
+  // Filipino
+  { key: "adb", apiId: "tgl_adb", language: "tl" },
+  // Swahili
+  { key: "suv", apiId: "swh_suv", language: "sw" },
+  // Afrikaans
+  { key: "a53", apiId: "afr_a53", language: "af" },
 ];
 
 interface BookInfo {
@@ -121,6 +178,7 @@ serve(async (req) => {
             verse: v.number,
             text: v.text,
             translation: trans.key,
+            language: trans.language,
           }));
 
           const { error } = await supabase

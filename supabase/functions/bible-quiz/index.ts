@@ -82,19 +82,20 @@ serve(async (req) => {
   }
 
   try {
-    const { mode = "multiple_choice", translation = "luther1912", difficulty = "medium" } = await req.json().catch(() => ({}));
+    const { mode = "multiple_choice", translation = "luther1912", difficulty = "medium", language = "de" } = await req.json().catch(() => ({}));
 
     const supabase = createClient(
       Deno.env.get("SUPABASE_URL")!,
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
     );
 
-    // Get a random verse using a random offset for variety
+    // Get a random verse using a random offset for variety, filtered by language
     const randomOffset = Math.floor(Math.random() * 30000);
     const { data: verses, error } = await supabase
       .from("bible_verses")
       .select("id, book, book_number, chapter, verse, text, translation")
       .eq("translation", translation)
+      .eq("language", language)
       .range(randomOffset, randomOffset + 99)
       .limit(100);
 
@@ -105,6 +106,7 @@ serve(async (req) => {
         .from("bible_verses")
         .select("id, book, book_number, chapter, verse, text, translation")
         .eq("translation", translation)
+        .eq("language", language)
         .limit(100);
       versePool = fallback;
     }
@@ -145,24 +147,27 @@ serve(async (req) => {
       });
     }
 
+    const langNames: Record<string, string> = { de: "Deutsch", en: "English", fr: "Français", es: "Español", it: "Italiano", pt: "Português", nl: "Nederlands", pl: "Polski", cs: "Čeština", ro: "Română", ru: "Русский", uk: "Українська", ar: "العربية", he: "עברית", ko: "한국어", zh: "中文" };
+    const quizLang = langNames[language] || language;
     const difficultyHint = difficulty === "easy"
-      ? "Stelle eine einfache, faktische Frage."
+      ? "Ask a simple, factual question."
       : difficulty === "hard"
-        ? "Stelle eine anspruchsvolle Frage, die tiefes Bibelwissen erfordert. Die falschen Antworten sollen plausibel klingen."
-        : "Stelle eine mittelschwere Frage.";
+        ? "Ask a challenging question requiring deep Bible knowledge. Wrong answers should sound plausible."
+        : "Ask a medium-difficulty question.";
 
-    const prompt = `Du bist ein Bibelquiz-Generator. Erstelle eine Multiple-Choice-Frage auf Deutsch basierend auf diesem Bibelvers:
+    const prompt = `You are a Bible quiz generator. Create a multiple-choice question in ${quizLang} based on this Bible verse:
 
 "${randomVerse.text}" (${randomVerse.book} ${randomVerse.chapter},${randomVerse.verse})
 
-Regeln:
+Rules:
 - ${difficultyHint}
-- 4 Antwortmöglichkeiten (A, B, C, D)
-- Genau eine richtige Antwort
-- Antworte AUSSCHLIESSLICH als JSON:
+- 4 answer options (A, B, C, D)
+- Exactly one correct answer
+- Respond ONLY as JSON:
 {"question":"...","options":["A","B","C","D"],"correct":0,"explanation":"..."}
-correct = Index (0-3) der richtigen Antwort.
-explanation = kurze Erklärung warum.`;
+correct = index (0-3) of the correct answer.
+explanation = brief explanation why.
+- ALL text (question, options, explanation) MUST be in ${quizLang}.`;
 
     const aiResp = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
       method: "POST",

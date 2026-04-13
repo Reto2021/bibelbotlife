@@ -120,6 +120,7 @@ export type Database = {
           created_at: string
           fts: unknown
           id: string
+          language: string
           text: string
           translation: string
           verse: number
@@ -131,6 +132,7 @@ export type Database = {
           created_at?: string
           fts?: unknown
           id?: string
+          language?: string
           text: string
           translation: string
           verse: number
@@ -142,6 +144,7 @@ export type Database = {
           created_at?: string
           fts?: unknown
           id?: string
+          language?: string
           text?: string
           translation?: string
           verse?: number
@@ -1926,24 +1929,44 @@ export type Database = {
           read_ct: number
         }[]
       }
-      search_bible_verses: {
-        Args: {
-          book_boost?: string[]
-          result_limit?: number
-          search_query: string
-          translation_filter?: string
-        }
-        Returns: {
-          book: string
-          book_number: number
-          chapter: number
-          id: string
-          rank: number
-          text: string
-          translation: string
-          verse: number
-        }[]
-      }
+      search_bible_verses:
+        | {
+            Args: {
+              book_boost?: string[]
+              result_limit?: number
+              search_query: string
+              translation_filter?: string
+            }
+            Returns: {
+              book: string
+              book_number: number
+              chapter: number
+              id: string
+              rank: number
+              text: string
+              translation: string
+              verse: number
+            }[]
+          }
+        | {
+            Args: {
+              book_boost?: string[]
+              language_filter?: string
+              result_limit?: number
+              search_query: string
+              translation_filter?: string
+            }
+            Returns: {
+              book: string
+              book_number: number
+              chapter: number
+              id: string
+              rank: number
+              text: string
+              translation: string
+              verse: number
+            }[]
+          }
       search_theology: {
         Args: {
           filter_source?: Database["public"]["Enums"]["theology_source_type"]
