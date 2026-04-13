@@ -874,7 +874,7 @@ export function ChatHero() {
         onSearch={searchConversations}
       />
 
-      <section className="relative px-4 min-h-[calc(100vh-64px)] flex flex-col" style={{ backgroundImage: "radial-gradient(circle at 60% 20%, hsl(32 65% 52% / 0.06) 0%, transparent 60%), radial-gradient(circle at 20% 80%, hsl(185 45% 35% / 0.05) 0%, transparent 55%)" }}>
+      <section id="chat" className="relative px-4 min-h-[calc(100vh-64px)] flex flex-col" style={{ backgroundImage: "radial-gradient(circle at 60% 20%, hsl(32 65% 52% / 0.06) 0%, transparent 60%), radial-gradient(circle at 20% 80%, hsl(185 45% 35% / 0.05) 0%, transparent 55%)" }}>
         {/* History toggle button */}
         {conversations.length > 0 && (
           <button

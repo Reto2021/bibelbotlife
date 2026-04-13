@@ -476,29 +476,18 @@ const Index = () => {
               <CardDescription>{t("donate.bankSubtitle")}</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {t("donate.subtitle")}
-              </p>
               <div className="space-y-3">
                 <Button
                   className="w-full"
                   size="lg"
-                  onClick={() => window.open("https://donate.stripe.com/PLACEHOLDER_STRIPE", "_blank")}
+                  onClick={() => window.open("https://t.me/meinbibelbot", "_blank")}
                 >
                   <Heart className="h-4 w-4 mr-2" />
-                  Mit Kreditkarte unterstützen
-                </Button>
-                <Button
-                  variant="outline"
-                  className="w-full"
-                  size="lg"
-                  onClick={() => window.open("https://donate.stripe.com/PLACEHOLDER_TWINT", "_blank")}
-                >
-                  Mit Twint unterstützen
+                  {t("donate.contactTitle", "Kontakt aufnehmen")}
                 </Button>
               </div>
               <p className="text-xs text-muted-foreground text-center">
-                Sichere Zahlung · Keine Abo-Falle · Jederzeit kündbar
+                {t("donate.contactHint", "Schreib uns — wir richten alles Weitere ein.")}
               </p>
             </CardContent>
           </Card>
@@ -528,7 +517,7 @@ const Index = () => {
             <AppLogo className="h-10 w-10" invertTheme />
             <span className="text-2xl font-bold">BibleBot<span className="text-muted">.Life</span></span>
           </div>
-          <p className="mb-4 text-center text-primary-foreground bg-popover-foreground">{t("footer.tagline")}</p>
+          <p className="mb-4 text-center text-background/70">{t("footer.tagline")}</p>
           <p className="text-background/50 text-xs mb-6 max-w-2xl mx-auto text-center">{t("footer.disclaimer")}</p>
           
           <div className="border-t border-background/20 pt-6 mt-6">
