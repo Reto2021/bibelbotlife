@@ -15,65 +15,71 @@ const TRANSLATIONS = [
   { key: "schlachter2000", apiId: "deu_sch", language: "de" },
   { key: "elberfelder", apiId: "deu_elbbk", language: "de" },
   // English
-  { key: "bsb", apiId: "eng_bsb", language: "en" },
+  { key: "bsb", apiId: "BSB", language: "en" },
   { key: "web", apiId: "eng_web", language: "en" },
   { key: "kjv", apiId: "eng_kjv", language: "en" },
   // French
-  { key: "lsg", apiId: "fraLSG", language: "fr" },
+  { key: "lsg", apiId: "fra_lsg", language: "fr" },
   // Spanish
-  { key: "rv09", apiId: "spa_rv09", language: "es" },
+  { key: "vbl", apiId: "spa_vbl", language: "es" },
+  { key: "rv09", apiId: "spa_r09", language: "es" },
   // Italian
   { key: "riv", apiId: "ita_riv", language: "it" },
   // Portuguese
-  { key: "arc", apiId: "por_arc", language: "pt" },
+  { key: "blj", apiId: "por_blj", language: "pt" },
   // Dutch
-  { key: "sv", apiId: "nld_sv", language: "nl" },
+  { key: "nbg", apiId: "nld_nbg", language: "nl" },
   // Polish
-  { key: "bg", apiId: "pol_bg", language: "pl" },
+  { key: "ubg", apiId: "pol_ubg", language: "pl" },
   // Czech
-  { key: "kr", apiId: "ces_kr", language: "cs" },
+  { key: "nkb", apiId: "ces_nkb", language: "cs" },
   // Romanian
-  { key: "corn", apiId: "ron_corn", language: "ro" },
+  { key: "corn", apiId: "ron_924", language: "ro" },
   // Russian
   { key: "syn", apiId: "rus_syn", language: "ru" },
   // Ukrainian
-  { key: "ogi", apiId: "ukr_ogi", language: "uk" },
+  { key: "ukr96", apiId: "ukr_1996", language: "uk" },
   // Arabic
-  { key: "vd", apiId: "arb_vd", language: "ar" },
+  { key: "vd", apiId: "arb_vdv", language: "ar" },
+  // Hebrew
+  { key: "mod", apiId: "heb_mod", language: "he" },
   // Korean
-  { key: "krv", apiId: "kor_krv", language: "ko" },
-  // Chinese
-  { key: "cuv", apiId: "zho_cuv", language: "zh" },
+  { key: "krv", apiId: "kor_old", language: "ko" },
+  // Chinese — not available on this API
   // Danish
-  { key: "bib", apiId: "dan_bib", language: "da" },
-  // Norwegian
-  { key: "b30", apiId: "nor_b30", language: "no" },
+  { key: "det", apiId: "dan_det", language: "da" },
   // Swedish
-  { key: "svb", apiId: "swe_svb", language: "sv" },
+  { key: "fol", apiId: "swe_fol", language: "sv" },
   // Finnish
-  { key: "pr", apiId: "fin_pr", language: "fi" },
+  { key: "fin", apiId: "fin_bib", language: "fi" },
   // Greek
-  { key: "vam", apiId: "ell_vam", language: "el" },
   // Hungarian
-  { key: "kar", apiId: "hun_kar", language: "hu" },
+  { key: "hun", apiId: "hun_bib", language: "hu" },
   // Croatian
-  { key: "sar", apiId: "hrv_sar", language: "hr" },
+  { key: "iva", apiId: "hrv_iva", language: "hr" },
   // Serbian
-  { key: "srp_kar", apiId: "srp_kar", language: "sr" },
+  { key: "srp", apiId: "srp_865", language: "sr" },
   // Slovak
-  { key: "roh", apiId: "slk_roh", language: "sk" },
-  // Bulgarian
-  { key: "bpb", apiId: "bul_bpb", language: "bg" },
+  { key: "slk", apiId: "slk_bib", language: "sk" },
   // Vietnamese
-  { key: "vb", apiId: "vie_vb", language: "vi" },
+  { key: "vie", apiId: "vie_1934", language: "vi" },
   // Indonesian
-  { key: "tb", apiId: "ind_tb", language: "id" },
+  { key: "ayt", apiId: "ind_ayt", language: "id" },
   // Filipino
-  { key: "adb", apiId: "tgl_adb", language: "tl" },
+  { key: "tgl", apiId: "tgl_ulb", language: "tl" },
   // Swahili
-  { key: "suv", apiId: "swh_suv", language: "sw" },
-  // Afrikaans
-  { key: "a53", apiId: "afr_a53", language: "af" },
+  { key: "swa", apiId: "swh_swa", language: "sw" },
+  // Afrikaans — not available
+  // Amharic
+  { key: "amh", apiId: "amh_amh", language: "am" },
+  // Yoruba
+  { key: "yor", apiId: "yor_bib", language: "yo" },
+  // Igbo
+  { key: "ibo", apiId: "ibo_bib", language: "ig" },
+  // Haitian Creole
+  { key: "hat", apiId: "hat_pds", language: "ht" },
+  // Norwegian
+  // Bulgarian — not available
 ];
 
 interface BookInfo {
