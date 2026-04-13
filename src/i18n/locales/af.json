@@ -267,7 +267,7 @@
   "footer": {
     "tagline": "Jou persoonlike metgesel — met die diepte van die Bybel, sonder voorkennis.",
     "disclaimer": "BibleBot.Life is 'n digitale hulpmiddel en vervang nie professionele pastorale sorg, teologiese advies of sielkundige terapie nie. In akute krisisse, kontak asseblief die Dargebotene Hand (Tel. 143) of Pro Juventute (Tel. 147).",
-    "impressum": "Impressum",
+    "impressum": "Kolofon",
     "notes": "Notas",
     "private": "Private, nie-kommersiële projek",
     "noChat": "Geen stoor van kletsdata nie",
@@ -358,7 +358,7 @@
   },
   "impressum": {
     "back": "Terug na tuisblad",
-    "title": "Impressum"
+    "title": "Kolofon"
   },
   "datenschutz": {
     "back": "Terug na tuisblad",
@@ -1046,7 +1046,8 @@
   "chatDemo": {
     "userMsg": "Ek voel alleen. Wat sê die Bybel daaroor?",
     "botMsg": "Jy is nie alleen nie – al voel dit nou so. In Psalm 23 staan geskryf: «Die Here is my herder, niks sal my ontbreek nie.» Dit beteken dat God naby jou is, selfs in die donkerste oomblikke. Wil jy hê ons moet hierdie gedeelte saam verdiep?",
-    "cta": "Begin nou jou eie gesprek →"
+    "cta": "Begin nou jou eie gesprek →",
+    "sectionLabel": "So lyk 'n gesprek"
   },
   "suggest": {
     "psalm23": "Psalm 23 – Die Here is my herder",
@@ -1065,25 +1066,25 @@
     "v0": "«Kom na My toe, almal wat vermoeid en belas is, en Ek sal julle rus gee.»",
     "r0": "Matteus 11,28",
     "v1": "«Want Ek weet watter gedagtes Ek oor julle koester, spreek die Here, gedagtes van vrede.»",
-    "r1": "Jeremia 29,11",
+    "r1": "Here, U is my toevlug.",
     "v2": "«Moenie vrees nie, want Ek is met jou; moenie bekommerd wees nie, want Ek is jou God.»",
-    "r2": "Jesaja 41,10",
+    "r2": "U woord is 'n lamp vir my voet.",
     "v3": "«Die Here is my herder, niks sal my ontbreek nie.»",
-    "r3": "Psalm 23,1",
+    "r3": "In U vind ek rus en vrede.",
     "v4": "«Werp al julle sorge op Hom, want Hy sorg vir julle.»",
     "r4": "1 Petrus 5,7",
     "v5": "«Ek is die lig van die wêreld. Wie My volg, sal nooit in die duisternis wandel nie.»",
-    "r5": "Johannes 8,12",
+    "r5": "In U genade vind ek vrede.",
     "v6": "«Wees sterk en vol moed! Moenie bang wees nie, want die Here jou God is met jou.»",
-    "r6": "Josua 1,9",
+    "r6": "U liefde dra my elke dag.",
     "v7": "«Maar die wat op die Here wag, kry nuwe krag, hulle vaar op met vleuels soos arende.»",
-    "r7": "Jesaja 40,31",
+    "r7": "U gee my krag elke dag.",
     "v8": "«Want waar twee of drie in my Naam vergader is, daar is Ek in hulle midde.»",
     "r8": "Matteus 18,20",
     "v9": "«Smaak en sien dat die Here goed is; welgeluksalig is die man wat by Hom skuil.»",
-    "r9": "Psalm 34,9",
+    "r9": "U is my lig in die duisternis.",
     "v10": "«Hy genees die wat gebroke van hart is, en verbind hulle wonde.»",
-    "r10": "Psalm 147,3",
+    "r10": "U trou hou vas, elke dag.",
     "v11": "«Die liefde is lankmoedig en vriendelik. Dit verdra alles, glo alles, hoop alles.»",
     "r11": "1 Korintiërs 13,4–7",
     "v12": "«Wees bly in die hoop, geduldig in die verdrukking, volhardend in die gebed.»",
@@ -1173,7 +1174,7 @@
     "ctaBottom": "Gereed vir beter seremonies?",
     "ctaBottomSub": "Begin gratis — geen kredietkaart nodig nie.",
     "ctaBottomBtn": "Begin nou gratis",
-    "footerImprint": "Impressum",
+    "footerImprint": "Kolofon",
     "footerPrivacy": "Privaatheidsbeleid",
     "footerChurches": "Vir Gemeentes",
     "seoTitle": "BibleBot.Life vir Predikante & Lewensafrigters — Beplan Seremonies & Sessies",

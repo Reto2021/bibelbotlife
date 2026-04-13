@@ -1046,7 +1046,8 @@
   "chatDemo": {
     "userMsg": "Mi sento solo. Cosa dice la Bibbia a riguardo?",
     "botMsg": "Non sei solo – anche se in questo momento ti senti così. Nel Salmo 23 si dice: «Il Signore è il mio pastore, non mi mancherà nulla.» Questo significa che Dio ti è vicino, anche nei momenti più bui. Vuoi che approfondiamo insieme questo passaggio?",
-    "cta": "Inizia ora la tua conversazione →"
+    "cta": "Inizia ora la tua conversazione →",
+    "sectionLabel": "Ecco come appare una conversazione"
   },
   "suggest": {
     "psalm23": "Salmo 23 – Il Signore è il mio pastore",
