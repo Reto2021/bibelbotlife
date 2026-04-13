@@ -969,7 +969,8 @@
     "imageSavedDesc": "Save the image and share it with the copied text on Instagram, WhatsApp or wherever you like!",
     "clipboardFallback": "Text copied — paste it when posting!",
     "recommendedBy": "Recommended by {{church}}",
-    "hashtagBible": "#Bible"
+    "hashtagBible": "#Bible",
+    "hashtagImpulse": "#DailyImpulse"
   },
   "chatHero": {
     "subtitle": "Ask your question – open, honest, no sign-up needed.",
