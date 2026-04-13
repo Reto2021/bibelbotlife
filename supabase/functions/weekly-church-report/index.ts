@@ -96,6 +96,10 @@ Deno.serve(async (req) => {
       }
     });
 
+    // Web chat stats (chat_hero_submit events for this church)
+    const webChatEvents = customEvts.filter((e: any) => e.event_name === "chat_hero_submit");
+    const webChatSessions = new Set(webChatEvents.map((e: any) => e.session_id));
+
     const botName = church.custom_bot_name || "BibleBot";
 
     // Send via transactional email template
@@ -122,6 +126,8 @@ Deno.serve(async (req) => {
             mobile: deviceCounts.mobile,
             tablet: deviceCounts.tablet,
             desktop: deviceCounts.desktop,
+            webChatUsers: webChatSessions.size,
+            webChatMessages: webChatEvents.length,
           },
         }),
       });
