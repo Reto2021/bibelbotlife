@@ -106,7 +106,7 @@ export function DailyImpulse() {
   const [isUnsubscribing, setIsUnsubscribing] = useState(false);
   const [showImagePreview, setShowImagePreview] = useState(false);
   const [showSmsInput, setShowSmsInput] = useState(false);
-  const [smsPhone, setSmsPhone] = useState("");
+  const [smsPhone, setSmsPhone] = useState("+41 ");
   const imagePreviewRef = useRef<HTMLDivElement>(null);
   const tts = useTTS();
 
