@@ -1,4 +1,4 @@
 {
   "error": "Invalid JSON from AI",
-  "raw": "{\"nav\":{\"startNow\":\"Empezar ahora\",\"prayerWall\":\"Muro de oración\",\"bibleQuiz\":\"Quiz bíblico\",\"forCelebrants\":\"Para celebrantes\",\"forCelebrantsMobile\":\"Para celebrantes y coaches\"},\"loader\":\"Cargando…\",\"hero\":{\"badge\":{\"noLogin\":\"No se necesita iniciar sesión\",\"optionalLogin\":\"Inicio de sesión opcional\",\"noData\":\"Sin datos\",\"noJudgment\":\"Sin juicios\"},\"title1\":\"La Biblia.\",\"title2\":\" Reimaginada.\",\"subtitle\":\"Tu compañero personal conoce la Biblia y hace las preguntas correctas. No es un humano, "
+  "raw": "{\"nav\":{\"startNow\":\"Empezar ahora\",\"prayerWall\":\"Muro de oración\",\"bibleQuiz\":\"Quiz bíblico\",\"forCelebrants\":\"Para ministros\",\"forCelebrantsMobile\":\"Para ministros y coaches\"},\"loader\":\"Cargando…\",\"hero\":{\"badge\":{\"noLogin\":\"No se requiere inicio de sesión\",\"optionalLogin\":\"Inicio de sesión opcional\",\"noData\":\"Sin datos\",\"noJudgment\":\"Sin juicio\"},\"title1\":\"La Biblia.\",\"title2\":\" Reimaginada.\",\"subtitle\":\"Tu compañero personal conoce la Biblia y hace las preguntas correctas. No es un humano, per"
 }
