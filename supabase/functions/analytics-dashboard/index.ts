@@ -70,7 +70,7 @@ Deno.serve(async (req) => {
   };
 
   // Fetch events + subscribers + telegram messages in parallel
-  const [allEvents, subscribersRes, telegramRes, churchesRes] = await Promise.all([
+  const [allEvents, subscribersRes, telegramRes, churchesRes, contactRequestsRes] = await Promise.all([
     fetchAllEvents(),
     supabase.from("daily_subscribers").select("*"),
     supabase.from("telegram_messages")
@@ -79,11 +79,15 @@ Deno.serve(async (req) => {
       .limit(10000),
     supabase.from("church_partners")
       .select("id, name, slug, is_active, plan_tier"),
+    supabase.from("church_contact_requests")
+      .select("church_id, created_at")
+      .gte("created_at", since),
   ]);
 
   const events = allEvents;
   const subscribers = subscribersRes.data || [];
   const telegramMsgs = telegramRes.data || [];
+  const contactRequests = contactRequestsRes.data || [];
   const churches = churchesRes.data || [];
 
   // Separate heartbeats from real events for counting
