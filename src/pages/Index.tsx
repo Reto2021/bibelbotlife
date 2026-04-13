@@ -32,6 +32,49 @@ const BIBLE_EDITIONS_DATA = [
   { name: "Elberfelder Bibel", year: "2006", traditionKey: "literal" },
 ];
 
+const ToolsSection = () => {
+  const { t } = useTranslation();
+  const tools = useToolDefs();
+  const { user } = useAuth();
+  const { toggleFavorite, isFavorite } = useFavoriteTools();
+
+  return (
+    <section className="py-16 px-4">
+      <div className="container mx-auto max-w-4xl">
+        <div className="text-center mb-10">
+          <div className="inline-flex items-center gap-2 text-sm font-medium text-primary bg-primary/10 px-4 py-1.5 rounded-full mb-4">
+            <Compass className="h-4 w-4" />
+            {t("tools.badge")}
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
+            {t("tools.title")}
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            {t("tools.subtitle")}
+          </p>
+          {user && (
+            <p className="text-xs text-muted-foreground mt-2">
+              <Star className="inline h-3 w-3 text-primary mr-1" />
+              {t("tools.favoriteTip")}
+            </p>
+          )}
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {tools.map((tool) => (
+            <ToolCard
+              key={tool.id}
+              tool={tool}
+              isFavorite={isFavorite(tool.id)}
+              isLoggedIn={!!user}
+              onToggleFavorite={() => toggleFavorite(tool.id)}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const Index = () => {
   const { t, i18n } = useTranslation();
 
