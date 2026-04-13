@@ -234,7 +234,10 @@
     "bank": "Bank",
     "purpose": "Reference",
     "purposeValue": "Donation BibleBot.Life",
-    "note": "BibleBot.Life is operated as a private project. Donations are therefore not tax-deductible."
+    "note": "BibleBot.Life is operated as a private project. Donations are therefore not tax-deductible.",
+    "creditCard": "Support with credit card",
+    "twint": "Support with Twint",
+    "secureNote": "Secure payment · No subscription trap · Cancel anytime"
   },
   "cta": {
     "title": "You don't have to go through this alone",
@@ -251,7 +254,8 @@
     "noTax": "Donations are not tax-deductible",
     "datenschutz": "Privacy Policy",
     "love": "With ❤️ for everyone wondering what Christ thinks.",
-    "forChurches": "For Churches"
+    "forChurches": "For Churches",
+    "forCelebrants": "For Chaplains & Coaches"
   },
   "chat": {
     "welcome": "Welcome! 🤗\n\nI'm your personal companion with the Bible, good questions, and real impulses. No pressure, no judgment.\n\nYou can ask me anything – or just share what's on your mind. 💛",
@@ -353,7 +357,8 @@
     "yo": "Yorùbá",
     "ig": "Igbo",
     "zu": "isiZulu",
-    "ht": "Kreyòl"
+    "ht": "Kreyòl",
+    "he": "Hebrew"
   },
   "tiles": {
     "sectionTitle": "What's on your heart?",
@@ -1278,33 +1283,5 @@
       "q": "Does BibleBot combine faith and psychology?",
       "a": "BibleBot combines biblical wisdom with insights from evidence-based psychology — not to psychologize faith, but to make it practical for everyday life. The methods (PERMA, logotherapy, gratitude and forgiveness research) complement the Bible, but don't replace it."
     }
-  },
-  "donate": {
-    "badge": "Support your companion",
-    "title": "Help keep your companion free",
-    "subtitle": "This is a passion project – no ads, no subscriptions, no hidden costs. To keep it that way, I rely on voluntary donations. Every contribution helps cover the ongoing costs for operations and infrastructure.",
-    "bankTitle": "Donate via bank transfer",
-    "bankSubtitle": "Every amount counts – thank you! 🙏",
-    "recipient": "Recipient",
-    "bank": "Bank",
-    "purpose": "Reference",
-    "purposeValue": "Donation BibleBot.Life",
-    "note": "BibleBot.Life is operated as a private project. Donations are therefore not tax-deductible.",
-    "creditCard": "Support with credit card",
-    "twint": "Support with Twint",
-    "secureNote": "Secure payment · No subscription trap · Cancel anytime"
-  },
-  "footer": {
-    "tagline": "Your personal companion — with the depth of the Bible, no prior knowledge needed.",
-    "disclaimer": "BibleBot.Life is a digital tool and does not replace professional pastoral care, theological counseling, or psychological therapy. In acute crises, please contact your local emergency helpline.",
-    "impressum": "Imprint",
-    "notes": "Notes",
-    "private": "Private, non-commercial project",
-    "noChat": "No storage of chat data",
-    "noTax": "Donations are not tax-deductible",
-    "datenschutz": "Privacy Policy",
-    "love": "With ❤️ for everyone wondering what Christ thinks.",
-    "forChurches": "For Churches",
-    "forCelebrants": "For Chaplains & Coaches"
   }
 }
