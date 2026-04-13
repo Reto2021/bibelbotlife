@@ -312,6 +312,14 @@ Deno.serve(async (req) => {
     }
     const cAvgDurSec = cCountedSessions > 0 ? Math.round(cTotalDur / cCountedSessions / 1000) : 0;
 
+    // UTM breakdown for this church
+    const cUtmSources: Record<string, number> = {};
+    const cUtmMediums: Record<string, number> = {};
+    ce.forEach((e: any) => {
+      if (e.utm_source) cUtmSources[e.utm_source] = (cUtmSources[e.utm_source] || 0) + 1;
+      if (e.utm_medium) cUtmMediums[e.utm_medium] = (cUtmMediums[e.utm_medium] || 0) + 1;
+    });
+
     perChurch[slug] = {
       churchName: church?.name || slug,
       planTier: church?.plan_tier || "free",
@@ -325,6 +333,14 @@ Deno.serve(async (req) => {
         .sort(([, a], [, b]) => (b as number) - (a as number))
         .slice(0, 5)
         .map(([name, count]) => ({ name, count })),
+      utmSources: Object.entries(cUtmSources)
+        .sort(([, a], [, b]) => b - a)
+        .slice(0, 10)
+        .map(([source, count]) => ({ source, count })),
+      utmMediums: Object.entries(cUtmMediums)
+        .sort(([, a], [, b]) => b - a)
+        .slice(0, 10)
+        .map(([medium, count]) => ({ medium, count })),
     };
   }
 
