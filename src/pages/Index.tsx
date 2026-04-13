@@ -341,6 +341,25 @@ const Index = () => {
                 </Button>
               </CardContent>
             </Card>
+
+            <Card className="bg-card/80 border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <CardHeader className="text-center pb-2">
+                <span className="text-5xl mb-3 block">🕯️</span>
+                <CardTitle className="text-xl text-card-foreground">{t("tools.examen.title")}</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center space-y-4">
+                <CardDescription className="text-muted-foreground leading-relaxed">
+                  {t("tools.examen.desc")}
+                </CardDescription>
+                <Button
+                  variant="outline"
+                  onClick={() => openBibleBotChat("Ich möchte das Ignatianische Examen machen. Bitte führe mich durch die 5 Schritte: 1) Stille werden und Gottes Gegenwart spüren, 2) Dankbarkeit für den Tag, 3) Rückblick auf den Tag, 4) Was hat mich berührt oder belastet?, 5) Ausblick auf morgen mit einem Gebet.", "examen")}
+                  className="w-full"
+                >
+                  {t("tools.examen.cta")}
+                </Button>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
