@@ -332,24 +332,6 @@ Deno.serve(async (req) => {
       ? contactRequests.filter((cr: any) => cr.church_id === churchId).length
       : 0;
 
-    // Weekly trend for this church (ISO week aggregation)
-    const cWeekly: Record<string, { pageviews: number; sessions: Set<string>; events: number }> = {};
-    ce.forEach((e: any) => {
-      const d = new Date(e.created_at);
-      // ISO week: Monday-based
-      const jan1 = new Date(d.getFullYear(), 0, 1);
-      const dayOfYear = Math.floor((d.getTime() - jan1.getTime()) / 86400000);
-      const weekNum = Math.ceil((dayOfYear + jan1.getDay() + 1) / 7);
-      const weekKey = `${d.getFullYear()}-W${String(weekNum).padStart(2, "0")}`;
-      if (!cWeekly[weekKey]) cWeekly[weekKey] = { pageviews: 0, sessions: new Set(), events: 0 };
-      if (e.event_type === "pageview") cWeekly[weekKey].pageviews++;
-      if (e.event_type === "event") cWeekly[weekKey].events++;
-      cWeekly[weekKey].sessions.add(e.session_id);
-    });
-    const weeklyTrend = Object.entries(cWeekly)
-      .sort(([a], [b]) => a.localeCompare(b))
-      .map(([week, d]) => ({ week, pageviews: d.pageviews, sessions: d.sessions.size, events: d.events }));
-
     perChurch[slug] = {
       churchName: church?.name || slug,
       planTier: church?.plan_tier || "free",
@@ -359,7 +341,6 @@ Deno.serve(async (req) => {
       sessions: cSessions.size,
       avgSessionDurationSec: cAvgDurSec,
       dailyPageviews: cDaily,
-      weeklyTrend,
       topEvents: Object.entries(cEventCounts)
         .sort(([, a], [, b]) => (b as number) - (a as number))
         .slice(0, 5)

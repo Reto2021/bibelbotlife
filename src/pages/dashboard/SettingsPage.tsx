@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { Save, CreditCard } from "lucide-react";
+import { Save, CreditCard, Bell } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
+import { Switch } from "@/components/ui/switch";
 import { useUserChurch } from "@/hooks/use-user-church";
 import { useAuth } from "@/hooks/use-auth";
 import { supabase } from "@/integrations/supabase/client";
@@ -35,6 +36,7 @@ export default function SettingsPage() {
   const { data: church, isLoading } = useUserChurch();
   const queryClient = useQueryClient();
   const [saving, setSaving] = useState(false);
+  const [notifyOnContact, setNotifyOnContact] = useState(true);
 
   const [form, setForm] = useState({
     name: "",
@@ -97,6 +99,7 @@ export default function SettingsPage() {
         custom_bot_name: church.custom_bot_name || "",
         contact_person: church.contact_person || "",
       });
+      setNotifyOnContact((church as any).notify_on_contact ?? true);
     }
   }, [church]);
 
@@ -137,7 +140,8 @@ export default function SettingsPage() {
           secondary_color: form.secondary_color || null,
           custom_bot_name: form.custom_bot_name || null,
           contact_person: form.contact_person || null,
-        })
+          notify_on_contact: notifyOnContact,
+        } as any)
         .eq("id", church.id);
       if (error) throw error;
 
@@ -347,6 +351,26 @@ export default function SettingsPage() {
           <h4 className="text-sm font-medium pt-2">{t("settings.payment", "Zahlung")}</h4>
           {billingField("iban", "IBAN")}
           {billingField("billing_reference", t("settings.billingRef", "Referenz / Kostenstelle"))}
+        </CardContent>
+      </Card>
+
+      {/* Notifications */}
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <Bell className="h-5 w-5" />
+            {t("settings.notifications", "Benachrichtigungen")}
+          </CardTitle>
+          <CardDescription>{t("settings.notificationsDesc", "E-Mail-Benachrichtigungen für deine Gemeinde")}</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-sm font-medium">{t("settings.notifyOnContact", "Bei neuer Kontaktanfrage benachrichtigen")}</p>
+              <p className="text-xs text-muted-foreground">{t("settings.notifyOnContactDesc", "E-Mail an deine Kontakt-Adresse bei jeder neuen Nachricht über das Kontaktformular")}</p>
+            </div>
+            <Switch checked={notifyOnContact} onCheckedChange={setNotifyOnContact} />
+          </div>
         </CardContent>
       </Card>
 

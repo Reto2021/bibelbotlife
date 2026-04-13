@@ -1,0 +1,1 @@
+ALTER TABLE public.church_partners ADD COLUMN notify_on_contact boolean NOT NULL DEFAULT true;
