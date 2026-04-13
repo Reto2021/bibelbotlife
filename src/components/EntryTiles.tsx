@@ -86,9 +86,9 @@ export function EntryTiles() {
       <div className="container mx-auto max-w-3xl">
 
         {GROUPS.map((group) => (
-          <div key={group.label} className="mb-6">
+          <div key={group.labelKey} className="mb-6">
             <p className={cn("text-xs font-semibold uppercase tracking-wider mb-3", group.accent)}>
-              {group.label}
+              {t(`entryTiles.groups.${group.labelKey}`)}
             </p>
             <div className="grid grid-cols-3 gap-3">
               {group.tiles.map((tile, i) => (
@@ -103,7 +103,7 @@ export function EntryTiles() {
                 >
                   <span className="text-2xl" role="img">{tile.emoji}</span>
                   <span className="text-xs font-medium text-foreground leading-tight">
-                    {tile.label}
+                    {t(`entryTiles.labels.${tile.label}`)}
                   </span>
                 </motion.button>
               ))}
@@ -118,7 +118,7 @@ export function EntryTiles() {
             className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors"
           >
             {showMore ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
-            {showMore ? "Weniger anzeigen" : "Weitere Themen entdecken"}
+            {showMore ? t("entryTiles.showLess") : t("entryTiles.showMore")}
           </button>
         </div>
 
@@ -135,7 +135,7 @@ export function EntryTiles() {
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-border text-sm text-foreground hover:border-primary/40 hover:bg-primary/5 transition-colors"
               >
                 <span role="img">{tile.emoji}</span>
-                {tile.label}
+                {t(`entryTiles.labels.${tile.label}`)}
               </button>
             ))}
           </motion.div>
