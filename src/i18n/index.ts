@@ -64,6 +64,7 @@ i18n
       vi: { translation: vi }, zh: { translation: zh }, sw: { translation: sw },
       am: { translation: am }, af: { translation: af }, yo: { translation: yo },
       ig: { translation: ig }, zu: { translation: zu }, ht: { translation: ht },
+      ar: { translation: ar },
     },
     fallbackLng: (code: string) => {
       if (!code || code === "de") return ["de"];
