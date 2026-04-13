@@ -486,16 +486,23 @@ function buildBibleTools(lang: string) {
 
 async function searchBibleVerses(
   query: string,
-  translation?: string
+  translation?: string,
+  lang?: string
 ): Promise<string> {
   const supabase = createClient(
     Deno.env.get("SUPABASE_URL")!,
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
   );
 
-  // Use AI to expand search terms
+  const searchLang = lang || "de";
+
+  // Use AI to expand search terms in the user's language
   const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY")!;
   let tsquery = query.split(/\s+/).filter(w => w.length > 0).join(" | ");
+
+  const langInstruction = searchLang === "de"
+    ? "Generiere deutsche Suchbegriffe"
+    : `Generate search terms in the language matching code '${searchLang}'`;
 
   try {
     const expandResp = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
@@ -509,8 +516,8 @@ async function searchBibleVerses(
         messages: [
           {
             role: "system",
-            content: `Generiere deutsche Suchbegriffe für eine Bibelsuche (PostgreSQL Full-Text-Search).
-Nur einzelne Wörter getrennt mit | (OR). Viele Synonyme. Beispiel: "Liebe | lieben | Güte | Barmherzigkeit | Nächstenliebe"
+            content: `${langInstruction} für eine Bibelsuche (PostgreSQL Full-Text-Search).
+Nur einzelne Wörter getrennt mit | (OR). Viele Synonyme.
 Antworte NUR mit dem tsquery-String, nichts anderes. Keine Anführungszeichen, keine Klammern, keine Sonderzeichen ausser |.`
           },
           { role: "user", content: query },
@@ -527,7 +534,7 @@ Antworte NUR mit dem tsquery-String, nichts anderes. Keine Anführungszeichen, k
     console.error("Search expansion error:", e);
   }
 
-  // Sanitize tsquery: remove quotes, parens, special chars; keep only words and |
+  // Sanitize tsquery
   tsquery = tsquery
     .replace(/["""''`()[\]{}<>!@#$%^&*+=~\\;:]/g, ' ')
     .replace(/\s*\|\s*/g, ' | ')
@@ -541,7 +548,6 @@ Antworte NUR mit dem tsquery-String, nichts anderes. Keine Anführungszeichen, k
   const trans = (!translation || translation === "all") ? null : translation;
 
   let results: any[] | null = null;
-  let searchError: any = null;
 
   // Try the expanded query first, fall back to simple query on syntax error
   const { data, error } = await supabase.rpc("search_bible_verses", {
@@ -549,17 +555,18 @@ Antworte NUR mit dem tsquery-String, nichts anderes. Keine Anführungszeichen, k
     translation_filter: trans,
     book_boost: null,
     result_limit: 8,
+    language_filter: searchLang,
   });
 
   if (error) {
     console.error("Bible search RPC error (expanded):", error.message, "tsquery:", tsquery);
-    // Fallback: use the original simple query
     const fallbackQuery = query.split(/\s+/).filter(w => w.length > 0).join(" | ");
     const { data: fallbackData, error: fallbackError } = await supabase.rpc("search_bible_verses", {
       search_query: fallbackQuery,
       translation_filter: trans,
       book_boost: null,
       result_limit: 8,
+      language_filter: searchLang,
     });
     if (fallbackError) {
       console.error("Bible search RPC fallback error:", fallbackError.message);
