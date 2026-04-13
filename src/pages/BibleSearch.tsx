@@ -35,7 +35,7 @@ const TRANSLATION_LABELS: Record<string, string> = {
 };
 
 export default function BibleSearch() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [query, setQuery] = useState("");
   const [translation, setTranslation] = useState("all");
   const [results, setResults] = useState<SearchResponse | null>(null);
@@ -54,7 +54,7 @@ export default function BibleSearch() {
           "Content-Type": "application/json",
           Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
         },
-        body: JSON.stringify({ query: query.trim(), translation, limit: 30 }),
+        body: JSON.stringify({ query: query.trim(), translation, limit: 30, language: i18n.language?.split("-")[0] || "de" }),
       });
 
       if (!resp.ok) {
@@ -69,7 +69,7 @@ export default function BibleSearch() {
     } finally {
       setLoading(false);
     }
-  }, [query, translation]);
+  }, [query, translation, i18n.language]);
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") doSearch();
