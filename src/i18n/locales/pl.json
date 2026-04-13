@@ -30,7 +30,10 @@
     "alreadySubscribed": "Otrzymujesz codzienną inspirację",
     "subscribeCta": "Czy chcesz otrzymywać tę inspirację codziennie?",
     "playAudio": "Słuchaj",
-    "stopAudio": "Zatrzymaj"
+    "stopAudio": "Zatrzymaj",
+    "collapseLabel": "Impuls dnia",
+    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
+    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
   },
   "features": {
     "sectionTitle": "Co oferuje ci twój towarzysz",
@@ -141,7 +144,7 @@
     "smsDesc": "SMS na telefon",
     "phoneLabel": "Numer telefonu",
     "phonePlaceholder": "+48 123 456 789",
-    "phoneHint": "Z numerem kierunkowym kraju, np. +48 dla Polski.",
+    "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "Kliknij «Zapisz się» – zostaniesz przekierowany do Telegrama. Uruchom bota i napisz <strong>/daily</strong>, aby aktywować codzienny impuls.",
     "pushHint": "Po kliknięciu «Zapisz się» przeglądarka zapyta o pozwolenie na powiadomienia. Zezwól, aby otrzymywać impuls.",
     "submit": "Zapisz się",
@@ -166,7 +169,9 @@
     "switchChannel": "Zmień kanał:",
     "unsubscribe": "Anuluj subskrypcję",
     "unsubscribedTitle": "Anulowano subskrypcję",
-    "unsubscribedDesc": "Nie będziesz już otrzymywać codziennych inspiracji."
+    "unsubscribedDesc": "Nie będziesz już otrzymywać codziennych inspiracji.",
+    "smsSwissOnly": "Swiss numbers only",
+    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
   },
   "faq": {
     "badge": "FAQ",
@@ -964,7 +969,8 @@
     "imageSavedDesc": "Zapisz obraz i udostępnij go!",
     "clipboardFallback": "Tekst skopiowany — wklej go przy publikacji!",
     "recommendedBy": "Polecane przez {{church}}",
-    "hashtagBible": "#Biblia"
+    "hashtagBible": "#Biblia",
+    "hashtagImpulse": "#ImpulsDnia"
   },
   "eulogy": {
     "pageTitle": "Mowa pogrzebowa – stwórz życiorys | twój towarzysz",

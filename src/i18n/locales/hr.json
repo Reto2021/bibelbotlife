@@ -30,7 +30,10 @@
     "alreadySubscribed": "Već primate dnevnu inspiraciju",
     "subscribeCta": "Želite li primati ovu inspiraciju svakodnevno?",
     "playAudio": "Slušaj",
-    "stopAudio": "Zaustavi"
+    "stopAudio": "Zaustavi",
+    "collapseLabel": "Impuls dana",
+    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
+    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
   },
   "features": {
     "sectionTitle": "Što ti tvoj pratitelj nudi",
@@ -141,7 +144,7 @@
     "smsDesc": "SMS na vaš mobitel",
     "phoneLabel": "Broj mobitela",
     "phonePlaceholder": "+385 91 123 4567",
-    "phoneHint": "S pozivnim brojem države, npr. +385 za Hrvatsku.",
+    "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "Kliknite na «Prijavi se» – bit ćete preusmjereni na Telegram. Tamo pokrenite bota i napišite <strong>/daily</strong> kako biste aktivirali dnevni poticaj.",
     "pushHint": "Nakon klika na «Prijavi se», vaš preglednik će zatražiti dopuštenje za obavijesti. Molimo dopustite ih kako biste primili poticaj.",
     "submit": "Prijavi se",
@@ -166,7 +169,9 @@
     "switchChannel": "Promijeni kanal:",
     "unsubscribe": "Odjavi se",
     "unsubscribedTitle": "Odjavljeni ste",
-    "unsubscribedDesc": "Više nećete primati dnevnu inspiraciju."
+    "unsubscribedDesc": "Više nećete primati dnevnu inspiraciju.",
+    "smsSwissOnly": "Swiss numbers only",
+    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
   },
   "faq": {
     "badge": "Česta pitanja",
@@ -352,7 +357,8 @@
     "imageSavedDesc": "Spremite sliku i podijelite je s kopiranim tekstom na Instagramu, WhatsAppu ili gdje god želite!",
     "clipboardFallback": "Tekst kopiran — zalijepite ga pri objavi!",
     "recommendedBy": "Preporučuje {{church}}",
-    "hashtagBible": "#Biblija"
+    "hashtagBible": "#Biblija",
+    "hashtagImpulse": "#DailyImpulse"
   },
   "darkMode": {
     "light": "Svijetli način rada",

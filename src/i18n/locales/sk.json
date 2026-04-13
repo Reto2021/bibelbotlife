@@ -30,7 +30,10 @@
     "alreadySubscribed": "Dostávate dennú inšpiráciu",
     "subscribeCta": "Dostávať túto inšpiráciu denne?",
     "playAudio": "Počúvať",
-    "stopAudio": "Zastaviť"
+    "stopAudio": "Zastaviť",
+    "collapseLabel": "Impulz dňa",
+    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
+    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
   },
   "features": {
     "sectionTitle": "Čo ti tvoj sprievodca ponúka",
@@ -141,7 +144,7 @@
     "smsDesc": "SMS na váš mobil",
     "phoneLabel": "Telefónne číslo",
     "phonePlaceholder": "+421 9xx xxx xxx",
-    "phoneHint": "S predvoľbou krajiny, napr. +421 pre Slovensko.",
+    "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "Kliknite na „Prihlásiť sa“ – budete presmerovaní na Telegram. Tam spustite bota a napíšte <strong>/daily</strong>, aby ste aktivovali denný impulz.",
     "pushHint": "Po kliknutí na „Prihlásiť sa“ vás prehliadač požiada o povolenie na upozornenia. Prosím, povoľte ich, aby ste dostávali impulz.",
     "submit": "Prihlásiť sa",
@@ -166,7 +169,9 @@
     "switchChannel": "Zmeniť kanál:",
     "unsubscribe": "Zrušiť odber",
     "unsubscribedTitle": "Odhlásené",
-    "unsubscribedDesc": "Už nebudete dostávať dennú inšpiráciu."
+    "unsubscribedDesc": "Už nebudete dostávať dennú inšpiráciu.",
+    "smsSwissOnly": "Swiss numbers only",
+    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
   },
   "faq": {
     "badge": "Často kladené otázky",
@@ -352,7 +357,8 @@
     "imageSavedDesc": "Uložte obrázok a zdieľajte ho so skopírovaným textom na Instagrame, WhatsApp alebo kdekoľvek chcete!",
     "clipboardFallback": "Text skopírovaný — vložte ho pri zverejnení!",
     "recommendedBy": "Odporúča {{church}}",
-    "hashtagBible": "#Biblia"
+    "hashtagBible": "#Biblia",
+    "hashtagImpulse": "#DailyImpulse"
   },
   "darkMode": {
     "light": "Svetlý režim",

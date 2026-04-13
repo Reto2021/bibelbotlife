@@ -30,7 +30,10 @@
     "subscribeCta": "Ị chọrọ ịnata mkpali a kwa ụbọchị?",
     "alreadySubscribed": "Ị na-anata mkpali kwa ụbọchị",
     "playAudio": "Gụọ n'olu dara ụda",
-    "stopAudio": "Kwụsị"
+    "stopAudio": "Kwụsị",
+    "collapseLabel": "Inyenye ụbọchị",
+    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
+    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
   },
   "features": {
     "sectionTitle": "Otu a ka onye enyi gị si akwado gị",
@@ -141,7 +144,7 @@
     "smsDesc": "SMS na ekwentị gị",
     "phoneLabel": "Nọmba ekwentị mkpanaka",
     "phonePlaceholder": "+41 79 123 45 67",
-    "phoneHint": "Na koodu obodo, dịka ọmụmaatụ +41 maka Switzerland.",
+    "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "Pịa «Debanye aha» – a ga-ebugharị gị na Telegram. Bido onye enyi gị ebe ahụ ma dee <strong>/daily</strong> iji mee ka mkpali kwa ụbọchị rụọ ọrụ.",
     "pushHint": "Mgbe ịpịrị «Debanye aha», ihe nchọgharị gị ga-ajụ maka ikike. Biko kwe ka ọkwa ka ị nweta mkpali ahụ.",
     "subscribeButton": "Debanye aha maka Inspo",
@@ -166,7 +169,9 @@
     "switchChannel": "Gbanwee ọwa:",
     "unsubscribe": "Kwụsị ndenye aha",
     "unsubscribedTitle": "Akagbuola ndenye aha",
-    "unsubscribedDesc": "Ị naghịzi enweta mkpali kwa ụbọchị."
+    "unsubscribedDesc": "Ị naghịzi enweta mkpali kwa ụbọchị.",
+    "smsSwissOnly": "Swiss numbers only",
+    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
   },
   "faq": {
     "badge": "Ajụjụ Ndị A Na-ajụkarị",
@@ -357,7 +362,8 @@
     "imageSavedDesc": "Chekwaa onyonyo ahụ ma kekọrịta ya na ederede e detuoro na Instagram, WhatsApp ma ọ bụ ebe ọ bụla ị chọrọ!",
     "clipboardFallback": "E detuoro ederede — tinye ya mgbe ị na-eziga!",
     "recommendedBy": "Nke {{church}} tụrụ aro",
-    "hashtagBible": "#Baịbụl"
+    "hashtagBible": "#Baịbụl",
+    "hashtagImpulse": "#DailyImpulse"
   },
   "darkMode": {
     "light": "Ụdị ọkụ",

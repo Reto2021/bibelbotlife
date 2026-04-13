@@ -30,7 +30,10 @@
     "alreadySubscribed": "Du tar emot den dagliga inspirationen",
     "subscribeCta": "Vill du få denna inspiration dagligen?",
     "playAudio": "Lyssna",
-    "stopAudio": "Stoppa"
+    "stopAudio": "Stoppa",
+    "collapseLabel": "Dagens impuls",
+    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
+    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
   },
   "features": {
     "sectionTitle": "Vad din följeslagare erbjuder dig",
@@ -141,7 +144,7 @@
     "smsDesc": "SMS till din mobil",
     "phoneLabel": "Mobilnummer",
     "phonePlaceholder": "+46 70 123 45 67",
-    "phoneHint": "Med landskod, t.ex. +46 för Sverige.",
+    "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "Klicka på «Anmäl dig» – du kommer att omdirigeras till Telegram. Starta boten där och skriv <strong>/daily</strong> för att aktivera den dagliga impulsen.",
     "pushHint": "Efter att ha klickat på «Anmäl dig» kommer din webbläsare att fråga om behörighet för aviseringar. Vänligen tillåt dem för att få impulsen.",
     "submit": "Anmäl dig",
@@ -166,7 +169,9 @@
     "switchChannel": "Byt kanal:",
     "unsubscribe": "Avsluta prenumeration",
     "unsubscribedTitle": "Avregistrerad",
-    "unsubscribedDesc": "Du kommer inte längre att få daglig inspiration."
+    "unsubscribedDesc": "Du kommer inte längre att få daglig inspiration.",
+    "smsSwissOnly": "Swiss numbers only",
+    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
   },
   "faq": {
     "badge": "Vanliga frågor",
@@ -352,7 +357,8 @@
     "imageSavedDesc": "Spara bilden och dela den med den kopierade texten på Instagram, WhatsApp eller var du vill!",
     "clipboardFallback": "Text kopierad — klistra in den när du postar!",
     "recommendedBy": "Rekommenderad av {{church}}",
-    "hashtagBible": "#Bibeln"
+    "hashtagBible": "#Bibeln",
+    "hashtagImpulse": "#DailyImpulse"
   },
   "darkMode": {
     "light": "Ljust läge",

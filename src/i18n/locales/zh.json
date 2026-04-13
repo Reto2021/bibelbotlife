@@ -31,7 +31,10 @@
     "alreadySubscribed": "您已收到每日灵感",
     "subscribeCta": "想每天收到这份灵感吗？",
     "playAudio": "收听",
-    "stopAudio": "停止"
+    "stopAudio": "停止",
+    "collapseLabel": "每日灵感",
+    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
+    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
   },
   "features": {
     "sectionTitle": "你的同伴为你提供什么",
@@ -142,7 +145,7 @@
     "smsDesc": "手机短信",
     "phoneLabel": "手机号码",
     "phonePlaceholder": "+41 79 123 45 67",
-    "phoneHint": "包含国家代码，例如瑞士为 +41。",
+    "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "点击“订阅”——您将被重定向到Telegram。在那里启动机器人并输入 <strong>/daily</strong>，以激活每日灵感。",
     "pushHint": "点击“订阅”后，您的浏览器会请求通知权限。请允许其获取，以便接收灵感。",
     "submit": "订阅",
@@ -167,7 +170,9 @@
     "switchChannel": "切换频道：",
     "unsubscribe": "取消订阅",
     "unsubscribedTitle": "已取消订阅",
-    "unsubscribedDesc": "你将不再收到每日灵感。"
+    "unsubscribedDesc": "你将不再收到每日灵感。",
+    "smsSwissOnly": "Swiss numbers only",
+    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
   },
   "faq": {
     "badge": "常见问题",
@@ -353,7 +358,8 @@
     "imageSavedDesc": "保存图片，并将复制的文本分享到Instagram、WhatsApp或任何您想分享的地方！",
     "clipboardFallback": "文本已复制 — 发布时粘贴！",
     "recommendedBy": "由{{church}}推荐",
-    "hashtagBible": "#圣经"
+    "hashtagBible": "#圣经",
+    "hashtagImpulse": "#每日灵感"
   },
   "darkMode": {
     "light": "浅色模式",

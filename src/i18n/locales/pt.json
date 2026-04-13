@@ -30,7 +30,10 @@
     "alreadySubscribed": "Você está recebendo a inspiração diária",
     "subscribeCta": "Deseja receber esta inspiração diariamente?",
     "playAudio": "Ouvir",
-    "stopAudio": "Parar"
+    "stopAudio": "Parar",
+    "collapseLabel": "Impulso do dia",
+    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
+    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
   },
   "features": {
     "sectionTitle": "O que o teu companheiro te oferece",
@@ -141,7 +144,7 @@
     "smsDesc": "SMS para o teu telemóvel",
     "phoneLabel": "Número de telemóvel",
     "phonePlaceholder": "+351 912 345 678",
-    "phoneHint": "Com indicativo do país, ex. +351 para Portugal.",
+    "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "Clica em «Subscrever» – serás redirecionado para o Telegram. Inicia o bot e escreve <strong>/daily</strong> para ativar o impulso diário.",
     "pushHint": "Após clicar em «Subscrever», o navegador pedirá permissão para notificações. Permite-as para receber o impulso.",
     "submit": "Subscrever",
@@ -166,7 +169,9 @@
     "switchChannel": "Mudar canal:",
     "unsubscribe": "Cancelar assinatura",
     "unsubscribedTitle": "Assinatura cancelada",
-    "unsubscribedDesc": "Você não receberá mais inspiração diária."
+    "unsubscribedDesc": "Você não receberá mais inspiração diária.",
+    "smsSwissOnly": "Apenas números suíços",
+    "smsSwissOnlyDesc": "O SMS está disponível apenas para números suíços (+41)."
   },
   "faq": {
     "badge": "FAQ",
@@ -964,7 +969,8 @@
     "imageSavedDesc": "Guarda a imagem e partilha-a!",
     "clipboardFallback": "Texto copiado — cole ao publicar!",
     "recommendedBy": "Recomendado por {{church}}",
-    "hashtagBible": "#Bíblia"
+    "hashtagBible": "#Bíblia",
+    "hashtagImpulse": "#ImpulsoDoDia"
   },
   "eulogy": {
     "pageTitle": "Eulogia – Criar biografia | o teu companheiro",

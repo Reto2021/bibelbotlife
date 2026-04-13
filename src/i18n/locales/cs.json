@@ -30,7 +30,10 @@
     "alreadySubscribed": "Dostáváte denní inspiraci",
     "subscribeCta": "Chcete tuto inspiraci dostávat denně?",
     "playAudio": "Poslechnout",
-    "stopAudio": "Zastavit"
+    "stopAudio": "Zastavit",
+    "collapseLabel": "Impuls dne",
+    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
+    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
   },
   "features": {
     "sectionTitle": "Co ti tvůj průvodce nabízí",
@@ -141,7 +144,7 @@
     "smsDesc": "SMS na telefon",
     "phoneLabel": "Telefonní číslo",
     "phonePlaceholder": "+420 123 456 789",
-    "phoneHint": "S mezinárodní předvolbou, např. +420 pro Česko.",
+    "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "Klikni na «Přihlásit se» – budeš přesměrován na Telegram. Spusť bota a napiš <strong>/daily</strong> pro aktivaci denního impulzu.",
     "pushHint": "Po kliknutí na «Přihlásit se» prohlížeč požádá o povolení oznámení. Povol je pro příjem impulzu.",
     "submit": "Přihlásit se",
@@ -166,7 +169,9 @@
     "switchChannel": "Změnit kanál:",
     "unsubscribe": "Odhlásit se",
     "unsubscribedTitle": "Odhlášeno",
-    "unsubscribedDesc": "Již nebudete dostávat denní inspiraci."
+    "unsubscribedDesc": "Již nebudete dostávat denní inspiraci.",
+    "smsSwissOnly": "Swiss numbers only",
+    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
   },
   "faq": {
     "badge": "FAQ",
@@ -964,7 +969,8 @@
     "imageSavedDesc": "Uložte obrázek a sdílejte ho!",
     "clipboardFallback": "Text zkopírován — vložte ho při zveřejnění!",
     "recommendedBy": "Doporučeno od {{church}}",
-    "hashtagBible": "#Bible"
+    "hashtagBible": "#Bible",
+    "hashtagImpulse": "#DailyImpulse"
   },
   "eulogy": {
     "pageTitle": "Rozloučení – vytvořit životopis | tvůj společník",

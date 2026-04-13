@@ -30,7 +30,10 @@
     "alreadySubscribed": "Saat päivittäisen inspiraation",
     "subscribeCta": "Haluatko saada tämän inspiraation päivittäin?",
     "playAudio": "Kuuntele",
-    "stopAudio": "Pysäytä"
+    "stopAudio": "Pysäytä",
+    "collapseLabel": "Päivän impulssi",
+    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
+    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
   },
   "features": {
     "sectionTitle": "Mitä kumppanisi tarjoaa sinulle",
@@ -141,7 +144,7 @@
     "smsDesc": "SMS puhelimeesi",
     "phoneLabel": "Puhelinnumero",
     "phonePlaceholder": "+41 79 123 45 67",
-    "phoneHint": "Maakoodilla, esim. +41 Sveitsille.",
+    "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "Napsauta «Tilaa» – sinut ohjataan Telegramiin. Käynnistä botti siellä ja kirjoita <strong>/daily</strong> aktivoidaksesi päivittäisen impulssin.",
     "pushHint": "Napsautettuasi «Tilaa» selaimesi pyytää lupaa ilmoituksiin. Salli se saadaksesi impulssin.",
     "submit": "Tilaa",
@@ -166,7 +169,9 @@
     "switchChannel": "Vaihda kanavaa:",
     "unsubscribe": "Peruuta tilaus",
     "unsubscribedTitle": "Tilaus peruutettu",
-    "unsubscribedDesc": "Et enää saa päivittäistä inspiraatiota."
+    "unsubscribedDesc": "Et enää saa päivittäistä inspiraatiota.",
+    "smsSwissOnly": "Swiss numbers only",
+    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
   },
   "faq": {
     "badge": "Usein kysytyt kysymykset",
@@ -352,7 +357,8 @@
     "imageSavedDesc": "Tallenna kuva ja jaa se kopioidun tekstin kanssa Instagramissa, WhatsAppissa tai missä haluat!",
     "clipboardFallback": "Teksti kopioitu — liitä se julkaistaessa!",
     "recommendedBy": "Suosittelee {{church}}",
-    "hashtagBible": "#Raamattu"
+    "hashtagBible": "#Raamattu",
+    "hashtagImpulse": "#DailyImpulse"
   },
   "darkMode": {
     "light": "Vaalea tila",

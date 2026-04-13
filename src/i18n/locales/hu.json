@@ -30,7 +30,10 @@
     "alreadySubscribed": "Már kapod a napi inspirációt",
     "subscribeCta": "Szeretnéd megkapni ezt az inspirációt naponta?",
     "playAudio": "Hallgat",
-    "stopAudio": "Leállít"
+    "stopAudio": "Leállít",
+    "collapseLabel": "Napi impulzus",
+    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
+    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
   },
   "features": {
     "sectionTitle": "Amit a társad kínál neked",
@@ -141,7 +144,7 @@
     "smsDesc": "SMS a telefonjára",
     "phoneLabel": "Telefonszám",
     "phonePlaceholder": "+36 20 123 4567",
-    "phoneHint": "Országkóddal, pl. +36 Magyarországra.",
+    "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "Kattintson a „Feliratkozás” gombra – átirányítjuk a Telegramra. Indítsa el ott a botot, és írja be a <strong>/daily</strong> parancsot a napi impulzus aktiválásához.",
     "pushHint": "A „Feliratkozás” gombra kattintás után a böngészője engedélyt kér az értesítésekhez. Kérjük, engedélyezze azokat az impulzus fogadásához.",
     "submit": "Feliratkozás",
@@ -166,7 +169,9 @@
     "switchChannel": "Csatorna váltása:",
     "unsubscribe": "Leiratkozás",
     "unsubscribedTitle": "Leiratkozva",
-    "unsubscribedDesc": "Nem fogsz több napi inspirációt kapni."
+    "unsubscribedDesc": "Nem fogsz több napi inspirációt kapni.",
+    "smsSwissOnly": "Swiss numbers only",
+    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
   },
   "faq": {
     "badge": "Gyakran Ismételt Kérdések",
@@ -352,7 +357,8 @@
     "imageSavedDesc": "Mentse el a képet, és ossza meg a másolt szöveggel Instagramon, WhatsAppon vagy ahol szeretné!",
     "clipboardFallback": "Szöveg másolva — illeszd be posztoláskor!",
     "recommendedBy": "Ajánlja: {{church}}",
-    "hashtagBible": "#Biblia"
+    "hashtagBible": "#Biblia",
+    "hashtagImpulse": "#DailyImpulse"
   },
   "darkMode": {
     "light": "Világos mód",

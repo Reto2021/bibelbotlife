@@ -30,7 +30,10 @@
     "alreadySubscribed": "Ou resevwa enspirasyon chak jou",
     "subscribeCta": "Vle resevwa enspirasyon sa a chak jou?",
     "playAudio": "Koute",
-    "stopAudio": "Sispann"
+    "stopAudio": "Sispann",
+    "collapseLabel": "Enpilsyon jou a",
+    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
+    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
   },
   "features": {
     "sectionTitle": "Kisa konpayon ou ofri ou",
@@ -141,7 +144,7 @@
     "smsDesc": "SMS sou telefòn ou",
     "phoneLabel": "Nimewo telefòn",
     "phonePlaceholder": "+41 79 123 45 67",
-    "phoneHint": "Avèk kòd peyi, pa egzanp +41 pou Swis.",
+    "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "Klike sou «Enskri» – w ap redireksyon sou Telegram. Kòmanse bot la la epi ekri <strong>/daily</strong> pou aktive enspirasyon chak jou a.",
     "pushHint": "Apre w fin klike sou «Enskri», navigatè w ap mande pèmisyon pou notifikasyon. Tanpri pèmèt li pou resevwa enspirasyon an.",
     "submit": "Enskri",
@@ -166,7 +169,9 @@
     "switchChannel": "Chanje chanèl:",
     "unsubscribe": "Dezabòne",
     "unsubscribedTitle": "Dezabòne",
-    "unsubscribedDesc": "Ou p'ap resevwa plis enspirasyon chak jou."
+    "unsubscribedDesc": "Ou p'ap resevwa plis enspirasyon chak jou.",
+    "smsSwissOnly": "Swiss numbers only",
+    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
   },
   "faq": {
     "badge": "Kesyon Souvan Poze",
@@ -352,7 +357,8 @@
     "imageSavedDesc": "Sove imaj la epi pataje li ak tèks kopye a sou Instagram, WhatsApp oswa kote ou vle!",
     "clipboardFallback": "Tèks kopye — kole l lè w ap poste!",
     "recommendedBy": "Rekòmande pa {{church}}",
-    "hashtagBible": "#Bib"
+    "hashtagBible": "#Bib",
+    "hashtagImpulse": "#DailyImpulse"
   },
   "darkMode": {
     "light": "Mòd limyè",

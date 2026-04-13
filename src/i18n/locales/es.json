@@ -30,7 +30,10 @@
     "alreadySubscribed": "Ya recibes la inspiración diaria",
     "subscribeCta": "¿Quieres recibir esta inspiración diariamente?",
     "playAudio": "Escuchar",
-    "stopAudio": "Detener"
+    "stopAudio": "Detener",
+    "collapseLabel": "Impulso del día",
+    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
+    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
   },
   "features": {
     "sectionTitle": "Lo que tu compañero te ofrece",
@@ -141,7 +144,7 @@
     "smsDesc": "SMS a tu teléfono",
     "phoneLabel": "Número de teléfono",
     "phonePlaceholder": "+34 612 345 678",
-    "phoneHint": "Con código de país, p.ej. +34 para España.",
+    "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "Haz clic en «Suscribirse» – serás redirigido a Telegram. Inicia el bot y escribe <strong>/daily</strong> para activar el impulso diario.",
     "pushHint": "Después de hacer clic en «Suscribirse», tu navegador pedirá permiso para notificaciones. Por favor, permítelo para recibir el impulso.",
     "submit": "Suscribirse",
@@ -166,7 +169,9 @@
     "switchChannel": "Cambiar canal:",
     "unsubscribe": "Cancelar suscripción",
     "unsubscribedTitle": "Suscripción cancelada",
-    "unsubscribedDesc": "Ya no recibirás inspiración diaria."
+    "unsubscribedDesc": "Ya no recibirás inspiración diaria.",
+    "smsSwissOnly": "Solo números suizos",
+    "smsSwissOnlyDesc": "Los SMS solo están disponibles para números suizos (+41)."
   },
   "faq": {
     "badge": "Preguntas frecuentes",
@@ -964,7 +969,8 @@
     "imageSavedDesc": "¡Guarda la imagen y compártela!",
     "clipboardFallback": "Texto copiado — ¡pégalo al publicar!",
     "recommendedBy": "Recomendado por {{church}}",
-    "hashtagBible": "#Biblia"
+    "hashtagBible": "#Biblia",
+    "hashtagImpulse": "#ImpulsoDelDía"
   },
   "eulogy": {
     "pageTitle": "Elogio – Crear biografía | tu compañero",

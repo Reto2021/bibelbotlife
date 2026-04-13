@@ -30,7 +30,10 @@
     "alreadySubscribed": "Ви отримуєте щоденну інспірацію",
     "subscribeCta": "Отримувати цю інспірацію щодня?",
     "playAudio": "Слухати",
-    "stopAudio": "Зупинити"
+    "stopAudio": "Зупинити",
+    "collapseLabel": "Імпульс дня",
+    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
+    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
   },
   "features": {
     "sectionTitle": "Що пропонує тобі твій супутник",
@@ -141,7 +144,7 @@
     "smsDesc": "SMS на ваш телефон",
     "phoneLabel": "Номер телефону",
     "phonePlaceholder": "+380 50 123 45 67",
-    "phoneHint": "З кодом країни, наприклад, +380 для України.",
+    "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "Натисніть «Підписатися» – вас буде перенаправлено до Telegram. Запустіть там бота та напишіть <strong>/daily</strong>, щоб активувати щоденний імпульс.",
     "pushHint": "Після натискання «Підписатися» ваш браузер запитає дозвіл на сповіщення. Будь ласка, дозвольте їх, щоб отримувати імпульс.",
     "submit": "Підписатися",
@@ -166,7 +169,9 @@
     "switchChannel": "Змінити канал:",
     "unsubscribe": "Відписатися",
     "unsubscribedTitle": "Відписано",
-    "unsubscribedDesc": "Ви більше не отримуватимете щоденне натхнення."
+    "unsubscribedDesc": "Ви більше не отримуватимете щоденне натхнення.",
+    "smsSwissOnly": "Swiss numbers only",
+    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
   },
   "faq": {
     "badge": "Часті запитання",
@@ -352,7 +357,8 @@
     "imageSavedDesc": "Збережіть зображення та поділіться ним зі скопійованим текстом в Instagram, WhatsApp або де завгодно!",
     "clipboardFallback": "Текст скопійовано — вставте при публікації!",
     "recommendedBy": "Рекомендовано {{church}}",
-    "hashtagBible": "#Біблія"
+    "hashtagBible": "#Біблія",
+    "hashtagImpulse": "#DailyImpulse"
   },
   "darkMode": {
     "light": "Світлий режим",

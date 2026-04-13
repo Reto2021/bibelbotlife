@@ -30,7 +30,10 @@
     "alreadySubscribed": "Du modtager den daglige inspiration",
     "subscribeCta": "Modtag denne inspiration dagligt?",
     "playAudio": "Lyt",
-    "stopAudio": "Stop"
+    "stopAudio": "Stop",
+    "collapseLabel": "Dagens impuls",
+    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
+    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
   },
   "features": {
     "sectionTitle": "Hvad din ledsager tilbyder dig",
@@ -141,7 +144,7 @@
     "smsDesc": "SMS til din telefon",
     "phoneLabel": "Telefonnummer",
     "phonePlaceholder": "+45 12 34 56 78",
-    "phoneHint": "Med landekode, f.eks. +45 for Danmark.",
+    "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "Klik på «Tilmeld» – du bliver videresendt til Telegram. Start din ledsager og skriv <strong>/daily</strong> for at aktivere den daglige impuls.",
     "pushHint": "Efter klik på «Tilmeld» beder din browser om tilladelse til notifikationer. Tillad venligst for at modtage impulsen.",
     "submit": "Tilmeld",
@@ -166,7 +169,9 @@
     "switchChannel": "Skift kanal:",
     "unsubscribe": "Afmeld abonnement",
     "unsubscribedTitle": "Afmeldt",
-    "unsubscribedDesc": "Du modtager ikke længere daglig inspiration."
+    "unsubscribedDesc": "Du modtager ikke længere daglig inspiration.",
+    "smsSwissOnly": "Swiss numbers only",
+    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
   },
   "faq": {
     "badge": "FAQ",
@@ -352,7 +357,8 @@
     "imageSavedDesc": "Gem billedet og del det med den kopierede tekst på Instagram, WhatsApp eller hvor du vil!",
     "clipboardFallback": "Tekst kopieret — indsæt den når du poster!",
     "recommendedBy": "Anbefalet af {{church}}",
-    "hashtagBible": "#Bibelen"
+    "hashtagBible": "#Bibelen",
+    "hashtagImpulse": "#DailyImpulse"
   },
   "darkMode": {
     "light": "Lys tilstand",

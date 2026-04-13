@@ -30,7 +30,10 @@
     "alreadySubscribed": "ዕለታዊ መነሳሳትን ይቀበላሉ",
     "subscribeCta": "ይህን መነሳሳት በየቀኑ መቀበል ይፈልጋሉ?",
     "playAudio": "አዳምጥ",
-    "stopAudio": "አቁም"
+    "stopAudio": "አቁም",
+    "collapseLabel": "የዕለቱ ማበረታቻ",
+    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
+    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
   },
   "features": {
     "sectionTitle": "ባልደረባህ ምን ያቀርብልሃል",
@@ -141,7 +144,7 @@
     "smsDesc": "ወደ ስልክህ SMS",
     "phoneLabel": "ስልክ ቁጥር",
     "phonePlaceholder": "+251 91 123 4567",
-    "phoneHint": "ከሀገር ኮድ ጋር፣ ለምሳሌ +251 ለኢትዮጵያ።",
+    "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "«ይመዝገቡ» ላይ ጠቅ ያድርጉ – ወደ Telegram ይመራሉ። ቦቱን ያስጀምሩ እና ዕለታዊ ማነቃቂያውን ለማንቃት <strong>/daily</strong> ብለው ይጻፉ።",
     "pushHint": "«ይመዝገቡ» ላይ ከጠቀሙ በኋላ አሳሽዎ ለማሳወቂያ ፈቃድ ይጠይቃል። ማነቃቂያውን ለመቀበል እባክዎ ይፍቀዱ።",
     "submit": "ይመዝገቡ",
@@ -166,7 +169,9 @@
     "switchChannel": "ቻናል ቀይር፡",
     "unsubscribe": "የደንበኝነት ምዝገባን አቋርጥ",
     "unsubscribedTitle": "የደንበኝነት ምዝገባ ተቋርጧል",
-    "unsubscribedDesc": "ከእንግዲህ ዕለታዊ መነሳሳትን አትቀበልም።"
+    "unsubscribedDesc": "ከእንግዲህ ዕለታዊ መነሳሳትን አትቀበልም።",
+    "smsSwissOnly": "Swiss numbers only",
+    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
   },
   "faq": {
     "badge": "በተደጋጋሚ የሚጠየቁ ጥያቄዎች",
@@ -352,7 +357,8 @@
     "imageSavedDesc": "ምስሉን ያስቀምጡ እና ከተቀዳው ጽሑፍ ጋር በInstagram፣ WhatsApp ወይም በፈለጉት ቦታ ያጋሩት!",
     "clipboardFallback": "ጽሑፍ ተቀድቷል — ሲለጥፉ ይለጥፉት!",
     "recommendedBy": "በ{{church}} የተመከረ",
-    "hashtagBible": "#መጽሐፍ_ቅዱስ"
+    "hashtagBible": "#መጽሐፍ_ቅዱስ",
+    "hashtagImpulse": "#DailyImpulse"
   },
   "darkMode": {
     "light": "ብሩህ ሁነታ",
