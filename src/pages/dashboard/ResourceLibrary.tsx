@@ -1,4 +1,5 @@
 import { useState, useMemo } from "react";
+import { useTranslation } from "react-i18next";
 import {
   BookOpen, Music, HandHeart, BookOpenText, Plus, Search,
   Pencil, Trash2, X, Tag, Filter, MoreHorizontal, Globe, Church,
@@ -46,6 +47,16 @@ const COUNTRIES = [
   { value: "INT", label: "🌍 International" },
 ];
 
+const LANGUAGES = [
+  { value: "de", label: "🇩🇪 Deutsch" },
+  { value: "en", label: "🇬🇧 English" },
+  { value: "fr", label: "🇫🇷 Français" },
+  { value: "es", label: "🇪🇸 Español" },
+  { value: "it", label: "🇮🇹 Italiano" },
+  { value: "pt", label: "🇵🇹 Português" },
+  { value: "nl", label: "🇳🇱 Nederlands" },
+];
+
 const FIXED_TAG_CATEGORIES = [
   {
     label: "Stimmung",
@@ -70,11 +81,14 @@ interface FormState {
   resource_type: ResourceType;
   tags: string[];
   tagInput: string;
+  language: string;
 }
 
-const emptyForm: FormState = { title: "", content: "", resource_type: "song", tags: [], tagInput: "" };
+const emptyForm = (lang: string): FormState => ({ title: "", content: "", resource_type: "song", tags: [], tagInput: "", language: lang });
 
 export default function ResourceLibrary() {
+  const { i18n } = useTranslation();
+  const defaultLang = i18n.language?.slice(0, 2) || "de";
   const { data: resources = [], isLoading } = useResources();
   const { data: church } = useUserChurch();
   const createResource = useCreateResource();
@@ -87,10 +101,11 @@ export default function ResourceLibrary() {
   const [filterTag, setFilterTag] = useState<string | "all">("all");
   const [filterTradition, setFilterTradition] = useState<string | "all">("all");
   const [filterCountry, setFilterCountry] = useState<string | "all">("all");
+  const [filterLanguage, setFilterLanguage] = useState<string>(defaultLang);
   const [activeTab, setActiveTab] = useState<"all" | "mine" | "system">("all");
   const [dialogOpen, setDialogOpen] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
-  const [form, setForm] = useState<FormState>(emptyForm);
+  const [form, setForm] = useState<FormState>(() => emptyForm(defaultLang));
 
   const myResources = useMemo(() => resources.filter(r => !r.is_system), [resources]);
   const systemResources = useMemo(() => resources.filter(r => r.is_system), [resources]);
@@ -106,6 +121,7 @@ export default function ResourceLibrary() {
   const filtered = useMemo(() => {
     const base = activeTab === "mine" ? myResources : activeTab === "system" ? systemResources : resources;
     return base.filter((r) => {
+      if (filterLanguage !== "all" && r.language !== filterLanguage) return false;
       if (filterType !== "all" && r.resource_type !== filterType) return false;
       if (filterTag !== "all" && !(r.tags ?? []).includes(filterTag)) return false;
       if (filterTradition !== "all" && r.tradition !== filterTradition) return false;
@@ -121,11 +137,11 @@ export default function ResourceLibrary() {
       }
       return true;
     });
-  }, [resources, myResources, systemResources, activeTab, filterType, filterTag, filterTradition, filterCountry, search]);
+  }, [resources, myResources, systemResources, activeTab, filterType, filterTag, filterTradition, filterCountry, filterLanguage, search]);
 
   const openCreate = () => {
     setEditingId(null);
-    setForm(emptyForm);
+    setForm(emptyForm(defaultLang));
     setDialogOpen(true);
   };
 
@@ -137,6 +153,7 @@ export default function ResourceLibrary() {
       resource_type: r.resource_type,
       tags: r.tags ?? [],
       tagInput: "",
+      language: r.language ?? defaultLang,
     });
     setDialogOpen(true);
   };
@@ -166,6 +183,7 @@ export default function ResourceLibrary() {
           content: form.content.trim() || null,
           resource_type: form.resource_type,
           tags: form.tags,
+          language: form.language,
         });
         toast.success("Ressource aktualisiert");
       } else {
@@ -174,6 +192,7 @@ export default function ResourceLibrary() {
           content: form.content.trim() || null,
           resource_type: form.resource_type,
           tags: form.tags,
+          language: form.language,
           church_id: church?.id ?? null,
         });
         toast.success("Ressource erstellt");
@@ -233,6 +252,11 @@ export default function ResourceLibrary() {
               <span className="text-xs text-muted-foreground">
                 {COUNTRIES.find(c => c.value === r.country)?.label ?? r.country}
               </span>
+            )}
+            {r.language && (
+              <Badge variant="outline" className="text-xs shrink-0">
+                {LANGUAGES.find(l => l.value === r.language)?.label ?? r.language}
+              </Badge>
             )}
           </div>
           {r.content && (
@@ -356,6 +380,18 @@ export default function ResourceLibrary() {
             ))}
           </SelectContent>
         </Select>
+        <Select value={filterLanguage} onValueChange={(v) => setFilterLanguage(v)}>
+          <SelectTrigger className="w-full sm:w-[150px]">
+            <Globe className="h-4 w-4 mr-1" />
+            <SelectValue placeholder="Sprache" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">Alle Sprachen</SelectItem>
+            {LANGUAGES.map((l) => (
+              <SelectItem key={l.value} value={l.value}>{l.label}</SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
         {allTags.length > 0 && (
           <Select value={filterTag} onValueChange={(v) => setFilterTag(v)}>
             <SelectTrigger className="w-full sm:w-[140px]">
@@ -423,6 +459,22 @@ export default function ResourceLibrary() {
                     <SelectItem key={t.value} value={t.value}>
                       <span className="flex items-center gap-1.5">{t.icon} {t.label}</span>
                     </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+            <div>
+              <label className="text-sm font-medium text-foreground mb-1 block">Sprache</label>
+              <Select
+                value={form.language}
+                onValueChange={(v) => setForm((f) => ({ ...f, language: v }))}
+              >
+                <SelectTrigger>
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  {LANGUAGES.map((l) => (
+                    <SelectItem key={l.value} value={l.value}>{l.label}</SelectItem>
                   ))}
                 </SelectContent>
               </Select>
