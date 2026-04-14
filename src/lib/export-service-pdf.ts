@@ -46,7 +46,7 @@ interface ExportOptions {
 }
 
 function buildServiceDoc(options: ExportOptions): jsPDF {
-  const { title, serviceDate, serviceTime, serviceType, tradition, blocks, churchName } = options;
+  const { title, serviceDate, serviceTime, serviceType, tradition, blocks, churchName, notes } = options;
 
   const doc = new jsPDF({ orientation: "portrait", unit: "mm", format: "a4" });
   const pageWidth = doc.internal.pageSize.getWidth();
