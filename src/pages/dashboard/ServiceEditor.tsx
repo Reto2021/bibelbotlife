@@ -362,14 +362,14 @@ export default function ServiceEditor() {
             <>
               <Button variant="outline" size="sm" onClick={() => exportServicePdf({
                 title, serviceDate, serviceTime, serviceType, tradition, blocks,
-                churchName: church?.name,
+                churchName: church?.name, notes,
               })}>
                 <FileDown className="h-4 w-4 sm:mr-1" />
                 <span className="hidden sm:inline">PDF</span>
               </Button>
               <Button variant="outline" size="sm" onClick={() => exportServiceDocx({
                 title, serviceDate, serviceTime, serviceType, tradition, blocks,
-                churchName: church?.name,
+                churchName: church?.name, notes,
               })}>
                 <FileText className="h-4 w-4 sm:mr-1" />
                 <span className="hidden sm:inline">Word</span>
