@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import {
   Menu, X as XIcon, HandHeart, GraduationCap, Building2, HeartHandshake,
-  Send, FileText, ShieldCheck, LogIn, LogOut, User, Shield, Users
+  Send, FileText, ShieldCheck, LogIn, LogOut, User, Shield, Users, MessageCircle
 } from "lucide-react";
 import { AppLogo } from "@/components/AppLogo";
 import { Button } from "@/components/ui/button";
@@ -11,7 +11,7 @@ import { DarkModeToggle } from "@/components/DarkModeToggle";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useAuth } from "@/hooks/use-auth";
 import { useIsAdmin } from "@/hooks/use-admin";
-import { resetBibleBotChat } from "@/lib/chat-events";
+import { resetBibleBotChat, openBibleBotChat } from "@/lib/chat-events";
 
 const TELEGRAM_LINK = "https://t.me/meinbibelbot";
 
