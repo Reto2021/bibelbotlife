@@ -647,5 +647,15 @@ export default function ServiceEditor() {
         </DialogContent>
       </Dialog>
     </div>
+    {/* Resource Sidebar */}
+    {sidebarOpen && (
+      <ResourceSidebar
+        onSelect={(resource) => {
+          addBlockFromResource(resource);
+        }}
+        onClose={() => setSidebarOpen(false)}
+      />
+    )}
+    </div>
   );
 }
