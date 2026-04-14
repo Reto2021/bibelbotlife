@@ -1889,9 +1889,13 @@
       "seoDesc": "Persönliche Trauungstexte erstellen und mit dem Seelsorger teilen.",
       "partner1": "Partner/in 1",
       "partner2": "Partner/in 2",
+      "birthName": "Geborene",
+      "birthDate": "Geburtsdatum",
+      "from": "Von (Ort)",
+      "confession": "Konfession",
       "date": "Datum der Trauung",
       "venue": "Ort / Kirche",
-      "tradition": "Konfession / Tradition"
+      "tradition": "Tradition der Trauung"
     },
     "baptism": {
       "title": "Taufe",
