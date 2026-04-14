@@ -51,26 +51,29 @@ const TRANSLATIONS = [
   { key: "det", apiId: "dan_det", language: "da" },
   // Swedish
   { key: "fol", apiId: "swe_fol", language: "sv" },
-  // Finnish
+  // Finnish (NT only — 27 books)
   { key: "fin", apiId: "fin_bib", language: "fi" },
-  // Greek — not available
-  // Hungarian
+  // Greek (Modern) — not available on helloao
+  // Hungarian (NT only — 27 books)
   { key: "hun", apiId: "hun_bib", language: "hu" },
-  // Croatian
+  // Croatian (65 books)
   { key: "iva", apiId: "hrv_iva", language: "hr" },
   // Serbian
   { key: "srp", apiId: "srp_865", language: "sr" },
-  // Slovak
+  // Slovak (NT only — 27 books)
   { key: "slk", apiId: "slk_bib", language: "sk" },
   // Vietnamese
   { key: "vie", apiId: "vie_1934", language: "vi" },
   // Indonesian
   { key: "ayt", apiId: "ind_ayt", language: "id" },
-  // Filipino
+  // Filipino / Tagalog
   { key: "tgl", apiId: "tgl_ulb", language: "tl" },
-  // Swahili
-  { key: "swa", apiId: "swh_swa", language: "sw" },
-  // Afrikaans — not available
+  // Swahili (full 66 books)
+  { key: "swa", apiId: "swh_ulb", language: "sw" },
+  // Afrikaans — not available on helloao
+  // Armenian — not available on helloao
+  // Bulgarian — not available on helloao
+  // Greek (Modern) — not available on helloao
   // Amharic
   { key: "amh", apiId: "amh_amh", language: "am" },
   // Yoruba
@@ -81,7 +84,6 @@ const TRANSLATIONS = [
   { key: "hat", apiId: "hat_pds", language: "ht" },
   // Norwegian
   { key: "nob", apiId: "nob_lbb", language: "no" },
-  // Bulgarian — not available
 ];
 
 interface BookInfo {
