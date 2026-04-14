@@ -1825,5 +1825,25 @@
     "thankYouTitle": "Ngiyabonga!",
     "thankYouMessage": "Umlayezo wakho usutholiwe. Sizobuya kuwe ngokushesha okukhulu.",
     "sendAnother": "Thumela omunye umlayezo"
-  }
+  },
+  "about": {
+    "title": "Mayelana Nathi – BibleBot.Life",
+    "metaDesc": "Ubani ongemuva kwe-BibleBot.Life? Funda kabanzi ngomsunguli u-Reto Wettstein nombono ongemuva kwephrojekthi.",
+    "heading": "Mayelana ne-BibleBot.Life",
+    "intro": "I-BibleBot.Life iyiphrojekthi yothando yomuntu siqu – ezelwe enkolelweni yokuthi iBhayibheli kufanele lifinyeleleke futhi liqondakale kuwo wonke umuntu. Kungakhathalekile ukuthi yihlelo, ulimi, noma ulwazi lobuchwepheshe.",
+    "visionTitle": "Umbono",
+    "visionText": "Umngane wamahhala, ongaziwa wonke umuntu ofuna ukuhlola iBhayibheli. Akukho ukulandelela, akukho ukwahlulela – nje ingxoxo enhle ngesibani. Ngezilimi ezingu-38, zamabandla, abafundisi nomuntu ngamunye.",
+    "founderTitle": "Umsunguli",
+    "founderBio": "UReto Wettstein unguchwepheshe wolwazi lwebhizinisi, usomabhizinisi, nomndeni oshisekayo kwezombangazwe waseBrugg, eSwitzerland. Ungumsunguli we-biz.Telligence, Prime Data, kanye ne-2Go Media AG – izinkampani ezigxile ekukhangiseni kwedijithali nasezinkambisweni ze-CRM. Ngothando, ukucabanga kwamasu, nokuzinikela, uhlanganisa ubuchwepheshe nokuzibandakanya nomphakathi.",
+    "education": "Imfundo",
+    "awards": "Imiklomelo",
+    "engagements": "Ukwazibandakanya",
+    "personal": "Okomuntu siqu",
+    "residence": "Indawo yokuhlala",
+    "confession": "Ihlobo",
+    "family": "Umndeni",
+    "familyValue": "Ushadile, unezingane ezimbili",
+    "cta": "Imibuzo, imibono, noma ufuna nje ukubingelela?"
+  },
+  "nav.about": "Mayelana Nathi"
 }

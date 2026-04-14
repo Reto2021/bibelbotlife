@@ -1825,5 +1825,25 @@
     "thankYouTitle": "Asante!",
     "thankYouMessage": "Ujumbe wako umepokelewa. Tutawasiliana nawe haraka iwezekanavyo.",
     "sendAnother": "Tuma ujumbe mwingine"
-  }
+  },
+  "about": {
+    "title": "Kuhusu Sisi – BibleBot.Life",
+    "metaDesc": "Nani yuko nyuma ya BibleBot.Life? Jifunze zaidi kuhusu mwanzilishi Reto Wettstein na maono nyuma ya mradi huo.",
+    "heading": "Kuhusu BibleBot.Life",
+    "intro": "BibleBot.Life ni mradi wa mapenzi ya kibinafsi – uliozaliwa kutokana na imani kwamba Biblia inapaswa kupatikana na kueleweka kwa kila mtu. Bila kujali madhehebu, lugha, au maarifa ya kiufundi.",
+    "visionTitle": "Maono",
+    "visionText": "Mwenzi huru, asiyejulikana kwa kila mtu anayetaka kuchunguza Biblia. Hakuna ufuatiliaji, hakuna hukumu – mazungumzo mazuri tu kwa mwangaza wa mshumaa. Katika lugha 38, kwa makanisa, wachungaji, na kila mtu binafsi.",
+    "founderTitle": "Mwanzilishi",
+    "founderBio": "Reto Wettstein ni mtaalamu wa informatics ya biashara, mjasiriamali, na mwanaume wa familia anayejihusisha na siasa kutoka Brugg, Uswizi. Yeye ndiye mwanzilishi wa biz.Telligence, Prime Data, na 2Go Media AG – kampuni zinazobobea katika masoko ya dijiti na michakato ya CRM. Kwa shauku, fikra za kimkakati, na kujitolea, anaunganisha teknolojia na ushiriki wa jamii.",
+    "education": "Elimu",
+    "awards": "Tuzo",
+    "engagements": "Shughuli",
+    "personal": "Kibinafsi",
+    "residence": "Makazi",
+    "confession": "Madhehebu",
+    "family": "Familia",
+    "familyValue": "Ameoa, watoto wawili",
+    "cta": "Maswali, mawazo, au unataka tu kusalimia?"
+  },
+  "nav.about": "Kuhusu Sisi"
 }

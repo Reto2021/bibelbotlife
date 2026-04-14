@@ -1825,5 +1825,25 @@
     "thankYouTitle": "Köszönjük!",
     "thankYouMessage": "Üzenetét megkaptuk. A lehető leghamarabb válaszolunk.",
     "sendAnother": "Új üzenet küldése"
-  }
+  },
+  "about": {
+    "title": "Rólunk – BibleBot.Life",
+    "metaDesc": "Ki áll a BibleBot.Life mögött? Tudjon meg többet az alapítóról, Reto Wettsteinről és a projekt mögötti vízióról.",
+    "heading": "A BibleBot.Life-ról",
+    "intro": "A BibleBot.Life egy személyes szenvedélyprojekt – abból a meggyőződésből született, hogy a Biblia mindenki számára hozzáférhetőnek és érthetőnek kell lennie. Függetlenül felekezettől, nyelvtől vagy technikai ismeretektől.",
+    "visionTitle": "A vízió",
+    "visionText": "Egy ingyenes, anonim társ mindenkinek, aki felfedezné a Bibliát. Nincs követés, nincs ítélkezés – csak egy jó beszélgetés gyertyafényben. 38 nyelven, gyülekezetek, lelkészek és minden egyén számára.",
+    "founderTitle": "Az alapító",
+    "founderBio": "Reto Wettstein üzleti informatikus, vállalkozó és politikailag elkötelezett családapa a svájci Bruggból. Ő a biz.Telligence, a Prime Data és a 2Go Media AG alapítója – olyan vállalatoké, amelyek a digitális marketingre és a CRM-folyamatokra szakosodtak. Szenvedéllyel, stratégiai gondolkodással és elhivatottsággal hidat épít a technológia és a közösségi elköteleződés között.",
+    "education": "Tanulmányok",
+    "awards": "Díjak",
+    "engagements": "Elkötelezettségek",
+    "personal": "Személyes",
+    "residence": "Lakóhely",
+    "confession": "Fejezet",
+    "family": "Család",
+    "familyValue": "Házas, két gyermek",
+    "cta": "Kérdések, ötletek, vagy csak köszönni szeretne?"
+  },
+  "nav.about": "Rólunk"
 }

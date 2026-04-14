@@ -1825,5 +1825,25 @@
     "thankYouTitle": "O ṣeun!",
     "thankYouMessage": "Ifiranṣẹ rẹ ti gba. A yoo ba ọ sọrọ ni kete bi o ti ṣee.",
     "sendAnother": "Firanṣẹ ifiranṣẹ miiran"
-  }
+  },
+  "about": {
+    "title": "Nipa Wa – BibleBot.Life",
+    "metaDesc": "Ta ni o wa lẹhin BibleBot.Life? Kọ ẹkọ siwaju sii nipa oludasilẹ Reto Wettstein ati iran ti o wa lẹhin iṣẹ akanṣe naa.",
+    "heading": "Nipa BibleBot.Life",
+    "intro": "BibleBot.Life jẹ iṣẹ akanṣe ifẹ ti ara ẹni – ti a bi lati inu igbagbọ pe Bibeli yẹ ki o wa fun gbogbo eniyan lati wọle ati loye. Laibikita ijọsin, ede, tabi imọ imọ-ẹrọ.",
+    "visionTitle": "Iran naa",
+    "visionText": "Ẹlẹgbẹ ọfẹ, ailorukọ fun gbogbo eniyan ti o fẹ lati ṣawari Bibeli. Ko si titọpa, ko si idajọ – kan ibaraẹnisọrọ to dara nipasẹ imọlẹ abẹla kan. Ni awọn ede 38, fun awọn ile ijọsin, awọn pasito, ati gbogbo eniyan.",
+    "founderTitle": "Oludasilẹ naa",
+    "founderBio": "Reto Wettstein jẹ alamọja imọ-ẹrọ iṣowo, oninawo, ati ọkunrin idile ti o ni ipa oloselu lati Brugg, Switzerland. Oun ni oludasilẹ biz.Telligence, Prime Data, ati 2Go Media AG – awọn ile-iṣẹ ti o ṣe pataki ni titaja oni-nọmba ati awọn ilana CRM. Pẹlu ifẹ, ero ilana, ati iyasọtọ, o kọja imọ-ẹrọ pẹlu ilowosi agbegbe.",
+    "education": "Ẹkọ",
+    "awards": "Awọn ami-ẹri",
+    "engagements": "Awọn iṣẹ-ṣiṣe",
+    "personal": "Ti ara ẹni",
+    "residence": "Ibugbe",
+    "confession": "Ijọsin",
+    "family": "Idile",
+    "familyValue": "Ti ni iyawo, ọmọ meji",
+    "cta": "Awọn ibeere, awọn imọran, tabi kan fẹ lati ki o ku?"
+  },
+  "nav.about": "Nipa Wa"
 }

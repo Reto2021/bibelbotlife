@@ -1448,5 +1448,25 @@
     "thankYouTitle": "Terima kasih!",
     "thankYouMessage": "Pesan Anda telah diterima. Kami akan menghubungi Anda sesegera mungkin.",
     "sendAnother": "Kirim pesan lain"
-  }
+  },
+  "about": {
+    "title": "Tentang Kami – BibleBot.Life",
+    "metaDesc": "Siapa di balik BibleBot.Life? Pelajari lebih lanjut tentang pendiri Reto Wettstein dan visi di balik proyek ini.",
+    "heading": "Tentang BibleBot.Life",
+    "intro": "BibleBot.Life adalah proyek passion pribadi – lahir dari keyakinan bahwa Alkitab harus dapat diakses dan dipahami oleh semua orang. Tanpa memandang denominasi, bahasa, atau pengetahuan teknis.",
+    "visionTitle": "Visi",
+    "visionText": "Pendamping gratis dan anonim untuk setiap orang yang ingin menjelajahi Alkitab. Tanpa pelacakan, tanpa penghakiman – hanya percakapan yang baik di bawah cahaya lilin. Dalam 38 bahasa, untuk gereja, pendeta, dan setiap individu.",
+    "founderTitle": "Pendiri",
+    "founderBio": "Reto Wettstein adalah seorang spesialis informatika bisnis, pengusaha, dan kepala keluarga yang aktif secara politik dari Brugg, Swiss. Dia adalah pendiri biz.Telligence, Prime Data, dan 2Go Media AG – perusahaan yang berspesialisasi dalam pemasaran digital dan proses CRM. Dengan semangat, pemikiran strategis, dan dedikasi, ia menjembatani teknologi dengan keterlibatan komunitas.",
+    "education": "Pendidikan",
+    "awards": "Penghargaan",
+    "engagements": "Keterlibatan",
+    "personal": "Pribadi",
+    "residence": "Tempat Tinggal",
+    "confession": "Denominasi",
+    "family": "Keluarga",
+    "familyValue": "Menikah, dua anak",
+    "cta": "Pertanyaan, ide, atau hanya ingin menyapa?"
+  },
+  "nav.about": "Tentang Kami"
 }

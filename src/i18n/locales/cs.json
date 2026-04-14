@@ -1825,5 +1825,25 @@
     "thankYouTitle": "Děkujeme vám!",
     "thankYouMessage": "Vaše zpráva byla přijata. Ozveme se vám co nejdříve.",
     "sendAnother": "Odeslat další zprávu"
-  }
+  },
+  "about": {
+    "title": "O nás – BibleBot.Life",
+    "metaDesc": "Kdo stojí za BibleBot.Life? Zjistěte více o zakladateli Reto Wettstein a vizi, která stojí za projektem.",
+    "heading": "O aplikaci BibleBot.Life",
+    "intro": "BibleBot.Life je osobní vášnivý projekt – zrozený z přesvědčení, že Bible by měla být přístupná a srozumitelná pro každého. Bez ohledu na denominaci, jazyk nebo technické znalosti.",
+    "visionTitle": "Vize",
+    "visionText": "Zdarma, anonymní společník pro každého, kdo chce prozkoumat Bibli. Žádné sledování, žádné odsuzování – jen dobrý rozhovor při svíčkách. Ve 38 jazycích, pro církve, pastory a každého jednotlivce.",
+    "founderTitle": "Zakladatel",
+    "founderBio": "Reto Wettstein je odborník na podnikovou informatiku, podnikatel a politicky angažovaný otec rodiny z města Brugg ve Švýcarsku. Je zakladatelem společností biz.Telligence, Prime Data a 2Go Media AG – společností specializujících se na digitální marketing a procesy CRM. S vášní, strategickým myšlením a odhodláním propojuje technologie s angažovaností komunity.",
+    "education": "Vzdělání",
+    "awards": "Ocenění",
+    "engagements": "Angažmá",
+    "personal": "Osobní",
+    "residence": "Bydliště",
+    "confession": "Vyznání",
+    "family": "Rodina",
+    "familyValue": "Ženatý, dvě děti",
+    "cta": "Dotazy, nápady, nebo jen chcete pozdravit?"
+  },
+  "nav.about": "O nás"
 }

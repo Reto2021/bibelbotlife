@@ -1825,5 +1825,25 @@
     "thankYouTitle": "감사합니다!",
     "thankYouMessage": "메시지가 접수되었습니다. 가능한 한 빨리 답변드리겠습니다.",
     "sendAnother": "다른 메시지 보내기"
-  }
+  },
+  "about": {
+    "title": "BibleBot.Life 소개",
+    "metaDesc": "BibleBot.Life 뒤에는 누가 있을까요? 설립자 Reto Wettstein과 프로젝트의 비전에 대해 자세히 알아보세요.",
+    "heading": "BibleBot.Life 소개",
+    "intro": "BibleBot.Life는 성경이 모든 사람에게 쉽게 접근하고 이해할 수 있어야 한다는 믿음에서 탄생한 개인적인 열정 프로젝트입니다. 교파, 언어, 기술 지식에 관계없이 말이죠.",
+    "visionTitle": "비전",
+    "visionText": "성경을 탐구하고자 하는 모든 사람을 위한 무료 익명의 동반자입니다. 추적도, 비판도 없이 촛불 아래에서 좋은 대화를 나눌 수 있습니다. 38개 언어로 교회, 목회자, 모든 개인을 위해 제공됩니다.",
+    "founderTitle": "설립자",
+    "founderBio": "Reto Wettstein은 스위스 Brugg 출신의 경영 정보학 전문가이자 기업가이며 정치에 참여하는 가장입니다. 그는 디지털 마케팅 및 CRM 프로세스 전문 회사인 biz.Telligence, Prime Data, 2Go Media AG의 설립자입니다. 열정, 전략적 사고, 헌신을 통해 그는 기술과 지역 사회 참여를 연결합니다.",
+    "education": "학력",
+    "awards": "수상 경력",
+    "engagements": "활동",
+    "personal": "개인 정보",
+    "residence": "거주지",
+    "confession": "교파",
+    "family": "가족",
+    "familyValue": "기혼, 두 자녀",
+    "cta": "질문, 아이디어가 있거나 그냥 인사하고 싶으신가요?"
+  },
+  "nav.about": "회사 소개"
 }

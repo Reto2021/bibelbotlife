@@ -1831,5 +1831,25 @@
     "thankYouTitle": "Daalụ!",
     "thankYouMessage": "Anatala ozi gị. Anyị ga-aza gị ozigbo enwere ike.",
     "sendAnother": "Zipu ozi ọzọ"
-  }
+  },
+  "about": {
+    "title": "Banyere Anyị – BibleBot.Life",
+    "metaDesc": "Ònye bụ onye nọ n’azụ BibleBot.Life? Mụtakwuo maka onye guzobere Reto Wettstein na ọhụụ dị n’azụ ọrụ a.",
+    "heading": "Banyere BibleBot.Life",
+    "intro": "BibleBot.Life bụ ọrụ sitere n'obi – amụrụ site n'ikwere na Baịbụl kwesịrị ịdị mfe inweta ma ghọta onye ọ bụla. N'agbanyeghị òtù okpukperechi, asụsụ, ma ọ bụ ihe ọmụma teknụzụ.",
+    "visionTitle": "Ọhụụ Ahụ",
+    "visionText": "Onye ibe anaghị enyocha, onye na-adịghị akwụ ụgwọ maka onye ọ bụla chọrọ inyocha Baịbụl. Enweghị nyocha, enweghị ikpe – naanị mkparịta ụka dị mma site na oriọna. N’asụsụ iri atọ na asatọ, maka chọọchị, ndị pastọ, na onye ọ bụla.",
+    "founderTitle": "Onye Guzobere",
+    "founderBio": "Reto Wettstein bụ ọkachamara n'ihe gbasara azụmahịa, onye ọchụnta ego, na nwoke na-etinye aka na ndọrọ ndọrọ ọchịchị si Brugg, Switzerland. Ọ bụ onye guzobere biz.Telligence, Prime Data, na 2Go Media AG – ụlọ ọrụ na-ahụ maka ịzụ ahịa dijitalụ na usoro CRM. Site na agụụ, echiche atụmatụ, na ntinye aka, ọ na-ejikọta teknụzụ na ntinye aka obodo.",
+    "education": "Agụmakwụkwọ",
+    "awards": "Onyinye",
+    "engagements": "Ọrụ",
+    "personal": "Nkeonwe",
+    "residence": "Ebe obibi",
+    "confession": "Òtù okpukperechi",
+    "family": "Ezinụlọ",
+    "familyValue": "Lụrụ nwunye, ụmụaka abụọ",
+    "cta": "Ajụjụ, echiche, ma ọ bụ naanị ịchọrọ ikwu ekele?"
+  },
+  "nav.about": "Banyere Anyị"
 }
