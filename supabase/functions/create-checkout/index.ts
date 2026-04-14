@@ -66,6 +66,33 @@ serve(async (req) => {
       }),
     });
 
+    // Sync revenue to GHL (fire-and-forget)
+    const supabaseUrl = Deno.env.get("SUPABASE_URL");
+    const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
+    if (supabaseUrl && serviceKey) {
+      const amountCents = customAmountCents || (lineItems[0]?.price_data?.unit_amount ?? 0);
+      const syncType = priceId && !customAmountCents ? "church_subscription" : "donation";
+      fetch(`${supabaseUrl}/functions/v1/ghl-sync`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${serviceKey}`,
+        },
+        body: JSON.stringify({
+          type: syncType,
+          data: {
+            email: customerEmail || "",
+            amount: amountCents / 100,
+            currency: "CHF",
+            ...(syncType === "church_subscription" && {
+              planTier: priceId || "",
+              interval: isRecurring ? "recurring" : "one_time",
+            }),
+          },
+        }),
+      }).catch((e) => console.error("GHL sync error:", e));
+    }
+
     return new Response(JSON.stringify({ clientSecret: session.client_secret }), {
       headers: corsHeaders,
     });
