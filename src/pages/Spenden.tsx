@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { SEOHead } from "@/components/SEOHead";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -23,11 +23,11 @@ function DonationThankYou() {
   const sessionId = searchParams.get("session_id");
 
   // Mark donation in localStorage so the chat nudge disappears
-  useState(() => {
+  useEffect(() => {
     if (sessionId) {
       try { localStorage.setItem("bibelbot-donated-at", Date.now().toString()); } catch {}
     }
-  });
+  }, [sessionId]);
 
   return (
     <div className="min-h-screen bg-background">
