@@ -436,7 +436,7 @@ const Index = () => {
           
           <Card className="bg-card/80 backdrop-blur-sm border-border max-w-md mx-auto">
             <CardHeader>
-              <CardTitle className="text-xl">{t("donate.bankTitle")}</CardTitle>
+              <CardTitle className="text-xl">{t("donate.onlineTitle", "Online spenden")}</CardTitle>
               <CardDescription>{t("donate.bankSubtitle")}</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -444,14 +444,16 @@ const Index = () => {
                 <Button
                   className="w-full"
                   size="lg"
-                  onClick={() => window.open("https://t.me/meinbibelbot", "_blank")}
+                  asChild
                 >
-                  <Heart className="h-4 w-4 mr-2" />
-                  {t("donate.creditCard", "Kontakt aufnehmen")}
+                  <Link to="/spenden">
+                    <Heart className="h-4 w-4 mr-2" />
+                    {t("donate.ctaDonate", "Jetzt spenden")}
+                  </Link>
                 </Button>
               </div>
               <p className="text-xs text-muted-foreground text-center">
-                {t("donate.secureNote", "Schreib uns — wir richten alles Weitere ein.")}
+                {t("donate.stripeNote", "Sicher via Kreditkarte, Twint & mehr")}
               </p>
             </CardContent>
           </Card>
