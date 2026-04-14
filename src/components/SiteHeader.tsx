@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import {
   Menu, X as XIcon, HandHeart, GraduationCap, Building2, HeartHandshake,
   Send, FileText, ShieldCheck, LogIn, LogOut, User, Shield, MessageCircle, Heart,
-  ChevronDown, BookOpen
+  ChevronDown, BookOpen, Mail
 } from "lucide-react";
 import { AppLogo } from "@/components/AppLogo";
 import { Button } from "@/components/ui/button";
@@ -115,6 +115,12 @@ export function SiteHeader() {
                 <Link to="/spenden" className="flex items-center gap-2 cursor-pointer">
                   <Heart className="h-4 w-4" />
                   {t("nav.donate", "Spenden")}
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link to="/kontakt" className="flex items-center gap-2 cursor-pointer">
+                  <Mail className="h-4 w-4" />
+                  {t("nav.contact", "Kontakt")}
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
@@ -243,6 +249,10 @@ export function SiteHeader() {
             <Send className="h-4 w-4 text-primary" />
             Telegram Bot
           </a>
+          <Link to="/kontakt" className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-foreground hover:bg-primary/10 transition-colors" onClick={() => setMobileMenuOpen(false)}>
+            <Mail className="h-4 w-4 text-primary" />
+            {t("nav.contact", "Kontakt")}
+          </Link>
 
           {/* Auth */}
           <div className="border-t border-border mt-2 pt-2">

@@ -1810,5 +1810,31 @@
     "baptism": "Taufe",
     "wedding": "Trauung",
     "funeral": "Abdankung"
+  },
+  "contact": {
+    "pageTitle": "Kontakt – BibleBot.Life",
+    "pageDesc": "Schreibe uns eine Nachricht – wir freuen uns auf deine Anfrage.",
+    "badge": "Kontakt",
+    "heading": "Schreibe uns",
+    "subheading": "Hast du eine Frage, Feedback oder möchtest du eine Partnerschaft besprechen? Wir freuen uns auf deine Nachricht.",
+    "name": "Name",
+    "namePlaceholder": "Dein Name",
+    "email": "E-Mail",
+    "emailPlaceholder": "deine@email.ch",
+    "category": "Anliegen",
+    "categoryPlaceholder": "Wähle ein Anliegen",
+    "categoryFeedback": "Feedback",
+    "categoryQuestion": "Frage",
+    "categoryPartnership": "Partnerschaft",
+    "categoryOther": "Sonstiges",
+    "message": "Nachricht",
+    "messagePlaceholder": "Schreibe uns deine Nachricht…",
+    "send": "Nachricht senden",
+    "sending": "Wird gesendet…",
+    "fillAll": "Bitte fülle alle Felder aus.",
+    "errorGeneric": "Es ist ein Fehler aufgetreten. Bitte versuche es erneut.",
+    "thankYouTitle": "Vielen Dank!",
+    "thankYouMessage": "Deine Nachricht ist bei uns eingegangen. Wir melden uns so schnell wie möglich bei dir.",
+    "sendAnother": "Weitere Nachricht senden"
   }
 }
