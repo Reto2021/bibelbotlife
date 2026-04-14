@@ -100,6 +100,7 @@ export default function Dashboard() {
           <main className="flex-1 p-6">
             <Outlet />
           </main>
+          <BibleBotChat />
         </div>
       </div>
     </SidebarProvider>
