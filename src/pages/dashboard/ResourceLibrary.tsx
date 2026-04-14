@@ -1,7 +1,8 @@
 import { useState, useMemo } from "react";
 import {
   BookOpen, Music, HandHeart, BookOpenText, Plus, Search,
-  Pencil, Trash2, X, Tag, Filter, MoreHorizontal,
+  Pencil, Trash2, X, Tag, Filter, MoreHorizontal, Globe, Church,
+  Download, Library,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -11,9 +12,11 @@ import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { toast } from "sonner";
 import {
   useResources, useCreateResource, useUpdateResource, useDeleteResource,
+  useImportSystemResource,
   type Resource,
 } from "@/hooks/use-resources";
 import { useUserChurch } from "@/hooks/use-user-church";
@@ -27,6 +30,20 @@ const RESOURCE_TYPES: { value: ResourceType; label: string; icon: React.ReactNod
   { value: "reading", label: "Lesung", icon: <BookOpenText className="h-4 w-4" /> },
   { value: "liturgy", label: "Liturgie", icon: <BookOpen className="h-4 w-4" /> },
   { value: "other", label: "Sonstiges", icon: <Tag className="h-4 w-4" /> },
+];
+
+const TRADITIONS = [
+  { value: "reformed", label: "Reformiert" },
+  { value: "catholic", label: "Katholisch" },
+  { value: "lutheran", label: "Lutherisch" },
+  { value: "evangelical", label: "Evangelikal" },
+];
+
+const COUNTRIES = [
+  { value: "CH", label: "🇨🇭 Schweiz" },
+  { value: "DE", label: "🇩🇪 Deutschland" },
+  { value: "AT", label: "🇦🇹 Österreich" },
+  { value: "INT", label: "🌍 International" },
 ];
 
 const FIXED_TAG_CATEGORIES = [
@@ -63,13 +80,20 @@ export default function ResourceLibrary() {
   const createResource = useCreateResource();
   const updateResource = useUpdateResource();
   const deleteResource = useDeleteResource();
+  const importResource = useImportSystemResource();
 
   const [search, setSearch] = useState("");
   const [filterType, setFilterType] = useState<ResourceType | "all">("all");
   const [filterTag, setFilterTag] = useState<string | "all">("all");
+  const [filterTradition, setFilterTradition] = useState<string | "all">("all");
+  const [filterCountry, setFilterCountry] = useState<string | "all">("all");
+  const [activeTab, setActiveTab] = useState<"all" | "mine" | "system">("all");
   const [dialogOpen, setDialogOpen] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [form, setForm] = useState<FormState>(emptyForm);
+
+  const myResources = useMemo(() => resources.filter(r => !r.is_system), [resources]);
+  const systemResources = useMemo(() => resources.filter(r => r.is_system), [resources]);
 
   // Collect all tags
   const allTags = useMemo(() => {
@@ -80,20 +104,24 @@ export default function ResourceLibrary() {
 
   // Filter & search
   const filtered = useMemo(() => {
-    return resources.filter((r) => {
+    const base = activeTab === "mine" ? myResources : activeTab === "system" ? systemResources : resources;
+    return base.filter((r) => {
       if (filterType !== "all" && r.resource_type !== filterType) return false;
       if (filterTag !== "all" && !(r.tags ?? []).includes(filterTag)) return false;
+      if (filterTradition !== "all" && r.tradition !== filterTradition) return false;
+      if (filterCountry !== "all" && r.country !== filterCountry) return false;
       if (search) {
         const q = search.toLowerCase();
         return (
           r.title.toLowerCase().includes(q) ||
           (r.content ?? "").toLowerCase().includes(q) ||
+          (r.hymnal_ref ?? "").toLowerCase().includes(q) ||
           (r.tags ?? []).some((t) => t.toLowerCase().includes(q))
         );
       }
       return true;
     });
-  }, [resources, filterType, filterTag, search]);
+  }, [resources, myResources, systemResources, activeTab, filterType, filterTag, filterTradition, filterCountry, search]);
 
   const openCreate = () => {
     setEditingId(null);
@@ -165,6 +193,99 @@ export default function ResourceLibrary() {
     }
   };
 
+  const handleImport = async (r: Resource) => {
+    try {
+      await importResource.mutateAsync(r);
+      toast.success(`«${r.title}» in deine Bibliothek kopiert`);
+    } catch {
+      toast.error("Fehler beim Importieren");
+    }
+  };
+
+  const ResourceCard = ({ r }: { r: Resource }) => (
+    <Card key={r.id} className="group hover:shadow-md transition-shadow">
+      <CardContent className="py-4 px-5 flex items-start gap-4">
+        <div className="mt-1 text-primary">{typeIcon(r.resource_type)}</div>
+        <div className="flex-1 min-w-0">
+          <div className="flex items-center gap-2 mb-1 flex-wrap">
+            <h3 className="font-semibold text-foreground truncate">{r.title}</h3>
+            <Badge variant="secondary" className="text-xs shrink-0">
+              {typeLabel(r.resource_type)}
+            </Badge>
+            {r.is_system && (
+              <Badge variant="outline" className="text-xs shrink-0 border-primary/30 text-primary">
+                <Library className="h-3 w-3 mr-1" />
+                Katalog
+              </Badge>
+            )}
+            {r.hymnal_ref && (
+              <Badge variant="outline" className="text-xs shrink-0 font-mono">
+                {r.hymnal_ref}
+              </Badge>
+            )}
+            {r.tradition && (
+              <Badge variant="outline" className="text-xs shrink-0">
+                <Church className="h-3 w-3 mr-1" />
+                {TRADITIONS.find(t => t.value === r.tradition)?.label ?? r.tradition}
+              </Badge>
+            )}
+            {r.country && (
+              <span className="text-xs text-muted-foreground">
+                {COUNTRIES.find(c => c.value === r.country)?.label ?? r.country}
+              </span>
+            )}
+          </div>
+          {r.content && (
+            <p className="text-sm text-muted-foreground line-clamp-2 mb-2">{r.content}</p>
+          )}
+          {(r.tags ?? []).length > 0 && (
+            <div className="flex flex-wrap gap-1">
+              {(r.tags ?? []).map((tag) => (
+                <Badge key={tag} variant="outline" className="text-xs">
+                  {tag}
+                </Badge>
+              ))}
+            </div>
+          )}
+        </div>
+        {r.is_system ? (
+          <Button
+            variant="outline"
+            size="sm"
+            className="opacity-0 group-hover:opacity-100 transition-opacity shrink-0"
+            onClick={() => handleImport(r)}
+            disabled={importResource.isPending}
+          >
+            <Download className="h-4 w-4 mr-1" /> Importieren
+          </Button>
+        ) : (
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="opacity-0 group-hover:opacity-100 transition-opacity shrink-0"
+              >
+                <MoreHorizontal className="h-4 w-4" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuItem onClick={() => openEdit(r)}>
+                <Pencil className="h-4 w-4 mr-2" /> Bearbeiten
+              </DropdownMenuItem>
+              <DropdownMenuItem
+                className="text-destructive"
+                onClick={() => handleDelete(r.id)}
+              >
+                <Trash2 className="h-4 w-4 mr-2" /> Löschen
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        )}
+      </CardContent>
+    </Card>
+  );
+
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
@@ -174,9 +295,21 @@ export default function ResourceLibrary() {
         </Button>
       </div>
 
+      {/* Tabs */}
+      <Tabs value={activeTab} onValueChange={(v) => setActiveTab(v as typeof activeTab)}>
+        <TabsList>
+          <TabsTrigger value="all">Alle ({resources.length})</TabsTrigger>
+          <TabsTrigger value="mine">Meine ({myResources.length})</TabsTrigger>
+          <TabsTrigger value="system">
+            <Globe className="h-4 w-4 mr-1" />
+            Katalog ({systemResources.length})
+          </TabsTrigger>
+        </TabsList>
+      </Tabs>
+
       {/* Search & Filters */}
-      <div className="flex flex-col sm:flex-row gap-3">
-        <div className="relative flex-1">
+      <div className="flex flex-col sm:flex-row gap-3 flex-wrap">
+        <div className="relative flex-1 min-w-[200px]">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
           <Input
             placeholder="Suchen…"
@@ -186,7 +319,7 @@ export default function ResourceLibrary() {
           />
         </div>
         <Select value={filterType} onValueChange={(v) => setFilterType(v as ResourceType | "all")}>
-          <SelectTrigger className="w-full sm:w-[160px]">
+          <SelectTrigger className="w-full sm:w-[140px]">
             <Filter className="h-4 w-4 mr-1" />
             <SelectValue placeholder="Typ" />
           </SelectTrigger>
@@ -199,9 +332,33 @@ export default function ResourceLibrary() {
             ))}
           </SelectContent>
         </Select>
+        <Select value={filterTradition} onValueChange={(v) => setFilterTradition(v)}>
+          <SelectTrigger className="w-full sm:w-[150px]">
+            <Church className="h-4 w-4 mr-1" />
+            <SelectValue placeholder="Konfession" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">Alle Konfessionen</SelectItem>
+            {TRADITIONS.map((t) => (
+              <SelectItem key={t.value} value={t.value}>{t.label}</SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+        <Select value={filterCountry} onValueChange={(v) => setFilterCountry(v)}>
+          <SelectTrigger className="w-full sm:w-[150px]">
+            <Globe className="h-4 w-4 mr-1" />
+            <SelectValue placeholder="Region" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">Alle Regionen</SelectItem>
+            {COUNTRIES.map((c) => (
+              <SelectItem key={c.value} value={c.value}>{c.label}</SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
         {allTags.length > 0 && (
           <Select value={filterTag} onValueChange={(v) => setFilterTag(v)}>
-            <SelectTrigger className="w-full sm:w-[160px]">
+            <SelectTrigger className="w-full sm:w-[140px]">
               <Tag className="h-4 w-4 mr-1" />
               <SelectValue placeholder="Tag" />
             </SelectTrigger>
@@ -232,53 +389,7 @@ export default function ResourceLibrary() {
       ) : (
         <div className="grid gap-3">
           {filtered.map((r) => (
-            <Card key={r.id} className="group hover:shadow-md transition-shadow">
-              <CardContent className="py-4 px-5 flex items-start gap-4">
-                <div className="mt-1 text-primary">{typeIcon(r.resource_type)}</div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2 mb-1">
-                    <h3 className="font-semibold text-foreground truncate">{r.title}</h3>
-                    <Badge variant="secondary" className="text-xs shrink-0">
-                      {typeLabel(r.resource_type)}
-                    </Badge>
-                  </div>
-                  {r.content && (
-                    <p className="text-sm text-muted-foreground line-clamp-2 mb-2">{r.content}</p>
-                  )}
-                  {(r.tags ?? []).length > 0 && (
-                    <div className="flex flex-wrap gap-1">
-                      {(r.tags ?? []).map((tag) => (
-                        <Badge key={tag} variant="outline" className="text-xs">
-                          {tag}
-                        </Badge>
-                      ))}
-                    </div>
-                  )}
-                </div>
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      className="opacity-0 group-hover:opacity-100 transition-opacity shrink-0"
-                    >
-                      <MoreHorizontal className="h-4 w-4" />
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="end">
-                    <DropdownMenuItem onClick={() => openEdit(r)}>
-                      <Pencil className="h-4 w-4 mr-2" /> Bearbeiten
-                    </DropdownMenuItem>
-                    <DropdownMenuItem
-                      className="text-destructive"
-                      onClick={() => handleDelete(r.id)}
-                    >
-                      <Trash2 className="h-4 w-4 mr-2" /> Löschen
-                    </DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              </CardContent>
-            </Card>
+            <ResourceCard key={r.id} r={r} />
           ))}
         </div>
       )}
