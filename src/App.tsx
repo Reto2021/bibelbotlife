@@ -56,6 +56,7 @@ const WidgetPreview = lazy(() => import("./pages/WidgetPreview"));
 const SplashPage = lazy(() => import("./pages/SplashPage"));
 const ForCelebrants = lazy(() => import("./pages/ForCelebrants"));
 const ReferralPartner = lazy(() => import("./pages/ReferralPartner"));
+const Spenden = lazy(() => import("./pages/Spenden"));
 
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { ProtectedAdminRoute } from "@/components/ProtectedAdminRoute";
@@ -154,6 +155,8 @@ const App = () => {
                   <Route path="/gebetswand" element={<PrayerWall />} />
                   <Route path="/bibelquiz" element={<BibleQuiz />} />
                   <Route path="/unsubscribe" element={<Unsubscribe />} />
+                  <Route path="/spenden" element={<Spenden />} />
+                  <Route path="/spenden/danke" element={<Spenden />} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/reset-password" element={<ResetPassword />} />
                   <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>}>
