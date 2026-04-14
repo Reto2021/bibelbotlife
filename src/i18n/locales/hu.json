@@ -1461,7 +1461,7 @@
     "language": "Nyelv",
     "website": "Weboldal",
     "serviceTimes": "Istentiszteleti idők",
-    "serviceTimesPlaceholder": "pl. Vasárnap 10:00",
+    "serviceTimesPlaceholder": "pl. vasárnap 10:00",
     "contact": "Kapcsolat",
     "contactPerson": "Kapcsolattartó személy",
     "email": "E-mail",
@@ -1487,7 +1487,7 @@
     "payment": "Fizetési mód",
     "notifications": "Értesítések",
     "notificationsDesc": "E-mail értesítések konfigurálása.",
-    "notifyOnContact": "Kapcsolatfelvételi kérések esetén",
+    "notifyOnContact": "Kapcsolatfelvételi kéréseknél",
     "notifyOnContactDesc": "Értesítést kap, ha valaki a kapcsolatfelvételi űrlapon keresztül ír.",
     "members": "Tagok",
     "membersDesc": "Azok a tagok, akik a templom oldalán keresztül regisztráltak.",
@@ -1581,13 +1581,13 @@
       "cancel": "Mégse"
     },
     "weekdays": [
-      "Hé",
-      "Ke",
-      "Sze",
-      "Csü",
-      "Pé",
-      "Szo",
-      "Va"
+      "Hét",
+      "Kedd",
+      "Szer",
+      "Csüt",
+      "Pén",
+      "Szomb",
+      "Vas"
     ],
     "months": [
       "Január",
@@ -1619,15 +1619,15 @@
       "catholic": "Katolikus",
       "reformed": "Református",
       "lutheran": "Evangélikus",
-      "evangelical": "Evangéliumi",
+      "evangelical": "Evangélikus",
       "secular": "Világi"
     },
     "blocks": "Istentiszteleti rend",
     "addBlock": "Blokk hozzáadása",
-    "emptyBlocks": "Kattintson a 'Blokk hozzáadása' gombra az istentiszteleti rend létrehozásához.",
+    "emptyBlocks": "Kattintson a „Blokk hozzáadása” gombra az istentiszteleti rend létrehozásához.",
     "template": "Sablon",
     "templatePicker": "Válasszon sablont",
-    "noTemplate": "Sablon nélkül kezdés",
+    "noTemplate": "Sablon nélkül indítás",
     "saveAsTemplate": "Mentés sablonként",
     "templateName": "Sablon neve",
     "templateSaved": "Sablon mentve!",
@@ -1638,7 +1638,7 @@
     "emailSending": "Küldés…",
     "emailSent": "E-mail elküldve!",
     "emailError": "Hiba a küldés során.",
-    "askBibleBot": "Kérdezze BibleBot-ot",
+    "askBibleBot": "Kérdezze meg a BibleBot-ot",
     "assignTeam": "Csapat hozzárendelése",
     "resourceSidebar": "Könyvtár",
     "error": "Hiba a mentés során.",
@@ -1713,7 +1713,7 @@
       "solemn": "Ünnepélyes",
       "comforting": "Vigasztaló",
       "grateful": "Hálás",
-      "hopeful": "Reményteli"
+      "hopeful": "Reményteljes"
     },
     "ceremonies": {
       "baptism": "Keresztelő",
@@ -1728,7 +1728,7 @@
       "lent": "Nagyböjt",
       "easter": "Húsvét",
       "pentecost": "Pünkösd",
-      "ordinary": "Évközi időszak"
+      "ordinary": "Évközi idő"
     }
   },
   "templates": {

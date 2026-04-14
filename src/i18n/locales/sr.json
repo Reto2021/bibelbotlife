@@ -1425,7 +1425,7 @@
   },
   "records": {
     "title": "Crkveni registar",
-    "search": "Pretražite unose…",
+    "search": "Pretraži unose…",
     "add": "Novi unos",
     "addTitle": "Novi unos u registar",
     "editTitle": "Uredi unos",
@@ -1444,9 +1444,9 @@
     "addParticipant": "Dodaj učesnika",
     "save": "Sačuvaj",
     "cancel": "Otkaži",
-    "created": "Unos je kreiran.",
-    "updated": "Unos je ažuriran.",
-    "deleted": "Unos je obrisan.",
+    "created": "Unos kreiran.",
+    "updated": "Unos ažuriran.",
+    "deleted": "Unos obrisan.",
     "error": "Greška pri čuvanju."
   },
   "settings": {
@@ -1486,7 +1486,7 @@
     "billingRef": "Referenca",
     "payment": "Način plaćanja",
     "notifications": "Obaveštenja",
-    "notificationsDesc": "Konfigurišite obaveštenja putem emaila.",
+    "notificationsDesc": "Konfigurišite obaveštenja putem e-pošte.",
     "notifyOnContact": "Na zahteve za kontakt",
     "notifyOnContactDesc": "Primite obaveštenje kada neko piše putem kontakt forme.",
     "members": "Članovi",
@@ -1517,9 +1517,9 @@
     "availability": "Dostupnost",
     "save": "Sačuvaj",
     "cancel": "Otkaži",
-    "created": "Član tima je dodat.",
-    "updated": "Član tima je ažuriran.",
-    "deleted": "Član tima je uklonjen.",
+    "created": "Član tima dodat.",
+    "updated": "Član tima ažuriran.",
+    "deleted": "Član tima uklonjen.",
     "empty": "Još nema članova tima.",
     "error": "Greška pri čuvanju."
   },
@@ -1560,7 +1560,7 @@
       "funeral": "Sahrana",
       "confirmation": "Potvrda",
       "communion": "Pričešće",
-      "special": "Posebna",
+      "special": "Posebno",
       "other": "Ostalo"
     },
     "status": {
@@ -1632,14 +1632,14 @@
     "templateName": "Naziv šablona",
     "templateSaved": "Šablon sačuvan!",
     "exportPdf": "Izvezi PDF",
-    "sendEmail": "Pošalji putem emaila",
+    "sendEmail": "Pošalji putem e-pošte",
     "emailRecipient": "Email primaoca",
     "emailSend": "Pošalji",
     "emailSending": "Slanje…",
     "emailSent": "Email poslat!",
     "emailError": "Greška pri slanju.",
     "askBibleBot": "Pitajte BibleBot",
-    "assignTeam": "Dodelite tim",
+    "assignTeam": "Dodeli tim",
     "resourceSidebar": "Biblioteka",
     "error": "Greška pri čuvanju.",
     "deleteConfirm": "Obriši službu?",
@@ -1663,7 +1663,7 @@
     "procession": "Procesija",
     "titlePlaceholder": "Naslov…",
     "notesPlaceholder": "Beleške…",
-    "assignTo": "Dodelite…",
+    "assignTo": "Dodeli…",
     "duration": "Trajanje (min)",
     "delete": "Obriši blok",
     "moveUp": "Pomeri gore",
@@ -1713,7 +1713,7 @@
       "solemn": "Svečano",
       "comforting": "Utešno",
       "grateful": "Zahvalno",
-      "hopeful": "Puno nade"
+      "hopeful": "Nadežno"
     },
     "ceremonies": {
       "baptism": "Krštenje",

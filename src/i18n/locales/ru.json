@@ -1475,14 +1475,14 @@
     "welcomeMessage": "Приветственное сообщение",
     "welcomePlaceholder": "Добро пожаловать в нашу церковь…",
     "billing": "Выставление счетов",
-    "billingDesc": "Для выставления счетов и бухгалтерского учета.",
-    "billingName": "Имя для выставления счета",
+    "billingDesc": "Для выставления счетов и учета.",
+    "billingName": "Имя для выставления счетов",
     "billingAddress": "Адрес",
     "billingStreet": "Улица",
     "billingZip": "Почтовый индекс",
     "billingCity": "Город",
     "billingCountry": "Страна",
-    "billingEmail": "Электронная почта для выставления счета",
+    "billingEmail": "Электронная почта для выставления счетов",
     "billingRef": "Ссылка",
     "payment": "Способ оплаты",
     "notifications": "Уведомления",
@@ -1556,7 +1556,7 @@
     "type": {
       "regular": "Служение",
       "baptism": "Крещение",
-      "wedding": "Венчание",
+      "wedding": "Свадьба",
       "funeral": "Похороны",
       "confirmation": "Конфирмация",
       "communion": "Причастие",
@@ -1657,7 +1657,7 @@
     "liturgy": "Литургия",
     "announcement": "Объявление",
     "blessing": "Благословение",
-    "silence": "Молчание",
+    "silence": "Тишина",
     "freeText": "Свободный текст",
     "offering": "Пожертвование",
     "procession": "Процессия",
@@ -1701,7 +1701,7 @@
     "deleted": "Ресурс удален.",
     "error": "Ошибка сохранения.",
     "sidebar": "Библиотека",
-    "addToService": "Добавить в служение",
+    "addToService": "Добавить к служению",
     "fixedCategories": {
       "mood": "Настроение",
       "ceremony": "Церемония",
@@ -1717,7 +1717,7 @@
     },
     "ceremonies": {
       "baptism": "Крещение",
-      "wedding": "Венчание",
+      "wedding": "Свадьба",
       "funeral": "Похороны",
       "confirmation": "Конфирмация",
       "communion": "Причастие"
@@ -1797,7 +1797,7 @@
   },
   "recordTypes": {
     "baptism": "Крещение",
-    "wedding": "Венчание",
+    "wedding": "Свадьба",
     "funeral": "Похороны"
   }
 }

@@ -1424,10 +1424,10 @@
     "explainRef": "Explain {{ref}} in detail."
   },
   "records": {
-    "title": "Kyrkobok",
+    "title": "Kyrkoregister",
     "search": "Sök poster…",
     "add": "Ny post",
-    "addTitle": "Ny kyrkobokspost",
+    "addTitle": "Ny registerpost",
     "editTitle": "Redigera post",
     "empty": "Inga poster registrerade än.",
     "entries": "Poster",
@@ -1446,7 +1446,7 @@
     "cancel": "Avbryt",
     "created": "Post skapad.",
     "updated": "Post uppdaterad.",
-    "deleted": "Post borttagen.",
+    "deleted": "Post raderad.",
     "error": "Fel vid sparande."
   },
   "settings": {
@@ -1526,7 +1526,7 @@
   "dashboard": {
     "title": "Gudstjänstplanerare",
     "welcome": "Välkommen till BibleBot.Life",
-    "setupHint": "Ställ in din kyrka först för att använda Gudstjänstplaneraren.",
+    "setupHint": "Konfigurera din kyrka först för att använda Gudstjänstplaneraren.",
     "loading": "Laddar…",
     "newService": "Ny gudstjänst",
     "newServiceDesc": "Skapa och planera en gudstjänst",
@@ -1538,8 +1538,8 @@
     "team": "Team",
     "resources": "Bibliotek",
     "templates": "Mallar",
-    "series": "Predikoserier",
-    "records": "Kyrkobok",
+    "series": "Predikoserie",
+    "records": "Kyrkoregister",
     "invoices": "Fakturor",
     "settings": "Inställningar",
     "conductor": "Dirigent",
@@ -1571,12 +1571,12 @@
     "actions": {
       "edit": "Redigera",
       "duplicate": "Duplicera",
-      "delete": "Ta bort",
+      "delete": "Radera",
       "archive": "Arkivera",
       "publish": "Publicera",
       "draft": "Ange som utkast",
       "conductor": "Dirigentläge",
-      "deleteConfirm": "Ta bort gudstjänst?",
+      "deleteConfirm": "Radera gudstjänst?",
       "deleteDesc": "Denna gudstjänst kommer att raderas permanent.",
       "cancel": "Avbryt"
     },
@@ -1642,9 +1642,9 @@
     "assignTeam": "Tilldela team",
     "resourceSidebar": "Bibliotek",
     "error": "Fel vid sparande.",
-    "deleteConfirm": "Ta bort gudstjänst?",
+    "deleteConfirm": "Radera gudstjänst?",
     "deleteDesc": "Denna gudstjänst kommer att raderas permanent.",
-    "deleted": "Gudstjänst borttagen.",
+    "deleted": "Gudstjänst raderad.",
     "duplicated": "Gudstjänst duplicerad.",
     "statusChanged": "Status ändrad."
   },
@@ -1665,7 +1665,7 @@
     "notesPlaceholder": "Anteckningar…",
     "assignTo": "Tilldela till…",
     "duration": "Varaktighet (min)",
-    "delete": "Ta bort block",
+    "delete": "Radera block",
     "moveUp": "Flytta upp",
     "moveDown": "Flytta ner"
   },
@@ -1698,7 +1698,7 @@
     "cancel": "Avbryt",
     "created": "Resurs skapad.",
     "updated": "Resurs uppdaterad.",
-    "deleted": "Resurs borttagen.",
+    "deleted": "Resurs raderad.",
     "error": "Fel vid sparande.",
     "sidebar": "Bibliotek",
     "addToService": "Lägg till i gudstjänst",
@@ -1725,10 +1725,10 @@
     "seasons": {
       "advent": "Advent",
       "christmas": "Jul",
-      "lent": "Fastan",
+      "lent": "Fasta",
       "easter": "Påsk",
       "pentecost": "Pingst",
-      "ordinary": "Trettondedagstiden"
+      "ordinary": "Vanlig tid"
     }
   },
   "templates": {
@@ -1739,14 +1739,14 @@
     "default": "Standard",
     "custom": "Anpassad",
     "use": "Använd",
-    "delete": "Ta bort",
-    "deleted": "Mall borttagen.",
+    "delete": "Radera",
+    "deleted": "Mall raderad.",
     "error": "Fel."
   },
   "series": {
-    "title": "Predikoserier",
+    "title": "Predikoserie",
     "add": "Ny serie",
-    "empty": "Inga predikoserier än.",
+    "empty": "Inga predikoserie än.",
     "name": "Namn",
     "description": "Beskrivning",
     "startDate": "Startdatum",
@@ -1756,7 +1756,7 @@
     "cancel": "Avbryt",
     "created": "Serie skapad.",
     "updated": "Serie uppdaterad.",
-    "deleted": "Serie borttagen.",
+    "deleted": "Serie raderad.",
     "error": "Fel vid sparande."
   },
   "invoices": {
@@ -1775,7 +1775,7 @@
     "error": "Fel."
   },
   "wizard": {
-    "title": "Ställ in kyrka",
+    "title": "Konfigurera kyrka",
     "churchName": "Kyrkans namn",
     "slug": "URL-slug",
     "denomination": "Samfund",

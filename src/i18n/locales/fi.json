@@ -1524,9 +1524,9 @@
     "error": "Virhe tallennettaessa."
   },
   "dashboard": {
-    "title": "Jumalanpalvelussuunnittelija",
+    "title": "Jumalanpalveluksen suunnittelija",
     "welcome": "Tervetuloa BibleBot.Lifeen",
-    "setupHint": "Määritä ensin kirkkosi käyttääksesi jumalanpalvelussuunnittelijaa.",
+    "setupHint": "Määritä ensin kirkkosi käyttääksesi jumalanpalveluksen suunnittelijaa.",
     "loading": "Ladataan…",
     "newService": "Uusi jumalanpalvelus",
     "newServiceDesc": "Luo ja suunnittele jumalanpalvelus",
