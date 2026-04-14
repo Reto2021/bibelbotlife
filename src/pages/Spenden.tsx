@@ -22,6 +22,13 @@ function DonationThankYou() {
   const [searchParams] = useSearchParams();
   const sessionId = searchParams.get("session_id");
 
+  // Mark donation in localStorage so the chat nudge disappears
+  useState(() => {
+    if (sessionId) {
+      try { localStorage.setItem("bibelbot-donated-at", Date.now().toString()); } catch {}
+    }
+  });
+
   return (
     <div className="min-h-screen bg-background">
       <SiteHeader />
