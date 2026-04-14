@@ -12,17 +12,17 @@ const TYPE_ICONS: Record<string, React.ReactNode> = {
   other: <Tag className="h-3.5 w-3.5" />,
 };
 
-/** Maps block types to the resource_type they should search */
-const BLOCK_TO_RESOURCE: Record<BlockType, string | null> = {
+/** Maps block types to the resource_type they should search. "any" = show all types. */
+const BLOCK_TO_RESOURCE: Record<BlockType, string | "any"> = {
   song: "song",
   reading: "reading",
   prayer: "prayer",
   liturgy: "liturgy",
-  sermon: null,
-  blessing: null,
+  sermon: "any",
+  blessing: "prayer",
   communion: "liturgy",
-  announcement: null,
-  free: null,
+  announcement: "any",
+  free: "any",
   music: "song",
 };
 
@@ -45,8 +45,8 @@ export function ResourceSuggest({ query, blockType, onSelect, visible }: Resourc
     const q = query.toLowerCase();
     return resources
       .filter((r) => {
-        // Filter by resource type if block has a matching type
-        if (resourceType && r.resource_type !== resourceType) return false;
+        // Filter by resource type if block has a specific matching type
+        if (resourceType !== "any" && r.resource_type !== resourceType) return false;
         return (
           r.title.toLowerCase().includes(q) ||
           (r.content ?? "").toLowerCase().includes(q) ||
