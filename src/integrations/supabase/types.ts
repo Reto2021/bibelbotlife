@@ -1894,6 +1894,7 @@ export type Database = {
           total_conversions: number
         }[]
       }
+      get_registered_user_count: { Args: never; Returns: number }
       get_shared_draft: {
         Args: { p_token: string }
         Returns: {

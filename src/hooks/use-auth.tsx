@@ -28,8 +28,23 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         setUser(session?.user ?? null);
         setIsLoading(false);
 
-        // After OAuth signup, link church membership if consent was stored
+        // GHL sync on first sign-up
         if (event === "SIGNED_IN" && session?.user) {
+          const syncKey = `biblebot-ghl-synced-${session.user.id}`;
+          if (!localStorage.getItem(syncKey)) {
+            localStorage.setItem(syncKey, "1");
+            supabase.functions.invoke("ghl-sync", {
+              body: {
+                type: "user_registered",
+                data: {
+                  email: session.user.email || "",
+                  firstName: session.user.user_metadata?.full_name || "",
+                },
+              },
+            }).catch(() => {});
+          }
+
+          // After OAuth signup, link church membership if consent was stored
           const consent = sessionStorage.getItem("biblebot-church-consent");
           const slug = localStorage.getItem("biblebot-church");
           if (consent !== null && slug) {

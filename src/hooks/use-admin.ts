@@ -35,13 +35,14 @@ export function useAdminStats() {
   return useQuery({
     queryKey: ["admin-stats"],
     queryFn: async () => {
-      const [churches, subscribers, todayMessages] = await Promise.all([
+      const [churches, subscribers, todayMessages, registeredUsers] = await Promise.all([
         supabase.from("church_partners").select("id, subscription_status, subscription_expires_at, is_active"),
         supabase.from("daily_subscribers").select("id", { count: "exact", head: true }).eq("is_active", true),
         supabase
           .from("chat_messages")
           .select("id", { count: "exact", head: true })
           .gte("created_at", new Date().toISOString().split("T")[0]),
+        supabase.rpc("get_registered_user_count" as any),
       ]);
 
       const allChurches = churches.data ?? [];
@@ -59,6 +60,7 @@ export function useAdminStats() {
         ).length,
         totalSubscribers: subscribers.count ?? 0,
         todayMessages: todayMessages.count ?? 0,
+        registeredUsers: (registeredUsers.data as unknown as number) ?? 0,
       };
     },
   });
