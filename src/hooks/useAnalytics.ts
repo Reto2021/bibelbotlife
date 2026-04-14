@@ -105,6 +105,7 @@ export const useAnalytics = () => {
         const { utm_source, utm_medium } = getUtmParams();
         await (supabase.from("analytics_events") as any).insert({
           session_id: sessionId.current,
+          visitor_id: visitorId.current,
           event_type: "event",
           page_path: location.pathname,
           event_name: eventName,
@@ -132,6 +133,7 @@ export const useAnalytics = () => {
     (supabase.from("analytics_events") as any)
       .insert({
         session_id: sessionId.current,
+        visitor_id: visitorId.current,
         event_type: "pageview",
         page_path: location.pathname,
         referrer: document.referrer || null,
@@ -151,6 +153,7 @@ export const useAnalytics = () => {
       (supabase.from("analytics_events") as any)
         .insert({
           session_id: sessionId.current,
+          visitor_id: visitorId.current,
           event_type: "event",
           event_name: "heartbeat",
           page_path: location.pathname,
