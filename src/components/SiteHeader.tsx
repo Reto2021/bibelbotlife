@@ -259,6 +259,10 @@ export function SiteHeader() {
             <Mail className="h-4 w-4 text-primary" />
             {t("nav.contact", "Kontakt")}
           </Link>
+          <Link to="/ueber-uns" className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-foreground hover:bg-primary/10 transition-colors" onClick={() => setMobileMenuOpen(false)}>
+            <Users className="h-4 w-4 text-primary" />
+            {t("nav.about", "Über uns")}
+          </Link>
 
           {/* Auth */}
           <div className="border-t border-border mt-2 pt-2">
