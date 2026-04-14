@@ -256,7 +256,6 @@ export default function ResourceLibrary() {
                 {LANGUAGES.find(l => l.value === r.language)?.label ?? r.language}
               </Badge>
             )}
-            )}
           </div>
           {r.content && (
             <p className="text-sm text-muted-foreground line-clamp-2 mb-2">{r.content}</p>
