@@ -251,7 +251,7 @@
     "purposeHeading": "How your donation is used",
     "purposeItem1": "Development and programming",
     "purposeItem2": "Servers, hosting, and technical operations",
-    "purposeItem3": "Global distribution and translations in over 35 languages",
+    "purposeItem3": "Global distribution and translations in over 38 languages",
     "purposeItem4": "Community care and support",
     "purposeItem5": "Administration and organizational management",
     "purposeItem6": "Education and digital faith outreach"
@@ -1045,7 +1045,7 @@
   "meta": {
     "forChurchesDesc": "A társad, mint partnere az Ön gyülekezetének: ifjúsági munka, konfirmáció, lelkigondozás és bibliai körök. Ingyenestől a prémiumig.",
     "forChurchesTitle": "Társad gyülekezeteknek – Digitális lelkigondozás és bibliai kísérés",
-    "homeDesc": "A társad 5 bibliafordítással, coaching módszertannal és lelkigondozással kíséri Önt. Névtelenül, ingyenesen, 36 nyelven.",
+    "homeDesc": "A társad 5 bibliafordítással, coaching módszertannal és lelkigondozással kíséri Önt. Névtelenül, ingyenesen, 38 nyelven.",
     "homeTitle": "Társad – Személyes Bibliai Kísérőd | Ingyenes és Névtelen",
     "loginDesc": "Jelentkezz be a társadba, hogy felkészítsd a személyes szertartásaidat.",
     "loginTitle": "Bejelentkezés – társad"
@@ -1185,7 +1185,7 @@
     "faq2q": "Biztonságosan tárolják az adataimat?",
     "faq2a": "Igen. Minden adat titkosítva van és Svájcban tárolódik. Csak Ön fér hozzá a tartalmához.",
     "faq3q": "Milyen nyelvek támogatottak?",
-    "faq3a": "Az interfész 36 nyelven érhető el. A szövegek bármilyen nyelven létrehozhatók.",
+    "faq3a": "Az interfész 38 nyelven érhető el. A szövegek bármilyen nyelven létrehozhatók.",
     "faq4q": "Használhatom a Karmester módot tableten?",
     "faq4a": "Igen! Az egész alkalmazás PWA-ként van optimalizálva mobilra – tökéletes tableten az emelvényen.",
     "faq5q": "Szükségem van technikai ismeretekre?",
