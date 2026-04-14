@@ -1447,7 +1447,7 @@
     "created": "Wpis utworzony.",
     "updated": "Wpis zaktualizowany.",
     "deleted": "Wpis usunięty.",
-    "error": "Błąd zapisu."
+    "error": "Błąd podczas zapisywania."
   },
   "settings": {
     "title": "Ustawienia",
@@ -1499,7 +1499,7 @@
     "save": "Zapisz",
     "saving": "Zapisywanie…",
     "saved": "Zapisano!",
-    "error": "Błąd zapisu."
+    "error": "Błąd podczas zapisywania."
   },
   "team": {
     "title": "Zespół",
@@ -1521,11 +1521,11 @@
     "updated": "Członek zespołu zaktualizowany.",
     "deleted": "Członek zespołu usunięty.",
     "empty": "Brak członków zespołu.",
-    "error": "Błąd zapisu."
+    "error": "Błąd podczas zapisywania."
   },
   "dashboard": {
     "title": "Planer nabożeństw",
-    "welcome": "Witamy w BibleBot.Life",
+    "welcome": "Witaj w BibleBot.Life",
     "setupHint": "Najpierw skonfiguruj swoją parafię, aby korzystać z Planera nabożeństw.",
     "loading": "Ładowanie…",
     "newService": "Nowe nabożeństwo",
@@ -1542,7 +1542,7 @@
     "records": "Rejestr kościelny",
     "invoices": "Faktury",
     "settings": "Ustawienia",
-    "conductor": "Tryb dyrygenta",
+    "conductor": "Tryb prowadzącego",
     "home": "Przegląd"
   },
   "services": {
@@ -1575,7 +1575,7 @@
       "archive": "Archiwizuj",
       "publish": "Opublikuj",
       "draft": "Ustaw jako szkic",
-      "conductor": "Tryb dyrygenta",
+      "conductor": "Tryb prowadzącego",
       "deleteConfirm": "Usunąć nabożeństwo?",
       "deleteDesc": "To nabożeństwo zostanie trwale usunięte.",
       "cancel": "Anuluj"
@@ -1641,7 +1641,7 @@
     "askBibleBot": "Zapytaj BibleBot",
     "assignTeam": "Przypisz zespół",
     "resourceSidebar": "Biblioteka",
-    "error": "Błąd zapisu.",
+    "error": "Błąd podczas zapisywania.",
     "deleteConfirm": "Usunąć nabożeństwo?",
     "deleteDesc": "To nabożeństwo zostanie trwale usunięte.",
     "deleted": "Nabożeństwo usunięte.",
@@ -1666,11 +1666,11 @@
     "assignTo": "Przypisz do…",
     "duration": "Czas trwania (min)",
     "delete": "Usuń blok",
-    "moveUp": "Przesuń w górę",
-    "moveDown": "Przesuń w dół"
+    "moveUp": "Przenieś w górę",
+    "moveDown": "Przenieś w dół"
   },
   "conductor": {
-    "title": "Tryb dyrygenta",
+    "title": "Tryb prowadzącego",
     "start": "Start",
     "exit": "Wyjdź",
     "prev": "Poprzedni",
@@ -1699,7 +1699,7 @@
     "created": "Zasób utworzony.",
     "updated": "Zasób zaktualizowany.",
     "deleted": "Zasób usunięty.",
-    "error": "Błąd zapisu.",
+    "error": "Błąd podczas zapisywania.",
     "sidebar": "Biblioteka",
     "addToService": "Dodaj do nabożeństwa",
     "fixedCategories": {
@@ -1737,7 +1737,7 @@
     "empty": "Brak szablonów.",
     "blocks": "{{count}} bloków",
     "default": "Domyślny",
-    "custom": "Niestandardowy",
+    "custom": "Własny",
     "use": "Użyj",
     "delete": "Usuń",
     "deleted": "Szablon usunięty.",
@@ -1757,7 +1757,7 @@
     "created": "Seria utworzona.",
     "updated": "Seria zaktualizowana.",
     "deleted": "Seria usunięta.",
-    "error": "Błąd zapisu."
+    "error": "Błąd podczas zapisywania."
   },
   "invoices": {
     "title": "Faktury",
@@ -1784,7 +1784,7 @@
     "submit": "Utwórz parafię",
     "creating": "Tworzenie…",
     "created": "Parafia utworzona!",
-    "error": "Błąd tworzenia."
+    "error": "Błąd podczas tworzenia."
   },
   "teamRoles": {
     "pastor": "Pastor",

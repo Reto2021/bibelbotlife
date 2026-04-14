@@ -1526,7 +1526,7 @@
   "dashboard": {
     "title": "Pianificatore di Servizi",
     "welcome": "Benvenuti su BibleBot.Life",
-    "setupHint": "Configura prima la tua chiesa per usare il Pianificatore di Servizi.",
+    "setupHint": "Configura prima la tua chiesa per utilizzare il Pianificatore di Servizi.",
     "loading": "Caricamento…",
     "newService": "Nuovo servizio",
     "newServiceDesc": "Crea e pianifica un servizio",
@@ -1542,7 +1542,7 @@
     "records": "Registro della Chiesa",
     "invoices": "Fatture",
     "settings": "Impostazioni",
-    "conductor": "Modalità Direttore",
+    "conductor": "Modalità Conduttore",
     "home": "Panoramica"
   },
   "services": {
@@ -1575,7 +1575,7 @@
       "archive": "Archivia",
       "publish": "Pubblica",
       "draft": "Imposta come bozza",
-      "conductor": "Modalità Direttore",
+      "conductor": "Modalità Conduttore",
       "deleteConfirm": "Eliminare il servizio?",
       "deleteDesc": "Questo servizio verrà eliminato permanentemente.",
       "cancel": "Annulla"
@@ -1633,7 +1633,7 @@
     "templateSaved": "Modello salvato!",
     "exportPdf": "Esporta PDF",
     "sendEmail": "Invia via email",
-    "emailRecipient": "Email del destinatario",
+    "emailRecipient": "Email destinatario",
     "emailSend": "Invia",
     "emailSending": "Invio…",
     "emailSent": "Email inviata!",
@@ -1670,7 +1670,7 @@
     "moveDown": "Sposta giù"
   },
   "conductor": {
-    "title": "Modalità Direttore",
+    "title": "Modalità Conduttore",
     "start": "Inizia",
     "exit": "Esci",
     "prev": "Precedente",

@@ -1526,7 +1526,7 @@
   "dashboard": {
     "title": "Planificateur de services",
     "welcome": "Bienvenue sur BibleBot.Life",
-    "setupHint": "Configurez d'abord votre église pour utiliser le Planificateur de services.",
+    "setupHint": "Configurez d'abord votre église pour utiliser le planificateur de services.",
     "loading": "Chargement…",
     "newService": "Nouveau service",
     "newServiceDesc": "Créer et planifier un service",
@@ -1542,7 +1542,7 @@
     "records": "Registre de l'église",
     "invoices": "Factures",
     "settings": "Paramètres",
-    "conductor": "Mode Chef de Culte",
+    "conductor": "Mode chef de chœur",
     "home": "Aperçu"
   },
   "services": {
@@ -1575,7 +1575,7 @@
       "archive": "Archiver",
       "publish": "Publier",
       "draft": "Définir comme brouillon",
-      "conductor": "Mode Chef de Culte",
+      "conductor": "Mode chef de chœur",
       "deleteConfirm": "Supprimer le service ?",
       "deleteDesc": "Ce service sera définitivement supprimé.",
       "cancel": "Annuler"
@@ -1670,7 +1670,7 @@
     "moveDown": "Déplacer vers le bas"
   },
   "conductor": {
-    "title": "Mode Chef de Culte",
+    "title": "Mode chef de chœur",
     "start": "Démarrer",
     "exit": "Quitter",
     "prev": "Précédent",

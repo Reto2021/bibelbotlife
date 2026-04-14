@@ -1484,10 +1484,10 @@
     "billingCountry": "Země",
     "billingEmail": "E-mail pro fakturaci",
     "billingRef": "Reference",
-    "payment": "Způsob platby",
+    "payment": "Platební metoda",
     "notifications": "Oznámení",
     "notificationsDesc": "Konfigurace e-mailových oznámení.",
-    "notifyOnContact": "Při kontaktních žádostech",
+    "notifyOnContact": "Při žádostech o kontakt",
     "notifyOnContactDesc": "Obdržet oznámení, když někdo napíše prostřednictvím kontaktního formuláře.",
     "members": "Členové",
     "membersDesc": "Členové, kteří se zaregistrovali prostřednictvím vaší církevní stránky.",
@@ -1542,7 +1542,7 @@
     "records": "Církevní matrika",
     "invoices": "Faktury",
     "settings": "Nastavení",
-    "conductor": "Režisér",
+    "conductor": "Dirigent",
     "home": "Přehled"
   },
   "services": {
@@ -1575,7 +1575,7 @@
       "archive": "Archivovat",
       "publish": "Zveřejnit",
       "draft": "Nastavit jako koncept",
-      "conductor": "Režisérský režim",
+      "conductor": "Režim dirigenta",
       "deleteConfirm": "Smazat bohoslužbu?",
       "deleteDesc": "Tato bohoslužba bude trvale smazána.",
       "cancel": "Zrušit"
@@ -1670,7 +1670,7 @@
     "moveDown": "Posunout dolů"
   },
   "conductor": {
-    "title": "Režisérský režim",
+    "title": "Režim dirigenta",
     "start": "Spustit",
     "exit": "Ukončit",
     "prev": "Předchozí",
@@ -1708,12 +1708,12 @@
       "season": "Liturgické období"
     },
     "moods": {
-      "joyful": "Radostná",
-      "reflective": "Zamyšlená",
+      "joyful": "Radostný",
+      "reflective": "Zamyšlený",
       "solemn": "Slavnostní",
       "comforting": "Uklidňující",
-      "grateful": "Vděčná",
-      "hopeful": "Nadějná"
+      "grateful": "Vděčný",
+      "hopeful": "Nadějný"
     },
     "ceremonies": {
       "baptism": "Křest",

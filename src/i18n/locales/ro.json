@@ -1478,7 +1478,7 @@
     "billingDesc": "Pentru facturare și contabilitate.",
     "billingName": "Nume de facturare",
     "billingAddress": "Adresă",
-    "billingStreet": "Strada",
+    "billingStreet": "Stradă",
     "billingZip": "Cod poștal",
     "billingCity": "Oraș",
     "billingCountry": "Țară",
@@ -1526,7 +1526,7 @@
   "dashboard": {
     "title": "Planificator de Slujbe",
     "welcome": "Bun venit la BibleBot.Life",
-    "setupHint": "Configurați mai întâi biserica pentru a utiliza Planificatorul de Slujbe.",
+    "setupHint": "Configurați mai întâi biserica dumneavoastră pentru a utiliza Planificatorul de Slujbe.",
     "loading": "Se încarcă…",
     "newService": "Slujbă nouă",
     "newServiceDesc": "Creați și planificați o slujbă",
@@ -1629,7 +1629,7 @@
     "templatePicker": "Alegeți șablon",
     "noTemplate": "Începeți fără șablon",
     "saveAsTemplate": "Salvați ca șablon",
-    "templateName": "Numele șablonului",
+    "templateName": "Nume șablon",
     "templateSaved": "Șablon salvat!",
     "exportPdf": "Exportați PDF",
     "sendEmail": "Trimiteți prin email",
@@ -1676,7 +1676,7 @@
     "prev": "Anterior",
     "next": "Următor",
     "block": "Bloc {{current}} din {{total}}",
-    "noBlocks": "Nu sunt blocuri disponibile.",
+    "noBlocks": "Niciun bloc disponibil.",
     "loading": "Se încarcă…"
   },
   "resources": {
@@ -1725,10 +1725,10 @@
     "seasons": {
       "advent": "Advent",
       "christmas": "Crăciun",
-      "lent": "Postul Mare",
+      "lent": "Post",
       "easter": "Paște",
       "pentecost": "Rusalii",
-      "ordinary": "Timp Obișnuit"
+      "ordinary": "Timp obișnuit"
     }
   },
   "templates": {
@@ -1763,21 +1763,21 @@
     "title": "Facturi",
     "add": "Factură nouă",
     "empty": "Nicio factură încă.",
-    "number": "Numărul facturii",
+    "number": "Număr factură",
     "date": "Data",
     "dueDate": "Data scadenței",
-    "amount": "Suma",
+    "amount": "Sumă",
     "status": "Status",
     "draft": "Ciornă",
-    "sent": "Trimis",
-    "paid": "Plătit",
+    "sent": "Trimisă",
+    "paid": "Plătită",
     "download": "Descărcați PDF",
     "error": "Eroare."
   },
   "wizard": {
     "title": "Configurați biserica",
     "churchName": "Numele bisericii",
-    "slug": "URL slug",
+    "slug": "Slug URL",
     "denomination": "Confesiune",
     "city": "Oraș",
     "country": "Țară",
