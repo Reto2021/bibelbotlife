@@ -13,6 +13,7 @@ import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import { ChurchDetailDrawer } from "./ChurchDetailDrawer";
+import { StatDrillDown } from "./StatDrillDown";
 import type { Tables } from "@/integrations/supabase/types";
 
 const PLAN_COLORS: Record<string, string> = {
@@ -38,6 +39,7 @@ export default function AdminDashboard() {
   const [planFilter, setPlanFilter] = useState("all");
   const [statusFilter, setStatusFilter] = useState("all");
   const [selectedChurch, setSelectedChurch] = useState<Tables<"church_partners"> | null>(null);
+  const [drillDown, setDrillDown] = useState<"users" | "subscribers" | "chats" | null>(null);
 
   const filtered = useMemo(() => {
     if (!churches) return [];
@@ -53,12 +55,12 @@ export default function AdminDashboard() {
   }, [churches, search, planFilter, statusFilter]);
 
   const statCards = [
-    { label: "Registrierte User", value: stats?.registeredUsers ?? "–", icon: UserPlus, color: "text-blue-600" },
-    { label: "Gemeinden", value: stats?.totalChurches ?? "–", icon: Building2, color: "text-primary" },
-    { label: "Aktive Abos", value: stats?.activeSubscriptions ?? "–", icon: TrendingUp, color: "text-green-600" },
-    { label: "Ablaufend (30d)", value: stats?.expiringSoon ?? "–", icon: AlertTriangle, color: "text-yellow-600" },
-    { label: "Abonnenten", value: stats?.totalSubscribers ?? "–", icon: Users, color: "text-secondary" },
-    { label: "Chats heute", value: stats?.todayMessages ?? "–", icon: MessageCircle, color: "text-primary" },
+    { label: "Registrierte User", value: stats?.registeredUsers ?? "–", icon: UserPlus, color: "text-blue-600", drill: "users" as const },
+    { label: "Gemeinden", value: stats?.totalChurches ?? "–", icon: Building2, color: "text-primary", drill: null },
+    { label: "Aktive Abos", value: stats?.activeSubscriptions ?? "–", icon: TrendingUp, color: "text-green-600", drill: null },
+    { label: "Ablaufend (30d)", value: stats?.expiringSoon ?? "–", icon: AlertTriangle, color: "text-yellow-600", drill: null },
+    { label: "Abonnenten", value: stats?.totalSubscribers ?? "–", icon: Users, color: "text-secondary", drill: "subscribers" as const },
+    { label: "Chats heute", value: stats?.todayMessages ?? "–", icon: MessageCircle, color: "text-primary", drill: "chats" as const },
   ];
 
   return (
@@ -104,7 +106,11 @@ export default function AdminDashboard() {
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {statCards.map((s) => (
-            <Card key={s.label}>
+            <Card
+              key={s.label}
+              className={s.drill ? "cursor-pointer hover:ring-2 hover:ring-primary/30 transition-all" : ""}
+              onClick={() => s.drill && setDrillDown(s.drill)}
+            >
               <CardHeader className="pb-2">
                 <CardTitle className="text-sm font-medium text-muted-foreground flex items-center gap-2">
                   <s.icon className={`h-4 w-4 ${s.color}`} />
@@ -113,6 +119,7 @@ export default function AdminDashboard() {
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold">{s.value}</div>
+                {s.drill && <p className="text-xs text-muted-foreground mt-1">Klick für Details</p>}
               </CardContent>
             </Card>
           ))}
@@ -227,6 +234,12 @@ export default function AdminDashboard() {
         church={selectedChurch}
         open={!!selectedChurch}
         onClose={() => setSelectedChurch(null)}
+      />
+
+      <StatDrillDown
+        type={drillDown}
+        open={!!drillDown}
+        onClose={() => setDrillDown(null)}
       />
     </div>
   );
