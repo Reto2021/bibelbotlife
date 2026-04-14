@@ -47,6 +47,16 @@ const COUNTRIES = [
   { value: "INT", label: "🌍 International" },
 ];
 
+const LANGUAGES = [
+  { value: "de", label: "🇩🇪 Deutsch" },
+  { value: "en", label: "🇬🇧 English" },
+  { value: "fr", label: "🇫🇷 Français" },
+  { value: "es", label: "🇪🇸 Español" },
+  { value: "it", label: "🇮🇹 Italiano" },
+  { value: "pt", label: "🇵🇹 Português" },
+  { value: "nl", label: "🇳🇱 Nederlands" },
+];
+
 const FIXED_TAG_CATEGORIES = [
   {
     label: "Stimmung",
