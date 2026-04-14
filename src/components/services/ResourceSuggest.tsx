@@ -45,8 +45,8 @@ export function ResourceSuggest({ query, blockType, onSelect, visible }: Resourc
     const q = query.toLowerCase();
     return resources
       .filter((r) => {
-        // Filter by resource type if block has a matching type
-        if (resourceType && r.resource_type !== resourceType) return false;
+        // Filter by resource type if block has a specific matching type
+        if (resourceType !== "any" && r.resource_type !== resourceType) return false;
         return (
           r.title.toLowerCase().includes(q) ||
           (r.content ?? "").toLowerCase().includes(q) ||
