@@ -77,6 +77,116 @@ export default function UeberUns() {
           </CardContent>
         </Card>
 
+        {/* 3-Level Approach */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-foreground mb-2 text-center">
+            {t("about.approachTitle", "Unser Ansatz")}
+          </h2>
+          <p className="text-muted-foreground text-center mb-8 max-w-2xl mx-auto">
+            {t("about.approachSubtitle", "Seelsorge beginnt nicht erst im persönlichen Gespräch. Sie beginnt dort, wo Menschen Fragen haben – oft still, oft nachts, oft allein.")}
+          </p>
+
+          <div className="relative flex flex-col items-center gap-0">
+            {/* Level 1 – BibleBot – widest */}
+            <div className="w-full max-w-2xl">
+              <Card className="border-primary/30 bg-primary/5 relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-1 h-full bg-primary rounded-l-lg" />
+                <CardContent className="p-5 pl-6">
+                  <div className="flex items-start gap-4">
+                    <div className="rounded-full bg-primary/15 p-2.5 shrink-0 mt-0.5">
+                      <MessageCircle className="h-5 w-5 text-primary" />
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-2 mb-1">
+                        <span className="text-xs font-bold uppercase tracking-wider text-primary">
+                          {t("about.level1Badge", "Erste Anlaufstelle")}
+                        </span>
+                      </div>
+                      <h3 className="font-bold text-foreground text-lg">BibleBot.Life</h3>
+                      <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
+                        {t("about.level1Desc", "Rund um die Uhr da, anonym und ohne Hemmschwelle. Für alle, die eine Frage haben, einen Impuls suchen oder einfach nicht allein sein möchten – der erste Schritt ist der leichteste.")}
+                      </p>
+                      <div className="flex flex-wrap gap-2 mt-2.5">
+                        <span className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full">24/7</span>
+                        <span className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full">{t("about.tag_anonymous", "Anonym")}</span>
+                        <span className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full">{t("about.tag_free", "Kostenlos")}</span>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Connector */}
+            <div className="w-px h-6 bg-border" />
+
+            {/* Level 2 – Gottesdienst – medium */}
+            <div className="w-full max-w-lg">
+              <Card className="relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-1 h-full bg-secondary rounded-l-lg" />
+                <CardContent className="p-5 pl-6">
+                  <div className="flex items-start gap-4">
+                    <div className="rounded-full bg-secondary/15 p-2.5 shrink-0 mt-0.5">
+                      <Church className="h-5 w-5 text-secondary" />
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-2 mb-1">
+                        <span className="text-xs font-bold uppercase tracking-wider text-secondary">
+                          {t("about.level2Badge", "Gemeinschaft")}
+                        </span>
+                      </div>
+                      <h3 className="font-bold text-foreground text-lg">{t("about.level2Title", "Gottesdienst & Gemeinde")}</h3>
+                      <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
+                        {t("about.level2Desc", "Zusammenkommen, zuhören, miteinander feiern. Der Gottesdienst gibt dem Glauben ein Zuhause in der Gemeinschaft.")}
+                      </p>
+                      <div className="flex flex-wrap gap-2 mt-2.5">
+                        <span className="text-xs bg-secondary/10 text-secondary px-2 py-0.5 rounded-full">{t("about.tag_weekly", "Wöchentlich")}</span>
+                        <span className="text-xs bg-secondary/10 text-secondary px-2 py-0.5 rounded-full">{t("about.tag_community", "Gemeinschaft")}</span>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Connector */}
+            <div className="w-px h-6 bg-border" />
+
+            {/* Level 3 – Seelsorge – narrowest */}
+            <div className="w-full max-w-sm">
+              <Card className="relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-1 h-full bg-accent-foreground/50 rounded-l-lg" />
+                <CardContent className="p-5 pl-6">
+                  <div className="flex items-start gap-4">
+                    <div className="rounded-full bg-accent p-2.5 shrink-0 mt-0.5">
+                      <HeartHandshake className="h-5 w-5 text-accent-foreground" />
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-2 mb-1">
+                        <span className="text-xs font-bold uppercase tracking-wider text-accent-foreground/70">
+                          {t("about.level3Badge", "Persönlich")}
+                        </span>
+                      </div>
+                      <h3 className="font-bold text-foreground text-lg">{t("about.level3Title", "1:1 Seelsorge")}</h3>
+                      <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
+                        {t("about.level3Desc", "Das vertrauliche Gespräch unter vier Augen. Für die Momente, die persönliche Begleitung brauchen.")}
+                      </p>
+                      <div className="flex flex-wrap gap-2 mt-2.5">
+                        <span className="text-xs bg-accent text-accent-foreground px-2 py-0.5 rounded-full">{t("about.tag_personal", "Persönlich")}</span>
+                        <span className="text-xs bg-accent text-accent-foreground px-2 py-0.5 rounded-full">{t("about.tag_individual", "Individuell")}</span>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          <p className="text-center text-sm text-muted-foreground mt-6 max-w-lg mx-auto italic">
+            {t("about.approachNote", "BibleBot.Life senkt die Hemmschwelle – und führt Menschen Schritt für Schritt näher zur Gemeinschaft und zur persönlichen Begleitung.")}
+          </p>
+        </section>
+
         {/* Founder */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
