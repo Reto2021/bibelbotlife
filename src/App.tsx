@@ -58,6 +58,7 @@ const ForCelebrants = lazy(() => import("./pages/ForCelebrants"));
 const ReferralPartner = lazy(() => import("./pages/ReferralPartner"));
 const Spenden = lazy(() => import("./pages/Spenden"));
 const Kontakt = lazy(() => import("./pages/Kontakt"));
+const UeberUns = lazy(() => import("./pages/UeberUns"));
 
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { ProtectedAdminRoute } from "@/components/ProtectedAdminRoute";
@@ -159,6 +160,7 @@ const App = () => {
                   <Route path="/spenden" element={<Spenden />} />
                   <Route path="/spenden/danke" element={<Spenden />} />
                   <Route path="/kontakt" element={<Kontakt />} />
+                  <Route path="/ueber-uns" element={<UeberUns />} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/reset-password" element={<ResetPassword />} />
                   <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>}>

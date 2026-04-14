@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import {
   Menu, X as XIcon, HandHeart, GraduationCap, Building2, HeartHandshake,
-  Send, FileText, ShieldCheck, LogIn, LogOut, User, Shield, MessageCircle, Heart,
+  Send, FileText, ShieldCheck, LogIn, LogOut, User, Users, Shield, MessageCircle, Heart,
   ChevronDown, BookOpen, Mail
 } from "lucide-react";
 import { AppLogo } from "@/components/AppLogo";
@@ -121,6 +121,12 @@ export function SiteHeader() {
                 <Link to="/kontakt" className="flex items-center gap-2 cursor-pointer">
                   <Mail className="h-4 w-4" />
                   {t("nav.contact", "Kontakt")}
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link to="/ueber-uns" className="flex items-center gap-2 cursor-pointer">
+                  <Users className="h-4 w-4" />
+                  {t("nav.about", "Über uns")}
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
@@ -252,6 +258,10 @@ export function SiteHeader() {
           <Link to="/kontakt" className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-foreground hover:bg-primary/10 transition-colors" onClick={() => setMobileMenuOpen(false)}>
             <Mail className="h-4 w-4 text-primary" />
             {t("nav.contact", "Kontakt")}
+          </Link>
+          <Link to="/ueber-uns" className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-foreground hover:bg-primary/10 transition-colors" onClick={() => setMobileMenuOpen(false)}>
+            <Users className="h-4 w-4 text-primary" />
+            {t("nav.about", "Über uns")}
           </Link>
 
           {/* Auth */}
