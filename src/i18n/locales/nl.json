@@ -899,7 +899,14 @@
         "title": "Freelance Celebranten",
         "desc": "Rouwsprekers, huwelijkscelbranten en onafhankelijke ceremonieleiders – met biografische tools en spraakplanning."
       }
-    }
+    },
+    "approachTitle": "Uw Digitale 1st-Level Kanaal",
+    "approachSubtitle": "De meeste mensen nemen niet direct contact op met een pastor. Ze googelen, ze mijmeren, ze blijven stil. BibleBot.Life ontmoet hen daar – als een laagdrempelig eerste contactpunt in uw gemeenschap van pastorale zorg.",
+    "approach1Desc": "24/7 beschikbaar, anoniem, gratis. Beantwoordt geloofsvragen, biedt inspiratie en gezelschap – zonder drempels. Uw digitale eerste contact.",
+    "approach2Desc": "BibleBot wekt belangstelling en bouwt vertrouwen op. De volgende stap: uw gemeenschap bezoeken. Wij linken direct naar uw kerktijden.",
+    "approach3Desc": "Wanneer vragen persoonlijke behoeften worden, verbindt BibleBot direct met uw pastorale zorg – met een contactformulier en ingebouwd vertrouwen.",
+    "approachNote": "BibleBot.Life vervangt pastorale zorg niet – het opent de deur ernaartoe. Als uw digitale 1st-level kanaal verlagen wij drempels en brengen we mensen naar u toe.",
+    "approachCta": "Partnerschap bespreken"
   },
   "institutions": {
     "badge": "Voor organisaties",
@@ -1843,7 +1850,24 @@
     "confession": "Confessie",
     "family": "Familie",
     "familyValue": "Getrouwd, twee kinderen",
-    "cta": "Vragen, ideeën, of gewoon gedag zeggen?"
+    "cta": "Vragen, ideeën, of gewoon gedag zeggen?",
+    "approachTitle": "Onze Aanpak",
+    "approachSubtitle": "Pastorale zorg begint niet met een persoonlijk gesprek. Het begint daar waar mensen vragen hebben – vaak stilzwijgend, vaak 's nachts, vaak alleen.",
+    "level1Badge": "Eerste Contactpunt",
+    "level1Desc": "Rond de klok beschikbaar, anoniem en drempelloos. Voor iedereen met een vraag, op zoek naar inspiratie, of gewoon niet alleen wil zijn – de eerste stap is de makkelijkste.",
+    "level2Badge": "Gemeenschap",
+    "level2Title": "Eredienst & Gemeenschap",
+    "level2Desc": "Samenkomen, luisteren, samen vieren. Eredienst geeft geloof een thuis in de gemeenschap.",
+    "level3Badge": "Persoonlijk",
+    "level3Title": "1:1 Pastorale Zorg",
+    "level3Desc": "Een vertrouwelijk, persoonlijk gesprek. Voor de momenten die persoonlijke begeleiding nodig hebben.",
+    "approachNote": "BibleBot.Life verlaagt de drempel – en begeleidt mensen stap voor stap dichter bij gemeenschap en persoonlijke ondersteuning.",
+    "tag_anonymous": "Anoniem",
+    "tag_free": "Gratis",
+    "tag_weekly": "Wekelijks",
+    "tag_community": "Gemeenschap",
+    "tag_personal": "Persoonlijk",
+    "tag_individual": "Individueel"
   },
   "nav.about": "Over ons"
 }

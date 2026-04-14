@@ -860,7 +860,14 @@
         "desc": "דחפים רוחניים משלימים ללקוחות בייעוץ פסיכו-סוציאלי או פסטורלי."
       }
     },
-    "patronageNote": "BibleBot.Life is run by a non-profit association and funded exclusively through voluntary donations and sponsorships. There is no advertising, no data sales, and no paid features. All contributions go directly toward development, technical operations, global distribution, and community management. Donations may be tax-deductible depending on your jurisdiction."
+    "patronageNote": "BibleBot.Life is run by a non-profit association and funded exclusively through voluntary donations and sponsorships. There is no advertising, no data sales, and no paid features. All contributions go directly toward development, technical operations, global distribution, and community management. Donations may be tax-deductible depending on your jurisdiction.",
+    "approachTitle": "ערוץ 1st-Level הדיגיטלי שלך",
+    "approachSubtitle": "רוב האנשים לא פונים ישירות לכומר. הם מחפשים בגוגל, הם מהרהרים, הם שותקים. BibleBot.Life פוגש אותם שם – כנקודת מגע ראשונה עם חסמים נמוכים במערכת הטיפול הפסטורלי שלך.",
+    "approach1Desc": "זמין 24/7, אנונימי, חינם. עונה על שאלות אמונה, מציע השראה, ומספק חברות – ללא חסמים כלל. נקודת המגע הראשונה הדיגיטלית שלך.",
+    "approach2Desc": "BibleBot מעורר עניין ובנה אמון. השלב הבא: ביקור בקהילה שלך. אנו מקשרים ישירות לזמני התפילות שלך.",
+    "approach3Desc": "כאשר שאלות הופכות לצרכים אישיים, BibleBot מתחבר ישירות לטיפול הפסטורלי שלך – עם טופס יצירת קשר ואמון מובנה.",
+    "approachNote": "BibleBot.Life אינו מחליף טיפול פסטורלי – הוא פותח לו את הדלת. כערוץ ה-1st-Level הדיגיטלי שלך, אנו מורידים חסמים ומביאים אנשים אליך.",
+    "approachCta": "דון בשיתוף פעולה"
   },
   "institutions": {
     "badge": "לארגונים",
@@ -1843,7 +1850,24 @@
     "confession": "שייכות דתית",
     "family": "משפחה",
     "familyValue": "נשוי, שני ילדים",
-    "cta": "שאלות, רעיונות או סתם רוצים להגיד שלום?"
+    "cta": "שאלות, רעיונות או סתם רוצים להגיד שלום?",
+    "approachTitle": "הגישה שלנו",
+    "approachSubtitle": "טיפול פסטורלי לא מתחיל בשיחה אישית. הוא מתחיל היכן שאנשים יש להם שאלות – לעיתים קרובות בשקט, לעיתים קרובות בלילה, לעיתים קרובות לבד.",
+    "level1Badge": "נקודת מגע ראשונה",
+    "level1Desc": "זמין מסביב לשעון, אנונימי וללא חסמים. לכל מי שיש לו שאלה, שמחפש השראה, או פשוט לא רוצה להיות לבד – הצעד הראשון הוא הקל ביותר.",
+    "level2Badge": "קהילה",
+    "level2Title": "תפילה וקהילה",
+    "level2Desc": "להתכנס יחד, להקשיב, לחגוג יחד. תפילה נותנת לאמונה בית בקהילה.",
+    "level3Badge": "אישי",
+    "level3Title": "טיפול פסטורלי 1:1",
+    "level3Desc": "שיחה חסויה, פנים אל פנים. לרגעים שדורשים הדרכה אישית.",
+    "approachNote": "BibleBot.Life מוריד חסמים – ומדריך אנשים צעד אחר צעד קרוב יותר לקהילה ותמיכה אישית.",
+    "tag_anonymous": "אנונימי",
+    "tag_free": "חינם",
+    "tag_weekly": "שבועי",
+    "tag_community": "קהילה",
+    "tag_personal": "אישי",
+    "tag_individual": "פרטני"
   },
   "nav.about": "אודותינו"
 }

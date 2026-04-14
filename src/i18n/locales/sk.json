@@ -860,7 +860,14 @@
         "title": "Nezávislí celebranti",
         "desc": "Pohrební rečníci, svadobní celebranti a nezávislí ceremoniári – s biografickými nástrojmi a plánovaním prejavov."
       }
-    }
+    },
+    "approachTitle": "Váš digitálny 1st-Level kanál",
+    "approachSubtitle": "Väčšina ľudí sa neobracia priamo na pastora. Googli, premýšľajú, mlčia. BibleBot.Life ich tam stretáva – ako kontaktný bod s nízkou bariérou vo vašom ekosystéme pastoračnej starostlivosti.",
+    "approach1Desc": "Dostupný 24/7, anonymne, zadarmo. Odpovedá na otázky viery, ponúka inšpiráciu a sprevádza – s nulovými bariérami. Váš digitálny prvý kontakt.",
+    "approach2Desc": "BibleBot podnecuje záujem a buduje dôveru. Ďalší krok: návšteva vašej komunity. Prepojíme priamo na časy bohoslužieb.",
+    "approach3Desc": "Keď sa otázky stanú osobnými potrebami, BibleBot sa priamo napojí na vašu pastoračnú starostlivosť – s kontaktným formulárom a zabudovanou dôverou.",
+    "approachNote": "BibleBot.Life nenahrádza pastoračnú starostlivosť – otvára jej dvere. Ako váš digitálny 1st-Level kanál znižujeme bariéry a privádzame k vám ľudí.",
+    "approachCta": "Diskutovať o partnerstve"
   },
   "institutions": {
     "badge": "Pre organizácie",
@@ -1843,7 +1850,24 @@
     "confession": "Vyznanie",
     "family": "Rodina",
     "familyValue": "Ženatý, dve deti",
-    "cta": "Máte otázky, nápady alebo nás len chcete pozdraviť?"
+    "cta": "Máte otázky, nápady alebo nás len chcete pozdraviť?",
+    "approachTitle": "Náš prístup",
+    "approachSubtitle": "Pastoračná starostlivosť nezačína osobným rozhovorom. Začína tam, kde ľudia majú otázky – často potichu, často v noci, často sami.",
+    "level1Badge": "Prvý kontaktný bod",
+    "level1Desc": "Dostupné nonstop, anonymne a bez bariér. Pre každého, kto má otázku, hľadá inšpiráciu alebo jednoducho nechce byť sám – prvý krok je najjednoduchší.",
+    "level2Badge": "Komunita",
+    "level2Title": "Bohoslužby & Komunita",
+    "level2Desc": "Stretávanie sa, počúvanie, spoločné oslavovanie. Bohoslužby dávajú viere domov v komunite.",
+    "level3Badge": "Osobné",
+    "level3Title": "Pastoračná starostlivosť 1:1",
+    "level3Desc": "Dôverný, osobný rozhovor. Pre chvíle, ktoré si vyžadujú osobnú radu.",
+    "approachNote": "BibleBot.Life znižuje bariéru – a postupne privádza ľudí bližšie ku komunite a osobnej podpore.",
+    "tag_anonymous": "Anonymné",
+    "tag_free": "Zadarmo",
+    "tag_weekly": "Týždenne",
+    "tag_community": "Komunita",
+    "tag_personal": "Osobné",
+    "tag_individual": "Individuálne"
   },
   "nav.about": "O nás"
 }

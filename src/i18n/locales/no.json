@@ -904,7 +904,14 @@
         "desc": "Supplerende åndelige impulser for klienter i psykososial eller sjelesørgerisk veiledning."
       }
     },
-    "patronageNote": "BibleBot.Life is run by a non-profit association and funded exclusively through voluntary donations and sponsorships. There is no advertising, no data sales, and no paid features. All contributions go directly toward development, technical operations, global distribution, and community management. Donations may be tax-deductible depending on your jurisdiction."
+    "patronageNote": "BibleBot.Life is run by a non-profit association and funded exclusively through voluntary donations and sponsorships. There is no advertising, no data sales, and no paid features. All contributions go directly toward development, technical operations, global distribution, and community management. Donations may be tax-deductible depending on your jurisdiction.",
+    "approachTitle": "Din Digitale 1st-Level Kanal",
+    "approachSubtitle": "De fleste tar ikke kontakt direkte med en pastor. De googler, de grubler, de forblir tause. BibleBot.Life møter dem der – som en lavterskel første kontaktpunkt i ditt sjelesorgøkosystem.",
+    "approach1Desc": "Tilgjengelig 24/7, anonymt, gratis. Svarer på trosspørsmål, tilbyr inspirasjon og gir selskap – uten barrierer. Din digitale første kontakt.",
+    "approach2Desc": "BibleBot vekker interesse og bygger tillit. Neste steg: besøke ditt fellesskap. Vi lenker direkte til dine gudstjenestetider.",
+    "approach3Desc": "Når spørsmål blir personlige behov, kobler BibleBot direkte til din sjelesorg – med et kontaktskjema og innebygd tillit.",
+    "approachNote": "BibleBot.Life erstatter ikke sjelesorg – den åpner døren til den. Som din digitale 1st-level kanal, senker vi barrierer og bringer folk til deg.",
+    "approachCta": "Diskuter Partnerskap"
   },
   "institutions": {
     "badge": "For organisasjoner",
@@ -1843,7 +1850,24 @@
     "confession": "Trossamfunn",
     "family": "Familie",
     "familyValue": "Gift, to barn",
-    "cta": "Spørsmål, ideer eller bare lyst til å si hei?"
+    "cta": "Spørsmål, ideer eller bare lyst til å si hei?",
+    "approachTitle": "Vår Tilnærming",
+    "approachSubtitle": "Sjelesorg starter ikke med en personlig samtale. Den starter der folk har spørsmål – ofte stille, ofte om natten, ofte alene.",
+    "level1Badge": "Første Kontaktpunkt",
+    "level1Desc": "Tilgjengelig døgnet rundt, anonymt og uten barrierer. For alle som har et spørsmål, søker inspirasjon, eller bare ikke ønsker å være alene – det første steget er det enkleste.",
+    "level2Badge": "Fellesskap",
+    "level2Title": "Gudstjeneste & Fellesskap",
+    "level2Desc": "Å samles, lytte, feire sammen. Gudstjenesten gir troen et hjem i fellesskapet.",
+    "level3Badge": "Personlig",
+    "level3Title": "1:1 Sjelesorg",
+    "level3Desc": "En konfidensiell, samtale ansikt til ansikt. For de øyeblikkene som trenger personlig veiledning.",
+    "approachNote": "BibleBot.Life senker terskelen – og guider mennesker steg for steg nærmere fellesskap og personlig støtte.",
+    "tag_anonymous": "Anonym",
+    "tag_free": "Gratis",
+    "tag_weekly": "Ukentlig",
+    "tag_community": "Fellesskap",
+    "tag_personal": "Personlig",
+    "tag_individual": "Individuell"
   },
   "nav.about": "Om Oss"
 }

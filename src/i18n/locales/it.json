@@ -904,7 +904,14 @@
         "desc": "Impulsi spirituali complementari per i clienti in consulenza psicosociale o pastorale."
       }
     },
-    "patronageNote": "BibleBot.Life è gestito da un'associazione senza scopo di lucro e finanziato esclusivamente da donazioni e sponsorizzazioni volontarie. Nessuna pubblicità, nessuna vendita di dati, nessuna funzionalità a pagamento. Tutti i contributi vanno direttamente allo sviluppo, alle operazioni tecniche, alla distribuzione globale e alla gestione della comunità. Le donazioni possono essere deducibili dalle tasse a seconda della giurisdizione."
+    "patronageNote": "BibleBot.Life è gestito da un'associazione senza scopo di lucro e finanziato esclusivamente da donazioni e sponsorizzazioni volontarie. Nessuna pubblicità, nessuna vendita di dati, nessuna funzionalità a pagamento. Tutti i contributi vanno direttamente allo sviluppo, alle operazioni tecniche, alla distribuzione globale e alla gestione della comunità. Le donazioni possono essere deducibili dalle tasse a seconda della giurisdizione.",
+    "approachTitle": "Il Tuo Canale Digitale di 1° Livello",
+    "approachSubtitle": "La maggior parte delle persone non contatta direttamente un pastore. Cercano su Google, riflettono, rimangono in silenzio. BibleBot.Life li incontra lì – come un primo punto di contatto a bassa barriera nel tuo ecosistema di cura pastorale.",
+    "approach1Desc": "Disponibile 24/7, anonimo, gratuito. Risponde a domande di fede, offre ispirazione e fornisce compagnia – senza alcuna barriera. Il tuo primo contatto digitale.",
+    "approach2Desc": "BibleBot suscita interesse e costruisce fiducia. Il passo successivo: visitare la tua comunità. Ci colleghiamo direttamente agli orari delle tue funzioni.",
+    "approach3Desc": "Quando le domande diventano bisogni personali, BibleBot si collega direttamente alla tua cura pastorale – con un modulo di contatto e fiducia integrata.",
+    "approachNote": "BibleBot.Life non sostituisce la cura pastorale – la apre. Come tuo canale digitale di 1° livello, abbassiamo le barriere e ti portiamo le persone.",
+    "approachCta": "Discuti Partnership"
   },
   "institutions": {
     "badge": "Per organizzazioni",
@@ -1843,7 +1850,24 @@
     "confession": "Confessione",
     "family": "Famiglia",
     "familyValue": "Sposato, due figli",
-    "cta": "Domande, idee o vuoi solo salutarci?"
+    "cta": "Domande, idee o vuoi solo salutarci?",
+    "approachTitle": "Il Nostro Approccio",
+    "approachSubtitle": "La cura pastorale non inizia con una conversazione personale. Inizia dove le persone hanno domande – spesso in silenzio, spesso di notte, spesso da sole.",
+    "level1Badge": "Primo Punto di Contatto",
+    "level1Desc": "Disponibile 24 ore su 24, anonimo e senza barriere. Per chiunque abbia una domanda, cerchi ispirazione o semplicemente non voglia essere solo – il primo passo è il più facile.",
+    "level2Badge": "Comunità",
+    "level2Title": "Culto & Comunità",
+    "level2Desc": "Stare insieme, ascoltare, celebrare. Il culto dà alla fede una casa nella comunità.",
+    "level3Badge": "Personale",
+    "level3Title": "Cura Pastorale 1:1",
+    "level3Desc": "Una conversazione confidenziale e faccia a faccia. Per i momenti che richiedono una guida personale.",
+    "approachNote": "BibleBot.Life abbassa la barriera – e guida le persone passo dopo passo verso la comunità e il supporto personale.",
+    "tag_anonymous": "Anonimo",
+    "tag_free": "Gratuito",
+    "tag_weekly": "Settimanale",
+    "tag_community": "Comunità",
+    "tag_personal": "Personale",
+    "tag_individual": "Individuale"
   },
   "nav.about": "Chi siamo"
 }

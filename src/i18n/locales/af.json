@@ -904,7 +904,14 @@
         "desc": "Aanvullende geestelike impulse vir kliënte in psigososiale of pastorale berading."
       }
     },
-    "patronageNote": "BibleBot.Life is run by a non-profit association and funded exclusively through voluntary donations and sponsorships. There is no advertising, no data sales, and no paid features. All contributions go directly toward development, technical operations, global distribution, and community management. Donations may be tax-deductible depending on your jurisdiction."
+    "patronageNote": "BibleBot.Life is run by a non-profit association and funded exclusively through voluntary donations and sponsorships. There is no advertising, no data sales, and no paid features. All contributions go directly toward development, technical operations, global distribution, and community management. Donations may be tax-deductible depending on your jurisdiction.",
+    "approachTitle": "Jou Digitale 1st-Level Kanaal",
+    "approachSubtitle": "Die meeste mense spreek nie 'n pastoor direk aan nie. Hulle google, hulle peins, hulle bly stil. BibleBot.Life ontmoet hulle daar – as 'n eerste kontakpunt met lae drempel in jou pastoraat-sorgnetwerk.",
+    "approach1Desc": "Beskikbaar 24/7, anoniem, gratis. Beantwoord geloofsvrae, bied inspirasie, en bied geselskap – met nul drempels. Jou digitale eerste kontak.",
+    "approach2Desc": "BibleBot wek belangstelling en bou vertroue. Die volgende stap: om jou gemeenskap te besoek. Ons skakel direk na jou diens tye.",
+    "approach3Desc": "Wanneer vrae persoonlike behoeftes word, skakel BibleBot direk na jou pastoraat-sorg – met 'n kontakvorm en ingeboude vertroue.",
+    "approachNote": "BibleBot.Life vervang nie pastoraat-sorg nie – dit maak die deur daarheen oop. As jou digitale 1st-level kanaal, verlaag ons drempels en bring mense na jou toe.",
+    "approachCta": "Bespreek Vennootskap"
   },
   "institutions": {
     "badge": "Vir Organisasies",
@@ -1843,7 +1850,24 @@
     "confession": "Denominasie",
     "family": "Gesin",
     "familyValue": "Getroud, twee kinders",
-    "cta": "Vrae, idees, of wil net hallo sê?"
+    "cta": "Vrae, idees, of wil net hallo sê?",
+    "approachTitle": "Ons Benadering",
+    "approachSubtitle": "Pastoraat-sorg begin nie met 'n persoonlike gesprek nie. Dit begin waar mense vrae het – dikwels stil, dikwels snags, dikwels alleen.",
+    "level1Badge": "Eerste Kontakpunt",
+    "level1Desc": "Rondom die klok beskikbaar, anoniem en drempelvry. Vir enigiemand met 'n vraag, wat inspirasie soek, of bloot nie alleen wil wees nie – die eerste stap is die maklikste.",
+    "level2Badge": "Gemeenskap",
+    "level2Title": "Aanbidding & Gemeenskap",
+    "level2Desc": "Om saam te kom, te luister, saam te vier. Aanbidding gee geloof 'n tuiste in die gemeenskap.",
+    "level3Badge": "Persoonlik",
+    "level3Title": "1:1 Pastoraat-sorg",
+    "level3Desc": " 'n Konfidensiële, persoon-tot-persoon gesprek. Vir die oomblikke wat persoonlike leiding benodig.",
+    "approachNote": "BibleBot.Life verlaag die drempel – en lei mense stap vir stap nader aan gemeenskap en persoonlike ondersteuning.",
+    "tag_anonymous": "Anoniem",
+    "tag_free": "Gratis",
+    "tag_weekly": "Weekliks",
+    "tag_community": "Gemeenskap",
+    "tag_personal": "Persoonlik",
+    "tag_individual": "Individueel"
   },
   "nav.about": "Oor Ons"
 }

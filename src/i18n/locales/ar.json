@@ -904,7 +904,14 @@
         "desc": "إلهامات روحية إضافية للعملاء في الاستشارة النفسية الاجتماعية أو الروحية."
       }
     },
-    "patronageNote": "BibleBot.Life is run by a non-profit association and funded exclusively through voluntary donations and sponsorships. There is no advertising, no data sales, and no paid features. All contributions go directly toward development, technical operations, global distribution, and community management. Donations may be tax-deductible depending on your jurisdiction."
+    "patronageNote": "BibleBot.Life is run by a non-profit association and funded exclusively through voluntary donations and sponsorships. There is no advertising, no data sales, and no paid features. All contributions go directly toward development, technical operations, global distribution, and community management. Donations may be tax-deductible depending on your jurisdiction.",
+    "approachTitle": "قناتك الرقمية من المستوى الأول",
+    "approachSubtitle": "معظم الناس لا يتواصلون مباشرة مع راعٍ. يبحثون على جوجل، يتأملون، يبقون صامتين. BibleBot.Life يلتقي بهم هناك – كنقطة اتصال أولى ذات حاجز منخفض في نظام الرعاية الرعوية الخاص بك.",
+    "approach1Desc": "متاح 24/7، مجهول، مجاني. يجيب على أسئلة الإيمان، يقدم الإلهام، ويوفر الرفقة – بدون أي حواجز. اتصالك الأول الرقمي.",
+    "approach2Desc": "BibleBot يثير الاهتمام ويبني الثقة. الخطوة التالية: زيارة مجتمعك. نربط مباشرة بأوقات خدماتكم.",
+    "approach3Desc": "عندما تصبح الأسئلة احتياجات شخصية، يربط BibleBot مباشرة برعايتكم الرعوية – مع نموذج اتصال وثقة مدمجة.",
+    "approachNote": "BibleBot.Life لا يحل محل الرعاية الرعوية – بل يفتح الباب لها. كقناتك الرقمية من المستوى الأول، نخفض الحواجز ونقرب الناس إليك.",
+    "approachCta": "مناقشة الشراكة"
   },
   "institutions": {
     "badge": "للمنظمات",
@@ -1843,7 +1850,24 @@
     "confession": "الطائفة",
     "family": "العائلة",
     "familyValue": "متزوج، وله طفلان",
-    "cta": "أسئلة، أفكار، أو مجرد رغبة في إلقاء التحية؟"
+    "cta": "أسئلة، أفكار، أو مجرد رغبة في إلقاء التحية؟",
+    "approachTitle": "منهجنا",
+    "approachSubtitle": "لا تبدأ الرعاية الرعوية بمحادثة شخصية. تبدأ حيث لدى الناس أسئلة – غالبًا بهدوء، غالبًا في الليل، غالبًا بمفردهم.",
+    "level1Badge": "نقطة الاتصال الأولى",
+    "level1Desc": "متاح على مدار الساعة، مجهول وخالٍ من الحواجز. لأي شخص لديه سؤال، يبحث عن الإلهام، أو ببساطة لا يريد أن يكون وحيدًا – الخطوة الأولى هي الأسهل.",
+    "level2Badge": "مجتمع",
+    "level2Title": "عبادة ومجتمع",
+    "level2Desc": "اجتماع، استماع، احتفال معًا. العبادة تعطي الإيمان بيتًا في المجتمع.",
+    "level3Badge": "شخصي",
+    "level3Title": "رعاية رعوية 1:1",
+    "level3Desc": "محادثة سرية وجهًا لوجه. للحظات تحتاج إلى توجيه شخصي.",
+    "approachNote": "BibleBot.Life يخفض الحاجز – ويوجه الناس خطوة بخطوة أقرب إلى المجتمع والدعم الشخصي.",
+    "tag_anonymous": "مجهول",
+    "tag_free": "مجاني",
+    "tag_weekly": "أسبوعي",
+    "tag_community": "مجتمع",
+    "tag_personal": "شخصي",
+    "tag_individual": "فردي"
   },
   "nav.about": "عنّا"
 }

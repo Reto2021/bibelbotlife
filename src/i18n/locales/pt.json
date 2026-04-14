@@ -860,7 +860,14 @@
         "title": "Celebrantes independentes",
         "desc": "Oradores fúnebres, celebrantes de casamento e oficiais de cerimônias independentes – com ferramentas biográficas e planejamento de discursos."
       }
-    }
+    },
+    "approachTitle": "Seu Canal Digital de 1º Nível",
+    "approachSubtitle": "A maioria das pessoas não procura um pastor diretamente. Elas pesquisam no Google, ponderam, ficam em silêncio. BibleBot.Life as encontra lá – como um primeiro ponto de contato de baixa barreira no seu ecossistema de cuidado pastoral.",
+    "approach1Desc": "Disponível 24/7, anônimo, gratuito. Responde a perguntas de fé, oferece inspiração e proporciona companhia – com zero barreiras. Seu primeiro contato digital.",
+    "approach2Desc": "O BibleBot desperta o interesse e constrói a confiança. O próximo passo: visitar sua comunidade. Ligamos diretamente aos horários dos seus cultos.",
+    "approach3Desc": "Quando as perguntas se tornam necessidades pessoais, o BibleBot conecta diretamente ao seu cuidado pastoral – com um formulário de contato e confiança integrada.",
+    "approachNote": "BibleBot.Life não substitui o cuidado pastoral – abre a porta para ele. Como seu canal digital de 1º-nível, diminuímos as barreiras e trazemos as pessoas até você.",
+    "approachCta": "Discutir Parceria"
   },
   "institutions": {
     "badge": "Para organizações",
@@ -1843,7 +1850,24 @@
     "confession": "Confissão",
     "family": "Família",
     "familyValue": "Casado, dois filhos",
-    "cta": "Perguntas, ideias ou apenas quer dar um olá?"
+    "cta": "Perguntas, ideias ou apenas quer dar um olá?",
+    "approachTitle": "Nossa Abordagem",
+    "approachSubtitle": "O cuidado pastoral não começa com uma conversa pessoal. Começa onde as pessoas têm dúvidas – muitas vezes em silêncio, muitas vezes à noite, muitas vezes sozinhas.",
+    "level1Badge": "Primeiro Ponto de Contato",
+    "level1Desc": "Disponível 24 horas por dia, 7 dias por semana, anônimo e sem barreiras. Para quem tem uma pergunta, busca inspiração ou simplesmente não quer ficar sozinho – o primeiro passo é o mais fácil.",
+    "level2Badge": "Comunidade",
+    "level2Title": "Adoração & Comunidade",
+    "level2Desc": "Reunir-se, ouvir, celebrar juntos. A adoração dá um lar à fé na comunidade.",
+    "level3Badge": "Pessoal",
+    "level3Title": "Cuidado Pastoral 1:1",
+    "level3Desc": "Uma conversa confidencial e cara a cara. Para os momentos que exigem orientação pessoal.",
+    "approachNote": "BibleBot.Life diminui a barreira – e guia as pessoas passo a passo para mais perto da comunidade e do apoio pessoal.",
+    "tag_anonymous": "Anônimo",
+    "tag_free": "Gratuito",
+    "tag_weekly": "Semanal",
+    "tag_community": "Comunidade",
+    "tag_personal": "Pessoal",
+    "tag_individual": "Individual"
   },
   "nav.about": "Sobre Nós"
 }

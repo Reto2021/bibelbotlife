@@ -904,7 +904,14 @@
         "desc": "Լրացուցիչ հոգևոր խթաններ հաճախորդների համար հոգեսոցիալական կամ հոգևորական խորհրդատվության մեջ։"
       }
     },
-    "patronageNote": "BibleBot.Life is run by a non-profit association and funded exclusively through voluntary donations and sponsorships. There is no advertising, no data sales, and no paid features. All contributions go directly toward development, technical operations, global distribution, and community management. Donations may be tax-deductible depending on your jurisdiction."
+    "patronageNote": "BibleBot.Life is run by a non-profit association and funded exclusively through voluntary donations and sponsorships. There is no advertising, no data sales, and no paid features. All contributions go directly toward development, technical operations, global distribution, and community management. Donations may be tax-deductible depending on your jurisdiction.",
+    "approachTitle": "Ձեր թվային 1-ին մակարդակի ալիք",
+    "approachSubtitle": "Մարդկանց մեծ մասը չի դիմում ուղղակիորեն հովվին։ Նրանք որոնում են Google-ում, մտածում են, լռում են։ BibleBot.Life-ը հանդիպում է նրանց այնտեղ՝ որպես ձեր հովվական խնամքի էկոհամակարգում ցածր մուտքի առաջին կետ։",
+    "approach1Desc": "Հասանելի է 24/7, անանուն, անվճար։ Պատասխանում է հավատքի հարցերին, առաջարկում է ոգեշնչում և ընկերակցություն՝ առանց որևէ խոչընդոտի։ Ձեր թվային առաջին կետը։",
+    "approach2Desc": "BibleBot-ը հետաքրքրություն է առաջացնում և վստահություն կառուցում։ Հաջորդ քայլը՝ ձեր համայնք այցելելը։ Մենք ուղղակիորեն կապում ենք ձեր ծառայությունների ժամանակացույցին։",
+    "approach3Desc": "Երբ հարցերը վերածվում են անձնական կարիքների, BibleBot-ը ուղղակիորեն կապվում է ձեր հովվական խնամքի հետ՝ կոնտակտային ձևի և ներկառուցված վստահության միջոցով։",
+    "approachNote": "BibleBot.Life-ը չի փոխարինում հովվական խնամքը, այն բացում է դուռը դեպի այն։ Որպես ձեր թվային 1-ին մակարդակի ալիք, մենք իջեցնում ենք խոչընդոտները և մարդկանց տանում ենք ձեզ մոտ։",
+    "approachCta": "Մասնակցության մասին քննարկել"
   },
   "institutions": {
     "badge": "Կազմակերպությունների համար",
@@ -1843,7 +1850,24 @@
     "confession": "Դավանանք",
     "family": "Ընտանիք",
     "familyValue": "Ամուսնացած է, ունի երկու երեխա",
-    "cta": "Հարցեր, գաղափարներ, կամ պարզապես ցանկանում եք ողջունել։"
+    "cta": "Հարցեր, գաղափարներ, կամ պարզապես ցանկանում եք ողջունել։",
+    "approachTitle": "Մեր մոտեցումը",
+    "approachSubtitle": "Հովվական խնամքը չի սկսվում անձնական զրույցից։ Այն սկսվում է այնտեղ, որտեղ մարդիկ հարցեր ունեն՝ հաճախ հանգիստ, հաճախ գիշերը, հաճախ մենակ։",
+    "level1Badge": "Առաջին կապի կետ",
+    "level1Desc": "Հասանելի է շուրջօրյա, անանուն և առանց խոչընդոտների։ Յուրաքանչյուրի համար, ով ունի հարց, փնտրում է ոգեշնչում կամ պարզապես չի ցանկանում լինել մենակ՝ առաջին քայլը ամենահեշտն է։",
+    "level2Badge": "Համայնք",
+    "level2Title": "Պաշտամունք և համայնք",
+    "level2Desc": "Հավաքվել, լսել, միասին ուրախանալ։ Պաշտամունքը հավատքին տուն է տալիս համայնքում։",
+    "level3Badge": "Անձնական",
+    "level3Title": "1:1 Հովվական խնամք",
+    "level3Desc": "Գաղտնի, դեմ առ դեմ զրույց։ Այն պահերի համար, որոնք պահանջում են անձնական ուղղորդում։",
+    "approachNote": "BibleBot.Life-ը իջեցնում է խոչընդոտները և քայլ առ քայլ մարդկանց մոտեցնում է համայնքին և անձնական աջակցությանը։",
+    "tag_anonymous": "Անանուն",
+    "tag_free": "Անվճար",
+    "tag_weekly": "Շաբաթական",
+    "tag_community": "Համայնք",
+    "tag_personal": "Անձնական",
+    "tag_individual": "Անհատական"
   },
   "nav.about": "Մեր մասին"
 }

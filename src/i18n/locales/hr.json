@@ -860,7 +860,14 @@
         "title": "Nezavisni voditelji",
         "desc": "Pogrebni govornici, vjenčani celebranti i nezavisni ceremonijari – s biografskim alatima i planiranjem govora."
       }
-    }
+    },
+    "approachTitle": "Vaš digitalni 1st-Level kanal",
+    "approachSubtitle": "Većina ljudi ne kontaktira direktno pastora. Pretrazuju na Googleu, razmisljaju, ostaju tihi. BibleBot.Life im se pridruzuje – kao prvi kontakt s niskim pragom u vasem ekosustavu pastoralne skrbi.",
+    "approach1Desc": "Dostupno 24/7, anonimno, besplatno. Odgovara na pitanja vjere, nudi inspiraciju i pruza drustvo – bez ikakvih prepreka. Vas digitalni prvi kontakt.",
+    "approach2Desc": "BibleBot potice interes i gradi povjerenje. Sljedeci korak: posjet vasoj zajednici. Povezujemo se izravno s vremenima vasih bogosluzja.",
+    "approach3Desc": "Kada pitanja postanu osobne potrebe, BibleBot se izravno povezuje s vasom pastoralnom skrbi – s kontakt obrascem i ugradjenim povjerenjem.",
+    "approachNote": "BibleBot.Life ne zamjenjuje pastoralnu skrb – ona otvara vrata prema njoj. Kao vas digitalni 1st-level kanal, snizavamo prepreke i dovodimo ljude k vama.",
+    "approachCta": "Dogovorite partnerstvo"
   },
   "institutions": {
     "badge": "Za organizacije",
@@ -1843,7 +1850,24 @@
     "confession": "Denominacija",
     "family": "Obitelj",
     "familyValue": "Oženjen, dvoje djece",
-    "cta": "Pitanja, ideje ili jednostavno želite pozdraviti?"
+    "cta": "Pitanja, ideje ili jednostavno želite pozdraviti?",
+    "approachTitle": "Naš pristup",
+    "approachSubtitle": "Pastoralna skrb ne zapocinje osobnim razgovorom. Ona zapocinje tamo gdje ljudi imaju pitanja – cesto tiho, cesto nocu, cesto sami.",
+    "level1Badge": "Prva kontaktna tocka",
+    "level1Desc": "Dostupno tijekom cijelog dana, anonimno i bez prepreka. Za svakoga tko ima pitanje, trazi inspiraciju ili jednostavno ne zeli biti sam – prvi korak je najlaksi.",
+    "level2Badge": "Zajednica",
+    "level2Title": "Bogosluzje i zajednica",
+    "level2Desc": "Okupiti se, slusati, zajedno slaviti. Bogosluzje daje vjeri dom u zajednici.",
+    "level3Badge": "Osobno",
+    "level3Title": "1:1 Pastoralna skrb",
+    "level3Desc": "Povjerljiv, osobni razgovor. Za trenutke koji zahtijevaju osobni vodstvo.",
+    "approachNote": "BibleBot.Life snizuje prepreke – i korak po korak vodi ljude blize zajednici i osobnoj podrsci.",
+    "tag_anonymous": "Anonimno",
+    "tag_free": "Besplatno",
+    "tag_weekly": "Tjedno",
+    "tag_community": "Zajednica",
+    "tag_personal": "Osobno",
+    "tag_individual": "Individualno"
   },
   "nav.about": "O nama"
 }

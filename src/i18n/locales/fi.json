@@ -860,7 +860,14 @@
         "title": "Freelance-seremonimestarit",
         "desc": "Hautajaispuhujat, hääseremonimestarit ja riippumattomat vihkijät – biografiatyökaluilla ja puheensuunnittelulla."
       }
-    }
+    },
+    "approachTitle": "Digitaalinen 1st-Level -kanavasi",
+    "approachSubtitle": "Useimmat ihmiset eivät ota suoraan yhteyttä pappiin. He googlaavat, pohdiskelevat, pysyvät hiljaa. BibleBot.Life kohtaa heidät siellä – matalan kynnyksen ensikontaktina pastorisi hoitoekosysteemissä.",
+    "approach1Desc": "Saatavilla 24/7, anonyymi, ilmainen. Vastaa uskon kysymyksiin, tarjoaa inspiraatiota ja tarjoaa kumppanuutta – ilman esteitä. Digitaalinen ensikontaktisi.",
+    "approach2Desc": "BibleBot herättää kiinnostusta ja rakentaa luottamusta. Seuraava askel: yhteisösi vierailu. Linkitämme suoraan palveluaikoihisi.",
+    "approach3Desc": "Kun kysymyksistä tulee henkilökohtaisia tarpeita, BibleBot yhdistää suoraan pastorisi hoitoon – yhteydenottolomakkeella ja sisäänrakennetulla luottamuksella.",
+    "approachNote": "BibleBot.Life ei korvaa pastorin hoitoa – se avaa oven siihen. Digitaalisena 1st-Level -kanavanasi madallamme kynnyksiä ja tuomme ihmisiä luoksesi.",
+    "approachCta": "Keskustele kumppanuudesta"
   },
   "institutions": {
     "badge": "Organisaatioille",
@@ -1843,7 +1850,24 @@
     "confession": "Tunnustus",
     "family": "Perhe",
     "familyValue": "Naimisissa, kaksi lasta",
-    "cta": "Kysymyksiä, ideoita vai haluatko vain sanoa hei?"
+    "cta": "Kysymyksiä, ideoita vai haluatko vain sanoa hei?",
+    "approachTitle": "Lähestymistapamme",
+    "approachSubtitle": "Pastorin hoito ei ala henkilökohtaisesta keskustelusta. Se alkaa sieltä, missä ihmisillä on kysymyksiä – usein hiljaa, usein yöllä, usein yksin.",
+    "level1Badge": "Ensikontakti",
+    "level1Desc": "Saatavilla vuorokauden ympäri, anonyymi ja esteetön. Jokaiselle, jolla on kysyttävää, joka etsii inspiraatiota tai ei vain halua olla yksin – ensimmäinen askel on helpoin.",
+    "level2Badge": "Yhteisö",
+    "level2Title": "Jumalanpalvelus & Yhteisö",
+    "level2Desc": "Yhdessä kokoontuminen, kuunteleminen, yhdessä juhliminen. Jumalanpalvelus antaa uskolle kodin yhteisössä.",
+    "level3Badge": "Henkilökohtainen",
+    "level3Title": "1:1 Pastorin hoito",
+    "level3Desc": "Luottamuksellinen, kasvokkain tapahtuva keskustelu. Hetkiin, jotka vaativat henkilökohtaista ohjausta.",
+    "approachNote": "BibleBot.Life madaltaa kynnystä – ja ohjaa ihmisiä askel askeleelta lähemmäs yhteisöä ja henkilökohtaista tukea.",
+    "tag_anonymous": "Anonyymi",
+    "tag_free": "Ilmainen",
+    "tag_weekly": "Viikoittain",
+    "tag_community": "Yhteisö",
+    "tag_personal": "Henkilökohtainen",
+    "tag_individual": "Yksilöllinen"
   },
   "nav.about": "Tietoa meistä"
 }

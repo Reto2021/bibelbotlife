@@ -899,7 +899,14 @@
         "title": "Freelance Officiants",
         "desc": "Mga tagapagsalita sa libing, wedding celebrants at independiyenteng mga tagapanguna ng seremonya – may mga biography tool at pagpaplano ng talumpati."
       }
-    }
+    },
+    "approachTitle": "Iyong Digital na 1st-Level Channel",
+    "approachSubtitle": "Karamihan ng tao ay hindi direktang lumalapit sa pastor. Naggo-google sila, nag-iisip, nananatiling tahimik. BibleBot.Life nakikipagtagpo sa kanila doon – bilang isang unang punto ng kontak na may mababang balakid sa iyong sistema ng pag-aalaga sa pastoral.",
+    "approach1Desc": "Available 24/7, anonymous, libre. Sumasagot sa mga tanong ng pananampalataya, nagbibigay ng inspirasyon, at nagbibigay ng kasama – na walang anumang balakid. Ang iyong digital na unang kontak.",
+    "approach2Desc": "Nagpapasiklab ng interes at nagpapatibay ng tiwala ang BibleBot. Ang susunod na hakbang: ang pagbisita sa iyong komunidad. Direktang nagli-link kami sa mga oras ng iyong serbisyo.",
+    "approach3Desc": "Kapag ang mga tanong ay naging personal na pangangailangan, direktang kumokonekta ang BibleBot sa iyong pag-aalaga sa pastoral – na may contact form at built-in na tiwala.",
+    "approachNote": "Hindi pinapalitan ng BibleBot.Life ang pag-aalaga sa pastoral – binubuksan nito ang pinto dito. Bilang iyong digital na 1st-level channel, binababa namin ang mga balakid at dinadala ang mga tao sa iyo.",
+    "approachCta": "Pag-usapan ang Pakikipag-ugnayan"
   },
   "institutions": {
     "badge": "Para sa mga organisasyon",
@@ -1846,7 +1853,24 @@
     "confession": "Denominasyon",
     "family": "Pamilya",
     "familyValue": "Kasal, dalawang anak",
-    "cta": "Mga tanong, ideya, o gusto lang magpa-hello?"
+    "cta": "Mga tanong, ideya, o gusto lang magpa-hello?",
+    "approachTitle": "Ang Aming Pamamaraan",
+    "approachSubtitle": "Ang pag-aalaga sa pastoral ay hindi nagsisimula sa isang personal na pag-uusap. Nagsisimula ito kung saan may mga tanong ang mga tao – madalas tahimik, madalas sa gabi, madalas mag-isa.",
+    "level1Badge": "Unang Punto ng Kontak",
+    "level1Desc": "Available sa buong magdamag, anonymous at walang balakid. Para sa sinumang may tanong, naghahanap ng inspirasyon, o simpleng ayaw mag-isa – ang unang hakbang ang pinakamadali.",
+    "level2Badge": "Komunidad",
+    "level2Title": "Pagsamba at Komunidad",
+    "level2Desc": "Pagtitipon, pakikinig, pagdiriwang nang magkasama. Nagbibigay ng tahanan ang pagsamba sa pananampalataya sa komunidad.",
+    "level3Badge": "Personal",
+    "level3Title": "1:1 Pag-aalaga sa Pastoral",
+    "level3Desc": "Isang kumpidensyal, harapan na pag-uusap. Para sa mga sandali na nangangailangan ng personal na gabay.",
+    "approachNote": "Binababa ng BibleBot.Life ang balakid – at ginagabayan ang mga tao hakbang-hakbang papalapit sa komunidad at personal na suporta.",
+    "tag_anonymous": "Anonymous",
+    "tag_free": "Libre",
+    "tag_weekly": "Lingguhan",
+    "tag_community": "Komunidad",
+    "tag_personal": "Personal",
+    "tag_individual": "Indibidwal"
   },
   "nav.about": "Tungkol sa Amin"
 }

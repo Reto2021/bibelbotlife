@@ -899,7 +899,14 @@
         "title": "Независни водитељи",
         "desc": "Погребни говорници, венчани церемонијари и независни водитељи – са биографским алатима и планирањем говора."
       }
-    }
+    },
+    "approachTitle": "Vaš digitalni 1st-Level kanal",
+    "approachSubtitle": "Većina ljudi se ne obraća direktno pastoru. Guglaju, razmišljaju, ćute. BibleBot.Life ih sreće tamo – kao prvu kontaktnu tačku sa niskom barijerom u vašem ekosistemu pastirske brige.",
+    "approach1Desc": "Dostupan 24/7, anoniman, besplatan. Odgovara na pitanja vere, nudi inspiraciju i pruža druženje – bez ikakvih barijera. Vaš digitalni prvi kontakt.",
+    "approach2Desc": "BibleBot podstiče interesovanje i gradi poverenje. Sledeći korak: poseta vašoj zajednici. Povezujemo se direktno sa vremenima vaših službi.",
+    "approach3Desc": "Kada pitanja postanu lične potrebe, BibleBot se direktno povezuje sa vašom pastirskom brigom – sa obrascom za kontakt i ugrađenim poverenjem.",
+    "approachNote": "BibleBot.Life ne zamenjuje pastirsku brigu – ona joj otvara vrata. Kao vaš digitalni 1st-level kanal, snižavamo barijere i dovodimo ljude vama.",
+    "approachCta": "Razgovarajte o partnerstvu"
   },
   "institutions": {
     "badge": "За организације",
@@ -1843,7 +1850,24 @@
     "confession": "Denominacija",
     "family": "Porodica",
     "familyValue": "Oženjen, dvoje dece",
-    "cta": "Pitanja, ideje ili samo želite da se javite?"
+    "cta": "Pitanja, ideje ili samo želite da se javite?",
+    "approachTitle": "Naš pristup",
+    "approachSubtitle": "Pastirska briga ne počinje ličnim razgovorom. Počinje tamo gde ljudi imaju pitanja – često tiho, često noću, često sami.",
+    "level1Badge": "Prva kontaktna tačka",
+    "level1Desc": "Dostupan non-stop, anoniman i bez barijera. Za svakoga ko ima pitanje, traži inspiraciju ili jednostavno ne želi da bude sam – prvi korak je najlakši.",
+    "level2Badge": "Zajednica",
+    "level2Title": "Bogoštovanje & Zajednica",
+    "level2Desc": "Okupljanje, slušanje, zajedničko slavljenje. Bogoštovanje daje veri dom u zajednici.",
+    "level3Badge": "Lično",
+    "level3Title": "1:1 Pastirska briga",
+    "level3Desc": "Poverljiv, lični razgovor. Za trenutke koji zahtevaju lično vođstvo.",
+    "approachNote": "BibleBot.Life snižava barijeru – i vodi ljude korak po korak bliže zajednici i ličnoj podršci.",
+    "tag_anonymous": "Anonimno",
+    "tag_free": "Besplatno",
+    "tag_weekly": "Nedeljno",
+    "tag_community": "Zajednica",
+    "tag_personal": "Lično",
+    "tag_individual": "Individualno"
   },
   "nav.about": "O nama"
 }

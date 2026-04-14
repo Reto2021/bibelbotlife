@@ -860,7 +860,14 @@
         "title": "Független szertartásvezetők",
         "desc": "Temetési szónokok, esküvői celebránsok és független ceremóniamesterek – biográfiai eszközökkel és beszédtervezéssel."
       }
-    }
+    },
+    "approachTitle": "A digitális 1st-Level csatornád",
+    "approachSubtitle": "A legtöbb ember nem keres meg közvetlenül egy lelkészt. Keresnek a Google-ben, gondolkodnak, csendben maradnak. A BibleBot.Life ott találkozik velük – alacsony belépési küszöbű első kapcsolattartóként a lelkigondozási ökoszisztémádban.",
+    "approach1Desc": "Elérhető a hét minden napján, 24 órában, anonim módon, ingyenesen. Válaszol a hitkérdésekre, inspirációt kínál, és társaságot nyújt – nulla akadály mellett. A digitális első kapcsolatod.",
+    "approach2Desc": "A BibleBot érdeklődést kelt és bizalmat épít. A következő lépés: a közösséged meglátogatása. Közvetlenül a szolgálati időkhöz linkelünk.",
+    "approach3Desc": "Amikor a kérdések személyes szükségletekké válnak, a BibleBot közvetlenül összekapcsolja a lelkigondozással – egy űrlappal és beépített bizalommal.",
+    "approachNote": "A BibleBot.Life nem helyettesíti a lelkigondozást – ajtót nyit felé. Digitális 1st-level csatornádként csökkentjük az akadályokat és közelebb hozzuk az embereket hozzád.",
+    "approachCta": "Partnerség megbeszélése"
   },
   "institutions": {
     "badge": "Szervezeteknek",
@@ -1843,7 +1850,24 @@
     "confession": "Fejezet",
     "family": "Család",
     "familyValue": "Házas, két gyermek",
-    "cta": "Kérdések, ötletek, vagy csak köszönni szeretne?"
+    "cta": "Kérdések, ötletek, vagy csak köszönni szeretne?",
+    "approachTitle": "Megközelítésünk",
+    "approachSubtitle": "A lelkigondozás nem személyes beszélgetéssel kezdődik. Ott kezdődik, ahol az embereknek kérdései vannak – gyakran csendben, gyakran éjszaka, gyakran egyedül.",
+    "level1Badge": "Első kapcsolattartó",
+    "level1Desc": "A hét minden napján, 24 órában elérhető, anonim és akadálymentes. Bárki számára, akinek kérdése van, aki inspirációt keres, vagy aki egyszerűen nem akar egyedül lenni – az első lépés a legkönnyebb.",
+    "level2Badge": "Közösség",
+    "level2Title": "Istentisztelet és Közösség",
+    "level2Desc": "Összegyűlni, meghallgatni, együtt ünnepelni. Az istentisztelet otthont ad a hitnek a közösségben.",
+    "level3Badge": "Személyes",
+    "level3Title": "1:1 Lelkigondozás",
+    "level3Desc": "Bizalmas, személyes beszélgetés. Azokra a pillanatokra, amelyek személyes útmutatást igényelnek.",
+    "approachNote": "A BibleBot.Life csökkenti az akadályokat – és lépésről lépésre közelebb kalauzolja az embereket a közösséghez és a személyes támogatáshoz.",
+    "tag_anonymous": "Anonim",
+    "tag_free": "Ingyenes",
+    "tag_weekly": "Heti",
+    "tag_community": "Közösség",
+    "tag_personal": "Személyes",
+    "tag_individual": "Egyéni"
   },
   "nav.about": "Rólunk"
 }

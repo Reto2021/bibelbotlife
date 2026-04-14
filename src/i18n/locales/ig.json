@@ -910,7 +910,14 @@
         "desc": "Mkpali ime mmụọ na-agbakwunye maka ndị ahịa na ndụmọdụ psychosocial ma ọ bụ nlekọta mmadụ."
       }
     },
-    "patronageNote": "BibleBot.Life is run by a non-profit association and funded exclusively through voluntary donations and sponsorships. There is no advertising, no data sales, and no paid features. All contributions go directly toward development, technical operations, global distribution, and community management. Donations may be tax-deductible depending on your jurisdiction."
+    "patronageNote": "BibleBot.Life is run by a non-profit association and funded exclusively through voluntary donations and sponsorships. There is no advertising, no data sales, and no paid features. All contributions go directly toward development, technical operations, global distribution, and community management. Donations may be tax-deductible depending on your jurisdiction.",
+    "approachTitle": "Ọwa Nkwukọrịta 1st-Level Gị",
+    "approachSubtitle": "Ọtụtụ mmadụ anaghị akpọtụ onye ụkọchukwu ozugbo. Ha na-eji Google, ha na-achọpụta, ha na-adị jụụ. BibleBot.Life zutere ha ebe ahụ – dị ka ụzọ mbụ dị mfe iji malite nlekọta ụkọchukwu gị.",
+    "approach1Desc": "Dị mgbe niile, anonymos, efu. Zaa ajụjụ okwukwe, nye mkpali, ma nye enyi – na-enweghị ihe mgbochi ọ bụla. Nkwukọrịta mbụ dijitalụ gị.",
+    "approach2Desc": "BibleBot na-enye mmasị ma na-ewuli ntụkwasị obi. Nzọụkwụ ọzọ: ileta obodo gị. Anyị na-ejikọ ozugbo na oge ọrụ gị.",
+    "approach3Desc": "Mgbe ajụjụ ghọrọ mkpa nke onwe, BibleBot na-ejikọ ozugbo na nlekọta ụkọchukwu gị – yana ụdị kọntaktị na ntụkwasị obi arụnyere n'ime ya.",
+    "approachNote": "BibleBot.Life anaghị edochi nlekọta ụkọchukwu – ọ na-emepe ọnụ ụzọ ya. Dị ka ọwa nkwukọrịta 1st-level dijitalụ gị, anyị na-eweda ihe mgbochi ma na-ebute mmadụ n'ebe ị nọ.",
+    "approachCta": "Kwurịtị maka njikọ aka"
   },
   "institutions": {
     "badge": "Maka Òtù",
@@ -1849,7 +1856,24 @@
     "confession": "Òtù okpukperechi",
     "family": "Ezinụlọ",
     "familyValue": "Lụrụ nwunye, ụmụaka abụọ",
-    "cta": "Ajụjụ, echiche, ma ọ bụ naanị ịchọrọ ikwu ekele?"
+    "cta": "Ajụjụ, echiche, ma ọ bụ naanị ịchọrọ ikwu ekele?",
+    "approachTitle": "Ụzọ Anyị",
+    "approachSubtitle": "Nlekọta ụkọchukwu anaghị amalite site na mkparịta ụka onwe onye. Ọ na-amalite ebe mmadụ nwere ajụjụ – ọtụtụ mgbe na nzuzo, ọtụtụ mgbe n'abalị, ọtụtụ mgbe naanị ha.",
+    "level1Badge": "Ọnụ Ụzọ Nkwukọrịta Mbụ",
+    "level1Desc": "Dị gburugburu elekere, anonymos na enweghị ihe mgbochi. Maka onye ọ bụla nwere ajụjụ, na-achọ mkpali, ma ọ bụ naanị na-achọghị ịnọ naanị ha – nzọụkwụ mbụ bụ nke kacha mfe.",
+    "level2Badge": "Obodo",
+    "level2Title": "Ofufe Na Obodo",
+    "level2Desc": "Ikwekọ, ige ntị, ịkekọrịta ọṅụ. Ofufe na-enye okwukwe ebe obibi na obodo.",
+    "level3Badge": "Onye Nwe",
+    "level3Title": "Nlekọta ụkọchukwu 1:1",
+    "level3Desc": "Mkparịta ụka n'ụzọ nzuzo, ihu na ihu. Maka oge ndị ahụ chọrọ nduzi nke onwe.",
+    "approachNote": "BibleBot.Life na-eweda ihe mgbochi – ma na-eduzi mmadụ nzọụkwụ site na nzọụkwụ nso obodo na nkwado nke onwe.",
+    "tag_anonymous": "Anonymos",
+    "tag_free": "Ego efu",
+    "tag_weekly": "Kwa izu",
+    "tag_community": "Obodo",
+    "tag_personal": "Onye Nwe",
+    "tag_individual": "Onye ọbụla"
   },
   "nav.about": "Banyere Anyị"
 }

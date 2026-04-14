@@ -900,7 +900,14 @@
         "title": "自由职业主持人",
         "desc": "丧礼演讲者、婚礼主持人和独立仪式主持人——配备传记工具和演讲规划。"
       }
-    }
+    },
+    "approachTitle": "您的数字1st-Level渠道",
+    "approachSubtitle": "大多数人不会直接联系牧师。他们会谷歌搜索，他们会沉思，他们会保持沉默。BibleBot.Life在那里与他们相遇——作为您牧养关怀生态系统中的一个低门槛的首次接触点。",
+    "approach1Desc": "全天候可用，匿名，免费。解答信仰问题，提供灵感，并提供陪伴——没有任何障碍。您的数字首次接触。",
+    "approach2Desc": "BibleBot激发兴趣并建立信任。下一步：参观您的教会。我们直接链接到您的聚会时间。",
+    "approach3Desc": "当问题变成个人需求时，BibleBot直接连接到您的牧养关怀——提供联系表格和内置信任。",
+    "approachNote": "BibleBot.Life不取代牧养关怀——它为牧养关怀打开了大门。作为您的数字1st-level渠道，我们降低了障碍，并将人们带到您身边。",
+    "approachCta": "讨论合作"
   },
   "institutions": {
     "badge": "面向组织",
@@ -1844,7 +1851,24 @@
     "confession": "教派",
     "family": "家庭",
     "familyValue": "已婚，两子",
-    "cta": "有问题、想法，或者只是想打个招呼？"
+    "cta": "有问题、想法，或者只是想打个招呼？",
+    "approachTitle": "我们的方法",
+    "approachSubtitle": "牧养关怀并非始于私人谈话。它始于人们有疑问的地方——通常是悄悄地，通常在夜里，通常是独自一人。",
+    "level1Badge": "首次接触点",
+    "level1Desc": "全天候可用，匿名且无障碍。对于任何有疑问、寻求灵感或只是不想孤单的人——第一步是最容易的。",
+    "level2Badge": "社区",
+    "level2Title": "敬拜与社区",
+    "level2Desc": "聚集在一起，倾听，共同庆祝。敬拜使信仰在社区中拥有家。",
+    "level3Badge": "个人",
+    "level3Title": "1:1 牧养关怀",
+    "level3Desc": "一次保密的、面对面的谈话。适用于需要个人指导的时刻。",
+    "approachNote": "BibleBot.Life降低了门槛——并引导人们一步步靠近社区和个人支持。",
+    "tag_anonymous": "匿名",
+    "tag_free": "免费",
+    "tag_weekly": "每周",
+    "tag_community": "社区",
+    "tag_personal": "个人",
+    "tag_individual": "个体"
   },
   "nav.about": "关于我们"
 }
