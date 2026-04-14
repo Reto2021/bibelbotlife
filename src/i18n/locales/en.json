@@ -1880,5 +1880,39 @@
     "tag_personal": "Personal",
     "tag_individual": "Individual"
   },
-  "nav.about": "About Us"
+  "nav.about": "About Us",
+  "ceremony": {
+    "wedding": {
+      "title": "Wedding",
+      "subtitle": "Write your vows, choose songs and plan your celebration.",
+      "seoTitle": "Prepare Your Wedding",
+      "seoDesc": "Create personal wedding ceremony texts and share with your pastor.",
+      "partner1": "Partner 1",
+      "partner2": "Partner 2",
+      "date": "Wedding Date",
+      "venue": "Venue / Church",
+      "tradition": "Tradition"
+    },
+    "baptism": {
+      "title": "Baptism",
+      "subtitle": "Write baptism wishes and prepare the ceremony with your church.",
+      "seoTitle": "Prepare a Baptism",
+      "seoDesc": "Create personal baptism texts and share with your pastor.",
+      "childName": "Name of the Child",
+      "birthDate": "Date of Birth",
+      "parents": "Parents",
+      "godparents": "Godparents",
+      "tradition": "Tradition"
+    },
+    "confirmation": {
+      "title": "Confirmation",
+      "subtitle": "Find a confirmation verse and prepare personal texts.",
+      "seoTitle": "Prepare Confirmation",
+      "seoDesc": "Create personal confirmation texts.",
+      "name": "Name of the Confirmand",
+      "verse": "Confirmation Verse",
+      "hobbies": "Interests / Hobbies",
+      "tradition": "Type of Ceremony"
+    }
+  }
 }
