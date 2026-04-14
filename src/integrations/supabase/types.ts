@@ -1342,40 +1342,52 @@ export type Database = {
         Row: {
           church_id: string | null
           content: string | null
+          country: string | null
           created_at: string
-          created_by: string
+          created_by: string | null
+          hymnal_ref: string | null
           id: string
+          is_system: boolean
           language: string
           metadata: Json | null
           resource_type: Database["public"]["Enums"]["resource_type"]
           tags: string[] | null
           title: string
+          tradition: string | null
           updated_at: string
         }
         Insert: {
           church_id?: string | null
           content?: string | null
+          country?: string | null
           created_at?: string
-          created_by: string
+          created_by?: string | null
+          hymnal_ref?: string | null
           id?: string
+          is_system?: boolean
           language?: string
           metadata?: Json | null
           resource_type?: Database["public"]["Enums"]["resource_type"]
           tags?: string[] | null
           title: string
+          tradition?: string | null
           updated_at?: string
         }
         Update: {
           church_id?: string | null
           content?: string | null
+          country?: string | null
           created_at?: string
-          created_by?: string
+          created_by?: string | null
+          hymnal_ref?: string | null
           id?: string
+          is_system?: boolean
           language?: string
           metadata?: Json | null
           resource_type?: Database["public"]["Enums"]["resource_type"]
           tags?: string[] | null
           title?: string
+          tradition?: string | null
           updated_at?: string
         }
         Relationships: [
