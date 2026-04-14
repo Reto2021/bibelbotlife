@@ -29,6 +29,21 @@ const RESOURCE_TYPES: { value: ResourceType; label: string; icon: React.ReactNod
   { value: "other", label: "Sonstiges", icon: <Tag className="h-4 w-4" /> },
 ];
 
+const FIXED_TAG_CATEGORIES = [
+  {
+    label: "Stimmung",
+    tags: ["freudig", "nachdenklich", "feierlich", "ruhig", "dankbar", "tröstend", "hoffnungsvoll", "andächtig"],
+  },
+  {
+    label: "Zeremonie",
+    tags: ["taufe", "hochzeit", "abdankung", "konfirmation", "abendmahl", "segnung"],
+  },
+  {
+    label: "Kirchenjahr",
+    tags: ["advent", "weihnachten", "passion", "ostern", "pfingsten", "erntedank", "reformationsonntag", "ewigkeitssonntag"],
+  },
+];
+
 const typeLabel = (t: ResourceType) => RESOURCE_TYPES.find((r) => r.value === t)?.label ?? t;
 const typeIcon = (t: ResourceType) => RESOURCE_TYPES.find((r) => r.value === t)?.icon;
 
