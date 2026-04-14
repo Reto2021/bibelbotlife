@@ -152,6 +152,7 @@ export default function ResourceLibrary() {
       resource_type: r.resource_type,
       tags: r.tags ?? [],
       tagInput: "",
+      language: r.language ?? defaultLang,
     });
     setDialogOpen(true);
   };
