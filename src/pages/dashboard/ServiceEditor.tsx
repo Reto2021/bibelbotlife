@@ -20,6 +20,7 @@ import { ResourceSidebar } from "@/components/services/ResourceSidebar";
 import type { Resource } from "@/hooks/use-resources";
 import { useTemplates, useCreateTemplate, type ServiceTemplate } from "@/hooks/use-templates";
 import { exportServicePdf, exportServicePdfBlob } from "@/lib/export-service-pdf";
+import { exportServiceDocx } from "@/lib/export-service-docx";
 import { Label } from "@/components/ui/label";
 import { useDeleteService, useDuplicateService, useUpdateServiceStatus } from "@/hooks/use-services";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
