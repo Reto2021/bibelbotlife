@@ -1799,5 +1799,31 @@
     "baptism": "Ìrìbọmi",
     "wedding": "Ìgbéyàwó",
     "funeral": "Ìsìnkú"
+  },
+  "contact": {
+    "pageTitle": "Contact – BibleBot.Life",
+    "pageDesc": "Firanṣẹ si wa – a nireti lati gbọ lati ọdọ rẹ.",
+    "badge": "Kan si",
+    "heading": "Kọ si wa",
+    "subheading": "Ṣe o ni ibeere kan, esi, tabi iwọ yoo fẹ lati jiroro ajọṣepọ kan? A nreti ifiranṣẹ rẹ.",
+    "name": "Orukọ",
+    "namePlaceholder": "Orukọ rẹ",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "category": "Akori",
+    "categoryPlaceholder": "Yan akori kan",
+    "categoryFeedback": "Esi",
+    "categoryQuestion": "Ibeere",
+    "categoryPartnership": "Ajọṣepọ",
+    "categoryOther": "Miiran",
+    "message": "Ifiranṣẹ",
+    "messagePlaceholder": "Kọ ifiranṣẹ rẹ…",
+    "send": "Firanṣẹ ifiranṣẹ",
+    "sending": "Firanṣẹ…",
+    "fillAll": "Jọwọ fọwọsi gbogbo awọn aaye.",
+    "errorGeneric": "Aṣiṣe kan ṣẹlẹ. Jọwọ gbiyanju lẹẹkansi.",
+    "thankYouTitle": "O ṣeun!",
+    "thankYouMessage": "Ifiranṣẹ rẹ ti gba. A yoo ba ọ sọrọ ni kete bi o ti ṣee.",
+    "sendAnother": "Firanṣẹ ifiranṣẹ miiran"
   }
 }

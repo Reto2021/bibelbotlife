@@ -1422,5 +1422,31 @@
     "values": "I'd like to discover my values compass.",
     "examen": "I'd like to do the Ignatian Examen.",
     "explainRef": "Explain {{ref}} in detail."
+  },
+  "contact": {
+    "pageTitle": "Kontak – BibleBot.Life",
+    "pageDesc": "Kirimkan pesan kepada kami – kami menantikan kabar dari Anda.",
+    "badge": "Kontak",
+    "heading": "Surati kami",
+    "subheading": "Apakah Anda memiliki pertanyaan, umpan balik, atau ingin mendiskusikan kemitraan? Kami menantikan pesan Anda.",
+    "name": "Nama",
+    "namePlaceholder": "Nama Anda",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "category": "Topik",
+    "categoryPlaceholder": "Pilih topik",
+    "categoryFeedback": "Umpan Balik",
+    "categoryQuestion": "Pertanyaan",
+    "categoryPartnership": "Kemitraan",
+    "categoryOther": "Lainnya",
+    "message": "Pesan",
+    "messagePlaceholder": "Tulis pesan Anda…",
+    "send": "Kirim pesan",
+    "sending": "Mengirim…",
+    "fillAll": "Harap isi semua kolom.",
+    "errorGeneric": "Terjadi kesalahan. Silakan coba lagi.",
+    "thankYouTitle": "Terima kasih!",
+    "thankYouMessage": "Pesan Anda telah diterima. Kami akan menghubungi Anda sesegera mungkin.",
+    "sendAnother": "Kirim pesan lain"
   }
 }

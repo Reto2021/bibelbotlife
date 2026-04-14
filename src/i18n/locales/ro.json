@@ -1799,5 +1799,31 @@
     "baptism": "Botez",
     "wedding": "Nuntă",
     "funeral": "Înmormântare"
+  },
+  "contact": {
+    "pageTitle": "Contact – BibleBot.Life",
+    "pageDesc": "Trimiteți-ne un mesaj – abia așteptăm să auzim de la dvs.",
+    "badge": "Contact",
+    "heading": "Scrieți-ne",
+    "subheading": "Aveți o întrebare, feedback sau ați dori să discutați despre un parteneriat? Așteptăm cu nerăbdare mesajul dvs.",
+    "name": "Nume",
+    "namePlaceholder": "Numele dvs.",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "category": "Subiect",
+    "categoryPlaceholder": "Alegeți un subiect",
+    "categoryFeedback": "Feedback",
+    "categoryQuestion": "Întrebare",
+    "categoryPartnership": "Parteneriat",
+    "categoryOther": "Alte",
+    "message": "Mesaj",
+    "messagePlaceholder": "Scrieți mesajul dvs. aici…",
+    "send": "Trimite mesajul",
+    "sending": "Se trimite…",
+    "fillAll": "Vă rugăm să completați toate câmpurile.",
+    "errorGeneric": "A apărut o eroare. Vă rugăm să încercați din nou.",
+    "thankYouTitle": "Vă mulțumim!",
+    "thankYouMessage": "Mesajul dvs. a fost primit. Vom reveni la dvs. cât mai curând posibil.",
+    "sendAnother": "Trimite un alt mesaj"
   }
 }

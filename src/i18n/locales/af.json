@@ -1799,5 +1799,31 @@
     "baptism": "Doop",
     "wedding": "Troue",
     "funeral": "Begrafnis"
+  },
+  "contact": {
+    "pageTitle": "Kontak – BibleBot.Life",
+    "pageDesc": "Stuur vir ons 'n boodskap – ons sien daarna uit om van jou te hoor.",
+    "badge": "Kontak",
+    "heading": "Skryf aan ons",
+    "subheading": "Het jy 'n vraag, terugvoer, of wil jy 'n vennootskap bespreek? Ons sien uit na jou boodskap.",
+    "name": "Naam",
+    "namePlaceholder": "Jou naam",
+    "email": "Email",
+    "emailPlaceholder": "jou@email.com",
+    "category": "Onderwerp",
+    "categoryPlaceholder": "Kies 'n onderwerp",
+    "categoryFeedback": "Terugvoer",
+    "categoryQuestion": "Vraag",
+    "categoryPartnership": "Vennootskap",
+    "categoryOther": "Ander",
+    "message": "Boodskap",
+    "messagePlaceholder": "Skryf jou boodskap…",
+    "send": "Stuur boodskap",
+    "sending": "Besig om te stuur…",
+    "fillAll": "Vul asseblief alle velde in.",
+    "errorGeneric": "’n Fout het voorgekom. Probeer asseblief weer.",
+    "thankYouTitle": "Dankie!",
+    "thankYouMessage": "Jou boodskap is ontvang. Ons sal so gou moontlik na jou terugkom.",
+    "sendAnother": "Stuur nog 'n boodskap"
   }
 }

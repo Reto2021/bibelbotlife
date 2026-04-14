@@ -1799,5 +1799,31 @@
     "baptism": "Ubatizo",
     "wedding": "Harusi",
     "funeral": "Mazishi"
+  },
+  "contact": {
+    "pageTitle": "Wasiliana - BibleBot.Life",
+    "pageDesc": "Tutumie ujumbe – tunatarajia kusikia kutoka kwako.",
+    "badge": "Wasiliana",
+    "heading": "Tuandikie",
+    "subheading": "Una swali, maoni, au ungependa kujadili ushirikiano? Tunatarajia ujumbe wako.",
+    "name": "Jina",
+    "namePlaceholder": "Jina lako",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "category": "Mada",
+    "categoryPlaceholder": "Chagua mada",
+    "categoryFeedback": "Maoni",
+    "categoryQuestion": "Swali",
+    "categoryPartnership": "Ushirikiano",
+    "categoryOther": "Nyingine",
+    "message": "Ujumbe",
+    "messagePlaceholder": "Andika ujumbe wako…",
+    "send": "Tuma ujumbe",
+    "sending": "Inatuma…",
+    "fillAll": "Tafadhali jaza sehemu zote.",
+    "errorGeneric": "Kuna hitilafu ilitokea. Tafadhali jaribu tena.",
+    "thankYouTitle": "Asante!",
+    "thankYouMessage": "Ujumbe wako umepokelewa. Tutawasiliana nawe haraka iwezekanavyo.",
+    "sendAnother": "Tuma ujumbe mwingine"
   }
 }

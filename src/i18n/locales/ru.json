@@ -1799,5 +1799,31 @@
     "baptism": "Крещение",
     "wedding": "Свадьба",
     "funeral": "Похороны"
+  },
+  "contact": {
+    "pageTitle": "Контакты – BibleBot.Life",
+    "pageDesc": "Напишите нам – мы с нетерпением ждем вашего сообщения.",
+    "badge": "Контакты",
+    "heading": "Напишите нам",
+    "subheading": "У вас есть вопрос, отзыв или вы хотели бы обсудить партнерство? Мы ждем вашего сообщения.",
+    "name": "Имя",
+    "namePlaceholder": "Ваше имя",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "category": "Тема",
+    "categoryPlaceholder": "Выберите тему",
+    "categoryFeedback": "Обратная связь",
+    "categoryQuestion": "Вопрос",
+    "categoryPartnership": "Партнерство",
+    "categoryOther": "Другое",
+    "message": "Сообщение",
+    "messagePlaceholder": "Напишите ваше сообщение…",
+    "send": "Отправить сообщение",
+    "sending": "Отправка…",
+    "fillAll": "Пожалуйста, заполните все поля.",
+    "errorGeneric": "Произошла ошибка. Пожалуйста, попробуйте еще раз.",
+    "thankYouTitle": "Спасибо!",
+    "thankYouMessage": "Ваше сообщение получено. Мы свяжемся с вами как можно скорее.",
+    "sendAnother": "Отправить еще одно сообщение"
   }
 }

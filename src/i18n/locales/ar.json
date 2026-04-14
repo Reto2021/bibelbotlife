@@ -1799,5 +1799,31 @@
     "baptism": "معمودية",
     "wedding": "زفاف",
     "funeral": "جنازة"
+  },
+  "contact": {
+    "pageTitle": "اتصل – BibleBot.Life",
+    "pageDesc": "أرسل لنا رسالة – نتطلع إلى الاستماع منك.",
+    "badge": "اتصل",
+    "heading": "اكتب إلينا",
+    "subheading": "هل لديك سؤال أو ملاحظات، أو هل ترغب في مناقشة شراكة؟ نحن نتطلع إلى رسالتك.",
+    "name": "الاسم",
+    "namePlaceholder": "اسمك",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "category": "الموضوع",
+    "categoryPlaceholder": "اختر موضوعًا",
+    "categoryFeedback": "ملاحظات",
+    "categoryQuestion": "سؤال",
+    "categoryPartnership": "شراكة",
+    "categoryOther": "أخرى",
+    "message": "الرسالة",
+    "messagePlaceholder": "اكتب رسالتك...",
+    "send": "إرسال الرسالة",
+    "sending": "جارٍ الإرسال...",
+    "fillAll": "يرجى ملء جميع الحقول.",
+    "errorGeneric": "حدث خطأ. الرجاء المحاولة مرة أخرى.",
+    "thankYouTitle": "شكرًا لك!",
+    "thankYouMessage": "تم استلام رسالتك. سنعود إليك في أقرب وقت ممكن.",
+    "sendAnother": "إرسال رسالة أخرى"
   }
 }

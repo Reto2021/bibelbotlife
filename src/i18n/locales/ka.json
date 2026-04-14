@@ -1801,5 +1801,31 @@
     "baptism": "ნათლობა",
     "wedding": "ქორწილი",
     "funeral": "დაკრძალვა"
+  },
+  "contact": {
+    "pageTitle": "კონტაქტი – BibleBot.Life",
+    "pageDesc": "გამოგვიგზავნეთ შეტყობინება – მოუთმენლად ველით თქვენგან სიახლეებს.",
+    "badge": "კონტაქტი",
+    "heading": "მოგვწერეთ",
+    "subheading": "გაქვთ შეკითხვა, გამოხმაურება, თუ გსურთ პარტნიორობის განხილვა? მოუთმენლად ველით თქვენს შეტყობინებას.",
+    "name": "სახელი",
+    "namePlaceholder": "თქვენი სახელი",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "category": "თემა",
+    "categoryPlaceholder": "აირჩიეთ თემა",
+    "categoryFeedback": "უკუკავშირი",
+    "categoryQuestion": "კითხვა",
+    "categoryPartnership": "პარტნიორობა",
+    "categoryOther": "სხვა",
+    "message": "შეტყობინება",
+    "messagePlaceholder": "დაწერეთ თქვენი შეტყობინება…",
+    "send": "შეტყობინების გაგზავნა",
+    "sending": "იზგზავნება…",
+    "fillAll": "გთხოვთ, შეავსოთ ყველა ველი.",
+    "errorGeneric": "მოხდა შეცდომა. გთხოვთ, სცადოთ ხელახლა.",
+    "thankYouTitle": "გმადლობთ!",
+    "thankYouMessage": "თქვენი შეტყობინება მიღებულია. ჩვენ დაგიკავშირდებით რაც შეიძლება მალე.",
+    "sendAnother": "კიდევ ერთი შეტყობინების გაგზავნა"
   }
 }

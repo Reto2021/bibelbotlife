@@ -1799,5 +1799,31 @@
     "baptism": "טבילה",
     "wedding": "חתונה",
     "funeral": "הלוויה"
+  },
+  "contact": {
+    "pageTitle": "צור קשר – BibleBot.Life",
+    "pageDesc": "שלח לנו הודעה – אנו מצפים לשמוע ממך.",
+    "badge": "צור קשר",
+    "heading": "כתבו לנו",
+    "subheading": "יש לכם שאלה, משוב, או שתרצו לדון בשיתוף פעולה? אנו מצפים להודעתכם.",
+    "name": "שם",
+    "namePlaceholder": "השם שלך",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "category": "נושא",
+    "categoryPlaceholder": "בחר נושא",
+    "categoryFeedback": "משוב",
+    "categoryQuestion": "שאלה",
+    "categoryPartnership": "שותפות",
+    "categoryOther": "אחר",
+    "message": "הודעה",
+    "messagePlaceholder": "כתוב את הודעתך…",
+    "send": "שלח הודעה",
+    "sending": "שולח…",
+    "fillAll": "אנא מלא את כל השדות.",
+    "errorGeneric": "אירעה שגיאה. אנא נסה שוב.",
+    "thankYouTitle": "תודה!",
+    "thankYouMessage": "הודעתך התקבלה. אנו נחזור אליכם בהקדם האפשרי.",
+    "sendAnother": "שלח הודעה נוספת"
   }
 }

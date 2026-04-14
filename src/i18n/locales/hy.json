@@ -1799,5 +1799,31 @@
     "baptism": "Մկրտություն",
     "wedding": "Հարսանիք",
     "funeral": "Հուղարկավորություն"
+  },
+  "contact": {
+    "pageTitle": "Contact – BibleBot.Life",
+    "pageDesc": "Ուղարկեք մեզ հաղորդագրություն. մենք անհամբեր սպասում ենք ձեր լուրերին:",
+    "badge": "Կապ",
+    "heading": "Գրեք մեզ",
+    "subheading": "Հարց ունե՞ք, կարծիք, կամ կցանկանայի՞ք քննարկել համագործակցություն: Մենք անհամբեր սպասում ենք ձեր հաղորդագրությանը:",
+    "name": "Անուն",
+    "namePlaceholder": "Ձեր անունը",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "category": "Թեմա",
+    "categoryPlaceholder": "Ընտրեք թեմա",
+    "categoryFeedback": "Կարծիք",
+    "categoryQuestion": "Հարց",
+    "categoryPartnership": "Համագործակցություն",
+    "categoryOther": "Այլ",
+    "message": "Հաղորդագրություն",
+    "messagePlaceholder": "Գրեք ձեր հաղորդագրությունը…",
+    "send": "Ուղարկել հաղորդագրությունը",
+    "sending": "Ուղարկվում է…",
+    "fillAll": "Խնդրում ենք լրացնել բոլոր դաշտերը։",
+    "errorGeneric": "Սխալ է տեղի ունեցել։ Խնդրում ենք նորից փորձել։",
+    "thankYouTitle": "Շնորհակալություն։",
+    "thankYouMessage": "Ձեր հաղորդագրությունն ստացված է։ Մենք հնարավորինս շուտ կկապվենք ձեզ հետ։",
+    "sendAnother": "Ուղարկել այլ հաղորդագրություն"
   }
 }

@@ -1799,5 +1799,31 @@
     "baptism": "Kaste",
     "wedding": "Häät",
     "funeral": "Hautajaiset"
+  },
+  "contact": {
+    "pageTitle": "Yhteystiedot – BibleBot.Life",
+    "pageDesc": "Lähetä meille viesti – odotamme innolla sitä.",
+    "badge": "Yhteystiedot",
+    "heading": "Kirjoita meille",
+    "subheading": "Onko sinulla kysyttävää, palautetta tai haluaisitko keskustella kumppanuudesta? Odotamme viestiäsi.",
+    "name": "Nimi",
+    "namePlaceholder": "Nimesi",
+    "email": "Email",
+    "emailPlaceholder": "sinun@sähköpostisi.com",
+    "category": "Aihe",
+    "categoryPlaceholder": "Valitse aihe",
+    "categoryFeedback": "Palaute",
+    "categoryQuestion": "Kysymys",
+    "categoryPartnership": "Kumppanuus",
+    "categoryOther": "Muu",
+    "message": "Viesti",
+    "messagePlaceholder": "Kirjoita viestisi…",
+    "send": "Lähetä viesti",
+    "sending": "Lähetetään…",
+    "fillAll": "Täytä kaikki kentät.",
+    "errorGeneric": "Tapahtui virhe. Yritä uudelleen.",
+    "thankYouTitle": "Kiitos!",
+    "thankYouMessage": "Viestisi on vastaanotettu. Palaamme asiaan mahdollisimman pian.",
+    "sendAnother": "Lähetä toinen viesti"
   }
 }

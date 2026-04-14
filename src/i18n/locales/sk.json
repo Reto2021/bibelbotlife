@@ -1799,5 +1799,31 @@
     "baptism": "Krst",
     "wedding": "Svadba",
     "funeral": "Pohreb"
+  },
+  "contact": {
+    "pageTitle": "Kontakt – BibleBot.Life",
+    "pageDesc": "Pošlite nám správu – tešíme sa na vašu správu.",
+    "badge": "Kontakt",
+    "heading": "Napíšte nám",
+    "subheading": "Máte otázku, spätnú väzbu alebo by ste chceli prediskutovať partnerstvo? Tešíme sa na vašu správu.",
+    "name": "Meno",
+    "namePlaceholder": "Vaše meno",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "category": "Téma",
+    "categoryPlaceholder": "Vyberte tému",
+    "categoryFeedback": "Spätná väzba",
+    "categoryQuestion": "Otázka",
+    "categoryPartnership": "Partnerstvo",
+    "categoryOther": "Iné",
+    "message": "Správa",
+    "messagePlaceholder": "Napíšte svoju správu…",
+    "send": "Odoslať správu",
+    "sending": "Odosielanie…",
+    "fillAll": "Prosím, vyplňte všetky polia.",
+    "errorGeneric": "Vyskytla sa chyba. Prosím, skúste to znova.",
+    "thankYouTitle": "Ďakujeme!",
+    "thankYouMessage": "Vaša správa bola prijatá. Ozveme sa vám čo najskôr.",
+    "sendAnother": "Odoslať ďalšiu správu"
   }
 }
