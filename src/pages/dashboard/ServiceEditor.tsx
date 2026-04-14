@@ -510,32 +510,23 @@ export default function ServiceEditor() {
           </DialogHeader>
           <div className="space-y-4">
             <p className="text-sm text-muted-foreground">
-              Kopiere diese Anfrage in den Chat:
+              Kopiere diese Anfrage in den Chat (unten rechts):
             </p>
             <div className="bg-muted rounded-lg p-4 text-sm">
               {bibleBotContext}
             </div>
-            <div className="flex gap-2">
-              <Button
-                className="flex-1"
-                onClick={() => {
-                  navigator.clipboard.writeText(bibleBotContext);
-                  toast.success("In Zwischenablage kopiert");
-                }}
-              >
-                Kopieren
-              </Button>
-              <Button
-                variant="outline"
-                className="flex-1"
-                onClick={() => {
-                  window.open("/", "_blank");
-                  setBibleBotOpen(false);
-                }}
-              >
-                Chat öffnen
-              </Button>
-            </div>
+            <Button
+              className="w-full"
+              onClick={() => {
+                navigator.clipboard.writeText(bibleBotContext);
+                toast.success("In Zwischenablage kopiert — öffne den Chat unten rechts");
+                setBibleBotOpen(false);
+                // Trigger chat open via custom event
+                window.dispatchEvent(new CustomEvent("open-bibelbot-chat"));
+              }}
+            >
+              Kopieren & Chat öffnen
+            </Button>
           </div>
         </DialogContent>
       </Dialog>
