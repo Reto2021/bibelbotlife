@@ -793,7 +793,7 @@ export function BibleBotChat() {
                     ) : (
                       <Volume2 className="h-4 w-4" />
                     )}
-                    <span className="text-xs">{tts.isPlaying ? "Stopp" : "Vorlesen"}</span>
+                    <span className="text-xs">{tts.isPlaying ? t("chat.stopAudio", "Stopp") : t("chat.playAudio", "Vorlesen")}</span>
                   </button>
                   <ShareButton
                     title={t("share.chatTitle")}
