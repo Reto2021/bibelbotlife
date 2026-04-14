@@ -12,17 +12,17 @@ const TYPE_ICONS: Record<string, React.ReactNode> = {
   other: <Tag className="h-3.5 w-3.5" />,
 };
 
-/** Maps block types to the resource_type they should search */
-const BLOCK_TO_RESOURCE: Record<BlockType, string | null> = {
+/** Maps block types to the resource_type they should search. "any" = show all types. */
+const BLOCK_TO_RESOURCE: Record<BlockType, string | "any"> = {
   song: "song",
   reading: "reading",
   prayer: "prayer",
   liturgy: "liturgy",
-  sermon: null,
-  blessing: null,
+  sermon: "any",
+  blessing: "prayer",
   communion: "liturgy",
-  announcement: null,
-  free: null,
+  announcement: "any",
+  free: "any",
   music: "song",
 };
 
