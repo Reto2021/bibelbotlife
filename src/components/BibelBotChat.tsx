@@ -745,7 +745,7 @@ export function BibleBotChat() {
           const assistantIndex = msg.role === "assistant"
             ? messages.slice(0, i + 1).filter(m => m.role === "assistant").length
             : 0;
-          const showDonateNudge = msg.role === "assistant" && isLast && assistantIndex >= 3 && assistantIndex % 3 === 0 && !user;
+          const showDonateNudge = msg.role === "assistant" && isLast && assistantIndex >= 3 && assistantIndex % 3 === 0;
           const donated = hasDonatedRecently();
           const nudgeDismissed = isDonateNudgeDismissed();
           return (
