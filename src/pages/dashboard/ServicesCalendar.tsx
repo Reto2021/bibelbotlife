@@ -40,6 +40,10 @@ export default function ServicesCalendar() {
   const { data: services, isLoading } = useServices();
   const [viewMode, setViewMode] = useState<ViewMode>("month");
   const [currentDate, setCurrentDate] = useState(new Date());
+  const navigate = useNavigate();
+  const deleteService = useDeleteService();
+  const duplicateService = useDuplicateService();
+  const updateStatus = useUpdateServiceStatus();
 
   const year = currentDate.getFullYear();
   const month = currentDate.getMonth();
