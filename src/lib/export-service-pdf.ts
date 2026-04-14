@@ -73,6 +73,7 @@ function buildServiceDoc(options: ExportOptions): jsPDF {
     `${TYPE_LABELS[serviceType] || serviceType} · ${TRADITION_LABELS[tradition] || tradition}`,
   ];
   if (churchName) meta.unshift(churchName);
+  if (notes) meta.push(`Leitgedanke: ${notes}`);
 
   meta.forEach((line, i) => {
     doc.text(line, margin, 33 + i * 5);
