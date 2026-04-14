@@ -498,6 +498,16 @@ export default function ServiceEditor() {
               </Select>
             </div>
           </div>
+          <div className="mt-4">
+            <label className="text-sm font-medium text-foreground mb-1.5 block">Leitgedanke / Thema</label>
+            <Textarea
+              value={notes}
+              onChange={(e) => setNotes(e.target.value)}
+              placeholder="z.B. «Dankbarkeit im Alltag» — der rote Faden für diesen Gottesdienst"
+              className="resize-none min-h-[56px]"
+              rows={2}
+            />
+          </div>
         </CardContent>
       </Card>
 
