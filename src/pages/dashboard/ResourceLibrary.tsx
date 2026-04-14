@@ -81,9 +81,10 @@ interface FormState {
   resource_type: ResourceType;
   tags: string[];
   tagInput: string;
+  language: string;
 }
 
-const emptyForm: FormState = { title: "", content: "", resource_type: "song", tags: [], tagInput: "" };
+const emptyForm = (lang: string): FormState => ({ title: "", content: "", resource_type: "song", tags: [], tagInput: "", language: lang });
 
 export default function ResourceLibrary() {
   const { data: resources = [], isLoading } = useResources();
