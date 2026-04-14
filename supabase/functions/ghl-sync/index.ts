@@ -55,6 +55,31 @@ serve(async (req) => {
         };
         break;
 
+      case "donation":
+        ghlPayload = {
+          event: "donation",
+          email: data.email || "",
+          amount: data.amount,
+          currency: data.currency || "CHF",
+          source: "BibleBot.Life",
+          tags: ["donor"],
+        };
+        break;
+
+      case "church_subscription":
+        ghlPayload = {
+          event: "church_subscription",
+          email: data.email || "",
+          churchName: data.churchName || "",
+          planTier: data.planTier || "",
+          amount: data.amount,
+          currency: data.currency || "CHF",
+          interval: data.interval || "one_time",
+          source: "BibleBot.Life",
+          tags: ["church_partner", `plan_${data.planTier || "unknown"}`],
+        };
+        break;
+
       default:
         return new Response(JSON.stringify({ error: "Unknown sync type" }), {
           status: 400,
