@@ -1889,9 +1889,13 @@
       "seoDesc": "Create personal wedding ceremony texts and share with your pastor.",
       "partner1": "Partner 1",
       "partner2": "Partner 2",
+      "birthName": "Birth Name",
+      "birthDate": "Date of Birth",
+      "from": "From (Place)",
+      "confession": "Confession",
       "date": "Wedding Date",
       "venue": "Venue / Church",
-      "tradition": "Tradition"
+      "tradition": "Ceremony Tradition"
     },
     "baptism": {
       "title": "Baptism",
