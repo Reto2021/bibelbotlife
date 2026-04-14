@@ -78,6 +78,11 @@ const LANG_CONFIG: Record<string, { name: string; translations: string; quoteSty
   ht: { name: "Haitian Creole", translations: "Bib la (HCV), or Haitian Creole Version", quoteStyle: ["\u00AB", "\u00BB"], spellingFix: false },
 };
 
+function normalizeLang(lang: string): string {
+  const baseLang = lang.trim().toLowerCase().split("-")[0];
+  return LANG_CONFIG[baseLang] ? baseLang : "en";
+}
+
 function getSystemPrompt(lang: string): string {
   const cfg = LANG_CONFIG[lang] || LANG_CONFIG["en"];
   const [q1, q2] = cfg.quoteStyle;
@@ -259,7 +264,7 @@ serve(async (req) => {
     if (!LOVABLE_API_KEY) throw new Error("LOVABLE_API_KEY is not configured");
 
     const url = new URL(req.url);
-    const lang = url.searchParams.get("lang") || "de";
+    const lang = normalizeLang(url.searchParams.get("lang") || "de");
 
     const now = new Date();
     const dateStr = now.toISOString().slice(0, 10);

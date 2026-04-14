@@ -18,6 +18,7 @@ const VAPID_PUBLIC_KEY = "BLMl5bBRzhlza0ozrHEblp3BfKtbyDsbOP-n120rl6teGPFdoyFb77
 const SUBSCRIBED_KEY = "bibelbot-daily-subscribed";
 const SUBSCRIBER_ID_KEY = "bibelbot-subscriber-id";
 const SUBSCRIBER_CHANNEL_KEY = "bibelbot-subscriber-channel";
+const LEGACY_IMPULSE_LANG_KEY = `${IMPULSE_CACHE_KEY}-lang`;
 
 type Impulse = {
   topic: string;
@@ -28,9 +29,24 @@ type Impulse = {
   date: string;
 };
 
-function getCachedImpulse(): Impulse | null {
+function normalizeLang(lang?: string): string {
+  return (lang || "de").split("-")[0].toLowerCase();
+}
+
+function getImpulseCacheKey(lang: string): string {
+  return `${IMPULSE_CACHE_KEY}-${normalizeLang(lang)}`;
+}
+
+function clearLegacyImpulseCache() {
   try {
-    const stored = localStorage.getItem(IMPULSE_CACHE_KEY);
+    localStorage.removeItem(IMPULSE_CACHE_KEY);
+    localStorage.removeItem(LEGACY_IMPULSE_LANG_KEY);
+  } catch {}
+}
+
+function getCachedImpulse(lang: string): Impulse | null {
+  try {
+    const stored = localStorage.getItem(getImpulseCacheKey(lang));
     if (!stored) return null;
     const impulse = JSON.parse(stored) as Impulse;
     const today = new Date().toISOString().slice(0, 10);
@@ -39,10 +55,33 @@ function getCachedImpulse(): Impulse | null {
   return null;
 }
 
-function cacheImpulse(impulse: Impulse) {
+function cacheImpulse(lang: string, impulse: Impulse) {
   try {
-    localStorage.setItem(IMPULSE_CACHE_KEY, JSON.stringify(impulse));
+    localStorage.setItem(getImpulseCacheKey(lang), JSON.stringify(impulse));
   } catch {}
+}
+
+function getFallbackImpulse(lang: string): Impulse {
+  const date = new Date().toISOString().slice(0, 10);
+  if (normalizeLang(lang) === "de") {
+    return {
+      topic: "Hoffnung",
+      verse: "«Denn ich weiss wohl, was ich für Gedanken über euch habe, spricht der Herr: Gedanken des Friedens und nicht des Leides.»",
+      reference: "Jeremia 29,11 (Lutherbibel 2017)",
+      teaser: "Gott hat einen Plan – auch wenn du ihn noch nicht siehst",
+      context: "Manchmal fühlt sich das Leben planlos an. Dieser Vers erinnert daran, dass es eine grössere Perspektive gibt.",
+      date,
+    };
+  }
+
+  return {
+    topic: "Hope",
+    verse: '"For I know the plans I have for you," declares the Lord, "plans to prosper you and not to harm you, plans to give you hope and a future."',
+    reference: "Jeremiah 29:11 (NIV)",
+    teaser: "God has a plan — even if you can’t see it yet",
+    context: "Sometimes life feels aimless. This verse reminds us there is a bigger perspective.",
+    date,
+  };
 }
 
 // Cache share image blob URL per date
@@ -89,9 +128,10 @@ export function DailyImpulse() {
   const { toast } = useToast();
   const isMobile = useIsMobile();
   const { branding: churchBranding } = useChurchBranding();
+  const currentLang = normalizeLang(i18n.resolvedLanguage || i18n.language);
   const [collapsed, setCollapsed] = useState(true); // will sync with isMobile on first render
   const [collapsedInitialized, setCollapsedInitialized] = useState(false);
-  const [impulse, setImpulse] = useState<Impulse | null>(getCachedImpulse);
+  const [impulse, setImpulse] = useState<Impulse | null>(() => getCachedImpulse(currentLang));
   const [isExpanded, setIsExpanded] = useState(false);
   const [isLoading, setIsLoading] = useState(!impulse);
   const [shareImageUrl, setShareImageUrl] = useState<string | null>(null);
@@ -118,52 +158,51 @@ export function DailyImpulse() {
     }
   }, [isMobile, collapsedInitialized]);
 
-  // Invalidate cache when language changes
-  const currentLang = i18n.language;
   useEffect(() => {
-    const cached = getCachedImpulse();
+    clearLegacyImpulseCache();
+    const cached = getCachedImpulse(currentLang);
     if (cached) {
-      const cachedLang = localStorage.getItem(IMPULSE_CACHE_KEY + "-lang");
-      if (cachedLang && cachedLang !== currentLang) {
-        localStorage.removeItem(IMPULSE_CACHE_KEY);
-        setImpulse(null);
-        setIsLoading(true);
-      }
+      setImpulse(cached);
+      setIsLoading(false);
+      return;
     }
+
+    setImpulse(null);
+    setIsLoading(true);
   }, [currentLang]);
 
   useEffect(() => {
     if (impulse) return;
 
+    const controller = new AbortController();
+    const requestLang = currentLang;
+
     const fetchImpulse = async () => {
       try {
-        const resp = await fetch(`${IMPULSE_URL}?lang=${currentLang}`, {
+        const resp = await fetch(`${IMPULSE_URL}?lang=${requestLang}`, {
           headers: {
             Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
           },
+          signal: controller.signal,
         });
         if (!resp.ok) throw new Error("fetch failed");
         const data: Impulse = await resp.json();
+        if (controller.signal.aborted) return;
         setImpulse(data);
-        cacheImpulse(data);
-        localStorage.setItem(IMPULSE_CACHE_KEY + "-lang", currentLang);
+        cacheImpulse(requestLang, data);
       } catch (e) {
+        if (controller.signal.aborted) return;
         console.error("Failed to load daily impulse:", e);
-        setImpulse({
-          topic: "Hoffnung",
-          verse: "«Denn ich weiss wohl, was ich für Gedanken über euch habe, spricht der Herr: Gedanken des Friedens und nicht des Leides.»",
-          reference: "Jeremia 29,11 (Lutherbibel 2017)",
-          teaser: "Gott hat einen Plan – auch wenn du ihn noch nicht siehst",
-          context: "Manchmal fühlt sich das Leben planlos an. Dieser Vers erinnert daran, dass es eine grössere Perspektive gibt.",
-          date: new Date().toISOString().slice(0, 10),
-        });
+        setImpulse(getFallbackImpulse(requestLang));
       } finally {
+        if (controller.signal.aborted) return;
         setIsLoading(false);
       }
     };
 
     fetchImpulse();
-  }, [impulse]);
+    return () => controller.abort();
+  }, [impulse, currentLang]);
 
   const handleGenerateShareImage = useCallback(async () => {
     if (!impulse || isGeneratingImage) return;
