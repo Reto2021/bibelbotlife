@@ -1895,6 +1895,15 @@ export type Database = {
         }[]
       }
       get_registered_user_count: { Args: never; Returns: number }
+      get_registered_users_list: {
+        Args: never
+        Returns: {
+          created_at: string
+          email: string
+          id: string
+          last_sign_in_at: string
+        }[]
+      }
       get_shared_draft: {
         Args: { p_token: string }
         Returns: {
