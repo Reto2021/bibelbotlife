@@ -2,7 +2,7 @@ import { useState, useCallback, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { DndContext, closestCenter, KeyboardSensor, PointerSensor, TouchSensor, useSensor, useSensors, type DragEndEvent, type DragStartEvent, type DragOverEvent, DragOverlay } from "@dnd-kit/core";
 import { arrayMove, SortableContext, sortableKeyboardCoordinates, verticalListSortingStrategy } from "@dnd-kit/sortable";
-import { ArrowLeft, Save, Clock, Plus, Play, Library, BookmarkPlus, FileDown, Mail, Users, GripVertical, PanelRightOpen, PanelRightClose } from "lucide-react";
+import { ArrowLeft, Save, Clock, Plus, Play, Library, BookmarkPlus, FileDown, Mail, Users, GripVertical, PanelRightOpen, PanelRightClose, Trash2, Copy, MoreVertical, Archive, Eye, FileEdit } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -21,6 +21,10 @@ import type { Resource } from "@/hooks/use-resources";
 import { useTemplates, useCreateTemplate, type ServiceTemplate } from "@/hooks/use-templates";
 import { exportServicePdf, exportServicePdfBlob } from "@/lib/export-service-pdf";
 import { Label } from "@/components/ui/label";
+import { useDeleteService, useDuplicateService, useUpdateServiceStatus } from "@/hooks/use-services";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
+import { Badge } from "@/components/ui/badge";
 
 export default function ServiceEditor() {
   const { id } = useParams();
@@ -51,6 +55,11 @@ export default function ServiceEditor() {
   const [emailRecipient, setEmailRecipient] = useState("");
   const [emailSending, setEmailSending] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [serviceStatus, setServiceStatus] = useState<string>("draft");
+  const [deleteConfirmOpen, setDeleteConfirmOpen] = useState(false);
+  const deleteService = useDeleteService();
+  const duplicateService = useDuplicateService();
+  const updateStatus = useUpdateServiceStatus();
 
   const uploadPdfAndGetUrl = async (): Promise<string> => {
     const blob = exportServicePdfBlob({ title, serviceDate, serviceTime, serviceType, tradition, blocks, churchName: church?.name });
@@ -160,6 +169,7 @@ export default function ServiceEditor() {
           setServiceType(data.service_type);
           setTradition(data.tradition);
           setBlocks((data.blocks as unknown as ServiceBlockData[]) || []);
+          setServiceStatus(data.status);
         }
         setLoading(false);
       });
@@ -319,9 +329,16 @@ export default function ServiceEditor() {
           <Button variant="ghost" size="icon" className="shrink-0" onClick={() => navigate("/dashboard")}>
             <ArrowLeft className="h-5 w-5" />
           </Button>
-          <h1 className="text-lg sm:text-2xl font-bold text-foreground truncate">
-            {isNew ? "Neuer Gottesdienst" : "Gottesdienst bearbeiten"}
-          </h1>
+          <div className="flex items-center gap-2 min-w-0">
+            <h1 className="text-lg sm:text-2xl font-bold text-foreground truncate">
+              {isNew ? "Neuer Gottesdienst" : "Gottesdienst bearbeiten"}
+            </h1>
+            {!isNew && (
+              <Badge variant={serviceStatus === "published" ? "default" : serviceStatus === "archived" ? "secondary" : "outline"} className="text-xs shrink-0">
+                {serviceStatus === "draft" ? "Entwurf" : serviceStatus === "published" ? "Veröffentlicht" : "Archiviert"}
+              </Badge>
+            )}
+          </div>
         </div>
         <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
           {totalDuration > 0 && (
@@ -368,6 +385,58 @@ export default function ServiceEditor() {
             {sidebarOpen ? <PanelRightClose className="h-4 w-4 sm:mr-1" /> : <PanelRightOpen className="h-4 w-4 sm:mr-1" />}
             <span className="hidden sm:inline">Bibliothek</span>
           </Button>
+          {!isNew && (
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline" size="sm">
+                  <MoreVertical className="h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem onClick={async () => {
+                  try {
+                    const result = await duplicateService.mutateAsync(id!);
+                    toast.success("Gottesdienst kopiert");
+                    navigate(`/dashboard/editor/${result.id}`);
+                  } catch { toast.error("Fehler beim Kopieren"); }
+                }}>
+                  <Copy className="h-4 w-4 mr-2" /> Kopieren
+                </DropdownMenuItem>
+                <DropdownMenuSeparator />
+                {serviceStatus !== "published" && (
+                  <DropdownMenuItem onClick={async () => {
+                    await updateStatus.mutateAsync({ id: id!, status: "published" });
+                    setServiceStatus("published");
+                    toast.success("Veröffentlicht");
+                  }}>
+                    <Eye className="h-4 w-4 mr-2" /> Veröffentlichen
+                  </DropdownMenuItem>
+                )}
+                {serviceStatus !== "draft" && (
+                  <DropdownMenuItem onClick={async () => {
+                    await updateStatus.mutateAsync({ id: id!, status: "draft" });
+                    setServiceStatus("draft");
+                    toast.success("Auf Entwurf zurückgesetzt");
+                  }}>
+                    <FileEdit className="h-4 w-4 mr-2" /> Auf Entwurf setzen
+                  </DropdownMenuItem>
+                )}
+                {serviceStatus !== "archived" && (
+                  <DropdownMenuItem onClick={async () => {
+                    await updateStatus.mutateAsync({ id: id!, status: "archived" });
+                    setServiceStatus("archived");
+                    toast.success("Archiviert");
+                  }}>
+                    <Archive className="h-4 w-4 mr-2" /> Archivieren
+                  </DropdownMenuItem>
+                )}
+                <DropdownMenuSeparator />
+                <DropdownMenuItem className="text-destructive" onClick={() => setDeleteConfirmOpen(true)}>
+                  <Trash2 className="h-4 w-4 mr-2" /> Löschen
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          )}
         </div>
       </div>
 
@@ -647,6 +716,33 @@ export default function ServiceEditor() {
         </DialogContent>
       </Dialog>
     </div>
+
+    {/* Delete Confirmation */}
+    <AlertDialog open={deleteConfirmOpen} onOpenChange={setDeleteConfirmOpen}>
+      <AlertDialogContent>
+        <AlertDialogHeader>
+          <AlertDialogTitle>Gottesdienst löschen?</AlertDialogTitle>
+          <AlertDialogDescription>
+            «{title}» wird unwiderruflich gelöscht. Diese Aktion kann nicht rückgängig gemacht werden.
+          </AlertDialogDescription>
+        </AlertDialogHeader>
+        <AlertDialogFooter>
+          <AlertDialogCancel>Abbrechen</AlertDialogCancel>
+          <AlertDialogAction
+            className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+            onClick={async () => {
+              try {
+                await deleteService.mutateAsync(id!);
+                toast.success("Gottesdienst gelöscht");
+                navigate("/dashboard/services");
+              } catch { toast.error("Fehler beim Löschen"); }
+            }}
+          >
+            Löschen
+          </AlertDialogAction>
+        </AlertDialogFooter>
+      </AlertDialogContent>
+    </AlertDialog>
     {/* Resource Sidebar */}
     {sidebarOpen && (
       <ResourceSidebar
