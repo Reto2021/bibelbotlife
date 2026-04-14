@@ -29,6 +29,21 @@ const RESOURCE_TYPES: { value: ResourceType; label: string; icon: React.ReactNod
   { value: "other", label: "Sonstiges", icon: <Tag className="h-4 w-4" /> },
 ];
 
+const FIXED_TAG_CATEGORIES = [
+  {
+    label: "Stimmung",
+    tags: ["freudig", "nachdenklich", "feierlich", "ruhig", "dankbar", "tröstend", "hoffnungsvoll", "andächtig"],
+  },
+  {
+    label: "Zeremonie",
+    tags: ["taufe", "hochzeit", "abdankung", "konfirmation", "abendmahl", "segnung"],
+  },
+  {
+    label: "Kirchenjahr",
+    tags: ["advent", "weihnachten", "passion", "ostern", "pfingsten", "erntedank", "reformationsonntag", "ewigkeitssonntag"],
+  },
+];
+
 const typeLabel = (t: ResourceType) => RESOURCE_TYPES.find((r) => r.value === t)?.label ?? t;
 const typeIcon = (t: ResourceType) => RESOURCE_TYPES.find((r) => r.value === t)?.icon;
 
@@ -312,11 +327,38 @@ export default function ResourceLibrary() {
             </div>
             <div>
               <label className="text-sm font-medium text-foreground mb-1 block">Tags</label>
+              {/* Fixed category quick-picks */}
+              <div className="space-y-2 mb-3">
+                {FIXED_TAG_CATEGORIES.map((cat) => (
+                  <div key={cat.label}>
+                    <p className="text-xs text-muted-foreground mb-1">{cat.label}</p>
+                    <div className="flex flex-wrap gap-1">
+                      {cat.tags.map((tag) => (
+                        <Badge
+                          key={tag}
+                          variant={form.tags.includes(tag) ? "default" : "outline"}
+                          className="text-xs cursor-pointer hover:bg-accent transition-colors"
+                          onClick={() => {
+                            if (form.tags.includes(tag)) {
+                              removeTag(tag);
+                            } else {
+                              setForm((f) => ({ ...f, tags: [...f.tags, tag] }));
+                            }
+                          }}
+                        >
+                          {tag}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+              {/* Free tag input */}
               <div className="flex gap-2 mb-2">
                 <Input
                   value={form.tagInput}
                   onChange={(e) => setForm((f) => ({ ...f, tagInput: e.target.value }))}
-                  placeholder="Tag hinzufügen…"
+                  placeholder="Eigener Tag…"
                   onKeyDown={(e) => {
                     if (e.key === "Enter") {
                       e.preventDefault();

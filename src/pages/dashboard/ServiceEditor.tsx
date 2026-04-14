@@ -2,7 +2,7 @@ import { useState, useCallback, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { DndContext, closestCenter, KeyboardSensor, PointerSensor, TouchSensor, useSensor, useSensors, type DragEndEvent, type DragStartEvent, type DragOverEvent, DragOverlay } from "@dnd-kit/core";
 import { arrayMove, SortableContext, sortableKeyboardCoordinates, verticalListSortingStrategy } from "@dnd-kit/sortable";
-import { ArrowLeft, Save, Clock, Plus, Play, Library, BookmarkPlus, FileDown, Mail, Users, GripVertical } from "lucide-react";
+import { ArrowLeft, Save, Clock, Plus, Play, Library, BookmarkPlus, FileDown, Mail, Users, GripVertical, PanelRightOpen, PanelRightClose } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -16,6 +16,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
 import { ResourcePicker } from "@/components/services/ResourcePicker";
+import { ResourceSidebar } from "@/components/services/ResourceSidebar";
 import type { Resource } from "@/hooks/use-resources";
 import { useTemplates, useCreateTemplate, type ServiceTemplate } from "@/hooks/use-templates";
 import { exportServicePdf, exportServicePdfBlob } from "@/lib/export-service-pdf";
@@ -49,6 +50,7 @@ export default function ServiceEditor() {
   const [emailDialogOpen, setEmailDialogOpen] = useState(false);
   const [emailRecipient, setEmailRecipient] = useState("");
   const [emailSending, setEmailSending] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const uploadPdfAndGetUrl = async (): Promise<string> => {
     const blob = exportServicePdfBlob({ title, serviceDate, serviceTime, serviceType, tradition, blocks, churchName: church?.name });
@@ -309,7 +311,8 @@ export default function ServiceEditor() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto space-y-6">
+    <div className="flex h-full">
+    <div className={`flex-1 max-w-4xl mx-auto space-y-6 ${sidebarOpen ? 'mr-0' : ''}`}>
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
         <div className="flex items-center gap-3 min-w-0">
@@ -355,6 +358,15 @@ export default function ServiceEditor() {
           <Button size="sm" onClick={handleSave} disabled={saving}>
             <Save className="h-4 w-4 sm:mr-1" />
             <span className="hidden sm:inline">{saving ? "Speichern..." : "Speichern"}</span>
+          </Button>
+          <Button
+            variant={sidebarOpen ? "default" : "outline"}
+            size="sm"
+            onClick={() => setSidebarOpen(!sidebarOpen)}
+            title="Bibliothek-Panel"
+          >
+            {sidebarOpen ? <PanelRightClose className="h-4 w-4 sm:mr-1" /> : <PanelRightOpen className="h-4 w-4 sm:mr-1" />}
+            <span className="hidden sm:inline">Bibliothek</span>
           </Button>
         </div>
       </div>
@@ -498,32 +510,23 @@ export default function ServiceEditor() {
           </DialogHeader>
           <div className="space-y-4">
             <p className="text-sm text-muted-foreground">
-              Kopiere diese Anfrage in den Chat:
+              Kopiere diese Anfrage in den Chat (unten rechts):
             </p>
             <div className="bg-muted rounded-lg p-4 text-sm">
               {bibleBotContext}
             </div>
-            <div className="flex gap-2">
-              <Button
-                className="flex-1"
-                onClick={() => {
-                  navigator.clipboard.writeText(bibleBotContext);
-                  toast.success("In Zwischenablage kopiert");
-                }}
-              >
-                Kopieren
-              </Button>
-              <Button
-                variant="outline"
-                className="flex-1"
-                onClick={() => {
-                  window.open("/", "_blank");
-                  setBibleBotOpen(false);
-                }}
-              >
-                Chat öffnen
-              </Button>
-            </div>
+            <Button
+              className="w-full"
+              onClick={() => {
+                navigator.clipboard.writeText(bibleBotContext);
+                toast.success("In Zwischenablage kopiert — öffne den Chat unten rechts");
+                setBibleBotOpen(false);
+                // Trigger chat open via custom event
+                window.dispatchEvent(new CustomEvent("open-bibelbot-chat"));
+              }}
+            >
+              Kopieren & Chat öffnen
+            </Button>
           </div>
         </DialogContent>
       </Dialog>
@@ -643,6 +646,16 @@ export default function ServiceEditor() {
           </div>
         </DialogContent>
       </Dialog>
+    </div>
+    {/* Resource Sidebar */}
+    {sidebarOpen && (
+      <ResourceSidebar
+        onSelect={(resource) => {
+          addBlockFromResource(resource);
+        }}
+        onClose={() => setSidebarOpen(false)}
+      />
+    )}
     </div>
   );
 }

@@ -6,6 +6,8 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState, useMemo } from "react";
+import { ResourceSuggest } from "./ResourceSuggest";
+import type { Resource } from "@/hooks/use-resources";
 
 export type BlockType = "song" | "reading" | "sermon" | "prayer" | "blessing" | "communion" | "liturgy" | "announcement" | "free" | "music";
 
@@ -67,6 +69,7 @@ interface ServiceBlockProps {
 
 export function ServiceBlock({ block, onUpdate, onDelete, onAskBibleBot, onPickResource }: ServiceBlockProps) {
   const [expanded, setExpanded] = useState(true);
+  const [titleFocused, setTitleFocused] = useState(false);
   const mediaUrl = (block.metadata?.mediaUrl as string) || "";
 
   const embedInfo = useMemo(() => {
@@ -111,12 +114,29 @@ export function ServiceBlock({ block, onUpdate, onDelete, onAskBibleBot, onPickR
         </button>
         <Icon className="h-4 w-4 text-muted-foreground shrink-0" />
         <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">{BLOCK_LABELS[block.type]}</span>
-        <Input
-          value={block.title}
-          onChange={(e) => onUpdate(block.id, { title: e.target.value })}
-          placeholder={`${BLOCK_LABELS[block.type]}-Titel`}
-          className="flex-1 h-8 text-sm border-0 bg-transparent px-2 focus-visible:ring-1"
-        />
+        <div className="flex-1 relative">
+          <Input
+            value={block.title}
+            onChange={(e) => onUpdate(block.id, { title: e.target.value })}
+            onFocus={() => setTitleFocused(true)}
+            onBlur={() => setTimeout(() => setTitleFocused(false), 200)}
+            placeholder={`${BLOCK_LABELS[block.type]}-Titel`}
+            className="h-8 text-sm border-0 bg-transparent px-2 focus-visible:ring-1"
+          />
+          <ResourceSuggest
+            query={block.title}
+            blockType={block.type}
+            visible={titleFocused}
+            onSelect={(resource: Resource) => {
+              onUpdate(block.id, {
+                title: resource.title,
+                content: resource.content ?? "",
+                metadata: { ...block.metadata, resourceId: resource.id },
+              });
+              setTitleFocused(false);
+            }}
+          />
+        </div>
         <div className="flex items-center gap-1">
           {onPickResource && (
             <Button variant="ghost" size="icon" className="h-7 w-7 text-muted-foreground hover:text-primary" onClick={() => onPickResource(block)} title="Aus Bibliothek">
