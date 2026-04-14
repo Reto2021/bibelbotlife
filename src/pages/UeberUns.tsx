@@ -6,7 +6,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
   Award, Briefcase, GraduationCap, Heart, Linkedin,
-  MapPin, ExternalLink, Users, Lightbulb, Building2
+  MapPin, ExternalLink, Users, Lightbulb, Building2,
+  MessageCircle, Church, HeartHandshake
 } from "lucide-react";
 
 const EDUCATION = [
