@@ -341,7 +341,15 @@
     "errorTitle": "Fehler",
     "errorConnection": "konnte nicht erreicht werden.",
     "errorNoStream": "Kein Stream",
-    "seniorMode": "Senioren-Modus (grössere Schrift)"
+    "seniorMode": "Senioren-Modus (grössere Schrift)",
+    "journeyProgress": "Tag {{day}} von {{total}} · {{phase}}",
+    "translationModern": "Moderne Übersetzungen",
+    "translationHistoric": "Historisch (exakt nachschlagbar)",
+    "translationZuercher": "Zürcher Bibel (2007) – Reformiert",
+    "translationLuther": "Lutherbibel (2017) – Evangelisch",
+    "translationEinheit": "Einheitsübersetzung (2016) – Katholisch",
+    "translationSchlachter": "Schlachter 2000 – Freikirchlich",
+    "translationElberfelder": "Elberfelder 2006 – Wortgetreu"
   },
   "install": {
     "title": "BibleBot installieren",
