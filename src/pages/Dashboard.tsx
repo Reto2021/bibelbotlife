@@ -20,7 +20,7 @@ import { Button } from "@/components/ui/button";
 import { LogOut } from "lucide-react";
 import { AppLogo } from "@/components/AppLogo";
 import { Link } from "react-router-dom";
-import BibelBotChat from "@/components/BibelBotChat";
+import { BibelBotChat } from "@/components/BibelBotChat";
 
 const navItems = [
   { title: "Übersicht", url: "/dashboard", icon: Home },
