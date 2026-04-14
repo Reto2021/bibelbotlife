@@ -118,12 +118,26 @@ export function DailyImpulse() {
     }
   }, [isMobile, collapsedInitialized]);
 
+  // Invalidate cache when language changes
+  const currentLang = i18n.language;
+  useEffect(() => {
+    const cached = getCachedImpulse();
+    if (cached) {
+      const cachedLang = localStorage.getItem(IMPULSE_CACHE_KEY + "-lang");
+      if (cachedLang && cachedLang !== currentLang) {
+        localStorage.removeItem(IMPULSE_CACHE_KEY);
+        setImpulse(null);
+        setIsLoading(true);
+      }
+    }
+  }, [currentLang]);
+
   useEffect(() => {
     if (impulse) return;
 
     const fetchImpulse = async () => {
       try {
-        const resp = await fetch(IMPULSE_URL, {
+        const resp = await fetch(`${IMPULSE_URL}?lang=${currentLang}`, {
           headers: {
             Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
           },
@@ -132,6 +146,7 @@ export function DailyImpulse() {
         const data: Impulse = await resp.json();
         setImpulse(data);
         cacheImpulse(data);
+        localStorage.setItem(IMPULSE_CACHE_KEY + "-lang", currentLang);
       } catch (e) {
         console.error("Failed to load daily impulse:", e);
         setImpulse({
