@@ -654,7 +654,7 @@ export function BibleBotChat() {
             )}
             <p className="text-xs text-muted-foreground">
               {journeyDay > 0 && journeyDay <= 21
-                ? `Tag ${journeyDay} von 21 · ${journeyDay <= 7 ? t("chat.arriving") : journeyDay <= 14 ? t("chat.deepening") : t("chat.acting")}`
+                ? t("chat.journeyProgress", { day: journeyDay, total: 21, phase: journeyDay <= 7 ? t("chat.arriving") : journeyDay <= 14 ? t("chat.deepening") : t("chat.acting") })
                 : journeyDay > 21
                   ? t("chat.journeyComplete")
                   : t("chat.yourCompanion")}
