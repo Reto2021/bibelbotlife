@@ -127,7 +127,8 @@ function buildDocx(options: ExportOptions): Document {
     }
 
     const isEven = i % 2 === 0;
-    const rowShading = isEven ? { fill: "F8F8F8", type: ShadingType.CLEAR as const } : { fill: "FFFFFF", type: ShadingType.CLEAR as const };
+    const rowFill = isEven ? "F8F8F8" : "FFFFFF";
+    const rowShading = { fill: rowFill, type: ShadingType.CLEAR };
 
     return new TableRow({
       children: [
