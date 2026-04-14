@@ -4,7 +4,12 @@
     "prayerWall": "حائط الصلاة",
     "bibleQuiz": "اختبار الكتاب المقدس",
     "forCelebrants": "للقساوسة",
-    "forCelebrantsMobile": "للقساوسة والمدربين"
+    "forCelebrantsMobile": "للقساوسة والمدربين",
+    "donate": "Donate",
+    "more": "More",
+    "explore": "Explore",
+    "professionals": "For Professionals",
+    "support": "Support"
   },
   "loader": "جارٍ التحميل…",
   "hero": {

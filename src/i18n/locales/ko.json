@@ -4,7 +4,12 @@
     "prayerWall": "기도의 벽",
     "bibleQuiz": "성경 퀴즈",
     "forCelebrants": "목회자용",
-    "forCelebrantsMobile": "목회자 및 코치용"
+    "forCelebrantsMobile": "목회자 및 코치용",
+    "donate": "Donate",
+    "more": "More",
+    "explore": "Explore",
+    "professionals": "For Professionals",
+    "support": "Support"
   },
   "loader": "로드 중…",
   "hero": {

@@ -4,7 +4,12 @@
     "prayerWall": "Modlitebná stena",
     "bibleQuiz": "Biblický kvíz",
     "forCelebrants": "Pre duchovných",
-    "forCelebrantsMobile": "Pre duchovných a koučov"
+    "forCelebrantsMobile": "Pre duchovných a koučov",
+    "donate": "Donate",
+    "more": "More",
+    "explore": "Explore",
+    "professionals": "For Professionals",
+    "support": "Support"
   },
   "loader": "Načítava sa…",
   "hero": {

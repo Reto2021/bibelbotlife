@@ -4,7 +4,12 @@
     "prayerWall": "Τοίχος Προσευχής",
     "bibleQuiz": "Κουίζ Αγίας Γραφής",
     "forCelebrants": "Για ιερείς",
-    "forCelebrantsMobile": "Για ιερείς & προπονητές"
+    "forCelebrantsMobile": "Για ιερείς & προπονητές",
+    "donate": "Donate",
+    "more": "More",
+    "explore": "Explore",
+    "professionals": "For Professionals",
+    "support": "Support"
   },
   "loader": "Φορτώνεται…",
   "hero": {

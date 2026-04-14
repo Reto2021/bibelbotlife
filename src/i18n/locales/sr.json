@@ -4,7 +4,12 @@
     "prayerWall": "Molitva",
     "bibleQuiz": "Biblijski kviz",
     "forCelebrants": "За душебрижнике",
-    "forCelebrantsMobile": "За душебрижнике и тренере"
+    "forCelebrantsMobile": "За душебрижнике и тренере",
+    "donate": "Donate",
+    "more": "More",
+    "explore": "Explore",
+    "professionals": "For Professionals",
+    "support": "Support"
   },
   "loader": "Učitavanje…",
   "hero": {
