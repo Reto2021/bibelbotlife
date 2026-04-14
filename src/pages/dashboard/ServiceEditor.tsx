@@ -294,6 +294,7 @@ export default function ServiceEditor() {
         service_type: serviceType as any,
         tradition: tradition as any,
         blocks: blocks as any,
+        notes: notes || null,
         created_by: user.id,
         church_id: church.id,
       };
