@@ -716,6 +716,33 @@ export default function ServiceEditor() {
         </DialogContent>
       </Dialog>
     </div>
+
+    {/* Delete Confirmation */}
+    <AlertDialog open={deleteConfirmOpen} onOpenChange={setDeleteConfirmOpen}>
+      <AlertDialogContent>
+        <AlertDialogHeader>
+          <AlertDialogTitle>Gottesdienst löschen?</AlertDialogTitle>
+          <AlertDialogDescription>
+            «{title}» wird unwiderruflich gelöscht. Diese Aktion kann nicht rückgängig gemacht werden.
+          </AlertDialogDescription>
+        </AlertDialogHeader>
+        <AlertDialogFooter>
+          <AlertDialogCancel>Abbrechen</AlertDialogCancel>
+          <AlertDialogAction
+            className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+            onClick={async () => {
+              try {
+                await deleteService.mutateAsync(id!);
+                toast.success("Gottesdienst gelöscht");
+                navigate("/dashboard/services");
+              } catch { toast.error("Fehler beim Löschen"); }
+            }}
+          >
+            Löschen
+          </AlertDialogAction>
+        </AlertDialogFooter>
+      </AlertDialogContent>
+    </AlertDialog>
     {/* Resource Sidebar */}
     {sidebarOpen && (
       <ResourceSidebar
