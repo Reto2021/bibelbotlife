@@ -28,6 +28,19 @@ const EulogyWriter = () => {
   const { t, i18n } = useTranslation();
   const { user } = useAuth();
   const { draftsQuery, saveDraft, toggleShare } = useCeremonyDrafts("funeral");
+  const { resources } = useResources();
+
+  const funeralTags = ["trauer", "trost", "abschied", "funeral", "comfort", "grief", "hope"];
+  const suggestedResources = (resources || []).filter(
+    (r) => r.tags?.some((tag) => funeralTags.includes(tag.toLowerCase())) ||
+      r.resource_type === "prayer" || r.resource_type === "reading"
+  ).slice(0, 8);
+
+  const resourceIcon = (type: string) => {
+    if (type === "song") return <Music className="h-3.5 w-3.5" />;
+    if (type === "prayer") return <HandHeart className="h-3.5 w-3.5" />;
+    return <BookOpenText className="h-3.5 w-3.5" />;
+  };
 
   // Form state
   const [personName, setPersonName] = useState("");
