@@ -307,12 +307,9 @@ Deno.serve(async (req) => {
     for (const ts of Object.values(cSessionTs)) {
       if (ts.length > 1) {
         const dur = Math.max(...ts) - Math.min(...ts);
-        if (dur < 7200000) { cTotalDur += dur; cCountedSessions++; }
-      } else {
-        // Single-event sessions: assume minimum 30s (one heartbeat)
-        cTotalDur += 30000;
-        cCountedSessions++;
+        if (dur > 0 && dur < 7200000) { cTotalDur += dur; cCountedSessions++; }
       }
+      // Skip single-event sessions (bounces)
     }
     const cAvgDurSec = cCountedSessions > 0 ? Math.round(cTotalDur / cCountedSessions / 1000) : 0;
 
