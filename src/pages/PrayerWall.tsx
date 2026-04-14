@@ -69,10 +69,10 @@ export default function PrayerWall() {
     });
 
     if (error) {
-      toast({ title: "Fehler", description: "Bitte versuche es erneut.", variant: "destructive" });
+      toast({ title: t("prayer.errorTitle"), description: t("prayer.errorDesc"), variant: "destructive" });
     } else {
-      toast({ title: "🙏 Gebetsanliegen geteilt", description: "Danke für dein Vertrauen." });
-      toast({ title: "Wird geprüft", description: "Dein Anliegen wird nach Freigabe sichtbar.", variant: "default" });
+      toast({ title: t("prayer.sharedTitle"), description: t("prayer.sharedDesc") });
+      toast({ title: t("prayer.moderationTitle"), description: t("prayer.moderationDesc"), variant: "default" });
       setContent("");
       setAuthorName("");
       fetchRequests();
@@ -95,19 +95,19 @@ export default function PrayerWall() {
   function timeAgo(dateStr: string) {
     const diff = Date.now() - new Date(dateStr).getTime();
     const mins = Math.floor(diff / 60000);
-    if (mins < 1) return "gerade eben";
-    if (mins < 60) return `vor ${mins} Min.`;
+    if (mins < 1) return t("prayer.justNow");
+    if (mins < 60) return t("prayer.minutesAgo", { count: mins });
     const hours = Math.floor(mins / 60);
-    if (hours < 24) return `vor ${hours} Std.`;
+    if (hours < 24) return t("prayer.hoursAgo", { count: hours });
     const days = Math.floor(hours / 24);
-    return `vor ${days} Tag${days > 1 ? "en" : ""}`;
+    return t("prayer.daysAgo", { count: days });
   }
 
   return (
     <>
       <SEOHead
-        title="Gebetswand – Füreinander beten | BibleBot.Life"
-        description="Teile dein Gebetsanliegen und bete für andere. Eine Gemeinschaft, die füreinander einsteht."
+        title={t("prayer.seoTitle")}
+        description={t("prayer.seoDesc")}
       />
 
       <div className="min-h-screen bg-background">
@@ -115,9 +115,9 @@ export default function PrayerWall() {
         <div className="container mx-auto max-w-2xl px-4 py-8">
           {/* Header */}
           <div className="mb-8">
-            <h1 className="text-2xl md:text-3xl font-bold text-foreground">🙏 Gebetswand</h1>
+            <h1 className="text-2xl md:text-3xl font-bold text-foreground">🙏 {t("prayer.title")}</h1>
             <p className="text-muted-foreground text-sm mt-1">
-              Teile dein Anliegen – die Gemeinschaft betet mit dir.
+              {t("prayer.subtitle")}
             </p>
           </div>
 
@@ -125,7 +125,7 @@ export default function PrayerWall() {
           <Card className="p-5 mb-8 border-primary/20 bg-card">
             <form onSubmit={handleSubmit} className="space-y-4">
               <Textarea
-                placeholder="Was liegt dir auf dem Herzen?"
+                placeholder={t("prayer.placeholder")}
                 value={content}
                 onChange={e => setContent(e.target.value.slice(0, 500))}
                 rows={3}
@@ -143,13 +143,13 @@ export default function PrayerWall() {
                     onCheckedChange={setIsAnonymous}
                   />
                   <Label htmlFor="anonymous" className="text-sm text-muted-foreground cursor-pointer">
-                    Anonym posten
+                    {t("prayer.anonymous")}
                   </Label>
                 </div>
 
                 {!isAnonymous && (
                   <Input
-                    placeholder="Dein Name (optional)"
+                    placeholder={t("prayer.namePlaceholder")}
                     value={authorName}
                     onChange={e => setAuthorName(e.target.value.slice(0, 50))}
                     className="max-w-[180px]"
@@ -161,7 +161,7 @@ export default function PrayerWall() {
                 <span className="text-xs text-muted-foreground">{content.length}/500</span>
                 <Button type="submit" disabled={submitting || content.trim().length < 5} size="sm">
                   <Send className="h-4 w-4 mr-2" />
-                  Anliegen teilen
+                  {t("prayer.submit")}
                 </Button>
               </div>
             </form>
@@ -177,7 +177,7 @@ export default function PrayerWall() {
           ) : requests.length === 0 ? (
             <div className="text-center py-16 text-muted-foreground">
               <p className="text-4xl mb-3">🕊️</p>
-              <p>Noch keine Gebetsanliegen. Sei der/die Erste!</p>
+              <p>{t("prayer.empty")}</p>
             </div>
           ) : (
             <AnimatePresence mode="popLayout">
@@ -195,7 +195,7 @@ export default function PrayerWall() {
                       </p>
                       <div className="flex items-center justify-between mt-3">
                         <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                          <span>{req.is_anonymous ? "Anonym" : "Jemand"}</span>
+                          <span>{req.is_anonymous ? t("prayer.anonymousLabel") : t("prayer.someoneLabel")}</span>
                           <span>·</span>
                           <span>{timeAgo(req.created_at)}</span>
                         </div>
@@ -208,7 +208,7 @@ export default function PrayerWall() {
                         >
                           <Heart className={`h-3.5 w-3.5 ${prayedFor.has(req.id) ? "fill-current" : ""}`} />
                           {req.prayer_count > 0 && <span>{req.prayer_count}</span>}
-                          {prayedFor.has(req.id) ? "Gebetet" : "Ich bete"}
+                          {prayedFor.has(req.id) ? t("prayer.prayed") : t("prayer.pray")}
                         </Button>
                       </div>
                     </Card>

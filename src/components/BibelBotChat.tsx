@@ -146,7 +146,7 @@ function QABadge({ qa, t }: { qa: QAResult | "loading" | "skipped"; t: (key: str
   );
 }
 
-function makeRefsClickable(children: React.ReactNode, onRefClick: (msg: string) => void): React.ReactNode {
+function makeRefsClickable(children: React.ReactNode, onRefClick: (msg: string) => void, t: (key: string, opts?: any) => string): React.ReactNode {
   if (!children) return children;
   const processNode = (node: React.ReactNode): React.ReactNode => {
     if (typeof node === "string") {
@@ -158,7 +158,7 @@ function makeRefsClickable(children: React.ReactNode, onRefClick: (msg: string) 
         if (match.index > lastIndex) parts.push(node.slice(lastIndex, match.index));
         const ref = match[0];
         parts.push(
-          <button key={`ref-${match.index}`} onClick={(e) => { e.preventDefault(); onRefClick(`Erkläre mir ${ref} im Detail: Was ist der historische Kontext? Wer spricht? Was kommt davor und danach? Und was bedeutet das für mich heute?`); }} className="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary cursor-pointer font-medium" title={`${ref} vertiefen`}>{ref}</button>
+          <button key={`ref-${match.index}`} onClick={(e) => { e.preventDefault(); onRefClick(t("toolPrompts.explainRef", { ref })); }} className="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary cursor-pointer font-medium" title={ref}>{ref}</button>
         );
         lastIndex = regex.lastIndex;
       }
@@ -725,8 +725,8 @@ export function BibleBotChat() {
                 {msg.role === "assistant" ? (
                   <div className="prose prose-sm max-w-none dark:prose-invert font-serif">
                     <ReactMarkdown components={{
-                      p: ({ children }) => <p>{makeRefsClickable(children, sendMessage)}</p>,
-                      li: ({ children }) => <li>{makeRefsClickable(children, sendMessage)}</li>,
+                      p: ({ children }) => <p>{makeRefsClickable(children, sendMessage, t)}</p>,
+                      li: ({ children }) => <li>{makeRefsClickable(children, sendMessage, t)}</li>,
                     }}>{cleanText}</ReactMarkdown>
                   </div>
                 ) : msg.content}
