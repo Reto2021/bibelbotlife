@@ -1,7 +1,7 @@
 import { useState, useRef, useCallback, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Mic, Square, Play, Pause, Trash2, Sparkles, Download, Loader2, Save, Share2, Check, Copy, ExternalLink } from "lucide-react";
+import { ArrowLeft, Mic, Square, Play, Pause, Trash2, Sparkles, Download, Loader2, Save, Share2, Check, Copy, ExternalLink, Music, BookOpenText, HandHeart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -11,6 +11,8 @@ import { SEOHead } from "@/components/SEOHead";
 import { toast } from "sonner";
 import { useAuth } from "@/hooks/use-auth";
 import { useCeremonyDrafts } from "@/hooks/use-ceremony-drafts";
+import { useResources } from "@/hooks/use-resources";
+import { Badge } from "@/components/ui/badge";
 import jsPDF from "jspdf";
 
 interface Recording {
@@ -25,6 +27,20 @@ const EulogyWriter = () => {
   const { t, i18n } = useTranslation();
   const { user } = useAuth();
   const { draftsQuery, saveDraft, toggleShare } = useCeremonyDrafts("funeral");
+  const resourcesQuery = useResources();
+  const resources = resourcesQuery.data;
+
+  const funeralTags = ["trauer", "trost", "abschied", "funeral", "comfort", "grief", "hope"];
+  const suggestedResources = (resources || []).filter(
+    (r) => r.tags?.some((tag) => funeralTags.includes(tag.toLowerCase())) ||
+      r.resource_type === "prayer" || r.resource_type === "reading"
+  ).slice(0, 8);
+
+  const resourceIcon = (type: string) => {
+    if (type === "song") return <Music className="h-3.5 w-3.5" />;
+    if (type === "prayer") return <HandHeart className="h-3.5 w-3.5" />;
+    return <BookOpenText className="h-3.5 w-3.5" />;
+  };
 
   // Form state
   const [personName, setPersonName] = useState("");
@@ -520,6 +536,40 @@ const EulogyWriter = () => {
             </div>
           </CardContent>
         </Card>
+
+        {/* Resource Suggestions */}
+        {suggestedResources.length > 0 && (
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-base flex items-center gap-2">
+                <span className="bg-primary/10 text-primary rounded-full w-6 h-6 flex items-center justify-center text-sm">💡</span>
+                {t("eulogy.resourceSuggestions", "Passende Lieder, Gebete & Lesungen")}
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid gap-2 sm:grid-cols-2">
+                {suggestedResources.map((r) => (
+                  <div key={r.id} className="flex items-start gap-2 p-2.5 rounded-lg border hover:bg-muted/50 transition-colors">
+                    <div className="mt-0.5 text-primary">{resourceIcon(r.resource_type)}</div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm font-medium truncate">{r.title}</p>
+                      <div className="flex items-center gap-1 mt-0.5">
+                        {r.hymnal_ref && (
+                          <Badge variant="outline" className="text-xs font-mono">{r.hymnal_ref}</Badge>
+                        )}
+                        <span className="text-xs text-muted-foreground">{r.resource_type}</span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <p className="text-xs text-muted-foreground mt-3">
+                {t("eulogy.moreResources", "Weitere Ressourcen findest du in der")}{" "}
+                <Link to="/dashboard/resources" className="underline text-primary">{t("eulogy.library", "Bibliothek")}</Link>.
+              </p>
+            </CardContent>
+          </Card>
+        )}
 
         {/* Step 3: Generate */}
         <Card>
