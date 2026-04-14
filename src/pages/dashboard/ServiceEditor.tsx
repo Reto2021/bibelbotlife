@@ -311,7 +311,8 @@ export default function ServiceEditor() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto space-y-6">
+    <div className="flex h-full">
+    <div className={`flex-1 max-w-4xl mx-auto space-y-6 ${sidebarOpen ? 'mr-0' : ''}`}>
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
         <div className="flex items-center gap-3 min-w-0">
