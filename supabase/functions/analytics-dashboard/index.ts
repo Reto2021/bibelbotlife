@@ -454,15 +454,20 @@ Deno.serve(async (req) => {
     : 0;
 
   // ═══════════════════════════════════════
-  // ── Unique visitors (daily-deduplicated fingerprint) ──
+  // ── Unique visitors (prefer persistent visitor_id, fallback to fingerprint) ──
   // ═══════════════════════════════════════
-  const dailyVisitors = new Set<string>();
+  const visitorIds = new Set<string>();
   nonHeartbeatEvents.forEach((e: any) => {
-    const day = zurichParts(e.created_at).date;
-    const fp = `${day}_${e.screen_width || 0}_${(e.user_agent || "").slice(0, 80)}`;
-    dailyVisitors.add(fp);
+    if (e.visitor_id) {
+      visitorIds.add(e.visitor_id);
+    } else {
+      // Fallback for events before visitor_id was added
+      const day = zurichParts(e.created_at).date;
+      const fp = `fp_${day}_${e.screen_width || 0}_${(e.user_agent || "").slice(0, 80)}`;
+      visitorIds.add(fp);
+    }
   });
-  const uniqueVisitors = dailyVisitors.size;
+  const uniqueVisitors = visitorIds.size;
 
   // ═══════════════════════════════════════
   // ── Bounce rate: sessions with only 1 pageview and no custom events ──

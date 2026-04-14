@@ -61,6 +61,7 @@ export type Database = {
           user_agent: string | null
           utm_medium: string | null
           utm_source: string | null
+          visitor_id: string | null
         }
         Insert: {
           church_slug?: string | null
@@ -76,6 +77,7 @@ export type Database = {
           user_agent?: string | null
           utm_medium?: string | null
           utm_source?: string | null
+          visitor_id?: string | null
         }
         Update: {
           church_slug?: string | null
@@ -91,6 +93,7 @@ export type Database = {
           user_agent?: string | null
           utm_medium?: string | null
           utm_source?: string | null
+          visitor_id?: string | null
         }
         Relationships: []
       }
