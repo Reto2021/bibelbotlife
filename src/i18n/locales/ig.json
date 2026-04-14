@@ -1805,5 +1805,31 @@
     "baptism": "Baptizim",
     "wedding": "Agbamakwụkwọ",
     "funeral": "Olili ozu"
+  },
+  "contact": {
+    "pageTitle": "Mmekọrịta – BibleBot.Life",
+    "pageDesc": "Zipu anyị ozi – anyị na-atụ anya ịnụrụ gị.",
+    "badge": "Mmekọrịta",
+    "heading": "Degara anyị akwụkwọ",
+    "subheading": "Ị nwere ajụjụ, nzaghachi, ka ị ga-achọ ikwurịta mmekọrịta? Anyị na-atụ anya ozi gị.",
+    "name": "Aha",
+    "namePlaceholder": "Aha gị",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "category": "Isiokwu",
+    "categoryPlaceholder": "Họrọ isiokwu",
+    "categoryFeedback": "Nzaghachi",
+    "categoryQuestion": "Ajụjụ",
+    "categoryPartnership": "Njiko",
+    "categoryOther": "Ndị ọzọ",
+    "message": "Ozi",
+    "messagePlaceholder": "Dee ozi gị…",
+    "send": "Zipu ozi",
+    "sending": "Na-eziga…",
+    "fillAll": "Biko dejupụta ebe niile.",
+    "errorGeneric": "Mmejọ mere. Biko nwaa ọzọ.",
+    "thankYouTitle": "Daalụ!",
+    "thankYouMessage": "Anatala ozi gị. Anyị ga-aza gị ozigbo enwere ike.",
+    "sendAnother": "Zipu ozi ọzọ"
   }
 }

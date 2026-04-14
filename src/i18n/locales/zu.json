@@ -1799,5 +1799,31 @@
     "baptism": "Ubhabhadiso",
     "wedding": "Umshado",
     "funeral": "Umngcwabo"
+  },
+  "contact": {
+    "pageTitle": "Contact – BibleBot.Life",
+    "pageDesc": "Sithumele umlayezo – silangazelela ukuzwa okuvela kuwe.",
+    "badge": "Xhumana",
+    "heading": "Sibhalele",
+    "subheading": "Unombuzo, impendulo, noma ungathanda ukuxoxa ngobambiswano? Silangazelela umlayezo wakho.",
+    "name": "Igama",
+    "namePlaceholder": "Igama lakho",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "category": "Isihloko",
+    "categoryPlaceholder": "Khetha isihloko",
+    "categoryFeedback": "Impendulo",
+    "categoryQuestion": "Umbuzo",
+    "categoryPartnership": "Ubudlelwano",
+    "categoryOther": "Okunye",
+    "message": "Umlayezo",
+    "messagePlaceholder": "Bhala umlayezo wakho…",
+    "send": "Thumela umlayezo",
+    "sending": "Iya thumela…",
+    "fillAll": "Sicela ugcwalise zonke izinkambu.",
+    "errorGeneric": "Kunenkinga eyenzekile. Sicela uzame futhi.",
+    "thankYouTitle": "Ngiyabonga!",
+    "thankYouMessage": "Umlayezo wakho usutholiwe. Sizobuya kuwe ngokushesha okukhulu.",
+    "sendAnother": "Thumela omunye umlayezo"
   }
 }

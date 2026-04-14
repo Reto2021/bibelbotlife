@@ -1800,5 +1800,31 @@
     "baptism": "洗礼",
     "wedding": "婚礼",
     "funeral": "葬礼"
+  },
+  "contact": {
+    "pageTitle": "联系 – BibleBot.Life",
+    "pageDesc": "给我们留言 – 我们期待您的来信。",
+    "badge": "联系",
+    "heading": "写信给我们",
+    "subheading": "您有问题、反馈，或者想讨论合作事宜吗？我们期待您的来信。",
+    "name": "姓名",
+    "namePlaceholder": "你的名字",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "category": "主题",
+    "categoryPlaceholder": "选择一个主题",
+    "categoryFeedback": "反馈",
+    "categoryQuestion": "问题",
+    "categoryPartnership": "合作",
+    "categoryOther": "其他",
+    "message": "消息",
+    "messagePlaceholder": "写下你的消息…",
+    "send": "发送消息",
+    "sending": "正在发送…",
+    "fillAll": "请填写所有字段。",
+    "errorGeneric": "发生错误。请重试。",
+    "thankYouTitle": "谢谢！",
+    "thankYouMessage": "您的消息已收到。我们将尽快回复您。",
+    "sendAnother": "发送另一条消息"
   }
 }

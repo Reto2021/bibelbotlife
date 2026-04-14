@@ -1799,5 +1799,31 @@
     "baptism": "Battesimo",
     "wedding": "Matrimonio",
     "funeral": "Funerale"
+  },
+  "contact": {
+    "pageTitle": "Contatti – BibleBot.Life",
+    "pageDesc": "Inviaci un messaggio – non vediamo l'ora di sentirti.",
+    "badge": "Contatto",
+    "heading": "Scrivici",
+    "subheading": "Hai una domanda, un feedback, o vorresti discutere una partnership? Aspettiamo il tuo messaggio.",
+    "name": "Nome",
+    "namePlaceholder": "Il tuo nome",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "category": "Argomento",
+    "categoryPlaceholder": "Scegli un argomento",
+    "categoryFeedback": "Feedback",
+    "categoryQuestion": "Domanda",
+    "categoryPartnership": "Partnership",
+    "categoryOther": "Altro",
+    "message": "Messaggio",
+    "messagePlaceholder": "Scrivi il tuo messaggio…",
+    "send": "Invia messaggio",
+    "sending": "Invio…",
+    "fillAll": "Si prega di compilare tutti i campi.",
+    "errorGeneric": "Si è verificato un errore. Per favore riprova.",
+    "thankYouTitle": "Grazie!",
+    "thankYouMessage": "Il tuo messaggio è stato ricevuto. Ti risponderemo il prima possibile.",
+    "sendAnother": "Invia un altro messaggio"
   }
 }

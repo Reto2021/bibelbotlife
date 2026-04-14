@@ -1801,5 +1801,31 @@
     "baptism": "Lễ rửa tội",
     "wedding": "Lễ cưới",
     "funeral": "Lễ tang"
+  },
+  "contact": {
+    "pageTitle": "Liên hệ – BibleBot.Life",
+    "pageDesc": "Gửi cho chúng tôi một tin nhắn – chúng tôi mong muốn nhận được phản hồi từ bạn.",
+    "badge": "Liên hệ",
+    "heading": "Viết thư cho chúng tôi",
+    "subheading": "Bạn có câu hỏi, phản hồi hay bạn muốn thảo luận về việc hợp tác? Chúng tôi mong nhận được tin nhắn của bạn.",
+    "name": "Tên",
+    "namePlaceholder": "Tên của bạn",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "category": "Chủ đề",
+    "categoryPlaceholder": "Chọn một chủ đề",
+    "categoryFeedback": "Phản hồi",
+    "categoryQuestion": "Câu hỏi",
+    "categoryPartnership": "Hợp tác",
+    "categoryOther": "Khác",
+    "message": "Tin nhắn",
+    "messagePlaceholder": "Viết tin nhắn của bạn…",
+    "send": "Gửi tin nhắn",
+    "sending": "Đang gửi…",
+    "fillAll": "Vui lòng điền tất cả các trường.",
+    "errorGeneric": "Đã xảy ra lỗi. Vui lòng thử lại.",
+    "thankYouTitle": "Cảm ơn bạn!",
+    "thankYouMessage": "Tin nhắn của bạn đã được nhận. Chúng tôi sẽ liên hệ lại với bạn trong thời gian sớm nhất.",
+    "sendAnother": "Gửi tin nhắn khác"
   }
 }

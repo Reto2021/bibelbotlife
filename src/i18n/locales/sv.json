@@ -1799,5 +1799,31 @@
     "baptism": "Dop",
     "wedding": "Bröllop",
     "funeral": "Begravning"
+  },
+  "contact": {
+    "pageTitle": "Kontakt – BibleBot.Life",
+    "pageDesc": "Skicka ett meddelande – vi ser fram emot att höra från dig.",
+    "badge": "Kontakt",
+    "heading": "Skriv till oss",
+    "subheading": "Har du en fråga, feedback, eller vill du diskutera ett partnerskap? Vi ser fram emot ditt meddelande.",
+    "name": "Namn",
+    "namePlaceholder": "Ditt namn",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "category": "Ämne",
+    "categoryPlaceholder": "Välj ett ämne",
+    "categoryFeedback": "Feedback",
+    "categoryQuestion": "Fråga",
+    "categoryPartnership": "Partnerskap",
+    "categoryOther": "Övrigt",
+    "message": "Meddelande",
+    "messagePlaceholder": "Skriv ditt meddelande…",
+    "send": "Skicka meddelande",
+    "sending": "Skickar…",
+    "fillAll": "Vänligen fyll i alla fält.",
+    "errorGeneric": "Ett fel uppstod. Vänligen försök igen.",
+    "thankYouTitle": "Tack!",
+    "thankYouMessage": "Ditt meddelande har mottagits. Vi återkommer så snart som möjligt.",
+    "sendAnother": "Skicka ett annat meddelande"
   }
 }

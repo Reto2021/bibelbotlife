@@ -1800,5 +1800,31 @@
     "baptism": "Βάπτιση",
     "wedding": "Γάμος",
     "funeral": "Κηδεία"
+  },
+  "contact": {
+    "pageTitle": "Επικοινωνία – BibleBot.Life",
+    "pageDesc": "Στείλτε μας ένα μήνυμα – ανυπομονούμε να σας ακούσουμε.",
+    "badge": "Επικοινωνία",
+    "heading": "Γράψτε μας",
+    "subheading": "Έχετε κάποια ερώτηση, σχόλια ή θα θέλατε να συζητήσουμε μια συνεργασία; Ανυπομονούμε για το μήνυμά σας.",
+    "name": "Όνομα",
+    "namePlaceholder": "Το όνομά σας",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "category": "Θέμα",
+    "categoryPlaceholder": "Επιλέξτε ένα θέμα",
+    "categoryFeedback": "Σχόλια",
+    "categoryQuestion": "Ερώτηση",
+    "categoryPartnership": "Συνεργασία",
+    "categoryOther": "Άλλο",
+    "message": "Μήνυμα",
+    "messagePlaceholder": "Γράψτε το μήνυμά σας…",
+    "send": "Αποστολή μηνύματος",
+    "sending": "Αποστολή…",
+    "fillAll": "Παρακαλώ συμπληρώστε όλα τα πεδία.",
+    "errorGeneric": "Παρουσιάστηκε σφάλμα. Παρακαλώ δοκιμάστε ξανά.",
+    "thankYouTitle": "Ευχαριστούμε!",
+    "thankYouMessage": "Το μήνυμά σας παραλήφθηκε. Θα επικοινωνήσουμε μαζί σας το συντομότερο δυνατό.",
+    "sendAnother": "Στείλτε άλλο μήνυμα"
   }
 }

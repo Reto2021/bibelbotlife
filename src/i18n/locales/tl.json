@@ -1802,5 +1802,31 @@
     "baptism": "Binyag",
     "wedding": "Kasal",
     "funeral": "Libing"
+  },
+  "contact": {
+    "pageTitle": "Kontak – BibleBot.Life",
+    "pageDesc": "Padalhan kami ng mensahe – inaasahan naming marinig mula sa iyo.",
+    "badge": "Kontak",
+    "heading": "Sumulat sa amin",
+    "subheading": "May tanong ka ba, feedback, o gusto mong makipag-ugnayan? Inaabangan namin ang iyong mensahe.",
+    "name": "Pangalan",
+    "namePlaceholder": "Ang iyong pangalan",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "category": "Paksa",
+    "categoryPlaceholder": "Pumili ng paksa",
+    "categoryFeedback": "Feedback",
+    "categoryQuestion": "Tanong",
+    "categoryPartnership": "Pakikipagtulungan",
+    "categoryOther": "Iba pa",
+    "message": "Mensahe",
+    "messagePlaceholder": "Isulat ang iyong mensahe…",
+    "send": "Ipadala ang mensahe",
+    "sending": "Nagpapadala…",
+    "fillAll": "Punan po ang lahat ng patlang.",
+    "errorGeneric": "Nagkaroon ng error. Pakisubukang muli.",
+    "thankYouTitle": "Salamat!",
+    "thankYouMessage": "Natanggap na ang iyong mensahe. Babalikan ka namin sa lalong madaling panahon.",
+    "sendAnother": "Magpadala ng isa pang mensahe"
   }
 }

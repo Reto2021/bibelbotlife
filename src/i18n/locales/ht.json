@@ -1799,5 +1799,31 @@
     "baptism": "Batèm",
     "wedding": "Maryaj",
     "funeral": "Antèman"
+  },
+  "contact": {
+    "pageTitle": "Kontak – BibleBot.Life",
+    "pageDesc": "Voye nou yon mesaj – nou anvi tande w.",
+    "badge": "Kontak",
+    "heading": "Ekri nou",
+    "subheading": "Ou gen yon kesyon, yon kòmantè, oswa ou ta renmen diskite sou yon patenarya? Nou anvi resevwa mesaj ou an.",
+    "name": "Non",
+    "namePlaceholder": "Non ou",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "category": "Sijè",
+    "categoryPlaceholder": "Chwazi yon sijè",
+    "categoryFeedback": "Kòmantè",
+    "categoryQuestion": "Kesyon",
+    "categoryPartnership": "Patenarya",
+    "categoryOther": "Lòt",
+    "message": "Mesaj",
+    "messagePlaceholder": "Ekri mesaj ou a…",
+    "send": "Voye mesaj",
+    "sending": "Ap voye…",
+    "fillAll": "Tanpri ranpli tout chanm yo.",
+    "errorGeneric": "Yon erè te fèt. Tanpri eseye ankò.",
+    "thankYouTitle": "Mèsi!",
+    "thankYouMessage": "Mesaj ou a te resevwa. N ap reponn ou pi vit posib.",
+    "sendAnother": "Voye yon lòt mesaj"
   }
 }

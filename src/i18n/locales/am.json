@@ -1797,5 +1797,31 @@
     "baptism": "ጥምቀት",
     "wedding": "ሠርግ",
     "funeral": "ቀብር"
+  },
+  "contact": {
+    "pageTitle": "Contact – BibleBot.Life",
+    "pageDesc": "መልእክት ይላኩልን – ከእርስዎ ለመስማት እንጠባበቃለን።",
+    "badge": "እውቂያ",
+    "heading": "ይጻፉልን",
+    "subheading": "ጥያቄ፣ አስተያየት አለዎት፣ ወይም ሽርክና ለመወያየት ይፈልጋሉ? መልእክትዎን እንጠባበቃለን።",
+    "name": "ስም",
+    "namePlaceholder": "የእርስዎ ስም",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "category": "ርዕስ",
+    "categoryPlaceholder": "ርዕስ ይምረጡ",
+    "categoryFeedback": "አስተያየት",
+    "categoryQuestion": "ጥያቄ",
+    "categoryPartnership": "ሽርክና",
+    "categoryOther": "ሌላ",
+    "message": "መልእክት",
+    "messagePlaceholder": "መልእክትዎን ይጻፉ…",
+    "send": "መልእክት ላክ",
+    "sending": "በመላክ ላይ…",
+    "fillAll": "እባክዎ ሁሉንም መስኮች ይሙሉ።",
+    "errorGeneric": "ስህተት ተከስቷል። እባክዎ እንደገና ይሞክሩ።",
+    "thankYouTitle": "አመሰግናለሁ!",
+    "thankYouMessage": "መልእክትዎ ተቀብሏል። በተቻለ ፍጥነት ወደ እርስዎ እንመለሳለን።",
+    "sendAnother": "ሌላ መልእክት ላክ"
   }
 }

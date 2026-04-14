@@ -1799,5 +1799,31 @@
     "baptism": "Krštenje",
     "wedding": "Venčanje",
     "funeral": "Sahrana"
+  },
+  "contact": {
+    "pageTitle": "Kontakt – BibleBot.Life",
+    "pageDesc": "Pošaljite nam poruku – radujemo se što ćemo vas čuti.",
+    "badge": "Kontakt",
+    "heading": "Pišite nam",
+    "subheading": "Imate pitanje, povratne informacije ili želite da razgovarate o partnerstvu? Radujemo se vašoj poruci.",
+    "name": "Ime",
+    "namePlaceholder": "Vaše ime",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "category": "Tema",
+    "categoryPlaceholder": "Odaberite temu",
+    "categoryFeedback": "Povratne informacije",
+    "categoryQuestion": "Pitanje",
+    "categoryPartnership": "Partnerstvo",
+    "categoryOther": "Ostalo",
+    "message": "Poruka",
+    "messagePlaceholder": "Napišite svoju poruku…",
+    "send": "Pošalji poruku",
+    "sending": "Slanje…",
+    "fillAll": "Molimo popunite sva polja.",
+    "errorGeneric": "Došlo je do greške. Molimo pokušajte ponovo.",
+    "thankYouTitle": "Hvala vam!",
+    "thankYouMessage": "Vaša poruka je primljena. Javićemo vam se što je pre moguće.",
+    "sendAnother": "Pošalji drugu poruku"
   }
 }

@@ -1799,5 +1799,31 @@
     "baptism": "Keresztelő",
     "wedding": "Esküvő",
     "funeral": "Temetés"
+  },
+  "contact": {
+    "pageTitle": "Kapcsolat – BibleBot.Life",
+    "pageDesc": "Küldjön nekünk üzenetet – örömmel várjuk.",
+    "badge": "Kapcsolat",
+    "heading": "Írjon nekünk",
+    "subheading": "Kérdése van, visszajelzést szeretne adni, vagy partnerséget kívánna tárgyalni? Várjuk üzenetét.",
+    "name": "Név",
+    "namePlaceholder": "Az Ön neve",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "category": "Téma",
+    "categoryPlaceholder": "Válasszon témát",
+    "categoryFeedback": "Visszajelzés",
+    "categoryQuestion": "Kérdés",
+    "categoryPartnership": "Partnerség",
+    "categoryOther": "Egyéb",
+    "message": "Üzenet",
+    "messagePlaceholder": "Írja meg üzenetét…",
+    "send": "Üzenet küldése",
+    "sending": "Küldés…",
+    "fillAll": "Kérjük, töltse ki az összes mezőt.",
+    "errorGeneric": "Hiba történt. Kérjük, próbálja újra.",
+    "thankYouTitle": "Köszönjük!",
+    "thankYouMessage": "Üzenetét megkaptuk. A lehető leghamarabb válaszolunk.",
+    "sendAnother": "Új üzenet küldése"
   }
 }

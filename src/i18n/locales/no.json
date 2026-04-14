@@ -1799,5 +1799,31 @@
     "baptism": "Dåp",
     "wedding": "Bryllup",
     "funeral": "Begravelse"
+  },
+  "contact": {
+    "pageTitle": "Kontakt – BibleBot.Life",
+    "pageDesc": "Send oss en melding – vi ser frem til å høre fra deg.",
+    "badge": "Kontakt",
+    "heading": "Skriv til oss",
+    "subheading": "Har du et spørsmål, tilbakemelding, eller ønsker du å diskutere et partnerskap? Vi ser frem til din melding.",
+    "name": "Navn",
+    "namePlaceholder": "Ditt navn",
+    "email": "Email",
+    "emailPlaceholder": "din@epost.no",
+    "category": "Emne",
+    "categoryPlaceholder": "Velg et emne",
+    "categoryFeedback": "Tilbakemelding",
+    "categoryQuestion": "Spørsmål",
+    "categoryPartnership": "Partnerskap",
+    "categoryOther": "Annet",
+    "message": "Melding",
+    "messagePlaceholder": "Skriv din melding…",
+    "send": "Send melding",
+    "sending": "Sender…",
+    "fillAll": "Vennligst fyll ut alle felt.",
+    "errorGeneric": "En feil oppstod. Vennligst prøv igjen.",
+    "thankYouTitle": "Takk!",
+    "thankYouMessage": "Din melding er mottatt. Vi vil komme tilbake til deg så snart som mulig.",
+    "sendAnother": "Send en ny melding"
   }
 }
