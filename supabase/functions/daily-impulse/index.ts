@@ -74,8 +74,8 @@ const LANG_CONFIG: Record<string, { name: string; translations: string; quoteSty
   ka: { name: "Georgian", translations: "GEO Bible, New Translation, or 1989 Translation", quoteStyle: ["\u201E", "\u201D"], spellingFix: false },
   ig: { name: "Igbo", translations: "Igbo Bible (BIB), or Igbo Union Version", quoteStyle: ["\u201C", "\u201D"], spellingFix: false },
   yo: { name: "Yoruba", translations: "BMY, or Yoruba Contemporary Bible (YCB)", quoteStyle: ["\u201C", "\u201D"], spellingFix: false },
-  zu: { name: "Zulu", translations: "IBhayibheli (ZULC), or ISindebele", quoteStyle: ['"', '"'], spellingFix: false },
-  ht: { name: "Haitian Creole", translations: "Bib la (HCV), or Haitian Creole Version", quoteStyle: ["«", "»"], spellingFix: false },
+  zu: { name: "Zulu", translations: "IBhayibheli (ZULC), or ISindebele", quoteStyle: ["\u201C", "\u201D"], spellingFix: false },
+  ht: { name: "Haitian Creole", translations: "Bib la (HCV), or Haitian Creole Version", quoteStyle: ["\u00AB", "\u00BB"], spellingFix: false },
 };
 
 function getSystemPrompt(lang: string): string {
