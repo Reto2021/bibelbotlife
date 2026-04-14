@@ -91,6 +91,7 @@ const HEARTBEAT_INTERVAL_MS = 30_000;
 export const useAnalytics = () => {
   const location = useLocation();
   const sessionId = useRef(getSessionId());
+  const visitorId = useRef(getVisitorId());
   const lastPath = useRef<string | null>(null);
 
   // Capture referral code on mount
