@@ -5,7 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { SEOHead } from "@/components/SEOHead";
-import { Trophy, BookOpen, HelpCircle, Loader2, ChevronRight, Gauge, RotateCcw, Star, ArrowLeft } from "lucide-react";
+import { Trophy, BookOpen, HelpCircle, Loader2, ChevronRight, Gauge, RotateCcw, Star, ArrowLeft, MessageCircle } from "lucide-react";
+import { openBibleBotChat } from "@/lib/chat-events";
 import { SiteHeader } from "@/components/SiteHeader";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -446,7 +447,22 @@ export default function BibleQuiz() {
                       </p>
                     </Card>
 
-                    <Button onClick={nextQuestion} className="w-full mt-4" size="lg">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="w-full mt-2"
+                      onClick={() => {
+                        const msg = question.verse_text
+                          ? `Erkläre mir diesen Bibelvers: ${question.reference} — „${question.verse_text}"`
+                          : `Erkläre mir diese Bibelstelle: ${question.reference}`;
+                        openBibleBotChat(msg);
+                      }}
+                    >
+                      <MessageCircle className="h-4 w-4 mr-1" />
+                      {t("quiz.discuss_verse", "Über diesen Vers sprechen")}
+                    </Button>
+
+                    <Button onClick={nextQuestion} className="w-full mt-2" size="lg">
                       {t("quiz.next")} <ChevronRight className="h-4 w-4 ml-1" />
                     </Button>
                   </motion.div>
