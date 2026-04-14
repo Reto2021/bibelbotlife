@@ -1,10 +1,12 @@
 import { useState, useMemo } from "react";
-import { Plus, ChevronLeft, ChevronRight, CalendarDays, CalendarRange, Play } from "lucide-react";
+import { Plus, ChevronLeft, ChevronRight, CalendarDays, CalendarRange, Play, Copy, Trash2, Archive, Eye, MoreHorizontal } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Link } from "react-router-dom";
-import { useServices } from "@/hooks/use-services";
+import { Link, useNavigate } from "react-router-dom";
+import { useServices, useDeleteService, useDuplicateService, useUpdateServiceStatus } from "@/hooks/use-services";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 
 const WEEKDAYS = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"];
