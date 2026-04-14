@@ -860,7 +860,14 @@
         "title": "Lidè Seremoni Endepandan",
         "desc": "Oratè lantèman, celebran maryaj ak ofisyèl seremoni endepandan – ak zouti byografi ak planifikasyon diskou."
       }
-    }
+    },
+    "approachTitle": "Ou Kanal Digital 1st-Level",
+    "approachSubtitle": "Pifò moun pa kontakte yon pastè dirèkteman. Yo chèche sou entènèt la, yo reflechi, yo rete an silans. BibleBot.Life rankontre yo la – kòm yon premye pwen kontak fasil nan ekosistèm swen pastora ou.",
+    "approach1Desc": "Disponib 24/7, anonim, gratis. Li reponn kesyon lafwa, li ofri enspirasyon, epi li bay konpayi – san okenn baryè. Premye kontak dijital ou.",
+    "approach2Desc": "BibleBot pwovoke enterè epi li bati konfyans. Etap ki vin apre a: vizite kominote ou. Nou konekte dirèkteman ak lè sèvis ou yo.",
+    "approach3Desc": "Lè kesyon yo vin bezwen pèsonèl, BibleBot konekte dirèkteman ak swen pastora ou – ak yon fòmilè kontak ak konfyans entegre.",
+    "approachNote": "BibleBot.Life pa ranplase swen pastora – li louvri pòt pou li. Kòm chanèl 1st-level dijital ou, nou diminye baryè yo epi nou mennen moun yo ba ou.",
+    "approachCta": "Diskite patenarya"
   },
   "institutions": {
     "badge": "Pou òganizasyon yo",
@@ -1843,7 +1850,24 @@
     "confession": "Konfesyon",
     "family": "Fanmi",
     "familyValue": "Marye, de pitit",
-    "cta": "Kesyon, ide, oswa jis ou vle di bonswa?"
+    "cta": "Kesyon, ide, oswa jis ou vle di bonswa?",
+    "approachTitle": "Nòt Apwòch Nou",
+    "approachSubtitle": "Swen pastora pa kòmanse ak yon konvèsasyon pèsonèl. Li kòmanse kote moun gen kesyon – souvan an silans, souvan lannwit, souvan poukont yo.",
+    "level1Badge": "Premye Pwen Kontak",
+    "level1Desc": "Disponib tout jounen an, anonim epi san baryè. Pou nenpòt moun ki gen yon kesyon, k ap chèche enspirasyon, oswa tou senpleman pa vle poukont yo – premye etap la se pi fasil.",
+    "level2Badge": "Kominote",
+    "level2Title": "Adorasyon & Kominote",
+    "level2Desc": "Reyini ansanm, koute, selebre ansanm. Adorasyon bay lafwa yon kay nan kominote a.",
+    "level3Badge": "Pèsonèl",
+    "level3Title": "Swen Pastora 1:1",
+    "level3Desc": "Yon konvèsasyon konfidansyèl, fas a fas. Pou moman ki bezwen gidans pèsonèl.",
+    "approachNote": "BibleBot.Life diminye baryè a – epi li gide moun yo etap pa etap pi pre kominote ak sipò pèsonèl.",
+    "tag_anonymous": "Anonim",
+    "tag_free": "Gratis",
+    "tag_weekly": "Chak Semèn",
+    "tag_community": "Kominote",
+    "tag_personal": "Pèsonèl",
+    "tag_individual": "Endividyèl"
   },
   "nav.about": "Sou Nou"
 }

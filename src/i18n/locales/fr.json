@@ -904,7 +904,14 @@
         "desc": "Impulsions spirituelles complémentaires pour les clients en conseil psychosocial ou pastoral."
       }
     },
-    "patronageNote": "BibleBot.Life est porté par une association à but non lucratif et financé exclusivement par des dons et sponsorings volontaires. Pas de publicité, pas de vente de données, pas de fonctionnalités payantes. Toutes les contributions sont directement investies dans le développement, l'exploitation technique, la diffusion mondiale et la gestion communautaire. Les dons peuvent être déductibles des impôts selon votre juridiction."
+    "patronageNote": "BibleBot.Life est porté par une association à but non lucratif et financé exclusivement par des dons et sponsorings volontaires. Pas de publicité, pas de vente de données, pas de fonctionnalités payantes. Toutes les contributions sont directement investies dans le développement, l'exploitation technique, la diffusion mondiale et la gestion communautaire. Les dons peuvent être déductibles des impôts selon votre juridiction.",
+    "approachTitle": "Votre canal numérique de 1er niveau",
+    "approachSubtitle": "La plupart des gens ne contactent pas directement un pasteur. Ils font des recherches sur Google, ils réfléchissent, ils restent silencieux. BibleBot.Life les rencontre là – comme un premier point de contact à faible barrière dans votre écosystème de soin pastoral.",
+    "approach1Desc": "Disponible 24h/24 et 7j/7, anonyme, gratuit. Répond aux questions de foi, offre de l'inspiration et assure la compagnie – sans aucune barrière. Votre premier contact numérique.",
+    "approach2Desc": "BibleBot suscite l'intérêt et établit la confiance. L'étape suivante : visiter votre communauté. Nous renvoyons directement à vos horaires de service.",
+    "approach3Desc": "Lorsque les questions deviennent des besoins personnels, BibleBot se connecte directement à votre assistance pastorale – avec un formulaire de contact et une confiance intégrée.",
+    "approachNote": "BibleBot.Life ne remplace pas le soin pastoral – il ouvre la porte à celui-ci. En tant que votre canal numérique de 1er niveau, nous abaissons les barrières et vous rapprochons les gens.",
+    "approachCta": "Discuter d'un partenariat"
   },
   "institutions": {
     "badge": "Pour les organisations",
@@ -1843,7 +1850,24 @@
     "confession": "Confession",
     "family": "Famille",
     "familyValue": "Marié, deux enfants",
-    "cta": "Des questions, des idées ou simplement envie de saluer ?"
+    "cta": "Des questions, des idées ou simplement envie de saluer ?",
+    "approachTitle": "Notre Approche",
+    "approachSubtitle": "Le soin pastoral ne commence pas par une conversation personnelle. Il commence là où les gens ont des questions – souvent en silence, souvent la nuit, souvent seuls.",
+    "level1Badge": "Premier Point de Contact",
+    "level1Desc": "Disponible à toute heure, anonyme et sans barrière. Pour quiconque a une question, cherche de l'inspiration, ou ne veut simplement pas être seul – le premier pas est le plus facile.",
+    "level2Badge": "Communauté",
+    "level2Title": "Culte & Communauté",
+    "level2Desc": "Se rassembler, écouter, célébrer ensemble. Le culte donne à la foi un foyer dans la communauté.",
+    "level3Badge": "Personnel",
+    "level3Title": "Soins Pastoraux 1:1",
+    "level3Desc": "Une conversation confidentielle, en personne. Pour les moments qui nécessitent une guidance personnelle.",
+    "approachNote": "BibleBot.Life abaisse la barrière – et guide les gens pas à pas vers la communauté et le soutien personnel.",
+    "tag_anonymous": "Anonyme",
+    "tag_free": "Gratuit",
+    "tag_weekly": "Hebdomadaire",
+    "tag_community": "Communauté",
+    "tag_personal": "Personnel",
+    "tag_individual": "Individuel"
   },
   "nav.about": "À Propos"
 }

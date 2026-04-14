@@ -899,7 +899,14 @@
         "title": "Viongozi Huru wa Sherehe",
         "desc": "Wasemaji wa mazishi, washereheshaji wa harusi na maafisa huru wa sherehe – na zana za wasifu na mpango wa hotuba."
       }
-    }
+    },
+    "approachTitle": "Njia Yako ya Kidijitali ya 1st-Level",
+    "approachSubtitle": "Watu wengi hawamwendei mchungaji moja kwa moja. Wanatafuta kwenye mtandao, wanatafakari, wanakaa kimya. BibleBot.Life huwakuta hapo – kama njia ya kwanza yenye vikwazo kidogo katika mfumo wako wa utunzaji wa kichungaji.",
+    "approach1Desc": "Inapatikana saa 24/7, bila jina, bila malipo. Inajibu maswali ya imani, inatoa msukumo, na inatoa urafiki – bila vikwazo vyovyote. Mawasiliano yako ya kwanza ya kidijitali.",
+    "approach2Desc": "BibleBot inachochea shauku na kujenga uaminifu. Hatua inayofuata: kutembelea jamii yako. Tunatoa kiungo moja kwa moja kwa saa za ibada zako.",
+    "approach3Desc": "Wakati maswali yanapokuwa mahitaji ya kibinafsi, BibleBot inaunganisha moja kwa moja na utunzaji wako wa kichungaji – kwa fomu ya mawasiliano na uaminifu uliojengewa ndani.",
+    "approachNote": "BibleBot.Life haichukui nafasi ya utunzaji wa kichungaji – inafungua mlango kwake. Kama njia yako ya kidijitali ya 1st-level, tunapunguza vikwazo na kuwaleta watu kwako.",
+    "approachCta": "Jadili Ushirikiano"
   },
   "institutions": {
     "badge": "Kwa mashirika",
@@ -1843,7 +1850,24 @@
     "confession": "Madhehebu",
     "family": "Familia",
     "familyValue": "Ameoa, watoto wawili",
-    "cta": "Maswali, mawazo, au unataka tu kusalimia?"
+    "cta": "Maswali, mawazo, au unataka tu kusalimia?",
+    "approachTitle": "Njia Yetu",
+    "approachSubtitle": "Utunzaji wa kichungaji hauachi kwa mazungumzo ya kibinafsi. Unaanzia pale ambapo watu wana maswali – mara nyingi kimya, mara nyingi usiku, mara nyingi peke yao.",
+    "level1Badge": "Njia ya Kwanza ya Mawasiliano",
+    "level1Desc": "Inapatikana saa nzima, bila jina na bila vikwazo. Kwa yeyote mwenye swali, anayetafuta msukumo, au ambaye hataki kuwa peke yake – hatua ya kwanza ni rahisi zaidi.",
+    "level2Badge": "Jamii",
+    "level2Title": "Ibada & Jamii",
+    "level2Desc": "Kukutana pamoja, kusikiliza, kusherehekea pamoja. Ibada inatoa imani mahali pake katika jamii.",
+    "level3Badge": "Binafsi",
+    "level3Title": "Utunzaji wa Kichungaji 1:1",
+    "level3Desc": "Mazungumzo ya siri, ya ana kwa ana. Kwa nyakati zinazohitaji mwongozo wa kibinafsi.",
+    "approachNote": "BibleBot.Life inapunguza vikwazo – na inaongoza watu hatua kwa hatua karibu na jamii na msaada wa kibinafsi.",
+    "tag_anonymous": "Bila Jina",
+    "tag_free": "Bure",
+    "tag_weekly": "Kila Wiki",
+    "tag_community": "Jamii",
+    "tag_personal": "Binafsi",
+    "tag_individual": "Mtu Mmoja Mmoja"
   },
   "nav.about": "Kuhusu Sisi"
 }

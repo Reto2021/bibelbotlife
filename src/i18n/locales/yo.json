@@ -899,7 +899,14 @@
         "title": "Aṣáájú Ayẹyẹ Alágbàṣe",
         "desc": "Àwọn agbọ̀rọ̀ ìsìnkú, celebranti ìgbéyàwó àti aṣáájú ayẹyẹ aládánidá – pẹ̀lú àwọn irinṣẹ́ ìtàn ìgbésí-ayé àti ìgbékalẹ̀ ọ̀rọ̀."
       }
-    }
+    },
+    "approachTitle": "Ọ̀nà Rẹ́ Tí Ọ̀wọ́n 1st-Level",
+    "approachSubtitle": "Ọ̀pọ̀lọpọ̀ ènìyàn kò fi ìdí sí àlùfáà lọ́wọ́. Wọ́n máa ń wá ohun tàbí béèrè lórí Google, wọ́n máa ń rò, wọ́n máa ń dákẹ́. BibleBot.Life pàdé wọn níbẹ̀ – gẹ́gẹ́ bí olùgàgbọ́ àkọ́kọ́ tí kò ní ìdíwọ̀n nínú ètò àbójútó àlùfáà yín.",
+    "approach1Desc": "Wà fún 24/7, tí ò ṣípayá, tí kò náwó. Ó dáhùn àwọn ìbéèrè ìgbàgbọ́, ó pèsè ìmí ẹ̀mí, ó sì pèsè àjọṣepọ̀ – láìsí ìdíwọ̀n kankan. Ọ̀wọ́n àkọ́kọ́ rẹ.",
+    "approach2Desc": "BibleBot mú ìfẹ́ sílẹ̀ ó sì kọ́ ìgbẹ́kẹ̀kẹ̀ ní. Ìgbésẹ̀ tí ó tẹ̀ lé: ṣíṣàbẹ̀wò sí àwùjọ yín. A ṣètò rẹ̀ láti tààrà sí àkókò ìsìn yín.",
+    "approach3Desc": "Nígbà tí àwọn ìbéèrè bá di ohun tí ara ẹni tí wọ́n nílò rẹ̀, BibleBot ṣètò rẹ̀ láti tààrà sí àbójútó àlùfáà yín – pẹ̀lú fọ́ọ̀mù ìkànṣẹ́ àti ìgbẹ́kẹ̀kẹ̀ tí a kọ́ sínú rẹ̀.",
+    "approachNote": "BibleBot.Life kò rọ́pò àbójútó àlùfáà – ó ṣí ilẹ̀kun sí i. Gẹ́gẹ́ bí ọ̀nà rẹ́ tí ń jẹ́ 1st-level, a mú àwọndìdí kù sílẹ̀ ó sì mú àwọn ènìyàn wá sí ọ.",
+    "approachCta": "Sọ̀rọ̀ nípa Àjọṣepọ̀"
   },
   "institutions": {
     "badge": "Fún àwọn àjọ",
@@ -1843,7 +1850,24 @@
     "confession": "Ijọsin",
     "family": "Idile",
     "familyValue": "Ti ni iyawo, ọmọ meji",
-    "cta": "Awọn ibeere, awọn imọran, tabi kan fẹ lati ki o ku?"
+    "cta": "Awọn ibeere, awọn imọran, tabi kan fẹ lati ki o ku?",
+    "approachTitle": "Ọ̀nà Wa",
+    "approachSubtitle": "Àbójútó àlùfáà kìí bẹ̀rẹ̀ pẹ̀lú ì báwíwí tí ẹni kan. Ó bẹ̀rẹ̀ níbi tí àwọn ènìyàn ti ní ìbéèrè – sábàá máa ń wà níìmọ̀ọ́kọ̀, sábàá máa ń wà ní òru, sábàá máa ń wà nìkan.",
+    "level1Badge": "Ìgbé-ìràn Àkọ́kọ́",
+    "level1Desc": "Wà fún ìgbà tí ọjọ́ bá lọ, tí ò ṣípayá, tí kò ní ìdíwọ̀n. Fún ẹnikẹ́ni tí ó ní ìbéèrè, tó ń wá ìmí ẹ̀mí, tàbí tí kò fẹ́ wà nìkan – ìgbésẹ̀ àkọ́kọ́ rọrùn jùlọ.",
+    "level2Badge": "Àwùjọ",
+    "level2Title": "Ìsìn àti Àwùjọ",
+    "level2Desc": "Pípọ̀ sí ara, títígbọ́, yọ̀ pọ̀. Ìsìn fún ìgbàgbọ́ ní ilé nínú àwùjọ.",
+    "level3Badge": "Tí Ẹnì Kan",
+    "level3Title": "Àbójútó Àlùfáà 1:1",
+    "level3Desc": "Ì báwíwí tí wọ́n ti ṣe dáadáa, tí wọ́n dojú kọ ara wọn. Fún àwọn ìgbà tí wọ́n nílò ìtọ́ni tí ara ẹni.",
+    "approachNote": "BibleBot.Life mú ìdíwọ̀n kù – ó sì máa ń tọ́ àwọn ènìyàn lọ ní ìgbésẹ̀ sí ìgbésẹ̀ súnmọ́ àwùjọ àti ìrànwọ́ tí ara ẹni.",
+    "tag_anonymous": "Tí Kò Ṣípayá",
+    "tag_free": "Láìnáwó",
+    "tag_weekly": "Lígbà",
+    "tag_community": "Àwùjọ",
+    "tag_personal": "Tí Ara Ẹni",
+    "tag_individual": "Tí Ẹnì Kan"
   },
   "nav.about": "Nipa Wa"
 }

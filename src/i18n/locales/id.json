@@ -899,7 +899,14 @@
         "title": "Pemimpin Upacara Freelance",
         "desc": "Pembicara pemakaman, selebrasi pernikahan dan pemimpin upacara independen – dengan alat biografi dan perencanaan pidato."
       }
-    }
+    },
+    "approachTitle": "Kanal 1st-Level Digital Anda",
+    "approachSubtitle": "Kebanyakan orang tidak langsung menghubungi pendeta. Mereka mencari di Google, merenung, tetap diam. BibleBot.Life menjumpai mereka di sana – sebagai titik kontak pertama dengan hambatan rendah dalam ekosistem pelayanan pastoral Anda.",
+    "approach1Desc": "Tersedia 24/7, anonim, gratis. Menjawab pertanyaan iman, menawarkan inspirasi, dan memberikan pendampingan – tanpa hambatan apa pun. Kontak pertama digital Anda.",
+    "approach2Desc": "BibleBot memicu minat dan membangun kepercayaan. Langkah selanjutnya: mengunjungi komunitas Anda. Kami terhubung langsung ke jadwal ibadah Anda.",
+    "approach3Desc": "Ketika pertanyaan menjadi kebutuhan pribadi, BibleBot terhubung langsung dengan pelayanan pastoral Anda – dengan formulir kontak dan kepercayaan yang terintegrasi.",
+    "approachNote": "BibleBot.Life tidak menggantikan pelayanan pastoral – ia membukakan pintu kepadanya. Sebagai kanal 1st-level digital Anda, kami menurunkan hambatan dan membawa orang kepada Anda.",
+    "approachCta": "Diskusikan Kemitraan"
   },
   "institutions": {
     "badge": "Untuk organisasi",
@@ -1466,7 +1473,24 @@
     "confession": "Denominasi",
     "family": "Keluarga",
     "familyValue": "Menikah, dua anak",
-    "cta": "Pertanyaan, ide, atau hanya ingin menyapa?"
+    "cta": "Pertanyaan, ide, atau hanya ingin menyapa?",
+    "approachTitle": "Pendekatan Kami",
+    "approachSubtitle": "Pelayanan pastoral tidak dimulai dengan percakapan pribadi. Ia dimulai di mana orang memiliki pertanyaan – seringkali secara diam-diam, seringkali di malam hari, seringkali sendirian.",
+    "level1Badge": "Titik Kontak Pertama",
+    "level1Desc": "Tersedia sepanjang waktu, anonim, dan tanpa hambatan. Bagi siapa pun yang memiliki pertanyaan, mencari inspirasi, atau sekadar tidak ingin sendirian – langkah pertama adalah yang termudah.",
+    "level2Badge": "Komunitas",
+    "level2Title": "Ibadah & Komunitas",
+    "level2Desc": "Berkumpul, mendengarkan, merayakan bersama. Ibadah memberikan iman sebuah rumah di dalam komunitas.",
+    "level3Badge": "Pribadi",
+    "level3Title": "Pelayanan Pastoral 1:1",
+    "level3Desc": "Percakapan tatap muka yang rahasia. Untuk momen-momen yang membutuhkan bimbingan pribadi.",
+    "approachNote": "BibleBot.Life menurunkan hambatan – dan membimbing orang selangkah demi selangkah lebih dekat ke komunitas dan dukungan pribadi.",
+    "tag_anonymous": "Anonim",
+    "tag_free": "Gratis",
+    "tag_weekly": "Mingguan",
+    "tag_community": "Komunitas",
+    "tag_personal": "Pribadi",
+    "tag_individual": "Individual"
   },
   "nav.about": "Tentang Kami"
 }

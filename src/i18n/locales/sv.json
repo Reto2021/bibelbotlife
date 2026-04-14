@@ -860,7 +860,14 @@
         "title": "Frilans officialter",
         "desc": "Begravningstalare, bröllopsofficialter och oberoende ceremonimästare – med biografiska verktyg och talplanering."
       }
-    }
+    },
+    "approachTitle": "Din digitala 1st-Level Kanal",
+    "approachSubtitle": "De flesta tar inte kontakt med en pastor direkt. De googlar, de funderar, de är tysta. BibleBot.Life möter dem där – som en lågtröskel första kontaktpunkt i ditt ekosystem för själavård.",
+    "approach1Desc": "Tillgänglig dygnet runt, anonymt och gratis. Svarar på trosfrågor, erbjuder inspiration och ger sällskap – med noll barriärer. Din digitala första kontakt.",
+    "approach2Desc": "BibleBot väcker intresse och bygger förtroende. Nästa steg: besöka din församling. Vi länkar direkt till dina gudstjänsttider.",
+    "approach3Desc": "När frågor blir personliga behov kopplar BibleBot direkt till din själavård – med ett kontaktformulär och inbyggt förtroende.",
+    "approachNote": "BibleBot.Life ersätter inte själavård – det öppnar dörren till den. Som din digitala 1st-level kanal sänker vi trösklarna och för människor till dig.",
+    "approachCta": "Diskutera partnerskap"
   },
   "institutions": {
     "badge": "För organisationer",
@@ -1843,7 +1850,24 @@
     "confession": "Trossamfund",
     "family": "Familj",
     "familyValue": "Gift, två barn",
-    "cta": "Frågor, idéer eller bara vill säga hej?"
+    "cta": "Frågor, idéer eller bara vill säga hej?",
+    "approachTitle": "Vårt tillvägagångssätt",
+    "approachSubtitle": "Själavård börjar inte med ett personligt samtal. Det börjar där människor har frågor – ofta tyst, ofta på natten, ofta ensamma.",
+    "level1Badge": "Första kontaktpunkt",
+    "level1Desc": "Tillgänglig dygnet runt, anonymt och barriärfritt. För alla som har en fråga, söker inspiration, eller helt enkelt inte vill vara ensam – det första steget är det enklaste.",
+    "level2Badge": "Gemenskap",
+    "level2Title": "Gudstjänst & Gemenskap",
+    "level2Desc": "Att samlas, lyssna, fira tillsammans. Gudstjänst ger tron ett hem i gemenskapen.",
+    "level3Badge": "Personlig",
+    "level3Title": "1:1 Själavård",
+    "level3Desc": "Ett konfidentiellt, personligt samtal. För de stunder som kräver personlig vägledning.",
+    "approachNote": "BibleBot.Life sänker tröskeln – och guidar människor steg för steg närmare gemenskap och personligt stöd.",
+    "tag_anonymous": "Anonym",
+    "tag_free": "Gratis",
+    "tag_weekly": "Veckovis",
+    "tag_community": "Gemenskap",
+    "tag_personal": "Personlig",
+    "tag_individual": "Individuell"
   },
   "nav.about": "Om Oss"
 }

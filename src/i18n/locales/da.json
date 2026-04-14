@@ -860,7 +860,14 @@
         "title": "Freelance ceremonimestre",
         "desc": "Begravelsestalere, bryllupsceremoniledere og uafhængige officerer – med biografiske værktøjer og taleplanlægning."
       }
-    }
+    },
+    "approachTitle": "Din Digitale 1st-Level Kanal",
+    "approachSubtitle": "De fleste henvender sig ikke direkte til en præst. De googler, de grubler, de forbliver tavse. BibleBot.Life møder dem der – som en første kontakt med lave barrierer i dit sjælesorgs-økosystem.",
+    "approach1Desc": "Tilgængelig 24/7, anonymt, gratis. Besvarer troens spørgsmål, tilbyder inspiration og giver selskab – uden barrierer. Din digitale første kontakt.",
+    "approach2Desc": "BibleBot vækker interesse og opbygger tillid. Næste skridt: at besøge dit fællesskab. Vi linker direkte til dine gudstjenestetider.",
+    "approach3Desc": "Når spørgsmål bliver til personlige behov, forbinder BibleBot direkte til din sjælesorg – med en kontaktformular og indbygget tillid.",
+    "approachNote": "BibleBot.Life erstatter ikke sjælesorg – det åbner døren til den. Som din digitale 1st-level kanal sænker vi barriererne og bringer folk til dig.",
+    "approachCta": "Diskuter Partnerskab"
   },
   "institutions": {
     "badge": "For organisationer",
@@ -1843,7 +1850,24 @@
     "confession": "Trosretning",
     "family": "Familie",
     "familyValue": "Gift, to børn",
-    "cta": "Spørgsmål, idéer eller bare lyst til at sige hej?"
+    "cta": "Spørgsmål, idéer eller bare lyst til at sige hej?",
+    "approachTitle": "Vores Tilgang",
+    "approachSubtitle": "Sjælesorg starter ikke med en personlig samtale. Den starter der, hvor folk har spørgsmål – ofte stille, ofte om natten, ofte alene.",
+    "level1Badge": "Første Kontaktpunkt",
+    "level1Desc": "Tilgængelig døgnet rundt, anonymt og uden barrierer. For alle med et spørgsmål, der søger inspiration, eller som bare ikke vil være alene – det første skridt er det nemmeste.",
+    "level2Badge": "Fællesskab",
+    "level2Title": "Gudstjeneste & Fællesskab",
+    "level2Desc": "At komme sammen, lytte, fejre sammen. Gudstjenesten giver troen et hjem i fællesskabet.",
+    "level3Badge": "Personlig",
+    "level3Title": "1:1 Sjælesorg",
+    "level3Desc": "En fortrolig, ansigt til ansigt samtale. Til de øjeblikke, der kræver personlig vejledning.",
+    "approachNote": "BibleBot.Life sænker barrieren – og guider folk trin for trin tættere på fællesskab og personlig støtte.",
+    "tag_anonymous": "Anonym",
+    "tag_free": "Gratis",
+    "tag_weekly": "Ugentlig",
+    "tag_community": "Fællesskab",
+    "tag_personal": "Personlig",
+    "tag_individual": "Individuel"
   },
   "nav.about": "Om Os"
 }

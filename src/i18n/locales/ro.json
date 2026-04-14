@@ -899,7 +899,14 @@
         "title": "Celebranți independenți",
         "desc": "Vorbitori funebri, celebranți de nuntă și oficianți independenți – cu instrumente biografice și planificare de discursuri."
       }
-    }
+    },
+    "approachTitle": "Canalul Tău Digital de Prim Nivel",
+    "approachSubtitle": "Majoritatea oamenilor nu contactează direct un pastor. Caută pe Google, cugetă, rămân tăcuți. BibleBot.Life îi întâlnește acolo – ca un prim punct de contact cu barieră scăzută în ecosistemul îngrijirii pastorale.",
+    "approach1Desc": "Disponibil 24/7, anonim, gratuit. Răspunde la întrebări de credință, oferă inspirație și companionat – fără bariere. Primul tău contact digital.",
+    "approach2Desc": "BibleBot stârnește interesul și construiește încredere. Următorul pas: vizitarea comunității tale. Ne legăm direct de orarul slujbelor tale.",
+    "approach3Desc": "Când întrebările devin nevoi personale, BibleBot se conectează direct la îngrijirea ta pastorală – cu un formular de contact și încredere integrată.",
+    "approachNote": "BibleBot.Life nu înlocuiește îngrijirea pastorală – ci deschide ușa către ea. Ca canal digital de 1st-Level, reducem barierele și aducem oameni la tine.",
+    "approachCta": "Discutați Parteneriatul"
   },
   "institutions": {
     "badge": "Pentru organizații",
@@ -1843,7 +1850,24 @@
     "confession": "Confesiune",
     "family": "Familie",
     "familyValue": "Căsătorit, doi copii",
-    "cta": "Întrebări, idei sau doriți doar să salutați?"
+    "cta": "Întrebări, idei sau doriți doar să salutați?",
+    "approachTitle": "Abordarea Noastră",
+    "approachSubtitle": "Îngrijirea pastorală nu începe cu o conversație personală. Începe acolo unde oamenii au întrebări – adesea în liniște, adesea noaptea, adesea singuri.",
+    "level1Badge": "Prim Punct de Contact",
+    "level1Desc": "Disponibil non-stop, anonim și fără bariere. Pentru oricine are o întrebare, caută inspirație sau pur și simplu nu dorește să fie singur – primul pas este cel mai ușor.",
+    "level2Badge": "Comunitate",
+    "level2Title": "Închinare și Comunitate",
+    "level2Desc": "Întâlnirea, ascultarea, celebrarea împreună. Închinarea oferă credinței un cămin în comunitate.",
+    "level3Badge": "Personal",
+    "level3Title": "Îngrijire Pastorală 1:1",
+    "level3Desc": "O conversație confidențială, față în față. Pentru momentele care necesită ghidare personală.",
+    "approachNote": "BibleBot.Life scade bariera – și ghidează oamenii pas cu pas mai aproape de comunitate și sprijin personal.",
+    "tag_anonymous": "Anonim",
+    "tag_free": "Gratuit",
+    "tag_weekly": "Săptămânal",
+    "tag_community": "Comunitate",
+    "tag_personal": "Personal",
+    "tag_individual": "Individual"
   },
   "nav.about": "Despre Noi"
 }

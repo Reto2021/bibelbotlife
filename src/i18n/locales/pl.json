@@ -860,7 +860,14 @@
         "title": "Niezależni celebranci",
         "desc": "Mówcy pogrzebowi, celebranci ślubni i niezależni oficjele ceremonii – z narzędziami biograficznymi i planowaniem mów."
       }
-    }
+    },
+    "approachTitle": "Twój cyfrowy kanał 1st-Level",
+    "approachSubtitle": "Większość ludzi nie zwraca się bezpośrednio do pastora. Googlowią, rozmyślają, milczą. BibleBot.Life spotyka ich tam – jako pierwszy punkt kontaktu z niskim progiem wejścia w ekosystemie waszej opieki duszpasterskiej.",
+    "approach1Desc": "Dostępny 24/7, anonimowy, darmowy. Odpowiada na pytania wiary, oferuje inspiracje i oferuje towarzystwo – bez żadnych barier. Wasz pierwszy cyfrowy kontakt.",
+    "approach2Desc": "BibleBot wzbudza zainteresowanie i buduje zaufanie. Kolejny krok: odwiedziny waszej wspólnoty. Linkujemy bezpośrednio do godzin waszych nabożeństw.",
+    "approach3Desc": "Gdy pytania stają się osobistymi potrzebami, BibleBot łączy bezpośrednio z waszą opieką duszpasterską – z formularzem kontaktowym i wbudowanym zaufaniem.",
+    "approachNote": "BibleBot.Life nie zastępuje opieki duszpasterskiej – otwiera do niej drzwi. Jako wasz cyfrowy kanał 1st-level, obniżamy bariery i przyciągamy do was ludzi.",
+    "approachCta": "Omów partnerstwo"
   },
   "institutions": {
     "badge": "Dla organizacji",
@@ -1843,7 +1850,24 @@
     "confession": "Wyznanie",
     "family": "Rodzina",
     "familyValue": "Żonaty, dwoje dzieci",
-    "cta": "Pytania, pomysły, czy po prostu chcesz się przywitać?"
+    "cta": "Pytania, pomysły, czy po prostu chcesz się przywitać?",
+    "approachTitle": "Nasze podejście",
+    "approachSubtitle": "Opieka duszpasterska nie zaczyna się od osobistej rozmowy. Zaczyna się tam, gdzie ludzie mają pytania – często po cichu, często w nocy, często sami.",
+    "level1Badge": "Pierwszy punkt kontaktu",
+    "level1Desc": "Dostępny przez całą dobę, anonimowy i bez barier. Dla każdego, kto ma pytanie, szuka inspiracji lub po prostu nie chce być sam – pierwszy krok jest najłatwiejszy.",
+    "level2Badge": "Wspólnota",
+    "level2Title": "Nabożeństwo i Wspólnota",
+    "level2Desc": "Wspólne spotkania, słuchanie, wspólne świętowanie. Nabożeństwo daje wierze dom we wspólnocie.",
+    "level3Badge": "Osobisty",
+    "level3Title": "Opieka duszpasterska 1:1",
+    "level3Desc": "Poufna, osobista rozmowa. Na momenty wymagające osobistego przewodnictwa.",
+    "approachNote": "BibleBot.Life obniża barierę – i stopniowo przybliża ludzi do wspólnoty i osobistego wsparcia.",
+    "tag_anonymous": "Anonimowy",
+    "tag_free": "Darmowy",
+    "tag_weekly": "Tygodniowy",
+    "tag_community": "Wspólnota",
+    "tag_personal": "Osobisty",
+    "tag_individual": "Indywidualny"
   },
   "nav.about": "O nas"
 }

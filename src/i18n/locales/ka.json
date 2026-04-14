@@ -904,7 +904,14 @@
         "desc": "დამატებითი სულიერი იმპულსები კლიენტებისთვის ფსიქოსოციალურ ან სამღვდელო კონსულტაციაში."
       }
     },
-    "patronageNote": "BibleBot.Life is run by a non-profit association and funded exclusively through voluntary donations and sponsorships. There is no advertising, no data sales, and no paid features. All contributions go directly toward development, technical operations, global distribution, and community management. Donations may be tax-deductible depending on your jurisdiction."
+    "patronageNote": "BibleBot.Life is run by a non-profit association and funded exclusively through voluntary donations and sponsorships. There is no advertising, no data sales, and no paid features. All contributions go directly toward development, technical operations, global distribution, and community management. Donations may be tax-deductible depending on your jurisdiction.",
+    "approachTitle": "თქვენი ციფრული 1st-Level არხი",
+    "approachSubtitle": "ადამიანთა უმეტესობა პირდაპირ მღვდელთან არ მოდის. ისინი ეძებენ ინტერნეტში, ფიქრობენ, ჩუმად რჩებიან. BibleBot.Life ხვდება მათ იქ – როგორც დაბალი ბარიერის პირველი საკონტაქტო წერტილი თქვენი სამწყსოს მოვლის ეკოსისტემაში.",
+    "approach1Desc": "ხელმისაწვდომია 24/7, ანონიმურად, უფასოდ. პასუხობს რწმენის საკითხებზე, შთააგონებს და თანადგომას სთავაზობს – ნულოვანი ბარიერებით. თქვენი პირველი ციფრული კონტაქტი.",
+    "approach2Desc": "BibleBot ინტერესს იწვევს და ნდობას ამყარებს. შემდეგი ნაბიჯი: თქვენი საზოგადოების მონახულება. ჩვენ პირდაპირ ვუკავშირდებით კრების დროს.",
+    "approach3Desc": "როდესაც კითხვები პიროვნულ საჭიროებებად იქცევა, BibleBot პირდაპირ უკავშირდება თქვენს სამწყსოს მოვლას – საკონტაქტო ფორმით და ჩაშენებული ნდობით.",
+    "approachNote": "BibleBot.Life არ ცვლის სამწყსოს მოვლას – ის აღებს მასთან კარს. როგორც თქვენი ციფრული 1st-Level არხი, ჩვენ ვამცირებთ ბარიერებს და მოგყავთ ხალხი თქვენთან.",
+    "approachCta": "განიხილეთ პარტნიორობა"
   },
   "institutions": {
     "badge": "ორგანიზაციებისთვის",
@@ -1845,7 +1852,24 @@
     "confession": "კონფესია",
     "family": "ოჯახი",
     "familyValue": "დაქორწინებული, ორი შვილი",
-    "cta": "კითხვები, იდეები, თუ უბრალოდ გამარჯობა გინდათ?"
+    "cta": "კითხვები, იდეები, თუ უბრალოდ გამარჯობა გინდათ?",
+    "approachTitle": "ჩვენი მიდგომა",
+    "approachSubtitle": "სამწყსოს მოვლა არ იწყება პირადი საუბრით. ის იწყება იქ, სადაც ადამიანებს აქვთ კითხვები – ხშირად მშვიდად, ხშირად ღამით, ხშირად მარტონი.",
+    "level1Badge": "პირველი საკონტაქტო წერტილი",
+    "level1Desc": "ხელმისაწვდომია მთელი საათის განმავლობაში, ანონიმურად და ბარიერების გარეშე. ნებისმიერისთვის, ვისაც აქვს შეკითხვა, ვინც ეძებს შთაგონებას, ან უბრალოდ არ უნდა იყოს მარტო – პირველი ნაბიჯი ყველაზე მარტივია.",
+    "level2Badge": "საზოგადოება",
+    "level2Title": "თაყვანისცემა და საზოგადოება",
+    "level2Desc": "ერთად შეკრება, მოსმენა, ერთად ზეიმი. თაყვანისცემა რწმენას საზოგადოებაში აძლევს სახლს.",
+    "level3Badge": "პიროვნული",
+    "level3Title": "1:1 სამწყსოს მოვლა",
+    "level3Desc": "კონფიდენციალური, პირისპირ საუბარი. იმ მომენტებისთვის, რომელიც საჭიროებს პირად ხელმძღვანელობას.",
+    "approachNote": "BibleBot.Life ამცირებს ბარიერს – და ნაბიჯ-ნაბიჯ მიუძღვება ხალხს საზოგადოებასთან და პირად მხარდაჭერასთან.",
+    "tag_anonymous": "ანონიმური",
+    "tag_free": "უფასო",
+    "tag_weekly": "ყოველკვირეული",
+    "tag_community": "საზოგადოება",
+    "tag_personal": "პიროვნული",
+    "tag_individual": "ინდივიდუალური"
   },
   "nav.about": "ჩვენს შესახებ"
 }

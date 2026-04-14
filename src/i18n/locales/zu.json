@@ -899,7 +899,14 @@
         "title": "Abahleli Bemicimbi Abazimele",
         "desc": "Izikhulumi zemingcwabo, abahleli bemishado nabahleli bemicimbi abazimele – ngamathuluzi embali yempilo nokuhlela izinkulumo."
       }
-    }
+    },
+    "approachTitle": "Isiteshi Sakho Sedijithali se-1st-Level",
+    "approachSubtitle": "Iningi labantu alikwazi ukuxhumana nomfelulehi ngqo. Bafuna ku-Google, bayacabanga, bayathula. I-BibleBot.Life ibahlangabeza lapho – njengendlela elula yokuxhumana kuqala emaphakethe enkonzo yakho yobupastor.",
+    "approach1Desc": "Itholakala 24/7, ngokungaziwa, mahhala. Iyaphendula imibuzo yokholo, inikeza ugqozi, futhi ihlinzeka ngokuhambisana – ngaphandle kwemibandela. Ukuxhumana kwakho kokuqala kwedijithali.",
+    "approach2Desc": "IBibleBot ivusa intshisekelo futhi yakha ukwethembana. Isinyathelo esilandelayo: ukuvakashela umphakathi wakho. Sixhumanisa ngqo nezikhathi zenkonzo yakho.",
+    "approach3Desc": "Lapho imibuzo iba izidingo eziyimfihlo, i-BibleBot ixhuma ngqo enkonzweni yakho yobupastor – ngefomu lokuxhumana nokwethembana okwakhelwe ngaphakathi.",
+    "approachNote": "IBibleBot.Life ayithathi indawo yenkonzo yobupastor – iyayivulela indlela. Njengesiteshi sakho sedijithali se-1st-level, sinciphisa imibandela futhi sikubuyisele abantu.",
+    "approachCta": "Xoxa Ngesivumelwano"
   },
   "institutions": {
     "badge": "Kwezinhlangano",
@@ -1843,7 +1850,24 @@
     "confession": "Ihlobo",
     "family": "Umndeni",
     "familyValue": "Ushadile, unezingane ezimbili",
-    "cta": "Imibuzo, imibono, noma ufuna nje ukubingelela?"
+    "cta": "Imibuzo, imibono, noma ufuna nje ukubingelela?",
+    "approachTitle": "Indlela Yethu",
+    "approachSubtitle": "Inkonzo yobupastor ayisiqali ngenxaxo lomuntu siqu. Iyiqala lapho abantu banemibuzo – ngokuvamile ngokuthula, ngokuvamile ebusuku, ngokuvamile bebodwa.",
+    "level1Badge": "Indlela Yokuqala Yokuxhumana",
+    "level1Desc": "Itholakala nxazonke kwewashi, ngokungaziwa futhi ngaphandle kwemibandela. Kunoma ubani onombuzo, ofuna ugqozi, noma ongumane nje angafuni ukuba yedwa – isinyathelo sokuqala kulula kakhulu.",
+    "level2Badge": "Umphakathi",
+    "level2Title": "Ukukhulekela Nomphakathi",
+    "level2Desc": "Ukuhlangana, ukulalelisisa, ukugubha ndawonye. Ukukhulekela kunikeza ukholo ikhaya emphakathini.",
+    "level3Badge": "Umuntu Ngamunye",
+    "level3Title": "Inkonzo Yomuntu Ngamunye (1:1)",
+    "level3Desc": "Ingxoxo eyimfihlo, ubuso nobuso. Ezikhathini ezidinga isiqondiso somuntu siqu.",
+    "approachNote": "IBibleBot.Life inciphisa umbandela – futhi iqondisa abantu isinyathelo ngesinyathelo eduze nomphakathi nokusekelwa komuntu siqu.",
+    "tag_anonymous": "Okungaziwa",
+    "tag_free": "Mahhala",
+    "tag_weekly": "Ngeviki",
+    "tag_community": "Umphakathi",
+    "tag_personal": "Okomuntu siqu",
+    "tag_individual": "Ngabanye"
   },
   "nav.about": "Mayelana Nathi"
 }
