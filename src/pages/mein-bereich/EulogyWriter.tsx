@@ -28,7 +28,8 @@ const EulogyWriter = () => {
   const { t, i18n } = useTranslation();
   const { user } = useAuth();
   const { draftsQuery, saveDraft, toggleShare } = useCeremonyDrafts("funeral");
-  const { resources } = useResources();
+  const resourcesQuery = useResources();
+  const resources = resourcesQuery.data;
 
   const funeralTags = ["trauer", "trost", "abschied", "funeral", "comfort", "grief", "hope"];
   const suggestedResources = (resources || []).filter(
