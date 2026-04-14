@@ -131,7 +131,7 @@ function QABadge({ qa, t }: { qa: QAResult | "loading" | "skipped"; t: (key: str
               {qa.has_issues
                 ? t("chat.qaIssue", { count: qa.issues.length })
                 : showExtended
-                  ? `BibleBot prüft jede Bibelstelle automatisch. ${qa.citations_found} Stelle(n) in dieser Antwort geprüft und bestätigt.`
+                  ? t("chat.qaExtended", { count: qa.citations_found, defaultValue: `BibleBot automatically checks every Bible reference. ${qa.citations_found} citation(s) in this answer verified and confirmed.` })
                   : t("chat.qaOk", { count: qa.citations_found })}
             </span>
           </div>
