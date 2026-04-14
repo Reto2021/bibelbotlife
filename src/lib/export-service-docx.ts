@@ -57,6 +57,7 @@ interface ExportOptions {
   tradition: string;
   blocks: ServiceBlockData[];
   churchName?: string;
+  notes?: string;
 }
 
 const cellBorder = { style: BorderStyle.SINGLE, size: 1, color: "CCCCCC" };
