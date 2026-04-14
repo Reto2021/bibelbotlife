@@ -1854,7 +1854,24 @@
     "confession": "Denomination",
     "family": "Family",
     "familyValue": "Married, two children",
-    "cta": "Questions, ideas, or just want to say hello?"
+    "cta": "Questions, ideas, or just want to say hello?",
+    "approachTitle": "Our Approach",
+    "approachSubtitle": "Pastoral care doesn't start with a personal conversation. It starts where people have questions – often quietly, often at night, often alone.",
+    "level1Badge": "First Point of Contact",
+    "level1Desc": "Available around the clock, anonymous and barrier-free. For anyone with a question, seeking inspiration, or simply not wanting to be alone – the first step is the easiest.",
+    "level2Badge": "Community",
+    "level2Title": "Worship & Community",
+    "level2Desc": "Coming together, listening, celebrating together. Worship gives faith a home in the community.",
+    "level3Badge": "Personal",
+    "level3Title": "1:1 Pastoral Care",
+    "level3Desc": "A confidential, face-to-face conversation. For the moments that need personal guidance.",
+    "approachNote": "BibleBot.Life lowers the barrier – and guides people step by step closer to community and personal support.",
+    "tag_anonymous": "Anonymous",
+    "tag_free": "Free",
+    "tag_weekly": "Weekly",
+    "tag_community": "Community",
+    "tag_personal": "Personal",
+    "tag_individual": "Individual"
   },
   "nav.about": "About Us"
 }
