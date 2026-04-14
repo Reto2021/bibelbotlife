@@ -37,8 +37,8 @@
     "playAudio": "Koute",
     "stopAudio": "Sispann",
     "collapseLabel": "Enpilsyon jou a",
-    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
-    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
+    "deepDivePrompt": "Enpilsyon chak jou a se \"{{topic}}\" ak {{reference}}. Eksplike pasaj sa a: Ki moun ki te ekri li? Nan ki sitiyasyon? Ki sa ki vini anvan ak apre? Epi ki sa sa vle di pou lavi mwen jodi a?",
+    "explorePrompt": "Li m pasaj konplè a alantou {{reference}} epi eksplike kontèks la. Mwen vle konprann istwa ki dèyè li."
   },
   "features": {
     "sectionTitle": "Kisa konpayon ou ofri ou",
@@ -175,8 +175,8 @@
     "unsubscribe": "Dezabòne",
     "unsubscribedTitle": "Dezabòne",
     "unsubscribedDesc": "Ou p'ap resevwa plis enspirasyon chak jou.",
-    "smsSwissOnly": "Swiss numbers only",
-    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
+    "smsSwissOnly": "Nimewo Swis sèlman",
+    "smsSwissOnlyDesc": "SMS disponib sèlman pou nimewo Swis (+41)."
   },
   "faq": {
     "badge": "Kesyon Souvan Poze",
@@ -347,24 +347,24 @@
     "shareVia": "Pataje via",
     "copied": "Kopye! 📋",
     "copiedShort": "Kopye!",
-    "copiedDesc": "Tèks la te kopye nan clipboard la. Pataje li kounye a sou WhatsApp, Instagram oswa kote ou vle!",
+    "copiedDesc": "Tèks kopye nan clipboard. Pataje li sou WhatsApp, Instagram oswa nenpòt kote ou vle!",
     "copyLink": "Kopye tèks",
-    "error": "Kopye echwe",
+    "error": "Kopi echwe",
     "impulseTitle": "Konpayon ou – Enspirasyon jounen an",
     "chatTitle": "Konpayon ou – Panse jounen an",
     "createImage": "Kreye imaj ✨",
     "generating": "Ap kreye…",
-    "imageReady": "Imaj ou a pare pou pataje!",
+    "imageReady": "Imaj ou pare pou pataje!",
     "shareImage": "Pataje imaj",
     "download": "Sove",
     "imageError": "Kreyasyon imaj echwe",
-    "imageErrorDesc": "Imaj la pa t ka kreye. Tanpri eseye ankò pita.",
+    "imageErrorDesc": "Imaj la pa t 'kapab kreye. Tanpri eseye ankò pita.",
     "imageSaved": "Tèks kopye! 📋",
-    "imageSavedDesc": "Sove imaj la epi pataje li ak tèks kopye a sou Instagram, WhatsApp oswa kote ou vle!",
+    "imageSavedDesc": "Sove imaj la epi pataje li ak tèks kopye a sou Instagram, WhatsApp oswa nenpòt kote ou vle!",
     "clipboardFallback": "Tèks kopye — kole l lè w ap poste!",
     "recommendedBy": "Rekòmande pa {{church}}",
     "hashtagBible": "#Bib",
-    "hashtagImpulse": "#DailyImpulse"
+    "hashtagImpulse": "#EnpilsyonChakJou"
   },
   "darkMode": {
     "light": "Mòd limyè",

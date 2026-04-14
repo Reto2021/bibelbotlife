@@ -37,8 +37,8 @@
     "playAudio": "Կարդալ բարձրաձայն",
     "stopAudio": "Դադարեցնել",
     "collapseLabel": "Օdelays մղում",
-    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
-    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
+    "deepDivePrompt": "Օրվա մտորումը «{{topic}}»-ն է՝ {{reference}}-ով: Բացատրեք այս հատվածը. Ո՞վ է գրել այն: Ի՞նչ իրավիճակում: Ի՞նչ է գալիս առաջ և հետո: Եվ ի՞նչ է դա նշանակում իմ կյանքի համար այսօր:",
+    "explorePrompt": "Կարդացեք ինձ համար ամբողջ հատվածը {{reference}}-ի շուրջ և բացատրեք համատեքստը: Ես ուզում եմ հասկանալ դրա հետևում եղած պատմությունը:"
   },
   "features": {
     "sectionTitle": "Այսպես է ձեզ աջակցում ձեր ուղեկիցը",
@@ -141,7 +141,7 @@
     "firstNamePlaceholder": "օրինակ՝ Թոմաս",
     "firstNameHint": "Որպեսզի կարողանանք ձեզ անձամբ ողջունել։",
     "channelLabel": "Ինչպե՞ս եք ցանկանում ստանալ խթանը։",
-    "push": "Ծանուցում",
+    "push": "Հրում",
     "pushDesc": "Ստանալ անմիջապես բրաուզերում",
     "telegram": "Telegram",
     "telegramDesc": "Հաղորդագրություն Telegram-ի միջոցով",
@@ -175,8 +175,8 @@
     "unsubscribe": "Չեղարկել բաժանորդագրությունը",
     "unsubscribedTitle": "Բաժանորդագրությունը չեղարկված է",
     "unsubscribedDesc": "Դուք այլևս չեք ստանա ամենօրյա ներշնչանք։",
-    "smsSwissOnly": "Swiss numbers only",
-    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
+    "smsSwissOnly": "Միայն շվեյցարական համարներ",
+    "smsSwissOnlyDesc": "SMS-ը հասանելի է միայն շվեյցարական համարների համար (+41):"
   },
   "faq": {
     "badge": "Հաճախ տրվող հարցեր",
@@ -350,26 +350,26 @@
   "share": {
     "label": "Կիսվել",
     "shareVia": "Կիսվել միջոցով",
-    "copied": "Պատճենված է։ 📋",
-    "copiedShort": "Պատճենված է։",
-    "copiedDesc": "Տեքստը պատճենվել է սեղմատախտակին։ Հիմա կիսվեք այն WhatsApp-ում, Instagram-ում կամ որտեղ ցանկանում եք։",
+    "copied": "Պատճենված է: 📋",
+    "copiedShort": "Պատճենված է:",
+    "copiedDesc": "Տեքստը պատճենվել է սեղմատախտակին: Կիսվեք այն WhatsApp-ում, Instagram-ում կամ ուր ցանկանաք:",
     "copyLink": "Պատճենել տեքստը",
     "error": "Պատճենումը ձախողվեց",
     "impulseTitle": "BibleBot – Օրվա խթան",
     "chatTitle": "BibleBot – Օրվա միտք",
     "createImage": "Ստեղծել պատկեր ✨",
     "generating": "Ստեղծվում է…",
-    "imageReady": "Ձեր պատկերը պատրաստ է կիսվելու։",
+    "imageReady": "Ձեր պատկերը պատրաստ է կիսվելու:",
     "shareImage": "Կիսվել պատկերով",
     "download": "Պահպանել",
     "imageError": "Պատկերի ստեղծումը ձախողվեց",
-    "imageErrorDesc": "Պատկերը չհաջողվեց ստեղծել։ Խնդրում ենք փորձել ավելի ուշ։",
-    "imageSaved": "Տեքստը պատճենված է։ 📋",
-    "imageSavedDesc": "Պահպանեք պատկերը և կիսվեք այն պատճենված տեքստով Instagram-ում, WhatsApp-ում կամ որտեղ ցանկանում եք։",
+    "imageErrorDesc": "Պատկերը հնարավոր չէր ստեղծել: Խնդրում ենք փորձել ավելի ուշ:",
+    "imageSaved": "Տեքստը պատճենված է: 📋",
+    "imageSavedDesc": "Պահպանեք պատկերը և կիսվեք պատճենված տեքստով Instagram-ում, WhatsApp-ում կամ ուր ցանկանաք:",
     "clipboardFallback": "Տեքստը պատճենված է՝ տեղադրեք այն հրապարակելիս։",
     "recommendedBy": "Խորհուրդ է տրվում {{church}}-ի կողմից",
     "hashtagBible": "#Աստվածաշունչ",
-    "hashtagImpulse": "#DailyImpulse"
+    "hashtagImpulse": "#ՕրվաՄտորում"
   },
   "darkMode": {
     "light": "Լուսավոր ռեժիմ",

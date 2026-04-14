@@ -35,10 +35,10 @@
     "alreadySubscribed": "Usuwuthola ugqozi lwansuku zonke",
     "subscribeCta": "Uyafuna ukuthola lolu gqozi nsuku zonke?",
     "playAudio": "Lalela",
-    "stopAudio": "Yima",
+    "stopAudio": "Misa",
     "collapseLabel": "Isipho sosuku",
-    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
-    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
+    "deepDivePrompt": "I-impulse yansuku zonke ithi \"{{topic}}\" nge-{{reference}}. Chaza le ndima: Ubani oyibhalile? Kulesiphi isimo? Yini eza ngaphambi nangemuva? Futhi isho ukuthini empilweni yami namuhla?",
+    "explorePrompt": "Ngicela ungifundele indima ephelele ezungeze {{reference}} bese uchaza umongo. Ngifuna ukuqonda indaba engemuva kwayo."
   },
   "features": {
     "sectionTitle": "Umngane wakho ukupha ini",
@@ -175,8 +175,8 @@
     "unsubscribe": "Khipha okubhaliselwe",
     "unsubscribedTitle": "Kukhishiwe okubhaliselwe",
     "unsubscribedDesc": "Ngeke usathola ugqozi lwansuku zonke.",
-    "smsSwissOnly": "Swiss numbers only",
-    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
+    "smsSwissOnly": "Izinombolo zaseSwitzerland kuphela",
+    "smsSwissOnlyDesc": "I-SMS itholakala kuphela ezinombolweni zaseSwitzerland (+41)."
   },
   "faq": {
     "badge": "Imibuzo Evame Ukubuzwa",
@@ -344,26 +344,26 @@
   },
   "share": {
     "label": "Yabelana",
-    "shareVia": "Yabelana Nge",
+    "shareVia": "Yabelana nge",
     "copied": "Kopishiwe! 📋",
     "copiedShort": "Kopishiwe!",
-    "copiedDesc": "Umbhalo ukopishiwe ebhodini lokunamathisela. Wabelane manje ku-WhatsApp, Instagram noma lapho ufuna khona!",
-    "copyLink": "Kopisha Umbhalo",
-    "error": "Ukukopisha kuhlulekile",
+    "copiedDesc": "Umbhalo ukopishiwe ebhodini lokunamathisela. Yabelana ngawo ku-WhatsApp, Instagram noma nomaphi lapho uthanda khona!",
+    "copyLink": "Kopisha umbhalo",
+    "error": "Ukukopisha kwehlulekile",
     "impulseTitle": "Umngane wakho – Umlayezo Wosuku",
     "chatTitle": "Umngane wakho – Umcabango Wosuku",
-    "createImage": "Dala Isithombe ✨",
-    "generating": "Iyaqhubeka nokudala…",
-    "imageReady": "Isithombe sakho sesilungele ukwabelana!",
+    "createImage": "Dala isithombe ✨",
+    "generating": "Kuyadalwa…",
+    "imageReady": "Isithombe sakho sikulungele ukwabelana!",
     "shareImage": "Yabelana ngesithombe",
     "download": "Londoloza",
-    "imageError": "Ukudala isithombe kuhlulekile",
-    "imageErrorDesc": "Isithombe asikwazanga ukudala. Sicela uzame futhi kamuva.",
+    "imageError": "Ukudala isithombe kwehlulekile",
+    "imageErrorDesc": "Isithombe asikwazanga ukudalwa. Sicela uzame futhi kamuva.",
     "imageSaved": "Umbhalo ukopishiwe! 📋",
-    "imageSavedDesc": "Londoloza isithombe bese usabelana ngaso nombhalo okopishiwe ku-Instagram, WhatsApp noma lapho ufuna khona!",
+    "imageSavedDesc": "Londoloza isithombe bese usabelana ngaso nombhalo okopishiwe ku-Instagram, WhatsApp noma nomaphi lapho uthanda khona!",
     "clipboardFallback": "Umbhalo ukopishiwe — unamathisele lapho uthumela!",
     "recommendedBy": "Kuphakanyiswe yi-{{church}}",
-    "hashtagBible": "#IBhayibheli",
+    "hashtagBible": "#Bible",
     "hashtagImpulse": "#DailyImpulse"
   },
   "darkMode": {

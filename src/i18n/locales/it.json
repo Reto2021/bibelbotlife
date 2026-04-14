@@ -37,8 +37,8 @@
     "playAudio": "Leggi ad alta voce",
     "stopAudio": "Ferma",
     "collapseLabel": "Impulso del giorno",
-    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
-    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
+    "deepDivePrompt": "L'impulso quotidiano è \"{{topic}}\" con {{reference}}. Spiega questo passaggio: Chi l'ha scritto? In quale situazione? Cosa viene prima e dopo? E cosa significa per la mia vita oggi?",
+    "explorePrompt": "Leggimi il passaggio completo intorno a {{reference}} e spiegami il contesto. Voglio capire la storia che c'è dietro."
   },
   "features": {
     "sectionTitle": "Ecco come ti supporta il tuo compagno",
@@ -141,10 +141,10 @@
     "firstNamePlaceholder": "es. Thomas",
     "firstNameHint": "Per poterti salutare personalmente.",
     "channelLabel": "Come vuoi ricevere l'impulso?",
-    "push": "Notifica",
+    "push": "Push",
     "pushDesc": "Ricevi direttamente nel browser",
     "telegram": "Telegram",
-    "telegramDesc": "Messaggio via Telegram",
+    "telegramDesc": "Messaggio tramite Telegram",
     "sms": "SMS",
     "smsDesc": "SMS sul tuo cellulare",
     "phoneLabel": "Numero di cellulare",
@@ -176,7 +176,7 @@
     "unsubscribedTitle": "Disiscritto",
     "unsubscribedDesc": "Non riceverai più l'ispirazione quotidiana.",
     "smsSwissOnly": "Solo numeri svizzeri",
-    "smsSwissOnlyDesc": "Gli SMS sono disponibili solo per numeri svizzeri (+41)."
+    "smsSwissOnlyDesc": "L'SMS è disponibile solo per i numeri svizzeri (+41)."
   },
   "faq": {
     "badge": "Domande frequenti",
@@ -352,7 +352,7 @@
     "shareVia": "Condividi tramite",
     "copied": "Copiato! 📋",
     "copiedShort": "Copiato!",
-    "copiedDesc": "Il testo è stato copiato negli appunti. Condividilo ora su WhatsApp, Instagram o dove vuoi!",
+    "copiedDesc": "Testo copiato negli appunti. Condividilo su WhatsApp, Instagram o dove preferisci!",
     "copyLink": "Copia testo",
     "error": "Copia fallita",
     "impulseTitle": "BibleBot – Impulso del giorno",
@@ -365,11 +365,11 @@
     "imageError": "Creazione immagine fallita",
     "imageErrorDesc": "L'immagine non è stata creata. Riprova più tardi.",
     "imageSaved": "Testo copiato! 📋",
-    "imageSavedDesc": "Salva l'immagine e condividila con il testo copiato su Instagram, WhatsApp o dove vuoi!",
+    "imageSavedDesc": "Salva l'immagine e condividila con il testo copiato su Instagram, WhatsApp o dove preferisci!",
     "clipboardFallback": "Testo copiato — incollalo quando pubblichi!",
     "recommendedBy": "Consigliato da {{church}}",
     "hashtagBible": "#Bibbia",
-    "hashtagImpulse": "#ImpulsoDelGiorno"
+    "hashtagImpulse": "#ImpulsoQuotidiano"
   },
   "darkMode": {
     "light": "Modalità chiara",

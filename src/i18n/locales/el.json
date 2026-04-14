@@ -36,10 +36,10 @@
     "alreadySubscribed": "Λαμβάνετε την καθημερινή έμπνευση",
     "subscribeCta": "Θέλετε να λαμβάνετε αυτήν την έμπνευση καθημερινά;",
     "playAudio": "Ακούστε",
-    "stopAudio": "Σταματήστε",
+    "stopAudio": "Διακοπή",
     "collapseLabel": "Ώθηση της ημέρας",
-    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
-    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
+    "deepDivePrompt": "Η καθημερινή έμπνευση είναι «{{topic}}» με {{reference}}. Εξηγήστε αυτό το απόσπασμα: Ποιος το έγραψε; Σε ποια κατάσταση; Τι προηγείται και τι ακολουθεί; Και τι σημαίνει για τη ζωή μου σήμερα;",
+    "explorePrompt": "Διαβάστε μου ολόκληρο το απόσπασμα γύρω από το {{reference}} και εξηγήστε το πλαίσιο. Θέλω να καταλάβω την ιστορία πίσω από αυτό."
   },
   "features": {
     "sectionTitle": "Τι σου προσφέρει ο σύντροφός σου",
@@ -149,7 +149,7 @@
     "sms": "SMS",
     "smsDesc": "SMS στο κινητό σας",
     "phoneLabel": "Αριθμός κινητού",
-    "phonePlaceholder": "+30 691 123 4567",
+    "phonePlaceholder": "+41 79 123 45 67",
     "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "Κάντε κλικ στο «Εγγραφή» – θα μεταφερθείτε στο Telegram. Ξεκινήστε το bot εκεί και γράψτε <strong>/daily</strong> για να ενεργοποιήσετε την καθημερινή παρόρμηση.",
     "pushHint": "Μετά το κλικ στο «Εγγραφή» ο browser σας θα ζητήσει άδεια για ειδοποιήσεις. Παρακαλώ επιτρέψτε το για να λάβετε την παρόρμηση.",
@@ -176,8 +176,8 @@
     "unsubscribe": "Διαγραφή συνδρομής",
     "unsubscribedTitle": "Έχετε διαγραφεί",
     "unsubscribedDesc": "Δεν θα λαμβάνετε πλέον καθημερινή έμπνευση.",
-    "smsSwissOnly": "Swiss numbers only",
-    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
+    "smsSwissOnly": "Μόνο για ελβετικούς αριθμούς",
+    "smsSwissOnlyDesc": "Το SMS είναι διαθέσιμο μόνο για ελβετικούς αριθμούς (+41)."
   },
   "faq": {
     "badge": "Συχνές ερωτήσεις",
@@ -348,24 +348,24 @@
     "shareVia": "Κοινή χρήση μέσω",
     "copied": "Αντιγράφηκε! 📋",
     "copiedShort": "Αντιγράφηκε!",
-    "copiedDesc": "Το κείμενο αντιγράφηκε στο πρόχειρο. Μοιραστείτε το τώρα στο WhatsApp, το Instagram ή όπου θέλετε!",
+    "copiedDesc": "Το κείμενο αντιγράφηκε στο πρόχειρο. Μοιραστείτε το στο WhatsApp, το Instagram ή όπου αλλού θέλετε!",
     "copyLink": "Αντιγραφή κειμένου",
-    "error": "Αποτυχία αντιγραφής",
+    "error": "Η αντιγραφή απέτυχε",
     "impulseTitle": "Ο σύντροφός σας – Παρόρμηση της Ημέρας",
     "chatTitle": "Ο σύντροφός σας – Σκέψη της Ημέρας",
     "createImage": "Δημιουργία εικόνας ✨",
-    "generating": "Δημιουργείται…",
+    "generating": "Δημιουργία…",
     "imageReady": "Η εικόνα σας είναι έτοιμη για κοινή χρήση!",
     "shareImage": "Κοινή χρήση εικόνας",
     "download": "Αποθήκευση",
-    "imageError": "Αποτυχία δημιουργίας εικόνας",
-    "imageErrorDesc": "Δεν ήταν δυνατή η δημιουργία της εικόνας. Δοκιμάστε ξανά αργότερα.",
-    "imageSaved": "Αντιγράφηκε το κείμενο! 📋",
-    "imageSavedDesc": "Αποθηκεύστε την εικόνα και μοιραστείτε την με το αντιγραμμένο κείμενο στο Instagram, το WhatsApp ή όπου θέλετε!",
+    "imageError": "Η δημιουργία εικόνας απέτυχε",
+    "imageErrorDesc": "Η εικόνα δεν μπόρεσε να δημιουργηθεί. Παρακαλώ δοκιμάστε ξανά αργότερα.",
+    "imageSaved": "Το κείμενο αντιγράφηκε! 📋",
+    "imageSavedDesc": "Αποθηκεύστε την εικόνα και μοιραστείτε την με το αντιγραμμένο κείμενο στο Instagram, το WhatsApp ή όπου αλλού θέλετε!",
     "clipboardFallback": "Το κείμενο αντιγράφηκε — επικολλήστε το όταν δημοσιεύετε!",
     "recommendedBy": "Προτείνεται από {{church}}",
     "hashtagBible": "#Βίβλος",
-    "hashtagImpulse": "#DailyImpulse"
+    "hashtagImpulse": "#ΚαθημερινήΈμπνευση"
   },
   "darkMode": {
     "light": "Φωτεινή λειτουργία",

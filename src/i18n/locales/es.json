@@ -37,8 +37,8 @@
     "playAudio": "Escuchar",
     "stopAudio": "Detener",
     "collapseLabel": "Impulso del día",
-    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
-    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
+    "deepDivePrompt": "El impulso diario es \"{{topic}}\" con {{reference}}. Explica este pasaje: ¿Quién lo escribió? ¿En qué situación? ¿Qué viene antes y después? ¿Y qué significa para mi vida hoy?",
+    "explorePrompt": "Léeme el pasaje completo alrededor de {{reference}} y explícame el contexto. Quiero entender la historia detrás de esto."
   },
   "features": {
     "sectionTitle": "Lo que tu compañero te ofrece",
@@ -141,14 +141,14 @@
     "firstNamePlaceholder": "p.ej. Tomás",
     "firstNameHint": "Para poder saludarte personalmente.",
     "channelLabel": "¿Cómo quieres recibir el impulso?",
-    "push": "Push",
+    "push": "Notificación push",
     "pushDesc": "Notificación del navegador",
     "telegram": "Telegram",
-    "telegramDesc": "Mensaje por Telegram",
+    "telegramDesc": "Mensaje vía Telegram",
     "sms": "SMS",
     "smsDesc": "SMS a tu teléfono",
     "phoneLabel": "Número de teléfono",
-    "phonePlaceholder": "+34 612 345 678",
+    "phonePlaceholder": "+41 79 123 45 67",
     "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "Haz clic en «Suscribirse» – serás redirigido a Telegram. Inicia el bot y escribe <strong>/daily</strong> para activar el impulso diario.",
     "pushHint": "Después de hacer clic en «Suscribirse», tu navegador pedirá permiso para notificaciones. Por favor, permítelo para recibir el impulso.",
@@ -176,7 +176,7 @@
     "unsubscribedTitle": "Suscripción cancelada",
     "unsubscribedDesc": "Ya no recibirás inspiración diaria.",
     "smsSwissOnly": "Solo números suizos",
-    "smsSwissOnlyDesc": "Los SMS solo están disponibles para números suizos (+41)."
+    "smsSwissOnlyDesc": "El SMS solo está disponible para números suizos (+41)."
   },
   "faq": {
     "badge": "Preguntas frecuentes",
@@ -959,24 +959,24 @@
     "shareVia": "Compartir vía",
     "copied": "¡Copiado! 📋",
     "copiedShort": "¡Copiado!",
-    "copiedDesc": "Texto copiado. ¡Compártelo en WhatsApp, Instagram o donde quieras!",
+    "copiedDesc": "Texto copiado al portapapeles. ¡Compártelo en WhatsApp, Instagram o donde quieras!",
     "copyLink": "Copiar texto",
     "error": "Error al copiar",
     "impulseTitle": "Tu compañero – Impulso del día",
     "chatTitle": "Tu compañero – Pensamiento del día",
     "createImage": "Crear imagen ✨",
     "generating": "Creando…",
-    "imageReady": "¡Tu imagen está lista!",
+    "imageReady": "¡Tu imagen está lista para compartir!",
     "shareImage": "Compartir imagen",
     "download": "Guardar",
-    "imageError": "Error al crear imagen",
-    "imageErrorDesc": "No se pudo crear la imagen. Inténtalo más tarde.",
+    "imageError": "Error al crear la imagen",
+    "imageErrorDesc": "No se pudo crear la imagen. Por favor, inténtalo de nuevo más tarde.",
     "imageSaved": "¡Texto copiado! 📋",
-    "imageSavedDesc": "¡Guarda la imagen y compártela!",
+    "imageSavedDesc": "¡Guarda la imagen y compártela con el texto copiado en Instagram, WhatsApp o donde quieras!",
     "clipboardFallback": "Texto copiado — ¡pégalo al publicar!",
     "recommendedBy": "Recomendado por {{church}}",
     "hashtagBible": "#Biblia",
-    "hashtagImpulse": "#ImpulsoDelDía"
+    "hashtagImpulse": "#ImpulsoDiario"
   },
   "eulogy": {
     "pageTitle": "Elogio – Crear biografía | tu compañero",

@@ -37,8 +37,8 @@
     "playAudio": "Gụọ n'olu dara ụda",
     "stopAudio": "Kwụsị",
     "collapseLabel": "Inyenye ụbọchị",
-    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
-    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
+    "deepDivePrompt": "Mkpali ụbọchị bụ \"{{topic}}\" na {{reference}}. Kọwaa akụkụ a: Onye dere ya? N'ọnọdụ dị aṅaa? Gịnị na-abịa tupu na mgbe? Ma gịnị ka ọ pụtara maka ndụ m taa?",
+    "explorePrompt": "Gụọrọ m akụkụ zuru ezu gbasara {{reference}} ma kọwaa ọnọdụ ahụ. Achọrọ m ịghọta akụkọ dị n'azụ ya."
   },
   "features": {
     "sectionTitle": "Otu a ka onye enyi gị si akwado gị",
@@ -141,7 +141,7 @@
     "firstNamePlaceholder": "dịka ọmụmaatụ Thomas",
     "firstNameHint": "Ka anyị wee nwee ike kelee gị n'onwe gị.",
     "channelLabel": "Olee otú ị ga-esi chọọ ịnata mkpali ahụ?",
-    "push": "Ọkwa",
+    "push": "Push",
     "pushDesc": "Nweta ya ozugbo na ihe nchọgharị",
     "telegram": "Telegram",
     "telegramDesc": "Ozi site na Telegram",
@@ -175,8 +175,8 @@
     "unsubscribe": "Kwụsị ndenye aha",
     "unsubscribedTitle": "Akagbuola ndenye aha",
     "unsubscribedDesc": "Ị naghịzi enweta mkpali kwa ụbọchị.",
-    "smsSwissOnly": "Swiss numbers only",
-    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
+    "smsSwissOnly": "Nọmba Swiss naanị",
+    "smsSwissOnlyDesc": "SMS dị naanị maka nọmba Swiss (+41)."
   },
   "faq": {
     "badge": "Ajụjụ Ndị A Na-ajụkarị",
@@ -348,28 +348,28 @@
     "close": "Mechie"
   },
   "share": {
-    "label": "Kekọrịta",
-    "shareVia": "Kekọrịta site na",
-    "copied": "E detuoro! 📋",
-    "copiedShort": "E detuoro!",
-    "copiedDesc": "E detuoro ederede na clipboard. Kekọrịta ya ugbu a na WhatsApp, Instagram ma ọ bụ ebe ọ bụla ị chọrọ!",
+    "label": "Kesa",
+    "shareVia": "Kesa site na",
+    "copied": "Edere ya! 📋",
+    "copiedShort": "Edere ya!",
+    "copiedDesc": "Edere ederede na clipboard. Kesaa ya na WhatsApp, Instagram ma ọ bụ ebe ọ bụla masịrị gị!",
     "copyLink": "Detuo ederede",
-    "error": "Ịdetuo adaghị",
+    "error": "Iṅomi adaala",
     "impulseTitle": "BibleBot – Mkpali nke Ụbọchị",
     "chatTitle": "BibleBot – Echiche nke Ụbọchị",
     "createImage": "Mepụta onyonyo ✨",
     "generating": "Na-emepụta…",
-    "imageReady": "Onyonyo gị dị njikere maka ịkekọrịta!",
-    "shareImage": "Kekọrịta onyonyo",
+    "imageReady": "Onyonyo gị adịla njikere ikesa!",
+    "shareImage": "Kesa onyonyo",
     "download": "Chekwaa",
-    "imageError": "Mepụta onyonyo adaghị",
-    "imageErrorDesc": "Enweghị ike ịmepụta onyonyo ahụ. Biko gbalịa ọzọ ma emechaa.",
-    "imageSaved": "E detuoro ederede! 📋",
-    "imageSavedDesc": "Chekwaa onyonyo ahụ ma kekọrịta ya na ederede e detuoro na Instagram, WhatsApp ma ọ bụ ebe ọ bụla ị chọrọ!",
+    "imageError": "Mepụta onyonyo adaala",
+    "imageErrorDesc": "Enweghị ike imepụta onyonyo a. Biko gbalịa ọzọ ma emechaa.",
+    "imageSaved": "Edere ederede! 📋",
+    "imageSavedDesc": "Chekwaa onyonyo a ma kesaa ya na ederede e depụtara na Instagram, WhatsApp ma ọ bụ ebe ọ bụla masịrị gị!",
     "clipboardFallback": "E detuoro ederede — tinye ya mgbe ị na-eziga!",
     "recommendedBy": "Nke {{church}} tụrụ aro",
-    "hashtagBible": "#Baịbụl",
-    "hashtagImpulse": "#DailyImpulse"
+    "hashtagBible": "#Bible",
+    "hashtagImpulse": "#MkpaliỤbọchị"
   },
   "darkMode": {
     "light": "Ụdị ọkụ",

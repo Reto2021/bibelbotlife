@@ -37,8 +37,8 @@
     "playAudio": "Lyt",
     "stopAudio": "Stop",
     "collapseLabel": "Dagens impuls",
-    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
-    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
+    "deepDivePrompt": "Dagens impuls er \"{{topic}}\" med {{reference}}. Forklar denne passage: Hvem skrev den? I hvilken situation? Hvad kommer før og efter? Og hvad betyder det for mit liv i dag?",
+    "explorePrompt": "Læs mig hele passagen omkring {{reference}} og forklar konteksten. Jeg vil gerne forstå historien bag den."
   },
   "features": {
     "sectionTitle": "Hvad din ledsager tilbyder dig",
@@ -148,7 +148,7 @@
     "sms": "SMS",
     "smsDesc": "SMS til din telefon",
     "phoneLabel": "Telefonnummer",
-    "phonePlaceholder": "+45 12 34 56 78",
+    "phonePlaceholder": "+41 79 123 45 67",
     "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "Klik på «Tilmeld» – du bliver videresendt til Telegram. Start din ledsager og skriv <strong>/daily</strong> for at aktivere den daglige impuls.",
     "pushHint": "Efter klik på «Tilmeld» beder din browser om tilladelse til notifikationer. Tillad venligst for at modtage impulsen.",
@@ -175,8 +175,8 @@
     "unsubscribe": "Afmeld abonnement",
     "unsubscribedTitle": "Afmeldt",
     "unsubscribedDesc": "Du modtager ikke længere daglig inspiration.",
-    "smsSwissOnly": "Swiss numbers only",
-    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
+    "smsSwissOnly": "Kun schweiziske numre",
+    "smsSwissOnlyDesc": "SMS er kun tilgængelig for schweiziske numre (+41)."
   },
   "faq": {
     "badge": "FAQ",
@@ -347,24 +347,24 @@
     "shareVia": "Del via",
     "copied": "Kopieret! 📋",
     "copiedShort": "Kopieret!",
-    "copiedDesc": "Tekst kopieret til udklipsholder. Del den på WhatsApp, Instagram eller hvor du vil!",
+    "copiedDesc": "Tekst kopieret til udklipsholderen. Del den på WhatsApp, Instagram eller hvor som helst du ønsker!",
     "copyLink": "Kopier tekst",
     "error": "Kopiering mislykkedes",
     "impulseTitle": "Din ledsager – Dagens impuls",
     "chatTitle": "Din ledsager – Dagens tanke",
     "createImage": "Opret billede ✨",
     "generating": "Opretter…",
-    "imageReady": "Dit billede er klar til deling!",
+    "imageReady": "Dit billede er klar til at blive delt!",
     "shareImage": "Del billede",
     "download": "Gem",
     "imageError": "Billedoprettelse mislykkedes",
-    "imageErrorDesc": "Billedet kunne ikke oprettes. Prøv igen senere.",
+    "imageErrorDesc": "Billedet kunne ikke oprettes. Prøv venligst igen senere.",
     "imageSaved": "Tekst kopieret! 📋",
-    "imageSavedDesc": "Gem billedet og del det med den kopierede tekst på Instagram, WhatsApp eller hvor du vil!",
+    "imageSavedDesc": "Gem billedet og del det med den kopierede tekst på Instagram, WhatsApp eller hvor som helst du ønsker!",
     "clipboardFallback": "Tekst kopieret — indsæt den når du poster!",
     "recommendedBy": "Anbefalet af {{church}}",
-    "hashtagBible": "#Bibelen",
-    "hashtagImpulse": "#DailyImpulse"
+    "hashtagBible": "#Bibel",
+    "hashtagImpulse": "#DagensImpuls"
   },
   "darkMode": {
     "light": "Lys tilstand",

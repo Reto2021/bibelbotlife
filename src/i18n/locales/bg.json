@@ -35,10 +35,10 @@
     "alreadySubscribed": "Получавате ежедневно вдъхновение",
     "subscribeCta": "Искате ли да получавате това вдъхновение ежедневно?",
     "playAudio": "Слушане",
-    "stopAudio": "Спиране",
+    "stopAudio": "Спри",
     "collapseLabel": "Импулс на деня",
-    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
-    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
+    "deepDivePrompt": "Дневният импулс е „{{topic}}“ с {{reference}}. Обясни този пасаж: Кой го е написал? В каква ситуация? Какво предшества и следва? И какво означава това за живота ми днес?",
+    "explorePrompt": "Прочети ми целия пасаж около {{reference}} и обясни контекста. Искам да разбера историята зад него."
   },
   "features": {
     "sectionTitle": "Какво ти предлага твоят спътник",
@@ -175,8 +175,8 @@
     "unsubscribe": "Отписване",
     "unsubscribedTitle": "Отписан",
     "unsubscribedDesc": "Вече няма да получаваш ежедневни вдъхновения.",
-    "smsSwissOnly": "Swiss numbers only",
-    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
+    "smsSwissOnly": "Само за швейцарски номера",
+    "smsSwissOnlyDesc": "SMS е налично само за швейцарски номера (+41)."
   },
   "faq": {
     "badge": "Често задавани въпроси",
@@ -347,24 +347,24 @@
     "shareVia": "Сподели чрез",
     "copied": "Копирано! 📋",
     "copiedShort": "Копирано!",
-    "copiedDesc": "Текстът е копиран в клипборда. Споделете го сега в WhatsApp, Instagram или където пожелаете!",
+    "copiedDesc": "Текстът е копиран в клипборда. Споделете го в WhatsApp, Instagram или където пожелаете!",
     "copyLink": "Копирай текст",
-    "error": "Копирането не успя",
+    "error": "Копирането не бе успешно",
     "impulseTitle": "Вашият спътник – Импулс на деня",
     "chatTitle": "Вашият спътник – Мисъл на деня",
     "createImage": "Създай изображение ✨",
-    "generating": "Създаване...",
+    "generating": "Създаване…",
     "imageReady": "Вашето изображение е готово за споделяне!",
     "shareImage": "Сподели изображение",
-    "download": "Запази",
-    "imageError": "Създаването на изображение не успя",
+    "download": "Запазване",
+    "imageError": "Създаването на изображението не бе успешно",
     "imageErrorDesc": "Изображението не можа да бъде създадено. Моля, опитайте отново по-късно.",
     "imageSaved": "Текстът е копиран! 📋",
     "imageSavedDesc": "Запазете изображението и го споделете с копирания текст в Instagram, WhatsApp или където пожелаете!",
     "clipboardFallback": "Текстът е копиран — поставете го при публикуване!",
     "recommendedBy": "Препоръчано от {{church}}",
     "hashtagBible": "#Библия",
-    "hashtagImpulse": "#DailyImpulse"
+    "hashtagImpulse": "#ДневенИмпулс"
   },
   "darkMode": {
     "light": "Светъл режим",

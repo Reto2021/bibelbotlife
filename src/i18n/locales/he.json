@@ -37,8 +37,8 @@
     "playAudio": "האזן",
     "stopAudio": "עצור",
     "collapseLabel": "דחף היום",
-    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
-    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
+    "deepDivePrompt": "ההשראה היומית היא \"{{topic}}\" עם {{reference}}. הסבר את הקטע הזה: מי כתב אותו? באיזה מצב? מה קדם לו ומה בא אחריו? ומה המשמעות שלו לחיי היום?",
+    "explorePrompt": "קרא לי את הקטע המלא סביב {{reference}} והסבר את ההקשר. אני רוצה להבין את הסיפור שמאחוריו."
   },
   "features": {
     "sectionTitle": "מה המלווה שלך מציע",
@@ -141,14 +141,14 @@
     "firstNamePlaceholder": "לדוגמה, תומס",
     "firstNameHint": "כדי שנוכל לברך אותך באופן אישי.",
     "channelLabel": "כיצד תרצה לקבל את ההשראה?",
-    "push": "התראה",
+    "push": "התראות",
     "pushDesc": "התראת דפדפן",
     "telegram": "טלגרם",
     "telegramDesc": "הודעה דרך טלגרם",
     "sms": "SMS",
     "smsDesc": "הודעת טקסט לטלפון שלך",
     "phoneLabel": "מספר טלפון",
-    "phonePlaceholder": "+1 555 123 4567",
+    "phonePlaceholder": "+41 79 123 45 67",
     "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "לחץ על \"הירשם\" – תועבר לטלגרם. הפעל את המלווה שלך והקלד <strong>/daily</strong> כדי להפעיל את ההשראה היומית.",
     "pushHint": "לאחר לחיצה על \"הירשם\", הדפדפן שלך יבקש אישור להתראות. אנא אפשר זאת כדי לקבל את ההשראה.",
@@ -175,8 +175,8 @@
     "unsubscribe": "בטל מנוי",
     "unsubscribedTitle": "מנוי בוטל",
     "unsubscribedDesc": "לא תקבל עוד השראה יומית.",
-    "smsSwissOnly": "Swiss numbers only",
-    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
+    "smsSwissOnly": "מספרים שוויצריים בלבד",
+    "smsSwissOnlyDesc": "שירות SMS זמין רק למספרים שוויצריים (+41)."
   },
   "faq": {
     "badge": "שאלות נפוצות",
@@ -959,7 +959,7 @@
     "shareVia": "שתף באמצעות",
     "copied": "הועתק! 📋",
     "copiedShort": "הועתק!",
-    "copiedDesc": "הטקסט הועתק ללוח. שתף אותו ב-WhatsApp, Instagram או בכל מקום שתרצה!",
+    "copiedDesc": "הטקסט הועתק ללוח. שתף אותו בוואטסאפ, באינסטגרם או בכל מקום אחר שתרצה!",
     "copyLink": "העתק טקסט",
     "error": "ההעתקה נכשלה",
     "impulseTitle": "המלווה שלך – דחף היום",
@@ -970,13 +970,13 @@
     "shareImage": "שתף תמונה",
     "download": "שמור",
     "imageError": "יצירת התמונה נכשלה",
-    "imageErrorDesc": "התמונה לא יכלה להיווצר. אנא נסה שוב מאוחר יותר.",
+    "imageErrorDesc": "לא ניתן היה ליצור את התמונה. אנא נסה שוב מאוחר יותר.",
     "imageSaved": "הטקסט הועתק! 📋",
-    "imageSavedDesc": "שמור את התמונה ושתף אותה עם הטקסט שהועתק ב-Instagram, WhatsApp או בכל מקום שתרצה!",
+    "imageSavedDesc": "שמור את התמונה ושתף אותה עם הטקסט שהועתק באינסטגרם, בוואטסאפ או בכל מקום אחר שתרצה!",
     "clipboardFallback": "הטקסט הועתק — הדבק אותו בעת הפרסום!",
     "recommendedBy": "מומלץ על ידי {{church}}",
-    "hashtagBible": "#תנ״ך",
-    "hashtagImpulse": "#דחף_היום"
+    "hashtagBible": "#תנ\"ך",
+    "hashtagImpulse": "#השראה_יומית"
   },
   "chatHero": {
     "subtitle": "שאל את שאלתך – בפתיחות, בכנות, ללא צורך בהרשמה.",

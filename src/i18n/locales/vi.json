@@ -39,8 +39,8 @@
     "playAudio": "Nghe",
     "stopAudio": "Dừng",
     "collapseLabel": "Cảm hứng hôm nay",
-    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
-    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
+    "deepDivePrompt": "Lời Chúa mỗi ngày là \"{{topic}}\" với {{reference}}. Giải thích đoạn văn này: Ai đã viết nó? Trong hoàn cảnh nào? Điều gì đến trước và sau? Và nó có ý nghĩa gì đối với cuộc sống của tôi ngày hôm nay?",
+    "explorePrompt": "Đọc cho tôi đoạn văn đầy đủ xung quanh {{reference}} và giải thích ngữ cảnh. Tôi muốn hiểu câu chuyện đằng sau nó."
   },
   "features": {
     "sectionTitle": "Người bạn đồng hành mang đến cho bạn điều gì",
@@ -177,8 +177,8 @@
     "unsubscribe": "Hủy đăng ký",
     "unsubscribedTitle": "Đã hủy đăng ký",
     "unsubscribedDesc": "Bạn sẽ không nhận được nguồn cảm hứng hàng ngày nữa.",
-    "smsSwissOnly": "Swiss numbers only",
-    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
+    "smsSwissOnly": "Chỉ dành cho số điện thoại Thụy Sĩ",
+    "smsSwissOnlyDesc": "SMS chỉ khả dụng cho các số điện thoại Thụy Sĩ (+41)."
   },
   "faq": {
     "badge": "Những câu hỏi thường gặp",
@@ -349,9 +349,9 @@
     "shareVia": "Chia sẻ qua",
     "copied": "Đã sao chép! 📋",
     "copiedShort": "Đã sao chép!",
-    "copiedDesc": "Văn bản đã được sao chép vào bộ nhớ đệm. Chia sẻ nó ngay bây giờ trên WhatsApp, Instagram hoặc bất cứ nơi nào bạn muốn!",
+    "copiedDesc": "Văn bản đã được sao chép vào khay nhớ tạm. Chia sẻ nó trên WhatsApp, Instagram hoặc bất cứ nơi nào bạn muốn!",
     "copyLink": "Sao chép văn bản",
-    "error": "Sao chép thất bại",
+    "error": "Sao chép không thành công",
     "impulseTitle": "Người bạn đồng hành – Lời khuyên trong ngày",
     "chatTitle": "Người bạn đồng hành – Suy nghĩ trong ngày",
     "createImage": "Tạo hình ảnh ✨",
@@ -359,14 +359,14 @@
     "imageReady": "Hình ảnh của bạn đã sẵn sàng để chia sẻ!",
     "shareImage": "Chia sẻ hình ảnh",
     "download": "Lưu",
-    "imageError": "Tạo hình ảnh thất bại",
+    "imageError": "Tạo hình ảnh không thành công",
     "imageErrorDesc": "Không thể tạo hình ảnh. Vui lòng thử lại sau.",
     "imageSaved": "Đã sao chép văn bản! 📋",
-    "imageSavedDesc": "Lưu hình ảnh và chia sẻ nó với văn bản đã sao chép trên Instagram, WhatsApp hoặc bất cứ nơi nào bạn muốn!",
+    "imageSavedDesc": "Lưu hình ảnh và chia sẻ với văn bản đã sao chép trên Instagram, WhatsApp hoặc bất cứ nơi nào bạn muốn!",
     "clipboardFallback": "Đã sao chép văn bản — dán khi đăng bài!",
     "recommendedBy": "Được giới thiệu bởi {{church}}",
     "hashtagBible": "#KinhThánh",
-    "hashtagImpulse": "#DailyImpulse"
+    "hashtagImpulse": "#LờiChúaMỗiNgày"
   },
   "darkMode": {
     "light": "Chế độ sáng",
