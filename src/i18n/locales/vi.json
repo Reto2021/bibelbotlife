@@ -253,7 +253,7 @@
     "purposeHeading": "How your donation is used",
     "purposeItem1": "Development and programming",
     "purposeItem2": "Servers, hosting, and technical operations",
-    "purposeItem3": "Global distribution and translations in over 35 languages",
+    "purposeItem3": "Global distribution and translations in over 38 languages",
     "purposeItem4": "Community care and support",
     "purposeItem5": "Administration and organizational management",
     "purposeItem6": "Education and digital faith outreach"
@@ -1000,7 +1000,7 @@
   "meta": {
     "forChurchesDesc": "Người bạn đồng hành là đối tác cho cộng đồng của bạn: công tác thanh niên, lễ xưng tội, mục vụ và các nhóm học Kinh Thánh. Miễn phí đến Premium.",
     "forChurchesTitle": "Người bạn đồng hành dành cho Hội Thánh – Mục Vụ Kỹ Thuật Số & Trợ Giúp Kinh Thánh",
-    "homeDesc": "Người bạn đồng hành đồng hành cùng bạn với 5 bản dịch Kinh Thánh, phương pháp huấn luyện và mục vụ. Ẩn danh, miễn phí, bằng 36 ngôn ngữ.",
+    "homeDesc": "Người bạn đồng hành đồng hành cùng bạn với 5 bản dịch Kinh Thánh, phương pháp huấn luyện và mục vụ. Ẩn danh, miễn phí, bằng 38 ngôn ngữ.",
     "homeTitle": "Người bạn đồng hành – người bạn đồng hành Kinh Thánh cá nhân của bạn | Miễn phí & Ẩn danh",
     "loginDesc": "Đăng nhập vào người bạn đồng hành để chuẩn bị các nghi lễ cá nhân của bạn.",
     "loginTitle": "Đăng nhập – người bạn đồng hành"
@@ -1187,7 +1187,7 @@
     "faq2q": "Dữ liệu của tôi có được lưu trữ an toàn không?",
     "faq2a": "Có. Tất cả dữ liệu được mã hóa và lưu trữ tại Thụy Sĩ. Chỉ bạn mới có quyền truy cập vào nội dung của mình.",
     "faq3q": "Những ngôn ngữ nào được hỗ trợ?",
-    "faq3a": "Giao diện có sẵn bằng 36 ngôn ngữ. Văn bản có thể được tạo bằng bất kỳ ngôn ngữ nào.",
+    "faq3a": "Giao diện có sẵn bằng 38 ngôn ngữ. Văn bản có thể được tạo bằng bất kỳ ngôn ngữ nào.",
     "faq4q": "Tôi có thể sử dụng Chế độ Người điều khiển trên máy tính bảng không?",
     "faq4a": "Có! Toàn bộ ứng dụng được tối ưu hóa dưới dạng PWA cho thiết bị di động — hoàn hảo trên máy tính bảng tại bục giảng.",
     "faq5q": "Tôi có cần kỹ năng kỹ thuật không?",

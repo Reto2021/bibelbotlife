@@ -251,7 +251,7 @@
     "purposeHeading": "How your donation is used",
     "purposeItem1": "Development and programming",
     "purposeItem2": "Servers, hosting, and technical operations",
-    "purposeItem3": "Global distribution and translations in over 35 languages",
+    "purposeItem3": "Global distribution and translations in over 38 languages",
     "purposeItem4": "Community care and support",
     "purposeItem5": "Administration and organizational management",
     "purposeItem6": "Education and digital faith outreach"
@@ -1002,7 +1002,7 @@
   },
   "meta": {
     "homeTitle": "BibleBot.Life – თქვენი პირადი თანამგზავრი | ბიბლიის სიღრმით",
-    "homeDesc": "თქვენი პირადი თანამგზავრი — ბიბლიის სიღრმით, წინასწარი ცოდნის გარეშე. 5 თარგმანი, ქოუჩინგი, მღვდელთმსახურება. ანონიმური, უფასო, 36 ენა.",
+    "homeDesc": "თქვენი პირადი თანამგზავრი — ბიბლიის სიღრმით, წინასწარი ცოდნის გარეშე. 5 თარგმანი, ქოუჩინგი, მღვდელთმსახურება. ანონიმური, უფასო, 38 ენა.",
     "forChurchesTitle": "BibleBot.Life ეკლესიებისთვის – ციფრული მღვდელთმსახურება და ბიბლიის თანხლება",
     "forChurchesDesc": "BibleBot.Life, როგორც პარტნიორი თქვენი ეკლესიისთვის: ახალგაზრდული მუშაობა, კონფირმაცია, მღვდელთმსახურება და ბიბლიის წრეები. უფასოდან პრემიუმამდე.",
     "loginTitle": "შესვლა – BibleBot.Life",
@@ -1185,7 +1185,7 @@
     "faq2q": "უსაფრთხოდ ინახება თუ არა ჩემი მონაცემები?",
     "faq2a": "დიახ. ყველა მონაცემი დაშიფრულია და ინახება შვეიცარიაში. მხოლოდ თქვენ გაქვთ წვდომა თქვენს შინაარსზე.",
     "faq3q": "რა ენებია მხარდაჭერილი?",
-    "faq3a": "მომხმარებლის ინტერფეისი ხელმისაწვდომია 36 ენაზე. ტექსტების შექმნა შესაძლებელია ნებისმიერ ენაზე.",
+    "faq3a": "მომხმარებლის ინტერფეისი ხელმისაწვდომია 38 ენაზე. ტექსტების შექმნა შესაძლებელია ნებისმიერ ენაზე.",
     "faq4q": "შემიძლია თუ არა დირიჟორის რეჟიმის გამოყენება ტაბლეტზე?",
     "faq4a": "დიახ! მთელი აპლიკაცია ოპტიმიზებულია მობილურისთვის, როგორც PWA — იდეალურია ტაბლეტზე ტრიბუნასთან.",
     "faq5q": "მჭირდება თუ არა ტექნიკური ცოდნა?",
