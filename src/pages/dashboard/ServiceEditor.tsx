@@ -385,6 +385,58 @@ export default function ServiceEditor() {
             {sidebarOpen ? <PanelRightClose className="h-4 w-4 sm:mr-1" /> : <PanelRightOpen className="h-4 w-4 sm:mr-1" />}
             <span className="hidden sm:inline">Bibliothek</span>
           </Button>
+          {!isNew && (
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline" size="sm">
+                  <MoreVertical className="h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem onClick={async () => {
+                  try {
+                    const result = await duplicateService.mutateAsync(id!);
+                    toast.success("Gottesdienst kopiert");
+                    navigate(`/dashboard/editor/${result.id}`);
+                  } catch { toast.error("Fehler beim Kopieren"); }
+                }}>
+                  <Copy className="h-4 w-4 mr-2" /> Kopieren
+                </DropdownMenuItem>
+                <DropdownMenuSeparator />
+                {serviceStatus !== "published" && (
+                  <DropdownMenuItem onClick={async () => {
+                    await updateStatus.mutateAsync({ id: id!, status: "published" });
+                    setServiceStatus("published");
+                    toast.success("Veröffentlicht");
+                  }}>
+                    <Eye className="h-4 w-4 mr-2" /> Veröffentlichen
+                  </DropdownMenuItem>
+                )}
+                {serviceStatus !== "draft" && (
+                  <DropdownMenuItem onClick={async () => {
+                    await updateStatus.mutateAsync({ id: id!, status: "draft" });
+                    setServiceStatus("draft");
+                    toast.success("Auf Entwurf zurückgesetzt");
+                  }}>
+                    <FileEdit className="h-4 w-4 mr-2" /> Auf Entwurf setzen
+                  </DropdownMenuItem>
+                )}
+                {serviceStatus !== "archived" && (
+                  <DropdownMenuItem onClick={async () => {
+                    await updateStatus.mutateAsync({ id: id!, status: "archived" });
+                    setServiceStatus("archived");
+                    toast.success("Archiviert");
+                  }}>
+                    <Archive className="h-4 w-4 mr-2" /> Archivieren
+                  </DropdownMenuItem>
+                )}
+                <DropdownMenuSeparator />
+                <DropdownMenuItem className="text-destructive" onClick={() => setDeleteConfirmOpen(true)}>
+                  <Trash2 className="h-4 w-4 mr-2" /> Löschen
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          )}
         </div>
       </div>
 
