@@ -61,6 +61,12 @@ const Datenschutz = () => {
             <p className="text-muted-foreground mt-2">
               <strong>Server-Logdaten:</strong> Beim Besuch der Website werden technische Daten wie IP-Adresse, Browsertyp, Betriebssystem und Zugriffszeitpunkt kurzzeitig in Server-Logs erfasst. Diese Daten dienen ausschliesslich der technischen Sicherstellung des Betriebs und werden nicht mit Personen verknüpft.
             </p>
+            <p className="text-muted-foreground mt-2">
+              <strong>Lokaler Speicher (localStorage):</strong> Für die Funktionalität der App werden bestimmte Einstellungen lokal in Ihrem Browser gespeichert, z.&nbsp;B. Spracheinstellung, Dark-Mode-Präferenz, Chat-Verlauf, Senior-Modus und Gemeinde-Zuordnung. Diese Daten verlassen Ihren Browser nicht und werden nicht an Server übermittelt.
+            </p>
+            <p className="text-muted-foreground mt-2">
+              <strong>Anonymes Analytics:</strong> Wir erfassen anonymisierte Nutzungsdaten (Seitenaufrufe, Bildschirmgrösse, Referrer) mit einem eigenen System ohne Cookies und ohne personenbezogene Zuordnung. Eine Session-ID wird temporär für die Sitzungsdauer erzeugt und ist nicht mit Ihrer Person verknüpfbar.
+            </p>
           </section>
 
           <section>
@@ -94,18 +100,20 @@ const Datenschutz = () => {
               <li><strong>Lovable Cloud (Supabase):</strong> Hosting, Datenbank und Authentifizierung (Server in der EU/USA)</li>
               <li><strong>Lovable AI Gateway:</strong> Verarbeitung für Chat und Impulse</li>
               <li><strong>ElevenLabs:</strong> Sprachausgabe (Text-to-Speech) und Spracheingabe (Speech-to-Text)</li>
-              <li><strong>Resend:</strong> Versand von Transaktions-E-Mails (Bestätigungen, Passwort-Reset)</li>
+              <li><strong>Resend:</strong> Versand von Transaktions-E-Mails (Bestätigungen, Passwort-Reset, wöchentliche Berichte). E-Mail-Adressen werden ausschliesslich für den Versand verarbeitet und nicht zu Werbezwecken genutzt.</li>
               <li><strong>Telegram Bot API:</strong> Zustellung des täglichen Impulses an Telegram-Abonnenten</li>
+              <li><strong>GoHighLevel (GHL):</strong> CRM-System zur Verwaltung von Kontakten und Partnerschaften. Bei der Registrierung, dem Impuls-Abo oder einer Spende werden relevante Daten (z.&nbsp;B. E-Mail, Kanal, Betrag) an das CRM übermittelt, um den Kundenservice und die Partnerbetreuung zu gewährleisten.</li>
+              <li><strong>Stripe:</strong> Zahlungsabwicklung für Spenden und Gemeinde-Abonnements. Zahlungsdaten werden direkt von Stripe verarbeitet und nicht auf unseren Servern gespeichert.</li>
             </ul>
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold mb-2">7. Cookies & Tracking</h2>
+            <h2 className="text-xl font-semibold mb-2">7. Cookies & lokaler Speicher</h2>
             <p className="text-muted-foreground">
-              BibleBot.Life verwendet <strong>keine Tracking-Cookies</strong> und <strong>kein Google Analytics</strong>. Es werden lediglich technisch notwendige Daten im lokalen Speicher (localStorage) des Browsers abgelegt, z.&nbsp;B. für Spracheinstellungen, Dark-Mode-Präferenz und den lokalen Chat-Verlauf. Diese Daten verlassen Ihren Browser nicht.
+              BibleBot.Life verwendet <strong>keine Tracking-Cookies</strong> und <strong>kein Google Analytics</strong>. Es werden keine Cookies gesetzt. Ein Cookie-Banner ist daher nicht erforderlich.
             </p>
             <p className="text-muted-foreground mt-2">
-              Für die anonymisierte Nutzungsstatistik verwenden wir ein eigenes, datenschutzfreundliches Analytics-System ohne Cookies und ohne personenbezogene Zuordnung.
+              Technisch notwendige Daten werden im lokalen Speicher (localStorage) des Browsers abgelegt (siehe Abschnitt 3). Diese Daten verlassen Ihren Browser nicht und können jederzeit über die Browser-Einstellungen gelöscht werden.
             </p>
           </section>
 
