@@ -538,6 +538,40 @@ const EulogyWriter = () => {
           </CardContent>
         </Card>
 
+        {/* Resource Suggestions */}
+        {suggestedResources.length > 0 && (
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-base flex items-center gap-2">
+                <span className="bg-primary/10 text-primary rounded-full w-6 h-6 flex items-center justify-center text-sm">💡</span>
+                {t("eulogy.resourceSuggestions", "Passende Lieder, Gebete & Lesungen")}
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid gap-2 sm:grid-cols-2">
+                {suggestedResources.map((r) => (
+                  <div key={r.id} className="flex items-start gap-2 p-2.5 rounded-lg border hover:bg-muted/50 transition-colors">
+                    <div className="mt-0.5 text-primary">{resourceIcon(r.resource_type)}</div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm font-medium truncate">{r.title}</p>
+                      <div className="flex items-center gap-1 mt-0.5">
+                        {r.hymnal_ref && (
+                          <Badge variant="outline" className="text-xs font-mono">{r.hymnal_ref}</Badge>
+                        )}
+                        <span className="text-xs text-muted-foreground">{r.resource_type}</span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <p className="text-xs text-muted-foreground mt-3">
+                {t("eulogy.moreResources", "Weitere Ressourcen findest du in der")}{" "}
+                <Link to="/dashboard/resources" className="underline text-primary">{t("eulogy.library", "Bibliothek")}</Link>.
+              </p>
+            </CardContent>
+          </Card>
+        )}
+
         {/* Step 3: Generate */}
         <Card>
           <CardHeader>
