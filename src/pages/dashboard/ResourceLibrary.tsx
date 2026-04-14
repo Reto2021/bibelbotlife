@@ -121,6 +121,7 @@ export default function ResourceLibrary() {
   const filtered = useMemo(() => {
     const base = activeTab === "mine" ? myResources : activeTab === "system" ? systemResources : resources;
     return base.filter((r) => {
+      if (filterLanguage !== "all" && r.language !== filterLanguage) return false;
       if (filterType !== "all" && r.resource_type !== filterType) return false;
       if (filterTag !== "all" && !(r.tags ?? []).includes(filterTag)) return false;
       if (filterTradition !== "all" && r.tradition !== filterTradition) return false;
