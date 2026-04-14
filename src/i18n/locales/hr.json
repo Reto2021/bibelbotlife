@@ -37,8 +37,8 @@
     "playAudio": "Slušaj",
     "stopAudio": "Zaustavi",
     "collapseLabel": "Impuls dana",
-    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
-    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
+    "deepDivePrompt": "Dnevni impuls je \"{{topic}}\" s {{reference}}. Objasni ovaj odlomak: Tko ga je napisao? U kojoj situaciji? Što dolazi prije i poslije? I što to znači za moj život danas?",
+    "explorePrompt": "Pročitaj mi cijeli odlomak oko {{reference}} i objasni kontekst. Želim razumjeti priču iza toga."
   },
   "features": {
     "sectionTitle": "Što ti tvoj pratitelj nudi",
@@ -148,7 +148,7 @@
     "sms": "SMS",
     "smsDesc": "SMS na vaš mobitel",
     "phoneLabel": "Broj mobitela",
-    "phonePlaceholder": "+385 91 123 4567",
+    "phonePlaceholder": "+41 79 123 45 67",
     "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "Kliknite na «Prijavi se» – bit ćete preusmjereni na Telegram. Tamo pokrenite bota i napišite <strong>/daily</strong> kako biste aktivirali dnevni poticaj.",
     "pushHint": "Nakon klika na «Prijavi se», vaš preglednik će zatražiti dopuštenje za obavijesti. Molimo dopustite ih kako biste primili poticaj.",
@@ -175,8 +175,8 @@
     "unsubscribe": "Odjavi se",
     "unsubscribedTitle": "Odjavljeni ste",
     "unsubscribedDesc": "Više nećete primati dnevnu inspiraciju.",
-    "smsSwissOnly": "Swiss numbers only",
-    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
+    "smsSwissOnly": "Samo švicarski brojevi",
+    "smsSwissOnlyDesc": "SMS je dostupan samo za švicarske brojeve (+41)."
   },
   "faq": {
     "badge": "Česta pitanja",
@@ -347,7 +347,7 @@
     "shareVia": "Podijeli putem",
     "copied": "Kopirano! 📋",
     "copiedShort": "Kopirano!",
-    "copiedDesc": "Tekst je kopiran u međuspremnik. Podijelite ga sada na WhatsAppu, Instagramu ili gdje god želite!",
+    "copiedDesc": "Tekst kopiran u međuspremnik. Podijelite ga na WhatsAppu, Instagramu ili gdje god želite!",
     "copyLink": "Kopiraj tekst",
     "error": "Kopiranje nije uspjelo",
     "impulseTitle": "Vaš pratitelj – Dnevni poticaj",
@@ -358,13 +358,13 @@
     "shareImage": "Podijeli sliku",
     "download": "Spremi",
     "imageError": "Stvaranje slike nije uspjelo",
-    "imageErrorDesc": "Slika nije mogla biti stvorena. Pokušajte ponovno kasnije.",
+    "imageErrorDesc": "Slika se ne može stvoriti. Pokušajte ponovno kasnije.",
     "imageSaved": "Tekst kopiran! 📋",
     "imageSavedDesc": "Spremite sliku i podijelite je s kopiranim tekstom na Instagramu, WhatsAppu ili gdje god želite!",
     "clipboardFallback": "Tekst kopiran — zalijepite ga pri objavi!",
     "recommendedBy": "Preporučuje {{church}}",
     "hashtagBible": "#Biblija",
-    "hashtagImpulse": "#DailyImpulse"
+    "hashtagImpulse": "#DnevniImpuls"
   },
   "darkMode": {
     "light": "Svijetli način rada",

@@ -37,8 +37,8 @@
     "playAudio": "Kuuntele",
     "stopAudio": "Pysäytä",
     "collapseLabel": "Päivän impulssi",
-    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
-    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
+    "deepDivePrompt": "Päivän impulssi on \"{{topic}}\" kohdasta {{reference}}. Selitä tämä kohta: Kuka sen kirjoitti? Missä tilanteessa? Mitä tulee ennen ja jälkeen? Ja mitä se tarkoittaa elämälleni tänään?",
+    "explorePrompt": "Lue minulle koko kohta {{reference}} ympäriltä ja selitä konteksti. Haluan ymmärtää tarinan sen takana."
   },
   "features": {
     "sectionTitle": "Mitä kumppanisi tarjoaa sinulle",
@@ -175,8 +175,8 @@
     "unsubscribe": "Peruuta tilaus",
     "unsubscribedTitle": "Tilaus peruutettu",
     "unsubscribedDesc": "Et enää saa päivittäistä inspiraatiota.",
-    "smsSwissOnly": "Swiss numbers only",
-    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
+    "smsSwissOnly": "Vain Sveitsin numerot",
+    "smsSwissOnlyDesc": "SMS on saatavilla vain Sveitsin numeroille (+41)."
   },
   "faq": {
     "badge": "Usein kysytyt kysymykset",
@@ -347,7 +347,7 @@
     "shareVia": "Jaa kautta",
     "copied": "Kopioitu! 📋",
     "copiedShort": "Kopioitu!",
-    "copiedDesc": "Teksti kopioitu leikepöydälle. Jaa se nyt WhatsAppissa, Instagramissa tai missä haluat!",
+    "copiedDesc": "Teksti kopioitu leikepöydälle. Jaa se WhatsAppissa, Instagramissa tai missä haluat!",
     "copyLink": "Kopioi teksti",
     "error": "Kopiointi epäonnistui",
     "impulseTitle": "Kumppanisi – Päivän impulssi",
@@ -358,13 +358,13 @@
     "shareImage": "Jaa kuva",
     "download": "Tallenna",
     "imageError": "Kuvan luominen epäonnistui",
-    "imageErrorDesc": "Kuvaa ei voitu luoda. Yritä myöhemmin uudelleen.",
+    "imageErrorDesc": "Kuvaa ei voitu luoda. Yritä uudelleen myöhemmin.",
     "imageSaved": "Teksti kopioitu! 📋",
     "imageSavedDesc": "Tallenna kuva ja jaa se kopioidun tekstin kanssa Instagramissa, WhatsAppissa tai missä haluat!",
     "clipboardFallback": "Teksti kopioitu — liitä se julkaistaessa!",
     "recommendedBy": "Suosittelee {{church}}",
     "hashtagBible": "#Raamattu",
-    "hashtagImpulse": "#DailyImpulse"
+    "hashtagImpulse": "#PäivänImpulssi"
   },
   "darkMode": {
     "light": "Vaalea tila",

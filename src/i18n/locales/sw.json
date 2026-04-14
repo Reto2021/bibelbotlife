@@ -35,10 +35,10 @@
     "alreadySubscribed": "Tayari unapokea msukumo wa kila siku",
     "subscribeCta": "Pata msukumo huu kila siku?",
     "playAudio": "Sikiliza",
-    "stopAudio": "Acha",
+    "stopAudio": "Simamisha",
     "collapseLabel": "Msukumo wa leo",
-    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
-    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
+    "deepDivePrompt": "Msukumo wa kila siku ni \"{{topic}}\" na {{reference}}. Eleza kifungu hiki: Nani aliandika? Katika hali gani? Nini kinakuja kabla na baada? Na inamaanisha nini kwa maisha yangu leo?",
+    "explorePrompt": "Nisome kifungu kamili karibu na {{reference}} na ueleze muktadha. Nataka kuelewa hadithi iliyo nyuma yake."
   },
   "features": {
     "sectionTitle": "Mwenzako anakupa nini",
@@ -141,7 +141,7 @@
     "firstNamePlaceholder": "k.m. Thomas",
     "firstNameHint": "Ili tuweze kukusalimu kibinafsi.",
     "channelLabel": "Je, ungependa kupokea msukumo vipi?",
-    "push": "Push",
+    "push": "Sukuma",
     "pushDesc": "Arifa ya kivinjari",
     "telegram": "Telegram",
     "telegramDesc": "Ujumbe kupitia Telegram",
@@ -175,8 +175,8 @@
     "unsubscribe": "Acha Kujisajili",
     "unsubscribedTitle": "Umeondolewa kwenye orodha ya wanaopokea",
     "unsubscribedDesc": "Hutapokea tena msukumo wa kila siku.",
-    "smsSwissOnly": "Swiss numbers only",
-    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
+    "smsSwissOnly": "Namba za Uswisi pekee",
+    "smsSwissOnlyDesc": "SMS inapatikana tu kwa namba za Uswisi (+41)."
   },
   "faq": {
     "badge": "Maswali Yanayoulizwa Mara kwa Mara",
@@ -347,24 +347,24 @@
     "shareVia": "Shiriki kupitia",
     "copied": "Imenakiliwa! 📋",
     "copiedShort": "Imenakiliwa!",
-    "copiedDesc": "Maandishi yamenakiliwa kwenye ubao wa kunakili. Shiriki sasa kwenye WhatsApp, Instagram au popote unapotaka!",
+    "copiedDesc": "Maandishi yamenakiliwa kwenye ubao wa kunakili. Shiriki kwenye WhatsApp, Instagram au popote unapotaka!",
     "copyLink": "Nakili maandishi",
     "error": "Kunakili kumeshindwa",
     "impulseTitle": "Mwenza wako – Msukumo wa Siku",
     "chatTitle": "Mwenza wako – Wazo la Siku",
-    "createImage": "Tengeneza picha ✨",
-    "generating": "Inatengenezwa…",
+    "createImage": "Unda picha ✨",
+    "generating": "Inatengeneza…",
     "imageReady": "Picha yako iko tayari kushirikiwa!",
     "shareImage": "Shiriki picha",
     "download": "Hifadhi",
     "imageError": "Uundaji wa picha umeshindwa",
-    "imageErrorDesc": "Picha haikuweza kuundwa. Jaribu tena baadaye.",
+    "imageErrorDesc": "Picha haikuweza kuundwa. Tafadhali jaribu tena baadaye.",
     "imageSaved": "Maandishi yamenakiliwa! 📋",
     "imageSavedDesc": "Hifadhi picha na ushiriki na maandishi yaliyonakiliwa kwenye Instagram, WhatsApp au popote unapotaka!",
     "clipboardFallback": "Maandishi yamenakiliwa — bandika unapochapisha!",
     "recommendedBy": "Imependekezwa na {{church}}",
     "hashtagBible": "#Biblia",
-    "hashtagImpulse": "#DailyImpulse"
+    "hashtagImpulse": "#MsukumoWaKilaSiku"
   },
   "darkMode": {
     "light": "Hali Nyepesi",

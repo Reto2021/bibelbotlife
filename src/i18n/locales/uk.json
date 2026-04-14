@@ -37,8 +37,8 @@
     "playAudio": "Слухати",
     "stopAudio": "Зупинити",
     "collapseLabel": "Імпульс дня",
-    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
-    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
+    "deepDivePrompt": "Щоденний імпульс – це «{{topic}}» з {{reference}}. Поясніть цей уривок: Хто його написав? В якій ситуації? Що було до і після? І що це означає для мого життя сьогодні?",
+    "explorePrompt": "Прочитайте мені повний уривок навколо {{reference}} і поясніть контекст. Я хочу зрозуміти історію, що стоїть за цим."
   },
   "features": {
     "sectionTitle": "Що пропонує тобі твій супутник",
@@ -148,7 +148,7 @@
     "sms": "SMS",
     "smsDesc": "SMS на ваш телефон",
     "phoneLabel": "Номер телефону",
-    "phonePlaceholder": "+380 50 123 45 67",
+    "phonePlaceholder": "+41 79 123 45 67",
     "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "Натисніть «Підписатися» – вас буде перенаправлено до Telegram. Запустіть там бота та напишіть <strong>/daily</strong>, щоб активувати щоденний імпульс.",
     "pushHint": "Після натискання «Підписатися» ваш браузер запитає дозвіл на сповіщення. Будь ласка, дозвольте їх, щоб отримувати імпульс.",
@@ -175,8 +175,8 @@
     "unsubscribe": "Відписатися",
     "unsubscribedTitle": "Відписано",
     "unsubscribedDesc": "Ви більше не отримуватимете щоденне натхнення.",
-    "smsSwissOnly": "Swiss numbers only",
-    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
+    "smsSwissOnly": "Лише швейцарські номери",
+    "smsSwissOnlyDesc": "SMS доступне лише для швейцарських номерів (+41)."
   },
   "faq": {
     "badge": "Часті запитання",
@@ -347,7 +347,7 @@
     "shareVia": "Поділитися через",
     "copied": "Скопійовано! 📋",
     "copiedShort": "Скопійовано!",
-    "copiedDesc": "Текст скопійовано в буфер обміну. Поділіться ним зараз у WhatsApp, Instagram або де завгодно!",
+    "copiedDesc": "Текст скопійовано в буфер обміну. Поділіться ним у WhatsApp, Instagram або де завгодно!",
     "copyLink": "Скопіювати текст",
     "error": "Помилка копіювання",
     "impulseTitle": "Ваш супутник – Імпульс дня",
@@ -357,14 +357,14 @@
     "imageReady": "Ваше зображення готове до поширення!",
     "shareImage": "Поділитися зображенням",
     "download": "Зберегти",
-    "imageError": "Помилка створення зображення",
-    "imageErrorDesc": "Не вдалося створити зображення. Спробуйте пізніше.",
+    "imageError": "Не вдалося створити зображення",
+    "imageErrorDesc": "Не вдалося створити зображення. Будь ласка, спробуйте пізніше.",
     "imageSaved": "Текст скопійовано! 📋",
     "imageSavedDesc": "Збережіть зображення та поділіться ним зі скопійованим текстом в Instagram, WhatsApp або де завгодно!",
     "clipboardFallback": "Текст скопійовано — вставте при публікації!",
     "recommendedBy": "Рекомендовано {{church}}",
     "hashtagBible": "#Біблія",
-    "hashtagImpulse": "#DailyImpulse"
+    "hashtagImpulse": "#ЩоденнийІмпульс"
   },
   "darkMode": {
     "light": "Світлий режим",

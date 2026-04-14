@@ -35,10 +35,10 @@
     "subscribeCta": "გსურთ ამ შთაგონების ყოველდღიურად მიღება?",
     "alreadySubscribed": "თქვენ იღებთ ყოველდღიურ შთაგონებას",
     "playAudio": "წაიკითხე ხმამაღლა",
-    "stopAudio": "შეაჩერე",
+    "stopAudio": "შეჩერება",
     "collapseLabel": "დღის იმპულსი",
-    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
-    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
+    "deepDivePrompt": "ყოველდღიური იმპულსი არის „{{topic}}“ {{reference}}-ით. ამიხსენი ეს პასაჟი: ვინ დაწერა? რა სიტუაციაში? რა მოდის წინ და რა მოდის შემდეგ? და რას ნიშნავს ეს ჩემი ცხოვრებისთვის დღეს?",
+    "explorePrompt": "წამიკითხე სრული პასაჟი {{reference}}-ის გარშემო და ამიხსენი კონტექსტი. მინდა გავიგო ამბავი მის უკან."
   },
   "features": {
     "sectionTitle": "ასე გეხმარებათ თქვენი თანამგზავრი",
@@ -141,7 +141,7 @@
     "firstNamePlaceholder": "მაგ. თომა",
     "firstNameHint": "რათა პირადად მოგესალმოთ.",
     "channelLabel": "როგორ გსურთ იმპულსის მიღება?",
-    "push": "შეტყობინება",
+    "push": "Push",
     "pushDesc": "მიიღეთ პირდაპირ ბრაუზერში",
     "telegram": "Telegram",
     "telegramDesc": "შეტყობინება Telegram-ის საშუალებით",
@@ -175,8 +175,8 @@
     "unsubscribe": "გამოწერის გაუქმება",
     "unsubscribedTitle": "გამოწერის გაუქმება",
     "unsubscribedDesc": "თქვენ აღარ მიიღებთ ყოველდღიურ შთაგონებას.",
-    "smsSwissOnly": "Swiss numbers only",
-    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
+    "smsSwissOnly": "მხოლოდ შვეიცარიული ნომრები",
+    "smsSwissOnlyDesc": "SMS ხელმისაწვდომია მხოლოდ შვეიცარიული ნომრებისთვის (+41)."
   },
   "faq": {
     "badge": "ხშირად დასმული კითხვები",
@@ -352,15 +352,15 @@
     "shareVia": "გაზიარება",
     "copied": "კოპირებულია! 📋",
     "copiedShort": "კოპირებულია!",
-    "copiedDesc": "ტექსტი კოპირებულია ბუფერში. გააზიარეთ ახლა WhatsApp-ზე, Instagram-ზე ან სადაც გსურთ!",
+    "copiedDesc": "ტექსტი კოპირებულია ბუფერში. გააზიარეთ WhatsApp-ზე, Instagram-ზე ან სადაც გსურთ!",
     "copyLink": "ტექსტის კოპირება",
     "error": "კოპირება ვერ მოხერხდა",
     "impulseTitle": "BibleBot – დღის იმპულსი",
     "chatTitle": "BibleBot – დღის აზრი",
     "createImage": "სურათის შექმნა ✨",
     "generating": "იქმნება…",
-    "imageReady": "თქვენი სურათი მზად არის გასაზიარებლად!",
-    "shareImage": "სურათის გაზიარება",
+    "imageReady": "თქვენი სურათი მზადაა გასაზიარებლად!",
+    "shareImage": "გააზიარე სურათი",
     "download": "შენახვა",
     "imageError": "სურათის შექმნა ვერ მოხერხდა",
     "imageErrorDesc": "სურათის შექმნა ვერ მოხერხდა. გთხოვთ, სცადოთ მოგვიანებით.",
@@ -368,7 +368,7 @@
     "imageSavedDesc": "შეინახეთ სურათი და გააზიარეთ კოპირებული ტექსტით Instagram-ზე, WhatsApp-ზე ან სადაც გსურთ!",
     "clipboardFallback": "ტექსტი კოპირებულია — ჩასვით პოსტისას!",
     "recommendedBy": "რეკომენდებულია {{church}}-ის მიერ",
-    "hashtagBible": "#ბიბლია",
+    "hashtagBible": "#Bible",
     "hashtagImpulse": "#DailyImpulse"
   },
   "darkMode": {

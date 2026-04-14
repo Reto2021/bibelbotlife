@@ -37,8 +37,8 @@
     "playAudio": "듣기",
     "stopAudio": "정지",
     "collapseLabel": "오늘의 영감",
-    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
-    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
+    "deepDivePrompt": "오늘의 말씀은 \"{{topic}}\"이며 {{reference}}입니다. 이 구절을 설명해 주세요: 누가 썼나요? 어떤 상황에서요? 앞뒤에는 무엇이 나오나요? 그리고 오늘날 내 삶에 어떤 의미가 있나요?",
+    "explorePrompt": "{{reference}} 주변의 전체 구절을 읽어주고 맥락을 설명해 주세요. 그 뒤에 숨겨진 이야기를 이해하고 싶습니다."
   },
   "features": {
     "sectionTitle": "당신의 동반자가 제공하는 것",
@@ -144,7 +144,7 @@
     "push": "푸시",
     "pushDesc": "브라우저 알림",
     "telegram": "텔레그램",
-    "telegramDesc": "텔레그램을 통한 메시지",
+    "telegramDesc": "텔레그램으로 메시지 보내기",
     "sms": "SMS",
     "smsDesc": "휴대폰으로 SMS",
     "phoneLabel": "휴대폰 번호",
@@ -175,8 +175,8 @@
     "unsubscribe": "구독 취소",
     "unsubscribedTitle": "구독 취소됨",
     "unsubscribedDesc": "더 이상 매일 영감을 받지 못할 것입니다.",
-    "smsSwissOnly": "Swiss numbers only",
-    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
+    "smsSwissOnly": "스위스 번호만 해당",
+    "smsSwissOnlyDesc": "SMS는 스위스 번호(+41)만 사용할 수 있습니다."
   },
   "faq": {
     "badge": "자주 묻는 질문",
@@ -345,26 +345,26 @@
   "share": {
     "label": "공유",
     "shareVia": "공유 방법",
-    "copied": "복사됨! 📋",
+    "copied": "복사되었습니다! 📋",
     "copiedShort": "복사됨!",
-    "copiedDesc": "텍스트가 클립보드에 복사되었습니다. 지금 WhatsApp, Instagram 또는 원하는 곳에 공유하세요!",
+    "copiedDesc": "텍스트가 클립보드에 복사되었습니다. WhatsApp, Instagram 또는 원하는 곳에 공유하세요!",
     "copyLink": "텍스트 복사",
     "error": "복사 실패",
     "impulseTitle": "당신의 동반자 – 오늘의 영감",
     "chatTitle": "당신의 동반자 – 오늘의 생각",
-    "createImage": "이미지 만들기 ✨",
+    "createImage": "이미지 생성 ✨",
     "generating": "생성 중…",
-    "imageReady": "이미지가 공유할 준비가 되었습니다!",
+    "imageReady": "이미지를 공유할 준비가 되었습니다!",
     "shareImage": "이미지 공유",
     "download": "저장",
     "imageError": "이미지 생성 실패",
     "imageErrorDesc": "이미지를 생성할 수 없습니다. 나중에 다시 시도해 주세요.",
-    "imageSaved": "텍스트 복사됨! 📋",
+    "imageSaved": "텍스트가 복사되었습니다! 📋",
     "imageSavedDesc": "이미지를 저장하고 복사된 텍스트와 함께 Instagram, WhatsApp 또는 원하는 곳에 공유하세요!",
     "clipboardFallback": "텍스트가 복사되었습니다 — 게시할 때 붙여넣으세요!",
     "recommendedBy": "{{church}} 추천",
     "hashtagBible": "#성경",
-    "hashtagImpulse": "#오늘의영감"
+    "hashtagImpulse": "#오늘의말씀"
   },
   "darkMode": {
     "light": "밝은 모드",

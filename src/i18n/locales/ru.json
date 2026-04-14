@@ -37,8 +37,8 @@
     "playAudio": "Слушать",
     "stopAudio": "Остановить",
     "collapseLabel": "Импульс дня",
-    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
-    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
+    "deepDivePrompt": "Ежедневный импульс — «{{topic}}» с {{reference}}. Объясните этот отрывок: Кто его написал? В какой ситуации? Что было до и после? И что это значит для моей жизни сегодня?",
+    "explorePrompt": "Прочитайте мне полный отрывок вокруг {{reference}} и объясните контекст. Я хочу понять историю, стоящую за этим."
   },
   "features": {
     "sectionTitle": "Что предлагает тебе твой спутник",
@@ -175,8 +175,8 @@
     "unsubscribe": "Отменить подписку",
     "unsubscribedTitle": "Подписка отменена",
     "unsubscribedDesc": "Вы больше не будете получать ежедневные вдохновения.",
-    "smsSwissOnly": "Swiss numbers only",
-    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
+    "smsSwissOnly": "Только для швейцарских номеров",
+    "smsSwissOnlyDesc": "SMS доступно только для швейцарских номеров (+41)."
   },
   "faq": {
     "badge": "Часто задаваемые вопросы",
@@ -347,24 +347,24 @@
     "shareVia": "Поделиться через",
     "copied": "Скопировано! 📋",
     "copiedShort": "Скопировано!",
-    "copiedDesc": "Текст скопирован в буфер обмена. Поделитесь им сейчас в WhatsApp, Instagram или где угодно!",
+    "copiedDesc": "Текст скопирован в буфер обмена. Поделитесь им в WhatsApp, Instagram или где угодно!",
     "copyLink": "Скопировать текст",
     "error": "Ошибка копирования",
     "impulseTitle": "Ваш спутник – Импульс дня",
     "chatTitle": "Ваш спутник – Мысль дня",
     "createImage": "Создать изображение ✨",
-    "generating": "Создается…",
+    "generating": "Создание…",
     "imageReady": "Ваше изображение готово к публикации!",
     "shareImage": "Поделиться изображением",
     "download": "Сохранить",
     "imageError": "Ошибка создания изображения",
-    "imageErrorDesc": "Изображение не удалось создать. Пожалуйста, попробуйте еще раз позже.",
+    "imageErrorDesc": "Не удалось создать изображение. Пожалуйста, попробуйте еще раз позже.",
     "imageSaved": "Текст скопирован! 📋",
     "imageSavedDesc": "Сохраните изображение и поделитесь им с скопированным текстом в Instagram, WhatsApp или где угодно!",
     "clipboardFallback": "Текст скопирован — вставьте при публикации!",
     "recommendedBy": "Рекомендовано {{church}}",
     "hashtagBible": "#Библия",
-    "hashtagImpulse": "#ИмпульсДня"
+    "hashtagImpulse": "#ЕжедневныйИмпульс"
   },
   "darkMode": {
     "light": "Светлый режим",

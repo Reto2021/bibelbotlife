@@ -35,10 +35,10 @@
     "alreadySubscribed": "Már kapod a napi inspirációt",
     "subscribeCta": "Szeretnéd megkapni ezt az inspirációt naponta?",
     "playAudio": "Hallgat",
-    "stopAudio": "Leállít",
+    "stopAudio": "Leállítás",
     "collapseLabel": "Napi impulzus",
-    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
-    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
+    "deepDivePrompt": "A napi impulzus „{{topic}}” a(z) {{reference}} résszel. Magyarázza el ezt a szakaszt: Ki írta? Milyen helyzetben? Mi jön előtte és utána? És mit jelent ez az életemre nézve ma?",
+    "explorePrompt": "Olvassa fel nekem a teljes szakaszt a(z) {{reference}} körül, és magyarázza el a kontextust. Szeretném megérteni a mögötte rejlő történetet."
   },
   "features": {
     "sectionTitle": "Amit a társad kínál neked",
@@ -148,7 +148,7 @@
     "sms": "SMS",
     "smsDesc": "SMS a telefonjára",
     "phoneLabel": "Telefonszám",
-    "phonePlaceholder": "+36 20 123 4567",
+    "phonePlaceholder": "+41 79 123 45 67",
     "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "Kattintson a „Feliratkozás” gombra – átirányítjuk a Telegramra. Indítsa el ott a botot, és írja be a <strong>/daily</strong> parancsot a napi impulzus aktiválásához.",
     "pushHint": "A „Feliratkozás” gombra kattintás után a böngészője engedélyt kér az értesítésekhez. Kérjük, engedélyezze azokat az impulzus fogadásához.",
@@ -175,8 +175,8 @@
     "unsubscribe": "Leiratkozás",
     "unsubscribedTitle": "Leiratkozva",
     "unsubscribedDesc": "Nem fogsz több napi inspirációt kapni.",
-    "smsSwissOnly": "Swiss numbers only",
-    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
+    "smsSwissOnly": "Csak svájci számok",
+    "smsSwissOnlyDesc": "Az SMS csak svájci számok (+41) esetén érhető el."
   },
   "faq": {
     "badge": "Gyakran Ismételt Kérdések",
@@ -347,24 +347,24 @@
     "shareVia": "Megosztás ezen keresztül",
     "copied": "Másolva! 📋",
     "copiedShort": "Másolva!",
-    "copiedDesc": "A szöveg a vágólapra másolva. Most oszd meg WhatsAppon, Instagramon vagy ahol szeretnéd!",
+    "copiedDesc": "A szöveg a vágólapra másolva. Ossza meg WhatsAppon, Instagramon vagy bárhol, ahol szeretné!",
     "copyLink": "Szöveg másolása",
-    "error": "Másolás sikertelen",
+    "error": "A másolás sikertelen",
     "impulseTitle": "Társad – A nap impulzusa",
     "chatTitle": "Társad – A nap gondolata",
     "createImage": "Kép létrehozása ✨",
-    "generating": "Létrehozás folyamatban…",
-    "imageReady": "A képed készen áll a megosztásra!",
+    "generating": "Létrehozás…",
+    "imageReady": "A kép készen áll a megosztásra!",
     "shareImage": "Kép megosztása",
     "download": "Mentés",
-    "imageError": "Kép létrehozása sikertelen",
-    "imageErrorDesc": "A kép nem hozható létre. Kérjük, próbálja meg később.",
+    "imageError": "A kép létrehozása sikertelen",
+    "imageErrorDesc": "A kép nem hozható létre. Kérjük, próbálja meg újra később.",
     "imageSaved": "Szöveg másolva! 📋",
-    "imageSavedDesc": "Mentse el a képet, és ossza meg a másolt szöveggel Instagramon, WhatsAppon vagy ahol szeretné!",
+    "imageSavedDesc": "Mentse el a képet, és ossza meg a másolt szöveggel Instagramon, WhatsAppon vagy bárhol, ahol szeretné!",
     "clipboardFallback": "Szöveg másolva — illeszd be posztoláskor!",
     "recommendedBy": "Ajánlja: {{church}}",
     "hashtagBible": "#Biblia",
-    "hashtagImpulse": "#DailyImpulse"
+    "hashtagImpulse": "#NapiImpulzus"
   },
   "darkMode": {
     "light": "Világos mód",

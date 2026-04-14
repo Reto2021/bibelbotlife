@@ -37,8 +37,8 @@
     "playAudio": "Les høyt",
     "stopAudio": "Stopp",
     "collapseLabel": "Daglig impuls",
-    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
-    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
+    "deepDivePrompt": "Dagens impuls er «{{topic}}» med {{reference}}. Forklar denne passasjen: Hvem skrev den? I hvilken situasjon? Hva kommer før og etter? Og hva betyr det for mitt liv i dag?",
+    "explorePrompt": "Les meg hele passasjen rundt {{reference}} og forklar konteksten. Jeg vil forstå historien bak den."
   },
   "features": {
     "sectionTitle": "Slik støtter din følgesvenn deg",
@@ -141,14 +141,14 @@
     "firstNamePlaceholder": "f.eks. Thomas",
     "firstNameHint": "Slik at vi kan hilse deg personlig.",
     "channelLabel": "Hvordan ønsker du å motta impulsen?",
-    "push": "Varsling",
+    "push": "Push",
     "pushDesc": "Motta direkte i nettleseren",
     "telegram": "Telegram",
     "telegramDesc": "Melding via Telegram",
     "sms": "SMS",
     "smsDesc": "SMS til din mobil",
     "phoneLabel": "Mobilnummer",
-    "phonePlaceholder": "+47 912 34 567",
+    "phonePlaceholder": "+41 79 123 45 67",
     "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "Klikk på «Meld deg på» – du blir videresendt til Telegram. Start din følgesvenn der og skriv <strong>/daily</strong> for å aktivere den daglige impulsen.",
     "pushHint": "Etter å ha klikket på «Meld deg på» vil nettleseren din be om tillatelse. Vennligst tillat varsler for å motta impulsen.",
@@ -175,8 +175,8 @@
     "unsubscribe": "Avslutt abonnement",
     "unsubscribedTitle": "Avmeldt",
     "unsubscribedDesc": "Du mottar ikke lenger daglig inspirasjon.",
-    "smsSwissOnly": "Swiss numbers only",
-    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
+    "smsSwissOnly": "Kun sveitsiske numre",
+    "smsSwissOnlyDesc": "SMS er kun tilgjengelig for sveitsiske numre (+41)."
   },
   "faq": {
     "badge": "Ofte stilte spørsmål",
@@ -350,26 +350,26 @@
   "share": {
     "label": "Del",
     "shareVia": "Del via",
-    "copied": "Kopiert!",
-    "copiedShort": "Kopiert",
-    "copiedDesc": "Teksten er kopiert til utklippstavlen. Del den nå på WhatsApp, Instagram eller hvor du vil!",
+    "copied": "Kopiert! 📋",
+    "copiedShort": "Kopiert!",
+    "copiedDesc": "Tekst kopiert til utklippstavlen. Del den på WhatsApp, Instagram eller hvor du vil!",
     "copyLink": "Kopier tekst",
     "error": "Kopiering mislyktes",
     "impulseTitle": "BibleBot – Dagens impuls",
     "chatTitle": "BibleBot – Dagens tanke",
     "createImage": "Lag bilde ✨",
-    "generating": "Genererer…",
+    "generating": "Oppretter…",
     "imageReady": "Bildet ditt er klart til å deles!",
     "shareImage": "Del bilde",
     "download": "Lagre",
-    "imageError": "Bildegenerering mislyktes",
-    "imageErrorDesc": "Bildet kunne ikke genereres. Prøv igjen senere.",
+    "imageError": "Bildeoppretting mislyktes",
+    "imageErrorDesc": "Bildet kunne ikke opprettes. Vennligst prøv igjen senere.",
     "imageSaved": "Tekst kopiert! 📋",
     "imageSavedDesc": "Lagre bildet og del det med den kopierte teksten på Instagram, WhatsApp eller hvor du vil!",
     "clipboardFallback": "Tekst kopiert – lim den inn når du poster!",
     "recommendedBy": "Anbefalt av {{church}}",
-    "hashtagBible": "#Bibel",
-    "hashtagImpulse": "#DagligImpuls"
+    "hashtagBible": "#Bibelen",
+    "hashtagImpulse": "#DagensImpuls"
   },
   "darkMode": {
     "light": "Lys modus",

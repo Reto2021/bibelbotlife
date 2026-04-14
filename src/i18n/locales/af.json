@@ -37,8 +37,8 @@
     "playAudio": "Lees voor",
     "stopAudio": "Stop",
     "collapseLabel": "Daaglikse impuls",
-    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
-    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
+    "deepDivePrompt": "Die daaglikse impuls is \"{{topic}}\" met {{reference}}. Verduidelik hierdie gedeelte: Wie het dit geskryf? In watter situasie? Wat kom voor en na? En wat beteken dit vir my lewe vandag?",
+    "explorePrompt": "Lees vir my die volledige gedeelte rondom {{reference}} en verduidelik die konteks. Ek wil die storie daaragter verstaan."
   },
   "features": {
     "sectionTitle": "Hoe jou metgesel jou ondersteun",
@@ -141,7 +141,7 @@
     "firstNamePlaceholder": "bv. Thomas",
     "firstNameHint": "Sodat ons jou persoonlik kan groet.",
     "channelLabel": "Hoe wil jy die impuls ontvang?",
-    "push": "Kennisgewing",
+    "push": "Stootkennisgewing",
     "pushDesc": "Direk in die blaaier ontvang",
     "telegram": "Telegram",
     "telegramDesc": "Boodskap via Telegram",
@@ -175,8 +175,8 @@
     "unsubscribe": "Kanselleer intekening",
     "unsubscribedTitle": "Uitgeteken",
     "unsubscribedDesc": "Jy sal nie meer daaglikse inspirasie ontvang nie.",
-    "smsSwissOnly": "Swiss numbers only",
-    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
+    "smsSwissOnly": "Slegs Switserse nommers",
+    "smsSwissOnlyDesc": "SMS is slegs beskikbaar vir Switserse nommers (+41)."
   },
   "faq": {
     "badge": "Gereelde vrae",
@@ -352,24 +352,24 @@
     "shareVia": "Deel via",
     "copied": "Gekopieer! 📋",
     "copiedShort": "Gekopieer!",
-    "copiedDesc": "Teks is na die knipbord gekopieer. Deel dit nou op WhatsApp, Instagram of waar jy wil!",
+    "copiedDesc": "Teks na knipbord gekopieer. Deel dit op WhatsApp, Instagram of waar jy ook al wil!",
     "copyLink": "Kopieer teks",
     "error": "Kopiëring het misluk",
     "impulseTitle": "BibleBot – Impuls van die dag",
     "chatTitle": "BibleBot – Gedagte van die dag",
     "createImage": "Skep prent ✨",
-    "generating": "Word geskep…",
+    "generating": "Besig om te skep…",
     "imageReady": "Jou prent is gereed om te deel!",
     "shareImage": "Deel prent",
     "download": "Stoor",
     "imageError": "Prentskepping het misluk",
     "imageErrorDesc": "Die prent kon nie geskep word nie. Probeer asseblief later weer.",
     "imageSaved": "Teks gekopieer! 📋",
-    "imageSavedDesc": "Stoor die prent en deel dit met die gekopieerde teks op Instagram, WhatsApp of waar jy wil!",
+    "imageSavedDesc": "Stoor die prent en deel dit met die gekopieerde teks op Instagram, WhatsApp of waar jy ook al wil!",
     "clipboardFallback": "Teks gekopieer — plak dit wanneer jy plaas!",
     "recommendedBy": "Aanbeveel deur {{church}}",
     "hashtagBible": "#Bybel",
-    "hashtagImpulse": "#DailyImpulse"
+    "hashtagImpulse": "#DaaglikseImpuls"
   },
   "darkMode": {
     "light": "Ligte modus",

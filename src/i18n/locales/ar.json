@@ -35,10 +35,10 @@
     "subscribeCta": "هل تريد الحصول على هذا الإلهام يوميًا؟",
     "alreadySubscribed": "أنت تتلقى الإلهام اليومي",
     "playAudio": "قراءة بصوت عالٍ",
-    "stopAudio": "توقف",
+    "stopAudio": "إيقاف",
     "collapseLabel": "دافع اليوم",
-    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
-    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
+    "deepDivePrompt": "الدافع اليومي هو \"{{topic}}\" مع {{reference}}. اشرح هذا المقطع: من كتبه؟ في أي موقف؟ ماذا يأتي قبله وبعده؟ وماذا يعني لحياتي اليوم؟",
+    "explorePrompt": "اقرأ لي المقطع الكامل حول {{reference}} واشرح السياق. أريد أن أفهم القصة وراءه."
   },
   "features": {
     "sectionTitle": "هكذا يدعمك رفيقك",
@@ -141,7 +141,7 @@
     "firstNamePlaceholder": "مثال: توماس",
     "firstNameHint": "حتى نتمكن من تحيتك شخصيًا.",
     "channelLabel": "كيف ترغب في تلقي الإلهام؟",
-    "push": "إشعار",
+    "push": "إشعارات",
     "pushDesc": "تلقيه مباشرة في المتصفح",
     "telegram": "Telegram",
     "telegramDesc": "رسالة عبر Telegram",
@@ -175,8 +175,8 @@
     "unsubscribe": "إلغاء الاشتراك",
     "unsubscribedTitle": "تم إلغاء الاشتراك",
     "unsubscribedDesc": "لن تتلقى المزيد من الإلهام اليومي.",
-    "smsSwissOnly": "Swiss numbers only",
-    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
+    "smsSwissOnly": "للأرقام السويسرية فقط",
+    "smsSwissOnlyDesc": "الرسائل النصية القصيرة متاحة فقط للأرقام السويسرية (+41)."
   },
   "faq": {
     "badge": "أسئلة متكررة",
@@ -349,27 +349,27 @@
   },
   "share": {
     "label": "مشاركة",
-    "shareVia": "شارك عبر",
+    "shareVia": "مشاركة عبر",
     "copied": "تم النسخ! 📋",
     "copiedShort": "تم النسخ!",
-    "copiedDesc": "تم نسخ النص إلى الحافظة. شاركه الآن على WhatsApp، Instagram أو حيثما تريد!",
-    "copyLink": "انسخ النص",
+    "copiedDesc": "تم نسخ النص إلى الحافظة. شاركه على WhatsApp أو Instagram أو أينما تريد!",
+    "copyLink": "نسخ النص",
     "error": "فشل النسخ",
     "impulseTitle": "BibleBot – إلهام اليوم",
     "chatTitle": "BibleBot – فكرة اليوم",
     "createImage": "إنشاء صورة ✨",
     "generating": "جارٍ الإنشاء…",
     "imageReady": "صورتك جاهزة للمشاركة!",
-    "shareImage": "شارك الصورة",
+    "shareImage": "مشاركة الصورة",
     "download": "حفظ",
     "imageError": "فشل إنشاء الصورة",
     "imageErrorDesc": "تعذر إنشاء الصورة. يرجى المحاولة مرة أخرى لاحقًا.",
     "imageSaved": "تم نسخ النص! 📋",
-    "imageSavedDesc": "احفظ الصورة وشاركها مع النص المنسوخ على Instagram، WhatsApp أو حيثما تريد!",
+    "imageSavedDesc": "احفظ الصورة وشاركها مع النص المنسوخ على Instagram أو WhatsApp أو أينما تريد!",
     "clipboardFallback": "تم نسخ النص — الصقه عند النشر!",
     "recommendedBy": "موصى به من قبل {{church}}",
     "hashtagBible": "#الكتاب_المقدس",
-    "hashtagImpulse": "#دافع_اليوم"
+    "hashtagImpulse": "#الدافع_اليومي"
   },
   "darkMode": {
     "light": "الوضع الفاتح",

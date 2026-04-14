@@ -37,8 +37,8 @@
     "playAudio": "Počúvať",
     "stopAudio": "Zastaviť",
     "collapseLabel": "Impulz dňa",
-    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
-    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
+    "deepDivePrompt": "Denný impulz je „{{topic}}“ s {{reference}}. Vysvetlite tento úryvok: Kto ho napísal? V akej situácii? Čo predchádza a nasleduje? A čo to znamená pre môj život dnes?",
+    "explorePrompt": "Prečítajte mi celý úryvok okolo {{reference}} a vysvetlite kontext. Chcem pochopiť príbeh, ktorý sa za tým skrýva."
   },
   "features": {
     "sectionTitle": "Čo ti tvoj sprievodca ponúka",
@@ -148,7 +148,7 @@
     "sms": "SMS",
     "smsDesc": "SMS na váš mobil",
     "phoneLabel": "Telefónne číslo",
-    "phonePlaceholder": "+421 9xx xxx xxx",
+    "phonePlaceholder": "+41 79 123 45 67",
     "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "Kliknite na „Prihlásiť sa“ – budete presmerovaní na Telegram. Tam spustite bota a napíšte <strong>/daily</strong>, aby ste aktivovali denný impulz.",
     "pushHint": "Po kliknutí na „Prihlásiť sa“ vás prehliadač požiada o povolenie na upozornenia. Prosím, povoľte ich, aby ste dostávali impulz.",
@@ -175,8 +175,8 @@
     "unsubscribe": "Zrušiť odber",
     "unsubscribedTitle": "Odhlásené",
     "unsubscribedDesc": "Už nebudete dostávať dennú inšpiráciu.",
-    "smsSwissOnly": "Swiss numbers only",
-    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
+    "smsSwissOnly": "Len švajčiarske čísla",
+    "smsSwissOnlyDesc": "SMS je k dispozícii len pre švajčiarske čísla (+41)."
   },
   "faq": {
     "badge": "Často kladené otázky",
@@ -347,24 +347,24 @@
     "shareVia": "Zdieľať cez",
     "copied": "Skopírované! 📋",
     "copiedShort": "Skopírované!",
-    "copiedDesc": "Text bol skopírovaný do schránky. Zdieľajte ho teraz na WhatsApp, Instagram alebo kdekoľvek chcete!",
+    "copiedDesc": "Text skopírovaný do schránky. Zdieľajte ho na WhatsAppe, Instagrame alebo kdekoľvek sa vám páči!",
     "copyLink": "Kopírovať text",
     "error": "Kopírovanie zlyhalo",
     "impulseTitle": "Váš sprievodca – Impulz dňa",
     "chatTitle": "Váš sprievodca – Myšlienka dňa",
     "createImage": "Vytvoriť obrázok ✨",
-    "generating": "Generuje sa…",
+    "generating": "Vytvára sa…",
     "imageReady": "Váš obrázok je pripravený na zdieľanie!",
     "shareImage": "Zdieľať obrázok",
     "download": "Uložiť",
     "imageError": "Vytvorenie obrázka zlyhalo",
-    "imageErrorDesc": "Obrázok sa nepodarilo vytvoriť. Skúste to neskôr znova.",
+    "imageErrorDesc": "Obrázok sa nepodarilo vytvoriť. Skúste to prosím neskôr.",
     "imageSaved": "Text skopírovaný! 📋",
-    "imageSavedDesc": "Uložte obrázok a zdieľajte ho so skopírovaným textom na Instagrame, WhatsApp alebo kdekoľvek chcete!",
+    "imageSavedDesc": "Uložte si obrázok a zdieľajte ho so skopírovaným textom na Instagrame, WhatsAppe alebo kdekoľvek sa vám páči!",
     "clipboardFallback": "Text skopírovaný — vložte ho pri zverejnení!",
     "recommendedBy": "Odporúča {{church}}",
     "hashtagBible": "#Biblia",
-    "hashtagImpulse": "#DailyImpulse"
+    "hashtagImpulse": "#DennýImpulz"
   },
   "darkMode": {
     "light": "Svetlý režim",

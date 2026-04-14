@@ -37,8 +37,8 @@
     "playAudio": "Lyssna",
     "stopAudio": "Stoppa",
     "collapseLabel": "Dagens impuls",
-    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
-    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
+    "deepDivePrompt": "Dagens impuls är \"{{topic}}\" med {{reference}}. Förklara denna passage: Vem skrev den? I vilken situation? Vad kommer före och efter? Och vad betyder det för mitt liv idag?",
+    "explorePrompt": "Läs hela passagen runt {{reference}} och förklara sammanhanget. Jag vill förstå historien bakom det."
   },
   "features": {
     "sectionTitle": "Vad din följeslagare erbjuder dig",
@@ -148,7 +148,7 @@
     "sms": "SMS",
     "smsDesc": "SMS till din mobil",
     "phoneLabel": "Mobilnummer",
-    "phonePlaceholder": "+46 70 123 45 67",
+    "phonePlaceholder": "+41 79 123 45 67",
     "phoneHint": "SMS: +41 (CH)",
     "telegramHint": "Klicka på «Anmäl dig» – du kommer att omdirigeras till Telegram. Starta boten där och skriv <strong>/daily</strong> för att aktivera den dagliga impulsen.",
     "pushHint": "Efter att ha klickat på «Anmäl dig» kommer din webbläsare att fråga om behörighet för aviseringar. Vänligen tillåt dem för att få impulsen.",
@@ -175,8 +175,8 @@
     "unsubscribe": "Avsluta prenumeration",
     "unsubscribedTitle": "Avregistrerad",
     "unsubscribedDesc": "Du kommer inte längre att få daglig inspiration.",
-    "smsSwissOnly": "Swiss numbers only",
-    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
+    "smsSwissOnly": "Endast schweiziska nummer",
+    "smsSwissOnlyDesc": "SMS är endast tillgängligt för schweiziska nummer (+41)."
   },
   "faq": {
     "badge": "Vanliga frågor",
@@ -347,7 +347,7 @@
     "shareVia": "Dela via",
     "copied": "Kopierat! 📋",
     "copiedShort": "Kopierat!",
-    "copiedDesc": "Texten har kopierats till urklipp. Dela den nu på WhatsApp, Instagram eller var du vill!",
+    "copiedDesc": "Text kopierad till urklipp. Dela den på WhatsApp, Instagram eller var du vill!",
     "copyLink": "Kopiera text",
     "error": "Kopiering misslyckades",
     "impulseTitle": "Din följeslagare – Dagens impuls",
@@ -364,7 +364,7 @@
     "clipboardFallback": "Text kopierad — klistra in den när du postar!",
     "recommendedBy": "Rekommenderad av {{church}}",
     "hashtagBible": "#Bibeln",
-    "hashtagImpulse": "#DailyImpulse"
+    "hashtagImpulse": "#DagensImpuls"
   },
   "darkMode": {
     "light": "Ljust läge",

@@ -37,8 +37,8 @@
     "playAudio": "Makinig",
     "stopAudio": "Ihinto",
     "collapseLabel": "Impulso ng araw",
-    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
-    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
+    "deepDivePrompt": "Ang pang-araw-araw na impulse ay \"{{topic}}\" na may {{reference}}. Ipaliwanag ang sipi na ito: Sino ang sumulat nito? Sa anong sitwasyon? Ano ang nauuna at sumusunod? At ano ang ibig sabihin nito para sa buhay ko ngayon?",
+    "explorePrompt": "Basahin mo sa akin ang buong sipi sa paligid ng {{reference}} at ipaliwanag ang konteksto. Gusto kong maunawaan ang kuwento sa likod nito."
   },
   "features": {
     "sectionTitle": "Ano ang inaalok ng iyong kasama",
@@ -175,8 +175,8 @@
     "unsubscribe": "I-unsubscribe",
     "unsubscribedTitle": "Hindi Naka-subscribe",
     "unsubscribedDesc": "Hindi ka na makakatanggap ng pang-araw-araw na inspirasyon.",
-    "smsSwissOnly": "Swiss numbers only",
-    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
+    "smsSwissOnly": "Mga numero lang ng Swiss",
+    "smsSwissOnlyDesc": "Available lang ang SMS para sa mga numero ng Swiss (+41)."
   },
   "faq": {
     "badge": "Mga Madalas Itanong",
@@ -344,23 +344,23 @@
   },
   "share": {
     "label": "Ibahagi",
-    "shareVia": "Ibahagi sa pamamaguan ng",
+    "shareVia": "Ibahagi sa pamamagitan ng",
     "copied": "Nakopya! 📋",
     "copiedShort": "Nakopya!",
-    "copiedDesc": "Nakopya ang text sa clipboard. Ibahagi ito ngayon sa WhatsApp, Instagram o kung saan mo gusto!",
-    "copyLink": "Kopyahin ang Link",
+    "copiedDesc": "Nakopya ang teksto sa clipboard. Ibahagi ito sa WhatsApp, Instagram o kung saan mo gusto!",
+    "copyLink": "Kopyahin ang teksto",
     "error": "Nabigo ang pagkopya",
     "impulseTitle": "Ang iyong kasama – Inspirasyon ng Araw",
     "chatTitle": "Ang iyong kasama – Kaisipan ng Araw",
-    "createImage": "Gumawa ng Larawan ✨",
+    "createImage": "Gumawa ng larawan ✨",
     "generating": "Gumagawa…",
     "imageReady": "Handa na ang iyong larawan para ibahagi!",
-    "shareImage": "Ibahagi ang Larawan",
+    "shareImage": "Ibahagi ang larawan",
     "download": "I-save",
     "imageError": "Nabigo ang paggawa ng larawan",
-    "imageErrorDesc": "Hindi nagawa ang larawan. Subukang muli sa ibang pagkakataon.",
-    "imageSaved": "Nakopya ang text! 📋",
-    "imageSavedDesc": "I-save ang larawan at ibahagi ito sa nakopyang text sa Instagram, WhatsApp o kung saan mo gusto!",
+    "imageErrorDesc": "Hindi nagawa ang larawan. Pakisubukang muli sa ibang pagkakataon.",
+    "imageSaved": "Nakopya ang teksto! 📋",
+    "imageSavedDesc": "I-save ang larawan at ibahagi ito kasama ang nakopyang teksto sa Instagram, WhatsApp o kung saan mo gusto!",
     "clipboardFallback": "Nakopya ang teksto — i-paste ito sa pag-post!",
     "recommendedBy": "Inirerekomenda ng {{church}}",
     "hashtagBible": "#Bibliya",

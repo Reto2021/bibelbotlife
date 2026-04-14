@@ -37,8 +37,8 @@
     "playAudio": "Dengarkan",
     "stopAudio": "Berhenti",
     "collapseLabel": "Inspirasi hari ini",
-    "deepDivePrompt": "The daily impulse is \"{{topic}}\" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?",
-    "explorePrompt": "Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it."
+    "deepDivePrompt": "Impuls harian adalah \"{{topic}}\" dengan {{reference}}. Jelaskan bagian ini: Siapa yang menulisnya? Dalam situasi apa? Apa yang datang sebelum dan sesudahnya? Dan apa artinya bagi hidup saya hari ini?",
+    "explorePrompt": "Bacakan saya seluruh bagian di sekitar {{reference}} dan jelaskan konteksnya. Saya ingin memahami cerita di baliknya."
   },
   "features": {
     "sectionTitle": "Apa yang pendampingmu tawarkan",
@@ -141,10 +141,10 @@
     "firstNamePlaceholder": "misalnya Thomas",
     "firstNameHint": "Agar kami dapat menyambut Anda secara pribadi.",
     "channelLabel": "Bagaimana Anda ingin menerima renungan?",
-    "push": "Push",
+    "push": "Dorong",
     "pushDesc": "Pemberitahuan Browser",
     "telegram": "Telegram",
-    "telegramDesc": "Pesan melalui Telegram",
+    "telegramDesc": "Pesan via Telegram",
     "sms": "SMS",
     "smsDesc": "SMS ke ponsel Anda",
     "phoneLabel": "Nomor Telepon",
@@ -175,8 +175,8 @@
     "unsubscribe": "Berhenti berlangganan",
     "unsubscribedTitle": "Berhenti berlangganan",
     "unsubscribedDesc": "Anda tidak akan lagi menerima inspirasi harian.",
-    "smsSwissOnly": "Swiss numbers only",
-    "smsSwissOnlyDesc": "SMS is only available for Swiss numbers (+41)."
+    "smsSwissOnly": "Hanya nomor Swiss",
+    "smsSwissOnlyDesc": "SMS hanya tersedia untuk nomor Swiss (+41)."
   },
   "faq": {
     "badge": "Pertanyaan yang Sering Diajukan",
@@ -344,27 +344,27 @@
   },
   "share": {
     "label": "Bagikan",
-    "shareVia": "Bagikan melalui",
-    "copied": "Disalin! 📋",
-    "copiedShort": "Disalin!",
-    "copiedDesc": "Teks telah disalin ke papan klip. Bagikan sekarang di WhatsApp, Instagram, atau di mana pun Anda mau!",
-    "copyLink": "Salin Teks",
+    "shareVia": "Bagikan via",
+    "copied": "Tersalin! 📋",
+    "copiedShort": "Tersalin!",
+    "copiedDesc": "Teks disalin ke papan klip. Bagikan di WhatsApp, Instagram, atau di mana pun Anda suka!",
+    "copyLink": "Salin teks",
     "error": "Gagal menyalin",
     "impulseTitle": "Pendamping Anda – Renungan Harian",
     "chatTitle": "Pendamping Anda – Pemikiran Harian",
-    "createImage": "Buat Gambar ✨",
+    "createImage": "Buat gambar ✨",
     "generating": "Membuat…",
-    "imageReady": "Gambar Anda siap untuk dibagikan!",
-    "shareImage": "Bagikan Gambar",
+    "imageReady": "Gambar Anda siap dibagikan!",
+    "shareImage": "Bagikan gambar",
     "download": "Simpan",
     "imageError": "Gagal membuat gambar",
     "imageErrorDesc": "Gambar tidak dapat dibuat. Silakan coba lagi nanti.",
     "imageSaved": "Teks disalin! 📋",
-    "imageSavedDesc": "Simpan gambar dan bagikan dengan teks yang disalin di Instagram, WhatsApp, atau di mana pun Anda mau!",
+    "imageSavedDesc": "Simpan gambar dan bagikan dengan teks yang disalin di Instagram, WhatsApp, atau di mana pun Anda suka!",
     "clipboardFallback": "Teks disalin — tempel saat memposting!",
     "recommendedBy": "Direkomendasikan oleh {{church}}",
     "hashtagBible": "#Alkitab",
-    "hashtagImpulse": "#DailyImpulse"
+    "hashtagImpulse": "#ImpulsHarian"
   },
   "darkMode": {
     "light": "Mode Terang",
