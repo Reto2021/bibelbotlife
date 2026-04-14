@@ -11,6 +11,16 @@ const getSessionId = (): string => {
   return id;
 };
 
+/** Persistent visitor ID across sessions (localStorage) */
+const getVisitorId = (): string => {
+  let id = localStorage.getItem("bb_vid");
+  if (!id) {
+    id = crypto.randomUUID();
+    localStorage.setItem("bb_vid", id);
+  }
+  return id;
+};
+
 /** Extract church slug from URL search params (?church=xyz) */
 const getChurchSlug = (): string | null => {
   const params = new URLSearchParams(window.location.search);
