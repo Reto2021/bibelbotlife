@@ -137,7 +137,7 @@ export default function ResourceLibrary() {
       }
       return true;
     });
-  }, [resources, myResources, systemResources, activeTab, filterType, filterTag, filterTradition, filterCountry, search]);
+  }, [resources, myResources, systemResources, activeTab, filterType, filterTag, filterTradition, filterCountry, filterLanguage, search]);
 
   const openCreate = () => {
     setEditingId(null);
