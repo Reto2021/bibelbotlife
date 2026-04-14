@@ -525,6 +525,7 @@ const Index = () => {
               <Link to="/for-churches" className="hover:text-background/80 underline underline-offset-2">{t("footer.forChurches")}</Link>
               <Link to="/fuer-seelsorger" className="hover:text-background/80 underline underline-offset-2">{t("footer.forCelebrants")}</Link>
               <Link to="/churches" className="hover:text-background/80 underline underline-offset-2">{t("church.directoryBadge")}</Link>
+              <Link to="/spenden" className="hover:text-background/80 underline underline-offset-2">{t("nav.donate", "Spenden")}</Link>
             </div>
 
             <p className="text-background/40 text-xs text-center mb-1">© 2026 BibleBot.Life</p>
