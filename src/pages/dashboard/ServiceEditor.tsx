@@ -2,7 +2,7 @@ import { useState, useCallback, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { DndContext, closestCenter, KeyboardSensor, PointerSensor, TouchSensor, useSensor, useSensors, type DragEndEvent, type DragStartEvent, type DragOverEvent, DragOverlay } from "@dnd-kit/core";
 import { arrayMove, SortableContext, sortableKeyboardCoordinates, verticalListSortingStrategy } from "@dnd-kit/sortable";
-import { ArrowLeft, Save, Clock, Plus, Play, Library, BookmarkPlus, FileDown, Mail, Users, GripVertical, PanelRightOpen, PanelRightClose, Trash2, Copy, MoreVertical, Archive, Eye, FileEdit } from "lucide-react";
+import { ArrowLeft, Save, Clock, Plus, Play, Library, BookmarkPlus, FileDown, FileText, Mail, Users, GripVertical, PanelRightOpen, PanelRightClose, Trash2, Copy, MoreVertical, Archive, Eye, FileEdit } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -20,6 +20,7 @@ import { ResourceSidebar } from "@/components/services/ResourceSidebar";
 import type { Resource } from "@/hooks/use-resources";
 import { useTemplates, useCreateTemplate, type ServiceTemplate } from "@/hooks/use-templates";
 import { exportServicePdf, exportServicePdfBlob } from "@/lib/export-service-pdf";
+import { exportServiceDocx } from "@/lib/export-service-docx";
 import { Label } from "@/components/ui/label";
 import { useDeleteService, useDuplicateService, useUpdateServiceStatus } from "@/hooks/use-services";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
@@ -361,6 +362,13 @@ export default function ServiceEditor() {
               })}>
                 <FileDown className="h-4 w-4 sm:mr-1" />
                 <span className="hidden sm:inline">PDF</span>
+              </Button>
+              <Button variant="outline" size="sm" onClick={() => exportServiceDocx({
+                title, serviceDate, serviceTime, serviceType, tradition, blocks,
+                churchName: church?.name,
+              })}>
+                <FileText className="h-4 w-4 sm:mr-1" />
+                <span className="hidden sm:inline">Word</span>
               </Button>
               <Button variant="outline" size="sm" onClick={() => setEmailDialogOpen(true)}>
                 <Mail className="h-4 w-4 sm:mr-1" />
