@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { SiteHeader } from "@/components/SiteHeader";
+import retoPhoto from "@/assets/reto-wettstein.jpg";
 import { SEOHead } from "@/components/SEOHead";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -86,6 +87,14 @@ export default function UeberUns() {
           <Card>
             <CardContent className="p-6 md:p-8">
               <div className="flex flex-col md:flex-row gap-6">
+                {/* Photo */}
+                <div className="shrink-0 mx-auto md:mx-0">
+                  <img
+                    src={retoPhoto}
+                    alt="Reto Wettstein"
+                    className="w-40 h-40 md:w-48 md:h-48 rounded-xl object-cover object-top shadow-md"
+                  />
+                </div>
                 {/* Info */}
                 <div className="flex-1 space-y-4">
                   <div>
