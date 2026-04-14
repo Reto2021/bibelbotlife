@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import {
   Menu, X as XIcon, HandHeart, GraduationCap, Building2, HeartHandshake,
-  Send, FileText, ShieldCheck, LogIn, LogOut, User, Shield, Users
+  Send, FileText, ShieldCheck, LogIn, LogOut, User, Shield, Users, MessageCircle
 } from "lucide-react";
 import { AppLogo } from "@/components/AppLogo";
 import { Button } from "@/components/ui/button";
@@ -11,7 +11,7 @@ import { DarkModeToggle } from "@/components/DarkModeToggle";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useAuth } from "@/hooks/use-auth";
 import { useIsAdmin } from "@/hooks/use-admin";
-import { resetBibleBotChat } from "@/lib/chat-events";
+import { resetBibleBotChat, openBibleBotChat } from "@/lib/chat-events";
 
 const TELEGRAM_LINK = "https://t.me/meinbibelbot";
 
@@ -106,10 +106,25 @@ export function SiteHeader() {
               </Link>
             </Button>
           )}
-          <Button asChild className="hidden lg:inline-flex bg-telegram hover:bg-telegram/90 text-telegram-foreground" size="sm">
+          <Button
+            className="hidden lg:inline-flex"
+            size="sm"
+            onClick={() => {
+              if (location.pathname !== "/") {
+                navigate("/");
+                setTimeout(() => document.getElementById("chat")?.scrollIntoView({ behavior: "smooth" }), 300);
+              } else {
+                document.getElementById("chat")?.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+          >
+            <MessageCircle className="h-4 w-4 mr-2" />
+            {t("nav.openChat")}
+          </Button>
+          <Button asChild variant="outline" size="sm" className="hidden lg:inline-flex">
             <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer">
               <Send className="h-4 w-4 mr-2" />
-              {t("nav.startNow")}
+              Telegram
             </a>
           </Button>
           {/* Mobile/tablet hamburger */}
@@ -215,11 +230,26 @@ export function SiteHeader() {
               {t("auth.loginShort")}
             </Link>
           )}
-          <div className="pt-2 pb-1">
-            <Button asChild className="w-full bg-telegram hover:bg-telegram/90 text-telegram-foreground">
+          <div className="pt-2 pb-1 flex flex-col gap-2">
+            <Button
+              className="w-full"
+              onClick={() => {
+                setMobileMenuOpen(false);
+                if (location.pathname !== "/") {
+                  navigate("/");
+                  setTimeout(() => document.getElementById("chat")?.scrollIntoView({ behavior: "smooth" }), 300);
+                } else {
+                  document.getElementById("chat")?.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+            >
+              <MessageCircle className="h-4 w-4 mr-2" />
+              {t("nav.openChat")}
+            </Button>
+            <Button asChild variant="outline" className="w-full">
               <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)}>
                 <Send className="h-4 w-4 mr-2" />
-                {t("nav.startNow")}
+                Telegram Bot
               </a>
             </Button>
           </div>
