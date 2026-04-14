@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { useTranslation } from "react-i18next";
-import { Send, X, MessageCircle, Loader2, Mic, MicOff, Pencil, Shield, Sparkles, CheckCircle2, AlertTriangle, Info, BookOpen, Volume2, VolumeX, ChevronDown } from "lucide-react";
+import { Send, X, MessageCircle, Loader2, Mic, MicOff, Pencil, Shield, Sparkles, CheckCircle2, AlertTriangle, Info, BookOpen, Volume2, VolumeX, ChevronDown, Heart } from "lucide-react";
 import { useTTS } from "@/hooks/use-tts";
 
 import { ShareButton } from "@/components/ShareButton";
