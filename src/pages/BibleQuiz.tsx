@@ -447,7 +447,22 @@ export default function BibleQuiz() {
                       </p>
                     </Card>
 
-                    <Button onClick={nextQuestion} className="w-full mt-4" size="lg">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="w-full mt-2"
+                      onClick={() => {
+                        const msg = question.verse_text
+                          ? `Erkläre mir diesen Bibelvers: ${question.reference} — „${question.verse_text}"`
+                          : `Erkläre mir diese Bibelstelle: ${question.reference}`;
+                        openBibleBotChat(msg);
+                      }}
+                    >
+                      <MessageCircle className="h-4 w-4 mr-1" />
+                      {t("quiz.discuss_verse", "Über diesen Vers sprechen")}
+                    </Button>
+
+                    <Button onClick={nextQuestion} className="w-full mt-2" size="lg">
                       {t("quiz.next")} <ChevronRight className="h-4 w-4 ml-1" />
                     </Button>
                   </motion.div>
