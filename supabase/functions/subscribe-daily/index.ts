@@ -156,6 +156,32 @@ serve(async (req) => {
       throw error;
     }
 
+    // Fire-and-forget GHL sync
+    try {
+      const supabaseUrl = Deno.env.get("SUPABASE_URL");
+      const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
+      if (supabaseUrl && serviceKey) {
+        fetch(`${supabaseUrl}/functions/v1/ghl-sync`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${serviceKey}`,
+          },
+          body: JSON.stringify({
+            type: "daily_subscriber",
+            data: {
+              channel,
+              firstName: first_name || "",
+              phone: phone_number || "",
+              language: language || "de",
+            },
+          }),
+        }).catch(() => {});
+      }
+    } catch {
+      // non-critical
+    }
+
     return new Response(
       JSON.stringify({
         message: "Anmeldung erfolgreich! Du erhältst ab morgen deinen täglichen Impuls. 🙏",
