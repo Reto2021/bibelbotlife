@@ -1,0 +1,211 @@
+import { useTranslation } from "react-i18next";
+import { SiteHeader } from "@/components/SiteHeader";
+import { SEOHead } from "@/components/SEOHead";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import {
+  Award, Briefcase, GraduationCap, Heart, Linkedin,
+  MapPin, ExternalLink, Users, Lightbulb, Building2
+} from "lucide-react";
+
+const EDUCATION = [
+  "Dipl. Wirtschaftsinformatiker UZH",
+  "Dipl. Handelslehrer UZH",
+  "Eidg. dipl. Führungsfachmann mit FA",
+  "CAS Strategy with Impact FHGR",
+  "CAS Krisenkommunikation ZHAW",
+  "VR-CAS Swiss Board School HSG",
+  "Scrum Master",
+];
+
+const AWARDS = [
+  "Venture Leader 2011",
+  "Microsoft Innovation Award 2011",
+  "Nominiert Swiss CRM Innovation Award 2011",
+  "Nominiert Microsoft European BizSpark Award 2011",
+];
+
+const ENGAGEMENTS = [
+  "Grossrat Kanton Aargau",
+  "Alt-Vize-Ammann Stadt Brugg",
+  "Präsident Stiftungsrat Stiftung Gesundheit Region Brugg",
+  "Präsident VR Süssbach Pflegezentrum AG",
+  "Vize-Präsident IBB Holding AG",
+  "OK-Präsident Stadtfest 2026",
+];
+
+export default function UeberUns() {
+  const { t } = useTranslation();
+
+  return (
+    <div className="min-h-screen bg-background">
+      <SEOHead
+        title={t("about.title", "Über uns – BibleBot.Life")}
+        description={t("about.metaDesc", "Wer steht hinter BibleBot.Life? Erfahren Sie mehr über den Gründer Reto Wettstein und die Vision hinter dem Projekt.")}
+        path="/ueber-uns"
+      />
+      <SiteHeader />
+
+      <main className="container mx-auto px-4 py-10 max-w-4xl">
+        {/* Hero */}
+        <section className="text-center mb-12">
+          <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            {t("about.heading", "Über BibleBot.Life")}
+          </h1>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            {t("about.intro", "BibleBot.Life ist ein persönliches Herzensprojekt – geboren aus dem Glauben, dass die Bibel für jeden Menschen zugänglich und verständlich sein sollte. Unabhängig von Konfession, Sprache oder technischem Wissen.")}
+          </p>
+        </section>
+
+        {/* Vision */}
+        <Card className="mb-8">
+          <CardContent className="p-6 md:p-8">
+            <div className="flex items-start gap-4">
+              <div className="rounded-full bg-primary/10 p-3 shrink-0">
+                <Lightbulb className="h-6 w-6 text-primary" />
+              </div>
+              <div>
+                <h2 className="text-xl font-semibold text-foreground mb-2">
+                  {t("about.visionTitle", "Die Vision")}
+                </h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  {t("about.visionText", "Ein kostenloser, anonymer Begleiter für alle, die sich mit der Bibel beschäftigen möchten. Kein Tracking, kein Urteil – einfach ein gutes Gespräch bei Kerzenlicht. In 38 Sprachen, für Kirchen, Seelsorger und jeden Einzelnen.")}
+                </p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Founder */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
+            <Users className="h-6 w-6 text-primary" />
+            {t("about.founderTitle", "Der Gründer")}
+          </h2>
+
+          <Card>
+            <CardContent className="p-6 md:p-8">
+              <div className="flex flex-col md:flex-row gap-6">
+                {/* Info */}
+                <div className="flex-1 space-y-4">
+                  <div>
+                    <h3 className="text-xl font-bold text-foreground">Reto Wettstein</h3>
+                    <p className="text-sm text-muted-foreground flex items-center gap-1.5 mt-1">
+                      <MapPin className="h-3.5 w-3.5" />
+                      Brugg, Kanton Aargau, Schweiz
+                    </p>
+                  </div>
+
+                  <p className="text-muted-foreground leading-relaxed">
+                    {t("about.founderBio", "Reto Wettstein ist Wirtschaftsinformatiker, Unternehmer und politisch engagierter Familienvater aus Brugg. Er ist Gründer der auf digitale Marketing- und CRM-Prozesse spezialisierten Firmen biz.Telligence, Prime Data und 2Go Media AG. Mit Leidenschaft, strategischem Denken und viel Herzblut verbindet er Technologie mit gesellschaftlichem Engagement.")}
+                  </p>
+
+                  <blockquote className="border-l-4 border-primary/40 pl-4 italic text-muted-foreground">
+                    «Persönliche Identifikation und Herzblut für die Aufgabe sind Voraussetzungen für mein Engagement. Entweder bin ich mit Leidenschaft bei der Sache oder ich lasse es bleiben.»
+                  </blockquote>
+
+                  <div className="flex flex-wrap gap-2 pt-2">
+                    <Button asChild variant="outline" size="sm">
+                      <a href="https://www.reto-wettstein.ch" target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="h-3.5 w-3.5 mr-1.5" />
+                        reto-wettstein.ch
+                      </a>
+                    </Button>
+                    <Button asChild variant="outline" size="sm">
+                      <a href="https://ch.linkedin.com/in/retowettstein" target="_blank" rel="noopener noreferrer">
+                        <Linkedin className="h-3.5 w-3.5 mr-1.5" />
+                        LinkedIn
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </section>
+
+        {/* Three columns: Education, Awards, Engagements */}
+        <section className="grid md:grid-cols-3 gap-6 mb-12">
+          {/* Education */}
+          <Card>
+            <CardContent className="p-5">
+              <h3 className="font-semibold text-foreground flex items-center gap-2 mb-3">
+                <GraduationCap className="h-5 w-5 text-primary" />
+                {t("about.education", "Ausbildung")}
+              </h3>
+              <ul className="space-y-1.5">
+                {EDUCATION.map((item) => (
+                  <li key={item} className="text-sm text-muted-foreground">• {item}</li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+
+          {/* Awards */}
+          <Card>
+            <CardContent className="p-5">
+              <h3 className="font-semibold text-foreground flex items-center gap-2 mb-3">
+                <Award className="h-5 w-5 text-primary" />
+                {t("about.awards", "Auszeichnungen")}
+              </h3>
+              <ul className="space-y-1.5">
+                {AWARDS.map((item) => (
+                  <li key={item} className="text-sm text-muted-foreground">• {item}</li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+
+          {/* Engagements */}
+          <Card>
+            <CardContent className="p-5">
+              <h3 className="font-semibold text-foreground flex items-center gap-2 mb-3">
+                <Building2 className="h-5 w-5 text-primary" />
+                {t("about.engagements", "Engagements")}
+              </h3>
+              <ul className="space-y-1.5">
+                {ENGAGEMENTS.map((item) => (
+                  <li key={item} className="text-sm text-muted-foreground">• {item}</li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+        </section>
+
+        {/* Personal */}
+        <Card className="mb-12">
+          <CardContent className="p-6 md:p-8">
+            <h3 className="font-semibold text-foreground flex items-center gap-2 mb-4">
+              <Heart className="h-5 w-5 text-primary" />
+              {t("about.personal", "Persönliches")}
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-sm">
+              <div>
+                <span className="text-muted-foreground block">{t("about.residence", "Wohnort")}</span>
+                <span className="text-foreground font-medium">Brugg AG</span>
+              </div>
+              <div>
+                <span className="text-muted-foreground block">{t("about.confession", "Konfession")}</span>
+                <span className="text-foreground font-medium">Ev.-ref.</span>
+              </div>
+              <div>
+                <span className="text-muted-foreground block">{t("about.family", "Familie")}</span>
+                <span className="text-foreground font-medium">{t("about.familyValue", "Verheiratet, zwei Kinder")}</span>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* CTA */}
+        <div className="text-center">
+          <p className="text-muted-foreground mb-4">
+            {t("about.cta", "Fragen, Ideen oder einfach Hallo sagen?")}
+          </p>
+          <Button asChild>
+            <a href="/kontakt">{t("nav.contact", "Kontakt")}</a>
+          </Button>
+        </div>
+      </main>
+    </div>
+  );
+}
