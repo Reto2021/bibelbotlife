@@ -65,7 +65,7 @@ const cellBorders = { top: cellBorder, bottom: cellBorder, left: cellBorder, rig
 const cellMargins = { top: 60, bottom: 60, left: 80, right: 80 };
 
 function buildDocx(options: ExportOptions): Document {
-  const { title, serviceDate, serviceTime, serviceType, tradition, blocks, churchName } = options;
+  const { title, serviceDate, serviceTime, serviceType, tradition, blocks, churchName, notes } = options;
 
   const dateFormatted = new Date(serviceDate).toLocaleDateString("de-CH", {
     weekday: "long",
