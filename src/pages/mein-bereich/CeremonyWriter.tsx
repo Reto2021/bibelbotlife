@@ -198,6 +198,7 @@ export default function CeremonyWriter({ config }: Props) {
   const [formData, setFormData] = useState<Record<string, string>>({});
   const [notes, setNotes] = useState("");
   const [draftId, setDraftId] = useState<string | null>(null);
+  const [expandedResourceId, setExpandedResourceId] = useState<string | null>(null);
   const [shareToken, setShareToken] = useState<string | null>(null);
   const [isShared, setIsShared] = useState(false);
   const [linkCopied, setLinkCopied] = useState(false);
