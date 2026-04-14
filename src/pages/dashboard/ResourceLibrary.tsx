@@ -87,6 +87,8 @@ interface FormState {
 const emptyForm = (lang: string): FormState => ({ title: "", content: "", resource_type: "song", tags: [], tagInput: "", language: lang });
 
 export default function ResourceLibrary() {
+  const { i18n } = useTranslation();
+  const defaultLang = i18n.language?.slice(0, 2) || "de";
   const { data: resources = [], isLoading } = useResources();
   const { data: church } = useUserChurch();
   const createResource = useCreateResource();
@@ -99,10 +101,11 @@ export default function ResourceLibrary() {
   const [filterTag, setFilterTag] = useState<string | "all">("all");
   const [filterTradition, setFilterTradition] = useState<string | "all">("all");
   const [filterCountry, setFilterCountry] = useState<string | "all">("all");
+  const [filterLanguage, setFilterLanguage] = useState<string>(defaultLang);
   const [activeTab, setActiveTab] = useState<"all" | "mine" | "system">("all");
   const [dialogOpen, setDialogOpen] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
-  const [form, setForm] = useState<FormState>(emptyForm);
+  const [form, setForm] = useState<FormState>(() => emptyForm(defaultLang));
 
   const myResources = useMemo(() => resources.filter(r => !r.is_system), [resources]);
   const systemResources = useMemo(() => resources.filter(r => r.is_system), [resources]);
