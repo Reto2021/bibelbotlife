@@ -296,50 +296,58 @@ const Analytics = () => {
         </div>
 
         {/* Summary stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-8 gap-3">
           <StatCard
             icon={Eye}
             label="Seitenaufrufe"
             value={data?.summary.totalPageviews || 0}
-            tooltip="Gesamtzahl aller geladenen Seiten im Zeitraum. Mehrfachaufrufe durch denselben Besucher zählen einzeln."
+            tooltip="Gesamtzahl aller geladenen Seiten im Zeitraum."
           />
           <StatCard
             icon={Users}
-            label="Sessions"
-            value={data?.summary.uniqueSessions || 0}
-            tooltip="Anzahl eindeutiger Browser-Sitzungen. Ein Nutzer der die Seite schliesst und wieder öffnet zählt als neue Session."
+            label="Besucher"
+            value={data?.summary.uniqueVisitors || data?.summary.uniqueSessions || 0}
+            sub={`${data?.summary.uniqueSessions || 0} Sessions`}
+            tooltip="Geschätzte Anzahl eindeutiger Besucher (basierend auf Geräte-Fingerprint). Sessions = einzelne Browsersitzungen."
           />
           <StatCard
             icon={Clock}
             label="Ø Verweildauer"
             value={formatDuration(data?.summary.avgSessionDurationSec || 0)}
-            tooltip="Durchschnittliche Zeit, die ein Besucher auf der Seite verbringt. Wird per Heartbeat alle 30s gemessen — auch wenn nur eine Seite besucht wird."
+            sub={data?.summary.medianSessionDurationSec ? `Median: ${formatDuration(data.summary.medianSessionDurationSec)}` : undefined}
+            tooltip="Durchschnittliche Verweildauer von Besuchern mit mindestens 2 Interaktionen (Bounces ausgeschlossen). Per Heartbeat alle 30s gemessen."
           />
           <StatCard
             icon={ArrowDownRight}
             label="Absprungrate"
             value={`${data?.summary.bounceRate ?? 0}%`}
-            tooltip="Anteil der Besucher, die nur eine einzige Seite ansehen und keine Interaktion ausführen (z.B. Chat, Kachel-Klick)."
+            tooltip="Anteil der Besucher mit nur einer Seite und keiner Interaktion."
           />
           <StatCard
             icon={MousePointer}
             label="Interaktionen"
             value={data?.summary.totalEvents || 0}
-            tooltip="Gesamtzahl aller bewussten Nutzer-Aktionen: Kachel-Klicks, Chat-Nachrichten, Quiz-Starts, Lebensrad-Abschlüsse etc."
+            tooltip="Alle bewussten Nutzer-Aktionen: Kachel-Klicks, Chat, Quiz, Lebensrad etc."
           />
           <StatCard
             icon={MessageCircle}
-            label="Chat-Nutzer (Telegram)"
+            label="Chat (Telegram)"
             value={data?.chat?.uniqueUsers || 0}
-            sub={`∅ ${data?.chat?.avgMessagesPerUser || 0} Nachr./Person`}
-            tooltip="Eindeutige Telegram-Nutzer, die dem Bot geschrieben haben. 'Nachr./Person' = durchschnittliche Anzahl gesendeter Nachrichten pro Nutzer."
+            sub={`Ø ${data?.chat?.avgMessagesPerUser || 0} Nachr.`}
+            tooltip="Eindeutige Telegram-Nutzer."
           />
           <StatCard
             icon={Globe}
-            label="Chat-Nutzer (Web)"
+            label="Chat (Web)"
             value={data?.webChat?.uniqueUsers || 0}
-            sub={`∅ ${data?.webChat?.avgMessagesPerUser || 0} Nachr./Person`}
-            tooltip="Eindeutige Web-Besucher, die den Chat auf der Webseite genutzt haben (pro Browser-Session gezählt)."
+            sub={`Ø ${data?.webChat?.avgMessagesPerUser || 0} Nachr.`}
+            tooltip="Eindeutige Web-Chat-Nutzer."
+          />
+          <StatCard
+            icon={Target}
+            label="Engagiert"
+            value={data?.summary.engagedSessions || 0}
+            tooltip="Sessions mit mindestens 2 Events (nicht abgesprungen). Diese Zahl zeigt echtes Engagement."
           />
         </div>
 
