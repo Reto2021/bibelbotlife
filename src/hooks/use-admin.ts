@@ -42,7 +42,7 @@ export function useAdminStats() {
           .from("chat_messages")
           .select("id", { count: "exact", head: true })
           .gte("created_at", new Date().toISOString().split("T")[0]),
-        supabase.rpc("get_registered_user_count"),
+        supabase.rpc("get_registered_user_count" as any),
       ]);
 
       const allChurches = churches.data ?? [];
@@ -60,7 +60,7 @@ export function useAdminStats() {
         ).length,
         totalSubscribers: subscribers.count ?? 0,
         todayMessages: todayMessages.count ?? 0,
-        registeredUsers: (registeredUsers.data as number) ?? 0,
+        registeredUsers: (registeredUsers.data as unknown as number) ?? 0,
       };
     },
   });
