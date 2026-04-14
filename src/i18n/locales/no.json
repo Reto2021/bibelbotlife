@@ -1825,5 +1825,25 @@
     "thankYouTitle": "Takk!",
     "thankYouMessage": "Din melding er mottatt. Vi vil komme tilbake til deg så snart som mulig.",
     "sendAnother": "Send en ny melding"
-  }
+  },
+  "about": {
+    "title": "Om Oss – BibleBot.Life",
+    "metaDesc": "Hvem står bak BibleBot.Life? Lær mer om grunnleggeren Reto Wettstein og visjonen bak prosjektet.",
+    "heading": "Om BibleBot.Life",
+    "intro": "BibleBot.Life er et personlig lidenskapsprosjekt – født fra troen på at Bibelen skal være tilgjengelig og forståelig for alle. Uavhengig av kirkesamfunn, språk eller teknisk kunnskap.",
+    "visionTitle": "Visjonen",
+    "visionText": "En gratis, anonym følgesvenn for alle som ønsker å utforske Bibelen. Ingen sporing, ingen fordømmelse – bare en god samtale ved levende lys. På 38 språk, for kirker, pastorer og hver enkeltperson.",
+    "founderTitle": "Grunnleggeren",
+    "founderBio": "Reto Wettstein er en forretningsinformatiker, gründer og politisk engasjert familiefar fra Brugg, Sveits. Han er grunnleggeren av biz.Telligence, Prime Data og 2Go Media AG – selskaper som spesialiserer seg på digital markedsføring og CRM-prosesser. Med lidenskap, strategisk tenkning og engasjement bygger han bro mellom teknologi og samfunnsengasjement.",
+    "education": "Utdanning",
+    "awards": "Utmerkelser",
+    "engagements": "Engasjementer",
+    "personal": "Personlig",
+    "residence": "Bosted",
+    "confession": "Trossamfunn",
+    "family": "Familie",
+    "familyValue": "Gift, to barn",
+    "cta": "Spørsmål, ideer eller bare lyst til å si hei?"
+  },
+  "nav.about": "Om Oss"
 }

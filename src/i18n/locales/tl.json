@@ -1828,5 +1828,25 @@
     "thankYouTitle": "Salamat!",
     "thankYouMessage": "Natanggap na ang iyong mensahe. Babalikan ka namin sa lalong madaling panahon.",
     "sendAnother": "Magpadala ng isa pang mensahe"
-  }
+  },
+  "about": {
+    "title": "Tungkol sa Amin – BibleBot.Life",
+    "metaDesc": "Sino sa likod ng BibleBot.Life? Higit pang alamin tungkol sa tagapagtatag na si Reto Wettstein at ang pananaw sa likod ng proyekto.",
+    "heading": "Tungkol sa BibleBot.Life",
+    "intro": "Ang BibleBot.Life ay isang personal na proyekto dahil sa hilig – isinilang mula sa paniniwalang ang Bibliya ay dapat na madaling ma-access at maunawaan para sa lahat. Anuman ang denominasyon, wika, o kaalamang teknikal.",
+    "visionTitle": "Ang Pananaw",
+    "visionText": "Isang libre, anonymous na kasama para sa sinumang gustong galugarin ang Bibliya. Walang pagsubaybay, walang paghuhusga – isang magandang pag-uusap lamang sa ilalim ng ilaw ng kandila. Sa 38 wika, para sa mga simbahan, pastor, at bawat indibidwal.",
+    "founderTitle": "Ang Tagapagtatag",
+    "founderBio": "Si Reto Wettstein ay isang business informatics specialist, negosyante, at isang pampolitikang aktibong ama ng pamilya mula sa Brugg, Switzerland. Siya ang tagapagtatag ng biz.Telligence, Prime Data, at 2Go Media AG – mga kumpanyang dalubhasa sa digital marketing at mga proseso ng CRM. Sa sipag, strategic thinking, at dedikasyon, pinagdurugtong niya ang teknolohiya sa pakikisangkot sa komunidad.",
+    "education": "Edukasyon",
+    "awards": "Mga Gantimpala",
+    "engagements": "Mga Pakikisangkot",
+    "personal": "Personal",
+    "residence": "Tirahan",
+    "confession": "Denominasyon",
+    "family": "Pamilya",
+    "familyValue": "Kasal, dalawang anak",
+    "cta": "Mga tanong, ideya, o gusto lang magpa-hello?"
+  },
+  "nav.about": "Tungkol sa Amin"
 }

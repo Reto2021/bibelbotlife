@@ -1826,5 +1826,25 @@
     "thankYouTitle": "谢谢！",
     "thankYouMessage": "您的消息已收到。我们将尽快回复您。",
     "sendAnother": "发送另一条消息"
-  }
+  },
+  "about": {
+    "title": "关于我们 – BibleBot.Life",
+    "metaDesc": "BibleBot.Life 的幕后是谁？了解更多关于创始人 Reto Wettstein 以及项目背后的愿景。",
+    "heading": "关于 BibleBot.Life",
+    "intro": "BibleBot.Life 是一个个人热情项目——源于一个信念，即圣经应该人人可理解和使用。不分教派、语言或技术知识。",
+    "visionTitle": "愿景",
+    "visionText": "为每个希望探索圣经的人提供一个免费的、匿名的伙伴。没有跟踪，没有评判——只有烛光下的良好对话。支持 38 种语言，为教会、牧师和每一个人服务。",
+    "founderTitle": "创始人",
+    "founderBio": "Reto Wettstein 是来自瑞士 Brugg 的商业信息专家、企业家和政治活跃的家庭人士。他是 biz.Telligence、Prime Data 和 2Go Media AG 的创始人——这些公司专注于数字营销和客户关系管理流程。他以热情、战略思维和奉献精神，将技术与社区参与连接起来。",
+    "education": "教育",
+    "awards": "奖项",
+    "engagements": "参与",
+    "personal": "个人",
+    "residence": "居住地",
+    "confession": "教派",
+    "family": "家庭",
+    "familyValue": "已婚，两子",
+    "cta": "有问题、想法，或者只是想打个招呼？"
+  },
+  "nav.about": "关于我们"
 }

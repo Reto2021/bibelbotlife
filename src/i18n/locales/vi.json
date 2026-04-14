@@ -1827,5 +1827,25 @@
     "thankYouTitle": "Cảm ơn bạn!",
     "thankYouMessage": "Tin nhắn của bạn đã được nhận. Chúng tôi sẽ liên hệ lại với bạn trong thời gian sớm nhất.",
     "sendAnother": "Gửi tin nhắn khác"
-  }
+  },
+  "about": {
+    "title": "Về chúng tôi – BibleBot.Life",
+    "metaDesc": "Ai đứng sau BibleBot.Life? Tìm hiểu thêm về người sáng lập Reto Wettstein và tầm nhìn đằng sau dự án.",
+    "heading": "Về BibleBot.Life",
+    "intro": "BibleBot.Life là một dự án tâm huyết cá nhân – ra đời từ niềm tin rằng Kinh thánh phải dễ tiếp cận và dễ hiểu đối với mọi người. Bất kể giáo phái, ngôn ngữ hoặc kiến thức kỹ thuật.",
+    "visionTitle": "Tầm nhìn",
+    "visionText": "Một người bạn đồng hành miễn phí, ẩn danh cho tất cả những ai muốn khám phá Kinh thánh. Không theo dõi, không phán xét – chỉ một cuộc trò chuyện tốt đẹp bên ánh nến. Bằng 38 ngôn ngữ, dành cho các nhà thờ, mục sư và mỗi cá nhân.",
+    "founderTitle": "Người sáng lập",
+    "founderBio": "Reto Wettstein là một chuyên gia tin học kinh doanh, doanh nhân và người đàn ông của gia đình tham gia chính trị đến từ Brugg, Thụy Sĩ. Ông là người sáng lập biz.Telligence, Prime Data và 2Go Media AG – các công ty chuyên về tiếp thị kỹ thuật số và quy trình CRM. Với niềm đam mê, tư duy chiến lược và sự cống hiến, ông đã kết nối công nghệ với sự tham gia của cộng đồng.",
+    "education": "Giáo dục",
+    "awards": "Giải thưởng",
+    "engagements": "Cam kết",
+    "personal": "Cá nhân",
+    "residence": "Nơi cư trú",
+    "confession": "Giáo phái",
+    "family": "Gia đình",
+    "familyValue": "Đã kết hôn, có hai con",
+    "cta": "Có câu hỏi, ý tưởng hoặc chỉ muốn nói lời chào?"
+  },
+  "nav.about": "Về chúng tôi"
 }

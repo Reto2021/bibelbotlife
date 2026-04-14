@@ -1825,5 +1825,25 @@
     "thankYouTitle": "Vă mulțumim!",
     "thankYouMessage": "Mesajul dvs. a fost primit. Vom reveni la dvs. cât mai curând posibil.",
     "sendAnother": "Trimite un alt mesaj"
-  }
+  },
+  "about": {
+    "title": "Despre Noi – BibleBot.Life",
+    "metaDesc": "Cine se află în spatele BibleBot.Life? Aflați mai multe despre fondatorul Reto Wettstein și viziunea din spatele proiectului.",
+    "heading": "Despre BibleBot.Life",
+    "intro": "BibleBot.Life este un proiect personal realizat cu pasiune – născut din convingerea că Biblia ar trebui să fie accesibilă și inteligibilă pentru toată lumea. Indiferent de confesiune, limbă sau cunoștințe tehnice.",
+    "visionTitle": "Viziunea",
+    "visionText": "Un însoțitor gratuit și anonim pentru toți cei care doresc să exploreze Biblia. Fără urmărire, fără judecată – doar o conversație bună la lumina lumânării. În 38 de limbi, pentru biserici, pastori și fiecare individ.",
+    "founderTitle": "Fondatorul",
+    "founderBio": "Reto Wettstein este un specialist în informatică de afaceri, antreprenor și tată de familie implicat politic din Brugg, Elveția. Este fondatorul biz.Telligence, Prime Data și 2Go Media AG – companii specializate în marketing digital și procese CRM. Cu pasiune, gândire strategică și dedicare, el leagă tehnologia de implicarea comunitară.",
+    "education": "Educație",
+    "awards": "Premii",
+    "engagements": "Angajamente",
+    "personal": "Personal",
+    "residence": "Reședință",
+    "confession": "Confesiune",
+    "family": "Familie",
+    "familyValue": "Căsătorit, doi copii",
+    "cta": "Întrebări, idei sau doriți doar să salutați?"
+  },
+  "nav.about": "Despre Noi"
 }
