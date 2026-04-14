@@ -216,9 +216,20 @@ function buildDocx(options: ExportOptions): Document {
             children: [new TextRun({ text: churchName ? `${churchName}` : "", size: 20, color: "666666", font: "Arial" })],
           }),
           new Paragraph({
-            spacing: { after: 200 },
+            spacing: { after: notes ? 40 : 200 },
             children: [new TextRun({ text: metaLine, size: 20, color: "666666", font: "Arial" })],
           }),
+          ...(notes
+            ? [
+                new Paragraph({
+                  spacing: { after: 200 },
+                  children: [
+                    new TextRun({ text: "Leitgedanke: ", bold: true, italics: true, size: 20, color: "444444", font: "Arial" }),
+                    new TextRun({ text: notes, italics: true, size: 20, color: "444444", font: "Arial" }),
+                  ],
+                }),
+              ]
+            : []),
           // Table
           new Table({
             width: { size: 9026, type: WidthType.DXA },
