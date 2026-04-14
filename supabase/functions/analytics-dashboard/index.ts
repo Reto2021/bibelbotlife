@@ -454,15 +454,15 @@ Deno.serve(async (req) => {
     : 0;
 
   // ═══════════════════════════════════════
-  // ── Unique visitors (approximate via user_agent fingerprint) ──
+  // ── Unique visitors (daily-deduplicated fingerprint) ──
   // ═══════════════════════════════════════
-  const visitorFingerprints = new Set<string>();
+  const dailyVisitors = new Set<string>();
   nonHeartbeatEvents.forEach((e: any) => {
-    // Simple fingerprint: screen_width + user_agent hash
-    const fp = `${e.screen_width || 0}_${(e.user_agent || "").slice(0, 80)}`;
-    visitorFingerprints.add(fp);
+    const day = zurichParts(e.created_at).date;
+    const fp = `${day}_${e.screen_width || 0}_${(e.user_agent || "").slice(0, 80)}`;
+    dailyVisitors.add(fp);
   });
-  const uniqueVisitors = visitorFingerprints.size;
+  const uniqueVisitors = dailyVisitors.size;
 
   // ═══════════════════════════════════════
   // ── Bounce rate: sessions with only 1 pageview and no custom events ──
