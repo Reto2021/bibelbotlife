@@ -378,6 +378,18 @@ export default function ResourceLibrary() {
             ))}
           </SelectContent>
         </Select>
+        <Select value={filterLanguage} onValueChange={(v) => setFilterLanguage(v)}>
+          <SelectTrigger className="w-full sm:w-[150px]">
+            <Globe className="h-4 w-4 mr-1" />
+            <SelectValue placeholder="Sprache" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">Alle Sprachen</SelectItem>
+            {LANGUAGES.map((l) => (
+              <SelectItem key={l.value} value={l.value}>{l.label}</SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
         {allTags.length > 0 && (
           <Select value={filterTag} onValueChange={(v) => setFilterTag(v)}>
             <SelectTrigger className="w-full sm:w-[140px]">
