@@ -359,6 +359,15 @@ export default function ServiceEditor() {
             <Save className="h-4 w-4 sm:mr-1" />
             <span className="hidden sm:inline">{saving ? "Speichern..." : "Speichern"}</span>
           </Button>
+          <Button
+            variant={sidebarOpen ? "default" : "outline"}
+            size="sm"
+            onClick={() => setSidebarOpen(!sidebarOpen)}
+            title="Bibliothek-Panel"
+          >
+            {sidebarOpen ? <PanelRightClose className="h-4 w-4 sm:mr-1" /> : <PanelRightOpen className="h-4 w-4 sm:mr-1" />}
+            <span className="hidden sm:inline">Bibliothek</span>
+          </Button>
         </div>
       </div>
 
