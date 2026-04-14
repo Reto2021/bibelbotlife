@@ -183,6 +183,7 @@ export default function ResourceLibrary() {
           content: form.content.trim() || null,
           resource_type: form.resource_type,
           tags: form.tags,
+          language: form.language,
         });
         toast.success("Ressource aktualisiert");
       } else {
