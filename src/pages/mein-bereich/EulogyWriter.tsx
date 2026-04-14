@@ -1,7 +1,7 @@
 import { useState, useRef, useCallback, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Mic, Square, Play, Pause, Trash2, Sparkles, Download, Loader2, Save, Share2, Check, Copy, ExternalLink } from "lucide-react";
+import { ArrowLeft, Mic, Square, Play, Pause, Trash2, Sparkles, Download, Loader2, Save, Share2, Check, Copy, ExternalLink, Music, BookOpenText, HandHeart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -11,6 +11,9 @@ import { SEOHead } from "@/components/SEOHead";
 import { toast } from "sonner";
 import { useAuth } from "@/hooks/use-auth";
 import { useCeremonyDrafts } from "@/hooks/use-ceremony-drafts";
+import { useResources } from "@/hooks/use-resources";
+import { Badge } from "@/components/ui/badge";
+import { Link as RouterLink } from "react-router-dom";
 import jsPDF from "jspdf";
 
 interface Recording {
