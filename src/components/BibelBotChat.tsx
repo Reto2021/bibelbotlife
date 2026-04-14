@@ -654,7 +654,7 @@ export function BibleBotChat() {
             )}
             <p className="text-xs text-muted-foreground">
               {journeyDay > 0 && journeyDay <= 21
-                ? `Tag ${journeyDay} von 21 · ${journeyDay <= 7 ? t("chat.arriving") : journeyDay <= 14 ? t("chat.deepening") : t("chat.acting")}`
+                ? t("chat.journeyProgress", { day: journeyDay, total: 21, phase: journeyDay <= 7 ? t("chat.arriving") : journeyDay <= 14 ? t("chat.deepening") : t("chat.acting") })
                 : journeyDay > 21
                   ? t("chat.journeyComplete")
                   : t("chat.yourCompanion")}
@@ -685,14 +685,14 @@ export function BibleBotChat() {
               title={t("chat.translationSelect", "Bibelübersetzung")}
             >
               <option value="auto">📖 Auto</option>
-              <optgroup label="Moderne Übersetzungen">
-                <option value="zuercher2007">Zürcher Bibel (2007) – Reformiert</option>
-                <option value="luther2017">Lutherbibel (2017) – Evangelisch</option>
-                <option value="einheitsuebersetzung">Einheitsübersetzung (2016) – Katholisch</option>
-                <option value="schlachter2000">Schlachter 2000 – Freikirchlich</option>
-                <option value="elberfelder2006">Elberfelder 2006 – Wortgetreu</option>
+              <optgroup label={t("chat.translationModern", "Moderne Übersetzungen")}>
+                <option value="zuercher2007">{t("chat.translationZuercher", "Zürcher Bibel (2007) – Reformiert")}</option>
+                <option value="luther2017">{t("chat.translationLuther", "Lutherbibel (2017) – Evangelisch")}</option>
+                <option value="einheitsuebersetzung">{t("chat.translationEinheit", "Einheitsübersetzung (2016) – Katholisch")}</option>
+                <option value="schlachter2000">{t("chat.translationSchlachter", "Schlachter 2000 – Freikirchlich")}</option>
+                <option value="elberfelder2006">{t("chat.translationElberfelder", "Elberfelder 2006 – Wortgetreu")}</option>
               </optgroup>
-              <optgroup label="Historisch (exakt nachschlagbar)">
+              <optgroup label={t("chat.translationHistoric", "Historisch (exakt nachschlagbar)")}>
                 <option value="luther1912">Luther 1912</option>
               </optgroup>
               <optgroup label="English">
@@ -793,7 +793,7 @@ export function BibleBotChat() {
                     ) : (
                       <Volume2 className="h-4 w-4" />
                     )}
-                    <span className="text-xs">{tts.isPlaying ? "Stopp" : "Vorlesen"}</span>
+                    <span className="text-xs">{tts.isPlaying ? t("chat.stopAudio", "Stopp") : t("chat.playAudio", "Vorlesen")}</span>
                   </button>
                   <ShareButton
                     title={t("share.chatTitle")}
@@ -826,7 +826,7 @@ export function BibleBotChat() {
                     <button
                       className="ml-1 text-muted-foreground/50 hover:text-muted-foreground text-[10px]"
                       onClick={(e) => { e.preventDefault(); e.stopPropagation(); dismissDonateNudge(); }}
-                      aria-label="Schliessen"
+                      aria-label={t("chat.close", "Schliessen")}
                     >
                       ✕
                     </button>

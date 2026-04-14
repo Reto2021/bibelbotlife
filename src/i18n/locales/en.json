@@ -321,7 +321,15 @@
     "seniorMode": "Senior mode (larger text)",
     "teaserCta": "Start writing →",
     "namePlaceholder": "e.g. Eli, Miriam…",
-    "previousChats": "{{count}} previous conversations"
+    "previousChats": "{{count}} previous conversations",
+    "journeyProgress": "Day {{day}} of {{total}} · {{phase}}",
+    "translationModern": "Modern Translations",
+    "translationHistoric": "Historic (exact reference)",
+    "translationZuercher": "Zurich Bible (2007) – Reformed",
+    "translationLuther": "Luther Bible (2017) – Protestant",
+    "translationEinheit": "Unity Translation (2016) – Catholic",
+    "translationSchlachter": "Schlachter 2000 – Free Church",
+    "translationElberfelder": "Elberfelder 2006 – Literal"
   },
   "install": {
     "title": "Install BibleBot.Life",
