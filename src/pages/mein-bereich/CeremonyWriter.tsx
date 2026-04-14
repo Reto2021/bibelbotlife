@@ -61,7 +61,35 @@ export const WEDDING_CONFIG: CeremonyConfig = {
   seoPath: "/mein-bereich/hochzeit",
   fields: [
     { key: "partnerName1", labelKey: "ceremony.wedding.partner1", placeholder: "z.B. Anna Müller" },
+    { key: "partnerBirthName1", labelKey: "ceremony.wedding.birthName", placeholder: "z.B. geborene Huber" },
+    { key: "partnerBirthDate1", labelKey: "ceremony.wedding.birthDate", placeholder: "", type: "date" },
+    { key: "partnerFrom1", labelKey: "ceremony.wedding.from", placeholder: "z.B. Zürich" },
+    {
+      key: "partnerConfession1", labelKey: "ceremony.wedding.confession", placeholder: "", type: "select",
+      options: [
+        { value: "reformed", label: "Reformiert" },
+        { value: "catholic", label: "Katholisch" },
+        { value: "lutheran", label: "Lutherisch" },
+        { value: "evangelical", label: "Evangelikal" },
+        { value: "other", label: "Andere" },
+        { value: "none", label: "Keine" },
+      ],
+    },
     { key: "partnerName2", labelKey: "ceremony.wedding.partner2", placeholder: "z.B. Thomas Meier" },
+    { key: "partnerBirthName2", labelKey: "ceremony.wedding.birthName", placeholder: "z.B. geborene Schmidt" },
+    { key: "partnerBirthDate2", labelKey: "ceremony.wedding.birthDate", placeholder: "", type: "date" },
+    { key: "partnerFrom2", labelKey: "ceremony.wedding.from", placeholder: "z.B. Bern" },
+    {
+      key: "partnerConfession2", labelKey: "ceremony.wedding.confession", placeholder: "", type: "select",
+      options: [
+        { value: "reformed", label: "Reformiert" },
+        { value: "catholic", label: "Katholisch" },
+        { value: "lutheran", label: "Lutherisch" },
+        { value: "evangelical", label: "Evangelikal" },
+        { value: "other", label: "Andere" },
+        { value: "none", label: "Keine" },
+      ],
+    },
     { key: "weddingDate", labelKey: "ceremony.wedding.date", placeholder: "", type: "date" },
     { key: "venue", labelKey: "ceremony.wedding.venue", placeholder: "z.B. Kirche St. Peter, Zürich" },
     {
