@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import {
   Menu, X as XIcon, HandHeart, GraduationCap, Building2, HeartHandshake,
-  Send, FileText, ShieldCheck, LogIn, LogOut, User, Shield, MessageCircle, Heart,
+  Send, FileText, ShieldCheck, LogIn, LogOut, User, Users, Shield, MessageCircle, Heart,
   ChevronDown, BookOpen, Mail
 } from "lucide-react";
 import { AppLogo } from "@/components/AppLogo";
