@@ -6,6 +6,8 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState, useMemo } from "react";
+import { ResourceSuggest } from "./ResourceSuggest";
+import type { Resource } from "@/hooks/use-resources";
 
 export type BlockType = "song" | "reading" | "sermon" | "prayer" | "blessing" | "communion" | "liturgy" | "announcement" | "free" | "music";
 
