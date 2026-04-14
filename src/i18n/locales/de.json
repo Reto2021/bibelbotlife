@@ -1880,5 +1880,39 @@
     "tag_personal": "Persönlich",
     "tag_individual": "Individuell"
   },
-  "nav.about": "Über uns"
+  "nav.about": "Über uns",
+  "ceremony": {
+    "wedding": {
+      "title": "Hochzeit",
+      "subtitle": "Eheversprechen schreiben, Lieder auswählen und die Feier planen.",
+      "seoTitle": "Hochzeit vorbereiten",
+      "seoDesc": "Persönliche Trauungstexte erstellen und mit dem Seelsorger teilen.",
+      "partner1": "Partner/in 1",
+      "partner2": "Partner/in 2",
+      "date": "Datum der Trauung",
+      "venue": "Ort / Kirche",
+      "tradition": "Konfession / Tradition"
+    },
+    "baptism": {
+      "title": "Taufe",
+      "subtitle": "Taufwünsche formulieren und den Ablauf mit der Gemeinde vorbereiten.",
+      "seoTitle": "Taufe vorbereiten",
+      "seoDesc": "Persönliche Tauftexte erstellen und mit dem Seelsorger teilen.",
+      "childName": "Name des Täuflings",
+      "birthDate": "Geburtsdatum",
+      "parents": "Eltern",
+      "godparents": "Paten",
+      "tradition": "Konfession / Tradition"
+    },
+    "confirmation": {
+      "title": "Konfirmation / Firmung",
+      "subtitle": "Konfirmationsspruch finden, persönliche Texte und Gebete vorbereiten.",
+      "seoTitle": "Konfirmation / Firmung vorbereiten",
+      "seoDesc": "Persönliche Konfirmations- oder Firmungstexte erstellen.",
+      "name": "Name des Konfirmanden / Firmlings",
+      "verse": "Konfirmationsspruch / Bibelvers",
+      "hobbies": "Interessen / Hobbys",
+      "tradition": "Art der Feier"
+    }
+  }
 }
