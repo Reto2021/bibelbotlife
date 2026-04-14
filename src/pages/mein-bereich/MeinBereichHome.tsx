@@ -21,21 +21,21 @@ const MeinBereichHome = () => {
       descKey: "meinBereich.weddingDesc",
       icon: Heart,
       href: "/mein-bereich/hochzeit",
-      available: false,
+      available: true,
     },
     {
       titleKey: "meinBereich.baptismCeremony",
       descKey: "meinBereich.baptismDesc",
       icon: Baby,
       href: "/mein-bereich/taufe",
-      available: false,
+      available: true,
     },
     {
       titleKey: "meinBereich.confirmation",
       descKey: "meinBereich.confirmationDesc",
       icon: BookHeart,
       href: "/mein-bereich/konfirmation",
-      available: false,
+      available: true,
     },
   ];
 
