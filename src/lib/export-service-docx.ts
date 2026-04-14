@@ -57,6 +57,7 @@ interface ExportOptions {
   tradition: string;
   blocks: ServiceBlockData[];
   churchName?: string;
+  notes?: string;
 }
 
 const cellBorder = { style: BorderStyle.SINGLE, size: 1, color: "CCCCCC" };
@@ -64,7 +65,7 @@ const cellBorders = { top: cellBorder, bottom: cellBorder, left: cellBorder, rig
 const cellMargins = { top: 60, bottom: 60, left: 80, right: 80 };
 
 function buildDocx(options: ExportOptions): Document {
-  const { title, serviceDate, serviceTime, serviceType, tradition, blocks, churchName } = options;
+  const { title, serviceDate, serviceTime, serviceType, tradition, blocks, churchName, notes } = options;
 
   const dateFormatted = new Date(serviceDate).toLocaleDateString("de-CH", {
     weekday: "long",
@@ -215,9 +216,20 @@ function buildDocx(options: ExportOptions): Document {
             children: [new TextRun({ text: churchName ? `${churchName}` : "", size: 20, color: "666666", font: "Arial" })],
           }),
           new Paragraph({
-            spacing: { after: 200 },
+            spacing: { after: notes ? 40 : 200 },
             children: [new TextRun({ text: metaLine, size: 20, color: "666666", font: "Arial" })],
           }),
+          ...(notes
+            ? [
+                new Paragraph({
+                  spacing: { after: 200 },
+                  children: [
+                    new TextRun({ text: "Leitgedanke: ", bold: true, italics: true, size: 20, color: "444444", font: "Arial" }),
+                    new TextRun({ text: notes, italics: true, size: 20, color: "444444", font: "Arial" }),
+                  ],
+                }),
+              ]
+            : []),
           // Table
           new Table({
             width: { size: 9026, type: WidthType.DXA },

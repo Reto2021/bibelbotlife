@@ -5,6 +5,7 @@ import { arrayMove, SortableContext, sortableKeyboardCoordinates, verticalListSo
 import { ArrowLeft, Save, Clock, Plus, Play, Library, BookmarkPlus, FileDown, FileText, Mail, Users, GripVertical, PanelRightOpen, PanelRightClose, Trash2, Copy, MoreVertical, Archive, Eye, FileEdit } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ServiceBlock, type ServiceBlockData, type BlockType } from "@/components/services/ServiceBlock";
@@ -41,6 +42,7 @@ export default function ServiceEditor() {
   const [serviceType, setServiceType] = useState("regular");
   const [tradition, setTradition] = useState("reformed");
   const [blocks, setBlocks] = useState<ServiceBlockData[]>([]);
+  const [notes, setNotes] = useState("");
   const [saving, setSaving] = useState(false);
   const [loading, setLoading] = useState(!isNew);
   const [bibleBotOpen, setBibleBotOpen] = useState(false);
@@ -170,6 +172,7 @@ export default function ServiceEditor() {
           setServiceType(data.service_type);
           setTradition(data.tradition);
           setBlocks((data.blocks as unknown as ServiceBlockData[]) || []);
+          setNotes(data.notes || "");
           setServiceStatus(data.status);
         }
         setLoading(false);
@@ -292,6 +295,7 @@ export default function ServiceEditor() {
         service_type: serviceType as any,
         tradition: tradition as any,
         blocks: blocks as any,
+        notes: notes || null,
         created_by: user.id,
         church_id: church.id,
       };
@@ -358,14 +362,14 @@ export default function ServiceEditor() {
             <>
               <Button variant="outline" size="sm" onClick={() => exportServicePdf({
                 title, serviceDate, serviceTime, serviceType, tradition, blocks,
-                churchName: church?.name,
+                churchName: church?.name, notes,
               })}>
                 <FileDown className="h-4 w-4 sm:mr-1" />
                 <span className="hidden sm:inline">PDF</span>
               </Button>
               <Button variant="outline" size="sm" onClick={() => exportServiceDocx({
                 title, serviceDate, serviceTime, serviceType, tradition, blocks,
-                churchName: church?.name,
+                churchName: church?.name, notes,
               })}>
                 <FileText className="h-4 w-4 sm:mr-1" />
                 <span className="hidden sm:inline">Word</span>
@@ -493,6 +497,16 @@ export default function ServiceEditor() {
                 </SelectContent>
               </Select>
             </div>
+          </div>
+          <div className="mt-4">
+            <label className="text-sm font-medium text-foreground mb-1.5 block">Leitgedanke / Thema</label>
+            <Textarea
+              value={notes}
+              onChange={(e) => setNotes(e.target.value)}
+              placeholder="z.B. «Dankbarkeit im Alltag» — der rote Faden für diesen Gottesdienst"
+              className="resize-none min-h-[56px]"
+              rows={2}
+            />
           </div>
         </CardContent>
       </Card>
