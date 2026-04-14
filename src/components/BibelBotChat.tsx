@@ -826,7 +826,7 @@ export function BibleBotChat() {
                     <button
                       className="ml-1 text-muted-foreground/50 hover:text-muted-foreground text-[10px]"
                       onClick={(e) => { e.preventDefault(); e.stopPropagation(); dismissDonateNudge(); }}
-                      aria-label="Schliessen"
+                      aria-label={t("chat.close", "Schliessen")}
                     >
                       ✕
                     </button>
