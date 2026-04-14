@@ -43,12 +43,58 @@ export default function ChurchWizard() {
     return false;
   };
 
+  // Map wizard denomination to DB tradition for resource filtering
+  const traditionMap: Record<string, string> = {
+    Reformiert: "reformed",
+    Katholisch: "catholic",
+    Lutherisch: "lutheran",
+    Freikirchlich: "evangelical",
+    Säkular: "secular",
+  };
+
+  const copySystemResources = async (churchId: string, tradition: string) => {
+    try {
+      const dbTradition = traditionMap[tradition] || "reformed";
+      // Fetch system resources matching the tradition or with no tradition set
+      const { data: sysResources } = await supabase
+        .from("resource_library")
+        .select("*")
+        .eq("is_system", true)
+        .or(`tradition.eq.${dbTradition},tradition.is.null`);
+
+      if (!sysResources?.length) return;
+
+      const copies = sysResources.map((r) => ({
+        title: r.title,
+        content: r.content,
+        resource_type: r.resource_type,
+        tags: r.tags,
+        language: r.language,
+        hymnal_ref: r.hymnal_ref,
+        tradition: r.tradition,
+        country: r.country,
+        church_id: churchId,
+        created_by: user!.id,
+        is_system: false,
+        metadata: { imported_from_system: r.id },
+      }));
+
+      // Insert in batches of 50
+      for (let i = 0; i < copies.length; i += 50) {
+        await supabase.from("resource_library").insert(copies.slice(i, i + 50));
+      }
+    } catch {
+      // Non-critical: don't block onboarding
+      console.warn("Resource copy during onboarding failed");
+    }
+  };
+
   const handleCreate = async () => {
     if (!user) return;
     setSaving(true);
     try {
       const slug = name.trim().toLowerCase().replace(/[^a-z0-9äöüàéè]/g, "-").replace(/-+/g, "-").replace(/^-|-$/g, "");
-      const { error } = await supabase.from("church_partners").insert({
+      const { data: churchData, error } = await supabase.from("church_partners").insert({
         name: name.trim(),
         slug: slug || `church-${Date.now()}`,
         denomination,
@@ -56,8 +102,14 @@ export default function ChurchWizard() {
         country,
         owner_id: user.id,
         is_active: false,
-      } as any);
+      } as any).select("id").single();
       if (error) throw error;
+
+      // Copy matching system resources into church library
+      if (churchData?.id) {
+        await copySystemResources(churchData.id, denomination);
+      }
+
       await queryClient.invalidateQueries({ queryKey: ["user-church"] });
       toast.success("Gemeinde erstellt!");
       navigate("/dashboard");
