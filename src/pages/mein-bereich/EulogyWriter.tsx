@@ -13,7 +13,6 @@ import { useAuth } from "@/hooks/use-auth";
 import { useCeremonyDrafts } from "@/hooks/use-ceremony-drafts";
 import { useResources } from "@/hooks/use-resources";
 import { Badge } from "@/components/ui/badge";
-import { Link as RouterLink } from "react-router-dom";
 import jsPDF from "jspdf";
 
 interface Recording {
