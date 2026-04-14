@@ -915,7 +915,14 @@
         "desc": "Ergänzende geistliche Impulse für Klienten in psychosozialer oder seelsorgerischer Beratung."
       }
     },
-    "patronageNote": "BibleBot.Life wird von einem gemeinnützigen Verein getragen und finanziert sich ausschliesslich durch freiwillige Spenden und Sponsorings. Es gibt keine Werbung, keine Datenverkäufe und keine kostenpflichtigen Features. Alle Beiträge fliessen direkt in die Weiterentwicklung, den technischen Betrieb, die weltweite Verbreitung und das Community-Management. Spenden können je nach Kanton steuerlich abzugsfähig sein."
+    "patronageNote": "BibleBot.Life wird von einem gemeinnützigen Verein getragen und finanziert sich ausschliesslich durch freiwillige Spenden und Sponsorings. Es gibt keine Werbung, keine Datenverkäufe und keine kostenpflichtigen Features. Alle Beiträge fliessen direkt in die Weiterentwicklung, den technischen Betrieb, die weltweite Verbreitung und das Community-Management. Spenden können je nach Kanton steuerlich abzugsfähig sein.",
+    "approachTitle": "Ihr digitaler 1st-Level-Kanal",
+    "approachSubtitle": "Die meisten Menschen wenden sich nicht direkt an einen Seelsorger. Sie googeln, sie grübeln, sie schweigen. BibleBot.Life fängt sie dort auf – als erste, niederschwellige Anlaufstelle in Ihrem Seelsorge-Ökosystem.",
+    "approach1Desc": "24/7 erreichbar, anonym, kostenlos. Beantwortet Glaubensfragen, gibt Impulse und begleitet – ohne Hemmschwelle. Ihr digitaler Erstkontakt.",
+    "approach2Desc": "BibleBot weckt Interesse und Vertrauen. Der nächste Schritt: der Besuch in Ihrer Gemeinde. Wir verlinken direkt auf Ihre Gottesdienstzeiten.",
+    "approach3Desc": "Wenn aus Fragen persönlicher Bedarf wird, vermittelt BibleBot direkt an Ihre Seelsorge weiter – mit Kontaktformular und Vertrauensvorschuss.",
+    "approachNote": "BibleBot.Life ersetzt keine Seelsorge – es öffnet die Tür dorthin. Als Ihr digitaler 1st-Level-Kanal senken wir die Hemmschwelle und bringen Menschen zu Ihnen.",
+    "approachCta": "Jetzt Partnerschaft besprechen"
   },
   "institutions": {
     "badge": "Für Organisationen",
