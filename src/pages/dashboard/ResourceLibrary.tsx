@@ -251,6 +251,12 @@ export default function ResourceLibrary() {
                 {COUNTRIES.find(c => c.value === r.country)?.label ?? r.country}
               </span>
             )}
+            {r.language && (
+              <Badge variant="outline" className="text-xs shrink-0">
+                {LANGUAGES.find(l => l.value === r.language)?.label ?? r.language}
+              </Badge>
+            )}
+            )}
           </div>
           {r.content && (
             <p className="text-sm text-muted-foreground line-clamp-2 mb-2">{r.content}</p>
