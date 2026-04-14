@@ -140,7 +140,7 @@ export default function ResourceLibrary() {
 
   const openCreate = () => {
     setEditingId(null);
-    setForm(emptyForm);
+    setForm(emptyForm(defaultLang));
     setDialogOpen(true);
   };
 
