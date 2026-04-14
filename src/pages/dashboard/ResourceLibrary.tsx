@@ -192,6 +192,7 @@ export default function ResourceLibrary() {
           content: form.content.trim() || null,
           resource_type: form.resource_type,
           tags: form.tags,
+          language: form.language,
           church_id: church?.id ?? null,
         });
         toast.success("Ressource erstellt");
