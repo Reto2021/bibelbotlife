@@ -4,7 +4,12 @@
     "prayerWall": "ლოცვის კედელი",
     "bibleQuiz": "ბიბლიის ვიქტორინა",
     "forCelebrants": "მღვდელთმსახურთათვის",
-    "forCelebrantsMobile": "მღვდელთმსახურთათვის და მწვრთნელებისთვის"
+    "forCelebrantsMobile": "მღვდელთმსახურთათვის და მწვრთნელებისთვის",
+    "donate": "Donate",
+    "more": "More",
+    "explore": "Explore",
+    "professionals": "For Professionals",
+    "support": "Support"
   },
   "loader": "იტვირთება…",
   "hero": {

@@ -4,7 +4,12 @@
     "prayerWall": "Стена молитвы",
     "bibleQuiz": "Библейская викторина",
     "forCelebrants": "Для капелланов",
-    "forCelebrantsMobile": "Для капелланов и коучей"
+    "forCelebrantsMobile": "Для капелланов и коучей",
+    "donate": "Donate",
+    "more": "More",
+    "explore": "Explore",
+    "professionals": "For Professionals",
+    "support": "Support"
   },
   "loader": "Загрузка…",
   "hero": {

@@ -4,7 +4,12 @@
     "prayerWall": "Rukousmuuri",
     "bibleQuiz": "Raamattuvisa",
     "forCelebrants": "Sielunhoitajille",
-    "forCelebrantsMobile": "Sielunhoitajille ja valmentajille"
+    "forCelebrantsMobile": "Sielunhoitajille ja valmentajille",
+    "donate": "Donate",
+    "more": "More",
+    "explore": "Explore",
+    "professionals": "For Professionals",
+    "support": "Support"
   },
   "loader": "Ladataan…",
   "hero": {

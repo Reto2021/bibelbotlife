@@ -5,7 +5,12 @@
     "prayerWall": "Gebetswand",
     "bibleQuiz": "Bibelquiz",
     "forCelebrants": "Für Seelsorger",
-    "forCelebrantsMobile": "Für Seelsorger & Coaches"
+    "forCelebrantsMobile": "Für Seelsorger & Coaches",
+    "donate": "Spenden",
+    "more": "Mehr",
+    "explore": "Entdecken",
+    "professionals": "Für Fachpersonen",
+    "support": "Unterstützen"
   },
   "loader": "Wird geladen…",
   "hero": {
@@ -1402,7 +1407,13 @@
     "emptyState": "Gib ein Thema oder eine Frage ein",
     "searchFailed": "Suche fehlgeschlagen",
     "unknownError": "Unbekannter Fehler",
-    "suggestedTerms": ["Vergebung", "Hoffnung", "Liebe Gottes", "Schöpfung", "Gerechtigkeit"]
+    "suggestedTerms": [
+      "Vergebung",
+      "Hoffnung",
+      "Liebe Gottes",
+      "Schöpfung",
+      "Gerechtigkeit"
+    ]
   },
   "toolPrompts": {
     "sevenWhys": "Ich möchte die 7-Warum-Methode ausprobieren",

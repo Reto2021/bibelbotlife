@@ -4,7 +4,12 @@
     "prayerWall": "Muro de oración",
     "bibleQuiz": "Quiz bíblico",
     "forCelebrants": "Para capellanes",
-    "forCelebrantsMobile": "Para capellanes y coaches"
+    "forCelebrantsMobile": "Para capellanes y coaches",
+    "donate": "Donate",
+    "more": "More",
+    "explore": "Explore",
+    "professionals": "For Professionals",
+    "support": "Support"
   },
   "loader": "Cargando…",
   "hero": {

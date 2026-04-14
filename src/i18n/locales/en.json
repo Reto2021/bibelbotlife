@@ -5,7 +5,12 @@
     "prayerWall": "Prayer Wall",
     "bibleQuiz": "Bible Quiz",
     "forCelebrants": "For Chaplains",
-    "forCelebrantsMobile": "For Chaplains & Coaches"
+    "forCelebrantsMobile": "For Chaplains & Coaches",
+    "donate": "Donate",
+    "more": "More",
+    "explore": "Explore",
+    "professionals": "For Professionals",
+    "support": "Support"
   },
   "loader": "Loading…",
   "hero": {
@@ -1402,7 +1407,13 @@
     "emptyState": "Enter a topic or question",
     "searchFailed": "Search failed",
     "unknownError": "Unknown error",
-    "suggestedTerms": ["Forgiveness", "Hope", "God's love", "Creation", "Justice"]
+    "suggestedTerms": [
+      "Forgiveness",
+      "Hope",
+      "God's love",
+      "Creation",
+      "Justice"
+    ]
   },
   "toolPrompts": {
     "sevenWhys": "I'd like to try the 7-Whys method",

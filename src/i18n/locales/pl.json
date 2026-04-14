@@ -4,7 +4,12 @@
     "prayerWall": "Ściana modlitwy",
     "bibleQuiz": "Quiz biblijny",
     "forCelebrants": "Dla duszpasterzy",
-    "forCelebrantsMobile": "Dla duszpasterzy i coachów"
+    "forCelebrantsMobile": "Dla duszpasterzy i coachów",
+    "donate": "Donate",
+    "more": "More",
+    "explore": "Explore",
+    "professionals": "For Professionals",
+    "support": "Support"
   },
   "loader": "Ładowanie…",
   "hero": {
