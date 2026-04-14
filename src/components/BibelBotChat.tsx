@@ -76,6 +76,29 @@ const AUTO_OPEN_KEY = "bibelbot-autoopened";
 const MESSAGES_KEY = "bibelbot-messages";
 const JOURNEY_START_KEY = "bibelbot-journey-start";
 const JOURNEY_CHECKINS_KEY = "bibelbot-checkins";
+const DONATED_AT_KEY = "bibelbot-donated-at";
+const DONATE_DISMISS_KEY = "bibelbot-donate-dismissed";
+const DONATE_GRACE_DAYS = 30;
+
+function hasDonatedRecently(): boolean {
+  try {
+    const ts = localStorage.getItem(DONATED_AT_KEY);
+    if (!ts) return false;
+    return Date.now() - parseInt(ts, 10) < DONATE_GRACE_DAYS * 24 * 60 * 60 * 1000;
+  } catch { return false; }
+}
+
+function isDonateNudgeDismissed(): boolean {
+  try {
+    const ts = localStorage.getItem(DONATE_DISMISS_KEY);
+    if (!ts) return false;
+    return Date.now() - parseInt(ts, 10) < 7 * 24 * 60 * 60 * 1000; // 7 days
+  } catch { return false; }
+}
+
+function dismissDonateNudge() {
+  try { localStorage.setItem(DONATE_DISMISS_KEY, Date.now().toString()); } catch {}
+}
 
 function getJourneyDay(): number {
   try {
