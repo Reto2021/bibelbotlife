@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import {
   ArrowLeft, Sparkles, Download, Loader2, Save, Share2,
   Check, Copy, ExternalLink, Music, BookOpenText, HandHeart,
-  Mic, Square, Play, Pause, Trash2,
+  Mic, Square, Play, Pause, Trash2, ChevronDown, ChevronUp,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -198,6 +198,7 @@ export default function CeremonyWriter({ config }: Props) {
   const [formData, setFormData] = useState<Record<string, string>>({});
   const [notes, setNotes] = useState("");
   const [draftId, setDraftId] = useState<string | null>(null);
+  const [expandedResourceId, setExpandedResourceId] = useState<string | null>(null);
   const [shareToken, setShareToken] = useState<string | null>(null);
   const [isShared, setIsShared] = useState(false);
   const [linkCopied, setLinkCopied] = useState(false);
@@ -712,20 +713,52 @@ export default function CeremonyWriter({ config }: Props) {
             </CardHeader>
             <CardContent>
               <div className="grid gap-2 sm:grid-cols-2">
-                {suggestedResources.map((r) => (
-                  <div key={r.id} className="flex items-start gap-2 p-2.5 rounded-lg border hover:bg-muted/50 transition-colors">
-                    <div className="mt-0.5 text-primary">{resourceIcon(r.resource_type)}</div>
-                    <div className="flex-1 min-w-0">
-                      <p className="text-sm font-medium truncate">{r.title}</p>
-                      <div className="flex items-center gap-1 mt-0.5">
-                        {r.hymnal_ref && (
-                          <Badge variant="outline" className="text-xs font-mono">{r.hymnal_ref}</Badge>
+                {suggestedResources.map((r) => {
+                  const isExpanded = expandedResourceId === r.id;
+                  return (
+                    <div key={r.id} className="rounded-lg border hover:bg-muted/50 transition-colors">
+                      <button
+                        type="button"
+                        onClick={() => setExpandedResourceId(isExpanded ? null : r.id)}
+                        className="flex items-start gap-2 p-2.5 w-full text-left"
+                      >
+                        <div className="mt-0.5 text-primary">{resourceIcon(r.resource_type)}</div>
+                        <div className="flex-1 min-w-0">
+                          <p className="text-sm font-medium truncate">{r.title}</p>
+                          <div className="flex items-center gap-1 mt-0.5">
+                            {r.hymnal_ref && (
+                              <Badge variant="outline" className="text-xs font-mono">{r.hymnal_ref}</Badge>
+                            )}
+                            <span className="text-xs text-muted-foreground">{r.resource_type}</span>
+                          </div>
+                        </div>
+                        {r.content && (
+                          isExpanded
+                            ? <ChevronUp className="h-4 w-4 text-muted-foreground shrink-0 mt-0.5" />
+                            : <ChevronDown className="h-4 w-4 text-muted-foreground shrink-0 mt-0.5" />
                         )}
-                        <span className="text-xs text-muted-foreground">{r.resource_type}</span>
-                      </div>
+                      </button>
+                      {isExpanded && r.content && (
+                        <div className="px-2.5 pb-2.5 border-t">
+                          <p className="text-sm whitespace-pre-wrap mt-2">{r.content}</p>
+                          <Button
+                            type="button"
+                            variant="ghost"
+                            size="sm"
+                            className="mt-1 gap-1 text-xs h-7"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              navigator.clipboard.writeText(r.content || "");
+                              toast.success("Kopiert");
+                            }}
+                          >
+                            <Copy className="h-3 w-3" /> Kopieren
+                          </Button>
+                        </div>
+                      )}
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
               <p className="text-xs text-muted-foreground mt-3">
                 Weitere Ressourcen findest du in der <Link to="/dashboard/resources" className="underline text-primary">Bibliothek</Link>.
