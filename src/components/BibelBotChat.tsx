@@ -725,8 +725,8 @@ export function BibleBotChat() {
                 {msg.role === "assistant" ? (
                   <div className="prose prose-sm max-w-none dark:prose-invert font-serif">
                     <ReactMarkdown components={{
-                      p: ({ children }) => <p>{makeRefsClickable(children, sendMessage)}</p>,
-                      li: ({ children }) => <li>{makeRefsClickable(children, sendMessage)}</li>,
+                      p: ({ children }) => <p>{makeRefsClickable(children, sendMessage, t)}</p>,
+                      li: ({ children }) => <li>{makeRefsClickable(children, sendMessage, t)}</li>,
                     }}>{cleanText}</ReactMarkdown>
                   </div>
                 ) : msg.content}
