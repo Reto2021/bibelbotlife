@@ -1825,5 +1825,25 @@
     "thankYouTitle": "Mèsi!",
     "thankYouMessage": "Mesaj ou a te resevwa. N ap reponn ou pi vit posib.",
     "sendAnother": "Voye yon lòt mesaj"
-  }
+  },
+  "about": {
+    "title": "Sou Nou – BibleBot.Life",
+    "metaDesc": "Ki moun ki dèyè BibleBot.Life? Aprann plis sou fondatè a Reto Wettstein ak vizyon ki dèyè pwojè a.",
+    "heading": "Sou BibleBot.Life",
+    "intro": "BibleBot.Life se yon pwojè pasyon pèsonèl – li fèt nan kwayans ke Bib la dwe aksesib ak konprann pou tout moun. Kèlkeswa denominasyon, lang, oswa konesans teknik.",
+    "visionTitle": "Vizyon an",
+    "visionText": "Yon konpayon gratis, anonim pou tout moun ki vle eksplore Bib la. Pa gen swiv, pa gen jijman – jis yon bon konvèsasyon ak chandèl. Nan 38 lang, pou legliz, pastè, ak chak endividi.",
+    "founderTitle": "Fondatè a",
+    "founderBio": "Reto Wettstein is a business informatics specialist, entrepreneur, and politically engaged family man from Brugg, Switzerland. He is the founder of biz.Telligence, Prime Data, and 2Go Media AG – companies specializing in digital marketing and CRM processes. With passion, strategic thinking, and dedication, he bridges technology with community engagement.",
+    "education": "Edikasyon",
+    "awards": "Prim",
+    "engagements": "Angajman",
+    "personal": "Pèsonèl",
+    "residence": "Rezídans",
+    "confession": "Konfesyon",
+    "family": "Fanmi",
+    "familyValue": "Marye, de pitit",
+    "cta": "Kesyon, ide, oswa jis ou vle di bonswa?"
+  },
+  "nav.about": "Sou Nou"
 }
