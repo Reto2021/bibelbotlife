@@ -169,6 +169,7 @@ export default function ServiceEditor() {
           setServiceType(data.service_type);
           setTradition(data.tradition);
           setBlocks((data.blocks as unknown as ServiceBlockData[]) || []);
+          setServiceStatus(data.status);
         }
         setLoading(false);
       });
