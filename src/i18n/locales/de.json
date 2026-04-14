@@ -1854,7 +1854,24 @@
     "confession": "Konfession",
     "family": "Familie",
     "familyValue": "Verheiratet, zwei Kinder",
-    "cta": "Fragen, Ideen oder einfach Hallo sagen?"
+    "cta": "Fragen, Ideen oder einfach Hallo sagen?",
+    "approachTitle": "Unser Ansatz",
+    "approachSubtitle": "Seelsorge beginnt nicht erst im persönlichen Gespräch. Sie beginnt dort, wo Menschen Fragen haben – oft still, oft nachts, oft allein.",
+    "level1Badge": "Erste Anlaufstelle",
+    "level1Desc": "Rund um die Uhr da, anonym und ohne Hemmschwelle. Für alle, die eine Frage haben, einen Impuls suchen oder einfach nicht allein sein möchten – der erste Schritt ist der leichteste.",
+    "level2Badge": "Gemeinschaft",
+    "level2Title": "Gottesdienst & Gemeinde",
+    "level2Desc": "Zusammenkommen, zuhören, miteinander feiern. Der Gottesdienst gibt dem Glauben ein Zuhause in der Gemeinschaft.",
+    "level3Badge": "Persönlich",
+    "level3Title": "1:1 Seelsorge",
+    "level3Desc": "Das vertrauliche Gespräch unter vier Augen. Für die Momente, die persönliche Begleitung brauchen.",
+    "approachNote": "BibleBot.Life senkt die Hemmschwelle – und führt Menschen Schritt für Schritt näher zur Gemeinschaft und zur persönlichen Begleitung.",
+    "tag_anonymous": "Anonym",
+    "tag_free": "Kostenlos",
+    "tag_weekly": "Wöchentlich",
+    "tag_community": "Gemeinschaft",
+    "tag_personal": "Persönlich",
+    "tag_individual": "Individuell"
   },
   "nav.about": "Über uns"
 }
