@@ -20,6 +20,7 @@ import { Button } from "@/components/ui/button";
 import { LogOut } from "lucide-react";
 import { AppLogo } from "@/components/AppLogo";
 import { Link } from "react-router-dom";
+import { BibleBotChat } from "@/components/BibelBotChat";
 
 const navItems = [
   { title: "Übersicht", url: "/dashboard", icon: Home },
@@ -99,6 +100,7 @@ export default function Dashboard() {
           <main className="flex-1 p-6">
             <Outlet />
           </main>
+          <BibleBotChat />
         </div>
       </div>
     </SidebarProvider>
