@@ -124,6 +124,12 @@ export function SiteHeader() {
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
+                <Link to="/ueber-uns" className="flex items-center gap-2 cursor-pointer">
+                  <Users className="h-4 w-4" />
+                  {t("nav.about", "Über uns")}
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
                 <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 cursor-pointer">
                   <Send className="h-4 w-4" />
                   Telegram Bot
