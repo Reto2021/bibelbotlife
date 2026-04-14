@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-import { Building2, Users, TrendingUp, AlertTriangle, MessageCircle, Search, Target, Heart, Link as LinkIcon } from "lucide-react";
+import { Building2, Users, TrendingUp, AlertTriangle, MessageCircle, Search, Target, Heart, Link as LinkIcon, UserPlus } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
@@ -53,6 +53,7 @@ export default function AdminDashboard() {
   }, [churches, search, planFilter, statusFilter]);
 
   const statCards = [
+    { label: "Registrierte User", value: stats?.registeredUsers ?? "–", icon: UserPlus, color: "text-blue-600" },
     { label: "Gemeinden", value: stats?.totalChurches ?? "–", icon: Building2, color: "text-primary" },
     { label: "Aktive Abos", value: stats?.activeSubscriptions ?? "–", icon: TrendingUp, color: "text-green-600" },
     { label: "Ablaufend (30d)", value: stats?.expiringSoon ?? "–", icon: AlertTriangle, color: "text-yellow-600" },
