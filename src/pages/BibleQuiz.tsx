@@ -41,12 +41,6 @@ function getSessionId() {
   return id;
 }
 
-const difficultyConfig: Record<Difficulty, { label: string; emoji: string; desc: string; color: string }> = {
-  easy: { label: "Leicht", emoji: "🟢", desc: "Bücher aus verschiedenen Teilen der Bibel", color: "border-emerald-400 bg-emerald-50 dark:bg-emerald-950/30 text-emerald-700 dark:text-emerald-300" },
-  medium: { label: "Mittel", emoji: "🟡", desc: "Bücher aus dem gleichen Testament", color: "border-amber-400 bg-amber-50 dark:bg-amber-950/30 text-amber-700 dark:text-amber-300" },
-  hard: { label: "Schwer", emoji: "🔴", desc: "Sehr ähnliche Bücher – für Kenner", color: "border-red-400 bg-red-50 dark:bg-red-950/30 text-red-700 dark:text-red-300" },
-};
-
 interface HighscoreEntry {
   score: number;
   total_questions: number;
@@ -56,6 +50,7 @@ interface HighscoreEntry {
 }
 
 export default function BibleQuiz() {
+  const { t } = useTranslation();
   const [mode, setMode] = useState<QuizMode | null>(null);
   const [difficulty, setDifficulty] = useState<Difficulty>("medium");
   const [question, setQuestion] = useState<QuizQuestion | null>(null);
@@ -63,6 +58,12 @@ export default function BibleQuiz() {
   const [selected, setSelected] = useState<string | null>(null);
   const [score, setScore] = useState(0);
   const [highscores, setHighscores] = useState<HighscoreEntry[]>([]);
+
+  const difficultyConfig: Record<Difficulty, { labelKey: string; emoji: string; descKey: string; color: string }> = {
+    easy: { labelKey: "quiz.easy", emoji: "🟢", descKey: "quiz.easyDesc", color: "border-emerald-400 bg-emerald-50 dark:bg-emerald-950/30 text-emerald-700 dark:text-emerald-300" },
+    medium: { labelKey: "quiz.medium", emoji: "🟡", descKey: "quiz.mediumDesc", color: "border-amber-400 bg-amber-50 dark:bg-amber-950/30 text-amber-700 dark:text-amber-300" },
+    hard: { labelKey: "quiz.hard", emoji: "🔴", descKey: "quiz.hardDesc", color: "border-red-400 bg-red-50 dark:bg-red-950/30 text-red-700 dark:text-red-300" },
+  };
 
   useEffect(() => {
     supabase
@@ -138,24 +139,26 @@ export default function BibleQuiz() {
     fetchQuestion(mode!, difficulty);
   }
 
+  const diffCfg = difficultyConfig[difficulty];
+
   // Mode selection screen
   if (!mode) {
     return (
       <>
         <SEOHead
-          title="Bibelquiz – Spielerisch lernen | BibleBot.Life"
-          description="Teste dein Bibelwissen mit Multiple-Choice-Fragen und Vers-Raten."
+          title={t("quiz.seoTitle")}
+          description={t("quiz.seoDesc")}
         />
         <div className="min-h-screen bg-background">
           <SiteHeader />
           <div className="container mx-auto max-w-lg px-4 py-8">
-            <h1 className="text-2xl md:text-3xl font-bold text-foreground mb-10">🧠 Bibelquiz</h1>
+            <h1 className="text-2xl md:text-3xl font-bold text-foreground mb-10">🧠 {t("quiz.title")}</h1>
 
             {/* Difficulty selector */}
             <div className="mb-8">
               <div className="flex items-center gap-2 mb-3">
                 <Gauge className="h-4 w-4 text-muted-foreground" />
-                <span className="text-sm font-medium text-foreground">Schwierigkeitsgrad</span>
+                <span className="text-sm font-medium text-foreground">{t("quiz.difficulty")}</span>
               </div>
               <div className="grid grid-cols-3 gap-2">
                 {(["easy", "medium", "hard"] as const).map((d) => {
@@ -173,8 +176,8 @@ export default function BibleQuiz() {
                       )}
                     >
                       <span className="text-lg block mb-0.5">{cfg.emoji}</span>
-                      <span className={cn("text-sm font-semibold block", !isActive && "text-foreground")}>{cfg.label}</span>
-                      <span className={cn("text-[11px] leading-tight block mt-0.5", !isActive && "text-muted-foreground")}>{cfg.desc}</span>
+                      <span className={cn("text-sm font-semibold block", !isActive && "text-foreground")}>{t(cfg.labelKey)}</span>
+                      <span className={cn("text-[11px] leading-tight block mt-0.5", !isActive && "text-muted-foreground")}>{t(cfg.descKey)}</span>
                     </button>
                   );
                 })}
@@ -193,8 +196,8 @@ export default function BibleQuiz() {
                       <HelpCircle className="h-6 w-6 text-primary" />
                     </div>
                     <div className="flex-1">
-                      <h2 className="font-semibold text-foreground text-lg">Multiple Choice</h2>
-                      <p className="text-muted-foreground text-sm">KI generiert Fragen zu Bibelversen</p>
+                      <h2 className="font-semibold text-foreground text-lg">{t("quiz.multipleChoice")}</h2>
+                      <p className="text-muted-foreground text-sm">{t("quiz.multipleChoiceDesc")}</p>
                     </div>
                     <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
                   </div>
@@ -211,8 +214,8 @@ export default function BibleQuiz() {
                       <BookOpen className="h-6 w-6 text-secondary" />
                     </div>
                     <div className="flex-1">
-                      <h2 className="font-semibold text-foreground text-lg">Vers erraten</h2>
-                      <p className="text-muted-foreground text-sm">Welches Buch? Erkenne den Bibelvers</p>
+                      <h2 className="font-semibold text-foreground text-lg">{t("quiz.verseGuess")}</h2>
+                      <p className="text-muted-foreground text-sm">{t("quiz.verseGuessDesc")}</p>
                     </div>
                     <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-secondary transition-colors" />
                   </div>
@@ -226,7 +229,7 @@ export default function BibleQuiz() {
                 <Card className="p-5">
                   <div className="flex items-center gap-2 mb-4">
                     <Trophy className="h-5 w-5 text-primary" />
-                    <h3 className="font-semibold text-foreground">Bestenliste</h3>
+                    <h3 className="font-semibold text-foreground">{t("quiz.highscores")}</h3>
                   </div>
                   <div className="space-y-2">
                     {highscores.map((hs, i) => {
@@ -239,9 +242,9 @@ export default function BibleQuiz() {
                           <span className="w-6 text-center font-medium">{medal}</span>
                           <span className="font-bold text-foreground">{hs.score}/{hs.total_questions}</span>
                           <span className="text-muted-foreground">({pct}%)</span>
-                          <span className="text-xs" title={hs.difficulty === "easy" ? "Leicht" : hs.difficulty === "hard" ? "Schwer" : "Mittel"}>{diffEmoji}</span>
+                          <span className="text-xs" title={t(`quiz.${hs.difficulty}`)}>{diffEmoji}</span>
                           <Badge variant="outline" className="text-[10px] ml-auto">
-                            {hs.quiz_mode === "multiple_choice" ? "MC" : "Vers"}
+                            {hs.quiz_mode === "multiple_choice" ? "MC" : t("quiz.verseGuess")}
                           </Badge>
                           <span className="text-xs text-muted-foreground">{date}</span>
                         </div>
@@ -257,17 +260,15 @@ export default function BibleQuiz() {
     );
   }
 
-  const diffCfg = difficultyConfig[difficulty];
-
   // Round summary screen
   if (roundComplete) {
     const pct = Math.round((score / ROUND_SIZE) * 100);
     const emoji = pct >= 90 ? "🏆" : pct >= 70 ? "🌟" : pct >= 50 ? "👍" : "💪";
-    const message = pct >= 90 ? "Hervorragend!" : pct >= 70 ? "Sehr gut!" : pct >= 50 ? "Gut gemacht!" : "Weiter üben!";
+    const message = pct >= 90 ? t("quiz.resultExcellent") : pct >= 70 ? t("quiz.resultGreat") : pct >= 50 ? t("quiz.resultGood") : t("quiz.resultKeepGoing");
 
     return (
       <>
-        <SEOHead title="Bibelquiz – Ergebnis | BibleBot.Life" description="Dein Quizergebnis" />
+        <SEOHead title={t("quiz.resultSeoTitle")} description={t("quiz.resultSeoDesc")} />
         <div className="min-h-screen bg-background">
           <div className="container mx-auto max-w-lg px-4 py-8">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-6">
@@ -276,20 +277,20 @@ export default function BibleQuiz() {
                 <p className="text-5xl mb-3">{emoji}</p>
                 <h2 className="text-2xl font-bold text-foreground mb-1">{message}</h2>
                 <p className="text-muted-foreground text-sm mb-4">
-                  {diffCfg.emoji} {diffCfg.label} · {mode === "multiple_choice" ? "Multiple Choice" : "Vers erraten"}
+                  {diffCfg.emoji} {t(diffCfg.labelKey)} · {mode === "multiple_choice" ? t("quiz.multipleChoice") : t("quiz.verseGuess")}
                 </p>
                 <div className="flex items-center justify-center gap-6 mb-4">
                   <div className="text-center">
                     <p className="text-4xl font-bold text-primary">{score}</p>
-                    <p className="text-xs text-muted-foreground">Richtig</p>
+                    <p className="text-xs text-muted-foreground">{t("quiz.rightLabel")}</p>
                   </div>
                   <div className="text-center">
                     <p className="text-4xl font-bold text-muted-foreground">{ROUND_SIZE - score}</p>
-                    <p className="text-xs text-muted-foreground">Falsch</p>
+                    <p className="text-xs text-muted-foreground">{t("quiz.wrongLabel")}</p>
                   </div>
                   <div className="text-center">
                     <p className="text-4xl font-bold text-foreground">{pct}%</p>
-                    <p className="text-xs text-muted-foreground">Quote</p>
+                    <p className="text-xs text-muted-foreground">{t("quiz.percentLabel")}</p>
                   </div>
                 </div>
                 {/* Progress bar */}
@@ -305,7 +306,7 @@ export default function BibleQuiz() {
 
               {/* Answer list */}
               <Card className="p-4">
-                <h3 className="font-semibold text-foreground text-sm mb-3">Deine Antworten</h3>
+                <h3 className="font-semibold text-foreground text-sm mb-3">{t("quiz.yourAnswers")}</h3>
                 <div className="space-y-1.5">
                   {answers.map((a, i) => (
                     <div key={i} className="flex items-center gap-2 text-sm">
@@ -320,10 +321,10 @@ export default function BibleQuiz() {
               {/* Actions */}
               <div className="flex gap-3">
                 <Button variant="outline" className="flex-1" onClick={() => setMode(null)}>
-                  <ArrowLeft className="h-4 w-4 mr-1" /> Menü
+                  <ArrowLeft className="h-4 w-4 mr-1" /> {t("quiz.menu")}
                 </Button>
                 <Button className="flex-1" onClick={() => startGame(mode!)}>
-                  <RotateCcw className="h-4 w-4 mr-1" /> Nochmal spielen
+                  <RotateCcw className="h-4 w-4 mr-1" /> {t("quiz.playAgain")}
                 </Button>
               </div>
             </motion.div>
@@ -336,26 +337,26 @@ export default function BibleQuiz() {
   // Quiz screen
   return (
     <>
-      <SEOHead title="Bibelquiz | BibleBot.Life" description="Teste dein Bibelwissen!" />
+      <SEOHead title={t("quiz.seoTitle")} description={t("quiz.seoDesc")} />
       <div className="min-h-screen bg-background">
         <SiteHeader />
         <div className="container mx-auto max-w-lg px-4 py-8">
           {/* Header */}
           <div className="flex items-center justify-between mb-3">
             <Button variant="ghost" size="sm" onClick={() => setMode(null)}>
-              <ArrowLeft className="h-4 w-4 mr-1" /> Zurück
+              <ArrowLeft className="h-4 w-4 mr-1" /> {t("quiz.back")}
             </Button>
             <div className="flex items-center gap-2">
               <Trophy className="h-4 w-4 text-primary" />
               <span className="font-semibold text-foreground">{score}/{total}</span>
               <Badge variant="outline" className="text-xs">
-                {diffCfg.emoji} {diffCfg.label}
+                {diffCfg.emoji} {t(diffCfg.labelKey)}
               </Badge>
             </div>
           </div>
           {/* Progress bar */}
           <div className="flex items-center gap-2 mb-6">
-            <span className="text-xs text-muted-foreground whitespace-nowrap">Frage {total + (showResult ? 0 : 1)}/{ROUND_SIZE}</span>
+            <span className="text-xs text-muted-foreground whitespace-nowrap">{t("quiz.question", { current: total + (showResult ? 0 : 1), total: ROUND_SIZE })}</span>
             <div className="flex-1 h-1.5 rounded-full bg-muted overflow-hidden">
               <div
                 className="h-full rounded-full bg-primary transition-all duration-300"
@@ -367,7 +368,7 @@ export default function BibleQuiz() {
           {loading ? (
             <div className="flex flex-col items-center justify-center py-20 gap-3">
               <Loader2 className="h-8 w-8 animate-spin text-primary" />
-              <p className="text-muted-foreground text-sm">Frage wird generiert…</p>
+              <p className="text-muted-foreground text-sm">{t("quiz.loading")}</p>
             </div>
           ) : question ? (
             <AnimatePresence mode="wait">
@@ -389,7 +390,7 @@ export default function BibleQuiz() {
                       : question.question}
                   </p>
                   {question.mode === "verse_guess" && (
-                    <p className="text-muted-foreground text-sm mt-2">Aus welchem Buch stammt dieser Vers?</p>
+                    <p className="text-muted-foreground text-sm mt-2">{t("quiz.whichBook")}</p>
                   )}
                 </Card>
 
@@ -432,7 +433,7 @@ export default function BibleQuiz() {
                         : "border-red-300 bg-red-50/50 dark:bg-red-950/20"
                     )}>
                       <p className="font-semibold text-sm mb-1">
-                        {selected === question.correct ? "✅ Richtig!" : "❌ Leider falsch"}
+                        {selected === question.correct ? t("quiz.correct") : t("quiz.wrong")}
                       </p>
                       {question.explanation && (
                         <p className="text-muted-foreground text-xs mb-2">{question.explanation}</p>
@@ -446,7 +447,7 @@ export default function BibleQuiz() {
                     </Card>
 
                     <Button onClick={nextQuestion} className="w-full mt-4" size="lg">
-                      Nächste Frage <ChevronRight className="h-4 w-4 ml-1" />
+                      {t("quiz.next")} <ChevronRight className="h-4 w-4 ml-1" />
                     </Button>
                   </motion.div>
                 )}

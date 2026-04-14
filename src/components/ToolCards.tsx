@@ -14,10 +14,13 @@ export interface ToolDef {
   titleKey: string;
   descKey: string;
   ctaKey: string;
+  promptKey?: string;
+  chatMode?: ChatMode;
   action: () => void;
 }
 
 export function useToolDefs(): ToolDef[] {
+  const { t } = useTranslation();
   return [
     {
       id: "lifewheel",
@@ -33,7 +36,7 @@ export function useToolDefs(): ToolDef[] {
       titleKey: "tools.sevenwhys.title",
       descKey: "tools.sevenwhys.desc",
       ctaKey: "tools.sevenwhys.cta",
-      action: () => openBibleBotChat("Ich möchte die 7-Warum-Methode ausprobieren", "seven-whys"),
+      action: () => openBibleBotChat(t("toolPrompts.sevenWhys"), "seven-whys"),
     },
     {
       id: "gratitude",
@@ -41,7 +44,7 @@ export function useToolDefs(): ToolDef[] {
       titleKey: "tools.gratitude.title",
       descKey: "tools.gratitude.desc",
       ctaKey: "tools.gratitude.cta",
-      action: () => openBibleBotChat("Ich möchte das Dankbarkeitstagebuch ausprobieren. Bitte frag mich nach drei Dingen, für die ich heute dankbar bin, und finde dann passende Bibelverse dazu.", "gratitude"),
+      action: () => openBibleBotChat(t("toolPrompts.gratitude"), "gratitude"),
     },
     {
       id: "lectio",
@@ -49,7 +52,7 @@ export function useToolDefs(): ToolDef[] {
       titleKey: "tools.lectio.title",
       descKey: "tools.lectio.desc",
       ctaKey: "tools.lectio.cta",
-      action: () => openBibleBotChat("Ich möchte Lectio Divina ausprobieren. Bitte führe mich durch die vier Schritte: Lectio (Lesen), Meditatio (Meditieren), Oratio (Beten), Contemplatio (Ruhen). Wähle einen passenden Bibeltext für mich.", "lectio"),
+      action: () => openBibleBotChat(t("toolPrompts.lectio"), "lectio"),
     },
     {
       id: "forgiveness",
@@ -57,7 +60,7 @@ export function useToolDefs(): ToolDef[] {
       titleKey: "tools.forgiveness.title",
       descKey: "tools.forgiveness.desc",
       ctaKey: "tools.forgiveness.cta",
-      action: () => openBibleBotChat("Ich möchte einen Vergebungsbrief schreiben. Bitte begleite mich Schritt für Schritt — mit biblischen Impulsen und einfühlsam.", "forgiveness"),
+      action: () => openBibleBotChat(t("toolPrompts.forgiveness"), "forgiveness"),
     },
     {
       id: "values",
@@ -65,7 +68,7 @@ export function useToolDefs(): ToolDef[] {
       titleKey: "tools.values.title",
       descKey: "tools.values.desc",
       ctaKey: "tools.values.cta",
-      action: () => openBibleBotChat("Ich möchte meinen Werte-Kompass entdecken. Hilf mir herauszufinden, was mir wirklich wichtig ist — und zeige mir, was die Bibel zu meinen Kernwerten sagt.", "values"),
+      action: () => openBibleBotChat(t("toolPrompts.values"), "values"),
     },
     {
       id: "examen",
@@ -73,7 +76,7 @@ export function useToolDefs(): ToolDef[] {
       titleKey: "tools.examen.title",
       descKey: "tools.examen.desc",
       ctaKey: "tools.examen.cta",
-      action: () => openBibleBotChat("Ich möchte das Ignatianische Examen machen. Bitte führe mich durch die 5 Schritte: 1) Stille werden und Gottes Gegenwart spüren, 2) Dankbarkeit für den Tag, 3) Rückblick auf den Tag, 4) Was hat mich berührt oder belastet?, 5) Ausblick auf morgen mit einem Gebet.", "examen"),
+      action: () => openBibleBotChat(t("toolPrompts.examen"), "examen"),
     },
   ];
 }
