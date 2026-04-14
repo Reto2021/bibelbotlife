@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import {
   ArrowLeft, Sparkles, Download, Loader2, Save, Share2,
   Check, Copy, ExternalLink, Music, BookOpenText, HandHeart,
+  Mic, Square, Play, Pause, Trash2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -32,7 +33,7 @@ export interface CeremonyField {
 
 export interface CeremonyConfig {
   type: "wedding" | "baptism" | "confirmation";
-  edgeFnType: string; // maps to ceremony-writer edge fn
+  edgeFnType: string;
   titleKey: string;
   subtitleKey: string;
   seoTitleKey: string;
@@ -43,7 +44,7 @@ export interface CeremonyConfig {
   generateLabel: string;
   pdfTitle: (fd: Record<string, string>) => string;
   pdfFileName: (fd: Record<string, string>) => string;
-  suggestedTags: string[]; // for resource suggestions
+  suggestedTags: string[];
 }
 
 // ──────────────────────────────────────────────
@@ -141,6 +142,17 @@ export const CONFIRMATION_CONFIG: CeremonyConfig = {
 };
 
 // ──────────────────────────────────────────────
+// Recording type
+// ──────────────────────────────────────────────
+interface Recording {
+  id: string;
+  blob: Blob | null;
+  url: string;
+  transcript: string;
+  duration: number;
+}
+
+// ──────────────────────────────────────────────
 // Component
 // ──────────────────────────────────────────────
 interface Props {
@@ -162,6 +174,22 @@ export default function CeremonyWriter({ config }: Props) {
   const [isShared, setIsShared] = useState(false);
   const [linkCopied, setLinkCopied] = useState(false);
 
+  // Recording state
+  const [isRecording, setIsRecording] = useState(false);
+  const [recordings, setRecordings] = useState<Recording[]>([]);
+  const [recordingTime, setRecordingTime] = useState(0);
+  const mediaRecorderRef = useRef<MediaRecorder | null>(null);
+  const chunksRef = useRef<Blob[]>([]);
+  const timerRef = useRef<number | null>(null);
+
+  // Playback state
+  const [playingId, setPlayingId] = useState<string | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  // Speech recognition
+  const recognitionRef = useRef<any>(null);
+  const interimTranscriptRef = useRef("");
+
   // AI generation
   const [generatedText, setGeneratedText] = useState("");
   const [isGenerating, setIsGenerating] = useState(false);
@@ -179,8 +207,26 @@ export default function CeremonyWriter({ config }: Props) {
         setFormData(fd);
         setNotes(fd._notes || "");
       }
+      const tr = draft.transcripts as Array<{ text: string; duration: number }> | null;
+      if (tr && tr.length > 0) {
+        setRecordings(tr.map((t, i) => ({
+          id: `loaded-${i}`,
+          blob: null,
+          url: "",
+          transcript: t.text,
+          duration: t.duration,
+        })));
+      }
     }
   }, [draftsQuery.data]);
+
+  // Cleanup
+  useEffect(() => {
+    return () => {
+      recordings.forEach((r) => { if (r.url) URL.revokeObjectURL(r.url); });
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
+  }, []);
 
   // Resource suggestions
   const suggestedResources = allResources.filter((r) =>
@@ -192,6 +238,113 @@ export default function CeremonyWriter({ config }: Props) {
     setFormData((prev) => ({ ...prev, [key]: value }));
   };
 
+  // ── Recording functions ──
+  const startRecording = useCallback(async () => {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      const mediaRecorder = new MediaRecorder(stream);
+      mediaRecorderRef.current = mediaRecorder;
+      chunksRef.current = [];
+
+      mediaRecorder.ondataavailable = (e) => {
+        if (e.data.size > 0) chunksRef.current.push(e.data);
+      };
+
+      mediaRecorder.onstop = () => {
+        const blob = new Blob(chunksRef.current, { type: "audio/webm" });
+        const url = URL.createObjectURL(blob);
+        const id = crypto.randomUUID();
+        const duration = recordingTime;
+
+        setRecordings((prev) => [
+          ...prev,
+          { id, blob, url, transcript: interimTranscriptRef.current, duration },
+        ]);
+        interimTranscriptRef.current = "";
+        stream.getTracks().forEach((track) => track.stop());
+      };
+
+      // Speech recognition (auto-detects Swiss German via de-CH)
+      const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+      if (SpeechRecognition) {
+        const recognition = new SpeechRecognition();
+        recognition.continuous = true;
+        recognition.interimResults = true;
+        recognition.lang = i18n.language === "en" ? "en-US" : "de-CH";
+
+        let finalTranscript = "";
+        recognition.onresult = (event: any) => {
+          let interim = "";
+          for (let i = event.resultIndex; i < event.results.length; i++) {
+            if (event.results[i].isFinal) {
+              finalTranscript += event.results[i][0].transcript + " ";
+            } else {
+              interim += event.results[i][0].transcript;
+            }
+          }
+          interimTranscriptRef.current = finalTranscript + interim;
+        };
+        recognition.onerror = () => {};
+        recognition.start();
+        recognitionRef.current = recognition;
+      }
+
+      mediaRecorder.start();
+      setIsRecording(true);
+      setRecordingTime(0);
+      timerRef.current = window.setInterval(() => {
+        setRecordingTime((prev) => prev + 1);
+      }, 1000);
+    } catch {
+      toast.error("Mikrofon-Zugriff nicht möglich. Bitte erlaube den Zugriff in den Browser-Einstellungen.");
+    }
+  }, [recordingTime, i18n.language]);
+
+  const stopRecording = useCallback(() => {
+    mediaRecorderRef.current?.stop();
+    recognitionRef.current?.stop();
+    recognitionRef.current = null;
+    setIsRecording(false);
+    if (timerRef.current) {
+      clearInterval(timerRef.current);
+      timerRef.current = null;
+    }
+  }, []);
+
+  const deleteRecording = (id: string) => {
+    setRecordings((prev) => {
+      const rec = prev.find((r) => r.id === id);
+      if (rec?.url) URL.revokeObjectURL(rec.url);
+      return prev.filter((r) => r.id !== id);
+    });
+  };
+
+  const togglePlayback = (rec: Recording) => {
+    if (!rec.url) return;
+    if (playingId === rec.id) {
+      audioRef.current?.pause();
+      setPlayingId(null);
+    } else {
+      if (audioRef.current) audioRef.current.pause();
+      const audio = new Audio(rec.url);
+      audio.onended = () => setPlayingId(null);
+      audio.play();
+      audioRef.current = audio;
+      setPlayingId(rec.id);
+    }
+  };
+
+  const updateTranscript = (id: string, transcript: string) => {
+    setRecordings((prev) => prev.map((r) => (r.id === id ? { ...r, transcript } : r)));
+  };
+
+  const formatTime = (seconds: number) => {
+    const m = Math.floor(seconds / 60);
+    const s = seconds % 60;
+    return `${m}:${s.toString().padStart(2, "0")}`;
+  };
+
+  // ── Save / Share ──
   const handleSave = async () => {
     if (!user) {
       toast.error("Bitte melde dich an, um zu speichern.");
@@ -203,6 +356,7 @@ export default function CeremonyWriter({ config }: Props) {
         ceremony_type: ceremonyType,
         person_name: formData[config.fields[0]?.key] || "",
         form_data: { ...formData, _notes: notes },
+        transcripts: recordings.map((r) => ({ text: r.transcript, duration: r.duration })),
         generated_text: generatedText,
       });
       setDraftId(result.id);
@@ -245,18 +399,22 @@ export default function CeremonyWriter({ config }: Props) {
     toast.success("Link kopiert");
   };
 
+  // ── Generate ──
   const generateText = async () => {
     setIsGenerating(true);
     setGeneratedText("");
 
     try {
-      // Map tradition to edge fn type
       let edgeFnType = config.edgeFnType;
       if (ceremonyType === "confirmation") {
         const trad = formData.tradition || "";
         if (trad === "catholic_communion") edgeFnType = "first_communion";
         else if (trad === "catholic_firmung") edgeFnType = "firmung";
       }
+
+      // Combine transcripts with notes
+      const allTranscripts = recordings.map((r) => r.transcript).filter(Boolean).join("\n\n");
+      const combinedNotes = [allTranscripts, notes].filter(Boolean).join("\n\n---\nSprachnotizen:\n");
 
       const resp = await fetch(
         `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/ceremony-writer`,
@@ -269,7 +427,7 @@ export default function CeremonyWriter({ config }: Props) {
           body: JSON.stringify({
             ceremonyType: edgeFnType,
             formData,
-            notes,
+            notes: combinedNotes,
             language: i18n.language,
           }),
         }
@@ -319,6 +477,7 @@ export default function CeremonyWriter({ config }: Props) {
     }
   };
 
+  // ── PDF ──
   const downloadPDF = () => {
     if (!generatedText) return;
     const doc = new jsPDF({ unit: "mm", format: "a4" });
@@ -430,11 +589,77 @@ export default function CeremonyWriter({ config }: Props) {
           </CardContent>
         </Card>
 
-        {/* Step 2: Notes & wishes */}
+        {/* Step 2: Voice recordings */}
         <Card>
           <CardHeader>
             <CardTitle className="text-base flex items-center gap-2">
               <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm">2</span>
+              Sprachnotizen
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <p className="text-sm text-muted-foreground">
+              Erzähle frei, was dir wichtig ist. Die Sprache wird automatisch erkannt — auch Schweizerdeutsch.
+            </p>
+
+            {/* Record button */}
+            <div className="flex items-center gap-3">
+              {!isRecording ? (
+                <Button onClick={startRecording} variant="outline" className="gap-2">
+                  <Mic className="h-4 w-4" />
+                  Aufnahme starten
+                </Button>
+              ) : (
+                <Button onClick={stopRecording} variant="destructive" className="gap-2">
+                  <Square className="h-4 w-4" />
+                  Stoppen ({formatTime(recordingTime)})
+                </Button>
+              )}
+              {isRecording && (
+                <span className="flex items-center gap-1.5 text-sm text-destructive animate-pulse">
+                  <span className="w-2 h-2 bg-destructive rounded-full" />
+                  Aufnahme läuft…
+                </span>
+              )}
+            </div>
+
+            {/* Recordings list */}
+            {recordings.length > 0 && (
+              <div className="space-y-3">
+                {recordings.map((rec, idx) => (
+                  <div key={rec.id} className="border rounded-lg p-3 space-y-2">
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm font-medium">Aufnahme {idx + 1} ({formatTime(rec.duration)})</span>
+                      <div className="flex items-center gap-1">
+                        {rec.url && (
+                          <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => togglePlayback(rec)}>
+                            {playingId === rec.id ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4" />}
+                          </Button>
+                        )}
+                        <Button variant="ghost" size="icon" className="h-8 w-8 text-destructive" onClick={() => deleteRecording(rec.id)}>
+                          <Trash2 className="h-4 w-4" />
+                        </Button>
+                      </div>
+                    </div>
+                    <Textarea
+                      value={rec.transcript}
+                      onChange={(e) => updateTranscript(rec.id, e.target.value)}
+                      placeholder="Transkription (automatisch oder manuell eingeben)…"
+                      rows={3}
+                      className="text-sm"
+                    />
+                  </div>
+                ))}
+              </div>
+            )}
+          </CardContent>
+        </Card>
+
+        {/* Step 3: Notes & wishes */}
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-base flex items-center gap-2">
+              <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm">3</span>
               Persönliche Notizen & Wünsche
             </CardTitle>
           </CardHeader>
@@ -481,11 +706,11 @@ export default function CeremonyWriter({ config }: Props) {
           </Card>
         )}
 
-        {/* Step 3: Generate */}
+        {/* Step 4: Generate */}
         <Card>
           <CardHeader>
             <CardTitle className="text-base flex items-center gap-2">
-              <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm">3</span>
+              <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm">4</span>
               Text generieren
             </CardTitle>
           </CardHeader>
@@ -518,12 +743,12 @@ export default function CeremonyWriter({ config }: Props) {
           </CardContent>
         </Card>
 
-        {/* Step 4: Share */}
+        {/* Step 5: Share */}
         {generatedText && (
           <Card>
             <CardHeader>
               <CardTitle className="text-base flex items-center gap-2">
-                <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm">4</span>
+                <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm">5</span>
                 Mit Seelsorger teilen
               </CardTitle>
             </CardHeader>
