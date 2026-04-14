@@ -44,6 +44,9 @@ const TemplatesPage = lazy(() => import("./pages/dashboard/TemplatesPage"));
 const MeinBereich = lazy(() => import("./pages/MeinBereich"));
 const MeinBereichHome = lazy(() => import("./pages/mein-bereich/MeinBereichHome"));
 const EulogyWriter = lazy(() => import("./pages/mein-bereich/EulogyWriter"));
+const WeddingWriter = lazy(() => import("./pages/mein-bereich/WeddingWriter"));
+const BaptismWriter = lazy(() => import("./pages/mein-bereich/BaptismWriter"));
+const ConfirmationWriter = lazy(() => import("./pages/mein-bereich/ConfirmationWriter"));
 const SharedDraft = lazy(() => import("./pages/SharedDraft"));
 const AdminDashboard = lazy(() => import("./pages/admin/AdminDashboard"));
 const OutreachAdmin = lazy(() => import("./pages/admin/OutreachAdmin"));
@@ -179,6 +182,9 @@ const App = () => {
                   <Route path="/mein-bereich" element={<ProtectedRoute><MeinBereich /></ProtectedRoute>}>
                     <Route index element={<MeinBereichHome />} />
                     <Route path="abdankung" element={<EulogyWriter />} />
+                    <Route path="hochzeit" element={<WeddingWriter />} />
+                    <Route path="taufe" element={<BaptismWriter />} />
+                    <Route path="konfirmation" element={<ConfirmationWriter />} />
                   </Route>
                   <Route path="/shared/:token" element={<SharedDraft />} />
                   <Route path="/admin" element={<ProtectedAdminRoute><AdminDashboard /></ProtectedAdminRoute>} />
