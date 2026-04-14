@@ -464,6 +464,22 @@ export default function ResourceLibrary() {
               </Select>
             </div>
             <div>
+              <label className="text-sm font-medium text-foreground mb-1 block">Sprache</label>
+              <Select
+                value={form.language}
+                onValueChange={(v) => setForm((f) => ({ ...f, language: v }))}
+              >
+                <SelectTrigger>
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  {LANGUAGES.map((l) => (
+                    <SelectItem key={l.value} value={l.value}>{l.label}</SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+            <div>
               <label className="text-sm font-medium text-foreground mb-1 block">Inhalt / Text</label>
               <Textarea
                 value={form.content}
