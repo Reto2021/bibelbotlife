@@ -247,25 +247,80 @@ export default function ServicesCalendar() {
                     </div>
                     <div className="space-y-1 min-h-[200px]">
                       {dayServices?.map((s) => (
-                        <Link key={s.id} to={`/dashboard/editor/${s.id}`}>
-                          <Card className="p-2 hover:border-primary/50 transition-colors cursor-pointer">
-                            <div className="text-xs font-medium truncate">{s.title}</div>
-                            <div className="text-[10px] text-muted-foreground">{s.service_time?.slice(0, 5)}</div>
-                            <div className="flex items-center justify-between mt-1">
-                              <Badge variant="outline" className={cn("text-[10px]", SERVICE_TYPE_COLORS[s.service_type])}>
-                                {SERVICE_TYPE_LABELS[s.service_type] || s.service_type}
-                              </Badge>
-                              <Link
-                                to={`/dashboard/conductor/${s.id}`}
-                                onClick={(e) => e.stopPropagation()}
-                                className="text-primary hover:text-primary/80"
-                                title="Live starten"
+                        <div key={s.id} className="relative group">
+                          <Link to={`/dashboard/editor/${s.id}`}>
+                            <Card className="p-2 hover:border-primary/50 transition-colors cursor-pointer">
+                              <div className="text-xs font-medium truncate">{s.title}</div>
+                              <div className="text-[10px] text-muted-foreground">{s.service_time?.slice(0, 5)}</div>
+                              <div className="flex items-center justify-between mt-1">
+                                <Badge variant="outline" className={cn("text-[10px]", SERVICE_TYPE_COLORS[s.service_type])}>
+                                  {SERVICE_TYPE_LABELS[s.service_type] || s.service_type}
+                                </Badge>
+                                <div className="flex items-center gap-1">
+                                  {s.status === "archived" && (
+                                    <Archive className="h-3 w-3 text-muted-foreground" />
+                                  )}
+                                  <Link
+                                    to={`/dashboard/conductor/${s.id}`}
+                                    onClick={(e) => e.stopPropagation()}
+                                    className="text-primary hover:text-primary/80"
+                                    title="Live starten"
+                                  >
+                                    <Play className="h-3.5 w-3.5" />
+                                  </Link>
+                                </div>
+                              </div>
+                            </Card>
+                          </Link>
+                          <DropdownMenu>
+                            <DropdownMenuTrigger asChild>
+                              <Button
+                                variant="ghost"
+                                size="icon"
+                                className="absolute top-1 right-1 h-5 w-5 opacity-0 group-hover:opacity-100 transition-opacity"
+                                onClick={(e) => e.preventDefault()}
                               >
-                                <Play className="h-3.5 w-3.5" />
-                              </Link>
-                            </div>
-                          </Card>
-                        </Link>
+                                <MoreHorizontal className="h-3 w-3" />
+                              </Button>
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent align="end" className="w-40">
+                              <DropdownMenuItem onClick={async () => {
+                                try {
+                                  const result = await duplicateService.mutateAsync(s.id);
+                                  toast.success("Kopiert");
+                                  routerNavigate(`/dashboard/editor/${result.id}`);
+                                } catch { toast.error("Fehler"); }
+                              }}>
+                                <Copy className="h-3.5 w-3.5 mr-2" /> Kopieren
+                              </DropdownMenuItem>
+                              {s.status !== "published" && (
+                                <DropdownMenuItem onClick={async () => {
+                                  await updateStatus.mutateAsync({ id: s.id, status: "published" });
+                                  toast.success("Veröffentlicht");
+                                }}>
+                                  <Eye className="h-3.5 w-3.5 mr-2" /> Veröffentlichen
+                                </DropdownMenuItem>
+                              )}
+                              {s.status !== "archived" && (
+                                <DropdownMenuItem onClick={async () => {
+                                  await updateStatus.mutateAsync({ id: s.id, status: "archived" });
+                                  toast.success("Archiviert");
+                                }}>
+                                  <Archive className="h-3.5 w-3.5 mr-2" /> Archivieren
+                                </DropdownMenuItem>
+                              )}
+                              <DropdownMenuSeparator />
+                              <DropdownMenuItem className="text-destructive" onClick={async () => {
+                                if (confirm(`«${s.title}» wirklich löschen?`)) {
+                                  await deleteService.mutateAsync(s.id);
+                                  toast.success("Gelöscht");
+                                }
+                              }}>
+                                <Trash2 className="h-3.5 w-3.5 mr-2" /> Löschen
+                              </DropdownMenuItem>
+                            </DropdownMenuContent>
+                          </DropdownMenu>
+                        </div>
                       ))}
                       {!dayServices?.length && (
                         <Link to={`/dashboard/editor/new`} className="block">
