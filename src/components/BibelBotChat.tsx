@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { useTranslation } from "react-i18next";
-import { Send, X, MessageCircle, Loader2, Mic, MicOff, Pencil, Shield, Sparkles, CheckCircle2, AlertTriangle, Info, BookOpen, Volume2, VolumeX, ChevronDown } from "lucide-react";
+import { Send, X, MessageCircle, Loader2, Mic, MicOff, Pencil, Shield, Sparkles, CheckCircle2, AlertTriangle, Info, BookOpen, Volume2, VolumeX, ChevronDown, Heart } from "lucide-react";
 import { useTTS } from "@/hooks/use-tts";
 
 import { ShareButton } from "@/components/ShareButton";
@@ -76,6 +76,29 @@ const AUTO_OPEN_KEY = "bibelbot-autoopened";
 const MESSAGES_KEY = "bibelbot-messages";
 const JOURNEY_START_KEY = "bibelbot-journey-start";
 const JOURNEY_CHECKINS_KEY = "bibelbot-checkins";
+const DONATED_AT_KEY = "bibelbot-donated-at";
+const DONATE_DISMISS_KEY = "bibelbot-donate-dismissed";
+const DONATE_GRACE_DAYS = 30;
+
+function hasDonatedRecently(): boolean {
+  try {
+    const ts = localStorage.getItem(DONATED_AT_KEY);
+    if (!ts) return false;
+    return Date.now() - parseInt(ts, 10) < DONATE_GRACE_DAYS * 24 * 60 * 60 * 1000;
+  } catch { return false; }
+}
+
+function isDonateNudgeDismissed(): boolean {
+  try {
+    const ts = localStorage.getItem(DONATE_DISMISS_KEY);
+    if (!ts) return false;
+    return Date.now() - parseInt(ts, 10) < 7 * 24 * 60 * 60 * 1000; // 7 days
+  } catch { return false; }
+}
+
+function dismissDonateNudge() {
+  try { localStorage.setItem(DONATE_DISMISS_KEY, Date.now().toString()); } catch {}
+}
 
 function getJourneyDay(): number {
   try {
@@ -718,8 +741,16 @@ export function BibleBotChat() {
         {messages.map((msg, i) => {
           const isLast = i === messages.length - 1;
           const { cleanText, options } = msg.role === "assistant" ? extractOptions(msg.content) : { cleanText: msg.content, options: [] };
+          // Count assistant messages up to this point
+          const assistantIndex = msg.role === "assistant"
+            ? messages.slice(0, i + 1).filter(m => m.role === "assistant").length
+            : 0;
+          const showDonateNudge = msg.role === "assistant" && isLast && assistantIndex >= 3 && assistantIndex % 3 === 0;
+          const donated = hasDonatedRecently();
+          const nudgeDismissed = isDonateNudgeDismissed();
           return (
-          <div key={i} className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
+          <div key={i}>
+            <div className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
             <div className="max-w-[85%]">
               <div className={`rounded-2xl px-4 py-3 text-base leading-relaxed ${msg.role === "user" ? "bg-primary text-primary-foreground rounded-br-md" : "bg-muted text-foreground rounded-bl-md"}`}>
                 {msg.role === "assistant" ? (
@@ -773,6 +804,36 @@ export function BibleBotChat() {
                 </div>
               )}
             </div>
+            </div>
+            {/* Subtle donation nudge */}
+            {showDonateNudge && !nudgeDismissed && (
+              <div className="flex justify-center mt-2 mb-1 animate-fade-up">
+                {donated ? (
+                  <span className="inline-flex items-center gap-1.5 text-[11px] text-primary/70 bg-primary/5 border border-primary/10 rounded-full px-3 py-1">
+                    <Heart className="h-3 w-3 fill-primary/50 text-primary/50" />
+                    {t("chat.donorBadge", "Danke für deine Unterstützung! ❤️")}
+                  </span>
+                ) : (
+                  <a
+                    href="/spenden"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center gap-1.5 text-[11px] text-muted-foreground hover:text-primary bg-muted/50 hover:bg-primary/5 border border-transparent hover:border-primary/15 rounded-full px-3 py-1 transition-all"
+                    onClick={() => { track("donate_nudge_click", {}); }}
+                  >
+                    <Heart className="h-3 w-3 group-hover:text-primary transition-colors" />
+                    {t("chat.donateNudge", "Gefällt dir BibleBot? Hilf uns mit einer kleinen Spende 🙏")}
+                    <button
+                      className="ml-1 text-muted-foreground/50 hover:text-muted-foreground text-[10px]"
+                      onClick={(e) => { e.preventDefault(); e.stopPropagation(); dismissDonateNudge(); }}
+                      aria-label="Schliessen"
+                    >
+                      ✕
+                    </button>
+                  </a>
+                )}
+              </div>
+            )}
           </div>
           );
         })}
