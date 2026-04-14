@@ -247,6 +247,8 @@ function translateChurchContext(context: string, lang: string): string {
 const WEEKDAYS_EN = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const WEEKDAYS_DE = ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"];
 
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.1";
+
 serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
@@ -261,6 +263,32 @@ serve(async (req) => {
 
     const now = new Date();
     const dateStr = now.toISOString().slice(0, 10);
+    const cacheKey = `impulse_${dateStr}_${lang}`;
+
+    // ── Check DB cache first ──
+    const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
+    const serviceRoleKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+    const sb = createClient(supabaseUrl, serviceRoleKey);
+
+    const { data: cached } = await sb
+      .from("app_settings")
+      .select("value")
+      .eq("key", cacheKey)
+      .maybeSingle();
+
+    if (cached?.value) {
+      console.log(`Cache hit: ${cacheKey}`);
+      return new Response(JSON.stringify(cached.value), {
+        headers: {
+          ...corsHeaders,
+          "Content-Type": "application/json",
+          "Cache-Control": "public, max-age=3600",
+        },
+      });
+    }
+
+    // ── Generate new impulse ──
+    console.log(`Cache miss: ${cacheKey} — generating…`);
     const churchContext = getChurchContext(now);
     const translatedContext = translateChurchContext(churchContext, lang);
     const weekday = lang === "de" ? WEEKDAYS_DE[now.getDay()] : WEEKDAYS_EN[now.getDay()];
@@ -309,7 +337,6 @@ serve(async (req) => {
     try {
       const cleaned = content.replace(/```json\n?/g, "").replace(/```\n?/g, "").trim();
       impulse = JSON.parse(cleaned);
-      // Fix spelling only for German
       const cfg = LANG_CONFIG[lang];
       if (cfg?.spellingFix) {
         for (const key of ['topic', 'verse', 'teaser', 'context']) {
@@ -323,11 +350,18 @@ serve(async (req) => {
         topic: "Hope",
         verse: '"For I know the plans I have for you," declares the Lord, "plans to prosper you and not to harm you, plans to give you hope and a future."',
         reference: "Jeremiah 29:11 (NIV)",
-        teaser: "God has a plan — even if you can't see it yet",
+        teaser: "God has a plan \u2014 even if you can\u2019t see it yet",
         context: "Sometimes life feels aimless. This verse reminds us there is a bigger perspective.",
         date: dateStr,
       };
     }
+
+    // ── Store in DB cache (upsert) ──
+    await sb.from("app_settings").upsert(
+      { key: cacheKey, value: impulse },
+      { onConflict: "key" }
+    );
+    console.log(`Cached: ${cacheKey}`);
 
     return new Response(JSON.stringify(impulse), {
       headers: {
