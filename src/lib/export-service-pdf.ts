@@ -42,6 +42,7 @@ interface ExportOptions {
   tradition: string;
   blocks: ServiceBlockData[];
   churchName?: string;
+  notes?: string;
 }
 
 function buildServiceDoc(options: ExportOptions): jsPDF {
