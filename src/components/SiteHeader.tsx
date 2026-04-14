@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import {
   Menu, X as XIcon, HandHeart, GraduationCap, Building2, HeartHandshake,
-  Send, FileText, ShieldCheck, LogIn, LogOut, User, Shield, Users, MessageCircle
+  Send, FileText, ShieldCheck, LogIn, LogOut, User, Shield, Users, MessageCircle, Heart
 } from "lucide-react";
 import { AppLogo } from "@/components/AppLogo";
 import { Button } from "@/components/ui/button";
@@ -73,6 +73,12 @@ export function SiteHeader() {
             <Link to="/fuer-seelsorger">
               <HeartHandshake className="h-4 w-4 mr-1" />
               {t("nav.forCelebrants")}
+            </Link>
+          </Button>
+          <Button asChild variant="ghost" size="sm" className="hidden lg:inline-flex">
+            <Link to="/spenden">
+              <Heart className="h-4 w-4 mr-1" />
+              {t("nav.donate", "Spenden")}
             </Link>
           </Button>
           <LanguageSwitcher />
@@ -185,6 +191,14 @@ export function SiteHeader() {
           >
             <HeartHandshake className="h-4 w-4 text-primary" />
             {t("nav.forCelebrantsMobile")}
+          </Link>
+          <Link
+            to="/spenden"
+            className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-foreground hover:bg-primary/10 transition-colors"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            <Heart className="h-4 w-4 text-primary" />
+            {t("nav.donate", "Spenden")}
           </Link>
           <Link
             to="/impressum"
