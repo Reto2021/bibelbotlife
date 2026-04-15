@@ -231,94 +231,158 @@ export default function ResourceLibrary() {
     }
   };
 
-  const ResourceCard = ({ r }: { r: Resource }) => (
-    <Card key={r.id} className="group hover:shadow-md transition-shadow">
-      <CardContent className="py-4 px-5 flex items-start gap-4">
-        <div className="mt-1 text-primary">{typeIcon(r.resource_type)}</div>
-        <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-2 mb-1 flex-wrap">
-            <h3 className="font-semibold text-foreground truncate">{r.title}</h3>
-            <Badge variant="secondary" className="text-xs shrink-0">
-              {typeLabel(r.resource_type)}
-            </Badge>
-            {r.is_system && (
-              <Badge variant="outline" className="text-xs shrink-0 border-primary/30 text-primary">
-                <Library className="h-3 w-3 mr-1" />
-                Katalog
-              </Badge>
-            )}
-            {r.hymnal_ref && (
-              <Badge variant="outline" className="text-xs shrink-0 font-mono">
-                {r.hymnal_ref}
-              </Badge>
-            )}
-            {r.tradition && (
-              <Badge variant="outline" className="text-xs shrink-0">
-                <Church className="h-3 w-3 mr-1" />
-                {TRADITIONS.find(t => t.value === r.tradition)?.label ?? r.tradition}
-              </Badge>
-            )}
-            {r.country && (
-              <span className="text-xs text-muted-foreground">
-                {COUNTRIES.find(c => c.value === r.country)?.label ?? r.country}
-              </span>
-            )}
-            {r.language && (
-              <Badge variant="outline" className="text-xs shrink-0">
-                {LANGUAGES.find(l => l.value === r.language)?.label ?? r.language}
-              </Badge>
-            )}
-          </div>
-          {r.content && (
-            <p className="text-sm text-muted-foreground line-clamp-2 mb-2">{r.content}</p>
-          )}
-          {(r.tags ?? []).length > 0 && (
-            <div className="flex flex-wrap gap-1">
-              {(r.tags ?? []).map((tag) => (
-                <Badge key={tag} variant="outline" className="text-xs">
-                  {tag}
+  const handleCopyContent = (content: string) => {
+    navigator.clipboard.writeText(content);
+    toast.success("In Zwischenablage kopiert");
+  };
+
+  const handleChatDeepen = (r: Resource) => {
+    const prefix = r.resource_type === "reading"
+      ? "Erkläre mir diese Bibelstelle:"
+      : r.resource_type === "prayer"
+      ? "Erzähle mir mehr über dieses Gebet:"
+      : "Erzähle mir mehr über:";
+    openBibleBotChat(`${prefix} ${r.title}`);
+  };
+
+  const ResourceCard = ({ r }: { r: Resource }) => {
+    const isExpanded = expandedIds.has(r.id);
+    return (
+      <Card key={r.id} className="group hover:shadow-md transition-shadow">
+        <CardContent className="py-4 px-5">
+          <div className="flex items-start gap-4">
+            <button
+              className="mt-1 text-primary cursor-pointer"
+              onClick={() => toggleExpand(r.id)}
+              aria-label={isExpanded ? "Zuklappen" : "Aufklappen"}
+            >
+              {typeIcon(r.resource_type)}
+            </button>
+            <div className="flex-1 min-w-0 cursor-pointer" onClick={() => toggleExpand(r.id)}>
+              <div className="flex items-center gap-2 mb-1 flex-wrap">
+                <h3 className="font-semibold text-foreground truncate">{r.title}</h3>
+                <Badge variant="secondary" className="text-xs shrink-0">
+                  {typeLabel(r.resource_type)}
                 </Badge>
-              ))}
+                {r.is_system && (
+                  <Badge variant="outline" className="text-xs shrink-0 border-primary/30 text-primary">
+                    <Library className="h-3 w-3 mr-1" />
+                    Katalog
+                  </Badge>
+                )}
+                {r.hymnal_ref && (
+                  <Badge variant="outline" className="text-xs shrink-0 font-mono">
+                    {r.hymnal_ref}
+                  </Badge>
+                )}
+                {r.tradition && (
+                  <Badge variant="outline" className="text-xs shrink-0">
+                    <Church className="h-3 w-3 mr-1" />
+                    {TRADITIONS.find(t => t.value === r.tradition)?.label ?? r.tradition}
+                  </Badge>
+                )}
+                {r.country && (
+                  <span className="text-xs text-muted-foreground">
+                    {COUNTRIES.find(c => c.value === r.country)?.label ?? r.country}
+                  </span>
+                )}
+                {r.language && (
+                  <Badge variant="outline" className="text-xs shrink-0">
+                    {LANGUAGES.find(l => l.value === r.language)?.label ?? r.language}
+                  </Badge>
+                )}
+              </div>
+              {r.content && !isExpanded && (
+                <p className="text-sm text-muted-foreground line-clamp-2 mb-2">{r.content}</p>
+              )}
+              {(r.tags ?? []).length > 0 && (
+                <div className="flex flex-wrap gap-1">
+                  {(r.tags ?? []).map((tag) => (
+                    <Badge key={tag} variant="outline" className="text-xs">
+                      {tag}
+                    </Badge>
+                  ))}
+                </div>
+              )}
             </div>
-          )}
-        </div>
-        {r.is_system ? (
-          <Button
-            variant="outline"
-            size="sm"
-            className="opacity-0 group-hover:opacity-100 transition-opacity shrink-0"
-            onClick={() => handleImport(r)}
-            disabled={importResource.isPending}
-          >
-            <Download className="h-4 w-4 mr-1" /> Importieren
-          </Button>
-        ) : (
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
+            <div className="flex items-center gap-1 shrink-0">
               <Button
                 variant="ghost"
                 size="icon"
-                className="opacity-0 group-hover:opacity-100 transition-opacity shrink-0"
+                className="h-8 w-8"
+                onClick={() => toggleExpand(r.id)}
               >
-                <MoreHorizontal className="h-4 w-4" />
+                {isExpanded ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
               </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              <DropdownMenuItem onClick={() => openEdit(r)}>
-                <Pencil className="h-4 w-4 mr-2" /> Bearbeiten
-              </DropdownMenuItem>
-              <DropdownMenuItem
-                className="text-destructive"
-                onClick={() => handleDelete(r.id)}
-              >
-                <Trash2 className="h-4 w-4 mr-2" /> Löschen
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-        )}
-      </CardContent>
-    </Card>
-  );
+              {r.is_system ? (
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="opacity-0 group-hover:opacity-100 transition-opacity"
+                  onClick={() => handleImport(r)}
+                  disabled={importResource.isPending}
+                >
+                  <Download className="h-4 w-4 mr-1" /> Importieren
+                </Button>
+              ) : (
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      className="opacity-0 group-hover:opacity-100 transition-opacity h-8 w-8"
+                    >
+                      <MoreHorizontal className="h-4 w-4" />
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="end">
+                    <DropdownMenuItem onClick={() => openEdit(r)}>
+                      <Pencil className="h-4 w-4 mr-2" /> Bearbeiten
+                    </DropdownMenuItem>
+                    <DropdownMenuItem
+                      className="text-destructive"
+                      onClick={() => handleDelete(r.id)}
+                    >
+                      <Trash2 className="h-4 w-4 mr-2" /> Löschen
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              )}
+            </div>
+          </div>
+          {/* Expanded content */}
+          {isExpanded && r.content && (
+            <div className="mt-3 ml-10 border-t pt-3 space-y-3">
+              <p className="text-sm text-foreground whitespace-pre-wrap leading-relaxed">
+                {r.content}
+              </p>
+              <div className="flex gap-2 flex-wrap">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => handleCopyContent(r.content!)}
+                >
+                  <Copy className="h-4 w-4 mr-1" /> Kopieren
+                </Button>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => handleChatDeepen(r)}
+                >
+                  <MessageCircle className="h-4 w-4 mr-1" /> Im Chat vertiefen
+                </Button>
+              </div>
+            </div>
+          )}
+          {isExpanded && !r.content && (
+            <div className="mt-3 ml-10 border-t pt-3">
+              <p className="text-sm text-muted-foreground italic">Kein Inhalt hinterlegt.</p>
+            </div>
+          )}
+        </CardContent>
+      </Card>
+    );
+  };
 
   return (
     <div className="space-y-6">
