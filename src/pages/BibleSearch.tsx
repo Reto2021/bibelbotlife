@@ -37,11 +37,13 @@ const TRANSLATION_LABELS: Record<string, string> = {
 
 export default function BibleSearch() {
   const { t, i18n } = useTranslation();
+  const [searchParams] = useSearchParams();
   const [query, setQuery] = useState("");
   const [translation, setTranslation] = useState("all");
   const [results, setResults] = useState<SearchResponse | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [initialSearchDone, setInitialSearchDone] = useState(false);
 
   const doSearch = useCallback(async () => {
     if (!query.trim() || query.trim().length < 2) return;
