@@ -1354,6 +1354,7 @@ export type Database = {
           language: string
           metadata: Json | null
           resource_type: Database["public"]["Enums"]["resource_type"]
+          shared_with_church: boolean
           tags: string[] | null
           title: string
           tradition: string | null
@@ -1371,6 +1372,7 @@ export type Database = {
           language?: string
           metadata?: Json | null
           resource_type?: Database["public"]["Enums"]["resource_type"]
+          shared_with_church?: boolean
           tags?: string[] | null
           title: string
           tradition?: string | null
@@ -1388,6 +1390,7 @@ export type Database = {
           language?: string
           metadata?: Json | null
           resource_type?: Database["public"]["Enums"]["resource_type"]
+          shared_with_church?: boolean
           tags?: string[] | null
           title?: string
           tradition?: string | null
