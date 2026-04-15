@@ -338,12 +338,14 @@ export default function ServicesCalendar() {
         </Card>
       )}
 
-      {/* Legend */}
+      {/* Quick-create by type */}
       <div className="flex flex-wrap gap-2">
         {Object.entries(SERVICE_TYPE_LABELS).map(([key, label]) => (
-          <Badge key={key} variant="outline" className={cn("text-xs", SERVICE_TYPE_COLORS[key])}>
-            {label}
-          </Badge>
+          <Link key={key} to={`/dashboard/editor/new?type=${key}`}>
+            <Badge variant="outline" className={cn("text-xs cursor-pointer hover:opacity-80 transition-opacity", SERVICE_TYPE_COLORS[key])}>
+              {label}
+            </Badge>
+          </Link>
         ))}
       </div>
     </div>
