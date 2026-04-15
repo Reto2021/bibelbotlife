@@ -41,6 +41,7 @@ export function useCeremonyDrafts(ceremonyType?: CeremonyType) {
         const { data: updated, error } = await supabase
           .from("ceremony_drafts")
           .update({
+            title: data.title,
             person_name: data.person_name,
             form_data: (data.form_data ?? {}) as Json,
             transcripts: (data.transcripts ?? []) as unknown as Json,
@@ -57,6 +58,7 @@ export function useCeremonyDrafts(ceremonyType?: CeremonyType) {
           .insert({
             user_id: user!.id,
             ceremony_type: data.ceremony_type,
+            title: data.title,
             person_name: data.person_name,
             form_data: (data.form_data ?? {}) as Json,
             transcripts: (data.transcripts ?? []) as unknown as Json,
