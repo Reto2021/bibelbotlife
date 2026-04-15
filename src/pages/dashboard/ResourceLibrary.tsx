@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import {
   BookOpen, Music, HandHeart, BookOpenText, Plus, Search,
   Pencil, Trash2, X, Tag, Filter, MoreHorizontal, Globe, Church,
-  Download, Library, ChevronDown, ChevronUp, Copy, MessageCircle,
+  Download, Library, ChevronDown, ChevronUp, Copy, MessageCircle, Share2, Users,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { openBibleBotChat } from "@/lib/chat-events";
@@ -339,6 +339,15 @@ export default function ResourceLibrary() {
                     <DropdownMenuItem onClick={() => openEdit(r)}>
                       <Pencil className="h-4 w-4 mr-2" /> Bearbeiten
                     </DropdownMenuItem>
+                    {church && (
+                      <DropdownMenuItem onClick={() => handleToggleShare(r)}>
+                        {r.shared_with_church ? (
+                          <><Users className="h-4 w-4 mr-2" /> Teilen aufheben</>
+                        ) : (
+                          <><Share2 className="h-4 w-4 mr-2" /> Mit Team teilen</>
+                        )}
+                      </DropdownMenuItem>
+                    )}
                     <DropdownMenuItem
                       className="text-destructive"
                       onClick={() => handleDelete(r.id)}
