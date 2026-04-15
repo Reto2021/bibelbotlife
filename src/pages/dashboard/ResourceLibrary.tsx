@@ -499,22 +499,22 @@ export default function ResourceLibrary() {
                 >
                 <MessageCircle className="h-4 w-4 mr-1" /> Im Chat vertiefen
                 </Button>
-                {r.attachment_url && r.attachment_name && (
+                {r.attachment_url && r.attachment_name && isAudioFile(r.attachment_name) && (
+                  <div className="w-full">
+                    <p className="text-xs text-muted-foreground mb-1 flex items-center gap-1"><FileAudio className="h-3 w-3" />{r.attachment_name}</p>
+                    <InlineAudioPlayer attachmentPath={r.attachment_url} />
+                  </div>
+                )}
+                {r.attachment_url && r.attachment_name && !isAudioFile(r.attachment_name) && (
                   <Button
                     variant="outline"
                     size="sm"
                     onClick={() => handleDownloadAttachment(r)}
                   >
-                    {r.attachment_name.match(/\.(mp3|wav|ogg|m4a)$/i) ? (
-                      <FileAudio className="h-4 w-4 mr-1" />
-                    ) : (
-                      <FileText className="h-4 w-4 mr-1" />
-                    )}
+                    <FileText className="h-4 w-4 mr-1" />
                     {r.attachment_name}
                   </Button>
                 )}
-              </div>
-            </div>
           )}
           {isExpanded && !r.content && (
             <div className="mt-3 ml-10 border-t pt-3 space-y-3">
