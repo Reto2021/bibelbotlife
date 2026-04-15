@@ -152,31 +152,15 @@ export function useCircle() {
 
   const joinCircle = useMutation({
     mutationFn: async ({ inviteCode, displayName }: { inviteCode: string; displayName: string }) => {
-      // Look up circle by invite code - need to use a workaround since we can't SELECT circles we're not a member of
-      // We'll insert into circle_members using a DB function or direct insert
-      // First, find the circle via a service call or RPC
-      // Since RLS blocks non-members from seeing circles, we need a different approach
-      // We'll try inserting directly - the user needs the circle_id
-      // Actually, let's query circles table - the user isn't a member yet so RLS blocks this
-      // Solution: create an RPC function or use invite_code lookup
-      
-      // For now, use a raw query approach via RPC or direct
-      // We'll use the fact that invite_code is unique and do a direct lookup
-      const { data: circles, error: lookupError } = await supabase
-        .from("circles")
-        .select("id")
-        .eq("invite_code", inviteCode)
-        .limit(1);
-      
-      // If RLS blocks this (user not member), circles will be empty
+      const { data, error: lookupError } = await supabase.rpc("lookup_circle_by_invite_code", { _code: inviteCode });
       if (lookupError) throw lookupError;
-      if (!circles || circles.length === 0) {
+      if (!data || data.length === 0) {
         throw new Error("Einladungscode nicht gefunden. Bitte überprüfe den Code.");
       }
 
       const { error: joinError } = await supabase
         .from("circle_members")
-        .insert({ circle_id: circles[0].id, user_id: user!.id, display_name: displayName });
+        .insert({ circle_id: data[0].id, user_id: user!.id, display_name: displayName });
       if (joinError) throw joinError;
     },
     onSuccess: () => {
