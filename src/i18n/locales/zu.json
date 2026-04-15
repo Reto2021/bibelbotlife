@@ -1867,7 +1867,24 @@
     "tag_weekly": "Ngeviki",
     "tag_community": "Umphakathi",
     "tag_personal": "Okomuntu siqu",
-    "tag_individual": "Ngabanye"
+    "tag_individual": "Ngabanye",
+    "edu1": "Ulwazi lwezomnotho oluthweswe iziqu e-UZH",
+    "edu2": "Uthisha wezohwebo othweswe iziqu e-UZH",
+    "edu3": "Uchwepheshe wezokuphatha othweswe iziqu nguhulumeni",
+    "edu4": "I-CAS Strategy with Impact FHGR",
+    "edu5": "I-CAS Crisis Communication ZHAW",
+    "edu6": "I-VR-CAS Swiss Board School HSG",
+    "edu7": "I-Scrum Master",
+    "award1": "Umholi we-Venture 2011",
+    "award2": "I-Microsoft Innovation Award 2011",
+    "award3": "Ukuqokwa kwe-Swiss CRM Innovation Award 2011",
+    "award4": "Ukuqokwa kwe-Microsoft European BizSpark Award 2011",
+    "eng1": "Ikhansela elikhulu le-Canton Aargau",
+    "eng2": "OwayeyiPhini leMeya yeDolobha laseBrugg",
+    "eng3": "UMongameli weBhodi Labaqondisi be-Brugg Region Health Foundation",
+    "eng4": "UMongameli weBhodi Labaqondisi be-Süssbach Nursing Home AG",
+    "eng5": "IPhini likaMongameli we-IBB Holding AG",
+    "eng6": "UMongameli weKomidi Lokuhlela Lomkhosi Wedolobha 2026"
   },
   "nav.about": "Mayelana Nathi"
 }

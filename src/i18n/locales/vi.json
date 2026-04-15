@@ -1869,7 +1869,24 @@
     "tag_weekly": "Hàng tuần",
     "tag_community": "Cộng đồng",
     "tag_personal": "Cá nhân",
-    "tag_individual": "Riêng lẻ"
+    "tag_individual": "Riêng lẻ",
+    "edu1": "Chuyên gia kinh tế học máy tính UZH",
+    "edu2": "Giáo viên thương mại UZH",
+    "edu3": "Chuyên gia quản lý cấp cao được cấp bằng liên bang",
+    "edu4": "CAS Chiến lược với Tác động FHGR",
+    "edu5": "CAS Truyền thông Khủng hoảng ZHAW",
+    "edu6": "VR-CAS Trường Hội đồng Quản trị Thụy Sĩ HSG",
+    "edu7": "Scrum Master",
+    "award1": "Lãnh đạo Doanh nghiệp 2011",
+    "award2": "Giải thưởng Sáng tạo Microsoft 2011",
+    "award3": "Đề cử Giải thưởng Sáng tạo CRM Thụy Sĩ 2011",
+    "award4": "Đề cử Giải thưởng BizSpark Châu Âu của Microsoft 2011",
+    "eng1": "Đại biểu Hội đồng Lớn bang Aargau",
+    "eng2": "Cựu Phó Thị trưởng Thành phố Brugg",
+    "eng3": "Chủ tịch Hội đồng Quản trị Quỹ Y tế Vùng Brugg",
+    "eng4": "Chủ tịch HĐQT Trung tâm Chăm sóc Süssbach AG",
+    "eng5": "Phó Chủ tịch IBB Holding AG",
+    "eng6": "Chủ tịch Ban Tổ chức Lễ hội Thành phố 2026"
   },
   "nav.about": "Về chúng tôi"
 }

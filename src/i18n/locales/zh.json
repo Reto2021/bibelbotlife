@@ -1868,7 +1868,24 @@
     "tag_weekly": "每周",
     "tag_community": "社区",
     "tag_personal": "个人",
-    "tag_individual": "个体"
+    "tag_individual": "个体",
+    "edu1": "苏黎世大学经济信息学文凭",
+    "edu2": "苏黎世大学商业教师文凭",
+    "edu3": "联邦文凭管理专家，拥有联邦专业证书",
+    "edu4": "FHGR 影响力战略高级证书",
+    "edu5": "ZHAW 危机沟通高级证书",
+    "edu6": "HSG 瑞士董事会学校 VR-CAS",
+    "edu7": "Scrum Master",
+    "award1": "2011 年创业领袖",
+    "award2": "2011 年微软创新奖",
+    "award3": "2011 年瑞士 CRM 创新奖提名",
+    "award4": "2011 年微软欧洲 BizSpark 奖提名",
+    "eng1": "阿尔高州议员",
+    "eng2": "布鲁格市前副市长",
+    "eng3": "布鲁格地区健康基金会董事会主席",
+    "eng4": "Süssbach 护理中心有限公司董事会主席",
+    "eng5": "IBB 控股有限公司副总裁",
+    "eng6": "2026 年城市节组委会主席"
   },
   "nav.about": "关于我们"
 }

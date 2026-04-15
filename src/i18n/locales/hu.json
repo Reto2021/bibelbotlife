@@ -1867,7 +1867,24 @@
     "tag_weekly": "Heti",
     "tag_community": "Közösség",
     "tag_personal": "Személyes",
-    "tag_individual": "Egyéni"
+    "tag_individual": "Egyéni",
+    "edu1": "Dipl. üzleti informatikus UZH",
+    "edu2": "Dipl. kereskedelmi tanár UZH",
+    "edu3": "Szövetségi okleveles vezető szakember FA-val",
+    "edu4": "CAS Stratégia hatással FHGR",
+    "edu5": "CAS Kríziskommunikáció ZHAW",
+    "edu6": "VR-CAS Swiss Board School HSG",
+    "edu7": "Scrum Master",
+    "award1": "Venture Leader 2011",
+    "award2": "Microsoft Innovációs Díj 2011",
+    "award3": "Jelölt Swiss CRM Innovációs Díj 2011",
+    "award4": "Jelölt Microsoft European BizSpark Díj 2011",
+    "eng1": "Aargau kanton nagytanácsosa",
+    "eng2": "Brugg város volt alpolgármestere",
+    "eng3": "A Brugg régió Egészségügyi Alapítványának elnöke",
+    "eng4": "A Süssbach Pflegezentrum AG igazgatótanácsának elnöke",
+    "eng5": "Az IBB Holding AG alelnöke",
+    "eng6": "A 2026-os városi fesztivál szervezőbizottságának elnöke"
   },
   "nav.about": "Rólunk"
 }

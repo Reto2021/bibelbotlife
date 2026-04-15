@@ -1867,7 +1867,24 @@
     "tag_weekly": "Viikoittain",
     "tag_community": "Yhteisö",
     "tag_personal": "Henkilökohtainen",
-    "tag_individual": "Yksilöllinen"
+    "tag_individual": "Yksilöllinen",
+    "edu1": "Dipl. liiketoimintainformaatikko UZH",
+    "edu2": "Dipl. kaupallinen opettaja UZH",
+    "edu3": "Liittovaltion diplomi. johtamisen asiantuntija FA:lla",
+    "edu4": "CAS Strategy with Impact FHGR",
+    "edu5": "CAS kriisiviestintä ZHAW",
+    "edu6": "VR-CAS Swiss Board School HSG",
+    "edu7": "Scrum Master",
+    "award1": "Venture Leader 2011",
+    "award2": "Microsoft Innovation Award 2011",
+    "award3": "Ehdolla Swiss CRM Innovation Award 2011",
+    "award4": "Ehdolla Microsoft European BizSpark Award 2011",
+    "eng1": "Aargaun kantonin suuri neuvosto",
+    "eng2": "Entinen Bruggin kaupungin varapormestari",
+    "eng3": "Bruggin alueen terveysrahaston hallituksen puheenjohtaja",
+    "eng4": "Süssbach Pflegezentrum AG:n hallituksen puheenjohtaja",
+    "eng5": "IBB Holding AG:n varapuheenjohtaja",
+    "eng6": "Kaupunkijuhlien 2026 järjestelykomitean puheenjohtaja"
   },
   "nav.about": "Tietoa meistä"
 }
