@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useRef, ReactNode } from "react";
 import { useTranslation } from "react-i18next";
-import { Sparkles, ChevronRight, BookOpen, Loader2, MessageCircle, Image, Download, Bell, Send, Smartphone, Volume2, VolumeX, XCircle, Settings2, ChevronDown, ChevronUp, Copy } from "lucide-react";
+import { Sparkles, ChevronRight, BookOpen, Loader2, MessageCircle, Image, Download, Bell, Send, Smartphone, Volume2, VolumeX, XCircle, Settings2, ChevronDown, ChevronUp, Copy, Users } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Button } from "@/components/ui/button";
 import { useTTS } from "@/hooks/use-tts";
@@ -9,6 +9,9 @@ import { ShareButton } from "@/components/ShareButton";
 import { useToast } from "@/hooks/use-toast";
 import { generateShareImage, fetchAIBackgroundUrl } from "@/lib/share-image-canvas";
 import { useChurchBranding } from "@/hooks/use-church-branding";
+import { useAuth } from "@/hooks/use-auth";
+import { useCircle } from "@/hooks/use-circle";
+import { toast as sonnerToast } from "sonner";
 
 const IMPULSE_CACHE_KEY = "bibelbot-daily-impulse";
 const IMPULSE_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/daily-impulse`;
