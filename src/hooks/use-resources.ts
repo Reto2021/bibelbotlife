@@ -8,6 +8,7 @@ export type Resource = Tables<"resource_library"> & {
   country?: string;
   tradition?: string;
   hymnal_ref?: string;
+  shared_with_church?: boolean;
 };
 export type ResourceInsert = TablesInsert<"resource_library">;
 export type ResourceUpdate = TablesUpdate<"resource_library">;
@@ -19,11 +20,11 @@ export function useResources() {
     queryKey: ["resources", user?.id],
     enabled: !!user,
     queryFn: async () => {
-      // Fetch both user's own resources AND system resources
+      // Fetch user's own, system, AND church-shared resources (RLS handles access)
       const { data, error } = await supabase
         .from("resource_library")
         .select("*")
-        .or(`created_by.eq.${user!.id},is_system.eq.true`)
+        .or(`created_by.eq.${user!.id},is_system.eq.true,shared_with_church.eq.true`)
         .order("is_system", { ascending: true })
         .order("updated_at", { ascending: false });
       if (error) throw error;
