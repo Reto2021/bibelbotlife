@@ -1,5 +1,6 @@
 import { useState, useMemo } from "react";
-import { BookOpen, Music, HandHeart, Search, Tag, Filter, Plus, X, BookOpenText } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { BookOpen, Music, HandHeart, Search, Tag, Filter, Plus, X, BookOpenText, Globe } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -26,6 +27,15 @@ const TYPE_LABELS: Record<string, string> = {
   other: "Sonstiges",
 };
 
+const LANGUAGES = [
+  { value: "de", label: "🇩🇪 DE" },
+  { value: "en", label: "🇬🇧 EN" },
+  { value: "fr", label: "🇫🇷 FR" },
+  { value: "es", label: "🇪🇸 ES" },
+  { value: "it", label: "🇮🇹 IT" },
+  { value: "pt", label: "🇵🇹 PT" },
+];
+
 const MOOD_TAGS = ["freudig", "nachdenklich", "feierlich", "ruhig", "dankbar", "tröstend"];
 const CEREMONY_TAGS = ["taufe", "hochzeit", "abdankung", "konfirmation", "abendmahl"];
 const SEASON_TAGS = ["advent", "weihnachten", "passion", "ostern", "pfingsten", "erntedank"];
@@ -36,9 +46,12 @@ interface ResourceSidebarProps {
 }
 
 export function ResourceSidebar({ onSelect, onClose }: ResourceSidebarProps) {
+  const { i18n } = useTranslation();
+  const defaultLang = i18n.language?.slice(0, 2) || "de";
   const { data: resources = [], isLoading } = useResources();
   const [search, setSearch] = useState("");
   const [typeFilter, setTypeFilter] = useState<ResourceType | "all">("all");
+  const [langFilter, setLangFilter] = useState<string>(defaultLang);
   const [activeTag, setActiveTag] = useState<string | null>(null);
 
   const allTags = useMemo(() => {
@@ -49,6 +62,7 @@ export function ResourceSidebar({ onSelect, onClose }: ResourceSidebarProps) {
 
   const filtered = useMemo(() => {
     return resources.filter((r) => {
+      if (langFilter !== "all" && r.language !== langFilter) return false;
       if (typeFilter !== "all" && r.resource_type !== typeFilter) return false;
       if (activeTag && !(r.tags ?? []).includes(activeTag)) return false;
       if (search) {
@@ -61,7 +75,7 @@ export function ResourceSidebar({ onSelect, onClose }: ResourceSidebarProps) {
       }
       return true;
     });
-  }, [resources, typeFilter, activeTag, search]);
+  }, [resources, typeFilter, langFilter, activeTag, search]);
 
   const quickTags = useMemo(() => {
     const present = new Set(allTags.map((t) => t.toLowerCase()));
@@ -97,20 +111,34 @@ export function ResourceSidebar({ onSelect, onClose }: ResourceSidebarProps) {
             className="pl-8 h-8 text-sm"
           />
         </div>
-        <Select value={typeFilter} onValueChange={(v) => setTypeFilter(v as ResourceType | "all")}>
-          <SelectTrigger className="h-8 text-sm">
-            <Filter className="h-3.5 w-3.5 mr-1" />
-            <SelectValue placeholder="Typ" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="all">Alle Typen</SelectItem>
-            {Object.entries(TYPE_LABELS).map(([k, v]) => (
-              <SelectItem key={k} value={k}>
-                <span className="flex items-center gap-1.5">{TYPE_ICONS[k]} {v}</span>
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
+        <div className="flex gap-2">
+          <Select value={typeFilter} onValueChange={(v) => setTypeFilter(v as ResourceType | "all")}>
+            <SelectTrigger className="h-8 text-sm flex-1">
+              <Filter className="h-3.5 w-3.5 mr-1" />
+              <SelectValue placeholder="Typ" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">Alle Typen</SelectItem>
+              {Object.entries(TYPE_LABELS).map(([k, v]) => (
+                <SelectItem key={k} value={k}>
+                  <span className="flex items-center gap-1.5">{TYPE_ICONS[k]} {v}</span>
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+          <Select value={langFilter} onValueChange={(v) => setLangFilter(v)}>
+            <SelectTrigger className="h-8 text-sm w-[90px]">
+              <Globe className="h-3.5 w-3.5 mr-1" />
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">Alle</SelectItem>
+              {LANGUAGES.map((l) => (
+                <SelectItem key={l.value} value={l.value}>{l.label}</SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
       </div>
 
       {/* Quick Tag Filters */}

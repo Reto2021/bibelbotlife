@@ -1,5 +1,6 @@
 import { useState, useMemo } from "react";
-import { BookOpen, Music, HandHeart, Search, Tag } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { BookOpen, Music, HandHeart, Search, Tag, Globe } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
@@ -21,6 +22,15 @@ const TYPE_LABELS: Record<string, string> = {
   song: "Lied", prayer: "Gebet", reading: "Lesung", liturgy: "Liturgie", other: "Sonstiges",
 };
 
+const LANGUAGES = [
+  { value: "de", label: "🇩🇪 Deutsch" },
+  { value: "en", label: "🇬🇧 English" },
+  { value: "fr", label: "🇫🇷 Français" },
+  { value: "es", label: "🇪🇸 Español" },
+  { value: "it", label: "🇮🇹 Italiano" },
+  { value: "pt", label: "🇵🇹 Português" },
+];
+
 interface ResourcePickerProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
@@ -29,12 +39,16 @@ interface ResourcePickerProps {
 }
 
 export function ResourcePicker({ open, onOpenChange, onSelect, filterType }: ResourcePickerProps) {
+  const { i18n } = useTranslation();
+  const defaultLang = i18n.language?.slice(0, 2) || "de";
   const { data: resources = [], isLoading } = useResources();
   const [search, setSearch] = useState("");
   const [typeFilter, setTypeFilter] = useState<ResourceType | "all">(filterType ?? "all");
+  const [langFilter, setLangFilter] = useState<string>(defaultLang);
 
   const filtered = useMemo(() => {
     return resources.filter((r) => {
+      if (langFilter !== "all" && r.language !== langFilter) return false;
       if (typeFilter !== "all" && r.resource_type !== typeFilter) return false;
       if (search) {
         const q = search.toLowerCase();
@@ -46,7 +60,7 @@ export function ResourcePicker({ open, onOpenChange, onSelect, filterType }: Res
       }
       return true;
     });
-  }, [resources, typeFilter, search]);
+  }, [resources, typeFilter, langFilter, search]);
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -54,8 +68,8 @@ export function ResourcePicker({ open, onOpenChange, onSelect, filterType }: Res
         <DialogHeader>
           <DialogTitle>Aus Bibliothek einfügen</DialogTitle>
         </DialogHeader>
-        <div className="flex gap-2 mb-3">
-          <div className="relative flex-1">
+        <div className="flex gap-2 mb-3 flex-wrap">
+          <div className="relative flex-1 min-w-[160px]">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input
               placeholder="Suchen…"
@@ -77,6 +91,18 @@ export function ResourcePicker({ open, onOpenChange, onSelect, filterType }: Res
               </SelectContent>
             </Select>
           )}
+          <Select value={langFilter} onValueChange={(v) => setLangFilter(v)}>
+            <SelectTrigger className="w-[130px]">
+              <Globe className="h-4 w-4 mr-1" />
+              <SelectValue placeholder="Sprache" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">Alle Sprachen</SelectItem>
+              {LANGUAGES.map((l) => (
+                <SelectItem key={l.value} value={l.value}>{l.label}</SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
         </div>
         <div className="max-h-80 overflow-y-auto space-y-1">
           {isLoading ? (

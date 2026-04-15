@@ -1,4 +1,5 @@
 import { useState, useMemo, useRef, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { Music, BookOpen, HandHeart, Tag, Sparkles } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { useResources, type Resource } from "@/hooks/use-resources";
@@ -34,6 +35,8 @@ interface ResourceSuggestProps {
 }
 
 export function ResourceSuggest({ query, blockType, onSelect, visible }: ResourceSuggestProps) {
+  const { i18n } = useTranslation();
+  const userLang = i18n.language?.slice(0, 2) || "de";
   const { data: resources = [] } = useResources();
   const [selectedIndex, setSelectedIndex] = useState(0);
   const listRef = useRef<HTMLDivElement>(null);
@@ -45,6 +48,8 @@ export function ResourceSuggest({ query, blockType, onSelect, visible }: Resourc
     const q = query.toLowerCase();
     return resources
       .filter((r) => {
+        // Filter by user language
+        if (r.language !== userLang) return false;
         // Filter by resource type if block has a specific matching type
         if (resourceType !== "any" && r.resource_type !== resourceType) return false;
         return (
@@ -54,7 +59,7 @@ export function ResourceSuggest({ query, blockType, onSelect, visible }: Resourc
         );
       })
       .slice(0, 8);
-  }, [resources, query, resourceType, visible]);
+  }, [resources, query, resourceType, userLang, visible]);
 
   useEffect(() => {
     setSelectedIndex(0);
