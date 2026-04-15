@@ -131,6 +131,8 @@ export function DailyImpulse() {
   const { toast } = useToast();
   const isMobile = useIsMobile();
   const { branding: churchBranding } = useChurchBranding();
+  const { user } = useAuth();
+  const { circle, addPrayer, members } = useCircle();
   const currentLang = normalizeLang(i18n.resolvedLanguage || i18n.language);
   const [collapsed, setCollapsed] = useState(true); // will sync with isMobile on first render
   const [collapsedInitialized, setCollapsedInitialized] = useState(false);
