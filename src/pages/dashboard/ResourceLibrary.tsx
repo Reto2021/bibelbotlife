@@ -86,9 +86,11 @@ interface FormState {
   tags: string[];
   tagInput: string;
   language: string;
+  attachment_url: string | null;
+  attachment_name: string | null;
 }
 
-const emptyForm = (lang: string): FormState => ({ title: "", content: "", resource_type: "song", tags: [], tagInput: "", language: lang });
+const emptyForm = (lang: string): FormState => ({ title: "", content: "", resource_type: "song", tags: [], tagInput: "", language: lang, attachment_url: null, attachment_name: null });
 
 export default function ResourceLibrary() {
   const { i18n } = useTranslation();
