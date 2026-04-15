@@ -96,6 +96,7 @@ export default function ResourceLibrary() {
   const { i18n } = useTranslation();
   const defaultLang = i18n.language?.slice(0, 2) || "de";
   const { data: resources = [], isLoading } = useResources();
+  const { user } = useAuth();
   const { data: church } = useUserChurch();
   const createResource = useCreateResource();
   const updateResource = useUpdateResource();
@@ -113,6 +114,8 @@ export default function ResourceLibrary() {
   const [editingId, setEditingId] = useState<string | null>(null);
   const [form, setForm] = useState<FormState>(() => emptyForm(defaultLang));
   const [expandedIds, setExpandedIds] = useState<Set<string>>(new Set());
+  const [uploading, setUploading] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const toggleExpand = useCallback((id: string) => {
     setExpandedIds(prev => {
@@ -169,6 +172,8 @@ export default function ResourceLibrary() {
       tags: r.tags ?? [],
       tagInput: "",
       language: r.language ?? defaultLang,
+      attachment_url: r.attachment_url ?? null,
+      attachment_name: r.attachment_name ?? null,
     });
     setDialogOpen(true);
   };
