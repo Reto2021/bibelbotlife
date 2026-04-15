@@ -482,8 +482,22 @@ export default function ResourceLibrary() {
             </div>
           )}
           {isExpanded && !r.content && (
-            <div className="mt-3 ml-10 border-t pt-3">
+            <div className="mt-3 ml-10 border-t pt-3 space-y-3">
               <p className="text-sm text-muted-foreground italic">Kein Inhalt hinterlegt.</p>
+              {r.attachment_url && r.attachment_name && (
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => handleDownloadAttachment(r)}
+                >
+                  {r.attachment_name.match(/\.(mp3|wav|ogg|m4a)$/i) ? (
+                    <FileAudio className="h-4 w-4 mr-1" />
+                  ) : (
+                    <FileText className="h-4 w-4 mr-1" />
+                  )}
+                  {r.attachment_name}
+                </Button>
+              )}
             </div>
           )}
         </CardContent>
