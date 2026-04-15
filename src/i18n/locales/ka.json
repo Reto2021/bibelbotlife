@@ -1869,7 +1869,24 @@
     "tag_weekly": "ყოველკვირეული",
     "tag_community": "საზოგადოება",
     "tag_personal": "პიროვნული",
-    "tag_individual": "ინდივიდუალური"
+    "tag_individual": "ინდივიდუალური",
+    "edu1": "დიპლომირებული ბიზნეს ინფორმატიკოსი UZH",
+    "edu2": "დიპლომირებული კომერციის მასწავლებელი UZH",
+    "edu3": "ფედერალური დიპლომირებული მენეჯმენტის სპეციალისტი FA-ით",
+    "edu4": "CAS სტრატეგია ზემოქმედებით FHGR",
+    "edu5": "CAS კრიზისული კომუნიკაცია ZHAW",
+    "edu6": "VR-CAS შვეიცარიის საბჭოს სკოლა HSG",
+    "edu7": "Scrum Master",
+    "award1": "Venture Leader 2011",
+    "award2": "Microsoft Innovation Award 2011",
+    "award3": "ნომინირებული Swiss CRM Innovation Award 2011",
+    "award4": "ნომინირებული Microsoft European BizSpark Award 2011",
+    "eng1": "აარგაუს კანტონის დიდი საბჭოს წევრი",
+    "eng2": "ქალაქ ბრუგის ყოფილი ვიცე-ამანი",
+    "eng3": "ბრუგის რეგიონის ჯანდაცვის ფონდის საბჭოს პრეზიდენტი",
+    "eng4": "VR Süssbach Pflegezentrum AG-ის პრეზიდენტი",
+    "eng5": "IBB Holding AG-ის ვიცე-პრეზიდენტი",
+    "eng6": "ქალაქის ფესტივალის 2026 წლის საორგანიზაციო კომიტეტის პრეზიდენტი"
   },
   "nav.about": "ჩვენს შესახებ"
 }

@@ -1490,7 +1490,24 @@
     "tag_weekly": "Mingguan",
     "tag_community": "Komunitas",
     "tag_personal": "Pribadi",
-    "tag_individual": "Individual"
+    "tag_individual": "Individual",
+    "edu1": "Dipl. Ilmu Komputer Bisnis UZH",
+    "edu2": "Dipl. Guru Komersial UZH",
+    "edu3": "Spesialis Manajemen Federal dengan FA",
+    "edu4": "CAS Strategi dengan Dampak FHGR",
+    "edu5": "CAS Komunikasi Krisis ZHAW",
+    "edu6": "VR-CAS Sekolah Dewan Swiss HSG",
+    "edu7": "Scrum Master",
+    "award1": "Pemimpin Usaha 2011",
+    "award2": "Penghargaan Inovasi Microsoft 2011",
+    "award3": "Nominasi Penghargaan Inovasi CRM Swiss 2011",
+    "award4": "Nominasi Penghargaan BizSpark Eropa Microsoft 2011",
+    "eng1": "Anggota Dewan Besar Kanton Aargau",
+    "eng2": "Mantan Wakil Walikota Kota Brugg",
+    "eng3": "Presiden Dewan Yayasan Kesehatan Wilayah Brugg",
+    "eng4": "Presiden Dewan Direksi Süssbach Pflegezentrum AG",
+    "eng5": "Wakil Presiden IBB Holding AG",
+    "eng6": "Presiden Komite Penyelenggara Festival Kota 2026"
   },
   "nav.about": "Tentang Kami"
 }

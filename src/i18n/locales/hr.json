@@ -1867,7 +1867,24 @@
     "tag_weekly": "Tjedno",
     "tag_community": "Zajednica",
     "tag_personal": "Osobno",
-    "tag_individual": "Individualno"
+    "tag_individual": "Individualno",
+    "edu1": "Dipl. informatičar UZH",
+    "edu2": "Dipl. profesor trgovine UZH",
+    "edu3": "Savezni diplomirani stručnjak za menadžment s FA",
+    "edu4": "CAS Strategija s utjecajem FHGR",
+    "edu5": "CAS Krizna komunikacija ZHAW",
+    "edu6": "VR-CAS Swiss Board School HSG",
+    "edu7": "Scrum Master",
+    "award1": "Venture Leader 2011",
+    "award2": "Microsoft Innovation Award 2011",
+    "award3": "Nominiran za Swiss CRM Innovation Award 2011",
+    "award4": "Nominiran za Microsoft European BizSpark Award 2011",
+    "eng1": "Veliko vijeće kantona Aargau",
+    "eng2": "Bivši zamjenik gradonačelnika grada Brugga",
+    "eng3": "Predsjednik Upravnog odbora Zaklade za zdravlje regije Brugg",
+    "eng4": "Predsjednik Upravnog odbora Süssbach Pflegezentrum AG",
+    "eng5": "Potpredsjednik IBB Holding AG",
+    "eng6": "Predsjednik Organizacijskog odbora Gradskog festivala 2026"
   },
   "nav.about": "O nama"
 }

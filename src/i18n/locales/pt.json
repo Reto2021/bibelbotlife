@@ -1867,7 +1867,24 @@
     "tag_weekly": "Semanal",
     "tag_community": "Comunidade",
     "tag_personal": "Pessoal",
-    "tag_individual": "Individual"
+    "tag_individual": "Individual",
+    "edu1": "Especialista em Informática Empresarial UZH",
+    "edu2": "Professor Comercial UZH",
+    "edu3": "Especialista em Gestão com Diploma Federal",
+    "edu4": "CAS Estratégia com Impacto FHGR",
+    "edu5": "CAS Comunicação de Crise ZHAW",
+    "edu6": "VR-CAS Swiss Board School HSG",
+    "edu7": "Scrum Master",
+    "award1": "Líder de Empreendimento 2011",
+    "award2": "Prêmio Microsoft de Inovação 2011",
+    "award3": "Nomeado para o Prêmio Suíço de Inovação em CRM 2011",
+    "award4": "Nomeado para o Prêmio Microsoft European BizSpark 2011",
+    "eng1": "Membro do Grande Conselho do Cantão de Aargau",
+    "eng2": "Ex-Vice-Prefeito da Cidade de Brugg",
+    "eng3": "Presidente do Conselho da Fundação Saúde Região Brugg",
+    "eng4": "Presidente do Conselho de Administração do Centro de Cuidados Süssbach AG",
+    "eng5": "Vice-Presidente da IBB Holding AG",
+    "eng6": "Presidente do Comitê Organizador do Festival da Cidade 2026"
   },
   "nav.about": "Sobre Nós"
 }

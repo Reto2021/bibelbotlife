@@ -1867,7 +1867,24 @@
     "tag_weekly": "Kila Wiki",
     "tag_community": "Jamii",
     "tag_personal": "Binafsi",
-    "tag_individual": "Mtu Mmoja Mmoja"
+    "tag_individual": "Mtu Mmoja Mmoja",
+    "edu1": "Mtaalamu wa Biashara ya Kompyuta UZH",
+    "edu2": "Mwalimu wa Biashara UZH",
+    "edu3": "Mtaalamu wa Uongozi aliyethibitishwa na FA",
+    "edu4": "CAS Mkakati wenye Athari FHGR",
+    "edu5": "CAS Mawasiliano ya Mgogoro ZHAW",
+    "edu6": "VR-CAS Shule ya Bodi ya Uswisi HSG",
+    "edu7": "Mwalimu wa Scrum",
+    "award1": "Kiongozi wa Biashara 2011",
+    "award2": "Tuzo ya Ubunifu ya Microsoft 2011",
+    "award3": "Ameteuliwa Tuzo ya Ubunifu ya CRM ya Uswisi 2011",
+    "award4": "Ameteuliwa Tuzo ya Microsoft European BizSpark 2011",
+    "eng1": "Mjumbe wa Baraza Kuu la Canton Aargau",
+    "eng2": "Meya Msaidizi wa Zamani wa Jiji la Brugg",
+    "eng3": "Mwenyekiti wa Bodi ya Wadhamini wa Mfuko wa Afya wa Mkoa wa Brugg",
+    "eng4": "Mwenyekiti wa Bodi ya Wakurugenzi Süssbach Nursing Home AG",
+    "eng5": "Makamu Mwenyekiti wa IBB Holding AG",
+    "eng6": "Mwenyekiti wa Kamati ya Maandalizi ya Tamasha la Jiji 2026"
   },
   "nav.about": "Kuhusu Sisi"
 }

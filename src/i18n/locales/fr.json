@@ -1867,7 +1867,24 @@
     "tag_weekly": "Hebdomadaire",
     "tag_community": "Communauté",
     "tag_personal": "Personnel",
-    "tag_individual": "Individuel"
+    "tag_individual": "Individuel",
+    "edu1": "Informaticien de gestion diplômé UZH",
+    "edu2": "Professeur de commerce diplômé UZH",
+    "edu3": "Spécialiste en gestion diplômé fédéral avec brevet fédéral",
+    "edu4": "CAS Stratégie avec Impact FHGR",
+    "edu5": "CAS Communication de crise ZHAW",
+    "edu6": "VR-CAS Swiss Board School HSG",
+    "edu7": "Scrum Master",
+    "award1": "Venture Leader 2011",
+    "award2": "Microsoft Innovation Award 2011",
+    "award3": "Nominé Swiss CRM Innovation Award 2011",
+    "award4": "Nominé Microsoft European BizSpark Award 2011",
+    "eng1": "Grand Conseil Canton d'Argovie",
+    "eng2": "Ancien Vice-Maire Ville de Brugg",
+    "eng3": "Président du Conseil de Fondation de la Fondation Santé Région Brugg",
+    "eng4": "Président du Conseil d'Administration Süssbach Pflegezentrum AG",
+    "eng5": "Vice-Président IBB Holding AG",
+    "eng6": "Président du Comité d'Organisation Fête de la Ville 2026"
   },
   "nav.about": "À Propos"
 }

@@ -1867,7 +1867,24 @@
     "tag_weekly": "Chak Semèn",
     "tag_community": "Kominote",
     "tag_personal": "Pèsonèl",
-    "tag_individual": "Endividyèl"
+    "tag_individual": "Endividyèl",
+    "edu1": "Dipl. Enfòmatik Biznis UZH",
+    "edu2": "Dipl. Pwofesè Komès UZH",
+    "edu3": "Espesyalis Jesyon ak Diplòm Federal",
+    "edu4": "CAS Estrateji ak Enpak FHGR",
+    "edu5": "CAS Kominikasyon Kriz ZHAW",
+    "edu6": "VR-CAS Swiss Board School HSG",
+    "edu7": "Scrum Mèt",
+    "award1": "Lidè Venture 2011",
+    "award2": "Microsoft Innovation Award 2011",
+    "award3": "Nominasyon Swiss CRM Innovation Award 2011",
+    "award4": "Nominasyon Microsoft European BizSpark Award 2011",
+    "eng1": "Gran Konsèy Kanton Aargau",
+    "eng2": "Ansyen Vis-Majistra Vil Brugg",
+    "eng3": "Prezidan Konsèy Fondasyon Sante Rejyon Brugg",
+    "eng4": "Prezidan Konsèy Administrasyon Süssbach Pflegezentrum AG",
+    "eng5": "Vis-Prezidan IBB Holding AG",
+    "eng6": "Prezidan Komite Òganizasyon Fèt Vil 2026"
   },
   "nav.about": "Sou Nou"
 }

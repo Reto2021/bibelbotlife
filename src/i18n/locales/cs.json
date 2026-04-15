@@ -1867,7 +1867,24 @@
     "tag_weekly": "Týdenní",
     "tag_community": "Komunita",
     "tag_personal": "Osobní",
-    "tag_individual": "Individuální"
+    "tag_individual": "Individuální",
+    "edu1": "Dipl. informatik UZH",
+    "edu2": "Dipl. učitel obchodu UZH",
+    "edu3": "Federálně certifikovaný manažer s FA",
+    "edu4": "CAS Strategie s dopadem FHGR",
+    "edu5": "CAS Krizová komunikace ZHAW",
+    "edu6": "VR-CAS Swiss Board School HSG",
+    "edu7": "Scrum Master",
+    "award1": "Venture Leader 2011",
+    "award2": "Microsoft Innovation Award 2011",
+    "award3": "Nominován na Swiss CRM Innovation Award 2011",
+    "award4": "Nominován na Microsoft European BizSpark Award 2011",
+    "eng1": "Velká rada kantonu Aargau",
+    "eng2": "Bývalý místostarosta města Brugg",
+    "eng3": "Předseda správní rady Nadace pro zdraví regionu Brugg",
+    "eng4": "Předseda představenstva Süssbach Pflegezentrum AG",
+    "eng5": "Místopředseda IBB Holding AG",
+    "eng6": "Předseda organizačního výboru Městského festivalu 2026"
   },
   "nav.about": "O nás"
 }

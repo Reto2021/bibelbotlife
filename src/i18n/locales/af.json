@@ -1867,7 +1867,24 @@
     "tag_weekly": "Weekliks",
     "tag_community": "Gemeenskap",
     "tag_personal": "Persoonlik",
-    "tag_individual": "Individueel"
+    "tag_individual": "Individueel",
+    "edu1": "Dipl. Bedryfsinformatikus UZH",
+    "edu2": "Dipl. Handelsonderwyser UZH",
+    "edu3": "Federale dipl. Bestuurspesialis met FA",
+    "edu4": "CAS Strategie met Impak FHGR",
+    "edu5": "CAS Krisiskommunikasie ZHAW",
+    "edu6": "VR-CAS Swiss Board School HSG",
+    "edu7": "Scrum Meester",
+    "award1": "Venture Leier 2011",
+    "award2": "Microsoft Innovasie Toekenning 2011",
+    "award3": "Genomineer Switserse CRM Innovasie Toekenning 2011",
+    "award4": "Genomineer Microsoft Europese BizSpark Toekenning 2011",
+    "eng1": "Groot Raad Kanton Aargau",
+    "eng2": "Voormalige Vise-Burgemeester Stad Brugg",
+    "eng3": "President Stigting Raad Stigting Gesondheid Streek Brugg",
+    "eng4": "President VR Süssbach Verpleegsentrum AG",
+    "eng5": "Vise-President IBB Holding AG",
+    "eng6": "OK-President Stadsfees 2026"
   },
   "nav.about": "Oor Ons"
 }

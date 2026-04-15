@@ -1867,7 +1867,24 @@
     "tag_weekly": "Wekelijks",
     "tag_community": "Gemeenschap",
     "tag_personal": "Persoonlijk",
-    "tag_individual": "Individueel"
+    "tag_individual": "Individueel",
+    "edu1": "Gediplomeerd bedrijfsinformaticus UZH",
+    "edu2": "Gediplomeerd handelsleraar UZH",
+    "edu3": "Federaal gediplomeerd leidinggevende met FA",
+    "edu4": "CAS Strategy with Impact FHGR",
+    "edu5": "CAS Crisiscommunicatie ZHAW",
+    "edu6": "VR-CAS Swiss Board School HSG",
+    "edu7": "Scrum Master",
+    "award1": "Venture Leader 2011",
+    "award2": "Microsoft Innovation Award 2011",
+    "award3": "Genomineerd Swiss CRM Innovation Award 2011",
+    "award4": "Genomineerd Microsoft European BizSpark Award 2011",
+    "eng1": "Grote Raad Kanton Aargau",
+    "eng2": "Voormalig vice-burgemeester stad Brugg",
+    "eng3": "Voorzitter Stichtingsraad Stichting Gezondheid Regio Brugg",
+    "eng4": "Voorzitter RvC Süssbach Pflegezentrum AG",
+    "eng5": "Vicevoorzitter IBB Holding AG",
+    "eng6": "OK-voorzitter Stadsfeest 2026"
   },
   "nav.about": "Over ons"
 }

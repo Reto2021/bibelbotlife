@@ -1868,7 +1868,24 @@
     "tag_weekly": "Εβδομαδιαίο",
     "tag_community": "Κοινότητα",
     "tag_personal": "Προσωπικό",
-    "tag_individual": "Ατομικό"
+    "tag_individual": "Ατομικό",
+    "edu1": "Διπλ. Πληροφορικής Οικονομίας UZH",
+    "edu2": "Διπλ. Καθηγητής Εμπορίου UZH",
+    "edu3": "Ομοσπονδιακά διπλ. Ειδικός Διοίκησης με FA",
+    "edu4": "CAS Στρατηγική με Επιπτώσεις FHGR",
+    "edu5": "CAS Επικοινωνία Κρίσεων ZHAW",
+    "edu6": "VR-CAS Swiss Board School HSG",
+    "edu7": "Scrum Master",
+    "award1": "Venture Leader 2011",
+    "award2": "Microsoft Innovation Award 2011",
+    "award3": "Υποψήφιος Swiss CRM Innovation Award 2011",
+    "award4": "Υποψήφιος Microsoft European BizSpark Award 2011",
+    "eng1": "Μέλος του Μεγάλου Συμβουλίου του Καντονιού Aargau",
+    "eng2": "Πρώην Αντιδήμαρχος της πόλης Brugg",
+    "eng3": "Πρόεδρος του Διοικητικού Συμβουλίου του Ιδρύματος Υγείας Περιοχής Brugg",
+    "eng4": "Πρόεδρος ΔΣ Süssbach Pflegezentrum AG",
+    "eng5": "Αντιπρόεδρος IBB Holding AG",
+    "eng6": "Πρόεδρος Οργανωτικής Επιτροπής Φεστιβάλ Πόλης 2026"
   },
   "nav.about": "Σχετικά με εμάς"
 }
