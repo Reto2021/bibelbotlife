@@ -108,6 +108,7 @@ export default function ResourceLibrary() {
   const [editingId, setEditingId] = useState<string | null>(null);
   const [form, setForm] = useState<FormState>(() => emptyForm(defaultLang));
   const [expandedIds, setExpandedIds] = useState<Set<string>>(new Set());
+  const importFileRef = useRef<HTMLInputElement>(null);
 
   const toggleExpand = useCallback((id: string) => {
     setExpandedIds(prev => {
