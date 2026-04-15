@@ -349,7 +349,7 @@ export default function ResourceLibrary() {
                   </Badge>
                 )}
                 {r.attachment_url && (
-                  <Paperclip className="h-3 w-3 text-muted-foreground shrink-0" title={r.attachment_name ?? "Anhang"} />
+                  <span title={r.attachment_name ?? "Anhang"}><Paperclip className="h-3 w-3 text-muted-foreground shrink-0" /></span>
                 )}
                 {r.shared_with_church && !r.is_system && (
                   <Badge variant="outline" className="text-xs shrink-0 border-green-500/30 text-green-600 dark:text-green-400">
