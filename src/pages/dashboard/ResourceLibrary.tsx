@@ -23,6 +23,8 @@ import {
   type Resource,
 } from "@/hooks/use-resources";
 import { useUserChurch } from "@/hooks/use-user-church";
+import { useAuth } from "@/hooks/use-auth";
+import { supabase } from "@/integrations/supabase/client";
 import type { Database } from "@/integrations/supabase/types";
 
 type ResourceType = Database["public"]["Enums"]["resource_type"];
