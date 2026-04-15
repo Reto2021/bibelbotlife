@@ -28,18 +28,31 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSepara
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
 import { Badge } from "@/components/ui/badge";
 
+const SERVICE_TYPE_TITLES: Record<string, string> = {
+  regular: "Neuer Gottesdienst",
+  baptism: "Taufgottesdienst",
+  wedding: "Trauung",
+  funeral: "Abdankung",
+  confirmation: "Konfirmationsgottesdienst",
+  communion: "Abendmahlsgottesdienst",
+  special: "Spezialgottesdienst",
+  other: "Anderer Gottesdienst",
+};
+
 export default function ServiceEditor() {
   const { id } = useParams();
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const { user } = useAuth();
   const { data: church } = useUserChurch();
   const { data: teamMembers } = useTeam();
   const isNew = !id || id === "new";
 
-  const [title, setTitle] = useState("Neuer Gottesdienst");
+  const initialType = (isNew && searchParams.get("type")) || "regular";
+  const [title, setTitle] = useState(SERVICE_TYPE_TITLES[initialType] || "Neuer Gottesdienst");
   const [serviceDate, setServiceDate] = useState(new Date().toISOString().split("T")[0]);
   const [serviceTime, setServiceTime] = useState("10:00");
-  const [serviceType, setServiceType] = useState("regular");
+  const [serviceType, setServiceType] = useState(initialType);
   const [tradition, setTradition] = useState("reformed");
   const [blocks, setBlocks] = useState<ServiceBlockData[]>([]);
   const [notes, setNotes] = useState("");
