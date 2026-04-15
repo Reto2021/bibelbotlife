@@ -1,5 +1,5 @@
 import { useState, useCallback, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { DndContext, closestCenter, KeyboardSensor, PointerSensor, TouchSensor, useSensor, useSensors, type DragEndEvent, type DragStartEvent, type DragOverEvent, DragOverlay } from "@dnd-kit/core";
 import { arrayMove, SortableContext, sortableKeyboardCoordinates, verticalListSortingStrategy } from "@dnd-kit/sortable";
 import { ArrowLeft, Save, Clock, Plus, Play, Library, BookmarkPlus, FileDown, FileText, Mail, Users, GripVertical, PanelRightOpen, PanelRightClose, Trash2, Copy, MoreVertical, Archive, Eye, FileEdit } from "lucide-react";
