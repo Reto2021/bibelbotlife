@@ -46,6 +46,7 @@ const EulogyWriter = () => {
   const [personName, setPersonName] = useState("");
   const [personAge, setPersonAge] = useState("");
   const [additionalNotes, setAdditionalNotes] = useState("");
+  const [draftTitle, setDraftTitle] = useState("");
   const [draftId, setDraftId] = useState<string | null>(null);
   const [shareToken, setShareToken] = useState<string | null>(null);
   const [isShared, setIsShared] = useState(false);
