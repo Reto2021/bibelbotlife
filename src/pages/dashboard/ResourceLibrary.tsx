@@ -674,6 +674,50 @@ export default function ResourceLibrary() {
                 </SelectContent>
               </Select>
             </div>
+            {/* File attachment */}
+            <div>
+              <label className="text-sm font-medium text-foreground mb-1 block">
+                <Paperclip className="h-4 w-4 inline mr-1" />
+                Anhang (PDF, Noten, Audio)
+              </label>
+              {form.attachment_name ? (
+                <div className="flex items-center gap-2 p-2 border rounded-md bg-muted/50">
+                  {form.attachment_name.match(/\.(mp3|wav|ogg|m4a)$/i) ? (
+                    <FileAudio className="h-4 w-4 text-muted-foreground" />
+                  ) : (
+                    <FileText className="h-4 w-4 text-muted-foreground" />
+                  )}
+                  <span className="text-sm flex-1 truncate">{form.attachment_name}</span>
+                  <Button type="button" variant="ghost" size="icon" className="h-6 w-6" onClick={removeAttachment}>
+                    <X className="h-3 w-3" />
+                  </Button>
+                </div>
+              ) : (
+                <div>
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept=".pdf,.mp3,.wav,.ogg,.m4a,.png,.jpg,.jpeg,.webp"
+                    onChange={handleFileUpload}
+                    className="hidden"
+                  />
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="sm"
+                    onClick={() => fileInputRef.current?.click()}
+                    disabled={uploading}
+                  >
+                    {uploading ? (
+                      <><Loader2 className="h-4 w-4 mr-1 animate-spin" /> Laden…</>
+                    ) : (
+                      <><Paperclip className="h-4 w-4 mr-1" /> Datei wählen</>
+                    )}
+                  </Button>
+                  <p className="text-xs text-muted-foreground mt-1">Max. 20 MB · PDF, Audio, Bilder</p>
+                </div>
+              )}
+            </div>
             <div>
               <label className="text-sm font-medium text-foreground mb-1 block">Inhalt / Text</label>
               <Textarea
