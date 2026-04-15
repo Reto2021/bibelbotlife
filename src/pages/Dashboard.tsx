@@ -92,17 +92,17 @@ export default function Dashboard() {
     <SidebarProvider>
       <div className="min-h-screen flex w-full">
         <DashboardSidebar />
-        <div className="flex-1 flex flex-col">
-          <header className="h-12 flex items-center border-b border-border px-4">
+        <div className="flex-1 flex flex-col overflow-hidden">
+          <header className="h-12 flex items-center border-b border-border px-4 shrink-0">
             <SidebarTrigger className="mr-4" />
             <span className="text-sm font-medium text-muted-foreground">Messeplaner</span>
           </header>
-          <main className="flex-1 p-6">
+          <main className="flex-1 overflow-auto p-6">
             <Outlet />
           </main>
-          <BibleBotChat />
         </div>
       </div>
+      <BibleBotChat />
     </SidebarProvider>
   );
 }
