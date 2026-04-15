@@ -170,7 +170,7 @@ export default function ResourceLibrary() {
 
   // Filter & search
   const filtered = useMemo(() => {
-    const base = activeTab === "mine" ? myResources : activeTab === "system" ? systemResources : resources;
+    const base = activeTab === "mine" ? myResources : activeTab === "system" ? systemResources : activeTab === "team" ? teamResources : resources;
     return base.filter((r) => {
       if (filterLanguage !== "all" && r.language !== filterLanguage) return false;
       if (filterType !== "all" && r.resource_type !== filterType) return false;
@@ -188,7 +188,7 @@ export default function ResourceLibrary() {
       }
       return true;
     });
-  }, [resources, myResources, systemResources, activeTab, filterType, filterTag, filterTradition, filterCountry, filterLanguage, search]);
+  }, [resources, myResources, systemResources, teamResources, activeTab, filterType, filterTag, filterTradition, filterCountry, filterLanguage, search]);
 
   const openCreate = () => {
     setEditingId(null);
@@ -563,6 +563,12 @@ export default function ResourceLibrary() {
             <Globe className="h-4 w-4 mr-1" />
             Katalog ({systemResources.length})
           </TabsTrigger>
+          {church && (
+            <TabsTrigger value="team">
+              <Users className="h-4 w-4 mr-1" />
+              Team ({teamResources.length})
+            </TabsTrigger>
+          )}
         </TabsList>
       </Tabs>
 
