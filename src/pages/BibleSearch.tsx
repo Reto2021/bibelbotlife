@@ -1,5 +1,6 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { useSearchParams } from "react-router-dom";
 import { Search, Book, Loader2, ChevronRight } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -36,11 +37,13 @@ const TRANSLATION_LABELS: Record<string, string> = {
 
 export default function BibleSearch() {
   const { t, i18n } = useTranslation();
+  const [searchParams] = useSearchParams();
   const [query, setQuery] = useState("");
   const [translation, setTranslation] = useState("all");
   const [results, setResults] = useState<SearchResponse | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [initialSearchDone, setInitialSearchDone] = useState(false);
 
   const doSearch = useCallback(async () => {
     if (!query.trim() || query.trim().length < 2) return;
@@ -70,6 +73,23 @@ export default function BibleSearch() {
       setLoading(false);
     }
   }, [query, translation, i18n.language, t]);
+
+  // Auto-search when ?q= parameter is present
+  useEffect(() => {
+    if (initialSearchDone) return;
+    const q = searchParams.get("q");
+    if (q) {
+      setQuery(q);
+      setInitialSearchDone(true);
+    }
+  }, [searchParams, initialSearchDone]);
+
+  // Trigger search when query is set from URL
+  useEffect(() => {
+    if (initialSearchDone && query.trim().length >= 2) {
+      doSearch();
+    }
+  }, [initialSearchDone]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") doSearch();
