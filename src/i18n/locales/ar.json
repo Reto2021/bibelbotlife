@@ -1930,6 +1930,8 @@
     "thisWeek": "هذا الأسبوع",
     "showAnswered": "عرض المستجابة",
     "newPrayer": "طلب صلاة جديد",
-    "send": "إرسال"
+    "send": "إرسال",
+    "hideAnswered": "إخفاء المستجابة",
+    "generateError": "خطأ في الإنشاء"
   }
 }

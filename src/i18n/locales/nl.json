@@ -1930,6 +1930,8 @@
     "thisWeek": "Deze week",
     "showAnswered": "Verhoorde tonen",
     "newPrayer": "Nieuw gebedsnood",
-    "send": "Verzenden"
+    "send": "Verzenden",
+    "hideAnswered": "Verhoorde verbergen",
+    "generateError": "Fout bij genereren"
   }
 }

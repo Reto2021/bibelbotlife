@@ -1930,6 +1930,8 @@
     "thisWeek": "Esta semana",
     "showAnswered": "Mostrar respondidas",
     "newPrayer": "Novo pedido de oração",
-    "send": "Enviar"
+    "send": "Enviar",
+    "hideAnswered": "Ocultar respondidas",
+    "generateError": "Erro ao gerar"
   }
 }

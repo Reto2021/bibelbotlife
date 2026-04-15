@@ -1930,6 +1930,8 @@
     "thisWeek": "Ten tydzień",
     "showAnswered": "Pokaż wysłuchane",
     "newPrayer": "Nowa prośba modlitewna",
-    "send": "Wyślij"
+    "send": "Wyślij",
+    "hideAnswered": "Ukryj wysłuchane",
+    "generateError": "Błąd generowania"
   }
 }

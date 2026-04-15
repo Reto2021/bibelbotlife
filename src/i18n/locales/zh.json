@@ -1931,6 +1931,8 @@
     "thisWeek": "本周",
     "showAnswered": "显示已应允",
     "newPrayer": "新祷告请求",
-    "send": "发送"
+    "send": "发送",
+    "hideAnswered": "隐藏已应允",
+    "generateError": "生成错误"
   }
 }

@@ -1930,6 +1930,8 @@
     "thisWeek": "Cette semaine",
     "showAnswered": "Afficher les exaucées",
     "newPrayer": "Nouvelle demande de prière",
-    "send": "Envoyer"
+    "send": "Envoyer",
+    "hideAnswered": "Masquer les exaucées",
+    "generateError": "Erreur lors de la génération"
   }
 }

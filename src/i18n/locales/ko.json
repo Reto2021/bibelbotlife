@@ -1930,6 +1930,8 @@
     "thisWeek": "이번 주",
     "showAnswered": "응답된 기도 보기",
     "newPrayer": "새 기도 요청",
-    "send": "보내기"
+    "send": "보내기",
+    "hideAnswered": "응답된 기도 숨기기",
+    "generateError": "생성 오류"
   }
 }

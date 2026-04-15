@@ -1930,6 +1930,8 @@
     "thisWeek": "Questa settimana",
     "showAnswered": "Mostra esaudite",
     "newPrayer": "Nuova richiesta di preghiera",
-    "send": "Invia"
+    "send": "Invia",
+    "hideAnswered": "Nascondi esaudite",
+    "generateError": "Errore nella generazione"
   }
 }

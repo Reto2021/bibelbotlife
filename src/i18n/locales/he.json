@@ -1930,6 +1930,8 @@
     "thisWeek": "This Week",
     "showAnswered": "Show answered",
     "newPrayer": "New prayer request",
-    "send": "Send"
+    "send": "Send",
+    "hideAnswered": "Hide answered",
+    "generateError": "Error generating questions"
   }
 }

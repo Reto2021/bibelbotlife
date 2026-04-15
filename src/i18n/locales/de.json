@@ -1971,6 +1971,8 @@
     "thisWeek": "Diese Woche",
     "showAnswered": "Erhörte anzeigen",
     "newPrayer": "Neues Gebetsanliegen",
-    "send": "Senden"
+    "send": "Senden",
+    "hideAnswered": "Erhörte ausblenden",
+    "generateError": "Fehler beim Generieren"
   }
 }
