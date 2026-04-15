@@ -77,6 +77,7 @@ const EulogyWriter = () => {
     if (draftsQuery.data && draftsQuery.data.length > 0 && !draftId) {
       const draft = draftsQuery.data[0];
       setDraftId(draft.id);
+      setDraftTitle((draft as any).title || "");
       setPersonName(draft.person_name || "");
       setShareToken(draft.share_token);
       setIsShared(draft.is_shared);
@@ -115,6 +116,7 @@ const EulogyWriter = () => {
       const result = await saveDraft.mutateAsync({
         id: draftId || undefined,
         ceremony_type: "funeral",
+        title: draftTitle,
         person_name: personName,
         form_data: { personAge, additionalNotes },
         transcripts: recordings.map((r) => ({ text: r.transcript, duration: r.duration })),
