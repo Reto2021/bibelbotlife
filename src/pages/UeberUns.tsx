@@ -10,31 +10,9 @@ import {
   MessageCircle, Church, HeartHandshake
 } from "lucide-react";
 
-const EDUCATION = [
-  "Dipl. Wirtschaftsinformatiker UZH",
-  "Dipl. Handelslehrer UZH",
-  "Eidg. dipl. Führungsfachmann mit FA",
-  "CAS Strategy with Impact FHGR",
-  "CAS Krisenkommunikation ZHAW",
-  "VR-CAS Swiss Board School HSG",
-  "Scrum Master",
-];
-
-const AWARDS = [
-  "Venture Leader 2011",
-  "Microsoft Innovation Award 2011",
-  "Nominiert Swiss CRM Innovation Award 2011",
-  "Nominiert Microsoft European BizSpark Award 2011",
-];
-
-const ENGAGEMENTS = [
-  "Grossrat Kanton Aargau",
-  "Alt-Vize-Ammann Stadt Brugg",
-  "Präsident Stiftungsrat Stiftung Gesundheit Region Brugg",
-  "Präsident VR Süssbach Pflegezentrum AG",
-  "Vize-Präsident IBB Holding AG",
-  "OK-Präsident Stadtfest 2026",
-];
+const EDU_KEYS = ["edu1", "edu2", "edu3", "edu4", "edu5", "edu6", "edu7"];
+const AWARD_KEYS = ["award1", "award2", "award3", "award4"];
+const ENG_KEYS = ["eng1", "eng2", "eng3", "eng4", "eng5", "eng6"];
 
 export default function UeberUns() {
   const { t } = useTranslation();
