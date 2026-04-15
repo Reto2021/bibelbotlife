@@ -141,7 +141,7 @@ export default function ResourceLibrary() {
   const [filterTradition, setFilterTradition] = useState<string | "all">("all");
   const [filterCountry, setFilterCountry] = useState<string | "all">("all");
   const [filterLanguage, setFilterLanguage] = useState<string>(defaultLang);
-  const [activeTab, setActiveTab] = useState<"all" | "mine" | "system">("all");
+  const [activeTab, setActiveTab] = useState<"all" | "mine" | "system" | "team">("all");
   const [dialogOpen, setDialogOpen] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [form, setForm] = useState<FormState>(() => emptyForm(defaultLang));
@@ -157,8 +157,9 @@ export default function ResourceLibrary() {
     });
   }, []);
 
-  const myResources = useMemo(() => resources.filter(r => !r.is_system), [resources]);
+  const myResources = useMemo(() => resources.filter(r => !r.is_system && r.created_by === user?.id), [resources, user?.id]);
   const systemResources = useMemo(() => resources.filter(r => r.is_system), [resources]);
+  const teamResources = useMemo(() => resources.filter(r => r.shared_with_church && r.created_by !== user?.id), [resources, user?.id]);
 
   // Collect all tags
   const allTags = useMemo(() => {
@@ -169,7 +170,7 @@ export default function ResourceLibrary() {
 
   // Filter & search
   const filtered = useMemo(() => {
-    const base = activeTab === "mine" ? myResources : activeTab === "system" ? systemResources : resources;
+    const base = activeTab === "mine" ? myResources : activeTab === "system" ? systemResources : activeTab === "team" ? teamResources : resources;
     return base.filter((r) => {
       if (filterLanguage !== "all" && r.language !== filterLanguage) return false;
       if (filterType !== "all" && r.resource_type !== filterType) return false;
@@ -187,7 +188,7 @@ export default function ResourceLibrary() {
       }
       return true;
     });
-  }, [resources, myResources, systemResources, activeTab, filterType, filterTag, filterTradition, filterCountry, filterLanguage, search]);
+  }, [resources, myResources, systemResources, teamResources, activeTab, filterType, filterTag, filterTradition, filterCountry, filterLanguage, search]);
 
   const openCreate = () => {
     setEditingId(null);
@@ -562,6 +563,12 @@ export default function ResourceLibrary() {
             <Globe className="h-4 w-4 mr-1" />
             Katalog ({systemResources.length})
           </TabsTrigger>
+          {church && (
+            <TabsTrigger value="team">
+              <Users className="h-4 w-4 mr-1" />
+              Team ({teamResources.length})
+            </TabsTrigger>
+          )}
         </TabsList>
       </Tabs>
 
