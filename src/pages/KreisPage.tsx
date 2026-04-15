@@ -132,7 +132,7 @@ function OverviewTab() {
       if (error) throw error;
       setQuestions(data.questions || []);
     } catch (e) {
-      toast.error("Fehler beim Generieren");
+      toast.error(t("circle.generateError", "Error generating questions"));
     } finally {
       setGenerating(false);
     }
@@ -144,7 +144,7 @@ function OverviewTab() {
       <div className="flex items-center justify-between flex-wrap gap-3">
         <div>
           <h2 className="text-2xl font-bold text-foreground">{circle?.name}</h2>
-          <p className="text-sm text-muted-foreground">{members.length} Mitglieder</p>
+          <p className="text-sm text-muted-foreground">{members.length} {t("circle.members")}</p>
         </div>
         <Button variant="outline" size="sm" onClick={copyInviteLink}>
           <Copy className="h-3.5 w-3.5 mr-1.5" />
@@ -184,7 +184,7 @@ function OverviewTab() {
       {/* Members */}
       <Card className="bg-card/80">
         <CardHeader className="pb-2">
-          <CardTitle className="text-base">Mitglieder</CardTitle>
+          <CardTitle className="text-base">{t("circle.members")}</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-2">
@@ -243,7 +243,7 @@ function PrayersTab() {
           <div className="flex justify-between items-center">
             <span className="text-xs text-muted-foreground">{content.length}/500</span>
             <Button size="sm" onClick={handleSubmit} disabled={!content.trim() || addPrayer.isPending}>
-              Senden
+              {t("circle.send")}
             </Button>
           </div>
         </CardContent>
@@ -254,7 +254,7 @@ function PrayersTab() {
         onClick={() => setShowAnswered(!showAnswered)}
         className="text-xs text-muted-foreground hover:text-foreground transition-colors"
       >
-        {showAnswered ? "Erhörte ausblenden" : `Erhörte anzeigen (${prayers.filter(p => p.is_answered).length})`}
+        {showAnswered ? t("circle.hideAnswered", "Hide answered") : `${t("circle.showAnswered")} (${prayers.filter(p => p.is_answered).length})`}
       </button>
 
       {/* Prayer list */}
@@ -328,9 +328,9 @@ function JourneyTab() {
   const leader = journeyProgress.find(p => p.days_completed === maxDays && maxDays > 0);
   let motivation = "";
   if (maxDays === 0) {
-    motivation = "Startet gemeinsam — heute ist der beste Tag ✨";
+    motivation = t("circle.motivationStart");
   } else if (leader && leader.user_id !== user?.id) {
-    motivation = `${leader.display_name} ist schon auf Tag ${leader.days_completed} — ihr könnt aufholen! 💪`;
+    motivation = t("circle.motivationCatchUp", { name: leader.display_name, days: leader.days_completed });
   }
 
   return (
@@ -346,7 +346,7 @@ function JourneyTab() {
         disabled={alreadyUpdatedToday || updateJourneyProgress.isPending}
         onClick={() => updateJourneyProgress.mutate()}
       >
-        {alreadyUpdatedToday ? "Heute bereits abgeschlossen ✓" : t("circle.journeyUpdateButton")}
+        {alreadyUpdatedToday ? t("circle.journeyUpdateButton") : t("circle.journeyUpdateButton")}
       </Button>
 
       <div className="space-y-3">

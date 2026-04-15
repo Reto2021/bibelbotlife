@@ -1964,6 +1964,15 @@
     "teaserBadge": "Neu: Mein Kreis",
     "teaserTitle": "Glaube teilt sich — in echten Beziehungen",
     "teaserDesc": "Gründe einen privaten Kreis mit Freunden oder deiner Familie. Gemeinsame Impulse, Gebetsanliegen, und die 21-Tage-Journey — füreinander da sein, auch digital.",
-    "teaserCta": "Kreis gründen — kostenlos"
+    "teaserCta": "Kreis gründen — kostenlos",
+    "motivationStart": "Startet gemeinsam — heute ist der beste Tag ✨",
+    "motivationCatchUp": "{{name}} ist schon auf Tag {{days}} — ihr könnt aufholen! 💪",
+    "members": "Mitglieder",
+    "thisWeek": "Diese Woche",
+    "showAnswered": "Erhörte anzeigen",
+    "newPrayer": "Neues Gebetsanliegen",
+    "send": "Senden",
+    "hideAnswered": "Erhörte ausblenden",
+    "generateError": "Fehler beim Generieren"
   }
 }
