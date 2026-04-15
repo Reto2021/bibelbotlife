@@ -157,8 +157,9 @@ export default function ResourceLibrary() {
     });
   }, []);
 
-  const myResources = useMemo(() => resources.filter(r => !r.is_system), [resources]);
+  const myResources = useMemo(() => resources.filter(r => !r.is_system && r.created_by === user?.id), [resources, user?.id]);
   const systemResources = useMemo(() => resources.filter(r => r.is_system), [resources]);
+  const teamResources = useMemo(() => resources.filter(r => r.shared_with_church && r.created_by !== user?.id), [resources, user?.id]);
 
   // Collect all tags
   const allTags = useMemo(() => {
