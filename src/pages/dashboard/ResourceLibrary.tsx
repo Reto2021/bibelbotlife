@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import {
   BookOpen, Music, HandHeart, BookOpenText, Plus, Search,
   Pencil, Trash2, X, Tag, Filter, MoreHorizontal, Globe, Church,
-  Download, Library, ChevronDown, ChevronUp, Copy, MessageCircle,
+  Download, Library, ChevronDown, ChevronUp, Copy, MessageCircle, Share2, Users,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { openBibleBotChat } from "@/lib/chat-events";
@@ -236,6 +236,20 @@ export default function ResourceLibrary() {
     toast.success("In Zwischenablage kopiert");
   };
 
+  const handleToggleShare = async (r: Resource) => {
+    try {
+      const newVal = !r.shared_with_church;
+      await updateResource.mutateAsync({
+        id: r.id,
+        shared_with_church: newVal,
+        church_id: church?.id ?? r.church_id ?? null,
+      });
+      toast.success(newVal ? "Ressource mit Team geteilt" : "Teilen aufgehoben");
+    } catch {
+      toast.error("Fehler beim Ändern der Freigabe");
+    }
+  };
+
   const handleChatDeepen = (r: Resource) => {
     const prefix = r.resource_type === "reading"
       ? "Erkläre mir diese Bibelstelle:"
@@ -268,6 +282,12 @@ export default function ResourceLibrary() {
                   <Badge variant="outline" className="text-xs shrink-0 border-primary/30 text-primary">
                     <Library className="h-3 w-3 mr-1" />
                     Katalog
+                  </Badge>
+                )}
+                {r.shared_with_church && !r.is_system && (
+                  <Badge variant="outline" className="text-xs shrink-0 border-green-500/30 text-green-600 dark:text-green-400">
+                    <Users className="h-3 w-3 mr-1" />
+                    Geteilt
                   </Badge>
                 )}
                 {r.hymnal_ref && (
@@ -339,6 +359,15 @@ export default function ResourceLibrary() {
                     <DropdownMenuItem onClick={() => openEdit(r)}>
                       <Pencil className="h-4 w-4 mr-2" /> Bearbeiten
                     </DropdownMenuItem>
+                    {church && (
+                      <DropdownMenuItem onClick={() => handleToggleShare(r)}>
+                        {r.shared_with_church ? (
+                          <><Users className="h-4 w-4 mr-2" /> Teilen aufheben</>
+                        ) : (
+                          <><Share2 className="h-4 w-4 mr-2" /> Mit Team teilen</>
+                        )}
+                      </DropdownMenuItem>
+                    )}
                     <DropdownMenuItem
                       className="text-destructive"
                       onClick={() => handleDelete(r.id)}
