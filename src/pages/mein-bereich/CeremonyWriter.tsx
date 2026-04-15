@@ -197,6 +197,7 @@ export default function CeremonyWriter({ config }: Props) {
   // Form state
   const [formData, setFormData] = useState<Record<string, string>>({});
   const [notes, setNotes] = useState("");
+  const [draftTitle, setDraftTitle] = useState("");
   const [draftId, setDraftId] = useState<string | null>(null);
   const [expandedResourceId, setExpandedResourceId] = useState<string | null>(null);
   const [shareToken, setShareToken] = useState<string | null>(null);
@@ -228,6 +229,7 @@ export default function CeremonyWriter({ config }: Props) {
     if (draftsQuery.data && draftsQuery.data.length > 0 && !draftId) {
       const draft = draftsQuery.data[0];
       setDraftId(draft.id);
+      setDraftTitle((draft as any).title || "");
       setShareToken(draft.share_token);
       setIsShared(draft.is_shared);
       setGeneratedText(draft.generated_text || "");
@@ -383,6 +385,7 @@ export default function CeremonyWriter({ config }: Props) {
       const result = await saveDraft.mutateAsync({
         id: draftId || undefined,
         ceremony_type: ceremonyType,
+        title: draftTitle,
         person_name: formData[config.fields[0]?.key] || "",
         form_data: { ...formData, _notes: notes },
         transcripts: recordings.map((r) => ({ text: r.transcript, duration: r.duration })),
@@ -566,8 +569,13 @@ export default function CeremonyWriter({ config }: Props) {
               </Button>
             </Link>
             <div className="min-w-0">
-              <h1 className="text-base font-semibold truncate">{t(config.titleKey)}</h1>
-              <p className="text-xs text-muted-foreground truncate hidden sm:block">{t(config.subtitleKey)}</p>
+              <Input
+                value={draftTitle}
+                onChange={(e) => setDraftTitle(e.target.value)}
+                placeholder={t(config.titleKey)}
+                className="text-base font-semibold h-7 px-1.5 border-transparent hover:border-input focus:border-input bg-transparent truncate"
+              />
+              <p className="text-xs text-muted-foreground truncate hidden sm:block px-1.5">{t(config.subtitleKey)}</p>
             </div>
           </div>
           <Button variant="outline" size="sm" onClick={handleSave} disabled={saveDraft.isPending} className="gap-1.5 shrink-0">
