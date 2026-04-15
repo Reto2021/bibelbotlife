@@ -78,6 +78,38 @@ const FIXED_TAG_CATEGORIES = [
 
 const typeLabel = (t: ResourceType) => RESOURCE_TYPES.find((r) => r.value === t)?.label ?? t;
 const typeIcon = (t: ResourceType) => RESOURCE_TYPES.find((r) => r.value === t)?.icon;
+const isAudioFile = (name: string) => /\.(mp3|wav|ogg|m4a|aac|flac|webm)$/i.test(name);
+
+function InlineAudioPlayer({ attachmentPath }: { attachmentPath: string }) {
+  const [url, setUrl] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    let cancelled = false;
+    setLoading(true);
+    setError(false);
+    supabase.storage
+      .from("resource-attachments")
+      .createSignedUrl(attachmentPath, 3600)
+      .then(({ data }) => {
+        if (cancelled) return;
+        if (data?.signedUrl) setUrl(data.signedUrl);
+        else setError(true);
+      })
+      .catch(() => { if (!cancelled) setError(true); })
+      .finally(() => { if (!cancelled) setLoading(false); });
+    return () => { cancelled = true; };
+  }, [attachmentPath]);
+
+  if (loading) return <div className="flex items-center gap-2 text-sm text-muted-foreground"><Loader2 className="h-4 w-4 animate-spin" /> Lade Audio…</div>;
+  if (error || !url) return <p className="text-sm text-destructive">Audio konnte nicht geladen werden</p>;
+  return (
+    <audio controls preload="metadata" className="w-full max-w-md h-10 rounded-lg">
+      <source src={url} />
+    </audio>
+  );
+}
 
 interface FormState {
   title: string;
