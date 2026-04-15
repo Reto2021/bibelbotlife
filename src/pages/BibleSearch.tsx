@@ -74,6 +74,23 @@ export default function BibleSearch() {
     }
   }, [query, translation, i18n.language, t]);
 
+  // Auto-search when ?q= parameter is present
+  useEffect(() => {
+    if (initialSearchDone) return;
+    const q = searchParams.get("q");
+    if (q) {
+      setQuery(q);
+      setInitialSearchDone(true);
+    }
+  }, [searchParams, initialSearchDone]);
+
+  // Trigger search when query is set from URL
+  useEffect(() => {
+    if (initialSearchDone && query.trim().length >= 2) {
+      doSearch();
+    }
+  }, [initialSearchDone]); // eslint-disable-line react-hooks/exhaustive-deps
+
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") doSearch();
   };
