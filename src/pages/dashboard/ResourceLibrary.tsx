@@ -236,6 +236,20 @@ export default function ResourceLibrary() {
     toast.success("In Zwischenablage kopiert");
   };
 
+  const handleToggleShare = async (r: Resource) => {
+    try {
+      const newVal = !r.shared_with_church;
+      await updateResource.mutateAsync({
+        id: r.id,
+        shared_with_church: newVal,
+        church_id: church?.id ?? r.church_id ?? null,
+      });
+      toast.success(newVal ? "Ressource mit Team geteilt" : "Teilen aufgehoben");
+    } catch {
+      toast.error("Fehler beim Ändern der Freigabe");
+    }
+  };
+
   const handleChatDeepen = (r: Resource) => {
     const prefix = r.resource_type === "reading"
       ? "Erkläre mir diese Bibelstelle:"
