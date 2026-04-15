@@ -46,6 +46,7 @@ const EulogyWriter = () => {
   const [personName, setPersonName] = useState("");
   const [personAge, setPersonAge] = useState("");
   const [additionalNotes, setAdditionalNotes] = useState("");
+  const [draftTitle, setDraftTitle] = useState("");
   const [draftId, setDraftId] = useState<string | null>(null);
   const [shareToken, setShareToken] = useState<string | null>(null);
   const [isShared, setIsShared] = useState(false);
@@ -76,6 +77,7 @@ const EulogyWriter = () => {
     if (draftsQuery.data && draftsQuery.data.length > 0 && !draftId) {
       const draft = draftsQuery.data[0];
       setDraftId(draft.id);
+      setDraftTitle((draft as any).title || "");
       setPersonName(draft.person_name || "");
       setShareToken(draft.share_token);
       setIsShared(draft.is_shared);
@@ -114,6 +116,7 @@ const EulogyWriter = () => {
       const result = await saveDraft.mutateAsync({
         id: draftId || undefined,
         ceremony_type: "funeral",
+        title: draftTitle,
         person_name: personName,
         form_data: { personAge, additionalNotes },
         transcripts: recordings.map((r) => ({ text: r.transcript, duration: r.duration })),
@@ -406,8 +409,13 @@ const EulogyWriter = () => {
               </Button>
             </Link>
             <div className="min-w-0">
-              <h1 className="text-base font-semibold truncate">{t("eulogy.title")}</h1>
-              <p className="text-xs text-muted-foreground truncate hidden sm:block">{t("eulogy.subtitle")}</p>
+              <Input
+                value={draftTitle}
+                onChange={(e) => setDraftTitle(e.target.value)}
+                placeholder={t("eulogy.title")}
+                className="text-base font-semibold h-7 px-1.5 border-transparent hover:border-input focus:border-input bg-transparent truncate"
+              />
+              <p className="text-xs text-muted-foreground truncate hidden sm:block px-1.5">{t("eulogy.subtitle")}</p>
             </div>
           </div>
           <Button

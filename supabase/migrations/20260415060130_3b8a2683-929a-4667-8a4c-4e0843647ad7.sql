@@ -1,0 +1,1 @@
+ALTER TABLE public.ceremony_drafts ADD COLUMN title text;
