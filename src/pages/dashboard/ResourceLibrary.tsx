@@ -348,6 +348,9 @@ export default function ResourceLibrary() {
                     Katalog
                   </Badge>
                 )}
+                {r.attachment_url && (
+                  <Paperclip className="h-3 w-3 text-muted-foreground shrink-0" title={r.attachment_name ?? "Anhang"} />
+                )}
                 {r.shared_with_church && !r.is_system && (
                   <Badge variant="outline" className="text-xs shrink-0 border-green-500/30 text-green-600 dark:text-green-400">
                     <Users className="h-3 w-3 mr-1" />
