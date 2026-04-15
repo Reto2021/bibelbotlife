@@ -1,9 +1,10 @@
-import { useState, useMemo, useCallback } from "react";
+import { useState, useMemo, useCallback, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import {
   BookOpen, Music, HandHeart, BookOpenText, Plus, Search,
   Pencil, Trash2, X, Tag, Filter, MoreHorizontal, Globe, Church,
   Download, Library, ChevronDown, ChevronUp, Copy, MessageCircle, Share2, Users,
+  Paperclip, FileText, FileAudio, Loader2,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { openBibleBotChat } from "@/lib/chat-events";
