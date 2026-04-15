@@ -260,6 +260,65 @@ export default function ResourceLibrary() {
     openBibleBotChat(`${prefix} ${r.title}`);
   };
 
+  const handleExport = () => {
+    const exportData = myResources.map(({ id, created_at, updated_at, created_by, church_id, is_system, metadata, shared_with_church, ...rest }) => rest);
+    const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `bibliothek-export-${new Date().toISOString().slice(0, 10)}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+    toast.success(`${exportData.length} Ressourcen exportiert`);
+  };
+
+  const handleExportCsv = () => {
+    const headers = ["title", "resource_type", "language", "tags", "content"];
+    const rows = myResources.map(r => [
+      `"${(r.title ?? "").replace(/"/g, '""')}"`,
+      r.resource_type,
+      r.language ?? "",
+      `"${(r.tags ?? []).join(", ")}"`,
+      `"${(r.content ?? "").replace(/"/g, '""')}"`,
+    ]);
+    const csv = [headers.join(","), ...rows.map(r => r.join(","))].join("\n");
+    const blob = new Blob(["\uFEFF" + csv], { type: "text/csv;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `bibliothek-export-${new Date().toISOString().slice(0, 10)}.csv`;
+    a.click();
+    URL.revokeObjectURL(url);
+    toast.success(`${myResources.length} Ressourcen als CSV exportiert`);
+  };
+
+  const handleImportFile = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    try {
+      const text = await file.text();
+      const data = JSON.parse(text);
+      if (!Array.isArray(data)) throw new Error("Ungültiges Format");
+      let count = 0;
+      for (const item of data) {
+        if (!item.title) continue;
+        await createResource.mutateAsync({
+          title: item.title,
+          content: item.content ?? null,
+          resource_type: item.resource_type ?? "other",
+          tags: item.tags ?? [],
+          language: item.language ?? defaultLang,
+          church_id: church?.id ?? null,
+        });
+        count++;
+      }
+      toast.success(`${count} Ressourcen importiert`);
+    } catch {
+      toast.error("Fehler beim Import – ungültige JSON-Datei");
+    }
+    if (importFileRef.current) importFileRef.current.value = "";
+  };
+
   const ResourceCard = ({ r }: { r: Resource }) => {
     const isExpanded = expandedIds.has(r.id);
     return (
