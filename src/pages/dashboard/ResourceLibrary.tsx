@@ -141,7 +141,7 @@ export default function ResourceLibrary() {
   const [filterTradition, setFilterTradition] = useState<string | "all">("all");
   const [filterCountry, setFilterCountry] = useState<string | "all">("all");
   const [filterLanguage, setFilterLanguage] = useState<string>(defaultLang);
-  const [activeTab, setActiveTab] = useState<"all" | "mine" | "system">("all");
+  const [activeTab, setActiveTab] = useState<"all" | "mine" | "system" | "team">("all");
   const [dialogOpen, setDialogOpen] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [form, setForm] = useState<FormState>(() => emptyForm(defaultLang));
