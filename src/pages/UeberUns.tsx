@@ -232,8 +232,8 @@ export default function UeberUns() {
                 {t("about.education", "Ausbildung")}
               </h3>
               <ul className="space-y-1.5">
-                {EDUCATION.map((item) => (
-                  <li key={item} className="text-sm text-muted-foreground">• {item}</li>
+                {EDU_KEYS.map((k) => (
+                  <li key={k} className="text-sm text-muted-foreground">• {t(`about.${k}`)}</li>
                 ))}
               </ul>
             </CardContent>
@@ -247,8 +247,8 @@ export default function UeberUns() {
                 {t("about.awards", "Auszeichnungen")}
               </h3>
               <ul className="space-y-1.5">
-                {AWARDS.map((item) => (
-                  <li key={item} className="text-sm text-muted-foreground">• {item}</li>
+                {AWARD_KEYS.map((k) => (
+                  <li key={k} className="text-sm text-muted-foreground">• {t(`about.${k}`)}</li>
                 ))}
               </ul>
             </CardContent>
@@ -262,8 +262,8 @@ export default function UeberUns() {
                 {t("about.engagements", "Engagements")}
               </h3>
               <ul className="space-y-1.5">
-                {ENGAGEMENTS.map((item) => (
-                  <li key={item} className="text-sm text-muted-foreground">• {item}</li>
+                {ENG_KEYS.map((k) => (
+                  <li key={k} className="text-sm text-muted-foreground">• {t(`about.${k}`)}</li>
                 ))}
               </ul>
             </CardContent>
