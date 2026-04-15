@@ -9,6 +9,8 @@ export type Resource = Tables<"resource_library"> & {
   tradition?: string;
   hymnal_ref?: string;
   shared_with_church?: boolean;
+  attachment_url?: string | null;
+  attachment_name?: string | null;
 };
 export type ResourceInsert = TablesInsert<"resource_library">;
 export type ResourceUpdate = TablesUpdate<"resource_library">;
