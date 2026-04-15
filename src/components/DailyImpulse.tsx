@@ -669,9 +669,8 @@ export function DailyImpulse() {
                   variant="outline"
                   onClick={() => {
                     if (!impulse) return;
-                    const myMember = members?.find(m => m.user_id === user.id);
                     addPrayer.mutate(
-                      { content: `✨ ${impulse.teaser}\n\n«${impulse.verse}»\n— ${impulse.reference}`, displayName: myMember?.display_name || "Anonym" },
+                      `✨ ${impulse.teaser}\n\n«${impulse.verse}»\n— ${impulse.reference}`,
                       { onSuccess: () => sonnerToast.success(t("circle.sharedToast", "Mit deinem Kreis geteilt 🙏")) }
                     );
                   }}
