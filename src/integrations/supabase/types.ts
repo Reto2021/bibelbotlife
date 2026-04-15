@@ -604,6 +604,147 @@ export type Database = {
           },
         ]
       }
+      circle_journey_progress: {
+        Row: {
+          circle_id: string
+          days_completed: number | null
+          display_name: string
+          id: string
+          last_active_date: string | null
+          updated_at: string | null
+          user_id: string
+        }
+        Insert: {
+          circle_id: string
+          days_completed?: number | null
+          display_name: string
+          id?: string
+          last_active_date?: string | null
+          updated_at?: string | null
+          user_id: string
+        }
+        Update: {
+          circle_id?: string
+          days_completed?: number | null
+          display_name?: string
+          id?: string
+          last_active_date?: string | null
+          updated_at?: string | null
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "circle_journey_progress_circle_id_fkey"
+            columns: ["circle_id"]
+            isOneToOne: false
+            referencedRelation: "circles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      circle_members: {
+        Row: {
+          circle_id: string
+          display_name: string
+          id: string
+          joined_at: string | null
+          user_id: string
+        }
+        Insert: {
+          circle_id: string
+          display_name: string
+          id?: string
+          joined_at?: string | null
+          user_id: string
+        }
+        Update: {
+          circle_id?: string
+          display_name?: string
+          id?: string
+          joined_at?: string | null
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "circle_members_circle_id_fkey"
+            columns: ["circle_id"]
+            isOneToOne: false
+            referencedRelation: "circles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      circle_prayer_requests: {
+        Row: {
+          circle_id: string
+          content: string
+          created_at: string | null
+          display_name: string
+          id: string
+          is_answered: boolean | null
+          prayer_count: number | null
+          user_id: string
+        }
+        Insert: {
+          circle_id: string
+          content: string
+          created_at?: string | null
+          display_name: string
+          id?: string
+          is_answered?: boolean | null
+          prayer_count?: number | null
+          user_id: string
+        }
+        Update: {
+          circle_id?: string
+          content?: string
+          created_at?: string | null
+          display_name?: string
+          id?: string
+          is_answered?: boolean | null
+          prayer_count?: number | null
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "circle_prayer_requests_circle_id_fkey"
+            columns: ["circle_id"]
+            isOneToOne: false
+            referencedRelation: "circles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      circles: {
+        Row: {
+          created_at: string | null
+          created_by: string
+          id: string
+          invite_code: string
+          name: string
+          weekly_bible_book: string | null
+          weekly_bible_chapter: number | null
+        }
+        Insert: {
+          created_at?: string | null
+          created_by: string
+          id?: string
+          invite_code?: string
+          name: string
+          weekly_bible_book?: string | null
+          weekly_bible_chapter?: number | null
+        }
+        Update: {
+          created_at?: string | null
+          created_by?: string
+          id?: string
+          invite_code?: string
+          name?: string
+          weekly_bible_book?: string | null
+          weekly_bible_chapter?: number | null
+        }
+        Relationships: []
+      }
       contact_submissions: {
         Row: {
           category: string
@@ -1971,11 +2112,19 @@ export type Database = {
         }
         Returns: boolean
       }
+      increment_circle_prayer_count: {
+        Args: { request_id: string }
+        Returns: undefined
+      }
       increment_prayer_count: {
         Args: { request_id: string }
         Returns: undefined
       }
       is_church_owner: { Args: { _church_id: string }; Returns: boolean }
+      is_circle_member: {
+        Args: { _circle_id: string; _user_id: string }
+        Returns: boolean
+      }
       move_to_dlq: {
         Args: {
           dlq_name: string

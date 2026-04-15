@@ -62,6 +62,7 @@ const ReferralPartner = lazy(() => import("./pages/ReferralPartner"));
 const Spenden = lazy(() => import("./pages/Spenden"));
 const Kontakt = lazy(() => import("./pages/Kontakt"));
 const UeberUns = lazy(() => import("./pages/UeberUns"));
+const KreisPage = lazy(() => import("./pages/KreisPage"));
 
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { ProtectedAdminRoute } from "@/components/ProtectedAdminRoute";
@@ -193,6 +194,7 @@ const App = () => {
                   <Route path="/admin/prayers" element={<ProtectedAdminRoute><PrayerModeration /></ProtectedAdminRoute>} />
                   <Route path="/admin/referrals" element={<ProtectedAdminRoute><ReferralAdmin /></ProtectedAdminRoute>} />
                   <Route path="/widget-preview/:leadId" element={<WidgetPreview />} />
+                  <Route path="/mein-kreis" element={<ProtectedRoute><KreisPage /></ProtectedRoute>} />
                   <Route path="/partner/:code" element={<ReferralPartner />} />
                   <Route path="/splash/:churchSlug" element={<SplashPage />} />
                   <Route path="*" element={<NotFound />} />

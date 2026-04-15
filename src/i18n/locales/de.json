@@ -1935,5 +1935,35 @@
       "hobbies": "Interessen / Hobbys",
       "tradition": "Art der Feier"
     }
+  },
+  "circle": {
+    "nav": "Mein Kreis",
+    "createTitle": "Kreis gründen",
+    "createDesc": "Starte einen privaten Raum für bis zu 8 Personen",
+    "joinTitle": "Kreis beitreten",
+    "joinDesc": "Du hast einen Einladungscode erhalten?",
+    "namePlaceholder": "Name des Kreises (z.B. Familie Wettstein)",
+    "displayNamePlaceholder": "Dein Anzeigename im Kreis",
+    "inviteCodePlaceholder": "Einladungscode (8 Zeichen)",
+    "inviteLink": "Einladungslink kopieren",
+    "inviteCopied": "Einladungslink kopiert!",
+    "tabOverview": "Übersicht",
+    "tabPrayers": "Gebete",
+    "tabJourney": "Journey",
+    "prayerPlaceholder": "Dein Gebetsanliegen (max. 500 Zeichen)...",
+    "prayButton": "🙏 Bete dafür",
+    "answeredButton": "✓ Erhört",
+    "shareImpulse": "Mit Kreis teilen",
+    "sharedToast": "Mit deinem Kreis geteilt 🙏",
+    "generateQuestions": "Diskussionsfragen generieren",
+    "journeyUpdateButton": "Heute abgeschlossen ✓",
+    "noCircleTitle": "Noch kein Kreis",
+    "noCircleDesc": "Gründe einen Kreis oder tritt einem bei — kostenlos.",
+    "membersOnline": "heute aktiv",
+    "weeklyVerse": "Vers dieser Woche",
+    "teaserBadge": "Neu: Mein Kreis",
+    "teaserTitle": "Glaube teilt sich — in echten Beziehungen",
+    "teaserDesc": "Gründe einen privaten Kreis mit Freunden oder deiner Familie. Gemeinsame Impulse, Gebetsanliegen, und die 21-Tage-Journey — füreinander da sein, auch digital.",
+    "teaserCta": "Kreis gründen — kostenlos"
   }
 }

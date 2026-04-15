@@ -1,4 +1,5 @@
 import { lazy, Suspense } from "react";
+import { motion } from "framer-motion";
 import { SEOHead } from "@/components/SEOHead";
 import { useTranslation } from "react-i18next";
 import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, GraduationCap, Church, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass, Send, Building2, Shield, EyeOff, Code2, Server, Globe, Headphones, ClipboardList, BookHeart } from "lucide-react";
@@ -253,6 +254,30 @@ const Index = () => {
             <p className="text-muted-foreground text-sm mb-6">{t("discover.quoteRef")}</p>
             <p className="text-sm text-muted-foreground max-w-xl mx-auto">{t("discover.quoteText")}</p>
           </div>
+        </div>
+      </section>
+
+      {/* Mein Kreis Teaser */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto max-w-2xl text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-primary bg-primary/10 px-4 py-1.5 rounded-full mb-4">
+              <Users className="h-4 w-4" />
+              {t("circle.teaserBadge")}
+            </div>
+            <h2 className="text-3xl font-bold text-foreground mb-3">{t("circle.teaserTitle")}</h2>
+            <p className="text-muted-foreground mb-6 max-w-xl mx-auto">{t("circle.teaserDesc")}</p>
+            <Button asChild size="lg">
+              <Link to="/mein-kreis">
+                <Users className="h-4 w-4 mr-2" />
+                {t("circle.teaserCta")}
+              </Link>
+            </Button>
+          </motion.div>
         </div>
       </section>
 
