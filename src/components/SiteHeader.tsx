@@ -155,6 +155,12 @@ export function SiteHeader() {
                   </Link>
                 </Button>
               )}
+              <Button asChild variant="ghost" size="sm">
+                <Link to="/mein-kreis">
+                  <Users className="h-4 w-4 mr-1" />
+                  {t("circle.nav", "Mein Kreis")}
+                </Link>
+              </Button>
               <Button asChild variant="outline" size="sm">
                 <Link to="/mein-bereich">
                   <User className="h-4 w-4 mr-1" />
@@ -268,6 +274,10 @@ export function SiteHeader() {
           <div className="border-t border-border mt-2 pt-2">
             {user ? (
               <>
+                <Link to="/mein-kreis" className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-foreground hover:bg-primary/10 transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                  <Users className="h-4 w-4 text-primary" />
+                  {t("circle.nav", "Mein Kreis")}
+                </Link>
                 <Link to="/mein-bereich" className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-foreground hover:bg-primary/10 transition-colors" onClick={() => setMobileMenuOpen(false)}>
                   <User className="h-4 w-4 text-primary" />
                   {t("meinBereichNav")}
