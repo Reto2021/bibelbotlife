@@ -475,11 +475,38 @@ export default function ResourceLibrary() {
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between flex-wrap gap-2">
         <h1 className="text-2xl font-bold text-foreground">Bibliothek</h1>
-        <Button onClick={openCreate} size="sm">
-          <Plus className="h-4 w-4 mr-1" /> Neue Ressource
-        </Button>
+        <div className="flex items-center gap-2 flex-wrap">
+          <input
+            ref={importFileRef}
+            type="file"
+            accept=".json"
+            onChange={handleImportFile}
+            className="hidden"
+          />
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="outline" size="sm">
+                <MoreHorizontal className="h-4 w-4 mr-1" /> Import / Export
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuItem onClick={handleExport} disabled={myResources.length === 0}>
+                <Download className="h-4 w-4 mr-2" /> Export als JSON
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={handleExportCsv} disabled={myResources.length === 0}>
+                <Download className="h-4 w-4 mr-2" /> Export als CSV
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => importFileRef.current?.click()}>
+                <Upload className="h-4 w-4 mr-2" /> Import (JSON)
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+          <Button onClick={openCreate} size="sm">
+            <Plus className="h-4 w-4 mr-1" /> Neue Ressource
+          </Button>
+        </div>
       </div>
 
       {/* Tabs */}
