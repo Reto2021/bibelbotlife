@@ -8,6 +8,7 @@ type CeremonyType = "funeral" | "wedding" | "baptism" | "confirmation";
 
 interface DraftData {
   ceremony_type: CeremonyType;
+  title?: string;
   person_name?: string;
   form_data?: Record<string, unknown>;
   transcripts?: Array<{ text: string; duration: number }>;
