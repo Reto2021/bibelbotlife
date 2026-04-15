@@ -1,9 +1,10 @@
-import { useState, useMemo, useCallback } from "react";
+import { useState, useMemo, useCallback, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import {
   BookOpen, Music, HandHeart, BookOpenText, Plus, Search,
   Pencil, Trash2, X, Tag, Filter, MoreHorizontal, Globe, Church,
   Download, Library, ChevronDown, ChevronUp, Copy, MessageCircle, Share2, Users,
+  Paperclip, FileText, FileAudio, Loader2,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { openBibleBotChat } from "@/lib/chat-events";
@@ -22,6 +23,8 @@ import {
   type Resource,
 } from "@/hooks/use-resources";
 import { useUserChurch } from "@/hooks/use-user-church";
+import { useAuth } from "@/hooks/use-auth";
+import { supabase } from "@/integrations/supabase/client";
 import type { Database } from "@/integrations/supabase/types";
 
 type ResourceType = Database["public"]["Enums"]["resource_type"];
@@ -83,14 +86,17 @@ interface FormState {
   tags: string[];
   tagInput: string;
   language: string;
+  attachment_url: string | null;
+  attachment_name: string | null;
 }
 
-const emptyForm = (lang: string): FormState => ({ title: "", content: "", resource_type: "song", tags: [], tagInput: "", language: lang });
+const emptyForm = (lang: string): FormState => ({ title: "", content: "", resource_type: "song", tags: [], tagInput: "", language: lang, attachment_url: null, attachment_name: null });
 
 export default function ResourceLibrary() {
   const { i18n } = useTranslation();
   const defaultLang = i18n.language?.slice(0, 2) || "de";
   const { data: resources = [], isLoading } = useResources();
+  const { user } = useAuth();
   const { data: church } = useUserChurch();
   const createResource = useCreateResource();
   const updateResource = useUpdateResource();
@@ -108,6 +114,8 @@ export default function ResourceLibrary() {
   const [editingId, setEditingId] = useState<string | null>(null);
   const [form, setForm] = useState<FormState>(() => emptyForm(defaultLang));
   const [expandedIds, setExpandedIds] = useState<Set<string>>(new Set());
+  const [uploading, setUploading] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const toggleExpand = useCallback((id: string) => {
     setExpandedIds(prev => {
@@ -164,6 +172,8 @@ export default function ResourceLibrary() {
       tags: r.tags ?? [],
       tagInput: "",
       language: r.language ?? defaultLang,
+      attachment_url: r.attachment_url ?? null,
+      attachment_name: r.attachment_name ?? null,
     });
     setDialogOpen(true);
   };
@@ -177,6 +187,56 @@ export default function ResourceLibrary() {
 
   const removeTag = (tag: string) => {
     setForm((f) => ({ ...f, tags: f.tags.filter((t) => t !== tag) }));
+  };
+
+  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file || !user) return;
+    if (file.size > 20 * 1024 * 1024) {
+      toast.error("Datei zu gross (max. 20 MB)");
+      return;
+    }
+    setUploading(true);
+    try {
+      const ext = file.name.split(".").pop() ?? "bin";
+      const path = `${user.id}/${crypto.randomUUID()}.${ext}`;
+      const { error } = await supabase.storage
+        .from("resource-attachments")
+        .upload(path, file, { upsert: false });
+      if (error) throw error;
+      const { data: urlData } = supabase.storage
+        .from("resource-attachments")
+        .getPublicUrl(path);
+      // For private buckets we use signed URLs, but store the path
+      setForm((f) => ({ ...f, attachment_url: path, attachment_name: file.name }));
+      toast.success("Datei hochgeladen");
+    } catch {
+      toast.error("Fehler beim Hochladen");
+    } finally {
+      setUploading(false);
+      if (fileInputRef.current) fileInputRef.current.value = "";
+    }
+  };
+
+  const removeAttachment = () => {
+    setForm((f) => ({ ...f, attachment_url: null, attachment_name: null }));
+  };
+
+  const getAttachmentUrl = async (path: string) => {
+    const { data } = await supabase.storage
+      .from("resource-attachments")
+      .createSignedUrl(path, 3600);
+    return data?.signedUrl ?? null;
+  };
+
+  const handleDownloadAttachment = async (r: Resource) => {
+    if (!r.attachment_url) return;
+    const url = await getAttachmentUrl(r.attachment_url);
+    if (url) {
+      window.open(url, "_blank");
+    } else {
+      toast.error("Datei konnte nicht geöffnet werden");
+    }
   };
 
   const handleSave = async () => {
@@ -194,6 +254,8 @@ export default function ResourceLibrary() {
           resource_type: form.resource_type,
           tags: form.tags,
           language: form.language,
+          attachment_url: form.attachment_url,
+          attachment_name: form.attachment_name,
         });
         toast.success("Ressource aktualisiert");
       } else {
@@ -204,6 +266,8 @@ export default function ResourceLibrary() {
           tags: form.tags,
           language: form.language,
           church_id: church?.id ?? null,
+          attachment_url: form.attachment_url,
+          attachment_name: form.attachment_name,
         });
         toast.success("Ressource erstellt");
       }
@@ -283,6 +347,9 @@ export default function ResourceLibrary() {
                     <Library className="h-3 w-3 mr-1" />
                     Katalog
                   </Badge>
+                )}
+                {r.attachment_url && (
+                  <span title={r.attachment_name ?? "Anhang"}><Paperclip className="h-3 w-3 text-muted-foreground shrink-0" /></span>
                 )}
                 {r.shared_with_church && !r.is_system && (
                   <Badge variant="outline" className="text-xs shrink-0 border-green-500/30 text-green-600 dark:text-green-400">
@@ -398,14 +465,42 @@ export default function ResourceLibrary() {
                   size="sm"
                   onClick={() => handleChatDeepen(r)}
                 >
-                  <MessageCircle className="h-4 w-4 mr-1" /> Im Chat vertiefen
+                <MessageCircle className="h-4 w-4 mr-1" /> Im Chat vertiefen
                 </Button>
+                {r.attachment_url && r.attachment_name && (
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => handleDownloadAttachment(r)}
+                  >
+                    {r.attachment_name.match(/\.(mp3|wav|ogg|m4a)$/i) ? (
+                      <FileAudio className="h-4 w-4 mr-1" />
+                    ) : (
+                      <FileText className="h-4 w-4 mr-1" />
+                    )}
+                    {r.attachment_name}
+                  </Button>
+                )}
               </div>
             </div>
           )}
           {isExpanded && !r.content && (
-            <div className="mt-3 ml-10 border-t pt-3">
+            <div className="mt-3 ml-10 border-t pt-3 space-y-3">
               <p className="text-sm text-muted-foreground italic">Kein Inhalt hinterlegt.</p>
+              {r.attachment_url && r.attachment_name && (
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => handleDownloadAttachment(r)}
+                >
+                  {r.attachment_name.match(/\.(mp3|wav|ogg|m4a)$/i) ? (
+                    <FileAudio className="h-4 w-4 mr-1" />
+                  ) : (
+                    <FileText className="h-4 w-4 mr-1" />
+                  )}
+                  {r.attachment_name}
+                </Button>
+              )}
             </div>
           )}
         </CardContent>
@@ -581,6 +676,50 @@ export default function ResourceLibrary() {
                   ))}
                 </SelectContent>
               </Select>
+            </div>
+            {/* File attachment */}
+            <div>
+              <label className="text-sm font-medium text-foreground mb-1 block">
+                <Paperclip className="h-4 w-4 inline mr-1" />
+                Anhang (PDF, Noten, Audio)
+              </label>
+              {form.attachment_name ? (
+                <div className="flex items-center gap-2 p-2 border rounded-md bg-muted/50">
+                  {form.attachment_name.match(/\.(mp3|wav|ogg|m4a)$/i) ? (
+                    <FileAudio className="h-4 w-4 text-muted-foreground" />
+                  ) : (
+                    <FileText className="h-4 w-4 text-muted-foreground" />
+                  )}
+                  <span className="text-sm flex-1 truncate">{form.attachment_name}</span>
+                  <Button type="button" variant="ghost" size="icon" className="h-6 w-6" onClick={removeAttachment}>
+                    <X className="h-3 w-3" />
+                  </Button>
+                </div>
+              ) : (
+                <div>
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept=".pdf,.mp3,.wav,.ogg,.m4a,.png,.jpg,.jpeg,.webp"
+                    onChange={handleFileUpload}
+                    className="hidden"
+                  />
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="sm"
+                    onClick={() => fileInputRef.current?.click()}
+                    disabled={uploading}
+                  >
+                    {uploading ? (
+                      <><Loader2 className="h-4 w-4 mr-1 animate-spin" /> Laden…</>
+                    ) : (
+                      <><Paperclip className="h-4 w-4 mr-1" /> Datei wählen</>
+                    )}
+                  </Button>
+                  <p className="text-xs text-muted-foreground mt-1">Max. 20 MB · PDF, Audio, Bilder</p>
+                </div>
+              )}
             </div>
             <div>
               <label className="text-sm font-medium text-foreground mb-1 block">Inhalt / Text</label>
