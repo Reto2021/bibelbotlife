@@ -1886,5 +1886,13 @@
     "eng5": "Vice President IBB Holding AG",
     "eng6": "Chairman Organizing Committee City Festival 2026"
   },
-  "nav.about": "אודותינו"
+  "nav.about": "אודותינו",
+  "ceremony": {
+    "wedding": {
+      "birthName": "שם לידה",
+      "birthDate": "תאריך לידה",
+      "from": "מאת (מקום)",
+      "confession": "וידוי"
+    }
+  }
 }

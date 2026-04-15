@@ -1884,5 +1884,13 @@
     "eng5": "የIBB Holding AG ምክትል ፕሬዝዳንት",
     "eng6": "የከተማ ፌስቲቫል 2026 የOK ፕሬዝዳንት"
   },
-  "nav.about": "ስለ እኛ"
+  "nav.about": "ስለ እኛ",
+  "ceremony": {
+    "wedding": {
+      "birthName": "የተወለደ ስም",
+      "birthDate": "የትውልድ ቀን",
+      "from": "ከ (ቦታ)",
+      "confession": "እምነት"
+    }
+  }
 }

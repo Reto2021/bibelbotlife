@@ -1889,5 +1889,13 @@
     "eng5": "Bise-Pangulo, IBB Holding AG",
     "eng6": "Pangulo ng Organizing Committee, City Festival 2026"
   },
-  "nav.about": "Tungkol sa Amin"
+  "nav.about": "Tungkol sa Amin",
+  "ceremony": {
+    "wedding": {
+      "birthName": "Pangalan sa kapanganakan",
+      "birthDate": "Petsa ng kapanganakan",
+      "from": "Mula sa (Lugar)",
+      "confession": "Pananampalataya"
+    }
+  }
 }

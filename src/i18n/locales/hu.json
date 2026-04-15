@@ -1886,5 +1886,13 @@
     "eng5": "Az IBB Holding AG alelnöke",
     "eng6": "A 2026-os városi fesztivál szervezőbizottságának elnöke"
   },
-  "nav.about": "Rólunk"
+  "nav.about": "Rólunk",
+  "ceremony": {
+    "wedding": {
+      "birthName": "Születési név",
+      "birthDate": "Születési dátum",
+      "from": "Származási hely",
+      "confession": "Vallás"
+    }
+  }
 }

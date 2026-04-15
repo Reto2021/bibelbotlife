@@ -1886,5 +1886,13 @@
     "eng5": "IPhini likaMongameli we-IBB Holding AG",
     "eng6": "UMongameli weKomidi Lokuhlela Lomkhosi Wedolobha 2026"
   },
-  "nav.about": "Mayelana Nathi"
+  "nav.about": "Mayelana Nathi",
+  "ceremony": {
+    "wedding": {
+      "birthName": "Ozaliwe",
+      "birthDate": "Usuku lokuzalwa",
+      "from": "Ukusuka (Indawo)",
+      "confession": "Isivumokholo"
+    }
+  }
 }

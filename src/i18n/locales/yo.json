@@ -1886,5 +1886,13 @@
     "eng5": "Igbakeji Alaga ti IBB Holding AG",
     "eng6": "Alaga ti Igbimọ Eto fun Ayẹyẹ Ilu 2026"
   },
-  "nav.about": "Nipa Wa"
+  "nav.about": "Nipa Wa",
+  "ceremony": {
+    "wedding": {
+      "birthName": "Oruko abiso",
+      "birthDate": "Ọjọ́ ìbí",
+      "from": "Láti (Ibi)",
+      "confession": "Ìjẹ́wọ́"
+    }
+  }
 }

@@ -1886,5 +1886,13 @@
     "eng5": "Vis-Prezidan IBB Holding AG",
     "eng6": "Prezidan Komite Òganizasyon Fèt Vil 2026"
   },
-  "nav.about": "Sou Nou"
+  "nav.about": "Sou Nou",
+  "ceremony": {
+    "wedding": {
+      "birthName": "Non nesans",
+      "birthDate": "Dat nesans",
+      "from": "Soti nan (kote)",
+      "confession": "Konfesyon"
+    }
+  }
 }

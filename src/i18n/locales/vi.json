@@ -1888,5 +1888,13 @@
     "eng5": "Phó Chủ tịch IBB Holding AG",
     "eng6": "Chủ tịch Ban Tổ chức Lễ hội Thành phố 2026"
   },
-  "nav.about": "Về chúng tôi"
+  "nav.about": "Về chúng tôi",
+  "ceremony": {
+    "wedding": {
+      "birthName": "Tên khai sinh",
+      "birthDate": "Ngày sinh",
+      "from": "Từ (Địa điểm)",
+      "confession": "Tôn giáo"
+    }
+  }
 }

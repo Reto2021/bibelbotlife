@@ -1886,5 +1886,13 @@
     "eng5": "Wiceprezes IBB Holding AG",
     "eng6": "Przewodniczący Komitetu Organizacyjnego Festiwalu Miejskiego 2026"
   },
-  "nav.about": "O nas"
+  "nav.about": "O nas",
+  "ceremony": {
+    "wedding": {
+      "birthName": "Nazwisko rodowe",
+      "birthDate": "Data urodzenia",
+      "from": "Z (miejscowość)",
+      "confession": "Wyznanie"
+    }
+  }
 }

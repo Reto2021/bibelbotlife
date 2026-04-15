@@ -1886,5 +1886,13 @@
     "eng5": "Makamu Mwenyekiti wa IBB Holding AG",
     "eng6": "Mwenyekiti wa Kamati ya Maandalizi ya Tamasha la Jiji 2026"
   },
-  "nav.about": "Kuhusu Sisi"
+  "nav.about": "Kuhusu Sisi",
+  "ceremony": {
+    "wedding": {
+      "birthName": "Jina la kuzaliwa",
+      "birthDate": "Tarehe ya kuzaliwa",
+      "from": "Kutoka (mahali)",
+      "confession": "Ukiri"
+    }
+  }
 }

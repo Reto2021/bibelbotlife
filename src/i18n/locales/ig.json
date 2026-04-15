@@ -1892,5 +1892,13 @@
     "eng5": "Onye osote onye isi oche IBB Holding AG",
     "eng6": "Onye isi oche nke Kọmitii Nhazi Ememme Obodo 2026"
   },
-  "nav.about": "Banyere Anyị"
+  "nav.about": "Banyere Anyị",
+  "ceremony": {
+    "wedding": {
+      "birthName": "Amụrụ",
+      "birthDate": "Ụbọchị ọmụmụ",
+      "from": "Site na (ebe)",
+      "confession": "Nkwupụta okwukwe"
+    }
+  }
 }

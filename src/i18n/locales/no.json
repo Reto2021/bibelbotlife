@@ -1886,5 +1886,13 @@
     "eng5": "Visepresident IBB Holding AG",
     "eng6": "OK-president Bysfest 2026"
   },
-  "nav.about": "Om Oss"
+  "nav.about": "Om Oss",
+  "ceremony": {
+    "wedding": {
+      "birthName": "Fødenavn",
+      "birthDate": "Fødselsdato",
+      "from": "Fra (sted)",
+      "confession": "Trosretning"
+    }
+  }
 }

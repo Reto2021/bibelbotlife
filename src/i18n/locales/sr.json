@@ -1886,5 +1886,13 @@
     "eng5": "Potpredsednik IBB Holding AG",
     "eng6": "Predsednik Organizacionog odbora Gradskog festivala 2026"
   },
-  "nav.about": "O nama"
+  "nav.about": "O nama",
+  "ceremony": {
+    "wedding": {
+      "birthName": "Rođeno ime",
+      "birthDate": "Datum rođenja",
+      "from": "Mesto rođenja",
+      "confession": "Verosipovest"
+    }
+  }
 }

@@ -1886,5 +1886,13 @@
     "eng5": "IBB 홀딩 AG 부회장",
     "eng6": "2026년 시 축제 조직 위원회 위원장"
   },
-  "nav.about": "회사 소개"
+  "nav.about": "회사 소개",
+  "ceremony": {
+    "wedding": {
+      "birthName": "출생 시 이름",
+      "birthDate": "생년월일",
+      "from": "출생지",
+      "confession": "종교"
+    }
+  }
 }

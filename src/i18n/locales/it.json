@@ -1886,5 +1886,13 @@
     "eng5": "Vice-Presidente IBB Holding AG",
     "eng6": "Presidente del Comitato Organizzativo Festa della Città 2026"
   },
-  "nav.about": "Chi siamo"
+  "nav.about": "Chi siamo",
+  "ceremony": {
+    "wedding": {
+      "birthName": "Nato",
+      "birthDate": "Data di nascita",
+      "from": "Da (luogo)",
+      "confession": "Confessione"
+    }
+  }
 }
