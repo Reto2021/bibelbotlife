@@ -1886,5 +1886,13 @@
     "eng5": "Viceprezident IBB Holding AG",
     "eng6": "Predseda organizačného výboru mestského festivalu 2026"
   },
-  "nav.about": "O nás"
+  "nav.about": "O nás",
+  "ceremony": {
+    "wedding": {
+      "birthName": "Rodné meno",
+      "birthDate": "Dátum narodenia",
+      "from": "Z (miesto)",
+      "confession": "Vyznanie"
+    }
+  }
 }

@@ -1886,5 +1886,13 @@
     "eng5": "Vicepresidente IBB Holding AG",
     "eng6": "Presidente del Comité Organizador del Festival de la Ciudad 2026"
   },
-  "nav.about": "Nosotros"
+  "nav.about": "Nosotros",
+  "ceremony": {
+    "wedding": {
+      "birthName": "Nombre de nacimiento",
+      "birthDate": "Fecha de nacimiento",
+      "from": "De (lugar)",
+      "confession": "Confesión"
+    }
+  }
 }

@@ -1509,5 +1509,13 @@
     "eng5": "Wakil Presiden IBB Holding AG",
     "eng6": "Presiden Komite Penyelenggara Festival Kota 2026"
   },
-  "nav.about": "Tentang Kami"
+  "nav.about": "Tentang Kami",
+  "ceremony": {
+    "wedding": {
+      "birthName": "Lahir dengan nama",
+      "birthDate": "Tanggal lahir",
+      "from": "Dari (tempat)",
+      "confession": "Pengakuan"
+    }
+  }
 }

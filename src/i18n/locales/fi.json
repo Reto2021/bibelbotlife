@@ -1886,5 +1886,13 @@
     "eng5": "IBB Holding AG:n varapuheenjohtaja",
     "eng6": "Kaupunkijuhlien 2026 järjestelykomitean puheenjohtaja"
   },
-  "nav.about": "Tietoa meistä"
+  "nav.about": "Tietoa meistä",
+  "ceremony": {
+    "wedding": {
+      "birthName": "Syntymänimi",
+      "birthDate": "Syntymäaika",
+      "from": "Paikkakunta",
+      "confession": "Uskontokunta"
+    }
+  }
 }

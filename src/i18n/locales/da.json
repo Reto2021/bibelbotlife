@@ -1886,5 +1886,13 @@
     "eng5": "Viceformand IBB Holding AG",
     "eng6": "Organisationskomitéformand Byfest 2026"
   },
-  "nav.about": "Om Os"
+  "nav.about": "Om Os",
+  "ceremony": {
+    "wedding": {
+      "birthName": "Fødenavn",
+      "birthDate": "Fødselsdato",
+      "from": "Fra (sted)",
+      "confession": "Trosretning"
+    }
+  }
 }

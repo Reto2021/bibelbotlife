@@ -1887,5 +1887,13 @@
     "eng5": "IBB 控股有限公司副总裁",
     "eng6": "2026 年城市节组委会主席"
   },
-  "nav.about": "关于我们"
+  "nav.about": "关于我们",
+  "ceremony": {
+    "wedding": {
+      "birthName": "出生名",
+      "birthDate": "出生日期",
+      "from": "来自（地点）",
+      "confession": "信仰"
+    }
+  }
 }

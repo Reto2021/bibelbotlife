@@ -1886,5 +1886,13 @@
     "eng5": "Vise-President IBB Holding AG",
     "eng6": "OK-President Stadsfees 2026"
   },
-  "nav.about": "Oor Ons"
+  "nav.about": "Oor Ons",
+  "ceremony": {
+    "wedding": {
+      "birthName": "Geboortenaam",
+      "birthDate": "Geboortedatum",
+      "from": "Van (Plek)",
+      "confession": "Belydenis"
+    }
+  }
 }

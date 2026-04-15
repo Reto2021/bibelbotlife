@@ -1886,5 +1886,13 @@
     "eng5": "Vicepreședinte IBB Holding AG",
     "eng6": "Președinte al Comitetului de Organizare a Festivalului Orașului 2026"
   },
-  "nav.about": "Despre Noi"
+  "nav.about": "Despre Noi",
+  "ceremony": {
+    "wedding": {
+      "birthName": "Nume la naștere",
+      "birthDate": "Data nașterii",
+      "from": "Din (loc)",
+      "confession": "Confesiune"
+    }
+  }
 }

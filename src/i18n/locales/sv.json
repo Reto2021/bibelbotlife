@@ -1886,5 +1886,13 @@
     "eng5": "Vice ordförande IBB Holding AG",
     "eng6": "Organisationskommitténs ordförande stadsfest 2026"
   },
-  "nav.about": "Om Oss"
+  "nav.about": "Om Oss",
+  "ceremony": {
+    "wedding": {
+      "birthName": "Född",
+      "birthDate": "Födelsedatum",
+      "from": "Från (plats)",
+      "confession": "Bekännelse"
+    }
+  }
 }

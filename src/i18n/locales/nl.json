@@ -1886,5 +1886,13 @@
     "eng5": "Vicevoorzitter IBB Holding AG",
     "eng6": "OK-voorzitter Stadsfeest 2026"
   },
-  "nav.about": "Over ons"
+  "nav.about": "Over ons",
+  "ceremony": {
+    "wedding": {
+      "birthName": "Geboortenaam",
+      "birthDate": "Geboortedatum",
+      "from": "Van (plaats)",
+      "confession": "Confessie"
+    }
+  }
 }
