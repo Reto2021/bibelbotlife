@@ -284,6 +284,12 @@ export default function ResourceLibrary() {
                     Katalog
                   </Badge>
                 )}
+                {r.shared_with_church && !r.is_system && (
+                  <Badge variant="outline" className="text-xs shrink-0 border-green-500/30 text-green-600 dark:text-green-400">
+                    <Users className="h-3 w-3 mr-1" />
+                    Geteilt
+                  </Badge>
+                )}
                 {r.hymnal_ref && (
                   <Badge variant="outline" className="text-xs shrink-0 font-mono">
                     {r.hymnal_ref}
