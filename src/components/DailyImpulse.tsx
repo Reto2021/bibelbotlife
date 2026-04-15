@@ -661,6 +661,31 @@ export function DailyImpulse() {
                 utmSource="impulse"
                 variant="button"
               />
+
+              {/* Share to Circle */}
+              {user && circle && (
+                <Button
+                  size="sm"
+                  variant="outline"
+                  onClick={() => {
+                    if (!impulse) return;
+                    const myMember = members?.find(m => m.user_id === user.id);
+                    addPrayer.mutate(
+                      { content: `✨ ${impulse.teaser}\n\n«${impulse.verse}»\n— ${impulse.reference}`, displayName: myMember?.display_name || "Anonym" },
+                      { onSuccess: () => sonnerToast.success(t("circle.sharedToast", "Mit deinem Kreis geteilt 🙏")) }
+                    );
+                  }}
+                  disabled={addPrayer.isPending}
+                  className="text-xs border-primary/30 text-primary hover:bg-primary/10"
+                >
+                  {addPrayer.isPending ? (
+                    <Loader2 className="h-3 w-3 mr-1.5 animate-spin" />
+                  ) : (
+                    <Users className="h-3 w-3 mr-1.5" />
+                  )}
+                  {t("circle.shareImpulse", "Mit Kreis teilen")}
+                </Button>
+              )}
             </div>
 
             {/* Subscribe: not yet subscribed */}
