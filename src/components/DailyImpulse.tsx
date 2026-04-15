@@ -106,7 +106,7 @@ function renderContextWithLinks(text: string): ReactNode[] {
     parts.push(
       <a
         key={match.index}
-        href={`/bibel?q=${searchQuery}`}
+        href={`/bible-search?q=${searchQuery}`}
         className="text-primary underline underline-offset-2 hover:text-primary/80 transition-colors"
         title={innerRef}
       >
