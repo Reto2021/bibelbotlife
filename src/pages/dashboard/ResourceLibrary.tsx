@@ -107,6 +107,15 @@ export default function ResourceLibrary() {
   const [dialogOpen, setDialogOpen] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [form, setForm] = useState<FormState>(() => emptyForm(defaultLang));
+  const [expandedIds, setExpandedIds] = useState<Set<string>>(new Set());
+
+  const toggleExpand = useCallback((id: string) => {
+    setExpandedIds(prev => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id); else next.add(id);
+      return next;
+    });
+  }, []);
 
   const myResources = useMemo(() => resources.filter(r => !r.is_system), [resources]);
   const systemResources = useMemo(() => resources.filter(r => r.is_system), [resources]);
