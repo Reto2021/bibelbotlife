@@ -462,8 +462,22 @@ export default function ResourceLibrary() {
                   size="sm"
                   onClick={() => handleChatDeepen(r)}
                 >
-                  <MessageCircle className="h-4 w-4 mr-1" /> Im Chat vertiefen
+                <MessageCircle className="h-4 w-4 mr-1" /> Im Chat vertiefen
                 </Button>
+                {r.attachment_url && r.attachment_name && (
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => handleDownloadAttachment(r)}
+                  >
+                    {r.attachment_name.match(/\.(mp3|wav|ogg|m4a)$/i) ? (
+                      <FileAudio className="h-4 w-4 mr-1" />
+                    ) : (
+                      <FileText className="h-4 w-4 mr-1" />
+                    )}
+                    {r.attachment_name}
+                  </Button>
+                )}
               </div>
             </div>
           )}
