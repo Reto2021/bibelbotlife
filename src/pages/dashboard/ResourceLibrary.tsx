@@ -1,9 +1,9 @@
-import { useState, useMemo, useCallback } from "react";
+import { useState, useMemo, useCallback, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import {
   BookOpen, Music, HandHeart, BookOpenText, Plus, Search,
   Pencil, Trash2, X, Tag, Filter, MoreHorizontal, Globe, Church,
-  Download, Library, ChevronDown, ChevronUp, Copy, MessageCircle, Share2, Users,
+  Download, Library, ChevronDown, ChevronUp, Copy, MessageCircle, Share2, Users, Upload,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { openBibleBotChat } from "@/lib/chat-events";
@@ -108,6 +108,7 @@ export default function ResourceLibrary() {
   const [editingId, setEditingId] = useState<string | null>(null);
   const [form, setForm] = useState<FormState>(() => emptyForm(defaultLang));
   const [expandedIds, setExpandedIds] = useState<Set<string>>(new Set());
+  const importFileRef = useRef<HTMLInputElement>(null);
 
   const toggleExpand = useCallback((id: string) => {
     setExpandedIds(prev => {
@@ -257,6 +258,65 @@ export default function ResourceLibrary() {
       ? "Erzähle mir mehr über dieses Gebet:"
       : "Erzähle mir mehr über:";
     openBibleBotChat(`${prefix} ${r.title}`);
+  };
+
+  const handleExport = () => {
+    const exportData = myResources.map(({ id, created_at, updated_at, created_by, church_id, is_system, metadata, shared_with_church, ...rest }) => rest);
+    const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `bibliothek-export-${new Date().toISOString().slice(0, 10)}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+    toast.success(`${exportData.length} Ressourcen exportiert`);
+  };
+
+  const handleExportCsv = () => {
+    const headers = ["title", "resource_type", "language", "tags", "content"];
+    const rows = myResources.map(r => [
+      `"${(r.title ?? "").replace(/"/g, '""')}"`,
+      r.resource_type,
+      r.language ?? "",
+      `"${(r.tags ?? []).join(", ")}"`,
+      `"${(r.content ?? "").replace(/"/g, '""')}"`,
+    ]);
+    const csv = [headers.join(","), ...rows.map(r => r.join(","))].join("\n");
+    const blob = new Blob(["\uFEFF" + csv], { type: "text/csv;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `bibliothek-export-${new Date().toISOString().slice(0, 10)}.csv`;
+    a.click();
+    URL.revokeObjectURL(url);
+    toast.success(`${myResources.length} Ressourcen als CSV exportiert`);
+  };
+
+  const handleImportFile = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    try {
+      const text = await file.text();
+      const data = JSON.parse(text);
+      if (!Array.isArray(data)) throw new Error("Ungültiges Format");
+      let count = 0;
+      for (const item of data) {
+        if (!item.title) continue;
+        await createResource.mutateAsync({
+          title: item.title,
+          content: item.content ?? null,
+          resource_type: item.resource_type ?? "other",
+          tags: item.tags ?? [],
+          language: item.language ?? defaultLang,
+          church_id: church?.id ?? null,
+        });
+        count++;
+      }
+      toast.success(`${count} Ressourcen importiert`);
+    } catch {
+      toast.error("Fehler beim Import – ungültige JSON-Datei");
+    }
+    if (importFileRef.current) importFileRef.current.value = "";
   };
 
   const ResourceCard = ({ r }: { r: Resource }) => {
@@ -415,11 +475,38 @@ export default function ResourceLibrary() {
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between flex-wrap gap-2">
         <h1 className="text-2xl font-bold text-foreground">Bibliothek</h1>
-        <Button onClick={openCreate} size="sm">
-          <Plus className="h-4 w-4 mr-1" /> Neue Ressource
-        </Button>
+        <div className="flex items-center gap-2 flex-wrap">
+          <input
+            ref={importFileRef}
+            type="file"
+            accept=".json"
+            onChange={handleImportFile}
+            className="hidden"
+          />
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="outline" size="sm">
+                <MoreHorizontal className="h-4 w-4 mr-1" /> Import / Export
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuItem onClick={handleExport} disabled={myResources.length === 0}>
+                <Download className="h-4 w-4 mr-2" /> Export als JSON
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={handleExportCsv} disabled={myResources.length === 0}>
+                <Download className="h-4 w-4 mr-2" /> Export als CSV
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => importFileRef.current?.click()}>
+                <Upload className="h-4 w-4 mr-2" /> Import (JSON)
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+          <Button onClick={openCreate} size="sm">
+            <Plus className="h-4 w-4 mr-1" /> Neue Ressource
+          </Button>
+        </div>
       </div>
 
       {/* Tabs */}
