@@ -189,6 +189,56 @@ export default function ResourceLibrary() {
     setForm((f) => ({ ...f, tags: f.tags.filter((t) => t !== tag) }));
   };
 
+  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file || !user) return;
+    if (file.size > 20 * 1024 * 1024) {
+      toast.error("Datei zu gross (max. 20 MB)");
+      return;
+    }
+    setUploading(true);
+    try {
+      const ext = file.name.split(".").pop() ?? "bin";
+      const path = `${user.id}/${crypto.randomUUID()}.${ext}`;
+      const { error } = await supabase.storage
+        .from("resource-attachments")
+        .upload(path, file, { upsert: false });
+      if (error) throw error;
+      const { data: urlData } = supabase.storage
+        .from("resource-attachments")
+        .getPublicUrl(path);
+      // For private buckets we use signed URLs, but store the path
+      setForm((f) => ({ ...f, attachment_url: path, attachment_name: file.name }));
+      toast.success("Datei hochgeladen");
+    } catch {
+      toast.error("Fehler beim Hochladen");
+    } finally {
+      setUploading(false);
+      if (fileInputRef.current) fileInputRef.current.value = "";
+    }
+  };
+
+  const removeAttachment = () => {
+    setForm((f) => ({ ...f, attachment_url: null, attachment_name: null }));
+  };
+
+  const getAttachmentUrl = async (path: string) => {
+    const { data } = await supabase.storage
+      .from("resource-attachments")
+      .createSignedUrl(path, 3600);
+    return data?.signedUrl ?? null;
+  };
+
+  const handleDownloadAttachment = async (r: Resource) => {
+    if (!r.attachment_url) return;
+    const url = await getAttachmentUrl(r.attachment_url);
+    if (url) {
+      window.open(url, "_blank");
+    } else {
+      toast.error("Datei konnte nicht geöffnet werden");
+    }
+  };
+
   const handleSave = async () => {
     if (!form.title.trim()) {
       toast.error("Titel ist erforderlich");
@@ -204,6 +254,8 @@ export default function ResourceLibrary() {
           resource_type: form.resource_type,
           tags: form.tags,
           language: form.language,
+          attachment_url: form.attachment_url,
+          attachment_name: form.attachment_name,
         });
         toast.success("Ressource aktualisiert");
       } else {
@@ -214,6 +266,8 @@ export default function ResourceLibrary() {
           tags: form.tags,
           language: form.language,
           church_id: church?.id ?? null,
+          attachment_url: form.attachment_url,
+          attachment_name: form.attachment_name,
         });
         toast.success("Ressource erstellt");
       }
