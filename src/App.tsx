@@ -156,7 +156,8 @@ const App = () => {
                   <Route path="/church-integration/:slug" element={<ChurchIntegration />} />
                   <Route path="/for-institutions" element={<ForChurches />} />
                   <Route path="/fuer-seelsorger" element={<ForCelebrants />} />
-                  <Route path="/bible-search" element={<BibleSearch />} />
+                   <Route path="/bible-search" element={<BibleSearch />} />
+                   <Route path="/bibel" element={<BibleSearch />} />
                   <Route path="/gebetswand" element={<PrayerWall />} />
                   <Route path="/bibelquiz" element={<BibleQuiz />} />
                   <Route path="/unsubscribe" element={<Unsubscribe />} />
