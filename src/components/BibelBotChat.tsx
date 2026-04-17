@@ -4,6 +4,7 @@ import { Send, X, MessageCircle, Loader2, Mic, MicOff, Pencil, Shield, Sparkles,
 import { useTTS } from "@/hooks/use-tts";
 
 import { ShareButton } from "@/components/ShareButton";
+import { ChatFeedbackButtons } from "@/components/ChatFeedbackButtons";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, ThumbsDown, Loader2, CheckCircle2, Sparkles, MessageSquare } from "lucide-react";
+import { ArrowLeft, ThumbsDown, ThumbsUp, Loader2, CheckCircle2, Sparkles, MessageSquare } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -13,16 +13,16 @@ import { Badge } from "@/components/ui/badge";
 
 type FeedbackRow = {
   id: string;
-  message_id: string;
-  conversation_id: string;
   rating: number;
   comment: string | null;
+  question_text: string | null;
+  answer_text: string | null;
+  language: string | null;
   reviewed: boolean;
   created_at: string;
-  user_id: string;
+  user_id: string | null;
+  session_id: string | null;
 };
-
-type ContextMessage = { id: string; role: string; content: string; created_at: string };
 
 type GoldenAnswer = {
   id: string;
@@ -39,8 +39,8 @@ export default function FeedbackAdmin() {
   const { user } = useAuth();
   const { toast } = useToast();
   const [feedback, setFeedback] = useState<FeedbackRow[]>([]);
+  const [stats, setStats] = useState({ up: 0, down: 0 });
   const [loading, setLoading] = useState(true);
-  const [contexts, setContexts] = useState<Record<string, { user: string; assistant: string }>>({});
   const [editing, setEditing] = useState<Record<string, { question: string; answer: string; topic: string }>>({});
   const [saving, setSaving] = useState<string | null>(null);
   const [goldens, setGoldens] = useState<GoldenAnswer[]>([]);
@@ -48,7 +48,7 @@ export default function FeedbackAdmin() {
 
   const loadFeedback = async () => {
     setLoading(true);
-    const { data, error } = await supabase
+    const { data } = await supabase
       .from("chat_feedback")
       .select("*")
       .eq("rating", -1)
@@ -56,33 +56,24 @@ export default function FeedbackAdmin() {
       .order("created_at", { ascending: false })
       .limit(50);
 
-    if (error) {
-      toast({ title: "Fehler", description: error.message, variant: "destructive" });
-      setLoading(false);
-      return;
-    }
+    const init: Record<string, { question: string; answer: string; topic: string }> = {};
+    (data || []).forEach((fb) => {
+      init[fb.id] = { question: fb.question_text || "", answer: "", topic: "" };
+    });
+    setEditing(init);
+    setFeedback((data as FeedbackRow[]) || []);
 
-    setFeedback(data || []);
+    // Stats
+    const { count: upCount } = await supabase
+      .from("chat_feedback")
+      .select("id", { count: "exact", head: true })
+      .eq("rating", 1);
+    const { count: downCount } = await supabase
+      .from("chat_feedback")
+      .select("id", { count: "exact", head: true })
+      .eq("rating", -1);
+    setStats({ up: upCount || 0, down: downCount || 0 });
 
-    // Fetch context messages for each feedback row
-    const ctx: Record<string, { user: string; assistant: string }> = {};
-    const initEdit: Record<string, { question: string; answer: string; topic: string }> = {};
-    for (const fb of data || []) {
-      const { data: msgs } = await supabase
-        .from("chat_messages")
-        .select("id, role, content, created_at")
-        .eq("conversation_id", fb.conversation_id)
-        .order("created_at", { ascending: true });
-      if (msgs) {
-        const targetIdx = msgs.findIndex((m) => m.id === fb.message_id);
-        const assistant = targetIdx >= 0 ? msgs[targetIdx]?.content : "";
-        const userMsg = targetIdx > 0 ? [...msgs.slice(0, targetIdx)].reverse().find((m) => m.role === "user")?.content || "" : "";
-        ctx[fb.id] = { user: userMsg, assistant };
-        initEdit[fb.id] = { question: userMsg, answer: "", topic: "" };
-      }
-    }
-    setContexts(ctx);
-    setEditing(initEdit);
     setLoading(false);
   };
 
@@ -122,16 +113,14 @@ export default function FeedbackAdmin() {
     setSaving(fbId);
     const fb = feedback.find((f) => f.id === fbId)!;
 
-    // Insert
     const { data: inserted, error } = await supabase
       .from("golden_answers")
       .insert({
         question: e.question.trim(),
         answer: e.answer.trim(),
         topic: e.topic.trim() || null,
-        language: "de",
+        language: fb.language || "de",
         source_feedback_id: fbId,
-        source_message_id: fb.message_id,
         created_by: user?.id,
       })
       .select("id")
@@ -150,7 +139,6 @@ export default function FeedbackAdmin() {
       console.error("embed err", e);
     }
 
-    // Mark feedback reviewed
     await supabase
       .from("chat_feedback")
       .update({ reviewed: true, reviewed_at: new Date().toISOString(), reviewed_by: user?.id })
@@ -167,6 +155,12 @@ export default function FeedbackAdmin() {
     loadGoldens();
   };
 
+  const deleteGolden = async (id: string) => {
+    if (!confirm("Wirklich löschen?")) return;
+    await supabase.from("golden_answers").delete().eq("id", id);
+    loadGoldens();
+  };
+
   const reembedAll = async () => {
     toast({ title: "Embeddings werden generiert..." });
     const { data, error } = await supabase.functions.invoke("golden-answer-embed", { body: {} });
@@ -180,16 +174,29 @@ export default function FeedbackAdmin() {
 
   return (
     <div className="container max-w-5xl py-8 space-y-6">
-      <div className="flex items-center justify-between">
-        <div>
-          <Link to="/admin" className="text-sm text-muted-foreground hover:text-foreground inline-flex items-center gap-1 mb-2">
-            <ArrowLeft className="h-3.5 w-3.5" /> Admin
-          </Link>
-          <h1 className="text-3xl font-serif">Feedback &amp; Golden Answers</h1>
-          <p className="text-muted-foreground text-sm mt-1">
-            Schlechte Antworten reviewen, Golden Answers pflegen — der Chat lernt mit jeder Korrektur dazu.
-          </p>
-        </div>
+      <div>
+        <Link to="/admin" className="text-sm text-muted-foreground hover:text-foreground inline-flex items-center gap-1 mb-2">
+          <ArrowLeft className="h-3.5 w-3.5" /> Admin
+        </Link>
+        <h1 className="text-3xl font-serif">Feedback &amp; Golden Answers</h1>
+        <p className="text-muted-foreground text-sm mt-1">
+          Schlechte Antworten reviewen, Golden Answers pflegen — der Chat lernt mit jeder Korrektur dazu.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-3 gap-3">
+        <Card><CardContent className="pt-4 flex items-center gap-2">
+          <ThumbsUp className="h-4 w-4 text-primary" />
+          <div><div className="text-2xl font-semibold">{stats.up}</div><div className="text-xs text-muted-foreground">positiv</div></div>
+        </CardContent></Card>
+        <Card><CardContent className="pt-4 flex items-center gap-2">
+          <ThumbsDown className="h-4 w-4 text-destructive" />
+          <div><div className="text-2xl font-semibold">{stats.down}</div><div className="text-xs text-muted-foreground">negativ</div></div>
+        </CardContent></Card>
+        <Card><CardContent className="pt-4 flex items-center gap-2">
+          <Sparkles className="h-4 w-4 text-primary" />
+          <div><div className="text-2xl font-semibold">{goldens.filter((g) => g.is_active).length}</div><div className="text-xs text-muted-foreground">aktive Golden Answers</div></div>
+        </CardContent></Card>
       </div>
 
       <Tabs value={tab} onValueChange={setTab}>
@@ -212,15 +219,16 @@ export default function FeedbackAdmin() {
             </CardContent></Card>
           )}
           {feedback.map((fb) => {
-            const ctx = contexts[fb.id];
-            const e = editing[fb.id] || { question: "", answer: "", topic: "" };
+            const e = editing[fb.id] || { question: fb.question_text || "", answer: "", topic: "" };
             return (
               <Card key={fb.id}>
                 <CardHeader>
-                  <CardTitle className="text-base flex items-center gap-2">
+                  <CardTitle className="text-base flex items-center gap-2 flex-wrap">
                     <ThumbsDown className="h-4 w-4 text-destructive" />
-                    {new Date(fb.created_at).toLocaleString("de-CH")}
-                    {fb.comment && <Badge variant="secondary" className="ml-2">mit Kommentar</Badge>}
+                    <span>{new Date(fb.created_at).toLocaleString("de-CH")}</span>
+                    {fb.language && <Badge variant="outline">{fb.language}</Badge>}
+                    {fb.comment && <Badge variant="secondary">mit Kommentar</Badge>}
+                    {!fb.user_id && <Badge variant="outline">anonym</Badge>}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
@@ -232,16 +240,18 @@ export default function FeedbackAdmin() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
                     <div className="space-y-1">
                       <div className="text-xs font-semibold text-muted-foreground">Frage</div>
-                      <div className="rounded-md bg-muted p-3 max-h-32 overflow-y-auto whitespace-pre-wrap">{ctx?.user || "—"}</div>
+                      <div className="rounded-md bg-muted p-3 max-h-40 overflow-y-auto whitespace-pre-wrap">{fb.question_text || "—"}</div>
                     </div>
                     <div className="space-y-1">
                       <div className="text-xs font-semibold text-muted-foreground">Antwort (👎)</div>
-                      <div className="rounded-md bg-muted p-3 max-h-32 overflow-y-auto whitespace-pre-wrap">{ctx?.assistant || "—"}</div>
+                      <div className="rounded-md bg-muted p-3 max-h-40 overflow-y-auto whitespace-pre-wrap">{fb.answer_text || "—"}</div>
                     </div>
                   </div>
 
                   <div className="border-t pt-3 space-y-2">
-                    <div className="text-xs font-semibold flex items-center gap-1.5"><Sparkles className="h-3.5 w-3.5 text-primary" /> Korrigierte Golden Answer</div>
+                    <div className="text-xs font-semibold flex items-center gap-1.5">
+                      <Sparkles className="h-3.5 w-3.5 text-primary" /> Korrigierte Golden Answer
+                    </div>
                     <Input
                       placeholder="Frage (kanonisch)"
                       value={e.question}
@@ -249,7 +259,7 @@ export default function FeedbackAdmin() {
                     />
                     <Textarea
                       placeholder="Bessere Antwort..."
-                      rows={4}
+                      rows={5}
                       value={e.answer}
                       onChange={(ev) => setEditing((p) => ({ ...p, [fb.id]: { ...e, answer: ev.target.value } }))}
                     />
@@ -292,15 +302,20 @@ export default function FeedbackAdmin() {
                   <div className="flex-1">
                     <div className="font-semibold text-sm">{g.question}</div>
                     <div className="text-sm text-muted-foreground mt-1 whitespace-pre-wrap line-clamp-3">{g.answer}</div>
-                    <div className="flex items-center gap-2 mt-2 text-xs text-muted-foreground">
+                    <div className="flex items-center gap-2 mt-2 text-xs text-muted-foreground flex-wrap">
                       {g.topic && <Badge variant="outline">{g.topic}</Badge>}
                       <Badge variant="outline">{g.language}</Badge>
                       <span>{g.use_count}× genutzt</span>
                     </div>
                   </div>
-                  <Button variant="ghost" size="sm" onClick={() => toggleGolden(g.id, g.is_active)}>
-                    {g.is_active ? "Deaktivieren" : "Aktivieren"}
-                  </Button>
+                  <div className="flex flex-col gap-1">
+                    <Button variant="ghost" size="sm" onClick={() => toggleGolden(g.id, g.is_active)}>
+                      {g.is_active ? "Deaktivieren" : "Aktivieren"}
+                    </Button>
+                    <Button variant="ghost" size="sm" onClick={() => deleteGolden(g.id)} className="text-destructive">
+                      Löschen
+                    </Button>
+                  </div>
                 </div>
               </CardContent>
             </Card>
