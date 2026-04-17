@@ -2032,5 +2032,68 @@
   "kiSeelsorge": {
     "metaTitle": "IA e cura pastorale – Metodologia & Trasparenza | BibleBot.Life",
     "metaDesc": "Come combina BibleBot l'IA con la cura pastorale? Metodologia basata su prove (PERMA, logoterapia), controllo qualità, intervento in crisi e limiti dell'IA — spiegato in modo trasparente."
+  },
+  "journal": {
+    "title": "Diario di preghiera",
+    "subtitle": "Il tuo spazio personale per pensieri, preghiere e riflessioni.",
+    "todayPrompt": "Impulso di oggi",
+    "writePlaceholder": "Scrivi i tuoi pensieri, preghiere o ciò che ti muove oggi...",
+    "moodLabel": "Come ti senti in questo momento?",
+    "moods": {
+      "dankbar": "🙏 Grato/a",
+      "hoffnungsvoll": "🌅 Speranzoso/a",
+      "schwer": "🌧 Pesante",
+      "suchend": "🔍 In ricerca",
+      "friedvoll": "☮️ In pace",
+      "unklar": "❓ Incerto/a"
+    },
+    "save": "Salva",
+    "saved": "Salvato ✓",
+    "edit": "Modifica",
+    "delete": "Elimina",
+    "deleteConfirm": "Eliminare davvero questa voce?",
+    "history": "Le mie voci",
+    "noEntries": "Nessuna voce ancora. Scrivi il tuo primo pensiero.",
+    "streak": "{{count}} giorno di fila",
+    "streak_plural": "{{count}} giorni di fila",
+    "streakLabel": "Serie attuale",
+    "readMore": "Leggi di più",
+    "loginRequired": "Accedi per usare il tuo diario.",
+    "tile": {
+      "title": "Diario di preghiera",
+      "desc": "Riflessione e preghiera quotidiane"
+    },
+    "prompts": {
+      "0": "What am I grateful for today that I couldn't see yesterday?",
+      "1": "Where do I feel resistance right now — and what does it say about me?",
+      "2": "What would Jesus do today in my situation?",
+      "3": "Who do I want to pray for today, and why?",
+      "4": "Which Bible verse is with me right now?",
+      "5": "What weighs me down that I want to let go of?",
+      "6": "Where have I felt God's hand recently?",
+      "7": "What is my biggest hope for the coming week?",
+      "8": "Which relationship needs my attention right now?",
+      "9": "What do I fear, and what does my faith say about it?",
+      "10": "When did I last truly experience silence?",
+      "11": "What surprised me this week?",
+      "12": "Which sin or pattern do I want to change?",
+      "13": "What am I ashamed of — and can I show it to God?",
+      "14": "What is my prayer for today in one sentence?",
+      "15": "Which person has shaped my life the most?",
+      "16": "Where do I see injustice right now — in me or around me?",
+      "17": "What would I do if I had no fear?",
+      "18": "What am I responsible for that I'm avoiding?",
+      "19": "What does forgiveness mean for me today, concretely?",
+      "20": "What image of God do I hold right now — and is it true?",
+      "21": "Where do I experience community that carries me?",
+      "22": "What is my deepest hunger at this moment?",
+      "23": "What question do I ask God to which I have no answer yet?",
+      "24": "What if I were enough — just as I am?",
+      "25": "Where do I see beauty I often overlook?",
+      "26": "What does God want to say to me today?",
+      "27": "Which decision lies before me where I need wisdom?",
+      "28": "What moved or touched me today?",
+      "29": "How do I want to look back on today a year from now?"
+    }
   }
 }

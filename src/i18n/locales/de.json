@@ -2073,5 +2073,68 @@
       "title": "Ohne Kirchenmitgliedschaft",
       "text": "Du brauchst keinen Taufschein, kein Vorwissen, keine Gemeindemitgliedschaft. BibleBot.Life ist Begleitung für die Generation, die nicht mehr in die Kirche geht — aber die Fragen mitgenommen hat."
     }
+  },
+  "journal": {
+    "title": "Gebetsjournal",
+    "subtitle": "Dein persönlicher Raum für Gedanken, Gebete und Reflexionen.",
+    "todayPrompt": "Heutiger Impuls",
+    "writePlaceholder": "Schreib hier deine Gedanken, Gebete oder was dich bewegt...",
+    "moodLabel": "Wie fühlst du dich gerade?",
+    "moods": {
+      "dankbar": "🙏 Dankbar",
+      "hoffnungsvoll": "🌅 Hoffnungsvoll",
+      "schwer": "🌧 Schwer",
+      "suchend": "🔍 Suchend",
+      "friedvoll": "☮️ Friedvoll",
+      "unklar": "❓ Unklar"
+    },
+    "save": "Eintrag speichern",
+    "saved": "Gespeichert ✓",
+    "edit": "Bearbeiten",
+    "delete": "Löschen",
+    "deleteConfirm": "Eintrag wirklich löschen?",
+    "history": "Meine Einträge",
+    "noEntries": "Noch keine Einträge. Schreib deinen ersten Gedanken.",
+    "streak": "{{count}} Tag in Folge",
+    "streak_plural": "{{count}} Tage in Folge",
+    "streakLabel": "Aktuelle Serie",
+    "readMore": "Mehr lesen",
+    "loginRequired": "Bitte melde dich an, um dein Journal zu nutzen.",
+    "tile": {
+      "title": "Gebetsjournal",
+      "desc": "Tägliche Reflexion & Gebet"
+    },
+    "prompts": {
+      "0": "Wofür bin ich heute dankbar, das ich gestern noch nicht sehen konnte?",
+      "1": "Wo spüre ich gerade Widerstand — und was sagt das über mich?",
+      "2": "Was würde Jesus heute in meiner Situation tun?",
+      "3": "Für wen möchte ich heute beten, und warum?",
+      "4": "Welches Bibelwort begleitet mich gerade?",
+      "5": "Was belastet mich, das ich loslassen möchte?",
+      "6": "Wo habe ich in letzter Zeit Gottes Hand gespürt?",
+      "7": "Was ist mein grösster Wunsch für die nächste Woche?",
+      "8": "Welche Beziehung braucht gerade meine Aufmerksamkeit?",
+      "9": "Was fürchte ich, und was sagt mein Glaube dazu?",
+      "10": "Wann habe ich zuletzt wirklich Stille erlebt?",
+      "11": "Was hat mich diese Woche überrascht?",
+      "12": "Welche Sünde, welches Muster möchte ich verändern?",
+      "13": "Wofür schäme ich mich — und kann ich es Gott zeigen?",
+      "14": "Was ist mein Gebet für heute in einem Satz?",
+      "15": "Welcher Mensch hat mein Leben am stärksten geprägt?",
+      "16": "Wo erlebe ich gerade Ungerechtigkeit — in mir oder um mich?",
+      "17": "Was würde ich tun, wenn ich keine Angst hätte?",
+      "18": "Wofür bin ich verantwortlich, dem ich ausweiche?",
+      "19": "Was bedeutet Vergebung für mich heute konkret?",
+      "20": "Welches Bild von Gott habe ich gerade — und stimmt es?",
+      "21": "Wo erlebe ich gerade Gemeinschaft, die trägt?",
+      "22": "Was ist mein tiefster Hunger im Moment?",
+      "23": "Welche Frage stelle ich Gott, auf die ich noch keine Antwort habe?",
+      "24": "Was wäre, wenn ich genug wäre — genau so?",
+      "25": "Wo sehe ich gerade Schönheit, die ich oft übersehe?",
+      "26": "Was möchte Gott mir heute sagen?",
+      "27": "Welche Entscheidung liegt vor mir, bei der ich Weisheit brauche?",
+      "28": "Was hat mich heute bewegt oder berührt?",
+      "29": "Wie möchte ich in einem Jahr auf heute zurückblicken?"
+    }
   }
 }

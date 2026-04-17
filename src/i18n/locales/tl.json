@@ -2028,5 +2028,68 @@
       "title": "Walang kailangang membership",
       "text": "Walang sertipiko ng binyag, walang dating kaalaman, walang membership na kailangan. Kasama ng BibleBot.Life ang henerasyong tumigil sa pagsisimba — ngunit pinanatili ang mga tanong."
     }
+  },
+  "journal": {
+    "title": "Talaarawan ng panalangin",
+    "subtitle": "Iyong personal na espasyo para sa mga iniisip, panalangin at pagninilay.",
+    "todayPrompt": "Today's prompt",
+    "writePlaceholder": "Write your thoughts, prayers or what moves you today...",
+    "moodLabel": "How are you feeling right now?",
+    "moods": {
+      "dankbar": "🙏 Grateful",
+      "hoffnungsvoll": "🌅 Hopeful",
+      "schwer": "🌧 Heavy",
+      "suchend": "🔍 Searching",
+      "friedvoll": "☮️ Peaceful",
+      "unklar": "❓ Unclear"
+    },
+    "save": "I-save",
+    "saved": "Saved ✓",
+    "edit": "Edit",
+    "delete": "Delete",
+    "deleteConfirm": "Really delete this entry?",
+    "history": "Aking mga entry",
+    "noEntries": "Wala pang entry. Isulat ang iyong unang iniisip.",
+    "streak": "{{count}} day in a row",
+    "streak_plural": "{{count}} days in a row",
+    "streakLabel": "Kasalukuyang sunod-sunod",
+    "readMore": "Read more",
+    "loginRequired": "Please sign in to use your journal.",
+    "tile": {
+      "title": "Talaarawan ng panalangin",
+      "desc": "Araw-araw na pagninilay at panalangin"
+    },
+    "prompts": {
+      "0": "What am I grateful for today that I couldn't see yesterday?",
+      "1": "Where do I feel resistance right now — and what does it say about me?",
+      "2": "What would Jesus do today in my situation?",
+      "3": "Who do I want to pray for today, and why?",
+      "4": "Which Bible verse is with me right now?",
+      "5": "What weighs me down that I want to let go of?",
+      "6": "Where have I felt God's hand recently?",
+      "7": "What is my biggest hope for the coming week?",
+      "8": "Which relationship needs my attention right now?",
+      "9": "What do I fear, and what does my faith say about it?",
+      "10": "When did I last truly experience silence?",
+      "11": "What surprised me this week?",
+      "12": "Which sin or pattern do I want to change?",
+      "13": "What am I ashamed of — and can I show it to God?",
+      "14": "What is my prayer for today in one sentence?",
+      "15": "Which person has shaped my life the most?",
+      "16": "Where do I see injustice right now — in me or around me?",
+      "17": "What would I do if I had no fear?",
+      "18": "What am I responsible for that I'm avoiding?",
+      "19": "What does forgiveness mean for me today, concretely?",
+      "20": "What image of God do I hold right now — and is it true?",
+      "21": "Where do I experience community that carries me?",
+      "22": "What is my deepest hunger at this moment?",
+      "23": "What question do I ask God to which I have no answer yet?",
+      "24": "What if I were enough — just as I am?",
+      "25": "Where do I see beauty I often overlook?",
+      "26": "What does God want to say to me today?",
+      "27": "Which decision lies before me where I need wisdom?",
+      "28": "What moved or touched me today?",
+      "29": "How do I want to look back on today a year from now?"
+    }
   }
 }
