@@ -612,7 +612,7 @@ export default function ServiceEditor() {
           </CardTitle>
         </CardHeader>
         <CardContent className="pt-0 space-y-3">
-          <BlockPalette onAdd={addBlock} />
+          <BlockPalette onAdd={addBlock} mode={isLessonMode ? "lesson" : "service"} />
           <Button
             variant="outline"
             size="sm"
