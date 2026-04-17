@@ -1723,9 +1723,12 @@ export type Database = {
         Row: {
           blocks: Json
           church_id: string
+          class_name: string | null
           created_at: string
           created_by: string
+          duration_minutes: number | null
           id: string
+          learning_objectives: string[] | null
           notes: string | null
           series_id: string | null
           service_date: string
@@ -1739,9 +1742,12 @@ export type Database = {
         Insert: {
           blocks?: Json
           church_id: string
+          class_name?: string | null
           created_at?: string
           created_by: string
+          duration_minutes?: number | null
           id?: string
+          learning_objectives?: string[] | null
           notes?: string | null
           series_id?: string | null
           service_date: string
@@ -1755,9 +1761,12 @@ export type Database = {
         Update: {
           blocks?: Json
           church_id?: string
+          class_name?: string | null
           created_at?: string
           created_by?: string
+          duration_minutes?: number | null
           id?: string
+          learning_objectives?: string[] | null
           notes?: string | null
           series_id?: string | null
           service_date?: string
@@ -2214,6 +2223,7 @@ export type Database = {
         | "lutheran"
         | "evangelical"
         | "secular"
+        | "interreligious"
       invoice_status: "draft" | "sent" | "paid"
       outreach_campaign_status: "active" | "paused" | "completed"
       outreach_email_status:
@@ -2231,7 +2241,15 @@ export type Database = {
         | "converted"
         | "unsubscribed"
       record_type: "baptism" | "wedding" | "funeral"
-      resource_type: "song" | "prayer" | "reading" | "liturgy" | "other"
+      resource_type:
+        | "song"
+        | "prayer"
+        | "reading"
+        | "liturgy"
+        | "other"
+        | "worksheet"
+        | "video"
+        | "image"
       service_status: "draft" | "published" | "archived"
       service_type:
         | "regular"
@@ -2242,6 +2260,10 @@ export type Database = {
         | "communion"
         | "special"
         | "other"
+        | "lesson"
+        | "double_lesson"
+        | "project_day"
+        | "confirmation_class"
       team_role:
         | "pastor"
         | "musician"
@@ -2250,6 +2272,9 @@ export type Database = {
         | "technician"
         | "volunteer"
         | "other"
+        | "co_teacher"
+        | "student_assistant"
+        | "mentor"
       theology_source_type: "lexikon" | "kommentar" | "konfession" | "seelsorge"
     }
     CompositeTypes: {
@@ -2387,6 +2412,7 @@ export const Constants = {
         "lutheran",
         "evangelical",
         "secular",
+        "interreligious",
       ],
       invoice_status: ["draft", "sent", "paid"],
       outreach_campaign_status: ["active", "paused", "completed"],
@@ -2407,7 +2433,16 @@ export const Constants = {
         "unsubscribed",
       ],
       record_type: ["baptism", "wedding", "funeral"],
-      resource_type: ["song", "prayer", "reading", "liturgy", "other"],
+      resource_type: [
+        "song",
+        "prayer",
+        "reading",
+        "liturgy",
+        "other",
+        "worksheet",
+        "video",
+        "image",
+      ],
       service_status: ["draft", "published", "archived"],
       service_type: [
         "regular",
@@ -2418,6 +2453,10 @@ export const Constants = {
         "communion",
         "special",
         "other",
+        "lesson",
+        "double_lesson",
+        "project_day",
+        "confirmation_class",
       ],
       team_role: [
         "pastor",
@@ -2427,6 +2466,9 @@ export const Constants = {
         "technician",
         "volunteer",
         "other",
+        "co_teacher",
+        "student_assistant",
+        "mentor",
       ],
       theology_source_type: ["lexikon", "kommentar", "konfession", "seelsorge"],
     },

@@ -34,6 +34,7 @@ const Dashboard = lazy(() => import("./pages/Dashboard"));
 const DashboardHome = lazy(() => import("./pages/dashboard/DashboardHome"));
 const ServiceEditor = lazy(() => import("./pages/dashboard/ServiceEditor"));
 const ServicesCalendar = lazy(() => import("./pages/dashboard/ServicesCalendar"));
+const LessonsPage = lazy(() => import("./pages/dashboard/LessonsPage"));
 const ResourceLibrary = lazy(() => import("./pages/dashboard/ResourceLibrary"));
 const SeriesPage = lazy(() => import("./pages/dashboard/SeriesPage"));
 const RecordsPage = lazy(() => import("./pages/dashboard/RecordsPage"));
@@ -174,6 +175,7 @@ const App = () => {
                     <Route path="editor/:id" element={<ServiceEditor />} />
                     <Route path="conductor/:id" element={<ConductorMode />} />
                     <Route path="services" element={<ServicesCalendar />} />
+                    <Route path="lessons" element={<LessonsPage />} />
                     <Route path="resources" element={<ResourceLibrary />} />
                     <Route path="series" element={<SeriesPage />} />
                     <Route path="records" element={<RecordsPage />} />

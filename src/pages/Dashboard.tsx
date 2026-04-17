@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import { Calendar, Plus, BookOpen, Users, Settings, Home, ListMusic, FileText, Receipt, LayoutTemplate } from "lucide-react";
+import { Calendar, Plus, BookOpen, Users, Settings, Home, ListMusic, FileText, Receipt, LayoutTemplate, GraduationCap } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation } from "react-router-dom";
 import {
@@ -25,6 +25,7 @@ import { BibleBotChat } from "@/components/BibelBotChat";
 const navItems = [
   { title: "Übersicht", url: "/dashboard", icon: Home },
   { title: "Kalender", url: "/dashboard/services", icon: Calendar },
+  { title: "Unterricht", url: "/dashboard/lessons", icon: GraduationCap },
   { title: "Bibliothek", url: "/dashboard/resources", icon: BookOpen },
   { title: "Serien", url: "/dashboard/series", icon: ListMusic },
   { title: "Vorlagen", url: "/dashboard/templates", icon: LayoutTemplate },

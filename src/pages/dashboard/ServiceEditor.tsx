@@ -37,7 +37,14 @@ const SERVICE_TYPE_TITLES: Record<string, string> = {
   communion: "Abendmahlsgottesdienst",
   special: "Spezialgottesdienst",
   other: "Anderer Gottesdienst",
+  // Lesson types
+  lesson: "Neue Lektion",
+  double_lesson: "Neue Doppelstunde",
+  project_day: "Neuer Projekttag",
+  confirmation_class: "Konfirmandenunterricht",
 };
+
+const LESSON_SERVICE_TYPES = new Set(["lesson", "double_lesson", "project_day", "confirmation_class"]);
 
 export default function ServiceEditor() {
   const { id } = useParams();
@@ -56,10 +63,15 @@ export default function ServiceEditor() {
   const [tradition, setTradition] = useState("reformed");
   const [blocks, setBlocks] = useState<ServiceBlockData[]>([]);
   const [notes, setNotes] = useState("");
+  const [className, setClassName] = useState("");
+  const [learningObjectives, setLearningObjectives] = useState<string[]>([]);
+  const [objectiveInput, setObjectiveInput] = useState("");
   const [saving, setSaving] = useState(false);
   const [loading, setLoading] = useState(!isNew);
   const [bibleBotOpen, setBibleBotOpen] = useState(false);
   const [bibleBotContext, setBibleBotContext] = useState("");
+
+  const isLessonMode = LESSON_SERVICE_TYPES.has(serviceType);
   const [resourcePickerOpen, setResourcePickerOpen] = useState(false);
   const [resourcePickerBlockId, setResourcePickerBlockId] = useState<string | null>(null);
   const [templatePickerOpen, setTemplatePickerOpen] = useState(isNew);
@@ -187,6 +199,8 @@ export default function ServiceEditor() {
           setBlocks((data.blocks as unknown as ServiceBlockData[]) || []);
           setNotes(data.notes || "");
           setServiceStatus(data.status);
+          setClassName((data as any).class_name || "");
+          setLearningObjectives(((data as any).learning_objectives as string[]) || []);
         }
         setLoading(false);
       });
@@ -311,18 +325,21 @@ export default function ServiceEditor() {
         notes: notes || null,
         created_by: user.id,
         church_id: church.id,
+        class_name: isLessonMode ? (className || null) : null,
+        learning_objectives: isLessonMode ? (learningObjectives.length ? learningObjectives : null) : null,
+        duration_minutes: totalDuration > 0 ? totalDuration : null,
       };
 
       if (isNew) {
         const { error } = await supabase.from("services").insert(payload);
         if (error) throw error;
-        toast.success("Gottesdienst erstellt");
+        toast.success(isLessonMode ? "Lektion erstellt" : "Gottesdienst erstellt");
       } else {
         const { error } = await supabase.from("services").update(payload).eq("id", id);
         if (error) throw error;
-        toast.success("Gottesdienst gespeichert");
+        toast.success(isLessonMode ? "Lektion gespeichert" : "Gottesdienst gespeichert");
       }
-      navigate("/dashboard/services");
+      navigate(isLessonMode ? "/dashboard/lessons" : "/dashboard/services");
     } catch (err: any) {
       toast.error(err.message || "Fehler beim Speichern");
     } finally {
@@ -333,7 +350,7 @@ export default function ServiceEditor() {
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-[40vh] text-muted-foreground">
-        Gottesdienst wird geladen...
+        {isLessonMode ? "Lektion wird geladen..." : "Gottesdienst wird geladen..."}
       </div>
     );
   }
@@ -344,12 +361,12 @@ export default function ServiceEditor() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
         <div className="flex items-center gap-3 min-w-0">
-          <Button variant="ghost" size="icon" className="shrink-0" onClick={() => navigate("/dashboard")}>
+          <Button variant="ghost" size="icon" className="shrink-0" onClick={() => navigate(isLessonMode ? "/dashboard/lessons" : "/dashboard/services")}>
             <ArrowLeft className="h-5 w-5" />
           </Button>
           <div className="flex items-center gap-2 min-w-0">
             <h1 className="text-lg sm:text-2xl font-bold text-foreground truncate">
-              {isNew ? "Neuer Gottesdienst" : "Gottesdienst bearbeiten"}
+              {isNew ? (isLessonMode ? "Neue Lektion" : "Neuer Gottesdienst") : (isLessonMode ? "Lektion bearbeiten" : "Gottesdienst bearbeiten")}
             </h1>
             {!isNew && (
               <Badge variant={serviceStatus === "published" ? "default" : serviceStatus === "archived" ? "secondary" : "outline"} className="text-xs shrink-0">
@@ -471,7 +488,7 @@ export default function ServiceEditor() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="sm:col-span-2">
               <label className="text-sm font-medium text-foreground mb-1.5 block">Titel</label>
-              <Input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Gottesdienst-Titel" />
+              <Input value={title} onChange={(e) => setTitle(e.target.value)} placeholder={isLessonMode ? "Lektions-Titel, z.B. «Gleichnis vom Sämann»" : "Gottesdienst-Titel"} />
             </div>
             <div>
               <label className="text-sm font-medium text-foreground mb-1.5 block">Datum</label>
@@ -494,11 +511,15 @@ export default function ServiceEditor() {
                   <SelectItem value="communion">Abendmahl</SelectItem>
                   <SelectItem value="special">Spezialgottesdienst</SelectItem>
                   <SelectItem value="other">Anderes</SelectItem>
+                  <SelectItem value="lesson">Einzelstunde (RU)</SelectItem>
+                  <SelectItem value="double_lesson">Doppelstunde (RU)</SelectItem>
+                  <SelectItem value="project_day">Projekttag</SelectItem>
+                  <SelectItem value="confirmation_class">Konfirmandenunterricht</SelectItem>
                 </SelectContent>
               </Select>
             </div>
             <div>
-              <label className="text-sm font-medium text-foreground mb-1.5 block">Tradition</label>
+              <label className="text-sm font-medium text-foreground mb-1.5 block">{isLessonMode ? "Kontext" : "Tradition"}</label>
               <Select value={tradition} onValueChange={setTradition}>
                 <SelectTrigger><SelectValue /></SelectTrigger>
                 <SelectContent>
@@ -507,16 +528,74 @@ export default function ServiceEditor() {
                   <SelectItem value="lutheran">Lutherisch</SelectItem>
                   <SelectItem value="evangelical">Evangelikal</SelectItem>
                   <SelectItem value="secular">Säkular / Frei</SelectItem>
+                  <SelectItem value="interreligious">Interreligiös</SelectItem>
                 </SelectContent>
               </Select>
             </div>
+            {isLessonMode && (
+              <div className="sm:col-span-2">
+                <label className="text-sm font-medium text-foreground mb-1.5 block">Klasse</label>
+                <Input value={className} onChange={(e) => setClassName(e.target.value)} placeholder="z.B. 7a, Konf-Gruppe Mo, Sek I" />
+              </div>
+            )}
           </div>
+
+          {isLessonMode && (
+            <div className="mt-4">
+              <label className="text-sm font-medium text-foreground mb-1.5 block">Lernziele / Kompetenzen</label>
+              <div className="flex gap-2 mb-2">
+                <Input
+                  value={objectiveInput}
+                  onChange={(e) => setObjectiveInput(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" && objectiveInput.trim()) {
+                      e.preventDefault();
+                      setLearningObjectives([...learningObjectives, objectiveInput.trim()]);
+                      setObjectiveInput("");
+                    }
+                  }}
+                  placeholder="Lernziel eingeben und Enter drücken"
+                />
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  onClick={() => {
+                    if (objectiveInput.trim()) {
+                      setLearningObjectives([...learningObjectives, objectiveInput.trim()]);
+                      setObjectiveInput("");
+                    }
+                  }}
+                >
+                  Hinzufügen
+                </Button>
+              </div>
+              {learningObjectives.length > 0 && (
+                <ul className="space-y-1">
+                  {learningObjectives.map((obj, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm bg-muted/50 rounded-md px-3 py-1.5">
+                      <span className="text-primary shrink-0">→</span>
+                      <span className="flex-1">{obj}</span>
+                      <button
+                        type="button"
+                        onClick={() => setLearningObjectives(learningObjectives.filter((_, j) => j !== i))}
+                        className="text-muted-foreground hover:text-destructive shrink-0"
+                      >
+                        ×
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          )}
+
           <div className="mt-4">
-            <label className="text-sm font-medium text-foreground mb-1.5 block">Leitgedanke / Thema</label>
+            <label className="text-sm font-medium text-foreground mb-1.5 block">{isLessonMode ? "Stundenthema / Notizen" : "Leitgedanke / Thema"}</label>
             <Textarea
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
-              placeholder="z.B. «Dankbarkeit im Alltag» — der rote Faden für diesen Gottesdienst"
+              placeholder={isLessonMode ? "z.B. Differenzierung, Materialien, Bemerkungen für Vertretung..." : "z.B. «Dankbarkeit im Alltag» — der rote Faden für diesen Gottesdienst"}
               className="resize-none min-h-[56px]"
               rows={2}
             />
@@ -533,7 +612,7 @@ export default function ServiceEditor() {
           </CardTitle>
         </CardHeader>
         <CardContent className="pt-0 space-y-3">
-          <BlockPalette onAdd={addBlock} />
+          <BlockPalette onAdd={addBlock} mode={isLessonMode ? "lesson" : "service"} />
           <Button
             variant="outline"
             size="sm"
