@@ -533,7 +533,7 @@ const Index = () => {
             <div className="grid sm:grid-cols-2 gap-6 text-sm text-background/50 mb-8">
               <div>
                 <p className="font-semibold text-background/70 mb-2">{t("footer.impressum")}</p>
-                <p>Reto Wettstein</p>
+                <p>2Go Media AG</p>
                 <p>Rebmoosweg 63</p>
                 <p>5200 Brugg, Schweiz</p>
                 <p className="mt-1">kontakt@biblebot.life</p>
