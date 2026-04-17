@@ -223,7 +223,7 @@
     "q7": "¿No es tu compañero simplemente un 'bot de bienestar'?",
     "q7Answer": "No. Tu compañero consuela cuando el consuelo es necesario – pero también desafía. El crecimiento espiritual requiere fricción. Tu compañero hace preguntas de seguimiento incómodas, nombra textos bíblicos difíciles (Job, Salmos de lamentación, crítica profética) y no rehúye temas como la justicia, el arrepentimiento y la responsabilidad.",
     "q8": "¿Quién está detrás de tu compañero y cómo se financia?",
-    "q8Answer": "BibleBot.Life es un proyecto privado y no comercial. Se gestiona de forma voluntaria y se financia exclusivamente con donaciones voluntarias. No hay publicidad, ni venta de datos, ni funciones de pago. Todas las donaciones cubren directamente los costos operativos (infraestructura, alojamiento, desarrollo).",
+    "q8Answer": "BibleBot.Life es desarrollado y operado por 2Go Media AG. La responsabilidad de las donaciones recae en la asociación BibleBot.Life (en formación). Para los particulares, el servicio es gratuito, sin publicidad y sin venta de datos. Se financia mediante donaciones voluntarias y asociaciones B2B con iglesias, hospitales e instituciones. Las donaciones se destinan a infraestructura, alojamiento, traducciones y desarrollo. Dado que la asociación aún está en formación, las donaciones no son actualmente deducibles de impuestos.",
     "q9": "¿Cómo maneja tu compañero mis datos?",
     "q9Answer": "Tu compañero no almacena datos personales ni historiales de chat. Cada conversación es anónima. No hay login, no hay seguimiento y no se comparten datos con terceros. El uso es completamente anónimo.",
     "tradition": {
@@ -232,7 +232,13 @@
       "catholic": "Católica",
       "freeChurch": "Iglesia Libre",
       "literal": "Literal"
-    }
+    },
+    "q10": "¿Qué ocurre en una crisis o con pensamientos suicidas?",
+    "q10Answer": "Tu compañero detecta automáticamente las señales de crisis en los 36 idiomas compatibles. Si hay indicios de pensamientos suicidas, desesperación aguda o violencia, se muestra inmediatamente una lista de líneas de ayuda profesionales (por ejemplo, Dargebotene Hand 143 y Pro Juventute 147 en Suiza, Telefonseelsorge 0800 111 0 111 en Alemania, Telefonseelsorge 142 en Austria). Tu compañero no sustituye la terapia ni la ayuda de emergencia; en situaciones agudas, dirígete directamente a estas instituciones o llama al número de emergencia.",
+    "q11": "¿Puedo usar BibleBot.Life como hospital, empresa o institución?",
+    "q11Answer": "Sí. Para hospitales, centros de atención, escuelas y empresas, existen paquetes B2B propios con marca propia, soberanía de datos y acceso para empleados. Puedes encontrar los detalles en /for-institutions. Para las comunidades eclesiásticas, hay paquetes adecuados en /for-churches.",
+    "q12": "¿Cómo puedo apoyar a BibleBot.Life?",
+    "q12Answer": "Con una donación única o regular a través de /spenden (tarjeta de crédito, Twint, Apple Pay, Google Pay), recomendándolo a personas que buscan un compañero espiritual, o como comunidad eclesiástica/institución con una asociación. Cada contribución ayuda a que tu compañero siga siendo gratuito y sin publicidad."
   },
   "donate": {
     "badge": "Apoya a tu compañero",

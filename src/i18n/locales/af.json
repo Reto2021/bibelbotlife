@@ -229,10 +229,16 @@
     "q6Answer": "Nee. Jou metgesel is 'n digitale hulpmiddel vir persoonlike Bybellees en refleksie. Dit vervang nie professionele pastorale sorg, teologiese advies of sielkundige terapie nie. In ernstige krisisse verwys jou metgesel altyd na gekwalifiseerde hulpbronne.",
     "q7": "Is jou metgesel nie net 'n «welstand-instrument» nie?",
     "q7Answer": "Nee. Jou metgesel troos waar troos nodig is – maar dit daag ook uit. Geestelike groei benodig wrywing. Jou metgesel vra ongemaklike terugvrae, noem moeilike Bybeltekste (Job, Klaagpsalms, profetiese kritiek) en skroom nie vir onderwerpe soos geregtigheid, bekering en verantwoordelikheid nie. Die profetiese tradisie was nooit gemaklik nie – en hierdie welstand-instrument ook nie.",
-    "q8": "Wie staan agter jou metgesel en hoe word dit gefinansier?",
-    "q8Answer": "BibleBot.Life is 'n private, nie-kommersiële projek. Dit word vrywillig bedryf en finansier homself uitsluitlik deur vrywillige donasies. Daar is geen advertensies, geen dataverkope en geen betaalde funksies nie. Alle donasies vloei direk in die dekking van die lopende koste (infrastruktuur, hosting, ontwikkeling). Aangesien BibleBot as 'n private projek loop, is donasies nie belastingaftrekbaar nie.",
+    "q8": "Wie word jou metgesel ondersteun en hoe word dit gefinansier?",
+    "q8Answer": "BibleBot.Life word ontwikkel en bedryf deur 2Go Media AG. Die BibleBot.Life-vereniging (i.G.) is verantwoordelik vir skenkings. Vir individue is die diens gratis, advertensievry en sonder dataverkope. Dit word gefinansier deur vrywillige skenkings sowel as deur B2B-vennootskappe met kerke, hospitale en instellings. Skenkings word gebruik vir infrastruktuur, hosting, vertalings en verdere ontwikkeling. Aangesien die vereniging nog in die stigtingsfase is, is skenkings tans nie belastingaftrekbaar nie.",
     "q9": "Hoe hanteer jou metgesel my data?",
-    "q9Answer": "Jou metgesel stoor geen persoonlike data en geen kletsgeskiedenis nie. Elke gesprek is anoniem. Daar is geen aanmelding, geen dop en geen deel van data met derde partye nie. Die gebruik is heeltemal anoniem."
+    "q9Answer": "Jou metgesel stoor geen persoonlike data en geen kletsgeskiedenis nie. Elke gesprek is anoniem. Daar is geen aanmelding, geen dop en geen deel van data met derde partye nie. Die gebruik is heeltemal anoniem.",
+    "q10": "Wat gebeur in 'n krisis of met selfmoordgedagtes?",
+    "q10Answer": "Jou metgesel herken outomaties krisissignale in al 36 ondersteunde tale. In geval van aanduidings van selfmoordgedagtes, akute wanhoop of geweld, word 'n lys van professionele blitslyne onmiddellik vertoon (bv. Dargebotene Hand 143 en Pro Juventute 147 in Switserland, Telefonseelsorge 0800 111 0 111 in Duitsland, Telefonseelsorge 142 in Oostenryk). Jou metgesel vervang nie terapie of noodhulp nie — in akute situasies, kontak asseblief hierdie dienste direk of skakel die noodnommer.",
+    "q11": "Kan ek BibleBot.Life as 'n hospitaal, maatskappy of instelling gebruik?",
+    "q11Answer": "Ja. Vir hospitale, versorgingsfasiliteite, skole en maatskappye is daar spesiale B2B-pakkette met eie handelsmerk, data-soevereiniteit en toegang vir werknemers. Besonderhede kan gevind word op /for-institutions. Vir kerkgemeentes is daar geskikte pakkette onder /for-churches.",
+    "q12": "Hoe kan ek BibleBot.Life ondersteun?",
+    "q12Answer": "Met 'n eenmalige of gereelde skenking via /spenden (kredietkaart, Twint, Apple Pay, Google Pay), deur dit aan te beveel aan mense wat 'n geestelike metgesel soek, of as 'n kerkgemeente/instelling met 'n vennootskap. Elke bydrae help om jou metgesel gratis en advertensievry te hou."
   },
   "donate": {
     "badge": "Ondersteun jou metgesel",

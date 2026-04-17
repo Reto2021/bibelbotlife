@@ -223,7 +223,7 @@
     "q7": "A társad nem csak egy „jó érzés bot”?",
     "q7Answer": "Nem. A társad vigasztal, ahol vigaszra van szükség – de kihívást is jelent. A lelki növekedéshez súrlódás kell. A társad kényelmetlen visszakérdezéseket tesz fel, megnevezi a nehéz bibliai szövegeket (Jób, panaszos zsoltárok, prófétai kritika), és nem riad vissza olyan témáktól, mint az igazságosság, a megtérés és a felelősség. A prófétai hagyomány soha nem volt kényelmes – és a társad sem az.",
     "q8": "Ki áll a társad mögött, és hogyan finanszírozzák?",
-    "q8Answer": "A BibleBot.Life egy magán, nem kereskedelmi projekt. Önkéntes alapon működik, és kizárólag önkéntes adományokból finanszírozza magát. Nincs reklám, nincs adatértékesítés és nincsenek fizetős funkciók. Minden adomány közvetlenül a működési költségek (infrastruktúra, tárhely, fejlesztés) fedezésére fordítódik. Mivel a társad magánprojektként működik, az adományok nem vonhatók le az adóból.",
+    "q8Answer": "A BibleBot.Life-ot a 2Go Media AG fejleszti és üzemelteti. Az adományokért a BibleBot.Life (i.G.) egyesület felel. Magánszemélyek számára a szolgáltatás ingyenes, reklámmentes és adatértékesítés nélkül működik. Finanszírozása önkéntes adományokból, valamint egyházakkal, kórházakkal és intézményekkel kötött B2B partnerségekből történik. Az adományok az infrastruktúrára, a tárhelyre, a fordításokra és a továbbfejlesztésre fordítódnak. Mivel az egyesület még alapítás alatt áll, az adományok jelenleg nem vonhatók le az adóból.",
     "q9": "Hogyan kezeli a társad az adataimat?",
     "q9Answer": "A társad nem tárol személyes adatokat és chat-előzményeket. Minden beszélgetés névtelen. Nincs bejelentkezés, nincs nyomon követés és nincs adatmegosztás harmadik felekkel. A használat teljesen névtelen.",
     "tradition": {
@@ -232,7 +232,13 @@
       "catholic": "Katolikus",
       "freeChurch": "Szabadegyház",
       "literal": "Szó szerinti"
-    }
+    },
+    "q10": "Mi történik krízis vagy öngyilkossági gondolatok esetén?",
+    "q10Answer": "Társad automatikusan felismeri a krízisjeleket mind a 36 támogatott nyelven. Öngyilkossági gondolatokra, akut kétségbeesésre vagy erőszakra utaló jelek esetén azonnal megjelenik egy lista professzionális segélyvonalakról (pl. Dargebotene Hand 143 és Pro Juventute 147 Svájcban, Telefonseelsorge 0800 111 0 111 Németországban, Telefonseelsorge 142 Ausztriában). Társad nem helyettesíti a terápiát és a sürgősségi segítséget – akut helyzetekben kérjük, fordulj közvetlenül ezekhez a szervekhez, vagy hívd a segélyhívót.",
+    "q11": "Használhatom a BibleBot.Life-ot kórházként, cégként vagy intézményként?",
+    "q11Answer": "Igen. Kórházak, ápolási intézmények, iskolák és vállalatok számára külön B2B csomagok állnak rendelkezésre saját márkával, adatszuverenitással és munkavállalói hozzáférésekkel. Részleteket a /for-institutions oldalon találsz. Egyházközségek számára megfelelő csomagok találhatók a /for-churches oldalon.",
+    "q12": "Hogyan támogathatom a BibleBot.Life-ot?",
+    "q12Answer": "Egyszeri vagy rendszeres adományokkal a /spenden oldalon (bankkártya, Twint, Apple Pay, Google Pay), ajánlással olyan embereknek, akik lelki társat keresnek, vagy egyházközségként/intézményként partnerséggel. Minden hozzájárulás segít abban, hogy társad ingyenes és reklámmentes maradjon."
   },
   "donate": {
     "badge": "Támogassa a társadot",

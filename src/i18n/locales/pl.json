@@ -222,8 +222,8 @@
     "q6Answer": "Nie. Twój towarzysz jest narzędziem cyfrowym do osobistej lektury biblijnej i refleksji. Nie zastępuje profesjonalnej opieki duszpasterskiej, doradztwa teologicznego ani terapii psychologicznej.",
     "q7": "Czy twój towarzysz to po prostu 'bot dobrego samopoczucia'?",
     "q7Answer": "Nie. Twój towarzysz pociesza, gdy potrzeba pocieszenia – ale też stawia wyzwania. Duchowy wzrost wymaga tarcia. Twój towarzysz zadaje niewygodne pytania i nie unika tematów jak sprawiedliwość, nawrócenie i odpowiedzialność.",
-    "q8": "Kto stoi za twój towarzysz i jak jest finansowany?",
-    "q8Answer": "BibleBot.Life to prywatny, niekomercyjny projekt. Jest prowadzony wolontaryjnie i finansowany wyłącznie z dobrowolnych darowizn. Bez reklam, bez sprzedaży danych, bez płatnych funkcji.",
+    "q8": "Kto stoi za Twoim towarzyszem i jak jest finansowany?",
+    "q8Answer": "BibleBot.Life jest rozwijany i obsługiwany przez 2Go Media AG. Wsparcie finansowe dla darowizn zapewnia stowarzyszenie BibleBot.Life (w organizacji). Dla osób prywatnych usługa jest bezpłatna, wolna od reklam i bez sprzedaży danych. Jest finansowana z dobrowolnych darowizn oraz partnerstw B2B z kościołami, szpitalami i instytucjami. Darowizny przeznaczane są na infrastrukturę, hosting, tłumaczenia i dalszy rozwój. Ponieważ stowarzyszenie jest jeszcze w fazie organizacji, darowizny nie podlegają obecnie odliczeniu od podatku.",
     "q9": "Jak twój towarzysz obchodzi się z moimi danymi?",
     "q9Answer": "Twój towarzysz nie przechowuje danych osobowych ani historii czatów. Każda rozmowa jest anonimowa. Brak logowania, śledzenia i udostępniania danych stronom trzecim.",
     "tradition": {
@@ -232,7 +232,13 @@
       "catholic": "Katolicki",
       "freeChurch": "Wolny Kościół",
       "literal": "Dosłownie"
-    }
+    },
+    "q10": "Co się dzieje w kryzysie lub w przypadku myśli samobójczych?",
+    "q10Answer": "Twój towarzysz automatycznie rozpoznaje sygnały kryzysowe we wszystkich 36 obsługiwanych językach. W przypadku wskazówek dotyczących myśli samobójczych, ostrej rozpaczy lub przemocy, natychmiast wyświetlana jest lista profesjonalnych infolinii (np. Dargebotene Hand 143 i Pro Juventute 147 w Szwajcarii, Telefonseelsorge 0800 111 0 111 w Niemczech, Telefonseelsorge 142 w Austrii). Twój towarzysz nie zastępuje terapii ani pomocy w nagłych wypadkach — w sytuacjach awaryjnych prosimy o bezpośredni kontakt z tymi instytucjami lub wybranie numeru alarmowego.",
+    "q11": "Czy mogę używać BibleBot.Life jako szpital, firma lub instytucja?",
+    "q11Answer": "Tak. Dla szpitali, placówek opieki, szkół i firm dostępne są specjalne pakiety B2B z własnym brandingiem, suwerennością danych i dostępem dla pracowników. Szczegóły znajdziesz na /for-institutions. Dla wspólnot kościelnych dostępne są odpowiednie pakiety na /for-churches.",
+    "q12": "Jak mogę wesprzeć BibleBot.Life?",
+    "q12Answer": "Poprzez jednorazową lub regularną darowiznę na /spenden (karta kredytowa, Twint, Apple Pay, Google Pay), poprzez polecanie osobom szukającym duchowego towarzysza, lub jako wspólnota kościelna/instytucja poprzez partnerstwo. Każdy wkład pomaga, aby Twój towarzysz pozostał bezpłatny i wolny od reklam."
   },
   "donate": {
     "badge": "Wesprzyj twój towarzysz",

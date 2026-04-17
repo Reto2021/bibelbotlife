@@ -230,9 +230,15 @@
     "q7": "Il tuo compagno non è solo uno «strumento di benessere»?",
     "q7Answer": "No. Il tuo compagno consola dove è necessario il conforto – ma sfida anche. La crescita spirituale richiede attrito. Il tuo compagno pone domande scomode, nomina testi biblici difficili (Giobbe, Salmi di lamento, critica profetica) e non si tira indietro di fronte a temi come giustizia, conversione e responsabilità. La tradizione profetica non è mai stata comoda – e nemmeno questo strumento di benessere.",
     "q8": "Chi c'è dietro il tuo compagno e come viene finanziato?",
-    "q8Answer": "BibleBot.Life è un progetto privato e non commerciale. È gestito su base volontaria e si finanzia esclusivamente tramite donazioni volontarie. Non ci sono pubblicità, nessuna vendita di dati e nessuna funzionalità a pagamento. Tutte le donazioni vanno direttamente a coprire i costi correnti (infrastruttura, hosting, sviluppo). Poiché BibleBot è un progetto privato, le donazioni non sono deducibili dalle tasse.",
+    "q8Answer": "BibleBot.Life è sviluppato e gestito da 2Go Media AG. L'associazione BibleBot.Life (i.G.) è responsabile delle donazioni. Per i privati, il servizio è gratuito, senza pubblicità e senza vendita di dati. È finanziato da donazioni volontarie e da partnership B2B con chiese, ospedali e istituzioni. Le donazioni vengono utilizzate per infrastrutture, hosting, traduzioni e ulteriore sviluppo. Poiché l'associazione è ancora in fase di costituzione, le donazioni non sono attualmente deducibili dalle tasse.",
     "q9": "Come gestisce il tuo compagno i miei dati?",
-    "q9Answer": "Il tuo compagno non memorizza dati personali né cronologie di chat. Ogni conversazione è anonima. Non c'è login, nessun tracciamento e nessuna condivisione di dati con terze parti. L'utilizzo è completamente anonimo."
+    "q9Answer": "Il tuo compagno non memorizza dati personali né cronologie di chat. Ogni conversazione è anonima. Non c'è login, nessun tracciamento e nessuna condivisione di dati con terze parti. L'utilizzo è completamente anonimo.",
+    "q10": "Cosa succede in caso di crisi o pensieri suicidi?",
+    "q10Answer": "Il tuo compagno rileva automaticamente i segnali di crisi in tutte le 36 lingue supportate. In caso di indicazioni di pensieri suicidi, disperazione acuta o violenza, viene immediatamente visualizzato un elenco di hotline professionali (ad esempio, Dargebotene Hand 143 e Pro Juventute 147 in Svizzera, Telefonseelsorge 0800 111 0 111 in Germania, Telefonseelsorge 142 in Austria). Il tuo compagno non sostituisce la terapia o l'assistenza di emergenza — in situazioni acute, contatta direttamente questi servizi o chiama il numero di emergenza.",
+    "q11": "Posso utilizzare BibleBot.Life come ospedale, azienda o istituzione?",
+    "q11Answer": "Sì. Per ospedali, strutture di cura, scuole e aziende, ci sono pacchetti B2B dedicati con branding personalizzato, sovranità dei dati e accesso per i dipendenti. I dettagli sono disponibili su /for-institutions. Per le comunità ecclesiastiche, ci sono pacchetti adatti su /for-churches.",
+    "q12": "Come posso supportare BibleBot.Life?",
+    "q12Answer": "Con una donazione una tantum o regolare tramite /spenden (carta di credito, Twint, Apple Pay, Google Pay), raccomandandolo a persone che cercano un compagno spirituale, o come comunità ecclesiastica/istituzione con una partnership. Ogni contributo aiuta a mantenere il tuo compagno gratuito e senza pubblicità."
   },
   "donate": {
     "badge": "Sostieni il tuo compagno",

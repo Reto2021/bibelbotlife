@@ -230,10 +230,16 @@
     "q6Answer": "No. Your companion is a digital tool for personal Bible reading and reflection. It does not replace professional pastoral care, theological counseling, or psychological therapy. In serious crises, your companion always refers to qualified resources.",
     "q7": "Isn't this just a 'feel-good tool'?",
     "q7Answer": "No. Your companion comforts where comfort is needed – but it also challenges. Spiritual growth requires friction. Your companion asks uncomfortable follow-up questions, names difficult Bible texts (Job, Lament Psalms, prophetic criticism), and doesn't shy away from topics like justice, repentance, and responsibility. The prophetic tradition was never comfortable – and neither is this tool.",
-    "q8": "Who is behind BibleBot.Life and how is it funded?",
-    "q8Answer": "BibleBot.Life is a private, non-commercial project. It's run on a volunteer basis and funded exclusively through voluntary donations. There's no advertising, no data sales, and no paid features. All donations go directly to covering operating costs (infrastructure, hosting, development). Since your companion is a private project, donations are not tax-deductible.",
+    "q8": "Who is behind your companion and how is it financed?",
+    "q8Answer": "BibleBot.Life is developed and operated by 2Go Media AG. The BibleBot.Life association (in formation) is responsible for donations. For private individuals, the service is free, ad-free, and without data sales. It is financed by voluntary donations and B2B partnerships with churches, hospitals, and institutions. Donations go towards infrastructure, hosting, translations, and further development. As the association is still in formation, donations are currently not tax-deductible.",
     "q9": "How does your companion handle my data?",
-    "q9Answer": "Your companion stores no personal data and no chat histories. Every conversation is anonymous. There's no login, no tracking, and no sharing of data with third parties. Usage is completely anonymous."
+    "q9Answer": "Your companion stores no personal data and no chat histories. Every conversation is anonymous. There's no login, no tracking, and no sharing of data with third parties. Usage is completely anonymous.",
+    "q10": "What happens in a crisis or with suicidal thoughts?",
+    "q10Answer": "Your companion automatically recognizes crisis signals in all 36 supported languages. If there are indications of suicidal thoughts, acute despair, or violence, a list of professional hotlines is immediately displayed (e.g., Dargebotene Hand 143 and Pro Juventute 147 in Switzerland, Telefonseelsorge 0800 111 0 111 in Germany, Telefonseelsorge 142 in Austria). Your companion does not replace therapy or emergency help — in acute situations, please contact these services directly or dial the emergency number.",
+    "q11": "Can I use BibleBot.Life as a hospital, company, or institution?",
+    "q11Answer": "Yes. For hospitals, care facilities, schools, and companies, there are separate B2B packages with their own branding, data sovereignty, and employee access. Details can be found at /for-institutions. For church communities, suitable packages are available at /for-churches.",
+    "q12": "How can I support BibleBot.Life?",
+    "q12Answer": "With a one-time or regular donation via /spenden (credit card, Twint, Apple Pay, Google Pay), by recommending it to people looking for a spiritual companion, or as a church community/institution with a partnership. Every contribution helps to keep your companion free and ad-free."
   },
   "donate": {
     "badge": "Support your companion",

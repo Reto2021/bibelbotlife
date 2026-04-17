@@ -222,8 +222,8 @@
     "q6Answer": "Nu. Companionul tău este un instrument pentru citirea și reflecția biblică personală. Nu înlocuiește îngrijirea pastorală profesională, consilierea teologică sau terapia psihologică. În crize grave, companionul tău trimite întotdeauna către resurse calificate.",
     "q7": "Nu este companionul tău doar un 'bot de stare bună'?",
     "q7Answer": "Nu. Companionul tău consolează unde este nevoie – dar și provoacă. Creșterea spirituală necesită fricțiune. Companionul tău pune întrebări incomode, numește texte biblice dificile și nu se ferește de subiecte precum dreptatea, pocăința și responsabilitatea.",
-    "q8": "Cine se află în spatele companionul tău și cum este finanțat?",
-    "q8Answer": "Companionul tău este un proiect privat, necomercial. Este administrat pe bază de voluntariat și finanțat exclusiv prin donații voluntare. Nu există publicitate, nu se vând date și nu există funcții plătite.",
+    "q8": "Cine se află în spatele însoțitorului tău și cum este finanțat?",
+    "q8Answer": "BibleBot.Life este dezvoltat și operat de 2Go Media AG. Responsabilitatea pentru donații revine asociației BibleBot.Life (în curs de înființare). Pentru persoanele fizice, serviciul este gratuit, fără reclame și fără vânzări de date. Este finanțat prin donații voluntare, precum și prin parteneriate B2B cu biserici, spitale și instituții. Donațiile sunt folosite pentru infrastructură, găzduire, traduceri și dezvoltare ulterioară. Deoarece asociația este încă în curs de înființare, donațiile nu sunt în prezent deductibile fiscal.",
     "q9": "Cum tratează companionul tău datele mele?",
     "q9Answer": "Companionul tău nu stochează date personale și niciun istoric de chat. Fiecare conversație este anonimă. Nu există autentificare, nu există urmărire și nu se partajează date cu terți.",
     "tradition": {
@@ -232,7 +232,13 @@
       "catholic": "Catolică",
       "freeChurch": "Biserică liberă",
       "literal": "Cuvânt cu cuvânt"
-    }
+    },
+    "q10": "Ce se întâmplă într-o criză sau în cazul gândurilor suicidare?",
+    "q10Answer": "Însoțitorul tău detectează automat semnalele de criză în toate cele 36 de limbi suportate. În cazul unor indicii de gânduri suicidare, disperare acută sau violență, este afișată imediat o listă de linii telefonice profesionale (de exemplu, Dargebotene Hand 143 și Pro Juventute 147 în Elveția, Telefonseelsorge 0800 111 0 111 în Germania, Telefonseelsorge 142 în Austria). Însoțitorul tău nu înlocuiește terapia și nici ajutorul de urgență — în situații acute, te rugăm să contactezi direct aceste instituții sau să apelezi numărul de urgență.",
+    "q11": "Pot folosi BibleBot.Life ca spital, companie sau instituție?",
+    "q11Answer": "Da. Pentru spitale, instituții de îngrijire, școli și companii există pachete B2B proprii cu branding personalizat, suveranitate a datelor și acces pentru angajați. Detalii găsești pe /for-institutions. Pentru comunitățile bisericești există pachete potrivite la /for-churches.",
+    "q12": "Cum pot susține BibleBot.Life?",
+    "q12Answer": "Printr-o donație unică sau regulată prin /spenden (card de credit, Twint, Apple Pay, Google Pay), prin recomandarea către persoane care caută un însoțitor spiritual, sau ca și comunitate bisericească/instituție printr-un parteneriat. Fiecare contribuție ajută ca însoțitorul tău să rămână gratuit și fără reclame."
   },
   "donate": {
     "badge": "Susține companionul tău",

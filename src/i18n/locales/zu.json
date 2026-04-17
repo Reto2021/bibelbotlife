@@ -222,8 +222,8 @@
     "q6Answer": "Cha. I-umngane wakho yakho iyithuluzi ledijithali lokufunda iBhayibheli nokuzindla. Ayithathi indawo yokwelulekwa kobuchwepheshe, iseluleko sezenkolo noma ukwelashwa kwengqondo. Esimweni sezimo ezinzima, i-umngane wakho yakho ihlale ikukhombisa izindawo ezifanele zokusiza.",
     "q7": "Ingabe iumngane wakho yakho akuyona nje «i-bot ekhululekile»?",
     "q7Answer": "Cha. I-umngane wakho yakho iduduza lapho kudingeka khona induduzo – kodwa futhi iphonsa inselele. Ukukhula ngokomoya kudinga ukungqubuzana. I-umngane wakho yakho ibuza imibuzo engakhululekile, ikhomba imibhalo enzima yeBhayibheli (uJobe, amaHubo okulila, ukugxeka kwesiprofetho) futhi ayiesabi izingosi ezifana nokulunga, ukuphenduka nobuqotho. Isiko lesiprofetho alizange libe lula – futhi i-umngane wakho yakho nayo ayikho.",
-    "q8": "Ubani osemuva kweumngane wakho yakho futhi ixhaswa kanjani?",
-    "q8Answer": "I-BibleBot.Life iyiphrojekthi yangasese, engenzi inzuzo. Isebenza ngokuzithandela futhi ixhaswa kuphela yiminikelo yokuzithandela. Ayikho imikhangiso, akukho ukuthengiswa kwedatha futhi akukho izici ezikhokhelwayo. Yonke iminikelo ihamba ngqo ekuhlanganisweni kwezindleko zokusebenza (ingqalasizinda, ukubamba, ukuthuthukiswa). Njengoba i-umngane wakho isebenza njengephrojekthi yangasese, iminikelo ayikwazi ukudonswa intela.",
+    "q8": "Ubani ongemuva komngane wakho futhi uxhaswa kanjani?",
+    "q8Answer": "I-BibleBot.Life ithuthukiswa futhi isetshenziswa yi-2Go Media AG. Ukuxhaswa kweminikelo kungaphansi kwe-BibleBot.Life Association (i.G.). Kubantu ngabanye, le nsizakalo imahhala, ayinazo izikhangiso, futhi ayithengisi idatha. Ixhaswa ngeminikelo yokuzithandela kanye nokubambisana kwe-B2B namasonto, izibhedlela, nezikhungo. Iminikelo iya engqalasizinda, ukusingathwa, ukuhumusha, nentuthuko eqhubekayo. Njengoba inhlangano isaqala, iminikelo okwamanje ayikwazi ukudonswa intela.",
     "q9": "I-umngane wakho yakho ihamba kanjani nedatha yami?",
     "q9Answer": "I-umngane wakho yakho ayibongi idatha yomuntu siqu nanoma yimaphi amarekhodi engxoxo. Yonke ingxoxo ayaziwa. Akukho ukungena ngemvume, akukho ukulandelela futhi akukho ukwabelana ngedatha nabantu besithathu. Ukusetshenziswa kuyimfihlo ngokuphelele.",
     "tradition": {
@@ -232,7 +232,13 @@
       "catholic": "Catholic",
       "freeChurch": "Isonto Lamahhala",
       "literal": "Igama-negama"
-    }
+    },
+    "q10": "Kwenzekani esimweni senhlekelele noma uma unemicabango yokuzibulala?",
+    "q10Answer": "Umngane wakho uhlonza ngokuzenzakalelayo izimpawu zenkinga kuzo zonke izilimi ezingu-36 ezisekelwayo. Uma kunezinkomba zemicabango yokuzibulala, ukuphelelwa ithemba okukhulu, noma ubudlova, uhlu lwezinombolo zocingo eziqeqeshiwe luyavezwa ngokushesha (isb., Dargebotene Hand 143 kanye ne-Pro Juventute 147 eSwitzerland, i-Telefonseelsorge 0800 111 0 111 eJalimane, i-Telefonseelsorge 142 e-Austria). Umngane wakho akathathi indawo yokwelashwa noma usizo oluphuthumayo — ezimweni eziphuthumayo, sicela uxhumane ngqo nalezi zikhungo noma ushayele inombolo yezimo eziphuthumayo.",
+    "q11": "Ngingakwazi ukusebenzisa i-BibleBot.Life njengesibhedlela, inkampani, noma isikhungo?",
+    "q11Answer": "Yebo. Izibhedlela, izikhungo zokunakekela, izikole, nezinkampani zinamaphakheji azo e-B2B anophawu lwazo, ukulawulwa kwedatha, nokufinyelela kwabasebenzi. Ungathola imininingwane ku-/for-institutions. Amaphakheji afanele amabandla atholakala ku-/for-churches.",
+    "q12": "Ngingayisekela kanjani i-BibleBot.Life?",
+    "q12Answer": "Ngomnikelo owodwa noma ojwayelekile nge-/spenden (ikhadi lesikweletu, i-Twint, i-Apple Pay, i-Google Pay), ngokuyincoma kubantu abafuna umngane ongokomoya, noma njengebandla/isikhungo ngokubambisana. Yonke iminikelo isiza ukugcina umngane wakho emahhala futhi engenazo izikhangiso."
   },
   "donate": {
     "badge": "Sekela iumngane wakho yakho",
