@@ -10,7 +10,10 @@
     "more": "Mehr",
     "explore": "Entdecken",
     "professionals": "Für Fachpersonen",
-    "support": "Unterstützen"
+    "support": "Unterstützen",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "kiSeelsorge": "KI & Seelsorge"
   },
   "loader": "Wird geladen…",
   "hero": {
@@ -2054,5 +2057,21 @@
   "kiSeelsorge": {
     "metaTitle": "KI und Seelsorge – Methodik & Transparenz | BibleBot.Life",
     "metaDesc": "Wie verbindet BibleBot KI mit Seelsorge? Evidenzbasierte Methodik (PERMA, Logotherapie), Qualitätssicherung, Krisenintervention und Grenzen der KI — transparent erklärt."
+  },
+  "why": {
+    "title": "Warum BibleBot — und nicht einfach ChatGPT?",
+    "subtitle": "Drei Unterschiede, die zählen.",
+    "wisdom": {
+      "title": "Nicht irgendeine KI",
+      "text": "BibleBot kennt 5 Bibelübersetzungen und prüft jede Stelle automatisch auf Korrektheit. Keine Halluzinationen, kein Raten — nur geprüfte Weisheit aus 2000 Jahren."
+    },
+    "crisis": {
+      "title": "Mit Krisenintervention",
+      "text": "Als erste Bibel-App weltweit erkennt BibleBot automatisch Krisensituationen und leitet sofort zu Telefonseelsorge-Nummern in CH, DE und AT weiter."
+    },
+    "nochurch": {
+      "title": "Ohne Kirchenmitgliedschaft",
+      "text": "Du brauchst keinen Taufschein, kein Vorwissen, keine Gemeindemitgliedschaft. BibleBot ist die Seelsorge für die Generation, die nicht mehr in die Kirche geht — aber die Fragen mitgenommen hat."
+    }
   }
 }

@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import {
   Menu, X as XIcon, HandHeart, GraduationCap, Building2, HeartHandshake,
   Send, FileText, ShieldCheck, LogIn, LogOut, User, Users, Shield, MessageCircle, Heart,
-  ChevronDown, BookOpen, Mail
+  ChevronDown, BookOpen, Mail, Brain
 } from "lucide-react";
 import { AppLogo } from "@/components/AppLogo";
 import { Button } from "@/components/ui/button";
@@ -127,6 +127,12 @@ export function SiteHeader() {
                 <Link to="/ueber-uns" className="flex items-center gap-2 cursor-pointer">
                   <Users className="h-4 w-4" />
                   {t("nav.about", "Über uns")}
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link to="/ki-und-seelsorge" className="flex items-center gap-2 cursor-pointer">
+                  <Brain className="h-4 w-4" />
+                  {t("nav.kiSeelsorge", "KI & Seelsorge")}
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
@@ -268,6 +274,10 @@ export function SiteHeader() {
           <Link to="/ueber-uns" className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-foreground hover:bg-primary/10 transition-colors" onClick={() => setMobileMenuOpen(false)}>
             <Users className="h-4 w-4 text-primary" />
             {t("nav.about", "Über uns")}
+          </Link>
+          <Link to="/ki-und-seelsorge" className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-foreground hover:bg-primary/10 transition-colors" onClick={() => setMobileMenuOpen(false)}>
+            <Brain className="h-4 w-4 text-primary" />
+            {t("nav.kiSeelsorge", "KI & Seelsorge")}
           </Link>
 
           {/* Auth */}
