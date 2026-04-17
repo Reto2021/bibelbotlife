@@ -1,6 +1,15 @@
+// Sitemap generator with sitemap-index pattern.
+// Routes:
+//   GET /generate-sitemap                 → sitemap index (default)
+//   GET /generate-sitemap?type=index      → sitemap index
+//   GET /generate-sitemap?type=core       → static + church-partner pages
+//   GET /generate-sitemap?type=verses     → bible verse landing pages (all langs as alternates)
+//   GET /generate-sitemap?type=topics&lang=de → topic pages for a single language
+
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";
 
 const SITE = "https://biblebot.life";
+const FN_BASE = "https://swsthxftugjqznqjcfpk.supabase.co/functions/v1/generate-sitemap";
 
 const SUPPORTED_LANGS = [
   "de", "en", "fr", "es", "it", "pl", "cs", "pt", "nl", "ro",
@@ -11,8 +20,7 @@ const SUPPORTED_LANGS = [
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers":
-    "authorization, x-client-info, apikey, content-type",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
 const STATIC_PAGES: { path: string; priority: number; changefreq: string }[] = [
@@ -36,24 +44,16 @@ interface UrlOpts {
   lastmod?: string;
   changefreq?: string;
   priority?: number;
-  /** If provided, emits xhtml:link alternates for each language using ?lng= */
   altLangs?: string[];
 }
 
 function urlEntry(loc: string, opts: UrlOpts = {}) {
-  const lines: string[] = [
-    "  <url>",
-    `    <loc>${loc}</loc>`,
-  ];
+  const lines: string[] = ["  <url>", `    <loc>${loc}</loc>`];
   if (opts.altLangs?.length) {
     for (const l of opts.altLangs) {
-      lines.push(
-        `    <xhtml:link rel="alternate" hreflang="${l}" href="${loc}?lng=${l}"/>`
-      );
+      lines.push(`    <xhtml:link rel="alternate" hreflang="${l}" href="${loc}?lng=${l}"/>`);
     }
-    lines.push(
-      `    <xhtml:link rel="alternate" hreflang="x-default" href="${loc}"/>`
-    );
+    lines.push(`    <xhtml:link rel="alternate" hreflang="x-default" href="${loc}"/>`);
   }
   if (opts.lastmod) lines.push(`    <lastmod>${opts.lastmod}</lastmod>`);
   if (opts.changefreq) lines.push(`    <changefreq>${opts.changefreq}</changefreq>`);
@@ -62,10 +62,41 @@ function urlEntry(loc: string, opts: UrlOpts = {}) {
   return lines.join("\n");
 }
 
-Deno.serve(async (req) => {
-  if (req.method === "OPTIONS") {
-    return new Response("ok", { headers: corsHeaders });
+function wrapUrlset(entries: string[]): string {
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+${entries.join("\n")}
+</urlset>`;
+}
+
+function sitemapIndex(today: string): string {
+  const items: string[] = [];
+  items.push(`  <sitemap><loc>${FN_BASE}?type=core</loc><lastmod>${today}</lastmod></sitemap>`);
+  items.push(`  <sitemap><loc>${FN_BASE}?type=verses</loc><lastmod>${today}</lastmod></sitemap>`);
+  for (const lang of SUPPORTED_LANGS) {
+    items.push(`  <sitemap><loc>${FN_BASE}?type=topics&amp;lang=${lang}</loc><lastmod>${today}</lastmod></sitemap>`);
   }
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${items.join("\n")}
+</sitemapindex>`;
+}
+
+const xmlResponse = (xml: string) =>
+  new Response(xml, {
+    headers: {
+      ...corsHeaders,
+      "Content-Type": "application/xml; charset=utf-8",
+      "Cache-Control": "public, max-age=3600",
+    },
+  });
+
+Deno.serve(async (req) => {
+  if (req.method === "OPTIONS") return new Response("ok", { headers: corsHeaders });
+
+  const url = new URL(req.url);
+  const type = url.searchParams.get("type") ?? "index";
+  const today = new Date().toISOString().split("T")[0];
 
   try {
     const supabase = createClient(
@@ -73,108 +104,121 @@ Deno.serve(async (req) => {
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
     );
 
-    const entries: string[] = STATIC_PAGES.map((p) =>
-      urlEntry(`${SITE}${p.path}`, {
-        priority: p.priority,
-        changefreq: p.changefreq,
-        altLangs: SUPPORTED_LANGS,
-      })
-    );
+    // ─── Sitemap Index ───────────────────────────────────────────
+    if (type === "index") {
+      return xmlResponse(sitemapIndex(today));
+    }
 
-    // Topic hubs — group by slug, emit per-slug entry with alternates for available langs
-    const { data: topics } = await supabase
-      .from("seo_topics")
-      .select("slug, updated_at, language")
-      .eq("is_published", true);
+    // ─── Core: static pages + church partners ────────────────────
+    if (type === "core") {
+      const entries: string[] = STATIC_PAGES.map((p) =>
+        urlEntry(`${SITE}${p.path}`, {
+          priority: p.priority,
+          changefreq: p.changefreq,
+          altLangs: SUPPORTED_LANGS,
+        })
+      );
 
-    if (topics) {
-      const bySlug = new Map<string, { langs: string[]; lastmod?: string }>();
-      for (const t of topics) {
-        const e = bySlug.get(t.slug) ?? { langs: [], lastmod: undefined };
-        e.langs.push(t.language);
-        const d = t.updated_at?.split("T")[0];
-        if (d && (!e.lastmod || d > e.lastmod)) e.lastmod = d;
-        bySlug.set(t.slug, e);
+      const { data: churches } = await supabase
+        .from("church_partners")
+        .select("slug, updated_at")
+        .eq("is_active", true);
+
+      if (churches) {
+        for (const c of churches) {
+          entries.push(
+            urlEntry(`${SITE}/church/${c.slug}`, {
+              lastmod: c.updated_at?.split("T")[0],
+              changefreq: "monthly",
+              priority: 0.6,
+            })
+          );
+        }
       }
-      for (const [slug, e] of bySlug) {
+
+      return xmlResponse(wrapUrlset(entries));
+    }
+
+    // ─── Verses: bible verse landing pages ───────────────────────
+    if (type === "verses") {
+      const { data: verses } = await supabase
+        .from("verse_seo_content")
+        .select("reference_slug, updated_at, language, is_featured")
+        .order("is_featured", { ascending: false })
+        .limit(20000);
+
+      const entries: string[] = [];
+      if (verses) {
+        const bySlug = new Map<string, { langs: string[]; lastmod?: string; featured: boolean }>();
+        for (const v of verses) {
+          const e = bySlug.get(v.reference_slug) ?? { langs: [], lastmod: undefined, featured: false };
+          e.langs.push(v.language);
+          if (v.is_featured) e.featured = true;
+          const d = v.updated_at?.split("T")[0];
+          if (d && (!e.lastmod || d > e.lastmod)) e.lastmod = d;
+          bySlug.set(v.reference_slug, e);
+        }
+        for (const [slug, e] of bySlug) {
+          entries.push(
+            urlEntry(`${SITE}/vers/${slug}`, {
+              lastmod: e.lastmod,
+              changefreq: "monthly",
+              priority: e.featured ? 0.8 : 0.5,
+              altLangs: e.langs,
+            })
+          );
+        }
+      }
+      return xmlResponse(wrapUrlset(entries));
+    }
+
+    // ─── Topics per language ─────────────────────────────────────
+    if (type === "topics") {
+      const lang = url.searchParams.get("lang") ?? "de";
+      if (!SUPPORTED_LANGS.includes(lang)) {
+        return xmlResponse(wrapUrlset([]));
+      }
+
+      const { data: topics } = await supabase
+        .from("seo_topics")
+        .select("slug, updated_at")
+        .eq("is_published", true)
+        .eq("language", lang);
+
+      // Get all available langs per slug for hreflang alternates
+      const { data: allLangs } = await supabase
+        .from("seo_topics")
+        .select("slug, language")
+        .eq("is_published", true);
+
+      const langsBySlug = new Map<string, string[]>();
+      for (const r of allLangs ?? []) {
+        const arr = langsBySlug.get(r.slug) ?? [];
+        arr.push(r.language);
+        langsBySlug.set(r.slug, arr);
+      }
+
+      const entries: string[] = [];
+      for (const t of topics ?? []) {
         entries.push(
-          urlEntry(`${SITE}/themen/${slug}`, {
-            lastmod: e.lastmod,
+          urlEntry(`${SITE}/themen/${t.slug}`, {
+            lastmod: t.updated_at?.split("T")[0],
             changefreq: "weekly",
             priority: 0.75,
-            altLangs: e.langs,
+            altLangs: langsBySlug.get(t.slug) ?? [lang],
           })
         );
       }
+      return xmlResponse(wrapUrlset(entries));
     }
 
-    // Verse landing pages — same: group by slug, alternates per language
-    const { data: verses } = await supabase
-      .from("verse_seo_content")
-      .select("reference_slug, updated_at, language, is_featured")
-      .order("is_featured", { ascending: false })
-      .limit(20000);
-
-    if (verses) {
-      const bySlug = new Map<string, { langs: string[]; lastmod?: string; featured: boolean }>();
-      for (const v of verses) {
-        const e = bySlug.get(v.reference_slug) ?? { langs: [], lastmod: undefined, featured: false };
-        e.langs.push(v.language);
-        if (v.is_featured) e.featured = true;
-        const d = v.updated_at?.split("T")[0];
-        if (d && (!e.lastmod || d > e.lastmod)) e.lastmod = d;
-        bySlug.set(v.reference_slug, e);
-      }
-      for (const [slug, e] of bySlug) {
-        entries.push(
-          urlEntry(`${SITE}/vers/${slug}`, {
-            lastmod: e.lastmod,
-            changefreq: "monthly",
-            priority: e.featured ? 0.8 : 0.5,
-            altLangs: e.langs,
-          })
-        );
-      }
-    }
-
-    // Public church partner pages
-    const { data: churches } = await supabase
-      .from("church_partners")
-      .select("slug, updated_at")
-      .eq("is_active", true);
-
-    if (churches) {
-      for (const c of churches) {
-        entries.push(
-          urlEntry(`${SITE}/church/${c.slug}`, {
-            lastmod: c.updated_at?.split("T")[0],
-            changefreq: "monthly",
-            priority: 0.6,
-          })
-        );
-      }
-    }
-
-    const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-${entries.join("\n")}
-</urlset>`;
-
-    return new Response(xml, {
-      headers: {
-        ...corsHeaders,
-        "Content-Type": "application/xml; charset=utf-8",
-        "Cache-Control": "public, max-age=3600",
-      },
-    });
+    // Unknown type → fallback to index
+    return xmlResponse(sitemapIndex(today));
   } catch (err) {
     console.error("[generate-sitemap] error:", err);
     return new Response(
       `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>`,
-      {
-        status: 200,
-        headers: { ...corsHeaders, "Content-Type": "application/xml" },
-      }
+      { status: 200, headers: { ...corsHeaders, "Content-Type": "application/xml" } }
     );
   }
 });
