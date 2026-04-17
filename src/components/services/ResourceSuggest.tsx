@@ -14,7 +14,7 @@ const TYPE_ICONS: Record<string, React.ReactNode> = {
 };
 
 /** Maps block types to the resource_type they should search. "any" = show all types. */
-const BLOCK_TO_RESOURCE: Record<BlockType, string | "any"> = {
+const BLOCK_TO_RESOURCE: Partial<Record<BlockType, string | "any">> = {
   song: "song",
   reading: "reading",
   prayer: "prayer",
@@ -26,6 +26,10 @@ const BLOCK_TO_RESOURCE: Record<BlockType, string | "any"> = {
   free: "any",
   music: "song",
 };
+
+function resolveResourceType(blockType: BlockType): string | "any" {
+  return BLOCK_TO_RESOURCE[blockType] ?? "any";
+}
 
 interface ResourceSuggestProps {
   query: string;
