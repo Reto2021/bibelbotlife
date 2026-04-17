@@ -2009,5 +2009,21 @@
     "placeholder": "What wasn't right? (optional)",
     "send": "Send",
     "error": "Error"
+  },
+  "why": {
+    "title": "Kí ló dé tí o fi yẹ kí o yan BibleBot.Life — kí ó má sì ṣe chatbot lásán?",
+    "subtitle": "Ìyàtọ̀ mẹ́ta tó ṣe pàtàkì.",
+    "wisdom": {
+      "title": "Ọgbọ́n tí a ti dájú",
+      "text": "BibleBot.Life mọ ìtumọ̀ Bíbélì márùn-ún ó sì ń ṣàyẹ̀wò gbogbo ìtọ́kasí láìtipẹ́. Kò sí ìrírí asán, kò sí ìfojúsùn — ọgbọ́n tí a ti dájú láti inú ọdún 2000 ti Ìwé Mímọ́ nìkan."
+    },
+    "crisis": {
+      "title": "Pẹ̀lú ìdásí àjálù",
+      "text": "Gẹ́gẹ́ bí ohun èlò Bíbélì àkọ́kọ́ ní àgbáyé, BibleBot.Life máa ń mọ ipò àjálù láìtipẹ́ ó sì ń so pọ̀ lẹ́sẹ̀kẹsẹ̀ pẹ̀lú àwọn lájìnde ìrànlọ́wọ́ olùṣọ́-àgùntàn ní Switzerland, Germany, àti Austria."
+    },
+    "nochurch": {
+      "title": "Láìsí ẹgbẹ́ ṣọ́ọ̀ṣì",
+      "text": "Kò sí ìwé ẹ̀rí ìbatisí, kò sí ìmọ̀ tẹ́lẹ̀, kò sí ọmọ ẹgbẹ́ tó nílò. BibleBot.Life jẹ́ alábàákẹ́gbẹ́ fún ìran tí ó dáwọ́ lílọ sí ṣọ́ọ̀ṣì dúró — ṣùgbọ́n tí ó pa àwọn ìbéèrè mọ́."
+    }
   }
 }

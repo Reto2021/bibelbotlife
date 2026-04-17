@@ -2050,5 +2050,21 @@
     "placeholder": "Wat klopte niet? (optioneel)",
     "send": "Verzenden",
     "error": "Fout"
+  },
+  "why": {
+    "title": "Waarom BibleBot.Life — en niet zomaar een chatbot?",
+    "subtitle": "Drie verschillen die ertoe doen.",
+    "wisdom": {
+      "title": "Geverifieerde wijsheid",
+      "text": "BibleBot.Life kent 5 Bijbelvertalingen en controleert automatisch elke verwijzing. Geen hallucinaties, geen gokwerk — alleen geverifieerde wijsheid uit 2000 jaar Schrift."
+    },
+    "crisis": {
+      "title": "Met crisisinterventie",
+      "text": "Als eerste Bijbel-app wereldwijd herkent BibleBot.Life automatisch crisissituaties en verbindt direct met pastorale hulplijnen in Zwitserland, Duitsland en Oostenrijk."
+    },
+    "nochurch": {
+      "title": "Zonder kerklidmaatschap",
+      "text": "Geen doopbewijs, geen voorkennis, geen lidmaatschap vereist. BibleBot.Life is een metgezel voor de generatie die de kerk verliet — maar de vragen behield."
+    }
   }
 }

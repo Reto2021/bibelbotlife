@@ -2009,5 +2009,21 @@
     "placeholder": "What wasn't right? (optional)",
     "send": "Send",
     "error": "Error"
+  },
+  "why": {
+    "title": "Kungani BibleBot.Life — hhayi nje i-chatbot?",
+    "subtitle": "Umehluko emithathu obalulekile.",
+    "wisdom": {
+      "title": "Ukuhlakanipha okuqinisekisiwe",
+      "text": "I-BibleBot.Life iyazi izinguqulo zeBhayibheli ezi-5 futhi ihlola ngokuzenzakalelayo wonke umbhalo wokusekela. Akukho zibonelo, akukho ukuqagela — kungukuhlakanipha okuqinisekisiwe kuphela kweminyaka engu-2000 yemiBhalo."
+    },
+    "crisis": {
+      "title": "Ngokungenelela kwenkinga",
+      "text": "Njengohlelo lokusebenza lwakuqala lweBhayibheli emhlabeni, i-BibleBot.Life ithola ngokuzenzakalelayo izimo zenkinga futhi ixhuma ngokushesha ezilayini zosizo lobufundisi eSwitzerland, eJalimane, nase-Austria."
+    },
+    "nochurch": {
+      "title": "Ngaphandle kobulungu besonto",
+      "text": "Akudingeki isitifiketi sombhapathizo, ulwazi langaphambili, noma ubulungu. I-BibleBot.Life ingumngani wesizukulwane esiyeke ukuya esontweni — kodwa sigcine imibuzo."
+    }
   }
 }

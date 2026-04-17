@@ -2014,19 +2014,19 @@
     "error": "Errore"
   },
   "why": {
-    "title": "Perché BibleBot — e non semplicemente ChatGPT?",
+    "title": "Perché BibleBot.Life — e non semplicemente un chatbot?",
     "subtitle": "Tre differenze che contano.",
     "wisdom": {
-      "title": "Non una IA qualsiasi",
-      "text": "BibleBot conosce 5 traduzioni della Bibbia e verifica automaticamente ogni riferimento per la sua accuratezza. Nessuna allucinazione, nessuna supposizione — solo saggezza verificata da 2.000 anni di Scrittura."
+      "title": "Saggezza verificata",
+      "text": "BibleBot.Life conosce 5 traduzioni della Bibbia e verifica automaticamente ogni riferimento. Niente allucinazioni, niente supposizioni — solo saggezza verificata da 2000 anni di Scrittura."
     },
     "crisis": {
       "title": "Con intervento in crisi",
-      "text": "Prima app biblica al mondo, BibleBot rileva automaticamente le situazioni di crisi e collega immediatamente alle linee di assistenza pastorale in Svizzera, Germania e Austria."
+      "text": "Prima app biblica al mondo, BibleBot.Life rileva automaticamente le situazioni di crisi e indirizza subito alle linee di ascolto in Svizzera, Germania e Austria."
     },
     "nochurch": {
-      "title": "Senza iscrizione alla chiesa",
-      "text": "Nessun certificato di battesimo, nessuna conoscenza pregressa, nessuna iscrizione alla chiesa richiesta. BibleBot è la cura pastorale per la generazione che ha smesso di andare in chiesa — ma ha tenuto le domande."
+      "title": "Senza appartenenza ecclesiale",
+      "text": "Nessun certificato di battesimo, nessuna conoscenza pregressa, nessuna affiliazione richiesta. BibleBot.Life accompagna la generazione che ha smesso di andare in chiesa — ma ha conservato le domande."
     }
   },
   "kiSeelsorge": {

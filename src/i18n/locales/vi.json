@@ -2011,5 +2011,21 @@
     "placeholder": "What wasn't right? (optional)",
     "send": "Send",
     "error": "Error"
+  },
+  "why": {
+    "title": "Tại sao BibleBot.Life — chứ không chỉ là một chatbot?",
+    "subtitle": "Ba khác biệt quan trọng.",
+    "wisdom": {
+      "title": "Sự khôn ngoan đã được kiểm chứng",
+      "text": "BibleBot.Life biết 5 bản dịch Kinh Thánh và tự động kiểm tra mọi tham chiếu. Không ảo giác, không đoán mò — chỉ là sự khôn ngoan đã được kiểm chứng từ 2000 năm Kinh Thánh."
+    },
+    "crisis": {
+      "title": "Có can thiệp khủng hoảng",
+      "text": "Là ứng dụng Kinh Thánh đầu tiên trên thế giới, BibleBot.Life tự động phát hiện các tình huống khủng hoảng và kết nối ngay với các đường dây hỗ trợ mục vụ tại Thụy Sĩ, Đức và Áo."
+    },
+    "nochurch": {
+      "title": "Không cần là thành viên giáo hội",
+      "text": "Không cần giấy chứng nhận rửa tội, không cần kiến thức trước, không cần là thành viên. BibleBot.Life đồng hành cùng thế hệ đã ngừng đi nhà thờ — nhưng vẫn giữ những câu hỏi."
+    }
   }
 }

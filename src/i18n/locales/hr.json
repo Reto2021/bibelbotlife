@@ -2009,5 +2009,21 @@
     "placeholder": "What wasn't right? (optional)",
     "send": "Send",
     "error": "Error"
+  },
+  "why": {
+    "title": "Zašto BibleBot.Life — a ne samo chatbot?",
+    "subtitle": "Tri razlike koje su važne.",
+    "wisdom": {
+      "title": "Provjerena mudrost",
+      "text": "BibleBot.Life poznaje 5 prijevoda Biblije i automatski provjerava svaku referencu. Bez halucinacija, bez nagađanja — samo provjerena mudrost iz 2000 godina Pisma."
+    },
+    "crisis": {
+      "title": "S kriznom intervencijom",
+      "text": "Kao prva biblijska aplikacija na svijetu, BibleBot.Life automatski prepoznaje krizne situacije i odmah povezuje s pastoralnim linijama pomoći u Švicarskoj, Njemačkoj i Austriji."
+    },
+    "nochurch": {
+      "title": "Bez crkvenog članstva",
+      "text": "Bez krsnog lista, bez prethodnog znanja, bez članstva. BibleBot.Life prati generaciju koja je prestala ići u crkvu — ali je zadržala pitanja."
+    }
   }
 }

@@ -2009,5 +2009,21 @@
     "placeholder": "What wasn't right? (optional)",
     "send": "Send",
     "error": "Error"
+  },
+  "why": {
+    "title": "Kwa nini BibleBot.Life — na si tu chatbot?",
+    "subtitle": "Tofauti tatu zenye umuhimu.",
+    "wisdom": {
+      "title": "Hekima iliyothibitishwa",
+      "text": "BibleBot.Life inajua tafsiri 5 za Biblia na inathibitisha kila marejeo kiotomatiki. Hakuna ndoto, hakuna kubahatisha — ni hekima iliyothibitishwa tu kutoka kwa miaka 2000 ya Maandiko."
+    },
+    "crisis": {
+      "title": "Pamoja na uingiliaji wa mgogoro",
+      "text": "Kama programu ya kwanza ya Biblia duniani, BibleBot.Life hutambua kiotomatiki hali za dharura na huunganisha mara moja na simu za msaada wa kichungaji nchini Uswisi, Ujerumani na Austria."
+    },
+    "nochurch": {
+      "title": "Bila uanachama wa kanisa",
+      "text": "Hakuna cheti cha ubatizo, ujuzi wa awali, au uanachama unahitajika. BibleBot.Life ni mwenza wa kizazi kilichoacha kwenda kanisani — lakini kikahifadhi maswali."
+    }
   }
 }

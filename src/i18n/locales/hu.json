@@ -2009,5 +2009,21 @@
     "placeholder": "What wasn't right? (optional)",
     "send": "Send",
     "error": "Error"
+  },
+  "why": {
+    "title": "Miért BibleBot.Life — és nem csak egy chatbot?",
+    "subtitle": "Három különbség, ami számít.",
+    "wisdom": {
+      "title": "Ellenőrzött bölcsesség",
+      "text": "A BibleBot.Life 5 bibliafordítást ismer és automatikusan ellenőriz minden hivatkozást. Nincs hallucináció, nincs találgatás — csak 2000 év ellenőrzött bölcsessége."
+    },
+    "crisis": {
+      "title": "Krízisbeavatkozással",
+      "text": "A világ első bibliai alkalmazásaként a BibleBot.Life automatikusan felismeri a krízishelyzeteket és azonnal összeköt a lelkigondozói segélyvonalakkal Svájcban, Németországban és Ausztriában."
+    },
+    "nochurch": {
+      "title": "Egyháztagság nélkül",
+      "text": "Nincs szükség keresztlevélre, előzetes tudásra vagy tagságra. A BibleBot.Life kísérője annak a generációnak, amely abbahagyta a templomba járást — de megtartotta a kérdéseket."
+    }
   }
 }

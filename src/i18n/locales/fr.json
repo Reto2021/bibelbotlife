@@ -2014,19 +2014,19 @@
     "error": "Erreur"
   },
   "why": {
-    "title": "Pourquoi BibleBot — et pas simplement ChatGPT ?",
-    "subtitle": "Trois différences essentielles.",
+    "title": "Pourquoi BibleBot.Life — et pas simplement un chatbot ?",
+    "subtitle": "Trois différences qui comptent.",
     "wisdom": {
-      "title": "Pas n'importe quelle IA",
-      "text": "BibleBot connaît 5 traductions de la Bible et vérifie automatiquement chaque référence pour en garantir l'exactitude. Pas d'hallucinations, pas de suppositions — uniquement de la sagesse vérifiée issue de 2 000 ans d'Écriture."
+      "title": "Sagesse vérifiée",
+      "text": "BibleBot.Life connaît 5 traductions de la Bible et vérifie automatiquement chaque référence. Pas d'hallucinations, pas de devinettes — uniquement la sagesse vérifiée de 2000 ans d'Écritures."
     },
     "crisis": {
       "title": "Avec intervention de crise",
-      "text": "Première application biblique au monde, BibleBot détecte automatiquement les situations de crise et oriente immédiatement vers les lignes d'assistance pastorale en Suisse, Allemagne et Autriche."
+      "text": "Première application biblique au monde, BibleBot.Life détecte automatiquement les situations de crise et oriente immédiatement vers les lignes d'écoute en Suisse, Allemagne et Autriche."
     },
     "nochurch": {
-      "title": "Sans adhésion à une église",
-      "text": "Pas de certificat de baptême, pas de connaissances préalables, pas d'appartenance à une église requise. BibleBot est le soin pastoral pour la génération qui a arrêté d'aller à l'église — mais qui a gardé les questions."
+      "title": "Sans appartenance ecclésiale",
+      "text": "Pas de certificat de baptême, pas de connaissances préalables, pas d'adhésion requise. BibleBot.Life accompagne la génération qui a quitté l'église — mais a gardé les questions."
     }
   },
   "kiSeelsorge": {
