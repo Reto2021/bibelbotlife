@@ -829,6 +829,21 @@ export function ChatHero() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // Pick up chat seed from SEO landing pages (vers/themen) → auto-send on mount
+  useEffect(() => {
+    const seed = sessionStorage.getItem("biblebot-chat-seed");
+    if (!seed) return;
+    sessionStorage.removeItem("biblebot-chat-seed");
+    const params = new URLSearchParams(window.location.search);
+    if (params.has("chat")) {
+      params.delete("chat");
+      const s = params.toString();
+      window.history.replaceState({}, "", window.location.pathname + (s ? `?${s}` : "") + window.location.hash);
+    }
+    setTimeout(() => sendMessage(seed), 250);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const handleChipClick = (chip: TopicChip) => {
     track("chip_click", { chip: chip.key });
     if (chip.special === "lifewheel") {
