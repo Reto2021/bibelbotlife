@@ -1183,6 +1183,39 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
 
     // Journey context removed from public chat — no check-in questions
 
+    // === Golden Answers RAG: inject curated Q&A as few-shot examples ===
+    try {
+      const lastUserMsg2 = [...messages].reverse().find((m: { role: string; content: string }) => m.role === "user");
+      const userQuery = lastUserMsg2?.content?.slice(0, 512);
+      if (userQuery) {
+        const embedSession = new (globalThis as any).Supabase.ai.Session("gte-small");
+        const queryEmbedding = await embedSession.run(userQuery, { mean_pool: true, normalize: true });
+        const embedArr = Array.from(queryEmbedding as Float32Array);
+        const supaForRag = createClient(
+          Deno.env.get("SUPABASE_URL")!,
+          Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
+        );
+        const { data: matches } = await supaForRag.rpc("search_golden_answers", {
+          query_embedding: JSON.stringify(embedArr),
+          match_threshold: 0.78,
+          match_count: 2,
+          language_filter: lang,
+        });
+        if (matches && matches.length > 0) {
+          const examples = matches
+            .map((m: { question: string; answer: string }, i: number) => `Beispiel ${i + 1}:\nFrage: ${m.question}\nVorbildliche Antwort: ${m.answer}`)
+            .join("\n\n");
+          systemPrompt += `\n\n[GOLDEN-ANSWER-BEISPIELE]\nDiese kuratierten Antworten wurden als besonders gut bewertet. Orientiere dich an Stil, Tiefe und Struktur, kopiere aber nicht wörtlich:\n\n${examples}`;
+          // Increment use count (best-effort, fire-and-forget)
+          for (const m of matches) {
+            supaForRag.rpc("increment_golden_answer_use", { answer_id: (m as { id: string }).id }).then(() => {});
+          }
+        }
+      }
+    } catch (e) {
+      console.error("Golden answer RAG error (non-fatal):", e);
+    }
+
     const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
     if (!LOVABLE_API_KEY) {
       throw new Error("LOVABLE_API_KEY is not configured");

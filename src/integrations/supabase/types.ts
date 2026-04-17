@@ -226,6 +226,57 @@ export type Database = {
         }
         Relationships: []
       }
+      chat_feedback: {
+        Row: {
+          answer_text: string | null
+          comment: string | null
+          conversation_id: string | null
+          created_at: string
+          id: string
+          language: string | null
+          message_id: string | null
+          question_text: string | null
+          rating: number
+          reviewed: boolean
+          reviewed_at: string | null
+          reviewed_by: string | null
+          session_id: string | null
+          user_id: string | null
+        }
+        Insert: {
+          answer_text?: string | null
+          comment?: string | null
+          conversation_id?: string | null
+          created_at?: string
+          id?: string
+          language?: string | null
+          message_id?: string | null
+          question_text?: string | null
+          rating: number
+          reviewed?: boolean
+          reviewed_at?: string | null
+          reviewed_by?: string | null
+          session_id?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          answer_text?: string | null
+          comment?: string | null
+          conversation_id?: string | null
+          created_at?: string
+          id?: string
+          language?: string | null
+          message_id?: string | null
+          question_text?: string | null
+          rating?: number
+          reviewed?: boolean
+          reviewed_at?: string | null
+          reviewed_by?: string | null
+          session_id?: string | null
+          user_id?: string | null
+        }
+        Relationships: []
+      }
       chat_messages: {
         Row: {
           content: string
@@ -921,6 +972,69 @@ export type Database = {
           used_at?: string | null
         }
         Relationships: []
+      }
+      golden_answers: {
+        Row: {
+          answer: string
+          created_at: string
+          created_by: string | null
+          embedding: string | null
+          id: string
+          is_active: boolean
+          language: string
+          question: string
+          source_feedback_id: string | null
+          source_message_id: string | null
+          topic: string | null
+          updated_at: string
+          use_count: number
+        }
+        Insert: {
+          answer: string
+          created_at?: string
+          created_by?: string | null
+          embedding?: string | null
+          id?: string
+          is_active?: boolean
+          language?: string
+          question: string
+          source_feedback_id?: string | null
+          source_message_id?: string | null
+          topic?: string | null
+          updated_at?: string
+          use_count?: number
+        }
+        Update: {
+          answer?: string
+          created_at?: string
+          created_by?: string | null
+          embedding?: string | null
+          id?: string
+          is_active?: boolean
+          language?: string
+          question?: string
+          source_feedback_id?: string | null
+          source_message_id?: string | null
+          topic?: string | null
+          updated_at?: string
+          use_count?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "golden_answers_source_feedback_id_fkey"
+            columns: ["source_feedback_id"]
+            isOneToOne: false
+            referencedRelation: "chat_feedback"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "golden_answers_source_message_id_fkey"
+            columns: ["source_message_id"]
+            isOneToOne: false
+            referencedRelation: "chat_messages"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       invoices: {
         Row: {
@@ -2257,6 +2371,10 @@ export type Database = {
         Args: { request_id: string }
         Returns: undefined
       }
+      increment_golden_answer_use: {
+        Args: { answer_id: string }
+        Returns: undefined
+      }
       increment_prayer_count: {
         Args: { request_id: string }
         Returns: undefined
@@ -2328,6 +2446,21 @@ export type Database = {
               verse: number
             }[]
           }
+      search_golden_answers: {
+        Args: {
+          language_filter?: string
+          match_count?: number
+          match_threshold?: number
+          query_embedding: string
+        }
+        Returns: {
+          answer: string
+          id: string
+          question: string
+          similarity: number
+          topic: string
+        }[]
+      }
       search_theology: {
         Args: {
           filter_source?: Database["public"]["Enums"]["theology_source_type"]

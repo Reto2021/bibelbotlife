@@ -4,6 +4,7 @@ import { Send, X, MessageCircle, Loader2, Mic, MicOff, Pencil, Shield, Sparkles,
 import { useTTS } from "@/hooks/use-tts";
 
 import { ShareButton } from "@/components/ShareButton";
+import { ChatFeedbackButtons } from "@/components/ChatFeedbackButtons";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
@@ -800,6 +801,15 @@ export function BibleBotChat() {
                     text={msg.content.length > 280 ? msg.content.slice(0, 277) + "…" : msg.content}
                     variant="icon"
                     className="ml-auto"
+                  />
+                </div>
+              )}
+              {msg.role === "assistant" && i > 0 && (
+                <div className="mt-1.5">
+                  <ChatFeedbackButtons
+                    questionText={[...messages.slice(0, i)].reverse().find((m) => m.role === "user")?.content || ""}
+                    answerText={msg.content}
+                    language={i18n.language || "de"}
                   />
                 </div>
               )}
