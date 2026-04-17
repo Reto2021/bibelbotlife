@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://bibelbot.ch/</loc>
+    <loc>https://biblebot.life/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://bibelbot.ch/for-churches</loc>
+    <loc>https://biblebot.life/for-churches</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bibelbot.ch/for-institutions</loc>
+    <loc>https://biblebot.life/for-institutions</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bibelbot.ch/churches</loc>
+    <loc>https://biblebot.life/churches</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bibelbot.ch/impressum</loc>
+    <loc>https://biblebot.life/impressum</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://bibelbot.ch/datenschutz</loc>
+    <loc>https://biblebot.life/datenschutz</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://bibelbot.ch/login</loc>
+    <loc>https://biblebot.life/login</loc>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
