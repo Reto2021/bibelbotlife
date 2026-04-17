@@ -50,15 +50,32 @@ Deno.serve(async (req) => {
   let content = data.choices[0].message.content.trim();
   content = content.replace(/^```json?\n?/, "").replace(/\n?```$/, "");
 
-  try {
-    const parsed = JSON.parse(content);
+  function tryParse(s: string) {
+    try { return JSON.parse(s); } catch { return null; }
+  }
+
+  let parsed = tryParse(content);
+
+  if (!parsed) {
+    // Fix Hebrew gershayim: replace " between Hebrew letters with U+05F4
+    const hebrewFixed = content.replace(/([\u0590-\u05FF])"([\u0590-\u05FF])/g, "$1\u05F4$2");
+    parsed = tryParse(hebrewFixed);
+  }
+
+  if (!parsed) {
+    // Generic: replace " between two letters (any script) with a typographic quote
+    const generic = content.replace(/(\p{L})"(\p{L})/gu, "$1\u201D$2");
+    parsed = tryParse(generic);
+  }
+
+  if (parsed) {
     return new Response(JSON.stringify(parsed), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
-  } catch {
-    return new Response(
-      JSON.stringify({ error: "Invalid JSON from AI", raw: content.substring(0, 500) }),
-      { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } },
-    );
   }
+
+  return new Response(
+    JSON.stringify({ error: "Invalid JSON from AI", raw: content.substring(0, 500) }),
+    { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } },
+  );
 });
