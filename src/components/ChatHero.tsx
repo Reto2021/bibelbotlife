@@ -12,6 +12,7 @@ import { openLifeWheel } from "@/components/LifeWheel";
 import { CHAT_OPEN_EVENT, CHAT_RESET_EVENT, type ChatMode } from "@/lib/chat-events";
 import ReactMarkdown from "react-markdown";
 import { ShareButton } from "@/components/ShareButton";
+import { VerseShareCard, extractMainVerse } from "@/components/VerseShareCard";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -806,6 +807,27 @@ export function ChatHero() {
     window.addEventListener(CHAT_RESET_EVENT, handler);
     return () => window.removeEventListener(CHAT_RESET_EVENT, handler);
   }, [startNewChat]);
+
+  // Deep link: ?v=Reference&ref=share — auto-open chat with shared verse
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const params = new URLSearchParams(window.location.search);
+    const verseParam = params.get("v");
+    if (!verseParam) return;
+    const source = params.get("ref") || "share";
+    track("deep_link_verse", { reference: verseParam, source });
+    const msg = t("verseCard.deepLinkPrompt", {
+      ref: verseParam,
+      defaultValue: `Jemand hat mir diesen Vers geschickt: ${verseParam}. Was bedeutet er?`,
+    });
+    // Clean URL so refresh doesn't retrigger
+    params.delete("v");
+    params.delete("ref");
+    const newSearch = params.toString();
+    window.history.replaceState({}, "", window.location.pathname + (newSearch ? `?${newSearch}` : "") + window.location.hash);
+    setTimeout(() => sendMessage(msg), 200);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleChipClick = (chip: TopicChip) => {
     track("chip_click", { chip: chip.key });
