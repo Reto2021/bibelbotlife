@@ -63,10 +63,15 @@ export default function ServiceEditor() {
   const [tradition, setTradition] = useState("reformed");
   const [blocks, setBlocks] = useState<ServiceBlockData[]>([]);
   const [notes, setNotes] = useState("");
+  const [className, setClassName] = useState("");
+  const [learningObjectives, setLearningObjectives] = useState<string[]>([]);
+  const [objectiveInput, setObjectiveInput] = useState("");
   const [saving, setSaving] = useState(false);
   const [loading, setLoading] = useState(!isNew);
   const [bibleBotOpen, setBibleBotOpen] = useState(false);
   const [bibleBotContext, setBibleBotContext] = useState("");
+
+  const isLessonMode = LESSON_SERVICE_TYPES.has(serviceType);
   const [resourcePickerOpen, setResourcePickerOpen] = useState(false);
   const [resourcePickerBlockId, setResourcePickerBlockId] = useState<string | null>(null);
   const [templatePickerOpen, setTemplatePickerOpen] = useState(isNew);
@@ -194,6 +199,8 @@ export default function ServiceEditor() {
           setBlocks((data.blocks as unknown as ServiceBlockData[]) || []);
           setNotes(data.notes || "");
           setServiceStatus(data.status);
+          setClassName((data as any).class_name || "");
+          setLearningObjectives(((data as any).learning_objectives as string[]) || []);
         }
         setLoading(false);
       });
@@ -318,18 +325,21 @@ export default function ServiceEditor() {
         notes: notes || null,
         created_by: user.id,
         church_id: church.id,
+        class_name: isLessonMode ? (className || null) : null,
+        learning_objectives: isLessonMode ? (learningObjectives.length ? learningObjectives : null) : null,
+        duration_minutes: totalDuration > 0 ? totalDuration : null,
       };
 
       if (isNew) {
         const { error } = await supabase.from("services").insert(payload);
         if (error) throw error;
-        toast.success("Gottesdienst erstellt");
+        toast.success(isLessonMode ? "Lektion erstellt" : "Gottesdienst erstellt");
       } else {
         const { error } = await supabase.from("services").update(payload).eq("id", id);
         if (error) throw error;
-        toast.success("Gottesdienst gespeichert");
+        toast.success(isLessonMode ? "Lektion gespeichert" : "Gottesdienst gespeichert");
       }
-      navigate("/dashboard/services");
+      navigate(isLessonMode ? "/dashboard/lessons" : "/dashboard/services");
     } catch (err: any) {
       toast.error(err.message || "Fehler beim Speichern");
     } finally {
