@@ -361,12 +361,12 @@ export default function ServiceEditor() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
         <div className="flex items-center gap-3 min-w-0">
-          <Button variant="ghost" size="icon" className="shrink-0" onClick={() => navigate("/dashboard")}>
+          <Button variant="ghost" size="icon" className="shrink-0" onClick={() => navigate(isLessonMode ? "/dashboard/lessons" : "/dashboard/services")}>
             <ArrowLeft className="h-5 w-5" />
           </Button>
           <div className="flex items-center gap-2 min-w-0">
             <h1 className="text-lg sm:text-2xl font-bold text-foreground truncate">
-              {isNew ? "Neuer Gottesdienst" : "Gottesdienst bearbeiten"}
+              {isNew ? (isLessonMode ? "Neue Lektion" : "Neuer Gottesdienst") : (isLessonMode ? "Lektion bearbeiten" : "Gottesdienst bearbeiten")}
             </h1>
             {!isNew && (
               <Badge variant={serviceStatus === "published" ? "default" : serviceStatus === "archived" ? "secondary" : "outline"} className="text-xs shrink-0">
