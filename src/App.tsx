@@ -54,6 +54,7 @@ const AdminDashboard = lazy(() => import("./pages/admin/AdminDashboard"));
 const OutreachAdmin = lazy(() => import("./pages/admin/OutreachAdmin"));
 const PrayerModeration = lazy(() => import("./pages/admin/PrayerModeration"));
 const ReferralAdmin = lazy(() => import("./pages/admin/ReferralAdmin"));
+const SeoAdmin = lazy(() => import("./pages/admin/SeoAdmin"));
 const BibleSearch = lazy(() => import("./pages/BibleSearch"));
 const PrayerWall = lazy(() => import("./pages/PrayerWall"));
 const BibleQuiz = lazy(() => import("./pages/BibleQuiz"));
@@ -66,6 +67,8 @@ const Spenden = lazy(() => import("./pages/Spenden"));
 const Kontakt = lazy(() => import("./pages/Kontakt"));
 const UeberUns = lazy(() => import("./pages/UeberUns"));
 const KreisPage = lazy(() => import("./pages/KreisPage"));
+const VersePage = lazy(() => import("./pages/VersePage"));
+const TopicPage = lazy(() => import("./pages/TopicPage"));
 
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { ProtectedAdminRoute } from "@/components/ProtectedAdminRoute";
@@ -200,10 +203,15 @@ const App = () => {
                   <Route path="/admin/outreach" element={<ProtectedAdminRoute><OutreachAdmin /></ProtectedAdminRoute>} />
                   <Route path="/admin/prayers" element={<ProtectedAdminRoute><PrayerModeration /></ProtectedAdminRoute>} />
                   <Route path="/admin/referrals" element={<ProtectedAdminRoute><ReferralAdmin /></ProtectedAdminRoute>} />
+                  <Route path="/admin/seo" element={<ProtectedAdminRoute><SeoAdmin /></ProtectedAdminRoute>}/>
                   <Route path="/widget-preview/:leadId" element={<WidgetPreview />} />
                   <Route path="/mein-kreis" element={<ProtectedRoute><KreisPage /></ProtectedRoute>} />
                   <Route path="/partner/:code" element={<ReferralPartner />} />
                   <Route path="/splash/:churchSlug" element={<SplashPage />} />
+                  <Route path="/vers/:reference" element={<VersePage />} />
+                  <Route path="/verse/:reference" element={<VersePage />} />
+                  <Route path="/themen/:slug" element={<TopicPage />} />
+                  <Route path="/topics/:slug" element={<TopicPage />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Suspense>
