@@ -1801,6 +1801,36 @@ export type Database = {
           },
         ]
       }
+      social_posts_log: {
+        Row: {
+          created_at: string
+          date: string
+          id: string
+          platforms: string[] | null
+          reference: string | null
+          results: Json | null
+          topic: string | null
+        }
+        Insert: {
+          created_at?: string
+          date: string
+          id?: string
+          platforms?: string[] | null
+          reference?: string | null
+          results?: Json | null
+          topic?: string | null
+        }
+        Update: {
+          created_at?: string
+          date?: string
+          id?: string
+          platforms?: string[] | null
+          reference?: string | null
+          results?: Json | null
+          topic?: string | null
+        }
+        Relationships: []
+      }
       suppressed_emails: {
         Row: {
           created_at: string
