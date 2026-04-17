@@ -8,109 +8,70 @@ import {
   ClipboardList, FileText, Target, Lightbulb, Check, ArrowRight, ChevronDown,
 } from "lucide-react";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
-const features = [
-  { icon: Target, title: "Lernziele pro Lektion", desc: "Definiere Lernziele und Kompetenzen direkt im Editor — sichtbar im Stundenentwurf." },
-  { icon: Sparkles, title: "Bausteine für Unterricht", desc: "Einstieg, Input, Aktivität, Arbeitsblatt, Diskussion, Reflexion, Hausaufgabe — drag & drop." },
-  { icon: BookOpen, title: "Bibel-Recherche im Chat", desc: "Bibelstellen, Erklärungen und Diskussionsfragen per BibleBot direkt aus dem Editor." },
-  { icon: ClipboardList, title: "Materialbibliothek", desc: "Arbeitsblätter, Lieder, Videos und Bibelstellen sammeln, taggen, wiederverwenden." },
-  { icon: Calendar, title: "Kalender & Wochenplan", desc: "Alle Lektionen pro Klasse — als Liste oder Wochenraster." },
-  { icon: Monitor, title: "Conductor-Modus", desc: "Live im Klassenzimmer: distraktionsfrei, swipebar, perfekt am Beamer oder Tablet." },
-  { icon: Users, title: "Reihen & Co-Teaching", desc: "Unterrichtsreihen («Gleichnisse», «Weltreligionen»), Vertretungen, Mentor-Sharing." },
-  { icon: FileText, title: "Stundenentwurf-PDF", desc: "Sauber formatierter Stundenentwurf für Mentor:in, Schulleitung oder Praktikum." },
-  { icon: Lightbulb, title: "Vorlagen pro Stufe", desc: "Eigene Vorlagen anlegen — Einstiegsstunde, Doppelstunde, Projekttag." },
-];
-
-const painPoints = [
-  "Stundenentwürfe in Word — unübersichtlich, schwer wiederverwendbar",
-  "Materialien verstreut über USB-Stick, Cloud, E-Mail-Anhänge",
-  "Bibelstellen mühsam recherchieren und in Word einfügen",
-  "Im Unterricht zwischen Notizen, Bibel und Beamer hin- und herwechseln",
-];
-
-const teacherFeatures = [
-  "Block-Editor mit Unterrichts-Bausteinen",
-  "Lernziele und Klassen pro Lektion",
-  "Materialbibliothek (Arbeitsblätter, Videos, Bilder)",
-  "Bibel-Suche in 5 Übersetzungen",
-  "Stundenentwurf als PDF",
-  "Conductor-Modus für Live-Unterricht",
-  "Wochenkalender und Lektionsreihen",
-  "BibleBot-Chat für Recherche und Diskussionsideen",
-];
-
-const faqs = [
-  {
-    q: "Ist das nur für Religionsunterricht?",
-    a: "Primär ja — die Bausteine sind auf Religion und Ethik zugeschnitten. Für andere Fächer mit ähnlicher Struktur (Geschichte, Philosophie) funktioniert es aber auch.",
-  },
-  {
-    q: "Kann ich es kostenlos nutzen?",
-    a: "Ja. Der persönliche Modus ist gratis — ohne Schullizenz, ohne Schulkonto. Du legst direkt los.",
-  },
-  {
-    q: "Welche Lehrpläne werden unterstützt?",
-    a: "Du arbeitest mit freiem Klassen- und Stufentext. Lehrplan-Bezüge (LP21, LehrplanPLUS, kantonal) trägst du selbst ein — wir sind kein verpflichtendes Curriculum.",
-  },
-  {
-    q: "Was ist mit Datenschutz?",
-    a: "Keine Schülerdaten nötig. Du planst Lektionen — keine Anwesenheit, keine Noten, keine Namen. Deine Entwürfe sind privat.",
-  },
-  {
-    q: "Funktioniert es auch ohne Internet?",
-    a: "Die App ist als PWA installierbar. Bestehende Lektionen sind offline lesbar; zum Speichern brauchst du Verbindung.",
-  },
-];
+const featureIcons = [Target, Sparkles, BookOpen, ClipboardList, Calendar, Monitor, Users, FileText, Lightbulb];
 
 export default function ForTeachers() {
+  const { t } = useTranslation();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  const features = Array.from({ length: 9 }, (_, i) => ({
+    icon: featureIcons[i],
+    title: t(`teachers.f${i + 1}Title`),
+    desc: t(`teachers.f${i + 1}Desc`),
+  }));
+
+  const painPoints = Array.from({ length: 4 }, (_, i) => t(`teachers.pain${i + 1}`));
+  const teacherFeatures = Array.from({ length: 8 }, (_, i) => t(`teachers.tf${i + 1}`));
+  const faqs = Array.from({ length: 5 }, (_, i) => ({
+    q: t(`teachers.faq${i + 1}q`),
+    a: t(`teachers.faq${i + 1}a`),
+  }));
 
   return (
     <>
       <SEOHead
-        title="Unterrichtsplaner für Religionslehrkräfte — BibleBot.Life"
-        description="Plane Religionsunterricht in Bausteinen. Lernziele, Materialbibliothek, Bibel-Recherche, Stundenentwurf-PDF und Live-Modus. Kostenlos starten."
+        title={t("teachers.seoTitle")}
+        description={t("teachers.seoDesc")}
         canonicalUrl="https://biblebot.life/unterrichtsplaner"
       />
       <SiteHeader />
 
       <main className="bg-background">
-        {/* Hero */}
         <section className="relative overflow-hidden bg-gradient-to-b from-primary/5 via-background to-background pt-16 pb-20 px-4">
           <div className="max-w-5xl mx-auto text-center space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium">
               <GraduationCap className="h-3.5 w-3.5" />
-              Für Religionslehrkräfte
+              {t("teachers.eyebrow")}
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground leading-tight">
-              Unterricht planen.<br />
-              <span className="text-primary">Endlich strukturiert.</span>
+              {t("teachers.heroLine1")}<br />
+              <span className="text-primary">{t("teachers.heroLine2")}</span>
             </h1>
             <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
-              Stundenentwürfe in Bausteinen. Lernziele, Bibelstellen, Material und Live-Modus —
-              alles an einem Ort, statt in zehn Word-Dateien.
+              {t("teachers.heroDesc")}
             </p>
             <div className="flex flex-wrap gap-3 justify-center pt-2">
               <Button asChild size="lg" className="text-base">
                 <Link to="/login?redirect=/dashboard/lessons">
-                  Kostenlos loslegen <ArrowRight className="ml-2 h-4 w-4" />
+                  {t("teachers.ctaStart")} <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="text-base">
-                <Link to="/dashboard/lessons">Demo ansehen</Link>
+                <Link to="/dashboard/lessons">{t("teachers.ctaDemo")}</Link>
               </Button>
             </div>
             <p className="text-xs text-muted-foreground pt-2">
-              Kein Schulkonto nötig · Keine Schülerdaten · In 2 Minuten startklar
+              {t("teachers.heroNote")}
             </p>
           </div>
         </section>
 
-        {/* Pain points */}
         <section className="py-16 px-4 bg-muted/30">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10 text-foreground">
-              Kennst du das?
+              {t("teachers.painTitle")}
             </h2>
             <div className="grid sm:grid-cols-2 gap-4">
               {painPoints.map((p, i) => (
@@ -123,20 +84,19 @@ export default function ForTeachers() {
               ))}
             </div>
             <p className="text-center mt-8 text-lg font-medium text-foreground">
-              Der Unterrichtsplaner löst das.
+              {t("teachers.painSolution")}
             </p>
           </div>
         </section>
 
-        {/* Features */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-3">
-                Alles, was du für den Religionsunterricht brauchst
+                {t("teachers.featuresTitle")}
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Kein Stundenplan-Tool, kein LMS — sondern ein Planer für die einzelne Lektion und die Reihe.
+                {t("teachers.featuresDesc")}
               </p>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -155,17 +115,16 @@ export default function ForTeachers() {
           </div>
         </section>
 
-        {/* What's included */}
         <section className="py-16 px-4 bg-muted/30">
           <div className="max-w-3xl mx-auto">
             <Card>
               <CardContent className="p-6 sm:p-8 space-y-4">
                 <div className="text-center space-y-2">
                   <div className="inline-flex items-center gap-2 text-primary text-sm font-medium">
-                    <GraduationCap className="h-4 w-4" /> Im Unterrichtsplaner enthalten
+                    <GraduationCap className="h-4 w-4" /> {t("teachers.includedEyebrow")}
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground">Kostenlos für Lehrkräfte</h3>
-                  <p className="text-sm text-muted-foreground">Persönliche Nutzung — keine Schullizenz nötig.</p>
+                  <h3 className="text-2xl font-bold text-foreground">{t("teachers.includedTitle")}</h3>
+                  <p className="text-sm text-muted-foreground">{t("teachers.includedDesc")}</p>
                 </div>
                 <ul className="space-y-2 pt-2">
                   {teacherFeatures.map((feat, i) => (
@@ -177,7 +136,7 @@ export default function ForTeachers() {
                 </ul>
                 <Button asChild className="w-full mt-4" size="lg">
                   <Link to="/login?redirect=/dashboard/lessons">
-                    Jetzt kostenlos starten <ArrowRight className="ml-2 h-4 w-4" />
+                    {t("teachers.ctaStart")} <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
               </CardContent>
@@ -185,10 +144,9 @@ export default function ForTeachers() {
           </div>
         </section>
 
-        {/* FAQ */}
         <section className="py-20 px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-10 text-foreground">Fragen & Antworten</h2>
+            <h2 className="text-3xl font-bold text-center mb-10 text-foreground">{t("teachers.faqTitle")}</h2>
             <div className="space-y-2">
               {faqs.map((faq, i) => (
                 <Card key={i}>
@@ -208,19 +166,18 @@ export default function ForTeachers() {
           </div>
         </section>
 
-        {/* Final CTA */}
         <section className="py-20 px-4 bg-gradient-to-b from-background to-primary/5">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <GraduationCap className="h-12 w-12 text-primary mx-auto" />
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
-              Plane deine nächste Lektion in 5 Minuten
+              {t("teachers.finalTitle")}
             </h2>
             <p className="text-muted-foreground">
-              Kein Setup. Keine Kreditkarte. Einfach loslegen.
+              {t("teachers.finalDesc")}
             </p>
             <Button asChild size="lg" className="text-base">
               <Link to="/login?redirect=/dashboard/lessons">
-                Kostenlos starten <ArrowRight className="ml-2 h-4 w-4" />
+                {t("teachers.ctaStart")} <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
           </div>
