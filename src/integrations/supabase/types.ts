@@ -228,57 +228,54 @@ export type Database = {
       }
       chat_feedback: {
         Row: {
+          answer_text: string | null
           comment: string | null
-          conversation_id: string
+          conversation_id: string | null
           created_at: string
           id: string
-          message_id: string
+          language: string | null
+          message_id: string | null
+          question_text: string | null
           rating: number
           reviewed: boolean
           reviewed_at: string | null
           reviewed_by: string | null
-          user_id: string
+          session_id: string | null
+          user_id: string | null
         }
         Insert: {
+          answer_text?: string | null
           comment?: string | null
-          conversation_id: string
+          conversation_id?: string | null
           created_at?: string
           id?: string
-          message_id: string
+          language?: string | null
+          message_id?: string | null
+          question_text?: string | null
           rating: number
           reviewed?: boolean
           reviewed_at?: string | null
           reviewed_by?: string | null
-          user_id: string
+          session_id?: string | null
+          user_id?: string | null
         }
         Update: {
+          answer_text?: string | null
           comment?: string | null
-          conversation_id?: string
+          conversation_id?: string | null
           created_at?: string
           id?: string
-          message_id?: string
+          language?: string | null
+          message_id?: string | null
+          question_text?: string | null
           rating?: number
           reviewed?: boolean
           reviewed_at?: string | null
           reviewed_by?: string | null
-          user_id?: string
+          session_id?: string | null
+          user_id?: string | null
         }
-        Relationships: [
-          {
-            foreignKeyName: "chat_feedback_conversation_id_fkey"
-            columns: ["conversation_id"]
-            isOneToOne: false
-            referencedRelation: "chat_conversations"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "chat_feedback_message_id_fkey"
-            columns: ["message_id"]
-            isOneToOne: false
-            referencedRelation: "chat_messages"
-            referencedColumns: ["id"]
-          },
-        ]
+        Relationships: []
       }
       chat_messages: {
         Row: {
