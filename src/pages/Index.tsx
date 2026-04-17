@@ -177,6 +177,41 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Warum BibleBot? — 3 Pressewinkel */}
+      <section className="py-16 px-4 bg-card/40">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-foreground mb-3">{t("why.title", "Warum BibleBot — und nicht einfach ChatGPT?")}</h2>
+            <p className="text-muted-foreground max-w-xl mx-auto">{t("why.subtitle", "Drei Unterschiede, die zählen.")}</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                emoji: "🏛️",
+                title: t("why.wisdom.title", "Nicht irgendeine KI"),
+                text: t("why.wisdom.text", "BibleBot kennt 5 Bibelübersetzungen und prüft jede Stelle automatisch auf Korrektheit. Keine Halluzinationen, kein Raten — nur geprüfte Weisheit aus 2000 Jahren."),
+              },
+              {
+                emoji: "🆘",
+                title: t("why.crisis.title", "Mit Krisenintervention"),
+                text: t("why.crisis.text", "Als erste Bibel-App weltweit erkennt BibleBot automatisch Krisensituationen und leitet sofort zu Telefonseelsorge-Nummern in CH, DE und AT weiter."),
+              },
+              {
+                emoji: "⛪",
+                title: t("why.nochurch.title", "Ohne Kirchenmitgliedschaft"),
+                text: t("why.nochurch.text", "Du brauchst keinen Taufschein, kein Vorwissen, keine Gemeindemitgliedschaft. BibleBot ist die Seelsorge für die Generation, die nicht mehr in die Kirche geht — aber die Fragen mitgenommen hat."),
+              },
+            ].map((item) => (
+              <div key={item.title} className="flex flex-col gap-4 p-6 rounded-2xl border border-border bg-card/60 hover:shadow-md transition-shadow">
+                <span className="text-4xl">{item.emoji}</span>
+                <h3 className="font-bold text-foreground text-lg leading-tight">{item.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Glaube neu entdecken */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-4xl">
