@@ -350,7 +350,7 @@ export default function ServiceEditor() {
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-[40vh] text-muted-foreground">
-        Gottesdienst wird geladen...
+        {isLessonMode ? "Lektion wird geladen..." : "Gottesdienst wird geladen..."}
       </div>
     );
   }
