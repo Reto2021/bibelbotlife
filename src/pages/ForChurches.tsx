@@ -14,10 +14,19 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 
 const tiers = [
-  { key: "free", icon: Sprout, popular: false },
-  { key: "community", icon: Footprints, popular: false },
-  { key: "gemeinde", icon: Handshake, popular: true },
-  { key: "kirche", icon: TowerControl, popular: false },
+  { key: "free",      icon: Sprout,       popular: false, setup: 490,  monthly: 49 },
+  { key: "community", icon: Footprints,   popular: false, setup: 690,  monthly: 99 },
+  { key: "gemeinde",  icon: Handshake,    popular: true,  setup: 990,  monthly: 149 },
+  { key: "kirche",    icon: TowerControl, popular: false, setup: 1490, monthly: 249 },
+];
+
+const SETUP_INCLUDES = [
+  "Persönliches Kickoff-Gespräch",
+  "Einrichtung Gemeinde-Branding (Logo, Farben, Name)",
+  "Generierung QR-Materialien (Flyer & Sticker)",
+  "Eigene Gemeinde-Landingpage",
+  "Test & Qualitätsprüfung",
+  "Onboarding-Dokumentation & Schulung",
 ];
 
 const ForChurches = () => {
@@ -300,7 +309,12 @@ const ForChurches = () => {
                   <CardTitle className="text-xl">{t(`church.tier.${tier.key}.name`)}</CardTitle>
                   <p className="text-xs text-muted-foreground">{t(`church.tier.${tier.key}.size`)}</p>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="text-center">
+                  <div className="py-2">
+                    <div className="text-3xl font-bold text-foreground">CHF {tier.monthly}<span className="text-base font-normal text-muted-foreground">/Mt.</span></div>
+                    <div className="text-xs text-muted-foreground mt-1">zzgl. einmalige Einrichtung CHF {tier.setup}</div>
+                    <div className="text-[11px] text-muted-foreground mt-2 italic">= CHF {tier.setup + tier.monthly * 12} im 1. Jahr</div>
+                  </div>
                   <Button
                     className="w-full mt-4"
                     variant={tier.popular ? "default" : "outline"}
@@ -317,9 +331,26 @@ const ForChurches = () => {
             ))}
           </div>
 
+          {/* Setup includes */}
+          <div className="mt-12 max-w-3xl mx-auto bg-card/60 border border-border rounded-xl p-6">
+            <h3 className="text-lg font-semibold text-foreground mb-4 text-center">Was ist im Einrichtungspaket enthalten?</h3>
+            <ul className="grid sm:grid-cols-2 gap-3">
+              {SETUP_INCLUDES.map((item) => (
+                <li key={item} className="flex items-start gap-2 text-sm text-muted-foreground">
+                  <Sparkles className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Transparency note */}
-          <div className="mt-12 max-w-3xl mx-auto text-center bg-card/60 border border-border rounded-xl p-6">
-            <p className="text-sm text-muted-foreground leading-relaxed">{t("church.patronageNote")}</p>
+          <div className="mt-6 max-w-3xl mx-auto text-center bg-primary/5 border border-primary/20 rounded-xl p-6">
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              BibleBot.Life wird von der <strong>2Go Media AG</strong> entwickelt und professionell betrieben.
+              Die Abo-Pakete finanzieren Weiterentwicklung, Qualitätssicherung und persönlichen Support.
+              Für Privatpersonen bleibt BibleBot kostenlos. Alle Preise exkl. MwSt.
+            </p>
           </div>
         </div>
       </section>

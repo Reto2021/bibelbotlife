@@ -21,6 +21,7 @@ const Impressum = lazy(() => import("./pages/Impressum"));
 const Datenschutz = lazy(() => import("./pages/Datenschutz"));
 const Analytics = lazy(() => import("./pages/Analytics"));
 const ForChurches = lazy(() => import("./pages/ForChurches"));
+const ForInstitutions = lazy(() => import("./pages/ForInstitutions"));
 const ChurchDirectory = lazy(() => import("./pages/ChurchDirectory"));
 const ChurchPartner = lazy(() => import("./pages/ChurchPartner"));
 const ChurchIntegration = lazy(() => import("./pages/ChurchIntegration"));
@@ -155,7 +156,7 @@ const App = () => {
                   <Route path="/churches" element={<ChurchDirectory />} />
                   <Route path="/church/:slug" element={<ChurchPartner />} />
                   <Route path="/church-integration/:slug" element={<ChurchIntegration />} />
-                  <Route path="/for-institutions" element={<ForChurches />} />
+                  <Route path="/for-institutions" element={<ForInstitutions />} />
                   <Route path="/fuer-seelsorger" element={<ForCelebrants />} />
                    <Route path="/bible-search" element={<BibleSearch />} />
                    <Route path="/bibel" element={<BibleSearch />} />
