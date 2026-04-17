@@ -804,6 +804,15 @@ export function BibleBotChat() {
                   />
                 </div>
               )}
+              {msg.role === "assistant" && i > 0 && (
+                <div className="mt-1.5">
+                  <ChatFeedbackButtons
+                    questionText={[...messages.slice(0, i)].reverse().find((m) => m.role === "user")?.content || ""}
+                    answerText={msg.content}
+                    language={i18n.language || "de"}
+                  />
+                </div>
+              )}
             </div>
             </div>
             {/* Subtle donation nudge */}
