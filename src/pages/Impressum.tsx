@@ -29,8 +29,8 @@ const Impressum = () => {
           <section>
             <h2 className="text-xl font-semibold mb-2">Verantwortlich für den Inhalt</h2>
             <p className="text-muted-foreground">
-              Reto Wettstein<br />
-              Rebmoosweg 63<br />
+              2Go Media AG<br />
+              Industriestrasse 19<br />
               5200 Brugg<br />
               Schweiz
             </p>
