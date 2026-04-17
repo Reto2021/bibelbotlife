@@ -61,6 +61,7 @@ export type Database = {
           user_agent: string | null
           utm_medium: string | null
           utm_source: string | null
+          visitor_id: string | null
         }
         Insert: {
           church_slug?: string | null
@@ -76,6 +77,7 @@ export type Database = {
           user_agent?: string | null
           utm_medium?: string | null
           utm_source?: string | null
+          visitor_id?: string | null
         }
         Update: {
           church_slug?: string | null
@@ -91,6 +93,7 @@ export type Database = {
           user_agent?: string | null
           utm_medium?: string | null
           utm_source?: string | null
+          visitor_id?: string | null
         }
         Relationships: []
       }
@@ -120,6 +123,7 @@ export type Database = {
           created_at: string
           fts: unknown
           id: string
+          language: string
           text: string
           translation: string
           verse: number
@@ -131,6 +135,7 @@ export type Database = {
           created_at?: string
           fts?: unknown
           id?: string
+          language?: string
           text: string
           translation: string
           verse: number
@@ -142,6 +147,7 @@ export type Database = {
           created_at?: string
           fts?: unknown
           id?: string
+          language?: string
           text?: string
           translation?: string
           verse?: number
@@ -158,6 +164,7 @@ export type Database = {
           is_shared: boolean
           person_name: string | null
           share_token: string | null
+          title: string | null
           transcripts: Json | null
           updated_at: string
           user_id: string
@@ -171,6 +178,7 @@ export type Database = {
           is_shared?: boolean
           person_name?: string | null
           share_token?: string | null
+          title?: string | null
           transcripts?: Json | null
           updated_at?: string
           user_id: string
@@ -184,6 +192,7 @@ export type Database = {
           is_shared?: boolean
           person_name?: string | null
           share_token?: string | null
+          title?: string | null
           transcripts?: Json | null
           updated_at?: string
           user_id?: string
@@ -214,6 +223,57 @@ export type Database = {
           title?: string | null
           updated_at?: string
           user_id?: string
+        }
+        Relationships: []
+      }
+      chat_feedback: {
+        Row: {
+          answer_text: string | null
+          comment: string | null
+          conversation_id: string | null
+          created_at: string
+          id: string
+          language: string | null
+          message_id: string | null
+          question_text: string | null
+          rating: number
+          reviewed: boolean
+          reviewed_at: string | null
+          reviewed_by: string | null
+          session_id: string | null
+          user_id: string | null
+        }
+        Insert: {
+          answer_text?: string | null
+          comment?: string | null
+          conversation_id?: string | null
+          created_at?: string
+          id?: string
+          language?: string | null
+          message_id?: string | null
+          question_text?: string | null
+          rating: number
+          reviewed?: boolean
+          reviewed_at?: string | null
+          reviewed_by?: string | null
+          session_id?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          answer_text?: string | null
+          comment?: string | null
+          conversation_id?: string | null
+          created_at?: string
+          id?: string
+          language?: string | null
+          message_id?: string | null
+          question_text?: string | null
+          rating?: number
+          reviewed?: boolean
+          reviewed_at?: string | null
+          reviewed_by?: string | null
+          session_id?: string | null
+          user_id?: string | null
         }
         Relationships: []
       }
@@ -347,6 +407,51 @@ export type Database = {
           },
           {
             foreignKeyName: "church_contact_requests_church_id_fkey"
+            columns: ["church_id"]
+            isOneToOne: false
+            referencedRelation: "church_partners_public"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      church_members: {
+        Row: {
+          church_id: string
+          consent_contact: boolean
+          created_at: string
+          id: string
+          source_slug: string | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          church_id: string
+          consent_contact?: boolean
+          created_at?: string
+          id?: string
+          source_slug?: string | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          church_id?: string
+          consent_contact?: boolean
+          created_at?: string
+          id?: string
+          source_slug?: string | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "church_members_church_id_fkey"
+            columns: ["church_id"]
+            isOneToOne: false
+            referencedRelation: "church_partners"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "church_members_church_id_fkey"
             columns: ["church_id"]
             isOneToOne: false
             referencedRelation: "church_partners_public"
@@ -550,6 +655,174 @@ export type Database = {
           },
         ]
       }
+      circle_journey_progress: {
+        Row: {
+          circle_id: string
+          days_completed: number | null
+          display_name: string
+          id: string
+          last_active_date: string | null
+          updated_at: string | null
+          user_id: string
+        }
+        Insert: {
+          circle_id: string
+          days_completed?: number | null
+          display_name: string
+          id?: string
+          last_active_date?: string | null
+          updated_at?: string | null
+          user_id: string
+        }
+        Update: {
+          circle_id?: string
+          days_completed?: number | null
+          display_name?: string
+          id?: string
+          last_active_date?: string | null
+          updated_at?: string | null
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "circle_journey_progress_circle_id_fkey"
+            columns: ["circle_id"]
+            isOneToOne: false
+            referencedRelation: "circles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      circle_members: {
+        Row: {
+          circle_id: string
+          display_name: string
+          id: string
+          joined_at: string | null
+          user_id: string
+        }
+        Insert: {
+          circle_id: string
+          display_name: string
+          id?: string
+          joined_at?: string | null
+          user_id: string
+        }
+        Update: {
+          circle_id?: string
+          display_name?: string
+          id?: string
+          joined_at?: string | null
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "circle_members_circle_id_fkey"
+            columns: ["circle_id"]
+            isOneToOne: false
+            referencedRelation: "circles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      circle_prayer_requests: {
+        Row: {
+          circle_id: string
+          content: string
+          created_at: string | null
+          display_name: string
+          id: string
+          is_answered: boolean | null
+          prayer_count: number | null
+          user_id: string
+        }
+        Insert: {
+          circle_id: string
+          content: string
+          created_at?: string | null
+          display_name: string
+          id?: string
+          is_answered?: boolean | null
+          prayer_count?: number | null
+          user_id: string
+        }
+        Update: {
+          circle_id?: string
+          content?: string
+          created_at?: string | null
+          display_name?: string
+          id?: string
+          is_answered?: boolean | null
+          prayer_count?: number | null
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "circle_prayer_requests_circle_id_fkey"
+            columns: ["circle_id"]
+            isOneToOne: false
+            referencedRelation: "circles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      circles: {
+        Row: {
+          created_at: string | null
+          created_by: string
+          id: string
+          invite_code: string
+          name: string
+          weekly_bible_book: string | null
+          weekly_bible_chapter: number | null
+        }
+        Insert: {
+          created_at?: string | null
+          created_by: string
+          id?: string
+          invite_code?: string
+          name: string
+          weekly_bible_book?: string | null
+          weekly_bible_chapter?: number | null
+        }
+        Update: {
+          created_at?: string | null
+          created_by?: string
+          id?: string
+          invite_code?: string
+          name?: string
+          weekly_bible_book?: string | null
+          weekly_bible_chapter?: number | null
+        }
+        Relationships: []
+      }
+      contact_submissions: {
+        Row: {
+          category: string
+          created_at: string
+          email: string
+          id: string
+          message: string
+          name: string
+        }
+        Insert: {
+          category: string
+          created_at?: string
+          email: string
+          id?: string
+          message: string
+          name: string
+        }
+        Update: {
+          category?: string
+          created_at?: string
+          email?: string
+          id?: string
+          message?: string
+          name?: string
+        }
+        Relationships: []
+      }
       daily_broadcast_log: {
         Row: {
           id: string
@@ -699,6 +972,69 @@ export type Database = {
           used_at?: string | null
         }
         Relationships: []
+      }
+      golden_answers: {
+        Row: {
+          answer: string
+          created_at: string
+          created_by: string | null
+          embedding: string | null
+          id: string
+          is_active: boolean
+          language: string
+          question: string
+          source_feedback_id: string | null
+          source_message_id: string | null
+          topic: string | null
+          updated_at: string
+          use_count: number
+        }
+        Insert: {
+          answer: string
+          created_at?: string
+          created_by?: string | null
+          embedding?: string | null
+          id?: string
+          is_active?: boolean
+          language?: string
+          question: string
+          source_feedback_id?: string | null
+          source_message_id?: string | null
+          topic?: string | null
+          updated_at?: string
+          use_count?: number
+        }
+        Update: {
+          answer?: string
+          created_at?: string
+          created_by?: string | null
+          embedding?: string | null
+          id?: string
+          is_active?: boolean
+          language?: string
+          question?: string
+          source_feedback_id?: string | null
+          source_message_id?: string | null
+          topic?: string | null
+          updated_at?: string
+          use_count?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "golden_answers_source_feedback_id_fkey"
+            columns: ["source_feedback_id"]
+            isOneToOne: false
+            referencedRelation: "chat_feedback"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "golden_answers_source_message_id_fkey"
+            columns: ["source_message_id"]
+            isOneToOne: false
+            referencedRelation: "chat_messages"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       invoices: {
         Row: {
@@ -1262,42 +1598,63 @@ export type Database = {
       }
       resource_library: {
         Row: {
+          attachment_name: string | null
+          attachment_url: string | null
           church_id: string | null
           content: string | null
+          country: string | null
           created_at: string
-          created_by: string
+          created_by: string | null
+          hymnal_ref: string | null
           id: string
+          is_system: boolean
           language: string
           metadata: Json | null
           resource_type: Database["public"]["Enums"]["resource_type"]
+          shared_with_church: boolean
           tags: string[] | null
           title: string
+          tradition: string | null
           updated_at: string
         }
         Insert: {
+          attachment_name?: string | null
+          attachment_url?: string | null
           church_id?: string | null
           content?: string | null
+          country?: string | null
           created_at?: string
-          created_by: string
+          created_by?: string | null
+          hymnal_ref?: string | null
           id?: string
+          is_system?: boolean
           language?: string
           metadata?: Json | null
           resource_type?: Database["public"]["Enums"]["resource_type"]
+          shared_with_church?: boolean
           tags?: string[] | null
           title: string
+          tradition?: string | null
           updated_at?: string
         }
         Update: {
+          attachment_name?: string | null
+          attachment_url?: string | null
           church_id?: string | null
           content?: string | null
+          country?: string | null
           created_at?: string
-          created_by?: string
+          created_by?: string | null
+          hymnal_ref?: string | null
           id?: string
+          is_system?: boolean
           language?: string
           metadata?: Json | null
           resource_type?: Database["public"]["Enums"]["resource_type"]
+          shared_with_church?: boolean
           tags?: string[] | null
           title?: string
+          tradition?: string | null
           updated_at?: string
         }
         Relationships: [
@@ -1316,6 +1673,51 @@ export type Database = {
             referencedColumns: ["id"]
           },
         ]
+      }
+      seo_topics: {
+        Row: {
+          body_md: string | null
+          created_at: string
+          faqs: Json | null
+          id: string
+          intro: string | null
+          is_published: boolean
+          language: string
+          meta_description: string | null
+          related_verses: string[] | null
+          slug: string
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          body_md?: string | null
+          created_at?: string
+          faqs?: Json | null
+          id?: string
+          intro?: string | null
+          is_published?: boolean
+          language?: string
+          meta_description?: string | null
+          related_verses?: string[] | null
+          slug: string
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          body_md?: string | null
+          created_at?: string
+          faqs?: Json | null
+          id?: string
+          intro?: string | null
+          is_published?: boolean
+          language?: string
+          meta_description?: string | null
+          related_verses?: string[] | null
+          slug?: string
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
       }
       service_series: {
         Row: {
@@ -1480,9 +1882,12 @@ export type Database = {
         Row: {
           blocks: Json
           church_id: string
+          class_name: string | null
           created_at: string
           created_by: string
+          duration_minutes: number | null
           id: string
+          learning_objectives: string[] | null
           notes: string | null
           series_id: string | null
           service_date: string
@@ -1496,9 +1901,12 @@ export type Database = {
         Insert: {
           blocks?: Json
           church_id: string
+          class_name?: string | null
           created_at?: string
           created_by: string
+          duration_minutes?: number | null
           id?: string
+          learning_objectives?: string[] | null
           notes?: string | null
           series_id?: string | null
           service_date: string
@@ -1512,9 +1920,12 @@ export type Database = {
         Update: {
           blocks?: Json
           church_id?: string
+          class_name?: string | null
           created_at?: string
           created_by?: string
+          duration_minutes?: number | null
           id?: string
+          learning_objectives?: string[] | null
           notes?: string | null
           series_id?: string | null
           service_date?: string
@@ -1548,6 +1959,36 @@ export type Database = {
             referencedColumns: ["id"]
           },
         ]
+      }
+      social_posts_log: {
+        Row: {
+          created_at: string
+          date: string
+          id: string
+          platforms: string[] | null
+          reference: string | null
+          results: Json | null
+          topic: string | null
+        }
+        Insert: {
+          created_at?: string
+          date: string
+          id?: string
+          platforms?: string[] | null
+          reference?: string | null
+          results?: Json | null
+          topic?: string | null
+        }
+        Update: {
+          created_at?: string
+          date?: string
+          id?: string
+          platforms?: string[] | null
+          reference?: string | null
+          results?: Json | null
+          topic?: string | null
+        }
+        Relationships: []
       }
       suppressed_emails: {
         Row: {
@@ -1666,8 +2107,93 @@ export type Database = {
         }
         Relationships: []
       }
+      verse_seo_content: {
+        Row: {
+          book: string
+          chapter: number
+          context: string | null
+          created_at: string
+          id: string
+          is_featured: boolean
+          language: string
+          meta_description: string | null
+          reference_slug: string
+          reflection: string | null
+          related_references: string[] | null
+          related_topics: string[] | null
+          title: string | null
+          updated_at: string
+          verse: number
+          view_count: number
+        }
+        Insert: {
+          book: string
+          chapter: number
+          context?: string | null
+          created_at?: string
+          id?: string
+          is_featured?: boolean
+          language?: string
+          meta_description?: string | null
+          reference_slug: string
+          reflection?: string | null
+          related_references?: string[] | null
+          related_topics?: string[] | null
+          title?: string | null
+          updated_at?: string
+          verse: number
+          view_count?: number
+        }
+        Update: {
+          book?: string
+          chapter?: number
+          context?: string | null
+          created_at?: string
+          id?: string
+          is_featured?: boolean
+          language?: string
+          meta_description?: string | null
+          reference_slug?: string
+          reflection?: string | null
+          related_references?: string[] | null
+          related_topics?: string[] | null
+          title?: string | null
+          updated_at?: string
+          verse?: number
+          view_count?: number
+        }
+        Relationships: []
+      }
     }
     Views: {
+      church_member_details: {
+        Row: {
+          church_id: string | null
+          consent_contact: boolean | null
+          created_at: string | null
+          email: string | null
+          full_name: string | null
+          id: string | null
+          source_slug: string | null
+          user_id: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "church_members_church_id_fkey"
+            columns: ["church_id"]
+            isOneToOne: false
+            referencedRelation: "church_partners"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "church_members_church_id_fkey"
+            columns: ["church_id"]
+            isOneToOne: false
+            referencedRelation: "church_partners_public"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       church_partners_public: {
         Row: {
           city: string | null
@@ -1815,6 +2341,16 @@ export type Database = {
           total_conversions: number
         }[]
       }
+      get_registered_user_count: { Args: never; Returns: number }
+      get_registered_users_list: {
+        Args: never
+        Returns: {
+          created_at: string
+          email: string
+          id: string
+          last_sign_in_at: string
+        }[]
+      }
       get_shared_draft: {
         Args: { p_token: string }
         Returns: {
@@ -1831,11 +2367,30 @@ export type Database = {
         }
         Returns: boolean
       }
+      increment_circle_prayer_count: {
+        Args: { request_id: string }
+        Returns: undefined
+      }
+      increment_golden_answer_use: {
+        Args: { answer_id: string }
+        Returns: undefined
+      }
       increment_prayer_count: {
         Args: { request_id: string }
         Returns: undefined
       }
       is_church_owner: { Args: { _church_id: string }; Returns: boolean }
+      is_circle_member: {
+        Args: { _circle_id: string; _user_id: string }
+        Returns: boolean
+      }
+      lookup_circle_by_invite_code: {
+        Args: { _code: string }
+        Returns: {
+          id: string
+          name: string
+        }[]
+      }
       move_to_dlq: {
         Args: {
           dlq_name: string
@@ -1853,22 +2408,57 @@ export type Database = {
           read_ct: number
         }[]
       }
-      search_bible_verses: {
+      search_bible_verses:
+        | {
+            Args: {
+              book_boost?: string[]
+              result_limit?: number
+              search_query: string
+              translation_filter?: string
+            }
+            Returns: {
+              book: string
+              book_number: number
+              chapter: number
+              id: string
+              rank: number
+              text: string
+              translation: string
+              verse: number
+            }[]
+          }
+        | {
+            Args: {
+              book_boost?: string[]
+              language_filter?: string
+              result_limit?: number
+              search_query: string
+              translation_filter?: string
+            }
+            Returns: {
+              book: string
+              book_number: number
+              chapter: number
+              id: string
+              rank: number
+              text: string
+              translation: string
+              verse: number
+            }[]
+          }
+      search_golden_answers: {
         Args: {
-          book_boost?: string[]
-          result_limit?: number
-          search_query: string
-          translation_filter?: string
+          language_filter?: string
+          match_count?: number
+          match_threshold?: number
+          query_embedding: string
         }
         Returns: {
-          book: string
-          book_number: number
-          chapter: number
+          answer: string
           id: string
-          rank: number
-          text: string
-          translation: string
-          verse: number
+          question: string
+          similarity: number
+          topic: string
         }[]
       }
       search_theology: {
@@ -1898,6 +2488,7 @@ export type Database = {
         | "lutheran"
         | "evangelical"
         | "secular"
+        | "interreligious"
       invoice_status: "draft" | "sent" | "paid"
       outreach_campaign_status: "active" | "paused" | "completed"
       outreach_email_status:
@@ -1915,7 +2506,15 @@ export type Database = {
         | "converted"
         | "unsubscribed"
       record_type: "baptism" | "wedding" | "funeral"
-      resource_type: "song" | "prayer" | "reading" | "liturgy" | "other"
+      resource_type:
+        | "song"
+        | "prayer"
+        | "reading"
+        | "liturgy"
+        | "other"
+        | "worksheet"
+        | "video"
+        | "image"
       service_status: "draft" | "published" | "archived"
       service_type:
         | "regular"
@@ -1926,6 +2525,10 @@ export type Database = {
         | "communion"
         | "special"
         | "other"
+        | "lesson"
+        | "double_lesson"
+        | "project_day"
+        | "confirmation_class"
       team_role:
         | "pastor"
         | "musician"
@@ -1934,6 +2537,9 @@ export type Database = {
         | "technician"
         | "volunteer"
         | "other"
+        | "co_teacher"
+        | "student_assistant"
+        | "mentor"
       theology_source_type: "lexikon" | "kommentar" | "konfession" | "seelsorge"
     }
     CompositeTypes: {
@@ -2071,6 +2677,7 @@ export const Constants = {
         "lutheran",
         "evangelical",
         "secular",
+        "interreligious",
       ],
       invoice_status: ["draft", "sent", "paid"],
       outreach_campaign_status: ["active", "paused", "completed"],
@@ -2091,7 +2698,16 @@ export const Constants = {
         "unsubscribed",
       ],
       record_type: ["baptism", "wedding", "funeral"],
-      resource_type: ["song", "prayer", "reading", "liturgy", "other"],
+      resource_type: [
+        "song",
+        "prayer",
+        "reading",
+        "liturgy",
+        "other",
+        "worksheet",
+        "video",
+        "image",
+      ],
       service_status: ["draft", "published", "archived"],
       service_type: [
         "regular",
@@ -2102,6 +2718,10 @@ export const Constants = {
         "communion",
         "special",
         "other",
+        "lesson",
+        "double_lesson",
+        "project_day",
+        "confirmation_class",
       ],
       team_role: [
         "pastor",
@@ -2111,6 +2731,9 @@ export const Constants = {
         "technician",
         "volunteer",
         "other",
+        "co_teacher",
+        "student_assistant",
+        "mentor",
       ],
       theology_source_type: ["lexikon", "kommentar", "konfession", "seelsorge"],
     },

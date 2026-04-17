@@ -1,322 +1,366 @@
 {
   "nav": {
     "startNow": "Nu starten",
+    "openChat": "Chat openen",
     "prayerWall": "Gebedsmuur",
     "bibleQuiz": "Bijbelquiz",
-    "forCelebrants": "Voor pastors",
-    "forCelebrantsMobile": "Voor pastors & coaches"
+    "forCelebrants": "Voor geestelijken",
+    "forCelebrantsMobile": "Voor geestelijken & coaches",
+    "donate": "Doneren",
+    "more": "Meer",
+    "explore": "Ontdekken",
+    "professionals": "Voor professionals",
+    "support": "Ondersteunen"
   },
   "loader": "Laden…",
   "hero": {
     "badge": {
-      "noLogin": "Geen login",
+      "noLogin": "Geen login nodig",
+      "optionalLogin": "Login optioneel",
       "noData": "Geen gegevens",
-      "noJudgment": "Geen oordeel",
-      "optionalLogin": "Optionele login"
+      "noJudgment": "Geen oordeel"
     },
     "title1": "De Bijbel.",
-    "title2": " Opnieuw ontdekt.",
-    "subtitle": "Je metgezel is een begeleider die de Bijbel kent – en de juiste vragen stelt. Geen persoon, maar een eerlijke metgezel. Voor zinvolle gesprekken, diepe vragen en echte impulsen.",
+    "title2": " Nieuw gedacht.",
+    "subtitle": "Je persoonlijke begeleider kent de Bijbel – en stelt de juiste vragen. Geen mens, maar een eerlijke begeleider. Voor goede gesprekken, diepe vragen en echte impulsen.",
     "ctaTelegram": "Start via Telegram",
-    "ctaMore": "Meer ontdekken",
-    "quote": "\"Kom naar mij, jullie die vermoeid zijn en onder lasten gebukt gaan, dan zal ik jullie rust geven.\"",
-    "quoteRef": "– Matteüs 11:28"
+    "ctaMore": "Meer informatie",
+    "quote": "«Kom naar Mij toe, allen die vermoeid en belast zijn, en Ik zal u rust geven.»",
+    "quoteRef": "– Mattheüs 11:28"
   },
   "impulse": {
-    "loading": "Dagelijkse impuls laden...",
-    "label": "Impuls van de dag",
+    "loading": "Inspiratie wordt geladen...",
+    "label": "Inspiratie van de dag",
+    "collapseLabel": "Dagelijkse impuls",
     "deepDive": "Wat betekent dit voor mij?",
-    "explore": "Volledige passage lezen",
-    "alreadySubscribed": "U ontvangt de dagelijkse inspiratie",
+    "explore": "Lees de hele passage",
+    "deepDivePrompt": "De dagelijkse impuls is \"{{topic}}\" met {{reference}}. Leg deze passage uit: Wie heeft dit geschreven? In welke situatie? Wat komt ervoor en erna? En wat betekent dit voor mijn leven vandaag?",
+    "explorePrompt": "Lees de hele passage rondom {{reference}} voor en leg de context uit. Ik wil het verhaal erachter begrijpen.",
     "subscribeCta": "Deze inspiratie dagelijks ontvangen?",
-    "playAudio": "Luister",
+    "alreadySubscribed": "Je ontvangt de dagelijkse inspiratie",
+    "playAudio": "Voorlezen",
     "stopAudio": "Stop"
   },
   "features": {
-    "sectionTitle": "Wat je metgezel je biedt",
-    "sectionSubtitle": "Ontdek de vele manieren waarop je persoonlijke metgezel je kan ondersteunen",
+    "sectionTitle": "Zo ondersteunt je begeleider je",
+    "sectionSubtitle": "Ontdek de diverse mogelijkheden die je persoonlijke begeleider je biedt",
     "bible": {
-      "title": "Bijbelpassages & uitleg",
-      "desc": "Vraag \"Wat zegt de Bijbel over...?\" en ontvang relevante verzen met context en duidelijke uitleg."
+      "title": "Bijbelteksten & uitleg",
+      "desc": "Vraag «Wat zegt de Bijbel over...?» en ontvang passende verzen met context en begrijpelijke uitleg."
     },
     "goals": {
-      "title": "Levensplanning & doelen",
-      "desc": "Ontdek je roeping, stel concrete doelen en ontdek wat God voor je in petto heeft."
+      "title": "Levensplanning & doelen stellen",
+      "desc": "Ontdek je roeping, stel concrete doelen en ontdek wat God met je voor zou kunnen hebben."
     },
     "self": {
-      "title": "Jezelf vinden",
-      "desc": "Herken je gaven, krachten en verlangens – en wat je hart echt nodig heeft."
+      "title": "Tot jezelf komen",
+      "desc": "Herken je gaven, sterke punten en verlangens – en wat je hart echt nodig heeft."
     },
     "faith": {
-      "title": "Geloofsreis & Christus vinden",
-      "desc": "Of je zoekt, twijfelt of verdiept – je metgezel begeleidt je op je persoonlijke weg."
+      "title": "Geloofspad & Christus vinden",
+      "desc": "Of je nu zoekt, twijfelt of verdiept – je begeleider begeleidt je op je persoonlijke pad."
     },
     "daily": {
       "title": "Dagelijkse impulsen & kerkelijk jaar",
-      "desc": "Begin je dag met impulsen en laat je metgezel je begeleiden door Advent, Vastentijd en feestdagen."
+      "desc": "Begin je dag met impulsen en laat je begeleiden door Advent, Vasten en feestdagen."
     },
     "groups": {
-      "title": "Groepen & gemeenschappen",
-      "desc": "Perfect voor bijbelstudiegroepen, kerkgemeenschappen en gezamenlijke devoties."
+      "title": "Groepen & gemeenten",
+      "desc": "Perfect voor Bijbelkringen, gemeentegroepen en gezamenlijke overdenkingen."
     }
   },
   "coaching": {
     "badge": "Methodiek",
-    "title": "Niet zomaar een chatbot – echte begeleiding",
-    "subtitle": "Je metgezel combineert bijbelse wijsheid met bewezen coachingmethoden en Positieve Psychologie.",
+    "title": "Niet zomaar een chat – een echte begeleiding",
+    "subtitle": "Je begeleider combineert Bijbelse wijsheid met beproefde coachingmethoden en Positieve Psychologie.",
     "journeyTitle": "Persoonlijke begeleiding",
-    "journeyDesc": "Je metgezel begeleidt je zo lang als je wilt – in vrij gesprek of met een optionele 21-dagenstructuur.",
+    "journeyDesc": "Je begeleider begeleidt je zo lang als je wilt – in een vrij gesprek of met een optionele 21-dagenstructuur.",
     "week1": "Week 1: Aankomen",
     "week1Desc": "Vertrouwen opbouwen, luisteren, je situatie begrijpen. Waar sta je? Wat houdt je bezig?",
     "week2": "Week 2: Verdiepen",
-    "week2Desc": "Patronen herkennen, wensen verhelderen, bijbelse impulsen verdiepen. Wat wil je echt?",
+    "week2Desc": "Patronen herkennen, wensen verhelderen, Bijbelse impulsen verdiepen. Wat wil je echt?",
     "week3": "Week 3: Handelen",
-    "week3Desc": "Concrete stappen zetten, doelen stellen, verandering in gang zetten. Wat is je volgende stap?",
+    "week3Desc": "Concrete stappen zetten, doelen formuleren, verandering initiëren. Wat is je volgende stap?",
     "openQuestionsTitle": "Open vragen in plaats van snelle antwoorden",
-    "openQuestionsDesc": "Je metgezel geeft geen goedkoop advies. In plaats daarvan stelt het de vragen die er echt toe doen:",
-    "openQ1": "\"Wat zit er echt achter dit verlangen?\"",
-    "openQ2": "\"Hoe zou je merken dat er iets is veranderd?\"",
-    "openQ3": "\"Wat zou een eerste kleine stap kunnen zijn?\"",
-    "honestTitle": "Eerlijk in plaats van toxische positiviteit",
-    "honestDesc": "Geen \"Het komt wel goed!\" en geen mooipraterij. Je metgezel is empathisch EN eerlijk:",
-    "honest1": "Behandelt ook ongemakkelijke bijbelpassages",
-    "honest2": "Daagt je uit tot zelfreflectie",
-    "honest3": "Onderscheidt troost van vermijding",
+    "openQuestionsDesc": "Je begeleider geeft je geen goedkope adviezen. In plaats daarvan stelt hij de vragen die er echt toe doen:",
+    "openQ1": "«Wat zit er eigenlijk achter deze wens?»",
+    "openQ2": "«Waaraan zou je merken dat er iets veranderd is?»",
+    "openQ3": "«Wat zou een eerste kleine stap zijn?»",
+    "honestTitle": "Eerlijk in plaats van toxisch positief",
+    "honestDesc": "Geen «Het komt wel goed!» en geen mooipraterij. Je begeleider is empathisch EN eerlijk:",
+    "honest1": "Benoemt ook ongemakkelijke Bijbelteksten",
+    "honest2": "Daagt uit tot zelfreflectie",
+    "honest3": "Onderscheidt troost van verdringing",
     "scienceTitle": "Wetenschappelijk onderbouwd",
     "perma": {
       "name": "PERMA-model",
       "author": "Seligman",
-      "desc": "Positieve emoties, betekenis & groei"
+      "desc": "Positieve emoties, zingeving & groei"
     },
     "logo": {
       "name": "Logotherapie",
       "author": "Frankl",
-      "desc": "Betekenis vinden in moeilijke tijden"
+      "desc": "Zingeving vinden in moeilijke tijden"
     },
     "gratitude": {
       "name": "Dankbaarheid",
       "author": "Emmons",
-      "desc": "Wetenschappelijk onderbouwde dankbaarheidspraktijk"
+      "desc": "Onderzoeksgebaseerde dankbaarheidspraktijk"
     },
     "forgiveness": {
       "name": "Vergeving",
       "author": "Worthington",
-      "desc": "REACH-model voor vergevingsprocessen"
+      "desc": "REACH-model voor vergevingstrajecten"
     },
-    "renameTip": "💡 Je kunt je je metgezel een persoonlijke naam geven – zodat het echt <strong>jouw</strong> metgezel wordt."
+    "renameTip": "💡 Je kunt je begeleider een eigen naam geven – zodat hij echt <strong>jouw</strong> begeleider wordt."
   },
   "discover": {
     "badge": "Voor nieuwsgierigen",
-    "title": "Geloof herontdekken – zonder druk",
-    "subtitle": "Steeds meer mensen stellen de grote vragen opnieuw. Je metgezel is er voor iedereen die geloof wil (her)ontdekken – eerlijk, zonder pathos en zonder kerktaal.",
+    "title": "Geloof opnieuw ontdekken – zonder druk",
+    "subtitle": "Steeds meer mensen stellen zich de grote vragen opnieuw. BibleBot.Life is voor iedereen die het geloof (opnieuw) wil ontdekken – eerlijk, zonder pathos en zonder kerkjargon.",
     "doubt": {
-      "title": "Je twijfelt?",
-      "text": "Goed zo. Twijfel is geen gebrek – het is het begin van eerlijk geloof. De Bijbel staat vol met mensen die worstelden."
+      "title": "Twijfel je?",
+      "text": "Goed zo. Twijfel is geen fout – het is het begin van oprecht geloof. De Bijbel staat vol met mensen die worstelden."
     },
     "search": {
-      "title": "Je zoekt?",
-      "text": "Misschien weet je niet eens waarnaar. Dat is helemaal oké. Je metgezel helpt je de juiste vragen te stellen – in plaats van snelle antwoorden te geven."
+      "title": "Zoek je?",
+      "text": "Misschien weet je niet eens precies waarnaar. Dat is helemaal oké. Je begeleider helpt je de juiste vragen te stellen – in plaats van snelle antwoorden te geven."
     },
     "deepen": {
-      "title": "Je wilt dieper gaan?",
-      "text": "Je gelooft al, maar wilt meer begrijpen? Ontdek de diepte van de Bijbel – historisch, persoonlijk, verrassend actueel."
+      "title": "Wil je verdiepen?",
+      "text": "Je gelooft al, maar wilt meer begrijpen? Ontdek de diepte van de Bijbel – historisch, persoonlijk, verrassend relevant."
     },
-    "quote": "\"Vraag en er zal je gegeven worden, zoek en je zult vinden, klop en er zal voor je worden opengedaan.\"",
-    "quoteRef": "– Matteüs 7:7",
-    "quoteText": "Velen van ons praten niet veel over geloof. Dat is oké. Maar wie vragen heeft, verdient eerlijke antwoorden – zonder preken, zonder lidmaatschap, zonder bijbedoelingen."
+    "quote": "«Klop, en er zal voor u worden opengedaan.»",
+    "quoteRef": "– Mattheüs 7:7",
+    "quoteText": "In Zwitserland praten we niet veel over geloof. Dat hoeft ook niet. Maar wie vragen heeft, verdient eerlijke antwoorden – zonder preek, zonder lidmaatschap, zonder bijbedoelingen."
   },
   "subscribe": {
-    "title": "Dagelijkse bijbelimpuls",
-    "subtitle": "Elke ochtend om 7:00 uur – een vers, een gedachte, een goed begin.",
+    "title": "Dagelijkse Bijbelimpuls",
+    "subtitle": "Elke ochtend om 07:00 uur – een vers, een gedachte, een goede start.",
     "firstName": "Je voornaam",
     "firstNameOptional": "(optioneel)",
     "firstNamePlaceholder": "bijv. Thomas",
     "firstNameHint": "Zodat we je persoonlijk kunnen begroeten.",
     "channelLabel": "Hoe wil je de impuls ontvangen?",
-    "push": "Push",
-    "pushDesc": "Browsermelding",
+    "push": "Melding",
+    "pushDesc": "Direct in de browser ontvangen",
     "telegram": "Telegram",
     "telegramDesc": "Bericht via Telegram",
     "sms": "SMS",
-    "smsDesc": "Sms naar je telefoon",
-    "phoneLabel": "Telefoonnummer",
+    "smsDesc": "SMS naar je mobiel",
+    "phoneLabel": "Mobiel nummer",
     "phonePlaceholder": "+31 6 12345678",
-    "phoneHint": "Met landcode, bijv. +31 voor Nederland.",
-    "telegramHint": "Klik op \"Abonneren\" – je wordt doorgestuurd naar Telegram. Start de bot en typ <strong>/daily</strong> om de dagelijkse impuls te activeren.",
-    "pushHint": "Na het klikken op \"Abonneren\" vraagt je browser om toestemming voor meldingen. Sta dit toe om de impuls te ontvangen.",
-    "submit": "Abonneren",
-    "submitting": "Bezig met abonneren...",
-    "footNote": "Geen login nodig. Op elk moment opzegbaar.",
-    "successTitle": "Je bent geabonneerd! 🙏",
-    "successText": "Vanaf morgen om 7:00 uur ontvang je je persoonlijke bijbelimpuls.",
+    "phoneHint": "SMS alleen voor Zwitserse nummers (+41).",
+    "smsSwissOnly": "Alleen Zwitserse nummers",
+    "smsSwissOnlyDesc": "SMS is alleen beschikbaar voor Zwitserse nummers (+41).",
+    "telegramHint": "Klik op «Aanmelden» – je wordt doorgestuurd naar Telegram. Start daar je begeleider en typ <strong>/daily</strong> om de dagelijkse impuls te activeren.",
+    "pushHint": "Na het klikken op «Aanmelden» vraagt je browser om toestemming. Sta meldingen toe om de impuls te ontvangen.",
+    "subscribeButton": "Inspo abonneren",
+    "submit": "Aanmelden",
+    "submitting": "Wordt aangemeld...",
+    "footNote": "Geen login nodig. Altijd opzegbaar.",
+    "successTitle": "Je bent aangemeld! 🙏",
+    "successText": "Vanaf morgen om 07:00 uur ontvang je je persoonlijke Bijbelimpuls.",
     "toastTelegram": "Telegram geopend 🙏",
-    "toastTelegramDesc": "Start de bot en typ /daily om de dagelijkse impuls te activeren.",
-    "toastSuccess": "Geabonneerd! 🙏",
-    "toastSuccessDesc": "Vanaf morgen ontvang je je dagelijkse impuls.",
-    "toastPushPreview": "Push-abonnement niet beschikbaar in preview",
-    "toastPushPreviewDesc": "Pushmeldingen werken alleen op de gepubliceerde site.",
+    "toastTelegramDesc": "Start je begeleider en typ /daily om de dagelijkse impuls te activeren.",
+    "toastSuccess": "Aangemeld! 🙏",
+    "toastSuccessDesc": "Je ontvangt vanaf morgen je dagelijkse impuls.",
+    "toastPushPreview": "Meldingen niet in preview",
+    "toastPushPreviewDesc": "Meldingen werken alleen op de gepubliceerde pagina.",
     "toastNotSupported": "Niet ondersteund",
-    "toastNotSupportedDesc": "Je browser ondersteunt geen pushmeldingen.",
+    "toastNotSupportedDesc": "Je browser ondersteunt geen browsermeldingen.",
     "toastPermDenied": "Toestemming geweigerd",
     "toastPermDeniedDesc": "Sta meldingen toe in je browserinstellingen.",
     "toastError": "Fout",
     "toastErrorDesc": "Probeer het later opnieuw.",
-    "subscribeButton": "Inspo abonneren",
     "manage": "Abonnement beheren",
     "switchChannel": "Kanaal wijzigen:",
-    "unsubscribe": "Abonnement opzeggen",
+    "unsubscribe": "Abonnement beëindigen",
     "unsubscribedTitle": "Afgezegd",
     "unsubscribedDesc": "Je ontvangt geen dagelijkse inspiratie meer."
   },
   "faq": {
-    "badge": "FAQ",
-    "title": "Wat je moet weten over je metgezel",
-    "subtitle": "Transparantie is belangrijk – vooral voor theologen, pastors en kritische denkers.",
-    "q1": "Wat maakt je metgezel anders dan ChatGPT & Co.?",
+    "badge": "Veelgestelde vragen",
+    "title": "Wat je moet weten over je begeleider",
+    "subtitle": "Transparantie is belangrijk voor ons – vooral naar theologen, geestelijken en kritische geesten.",
+    "q1": "Wat onderscheidt je begeleider van ChatGPT & co.?",
     "q1Generic": "Generieke chatbots:",
     "q1GenericItems": [
-      "Oppervlakkige bijbelcitaten zonder context",
-      "Geen pastorale bescherming",
+      "Oppervlakkige Bijbelcitaten zonder context",
+      "Geen pastorale richtlijnen",
       "Vermijdt ongemakkelijke teksten",
       "Geen crisisinterventie",
       "Mengt Bijbel met esoterie",
       "Geen vervolgvragen – alleen bevestiging"
     ],
-    "q1Bot": "Je metgezel:",
+    "q1Bot": "BibleBot.Life:",
     "q1BotItems": [
-      "5 erkende vertalingen – inclusief ongemakkelijke passages",
-      "Bescherming EN uitdagende begeleiding",
+      "5 erkende vertalingen – ook ongemakkelijke passages",
+      "Richtlijnen EN uitdagende begeleiding",
       "Vervolgvragen voor zelfreflectie",
-      "Crisisverwijzingen (hulplijnen)",
+      "Crisisverwijzingen (Tel. 143 / 147)",
       "Uitsluitend christelijke theologie",
-      "Bevordert kritisch denken als geloofsvolwassenheid"
+      "Bevordert kritisch denken als geloofsrijpheid"
     ],
-    "q2": "Welke bijbelvertalingen zijn opgenomen?",
-    "q2Intro": "Je metgezel werkt oecumenisch met de belangrijkste Duitstalige bijbeledities:",
-    "q2Outro": "Alle bijbelpassages bevatten bronvermelding en historische context.",
-    "q3": "Welke wetenschappelijke basis zit erachter?",
-    "q3Intro": "De begeleiding is gebaseerd op peer-reviewed onderzoek in de Positieve Psychologie:",
-    "q4": "Hoe waarborgt je metgezel pastorale veiligheid?",
-    "q4Items": [
-      "Suïcidale gedachten of crisis → directe verwijzing naar hulplijnen",
-      "Geen psychologische of medische diagnoses",
-      "Respect zonder willekeur – duidelijke bijbelse standpunten worden ingenomen",
-      "Empathie EN eerlijkheid – ongemakkelijke onderwerpen worden besproken",
-      "Vervolgvragen voor zelfreflectie in plaats van goedkope bevestiging",
-      "Geen toxische positiviteit – oprechte, eerlijke begeleiding",
-      "Benoemt openlijk spanningen en moeilijke teksten"
-    ],
-    "q5": "Is je metgezel gebonden aan een specifieke denominatie?",
-    "q5Answer": "Nee. Je metgezel is oecumenisch georiënteerd en respecteert gereformeerde, katholieke, evangelische en andere christelijke tradities gelijkwaardig. Bij denominatieverschillen worden de verschillende perspectieven transparant gepresenteerd.",
-    "q6": "Vervangt je metgezel pastorale zorg of therapie?",
-    "q6Answer": "Nee. Je metgezel is een hulpmiddel voor persoonlijk bijbellezen en reflectie. Het vervangt geen professionele pastorale zorg, theologisch advies of psychologische therapie. Bij ernstige crises verwijst je metgezel altijd naar gekwalificeerde hulp.",
-    "q7": "Is je metgezel niet gewoon een 'feel-good bot'?",
-    "q7Answer": "Nee. Je metgezel troost waar troost nodig is – maar daagt ook uit. Spirituele groei vereist wrijving. Je metgezel stelt ongemakkelijke vervolgvragen, benoemt moeilijke bijbelteksten en schuwt onderwerpen als gerechtigheid, berouw en verantwoordelijkheid niet.",
-    "q8": "Wie zit achter je metgezel en hoe wordt het gefinancierd?",
-    "q8Answer": "Je metgezel is een privé, niet-commercieel project. Het wordt op vrijwillige basis gerund en uitsluitend gefinancierd door vrijwillige donaties. Er is geen reclame, geen dataverkoop en geen betaalde functies.",
-    "q9": "Hoe gaat je metgezel om met mijn gegevens?",
-    "q9Answer": "Je metgezel slaat geen persoonlijke gegevens en geen chatgeschiedenissen op. Elk gesprek is anoniem. Er is geen login, geen tracking en geen gegevensdeling met derden.",
+    "q2": "Welke Bijbelvertalingen zijn opgeslagen?",
+    "q2Intro": "Je begeleider werkt oecumenisch met de belangrijkste Duitstalige Bijbeluitgaven:",
+    "q2Outro": "Alle Bijbelteksten worden met bronvermelding en historische context weergegeven.",
     "tradition": {
       "reformed": "Gereformeerd",
       "evangelical": "Evangelisch",
       "catholic": "Katholiek",
-      "freeChurch": "Vrije Kerk",
-      "literal": "Woord-voor-woord"
-    }
+      "freeChurch": "Vrije kerk",
+      "literal": "Letterlijk"
+    },
+    "q3": "Welke wetenschappelijke grondslagen liggen hieraan ten grondslag?",
+    "q3Intro": "De begeleiding is gebaseerd op peer-reviewed onderzoek van de Positieve Psychologie:",
+    "q4": "Hoe waarborgt je begeleider pastorale veiligheid?",
+    "q4Items": [
+      "Bij zelfmoordgedachten of crises → onmiddellijke doorverwijzing naar Dargebotene Hand (143) en Pro Juventute (147)",
+      "Geen psychologische of medische diagnoses",
+      "Respect zonder willekeur – duidelijke Bijbelse standpunten worden ingenomen",
+      "Empathie EN eerlijkheid – ook ongemakkelijke zaken worden besproken",
+      "Vervolgvragen voor zelfreflectie in plaats van goedkope bevestiging",
+      "Geen toxische positiviteit – echte, eerlijke begeleiding",
+      "Benoemt spanningen en moeilijke teksten openlijk"
+    ],
+    "q5": "Is je begeleider confessioneel gebonden?",
+    "q5Answer": "Nee. Je begeleider is oecumenisch georiënteerd en respecteert gereformeerde, katholieke, vrije kerkelijke en andere christelijke tradities gelijkelijk. Bij confessioneel verschillende interpretaties worden diverse perspectieven transparant weergegeven – zonder een traditie te bevoordelen.",
+    "q6": "Vervangt je begeleider pastorale zorg of therapie?",
+    "q6Answer": "Nee. Je begeleider is een digitaal hulpmiddel voor persoonlijke Bijbellezing en reflectie. Hij vervangt geen professionele pastorale zorg, theologische advisering of psychologische therapie. Bij ernstige crises verwijst je begeleider altijd naar gekwalificeerde instanties.",
+    "q7": "Is je begeleider niet gewoon een «feelgood-tool»?",
+    "q7Answer": "Nee. Je begeleider troost waar troost nodig is – maar hij daagt ook uit. Geestelijke groei heeft wrijving nodig. Je begeleider stelt ongemakkelijke vervolgvragen, benoemt moeilijke Bijbelteksten (Job, klaagpsalmen, profetische kritiek) en schuwt geen onderwerpen als gerechtigheid, bekering en verantwoordelijkheid. De profetische traditie was nooit comfortabel – en deze feelgood-tool ook niet.",
+    "q8": "Wie zit er achter je begeleider en hoe wordt het gefinancierd?",
+    "q8Answer": "BibleBot.Life wordt ontwikkeld en beheerd door 2Go Media AG. De stichting voor donaties is de vereniging BibleBot.Life (i.G.). Voor particulieren is de dienst gratis, reclamevrij en zonder gegevensverkoop. Het wordt gefinancierd door vrijwillige donaties en door B2B-partnerschappen met kerken, ziekenhuizen en instellingen. Donaties vloeien naar infrastructuur, hosting, vertalingen en verdere ontwikkeling. Aangezien de vereniging nog in oprichting is, zijn donaties momenteel niet fiscaal aftrekbaar.",
+    "q9": "Hoe gaat je begeleider om met mijn gegevens?",
+    "q9Answer": "Je begeleider slaat geen persoonlijke gegevens en geen chatgeschiedenis op. Elk gesprek is anoniem. Er is geen login, geen tracking en geen doorgifte van gegevens aan derden. Het gebruik is volledig anoniem.",
+    "q10": "Wat gebeurt er in een crisis of bij zelfmoordgedachten?",
+    "q10Answer": "Je begeleider herkent crisissignalen automatisch in alle 36 ondersteunde talen. Bij aanwijzingen van zelfmoordgedachten, acute wanhoop of geweld wordt onmiddellijk een lijst met professionele hulplijnen getoond (bijv. Dargebotene Hand 143 en Pro Juventute 147 in Zwitserland, Telefonseelsorge 0800 111 0 111 in Duitsland, Telefonseelsorge 142 in Oostenrijk). Je begeleider vervangt geen therapie en geen noodhulp — in acute situaties kun je je direct tot deze instanties wenden of het noodnummer bellen.",
+    "q11": "Kan ik BibleBot.Life als ziekenhuis, bedrijf of instelling gebruiken?",
+    "q11Answer": "Ja. Voor ziekenhuizen, zorginstellingen, scholen en bedrijven zijn er eigen B2B-pakketten met eigen branding, data-soevereiniteit en toegang voor medewerkers. Details vind je op /for-institutions. Voor kerkgemeenten zijn er passende pakketten onder /for-churches.",
+    "q12": "Hoe kan ik BibleBot.Life ondersteunen?",
+    "q12Answer": "Met een eenmalige of regelmatige donatie via /spenden (creditcard, Twint, Apple Pay, Google Pay), door aanbeveling aan mensen die een geestelijke begeleider zoeken, of als kerkgemeente/instelling met een partnerschap. Elke bijdrage helpt om je begeleider gratis en reclamevrij te houden."
   },
   "donate": {
-    "badge": "Steun je metgezel",
-    "title": "Help je metgezel gratis te houden",
-    "subtitle": "BibleBot.Life is een passieproject – geen advertenties, geen abonnementen, geen verborgen kosten. Om het zo te houden, ben ik afhankelijk van vrijwillige donaties.",
+    "badge": "Ondersteun je begeleider",
+    "title": "Help mee om je begeleider gratis te houden",
+    "subtitle": "BibleBot.Life is een non-profit project ter bevordering van vrije toegang tot Bijbelse kennis en geestelijke begeleiding. Jouw donatie maakt het mogelijk dat deze dienst gratis, reclamevrij en voor iedereen wereldwijd toegankelijk blijft.",
     "bankTitle": "Doneren via bankoverschrijving",
-    "bankSubtitle": "Elk bedrag telt – dank je wel! 🙏",
+    "bankSubtitle": "Elk bedrag telt – hartelijk dank! 🙏",
     "recipient": "Ontvanger",
     "bank": "Bank",
-    "purpose": "Referentie",
-    "purposeValue": "Donatie BibleBot.Life",
-    "note": "BibleBot.Life wordt als privéproject uitgevoerd. Donaties zijn daarom niet fiscaal aftrekbaar."
+    "purpose": "Omschrijving",
+    "purposeValue": "Donatie BibleBot.Life — Bevordering Bijbelse kennis",
+    "note": "BibleBot.Life wordt gedragen door een non-profit vereniging. Donaties kunnen afhankelijk van het kanton fiscaal aftrekbaar zijn.",
+    "creditCard": "Contact opnemen",
+    "twint": "Ondersteun met Twint",
+    "secureNote": "Schrijf ons — wij regelen de rest.",
+    "purposeHeading": "Hiervoor wordt je donatie gebruikt",
+    "purposeItem1": "Verdere ontwikkeling en programmering",
+    "purposeItem2": "Server, hosting en technische exploitatie",
+    "purposeItem3": "Wereldwijde verspreiding en vertalingen in meer dan 38 talen",
+    "purposeItem4": "Community-ondersteuning en support",
+    "purposeItem5": "Administratie en verenigingsbestuur",
+    "purposeItem6": "Educatie en digitale geloofsverspreiding"
+  },
+  "social": {
+    "conversations": "Gesprekken gevoerd",
+    "languages": "Talen",
+    "bibles": "Bijbelvertalingen"
   },
   "refer": {
     "badge": "Gods Woord delen",
-    "title": "Beveel je metgezel aan",
-    "subtitle": "Ken je iemand die bemoediging nodig heeft? Deel je metgezel.",
+    "title": "Beveel je begeleider aan",
+    "subtitle": "Ken je iemand die nu bemoediging nodig heeft? Deel je begeleider – een bericht kan veel betekenen.",
     "whatsapp": "Delen via WhatsApp",
-    "whatsappMsg": "Hey, ik wilde je BibleBot.Life laten zien – een gratis bijbelcompagnon. Probeer het: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
+    "whatsappMsg": "Hé, ik wilde je iets laten zien – een gratis Bijbelbegeleider die de Bijbel kent en echt goede vragen stelt. Geen login, anoniem, eerlijk. Probeer het eens: https://bibelbot.ch?utm_source=refer&utm_medium=whatsapp 💛",
     "telegram": "Delen via Telegram",
-    "telegramMsg": "Hey, ken je BibleBot.Life al? Een gratis persoonlijke bijbelcompagnon. Kijk hier: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
+    "telegramMsg": "Hé, ken je BibleBot.Life al? Een gratis persoonlijke Bijbelbegeleider – eerlijk, anoniem, zonder login. Kijk eens: https://bibelbot.ch?utm_source=refer&utm_medium=telegram 💛",
     "email": "Delen via e-mail",
-    "emailSubject": "Dit is misschien interessant: BibleBot.Life",
-    "emailBody": "Hallo!\n\nIk wilde je BibleBot.Life laten zien.\n\nProbeer het: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nGroeten",
+    "emailSubject": "Dit zou je kunnen interesseren: BibleBot.Life",
+    "emailBody": "Hallo!\n\nIk wilde je BibleBot laten zien – een gratis Bijbelbegeleider die de Bijbel echt kent. Geen aanmelding nodig, volledig anoniem.\n\nHij stelt goede vervolgvragen, legt Bijbelteksten uit in context en begeleidt je eerlijk – ook bij moeilijke onderwerpen.\n\nProbeer het eens: https://bibelbot.ch?utm_source=refer&utm_medium=email\n\nMet vriendelijke groet",
     "copy": "Link kopiëren",
     "copied": "Link gekopieerd! 📋",
-    "qr": "Of toon deze QR-code:"
+    "qr": "Of toon gewoon deze QR-code:"
   },
   "cta": {
-    "title": "Je hoeft dit niet alleen te doen",
-    "subtitle": "Vertel je metgezel gewoon wat je bezighoudt. Geen login, geen kosten, geen oordeel – alleen eerlijke begeleiding en de wijsheid van de Bijbel.",
-    "button": "Start een gesprek"
+    "title": "Je hoeft dit niet alleen te doorstaan",
+    "subtitle": "Schrijf je begeleider gewoon wat je bezighoudt. Geen login, geen kosten, geen oordeel – alleen eerlijke begeleiding en de wijsheid van de Bijbel.",
+    "button": "Start nu een gesprek"
   },
   "footer": {
-    "tagline": "Je persoonlijke metgezel — met de diepte van de Bijbel, zonder voorkennis.",
-    "disclaimer": "Je metgezel is een hulpmiddel en vervangt geen professionele pastorale zorg, theologisch advies of psychologische therapie. Bel bij acute crises je lokale hulplijn.",
+    "tagline": "Je persoonlijke begeleider — met de diepte van de Bijbel, zonder voorkennis.",
+    "disclaimer": "BibleBot.Life is een digitaal hulpmiddel en vervangt geen professionele pastorale zorg, theologische advisering of psychologische therapie. Bij acute crises kun je je wenden tot Dargebotene Hand (tel. 143) of Pro Juventute (tel. 147).",
     "impressum": "Colofon",
     "notes": "Opmerkingen",
-    "private": "Privé, niet-commercieel project",
+    "private": "Een aanbod van 2Go Media AG",
     "noChat": "Geen opslag van chatgegevens",
-    "noTax": "Donaties zijn niet fiscaal aftrekbaar",
-    "datenschutz": "Privacybeleid",
+    "noTax": "Donaties aan de vereniging BibleBot.Life (i.G.)",
+    "datenschutz": "Gegevensbescherming",
     "love": "Met ❤️ voor iedereen die zich afvraagt wat Christus denkt.",
-    "forChurches": "Voor Kerken"
+    "forChurches": "Voor gemeenten",
+    "forCelebrants": "Voor geestelijken & coaches"
   },
   "chat": {
-    "welcome": "Welkom! 🤗\n\nIk ben je je metgezel – je persoonlijke metgezel met de Bijbel, goede vragen en echte impulsen. Geen druk, geen oordeel.\n\nJe kunt me alles vragen – of gewoon delen wat je bezighoudt. 💛",
-    "journeyOffer": "💡 **Tip:** Ik bied ook een **21-dagenreis** aan – 3 weken dagelijkse impulsen, reflecties en concrete stappen. Op je eigen tempo.\n\nWil je het proberen?",
+    "newChat": "Nieuw gesprek starten",
+    "welcome": "Fijn dat je er bent 🤗\n\nIk ben je begeleider – je persoonlijke begeleider met de Bijbel, goede vragen en concrete impulsen. Geen druk, geen oordeel.\n\nJe kunt me alles vragen – of gewoon vertellen wat je bezighoudt. 💛",
+    "journeyOffer": "💡 **Tip:** Ik bied ook een **21-dagenbegeleiding** aan – 3 weken met dagelijkse impulsen, reflecties en concrete stappen. Helemaal in jouw tempo.\n\nWil je dat proberen?",
     "suggestion1": "Ik heb nu een bemoedigend woord nodig",
     "suggestion2": "Wat zegt de Bijbel als je je onzeker voelt?",
     "suggestion3": "Ik wil ontdekken wat ik echt wil",
-    "teaser": "Wat houdt je bezig? 💛",
-    "teaserSub": "Ik ben er – zonder oordeel.",
+    "teaser": "Wat houdt je nu bezig? 💛",
+    "teaserSub": "Ik ben hier – helemaal zonder oordeel.",
+    "teaserCta": "Schrijf nu →",
     "openChat": "Chat openen",
     "closeChat": "Chat sluiten",
-    "yourCompanion": "Je persoonlijke metgezel",
+    "yourCompanion": "Je persoonlijke begeleider",
     "journeyComplete": "21 dagen voltooid! 🎉",
     "arriving": "Aankomen",
     "deepening": "Verdiepen",
     "acting": "Handelen",
-    "renameTip": "Tip: Klik op de naam om me te hernoemen ✨",
+    "renameTip": "Geef me een naam ✨",
+    "namePlaceholder": "bijv. Eli, Mirjam…",
+    "previousChats": "{{count}} eerdere gesprekken",
     "changeName": "Naam wijzigen",
-    "placeholder": "Begin gewoon met typen...",
+    "placeholder": "Schrijf gewoon wat je wilt...",
     "startVoice": "Spraakinvoer starten",
     "stopVoice": "Opname stoppen",
     "noVoice": "Je browser ondersteunt geen spraakinvoer.",
-    "writing": "aan het typen...",
-    "shieldBadge": "Geen login · Geen oordeel · Citaten geverifieerd",
-    "journeyStart": "Ja, laten we beginnen ✨",
+    "writing": "schrijft...",
+    "shieldBadge": "Geen login · Geen oordeel · Citaten gecontroleerd",
+    "donateNudge": "Vind je BibleBot leuk? Help ons met een kleine donatie 🙏",
+    "donorBadge": "Bedankt voor je steun! ❤️",
+    "loginHint": "Meld je aan om gesprekken op alle apparaten te bewaren",
+    "journeyStart": "Ja, starten ✨",
     "journeyLater": "Misschien later",
-    "journeyStartMsg": "Ja, ik wil graag de 21-dagenreis beginnen!",
-    "qaChecking": "Citaten controleren...",
-    "qaIssue": "{{count}} probleem met citaten",
-    "qaIssue_plural": "{{count}} problemen met citaten",
-    "qaOk": "{{count}} citaat geverifieerd ✓",
-    "qaOk_plural": "{{count}} citaten geverifieerd ✓",
-    "qaWarning": "⚠️ Nauwkeurigheidsopmerkingen:",
-    "errorTooMany": "Te veel verzoeken – even geduld.",
-    "errorCredits": "Quotum uitgeput – probeer het later opnieuw.",
-    "errorConnect": "Verbindingsfout.",
+    "journeyStartMsg": "Ja, ik wil de 21-dagenbegeleiding starten!",
+    "qaChecking": "Citaten worden gecontroleerd...",
+    "qaIssue": "{{count}} opmerking over citaten",
+    "qaIssue_plural": "{{count}} opmerkingen over citaten",
+    "qaOk": "{{count}} citaat gecontroleerd ✓",
+    "qaOk_plural": "{{count}} citaten gecontroleerd ✓",
+    "qaWarning": "⚠️ Opmerkingen over nauwkeurigheid:",
+    "suggestionsLoading": "Suggesties laden…",
+    "errorTooMany": "Te veel aanvragen – wacht even.",
+    "errorCredits": "Tegoed opgebruikt – probeer het later.",
+    "errorConnect": "Fout bij verbinden.",
     "errorTitle": "Fout",
     "errorConnection": "kon niet worden bereikt.",
     "errorNoStream": "Geen stream",
-    "seniorMode": "Senior mode (larger text)",
-    "teaserCta": "Nu schrijven →",
-    "namePlaceholder": "bijv. Eli, Miriam…",
-    "loginHint": "Meld u aan om gesprekken op alle apparaten te behouden",
-    "previousChats": "{{count}} eerdere gesprekken",
-    "suggestionsLoading": "Suggesties laden…"
+    "seniorMode": "Seniorenmodus (groter lettertype)",
+    "journeyProgress": "Dag {{day}} van {{total}} · {{phase}}",
+    "translationModern": "Moderne vertalingen",
+    "translationHistoric": "Historisch (exact opzoekbaar)",
+    "translationZuercher": "Zürcher Bijbel (2007) – Gereformeerd",
+    "translationLuther": "Lutherbijbel (2017) – Evangelisch",
+    "translationEinheit": "Einheitsvertaling (2016) – Katholiek",
+    "translationSchlachter": "Schlachter 2000 – Vrije kerk",
+    "translationElberfelder": "Elberfelder 2006 – Letterlijk"
   },
   "install": {
-    "title": "BibleBot.Life installeren",
-    "androidDesc": "Snelle toegang vanaf je startscherm",
-    "iosDesc": "Tik op \"Delen\" → \"Zet op beginscherm\"",
+    "title": "BibleBot installeren",
+    "androidDesc": "Snelle toegang direct vanaf het startscherm",
+    "iosDesc": "Tik op «Delen» → «Zet op beginscherm»",
     "button": "Installeren",
     "close": "Sluiten"
   },
@@ -325,80 +369,83 @@
     "shareVia": "Delen via",
     "copied": "Gekopieerd! 📋",
     "copiedShort": "Gekopieerd!",
-    "copiedDesc": "Tekst gekopieerd. Deel het op WhatsApp, Instagram of waar je wilt!",
+    "copiedDesc": "Tekst is naar het klembord gekopieerd. Deel hem nu op WhatsApp, Instagram of waar je maar wilt!",
     "copyLink": "Tekst kopiëren",
     "error": "Kopiëren mislukt",
-    "impulseTitle": "Je metgezel – Impuls van de dag",
-    "chatTitle": "Je metgezel – Gedachte van de dag",
+    "impulseTitle": "BibleBot – Impuls van de dag",
+    "chatTitle": "BibleBot – Gedachte van de dag",
     "createImage": "Afbeelding maken ✨",
-    "generating": "Bezig…",
-    "imageReady": "Je afbeelding is klaar!",
+    "generating": "Wordt gemaakt…",
+    "imageReady": "Je afbeelding is klaar om te delen!",
     "shareImage": "Afbeelding delen",
     "download": "Opslaan",
     "imageError": "Afbeelding maken mislukt",
-    "imageErrorDesc": "De afbeelding kon niet worden gemaakt.",
+    "imageErrorDesc": "De afbeelding kon niet worden gemaakt. Probeer het later opnieuw.",
     "imageSaved": "Tekst gekopieerd! 📋",
-    "imageSavedDesc": "Sla de afbeelding op en deel hem!",
-    "clipboardFallback": "Tekst gekopieerd — plak het bij het posten!",
+    "imageSavedDesc": "Sla de afbeelding op en deel deze met de gekopieerde tekst op Instagram, WhatsApp of waar je maar wilt!",
+    "clipboardFallback": "Tekst gekopieerd — plak deze bij het plaatsen!",
     "recommendedBy": "Aanbevolen door {{church}}",
-    "hashtagBible": "#Bijbel"
+    "hashtagBible": "#Bijbel",
+    "hashtagImpulse": "#DagelijkseImpuls"
   },
   "darkMode": {
     "light": "Lichte modus",
     "dark": "Donkere modus"
   },
   "impressum": {
-    "back": "Terug naar startpagina",
+    "back": "Terug naar de startpagina",
     "title": "Colofon"
   },
   "datenschutz": {
-    "back": "Terug naar startpagina",
-    "title": "Privacybeleid"
+    "back": "Terug naar de startpagina",
+    "title": "Privacyverklaring"
   },
   "lang": {
-    "de": "Deutsch",
-    "en": "English",
-    "fr": "Français",
-    "es": "Español",
-    "it": "Italiano",
-    "pl": "Polski",
-    "cs": "Čeština",
-    "pt": "Português",
+    "de": "Duits",
+    "en": "Engels",
+    "fr": "Frans",
+    "es": "Spaans",
+    "it": "Italiaans",
+    "pl": "Pools",
+    "cs": "Tsjechisch",
+    "pt": "Portugees",
     "nl": "Nederlands",
-    "ro": "Română",
-    "da": "Dansk",
-    "no": "Norsk",
-    "sv": "Svenska",
-    "fi": "Suomi",
-    "el": "Ελληνικά",
-    "hr": "Hrvatski",
-    "sr": "Srpski",
-    "hu": "Magyar",
-    "sk": "Slovenčina",
-    "bg": "Български",
-    "ru": "Русский",
-    "uk": "Українська",
-    "ka": "ქართული",
-    "hy": "Հայերեն",
-    "ko": "한국어",
-    "tl": "Filipino",
-    "id": "Bahasa Indonesia",
-    "vi": "Tiếng Việt",
-    "zh": "中文",
-    "sw": "Kiswahili",
-    "am": "አማርኛ",
+    "ro": "Roemeens",
+    "da": "Deens",
+    "no": "Noors",
+    "sv": "Zweeds",
+    "fi": "Fins",
+    "el": "Grieks",
+    "hr": "Kroatisch",
+    "sr": "Servisch",
+    "hu": "Hongaars",
+    "sk": "Slowaaks",
+    "bg": "Bulgaars",
+    "ru": "Russisch",
+    "uk": "Oekraïens",
+    "ka": "Georgisch",
+    "hy": "Armeens",
+    "ko": "Koreaans",
+    "tl": "Filipijns",
+    "id": "Indonesisch",
+    "vi": "Vietnamees",
+    "zh": "Chinees",
+    "sw": "Swahili",
+    "am": "Amhaars",
     "af": "Afrikaans",
-    "yo": "Yorùbá",
+    "yo": "Yoruba",
     "ig": "Igbo",
-    "zu": "isiZulu",
-    "ht": "Kreyòl"
+    "zu": "Zulu",
+    "ht": "Haïtiaans Creools",
+    "he": "Hebreeuws"
   },
   "tiles": {
-    "sectionTitle": "Wat leeft er in je?",
-    "sectionSubtitle": "Kies een thema — je metgezel begeleidt je",
+    "sectionTitle": "Wat beweegt je?",
+    "sectionSubtitle": "Kies een onderwerp — de BibleBot begeleidt je",
+    "showMore": "meer",
     "baptism": {
       "title": "Dooptekst vinden",
-      "desc": "Het perfecte vers voor je kind",
+      "desc": "Het perfecte vers voor mijn kind",
       "prompt": "Help me een passende dooptekst te vinden. Wat voor kind is het en wat wensen de ouders?",
       "prompt_v1": "Wat betekent de doop eigenlijk?",
       "prompt_v2": "Vertel me over de doop in de Bijbel – verras me!",
@@ -406,177 +453,55 @@
     },
     "condolence": {
       "title": "Troostwoorden",
-      "desc": "Steun bij rouw & afscheid",
-      "prompt": "Ik heb troostende woorden nodig voor een condoleancekaart. Kun je me helpen de juiste woorden te vinden?"
+      "desc": "Condoleance & afscheid begeleiden",
+      "prompt": "Ik heb troostende woorden nodig voor een condoleancekaart. Kun je me helpen iets passends te formuleren?"
     },
     "wedding": {
-      "title": "Trouwtekst",
+      "title": "Huwelijksspreuk",
       "desc": "Bijbelse woorden voor jullie liefde",
-      "prompt": "We zoeken een mooi bijbelvers voor onze bruiloft. Welke passages gaan over liefde en partnerschap?"
+      "prompt": "We zoeken een mooie Bijbelse spreuk voor onze bruiloft. Welke Bijbelteksten passen bij liefde en partnerschap?"
     },
     "anxiety": {
       "title": "Angst & zorgen",
       "desc": "Moed vinden in moeilijke tijden",
-      "prompt": "Ik worstel nu met angst en zorgen. Wat zegt de Bijbel hierover? Zijn er verzen die moed geven?",
+      "prompt": "Ik worstel nu met angsten en zorgen. Wat zegt de Bijbel hierover? Zijn er verzen die moed geven?",
       "prompt_v1": "Ik ben bang. Wat zegt de Bijbel over angst?",
-      "prompt_v2": "Hoe kan geloof me helpen bij angst?",
-      "prompt_v3": "Welke Bijbelse figuren hadden ook angst?"
+      "prompt_v2": "Hoe kan geloof me helpen bij angsten?",
+      "prompt_v3": "Welke Bijbelse figuren waren ook bang?"
     },
     "confession": {
-      "title": "Belijdenis",
+      "title": "Biecht",
       "desc": "God vergeeft — spreek het uit",
-      "prompt": "Ik wil iets loslaten dat me bezwaart. Wat zegt de Bijbel over vergeving en een nieuw begin?"
+      "prompt": "Ik wil iets kwijt dat me belast. Wat zegt de Bijbel over vergeving en een nieuw begin?"
     },
     "heartbreak": {
       "title": "Liefdesverdriet",
-      "desc": "Wat de Bijbel zegt over hartenpijn",
-      "prompt": "Mijn hart is gebroken. Wat zegt de Bijbel over liefdesverdriet en hoe weer hoop te vinden?",
+      "desc": "Wat de Bijbel zegt over liefdesverdriet",
+      "prompt": "Mijn hart is gebroken. Wat zegt de Bijbel over liefdesverdriet en hoe je weer hoop kunt vinden?",
       "prompt_v1": "Mijn hart is gebroken. Wat zegt de Bijbel hierover?",
       "prompt_v2": "Hoe ga ik om met liefdesverdriet – is er Bijbelse hulp?",
       "prompt_v3": "Kan God een gebroken hart helen?"
     },
     "newstart": {
       "title": "Nieuw begin",
-      "desc": "Kracht voor een nieuw hoofdstuk",
-      "prompt": "Ik sta voor een nieuw begin en heb bemoediging nodig. Welke bijbelpassages gaan over een frisse start?"
+      "desc": "Kracht voor een nieuwe levensfase",
+      "prompt": "Ik sta voor een nieuw begin en heb bemoediging nodig. Welke Bijbelteksten spreken over nieuwe beginnen?"
     },
     "namequiz": {
-      "title": "What does your name mean?",
-      "desc": "Discover the biblical meaning of your name",
-      "prompt": "What does my name mean and does it have a biblical or spiritual significance? Surprise me!",
-      "prompt_v1": "Which biblical names have the most beautiful meanings?",
-      "prompt_v2": "What does my name mean – is there a biblical connection?",
-      "prompt_v3": "Tell me the story behind my name!"
+      "title": "Wat betekent mijn naam?",
+      "desc": "Ontdek de Bijbelse betekenis van mijn naam",
+      "prompt": "Wat betekent mijn naam en heeft deze een Bijbelse of spirituele betekenis? Verras me!",
+      "prompt_v1": "Welke Bijbelse namen hebben de mooiste betekenis?",
+      "prompt_v2": "Wat betekent mijn naam – is er een Bijbelse connectie?",
+      "prompt_v3": "Vertel me het verhaal achter mijn naam!"
     },
-    "sleepless": {
-      "title": "Slapeloze nacht",
-      "desc": "Rust vinden in de nacht",
-      "prompt": "Ik kan niet slapen en mijn gedachten malen. Is er een rustgevend gebed of psalm voor de nacht?"
-    },
-    "loneliness": {
-      "title": "Eenzaamheid",
-      "desc": "Je bent nooit alleen",
-      "prompt": "Ik voel me eenzaam. Wat zegt de Bijbel erover dat God altijd bij ons is?"
-    },
-    "decision": {
-      "title": "Moeilijke beslissing",
-      "desc": "Wijsheid voor de juiste weg",
-      "prompt": "Ik sta voor een moeilijke beslissing. Welke bijbelpassages kunnen me helpen de juiste weg te vinden?"
-    },
-    "gratitude": {
-      "title": "Dankbaarheid",
-      "desc": "Een persoonlijk dankgebed",
-      "prompt": "Ik wil God bedanken. Help me een persoonlijk dankgebed te schrijven.",
-      "prompt_v1": "Hoe kan ik dankbaarder worden?",
-      "prompt_v2": "Wat zegt de Bijbel over dankbaarheid?",
-      "prompt_v3": "Waarom is dankbaarheid zo belangrijk in het geloof?"
-    },
-    "lifewheel": {
-      "title": "Levenswiel",
-      "desc": "Hoe tevreden ben je echt?"
-    },
-    "sevenwhys": {
-      "title": "7 Waaroms",
-      "desc": "Vind de diepste kern van je vraag",
-      "prompt": "Ik wil graag de 7 Waaroms-oefening doen. Hier is mijn onderwerp:"
-    },
-    "anger": {
-      "title": "Woede",
-      "desc": "Als je bijna ontploft",
-      "prompt": "Ik ben zo boos en weet niet wat ik met mijn woede moet doen. Wat zegt de Bijbel over boosheid?"
-    },
-    "shame": {
-      "title": "Schaamte & schuld",
-      "desc": "Als schuld je verplettert",
-      "prompt": "Ik voel me zo beschaamd en schuldig. Wat zegt de Bijbel over schuld, vergeving en opnieuw beginnen?"
-    },
-    "burnout": {
-      "title": "Burn-out",
-      "desc": "Als je gewoon niet meer kunt",
-      "prompt": "Ik ben totaal uitgeput en opgebrand. Wat zegt de Bijbel over rust en herstel?"
-    },
-    "illness": {
-      "title": "Ziekte",
-      "desc": "Als een diagnose alles verandert",
-      "prompt": "Ik heb een moeilijke diagnose gekregen en ben bang. Wat zegt de Bijbel over ziekte, genezing en hoop?"
-    },
-    "financial": {
-      "title": "Geldzorgen",
-      "desc": "Als rekeningen zich opstapelen",
-      "prompt": "Ik heb financiële zorgen. Wat zegt de Bijbel over geld, vertrouwen en voorziening?"
-    },
-    "meaningcrisis": {
-      "title": "Zingevingscrisis",
-      "desc": "Waar is het allemaal voor?",
-      "prompt": "Ik vraag me af waar het allemaal voor is. Wat zegt de Bijbel over de zin van het leven?"
-    },
-    "selfdoubt": {
-      "title": "Zelftwijfel",
-      "desc": "Als je niet goed genoeg voelt",
-      "prompt": "Ik twijfel voortdurend aan mezelf. Wat zegt de Bijbel over mijn waarde?"
-    },
-    "calling": {
-      "title": "Roeping",
-      "desc": "Wat moet ik met mijn leven?",
-      "prompt": "Ik weet niet wat ik met mijn leven moet. Help me mijn roeping te vinden – wat zegt de Bijbel?"
-    },
-    "faithdoubt": {
-      "title": "Geloofstwijfels",
-      "desc": "Als je geloof wankelt",
-      "prompt": "Ik heb twijfels over mijn geloof. Wat zegt de Bijbel over twijfel?"
-    },
-    "forgiveness": {
-      "title": "Vergeving",
-      "desc": "Als vergeven onmogelijk lijkt",
-      "prompt": "Ik kan iemand gewoon niet vergeven. Het doet te veel pijn. Wat zegt de Bijbel over vergeving?",
-      "prompt_v1": "Wat zegt de Bijbel over vergeving?",
-      "prompt_v2": "Hoe kan ik iemand vergeven die me pijn heeft gedaan?",
-      "prompt_v3": "Zijn er grenzen aan vergeving?"
-    },
-    "familyconflict": {
-      "title": "Familieconflict",
-      "desc": "Als de familie in oorlog is",
-      "prompt": "Er is een groot conflict in mijn familie. Wat zegt de Bijbel over familievrede en verzoening?"
-    },
-    "envy": {
-      "title": "Jaloezie",
-      "desc": "Als anderen het beter hebben",
-      "prompt": "Ik ben jaloers op anderen en vergelijk mezelf voortdurend. Wat zegt de Bijbel over jaloezie en tevredenheid?"
-    },
-    "joy": {
-      "title": "Vreugde delen",
-      "desc": "Als er iets moois is gebeurd",
-      "prompt": "Er is iets moois gebeurd en ik wil mijn vreugde delen! Wat zegt de Bijbel over vreugde en dankbaarheid?"
-    },
-    "prayer": {
-      "title": "Gebedsvraag",
-      "desc": "Samen bidden",
-      "prompt": "Ik heb een gebedsvraag en wil graag samen bidden. Bid met me mee.",
-      "prompt_v1": "Hoe kan ik leren bidden?",
-      "prompt_v2": "Wat zegt de Bijbel over gebed?",
-      "prompt_v3": "Waarom verhoort God sommige gebeden niet?"
-    },
-    "bibleverse": {
-      "title": "Vers begrijpen",
-      "desc": "Een bijbelpassage uitgelegd krijgen",
-      "prompt": "Ik wil een bijbelpassage beter begrijpen. Kun je me helpen het in context te plaatsen?"
-    },
-    "biblequiz": {
-      "desc": "Test uw Bijbelkennis op een speelse manier",
-      "title": "Bijbelquiz"
-    },
-    "prayerwall": {
-      "desc": "Deel gebedsverzoeken & bid voor elkaar",
-      "title": "Gebedsmuur"
-    },
-    "showMore": "meer",
     "dailywisdom": {
       "title": "Wijsheid voor vandaag",
-      "desc": "Een bemoedigende gedachte voor je dag",
-      "prompt": "Geef me een korte, bemoedigende gedachte voor mijn dag – met een passende Bijbeltekst.",
+      "desc": "Een bemoedigende gedachte voor mijn dag",
+      "prompt": "Geef me een korte, bemoedigende gedachte voor mijn dag – met een passende Bijbelvers.",
       "prompt_v1": "Wat is de beste raad die de Bijbel voor vandaag heeft?",
-      "prompt_v2": "Geef me een wijsheid uit de Bijbel die me door de dag heen begeleidt.",
-      "prompt_v3": "Verras me met een bemoedigende Bijbeltekst voor vandaag!"
+      "prompt_v2": "Geef me een wijsheid uit de Bijbel die me door de dag begeleidt.",
+      "prompt_v3": "Verras me met een bemoedigende Bijbelvers voor vandaag!"
     },
     "funfact": {
       "title": "Wist je dat?",
@@ -587,17 +512,17 @@
       "prompt_v3": "Vertel me iets grappigs of onverwachts uit de Bijbel!"
     },
     "lifehack": {
-      "title": "Lifehack",
+      "title": "Levensles",
       "desc": "Bijbelse wijsheid voor familie & werk",
       "prompt": "Welke Bijbelse tip helpt me in het dagelijks leven met familie en werk? Geef me iets praktisch!",
-      "prompt_v1": "Hoe kan de Bijbel me helpen in het stressvolle dagelijks leven?",
-      "prompt_v2": "Welke praktische lifehacks zitten er in de Bijbel?",
+      "prompt_v1": "Hoe kan de Bijbel me helpen in het stressvolle dagelijkse leven?",
+      "prompt_v2": "Welke praktische levenslessen zitten er in de Bijbel?",
       "prompt_v3": "Geef me een concrete tip uit de Bijbel voor mijn dagelijks leven!"
     },
     "strengths": {
-      "title": "Jouw sterke punten",
-      "desc": "Ontdek wat er in je zit",
-      "prompt": "Help me mijn persoonlijke sterke punten te ontdekken – wat zegt de Bijbel over de gaven die ieder mens heeft?",
+      "title": "Mijn sterke punten",
+      "desc": "Ontdek wat er in me zit",
+      "prompt": "Help me mijn persoonlijke sterke punten te ontdekken – wat zegt de Bijbel over de gaven die elk mens heeft?",
       "prompt_v1": "Welke sterke punten heb ik volgens de Bijbel?",
       "prompt_v2": "Hoe kan ik ontdekken wat mijn gaven en talenten zijn?",
       "prompt_v3": "Wat zegt de Bijbel over wat mij bijzonder maakt?"
@@ -613,25 +538,146 @@
     "relax": {
       "title": "Tot rust komen",
       "desc": "Een moment van stilte en vrede vinden",
-      "prompt": "Ik heb een moment van rust nodig. Help me te ontspannen – met een kalmerende Bijbeltekst of een korte meditatie.",
-      "prompt_v1": "Geef me een kalmerende Psalm voor dit moment.",
+      "prompt": "Ik heb een moment van rust nodig. Help me te ontspannen – met een rustgevende Bijbelvers of een korte meditatie.",
+      "prompt_v1": "Geef me een rustgevende Psalm voor dit moment.",
       "prompt_v2": "Hoe kan ik volgens de Bijbel echte rust vinden?",
       "prompt_v3": "Leid me door een korte Bijbelse meditatie."
+    },
+    "sleepless": {
+      "title": "Slapeloos",
+      "desc": "Rust vinden in de nacht",
+      "prompt": "Ik kan niet slapen en maak me zorgen. Is er een rustgevend gebed of een Psalm voor de nacht?"
+    },
+    "prayerwall": {
+      "title": "Gebedsmuur",
+      "desc": "Gebedsverzoeken delen & voor elkaar bidden"
+    },
+    "biblequiz": {
+      "title": "Bijbelquiz",
+      "desc": "Test je Bijbelkennis spelenderwijs"
+    },
+    "loneliness": {
+      "title": "Eenzaamheid",
+      "desc": "Je bent nooit alleen",
+      "prompt": "Ik voel me eenzaam. Wat zegt de Bijbel erover dat God altijd bij ons is?"
+    },
+    "decision": {
+      "title": "Moeilijke beslissing",
+      "desc": "Wijsheid voor de juiste weg",
+      "prompt": "Ik sta voor een moeilijke beslissing. Welke Bijbelteksten helpen me de juiste weg te vinden?"
+    },
+    "gratitude": {
+      "title": "Dankbaarheid",
+      "desc": "Een persoonlijk dankgebed",
+      "prompt": "Ik wil God danken. Help me een persoonlijk dankgebed te formuleren.",
+      "prompt_v1": "Hoe kan ik dankbaarder worden?",
+      "prompt_v2": "Wat zegt de Bijbel over dankbaarheid?",
+      "prompt_v3": "Waarom is dankbaarheid zo belangrijk in het geloof?"
+    },
+    "lifewheel": {
+      "title": "Levenswiel",
+      "desc": "Hoe tevreden ben je echt?"
+    },
+    "sevenwhys": {
+      "title": "7 Waarom's",
+      "desc": "Vind de diepste wortel van mijn vraag",
+      "prompt": "Ik wil de 7-Waarom's-oefening doen. Hier is mijn onderwerp:"
+    },
+    "anger": {
+      "title": "Woede & toorn",
+      "desc": "Als je van woede zou kunnen ontploffen",
+      "prompt": "Ik ben zo boos en weet niet waar ik met mijn woede heen moet. Wat zegt de Bijbel over toorn en hoe ik ermee om kan gaan?"
+    },
+    "shame": {
+      "title": "Schaamte & schuld",
+      "desc": "Als schuldgevoelens je overweldigen",
+      "prompt": "Ik schaam me zo en voel me schuldig. Wat zegt de Bijbel over schuld, vergeving en een nieuw begin?"
+    },
+    "burnout": {
+      "title": "Burn-out",
+      "desc": "Als je gewoon niet meer kunt",
+      "prompt": "Ik ben totaal uitgeput en opgebrand. Ik kan gewoon niet meer. Wat zegt de Bijbel over rust en herstel?"
+    },
+    "illness": {
+      "title": "Ziekte",
+      "desc": "Als een diagnose alles verandert",
+      "prompt": "Ik heb een moeilijke diagnose gekregen en ben bang. Wat zegt de Bijbel over ziekte, genezing en hoop?"
+    },
+    "financial": {
+      "title": "Geldzorgen",
+      "desc": "Als de rekeningen drukken",
+      "prompt": "Ik heb financiële zorgen en weet niet wat ik moet doen. Wat zegt de Bijbel over geld, vertrouwen en voorziening?"
+    },
+    "meaningcrisis": {
+      "title": "Zinloosheidscrisis",
+      "desc": "Waar is dit allemaal goed voor?",
+      "prompt": "Ik vraag me af waar dit allemaal goed voor is. Ik zit in een zinloosheidscrisis. Wat zegt de Bijbel over de zin van het leven?"
+    },
+    "selfdoubt": {
+      "title": "Zelfvertrouwen",
+      "desc": "Als je je niet goed genoeg voelt",
+      "prompt": "Ik twijfel constant aan mezelf en voel me niet goed genoeg. Wat zegt de Bijbel over mijn waarde?"
+    },
+    "calling": {
+      "title": "Roeping",
+      "desc": "Wat moet ik met mijn leven doen?",
+      "prompt": "Ik weet niet wat ik met mijn leven moet doen. Help me mijn roeping te vinden – wat zegt de Bijbel hierover?"
+    },
+    "faithdoubt": {
+      "title": "Geloofstwijfel",
+      "desc": "Als het geloof wankelt",
+      "prompt": "Ik twijfel aan mijn geloof en weet niet of ik nog kan geloven. Wat zegt de Bijbel over twijfel?"
+    },
+    "forgiveness": {
+      "title": "Vergeving",
+      "desc": "Als vergeven onmogelijk lijkt",
+      "prompt": "Ik kan iemand gewoon niet vergeven. Het doet te veel pijn. Wat zegt de Bijbel over vergeving?",
+      "prompt_v1": "Wat zegt de Bijbel over vergeving?",
+      "prompt_v2": "Hoe kan ik iemand vergeven die me pijn heeft gedaan?",
+      "prompt_v3": "Zijn er grenzen aan vergeving?"
+    },
+    "familyconflict": {
+      "title": "Familieruzie",
+      "desc": "Als het botst in de familie",
+      "prompt": "Er is grote ruzie in mijn familie. Wat zegt de Bijbel over familievrede en verzoening?"
+    },
+    "envy": {
+      "title": "Afgunst",
+      "desc": "Als anderen het beter hebben",
+      "prompt": "Ik ben jaloers op anderen en vergelijk mezelf constant. Wat zegt de Bijbel over afgunst en tevredenheid?"
+    },
+    "joy": {
+      "title": "Vreugde delen",
+      "desc": "Als er iets moois is gebeurd",
+      "prompt": "Er is iets moois gebeurd en ik wil mijn vreugde delen! Wat zegt de Bijbel over vreugde en dankbaarheid?"
+    },
+    "prayer": {
+      "title": "Gebedsverzoek",
+      "desc": "Samen bidden",
+      "prompt": "Ik heb een gebedsverzoek en wil samen bidden. Begeleid me in gebed.",
+      "prompt_v1": "Hoe kan ik leren bidden?",
+      "prompt_v2": "Wat zegt de Bijbel over gebed?",
+      "prompt_v3": "Waarom verhoort God sommige gebeden niet?"
+    },
+    "bibleverse": {
+      "title": "Vers begrijpen",
+      "desc": "Een Bijbeltekst laten uitleggen",
+      "prompt": "Ik wil een Bijbeltekst beter begrijpen. Kun je me helpen deze in context te plaatsen?"
     },
     "quoteofday": {
       "title": "Citaat van de dag",
       "desc": "Een inspirerend citaat om over na te denken",
-      "prompt": "Geef me vandaag een inspirerend citaat uit de Bijbel met een korte uitleg",
-      "prompt_v1": "Welk Bijbelcitaat past vandaag bijzonder goed?",
-      "prompt_v2": "Geef me vandaag een bemoedigend citaat uit de Psalmen",
+      "prompt": "Geef me een inspirerend citaat uit de Bijbel voor vandaag met een korte uitleg",
+      "prompt_v1": "Welk Bijbelcitaat past bijzonder goed bij deze dag?",
+      "prompt_v2": "Geef me een bemoedigend citaat uit de Psalmen voor vandaag",
       "prompt_v3": "Welk spreekwoord uit de Bijbel geeft me vandaag een nieuw perspectief?"
     },
     "thankfulness": {
       "title": "Dankbaarheidsoefening",
-      "desc": "Ontdek waar je dankbaar voor kunt zijn",
-      "prompt": "Begeleid me door een korte dankbaarheidsoefening. Help me drie dingen te vinden waar ik vandaag dankbaar voor ben",
+      "desc": "Ontdek waarvoor je dankbaar kunt zijn",
+      "prompt": "Leid me door een korte dankbaarheidsoefening. Help me drie dingen te vinden waarvoor ik vandaag dankbaar ben",
       "prompt_v1": "Help me dankbaarheid te ontdekken in mijn dagelijks leven — ook in de kleine dingen",
-      "prompt_v2": "Ik wil leren dankbaarder te zijn. Geef me hiervoor een praktische oefening",
+      "prompt_v2": "Ik wil leren dankbaarder te zijn. Geef me een praktische oefening hiervoor",
       "prompt_v3": "Wat zegt de Bijbel over dankbaarheid en hoe kan ik dat vandaag toepassen?"
     },
     "biblesays": {
@@ -645,8 +691,8 @@
     "morningstart": {
       "title": "Goedemorgen!",
       "desc": "Begin de dag positief",
-      "prompt": "Wens me een goede morgen en geef me een bemoedigende gedachte voor de start van de dag",
-      "prompt_v1": "Geef me een korte ochtendimpuls met een passende Bijbeltekst",
+      "prompt": "Wens me een goedemorgen en geef me een bemoedigende gedachte voor de start van de dag",
+      "prompt_v1": "Geef me een korte ochtendimpuls met een passende Bijbelvers",
       "prompt_v2": "Hoe kan ik mijn dag vandaag bewust en positief beginnen?",
       "prompt_v3": "Geef me een bemoedigende ochtendgroet met een gedachte uit de Bijbel"
     },
@@ -660,16 +706,16 @@
     }
   },
   "lifeWheel": {
-    "title": "Je Levenswiel",
-    "intro": "Beoordeel 8 levensgebieden op een schaal van 1-10. Ontdek waar je staat — en ontvang bijbelse impulsen voor het gebied dat aandacht nodig heeft.",
-    "start": "Beginnen",
-    "sliderHint": "Verplaats de schuifjes — 1 = zeer ontevreden, 10 = zeer tevreden",
+    "title": "Je levenswiel",
+    "intro": "Beoordeel 8 levensgebieden op een schaal van 1-10. Ontdek waar je staat — en ontvang Bijbelse impulsen voor het gebied dat aandacht nodig heeft.",
+    "start": "Nu starten",
+    "sliderHint": "Beweeg de schuifregelaars — 1 = zeer ontevreden, 10 = zeer tevreden",
     "showResult": "Resultaat tonen",
     "average": "Gemiddelde",
     "weakestArea": "Grootste behoefte",
     "getImpulse": "Bijbelse impuls voor {{area}}",
-    "reset": "Opnieuw proberen",
-    "prompt": "Mijn levenswiel toont dat ik slechts {{score}}/10 scoorde in het gebied '{{area}}'. Wat zegt de Bijbel over dit levensgebied? Geef me bemoediging en praktische impulsen.",
+    "reset": "Opnieuw doen",
+    "prompt": "Mijn levenswiel toont dat ik op het gebied «{{area}}» slechts {{score}}/10 punten heb. Wat zegt de Bijbel over dit levensgebied? Geef me bemoediging en praktische impulsen.",
     "areas": {
       "health": "Gezondheid",
       "relationships": "Relaties",
@@ -680,184 +726,139 @@
       "leisure": "Vrije tijd",
       "growth": "Persoonlijke groei"
     },
-    "save": "Save result",
-    "saved": "Saved!",
-    "history": "Previous results",
-    "noHistory": "No saved results yet.",
-    "backToNew": "New Life Wheel",
-    "backToList": "Back to list"
+    "save": "Resultaat opslaan",
+    "saved": "Opgeslagen!",
+    "history": "Eerdere resultaten",
+    "noHistory": "Nog geen opgeslagen resultaten.",
+    "backToNew": "Nieuw levenswiel",
+    "backToList": "Terug naar lijst"
   },
   "church": {
     "badge": "Voor organisaties",
-    "heroTitle": "Je metgezel voor uw organisatie",
-    "heroSubtitle": "Begeleid uw team met bijbelse wijsheid – digitaal, persoonlijk en 24/7.",
-    "useCasesTitle": "Toepassingen",
+    "heroTitle": "BibleBot voor uw organisatie",
+    "heroSubtitle": "Begeleid uw medewerkers en doelgroepen met Bijbelse wijsheid – digitaal, persoonlijk en 24/7.",
+    "useCasesTitle": "Toepassingsmogelijkheden",
     "useCase": {
       "youth": {
         "title": "Jeugdwerk",
-        "desc": "Tieners ontdekken de Bijbel op hun eigen manier – interactief en zonder drempels."
+        "desc": "Tieners ontdekken de Bijbel op hun eigen manier – interactief en zonder schroom."
       },
       "confirmation": {
-        "title": "Belijdenis",
-        "desc": "Catechisanten verdiepen hun bijbelkennis zelfstandig met persoonlijke begeleiding."
+        "title": "Vormsel",
+        "desc": "Vormelingen verdiepen Bijbelkennis zelfstandig met persoonlijke begeleiding."
       },
       "pastoral": {
-        "title": "Pastoraat",
+        "title": "Pastorale zorg",
         "desc": "24/7 begeleiding als aanvulling op persoonlijke pastorale zorg."
       },
       "bibleStudy": {
-        "title": "Bijbelstudie",
-        "desc": "Impulsen en gespreksstarters voor groepen en huiskringen."
+        "title": "Bijbelkring",
+        "desc": "Impulsen en discussiepunten voor groepen en huiskringen."
       }
     },
-    "pricingTitle": "Patronaatspakketten",
-    "pricingSubtitle": "Steun je metgezel en uw organisatie met het juiste patronaatspakket.",
-    "popular": "Populair",
+    "pricingTitle": "Sponsorpakketten",
+    "pricingSubtitle": "BibleBot.Life is gratis en reclamevrij. Organisaties kunnen het project ondersteunen door sponsoring en ontvangen daarvoor extra functies.",
+    "popular": "Aanbevolen",
     "free": "Gratis",
-    "perYear": "personen / jaar",
-    "contact": "Contact opnemen",
+    "perYear": "",
+    "contact": "Sponsoring aanvragen",
     "tier": {
       "free": {
         "name": "Mosterdzaadje",
-        "size": "Basistoegang tot de bot voor alle gemeentepersonen."
+        "size": "Voor kleine organisaties (tot 50 personen/jaar)"
       },
       "community": {
-        "name": "Reisgenoot",
-        "size": "Vermelding van de organisatie als ondersteuner op de website & reclamevrije toegang."
+        "name": "Wegbegeleider",
+        "size": "Voor organisaties met 50–200 personen/jaar"
       },
       "gemeinde": {
         "name": "Bruggenbouwer",
-        "size": "Logo-aanwezigheid in de botinterface, maandelijks gebruiksrapport (geanonimiseerd)."
+        "size": "Voor organisaties met 200–500 personen/jaar"
       },
       "kirche": {
         "name": "Vuurtoren",
-        "size": "Integratie van eigen inhoud (bijv. preekarchief), medeskepping van de roadmap, premiumondersteuning."
+        "size": "Voor grote organisaties (500+ personen)/jaar"
       }
     },
     "features": {
-      "directoryEntry": "Vermelding in de gids",
-      "telegramGroup": "Telegramgroep",
+      "directoryEntry": "Vermelding in gids",
+      "telegramGroup": "Telegram-groep",
       "partnerPage": "Eigen partnerpagina",
       "badge": "Partnerbadge",
-      "qrFlyer": "Afdrukbare QR-flyer",
+      "qrFlyer": "QR-flyer om te printen",
       "contactForm": "Contactformulier",
-      "pastorProfile": "Predikantprofiel",
+      "pastorProfile": "Predikant/pastor-profiel",
       "welcomeVideo": "Welkomstvideo",
       "analytics": "Analytics-dashboard",
-      "prioritySupport": "Prioriteitsondersteuning",
+      "prioritySupport": "Prioriteitssupport",
       "multipleProfiles": "Meerdere profielen",
-      "customBranding": "Eigen huisstijl",
+      "customBranding": "Aangepaste branding",
       "apiAccess": "API-toegang",
       "accountManager": "Persoonlijke accountmanager"
     },
-    "viewDirectory": "Kerkengids bekijken",
-    "directoryBadge": "Kerkengids",
-    "directoryTitle": "Partnerkerken",
-    "directorySubtitle": "Vind een kerk bij u in de buurt die je metgezel aanbeveelt.",
-    "searchPlaceholder": "Zoek op plaats, naam of denominatie...",
-    "noResults": "Nog geen kerken in de gids.",
+    "viewDirectory": "Partnergids bekijken",
+    "directoryBadge": "Partnergids",
+    "directoryTitle": "Partnerorganisaties",
+    "directorySubtitle": "Vind een organisatie bij u in de buurt die BibleBot aanbeveelt.",
+    "searchPlaceholder": "Zoek plaats, naam of denominatie...",
+    "noResults": "Nog geen organisaties in de gids.",
     "becomePartner": "Word partner →",
-    "notFound": "Kerk niet gevonden.",
+    "notFound": "Organisatie niet gevonden.",
     "backToDirectory": "Terug naar de gids",
-    "pastor": "Predikant",
-    "serviceTimes": "Diensten",
+    "pastor": "Predikant/pastor",
+    "serviceTimes": "Diensttijden",
     "startChat": "Chat starten",
     "website": "Website",
-    "telegramGroup": "Telegramgroep",
+    "telegramGroup": "Telegram-groep",
     "contactTitle": "Contact met {{name}}",
     "contactName": "Uw naam (optioneel)",
     "contactEmail": "Uw e-mailadres",
     "contactMessage": "Uw bericht",
-    "contactSend": "Bericht versturen",
+    "contactSend": "Bericht verzenden",
     "contactSuccess": "Bericht verzonden! 🙏",
-    "contactSuccessDesc": "De kerk neemt contact met u op.",
+    "contactSuccessDesc": "De organisatie neemt contact met u op.",
     "recommendedBy": "Aanbevolen door {{name}}",
-    "setup": "Setup (eenmalig)",
+    "setup": "",
     "form": {
-      "title": "Geïnteresseerd? Neem contact op!",
-      "subtitle": "We reageren binnen 48 uur.",
+      "title": "Interesse in sponsoring?",
+      "subtitle": "Wij nemen binnen 48 uur contact met u op.",
       "name": "Uw naam",
       "email": "E-mailadres",
-      "churchName": "Naam van de kerk",
+      "churchName": "Naam van de organisatie",
       "tier": "Gewenst pakket",
       "tierPlaceholder": "Kies pakket...",
       "message": "Uw bericht",
-      "submit": "Aanvraag versturen",
-      "success": "Aanvraag verzonden! We nemen contact op. 🙏",
+      "submit": "Sponsoraanvraag verzenden",
+      "success": "Aanvraag verzonden! Wij nemen spoedig contact met u op. 🙏",
       "error": "Fout bij verzenden. Probeer het opnieuw.",
-      "orgType": "Organization type",
-      "orgTypePlaceholder": "Select type...",
+      "orgType": "Type organisatie",
+      "orgTypePlaceholder": "Kies type...",
       "orgTypes": {
-        "church": "Church",
-        "careHome": "Care Home",
-        "seniorHome": "Retirement Home",
-        "hospital": "Hospital",
-        "prison": "Prison Chaplaincy",
-        "military": "Military Chaplaincy",
-        "rehaClinic": "Revalidatiekliniek",
-        "psychiatry": "Psychiatrie",
-        "burnoutClinic": "Burnout-kliniek",
-        "hospice": "Hospice",
-        "counseling": "Adviescentrum",
+        "church": "Gemeente",
         "reformed": "Gereformeerde Kerk",
         "catholic": "Katholieke Kerk",
         "lutheran": "Lutherse Kerk",
-        "evangelical": "Vrije Kerk / Evangelisch",
+        "evangelical": "Vrije kerk / Evangelisch",
         "freelance": "Freelance / Onafhankelijk",
+        "careHome": "Verpleeghuis",
+        "seniorHome": "Verzorgingshuis",
+        "hospital": "Ziekenhuis",
+        "prison": "Gevangenispastoraat",
+        "military": "Legerpastoraat",
+        "rehaClinic": "Revalidatiekliniek",
+        "psychiatry": "Psychiatrie / Psychosomatiek",
+        "burnoutClinic": "Burn-outkliniek",
+        "hospice": "Hospice",
+        "counseling": "Adviesbureau",
         "other": "Overig"
       }
     },
-    "institutionsTitle": "Ook voor instellingen",
-    "institutionsSubtitle": "Je metgezel begeleidt ook verzorgingshuizen, bejaardenhuizen en ziekenhuizen met digitale pastorale zorg.",
-    "institution": {
-      "careHome": {
-        "title": "Verzorgingshuizen",
-        "desc": "Dagelijkse bijbelse impulsen voor bewoners – ook zonder aalmoezenier ter plaatse."
-      },
-      "seniorHome": {
-        "title": "Bejaardenhuizen",
-        "desc": "Vertrouwde bijbelverzen en gesprekken voor senioren – eenvoudig toegankelijk via tablet."
-      },
-      "hospital": {
-        "title": "Ziekenhuizen",
-        "desc": "Troost en geestelijke begeleiding voor patiënten – 24/7 beschikbaar."
-      },
-      "prison": {
-        "title": "Gevangenispastoraat",
-        "desc": "Hoop en geestelijke begeleiding voor gedetineerden – een vertrouwelijke gesprekspartner dag en nacht."
-      },
-      "military": {
-        "title": "Military Chaplaincy",
-        "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
-      },
-      "rehaClinic": {
-        "title": "Revalidatieklinieken",
-        "desc": "Pastorale ondersteuning tijdens revalidatie – voor innerlijke kracht op weg terug naar het leven."
-      },
-      "psychiatry": {
-        "title": "Psychiatrische instellingen",
-        "desc": "Vertrouwelijke geestelijke gesprekken voor patiënten in de psychiatrische zorg."
-      },
-      "burnoutClinic": {
-        "title": "Burnout-klinieken",
-        "desc": "Zinvragen en innerlijke bezinning bij uitputting."
-      },
-      "hospice": {
-        "title": "Hospices",
-        "desc": "Begeleiding aan het levenseinde – troostende woorden en een luisterend oor."
-      },
-      "counseling": {
-        "title": "Adviescentra",
-        "desc": "Aanvullende geestelijke impulsen voor cliënten in psychosociale begeleiding."
-      }
-    },
-    "patronageNote": "BibleBot.Life is een privé, niet-commercieel project. Het wordt op vrijwillige basis beheerd en uitsluitend gefinancierd door donaties. Geen reclame, geen dataverkoop, geen betaalde functies. Alle donaties gaan rechtstreeks naar het dekken van de lopende kosten (infrastructuur, hosting, ontwikkeling). Donaties zijn niet fiscaal aftrekbaar.",
-    "denominationsTitle": "Voor alle denominaties en ceremonieleiders",
-    "denominationsSubtitle": "BibleBot.Life is oecumenisch – voor gereformeerde, katholieke, lutherse en vrij-evangelische gemeenschappen, evenals freelance ceremonieleiders.",
+    "denominationsTitle": "Voor alle confessies & ceremoniebegeleiders",
+    "denominationsSubtitle": "BibleBot is oecumenisch – voor gereformeerde, katholieke, lutherse en vrije kerkelijke gemeenten, evenals voor freelance ceremoniebegeleiders.",
     "denomination": {
       "reformed": {
         "title": "Gereformeerde Kerk",
-        "desc": "Zürichse Bijbel, gereformeerde liturgie en preekondersteuning – op maat voor uw gemeente."
+        "desc": "Zürcher Bijbel, gereformeerde liturgie en preekbegeleiding – op maat gemaakt voor uw kerkgemeente."
       },
       "catholic": {
         "title": "Katholieke Kerk",
@@ -865,141 +866,193 @@
       },
       "lutheran": {
         "title": "Lutherse Kerk",
-        "desc": "Lutherbijbel, dienstplanning en pastoraat – voor evangelisch-lutherse gemeenten."
+        "desc": "Lutherbijbel, dienstplanning en pastorale zorg – voor evangelisch-lutherse gemeenten."
       },
       "evangelical": {
-        "title": "Vrije Kerken",
-        "desc": "Schlachter 2000, aanbidding en flexibel dienstontwerp – voor vrij-evangelische gemeenschappen."
+        "title": "Vrije kerken",
+        "desc": "Schlachter 2000, lofprijzing en flexibele dienstvormgeving – voor vrije kerkelijke gemeenschappen."
       },
       "freelance": {
-        "title": "Freelance Celebranten",
-        "desc": "Rouwsprekers, huwelijkscelbranten en onafhankelijke ceremonieleiders – met biografische tools en spraakplanning."
+        "title": "Freelancers",
+        "desc": "Uitvaartsprekers, huwelijkssprekers en onafhankelijke ceremoniebegeleiders – met biografie-tool en spraakplanning."
       }
-    }
+    },
+    "institutionsTitle": "Voor diverse organisaties",
+    "institutionsSubtitle": "BibleBot begeleidt gemeenten, verpleeg- en verzorgingshuizen, ziekenhuizen, revalidatie- en burn-outklinieken, psychiatrische instellingen, hospices, adviesbureaus en vele andere organisaties met digitale pastorale zorg.",
+    "institution": {
+      "careHome": {
+        "title": "Verpleeghuizen",
+        "desc": "Dagelijkse Bijbelimpulsen en begeleiding voor bewoners – ook als er geen geestelijke ter plaatse is."
+      },
+      "seniorHome": {
+        "title": "Verzorgingshuizen",
+        "desc": "Vertrouwde Bijbelverzen en gesprekken voor senioren – eenvoudig toegankelijk via tablet of smartphone."
+      },
+      "hospital": {
+        "title": "Ziekenhuizen",
+        "desc": "Troost en geestelijke begeleiding voor patiënten in moeilijke tijden – 24/7 beschikbaar aan het ziekbed."
+      },
+      "prison": {
+        "title": "Gevangenispastoraat",
+        "desc": "Hoop en geestelijke begeleiding voor gedetineerden – een vertrouwelijke gesprekspartner de klok rond."
+      },
+      "military": {
+        "title": "Legerpastoraat",
+        "desc": "Geestelijke begeleiding voor militairen – ook tijdens inzet of in de kazerne bereikbaar."
+      },
+      "rehaClinic": {
+        "title": "Revalidatieklinieken",
+        "desc": "Pastorale begeleiding tijdens de revalidatie – voor innerlijke kracht op de weg terug naar het leven."
+      },
+      "psychiatry": {
+        "title": "Psychiatrische instellingen",
+        "desc": "Vertrouwelijke geestelijke gesprekken voor patiënten in psychiatrische behandeling – aanvullend op de therapie."
+      },
+      "burnoutClinic": {
+        "title": "Burn-outklinieken",
+        "desc": "Zinvraagstukken en innerlijke bezinning bij uitputting – een rustige gesprekspartner zonder tijdsdruk."
+      },
+      "hospice": {
+        "title": "Hospices",
+        "desc": "Begeleiding aan het levenseinde – troostende woorden, vertrouwde verzen en een luisterend oor in de laatste dagen."
+      },
+      "counseling": {
+        "title": "Adviesbureaus",
+        "desc": "Aanvullende geestelijke impulsen voor cliënten in psychosociale of pastorale advisering."
+      }
+    },
+    "patronageNote": "BibleBot.Life wordt gedragen door een non-profit vereniging en wordt uitsluitend gefinancierd door vrijwillige donaties en sponsoring. Er is geen reclame, geen gegevensverkoop en geen betaalde functies. Alle bijdragen vloeien direct naar de verdere ontwikkeling, de technische exploitatie, de wereldwijde verspreiding en het communitymanagement. Donaties kunnen afhankelijk van het kanton fiscaal aftrekbaar zijn.",
+    "approachTitle": "Uw digitale 1e-lijns kanaal",
+    "approachSubtitle": "De meeste mensen wenden zich niet direct tot een geestelijke. Ze googelen, ze piekeren, ze zwijgen. BibleBot.Life vangt hen daar op – als eerste, laagdrempelige contactpunt in uw pastorale ecosysteem.",
+    "approach1Desc": "24/7 bereikbaar, anoniem, gratis. Beantwoordt geloofsvragen, geeft impulsen en begeleidt – zonder drempel. Uw digitale eerste contact.",
+    "approach2Desc": "BibleBot wekt interesse en vertrouwen. De volgende stap: het bezoek aan uw gemeente. Wij linken direct naar uw diensttijden.",
+    "approach3Desc": "Als vragen persoonlijke behoefte worden, verwijst BibleBot direct door naar uw pastorale zorg – met contactformulier en vertrouwensvoorsprong.",
+    "approachNote": "BibleBot.Life vervangt geen pastorale zorg – het opent de deur ernaartoe. Als uw digitale 1e-lijns kanaal verlagen we de drempel en brengen we mensen naar u toe.",
+    "approachCta": "Partnerschap nu bespreken"
   },
   "institutions": {
     "badge": "Voor organisaties",
-    "heroTitle": "Je metgezel voor uw organisatie",
-    "heroSubtitle": "Digital pastoral care for care homes, retirement homes, hospitals, and correctional facilities – personal, confidential, and around the clock.",
-    "typesTitle": "Who is je metgezel for?",
-    "useCasesTitle": "How je metgezel is Used",
-    "useCasesSubtitle": "Practical applications for daily life in your institution.",
-    "pricingTitle": "Patronage Packages",
-    "pricingSubtitle": "The same packages as for churches – adapted to institutional needs.",
-    "linkChurches": "Also available for churches",
+    "heroTitle": "BibleBot voor uw organisatie",
+    "heroSubtitle": "Digitale pastorale zorg voor verpleeghuizen, verzorgingshuizen, ziekenhuizen en justitiële inrichtingen – persoonlijk, vertrouwelijk en 24/7.",
+    "seniorHint": {
+      "title": "Seniorenmodus beschikbaar",
+      "desc": "Groter lettertype en vereenvoudigde bediening – ideaal voor oudere bewoners.",
+      "cta": "Seniorenmodus testen"
+    },
+    "typesTitle": "Voor wie is BibleBot?",
+    "useCasesTitle": "Zo wordt BibleBot gebruikt",
+    "useCasesSubtitle": "Concrete toepassingen voor het dagelijks leven in uw instelling.",
+    "pricingTitle": "Patronaatspakketten",
+    "pricingSubtitle": "Dezelfde pakketten als voor gemeenten – aangepast aan institutionele behoeften.",
+    "linkChurches": "Ook beschikbaar voor gemeenten",
     "type": {
       "careHome": {
-        "title": "Care Homes",
-        "desc": "Daily Bible impulses and companionship for residents – even when no chaplain is on site."
+        "title": "Verpleeghuizen",
+        "desc": "Dagelijkse Bijbelimpulsen en begeleiding voor bewoners – ook als er geen geestelijke ter plaatse is."
       },
       "seniorHome": {
-        "title": "Retirement Homes",
-        "desc": "Familiar Bible verses and conversations for seniors – easily accessible via tablet or smartphone."
+        "title": "Verzorgingshuizen",
+        "desc": "Vertrouwde Bijbelverzen en gesprekken voor senioren – eenvoudig toegankelijk via tablet of smartphone."
       },
       "hospital": {
-        "title": "Hospitals",
-        "desc": "Comfort and spiritual support for patients in difficult times – available 24/7 at the bedside."
+        "title": "Ziekenhuizen",
+        "desc": "Troost en geestelijke begeleiding voor patiënten in moeilijke tijden – 24/7 beschikbaar aan het ziekbed."
       },
       "prison": {
-        "title": "Prison Chaplaincy",
-        "desc": "Hope and spiritual support for inmates – a confidential companion around the clock."
+        "title": "Gevangenispastoraat",
+        "desc": "Hoop en geestelijke begeleiding voor gedetineerden – een vertrouwelijke gesprekspartner de klok rond."
       },
       "military": {
-        "title": "Military Chaplaincy",
-        "desc": "Spiritual support for military personnel – accessible even during deployment or in the barracks."
+        "title": "Legerpastoraat",
+        "desc": "Geestelijke begeleiding voor militairen – ook tijdens inzet of in de kazerne bereikbaar."
       }
     },
     "useCase": {
       "dailyImpulse": {
-        "title": "Daily Impulse",
-        "desc": "A Bible verse with reflection question every morning – lowers the barrier for spiritual conversations."
+        "title": "Dagelijkse impuls",
+        "desc": "Elke ochtend een Bijbelvers met reflectievraag – verlaagt de drempel voor spirituele gesprekken."
       },
       "companionship": {
-        "title": "Conversation Partner",
-        "desc": "Je metgezel answers faith questions patiently and without time pressure – ideal for lonely hours."
+        "title": "Gesprekspartner",
+        "desc": "BibleBot beantwoordt geloofsvragen geduldig en zonder tijdsdruk – ideaal voor eenzame uren."
       },
       "accessibility": {
-        "title": "Easy Access",
-        "desc": "Large text, simple tablet interface – also for people with limited mobility."
+        "title": "Eenvoudige toegang",
+        "desc": "Groot lettertype, eenvoudige bediening via tablet – ook voor mensen met beperkte mobiliteit."
       },
       "availability": {
-        "title": "24/7 Available",
-        "desc": "Spiritual companionship at night and on weekends – when no chaplain is available."
+        "title": "24/7 Beschikbaar",
+        "desc": "Geestelijke begeleiding ook 's nachts en in het weekend – als er geen geestelijke bereikbaar is."
       }
     },
     "tierDesc": {
-      "free": "Basic access for residents and patients",
-      "community": "Mentioned as supporter, ad-free access",
-      "gemeinde": "Logo presence, monthly usage report",
-      "kirche": "Custom content, roadmap co-creation, premium support"
+      "free": "Basistoegang voor bewoners en patiënten",
+      "community": "Vermelding als ondersteuner, reclamevrije toegang",
+      "gemeinde": "Logo-aanwezigheid, maandelijks gebruiksrapport",
+      "kirche": "Eigen inhoud, medevorming roadmap, premium support"
     },
     "form": {
-      "title": "Interested? Get in touch!",
-      "subtitle": "We'll get back to you within 48 hours.",
-      "name": "Your name",
-      "email": "Email address",
-      "institutionName": "Institution name",
-      "type": "Type of institution",
-      "typePlaceholder": "Please select...",
-      "tier": "Preferred package",
-      "tierPlaceholder": "Choose package...",
-      "message": "Your message",
-      "submit": "Send inquiry",
-      "success": "Inquiry sent! We'll be in touch soon. 🙏",
-      "error": "Error sending. Please try again."
-    },
-    "seniorHint": {
-      "title": "Seniormodus beschikbaar",
-      "desc": "Grotere tekst en vereenvoudigde navigatie – ideaal voor oudere bewoners.",
-      "cta": "Probeer seniormodus"
+      "title": "Interesse? Neem contact met ons op!",
+      "subtitle": "Wij nemen binnen 48 uur contact met u op.",
+      "name": "Uw naam",
+      "email": "E-mailadres",
+      "institutionName": "Naam van de instelling",
+      "type": "Type instelling",
+      "typePlaceholder": "Kies alstublieft...",
+      "tier": "Gewenst pakket",
+      "tierPlaceholder": "Kies pakket...",
+      "message": "Uw bericht",
+      "submit": "Aanvraag verzenden",
+      "success": "Aanvraag verzonden! Wij nemen spoedig contact met u op. 🙏",
+      "error": "Fout bij verzenden. Probeer het opnieuw."
     }
   },
   "chatHero": {
-    "ariaLabel": "Stel een vraag aan je metgezel",
-    "focusPlaceholder": "Typ uw vraag…",
+    "subtitle": "Stel je vraag – open, eerlijk, zonder aanmelding.",
     "placeholder1": "Waar ben ik echt dankbaar voor?",
-    "placeholder2": "Hoe vind ik innerlijke vrede?",
-    "placeholder3": "Wat geeft mij hoop?",
-    "placeholder4": "Wat verlangt mijn hart?",
-    "placeholder5": "Wat kan ik vandaag goed doen?",
+    "placeholder2": "Hoe vind ik innerlijke rust?",
+    "placeholder3": "Wat geeft me hoop?",
+    "placeholder4": "Wat wenst mijn hart?",
+    "placeholder5": "Wat kan ik vandaag goeds doen?",
+    "focusPlaceholder": "Schrijf je vraag…",
+    "ariaLabel": "Vraag stellen aan BibleBot",
     "send": "Verzenden",
-    "subtitle": "Stel uw vraag – open, eerlijk, zonder aanmelding.",
     "suggestion1": "Waar staat mijn naam voor?",
-    "suggestion2": "Wat geeft mij kracht vandaag?",
+    "suggestion2": "Wat geeft me vandaag kracht?",
     "suggestion3": "Waar ben ik dankbaar voor?"
   },
   "splash": {
     "patronage": "Aanbevolen door"
   },
   "meta": {
-    "forChurchesDesc": "Je metgezel als partner voor uw gemeente: jeugdwerk, confirmatie, pastorale zorg en Bijbelkringen. Gratis tot Premium.",
-    "forChurchesTitle": "Je metgezel voor Kerken – Digitale Pastorale Zorg & Bijbelbegeleiding",
-    "homeDesc": "Je metgezel begeleidt u met 5 Bijbelvertalingen, coachingmethodiek en pastorale zorg. Anoniem, gratis, in 36 talen.",
-    "homeTitle": "Je metgezel – Uw persoonlijke Bijbelbegeleider | Gratis & Anoniem",
-    "loginDesc": "Meld u aan bij je metgezel om uw persoonlijke ceremonies voor te bereiden.",
-    "loginTitle": "Aanmelden – je metgezel"
+    "homeTitle": "BibleBot.Life – Je persoonlijke begeleider | Met de diepte van de Bijbel",
+    "homeDesc": "Je persoonlijke begeleider — met de diepte van de Bijbel, zonder voorkennis. 5 vertalingen, coaching, pastorale zorg. Anoniem, gratis, 38 talen.",
+    "forChurchesTitle": "BibleBot.Life voor gemeenten – Digitale pastorale zorg & Bijbelbegeleiding",
+    "forChurchesDesc": "BibleBot.Life als partner voor uw gemeente: jeugdwerk, vormsel, pastorale zorg en Bijbelkringen. Gratis tot Premium.",
+    "loginTitle": "Aanmelden – BibleBot.Life",
+    "loginDesc": "Meld je aan om je persoonlijke ceremonies voor te bereiden."
   },
   "meinBereich": {
     "title": "Mijn gebied",
-    "subtitle": "Bereid je persoonlijke ceremonies voor en deel ze met je pastor.",
+    "subtitle": "Bereid je persoonlijke ceremonies voor en deel ze met je geestelijke.",
     "sidebarLabel": "Mijn gebied",
     "overview": "Overzicht",
     "funeral": "Uitvaart",
     "wedding": "Huwelijk",
     "baptismCeremony": "Doop",
-    "confirmation": "Bevestiging",
+    "confirmation": "Vormsel",
     "logout": "Afmelden",
     "comingSoon": "Binnenkort beschikbaar",
-    "funeralDesc": "Levensloop opstellen, herinneringen vastleggen en delen met de pastor.",
+    "funeralDesc": "Levensloop maken, herinneringen vastleggen en delen met de geestelijke.",
     "weddingDesc": "Huwelijksgeloften schrijven, liederen kiezen en de viering plannen.",
     "baptismDesc": "Doopwensen formuleren en het verloop met de gemeente voorbereiden.",
-    "confirmationDesc": "Bevestigingsspreuk vinden en persoonlijke teksten voorbereiden."
+    "confirmationDesc": "Vormseltekst vinden en persoonlijke teksten voorbereiden."
   },
   "eulogy": {
-    "pageTitle": "Uitvaart – Levensloop opstellen | je metgezel",
-    "pageDesc": "Leg herinneringen aan een geliefde vast en stel een mooie levenslooptekst op voor de uitvaart.",
+    "pageTitle": "Uitvaart – Levensloop maken | BibleBot",
+    "pageDesc": "Leg herinneringen aan een geliefde vast en maak een mooie levenslooptekst voor de uitvaart.",
     "title": "Uitvaart – Levensloop",
-    "subtitle": "Herinneringen vastleggen, tekst opstellen, als PDF downloaden.",
+    "subtitle": "Herinneringen vastleggen, tekst maken, als PDF downloaden.",
     "step1": "Over de overledene",
     "name": "Naam",
     "namePlaceholder": "Voor- en achternaam",
@@ -1012,28 +1065,79 @@
     "stop": "Stop",
     "recording": "Opname",
     "transcript": "Transcript (bewerkbaar)",
-    "transcriptPlaceholder": "Het transcript wordt automatisch aangemaakt tijdens de opname. Je kunt het hier bewerken.",
+    "transcriptPlaceholder": "Het transcript wordt automatisch tijdens de opname gemaakt. Je kunt het hier bewerken.",
     "additionalNotes": "Aanvullende notities",
     "notesPlaceholder": "Beroep, hobby's, belangrijke levensgebeurtenissen, bijzondere karaktertrekken…",
-    "step3": "Tekst opstellen & downloaden",
-    "generate": "Levenslooptekst opstellen",
-    "generating": "Tekst wordt opgesteld…",
+    "step3": "Tekst maken & downloaden",
+    "generate": "Levenslooptekst maken",
+    "generating": "Tekst wordt gemaakt…",
     "regenerate": "Opnieuw genereren",
     "downloadPDF": "Als PDF downloaden",
     "save": "Opslaan",
-    "shareStep": "Delen met pastor",
-    "shareDesc": "Maak een link aan die je via e-mail of messenger naar je pastor kunt sturen. Hij kan de tekst lezen en als PDF downloaden.",
-    "enableShare": "Link aanmaken & kopiëren",
+    "shareStep": "Delen met geestelijke",
+    "shareDesc": "Maak een link die je via e-mail of messenger naar je geestelijke kunt sturen. Hij kan de tekst lezen en als PDF downloaden.",
+    "enableShare": "Link maken & kopiëren",
     "disableShare": "Delen uitschakelen",
-    "micError": "Microfoon kon niet worden gestart. Geef alstublieft toestemming.",
+    "micError": "Microfoon kon niet worden gestart. Geef toestemming.",
     "needMore": "Neem eerst herinneringen op of schrijf notities.",
-    "genError": "Fout bij het genereren van de tekst. Probeer het opnieuw."
+    "genError": "Fout bij het maken van de tekst. Probeer het opnieuw."
   },
   "auth": {
-    "apple": "Inloggen met Apple",
-    "loginShort": "Inloggen",
-    "logout": "Uitloggen"
+    "apple": "Aanmelden met Apple",
+    "loginShort": "Aanmelden",
+    "logout": "Afmelden"
   },
+  "chatDemo": {
+    "sectionLabel": "Zo ziet een gesprek eruit",
+    "userMsg": "Ik voel me alleen. Wat zegt de Bijbel hierover?",
+    "botMsg": "Je bent niet alleen – ook al voelt het nu zo. In Psalm 23 staat: «De HEER is mijn herder, het ontbreekt mij aan niets.» Dat betekent dat God dichtbij je is, ook in de donkerste momenten. Wil je dat we deze passage samen verdiepen?",
+    "cta": "Start nu je eigen gesprek →"
+  },
+  "suggest": {
+    "psalm23": "Psalm 23 – De HEER is mijn herder",
+    "joh316": "Johannes 3:16 – Want zo lief heeft God de wereld gehad",
+    "rom828": "Romeinen 8:28 – Alles ten goede",
+    "mt1128": "Mattheüs 11:28 – Kom naar Mij toe",
+    "phil413": "Filippenzen 4:13 – Ik vermag alle dingen",
+    "jes4110": "Jesaja 41:10 – Vrees niet",
+    "1kor13": "1 Korintiërs 13 – Het hooglied van de liefde",
+    "spr35": "Spreuken 3:5 – Vertrouw op de HEER",
+    "jos19": "Jozua 1:9 – Wees sterk en moedig",
+    "ps462": "Psalm 46:2 – God is onze toevlucht",
+    "explainDetail": "Leg {{ref}} in detail uit"
+  },
+  "dailyVerses": {
+    "v0": "«Kom naar Mij toe, allen die vermoeid en belast zijn, en Ik zal u rust geven.»",
+    "r0": "Mattheüs 11:28",
+    "v1": "«Want Ik weet welke gedachten Ik over u koester, spreekt de HEER, gedachten van vrede.»",
+    "r1": "Jeremia 29:11",
+    "v2": "«Vrees niet, want Ik ben met u; wees niet bevreesd, want Ik ben uw God.»",
+    "r2": "Jesaja 41:10",
+    "v3": "«De HEER is mijn herder, het ontbreekt mij aan niets.»",
+    "r3": "Psalm 23:1",
+    "v4": "«Werp al uw zorgen op Hem, want Hij zorgt voor u.»",
+    "r4": "1 Petrus 5:7",
+    "v5": "«Ik ben het licht van de wereld. Wie Mij volgt, zal niet in de duisternis wandelen.»",
+    "r5": "Johannes 8:12",
+    "v6": "«Wees sterk en moedig! Vrees niet, want de HEER, uw God, is met u.»",
+    "r6": "Jozua 1:9",
+    "v7": "«Maar wie de HEER verwachten, krijgen nieuwe kracht, zij varen op met vleugels als arenden.»",
+    "r7": "Jesaja 40:31",
+    "v8": "«Want waar twee of drie in mijn naam bijeen zijn, daar ben Ik in hun midden.»",
+    "r8": "Mattheüs 18:20",
+    "v9": "«Proef en zie dat de HEER goed is. Welzalig de man die op Hem vertrouwt!»",
+    "r9": "Psalm 34:9",
+    "v10": "«Hij geneest de gebrokenen van hart en verbindt hun wonden.»",
+    "r10": "Psalm 147:3",
+    "v11": "«De liefde is geduldig en vriendelijk. Zij verdraagt alles, gelooft alles, hoopt alles.»",
+    "r11": "1 Korintiërs 13:4–7",
+    "v12": "«Verblijd u in de hoop, wees geduldig in de verdrukking, volhardend in het gebed.»",
+    "r12": "Romeinen 12:12",
+    "v13": "«Vertrouw op de HEER met heel uw hart en steun niet op uw eigen inzicht.»",
+    "r13": "Spreuken 3:5"
+  },
+  "meinBereichNav": "Mijn gebied",
+  "verseExplain": "Leg deze Bijbelvers in detail uit: {{quote}} ({{ref}}) – Wie heeft dit geschreven? In welke context? Wat betekent dit voor mijn leven vandaag?",
   "tts": {
     "male": "Mannelijke stem",
     "female": "Vrouwelijke stem",
@@ -1041,143 +1145,910 @@
     "femaleShort": "V",
     "voice": "Stem"
   },
-  "meinBereichNav": "Mijn ruimte",
-  "social": {
-    "conversations": "Gesprekken",
-    "languages": "Talen",
-    "bibles": "Bijbelvertalingen"
-  },
-  "chatDemo": {
-    "sectionLabel": "Zo ziet een gesprek eruit",
-    "userMsg": "Ik voel me alleen. Wat zegt de Bijbel daarover?",
-    "botMsg": "Je bent niet alleen – zelfs als het zo voelt. Psalm 23 zegt: 'De Heer is mijn herder, het ontbreekt mij aan niets.' Dit betekent dat God dicht bij je is, zelfs in de donkerste momenten. Zou je willen dat we deze passage samen verkennen?",
-    "cta": "Start je eigen gesprek →"
-  },
-  "suggest": {
-    "psalm23": "Psalm 23 – De Heer is mijn herder",
-    "joh316": "Johannes 3:16 – Want zo lief heeft God de wereld gehad",
-    "rom828": "Romeinen 8:28 – Alle dingen werken mee ten goede",
-    "mt1128": "Mattheüs 11:28 – Kom naar Mij toe, allen die vermoeid en belast zijn",
-    "phil413": "Filippenzen 4:13 – Ik vermag alle dingen",
-    "jes4110": "Jesaja 41:10 – Vrees niet, want Ik ben met u",
-    "1kor13": "1 Korinthe 13 – De grootste is de liefde",
-    "spr35": "Spreuken 3:5 – Vertrouw op de Heer",
-    "jos19": "Jozua 1:9 – Wees sterk en moedig",
-    "ps462": "Psalm 46:1 – God is onze toevlucht en sterkte",
-    "explainDetail": "Leg {{ref}} in detail uit"
-  },
-  "dailyVerses": {
-    "v0": "\"Kom naar Mij toe, allen die vermoeid en belast zijn, en Ik zal u rust geven.\"",
-    "r0": "Mattheüs 11:28",
-    "v1": "\"Want Ik weet welke gedachten Ik over u koester, spreekt de Heer, gedachten van vrede.\"",
-    "r1": "Jeremia 29:11",
-    "v2": "\"Vrees niet, want Ik ben met u; wees niet bevreesd, want Ik ben uw God.\"",
-    "r2": "Jesaja 41:10",
-    "v3": "\"De Heer is mijn herder; het ontbreekt mij aan niets.\"",
-    "r3": "Psalm 23:1",
-    "v4": "\"Werp al uw zorgen op Hem, want Hij zorgt voor u.\"",
-    "r4": "1 Petrus 5:7",
-    "v5": "\"Ik ben het licht der wereld. Wie Mij volgt, zal beslist niet in de duisternis wandelen.\"",
-    "r5": "Johannes 8:12",
-    "v6": "\"Wees sterk en moedig! Wees niet bevreesd, want de Heer, uw God, is met u.\"",
-    "r6": "Jozua 1:9",
-    "v7": "\"Maar wie de Heer verwachten, zullen hun kracht vernieuwen; zij zullen opvaren met vleugels als arenden.\"",
-    "r7": "Jesaja 40:31",
-    "v8": "\"Want waar twee of drie in Mijn Naam bijeengekomen zijn, daar ben Ik in hun midden.\"",
-    "r8": "Mattheüs 18:20",
-    "v9": "\"Proef en zie dat de Heer goed is; welzalig de man die tot Hem de toevlucht neemt.\"",
-    "r9": "Psalm 34:8",
-    "v10": "\"Hij geneest de gebrokenen van hart en verbindt hun wonden.\"",
-    "r10": "Psalm 147:3",
-    "v11": "\"De liefde is geduldig, de liefde is vriendelijk. Zij verdraagt alle dingen, gelooft alle dingen, hoopt alle dingen.\"",
-    "r11": "1 Korinthe 13:4–7",
-    "v12": "\"Verblijd u in de hoop, wees geduldig in de verdrukking, volhard in het gebed.\"",
-    "r12": "Romeinen 12:12",
-    "v13": "\"Vertrouw op de Heer met heel je hart en steun niet op je eigen inzicht.\"",
-    "r13": "Spreuken 3:5"
-  },
-  "verseExplain": "Leg dit Bijbelvers in detail uit: {{quote}} ({{ref}}) – Wie heeft dit geschreven? In welke context? Wat betekent het voor mijn leven vandaag?",
   "celebrants": {
-    "badge": "Voor Kapelaans & Life Coaches",
+    "badge": "Voor geestelijken & life coaches",
     "heroTitle1": "Elke ontmoeting verdient",
     "heroTitle2": "de beste voorbereiding",
-    "heroSubtitle": "Van de eerste spraaknotitie tot de voltooide sessie — plan, documenteer en voer ceremonies en coachingsessies uit met één tool.",
+    "heroSubtitle": "Van de eerste spraaknotitie tot de voltooide sessie — plan, documenteer en voer ceremonies en coachingsessies uit met één enkel hulpmiddel.",
     "ctaStart": "Gratis starten",
-    "ctaFeatures": "Ontdek functies",
-    "painTitle": "Klinkt dit bekend?",
-    "pain1": "Uren voorbereiding voor elke ceremonie?",
-    "pain2": "Papieren notities die op het belangrijkste moment ontbreken?",
-    "pain3": "Geen systeem voor liederen, lezingen en de orde van dienst?",
+    "ctaFeatures": "Functies ontdekken",
+    "painTitle": "Kent u dit?",
+    "pain1": "Urenlange voorbereiding voor elke afzonderlijke ceremonie?",
+    "pain2": "Notities op papier die op het belangrijkste moment ontbreken?",
+    "pain3": "Geen systeem voor liederen, lezingen en verloop?",
     "pain4": "Moeilijk te coördineren met muzikanten en helpers?",
-    "featuresTitle": "Alles wat je nodig hebt",
-    "featuresSubtitle": "Een doordacht systeem voor de gehele workflow — van voorbereiding tot uitvoering.",
-    "f1Title": "Spraakopname & Transcriptie",
-    "f1Desc": "Neem gesprekken op, krijg automatische transcripties — de basis voor ontroerende ceremonieteksten.",
-    "f2Title": "Intelligente Tekstcreatie",
-    "f2Desc": "Creëer vanuit je notities en transcripten empathische toespraken, coachingssamenvattingen of reflectieteksten.",
-    "f3Title": "PDF Export & Delen",
-    "f3Desc": "Exporteer voltooide teksten als PDF of deel via een link direct met cliënten, familieleden en deelnemers.",
-    "f4Title": "Sjablonen per Denominatie",
-    "f4Desc": "Vooraf gebouwde workflow-sjablonen voor Katholiek, Hervormd, Luthers, Evangelisch en Seculier — klaar voor gebruik.",
-    "f5Title": "Kalender & Planning",
-    "f5Desc": "Alle ceremonies in één oogopslag: maand-, week- en dagoverzichten. Verlies nooit meer het overzicht.",
-    "f6Title": "Teleprompter / Dirigentmodus",
-    "f6Desc": "Live modus voor uitvoering: doorloop de dienst blok voor blok, lees teksten, zie muziek cues — afleidingsvrij.",
+    "featuresTitle": "Alles wat u nodig heeft",
+    "featuresSubtitle": "Een doordacht systeem voor het gehele proces — van voorbereiding tot uitvoering.",
+    "f1Title": "Spraakopname & transcriptie",
+    "f1Desc": "Gesprekken opnemen, automatisch laten transcriberen — de basis voor ontroerende ceremonieteksten.",
+    "f2Title": "Intelligente tekstcreatie",
+    "f2Desc": "Uit uw notities en transcripten ontstaan empathische toespraken, coaching-samenvattingen of reflectieteksten.",
+    "f3Title": "PDF-export & delen",
+    "f3Desc": "Voltooide teksten als PDF exporteren of via een deelbare link direct doorgeven aan cliënten, familieleden en betrokkenen.",
+    "f4Title": "Sjablonen per confessie",
+    "f4Desc": "Voorgefabriceerde verloop-sjablonen voor katholiek, gereformeerd, luthers, vrije kerk en seculier — direct klaar voor gebruik.",
+    "f5Title": "Kalender & planning",
+    "f5Desc": "Alle ceremonies in één oogopslag: maand-, week- en dagoverzicht. Nooit meer het overzicht verliezen.",
+    "f6Title": "Teleprompter / Conductor Mode",
+    "f6Desc": "Live-modus voor de uitvoering: verloop blok voor blok doorlopen, teksten aflezen, muziek-cues zien — afleidingsvrij.",
     "f7Title": "Muziekintegratie",
-    "f7Desc": "Integreer liederen en muziekstukken direct in de orde van dienst. De Dirigentmodus toont je wanneer elk stuk speelt.",
-    "f8Title": "Team & Samenwerking",
-    "f8Desc": "Betrek muzikanten, lezers, technici. Wijs rollen toe, controleer beschikbaarheid, plan samen.",
+    "f7Desc": "Liederen en muziekstukken direct in het verloop integreren. De Conductor Mode toont u wanneer welk stuk klinkt.",
+    "f8Title": "Team & samenwerking",
+    "f8Desc": "Muzikanten, lectoren, technici betrekken. Rollen toewijzen, beschikbaarheid controleren, samen plannen.",
     "f9Title": "Bronnenbibliotheek",
-    "f9Desc": "Liederen, gebeden, lezingen en liturgische teksten — doorzoekbaar, getagd, groeiend met elke ceremonie.",
-    "f10Title": "Kerkregister",
-    "f10Desc": "Documenteer doopfeesten, bruiloften en begrafenissen netjes. Alle gegevens op één plek.",
-    "pricingTitle": "Eenvoudige prijzen",
-    "pricingSubtitle": "Begin gratis. Upgrade wanneer je meer nodig hebt.",
+    "f9Desc": "Liederen, gebeden, lezingen en liturgische teksten — doorzoekbaar, met tags, groeiend met elke ceremonie.",
+    "f10Title": "Kerkboek & register",
+    "f10Desc": "Dopen, huwelijken en uitvaarten netjes documenteren. Alle gegevens op één plek.",
+    "pricingTitle": "Gratis & ondersteund door donaties",
+    "pricingSubtitle": "Start gratis. Alle Pro-functies worden mogelijk gemaakt door sponsoring.",
     "planPersonal": "Persoonlijk",
     "planFree": "Gratis",
     "planPro": "Pro",
-    "planProPrice": "CHF 29",
-    "planProPeriod": "/ maand",
+    "planProSupported": "Mogelijk gemaakt door donaties",
+    "planProPeriod": "",
     "recommended": "Aanbevolen",
     "pf1": "Ceremonieteksten maken",
     "pf2": "Spraakopname & transcriptie",
     "pf3": "PDF-export",
     "pf4": "Delen via link",
     "pf5": "1 actief project",
-    "pf6": "Alles van Persoonlijk",
+    "pf6": "Alles uit Persoonlijk",
     "pf7": "Onbeperkt aantal projecten",
     "pf8": "Dienstplanner met kalender",
-    "pf9": "Dirigentmodus (teleprompter)",
+    "pf9": "Conductor Mode (Teleprompter)",
     "pf10": "Muziekintegratie",
-    "pf11": "Sjabloonbibliotheek",
+    "pf11": "Sjablonenbibliotheek",
     "pf12": "Teamsamenwerking",
     "pf13": "Bronnenbibliotheek",
-    "pf14": "Kerkregister",
-    "pf15": "Prioritaire ondersteuning",
-    "ctaFree": "Beginnen",
-    "ctaTrial": "14 dagen gratis proefperiode",
+    "pf14": "Kerkboek / register",
+    "pf15": "Prioriteitssupport",
+    "ctaFree": "Nu starten",
+    "ctaSponsor": "Sponsoring aanvragen",
+    "ctaTrial": "Sponsoring aanvragen",
     "faqTitle": "Veelgestelde vragen",
-    "faq1q": "Voor wie is deze tool?",
-    "faq1a": "Voor kapelaans, life coaches, freelance uitvaartsprekers, trouwambtenaren, ziekenhuiskapelaans, pastoors en iedereen die ceremonies, workshops of coachingsessies voorbereidt en uitvoert.",
+    "faq1q": "Voor wie is deze tool bedoeld?",
+    "faq1a": "Voor geestelijken, life coaches, freelance uitvaartsprekers, huwelijksceremoniemeesters, ziekenhuisgeestelijken, predikanten en iedereen die ceremonies, workshops of coachingsessies voorbereidt en uitvoert.",
     "faq2q": "Worden mijn gegevens veilig opgeslagen?",
-    "faq2a": "Ja. Alle gegevens worden versleuteld en opgeslagen in Zwitserland. Alleen jij hebt toegang tot je inhoud.",
+    "faq2a": "Ja. Alle gegevens worden versleuteld in Zwitserland opgeslagen. Alleen u heeft toegang tot uw inhoud.",
     "faq3q": "Welke talen worden ondersteund?",
-    "faq3a": "De interface is beschikbaar in 36 talen. Teksten kunnen in elke taal worden gemaakt.",
-    "faq4q": "Kan ik de Dirigentmodus op een tablet gebruiken?",
-    "faq4a": "Ja! De hele app is geoptimaliseerd als PWA voor mobiel — perfect op een tablet aan de lessenaar.",
-    "faq5q": "Heb ik technische vaardigheden nodig?",
-    "faq5a": "Nee. De interface is intuïtief en ontworpen voor mensen die zich willen richten op inhoud — niet op technologie.",
+    "faq3a": "De gebruikersinterface is beschikbaar in 38 talen. Teksten kunnen in elke taal worden gemaakt.",
+    "faq4q": "Kan ik de Conductor Mode ook op de tablet gebruiken?",
+    "faq4a": "Ja! De gehele app is als PWA mobiel-geoptimaliseerd — perfect op de tablet op de preekstoel.",
+    "faq5q": "Heb ik technische kennis nodig?",
+    "faq5a": "Nee. De bediening is intuïtief en gemaakt voor mensen die zich willen concentreren op inhoud — niet op techniek.",
     "ctaBottom": "Klaar voor betere ceremonies?",
-    "ctaBottomSub": "Begin gratis — geen creditcard nodig.",
+    "ctaBottomSub": "Start gratis — geen creditcard nodig.",
     "ctaBottomBtn": "Nu gratis starten",
     "footerImprint": "Colofon",
-    "footerPrivacy": "Privacybeleid",
-    "footerChurches": "Voor Kerken",
-    "seoTitle": "BibleBot.Life voor Kapelaans & Life Coaches — Plan Ceremonies & Sessies",
-    "seoDesc": "Plan begrafenissen, bruiloften, coachingsessies professioneel: spraakopname, tekstgeneratie, teleprompter, kalender en samenwerking."
+    "footerPrivacy": "Privacy",
+    "footerChurches": "Voor gemeenten",
+    "seoTitle": "BibleBot.Life voor geestelijken & life coaches — ceremonies & sessies plannen",
+    "seoDesc": "Uitvaarten, huwelijken, coachingsessies professioneel plannen: spraakopname, tekstgeneratie, teleprompter, kalender en samenwerking."
   },
   "pricing": {
     "onRequest": "Patronaat op aanvraag",
-    "contactUs": "Neem contact op"
+    "contactUs": "Contact opnemen"
+  },
+  "entryTiles": {
+    "groups": {
+      "emotional": "Er zit me iets dwars",
+      "orientation": "Ik zoek oriëntatie",
+      "deep": "Ik wil dieper gaan"
+    },
+    "labels": {
+      "anxiety": "Ik maak me zorgen",
+      "heartbreak": "Ik ben gekwetst",
+      "loneliness": "Ik voel me alleen",
+      "decision": "Ik sta voor een beslissing",
+      "newstart": "Ik wil opnieuw beginnen",
+      "calling": "Wat is mijn weg?",
+      "bibleverse": "Bijbeltekst begrijpen",
+      "sevenwhys": "Waarom doe ik dit echt?",
+      "lifewheel": "Waar sta ik in het leven?",
+      "thankfulness": "Dankbaarheid",
+      "burnout": "Uitputting",
+      "meaningcrisis": "Zinloosheidscrisis",
+      "selfdoubt": "Zelfvertrouwen",
+      "anger": "Woede & ergernis",
+      "financial": "Financiële zorgen",
+      "illness": "Ziekte",
+      "condolence": "Rouw & verlies",
+      "wedding": "Huwelijk & partnerschap",
+      "baptism": "Doop & geloofspad",
+      "faithdoubt": "Geloofstwijfel",
+      "forgiveness": "Vergeven & loslaten",
+      "sleepless": "Slapeloosheid",
+      "biblequiz": "Bijbelquiz",
+      "prayerwall": "Gebedsmuur"
+    },
+    "showMore": "Meer onderwerpen ontdekken",
+    "showLess": "Minder tonen"
+  },
+  "trust": {
+    "qa": {
+      "title": "QA-gecontroleerd",
+      "text": "Elke Bijbeltekst wordt automatisch gecontroleerd op correctheid — bij elk gesprek."
+    },
+    "noAds": {
+      "title": "Geen reclame",
+      "text": "Geen tracking, geen gegevensdeling, geen monetarisering van je vragen."
+    },
+    "noExpertise": {
+      "title": "Geen voorkennis nodig",
+      "text": "Je hebt geen kerkelijk lidmaatschap en geen theologische voorkennis nodig."
+    }
+  },
+  "tools": {
+    "badge": "Meer dan antwoorden",
+    "title": "Hulpmiddelen die dieper gaan",
+    "subtitle": "Voor momenten waarop je meer nodig hebt dan een antwoord.",
+    "lifewheel": {
+      "title": "Levenswiel-check",
+      "desc": "Hoe staat het nu met werk, relaties, zingeving en gezondheid? Het levenswiel helpt je in 3 minuten duidelijkheid te krijgen — en toont waar de Bijbel direct aansluit.",
+      "cta": "Levenswiel starten"
+    },
+    "sevenwhys": {
+      "title": "De 7-Waarom-methode",
+      "desc": "Waarom doe ik dit echt? Waarom voelt dit zo? BibleBot leidt je door 7 vragen die tot de kern komen — met Bijbelse duiding op het diepste punt.",
+      "cta": "Dieper vragen"
+    },
+    "gratitude": {
+      "title": "Dankbaarheidsdagboek",
+      "desc": "Noem drie dingen waarvoor je vandaag dankbaar bent — en BibleBot vindt passende Psalmen en verzen daarbij. Een dagelijks ritueel dat de blik verandert.",
+      "cta": "Dankbaarheid oefenen"
+    },
+    "lectio": {
+      "title": "Lectio Divina",
+      "desc": "Geleid meditatief Bijbellezen in vier stappen: Lezen, Mediteren, Bidden, Rusten. Een eeuwenoude praktijk, nieuw begeleid.",
+      "cta": "Meditatie starten"
+    },
+    "forgiveness": {
+      "title": "Vergevingsbrief",
+      "desc": "BibleBot begeleidt je bij het formuleren van een vergevingsbrief — stap voor stap, met Bijbelse impulsen en zonder druk.",
+      "cta": "Brief beginnen"
+    },
+    "values": {
+      "title": "Waardenkompas",
+      "desc": "Wat is echt belangrijk voor jou in het leven? Vind je kernwaarden — en ontdek wat de Bijbel daarover zegt. Duidelijkheid in 5 minuten.",
+      "cta": "Waarden ontdekken"
+    },
+    "examen": {
+      "title": "Examen (Ignatius)",
+      "desc": "De beproefde dagelijkse terugblik van Ignatius van Loyola: In 5 stappen de dag reflecteren — dankbaarheid, terugblik, aanrakingen en een gebed voor morgen.",
+      "cta": "Examen starten"
+    },
+    "myFavorites": "Mijn favorieten",
+    "addFavorite": "Toevoegen aan favorieten",
+    "removeFavorite": "Verwijderen uit favorieten",
+    "favoriteTip": "Klik op de ster om je favoriete hulpmiddelen als snelle toegang op te slaan"
+  },
+  "audience": {
+    "title": "Voor wie is BibleBot.Life?",
+    "subtitle": "Kies je weg",
+    "personal": {
+      "title": "Ik zoek persoonlijke begeleiding",
+      "desc": "Vragen over geloof, dagelijkse impulsen, spirituele groei — helemaal in jouw tempo en zonder oordeel.",
+      "f1": "Chat met Bijbelbegeleiding",
+      "f2": "21-dagenreis",
+      "f3": "Dagelijkse impuls via push / Telegram",
+      "f4": "Persoonlijke gespreksgeschiedenis",
+      "cta": "Nu chatten — gratis →"
+    },
+    "church": {
+      "title": "Ik plan diensten & begeleid mensen",
+      "desc": "Voor predikanten, geestelijken en gemeenteteams: AI-ondersteuning voor preekvoorbereiding, teamplanning en meer.",
+      "f1": "Dienstplanner met AI",
+      "f2": "Bronnenbibliotheek",
+      "f3": "Teamcoördinatie",
+      "f4": "Gemeentepagina & gids",
+      "cta": "Voor gemeenten & geestelijken →"
+    }
+  },
+  "faqExtra": {
+    "methodik": {
+      "q": "Wat zit er achter de methodiek van BibleBot?",
+      "a": ""
+    },
+    "journey": {
+      "q": "Wat is de 21-dagenreis?"
+    },
+    "faithPsych": {
+      "q": "Verbindt BibleBot geloof en psychologie?",
+      "a": "BibleBot combineert Bijbelse wijsheid met inzichten uit de evidence-based psychologie — niet om het geloof te psychologiseren, maar om het alledaags te maken. De methoden (PERMA, logotherapie, dankbaarheids- en vergevingsonderzoek) vullen de Bijbel aan, maar vervangen deze niet."
+    }
+  },
+  "prayer": {
+    "title": "Gebedsmuur",
+    "seoTitle": "Gebedsmuur – Voor elkaar bidden | BibleBot.Life",
+    "seoDesc": "Deel je gebedsverzoek en bid voor anderen. Een gemeenschap die voor elkaar opkomt.",
+    "subtitle": "Deel je verzoek – de gemeenschap bidt met je mee.",
+    "placeholder": "Wat ligt je op het hart?",
+    "anonymous": "Anoniem plaatsen",
+    "namePlaceholder": "Je naam (optioneel)",
+    "submit": "Verzoek delen",
+    "errorTitle": "Fout",
+    "errorDesc": "Probeer het opnieuw.",
+    "sharedTitle": "🙏 Gebedsverzoek gedeeld",
+    "sharedDesc": "Bedankt voor je vertrouwen.",
+    "moderationTitle": "Wordt gecontroleerd",
+    "moderationDesc": "Je verzoek wordt na goedkeuring zichtbaar.",
+    "empty": "Nog geen gebedsverzoeken. Wees de eerste!",
+    "anonymousLabel": "Anoniem",
+    "someoneLabel": "Iemand",
+    "prayed": "Gebeden",
+    "pray": "Ik bid",
+    "justNow": "zojuist",
+    "minutesAgo": "{{count}} min. geleden",
+    "hoursAgo": "{{count}} uur geleden",
+    "daysAgo": "{{count}} dag(en) geleden"
+  },
+  "quiz": {
+    "seoTitle": "Bijbelquiz – Spelenderwijs leren | BibleBot.Life",
+    "seoDesc": "Test je Bijbelkennis met meerkeuzevragen en vers-raden.",
+    "title": "Bijbelquiz",
+    "difficulty": "Moeilijkheidsgraad",
+    "easy": "Makkelijk",
+    "easyDesc": "Boeken uit verschillende delen van de Bijbel",
+    "medium": "Gemiddeld",
+    "mediumDesc": "Boeken uit hetzelfde Testament",
+    "hard": "Moeilijk",
+    "hardDesc": "Zeer vergelijkbare boeken – voor kenners",
+    "multipleChoice": "Meerkeuze",
+    "multipleChoiceDesc": "AI genereert vragen over Bijbelverzen",
+    "verseGuess": "Vers raden",
+    "verseGuessDesc": "Welk boek? Herken de Bijbelvers",
+    "highscores": "Scorebord",
+    "question": "Vraag {{current}}/{{total}}",
+    "loading": "Vraag wordt gegenereerd…",
+    "whichBook": "Uit welk boek komt dit vers?",
+    "correct": "✅ Correct!",
+    "wrong": "❌ Helaas fout",
+    "next": "Volgende vraag",
+    "back": "Terug",
+    "menu": "Menu",
+    "playAgain": "Opnieuw spelen",
+    "resultExcellent": "Uitstekend!",
+    "resultGreat": "Zeer goed!",
+    "resultGood": "Goed gedaan!",
+    "resultKeepGoing": "Blijf oefenen!",
+    "resultSeoTitle": "Bijbelquiz – Resultaat | BibleBot.Life",
+    "resultSeoDesc": "Je quizresultaat",
+    "rightLabel": "Correct",
+    "wrongLabel": "Fout",
+    "percentLabel": "Percentage",
+    "yourAnswers": "Je antwoorden"
+  },
+  "bibleSearch": {
+    "seoTitle": "Semantische Bijbelzoekmachine – BibleBot.Life",
+    "seoDesc": "Doorzoek de Bijbel op thema's, concepten en betekenissen.",
+    "title": "Semantische Bijbelzoekmachine",
+    "subtitle": "Zoek op thema's, concepten of vragen — de AI vindt passende Bijbelteksten.",
+    "placeholder": "bijv. «Waar spreekt Jezus over vergeving?» of «Hoop in moeilijke tijden»",
+    "allTranslations": "Alle vertalingen",
+    "results": "{{count}} resultaten",
+    "noResults": "Geen resultaten gevonden. Probeer een andere formulering.",
+    "emptyState": "Voer een onderwerp of vraag in",
+    "searchFailed": "Zoeken mislukt",
+    "unknownError": "Onbekende fout",
+    "suggestedTerms": [
+      "Vergeving",
+      "Hoop",
+      "Liefde van God",
+      "Schepping",
+      "Gerechtigheid"
+    ]
+  },
+  "toolPrompts": {
+    "sevenWhys": "Ik wil de 7-Waarom-methode proberen",
+    "gratitude": "Ik wil het dankbaarheidsdagboek proberen. Vraag me alsjeblieft naar drie dingen waarvoor ik vandaag dankbaar ben, en zoek dan passende Bijbelverzen daarbij.",
+    "lectio": "Ik wil Lectio Divina proberen. Leid me alsjeblieft door de vier stappen: Lectio (Lezen), Meditatio (Mediteren), Oratio (Bidden), Contemplatio (Rusten). Kies een passende Bijbeltekst voor mij.",
+    "forgiveness": "Ik wil een vergevingsbrief schrijven. Begeleid me alsjeblieft stap voor stap — met Bijbelse impulsen en empathisch.",
+    "values": "Ik wil mijn waardenkompas ontdekken. Help me te ontdekken wat echt belangrijk voor me is — en laat me zien wat de Bijbel zegt over mijn kernwaarden.",
+    "examen": "Ik wil het Ignatiaanse Examen doen. Leid me alsjeblieft door de 5 stappen: 1) Stil worden en Gods aanwezigheid voelen, 2) Dankbaarheid voor de dag, 3) Terugblik op de dag, 4) Wat heeft me geraakt of belast?, 5) Vooruitblik op morgen met een gebed.",
+    "explainRef": "Leg {{ref}} in detail uit: Wat is de historische context? Wie spreekt? Wat komt ervoor en erna? En wat betekent dit voor mij vandaag?"
+  },
+  "records": {
+    "title": "Kerkboek",
+    "search": "Inzendingen zoeken…",
+    "add": "Nieuwe inzending",
+    "addTitle": "Nieuwe kerkboek-inzending",
+    "editTitle": "Inzending bewerken",
+    "empty": "Nog geen inzendingen vastgelegd.",
+    "entries": "Inzendingen",
+    "noChurch": "Geen gemeente toegewezen.",
+    "type": "Type",
+    "allTypes": "Alle typen",
+    "date": "Datum",
+    "number": "Nummer",
+    "officiant": "Voorganger",
+    "notes": "Notities",
+    "participants": "Deelnemers",
+    "participantName": "Naam",
+    "participantRole": "Rol",
+    "addParticipant": "Deelnemer toevoegen",
+    "save": "Opslaan",
+    "cancel": "Annuleren",
+    "created": "Inzending gemaakt.",
+    "updated": "Inzending bijgewerkt.",
+    "deleted": "Inzending verwijderd.",
+    "error": "Fout bij opslaan."
+  },
+  "settings": {
+    "title": "Instellingen",
+    "noChurch": "Geen gemeente toegewezen.",
+    "profile": "Gemeenteprofiel",
+    "profileDesc": "Basisinformatie over uw gemeente.",
+    "churchName": "Naam van de gemeente",
+    "city": "Plaats",
+    "denomination": "Confessie",
+    "selectDenomination": "Confessie kiezen…",
+    "language": "Taal",
+    "website": "Website",
+    "serviceTimes": "Diensttijden",
+    "serviceTimesPlaceholder": "bijv. Zondag 10:00 uur",
+    "contact": "Contact",
+    "contactPerson": "Contactpersoon",
+    "email": "E-mail",
+    "phone": "Telefoon",
+    "pastorName": "Predikant",
+    "branding": "Branding",
+    "brandingDesc": "Kleuren en uiterlijk aanpassen.",
+    "primaryColor": "Primaire kleur",
+    "secondaryColor": "Secundaire kleur",
+    "botName": "Botnaam",
+    "welcomeMessage": "Welkomstbericht",
+    "welcomePlaceholder": "Welkom bij onze gemeente…",
+    "billing": "Factuurgegevens",
+    "billingDesc": "Voor facturering en boekhouding.",
+    "billingName": "Factuurontvanger",
+    "billingAddress": "Adres",
+    "billingStreet": "Straat",
+    "billingZip": "Postcode",
+    "billingCity": "Plaats",
+    "billingCountry": "Land",
+    "billingEmail": "Factuur-e-mail",
+    "billingRef": "Referentie",
+    "payment": "Betaalmethode",
+    "notifications": "Meldingen",
+    "notificationsDesc": "E-mailmeldingen configureren.",
+    "notifyOnContact": "Bij contactaanvragen",
+    "notifyOnContactDesc": "Melding ontvangen wanneer iemand via het contactformulier schrijft.",
+    "members": "Leden",
+    "membersDesc": "Leden die zich via uw gemeentepagina hebben geregistreerd.",
+    "totalMembers": "Totaal aantal leden",
+    "consentedMembers": "Toestemming voor contact",
+    "memberName": "Naam",
+    "memberEmail": "E-mail",
+    "memberSince": "Sinds",
+    "save": "Opslaan",
+    "saving": "Wordt opgeslagen…",
+    "saved": "Opgeslagen!",
+    "error": "Fout bij opslaan."
+  },
+  "team": {
+    "title": "Team",
+    "noChurch": "Geen gemeente toegewezen.",
+    "members": "Teamleden",
+    "add": "Lid toevoegen",
+    "edit": "Bewerken",
+    "name": "Naam",
+    "email": "E-mail",
+    "role": "Rol",
+    "allRoles": "Alle rollen",
+    "status": "Status",
+    "active": "Actief",
+    "inactive": "Inactief",
+    "availability": "Beschikbaarheid",
+    "save": "Opslaan",
+    "cancel": "Annuleren",
+    "created": "Teamlid toegevoegd.",
+    "updated": "Teamlid bijgewerkt.",
+    "deleted": "Teamlid verwijderd.",
+    "empty": "Nog geen teamleden.",
+    "error": "Fout bij opslaan."
+  },
+  "dashboard": {
+    "title": "Dienstplanner",
+    "welcome": "Welkom bij BibleBot.Life",
+    "setupHint": "Stel eerst je gemeente in om de dienstplanner te gebruiken.",
+    "loading": "Laden…",
+    "newService": "Nieuwe dienst",
+    "newServiceDesc": "Dienst maken en plannen",
+    "calendar": "Kalender",
+    "calendarDesc": "Alle diensten in één oogopslag",
+    "library": "Bibliotheek",
+    "libraryDesc": "Liederen, gebeden en lezingen",
+    "services": "Diensten",
+    "team": "Team",
+    "resources": "Bibliotheek",
+    "templates": "Sjablonen",
+    "series": "Preekreeksen",
+    "records": "Kerkboek",
+    "invoices": "Facturen",
+    "settings": "Instellingen",
+    "conductor": "Dirigent",
+    "home": "Overzicht"
+  },
+  "services": {
+    "title": "Dienstkalender",
+    "newService": "Nieuwe dienst",
+    "month": "Maand",
+    "week": "Week",
+    "today": "Vandaag",
+    "loading": "Laden…",
+    "noServices": "Geen diensten in deze periode.",
+    "type": {
+      "regular": "Dienst",
+      "baptism": "Doop",
+      "wedding": "Huwelijk",
+      "funeral": "Uitvaart",
+      "confirmation": "Vormsel",
+      "communion": "Avondmaal",
+      "special": "Speciaal",
+      "other": "Overig"
+    },
+    "status": {
+      "draft": "Concept",
+      "published": "Gepubliceerd",
+      "archived": "Gearchiveerd"
+    },
+    "actions": {
+      "edit": "Bewerken",
+      "duplicate": "Dupliceren",
+      "delete": "Verwijderen",
+      "archive": "Archiveren",
+      "publish": "Publiceren",
+      "draft": "Als concept",
+      "conductor": "Dirigentmodus",
+      "deleteConfirm": "Dienst verwijderen?",
+      "deleteDesc": "Deze dienst wordt onherroepelijk verwijderd.",
+      "cancel": "Annuleren"
+    },
+    "weekdays": [
+      "Ma",
+      "Di",
+      "Wo",
+      "Do",
+      "Vr",
+      "Za",
+      "Zo"
+    ],
+    "months": [
+      "Januari",
+      "Februari",
+      "Maart",
+      "April",
+      "Mei",
+      "Juni",
+      "Juli",
+      "Augustus",
+      "September",
+      "Oktober",
+      "November",
+      "December"
+    ]
+  },
+  "editor": {
+    "back": "Terug",
+    "save": "Opslaan",
+    "saving": "Opslaan…",
+    "saved": "Dienst opgeslagen!",
+    "title": "Titel",
+    "titleDefault": "Nieuwe dienst",
+    "date": "Datum",
+    "time": "Tijd",
+    "type": "Type",
+    "tradition": "Traditie",
+    "traditions": {
+      "catholic": "Katholiek",
+      "reformed": "Gereformeerd",
+      "lutheran": "Luthers",
+      "evangelical": "Evangelisch",
+      "secular": "Seculier"
+    },
+    "blocks": "Verloopblokken",
+    "addBlock": "Blok toevoegen",
+    "emptyBlocks": "Klik op «Blok toevoegen» om het verloop te maken.",
+    "template": "Sjabloon",
+    "templatePicker": "Sjabloon kiezen",
+    "noTemplate": "Start zonder sjabloon",
+    "saveAsTemplate": "Opslaan als sjabloon",
+    "templateName": "Sjabloonnaam",
+    "templateSaved": "Sjabloon opgeslagen!",
+    "exportPdf": "PDF exporteren",
+    "sendEmail": "Per e-mail verzenden",
+    "emailRecipient": "Ontvanger e-mail",
+    "emailSend": "Verzenden",
+    "emailSending": "Wordt verzonden…",
+    "emailSent": "E-mail verzonden!",
+    "emailError": "Fout bij verzenden.",
+    "askBibleBot": "Vraag BibleBot",
+    "assignTeam": "Team toewijzen",
+    "resourceSidebar": "Bibliotheek",
+    "error": "Fout bij opslaan.",
+    "deleteConfirm": "Dienst verwijderen?",
+    "deleteDesc": "Deze dienst wordt onherroepelijk verwijderd.",
+    "deleted": "Dienst verwijderd.",
+    "duplicated": "Dienst gedupliceerd.",
+    "statusChanged": "Status gewijzigd."
+  },
+  "blocks": {
+    "song": "Lied",
+    "reading": "Lezing",
+    "prayer": "Gebed",
+    "sermon": "Preek",
+    "communion": "Avondmaal",
+    "liturgy": "Liturgie",
+    "announcement": "Mededeling",
+    "blessing": "Zegen",
+    "silence": "Stilte",
+    "freeText": "Vrije tekst",
+    "offering": "Collecte",
+    "procession": "Intocht/Uittocht",
+    "titlePlaceholder": "Titel…",
+    "notesPlaceholder": "Notities…",
+    "assignTo": "Toewijzen aan…",
+    "duration": "Duur (min.)",
+    "delete": "Blok verwijderen",
+    "moveUp": "Naar boven",
+    "moveDown": "Naar beneden"
+  },
+  "conductor": {
+    "title": "Dirigentmodus",
+    "start": "Starten",
+    "exit": "Afsluiten",
+    "prev": "Vorige",
+    "next": "Volgende",
+    "block": "Blok {{current}} van {{total}}",
+    "noBlocks": "Geen blokken beschikbaar.",
+    "loading": "Laden…"
+  },
+  "resources": {
+    "title": "Bronnenbibliotheek",
+    "add": "Nieuwe bron",
+    "search": "Zoeken…",
+    "allTypes": "Alle typen",
+    "empty": "Nog geen bronnen.",
+    "type": {
+      "song": "Lied",
+      "prayer": "Gebed",
+      "reading": "Lezing",
+      "liturgy": "Liturgie",
+      "other": "Overig"
+    },
+    "tags": "Tags",
+    "addTag": "Tag toevoegen",
+    "save": "Opslaan",
+    "cancel": "Annuleren",
+    "created": "Bron gemaakt.",
+    "updated": "Bron bijgewerkt.",
+    "deleted": "Bron verwijderd.",
+    "error": "Fout bij opslaan.",
+    "sidebar": "Bibliotheek",
+    "addToService": "Toevoegen aan dienst",
+    "fixedCategories": {
+      "mood": "Stemming",
+      "ceremony": "Ceremonie",
+      "season": "Kerkelijk jaar"
+    },
+    "moods": {
+      "joyful": "Vreugdevol",
+      "reflective": "Reflectief",
+      "solemn": "Plechtig",
+      "comforting": "Troostend",
+      "grateful": "Dankbaar",
+      "hopeful": "Hoopvol"
+    },
+    "ceremonies": {
+      "baptism": "Doop",
+      "wedding": "Huwelijk",
+      "funeral": "Uitvaart",
+      "confirmation": "Vormsel",
+      "communion": "Avondmaal"
+    },
+    "seasons": {
+      "advent": "Advent",
+      "christmas": "Kerst",
+      "lent": "Vasten",
+      "easter": "Pasen",
+      "pentecost": "Pinksteren",
+      "ordinary": "Jaarkring"
+    }
+  },
+  "templates": {
+    "title": "Dienstsjablonen",
+    "add": "Nieuw sjabloon",
+    "empty": "Nog geen sjablonen.",
+    "blocks": "{{count}} blokken",
+    "default": "Standaard",
+    "custom": "Eigen",
+    "use": "Gebruiken",
+    "delete": "Verwijderen",
+    "deleted": "Sjabloon verwijderd.",
+    "error": "Fout."
+  },
+  "series": {
+    "title": "Preekreeksen",
+    "add": "Nieuwe reeks",
+    "empty": "Nog geen preekreeksen.",
+    "name": "Naam",
+    "description": "Beschrijving",
+    "startDate": "Startdatum",
+    "endDate": "Einddatum",
+    "services": "Diensten",
+    "save": "Opslaan",
+    "cancel": "Annuleren",
+    "created": "Preekreeks gemaakt.",
+    "updated": "Preekreeks bijgewerkt.",
+    "deleted": "Preekreeks verwijderd.",
+    "error": "Fout bij opslaan."
+  },
+  "invoices": {
+    "title": "Facturen",
+    "add": "Nieuwe factuur",
+    "empty": "Nog geen facturen.",
+    "number": "Factuurnummer",
+    "date": "Datum",
+    "dueDate": "Vervaldatum",
+    "amount": "Bedrag",
+    "status": "Status",
+    "draft": "Concept",
+    "sent": "Verzonden",
+    "paid": "Betaald",
+    "download": "PDF downloaden",
+    "error": "Fout."
+  },
+  "wizard": {
+    "title": "Gemeente instellen",
+    "churchName": "Naam van de gemeente",
+    "slug": "URL-afkorting",
+    "denomination": "Confessie",
+    "city": "Plaats",
+    "country": "Land",
+    "submit": "Gemeente maken",
+    "creating": "Wordt gemaakt…",
+    "created": "Gemeente gemaakt!",
+    "error": "Fout bij maken."
+  },
+  "teamRoles": {
+    "pastor": "Predikant",
+    "musician": "Muzikant(e)",
+    "lector": "Lector(es)",
+    "sacristan": "Koster(es)",
+    "technician": "Technicus(a)",
+    "volunteer": "Vrijwilliger(ster)",
+    "other": "Overig"
+  },
+  "recordTypes": {
+    "baptism": "Doop",
+    "wedding": "Huwelijk",
+    "funeral": "Uitvaart"
+  },
+  "contact": {
+    "pageTitle": "Contact – BibleBot.Life",
+    "pageDesc": "Stuur ons een bericht – we kijken uit naar uw aanvraag.",
+    "badge": "Contact",
+    "heading": "Schrijf ons",
+    "subheading": "Heeft u een vraag, feedback of wilt u een partnerschap bespreken? We kijken uit naar uw bericht.",
+    "name": "Naam",
+    "namePlaceholder": "Uw naam",
+    "email": "E-mail",
+    "emailPlaceholder": "uw@email.nl",
+    "category": "Onderwerp",
+    "categoryPlaceholder": "Kies een onderwerp",
+    "categoryFeedback": "Feedback",
+    "categoryQuestion": "Vraag",
+    "categoryPartnership": "Partnerschap",
+    "categoryOther": "Overig",
+    "message": "Bericht",
+    "messagePlaceholder": "Schrijf ons uw bericht…",
+    "send": "Bericht verzenden",
+    "sending": "Wordt verzonden…",
+    "fillAll": "Vul alle velden in.",
+    "errorGeneric": "Er is een fout opgetreden. Probeer het opnieuw.",
+    "thankYouTitle": "Hartelijk dank!",
+    "thankYouMessage": "Uw bericht is ontvangen. Wij nemen zo snel mogelijk contact met u op.",
+    "sendAnother": "Nog een bericht verzenden"
+  },
+  "about": {
+    "title": "Over ons – BibleBot.Life",
+    "metaDesc": "Wie zit er achter BibleBot.Life? Lees meer over oprichter Reto Wettstein en de visie achter het project.",
+    "heading": "Over BibleBot.Life",
+    "intro": "BibleBot.Life is een persoonlijk hartproject – geboren uit het geloof dat de Bijbel voor iedereen toegankelijk en begrijpelijk moet zijn. Ongeacht confessie, taal of technische kennis.",
+    "visionTitle": "De visie",
+    "visionText": "Een gratis, anonieme begeleider voor iedereen die zich met de Bijbel wil bezighouden. Geen tracking, geen oordeel – gewoon een goed gesprek bij kaarslicht. In 38 talen, voor kerken, geestelijken en elk individu.",
+    "founderTitle": "De oprichter",
+    "founderBio": "Reto Wettstein is bedrijfsinformaticus, ondernemer en politiek betrokken familieman uit Brugg. Hij is oprichter van de bedrijven biz.Telligence, Prime Data en 2Go Media AG, gespecialiseerd in digitale marketing- en CRM-processen. Met passie, strategisch denken en veel hart en ziel verbindt hij technologie met maatschappelijke betrokkenheid.",
+    "education": "Opleiding",
+    "awards": "Onderscheidingen",
+    "engagements": "Engagementen",
+    "personal": "Persoonlijk",
+    "residence": "Woonplaats",
+    "confession": "Confessie",
+    "family": "Familie",
+    "familyValue": "Getrouwd, twee kinderen",
+    "cta": "Vragen, ideeën of gewoon hallo zeggen?",
+    "approachTitle": "Onze aanpak",
+    "approachSubtitle": "Pastorale zorg begint niet pas in het persoonlijke gesprek. Het begint daar waar mensen vragen hebben – vaak stil, vaak 's nachts, vaak alleen.",
+    "level1Badge": "Eerste aanspreekpunt",
+    "level1Desc": "24 uur per dag bereikbaar, anoniem en zonder drempel. Voor iedereen die een vraag heeft, een impuls zoekt of gewoon niet alleen wil zijn – de eerste stap is de gemakkelijkste.",
+    "level2Badge": "Gemeenschap",
+    "level2Title": "Dienst & gemeente",
+    "level2Desc": "Samenkomen, luisteren, samen vieren. De dienst geeft het geloof een thuis in de gemeenschap.",
+    "level3Badge": "Persoonlijk",
+    "level3Title": "1:1 Pastorale zorg",
+    "level3Desc": "Het vertrouwelijke gesprek onder vier ogen. Voor de momenten die persoonlijke begeleiding nodig hebben.",
+    "approachNote": "BibleBot.Life verlaagt de drempel – en leidt mensen stap voor stap dichter bij de gemeenschap en persoonlijke begeleiding.",
+    "tag_anonymous": "Anoniem",
+    "tag_free": "Gratis",
+    "tag_weekly": "Wekelijks",
+    "tag_community": "Gemeenschap",
+    "tag_personal": "Persoonlijk",
+    "tag_individual": "Individueel",
+    "edu1": "Gediplomeerd bedrijfsinformaticus UZH",
+    "edu2": "Gediplomeerd handelsleraar UZH",
+    "edu3": "Federaal gediplomeerd leidinggevende met FA",
+    "edu4": "CAS Strategy with Impact FHGR",
+    "edu5": "CAS Crisiscommunicatie ZHAW",
+    "edu6": "VR-CAS Swiss Board School HSG",
+    "edu7": "Scrum Master",
+    "award1": "Venture Leader 2011",
+    "award2": "Microsoft Innovation Award 2011",
+    "award3": "Genomineerd Swiss CRM Innovation Award 2011",
+    "award4": "Genomineerd Microsoft European BizSpark Award 2011",
+    "eng1": "Grootraad Kanton Aargau",
+    "eng2": "Voormalig vice-burgemeester stad Brugg",
+    "eng3": "Voorzitter stichtingsbestuur Stichting Gezondheid Regio Brugg",
+    "eng4": "Voorzitter RvC Süssbach Pflegezentrum AG",
+    "eng5": "Vice-voorzitter IBB Holding AG",
+    "eng6": "OK-voorzitter Stadsfeest 2026"
+  },
+  "nav.about": "Over ons",
+  "ceremony": {
+    "wedding": {
+      "title": "Huwelijk",
+      "subtitle": "Huwelijksgeloften schrijven, liederen kiezen en de viering plannen.",
+      "seoTitle": "Huwelijk voorbereiden",
+      "seoDesc": "Persoonlijke huwelijksteksten maken en delen met de geestelijke.",
+      "partner1": "Partner 1",
+      "partner2": "Partner 2",
+      "birthName": "Geboren",
+      "birthDate": "Geboortedatum",
+      "from": "Van (plaats)",
+      "confession": "Confessie",
+      "date": "Datum van de bruiloft",
+      "venue": "Locatie / kerk",
+      "tradition": "Traditie van de bruiloft"
+    },
+    "baptism": {
+      "title": "Doop",
+      "subtitle": "Doopwensen formuleren en het verloop met de gemeente voorbereiden.",
+      "seoTitle": "Doop voorbereiden",
+      "seoDesc": "Persoonlijke doopteksten maken en delen met de geestelijke.",
+      "childName": "Naam van de dopeling",
+      "birthDate": "Geboortedatum",
+      "parents": "Ouders",
+      "godparents": "Peetouders",
+      "tradition": "Confessie / traditie"
+    },
+    "confirmation": {
+      "title": "Vormsel / Communie",
+      "subtitle": "Vormseltekst vinden, persoonlijke teksten en gebeden voorbereiden.",
+      "seoTitle": "Vormsel / Communie voorbereiden",
+      "seoDesc": "Persoonlijke vormsel- of communieteksten maken.",
+      "name": "Naam van de vormeling / communicant",
+      "verse": "Vormseltekst / Bijbelvers",
+      "hobbies": "Interesses / hobby's",
+      "tradition": "Aard van de viering"
+    }
+  },
+  "circle": {
+    "nav": "Mijn kring",
+    "createTitle": "Kring oprichten",
+    "createDesc": "Start een privéruimte voor maximaal 8 personen",
+    "joinTitle": "Kring toetreden",
+    "joinDesc": "Heb je een uitnodigingscode ontvangen?",
+    "namePlaceholder": "Naam van de kring (bijv. Familie Wettstein)",
+    "displayNamePlaceholder": "Je weergavenaam in de kring",
+    "inviteCodePlaceholder": "Uitnodigingscode (8 tekens)",
+    "inviteLink": "Uitnodigingslink kopiëren",
+    "inviteCopied": "Uitnodigingslink gekopieerd!",
+    "tabOverview": "Overzicht",
+    "tabPrayers": "Gebeden",
+    "tabJourney": "Reis",
+    "prayerPlaceholder": "Je gebedsverzoek (max. 500 tekens)...",
+    "prayButton": "🙏 Bid hiervoor",
+    "answeredButton": "✓ Verhoord",
+    "shareImpulse": "Delen met kring",
+    "sharedToast": "Gedeeld met je kring 🙏",
+    "generateQuestions": "Discussievragen genereren",
+    "journeyUpdateButton": "Vandaag voltooid ✓",
+    "noCircleTitle": "Nog geen kring",
+    "noCircleDesc": "Richt een kring op of word lid van een kring — gratis.",
+    "membersOnline": "vandaag actief",
+    "weeklyVerse": "Vers van deze week",
+    "teaserBadge": "Nieuw: Mijn kring",
+    "teaserTitle": "Geloof deelt zich — in echte relaties",
+    "teaserDesc": "Richt een privé kring op met vrienden of je familie. Gezamenlijke impulsen, gebedsverzoeken, en de 21-dagenreis — voor elkaar zijn, ook digitaal.",
+    "teaserCta": "Kring oprichten — gratis",
+    "motivationStart": "Start samen — vandaag is de beste dag ✨",
+    "motivationCatchUp": "{{name}} is al op dag {{days}} — jullie kunnen inhalen! 💪",
+    "members": "Leden",
+    "thisWeek": "Deze week",
+    "showAnswered": "Verhoorde tonen",
+    "newPrayer": "Nieuw gebedsverzoek",
+    "send": "Verzenden",
+    "hideAnswered": "Verhoorde verbergen",
+    "generateError": "Fout bij genereren"
+  },
+  "teachers": {
+    "seoTitle": "Lesplanner voor godsdienstdocenten — BibleBot.Life",
+    "seoDesc": "Plan godsdienstlessen in bouwstenen. Leerdoelen, materialenbibliotheek, Bijbelonderzoek, lesplan-PDF en live-modus. Begin gratis.",
+    "eyebrow": "Voor godsdienstdocenten",
+    "heroLine1": "Lessen plannen.",
+    "heroLine2": "Eindelijk gestructureerd.",
+    "heroDesc": "Lesplannen in bouwstenen. Leerdoelen, Bijbelteksten, materiaal en live-modus — alles op één plek, in plaats van in tien Word-bestanden.",
+    "ctaStart": "Gratis beginnen",
+    "ctaDemo": "Bekijk demo",
+    "heroNote": "Geen schoolaccount nodig · Geen leerlinggegevens · Binnen 2 minuten klaar voor gebruik",
+    "painTitle": "Herken je dit?",
+    "pain1": "Lesplannen in Word — onoverzichtelijk, moeilijk herbruikbaar",
+    "pain2": "Materialen verspreid over USB-stick, cloud, e-mailbijlagen",
+    "pain3": "Moeizaam Bijbelteksten onderzoeken en in Word plakken",
+    "pain4": "Tijdens de les schakelen tussen notities, Bijbel en beamer",
+    "painSolution": "De lesplanner lost dit op.",
+    "featuresTitle": "Alles wat je nodig hebt voor godsdienstonderwijs",
+    "featuresDesc": "Geen rooster-tool, geen LMS — maar een planner voor de individuele les en de reeks.",
+    "f1Title": "Leerdoelen per les",
+    "f1Desc": "Definieer leerdoelen en competenties direct in de editor — zichtbaar in het lesplan.",
+    "f2Title": "Bouwstenen voor lessen",
+    "f2Desc": "Introductie, input, activiteit, werkblad, discussie, reflectie, huiswerk — drag & drop.",
+    "f3Title": "Bijbelonderzoek in chat",
+    "f3Desc": "Bijbelteksten, uitleg en discussievragen via BibleBot direct vanuit de editor.",
+    "f4Title": "Materialenbibliotheek",
+    "f4Desc": "Werkbladen, liederen, video's en Bijbelteksten verzamelen, taggen, hergebruiken.",
+    "f5Title": "Kalender & weekplanning",
+    "f5Desc": "Alle lessen per klas — als lijst of weekoverzicht.",
+    "f6Title": "Conductor-modus",
+    "f6Desc": "Live in de klas: afleidingsvrij, swipebaar, perfect op de beamer of tablet.",
+    "f7Title": "Reeksen & co-teaching",
+    "f7Desc": "Lesreeksen («Gelijkenissen», «Wereldreligies»), vervangingen, mentor-sharing.",
+    "f8Title": "Lesplan-PDF",
+    "f8Desc": "Netjes geformatteerd lesplan voor mentor, schoolleiding of stage.",
+    "f9Title": "Sjablonen per niveau",
+    "f9Desc": "Maak je eigen sjablonen aan — introductieles, dubbele les, projectdag.",
+    "includedEyebrow": "Inbegrepen in de lesplanner",
+    "includedTitle": "Gratis voor docenten",
+    "includedDesc": "Persoonlijk gebruik — geen schoollicentie nodig.",
+    "tf1": "Blok-editor met lesbouwstenen",
+    "tf2": "Leerdoelen en klassen per les",
+    "tf3": "Materialenbibliotheek (werkbladen, video's, afbeeldingen)",
+    "tf4": "Bijbelzoekfunctie in 5 vertalingen",
+    "tf5": "Lesplan als PDF",
+    "tf6": "Conductor-modus voor live-lessen",
+    "tf7": "Weekkalender en lesreeksen",
+    "tf8": "BibleBot-chat voor onderzoek en discussie-ideeën",
+    "faqTitle": "Vragen & antwoorden",
+    "faq1q": "Is dit alleen voor godsdienstonderwijs?",
+    "faq1a": "Primair ja — de bouwstenen zijn afgestemd op religie en ethiek. Maar voor andere vakken met een vergelijkbare structuur (geschiedenis, filosofie) werkt het ook.",
+    "faq2q": "Kan ik het gratis gebruiken?",
+    "faq2a": "Ja. De persoonlijke modus is gratis — zonder schoollicentie, zonder schoolaccount. Je kunt direct beginnen.",
+    "faq3q": "Welke leerplannen worden ondersteund?",
+    "faq3a": "Je werkt met vrije klas- en niveautekst. Leerplanreferenties (LP21, LehrplanPLUS, kantonale) voer je zelf in — wij zijn geen verplicht curriculum.",
+    "faq4q": "Hoe zit het met gegevensbescherming?",
+    "faq4a": "Geen leerlinggegevens nodig. Je plant lessen — geen aanwezigheid, geen cijfers, geen namen. Je ontwerpen zijn privé.",
+    "faq5q": "Werkt het ook zonder internet?",
+    "faq5a": "De app is als PWA installeerbaar. Bestaande lessen zijn offline leesbaar; om op te slaan heb je verbinding nodig.",
+    "finalTitle": "Plan je volgende les in 5 minuten",
+    "finalDesc": "Geen setup. Geen creditcard. Gewoon beginnen."
+  },
+  "feedback": {
+    "helpful": "Nuttig",
+    "notHelpful": "Niet nuttig",
+    "thanks": "Bedankt voor je feedback!",
+    "thanksDetail": "Bedankt! We bekijken het.",
+    "placeholder": "Wat klopte niet? (optioneel)",
+    "send": "Verzenden",
+    "error": "Fout"
   }
 }

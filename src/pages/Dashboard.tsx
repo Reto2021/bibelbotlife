@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import { Calendar, Plus, BookOpen, Users, Settings, Home, ListMusic, FileText, Receipt, LayoutTemplate } from "lucide-react";
+import { Calendar, Plus, BookOpen, Users, Settings, Home, ListMusic, FileText, Receipt, LayoutTemplate, GraduationCap } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation } from "react-router-dom";
 import {
@@ -20,10 +20,12 @@ import { Button } from "@/components/ui/button";
 import { LogOut } from "lucide-react";
 import { AppLogo } from "@/components/AppLogo";
 import { Link } from "react-router-dom";
+import { BibleBotChat } from "@/components/BibelBotChat";
 
 const navItems = [
   { title: "Übersicht", url: "/dashboard", icon: Home },
   { title: "Kalender", url: "/dashboard/services", icon: Calendar },
+  { title: "Unterricht", url: "/dashboard/lessons", icon: GraduationCap },
   { title: "Bibliothek", url: "/dashboard/resources", icon: BookOpen },
   { title: "Serien", url: "/dashboard/series", icon: ListMusic },
   { title: "Vorlagen", url: "/dashboard/templates", icon: LayoutTemplate },
@@ -91,16 +93,17 @@ export default function Dashboard() {
     <SidebarProvider>
       <div className="min-h-screen flex w-full">
         <DashboardSidebar />
-        <div className="flex-1 flex flex-col">
-          <header className="h-12 flex items-center border-b border-border px-4">
+        <div className="flex-1 flex flex-col overflow-hidden">
+          <header className="h-12 flex items-center border-b border-border px-4 shrink-0">
             <SidebarTrigger className="mr-4" />
             <span className="text-sm font-medium text-muted-foreground">Messeplaner</span>
           </header>
-          <main className="flex-1 p-6">
+          <main className="flex-1 overflow-auto p-6">
             <Outlet />
           </main>
         </div>
       </div>
+      <BibleBotChat />
     </SidebarProvider>
   );
 }

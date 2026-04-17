@@ -1,10 +1,11 @@
 import { useState, useCallback, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { DndContext, closestCenter, KeyboardSensor, PointerSensor, TouchSensor, useSensor, useSensors, type DragEndEvent, type DragStartEvent, type DragOverEvent, DragOverlay } from "@dnd-kit/core";
 import { arrayMove, SortableContext, sortableKeyboardCoordinates, verticalListSortingStrategy } from "@dnd-kit/sortable";
-import { ArrowLeft, Save, Clock, Plus, Play, Library, BookmarkPlus, FileDown, Mail, Users, GripVertical } from "lucide-react";
+import { ArrowLeft, Save, Clock, Plus, Play, Library, BookmarkPlus, FileDown, FileText, Mail, Users, GripVertical, PanelRightOpen, PanelRightClose, Trash2, Copy, MoreVertical, Archive, Eye, FileEdit } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ServiceBlock, type ServiceBlockData, type BlockType } from "@/components/services/ServiceBlock";
@@ -16,29 +17,61 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
 import { ResourcePicker } from "@/components/services/ResourcePicker";
+import { ResourceSidebar } from "@/components/services/ResourceSidebar";
 import type { Resource } from "@/hooks/use-resources";
 import { useTemplates, useCreateTemplate, type ServiceTemplate } from "@/hooks/use-templates";
 import { exportServicePdf, exportServicePdfBlob } from "@/lib/export-service-pdf";
+import { exportServiceDocx } from "@/lib/export-service-docx";
 import { Label } from "@/components/ui/label";
+import { useDeleteService, useDuplicateService, useUpdateServiceStatus } from "@/hooks/use-services";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
+import { Badge } from "@/components/ui/badge";
+
+const SERVICE_TYPE_TITLES: Record<string, string> = {
+  regular: "Neuer Gottesdienst",
+  baptism: "Taufgottesdienst",
+  wedding: "Trauung",
+  funeral: "Abdankung",
+  confirmation: "Konfirmationsgottesdienst",
+  communion: "Abendmahlsgottesdienst",
+  special: "Spezialgottesdienst",
+  other: "Anderer Gottesdienst",
+  // Lesson types
+  lesson: "Neue Lektion",
+  double_lesson: "Neue Doppelstunde",
+  project_day: "Neuer Projekttag",
+  confirmation_class: "Konfirmandenunterricht",
+};
+
+const LESSON_SERVICE_TYPES = new Set(["lesson", "double_lesson", "project_day", "confirmation_class"]);
 
 export default function ServiceEditor() {
   const { id } = useParams();
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const { user } = useAuth();
   const { data: church } = useUserChurch();
   const { data: teamMembers } = useTeam();
   const isNew = !id || id === "new";
 
-  const [title, setTitle] = useState("Neuer Gottesdienst");
+  const initialType = (isNew && searchParams.get("type")) || "regular";
+  const [title, setTitle] = useState(SERVICE_TYPE_TITLES[initialType] || "Neuer Gottesdienst");
   const [serviceDate, setServiceDate] = useState(new Date().toISOString().split("T")[0]);
   const [serviceTime, setServiceTime] = useState("10:00");
-  const [serviceType, setServiceType] = useState("regular");
+  const [serviceType, setServiceType] = useState(initialType);
   const [tradition, setTradition] = useState("reformed");
   const [blocks, setBlocks] = useState<ServiceBlockData[]>([]);
+  const [notes, setNotes] = useState("");
+  const [className, setClassName] = useState("");
+  const [learningObjectives, setLearningObjectives] = useState<string[]>([]);
+  const [objectiveInput, setObjectiveInput] = useState("");
   const [saving, setSaving] = useState(false);
   const [loading, setLoading] = useState(!isNew);
   const [bibleBotOpen, setBibleBotOpen] = useState(false);
   const [bibleBotContext, setBibleBotContext] = useState("");
+
+  const isLessonMode = LESSON_SERVICE_TYPES.has(serviceType);
   const [resourcePickerOpen, setResourcePickerOpen] = useState(false);
   const [resourcePickerBlockId, setResourcePickerBlockId] = useState<string | null>(null);
   const [templatePickerOpen, setTemplatePickerOpen] = useState(isNew);
@@ -49,6 +82,12 @@ export default function ServiceEditor() {
   const [emailDialogOpen, setEmailDialogOpen] = useState(false);
   const [emailRecipient, setEmailRecipient] = useState("");
   const [emailSending, setEmailSending] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [serviceStatus, setServiceStatus] = useState<string>("draft");
+  const [deleteConfirmOpen, setDeleteConfirmOpen] = useState(false);
+  const deleteService = useDeleteService();
+  const duplicateService = useDuplicateService();
+  const updateStatus = useUpdateServiceStatus();
 
   const uploadPdfAndGetUrl = async (): Promise<string> => {
     const blob = exportServicePdfBlob({ title, serviceDate, serviceTime, serviceType, tradition, blocks, churchName: church?.name });
@@ -158,6 +197,10 @@ export default function ServiceEditor() {
           setServiceType(data.service_type);
           setTradition(data.tradition);
           setBlocks((data.blocks as unknown as ServiceBlockData[]) || []);
+          setNotes(data.notes || "");
+          setServiceStatus(data.status);
+          setClassName((data as any).class_name || "");
+          setLearningObjectives(((data as any).learning_objectives as string[]) || []);
         }
         setLoading(false);
       });
@@ -279,20 +322,24 @@ export default function ServiceEditor() {
         service_type: serviceType as any,
         tradition: tradition as any,
         blocks: blocks as any,
+        notes: notes || null,
         created_by: user.id,
         church_id: church.id,
+        class_name: isLessonMode ? (className || null) : null,
+        learning_objectives: isLessonMode ? (learningObjectives.length ? learningObjectives : null) : null,
+        duration_minutes: totalDuration > 0 ? totalDuration : null,
       };
 
       if (isNew) {
         const { error } = await supabase.from("services").insert(payload);
         if (error) throw error;
-        toast.success("Gottesdienst erstellt");
+        toast.success(isLessonMode ? "Lektion erstellt" : "Gottesdienst erstellt");
       } else {
         const { error } = await supabase.from("services").update(payload).eq("id", id);
         if (error) throw error;
-        toast.success("Gottesdienst gespeichert");
+        toast.success(isLessonMode ? "Lektion gespeichert" : "Gottesdienst gespeichert");
       }
-      navigate("/dashboard/services");
+      navigate(isLessonMode ? "/dashboard/lessons" : "/dashboard/services");
     } catch (err: any) {
       toast.error(err.message || "Fehler beim Speichern");
     } finally {
@@ -303,22 +350,30 @@ export default function ServiceEditor() {
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-[40vh] text-muted-foreground">
-        Gottesdienst wird geladen...
+        {isLessonMode ? "Lektion wird geladen..." : "Gottesdienst wird geladen..."}
       </div>
     );
   }
 
   return (
-    <div className="max-w-4xl mx-auto space-y-6">
+    <div className="flex h-full">
+    <div className={`flex-1 max-w-4xl mx-auto space-y-6 ${sidebarOpen ? 'mr-0' : ''}`}>
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
         <div className="flex items-center gap-3 min-w-0">
-          <Button variant="ghost" size="icon" className="shrink-0" onClick={() => navigate("/dashboard")}>
+          <Button variant="ghost" size="icon" className="shrink-0" onClick={() => navigate(isLessonMode ? "/dashboard/lessons" : "/dashboard/services")}>
             <ArrowLeft className="h-5 w-5" />
           </Button>
-          <h1 className="text-lg sm:text-2xl font-bold text-foreground truncate">
-            {isNew ? "Neuer Gottesdienst" : "Gottesdienst bearbeiten"}
-          </h1>
+          <div className="flex items-center gap-2 min-w-0">
+            <h1 className="text-lg sm:text-2xl font-bold text-foreground truncate">
+              {isNew ? (isLessonMode ? "Neue Lektion" : "Neuer Gottesdienst") : (isLessonMode ? "Lektion bearbeiten" : "Gottesdienst bearbeiten")}
+            </h1>
+            {!isNew && (
+              <Badge variant={serviceStatus === "published" ? "default" : serviceStatus === "archived" ? "secondary" : "outline"} className="text-xs shrink-0">
+                {serviceStatus === "draft" ? "Entwurf" : serviceStatus === "published" ? "Veröffentlicht" : "Archiviert"}
+              </Badge>
+            )}
+          </div>
         </div>
         <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
           {totalDuration > 0 && (
@@ -337,10 +392,17 @@ export default function ServiceEditor() {
             <>
               <Button variant="outline" size="sm" onClick={() => exportServicePdf({
                 title, serviceDate, serviceTime, serviceType, tradition, blocks,
-                churchName: church?.name,
+                churchName: church?.name, notes,
               })}>
                 <FileDown className="h-4 w-4 sm:mr-1" />
                 <span className="hidden sm:inline">PDF</span>
+              </Button>
+              <Button variant="outline" size="sm" onClick={() => exportServiceDocx({
+                title, serviceDate, serviceTime, serviceType, tradition, blocks,
+                churchName: church?.name, notes,
+              })}>
+                <FileText className="h-4 w-4 sm:mr-1" />
+                <span className="hidden sm:inline">Word</span>
               </Button>
               <Button variant="outline" size="sm" onClick={() => setEmailDialogOpen(true)}>
                 <Mail className="h-4 w-4 sm:mr-1" />
@@ -356,6 +418,67 @@ export default function ServiceEditor() {
             <Save className="h-4 w-4 sm:mr-1" />
             <span className="hidden sm:inline">{saving ? "Speichern..." : "Speichern"}</span>
           </Button>
+          <Button
+            variant={sidebarOpen ? "default" : "outline"}
+            size="sm"
+            onClick={() => setSidebarOpen(!sidebarOpen)}
+            title="Bibliothek-Panel"
+          >
+            {sidebarOpen ? <PanelRightClose className="h-4 w-4 sm:mr-1" /> : <PanelRightOpen className="h-4 w-4 sm:mr-1" />}
+            <span className="hidden sm:inline">Bibliothek</span>
+          </Button>
+          {!isNew && (
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline" size="sm">
+                  <MoreVertical className="h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem onClick={async () => {
+                  try {
+                    const result = await duplicateService.mutateAsync(id!);
+                    toast.success("Gottesdienst kopiert");
+                    navigate(`/dashboard/editor/${result.id}`);
+                  } catch { toast.error("Fehler beim Kopieren"); }
+                }}>
+                  <Copy className="h-4 w-4 mr-2" /> Kopieren
+                </DropdownMenuItem>
+                <DropdownMenuSeparator />
+                {serviceStatus !== "published" && (
+                  <DropdownMenuItem onClick={async () => {
+                    await updateStatus.mutateAsync({ id: id!, status: "published" });
+                    setServiceStatus("published");
+                    toast.success("Veröffentlicht");
+                  }}>
+                    <Eye className="h-4 w-4 mr-2" /> Veröffentlichen
+                  </DropdownMenuItem>
+                )}
+                {serviceStatus !== "draft" && (
+                  <DropdownMenuItem onClick={async () => {
+                    await updateStatus.mutateAsync({ id: id!, status: "draft" });
+                    setServiceStatus("draft");
+                    toast.success("Auf Entwurf zurückgesetzt");
+                  }}>
+                    <FileEdit className="h-4 w-4 mr-2" /> Auf Entwurf setzen
+                  </DropdownMenuItem>
+                )}
+                {serviceStatus !== "archived" && (
+                  <DropdownMenuItem onClick={async () => {
+                    await updateStatus.mutateAsync({ id: id!, status: "archived" });
+                    setServiceStatus("archived");
+                    toast.success("Archiviert");
+                  }}>
+                    <Archive className="h-4 w-4 mr-2" /> Archivieren
+                  </DropdownMenuItem>
+                )}
+                <DropdownMenuSeparator />
+                <DropdownMenuItem className="text-destructive" onClick={() => setDeleteConfirmOpen(true)}>
+                  <Trash2 className="h-4 w-4 mr-2" /> Löschen
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          )}
         </div>
       </div>
 
@@ -365,7 +488,7 @@ export default function ServiceEditor() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="sm:col-span-2">
               <label className="text-sm font-medium text-foreground mb-1.5 block">Titel</label>
-              <Input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Gottesdienst-Titel" />
+              <Input value={title} onChange={(e) => setTitle(e.target.value)} placeholder={isLessonMode ? "Lektions-Titel, z.B. «Gleichnis vom Sämann»" : "Gottesdienst-Titel"} />
             </div>
             <div>
               <label className="text-sm font-medium text-foreground mb-1.5 block">Datum</label>
@@ -388,11 +511,15 @@ export default function ServiceEditor() {
                   <SelectItem value="communion">Abendmahl</SelectItem>
                   <SelectItem value="special">Spezialgottesdienst</SelectItem>
                   <SelectItem value="other">Anderes</SelectItem>
+                  <SelectItem value="lesson">Einzelstunde (RU)</SelectItem>
+                  <SelectItem value="double_lesson">Doppelstunde (RU)</SelectItem>
+                  <SelectItem value="project_day">Projekttag</SelectItem>
+                  <SelectItem value="confirmation_class">Konfirmandenunterricht</SelectItem>
                 </SelectContent>
               </Select>
             </div>
             <div>
-              <label className="text-sm font-medium text-foreground mb-1.5 block">Tradition</label>
+              <label className="text-sm font-medium text-foreground mb-1.5 block">{isLessonMode ? "Kontext" : "Tradition"}</label>
               <Select value={tradition} onValueChange={setTradition}>
                 <SelectTrigger><SelectValue /></SelectTrigger>
                 <SelectContent>
@@ -401,9 +528,77 @@ export default function ServiceEditor() {
                   <SelectItem value="lutheran">Lutherisch</SelectItem>
                   <SelectItem value="evangelical">Evangelikal</SelectItem>
                   <SelectItem value="secular">Säkular / Frei</SelectItem>
+                  <SelectItem value="interreligious">Interreligiös</SelectItem>
                 </SelectContent>
               </Select>
             </div>
+            {isLessonMode && (
+              <div className="sm:col-span-2">
+                <label className="text-sm font-medium text-foreground mb-1.5 block">Klasse</label>
+                <Input value={className} onChange={(e) => setClassName(e.target.value)} placeholder="z.B. 7a, Konf-Gruppe Mo, Sek I" />
+              </div>
+            )}
+          </div>
+
+          {isLessonMode && (
+            <div className="mt-4">
+              <label className="text-sm font-medium text-foreground mb-1.5 block">Lernziele / Kompetenzen</label>
+              <div className="flex gap-2 mb-2">
+                <Input
+                  value={objectiveInput}
+                  onChange={(e) => setObjectiveInput(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" && objectiveInput.trim()) {
+                      e.preventDefault();
+                      setLearningObjectives([...learningObjectives, objectiveInput.trim()]);
+                      setObjectiveInput("");
+                    }
+                  }}
+                  placeholder="Lernziel eingeben und Enter drücken"
+                />
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  onClick={() => {
+                    if (objectiveInput.trim()) {
+                      setLearningObjectives([...learningObjectives, objectiveInput.trim()]);
+                      setObjectiveInput("");
+                    }
+                  }}
+                >
+                  Hinzufügen
+                </Button>
+              </div>
+              {learningObjectives.length > 0 && (
+                <ul className="space-y-1">
+                  {learningObjectives.map((obj, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm bg-muted/50 rounded-md px-3 py-1.5">
+                      <span className="text-primary shrink-0">→</span>
+                      <span className="flex-1">{obj}</span>
+                      <button
+                        type="button"
+                        onClick={() => setLearningObjectives(learningObjectives.filter((_, j) => j !== i))}
+                        className="text-muted-foreground hover:text-destructive shrink-0"
+                      >
+                        ×
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          )}
+
+          <div className="mt-4">
+            <label className="text-sm font-medium text-foreground mb-1.5 block">{isLessonMode ? "Stundenthema / Notizen" : "Leitgedanke / Thema"}</label>
+            <Textarea
+              value={notes}
+              onChange={(e) => setNotes(e.target.value)}
+              placeholder={isLessonMode ? "z.B. Differenzierung, Materialien, Bemerkungen für Vertretung..." : "z.B. «Dankbarkeit im Alltag» — der rote Faden für diesen Gottesdienst"}
+              className="resize-none min-h-[56px]"
+              rows={2}
+            />
           </div>
         </CardContent>
       </Card>
@@ -417,7 +612,7 @@ export default function ServiceEditor() {
           </CardTitle>
         </CardHeader>
         <CardContent className="pt-0 space-y-3">
-          <BlockPalette onAdd={addBlock} />
+          <BlockPalette onAdd={addBlock} mode={isLessonMode ? "lesson" : "service"} />
           <Button
             variant="outline"
             size="sm"
@@ -498,32 +693,23 @@ export default function ServiceEditor() {
           </DialogHeader>
           <div className="space-y-4">
             <p className="text-sm text-muted-foreground">
-              Kopiere diese Anfrage in den Chat:
+              Kopiere diese Anfrage in den Chat (unten rechts):
             </p>
             <div className="bg-muted rounded-lg p-4 text-sm">
               {bibleBotContext}
             </div>
-            <div className="flex gap-2">
-              <Button
-                className="flex-1"
-                onClick={() => {
-                  navigator.clipboard.writeText(bibleBotContext);
-                  toast.success("In Zwischenablage kopiert");
-                }}
-              >
-                Kopieren
-              </Button>
-              <Button
-                variant="outline"
-                className="flex-1"
-                onClick={() => {
-                  window.open("/", "_blank");
-                  setBibleBotOpen(false);
-                }}
-              >
-                Chat öffnen
-              </Button>
-            </div>
+            <Button
+              className="w-full"
+              onClick={() => {
+                navigator.clipboard.writeText(bibleBotContext);
+                toast.success("In Zwischenablage kopiert — öffne den Chat unten rechts");
+                setBibleBotOpen(false);
+                // Trigger chat open via custom event
+                window.dispatchEvent(new CustomEvent("open-bibelbot-chat"));
+              }}
+            >
+              Kopieren & Chat öffnen
+            </Button>
           </div>
         </DialogContent>
       </Dialog>
@@ -643,6 +829,43 @@ export default function ServiceEditor() {
           </div>
         </DialogContent>
       </Dialog>
+    </div>
+
+    {/* Delete Confirmation */}
+    <AlertDialog open={deleteConfirmOpen} onOpenChange={setDeleteConfirmOpen}>
+      <AlertDialogContent>
+        <AlertDialogHeader>
+          <AlertDialogTitle>Gottesdienst löschen?</AlertDialogTitle>
+          <AlertDialogDescription>
+            «{title}» wird unwiderruflich gelöscht. Diese Aktion kann nicht rückgängig gemacht werden.
+          </AlertDialogDescription>
+        </AlertDialogHeader>
+        <AlertDialogFooter>
+          <AlertDialogCancel>Abbrechen</AlertDialogCancel>
+          <AlertDialogAction
+            className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+            onClick={async () => {
+              try {
+                await deleteService.mutateAsync(id!);
+                toast.success("Gottesdienst gelöscht");
+                navigate("/dashboard/services");
+              } catch { toast.error("Fehler beim Löschen"); }
+            }}
+          >
+            Löschen
+          </AlertDialogAction>
+        </AlertDialogFooter>
+      </AlertDialogContent>
+    </AlertDialog>
+    {/* Resource Sidebar */}
+    {sidebarOpen && (
+      <ResourceSidebar
+        onSelect={(resource) => {
+          addBlockFromResource(resource);
+        }}
+        onClose={() => setSidebarOpen(false)}
+      />
+    )}
     </div>
   );
 }

@@ -8,11 +8,12 @@ import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-import { Building2, Users, TrendingUp, AlertTriangle, MessageCircle, Search, Target, Heart, Link as LinkIcon } from "lucide-react";
+import { Building2, Users, TrendingUp, AlertTriangle, MessageCircle, Search, Target, Heart, Link as LinkIcon, UserPlus, ThumbsDown, Globe } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import { ChurchDetailDrawer } from "./ChurchDetailDrawer";
+import { StatDrillDown } from "./StatDrillDown";
 import type { Tables } from "@/integrations/supabase/types";
 
 const PLAN_COLORS: Record<string, string> = {
@@ -38,6 +39,7 @@ export default function AdminDashboard() {
   const [planFilter, setPlanFilter] = useState("all");
   const [statusFilter, setStatusFilter] = useState("all");
   const [selectedChurch, setSelectedChurch] = useState<Tables<"church_partners"> | null>(null);
+  const [drillDown, setDrillDown] = useState<"users" | "subscribers" | "chats" | null>(null);
 
   const filtered = useMemo(() => {
     if (!churches) return [];
@@ -53,27 +55,36 @@ export default function AdminDashboard() {
   }, [churches, search, planFilter, statusFilter]);
 
   const statCards = [
-    { label: "Gemeinden", value: stats?.totalChurches ?? "–", icon: Building2, color: "text-primary" },
-    { label: "Aktive Abos", value: stats?.activeSubscriptions ?? "–", icon: TrendingUp, color: "text-green-600" },
-    { label: "Ablaufend (30d)", value: stats?.expiringSoon ?? "–", icon: AlertTriangle, color: "text-yellow-600" },
-    { label: "Abonnenten", value: stats?.totalSubscribers ?? "–", icon: Users, color: "text-secondary" },
-    { label: "Chats heute", value: stats?.todayMessages ?? "–", icon: MessageCircle, color: "text-primary" },
+    { label: "Registrierte User", value: stats?.registeredUsers ?? "–", icon: UserPlus, color: "text-blue-600", drill: "users" as const },
+    { label: "Gemeinden", value: stats?.totalChurches ?? "–", icon: Building2, color: "text-primary", drill: null },
+    { label: "Aktive Abos", value: stats?.activeSubscriptions ?? "–", icon: TrendingUp, color: "text-green-600", drill: null },
+    { label: "Ablaufend (30d)", value: stats?.expiringSoon ?? "–", icon: AlertTriangle, color: "text-yellow-600", drill: null },
+    { label: "Abonnenten", value: stats?.totalSubscribers ?? "–", icon: Users, color: "text-secondary", drill: "subscribers" as const },
+    { label: "Chats heute", value: stats?.todayMessages ?? "–", icon: MessageCircle, color: "text-primary", drill: "chats" as const },
   ];
 
   return (
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-8 space-y-8">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between flex-wrap gap-2">
           <h1 className="text-3xl font-bold text-foreground">Admin Dashboard</h1>
-          <Button asChild variant="outline">
-            <Link to="/admin/outreach"><Target className="h-4 w-4 mr-2" />Cold Outreach</Link>
-          </Button>
-          <Button asChild variant="outline">
-            <Link to="/admin/referrals"><LinkIcon className="h-4 w-4 mr-2" />Referrals</Link>
-          </Button>
-          <Button asChild variant="outline">
-            <Link to="/admin/prayers"><Heart className="h-4 w-4 mr-2" />Gebete</Link>
-          </Button>
+          <div className="flex flex-wrap gap-2">
+            <Button asChild variant="outline" size="sm">
+              <Link to="/admin/seo"><Globe className="h-4 w-4 mr-2" />SEO</Link>
+            </Button>
+            <Button asChild variant="outline" size="sm">
+              <Link to="/admin/feedback"><ThumbsDown className="h-4 w-4 mr-2" />Feedback</Link>
+            </Button>
+            <Button asChild variant="outline" size="sm">
+              <Link to="/admin/outreach"><Target className="h-4 w-4 mr-2" />Cold Outreach</Link>
+            </Button>
+            <Button asChild variant="outline" size="sm">
+              <Link to="/admin/referrals"><LinkIcon className="h-4 w-4 mr-2" />Referrals</Link>
+            </Button>
+            <Button asChild variant="outline" size="sm">
+              <Link to="/admin/prayers"><Heart className="h-4 w-4 mr-2" />Gebete</Link>
+            </Button>
+          </div>
         </div>
 
         {/* Pricing Toggle */}
@@ -101,9 +112,13 @@ export default function AdminDashboard() {
         </Card>
 
         {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {statCards.map((s) => (
-            <Card key={s.label}>
+            <Card
+              key={s.label}
+              className={s.drill ? "cursor-pointer hover:ring-2 hover:ring-primary/30 transition-all" : ""}
+              onClick={() => s.drill && setDrillDown(s.drill)}
+            >
               <CardHeader className="pb-2">
                 <CardTitle className="text-sm font-medium text-muted-foreground flex items-center gap-2">
                   <s.icon className={`h-4 w-4 ${s.color}`} />
@@ -112,6 +127,7 @@ export default function AdminDashboard() {
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold">{s.value}</div>
+                {s.drill && <p className="text-xs text-muted-foreground mt-1">Klick für Details</p>}
               </CardContent>
             </Card>
           ))}
@@ -226,6 +242,12 @@ export default function AdminDashboard() {
         church={selectedChurch}
         open={!!selectedChurch}
         onClose={() => setSelectedChurch(null)}
+      />
+
+      <StatDrillDown
+        type={drillDown}
+        open={!!drillDown}
+        onClose={() => setDrillDown(null)}
       />
     </div>
   );

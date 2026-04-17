@@ -1,11 +1,9 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useCurrency } from "@/hooks/use-currency";
-import { useAppSetting } from "@/hooks/use-app-setting";
 import { getStoredReferralCode } from "@/hooks/useAnalytics";
 import { SEOHead } from "@/components/SEOHead";
 import { Link } from "react-router-dom";
-import { Church, ArrowLeft, Send, Handshake, Sprout, Heart, Building2, Hospital, ShieldCheck, Swords, Footprints, TowerControl, Cross, BookOpen, Flame, Users, Sparkles, Activity, Brain, HeartPulse, Home, MessageSquareHeart } from "lucide-react";
+import { Church, ArrowLeft, Send, Handshake, Sprout, Heart, Building2, Hospital, ShieldCheck, Swords, Footprints, TowerControl, Cross, BookOpen, Flame, Users, Sparkles, Activity, Brain, HeartPulse, Home, MessageSquareHeart, MessageCircle, HeartHandshake } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -16,16 +14,23 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 
 const tiers = [
-  { key: "free", setup: 0, annual: 0, icon: Sprout, popular: false },
-  { key: "community", setup: 490, annual: 790, icon: Footprints, popular: false },
-  { key: "gemeinde", setup: 990, annual: 1490, icon: Handshake, popular: true },
-  { key: "kirche", setup: 1990, annual: 2990, icon: TowerControl, popular: false },
+  { key: "free",      icon: Sprout,       popular: false, setup: 490,  monthly: 49 },
+  { key: "community", icon: Footprints,   popular: false, setup: 690,  monthly: 99 },
+  { key: "gemeinde",  icon: Handshake,    popular: true,  setup: 990,  monthly: 149 },
+  { key: "kirche",    icon: TowerControl, popular: false, setup: 1490, monthly: 249 },
+];
+
+const SETUP_INCLUDES = [
+  "Persönliches Kickoff-Gespräch",
+  "Einrichtung Gemeinde-Branding (Logo, Farben, Name)",
+  "Generierung QR-Materialien (Flyer & Sticker)",
+  "Eigene Gemeinde-Landingpage",
+  "Test & Qualitätsprüfung",
+  "Onboarding-Dokumentation & Schulung",
 ];
 
 const ForChurches = () => {
   const { t } = useTranslation();
-  const { formatPrice, currency } = useCurrency();
-  const { value: showPricing } = useAppSetting("show_pricing");
   const [formData, setFormData] = useState({ name: "", email: "", church_name: "", organization_type: "", preferred_tier: "", message: "" });
   const [sending, setSending] = useState(false);
 
@@ -110,6 +115,97 @@ const ForChurches = () => {
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">{t("church.heroTitle")}</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">{t("church.heroSubtitle")}</p>
+        </div>
+      </section>
+
+      {/* 3-Level Pastoral Approach */}
+      <section className="py-16 px-4 bg-card/40">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="text-3xl font-bold text-foreground text-center mb-3">
+            {t("church.approachTitle", "Ihr digitaler 1st-Level-Kanal")}
+          </h2>
+          <p className="text-muted-foreground text-center mb-10 max-w-2xl mx-auto">
+            {t("church.approachSubtitle", "Die meisten Menschen wenden sich nicht direkt an einen Seelsorger. Sie googeln, sie grübeln, sie schweigen. BibleBot.Life fängt sie dort auf – als erste, niederschwellige Anlaufstelle in Ihrem Seelsorge-Ökosystem.")}
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* Level 1 */}
+            <Card className="border-primary/30 bg-primary/5 relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-primary" />
+              <CardContent className="pt-6 pb-5">
+                <div className="flex flex-col items-center text-center">
+                  <div className="rounded-full bg-primary/15 p-3 mb-3">
+                    <MessageCircle className="h-6 w-6 text-primary" />
+                  </div>
+                  <span className="text-xs font-bold uppercase tracking-wider text-primary mb-1">Level 1</span>
+                  <h3 className="font-bold text-foreground text-lg mb-2">BibleBot.Life</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                    {t("church.approach1Desc", "24/7 erreichbar, anonym, kostenlos. Beantwortet Glaubensfragen, gibt Impulse und begleitet – ohne Hemmschwelle. Ihr digitaler Erstkontakt.")}
+                  </p>
+                  <div className="flex flex-wrap justify-center gap-1.5">
+                    <span className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full">24/7</span>
+                    <span className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full">{t("about.tag_anonymous", "Anonym")}</span>
+                    <span className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full">{t("about.tag_free", "Kostenlos")}</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Level 2 */}
+            <Card className="relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-secondary" />
+              <CardContent className="pt-6 pb-5">
+                <div className="flex flex-col items-center text-center">
+                  <div className="rounded-full bg-secondary/15 p-3 mb-3">
+                    <Church className="h-6 w-6 text-secondary" />
+                  </div>
+                  <span className="text-xs font-bold uppercase tracking-wider text-secondary mb-1">Level 2</span>
+                  <h3 className="font-bold text-foreground text-lg mb-2">{t("about.level2Title", "Gottesdienst & Gemeinde")}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                    {t("church.approach2Desc", "BibleBot weckt Interesse und Vertrauen. Der nächste Schritt: der Besuch in Ihrer Gemeinde. Wir verlinken direkt auf Ihre Gottesdienstzeiten.")}
+                  </p>
+                  <div className="flex flex-wrap justify-center gap-1.5">
+                    <span className="text-xs bg-secondary/10 text-secondary px-2 py-0.5 rounded-full">{t("about.tag_weekly", "Wöchentlich")}</span>
+                    <span className="text-xs bg-secondary/10 text-secondary px-2 py-0.5 rounded-full">{t("about.tag_community", "Gemeinschaft")}</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Level 3 */}
+            <Card className="relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-accent-foreground/50" />
+              <CardContent className="pt-6 pb-5">
+                <div className="flex flex-col items-center text-center">
+                  <div className="rounded-full bg-accent p-3 mb-3">
+                    <HeartHandshake className="h-6 w-6 text-accent-foreground" />
+                  </div>
+                  <span className="text-xs font-bold uppercase tracking-wider text-accent-foreground/70 mb-1">Level 3</span>
+                  <h3 className="font-bold text-foreground text-lg mb-2">{t("about.level3Title", "1:1 Seelsorge")}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                    {t("church.approach3Desc", "Wenn aus Fragen persönlicher Bedarf wird, vermittelt BibleBot direkt an Ihre Seelsorge weiter – mit Kontaktformular und Vertrauensvorschuss.")}
+                  </p>
+                  <div className="flex flex-wrap justify-center gap-1.5">
+                    <span className="text-xs bg-accent text-accent-foreground px-2 py-0.5 rounded-full">{t("about.tag_personal", "Persönlich")}</span>
+                    <span className="text-xs bg-accent text-accent-foreground px-2 py-0.5 rounded-full">{t("about.tag_individual", "Individuell")}</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-8 text-center">
+            <p className="text-sm text-muted-foreground italic max-w-xl mx-auto mb-4">
+              {t("church.approachNote", "BibleBot.Life ersetzt keine Seelsorge – es öffnet die Tür dorthin. Als Ihr digitaler 1st-Level-Kanal senken wir die Hemmschwelle und bringen Menschen zu Ihnen.")}
+            </p>
+            <Button
+              variant="default"
+              onClick={() => document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" })}
+            >
+              <Send className="h-4 w-4 mr-2" />
+              {t("church.approachCta", "Jetzt Partnerschaft besprechen")}
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -213,31 +309,14 @@ const ForChurches = () => {
                   <CardTitle className="text-xl">{t(`church.tier.${tier.key}.name`)}</CardTitle>
                   <p className="text-xs text-muted-foreground">{t(`church.tier.${tier.key}.size`)}</p>
                 </CardHeader>
-                <CardContent>
-                  <div className="text-center mb-6">
-                    {showPricing ? (
-                      <>
-                        {tier.setup > 0 && (
-                          <p className="text-sm text-muted-foreground mb-1">
-                            {t("church.setup")}: <span className="font-semibold text-foreground">{formatPrice(tier.setup)}</span>
-                          </p>
-                        )}
-                        <p className="text-3xl font-bold text-foreground">
-                          {formatPrice(tier.annual)}
-                        </p>
-                        {tier.annual > 0 && t("church.perYear") ? <p className="text-xs text-muted-foreground">{t("church.perYear")}</p> : null}
-                        {currency !== "CHF" && tier.annual > 0 && (
-                          <p className="text-[10px] text-muted-foreground/60 mt-1">
-                            ≈ CHF {tier.annual.toLocaleString("de-CH")}.–
-                          </p>
-                        )}
-                      </>
-                    ) : (
-                      <p className="text-lg font-semibold text-muted-foreground">{t("pricing.onRequest")}</p>
-                    )}
+                <CardContent className="text-center">
+                  <div className="py-2">
+                    <div className="text-3xl font-bold text-foreground">CHF {tier.monthly}<span className="text-base font-normal text-muted-foreground">/Mt.</span></div>
+                    <div className="text-xs text-muted-foreground mt-1">zzgl. einmalige Einrichtung CHF {tier.setup}</div>
+                    <div className="text-[11px] text-muted-foreground mt-2 italic">= CHF {tier.setup + tier.monthly * 12} im 1. Jahr</div>
                   </div>
                   <Button
-                    className="w-full mt-6"
+                    className="w-full mt-4"
                     variant={tier.popular ? "default" : "outline"}
                     onClick={() => {
                       setFormData(prev => ({ ...prev, preferred_tier: tier.key }));
@@ -252,9 +331,26 @@ const ForChurches = () => {
             ))}
           </div>
 
+          {/* Setup includes */}
+          <div className="mt-12 max-w-3xl mx-auto bg-card/60 border border-border rounded-xl p-6">
+            <h3 className="text-lg font-semibold text-foreground mb-4 text-center">Was ist im Einrichtungspaket enthalten?</h3>
+            <ul className="grid sm:grid-cols-2 gap-3">
+              {SETUP_INCLUDES.map((item) => (
+                <li key={item} className="flex items-start gap-2 text-sm text-muted-foreground">
+                  <Sparkles className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Transparency note */}
-          <div className="mt-12 max-w-3xl mx-auto text-center bg-card/60 border border-border rounded-xl p-6">
-            <p className="text-sm text-muted-foreground leading-relaxed">{t("church.patronageNote")}</p>
+          <div className="mt-6 max-w-3xl mx-auto text-center bg-primary/5 border border-primary/20 rounded-xl p-6">
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              BibleBot.Life wird von der <strong>2Go Media AG</strong> entwickelt und professionell betrieben.
+              Die Abo-Pakete finanzieren Weiterentwicklung, Qualitätssicherung und persönlichen Support.
+              Für Privatpersonen bleibt BibleBot kostenlos. Alle Preise exkl. MwSt.
+            </p>
           </div>
         </div>
       </section>

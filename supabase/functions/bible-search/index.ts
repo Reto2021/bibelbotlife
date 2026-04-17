@@ -99,7 +99,7 @@ serve(async (req) => {
   }
 
   try {
-    const { query, translation, limit = 20 } = await req.json();
+    const { query, translation, limit = 20, language = "de" } = await req.json();
 
     if (!query || typeof query !== "string" || query.trim().length < 2) {
       return new Response(
@@ -117,12 +117,13 @@ serve(async (req) => {
     const expanded = await expandQuery(query.trim());
     console.log("Expanded:", expanded.tsquery);
 
-    // Step 2: Search using DB function
+    // Step 2: Search using DB function with language filter
     const { data: results, error } = await supabase.rpc("search_bible_verses", {
       search_query: expanded.tsquery,
       translation_filter: translation === "all" ? null : (translation || null),
       book_boost: expanded.books,
       result_limit: Math.min(limit, 50),
+      language_filter: language,
     });
 
     if (error) {

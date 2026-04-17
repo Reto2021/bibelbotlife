@@ -11,6 +11,16 @@ const getSessionId = (): string => {
   return id;
 };
 
+/** Persistent visitor ID across sessions (localStorage) */
+const getVisitorId = (): string => {
+  let id = localStorage.getItem("bb_vid");
+  if (!id) {
+    id = crypto.randomUUID();
+    localStorage.setItem("bb_vid", id);
+  }
+  return id;
+};
+
 /** Extract church slug from URL search params (?church=xyz) */
 const getChurchSlug = (): string | null => {
   const params = new URLSearchParams(window.location.search);
@@ -81,6 +91,7 @@ const HEARTBEAT_INTERVAL_MS = 30_000;
 export const useAnalytics = () => {
   const location = useLocation();
   const sessionId = useRef(getSessionId());
+  const visitorId = useRef(getVisitorId());
   const lastPath = useRef<string | null>(null);
 
   // Capture referral code on mount
@@ -94,6 +105,7 @@ export const useAnalytics = () => {
         const { utm_source, utm_medium } = getUtmParams();
         await (supabase.from("analytics_events") as any).insert({
           session_id: sessionId.current,
+          visitor_id: visitorId.current,
           event_type: "event",
           page_path: location.pathname,
           event_name: eventName,
@@ -121,6 +133,7 @@ export const useAnalytics = () => {
     (supabase.from("analytics_events") as any)
       .insert({
         session_id: sessionId.current,
+        visitor_id: visitorId.current,
         event_type: "pageview",
         page_path: location.pathname,
         referrer: document.referrer || null,
@@ -140,6 +153,7 @@ export const useAnalytics = () => {
       (supabase.from("analytics_events") as any)
         .insert({
           session_id: sessionId.current,
+          visitor_id: visitorId.current,
           event_type: "event",
           event_name: "heartbeat",
           page_path: location.pathname,

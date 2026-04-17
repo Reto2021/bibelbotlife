@@ -1,5 +1,6 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { useSearchParams } from "react-router-dom";
 import { Search, Book, Loader2, ChevronRight } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -35,12 +36,14 @@ const TRANSLATION_LABELS: Record<string, string> = {
 };
 
 export default function BibleSearch() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const [searchParams] = useSearchParams();
   const [query, setQuery] = useState("");
   const [translation, setTranslation] = useState("all");
   const [results, setResults] = useState<SearchResponse | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [initialSearchDone, setInitialSearchDone] = useState(false);
 
   const doSearch = useCallback(async () => {
     if (!query.trim() || query.trim().length < 2) return;
@@ -54,22 +57,39 @@ export default function BibleSearch() {
           "Content-Type": "application/json",
           Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
         },
-        body: JSON.stringify({ query: query.trim(), translation, limit: 30 }),
+        body: JSON.stringify({ query: query.trim(), translation, limit: 30, language: i18n.language?.split("-")[0] || "de" }),
       });
 
       if (!resp.ok) {
-        const err = await resp.json().catch(() => ({ error: "Suche fehlgeschlagen" }));
-        throw new Error(err.error || "Suche fehlgeschlagen");
+        const err = await resp.json().catch(() => ({ error: t("bibleSearch.searchFailed") }));
+        throw new Error(err.error || t("bibleSearch.searchFailed"));
       }
 
       const data: SearchResponse = await resp.json();
       setResults(data);
     } catch (e) {
-      setError(e instanceof Error ? e.message : "Unbekannter Fehler");
+      setError(e instanceof Error ? e.message : t("bibleSearch.unknownError"));
     } finally {
       setLoading(false);
     }
-  }, [query, translation]);
+  }, [query, translation, i18n.language, t]);
+
+  // Auto-search when ?q= parameter is present
+  useEffect(() => {
+    if (initialSearchDone) return;
+    const q = searchParams.get("q");
+    if (q) {
+      setQuery(q);
+      setInitialSearchDone(true);
+    }
+  }, [searchParams, initialSearchDone]);
+
+  // Trigger search when query is set from URL
+  useEffect(() => {
+    if (initialSearchDone && query.trim().length >= 2) {
+      doSearch();
+    }
+  }, [initialSearchDone]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") doSearch();
@@ -81,11 +101,13 @@ export default function BibleSearch() {
     return acc;
   }, {}) || {};
 
+  const suggestedTerms = t("bibleSearch.suggestedTerms", { returnObjects: true }) as string[];
+
   return (
     <>
       <SEOHead
-        title="Semantische Bibelsuche – BibleBot.Life"
-        description="Durchsuche die Bibel nach Themen, Konzepten und Bedeutungen. KI-gestützte semantische Suche in Luther, Schlachter und Elberfelder."
+        title={t("bibleSearch.seoTitle")}
+        description={t("bibleSearch.seoDesc")}
       />
 
       <div className="min-h-screen bg-background">
@@ -95,10 +117,10 @@ export default function BibleSearch() {
           <div className="mb-8">
             <h1 className="text-3xl font-bold text-foreground flex items-center gap-3">
               <Book className="w-8 h-8 text-primary" />
-              Semantische Bibelsuche
+              {t("bibleSearch.title")}
             </h1>
             <p className="text-muted-foreground mt-2">
-              Suche nach Themen, Konzepten oder Fragen — die KI findet passende Bibelstellen.
+              {t("bibleSearch.subtitle")}
             </p>
           </div>
 
@@ -110,7 +132,7 @@ export default function BibleSearch() {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 onKeyDown={handleKeyDown}
-                placeholder="z.B. «Wo spricht Jesus über Vergebung?» oder «Hoffnung in schweren Zeiten»"
+                placeholder={t("bibleSearch.placeholder")}
                 className="pl-10"
                 autoFocus
               />
@@ -120,7 +142,7 @@ export default function BibleSearch() {
                 <SelectValue />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="all">Alle Übersetzungen</SelectItem>
+                <SelectItem value="all">{t("bibleSearch.allTranslations")}</SelectItem>
                 <SelectItem value="luther1912">Luther 1912</SelectItem>
                 <SelectItem value="schlachter2000">Schlachter 2000</SelectItem>
                 <SelectItem value="elberfelder">Elberfelder</SelectItem>
@@ -134,7 +156,7 @@ export default function BibleSearch() {
           {/* Search info */}
           {results && !loading && (
             <div className="mb-4 text-sm text-muted-foreground">
-              <span className="font-medium">{results.total} Ergebnisse</span>
+              <span className="font-medium">{t("bibleSearch.results", { count: results.total })}</span>
               {results.query !== query && (
                 <span className="ml-2">— {results.query}</span>
               )}
@@ -152,7 +174,7 @@ export default function BibleSearch() {
           {results && results.results.length === 0 && !loading && (
             <div className="text-center py-12 text-muted-foreground">
               <Book className="w-12 h-12 mx-auto mb-4 opacity-50" />
-              <p>Keine Ergebnisse gefunden. Versuche eine andere Formulierung.</p>
+              <p>{t("bibleSearch.noResults")}</p>
             </div>
           )}
 
@@ -182,9 +204,9 @@ export default function BibleSearch() {
           {!results && !loading && (
             <div className="text-center py-16 text-muted-foreground">
               <Search className="w-16 h-16 mx-auto mb-4 opacity-30" />
-              <p className="text-lg">Gib ein Thema oder eine Frage ein</p>
+              <p className="text-lg">{t("bibleSearch.emptyState")}</p>
               <div className="mt-6 flex flex-wrap gap-2 justify-center">
-                {["Vergebung", "Hoffnung", "Liebe Gottes", "Schöpfung", "Gerechtigkeit"].map((term) => (
+                {Array.isArray(suggestedTerms) && suggestedTerms.map((term) => (
                   <Badge
                     key={term}
                     variant="secondary"

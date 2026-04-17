@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useRef, ReactNode } from "react";
 import { useTranslation } from "react-i18next";
-import { Sparkles, ChevronRight, BookOpen, Loader2, MessageCircle, Image, Download, Bell, Send, Smartphone, Volume2, VolumeX, XCircle, Settings2, ChevronDown, ChevronUp, Copy } from "lucide-react";
+import { Sparkles, ChevronRight, BookOpen, Loader2, MessageCircle, Image, Download, Bell, Send, Smartphone, Volume2, VolumeX, XCircle, Settings2, ChevronDown, ChevronUp, Copy, Users } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Button } from "@/components/ui/button";
 import { useTTS } from "@/hooks/use-tts";
@@ -9,6 +9,9 @@ import { ShareButton } from "@/components/ShareButton";
 import { useToast } from "@/hooks/use-toast";
 import { generateShareImage, fetchAIBackgroundUrl } from "@/lib/share-image-canvas";
 import { useChurchBranding } from "@/hooks/use-church-branding";
+import { useAuth } from "@/hooks/use-auth";
+import { useCircle } from "@/hooks/use-circle";
+import { toast as sonnerToast } from "sonner";
 
 const IMPULSE_CACHE_KEY = "bibelbot-daily-impulse";
 const IMPULSE_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/daily-impulse`;
@@ -18,6 +21,7 @@ const VAPID_PUBLIC_KEY = "BLMl5bBRzhlza0ozrHEblp3BfKtbyDsbOP-n120rl6teGPFdoyFb77
 const SUBSCRIBED_KEY = "bibelbot-daily-subscribed";
 const SUBSCRIBER_ID_KEY = "bibelbot-subscriber-id";
 const SUBSCRIBER_CHANNEL_KEY = "bibelbot-subscriber-channel";
+const LEGACY_IMPULSE_LANG_KEY = `${IMPULSE_CACHE_KEY}-lang`;
 
 type Impulse = {
   topic: string;
@@ -28,9 +32,24 @@ type Impulse = {
   date: string;
 };
 
-function getCachedImpulse(): Impulse | null {
+function normalizeLang(lang?: string): string {
+  return (lang || "de").split("-")[0].toLowerCase();
+}
+
+function getImpulseCacheKey(lang: string): string {
+  return `${IMPULSE_CACHE_KEY}-${normalizeLang(lang)}`;
+}
+
+function clearLegacyImpulseCache() {
   try {
-    const stored = localStorage.getItem(IMPULSE_CACHE_KEY);
+    localStorage.removeItem(IMPULSE_CACHE_KEY);
+    localStorage.removeItem(LEGACY_IMPULSE_LANG_KEY);
+  } catch {}
+}
+
+function getCachedImpulse(lang: string): Impulse | null {
+  try {
+    const stored = localStorage.getItem(getImpulseCacheKey(lang));
     if (!stored) return null;
     const impulse = JSON.parse(stored) as Impulse;
     const today = new Date().toISOString().slice(0, 10);
@@ -39,10 +58,33 @@ function getCachedImpulse(): Impulse | null {
   return null;
 }
 
-function cacheImpulse(impulse: Impulse) {
+function cacheImpulse(lang: string, impulse: Impulse) {
   try {
-    localStorage.setItem(IMPULSE_CACHE_KEY, JSON.stringify(impulse));
+    localStorage.setItem(getImpulseCacheKey(lang), JSON.stringify(impulse));
   } catch {}
+}
+
+function getFallbackImpulse(lang: string): Impulse {
+  const date = new Date().toISOString().slice(0, 10);
+  if (normalizeLang(lang) === "de") {
+    return {
+      topic: "Hoffnung",
+      verse: "«Denn ich weiss wohl, was ich für Gedanken über euch habe, spricht der Herr: Gedanken des Friedens und nicht des Leides.»",
+      reference: "Jeremia 29,11 (Lutherbibel 2017)",
+      teaser: "Gott hat einen Plan – auch wenn du ihn noch nicht siehst",
+      context: "Manchmal fühlt sich das Leben planlos an. Dieser Vers erinnert daran, dass es eine grössere Perspektive gibt.",
+      date,
+    };
+  }
+
+  return {
+    topic: "Hope",
+    verse: '"For I know the plans I have for you," declares the Lord, "plans to prosper you and not to harm you, plans to give you hope and a future."',
+    reference: "Jeremiah 29:11 (NIV)",
+    teaser: "God has a plan — even if you can’t see it yet",
+    context: "Sometimes life feels aimless. This verse reminds us there is a bigger perspective.",
+    date,
+  };
 }
 
 // Cache share image blob URL per date
@@ -67,7 +109,7 @@ function renderContextWithLinks(text: string): ReactNode[] {
     parts.push(
       <a
         key={match.index}
-        href={`/bibel?q=${searchQuery}`}
+        href={`/bible-search?q=${searchQuery}`}
         className="text-primary underline underline-offset-2 hover:text-primary/80 transition-colors"
         title={innerRef}
       >
@@ -89,9 +131,12 @@ export function DailyImpulse() {
   const { toast } = useToast();
   const isMobile = useIsMobile();
   const { branding: churchBranding } = useChurchBranding();
+  const { user } = useAuth();
+  const { circle, addPrayer } = useCircle();
+  const currentLang = normalizeLang(i18n.resolvedLanguage || i18n.language);
   const [collapsed, setCollapsed] = useState(true); // will sync with isMobile on first render
   const [collapsedInitialized, setCollapsedInitialized] = useState(false);
-  const [impulse, setImpulse] = useState<Impulse | null>(getCachedImpulse);
+  const [impulse, setImpulse] = useState<Impulse | null>(() => getCachedImpulse(currentLang));
   const [isExpanded, setIsExpanded] = useState(false);
   const [isLoading, setIsLoading] = useState(!impulse);
   const [shareImageUrl, setShareImageUrl] = useState<string | null>(null);
@@ -106,7 +151,7 @@ export function DailyImpulse() {
   const [isUnsubscribing, setIsUnsubscribing] = useState(false);
   const [showImagePreview, setShowImagePreview] = useState(false);
   const [showSmsInput, setShowSmsInput] = useState(false);
-  const [smsPhone, setSmsPhone] = useState("");
+  const [smsPhone, setSmsPhone] = useState("+41 ");
   const imagePreviewRef = useRef<HTMLDivElement>(null);
   const tts = useTTS();
 
@@ -119,36 +164,50 @@ export function DailyImpulse() {
   }, [isMobile, collapsedInitialized]);
 
   useEffect(() => {
+    clearLegacyImpulseCache();
+    const cached = getCachedImpulse(currentLang);
+    if (cached) {
+      setImpulse(cached);
+      setIsLoading(false);
+      return;
+    }
+
+    setImpulse(null);
+    setIsLoading(true);
+  }, [currentLang]);
+
+  useEffect(() => {
     if (impulse) return;
+
+    const controller = new AbortController();
+    const requestLang = currentLang;
 
     const fetchImpulse = async () => {
       try {
-        const resp = await fetch(IMPULSE_URL, {
+        const resp = await fetch(`${IMPULSE_URL}?lang=${requestLang}`, {
           headers: {
             Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
           },
+          signal: controller.signal,
         });
         if (!resp.ok) throw new Error("fetch failed");
         const data: Impulse = await resp.json();
+        if (controller.signal.aborted) return;
         setImpulse(data);
-        cacheImpulse(data);
+        cacheImpulse(requestLang, data);
       } catch (e) {
+        if (controller.signal.aborted) return;
         console.error("Failed to load daily impulse:", e);
-        setImpulse({
-          topic: "Hoffnung",
-          verse: "«Denn ich weiss wohl, was ich für Gedanken über euch habe, spricht der Herr: Gedanken des Friedens und nicht des Leides.»",
-          reference: "Jeremia 29,11 (Lutherbibel 2017)",
-          teaser: "Gott hat einen Plan – auch wenn du ihn noch nicht siehst",
-          context: "Manchmal fühlt sich das Leben planlos an. Dieser Vers erinnert daran, dass es eine grössere Perspektive gibt.",
-          date: new Date().toISOString().slice(0, 10),
-        });
+        setImpulse(getFallbackImpulse(requestLang));
       } finally {
+        if (controller.signal.aborted) return;
         setIsLoading(false);
       }
     };
 
     fetchImpulse();
-  }, [impulse]);
+    return () => controller.abort();
+  }, [impulse, currentLang]);
 
   const handleGenerateShareImage = useCallback(async () => {
     if (!impulse || isGeneratingImage) return;
@@ -213,7 +272,8 @@ export function DailyImpulse() {
       ? ` #${churchBranding.churchName.replace(/\s+/g, "")}`
       : "";
 
-    return `✨ ${impulse.teaser}\n\n«${impulse.verse}»\n— ${impulse.reference}${recommendedBy}\n\n#BibleBotLife #Tagesimpuls ${topicTag} ${hashtagBible}${churchTag}\n${baseUrl}`;
+    const hashtagImpulse = t("share.hashtagImpulse", "#DailyImpulse");
+    return `✨ ${impulse.teaser}\n\n«${impulse.verse}»\n— ${impulse.reference}${recommendedBy}\n\n#BibleBotLife ${hashtagImpulse} ${topicTag} ${hashtagBible}${churchTag}\n${baseUrl}`;
   }, [impulse, churchBranding, t]);
 
   const shareAsImage = useCallback(async () => {
@@ -247,26 +307,36 @@ export function DailyImpulse() {
   }, [shareBlob, impulse, buildShareText, toast, t]);
 
   const downloadImage = useCallback(() => {
-    if (!shareImageUrl || !impulse) return;
+    if (!shareBlob || !impulse) return;
+    const url = URL.createObjectURL(shareBlob);
     const a = document.createElement("a");
-    a.href = shareImageUrl;
+    a.href = url;
     a.download = `bibelbot-impuls-${impulse.date}.png`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
-  }, [shareImageUrl, impulse]);
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    toast({ title: t("share.imageSaved") });
+  }, [shareBlob, impulse, toast, t]);
 
   const handleDeepDive = () => {
     if (!impulse) return;
     openBibleBotChat(
-      `Der Tagesimpuls ist "${impulse.topic}" mit ${impulse.reference}. Erkläre mir diese Stelle: Wer hat das geschrieben? In welcher Situation? Was kommt davor und danach? Und was bedeutet das für mein Leben heute?`
+      t("impulse.deepDivePrompt", {
+        topic: impulse.topic,
+        reference: impulse.reference,
+        defaultValue: `The daily impulse is "{{topic}}" with {{reference}}. Explain this passage: Who wrote it? In what situation? What comes before and after? And what does it mean for my life today?`,
+      })
     );
   };
 
   const handleExploreVerse = () => {
     if (!impulse) return;
     openBibleBotChat(
-      `Lies mir den ganzen Abschnitt rund um ${impulse.reference} vor und erkläre mir den Zusammenhang. Ich möchte die Geschichte dahinter verstehen.`
+      t("impulse.explorePrompt", {
+        reference: impulse.reference,
+        defaultValue: `Read me the full passage around {{reference}} and explain the context. I want to understand the story behind it.`,
+      })
     );
   };
 
@@ -334,13 +404,17 @@ export function DailyImpulse() {
   }, [toast, t]);
 
   const handleSubscribeSms = useCallback(async () => {
-    if (smsPhone.length < 8) return;
+    const cleaned = smsPhone.replace(/\s/g, "");
+    if (!cleaned.startsWith("+41") || cleaned.length < 12) {
+      toast({ title: t("subscribe.smsSwissOnly", "Nur Schweizer Nummern"), description: t("subscribe.smsSwissOnlyDesc", "SMS ist nur für Schweizer Nummern (+41) verfügbar."), variant: "destructive" });
+      return;
+    }
     setIsSubscribing(true);
     try {
       const resp = await fetch(SUBSCRIBE_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ channel: "sms", phone_number: smsPhone, language: i18n.language }),
+        body: JSON.stringify({ channel: "sms", phone_number: cleaned, language: i18n.language }),
       });
       if (!resp.ok) throw new Error("Subscribe failed");
       const data = await resp.json();
@@ -403,7 +477,7 @@ export function DailyImpulse() {
       >
         <span className="flex items-center gap-2">
           <BookOpen className="h-3.5 w-3.5" />
-          <span className="font-medium">Tagesimpuls</span>
+          <span className="font-medium">{t("impulse.collapseLabel", "Daily Impulse")}</span>
           {collapsed && impulse && (
             <span className="text-xs opacity-70 truncate max-w-[200px]">
               · {impulse.reference}
@@ -587,6 +661,30 @@ export function DailyImpulse() {
                 utmSource="impulse"
                 variant="button"
               />
+
+              {/* Share to Circle */}
+              {user && circle && (
+                <Button
+                  size="sm"
+                  variant="outline"
+                  onClick={() => {
+                    if (!impulse) return;
+                    addPrayer.mutate(
+                      `✨ ${impulse.teaser}\n\n«${impulse.verse}»\n— ${impulse.reference}`,
+                      { onSuccess: () => sonnerToast.success(t("circle.sharedToast", "Mit deinem Kreis geteilt 🙏")) }
+                    );
+                  }}
+                  disabled={addPrayer.isPending}
+                  className="text-xs border-primary/30 text-primary hover:bg-primary/10"
+                >
+                  {addPrayer.isPending ? (
+                    <Loader2 className="h-3 w-3 mr-1.5 animate-spin" />
+                  ) : (
+                    <Users className="h-3 w-3 mr-1.5" />
+                  )}
+                  {t("circle.shareImpulse", "Mit Kreis teilen")}
+                </Button>
+              )}
             </div>
 
             {/* Subscribe: not yet subscribed */}
@@ -644,7 +742,7 @@ export function DailyImpulse() {
                     <Button
                       size="sm"
                       onClick={handleSubscribeSms}
-                      disabled={isSubscribing || smsPhone.length < 8}
+                      disabled={isSubscribing || !smsPhone.replace(/\s/g, "").startsWith("+41") || smsPhone.replace(/\s/g, "").length < 12}
                       className="text-xs h-7 bg-primary hover:bg-primary/90"
                     >
                       {isSubscribing && showSmsInput ? <Loader2 className="h-3 w-3 animate-spin" /> : t("subscribe.submit", "Abonnieren")}

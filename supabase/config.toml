@@ -13,3 +13,9 @@ project_id = "swsthxftugjqznqjcfpk"
     verify_jwt = true
   [functions.send-transactional-email]
     verify_jwt = true
+  [functions.create-checkout]
+    verify_jwt = false
+  [functions.get-stripe-price]
+    verify_jwt = false
+  [functions.generate-sitemap]
+    verify_jwt = false

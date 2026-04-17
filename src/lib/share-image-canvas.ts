@@ -189,8 +189,8 @@ export function generateShareImage(options: ShareTileOptions): Promise<Blob> {
     ctx.textBaseline = "top";
     ctx.fillText("«", PAD - 12, y - 20);
 
-    // --- Verse text ---
-    const verseFontSize = verse.length > 200 ? 34 : verse.length > 120 ? 38 : 44;
+    // --- Verse text (sized for WhatsApp preview readability) ---
+    const verseFontSize = verse.length > 200 ? 36 : verse.length > 120 ? 42 : 48;
     const verseLineHeight = verseFontSize * 1.55;
     ctx.font = `italic ${verseFontSize}px Georgia, 'Times New Roman', serif`;
     ctx.fillStyle = textColor;
@@ -207,7 +207,7 @@ export function generateShareImage(options: ShareTileOptions): Promise<Blob> {
     y += 20;
 
     // --- Reference ---
-    ctx.font = "500 26px 'Inter', 'Segoe UI', system-ui, sans-serif";
+    ctx.font = "500 28px 'Inter', 'Segoe UI', system-ui, sans-serif";
     ctx.fillStyle = hasImage ? GOLD_LIGHT : PETROL;
     withShadow(() => ctx.fillText(`— ${reference}`, PAD, y));
     y += 50;
@@ -242,6 +242,15 @@ export function generateShareImage(options: ShareTileOptions): Promise<Blob> {
     ctx.font = "400 22px 'Inter', 'Segoe UI', system-ui, sans-serif";
     ctx.fillStyle = brandSubtle;
     ctx.fillText("Everyday Sunday", PAD, brandY + 38);
+
+    // --- Centered domain badge at the very bottom ---
+    ctx.font = "600 28px 'Inter', 'Segoe UI', system-ui, sans-serif";
+    ctx.fillStyle = GOLD;
+    ctx.textBaseline = "alphabetic";
+    const domain = "biblebot.life";
+    const domainWidth = ctx.measureText(domain).width;
+    withShadow(() => ctx.fillText(domain, (SIZE - domainWidth) / 2, SIZE - 30));
+    ctx.textBaseline = "top";
 
     // --- Church branding (sponsor) ---
     if (churchBranding) {

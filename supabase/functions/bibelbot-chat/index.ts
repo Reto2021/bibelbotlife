@@ -47,16 +47,219 @@ function fixSpelling(text: string): string {
 
 const BIBLE_API_BASE = "https://bible.helloao.org/api";
 
-// Map of available German translations
-const BIBLE_TRANSLATIONS: Record<string, { id: string; name: string }> = {
-  luther: { id: "deu_l12", name: "Lutherbibel 1912" },
-  luther1912: { id: "deu_l12", name: "Lutherbibel 1912" },
-  elberfelder: { id: "deu_elbbk", name: "Elberfelder Übersetzung" },
-  schlachter: { id: "deu_sch", name: "Schlachter-Bibel 1951" },
-  schlachter2000: { id: "deu_sch", name: "Schlachter 2000" },
-  kjv: { id: "eng_kjv", name: "King James Version" },
-  web: { id: "eng_web", name: "World English Bible" },
+// Map of available translations per language (modern first, classic fallback)
+const LANGUAGE_BIBLES: Record<string, { translations: Record<string, { id: string; name: string }>; default: string }> = {
+  de: {
+    default: "luther",
+    translations: {
+      luther: { id: "deu_l12", name: "Lutherbibel 1912" },
+      luther1912: { id: "deu_l12", name: "Lutherbibel 1912" },
+      elberfelder: { id: "deu_elbbk", name: "Elberfelder Übersetzung" },
+      schlachter: { id: "deu_sch", name: "Schlachter-Bibel 1951" },
+      schlachter2000: { id: "deu_sch", name: "Schlachter 2000" },
+    },
+  },
+  en: {
+    default: "bsb",
+    translations: {
+      bsb: { id: "BSB", name: "Berean Standard Bible (2022)" },
+      web: { id: "eng_web", name: "World English Bible" },
+      kjv: { id: "eng_kjv", name: "King James Version" },
+    },
+  },
+  fr: {
+    default: "lsg",
+    translations: {
+      lsg: { id: "fra_lsg", name: "Louis Segond 1910" },
+    },
+  },
+  es: {
+    default: "vbl",
+    translations: {
+      vbl: { id: "spa_vbl", name: "Versión Biblia Libre (2018)" },
+      rv09: { id: "spa_r09", name: "Reina-Valera 1909" },
+    },
+  },
+  it: {
+    default: "riv",
+    translations: {
+      riv: { id: "ita_riv", name: "Riveduta (Luzzi) 1927" },
+    },
+  },
+  pt: {
+    default: "blj",
+    translations: {
+      blj: { id: "por_blj", name: "Bíblia Livre" },
+    },
+  },
+  nl: {
+    default: "nbg",
+    translations: {
+      nbg: { id: "nld_nbg", name: "NBG-vertaling 1951" },
+    },
+  },
+  pl: {
+    default: "ubg",
+    translations: {
+      ubg: { id: "pol_ubg", name: "Święta Biblia (UBG)" },
+    },
+  },
+  cs: {
+    default: "nkb",
+    translations: {
+      nkb: { id: "ces_nkb", name: "Nova Bible Kralicka" },
+    },
+  },
+  ro: {
+    default: "corn",
+    translations: {
+      corn: { id: "ron_924", name: "Cornilescu 1924" },
+    },
+  },
+  ru: {
+    default: "syn",
+    translations: {
+      syn: { id: "rus_syn", name: "Синодальный перевод 1876" },
+    },
+  },
+  uk: {
+    default: "ukr96",
+    translations: {
+      ukr96: { id: "ukr_1996", name: "Біблія 1996" },
+    },
+  },
+  ar: {
+    default: "vd",
+    translations: {
+      vd: { id: "arb_vdv", name: "الكتاب المقدس (Van Dyck)" },
+    },
+  },
+  he: {
+    default: "mod",
+    translations: {
+      mod: { id: "heb_mod", name: "תנ״ך עברי מודרני" },
+    },
+  },
+  ko: {
+    default: "krv",
+    translations: {
+      krv: { id: "kor_old", name: "한국어 성경" },
+    },
+  },
+  da: {
+    default: "det",
+    translations: {
+      det: { id: "dan_det", name: "Hellig Bibel" },
+    },
+  },
+  sv: {
+    default: "fol",
+    translations: {
+      fol: { id: "swe_fol", name: "Svenska Folkbibeln" },
+    },
+  },
+  fi: {
+    default: "fin",
+    translations: {
+      fin: { id: "fin_bib", name: "Elävä uutinen" },
+    },
+  },
+  hu: {
+    default: "hun",
+    translations: {
+      hun: { id: "hun_bib", name: "Nádej pre každého" },
+    },
+  },
+  hr: {
+    default: "iva",
+    translations: {
+      iva: { id: "hrv_iva", name: "Sveta Biblija" },
+    },
+  },
+  sr: {
+    default: "srp",
+    translations: {
+      srp: { id: "srp_865", name: "Sveta Biblija" },
+    },
+  },
+  sk: {
+    default: "slk",
+    translations: {
+      slk: { id: "slk_bib", name: "Nádej pre každého" },
+    },
+  },
+  vi: {
+    default: "vie",
+    translations: {
+      vie: { id: "vie_1934", name: "Kinh Thánh 1934" },
+    },
+  },
+  id: {
+    default: "ayt",
+    translations: {
+      ayt: { id: "ind_ayt", name: "Alkitab Yang Terbuka" },
+    },
+  },
+  tl: {
+    default: "tgl",
+    translations: {
+      tgl: { id: "tgl_ulb", name: "Banal na Bibliya" },
+    },
+  },
+  sw: {
+    default: "swa",
+    translations: {
+      swa: { id: "swh_swa", name: "Biblia Takatifu" },
+    },
+  },
+  am: {
+    default: "amh",
+    translations: {
+      amh: { id: "amh_amh", name: "መጽሐፍ ቅዱስ" },
+    },
+  },
+  yo: {
+    default: "yor",
+    translations: {
+      yor: { id: "yor_bib", name: "Bíbélì Mímọ́" },
+    },
+  },
+  ig: {
+    default: "ibo",
+    translations: {
+      ibo: { id: "ibo_bib", name: "Baịbụlụ Nsọ" },
+    },
+  },
+  ht: {
+    default: "hat",
+    translations: {
+      hat: { id: "hat_pds", name: "Bib La" },
+    },
+  },
 };
+
+// Resolve translation for a given language
+function getTranslation(lang: string, translationKey?: string): { id: string; name: string } {
+  const langBibles = LANGUAGE_BIBLES[lang] || LANGUAGE_BIBLES["en"];
+  if (translationKey) {
+    const t = langBibles.translations[translationKey.toLowerCase()];
+    if (t) return t;
+    // Try across all languages (e.g. user explicitly asks for "kjv")
+    for (const lb of Object.values(LANGUAGE_BIBLES)) {
+      const found = lb.translations[translationKey.toLowerCase()];
+      if (found) return found;
+    }
+  }
+  return langBibles.translations[langBibles.default];
+}
+
+// Legacy flat map for backward compat
+const BIBLE_TRANSLATIONS: Record<string, { id: string; name: string }> = {};
+for (const lb of Object.values(LANGUAGE_BIBLES)) {
+  for (const [k, v] of Object.entries(lb.translations)) {
+    BIBLE_TRANSLATIONS[k] = v;
+  }
+}
 
 // Standard book ID mapping (German/English name → OSIS ID)
 const BOOK_MAP: Record<string, string> = {
@@ -140,12 +343,13 @@ async function lookupBibleVerse(
   chapter: number,
   verseStart: number,
   verseEnd?: number,
-  translationKey?: string
+  translationKey?: string,
+  lang?: string
 ): Promise<string> {
   const bookId = resolveBookId(book);
   if (!bookId) return `Buch «${book}» nicht gefunden.`;
 
-  const trans = BIBLE_TRANSLATIONS[translationKey?.toLowerCase() || "luther"] || BIBLE_TRANSLATIONS.luther;
+  const trans = getTranslation(lang || "de", translationKey);
   const url = `${BIBLE_API_BASE}/${trans.id}/${bookId}/${chapter}.json`;
 
   try {
@@ -175,78 +379,82 @@ async function lookupBibleVerse(
   }
 }
 
-// Tool definition for AI tool calling
-const BIBLE_LOOKUP_TOOL = {
-  type: "function" as const,
-  function: {
-    name: "lookup_bible_verse",
-    description: "Schlage einen exakten Bibelvers in einer deutschen Übersetzung nach. Verwende dieses Tool IMMER, wenn du einen Bibelvers wörtlich zitieren möchtest, um sicherzustellen, dass das Zitat korrekt ist.",
-    parameters: {
-      type: "object",
-      properties: {
-        book: {
-          type: "string",
-          description: "Buchname (deutsch oder englisch), z.B. 'Johannes', 'Psalm', '1. Korinther', 'Matthäus'"
-        },
-        chapter: {
-          type: "number",
-          description: "Kapitelnummer"
-        },
-        verse_start: {
-          type: "number",
-          description: "Erste Versnummer"
-        },
-        verse_end: {
-          type: "number",
-          description: "Letzte Versnummer (optional, für Versbereich)"
-        },
-        translation: {
-          type: "string",
-          enum: ["luther", "elberfelder", "schlachter", "kjv", "web"],
-          description: "Bibelübersetzung. Standard: luther. Auch englisch: kjv, web"
-        }
-      },
-      required: ["book", "chapter", "verse_start"]
-    }
-  }
-};
+// Tool definitions – built dynamically based on language
+function buildBibleTools(lang: string) {
+  const langBibles = LANGUAGE_BIBLES[lang] || LANGUAGE_BIBLES["en"];
+  const translationKeys = Object.keys(langBibles.translations);
 
-// Semantic Bible search tool – searches the DB full-text index
-const BIBLE_SEARCH_TOOL = {
-  type: "function" as const,
-  function: {
-    name: "search_bible_verses",
-    description: "Durchsuche die Bibel nach Versen zu einem Thema, Stichwort oder einer Frage. Verwende dieses Tool, wenn du thematisch passende Bibelverse finden willst, aber keine exakte Stellenangabe hast. Gibt bis zu 8 relevante Verse zurück.",
-    parameters: {
-      type: "object",
-      properties: {
-        query: {
-          type: "string",
-          description: "Suchbegriffe oder Thema auf Deutsch, z.B. 'Hoffnung in schweren Zeiten', 'Vergebung', 'Gottes Liebe'"
+  const BIBLE_LOOKUP_TOOL = {
+    type: "function" as const,
+    function: {
+      name: "lookup_bible_verse",
+      description: "Look up an exact Bible verse in a specific translation. Use this tool whenever you want to quote a Bible verse verbatim.",
+      parameters: {
+        type: "object",
+        properties: {
+          book: {
+            type: "string",
+            description: "Book name (in any language), e.g. 'John', 'Psalm', '1 Corinthians', 'Genesis'"
+          },
+          chapter: { type: "number", description: "Chapter number" },
+          verse_start: { type: "number", description: "Start verse number" },
+          verse_end: { type: "number", description: "End verse number (optional, for range)" },
+          translation: {
+            type: "string",
+            enum: translationKeys,
+            description: `Bible translation. Default: ${langBibles.default}. Available: ${translationKeys.join(", ")}`
+          }
         },
-        translation: {
-          type: "string",
-          enum: ["luther1912", "elberfelder", "schlachter2000", "kjv", "web", "all"],
-          description: "Bibelübersetzung für die Suche. Standard: luther1912. Englisch: kjv, web. 'all' für alle."
-        }
-      },
-      required: ["query"]
+        required: ["book", "chapter", "verse_start"]
+      }
     }
-  }
-};
+  };
+
+  const BIBLE_SEARCH_TOOL = {
+    type: "function" as const,
+    function: {
+      name: "search_bible_verses",
+      description: "Search the Bible for verses about a topic, keyword or question. Returns up to 8 relevant verses.",
+      parameters: {
+        type: "object",
+        properties: {
+          query: {
+            type: "string",
+            description: "Search terms or topic in the user's language"
+          },
+          translation: {
+            type: "string",
+            enum: [...translationKeys, "all"],
+            description: `Translation filter. Default: all.`
+          }
+        },
+        required: ["query"]
+      }
+    }
+  };
+
+  return { BIBLE_LOOKUP_TOOL, BIBLE_SEARCH_TOOL };
+}
 
 async function searchBibleVerses(
   query: string,
-  translation?: string
+  translation?: string,
+  lang?: string
 ): Promise<string> {
   const supabase = createClient(
     Deno.env.get("SUPABASE_URL")!,
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
   );
 
-  // Use AI to expand search terms
+  const searchLang = lang || "de";
+
+  // Use AI to expand search terms in the user's language
   const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY")!;
   let tsquery = query.split(/\s+/).filter(w => w.length > 0).join(" | ");
+
+  const langInstruction = searchLang === "de"
+    ? "Generiere deutsche Suchbegriffe"
+    : `Generate search terms in the language matching code '${searchLang}'`;
 
   try {
     const expandResp = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
@@ -260,8 +468,8 @@ async function searchBibleVerses(
         messages: [
           {
             role: "system",
-            content: `Generiere deutsche Suchbegriffe für eine Bibelsuche (PostgreSQL Full-Text-Search).
-Nur einzelne Wörter getrennt mit | (OR). Viele Synonyme. Beispiel: "Liebe | lieben | Güte | Barmherzigkeit | Nächstenliebe"
+            content: `${langInstruction} für eine Bibelsuche (PostgreSQL Full-Text-Search).
+Nur einzelne Wörter getrennt mit | (OR). Viele Synonyme.
 Antworte NUR mit dem tsquery-String, nichts anderes. Keine Anführungszeichen, keine Klammern, keine Sonderzeichen ausser |.`
           },
           { role: "user", content: query },
@@ -278,7 +486,7 @@ Antworte NUR mit dem tsquery-String, nichts anderes. Keine Anführungszeichen, k
     console.error("Search expansion error:", e);
   }
 
-  // Sanitize tsquery: remove quotes, parens, special chars; keep only words and |
+  // Sanitize tsquery
   tsquery = tsquery
     .replace(/["""''`()[\]{}<>!@#$%^&*+=~\\;:]/g, ' ')
     .replace(/\s*\|\s*/g, ' | ')
@@ -292,7 +500,6 @@ Antworte NUR mit dem tsquery-String, nichts anderes. Keine Anführungszeichen, k
   const trans = (!translation || translation === "all") ? null : translation;
 
   let results: any[] | null = null;
-  let searchError: any = null;
 
   // Try the expanded query first, fall back to simple query on syntax error
   const { data, error } = await supabase.rpc("search_bible_verses", {
@@ -300,17 +507,18 @@ Antworte NUR mit dem tsquery-String, nichts anderes. Keine Anführungszeichen, k
     translation_filter: trans,
     book_boost: null,
     result_limit: 8,
+    language_filter: searchLang,
   });
 
   if (error) {
     console.error("Bible search RPC error (expanded):", error.message, "tsquery:", tsquery);
-    // Fallback: use the original simple query
     const fallbackQuery = query.split(/\s+/).filter(w => w.length > 0).join(" | ");
     const { data: fallbackData, error: fallbackError } = await supabase.rpc("search_bible_verses", {
       search_query: fallbackQuery,
       translation_filter: trans,
       book_boost: null,
       result_limit: 8,
+      language_filter: searchLang,
     });
     if (fallbackError) {
       console.error("Bible search RPC fallback error:", fallbackError.message);
@@ -446,6 +654,7 @@ const SYSTEM_PROMPT = `Du bist BibleBot – ein einfühlsamer, weiser und heraus
 - Du zitierst bevorzugt aus modernen Übersetzungen: Zürcher Bibel (2007, reformiert), Lutherbibel (2017, evangelisch), Einheitsübersetzung (2016, katholisch), Schlachter 2000 (freikirchlich), Elberfelder 2006 (wortgetreu).
 - Du bist ökumenisch orientiert und respektierst alle christlichen Traditionen.
 - Du bist kein Ersatz für seelsorgerische Beratung oder Therapie.
+- WICHTIG: Deine Wissensbasis umfasst ausschliesslich den biblischen Kanon (Altes und Neues Testament). Wenn Nutzer nach Inhalten fragen, die ausserhalb dieses Kanons liegen (z.B. Buch Mormon, Koran, Apokryphen bestimmter Traditionen), antworte freundlich und transparent: «Meine Wissensbasis umfasst den biblischen Kanon (Altes und Neues Testament). Zu Texten ausserhalb dieses Kanons kann ich leider keine fundierte Auskunft geben. Ich kann dir aber gerne zeigen, was die Bibel zu diesem Thema sagt.» Sei dabei respektvoll gegenüber allen Glaubensrichtungen – grenze ab, ohne abzuwerten.
 
 ## KRITISCH: Bibelverse – Zwei Tools + Trainingswissen
 
@@ -974,10 +1183,46 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
 
     // Journey context removed from public chat — no check-in questions
 
+    // === Golden Answers RAG: inject curated Q&A as few-shot examples ===
+    try {
+      const lastUserMsg2 = [...messages].reverse().find((m: { role: string; content: string }) => m.role === "user");
+      const userQuery = lastUserMsg2?.content?.slice(0, 512);
+      if (userQuery) {
+        const embedSession = new (globalThis as any).Supabase.ai.Session("gte-small");
+        const queryEmbedding = await embedSession.run(userQuery, { mean_pool: true, normalize: true });
+        const embedArr = Array.from(queryEmbedding as Float32Array);
+        const supaForRag = createClient(
+          Deno.env.get("SUPABASE_URL")!,
+          Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
+        );
+        const { data: matches } = await supaForRag.rpc("search_golden_answers", {
+          query_embedding: JSON.stringify(embedArr),
+          match_threshold: 0.78,
+          match_count: 2,
+          language_filter: lang,
+        });
+        if (matches && matches.length > 0) {
+          const examples = matches
+            .map((m: { question: string; answer: string }, i: number) => `Beispiel ${i + 1}:\nFrage: ${m.question}\nVorbildliche Antwort: ${m.answer}`)
+            .join("\n\n");
+          systemPrompt += `\n\n[GOLDEN-ANSWER-BEISPIELE]\nDiese kuratierten Antworten wurden als besonders gut bewertet. Orientiere dich an Stil, Tiefe und Struktur, kopiere aber nicht wörtlich:\n\n${examples}`;
+          // Increment use count (best-effort, fire-and-forget)
+          for (const m of matches) {
+            supaForRag.rpc("increment_golden_answer_use", { answer_id: (m as { id: string }).id }).then(() => {});
+          }
+        }
+      }
+    } catch (e) {
+      console.error("Golden answer RAG error (non-fatal):", e);
+    }
+
     const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
     if (!LOVABLE_API_KEY) {
       throw new Error("LOVABLE_API_KEY is not configured");
     }
+
+    // Build language-aware Bible tools
+    const bibleTools = buildBibleTools(lang);
 
     // If conversation exceeds 50 messages, summarize older ones
     let finalMessages = messages;
@@ -1038,7 +1283,7 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
             { role: "system", content: systemPrompt },
             ...finalMessages,
           ],
-          tools: [BIBLE_LOOKUP_TOOL, BIBLE_SEARCH_TOOL, THEOLOGY_SEARCH_TOOL],
+          tools: [bibleTools.BIBLE_LOOKUP_TOOL, bibleTools.BIBLE_SEARCH_TOOL, THEOLOGY_SEARCH_TOOL],
         }),
       }
     );
@@ -1082,7 +1327,8 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
                 args.chapter,
                 args.verse_start,
                 args.verse_end,
-                args.translation
+                args.translation,
+                lang
               );
               return { id: tc.id, result };
             } catch (e) {
@@ -1095,7 +1341,8 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
               const args = JSON.parse(tc.function.arguments);
               const result = await searchBibleVerses(
                 args.query,
-                args.translation
+                args.translation,
+                lang
               );
               return { id: tc.id, result };
             } catch (e) {

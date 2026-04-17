@@ -1,9 +1,10 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { useTranslation } from "react-i18next";
-import { Send, X, MessageCircle, Loader2, Mic, MicOff, Pencil, Shield, Sparkles, CheckCircle2, AlertTriangle, Info, BookOpen, Volume2, VolumeX, ChevronDown } from "lucide-react";
+import { Send, X, MessageCircle, Loader2, Mic, MicOff, Pencil, Shield, Sparkles, CheckCircle2, AlertTriangle, Info, BookOpen, Volume2, VolumeX, ChevronDown, Heart } from "lucide-react";
 import { useTTS } from "@/hooks/use-tts";
 
 import { ShareButton } from "@/components/ShareButton";
+import { ChatFeedbackButtons } from "@/components/ChatFeedbackButtons";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
@@ -76,6 +77,29 @@ const AUTO_OPEN_KEY = "bibelbot-autoopened";
 const MESSAGES_KEY = "bibelbot-messages";
 const JOURNEY_START_KEY = "bibelbot-journey-start";
 const JOURNEY_CHECKINS_KEY = "bibelbot-checkins";
+const DONATED_AT_KEY = "bibelbot-donated-at";
+const DONATE_DISMISS_KEY = "bibelbot-donate-dismissed";
+const DONATE_GRACE_DAYS = 30;
+
+function hasDonatedRecently(): boolean {
+  try {
+    const ts = localStorage.getItem(DONATED_AT_KEY);
+    if (!ts) return false;
+    return Date.now() - parseInt(ts, 10) < DONATE_GRACE_DAYS * 24 * 60 * 60 * 1000;
+  } catch { return false; }
+}
+
+function isDonateNudgeDismissed(): boolean {
+  try {
+    const ts = localStorage.getItem(DONATE_DISMISS_KEY);
+    if (!ts) return false;
+    return Date.now() - parseInt(ts, 10) < 7 * 24 * 60 * 60 * 1000; // 7 days
+  } catch { return false; }
+}
+
+function dismissDonateNudge() {
+  try { localStorage.setItem(DONATE_DISMISS_KEY, Date.now().toString()); } catch {}
+}
 
 function getJourneyDay(): number {
   try {
@@ -146,7 +170,7 @@ function QABadge({ qa, t }: { qa: QAResult | "loading" | "skipped"; t: (key: str
   );
 }
 
-function makeRefsClickable(children: React.ReactNode, onRefClick: (msg: string) => void): React.ReactNode {
+function makeRefsClickable(children: React.ReactNode, onRefClick: (msg: string) => void, t: (key: string, opts?: any) => string): React.ReactNode {
   if (!children) return children;
   const processNode = (node: React.ReactNode): React.ReactNode => {
     if (typeof node === "string") {
@@ -158,7 +182,7 @@ function makeRefsClickable(children: React.ReactNode, onRefClick: (msg: string) 
         if (match.index > lastIndex) parts.push(node.slice(lastIndex, match.index));
         const ref = match[0];
         parts.push(
-          <button key={`ref-${match.index}`} onClick={(e) => { e.preventDefault(); onRefClick(`Erkläre mir ${ref} im Detail: Was ist der historische Kontext? Wer spricht? Was kommt davor und danach? Und was bedeutet das für mich heute?`); }} className="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary cursor-pointer font-medium" title={`${ref} vertiefen`}>{ref}</button>
+          <button key={`ref-${match.index}`} onClick={(e) => { e.preventDefault(); onRefClick(t("toolPrompts.explainRef", { ref })); }} className="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary cursor-pointer font-medium" title={ref}>{ref}</button>
         );
         lastIndex = regex.lastIndex;
       }
@@ -631,7 +655,7 @@ export function BibleBotChat() {
             )}
             <p className="text-xs text-muted-foreground">
               {journeyDay > 0 && journeyDay <= 21
-                ? `Tag ${journeyDay} von 21 · ${journeyDay <= 7 ? t("chat.arriving") : journeyDay <= 14 ? t("chat.deepening") : t("chat.acting")}`
+                ? t("chat.journeyProgress", { day: journeyDay, total: 21, phase: journeyDay <= 7 ? t("chat.arriving") : journeyDay <= 14 ? t("chat.deepening") : t("chat.acting") })
                 : journeyDay > 21
                   ? t("chat.journeyComplete")
                   : t("chat.yourCompanion")}
@@ -662,14 +686,14 @@ export function BibleBotChat() {
               title={t("chat.translationSelect", "Bibelübersetzung")}
             >
               <option value="auto">📖 Auto</option>
-              <optgroup label="Moderne Übersetzungen">
-                <option value="zuercher2007">Zürcher Bibel (2007) – Reformiert</option>
-                <option value="luther2017">Lutherbibel (2017) – Evangelisch</option>
-                <option value="einheitsuebersetzung">Einheitsübersetzung (2016) – Katholisch</option>
-                <option value="schlachter2000">Schlachter 2000 – Freikirchlich</option>
-                <option value="elberfelder2006">Elberfelder 2006 – Wortgetreu</option>
+              <optgroup label={t("chat.translationModern", "Moderne Übersetzungen")}>
+                <option value="zuercher2007">{t("chat.translationZuercher", "Zürcher Bibel (2007) – Reformiert")}</option>
+                <option value="luther2017">{t("chat.translationLuther", "Lutherbibel (2017) – Evangelisch")}</option>
+                <option value="einheitsuebersetzung">{t("chat.translationEinheit", "Einheitsübersetzung (2016) – Katholisch")}</option>
+                <option value="schlachter2000">{t("chat.translationSchlachter", "Schlachter 2000 – Freikirchlich")}</option>
+                <option value="elberfelder2006">{t("chat.translationElberfelder", "Elberfelder 2006 – Wortgetreu")}</option>
               </optgroup>
-              <optgroup label="Historisch (exakt nachschlagbar)">
+              <optgroup label={t("chat.translationHistoric", "Historisch (exakt nachschlagbar)")}>
                 <option value="luther1912">Luther 1912</option>
               </optgroup>
               <optgroup label="English">
@@ -718,15 +742,23 @@ export function BibleBotChat() {
         {messages.map((msg, i) => {
           const isLast = i === messages.length - 1;
           const { cleanText, options } = msg.role === "assistant" ? extractOptions(msg.content) : { cleanText: msg.content, options: [] };
+          // Count assistant messages up to this point
+          const assistantIndex = msg.role === "assistant"
+            ? messages.slice(0, i + 1).filter(m => m.role === "assistant").length
+            : 0;
+          const showDonateNudge = msg.role === "assistant" && isLast && assistantIndex >= 3 && assistantIndex % 3 === 0;
+          const donated = hasDonatedRecently();
+          const nudgeDismissed = isDonateNudgeDismissed();
           return (
-          <div key={i} className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
+          <div key={i}>
+            <div className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
             <div className="max-w-[85%]">
               <div className={`rounded-2xl px-4 py-3 text-base leading-relaxed ${msg.role === "user" ? "bg-primary text-primary-foreground rounded-br-md" : "bg-muted text-foreground rounded-bl-md"}`}>
                 {msg.role === "assistant" ? (
                   <div className="prose prose-sm max-w-none dark:prose-invert font-serif">
                     <ReactMarkdown components={{
-                      p: ({ children }) => <p>{makeRefsClickable(children, sendMessage)}</p>,
-                      li: ({ children }) => <li>{makeRefsClickable(children, sendMessage)}</li>,
+                      p: ({ children }) => <p>{makeRefsClickable(children, sendMessage, t)}</p>,
+                      li: ({ children }) => <li>{makeRefsClickable(children, sendMessage, t)}</li>,
                     }}>{cleanText}</ReactMarkdown>
                   </div>
                 ) : msg.content}
@@ -762,7 +794,7 @@ export function BibleBotChat() {
                     ) : (
                       <Volume2 className="h-4 w-4" />
                     )}
-                    <span className="text-xs">{tts.isPlaying ? "Stopp" : "Vorlesen"}</span>
+                    <span className="text-xs">{tts.isPlaying ? t("chat.stopAudio", "Stopp") : t("chat.playAudio", "Vorlesen")}</span>
                   </button>
                   <ShareButton
                     title={t("share.chatTitle")}
@@ -772,7 +804,46 @@ export function BibleBotChat() {
                   />
                 </div>
               )}
+              {msg.role === "assistant" && i > 0 && (
+                <div className="mt-1.5">
+                  <ChatFeedbackButtons
+                    questionText={[...messages.slice(0, i)].reverse().find((m) => m.role === "user")?.content || ""}
+                    answerText={msg.content}
+                    language={i18n.language || "de"}
+                  />
+                </div>
+              )}
             </div>
+            </div>
+            {/* Subtle donation nudge */}
+            {showDonateNudge && !nudgeDismissed && (
+              <div className="flex justify-center mt-2 mb-1 animate-fade-up">
+                {donated ? (
+                  <span className="inline-flex items-center gap-1.5 text-[11px] text-primary/70 bg-primary/5 border border-primary/10 rounded-full px-3 py-1">
+                    <Heart className="h-3 w-3 fill-primary/50 text-primary/50" />
+                    {t("chat.donorBadge", "Danke für deine Unterstützung! ❤️")}
+                  </span>
+                ) : (
+                  <a
+                    href="/spenden"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center gap-1.5 text-[11px] text-muted-foreground hover:text-primary bg-muted/50 hover:bg-primary/5 border border-transparent hover:border-primary/15 rounded-full px-3 py-1 transition-all"
+                    onClick={() => { track("donate_nudge_click", {}); }}
+                  >
+                    <Heart className="h-3 w-3 group-hover:text-primary transition-colors" />
+                    {t("chat.donateNudge", "Gefällt dir BibleBot? Hilf uns mit einer kleinen Spende 🙏")}
+                    <button
+                      className="ml-1 text-muted-foreground/50 hover:text-muted-foreground text-[10px]"
+                      onClick={(e) => { e.preventDefault(); e.stopPropagation(); dismissDonateNudge(); }}
+                      aria-label={t("chat.close", "Schliessen")}
+                    >
+                      ✕
+                    </button>
+                  </a>
+                )}
+              </div>
+            )}
           </div>
           );
         })}

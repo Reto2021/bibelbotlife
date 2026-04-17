@@ -1,69 +1,29 @@
 
 
-## Plan: Share-Bild mit Intro-Text, Hashtags und Gemeinde-Sponsoring
+## Ressourcen-Karten aufklappbar machen + Chat-Weiterführung
 
-### Was wird gemacht
+### Problem
+Die Ressourcen-Karten in der Bibliothek zeigen nur einen 2-Zeilen-Vorschau (`line-clamp-2`). Man kann den vollen Inhalt nicht lesen und Bibelstellen sind nicht klickbar. Es fehlt eine Möglichkeit, direkt in den Chat zu wechseln.
 
-Wenn ein Nutzer auf "Bild teilen" klickt, wird automatisch ein passender Intro-Text mit Hashtags generiert und beim Teilen mitgegeben. Bei gesponsorten Gemeinden (church branding aktiv) wird die Gemeinde sowohl im Bild als auch im Share-Text erwähnt.
+### Lösung
 
-### Bestandsaufnahme (bereits vorhanden)
+**1. Expand/Collapse pro Karte** (`ResourceLibrary.tsx`)
+- Neuer State: `expandedIds: Set<string>` — mehrere Karten gleichzeitig aufklappbar
+- Klick auf die Karte (oder einen Chevron-Button) toggled die ID im Set
+- Im zugeklappten Zustand: `line-clamp-2` (wie bisher)
+- Im aufgeklappten Zustand: voller `content`-Text mit `whitespace-pre-wrap`, kein line-clamp
+- ChevronDown/ChevronUp-Icon als visueller Hinweis
 
-- `useChurchBranding()` Hook — liefert churchName, logoUrl, primaryColor etc.
-- `ChurchBanner` — zeigt Gemeinde-Banner bei `?church=slug`
-- `BrandedQRCode` — QR-Code mit BibleBot-Logo
-- `QRFlyerDownload`, `QRStickerDownload` — Flyer/Sticker-Download für Gemeinden
-- `SplashScreen` — zeigt Partner-Logo bei Patronat
-- Share-Flow in `DailyImpulse.tsx` → `shareAsImage()` nutzt bereits `navigator.share()` mit Text
+**2. "Im Chat vertiefen"-Button**
+- Nur im aufgeklappten Zustand sichtbar
+- Ruft `openBibleBotChat()` auf mit dem Ressourcen-Titel als Kontext
+- z.B. `"Erkläre mir diese Bibelstelle: {title}"` für Lesungen, oder `"Erzähle mir mehr über dieses Gebet: {title}"` für Gebete
+- MessageCircle-Icon + "Im Chat vertiefen"
 
-### Änderungen
+**3. Kopieren-Button**
+- Ebenfalls nur im aufgeklappten Zustand
+- Kopiert den `content`-Text in die Zwischenablage
 
-**1. Share-Text mit Intro + Hashtags (`src/components/DailyImpulse.tsx`)**
-
-- `shareAsImage()` erweitern: statt nur Vers + Referenz wird ein vollständiger Post-Text generiert:
-  ```
-  ✨ {teaser}
-
-  «{verse}»
-  — {reference}
-
-  #BibleBotLife #Tagesimpuls #{topic} #Bibel
-  biblebot.life
-  ```
-- Bei aktiver Gemeinde-Branding:
-  ```
-  ✨ {teaser}
-
-  «{verse}»
-  — {reference}
-
-  📍 Empfohlen von {churchName}
-
-  #BibleBotLife #Tagesimpuls #{topic} #{churchName}
-  biblebot.life/?church={slug}
-  ```
-
-**2. Gemeinde-Logo + Name im Bild (`src/lib/share-image-canvas.ts`)**
-
-- `ShareTileOptions` erweitern um optionale `churchBranding: { name, logoUrl, slug }`.
-- Im unteren Branding-Bereich: Wenn `churchBranding` vorhanden, neben "BibleBot.Life" ein kleines "Empfohlen von {churchName}" und optional das Gemeinde-Logo anzeigen.
-- Layout: Links "BibleBot.Life" + "Everyday Sunday", rechts unten kleines Gemeinde-Logo + Name.
-
-**3. Integration in DailyImpulse**
-
-- `useChurchBranding()` importieren und Branding-Daten an `generateShareImage()` und `shareAsImage()` weitergeben.
-- Hashtags werden sprachabhängig generiert (DE: #Bibel, EN: #Bible, etc.) mit Basis-Set + topic-basiertem Tag.
-
-**4. Clipboard-Fallback**
-
-- Wenn `navigator.share` nicht verfügbar: Text wird in Zwischenablage kopiert mit Toast-Hinweis "Text kopiert — füge ihn beim Posten ein".
-
-### Technische Details
-
-| Datei | Änderung |
-|-------|----------|
-| `src/lib/share-image-canvas.ts` | `ShareTileOptions` + `churchBranding` Feld; Gemeinde-Logo laden + im Canvas unten rechts zeichnen; "Empfohlen von X" Text |
-| `src/components/DailyImpulse.tsx` | `useChurchBranding()` importieren; Share-Text Builder-Funktion mit Hashtags + Gemeinde; an `generateShareImage` + `navigator.share` übergeben |
-| `src/i18n/locales/de.json` | Neue Keys: `share.introPrefix`, `share.recommendedBy`, `share.hashtagBible` |
-| `src/i18n/locales/en.json` | Gleiche Keys auf Englisch |
-| Alle anderen Locale-Dateien | Übersetzte Versionen der neuen Keys |
+### Dateien
+- `src/pages/dashboard/ResourceLibrary.tsx` — Expand-State, Karten-Klick, aufgeklappte Ansicht mit Chat- und Kopier-Button
 

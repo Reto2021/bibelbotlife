@@ -8,6 +8,7 @@ type CeremonyType = "funeral" | "wedding" | "baptism" | "confirmation";
 
 interface DraftData {
   ceremony_type: CeremonyType;
+  title?: string;
   person_name?: string;
   form_data?: Record<string, unknown>;
   transcripts?: Array<{ text: string; duration: number }>;
@@ -40,6 +41,7 @@ export function useCeremonyDrafts(ceremonyType?: CeremonyType) {
         const { data: updated, error } = await supabase
           .from("ceremony_drafts")
           .update({
+            title: data.title,
             person_name: data.person_name,
             form_data: (data.form_data ?? {}) as Json,
             transcripts: (data.transcripts ?? []) as unknown as Json,
@@ -56,6 +58,7 @@ export function useCeremonyDrafts(ceremonyType?: CeremonyType) {
           .insert({
             user_id: user!.id,
             ceremony_type: data.ceremony_type,
+            title: data.title,
             person_name: data.person_name,
             form_data: (data.form_data ?? {}) as Json,
             transcripts: (data.transcripts ?? []) as unknown as Json,

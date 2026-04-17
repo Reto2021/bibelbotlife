@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
@@ -7,6 +7,7 @@ import { useAuth } from "@/hooks/use-auth";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, Loader2, ArrowLeft, Eye, EyeOff } from "lucide-react";
 import { AppLogo } from "@/components/AppLogo";
@@ -14,6 +15,27 @@ import { useToast } from "@/hooks/use-toast";
 import { Link } from "react-router-dom";
 
 type Mode = "login" | "signup" | "forgot";
+
+/** After signup, create church_members entry if a church slug is stored. */
+async function linkChurchMembership(userId: string, consentContact: boolean) {
+  const slug = localStorage.getItem("biblebot-church");
+  if (!slug) return;
+
+  // look up church id from slug
+  const { data: church } = await (supabase
+    .from("church_partners_public" as any)
+    .select("id")
+    .eq("slug", slug)
+    .maybeSingle() as any);
+  if (!church?.id) return;
+
+  await supabase.from("church_members").insert({
+    user_id: userId,
+    church_id: church.id,
+    consent_contact: consentContact,
+    source_slug: slug,
+  } as any);
+}
 
 const Login = () => {
   const { t, i18n } = useTranslation();
@@ -25,6 +47,22 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [consentContact, setConsentContact] = useState(false);
+  const [churchName, setChurchName] = useState<string | null>(null);
+
+  // Check if user arrived via a church link
+  useEffect(() => {
+    const slug = localStorage.getItem("biblebot-church");
+    if (!slug) return;
+    (supabase
+      .from("church_partners_public" as any)
+      .select("name")
+      .eq("slug", slug)
+      .maybeSingle() as any)
+      .then(({ data }: any) => {
+        if (data?.name) setChurchName(data.name);
+      });
+  }, []);
 
   // Redirect if already logged in
   if (user) {
@@ -44,12 +82,16 @@ const Login = () => {
         toast({ title: t("auth.resetSent", "Link gesendet"), description: t("auth.resetSentDesc", "Prüfe dein E-Mail-Postfach.") });
         setMode("login");
       } else if (mode === "signup") {
-        const { error } = await supabase.auth.signUp({
+        const { data, error } = await supabase.auth.signUp({
           email,
           password,
           options: { emailRedirectTo: window.location.origin },
         });
         if (error) throw error;
+        // Link church membership right after signup
+        if (data.user) {
+          await linkChurchMembership(data.user.id, consentContact);
+        }
         toast({ title: t("auth.signupSuccess", "Konto erstellt"), description: t("auth.confirmEmail", "Bitte bestätige deine E-Mail-Adresse.") });
       } else {
         const { error } = await supabase.auth.signInWithPassword({ email, password });
@@ -66,6 +108,10 @@ const Login = () => {
   const handleGoogle = async () => {
     setLoading(true);
     try {
+      // Store consent in sessionStorage so we can use it after OAuth redirect
+      if (mode === "signup" && churchName) {
+        sessionStorage.setItem("biblebot-church-consent", consentContact ? "1" : "0");
+      }
       const result = await lovable.auth.signInWithOAuth("google", {
         redirect_uri: window.location.origin,
       });
@@ -84,6 +130,9 @@ const Login = () => {
   const handleApple = async () => {
     setLoading(true);
     try {
+      if (mode === "signup" && churchName) {
+        sessionStorage.setItem("biblebot-church-consent", consentContact ? "1" : "0");
+      }
       const result = await lovable.auth.signInWithOAuth("apple", {
         redirect_uri: window.location.origin,
       });
@@ -184,6 +233,22 @@ const Login = () => {
                   </div>
                 </div>
               )}
+
+              {/* Church opt-in checkbox */}
+              {mode === "signup" && churchName && (
+                <div className="flex items-start gap-2 p-3 rounded-md bg-muted/50 border border-border">
+                  <Checkbox
+                    id="consent-contact"
+                    checked={consentContact}
+                    onCheckedChange={(v) => setConsentContact(!!v)}
+                    className="mt-0.5"
+                  />
+                  <Label htmlFor="consent-contact" className="text-xs leading-relaxed cursor-pointer font-normal">
+                    {t("auth.churchConsent", "Ich erlaube {{churchName}}, mir Infos und Einladungen mitzuteilen.", { churchName })}
+                  </Label>
+                </div>
+              )}
+
               <Button type="submit" disabled={loading} className="w-full">
                 {loading && <Loader2 className="h-4 w-4 mr-2 animate-spin" />}
                 <Mail className="h-4 w-4 mr-2" />

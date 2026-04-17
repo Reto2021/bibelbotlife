@@ -42,10 +42,11 @@ interface ExportOptions {
   tradition: string;
   blocks: ServiceBlockData[];
   churchName?: string;
+  notes?: string;
 }
 
 function buildServiceDoc(options: ExportOptions): jsPDF {
-  const { title, serviceDate, serviceTime, serviceType, tradition, blocks, churchName } = options;
+  const { title, serviceDate, serviceTime, serviceType, tradition, blocks, churchName, notes } = options;
 
   const doc = new jsPDF({ orientation: "portrait", unit: "mm", format: "a4" });
   const pageWidth = doc.internal.pageSize.getWidth();
@@ -72,6 +73,7 @@ function buildServiceDoc(options: ExportOptions): jsPDF {
     `${TYPE_LABELS[serviceType] || serviceType} · ${TRADITION_LABELS[tradition] || tradition}`,
   ];
   if (churchName) meta.unshift(churchName);
+  if (notes) meta.push(`Leitgedanke: ${notes}`);
 
   meta.forEach((line, i) => {
     doc.text(line, margin, 33 + i * 5);

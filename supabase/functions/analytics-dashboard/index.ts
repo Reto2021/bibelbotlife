@@ -48,6 +48,10 @@ Deno.serve(async (req) => {
   const days = parseInt(url.searchParams.get("days") || "7");
   const since = new Date(Date.now() - days * 86400000).toISOString();
 
+  // ── Bot / crawler filter ──
+  const BOT_RE = /bot|crawl|spider|slurp|bingpreview|facebookexternalhit|mediapartners|google-inspectiontool|headlesschrome|phantomjs|prerender|lighthouse|pagespeed|gtmetrix|pingdom|uptimerobot|semrush|ahrefs|mj12bot|dotbot|petalbot|yandex|baidu|bytespider|gptbot|claudebot|chatgpt/i;
+  const isBot = (ua: string | null) => !ua || BOT_RE.test(ua);
+
   // Paginated fetch to overcome Supabase 1000-row default limit
   const PAGE_SIZE = 1000;
   const fetchAllEvents = async () => {
@@ -62,7 +66,9 @@ Deno.serve(async (req) => {
         .range(from, from + PAGE_SIZE - 1);
       if (error) throw error;
       if (!data || data.length === 0) break;
-      allEvents.push(...data);
+      // Filter out known bots
+      const filtered = data.filter((e: any) => !isBot(e.user_agent));
+      allEvents.push(...filtered);
       if (data.length < PAGE_SIZE) break;
       from += PAGE_SIZE;
     }
@@ -307,12 +313,9 @@ Deno.serve(async (req) => {
     for (const ts of Object.values(cSessionTs)) {
       if (ts.length > 1) {
         const dur = Math.max(...ts) - Math.min(...ts);
-        if (dur < 7200000) { cTotalDur += dur; cCountedSessions++; }
-      } else {
-        // Single-event sessions: assume minimum 30s (one heartbeat)
-        cTotalDur += 30000;
-        cCountedSessions++;
+        if (dur > 0 && dur < 7200000) { cTotalDur += dur; cCountedSessions++; }
       }
+      // Skip single-event sessions (bounces)
     }
     const cAvgDurSec = cCountedSessions > 0 ? Math.round(cTotalDur / cCountedSessions / 1000) : 0;
 
@@ -421,7 +424,7 @@ Deno.serve(async (req) => {
   const weekdayDistribution = weekdays.map((count, i) => ({ day: weekdayNames[i], count }));
 
   // ═══════════════════════════════════════
-  // ── Average session duration (using heartbeats for accuracy) ──
+  // ── Average session duration (engaged sessions only) ──
   // ═══════════════════════════════════════
   const sessionTimestamps: Record<string, number[]> = {};
   // Use ALL events including heartbeats for duration calculation
@@ -431,20 +434,40 @@ Deno.serve(async (req) => {
   });
   let totalDuration = 0;
   let countedSessions = 0;
-  for (const ts of Object.values(sessionTimestamps)) {
+  const durations: number[] = []; // for median
+  for (const [sid, ts] of Object.entries(sessionTimestamps)) {
     if (ts.length > 1) {
       const dur = Math.max(...ts) - Math.min(...ts);
-      if (dur < 7200000) { // skip sessions > 2h (likely abandoned)
+      if (dur > 0 && dur < 7200000) { // skip sessions > 2h (likely abandoned)
         totalDuration += dur;
         countedSessions++;
+        durations.push(dur);
       }
-    } else {
-      // Single-event sessions count as ~30s (one heartbeat interval)
-      totalDuration += 30000;
-      countedSessions++;
     }
+    // Skip single-event sessions entirely — they are bounces (no engagement data)
   }
   const avgSessionDurationSec = countedSessions > 0 ? Math.round(totalDuration / countedSessions / 1000) : 0;
+  // Median for more robust measurement
+  durations.sort((a, b) => a - b);
+  const medianSessionDurationSec = durations.length > 0
+    ? Math.round(durations[Math.floor(durations.length / 2)] / 1000)
+    : 0;
+
+  // ═══════════════════════════════════════
+  // ── Unique visitors (prefer persistent visitor_id, fallback to fingerprint) ──
+  // ═══════════════════════════════════════
+  const visitorIds = new Set<string>();
+  nonHeartbeatEvents.forEach((e: any) => {
+    if (e.visitor_id) {
+      visitorIds.add(e.visitor_id);
+    } else {
+      // Fallback for events before visitor_id was added
+      const day = zurichParts(e.created_at).date;
+      const fp = `fp_${day}_${e.screen_width || 0}_${(e.user_agent || "").slice(0, 80)}`;
+      visitorIds.add(fp);
+    }
+  });
+  const uniqueVisitors = visitorIds.size;
 
   // ═══════════════════════════════════════
   // ── Bounce rate: sessions with only 1 pageview and no custom events ──
@@ -472,8 +495,11 @@ Deno.serve(async (req) => {
       totalPageviews: pageviews.length,
       totalEvents: customEvents.length,
       uniqueSessions: sessions.size,
+      uniqueVisitors,
       avgSessionDurationSec,
+      medianSessionDurationSec,
       bounceRate,
+      engagedSessions: countedSessions,
     },
     topPages,
     topEvents,

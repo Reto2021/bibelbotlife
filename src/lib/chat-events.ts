@@ -2,7 +2,7 @@
 export const CHAT_OPEN_EVENT = "bibelbot-open-chat";
 export const CHAT_RESET_EVENT = "bibelbot-reset-chat";
 
-export type ChatMode = "normal" | "seven-whys";
+export type ChatMode = "normal" | "seven-whys" | "gratitude" | "lectio" | "forgiveness" | "values" | "examen";
 
 export function openBibleBotChat(message: string, mode: ChatMode = "normal") {
   window.dispatchEvent(new CustomEvent(CHAT_OPEN_EVENT, { detail: { message, mode } }));

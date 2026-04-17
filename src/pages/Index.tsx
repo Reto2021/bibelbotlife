@@ -1,17 +1,20 @@
 import { lazy, Suspense } from "react";
+import { motion } from "framer-motion";
 import { SEOHead } from "@/components/SEOHead";
 import { useTranslation } from "react-i18next";
-import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, GraduationCap, Church, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass, Send, Building2, Shield, EyeOff } from "lucide-react";
+import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, GraduationCap, Church, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass, Send, Building2, Shield, EyeOff, Code2, Server, Globe, Headphones, ClipboardList, BookHeart } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { ChurchBanner } from "@/components/ChurchBanner";
 import { ReferralSection } from "@/components/ReferralSection";
 import { EntryTiles } from "@/components/EntryTiles";
 import { ChatHero } from "@/components/ChatHero";
-import { LifeWheelProvider, openLifeWheel } from "@/components/LifeWheel";
-import { openBibleBotChat } from "@/lib/chat-events";
+import { LifeWheelProvider } from "@/components/LifeWheel";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { AppLogo } from "@/components/AppLogo";
+import { ToolCard, useToolDefs } from "@/components/ToolCards";
+import { useFavoriteTools } from "@/hooks/use-favorite-tools";
+import { useAuth } from "@/hooks/use-auth";
 
 // BibleBotChat overlay removed - chat is now inline in ChatHero
 const DailyImpulse = lazy(() => import("@/components/DailyImpulse"));
@@ -29,6 +32,49 @@ const BIBLE_EDITIONS_DATA = [
   { name: "Schlachter Bibel", year: "2000", traditionKey: "freeChurch" },
   { name: "Elberfelder Bibel", year: "2006", traditionKey: "literal" },
 ];
+
+const ToolsSection = () => {
+  const { t } = useTranslation();
+  const tools = useToolDefs();
+  const { user } = useAuth();
+  const { toggleFavorite, isFavorite } = useFavoriteTools();
+
+  return (
+    <section className="py-16 px-4">
+      <div className="container mx-auto max-w-4xl">
+        <div className="text-center mb-10">
+          <div className="inline-flex items-center gap-2 text-sm font-medium text-primary bg-primary/10 px-4 py-1.5 rounded-full mb-4">
+            <Compass className="h-4 w-4" />
+            {t("tools.badge")}
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
+            {t("tools.title")}
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            {t("tools.subtitle")}
+          </p>
+          {user && (
+            <p className="text-xs text-muted-foreground mt-2">
+              <Star className="inline h-3 w-3 text-primary mr-1" />
+              {t("tools.favoriteTip")}
+            </p>
+          )}
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {tools.map((tool) => (
+            <ToolCard
+              key={tool.id}
+              tool={tool}
+              isFavorite={isFavorite(tool.id)}
+              isLoggedIn={!!user}
+              onToggleFavorite={() => toggleFavorite(tool.id)}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
 
 const Index = () => {
   const { t, i18n } = useTranslation();
@@ -246,63 +292,35 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Mein Kreis Teaser */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto max-w-2xl text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-primary bg-primary/10 px-4 py-1.5 rounded-full mb-4">
+              <Users className="h-4 w-4" />
+              {t("circle.teaserBadge")}
+            </div>
+            <h2 className="text-3xl font-bold text-foreground mb-3">{t("circle.teaserTitle")}</h2>
+            <p className="text-muted-foreground mb-6 max-w-xl mx-auto">{t("circle.teaserDesc")}</p>
+            <Button asChild size="lg">
+              <Link to="/mein-kreis">
+                <Users className="h-4 w-4 mr-2" />
+                {t("circle.teaserCta")}
+              </Link>
+            </Button>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Subscribe CTA is now integrated in the DailyImpulse banner */}
       {/* Referral / Empfehlen */}
       <ReferralSection />
-
-      {/* LifeWheel & SevenWhys Feature Section */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 text-sm font-medium text-primary bg-primary/10 px-4 py-1.5 rounded-full mb-4">
-              <Compass className="h-4 w-4" />
-              {t("tools.badge")}
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-              {t("tools.title")}
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              {t("tools.subtitle")}
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            <Card className="bg-card/80 border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <CardHeader className="text-center pb-2">
-                <span className="text-5xl mb-3 block">🎡</span>
-                <CardTitle className="text-xl text-card-foreground">{t("tools.lifewheel.title")}</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center space-y-4">
-                <CardDescription className="text-muted-foreground leading-relaxed">
-                  {t("tools.lifewheel.desc")}
-                </CardDescription>
-                <Button onClick={() => openLifeWheel()} className="w-full">
-                  {t("tools.lifewheel.cta")}
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-card/80 border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <CardHeader className="text-center pb-2">
-                <span className="text-5xl mb-3 block">🔍</span>
-                <CardTitle className="text-xl text-card-foreground">{t("tools.sevenwhys.title")}</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center space-y-4">
-                <CardDescription className="text-muted-foreground leading-relaxed">
-                  {t("tools.sevenwhys.desc")}
-                </CardDescription>
-                <Button
-                  variant="outline"
-                  onClick={() => openBibleBotChat("Ich möchte die 7-Warum-Methode ausprobieren", "seven-whys")}
-                  className="w-full"
-                >
-                  {t("tools.sevenwhys.cta")}
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+      {/* Tools Section */}
+      <ToolsSection />
 
       {/* FAQ */}
       <section className="py-20 px-4">
@@ -400,7 +418,7 @@ const Index = () => {
               </AccordionContent>
             </AccordionItem>
 
-            {(["q5", "q6", "q7", "q8", "q9"] as const).map((key) => (
+            {(["q5", "q6", "q7", "q8", "q9", "q10", "q11", "q12"] as const).map((key) => (
               <AccordionItem key={key} value={key} className="bg-card/80 border border-border rounded-xl px-6 data-[state=open]:shadow-md">
                 <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">{t(`faq.${key}`)}</AccordionTrigger>
                 <AccordionContent className="text-muted-foreground leading-relaxed pb-6">{t(`faq.${key}Answer`)}</AccordionContent>
@@ -478,7 +496,7 @@ const Index = () => {
           
           <Card className="bg-card/80 backdrop-blur-sm border-border max-w-md mx-auto">
             <CardHeader>
-              <CardTitle className="text-xl">{t("donate.bankTitle")}</CardTitle>
+              <CardTitle className="text-xl">{t("donate.onlineTitle", "Online spenden")}</CardTitle>
               <CardDescription>{t("donate.bankSubtitle")}</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -486,19 +504,41 @@ const Index = () => {
                 <Button
                   className="w-full"
                   size="lg"
-                  onClick={() => window.open("https://t.me/meinbibelbot", "_blank")}
+                  asChild
                 >
-                  <Heart className="h-4 w-4 mr-2" />
-                  {t("donate.creditCard", "Kontakt aufnehmen")}
+                  <Link to="/spenden">
+                    <Heart className="h-4 w-4 mr-2" />
+                    {t("donate.ctaDonate", "Jetzt spenden")}
+                  </Link>
                 </Button>
               </div>
               <p className="text-xs text-muted-foreground text-center">
-                {t("donate.secureNote", "Schreib uns — wir richten alles Weitere ein.")}
+                {t("donate.stripeNote", "Sicher via Kreditkarte, Twint & mehr")}
               </p>
             </CardContent>
           </Card>
 
-          <p className="text-sm text-muted-foreground mt-6">{t("donate.note")}</p>
+          {/* Verwendungszwecke */}
+          <div className="mt-10 max-w-lg mx-auto text-left">
+            <h3 className="text-lg font-semibold text-foreground mb-4 text-center">{t("donate.purposeHeading")}</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {[
+                { icon: Code2, key: "purposeItem1" },
+                { icon: Server, key: "purposeItem2" },
+                { icon: Globe, key: "purposeItem3" },
+                { icon: Headphones, key: "purposeItem4" },
+                { icon: ClipboardList, key: "purposeItem5" },
+                { icon: BookHeart, key: "purposeItem6" },
+              ].map(({ icon: Icon, key }) => (
+                <div key={key} className="flex items-start gap-3 p-3 rounded-lg bg-muted/50">
+                  <Icon className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+                  <span className="text-sm text-muted-foreground">{t(`donate.${key}`)}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <p className="text-sm text-muted-foreground mt-8">{t("donate.note")}</p>
         </div>
       </section>
 
@@ -507,11 +547,9 @@ const Index = () => {
         <div className="container mx-auto text-center max-w-4xl">
           <h2 className="text-4xl font-bold text-primary-foreground mb-6">{t("cta.title")}</h2>
           <p className="text-xl text-primary-foreground/90 mb-8">{t("cta.subtitle")}</p>
-          <Button asChild size="lg" className="bg-card text-foreground hover:bg-card/90 px-8 py-4 text-lg font-semibold">
-            <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer">
-              <Send className="h-5 w-5 mr-2" />
+          <Button size="lg" className="bg-card text-foreground hover:bg-card/90 px-8 py-4 text-lg font-semibold" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }}>
+              <MessageCircle className="h-5 w-5 mr-2" />
               {t("cta.button")}
-            </a>
           </Button>
         </div>
       </section>
@@ -530,7 +568,7 @@ const Index = () => {
             <div className="grid sm:grid-cols-2 gap-6 text-sm text-background/50 mb-8">
               <div>
                 <p className="font-semibold text-background/70 mb-2">{t("footer.impressum")}</p>
-                <p>Reto Wettstein</p>
+                <p>2Go Media AG</p>
                 <p>Rebmoosweg 63</p>
                 <p>5200 Brugg, Schweiz</p>
                 <p className="mt-1">kontakt@biblebot.life</p>
@@ -549,6 +587,9 @@ const Index = () => {
               <Link to="/for-churches" className="hover:text-background/80 underline underline-offset-2">{t("footer.forChurches")}</Link>
               <Link to="/fuer-seelsorger" className="hover:text-background/80 underline underline-offset-2">{t("footer.forCelebrants")}</Link>
               <Link to="/churches" className="hover:text-background/80 underline underline-offset-2">{t("church.directoryBadge")}</Link>
+              <Link to="/spenden" className="hover:text-background/80 underline underline-offset-2">{t("nav.donate", "Spenden")}</Link>
+              <Link to="/kontakt" className="hover:text-background/80 underline underline-offset-2">{t("nav.contact", "Kontakt")}</Link>
+              <Link to="/ueber-uns" className="hover:text-background/80 underline underline-offset-2">{t("nav.about", "Über uns")}</Link>
             </div>
 
             <p className="text-background/40 text-xs text-center mb-1">© 2026 BibleBot.Life</p>

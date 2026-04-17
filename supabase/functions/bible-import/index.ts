@@ -8,15 +8,85 @@ const corsHeaders = {
 };
 
 const BIBLE_API = "https://bible.helloao.org/api";
+const GETBIBLE_API = "https://api.getbible.net/v2";
 
 const TRANSLATIONS = [
-  { key: "luther1912", apiId: "deu_l12" },
-  { key: "schlachter2000", apiId: "deu_sch" },
-  { key: "elberfelder", apiId: "deu_elbbk" },
-  { key: "kjv", apiId: "eng_kjv" },
-  { key: "web", apiId: "eng_web" },
-  { key: "niv", apiId: "eng_niv11" },
-  { key: "esv", apiId: "eng_esv16" },
+  // German
+  { key: "luther1912", apiId: "deu_l12", language: "de" },
+  { key: "schlachter2000", apiId: "deu_sch", language: "de" },
+  { key: "elberfelder", apiId: "deu_elbbk", language: "de" },
+  // English
+  { key: "bsb", apiId: "BSB", language: "en" },
+  { key: "web", apiId: "eng_web", language: "en" },
+  { key: "kjv", apiId: "eng_kjv", language: "en" },
+  // French
+  { key: "lsg", apiId: "fra_lsg", language: "fr" },
+  // Spanish
+  { key: "vbl", apiId: "spa_vbl", language: "es" },
+  { key: "rv09", apiId: "spa_r09", language: "es" },
+  // Italian
+  { key: "riv", apiId: "ita_riv", language: "it" },
+  // Portuguese
+  { key: "blj", apiId: "por_blj", language: "pt" },
+  // Dutch
+  { key: "nbg", apiId: "nld_nbg", language: "nl" },
+  // Polish
+  { key: "ubg", apiId: "pol_ubg", language: "pl" },
+  // Czech
+  { key: "nkb", apiId: "ces_nkb", language: "cs" },
+  // Romanian
+  { key: "corn", apiId: "ron_924", language: "ro" },
+  // Russian
+  { key: "syn", apiId: "rus_syn", language: "ru" },
+  // Ukrainian
+  { key: "ukr96", apiId: "ukr_1996", language: "uk" },
+  // Arabic
+  { key: "vd", apiId: "arb_vdv", language: "ar" },
+  // Hebrew
+  { key: "mod", apiId: "heb_mod", language: "he" },
+  // Korean
+  { key: "krv", apiId: "kor_old", language: "ko" },
+  // Chinese
+  { key: "cuv", apiId: "cmn_cu1", language: "zh" },
+  // Danish
+  { key: "det", apiId: "dan_det", language: "da" },
+  // Swedish
+  { key: "fol", apiId: "swe_fol", language: "sv" },
+  // Finnish (NT only)
+  { key: "fin", apiId: "fin_bib", language: "fi" },
+  // Hungarian (NT only)
+  { key: "hun", apiId: "hun_bib", language: "hu" },
+  // Croatian
+  { key: "iva", apiId: "hrv_iva", language: "hr" },
+  // Serbian
+  { key: "srp", apiId: "srp_865", language: "sr" },
+  // Slovak (NT only)
+  { key: "slk", apiId: "slk_bib", language: "sk" },
+  // Vietnamese
+  { key: "vie", apiId: "vie_1934", language: "vi" },
+  // Indonesian
+  { key: "ayt", apiId: "ind_ayt", language: "id" },
+  // Filipino / Tagalog
+  { key: "tgl", apiId: "tgl_ulb", language: "tl" },
+  // Swahili
+  { key: "swa", apiId: "swh_ulb", language: "sw" },
+  // Amharic
+  { key: "amh", apiId: "amh_amh", language: "am" },
+  // Yoruba
+  { key: "yor", apiId: "yor_bib", language: "yo" },
+  // Igbo
+  { key: "ibo", apiId: "ibo_bib", language: "ig" },
+  // Haitian Creole
+  { key: "hat", apiId: "hat_pds", language: "ht" },
+  // Norwegian
+  { key: "nob", apiId: "nob_lbb", language: "no" },
+];
+
+// Translations from getbible.net (not available on helloao)
+const GETBIBLE_TRANSLATIONS = [
+  { key: "grk", abbrev: "moderngreek", language: "el" },
+  { key: "aov", abbrev: "aov", language: "af" },
+  { key: "hyewest", abbrev: "westernarmenian", language: "hy" },
 ];
 
 interface BookInfo {
@@ -58,6 +128,34 @@ async function fetchChapter(apiId: string, bookId: string, chapter: number): Pro
   return verses;
 }
 
+// ── getbible.net helpers ──
+
+interface GetBibleVerse { chapter: number; verse: number; text: string; }
+
+async function fetchGetBibleBook(abbrev: string, bookNr: number): Promise<{ name: string; chapters: { chapter: number; verses: GetBibleVerse[] }[] } | null> {
+  const resp = await fetch(`${GETBIBLE_API}/${abbrev}/${bookNr}.json`);
+  if (!resp.ok) return null;
+  const data = await resp.json();
+  const name: string = data.name || `Book ${bookNr}`;
+  const chapters: { chapter: number; verses: GetBibleVerse[] }[] = [];
+  for (const ch of (data.chapters || [])) {
+    const verses: GetBibleVerse[] = [];
+    for (const v of (ch.verses || [])) {
+      const text = (v.text || "").trim();
+      if (text) verses.push({ chapter: ch.chapter, verse: v.verse, text });
+    }
+    chapters.push({ chapter: ch.chapter, verses });
+  }
+  return { name, chapters };
+}
+
+async function fetchGetBibleBooks(abbrev: string): Promise<{ nr: number; name: string }[]> {
+  const resp = await fetch(`${GETBIBLE_API}/${abbrev}/books.json`);
+  if (!resp.ok) throw new Error(`Failed to fetch getbible books for ${abbrev}`);
+  const data = await resp.json();
+  return Object.entries(data).map(([nr, info]: [string, any]) => ({ nr: parseInt(nr), name: info.name }));
+}
+
 serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
@@ -73,19 +171,8 @@ serve(async (req) => {
     const targetTranslation = body.translation;
     const startBook = body.start_book || 1;
     const endBook = body.end_book || 66;
-    // Import only a few books per call to avoid timeout
     const maxBooks = body.max_books || 5;
-
-    const translations = targetTranslation
-      ? TRANSLATIONS.filter(t => t.key === targetTranslation)
-      : TRANSLATIONS;
-
-    if (translations.length === 0) {
-      return new Response(
-        JSON.stringify({ error: `Unknown translation: ${targetTranslation}` }),
-        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-      );
-    }
+    const source = body.source || "helloao"; // "helloao" or "getbible"
 
     let totalInserted = 0;
     const errors: string[] = [];
@@ -93,55 +180,134 @@ serve(async (req) => {
     let booksProcessed = 0;
     let nextBook = 0;
 
-    for (const trans of translations) {
-      console.log(`Importing ${trans.key}...`);
-      let books: BookInfo[];
-      try {
-        books = await fetchBooks(trans.apiId);
-      } catch (e) {
-        errors.push(`${trans.key}: ${e instanceof Error ? e.message : "fetch failed"}`);
-        continue;
+    if (source === "getbible") {
+      // Import from getbible.net
+      const gbTranslations = targetTranslation
+        ? GETBIBLE_TRANSLATIONS.filter(t => t.key === targetTranslation)
+        : GETBIBLE_TRANSLATIONS;
+
+      if (gbTranslations.length === 0) {
+        return new Response(
+          JSON.stringify({ error: `Unknown getbible translation: ${targetTranslation}` }),
+          { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+        );
       }
 
-      for (const book of books) {
-        if (book.order < startBook || book.order > endBook) continue;
-        if (booksProcessed >= maxBooks) {
-          nextBook = book.order;
-          break;
+      for (const trans of gbTranslations) {
+        console.log(`Importing ${trans.key} from getbible...`);
+        let books: { nr: number; name: string }[];
+        try {
+          books = await fetchGetBibleBooks(trans.abbrev);
+        } catch (e) {
+          errors.push(`${trans.key}: ${e instanceof Error ? e.message : "fetch failed"}`);
+          continue;
         }
 
-        for (let ch = 1; ch <= book.numberOfChapters; ch++) {
-          const verses = await fetchChapter(trans.apiId, book.id, ch);
-          if (verses.length === 0) continue;
-
-          const rows = verses.map(v => ({
-            book: book.name,
-            book_number: book.order,
-            chapter: ch,
-            verse: v.number,
-            text: v.text,
-            translation: trans.key,
-          }));
-
-          const { error } = await supabase
-            .from("bible_verses")
-            .upsert(rows, { onConflict: "translation,book_number,chapter,verse" });
-
-          if (error) {
-            errors.push(`${trans.key}/${book.name} ${ch}: ${error.message}`);
-          } else {
-            totalInserted += rows.length;
+        for (const book of books) {
+          if (book.nr < startBook || book.nr > endBook) continue;
+          if (booksProcessed >= maxBooks) {
+            nextBook = book.nr;
+            break;
           }
 
-          await new Promise(r => setTimeout(r, 30));
+          const bookData = await fetchGetBibleBook(trans.abbrev, book.nr);
+          if (!bookData) { continue; }
+
+          for (const ch of bookData.chapters) {
+            if (ch.verses.length === 0) continue;
+            const rows = ch.verses.map(v => ({
+              book: bookData.name,
+              book_number: book.nr,
+              chapter: ch.chapter,
+              verse: v.verse,
+              text: v.text,
+              translation: trans.key,
+              language: trans.language,
+            }));
+
+            const { error } = await supabase
+              .from("bible_verses")
+              .upsert(rows, { onConflict: "translation,book_number,chapter,verse" });
+
+            if (error) {
+              errors.push(`${trans.key}/${bookData.name} ${ch.chapter}: ${error.message}`);
+            } else {
+              totalInserted += rows.length;
+            }
+            await new Promise(r => setTimeout(r, 50));
+          }
+
+          progress.push(`${trans.key}/${bookData.name}: done`);
+          console.log(`  ${bookData.name}: done`);
+          booksProcessed++;
         }
 
-        progress.push(`${trans.key}/${book.name}: ${book.numberOfChapters} ch`);
-        console.log(`  ${book.name}: done`);
-        booksProcessed++;
+        if (booksProcessed >= maxBooks) break;
+      }
+    } else {
+      // Import from helloao
+      const translations = targetTranslation
+        ? TRANSLATIONS.filter(t => t.key === targetTranslation)
+        : TRANSLATIONS;
+
+      if (translations.length === 0) {
+        return new Response(
+          JSON.stringify({ error: `Unknown translation: ${targetTranslation}` }),
+          { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+        );
       }
 
-      if (booksProcessed >= maxBooks) break;
+      for (const trans of translations) {
+        console.log(`Importing ${trans.key}...`);
+        let books: BookInfo[];
+        try {
+          books = await fetchBooks(trans.apiId);
+        } catch (e) {
+          errors.push(`${trans.key}: ${e instanceof Error ? e.message : "fetch failed"}`);
+          continue;
+        }
+
+        for (const book of books) {
+          if (book.order < startBook || book.order > endBook) continue;
+          if (booksProcessed >= maxBooks) {
+            nextBook = book.order;
+            break;
+          }
+
+          for (let ch = 1; ch <= book.numberOfChapters; ch++) {
+            const verses = await fetchChapter(trans.apiId, book.id, ch);
+            if (verses.length === 0) continue;
+
+            const rows = verses.map(v => ({
+              book: book.name,
+              book_number: book.order,
+              chapter: ch,
+              verse: v.number,
+              text: v.text,
+              translation: trans.key,
+              language: trans.language,
+            }));
+
+            const { error } = await supabase
+              .from("bible_verses")
+              .upsert(rows, { onConflict: "translation,book_number,chapter,verse" });
+
+            if (error) {
+              errors.push(`${trans.key}/${book.name} ${ch}: ${error.message}`);
+            } else {
+              totalInserted += rows.length;
+            }
+
+            await new Promise(r => setTimeout(r, 30));
+          }
+
+          progress.push(`${trans.key}/${book.name}: ${book.numberOfChapters} ch`);
+          console.log(`  ${book.name}: done`);
+          booksProcessed++;
+        }
+
+        if (booksProcessed >= maxBooks) break;
+      }
     }
 
     return new Response(
