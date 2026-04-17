@@ -1144,6 +1144,7 @@ export function ChatHero() {
                       const { cleanText, options } = msg.role === "assistant"
                         ? extractOptions(msg.content)
                         : { cleanText: msg.content, options: [] as string[] };
+                      const mainVerse = msg.role === "assistant" ? extractMainVerse(cleanText) : null;
 
                       return (
                       <div key={i} className={`flex ${msg.role === "user" ? "justify-end" : "justify-start gap-2"}`}>
@@ -1162,6 +1163,9 @@ export function ChatHero() {
                                   p: ({ children }) => <p>{makeRefsClickable(children, sendMessage, t("suggest.explainDetail", { ref: "{{ref}}" }))}</p>,
                                   li: ({ children }) => <li>{makeRefsClickable(children, sendMessage, t("suggest.explainDetail", { ref: "{{ref}}" }))}</li>,
                                 }}>{cleanText}</ReactMarkdown>
+                                {mainVerse && (
+                                  <VerseShareCard verse={mainVerse.verse} reference={mainVerse.reference} />
+                                )}
                               </div>
                             ) : msg.content}
                           </div>
@@ -1196,7 +1200,9 @@ export function ChatHero() {
                                     <Volume2 className="h-3.5 w-3.5" />
                                   )}
                                 </button>
-                                <ShareButton title={t("share.chatTitle")} text={msg.content.length > 280 ? msg.content.slice(0, 277) + "…" : msg.content} variant="icon" className="ml-auto" />
+                                {!mainVerse && (
+                                  <ShareButton title={t("share.chatTitle")} text={msg.content.length > 280 ? msg.content.slice(0, 277) + "…" : msg.content} variant="icon" className="ml-auto" />
+                                )}
                               </div>
                               {qaMap[i] && <QABadge qa={qaMap[i]} t={t} />}
                             </>
