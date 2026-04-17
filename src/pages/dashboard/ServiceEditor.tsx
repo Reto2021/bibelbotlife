@@ -488,7 +488,7 @@ export default function ServiceEditor() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="sm:col-span-2">
               <label className="text-sm font-medium text-foreground mb-1.5 block">Titel</label>
-              <Input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Gottesdienst-Titel" />
+              <Input value={title} onChange={(e) => setTitle(e.target.value)} placeholder={isLessonMode ? "Lektions-Titel, z.B. «Gleichnis vom Sämann»" : "Gottesdienst-Titel"} />
             </div>
             <div>
               <label className="text-sm font-medium text-foreground mb-1.5 block">Datum</label>
@@ -511,11 +511,15 @@ export default function ServiceEditor() {
                   <SelectItem value="communion">Abendmahl</SelectItem>
                   <SelectItem value="special">Spezialgottesdienst</SelectItem>
                   <SelectItem value="other">Anderes</SelectItem>
+                  <SelectItem value="lesson">Einzelstunde (RU)</SelectItem>
+                  <SelectItem value="double_lesson">Doppelstunde (RU)</SelectItem>
+                  <SelectItem value="project_day">Projekttag</SelectItem>
+                  <SelectItem value="confirmation_class">Konfirmandenunterricht</SelectItem>
                 </SelectContent>
               </Select>
             </div>
             <div>
-              <label className="text-sm font-medium text-foreground mb-1.5 block">Tradition</label>
+              <label className="text-sm font-medium text-foreground mb-1.5 block">{isLessonMode ? "Kontext" : "Tradition"}</label>
               <Select value={tradition} onValueChange={setTradition}>
                 <SelectTrigger><SelectValue /></SelectTrigger>
                 <SelectContent>
@@ -524,16 +528,74 @@ export default function ServiceEditor() {
                   <SelectItem value="lutheran">Lutherisch</SelectItem>
                   <SelectItem value="evangelical">Evangelikal</SelectItem>
                   <SelectItem value="secular">Säkular / Frei</SelectItem>
+                  <SelectItem value="interreligious">Interreligiös</SelectItem>
                 </SelectContent>
               </Select>
             </div>
+            {isLessonMode && (
+              <div className="sm:col-span-2">
+                <label className="text-sm font-medium text-foreground mb-1.5 block">Klasse</label>
+                <Input value={className} onChange={(e) => setClassName(e.target.value)} placeholder="z.B. 7a, Konf-Gruppe Mo, Sek I" />
+              </div>
+            )}
           </div>
+
+          {isLessonMode && (
+            <div className="mt-4">
+              <label className="text-sm font-medium text-foreground mb-1.5 block">Lernziele / Kompetenzen</label>
+              <div className="flex gap-2 mb-2">
+                <Input
+                  value={objectiveInput}
+                  onChange={(e) => setObjectiveInput(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" && objectiveInput.trim()) {
+                      e.preventDefault();
+                      setLearningObjectives([...learningObjectives, objectiveInput.trim()]);
+                      setObjectiveInput("");
+                    }
+                  }}
+                  placeholder="Lernziel eingeben und Enter drücken"
+                />
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  onClick={() => {
+                    if (objectiveInput.trim()) {
+                      setLearningObjectives([...learningObjectives, objectiveInput.trim()]);
+                      setObjectiveInput("");
+                    }
+                  }}
+                >
+                  Hinzufügen
+                </Button>
+              </div>
+              {learningObjectives.length > 0 && (
+                <ul className="space-y-1">
+                  {learningObjectives.map((obj, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm bg-muted/50 rounded-md px-3 py-1.5">
+                      <span className="text-primary shrink-0">→</span>
+                      <span className="flex-1">{obj}</span>
+                      <button
+                        type="button"
+                        onClick={() => setLearningObjectives(learningObjectives.filter((_, j) => j !== i))}
+                        className="text-muted-foreground hover:text-destructive shrink-0"
+                      >
+                        ×
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          )}
+
           <div className="mt-4">
-            <label className="text-sm font-medium text-foreground mb-1.5 block">Leitgedanke / Thema</label>
+            <label className="text-sm font-medium text-foreground mb-1.5 block">{isLessonMode ? "Stundenthema / Notizen" : "Leitgedanke / Thema"}</label>
             <Textarea
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
-              placeholder="z.B. «Dankbarkeit im Alltag» — der rote Faden für diesen Gottesdienst"
+              placeholder={isLessonMode ? "z.B. Differenzierung, Materialien, Bemerkungen für Vertretung..." : "z.B. «Dankbarkeit im Alltag» — der rote Faden für diesen Gottesdienst"}
               className="resize-none min-h-[56px]"
               rows={2}
             />
