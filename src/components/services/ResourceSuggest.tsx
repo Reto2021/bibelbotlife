@@ -45,7 +45,7 @@ export function ResourceSuggest({ query, blockType, onSelect, visible }: Resourc
   const [selectedIndex, setSelectedIndex] = useState(0);
   const listRef = useRef<HTMLDivElement>(null);
 
-  const resourceType = BLOCK_TO_RESOURCE[blockType];
+  const resourceType = resolveResourceType(blockType);
 
   const suggestions = useMemo(() => {
     if (!query || query.length < 2 || !visible) return [];

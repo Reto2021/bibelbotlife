@@ -21,7 +21,7 @@ export function useLessons() {
         .from("services")
         .select("*")
         .eq("created_by", user!.id)
-        .in("service_type", LESSON_TYPES as unknown as string[])
+        .in("service_type", LESSON_TYPES as unknown as any)
         .order("service_date", { ascending: true });
       if (error) throw error;
       return data;
@@ -40,7 +40,7 @@ export function useServicesOnly() {
         .from("services")
         .select("*")
         .eq("created_by", user!.id)
-        .in("service_type", SERVICE_TYPES_REGULAR as unknown as string[])
+        .in("service_type", SERVICE_TYPES_REGULAR as unknown as any)
         .order("service_date", { ascending: true });
       if (error) throw error;
       return data;
