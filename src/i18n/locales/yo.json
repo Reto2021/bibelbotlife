@@ -222,8 +222,8 @@
     "q6Answer": "Rárá. Alábàáṣiṣẹ́pọ̀ rẹ jẹ́ ohun-èlò dígítà fún kíkà Bíbélì àti ìrònú tìrẹ. Kò rọ́pò ìtọ́jú ẹ̀mí, ìgbìmọ̀ ẹ̀kọ́ ìsìn tàbí ìtọ́jú ìmọ̀-ọkàn. Nínú ìṣòro ńlá, alábàáṣiṣẹ́pọ̀ rẹ máa ń tọ́kasí sí àwọn ibùdó tó péye.",
     "q7": "Ṣé alábàáṣiṣẹ́pọ̀ rẹ kì í ṣe 'bot ìdùnnú' lásán?",
     "q7Answer": "Rárá. Alábàáṣiṣẹ́pọ̀ rẹ tù ní lára níbi tí ìtùnú bá nílò – ṣùgbọ́n ó tún pè ọ́ sí ìpenija. Ìdàgbàsókè ẹ̀mí nílò ìjà. Alábàáṣiṣẹ́pọ̀ rẹ béèrè àwọn ìbéèrè tó le, sọ àwọn ọ̀rọ̀ Bíbélì líle (Jóòbù, Àwọn Saàmù Ẹkún, àtakò wòlíì) kò sì bẹ̀rù àwọn kókó bíi ìdájọ́ òdodo, ìronúpìwàdà àti ojúṣe. Àṣà wòlíì kò rọrùn rí – alábàáṣiṣẹ́pọ̀ rẹ náà bẹ́ẹ̀.",
-    "q8": "Ta ni ó wà lẹ́yìn alábàáṣiṣẹ́pọ̀ rẹ, báwo ni a ṣe ń sanwó rẹ̀?",
-    "q8Answer": "BibleBot.Life jẹ́ iṣẹ́ àkànṣe, tí kì í ṣe fún owó. A ń ṣe é lọ́fẹ̀ẹ́ a sì ń sanwó rẹ̀ nípasẹ̀ ẹ̀bùn àtinúwá nìkan. Kò sí ìpolówó, kò sí títà dátà, kò sí ẹ̀ka tí a ń san owó fún. Gbogbo ẹ̀bùn lọ tààrà sí ìbọ́jú ìnáwó ìṣiṣẹ́. Nítorí alábàáṣiṣẹ́pọ̀ rẹ jẹ́ iṣẹ́ àkànṣe, àwọn ẹ̀bùn kò ṣe é yọ kúrò nínú owó orí.",
+    "q8": "Taani wo ni o wa lẹhin alabaṣepọ rẹ ati bawo ni o ṣe n gba owo?",
+    "q8Answer": "2Go Media AG ni o n ṣe agbekalẹ ati ṣiṣe BibleBot.Life. Ẹgbẹ BibleBot.Life (i.G.) ni o n gba awọn ẹbun. Iṣẹ naa jẹ ọfẹ fun awọn eniyan kọọkan, laisi ipolowo, ati laisi tita data. Owo rẹ wa lati awọn ẹbun atinuwa ati lati awọn ajọṣepọ B2B pẹlu awọn ile ijọsin, awọn ile iwosan, ati awọn ile-iṣẹ. Awọn ẹbun n lọ si amayika, gbigbalejo, awọn itumọ, ati idagbasoke siwaju. Niwọn igba ti ẹgbẹ naa tun wa ni ipilẹ, awọn ẹbun lọwọlọwọ ko le yọkuro lati owo-ori.",
     "q9": "Báwo ni alábàáṣiṣẹ́pọ̀ rẹ ṣe ń ṣe pẹ̀lú dátà mi?",
     "q9Answer": "Alábàáṣiṣẹ́pọ̀ rẹ kò tọ́jú dátà àkànṣe kankan tàbí ìtàn ìjíròrò. Gbogbo ìjíròrò jẹ́ aláìlórúkọ. Kò sí ìforúkọsílẹ̀, kò sí ìtọpinpin, kò sí pínpín dátà pẹ̀lú ẹlòmíì.",
     "tradition": {
@@ -232,7 +232,13 @@
       "catholic": "Katoliki",
       "freeChurch": "Ijo Ofe",
       "literal": "Ọrọ-fun-ọrọ"
-    }
+    },
+    "q10": "Kini yoo ṣẹlẹ ni akoko idaamu tabi pẹlu awọn ero igbẹmi ara ẹni?",
+    "q10Answer": "Alabaṣepọ rẹ n ṣe idanimọ awọn ami idaamu laifọwọyi ni gbogbo awọn ede 36 ti o ni atilẹyin. Ti o ba jẹ ami ti awọn ero igbẹmi ara ẹni, ibanujẹ nla, tabi iwa-ipa, atokọ ti awọn laini iranlọwọ alamọdaju yoo han lẹsẹkẹsẹ (fun apẹẹrẹ, Dargebotene Hand 143 ati Pro Juventute 147 ni Switzerland, Telefonseelsorge 0800 111 0 111 ni Germany, Telefonseelsorge 142 ni Austria). Alabaṣepọ rẹ ko rọpo itọju ailera tabi iranlọwọ pajawiri — ni awọn ipo pajawiri, jọwọ kan si awọn ile-iṣẹ wọnyi taara tabi pe nọmba pajawiri.",
+    "q11": "Ṣe Mo le lo BibleBot.Life bi ile iwosan, ile-iṣẹ, tabi ile-ẹkọ?",
+    "q11Answer": "Bẹẹni. Fun awọn ile iwosan, awọn ile-iṣẹ itọju, awọn ile-iwe, ati awọn ile-iṣẹ, awọn idii B2B ti ara wọn wa pẹlu ami iyasọtọ ti ara wọn, aṣẹ data, ati awọn iwọle oṣiṣẹ. O le wa awọn alaye lori /for-institutions. Fun awọn ijọsin, awọn idii ti o yẹ wa labẹ /for-churches.",
+    "q12": "Bawo ni MO ṣe le ṣe atilẹyin BibleBot.Life?",
+    "q12Answer": "Pẹlu ẹbun ẹyọkan tabi deede nipasẹ /spenden (kaadi kirẹditi, Twint, Apple Pay, Google Pay), nipa sisọ fun awọn eniyan ti n wa alabaṣepọ ti ẹmi, tabi bi ijọsin/ile-iṣẹ pẹlu ajọṣepọ. Gbogbo ilowosi n ṣe iranlọwọ lati jẹ ki alabaṣepọ rẹ jẹ ọfẹ ati laisi ipolowo."
   },
   "donate": {
     "badge": "Ṣe àtìlẹ́yìn alábàáṣiṣẹ́pọ̀ rẹ",

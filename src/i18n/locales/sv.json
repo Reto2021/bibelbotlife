@@ -222,8 +222,8 @@
     "q6Answer": "Nej. Din din följeslagare är ett digitalt hjälpmedel för personlig bibelläsning och reflektion. Den ersätter inte professionell själavård, teologisk rådgivning eller psykologisk terapi. Vid allvarliga kriser hänvisar din din följeslagare alltid till kvalificerade kontaktpunkter.",
     "q7": "Är din din följeslagare inte bara en «må-bra-bot»?",
     "q7Answer": "Nej. Din din följeslagare tröstar där tröst behövs – men den utmanar också. Andlig tillväxt kräver friktion. Din din följeslagare ställer obekväma följdfrågor, nämner svåra bibeltexter (Job, klagopsalmer, profetisk kritik) och drar sig inte för ämnen som rättvisa, omvändelse och ansvar. Den profetiska traditionen var aldrig bekväm – och din din följeslagare är det inte heller.",
-    "q8": "Vem står bakom din din följeslagare och hur finansieras den?",
-    "q8Answer": "BibleBot.Life är ett privat, icke-kommersiellt projekt. Det drivs ideellt och finansieras uteslutande genom frivilliga donationer. Det finns ingen reklam, ingen dataförsäljning och inga betalda funktioner. Alla donationer går direkt till att täcka de löpande kostnaderna (infrastruktur, hosting, utveckling). Eftersom din följeslagare drivs som ett privat projekt är donationer inte avdragsgilla.",
+    "q8": "Vem står bakom din följeslagare och hur finansieras den?",
+    "q8Answer": "BibleBot.Life utvecklas och drivs av 2Go Media AG. Stiftelsen för donationer är föreningen BibleBot.Life (i.G.). För privatpersoner är tjänsten gratis, reklamfri och utan dataförsäljning. Den finansieras genom frivilliga donationer samt genom B2B-partnerskap med kyrkor, sjukhus och institutioner. Donationer går till infrastruktur, hosting, översättningar och vidareutveckling. Eftersom föreningen fortfarande är under bildande är donationer för närvarande inte avdragsgilla.",
     "q9": "Hur hanterar din din följeslagare mina data?",
     "q9Answer": "Din din följeslagare lagrar inga personliga data och inga chatthistoriker. Varje samtal är anonymt. Det finns ingen inloggning, ingen spårning och ingen vidarebefordran av data till tredje part. Användningen är helt anonym.",
     "tradition": {
@@ -232,7 +232,13 @@
       "catholic": "Katolsk",
       "freeChurch": "Frikyrka",
       "literal": "Ordagrant"
-    }
+    },
+    "q10": "Vad händer i en kris eller vid självmordstankar?",
+    "q10Answer": "Din följeslagare känner automatiskt igen krissignaler på alla 36 språk som stöds. Vid tecken på självmordstankar, akut förtvivlan eller våld visas omedelbart en lista över professionella hjälplinjer (t.ex. Dargebotene Hand 143 och Pro Juventute 147 i Schweiz, Telefonseelsorge 0800 111 0 111 i Tyskland, Telefonseelsorge 142 i Österrike). Din följeslagare ersätter inte terapi eller nödhjälp – i akuta situationer, vänligen kontakta dessa instanser direkt eller ring nödnumret.",
+    "q11": "Kan jag använda BibleBot.Life som sjukhus, företag eller institution?",
+    "q11Answer": "Ja. För sjukhus, vårdinrättningar, skolor och företag finns det egna B2B-paket med eget varumärke, dataägarskap och tillgång för anställda. Detaljer finns på /for-institutions. För församlingar finns det passande paket under /for-churches.",
+    "q12": "Hur kan jag stödja BibleBot.Life?",
+    "q12Answer": "Med en engångs- eller regelbunden donation via /spenden (kreditkort, Twint, Apple Pay, Google Pay), genom att rekommendera den till människor som söker en andlig följeslagare, eller som församling/institution med ett partnerskap. Varje bidrag hjälper till att din följeslagare förblir gratis och reklamfri."
   },
   "donate": {
     "badge": "Stöd din din följeslagare",

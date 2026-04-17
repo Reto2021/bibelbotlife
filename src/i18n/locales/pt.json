@@ -222,8 +222,8 @@
     "q6Answer": "Não. O o teu companheiro é uma ferramenta digital para leitura bíblica pessoal e reflexão. Não substitui o cuidado pastoral profissional, o aconselhamento teológico nem a terapia psicológica.",
     "q7": "O o teu companheiro não é simplesmente um 'bot de bem-estar'?",
     "q7Answer": "Não. O o teu companheiro conforta onde o conforto é necessário – mas também desafia. O crescimento espiritual requer atrito. O o teu companheiro faz perguntas desconfortáveis e não evita temas como justiça, arrependimento e responsabilidade.",
-    "q8": "Quem está por trás do o teu companheiro e como é financiado?",
-    "q8Answer": "O BibleBot.Life é um projeto privado e não comercial. É gerido voluntariamente e financiado exclusivamente por doações voluntárias. Sem publicidade, sem venda de dados, sem funcionalidades pagas.",
+    "q8": "Quem está por trás do seu companheiro e como ele é financiado?",
+    "q8Answer": "BibleBot.Life é desenvolvido e operado pela 2Go Media AG. A responsabilidade pelas doações é da associação BibleBot.Life (i.G.). Para indivíduos, o serviço é gratuito, sem anúncios e sem venda de dados. É financiado por doações voluntárias e por parcerias B2B com igrejas, hospitais e instituições. As doações são usadas para infraestrutura, hospedagem, traduções e desenvolvimento. Como a associação ainda está em formação, as doações atualmente não são dedutíveis de impostos.",
     "q9": "Como o o teu companheiro lida com os meus dados?",
     "q9Answer": "O o teu companheiro não armazena dados pessoais nem históricos de chat. Cada conversa é anónima. Sem login, sem rastreamento, sem partilha de dados com terceiros.",
     "tradition": {
@@ -232,7 +232,13 @@
       "catholic": "Católica",
       "freeChurch": "Igreja Livre",
       "literal": "Literal"
-    }
+    },
+    "q10": "O que acontece em uma crise ou com pensamentos suicidas?",
+    "q10Answer": "Seu companheiro detecta automaticamente sinais de crise em todas as 36 línguas suportadas. Em caso de indícios de pensamentos suicidas, desespero agudo ou violência, uma lista de linhas diretas profissionais é exibida imediatamente (por exemplo, Dargebotene Hand 143 e Pro Juventute 147 na Suíça, Telefonseelsorge 0800 111 0 111 na Alemanha, Telefonseelsorge 142 na Áustria). Seu companheiro não substitui terapia nem ajuda de emergência — em situações agudas, por favor, entre em contato diretamente com esses serviços ou ligue para o número de emergência.",
+    "q11": "Posso usar BibleBot.Life como hospital, empresa ou instituição?",
+    "q11Answer": "Sim. Para hospitais, instituições de cuidados, escolas e empresas, existem pacotes B2B próprios com branding próprio, soberania de dados e acessos para funcionários. Detalhes podem ser encontrados em /for-institutions. Para comunidades eclesiásticas, existem pacotes adequados em /for-churches.",
+    "q12": "Como posso apoiar BibleBot.Life?",
+    "q12Answer": "Com uma doação única ou regular através de /spenden (cartão de crédito, Twint, Apple Pay, Google Pay), recomendando-o a pessoas que procuram um companheiro espiritual, ou como comunidade eclesiástica/instituição com uma parceria. Cada contribuição ajuda a manter seu companheiro gratuito e sem anúncios."
   },
   "donate": {
     "badge": "Apoia o o teu companheiro",

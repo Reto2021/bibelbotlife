@@ -224,8 +224,8 @@
     "q6Answer": "Không. Người bạn đồng hành của bạn là một công cụ kỹ thuật số để đọc và suy tư Kinh Thánh cá nhân. Nó không thay thế cố vấn mục vụ chuyên nghiệp, tư vấn thần học hoặc liệu pháp tâm lý. Trong trường hợp khủng hoảng nghiêm trọng, người bạn đồng hành của bạn luôn giới thiệu đến các cơ quan có trình độ.",
     "q7": "Người bạn đồng hành của bạn không chỉ là một «bot dễ chịu» sao?",
     "q7Answer": "Không. Người bạn đồng hành của bạn an ủi khi cần an ủi – nhưng nó cũng thách thức. Sự phát triển tâm linh cần sự cọ xát. Người bạn đồng hành của bạn đặt ra những câu hỏi khó chịu, nhắc đến những văn bản Kinh Thánh khó khăn (Gióp, Thi thiên than vãn, phê bình tiên tri) và không ngại các chủ đề như công lý, sự ăn năn và trách nhiệm. Truyền thống tiên tri chưa bao giờ dễ chịu – và người bạn đồng hành của bạn cũng vậy.",
-    "q8": "Ai đứng sau người bạn đồng hành của bạn và nó được tài trợ như thế nào?",
-    "q8Answer": "BibleBot.Life là một dự án tư nhân, phi thương mại. Nó được vận hành tình nguyện và chỉ được tài trợ thông qua các khoản quyên góp tự nguyện. Không có quảng cáo, không bán dữ liệu và không có tính năng trả phí. Tất cả các khoản quyên góp trực tiếp trang trải chi phí hoạt động (cơ sở hạ tầng, lưu trữ, phát triển). Vì người bạn đồng hành hoạt động như một dự án tư nhân, các khoản quyên góp không được trừ thuế.",
+    "q8": "Ai là người đứng sau người bạn đồng hành của bạn và nó được tài trợ như thế nào?",
+    "q8Answer": "BibleBot.Life được phát triển và vận hành bởi 2Go Media AG. Việc gây quỹ từ thiện được thực hiện bởi hiệp hội BibleBot.Life (đang thành lập). Đối với cá nhân, dịch vụ này miễn phí, không quảng cáo và không bán dữ liệu. Nó được tài trợ thông qua các khoản đóng góp tự nguyện cũng như thông qua các đối tác B2B với các nhà thờ, bệnh viện và tổ chức. Các khoản đóng góp được sử dụng cho cơ sở hạ tầng, lưu trữ, dịch thuật và phát triển thêm. Vì hiệp hội vẫn đang trong quá trình thành lập, các khoản đóng góp hiện không được khấu trừ thuế.",
     "q9": "Người bạn đồng hành của bạn xử lý dữ liệu của tôi như thế nào?",
     "q9Answer": "Người bạn đồng hành của bạn không lưu trữ dữ liệu cá nhân hay lịch sử trò chuyện. Mọi cuộc trò chuyện đều ẩn danh. Không có đăng nhập, không theo dõi và không chia sẻ dữ liệu với bên thứ ba. Việc sử dụng hoàn toàn ẩn danh.",
     "tradition": {
@@ -234,7 +234,13 @@
       "catholic": "Công giáo",
       "freeChurch": "Hội thánh tự do",
       "literal": "Từng chữ một"
-    }
+    },
+    "q10": "Điều gì xảy ra trong một cuộc khủng hoảng hoặc khi có ý định tự tử?",
+    "q10Answer": "Người bạn đồng hành của bạn tự động nhận diện các dấu hiệu khủng hoảng trong tất cả 36 ngôn ngữ được hỗ trợ. Nếu có dấu hiệu của ý định tự tử, tuyệt vọng cấp tính hoặc bạo lực, một danh sách các đường dây nóng chuyên nghiệp sẽ được hiển thị ngay lập tức (ví dụ: Dargebotene Hand 143 và Pro Juventute 147 ở Thụy Sĩ, Telefonseelsorge 0800 111 0 111 ở Đức, Telefonseelsorge 142 ở Áo). Người bạn đồng hành của bạn không thay thế liệu pháp điều trị hoặc hỗ trợ khẩn cấp — trong các tình huống cấp tính, vui lòng liên hệ trực tiếp với các cơ quan này hoặc gọi số khẩn cấp.",
+    "q11": "Tôi có thể sử dụng BibleBot.Life như một bệnh viện, công ty hoặc tổ chức không?",
+    "q11Answer": "Có. Đối với bệnh viện, cơ sở chăm sóc, trường học và doanh nghiệp, có các gói B2B riêng với thương hiệu riêng, quyền kiểm soát dữ liệu và quyền truy cập của nhân viên. Chi tiết có thể tìm thấy tại /for-institutions. Đối với các giáo xứ, có các gói phù hợp tại /for-churches.",
+    "q12": "Làm thế nào tôi có thể hỗ trợ BibleBot.Life?",
+    "q12Answer": "Bằng cách đóng góp một lần hoặc thường xuyên qua /spenden (thẻ tín dụng, Twint, Apple Pay, Google Pay), bằng cách giới thiệu cho những người đang tìm kiếm một người bạn đồng hành tâm linh, hoặc với tư cách là một giáo xứ/tổ chức với một mối quan hệ đối tác. Mọi đóng góp đều giúp người bạn đồng hành của bạn duy trì miễn phí và không quảng cáo."
   },
   "donate": {
     "badge": "Hỗ trợ người bạn đồng hành của bạn",

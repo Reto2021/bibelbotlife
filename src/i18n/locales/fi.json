@@ -222,8 +222,8 @@
     "q6Answer": "Ei. Kumppanisiisi on digitaalinen apuväline henkilökohtaiseen Raamatun lukemiseen ja pohdintaan. Se ei korvaa ammattimaista sielunhoitoa, teologista neuvontaa tai psykologista terapiaa. Vakavissa kriiseissä kumppanisiisi ohjaa aina päteviin yhteyspisteisiin.",
     "q7": "Eikö kumppanisiisi ole vain «hyvän olon botti»?",
     "q7Answer": "Ei. Kumppanisiisi lohduttaa, missä lohdutusta tarvitaan – mutta se myös haastaa. Hengellinen kasvu vaatii kitkaa. Kumppanisiisi esittää epämukavia lisäkysymyksiä, nimeää vaikeita Raamatun tekstejä (Job, valituspsalmit, profeetallinen kritiikki) eikä pelkää aiheita kuten oikeudenmukaisuus, parannus ja vastuu. Profeetallinen perinne ei ole koskaan ollut mukava – eikä kumppanisiisikaan.",
-    "q8": "Kuka kumppanisiisi takana on ja miten se rahoitetaan?",
-    "q8Answer": "BibleBot.Life on yksityinen, ei-kaupallinen projekti. Sitä ylläpidetään vapaaehtoisvoimin ja rahoitetaan yksinomaan vapaaehtoisilla lahjoituksilla. Ei ole mainoksia, ei tietojen myyntiä eikä maksullisia ominaisuuksia. Kaikki lahjoitukset menevät suoraan juoksevien kulujen (infrastruktuuri, hosting, kehitys) kattamiseen. Koska kumppanisi toimii yksityisenä projektina, lahjoitukset eivät ole verovähennyskelpoisia.",
+    "q8": "Kuka on kumppanisi takana ja miten se rahoitetaan?",
+    "q8Answer": "BibleBot.Life on 2Go Media AG:n kehittämä ja ylläpitämä. Lahjoitusten tukijana toimii BibleBot.Life (i.G.) -yhdistys. Yksityishenkilöille palvelu on ilmainen, mainokseton ja ilman tietojen myyntiä. Se rahoitetaan vapaaehtoisilla lahjoituksilla sekä B2B-kumppanuuksilla kirkkojen, sairaaloiden ja instituutioiden kanssa. Lahjoitukset käytetään infrastruktuuriin, hostingiin, käännöksiin ja jatkokehitykseen. Koska yhdistys on vielä perustamisvaiheessa, lahjoitukset eivät ole tällä hetkellä verovähennyskelpoisia.",
     "q9": "Miten kumppanisiisi käsittelee tietojani?",
     "q9Answer": "Kumppanisiisi ei tallenna henkilötietoja eikä chat-historiaa. Jokainen keskustelu on anonyymi. Ei ole kirjautumista, ei seurantaa eikä tietojen luovuttamista kolmansille osapuolille. Käyttö on täysin anonyymi.",
     "tradition": {
@@ -232,7 +232,13 @@
       "catholic": "Katolinen",
       "freeChurch": "Vapaakirkko",
       "literal": "Sana sanalta"
-    }
+    },
+    "q10": "Mitä tapahtuu kriisissä tai itsemurha-ajatusten yhteydessä?",
+    "q10Answer": "Kumppanisi tunnistaa kriisisignaalit automaattisesti kaikilla 36 tuetulla kielellä. Jos havaitaan itsemurha-ajatuksia, akuuttia epätoivoa tai väkivaltaa, näytölle ilmestyy välittömästi luettelo ammattimaisista auttavista puhelimista (esim. Dargebotene Hand 143 ja Pro Juventute 147 Sveitsissä, Telefonseelsorge 0800 111 0 111 Saksassa, Telefonseelsorge 142 Itävallassa). Kumppanisi ei korvaa terapiaa eikä hätäapua – akuuteissa tilanteissa ota yhteyttä suoraan näihin tahoihin tai soita hätänumeroon.",
+    "q11": "Voinko käyttää BibleBot.Lifea sairaalana, yrityksenä tai laitoksena?",
+    "q11Answer": "Kyllä. Sairaaloille, hoitolaitoksille, kouluille ja yrityksille on omat B2B-paketit omalla brändäyksellä, tietosuojalla ja työntekijöiden käyttöoikeuksilla. Lisätietoja löydät osoitteesta /for-institutions. Seurakunnille on sopivia paketteja osoitteessa /for-churches.",
+    "q12": "Miten voin tukea BibleBot.Lifea?",
+    "q12Answer": "Kertaluonteisella tai säännöllisellä lahjoituksella osoitteessa /spenden (luottokortti, Twint, Apple Pay, Google Pay), suosittelemalla sitä ihmisille, jotka etsivät hengellistä kumppania, tai seurakuntana/instituutiona kumppanuuden kautta. Jokainen panos auttaa pitämään kumppanisi ilmaisena ja mainoksettomana."
   },
   "donate": {
     "badge": "Tue kumppanisiiasi",

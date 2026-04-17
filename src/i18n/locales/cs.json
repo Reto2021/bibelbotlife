@@ -222,8 +222,8 @@
     "q6Answer": "Ne. Tvůj společník je digitální nástroj pro osobní čtení Bible a reflexi. Nenahrazuje profesionální pastorační péči, teologické poradenství ani psychologickou terapii.",
     "q7": "Není tvůj společník jen ‚bot dobrého pocitu'?",
     "q7Answer": "Ne. Tvůj společník utěšuje, kde je útěcha potřeba – ale také vyzývá. Duchovní růst vyžaduje tření. Tvůj společník klade nepohodlné otázky a nevyhýbá se tématům jako spravedlnost, pokání a odpovědnost.",
-    "q8": "Kdo stojí za tvůj společník a jak je financován?",
-    "q8Answer": "BibleBot.Life je soukromý, nekomerční projekt. Je provozován dobrovolnicky a financován výhradně z dobrovolných darů. Bez reklam, bez prodeje dat, bez placených funkcí.",
+    "q8": "Kdo stojí za vaším společníkem a jak je financován?",
+    "q8Answer": "BibleBot.Life je vyvíjen a provozován společností 2Go Media AG. Sponzorství pro dary zajišťuje sdružení BibleBot.Life (i.G.). Pro soukromé osoby je služba zdarma, bez reklam a bez prodeje dat. Financována je z dobrovolných darů a z B2B partnerství s církvemi, nemocnicemi a institucemi. Dary plynou do infrastruktury, hostingu, překladů a dalšího vývoje. Jelikož je sdružení stále ve fázi zakládání, dary v současné době nejsou daňově odečitatelné.",
     "q9": "Jak tvůj společník zachází s mými daty?",
     "q9Answer": "Tvůj společník neukládá osobní data ani historii chatů. Každý rozhovor je anonymní. Bez přihlášení, bez sledování, bez sdílení dat s třetími stranami.",
     "tradition": {
@@ -232,7 +232,13 @@
       "catholic": "Katolická",
       "freeChurch": "Svobodná církev",
       "literal": "Doslovná"
-    }
+    },
+    "q10": "Co se stane v krizi nebo při sebevražedných myšlenkách?",
+    "q10Answer": "Váš společník automaticky rozpozná krizové signály ve všech 36 podporovaných jazycích. Při náznacích sebevražedných myšlenek, akutního zoufalství nebo násilí se okamžitě zobrazí seznam profesionálních horkých linek (např. Dargebotene Hand 143 a Pro Juventute 147 ve Švýcarsku, Telefonseelsorge 0800 111 0 111 v Německu, Telefonseelsorge 142 v Rakousku). Váš společník nenahrazuje terapii ani nouzovou pomoc – v akutních situacích se prosím obraťte přímo na tyto instituce nebo zavolejte na tísňovou linku.",
+    "q11": "Mohu BibleBot.Life používat jako nemocnice, firma nebo instituce?",
+    "q11Answer": "Ano. Pro nemocnice, pečovatelská zařízení, školy a firmy existují vlastní B2B balíčky s vlastním brandingem, datovou suverenitou a přístupy pro zaměstnance. Podrobnosti naleznete na /for-institutions. Pro církevní obce jsou k dispozici vhodné balíčky na /for-churches.",
+    "q12": "Jak mohu podpořit BibleBot.Life?",
+    "q12Answer": "Jednorázovým nebo pravidelným darem přes /spenden (kreditní karta, Twint, Apple Pay, Google Pay), doporučením lidem, kteří hledají duchovního průvodce, nebo jako církevní obec/instituce partnerstvím. Každý příspěvek pomáhá, aby váš společník zůstal zdarma a bez reklam."
   },
   "donate": {
     "badge": "Podpoř tvůj společník",

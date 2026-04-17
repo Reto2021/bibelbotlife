@@ -222,8 +222,8 @@
     "q6Answer": "Nie. Váš váš sprievodca je digitálny nástroj pre osobné čítanie Biblie a reflexiu. Nenahrádza profesionálnu pastoračnú starostlivosť, teologické poradenstvo ani psychologickú terapiu. V prípade vážnych kríz váš váš sprievodca vždy odkazuje na kvalifikované kontaktné miesta.",
     "q7": "Nie je váš váš sprievodca len „bot pre dobrý pocit“?",
     "q7Answer": "Nie. Váš váš sprievodca utešuje tam, kde je útecha potrebná – ale aj vyzýva. Duchovný rast potrebuje trenie. Váš váš sprievodca kladie nepríjemné doplňujúce otázky, pomenúva ťažké biblické texty (Jób, žalmy nárekov, prorocká kritika) a nebojí sa tém ako spravodlivosť, pokánie a zodpovednosť. Prorocká tradícia nikdy nebola pohodlná – a váš váš sprievodca tiež nie.",
-    "q8": "Kto stojí za vaším váš sprievodcaom a ako je financovaný?",
-    "q8Answer": "BibleBot.Life je súkromný, nekomerčný projekt. Je prevádzkovaný dobrovoľne a financovaný výhradne z dobrovoľných darov. Neexistuje žiadna reklama, žiadny predaj dát a žiadne platené funkcie. Všetky dary idú priamo na pokrytie prevádzkových nákladov (infraštruktúra, hosting, vývoj). Keďže váš sprievodca funguje ako súkromný projekt, dary nie sú daňovo odpočítateľné.",
+    "q8": "Kto stojí za tvojím sprievodcom a ako je financovaný?",
+    "q8Answer": "BibleBot.Life je vyvíjaný a prevádzkovaný spoločnosťou 2Go Media AG. Zodpovednosť za dary nesie združenie BibleBot.Life (i.G.). Pre súkromné osoby je služba bezplatná, bez reklám a bez predaja dát. Financovaná je dobrovoľnými darmi a B2B partnerstvami s cirkvami, nemocnicami a inštitúciami. Dary plynú do infraštruktúry, hostingu, prekladov a ďalšieho vývoja. Keďže združenie je ešte len vo fáze zakladania, dary v súčasnosti nie sú daňovo odpočítateľné.",
     "q9": "Ako váš váš sprievodca zaobchádza s mojimi údajmi?",
     "q9Answer": "Váš váš sprievodca neukladá žiadne osobné údaje ani históriu chatu. Každý rozhovor je anonymný. Neexistuje žiadne prihlásenie, žiadne sledovanie a žiadne zdieľanie údajov s tretími stranami. Používanie je úplne anonymné.",
     "tradition": {
@@ -232,7 +232,13 @@
       "catholic": "Katolícky",
       "freeChurch": "Slobodná cirkev",
       "literal": "Doslovne"
-    }
+    },
+    "q10": "Čo sa stane v kríze alebo pri samovražedných myšlienkach?",
+    "q10Answer": "Tvoj sprievodca automaticky rozpoznáva krízové signály vo všetkých 36 podporovaných jazykoch. Pri náznakoch samovražedných myšlienok, akútneho zúfalstva alebo násilia sa okamžite zobrazí zoznam profesionálnych horúcich liniek (napr. Dargebotene Hand 143 a Pro Juventute 147 vo Švajčiarsku, Telefonseelsorge 0800 111 0 111 v Nemecku, Telefonseelsorge 142 v Rakúsku). Tvoj sprievodca nenahrádza terapiu ani núdzovú pomoc — v akútnych situáciách sa prosím obráť priamo na tieto miesta alebo zavolaj na tiesňovú linku.",
+    "q11": "Môžem BibleBot.Life používať ako nemocnica, firma alebo inštitúcia?",
+    "q11Answer": "Áno. Pre nemocnice, opatrovateľské zariadenia, školy a firmy sú k dispozícii vlastné B2B balíčky s vlastnou značkou, dátovou suverenitou a prístupmi pre zamestnancov. Podrobnosti nájdeš na /for-institutions. Pre cirkevné zbory sú k dispozícii vhodné balíčky na /for-churches.",
+    "q12": "Ako môžem podporiť BibleBot.Life?",
+    "q12Answer": "Jednorazovým alebo pravidelným darom cez /spenden (kreditná karta, Twint, Apple Pay, Google Pay), odporúčaním ľuďom, ktorí hľadajú duchovného sprievodcu, alebo ako cirkevný zbor/inštitúcia partnerstvom. Každý príspevok pomáha, aby tvoj sprievodca zostal bezplatný a bez reklám."
   },
   "donate": {
     "badge": "Podporte svojho váš sprievodcaa",

@@ -222,8 +222,8 @@
     "q6Answer": "Hindi. Ang iyong ang iyong kasama ay isang digital na tool para sa personal na pagbabasa at pagmumuni-muni ng Bibliya. Hindi nito pinapalitan ang propesyonal na pagpapayo, teolohikal na payo, o sikolohikal na therapy. Sa kaso ng malubhang krisis, palaging tinutukoy ng iyong ang iyong kasama ang mga kwalipikadong ahensya ng tulong.",
     "q7": "Hindi ba ang iyong ang iyong kasama ay isang «feel-good bot» lang?",
     "q7Answer": "Hindi. Ang iyong ang iyong kasama ay nagbibigay ng aliw kung saan kailangan ang aliw – ngunit naghahamon din ito. Ang espirituwal na paglago ay nangangailangan ng pagsubok. Ang iyong ang iyong kasama ay nagtatanong ng hindi komportableng mga follow-up na tanong, pinangalanan ang mahirap na mga teksto sa Bibliya (Job, mga salmo ng pagtangis, propetikong kritisismo) at hindi natatakot sa mga paksa tulad ng katarungan, pagsisisi, at responsibilidad. Ang tradisyong propetiko ay hindi kailanman naging komportable – at ang iyong ang iyong kasama din.",
-    "q8": "Sino ang nasa likod ng iyong ang iyong kasama at paano ito pinopondohan?",
-    "q8Answer": "Ang BibleBot.Life ay isang pribado, hindi komersyal na proyekto. Ito ay pinapatakbo nang boluntaryo at pinopondohan lamang sa pamamagitan ng boluntaryong donasyon. Walang advertising, walang pagbebenta ng data, at walang bayad na feature. Ang lahat ng donasyon ay direktang napupunta sa pagbabayad ng mga kasalukuyang gastos (imprastraktura, hosting, pagpapaunlad). Dahil ang ang iyong kasama ay tumatakbo bilang isang pribadong proyekto, ang mga donasyon ay hindi deductible sa buwis.",
+    "q8": "Sino ang nasa likod ng iyong kasama at paano ito pinopondohan?",
+    "q8Answer": "Ang BibleBot.Life ay binuo at pinamamahalaan ng 2Go Media AG. Ang responsibilidad para sa mga donasyon ay nasa asosasyon ng BibleBot.Life (i.G.). Para sa mga pribadong indibidwal, ang serbisyo ay libre, walang ad, at walang pagbebenta ng data. Ito ay pinopondohan sa pamamagitan ng boluntaryong donasyon at sa pamamagitan ng B2B partnership sa mga simbahan, ospital, at institusyon. Ang mga donasyon ay napupunta sa imprastraktura, hosting, pagsasalin, at karagdagang pag-unlad. Dahil ang asosasyon ay nasa proseso pa ng pagtatatag, ang mga donasyon ay kasalukuyang hindi deductible sa buwis.",
     "q9": "Paano pinangangasiwaan ng iyong ang iyong kasama ang aking data?",
     "q9Answer": "Hindi nagse-save ang iyong ang iyong kasama ng personal na data o mga kasaysayan ng chat. Ang bawat pag-uusap ay anonymous. Walang pag-login, walang pagsubaybay, at walang pagbabahagi ng data sa mga third party. Ang paggamit ay ganap na anonymous.",
     "tradition": {
@@ -232,7 +232,13 @@
       "catholic": "Katoliko",
       "freeChurch": "Malayang Simbahan",
       "literal": "Salita-sa-salita"
-    }
+    },
+    "q10": "Ano ang mangyayari sa isang krisis o sa mga pag-iisip ng pagpapakamatay?",
+    "q10Answer": "Awtomatikong kinikilala ng iyong kasama ang mga senyales ng krisis sa lahat ng 36 na sinusuportahang wika. Kung may mga indikasyon ng pag-iisip ng pagpapakamatay, matinding pagkabigo, o karahasan, agad na ipinapakita ang isang listahan ng mga propesyonal na hotline (hal. Dargebotene Hand 143 at Pro Juventute 147 sa Switzerland, Telefonseelsorge 0800 111 0 111 sa Germany, Telefonseelsorge 142 sa Austria). Hindi pinapalitan ng iyong kasama ang therapy o emergency assistance — sa mga matinding sitwasyon, mangyaring direktang makipag-ugnayan sa mga serbisyong ito o tumawag sa emergency number.",
+    "q11": "Maaari ko bang gamitin ang BibleBot.Life bilang isang ospital, kumpanya, o institusyon?",
+    "q11Answer": "Oo. Para sa mga ospital, pasilidad ng pangangalaga, paaralan, at kumpanya, mayroong mga espesyal na B2B package na may sariling branding, data sovereignty, at access ng empleyado. Makikita mo ang mga detalye sa /for-institutions. Para sa mga parokya, mayroong angkop na package sa /for-churches.",
+    "q12": "Paano ko susuportahan ang BibleBot.Life?",
+    "q12Answer": "Sa pamamagitan ng isang beses o regular na donasyon sa /spenden (Credit card, Twint, Apple Pay, Google Pay), sa pamamagitan ng pagrerekomenda sa mga taong naghahanap ng espirituwal na kasama, o bilang isang parokya/institusyon na may partnership. Ang bawat kontribusyon ay nakakatulong upang ang iyong kasama ay manatiling libre at walang ad."
   },
   "donate": {
     "badge": "Suportahan ang Iyong ang iyong kasama",

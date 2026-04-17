@@ -222,8 +222,8 @@
     "q6Answer": "Non. Konpayon ou ou a se yon zouti dijital pou lekti Bib pèsonèl ak refleksyon. Li pa ranplase konsèy espirityèl pwofesyonèl, konsèy teyolojik oswa terapi sikolojik. Nan ka kriz grav, konpayon ou ou a toujou refere w nan resous kalifye.",
     "q7": "Èske konpayon ou ou a pa jis yon «bot byennèt»?",
     "q7Answer": "Non. Konpayon ou ou a konsole kote konsolasyon nesesè – men li defi tou. Kwasans espirityèl bezwen friksyon. Konpayon ou ou a poze kesyon swivi ki alèz, nonmen tèks biblik difisil (Jòb, Sòm plenn, kritik pwofetik) epi li pa pè sijè tankou jistis, repantans ak responsablite. Tradisyon pwofetik la pa janm te alèz – e konpayon ou ou a tou pa.",
-    "q8": "Ki moun ki dèyè konpayon ou ou a e kijan li finanse?",
-    "q8Answer": "BibleBot.Life se yon pwojè prive, ki pa komèsyal. Li opere sou baz volontè epi li finanse sèlman pa don volontè. Pa gen piblisite, pa gen lavant done ak pa gen okenn karakteristik peye. Tout don yo ale dirèkteman nan kouvri depans operasyonèl yo (enfrastrikti, hosting, devlopman). Kòm konpayon ou opere kòm yon pwojè prive, don yo pa dediktib taks.",
+    "q8": "Ki moun ki dèyè konpayon ou a e kijan li finanse?",
+    "q8Answer": "BibleBot.Life devlope ak opere pa 2Go Media AG. Asosyasyon BibleBot.Life (i.G.) responsab pou don yo. Sèvis la gratis pou moun prive, san piblisite e san vann done. Li finanse pa don volontè ak patenarya B2B ak legliz, lopital ak enstitisyon. Don yo ale nan enfrastrikti, hosting, tradiksyon ak devlopman. Kòm asosyasyon an toujou nan pwosesis pou yo fonde, don yo pa dediktib taks kounye a.",
     "q9": "Kijan konpayon ou ou a trete done mwen yo?",
     "q9Answer": "Konpayon ou ou a pa estoke okenn done pèsonèl ak okenn istwa chat. Chak konvèsasyon anonim. Pa gen koneksyon, pa gen swiv ak pa gen okenn pataj done ak twazyèm pati. Itilizasyon an konplètman anonim.",
     "tradition": {
@@ -232,7 +232,13 @@
       "catholic": "Katolik",
       "freeChurch": "Legliz lib",
       "literal": "Mo pou mo"
-    }
+    },
+    "q10": "Kisa k ap pase nan yon kriz oswa ak panse swisid?",
+    "q10Answer": "Konpayon ou a otomatikman detekte siy kriz nan tout 36 lang sipòte yo. Si gen endikasyon de panse swisid, dezespwa egi oswa vyolans, yon lis liy dirèk pwofesyonèl parèt imedyatman (egzanp, Dargebotene Hand 143 ak Pro Juventute 147 nan Swis, Telefonseelsorge 0800 111 0 111 nan Almay, Telefonseelsorge 142 nan Otrich). Konpayon ou a pa ranplase terapi oswa èd ijans — nan sitiyasyon egi, tanpri kontakte ajans sa yo dirèkteman oswa rele nimewo ijans lan.",
+    "q11": "Èske mwen ka itilize BibleBot.Life kòm yon lopital, konpayi oswa enstitisyon?",
+    "q11Answer": "Wi. Pou lopital, etablisman swen, lekòl ak konpayi, gen pakè B2B espesyal ak pwòp mak yo, souverènte done ak aksè anplwaye yo. Ou ka jwenn detay sou /for-institutions. Pou kongregasyon legliz yo, gen pakè apwopriye sou /for-churches.",
+    "q12": "Kijan mwen ka sipòte BibleBot.Life?",
+    "q12Answer": "Avèk yon don yon sèl fwa oswa regilye atravè /spenden (kat kredi, Twint, Apple Pay, Google Pay), lè w rekòmande li bay moun k ap chèche yon konpayon espirityèl, oswa kòm yon kongregasyon legliz/enstitisyon ak yon patenarya. Chak kontribisyon ede kenbe konpayon ou gratis ak san piblisite."
   },
   "donate": {
     "badge": "Sipòte konpayon ou ou a",

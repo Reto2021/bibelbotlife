@@ -222,8 +222,8 @@
     "q6Answer": "Ne. Vaš vaš pratitelj je digitalni alat za osobno čitanje Biblije i razmišljanje. Ne zamjenjuje profesionalnu duhovnu skrb, teološko savjetovanje ili psihološku terapiju. U ozbiljnim krizama, vaš vaš pratitelj uvijek upućuje na kvalificirane kontakt točke.",
     "q7": "Nije li vaš vaš pratitelj samo «bot za dobro raspoloženje»?",
     "q7Answer": "Ne. Vaš vaš pratitelj tješi tamo gdje je utjeha potrebna – ali i izaziva. Duhovni rast zahtijeva trenje. Vaš vaš pratitelj postavlja neugodna dodatna pitanja, imenuje teške biblijske tekstove (Job, psalmi tužaljki, proročka kritika) i ne boji se tema poput pravde, pokajanja i odgovornosti. Proročka tradicija nikada nije bila ugodna – pa tako ni vaš vaš pratitelj.",
-    "q8": "Tko stoji iza vašeg vaš pratitelja i kako se financira?",
-    "q8Answer": "BibleBot.Life je privatni, nekomercijalni projekt. Vodi se volonterski i financira se isključivo dobrovoljnim donacijama. Nema oglašavanja, prodaje podataka i plaćenih značajki. Sve donacije idu izravno na pokrivanje tekućih troškova (infrastruktura, hosting, razvoj). Budući da vaš pratitelj djeluje kao privatni projekt, donacije nisu porezno priznate.",
+    "q8": "Tko stoji iza vašeg pratitelja i kako se financira?",
+    "q8Answer": "BibleBot.Life razvija i upravlja 2Go Media AG. Udruga BibleBot.Life (i.G.) je odgovorna za donacije. Za pojedince, usluga je besplatna, bez oglasa i bez prodaje podataka. Financira se dobrovoljnim donacijama i B2B partnerstvima s crkvama, bolnicama i institucijama. Donacije se koriste za infrastrukturu, hosting, prijevode i daljnji razvoj. Budući da je udruga još u osnivanju, donacije trenutno nisu porezno priznate.",
     "q9": "Kako vaš vaš pratitelj postupa s mojim podacima?",
     "q9Answer": "Vaš vaš pratitelj ne pohranjuje osobne podatke niti povijest razgovora. Svaki razgovor je anoniman. Nema prijave, praćenja i prosljeđivanja podataka trećim stranama. Korištenje je potpuno anonimno.",
     "tradition": {
@@ -232,7 +232,13 @@
       "literal": "Doslovno",
       "evangelical": "Evangelistički",
       "catholic": "Katolički"
-    }
+    },
+    "q10": "Što se događa u krizi ili s suicidalnim mislima?",
+    "q10Answer": "Vaš pratitelj automatski prepoznaje znakove krize na svih 36 podržanih jezika. U slučaju naznaka suicidalnih misli, akutnog očaja ili nasilja, odmah se prikazuje popis profesionalnih telefonskih linija za pomoć (npr. Dargebotene Hand 143 i Pro Juventute 147 u Švicarskoj, Telefonseelsorge 0800 111 0 111 u Njemačkoj, Telefonseelsorge 142 u Austriji). Vaš pratitelj ne zamjenjuje terapiju niti hitnu pomoć — u akutnim situacijama obratite se izravno tim službama ili nazovite hitnu pomoć.",
+    "q11": "Mogu li koristiti BibleBot.Life kao bolnica, tvrtka ili institucija?",
+    "q11Answer": "Da. Za bolnice, ustanove za njegu, škole i tvrtke postoje posebni B2B paketi s vlastitim brendiranjem, suverenitetom podataka i pristupom za zaposlenike. Detalje možete pronaći na /for-institutions. Za crkvene zajednice postoje odgovarajući paketi na /for-churches.",
+    "q12": "Kako mogu podržati BibleBot.Life?",
+    "q12Answer": "Jednokratnom ili redovitom donacijom putem /spenden (kreditna kartica, Twint, Apple Pay, Google Pay), preporukom ljudima koji traže duhovnog pratitelja ili kao crkvena zajednica/institucija s partnerstvom. Svaki doprinos pomaže da vaš pratitelj ostane besplatan i bez oglasa."
   },
   "donate": {
     "badge": "Podržite svog vaš pratitelja",

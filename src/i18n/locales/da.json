@@ -222,8 +222,8 @@
     "q6Answer": "Nej. Din ledsager er et digitalt værktøj til personlig bibellæsning og refleksion. Den erstatter ikke professionel sjælesorg, teologisk rådgivning eller psykologisk terapi. I alvorlige kriser henviser din ledsager altid til kvalificerede ressourcer.",
     "q7": "Er din ledsager ikke bare et «føl-godt-værktøj»?",
     "q7Answer": "Nej. Din ledsager trøster, hvor trøst er nødvendig – men udfordrer også. Åndelig vækst kræver friktion. Din ledsager stiller ubehagelige opfølgende spørgsmål, nævner svære bibeltekster (Job, Klagepsalmer, profetisk kritik) og viger ikke tilbage fra emner som retfærdighed, omvendelse og ansvar.",
-    "q8": "Hvem står bag BibleBot.Life og hvordan finansieres det?",
-    "q8Answer": "BibleBot.Life er et privat, ikke-kommercielt projekt. Det drives frivilligt og finansieres udelukkende gennem frivillige donationer. Der er ingen reklame, ingen datasalg og ingen betalte funktioner.",
+    "q8": "Hvem står bag din ledsager, og hvordan finansieres den?",
+    "q8Answer": "BibleBot.Life er udviklet og drives af 2Go Media AG. Foreningen BibleBot.Life (i.G.) er ansvarlig for donationer. For privatpersoner er tjenesten gratis, reklamefri og uden salg af data. Den finansieres af frivillige donationer samt B2B-partnerskaber med kirker, hospitaler og institutioner. Donationer går til infrastruktur, hosting, oversættelser og videreudvikling. Da foreningen stadig er under stiftelse, er donationer i øjeblikket ikke fradragsberettigede.",
     "q9": "Hvordan håndterer din ledsager mine data?",
     "q9Answer": "Din ledsager gemmer ingen personlige data og ingen chathistorik. Hver samtale er anonym. Der er intet login, ingen sporing og ingen deling af data med tredjeparter.",
     "tradition": {
@@ -232,7 +232,13 @@
       "catholic": "Katolsk",
       "freeChurch": "Frikirke",
       "literal": "Ordret"
-    }
+    },
+    "q10": "Hvad sker der i en krise eller ved selvmordstanker?",
+    "q10Answer": "Din ledsager genkender automatisk krisesignaler på alle 36 understøttede sprog. Ved tegn på selvmordstanker, akut fortvivlelse eller vold vises der straks en liste over professionelle hotlines (f.eks. Dargebotene Hand 143 og Pro Juventute 147 i Schweiz, Telefonseelsorge 0800 111 0 111 i Tyskland, Telefonseelsorge 142 i Østrig). Din ledsager erstatter ikke terapi eller nødhjælp – i akutte situationer bedes du kontakte disse instanser direkte eller ringe til alarmnummeret.",
+    "q11": "Kan jeg bruge BibleBot.Life som hospital, virksomhed eller institution?",
+    "q11Answer": "Ja. For hospitaler, plejehjem, skoler og virksomheder findes der separate B2B-pakker med eget branding, dataejerskab og medarbejderadgang. Detaljer findes på /for-institutions. For kirkesamfund findes der passende pakker under /for-churches.",
+    "q12": "Hvordan kan jeg støtte BibleBot.Life?",
+    "q12Answer": "Med en engangs- eller regelmæssig donation via /spenden (kreditkort, Twint, Apple Pay, Google Pay), ved at anbefale den til mennesker, der søger en åndelig ledsager, eller som kirkesamfund/institution med et partnerskab. Hvert bidrag hjælper med at holde din ledsager gratis og reklamefri."
   },
   "donate": {
     "badge": "Støt din ledsager",

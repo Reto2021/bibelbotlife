@@ -222,8 +222,8 @@
     "q6Answer": "Hapana. Mwenza wako wako ni chombo cha kidijitali cha kusoma Biblia kibinafsi na kutafakari. Haichukui nafasi ya huduma ya kichungaji, ushauri wa kitheolojia au tiba ya kisaikolojia. Katika shida mbaya, mwenza wako wako daima huelekeza kwenye vituo vilivyohitimu.",
     "q7": "Je, mwenza wako wako si tu «bot ya kujisikia vizuri»?",
     "q7Answer": "Hapana. Mwenza wako wako hufariji pale faraja inahitajika – lakini pia huchochea. Ukuaji wa kiroho unahitaji msuguano. Mwenza wako wako huuliza maswali magumu, huonyesha maandishi magumu ya Biblia (Ayubu, Zaburi za Maombolezo, ukosoaji wa kinabii) na haogopi mada kama vile haki, toba na wajibu. Tamaduni ya kinabii haikuwa rahisi kamwe – na mwenza wako wako pia si rahisi.",
-    "q8": "Ni nani aliye nyuma ya mwenza wako wako na inafadhiliwaje?",
-    "q8Answer": "BibleBot.Life ni mradi wa kibinafsi, usio wa kibiashara. Unaendeshwa kwa kujitolea na hufadhiliwa tu kupitia michango ya hiari. Hakuna matangazo, hakuna mauzo ya data na hakuna vipengele vya kulipia. Michango yote huenda moja kwa moja kufidia gharama za uendeshaji (miundombinu, uhifadhi, maendeleo). Kwa kuwa mwenza wako unaendeshwa kama mradi wa kibinafsi, michango haiwezi kukatwa kodi.",
+    "q8": "Nani yuko nyuma ya rafiki yako na inafadhiliwaje?",
+    "q8Answer": "BibleBot.Life inatengenezwa na kuendeshwa na 2Go Media AG. Usimamizi wa michango uko chini ya chama cha BibleBot.Life (i.G.). Kwa watu binafsi, huduma ni bure, haina matangazo na haina mauzo ya data. Inafadhiliwa kupitia michango ya hiari na kupitia ushirikiano wa B2B na makanisa, hospitali na taasisi. Michango huenda kwenye miundombinu, upangishaji, tafsiri na maendeleo zaidi. Kwa kuwa chama bado kiko katika hatua ya kuanzishwa, michango kwa sasa haitozwi kodi.",
     "q9": "Mwenza wako wako hushughulikiaje data yangu?",
     "q9Answer": "Mwenza wako wako haihifadhi data za kibinafsi wala historia ya mazungumzo. Kila mazungumzo ni ya siri. Hakuna kuingia, hakuna ufuatiliaji na hakuna uhamishaji wa data kwa washirika wengine. Matumizi ni ya siri kabisa.",
     "tradition": {
@@ -232,7 +232,13 @@
       "catholic": "Katoliki",
       "freeChurch": "Kanisa Huru",
       "literal": "Neno kwa neno"
-    }
+    },
+    "q10": "Nini kinatokea wakati wa shida au mawazo ya kujiua?",
+    "q10Answer": "Mwandamani wako hutambua ishara za shida kiotomatiki katika lugha zote 36 zinazoungwa mkono. Ikiwa kuna dalili za mawazo ya kujiua, kukata tamaa kali au vurugu, orodha ya nambari za simu za kitaalamu huonyeshwa mara moja (k.m. Dargebotene Hand 143 na Pro Juventute 147 nchini Uswisi, Telefonseelsorge 0800 111 0 111 nchini Ujerumani, Telefonseelsorge 142 nchini Austria). Mwandamani wako hauchukui nafasi ya tiba au msaada wa dharura — katika hali mbaya, tafadhali wasiliana na mashirika haya moja kwa moja au piga nambari ya dharura.",
+    "q11": "Je, ninaweza kutumia BibleBot.Life kama hospitali, kampuni au taasisi?",
+    "q11Answer": "Ndiyo. Kwa hospitali, vituo vya utunzaji, shule na makampuni, kuna vifurushi maalum vya B2B na chapa yao wenyewe, uhuru wa data na ufikiaji wa wafanyakazi. Maelezo yanaweza kupatikana kwenye /for-institutions. Kwa makanisa, kuna vifurushi vinavyofaa chini ya /for-churches.",
+    "q12": "Ninawezaje kusaidia BibleBot.Life?",
+    "q12Answer": "Kwa mchango wa mara moja au wa kawaida kupitia /spenden (Kadi ya Mkopo, Twint, Apple Pay, Google Pay), kwa kupendekeza kwa watu wanaotafuta mwandamani wa kiroho, au kama kanisa/taasisi yenye ushirikiano. Kila mchango husaidia mwandamani wako kubaki bure na bila matangazo."
   },
   "donate": {
     "badge": "Saidia mwenza wako wako",
