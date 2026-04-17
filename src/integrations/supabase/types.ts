@@ -658,28 +658,37 @@ export type Database = {
       circle_journey_progress: {
         Row: {
           circle_id: string
+          completed_at: string | null
           days_completed: number | null
           display_name: string
           id: string
           last_active_date: string | null
+          question_id: string | null
+          response: string | null
           updated_at: string | null
           user_id: string
         }
         Insert: {
           circle_id: string
+          completed_at?: string | null
           days_completed?: number | null
           display_name: string
           id?: string
           last_active_date?: string | null
+          question_id?: string | null
+          response?: string | null
           updated_at?: string | null
           user_id: string
         }
         Update: {
           circle_id?: string
+          completed_at?: string | null
           days_completed?: number | null
           display_name?: string
           id?: string
           last_active_date?: string | null
+          question_id?: string | null
+          response?: string | null
           updated_at?: string | null
           user_id?: string
         }
@@ -699,6 +708,7 @@ export type Database = {
           display_name: string
           id: string
           joined_at: string | null
+          role: string
           user_id: string
         }
         Insert: {
@@ -706,6 +716,7 @@ export type Database = {
           display_name: string
           id?: string
           joined_at?: string | null
+          role?: string
           user_id: string
         }
         Update: {
@@ -713,6 +724,7 @@ export type Database = {
           display_name?: string
           id?: string
           joined_at?: string | null
+          role?: string
           user_id?: string
         }
         Relationships: [
@@ -770,6 +782,7 @@ export type Database = {
         Row: {
           created_at: string | null
           created_by: string
+          description: string | null
           id: string
           invite_code: string
           name: string
@@ -779,6 +792,7 @@ export type Database = {
         Insert: {
           created_at?: string | null
           created_by: string
+          description?: string | null
           id?: string
           invite_code?: string
           name: string
@@ -788,6 +802,7 @@ export type Database = {
         Update: {
           created_at?: string | null
           created_by?: string
+          description?: string | null
           id?: string
           invite_code?: string
           name?: string
