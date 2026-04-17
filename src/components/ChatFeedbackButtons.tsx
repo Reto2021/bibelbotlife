@@ -6,18 +6,33 @@ import { useAuth } from "@/hooks/use-auth";
 import { useToast } from "@/hooks/use-toast";
 
 type Props = {
-  conversationId: string | null;
-  messageContent: string;
-  /** Index of the assistant message in the local array — used to dedupe per render. */
-  messageIndex: number;
+  /** Question that was asked (last user message) */
+  questionText: string;
+  /** Assistant answer being rated */
+  answerText: string;
+  language: string;
 };
 
+const SESSION_KEY = "bibelbot-session-id";
+function getSessionId(): string {
+  try {
+    let id = localStorage.getItem(SESSION_KEY);
+    if (!id) {
+      id = crypto.randomUUID();
+      localStorage.setItem(SESSION_KEY, id);
+    }
+    return id;
+  } catch {
+    return "anon-" + Math.random().toString(36).slice(2);
+  }
+}
+
 /**
- * Feedback buttons (👍 / 👎) shown under each assistant message.
- * Looks up the matching DB row by content + conversation_id (latest assistant message wins on ties).
- * Only rendered for authenticated users; anonymous chats have no DB rows to attach feedback to.
+ * Compact 👍 / 👎 buttons under each assistant message.
+ * Works for both authenticated and anonymous users.
+ * Negative ratings open a comment box for context.
  */
-export function ChatFeedbackButtons({ conversationId, messageContent, messageIndex }: Props) {
+export function ChatFeedbackButtons({ questionText, answerText, language }: Props) {
   const { user } = useAuth();
   const { t } = useTranslation();
   const { toast } = useToast();
@@ -25,72 +40,41 @@ export function ChatFeedbackButtons({ conversationId, messageContent, messageInd
   const [loading, setLoading] = useState<-1 | 1 | null>(null);
   const [comment, setComment] = useState("");
   const [showCommentBox, setShowCommentBox] = useState(false);
-  const [messageId, setMessageId] = useState<string | null>(null);
+  const [feedbackId, setFeedbackId] = useState<string | null>(null);
 
-  // Resolve the DB message id for this assistant message
+  // Reset rating when the answer changes
   useEffect(() => {
-    let cancelled = false;
-    if (!user || !conversationId || !messageContent) return;
-
-    (async () => {
-      const { data } = await supabase
-        .from("chat_messages")
-        .select("id, content")
-        .eq("conversation_id", conversationId)
-        .eq("role", "assistant")
-        .order("created_at", { ascending: false })
-        .limit(20);
-
-      if (cancelled || !data) return;
-      // Find an exact match — fall back to startsWith for streaming-truncation differences
-      const exact = data.find((m) => m.content === messageContent);
-      const partial =
-        exact ??
-        data.find((m) => m.content.startsWith(messageContent.slice(0, 200)));
-      if (partial) {
-        setMessageId(partial.id);
-        // Fetch existing feedback if any
-        const { data: fb } = await supabase
-          .from("chat_feedback")
-          .select("rating")
-          .eq("message_id", partial.id)
-          .eq("user_id", user.id)
-          .maybeSingle();
-        if (!cancelled && fb) setRating(fb.rating as -1 | 1);
-      }
-    })();
-
-    return () => {
-      cancelled = true;
-    };
-  }, [user, conversationId, messageContent, messageIndex]);
-
-  if (!user || !conversationId) return null;
+    setRating(null);
+    setFeedbackId(null);
+    setShowCommentBox(false);
+    setComment("");
+  }, [answerText]);
 
   const submit = async (newRating: -1 | 1, withComment?: string) => {
-    if (!messageId) {
-      toast({
-        title: t("feedback.notReady", "Feedback noch nicht bereit"),
-        description: t("feedback.notReadyDesc", "Bitte einen Moment warten, bis die Nachricht gespeichert ist."),
-      });
-      return;
-    }
     setLoading(newRating);
-    const { error } = await supabase.from("chat_feedback").upsert(
-      {
-        message_id: messageId,
-        conversation_id: conversationId,
-        user_id: user.id,
-        rating: newRating,
-        comment: withComment ?? null,
-      },
-      { onConflict: "message_id,user_id" }
-    );
+    const payload = {
+      rating: newRating,
+      comment: withComment ?? null,
+      question_text: questionText.slice(0, 2000),
+      answer_text: answerText.slice(0, 4000),
+      language,
+      user_id: user?.id ?? null,
+      session_id: user ? null : getSessionId(),
+    };
+
+    let result;
+    if (feedbackId) {
+      result = await supabase.from("chat_feedback").update(payload).eq("id", feedbackId);
+    } else {
+      result = await supabase.from("chat_feedback").insert(payload).select("id").single();
+      if (!result.error && result.data) setFeedbackId(result.data.id);
+    }
+
     setLoading(null);
-    if (error) {
+    if (result.error) {
       toast({
         title: t("feedback.error", "Fehler"),
-        description: error.message,
+        description: result.error.message,
         variant: "destructive",
       });
       return;
@@ -98,7 +82,7 @@ export function ChatFeedbackButtons({ conversationId, messageContent, messageInd
     setRating(newRating);
     if (newRating === 1) {
       toast({ title: t("feedback.thanks", "Danke für dein Feedback!") });
-    } else {
+    } else if (!withComment) {
       setShowCommentBox(true);
     }
   };
