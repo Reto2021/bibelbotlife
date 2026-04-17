@@ -60,6 +60,7 @@ const BibleQuiz = lazy(() => import("./pages/BibleQuiz"));
 const WidgetPreview = lazy(() => import("./pages/WidgetPreview"));
 const SplashPage = lazy(() => import("./pages/SplashPage"));
 const ForCelebrants = lazy(() => import("./pages/ForCelebrants"));
+const ForTeachers = lazy(() => import("./pages/ForTeachers"));
 const ReferralPartner = lazy(() => import("./pages/ReferralPartner"));
 const Spenden = lazy(() => import("./pages/Spenden"));
 const Kontakt = lazy(() => import("./pages/Kontakt"));
@@ -159,6 +160,9 @@ const App = () => {
                   <Route path="/church-integration/:slug" element={<ChurchIntegration />} />
                   <Route path="/for-institutions" element={<ForInstitutions />} />
                   <Route path="/fuer-seelsorger" element={<ForCelebrants />} />
+                  <Route path="/unterrichtsplaner" element={<ForTeachers />} />
+                  <Route path="/fuer-lehrer" element={<ForTeachers />} />
+                  <Route path="/fuer-lehrkraefte" element={<ForTeachers />} />
                    <Route path="/bible-search" element={<BibleSearch />} />
                    <Route path="/bibel" element={<BibleSearch />} />
                   <Route path="/gebetswand" element={<PrayerWall />} />
