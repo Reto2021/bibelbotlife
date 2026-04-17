@@ -12,6 +12,7 @@ import { openLifeWheel } from "@/components/LifeWheel";
 import { CHAT_OPEN_EVENT, CHAT_RESET_EVENT, type ChatMode } from "@/lib/chat-events";
 import ReactMarkdown from "react-markdown";
 import { ShareButton } from "@/components/ShareButton";
+import { VerseShareCard, extractMainVerse } from "@/components/VerseShareCard";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -807,6 +808,27 @@ export function ChatHero() {
     return () => window.removeEventListener(CHAT_RESET_EVENT, handler);
   }, [startNewChat]);
 
+  // Deep link: ?v=Reference&ref=share — auto-open chat with shared verse
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const params = new URLSearchParams(window.location.search);
+    const verseParam = params.get("v");
+    if (!verseParam) return;
+    const source = params.get("ref") || "share";
+    track("deep_link_verse", { reference: verseParam, source });
+    const msg = t("verseCard.deepLinkPrompt", {
+      ref: verseParam,
+      defaultValue: `Jemand hat mir diesen Vers geschickt: ${verseParam}. Was bedeutet er?`,
+    });
+    // Clean URL so refresh doesn't retrigger
+    params.delete("v");
+    params.delete("ref");
+    const newSearch = params.toString();
+    window.history.replaceState({}, "", window.location.pathname + (newSearch ? `?${newSearch}` : "") + window.location.hash);
+    setTimeout(() => sendMessage(msg), 200);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const handleChipClick = (chip: TopicChip) => {
     track("chip_click", { chip: chip.key });
     if (chip.special === "lifewheel") {
@@ -1122,6 +1144,7 @@ export function ChatHero() {
                       const { cleanText, options } = msg.role === "assistant"
                         ? extractOptions(msg.content)
                         : { cleanText: msg.content, options: [] as string[] };
+                      const mainVerse = msg.role === "assistant" ? extractMainVerse(cleanText) : null;
 
                       return (
                       <div key={i} className={`flex ${msg.role === "user" ? "justify-end" : "justify-start gap-2"}`}>
@@ -1140,6 +1163,9 @@ export function ChatHero() {
                                   p: ({ children }) => <p>{makeRefsClickable(children, sendMessage, t("suggest.explainDetail", { ref: "{{ref}}" }))}</p>,
                                   li: ({ children }) => <li>{makeRefsClickable(children, sendMessage, t("suggest.explainDetail", { ref: "{{ref}}" }))}</li>,
                                 }}>{cleanText}</ReactMarkdown>
+                                {mainVerse && (
+                                  <VerseShareCard verse={mainVerse.verse} reference={mainVerse.reference} />
+                                )}
                               </div>
                             ) : msg.content}
                           </div>
@@ -1174,7 +1200,9 @@ export function ChatHero() {
                                     <Volume2 className="h-3.5 w-3.5" />
                                   )}
                                 </button>
-                                <ShareButton title={t("share.chatTitle")} text={msg.content.length > 280 ? msg.content.slice(0, 277) + "…" : msg.content} variant="icon" className="ml-auto" />
+                                {!mainVerse && (
+                                  <ShareButton title={t("share.chatTitle")} text={msg.content.length > 280 ? msg.content.slice(0, 277) + "…" : msg.content} variant="icon" className="ml-auto" />
+                                )}
                               </div>
                               {qaMap[i] && <QABadge qa={qaMap[i]} t={t} />}
                             </>
