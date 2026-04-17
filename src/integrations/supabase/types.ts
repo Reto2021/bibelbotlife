@@ -1560,6 +1560,51 @@ export type Database = {
           },
         ]
       }
+      seo_topics: {
+        Row: {
+          body_md: string | null
+          created_at: string
+          faqs: Json | null
+          id: string
+          intro: string | null
+          is_published: boolean
+          language: string
+          meta_description: string | null
+          related_verses: string[] | null
+          slug: string
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          body_md?: string | null
+          created_at?: string
+          faqs?: Json | null
+          id?: string
+          intro?: string | null
+          is_published?: boolean
+          language?: string
+          meta_description?: string | null
+          related_verses?: string[] | null
+          slug: string
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          body_md?: string | null
+          created_at?: string
+          faqs?: Json | null
+          id?: string
+          intro?: string | null
+          is_published?: boolean
+          language?: string
+          meta_description?: string | null
+          related_verses?: string[] | null
+          slug?: string
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       service_series: {
         Row: {
           church_id: string | null
@@ -1945,6 +1990,63 @@ export type Database = {
           id?: string
           role?: Database["public"]["Enums"]["app_role"]
           user_id?: string
+        }
+        Relationships: []
+      }
+      verse_seo_content: {
+        Row: {
+          book: string
+          chapter: number
+          context: string | null
+          created_at: string
+          id: string
+          is_featured: boolean
+          language: string
+          meta_description: string | null
+          reference_slug: string
+          reflection: string | null
+          related_references: string[] | null
+          related_topics: string[] | null
+          title: string | null
+          updated_at: string
+          verse: number
+          view_count: number
+        }
+        Insert: {
+          book: string
+          chapter: number
+          context?: string | null
+          created_at?: string
+          id?: string
+          is_featured?: boolean
+          language?: string
+          meta_description?: string | null
+          reference_slug: string
+          reflection?: string | null
+          related_references?: string[] | null
+          related_topics?: string[] | null
+          title?: string | null
+          updated_at?: string
+          verse: number
+          view_count?: number
+        }
+        Update: {
+          book?: string
+          chapter?: number
+          context?: string | null
+          created_at?: string
+          id?: string
+          is_featured?: boolean
+          language?: string
+          meta_description?: string | null
+          reference_slug?: string
+          reflection?: string | null
+          related_references?: string[] | null
+          related_topics?: string[] | null
+          title?: string | null
+          updated_at?: string
+          verse?: number
+          view_count?: number
         }
         Relationships: []
       }
