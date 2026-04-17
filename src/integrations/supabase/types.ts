@@ -1117,6 +1117,36 @@ export type Database = {
           },
         ]
       }
+      journal_entries: {
+        Row: {
+          content: string
+          created_at: string
+          id: string
+          mood: string | null
+          prompt: string | null
+          user_id: string
+          verse_ref: string | null
+        }
+        Insert: {
+          content: string
+          created_at?: string
+          id?: string
+          mood?: string | null
+          prompt?: string | null
+          user_id: string
+          verse_ref?: string | null
+        }
+        Update: {
+          content?: string
+          created_at?: string
+          id?: string
+          mood?: string | null
+          prompt?: string | null
+          user_id?: string
+          verse_ref?: string | null
+        }
+        Relationships: []
+      }
       outreach_campaigns: {
         Row: {
           blacklist_domains: string[]
