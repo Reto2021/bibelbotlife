@@ -2000,5 +2000,14 @@
     "faq5a": "Aplikaci lze nainstalovat jako PWA. Existující lekce jsou čitelné offline; pro uložení potřebujete připojení.",
     "finalTitle": "Naplánujte si další lekci za 5 minut",
     "finalDesc": "Žádné nastavení. Žádná kreditní karta. Jednoduše začněte."
+  },
+  "feedback": {
+    "helpful": "Helpful",
+    "notHelpful": "Not helpful",
+    "thanks": "Thanks for your feedback!",
+    "thanksDetail": "Thanks! We'll look into it.",
+    "placeholder": "What wasn't right? (optional)",
+    "send": "Send",
+    "error": "Error"
   }
 }

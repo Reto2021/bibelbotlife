@@ -2000,5 +2000,14 @@
     "faq5a": "Հավելվածը կարող է տեղադրվել որպես PWA: Գոյություն ունեցող դասերը կարող են կարդացվել անցանց; պահպանելու համար ձեզ կապ է պետք:",
     "finalTitle": "Պլանավորեք ձեր հաջորդ դասը 5 րոպեում",
     "finalDesc": "Կարգավորում չկա: Վարկային քարտ չկա: Պարզապես սկսեք:"
+  },
+  "feedback": {
+    "helpful": "Helpful",
+    "notHelpful": "Not helpful",
+    "thanks": "Thanks for your feedback!",
+    "thanksDetail": "Thanks! We'll look into it.",
+    "placeholder": "What wasn't right? (optional)",
+    "send": "Send",
+    "error": "Error"
   }
 }

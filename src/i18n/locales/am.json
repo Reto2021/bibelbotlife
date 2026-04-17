@@ -1998,5 +1998,14 @@
     "faq5a": "መተግበሪያው እንደ PWA ሊጫን ይችላል። ያሉ ትምህርቶች ከመስመር ውጭ ሊነበቡ ይችላሉ፤ ለማስቀመጥ ግን ግንኙነት ያስፈልግዎታል።",
     "finalTitle": "ቀጣዩን ትምህርትዎን በ5 ደቂቃ ውስጥ ያቅዱ",
     "finalDesc": "ምንም ማዋቀር የለም። ምንም ክሬዲት ካርድ የለም። ዝም ብለው ይጀምሩ።"
+  },
+  "feedback": {
+    "helpful": "Helpful",
+    "notHelpful": "Not helpful",
+    "thanks": "Thanks for your feedback!",
+    "thanksDetail": "Thanks! We'll look into it.",
+    "placeholder": "What wasn't right? (optional)",
+    "send": "Send",
+    "error": "Error"
   }
 }

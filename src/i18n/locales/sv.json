@@ -2000,5 +2000,14 @@
     "faq5a": "Appen kan installeras som en PWA. Befintliga lektioner kan läsas offline; för att spara behöver du anslutning.",
     "finalTitle": "Planera din nästa lektion på 5 minuter",
     "finalDesc": "Ingen installation. Inget kreditkort. Bara att komma igång."
+  },
+  "feedback": {
+    "helpful": "Helpful",
+    "notHelpful": "Not helpful",
+    "thanks": "Thanks for your feedback!",
+    "thanksDetail": "Thanks! We'll look into it.",
+    "placeholder": "What wasn't right? (optional)",
+    "send": "Send",
+    "error": "Error"
   }
 }

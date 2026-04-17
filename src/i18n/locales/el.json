@@ -2001,5 +2001,14 @@
     "faq5a": "Η εφαρμογή μπορεί να εγκατασταθεί ως PWA. Τα υπάρχοντα μαθήματα είναι αναγνώσιμα εκτός σύνδεσης. Για αποθήκευση χρειάζεστε σύνδεση.",
     "finalTitle": "Σχεδιάστε το επόμενο μάθημά σας σε 5 λεπτά",
     "finalDesc": "Χωρίς εγκατάσταση. Χωρίς πιστωτική κάρτα. Απλά ξεκινήστε."
+  },
+  "feedback": {
+    "helpful": "Helpful",
+    "notHelpful": "Not helpful",
+    "thanks": "Thanks for your feedback!",
+    "thanksDetail": "Thanks! We'll look into it.",
+    "placeholder": "What wasn't right? (optional)",
+    "send": "Send",
+    "error": "Error"
   }
 }

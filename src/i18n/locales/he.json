@@ -2000,5 +2000,14 @@
     "faq5a": "האפליקציה ניתנת להתקנה כ-PWA. שיעורים קיימים ניתנים לקריאה במצב לא מקוון; כדי לשמור, אתה צריך חיבור.",
     "finalTitle": "תכנן את השיעור הבא שלך תוך 5 דקות",
     "finalDesc": "אין הגדרה. אין כרטיס אשראי. פשוט התחל."
+  },
+  "feedback": {
+    "helpful": "Helpful",
+    "notHelpful": "Not helpful",
+    "thanks": "Thanks for your feedback!",
+    "thanksDetail": "Thanks! We'll look into it.",
+    "placeholder": "What wasn't right? (optional)",
+    "send": "Send",
+    "error": "Error"
   }
 }

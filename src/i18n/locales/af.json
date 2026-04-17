@@ -2000,5 +2000,14 @@
     "faq5a": "Die toepassing kan as 'n PWA geïnstalleer word. Bestaande lesse is vanlyn leesbaar; om te stoor benodig jy 'n verbinding.",
     "finalTitle": "Beplan jou volgende les in 5 minute",
     "finalDesc": "Geen opstelling. Geen kredietkaart. Begin eenvoudig."
+  },
+  "feedback": {
+    "helpful": "Helpful",
+    "notHelpful": "Not helpful",
+    "thanks": "Thanks for your feedback!",
+    "thanksDetail": "Thanks! We'll look into it.",
+    "placeholder": "What wasn't right? (optional)",
+    "send": "Send",
+    "error": "Error"
   }
 }

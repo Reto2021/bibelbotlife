@@ -2000,5 +2000,14 @@
     "faq5a": "يمكن تثبيت التطبيق كـ PWA. يمكن قراءة الدروس الموجودة دون اتصال بالإنترنت؛ للحفظ تحتاج إلى اتصال.",
     "finalTitle": "خطط لدرسك التالي في 5 دقائق",
     "finalDesc": "لا إعداد. لا بطاقة ائتمان. ابدأ ببساطة."
+  },
+  "feedback": {
+    "helpful": "Helpful",
+    "notHelpful": "Not helpful",
+    "thanks": "Thanks for your feedback!",
+    "thanksDetail": "Thanks! We'll look into it.",
+    "placeholder": "What wasn't right? (optional)",
+    "send": "Send",
+    "error": "Error"
   }
 }

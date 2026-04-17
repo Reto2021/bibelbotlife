@@ -2001,5 +2001,14 @@
     "faq5a": "该应用程序可以作为PWA安装。现有课程可以离线阅读；保存需要连接。",
     "finalTitle": "在5分钟内规划你的下一节课",
     "finalDesc": "无需设置。无需信用卡。立即开始。"
+  },
+  "feedback": {
+    "helpful": "Helpful",
+    "notHelpful": "Not helpful",
+    "thanks": "Thanks for your feedback!",
+    "thanksDetail": "Thanks! We'll look into it.",
+    "placeholder": "What wasn't right? (optional)",
+    "send": "Send",
+    "error": "Error"
   }
 }

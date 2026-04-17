@@ -2000,5 +2000,14 @@
     "faq5a": "Sovellus on asennettavissa PWA:na. Olemassa olevat oppitunnit ovat luettavissa offline-tilassa; tallentamiseen tarvitset yhteyden.",
     "finalTitle": "Suunnittele seuraava oppituntisi 5 minuutissa",
     "finalDesc": "Ei asennusta. Ei luottokorttia. Aloita vain."
+  },
+  "feedback": {
+    "helpful": "Helpful",
+    "notHelpful": "Not helpful",
+    "thanks": "Thanks for your feedback!",
+    "thanksDetail": "Thanks! We'll look into it.",
+    "placeholder": "What wasn't right? (optional)",
+    "send": "Send",
+    "error": "Error"
   }
 }

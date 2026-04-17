@@ -2000,5 +2000,14 @@
     "faq5a": "Programu inaweza kusakinishwa kama PWA. Masomo yaliyopo yanaweza kusomwa nje ya mtandao; unahitaji muunganisho ili kuhifadhi.",
     "finalTitle": "Panga somo lako lijalo kwa dakika 5",
     "finalDesc": "Hakuna usanidi. Hakuna kadi ya mkopo. Anza tu."
+  },
+  "feedback": {
+    "helpful": "Helpful",
+    "notHelpful": "Not helpful",
+    "thanks": "Thanks for your feedback!",
+    "thanksDetail": "Thanks! We'll look into it.",
+    "placeholder": "What wasn't right? (optional)",
+    "send": "Send",
+    "error": "Error"
   }
 }

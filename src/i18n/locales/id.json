@@ -2041,5 +2041,14 @@
     "faq5a": "Aplikasi ini dapat diinstal sebagai PWA. Pelajaran yang ada dapat dibaca secara offline; Anda memerlukan koneksi untuk menyimpan.",
     "finalTitle": "Rencanakan pelajaran Anda berikutnya dalam 5 menit",
     "finalDesc": "Tidak ada pengaturan. Tidak ada kartu kredit. Cukup mulai."
+  },
+  "feedback": {
+    "helpful": "Helpful",
+    "notHelpful": "Not helpful",
+    "thanks": "Thanks for your feedback!",
+    "thanksDetail": "Thanks! We'll look into it.",
+    "placeholder": "What wasn't right? (optional)",
+    "send": "Send",
+    "error": "Error"
   }
 }

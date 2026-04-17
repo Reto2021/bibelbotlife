@@ -2000,5 +2000,14 @@
     "faq5a": "L'application peut être installée en tant que PWA. Les leçons existantes sont lisibles hors ligne ; pour enregistrer, vous avez besoin d'une connexion.",
     "finalTitle": "Planifiez votre prochaine leçon en 5 minutes",
     "finalDesc": "Pas de configuration. Pas de carte de crédit. Commencez simplement."
+  },
+  "feedback": {
+    "helpful": "Utile",
+    "notHelpful": "Pas utile",
+    "thanks": "Merci pour votre retour !",
+    "thanksDetail": "Merci ! Nous allons examiner cela.",
+    "placeholder": "Qu'est-ce qui n'allait pas ? (optionnel)",
+    "send": "Envoyer",
+    "error": "Erreur"
   }
 }
