@@ -231,9 +231,15 @@
     "q7": "Ist dein Begleiter nicht einfach ein «Wohlfühl-Tool»?",
     "q7Answer": "Nein. Dein Begleiter tröstet, wo Trost nötig ist – aber er fordert auch heraus. Geistliches Wachstum braucht Reibung. Dein Begleiter stellt unbequeme Rückfragen, benennt schwierige Bibeltexte (Hiob, Klagepsalmen, prophetische Kritik) und scheut sich nicht vor Themen wie Gerechtigkeit, Umkehr und Verantwortung. Die prophetische Tradition war nie bequem – und dieses Wohlfühl-Tool auch nicht.",
     "q8": "Wer steht hinter deinem Begleiter und wie wird es finanziert?",
-    "q8Answer": "BibleBot.Life ist ein privates, nicht-kommerzielles Projekt. Es wird ehrenamtlich betrieben und finanziert sich ausschliesslich durch freiwillige Spenden. Es gibt keine Werbung, keine Datenverkäufe und keine kostenpflichtigen Features. Alle Spenden fliessen direkt in die Deckung der laufenden Kosten (Infrastruktur, Hosting, Entwicklung). Da BibleBot als privates Projekt läuft, sind Spenden nicht steuerabzugsfähig.",
+    "q8Answer": "BibleBot.Life wird von der 2Go Media AG entwickelt und betrieben. Die Trägerschaft für Spenden liegt beim Verein BibleBot.Life (i.G.). Für Privatpersonen ist der Dienst kostenlos, werbefrei und ohne Datenverkäufe. Finanziert wird er durch freiwillige Spenden sowie durch B2B-Partnerschaften mit Kirchen, Spitälern und Institutionen. Spenden fliessen in Infrastruktur, Hosting, Übersetzungen und Weiterentwicklung. Da der Verein noch in Gründung ist, sind Spenden aktuell nicht steuerabzugsfähig.",
     "q9": "Wie geht dein Begleiter mit meinen Daten um?",
-    "q9Answer": "Dein Begleiter speichert keine persönlichen Daten und keine Chatverläufe. Jedes Gespräch ist anonym. Es gibt kein Login, kein Tracking und keine Weitergabe von Daten an Dritte. Die Nutzung ist vollständig anonym."
+    "q9Answer": "Dein Begleiter speichert keine persönlichen Daten und keine Chatverläufe. Jedes Gespräch ist anonym. Es gibt kein Login, kein Tracking und keine Weitergabe von Daten an Dritte. Die Nutzung ist vollständig anonym.",
+    "q10": "Was passiert in einer Krise oder bei Suizidgedanken?",
+    "q10Answer": "Dein Begleiter erkennt Krisensignale automatisch in allen 36 unterstützten Sprachen. Bei Hinweisen auf Suizidgedanken, akute Verzweiflung oder Gewalt wird sofort eine Liste von professionellen Hotlines eingeblendet (z.B. Dargebotene Hand 143 und Pro Juventute 147 in der Schweiz, Telefonseelsorge 0800 111 0 111 in Deutschland, Telefonseelsorge 142 in Österreich). Dein Begleiter ersetzt keine Therapie und keine Notfallhilfe — in akuten Situationen wende dich bitte direkt an diese Stellen oder wähle den Notruf.",
+    "q11": "Kann ich BibleBot.Life als Spital, Firma oder Institution einsetzen?",
+    "q11Answer": "Ja. Für Spitäler, Pflegeeinrichtungen, Schulen und Unternehmen gibt es eigene B2B-Pakete mit eigenem Branding, Datenhoheit und Mitarbeitenden-Zugängen. Details findest du auf /for-institutions. Für Kirchgemeinden gibt es passende Pakete unter /for-churches.",
+    "q12": "Wie kann ich BibleBot.Life unterstützen?",
+    "q12Answer": "Mit einer einmaligen oder regelmässigen Spende über /spenden (Kreditkarte, Twint, Apple Pay, Google Pay), durch Weiterempfehlung an Menschen, die einen geistlichen Begleiter suchen, oder als Kirchgemeinde/Institution mit einer Partnerschaft. Jeder Beitrag hilft, dass dein Begleiter kostenlos und werbefrei bleibt."
   },
   "donate": {
     "badge": "Unterstütze deinen Begleiter",
