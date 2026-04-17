@@ -1,9 +1,11 @@
-import { Music, BookOpen, Mic, HandHeart, Cross, Church, FileText, Megaphone } from "lucide-react";
+import { Music, BookOpen, Mic, HandHeart, Cross, Church, FileText, Megaphone, Target, Sparkles, Users, ClipboardList, MessagesSquare, Lightbulb, House, Video, Image as ImageIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import type { BlockType } from "./ServiceBlock";
 
-const PALETTE_ITEMS: { type: BlockType; label: string; icon: React.ElementType }[] = [
+export type PaletteMode = "service" | "lesson";
+
+const SERVICE_PALETTE: { type: BlockType; label: string; icon: React.ElementType }[] = [
   { type: "song", label: "Lied", icon: Music },
   { type: "reading", label: "Lesung", icon: BookOpen },
   { type: "sermon", label: "Predigt", icon: Mic },
@@ -16,14 +18,33 @@ const PALETTE_ITEMS: { type: BlockType; label: string; icon: React.ElementType }
   { type: "free", label: "Frei", icon: FileText },
 ];
 
+const LESSON_PALETTE: { type: BlockType; label: string; icon: React.ElementType }[] = [
+  { type: "lesson_objective", label: "Lernziel", icon: Target },
+  { type: "warmup", label: "Einstieg", icon: Sparkles },
+  { type: "input", label: "Input", icon: Mic },
+  { type: "activity", label: "Aktivität", icon: Users },
+  { type: "worksheet", label: "Arbeitsblatt", icon: ClipboardList },
+  { type: "reading", label: "Bibelstelle", icon: BookOpen },
+  { type: "discussion", label: "Diskussion", icon: MessagesSquare },
+  { type: "video", label: "Video", icon: Video },
+  { type: "image", label: "Bild", icon: ImageIcon },
+  { type: "song", label: "Lied", icon: Music },
+  { type: "prayer", label: "Gebet", icon: HandHeart },
+  { type: "reflection", label: "Reflexion", icon: Lightbulb },
+  { type: "homework", label: "Hausaufgabe", icon: House },
+  { type: "free", label: "Frei", icon: FileText },
+];
+
 interface BlockPaletteProps {
   onAdd: (type: BlockType) => void;
+  mode?: PaletteMode;
 }
 
-export function BlockPalette({ onAdd }: BlockPaletteProps) {
+export function BlockPalette({ onAdd, mode = "service" }: BlockPaletteProps) {
+  const items = mode === "lesson" ? LESSON_PALETTE : SERVICE_PALETTE;
   return (
     <div className="flex flex-wrap gap-1">
-      {PALETTE_ITEMS.map((item) => (
+      {items.map((item) => (
         <Tooltip key={item.type}>
           <TooltipTrigger asChild>
             <Button

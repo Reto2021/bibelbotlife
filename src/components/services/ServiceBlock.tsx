@@ -1,6 +1,6 @@
 import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
-import { GripVertical, Trash2, MessageCircle, Music, BookOpen, Mic, HandHeart, Cross, Church, Megaphone, FileText, ChevronDown, ChevronUp, Library, Link2, ExternalLink } from "lucide-react";
+import { GripVertical, Trash2, MessageCircle, Music, BookOpen, Mic, HandHeart, Cross, Church, Megaphone, FileText, ChevronDown, ChevronUp, Library, Link2, ExternalLink, Target, Sparkles, Users, ClipboardList, MessagesSquare, Lightbulb, House, Video, Image as ImageIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -9,7 +9,10 @@ import { useState, useMemo } from "react";
 import { ResourceSuggest } from "./ResourceSuggest";
 import type { Resource } from "@/hooks/use-resources";
 
-export type BlockType = "song" | "reading" | "sermon" | "prayer" | "blessing" | "communion" | "liturgy" | "announcement" | "free" | "music";
+export type BlockType =
+  | "song" | "reading" | "sermon" | "prayer" | "blessing" | "communion" | "liturgy" | "announcement" | "free" | "music"
+  // Lesson blocks
+  | "lesson_objective" | "warmup" | "input" | "activity" | "worksheet" | "discussion" | "reflection" | "homework" | "video" | "image";
 
 export interface ServiceBlockData {
   id: string;
@@ -31,6 +34,16 @@ const BLOCK_ICONS: Record<BlockType, React.ElementType> = {
   announcement: Megaphone,
   free: FileText,
   music: Music,
+  lesson_objective: Target,
+  warmup: Sparkles,
+  input: Mic,
+  activity: Users,
+  worksheet: ClipboardList,
+  discussion: MessagesSquare,
+  reflection: Lightbulb,
+  homework: House,
+  video: Video,
+  image: ImageIcon,
 };
 
 const BLOCK_LABELS: Record<BlockType, string> = {
@@ -44,6 +57,16 @@ const BLOCK_LABELS: Record<BlockType, string> = {
   announcement: "Mitteilung",
   free: "Freier Block",
   music: "Instrumentalmusik",
+  lesson_objective: "Lernziel",
+  warmup: "Einstieg",
+  input: "Input",
+  activity: "Aktivität",
+  worksheet: "Arbeitsblatt",
+  discussion: "Diskussion",
+  reflection: "Reflexion",
+  homework: "Hausaufgabe",
+  video: "Video",
+  image: "Bild",
 };
 
 const BLOCK_COLORS: Record<BlockType, string> = {
@@ -57,6 +80,16 @@ const BLOCK_COLORS: Record<BlockType, string> = {
   announcement: "border-l-gray-500",
   free: "border-l-slate-400",
   music: "border-l-indigo-500",
+  lesson_objective: "border-l-emerald-600",
+  warmup: "border-l-orange-500",
+  input: "border-l-amber-500",
+  activity: "border-l-blue-600",
+  worksheet: "border-l-cyan-500",
+  discussion: "border-l-purple-500",
+  reflection: "border-l-yellow-600",
+  homework: "border-l-rose-500",
+  video: "border-l-red-600",
+  image: "border-l-fuchsia-500",
 };
 
 interface ServiceBlockProps {
