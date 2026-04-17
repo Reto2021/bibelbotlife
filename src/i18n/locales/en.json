@@ -22,7 +22,7 @@
     },
     "title1": "The Bible.",
     "title2": " Reimagined.",
-    "subtitle": "Your personal companion knows the Bible – and asks the right questions. Not a person, but an honest companion. For meaningful conversations, deep questions, and real impulses.",
+    "subtitle": "2,000 years of wisdom. Available 24/7. No judgment. — The only companion that knows the Bible, asks instead of answers, and never leaves you alone.",
     "ctaTelegram": "Start via Telegram",
     "ctaMore": "Learn more",
     "quote": "\"Come to me, all you who are weary and burdened, and I will give you rest.\"",
@@ -269,7 +269,7 @@
     "button": "Start a conversation"
   },
   "footer": {
-    "tagline": "Your personal companion — with the depth of the Bible, no prior knowledge needed.",
+    "tagline": "2,000 years of wisdom. Available 24/7. No judgment.",
     "disclaimer": "BibleBot.Life is a digital tool and does not replace professional pastoral care, theological counseling, or psychological therapy. In acute crises, please contact your local emergency helpline.",
     "impressum": "Imprint",
     "notes": "Notes",
@@ -1020,8 +1020,8 @@
     "patronage": "Recommended by"
   },
   "meta": {
-    "homeTitle": "BibleBot.Life – Your Personal Companion | With the Depth of the Bible",
-    "homeDesc": "Your personal companion — with the depth of the Bible, no prior knowledge needed. 5 translations, coaching, pastoral care. Anonymous, free, 38 languages.",
+    "homeTitle": "BibleBot.Life – 2,000 Years of Wisdom. 24/7 Available. No Judgment.",
+    "homeDesc": "The AI companion that knows the Bible, asks instead of answers, and never judges. Crisis intervention, 5 Bible translations, coaching methodology. Anonymous, free, 38 languages.",
     "forChurchesTitle": "BibleBot.Life for Churches – Digital Pastoral Care & Bible Companionship",
     "forChurchesDesc": "BibleBot.Life as a partner for your church: youth work, confirmation, pastoral care and Bible study groups. Free to Premium.",
     "loginTitle": "Sign In – BibleBot.Life",
@@ -2050,5 +2050,25 @@
     "placeholder": "What wasn't right? (optional)",
     "send": "Send",
     "error": "Error"
+  },
+  "why": {
+    "title": "Why BibleBot — and not just ChatGPT?",
+    "subtitle": "Three differences that matter.",
+    "wisdom": {
+      "title": "Not just any AI",
+      "text": "BibleBot knows 5 Bible translations and automatically checks every reference for accuracy. No hallucinations, no guessing — only verified wisdom from 2,000 years of scripture."
+    },
+    "crisis": {
+      "title": "With crisis intervention",
+      "text": "As the first Bible app worldwide, BibleBot automatically detects crisis situations and immediately connects to pastoral care hotlines in Switzerland, Germany, and Austria."
+    },
+    "nochurch": {
+      "title": "No church membership needed",
+      "text": "No baptism certificate, no prior knowledge, no church membership required. BibleBot is pastoral care for the generation that stopped going to church — but kept the questions."
+    }
+  },
+  "kiSeelsorge": {
+    "metaTitle": "AI and Pastoral Care – Methodology & Transparency | BibleBot.Life",
+    "metaDesc": "How does BibleBot combine AI with pastoral care? Evidence-based methodology (PERMA, logotherapy), quality assurance, crisis intervention, and AI limitations — explained transparently."
   }
 }

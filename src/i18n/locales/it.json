@@ -21,7 +21,7 @@
     },
     "title1": "La Bibbia.",
     "title2": " Reinventata.",
-    "subtitle": "Il tuo compagno personale conosce la Bibbia e pone le domande giuste. Non è una persona, ma un compagno onesto. Per buone conversazioni, domande profonde e veri stimoli.",
+    "subtitle": "2.000 anni di saggezza. Disponibile 24/7. Senza giudizio. — L'unico compagno che conosce la Bibbia, fa domande invece di rispondere e non ti lascia mai solo.",
     "ctaTelegram": "Inizia con Telegram",
     "ctaMore": "Scopri di più",
     "quote": "«Venite a me, voi tutti che siete affaticati e oppressi, e io vi darò riposo.»",
@@ -288,7 +288,7 @@
     "button": "Inizia una conversazione ora"
   },
   "footer": {
-    "tagline": "Il tuo compagno personale — con la profondità della Bibbia, senza conoscenze pregresse.",
+    "tagline": "2.000 anni di saggezza. Disponibile 24/7. Senza giudizio.",
     "disclaimer": "BibleBot.Life è uno strumento digitale e non sostituisce la cura pastorale professionale, la consulenza teologica o la terapia psicologica. In caso di crisi acute, rivolgiti a Dargebotene Hand (Tel. 143) o Pro Juventute (Tel. 147).",
     "impressum": "Impronta",
     "notes": "Note",
@@ -1014,8 +1014,8 @@
     "patronage": "Consigliato da"
   },
   "meta": {
-    "homeTitle": "BibleBot.Life – Il tuo compagno personale | Con la profondità della Bibbia",
-    "homeDesc": "Il tuo compagno personale — con la profondità della Bibbia, senza conoscenze pregresse. 5 traduzioni, coaching, cura pastorale. Anonimo, gratuito, 38 lingue.",
+    "homeTitle": "BibleBot.Life – 2.000 anni di saggezza. 24/7 disponibile. Senza giudizio.",
+    "homeDesc": "Il compagno IA che conosce la Bibbia, fa domande invece di rispondere e non giudica mai. Intervento in crisi, 5 traduzioni, metodologia di coaching. Anonimo, gratuito, 38 lingue.",
     "forChurchesTitle": "BibleBot.Life per le comunità – Cura pastorale digitale e accompagnamento biblico",
     "forChurchesDesc": "BibleBot.Life come partner per la tua comunità: lavoro giovanile, cresima, cura pastorale e circoli biblici. Da gratuito a premium.",
     "loginTitle": "Accedi – BibleBot.Life",
@@ -2009,5 +2009,25 @@
     "placeholder": "Cosa non andava? (opzionale)",
     "send": "Invia",
     "error": "Errore"
+  },
+  "why": {
+    "title": "Perché BibleBot — e non semplicemente ChatGPT?",
+    "subtitle": "Tre differenze che contano.",
+    "wisdom": {
+      "title": "Non una IA qualsiasi",
+      "text": "BibleBot conosce 5 traduzioni della Bibbia e verifica automaticamente ogni riferimento per la sua accuratezza. Nessuna allucinazione, nessuna supposizione — solo saggezza verificata da 2.000 anni di Scrittura."
+    },
+    "crisis": {
+      "title": "Con intervento in crisi",
+      "text": "Prima app biblica al mondo, BibleBot rileva automaticamente le situazioni di crisi e collega immediatamente alle linee di assistenza pastorale in Svizzera, Germania e Austria."
+    },
+    "nochurch": {
+      "title": "Senza iscrizione alla chiesa",
+      "text": "Nessun certificato di battesimo, nessuna conoscenza pregressa, nessuna iscrizione alla chiesa richiesta. BibleBot è la cura pastorale per la generazione che ha smesso di andare in chiesa — ma ha tenuto le domande."
+    }
+  },
+  "kiSeelsorge": {
+    "metaTitle": "IA e cura pastorale – Metodologia & Trasparenza | BibleBot.Life",
+    "metaDesc": "Come combina BibleBot l'IA con la cura pastorale? Metodologia basata su prove (PERMA, logoterapia), controllo qualità, intervento in crisi e limiti dell'IA — spiegato in modo trasparente."
   }
 }

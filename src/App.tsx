@@ -70,6 +70,7 @@ const UeberUns = lazy(() => import("./pages/UeberUns"));
 const KreisPage = lazy(() => import("./pages/KreisPage"));
 const VersePage = lazy(() => import("./pages/VersePage"));
 const TopicPage = lazy(() => import("./pages/TopicPage"));
+const KIundSeelsorge = lazy(() => import("./pages/KIundSeelsorge"));
 
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { ProtectedAdminRoute } from "@/components/ProtectedAdminRoute";
@@ -176,6 +177,7 @@ const App = () => {
                   <Route path="/spenden/danke" element={<Spenden />} />
                   <Route path="/kontakt" element={<Kontakt />} />
                   <Route path="/ueber-uns" element={<UeberUns />} />
+                  <Route path="/ki-und-seelsorge" element={<KIundSeelsorge />} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/reset-password" element={<ResetPassword />} />
                   <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>}>

@@ -2050,5 +2050,9 @@
     "placeholder": "Was war nicht passend? (optional)",
     "send": "Senden",
     "error": "Fehler"
+  },
+  "kiSeelsorge": {
+    "metaTitle": "KI und Seelsorge – Methodik & Transparenz | BibleBot.Life",
+    "metaDesc": "Wie verbindet BibleBot KI mit Seelsorge? Evidenzbasierte Methodik (PERMA, Logotherapie), Qualitätssicherung, Krisenintervention und Grenzen der KI — transparent erklärt."
   }
 }

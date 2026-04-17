@@ -21,7 +21,7 @@
     },
     "title1": "La Bible.",
     "title2": " Repensée.",
-    "subtitle": "Votre compagnon personnel connaît la Bible – et pose les bonnes questions. Pas un humain, mais un compagnon honnête. Pour de bonnes conversations, des questions profondes et de vraies impulsions.",
+    "subtitle": "2 000 ans de sagesse. Disponible 24h/24. Sans jugement. — Le seul compagnon qui connaît la Bible, pose des questions au lieu de répondre et ne vous laisse jamais seul.",
     "ctaTelegram": "Commencer via Telegram",
     "ctaMore": "En savoir plus",
     "quote": "«Venez à moi, vous tous qui êtes fatigués et chargés, et je vous donnerai du repos.»",
@@ -288,7 +288,7 @@
     "button": "Commencer la conversation maintenant"
   },
   "footer": {
-    "tagline": "Votre compagnon personnel — avec la profondeur de la Bible, sans connaissances préalables.",
+    "tagline": "2 000 ans de sagesse. Disponible 24h/24. Sans jugement.",
     "disclaimer": "BibleBot.Life est un outil numérique et ne remplace pas le conseil pastoral professionnel, le conseil théologique ou la thérapie psychologique. En cas de crises aiguës, veuillez contacter La Main Tendue (Tél. 143) ou Pro Juventute (Tél. 147).",
     "impressum": "Mentions légales",
     "notes": "Notes",
@@ -1014,8 +1014,8 @@
     "patronage": "Recommandé par"
   },
   "meta": {
-    "homeTitle": "BibleBot.Life – Votre compagnon personnel | Avec la profondeur de la Bible",
-    "homeDesc": "Votre compagnon personnel — avec la profondeur de la Bible, sans connaissances préalables. 5 traductions, coaching, pastorale. Anonyme, gratuit, 38 langues.",
+    "homeTitle": "BibleBot.Life – 2 000 ans de sagesse. 24h/24. Sans jugement.",
+    "homeDesc": "Le compagnon IA qui connaît la Bible, pose des questions plutôt que de répondre et ne juge jamais. Intervention de crise, 5 traductions, méthodes de coaching. Anonyme, gratuit, 38 langues.",
     "forChurchesTitle": "BibleBot.Life pour les communautés – Pastorale numérique et accompagnement biblique",
     "forChurchesDesc": "BibleBot.Life comme partenaire pour votre communauté : travail de jeunesse, confirmation, pastorale et cercles bibliques. Gratuit à Premium.",
     "loginTitle": "Connexion – BibleBot.Life",
@@ -2009,5 +2009,25 @@
     "placeholder": "Qu'est-ce qui n'allait pas ? (optionnel)",
     "send": "Envoyer",
     "error": "Erreur"
+  },
+  "why": {
+    "title": "Pourquoi BibleBot — et pas simplement ChatGPT ?",
+    "subtitle": "Trois différences essentielles.",
+    "wisdom": {
+      "title": "Pas n'importe quelle IA",
+      "text": "BibleBot connaît 5 traductions de la Bible et vérifie automatiquement chaque référence pour en garantir l'exactitude. Pas d'hallucinations, pas de suppositions — uniquement de la sagesse vérifiée issue de 2 000 ans d'Écriture."
+    },
+    "crisis": {
+      "title": "Avec intervention de crise",
+      "text": "Première application biblique au monde, BibleBot détecte automatiquement les situations de crise et oriente immédiatement vers les lignes d'assistance pastorale en Suisse, Allemagne et Autriche."
+    },
+    "nochurch": {
+      "title": "Sans adhésion à une église",
+      "text": "Pas de certificat de baptême, pas de connaissances préalables, pas d'appartenance à une église requise. BibleBot est le soin pastoral pour la génération qui a arrêté d'aller à l'église — mais qui a gardé les questions."
+    }
+  },
+  "kiSeelsorge": {
+    "metaTitle": "IA et accompagnement pastoral – Méthode & Transparence | BibleBot.Life",
+    "metaDesc": "Comment BibleBot combine-t-il l'IA et l'accompagnement pastoral ? Méthodologie fondée sur des preuves (PERMA, logothérapie), contrôle qualité, intervention de crise — expliqué en toute transparence."
   }
 }
