@@ -1,4 +1,11 @@
 User-agent: *
 Allow: /
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /mein-bereich
+Disallow: /shared/
+Disallow: /widget-preview/
+Disallow: /reset-password
 
-Sitemap: https://bibelbot.ch/sitemap.xml
+Sitemap: https://biblebot.life/sitemap.xml
+Sitemap: https://swsthxftugjqznqjcfpk.supabase.co/functions/v1/generate-sitemap
