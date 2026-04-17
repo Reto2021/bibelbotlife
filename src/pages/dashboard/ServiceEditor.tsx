@@ -37,7 +37,14 @@ const SERVICE_TYPE_TITLES: Record<string, string> = {
   communion: "Abendmahlsgottesdienst",
   special: "Spezialgottesdienst",
   other: "Anderer Gottesdienst",
+  // Lesson types
+  lesson: "Neue Lektion",
+  double_lesson: "Neue Doppelstunde",
+  project_day: "Neuer Projekttag",
+  confirmation_class: "Konfirmandenunterricht",
 };
+
+const LESSON_SERVICE_TYPES = new Set(["lesson", "double_lesson", "project_day", "confirmation_class"]);
 
 export default function ServiceEditor() {
   const { id } = useParams();
