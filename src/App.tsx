@@ -66,6 +66,8 @@ const Spenden = lazy(() => import("./pages/Spenden"));
 const Kontakt = lazy(() => import("./pages/Kontakt"));
 const UeberUns = lazy(() => import("./pages/UeberUns"));
 const KreisPage = lazy(() => import("./pages/KreisPage"));
+const VersePage = lazy(() => import("./pages/VersePage"));
+const TopicPage = lazy(() => import("./pages/TopicPage"));
 
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { ProtectedAdminRoute } from "@/components/ProtectedAdminRoute";
@@ -204,6 +206,10 @@ const App = () => {
                   <Route path="/mein-kreis" element={<ProtectedRoute><KreisPage /></ProtectedRoute>} />
                   <Route path="/partner/:code" element={<ReferralPartner />} />
                   <Route path="/splash/:churchSlug" element={<SplashPage />} />
+                  <Route path="/vers/:reference" element={<VersePage />} />
+                  <Route path="/verse/:reference" element={<VersePage />} />
+                  <Route path="/themen/:slug" element={<TopicPage />} />
+                  <Route path="/topics/:slug" element={<TopicPage />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Suspense>
