@@ -383,7 +383,7 @@ const Index = () => {
               </AccordionContent>
             </AccordionItem>
 
-            {(["q5", "q6", "q7", "q8", "q9"] as const).map((key) => (
+            {(["q5", "q6", "q7", "q8", "q9", "q10", "q11", "q12"] as const).map((key) => (
               <AccordionItem key={key} value={key} className="bg-card/80 border border-border rounded-xl px-6 data-[state=open]:shadow-md">
                 <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">{t(`faq.${key}`)}</AccordionTrigger>
                 <AccordionContent className="text-muted-foreground leading-relaxed pb-6">{t(`faq.${key}Answer`)}</AccordionContent>
