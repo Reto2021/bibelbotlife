@@ -2009,5 +2009,21 @@
     "placeholder": "What wasn't right? (optional)",
     "send": "Send",
     "error": "Error"
+  },
+  "why": {
+    "title": "Miksi BibleBot.Life — eikä vain chatbot?",
+    "subtitle": "Kolme eroa, joilla on merkitystä.",
+    "wisdom": {
+      "title": "Vahvistettu viisaus",
+      "text": "BibleBot.Life tuntee 5 raamatunkäännöstä ja tarkistaa automaattisesti jokaisen viittauksen. Ei hallusinaatioita, ei arvailua — vain vahvistettu viisaus 2000 vuoden Raamatusta."
+    },
+    "crisis": {
+      "title": "Kriisi-intervention kanssa",
+      "text": "Maailman ensimmäisenä raamattusovelluksena BibleBot.Life tunnistaa automaattisesti kriisitilanteet ja yhdistää välittömästi sielunhoidon tukilinjoihin Sveitsissä, Saksassa ja Itävallassa."
+    },
+    "nochurch": {
+      "title": "Ilman kirkkojäsenyyttä",
+      "text": "Ei kastetodistusta, ei ennakkotietoja, ei jäsenyyttä tarvita. BibleBot.Life seuraa sukupolvea, joka lopetti kirkossa käymisen — mutta säilytti kysymykset."
+    }
   }
 }

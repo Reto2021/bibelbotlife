@@ -2009,5 +2009,21 @@
     "placeholder": "What wasn't right? (optional)",
     "send": "Send",
     "error": "Error"
+  },
+  "why": {
+    "title": "Hvorfor BibleBot.Life — og ikke bare en chatbot?",
+    "subtitle": "Tre forskelle der tæller.",
+    "wisdom": {
+      "title": "Verificeret visdom",
+      "text": "BibleBot.Life kender 5 bibeloversættelser og kontrollerer automatisk hver henvisning. Ingen hallucinationer, ingen gætværk — kun verificeret visdom fra 2000 års Skrift."
+    },
+    "crisis": {
+      "title": "Med kriseintervention",
+      "text": "Som verdens første bibelapp opdager BibleBot.Life automatisk krisesituationer og forbinder straks til sjælesorgens hjælpelinjer i Schweiz, Tyskland og Østrig."
+    },
+    "nochurch": {
+      "title": "Uden kirkemedlemskab",
+      "text": "Intet dåbsbevis, ingen forhåndsviden, intet medlemskab påkrævet. BibleBot.Life er en ledsager for den generation, der holdt op med at gå i kirke — men beholdt spørgsmålene."
+    }
   }
 }

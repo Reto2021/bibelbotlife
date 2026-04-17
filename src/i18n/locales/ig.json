@@ -2050,5 +2050,21 @@
     "placeholder": "What wasn't right? (optional)",
     "send": "Send",
     "error": "Error"
+  },
+  "why": {
+    "title": "Gịnị mere BibleBot.Life — ọ bụghị nanị chatbot?",
+    "subtitle": "Ọdịiche atọ dị mkpa.",
+    "wisdom": {
+      "title": "Amamihe enyochara",
+      "text": "BibleBot.Life maara nsụgharị Akwụkwọ Nsọ ise ma na-enyocha aha ntụaka ọ bụla na-akpaghị aka. Enweghị mfufe, enweghị atụmatụ — naanị amamihe enyochara site na narị afọ 2000 nke Akwụkwọ Nsọ."
+    },
+    "crisis": {
+      "title": "Site n'itinye aka na nsogbu",
+      "text": "Dị ka ngwa Akwụkwọ Nsọ mbụ n'ụwa, BibleBot.Life na-amata ọnọdụ nsogbu na-akpaghị aka ma jikọọ ozugbo na ahịrị enyemaka pastoral na Switzerland, Germany, na Austria."
+    },
+    "nochurch": {
+      "title": "Enweghị mkpa ịbụ onye uka",
+      "text": "Enweghị akwụkwọ baptizim, enweghị ihe ọmụma mbụ, enweghị mkpa ịbụ onye òtù. BibleBot.Life bụ enyi nke ọgbọ kwụsịrị ịga ụka — mana debere ajụjụ ndị ahụ."
+    }
   }
 }

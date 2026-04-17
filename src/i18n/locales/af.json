@@ -2009,5 +2009,21 @@
     "placeholder": "What wasn't right? (optional)",
     "send": "Send",
     "error": "Error"
+  },
+  "why": {
+    "title": "Hoekom BibleBot.Life — en nie net 'n chatbot nie?",
+    "subtitle": "Drie verskille wat saak maak.",
+    "wisdom": {
+      "title": "Geverifieerde wysheid",
+      "text": "BibleBot.Life ken 5 Bybelvertalings en kontroleer outomaties elke verwysing. Geen hallusinasies, geen raaiwerk nie — net geverifieerde wysheid uit 2000 jaar Skrif."
+    },
+    "crisis": {
+      "title": "Met krisisintervensie",
+      "text": "As die wêreld se eerste Bybel-toepassing herken BibleBot.Life outomaties krisissituasies en verbind onmiddellik met pastorale hulplyne in Switserland, Duitsland en Oostenryk."
+    },
+    "nochurch": {
+      "title": "Sonder kerklidmaatskap",
+      "text": "Geen doopsertifikaat, geen voorkennis, geen lidmaatskap nodig nie. BibleBot.Life vergesel die generasie wat opgehou het kerk toe gaan — maar die vrae behou het."
+    }
   }
 }

@@ -2050,5 +2050,21 @@
     "placeholder": "What wasn't right? (optional)",
     "send": "Send",
     "error": "Error"
+  },
+  "why": {
+    "title": "Mengapa BibleBot.Life — bukan sekadar chatbot?",
+    "subtitle": "Tiga perbedaan yang berarti.",
+    "wisdom": {
+      "title": "Hikmat terverifikasi",
+      "text": "BibleBot.Life mengenal 5 terjemahan Alkitab dan secara otomatis memeriksa setiap referensi. Tidak ada halusinasi, tidak ada tebakan — hanya hikmat terverifikasi dari 2000 tahun Kitab Suci."
+    },
+    "crisis": {
+      "title": "Dengan intervensi krisis",
+      "text": "Sebagai aplikasi Alkitab pertama di dunia, BibleBot.Life secara otomatis mendeteksi situasi krisis dan langsung menghubungkan ke saluran bantuan pastoral di Swiss, Jerman, dan Austria."
+    },
+    "nochurch": {
+      "title": "Tanpa keanggotaan gereja",
+      "text": "Tidak perlu sertifikat baptis, pengetahuan awal, atau keanggotaan. BibleBot.Life menemani generasi yang berhenti ke gereja — tetapi tetap menyimpan pertanyaan."
+    }
   }
 }

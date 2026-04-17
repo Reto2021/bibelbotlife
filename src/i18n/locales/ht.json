@@ -2009,5 +2009,21 @@
     "placeholder": "What wasn't right? (optional)",
     "send": "Send",
     "error": "Error"
+  },
+  "why": {
+    "title": "Poukisa BibleBot.Life — epi pa senpleman yon chatbot?",
+    "subtitle": "Twa diferans ki gen enpòtans.",
+    "wisdom": {
+      "title": "Sajès verifye",
+      "text": "BibleBot.Life konnen 5 tradiksyon Bib la epi li verifye chak referans otomatikman. Pa gen ipotèz, pa gen devine — sèlman sajès verifye ki soti nan 2000 ane Ekriti yo."
+    },
+    "crisis": {
+      "title": "Avèk entèvansyon kriz",
+      "text": "Kòm premye aplikasyon Bib nan mond lan, BibleBot.Life detekte sitiyasyon kriz otomatikman epi konekte imedyatman ak liy èd pastoral nan Swis, Almay, ak Otrich."
+    },
+    "nochurch": {
+      "title": "San manm legliz",
+      "text": "Pa gen sètifika batèm, pa gen konesans davans, pa gen manm ki nesesè. BibleBot.Life se yon konpayon pou jenerasyon ki sispann ale legliz — men ki kenbe kesyon yo."
+    }
   }
 }

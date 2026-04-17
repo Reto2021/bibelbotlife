@@ -2009,5 +2009,21 @@
     "placeholder": "What wasn't right? (optional)",
     "send": "Send",
     "error": "Error"
+  },
+  "why": {
+    "title": "Proč BibleBot.Life — a ne jen chatbot?",
+    "subtitle": "Tři rozdíly, které mají význam.",
+    "wisdom": {
+      "title": "Ověřená moudrost",
+      "text": "BibleBot.Life zná 5 překladů Bible a automaticky ověřuje každý odkaz. Žádné halucinace, žádné hádání — jen ověřená moudrost z 2000 let Písma."
+    },
+    "crisis": {
+      "title": "S krizovou intervencí",
+      "text": "Jako první biblická aplikace na světě BibleBot.Life automaticky rozpozná krizové situace a okamžitě propojí s pastoračními linkami pomoci ve Švýcarsku, Německu a Rakousku."
+    },
+    "nochurch": {
+      "title": "Bez církevního členství",
+      "text": "Bez křestního listu, bez předchozích znalostí, bez členství. BibleBot.Life provází generaci, která přestala chodit do kostela — ale otázky si nechala."
+    }
   }
 }

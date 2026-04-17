@@ -2009,5 +2009,21 @@
     "placeholder": "O que não estava certo? (opcional)",
     "send": "Enviar",
     "error": "Erro"
+  },
+  "why": {
+    "title": "Por que BibleBot.Life — e não apenas um chatbot?",
+    "subtitle": "Três diferenças que importam.",
+    "wisdom": {
+      "title": "Sabedoria verificada",
+      "text": "BibleBot.Life conhece 5 traduções da Bíblia e verifica automaticamente cada referência. Sem alucinações, sem adivinhações — apenas sabedoria verificada de 2000 anos de Escritura."
+    },
+    "crisis": {
+      "title": "Com intervenção em crise",
+      "text": "Como o primeiro app bíblico do mundo, BibleBot.Life detecta automaticamente situações de crise e conecta imediatamente com linhas de apoio pastoral na Suíça, Alemanha e Áustria."
+    },
+    "nochurch": {
+      "title": "Sem filiação eclesial",
+      "text": "Sem certificado de batismo, sem conhecimento prévio, sem filiação necessária. BibleBot.Life acompanha a geração que deixou de ir à igreja — mas guardou as perguntas."
+    }
   }
 }

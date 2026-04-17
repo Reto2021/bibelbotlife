@@ -2010,5 +2010,21 @@
     "placeholder": "What wasn't right? (optional)",
     "send": "Send",
     "error": "Error"
+  },
+  "why": {
+    "title": "为什么选择 BibleBot.Life — 而不是普通聊天机器人?",
+    "subtitle": "三个重要的不同之处。",
+    "wisdom": {
+      "title": "经过验证的智慧",
+      "text": "BibleBot.Life 通晓 5 种圣经译本,自动核实每一处引用。没有幻觉,没有猜测 —— 只有 2000 年圣经中经过验证的智慧。"
+    },
+    "crisis": {
+      "title": "具备危机干预",
+      "text": "作为全球首个圣经应用,BibleBot.Life 自动识别危机情况,并立即接通瑞士、德国和奥地利的牧灵援助热线。"
+    },
+    "nochurch": {
+      "title": "无需教会会员身份",
+      "text": "无需洗礼证书,无需先备知识,无需会员资格。BibleBot.Life 陪伴那些不再去教堂、却仍带着疑问的一代人。"
+    }
   }
 }

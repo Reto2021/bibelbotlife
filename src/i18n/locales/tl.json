@@ -2012,5 +2012,21 @@
     "placeholder": "What wasn't right? (optional)",
     "send": "Send",
     "error": "Error"
+  },
+  "why": {
+    "title": "Bakit BibleBot.Life — at hindi basta chatbot?",
+    "subtitle": "Tatlong pagkakaiba na mahalaga.",
+    "wisdom": {
+      "title": "Napatunayang karunungan",
+      "text": "Kilala ng BibleBot.Life ang 5 saling-Biblia at awtomatikong sinusuri ang bawat reperensya. Walang hallucination, walang hula — tanging napatunayang karunungan mula sa 2000 taong Banal na Kasulatan."
+    },
+    "crisis": {
+      "title": "May crisis intervention",
+      "text": "Bilang unang Bible app sa buong mundo, awtomatikong nakikilala ng BibleBot.Life ang mga sitwasyong krisis at agad na nagkokonekta sa mga linya ng pastoral na tulong sa Switzerland, Germany, at Austria."
+    },
+    "nochurch": {
+      "title": "Walang kailangang membership",
+      "text": "Walang sertipiko ng binyag, walang dating kaalaman, walang membership na kailangan. Kasama ng BibleBot.Life ang henerasyong tumigil sa pagsisimba — ngunit pinanatili ang mga tanong."
+    }
   }
 }
