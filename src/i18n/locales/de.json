@@ -2041,5 +2041,14 @@
     "faq5a": "Die App ist als PWA installierbar. Bestehende Lektionen sind offline lesbar; zum Speichern brauchst du Verbindung.",
     "finalTitle": "Plane deine nächste Lektion in 5 Minuten",
     "finalDesc": "Kein Setup. Keine Kreditkarte. Einfach loslegen."
+  },
+  "feedback": {
+    "helpful": "Hilfreich",
+    "notHelpful": "Nicht hilfreich",
+    "thanks": "Danke für dein Feedback!",
+    "thanksDetail": "Danke! Wir schauen uns das an.",
+    "placeholder": "Was war nicht passend? (optional)",
+    "send": "Senden",
+    "error": "Fehler"
   }
 }
