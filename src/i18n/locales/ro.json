@@ -2000,5 +2000,14 @@
     "faq5a": "Aplicația poate fi instalată ca PWA. Lecțiile existente pot fi citite offline; pentru a salva ai nevoie de conexiune.",
     "finalTitle": "Planifică-ți următoarea lecție în 5 minute",
     "finalDesc": "Fără configurare. Fără card de credit. Pur și simplu începe."
+  },
+  "feedback": {
+    "helpful": "Helpful",
+    "notHelpful": "Not helpful",
+    "thanks": "Thanks for your feedback!",
+    "thanksDetail": "Thanks! We'll look into it.",
+    "placeholder": "What wasn't right? (optional)",
+    "send": "Send",
+    "error": "Error"
   }
 }

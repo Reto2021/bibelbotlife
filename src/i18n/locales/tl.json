@@ -2003,5 +2003,14 @@
     "faq5a": "Maaaring i-install ang app bilang PWA. Ang mga umiiral nang aralin ay nababasa offline; kailangan mo ng koneksyon para mag-save.",
     "finalTitle": "Planuhin ang iyong susunod na aralin sa loob ng 5 minuto",
     "finalDesc": "Walang setup. Walang credit card. Magsimula lang."
+  },
+  "feedback": {
+    "helpful": "Helpful",
+    "notHelpful": "Not helpful",
+    "thanks": "Thanks for your feedback!",
+    "thanksDetail": "Thanks! We'll look into it.",
+    "placeholder": "What wasn't right? (optional)",
+    "send": "Send",
+    "error": "Error"
   }
 }

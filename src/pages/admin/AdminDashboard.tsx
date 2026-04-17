@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-import { Building2, Users, TrendingUp, AlertTriangle, MessageCircle, Search, Target, Heart, Link as LinkIcon, UserPlus } from "lucide-react";
+import { Building2, Users, TrendingUp, AlertTriangle, MessageCircle, Search, Target, Heart, Link as LinkIcon, UserPlus, ThumbsDown, Globe } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
@@ -66,17 +66,25 @@ export default function AdminDashboard() {
   return (
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-8 space-y-8">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between flex-wrap gap-2">
           <h1 className="text-3xl font-bold text-foreground">Admin Dashboard</h1>
-          <Button asChild variant="outline">
-            <Link to="/admin/outreach"><Target className="h-4 w-4 mr-2" />Cold Outreach</Link>
-          </Button>
-          <Button asChild variant="outline">
-            <Link to="/admin/referrals"><LinkIcon className="h-4 w-4 mr-2" />Referrals</Link>
-          </Button>
-          <Button asChild variant="outline">
-            <Link to="/admin/prayers"><Heart className="h-4 w-4 mr-2" />Gebete</Link>
-          </Button>
+          <div className="flex flex-wrap gap-2">
+            <Button asChild variant="outline" size="sm">
+              <Link to="/admin/seo"><Globe className="h-4 w-4 mr-2" />SEO</Link>
+            </Button>
+            <Button asChild variant="outline" size="sm">
+              <Link to="/admin/feedback"><ThumbsDown className="h-4 w-4 mr-2" />Feedback</Link>
+            </Button>
+            <Button asChild variant="outline" size="sm">
+              <Link to="/admin/outreach"><Target className="h-4 w-4 mr-2" />Cold Outreach</Link>
+            </Button>
+            <Button asChild variant="outline" size="sm">
+              <Link to="/admin/referrals"><LinkIcon className="h-4 w-4 mr-2" />Referrals</Link>
+            </Button>
+            <Button asChild variant="outline" size="sm">
+              <Link to="/admin/prayers"><Heart className="h-4 w-4 mr-2" />Gebete</Link>
+            </Button>
+          </div>
         </div>
 
         {/* Pricing Toggle */}

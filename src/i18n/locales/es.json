@@ -2000,5 +2000,14 @@
     "faq5a": "La aplicación se puede instalar como PWA. Las lecciones existentes se pueden leer sin conexión; para guardar necesitas conexión.",
     "finalTitle": "Planifica tu próxima lección en 5 minutos",
     "finalDesc": "Sin configuración. Sin tarjeta de crédito. Simplemente empieza."
+  },
+  "feedback": {
+    "helpful": "Útil",
+    "notHelpful": "No útil",
+    "thanks": "¡Gracias por tu opinión!",
+    "thanksDetail": "¡Gracias! Lo revisaremos.",
+    "placeholder": "¿Qué no estuvo bien? (opcional)",
+    "send": "Enviar",
+    "error": "Error"
   }
 }

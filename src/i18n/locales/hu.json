@@ -2000,5 +2000,14 @@
     "faq5a": "Az alkalmazás PWA-ként telepíthető. A meglévő leckék offline is olvashatók; mentéshez kapcsolatra van szüksége.",
     "finalTitle": "Tervezze meg következő óráját 5 perc alatt",
     "finalDesc": "Nincs beállítás. Nincs hitelkártya. Csak kezdje el."
+  },
+  "feedback": {
+    "helpful": "Helpful",
+    "notHelpful": "Not helpful",
+    "thanks": "Thanks for your feedback!",
+    "thanksDetail": "Thanks! We'll look into it.",
+    "placeholder": "What wasn't right? (optional)",
+    "send": "Send",
+    "error": "Error"
   }
 }

@@ -2041,5 +2041,14 @@
     "faq5a": "The app can be installed as a PWA. Existing lessons can be read offline; you need a connection to save.",
     "finalTitle": "Plan your next lesson in 5 minutes",
     "finalDesc": "No setup. No credit card. Just get started."
+  },
+  "feedback": {
+    "helpful": "Helpful",
+    "notHelpful": "Not helpful",
+    "thanks": "Thanks for your feedback!",
+    "thanksDetail": "Thanks! We'll look into it.",
+    "placeholder": "What wasn't right? (optional)",
+    "send": "Send",
+    "error": "Error"
   }
 }

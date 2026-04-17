@@ -2041,5 +2041,14 @@
     "faq5a": "De app is als PWA installeerbaar. Bestaande lessen zijn offline leesbaar; om op te slaan heb je verbinding nodig.",
     "finalTitle": "Plan je volgende les in 5 minuten",
     "finalDesc": "Geen setup. Geen creditcard. Gewoon beginnen."
+  },
+  "feedback": {
+    "helpful": "Nuttig",
+    "notHelpful": "Niet nuttig",
+    "thanks": "Bedankt voor je feedback!",
+    "thanksDetail": "Bedankt! We bekijken het.",
+    "placeholder": "Wat klopte niet? (optioneel)",
+    "send": "Verzenden",
+    "error": "Fout"
   }
 }

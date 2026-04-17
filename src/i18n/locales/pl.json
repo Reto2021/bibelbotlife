@@ -2000,5 +2000,14 @@
     "faq5a": "Aplikacja może być zainstalowana jako PWA. Istniejące lekcje można czytać offline; do zapisywania potrzebujesz połączenia.",
     "finalTitle": "Zaplanuj swoją następną lekcję w 5 minut",
     "finalDesc": "Bez konfiguracji. Bez karty kredytowej. Po prostu zacznij."
+  },
+  "feedback": {
+    "helpful": "Helpful",
+    "notHelpful": "Not helpful",
+    "thanks": "Thanks for your feedback!",
+    "thanksDetail": "Thanks! We'll look into it.",
+    "placeholder": "What wasn't right? (optional)",
+    "send": "Send",
+    "error": "Error"
   }
 }

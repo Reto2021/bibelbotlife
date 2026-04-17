@@ -2002,5 +2002,14 @@
     "faq5a": "Ứng dụng có thể được cài đặt dưới dạng PWA. Các bài học hiện có có thể đọc ngoại tuyến; bạn cần kết nối để lưu.",
     "finalTitle": "Lập kế hoạch bài học tiếp theo của bạn trong 5 phút",
     "finalDesc": "Không cần thiết lập. Không cần thẻ tín dụng. Chỉ cần bắt đầu."
+  },
+  "feedback": {
+    "helpful": "Helpful",
+    "notHelpful": "Not helpful",
+    "thanks": "Thanks for your feedback!",
+    "thanksDetail": "Thanks! We'll look into it.",
+    "placeholder": "What wasn't right? (optional)",
+    "send": "Send",
+    "error": "Error"
   }
 }

@@ -2000,5 +2000,14 @@
     "faq5a": "Ohun elo naa le fi sori ẹrọ bi PWA. Awọn ẹkọ ti o wa tẹlẹ le ka ni aisinipo; o nilo asopọ lati fipamọ.",
     "finalTitle": "Ṣeto ẹkọ rẹ ti o tẹle ni iṣẹju 5",
     "finalDesc": "Ko si iṣeto. Ko si kaadi kirẹditi. Kan bẹrẹ."
+  },
+  "feedback": {
+    "helpful": "Helpful",
+    "notHelpful": "Not helpful",
+    "thanks": "Thanks for your feedback!",
+    "thanksDetail": "Thanks! We'll look into it.",
+    "placeholder": "What wasn't right? (optional)",
+    "send": "Send",
+    "error": "Error"
   }
 }

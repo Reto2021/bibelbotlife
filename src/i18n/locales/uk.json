@@ -2000,5 +2000,14 @@
     "faq5a": "Додаток можна встановити як PWA. Існуючі уроки можна читати офлайн; для збереження вам потрібне підключення.",
     "finalTitle": "Сплануйте свій наступний урок за 5 хвилин",
     "finalDesc": "Без налаштування. Без кредитної картки. Просто почніть."
+  },
+  "feedback": {
+    "helpful": "Helpful",
+    "notHelpful": "Not helpful",
+    "thanks": "Thanks for your feedback!",
+    "thanksDetail": "Thanks! We'll look into it.",
+    "placeholder": "What wasn't right? (optional)",
+    "send": "Send",
+    "error": "Error"
   }
 }

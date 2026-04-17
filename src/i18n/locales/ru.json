@@ -2000,5 +2000,14 @@
     "faq5a": "Приложение можно установить как PWA. Существующие уроки можно читать в автономном режиме; для сохранения вам нужно подключение.",
     "finalTitle": "Запланируйте свой следующий урок за 5 минут",
     "finalDesc": "Без настройки. Без кредитной карты. Просто начните."
+  },
+  "feedback": {
+    "helpful": "Helpful",
+    "notHelpful": "Not helpful",
+    "thanks": "Thanks for your feedback!",
+    "thanksDetail": "Thanks! We'll look into it.",
+    "placeholder": "What wasn't right? (optional)",
+    "send": "Send",
+    "error": "Error"
   }
 }

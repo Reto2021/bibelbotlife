@@ -2000,5 +2000,14 @@
     "faq5a": "Uhlelo lokusebenza lungafakwa njenge-PWA. Izifundo ezikhona zingafundwa ungaxhunyiwe ku-inthanethi; udinga uxhumano ukuze ulondoloze.",
     "finalTitle": "Hlela isifundo sakho esilandelayo ngemizuzu emi-5",
     "finalDesc": "Akukho ukusetha. Ayikho ikhadi lesikweletu. Vele uqale."
+  },
+  "feedback": {
+    "helpful": "Helpful",
+    "notHelpful": "Not helpful",
+    "thanks": "Thanks for your feedback!",
+    "thanksDetail": "Thanks! We'll look into it.",
+    "placeholder": "What wasn't right? (optional)",
+    "send": "Send",
+    "error": "Error"
   }
 }

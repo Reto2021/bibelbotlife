@@ -2000,5 +2000,14 @@
     "faq5a": "O aplicativo pode ser instalado como um PWA. As aulas existentes podem ser lidas offline; para salvar, você precisa de conexão.",
     "finalTitle": "Planeje sua próxima aula em 5 minutos",
     "finalDesc": "Sem configuração. Sem cartão de crédito. Basta começar."
+  },
+  "feedback": {
+    "helpful": "Útil",
+    "notHelpful": "Não útil",
+    "thanks": "Obrigado pelo seu feedback!",
+    "thanksDetail": "Obrigado! Vamos analisar.",
+    "placeholder": "O que não estava certo? (opcional)",
+    "send": "Enviar",
+    "error": "Erro"
   }
 }

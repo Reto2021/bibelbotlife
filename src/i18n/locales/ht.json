@@ -2000,5 +2000,14 @@
     "faq5a": "Aplikasyon an ka enstale kòm yon PWA. Leson ki egziste deja yo ka li offline; ou bezwen koneksyon pou sove.",
     "finalTitle": "Planifye pwochen leson ou nan 5 minit",
     "finalDesc": "Pa gen konfigirasyon. Pa gen kat kredi. Jis kòmanse."
+  },
+  "feedback": {
+    "helpful": "Helpful",
+    "notHelpful": "Not helpful",
+    "thanks": "Thanks for your feedback!",
+    "thanksDetail": "Thanks! We'll look into it.",
+    "placeholder": "What wasn't right? (optional)",
+    "send": "Send",
+    "error": "Error"
   }
 }

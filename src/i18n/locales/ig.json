@@ -2041,5 +2041,14 @@
     "faq5a": "Enwere ike ịwụnye ngwa ahụ dị ka PWA. Enwere ike ịgụ nkuzi ndị dị adị na-anọghị n'ịntanetị; ị chọrọ njikọ iji chekwaa.",
     "finalTitle": "Hazie nkuzi gị na-esote n'ime nkeji 5",
     "finalDesc": "Enweghị ntọala. Enweghị kaadị kredit. Naanị bido."
+  },
+  "feedback": {
+    "helpful": "Helpful",
+    "notHelpful": "Not helpful",
+    "thanks": "Thanks for your feedback!",
+    "thanksDetail": "Thanks! We'll look into it.",
+    "placeholder": "What wasn't right? (optional)",
+    "send": "Send",
+    "error": "Error"
   }
 }

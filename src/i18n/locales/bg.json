@@ -2000,5 +2000,14 @@
     "faq5a": "Приложението може да се инсталира като PWA. Съществуващите уроци могат да се четат офлайн; за запазване е необходима връзка.",
     "finalTitle": "Планирайте следващия си урок за 5 минути",
     "finalDesc": "Без настройка. Без кредитна карта. Просто започнете."
+  },
+  "feedback": {
+    "helpful": "Helpful",
+    "notHelpful": "Not helpful",
+    "thanks": "Thanks for your feedback!",
+    "thanksDetail": "Thanks! We'll look into it.",
+    "placeholder": "What wasn't right? (optional)",
+    "send": "Send",
+    "error": "Error"
   }
 }

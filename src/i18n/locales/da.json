@@ -2000,5 +2000,14 @@
     "faq5a": "Appen kan installeres som PWA. Eksisterende lektioner kan læses offline; for at gemme skal du have forbindelse.",
     "finalTitle": "Planlæg din næste lektion på 5 minutter",
     "finalDesc": "Ingen opsætning. Intet kreditkort. Bare kom i gang."
+  },
+  "feedback": {
+    "helpful": "Helpful",
+    "notHelpful": "Not helpful",
+    "thanks": "Thanks for your feedback!",
+    "thanksDetail": "Thanks! We'll look into it.",
+    "placeholder": "What wasn't right? (optional)",
+    "send": "Send",
+    "error": "Error"
   }
 }

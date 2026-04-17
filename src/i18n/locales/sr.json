@@ -2000,5 +2000,14 @@
     "faq5a": "Aplikacija se može instalirati kao PWA. Postojeće lekcije su čitljive van mreže; za čuvanje vam je potrebna veza.",
     "finalTitle": "Planirajte svoju sledeću lekciju za 5 minuta",
     "finalDesc": "Nema podešavanja. Nema kreditne kartice. Samo počnite."
+  },
+  "feedback": {
+    "helpful": "Helpful",
+    "notHelpful": "Not helpful",
+    "thanks": "Thanks for your feedback!",
+    "thanksDetail": "Thanks! We'll look into it.",
+    "placeholder": "What wasn't right? (optional)",
+    "send": "Send",
+    "error": "Error"
   }
 }
