@@ -285,6 +285,9 @@ async function callLovableAI(prompt: string): Promise<any> {
   const apiKey = Deno.env.get("LOVABLE_API_KEY");
   if (!apiKey) throw new Error("LOVABLE_API_KEY not set");
 
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 30000);
+
   const res = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
     method: "POST",
     headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
@@ -296,7 +299,8 @@ async function callLovableAI(prompt: string): Promise<any> {
       ],
       response_format: { type: "json_object" },
     }),
-  });
+    signal: controller.signal,
+  }).finally(() => clearTimeout(timeoutId));
 
   if (res.status === 429) throw new Error("rate-limit");
   if (res.status === 402) throw new Error("payment-required");
@@ -357,7 +361,10 @@ Deno.serve(async (req) => {
         }
 
         try {
+          console.log(`[seed] start ${topic.slug}/${lang}`);
+          const t0 = Date.now();
           const ai = await callLovableAI(buildPrompt(topic.seed, lang));
+          console.log(`[seed] ai-ok ${topic.slug}/${lang} in ${Date.now() - t0}ms`);
           const faqs = Array.isArray(ai.faqs)
             ? ai.faqs
                 .filter((f: any) => f?.question && f?.answer)
@@ -383,8 +390,10 @@ Deno.serve(async (req) => {
 
           processed++;
           results.push({ slug: topic.slug, lang, status: "created" });
+          console.log(`[seed] saved ${topic.slug}/${lang} (${processed}/${batchLimit})`);
           await new Promise((r) => setTimeout(r, 300));
         } catch (e: any) {
+          console.error(`[seed] error ${topic.slug}/${lang}:`, e?.message ?? String(e));
           results.push({ slug: topic.slug, lang, status: "error", error: e?.message ?? String(e) });
           if (e?.message === "rate-limit" || e?.message === "payment-required") break outer;
         }
