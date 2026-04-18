@@ -317,7 +317,7 @@ Deno.serve(async (req) => {
 
   try {
     const body = req.method === "POST" ? await req.json().catch(() => ({})) : {};
-    const batchLimit: number = Math.min(body.batch ?? 15, 60);
+    const batchLimit: number = Math.min(body.batch ?? 10, 60);
     const languages: string[] = Array.isArray(body.languages) && body.languages.length
       ? body.languages.filter((l: string) => SUPPORTED_LANGS.includes(l))
       : SUPPORTED_LANGS;
