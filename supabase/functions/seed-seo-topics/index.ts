@@ -361,7 +361,10 @@ Deno.serve(async (req) => {
         }
 
         try {
+          console.log(`[seed] start ${topic.slug}/${lang}`);
+          const t0 = Date.now();
           const ai = await callLovableAI(buildPrompt(topic.seed, lang));
+          console.log(`[seed] ai-ok ${topic.slug}/${lang} in ${Date.now() - t0}ms`);
           const faqs = Array.isArray(ai.faqs)
             ? ai.faqs
                 .filter((f: any) => f?.question && f?.answer)
@@ -387,8 +390,10 @@ Deno.serve(async (req) => {
 
           processed++;
           results.push({ slug: topic.slug, lang, status: "created" });
+          console.log(`[seed] saved ${topic.slug}/${lang} (${processed}/${batchLimit})`);
           await new Promise((r) => setTimeout(r, 300));
         } catch (e: any) {
+          console.error(`[seed] error ${topic.slug}/${lang}:`, e?.message ?? String(e));
           results.push({ slug: topic.slug, lang, status: "error", error: e?.message ?? String(e) });
           if (e?.message === "rate-limit" || e?.message === "payment-required") break outer;
         }
