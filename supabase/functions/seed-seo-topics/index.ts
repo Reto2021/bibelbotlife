@@ -285,6 +285,9 @@ async function callLovableAI(prompt: string): Promise<any> {
   const apiKey = Deno.env.get("LOVABLE_API_KEY");
   if (!apiKey) throw new Error("LOVABLE_API_KEY not set");
 
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 30000);
+
   const res = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
     method: "POST",
     headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
@@ -296,7 +299,8 @@ async function callLovableAI(prompt: string): Promise<any> {
       ],
       response_format: { type: "json_object" },
     }),
-  });
+    signal: controller.signal,
+  }).finally(() => clearTimeout(timeoutId));
 
   if (res.status === 429) throw new Error("rate-limit");
   if (res.status === 402) throw new Error("payment-required");
