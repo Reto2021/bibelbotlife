@@ -317,7 +317,7 @@ Deno.serve(async (req) => {
 
   try {
     const body = req.method === "POST" ? await req.json().catch(() => ({})) : {};
-    const batchLimit: number = Math.min(body.batch ?? 15, 60);
+    const batchLimit: number = Math.min(body.batch ?? 10, 60);
     const languages: string[] = Array.isArray(body.languages) && body.languages.length
       ? body.languages.filter((l: string) => SUPPORTED_LANGS.includes(l))
       : SUPPORTED_LANGS;
@@ -333,6 +333,18 @@ Deno.serve(async (req) => {
       ? CORE_TOPICS.filter((t) => onlySlugs.includes(t.slug))
       : CORE_TOPICS;
 
+    // Pre-fetch ALL existing slug+language combos in ONE query (avoids N+1 timeout)
+    const existingSet = new Set<string>();
+    if (!force) {
+      const slugList = topics.map((t) => t.slug);
+      const { data: existingRows } = await supabase
+        .from("seo_topics")
+        .select("slug, language")
+        .in("slug", slugList)
+        .in("language", languages);
+      (existingRows ?? []).forEach((r: any) => existingSet.add(`${r.slug}|${r.language}`));
+    }
+
     const results: Array<{ slug: string; lang: string; status: string; error?: string }> = [];
     let processed = 0;
 
@@ -340,17 +352,8 @@ Deno.serve(async (req) => {
       for (const lang of languages) {
         if (processed >= batchLimit) break outer;
 
-        if (!force) {
-          const { data: existing } = await supabase
-            .from("seo_topics")
-            .select("id")
-            .eq("slug", topic.slug)
-            .eq("language", lang)
-            .maybeSingle();
-          if (existing) {
-            results.push({ slug: topic.slug, lang, status: "skipped" });
-            continue;
-          }
+        if (!force && existingSet.has(`${topic.slug}|${lang}`)) {
+          continue; // skip silently; don't bloat results
         }
 
         try {
