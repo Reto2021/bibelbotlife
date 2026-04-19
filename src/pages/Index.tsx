@@ -244,8 +244,8 @@ const Index = () => {
               },
               {
                 emoji: "⛪",
-                title: t("why.nochurch.title", "Ohne Kirchenmitgliedschaft"),
-                text: t("why.nochurch.text", "Du brauchst keinen Taufschein, kein Vorwissen, keine Gemeindemitgliedschaft. BibleBot ist die Seelsorge für die Generation, die nicht mehr in die Kirche geht — aber die Fragen mitgenommen hat."),
+                title: t("why.nochurch.title", "Ergänzt deine Gemeinde"),
+                text: t("why.nochurch.text", "Ob du jeden Sonntag in der Kirche bist oder die Bibel jahrelang nicht aufgeschlagen hast — BibleBot begegnet dir dort, wo du gerade stehst. Kein Vorwissen nötig."),
               },
             ].map((item) => (
               <div key={item.title} className="flex flex-col gap-4 p-6 rounded-2xl border border-border bg-card/60 hover:shadow-md transition-shadow">
