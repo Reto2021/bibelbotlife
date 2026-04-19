@@ -1,0 +1,1 @@
+ALTER TABLE public.seo_topics DROP CONSTRAINT IF EXISTS seo_topics_slug_key;

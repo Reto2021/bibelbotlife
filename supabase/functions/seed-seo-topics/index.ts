@@ -285,6 +285,9 @@ async function callLovableAI(prompt: string): Promise<any> {
   const apiKey = Deno.env.get("LOVABLE_API_KEY");
   if (!apiKey) throw new Error("LOVABLE_API_KEY not set");
 
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 30000);
+
   const res = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
     method: "POST",
     headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
@@ -296,7 +299,8 @@ async function callLovableAI(prompt: string): Promise<any> {
       ],
       response_format: { type: "json_object" },
     }),
-  });
+    signal: controller.signal,
+  }).finally(() => clearTimeout(timeoutId));
 
   if (res.status === 429) throw new Error("rate-limit");
   if (res.status === 402) throw new Error("payment-required");
@@ -317,7 +321,7 @@ Deno.serve(async (req) => {
 
   try {
     const body = req.method === "POST" ? await req.json().catch(() => ({})) : {};
-    const batchLimit: number = Math.min(body.batch ?? 15, 60);
+    const batchLimit: number = Math.min(body.batch ?? 10, 60);
     const languages: string[] = Array.isArray(body.languages) && body.languages.length
       ? body.languages.filter((l: string) => SUPPORTED_LANGS.includes(l))
       : SUPPORTED_LANGS;
@@ -333,6 +337,18 @@ Deno.serve(async (req) => {
       ? CORE_TOPICS.filter((t) => onlySlugs.includes(t.slug))
       : CORE_TOPICS;
 
+    // Pre-fetch ALL existing slug+language combos in ONE query (avoids N+1 timeout)
+    const existingSet = new Set<string>();
+    if (!force) {
+      const slugList = topics.map((t) => t.slug);
+      const { data: existingRows } = await supabase
+        .from("seo_topics")
+        .select("slug, language")
+        .in("slug", slugList)
+        .in("language", languages);
+      (existingRows ?? []).forEach((r: any) => existingSet.add(`${r.slug}|${r.language}`));
+    }
+
     const results: Array<{ slug: string; lang: string; status: string; error?: string }> = [];
     let processed = 0;
 
@@ -340,21 +356,15 @@ Deno.serve(async (req) => {
       for (const lang of languages) {
         if (processed >= batchLimit) break outer;
 
-        if (!force) {
-          const { data: existing } = await supabase
-            .from("seo_topics")
-            .select("id")
-            .eq("slug", topic.slug)
-            .eq("language", lang)
-            .maybeSingle();
-          if (existing) {
-            results.push({ slug: topic.slug, lang, status: "skipped" });
-            continue;
-          }
+        if (!force && existingSet.has(`${topic.slug}|${lang}`)) {
+          continue; // skip silently; don't bloat results
         }
 
         try {
+          console.log(`[seed] start ${topic.slug}/${lang}`);
+          const t0 = Date.now();
           const ai = await callLovableAI(buildPrompt(topic.seed, lang));
+          console.log(`[seed] ai-ok ${topic.slug}/${lang} in ${Date.now() - t0}ms`);
           const faqs = Array.isArray(ai.faqs)
             ? ai.faqs
                 .filter((f: any) => f?.question && f?.answer)
@@ -380,8 +390,10 @@ Deno.serve(async (req) => {
 
           processed++;
           results.push({ slug: topic.slug, lang, status: "created" });
+          console.log(`[seed] saved ${topic.slug}/${lang} (${processed}/${batchLimit})`);
           await new Promise((r) => setTimeout(r, 300));
         } catch (e: any) {
+          console.error(`[seed] error ${topic.slug}/${lang}:`, e?.message ?? String(e));
           results.push({ slug: topic.slug, lang, status: "error", error: e?.message ?? String(e) });
           if (e?.message === "rate-limit" || e?.message === "payment-required") break outer;
         }
