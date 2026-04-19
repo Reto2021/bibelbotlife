@@ -11,12 +11,7 @@ import { Input } from "@/components/ui/input";
 import ReactMarkdown from "react-markdown";
 import { useToast } from "@/hooks/use-toast";
 import { useTrack } from "@/components/AnalyticsProvider";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 
 const STT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/elevenlabs-stt`;
 
@@ -137,36 +132,34 @@ function QABadge({ qa, t }: { qa: QAResult | "loading" | "skipped"; t: (key: str
   if (qa.citations_found === 0) return null;
 
   return (
-    <TooltipProvider>
-      <Tooltip>
-        <TooltipTrigger asChild>
-          <div className={`flex items-center gap-2 mt-2 px-2.5 py-1.5 rounded-lg border cursor-help text-sm font-medium ${qa.has_issues ? "text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/30 border-amber-200 dark:border-amber-800" : "text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800"}`}>
-            {qa.has_issues ? <AlertTriangle className="h-4 w-4" /> : <CheckCircle2 className="h-4 w-4" />}
-            <span>
-              {qa.has_issues
-                ? t("chat.qaIssue", { count: qa.issues.length })
-                : t("chat.qaOk", { count: qa.citations_found })}
-            </span>
+    <Popover>
+      <PopoverTrigger asChild>
+        <button type="button" className={`flex items-center gap-2 mt-2 px-2.5 py-1.5 rounded-lg border cursor-pointer text-sm font-medium text-left w-full sm:w-auto hover:opacity-90 transition-opacity ${qa.has_issues ? "text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/30 border-amber-200 dark:border-amber-800" : "text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800"}`}>
+          {qa.has_issues ? <AlertTriangle className="h-4 w-4 shrink-0" /> : <CheckCircle2 className="h-4 w-4 shrink-0" />}
+          <span>
+            {qa.has_issues
+              ? t("chat.qaIssue", { count: qa.issues.length })
+              : t("chat.qaOk", { count: qa.citations_found })}
+          </span>
+        </button>
+      </PopoverTrigger>
+      <PopoverContent side="top" className="max-w-[320px] text-xs">
+        {qa.has_issues ? (
+          <div className="space-y-2">
+            <p className="font-semibold">{t("chat.qaWarning")}</p>
+            {qa.issues.map((issue, i) => (
+              <div key={i} className="border-t border-border pt-1.5">
+                <p className="font-medium">{issue.citation}</p>
+                <p className="text-muted-foreground">{issue.problem}</p>
+                {issue.correction && <p className="text-foreground mt-0.5">→ {issue.correction}</p>}
+              </div>
+            ))}
           </div>
-        </TooltipTrigger>
-        <TooltipContent side="top" className="max-w-[300px] text-xs">
-          {qa.has_issues ? (
-            <div className="space-y-2">
-              <p className="font-semibold">{t("chat.qaWarning")}</p>
-              {qa.issues.map((issue, i) => (
-                <div key={i} className="border-t border-border pt-1.5">
-                  <p className="font-medium">{issue.citation}</p>
-                  <p className="text-muted-foreground">{issue.problem}</p>
-                  {issue.correction && <p className="text-foreground mt-0.5">→ {issue.correction}</p>}
-                </div>
-              ))}
-            </div>
-          ) : (
-            <p>{qa.summary}</p>
-          )}
-        </TooltipContent>
-      </Tooltip>
-    </TooltipProvider>
+        ) : (
+          <p>{qa.summary}</p>
+        )}
+      </PopoverContent>
+    </Popover>
   );
 }
 
