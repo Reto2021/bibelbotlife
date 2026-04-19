@@ -1133,15 +1133,12 @@ serve(async (req) => {
 
 
     const TRANSLATION_NAMES: Record<string, string> = {
-      zuercher: "Zürcher Bibel (2007)", zuercher2007: "Zürcher Bibel (2007)",
-      luther2017: "Lutherbibel (2017)", luther: "Lutherbibel (2017)",
-      einheitsuebersetzung: "Einheitsübersetzung (2016)", eu2016: "Einheitsübersetzung (2016)",
+      luther1912: "Lutherbibel 1912", luther: "Lutherbibel 1912",
       schlachter2000: "Schlachter 2000", schlachter: "Schlachter 2000",
       elberfelder2006: "Elberfelder 2006", elberfelder: "Elberfelder 2006",
-      luther1912: "Lutherbibel 1912",
       kjv: "King James Version (KJV)", web: "World English Bible (WEB)",
     };
-    const MODERN_TRANSLATIONS = new Set(["zuercher", "zuercher2007", "luther2017", "luther", "einheitsuebersetzung", "eu2016", "schlachter2000", "schlachter", "elberfelder2006", "elberfelder"]);
+    const MODERN_TRANSLATIONS = new Set(["luther1912", "luther", "schlachter2000", "schlachter", "elberfelder2006", "elberfelder"]);
     if (preferredTranslation && TRANSLATION_NAMES[preferredTranslation]) {
       const isModern = MODERN_TRANSLATIONS.has(preferredTranslation);
       if (isModern) {
