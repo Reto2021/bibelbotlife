@@ -26,9 +26,7 @@ import { Link } from "react-router-dom";
 const TELEGRAM_LINK = "https://t.me/meinbibelbot";
 
 const BIBLE_EDITIONS_DATA = [
-  { name: "Zürcher Bibel", year: "2007", traditionKey: "reformed" },
-  { name: "Lutherbibel", year: "2017", traditionKey: "evangelical" },
-  { name: "Einheitsübersetzung", year: "2016", traditionKey: "catholic" },
+  { name: "Lutherbibel", year: "1912", traditionKey: "evangelical" },
   { name: "Schlachter Bibel", year: "2000", traditionKey: "freeChurch" },
   { name: "Elberfelder Bibel", year: "2006", traditionKey: "literal" },
 ];
