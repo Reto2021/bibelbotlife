@@ -5,6 +5,9 @@ export const CHAT_RESET_EVENT = "bibelbot-reset-chat";
 export type ChatMode = "normal" | "seven-whys" | "gratitude" | "lectio" | "forgiveness" | "values" | "examen";
 
 export function openBibleBotChat(message: string, mode: ChatMode = "normal") {
+  if (typeof window !== "undefined") {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
   window.dispatchEvent(new CustomEvent(CHAT_OPEN_EVENT, { detail: { message, mode } }));
 }
 
