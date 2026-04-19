@@ -569,7 +569,7 @@ const Index = () => {
               <div>
                 <p className="font-semibold text-background/70 mb-2">{t("footer.impressum")}</p>
                 <p>2Go Media AG</p>
-                <p>Rebmoosweg 63</p>
+                <p>Industriestrasse 19</p>
                 <p>5200 Brugg, Schweiz</p>
                 <p className="mt-1">kontakt@biblebot.life</p>
               </div>
