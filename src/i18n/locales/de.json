@@ -824,7 +824,7 @@
     "recommendedBy": "Empfohlen von {{name}}",
     "setup": "",
     "form": {
-      "title": "Interesse an einer Zusammenarbeit?",
+      "title": "Interesse an einer Partnerschaft?",
       "subtitle": "Wir melden uns innert 48 Stunden.",
       "name": "Ihr Name",
       "email": "E-Mail-Adresse",
@@ -832,7 +832,7 @@
       "tier": "Gewünschtes Paket",
       "tierPlaceholder": "Paket wählen...",
       "message": "Ihre Nachricht",
-      "submit": "Spendenanfrage senden",
+      "submit": "Anfrage senden",
       "success": "Anfrage gesendet! Wir melden uns bald. 🙏",
       "error": "Fehler beim Senden. Bitte versuchen Sie es erneut.",
       "orgType": "Typ der Organisation",
