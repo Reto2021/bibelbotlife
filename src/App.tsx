@@ -72,6 +72,8 @@ const KreisPage = lazy(() => import("./pages/KreisPage"));
 const VersePage = lazy(() => import("./pages/VersePage"));
 const TopicPage = lazy(() => import("./pages/TopicPage"));
 const KIundSeelsorge = lazy(() => import("./pages/KIundSeelsorge"));
+const Presse = lazy(() => import("./pages/Presse"));
+const Flyer = lazy(() => import("./pages/Flyer"));
 
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { ProtectedAdminRoute } from "@/components/ProtectedAdminRoute";
@@ -179,6 +181,8 @@ const App = () => {
                   <Route path="/kontakt" element={<Kontakt />} />
                   <Route path="/ueber-uns" element={<UeberUns />} />
                   <Route path="/ki-und-seelsorge" element={<KIundSeelsorge />} />
+                  <Route path="/presse" element={<Presse />} />
+                  <Route path="/flyer" element={<Flyer />} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/reset-password" element={<ResetPassword />} />
                   <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>}>

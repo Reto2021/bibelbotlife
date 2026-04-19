@@ -456,9 +456,15 @@ const ForChurches = () => {
       </section>
 
       {/* Footer links */}
-      <div className="py-8 text-center space-y-2">
+      <div className="py-8 text-center space-y-3">
         <Link to="/churches" className="text-primary hover:underline text-sm font-medium block">
           {t("church.viewDirectory")} →
+        </Link>
+        <Link to="/flyer" className="text-muted-foreground hover:text-primary text-sm block">
+          Flyer & QR-Material herunterladen →
+        </Link>
+        <Link to="/presse" className="text-muted-foreground hover:text-primary text-sm block">
+          Pressematerial & Medienkontakt →
         </Link>
       </div>
     </div>
