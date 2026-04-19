@@ -38,7 +38,7 @@ const corsHeaders = {
 
 // Language-specific configurations
 const LANG_CONFIG: Record<string, { name: string; translations: string; quoteStyle: [string, string]; spellingFix: boolean }> = {
-  de: { name: "German (Swiss)", translations: "Zürcher Bibel, Lutherbibel 2017, or Einheitsübersetzung 2016", quoteStyle: ["«", "»"], spellingFix: true },
+  de: { name: "German (Swiss)", translations: "Lutherbibel 2017, Schlachter 2000, or Elberfelder 2006", quoteStyle: ["«", "»"], spellingFix: true },
   en: { name: "English", translations: "NIV, ESV, or KJV", quoteStyle: ['"', '"'], spellingFix: false },
   fr: { name: "French", translations: "Louis Segond (LSG), Bible de Jérusalem, or TOB", quoteStyle: ["«\u00A0", "\u00A0»"], spellingFix: false },
   es: { name: "Spanish", translations: "Reina-Valera 1995 (RVR1995), NVI, or LBLA", quoteStyle: ["«", "»"], spellingFix: false },
