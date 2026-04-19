@@ -64,18 +64,19 @@ export default function VersePage() {
     (async () => {
       setLoading(true);
 
-      const variants = bookNameVariants(parsed.book, lang);
+      // Lookup by book_number (works for all 33 languages, regardless of name spelling)
       const { data: vData } = await supabase
         .from("bible_verses")
         .select("text,translation,book,chapter,verse,language")
-        .in("book", variants)
+        .eq("book_number", parsed.book.number)
         .eq("chapter", parsed.chapter)
         .eq("verse", parsed.verse)
-        .limit(20);
+        .limit(50);
 
-      // Prefer current language; fall back to English
+      // Prefer current language; fall back to English, then German, then anything
       let chosen: VerseRow[] = (vData ?? []).filter((r: any) => r.language === lang);
       if (chosen.length === 0) chosen = (vData ?? []).filter((r: any) => r.language === "en");
+      if (chosen.length === 0) chosen = (vData ?? []).filter((r: any) => r.language === "de");
       if (chosen.length === 0) chosen = (vData ?? []) as VerseRow[];
 
       // Sort: default translation first
