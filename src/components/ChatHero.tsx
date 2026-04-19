@@ -623,7 +623,7 @@ export function ChatHero() {
   const sendMessage = useCallback(
     async (text: string) => {
       if (!text.trim() || isLoading) return;
-      track("chat_hero_submit", { query: text.slice(0, 50) });
+      track("chat_hero_submit", user ? { query: text.slice(0, 50) } : {});
 
       const userMsg: ChatMessage = { role: "user", content: text.trim() };
 

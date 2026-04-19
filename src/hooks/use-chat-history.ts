@@ -4,6 +4,8 @@ import { useAuth } from "@/hooks/use-auth";
 
 const SESSION_KEY = "bibelbot-session-id";
 const LOCAL_CHAT_HISTORY_KEY = "bibelbot-anon-chat-history-v1";
+const MAX_LOCAL_MESSAGES = 50;
+const COMPACT_KEEP_RECENT = 20;
 
 function getSessionId(): string {
   try {
@@ -60,6 +62,24 @@ function saveLocalConversationState(conversations: StoredConversation[]) {
 
 function stripMessages(conversations: StoredConversation[]): Conversation[] {
   return conversations.map(({ messages: _messages, ...conversation }) => conversation);
+}
+
+function compactMessages(messages: ChatMessage[]): ChatMessage[] {
+  if (messages.length <= MAX_LOCAL_MESSAGES) return messages;
+  const toSummarize = messages.slice(0, messages.length - COMPACT_KEEP_RECENT);
+  const recent = messages.slice(messages.length - COMPACT_KEEP_RECENT);
+  const topics = toSummarize
+    .filter(m => m.role === "user")
+    .slice(0, 6)
+    .map(m => m.content.slice(0, 80).replace(/\n/g, " "))
+    .join(" · ");
+  const summary: ChatMessage = {
+    id: crypto.randomUUID(),
+    role: "assistant",
+    content: `📋 *Frühere Themen (${toSummarize.length} Nachrichten komprimiert):* ${topics}`,
+    created_at: new Date().toISOString(),
+  };
+  return [summary, ...recent];
 }
 
 export function useChatHistory() {
@@ -169,22 +189,12 @@ export function useChatHistory() {
     if (!user) {
       const nextConversations = loadLocalConversationState().map((conversation) => {
         if (conversation.id !== conversationId) return conversation;
-
-        return {
-          ...conversation,
-          updated_at: new Date().toISOString(),
-          messages: [
-            ...conversation.messages,
-            {
-              id: crypto.randomUUID(),
-              role,
-              content,
-              created_at: new Date().toISOString(),
-            },
-          ],
-        };
+        const updatedMessages = compactMessages([
+          ...conversation.messages,
+          { id: crypto.randomUUID(), role, content, created_at: new Date().toISOString() },
+        ]);
+        return { ...conversation, updated_at: new Date().toISOString(), messages: updatedMessages };
       });
-
       saveLocalConversationState(nextConversations);
       setConversations(stripMessages(nextConversations));
       return;

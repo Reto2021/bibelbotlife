@@ -42,7 +42,7 @@ const GUARDRAILS = [
   { icon: CheckCircle2, color: "text-emerald-600 dark:text-emerald-400", text: "BibleBot gibt keine medizinischen, rechtlichen oder therapeutischen Diagnosen." },
   { icon: CheckCircle2, color: "text-emerald-600 dark:text-emerald-400", text: "Bei Krisensignalen (Suizid, akute Not) wird sofort auf Telefonseelsorge hingewiesen — bevor die Antwort beginnt." },
   { icon: CheckCircle2, color: "text-emerald-600 dark:text-emerald-400", text: "BibleBot behauptet nie, ein Mensch zu sein oder professionelle Seelsorge zu ersetzen." },
-  { icon: CheckCircle2, color: "text-emerald-600 dark:text-emerald-400", text: "Keine Speicherung von Chatinhalten. Kein Tracking von spirituellen Profilen." },
+  { icon: CheckCircle2, color: "text-emerald-600 dark:text-emerald-400", text: "Ohne Login: Chatverläufe werden ausschliesslich lokal auf deinem Gerät gespeichert (max. 50 Nachrichten). Mit Login speicherst du bewusst in deinem Konto. Keine Weitergabe von Gesprächsinhalten an Dritte." },
   { icon: AlertTriangle, color: "text-amber-600 dark:text-amber-400", text: "BibleBot kann irren. Die KI-Technologie ist nicht unfehlbar — deshalb das QA-System und der Verweis auf menschliche Seelsorger." },
 ];
 
