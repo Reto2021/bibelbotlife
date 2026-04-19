@@ -60,7 +60,7 @@ export default function Flyer() {
               <div className="space-y-2 text-left text-sm text-gray-700 border-t border-gray-100 pt-5">
                 {[
                   "✓ Kostenlos & anonym — kein Login nötig",
-                  "✓ 5 Bibelübersetzungen, automatisch geprüft",
+                  "✓ 35+ Bibelübersetzungen, automatisch geprüft",
                   "✓ 38 Sprachen — für alle Menschen",
                   "✓ Krisenintervention rund um die Uhr",
                   "✓ Ergänzt Gemeinde & Seelsorge",

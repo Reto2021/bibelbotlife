@@ -235,7 +235,7 @@ const Index = () => {
               {
                 emoji: "🏛️",
                 title: t("why.wisdom.title", "Nicht irgendeine KI"),
-                text: t("why.wisdom.text", "BibleBot kennt 5 Bibelübersetzungen und prüft jede Stelle automatisch auf Korrektheit. Keine Halluzinationen, kein Raten — nur geprüfte Weisheit aus 2000 Jahren."),
+                text: t("why.wisdom.text", "BibleBot kennt über 35 Bibelübersetzungen in 38 Sprachen und prüft jede Stelle automatisch auf Korrektheit. Keine Halluzinationen, kein Raten — nur geprüfte Weisheit aus 2000 Jahren."),
               },
               {
                 emoji: "🆘",
