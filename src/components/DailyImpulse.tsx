@@ -70,7 +70,7 @@ function getFallbackImpulse(lang: string): Impulse {
     return {
       topic: "Hoffnung",
       verse: "«Denn ich weiss wohl, was ich für Gedanken über euch habe, spricht der Herr: Gedanken des Friedens und nicht des Leides.»",
-      reference: "Jeremia 29,11 (Lutherbibel 2017)",
+      reference: "Jeremia 29,11 (Lutherbibel 1912)",
       teaser: "Gott hat einen Plan – auch wenn du ihn noch nicht siehst",
       context: "Manchmal fühlt sich das Leben planlos an. Dieser Vers erinnert daran, dass es eine grössere Perspektive gibt.",
       date,
