@@ -1084,7 +1084,7 @@ export function ChatHero() {
                   {[
                     { value: "2'500+", label: t("social.conversations") },
                     { value: "36", label: t("social.languages") },
-                    { value: "5", label: t("social.bibles") },
+                    { value: "35+", label: t("social.bibles") },
                   ].map((stat) => (
                     <div key={stat.label} className="text-center">
                       <p className="text-lg sm:text-xl font-bold text-primary">{stat.value}</p>
