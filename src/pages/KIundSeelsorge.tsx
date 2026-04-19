@@ -227,19 +227,20 @@ export default function KIundSeelsorge() {
         <section className="py-16 px-4">
           <div className="container mx-auto max-w-3xl">
             <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-foreground mb-3">5 Bibelübersetzungen</h2>
+              <h2 className="text-3xl font-bold text-foreground mb-3">Über 30 Bibelübersetzungen in 38 Sprachen</h2>
               <p className="text-muted-foreground">
-                BibleBot nutzt ausschliesslich lizenzierte Bibelübersetzungen und kennzeichnet
-                jede Antwort mit Buch, Kapitel und Übersetzung.
+                Jede Antwort referenziert eine geprüfte Übersetzung mit Buch, Kapitel und Vers.
+                Für Deutsch stehen drei bewährte Übersetzungen zur Wahl.
               </p>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {[
-                { name: "Zürcher Bibel 2007", tradition: "Reformiert", color: "text-teal-600 dark:text-teal-400" },
-                { name: "Lutherbibel 2017", tradition: "Evangelisch-lutherisch", color: "text-amber-600 dark:text-amber-400" },
-                { name: "Einheitsübersetzung 2016", tradition: "Römisch-katholisch", color: "text-primary" },
-                { name: "Schlachter Bibel 2000", tradition: "Freikirchlich", color: "text-purple-600 dark:text-purple-400" },
-                { name: "Elberfelder Bibel 2006", tradition: "Wortgetreu", color: "text-rose-600 dark:text-rose-400" },
+                { name: "Lutherbibel", tradition: "Evangelisch · Standardübersetzung", color: "text-amber-600 dark:text-amber-400" },
+                { name: "Elberfelder Übersetzung", tradition: "Alle Konfessionen · Wortgetreu", color: "text-rose-600 dark:text-rose-400" },
+                { name: "Schlachter Bibel", tradition: "Freikirchlich · Fliessend lesbar", color: "text-purple-600 dark:text-purple-400" },
+                { name: "King James Version", tradition: "Englisch · Klassisch", color: "text-teal-600 dark:text-teal-400" },
+                { name: "Berean Standard Bible", tradition: "Englisch · Modern", color: "text-primary" },
+                { name: "+ 25 weitere Sprachen", tradition: "je eigene Übersetzung", color: "text-muted-foreground" },
               ].map((b) => (
                 <div key={b.name} className="flex items-center gap-3 bg-card/60 rounded-lg px-4 py-3 border border-border">
                   <BookOpen className={`h-4 w-4 shrink-0 ${b.color}`} />

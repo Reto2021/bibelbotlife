@@ -686,19 +686,15 @@ export function BibleBotChat() {
               title={t("chat.translationSelect", "Bibelübersetzung")}
             >
               <option value="auto">📖 Auto</option>
-              <optgroup label={t("chat.translationModern", "Moderne Übersetzungen")}>
-                <option value="zuercher2007">{t("chat.translationZuercher", "Zürcher Bibel (2007) – Reformiert")}</option>
-                <option value="luther2017">{t("chat.translationLuther", "Lutherbibel (2017) – Evangelisch")}</option>
-                <option value="einheitsuebersetzung">{t("chat.translationEinheit", "Einheitsübersetzung (2016) – Katholisch")}</option>
-                <option value="schlachter2000">{t("chat.translationSchlachter", "Schlachter 2000 – Freikirchlich")}</option>
-                <option value="elberfelder2006">{t("chat.translationElberfelder", "Elberfelder 2006 – Wortgetreu")}</option>
-              </optgroup>
-              <optgroup label={t("chat.translationHistoric", "Historisch (exakt nachschlagbar)")}>
-                <option value="luther1912">Luther 1912</option>
+              <optgroup label="Deutsch">
+                <option value="luther">{t("chat.translationLuther", "Lutherbibel")}</option>
+                <option value="elberfelder">{t("chat.translationElberfelder", "Elberfelder – Wortgetreu")}</option>
+                <option value="schlachter2000">{t("chat.translationSchlachter", "Schlachter – Freikirchlich")}</option>
               </optgroup>
               <optgroup label="English">
-                <option value="kjv">KJV</option>
-                <option value="web">WEB</option>
+                <option value="bsb">Berean Standard Bible</option>
+                <option value="kjv">King James Version</option>
+                <option value="web">World English Bible</option>
               </optgroup>
             </select>
             <BookOpen className="absolute right-0 top-1/2 -translate-y-1/2 h-3 w-3 text-muted-foreground pointer-events-none" />
