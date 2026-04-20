@@ -324,7 +324,7 @@ const ForChurches = () => {
                     }}
                   >
                     <Send className="h-4 w-4 mr-2" />
-                    {t("church.contact")}
+                    {t(`church.tier.${tier.key}.cta`, { defaultValue: t("church.contact") })}
                   </Button>
                 </CardContent>
               </Card>
