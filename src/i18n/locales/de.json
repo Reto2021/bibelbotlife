@@ -761,27 +761,31 @@
       }
     },
     "pricingTitle": "Partnerschafts-Pakete",
-    "pricingSubtitle": "BibleBot.Life ist kostenlos und werbefrei. Organisationen können das Projekt durch Sponsoring unterstützen und erhalten dafür zusätzliche Features.",
+    "pricingSubtitle": "BibleBot.Life ist kostenlos und werbefrei. Organisationen können das Projekt durch eine Partnerschaft unterstützen und erhalten dafür zusätzliche Features wie Co-Branding, Website-Widget, Messe- und Unterrichtsplaner, Kommunikationswege, etc.",
     "popular": "Empfohlen",
     "free": "Kostenlos",
     "perYear": "",
-    "contact": "Sponsoring anfragen",
+    "contact": "Jetzt anfragen",
     "tier": {
       "free": {
         "name": "Senfkorn",
-        "size": "Für kleine Organisationen (bis 50 Personen/Jahr)"
+        "size": "Für kleine Organisationen (bis 50 Personen/Jahr)",
+        "cta": "Senfkorn anfragen"
       },
       "community": {
         "name": "Wegbegleiter",
-        "size": "Für Organisationen mit 50–200 Personen/Jahr"
+        "size": "Für Organisationen mit 50–200 Personen/Jahr",
+        "cta": "Wegbegleiter anfragen"
       },
       "gemeinde": {
         "name": "Brückenbauer",
-        "size": "Für Organisationen mit 200–500 Personen/Jahr"
+        "size": "Für Organisationen mit 200–500 Personen/Jahr",
+        "cta": "Jetzt anfragen"
       },
       "kirche": {
         "name": "Leuchtturm",
-        "size": "Für grosse Organisationen (500+ Personen)/Jahr"
+        "size": "Für grosse Organisationen (500+ Personen)/Jahr",
+        "cta": "Jetzt anfragen"
       }
     },
     "features": {
