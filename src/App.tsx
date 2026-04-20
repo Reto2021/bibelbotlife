@@ -77,6 +77,7 @@ const Flyer = lazy(() => import("./pages/Flyer"));
 
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { ProtectedAdminRoute } from "@/components/ProtectedAdminRoute";
+import { ProtectedDashboardRoute } from "@/components/ProtectedDashboardRoute";
 
 const queryClient = new QueryClient();
 
@@ -185,7 +186,7 @@ const App = () => {
                   <Route path="/flyer" element={<Flyer />} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/reset-password" element={<ResetPassword />} />
-                  <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>}>
+                  <Route path="/dashboard" element={<ProtectedDashboardRoute><Dashboard /></ProtectedDashboardRoute>}>
                     <Route index element={<DashboardHome />} />
                     <Route path="editor/:id" element={<ServiceEditor />} />
                     <Route path="conductor/:id" element={<ConductorMode />} />

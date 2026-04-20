@@ -1817,12 +1817,14 @@ export type Database = {
       }
       service_team_members: {
         Row: {
+          accepted_at: string | null
           availability: Json | null
           church_id: string
           created_at: string
           created_by: string
           email: string | null
           id: string
+          invited_at: string | null
           is_active: boolean
           name: string
           role: Database["public"]["Enums"]["team_role"]
@@ -1830,12 +1832,14 @@ export type Database = {
           user_id: string | null
         }
         Insert: {
+          accepted_at?: string | null
           availability?: Json | null
           church_id: string
           created_at?: string
           created_by: string
           email?: string | null
           id?: string
+          invited_at?: string | null
           is_active?: boolean
           name: string
           role?: Database["public"]["Enums"]["team_role"]
@@ -1843,12 +1847,14 @@ export type Database = {
           user_id?: string | null
         }
         Update: {
+          accepted_at?: string | null
           availability?: Json | null
           church_id?: string
           created_at?: string
           created_by?: string
           email?: string | null
           id?: string
+          invited_at?: string | null
           is_active?: boolean
           name?: string
           role?: Database["public"]["Enums"]["team_role"]
@@ -2356,6 +2362,13 @@ export type Database = {
           welcome_message: string
         }[]
       }
+      get_my_team_churches: {
+        Args: never
+        Returns: {
+          church_id: string
+          role: string
+        }[]
+      }
       get_public_prayers: {
         Args: never
         Returns: {
@@ -2425,6 +2438,7 @@ export type Database = {
         Returns: undefined
       }
       is_church_owner: { Args: { _church_id: string }; Returns: boolean }
+      is_church_team_member: { Args: { _church_id: string }; Returns: boolean }
       is_circle_member: {
         Args: { _circle_id: string; _user_id: string }
         Returns: boolean
