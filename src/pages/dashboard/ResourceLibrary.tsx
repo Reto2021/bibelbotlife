@@ -836,7 +836,7 @@ export default function ResourceLibrary() {
               )}
             </div>
           </div>
-          <DialogFooter>
+          <DialogFooter className="p-6 pt-4 border-t shrink-0">
             <Button variant="outline" onClick={() => setDialogOpen(false)}>
               Abbrechen
             </Button>
