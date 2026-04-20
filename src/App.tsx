@@ -77,6 +77,7 @@ const Flyer = lazy(() => import("./pages/Flyer"));
 
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { ProtectedAdminRoute } from "@/components/ProtectedAdminRoute";
+import { ProtectedDashboardRoute } from "@/components/ProtectedDashboardRoute";
 
 const queryClient = new QueryClient();
 
