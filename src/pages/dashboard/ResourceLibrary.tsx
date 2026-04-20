@@ -673,11 +673,11 @@ export default function ResourceLibrary() {
 
       {/* Create / Edit Dialog */}
       <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
-        <DialogContent className="sm:max-w-lg">
-          <DialogHeader>
+        <DialogContent className="sm:max-w-lg max-h-[90vh] flex flex-col p-0 gap-0">
+          <DialogHeader className="p-6 pb-4 border-b shrink-0">
             <DialogTitle>{editingId ? "Ressource bearbeiten" : "Neue Ressource"}</DialogTitle>
           </DialogHeader>
-          <div className="space-y-4">
+          <div className="space-y-4 overflow-y-auto px-6 py-4 flex-1 min-h-0">
             <div>
               <label className="text-sm font-medium text-foreground mb-1 block">Titel *</label>
               <Input
@@ -836,7 +836,7 @@ export default function ResourceLibrary() {
               )}
             </div>
           </div>
-          <DialogFooter>
+          <DialogFooter className="p-6 pt-4 border-t shrink-0">
             <Button variant="outline" onClick={() => setDialogOpen(false)}>
               Abbrechen
             </Button>
