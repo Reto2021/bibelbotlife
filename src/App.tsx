@@ -186,7 +186,7 @@ const App = () => {
                   <Route path="/flyer" element={<Flyer />} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/reset-password" element={<ResetPassword />} />
-                  <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>}>
+                  <Route path="/dashboard" element={<ProtectedDashboardRoute><Dashboard /></ProtectedDashboardRoute>}>
                     <Route index element={<DashboardHome />} />
                     <Route path="editor/:id" element={<ServiceEditor />} />
                     <Route path="conductor/:id" element={<ConductorMode />} />
