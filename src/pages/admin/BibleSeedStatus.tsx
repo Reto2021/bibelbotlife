@@ -7,9 +7,11 @@ import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { supabase } from "@/integrations/supabase/client";
-import { RefreshCw, Activity, AlertTriangle, CheckCircle2, Clock } from "lucide-react";
+import { RefreshCw, Activity, AlertTriangle, CheckCircle2, Clock, Play, Loader2, StopCircle } from "lucide-react";
+import { toast } from "sonner";
 
 const REFRESH_MS = 30_000;
+const RETRY_MAX_ROUNDS = 50; // Sicherheitslimit gegen Endlosschleifen
 
 type StatusResponse = {
   generated_at: string;
