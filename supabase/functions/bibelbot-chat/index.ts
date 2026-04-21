@@ -352,8 +352,17 @@ async function lookupBibleVerse(
   const trans = getTranslation(lang || "de", translationKey);
   const url = `${BIBLE_API_BASE}/${trans.id}/${bookId}/${chapter}.json`;
 
+  const supabase = createClient(
+    Deno.env.get("SUPABASE_URL")!,
+    Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
+  );
+  const metaCode = METADATA_CODE_MAP[trans.id];
+
   try {
-    const resp = await fetch(url);
+    const [resp, meta] = await Promise.all([
+      fetch(url),
+      metaCode ? getTranslationMeta(supabase, metaCode) : Promise.resolve(null),
+    ]);
     if (!resp.ok) return `Kapitel ${book} ${chapter} nicht gefunden (${trans.name}).`;
 
     const data = await resp.json();
@@ -372,7 +381,14 @@ async function lookupBibleVerse(
       ? `${book} ${chapter},${verseStart}-${verseEnd}`
       : `${book} ${chapter},${verseStart}`;
 
-    return `«${text.trim()}» — ${ref} (${trans.name})`;
+    return formatVerseCitation({
+      text,
+      reference: ref,
+      translationName: meta?.name ?? trans.name,
+      meta,
+      sourceUrl: url,
+      fallbackCitation: `${trans.name} – bible.helloao.org (${trans.id})`,
+    });
   } catch (e) {
     console.error("Bible API error:", e);
     return `Fehler beim Abrufen von ${book} ${chapter},${verseStart}.`;
