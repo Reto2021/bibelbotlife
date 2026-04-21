@@ -13,6 +13,11 @@ import { toast } from "sonner";
 const REFRESH_MS = 30_000;
 const RETRY_MAX_ROUNDS = 50; // Sicherheitslimit gegen Endlosschleifen
 
+// Übersetzungen, deren Quelle (bibel.github.io) aktuell erreichbar ist.
+// Stand zuletzt geprüft: ELB, EU, NEUE, GRU, HER, PAT.
+// BB, ZB, LUT1984, SCH2000, HFA, GNB liefern aktuell 404.
+const REACHABLE_TRANSLATIONS = ["ELB", "EU", "NEUE", "GRU", "HER", "PAT"];
+
 type StatusResponse = {
   generated_at: string;
   filter: string | null;
@@ -120,8 +125,19 @@ export default function BibleSeedStatus() {
 
   // Auto-Retry-Loop: ruft bible-extra-seed-nt wiederholt auf, bis keine
   // fälligen Retries mehr offen sind oder Abort gedrückt wurde.
-  const runRetryUntilDone = useCallback(async (translation: string | null) => {
-    const label = translation ?? "ALL";
+  const runRetryUntilDone = useCallback(async (
+    translation: string | string[] | null,
+    opts?: { mode?: "auto" | "only" | "force"; label?: string },
+  ) => {
+    const list = Array.isArray(translation)
+      ? translation
+      : translation
+        ? [translation]
+        : null;
+    const label = opts?.label ?? (Array.isArray(translation)
+      ? `${translation.length} Übersetzungen`
+      : (translation ?? "ALL"));
+    const mode = opts?.mode ?? "auto";
     setRetryRunning(label);
     setRetryAbort(false);
     setRetryProgress({ rounds: 0, processed: 0, remaining: 0 });
@@ -139,10 +155,10 @@ export default function BibleSeedStatus() {
         if (abortRef.current) { abort = true; break; }
 
         const payload: Record<string, unknown> = {
-          retry_mode: "only",
+          retry_mode: mode,
           batch_size: 50,
         };
-        if (translation) payload.translations = [translation];
+        if (list && list.length > 0) payload.translations = list;
 
         const { data: result, error: fnErr } = await supabase.functions.invoke(
           "bible-extra-seed-nt",
@@ -158,12 +174,12 @@ export default function BibleSeedStatus() {
         // Status live nachziehen
         await load();
 
-        // Abbruchbedingung: nichts mehr verarbeitet UND keine OK-Treffer → keine
-        // fälligen Retries mehr (oder alle erschöpft).
+        // Abbruchbedingung: nichts mehr verarbeitet → keine fälligen Retries
+        // bzw. keine offenen Kapitel mehr.
         if ((r.processed ?? 0) === 0) break;
-        // Wenn gar nichts mehr erfolgreich war, aber processed>0 (alle re-failed),
-        // einmal Pause und nochmal probieren – Backoff gibt sie später wieder frei.
-        if (okCount === 0) break;
+        // Im "only"-Modus: wenn nichts mehr erfolgreich war, aufhören (alle re-failed).
+        // Im "auto"/"force"-Modus weiterlaufen, da auch neue/unversuchte Kapitel verarbeitet werden.
+        if (mode === "only" && okCount === 0) break;
 
         // kleine Pause zwischen Runden
         await new Promise((res) => setTimeout(res, 500));
@@ -245,6 +261,21 @@ export default function BibleSeedStatus() {
               <><Loader2 className="h-4 w-4 mr-2 animate-spin" /> Retry läuft …</>
             ) : (
               <><Play className="h-4 w-4 mr-2" /> Retry bis fertig {translationFilter ? `(${translationFilter})` : "(alle)"}</>
+            )}
+          </Button>
+          <Button
+            onClick={() => runRetryUntilDone(REACHABLE_TRANSLATIONS, {
+              mode: "auto",
+              label: `Erreichbare (${REACHABLE_TRANSLATIONS.join(", ")})`,
+            })}
+            disabled={!!retryRunning}
+            variant="default"
+            title="Seedet nur Übersetzungen, deren Quelle aktuell erreichbar ist"
+          >
+            {retryRunning?.startsWith("Erreichbare") ? (
+              <><Loader2 className="h-4 w-4 mr-2 animate-spin" /> Erreichbare laufen …</>
+            ) : (
+              <><Play className="h-4 w-4 mr-2" /> Nur erreichbare seeden ({REACHABLE_TRANSLATIONS.length})</>
             )}
           </Button>
           {retryRunning && (
