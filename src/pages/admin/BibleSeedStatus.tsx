@@ -7,9 +7,11 @@ import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { supabase } from "@/integrations/supabase/client";
-import { RefreshCw, Activity, AlertTriangle, CheckCircle2, Clock } from "lucide-react";
+import { RefreshCw, Activity, AlertTriangle, CheckCircle2, Clock, Play, Loader2, StopCircle } from "lucide-react";
+import { toast } from "sonner";
 
 const REFRESH_MS = 30_000;
+const RETRY_MAX_ROUNDS = 50; // Sicherheitslimit gegen Endlosschleifen
 
 type StatusResponse = {
   generated_at: string;
@@ -73,6 +75,9 @@ export default function BibleSeedStatus() {
   const [translationFilter, setTranslationFilter] = useState("");
   const [lastFetched, setLastFetched] = useState<Date | null>(null);
   const [secondsSince, setSecondsSince] = useState(0);
+  const [retryRunning, setRetryRunning] = useState<string | null>(null); // translation code being retried, or "ALL"
+  const [retryProgress, setRetryProgress] = useState<{ rounds: number; processed: number; remaining: number } | null>(null);
+  const [retryAbort, setRetryAbort] = useState(false);
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -112,6 +117,73 @@ export default function BibleSeedStatus() {
     }, 1000);
     return () => clearInterval(id);
   }, [lastFetched]);
+
+  // Auto-Retry-Loop: ruft bible-extra-seed-nt wiederholt auf, bis keine
+  // fälligen Retries mehr offen sind oder Abort gedrückt wurde.
+  const runRetryUntilDone = useCallback(async (translation: string | null) => {
+    const label = translation ?? "ALL";
+    setRetryRunning(label);
+    setRetryAbort(false);
+    setRetryProgress({ rounds: 0, processed: 0, remaining: 0 });
+
+    let totalProcessed = 0;
+    let abort = false;
+    const abortRef = { current: false };
+    // Mini-Trick: Polling für Abort-Flag
+    const interval = setInterval(() => {
+      setRetryAbort((v) => { abortRef.current = v; return v; });
+    }, 200);
+
+    try {
+      for (let round = 1; round <= RETRY_MAX_ROUNDS; round++) {
+        if (abortRef.current) { abort = true; break; }
+
+        const payload: Record<string, unknown> = {
+          retry_mode: "only",
+          batch_size: 50,
+        };
+        if (translation) payload.translations = [translation];
+
+        const { data: result, error: fnErr } = await supabase.functions.invoke(
+          "bible-extra-seed-nt",
+          { method: "POST", body: payload },
+        );
+        if (fnErr) throw fnErr;
+
+        const r = result as { processed: number; remaining: number; results?: Array<{ status: string }> };
+        const okCount = (r.results ?? []).filter((x) => x.status === "ok" || x.status === "recovered" || x.status === "cached").length;
+        totalProcessed += r.processed ?? 0;
+        setRetryProgress({ rounds: round, processed: totalProcessed, remaining: r.remaining ?? 0 });
+
+        // Status live nachziehen
+        await load();
+
+        // Abbruchbedingung: nichts mehr verarbeitet UND keine OK-Treffer → keine
+        // fälligen Retries mehr (oder alle erschöpft).
+        if ((r.processed ?? 0) === 0) break;
+        // Wenn gar nichts mehr erfolgreich war, aber processed>0 (alle re-failed),
+        // einmal Pause und nochmal probieren – Backoff gibt sie später wieder frei.
+        if (okCount === 0) break;
+
+        // kleine Pause zwischen Runden
+        await new Promise((res) => setTimeout(res, 500));
+      }
+
+      if (abort) {
+        toast.info(`Retry abgebrochen für ${label} (${totalProcessed} Kapitel verarbeitet)`);
+      } else {
+        toast.success(`Retry fertig für ${label}: ${totalProcessed} Kapitel verarbeitet`);
+      }
+    } catch (e: any) {
+      toast.error(`Retry-Fehler: ${e?.message ?? "Unbekannt"}`);
+    } finally {
+      clearInterval(interval);
+      setRetryRunning(null);
+      setRetryAbort(false);
+      // letzter Refresh
+      load();
+    }
+  }, [load]);
 
   const totals = data?.totals;
   const progress = useMemo(() => {
@@ -164,7 +236,29 @@ export default function BibleSeedStatus() {
           <Button variant="secondary" onClick={() => setTranslationFilter("")} disabled={!translationFilter}>
             Filter zurücksetzen
           </Button>
+          <Button
+            onClick={() => runRetryUntilDone(translationFilter.trim() || null)}
+            disabled={!!retryRunning}
+            variant="default"
+          >
+            {retryRunning ? (
+              <><Loader2 className="h-4 w-4 mr-2 animate-spin" /> Retry läuft …</>
+            ) : (
+              <><Play className="h-4 w-4 mr-2" /> Retry bis fertig {translationFilter ? `(${translationFilter})` : "(alle)"}</>
+            )}
+          </Button>
+          {retryRunning && (
+            <Button variant="destructive" onClick={() => setRetryAbort(true)}>
+              <StopCircle className="h-4 w-4 mr-2" /> Stop
+            </Button>
+          )}
         </CardContent>
+        {retryRunning && retryProgress && (
+          <CardContent className="pt-0 text-sm text-muted-foreground">
+            Läuft für <Badge variant="outline">{retryRunning}</Badge> – Runde {retryProgress.rounds},
+            {" "}{retryProgress.processed} Kapitel verarbeitet, {retryProgress.remaining} offen im Batch-Cursor.
+          </CardContent>
+        )}
       </Card>
 
       {error && (
@@ -282,12 +376,13 @@ export default function BibleSeedStatus() {
                       <TableHead className="text-right">Verse</TableHead>
                       <TableHead>Letzter Versuch</TableHead>
                       <TableHead>Letzter Fehler</TableHead>
+                      <TableHead className="text-right">Aktion</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
                     {data?.translations.length === 0 && (
                       <TableRow>
-                        <TableCell colSpan={9} className="text-center text-muted-foreground py-6">
+                        <TableCell colSpan={10} className="text-center text-muted-foreground py-6">
                           Noch keine Daten.
                         </TableCell>
                       </TableRow>
@@ -308,6 +403,20 @@ export default function BibleSeedStatus() {
                         <TableCell className="text-xs">{fmtTime(t.last_attempt_at)}</TableCell>
                         <TableCell className="text-xs">
                           {t.last_error_code ? <code>{t.last_error_code}</code> : "—"}
+                        </TableCell>
+                        <TableCell className="text-right">
+                          <Button
+                            size="sm"
+                            variant="outline"
+                            disabled={!!retryRunning}
+                            onClick={() => runRetryUntilDone(t.translation)}
+                          >
+                            {retryRunning === t.translation ? (
+                              <Loader2 className="h-3.5 w-3.5 animate-spin" />
+                            ) : (
+                              <><Play className="h-3.5 w-3.5 mr-1" /> Retry</>
+                            )}
+                          </Button>
                         </TableCell>
                       </TableRow>
                     ))}
