@@ -363,7 +363,9 @@ async function fetchAndStoreChapter(
   translationCode: string,
   bookInput: string,
   chapter: number,
+  opts: { forceRetry?: boolean } = {},
 ): Promise<{ ok: boolean; verses: { verse: number; text: string }[]; source_url: string; book: { slug: string; number: number; canonical: string } | null; cached: boolean; error?: string }> {
+  const cursorIgnoreBackoff = !!opts.forceRetry;
   const book = resolveBook(bookInput);
   if (!book) return { ok: false, verses: [], source_url: "", book: null, cached: false, error: `Buch '${bookInput}' nicht erkannt.` };
 
