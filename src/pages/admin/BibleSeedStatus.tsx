@@ -174,12 +174,12 @@ export default function BibleSeedStatus() {
         // Status live nachziehen
         await load();
 
-        // Abbruchbedingung: nichts mehr verarbeitet UND keine OK-Treffer → keine
-        // fälligen Retries mehr (oder alle erschöpft).
+        // Abbruchbedingung: nichts mehr verarbeitet → keine fälligen Retries
+        // bzw. keine offenen Kapitel mehr.
         if ((r.processed ?? 0) === 0) break;
-        // Wenn gar nichts mehr erfolgreich war, aber processed>0 (alle re-failed),
-        // einmal Pause und nochmal probieren – Backoff gibt sie später wieder frei.
-        if (okCount === 0) break;
+        // Im "only"-Modus: wenn nichts mehr erfolgreich war, aufhören (alle re-failed).
+        // Im "auto"/"force"-Modus weiterlaufen, da auch neue/unversuchte Kapitel verarbeitet werden.
+        if (mode === "only" && okCount === 0) break;
 
         // kleine Pause zwischen Runden
         await new Promise((res) => setTimeout(res, 500));
