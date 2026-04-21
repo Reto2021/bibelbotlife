@@ -236,7 +236,29 @@ export default function BibleSeedStatus() {
           <Button variant="secondary" onClick={() => setTranslationFilter("")} disabled={!translationFilter}>
             Filter zurücksetzen
           </Button>
+          <Button
+            onClick={() => runRetryUntilDone(translationFilter.trim() || null)}
+            disabled={!!retryRunning}
+            variant="default"
+          >
+            {retryRunning ? (
+              <><Loader2 className="h-4 w-4 mr-2 animate-spin" /> Retry läuft …</>
+            ) : (
+              <><Play className="h-4 w-4 mr-2" /> Retry bis fertig {translationFilter ? `(${translationFilter})` : "(alle)"}</>
+            )}
+          </Button>
+          {retryRunning && (
+            <Button variant="destructive" onClick={() => setRetryAbort(true)}>
+              <StopCircle className="h-4 w-4 mr-2" /> Stop
+            </Button>
+          )}
         </CardContent>
+        {retryRunning && retryProgress && (
+          <CardContent className="pt-0 text-sm text-muted-foreground">
+            Läuft für <Badge variant="outline">{retryRunning}</Badge> – Runde {retryProgress.rounds},
+            {" "}{retryProgress.processed} Kapitel verarbeitet, {retryProgress.remaining} offen im Batch-Cursor.
+          </CardContent>
+        )}
       </Card>
 
       {error && (
