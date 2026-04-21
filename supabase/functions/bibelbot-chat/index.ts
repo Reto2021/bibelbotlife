@@ -352,8 +352,17 @@ async function lookupBibleVerse(
   const trans = getTranslation(lang || "de", translationKey);
   const url = `${BIBLE_API_BASE}/${trans.id}/${bookId}/${chapter}.json`;
 
+  const supabase = createClient(
+    Deno.env.get("SUPABASE_URL")!,
+    Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
+  );
+  const metaCode = METADATA_CODE_MAP[trans.id];
+
   try {
-    const resp = await fetch(url);
+    const [resp, meta] = await Promise.all([
+      fetch(url),
+      metaCode ? getTranslationMeta(supabase, metaCode) : Promise.resolve(null),
+    ]);
     if (!resp.ok) return `Kapitel ${book} ${chapter} nicht gefunden (${trans.name}).`;
 
     const data = await resp.json();
@@ -372,7 +381,14 @@ async function lookupBibleVerse(
       ? `${book} ${chapter},${verseStart}-${verseEnd}`
       : `${book} ${chapter},${verseStart}`;
 
-    return `«${text.trim()}» — ${ref} (${trans.name})`;
+    return formatVerseCitation({
+      text,
+      reference: ref,
+      translationName: meta?.name ?? trans.name,
+      meta,
+      sourceUrl: url,
+      fallbackCitation: `${trans.name} – bible.helloao.org (${trans.id})`,
+    });
   } catch (e) {
     console.error("Bible API error:", e);
     return `Fehler beim Abrufen von ${book} ${chapter},${verseStart}.`;
@@ -735,6 +751,50 @@ function formatMetaBlurb(meta: TranslationMeta | null): string {
   return `${head}${tail}`.trim();
 }
 
+// Map von Tool-Translation-IDs auf DB-Codes in bible_translation_meta
+const METADATA_CODE_MAP: Record<string, string> = {
+  deu_l12: "LU1912",
+  deu_elbbk: "ELB",
+  deu_sch: "SCH2000",
+};
+
+/**
+ * Einheitliches Zitier-Format für ALLE Bibelzitate (Standard- und Extra-Tool).
+ * Struktur (exakt, verbindlich):
+ *
+ *   «<Vers-Text>»
+ *   📖 Stelle: <Buch Kapitel,Vers(e)>
+ *   Übersetzung: <Name> | Jahr: <yyyy> | Herausgeber: <Publisher> | Konfession: <Konfession>
+ *   Quelle: <Zitation / URL>
+ *
+ * Fehlende Felder werden als «—» ausgegeben, damit die Struktur IMMER identisch bleibt.
+ */
+function formatVerseCitation(opts: {
+  text: string;
+  reference: string;
+  translationName: string;
+  meta: TranslationMeta | null;
+  sourceUrl?: string;
+  fallbackCitation?: string;
+}): string {
+  const dash = "—";
+  const year = opts.meta?.year ? String(opts.meta.year) : dash;
+  const publisher = opts.meta?.publisher || dash;
+  const confession = opts.meta?.confession || dash;
+  const source =
+    opts.meta?.citation ||
+    opts.fallbackCitation ||
+    opts.sourceUrl ||
+    dash;
+
+  return [
+    `«${opts.text.trim()}»`,
+    `📖 Stelle: ${opts.reference}`,
+    `Übersetzung: ${opts.translationName} | Jahr: ${year} | Herausgeber: ${publisher} | Konfession: ${confession}`,
+    `Quelle: ${source}`,
+  ].join("\n");
+}
+
 function extraCacheKey(translationCode: string, bookKey: string, chapter: number): string {
   return `${translationCode}|${bookKey.toLowerCase()}|${chapter}`;
 }
@@ -847,9 +907,14 @@ async function lookupBibleVerseExtra(
     ? `${result.book_canonical} ${chapter},${verseStart}-${verseEnd}`
     : `${result.book_canonical} ${chapter},${verseStart}`;
 
-  const blurb = formatMetaBlurb(result.meta);
-  const about = blurb ? `\nÜber die Übersetzung: ${blurb}` : "";
-  return `«${text.trim()}» — ${ref} (${result.translation_name}). Zitation: ${result.citation}${about}`;
+  return formatVerseCitation({
+    text,
+    reference: ref,
+    translationName: result.meta?.name ?? result.translation_name,
+    meta: result.meta,
+    sourceUrl: result.source_url,
+    fallbackCitation: result.citation,
+  });
 }
 
 async function searchBibleVerses(
@@ -1121,9 +1186,24 @@ Verwende dieses Tool, wenn du **theologisches Hintergrundwissen** brauchst:
 ### Gemeinsame Regeln
 1. Verwende den exakten Wortlaut bei Bibelzitaten. Ändere nichts am Text.
 2. Wenn ein Tool einen Fehler zurückgibt, paraphrasiere und kennzeichne mit «Sinngemäss:».
-3. Gib bei jedem Bibelzitat die Übersetzung an.
-4. Du kannst alle drei Tools in derselben Antwort verwenden.
-5. Theologisches Hintergrundwissen aus search_theology sollst du in eigenen Worten einbauen – nicht einfach kopieren.
+3. Du kannst alle drei Tools in derselben Antwort verwenden.
+4. Theologisches Hintergrundwissen aus search_theology sollst du in eigenen Worten einbauen – nicht einfach kopieren.
+
+### ✴️ EINHEITLICHES ZITIER-FORMAT (VERBINDLICH)
+Jedes wörtliche Bibelzitat – egal aus welchem Tool oder Trainingswissen – MUSST du exakt in dieser vierzeiligen Struktur wiedergeben, unverändert und ohne Ergänzungen innerhalb des Blocks:
+
+«<Vers-Text>»
+📖 Stelle: <Buch Kapitel,Vers(e)>
+Übersetzung: <Name> | Jahr: <yyyy> | Herausgeber: <Publisher> | Konfession: <Konfession>
+Quelle: <Zitation oder URL>
+
+Harte Regeln:
+- Die Tools `lookup_bible_verse` und `lookup_bible_verse_extra` liefern diesen Block BEREITS in korrekter Form zurück. Übernimm ihn **wörtlich** in deine Antwort – nicht umformulieren, nicht kürzen, nicht mit dem Fliesstext vermischen.
+- Setze den Block als eigenständigen Absatz (Leerzeile davor und danach). Im Fliesstext darfst du normale Kurzverweise wie «Joh 3,16» verwenden, aber sobald du zitierst, kommt der vollständige Block.
+- Fehlende Felder (z.B. unbekanntes Jahr) werden vom Tool als `—` geliefert – lass sie so stehen.
+- Mehrere Zitate in einer Antwort: jedes bekommt seinen eigenen Block.
+- Bei Zitaten aus Trainingswissen (nur bei unseren 5 DB-Übersetzungen zulässig) baue den Block manuell in exakt derselben Struktur. Für die 4 Metadaten-Felder nutze: **Lutherbibel 1912** → Jahr 1912, Deutsche Bibelgesellschaft, evangelisch-lutherisch · **Schlachter 2000** → 2000, Genfer Bibelgesellschaft, evangelisch-reformiert · **Elberfelder 2006** → 2006, SCM R. Brockhaus, evangelisch (Brüderbewegung) · **KJV** → 1611, Cambridge/Oxford, anglikanisch · **WEB** → 2000, Public Domain, ökumenisch.
+- QUELLEN-EINORDNUNG bleibt separat: Beim ersten Auftreten einer Übersetzung in deiner Antwort darfst du NACH dem Block einen einzelnen Kontextsatz anfügen (z.B. «Die Einheitsübersetzung ist die offizielle katholische Bibel im deutschsprachigen Raum.»). Nicht innerhalb des Blocks.
 
 ## Biblisches Wissen
 - Du kennst die Bibel umfassend: Altes und Neues Testament, Psalmen, Weisheitsliteratur, Evangelien, Briefe.
