@@ -359,7 +359,7 @@ function cleanVerseText(raw: string): string {
 }
 
 async function fetchAndStoreChapter(
-  supabase: ReturnType<typeof createClient>,
+  supabase: any,
   translationCode: string,
   bookInput: string,
   chapter: number,
