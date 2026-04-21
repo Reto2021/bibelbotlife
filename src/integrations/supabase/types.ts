@@ -117,33 +117,42 @@ export type Database = {
       }
       bible_chapter_fetch_log: {
         Row: {
+          attempts: number
           book_number: number
           chapter: number
           error_message: string | null
           fetched_at: string
           id: string
+          last_error_code: string | null
+          next_retry_at: string | null
           source_url: string | null
           status: string
           translation: string
           verse_count: number
         }
         Insert: {
+          attempts?: number
           book_number: number
           chapter: number
           error_message?: string | null
           fetched_at?: string
           id?: string
+          last_error_code?: string | null
+          next_retry_at?: string | null
           source_url?: string | null
           status?: string
           translation: string
           verse_count?: number
         }
         Update: {
+          attempts?: number
           book_number?: number
           chapter?: number
           error_message?: string | null
           fetched_at?: string
           id?: string
+          last_error_code?: string | null
+          next_retry_at?: string | null
           source_url?: string | null
           status?: string
           translation?: string
