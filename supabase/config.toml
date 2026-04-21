@@ -23,3 +23,5 @@ project_id = "swsthxftugjqznqjcfpk"
     verify_jwt = false
   [functions.bible-extra-seed-nt]
     verify_jwt = false
+  [functions.bible-extra-seed-status]
+    verify_jwt = false
