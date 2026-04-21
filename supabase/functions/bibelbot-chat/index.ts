@@ -668,6 +668,110 @@ const VALIDATE_REFERENCE_TOOL = {
   },
 };
 
+// ── Extra-Translation Verse Cache ────────────────────────────────
+// Zweistufig:
+//  1) Module-Level LRU mit TTL (überlebt warme Edge-Function-Invocations).
+//  2) Pro Request wird derselbe Key niemals doppelt aufgelöst (dedupe via in-flight Map).
+// Schlüssel: `${translationCode}|${bookNumber}|${chapter}` → komplettes Kapitel.
+// Einzelvers-Slicing passiert danach in-memory, ohne erneuten Roundtrip.
+
+type CachedChapter = {
+  verses: { verse: number; text: string }[];
+  book_canonical: string;
+  translation_name: string;
+  citation: string;
+  source_url: string;
+  storedAt: number;
+};
+
+const EXTRA_CACHE_TTL_MS = 1000 * 60 * 60 * 6; // 6h — geschützte Bibeln ändern sich nicht
+const EXTRA_CACHE_MAX_ENTRIES = 500; // ~500 Kapitel im RAM, reicht dicke
+const extraChapterCache = new Map<string, CachedChapter>();
+const extraChapterInFlight = new Map<string, Promise<CachedChapter | { error: string }>>();
+
+function extraCacheKey(translationCode: string, bookKey: string, chapter: number): string {
+  return `${translationCode}|${bookKey.toLowerCase()}|${chapter}`;
+}
+
+function readFromExtraCache(key: string): CachedChapter | null {
+  const hit = extraChapterCache.get(key);
+  if (!hit) return null;
+  if (Date.now() - hit.storedAt > EXTRA_CACHE_TTL_MS) {
+    extraChapterCache.delete(key);
+    return null;
+  }
+  // LRU-Refresh
+  extraChapterCache.delete(key);
+  extraChapterCache.set(key, hit);
+  return hit;
+}
+
+function writeToExtraCache(key: string, value: CachedChapter): void {
+  if (extraChapterCache.size >= EXTRA_CACHE_MAX_ENTRIES) {
+    const oldestKey = extraChapterCache.keys().next().value;
+    if (oldestKey) extraChapterCache.delete(oldestKey);
+  }
+  extraChapterCache.set(key, value);
+}
+
+async function fetchChapterViaExtraFn(
+  translationCode: string,
+  book: string,
+  chapter: number,
+): Promise<CachedChapter | { error: string }> {
+  const key = extraCacheKey(translationCode, book, chapter);
+
+  // 1) RAM-Cache
+  const cached = readFromExtraCache(key);
+  if (cached) {
+    console.log(`[extra-cache] HIT ${key}`);
+    return cached;
+  }
+
+  // 2) In-Flight-Dedupe (zwei Tool-Calls im selben Turn auf dieselbe Stelle → nur 1 Request)
+  const inflight = extraChapterInFlight.get(key);
+  if (inflight) {
+    console.log(`[extra-cache] COALESCE ${key}`);
+    return inflight;
+  }
+
+  const promise = (async (): Promise<CachedChapter | { error: string }> => {
+    try {
+      // Kompletts Kapitel holen (ohne verse_start/_end) → maximal cacheable
+      const resp = await fetch(`${Deno.env.get("SUPABASE_URL")}/functions/v1/bible-extra-fetch`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")}`,
+        },
+        body: JSON.stringify({ translation: translationCode, book, chapter }),
+      });
+      const data = await resp.json();
+      if (!resp.ok) return { error: data?.error ?? "unbekannt" };
+
+      const payload: CachedChapter = {
+        verses: (data.verses ?? []) as { verse: number; text: string }[],
+        book_canonical: data.book ?? book,
+        translation_name: data.translation_name ?? translationCode,
+        citation: data.citation ?? "",
+        source_url: data.source_url ?? "",
+        storedAt: Date.now(),
+      };
+      writeToExtraCache(key, payload);
+      console.log(`[extra-cache] STORE ${key} (dbCached=${data.cached === true}, verses=${payload.verses.length})`);
+      return payload;
+    } catch (e: any) {
+      return { error: `Fetch fehlgeschlagen: ${e.message}` };
+    } finally {
+      // in-flight immer aufräumen
+      extraChapterInFlight.delete(key);
+    }
+  })();
+
+  extraChapterInFlight.set(key, promise);
+  return promise;
+}
+
 async function lookupBibleVerseExtra(
   translationCode: string,
   book: string,
@@ -675,28 +779,19 @@ async function lookupBibleVerseExtra(
   verseStart: number,
   verseEnd?: number,
 ): Promise<string> {
-  try {
-    const resp = await fetch(`${Deno.env.get("SUPABASE_URL")}/functions/v1/bible-extra-fetch`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")}`,
-      },
-      body: JSON.stringify({ translation: translationCode, book, chapter, verse_start: verseStart, verse_end: verseEnd }),
-    });
-    const data = await resp.json();
-    if (!resp.ok) return `Fehler: ${data?.error ?? "unbekannt"}`;
-    const verses = (data.verses ?? []) as { verse: number; text: string }[];
-    if (verses.length === 0) return `Keine Verse gefunden für ${book} ${chapter},${verseStart}.`;
-    const limited = verses.slice(0, 7);
-    const text = limited.map((v) => `${v.verse} ${v.text}`).join(" ");
-    const ref = verseEnd && verseEnd !== verseStart
-      ? `${data.book} ${chapter},${verseStart}-${verseEnd}`
-      : `${data.book} ${chapter},${verseStart}`;
-    return `«${text.trim()}» — ${ref} (${data.translation_name}). Zitation: ${data.citation}`;
-  } catch (e: any) {
-    return `Fehler beim Nachschlagen: ${e.message}`;
-  }
+  const result = await fetchChapterViaExtraFn(translationCode, book, chapter);
+  if ("error" in result) return `Fehler: ${result.error}`;
+
+  const end = verseEnd ?? verseStart;
+  const slice = result.verses.filter((v) => v.verse >= verseStart && v.verse <= end);
+  if (slice.length === 0) return `Keine Verse gefunden für ${book} ${chapter},${verseStart}.`;
+
+  const limited = slice.slice(0, 7); // Zitat-Hardlimit gegen Urheberrecht
+  const text = limited.map((v) => `${v.verse} ${v.text}`).join(" ");
+  const ref = verseEnd && verseEnd !== verseStart
+    ? `${result.book_canonical} ${chapter},${verseStart}-${verseEnd}`
+    : `${result.book_canonical} ${chapter},${verseStart}`;
+  return `«${text.trim()}» — ${ref} (${result.translation_name}). Zitation: ${result.citation}`;
 }
 
 async function searchBibleVerses(
