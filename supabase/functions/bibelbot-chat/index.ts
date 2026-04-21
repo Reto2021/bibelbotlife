@@ -907,9 +907,14 @@ async function lookupBibleVerseExtra(
     ? `${result.book_canonical} ${chapter},${verseStart}-${verseEnd}`
     : `${result.book_canonical} ${chapter},${verseStart}`;
 
-  const blurb = formatMetaBlurb(result.meta);
-  const about = blurb ? `\nÜber die Übersetzung: ${blurb}` : "";
-  return `«${text.trim()}» — ${ref} (${result.translation_name}). Zitation: ${result.citation}${about}`;
+  return formatVerseCitation({
+    text,
+    reference: ref,
+    translationName: result.meta?.name ?? result.translation_name,
+    meta: result.meta,
+    sourceUrl: result.source_url,
+    fallbackCitation: result.citation,
+  });
 }
 
 async function searchBibleVerses(
