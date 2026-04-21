@@ -795,13 +795,8 @@ function formatVerseCitation(opts: {
   ].join("\n");
 }
 
-function extraCacheKey(translationCode: string, bookKey: string, chapter: number, verseStart?: number, verseEnd?: number): string {
-  const base = `${translationCode}|${bookKey.toLowerCase()}|${chapter}`;
-  if (typeof verseStart === "number") {
-    const end = verseEnd ?? verseStart;
-    return `${base}|${verseStart}-${end}`;
-  }
-  return base;
+function extraCacheKey(translationCode: string, bookKey: string, chapter: number): string {
+  return `${translationCode}|${bookKey.toLowerCase()}|${chapter}`;
 }
 
 function readFromExtraCache(key: string): CachedChapter | null {
@@ -825,36 +820,12 @@ function writeToExtraCache(key: string, value: CachedChapter): void {
   extraChapterCache.set(key, value);
 }
 
-/**
- * Holt einen Zitat-Slice (für restricted) oder ein komplettes Kapitel (für public)
- * aus `bible-extra-fetch`. Bei restricted werden ausschließlich die angefragten
- * Einzelverse geholt und gecached — niemals das gesamte Kapitel.
- */
 async function fetchChapterViaExtraFn(
   translationCode: string,
   book: string,
   chapter: number,
-  opts: { verseStart?: number; verseEnd?: number } = {},
 ): Promise<CachedChapter | { error: string }> {
-  const supabase = createClient(
-    Deno.env.get("SUPABASE_URL")!,
-    Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
-  );
-
-  // Meta vorab, um restricted zu erkennen
-  const meta = await getTranslationMeta(supabase, translationCode);
-  const isRestricted = !!meta?.is_restricted;
-
-  // Restricted: verse_start Pflicht, Snippet-Cache-Key
-  if (isRestricted && (typeof opts.verseStart !== "number" || opts.verseStart < 1)) {
-    return { error: "Für geschützte Übersetzungen ist verse_start erforderlich (Kurzzitat-Modus)." };
-  }
-
-  const key = extraCacheKey(
-    translationCode, book, chapter,
-    isRestricted ? opts.verseStart : undefined,
-    isRestricted ? opts.verseEnd : undefined,
-  );
+  const key = extraCacheKey(translationCode, book, chapter);
 
   // 1) RAM-Cache
   const cached = readFromExtraCache(key);
@@ -863,7 +834,7 @@ async function fetchChapterViaExtraFn(
     return cached;
   }
 
-  // 2) In-Flight-Dedupe
+  // 2) In-Flight-Dedupe (zwei Tool-Calls im selben Turn auf dieselbe Stelle → nur 1 Request)
   const inflight = extraChapterInFlight.get(key);
   if (inflight) {
     console.log(`[extra-cache] COALESCE ${key}`);
@@ -872,23 +843,23 @@ async function fetchChapterViaExtraFn(
 
   const promise = (async (): Promise<CachedChapter | { error: string }> => {
     try {
-      const body: Record<string, unknown> = { translation: translationCode, book, chapter };
-      if (isRestricted) {
-        body.verse_start = opts.verseStart;
-        if (typeof opts.verseEnd === "number") body.verse_end = opts.verseEnd;
-      } else if (typeof opts.verseStart === "number") {
-        body.verse_start = opts.verseStart;
-        if (typeof opts.verseEnd === "number") body.verse_end = opts.verseEnd;
-      }
+      const supabase = createClient(
+        Deno.env.get("SUPABASE_URL")!,
+        Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
+      );
 
-      const resp = await fetch(`${Deno.env.get("SUPABASE_URL")}/functions/v1/bible-extra-fetch`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")}`,
-        },
-        body: JSON.stringify(body),
-      });
+      // Kapitel + Meta parallel holen
+      const [resp, meta] = await Promise.all([
+        fetch(`${Deno.env.get("SUPABASE_URL")}/functions/v1/bible-extra-fetch`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")}`,
+          },
+          body: JSON.stringify({ translation: translationCode, book, chapter }),
+        }),
+        getTranslationMeta(supabase, translationCode),
+      ]);
 
       const data = await resp.json();
       if (!resp.ok) return { error: data?.error ?? "unbekannt" };
@@ -903,7 +874,7 @@ async function fetchChapterViaExtraFn(
         storedAt: Date.now(),
       };
       writeToExtraCache(key, payload);
-      console.log(`[extra-cache] STORE ${key} (mode=${data.snippet_mode ?? "full"}, verses=${payload.verses.length})`);
+      console.log(`[extra-cache] STORE ${key} (dbCached=${data.cached === true}, verses=${payload.verses.length})`);
       return payload;
     } catch (e: any) {
       return { error: `Fetch fehlgeschlagen: ${e.message}` };
@@ -923,7 +894,7 @@ async function lookupBibleVerseExtra(
   verseStart: number,
   verseEnd?: number,
 ): Promise<string> {
-  const result = await fetchChapterViaExtraFn(translationCode, book, chapter, { verseStart, verseEnd });
+  const result = await fetchChapterViaExtraFn(translationCode, book, chapter);
   if ("error" in result) return `Fehler: ${result.error}`;
 
   const end = verseEnd ?? verseStart;
