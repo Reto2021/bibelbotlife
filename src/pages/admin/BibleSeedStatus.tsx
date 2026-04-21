@@ -118,6 +118,73 @@ export default function BibleSeedStatus() {
     return () => clearInterval(id);
   }, [lastFetched]);
 
+  // Auto-Retry-Loop: ruft bible-extra-seed-nt wiederholt auf, bis keine
+  // fälligen Retries mehr offen sind oder Abort gedrückt wurde.
+  const runRetryUntilDone = useCallback(async (translation: string | null) => {
+    const label = translation ?? "ALL";
+    setRetryRunning(label);
+    setRetryAbort(false);
+    setRetryProgress({ rounds: 0, processed: 0, remaining: 0 });
+
+    let totalProcessed = 0;
+    let abort = false;
+    const abortRef = { current: false };
+    // Mini-Trick: Polling für Abort-Flag
+    const interval = setInterval(() => {
+      setRetryAbort((v) => { abortRef.current = v; return v; });
+    }, 200);
+
+    try {
+      for (let round = 1; round <= RETRY_MAX_ROUNDS; round++) {
+        if (abortRef.current) { abort = true; break; }
+
+        const payload: Record<string, unknown> = {
+          retry_mode: "only",
+          batch_size: 50,
+        };
+        if (translation) payload.translations = [translation];
+
+        const { data: result, error: fnErr } = await supabase.functions.invoke(
+          "bible-extra-seed-nt",
+          { method: "POST", body: payload },
+        );
+        if (fnErr) throw fnErr;
+
+        const r = result as { processed: number; remaining: number; results?: Array<{ status: string }> };
+        const okCount = (r.results ?? []).filter((x) => x.status === "ok" || x.status === "recovered" || x.status === "cached").length;
+        totalProcessed += r.processed ?? 0;
+        setRetryProgress({ rounds: round, processed: totalProcessed, remaining: r.remaining ?? 0 });
+
+        // Status live nachziehen
+        await load();
+
+        // Abbruchbedingung: nichts mehr verarbeitet UND keine OK-Treffer → keine
+        // fälligen Retries mehr (oder alle erschöpft).
+        if ((r.processed ?? 0) === 0) break;
+        // Wenn gar nichts mehr erfolgreich war, aber processed>0 (alle re-failed),
+        // einmal Pause und nochmal probieren – Backoff gibt sie später wieder frei.
+        if (okCount === 0) break;
+
+        // kleine Pause zwischen Runden
+        await new Promise((res) => setTimeout(res, 500));
+      }
+
+      if (abort) {
+        toast.info(`Retry abgebrochen für ${label} (${totalProcessed} Kapitel verarbeitet)`);
+      } else {
+        toast.success(`Retry fertig für ${label}: ${totalProcessed} Kapitel verarbeitet`);
+      }
+    } catch (e: any) {
+      toast.error(`Retry-Fehler: ${e?.message ?? "Unbekannt"}`);
+    } finally {
+      clearInterval(interval);
+      setRetryRunning(null);
+      setRetryAbort(false);
+      // letzter Refresh
+      load();
+    }
+  }, [load]);
+
   const totals = data?.totals;
   const progress = useMemo(() => {
     if (!totals || totals.tracked_chapters === 0) return 0;
