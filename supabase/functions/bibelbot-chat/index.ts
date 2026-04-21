@@ -433,7 +433,63 @@ function buildBibleTools(lang: string) {
     }
   };
 
-  return { BIBLE_LOOKUP_TOOL, BIBLE_SEARCH_TOOL };
+  const EXTRA_TRANSLATION_CODES = [
+    "HRD", "GRU", "EU", "ZB", "ELB",
+    "LUT2017", "MENG", "NLB", "HFA", "GNB", "BB", "NEUE", "NGUE",
+    "NWT", "TUR", "BR", "SLT1951", "LU1545", "HER", "MNT", "PAT",
+  ];
+
+  const BIBLE_LOOKUP_EXTRA_TOOL = {
+    type: "function" as const,
+    function: {
+      name: "lookup_bible_verse_extra",
+      description: "Schlägt Verse in einer der zusätzlichen deutschen Bibelübersetzungen nach (Henne-Rösch, Grünewald, Einheitsübersetzung, Zürcher, Luther 2017, Menge, Hoffnung für Alle, Gute Nachricht, BasisBibel, NeÜ, Neue Genfer, Buber-Rosenzweig, Tur-Sinai u.a.). Quelle: bibel.github.io. Liefert die wissenschaftliche Zitation mit. WICHTIG: aus geschützten Übersetzungen nur 1 Perikope (max. 3-7 Verse) im Antworttext zitieren, immer mit Quellenangabe.",
+      parameters: {
+        type: "object",
+        properties: {
+          translation_code: { type: "string", enum: EXTRA_TRANSLATION_CODES, description: "Übersetzungs-Code, z.B. 'EU', 'HRD', 'BR'" },
+          book: { type: "string", description: "Buchname auf Deutsch, z.B. 'Johannes', 'Psalm', '1. Mose'" },
+          chapter: { type: "number" },
+          verse_start: { type: "number" },
+          verse_end: { type: "number", description: "Optional, max. 6 Verse Differenz (Zitatrecht)" },
+        },
+        required: ["translation_code", "book", "chapter", "verse_start"],
+      },
+    },
+  };
+
+  return { BIBLE_LOOKUP_TOOL, BIBLE_SEARCH_TOOL, BIBLE_LOOKUP_EXTRA_TOOL };
+}
+
+async function lookupBibleVerseExtra(
+  translationCode: string,
+  book: string,
+  chapter: number,
+  verseStart: number,
+  verseEnd?: number,
+): Promise<string> {
+  try {
+    const resp = await fetch(`${Deno.env.get("SUPABASE_URL")}/functions/v1/bible-extra-fetch`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")}`,
+      },
+      body: JSON.stringify({ translation: translationCode, book, chapter, verse_start: verseStart, verse_end: verseEnd }),
+    });
+    const data = await resp.json();
+    if (!resp.ok) return `Fehler: ${data?.error ?? "unbekannt"}`;
+    const verses = (data.verses ?? []) as { verse: number; text: string }[];
+    if (verses.length === 0) return `Keine Verse gefunden für ${book} ${chapter},${verseStart}.`;
+    const limited = verses.slice(0, 7);
+    const text = limited.map((v) => `${v.verse} ${v.text}`).join(" ");
+    const ref = verseEnd && verseEnd !== verseStart
+      ? `${data.book} ${chapter},${verseStart}-${verseEnd}`
+      : `${data.book} ${chapter},${verseStart}`;
+    return `«${text.trim()}» — ${ref} (${data.translation_name}). Zitation: ${data.citation}`;
+  } catch (e: any) {
+    return `Fehler beim Nachschlagen: ${e.message}`;
+  }
 }
 
 async function searchBibleVerses(
@@ -685,7 +741,13 @@ Verwende dieses Tool, wenn du **thematisch passende Verse** finden willst, aber 
 - Suche auch proaktiv nach Versen, die zum Gesprächsthema passen!
 - Verfügbare Übersetzungen: luther1912, elberfelder, schlachter2000, kjv, web
 
-### 3. «search_theology» – Theologisches Hintergrundwissen
+### 3. «lookup_bible_verse_extra» – Zusätzliche Übersetzungen (bibel.github.io)
+Verwende dieses Tool, wenn der Nutzer ausdrücklich nach einer bestimmten Übersetzung fragt, die nicht in den Standard-Tools liegt – z.B. Einheitsübersetzung (EU), Zürcher (ZB), Luther 2017 (LUT2017), Hoffnung für Alle (HFA), Gute Nachricht (GNB), BasisBibel (BB), Menge (MENG), Henne-Rösch (HRD, gemeinfrei kath.), Grünewald (GRU, gemeinfrei kath.), Buber-Rosenzweig (BR, jüdisch AT), Tur-Sinai (TUR, jüdisch AT), Neues Leben (NLB), NeÜ, Neue Genfer (NGUE), Schlachter 1951 (SLT1951), Luther 1545 (LU1545), Herder (HER), Münchener NT (MNT), Pattloch (PAT), Neue-Welt-Übersetzung (NWT, theologisch umstritten – nur auf Nachfrage, mit Hinweis).
+- ZITAT-LIMIT: aus geschützten Übersetzungen pro Antwort höchstens EINE Perikope (3-7 Verse). Niemals ganze Kapitel ausgeben. Bei längerem Bedarf paraphrasieren.
+- Bei jedem Zitat IMMER die mitgelieferte wissenschaftliche Zitation am Ende nennen.
+- Nutzer kann diese Übersetzungen NICHT direkt in der UI durchsuchen – sie dienen nur als Vergleichs-/Vertiefungs-Kontext im Gespräch.
+
+### 4. «search_theology» – Theologisches Hintergrundwissen
 Verwende dieses Tool, wenn du **theologisches Hintergrundwissen** brauchst:
 - Begriffserklärungen (Gnade, Trinität, Sakrament, etc.)
 - Konfessionsunterschiede (reformiert vs. lutherisch vs. katholisch)
@@ -1276,7 +1338,7 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
             { role: "system", content: systemPrompt },
             ...finalMessages,
           ],
-          tools: [bibleTools.BIBLE_LOOKUP_TOOL, bibleTools.BIBLE_SEARCH_TOOL, THEOLOGY_SEARCH_TOOL],
+          tools: [bibleTools.BIBLE_LOOKUP_TOOL, bibleTools.BIBLE_SEARCH_TOOL, bibleTools.BIBLE_LOOKUP_EXTRA_TOOL, THEOLOGY_SEARCH_TOOL],
         }),
       }
     );
@@ -1354,6 +1416,22 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
             } catch (e) {
               console.error("Theology search error:", e);
               return { id: tc.id, result: "Fehler bei der theologischen Suche." };
+            }
+          }
+          if (tc.function.name === "lookup_bible_verse_extra") {
+            try {
+              const args = JSON.parse(tc.function.arguments);
+              const result = await lookupBibleVerseExtra(
+                args.translation_code,
+                args.book,
+                args.chapter,
+                args.verse_start,
+                args.verse_end,
+              );
+              return { id: tc.id, result };
+            } catch (e) {
+              console.error("Extra lookup error:", e);
+              return { id: tc.id, result: "Fehler beim Nachschlagen in zusätzlicher Übersetzung." };
             }
           }
           return { id: tc.id, result: "Unbekanntes Tool." };

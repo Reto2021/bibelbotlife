@@ -115,6 +115,96 @@ export type Database = {
         }
         Relationships: []
       }
+      bible_chapter_fetch_log: {
+        Row: {
+          book_number: number
+          chapter: number
+          error_message: string | null
+          fetched_at: string
+          id: string
+          source_url: string | null
+          status: string
+          translation: string
+          verse_count: number
+        }
+        Insert: {
+          book_number: number
+          chapter: number
+          error_message?: string | null
+          fetched_at?: string
+          id?: string
+          source_url?: string | null
+          status?: string
+          translation: string
+          verse_count?: number
+        }
+        Update: {
+          book_number?: number
+          chapter?: number
+          error_message?: string | null
+          fetched_at?: string
+          id?: string
+          source_url?: string | null
+          status?: string
+          translation?: string
+          verse_count?: number
+        }
+        Relationships: []
+      }
+      bible_translation_meta: {
+        Row: {
+          citation: string
+          code: string
+          confession: string | null
+          created_at: string
+          description: string | null
+          is_restricted: boolean
+          language: string
+          name: string
+          publisher: string | null
+          rights_status: string
+          source_url: string | null
+          testaments: string[]
+          translators: string | null
+          updated_at: string
+          year: number | null
+        }
+        Insert: {
+          citation: string
+          code: string
+          confession?: string | null
+          created_at?: string
+          description?: string | null
+          is_restricted?: boolean
+          language?: string
+          name: string
+          publisher?: string | null
+          rights_status?: string
+          source_url?: string | null
+          testaments?: string[]
+          translators?: string | null
+          updated_at?: string
+          year?: number | null
+        }
+        Update: {
+          citation?: string
+          code?: string
+          confession?: string | null
+          created_at?: string
+          description?: string | null
+          is_restricted?: boolean
+          language?: string
+          name?: string
+          publisher?: string | null
+          rights_status?: string
+          source_url?: string | null
+          testaments?: string[]
+          translators?: string | null
+          updated_at?: string
+          year?: number | null
+        }
+        Relationships: []
+      }
       bible_verses: {
         Row: {
           book: string
@@ -153,6 +243,53 @@ export type Database = {
           verse?: number
         }
         Relationships: []
+      }
+      bible_verses_restricted: {
+        Row: {
+          book: string
+          book_number: number
+          chapter: number
+          fetched_at: string
+          id: string
+          language: string
+          source_url: string | null
+          text: string
+          translation: string
+          verse: number
+        }
+        Insert: {
+          book: string
+          book_number: number
+          chapter: number
+          fetched_at?: string
+          id?: string
+          language?: string
+          source_url?: string | null
+          text: string
+          translation: string
+          verse: number
+        }
+        Update: {
+          book?: string
+          book_number?: number
+          chapter?: number
+          fetched_at?: string
+          id?: string
+          language?: string
+          source_url?: string | null
+          text?: string
+          translation?: string
+          verse?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "bible_verses_restricted_translation_fkey"
+            columns: ["translation"]
+            isOneToOne: false
+            referencedRelation: "bible_translation_meta"
+            referencedColumns: ["code"]
+          },
+        ]
       }
       ceremony_drafts: {
         Row: {
