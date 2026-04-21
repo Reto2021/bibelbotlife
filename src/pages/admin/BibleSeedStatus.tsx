@@ -13,6 +13,11 @@ import { toast } from "sonner";
 const REFRESH_MS = 30_000;
 const RETRY_MAX_ROUNDS = 50; // Sicherheitslimit gegen Endlosschleifen
 
+// Übersetzungen, deren Quelle (bibel.github.io) aktuell erreichbar ist.
+// Stand zuletzt geprüft: ELB, EU, NEUE, GRU, HER, PAT.
+// BB, ZB, LUT1984, SCH2000, HFA, GNB liefern aktuell 404.
+const REACHABLE_TRANSLATIONS = ["ELB", "EU", "NEUE", "GRU", "HER", "PAT"];
+
 type StatusResponse = {
   generated_at: string;
   filter: string | null;
