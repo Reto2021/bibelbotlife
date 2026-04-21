@@ -263,6 +263,21 @@ export default function BibleSeedStatus() {
               <><Play className="h-4 w-4 mr-2" /> Retry bis fertig {translationFilter ? `(${translationFilter})` : "(alle)"}</>
             )}
           </Button>
+          <Button
+            onClick={() => runRetryUntilDone(REACHABLE_TRANSLATIONS, {
+              mode: "auto",
+              label: `Erreichbare (${REACHABLE_TRANSLATIONS.join(", ")})`,
+            })}
+            disabled={!!retryRunning}
+            variant="default"
+            title="Seedet nur Übersetzungen, deren Quelle aktuell erreichbar ist"
+          >
+            {retryRunning?.startsWith("Erreichbare") ? (
+              <><Loader2 className="h-4 w-4 mr-2 animate-spin" /> Erreichbare laufen …</>
+            ) : (
+              <><Play className="h-4 w-4 mr-2" /> Nur erreichbare seeden ({REACHABLE_TRANSLATIONS.length})</>
+            )}
+          </Button>
           {retryRunning && (
             <Button variant="destructive" onClick={() => setRetryAbort(true)}>
               <StopCircle className="h-4 w-4 mr-2" /> Stop
