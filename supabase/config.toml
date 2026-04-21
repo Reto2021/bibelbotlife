@@ -19,3 +19,7 @@ project_id = "swsthxftugjqznqjcfpk"
     verify_jwt = false
   [functions.generate-sitemap]
     verify_jwt = false
+  [functions.bible-extra-fetch]
+    verify_jwt = false
+  [functions.bible-extra-seed-nt]
+    verify_jwt = true
