@@ -65,11 +65,13 @@ serve(async (req) => {
   //             "force" (alle Failures ignorieren Backoff)
   const retryMode: "auto" | "only" | "force" = (body.retry_mode ?? "auto") as any;
 
-  // Alle restricted Übersetzungen mit NT
-  const { data: metas, error: metaErr } = await supabase
+  // Übersetzungen mit NT laden. Wenn `translations` explizit übergeben wird,
+  // werden auch nicht-restricted Übersetzungen (z. B. gemeinfreie wie GRU) berücksichtigt.
+  let metaQuery = supabase
     .from("bible_translation_meta")
-    .select("code, is_restricted, testaments")
-    .eq("is_restricted", true);
+    .select("code, is_restricted, testaments");
+  if (!onlyTranslations) metaQuery = metaQuery.eq("is_restricted", true);
+  const { data: metas, error: metaErr } = await metaQuery;
   if (metaErr) {
     return new Response(JSON.stringify({ error: metaErr.message }), { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } });
   }
