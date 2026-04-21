@@ -1332,7 +1332,7 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
             { role: "system", content: systemPrompt },
             ...finalMessages,
           ],
-          tools: [bibleTools.BIBLE_LOOKUP_TOOL, bibleTools.BIBLE_SEARCH_TOOL, THEOLOGY_SEARCH_TOOL],
+          tools: [bibleTools.BIBLE_LOOKUP_TOOL, bibleTools.BIBLE_SEARCH_TOOL, bibleTools.BIBLE_LOOKUP_EXTRA_TOOL, THEOLOGY_SEARCH_TOOL],
         }),
       }
     );
@@ -1410,6 +1410,22 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
             } catch (e) {
               console.error("Theology search error:", e);
               return { id: tc.id, result: "Fehler bei der theologischen Suche." };
+            }
+          }
+          if (tc.function.name === "lookup_bible_verse_extra") {
+            try {
+              const args = JSON.parse(tc.function.arguments);
+              const result = await lookupBibleVerseExtra(
+                args.translation_code,
+                args.book,
+                args.chapter,
+                args.verse_start,
+                args.verse_end,
+              );
+              return { id: tc.id, result };
+            } catch (e) {
+              console.error("Extra lookup error:", e);
+              return { id: tc.id, result: "Fehler beim Nachschlagen in zusätzlicher Übersetzung." };
             }
           }
           return { id: tc.id, result: "Unbekanntes Tool." };
