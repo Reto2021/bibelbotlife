@@ -22,4 +22,4 @@ project_id = "swsthxftugjqznqjcfpk"
   [functions.bible-extra-fetch]
     verify_jwt = false
   [functions.bible-extra-seed-nt]
-    verify_jwt = true
+    verify_jwt = false
