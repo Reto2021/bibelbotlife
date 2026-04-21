@@ -433,7 +433,63 @@ function buildBibleTools(lang: string) {
     }
   };
 
-  return { BIBLE_LOOKUP_TOOL, BIBLE_SEARCH_TOOL };
+  const EXTRA_TRANSLATION_CODES = [
+    "HRD", "GRU", "EU", "ZB", "ELB",
+    "LUT2017", "MENG", "NLB", "HFA", "GNB", "BB", "NEUE", "NGUE",
+    "NWT", "TUR", "BR", "SLT1951", "LU1545", "HER", "MNT", "PAT",
+  ];
+
+  const BIBLE_LOOKUP_EXTRA_TOOL = {
+    type: "function" as const,
+    function: {
+      name: "lookup_bible_verse_extra",
+      description: "Schlägt Verse in einer der zusätzlichen deutschen Bibelübersetzungen nach (Henne-Rösch, Grünewald, Einheitsübersetzung, Zürcher, Luther 2017, Menge, Hoffnung für Alle, Gute Nachricht, BasisBibel, NeÜ, Neue Genfer, Buber-Rosenzweig, Tur-Sinai u.a.). Quelle: bibel.github.io. Liefert die wissenschaftliche Zitation mit. WICHTIG: aus geschützten Übersetzungen nur 1 Perikope (max. 3-7 Verse) im Antworttext zitieren, immer mit Quellenangabe.",
+      parameters: {
+        type: "object",
+        properties: {
+          translation_code: { type: "string", enum: EXTRA_TRANSLATION_CODES, description: "Übersetzungs-Code, z.B. 'EU', 'HRD', 'BR'" },
+          book: { type: "string", description: "Buchname auf Deutsch, z.B. 'Johannes', 'Psalm', '1. Mose'" },
+          chapter: { type: "number" },
+          verse_start: { type: "number" },
+          verse_end: { type: "number", description: "Optional, max. 6 Verse Differenz (Zitatrecht)" },
+        },
+        required: ["translation_code", "book", "chapter", "verse_start"],
+      },
+    },
+  };
+
+  return { BIBLE_LOOKUP_TOOL, BIBLE_SEARCH_TOOL, BIBLE_LOOKUP_EXTRA_TOOL };
+}
+
+async function lookupBibleVerseExtra(
+  translationCode: string,
+  book: string,
+  chapter: number,
+  verseStart: number,
+  verseEnd?: number,
+): Promise<string> {
+  try {
+    const resp = await fetch(`${Deno.env.get("SUPABASE_URL")}/functions/v1/bible-extra-fetch`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")}`,
+      },
+      body: JSON.stringify({ translation: translationCode, book, chapter, verse_start: verseStart, verse_end: verseEnd }),
+    });
+    const data = await resp.json();
+    if (!resp.ok) return `Fehler: ${data?.error ?? "unbekannt"}`;
+    const verses = (data.verses ?? []) as { verse: number; text: string }[];
+    if (verses.length === 0) return `Keine Verse gefunden für ${book} ${chapter},${verseStart}.`;
+    const limited = verses.slice(0, 7);
+    const text = limited.map((v) => `${v.verse} ${v.text}`).join(" ");
+    const ref = verseEnd && verseEnd !== verseStart
+      ? `${data.book} ${chapter},${verseStart}-${verseEnd}`
+      : `${data.book} ${chapter},${verseStart}`;
+    return `«${text.trim()}» — ${ref} (${data.translation_name}). Zitation: ${data.citation}`;
+  } catch (e: any) {
+    return `Fehler beim Nachschlagen: ${e.message}`;
+  }
 }
 
 async function searchBibleVerses(
