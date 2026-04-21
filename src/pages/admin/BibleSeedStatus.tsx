@@ -193,7 +193,7 @@ export default function BibleSeedStatus() {
             <Card>
               <CardHeader className="pb-2">
                 <CardTitle className="text-sm font-medium text-muted-foreground flex items-center gap-1">
-                  <Clock className="h-4 w-4 text-amber-500" /> Wartend / Geplant
+                  <Clock className="h-4 w-4 text-muted-foreground" /> Wartend / Geplant
                 </CardTitle>
               </CardHeader>
               <CardContent>
