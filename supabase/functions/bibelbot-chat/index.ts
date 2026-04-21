@@ -1198,9 +1198,9 @@ Jedes wörtliche Bibelzitat – egal aus welchem Tool oder Trainingswissen – M
 Quelle: <Zitation oder URL>
 
 Harte Regeln:
-- Die Tools `lookup_bible_verse` und `lookup_bible_verse_extra` liefern diesen Block BEREITS in korrekter Form zurück. Übernimm ihn **wörtlich** in deine Antwort – nicht umformulieren, nicht kürzen, nicht mit dem Fliesstext vermischen.
+- Die Tools \`lookup_bible_verse\` und \`lookup_bible_verse_extra\` liefern diesen Block BEREITS in korrekter Form zurück. Übernimm ihn **wörtlich** in deine Antwort – nicht umformulieren, nicht kürzen, nicht mit dem Fliesstext vermischen.
 - Setze den Block als eigenständigen Absatz (Leerzeile davor und danach). Im Fliesstext darfst du normale Kurzverweise wie «Joh 3,16» verwenden, aber sobald du zitierst, kommt der vollständige Block.
-- Fehlende Felder (z.B. unbekanntes Jahr) werden vom Tool als `—` geliefert – lass sie so stehen.
+- Fehlende Felder (z.B. unbekanntes Jahr) werden vom Tool als \`—\` geliefert – lass sie so stehen.
 - Mehrere Zitate in einer Antwort: jedes bekommt seinen eigenen Block.
 - Bei Zitaten aus Trainingswissen (nur bei unseren 5 DB-Übersetzungen zulässig) baue den Block manuell in exakt derselben Struktur. Für die 4 Metadaten-Felder nutze: **Lutherbibel 1912** → Jahr 1912, Deutsche Bibelgesellschaft, evangelisch-lutherisch · **Schlachter 2000** → 2000, Genfer Bibelgesellschaft, evangelisch-reformiert · **Elberfelder 2006** → 2006, SCM R. Brockhaus, evangelisch (Brüderbewegung) · **KJV** → 1611, Cambridge/Oxford, anglikanisch · **WEB** → 2000, Public Domain, ökumenisch.
 - QUELLEN-EINORDNUNG bleibt separat: Beim ersten Auftreten einer Übersetzung in deiner Antwort darfst du NACH dem Block einen einzelnen Kontextsatz anfügen (z.B. «Die Einheitsübersetzung ist die offizielle katholische Bibel im deutschsprachigen Raum.»). Nicht innerhalb des Blocks.
