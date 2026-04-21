@@ -376,12 +376,13 @@ export default function BibleSeedStatus() {
                       <TableHead className="text-right">Verse</TableHead>
                       <TableHead>Letzter Versuch</TableHead>
                       <TableHead>Letzter Fehler</TableHead>
+                      <TableHead className="text-right">Aktion</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
                     {data?.translations.length === 0 && (
                       <TableRow>
-                        <TableCell colSpan={9} className="text-center text-muted-foreground py-6">
+                        <TableCell colSpan={10} className="text-center text-muted-foreground py-6">
                           Noch keine Daten.
                         </TableCell>
                       </TableRow>
@@ -402,6 +403,20 @@ export default function BibleSeedStatus() {
                         <TableCell className="text-xs">{fmtTime(t.last_attempt_at)}</TableCell>
                         <TableCell className="text-xs">
                           {t.last_error_code ? <code>{t.last_error_code}</code> : "—"}
+                        </TableCell>
+                        <TableCell className="text-right">
+                          <Button
+                            size="sm"
+                            variant="outline"
+                            disabled={!!retryRunning}
+                            onClick={() => runRetryUntilDone(t.translation)}
+                          >
+                            {retryRunning === t.translation ? (
+                              <Loader2 className="h-3.5 w-3.5 animate-spin" />
+                            ) : (
+                              <><Play className="h-3.5 w-3.5 mr-1" /> Retry</>
+                            )}
+                          </Button>
                         </TableCell>
                       </TableRow>
                     ))}
