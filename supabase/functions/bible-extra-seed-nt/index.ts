@@ -48,31 +48,30 @@ const NT_BOOKS: { number: number; canonical: string; chapters: number }[] = [
 serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
 
-  console.log("[seed-nt] request received");
-  const authHeader = req.headers.get("Authorization") ?? "";
+  console.log("[seed-nt] v2 request received", req.method);
   const supabase = createClient(
     Deno.env.get("SUPABASE_URL")!,
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
   );
 
+  const authHeader = req.headers.get("Authorization") ?? "";
+  const token = authHeader.replace(/^Bearer\s+/i, "").trim();
   const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
-  const token = authHeader.replace("Bearer ", "");
-  const isServiceRole = token === serviceKey;
+  let authorized = token.length > 0 && token === serviceKey;
+  console.log("[seed-nt] tokenLen", token.length, "serviceKeyLen", serviceKey.length, "match", authorized);
 
-  if (!isServiceRole) {
-    if (!token) {
-      return new Response(JSON.stringify({ error: "Nicht autorisiert" }), { status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" } });
-    }
+  if (!authorized && token) {
     const { data: userData } = await supabase.auth.getUser(token);
     const userId = userData?.user?.id;
-    if (!userId) {
-      return new Response(JSON.stringify({ error: "Nicht autorisiert (kein User)" }), { status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" } });
+    if (userId) {
+      const { data: roleRows } = await supabase
+        .from("user_roles").select("role").eq("user_id", userId).eq("role", "admin");
+      authorized = !!roleRows && roleRows.length > 0;
     }
-    const { data: roleRows } = await supabase
-      .from("user_roles").select("role").eq("user_id", userId).eq("role", "admin");
-    if (!roleRows || roleRows.length === 0) {
-      return new Response(JSON.stringify({ error: "Nur Admins" }), { status: 403, headers: { ...corsHeaders, "Content-Type": "application/json" } });
-    }
+  }
+
+  if (!authorized) {
+    return new Response(JSON.stringify({ error: "Nicht autorisiert" }), { status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" } });
   }
 
   const body = await req.json().catch(() => ({}));
