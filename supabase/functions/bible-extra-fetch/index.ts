@@ -174,17 +174,146 @@ const BOOK_SLUG: Record<string, { slug: string; number: number; canonical: strin
 
 function resolveBook(input: string): { slug: string; number: number; canonical: string } | null {
   const key = input.trim().toLowerCase().replace(/\.|\s/g, "");
-  return BOOK_SLUG[key] ?? null;
+  const hit = BOOK_SLUG[key];
+  if (!hit) return null;
+  // slug ist nur noch ein "logischer" Default — der echte Pfad-Slug wird dynamisch ermittelt.
+  return hit;
 }
 
-// Übersetzungs-Code → Pfad-Segment auf bibel.github.io
-const TRANSLATION_PATH: Record<string, string> = {
-  HRD: "HRD", GRU: "GRU", NEUE: "NEUE", NGUE: "NGUE", HFA: "HFA", GNB: "GNB",
-  BB: "BB", LUT2017: "LUT2017", MENG: "MENG", NLB: "NLB", NWT: "NWT",
-  TUR: "TUR", BR: "BR", SLT1951: "SLT1951", LU1545: "LU1545",
-  HER: "HER", MNT: "MNT", PAT: "PAT", EU: "EU", ELB: "ELB", ZB: "ZB",
-  LU1912: "LU1912", SCH2000: "SCH2000",
+// Übersetzungs-Code → echter Pfad-Ordner auf bibel.github.io
+// Wird durch Scraping des Index bestätigt/ermittelt. Einträge hier dienen als
+// Fallback, wenn unser internes Kürzel vom Ordnernamen abweicht.
+const TRANSLATION_PATH_HINT: Record<string, string[]> = {
+  // code → Kandidaten-Ordner auf bibel.github.io, in Prioritätsreihenfolge
+  EU: ["EUe"],
+  ELB: ["ELB2006"],
+  ZB: ["ZUR2007", "ZUR1931"],
+  LU1912: ["LU1912"],
+  LUT1984: ["LUT1984"],
+  SCH2000: ["SCH2000"],
+  NEUE: ["NeUe"],
+  BB: ["BasisBibel"],
+  GNB: ["GNB"],
+  HFA: ["HFA"],
+  HRD: ["HRD"],
+  GRU: ["Gruenewald", "GRU"],
+  MENG: ["MENG"],
+  NLB: ["NLB"],
+  NWT: ["NeueWelt", "NWT"],
+  TUR: ["NHTS", "TUR"],
+  BR: ["BuberRosenzweig", "BR"],
+  SLT1951: ["SLT1951"],
+  LU1545: ["LU1545"],
+  HER: ["Herder", "HER"],
+  MNT: ["MuenchenerNT", "MNT"],
+  PAT: ["Schoeningh", "PAT"],
+  NGUE: ["NGUE"],
 };
+
+// Cache: pro Übersetzung ein Mapping book_number → { testament: "ot"|"nt"|"meta", slug: string }
+type BookPathEntry = { testament: "ot" | "nt" | "meta"; slug: string };
+type TranslationIndex = {
+  pathFolder: string;              // echter Ordner auf bibel.github.io
+  byNumber: Record<number, BookPathEntry>;
+};
+const translationIndexCache = new Map<string, { index: TranslationIndex; ts: number }>();
+const INDEX_TTL_MS = 6 * 60 * 60 * 1000; // 6 Stunden
+
+// Heuristik: Buchnamen-Fragment aus URL-Slug (nach decodeURIComponent) einem book_number zuordnen.
+function inferBookNumberFromSlug(rawSlug: string): number | null {
+  const norm = rawSlug
+    .replace(/\.html$/i, "")
+    .replace(/_\d+$/, "")           // "_1" am Ende weg
+    .toLowerCase()
+    .replace(/\./g, "")
+    .replace(/\s+/g, "");
+  // Direkte Übereinstimmung im BOOK_SLUG-Lexikon
+  const direct = BOOK_SLUG[norm];
+  if (direct) return direct.number;
+
+  // Bekannte Varianten, die auf bibel.github.io vorkommen, aber nicht 1:1 in BOOK_SLUG sind
+  const aliases: Record<string, number> = {
+    "gen": 1, "1mose": 1,
+    "ex": 2, "2mose": 2,
+    "lev": 3, "3mose": 3,
+    "num": 4, "4mose": 4,
+    "dtn": 5, "5mose": 5,
+    "1kön": 11, "1koen": 11,
+    "2kön": 12, "2koen": 12,
+    "ijob": 18, "hiob": 18,
+    "koh": 21, "pred": 21,
+    "hld": 22, "hl": 22,
+    "ez": 26, "hes": 26,
+    "obd": 31, "ob": 31,
+    "jona": 32, "jon": 32,
+    "röm": 45, "roem": 45, "rom": 45,
+    // Deuterokanonische (werden vorerst ignoriert / kein Eintrag)
+  };
+  if (aliases[norm] != null) return aliases[norm];
+  return null;
+}
+
+async function loadTranslationIndex(translationCode: string): Promise<TranslationIndex | null> {
+  // 1) RAM-Cache
+  const cached = translationIndexCache.get(translationCode);
+  if (cached && Date.now() - cached.ts < INDEX_TTL_MS) return cached.index;
+
+  const candidates = TRANSLATION_PATH_HINT[translationCode] ?? [translationCode];
+
+  for (const folder of candidates) {
+    const indexUrl = `https://bibel.github.io/${folder}/`;
+    try {
+      const resp = await fetch(indexUrl, {
+        headers: { "User-Agent": "BibleBot.Life/1.0 (+https://biblebot.life)" },
+      });
+      if (!resp.ok) {
+        console.log(`[index] ${indexUrl} → HTTP ${resp.status}, Kandidat übersprungen`);
+        continue;
+      }
+      const html = await resp.text();
+      // Links können relativ ("ot/Gen_1.html") oder absolut ("https://bibel.github.io/EUe/ot/Gen_1.html") sein
+      const linkRe = new RegExp(
+        `href="(?:https://bibel\\.github\\.io/${folder}/|/${folder}/|)(ot|nt|meta)/([^"/#?]+?)_(\\d+)\\.html"`,
+        "gi",
+      );
+      const byNumber: Record<number, BookPathEntry> = {};
+      let m: RegExpExecArray | null;
+      const seen = new Set<string>();
+      while ((m = linkRe.exec(html)) !== null) {
+        const testament = m[1] as "ot" | "nt" | "meta";
+        const slugEncoded = m[2];
+        const slug = decodeURIComponent(slugEncoded);
+        const key = `${testament}/${slug}`;
+        if (seen.has(key)) continue;
+        seen.add(key);
+        if (testament === "meta") continue;
+        const bookNumber = inferBookNumberFromSlug(slug);
+        if (bookNumber == null) continue;
+        // Ersten Treffer pro book_number behalten (Index listet jedes Buch nur einmal zum 1. Kapitel)
+        if (!byNumber[bookNumber]) {
+          byNumber[bookNumber] = { testament, slug };
+        }
+      }
+
+      if (Object.keys(byNumber).length === 0) {
+        console.log(`[index] ${indexUrl} lieferte 0 Bücher, nächster Kandidat`);
+        continue;
+      }
+
+      const index: TranslationIndex = { pathFolder: folder, byNumber };
+      translationIndexCache.set(translationCode, { index, ts: Date.now() });
+      console.log(
+        `[index] ${translationCode} → /${folder}/, ${Object.keys(byNumber).length} Bücher erkannt`,
+      );
+      return index;
+    } catch (e) {
+      console.log(`[index] Fehler beim Laden ${indexUrl}:`, (e as Error).message);
+    }
+  }
+
+  console.error(`[index] Kein gültiger Index für ${translationCode} gefunden (Kandidaten: ${candidates.join(", ")})`);
+  return null;
+}
 
 // Parst HTML eines Kapitels in Verse.
 // bibel.github.io verwendet im Allgemeinen <div class="v" id="vN"><span class="vn">N</span> TEXT</div>
@@ -238,8 +367,21 @@ async function fetchAndStoreChapter(
   const book = resolveBook(bookInput);
   if (!book) return { ok: false, verses: [], source_url: "", book: null, cached: false, error: `Buch '${bookInput}' nicht erkannt.` };
 
-  const transPath = TRANSLATION_PATH[translationCode];
-  if (!transPath) return { ok: false, verses: [], source_url: "", book, cached: false, error: `Übersetzung '${translationCode}' nicht unterstützt.` };
+  // Dynamischen Index der Übersetzung laden (echter Ordnername + Buch-Slugs + Testament)
+  const index = await loadTranslationIndex(translationCode);
+  if (!index) {
+    return {
+      ok: false, verses: [], source_url: "", book, cached: false,
+      error: `Übersetzung '${translationCode}' nicht erreichbar (Index auf bibel.github.io nicht gefunden).`,
+    };
+  }
+  const pathEntry = index.byNumber[book.number];
+  if (!pathEntry) {
+    return {
+      ok: false, verses: [], source_url: `https://bibel.github.io/${index.pathFolder}/`, book, cached: false,
+      error: `Buch '${book.canonical}' (Nr. ${book.number}) ist in Übersetzung '${translationCode}' nicht enthalten.`,
+    };
+  }
 
   // Meta laden, um Ziel-Tabelle zu bestimmen
   const { data: meta } = await supabase
@@ -250,6 +392,9 @@ async function fetchAndStoreChapter(
   if (!meta) return { ok: false, verses: [], source_url: "", book, cached: false, error: `Keine Metadaten für '${translationCode}'.` };
 
   const targetTable = meta.is_restricted ? "bible_verses_restricted" : "bible_verses";
+
+  // URL dynamisch: https://bibel.github.io/<folder>/<ot|nt>/<slug>_<chapter>.html
+  const sourceUrl = `https://bibel.github.io/${index.pathFolder}/${pathEntry.testament}/${encodeURIComponent(pathEntry.slug)}_${chapter}.html`;
 
   // Cache prüfen
   const { data: existing } = await supabase
@@ -264,14 +409,13 @@ async function fetchAndStoreChapter(
     return {
       ok: true,
       verses: existing.map((r: any) => ({ verse: r.verse as number, text: r.text as string })),
-      source_url: `https://bibel.github.io/${transPath}/${book.slug}/${chapter}.html`,
+      source_url: sourceUrl,
       book,
       cached: true,
     };
   }
 
   // Scrape
-  const sourceUrl = `https://bibel.github.io/${transPath}/${book.slug}/${chapter}.html`;
   let html: string;
   try {
     const resp = await fetch(sourceUrl, { headers: { "User-Agent": "BibleBot.Life/1.0 (+https://biblebot.life)" } });
