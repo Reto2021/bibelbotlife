@@ -675,12 +675,25 @@ const VALIDATE_REFERENCE_TOOL = {
 // Schlüssel: `${translationCode}|${bookNumber}|${chapter}` → komplettes Kapitel.
 // Einzelvers-Slicing passiert danach in-memory, ohne erneuten Roundtrip.
 
+type TranslationMeta = {
+  code: string;
+  name: string;
+  year: number | null;
+  confession: string | null;
+  publisher: string | null;
+  translators: string | null;
+  description: string | null;
+  citation: string;
+  rights_status: string;
+};
+
 type CachedChapter = {
   verses: { verse: number; text: string }[];
   book_canonical: string;
   translation_name: string;
   citation: string;
   source_url: string;
+  meta: TranslationMeta | null;
   storedAt: number;
 };
 
@@ -688,6 +701,39 @@ const EXTRA_CACHE_TTL_MS = 1000 * 60 * 60 * 6; // 6h — geschützte Bibeln änd
 const EXTRA_CACHE_MAX_ENTRIES = 500; // ~500 Kapitel im RAM, reicht dicke
 const extraChapterCache = new Map<string, CachedChapter>();
 const extraChapterInFlight = new Map<string, Promise<CachedChapter | { error: string }>>();
+
+// Separater Meta-Cache (Translations ändern sich quasi nie → 24h TTL)
+const META_CACHE_TTL_MS = 1000 * 60 * 60 * 24;
+const translationMetaCache = new Map<string, { meta: TranslationMeta | null; storedAt: number }>();
+
+async function getTranslationMeta(
+  supabase: ReturnType<typeof createClient>,
+  translationCode: string,
+): Promise<TranslationMeta | null> {
+  const cached = translationMetaCache.get(translationCode);
+  if (cached && Date.now() - cached.storedAt < META_CACHE_TTL_MS) {
+    return cached.meta;
+  }
+  const { data } = await supabase
+    .from("bible_translation_meta")
+    .select("code, name, year, confession, publisher, translators, description, citation, rights_status")
+    .eq("code", translationCode)
+    .maybeSingle();
+  const meta = (data as TranslationMeta | null) ?? null;
+  translationMetaCache.set(translationCode, { meta, storedAt: Date.now() });
+  return meta;
+}
+
+function formatMetaBlurb(meta: TranslationMeta | null): string {
+  if (!meta) return "";
+  const parts: string[] = [];
+  if (meta.year) parts.push(`${meta.year}`);
+  if (meta.confession) parts.push(meta.confession);
+  if (meta.publisher) parts.push(meta.publisher);
+  const head = parts.length > 0 ? `${meta.name} (${parts.join(", ")})` : meta.name;
+  const tail = meta.description ? ` — ${meta.description}` : "";
+  return `${head}${tail}`.trim();
+}
 
 function extraCacheKey(translationCode: string, bookKey: string, chapter: number): string {
   return `${translationCode}|${bookKey.toLowerCase()}|${chapter}`;
@@ -737,24 +783,34 @@ async function fetchChapterViaExtraFn(
 
   const promise = (async (): Promise<CachedChapter | { error: string }> => {
     try {
-      // Kompletts Kapitel holen (ohne verse_start/_end) → maximal cacheable
-      const resp = await fetch(`${Deno.env.get("SUPABASE_URL")}/functions/v1/bible-extra-fetch`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")}`,
-        },
-        body: JSON.stringify({ translation: translationCode, book, chapter }),
-      });
+      const supabase = createClient(
+        Deno.env.get("SUPABASE_URL")!,
+        Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
+      );
+
+      // Kapitel + Meta parallel holen
+      const [resp, meta] = await Promise.all([
+        fetch(`${Deno.env.get("SUPABASE_URL")}/functions/v1/bible-extra-fetch`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")}`,
+          },
+          body: JSON.stringify({ translation: translationCode, book, chapter }),
+        }),
+        getTranslationMeta(supabase, translationCode),
+      ]);
+
       const data = await resp.json();
       if (!resp.ok) return { error: data?.error ?? "unbekannt" };
 
       const payload: CachedChapter = {
         verses: (data.verses ?? []) as { verse: number; text: string }[],
         book_canonical: data.book ?? book,
-        translation_name: data.translation_name ?? translationCode,
-        citation: data.citation ?? "",
+        translation_name: data.translation_name ?? meta?.name ?? translationCode,
+        citation: data.citation ?? meta?.citation ?? "",
         source_url: data.source_url ?? "",
+        meta,
         storedAt: Date.now(),
       };
       writeToExtraCache(key, payload);
@@ -763,7 +819,6 @@ async function fetchChapterViaExtraFn(
     } catch (e: any) {
       return { error: `Fetch fehlgeschlagen: ${e.message}` };
     } finally {
-      // in-flight immer aufräumen
       extraChapterInFlight.delete(key);
     }
   })();
@@ -791,7 +846,10 @@ async function lookupBibleVerseExtra(
   const ref = verseEnd && verseEnd !== verseStart
     ? `${result.book_canonical} ${chapter},${verseStart}-${verseEnd}`
     : `${result.book_canonical} ${chapter},${verseStart}`;
-  return `«${text.trim()}» — ${ref} (${result.translation_name}). Zitation: ${result.citation}`;
+
+  const blurb = formatMetaBlurb(result.meta);
+  const about = blurb ? `\nÜber die Übersetzung: ${blurb}` : "";
+  return `«${text.trim()}» — ${ref} (${result.translation_name}). Zitation: ${result.citation}${about}`;
 }
 
 async function searchBibleVerses(
