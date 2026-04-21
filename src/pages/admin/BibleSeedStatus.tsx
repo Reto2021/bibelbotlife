@@ -125,8 +125,19 @@ export default function BibleSeedStatus() {
 
   // Auto-Retry-Loop: ruft bible-extra-seed-nt wiederholt auf, bis keine
   // fälligen Retries mehr offen sind oder Abort gedrückt wurde.
-  const runRetryUntilDone = useCallback(async (translation: string | null) => {
-    const label = translation ?? "ALL";
+  const runRetryUntilDone = useCallback(async (
+    translation: string | string[] | null,
+    opts?: { mode?: "auto" | "only" | "force"; label?: string },
+  ) => {
+    const list = Array.isArray(translation)
+      ? translation
+      : translation
+        ? [translation]
+        : null;
+    const label = opts?.label ?? (Array.isArray(translation)
+      ? `${translation.length} Übersetzungen`
+      : (translation ?? "ALL"));
+    const mode = opts?.mode ?? "auto";
     setRetryRunning(label);
     setRetryAbort(false);
     setRetryProgress({ rounds: 0, processed: 0, remaining: 0 });
@@ -144,10 +155,10 @@ export default function BibleSeedStatus() {
         if (abortRef.current) { abort = true; break; }
 
         const payload: Record<string, unknown> = {
-          retry_mode: "only",
+          retry_mode: mode,
           batch_size: 50,
         };
-        if (translation) payload.translations = [translation];
+        if (list && list.length > 0) payload.translations = list;
 
         const { data: result, error: fnErr } = await supabase.functions.invoke(
           "bible-extra-seed-nt",
