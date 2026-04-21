@@ -271,9 +271,9 @@ async function loadTranslationIndex(translationCode: string): Promise<Translatio
         continue;
       }
       const html = await resp.text();
-      // Links im Format /<folder>/ot/<slug>_<chapter>.html bzw. /<folder>/nt/...
+      // Links können relativ ("ot/Gen_1.html") oder absolut ("https://bibel.github.io/EUe/ot/Gen_1.html") sein
       const linkRe = new RegExp(
-        `href="(?:https://bibel\\.github\\.io)?/${folder}/(ot|nt|meta)/([^"/#?]+?)_(\\d+)\\.html"`,
+        `href="(?:https://bibel\\.github\\.io/${folder}/|/${folder}/|)(ot|nt|meta)/([^"/#?]+?)_(\\d+)\\.html"`,
         "gi",
       );
       const byNumber: Record<number, BookPathEntry> = {};
