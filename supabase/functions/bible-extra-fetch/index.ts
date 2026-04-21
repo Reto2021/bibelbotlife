@@ -485,6 +485,9 @@ serve(async (req) => {
     const chapter: number = Number(body.chapter);
     const verseStart: number | undefined = body.verse_start ? Number(body.verse_start) : undefined;
     const verseEnd: number | undefined = body.verse_end ? Number(body.verse_end) : undefined;
+    // Internes Flag: erlaubt dem Seeder, ein komplettes Kapitel zu befüllen/zurückzugeben.
+    // Ausserhalb des Seeders (insb. Chat) NIE setzen.
+    const allowFullChapter: boolean = body.allow_full_chapter === true;
 
     if (!translation || !book || !Number.isFinite(chapter) || chapter < 1) {
       return new Response(JSON.stringify({ error: "translation, book, chapter erforderlich" }), {
@@ -492,7 +495,30 @@ serve(async (req) => {
       });
     }
 
-    const result = await fetchAndStoreChapter(supabase, translation, book, chapter);
+    // Harte Zitat-Regel für geschützte Übersetzungen
+    const { data: metaEarly } = await supabase
+      .from("bible_translation_meta")
+      .select("is_restricted")
+      .eq("code", translation)
+      .maybeSingle();
+    const isRestricted = !!metaEarly?.is_restricted;
+
+    if (isRestricted && !allowFullChapter) {
+      if (!Number.isFinite(verseStart) || (verseStart as number) < 1) {
+        return new Response(JSON.stringify({
+          error: "Für geschützte Übersetzungen ist verse_start Pflicht (Kurzzitat-Modus).",
+        }), { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } });
+      }
+      const end = verseEnd ?? (verseStart as number);
+      const range = end - (verseStart as number) + 1;
+      if (range < 1 || range > 7) {
+        return new Response(JSON.stringify({
+          error: `Kurzzitat-Grenze: max. 7 Verse pro Anfrage (angefordert: ${range}).`,
+        }), { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } });
+      }
+    }
+
+    const result = await fetchAndStoreChapter(supabase, translation, book, chapter, { forceRetry: !!body.force_retry });
 
     if (!result.ok) {
       return new Response(JSON.stringify({ error: result.error, source_url: result.source_url }), {
@@ -500,9 +526,12 @@ serve(async (req) => {
       });
     }
 
-    // Optional: nur Bereich zurückgeben
+    // Slice: bei restricted IMMER (außer allow_full_chapter); bei public optional
     let verses = result.verses;
-    if (verseStart) {
+    if (isRestricted && !allowFullChapter) {
+      const end = verseEnd ?? (verseStart as number);
+      verses = verses.filter((v) => v.verse >= (verseStart as number) && v.verse <= end);
+    } else if (verseStart) {
       const end = verseEnd ?? verseStart;
       verses = verses.filter((v) => v.verse >= verseStart && v.verse <= end);
     }
@@ -524,10 +553,10 @@ serve(async (req) => {
         verses,
         source_url: result.source_url,
         cached: result.cached,
+        snippet_mode: isRestricted && !allowFullChapter ? "snippet" : "full",
       }),
       { headers: { ...corsHeaders, "Content-Type": "application/json" } },
     );
-  } catch (e: any) {
     console.error("bible-extra-fetch error:", e);
     return new Response(JSON.stringify({ error: e.message }), {
       status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" },
