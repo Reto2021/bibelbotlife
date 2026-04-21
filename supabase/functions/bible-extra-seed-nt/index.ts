@@ -120,7 +120,14 @@ serve(async (req) => {
           "Content-Type": "application/json",
           "Authorization": `Bearer ${Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")}`,
         },
-        body: JSON.stringify({ translation: w.translation, book: w.book.canonical, chapter: w.chapter }),
+        body: JSON.stringify({
+          translation: w.translation,
+          book: w.book.canonical,
+          chapter: w.chapter,
+          // Seeder benötigt kompletten Kapitel-Fetch, um die restricted-DB zu befüllen.
+          // Chat darf diesen Flag NIE setzen.
+          allow_full_chapter: true,
+        }),
       });
       const data = await resp.json().catch(() => ({}));
       if (resp.ok) {
