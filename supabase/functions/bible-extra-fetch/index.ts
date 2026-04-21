@@ -367,8 +367,21 @@ async function fetchAndStoreChapter(
   const book = resolveBook(bookInput);
   if (!book) return { ok: false, verses: [], source_url: "", book: null, cached: false, error: `Buch '${bookInput}' nicht erkannt.` };
 
-  const transPath = TRANSLATION_PATH[translationCode];
-  if (!transPath) return { ok: false, verses: [], source_url: "", book, cached: false, error: `Übersetzung '${translationCode}' nicht unterstützt.` };
+  // Dynamischen Index der Übersetzung laden (echter Ordnername + Buch-Slugs + Testament)
+  const index = await loadTranslationIndex(translationCode);
+  if (!index) {
+    return {
+      ok: false, verses: [], source_url: "", book, cached: false,
+      error: `Übersetzung '${translationCode}' nicht erreichbar (Index auf bibel.github.io nicht gefunden).`,
+    };
+  }
+  const pathEntry = index.byNumber[book.number];
+  if (!pathEntry) {
+    return {
+      ok: false, verses: [], source_url: `https://bibel.github.io/${index.pathFolder}/`, book, cached: false,
+      error: `Buch '${book.canonical}' (Nr. ${book.number}) ist in Übersetzung '${translationCode}' nicht enthalten.`,
+    };
+  }
 
   // Meta laden, um Ziel-Tabelle zu bestimmen
   const { data: meta } = await supabase
@@ -379,6 +392,9 @@ async function fetchAndStoreChapter(
   if (!meta) return { ok: false, verses: [], source_url: "", book, cached: false, error: `Keine Metadaten für '${translationCode}'.` };
 
   const targetTable = meta.is_restricted ? "bible_verses_restricted" : "bible_verses";
+
+  // URL dynamisch: https://bibel.github.io/<folder>/<ot|nt>/<slug>_<chapter>.html
+  const sourceUrl = `https://bibel.github.io/${index.pathFolder}/${pathEntry.testament}/${encodeURIComponent(pathEntry.slug)}_${chapter}.html`;
 
   // Cache prüfen
   const { data: existing } = await supabase
@@ -393,14 +409,13 @@ async function fetchAndStoreChapter(
     return {
       ok: true,
       verses: existing.map((r: any) => ({ verse: r.verse as number, text: r.text as string })),
-      source_url: `https://bibel.github.io/${transPath}/${book.slug}/${chapter}.html`,
+      source_url: sourceUrl,
       book,
       cached: true,
     };
   }
 
   // Scrape
-  const sourceUrl = `https://bibel.github.io/${transPath}/${book.slug}/${chapter}.html`;
   let html: string;
   try {
     const resp = await fetch(sourceUrl, { headers: { "User-Agent": "BibleBot.Life/1.0 (+https://biblebot.life)" } });
