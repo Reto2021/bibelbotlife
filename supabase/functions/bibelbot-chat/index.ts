@@ -461,6 +461,213 @@ function buildBibleTools(lang: string) {
   return { BIBLE_LOOKUP_TOOL, BIBLE_SEARCH_TOOL, BIBLE_LOOKUP_EXTRA_TOOL };
 }
 
+// ── Bibelstellen-Validierung ─────────────────────────────────────
+// Prüft via DB (bible_verses) ob Buch/Kapitel/Vers existiert.
+// Antwort enthält: exists, max_chapter, max_verse, suggestion, ambiguous flags.
+
+// Deutsche Buchnamen → book_number (Standard 66 Bücher)
+const BOOK_NUMBER_MAP: Record<string, { num: number; canonical: string }> = {
+  "1. mose": { num: 1, canonical: "1. Mose" }, "genesis": { num: 1, canonical: "1. Mose" },
+  "2. mose": { num: 2, canonical: "2. Mose" }, "exodus": { num: 2, canonical: "2. Mose" },
+  "3. mose": { num: 3, canonical: "3. Mose" }, "levitikus": { num: 3, canonical: "3. Mose" },
+  "4. mose": { num: 4, canonical: "4. Mose" }, "numeri": { num: 4, canonical: "4. Mose" },
+  "5. mose": { num: 5, canonical: "5. Mose" }, "deuteronomium": { num: 5, canonical: "5. Mose" },
+  "josua": { num: 6, canonical: "Josua" }, "richter": { num: 7, canonical: "Richter" },
+  "rut": { num: 8, canonical: "Rut" }, "ruth": { num: 8, canonical: "Rut" },
+  "1. samuel": { num: 9, canonical: "1. Samuel" }, "2. samuel": { num: 10, canonical: "2. Samuel" },
+  "1. könige": { num: 11, canonical: "1. Könige" }, "1. koenige": { num: 11, canonical: "1. Könige" },
+  "2. könige": { num: 12, canonical: "2. Könige" }, "2. koenige": { num: 12, canonical: "2. Könige" },
+  "1. chronik": { num: 13, canonical: "1. Chronik" }, "2. chronik": { num: 14, canonical: "2. Chronik" },
+  "esra": { num: 15, canonical: "Esra" }, "nehemia": { num: 16, canonical: "Nehemia" },
+  "ester": { num: 17, canonical: "Ester" }, "esther": { num: 17, canonical: "Ester" },
+  "hiob": { num: 18, canonical: "Hiob" }, "ijob": { num: 18, canonical: "Hiob" }, "job": { num: 18, canonical: "Hiob" },
+  "psalm": { num: 19, canonical: "Psalm" }, "psalmen": { num: 19, canonical: "Psalm" },
+  "sprüche": { num: 20, canonical: "Sprüche" }, "sprueche": { num: 20, canonical: "Sprüche" }, "sprichwörter": { num: 20, canonical: "Sprüche" },
+  "prediger": { num: 21, canonical: "Prediger" }, "kohelet": { num: 21, canonical: "Prediger" },
+  "hoheslied": { num: 22, canonical: "Hoheslied" }, "hohelied": { num: 22, canonical: "Hoheslied" },
+  "jesaja": { num: 23, canonical: "Jesaja" }, "jeremia": { num: 24, canonical: "Jeremia" },
+  "klagelieder": { num: 25, canonical: "Klagelieder" },
+  "hesekiel": { num: 26, canonical: "Hesekiel" }, "ezechiel": { num: 26, canonical: "Hesekiel" },
+  "daniel": { num: 27, canonical: "Daniel" }, "hosea": { num: 28, canonical: "Hosea" },
+  "joel": { num: 29, canonical: "Joel" }, "amos": { num: 30, canonical: "Amos" },
+  "obadja": { num: 31, canonical: "Obadja" }, "jona": { num: 32, canonical: "Jona" },
+  "micha": { num: 33, canonical: "Micha" }, "nahum": { num: 34, canonical: "Nahum" },
+  "habakuk": { num: 35, canonical: "Habakuk" }, "zefanja": { num: 36, canonical: "Zefanja" },
+  "haggai": { num: 37, canonical: "Haggai" }, "sacharja": { num: 38, canonical: "Sacharja" },
+  "maleachi": { num: 39, canonical: "Maleachi" },
+  "matthäus": { num: 40, canonical: "Matthäus" }, "matthaeus": { num: 40, canonical: "Matthäus" },
+  "markus": { num: 41, canonical: "Markus" }, "lukas": { num: 42, canonical: "Lukas" },
+  "johannes": { num: 43, canonical: "Johannes" },
+  "apostelgeschichte": { num: 44, canonical: "Apostelgeschichte" },
+  "römer": { num: 45, canonical: "Römer" }, "roemer": { num: 45, canonical: "Römer" },
+  "1. korinther": { num: 46, canonical: "1. Korinther" }, "2. korinther": { num: 47, canonical: "2. Korinther" },
+  "galater": { num: 48, canonical: "Galater" }, "epheser": { num: 49, canonical: "Epheser" },
+  "philipper": { num: 50, canonical: "Philipper" }, "kolosser": { num: 51, canonical: "Kolosser" },
+  "1. thessalonicher": { num: 52, canonical: "1. Thessalonicher" },
+  "2. thessalonicher": { num: 53, canonical: "2. Thessalonicher" },
+  "1. timotheus": { num: 54, canonical: "1. Timotheus" },
+  "2. timotheus": { num: 55, canonical: "2. Timotheus" },
+  "titus": { num: 56, canonical: "Titus" }, "philemon": { num: 57, canonical: "Philemon" },
+  "hebräer": { num: 58, canonical: "Hebräer" }, "hebraeer": { num: 58, canonical: "Hebräer" },
+  "jakobus": { num: 59, canonical: "Jakobus" },
+  "1. petrus": { num: 60, canonical: "1. Petrus" }, "2. petrus": { num: 61, canonical: "2. Petrus" },
+  "1. johannes": { num: 62, canonical: "1. Johannes" },
+  "2. johannes": { num: 63, canonical: "2. Johannes" },
+  "3. johannes": { num: 64, canonical: "3. Johannes" },
+  "judas": { num: 65, canonical: "Judas" }, "offenbarung": { num: 66, canonical: "Offenbarung" },
+};
+
+function normalizeBookInput(book: string): { num: number; canonical: string } | null {
+  const n = book.trim().toLowerCase().replace(/\s+/g, " ");
+  if (BOOK_NUMBER_MAP[n]) return BOOK_NUMBER_MAP[n];
+  const noDots = n.replace(/\./g, "").replace(/\s+/g, " ").trim();
+  for (const [key, val] of Object.entries(BOOK_NUMBER_MAP)) {
+    if (key.replace(/\./g, "").trim() === noDots) return val;
+  }
+  // Partial match (z.B. "Matt" → Matthäus)
+  for (const [key, val] of Object.entries(BOOK_NUMBER_MAP)) {
+    if (key.startsWith(n) || n.startsWith(key)) return val;
+  }
+  return null;
+}
+
+function suggestBookName(book: string): string[] {
+  const n = book.trim().toLowerCase();
+  const suggestions = new Set<string>();
+  for (const [key, val] of Object.entries(BOOK_NUMBER_MAP)) {
+    // simple substring match on first 3 chars
+    if (n.length >= 2 && (key.includes(n.slice(0, 3)) || val.canonical.toLowerCase().includes(n.slice(0, 3)))) {
+      suggestions.add(val.canonical);
+    }
+  }
+  return Array.from(suggestions).slice(0, 5);
+}
+
+async function validateBibleReference(
+  book: string,
+  chapter?: number,
+  verseStart?: number,
+  verseEnd?: number,
+): Promise<string> {
+  const supabase = createClient(
+    Deno.env.get("SUPABASE_URL")!,
+    Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
+  );
+
+  const resolved = normalizeBookInput(book);
+  if (!resolved) {
+    const suggestions = suggestBookName(book);
+    return JSON.stringify({
+      valid: false,
+      reason: "book_not_found",
+      message: `Das Buch «${book}» ist nicht eindeutig erkennbar.`,
+      suggestions,
+      action: "ask_user",
+    });
+  }
+
+  // Query DB for max chapter / verse for this book (using luther1912 as reference)
+  const { data: chapterData, error: chErr } = await supabase
+    .from("bible_verses")
+    .select("chapter")
+    .eq("book_number", resolved.num)
+    .eq("translation", "luther1912")
+    .order("chapter", { ascending: false })
+    .limit(1);
+
+  if (chErr || !chapterData || chapterData.length === 0) {
+    return JSON.stringify({
+      valid: false,
+      reason: "book_not_in_db",
+      message: `Buch «${resolved.canonical}» ist erkannt, aber keine Verse in der Datenbank.`,
+      canonical_book: resolved.canonical,
+      action: "ask_user",
+    });
+  }
+
+  const maxChapter = chapterData[0].chapter as number;
+
+  if (chapter === undefined) {
+    return JSON.stringify({
+      valid: true,
+      canonical_book: resolved.canonical,
+      max_chapter: maxChapter,
+    });
+  }
+
+  if (chapter < 1 || chapter > maxChapter) {
+    return JSON.stringify({
+      valid: false,
+      reason: "chapter_out_of_range",
+      canonical_book: resolved.canonical,
+      max_chapter: maxChapter,
+      message: `${resolved.canonical} hat nur ${maxChapter} Kapitel. Kapitel ${chapter} existiert nicht.`,
+      action: "ask_user",
+    });
+  }
+
+  // Check max verse in chapter
+  const { data: verseData } = await supabase
+    .from("bible_verses")
+    .select("verse")
+    .eq("book_number", resolved.num)
+    .eq("chapter", chapter)
+    .eq("translation", "luther1912")
+    .order("verse", { ascending: false })
+    .limit(1);
+
+  const maxVerse = verseData?.[0]?.verse as number | undefined;
+
+  if (verseStart !== undefined && maxVerse !== undefined) {
+    if (verseStart < 1 || verseStart > maxVerse) {
+      return JSON.stringify({
+        valid: false,
+        reason: "verse_out_of_range",
+        canonical_book: resolved.canonical,
+        max_chapter: maxChapter,
+        max_verse_in_chapter: maxVerse,
+        message: `${resolved.canonical} ${chapter} hat nur ${maxVerse} Verse. Vers ${verseStart} existiert nicht.`,
+        action: "ask_user",
+      });
+    }
+    if (verseEnd !== undefined && (verseEnd < verseStart || verseEnd > maxVerse)) {
+      return JSON.stringify({
+        valid: false,
+        reason: "verse_range_invalid",
+        canonical_book: resolved.canonical,
+        max_verse_in_chapter: maxVerse,
+        message: `Vers-Bereich ${verseStart}-${verseEnd} ist ungültig (max. Vers ${maxVerse}).`,
+        action: "ask_user",
+      });
+    }
+  }
+
+  return JSON.stringify({
+    valid: true,
+    canonical_book: resolved.canonical,
+    max_chapter: maxChapter,
+    max_verse_in_chapter: maxVerse,
+  });
+}
+
+const VALIDATE_REFERENCE_TOOL = {
+  type: "function" as const,
+  function: {
+    name: "validate_bible_reference",
+    description: "Prüft, ob eine Bibelstellen-Angabe (Buch, Kapitel, Vers) existiert. Verwende dieses Tool IMMER, BEVOR du eine Bibelstelle zitierst, wenn du dir beim Buchnamen, der Kapitel- oder Vers-Nummer nicht 100%ig sicher bist. Gibt zurück, ob die Referenz gültig ist, den kanonischen Buchnamen, die maximale Kapitel-/Versnummer – oder Vorschläge bei Buchnamen-Verwechslung. Bei valid=false IMMER beim Nutzer nachfragen statt zu raten.",
+    parameters: {
+      type: "object",
+      properties: {
+        book: { type: "string", description: "Buchname, z.B. 'Johannes', '1. Mose', 'Psalm', 'Matthäus'" },
+        chapter: { type: "number", description: "Optional: Kapitelnummer zum Prüfen" },
+        verse_start: { type: "number", description: "Optional: Start-Vers" },
+        verse_end: { type: "number", description: "Optional: End-Vers" },
+      },
+      required: ["book"],
+    },
+  },
+};
+
 async function lookupBibleVerseExtra(
   translationCode: string,
   book: string,
@@ -729,6 +936,7 @@ Es gibt zwei Kategorien von Übersetzungen:
 3. Bei Quellenangabe immer die korrekte Version nennen, z.B. «...» (Johannes 3,16, Lutherbibel 1912).
 4. Verwende search_bible_verses für thematische Suchen – die Ergebnisse kommen aus der Datenbank.
 5. Wenn du dir bei einem Zitat aus dem Trainingswissen nicht 100% sicher bist, kennzeichne es mit «Sinngemäss:».
+6. **REFERENZ-VALIDIERUNG (WICHTIG):** Wenn du dir bei einer Bibelstelle (Buchname, Kapitel- oder Versnummer) nicht absolut sicher bist – z.B. weil der Nutzer sie ungenau angibt («Johannes 3,16-17» vs. «Joh 3» vs. «Römer 18» – gibt es gar nicht) –, rufe ZUERST das Tool `validate_bible_reference` auf. Bei `valid: false` NIEMALS raten oder phantasieren, sondern beim Nutzer nachfragen: «Meinst du vielleicht ...?» oder «Römer hat nur 16 Kapitel – welche Stelle meinst du genau?». Gib dem Nutzer die vom Tool gelieferten Vorschläge oder Max-Werte als Orientierung.
 
 ### 1. «lookup_bible_verse» – Exaktes Nachschlagen (Kategorie A)
 Verwende dieses Tool für exakte Zitate aus den historischen Übersetzungen (Luther 1912, Elberfelder, Schlachter 1951, KJV, WEB).
@@ -1338,7 +1546,7 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
             { role: "system", content: systemPrompt },
             ...finalMessages,
           ],
-          tools: [bibleTools.BIBLE_LOOKUP_TOOL, bibleTools.BIBLE_SEARCH_TOOL, bibleTools.BIBLE_LOOKUP_EXTRA_TOOL, THEOLOGY_SEARCH_TOOL],
+          tools: [bibleTools.BIBLE_LOOKUP_TOOL, bibleTools.BIBLE_SEARCH_TOOL, bibleTools.BIBLE_LOOKUP_EXTRA_TOOL, THEOLOGY_SEARCH_TOOL, VALIDATE_REFERENCE_TOOL],
         }),
       }
     );
@@ -1432,6 +1640,21 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
             } catch (e) {
               console.error("Extra lookup error:", e);
               return { id: tc.id, result: "Fehler beim Nachschlagen in zusätzlicher Übersetzung." };
+            }
+          }
+          if (tc.function.name === "validate_bible_reference") {
+            try {
+              const args = JSON.parse(tc.function.arguments);
+              const result = await validateBibleReference(
+                args.book,
+                args.chapter,
+                args.verse_start,
+                args.verse_end,
+              );
+              return { id: tc.id, result };
+            } catch (e) {
+              console.error("Validate reference error:", e);
+              return { id: tc.id, result: JSON.stringify({ valid: false, reason: "internal_error", action: "ask_user" }) };
             }
           }
           return { id: tc.id, result: "Unbekanntes Tool." };
