@@ -518,7 +518,7 @@ serve(async (req) => {
       }
     }
 
-    const result = await fetchAndStoreChapter(supabase, translation, book, chapter, { forceRetry: !!body.force_retry });
+    const result = await fetchAndStoreChapter(supabase, translation, book, chapter);
 
     if (!result.ok) {
       return new Response(JSON.stringify({ error: result.error, source_url: result.source_url }), {
