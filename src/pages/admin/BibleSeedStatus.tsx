@@ -75,6 +75,9 @@ export default function BibleSeedStatus() {
   const [translationFilter, setTranslationFilter] = useState("");
   const [lastFetched, setLastFetched] = useState<Date | null>(null);
   const [secondsSince, setSecondsSince] = useState(0);
+  const [retryRunning, setRetryRunning] = useState<string | null>(null); // translation code being retried, or "ALL"
+  const [retryProgress, setRetryProgress] = useState<{ rounds: number; processed: number; remaining: number } | null>(null);
+  const [retryAbort, setRetryAbort] = useState(false);
 
   const load = useCallback(async () => {
     setLoading(true);
