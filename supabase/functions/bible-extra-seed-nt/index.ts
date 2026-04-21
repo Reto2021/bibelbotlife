@@ -48,20 +48,25 @@ const NT_BOOKS: { number: number; canonical: string; chapters: number }[] = [
 serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
 
-  // Nur Admin oder Service-Role
+  console.log("[seed-nt] request received");
   const authHeader = req.headers.get("Authorization") ?? "";
   const supabase = createClient(
     Deno.env.get("SUPABASE_URL")!,
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
   );
 
-  // Admin-Check via JWT (Service-Role-Aufrufe haben kein User-JWT, deshalb prüfen wir nur authentifizierte Aufrufe)
-  if (authHeader.startsWith("Bearer ") && !authHeader.includes(Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!)) {
-    const token = authHeader.replace("Bearer ", "");
+  const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+  const token = authHeader.replace("Bearer ", "");
+  const isServiceRole = token === serviceKey;
+
+  if (!isServiceRole) {
+    if (!token) {
+      return new Response(JSON.stringify({ error: "Nicht autorisiert" }), { status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" } });
+    }
     const { data: userData } = await supabase.auth.getUser(token);
     const userId = userData?.user?.id;
     if (!userId) {
-      return new Response(JSON.stringify({ error: "Nicht autorisiert" }), { status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" } });
+      return new Response(JSON.stringify({ error: "Nicht autorisiert (kein User)" }), { status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" } });
     }
     const { data: roleRows } = await supabase
       .from("user_roles").select("role").eq("user_id", userId).eq("role", "admin");
