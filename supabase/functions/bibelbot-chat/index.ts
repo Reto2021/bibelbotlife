@@ -1641,6 +1641,21 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
               return { id: tc.id, result: "Fehler beim Nachschlagen in zusätzlicher Übersetzung." };
             }
           }
+          if (tc.function.name === "validate_bible_reference") {
+            try {
+              const args = JSON.parse(tc.function.arguments);
+              const result = await validateBibleReference(
+                args.book,
+                args.chapter,
+                args.verse_start,
+                args.verse_end,
+              );
+              return { id: tc.id, result };
+            } catch (e) {
+              console.error("Validate reference error:", e);
+              return { id: tc.id, result: JSON.stringify({ valid: false, reason: "internal_error", action: "ask_user" }) };
+            }
+          }
           return { id: tc.id, result: "Unbekanntes Tool." };
         })
       );
