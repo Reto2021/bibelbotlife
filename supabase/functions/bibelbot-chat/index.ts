@@ -675,12 +675,25 @@ const VALIDATE_REFERENCE_TOOL = {
 // Schlüssel: `${translationCode}|${bookNumber}|${chapter}` → komplettes Kapitel.
 // Einzelvers-Slicing passiert danach in-memory, ohne erneuten Roundtrip.
 
+type TranslationMeta = {
+  code: string;
+  name: string;
+  year: number | null;
+  confession: string | null;
+  publisher: string | null;
+  translators: string | null;
+  description: string | null;
+  citation: string;
+  rights_status: string;
+};
+
 type CachedChapter = {
   verses: { verse: number; text: string }[];
   book_canonical: string;
   translation_name: string;
   citation: string;
   source_url: string;
+  meta: TranslationMeta | null;
   storedAt: number;
 };
 
@@ -688,6 +701,39 @@ const EXTRA_CACHE_TTL_MS = 1000 * 60 * 60 * 6; // 6h — geschützte Bibeln änd
 const EXTRA_CACHE_MAX_ENTRIES = 500; // ~500 Kapitel im RAM, reicht dicke
 const extraChapterCache = new Map<string, CachedChapter>();
 const extraChapterInFlight = new Map<string, Promise<CachedChapter | { error: string }>>();
+
+// Separater Meta-Cache (Translations ändern sich quasi nie → 24h TTL)
+const META_CACHE_TTL_MS = 1000 * 60 * 60 * 24;
+const translationMetaCache = new Map<string, { meta: TranslationMeta | null; storedAt: number }>();
+
+async function getTranslationMeta(
+  supabase: ReturnType<typeof createClient>,
+  translationCode: string,
+): Promise<TranslationMeta | null> {
+  const cached = translationMetaCache.get(translationCode);
+  if (cached && Date.now() - cached.storedAt < META_CACHE_TTL_MS) {
+    return cached.meta;
+  }
+  const { data } = await supabase
+    .from("bible_translation_meta")
+    .select("code, name, year, confession, publisher, translators, description, citation, rights_status")
+    .eq("code", translationCode)
+    .maybeSingle();
+  const meta = (data as TranslationMeta | null) ?? null;
+  translationMetaCache.set(translationCode, { meta, storedAt: Date.now() });
+  return meta;
+}
+
+function formatMetaBlurb(meta: TranslationMeta | null): string {
+  if (!meta) return "";
+  const parts: string[] = [];
+  if (meta.year) parts.push(`${meta.year}`);
+  if (meta.confession) parts.push(meta.confession);
+  if (meta.publisher) parts.push(meta.publisher);
+  const head = parts.length > 0 ? `${meta.name} (${parts.join(", ")})` : meta.name;
+  const tail = meta.description ? ` — ${meta.description}` : "";
+  return `${head}${tail}`.trim();
+}
 
 function extraCacheKey(translationCode: string, bookKey: string, chapter: number): string {
   return `${translationCode}|${bookKey.toLowerCase()}|${chapter}`;
@@ -737,24 +783,34 @@ async function fetchChapterViaExtraFn(
 
   const promise = (async (): Promise<CachedChapter | { error: string }> => {
     try {
-      // Kompletts Kapitel holen (ohne verse_start/_end) → maximal cacheable
-      const resp = await fetch(`${Deno.env.get("SUPABASE_URL")}/functions/v1/bible-extra-fetch`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")}`,
-        },
-        body: JSON.stringify({ translation: translationCode, book, chapter }),
-      });
+      const supabase = createClient(
+        Deno.env.get("SUPABASE_URL")!,
+        Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
+      );
+
+      // Kapitel + Meta parallel holen
+      const [resp, meta] = await Promise.all([
+        fetch(`${Deno.env.get("SUPABASE_URL")}/functions/v1/bible-extra-fetch`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")}`,
+          },
+          body: JSON.stringify({ translation: translationCode, book, chapter }),
+        }),
+        getTranslationMeta(supabase, translationCode),
+      ]);
+
       const data = await resp.json();
       if (!resp.ok) return { error: data?.error ?? "unbekannt" };
 
       const payload: CachedChapter = {
         verses: (data.verses ?? []) as { verse: number; text: string }[],
         book_canonical: data.book ?? book,
-        translation_name: data.translation_name ?? translationCode,
-        citation: data.citation ?? "",
+        translation_name: data.translation_name ?? meta?.name ?? translationCode,
+        citation: data.citation ?? meta?.citation ?? "",
         source_url: data.source_url ?? "",
+        meta,
         storedAt: Date.now(),
       };
       writeToExtraCache(key, payload);
@@ -763,7 +819,6 @@ async function fetchChapterViaExtraFn(
     } catch (e: any) {
       return { error: `Fetch fehlgeschlagen: ${e.message}` };
     } finally {
-      // in-flight immer aufräumen
       extraChapterInFlight.delete(key);
     }
   })();
@@ -791,7 +846,10 @@ async function lookupBibleVerseExtra(
   const ref = verseEnd && verseEnd !== verseStart
     ? `${result.book_canonical} ${chapter},${verseStart}-${verseEnd}`
     : `${result.book_canonical} ${chapter},${verseStart}`;
-  return `«${text.trim()}» — ${ref} (${result.translation_name}). Zitation: ${result.citation}`;
+
+  const blurb = formatMetaBlurb(result.meta);
+  const about = blurb ? `\nÜber die Übersetzung: ${blurb}` : "";
+  return `«${text.trim()}» — ${ref} (${result.translation_name}). Zitation: ${result.citation}${about}`;
 }
 
 async function searchBibleVerses(
@@ -1048,6 +1106,7 @@ Verwende dieses Tool, wenn du **thematisch passende Verse** finden willst, aber 
 Verwende dieses Tool, wenn der Nutzer ausdrücklich nach einer bestimmten Übersetzung fragt, die nicht in den Standard-Tools liegt – z.B. Einheitsübersetzung (EU), Zürcher (ZB), Luther 2017 (LUT2017), Hoffnung für Alle (HFA), Gute Nachricht (GNB), BasisBibel (BB), Menge (MENG), Henne-Rösch (HRD, gemeinfrei kath.), Grünewald (GRU, gemeinfrei kath.), Buber-Rosenzweig (BR, jüdisch AT), Tur-Sinai (TUR, jüdisch AT), Neues Leben (NLB), NeÜ, Neue Genfer (NGUE), Schlachter 1951 (SLT1951), Luther 1545 (LU1545), Herder (HER), Münchener NT (MNT), Pattloch (PAT), Neue-Welt-Übersetzung (NWT, theologisch umstritten – nur auf Nachfrage, mit Hinweis).
 - ZITAT-LIMIT: aus geschützten Übersetzungen pro Antwort höchstens EINE Perikope (3-7 Verse). Niemals ganze Kapitel ausgeben. Bei längerem Bedarf paraphrasieren.
 - Bei jedem Zitat IMMER die mitgelieferte wissenschaftliche Zitation am Ende nennen.
+- QUELLEN-EINORDNUNG: Das Tool liefert am Ende «Über die Übersetzung: …» mit Jahr, Konfession, Verlag und Charakteristik. Beim ERSTEN Gebrauch einer Übersetzung in der aktuellen Antwort ordne sie kurz ein (1 Satz, z.B. «Die Einheitsübersetzung (2016, katholisch) ist die offizielle Bibel der deutschsprachigen katholischen Kirche.»). Bei weiteren Zitaten derselben Übersetzung NICHT wiederholen. Nutze das für Transparenz darüber, aus welcher theologischen Tradition der Text stammt.
 - Nutzer kann diese Übersetzungen NICHT direkt in der UI durchsuchen – sie dienen nur als Vergleichs-/Vertiefungs-Kontext im Gespräch.
 
 ### 4. «search_theology» – Theologisches Hintergrundwissen
