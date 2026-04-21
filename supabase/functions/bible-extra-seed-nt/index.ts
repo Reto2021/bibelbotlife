@@ -60,10 +60,6 @@ serve(async (req) => {
   const batchSize: number = Math.min(Number(body.batch_size) || 30, 60);
   const cursor: { translation: string; book_number: number; chapter: number } | null = body.cursor ?? null;
   const onlyTranslations: string[] | null = Array.isArray(body.translations) ? body.translations : null;
-  // retry_mode: "auto" (Standard – fällige Retries werden mitgenommen),
-  //             "only" (nur fällige Retries, keine neuen Kapitel),
-  //             "force" (alle Failures ignorieren Backoff)
-  const retryMode: "auto" | "only" | "force" = (body.retry_mode ?? "auto") as any;
 
   // Alle restricted Übersetzungen mit NT
   const { data: metas, error: metaErr } = await supabase
@@ -80,6 +76,8 @@ serve(async (req) => {
     .filter((c) => !onlyTranslations || onlyTranslations.includes(c))
     .sort();
 
+  // Reihenfolge: für jede Übersetzung jedes NT-Buch jedes Kapitel.
+  // Cursor erlaubt Wiederaufnahme.
   const work: { translation: string; book: { number: number; canonical: string }; chapter: number }[] = [];
   for (const t of translations) {
     for (const b of NT_BOOKS) {
@@ -97,63 +95,23 @@ serve(async (req) => {
     if (startIdx < 0) startIdx = 0;
   }
 
-  // Log laden: Success + Failures mit Retry-Zeitpunkt
-  const { data: logRows } = await supabase
+  // Bereits geladene Kapitel überspringen (per Log)
+  const { data: doneLog } = await supabase
     .from("bible_chapter_fetch_log")
-    .select("translation, book_number, chapter, status, attempts, next_retry_at");
-  const successSet = new Set(
-    (logRows ?? []).filter((r: any) => r.status === "success")
-      .map((r: any) => `${r.translation}|${r.book_number}|${r.chapter}`),
-  );
-  const failMap = new Map<string, { attempts: number; next_retry_at: string | null }>();
-  for (const r of (logRows ?? []) as any[]) {
-    if (r.status === "failed") {
-      failMap.set(`${r.translation}|${r.book_number}|${r.chapter}`, {
-        attempts: Number(r.attempts ?? 0),
-        next_retry_at: r.next_retry_at,
-      });
-    }
-  }
+    .select("translation, book_number, chapter, status")
+    .in("status", ["success"]);
+  const doneSet = new Set((doneLog ?? []).map((r: any) => `${r.translation}|${r.book_number}|${r.chapter}`));
 
-  const nowMs = Date.now();
-  const MAX_ATTEMPTS = 6; // nach 6 Fehlversuchen als endgültig fehlgeschlagen betrachten
-
-  const results: { translation: string; book: string; chapter: number; status: string; verses?: number; error?: string; attempts?: number }[] = [];
+  const results: { translation: string; book: string; chapter: number; status: string; verses?: number; error?: string }[] = [];
   let processed = 0;
-  let skippedBackoff = 0;
-  let skippedExhausted = 0;
   let lastIdx = startIdx;
-
   for (let i = startIdx; i < work.length && processed < batchSize; i++) {
     const w = work[i];
     lastIdx = i;
     const key = `${w.translation}|${w.book.number}|${w.chapter}`;
+    if (doneSet.has(key)) continue;
 
-    // 1) Erfolg → überspringen (Idempotency)
-    if (successSet.has(key)) continue;
-
-    const fail = failMap.get(key);
-    const isFailure = !!fail;
-
-    // 2) retry_mode=only → nur Retries bearbeiten
-    if (retryMode === "only" && !isFailure) continue;
-
-    // 3) Maximalversuche erreicht → aufgeben (außer force)
-    if (isFailure && fail!.attempts >= MAX_ATTEMPTS && retryMode !== "force") {
-      skippedExhausted++;
-      continue;
-    }
-
-    // 4) Backoff aktiv → überspringen (außer force)
-    if (
-      isFailure && fail!.next_retry_at &&
-      new Date(fail!.next_retry_at).getTime() > nowMs &&
-      retryMode !== "force"
-    ) {
-      skippedBackoff++;
-      continue;
-    }
-
+    // Direkter HTTP-Call an unsere eigene fetch-Function via interner URL
     const fetchUrl = `${Deno.env.get("SUPABASE_URL")}/functions/v1/bible-extra-fetch`;
     try {
       const resp = await fetch(fetchUrl, {
@@ -166,29 +124,19 @@ serve(async (req) => {
           translation: w.translation,
           book: w.book.canonical,
           chapter: w.chapter,
-          force_retry: retryMode === "force",
+          // Seeder benötigt kompletten Kapitel-Fetch, um die restricted-DB zu befüllen.
+          // Chat darf diesen Flag NIE setzen.
+          allow_full_chapter: true,
         }),
       });
       const data = await resp.json().catch(() => ({}));
-      const attemptsNow = (fail?.attempts ?? 0) + 1;
       if (resp.ok) {
-        results.push({
-          translation: w.translation, book: w.book.canonical, chapter: w.chapter,
-          status: data.cached ? "cached" : (isFailure ? "recovered" : "ok"),
-          verses: data.verses?.length,
-          attempts: attemptsNow,
-        });
+        results.push({ translation: w.translation, book: w.book.canonical, chapter: w.chapter, status: data.cached ? "cached" : "ok", verses: data.verses?.length });
       } else {
-        results.push({
-          translation: w.translation, book: w.book.canonical, chapter: w.chapter,
-          status: "failed", error: data.error, attempts: attemptsNow,
-        });
+        results.push({ translation: w.translation, book: w.book.canonical, chapter: w.chapter, status: "failed", error: data.error });
       }
     } catch (e: any) {
-      results.push({
-        translation: w.translation, book: w.book.canonical, chapter: w.chapter,
-        status: "error", error: e.message,
-      });
+      results.push({ translation: w.translation, book: w.book.canonical, chapter: w.chapter, status: "error", error: e.message });
     }
     processed++;
     // kurzer Throttle gegen Rate-Limits
@@ -199,11 +147,8 @@ serve(async (req) => {
   return new Response(
     JSON.stringify({
       processed,
-      skipped_backoff: skippedBackoff,
-      skipped_exhausted: skippedExhausted,
       total: work.length,
       remaining: Math.max(0, work.length - (lastIdx + 1)),
-      retry_mode: retryMode,
       results,
       next_cursor: next ? { translation: next.translation, book_number: next.book.number, chapter: next.chapter } : null,
     }),

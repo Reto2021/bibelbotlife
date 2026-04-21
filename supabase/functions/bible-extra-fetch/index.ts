@@ -363,9 +363,7 @@ async function fetchAndStoreChapter(
   translationCode: string,
   bookInput: string,
   chapter: number,
-  opts: { forceRetry?: boolean } = {},
 ): Promise<{ ok: boolean; verses: { verse: number; text: string }[]; source_url: string; book: { slug: string; number: number; canonical: string } | null; cached: boolean; error?: string }> {
-  const cursorIgnoreBackoff = !!opts.forceRetry;
   const book = resolveBook(bookInput);
   if (!book) return { ok: false, verses: [], source_url: "", book: null, cached: false, error: `Buch '${bookInput}' nicht erkannt.` };
 
@@ -417,84 +415,34 @@ async function fetchAndStoreChapter(
     };
   }
 
-  // Vorherigen Log-Eintrag laden (für Retry-Logik / Backoff)
-  const { data: prevLog } = await supabase
-    .from("bible_chapter_fetch_log")
-    .select("attempts, status, next_retry_at")
-    .eq("translation", translationCode)
-    .eq("book_number", book.number)
-    .eq("chapter", chapter)
-    .maybeSingle();
-
-  const prevAttempts = Number((prevLog as any)?.attempts ?? 0);
-  const nowMs = Date.now();
-  const nextRetryIso = (prevLog as any)?.next_retry_at as string | null | undefined;
-
-  // Wenn letzter Versuch fehlgeschlagen ist UND das Retry-Fenster noch nicht erreicht ist → abbrechen
-  if (
-    (prevLog as any)?.status === "failed" &&
-    nextRetryIso &&
-    new Date(nextRetryIso).getTime() > nowMs &&
-    !cursorIgnoreBackoff
-  ) {
-    return {
-      ok: false, verses: [], source_url: sourceUrl, book, cached: false,
-      error: `Retry-Backoff aktiv bis ${nextRetryIso} (Versuche: ${prevAttempts}).`,
-    };
-  }
-
-  // Helper: Backoff berechnen (exponentiell, mit Jitter, Cap = 2h)
-  const backoffMs = (attempt: number) => {
-    const base = Math.min(2 ** attempt * 30_000, 2 * 60 * 60 * 1000); // 30s, 60s, 120s, … max 2h
-    const jitter = Math.floor(Math.random() * 10_000);
-    return base + jitter;
-  };
-
-  const recordFailure = async (errCode: string, errMsg: string) => {
-    const newAttempts = prevAttempts + 1;
-    await supabase.from("bible_chapter_fetch_log").upsert({
-      translation: translationCode, book_number: book.number, chapter,
-      verse_count: 0, source_url: sourceUrl, status: "failed",
-      error_message: errMsg,
-      attempts: newAttempts,
-      last_error_code: errCode,
-      next_retry_at: new Date(nowMs + backoffMs(newAttempts)).toISOString(),
-    }, { onConflict: "translation,book_number,chapter" });
-  };
-
-  // Scrape mit kleinem internen Retry (Netzwerk-Transient)
-  let html = "";
-  let fetchError: { code: string; msg: string } | null = null;
-  for (let attempt = 1; attempt <= 3; attempt++) {
-    try {
-      const resp = await fetch(sourceUrl, { headers: { "User-Agent": "BibleBot.Life/1.0 (+https://biblebot.life)" } });
-      if (resp.ok) {
-        html = await resp.text();
-        fetchError = null;
-        break;
-      }
-      fetchError = { code: `HTTP_${resp.status}`, msg: `HTTP ${resp.status}` };
-      // 4xx (außer 408/429) → nicht wiederholen
-      if (resp.status >= 400 && resp.status < 500 && resp.status !== 408 && resp.status !== 429) break;
-    } catch (e: any) {
-      fetchError = { code: "NETWORK", msg: `Fetch fehlgeschlagen: ${e.message}` };
+  // Scrape
+  let html: string;
+  try {
+    const resp = await fetch(sourceUrl, { headers: { "User-Agent": "BibleBot.Life/1.0 (+https://biblebot.life)" } });
+    if (!resp.ok) {
+      await supabase.from("bible_chapter_fetch_log").upsert({
+        translation: translationCode, book_number: book.number, chapter,
+        verse_count: 0, source_url: sourceUrl, status: "failed",
+        error_message: `HTTP ${resp.status}`,
+      }, { onConflict: "translation,book_number,chapter" });
+      return { ok: false, verses: [], source_url: sourceUrl, book, cached: false, error: `Quelle nicht erreichbar (HTTP ${resp.status}).` };
     }
-    // kurzer, interner Backoff zwischen Versuchen
-    if (attempt < 3) await new Promise((r) => setTimeout(r, 500 * attempt));
-  }
-
-  if (fetchError) {
-    await recordFailure(fetchError.code, fetchError.msg);
-    return { ok: false, verses: [], source_url: sourceUrl, book, cached: false, error: fetchError.msg };
+    html = await resp.text();
+  } catch (e: any) {
+    return { ok: false, verses: [], source_url: sourceUrl, book, cached: false, error: `Fetch fehlgeschlagen: ${e.message}` };
   }
 
   const verses = parseChapterHtml(html);
   if (verses.length === 0) {
-    await recordFailure("PARSE_EMPTY", "Parser fand keine Verse");
+    await supabase.from("bible_chapter_fetch_log").upsert({
+      translation: translationCode, book_number: book.number, chapter,
+      verse_count: 0, source_url: sourceUrl, status: "failed",
+      error_message: "Parser fand keine Verse",
+    }, { onConflict: "translation,book_number,chapter" });
     return { ok: false, verses: [], source_url: sourceUrl, book, cached: false, error: "Keine Verse im HTML gefunden." };
   }
 
-  // In Ziel-Tabelle schreiben — idempotent via Unique-Key (translation,book_number,chapter,verse)
+  // In Ziel-Tabelle schreiben
   const rows = verses.map((v) => ({
     translation: translationCode,
     language: "de",
@@ -508,23 +456,15 @@ async function fetchAndStoreChapter(
 
   const { error: insertError } = await supabase
     .from(targetTable)
-    .upsert(rows, {
-      onConflict: "translation,book_number,chapter,verse",
-      ignoreDuplicates: true,
-    });
+    .upsert(rows, { onConflict: meta.is_restricted ? "translation,book_number,chapter,verse" : undefined, ignoreDuplicates: true });
 
   if (insertError) {
     console.error(`Insert into ${targetTable} failed:`, insertError);
-    await recordFailure("DB_INSERT", `Insert fehlgeschlagen: ${insertError.message}`);
-    return { ok: false, verses: [], source_url: sourceUrl, book, cached: false, error: insertError.message };
   }
 
   await supabase.from("bible_chapter_fetch_log").upsert({
     translation: translationCode, book_number: book.number, chapter,
     verse_count: verses.length, source_url: sourceUrl, status: "success",
-    attempts: prevAttempts + 1,
-    last_error_code: null,
-    next_retry_at: null,
   }, { onConflict: "translation,book_number,chapter" });
 
   return { ok: true, verses, source_url: sourceUrl, book, cached: false };
@@ -545,6 +485,9 @@ serve(async (req) => {
     const chapter: number = Number(body.chapter);
     const verseStart: number | undefined = body.verse_start ? Number(body.verse_start) : undefined;
     const verseEnd: number | undefined = body.verse_end ? Number(body.verse_end) : undefined;
+    // Internes Flag: erlaubt dem Seeder, ein komplettes Kapitel zu befüllen/zurückzugeben.
+    // Ausserhalb des Seeders (insb. Chat) NIE setzen.
+    const allowFullChapter: boolean = body.allow_full_chapter === true;
 
     if (!translation || !book || !Number.isFinite(chapter) || chapter < 1) {
       return new Response(JSON.stringify({ error: "translation, book, chapter erforderlich" }), {
@@ -552,7 +495,30 @@ serve(async (req) => {
       });
     }
 
-    const result = await fetchAndStoreChapter(supabase, translation, book, chapter, { forceRetry: !!body.force_retry });
+    // Harte Zitat-Regel für geschützte Übersetzungen
+    const { data: metaEarly } = await supabase
+      .from("bible_translation_meta")
+      .select("is_restricted")
+      .eq("code", translation)
+      .maybeSingle();
+    const isRestricted = !!metaEarly?.is_restricted;
+
+    if (isRestricted && !allowFullChapter) {
+      if (!Number.isFinite(verseStart) || (verseStart as number) < 1) {
+        return new Response(JSON.stringify({
+          error: "Für geschützte Übersetzungen ist verse_start Pflicht (Kurzzitat-Modus).",
+        }), { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } });
+      }
+      const end = verseEnd ?? (verseStart as number);
+      const range = end - (verseStart as number) + 1;
+      if (range < 1 || range > 7) {
+        return new Response(JSON.stringify({
+          error: `Kurzzitat-Grenze: max. 7 Verse pro Anfrage (angefordert: ${range}).`,
+        }), { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } });
+      }
+    }
+
+    const result = await fetchAndStoreChapter(supabase, translation, book, chapter);
 
     if (!result.ok) {
       return new Response(JSON.stringify({ error: result.error, source_url: result.source_url }), {
@@ -560,9 +526,12 @@ serve(async (req) => {
       });
     }
 
-    // Optional: nur Bereich zurückgeben
+    // Slice: bei restricted IMMER (außer allow_full_chapter); bei public optional
     let verses = result.verses;
-    if (verseStart) {
+    if (isRestricted && !allowFullChapter) {
+      const end = verseEnd ?? (verseStart as number);
+      verses = verses.filter((v) => v.verse >= (verseStart as number) && v.verse <= end);
+    } else if (verseStart) {
       const end = verseEnd ?? verseStart;
       verses = verses.filter((v) => v.verse >= verseStart && v.verse <= end);
     }
@@ -584,6 +553,7 @@ serve(async (req) => {
         verses,
         source_url: result.source_url,
         cached: result.cached,
+        snippet_mode: isRestricted && !allowFullChapter ? "snippet" : "full",
       }),
       { headers: { ...corsHeaders, "Content-Type": "application/json" } },
     );

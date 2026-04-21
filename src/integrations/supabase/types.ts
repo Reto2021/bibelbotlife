@@ -2555,6 +2555,21 @@ export type Database = {
           last_sign_in_at: string
         }[]
       }
+      get_restricted_verse_snippet: {
+        Args: {
+          p_book_number: number
+          p_chapter: number
+          p_translation: string
+          p_verse_end?: number
+          p_verse_start: number
+        }
+        Returns: {
+          book: string
+          source_url: string
+          text: string
+          verse: number
+        }[]
+      }
       get_shared_draft: {
         Args: { p_token: string }
         Returns: {
