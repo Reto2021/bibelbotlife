@@ -1,6 +1,46 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.1";
 import { corsHeaders } from "https://esm.sh/@supabase/supabase-js@2.95.0/cors";
 
+// Retry fetch with exponential backoff for transient errors (DNS, network, 5xx, 429).
+async function fetchWithRetry(
+  url: string,
+  init: RequestInit,
+  opts: { retries?: number; baseDelayMs?: number; label?: string } = {},
+): Promise<Response> {
+  const retries = opts.retries ?? 4;
+  const baseDelay = opts.baseDelayMs ?? 800;
+  const label = opts.label ?? url;
+  let lastErr: unknown = null;
+
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    try {
+      const res = await fetch(url, init);
+      if (res.status === 429 || (res.status >= 500 && res.status <= 599)) {
+        if (attempt < retries) {
+          const delay = Math.round(baseDelay * Math.pow(2, attempt) + Math.random() * 300);
+          console.warn(`[retry] ${label} HTTP ${res.status}, attempt ${attempt + 1}/${retries} in ${delay}ms`);
+          await new Promise((r) => setTimeout(r, delay));
+          continue;
+        }
+      }
+      return res;
+    } catch (err) {
+      lastErr = err;
+      const msg = (err as Error)?.message || String(err);
+      const isTransient =
+        /dns|getaddrinfo|ENOTFOUND|EAI_AGAIN|ECONNRESET|ETIMEDOUT|ECONNREFUSED|network|fetch failed|TLS|handshake|sending request/i
+          .test(msg);
+      if (!isTransient || attempt === retries) {
+        throw err;
+      }
+      const delay = Math.round(baseDelay * Math.pow(2, attempt) + Math.random() * 300);
+      console.warn(`[retry] ${label} ${msg}, attempt ${attempt + 1}/${retries} in ${delay}ms`);
+      await new Promise((r) => setTimeout(r, delay));
+    }
+  }
+  throw lastErr ?? new Error(`fetchWithRetry exhausted for ${label}`);
+}
+
 function hexToHsl(hex: string): string | null {
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
   if (!result) return null;
@@ -81,7 +121,7 @@ Deno.serve(async (req) => {
     if (!formattedUrl.startsWith("http")) formattedUrl = `https://${formattedUrl}`;
 
     // Step 1: Scrape with branding extraction + screenshot
-    const scrapeRes = await fetch("https://api.firecrawl.dev/v1/scrape", {
+    const scrapeRes = await fetchWithRetry("https://api.firecrawl.dev/v1/scrape", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${firecrawlKey}`,
@@ -92,7 +132,7 @@ Deno.serve(async (req) => {
         formats: ["markdown", "screenshot", "branding"],
         onlyMainContent: true,
       }),
-    });
+    }, { label: "firecrawl-scrape", retries: 4, baseDelayMs: 1000 });
 
     const scrapeData = await scrapeRes.json();
     const markdown = scrapeData?.data?.markdown || scrapeData?.markdown || "";
@@ -143,7 +183,7 @@ Deno.serve(async (req) => {
     console.log("Social links extracted:", JSON.stringify(socialLinks));
 
     // Step 2: AI extraction of contact data + website score in one call
-    const aiRes = await fetch("https://ai-gateway.lovable.dev/v1/chat/completions", {
+    const aiRes = await fetchWithRetry("https://ai-gateway.lovable.dev/v1/chat/completions", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${lovableKey}`,
@@ -188,7 +228,7 @@ Extrahiere auch Social-Media-Links (Instagram, Facebook, WhatsApp, Telegram, You
         ],
         temperature: 0.3,
       }),
-    });
+    }, { label: "ai-gateway", retries: 4, baseDelayMs: 1000 });
 
     const aiData = await aiRes.json();
     let extracted: any = {};

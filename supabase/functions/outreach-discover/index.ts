@@ -1,6 +1,47 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.1";
 import { corsHeaders } from "https://esm.sh/@supabase/supabase-js@2.95.0/cors";
 
+// Retry fetch with exponential backoff for transient errors (DNS, network, 5xx, 429).
+async function fetchWithRetry(
+  url: string,
+  init: RequestInit,
+  opts: { retries?: number; baseDelayMs?: number; label?: string } = {},
+): Promise<Response> {
+  const retries = opts.retries ?? 4;
+  const baseDelay = opts.baseDelayMs ?? 800;
+  const label = opts.label ?? url;
+  let lastErr: unknown = null;
+
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    try {
+      const res = await fetch(url, init);
+      // Retry on transient HTTP errors
+      if (res.status === 429 || (res.status >= 500 && res.status <= 599)) {
+        if (attempt < retries) {
+          const delay = Math.round(baseDelay * Math.pow(2, attempt) + Math.random() * 300);
+          console.warn(`[retry] ${label} HTTP ${res.status}, attempt ${attempt + 1}/${retries} in ${delay}ms`);
+          await new Promise((r) => setTimeout(r, delay));
+          continue;
+        }
+      }
+      return res;
+    } catch (err) {
+      lastErr = err;
+      const msg = (err as Error)?.message || String(err);
+      const isTransient =
+        /dns|getaddrinfo|ENOTFOUND|EAI_AGAIN|ECONNRESET|ETIMEDOUT|ECONNREFUSED|network|fetch failed|TLS|handshake|sending request/i
+          .test(msg);
+      if (!isTransient || attempt === retries) {
+        throw err;
+      }
+      const delay = Math.round(baseDelay * Math.pow(2, attempt) + Math.random() * 300);
+      console.warn(`[retry] ${label} ${msg}, attempt ${attempt + 1}/${retries} in ${delay}ms`);
+      await new Promise((r) => setTimeout(r, delay));
+    }
+  }
+  throw lastErr ?? new Error(`fetchWithRetry exhausted for ${label}`);
+}
+
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response("ok", { headers: corsHeaders });
@@ -34,7 +75,7 @@ Deno.serve(async (req) => {
 
     // Step 1: Search for churches using Firecrawl
     console.log("Searching:", search_query);
-    const searchRes = await fetch("https://api.firecrawl.dev/v1/search", {
+    const searchRes = await fetchWithRetry("https://api.firecrawl.dev/v1/search", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${firecrawlKey}`,
@@ -47,7 +88,7 @@ Deno.serve(async (req) => {
         country,
         scrapeOptions: { formats: ["markdown"] },
       }),
-    });
+    }, { label: "firecrawl-search", retries: 4, baseDelayMs: 1000 });
 
     const searchData = await searchRes.json();
     if (!searchRes.ok) {
@@ -69,7 +110,7 @@ Deno.serve(async (req) => {
       return `--- WEBSITE ${i + 1} ---\nURL: ${r.url}\nTitle: ${r.title || ""}\nContent:\n${md}`;
     }).join("\n\n");
 
-    const aiRes = await fetch("https://ai-gateway.lovable.dev/v1/chat/completions", {
+    const aiRes = await fetchWithRetry("https://ai-gateway.lovable.dev/v1/chat/completions", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${lovableKey}`,
@@ -116,7 +157,7 @@ Regeln:
         ],
         temperature: 0.2,
       }),
-    });
+    }, { label: "ai-gateway", retries: 4, baseDelayMs: 1000 });
 
     const aiData = await aiRes.json();
     let extracted: any[] = [];
