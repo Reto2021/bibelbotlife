@@ -229,6 +229,7 @@ Regeln:
       imported: newLeads.length,
       skipped: validLeads.length - newLeads.length,
       no_email: extracted.filter((e: any) => !e.email).length,
+      used_fallback: usedFallback,
       leads: extracted,
     }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
