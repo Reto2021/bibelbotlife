@@ -20,6 +20,24 @@ serve(async (req) => {
     });
   }
 
+  // Validate that the secret is a full URL, not just a Pit ID
+  if (!/^https?:\/\//i.test(GHL_WEBHOOK_URL)) {
+    console.error(
+      `GHL_WEBHOOK_URL is not a valid URL (got: "${GHL_WEBHOOK_URL.slice(0, 40)}..."). ` +
+      `Expected full webhook URL like https://services.leadconnectorhq.com/hooks/.../webhook-trigger/pit-...`
+    );
+    return new Response(
+      JSON.stringify({
+        error: "GHL_WEBHOOK_URL must be a full https:// URL, not just a Pit ID",
+        hint: "In GoHighLevel, copy the complete Webhook Trigger URL (starts with https://services.leadconnectorhq.com/hooks/...)",
+      }),
+      {
+        status: 500,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      }
+    );
+  }
+
   try {
     const { type, data } = await req.json();
 
