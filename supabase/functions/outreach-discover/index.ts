@@ -104,72 +104,86 @@ Deno.serve(async (req) => {
       });
     }
 
-    // Step 2: Extract contacts from each result using AI (batch)
+    // Step 2: Extract contacts from each result using AI (batch) — with regex fallback if gateway down
     const batchPrompt = results.map((r: any, i: number) => {
       const md = (r.markdown || r.description || "").slice(0, 2000);
       return `--- WEBSITE ${i + 1} ---\nURL: ${r.url}\nTitle: ${r.title || ""}\nContent:\n${md}`;
     }).join("\n\n");
 
-    const aiRes = await fetchWithRetry("https://ai-gateway.lovable.dev/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${lovableKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        model: "google/gemini-2.5-flash",
-        messages: [
-          {
-            role: "system",
-            content: `Du extrahierst Kontaktdaten von Websites. Zielgruppen sind:
+    // Regex-based fallback extractor — used if AI gateway is unreachable
+    const fallbackExtract = (): any[] => {
+      const EMAIL_RE = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g;
+      const BAD_PREFIXES = /^(noreply|no-reply|donotreply|info-?bounce|mailer-daemon|postmaster|abuse|webmaster)@/i;
+      const BAD_DOMAINS = /(wikipedia\.org|wikimedia|facebook\.com|instagram\.com|twitter\.com|youtube\.com|google\.com|linkedin\.com)$/i;
+      return results.map((r: any, i: number) => {
+        const text = `${r.title || ""}\n${r.markdown || r.description || ""}`;
+        const url = r.url || "";
+        const domain = (() => { try { return new URL(url).hostname; } catch { return ""; } })();
+        if (BAD_DOMAINS.test(domain)) return null;
+        const emails = (text.match(EMAIL_RE) || [])
+          .map((e: string) => e.toLowerCase())
+          .filter((e: string) => !BAD_PREFIXES.test(e))
+          .filter((e: string, idx: number, a: string[]) => a.indexOf(e) === idx);
+        const preferred = emails.find((e: string) => domain && e.endsWith("@" + domain.replace(/^www\./, ""))) || emails[0];
+        if (!preferred) return null;
+        const name = (r.title || "").replace(/\s*[-–|].*$/, "").trim().slice(0, 200);
+        return {
+          website_index: i + 1,
+          church_name: name || domain || "Unbekannt",
+          email: preferred,
+          contact_name: null,
+          city: null,
+          denomination: null,
+          category: "church",
+          website: url,
+          is_relevant: true,
+          _fallback: true,
+        };
+      }).filter(Boolean) as any[];
+    };
+
+    let extracted: any[] = [];
+    let usedFallback = false;
+    try {
+      const aiRes = await fetchWithRetry("https://ai-gateway.lovable.dev/v1/chat/completions", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${lovableKey}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          model: "google/gemini-2.5-flash",
+          messages: [
+            {
+              role: "system",
+              content: `Du extrahierst Kontaktdaten von Websites. Zielgruppen sind:
 - Kirchen und Gemeinden (reformiert, katholisch, freikirchlich etc.)
-- Seelsorger und Seelsorge-Praxen (Spitalseelsorge, Gefängnisseelsorge, Notfallseelsorge etc.)
+- Seelsorger und Seelsorge-Praxen
 - Life Coaches mit spirituellem/christlichem Fokus
 - Heime und Pflegeeinrichtungen mit Seelsorge-Angebot
 
-Antworte NUR mit einem JSON-Array. Für jede Website ein Objekt:
-[
-  {
-    "website_index": 1,
-    "church_name": "Name der Organisation/Person",
-    "email": "kontakt@email.ch oder null",
-    "contact_name": "Name der Kontaktperson oder null",
-    "city": "Stadt oder null",
-    "denomination": "Konfession oder null",
-    "category": "church | chaplain | life_coach | care_home | other",
-    "website": "URL der Website",
-    "is_relevant": true
-  }
-]
+Antworte NUR mit einem JSON-Array. Für jede Website ein Objekt mit website_index, church_name, email, contact_name, city, denomination, category (church|chaplain|life_coach|care_home|other), website, is_relevant.
 
 Regeln:
-- Kirchen, Seelsorger, christliche Life Coaches und Heime mit Seelsorge einschliessen (is_relevant: true)
-- Keine Aggregator-Seiten, Verzeichnisse, Nachrichtenportale, Wikipedia
-- E-Mail muss eine echte Kontakt-E-Mail sein (kein noreply, persönliche E-Mail bevorzugen)
-- Falls keine E-Mail gefunden: email = null
-- "category" korrekt setzen: church (Kirche/Gemeinde), chaplain (Seelsorger), life_coach (Coach), care_home (Heim)
-- Antworte NUR mit dem JSON-Array, keine Erklärung`,
-          },
-          {
-            role: "user",
-            content: `Extrahiere die Kontakte aus diesen ${results.length} Suchergebnissen:\n\n${batchPrompt}`,
-          },
-        ],
-        temperature: 0.2,
-      }),
-    }, { label: "ai-gateway", retries: 4, baseDelayMs: 1000 });
+- Keine Aggregator-Seiten, Verzeichnisse, Wikipedia
+- E-Mail muss echte Kontakt-E-Mail sein (kein noreply)
+- Falls keine E-Mail: email = null
+- Antworte NUR mit dem JSON-Array.`,
+            },
+            { role: "user", content: `Extrahiere die Kontakte aus diesen ${results.length} Suchergebnissen:\n\n${batchPrompt}` },
+          ],
+          temperature: 0.2,
+        }),
+      }, { label: "ai-gateway", retries: 4, baseDelayMs: 1000 });
 
-    const aiData = await aiRes.json();
-    let extracted: any[] = [];
-    try {
+      const aiData = await aiRes.json();
       const content = aiData.choices?.[0]?.message?.content || "";
       const jsonStr = content.replace(/```json\n?/g, "").replace(/```\n?/g, "").trim();
       extracted = JSON.parse(jsonStr);
-    } catch (e) {
-      console.error("AI parse error:", aiData);
-      return new Response(JSON.stringify({ error: "Could not parse AI response", raw: aiData.choices?.[0]?.message?.content }), {
-        status: 422, headers: { ...corsHeaders, "Content-Type": "application/json" },
-      });
+    } catch (aiErr) {
+      console.warn("AI gateway unavailable, using regex fallback:", (aiErr as Error).message);
+      extracted = fallbackExtract();
+      usedFallback = true;
     }
 
     // Filter: only churches with email
