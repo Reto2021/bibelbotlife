@@ -321,7 +321,10 @@ Deno.serve(async (req) => {
 
   try {
     const body = req.method === "POST" ? await req.json().catch(() => ({})) : {};
-    const batchLimit: number = Math.min(body.batch ?? 10, 60);
+    // Default 1 pro Aufruf, hart gedeckelt bei 5. Verhindert dass dieser Job
+    // die Edge-Runtime so lange belegt, dass parallele Live-Requests (z.B.
+    // bibelbot-chat) mit 503 Service Unavailable abgewiesen werden.
+    const batchLimit: number = Math.max(1, Math.min(body.batch ?? 1, 5));
     const languages: string[] = Array.isArray(body.languages) && body.languages.length
       ? body.languages.filter((l: string) => SUPPORTED_LANGS.includes(l))
       : SUPPORTED_LANGS;
