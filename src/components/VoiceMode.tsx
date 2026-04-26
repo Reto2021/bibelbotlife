@@ -315,8 +315,9 @@ export function VoiceMode({ open, onClose, botName }: VoiceModeProps) {
     setIsMuted(newMuted);
   };
 
-  const activateAudio = () => {
-    playLocalTestTone();
+  const activateAudio = async () => {
+    await unlockAudioElement().catch((err) => console.warn("audio element unlock failed:", err));
+    await playLocalTestTone();
     const audio = audioElRef.current;
     if (audio) {
       audio.muted = false;
