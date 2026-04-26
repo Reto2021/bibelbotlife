@@ -259,6 +259,11 @@ export function VoiceMode({ open, onClose, botName }: VoiceModeProps) {
 
         {/* Status text */}
         <div className="min-h-[3rem]">
+          {status === "idle" && (
+            <p className="text-muted-foreground">
+              Tippe auf Start, dann kann dein Handy Mikrofon und Ton freigeben.
+            </p>
+          )}
           {status === "connecting" && (
             <p className="text-muted-foreground">Verbindung wird aufgebaut…</p>
           )}
@@ -277,10 +282,21 @@ export function VoiceMode({ open, onClose, botName }: VoiceModeProps) {
               Verbindung fehlgeschlagen. Bitte erneut versuchen.
             </p>
           )}
+          {audioBlocked && status === "connected" && (
+            <p className="text-xs text-destructive mt-2">
+              Ton wurde vom Browser blockiert. Tippe unten auf „Ton aktivieren“.
+            </p>
+          )}
         </div>
 
         {/* Controls */}
         <div className="flex items-center gap-4">
+          {status === "idle" && (
+            <Button onClick={connect} size="lg" className="rounded-full px-7">
+              Voice starten
+            </Button>
+          )}
+
           {status === "connected" && (
             <Button
               variant={isMuted ? "secondary" : "outline"}
@@ -290,6 +306,22 @@ export function VoiceMode({ open, onClose, botName }: VoiceModeProps) {
               aria-label={isMuted ? "Mikrofon einschalten" : "Mikrofon stumm"}
             >
               {isMuted ? <MicOff className="h-5 w-5" /> : <Mic className="h-5 w-5" />}
+            </Button>
+          )}
+
+          {audioBlocked && status === "connected" && (
+            <Button
+              variant="secondary"
+              size="lg"
+              onClick={() => {
+                const audio = audioElRef.current;
+                if (!audio) return;
+                audio.muted = false;
+                audio.play().then(() => setAudioBlocked(false)).catch(() => setAudioBlocked(true));
+              }}
+              className="rounded-full px-5"
+            >
+              Ton aktivieren
             </Button>
           )}
 
