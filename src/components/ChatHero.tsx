@@ -1009,9 +1009,11 @@ export function ChatHero() {
                         <button
                           type="button"
                           onClick={isListening ? stopListening : startListening}
-                          className={`h-9 w-9 rounded-xl flex items-center justify-center transition-all duration-200 ${isListening ? "bg-destructive text-destructive-foreground" : "text-muted-foreground hover:text-foreground hover:bg-muted"}`}
+                          aria-label={isListening ? "Aufnahme stoppen" : "Spracheingabe starten"}
+                          aria-pressed={isListening}
+                          className={`h-9 w-9 rounded-xl flex items-center justify-center transition-all duration-200 ${isListening ? "bg-destructive text-destructive-foreground animate-pulse" : "text-muted-foreground/60 hover:text-foreground hover:bg-muted"}`}
                         >
-                          {isListening ? <MicOff className="h-4 w-4" /> : <Mic className="h-4 w-4" />}
+                          {isListening ? <Mic className="h-4 w-4" /> : <MicOff className="h-4 w-4" />}
                         </button>
                       )}
                       <button
