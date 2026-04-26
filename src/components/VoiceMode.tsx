@@ -21,14 +21,49 @@ export function VoiceMode({ open, onClose, botName }: VoiceModeProps) {
   const [audioBlocked, setAudioBlocked] = useState(false);
   const pcRef = useRef<RTCPeerConnection | null>(null);
   const audioElRef = useRef<HTMLAudioElement | null>(null);
+  const audioContextRef = useRef<AudioContext | null>(null);
+  const remoteSourceRef = useRef<MediaStreamAudioSourceNode | null>(null);
   const localStreamRef = useRef<MediaStream | null>(null);
   const dcRef = useRef<RTCDataChannel | null>(null);
   const { toast } = useToast();
+
+  const getAudioContext = () => {
+    if (!audioContextRef.current || audioContextRef.current.state === "closed") {
+      const AudioContextCtor = window.AudioContext || (window as typeof window & { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
+      if (!AudioContextCtor) throw new Error("Audio wird von diesem Browser nicht unterstützt");
+      audioContextRef.current = new AudioContextCtor();
+    }
+    return audioContextRef.current;
+  };
+
+  const playLocalTestTone = () => {
+    try {
+      const ctx = getAudioContext();
+      if (ctx.state === "suspended") void ctx.resume();
+      const oscillator = ctx.createOscillator();
+      const gain = ctx.createGain();
+      oscillator.type = "sine";
+      oscillator.frequency.setValueAtTime(660, ctx.currentTime);
+      gain.gain.setValueAtTime(0.0001, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.18, ctx.currentTime + 0.03);
+      gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.28);
+      oscillator.connect(gain).connect(ctx.destination);
+      oscillator.start(ctx.currentTime + 0.01);
+      oscillator.stop(ctx.currentTime + 0.3);
+      oscillator.onended = () => oscillator.disconnect();
+      setAudioBlocked(false);
+    } catch (err) {
+      console.warn("local test tone failed:", err);
+      setAudioBlocked(true);
+    }
+  };
 
   const cleanup = () => {
     try { dcRef.current?.close(); } catch {}
     try { pcRef.current?.close(); } catch {}
     try { localStreamRef.current?.getTracks().forEach((t) => t.stop()); } catch {}
+    try { remoteSourceRef.current?.disconnect(); } catch {}
+    try { audioContextRef.current?.close(); } catch {}
     try {
       if (audioElRef.current) {
         audioElRef.current.srcObject = null;
@@ -36,6 +71,8 @@ export function VoiceMode({ open, onClose, botName }: VoiceModeProps) {
       }
     } catch {}
     audioElRef.current = null;
+    audioContextRef.current = null;
+    remoteSourceRef.current = null;
     pcRef.current = null;
     dcRef.current = null;
     localStreamRef.current = null;
@@ -68,6 +105,8 @@ export function VoiceMode({ open, onClose, botName }: VoiceModeProps) {
       audioEl.srcObject = new MediaStream();
       document.body.appendChild(audioEl);
       audioElRef.current = audioEl;
+      const audioContext = getAudioContext();
+      if (audioContext.state === "suspended") await audioContext.resume();
       audioEl.play().catch((err) => console.warn("audio unlock failed:", err));
 
       const streamPromise = navigator.mediaDevices.getUserMedia({
@@ -100,6 +139,15 @@ export function VoiceMode({ open, onClose, botName }: VoiceModeProps) {
         audioEl.srcObject = remoteStream;
         audioEl.muted = false;
         audioEl.volume = 1;
+        try {
+          remoteSourceRef.current?.disconnect();
+          const ctx = getAudioContext();
+          remoteSourceRef.current = ctx.createMediaStreamSource(remoteStream);
+          remoteSourceRef.current.connect(ctx.destination);
+          if (ctx.state === "suspended") void ctx.resume();
+        } catch (err) {
+          console.warn("AudioContext remote playback failed:", err);
+        }
         audioEl.play().catch((err) => {
           console.warn("audio.play() failed:", err);
           setAudioBlocked(true);
@@ -202,6 +250,7 @@ export function VoiceMode({ open, onClose, botName }: VoiceModeProps) {
   };
 
   const activateAudio = () => {
+    playLocalTestTone();
     const audio = audioElRef.current;
     if (audio) {
       audio.muted = false;
