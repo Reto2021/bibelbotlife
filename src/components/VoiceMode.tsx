@@ -27,6 +27,60 @@ export function VoiceMode({ open, onClose, botName }: VoiceModeProps) {
   const dcRef = useRef<RTCDataChannel | null>(null);
   const { toast } = useToast();
 
+  const createToneAudioUrl = (frequency = 660, durationMs = 650) => {
+    const sampleRate = 44100;
+    const sampleCount = Math.floor((durationMs / 1000) * sampleRate);
+    const buffer = new ArrayBuffer(44 + sampleCount * 2);
+    const view = new DataView(buffer);
+    const writeString = (offset: number, value: string) => {
+      for (let i = 0; i < value.length; i += 1) view.setUint8(offset + i, value.charCodeAt(i));
+    };
+    writeString(0, "RIFF");
+    view.setUint32(4, 36 + sampleCount * 2, true);
+    writeString(8, "WAVE");
+    writeString(12, "fmt ");
+    view.setUint32(16, 16, true);
+    view.setUint16(20, 1, true);
+    view.setUint16(22, 1, true);
+    view.setUint32(24, sampleRate, true);
+    view.setUint32(28, sampleRate * 2, true);
+    view.setUint16(32, 2, true);
+    view.setUint16(34, 16, true);
+    writeString(36, "data");
+    view.setUint32(40, sampleCount * 2, true);
+    for (let i = 0; i < sampleCount; i += 1) {
+      const fadeIn = Math.min(1, i / (sampleRate * 0.03));
+      const fadeOut = Math.min(1, (sampleCount - i) / (sampleRate * 0.08));
+      const envelope = Math.min(fadeIn, fadeOut);
+      const sample = Math.sin((2 * Math.PI * frequency * i) / sampleRate) * envelope * 0.32;
+      view.setInt16(44 + i * 2, Math.max(-1, Math.min(1, sample)) * 0x7fff, true);
+    }
+    return URL.createObjectURL(new Blob([buffer], { type: "audio/wav" }));
+  };
+
+  const unlockAudioElement = async () => {
+    const audio = audioElRef.current;
+    if (!audio) return;
+    const previousSrc = audio.src;
+    const previousSrcObject = audio.srcObject;
+    const toneUrl = createToneAudioUrl(1, 120);
+    try {
+      audio.pause();
+      audio.srcObject = null;
+      audio.src = toneUrl;
+      audio.muted = false;
+      audio.volume = 0.01;
+      await audio.play();
+      audio.pause();
+      audio.currentTime = 0;
+    } finally {
+      URL.revokeObjectURL(toneUrl);
+      audio.volume = 1;
+      audio.src = previousSrc;
+      audio.srcObject = previousSrcObject;
+    }
+  };
+
   const getAudioContext = () => {
     if (!audioContextRef.current || audioContextRef.current.state === "closed") {
       const AudioContextCtor = window.AudioContext || (window as typeof window & { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
@@ -36,25 +90,37 @@ export function VoiceMode({ open, onClose, botName }: VoiceModeProps) {
     return audioContextRef.current;
   };
 
-  const playLocalTestTone = () => {
+  const playLocalTestTone = async () => {
     try {
       const ctx = getAudioContext();
-      if (ctx.state === "suspended") void ctx.resume();
+      if (ctx.state === "suspended") await ctx.resume();
       const oscillator = ctx.createOscillator();
       const gain = ctx.createGain();
       oscillator.type = "sine";
       oscillator.frequency.setValueAtTime(660, ctx.currentTime);
       gain.gain.setValueAtTime(0.0001, ctx.currentTime);
-      gain.gain.exponentialRampToValueAtTime(0.18, ctx.currentTime + 0.03);
-      gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.28);
+      gain.gain.exponentialRampToValueAtTime(0.32, ctx.currentTime + 0.03);
+      gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.62);
       oscillator.connect(gain).connect(ctx.destination);
       oscillator.start(ctx.currentTime + 0.01);
-      oscillator.stop(ctx.currentTime + 0.3);
+      oscillator.stop(ctx.currentTime + 0.65);
       oscillator.onended = () => oscillator.disconnect();
       setAudioBlocked(false);
     } catch (err) {
       console.warn("local test tone failed:", err);
-      setAudioBlocked(true);
+      const toneUrl = createToneAudioUrl();
+      try {
+        const fallbackAudio = new Audio(toneUrl);
+        fallbackAudio.volume = 1;
+        fallbackAudio.playsInline = true;
+        await fallbackAudio.play();
+        setAudioBlocked(false);
+      } catch (fallbackErr) {
+        console.warn("fallback test tone failed:", fallbackErr);
+        setAudioBlocked(true);
+      } finally {
+        setTimeout(() => URL.revokeObjectURL(toneUrl), 1000);
+      }
     }
   };
 
