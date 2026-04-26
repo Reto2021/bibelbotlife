@@ -18,6 +18,7 @@ export function VoiceMode({ open, onClose, botName }: VoiceModeProps) {
   const [transcript, setTranscript] = useState<string>("");
   const [isAssistantSpeaking, setIsAssistantSpeaking] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
+  const [audioBlocked, setAudioBlocked] = useState(false);
   const pcRef = useRef<RTCPeerConnection | null>(null);
   const audioElRef = useRef<HTMLAudioElement | null>(null);
   const localStreamRef = useRef<MediaStream | null>(null);
@@ -40,13 +41,40 @@ export function VoiceMode({ open, onClose, botName }: VoiceModeProps) {
     localStreamRef.current = null;
     setStatus("idle");
     setIsAssistantSpeaking(false);
+    setIsMuted(false);
+    setAudioBlocked(false);
     setTranscript("");
   };
 
   const connect = async () => {
+    if (status === "connecting" || status === "connected") return;
     setStatus("connecting");
+    setAudioBlocked(false);
     try {
-      // 1. Get ephemeral token from our edge function
+      // 1. Prime audio + microphone immediately from the user's tap.
+      // Mobile WebViews often block playback if media setup happens later in an effect/async callback.
+      const audioEl = document.createElement("audio");
+      audioEl.autoplay = true;
+      audioEl.controls = false;
+      audioEl.muted = true;
+      audioEl.volume = 1;
+      (audioEl as any).playsInline = true;
+      audioEl.setAttribute("playsinline", "true");
+      audioEl.style.position = "fixed";
+      audioEl.style.width = "1px";
+      audioEl.style.height = "1px";
+      audioEl.style.opacity = "0";
+      audioEl.style.pointerEvents = "none";
+      audioEl.srcObject = new MediaStream();
+      document.body.appendChild(audioEl);
+      audioElRef.current = audioEl;
+      audioEl.play().catch((err) => console.warn("audio unlock failed:", err));
+
+      const streamPromise = navigator.mediaDevices.getUserMedia({
+        audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true },
+      });
+
+      // 2. Get ephemeral token from our edge function
       const tokenResp = await fetch(SESSION_URL, {
         method: "POST",
         headers: {
@@ -63,35 +91,27 @@ export function VoiceMode({ open, onClose, botName }: VoiceModeProps) {
       const ephemeralKey: string | undefined = session?.client_secret?.value;
       if (!ephemeralKey) throw new Error("Kein Token erhalten");
 
-      // 2. Create peer connection
+      // 3. Create peer connection
       const pc = new RTCPeerConnection();
       pcRef.current = pc;
 
-      // Remote audio playback – MUST be in DOM for mobile WebView autoplay
-      const audioEl = document.createElement("audio");
-      audioEl.autoplay = true;
-      (audioEl as any).playsInline = true;
-      audioEl.setAttribute("playsinline", "true");
-      audioEl.style.display = "none";
-      document.body.appendChild(audioEl);
-      audioElRef.current = audioEl;
       pc.ontrack = (ev) => {
-        audioEl.srcObject = ev.streams[0];
-        // Force play (mobile autoplay can need explicit call)
-        audioEl.play().catch((err) => console.warn("audio.play() failed:", err));
+        const remoteStream = ev.streams[0] ?? new MediaStream([ev.track]);
+        audioEl.srcObject = remoteStream;
+        audioEl.muted = false;
+        audioEl.volume = 1;
+        audioEl.play().catch((err) => {
+          console.warn("audio.play() failed:", err);
+          setAudioBlocked(true);
+        });
       };
 
-      // Explicit recv transceiver helps some browsers/WebViews negotiate audio reliably
-      pc.addTransceiver("audio", { direction: "recvonly" });
-
-      // 3. Local mic
-      const stream = await navigator.mediaDevices.getUserMedia({
-        audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true },
-      });
+      // 4. Local mic
+      const stream = await streamPromise;
       localStreamRef.current = stream;
       stream.getTracks().forEach((track) => pc.addTrack(track, stream));
 
-      // 4. Data channel for events
+      // 5. Data channel for events
       const dc = pc.createDataChannel("oai-events");
       dcRef.current = dc;
       dc.addEventListener("open", () => {
@@ -114,11 +134,12 @@ export function VoiceMode({ open, onClose, botName }: VoiceModeProps) {
       dc.addEventListener("message", (e) => {
         try {
           const msg = JSON.parse(e.data);
-          if (msg.type === "response.audio.delta") {
+          if (msg.type === "response.audio.delta" || msg.type === "response.output_audio.delta") {
             setIsAssistantSpeaking(true);
           } else if (
             msg.type === "response.done" ||
-            msg.type === "response.audio.done"
+            msg.type === "response.audio.done" ||
+            msg.type === "response.output_audio.done"
           ) {
             setIsAssistantSpeaking(false);
           } else if (msg.type === "response.audio_transcript.delta") {
@@ -129,13 +150,15 @@ export function VoiceMode({ open, onClose, botName }: VoiceModeProps) {
           } else if (msg.type === "input_audio_buffer.speech_started") {
             // user started speaking → barge-in
             setIsAssistantSpeaking(false);
+          } else if (msg.type === "error") {
+            throw new Error(msg.error?.message || "Realtime-Fehler");
           }
-        } catch {
-          // ignore
+        } catch (err) {
+          console.warn("Realtime event error:", err);
         }
       });
 
-      // 5. SDP offer/answer with OpenAI Realtime
+      // 6. SDP offer/answer with OpenAI Realtime
       const offer = await pc.createOffer();
       await pc.setLocalDescription(offer);
 
@@ -178,11 +201,29 @@ export function VoiceMode({ open, onClose, botName }: VoiceModeProps) {
     setIsMuted(newMuted);
   };
 
-  // Auto-connect when opened
-  useEffect(() => {
-    if (open && status === "idle") {
-      connect();
+  const activateAudio = () => {
+    const audio = audioElRef.current;
+    if (audio) {
+      audio.muted = false;
+      audio.volume = 1;
+      audio.play().then(() => setAudioBlocked(false)).catch(() => setAudioBlocked(true));
     }
+    if (dcRef.current?.readyState === "open") {
+      dcRef.current.send(
+        JSON.stringify({
+          type: "response.create",
+          response: {
+            modalities: ["audio", "text"],
+            instructions: "Sag kurz und warm: Ich bin da. Dann frag, was den Menschen gerade beschäftigt.",
+          },
+        }),
+      );
+    }
+  };
+
+  // Reset when closed. Connection starts only from the visible Start button,
+  // so microphone + audio playback stay tied to a real user gesture.
+  useEffect(() => {
     if (!open) {
       cleanup();
     }
@@ -238,6 +279,11 @@ export function VoiceMode({ open, onClose, botName }: VoiceModeProps) {
 
         {/* Status text */}
         <div className="min-h-[3rem]">
+          {status === "idle" && (
+            <p className="text-muted-foreground">
+              Tippe auf Start, dann kann dein Handy Mikrofon und Ton freigeben.
+            </p>
+          )}
           {status === "connecting" && (
             <p className="text-muted-foreground">Verbindung wird aufgebaut…</p>
           )}
@@ -256,10 +302,21 @@ export function VoiceMode({ open, onClose, botName }: VoiceModeProps) {
               Verbindung fehlgeschlagen. Bitte erneut versuchen.
             </p>
           )}
+          {audioBlocked && status === "connected" && (
+            <p className="text-xs text-destructive mt-2">
+              Ton wurde vom Browser blockiert. Tippe unten auf „Ton aktivieren“.
+            </p>
+          )}
         </div>
 
         {/* Controls */}
         <div className="flex items-center gap-4">
+          {status === "idle" && (
+            <Button onClick={connect} size="lg" className="rounded-full px-7">
+              Voice starten
+            </Button>
+          )}
+
           {status === "connected" && (
             <Button
               variant={isMuted ? "secondary" : "outline"}
@@ -269,6 +326,17 @@ export function VoiceMode({ open, onClose, botName }: VoiceModeProps) {
               aria-label={isMuted ? "Mikrofon einschalten" : "Mikrofon stumm"}
             >
               {isMuted ? <MicOff className="h-5 w-5" /> : <Mic className="h-5 w-5" />}
+            </Button>
+          )}
+
+          {status === "connected" && (
+            <Button
+              variant="secondary"
+              size="lg"
+              onClick={activateAudio}
+              className="rounded-full px-5"
+            >
+              {audioBlocked ? "Ton aktivieren" : "Ton testen"}
             </Button>
           )}
 

@@ -868,18 +868,31 @@ export function ChatHero() {
   };
 
   const startListening = useCallback(() => {
-    if (!SpeechRecognition) return;
+    if (!SpeechRecognition) {
+      toast({ title: "Spracheingabe nicht verfügbar", description: "Dein Browser unterstützt diese Funktion leider nicht.", variant: "destructive" });
+      return;
+    }
     const recognition = new SpeechRecognition();
     recognition.lang = getSpeechLang(i18n.language);
     recognition.continuous = false;
     recognition.interimResults = true;
     recognition.onresult = (event: any) => { const transcript = Array.from(event.results).map((r: any) => r[0].transcript).join(""); setInput(transcript); };
     recognition.onend = () => setIsListening(false);
-    recognition.onerror = () => setIsListening(false);
+    recognition.onerror = (event: any) => {
+      setIsListening(false);
+      if (event?.error === "not-allowed") {
+        toast({ title: "Mikrofon blockiert", description: "Bitte erlaube den Mikrofonzugriff und tippe nochmals auf das Symbol.", variant: "destructive" });
+      }
+    };
     recognitionRef.current = recognition;
-    recognition.start();
-    setIsListening(true);
-  }, [i18n.language]);
+    try {
+      recognition.start();
+      setIsListening(true);
+    } catch (error) {
+      setIsListening(false);
+      toast({ title: "Aufnahme konnte nicht starten", description: error instanceof Error ? error.message : "Bitte tippe nochmals auf das Mikrofon.", variant: "destructive" });
+    }
+  }, [i18n.language, toast]);
 
   const stopListening = useCallback(() => { recognitionRef.current?.stop(); setIsListening(false); }, []);
 
