@@ -7,6 +7,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { AnalyticsProvider } from "@/components/AnalyticsProvider";
 import { InstallPrompt } from "@/components/InstallPrompt";
+import { VoiceFloatingButton } from "@/components/VoiceFloatingButton";
 import { AuthProvider } from "@/hooks/use-auth";
 import { SplashScreen } from "@/components/SplashScreen";
 import { useChurchBranding, hexToHsl } from "@/hooks/use-church-branding";
@@ -230,6 +231,7 @@ const App = () => {
                 </Routes>
               </Suspense>
               <InstallPrompt />
+              <VoiceFloatingButton />
             </AnalyticsProvider>
           </AuthProvider>
         </BrowserRouter>
