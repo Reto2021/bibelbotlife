@@ -105,6 +105,8 @@ export function VoiceMode({ open, onClose, botName }: VoiceModeProps) {
       audioEl.srcObject = new MediaStream();
       document.body.appendChild(audioEl);
       audioElRef.current = audioEl;
+      const audioContext = getAudioContext();
+      if (audioContext.state === "suspended") await audioContext.resume();
       audioEl.play().catch((err) => console.warn("audio unlock failed:", err));
 
       const streamPromise = navigator.mediaDevices.getUserMedia({
@@ -137,6 +139,15 @@ export function VoiceMode({ open, onClose, botName }: VoiceModeProps) {
         audioEl.srcObject = remoteStream;
         audioEl.muted = false;
         audioEl.volume = 1;
+        try {
+          remoteSourceRef.current?.disconnect();
+          const ctx = getAudioContext();
+          remoteSourceRef.current = ctx.createMediaStreamSource(remoteStream);
+          remoteSourceRef.current.connect(ctx.destination);
+          if (ctx.state === "suspended") void ctx.resume();
+        } catch (err) {
+          console.warn("AudioContext remote playback failed:", err);
+        }
         audioEl.play().catch((err) => {
           console.warn("audio.play() failed:", err);
           setAudioBlocked(true);
@@ -239,6 +250,7 @@ export function VoiceMode({ open, onClose, botName }: VoiceModeProps) {
   };
 
   const activateAudio = () => {
+    playLocalTestTone();
     const audio = audioElRef.current;
     if (audio) {
       audio.muted = false;
