@@ -286,6 +286,7 @@ export function BibleBotChat() {
     try { return localStorage.getItem("bibelbot-translation") || "auto"; } catch { return "auto"; }
   });
   const [showScrollDown, setShowScrollDown] = useState(false);
+  const [voiceModeOpen, setVoiceModeOpen] = useState(false);
   const [recordingSeconds, setRecordingSeconds] = useState(0);
   const recordingTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
@@ -694,11 +695,21 @@ export function BibleBotChat() {
             <BookOpen className="absolute right-0 top-1/2 -translate-y-1/2 h-3 w-3 text-muted-foreground pointer-events-none" />
           </div>
           
+          <button
+            onClick={() => setVoiceModeOpen(true)}
+            className="text-muted-foreground hover:text-primary transition-colors p-1.5 rounded-lg hover:bg-primary/10"
+            aria-label="Voice-Gespräch starten"
+            title="Voice-Gespräch starten"
+          >
+            <Phone className="h-4 w-4" />
+          </button>
+
           <button onClick={() => setIsOpen(false)} className="text-muted-foreground hover:text-foreground transition-colors" aria-label={t("chat.closeChat")}>
             <X className="h-5 w-5" />
           </button>
         </div>
       </div>
+      <VoiceMode open={voiceModeOpen} onClose={() => setVoiceModeOpen(false)} botName={botName} />
 
       {/* Messages */}
       <div ref={scrollRef} className={`flex-1 overflow-y-auto px-4 py-3 space-y-3`}>
