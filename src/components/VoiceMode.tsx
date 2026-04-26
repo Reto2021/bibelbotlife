@@ -112,7 +112,7 @@ export function VoiceMode({ open, onClose, botName }: VoiceModeProps) {
       try {
         const fallbackAudio = new Audio(toneUrl);
         fallbackAudio.volume = 1;
-        fallbackAudio.playsInline = true;
+        fallbackAudio.setAttribute("playsinline", "true");
         await fallbackAudio.play();
         setAudioBlocked(false);
       } catch (fallbackErr) {
