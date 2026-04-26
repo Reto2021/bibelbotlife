@@ -37,7 +37,7 @@ export function VoiceFloatingButton() {
 
   return (
     <>
-      <div className="fixed bottom-6 right-24 z-50 flex items-end gap-3">
+      <div className="fixed bottom-24 right-6 z-50 flex flex-col items-end gap-3">
         {showTeaser && (
           <div
             className="animate-in fade-in slide-in-from-right-4 duration-500 bg-card border border-primary/30 rounded-2xl rounded-br-md px-3 py-2 shadow-[0_4px_20px_hsl(var(--primary)/0.2)] max-w-[200px] cursor-pointer hover:shadow-[0_4px_28px_hsl(var(--primary)/0.3)] transition-shadow"
