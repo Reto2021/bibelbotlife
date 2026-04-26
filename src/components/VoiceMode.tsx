@@ -201,6 +201,26 @@ export function VoiceMode({ open, onClose, botName }: VoiceModeProps) {
     setIsMuted(newMuted);
   };
 
+  const activateAudio = () => {
+    const audio = audioElRef.current;
+    if (audio) {
+      audio.muted = false;
+      audio.volume = 1;
+      audio.play().then(() => setAudioBlocked(false)).catch(() => setAudioBlocked(true));
+    }
+    if (dcRef.current?.readyState === "open") {
+      dcRef.current.send(
+        JSON.stringify({
+          type: "response.create",
+          response: {
+            modalities: ["audio", "text"],
+            instructions: "Sag kurz und warm: Ich bin da. Dann frag, was den Menschen gerade beschäftigt.",
+          },
+        }),
+      );
+    }
+  };
+
   // Reset when closed. Connection starts only from the visible Start button,
   // so microphone + audio playback stay tied to a real user gesture.
   useEffect(() => {
@@ -309,19 +329,14 @@ export function VoiceMode({ open, onClose, botName }: VoiceModeProps) {
             </Button>
           )}
 
-          {audioBlocked && status === "connected" && (
+          {status === "connected" && (
             <Button
               variant="secondary"
               size="lg"
-              onClick={() => {
-                const audio = audioElRef.current;
-                if (!audio) return;
-                audio.muted = false;
-                audio.play().then(() => setAudioBlocked(false)).catch(() => setAudioBlocked(true));
-              }}
+              onClick={activateAudio}
               className="rounded-full px-5"
             >
-              Ton aktivieren
+              {audioBlocked ? "Ton aktivieren" : "Ton testen"}
             </Button>
           )}
 
