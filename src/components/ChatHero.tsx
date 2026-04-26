@@ -1308,8 +1308,8 @@ export function ChatHero() {
                       rows={isSenior ? 2 : 1}
                     />
                     {SpeechRecognition && (
-                      <Button size="icon" variant={isListening ? "destructive" : "outline"} onClick={isListening ? stopListening : startListening} className={`${s.btnSize} shrink-0`}>
-                        {isListening ? <MicOff className={s.btnIcon} /> : <Mic className={s.btnIcon} />}
+                      <Button size="icon" variant={isListening ? "destructive" : "outline"} onClick={isListening ? stopListening : startListening} aria-pressed={isListening} aria-label={isListening ? "Aufnahme stoppen" : "Spracheingabe starten"} className={`${s.btnSize} shrink-0 ${isListening ? "animate-pulse" : ""}`}>
+                        {isListening ? <Mic className={s.btnIcon} /> : <MicOff className={s.btnIcon} />}
                       </Button>
                     )}
                     <Button size="icon" onClick={() => sendMessage(input)} disabled={!input.trim() || isLoading} className={`${s.btnSize} shrink-0`}>
