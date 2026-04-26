@@ -60,13 +60,22 @@ export function VoiceMode({ open, onClose, botName }: VoiceModeProps) {
       const pc = new RTCPeerConnection();
       pcRef.current = pc;
 
-      // Remote audio playback
-      const audioEl = new Audio();
+      // Remote audio playback – MUST be in DOM for mobile WebView autoplay
+      const audioEl = document.createElement("audio");
       audioEl.autoplay = true;
+      (audioEl as any).playsInline = true;
+      audioEl.setAttribute("playsinline", "true");
+      audioEl.style.display = "none";
+      document.body.appendChild(audioEl);
       audioElRef.current = audioEl;
       pc.ontrack = (ev) => {
         audioEl.srcObject = ev.streams[0];
+        // Force play (mobile autoplay can need explicit call)
+        audioEl.play().catch((err) => console.warn("audio.play() failed:", err));
       };
+
+      // Explicit recv transceiver helps some browsers/WebViews negotiate audio reliably
+      pc.addTransceiver("audio", { direction: "recvonly" });
 
       // 3. Local mic
       const stream = await navigator.mediaDevices.getUserMedia({
@@ -78,6 +87,23 @@ export function VoiceMode({ open, onClose, botName }: VoiceModeProps) {
       // 4. Data channel for events
       const dc = pc.createDataChannel("oai-events");
       dcRef.current = dc;
+      dc.addEventListener("open", () => {
+        // Kick off with a brief greeting so the user immediately hears the bot.
+        try {
+          dc.send(
+            JSON.stringify({
+              type: "response.create",
+              response: {
+                modalities: ["audio", "text"],
+                instructions:
+                  "Begrüsse den Menschen kurz und herzlich auf Schweizer Hochdeutsch (ein bis zwei Sätze) und frag offen, was ihn gerade beschäftigt.",
+              },
+            }),
+          );
+        } catch (err) {
+          console.warn("greeting send failed", err);
+        }
+      });
       dc.addEventListener("message", (e) => {
         try {
           const msg = JSON.parse(e.data);
