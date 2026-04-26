@@ -28,6 +28,13 @@ export function VoiceMode({ open, onClose, botName }: VoiceModeProps) {
     try { dcRef.current?.close(); } catch {}
     try { pcRef.current?.close(); } catch {}
     try { localStreamRef.current?.getTracks().forEach((t) => t.stop()); } catch {}
+    try {
+      if (audioElRef.current) {
+        audioElRef.current.srcObject = null;
+        audioElRef.current.remove();
+      }
+    } catch {}
+    audioElRef.current = null;
     pcRef.current = null;
     dcRef.current = null;
     localStreamRef.current = null;
