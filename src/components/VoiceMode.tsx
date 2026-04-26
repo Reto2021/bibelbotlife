@@ -149,17 +149,47 @@ export function VoiceMode({ open, onClose, botName }: VoiceModeProps) {
     setTranscript("");
   };
 
+  const greetedRef = useRef(false);
+  const trackReadyRef = useRef(false);
+  const dcOpenRef = useRef(false);
+
+  const sendGreeting = () => {
+    if (greetedRef.current) return;
+    if (!dcOpenRef.current || !trackReadyRef.current) return;
+    const dc = dcRef.current;
+    if (!dc || dc.readyState !== "open") return;
+    greetedRef.current = true;
+    try {
+      dc.send(
+        JSON.stringify({
+          type: "response.create",
+          response: {
+            modalities: ["audio", "text"],
+            instructions:
+              "Begrüsse den Menschen kurz und herzlich auf Schweizer Hochdeutsch (ein bis zwei Sätze) und frag offen, was ihn gerade beschäftigt.",
+          },
+        }),
+      );
+    } catch (err) {
+      console.warn("greeting send failed", err);
+      greetedRef.current = false;
+    }
+  };
+
   const connect = async () => {
     if (status === "connecting" || status === "connected") return;
     setStatus("connecting");
     setAudioBlocked(false);
+    greetedRef.current = false;
+    trackReadyRef.current = false;
+    dcOpenRef.current = false;
     try {
       // 1. Prime audio + microphone immediately from the user's tap.
       // Mobile WebViews often block playback if media setup happens later in an effect/async callback.
       const audioEl = document.createElement("audio");
       audioEl.autoplay = true;
       audioEl.controls = false;
-      audioEl.muted = true;
+      audioEl.muted = false;
       audioEl.volume = 1;
       (audioEl as any).playsInline = true;
       audioEl.setAttribute("playsinline", "true");
@@ -214,10 +244,19 @@ export function VoiceMode({ open, onClose, botName }: VoiceModeProps) {
         } catch (err) {
           console.warn("AudioContext remote playback failed:", err);
         }
-        audioEl.play().catch((err) => {
-          console.warn("audio.play() failed:", err);
-          setAudioBlocked(true);
-        });
+        audioEl.play()
+          .then(() => {
+            setAudioBlocked(false);
+            trackReadyRef.current = true;
+            sendGreeting();
+          })
+          .catch((err) => {
+            console.warn("audio.play() failed:", err);
+            setAudioBlocked(true);
+            // Still attempt greeting; user can hit "Ton aktivieren"
+            trackReadyRef.current = true;
+            sendGreeting();
+          });
       };
 
       // 4. Local mic
@@ -229,21 +268,8 @@ export function VoiceMode({ open, onClose, botName }: VoiceModeProps) {
       const dc = pc.createDataChannel("oai-events");
       dcRef.current = dc;
       dc.addEventListener("open", () => {
-        // Kick off with a brief greeting so the user immediately hears the bot.
-        try {
-          dc.send(
-            JSON.stringify({
-              type: "response.create",
-              response: {
-                modalities: ["audio", "text"],
-                instructions:
-                  "Begrüsse den Menschen kurz und herzlich auf Schweizer Hochdeutsch (ein bis zwei Sätze) und frag offen, was ihn gerade beschäftigt.",
-              },
-            }),
-          );
-        } catch (err) {
-          console.warn("greeting send failed", err);
-        }
+        dcOpenRef.current = true;
+        sendGreeting();
       });
       dc.addEventListener("message", (e) => {
         try {
