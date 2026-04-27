@@ -161,7 +161,9 @@ export function VoiceMode({ open, onClose, botName }: VoiceModeProps) {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          apikey: import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
           Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+          Accept: "text/event-stream",
         },
         body: JSON.stringify({
           messages: historyRef.current,
@@ -171,7 +173,9 @@ export function VoiceMode({ open, onClose, botName }: VoiceModeProps) {
       });
 
       if (!resp.ok || !resp.body) {
-        throw new Error(`Chat ${resp.status}`);
+        const errText = await resp.text().catch(() => "");
+        console.error("Chat failed:", resp.status, errText);
+        throw new Error(`Chat ${resp.status}: ${errText.slice(0, 200)}`);
       }
 
       const reader = resp.body.getReader();
