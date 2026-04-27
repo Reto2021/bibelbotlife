@@ -1718,6 +1718,52 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
       throw new Error("LOVABLE_API_KEY is not configured");
     }
 
+    // === Voice mode fast-path: skip tool calls, stream directly ===
+    // Voice should feel snappy. We skip the bible-lookup tool round-trip and
+    // stream a shorter, conversational response straight back as SSE.
+    if (mode === "voice") {
+      const voiceSystem = systemPrompt + `\n\n[VOICE-MODUS] Du sprichst – nicht schreibst. Halte Antworten KURZ (max 60-90 Wörter, 2-3 Sätze). Keine Aufzählungen, keine Markdown, keine «a) b) c)»-Optionen. Stelle am Ende EINE einfache Folgefrage. Sprich natürlich und warm.`;
+      const voiceResp = await fetch(
+        "https://ai.gateway.lovable.dev/v1/chat/completions",
+        {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${LOVABLE_API_KEY}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            model: "google/gemini-2.5-flash",
+            temperature: 0.85,
+            stream: true,
+            messages: [
+              { role: "system", content: voiceSystem },
+              ...messages,
+            ],
+          }),
+        }
+      );
+      if (!voiceResp.ok) {
+        const errText = await voiceResp.text();
+        console.error("Voice fast-path error:", voiceResp.status, errText);
+        if (voiceResp.status === 429) {
+          return new Response(JSON.stringify({ error: "Rate limit erreicht, bitte später erneut versuchen." }), {
+            status: 429, headers: { ...corsHeaders, "Content-Type": "application/json" },
+          });
+        }
+        if (voiceResp.status === 402) {
+          return new Response(JSON.stringify({ error: "Guthaben aufgebraucht." }), {
+            status: 402, headers: { ...corsHeaders, "Content-Type": "application/json" },
+          });
+        }
+        return new Response(JSON.stringify({ error: "Voice chat failed", detail: errText }), {
+          status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" },
+        });
+      }
+      return new Response(voiceResp.body, {
+        headers: { ...corsHeaders, "Content-Type": "text/event-stream" },
+      });
+    }
+
     // Build language-aware Bible tools
     const bibleTools = buildBibleTools(lang);
 
