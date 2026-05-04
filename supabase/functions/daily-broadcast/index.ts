@@ -159,7 +159,8 @@ ${impulse.context}
 function formatSMS(impulse: Record<string, string>, firstName?: string, lang = "de"): string {
   const [greeting] = getGreeting(lang);
   const name = firstName ? `${greeting}, ${firstName}!` : `${greeting}!`;
-  return `${name} ${impulse.topic}: ${impulse.teaser} - ${impulse.reference} | BibelBot.ch`;
+  // Kein konstanter Topic-Prefix mehr — direkt mit dem variierenden Teaser starten.
+  return `${name} ${impulse.teaser} (${impulse.reference}) | BibelBot.ch`;
 }
 
 serve(async (req) => {

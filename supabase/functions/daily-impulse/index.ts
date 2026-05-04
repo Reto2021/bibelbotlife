@@ -298,9 +298,54 @@ serve(async (req) => {
     const translatedContext = translateChurchContext(churchContext, lang);
     const weekday = lang === "de" ? WEEKDAYS_DE[now.getDay()] : WEEKDAYS_EN[now.getDay()];
 
+    // ── Themen-Variation: letzte 14 Themen aus dem Cache holen, damit das LLM sie meidet ──
+    const { data: recent } = await sb
+      .from("app_settings")
+      .select("key,value")
+      .like("key", `impulse_%_${lang}`)
+      .order("key", { ascending: false })
+      .limit(14);
+    const recentTopics = (recent || [])
+      .map((r: any) => (r.value && typeof r.value === "object" ? r.value.topic : null))
+      .filter(Boolean);
+
+    // Zufälliges Themen-Seed, damit das LLM bei gleichem Kontext nicht in derselben Bahn landet
+    const THEME_SEEDS_DE = [
+      "Mut", "Zweifel", "Liebe", "Gerechtigkeit", "Hoffnung", "Vergebung",
+      "Identität", "Angst", "Dankbarkeit", "Berufung", "Geduld", "Demut",
+      "Freude", "Treue", "Versuchung", "Weisheit", "Trauer", "Freundschaft",
+      "Wahrheit", "Grosszügigkeit", "Sanftmut", "Selbstbeherrschung",
+      "Gebet", "Anbetung", "Schöpfung", "Ehe", "Familie", "Arbeit",
+      "Reichtum und Geld", "Feinde lieben", "Heiliger Geist", "Gnade",
+      "Bund", "Sabbat / Ruhe", "Nachfolge", "Versöhnung", "Sehnsucht",
+      "Veränderung", "Neuanfang", "Sterben und Auferstehung",
+    ];
+    const THEME_SEEDS_EN = [
+      "courage", "doubt", "love", "justice", "hope", "forgiveness",
+      "identity", "fear", "gratitude", "calling", "patience", "humility",
+      "joy", "faithfulness", "temptation", "wisdom", "grief", "friendship",
+      "truth", "generosity", "gentleness", "self-control",
+      "prayer", "worship", "creation", "marriage", "family", "work",
+      "money and wealth", "loving enemies", "Holy Spirit", "grace",
+      "covenant", "sabbath / rest", "discipleship", "reconciliation", "longing",
+      "change", "new beginnings", "death and resurrection",
+    ];
+    const seeds = lang === "de" ? THEME_SEEDS_DE : THEME_SEEDS_EN;
+    const seed = seeds[Math.floor(Math.random() * seeds.length)];
+
+    const avoidLine = recentTopics.length
+      ? (lang === "de"
+          ? `WICHTIG – Diese Themen wurden in den letzten Tagen schon verwendet, vermeide sie und wähle ETWAS DEUTLICH ANDERES (anderes Buch, anderes Motiv, andere Tonart): ${recentTopics.join(" | ")}.`
+          : `IMPORTANT – These topics were used in recent days, AVOID them and choose something distinctly different (different book, different motif, different tone): ${recentTopics.join(" | ")}.`)
+      : "";
+
+    const seedLine = lang === "de"
+      ? `Themen-Vorschlag für heute (kannst du leicht abwandeln, aber bleib in dieser Richtung): „${seed}". Wähle eine passende Bibelstelle dazu, möglichst aus einem Buch, das in der obigen Liste NICHT vertreten ist.`
+      : `Theme suggestion for today (you may vary slightly, but stay in this direction): "${seed}". Pick a fitting Bible passage, ideally from a book NOT present in the list above.`;
+
     const userPrompt = lang === "de"
-      ? `Heute ist ${weekday}, ${dateStr}. Kirchlicher Kontext: ${churchContext}. Generiere einen passenden täglichen Impuls.`
-      : `Today is ${weekday}, ${dateStr}. Church context: ${translatedContext}. Generate a fitting daily impulse in ${LANG_CONFIG[lang]?.name || "the requested language"}.`;
+      ? `Heute ist ${weekday}, ${dateStr}. Kirchlicher Kontext: ${churchContext}.\n${avoidLine}\n${seedLine}\nGeneriere einen passenden täglichen Impuls.`
+      : `Today is ${weekday}, ${dateStr}. Church context: ${translatedContext}.\n${avoidLine}\n${seedLine}\nGenerate a fitting daily impulse in ${LANG_CONFIG[lang]?.name || "the requested language"}.`;
 
     const systemPrompt = getSystemPrompt(lang);
 
@@ -312,6 +357,7 @@ serve(async (req) => {
       },
       body: JSON.stringify({
         model: "google/gemini-3-flash-preview",
+        temperature: 1.1,
         messages: [
           { role: "system", content: systemPrompt },
           { role: "user", content: userPrompt },
