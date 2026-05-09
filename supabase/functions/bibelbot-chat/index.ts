@@ -760,14 +760,10 @@ const METADATA_CODE_MAP: Record<string, string> = {
 
 /**
  * Einheitliches Zitier-Format für ALLE Bibelzitate (Standard- und Extra-Tool).
- * Struktur (exakt, verbindlich):
+ * Kompakt – Struktur:
  *
  *   «<Vers-Text>»
- *   📖 Stelle: <Buch Kapitel,Vers(e)>
- *   Übersetzung: <Name> | Jahr: <yyyy> | Herausgeber: <Publisher> | Konfession: <Konfession>
- *   Quelle: <Zitation / URL>
- *
- * Fehlende Felder werden als «—» ausgegeben, damit die Struktur IMMER identisch bleibt.
+ *   📖 <Buch Kapitel,Vers(e)> · <Übersetzung>
  */
 function formatVerseCitation(opts: {
   text: string;
@@ -777,21 +773,9 @@ function formatVerseCitation(opts: {
   sourceUrl?: string;
   fallbackCitation?: string;
 }): string {
-  const dash = "—";
-  const year = opts.meta?.year ? String(opts.meta.year) : dash;
-  const publisher = opts.meta?.publisher || dash;
-  const confession = opts.meta?.confession || dash;
-  const source =
-    opts.meta?.citation ||
-    opts.fallbackCitation ||
-    opts.sourceUrl ||
-    dash;
-
   return [
     `«${opts.text.trim()}»`,
-    `📖 Stelle: ${opts.reference}`,
-    `Übersetzung: ${opts.translationName} | Jahr: ${year} | Herausgeber: ${publisher} | Konfession: ${confession}`,
-    `Quelle: ${source}`,
+    `📖 ${opts.reference} · ${opts.translationName}`,
   ].join("\n");
 }
 
