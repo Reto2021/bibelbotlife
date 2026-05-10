@@ -758,13 +758,6 @@ const METADATA_CODE_MAP: Record<string, string> = {
   deu_sch: "SCH2000",
 };
 
-/**
- * Einheitliches Zitier-Format für ALLE Bibelzitate (Standard- und Extra-Tool).
- * Kompakt – Struktur:
- *
- *   «<Vers-Text>»
- *   📖 <Buch Kapitel,Vers(e)> · <Übersetzung>
- */
 /** Normalisiert Übersetzungsnamen zu kurzen, konsistenten Labels für die Zitatzeile. */
 function normalizeTranslationName(raw: string): string {
   if (!raw) return "";
