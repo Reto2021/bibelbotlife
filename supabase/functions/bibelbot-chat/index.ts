@@ -765,6 +765,56 @@ const METADATA_CODE_MAP: Record<string, string> = {
  *   «<Vers-Text>»
  *   📖 <Buch Kapitel,Vers(e)> · <Übersetzung>
  */
+/** Normalisiert Übersetzungsnamen zu kurzen, konsistenten Labels für die Zitatzeile. */
+function normalizeTranslationName(raw: string): string {
+  if (!raw) return "";
+  let s = raw.trim().replace(/\s+/g, " ");
+  // Jahr extrahieren (z.B. 1912, 2000, 2016)
+  const yearMatch = s.match(/\b(1[5-9]\d{2}|20\d{2})\b/);
+  const year = yearMatch ? yearMatch[1] : "";
+  // Jahr und überflüssige Wörter aus Basis entfernen
+  const base = s
+    .replace(/\b(1[5-9]\d{2}|20\d{2})\b/g, "")
+    .replace(/\b(Bibel|Bibelübersetzung|Übersetzung|Version|revidiert(e)?|rev\.?|deutsche|german)\b/gi, "")
+    .replace(/[–—]/g, "-")
+    .replace(/\s{2,}/g, " ")
+    .replace(/[ ,;:·-]+$/g, "")
+    .trim();
+  const lower = base.toLowerCase();
+  const aliases: Array<[RegExp, string]> = [
+    [/^luther/, "Luther"],
+    [/^schlachter/, "Schlachter"],
+    [/^z(ü|ue)rcher/, "Zürcher"],
+    [/^elberfelder/, "Elberfelder"],
+    [/^einheits/, "Einheitsübersetzung"],
+    [/^hoffnung\s*f(ü|ue)r\s*alle|^hfa$/, "Hoffnung für Alle"],
+    [/^neue\s*genfer|^ngü$/, "Neue Genfer"],
+    [/^gute\s*nachricht/, "Gute Nachricht"],
+    [/^basisbibel|^basis\s*bibel/, "BasisBibel"],
+    [/^menge/, "Menge"],
+    [/^ne(ü|ue)$|^neue\s*evangelistische/, "NeÜ"],
+    [/^buber/, "Buber-Rosenzweig"],
+    [/^tur[-\s]?sinai/, "Tur-Sinai"],
+    [/^henne/, "Henne-Rösch"],
+    [/^gr(ü|ue)newald/, "Grünewald"],
+    [/^king\s*james|^kjv$/, "KJV"],
+    [/^new\s*international|^niv$/, "NIV"],
+    [/^english\s*standard|^esv$/, "ESV"],
+  ];
+  let label = base;
+  for (const [re, name] of aliases) {
+    if (re.test(lower)) { label = name; break; }
+  }
+  return year ? `${label} ${year}` : label;
+}
+
+/**
+ * Einheitliches Zitier-Format für ALLE Bibelzitate (Standard- und Extra-Tool).
+ * Kompakt – Struktur:
+ *
+ *   «<Vers-Text>»
+ *   📖 <Buch Kapitel,Vers(e)> · <Übersetzung>
+ */
 function formatVerseCitation(opts: {
   text: string;
   reference: string;
@@ -775,7 +825,7 @@ function formatVerseCitation(opts: {
 }): string {
   return [
     `«${opts.text.trim()}»`,
-    `📖 ${opts.reference} · ${opts.translationName}`,
+    `📖 ${opts.reference} · ${normalizeTranslationName(opts.translationName)}`,
   ].join("\n");
 }
 
