@@ -164,6 +164,62 @@ function QABadge({ qa, t }: { qa: QAResult | "loading" | "skipped"; t: (key: str
   );
 }
 
+/** Entfernt URLs aus Text: Markdown-Links → nur Linktext, blanke http(s)-URLs → weg. */
+function stripUrls(text: string): string {
+  return text
+    .replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g, "$1")
+    .replace(/<https?:\/\/[^>]+>/g, "")
+    .replace(/https?:\/\/\S+/g, "")
+    .replace(/[ \t]+\n/g, "\n")
+    .replace(/\(\s*\)/g, "");
+}
+
+/** Splittet Zitat-Zeilen "📖 Ref · Übersetzung" → Ref sichtbar, Übersetzung in Popover. */
+function splitCitationSource(node: React.ReactNode, t: (key: string, opts?: any) => string): React.ReactNode {
+  const process = (n: React.ReactNode): React.ReactNode => {
+    if (typeof n === "string") {
+      const re = /📖\s*([^·\n]+?)\s*·\s*([^\n]+?)(?=\n|$)/g;
+      const parts: React.ReactNode[] = [];
+      let last = 0;
+      let m: RegExpExecArray | null;
+      let i = 0;
+      while ((m = re.exec(n)) !== null) {
+        if (m.index > last) parts.push(n.slice(last, m.index));
+        const ref = m[1].trim();
+        const source = m[2].trim();
+        parts.push(
+          <span key={`cite-${i++}`} className="inline-flex items-baseline gap-1">
+            <span>📖 {ref}</span>
+            <Popover>
+              <PopoverTrigger asChild>
+                <button
+                  type="button"
+                  className="text-xs text-muted-foreground hover:text-primary underline underline-offset-2 decoration-dotted"
+                  aria-label={t("chat.showSource", "Quelle anzeigen")}
+                >
+                  {t("chat.more", "Mehr")}
+                </button>
+              </PopoverTrigger>
+              <PopoverContent className="w-auto max-w-[280px] text-xs p-3">
+                <p className="font-medium mb-1">{t("chat.source", "Quelle")}</p>
+                <p className="text-muted-foreground">{source}</p>
+              </PopoverContent>
+            </Popover>
+          </span>
+        );
+        last = re.lastIndex;
+      }
+      if (parts.length === 0) return n;
+      if (last < n.length) parts.push(n.slice(last));
+      return <>{parts}</>;
+    }
+    if (Array.isArray(n)) return n.map((c, idx) => <span key={idx}>{process(c)}</span>);
+    return n;
+  };
+  if (Array.isArray(children)) return children.map((c, idx) => <span key={idx}>{process(c)}</span>);
+  return process(node);
+}
+
 function makeRefsClickable(children: React.ReactNode, onRefClick: (msg: string) => void, t: (key: string, opts?: any) => string): React.ReactNode {
   if (!children) return children;
   const processNode = (node: React.ReactNode): React.ReactNode => {
