@@ -216,7 +216,7 @@ function splitCitationSource(node: React.ReactNode, t: (key: string, opts?: any)
     if (Array.isArray(n)) return n.map((c, idx) => <span key={idx}>{process(c)}</span>);
     return n;
   };
-  if (Array.isArray(children)) return children.map((c, idx) => <span key={idx}>{process(c)}</span>);
+  if (Array.isArray(node)) return node.map((c, idx) => <span key={idx}>{process(c)}</span>);
   return process(node);
 }
 
