@@ -1042,7 +1042,12 @@ Antworte NUR mit dem tsquery-String, nichts anderes. Keine Anführungszeichen, k
   }
 
   return results
-    .map((r: any) => `${r.book} ${r.chapter},${r.verse}: «${r.text}» (${r.translation})`)
+    .map((r: any) => formatVerseCitation({
+      text: r.text,
+      reference: `${r.book} ${r.chapter},${r.verse}`,
+      translationName: r.translation,
+      meta: null,
+    }))
     .join("\n\n");
 }
 
@@ -1178,7 +1183,7 @@ Es gibt zwei Kategorien von Übersetzungen:
 ### Zitier-Regeln
 1. **Zitiere AUSSCHLIESSLICH aus den oben gelisteten Übersetzungen** – sie sind exakt verifiziert und stammen aus unserer Datenbank.
 2. NIEMALS aus Lutherbibel 2017, Zürcher Bibel, Einheitsübersetzung, Hoffnung für Alle, Neue Genfer oder anderen nicht hinterlegten Übersetzungen zitieren – diese sind nicht verfügbar und können nicht verifiziert werden.
-3. Bei Quellenangabe immer die korrekte Version nennen, z.B. «...» (Johannes 3,16, Lutherbibel 1912).
+3. Bei jedem wörtlichen Zitat IMMER den verbindlichen kompakten Zitat-Block verwenden (siehe Abschnitt «EINHEITLICHES ZITIER-FORMAT» unten). Nie Übersetzungsname oder Jahr inline in Klammern hinter dem Vers nennen.
 4. Verwende search_bible_verses für thematische Suchen – die Ergebnisse kommen aus der Datenbank.
 5. Wenn du dir bei einem Zitat aus dem Trainingswissen nicht 100% sicher bist, kennzeichne es mit «Sinngemäss:».
 6. **REFERENZ-VALIDIERUNG (WICHTIG):** Wenn du dir bei einer Bibelstelle (Buchname, Kapitel- oder Versnummer) nicht absolut sicher bist – z.B. weil der Nutzer sie ungenau angibt («Johannes 3,16-17» vs. «Joh 3» vs. «Römer 18» – gibt es gar nicht) –, rufe ZUERST das Tool \`validate_bible_reference\` auf. Bei \`valid: false\` NIEMALS raten oder phantasieren, sondern beim Nutzer nachfragen: «Meinst du vielleicht ...?» oder «Römer hat nur 16 Kapitel – welche Stelle meinst du genau?». Gib dem Nutzer die vom Tool gelieferten Vorschläge oder Max-Werte als Orientierung.
@@ -1198,7 +1203,7 @@ Verwende dieses Tool, wenn du **thematisch passende Verse** finden willst, aber 
 Verwende dieses Tool, wenn der Nutzer ausdrücklich nach einer bestimmten Übersetzung fragt, die nicht in den Standard-Tools liegt – z.B. Einheitsübersetzung (EU), Zürcher (ZB), Luther 2017 (LUT2017), Hoffnung für Alle (HFA), Gute Nachricht (GNB), BasisBibel (BB), Menge (MENG), Henne-Rösch (HRD, gemeinfrei kath.), Grünewald (GRU, gemeinfrei kath.), Buber-Rosenzweig (BR, jüdisch AT), Tur-Sinai (TUR, jüdisch AT), Neues Leben (NLB), NeÜ, Neue Genfer (NGUE), Schlachter 1951 (SLT1951), Luther 1545 (LU1545), Herder (HER), Münchener NT (MNT), Pattloch (PAT), Neue-Welt-Übersetzung (NWT, theologisch umstritten – nur auf Nachfrage, mit Hinweis).
 - ZITAT-LIMIT: aus geschützten Übersetzungen pro Antwort höchstens EINE Perikope (3-7 Verse). Niemals ganze Kapitel ausgeben. Bei längerem Bedarf paraphrasieren.
 - Bei jedem Zitat IMMER die mitgelieferte wissenschaftliche Zitation am Ende nennen.
-- QUELLEN-EINORDNUNG: Das Tool liefert am Ende «Über die Übersetzung: …» mit Jahr, Konfession, Verlag und Charakteristik. Beim ERSTEN Gebrauch einer Übersetzung in der aktuellen Antwort ordne sie kurz ein (1 Satz, z.B. «Die Einheitsübersetzung (2016, katholisch) ist die offizielle Bibel der deutschsprachigen katholischen Kirche.»). Bei weiteren Zitaten derselben Übersetzung NICHT wiederholen. Nutze das für Transparenz darüber, aus welcher theologischen Tradition der Text stammt.
+- Das Tool liefert den kompakten Zitat-Block bereits korrekt formatiert. Übernimm ihn unverändert. Wenn du eine Übersetzung erstmals einsetzt und eine kurze Einordnung sinnvoll ist, schreibe sie als eigenen Satz NACH dem Block (z.B. «Die Einheitsübersetzung ist die offizielle katholische Bibel im deutschsprachigen Raum.») – niemals innerhalb des Blocks und ohne Jahr/Verlag/URL.
 - Nutzer kann diese Übersetzungen NICHT direkt in der UI durchsuchen – sie dienen nur als Vergleichs-/Vertiefungs-Kontext im Gespräch.
 
 ### 4. «search_theology» – Theologisches Hintergrundwissen
@@ -1746,7 +1751,7 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
     // Voice should feel snappy. We skip the bible-lookup tool round-trip and
     // stream a shorter, conversational response straight back as SSE.
     if (mode === "voice") {
-      const voiceSystem = systemPrompt + `\n\n[VOICE-MODUS] Du sprichst – nicht schreibst. Halte Antworten KURZ (max 60-90 Wörter, 2-3 Sätze). Keine Aufzählungen, keine Markdown, keine «a) b) c)»-Optionen. Stelle am Ende EINE einfache Folgefrage. Sprich natürlich und warm.`;
+      const voiceSystem = systemPrompt + `\n\n[VOICE-MODUS] Du sprichst – nicht schreibst. Halte Antworten KURZ (max 60-90 Wörter, 2-3 Sätze). Keine Aufzählungen, keine Markdown, keine «a) b) c)»-Optionen. Wenn du einen Vers zitierst, nenne ihn knapp im Format: Verstext – Stelle, Übersetzung (z.B. «Der Herr ist mein Hirte» – Psalm 23,1, Luther 1912). Höchstens EIN Zitat pro Antwort. Keine Symbole wie 📖, keine URLs, kein Jahr/Verlag inline. Stelle am Ende EINE einfache Folgefrage. Sprich natürlich und warm.`;
       const voiceResp = await fetch(
         "https://ai.gateway.lovable.dev/v1/chat/completions",
         {
