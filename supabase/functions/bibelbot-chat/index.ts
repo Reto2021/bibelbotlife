@@ -1751,7 +1751,7 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
     // Voice should feel snappy. We skip the bible-lookup tool round-trip and
     // stream a shorter, conversational response straight back as SSE.
     if (mode === "voice") {
-      const voiceSystem = systemPrompt + `\n\n[VOICE-MODUS] Du sprichst – nicht schreibst. Halte Antworten KURZ (max 60-90 Wörter, 2-3 Sätze). Keine Aufzählungen, keine Markdown, keine «a) b) c)»-Optionen. Stelle am Ende EINE einfache Folgefrage. Sprich natürlich und warm.`;
+      const voiceSystem = systemPrompt + `\n\n[VOICE-MODUS] Du sprichst – nicht schreibst. Halte Antworten KURZ (max 60-90 Wörter, 2-3 Sätze). Keine Aufzählungen, keine Markdown, keine «a) b) c)»-Optionen. Wenn du einen Vers zitierst, nenne ihn knapp im Format: Verstext – Stelle, Übersetzung (z.B. «Der Herr ist mein Hirte» – Psalm 23,1, Luther 1912). Höchstens EIN Zitat pro Antwort. Keine Symbole wie 📖, keine URLs, kein Jahr/Verlag inline. Stelle am Ende EINE einfache Folgefrage. Sprich natürlich und warm.`;
       const voiceResp = await fetch(
         "https://ai.gateway.lovable.dev/v1/chat/completions",
         {
