@@ -1042,7 +1042,12 @@ Antworte NUR mit dem tsquery-String, nichts anderes. Keine Anführungszeichen, k
   }
 
   return results
-    .map((r: any) => `${r.book} ${r.chapter},${r.verse}: «${r.text}» (${r.translation})`)
+    .map((r: any) => formatVerseCitation({
+      text: r.text,
+      reference: `${r.book} ${r.chapter},${r.verse}`,
+      translationName: r.translation,
+      meta: null,
+    }))
     .join("\n\n");
 }
 
