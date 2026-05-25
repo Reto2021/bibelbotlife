@@ -774,8 +774,8 @@ export function BibleBotChat() {
             {showWelcome && (
               <div className="animate-fade-up">
                 <div className="flex justify-start">
-                  <div className={`max-w-[85%] rounded-2xl rounded-bl-md px-4 py-3 text-base leading-relaxed bg-muted text-foreground`}>
-                    <div className={`prose prose-sm max-w-none dark:prose-invert font-serif`}>
+                  <div className={`max-w-[92%] sm:max-w-[88%] rounded-2xl rounded-bl-md px-5 py-4 bg-muted text-foreground`}>
+                    <div className={`prose prose-base max-w-none dark:prose-invert font-serif leading-[1.75] prose-p:my-3 prose-headings:mt-4 prose-headings:mb-2 prose-li:my-1 prose-strong:text-foreground`}>
                       <ReactMarkdown>{welcomeMessage.content}</ReactMarkdown>
                     </div>
                   </div>
