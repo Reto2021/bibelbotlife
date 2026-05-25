@@ -768,16 +768,14 @@ export function BibleBotChat() {
       <VoiceMode open={voiceModeOpen} onClose={() => setVoiceModeOpen(false)} botName={botName} />
 
       {/* Messages */}
-      <div ref={scrollRef} className={`flex-1 overflow-y-auto px-4 py-3 space-y-3`}>
+      <div ref={scrollRef} className={`flex-1 overflow-y-auto px-4 py-4 space-y-6`}>
         {!hasConversation && (
           <div className="space-y-4">
             {showWelcome && (
               <div className="animate-fade-up">
-                <div className="flex justify-start">
-                  <div className={`max-w-[92%] sm:max-w-[88%] rounded-2xl rounded-bl-md px-5 py-4 bg-muted text-foreground`}>
-                    <div className={`prose prose-base max-w-none dark:prose-invert font-serif leading-[1.75] prose-p:my-3 prose-headings:mt-4 prose-headings:mb-2 prose-li:my-1 prose-strong:text-foreground`}>
-                      <ReactMarkdown>{welcomeMessage.content}</ReactMarkdown>
-                    </div>
+                <div className="max-w-[680px]">
+                  <div className={`prose prose-base max-w-none dark:prose-invert font-serif leading-[1.75] prose-p:my-3 prose-headings:mt-4 prose-headings:mb-2 prose-li:my-1 prose-strong:text-foreground text-foreground`}>
+                    <ReactMarkdown>{welcomeMessage.content}</ReactMarkdown>
                   </div>
                 </div>
 
@@ -809,17 +807,19 @@ export function BibleBotChat() {
           return (
           <div key={i}>
             <div className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
-            <div className={msg.role === "user" ? "max-w-[85%]" : "max-w-[92%] sm:max-w-[88%]"}>
-              <div className={`rounded-2xl px-5 py-4 ${msg.role === "user" ? "bg-primary text-primary-foreground rounded-br-md text-base leading-relaxed" : "bg-muted text-foreground rounded-bl-md"}`}>
-                {msg.role === "assistant" ? (
-                  <div className="prose prose-base max-w-none dark:prose-invert font-serif leading-[1.75] prose-p:my-3 prose-headings:mt-4 prose-headings:mb-2 prose-li:my-1 prose-strong:text-foreground prose-blockquote:my-3">
-                    <ReactMarkdown components={{
-                      p: ({ children }) => <p>{splitCitationSource(makeRefsClickable(children, sendMessage, t), t)}</p>,
-                      li: ({ children }) => <li>{splitCitationSource(makeRefsClickable(children, sendMessage, t), t)}</li>,
-                    }}>{stripUrls(cleanText)}</ReactMarkdown>
-                  </div>
-                ) : msg.content}
-              </div>
+            <div className={msg.role === "user" ? "max-w-[85%]" : "max-w-full sm:max-w-[680px] w-full"}>
+              {msg.role === "user" ? (
+                <div className="rounded-2xl rounded-br-md px-4 py-3 bg-primary text-primary-foreground text-base leading-relaxed">
+                  {msg.content}
+                </div>
+              ) : (
+                <div className="prose prose-base max-w-none dark:prose-invert font-serif leading-[1.75] prose-p:my-3 prose-headings:mt-4 prose-headings:mb-2 prose-li:my-1 prose-strong:text-foreground prose-blockquote:my-3 text-foreground">
+                  <ReactMarkdown components={{
+                    p: ({ children }) => <p>{splitCitationSource(makeRefsClickable(children, sendMessage, t), t)}</p>,
+                    li: ({ children }) => <li>{splitCitationSource(makeRefsClickable(children, sendMessage, t), t)}</li>,
+                  }}>{stripUrls(cleanText)}</ReactMarkdown>
+                </div>
+              )}
               {/* Option buttons */}
               {msg.role === "assistant" && options.length > 0 && (
                 <div className="flex flex-col gap-1.5 mt-2">
