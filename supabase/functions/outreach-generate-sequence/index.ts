@@ -203,8 +203,12 @@ Deno.serve(async (req) => {
   try {
     const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
     const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+    const anonKey = Deno.env.get("SUPABASE_ANON_KEY")!;
     const lovableKey = Deno.env.get("LOVABLE_API_KEY");
     const supabase = createClient(supabaseUrl, serviceKey);
+
+    const authResult = await requireAdminOrService(req, supabaseUrl, anonKey, serviceKey);
+    if (!authResult.ok) return authResult.response;
 
     if (!lovableKey) {
       return new Response(JSON.stringify({ error: "LOVABLE_API_KEY not configured" }), {
