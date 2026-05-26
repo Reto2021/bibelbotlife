@@ -1,0 +1,1 @@
+DROP POLICY IF EXISTS "Team members can view invoices" ON public.invoices;
