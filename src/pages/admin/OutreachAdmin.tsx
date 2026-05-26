@@ -1,4 +1,5 @@
 import { useState } from "react";
+import DOMPurify from "dompurify";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -1509,7 +1510,7 @@ export default function OutreachAdmin() {
                 <Label className="text-xs text-muted-foreground mb-1 block">Vorschau</Label>
                 <div
                   className="border rounded-lg p-4 bg-card text-sm prose prose-sm max-w-none"
-                  dangerouslySetInnerHTML={{ __html: personalizedEmail.body }}
+                  dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(personalizedEmail.body) }}
                 />
               </div>
               <p className="text-xs text-muted-foreground">

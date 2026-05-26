@@ -31,9 +31,9 @@ Deno.serve(async (req) => {
 
   const url = new URL(req.url);
   const key = url.searchParams.get("key");
-  const ADMIN_KEY = Deno.env.get("ANALYTICS_ADMIN_KEY") || "bibelbot2025";
+  const ADMIN_KEY = Deno.env.get("ANALYTICS_ADMIN_KEY");
 
-  if (key !== ADMIN_KEY) {
+  if (!ADMIN_KEY || key !== ADMIN_KEY) {
     return new Response(JSON.stringify({ error: "Unauthorized" }), {
       status: 401,
       headers: { ...corsHeaders, "Content-Type": "application/json" },

@@ -1,6 +1,49 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.1";
 import { corsHeaders } from "https://esm.sh/@supabase/supabase-js@2.95.0/cors";
 
+async function requireAdminOrService(
+  req: Request,
+  supabaseUrl: string,
+  anonKey: string,
+  serviceKey: string,
+): Promise<{ ok: true } | { ok: false; response: Response }> {
+  const authHeader = req.headers.get("authorization") ?? "";
+  const token = authHeader.toLowerCase().startsWith("bearer ")
+    ? authHeader.slice(7)
+    : "";
+  const unauthorized = new Response(
+    JSON.stringify({ error: "Unauthorized" }),
+    { status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" } },
+  );
+  if (!token) return { ok: false, response: unauthorized };
+  if (token === serviceKey) return { ok: true };
+
+  const authClient = createClient(supabaseUrl, anonKey, {
+    global: { headers: { Authorization: `Bearer ${token}` } },
+  });
+  const { data: userRes, error: userErr } = await authClient.auth.getUser(token);
+  if (userErr || !userRes?.user) return { ok: false, response: unauthorized };
+
+  const admin = createClient(supabaseUrl, serviceKey);
+  const { data: roleRow } = await admin
+    .from("user_roles")
+    .select("role")
+    .eq("user_id", userRes.user.id)
+    .eq("role", "admin")
+    .maybeSingle();
+  if (!roleRow) {
+    return {
+      ok: false,
+      response: new Response(
+        JSON.stringify({ error: "Forbidden" }),
+        { status: 403, headers: { ...corsHeaders, "Content-Type": "application/json" } },
+      ),
+    };
+  }
+  return { ok: true };
+}
+
+
 const AI_GATEWAY = "https://ai.gateway.lovable.dev/v1/chat/completions";
 
 const SENDER_PROFILE = {
@@ -160,8 +203,12 @@ Deno.serve(async (req) => {
   try {
     const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
     const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+    const anonKey = Deno.env.get("SUPABASE_ANON_KEY")!;
     const lovableKey = Deno.env.get("LOVABLE_API_KEY");
     const supabase = createClient(supabaseUrl, serviceKey);
+
+    const authResult = await requireAdminOrService(req, supabaseUrl, anonKey, serviceKey);
+    if (!authResult.ok) return authResult.response;
 
     if (!lovableKey) {
       return new Response(JSON.stringify({ error: "LOVABLE_API_KEY not configured" }), {
