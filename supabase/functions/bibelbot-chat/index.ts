@@ -338,6 +338,68 @@ function resolveBookId(bookName: string): string | null {
   return null;
 }
 
+// OSIS bookId -> German book name(s) as stored in bible_verses table.
+// Used to query our own DB for the canonical German translations.
+const OSIS_TO_DE_BOOKS: Record<string, string[]> = {
+  GEN: ["1. Mose"], EXO: ["2. Mose"], LEV: ["3. Mose"], NUM: ["4. Mose"], DEU: ["5. Mose"],
+  JOS: ["Josua"], JDG: ["Richter"], RUT: ["Ruth", "Rut"],
+  "1SA": ["1. Samuel"], "2SA": ["2. Samuel"],
+  "1KI": ["1. Könige"], "2KI": ["2. Könige"],
+  "1CH": ["1. Chronik", "1. Chonik"], "2CH": ["2. Chronik"],
+  EZR: ["Esra"], NEH: ["Nehemia"], EST: ["Esther", "Ester"],
+  JOB: ["Hiob", "Ijob"], PSA: ["Psalmen", "Psalm"], PRO: ["Sprüche", "Sprichwörter"],
+  ECC: ["Prediger", "Kohelet"], SNG: ["Hohelied", "Hoheslied"],
+  ISA: ["Jesaja"], JER: ["Jeremia"], LAM: ["Klagelieder"],
+  EZK: ["Hesekiel", "Ezechiel"], DAN: ["Daniel"],
+  HOS: ["Hosea"], JOL: ["Joel"], AMO: ["Amos"], OBA: ["Obadja"], JON: ["Jona"],
+  MIC: ["Micha"], NAM: ["Nahum"], HAB: ["Habakuk"], ZEP: ["Zephanja", "Zefanja"],
+  HAG: ["Haggai"], ZEC: ["Sacharja"], MAL: ["Maleachi"],
+  MAT: ["Matthäus"], MRK: ["Markus"], LUK: ["Lukas"], JHN: ["Johannes"],
+  ACT: ["Apostelgeschichte"], ROM: ["Römer"],
+  "1CO": ["1. Korinther"], "2CO": ["2. Korinther"],
+  GAL: ["Galater"], EPH: ["Epheser"], PHP: ["Philipper"], COL: ["Kolosser"],
+  "1TH": ["1. Thessalonicher"], "2TH": ["2. Thessalonicher"],
+  "1TI": ["1. Timotheus"], "2TI": ["2. Timotheus"],
+  TIT: ["Titus"], PHM: ["Philemon"], HEB: ["Hebräer"], JAS: ["Jakobus"],
+  "1PE": ["1. Petrus"], "2PE": ["2. Petrus"],
+  "1JN": ["1. Johannes"], "2JN": ["2. Johannes"], "3JN": ["3. Johannes"],
+  JUD: ["Judas"], REV: ["Offenbarung"],
+};
+
+// Translations that live in our own DB (preferred source – exact copyrighted editions)
+const DB_DE_TRANSLATIONS: Record<string, { code: string; name: string }> = {
+  luther: { code: "luther1912", name: "Lutherbibel 1912" },
+  luther1912: { code: "luther1912", name: "Lutherbibel 1912" },
+  elberfelder: { code: "elberfelder", name: "Elberfelder 2006" },
+  schlachter: { code: "schlachter2000", name: "Schlachter 2000" },
+  schlachter2000: { code: "schlachter2000", name: "Schlachter 2000" },
+};
+
+async function lookupVerseFromDb(
+  supabase: any,
+  bookId: string,
+  chapter: number,
+  verseStart: number,
+  verseEnd: number | undefined,
+  dbTranslationCode: string
+): Promise<{ text: string; bookName: string } | null> {
+  const candidates = OSIS_TO_DE_BOOKS[bookId];
+  if (!candidates || candidates.length === 0) return null;
+  const end = verseEnd || verseStart;
+  const { data, error } = await supabase
+    .from("bible_verses")
+    .select("book, verse, text")
+    .in("book", candidates)
+    .eq("translation", dbTranslationCode)
+    .eq("chapter", chapter)
+    .gte("verse", verseStart)
+    .lte("verse", end)
+    .order("verse", { ascending: true });
+  if (error || !data || data.length === 0) return null;
+  const text = data.map((v: any) => `${v.verse} ${v.text}`).join(" ");
+  return { text, bookName: data[0].book };
+}
+
 async function lookupBibleVerse(
   book: string,
   chapter: number,
@@ -357,6 +419,35 @@ async function lookupBibleVerse(
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
   );
   const metaCode = METADATA_CODE_MAP[trans.id];
+
+  // Prefer our own DB for the canonical German translations
+  // (the external API only ships gemeinfreie Editionen, z.B. Schlachter 1951 statt 2000).
+  const effectiveLang = lang || "de";
+  const dbTransKey = translationKey?.toLowerCase();
+  if (effectiveLang === "de" && dbTransKey && DB_DE_TRANSLATIONS[dbTransKey]) {
+    const dbTrans = DB_DE_TRANSLATIONS[dbTransKey];
+    try {
+      const [dbResult, meta] = await Promise.all([
+        lookupVerseFromDb(supabase, bookId, chapter, verseStart, verseEnd, dbTrans.code),
+        metaCode ? getTranslationMeta(supabase, metaCode) : Promise.resolve(null),
+      ]);
+      if (dbResult) {
+        const ref = verseEnd && verseEnd !== verseStart
+          ? `${dbResult.bookName} ${chapter},${verseStart}-${verseEnd}`
+          : `${dbResult.bookName} ${chapter},${verseStart}`;
+        return formatVerseCitation({
+          text: dbResult.text,
+          reference: ref,
+          translationName: meta?.name ?? dbTrans.name,
+          meta,
+          fallbackCitation: `${dbTrans.name} – BibleBot.Life Datenbank`,
+        });
+      }
+      // fall through to external API as a last resort
+    } catch (e) {
+      console.error("DB verse lookup error:", e);
+    }
+  }
 
   try {
     const [resp, meta] = await Promise.all([
@@ -1189,8 +1280,9 @@ Es gibt zwei Kategorien von Übersetzungen:
 6. **REFERENZ-VALIDIERUNG (WICHTIG):** Wenn du dir bei einer Bibelstelle (Buchname, Kapitel- oder Versnummer) nicht absolut sicher bist – z.B. weil der Nutzer sie ungenau angibt («Johannes 3,16-17» vs. «Joh 3» vs. «Römer 18» – gibt es gar nicht) –, rufe ZUERST das Tool \`validate_bible_reference\` auf. Bei \`valid: false\` NIEMALS raten oder phantasieren, sondern beim Nutzer nachfragen: «Meinst du vielleicht ...?» oder «Römer hat nur 16 Kapitel – welche Stelle meinst du genau?». Gib dem Nutzer die vom Tool gelieferten Vorschläge oder Max-Werte als Orientierung.
 
 ### 1. «lookup_bible_verse» – Exaktes Nachschlagen (Kategorie A)
-Verwende dieses Tool für exakte Zitate aus den historischen Übersetzungen (Luther 1912, Elberfelder, Schlachter 1951, KJV, WEB).
-- Verfügbare Übersetzungen: luther, elberfelder, schlachter, kjv, web
+Verwende dieses Tool für exakte Zitate aus den drei deutschen Hauptübersetzungen (Luther 1912, Elberfelder 2006, Schlachter 2000) sowie KJV/WEB im Englischen.
+- Verfügbare Übersetzungen: luther1912, elberfelder, schlachter2000, kjv, web
+- WICHTIG: Wechsle bewusst zwischen den drei deutschen Übersetzungen ab, statt nur Luther 1912 zu zitieren. Schlachter 2000 ist vor allem im freikirchlichen Umfeld weit verbreitet und sprachlich modern – nutze sie regelmässig. Elberfelder 2006 eignet sich für besonders wortgetreue Zitate.
 
 ### 2. «search_bible_verses» – Thematische Suche
 Verwende dieses Tool, wenn du **thematisch passende Verse** finden willst, aber keine exakte Stelle kennst.
