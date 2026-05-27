@@ -338,41 +338,86 @@ function resolveBookId(bookName: string): string | null {
   return null;
 }
 
-// OSIS bookId -> German book name(s) as stored in bible_verses table.
-// Used to query our own DB for the canonical German translations.
-const OSIS_TO_DE_BOOKS: Record<string, string[]> = {
-  GEN: ["1. Mose"], EXO: ["2. Mose"], LEV: ["3. Mose"], NUM: ["4. Mose"], DEU: ["5. Mose"],
-  JOS: ["Josua"], JDG: ["Richter"], RUT: ["Ruth", "Rut"],
-  "1SA": ["1. Samuel"], "2SA": ["2. Samuel"],
-  "1KI": ["1. Könige"], "2KI": ["2. Könige"],
-  "1CH": ["1. Chronik", "1. Chonik"], "2CH": ["2. Chronik"],
-  EZR: ["Esra"], NEH: ["Nehemia"], EST: ["Esther", "Ester"],
-  JOB: ["Hiob", "Ijob"], PSA: ["Psalmen", "Psalm"], PRO: ["Sprüche", "Sprichwörter"],
-  ECC: ["Prediger", "Kohelet"], SNG: ["Hohelied", "Hoheslied"],
-  ISA: ["Jesaja"], JER: ["Jeremia"], LAM: ["Klagelieder"],
-  EZK: ["Hesekiel", "Ezechiel"], DAN: ["Daniel"],
-  HOS: ["Hosea"], JOL: ["Joel"], AMO: ["Amos"], OBA: ["Obadja"], JON: ["Jona"],
-  MIC: ["Micha"], NAM: ["Nahum"], HAB: ["Habakuk"], ZEP: ["Zephanja", "Zefanja"],
-  HAG: ["Haggai"], ZEC: ["Sacharja"], MAL: ["Maleachi"],
-  MAT: ["Matthäus"], MRK: ["Markus"], LUK: ["Lukas"], JHN: ["Johannes"],
-  ACT: ["Apostelgeschichte"], ROM: ["Römer"],
-  "1CO": ["1. Korinther"], "2CO": ["2. Korinther"],
-  GAL: ["Galater"], EPH: ["Epheser"], PHP: ["Philipper"], COL: ["Kolosser"],
-  "1TH": ["1. Thessalonicher"], "2TH": ["2. Thessalonicher"],
-  "1TI": ["1. Timotheus"], "2TI": ["2. Timotheus"],
-  TIT: ["Titus"], PHM: ["Philemon"], HEB: ["Hebräer"], JAS: ["Jakobus"],
-  "1PE": ["1. Petrus"], "2PE": ["2. Petrus"],
-  "1JN": ["1. Johannes"], "2JN": ["2. Johannes"], "3JN": ["3. Johannes"],
-  JUD: ["Judas"], REV: ["Offenbarung"],
+// OSIS bookId -> standardisierte book_number (1..66) in bible_verses table.
+// book_number ist sprachunabhängig, daher universell verwendbar.
+const OSIS_TO_BOOK_NUMBER: Record<string, number> = {
+  GEN: 1, EXO: 2, LEV: 3, NUM: 4, DEU: 5, JOS: 6, JDG: 7, RUT: 8,
+  "1SA": 9, "2SA": 10, "1KI": 11, "2KI": 12, "1CH": 13, "2CH": 14,
+  EZR: 15, NEH: 16, EST: 17, JOB: 18, PSA: 19, PRO: 20, ECC: 21, SNG: 22,
+  ISA: 23, JER: 24, LAM: 25, EZK: 26, DAN: 27,
+  HOS: 28, JOL: 29, AMO: 30, OBA: 31, JON: 32, MIC: 33, NAM: 34,
+  HAB: 35, ZEP: 36, HAG: 37, ZEC: 38, MAL: 39,
+  MAT: 40, MRK: 41, LUK: 42, JHN: 43, ACT: 44, ROM: 45,
+  "1CO": 46, "2CO": 47, GAL: 48, EPH: 49, PHP: 50, COL: 51,
+  "1TH": 52, "2TH": 53, "1TI": 54, "2TI": 55, TIT: 56, PHM: 57,
+  HEB: 58, JAS: 59, "1PE": 60, "2PE": 61,
+  "1JN": 62, "2JN": 63, "3JN": 64, JUD: 65, REV: 66,
 };
 
-// Translations that live in our own DB (preferred source – exact copyrighted editions)
-const DB_DE_TRANSLATIONS: Record<string, { code: string; name: string }> = {
-  luther: { code: "luther1912", name: "Lutherbibel 1912" },
-  luther1912: { code: "luther1912", name: "Lutherbibel 1912" },
-  elberfelder: { code: "elberfelder", name: "Elberfelder 2006" },
-  schlachter: { code: "schlachter2000", name: "Schlachter 2000" },
-  schlachter2000: { code: "schlachter2000", name: "Schlachter 2000" },
+// Übersetzungen, die in unserer eigenen DB (bible_verses) liegen.
+// translationKey (lowercase, wie er im Tool-Argument verwendet wird)
+// → { dbCode wie in bible_verses.translation, language, Anzeigename }
+const DB_TRANSLATIONS: Record<string, { code: string; lang: string; name: string }> = {
+  // Deutsch
+  luther: { code: "luther1912", lang: "de", name: "Lutherbibel 1912" },
+  luther1912: { code: "luther1912", lang: "de", name: "Lutherbibel 1912" },
+  elberfelder: { code: "elberfelder", lang: "de", name: "Elberfelder 2006" },
+  elb: { code: "ELB", lang: "de", name: "Elberfelder (Kurz)" },
+  schlachter: { code: "schlachter2000", lang: "de", name: "Schlachter 2000" },
+  schlachter2000: { code: "schlachter2000", lang: "de", name: "Schlachter 2000" },
+  eu: { code: "EU", lang: "de", name: "Einheitsübersetzung" },
+  einheit: { code: "EU", lang: "de", name: "Einheitsübersetzung" },
+  // Englisch
+  bsb: { code: "bsb", lang: "en", name: "Berean Standard Bible" },
+  kjv: { code: "kjv", lang: "en", name: "King James Version" },
+  web: { code: "web", lang: "en", name: "World English Bible" },
+  // Romanisch
+  lsg: { code: "lsg", lang: "fr", name: "Louis Segond 1910" },
+  vbl: { code: "vbl", lang: "es", name: "Versión Biblia Libre" },
+  rv09: { code: "rv09", lang: "es", name: "Reina-Valera 1909" },
+  riv: { code: "riv", lang: "it", name: "Riveduta (Luzzi) 1927" },
+  blj: { code: "blj", lang: "pt", name: "Bíblia Livre" },
+  // Slawisch
+  ubg: { code: "ubg", lang: "pl", name: "Uwspółcześniona Biblia Gdańska" },
+  nkb: { code: "nkb", lang: "cs", name: "Nová Bible Kralická" },
+  slk: { code: "slk", lang: "sk", name: "Slovenská Biblia" },
+  corn: { code: "corn", lang: "ro", name: "Cornilescu 1924" },
+  syn: { code: "syn", lang: "ru", name: "Синодальный перевод" },
+  ukr96: { code: "ukr96", lang: "uk", name: "Біблія 1996" },
+  iva: { code: "iva", lang: "hr", name: "Sveta Biblija" },
+  srp: { code: "srp", lang: "sr", name: "Sveta Biblija" },
+  hun: { code: "hun", lang: "hu", name: "Magyar Biblia" },
+  // Nordeuropa / Niederländisch
+  nbg: { code: "nbg", lang: "nl", name: "NBG-vertaling 1951" },
+  det: { code: "det", lang: "da", name: "Hellig Bibel" },
+  fol: { code: "fol", lang: "sv", name: "Svenska Folkbibeln" },
+  nob: { code: "nob", lang: "no", name: "Norsk Bibel" },
+  fin: { code: "fin", lang: "fi", name: "Pyhä Raamattu" },
+  // Mittlerer Osten / Asien / Afrika
+  vd: { code: "vd", lang: "ar", name: "الكتاب المقدس (Van Dyck)" },
+  mod: { code: "mod", lang: "he", name: "תנ״ך עברי מודרני" },
+  grk: { code: "grk", lang: "el", name: "Ελληνική Βίβλος" },
+  krv: { code: "krv", lang: "ko", name: "한국어 성경" },
+  cuv: { code: "cuv", lang: "zh", name: "中文和合本" },
+  vie: { code: "vie", lang: "vi", name: "Kinh Thánh 1934" },
+  ayt: { code: "ayt", lang: "id", name: "Alkitab Yang Terbuka" },
+  tgl: { code: "tgl", lang: "tl", name: "Banal na Bibliya" },
+  swa: { code: "swa", lang: "sw", name: "Biblia Takatifu" },
+  amh: { code: "amh", lang: "am", name: "መጽሐፍ ቅዱስ" },
+  yor: { code: "yor", lang: "yo", name: "Bíbélì Mímọ́" },
+  ibo: { code: "ibo", lang: "ig", name: "Baịbụlụ Nsọ" },
+  aov: { code: "aov", lang: "af", name: "Afrikaans 1933/53" },
+};
+
+// Default-DB-Übersetzung pro Sprache (für Lookups ohne expliziten translationKey).
+const DB_DEFAULT_BY_LANG: Record<string, string> = {
+  de: "luther1912", en: "bsb", fr: "lsg", es: "vbl", it: "riv",
+  pt: "blj", nl: "nbg", pl: "ubg", cs: "nkb", sk: "slk",
+  ro: "corn", ru: "syn", uk: "ukr96", hr: "iva", sr: "srp",
+  hu: "hun", da: "det", sv: "fol", no: "nob", fi: "fin",
+  ar: "vd", he: "mod", el: "grk", ko: "krv", zh: "cuv",
+  vi: "vie", id: "ayt", tl: "tgl", sw: "swa", am: "amh",
+  yo: "yor", ig: "ibo", af: "aov",
 };
 
 async function lookupVerseFromDb(
@@ -381,16 +426,18 @@ async function lookupVerseFromDb(
   chapter: number,
   verseStart: number,
   verseEnd: number | undefined,
-  dbTranslationCode: string
+  dbTranslationCode: string,
+  lang: string
 ): Promise<{ text: string; bookName: string } | null> {
-  const candidates = OSIS_TO_DE_BOOKS[bookId];
-  if (!candidates || candidates.length === 0) return null;
+  const bookNumber = OSIS_TO_BOOK_NUMBER[bookId];
+  if (!bookNumber) return null;
   const end = verseEnd || verseStart;
   const { data, error } = await supabase
     .from("bible_verses")
     .select("book, verse, text")
-    .in("book", candidates)
+    .eq("book_number", bookNumber)
     .eq("translation", dbTranslationCode)
+    .eq("language", lang)
     .eq("chapter", chapter)
     .gte("verse", verseStart)
     .lte("verse", end)
@@ -420,15 +467,19 @@ async function lookupBibleVerse(
   );
   const metaCode = METADATA_CODE_MAP[trans.id];
 
-  // Prefer our own DB for the canonical German translations
-  // (the external API only ships gemeinfreie Editionen, z.B. Schlachter 1951 statt 2000).
+  // Bevorzuge unsere eigene DB – die externe API liefert oft falsche Editionen
+  // (z.B. Schlachter 1951 statt 2000) oder fehlerhafte Daten.
   const effectiveLang = lang || "de";
   const dbTransKey = translationKey?.toLowerCase();
-  if (effectiveLang === "de" && dbTransKey && DB_DE_TRANSLATIONS[dbTransKey]) {
-    const dbTrans = DB_DE_TRANSLATIONS[dbTransKey];
+  let dbTrans = dbTransKey ? DB_TRANSLATIONS[dbTransKey] : undefined;
+  if (!dbTrans) {
+    const fallbackKey = DB_DEFAULT_BY_LANG[effectiveLang];
+    if (fallbackKey) dbTrans = DB_TRANSLATIONS[fallbackKey];
+  }
+  if (dbTrans) {
     try {
       const [dbResult, meta] = await Promise.all([
-        lookupVerseFromDb(supabase, bookId, chapter, verseStart, verseEnd, dbTrans.code),
+        lookupVerseFromDb(supabase, bookId, chapter, verseStart, verseEnd, dbTrans.code, dbTrans.lang),
         metaCode ? getTranslationMeta(supabase, metaCode) : Promise.resolve(null),
       ]);
       if (dbResult) {
@@ -448,6 +499,7 @@ async function lookupBibleVerse(
       console.error("DB verse lookup error:", e);
     }
   }
+
 
   try {
     const [resp, meta] = await Promise.all([
