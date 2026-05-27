@@ -1280,8 +1280,9 @@ Es gibt zwei Kategorien von Übersetzungen:
 6. **REFERENZ-VALIDIERUNG (WICHTIG):** Wenn du dir bei einer Bibelstelle (Buchname, Kapitel- oder Versnummer) nicht absolut sicher bist – z.B. weil der Nutzer sie ungenau angibt («Johannes 3,16-17» vs. «Joh 3» vs. «Römer 18» – gibt es gar nicht) –, rufe ZUERST das Tool \`validate_bible_reference\` auf. Bei \`valid: false\` NIEMALS raten oder phantasieren, sondern beim Nutzer nachfragen: «Meinst du vielleicht ...?» oder «Römer hat nur 16 Kapitel – welche Stelle meinst du genau?». Gib dem Nutzer die vom Tool gelieferten Vorschläge oder Max-Werte als Orientierung.
 
 ### 1. «lookup_bible_verse» – Exaktes Nachschlagen (Kategorie A)
-Verwende dieses Tool für exakte Zitate aus den historischen Übersetzungen (Luther 1912, Elberfelder, Schlachter 1951, KJV, WEB).
-- Verfügbare Übersetzungen: luther, elberfelder, schlachter, kjv, web
+Verwende dieses Tool für exakte Zitate aus den drei deutschen Hauptübersetzungen (Luther 1912, Elberfelder 2006, Schlachter 2000) sowie KJV/WEB im Englischen.
+- Verfügbare Übersetzungen: luther1912, elberfelder, schlachter2000, kjv, web
+- WICHTIG: Wechsle bewusst zwischen den drei deutschen Übersetzungen ab, statt nur Luther 1912 zu zitieren. Schlachter 2000 ist vor allem im freikirchlichen Umfeld weit verbreitet und sprachlich modern – nutze sie regelmässig. Elberfelder 2006 eignet sich für besonders wortgetreue Zitate.
 
 ### 2. «search_bible_verses» – Thematische Suche
 Verwende dieses Tool, wenn du **thematisch passende Verse** finden willst, aber keine exakte Stelle kennst.
