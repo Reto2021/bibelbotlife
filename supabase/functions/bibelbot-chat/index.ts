@@ -420,6 +420,35 @@ async function lookupBibleVerse(
   );
   const metaCode = METADATA_CODE_MAP[trans.id];
 
+  // Prefer our own DB for the canonical German translations
+  // (the external API only ships gemeinfreie Editionen, z.B. Schlachter 1951 statt 2000).
+  const effectiveLang = lang || "de";
+  const dbTransKey = translationKey?.toLowerCase();
+  if (effectiveLang === "de" && dbTransKey && DB_DE_TRANSLATIONS[dbTransKey]) {
+    const dbTrans = DB_DE_TRANSLATIONS[dbTransKey];
+    try {
+      const [dbResult, meta] = await Promise.all([
+        lookupVerseFromDb(supabase, bookId, chapter, verseStart, verseEnd, dbTrans.code),
+        metaCode ? getTranslationMeta(supabase, metaCode) : Promise.resolve(null),
+      ]);
+      if (dbResult) {
+        const ref = verseEnd && verseEnd !== verseStart
+          ? `${dbResult.bookName} ${chapter},${verseStart}-${verseEnd}`
+          : `${dbResult.bookName} ${chapter},${verseStart}`;
+        return formatVerseCitation({
+          text: dbResult.text,
+          reference: ref,
+          translationName: meta?.name ?? dbTrans.name,
+          meta,
+          fallbackCitation: `${dbTrans.name} – BibleBot.Life Datenbank`,
+        });
+      }
+      // fall through to external API as a last resort
+    } catch (e) {
+      console.error("DB verse lookup error:", e);
+    }
+  }
+
   try {
     const [resp, meta] = await Promise.all([
       fetch(url),
