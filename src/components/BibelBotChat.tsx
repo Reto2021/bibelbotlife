@@ -956,32 +956,45 @@ export function BibleBotChat() {
       )}
 
       {/* Input */}
-      <div className={`border-t border-border p-3`}>
-        <div className="flex gap-2 items-end">
-          <Textarea ref={textareaRef} value={input} onChange={(e) => setInput(e.target.value)} onKeyDown={handleKeyDown} placeholder={t("chat.placeholder")} className={`min-h-[40px] max-h-[100px] text-base resize-none`} rows={1} />
-          <div className="flex flex-col items-center gap-0.5 shrink-0">
+      <div className="border-t border-border p-3">
+        <div className="flex items-end gap-2 rounded-3xl border border-border bg-background focus-within:border-primary/50 focus-within:shadow-[0_0_0_3px_hsl(var(--primary)/0.1)] transition-all px-3 py-2">
+          <Textarea
+            ref={textareaRef}
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyDown={handleKeyDown}
+            placeholder={t("chat.placeholder")}
+            className="min-h-[36px] max-h-[140px] text-base resize-none border-0 bg-transparent px-1 py-2 shadow-none focus-visible:ring-0 focus-visible:ring-offset-0"
+            rows={1}
+          />
+          <div className="flex items-center gap-1 shrink-0 pb-1">
             <Button
               size="icon"
-              variant={isListening ? "destructive" : "outline"}
+              variant="ghost"
               onClick={isListening ? stopListening : startListening}
               disabled={isTranscribing}
-              className={`h-10 w-10 relative`}
+              className={`h-9 w-9 rounded-full ${isListening ? "text-destructive" : "text-muted-foreground hover:text-foreground"}`}
               aria-label={isListening ? t("chat.stopVoice") : t("chat.startVoice")}
               title={isListening ? t("chat.stopVoice") : t("chat.startVoice", "Spracheingabe")}
             >
               {isTranscribing ? <Loader2 className="h-5 w-5 animate-spin" /> : isListening ? <MicOff className="h-5 w-5" /> : <Mic className="h-5 w-5" />}
-              {isListening && <span className="absolute inset-0 rounded-md border-2 border-destructive animate-pulse" />}
             </Button>
-            {isListening && (
-              <span className="text-[10px] font-mono text-destructive leading-none tabular-nums">
-                {String(Math.floor(recordingSeconds / 60)).padStart(2, "0")}:{String(recordingSeconds % 60).padStart(2, "0")}
-              </span>
-            )}
+            <Button
+              size="icon"
+              onClick={() => sendMessage(input)}
+              disabled={!input.trim() || isLoading}
+              className="h-9 w-9 rounded-full shrink-0"
+              title={t("chat.send", "Senden")}
+            >
+              <Send className="h-4 w-4" />
+            </Button>
           </div>
-          <Button size="icon" onClick={() => sendMessage(input)} disabled={!input.trim() || isLoading} className={`h-10 w-10 shrink-0`} title={t("chat.send", "Senden")}>
-            <Send className="h-5 w-5" />
-          </Button>
         </div>
+        {isListening && (
+          <div className="text-center mt-1 text-[10px] font-mono text-destructive tabular-nums">
+            ● {String(Math.floor(recordingSeconds / 60)).padStart(2, "0")}:{String(recordingSeconds % 60).padStart(2, "0")}
+          </div>
+        )}
       </div>
     </div>
   );
