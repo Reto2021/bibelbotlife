@@ -807,13 +807,13 @@ export function BibleBotChat() {
           return (
           <div key={i}>
             <div className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
-            <div className={msg.role === "user" ? "max-w-[85%]" : "max-w-full sm:max-w-[680px] w-full"}>
+            <div className={msg.role === "user" ? "max-w-[90%]" : "max-w-full w-full"}>
               {msg.role === "user" ? (
-                <div className="rounded-2xl rounded-br-md px-4 py-3 bg-primary text-primary-foreground text-base leading-relaxed">
+                <div className="text-lg leading-relaxed text-foreground font-medium text-right">
                   {msg.content}
                 </div>
               ) : (
-                <div className="prose prose-base max-w-none dark:prose-invert font-serif leading-[1.75] prose-p:my-3 prose-headings:mt-4 prose-headings:mb-2 prose-li:my-1 prose-strong:text-foreground prose-blockquote:my-3 text-foreground">
+                <div className="prose prose-lg max-w-none dark:prose-invert font-serif leading-[1.75] prose-p:my-3 prose-headings:mt-4 prose-headings:mb-2 prose-li:my-1 prose-strong:text-foreground prose-blockquote:my-3 text-foreground">
                   <ReactMarkdown components={{
                     p: ({ children }) => <p>{splitCitationSource(makeRefsClickable(children, sendMessage, t), t)}</p>,
                     li: ({ children }) => <li>{splitCitationSource(makeRefsClickable(children, sendMessage, t), t)}</li>,
