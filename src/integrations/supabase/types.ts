@@ -2411,7 +2411,6 @@ export type Database = {
           secondary_color: string | null
           service_times: string | null
           slug: string | null
-          telegram_group_link: string | null
           updated_at: string | null
           website: string | null
           welcome_message: string | null
@@ -2435,7 +2434,6 @@ export type Database = {
           secondary_color?: string | null
           service_times?: string | null
           slug?: string | null
-          telegram_group_link?: string | null
           updated_at?: string | null
           website?: string | null
           welcome_message?: string | null
@@ -2459,7 +2457,6 @@ export type Database = {
           secondary_color?: string | null
           service_times?: string | null
           slug?: string | null
-          telegram_group_link?: string | null
           updated_at?: string | null
           website?: string | null
           welcome_message?: string | null
