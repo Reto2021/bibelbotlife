@@ -24,6 +24,7 @@ interface CardData {
   verse_text: string;
   explanation: string;
   image_url: string | null;
+  mood: string | null;
 }
 
 export default function VerseCardPage() {
