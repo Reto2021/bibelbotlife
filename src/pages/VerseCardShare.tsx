@@ -23,6 +23,7 @@ interface CardData {
   verse_ref: string;
   verse_text: string;
   explanation: string;
+  image_url: string | null;
 }
 
 export default function VerseCardPage() {
@@ -37,12 +38,24 @@ export default function VerseCardPage() {
     (async () => {
       const { data } = await supabase
         .from("verse_cards" as any)
-        .select("id, verse_ref, verse_text, explanation")
+        .select("id, verse_ref, verse_text, explanation, image_url")
         .eq("id", id)
         .maybeSingle();
       setCard(data as any);
       setLoading(false);
-      if (data) supabase.rpc("increment_verse_card_views", { card_id: id } as any);
+      if (data) {
+        supabase.rpc("increment_verse_card_views", { card_id: id } as any);
+        // If the server-side PNG isn't ready yet, kick off generation so the
+        // OG image is available on the next visit / scrape.
+        if (!(data as any).image_url) {
+          supabase.functions
+            .invoke("generate-verse-card", { body: { id } })
+            .then(({ data: gen }) => {
+              if (gen?.image_url) setCard((c) => (c ? { ...c, image_url: gen.image_url } : c));
+            })
+            .catch(() => {});
+        }
+      }
     })();
   }, [id]);
 
