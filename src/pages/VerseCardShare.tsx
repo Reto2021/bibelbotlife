@@ -128,6 +128,10 @@ export default function VerseCardPage() {
         <meta property="og:description" content={ogText.slice(0, 200)} />
         <meta property="og:url" content={shareUrl} />
         <meta property="og:type" content="article" />
+        {card.image_url && <meta property="og:image" content={card.image_url} />}
+        {card.image_url && <meta property="og:image:width" content="1200" />}
+        {card.image_url && <meta property="og:image:height" content="630" />}
+        {card.image_url && <meta name="twitter:image" content={card.image_url} />}
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="canonical" href={shareUrl} />
       </Helmet>
