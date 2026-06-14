@@ -2,8 +2,8 @@ import { lazy, Suspense, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 
-const BibelBotChat = lazy(() =>
-  import("@/components/BibelBotChat").then((m) => ({ default: m.default || (m as any).BibelBotChat })),
+const BibleBotChat = lazy(() =>
+  import("@/components/BibelBotChat").then((m) => ({ default: m.BibleBotChat })),
 );
 
 /**
