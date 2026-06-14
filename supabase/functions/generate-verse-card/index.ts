@@ -324,7 +324,7 @@ Deno.serve(async (req) => {
 
     const { data: card, error: fetchErr } = await supabase
       .from("verse_cards")
-      .select("id, verse_text, verse_ref, explanation, image_url")
+      .select("id, verse_text, verse_ref, explanation, image_url, mood")
       .eq("id", id)
       .maybeSingle();
 
