@@ -62,19 +62,28 @@ export const VerseCard = forwardRef<HTMLDivElement, VerseCardProps>(
           }}
         />
 
-        {/* Header */}
+        {/* Header mit Stimmungs-Symbol */}
         <div
           style={{
-            fontSize: 28,
-            letterSpacing: "0.3em",
-            textTransform: "uppercase",
-            color: "rgba(42,24,16,0.7)",
-            fontFamily: "Inter, sans-serif",
-            fontWeight: 600,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
             zIndex: 1,
           }}
         >
-          Dein Vers
+          <div
+            style={{
+              fontSize: 28,
+              letterSpacing: "0.3em",
+              textTransform: "uppercase",
+              color: "rgba(42,24,16,0.7)",
+              fontFamily: "Inter, sans-serif",
+              fontWeight: 600,
+            }}
+          >
+            Dein Vers
+          </div>
+          {mood && <MoodSymbol mood={mood} size={isStory ? 180 : 140} />}
         </div>
 
         {/* Vers */}
