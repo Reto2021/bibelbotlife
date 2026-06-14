@@ -324,6 +324,7 @@ export default function MeinVers() {
                       verseRef={card.verse_ref}
                       explanation={card.explanation}
                       qrUrl={qrDataUrl}
+                      mood={mood as any}
                     />
                   </div>
                 </div>
