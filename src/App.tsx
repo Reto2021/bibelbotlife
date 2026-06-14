@@ -170,6 +170,10 @@ const App = () => {
                   <Route path="/datenschutz" element={<Datenschutz />} />
                   <Route path="/analytics" element={<Analytics />} />
                   <Route path="/for-churches" element={<ForChurches />} />
+                  <Route path="/mein-vers" element={<MeinVers />} />
+                  <Route path="/v/:id" element={<VerseCardShare />} />
+                  <Route path="/embed" element={<Embed />} />
+                  <Route path="/widget" element={<WidgetGenerator />} />
                   <Route path="/churches" element={<ChurchDirectory />} />
                   <Route path="/church/:slug" element={<ChurchPartner />} />
                   <Route path="/church-integration/:slug" element={<ChurchIntegration />} />
