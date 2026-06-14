@@ -61,7 +61,7 @@ export default function Embed() {
       </div>
       <div className="flex-1 overflow-hidden">
         <Suspense fallback={<div className="p-6 text-muted-foreground">Lade…</div>}>
-          <BibelBotChat />
+          <BibleBotChat />
         </Suspense>
       </div>
     </div>
