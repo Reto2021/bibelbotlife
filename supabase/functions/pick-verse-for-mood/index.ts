@@ -121,6 +121,27 @@ Deno.serve(async (req) => {
       throw error;
     }
 
+    // Server-side render of the share PNG (Satori). Fire-and-forget so the
+    // user doesn't wait — OG scrapers refetch links after a delay anyway.
+    try {
+      const url = `${Deno.env.get("SUPABASE_URL")}/functions/v1/generate-verse-card`;
+      const promise = fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")}`,
+        },
+        body: JSON.stringify({ id: card.id }),
+      }).catch((e) => console.error("generate-verse-card kickoff failed", e));
+      // @ts-ignore EdgeRuntime is provided by Deno Deploy
+      if (typeof EdgeRuntime !== "undefined" && (EdgeRuntime as any).waitUntil) {
+        // @ts-ignore
+        EdgeRuntime.waitUntil(promise);
+      }
+    } catch (e) {
+      console.error("kickoff err", e);
+    }
+
     return new Response(JSON.stringify(card), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
