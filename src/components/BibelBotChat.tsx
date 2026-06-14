@@ -859,6 +859,17 @@ export function BibleBotChat() {
                     variant="icon"
                     className="ml-auto"
                   />
+                  {/^.*\d+[,:]\s?\d+.*$/m.test(msg.content) && (
+                    <a
+                      href="/mein-vers"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1 text-xs text-primary hover:underline px-2"
+                      title="Persönlichen Vers als Share-Karte erhalten"
+                    >
+                      ✨ Karte
+                    </a>
+                  )}
                 </div>
               )}
               {msg.role === "assistant" && i > 0 && (
