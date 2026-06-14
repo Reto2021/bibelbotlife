@@ -113,7 +113,7 @@ Deno.serve(async (req) => {
         explanation: parsed.explanation.slice(0, 600),
         language,
       })
-      .select("id, verse_ref, verse_text, explanation, mood, area, language, created_at")
+      .select("id, verse_ref, verse_text, explanation, mood, area, language, image_url, created_at")
       .single();
 
     if (error) {
