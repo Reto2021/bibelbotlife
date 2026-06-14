@@ -1,0 +1,1 @@
+ALTER TABLE public.verse_cards ADD COLUMN IF NOT EXISTS image_url text;
