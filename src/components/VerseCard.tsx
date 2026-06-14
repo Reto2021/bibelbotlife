@@ -16,7 +16,7 @@ interface VerseCardProps {
  * Wird via html-to-image als PNG exportiert (Story 1080×1920).
  */
 export const VerseCard = forwardRef<HTMLDivElement, VerseCardProps>(
-  ({ verseText, verseRef, explanation, qrUrl, format = "story" }, ref) => {
+  ({ verseText, verseRef, explanation, qrUrl, mood, format = "story" }, ref) => {
     const isStory = format === "story";
     return (
       <div
