@@ -279,7 +279,7 @@ function buildCard(opts: {
   } as any;
 }
 
-async function renderPng(card: { verse_text: string; verse_ref: string; explanation: string }) {
+async function renderPng(card: { verse_text: string; verse_ref: string; explanation: string; mood?: string | null }) {
   await ensureAssets();
 
   const svg = await satori(
@@ -287,6 +287,7 @@ async function renderPng(card: { verse_text: string; verse_ref: string; explanat
       verseText: card.verse_text,
       verseRef: card.verse_ref,
       explanation: card.explanation,
+      mood: card.mood,
     }),
     {
       width: 1200,
