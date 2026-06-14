@@ -39,7 +39,7 @@ export default function VerseCardPage() {
     (async () => {
       const { data } = await supabase
         .from("verse_cards" as any)
-        .select("id, verse_ref, verse_text, explanation, image_url")
+        .select("id, verse_ref, verse_text, explanation, image_url, mood")
         .eq("id", id)
         .maybeSingle();
       setCard(data as any);
