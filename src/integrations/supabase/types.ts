@@ -2311,6 +2311,7 @@ export type Database = {
           created_at: string
           explanation: string
           id: string
+          image_url: string | null
           language: string
           mood: string
           prompt: string | null
@@ -2325,6 +2326,7 @@ export type Database = {
           created_at?: string
           explanation: string
           id?: string
+          image_url?: string | null
           language?: string
           mood: string
           prompt?: string | null
@@ -2339,6 +2341,7 @@ export type Database = {
           created_at?: string
           explanation?: string
           id?: string
+          image_url?: string | null
           language?: string
           mood?: string
           prompt?: string | null
