@@ -1,10 +1,12 @@
 import { forwardRef } from "react";
+import { MoodSymbol, type MoodId } from "@/components/MoodSymbol";
 
 interface VerseCardProps {
   verseText: string;
   verseRef: string;
   explanation?: string;
   qrUrl?: string;
+  mood?: MoodId;
   // 1080x1920 for stories, 1080x1080 for square
   format?: "story" | "square";
 }
