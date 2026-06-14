@@ -24,6 +24,7 @@ interface CardData {
   verse_text: string;
   explanation: string;
   image_url: string | null;
+  mood: string | null;
 }
 
 export default function VerseCardPage() {
@@ -38,7 +39,7 @@ export default function VerseCardPage() {
     (async () => {
       const { data } = await supabase
         .from("verse_cards" as any)
-        .select("id, verse_ref, verse_text, explanation, image_url")
+        .select("id, verse_ref, verse_text, explanation, image_url, mood")
         .eq("id", id)
         .maybeSingle();
       setCard(data as any);
@@ -154,6 +155,7 @@ export default function VerseCardPage() {
                   verseRef={card.verse_ref}
                   explanation={card.explanation}
                   qrUrl={qrDataUrl}
+                  mood={(card.mood || undefined) as any}
                 />
               </div>
             </div>

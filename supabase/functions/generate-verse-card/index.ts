@@ -52,14 +52,80 @@ async function ensureAssets() {
   await wasmReady;
 }
 
+// ---- Mood symbols (inline SVG → data URL) -------------------------------
+function moodSvg(mood: string, size = 160): string | null {
+  const s = size;
+  const c = s / 2;
+  const gL = "rgba(255,230,180,0.55)";
+  const gM = "rgba(232,200,150,0.45)";
+  const gD = "rgba(139,90,31,0.35)";
+  const gC = "rgba(255,245,220,0.85)";
+  let inner = "";
+  switch (mood) {
+    case "dankbar": {
+      inner += `<circle cx="${c}" cy="${c}" r="${s * 0.22}" fill="${gL}"/>`;
+      for (let i = 0; i < 8; i++) {
+        const deg = i * 45;
+        const rad = (deg * Math.PI) / 180;
+        const x1 = c + Math.cos(rad) * s * 0.32;
+        const y1 = c + Math.sin(rad) * s * 0.32;
+        const x2 = c + Math.cos(rad) * s * 0.46;
+        const y2 = c + Math.sin(rad) * s * 0.46;
+        inner += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${i % 2 === 0 ? gL : gM}" stroke-width="${s * 0.025}" stroke-linecap="round"/>`;
+      }
+      break;
+    }
+    case "aengstlich": {
+      inner += `<circle cx="${c}" cy="${c - s * 0.05}" r="${s * 0.38}" fill="${gM}" opacity="0.3"/>`;
+      inner += `<ellipse cx="${c}" cy="${c - s * 0.08}" rx="${s * 0.12}" ry="${s * 0.22}" fill="${gL}"/>`;
+      inner += `<ellipse cx="${c}" cy="${c - s * 0.05}" rx="${s * 0.06}" ry="${s * 0.14}" fill="rgba(255,245,220,0.8)"/>`;
+      break;
+    }
+    case "traurig": {
+      [0.2, 0.35, 0.5, 0.65, 0.8].forEach((xRel, i) => {
+        inner += `<ellipse cx="${s * xRel}" cy="${s * (0.25 + i * 0.12)}" rx="${s * 0.04}" ry="${s * 0.06}" fill="${i < 2 ? gD : gM}" opacity="${0.5 + i * 0.1}"/>`;
+      });
+      inner += `<ellipse cx="${c}" cy="${s * 0.82}" rx="${s * 0.35}" ry="${s * 0.08}" fill="${gL}" opacity="0.4"/>`;
+      break;
+    }
+    case "suchend": {
+      inner += `<circle cx="${c}" cy="${c}" r="${s * 0.32}" fill="none" stroke="${gM}" stroke-width="${s * 0.02}"/>`;
+      inner += `<polygon points="${c},${s * 0.18} ${c - s * 0.08},${c + s * 0.1} ${c + s * 0.08},${c + s * 0.1}" fill="${gL}"/>`;
+      inner += `<polygon points="${c},${s * 0.82} ${c - s * 0.06},${c - s * 0.08} ${c + s * 0.06},${c - s * 0.08}" fill="${gD}"/>`;
+      inner += `<circle cx="${c}" cy="${c}" r="${s * 0.04}" fill="${gL}"/>`;
+      break;
+    }
+    case "hoffnungsvoll": {
+      inner += `<polygon points="0,0 ${s * 0.6},0 0,${s * 0.45}" fill="${gL}" opacity="0.25"/>`;
+      inner += `<polygon points="0,0 ${s * 0.35},0 0,${s * 0.25}" fill="${gL}" opacity="0.4"/>`;
+      inner += `<circle cx="${s * 0.18}" cy="${s * 0.18}" r="${s * 0.14}" fill="${gL}" opacity="0.5"/>`;
+      break;
+    }
+    case "muede": {
+      inner += `<circle cx="${c - s * 0.06}" cy="${c - s * 0.15}" r="${s * 0.2}" fill="${gM}"/>`;
+      inner += `<circle cx="${c + s * 0.02}" cy="${c - s * 0.18}" r="${s * 0.18}" fill="${gC}"/>`;
+      [0.58, 0.68, 0.78].forEach((y, i) => {
+        inner += `<ellipse cx="${c}" cy="${s * y}" rx="${s * (0.3 - i * 0.05)}" ry="${s * 0.015}" fill="${gD}" opacity="0.4"/>`;
+      });
+      break;
+    }
+    default:
+      return null;
+  }
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${s}" height="${s}" viewBox="0 0 ${s} ${s}">${inner}</svg>`;
+  return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
+}
+
 // ---- Card layout (Satori object tree, no JSX) ---------------------------
 function buildCard(opts: {
   verseText: string;
   verseRef: string;
   explanation: string;
+  mood?: string | null;
 }) {
-  const { verseText, verseRef, explanation } = opts;
+  const { verseText, verseRef, explanation, mood } = opts;
   const verseSize = verseText.length > 200 ? 38 : verseText.length > 120 ? 46 : 56;
+  const symbolUrl = mood ? moodSvg(mood, 140) : null;
 
   return {
     type: "div",
@@ -81,13 +147,36 @@ function buildCard(opts: {
           type: "div",
           props: {
             style: {
-              fontSize: 20,
-              letterSpacing: "0.3em",
-              textTransform: "uppercase",
-              color: "rgba(42,24,16,0.7)",
-              fontWeight: 600,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
             },
-            children: "Dein Vers",
+            children: [
+              {
+                type: "div",
+                props: {
+                  style: {
+                    fontSize: 20,
+                    letterSpacing: "0.3em",
+                    textTransform: "uppercase",
+                    color: "rgba(42,24,16,0.7)",
+                    fontWeight: 600,
+                  },
+                  children: "Dein Vers",
+                },
+              },
+              symbolUrl
+                ? {
+                    type: "img",
+                    props: {
+                      src: symbolUrl,
+                      width: 90,
+                      height: 90,
+                      style: { width: 90, height: 90 },
+                    },
+                  }
+                : null,
+            ].filter(Boolean),
           },
         },
         {
@@ -190,7 +279,7 @@ function buildCard(opts: {
   } as any;
 }
 
-async function renderPng(card: { verse_text: string; verse_ref: string; explanation: string }) {
+async function renderPng(card: { verse_text: string; verse_ref: string; explanation: string; mood?: string | null }) {
   await ensureAssets();
 
   const svg = await satori(
@@ -198,6 +287,7 @@ async function renderPng(card: { verse_text: string; verse_ref: string; explanat
       verseText: card.verse_text,
       verseRef: card.verse_ref,
       explanation: card.explanation,
+      mood: card.mood,
     }),
     {
       width: 1200,
@@ -234,7 +324,7 @@ Deno.serve(async (req) => {
 
     const { data: card, error: fetchErr } = await supabase
       .from("verse_cards")
-      .select("id, verse_text, verse_ref, explanation, image_url")
+      .select("id, verse_text, verse_ref, explanation, image_url, mood")
       .eq("id", id)
       .maybeSingle();
 

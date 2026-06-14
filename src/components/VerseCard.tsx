@@ -1,10 +1,12 @@
 import { forwardRef } from "react";
+import { MoodSymbol, type MoodId } from "@/components/MoodSymbol";
 
 interface VerseCardProps {
   verseText: string;
   verseRef: string;
   explanation?: string;
   qrUrl?: string;
+  mood?: MoodId;
   // 1080x1920 for stories, 1080x1080 for square
   format?: "story" | "square";
 }
@@ -14,7 +16,7 @@ interface VerseCardProps {
  * Wird via html-to-image als PNG exportiert (Story 1080×1920).
  */
 export const VerseCard = forwardRef<HTMLDivElement, VerseCardProps>(
-  ({ verseText, verseRef, explanation, qrUrl, format = "story" }, ref) => {
+  ({ verseText, verseRef, explanation, qrUrl, mood, format = "story" }, ref) => {
     const isStory = format === "story";
     return (
       <div
@@ -60,19 +62,28 @@ export const VerseCard = forwardRef<HTMLDivElement, VerseCardProps>(
           }}
         />
 
-        {/* Header */}
+        {/* Header mit Stimmungs-Symbol */}
         <div
           style={{
-            fontSize: 28,
-            letterSpacing: "0.3em",
-            textTransform: "uppercase",
-            color: "rgba(42,24,16,0.7)",
-            fontFamily: "Inter, sans-serif",
-            fontWeight: 600,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
             zIndex: 1,
           }}
         >
-          Dein Vers
+          <div
+            style={{
+              fontSize: 28,
+              letterSpacing: "0.3em",
+              textTransform: "uppercase",
+              color: "rgba(42,24,16,0.7)",
+              fontFamily: "Inter, sans-serif",
+              fontWeight: 600,
+            }}
+          >
+            Dein Vers
+          </div>
+          {mood && <MoodSymbol mood={mood} size={isStory ? 180 : 140} />}
         </div>
 
         {/* Vers */}
