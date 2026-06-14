@@ -44,6 +44,7 @@ interface CardData {
   verse_ref: string;
   verse_text: string;
   explanation: string;
+  mood?: string;
 }
 
 function track(name: string, data?: Record<string, unknown>) {
