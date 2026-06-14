@@ -2304,6 +2304,51 @@ export type Database = {
         }
         Relationships: []
       }
+      verse_cards: {
+        Row: {
+          area: string
+          bg_style: string
+          created_at: string
+          explanation: string
+          id: string
+          language: string
+          mood: string
+          prompt: string | null
+          share_count: number
+          verse_ref: string
+          verse_text: string
+          view_count: number
+        }
+        Insert: {
+          area: string
+          bg_style?: string
+          created_at?: string
+          explanation: string
+          id?: string
+          language?: string
+          mood: string
+          prompt?: string | null
+          share_count?: number
+          verse_ref: string
+          verse_text: string
+          view_count?: number
+        }
+        Update: {
+          area?: string
+          bg_style?: string
+          created_at?: string
+          explanation?: string
+          id?: string
+          language?: string
+          mood?: string
+          prompt?: string | null
+          share_count?: number
+          verse_ref?: string
+          verse_text?: string
+          view_count?: number
+        }
+        Relationships: []
+      }
       verse_seo_content: {
         Row: {
           book: string
@@ -2593,6 +2638,14 @@ export type Database = {
       }
       increment_prayer_count: {
         Args: { request_id: string }
+        Returns: undefined
+      }
+      increment_verse_card_shares: {
+        Args: { card_id: string }
+        Returns: undefined
+      }
+      increment_verse_card_views: {
+        Args: { card_id: string }
         Returns: undefined
       }
       is_church_owner: { Args: { _church_id: string }; Returns: boolean }
