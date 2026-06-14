@@ -155,6 +155,7 @@ export default function VerseCardPage() {
                   verseRef={card.verse_ref}
                   explanation={card.explanation}
                   qrUrl={qrDataUrl}
+                  mood={(card.mood || undefined) as any}
                 />
               </div>
             </div>
