@@ -84,6 +84,9 @@ export default function AdminDashboard() {
             <Button asChild variant="outline" size="sm">
               <Link to="/admin/prayers"><Heart className="h-4 w-4 mr-2" />Gebete</Link>
             </Button>
+            <Button asChild variant="outline" size="sm">
+              <Link to="/admin/widgets"><Globe className="h-4 w-4 mr-2" />Widgets</Link>
+            </Button>
           </div>
         </div>
 

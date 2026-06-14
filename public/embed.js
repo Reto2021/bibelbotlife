@@ -109,13 +109,11 @@
     container.style.display = isOpen ? "block" : "none";
     if (isOpen) {
       try {
-        // Fire-and-forget tracking call (no auth needed; goes to public endpoint)
         var img = new Image();
         img.src =
-          origin +
-          "/api/embed-track?host=" +
+          "https://swsthxftugjqznqjcfpk.supabase.co/functions/v1/embed-track?host=" +
           encodeURIComponent(host) +
-          "&t=" +
+          "&event=widget_open&t=" +
           Date.now();
       } catch (e) {}
     }
