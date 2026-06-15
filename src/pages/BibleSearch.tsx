@@ -155,10 +155,23 @@ export default function BibleSearch() {
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">{t("bibleSearch.allTranslations")}</SelectItem>
-                <SelectItem value="basisbibel">BasisBibel (modern)</SelectItem>
-                <SelectItem value="luther1912">Luther 1912</SelectItem>
-                <SelectItem value="schlachter2000">Schlachter 2000</SelectItem>
-                <SelectItem value="elberfelder">Elberfelder</SelectItem>
+                {(i18n.language?.startsWith("en")) ? (
+                  <>
+                    <SelectItem value="NIV">NIV (modern)</SelectItem>
+                    <SelectItem value="bsb">Berean Standard</SelectItem>
+                    <SelectItem value="kjv">King James</SelectItem>
+                    <SelectItem value="web">World English</SelectItem>
+                  </>
+                ) : (
+                  <>
+                    <SelectItem value="basisbibel">BasisBibel (modern)</SelectItem>
+                    <SelectItem value="luther1912">Luther 1912</SelectItem>
+                    <SelectItem value="schlachter2000">Schlachter 2000</SelectItem>
+                    <SelectItem value="ELB">Elberfelder 2006</SelectItem>
+                    <SelectItem value="EU">Einheitsübersetzung</SelectItem>
+                    <SelectItem value="elberfelder">Elberfelder (klassisch)</SelectItem>
+                  </>
+                )}
               </SelectContent>
             </Select>
             <Button onClick={doSearch} disabled={loading || query.trim().length < 2}>
