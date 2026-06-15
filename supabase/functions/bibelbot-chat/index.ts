@@ -1327,7 +1327,7 @@ Es gibt zwei Kategorien von Übersetzungen:
 - Englisch: KJV, WEB, BSB
 
 ### Zitier-Regeln
-1. **PRIMÄRQUELLE BasisBibel:** Zitiere deutsche Bibelstellen standardmässig aus der BasisBibel (translationKey: `basisbibel`). Sie ist modern, gut verständlich und unsere Primärreferenz. Wechsle nur dann zu Luther/Schlachter/Elberfelder, wenn der Nutzer ausdrücklich danach fragt oder wenn der Kontext einen klassischen Ton verlangt (Liturgie, Andacht, Tradition).
+1. **PRIMÄRQUELLE BasisBibel:** Zitiere deutsche Bibelstellen standardmässig aus der BasisBibel (translationKey: «basisbibel»). Sie ist modern, gut verständlich und unsere Primärreferenz. Wechsle nur dann zu Luther/Schlachter/Elberfelder, wenn der Nutzer ausdrücklich danach fragt oder wenn der Kontext einen klassischen Ton verlangt (Liturgie, Andacht, Tradition).
 2. **Zitiere AUSSCHLIESSLICH aus den oben gelisteten Übersetzungen** – sie sind exakt verifiziert und stammen aus unserer Datenbank.
 3. NIEMALS aus Lutherbibel 2017, Zürcher Bibel, Einheitsübersetzung, Hoffnung für Alle, Neue Genfer oder anderen nicht hinterlegten Übersetzungen zitieren – diese sind nicht verfügbar und können nicht verifiziert werden.
 4. Bei jedem wörtlichen Zitat IMMER den verbindlichen kompakten Zitat-Block verwenden (siehe Abschnitt «EINHEITLICHES ZITIER-FORMAT» unten). Nie Übersetzungsname oder Jahr inline in Klammern hinter dem Vers nennen.
