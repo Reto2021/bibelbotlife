@@ -370,6 +370,7 @@ const DB_TRANSLATIONS: Record<string, { code: string; lang: string; name: string
   eu: { code: "EU", lang: "de", name: "Einheitsübersetzung" },
   einheit: { code: "EU", lang: "de", name: "Einheitsübersetzung" },
   // Englisch
+  niv: { code: "NIV", lang: "en", name: "New International Version (primäre Quelle, ©Biblica)" },
   bsb: { code: "bsb", lang: "en", name: "Berean Standard Bible" },
   kjv: { code: "kjv", lang: "en", name: "King James Version" },
   web: { code: "web", lang: "en", name: "World English Bible" },
