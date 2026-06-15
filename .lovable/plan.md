@@ -1,93 +1,61 @@
-# Erklärungs-Tooltips mit KI-Umformulierung
+## Ziel
 
-Ziel: BasisBibel-Erklärungen urheberrechtssicher als Tooltips im Chat und in der Bibelsuche anzeigen. KI formuliert einmalig sinngemäss um, Ergebnis wird persistent gespeichert.
+NIV (New International Version, ©Biblica) als englische Primärquelle für Chat und BibleSearch — lizenzkonform via `bible_verses_restricted` (kein offener Volltext-Zugriff, immer mit Quellennachweis "NIV ©Biblica").
 
-## 1. DB-Migration
+## Lizenz-Strategie
 
-Erweitere `bible_explanations`:
-- `explanation_rewritten TEXT` — sinngemässe KI-Version (öffentlich auslieferbar)
-- `rewritten_at TIMESTAMPTZ` — Zeitstempel
-- `rewrite_status TEXT` — `pending` | `done` | `failed` (default `pending`)
+- NIV-Volltext liegt **nur** in `bible_verses_restricted` (service_role-only RLS).
+- Auslieferung an Frontend ausschliesslich über RPC `get_restricted_verse_snippet`.
+- Pro Antwort/Anzeige: Copyright-Footer "Scripture quotations taken from The Holy Bible, New International Version® NIV®. Copyright © 1973, 1978, 1984, 2011 by Biblica, Inc.™ Used by permission."
+- Verse-Limit pro RPC-Call: **von 7 auf 30 anheben** (deckt ein ganzes Kapitel ab — Standard für BibleSearch-Kapitelansicht). Bleibt Scraping-Schutz, da Tabelle selbst nicht direkt lesbar.
 
-RLS-Anpassung: Öffentliche Leser erhalten nur Zeilen mit `rewrite_status = 'done'` und sehen nur die umformulierte Spalte. Das Original (`explanation`) bleibt service_role-only.
+## Schritte
 
-Konkret: Neue View `public.bible_explanations_public` mit Spalten `id, verse_id, book, chapter, verse, keyword, explanation_rewritten, source` — Frontend liest nur diese View.
+### 1. Import-Pipeline
+- Neue Edge Function `bible-import-niv` (analog `bible-import-basisbibel`):
+  - Liest `niv_chapters.json` aus Storage-Bucket `bible-imports`.
+  - Parst pro Vers (ID-Format `GEN.1.1` → book/chapter/verse mapping).
+  - Schreibt in `bible_verses_restricted` mit `translation='NIV'`, `language='en'`, `source_url` auf biblica.com.
+  - Idempotent via ON CONFLICT (translation, book_number, chapter, verse).
+  - Kapitelüberschriften (`headings`) in `bible_chapter_headings`.
+- Hochladen: JSON nach `bible-imports/niv_chapters.json`, Edge Function einmalig triggern.
 
-## 2. Edge Function: `bible-explanations-rewrite`
+### 2. DB-Migration
+- `get_restricted_verse_snippet`: Limit von 7 auf 30 erhöhen.
+- `bible_translation_meta`: NIV-Eintrag (name, language='en', copyright_notice, source_url, is_restricted=true).
+- Keine Public-Grants auf `bible_verses_restricted` — bleibt service_role.
 
-Batch-Worker:
-- Liest 50 Einträge mit `rewrite_status = 'pending'` pro Aufruf
-- Ruft Lovable AI (`google/gemini-2.5-flash-lite`) mit kompaktem System-Prompt:
-  - "Formuliere die folgende Bibelerklärung sinngemäss in eigenen Worten neu. Max. 2 Sätze, sachlich, Schweizer Deutsch (kein ß). Behalte die Kernaussage, ändere Satzbau und Wortwahl substantiell. Gib nur den umformulierten Text zurück, keine Einleitung."
-- Schreibt Ergebnis in `explanation_rewritten`, setzt Status `done`
-- Bei Fehler: Status `failed` + `error_message`
-- Ruft sich selbst rekursiv neu auf (`fetch` auf eigene URL) bis `pending = 0` → läuft autonom durch
-- Schutz vor Endlosschleifen: Max-Iterationen-Header oder Timestamp-Check
+### 3. Chat-Integration (`bibelbot-chat`)
+- Wenn UI-Sprache `en`: NIV als Default-Translation für Versabruf.
+- Versabruf via `get_restricted_verse_snippet` (RPC), nicht via `bible_verses`.
+- System-Prompt erweitern: bei englischen Antworten NIV als Primärquelle, Copyright-Footer am Ende der Antwort einfügen, wenn NIV-Vers zitiert wurde.
+- Direktzitate paraphrasieren wir **nicht** — NIV-Verse werden wörtlich zitiert (das ist legitim und theologisch sauber, anders als die BasisBibel-Erklärungen, die wegen 36k Einträgen umformuliert wurden).
 
-Auto-Start: Migration enthält am Ende einen `pg_net.http_post` Aufruf auf die Function → Job startet direkt nach Migration.
+### 4. BibleSearch-Integration
+- NIV in Translation-Dropdown verfügbar machen, aber nur wenn `language='en'` aktiv.
+- Kapitelansicht: Verse via RPC `get_restricted_verse_snippet` laden (statt direkter Tabellen-Query).
+- Volltext-Suche (FTS) auf NIV: **nicht** öffentlich. Stattdessen via Edge Function `bible-search-restricted`, die intern sucht und nur Treffer-Slices (max 30 Verse) zurückgibt.
+- Copyright-Footer unter jedem NIV-Treffer/Kapitel.
 
-Admin-UI: Kleine Status-Karte in `/admin/AdminDashboard.tsx` mit Fortschritt (`done` / `total`), Re-Trigger-Button.
+### 5. Frontend-Komponente
+- `src/components/RestrictedTranslationFooter.tsx`: Wiederverwendbarer Copyright-Hinweis (NIV-Text aus `bible_translation_meta.copyright_notice`).
+- In `BibleSearch.tsx` und `BibelBotChat.tsx` rendern, sobald NIV im aktuellen Resultat enthalten ist.
 
-## 3. Tooltip-Komponente
+### 6. Memory
+- `mem://feature/niv-integration`: Lizenz-Regeln, Copyright-Footer-Pflicht, Restricted-Pfad-Workflow.
 
-Neue Datei `src/components/BibleExplanationTooltip.tsx`:
-- Nutzt `HoverCard` (Radix, bereits im Projekt: `src/components/ui/hover-card.tsx`)
-- Props: `keyword`, `verseRef` (optional zur Eingrenzung)
-- Lazy-Load via `useQuery` aus `bible_explanations_public` (Cache: 24h)
-- Auf Mobile: Tap statt Hover (Popover-Fallback)
-- Render: Keyword unterstrichen (dezent, `decoration-dotted text-primary/80`)
-- Tooltip-Inhalt: Umformulierter Text + kleiner Hinweis "Erklärung sinngemäss." am Ende
+## Reihenfolge
 
-## 4. Integration in Chat (`BibelBotChat.tsx`)
+1. Migration (Limit 30, NIV-Meta-Eintrag)
+2. Edge Function `bible-import-niv` + JSON-Upload + Trigger
+3. Edge Function `bible-search-restricted` (NIV-FTS)
+4. `bibelbot-chat` System-Prompt + RPC-Routing für `lang='en'`
+5. `RestrictedTranslationFooter` Komponente
+6. `BibleSearch.tsx` Integration
+7. Memory-File
 
-- Nach Empfang einer Bot-Antwort: Text-Parser scannt nach Schlüsselwörtern aus `bible_explanations_public`
-- Performance: Lade einmalig pro Session eine Liste der ~3'000 häufigsten Keywords in einen In-Memory-Trie (oder einfacher: nimm nur Keywords, die im aktuellen Antworttext UND in der DB existieren → ein RPC pro Antwort)
-- Ersetze Vorkommen mit `<BibleExplanationTooltip keyword="…">…</BibleExplanationTooltip>`
-- Nur erste Vorkommen pro Wort markieren, um Tooltip-Spam zu vermeiden
+## Was wir bewusst NICHT tun
 
-## 5. Integration in BibleSearch (`BibleSearch.tsx`)
-
-- Gleicher Tooltip-Wrapper auf den angezeigten Versen
-- Wenn ein Vers angezeigt wird: Hole zugehörige Erklärungen via `verse_id`
-- Markiere die in den Erklärungen genannten Keywords im Verstext
-
-## 6. Memory-Update
-
-Neue Datei `mem://feature/erklaerungen-tooltip`:
-- Hinweis: BasisBibel-Original NIE an Client ausliefern
-- Quellenhinweis-Wortlaut: "Erklärung sinngemäss."
-- Workflow: pending → rewrite → done, Auto-Trigger via pg_net
-
----
-
-## Technische Details
-
-**Modell-Wahl:** `google/gemini-2.5-flash-lite` — günstigstes Modell, ausreichend für kurze Umformulierungen. ~36'082 Einträge × ~200 Token total ≈ wenige CHF einmalig.
-
-**Performance Chat-Keywords:** Statt In-Memory-Trie nutze Postgres-Funktion `match_explanations_in_text(text)` → schickt den Antworttext an DB, DB matcht Keywords via Index, liefert Treffer zurück. Cache pro Antwort-Hash.
-
-**RLS-Sicherheit:**
-- `bible_explanations` Tabelle: nur `service_role` darf lesen (Original geschützt)
-- `bible_explanations_public` View: `SECURITY INVOKER` mit Filter `WHERE rewrite_status = 'done'`, exposed nur umformulierte Spalte
-- GRANT SELECT auf View an `anon, authenticated`
-
-**Idempotenz:** Re-Run der Edge Function überspringt `done`-Einträge. Re-Trigger im Admin setzt einzelne Einträge zurück auf `pending`.
-
-**Auto-Trigger nach Migration:** Migration enthält `SELECT net.http_post(...)` ans Ende → startet Worker. Worker ruft sich rekursiv selbst auf, bis fertig.
-
-**Rate-Limits:** 50 Calls pro Batch, kein expliziter Delay nötig (Lovable AI Gateway handhabt). Bei 429 → exponential backoff im Worker.
-
----
-
-## Reihenfolge der Umsetzung
-
-1. Migration (Spalten + View + RLS + pg_net-Trigger am Ende)
-2. Edge Function `bible-explanations-rewrite` deployen
-3. Migration ausführen → Worker startet automatisch
-4. `BibleExplanationTooltip.tsx` bauen
-5. Chat-Integration
-6. BibleSearch-Integration
-7. Admin-Status-Karte
-8. Memory speichern
-
-Klar zum Bauen?
+- **Keine** KI-Paraphrase aller NIV-Verse (anders als BasisBibel-Erklärungen). Paraphrasierte Bibelverse sind theologisch heikel — verändert Bedeutung.
+- **Kein** direkter Public-Read auf `bible_verses_restricted`.
+- **Keine** Aufnahme in `bible_verses` (öffentliche Tabelle).
