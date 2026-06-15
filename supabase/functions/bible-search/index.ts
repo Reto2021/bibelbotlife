@@ -136,12 +136,58 @@ serve(async (req) => {
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
     );
 
+    const RESTRICTED = new Set(["basisbibel", "schlachter2000", "EU", "ELB", "NIV"]);
+
+    // Step 0: Detect Bible reference (e.g., "Epheser 5", "Joh 3,16", "1. Mose 1,1-3")
+    const refMatch = query.trim().match(
+      /^\s*((?:[1-3]\.?\s*)?[A-Za-zÄÖÜäöüß]+)\s+(\d+)(?:[,:](\d+)(?:\s*[-–]\s*(\d+))?)?[,.\s]*$/
+    );
+    if (refMatch) {
+      const [, bookRaw, chap, vFrom, vTo] = refMatch;
+      const bookNorm = bookRaw.replace(/\s+/g, " ").trim();
+      const tables = translation && translation !== "all"
+        ? [RESTRICTED.has(translation) ? "bible_verses_restricted" : "bible_verses"]
+        : ["bible_verses", "bible_verses_restricted"];
+      const out: any[] = [];
+      for (const tbl of tables) {
+        let q = supabase
+          .from(tbl)
+          .select("id, book, book_number, chapter, verse, text, translation")
+          .ilike("book", `${bookNorm}%`)
+          .eq("chapter", Number(chap))
+          .order("translation")
+          .order("verse")
+          .limit(Math.min(limit, 100));
+        if (vFrom) {
+          const from = Number(vFrom);
+          const to = vTo ? Number(vTo) : from;
+          q = q.gte("verse", from).lte("verse", to);
+        }
+        if (translation && translation !== "all") {
+          q = q.eq("translation", translation);
+        }
+        const { data, error } = await q;
+        if (error) console.error(`ref lookup ${tbl}:`, error);
+        if (data) out.push(...data);
+      }
+      if (out.length > 0) {
+        return new Response(
+          JSON.stringify({
+            results: out.slice(0, Math.min(limit, 100)),
+            query: `${bookNorm} ${chap}${vFrom ? `,${vFrom}${vTo ? `-${vTo}` : ""}` : ""}`,
+            expanded_terms: "reference_lookup",
+            total: out.length,
+          }),
+          { headers: { ...corsHeaders, "Content-Type": "application/json" } }
+        );
+      }
+    }
+
     // Step 1: AI-powered query expansion
     const expanded = await expandQuery(query.trim(), language);
     console.log("Expanded:", expanded.tsquery);
 
     // Step 2: Search both public and restricted in parallel
-    const RESTRICTED = new Set(["basisbibel", "schlachter2000", "EU", "ELB", "NIV"]);
     const wantsRestricted = !translation || translation === "all" || RESTRICTED.has(translation);
     const wantsPublic = !translation || translation === "all" || !RESTRICTED.has(translation);
 
