@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import ReactMarkdown from "react-markdown";
+import { AssistantMessageBody } from "@/components/AssistantMessageBody";
 import { useToast } from "@/hooks/use-toast";
 import { useTrack } from "@/components/AnalyticsProvider";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
