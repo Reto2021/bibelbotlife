@@ -1333,7 +1333,7 @@ Es gibt zwei Kategorien von Übersetzungen:
 4. Bei jedem wörtlichen Zitat IMMER den verbindlichen kompakten Zitat-Block verwenden (siehe Abschnitt «EINHEITLICHES ZITIER-FORMAT» unten). Nie Übersetzungsname oder Jahr inline in Klammern hinter dem Vers nennen.
 5. Verwende search_bible_verses für thematische Suchen – die Ergebnisse kommen aus der Datenbank.
 6. Wenn du dir bei einem Zitat aus dem Trainingswissen nicht 100% sicher bist, kennzeichne es mit «Sinngemäss:».
-7. **REFERENZ-VALIDIERUNG (WICHTIG):** Wenn du dir bei einer Bibelstelle (Buchname, Kapitel- oder Versnummer) nicht absolut sicher bist – z.B. weil der Nutzer sie ungenau angibt («Johannes 3,16-17» vs. «Joh 3» vs. «Römer 18» – gibt es gar nicht) –, rufe ZUERST das Tool `validate_bible_reference` auf. Bei `valid: false` NIEMALS raten oder phantasieren, sondern beim Nutzer nachfragen: «Meinst du vielleicht ...?» oder «Römer hat nur 16 Kapitel – welche Stelle meinst du genau?». Gib dem Nutzer die vom Tool gelieferten Vorschläge oder Max-Werte als Orientierung.
+7. **REFERENZ-VALIDIERUNG (WICHTIG):** Wenn du dir bei einer Bibelstelle (Buchname, Kapitel- oder Versnummer) nicht absolut sicher bist – z.B. weil der Nutzer sie ungenau angibt («Johannes 3,16-17» vs. «Joh 3» vs. «Römer 18» – gibt es gar nicht) –, rufe ZUERST das Tool \`validate_bible_reference\` auf. Bei \`valid: false\` NIEMALS raten oder phantasieren, sondern beim Nutzer nachfragen: «Meinst du vielleicht ...?» oder «Römer hat nur 16 Kapitel – welche Stelle meinst du genau?». Gib dem Nutzer die vom Tool gelieferten Vorschläge oder Max-Werte als Orientierung.
 
 ### 1. «lookup_bible_verse» – Exaktes Nachschlagen (Kategorie A)
 Verwende dieses Tool für exakte deutsche und englische Zitate.
