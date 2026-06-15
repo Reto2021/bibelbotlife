@@ -160,6 +160,81 @@ export type Database = {
         }
         Relationships: []
       }
+      bible_chapter_headings: {
+        Row: {
+          book: string
+          book_number: number
+          chapter: number
+          created_at: string
+          heading: string
+          id: string
+          language: string
+          position: number
+          translation: string
+        }
+        Insert: {
+          book: string
+          book_number: number
+          chapter: number
+          created_at?: string
+          heading: string
+          id?: string
+          language?: string
+          position: number
+          translation?: string
+        }
+        Update: {
+          book?: string
+          book_number?: number
+          chapter?: number
+          created_at?: string
+          heading?: string
+          id?: string
+          language?: string
+          position?: number
+          translation?: string
+        }
+        Relationships: []
+      }
+      bible_explanations: {
+        Row: {
+          book: string
+          book_number: number
+          chapter: number
+          created_at: string
+          explanation: string
+          id: string
+          keyword: string
+          language: string
+          translation: string
+          verse: number
+        }
+        Insert: {
+          book: string
+          book_number: number
+          chapter: number
+          created_at?: string
+          explanation: string
+          id?: string
+          keyword: string
+          language?: string
+          translation?: string
+          verse: number
+        }
+        Update: {
+          book?: string
+          book_number?: number
+          chapter?: number
+          created_at?: string
+          explanation?: string
+          id?: string
+          keyword?: string
+          language?: string
+          translation?: string
+          verse?: number
+        }
+        Relationships: []
+      }
       bible_translation_meta: {
         Row: {
           citation: string
