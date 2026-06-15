@@ -137,7 +137,7 @@ serve(async (req) => {
     );
 
     // Step 1: AI-powered query expansion
-    const expanded = await expandQuery(query.trim());
+    const expanded = await expandQuery(query.trim(), language);
     console.log("Expanded:", expanded.tsquery);
 
     // Step 2: Search both public and restricted in parallel
