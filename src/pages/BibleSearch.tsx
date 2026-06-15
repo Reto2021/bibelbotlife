@@ -228,11 +228,14 @@ export default function BibleSearch() {
 }
 
 function VerseCard({ verse }: { verse: SearchResult }) {
+  const { data: matches = [] } = useExplanationsInText(verse.text);
   return (
     <div className="p-4 rounded-lg border border-border bg-card hover:bg-accent/50 transition-colors">
       <div className="flex items-start justify-between gap-4">
         <div className="flex-1">
-          <p className="text-foreground leading-relaxed">{verse.text}</p>
+          <p className="text-foreground leading-relaxed">
+            {matches.length > 0 ? wrapKeywordsInText(verse.text, matches) : verse.text}
+          </p>
           <p className="text-sm text-primary font-medium mt-2">
             {verse.book} {verse.chapter},{verse.verse}
           </p>
