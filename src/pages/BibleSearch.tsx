@@ -10,6 +10,9 @@ import { SEOHead } from "@/components/SEOHead";
 import { SiteHeader } from "@/components/SiteHeader";
 import { useExplanationsInText } from "@/hooks/use-explanations";
 import { wrapKeywordsInText } from "@/components/BibleExplanationTooltip";
+import { RestrictedTranslationFooter } from "@/components/RestrictedTranslationFooter";
+
+const RESTRICTED_TRANSLATIONS = new Set(["basisbibel", "schlachter2000", "EU", "ELB", "NIV"]);
 
 const SEARCH_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/bible-search`;
 
