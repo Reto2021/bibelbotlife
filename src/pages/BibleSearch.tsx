@@ -30,6 +30,7 @@ type SearchResponse = {
 };
 
 const TRANSLATION_LABELS: Record<string, string> = {
+  basisbibel: "BasisBibel",
   luther1912: "Luther 1912",
   schlachter2000: "Schlachter 2000",
   elberfelder: "Elberfelder",
