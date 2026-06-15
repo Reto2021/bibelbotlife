@@ -216,6 +216,9 @@ export default function BibleSearch() {
                     <VerseCard key={v.id} verse={v} />
                   ))}
                 </div>
+                {RESTRICTED_TRANSLATIONS.has(trans) && (
+                  <RestrictedTranslationFooter translation={trans} />
+                )}
               </div>
             ))
           ) : (
@@ -223,6 +226,9 @@ export default function BibleSearch() {
               {results?.results.map((v) => (
                 <VerseCard key={v.id} verse={v} />
               ))}
+              {RESTRICTED_TRANSLATIONS.has(translation) && results && results.results.length > 0 && (
+                <RestrictedTranslationFooter translation={translation} />
+              )}
             </div>
           )}
 
