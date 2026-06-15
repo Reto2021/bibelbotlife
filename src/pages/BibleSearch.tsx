@@ -144,6 +144,7 @@ export default function BibleSearch() {
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">{t("bibleSearch.allTranslations")}</SelectItem>
+                <SelectItem value="basisbibel">BasisBibel (modern)</SelectItem>
                 <SelectItem value="luther1912">Luther 1912</SelectItem>
                 <SelectItem value="schlachter2000">Schlachter 2000</SelectItem>
                 <SelectItem value="elberfelder">Elberfelder</SelectItem>
