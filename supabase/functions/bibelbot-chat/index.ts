@@ -423,6 +423,9 @@ const DB_DEFAULT_BY_LANG: Record<string, string> = {
   yo: "yor", ig: "ibo", af: "aov",
 };
 
+// Translation codes that are stored in bible_verses_restricted (copyright-protected)
+const RESTRICTED_DB_TRANSLATIONS = new Set(["basisbibel", "schlachter2000", "EU", "ELB", "NIV"]);
+
 async function lookupVerseFromDb(
   supabase: any,
   bookId: string,
@@ -435,8 +438,11 @@ async function lookupVerseFromDb(
   const bookNumber = OSIS_TO_BOOK_NUMBER[bookId];
   if (!bookNumber) return null;
   const end = verseEnd || verseStart;
+  const table = RESTRICTED_DB_TRANSLATIONS.has(dbTranslationCode)
+    ? "bible_verses_restricted"
+    : "bible_verses";
   const { data, error } = await supabase
-    .from("bible_verses")
+    .from(table)
     .select("book, verse, text")
     .eq("book_number", bookNumber)
     .eq("translation", dbTranslationCode)
