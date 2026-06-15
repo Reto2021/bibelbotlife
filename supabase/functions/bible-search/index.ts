@@ -117,41 +117,52 @@ serve(async (req) => {
     const expanded = await expandQuery(query.trim());
     console.log("Expanded:", expanded.tsquery);
 
-    // Step 2: Search using DB function with language filter
-    const { data: results, error } = await supabase.rpc("search_bible_verses", {
-      search_query: expanded.tsquery,
-      translation_filter: translation === "all" ? null : (translation || null),
-      book_boost: expanded.books,
-      result_limit: Math.min(limit, 50),
-      language_filter: language,
-    });
+    // Step 2: Search both public and restricted in parallel
+    const RESTRICTED = new Set(["basisbibel", "schlachter2000", "EU", "ELB", "NIV"]);
+    const wantsRestricted = !translation || translation === "all" || RESTRICTED.has(translation);
+    const wantsPublic = !translation || translation === "all" || !RESTRICTED.has(translation);
 
-    if (error) {
-      console.error("RPC error, trying fallback:", error);
-      // Fallback: simple textSearch
+    const [pubRes, restRes] = await Promise.all([
+      wantsPublic
+        ? supabase.rpc("search_bible_verses", {
+            search_query: expanded.tsquery,
+            translation_filter: translation === "all" || RESTRICTED.has(translation || "") ? null : (translation || null),
+            book_boost: expanded.books,
+            result_limit: Math.min(limit, 50),
+            language_filter: language,
+          })
+        : Promise.resolve({ data: [], error: null }),
+      wantsRestricted
+        ? supabase.rpc("search_bible_verses_restricted", {
+            search_query: expanded.tsquery,
+            translation_filter: !translation || translation === "all" ? null : (RESTRICTED.has(translation) ? translation : null),
+            book_boost: expanded.books,
+            result_limit: Math.min(limit, 50),
+            language_filter: language,
+          })
+        : Promise.resolve({ data: [], error: null }),
+    ]);
+
+    if (pubRes.error) console.error("public search error:", pubRes.error);
+    if (restRes.error) console.error("restricted search error:", restRes.error);
+
+    let results = [...(pubRes.data || []), ...(restRes.data || [])];
+    results.sort((a: any, b: any) => (b.rank || 0) - (a.rank || 0));
+    results = results.slice(0, Math.min(limit, 50));
+
+    if (results.length === 0 && (pubRes.error || restRes.error)) {
+      // Fallback: simple textSearch on public table only
       const safeTerms = query.trim().split(/\s+/).slice(0, 5).join(" & ");
       let q = supabase
         .from("bible_verses")
         .select("id, book, book_number, chapter, verse, text, translation")
         .textSearch("fts", safeTerms, { config: "german" })
         .limit(Math.min(limit, 50));
-
-      if (translation && translation !== "all") {
+      if (translation && translation !== "all" && !RESTRICTED.has(translation)) {
         q = q.eq("translation", translation);
       }
-
-      const { data: fb, error: fbErr } = await q;
-      if (fbErr) throw fbErr;
-
-      return new Response(
-        JSON.stringify({
-          results: fb || [],
-          query: expanded.explanation,
-          expanded_terms: expanded.tsquery,
-          total: fb?.length || 0,
-        }),
-        { headers: { ...corsHeaders, "Content-Type": "application/json" } }
-      );
+      const { data: fb } = await q;
+      results = fb || [];
     }
 
     return new Response(
