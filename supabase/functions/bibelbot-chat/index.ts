@@ -1161,32 +1161,35 @@ Antworte NUR mit dem tsquery-String, nichts anderes. Keine Anführungszeichen, k
 
   let results: any[] | null = null;
 
-  // Try the expanded query first, fall back to simple query on syntax error
-  const { data, error } = await supabase.rpc("search_bible_verses", {
-    search_query: tsquery,
-    translation_filter: trans,
-    book_boost: null,
-    result_limit: 8,
-    language_filter: searchLang,
-  });
+  // Run both public and restricted searches in parallel; merge by rank
+  const publicTrans = trans && RESTRICTED_DB_TRANSLATIONS.has(trans) ? null : trans;
+  const restrictedTrans = trans && RESTRICTED_DB_TRANSLATIONS.has(trans) ? trans : (trans ? null : null);
+  const skipPublic = trans && RESTRICTED_DB_TRANSLATIONS.has(trans);
 
-  if (error) {
-    console.error("Bible search RPC error (expanded):", error.message, "tsquery:", tsquery);
+  const [pubRes, restRes] = await Promise.all([
+    skipPublic ? Promise.resolve({ data: [], error: null }) : supabase.rpc("search_bible_verses", {
+      search_query: tsquery, translation_filter: publicTrans, book_boost: null,
+      result_limit: 8, language_filter: searchLang,
+    }),
+    supabase.rpc("search_bible_verses_restricted", {
+      search_query: tsquery, translation_filter: restrictedTrans, book_boost: null,
+      result_limit: 8, language_filter: searchLang,
+    }),
+  ]);
+
+  if (pubRes.error && restRes.error) {
+    console.error("Bible search both failed:", pubRes.error.message, restRes.error.message);
     const fallbackQuery = query.split(/\s+/).filter(w => w.length > 0).join(" | ");
     const { data: fallbackData, error: fallbackError } = await supabase.rpc("search_bible_verses", {
-      search_query: fallbackQuery,
-      translation_filter: trans,
-      book_boost: null,
-      result_limit: 8,
-      language_filter: searchLang,
+      search_query: fallbackQuery, translation_filter: publicTrans, book_boost: null,
+      result_limit: 8, language_filter: searchLang,
     });
-    if (fallbackError) {
-      console.error("Bible search RPC fallback error:", fallbackError.message);
-      return `Keine Verse zu «${query}» gefunden (Suche fehlgeschlagen).`;
-    }
+    if (fallbackError) return `Keine Verse zu «${query}» gefunden (Suche fehlgeschlagen).`;
     results = fallbackData;
   } else {
-    results = data;
+    const merged = [...(pubRes.data || []), ...(restRes.data || [])];
+    merged.sort((a: any, b: any) => (b.rank || 0) - (a.rank || 0));
+    results = merged.slice(0, 8);
   }
 
   if (!results || results.length === 0) {
