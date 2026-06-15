@@ -55,14 +55,21 @@ Deno.serve(async (req) => {
       if (!bn) continue;
 
       if (mode === "all" || mode === "verses") {
+        // Dedupe by verse number within chapter — some JSON entries have malformed short ids
+        const seenVerses = new Set<number>();
         for (const [vid, txt] of Object.entries(ch.verses || {})) {
+          // Require full dotted id like "GEN.1.9" — skip short malformed ids like "9"
+          if (!String(vid).includes(".")) continue;
           const vnumMatch = String(vid).split(".").pop()?.match(/(\d+)/);
           if (!vnumMatch) continue;
+          const vn = parseInt(vnumMatch[1]);
+          if (seenVerses.has(vn)) continue;
+          seenVerses.add(vn);
           verseBatch.push({
             book: ch.book,
             book_number: bn,
             chapter: ch.chapter,
-            verse: parseInt(vnumMatch[1]),
+            verse: vn,
             text: clean(String(txt)),
             translation: "NIV",
             language: "en",
