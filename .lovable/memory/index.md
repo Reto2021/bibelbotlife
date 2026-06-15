@@ -11,6 +11,8 @@ Kein "Bot" in Marketing-Texten — "Begleiter" (DE) / "companion" (EN).
 
 ## Memories
 - [Sprachregeln](mem://preference/sprache) — Schweizer Deutsch, kein ß, Audio-Eingabe Schweizerdeutsch
+- [Erklärungs-Tooltips](mem://feature/erklaerungen-tooltip) — KI-Umformulierung der BasisBibel-Erklärungen, Tooltips im Chat + BibleSearch, Quellenhinweis "Erklärung sinngemäss."
+
 - [BasisBibel](mem://feature/basisbibel) — Primärquelle DE (translation=basisbibel) + Erklärungen/Headings
 - [Branding](mem://preference/branding) — BibleBot.Life Domain, kein KI/Bot in Marketing, Tagline
 - [Color palette](mem://design/color-palette) — Golden Hour palette, warm honey-gold primary

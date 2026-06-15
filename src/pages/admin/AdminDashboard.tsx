@@ -14,6 +14,7 @@ import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import { ChurchDetailDrawer } from "./ChurchDetailDrawer";
 import { StatDrillDown } from "./StatDrillDown";
+import { ExplanationRewriteStatus } from "./ExplanationRewriteStatus";
 import type { Tables } from "@/integrations/supabase/types";
 
 const PLAN_COLORS: Record<string, string> = {
@@ -113,6 +114,8 @@ export default function AdminDashboard() {
             />
           </CardContent>
         </Card>
+
+        <ExplanationRewriteStatus />
 
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">

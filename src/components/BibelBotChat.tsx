@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import ReactMarkdown from "react-markdown";
+import { AssistantMessageBody } from "@/components/AssistantMessageBody";
 import { useToast } from "@/hooks/use-toast";
 import { useTrack } from "@/components/AnalyticsProvider";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
@@ -814,10 +815,10 @@ export function BibleBotChat() {
                 </div>
               ) : (
                 <div className="prose prose-lg max-w-none dark:prose-invert font-serif leading-[1.75] prose-p:my-3 prose-headings:mt-4 prose-headings:mb-2 prose-li:my-1 prose-strong:text-foreground prose-blockquote:my-3 text-foreground">
-                  <ReactMarkdown components={{
-                    p: ({ children }) => <p>{splitCitationSource(makeRefsClickable(children, sendMessage, t), t)}</p>,
-                    li: ({ children }) => <li>{splitCitationSource(makeRefsClickable(children, sendMessage, t), t)}</li>,
-                  }}>{stripUrls(cleanText)}</ReactMarkdown>
+                  <AssistantMessageBody
+                    text={stripUrls(cleanText)}
+                    decorate={(node) => splitCitationSource(makeRefsClickable(node, sendMessage, t), t)}
+                  />
                 </div>
               )}
               {/* Option buttons */}
