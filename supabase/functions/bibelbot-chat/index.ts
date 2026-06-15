@@ -414,7 +414,7 @@ const DB_TRANSLATIONS: Record<string, { code: string; lang: string; name: string
 
 // Default-DB-Übersetzung pro Sprache (für Lookups ohne expliziten translationKey).
 const DB_DEFAULT_BY_LANG: Record<string, string> = {
-  de: "basisbibel", en: "bsb", fr: "lsg", es: "vbl", it: "riv",
+  de: "basisbibel", en: "niv", fr: "lsg", es: "vbl", it: "riv",
   pt: "blj", nl: "nbg", pl: "ubg", cs: "nkb", sk: "slk",
   ro: "corn", ru: "syn", uk: "ukr96", hr: "iva", sr: "srp",
   hu: "hun", da: "det", sv: "fol", no: "nob", fi: "fin",
