@@ -203,9 +203,13 @@ export type Database = {
           chapter: number
           created_at: string
           explanation: string
+          explanation_rewritten: string | null
           id: string
           keyword: string
           language: string
+          rewrite_error: string | null
+          rewrite_status: string
+          rewritten_at: string | null
           translation: string
           verse: number
         }
@@ -215,9 +219,13 @@ export type Database = {
           chapter: number
           created_at?: string
           explanation: string
+          explanation_rewritten?: string | null
           id?: string
           keyword: string
           language?: string
+          rewrite_error?: string | null
+          rewrite_status?: string
+          rewritten_at?: string | null
           translation?: string
           verse: number
         }
@@ -227,9 +235,13 @@ export type Database = {
           chapter?: number
           created_at?: string
           explanation?: string
+          explanation_rewritten?: string | null
           id?: string
           keyword?: string
           language?: string
+          rewrite_error?: string | null
+          rewrite_status?: string
+          rewritten_at?: string | null
           translation?: string
           verse?: number
         }
@@ -2486,6 +2498,45 @@ export type Database = {
       }
     }
     Views: {
+      bible_explanations_public: {
+        Row: {
+          book: string | null
+          book_number: number | null
+          chapter: number | null
+          created_at: string | null
+          explanation: string | null
+          id: string | null
+          keyword: string | null
+          language: string | null
+          translation: string | null
+          verse: number | null
+        }
+        Insert: {
+          book?: string | null
+          book_number?: number | null
+          chapter?: number | null
+          created_at?: string | null
+          explanation?: string | null
+          id?: string | null
+          keyword?: string | null
+          language?: string | null
+          translation?: string | null
+          verse?: number | null
+        }
+        Update: {
+          book?: string | null
+          book_number?: number | null
+          chapter?: number | null
+          created_at?: string | null
+          explanation?: string | null
+          id?: string | null
+          keyword?: string | null
+          language?: string | null
+          translation?: string | null
+          verse?: number | null
+        }
+        Relationships: []
+      }
       church_member_details: {
         Row: {
           church_id: string | null
@@ -2595,6 +2646,13 @@ export type Database = {
       enqueue_email: {
         Args: { payload: Json; queue_name: string }
         Returns: number
+      }
+      get_explanation_rewrite_status: {
+        Args: never
+        Returns: {
+          count: number
+          status: string
+        }[]
       }
       get_my_church: {
         Args: never
@@ -2737,6 +2795,16 @@ export type Database = {
         Returns: {
           id: string
           name: string
+        }[]
+      }
+      match_explanations_in_text: {
+        Args: { input_text: string; lang?: string; max_results?: number }
+        Returns: {
+          book: string
+          chapter: number
+          explanation: string
+          keyword: string
+          verse: number
         }[]
       }
       move_to_dlq: {
