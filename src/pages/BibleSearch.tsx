@@ -10,6 +10,9 @@ import { SEOHead } from "@/components/SEOHead";
 import { SiteHeader } from "@/components/SiteHeader";
 import { useExplanationsInText } from "@/hooks/use-explanations";
 import { wrapKeywordsInText } from "@/components/BibleExplanationTooltip";
+import { RestrictedTranslationFooter } from "@/components/RestrictedTranslationFooter";
+
+const RESTRICTED_TRANSLATIONS = new Set(["basisbibel", "schlachter2000", "EU", "ELB", "NIV"]);
 
 const SEARCH_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/bible-search`;
 
@@ -36,6 +39,12 @@ const TRANSLATION_LABELS: Record<string, string> = {
   luther1912: "Luther 1912",
   schlachter2000: "Schlachter 2000",
   elberfelder: "Elberfelder",
+  ELB: "Elberfelder 2006",
+  EU: "Einheitsübersetzung",
+  NIV: "New International Version",
+  bsb: "Berean Standard Bible",
+  kjv: "King James Version",
+  web: "World English Bible",
 };
 
 export default function BibleSearch() {
@@ -146,10 +155,23 @@ export default function BibleSearch() {
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">{t("bibleSearch.allTranslations")}</SelectItem>
-                <SelectItem value="basisbibel">BasisBibel (modern)</SelectItem>
-                <SelectItem value="luther1912">Luther 1912</SelectItem>
-                <SelectItem value="schlachter2000">Schlachter 2000</SelectItem>
-                <SelectItem value="elberfelder">Elberfelder</SelectItem>
+                {(i18n.language?.startsWith("en")) ? (
+                  <>
+                    <SelectItem value="NIV">NIV (modern)</SelectItem>
+                    <SelectItem value="bsb">Berean Standard</SelectItem>
+                    <SelectItem value="kjv">King James</SelectItem>
+                    <SelectItem value="web">World English</SelectItem>
+                  </>
+                ) : (
+                  <>
+                    <SelectItem value="basisbibel">BasisBibel (modern)</SelectItem>
+                    <SelectItem value="luther1912">Luther 1912</SelectItem>
+                    <SelectItem value="schlachter2000">Schlachter 2000</SelectItem>
+                    <SelectItem value="ELB">Elberfelder 2006</SelectItem>
+                    <SelectItem value="EU">Einheitsübersetzung</SelectItem>
+                    <SelectItem value="elberfelder">Elberfelder (klassisch)</SelectItem>
+                  </>
+                )}
               </SelectContent>
             </Select>
             <Button onClick={doSearch} disabled={loading || query.trim().length < 2}>
@@ -194,6 +216,9 @@ export default function BibleSearch() {
                     <VerseCard key={v.id} verse={v} />
                   ))}
                 </div>
+                {RESTRICTED_TRANSLATIONS.has(trans) && (
+                  <RestrictedTranslationFooter translation={trans} />
+                )}
               </div>
             ))
           ) : (
@@ -201,6 +226,9 @@ export default function BibleSearch() {
               {results?.results.map((v) => (
                 <VerseCard key={v.id} verse={v} />
               ))}
+              {RESTRICTED_TRANSLATIONS.has(translation) && results && results.results.length > 0 && (
+                <RestrictedTranslationFooter translation={translation} />
+              )}
             </div>
           )}
 

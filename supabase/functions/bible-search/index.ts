@@ -10,11 +10,35 @@ const corsHeaders = {
 const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY")!;
 const AI_GATEWAY = "https://ai.gateway.lovable.dev/v1/chat/completions";
 
-async function expandQuery(query: string): Promise<{
+async function expandQuery(query: string, language: string = "de"): Promise<{
   tsquery: string;
   books: string[] | null;
   explanation: string;
 }> {
+  const langInstructions: Record<string, { sys: string; example: string; explLang: string }> = {
+    de: {
+      sys: "Du bist ein Bibel-Suchassistent. Generiere deutsche Suchbegriffe für PostgreSQL Full-Text-Search.",
+      example: "Liebe | lieben | Barmherzigkeit | Güte | Nächstenliebe",
+      explLang: "German",
+    },
+    en: {
+      sys: "You are a Bible search assistant. Generate English search terms for PostgreSQL Full-Text-Search.",
+      example: "love | loved | loves | loving | mercy | kindness | compassion",
+      explLang: "English",
+    },
+    fr: {
+      sys: "Tu es un assistant de recherche biblique. Génère des termes français pour PostgreSQL Full-Text-Search.",
+      example: "amour | aime | bonté | miséricorde",
+      explLang: "French",
+    },
+    es: {
+      sys: "Eres un asistente de búsqueda bíblica. Genera términos en español para PostgreSQL Full-Text-Search.",
+      example: "amor | amar | bondad | misericordia",
+      explLang: "Spanish",
+    },
+  };
+  const cfg = langInstructions[language] || langInstructions.en;
+
   try {
     const resp = await fetch(AI_GATEWAY, {
       method: "POST",
@@ -27,15 +51,14 @@ async function expandQuery(query: string): Promise<{
         messages: [
           {
             role: "system",
-            content: `Du bist ein Bibel-Suchassistent. Generiere deutsche Suchbegriffe für PostgreSQL Full-Text-Search.
+            content: `${cfg.sys}
 
-Regeln für tsquery:
-- Verwende | für OR zwischen Begriffen  
-- Nur einzelne Wörter, keine Phrasen
-- Generiere viele Synonyme und verwandte Begriffe
-- Beispiel: "Liebe | lieben | Barmherzigkeit | Güte | Nächstenliebe"
-- Beispiel: "Schöpfung | erschaffen | Anfang | Himmel | Erde"
-- Keine Sonderzeichen ausser | und &`,
+Rules for tsquery:
+- Use | for OR between terms
+- Single words only, no phrases
+- Generate many synonyms and related terms in ${cfg.explLang}
+- Example: "${cfg.example}"
+- No special characters except | and &`,
           },
           { role: "user", content: query },
         ],
@@ -50,7 +73,7 @@ Regeln für tsquery:
                 properties: {
                   tsquery: {
                     type: "string",
-                    description: "PostgreSQL tsquery: words separated by | (OR). Example: 'Liebe | lieben | Güte'",
+                    description: `PostgreSQL tsquery: ${cfg.explLang} words separated by | (OR).`,
                   },
                   books: {
                     type: "array",
@@ -59,7 +82,7 @@ Regeln für tsquery:
                   },
                   explanation: {
                     type: "string",
-                    description: "Brief German explanation of the search intent",
+                    description: `Brief ${cfg.explLang} explanation of the search intent`,
                   },
                 },
                 required: ["tsquery", "explanation"],
@@ -114,44 +137,55 @@ serve(async (req) => {
     );
 
     // Step 1: AI-powered query expansion
-    const expanded = await expandQuery(query.trim());
+    const expanded = await expandQuery(query.trim(), language);
     console.log("Expanded:", expanded.tsquery);
 
-    // Step 2: Search using DB function with language filter
-    const { data: results, error } = await supabase.rpc("search_bible_verses", {
-      search_query: expanded.tsquery,
-      translation_filter: translation === "all" ? null : (translation || null),
-      book_boost: expanded.books,
-      result_limit: Math.min(limit, 50),
-      language_filter: language,
-    });
+    // Step 2: Search both public and restricted in parallel
+    const RESTRICTED = new Set(["basisbibel", "schlachter2000", "EU", "ELB", "NIV"]);
+    const wantsRestricted = !translation || translation === "all" || RESTRICTED.has(translation);
+    const wantsPublic = !translation || translation === "all" || !RESTRICTED.has(translation);
 
-    if (error) {
-      console.error("RPC error, trying fallback:", error);
-      // Fallback: simple textSearch
+    const [pubRes, restRes] = await Promise.all([
+      wantsPublic
+        ? supabase.rpc("search_bible_verses", {
+            search_query: expanded.tsquery,
+            translation_filter: translation === "all" || RESTRICTED.has(translation || "") ? null : (translation || null),
+            book_boost: expanded.books,
+            result_limit: Math.min(limit, 50),
+            language_filter: language,
+          })
+        : Promise.resolve({ data: [], error: null }),
+      wantsRestricted
+        ? supabase.rpc("search_bible_verses_restricted", {
+            search_query: expanded.tsquery,
+            translation_filter: !translation || translation === "all" ? null : (RESTRICTED.has(translation) ? translation : null),
+            book_boost: expanded.books,
+            result_limit: Math.min(limit, 50),
+            language_filter: language,
+          })
+        : Promise.resolve({ data: [], error: null }),
+    ]);
+
+    if (pubRes.error) console.error("public search error:", pubRes.error);
+    if (restRes.error) console.error("restricted search error:", restRes.error);
+
+    let results = [...(pubRes.data || []), ...(restRes.data || [])];
+    results.sort((a: any, b: any) => (b.rank || 0) - (a.rank || 0));
+    results = results.slice(0, Math.min(limit, 50));
+
+    if (results.length === 0 && (pubRes.error || restRes.error)) {
+      // Fallback: simple textSearch on public table only
       const safeTerms = query.trim().split(/\s+/).slice(0, 5).join(" & ");
       let q = supabase
         .from("bible_verses")
         .select("id, book, book_number, chapter, verse, text, translation")
         .textSearch("fts", safeTerms, { config: "german" })
         .limit(Math.min(limit, 50));
-
-      if (translation && translation !== "all") {
+      if (translation && translation !== "all" && !RESTRICTED.has(translation)) {
         q = q.eq("translation", translation);
       }
-
-      const { data: fb, error: fbErr } = await q;
-      if (fbErr) throw fbErr;
-
-      return new Response(
-        JSON.stringify({
-          results: fb || [],
-          query: expanded.explanation,
-          expanded_terms: expanded.tsquery,
-          total: fb?.length || 0,
-        }),
-        { headers: { ...corsHeaders, "Content-Type": "application/json" } }
-      );
+      const { data: fb } = await q;
+      results = fb || [];
     }
 
     return new Response(

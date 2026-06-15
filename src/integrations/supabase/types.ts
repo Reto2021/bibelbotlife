@@ -346,6 +346,7 @@ export type Database = {
           book_number: number
           chapter: number
           fetched_at: string
+          fts: unknown
           id: string
           language: string
           source_url: string | null
@@ -358,6 +359,7 @@ export type Database = {
           book_number: number
           chapter: number
           fetched_at?: string
+          fts?: unknown
           id?: string
           language?: string
           source_url?: string | null
@@ -370,6 +372,7 @@ export type Database = {
           book_number?: number
           chapter?: number
           fetched_at?: string
+          fts?: unknown
           id?: string
           language?: string
           source_url?: string | null
@@ -2862,6 +2865,26 @@ export type Database = {
               verse: number
             }[]
           }
+      search_bible_verses_restricted: {
+        Args: {
+          book_boost?: string[]
+          language_filter?: string
+          result_limit?: number
+          search_query: string
+          translation_filter?: string
+        }
+        Returns: {
+          book: string
+          book_number: number
+          chapter: number
+          id: string
+          rank: number
+          source_url: string
+          text: string
+          translation: string
+          verse: number
+        }[]
+      }
       search_golden_answers: {
         Args: {
           language_filter?: string

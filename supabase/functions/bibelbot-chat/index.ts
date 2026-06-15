@@ -370,6 +370,7 @@ const DB_TRANSLATIONS: Record<string, { code: string; lang: string; name: string
   eu: { code: "EU", lang: "de", name: "Einheitsübersetzung" },
   einheit: { code: "EU", lang: "de", name: "Einheitsübersetzung" },
   // Englisch
+  niv: { code: "NIV", lang: "en", name: "New International Version (primäre Quelle, ©Biblica)" },
   bsb: { code: "bsb", lang: "en", name: "Berean Standard Bible" },
   kjv: { code: "kjv", lang: "en", name: "King James Version" },
   web: { code: "web", lang: "en", name: "World English Bible" },
@@ -413,7 +414,7 @@ const DB_TRANSLATIONS: Record<string, { code: string; lang: string; name: string
 
 // Default-DB-Übersetzung pro Sprache (für Lookups ohne expliziten translationKey).
 const DB_DEFAULT_BY_LANG: Record<string, string> = {
-  de: "basisbibel", en: "bsb", fr: "lsg", es: "vbl", it: "riv",
+  de: "basisbibel", en: "niv", fr: "lsg", es: "vbl", it: "riv",
   pt: "blj", nl: "nbg", pl: "ubg", cs: "nkb", sk: "slk",
   ro: "corn", ru: "syn", uk: "ukr96", hr: "iva", sr: "srp",
   hu: "hun", da: "det", sv: "fol", no: "nob", fi: "fin",
@@ -421,6 +422,9 @@ const DB_DEFAULT_BY_LANG: Record<string, string> = {
   vi: "vie", id: "ayt", tl: "tgl", sw: "swa", am: "amh",
   yo: "yor", ig: "ibo", af: "aov",
 };
+
+// Translation codes that are stored in bible_verses_restricted (copyright-protected)
+const RESTRICTED_DB_TRANSLATIONS = new Set(["basisbibel", "schlachter2000", "EU", "ELB", "NIV"]);
 
 async function lookupVerseFromDb(
   supabase: any,
@@ -434,8 +438,11 @@ async function lookupVerseFromDb(
   const bookNumber = OSIS_TO_BOOK_NUMBER[bookId];
   if (!bookNumber) return null;
   const end = verseEnd || verseStart;
+  const table = RESTRICTED_DB_TRANSLATIONS.has(dbTranslationCode)
+    ? "bible_verses_restricted"
+    : "bible_verses";
   const { data, error } = await supabase
-    .from("bible_verses")
+    .from(table)
     .select("book, verse, text")
     .eq("book_number", bookNumber)
     .eq("translation", dbTranslationCode)
@@ -1154,32 +1161,35 @@ Antworte NUR mit dem tsquery-String, nichts anderes. Keine Anführungszeichen, k
 
   let results: any[] | null = null;
 
-  // Try the expanded query first, fall back to simple query on syntax error
-  const { data, error } = await supabase.rpc("search_bible_verses", {
-    search_query: tsquery,
-    translation_filter: trans,
-    book_boost: null,
-    result_limit: 8,
-    language_filter: searchLang,
-  });
+  // Run both public and restricted searches in parallel; merge by rank
+  const publicTrans = trans && RESTRICTED_DB_TRANSLATIONS.has(trans) ? null : trans;
+  const restrictedTrans = trans && RESTRICTED_DB_TRANSLATIONS.has(trans) ? trans : (trans ? null : null);
+  const skipPublic = trans && RESTRICTED_DB_TRANSLATIONS.has(trans);
 
-  if (error) {
-    console.error("Bible search RPC error (expanded):", error.message, "tsquery:", tsquery);
+  const [pubRes, restRes] = await Promise.all([
+    skipPublic ? Promise.resolve({ data: [], error: null }) : supabase.rpc("search_bible_verses", {
+      search_query: tsquery, translation_filter: publicTrans, book_boost: null,
+      result_limit: 8, language_filter: searchLang,
+    }),
+    supabase.rpc("search_bible_verses_restricted", {
+      search_query: tsquery, translation_filter: restrictedTrans, book_boost: null,
+      result_limit: 8, language_filter: searchLang,
+    }),
+  ]);
+
+  if (pubRes.error && restRes.error) {
+    console.error("Bible search both failed:", pubRes.error.message, restRes.error.message);
     const fallbackQuery = query.split(/\s+/).filter(w => w.length > 0).join(" | ");
     const { data: fallbackData, error: fallbackError } = await supabase.rpc("search_bible_verses", {
-      search_query: fallbackQuery,
-      translation_filter: trans,
-      book_boost: null,
-      result_limit: 8,
-      language_filter: searchLang,
+      search_query: fallbackQuery, translation_filter: publicTrans, book_boost: null,
+      result_limit: 8, language_filter: searchLang,
     });
-    if (fallbackError) {
-      console.error("Bible search RPC fallback error:", fallbackError.message);
-      return `Keine Verse zu «${query}» gefunden (Suche fehlgeschlagen).`;
-    }
+    if (fallbackError) return `Keine Verse zu «${query}» gefunden (Suche fehlgeschlagen).`;
     results = fallbackData;
   } else {
-    results = data;
+    const merged = [...(pubRes.data || []), ...(restRes.data || [])];
+    merged.sort((a: any, b: any) => (b.rank || 0) - (a.rank || 0));
+    results = merged.slice(0, 8);
   }
 
   if (!results || results.length === 0) {
@@ -1614,7 +1624,16 @@ Wenn du auf andere biblische Geschichten, Personen oder Ereignisse verweist (z.B
 - RICHTIG: «Paulus greift das in Römer 8,28 auf...»
 - FALSCH: «Das erinnert an Jona» (ohne Stellenangabe)
 - FALSCH: «Wie David sagt...» (ohne Kapitel/Vers)
-Jede erwähnte biblische Person, Geschichte oder Lehre muss mit einer konkreten, überprüfbaren Bibelstelle versehen sein (Buch Kapitel,Vers). Erfinde KEINE Stellenangaben – wenn du dir unsicher bist, verwende das search_bible_verses-Tool, um die korrekte Stelle zu finden.`;
+Jede erwähnte biblische Person, Geschichte oder Lehre muss mit einer konkreten, überprüfbaren Bibelstelle versehen sein (Buch Kapitel,Vers). Erfinde KEINE Stellenangaben – wenn du dir unsicher bist, verwende das search_bible_verses-Tool, um die korrekte Stelle zu finden.
+
+## PFLICHT: Geschützte Übersetzungen wörtlich zitieren + Quellennachweis
+Wenn du Verse aus den folgenden urheberrechtlich geschützten Übersetzungen verwendest, MUSST du:
+- den Verstext WÖRTLICH ausgeben (keine Paraphrase, keine eigene Übersetzung)
+- den Quellennachweis exakt so übernehmen, wie ihn das lookup-Tool im «citation»-Feld liefert (er erscheint automatisch unter dem Zitat)
+- pro Antwort höchstens 2-3 zusammenhängende Verse zitieren (kurzes Zitat, kein Kapitel-Volltext)
+
+Geschützt sind: BasisBibel, Schlachter 2000, Einheitsübersetzung (EU), Elberfelder 2006 (ELB), New International Version (NIV).
+Für englische Anfragen ist NIV die primäre Quelle – nutze sie wörtlich und mit «Scripture quotations taken from The Holy Bible, New International Version® NIV®. Copyright © Biblica, Inc. Used by permission.» als Fussnote (kommt automatisch über das Tool).`;
 
 // ── Crisis detection ───────────────────────────────────────────────
 const CRISIS_KEYWORDS = [
