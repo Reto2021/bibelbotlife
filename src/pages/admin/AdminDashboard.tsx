@@ -14,6 +14,7 @@ import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import { ChurchDetailDrawer } from "./ChurchDetailDrawer";
 import { StatDrillDown } from "./StatDrillDown";
+import { ExplanationRewriteStatus } from "./ExplanationRewriteStatus";
 import type { Tables } from "@/integrations/supabase/types";
 
 const PLAN_COLORS: Record<string, string> = {
