@@ -39,6 +39,12 @@ const TRANSLATION_LABELS: Record<string, string> = {
   luther1912: "Luther 1912",
   schlachter2000: "Schlachter 2000",
   elberfelder: "Elberfelder",
+  ELB: "Elberfelder 2006",
+  EU: "Einheitsübersetzung",
+  NIV: "New International Version",
+  bsb: "Berean Standard Bible",
+  kjv: "King James Version",
+  web: "World English Bible",
 };
 
 export default function BibleSearch() {
