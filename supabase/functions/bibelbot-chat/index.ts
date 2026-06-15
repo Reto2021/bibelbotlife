@@ -359,6 +359,8 @@ const OSIS_TO_BOOK_NUMBER: Record<string, number> = {
 // → { dbCode wie in bible_verses.translation, language, Anzeigename }
 const DB_TRANSLATIONS: Record<string, { code: string; lang: string; name: string }> = {
   // Deutsch
+  basisbibel: { code: "basisbibel", lang: "de", name: "BasisBibel (modern, primäre Quelle)" },
+  bb: { code: "basisbibel", lang: "de", name: "BasisBibel" },
   luther: { code: "luther1912", lang: "de", name: "Lutherbibel 1912" },
   luther1912: { code: "luther1912", lang: "de", name: "Lutherbibel 1912" },
   elberfelder: { code: "elberfelder", lang: "de", name: "Elberfelder 2006" },
