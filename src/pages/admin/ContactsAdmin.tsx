@@ -216,6 +216,7 @@ export default function ContactsAdmin() {
                       <TableHead>Quellen</TableHead>
                       <TableHead>Sprache / Land</TableHead>
                       <TableHead>Letzte Aktivität</TableHead>
+                      <TableHead>Opt-in</TableHead>
                       <TableHead>Status</TableHead>
                     </TableRow>
                   </TableHeader>
