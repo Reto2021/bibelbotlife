@@ -148,10 +148,12 @@ export const template = {
     `Willkommen ${data.churchName ? `– ${data.churchName}` : ''} | Euer BibleBot Integrations-Kit`,
   displayName: 'Gemeinde-Onboarding',
   previewData: {
-    churchName: 'Vineyard Bern',
-    slug: 'vineyard-bern',
-    customBotName: 'ReformierterBot',
-    contactName: 'Pastor Müller',
+    churchName: 'Gemeinde Musterhausen',
+    slug: 'gemeinde-musterhausen',
+    customBotName: 'BibelBot',
+    contactGender: 'female',
+    contactFirstName: 'Maria',
+    contactLastName: 'Müller',
     planTier: 'community',
   },
 } satisfies TemplateEntry
