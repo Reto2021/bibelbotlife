@@ -2702,6 +2702,20 @@ export type Database = {
       }
     }
     Functions: {
+      admin_list_contacts: {
+        Args: never
+        Returns: {
+          church_id: string
+          countries: string[]
+          display_name: string
+          email: string
+          is_suppressed: boolean
+          languages: string[]
+          last_activity: string
+          sources: string[]
+          user_id: string
+        }[]
+      }
       delete_email: {
         Args: { message_id: number; queue_name: string }
         Returns: boolean
