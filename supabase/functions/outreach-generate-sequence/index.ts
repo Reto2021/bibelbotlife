@@ -160,6 +160,8 @@ ${SENDER_PROFILE.testimonials.map((t, i) => `${i + 1}. "${t}"`).join("\n")}
 - Ton: Warm, professionell, nicht aufdringlich
 - MUSS mit einem klaren CTA enden
 - Signatur wird automatisch angehängt, NICHT einbauen
+- **KONFESSIONS-NEUTRAL**: Schreibe ökumenisch und respektvoll. Erwähne NIEMALS die Konfession (reformiert, katholisch, freikirchlich, evangelisch, lutherisch, evangelikal) explizit im Text — auch wenn sie in den Lead-Daten steht. Sprich neutral von "Ihrer Gemeinde". Nutze neutrale Begriffe ("Gemeindeleitung", "Verantwortliche") statt konfessions-spezifische Titel.
+- **ANREDE**: Wenn Geschlecht erkennbar → "Sehr geehrte Frau {Nachname}" / "Sehr geehrter Herr {Nachname}". Sonst "Guten Tag {Vor- und Nachname}". NIEMALS "Pastor", "Pfarrer", "Priester" o.ä. als Anrede-Titel voranstellen — der konkrete Funktionstitel ist nicht immer bekannt und kann falsch sein.
 
 ## Antwortformat:
 Antworte als JSON-Objekt:
