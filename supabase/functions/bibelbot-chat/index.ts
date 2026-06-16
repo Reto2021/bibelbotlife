@@ -51,13 +51,15 @@ const BIBLE_API_BASE = "https://bible.helloao.org/api";
 // Map of available translations per language (modern first, classic fallback)
 const LANGUAGE_BIBLES: Record<string, { translations: Record<string, { id: string; name: string }>; default: string }> = {
   de: {
-    default: "luther",
+    default: "basisbibel",
     translations: {
+      basisbibel: { id: "deu_bb", name: "BasisBibel (2021)" },
+      bb: { id: "deu_bb", name: "BasisBibel (2021)" },
+      schlachter2000: { id: "deu_sch", name: "Schlachter 2000" },
+      schlachter: { id: "deu_sch", name: "Schlachter 2000" },
+      elberfelder: { id: "deu_elbbk", name: "Elberfelder Übersetzung" },
       luther: { id: "deu_l12", name: "Lutherbibel 1912" },
       luther1912: { id: "deu_l12", name: "Lutherbibel 1912" },
-      elberfelder: { id: "deu_elbbk", name: "Elberfelder Übersetzung" },
-      schlachter: { id: "deu_sch", name: "Schlachter-Bibel 1951" },
-      schlachter2000: { id: "deu_sch", name: "Schlachter 2000" },
     },
   },
   en: {
