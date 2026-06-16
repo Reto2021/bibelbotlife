@@ -908,6 +908,7 @@ function formatMetaBlurb(meta: TranslationMeta | null): string {
 
 // Map von Tool-Translation-IDs auf DB-Codes in bible_translation_meta
 const METADATA_CODE_MAP: Record<string, string> = {
+  deu_bb: "BB",
   deu_l12: "LU1912",
   deu_elbbk: "ELB",
   deu_sch: "SCH2000",
