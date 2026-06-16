@@ -1,61 +1,76 @@
-## Ziel
+## Widget-Nutzungslimit für Senfkorn-Paket (gratis)
 
-NIV (New International Version, ©Biblica) als englische Primärquelle für Chat und BibleSearch — lizenzkonform via `bible_verses_restricted` (kein offener Volltext-Zugriff, immer mit Quellennachweis "NIV ©Biblica").
+**Logik:** 1 Frage gratis pro End-User (Fingerprint via localStorage), danach sanfter Hinweis im Chat, aber weiterhin nutzbar. Counts werden getrackt und im Admin sichtbar — als Verkaufsargument fürs Upgrade-Gespräch.
 
-## Lizenz-Strategie
+### 1. End-User-Identifikation
 
-- NIV-Volltext liegt **nur** in `bible_verses_restricted` (service_role-only RLS).
-- Auslieferung an Frontend ausschliesslich über RPC `get_restricted_verse_snippet`.
-- Pro Antwort/Anzeige: Copyright-Footer "Scripture quotations taken from The Holy Bible, New International Version® NIV®. Copyright © 1973, 1978, 1984, 2011 by Biblica, Inc.™ Used by permission."
-- Verse-Limit pro RPC-Call: **von 7 auf 30 anheben** (deckt ein ganzes Kapitel ab — Standard für BibleSearch-Kapitelansicht). Bleibt Scraping-Schutz, da Tabelle selbst nicht direkt lesbar.
+Im Widget (bzw. Chat mit `?church=slug`-Parameter) wird beim ersten Aufruf eine `widget_visitor_id` (UUID) in `localStorage` gespeichert. Diese ID wandert bei jedem Chat-Request mit.
 
-## Schritte
+```text
+localStorage key: "bb_visitor_id"
+value: UUID (einmalig generiert)
+```
 
-### 1. Import-Pipeline
-- Neue Edge Function `bible-import-niv` (analog `bible-import-basisbibel`):
-  - Liest `niv_chapters.json` aus Storage-Bucket `bible-imports`.
-  - Parst pro Vers (ID-Format `GEN.1.1` → book/chapter/verse mapping).
-  - Schreibt in `bible_verses_restricted` mit `translation='NIV'`, `language='en'`, `source_url` auf biblica.com.
-  - Idempotent via ON CONFLICT (translation, book_number, chapter, verse).
-  - Kapitelüberschriften (`headings`) in `bible_chapter_headings`.
-- Hochladen: JSON nach `bible-imports/niv_chapters.json`, Edge Function einmalig triggern.
+Datenschutz-Hinweis: keine personenbezogenen Daten, nur zufällige Kennung. In der Datenschutzerklärung des Widgets erwähnen.
 
-### 2. DB-Migration
-- `get_restricted_verse_snippet`: Limit von 7 auf 30 erhöhen.
-- `bible_translation_meta`: NIV-Eintrag (name, language='en', copyright_notice, source_url, is_restricted=true).
-- Keine Public-Grants auf `bible_verses_restricted` — bleibt service_role.
+### 2. Tracking-Tabelle
 
-### 3. Chat-Integration (`bibelbot-chat`)
-- Wenn UI-Sprache `en`: NIV als Default-Translation für Versabruf.
-- Versabruf via `get_restricted_verse_snippet` (RPC), nicht via `bible_verses`.
-- System-Prompt erweitern: bei englischen Antworten NIV als Primärquelle, Copyright-Footer am Ende der Antwort einfügen, wenn NIV-Vers zitiert wurde.
-- Direktzitate paraphrasieren wir **nicht** — NIV-Verse werden wörtlich zitiert (das ist legitim und theologisch sauber, anders als die BasisBibel-Erklärungen, die wegen 36k Einträgen umformuliert wurden).
+Neue Tabelle `widget_usage`:
 
-### 4. BibleSearch-Integration
-- NIV in Translation-Dropdown verfügbar machen, aber nur wenn `language='en'` aktiv.
-- Kapitelansicht: Verse via RPC `get_restricted_verse_snippet` laden (statt direkter Tabellen-Query).
-- Volltext-Suche (FTS) auf NIV: **nicht** öffentlich. Stattdessen via Edge Function `bible-search-restricted`, die intern sucht und nur Treffer-Slices (max 30 Verse) zurückgibt.
-- Copyright-Footer unter jedem NIV-Treffer/Kapitel.
+```text
+widget_usage
+- id (uuid)
+- church_id → church_partners
+- visitor_id (text, der Fingerprint aus localStorage)
+- question_count (int, default 0)
+- first_seen_at, last_seen_at
+- unique (church_id, visitor_id)
+```
 
-### 5. Frontend-Komponente
-- `src/components/RestrictedTranslationFooter.tsx`: Wiederverwendbarer Copyright-Hinweis (NIV-Text aus `bible_translation_meta.copyright_notice`).
-- In `BibleSearch.tsx` und `BibelBotChat.tsx` rendern, sobald NIV im aktuellen Resultat enthalten ist.
+RLS:
+- service_role: voll (Edge Function schreibt)
+- Church-Owner & Team: SELECT auf eigene Gemeinde (für Admin-Anzeige)
+- Admin: SELECT alle
 
-### 6. Memory
-- `mem://feature/niv-integration`: Lizenz-Regeln, Copyright-Footer-Pflicht, Restricted-Pfad-Workflow.
+### 3. Edge Function: Counter & Soft-Limit
 
-## Reihenfolge
+In `bible-search` / Chat-Edge-Function (dort wo die Frage entgegengenommen wird) wird:
 
-1. Migration (Limit 30, NIV-Meta-Eintrag)
-2. Edge Function `bible-import-niv` + JSON-Upload + Trigger
-3. Edge Function `bible-search-restricted` (NIV-FTS)
-4. `bibelbot-chat` System-Prompt + RPC-Routing für `lang='en'`
-5. `RestrictedTranslationFooter` Komponente
-6. `BibleSearch.tsx` Integration
-7. Memory-File
+1. Wenn Request mit `church=slug` und `visitor_id` ankommt → Gemeinde lookup.
+2. Bei `plan_tier = 'free'` (Senfkorn):
+   - `widget_usage` row upsert + `question_count + 1`.
+   - Wenn `question_count > 1`: Flag `limit_exceeded: true` in der Response anhängen.
+3. Antwort wird **immer** generiert (sanfter Hinweis, kein Hard-Stop).
+4. Frontend zeigt nach jeder Antwort über dem Eingabefeld einen dezenten Hinweis:
 
-## Was wir bewusst NICHT tun
+```text
+Wenn limit_exceeded:
+  „Diese Gemeinde nutzt das Senfkorn-Paket (gratis).
+   Bei Interesse an mehr Funktionen → biblebot.life/gemeinden"
+```
 
-- **Keine** KI-Paraphrase aller NIV-Verse (anders als BasisBibel-Erklärungen). Paraphrasierte Bibelverse sind theologisch heikel — verändert Bedeutung.
-- **Kein** direkter Public-Read auf `bible_verses_restricted`.
-- **Keine** Aufnahme in `bible_verses` (öffentliche Tabelle).
+Bei kostenpflichtigen Tiers (Community/Gemeinde/Leuchtturm) → kein Limit, kein Hinweis.
+
+### 4. Anzeige im Admin- und Gemeinde-Dashboard
+
+**Im ChurchDetailDrawer (Admin):** Neuer Tab oder Sektion „Widget-Nutzung":
+- Unique Visitors (Gesamt + letzte 30 Tage)
+- Fragen gesamt
+- Anteil „Wiederkehrer" (> 1 Frage) → Upgrade-Indikator
+- Top-Tage / Chart
+
+**Im Gemeinde-Bereich (Mein Bereich → Statistik):** gleiche Übersicht für die eigene Gemeinde — als Wert-Demonstration.
+
+### 5. Optional, später
+
+- Counter-Reset monatlich (per Cron) falls man später auf „1 Frage pro Monat" wechseln will
+- A/B-Test: Email-Wall vs. sanfter Hinweis (Conversion-Vergleich)
+- Pro Tier konfigurierbares Limit in `church_partners.plan_config` (jsonb), damit man ohne Code-Change anpassen kann
+
+### Reihenfolge
+
+1. Migration: `widget_usage` Tabelle + RLS
+2. Edge Function: Counter-Logik + `limit_exceeded` Flag in Response
+3. Widget/Chat-Frontend: Visitor-ID Setup + Soft-Hinweis-UI
+4. Admin: Widget-Nutzungs-Sektion in ChurchDetailDrawer
+5. Gemeinde-Dashboard: eigene Statistik
