@@ -37,8 +37,7 @@ export default function ContactsAdmin() {
   useEffect(() => {
     (async () => {
       setLoading(true);
-      // @ts-expect-error – RPC type generated after migration
-      const { data, error } = await supabase.rpc("admin_list_contacts");
+      const { data, error } = await (supabase.rpc as any)("admin_list_contacts");
       if (error) {
         toast.error("Konnte Kontakte nicht laden: " + error.message);
         setLoading(false);
