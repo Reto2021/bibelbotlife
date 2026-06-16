@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog";
-import { Trash2, ExternalLink, Code2 } from "lucide-react";
+import { Trash2, ExternalLink, Code2, Copy, Mail, Check } from "lucide-react";
 import { toast } from "sonner";
 import type { Tables } from "@/integrations/supabase/types";
 
