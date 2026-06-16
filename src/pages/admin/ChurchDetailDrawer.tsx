@@ -233,13 +233,77 @@ export function ChurchDetailDrawer({ church, open, onClose }: Props) {
           </TabsContent>
         </Tabs>
 
-        <div className="mt-6 flex gap-3">
-          <Button onClick={handleSave} disabled={saving} className="flex-1">
+        {/* Quick Links: Profil, Widget */}
+        <div className="mt-6 border-t border-border pt-4 space-y-2">
+          <p className="text-xs text-muted-foreground">Quick Links</p>
+          <div className="flex flex-wrap gap-2">
+            <Button asChild variant="outline" size="sm">
+              <a href={`/church/${church.slug}`} target="_blank" rel="noreferrer">
+                <ExternalLink className="h-3.5 w-3.5 mr-1.5" />
+                Öffentliches Profil
+              </a>
+            </Button>
+            <Button asChild variant="outline" size="sm">
+              <a href={`/?church=${church.slug}`} target="_blank" rel="noreferrer">
+                <ExternalLink className="h-3.5 w-3.5 mr-1.5" />
+                Branded Chat
+              </a>
+            </Button>
+            <Button asChild variant="outline" size="sm">
+              <Link to={`/widget?church=${church.slug}`} target="_blank">
+                <Code2 className="h-3.5 w-3.5 mr-1.5" />
+                Widget / Embed-Code
+              </Link>
+            </Button>
+          </div>
+        </div>
+
+        <div className="mt-6 flex gap-2 flex-wrap">
+          <Button onClick={handleSave} disabled={saving} className="flex-1 min-w-[120px]">
             {saving ? "Speichern…" : "Speichern"}
           </Button>
           <Button variant="outline" onClick={onClose}>
             Schliessen
           </Button>
+          <AlertDialog>
+            <AlertDialogTrigger asChild>
+              <Button variant="destructive" size="icon" title="Gemeinde löschen">
+                <Trash2 className="h-4 w-4" />
+              </Button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>Gemeinde wirklich löschen?</AlertDialogTitle>
+                <AlertDialogDescription>
+                  <strong>{church.name}</strong> wird endgültig entfernt. Alle verknüpften
+                  Daten (Billing, Team-Einträge etc.) gehen verloren. Falls die Gemeinde nur
+                  versteckt werden soll, nutze stattdessen den Schalter «Gemeinde aktiv» im Tab «Abo & Billing».
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel>Abbrechen</AlertDialogCancel>
+                <AlertDialogAction
+                  onClick={async () => {
+                    const { error } = await supabase
+                      .from("church_partners")
+                      .delete()
+                      .eq("id", church.id);
+                    if (error) {
+                      toast.error("Fehler beim Löschen: " + error.message);
+                    } else {
+                      toast.success("Gemeinde gelöscht");
+                      queryClient.invalidateQueries({ queryKey: ["admin-churches"] });
+                      queryClient.invalidateQueries({ queryKey: ["admin-stats"] });
+                      onClose();
+                    }
+                  }}
+                  className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+                >
+                  Endgültig löschen
+                </AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
         </div>
       </SheetContent>
     </Sheet>
