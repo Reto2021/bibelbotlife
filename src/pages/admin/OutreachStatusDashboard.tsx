@@ -156,10 +156,15 @@ export default function OutreachStatusDashboard() {
               {dataUpdatedAt && ` · zuletzt ${formatDistanceToNow(new Date(dataUpdatedAt), { locale: de, addSuffix: true })}`}
             </p>
           </div>
-          <Button variant="outline" size="sm" onClick={() => refetch()} disabled={isFetching}>
-            <RefreshCw className={`h-4 w-4 mr-2 ${isFetching ? "animate-spin" : ""}`} />
-            Aktualisieren
-          </Button>
+          <div className="flex gap-2">
+            <Button variant="outline" size="sm" asChild>
+              <Link to="/admin/outreach/logs">Debug-Logs</Link>
+            </Button>
+            <Button variant="outline" size="sm" onClick={() => refetch()} disabled={isFetching}>
+              <RefreshCw className={`h-4 w-4 mr-2 ${isFetching ? "animate-spin" : ""}`} />
+              Aktualisieren
+            </Button>
+          </div>
         </div>
 
         {/* Alerts */}
