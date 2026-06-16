@@ -207,7 +207,6 @@ Deno.serve(async (req) => {
           const emailData = await emailRes.json();
 
           if (emailRes.ok) {
-            // Log email
             await supabase.from("outreach_emails").insert({
               lead_id: lead.id,
               sequence_step: nextStep,
@@ -218,7 +217,6 @@ Deno.serve(async (req) => {
               resend_id: emailData.id,
             });
 
-            // Update lead
             await supabase
               .from("outreach_leads")
               .update({
@@ -231,18 +229,62 @@ Deno.serve(async (req) => {
             totalSent++;
             hourSent++;
           } else {
-            console.error("Resend error:", emailData);
-            // Log failed attempt
+            const errMsg = JSON.stringify(emailData).slice(0, 500);
+            const isSystemError =
+              emailRes.status === 401 ||
+              emailRes.status === 403 ||
+              emailRes.status >= 500 ||
+              /credential|unauthor|api[_ ]?key|forbidden/i.test(errMsg);
+
+            console.error(
+              `Resend ${isSystemError ? "SYSTEM" : "REJECT"} (${emailRes.status}):`,
+              errMsg,
+            );
+
+            if (isSystemError) {
+              await supabase.from("outreach_emails").insert({
+                lead_id: lead.id,
+                sequence_step: nextStep,
+                subject,
+                body,
+                status: "failed_system",
+                error_message: errMsg,
+              });
+              return new Response(
+                JSON.stringify({
+                  sent: totalSent,
+                  halted: true,
+                  reason: "system_error",
+                  status: emailRes.status,
+                  error: errMsg,
+                }),
+                { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } },
+              );
+            }
+
             await supabase.from("outreach_emails").insert({
               lead_id: lead.id,
               sequence_step: nextStep,
               subject,
               body,
               status: "bounced",
+              error_message: errMsg,
             });
+            await supabase
+              .from("outreach_leads")
+              .update({ status: "bounced" })
+              .eq("id", lead.id);
           }
         } catch (err) {
           console.error("Send error for lead", lead.id, err);
+          await supabase.from("outreach_emails").insert({
+            lead_id: lead.id,
+            sequence_step: nextStep,
+            subject,
+            body,
+            status: "failed_system",
+            error_message: (err as Error).message?.slice(0, 500),
+          });
         }
 
         // Small delay between sends
