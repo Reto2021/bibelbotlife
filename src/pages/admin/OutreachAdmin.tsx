@@ -79,21 +79,35 @@ function useOutreachStats(campaignId: string | null) {
         .from("outreach_leads")
         .select("status")
         .eq("campaign_id", campaignId);
+      const { data: leadsRaw } = await supabase
+        .from("outreach_leads")
+        .select("id")
+        .eq("campaign_id", campaignId);
+      const leadIds = leadsRaw?.map((l: any) => l.id) || [];
       const { data: emails } = await supabase
         .from("outreach_emails")
-        .select("status")
-        .in("lead_id",
-          (await supabase.from("outreach_leads").select("id").eq("campaign_id", campaignId)).data?.map((l: any) => l.id) || []
-        );
+        .select("status, opened_at, clicked_at")
+        .in("lead_id", leadIds.length ? leadIds : ["00000000-0000-0000-0000-000000000000"]);
       const statusCounts: Record<string, number> = {};
       leads?.forEach((l: any) => { statusCounts[l.status] = (statusCounts[l.status] || 0) + 1; });
       const emailCounts: Record<string, number> = {};
-      emails?.forEach((e: any) => { emailCounts[e.status] = (emailCounts[e.status] || 0) + 1; });
+      let openedCount = 0;
+      let clickedCount = 0;
+      emails?.forEach((e: any) => {
+        emailCounts[e.status] = (emailCounts[e.status] || 0) + 1;
+        if (e.opened_at) openedCount++;
+        if (e.clicked_at) clickedCount++;
+      });
+      const sentCount = emailCounts["sent"] || 0;
       return {
         totalLeads: leads?.length || 0,
         leadStatus: statusCounts,
         totalEmails: emails?.length || 0,
         emailStatus: emailCounts,
+        opened: openedCount,
+        clicked: clickedCount,
+        openRate: sentCount > 0 ? ((openedCount / sentCount) * 100).toFixed(1) : "0.0",
+        clickRate: sentCount > 0 ? ((clickedCount / sentCount) * 100).toFixed(1) : "0.0",
       };
     },
     enabled: !!campaignId,
@@ -1370,6 +1384,10 @@ export default function OutreachAdmin() {
                 <Card><CardHeader className="pb-2"><CardDescription>E-Mails gesendet</CardDescription><CardTitle className="text-2xl">{stats.emailStatus.sent || 0}</CardTitle></CardHeader></Card>
                 <Card><CardHeader className="pb-2"><CardDescription>Geantwortet</CardDescription><CardTitle className="text-2xl text-secondary">{stats.leadStatus.replied || 0}</CardTitle></CardHeader></Card>
                 <Card><CardHeader className="pb-2"><CardDescription>Demo gebucht</CardDescription><CardTitle className="text-2xl text-primary">{stats.leadStatus.booked || 0}</CardTitle></CardHeader></Card>
+                <Card><CardHeader className="pb-2"><CardDescription>Geöffnet</CardDescription><CardTitle className="text-2xl text-blue-600">{stats.opened}</CardTitle><CardContent className="pt-0 text-xs text-muted-foreground">{stats.openRate}% Open Rate</CardContent></CardHeader></Card>
+                <Card><CardHeader className="pb-2"><CardDescription>Geklickt</CardDescription><CardTitle className="text-2xl text-violet-600">{stats.clicked}</CardTitle><CardContent className="pt-0 text-xs text-muted-foreground">{stats.clickRate}% Click Rate</CardContent></CardHeader></Card>
+                <Card><CardHeader className="pb-2"><CardDescription>Bounces</CardDescription><CardTitle className="text-2xl text-orange-600">{stats.emailStatus.bounced || 0}</CardTitle></CardHeader></Card>
+                <Card><CardHeader className="pb-2"><CardDescription>Systemfehler</CardDescription><CardTitle className="text-2xl text-red-600">{stats.emailStatus.failed_system || 0}</CardTitle></CardHeader></Card>
               </div>
             ) : (
               <div className="text-center py-8 text-muted-foreground">Wähle eine Kampagne</div>
