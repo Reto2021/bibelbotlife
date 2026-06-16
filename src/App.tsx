@@ -85,6 +85,7 @@ const KIundSeelsorge = lazy(() => import("./pages/KIundSeelsorge"));
 const Presse = lazy(() => import("./pages/Presse"));
 const Flyer = lazy(() => import("./pages/Flyer"));
 const GuideAIBibleStudy = lazy(() => import("./pages/GuideAIBibleStudy"));
+const GuideDiscordIntegration = lazy(() => import("./pages/GuideDiscordIntegration"));
 
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { ProtectedAdminRoute } from "@/components/ProtectedAdminRoute";
