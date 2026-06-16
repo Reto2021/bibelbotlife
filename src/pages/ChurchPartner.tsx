@@ -52,8 +52,36 @@ const ChurchPartner = () => {
     );
   }
 
+  const churchUrl = `https://biblebot.life/church/${slug}`;
+
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "Church",
+    "@id": `${churchUrl}#church`,
+    "name": church.name,
+    "description": church.welcome_message || church.denomination || undefined,
+    "url": church.website || churchUrl,
+    "image": church.logo_url || undefined,
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": church.city || undefined,
+      "addressCountry": church.country || undefined,
+      ...(church.street_address ? { "streetAddress": church.street_address } : {}),
+      ...(church.postal_code ? { "postalCode": church.postal_code } : {}),
+    },
+    ...(church.phone ? { "telephone": church.phone } : {}),
+    ...(church.email ? { "email": church.email } : {}),
+    ...(church.service_times ? { "openingHours": church.service_times } : {}),
+    ...(church.pastor_name ? { "employee": {
+      "@type": "Person",
+      "name": church.pastor_name,
+      ...(church.pastor_photo_url ? { "image": church.pastor_photo_url } : {}),
+    }} : {}),
+  };
+
   return (
     <div className="min-h-screen" style={{ background: "var(--gradient-hero)" }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <nav className="bg-card/80 backdrop-blur-sm border-b border-border sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link to="/churches" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
