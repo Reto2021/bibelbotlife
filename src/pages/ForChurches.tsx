@@ -366,16 +366,18 @@ const ForChurches = () => {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="text-sm font-medium text-foreground mb-1 block">{t("church.form.name")}</label>
+                    <label htmlFor="church-form-name" className="text-sm font-medium text-foreground mb-1 block">{t("church.form.name")}</label>
                     <Input
+                      id="church-form-name"
                       value={formData.name}
                       onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
                       maxLength={100}
                     />
                   </div>
                   <div>
-                    <label className="text-sm font-medium text-foreground mb-1 block">{t("church.form.email")} *</label>
+                    <label htmlFor="church-form-email" className="text-sm font-medium text-foreground mb-1 block">{t("church.form.email")} *</label>
                     <Input
+                      id="church-form-email"
                       type="email"
                       required
                       value={formData.email}
@@ -386,17 +388,18 @@ const ForChurches = () => {
                 </div>
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="text-sm font-medium text-foreground mb-1 block">{t("church.form.churchName")}</label>
+                    <label htmlFor="church-form-churchname" className="text-sm font-medium text-foreground mb-1 block">{t("church.form.churchName")}</label>
                     <Input
+                      id="church-form-churchname"
                       value={formData.church_name}
                       onChange={(e) => setFormData(prev => ({ ...prev, church_name: e.target.value }))}
                       maxLength={200}
                     />
                   </div>
                   <div>
-                    <label className="text-sm font-medium text-foreground mb-1 block">{t("church.form.orgType")}</label>
+                    <label htmlFor="church-form-orgtype" className="text-sm font-medium text-foreground mb-1 block">{t("church.form.orgType")}</label>
                     <Select value={formData.organization_type} onValueChange={(v) => setFormData(prev => ({ ...prev, organization_type: v }))}>
-                      <SelectTrigger>
+                      <SelectTrigger id="church-form-orgtype" aria-label={t("church.form.orgType")}>
                         <SelectValue placeholder={t("church.form.orgTypePlaceholder")} />
                       </SelectTrigger>
                       <SelectContent>
@@ -421,9 +424,9 @@ const ForChurches = () => {
                   </div>
                 </div>
                 <div>
-                  <label className="text-sm font-medium text-foreground mb-1 block">{t("church.form.tier")}</label>
+                  <label htmlFor="church-form-tier" className="text-sm font-medium text-foreground mb-1 block">{t("church.form.tier")}</label>
                   <Select value={formData.preferred_tier} onValueChange={(v) => setFormData(prev => ({ ...prev, preferred_tier: v }))}>
-                    <SelectTrigger>
+                    <SelectTrigger id="church-form-tier" aria-label={t("church.form.tier")}>
                       <SelectValue placeholder={t("church.form.tierPlaceholder")} />
                     </SelectTrigger>
                     <SelectContent>
@@ -436,8 +439,9 @@ const ForChurches = () => {
                   </Select>
                 </div>
                 <div>
-                  <label className="text-sm font-medium text-foreground mb-1 block">{t("church.form.message")} *</label>
+                  <label htmlFor="church-form-message" className="text-sm font-medium text-foreground mb-1 block">{t("church.form.message")} *</label>
                   <Textarea
+                    id="church-form-message"
                     required
                     value={formData.message}
                     onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
