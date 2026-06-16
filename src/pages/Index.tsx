@@ -552,8 +552,6 @@ const Index = () => {
           </Button>
         </div>
       </section>
-
-      {/* Footer */}
       </main>
 
       {/* Footer */}
