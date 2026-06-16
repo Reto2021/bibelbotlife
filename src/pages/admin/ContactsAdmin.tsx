@@ -77,10 +77,13 @@ export default function ContactsAdmin() {
     return { total, appUsers, churches, daily, optin, suppressed };
   }, [rows]);
 
-  function exportCsv() {
-    const header = ["email", "name", "sources", "languages", "countries", "last_activity", "is_suppressed"];
+  function exportCsv(onlyOptin = false) {
+    const data = onlyOptin
+      ? filtered.filter((r) => r.has_consent && !r.is_suppressed)
+      : filtered;
+    const header = ["email", "name", "sources", "languages", "countries", "last_activity", "has_consent", "is_suppressed"];
     const lines = [header.join(",")];
-    for (const r of filtered) {
+    for (const r of data) {
       const esc = (v: string | null | undefined) =>
         v == null ? "" : `"${String(v).replace(/"/g, '""')}"`;
       lines.push([
@@ -90,6 +93,7 @@ export default function ContactsAdmin() {
         esc((r.languages ?? []).join("|")),
         esc((r.countries ?? []).join("|")),
         esc(r.last_activity),
+        r.has_consent ? "true" : "false",
         r.is_suppressed ? "true" : "false",
       ].join(","));
     }
@@ -97,10 +101,10 @@ export default function ContactsAdmin() {
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = `biblebot-contacts-${new Date().toISOString().slice(0, 10)}.csv`;
+    a.download = `biblebot-${onlyOptin ? "optin-" : ""}contacts-${new Date().toISOString().slice(0, 10)}.csv`;
     a.click();
     URL.revokeObjectURL(url);
-    toast.success(`${filtered.length} Kontakte exportiert`);
+    toast.success(`${data.length} Kontakte exportiert`);
   }
 
   return (
