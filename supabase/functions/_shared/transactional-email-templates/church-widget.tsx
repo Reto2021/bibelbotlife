@@ -3,6 +3,7 @@ import {
   Body, Container, Head, Heading, Html, Img, Preview, Text, Button, Hr, Section, Link,
 } from 'npm:@react-email/components@0.0.22'
 import type { TemplateEntry } from './registry.ts'
+import { buildSalutation } from './salutation.ts'
 
 const SITE_NAME = "BibleBot.Life"
 const BASE_URL = "https://biblebot.life"
@@ -12,6 +13,9 @@ interface Props {
   churchName?: string
   slug?: string
   contactName?: string
+  contactGender?: string
+  contactFirstName?: string
+  contactLastName?: string
   customBotName?: string
   primaryColor?: string
   snippet?: string
@@ -21,11 +25,20 @@ const ChurchWidgetEmail = ({
   churchName = 'Eure Gemeinde',
   slug = 'meine-gemeinde',
   contactName,
+  contactGender,
+  contactFirstName,
+  contactLastName,
   customBotName,
   primaryColor = '#C8883A',
   snippet,
 }: Props) => {
   const botName = customBotName || 'BibelBot'
+  const salutation = buildSalutation({
+    gender: contactGender,
+    firstName: contactFirstName,
+    lastName: contactLastName,
+    fullName: contactName,
+  })
   const code = snippet || `<script src="${BASE_URL}/embed.js"
         data-church="${slug}"
         data-color="${primaryColor}"
@@ -47,7 +60,7 @@ const ChurchWidgetEmail = ({
           <Hr style={hrGold} />
 
           <Heading style={h1}>
-            {contactName ? `Hallo ${contactName}` : 'Hallo'}!
+            {salutation}!
           </Heading>
 
           <Text style={text}>
@@ -95,9 +108,11 @@ export const template = {
     `Euer Widget-Code für ${data.customBotName || 'BibelBot'} — ${data.churchName || 'eure Gemeinde'}`,
   displayName: 'Widget-Code Versand',
   previewData: {
-    churchName: 'Reformierte Kirche Zürich',
-    slug: 'ref-zuerich',
-    contactName: 'Pfarrer Müller',
+    churchName: 'Gemeinde Musterhausen',
+    slug: 'gemeinde-musterhausen',
+    contactGender: 'male',
+    contactFirstName: 'Thomas',
+    contactLastName: 'Müller',
     customBotName: 'BibelBot',
     primaryColor: '#C8883A',
   },

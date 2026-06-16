@@ -80,7 +80,7 @@ export const template = {
     senderName: 'Maria Müller',
     senderEmail: 'maria@example.com',
     organizationType: 'Gemeinde',
-    churchName: 'Reformierte Kirche Zürich',
+    churchName: 'Gemeinde Musterhausen',
     message: 'Wir interessieren uns für eine Partnerschaft mit BibleBot.Life.',
     source: 'Gemeinde-Seite',
   },

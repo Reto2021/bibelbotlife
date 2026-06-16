@@ -3,6 +3,7 @@ import {
   Body, Container, Head, Heading, Html, Img, Preview, Text, Button, Hr, Section, Link,
 } from 'npm:@react-email/components@0.0.22'
 import type { TemplateEntry } from './registry.ts'
+import { buildSalutation } from './salutation.ts'
 
 const SITE_NAME = "BibleBot.Life"
 const BASE_URL = "https://biblebot.life"
@@ -12,6 +13,9 @@ interface QRStickerEmailProps {
   churchName?: string
   slug?: string
   contactName?: string
+  contactGender?: string
+  contactFirstName?: string
+  contactLastName?: string
   customBotName?: string
 }
 
@@ -19,12 +23,21 @@ const QRStickerEmail = ({
   churchName = 'Meine Gemeinde',
   slug = 'meine-gemeinde',
   contactName,
+  contactGender,
+  contactFirstName,
+  contactLastName,
   customBotName,
 }: QRStickerEmailProps) => {
   const brandedLink = `${BASE_URL}/?church=${slug}&utm_source=email&utm_medium=qr_sticker`
   const integrationLink = `${BASE_URL}/church-integration/${slug}`
   const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=${encodeURIComponent(brandedLink)}&margin=12&ecc=H`
-  const botName = customBotName || 'BibleBot'
+  const botName = customBotName || 'BibelBot'
+  const salutation = buildSalutation({
+    gender: contactGender,
+    firstName: contactFirstName,
+    lastName: contactLastName,
+    fullName: contactName,
+  })
 
   return (
     <Html lang="de" dir="ltr">
@@ -39,7 +52,7 @@ const QRStickerEmail = ({
           <Hr style={hrGold} />
 
           <Heading style={h1}>
-            {contactName ? `Hallo ${contactName}` : 'Hallo'}! 👋
+            {salutation}! 👋
           </Heading>
 
           <Text style={text}>
@@ -96,9 +109,11 @@ export const template = {
     `Euer QR-Sticker für ${data.customBotName || 'BibleBot'} — ${data.churchName || 'eure Gemeinde'}`,
   displayName: 'QR-Sticker Versand',
   previewData: {
-    churchName: 'Reformierte Kirche Zürich',
-    slug: 'ref-zuerich',
-    contactName: 'Pfarrer Müller',
+    churchName: 'Gemeinde Musterhausen',
+    slug: 'gemeinde-musterhausen',
+    contactGender: 'female',
+    contactFirstName: 'Maria',
+    contactLastName: 'Müller',
     customBotName: 'BibelBot',
   },
 } satisfies TemplateEntry

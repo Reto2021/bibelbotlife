@@ -121,6 +121,8 @@ ${SENDER_PROFILE.usp}
 - E-Mails als HTML formatieren (einfach, keine aufwändigen Designs)
 - Betreffzeilen: Kurz, persönlich, keine Spam-Wörter
 - Ton: Warm, professionell, nicht aufdringlich
+- **KONFESSIONS-NEUTRAL**: Schreibe ökumenisch und respektvoll für alle Glaubensrichtungen. Erwähne NIEMALS spezifische Konfessionen (reformiert, katholisch, freikirchlich, evangelisch, lutherisch) in Betreff oder Body — auch wenn die Konfession des Leads bekannt ist. Sprich von "Ihrer Gemeinde", "Ihrer Kirchgemeinde" oder "Ihrer Glaubensgemeinschaft".
+- Vermeide konfessions-spezifische Begriffe wie "Pfarramt" vs. "Pastoralteam" vs. "Älteste" — nutze neutrale Begriffe wie "Leitungsteam", "Gemeindeleitung", "Verantwortliche".
 - Jede E-Mail sollte eigenständig funktionieren (nicht auf vorherige Bezug nehmen)
 - Signatur wird automatisch angehängt, NICHT in den Body einbauen
 
@@ -158,6 +160,8 @@ ${SENDER_PROFILE.testimonials.map((t, i) => `${i + 1}. "${t}"`).join("\n")}
 - Ton: Warm, professionell, nicht aufdringlich
 - MUSS mit einem klaren CTA enden
 - Signatur wird automatisch angehängt, NICHT einbauen
+- **KONFESSIONS-NEUTRAL**: Schreibe ökumenisch und respektvoll. Erwähne NIEMALS die Konfession (reformiert, katholisch, freikirchlich, evangelisch, lutherisch, evangelikal) explizit im Text — auch wenn sie in den Lead-Daten steht. Sprich neutral von "Ihrer Gemeinde". Nutze neutrale Begriffe ("Gemeindeleitung", "Verantwortliche") statt konfessions-spezifische Titel.
+- **ANREDE**: Wenn Geschlecht erkennbar → "Sehr geehrte Frau {Nachname}" / "Sehr geehrter Herr {Nachname}". Sonst "Guten Tag {Vor- und Nachname}". NIEMALS "Pastor", "Pfarrer", "Priester" o.ä. als Anrede-Titel voranstellen — der konkrete Funktionstitel ist nicht immer bekannt und kann falsch sein.
 
 ## Antwortformat:
 Antworte als JSON-Objekt:
@@ -275,12 +279,26 @@ Deno.serve(async (req) => {
         5: "Break-up E-Mail – respektvoller Abschluss, letzte Chance",
       };
 
+      const contactGender = (lead as any).contact_gender as string | undefined;
+      const contactFirst = (lead as any).contact_first_name as string | undefined;
+      const contactLast = (lead as any).contact_last_name as string | undefined;
+      let salutationHint = "Guten Tag";
+      if (contactLast) {
+        if (contactGender === "female") salutationHint = `Sehr geehrte Frau ${contactLast}`;
+        else if (contactGender === "male") salutationHint = `Sehr geehrter Herr ${contactLast}`;
+        else if (contactFirst) salutationHint = `Guten Tag ${contactFirst} ${contactLast}`;
+        else salutationHint = `Guten Tag ${contactLast}`;
+      } else if (lead.contact_name) {
+        // Strip clerical title prefix from legacy contact_name
+        const stripped = lead.contact_name.replace(/^(Pastor(?:in)?|Pfarrer(?:in)?|Priester(?:in)?|Diakon(?:in)?|Dr\.?|Prof\.?)\s+/i, "").trim();
+        salutationHint = `Guten Tag ${stripped}`;
+      }
+
       const userPrompt = `Schreibe eine personalisierte E-Mail (Schritt ${targetStep}: ${stepDescriptions[targetStep] || "Follow-up"}) für:
 
 Gemeinde: ${lead.church_name}
-Kontaktperson: ${lead.contact_name || "Pfarrer/Pfarrerin"}
+Anrede (genau so verwenden, NICHT ändern): ${salutationHint}
 Stadt: ${lead.city || "unbekannt"}
-Konfession: ${lead.denomination || "unbekannt"}
 Website: ${lead.website || "keine"}
 Persönliche Notiz: ${lead.personal_note || "keine"}
 ${scrapedInfo}

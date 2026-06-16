@@ -89,7 +89,10 @@ export function ChurchDetailDrawer({ church, open, onClose }: Props) {
         subscription_expires_at: form.subscription_expires_at,
         is_active: form.is_active,
         contact_person: form.contact_person,
-      })
+        contact_gender: (form as any).contact_gender || null,
+        contact_first_name: (form as any).contact_first_name || null,
+        contact_last_name: (form as any).contact_last_name || null,
+      } as any)
       .eq("id", church.id);
 
     // Upsert billing
@@ -150,10 +153,43 @@ export function ChurchDetailDrawer({ church, open, onClose }: Props) {
             <Field label="Land" value={church.country} />
             <Field label="Sprache" value={church.language} />
             <Field label="Kontaktperson" value={church.contact_person} />
+            <div className="grid grid-cols-3 gap-2">
+              <div className="space-y-1">
+                <Label className="text-muted-foreground text-xs">Anrede</Label>
+                <Select
+                  value={(form as any).contact_gender ?? "none"}
+                  onValueChange={(v) => set("contact_gender", v === "none" ? null : v)}
+                >
+                  <SelectTrigger><SelectValue placeholder="—" /></SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="none">— keine —</SelectItem>
+                    <SelectItem value="female">Frau</SelectItem>
+                    <SelectItem value="male">Herr</SelectItem>
+                    <SelectItem value="diverse">Divers</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+              <div className="space-y-1">
+                <Label className="text-muted-foreground text-xs">Vorname</Label>
+                <Input
+                  value={(form as any).contact_first_name ?? ""}
+                  onChange={(e) => set("contact_first_name", e.target.value)}
+                  placeholder="Maria"
+                />
+              </div>
+              <div className="space-y-1">
+                <Label className="text-muted-foreground text-xs">Nachname</Label>
+                <Input
+                  value={(form as any).contact_last_name ?? ""}
+                  onChange={(e) => set("contact_last_name", e.target.value)}
+                  placeholder="Müller"
+                />
+              </div>
+            </div>
             <Field label="E-Mail" value={church.contact_email} />
             <Field label="Telefon" value={church.contact_phone} />
             <Field label="Website" value={church.website} />
-            <Field label="Pastor" value={church.pastor_name} />
+            <Field label="Funktion/Pastor (Anzeige)" value={church.pastor_name} />
             {church.logo_url && (
               <div>
                 <Label className="text-muted-foreground text-xs">Logo</Label>
@@ -307,6 +343,9 @@ export function ChurchDetailDrawer({ church, open, onClose }: Props) {
                   churchName: church.name,
                   slug: church.slug,
                   contactName: church.pastor_name || church.contact_person || undefined,
+                  contactGender: (church as any).contact_gender || undefined,
+                  contactFirstName: (church as any).contact_first_name || undefined,
+                  contactLastName: (church as any).contact_last_name || undefined,
                   customBotName: botName,
                   primaryColor: color,
                   snippet,

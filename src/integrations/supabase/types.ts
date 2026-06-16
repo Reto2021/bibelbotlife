@@ -699,6 +699,9 @@ export type Database = {
         Row: {
           city: string | null
           contact_email: string | null
+          contact_first_name: string | null
+          contact_gender: string | null
+          contact_last_name: string | null
           contact_person: string | null
           contact_phone: string | null
           country: string | null
@@ -730,6 +733,9 @@ export type Database = {
         Insert: {
           city?: string | null
           contact_email?: string | null
+          contact_first_name?: string | null
+          contact_gender?: string | null
+          contact_last_name?: string | null
           contact_person?: string | null
           contact_phone?: string | null
           country?: string | null
@@ -761,6 +767,9 @@ export type Database = {
         Update: {
           city?: string | null
           contact_email?: string | null
+          contact_first_name?: string | null
+          contact_gender?: string | null
+          contact_last_name?: string | null
           contact_person?: string | null
           contact_phone?: string | null
           country?: string | null
@@ -1497,6 +1506,9 @@ export type Database = {
           campaign_id: string
           church_name: string
           city: string | null
+          contact_first_name: string | null
+          contact_gender: string | null
+          contact_last_name: string | null
           contact_name: string | null
           created_at: string
           current_step: number
@@ -1529,6 +1541,9 @@ export type Database = {
           campaign_id: string
           church_name: string
           city?: string | null
+          contact_first_name?: string | null
+          contact_gender?: string | null
+          contact_last_name?: string | null
           contact_name?: string | null
           created_at?: string
           current_step?: number
@@ -1561,6 +1576,9 @@ export type Database = {
           campaign_id?: string
           church_name?: string
           city?: string | null
+          contact_first_name?: string | null
+          contact_gender?: string | null
+          contact_last_name?: string | null
           contact_name?: string | null
           created_at?: string
           current_step?: number

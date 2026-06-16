@@ -68,9 +68,9 @@ export const template = {
   previewData: {
     serviceTitle: 'Erntedank-Gottesdienst',
     serviceDate: '2025-10-12',
-    churchName: 'Reformierte Kirche Zürich',
+    churchName: 'Gemeinde Musterhausen',
     downloadUrl: 'https://example.com/download/service.pdf',
-    senderName: 'Pfarrer Müller',
+    senderName: 'Maria Müller',
   },
 } satisfies TemplateEntry
 

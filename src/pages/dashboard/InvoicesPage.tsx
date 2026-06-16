@@ -140,6 +140,10 @@ export default function InvoicesPage() {
             amount: new Intl.NumberFormat("de-CH", { style: "currency", currency: "CHF" }).format(invoice.amount),
             dueDate: new Date(invoice.due_date).toLocaleDateString("de-CH"),
             downloadUrl: invoice.pdf_url,
+            contactName: (church as any)?.pastor_name || (church as any)?.contact_person || undefined,
+            contactGender: (church as any)?.contact_gender || undefined,
+            contactFirstName: (church as any)?.contact_first_name || undefined,
+            contactLastName: (church as any)?.contact_last_name || undefined,
           },
         },
       });
