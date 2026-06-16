@@ -56,6 +56,8 @@ export default function ContactsAdmin() {
       if (suppressedFilter === "active" && r.is_suppressed) return false;
       if (suppressedFilter === "suppressed" && !r.is_suppressed) return false;
       if (sourceFilter !== "all" && !r.sources.includes(sourceFilter)) return false;
+      if (consentFilter === "optin" && !r.has_consent) return false;
+      if (consentFilter === "no_consent" && r.has_consent) return false;
       if (search) {
         const q = search.toLowerCase();
         const hay = `${r.email} ${r.display_name ?? ""}`.toLowerCase();
@@ -63,15 +65,16 @@ export default function ContactsAdmin() {
       }
       return true;
     });
-  }, [rows, search, sourceFilter, suppressedFilter]);
+  }, [rows, search, sourceFilter, suppressedFilter, consentFilter]);
 
   const stats = useMemo(() => {
     const total = rows.length;
     const appUsers = rows.filter((r) => r.sources.includes("app_user")).length;
     const churches = rows.filter((r) => r.sources.includes("church")).length;
-    const multi = rows.filter((r) => r.sources.length > 1).length;
+    const daily = rows.filter((r) => r.sources.includes("daily")).length;
+    const optin = rows.filter((r) => r.has_consent && !r.is_suppressed).length;
     const suppressed = rows.filter((r) => r.is_suppressed).length;
-    return { total, appUsers, churches, multi, suppressed };
+    return { total, appUsers, churches, daily, optin, suppressed };
   }, [rows]);
 
   function exportCsv() {
