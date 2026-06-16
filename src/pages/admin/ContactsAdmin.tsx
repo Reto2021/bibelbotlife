@@ -119,9 +119,14 @@ export default function ContactsAdmin() {
               <Users className="h-7 w-7" /> Kontakte
             </h1>
           </div>
-          <Button onClick={exportCsv} disabled={!filtered.length}>
-            <Download className="h-4 w-4 mr-2" /> CSV exportieren ({filtered.length})
-          </Button>
+          <div className="flex gap-2">
+            <Button variant="outline" onClick={() => exportCsv(true)} disabled={!stats.optin}>
+              <Download className="h-4 w-4 mr-2" /> Opt-in CSV ({stats.optin})
+            </Button>
+            <Button onClick={() => exportCsv(false)} disabled={!filtered.length}>
+              <Download className="h-4 w-4 mr-2" /> Alle CSV ({filtered.length})
+            </Button>
+          </div>
         </div>
 
         <p className="text-sm text-muted-foreground max-w-3xl">
