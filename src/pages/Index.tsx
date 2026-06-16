@@ -107,6 +107,7 @@ const Index = () => {
       {/* Navigation */}
       <SiteHeader />
 
+      <main>
       {/* Chat-First Hero – above the fold */}
       <ChatHero />
 
@@ -551,6 +552,9 @@ const Index = () => {
           </Button>
         </div>
       </section>
+
+      {/* Footer */}
+      </main>
 
       {/* Footer */}
       <footer className="bg-foreground text-background py-12 px-4">
