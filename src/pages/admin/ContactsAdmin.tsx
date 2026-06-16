@@ -35,6 +35,7 @@ export default function ContactsAdmin() {
   const [search, setSearch] = useState("");
   const [sourceFilter, setSourceFilter] = useState<string>("all");
   const [suppressedFilter, setSuppressedFilter] = useState<string>("active");
+  const [consentFilter, setConsentFilter] = useState<string>("all");
 
   useEffect(() => {
     (async () => {
