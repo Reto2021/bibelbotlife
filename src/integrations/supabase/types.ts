@@ -1224,6 +1224,39 @@ export type Database = {
         }
         Relationships: []
       }
+      email_tracking_events: {
+        Row: {
+          created_at: string
+          event_type: string
+          id: string
+          message_id: string | null
+          metadata: Json
+          occurred_at: string
+          recipient_email: string | null
+          resend_email_id: string | null
+        }
+        Insert: {
+          created_at?: string
+          event_type: string
+          id?: string
+          message_id?: string | null
+          metadata?: Json
+          occurred_at?: string
+          recipient_email?: string | null
+          resend_email_id?: string | null
+        }
+        Update: {
+          created_at?: string
+          event_type?: string
+          id?: string
+          message_id?: string | null
+          metadata?: Json
+          occurred_at?: string
+          recipient_email?: string | null
+          resend_email_id?: string | null
+        }
+        Relationships: []
+      }
       email_unsubscribe_tokens: {
         Row: {
           created_at: string
