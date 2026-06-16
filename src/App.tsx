@@ -54,6 +54,7 @@ const JournalPage = lazy(() => import("./pages/mein-bereich/JournalPage"));
 const SharedDraft = lazy(() => import("./pages/SharedDraft"));
 const AdminDashboard = lazy(() => import("./pages/admin/AdminDashboard"));
 const OutreachAdmin = lazy(() => import("./pages/admin/OutreachAdmin"));
+const OutreachStatusDashboard = lazy(() => import("./pages/admin/OutreachStatusDashboard"));
 const PrayerModeration = lazy(() => import("./pages/admin/PrayerModeration"));
 const ReferralAdmin = lazy(() => import("./pages/admin/ReferralAdmin"));
 const SeoAdmin = lazy(() => import("./pages/admin/SeoAdmin"));
@@ -229,6 +230,7 @@ const App = () => {
                   <Route path="/shared/:token" element={<SharedDraft />} />
                   <Route path="/admin" element={<ProtectedAdminRoute><AdminDashboard /></ProtectedAdminRoute>} />
                   <Route path="/admin/outreach" element={<ProtectedAdminRoute><OutreachAdmin /></ProtectedAdminRoute>} />
+                  <Route path="/admin/outreach/status" element={<ProtectedAdminRoute><OutreachStatusDashboard /></ProtectedAdminRoute>} />
                   <Route path="/admin/prayers" element={<ProtectedAdminRoute><PrayerModeration /></ProtectedAdminRoute>} />
                   <Route path="/admin/referrals" element={<ProtectedAdminRoute><ReferralAdmin /></ProtectedAdminRoute>} />
                   <Route path="/admin/referral" element={<ProtectedAdminRoute><ReferralAdmin /></ProtectedAdminRoute>} />
