@@ -1,0 +1,1 @@
+ALTER TABLE public.pipeline_schedules DROP CONSTRAINT IF EXISTS pipeline_schedules_campaign_id_key;
