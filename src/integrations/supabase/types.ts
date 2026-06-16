@@ -1502,6 +1502,7 @@ export type Database = {
           body: string
           clicked_at: string | null
           created_at: string
+          error_message: string | null
           id: string
           lead_id: string
           opened_at: string | null
@@ -1515,6 +1516,7 @@ export type Database = {
           body: string
           clicked_at?: string | null
           created_at?: string
+          error_message?: string | null
           id?: string
           lead_id: string
           opened_at?: string | null
@@ -1528,6 +1530,7 @@ export type Database = {
           body?: string
           clicked_at?: string | null
           created_at?: string
+          error_message?: string | null
           id?: string
           lead_id?: string
           opened_at?: string | null
@@ -3105,6 +3108,7 @@ export type Database = {
         | "clicked"
         | "replied"
         | "bounced"
+        | "failed_system"
       outreach_lead_status:
         | "new"
         | "contacted"
@@ -3295,6 +3299,7 @@ export const Constants = {
         "clicked",
         "replied",
         "bounced",
+        "failed_system",
       ],
       outreach_lead_status: [
         "new",
