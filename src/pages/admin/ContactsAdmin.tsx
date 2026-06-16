@@ -127,18 +127,19 @@ export default function ContactsAdmin() {
         </p>
 
         {/* Stat cards */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-3">
           {[
             { label: "Total unique", value: stats.total },
             { label: "App-Nutzer", value: stats.appUsers },
             { label: "Gemeinden", value: stats.churches },
-            { label: "Mehrfach-Quelle", value: stats.multi },
+            { label: "Daily", value: stats.daily },
+            { label: "Opt-in (anschreibbar)", value: stats.optin, success: true },
             { label: "Suppressed", value: stats.suppressed, danger: true },
-          ].map((s) => (
+          ].map((s: any) => (
             <Card key={s.label}>
               <CardContent className="p-4">
                 <div className="text-xs text-muted-foreground">{s.label}</div>
-                <div className={`text-2xl font-bold ${s.danger ? "text-destructive" : "text-foreground"}`}>
+                <div className={`text-2xl font-bold ${s.danger ? "text-destructive" : s.success ? "text-primary" : "text-foreground"}`}>
                   {s.value}
                 </div>
               </CardContent>
