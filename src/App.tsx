@@ -60,6 +60,7 @@ const SeoAdmin = lazy(() => import("./pages/admin/SeoAdmin"));
 const FeedbackAdmin = lazy(() => import("./pages/admin/FeedbackAdmin"));
 const BibleSeedStatus = lazy(() => import("./pages/admin/BibleSeedStatus"));
 const WidgetsAdmin = lazy(() => import("./pages/admin/WidgetsAdmin"));
+const ContactsAdmin = lazy(() => import("./pages/admin/ContactsAdmin"));
 const BibleSearch = lazy(() => import("./pages/BibleSearch"));
 const PrayerWall = lazy(() => import("./pages/PrayerWall"));
 const BibleQuiz = lazy(() => import("./pages/BibleQuiz"));
@@ -229,6 +230,7 @@ const App = () => {
                   <Route path="/admin/feedback" element={<ProtectedAdminRoute><FeedbackAdmin /></ProtectedAdminRoute>}/>
                   <Route path="/admin/bible-seed" element={<ProtectedAdminRoute><BibleSeedStatus /></ProtectedAdminRoute>}/>
                   <Route path="/admin/widgets" element={<ProtectedAdminRoute><WidgetsAdmin /></ProtectedAdminRoute>}/>
+                  <Route path="/admin/contacts" element={<ProtectedAdminRoute><ContactsAdmin /></ProtectedAdminRoute>}/>
                   <Route path="/widget-preview/:leadId" element={<WidgetPreview />} />
                   <Route path="/mein-kreis" element={<ProtectedRoute><KreisPage /></ProtectedRoute>} />
                   <Route path="/partner/:code" element={<ReferralPartner />} />
