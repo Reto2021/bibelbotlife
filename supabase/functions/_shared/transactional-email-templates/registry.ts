@@ -17,6 +17,7 @@ import { template as teamInvitation } from './team-invitation.tsx'
 import { template as serviceShare } from './service-share.tsx'
 import { template as qrSticker } from './qr-sticker.tsx'
 import { template as weeklyReport } from './weekly-report.tsx'
+import { template as churchWidget } from './church-widget.tsx'
 
 export const TEMPLATES: Record<string, TemplateEntry> = {
   'contact-confirmation': contactConfirmation,
