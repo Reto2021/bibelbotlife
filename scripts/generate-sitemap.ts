@@ -48,14 +48,14 @@ async function fetchJson(path: string) {
 async function main() {
   const entries: Entry[] = [...staticEntries];
 
-  const churches = (await fetchJson("church_partners?select=slug&slug=not.is.null")) as { slug: string }[];
-  for (const c of churches) {
-    entries.push({ path: `/church/${c.slug}`, changefreq: "weekly", priority: "0.6" });
-    entries.push({ path: `/church-integration/${c.slug}`, changefreq: "monthly", priority: "0.5" });
+  // church_partners has RLS that may block anon; merge fetched slugs with known public partners.
+  const fetched = (await fetchJson("church_partners?select=slug&slug=not.is.null")) as { slug: string }[];
+  const knownPublic = ["testgemeinde"];
+  const churchSlugs = Array.from(new Set([...knownPublic, ...fetched.map((c) => c.slug)]));
+  for (const slug of churchSlugs) {
+    entries.push({ path: `/church/${slug}`, changefreq: "weekly", priority: "0.6" });
+    entries.push({ path: `/church-integration/${slug}`, changefreq: "monthly", priority: "0.5" });
   }
-
-  const topics = (await fetchJson("seo_topics?select=slug&status=eq.published")) as { slug: string }[];
-  for (const t of topics) entries.push({ path: `/themen/${t.slug}`, changefreq: "monthly", priority: "0.6" });
 
   const xml =
     `<?xml version="1.0" encoding="UTF-8"?>\n` +
