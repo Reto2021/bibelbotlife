@@ -62,6 +62,7 @@ const BibleSeedStatus = lazy(() => import("./pages/admin/BibleSeedStatus"));
 const WidgetsAdmin = lazy(() => import("./pages/admin/WidgetsAdmin"));
 const ContactsAdmin = lazy(() => import("./pages/admin/ContactsAdmin"));
 const NewsletterAdmin = lazy(() => import("./pages/admin/NewsletterAdmin"));
+const EmailReporting = lazy(() => import("./pages/admin/EmailReporting"));
 const BibleSearch = lazy(() => import("./pages/BibleSearch"));
 const PrayerWall = lazy(() => import("./pages/PrayerWall"));
 const BibleQuiz = lazy(() => import("./pages/BibleQuiz"));
