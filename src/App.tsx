@@ -199,6 +199,7 @@ const App = () => {
                   <Route path="/ueber-uns" element={<UeberUns />} />
                   <Route path="/ki-und-seelsorge" element={<KIundSeelsorge />} />
                   <Route path="/guide/ai-bible-study" element={<GuideAIBibleStudy />} />
+                  <Route path="/guide/discord-integration" element={<GuideDiscordIntegration />} />
                   <Route path="/presse" element={<Presse />} />
                   <Route path="/flyer" element={<Flyer />} />
                   <Route path="/login" element={<Login />} />
