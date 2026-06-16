@@ -42,6 +42,7 @@
     name: name,
     lang: lang,
   });
+  if (church) params.set("church", church);
   var iframeSrc = origin + "/embed?" + params.toString();
 
   var isOpen = false;
