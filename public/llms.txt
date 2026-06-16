@@ -1,0 +1,37 @@
+# BibleBot.Life
+
+> Kostenloser, anonymer, multilingualer Bibel-Begleiter im Browser. Stell Fragen zur Bibel, erhalte seelsorgerliche Antworten, und entdecke den Glauben – ohne Login, ohne Tracking, ohne Urteil.
+
+BibleBot.Life ist eine Progressive Web App (PWA), die Menschen im deutschsprachigen Raum und weltweit einen sicheren Raum bietet, um sich mit der Bibel auseinanderzusetzen. Die Antworten basieren auf fünf deutschen Bibelübersetzungen (Zürcher, Luther, Einheitsübersetzung, Schlachter, Elberfelder) und folgen einem Coaching-Ansatz mit PERMA, Logotherapie, Dankbarkeit und Vergebung.
+
+## Hauptfunktionen
+
+- [Startseite](/): Bibel-Chat, täglicher Vers und schneller Einstieg in alle Funktionen.
+- [Bibelsuche](/bible-search): Volltextsuche über fünf deutsche Bibelübersetzungen.
+- [Bibelquiz](/bibelquiz): Interaktives Quiz mit Rangliste.
+- [Gebetswand](/gebetswand): Öffentliche Gebetsanliegen mit anonymem Mitbeten.
+- [Täglicher Vers](/mein-vers): Täglicher Bibelvers mit Impuls und Reflexion – abonnierbar per Push, Telegram oder SMS.
+- [KI und Seelsorge](/ki-und-seelsorge): Wie BibleBot.Life KI und Seelsorge verbindet.
+
+## Für Gemeinden und Seelsorger
+
+- [Für Gemeinden](/for-churches): Partnerschaftspakete für Kirchen – mit Branding, Chat-Integration und Messplaner.
+- [Für Seelsorger](/fuer-seelsorger): Wie BibleBot.Life Seelsorgern im Alltag unterstützt.
+- [Unterrichtsplaner](/unterrichtsplaner): Bibelunterricht planen und gestalten.
+- [Für Institutionen](/for-institutions): Angebote für Schulen, Caritas und andere Organisationen.
+- [Gemeindeverzeichnis](/churches): Partnergemeinden in der Übersicht.
+
+## Integration & Widget
+
+- [Widget einbetten](/widget): BibleBot-Widget für eigene Websites.
+- [Embed-Code](/embed): Direkte Einbettung des Bibel-Chats.
+
+## Über das Projekt
+
+- [Spenden](/spenden): BibleBot.Life freiwillig unterstützen.
+- [Über uns](/ueber-uns): Wer wir sind und was uns antreibt.
+- [Presse](/presse): Pressematerialien und Medienkontakt.
+- [Flyer](/flyer): Druckbare Infomaterialien.
+- [Kontakt](/kontakt): Nachricht an das BibleBot-Team.
+- [Impressum](/impressum): Rechtliche Angaben.
+- [Datenschutz](/datenschutz): Umgang mit Daten und Privatsphäre.
