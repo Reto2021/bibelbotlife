@@ -165,6 +165,15 @@ export default function ContactsAdmin() {
                 <SelectItem value="all">Alle Quellen</SelectItem>
                 <SelectItem value="app_user">Nur App-Nutzer</SelectItem>
                 <SelectItem value="church">Nur Gemeinden</SelectItem>
+                <SelectItem value="daily">Nur Daily</SelectItem>
+              </SelectContent>
+            </Select>
+            <Select value={consentFilter} onValueChange={setConsentFilter}>
+              <SelectTrigger className="w-[180px]"><SelectValue /></SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">Alle (Consent)</SelectItem>
+                <SelectItem value="optin">Nur mit Opt-in</SelectItem>
+                <SelectItem value="no_consent">Ohne Opt-in</SelectItem>
               </SelectContent>
             </Select>
             <Select value={suppressedFilter} onValueChange={setSuppressedFilter}>
