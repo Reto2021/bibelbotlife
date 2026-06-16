@@ -977,6 +977,15 @@ export function BibleBotChat() {
 
       {/* Input */}
       <div className="border-t border-border p-3">
+        {widgetLimitExceeded && (
+          <div className="mb-2 rounded-lg border border-primary/20 bg-primary/5 px-3 py-2 text-xs text-muted-foreground flex items-start gap-2">
+            <Info className="h-3.5 w-3.5 mt-0.5 text-primary shrink-0" />
+            <span>
+              {t("chat.softLimit", "Diese Gemeinde nutzt das Senfkorn-Paket (gratis). Wenn dir BibleBot.Life hilft, sag deiner Gemeinde Bescheid – mit dem Leuchtturm-Paket bekommst du noch mehr.")}
+            </span>
+          </div>
+        )}
+
         <div className="flex items-end gap-2 rounded-3xl border border-border bg-background focus-within:border-primary/50 focus-within:shadow-[0_0_0_3px_hsl(var(--primary)/0.1)] transition-all px-3 py-2">
           <Textarea
             ref={textareaRef}
