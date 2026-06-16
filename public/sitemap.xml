@@ -10,6 +10,8 @@
   <url><loc>https://biblebot.life/for-churches</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://biblebot.life/fuer-seelsorger</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://biblebot.life/unterrichtsplaner</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://biblebot.life/fuer-lehrer</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://biblebot.life/fuer-lehrkraefte</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://biblebot.life/for-institutions</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://biblebot.life/churches</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://biblebot.life/widget</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
