@@ -35,6 +35,11 @@ const ChurchDirectory = () => {
 
   return (
     <div className="min-h-screen" style={{ background: "var(--gradient-hero)" }}>
+      <SEOHead
+        title="Partner-Kirchen Verzeichnis · BibleBot.Life"
+        description="Entdecke Kirchen und Gemeinden, die BibleBot.Life für ihre Mitglieder einsetzen — durchsuchbar nach Ort, Konfession und Name."
+        path="/churches"
+      />
       <SiteHeader />
 
       <section className="py-16 px-4">
