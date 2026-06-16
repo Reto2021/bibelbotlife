@@ -2499,6 +2499,48 @@ export type Database = {
         }
         Relationships: []
       }
+      widget_usage: {
+        Row: {
+          church_id: string
+          first_seen_at: string
+          id: string
+          last_seen_at: string
+          question_count: number
+          visitor_id: string
+        }
+        Insert: {
+          church_id: string
+          first_seen_at?: string
+          id?: string
+          last_seen_at?: string
+          question_count?: number
+          visitor_id: string
+        }
+        Update: {
+          church_id?: string
+          first_seen_at?: string
+          id?: string
+          last_seen_at?: string
+          question_count?: number
+          visitor_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "widget_usage_church_id_fkey"
+            columns: ["church_id"]
+            isOneToOne: false
+            referencedRelation: "church_partners"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "widget_usage_church_id_fkey"
+            columns: ["church_id"]
+            isOneToOne: false
+            referencedRelation: "church_partners_public"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       bible_explanations_public: {
@@ -2825,6 +2867,14 @@ export type Database = {
           message: Json
           msg_id: number
           read_ct: number
+        }[]
+      }
+      record_widget_question: {
+        Args: { _church_slug: string; _visitor_id: string }
+        Returns: {
+          limit_exceeded: boolean
+          plan_tier: Database["public"]["Enums"]["church_plan_tier"]
+          question_count: number
         }[]
       }
       search_bible_verses:
