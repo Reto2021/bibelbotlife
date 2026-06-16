@@ -69,9 +69,9 @@ export const template = {
     `Einladung zum Team von ${data.churchName || 'deiner Gemeinde'}`,
   displayName: 'Team-Einladung',
   previewData: {
-    churchName: 'Reformierte Kirche Zürich',
+    churchName: 'Gemeinde Musterhausen',
     role: 'musician',
-    inviterName: 'Pfarrer Müller',
+    inviterName: 'Maria Müller',
     dashboardUrl: 'https://biblebot.life/dashboard',
   },
 } satisfies TemplateEntry
