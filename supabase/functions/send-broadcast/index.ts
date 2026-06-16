@@ -131,7 +131,7 @@ Deno.serve(async (req) => {
           subject: `[TEST] ${subject}`,
           html,
         }),
-      }, apiKey);
+      });
       return new Response(JSON.stringify({ ok: true, id: res.id }), { headers: { ...corsHeaders, "Content-Type": "application/json" } });
     }
 
