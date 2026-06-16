@@ -232,7 +232,9 @@ const App = () => {
                   <Route path="/admin" element={<ProtectedAdminRoute><AdminDashboard /></ProtectedAdminRoute>} />
                   <Route path="/admin/outreach" element={<ProtectedAdminRoute><OutreachAdmin /></ProtectedAdminRoute>} />
                   <Route path="/admin/outreach/status" element={<ProtectedAdminRoute><OutreachStatusDashboard /></ProtectedAdminRoute>} />
+                  <Route path="/admin/outreach/logs" element={<ProtectedAdminRoute><OutreachLogs /></ProtectedAdminRoute>} />
                   <Route path="/admin/prayers" element={<ProtectedAdminRoute><PrayerModeration /></ProtectedAdminRoute>} />
+
                   <Route path="/admin/referrals" element={<ProtectedAdminRoute><ReferralAdmin /></ProtectedAdminRoute>} />
                   <Route path="/admin/referral" element={<ProtectedAdminRoute><ReferralAdmin /></ProtectedAdminRoute>} />
                   <Route path="/admin/seo" element={<ProtectedAdminRoute><SeoAdmin /></ProtectedAdminRoute>}/>
