@@ -562,10 +562,10 @@ const Index = () => {
             <span className="text-2xl font-bold">BibleBot<span className="text-muted">.Life</span></span>
           </div>
           <p className="mb-4 text-center text-background/70">{t("footer.tagline")}</p>
-          <p className="text-background/50 text-xs mb-6 max-w-2xl mx-auto text-center">{t("footer.disclaimer")}</p>
+          <p className="text-background/80 text-xs mb-6 max-w-2xl mx-auto text-center">{t("footer.disclaimer")}</p>
           
           <div className="border-t border-background/20 pt-6 mt-6">
-            <div className="grid sm:grid-cols-2 gap-6 text-sm text-background/50 mb-8">
+            <div className="grid sm:grid-cols-2 gap-6 text-sm text-background/80 mb-8">
               <div>
                 <p className="font-semibold text-background/70 mb-2">{t("footer.impressum")}</p>
                 <p>2Go Media AG</p>
@@ -581,7 +581,7 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm text-background/50 mb-4">
+            <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm text-background/80 mb-4">
               <Link to="/impressum" className="hover:text-background/80 underline underline-offset-2">{t("footer.impressum")}</Link>
               <Link to="/datenschutz" className="hover:text-background/80 underline underline-offset-2">{t("footer.datenschutz")}</Link>
               <Link to="/for-churches" className="hover:text-background/80 underline underline-offset-2">{t("footer.forChurches")}</Link>
@@ -592,8 +592,8 @@ const Index = () => {
               <Link to="/ueber-uns" className="hover:text-background/80 underline underline-offset-2">{t("nav.about", "Über uns")}</Link>
             </div>
 
-            <p className="text-background/40 text-xs text-center mb-1">© 2026 BibleBot.Life</p>
-            <p className="text-background/50 text-sm text-center">{t("footer.love")}</p>
+            <p className="text-background/70 text-xs text-center mb-1">© 2026 BibleBot.Life</p>
+            <p className="text-background/80 text-sm text-center">{t("footer.love")}</p>
           </div>
         </div>
       </footer>
