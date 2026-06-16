@@ -28,4 +28,5 @@ export const TEMPLATES: Record<string, TemplateEntry> = {
   'service-share': serviceShare,
   'qr-sticker': qrSticker,
   'weekly-report': weeklyReport,
+  'church-widget': churchWidget,
 }
