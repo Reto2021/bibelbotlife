@@ -161,12 +161,12 @@ Deno.serve(async (req) => {
           preview_text: preview || undefined,
           name: `${subject} – ${new Date().toISOString().slice(0, 10)}`,
         }),
-      }, apiKey);
+      });
 
       const sendRes = await resend(`/broadcasts/${broadcast.id}/send`, {
         method: "POST",
         body: JSON.stringify({}),
-      }, apiKey);
+      });
 
       return new Response(JSON.stringify({ ok: true, broadcastId: broadcast.id, send: sendRes }), {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
