@@ -80,6 +80,9 @@ export default function AdminDashboard() {
               <Link to="/admin/outreach"><Target className="h-4 w-4 mr-2" />Cold Outreach</Link>
             </Button>
             <Button asChild variant="outline" size="sm">
+              <Link to="/admin/outreach/status"><TrendingUp className="h-4 w-4 mr-2" />Outreach-Status</Link>
+            </Button>
+            <Button asChild variant="outline" size="sm">
               <Link to="/admin/referrals"><LinkIcon className="h-4 w-4 mr-2" />Referrals</Link>
             </Button>
             <Button asChild variant="outline" size="sm">
