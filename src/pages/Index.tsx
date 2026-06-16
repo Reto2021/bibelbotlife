@@ -108,8 +108,10 @@ const Index = () => {
       <SiteHeader />
 
       <main>
-        {/* Descriptive H1 for SEO — visually hidden, exact same styling as h2 for consistency */}
-        <h1 className="sr-only">BibleBot.Life – Dein mehrsprachiger KI-Bibel-Begleiter</h1>
+        {/* Visible H1 for SEO and accessibility */}
+        <h1 className="sr-only md:not-sr-only md:text-center md:text-2xl md:font-semibold md:text-foreground md:pt-6 md:px-4">
+          BibleBot.Life – Dein mehrsprachiger Bibel-Begleiter
+        </h1>
         {/* Chat-First Hero – above the fold */}
         <ChatHero />
 
