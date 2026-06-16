@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog";
-import { Trash2, ExternalLink, Code2 } from "lucide-react";
+import { Trash2, ExternalLink, Code2, Copy, Mail, Check } from "lucide-react";
 import { toast } from "sonner";
 import type { Tables } from "@/integrations/supabase/types";
 
@@ -27,6 +27,8 @@ export function ChurchDetailDrawer({ church, open, onClose }: Props) {
   const [form, setForm] = useState<Partial<Tables<"church_partners">>>({});
   const [billingForm, setBillingForm] = useState<Partial<Tables<"church_billing">>>({});
   const [saving, setSaving] = useState(false);
+  const [snippetCopied, setSnippetCopied] = useState(false);
+  const [sendingWidget, setSendingWidget] = useState(false);
 
   const { data: billing } = useQuery({
     queryKey: ["church-billing", church?.id],
@@ -233,6 +235,77 @@ export function ChurchDetailDrawer({ church, open, onClose }: Props) {
           </TabsContent>
         </Tabs>
 
+        {/* Widget-Code generieren & senden */}
+        {(() => {
+          const color = church.primary_color || "#C8883A";
+          const botName = church.custom_bot_name || "BibelBot";
+          const snippet = `<script src="https://biblebot.life/embed.js"
+        data-church="${church.slug}"
+        data-color="${color}"
+        data-name="Frag ${botName}"
+        data-position="bottom-right"
+        data-lang="${church.language || "de"}"
+        defer></script>`;
+
+          const copySnippet = () => {
+            navigator.clipboard.writeText(snippet);
+            setSnippetCopied(true);
+            setTimeout(() => setSnippetCopied(false), 2000);
+            toast.success("Snippet kopiert");
+          };
+
+          const sendWidget = async () => {
+            if (!church.contact_email) {
+              toast.error("Keine Kontakt-E-Mail hinterlegt");
+              return;
+            }
+            setSendingWidget(true);
+            const { error } = await supabase.functions.invoke("send-transactional-email", {
+              body: {
+                templateName: "church-widget",
+                recipientEmail: church.contact_email,
+                idempotencyKey: `church-widget-${church.id}-${Date.now()}`,
+                templateData: {
+                  churchName: church.name,
+                  slug: church.slug,
+                  contactName: church.pastor_name || church.contact_person || undefined,
+                  customBotName: botName,
+                  primaryColor: color,
+                  snippet,
+                },
+              },
+            });
+            setSendingWidget(false);
+            if (error) toast.error("Versand fehlgeschlagen: " + error.message);
+            else toast.success(`Widget-Code an ${church.contact_email} gesendet`);
+          };
+
+          return (
+            <div className="mt-6 border-t border-border pt-4 space-y-3">
+              <div className="flex items-center justify-between">
+                <p className="text-xs font-medium uppercase text-muted-foreground">Embed-Widget</p>
+                <span className="text-[10px] text-muted-foreground">Branded für {botName}</span>
+              </div>
+              <pre className="bg-muted rounded-md p-3 text-[11px] leading-relaxed overflow-x-auto border border-border">
+                <code>{snippet}</code>
+              </pre>
+              <div className="flex flex-wrap gap-2">
+                <Button size="sm" variant="outline" onClick={copySnippet}>
+                  {snippetCopied ? <Check className="h-3.5 w-3.5 mr-1.5" /> : <Copy className="h-3.5 w-3.5 mr-1.5" />}
+                  {snippetCopied ? "Kopiert" : "Code kopieren"}
+                </Button>
+                <Button size="sm" onClick={sendWidget} disabled={sendingWidget || !church.contact_email}>
+                  <Mail className="h-3.5 w-3.5 mr-1.5" />
+                  {sendingWidget ? "Sende…" : "Per E-Mail senden"}
+                </Button>
+              </div>
+              {!church.contact_email && (
+                <p className="text-xs text-destructive">Keine Kontakt-E-Mail — Versand nicht möglich.</p>
+              )}
+            </div>
+          );
+        })()}
+
         {/* Quick Links: Profil, Widget */}
         <div className="mt-6 border-t border-border pt-4 space-y-2">
           <p className="text-xs text-muted-foreground">Quick Links</p>
@@ -252,7 +325,7 @@ export function ChurchDetailDrawer({ church, open, onClose }: Props) {
             <Button asChild variant="outline" size="sm">
               <Link to={`/widget?church=${church.slug}`} target="_blank">
                 <Code2 className="h-3.5 w-3.5 mr-1.5" />
-                Widget / Embed-Code
+                Widget Generator
               </Link>
             </Button>
           </div>
