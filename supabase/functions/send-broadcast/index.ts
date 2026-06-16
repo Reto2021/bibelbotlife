@@ -64,9 +64,6 @@ Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
 
   try {
-    const apiKey = Deno.env.get("RESEND_API_KEY");
-    if (!apiKey) throw new Error("RESEND_API_KEY fehlt");
-
     const supabase = createClient(
       Deno.env.get("SUPABASE_URL")!,
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
@@ -89,7 +86,7 @@ Deno.serve(async (req) => {
     const body = await req.json();
     const action = body.action as "sync" | "send" | "test" | "preview";
 
-    const audienceId = await getOrCreateAudience(supabase, apiKey);
+    const audienceId = await getOrCreateAudience(supabase);
 
     if (action === "sync") {
       // Opt-in Kontakte ziehen
