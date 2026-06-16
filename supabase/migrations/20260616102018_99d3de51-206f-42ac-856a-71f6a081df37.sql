@@ -1,0 +1,1 @@
+UPDATE public.outreach_campaigns SET booking_url = 'https://api.crm2go.io/widget/bookings/2gomedia';
