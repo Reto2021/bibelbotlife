@@ -125,6 +125,7 @@ ${SENDER_PROFILE.usp}
 - Vermeide konfessions-spezifische Begriffe wie "Pfarramt" vs. "Pastoralteam" vs. "Älteste" — nutze neutrale Begriffe wie "Leitungsteam", "Gemeindeleitung", "Verantwortliche".
 - Jede E-Mail sollte eigenständig funktionieren (nicht auf vorherige Bezug nehmen)
 - Signatur wird automatisch angehängt, NICHT in den Body einbauen
+- Schluss-/Grussformel: Bei Empfängern in der Schweiz NIE "Grüsse aus der Schweiz" schreiben (macht innerhalb der Schweiz keinen Sinn). Stattdessen ortsbezogen: "Gesegnete Grüsse aus Brugg," (Absender sitzt in Brugg, AG). Bei Empfängern in Deutschland/Österreich darf "aus der Schweiz" verwendet werden.
 
 ## Antwortformat:
 Antworte als JSON-Array mit exakt 5 Objekten:
