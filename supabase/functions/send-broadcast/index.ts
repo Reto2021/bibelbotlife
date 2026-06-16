@@ -41,7 +41,7 @@ async function resend(path: string, init: RequestInit) {
   return data;
 }
 
-async function getOrCreateAudience(supabase: any, apiKey: string): Promise<string> {
+async function getOrCreateAudience(supabase: any): Promise<string> {
   const { data: setting } = await supabase
     .from("app_settings")
     .select("value")
@@ -53,7 +53,7 @@ async function getOrCreateAudience(supabase: any, apiKey: string): Promise<strin
   const created = await resend("/audiences", {
     method: "POST",
     body: JSON.stringify({ name: "BibelBot Community" }),
-  }, apiKey);
+  });
 
   const id = created.id;
   await supabase.from("app_settings").upsert({ key: AUDIENCE_SETTING_KEY, value: id });
