@@ -43,6 +43,33 @@ async function requireAdminOrService(
   return { ok: true };
 }
 
+async function requireAuth(
+  req: Request,
+  supabase: any,
+  supabaseUrl: string,
+  anonKey: string,
+  serviceKey: string,
+): Promise<{ ok: true } | { ok: false; response: Response }> {
+  const cronSecret = req.headers.get("x-outreach-cron");
+  if (cronSecret) {
+    const { data: setting } = await supabase
+      .from("app_settings")
+      .select("value")
+      .eq("key", "outreach_cron_secret")
+      .maybeSingle();
+    if (setting?.value?.secret === cronSecret) {
+      return { ok: true };
+    }
+    return {
+      ok: false,
+      response: new Response(
+        JSON.stringify({ error: "Invalid cron secret" }),
+        { status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" } },
+      ),
+    };
+  }
+  return requireAdminOrService(req, supabaseUrl, anonKey, serviceKey);
+}
 
 const RESEND_GATEWAY = "https://connector-gateway.lovable.dev/resend";
 
@@ -59,7 +86,7 @@ Deno.serve(async (req) => {
     const lovableKey = Deno.env.get("LOVABLE_API_KEY");
     const supabase = createClient(supabaseUrl, serviceKey);
 
-    const authResult = await requireAdminOrService(req, supabaseUrl, anonKey, serviceKey);
+    const authResult = await requireAuth(req, supabase, supabaseUrl, anonKey, serviceKey);
     if (!authResult.ok) return authResult.response;
 
     if (!resendKey) {
