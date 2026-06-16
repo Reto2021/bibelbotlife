@@ -109,9 +109,11 @@ export const template = {
     `Euer QR-Sticker für ${data.customBotName || 'BibleBot'} — ${data.churchName || 'eure Gemeinde'}`,
   displayName: 'QR-Sticker Versand',
   previewData: {
-    churchName: 'Reformierte Kirche Zürich',
-    slug: 'ref-zuerich',
-    contactName: 'Pfarrer Müller',
+    churchName: 'Gemeinde Musterhausen',
+    slug: 'gemeinde-musterhausen',
+    contactGender: 'female',
+    contactFirstName: 'Maria',
+    contactLastName: 'Müller',
     customBotName: 'BibelBot',
   },
 } satisfies TemplateEntry
