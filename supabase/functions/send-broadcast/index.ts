@@ -8,19 +8,32 @@ const corsHeaders = {
 };
 
 const RESEND_API = "https://api.resend.com";
+const RESEND_GATEWAY = "https://connector-gateway.lovable.dev/resend";
 const FROM_EMAIL = "BibelBot News <news@mail.biblebot.life>";
 const REPLY_TO = "hello@biblebot.life";
 const AUDIENCE_SETTING_KEY = "resend_audience_id";
 
-async function resend(path: string, init: RequestInit, apiKey: string) {
-  const resp = await fetch(`${RESEND_API}${path}`, {
-    ...init,
-    headers: {
-      Authorization: `Bearer ${apiKey}`,
-      "Content-Type": "application/json",
-      ...(init.headers || {}),
-    },
-  });
+async function resend(path: string, init: RequestInit) {
+  const lovableKey = Deno.env.get("LOVABLE_API_KEY");
+  const resendKey = Deno.env.get("RESEND_API_KEY");
+  if (!resendKey) throw new Error("RESEND_API_KEY fehlt");
+
+  const headers: Record<string, string> = {
+    "Content-Type": "application/json",
+    ...(init.headers || {}),
+  };
+
+  let url: string;
+  if (lovableKey) {
+    url = `${RESEND_GATEWAY}${path}`;
+    headers["Authorization"] = `Bearer ${lovableKey}`;
+    headers["X-Connection-Api-Key"] = resendKey;
+  } else {
+    url = `${RESEND_API}${path}`;
+    headers["Authorization"] = `Bearer ${resendKey}`;
+  }
+
+  const resp = await fetch(url, { ...init, headers });
   const text = await resp.text();
   let data: any = null;
   try { data = text ? JSON.parse(text) : null; } catch { data = { raw: text }; }
@@ -28,7 +41,7 @@ async function resend(path: string, init: RequestInit, apiKey: string) {
   return data;
 }
 
-async function getOrCreateAudience(supabase: any, apiKey: string): Promise<string> {
+async function getOrCreateAudience(supabase: any): Promise<string> {
   const { data: setting } = await supabase
     .from("app_settings")
     .select("value")
@@ -40,7 +53,7 @@ async function getOrCreateAudience(supabase: any, apiKey: string): Promise<strin
   const created = await resend("/audiences", {
     method: "POST",
     body: JSON.stringify({ name: "BibelBot Community" }),
-  }, apiKey);
+  });
 
   const id = created.id;
   await supabase.from("app_settings").upsert({ key: AUDIENCE_SETTING_KEY, value: id });
@@ -51,9 +64,6 @@ Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
 
   try {
-    const apiKey = Deno.env.get("RESEND_API_KEY");
-    if (!apiKey) throw new Error("RESEND_API_KEY fehlt");
-
     const supabase = createClient(
       Deno.env.get("SUPABASE_URL")!,
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
@@ -76,7 +86,7 @@ Deno.serve(async (req) => {
     const body = await req.json();
     const action = body.action as "sync" | "send" | "test" | "preview";
 
-    const audienceId = await getOrCreateAudience(supabase, apiKey);
+    const audienceId = await getOrCreateAudience(supabase);
 
     if (action === "sync") {
       // Opt-in Kontakte ziehen
@@ -93,7 +103,7 @@ Deno.serve(async (req) => {
               first_name: (c.display_name || "").split(" ")[0] || undefined,
               unsubscribed: false,
             }),
-          }, apiKey);
+          });
           added++;
         } catch (e) {
           const msg = String(e);
@@ -121,7 +131,7 @@ Deno.serve(async (req) => {
           subject: `[TEST] ${subject}`,
           html,
         }),
-      }, apiKey);
+      });
       return new Response(JSON.stringify({ ok: true, id: res.id }), { headers: { ...corsHeaders, "Content-Type": "application/json" } });
     }
 
@@ -151,12 +161,12 @@ Deno.serve(async (req) => {
           preview_text: preview || undefined,
           name: `${subject} – ${new Date().toISOString().slice(0, 10)}`,
         }),
-      }, apiKey);
+      });
 
       const sendRes = await resend(`/broadcasts/${broadcast.id}/send`, {
         method: "POST",
         body: JSON.stringify({}),
-      }, apiKey);
+      });
 
       return new Response(JSON.stringify({ ok: true, broadcastId: broadcast.id, send: sendRes }), {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
