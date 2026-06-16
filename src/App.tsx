@@ -236,6 +236,7 @@ const App = () => {
                   <Route path="/admin/widgets" element={<ProtectedAdminRoute><WidgetsAdmin /></ProtectedAdminRoute>}/>
                   <Route path="/admin/contacts" element={<ProtectedAdminRoute><ContactsAdmin /></ProtectedAdminRoute>}/>
                   <Route path="/admin/newsletter" element={<ProtectedAdminRoute><NewsletterAdmin /></ProtectedAdminRoute>}/>
+                  <Route path="/admin/email-reporting" element={<ProtectedAdminRoute><EmailReporting /></ProtectedAdminRoute>}/>
                   <Route path="/widget-preview/:leadId" element={<WidgetPreview />} />
                   <Route path="/mein-kreis" element={<ProtectedRoute><KreisPage /></ProtectedRoute>} />
                   <Route path="/partner/:code" element={<ReferralPartner />} />
