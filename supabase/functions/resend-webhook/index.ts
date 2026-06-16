@@ -136,6 +136,19 @@ Deno.serve(async (req) => {
   );
   const messageId = (idemHeader?.value as string) ?? (data.tags as any)?.message_id ?? null;
 
+  // --- Filter: nur Events von BibelBot-Absender speichern ---
+  // Resend-Webhook ist account-weit; andere Apps teilen sich denselben Endpoint.
+  const fromField = String(data.from ?? "");
+  const isBibelBot = /@([a-z0-9-]+\.)?biblebot\.life/i.test(fromField);
+  if (!isBibelBot) {
+    return new Response(JSON.stringify({ ok: true, ignored: true, reason: "not_bibelbot_sender", from: fromField }), {
+      status: 200,
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
+    });
+  }
+
+
+
   const { error } = await supabase.from("email_tracking_events").insert({
     message_id: messageId,
     resend_email_id: resendEmailId,
