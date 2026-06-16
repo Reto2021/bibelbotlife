@@ -34,7 +34,7 @@ export const BrandedQRCode = ({
       />
       <img
         src={logo}
-        alt="BibleBot"
+        alt="BibleBot.Life Logo"
         className="absolute rounded-md bg-white p-0.5"
         style={{
           width: lSize,

@@ -108,8 +108,10 @@ const Index = () => {
       <SiteHeader />
 
       <main>
-      {/* Chat-First Hero – above the fold */}
-      <ChatHero />
+        {/* Descriptive H1 for SEO — visually hidden, exact same styling as h2 for consistency */}
+        <h1 className="sr-only">BibleBot.Life – Dein mehrsprachiger KI-Bibel-Begleiter</h1>
+        {/* Chat-First Hero – above the fold */}
+        <ChatHero />
 
       {/* Entry Tiles — 9 curated topic chips in 3 groups */}
       <EntryTiles />

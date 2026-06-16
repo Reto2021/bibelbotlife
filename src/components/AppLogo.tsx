@@ -16,7 +16,7 @@ interface AppLogoProps {
  * Renders the BibleBot logo. Automatically switches to the white variant
  * when the page is in dark mode (or light mode + invertTheme).
  */
-export const AppLogo = ({ className = "h-10 w-10", invertTheme = false, alt = "BibleBot" }: AppLogoProps) => {
+export const AppLogo = ({ className = "h-10 w-10", invertTheme = false, alt = "BibleBot.Life Logo" }: AppLogoProps) => {
   // Normal:      dark logo visible in light, hidden in dark; white logo hidden in light, visible in dark.
   // invertTheme: dark logo hidden in light, visible in dark; white logo visible in light, hidden in dark.
   const darkLogoClasses = invertTheme ? "hidden dark:block" : "dark:hidden";
