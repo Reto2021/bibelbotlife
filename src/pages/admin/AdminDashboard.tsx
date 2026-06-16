@@ -88,6 +88,9 @@ export default function AdminDashboard() {
             <Button asChild variant="outline" size="sm">
               <Link to="/admin/widgets"><Globe className="h-4 w-4 mr-2" />Widgets</Link>
             </Button>
+            <Button asChild variant="outline" size="sm">
+              <Link to="/admin/contacts"><Users className="h-4 w-4 mr-2" />Kontakte</Link>
+            </Button>
           </div>
         </div>
 
