@@ -3,6 +3,7 @@ import {
   Body, Container, Head, Heading, Html, Img, Preview, Text, Button, Hr, Section,
 } from 'npm:@react-email/components@0.0.22'
 import type { TemplateEntry } from './registry.ts'
+import { buildSalutation } from './salutation.ts'
 
 const SITE_NAME = "BibleBot.Life"
 const LOGO_URL = 'https://swsthxftugjqznqjcfpk.supabase.co/storage/v1/object/public/share-images/email%2Fbiblebot-logo.png'
@@ -16,6 +17,9 @@ interface InvoiceNotificationProps {
   currency?: string
   downloadUrl?: string
   contactName?: string
+  contactGender?: string
+  contactFirstName?: string
+  contactLastName?: string
 }
 
 const InvoiceNotificationEmail = ({
@@ -27,7 +31,17 @@ const InvoiceNotificationEmail = ({
   currency = 'CHF',
   downloadUrl,
   contactName,
-}: InvoiceNotificationProps) => (
+  contactGender,
+  contactFirstName,
+  contactLastName,
+}: InvoiceNotificationProps) => {
+  const salutation = buildSalutation({
+    gender: contactGender,
+    firstName: contactFirstName,
+    lastName: contactLastName,
+    fullName: contactName,
+  })
+  return (
   <Html lang="de" dir="ltr">
     <Head />
     <Preview>Rechnung {invoiceNumber || ''} von {SITE_NAME}</Preview>
@@ -44,7 +58,7 @@ const InvoiceNotificationEmail = ({
         </Heading>
 
         <Text style={text}>
-          {contactName ? `Guten Tag ${contactName},` : 'Guten Tag,'}
+          {salutation},
         </Text>
 
         <Text style={text}>
