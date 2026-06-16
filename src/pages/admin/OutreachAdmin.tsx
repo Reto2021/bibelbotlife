@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import DOMPurify from "dompurify";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
@@ -17,7 +18,7 @@ import {
   Plus, Play, Pause, Upload, Globe, Mail, Users, BarChart3,
   Loader2, Trash2, RefreshCw, Send, Target, Sparkles, Wand2, Eye, Copy,
   Palette, ExternalLink, Search, Rocket, Clock, Calendar,
-  Instagram, Facebook, MessageCircle, Youtube,
+  Instagram, Facebook, MessageCircle, Youtube, ArrowLeft,
 } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
