@@ -211,7 +211,11 @@ async function handleWebhook(req: Request): Promise<Response> {
   // The email action type is in payload.data.action_type (e.g., "signup", "recovery")
   // payload.type is the hook event type ("auth")
   const emailType = payload.data.action_type
-  console.log('Received auth event', { emailType, email: payload.data.email, run_id })
+  // Resolve locale from user_metadata (set at signup via supabase auth.signUp options)
+  // Falls back to 'de' (Swiss German project default).
+  const userMeta = (payload.data as any).user?.user_metadata || (payload.data as any).user_metadata || {}
+  const locale = (userMeta.locale || userMeta.lang || userMeta.language || 'de').toString().slice(0, 2).toLowerCase()
+  console.log('Received auth event', { emailType, email: payload.data.email, locale, run_id })
 
   const EmailTemplate = EMAIL_TEMPLATES[emailType]
   if (!EmailTemplate) {
@@ -231,6 +235,7 @@ async function handleWebhook(req: Request): Promise<Response> {
     token: payload.data.token,
     email: payload.data.email,
     newEmail: payload.data.new_email,
+    locale,
   }
 
   // Render React Email to HTML and plain text
