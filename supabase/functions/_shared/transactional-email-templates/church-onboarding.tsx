@@ -3,6 +3,7 @@ import {
   Body, Container, Head, Heading, Html, Img, Preview, Text, Button, Hr, Section, Link,
 } from 'npm:@react-email/components@0.0.22'
 import type { TemplateEntry } from './registry.ts'
+import { buildSalutation } from './salutation.ts'
 
 const SITE_NAME = "BibleBot.Life"
 const BASE_URL = "https://biblebot.life"
@@ -13,6 +14,9 @@ interface ChurchOnboardingProps {
   slug?: string
   customBotName?: string
   contactName?: string
+  contactGender?: string
+  contactFirstName?: string
+  contactLastName?: string
   planTier?: string
 }
 
