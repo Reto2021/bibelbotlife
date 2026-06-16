@@ -1983,7 +1983,7 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
         });
       }
       return new Response(voiceResp.body, {
-        headers: { ...corsHeaders, "Content-Type": "text/event-stream" },
+        headers: { ...corsHeaders, ...widgetHeaders, "Content-Type": "text/event-stream" },
       });
     }
 
@@ -2227,7 +2227,7 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
       });
 
       return new Response(stream, {
-        headers: { ...corsHeaders, "Content-Type": "text/event-stream" },
+        headers: { ...corsHeaders, ...widgetHeaders, "Content-Type": "text/event-stream" },
       });
     }
 
@@ -2265,7 +2265,7 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
     });
 
     return new Response(stream, {
-      headers: { ...corsHeaders, "Content-Type": "text/event-stream" },
+      headers: { ...corsHeaders, ...widgetHeaders, "Content-Type": "text/event-stream" },
     });
   } catch (e) {
     console.error("bibelbot-chat error:", e);
