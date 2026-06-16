@@ -25,6 +25,7 @@
   var name = (scriptEl && scriptEl.getAttribute("data-name")) || "Frag den BibleBot";
   var position = (scriptEl && scriptEl.getAttribute("data-position")) || "bottom-right";
   var lang = (scriptEl && scriptEl.getAttribute("data-lang")) || "de";
+  var church = (scriptEl && scriptEl.getAttribute("data-church")) || "";
 
   var host = location.host;
   var origin = "https://biblebot.life";
