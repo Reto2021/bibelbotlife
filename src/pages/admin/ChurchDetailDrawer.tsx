@@ -43,6 +43,27 @@ export function ChurchDetailDrawer({ church, open, onClose }: Props) {
     },
   });
 
+  const { data: widgetStats } = useQuery({
+    queryKey: ["widget-usage", church?.id],
+    enabled: !!church?.id,
+    queryFn: async () => {
+      const since = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString();
+      const [{ count: totalVisitors }, { data: rows }, { count: recent30d }] = await Promise.all([
+        (supabase.from("widget_usage" as any) as any).select("id", { count: "exact", head: true }).eq("church_id", church!.id),
+        (supabase.from("widget_usage" as any) as any).select("question_count").eq("church_id", church!.id),
+        (supabase.from("widget_usage" as any) as any).select("id", { count: "exact", head: true }).eq("church_id", church!.id).gte("last_seen_at", since),
+      ]);
+      const totalQuestions = (rows ?? []).reduce((sum: number, r: any) => sum + (r.question_count ?? 0), 0);
+      const returning = (rows ?? []).filter((r: any) => (r.question_count ?? 0) > 1).length;
+      return {
+        totalVisitors: totalVisitors ?? 0,
+        totalQuestions,
+        returning,
+        recent30d: recent30d ?? 0,
+      };
+    },
+  });
+
   useEffect(() => {
     if (church) setForm({ ...church });
   }, [church]);
@@ -224,6 +245,22 @@ export function ChurchDetailDrawer({ church, open, onClose }: Props) {
             <UsageStat label="Gottesdienste" value={usage?.servicesCount} />
             <UsageStat label="Team-Mitglieder" value={usage?.teamCount} />
             <UsageStat label="Kirchenbuch-Einträge" value={usage?.recordsCount} />
+
+            <div className="pt-4 border-t border-border">
+              <Label className="text-muted-foreground text-xs uppercase tracking-wide">Widget-Nutzung</Label>
+              <div className="grid grid-cols-2 gap-3 mt-2">
+                <UsageStat label="Unique Visitors (gesamt)" value={widgetStats?.totalVisitors} />
+                <UsageStat label="Visitors letzte 30 Tage" value={widgetStats?.recent30d} />
+                <UsageStat label="Fragen gesamt" value={widgetStats?.totalQuestions} />
+                <UsageStat label="Wiederkehrer (>1 Frage)" value={widgetStats?.returning} />
+              </div>
+              {church.plan_tier === "free" && (widgetStats?.returning ?? 0) > 0 && (
+                <p className="mt-2 text-xs text-primary">
+                  💡 {widgetStats?.returning} Visitor(s) haben mehrfach gefragt – Upgrade-Potenzial.
+                </p>
+              )}
+            </div>
+
             <div className="pt-4 border-t border-border">
               <Label className="text-muted-foreground text-xs">Letzte Aktivität</Label>
               <p className="text-sm">{new Date(church.updated_at).toLocaleString("de-CH")}</p>
@@ -233,6 +270,7 @@ export function ChurchDetailDrawer({ church, open, onClose }: Props) {
               <p className="text-sm">{new Date(church.created_at).toLocaleString("de-CH")}</p>
             </div>
           </TabsContent>
+
         </Tabs>
 
         {/* Widget-Code generieren & senden */}
