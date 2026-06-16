@@ -103,7 +103,7 @@ Deno.serve(async (req) => {
               first_name: (c.display_name || "").split(" ")[0] || undefined,
               unsubscribed: false,
             }),
-          }, apiKey);
+          });
           added++;
         } catch (e) {
           const msg = String(e);
