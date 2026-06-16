@@ -1718,7 +1718,7 @@ export type Database = {
           {
             foreignKeyName: "pipeline_schedules_campaign_id_fkey"
             columns: ["campaign_id"]
-            isOneToOne: true
+            isOneToOne: false
             referencedRelation: "outreach_campaigns"
             referencedColumns: ["id"]
           },
