@@ -3081,6 +3081,9 @@ export type Database = {
           title: string
         }[]
       }
+      trigger_outreach_daily_report: { Args: never; Returns: undefined }
+      trigger_outreach_pipeline: { Args: never; Returns: undefined }
+      trigger_outreach_send: { Args: never; Returns: undefined }
     }
     Enums: {
       app_role: "admin" | "moderator" | "user"
