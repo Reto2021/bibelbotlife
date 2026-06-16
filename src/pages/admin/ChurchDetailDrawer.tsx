@@ -27,6 +27,8 @@ export function ChurchDetailDrawer({ church, open, onClose }: Props) {
   const [form, setForm] = useState<Partial<Tables<"church_partners">>>({});
   const [billingForm, setBillingForm] = useState<Partial<Tables<"church_billing">>>({});
   const [saving, setSaving] = useState(false);
+  const [snippetCopied, setSnippetCopied] = useState(false);
+  const [sendingWidget, setSendingWidget] = useState(false);
 
   const { data: billing } = useQuery({
     queryKey: ["church-billing", church?.id],
