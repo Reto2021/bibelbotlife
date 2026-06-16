@@ -244,6 +244,13 @@ export default function ContactsAdmin() {
                           {r.last_activity ? new Date(r.last_activity).toLocaleDateString("de-CH") : "–"}
                         </TableCell>
                         <TableCell>
+                          {r.has_consent ? (
+                            <Badge className="text-xs bg-primary/15 text-primary border-primary/30">Ja</Badge>
+                          ) : (
+                            <Badge variant="outline" className="text-xs text-muted-foreground">Nein</Badge>
+                          )}
+                        </TableCell>
+                        <TableCell>
                           {r.is_suppressed ? (
                             <Badge variant="destructive" className="text-xs">Blockiert</Badge>
                           ) : (
