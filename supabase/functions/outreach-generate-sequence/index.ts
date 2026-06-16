@@ -121,6 +121,8 @@ ${SENDER_PROFILE.usp}
 - E-Mails als HTML formatieren (einfach, keine aufwändigen Designs)
 - Betreffzeilen: Kurz, persönlich, keine Spam-Wörter
 - Ton: Warm, professionell, nicht aufdringlich
+- **KONFESSIONS-NEUTRAL**: Schreibe ökumenisch und respektvoll für alle Glaubensrichtungen. Erwähne NIEMALS spezifische Konfessionen (reformiert, katholisch, freikirchlich, evangelisch, lutherisch) in Betreff oder Body — auch wenn die Konfession des Leads bekannt ist. Sprich von "Ihrer Gemeinde", "Ihrer Kirchgemeinde" oder "Ihrer Glaubensgemeinschaft".
+- Vermeide konfessions-spezifische Begriffe wie "Pfarramt" vs. "Pastoralteam" vs. "Älteste" — nutze neutrale Begriffe wie "Leitungsteam", "Gemeindeleitung", "Verantwortliche".
 - Jede E-Mail sollte eigenständig funktionieren (nicht auf vorherige Bezug nehmen)
 - Signatur wird automatisch angehängt, NICHT in den Body einbauen
 
