@@ -60,6 +60,7 @@ const SeoAdmin = lazy(() => import("./pages/admin/SeoAdmin"));
 const FeedbackAdmin = lazy(() => import("./pages/admin/FeedbackAdmin"));
 const BibleSeedStatus = lazy(() => import("./pages/admin/BibleSeedStatus"));
 const WidgetsAdmin = lazy(() => import("./pages/admin/WidgetsAdmin"));
+const ContactsAdmin = lazy(() => import("./pages/admin/ContactsAdmin"));
 const BibleSearch = lazy(() => import("./pages/BibleSearch"));
 const PrayerWall = lazy(() => import("./pages/PrayerWall"));
 const BibleQuiz = lazy(() => import("./pages/BibleQuiz"));
