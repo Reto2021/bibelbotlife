@@ -1,0 +1,1 @@
+UPDATE outreach_sequences SET body_template = replace(body_template, 'Gesegnete Grüsse aus der Schweiz,', 'Gesegnete Grüsse aus Brugg,') WHERE body_template LIKE '%Gesegnete Grüsse aus der Schweiz%';
