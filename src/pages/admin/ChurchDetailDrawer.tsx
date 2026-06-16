@@ -89,7 +89,10 @@ export function ChurchDetailDrawer({ church, open, onClose }: Props) {
         subscription_expires_at: form.subscription_expires_at,
         is_active: form.is_active,
         contact_person: form.contact_person,
-      })
+        contact_gender: (form as any).contact_gender || null,
+        contact_first_name: (form as any).contact_first_name || null,
+        contact_last_name: (form as any).contact_last_name || null,
+      } as any)
       .eq("id", church.id);
 
     // Upsert billing
