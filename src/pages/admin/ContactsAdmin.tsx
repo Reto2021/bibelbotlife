@@ -18,6 +18,7 @@ interface ContactRow {
   countries: string[] | null;
   last_activity: string | null;
   is_suppressed: boolean;
+  has_consent: boolean;
   user_id: string | null;
   church_id: string | null;
 }
@@ -25,6 +26,7 @@ interface ContactRow {
 const SOURCE_LABEL: Record<string, string> = {
   app_user: "App-Nutzer",
   church: "Gemeinde",
+  daily: "Daily",
 };
 
 export default function ContactsAdmin() {
