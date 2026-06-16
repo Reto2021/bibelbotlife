@@ -25,12 +25,21 @@ const ChurchOnboardingEmail = ({
   slug = 'meine-gemeinde',
   customBotName,
   contactName,
+  contactGender,
+  contactFirstName,
+  contactLastName,
   planTier = 'community',
 }: ChurchOnboardingProps) => {
   const brandedLink = `${BASE_URL}/?church=${slug}&utm_source=email&utm_medium=onboarding`
   const integrationPageLink = `${BASE_URL}/church-integration/${slug}`
   const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(brandedLink)}&margin=12`
-  const botName = customBotName || 'BibleBot'
+  const botName = customBotName || 'BibelBot'
+  const salutation = buildSalutation({
+    gender: contactGender,
+    firstName: contactFirstName,
+    lastName: contactLastName,
+    fullName: contactName,
+  })
 
   return (
     <Html lang="de" dir="ltr">
@@ -50,7 +59,7 @@ const ChurchOnboardingEmail = ({
           </Section>
 
           <Heading style={h1}>
-            {contactName ? `Hallo ${contactName},` : `Hallo,`}
+            {salutation},
           </Heading>
 
           <Text style={text}>
