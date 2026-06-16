@@ -8,19 +8,32 @@ const corsHeaders = {
 };
 
 const RESEND_API = "https://api.resend.com";
+const RESEND_GATEWAY = "https://connector-gateway.lovable.dev/resend";
 const FROM_EMAIL = "BibelBot News <news@mail.biblebot.life>";
 const REPLY_TO = "hello@biblebot.life";
 const AUDIENCE_SETTING_KEY = "resend_audience_id";
 
-async function resend(path: string, init: RequestInit, apiKey: string) {
-  const resp = await fetch(`${RESEND_API}${path}`, {
-    ...init,
-    headers: {
-      Authorization: `Bearer ${apiKey}`,
-      "Content-Type": "application/json",
-      ...(init.headers || {}),
-    },
-  });
+async function resend(path: string, init: RequestInit) {
+  const lovableKey = Deno.env.get("LOVABLE_API_KEY");
+  const resendKey = Deno.env.get("RESEND_API_KEY");
+  if (!resendKey) throw new Error("RESEND_API_KEY fehlt");
+
+  const headers: Record<string, string> = {
+    "Content-Type": "application/json",
+    ...(init.headers || {}),
+  };
+
+  let url: string;
+  if (lovableKey) {
+    url = `${RESEND_GATEWAY}${path}`;
+    headers["Authorization"] = `Bearer ${lovableKey}`;
+    headers["X-Connection-Api-Key"] = resendKey;
+  } else {
+    url = `${RESEND_API}${path}`;
+    headers["Authorization"] = `Bearer ${resendKey}`;
+  }
+
+  const resp = await fetch(url, { ...init, headers });
   const text = await resp.text();
   let data: any = null;
   try { data = text ? JSON.parse(text) : null; } catch { data = { raw: text }; }
