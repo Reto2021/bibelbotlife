@@ -712,6 +712,8 @@ export type Database = {
           is_active: boolean
           language: string | null
           logo_url: string | null
+          marketing_consent: boolean
+          marketing_consent_at: string | null
           name: string
           notify_on_contact: boolean
           owner_id: string | null
@@ -746,6 +748,8 @@ export type Database = {
           is_active?: boolean
           language?: string | null
           logo_url?: string | null
+          marketing_consent?: boolean
+          marketing_consent_at?: string | null
           name: string
           notify_on_contact?: boolean
           owner_id?: string | null
@@ -780,6 +784,8 @@ export type Database = {
           is_active?: boolean
           language?: string | null
           logo_url?: string | null
+          marketing_consent?: boolean
+          marketing_consent_at?: string | null
           name?: string
           notify_on_contact?: boolean
           owner_id?: string | null
@@ -1111,10 +1117,13 @@ export type Database = {
         Row: {
           channel: string
           created_at: string
+          email: string | null
           first_name: string | null
           id: string
           is_active: boolean
           language: string | null
+          marketing_consent: boolean
+          marketing_consent_at: string | null
           phone_number: string | null
           push_subscription: Json | null
           telegram_chat_id: number | null
@@ -1123,10 +1132,13 @@ export type Database = {
         Insert: {
           channel: string
           created_at?: string
+          email?: string | null
           first_name?: string | null
           id?: string
           is_active?: boolean
           language?: string | null
+          marketing_consent?: boolean
+          marketing_consent_at?: string | null
           phone_number?: string | null
           push_subscription?: Json | null
           telegram_chat_id?: number | null
@@ -1135,10 +1147,13 @@ export type Database = {
         Update: {
           channel?: string
           created_at?: string
+          email?: string | null
           first_name?: string | null
           id?: string
           is_active?: boolean
           language?: string | null
+          marketing_consent?: boolean
+          marketing_consent_at?: string | null
           phone_number?: string | null
           push_subscription?: Json | null
           telegram_chat_id?: number | null
@@ -2394,6 +2409,30 @@ export type Database = {
         }
         Relationships: []
       }
+      user_marketing_preferences: {
+        Row: {
+          bibelbot_news: boolean
+          bibelbot_news_at: string | null
+          created_at: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          bibelbot_news?: boolean
+          bibelbot_news_at?: string | null
+          created_at?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          bibelbot_news?: boolean
+          bibelbot_news_at?: string | null
+          created_at?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           id: string
@@ -2709,11 +2748,22 @@ export type Database = {
           countries: string[]
           display_name: string
           email: string
+          has_consent: boolean
           is_suppressed: boolean
           languages: string[]
           last_activity: string
           sources: string[]
           user_id: string
+        }[]
+      }
+      admin_list_optin_contacts: {
+        Args: never
+        Returns: {
+          display_name: string
+          email: string
+          languages: string[]
+          last_activity: string
+          sources: string[]
         }[]
       }
       delete_email: {
