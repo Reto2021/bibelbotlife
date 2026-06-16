@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-import { Building2, Users, TrendingUp, AlertTriangle, MessageCircle, Search, Target, Heart, Link as LinkIcon, UserPlus, ThumbsDown, Globe } from "lucide-react";
+import { Building2, Users, TrendingUp, AlertTriangle, MessageCircle, Search, Target, Heart, Link as LinkIcon, UserPlus, ThumbsDown, Globe, Mail } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
@@ -90,6 +90,9 @@ export default function AdminDashboard() {
             </Button>
             <Button asChild variant="outline" size="sm">
               <Link to="/admin/contacts"><Users className="h-4 w-4 mr-2" />Kontakte</Link>
+            </Button>
+            <Button asChild variant="outline" size="sm">
+              <Link to="/admin/newsletter"><Mail className="h-4 w-4 mr-2" />Newsletter</Link>
             </Button>
           </div>
         </div>
