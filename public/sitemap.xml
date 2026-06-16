@@ -26,6 +26,7 @@
   <url><loc>https://biblebot.life/impressum</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://biblebot.life/datenschutz</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://biblebot.life/guide/ai-bible-study</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://biblebot.life/guide/discord-integration</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://biblebot.life/church/testgemeinde</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
   <url><loc>https://biblebot.life/church-integration/testgemeinde</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
 </urlset>

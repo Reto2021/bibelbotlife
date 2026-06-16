@@ -85,6 +85,7 @@ const KIundSeelsorge = lazy(() => import("./pages/KIundSeelsorge"));
 const Presse = lazy(() => import("./pages/Presse"));
 const Flyer = lazy(() => import("./pages/Flyer"));
 const GuideAIBibleStudy = lazy(() => import("./pages/GuideAIBibleStudy"));
+const GuideDiscordIntegration = lazy(() => import("./pages/GuideDiscordIntegration"));
 
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { ProtectedAdminRoute } from "@/components/ProtectedAdminRoute";
@@ -198,6 +199,7 @@ const App = () => {
                   <Route path="/ueber-uns" element={<UeberUns />} />
                   <Route path="/ki-und-seelsorge" element={<KIundSeelsorge />} />
                   <Route path="/guide/ai-bible-study" element={<GuideAIBibleStudy />} />
+                  <Route path="/guide/discord-integration" element={<GuideDiscordIntegration />} />
                   <Route path="/presse" element={<Presse />} />
                   <Route path="/flyer" element={<Flyer />} />
                   <Route path="/login" element={<Login />} />
