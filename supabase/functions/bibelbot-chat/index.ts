@@ -5,6 +5,7 @@ const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers":
     "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
+  "Access-Control-Expose-Headers": "x-widget-limit-exceeded, x-widget-question-count, x-widget-plan-tier",
 };
 
 // Fix common AI spelling mistakes: wrong umlaut substitutions, sz→ss, etc.
@@ -1701,7 +1702,7 @@ serve(async (req) => {
   }
 
   try {
-    const { messages, journeyDay, language, mode, preferredTranslation, screenWidth } = await req.json();
+    const { messages, journeyDay, language, mode, preferredTranslation, screenWidth, churchSlug, visitorId } = await req.json();
 
     // Crisis check on latest user message
     const latestUserMsg = [...messages].reverse().find((m: { role: string }) => m.role === "user");
@@ -1713,6 +1714,31 @@ serve(async (req) => {
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
+
+    // === Widget usage tracking (only when called from a church-branded widget) ===
+    const widgetHeaders: Record<string, string> = {};
+    const isUserTurn = mode !== "generate_title" && mode !== "generate_followups";
+    if (isUserTurn && churchSlug && visitorId && typeof churchSlug === "string" && typeof visitorId === "string") {
+      try {
+        const sb = createClient(
+          Deno.env.get("SUPABASE_URL") ?? "",
+          Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
+        );
+        const { data: usage } = await sb.rpc("record_widget_question", {
+          _church_slug: churchSlug.slice(0, 100),
+          _visitor_id: visitorId.slice(0, 100),
+        });
+        const row = Array.isArray(usage) ? usage[0] : usage;
+        if (row) {
+          widgetHeaders["x-widget-question-count"] = String(row.question_count ?? 0);
+          widgetHeaders["x-widget-plan-tier"] = String(row.plan_tier ?? "");
+          if (row.limit_exceeded) widgetHeaders["x-widget-limit-exceeded"] = "true";
+        }
+      } catch (err) {
+        console.warn("widget_usage tracking failed:", err);
+      }
+    }
+
 
     // === Generate title mode ===
     if (mode === "generate_title") {
@@ -1957,7 +1983,7 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
         });
       }
       return new Response(voiceResp.body, {
-        headers: { ...corsHeaders, "Content-Type": "text/event-stream" },
+        headers: { ...corsHeaders, ...widgetHeaders, "Content-Type": "text/event-stream" },
       });
     }
 
@@ -2201,7 +2227,7 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
       });
 
       return new Response(stream, {
-        headers: { ...corsHeaders, "Content-Type": "text/event-stream" },
+        headers: { ...corsHeaders, ...widgetHeaders, "Content-Type": "text/event-stream" },
       });
     }
 
@@ -2239,7 +2265,7 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
     });
 
     return new Response(stream, {
-      headers: { ...corsHeaders, "Content-Type": "text/event-stream" },
+      headers: { ...corsHeaders, ...widgetHeaders, "Content-Type": "text/event-stream" },
     });
   } catch (e) {
     console.error("bibelbot-chat error:", e);

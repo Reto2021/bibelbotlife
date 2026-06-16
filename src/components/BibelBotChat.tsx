@@ -18,6 +18,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 const STT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/elevenlabs-stt`;
 
 import { CHAT_OPEN_EVENT, type ChatMode } from "@/lib/chat-events";
+import { getVisitorId, getChurchSlugFromUrlOrStorage } from "@/lib/widget-visitor";
 export { openBibleBotChat } from "@/lib/chat-events";
 
 const BIBLE_REF_PATTERN = /(\d\.\s?)?(?:Genesis|Exodus|Levitikus|Numeri|Deuteronomium|Josua|Richter|Rut|Samuel|Könige|Chronik|Esra|Nehemia|Ester|Hiob|Psalm|Psalmen|Sprüche|Prediger|Hoheslied|Jesaja|Jeremia|Klagelieder|Ezechiel|Daniel|Hosea|Joel|Amos|Obadja|Jona|Micha|Nahum|Habakuk|Zefanja|Haggai|Sacharja|Maleachi|Matthäus|Markus|Lukas|Johannes|Apostelgeschichte|Römer|Korinther|Galater|Epheser|Philipper|Kolosser|Thessalonicher|Timotheus|Titus|Philemon|Hebräer|Jakobus|Petrus|Judas|Offenbarung|Mose|Gen|Ex|Lev|Num|Dtn|Jos|Ri|Kön|Chr|Esr|Neh|Est|Ps|Spr|Pred|Hld|Jes|Jer|Klgl|Ez|Dan|Hos|Am|Ob|Jon|Mi|Nah|Hab|Zef|Hag|Sach|Mal|Mt|Mk|Lk|Joh|Apg|Röm|Kor|Gal|Eph|Phil|Kol|Thess|Tim|Tit|Phlm|Hebr|Jak|Petr|Jud|Offb|Matthew|Mark|Luke|John|Acts|Romans|Corinthians|Galatians|Ephesians|Philippians|Colossians|Thessalonians|Timothy|Hebrews|James|Peter|Jude|Revelation)\s+\d+(?:[,:]\d+(?:[\-–]\d+)?)?/g;
@@ -353,6 +354,7 @@ export function BibleBotChat() {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const { toast } = useToast();
   const { track } = useTrack();
+  const [widgetLimitExceeded, setWidgetLimitExceeded] = useState(false);
 
   const welcomeMessage: Message = { role: "assistant", content: t("chat.welcome") };
   const journeyOffer: Message = { role: "assistant", content: t("chat.journeyOffer") };
@@ -516,10 +518,12 @@ export function BibleBotChat() {
       let assistantSoFar = "";
 
       try {
+        const churchSlug = getChurchSlugFromUrlOrStorage();
+        const visitorId = churchSlug ? getVisitorId() : null;
         const resp = await fetch(CHAT_URL, {
           method: "POST",
           headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}` },
-          body: JSON.stringify({ messages: contextMessages, language: i18n.language, mode: chatMode, preferredTranslation: preferredTranslation !== "auto" ? preferredTranslation : undefined, screenWidth: window.innerWidth }),
+          body: JSON.stringify({ messages: contextMessages, language: i18n.language, mode: chatMode, preferredTranslation: preferredTranslation !== "auto" ? preferredTranslation : undefined, screenWidth: window.innerWidth, churchSlug, visitorId }),
         });
 
         if (!resp.ok) {
@@ -529,6 +533,10 @@ export function BibleBotChat() {
           setIsLoading(false);
           return;
         }
+
+        // Soft-Limit-Hinweis bei Senfkorn-Paket
+        setWidgetLimitExceeded(resp.headers.get("x-widget-limit-exceeded") === "true");
+
 
         if (!resp.body) throw new Error(t("chat.errorNoStream"));
 
@@ -577,7 +585,7 @@ export function BibleBotChat() {
           const fallbackResp = await fetch(CHAT_URL, {
             method: "POST",
             headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}` },
-            body: JSON.stringify({ messages: contextMessages, language: i18n.language, mode: chatMode, preferredTranslation: preferredTranslation !== "auto" ? preferredTranslation : undefined, screenWidth: window.innerWidth }),
+            body: JSON.stringify({ messages: contextMessages, language: i18n.language, mode: chatMode, preferredTranslation: preferredTranslation !== "auto" ? preferredTranslation : undefined, screenWidth: window.innerWidth, churchSlug, visitorId }),
           });
           const fullText = await fallbackResp.text();
           const lines = fullText.split("\n");
@@ -969,6 +977,15 @@ export function BibleBotChat() {
 
       {/* Input */}
       <div className="border-t border-border p-3">
+        {widgetLimitExceeded && (
+          <div className="mb-2 rounded-lg border border-primary/20 bg-primary/5 px-3 py-2 text-xs text-muted-foreground flex items-start gap-2">
+            <Info className="h-3.5 w-3.5 mt-0.5 text-primary shrink-0" />
+            <span>
+              {t("chat.softLimit", "Diese Gemeinde nutzt das Senfkorn-Paket (gratis). Wenn dir BibleBot.Life hilft, sag deiner Gemeinde Bescheid – mit dem Leuchtturm-Paket bekommst du noch mehr.")}
+            </span>
+          </div>
+        )}
+
         <div className="flex items-end gap-2 rounded-3xl border border-border bg-background focus-within:border-primary/50 focus-within:shadow-[0_0_0_3px_hsl(var(--primary)/0.1)] transition-all px-3 py-2">
           <Textarea
             ref={textareaRef}
