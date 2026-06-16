@@ -946,14 +946,14 @@ export function ChatHero() {
                 className="flex-1 flex flex-col justify-center py-4 sm:py-8"
               >
                 {/* Title – instant, no delay */}
-                <h1
+                <div
                   className="text-3xl sm:text-4xl md:text-6xl font-bold text-foreground mb-2 sm:mb-3 leading-tight text-center"
                 >
                   {t("hero.title1")}
                   <span className="text-transparent bg-clip-text" style={{ backgroundImage: "var(--gradient-cta)" }}>
                     {t("hero.title2")}
                   </span>
-                </h1>
+                </div>
 
                 {/* Compact trust badges – inline */}
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3, delay: 0.1 }} className="mb-4 sm:mb-6 text-center">
