@@ -99,7 +99,8 @@ const InvoiceNotificationEmail = ({
       </Container>
     </Body>
   </Html>
-)
+  )
+}
 
 export const template = {
   component: InvoiceNotificationEmail,
@@ -107,14 +108,16 @@ export const template = {
     `Rechnung ${data.invoiceNumber || ''} – ${SITE_NAME}`,
   displayName: 'Rechnungsbenachrichtigung',
   previewData: {
-    churchName: 'Reformierte Kirche Zürich',
+    churchName: 'Gemeinde Musterhausen',
     invoiceNumber: 'INV-2026-0042',
     invoiceDate: '09.04.2026',
     dueDate: '30.04.2026',
     amount: '49.00',
     currency: 'CHF',
     downloadUrl: 'https://example.com/invoice.pdf',
-    contactName: 'Pfarrer Müller',
+    contactGender: 'female',
+    contactFirstName: 'Maria',
+    contactLastName: 'Müller',
   },
 } satisfies TemplateEntry
 
