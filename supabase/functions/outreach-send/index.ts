@@ -72,6 +72,7 @@ async function requireAuth(
 }
 
 const RESEND_GATEWAY = "https://connector-gateway.lovable.dev/resend";
+const DEFAULT_REPLY_TO = "reto@biblebot.life";
 
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") {
@@ -84,6 +85,7 @@ Deno.serve(async (req) => {
     const anonKey = Deno.env.get("SUPABASE_ANON_KEY")!;
     const resendKey = Deno.env.get("RESEND_API_KEY");
     const lovableKey = Deno.env.get("LOVABLE_API_KEY");
+    const replyTo = Deno.env.get("OUTREACH_REPLY_TO") || DEFAULT_REPLY_TO;
     const supabase = createClient(supabaseUrl, serviceKey);
 
     const authResult = await requireAuth(req, supabase, supabaseUrl, anonKey, serviceKey);
@@ -199,8 +201,16 @@ Deno.serve(async (req) => {
             body: JSON.stringify({
               from: `${campaign.sender_name} <${campaign.sender_email}>`,
               to: [lead.email],
+              reply_to: replyTo,
               subject,
               html: body,
+              tags: [
+                { name: "app", value: "biblebot" },
+                { name: "kind", value: "outreach" },
+                { name: "campaign_id", value: String(campaign.id) },
+                { name: "lead_id", value: String(lead.id) },
+                { name: "sequence_step", value: String(nextStep) },
+              ],
             }),
           });
 
