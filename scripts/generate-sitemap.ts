@@ -36,6 +36,7 @@ const staticEntries: Entry[] = [
   { path: "/datenschutz", changefreq: "yearly", priority: "0.3" },
   { path: "/guide/ai-bible-study", changefreq: "monthly", priority: "0.7" },
   { path: "/guide/discord-integration", changefreq: "monthly", priority: "0.7" },
+  { path: "/bibel-bot-vergleich", changefreq: "monthly", priority: "0.8" },
 ];
 
 async function fetchJson(path: string) {
