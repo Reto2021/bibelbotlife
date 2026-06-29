@@ -72,6 +72,9 @@ async function requireAuth(
 }
 
 const RESEND_GATEWAY = "https://connector-gateway.lovable.dev/resend";
+const DEFAULT_REPLY_TO = "reto@biblebot.life";
+const EMAIL_RE = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+const BAD_EMAIL_PATTERNS = /(%20|remove-this|\.jpg$|\.jpeg$|\.png$|\.gif$|\.webp$)/i;
 
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") {
@@ -84,6 +87,7 @@ Deno.serve(async (req) => {
     const anonKey = Deno.env.get("SUPABASE_ANON_KEY")!;
     const resendKey = Deno.env.get("RESEND_API_KEY");
     const lovableKey = Deno.env.get("LOVABLE_API_KEY");
+    const replyTo = Deno.env.get("OUTREACH_REPLY_TO") || DEFAULT_REPLY_TO;
     const supabase = createClient(supabaseUrl, serviceKey);
 
     const authResult = await requireAuth(req, supabase, supabaseUrl, anonKey, serviceKey);
@@ -157,7 +161,24 @@ Deno.serve(async (req) => {
         if ((sentToday || 0) + totalSent >= campaign.max_emails_per_day) break;
 
         // Check if blacklisted
-        const domain = lead.email.split("@")[1];
+        const email = String(lead.email || "").trim().toLowerCase();
+        if (!EMAIL_RE.test(email) || BAD_EMAIL_PATTERNS.test(email)) {
+          await supabase
+            .from("outreach_leads")
+            .update({ status: "unsubscribed" })
+            .eq("id", lead.id);
+          await supabase.from("outreach_emails").insert({
+            lead_id: lead.id,
+            sequence_step: lead.current_step + 1,
+            subject: "Skipped invalid email",
+            body: `Invalid recipient address: ${lead.email}`,
+            status: "failed_system",
+            error_message: `Skipped invalid recipient address: ${lead.email}`,
+          });
+          continue;
+        }
+
+        const domain = email.split("@")[1];
         if (campaign.blacklist_domains?.includes(domain)) continue;
 
         const nextStep = lead.current_step + 1;
@@ -174,7 +195,8 @@ Deno.serve(async (req) => {
 
         // Personalize template
         const subject = personalizeTemplate(sequence.subject_template, lead, campaign);
-        const body = personalizeTemplate(sequence.body_template, lead, campaign);
+        const bodyText = personalizeTemplate(sequence.body_template, lead, campaign);
+        const body = renderEmailHtml(bodyText);
 
         // Send via Resend
         try {
@@ -198,9 +220,18 @@ Deno.serve(async (req) => {
             headers: sendHeaders,
             body: JSON.stringify({
               from: `${campaign.sender_name} <${campaign.sender_email}>`,
-              to: [lead.email],
+              to: [email],
+              reply_to: replyTo,
               subject,
               html: body,
+              text: bodyText,
+              tags: [
+                { name: "app", value: "biblebot" },
+                { name: "kind", value: "outreach" },
+                { name: "campaign_id", value: String(campaign.id) },
+                { name: "lead_id", value: String(lead.id) },
+                { name: "sequence_step", value: String(nextStep) },
+              ],
             }),
           });
 
@@ -346,4 +377,45 @@ function personalizeTemplate(template: string, lead: any, campaign: any): string
     .replace(/\{\{primaryColor\}\}/g, primaryColor)
     .replace(/\{\{logoUrl\}\}/g, lead.logo_url || "")
     .replace(/\{\{screenshotBlock\}\}/g, screenshotBlock);
+}
+
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function linkifyEscapedLine(line: string): string {
+  return line.replace(/(https:\/\/[^\s<]+)/g, (url) => {
+    const href = url.replace(/&amp;/g, "&");
+    return `<a href="${href}" style="color:#C8883A;text-decoration:underline;">${url}</a>`;
+  });
+}
+
+function renderEmailHtml(bodyText: string): string {
+  if (/<\/?[a-z][\s\S]*>/i.test(bodyText)) return bodyText;
+
+  const paragraphs = bodyText
+    .trim()
+    .split(/\n\s*\n/g)
+    .map((paragraph) => {
+      const html = paragraph
+        .split("\n")
+        .map((line) => linkifyEscapedLine(escapeHtml(line)).replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>"))
+        .join("<br />");
+      return `<p style="margin:0 0 16px;line-height:1.55;">${html}</p>`;
+    })
+    .join("\n");
+
+  return `<!doctype html>
+<html>
+  <body style="margin:0;padding:0;background:#ffffff;color:#1f2937;font-family:Arial,Helvetica,sans-serif;font-size:16px;">
+    <div style="max-width:640px;margin:0 auto;padding:24px;">
+      ${paragraphs}
+    </div>
+  </body>
+</html>`;
 }
