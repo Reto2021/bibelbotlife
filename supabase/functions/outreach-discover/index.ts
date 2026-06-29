@@ -245,8 +245,26 @@ Regeln:
       });
     }
 
+    const BAD_EMAIL_PREFIXES = /^(noreply|no-reply|donotreply|info-?bounce|mailer-daemon|postmaster|abuse|webmaster)@/i;
+    const BAD_EMAIL_PATTERNS = /(%20|remove-this|\.jpg$|\.jpeg$|\.png$|\.gif$|\.webp$)/i;
+    const EMAIL_RE = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    const cleanLeads = validLeads
+      .map((lead: any) => ({ ...lead, email: String(lead.email || "").trim().toLowerCase() }))
+      .filter((lead: any) =>
+        EMAIL_RE.test(lead.email) &&
+        !BAD_EMAIL_PREFIXES.test(lead.email) &&
+        !BAD_EMAIL_PATTERNS.test(lead.email)
+      );
+
+    if (!cleanLeads.length) {
+      return new Response(JSON.stringify({ discovered: extracted.length, imported: 0, skipped: extracted.length, leads: extracted }), {
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+
     // Step 3: Deduplicate against existing leads
-    const emails = validLeads.map((l: any) => l.email.toLowerCase().trim());
+    const emails = cleanLeads.map((l: any) => l.email);
     const { data: existing } = await supabase
       .from("outreach_leads")
       .select("email")
@@ -254,14 +272,14 @@ Regeln:
       .in("email", emails);
 
     const existingEmails = new Set((existing || []).map((e: any) => e.email.toLowerCase()));
-    const newLeads = validLeads.filter((l: any) => !existingEmails.has(l.email.toLowerCase().trim()));
+    const newLeads = cleanLeads.filter((l: any) => !existingEmails.has(l.email));
 
     // Step 4: Insert new leads
     if (newLeads.length > 0) {
       const rows = newLeads.map((l: any) => ({
         campaign_id,
         church_name: l.church_name,
-        email: l.email.trim(),
+        email: l.email,
         website: l.website || null,
         city: l.city || null,
         denomination: l.denomination || null,
@@ -277,7 +295,7 @@ Regeln:
     return new Response(JSON.stringify({
       discovered: extracted.length,
       imported: newLeads.length,
-      skipped: validLeads.length - newLeads.length,
+      skipped: extracted.length - newLeads.length,
       no_email: extracted.filter((e: any) => !e.email).length,
       used_fallback: usedFallback,
       leads: extracted,
