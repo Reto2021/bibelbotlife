@@ -195,7 +195,8 @@ Deno.serve(async (req) => {
 
         // Personalize template
         const subject = personalizeTemplate(sequence.subject_template, lead, campaign);
-        const body = personalizeTemplate(sequence.body_template, lead, campaign);
+        const bodyText = personalizeTemplate(sequence.body_template, lead, campaign);
+        const body = renderEmailHtml(bodyText);
 
         // Send via Resend
         try {
@@ -223,6 +224,7 @@ Deno.serve(async (req) => {
               reply_to: replyTo,
               subject,
               html: body,
+              text: bodyText,
               tags: [
                 { name: "app", value: "biblebot" },
                 { name: "kind", value: "outreach" },
@@ -375,4 +377,45 @@ function personalizeTemplate(template: string, lead: any, campaign: any): string
     .replace(/\{\{primaryColor\}\}/g, primaryColor)
     .replace(/\{\{logoUrl\}\}/g, lead.logo_url || "")
     .replace(/\{\{screenshotBlock\}\}/g, screenshotBlock);
+}
+
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function linkifyEscapedLine(line: string): string {
+  return line.replace(/(https:\/\/[^\s<]+)/g, (url) => {
+    const href = url.replace(/&amp;/g, "&");
+    return `<a href="${href}" style="color:#C8883A;text-decoration:underline;">${url}</a>`;
+  });
+}
+
+function renderEmailHtml(bodyText: string): string {
+  if (/<\/?[a-z][\s\S]*>/i.test(bodyText)) return bodyText;
+
+  const paragraphs = bodyText
+    .trim()
+    .split(/\n\s*\n/g)
+    .map((paragraph) => {
+      const html = paragraph
+        .split("\n")
+        .map((line) => linkifyEscapedLine(escapeHtml(line)).replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>"))
+        .join("<br />");
+      return `<p style="margin:0 0 16px;line-height:1.55;">${html}</p>`;
+    })
+    .join("\n");
+
+  return `<!doctype html>
+<html>
+  <body style="margin:0;padding:0;background:#ffffff;color:#1f2937;font-family:Arial,Helvetica,sans-serif;font-size:16px;">
+    <div style="max-width:640px;margin:0 auto;padding:24px;">
+      ${paragraphs}
+    </div>
+  </body>
+</html>`;
 }
