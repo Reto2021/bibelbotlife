@@ -15,6 +15,13 @@ import { useToast } from "@/hooks/use-toast";
 import { useTrack } from "@/components/AnalyticsProvider";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Shimmer } from "@/components/ai-elements/shimmer";
+import {
+  PromptInput,
+  PromptInputTextarea,
+  PromptInputFooter,
+  PromptInputSubmit,
+  PromptInputTools,
+} from "@/components/ai-elements/prompt-input";
 
 
 const STT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/elevenlabs-stt`;
