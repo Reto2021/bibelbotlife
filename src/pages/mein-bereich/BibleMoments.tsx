@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Clock, MapPin, Heart, CloudRain, CalendarDays, Plus, Trash2, Sparkle, Bell, BellRing, CalendarClock } from "lucide-react";
+import { ArrowLeft, Clock, MapPin, Heart, CloudRain, CalendarDays, Plus, Trash2, Sparkle, Bell, BellRing, CalendarClock, Mic, Square, Loader2 } from "lucide-react";
 import { useUserPushSubscription } from "@/hooks/use-user-push-subscription";
 
 import { SEOHead } from "@/components/SEOHead";
