@@ -249,6 +249,33 @@ function AddMomentDialog() {
             </div>
           )}
 
+          {triggerType === "calendar" && (
+            <div className="space-y-3 rounded-md border border-primary/20 bg-primary/5 p-3">
+              <div className="space-y-2">
+                <Label htmlFor="cal-event">Termin / Anlass</Label>
+                <Input
+                  id="cal-event"
+                  placeholder="z.B. Prüfung, Beerdigung, Predigt"
+                  value={calEvent}
+                  onChange={(e) => setCalEvent(e.target.value)}
+                  maxLength={120}
+                />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="cal-date">Datum</Label>
+                <Input
+                  id="cal-date"
+                  type="date"
+                  value={calDate}
+                  onChange={(e) => setCalDate(e.target.value)}
+                />
+              </div>
+              <p className="text-xs text-muted-foreground">
+                Du bekommst am Vortag einen passenden Vers mit kurzem Impuls.
+              </p>
+            </div>
+          )}
+
           <div className="space-y-2">
             <Label>Kanal</Label>
             <Select value={channel} onValueChange={setChannel}>
