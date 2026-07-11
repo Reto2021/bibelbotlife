@@ -44,6 +44,13 @@ const MeinBereichHome = () => {
       href: "/mein-bereich/journal",
       available: true,
     },
+    {
+      titleKey: "bibleMoments.tile.title",
+      descKey: "bibleMoments.tile.desc",
+      icon: Sparkle,
+      href: "/mein-bereich/momente",
+      available: true,
+    },
   ];
 
   return (
