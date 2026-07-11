@@ -389,6 +389,13 @@ export function ChatHero() {
     quote: t(`dailyVerses.v${dailyVerseIdx}`),
     ref: t(`dailyVerses.r${dailyVerseIdx}`),
   }), [dailyVerseIdx, t]);
+  const heroVariant = useMemo(() => getHeroVariant(), []);
+  const heroViewTrackedRef = useRef(false);
+  useEffect(() => {
+    if (heroViewTrackedRef.current) return;
+    heroViewTrackedRef.current = true;
+    track("hero_variant_view", { variant: heroVariant });
+  }, [heroVariant, track]);
 
   // Senior mode size classes
   const s = {
