@@ -630,6 +630,7 @@ export function ChatHero() {
     async (text: string) => {
       if (!text.trim() || isLoading) return;
       track("chat_hero_submit", user ? { query: text.slice(0, 50) } : {});
+      track("hero_variant_cta_click", { variant: heroVariant });
 
       const userMsg: ChatMessage = { role: "user", content: text.trim() };
 
