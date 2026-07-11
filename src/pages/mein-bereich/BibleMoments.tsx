@@ -85,6 +85,90 @@ function TriggerIcon({ type, className }: { type: BibleMomentTrigger; className?
   return <Icon className={className} />;
 }
 
+function VoiceCapture({ onTranscript }: { onTranscript: (text: string) => void }) {
+  const [state, setState] = useState<"idle" | "recording" | "transcribing">("idle");
+  const recorderRef = useRef<MediaRecorder | null>(null);
+  const chunksRef = useRef<Blob[]>([]);
+
+  async function start() {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      const mime = MediaRecorder.isTypeSupported("audio/webm") ? "audio/webm" : "audio/mp4";
+      const rec = new MediaRecorder(stream, { mimeType: mime });
+      chunksRef.current = [];
+      rec.ondataavailable = (e) => { if (e.data.size > 0) chunksRef.current.push(e.data); };
+      rec.onstop = async () => {
+        stream.getTracks().forEach((t) => t.stop());
+        const blob = new Blob(chunksRef.current, { type: rec.mimeType });
+        if (blob.size < 800) { setState("idle"); return; }
+        setState("transcribing");
+        try {
+          const fd = new FormData();
+          fd.append("audio", blob, "recording.webm");
+          fd.append("language", "de");
+          const resp = await fetch(
+            `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/elevenlabs-stt`,
+            {
+              method: "POST",
+              headers: {
+                apikey: import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
+                Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+              },
+              body: fd,
+            },
+          );
+          if (!resp.ok) throw new Error("stt_failed");
+          const data = await resp.json();
+          const text = String(data?.text ?? "").trim();
+          if (text) onTranscript(text);
+          else toast.info("Nichts erkannt — bitte nochmals versuchen");
+        } catch {
+          toast.error("Sprach-Erkennung fehlgeschlagen");
+        } finally {
+          setState("idle");
+        }
+      };
+      rec.start();
+      recorderRef.current = rec;
+      setState("recording");
+    } catch {
+      toast.error("Kein Mikrofon-Zugriff");
+    }
+  }
+
+  function stop() {
+    recorderRef.current?.stop();
+  }
+
+  if (state === "transcribing") {
+    return (
+      <span className="inline-flex items-center gap-1 text-xs text-muted-foreground">
+        <Loader2 className="h-3.5 w-3.5 animate-spin" /> übersetze…
+      </span>
+    );
+  }
+
+  return (
+    <Button
+      type="button"
+      size="sm"
+      variant={state === "recording" ? "default" : "outline"}
+      className="h-8 gap-1.5"
+      onClick={state === "recording" ? stop : start}
+    >
+      {state === "recording" ? (
+        <>
+          <Square className="h-3.5 w-3.5 fill-current" /> Stopp
+        </>
+      ) : (
+        <>
+          <Mic className="h-3.5 w-3.5" /> Einsprechen
+        </>
+      )}
+    </Button>
+  );
+}
+
 const CHANNELS = [
   { value: "inapp", label: "In der App" },
   { value: "push", label: "Push-Benachrichtigung" },
