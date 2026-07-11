@@ -244,6 +244,32 @@ export default function GedaechtnisPage() {
         </CardContent>
       </Card>
 
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-lg flex items-center gap-2">
+            <MessageSquare className="h-5 w-5 text-primary" /> Chats & Prompts
+          </CardTitle>
+          <CardDescription>
+            Exportiere deine BibleBot-Chats als Markdown (portabel für andere KIs)
+            oder importiere einen Prompt aus einer .md-Datei, um einen neuen Chat zu starten.
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="flex flex-wrap gap-3">
+          <Button onClick={handleExportChats} disabled={exporting || !user} variant="outline">
+            <Download className="h-4 w-4 mr-2" />
+            {exporting ? "Exportiere…" : "Chats als .md exportieren"}
+          </Button>
+          <label>
+            <input type="file" accept=".md,.txt,.markdown" onChange={handleImportPrompt} className="hidden" />
+            <span className="inline-flex items-center gap-2 h-10 px-4 rounded-md border border-input bg-background hover:bg-accent cursor-pointer text-sm">
+              <FileUp className="h-4 w-4" /> Prompt aus .md importieren
+            </span>
+          </label>
+        </CardContent>
+      </Card>
+
+
+
       <div className="space-y-3">
         <h2 className="text-lg font-medium">Gespeicherte Erinnerungen</h2>
         {memories.isLoading && <p className="text-sm text-muted-foreground">Lade…</p>}
