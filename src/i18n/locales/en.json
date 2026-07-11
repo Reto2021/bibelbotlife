@@ -26,6 +26,12 @@
     },
     "title1": "The Bible.",
     "title2": " Reimagined.",
+    "title1_praesenz": "Presence & Wisdom",
+    "title2_praesenz": " for your path.",
+    "title1_begleiter": "Your personal",
+    "title2_begleiter": " Bible companion.",
+    "title1_leben": "The Bible",
+    "title2_leben": " in your life.",
     "subtitle": "2,000 years of wisdom. Available 24/7. No judgment. — The only companion that knows the Bible, asks instead of answers, and never leaves you alone.",
     "ctaTelegram": "Start via Telegram",
     "ctaMore": "Learn more",
@@ -2136,6 +2142,12 @@
       "27": "Which decision lies before me where I need wisdom?",
       "28": "What moved or touched me today?",
       "29": "How do I want to look back on today a year from now?"
+    }
+  },
+  "memory": {
+    "tile": {
+      "title": "AI Memory",
+      "desc": "Import what ChatGPT, Claude or Gemini already knows about you"
     }
   }
 }

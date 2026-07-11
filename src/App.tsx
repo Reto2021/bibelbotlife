@@ -52,6 +52,7 @@ const BaptismWriter = lazy(() => import("./pages/mein-bereich/BaptismWriter"));
 const ConfirmationWriter = lazy(() => import("./pages/mein-bereich/ConfirmationWriter"));
 const JournalPage = lazy(() => import("./pages/mein-bereich/JournalPage"));
 const BibleMoments = lazy(() => import("./pages/mein-bereich/BibleMoments"));
+const GedaechtnisPage = lazy(() => import("./pages/mein-bereich/GedaechtnisPage"));
 const SharedDraft = lazy(() => import("./pages/SharedDraft"));
 const AdminDashboard = lazy(() => import("./pages/admin/AdminDashboard"));
 const OutreachAdmin = lazy(() => import("./pages/admin/OutreachAdmin"));
@@ -232,6 +233,7 @@ const App = () => {
                     <Route path="konfirmation" element={<ConfirmationWriter />} />
                     <Route path="journal" element={<JournalPage />} />
                     <Route path="momente" element={<BibleMoments />} />
+                    <Route path="gedaechtnis" element={<GedaechtnisPage />} />
                   </Route>
                   <Route path="/shared/:token" element={<SharedDraft />} />
                   <Route path="/admin" element={<ProtectedAdminRoute><AdminDashboard /></ProtectedAdminRoute>} />

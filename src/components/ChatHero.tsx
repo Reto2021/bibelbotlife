@@ -20,6 +20,7 @@ import { useChatHistory, type ChatMessage } from "@/hooks/use-chat-history";
 import { ChatSidebar } from "@/components/ChatSidebar";
 import { useAuth } from "@/hooks/use-auth";
 import { useChurchBranding } from "@/hooks/use-church-branding";
+import { getHeroVariant } from "@/lib/hero-variant";
 
 const TYPEWRITER_SPEED = 45;
 const PAUSE_BETWEEN = 2800;
@@ -388,6 +389,13 @@ export function ChatHero() {
     quote: t(`dailyVerses.v${dailyVerseIdx}`),
     ref: t(`dailyVerses.r${dailyVerseIdx}`),
   }), [dailyVerseIdx, t]);
+  const heroVariant = useMemo(() => getHeroVariant(), []);
+  const heroViewTrackedRef = useRef(false);
+  useEffect(() => {
+    if (heroViewTrackedRef.current) return;
+    heroViewTrackedRef.current = true;
+    track("hero_variant_view", { variant: heroVariant });
+  }, [heroVariant, track]);
 
   // Senior mode size classes
   const s = {
@@ -622,6 +630,7 @@ export function ChatHero() {
     async (text: string) => {
       if (!text.trim() || isLoading) return;
       track("chat_hero_submit", user ? { query: text.slice(0, 50) } : {});
+      track("hero_variant_cta_click", { variant: heroVariant });
 
       const userMsg: ChatMessage = { role: "user", content: text.trim() };
 
@@ -953,9 +962,9 @@ export function ChatHero() {
                     className="pointer-events-none absolute inset-x-0 -top-16 h-64 bg-glow animate-candle"
                   />
                   <h1 className="font-display font-normal text-5xl sm:text-6xl md:text-7xl text-foreground leading-[1.05] tracking-tight text-balance">
-                    {t("hero.title1")}
+                    {t(`hero.title1_${heroVariant}`)}
                     <span className="italic text-primary block sm:inline">
-                      {t("hero.title2")}
+                      {t(`hero.title2_${heroVariant}`)}
                     </span>
                   </h1>
                 </div>
