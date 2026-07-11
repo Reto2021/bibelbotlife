@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Clock, MapPin, Heart, CloudRain, CalendarDays, Plus, Trash2, Sparkle, Bell, BellRing, CalendarClock } from "lucide-react";
+import { ArrowLeft, Clock, MapPin, Heart, CloudRain, CalendarDays, Plus, Trash2, Sparkle, Bell, BellRing, CalendarClock, Mic, Square, Loader2 } from "lucide-react";
 import { useUserPushSubscription } from "@/hooks/use-user-push-subscription";
 
 import { SEOHead } from "@/components/SEOHead";
@@ -83,6 +83,90 @@ function TriggerIcon({ type, className }: { type: BibleMomentTrigger; className?
   const meta = TRIGGERS.find((t) => t.type === type);
   const Icon = meta?.icon ?? Sparkle;
   return <Icon className={className} />;
+}
+
+function VoiceCapture({ onTranscript }: { onTranscript: (text: string) => void }) {
+  const [state, setState] = useState<"idle" | "recording" | "transcribing">("idle");
+  const recorderRef = useRef<MediaRecorder | null>(null);
+  const chunksRef = useRef<Blob[]>([]);
+
+  async function start() {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      const mime = MediaRecorder.isTypeSupported("audio/webm") ? "audio/webm" : "audio/mp4";
+      const rec = new MediaRecorder(stream, { mimeType: mime });
+      chunksRef.current = [];
+      rec.ondataavailable = (e) => { if (e.data.size > 0) chunksRef.current.push(e.data); };
+      rec.onstop = async () => {
+        stream.getTracks().forEach((t) => t.stop());
+        const blob = new Blob(chunksRef.current, { type: rec.mimeType });
+        if (blob.size < 800) { setState("idle"); return; }
+        setState("transcribing");
+        try {
+          const fd = new FormData();
+          fd.append("audio", blob, "recording.webm");
+          fd.append("language", "de");
+          const resp = await fetch(
+            `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/elevenlabs-stt`,
+            {
+              method: "POST",
+              headers: {
+                apikey: import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
+                Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+              },
+              body: fd,
+            },
+          );
+          if (!resp.ok) throw new Error("stt_failed");
+          const data = await resp.json();
+          const text = String(data?.text ?? "").trim();
+          if (text) onTranscript(text);
+          else toast.info("Nichts erkannt — bitte nochmals versuchen");
+        } catch {
+          toast.error("Sprach-Erkennung fehlgeschlagen");
+        } finally {
+          setState("idle");
+        }
+      };
+      rec.start();
+      recorderRef.current = rec;
+      setState("recording");
+    } catch {
+      toast.error("Kein Mikrofon-Zugriff");
+    }
+  }
+
+  function stop() {
+    recorderRef.current?.stop();
+  }
+
+  if (state === "transcribing") {
+    return (
+      <span className="inline-flex items-center gap-1 text-xs text-muted-foreground">
+        <Loader2 className="h-3.5 w-3.5 animate-spin" /> übersetze…
+      </span>
+    );
+  }
+
+  return (
+    <Button
+      type="button"
+      size="sm"
+      variant={state === "recording" ? "default" : "outline"}
+      className="h-8 gap-1.5"
+      onClick={state === "recording" ? stop : start}
+    >
+      {state === "recording" ? (
+        <>
+          <Square className="h-3.5 w-3.5 fill-current" /> Stopp
+        </>
+      ) : (
+        <>
+          <Mic className="h-3.5 w-3.5" /> Einsprechen
+        </>
+      )}
+    </Button>
+  );
 }
 
 const CHANNELS = [
@@ -252,13 +336,33 @@ function AddMomentDialog() {
           {triggerType === "calendar" && (
             <div className="space-y-3 rounded-md border border-primary/20 bg-primary/5 p-3">
               <div className="space-y-2">
-                <Label htmlFor="cal-event">Termin / Anlass</Label>
+                <div className="flex items-center justify-between gap-2">
+                  <Label htmlFor="cal-event">Termin / Anlass</Label>
+                  <VoiceCapture
+                    onTranscript={(text) => {
+                      setCalEvent((prev) => (prev ? prev + " " + text : text));
+                      // Try to extract a date like 15.11. / 15.11.2026 / 2026-11-15
+                      const dm = text.match(/(\d{1,2})[.\/-](\d{1,2})(?:[.\/-](\d{2,4}))?/);
+                      const iso = text.match(/(\d{4})-(\d{2})-(\d{2})/);
+                      if (iso && !calDate) {
+                        setCalDate(`${iso[1]}-${iso[2]}-${iso[3]}`);
+                      } else if (dm && !calDate) {
+                        const d = dm[1].padStart(2, "0");
+                        const m = dm[2].padStart(2, "0");
+                        let y = dm[3];
+                        if (!y) y = String(new Date().getFullYear());
+                        else if (y.length === 2) y = "20" + y;
+                        setCalDate(`${y}-${m}-${d}`);
+                      }
+                    }}
+                  />
+                </div>
                 <Input
                   id="cal-event"
-                  placeholder="z.B. Prüfung, Beerdigung, Predigt"
+                  placeholder="z.B. Prüfung, Beerdigung, Predigt — oder einsprechen"
                   value={calEvent}
                   onChange={(e) => setCalEvent(e.target.value)}
-                  maxLength={120}
+                  maxLength={200}
                 />
               </div>
               <div className="space-y-2">
@@ -271,7 +375,7 @@ function AddMomentDialog() {
                 />
               </div>
               <p className="text-xs text-muted-foreground">
-                Du bekommst am Vortag einen passenden Vers mit kurzem Impuls.
+                Du bekommst am Vortag einen passenden Vers mit kurzem Impuls. Beim Einsprechen wird ein erkanntes Datum automatisch übernommen.
               </p>
             </div>
           )}
