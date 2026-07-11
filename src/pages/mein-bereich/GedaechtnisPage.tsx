@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { SEOHead } from "@/components/SEOHead";
-import { Brain, Upload, Trash2, Download } from "lucide-react";
+import { Brain, Upload, Trash2, Download, MessageSquare, FileUp } from "lucide-react";
 import {
   useUserMemories,
   useImportMemory,
@@ -14,7 +14,12 @@ import {
   useDeleteMemory,
   type MemorySource,
 } from "@/hooks/use-user-memory";
+import { supabase } from "@/integrations/supabase/client";
+import { useAuth } from "@/hooks/use-auth";
+import { openBibleBotChat } from "@/lib/chat-events";
+import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
+
 
 const SOURCE_LABELS: Record<MemorySource, string> = {
   gpt: "ChatGPT",
