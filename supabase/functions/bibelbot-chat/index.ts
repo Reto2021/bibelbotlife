@@ -2046,8 +2046,8 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          model: "google/gemini-3-flash-preview",
-          temperature: 0.8,
+          model: "openai/gpt-5.5",
+          service_tier: "priority",
           messages: [
             { role: "system", content: systemPrompt },
             ...finalMessages,
