@@ -69,6 +69,14 @@ const TRIGGERS: Array<{
     defaultLabel: "Jahrestag",
     defaultConfig: { date: "" },
   },
+  {
+    type: "calendar",
+    icon: CalendarClock,
+    title: "Kalender-Termin",
+    desc: "Trag Termine ein — Prüfung, Beerdigung, Predigt — und bekomm am Vortag einen stärkenden Vers.",
+    defaultLabel: "Wichtiger Termin",
+    defaultConfig: { event: "", date: "", lead_hours: 20 },
+  },
 ];
 
 function TriggerIcon({ type, className }: { type: BibleMomentTrigger; className?: string }) {
