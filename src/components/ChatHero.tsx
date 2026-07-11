@@ -20,6 +20,7 @@ import { useChatHistory, type ChatMessage } from "@/hooks/use-chat-history";
 import { ChatSidebar } from "@/components/ChatSidebar";
 import { useAuth } from "@/hooks/use-auth";
 import { useChurchBranding } from "@/hooks/use-church-branding";
+import { getHeroVariant } from "@/lib/hero-variant";
 
 const TYPEWRITER_SPEED = 45;
 const PAUSE_BETWEEN = 2800;
