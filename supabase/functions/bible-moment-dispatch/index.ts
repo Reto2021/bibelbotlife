@@ -183,9 +183,9 @@ Deno.serve(async (req) => {
         moment_id: (m as any).id,
         user_id: (m as any).user_id,
         channel: (m as any).delivery_channel,
-        payload: {},
         status: "error",
-        error_message: e?.message ?? "unknown",
+        error: e?.message ?? "unknown",
+
       });
     }
   }
