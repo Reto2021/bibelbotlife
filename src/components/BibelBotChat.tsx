@@ -953,13 +953,12 @@ export function BibleBotChat() {
 
         {isLoading && messages[messages.length - 1]?.role !== "assistant" && (
           <div className="flex justify-start">
-            <div className={`bg-muted rounded-2xl rounded-bl-md px-4 py-3 flex items-center gap-1`}>
-              <span className="h-2 w-2 rounded-full bg-muted-foreground/60 animate-bounce" style={{ animationDelay: "0ms" }} />
-              <span className="h-2 w-2 rounded-full bg-muted-foreground/60 animate-bounce" style={{ animationDelay: "150ms" }} />
-              <span className="h-2 w-2 rounded-full bg-muted-foreground/60 animate-bounce" style={{ animationDelay: "300ms" }} />
+            <div className="rounded-2xl rounded-bl-md px-4 py-3">
+              <Shimmer className="text-sm">{t("chat.thinking", "Ich denke nach ...")}</Shimmer>
             </div>
           </div>
         )}
+
       </div>
 
       {/* Scroll-to-bottom button */}
