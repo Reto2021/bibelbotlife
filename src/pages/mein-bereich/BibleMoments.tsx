@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Clock, MapPin, Heart, CloudRain, CalendarDays, Plus, Trash2, Sparkle } from "lucide-react";
+import { ArrowLeft, Clock, MapPin, Heart, CloudRain, CalendarDays, Plus, Trash2, Sparkle, Bell, BellRing } from "lucide-react";
+import { useUserPushSubscription } from "@/hooks/use-user-push-subscription";
+
 import { SEOHead } from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
