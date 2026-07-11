@@ -3,7 +3,15 @@ import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/use-auth";
 import { toast } from "sonner";
 
-export type BibleMomentTrigger = "time" | "location" | "mood" | "weather" | "event";
+export type BibleMomentTrigger =
+  | "time"
+  | "location"
+  | "mood"
+  | "weather"
+  | "event"
+  | "calendar"
+  | "journal_mood"
+  | "memory_topic";
 export type BibleMomentChannel = "inapp" | "push" | "sms" | "telegram" | "email";
 
 export interface BibleMoment {
