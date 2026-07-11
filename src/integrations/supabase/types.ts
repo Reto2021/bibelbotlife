@@ -2579,6 +2579,36 @@ export type Database = {
         }
         Relationships: []
       }
+      user_memory: {
+        Row: {
+          content: string
+          id: string
+          imported_at: string
+          is_active: boolean
+          source: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          content: string
+          id?: string
+          imported_at?: string
+          is_active?: boolean
+          source: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          content?: string
+          id?: string
+          imported_at?: string
+          is_active?: boolean
+          source?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       user_push_subscriptions: {
         Row: {
           created_at: string
@@ -3234,7 +3264,15 @@ export type Database = {
     }
     Enums: {
       app_role: "admin" | "moderator" | "user"
-      bible_moment_trigger: "time" | "location" | "mood" | "weather" | "event"
+      bible_moment_trigger:
+        | "time"
+        | "location"
+        | "mood"
+        | "weather"
+        | "event"
+        | "calendar"
+        | "journal_mood"
+        | "memory_topic"
       ceremony_type: "funeral" | "wedding" | "baptism" | "confirmation"
       church_plan_tier: "free" | "community" | "gemeinde" | "kirche"
       confession_tradition:
@@ -3425,7 +3463,16 @@ export const Constants = {
   public: {
     Enums: {
       app_role: ["admin", "moderator", "user"],
-      bible_moment_trigger: ["time", "location", "mood", "weather", "event"],
+      bible_moment_trigger: [
+        "time",
+        "location",
+        "mood",
+        "weather",
+        "event",
+        "calendar",
+        "journal_mood",
+        "memory_topic",
+      ],
       ceremony_type: ["funeral", "wedding", "baptism", "confirmation"],
       church_plan_tier: ["free", "community", "gemeinde", "kirche"],
       confession_tradition: [
