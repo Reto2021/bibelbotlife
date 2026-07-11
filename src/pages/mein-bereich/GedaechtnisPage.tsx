@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { SEOHead } from "@/components/SEOHead";
-import { Brain, Upload, Trash2, Download, MessageSquare, FileUp } from "lucide-react";
+import { Brain, Upload, Trash2, Download, MessageSquare, FileUp, Sparkles } from "lucide-react";
 import {
   useUserMemories,
   useImportMemory,
@@ -38,6 +38,7 @@ export default function GedaechtnisPage() {
   const [content, setContent] = useState("");
   const [source, setSource] = useState<MemorySource>("gpt");
   const [exporting, setExporting] = useState(false);
+  const [extracting, setExtracting] = useState(false);
   const memories = useUserMemories();
   const importMem = useImportMemory();
   const updateMem = useUpdateMemory();
@@ -265,6 +266,33 @@ export default function GedaechtnisPage() {
               <FileUp className="h-4 w-4" /> Prompt aus .md importieren
             </span>
           </label>
+          <Button
+            onClick={async () => {
+              if (!user) return;
+              setExtracting(true);
+              try {
+                const { data, error } = await supabase.functions.invoke("memory-auto-extract", {
+                  body: { limit_messages: 100 },
+                });
+                if (error) throw error;
+                const n = (data as any)?.extracted ?? 0;
+                if (n > 0) {
+                  toast.success(`${n} Erinnerung${n === 1 ? "" : "en"} aus Chats destilliert`);
+                  memories.refetch();
+                } else {
+                  toast.info("Keine neuen Erkenntnisse aus den letzten Chats");
+                }
+              } catch (e: any) {
+                toast.error(e.message ?? "Fehler bei der Extraktion");
+              } finally {
+                setExtracting(false);
+              }
+            }}
+            disabled={extracting || !user}
+          >
+            <Sparkles className="h-4 w-4 mr-2" />
+            {extracting ? "Destilliere…" : "Aus Chats destillieren"}
+          </Button>
         </CardContent>
       </Card>
 

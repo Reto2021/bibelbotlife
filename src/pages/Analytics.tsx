@@ -20,6 +20,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { HeroVariantStats } from "@/components/admin/HeroVariantStats";
 
 type AnalyticsData = {
   period: { days: number; since: string };
@@ -1103,6 +1104,8 @@ const Analytics = () => {
             </CardContent>
           </Card>
         )}
+
+        <HeroVariantStats />
 
         {/* User Flows */}
         <Card>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Clock, MapPin, Heart, CloudRain, CalendarDays, Plus, Trash2, Sparkle, Bell, BellRing } from "lucide-react";
+import { ArrowLeft, Clock, MapPin, Heart, CloudRain, CalendarDays, Plus, Trash2, Sparkle, Bell, BellRing, CalendarClock } from "lucide-react";
 import { useUserPushSubscription } from "@/hooks/use-user-push-subscription";
 
 import { SEOHead } from "@/components/SEOHead";
@@ -68,6 +68,14 @@ const TRIGGERS: Array<{
     desc: "Geburtstage, Jahrestage oder selbst gesetzte schwere Tage.",
     defaultLabel: "Jahrestag",
     defaultConfig: { date: "" },
+  },
+  {
+    type: "calendar",
+    icon: CalendarClock,
+    title: "Kalender-Termin",
+    desc: "Trag Termine ein — Prüfung, Beerdigung, Predigt — und bekomm am Vortag einen stärkenden Vers.",
+    defaultLabel: "Wichtiger Termin",
+    defaultConfig: { event: "", date: "", lead_hours: 20 },
   },
 ];
 
@@ -148,12 +156,23 @@ function AddMomentDialog() {
   const [channel, setChannel] = useState<string>("inapp");
   const create = useCreateBibleMoment();
 
+  const [calEvent, setCalEvent] = useState("");
+  const [calDate, setCalDate] = useState("");
+
   const meta = TRIGGERS.find((t) => t.type === triggerType);
 
   function handleCreate() {
     const finalLabel = label.trim() || meta?.defaultLabel || "Bible Moment";
     const config = { ...(meta?.defaultConfig ?? {}) };
     if (triggerType === "time") config.time = time;
+    if (triggerType === "calendar") {
+      if (!calDate) {
+        toast.error("Bitte ein Datum wählen");
+        return;
+      }
+      config.event = calEvent.trim();
+      config.date = calDate;
+    }
 
     create.mutate(
       {
@@ -167,6 +186,8 @@ function AddMomentDialog() {
           toast.success("Bible Moment angelegt");
           setOpen(false);
           setLabel("");
+          setCalEvent("");
+          setCalDate("");
         },
       },
     );
@@ -225,6 +246,33 @@ function AddMomentDialog() {
             <div className="space-y-2">
               <Label htmlFor="time">Uhrzeit</Label>
               <Input id="time" type="time" value={time} onChange={(e) => setTime(e.target.value)} />
+            </div>
+          )}
+
+          {triggerType === "calendar" && (
+            <div className="space-y-3 rounded-md border border-primary/20 bg-primary/5 p-3">
+              <div className="space-y-2">
+                <Label htmlFor="cal-event">Termin / Anlass</Label>
+                <Input
+                  id="cal-event"
+                  placeholder="z.B. Prüfung, Beerdigung, Predigt"
+                  value={calEvent}
+                  onChange={(e) => setCalEvent(e.target.value)}
+                  maxLength={120}
+                />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="cal-date">Datum</Label>
+                <Input
+                  id="cal-date"
+                  type="date"
+                  value={calDate}
+                  onChange={(e) => setCalDate(e.target.value)}
+                />
+              </div>
+              <p className="text-xs text-muted-foreground">
+                Du bekommst am Vortag einen passenden Vers mit kurzem Impuls.
+              </p>
             </div>
           )}
 
