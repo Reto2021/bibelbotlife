@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Clock, MapPin, Heart, CloudRain, CalendarDays, Plus, Trash2, Sparkle } from "lucide-react";
+import { ArrowLeft, Clock, MapPin, Heart, CloudRain, CalendarDays, Plus, Trash2, Sparkle, Bell, BellRing } from "lucide-react";
+import { useUserPushSubscription } from "@/hooks/use-user-push-subscription";
+
 import { SEOHead } from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -321,9 +323,41 @@ export default function BibleMoments() {
         )}
       </div>
 
+      <PushEnableCard />
+
       <div className="rounded-2xl border border-dashed p-4 md:p-6 text-sm text-muted-foreground">
         <strong className="text-foreground">Datenschutz zuerst.</strong> Orts-Trigger prüfen dein Gerät nur clientseitig — Koordinaten werden nie gespeichert. Alle Momente sind privat und jederzeit pausierbar.
       </div>
     </div>
   );
 }
+
+function PushEnableCard() {
+  const { status, isSubscribing, subscribe } = useUserPushSubscription();
+  if (status === "unsupported") return null;
+  const enabled = status === "subscribed";
+  return (
+    <div className="rounded-2xl border bg-card/60 backdrop-blur-sm p-4 md:p-6 shadow-elegant flex items-start gap-4">
+      <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+        {enabled ? <BellRing className="h-5 w-5 text-primary" /> : <Bell className="h-5 w-5 text-primary" />}
+      </div>
+      <div className="flex-1 min-w-0">
+        <h3 className="font-display text-lg">Push-Benachrichtigungen</h3>
+        <p className="text-sm text-muted-foreground mt-1">
+          {enabled
+            ? "Aktiv — deine Momente kommen als sanfte Push-Benachrichtigung auf dieses Gerät."
+            : "Aktiviere Push, damit deine Bible Moments dich direkt auf diesem Gerät erreichen."}
+        </p>
+        {status === "denied" && (
+          <p className="text-xs text-destructive mt-2">Berechtigung wurde abgelehnt. Aktiviere Benachrichtigungen in den Browser-Einstellungen.</p>
+        )}
+      </div>
+      {!enabled && (
+        <Button onClick={subscribe} disabled={isSubscribing} size="sm">
+          {isSubscribing ? "Aktiviere…" : "Aktivieren"}
+        </Button>
+      )}
+    </div>
+  );
+}
+
