@@ -37,14 +37,18 @@ const HELP_URLS: Record<Exclude<MemorySource, "manual">, string> = {
 export default function GedaechtnisPage() {
   const [content, setContent] = useState("");
   const [source, setSource] = useState<MemorySource>("gpt");
+  const [exporting, setExporting] = useState(false);
   const memories = useUserMemories();
   const importMem = useImportMemory();
   const updateMem = useUpdateMemory();
   const deleteMem = useDeleteMemory();
+  const { user } = useAuth();
+  const navigate = useNavigate();
 
   const handleFile = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const f = e.target.files?.[0];
     if (!f) return;
+
     if (f.size > 500_000) {
       toast.error("Datei zu gross (max 500 KB)");
       return;
