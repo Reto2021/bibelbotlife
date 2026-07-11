@@ -43,14 +43,61 @@ function inQuietHours(m: Moment, now: Date): boolean {
   return s < e ? (h >= s && h < e) : (h >= s || h < e);
 }
 
+async function buildContext(m: Moment): Promise<string> {
+  const cfg = (m.config as any) ?? {};
+  const label = m.label ? ` (${m.label})` : "";
+
+  if (m.trigger_type === "mood" && cfg.mood) {
+    return `Der Nutzer fühlt sich gerade: ${cfg.mood}.`;
+  }
+
+  if (m.trigger_type === "journal_mood") {
+    const { data } = await supabase
+      .from("journal_entries")
+      .select("mood, content, created_at")
+      .eq("user_id", m.user_id)
+      .not("mood", "is", null)
+      .order("created_at", { ascending: false })
+      .limit(1);
+    const j = data?.[0];
+    if (j) {
+      const snippet = (j.content || "").slice(0, 300);
+      return `Letzter Journal-Eintrag (Stimmung: ${j.mood}): "${snippet}". Wähle einen Vers, der dazu passt — tröstend, klärend oder ermutigend.`;
+    }
+    return `Auslöser: journal_mood${label} — keine Journal-Daten gefunden, wähle einen allgemein tröstenden Vers.`;
+  }
+
+  if (m.trigger_type === "memory_topic") {
+    const { data } = await supabase
+      .from("user_memory")
+      .select("content")
+      .eq("user_id", m.user_id)
+      .eq("is_active", true)
+      .order("imported_at", { ascending: false })
+      .limit(1);
+    const mem = data?.[0]?.content?.slice(0, 2000);
+    const topic = cfg.topic as string | undefined;
+    if (mem) {
+      return `Kontext aus dem KI-Gedächtnis des Nutzers:\n${mem}\n\n${topic ? `Fokus-Thema: ${topic}. ` : ""}Wähle einen Vers, der genau zu seiner aktuellen Lebenssituation spricht.`;
+    }
+    return `Auslöser: memory_topic${label}${topic ? ` — Thema: ${topic}` : ""}.`;
+  }
+
+  if (m.trigger_type === "calendar") {
+    const event = cfg.event as string | undefined;
+    const when = cfg.date as string | undefined;
+    return `Kalender-Ereignis${when ? ` am ${when}` : ""}${event ? `: ${event}` : ""}. Wähle einen passenden, stärkenden Vers.`;
+  }
+
+  return `Auslöser: ${m.trigger_type}${label}.`;
+}
+
 async function generateImpulse(m: Moment): Promise<{ title: string; verse: string; reflection: string }> {
   const lang = m.language || "de";
-  const mood = (m.config as any)?.mood as string | undefined;
-  const context = m.trigger_type === "mood" && mood
-    ? `Der Nutzer fühlt sich gerade: ${mood}.`
-    : `Auslöser: ${m.trigger_type}${m.label ? ` (${m.label})` : ""}.`;
+  const context = await buildContext(m);
 
   const sys = `Du bist ein warmherziger, seelsorgerlicher Bibelbegleiter für BibelBot.Life. Antworte auf ${lang === "de" ? "Schweizer Deutsch (kein ß, immer ss)" : lang}. Gib genau JSON zurück: {"title": "kurzer Titel (max 40 Zeichen)", "verse": "Bibelvers mit Referenz z.B. Psalm 23,1", "reflection": "1-2 Sätze warme Reflexion"}. Kein Markdown, nur JSON.`;
+
 
   const resp = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
     method: "POST",

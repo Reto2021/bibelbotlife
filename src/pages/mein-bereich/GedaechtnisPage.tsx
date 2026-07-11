@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { SEOHead } from "@/components/SEOHead";
-import { Brain, Upload, Trash2, Download } from "lucide-react";
+import { Brain, Upload, Trash2, Download, MessageSquare, FileUp } from "lucide-react";
 import {
   useUserMemories,
   useImportMemory,
@@ -14,7 +14,12 @@ import {
   useDeleteMemory,
   type MemorySource,
 } from "@/hooks/use-user-memory";
+import { supabase } from "@/integrations/supabase/client";
+import { useAuth } from "@/hooks/use-auth";
+import { openBibleBotChat } from "@/lib/chat-events";
+import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
+
 
 const SOURCE_LABELS: Record<MemorySource, string> = {
   gpt: "ChatGPT",
@@ -32,14 +37,18 @@ const HELP_URLS: Record<Exclude<MemorySource, "manual">, string> = {
 export default function GedaechtnisPage() {
   const [content, setContent] = useState("");
   const [source, setSource] = useState<MemorySource>("gpt");
+  const [exporting, setExporting] = useState(false);
   const memories = useUserMemories();
   const importMem = useImportMemory();
   const updateMem = useUpdateMemory();
   const deleteMem = useDeleteMemory();
+  const { user } = useAuth();
+  const navigate = useNavigate();
 
   const handleFile = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const f = e.target.files?.[0];
     if (!f) return;
+
     if (f.size > 500_000) {
       toast.error("Datei zu gross (max 500 KB)");
       return;
@@ -66,6 +75,81 @@ export default function GedaechtnisPage() {
     a.click();
     URL.revokeObjectURL(url);
   };
+
+  const handleExportChats = async () => {
+    if (!user) {
+      toast.error("Anmeldung erforderlich");
+      return;
+    }
+    setExporting(true);
+    try {
+      const { data: convs, error: cErr } = await supabase
+        .from("chat_conversations")
+        .select("id, title, created_at")
+        .eq("user_id", user.id)
+        .order("created_at", { ascending: true });
+      if (cErr) throw cErr;
+      if (!convs?.length) {
+        toast.info("Noch keine Chats zum Exportieren");
+        return;
+      }
+      const ids = convs.map((c) => c.id);
+      const { data: msgs, error: mErr } = await supabase
+        .from("chat_messages")
+        .select("conversation_id, role, content, created_at")
+        .in("conversation_id", ids)
+        .order("created_at", { ascending: true });
+      if (mErr) throw mErr;
+      const byConv = new Map<string, typeof msgs>();
+      (msgs || []).forEach((m) => {
+        const arr = byConv.get(m.conversation_id) || [];
+        arr.push(m);
+        byConv.set(m.conversation_id, arr);
+      });
+      const lines: string[] = [
+        `# BibleBot.Life – Chat-Export`,
+        `> Exportiert am ${new Date().toLocaleString("de-CH")}`,
+        ``,
+      ];
+      for (const c of convs) {
+        lines.push(`\n## ${c.title || "Unbenannt"} · ${new Date(c.created_at).toLocaleDateString("de-CH")}\n`);
+        for (const m of byConv.get(c.id) || []) {
+          const who = m.role === "user" ? "**Ich**" : "**BibleBot**";
+          lines.push(`${who}: ${m.content}\n`);
+        }
+      }
+      const blob = new Blob([lines.join("\n")], { type: "text/markdown" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `biblebot-chats-${new Date().toISOString().slice(0, 10)}.md`;
+      a.click();
+      URL.revokeObjectURL(url);
+      toast.success(`${convs.length} Chats exportiert`);
+    } catch (e: any) {
+      toast.error(e?.message || "Export fehlgeschlagen");
+    } finally {
+      setExporting(false);
+    }
+  };
+
+  const handleImportPrompt = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const f = e.target.files?.[0];
+    if (!f) return;
+    if (f.size > 200_000) {
+      toast.error("Datei zu gross (max 200 KB)");
+      return;
+    }
+    const text = await f.text();
+    if (text.trim().length < 5) {
+      toast.error("Datei leer");
+      return;
+    }
+    navigate("/");
+    setTimeout(() => openBibleBotChat(text.trim().slice(0, 8000)), 200);
+  };
+
+
 
   return (
     <div className="max-w-3xl mx-auto space-y-6">
@@ -159,6 +243,32 @@ export default function GedaechtnisPage() {
           </Button>
         </CardContent>
       </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-lg flex items-center gap-2">
+            <MessageSquare className="h-5 w-5 text-primary" /> Chats & Prompts
+          </CardTitle>
+          <CardDescription>
+            Exportiere deine BibleBot-Chats als Markdown (portabel für andere KIs)
+            oder importiere einen Prompt aus einer .md-Datei, um einen neuen Chat zu starten.
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="flex flex-wrap gap-3">
+          <Button onClick={handleExportChats} disabled={exporting || !user} variant="outline">
+            <Download className="h-4 w-4 mr-2" />
+            {exporting ? "Exportiere…" : "Chats als .md exportieren"}
+          </Button>
+          <label>
+            <input type="file" accept=".md,.txt,.markdown" onChange={handleImportPrompt} className="hidden" />
+            <span className="inline-flex items-center gap-2 h-10 px-4 rounded-md border border-input bg-background hover:bg-accent cursor-pointer text-sm">
+              <FileUp className="h-4 w-4" /> Prompt aus .md importieren
+            </span>
+          </label>
+        </CardContent>
+      </Card>
+
+
 
       <div className="space-y-3">
         <h2 className="text-lg font-medium">Gespeicherte Erinnerungen</h2>
