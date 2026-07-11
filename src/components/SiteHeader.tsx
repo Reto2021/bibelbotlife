@@ -217,9 +217,10 @@ export function SiteHeader() {
 
       {/* Mobile menu */}
       <div
-        className={`lg:hidden border-t border-border bg-card/95 backdrop-blur-sm overflow-hidden transition-all duration-300 ease-in-out ${
-          mobileMenuOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0 border-t-transparent"
+        className={`lg:hidden border-t border-border bg-card/95 backdrop-blur-sm overflow-y-auto overscroll-contain transition-all duration-300 ease-in-out ${
+          mobileMenuOpen ? "max-h-[calc(100vh-4rem)] opacity-100" : "max-h-0 opacity-0 border-t-transparent"
         }`}
+        style={{ WebkitOverflowScrolling: "touch" }}
       >
         <div className="container mx-auto px-4 py-3 flex flex-col gap-0.5">
           {/* Primary CTA at top */}
