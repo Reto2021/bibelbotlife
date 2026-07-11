@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { SEOHead } from "@/components/SEOHead";
-import { Brain, Upload, Trash2, Download, MessageSquare, FileUp } from "lucide-react";
+import { Brain, Upload, Trash2, Download, MessageSquare, FileUp, Sparkles } from "lucide-react";
 import {
   useUserMemories,
   useImportMemory,
