@@ -2141,5 +2141,13 @@
       "28": "Was hat mich heute bewegt oder berührt?",
       "29": "Wie möchte ich in einem Jahr auf heute zurückblicken?"
     }
+  },
+  "bibleMoments": {
+    "title": "Bible Moments",
+    "subtitle": "Präsenz zur richtigen Zeit — Verse und Impulse, ausgelöst durch Zeit, Ort, Stimmung, Wetter oder Ereignisse.",
+    "tile": {
+      "title": "Bible Moments",
+      "desc": "Verse im richtigen Moment — Zeit, Ort, Stimmung"
+    }
   }
 }

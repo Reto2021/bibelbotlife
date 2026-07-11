@@ -247,6 +247,116 @@ export type Database = {
         }
         Relationships: []
       }
+      bible_moment_deliveries: {
+        Row: {
+          channel: string
+          context: Json
+          created_at: string
+          error: string | null
+          id: string
+          impulse_text: string | null
+          moment_id: string
+          read_at: string | null
+          reference: string | null
+          sent_at: string | null
+          status: string
+          translation: string | null
+          user_id: string
+          verse_text: string | null
+        }
+        Insert: {
+          channel: string
+          context?: Json
+          created_at?: string
+          error?: string | null
+          id?: string
+          impulse_text?: string | null
+          moment_id: string
+          read_at?: string | null
+          reference?: string | null
+          sent_at?: string | null
+          status?: string
+          translation?: string | null
+          user_id: string
+          verse_text?: string | null
+        }
+        Update: {
+          channel?: string
+          context?: Json
+          created_at?: string
+          error?: string | null
+          id?: string
+          impulse_text?: string | null
+          moment_id?: string
+          read_at?: string | null
+          reference?: string | null
+          sent_at?: string | null
+          status?: string
+          translation?: string | null
+          user_id?: string
+          verse_text?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "bible_moment_deliveries_moment_id_fkey"
+            columns: ["moment_id"]
+            isOneToOne: false
+            referencedRelation: "bible_moments"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      bible_moments: {
+        Row: {
+          active: boolean
+          config: Json
+          created_at: string
+          delivery_channel: string
+          id: string
+          label: string | null
+          language: string
+          last_delivered_at: string | null
+          next_eligible_at: string | null
+          quiet_hours_end: number
+          quiet_hours_start: number
+          trigger_type: Database["public"]["Enums"]["bible_moment_trigger"]
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          active?: boolean
+          config?: Json
+          created_at?: string
+          delivery_channel?: string
+          id?: string
+          label?: string | null
+          language?: string
+          last_delivered_at?: string | null
+          next_eligible_at?: string | null
+          quiet_hours_end?: number
+          quiet_hours_start?: number
+          trigger_type: Database["public"]["Enums"]["bible_moment_trigger"]
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          active?: boolean
+          config?: Json
+          created_at?: string
+          delivery_channel?: string
+          id?: string
+          label?: string | null
+          language?: string
+          last_delivered_at?: string | null
+          next_eligible_at?: string | null
+          quiet_hours_end?: number
+          quiet_hours_start?: number
+          trigger_type?: Database["public"]["Enums"]["bible_moment_trigger"]
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       bible_translation_meta: {
         Row: {
           citation: string
@@ -3091,6 +3201,7 @@ export type Database = {
     }
     Enums: {
       app_role: "admin" | "moderator" | "user"
+      bible_moment_trigger: "time" | "location" | "mood" | "weather" | "event"
       ceremony_type: "funeral" | "wedding" | "baptism" | "confirmation"
       church_plan_tier: "free" | "community" | "gemeinde" | "kirche"
       confession_tradition:
@@ -3281,6 +3392,7 @@ export const Constants = {
   public: {
     Enums: {
       app_role: ["admin", "moderator", "user"],
+      bible_moment_trigger: ["time", "location", "mood", "weather", "event"],
       ceremony_type: ["funeral", "wedding", "baptism", "confirmation"],
       church_plan_tier: ["free", "community", "gemeinde", "kirche"],
       confession_tradition: [

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Cross, Heart, Baby, BookHeart, ArrowRight, NotebookPen } from "lucide-react";
+import { Cross, Heart, Baby, BookHeart, ArrowRight, NotebookPen, Sparkle } from "lucide-react";
 import { SEOHead } from "@/components/SEOHead";
 import { FavoriteToolsBar } from "@/components/ToolCards";
 
@@ -42,6 +42,13 @@ const MeinBereichHome = () => {
       descKey: "journal.tile.desc",
       icon: NotebookPen,
       href: "/mein-bereich/journal",
+      available: true,
+    },
+    {
+      titleKey: "bibleMoments.tile.title",
+      descKey: "bibleMoments.tile.desc",
+      icon: Sparkle,
+      href: "/mein-bereich/momente",
       available: true,
     },
   ];
