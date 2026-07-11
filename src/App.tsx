@@ -51,6 +51,7 @@ const WeddingWriter = lazy(() => import("./pages/mein-bereich/WeddingWriter"));
 const BaptismWriter = lazy(() => import("./pages/mein-bereich/BaptismWriter"));
 const ConfirmationWriter = lazy(() => import("./pages/mein-bereich/ConfirmationWriter"));
 const JournalPage = lazy(() => import("./pages/mein-bereich/JournalPage"));
+const BibleMoments = lazy(() => import("./pages/mein-bereich/BibleMoments"));
 const SharedDraft = lazy(() => import("./pages/SharedDraft"));
 const AdminDashboard = lazy(() => import("./pages/admin/AdminDashboard"));
 const OutreachAdmin = lazy(() => import("./pages/admin/OutreachAdmin"));
