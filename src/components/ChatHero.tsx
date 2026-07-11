@@ -961,9 +961,9 @@ export function ChatHero() {
                     className="pointer-events-none absolute inset-x-0 -top-16 h-64 bg-glow animate-candle"
                   />
                   <h1 className="font-display font-normal text-5xl sm:text-6xl md:text-7xl text-foreground leading-[1.05] tracking-tight text-balance">
-                    {t("hero.title1")}
+                    {t(`hero.title1_${heroVariant}`)}
                     <span className="italic text-primary block sm:inline">
-                      {t("hero.title2")}
+                      {t(`hero.title2_${heroVariant}`)}
                     </span>
                   </h1>
                 </div>
