@@ -37,8 +37,12 @@
 
     --radius: 0.5rem;
 
-    --gradient-hero: linear-gradient(135deg, hsl(38 40% 97%) 0%, hsl(32 45% 96%) 40%, hsl(185 20% 96%) 100%);
+    --gradient-hero: radial-gradient(80% 60% at 50% 0%, hsl(32 55% 94%) 0%, hsl(38 40% 97%) 55%, hsl(185 20% 96%) 100%);
     --gradient-cta: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+    --gradient-glow: radial-gradient(60% 60% at 50% 40%, hsl(32 70% 82% / 0.55) 0%, transparent 70%);
+
+    --shadow-warm: 0 32px 64px -24px hsl(32 55% 30% / 0.18), 0 8px 24px -12px hsl(32 55% 30% / 0.10);
+    --shadow-elegant: 0 20px 50px -20px hsl(32 55% 30% / 0.20);
 
     --chat-warmth: 32 50% 97%;
     --chat-bot-bubble: 32 40% 94%;
