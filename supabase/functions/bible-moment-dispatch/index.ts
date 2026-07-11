@@ -124,9 +124,14 @@ async function processMoment(m: Moment, now: Date) {
     moment_id: m.id,
     user_id: m.user_id,
     channel: m.delivery_channel,
-    payload: impulse,
     status: "delivered",
+    reference: impulse.verse,
+    verse_text: impulse.verse,
+    impulse_text: impulse.reflection,
+    context: m.trigger_type,
+    sent_at: now.toISOString(),
   });
+
 
   // Push if configured
   let pushResult: any = null;
