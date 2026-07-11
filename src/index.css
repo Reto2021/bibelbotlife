@@ -118,8 +118,21 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "cv11", "ss01", "ss03";
   }
+
+  h1, h2, h3, .font-display {
+    font-family: "Instrument Serif", Lora, Georgia, serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .shadow-warm { box-shadow: var(--shadow-warm); }
+  .shadow-elegant { box-shadow: var(--shadow-elegant); }
+  .bg-glow { background-image: var(--gradient-glow); }
 }
 
 @keyframes bounce-gentle {
@@ -147,6 +160,15 @@
 
 .animate-fade-up {
   animation: fade-up 0.5s ease-out forwards;
+}
+
+/* Slow candle breathe behind hero */
+@keyframes candle-breathe {
+  0%, 100% { opacity: 0.55; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.06); }
+}
+.animate-candle {
+  animation: candle-breathe 6s ease-in-out infinite;
 }
 
 .chat-welcome-gradient {
