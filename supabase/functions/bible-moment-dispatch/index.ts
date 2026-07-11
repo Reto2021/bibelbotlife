@@ -86,6 +86,12 @@ async function buildContext(m: Moment): Promise<string> {
   if (m.trigger_type === "calendar") {
     const event = cfg.event as string | undefined;
     const when = cfg.date as string | undefined;
+    const recipient = cfg.recipient_name as string | undefined;
+    const relation = cfg.relationship as string | undefined;
+    const occasion = cfg.occasion as string | undefined;
+    if (recipient) {
+      return `Geburtstag/Anlass für ${recipient}${relation ? ` (${relation})` : ""}${when ? ` am ${when}` : ""}${occasion ? ` — ${occasion}` : ""}. Erzeuge einen kurzen, warmen Bibelgruss (Vers + 1-2 Sätze) an den Nutzer, damit er ihn weiterleiten kann.`;
+    }
     return `Kalender-Ereignis${when ? ` am ${when}` : ""}${event ? `: ${event}` : ""}. Wähle einen passenden, stärkenden Vers.`;
   }
 

@@ -1,6 +1,10 @@
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Clock, MapPin, Heart, CloudRain, CalendarDays, Plus, Trash2, Sparkle, Bell, BellRing, CalendarClock, Mic, Square, Loader2 } from "lucide-react";
+import {
+  ArrowLeft, Clock, MapPin, Heart, CloudRain, CalendarDays, Plus, Trash2,
+  Sparkle, Bell, BellRing, CalendarClock, Mic, Square, Loader2, Gift,
+  Share2, RotateCcw, Check, Copy,
+} from "lucide-react";
 import { useUserPushSubscription } from "@/hooks/use-user-push-subscription";
 
 import { SEOHead } from "@/components/SEOHead";
@@ -20,9 +24,13 @@ import {
   type BibleMomentTrigger,
 } from "@/hooks/use-bible-moments";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
+import { parseGermanDate, extractPersonName, cleanEventLabel } from "@/lib/parse-german-date";
+
+type TriggerType = BibleMomentTrigger | "birthday";
 
 const TRIGGERS: Array<{
-  type: BibleMomentTrigger;
+  type: TriggerType;
   icon: typeof Clock;
   title: string;
   desc: string;
@@ -44,6 +52,22 @@ const TRIGGERS: Array<{
     desc: "Nach deinem täglichen Mood-Check kommt der passende Vers.",
     defaultLabel: "Stimmungs-Vers",
     defaultConfig: { moods: ["schwer", "suchend"] },
+  },
+  {
+    type: "birthday",
+    icon: Gift,
+    title: "Geburtstag (Andere)",
+    desc: "Erfasse Geburtstage von Familie & Freunden — verschick einen persönlichen Bibelgruss auf Knopfdruck.",
+    defaultLabel: "Geburtstag",
+    defaultConfig: { recipient_name: "", date: "", relationship: "" },
+  },
+  {
+    type: "calendar",
+    icon: CalendarClock,
+    title: "Kalender-Termin",
+    desc: "Trag Termine ein — Prüfung, Beerdigung, Predigt — und bekomm am Vortag einen stärkenden Vers.",
+    defaultLabel: "Wichtiger Termin",
+    defaultConfig: { event: "", date: "", lead_hours: 20 },
   },
   {
     type: "location",
@@ -69,23 +93,21 @@ const TRIGGERS: Array<{
     defaultLabel: "Jahrestag",
     defaultConfig: { date: "" },
   },
-  {
-    type: "calendar",
-    icon: CalendarClock,
-    title: "Kalender-Termin",
-    desc: "Trag Termine ein — Prüfung, Beerdigung, Predigt — und bekomm am Vortag einen stärkenden Vers.",
-    defaultLabel: "Wichtiger Termin",
-    defaultConfig: { event: "", date: "", lead_hours: 20 },
-  },
 ];
 
-function TriggerIcon({ type, className }: { type: BibleMomentTrigger; className?: string }) {
+function TriggerIcon({ type, className }: { type: string; className?: string }) {
   const meta = TRIGGERS.find((t) => t.type === type);
   const Icon = meta?.icon ?? Sparkle;
   return <Icon className={className} />;
 }
 
-function VoiceCapture({ onTranscript }: { onTranscript: (text: string) => void }) {
+function VoiceCapture({
+  onTranscript,
+  label = "Einsprechen",
+}: {
+  onTranscript: (text: string) => void;
+  label?: string;
+}) {
   const [state, setState] = useState<"idle" | "recording" | "transcribing">("idle");
   const recorderRef = useRef<MediaRecorder | null>(null);
   const chunksRef = useRef<Blob[]>([]);
@@ -100,7 +122,7 @@ function VoiceCapture({ onTranscript }: { onTranscript: (text: string) => void }
       rec.onstop = async () => {
         stream.getTracks().forEach((t) => t.stop());
         const blob = new Blob(chunksRef.current, { type: rec.mimeType });
-        if (blob.size < 800) { setState("idle"); return; }
+        if (blob.size < 800) { setState("idle"); toast.info("Zu kurz — bitte nochmals versuchen"); return; }
         setState("transcribing");
         try {
           const fd = new FormData();
@@ -162,7 +184,7 @@ function VoiceCapture({ onTranscript }: { onTranscript: (text: string) => void }
         </>
       ) : (
         <>
-          <Mic className="h-3.5 w-3.5" /> Einsprechen
+          <Mic className="h-3.5 w-3.5" /> {label}
         </>
       )}
     </Button>
@@ -176,10 +198,127 @@ const CHANNELS = [
   { value: "telegram", label: "Telegram" },
 ];
 
+function formatDateHuman(iso: string): string {
+  try {
+    const [y, m, d] = iso.split("-").map(Number);
+    return new Date(Date.UTC(y, m - 1, d)).toLocaleDateString("de-CH", {
+      day: "2-digit", month: "long", year: "numeric",
+    });
+  } catch { return iso; }
+}
+
+function ShareGreetingDialog({ moment }: { moment: BibleMoment }) {
+  const [open, setOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [greeting, setGreeting] = useState<{
+    title: string; verse: string; reflection: string; share_text: string;
+  } | null>(null);
+  const [copied, setCopied] = useState(false);
+
+  const cfg = (moment.config as any) ?? {};
+  const recipient = cfg.recipient_name || moment.label || "";
+
+  async function generate() {
+    setLoading(true);
+    setGreeting(null);
+    try {
+      const { data, error } = await supabase.functions.invoke("bible-greeting", {
+        body: {
+          recipient_name: recipient,
+          occasion: cfg.occasion || "Geburtstag",
+          relationship: cfg.relationship || "",
+          language: moment.language || "de",
+        },
+      });
+      if (error) throw error;
+      setGreeting(data as any);
+    } catch (e: any) {
+      toast.error("Konnte Gruss nicht generieren");
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  async function handleShare() {
+    if (!greeting) return;
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: greeting.title,
+          text: greeting.share_text,
+        });
+      } catch { /* user cancelled */ }
+    } else {
+      await navigator.clipboard.writeText(greeting.share_text);
+      setCopied(true);
+      toast.success("Gruss kopiert");
+      setTimeout(() => setCopied(false), 2000);
+    }
+  }
+
+  async function handleCopy() {
+    if (!greeting) return;
+    await navigator.clipboard.writeText(greeting.share_text);
+    setCopied(true);
+    toast.success("In Zwischenablage kopiert");
+    setTimeout(() => setCopied(false), 2000);
+  }
+
+  return (
+    <Dialog open={open} onOpenChange={(v) => { setOpen(v); if (v && !greeting) generate(); }}>
+      <DialogTrigger asChild>
+        <Button variant="outline" size="sm" className="gap-1.5">
+          <Share2 className="h-3.5 w-3.5" /> Bibelgruss
+        </Button>
+      </DialogTrigger>
+      <DialogContent className="max-w-md">
+        <DialogHeader>
+          <DialogTitle className="font-display text-2xl">
+            Gruss für {recipient || "…"}
+          </DialogTitle>
+          <DialogDescription>
+            Persönlicher Bibelvers mit warmer Segenszeile — zum Teilen per WhatsApp, SMS oder Email.
+          </DialogDescription>
+        </DialogHeader>
+
+        {loading && (
+          <div className="py-8 text-center text-sm text-muted-foreground">
+            <Loader2 className="inline h-4 w-4 animate-spin mr-2" /> Gruss wird geschrieben…
+          </div>
+        )}
+
+        {greeting && !loading && (
+          <div className="space-y-3">
+            <div className="rounded-lg border bg-primary/5 p-4">
+              <p className="text-sm whitespace-pre-line leading-relaxed">
+                {greeting.share_text}
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              <Button size="sm" onClick={handleShare} className="gap-1.5">
+                <Share2 className="h-3.5 w-3.5" /> Teilen
+              </Button>
+              <Button size="sm" variant="outline" onClick={handleCopy} className="gap-1.5">
+                {copied ? <Check className="h-3.5 w-3.5" /> : <Copy className="h-3.5 w-3.5" />}
+                Kopieren
+              </Button>
+              <Button size="sm" variant="ghost" onClick={generate} className="gap-1.5">
+                <RotateCcw className="h-3.5 w-3.5" /> Neu generieren
+              </Button>
+            </div>
+          </div>
+        )}
+      </DialogContent>
+    </Dialog>
+  );
+}
+
 function MomentCard({ moment }: { moment: BibleMoment }) {
   const update = useUpdateBibleMoment();
   const del = useDeleteBibleMoment();
   const meta = TRIGGERS.find((t) => t.type === moment.trigger_type);
+  const cfg = (moment.config as any) ?? {};
+  const isBirthday = moment.trigger_type === ("birthday" as any);
 
   return (
     <Card className="transition-colors hover:border-primary/40">
@@ -191,7 +330,9 @@ function MomentCard({ moment }: { moment: BibleMoment }) {
           <div className="flex-1 min-w-0">
             <CardTitle className="text-base">{moment.label || meta?.title}</CardTitle>
             <CardDescription className="text-sm mt-0.5 line-clamp-2">
-              {meta?.desc}
+              {isBirthday && cfg.recipient_name
+                ? `Für ${cfg.recipient_name}${cfg.date ? ` · ${formatDateHuman(cfg.date)}` : ""}`
+                : meta?.desc}
             </CardDescription>
           </div>
           <Switch
@@ -209,13 +350,19 @@ function MomentCard({ moment }: { moment: BibleMoment }) {
           <span className="rounded-full bg-muted px-2 py-0.5">
             Ruhezeit {String(moment.quiet_hours_start).padStart(2, "0")}:00–{String(moment.quiet_hours_end).padStart(2, "0")}:00
           </span>
-          {moment.trigger_type === "time" && moment.config?.time && (
+          {moment.trigger_type === "time" && cfg.time && (
             <span className="rounded-full bg-primary/10 text-primary px-2 py-0.5">
-              {moment.config.time}
+              {cfg.time}
+            </span>
+          )}
+          {(moment.trigger_type === "calendar" || isBirthday) && cfg.date && (
+            <span className="rounded-full bg-primary/10 text-primary px-2 py-0.5">
+              {formatDateHuman(cfg.date)}
             </span>
           )}
         </div>
-        <div className="mt-3 flex justify-end">
+        <div className="mt-3 flex items-center justify-between gap-2">
+          {isBirthday ? <ShareGreetingDialog moment={moment} /> : <span />}
           <Button
             variant="ghost"
             size="sm"
@@ -234,7 +381,7 @@ function MomentCard({ moment }: { moment: BibleMoment }) {
 
 function AddMomentDialog() {
   const [open, setOpen] = useState(false);
-  const [triggerType, setTriggerType] = useState<BibleMomentTrigger>("time");
+  const [triggerType, setTriggerType] = useState<TriggerType>("time");
   const [label, setLabel] = useState("");
   const [time, setTime] = useState("07:30");
   const [channel, setChannel] = useState<string>("inapp");
@@ -243,25 +390,81 @@ function AddMomentDialog() {
   const [calEvent, setCalEvent] = useState("");
   const [calDate, setCalDate] = useState("");
 
+  const [bdayName, setBdayName] = useState("");
+  const [bdayDate, setBdayDate] = useState("");
+  const [bdayRelation, setBdayRelation] = useState("");
+
+  const [lastParsed, setLastParsed] = useState<string | null>(null);
+
   const meta = TRIGGERS.find((t) => t.type === triggerType);
+
+  function resetForm() {
+    setLabel("");
+    setCalEvent("");
+    setCalDate("");
+    setBdayName("");
+    setBdayDate("");
+    setBdayRelation("");
+    setLastParsed(null);
+  }
+
+  function handleVoiceForCalendar(text: string) {
+    const parsed = parseGermanDate(text);
+    if (parsed.date) {
+      setCalDate(parsed.date);
+      setLastParsed(`📅 Datum erkannt: ${formatDateHuman(parsed.date)}`);
+    } else {
+      setLastParsed("⚠️ Kein Datum erkannt — bitte manuell eintragen");
+    }
+    const evt = cleanEventLabel(parsed.cleanedText || text);
+    if (evt) setCalEvent((prev) => (prev ? `${prev} ${evt}`.trim() : evt));
+  }
+
+  function handleVoiceForBirthday(text: string) {
+    const parsed = parseGermanDate(text);
+    const name = extractPersonName(parsed.cleanedText || text);
+    const notes: string[] = [];
+    if (parsed.date) {
+      setBdayDate(parsed.date);
+      notes.push(`📅 ${formatDateHuman(parsed.date)}`);
+    }
+    if (name) {
+      setBdayName(name);
+      notes.push(`👤 ${name}`);
+    }
+    setLastParsed(notes.length ? `Erkannt: ${notes.join(" · ")}` : "⚠️ Nichts eindeutig erkannt — bitte manuell eintragen");
+  }
 
   function handleCreate() {
     const finalLabel = label.trim() || meta?.defaultLabel || "Bible Moment";
-    const config = { ...(meta?.defaultConfig ?? {}) };
+    const config: Record<string, any> = { ...(meta?.defaultConfig ?? {}) };
+
     if (triggerType === "time") config.time = time;
+
     if (triggerType === "calendar") {
-      if (!calDate) {
-        toast.error("Bitte ein Datum wählen");
-        return;
-      }
+      if (!calDate) { toast.error("Bitte ein Datum wählen"); return; }
       config.event = calEvent.trim();
       config.date = calDate;
     }
 
+    if (triggerType === "birthday") {
+      if (!bdayName.trim()) { toast.error("Bitte einen Namen eingeben"); return; }
+      if (!bdayDate) { toast.error("Bitte ein Datum wählen"); return; }
+      config.recipient_name = bdayName.trim();
+      config.date = bdayDate;
+      config.relationship = bdayRelation.trim();
+      config.occasion = "Geburtstag";
+    }
+
+    // Store birthday as calendar trigger under the hood — the dispatcher already
+    // knows calendar; the config.recipient_name marks it as a shareable greeting.
+    const persistedTrigger: BibleMomentTrigger =
+      triggerType === "birthday" ? "calendar" : (triggerType as BibleMomentTrigger);
+
     create.mutate(
       {
-        trigger_type: triggerType,
-        label: finalLabel,
+        trigger_type: persistedTrigger,
+        label: triggerType === "birthday" ? `Geburtstag: ${bdayName.trim()}` : finalLabel,
         config,
         delivery_channel: channel as any,
       },
@@ -269,22 +472,20 @@ function AddMomentDialog() {
         onSuccess: () => {
           toast.success("Bible Moment angelegt");
           setOpen(false);
-          setLabel("");
-          setCalEvent("");
-          setCalDate("");
+          resetForm();
         },
       },
     );
   }
 
   return (
-    <Dialog open={open} onOpenChange={setOpen}>
+    <Dialog open={open} onOpenChange={(v) => { setOpen(v); if (!v) resetForm(); }}>
       <DialogTrigger asChild>
         <Button className="gap-2">
           <Plus className="h-4 w-4" /> Neuen Moment anlegen
         </Button>
       </DialogTrigger>
-      <DialogContent className="max-w-lg">
+      <DialogContent className="max-w-lg max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="font-display text-2xl">Neuer Bible Moment</DialogTitle>
           <DialogDescription>
@@ -301,7 +502,7 @@ function AddMomentDialog() {
                 <button
                   key={t.type}
                   type="button"
-                  onClick={() => setTriggerType(t.type)}
+                  onClick={() => { setTriggerType(t.type); setLastParsed(null); }}
                   className={`text-left rounded-lg border p-3 transition-colors ${
                     active ? "border-primary bg-primary/5" : "border-border hover:border-primary/40"
                   }`}
@@ -316,15 +517,17 @@ function AddMomentDialog() {
             })}
           </div>
 
-          <div className="space-y-2">
-            <Label htmlFor="label">Name</Label>
-            <Input
-              id="label"
-              placeholder={meta?.defaultLabel}
-              value={label}
-              onChange={(e) => setLabel(e.target.value)}
-            />
-          </div>
+          {triggerType !== "birthday" && (
+            <div className="space-y-2">
+              <Label htmlFor="label">Name</Label>
+              <Input
+                id="label"
+                placeholder={meta?.defaultLabel}
+                value={label}
+                onChange={(e) => setLabel(e.target.value)}
+              />
+            </div>
+          )}
 
           {triggerType === "time" && (
             <div className="space-y-2">
@@ -338,28 +541,11 @@ function AddMomentDialog() {
               <div className="space-y-2">
                 <div className="flex items-center justify-between gap-2">
                   <Label htmlFor="cal-event">Termin / Anlass</Label>
-                  <VoiceCapture
-                    onTranscript={(text) => {
-                      setCalEvent((prev) => (prev ? prev + " " + text : text));
-                      // Try to extract a date like 15.11. / 15.11.2026 / 2026-11-15
-                      const dm = text.match(/(\d{1,2})[.\/-](\d{1,2})(?:[.\/-](\d{2,4}))?/);
-                      const iso = text.match(/(\d{4})-(\d{2})-(\d{2})/);
-                      if (iso && !calDate) {
-                        setCalDate(`${iso[1]}-${iso[2]}-${iso[3]}`);
-                      } else if (dm && !calDate) {
-                        const d = dm[1].padStart(2, "0");
-                        const m = dm[2].padStart(2, "0");
-                        let y = dm[3];
-                        if (!y) y = String(new Date().getFullYear());
-                        else if (y.length === 2) y = "20" + y;
-                        setCalDate(`${y}-${m}-${d}`);
-                      }
-                    }}
-                  />
+                  <VoiceCapture onTranscript={handleVoiceForCalendar} label="Einsprechen" />
                 </div>
                 <Input
                   id="cal-event"
-                  placeholder="z.B. Prüfung, Beerdigung, Predigt — oder einsprechen"
+                  placeholder='z.B. "am 15. November Prüfung" — oder einsprechen'
                   value={calEvent}
                   onChange={(e) => setCalEvent(e.target.value)}
                   maxLength={200}
@@ -367,15 +553,71 @@ function AddMomentDialog() {
               </div>
               <div className="space-y-2">
                 <Label htmlFor="cal-date">Datum</Label>
+                <Input id="cal-date" type="date" value={calDate} onChange={(e) => setCalDate(e.target.value)} />
+              </div>
+              {lastParsed && (
+                <div className="flex items-start justify-between gap-2 text-xs bg-background/60 rounded px-2 py-1.5">
+                  <span className="text-muted-foreground">{lastParsed}</span>
+                  <button
+                    type="button"
+                    className="text-primary hover:underline inline-flex items-center gap-1"
+                    onClick={() => { setCalEvent(""); setCalDate(""); setLastParsed(null); }}
+                  >
+                    <RotateCcw className="h-3 w-3" /> Zurücksetzen
+                  </button>
+                </div>
+              )}
+              <p className="text-xs text-muted-foreground">
+                Du bekommst am Vortag einen passenden Vers. Datumsangaben wie „15. November", „fünfzehnter November", „15.11." oder „morgen" werden automatisch erkannt.
+              </p>
+            </div>
+          )}
+
+          {triggerType === "birthday" && (
+            <div className="space-y-3 rounded-md border border-primary/20 bg-primary/5 p-3">
+              <div className="space-y-2">
+                <div className="flex items-center justify-between gap-2">
+                  <Label htmlFor="bday-name">Name & Datum</Label>
+                  <VoiceCapture onTranscript={handleVoiceForBirthday} label="Einsprechen" />
+                </div>
                 <Input
-                  id="cal-date"
-                  type="date"
-                  value={calDate}
-                  onChange={(e) => setCalDate(e.target.value)}
+                  id="bday-name"
+                  placeholder='z.B. "Anna am 15. November" oder "Papa am 3.4."'
+                  value={bdayName}
+                  onChange={(e) => setBdayName(e.target.value)}
+                  maxLength={80}
                 />
               </div>
+              <div className="grid grid-cols-2 gap-2">
+                <div className="space-y-2">
+                  <Label htmlFor="bday-date">Datum</Label>
+                  <Input id="bday-date" type="date" value={bdayDate} onChange={(e) => setBdayDate(e.target.value)} />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="bday-rel">Beziehung (optional)</Label>
+                  <Input
+                    id="bday-rel"
+                    placeholder="Mutter, Freund…"
+                    value={bdayRelation}
+                    onChange={(e) => setBdayRelation(e.target.value)}
+                    maxLength={40}
+                  />
+                </div>
+              </div>
+              {lastParsed && (
+                <div className="flex items-start justify-between gap-2 text-xs bg-background/60 rounded px-2 py-1.5">
+                  <span className="text-muted-foreground">{lastParsed}</span>
+                  <button
+                    type="button"
+                    className="text-primary hover:underline inline-flex items-center gap-1"
+                    onClick={() => { setBdayName(""); setBdayDate(""); setBdayRelation(""); setLastParsed(null); }}
+                  >
+                    <RotateCcw className="h-3 w-3" /> Zurücksetzen
+                  </button>
+                </div>
+              )}
               <p className="text-xs text-muted-foreground">
-                Du bekommst am Vortag einen passenden Vers mit kurzem Impuls. Beim Einsprechen wird ein erkanntes Datum automatisch übernommen.
+                Am Geburtstag bekommst du eine Erinnerung mit persönlichem Bibelgruss — direkt teilbar per WhatsApp, SMS oder Email.
               </p>
             </div>
           )}
@@ -439,7 +681,7 @@ export default function BibleMoments() {
             Bible <em className="text-primary not-italic md:italic">Moments</em>
           </h1>
           <p className="text-sm md:text-base text-muted-foreground mt-2 max-w-xl">
-            Präsenz zur richtigen Zeit. BibleBot findet für dich die Momente — durch Zeit, Ort, Stimmung, Wetter oder Ereignis — und sendet einen passenden Vers mit einem kurzen Impuls.
+            Präsenz zur richtigen Zeit. BibleBot findet für dich die Momente — durch Zeit, Ort, Stimmung, Wetter, Ereignis oder Geburtstag — und sendet einen passenden Vers mit einem kurzen Impuls.
           </p>
         </div>
       </div>
@@ -463,7 +705,7 @@ export default function BibleMoments() {
               <Sparkle className="h-6 w-6 text-primary" />
             </div>
             <p className="text-sm text-muted-foreground max-w-sm mx-auto">
-              Leg deinen ersten Moment an — zum Beispiel einen Morgen-Impuls um 07:30 oder einen Trost-Vers bei schwerer Stimmung.
+              Leg deinen ersten Moment an — Morgen-Impuls, Trost-Vers bei schwerer Stimmung, oder ein Geburtstag mit persönlichem Bibelgruss.
             </p>
           </div>
         ) : (
@@ -512,4 +754,3 @@ function PushEnableCard() {
     </div>
   );
 }
-
