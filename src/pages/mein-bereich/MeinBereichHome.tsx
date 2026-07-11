@@ -51,6 +51,13 @@ const MeinBereichHome = () => {
       href: "/mein-bereich/momente",
       available: true,
     },
+    {
+      titleKey: "memory.tile.title",
+      descKey: "memory.tile.desc",
+      icon: Brain,
+      href: "/mein-bereich/gedaechtnis",
+      available: true,
+    },
   ];
 
   return (
