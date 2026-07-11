@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Cross, Heart, Baby, BookHeart, ArrowRight, NotebookPen, Sparkle } from "lucide-react";
+import { Cross, Heart, Baby, BookHeart, ArrowRight, NotebookPen, Sparkle, Brain } from "lucide-react";
 import { SEOHead } from "@/components/SEOHead";
 import { FavoriteToolsBar } from "@/components/ToolCards";
 
