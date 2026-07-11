@@ -994,39 +994,41 @@ export function BibleBotChat() {
           </div>
         )}
 
-        <div className="flex items-end gap-2 rounded-3xl border border-border bg-background focus-within:border-primary/50 focus-within:shadow-[0_0_0_3px_hsl(var(--primary)/0.1)] transition-all px-3 py-2">
-          <Textarea
-            ref={textareaRef}
+        <PromptInput
+          onSubmit={(msg) => {
+            const text = (msg.text ?? input).trim();
+            if (!text || isLoading) return;
+            sendMessage(text);
+          }}
+          className="rounded-3xl"
+        >
+          <PromptInputTextarea
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            onKeyDown={handleKeyDown}
             placeholder={t("chat.placeholder")}
-            className="min-h-[36px] max-h-[140px] text-base resize-none border-0 bg-transparent px-1 py-2 shadow-none focus-visible:ring-0 focus-visible:ring-offset-0"
-            rows={1}
+            className="min-h-[44px] max-h-[140px] text-base"
           />
-          <div className="flex items-center gap-1 shrink-0 pb-1">
-            <Button
-              size="icon"
-              variant="ghost"
-              onClick={isListening ? stopListening : startListening}
-              disabled={isTranscribing}
-              className={`h-9 w-9 rounded-full ${isListening ? "text-destructive" : "text-muted-foreground hover:text-foreground"}`}
-              aria-label={isListening ? t("chat.stopVoice") : t("chat.startVoice")}
-              title={isListening ? t("chat.stopVoice") : t("chat.startVoice", "Spracheingabe")}
-            >
-              {isTranscribing ? <Loader2 className="h-5 w-5 animate-spin" /> : isListening ? <MicOff className="h-5 w-5" /> : <Mic className="h-5 w-5" />}
-            </Button>
-            <Button
-              size="icon"
-              onClick={() => sendMessage(input)}
+          <PromptInputFooter className="justify-end">
+            <PromptInputTools>
+              <Button
+                type="button"
+                size="icon-sm"
+                variant="ghost"
+                onClick={isListening ? stopListening : startListening}
+                disabled={isTranscribing}
+                className={`rounded-full ${isListening ? "text-destructive" : "text-muted-foreground hover:text-foreground"}`}
+                aria-label={isListening ? t("chat.stopVoice") : t("chat.startVoice")}
+                title={isListening ? t("chat.stopVoice") : t("chat.startVoice", "Spracheingabe")}
+              >
+                {isTranscribing ? <Loader2 className="h-4 w-4 animate-spin" /> : isListening ? <MicOff className="h-4 w-4" /> : <Mic className="h-4 w-4" />}
+              </Button>
+            </PromptInputTools>
+            <PromptInputSubmit
+              status={isLoading ? "streaming" : undefined}
               disabled={!input.trim() || isLoading}
-              className="h-9 w-9 rounded-full shrink-0"
-              title={t("chat.send", "Senden")}
-            >
-              <Send className="h-4 w-4" />
-            </Button>
-          </div>
-        </div>
+            />
+          </PromptInputFooter>
+        </PromptInput>
         {isListening && (
           <div className="text-center mt-1 text-[10px] font-mono text-destructive tabular-nums">
             ● {String(Math.floor(recordingSeconds / 60)).padStart(2, "0")}:{String(recordingSeconds % 60).padStart(2, "0")}
