@@ -2143,5 +2143,11 @@
       "28": "What moved or touched me today?",
       "29": "How do I want to look back on today a year from now?"
     }
+  },
+  "memory": {
+    "tile": {
+      "title": "AI Memory",
+      "desc": "Import what ChatGPT, Claude or Gemini already knows about you"
+    }
   }
 }
