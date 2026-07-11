@@ -1860,6 +1860,30 @@ serve(async (req) => {
     }
     systemPrompt += `\n\n${lengthInstruction}\nGRUNDREGEL: Lieber zu kurz als zu lang. Eine gute Frage am Ende ist wertvoller als ein langer Absatz.`;
 
+    // ── Inject user's KI-Gedächtnis (imported from GPT/Claude/Gemini) ──
+    try {
+      const authHeader = req.headers.get("Authorization");
+      if (authHeader && isUserTurn) {
+        const userSb = createClient(
+          Deno.env.get("SUPABASE_URL") ?? "",
+          Deno.env.get("SUPABASE_ANON_KEY") ?? Deno.env.get("SUPABASE_PUBLISHABLE_KEY") ?? "",
+          { global: { headers: { Authorization: authHeader } } }
+        );
+        const { data: memRows } = await userSb
+          .from("user_memory")
+          .select("content, source")
+          .eq("is_active", true)
+          .order("imported_at", { ascending: false })
+          .limit(3);
+        if (memRows && memRows.length > 0) {
+          const memText = memRows.map((r: any) => r.content.slice(0, 3000)).join("\n\n---\n\n");
+          systemPrompt += `\n\n[PERSÖNLICHES GEDÄCHTNIS DES NUTZERS]\nDer Nutzer hat sein KI-Gedächtnis aus früheren Gesprächen (ChatGPT/Claude/Gemini) mit dir geteilt. Nutze es dezent, um ihn persönlich zu begleiten – erwähne es NUR wenn relevant, nie mechanisch:\n\n${memText}\n[ENDE GEDÄCHTNIS]`;
+        }
+      }
+    } catch (e) {
+      console.warn("user_memory lookup failed:", e);
+    }
+
 
     const TRANSLATION_NAMES: Record<string, string> = {
       basisbibel: "BasisBibel", bb: "BasisBibel",
