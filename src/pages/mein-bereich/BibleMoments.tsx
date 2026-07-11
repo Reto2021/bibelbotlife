@@ -252,13 +252,33 @@ function AddMomentDialog() {
           {triggerType === "calendar" && (
             <div className="space-y-3 rounded-md border border-primary/20 bg-primary/5 p-3">
               <div className="space-y-2">
-                <Label htmlFor="cal-event">Termin / Anlass</Label>
+                <div className="flex items-center justify-between gap-2">
+                  <Label htmlFor="cal-event">Termin / Anlass</Label>
+                  <VoiceCapture
+                    onTranscript={(text) => {
+                      setCalEvent((prev) => (prev ? prev + " " + text : text));
+                      // Try to extract a date like 15.11. / 15.11.2026 / 2026-11-15
+                      const dm = text.match(/(\d{1,2})[.\/-](\d{1,2})(?:[.\/-](\d{2,4}))?/);
+                      const iso = text.match(/(\d{4})-(\d{2})-(\d{2})/);
+                      if (iso && !calDate) {
+                        setCalDate(`${iso[1]}-${iso[2]}-${iso[3]}`);
+                      } else if (dm && !calDate) {
+                        const d = dm[1].padStart(2, "0");
+                        const m = dm[2].padStart(2, "0");
+                        let y = dm[3];
+                        if (!y) y = String(new Date().getFullYear());
+                        else if (y.length === 2) y = "20" + y;
+                        setCalDate(`${y}-${m}-${d}`);
+                      }
+                    }}
+                  />
+                </div>
                 <Input
                   id="cal-event"
-                  placeholder="z.B. Prüfung, Beerdigung, Predigt"
+                  placeholder="z.B. Prüfung, Beerdigung, Predigt — oder einsprechen"
                   value={calEvent}
                   onChange={(e) => setCalEvent(e.target.value)}
-                  maxLength={120}
+                  maxLength={200}
                 />
               </div>
               <div className="space-y-2">
@@ -271,7 +291,7 @@ function AddMomentDialog() {
                 />
               </div>
               <p className="text-xs text-muted-foreground">
-                Du bekommst am Vortag einen passenden Vers mit kurzem Impuls.
+                Du bekommst am Vortag einen passenden Vers mit kurzem Impuls. Beim Einsprechen wird ein erkanntes Datum automatisch übernommen.
               </p>
             </div>
           )}
