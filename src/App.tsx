@@ -231,6 +231,7 @@ const App = () => {
                     <Route path="taufe" element={<BaptismWriter />} />
                     <Route path="konfirmation" element={<ConfirmationWriter />} />
                     <Route path="journal" element={<JournalPage />} />
+                    <Route path="momente" element={<BibleMoments />} />
                   </Route>
                   <Route path="/shared/:token" element={<SharedDraft />} />
                   <Route path="/admin" element={<ProtectedAdminRoute><AdminDashboard /></ProtectedAdminRoute>} />
