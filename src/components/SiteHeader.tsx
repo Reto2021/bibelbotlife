@@ -222,7 +222,7 @@ export function SiteHeader() {
         }`}
         style={{ WebkitOverflowScrolling: "touch" }}
       >
-        <div className="container mx-auto px-4 py-3 flex flex-col gap-0.5">
+        <div className="container mx-auto px-4 py-3 pb-[max(1.5rem,env(safe-area-inset-bottom))] flex flex-col gap-0.5">
           {/* Primary CTA at top */}
           <Button
             className="w-full mb-2"
