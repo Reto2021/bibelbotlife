@@ -2155,5 +2155,11 @@
       "title": "Bible Moments",
       "desc": "Verse im richtigen Moment — Zeit, Ort, Stimmung"
     }
+  },
+  "memory": {
+    "tile": {
+      "title": "KI-Gedächtnis",
+      "desc": "Importiere, was ChatGPT, Claude oder Gemini über dich weiss"
+    }
   }
 }
