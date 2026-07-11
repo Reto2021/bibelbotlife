@@ -38,6 +38,7 @@ export default function GedaechtnisPage() {
   const [content, setContent] = useState("");
   const [source, setSource] = useState<MemorySource>("gpt");
   const [exporting, setExporting] = useState(false);
+  const [extracting, setExtracting] = useState(false);
   const memories = useUserMemories();
   const importMem = useImportMemory();
   const updateMem = useUpdateMemory();
