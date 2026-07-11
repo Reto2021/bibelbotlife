@@ -1105,6 +1105,8 @@ const Analytics = () => {
           </Card>
         )}
 
+        <HeroVariantStats />
+
         {/* User Flows */}
         <Card>
           <CardHeader className="pb-2">
