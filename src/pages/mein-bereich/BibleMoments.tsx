@@ -156,12 +156,23 @@ function AddMomentDialog() {
   const [channel, setChannel] = useState<string>("inapp");
   const create = useCreateBibleMoment();
 
+  const [calEvent, setCalEvent] = useState("");
+  const [calDate, setCalDate] = useState("");
+
   const meta = TRIGGERS.find((t) => t.type === triggerType);
 
   function handleCreate() {
     const finalLabel = label.trim() || meta?.defaultLabel || "Bible Moment";
     const config = { ...(meta?.defaultConfig ?? {}) };
     if (triggerType === "time") config.time = time;
+    if (triggerType === "calendar") {
+      if (!calDate) {
+        toast.error("Bitte ein Datum wählen");
+        return;
+      }
+      config.event = calEvent.trim();
+      config.date = calDate;
+    }
 
     create.mutate(
       {
@@ -175,6 +186,8 @@ function AddMomentDialog() {
           toast.success("Bible Moment angelegt");
           setOpen(false);
           setLabel("");
+          setCalEvent("");
+          setCalDate("");
         },
       },
     );
