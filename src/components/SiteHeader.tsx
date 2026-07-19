@@ -58,10 +58,10 @@ export function SiteHeader() {
         >
           <AppLogo className="h-9 w-9 lg:h-11 lg:w-11" />
           <div className="flex w-max flex-col">
-            <span className="text-base lg:text-lg font-bold text-foreground leading-tight">
-              BibleBot<span className="text-sm font-normal text-muted-foreground dark:text-amber-400">.Life</span>
+            <span className="font-display text-xl lg:text-2xl uppercase tracking-wide text-foreground leading-none">
+              BibleBot<span className="text-primary">.life</span>
             </span>
-            <span className="hidden pl-[1px] text-[8px] font-medium tracking-[0.18em] uppercase text-muted-foreground/70 dark:text-amber-400/70 lg:block">
+            <span className="hidden pl-[1px] text-[8px] font-semibold tracking-[0.22em] uppercase text-muted-foreground/70 lg:block mt-0.5">
               Everyday Sunday
             </span>
           </div>
