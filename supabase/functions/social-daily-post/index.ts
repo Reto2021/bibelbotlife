@@ -1,5 +1,6 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.4";
+import { requireAdminOrService } from "../_shared/auth.ts";
 
 // SETUP REQUIRED (Supabase Secrets):
 // GHL_API_KEY         — GoHighLevel API Key (Settings → API Keys)
@@ -67,6 +68,11 @@ serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
+
+  const authCheck = await requireAdminOrService(req);
+  if (!authCheck.ok) return authCheck.response;
+
+
 
   const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
   const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;

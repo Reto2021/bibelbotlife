@@ -3,6 +3,7 @@
 // via Lovable AI, and delivers via configured channels (in-app record, web push).
 import { createClient } from "npm:@supabase/supabase-js@2";
 import webpush from "npm:web-push@3.6.7";
+import { requireAdminOrService } from "../_shared/auth.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -209,6 +210,10 @@ async function processMoment(m: Moment, now: Date) {
 
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
+
+  const authCheck = await requireAdminOrService(req);
+  if (!authCheck.ok) return authCheck.response;
+
   const now = new Date();
 
   const { data: moments, error } = await supabase

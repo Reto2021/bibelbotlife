@@ -2,6 +2,7 @@
 // POST { topics?: string[], languages?: string[], batch?: number, force?: boolean }
 
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+import { requireAdminOrService } from "../_shared/auth.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -318,6 +319,9 @@ async function callLovableAI(prompt: string): Promise<any> {
 
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: corsHeaders });
+
+  const authCheck = await requireAdminOrService(req);
+  if (!authCheck.ok) return authCheck.response;
 
   try {
     const body = req.method === "POST" ? await req.json().catch(() => ({})) : {};

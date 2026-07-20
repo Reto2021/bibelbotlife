@@ -1,5 +1,6 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.1";
 import { corsHeaders } from "https://esm.sh/@supabase/supabase-js@2.95.0/cors";
+import { requireAdminOrService } from "../_shared/auth.ts";
 
 // Retry fetch with exponential backoff for transient errors (DNS, network, 5xx, 429).
 async function fetchWithRetry(
@@ -89,6 +90,9 @@ Deno.serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response("ok", { headers: corsHeaders });
   }
+
+  const authCheck = await requireAdminOrService(req);
+  if (!authCheck.ok) return authCheck.response;
 
   try {
     const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
