@@ -533,6 +533,10 @@ async function fetchAndStoreChapter(
 serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
 
+  const authCheck = await requireAdminOrService(req);
+  if (!authCheck.ok) return authCheck.response;
+
+
   try {
     const supabase = createClient(
       Deno.env.get("SUPABASE_URL")!,
