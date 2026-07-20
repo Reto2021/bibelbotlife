@@ -1,5 +1,6 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.4";
+import { requireAdminOrService } from "../_shared/auth.ts";
 
 // SETUP REQUIRED (Supabase Secrets):
 // GHL_API_KEY         — GoHighLevel API Key (Settings → API Keys)
