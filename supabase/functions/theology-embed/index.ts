@@ -34,6 +34,8 @@ serve(async (req) => {
 
     // Mode: import — store chunks without embeddings (FTS-based retrieval)
     if (mode === "import") {
+      const authCheck = await requireAdminOrService(req);
+      if (!authCheck.ok) return authCheck.response;
       const chunks: { source_type: string; title: string; content: string; metadata?: any }[] = body.chunks;
       if (!chunks?.length) {
         return new Response(JSON.stringify({ error: "chunks array required" }), {
