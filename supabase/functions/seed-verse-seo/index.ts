@@ -3,6 +3,7 @@
 // Trigger via POST with { batch?: number, languages?: string[], force?: boolean }.
 
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+import { requireAdminOrService } from "../_shared/auth.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
