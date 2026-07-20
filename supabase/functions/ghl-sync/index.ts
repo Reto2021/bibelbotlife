@@ -1,5 +1,6 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "npm:@supabase/supabase-js@2";
+import { requireUserOrService } from "../_shared/auth.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -10,6 +11,11 @@ serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response("ok", { headers: corsHeaders });
   }
+
+  const authCheck = await requireUserOrService(req);
+  if (!authCheck.ok) return authCheck.response;
+
+
 
   const GHL_WEBHOOK_URL = Deno.env.get("GHL_WEBHOOK_URL");
   if (!GHL_WEBHOOK_URL) {
