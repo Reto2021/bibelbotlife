@@ -95,6 +95,11 @@ serve(async (req) => {
     return new Response(null, { headers: corsHeaders });
   }
 
+  const auth = await requireUser(req);
+  if (!auth.ok) return auth.response;
+
+
+
   try {
     const body = await req.json();
     const { ceremonyType, formData, notes, language } = body;
