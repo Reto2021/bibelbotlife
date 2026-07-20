@@ -125,6 +125,9 @@ async function callLovableAI(prompt: string): Promise<any> {
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: corsHeaders });
 
+  const authCheck = await requireAdminOrService(req);
+  if (!authCheck.ok) return authCheck.response;
+
   try {
     const body = req.method === "POST" ? await req.json().catch(() => ({})) : {};
     const batchLimit: number = Math.min(body.batch ?? 20, 80);
