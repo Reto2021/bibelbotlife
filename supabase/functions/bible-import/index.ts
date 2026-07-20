@@ -162,6 +162,11 @@ serve(async (req) => {
     return new Response(null, { headers: corsHeaders });
   }
 
+  const authCheck = await requireAdminOrService(req);
+  if (!authCheck.ok) return authCheck.response;
+
+
+
   const supabase = createClient(
     Deno.env.get("SUPABASE_URL")!,
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
