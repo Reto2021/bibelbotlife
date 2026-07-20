@@ -210,6 +210,10 @@ async function processMoment(m: Moment, now: Date) {
 
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
+
+  const authCheck = await requireAdminOrService(req);
+  if (!authCheck.ok) return authCheck.response;
+
   const now = new Date();
 
   const { data: moments, error } = await supabase
