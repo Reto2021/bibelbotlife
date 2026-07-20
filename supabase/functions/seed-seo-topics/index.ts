@@ -320,6 +320,9 @@ async function callLovableAI(prompt: string): Promise<any> {
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: corsHeaders });
 
+  const authCheck = await requireAdminOrService(req);
+  if (!authCheck.ok) return authCheck.response;
+
   try {
     const body = req.method === "POST" ? await req.json().catch(() => ({})) : {};
     // Default 1 pro Aufruf, hart gedeckelt bei 5. Verhindert dass dieser Job
