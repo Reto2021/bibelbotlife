@@ -1,99 +1,83 @@
-# Plan: Hero-Test + "Bible in your Life"
+# Partner-Pitch Deck — BibleBot.Life
 
-Zwei parallele Stränge: (A) Hero-Hook messbar testen, (B) neues Feature-Bundle "Bible in your Life" — importierbares KI-Gedächtnis + kontextbezogene Bibel-Pushes.
+Ziel: Ein überzeugendes Deck zur Partnergewinnung (Kirchen, Institutionen, Spitäler, Bildung, Werke). Look: McKinsey/BCG-Rigor (klare Pyramide, Data-driven, „so-what"-Titel, saubere 2-Spalten-Layouts, dezente Farbakzente) — Feel: HubSpot (warm, menschlich, Nutzenversprechen, klare CTAs, illustrativ).
 
----
+## Prinzipien (Design & Rhetorik)
 
-## A. Hero A/B-Test (leichtgewichtig, ohne externes Tool)
+- **Titel = Botschaft**, nicht Thema. Jede Slide-Headline ist die „So-what"-Aussage in einem Satz.
+- **Ein Gedanke pro Slide.** Max. 30 Wörter Fliesstext, Rest visuell.
+- **Pyramide**: These → Begründung (3 Punkte) → Beleg (Zahl/Zitat/Chart).
+- **Farbe sparsam**: Warm Honey-Gold (Primary) als Akzent, Deep Teal für Data-Highlights, Creme als Basis. Dark Cover + Close ("Sandwich").
+- **Typo**: Instrument Serif (Titel) + Inter Tight (Body) — passt zum aktuellen App-Design; alternativ Fraunces + Inter.
+- **Chart-Regel**: One insight per chart, Insight steht als Subheadline drüber.
 
-**Ziel:** Statt Bauchgefühl echte Klick-Daten für den Hero-Claim.
+## Struktur (18 Slides, ~15 Min)
 
-**Varianten (rotieren pro Visitor, gespeichert in `localStorage`):**
-1. `präsenz` — aktuell: "Präsenz & Weisheit für deinen Weg."
-2. `begleiter` — konkret: "Dein persönlicher Bibel-Begleiter. Frag alles. Anonym."
-3. `leben` — neue Positionierung: "Die Bibel in deinem Leben. Jeden Tag."
+**Teil 1 — Hook (Slides 1–3)**
+1. **Cover**: „Die Bibel. Im Leben. Jeden Tag." + Sub: Partner-Programm 2026. Dunkler Hintergrund, Logo, Kontakt.
+2. **Warum jetzt**: 3 Kurven — Kirchenaustritte ↑, Sinnsuche & Mental-Health-Suchen ↑, KI-Adoption ↑. So-what: „Menschen suchen Orientierung digital — nicht mehr im Pfarrhaus."
+3. **Das Problem in einem Satz**: Kirchen erreichen die Suchenden nicht dort, wo sie fragen — auf dem Handy, nachts, anonym.
 
-**Technisch:**
-- `src/lib/hero-variant.ts` — deterministische Zuweisung (Hash von Visitor-ID), persistent
-- `src/components/ChatHero.tsx` — liest Variante, rendert entsprechenden Text (aus i18n)
-- `analytics_events` bereits vorhanden → Event `hero_variant_view` + `hero_variant_cta_click` mit `variant` in `event_data`
-- Auswertung: neuer Tab in `/admin/analytics` (Conversion Rate pro Variante = CTA-Klicks / Views)
-- Alle 3 i18n-Strings zusätzlich in `de.json` + `en.json` (Rest erbt DE als Fallback)
+**Teil 2 — Lösung (Slides 4–7)**
+4. **Was BibleBot.Life ist**: Persönlicher Bibel-Begleiter. Anonym, 36 Sprachen, 5 Übersetzungen, Coaching-Methodik. Screenshot Chat.
+5. **Wie es sich anfühlt**: 3 echte Nutzer-Dialoge (Angst, Trauer, Zweifel) — Vorher/Nachher.
+6. **Was es kann (Feature-Matrix)**: Chat · Daily Impulse · Bibelsuche · Gebetswand · Quiz · Mein Bereich · Messeplaner. Kompakte 2×4-Grid.
+7. **Was es NICHT ist**: Kein Ersatz für Seelsorge, keine Denomination, keine Datensammlung. (Vertrauensanker.)
 
----
+**Teil 3 — Traction & Proof (Slides 8–10)**
+8. **Zahlen** (Stat-Slide, 3 grosse Kacheln): Nutzer, Chats, Länder — Quelle: interne Analytics.
+9. **Stimmen**: 3 Testimonials (Nutzer + Pastor + Institution).
+10. **Wirkung**: „Fragen, die sonst niemand hört" — 4 anonymisierte Beispielthemen mit Verteilung.
 
-## B. "Bible in your Life" — Feature-Bundle
+**Teil 4 — Partnerangebot (Slides 11–14)**
+11. **Warum Partner werden**: 3 Nutzen — Reichweite, Modernität, Entlastung Seelsorge.
+12. **Wie Partnerschaft aussieht**: Co-Branding im Chat, eigene Splash, Gemeindeseite, QR-Materialien, Kontaktweiterleitung.
+13. **Pakete** (aus `church-partnership.md`): Senfkorn (0), Wegbegleiter (490), Brückenbauer (990, empfohlen), Leuchtturm (1'990). Klare Feature-Tabelle.
+14. **Institutionen-Track**: Starter/Professional/Enterprise (aus `ForInstitutions.tsx`) — für Spital, HR, Versicherer.
 
-Drei zusammenhängende Bausteine, alle unter `/mein-bereich`.
+**Teil 5 — Umsetzung & Vertrauen (Slides 15–17)**
+15. **Onboarding in 14 Tagen**: Timeline (Kickoff → Branding → Launch → Review).
+16. **Sicherheit & Datenschutz**: Schweiz-Hosting, RLS, keine Werbung, DSG-konform, keine Nutzerdaten an Dritte.
+17. **Team & Trägerschaft**: 2Go Media AG, ökumenisch, Beirat.
 
-### B1. KI-Gedächtnis Import (`.md` aus GPT/Claude/Gemini)
+**Teil 6 — CTA (Slide 18)**
+18. **Call to Action** — 3 klare Optionen:
+    - **Pilot starten** (30 Tage kostenlos, 1 Klick)
+    - **Gespräch buchen** (Calendly-Link/QR)
+    - **Material erhalten** (Onepager + Flyer PDF)
+    Kontakt + QR + E-Mail gross. Dark Close-Slide.
 
-**Nutzer-Flow:** In ChatGPT/Claude/Gemini gibt es exportierbares "Memory"/"Projects"-Wissen. Nutzer lädt `.md` hoch → wir extrahieren Fakten → Chat nutzt sie.
+## Empfohlener Primary-CTA
 
-**Umsetzung:**
-- Neue Tabelle `user_memory` (`user_id`, `content` text, `source` enum: `gpt`/`claude`/`gemini`/`manual`, `imported_at`, `is_active`) mit RLS + GRANT
-- Neue Seite `/mein-bereich/gedaechtnis` — File-Upload (`.md` bis 100 KB), Textarea zum manuellen Bearbeiten, Toggle "aktiv"
-- Edge Function `memory-import` (`verify_jwt = true`) — parst Markdown, extrahiert Bullet-Fakten via `openai/gpt-5-mini`, speichert als bereinigten Text
-- `bibelbot-chat` Edge Function: lädt aktives Memory des Users (falls eingeloggt) und hängt es als System-Prompt-Block "Was ich über dich weiss" an
-- Datenschutz: klare UI-Copy "Nur du siehst das. Wird nur zum Personalisieren deiner Antworten genutzt. Jederzeit löschbar."
+**„Starten Sie einen 30-Tage-Pilot — kostenlos, gebrandet, unverbindlich."**
+Begründung: Senkt Entscheidungsdruck, macht das Produkt erlebbar (statt zu erklären), führt organisch ins Brückenbauer-Paket. Sekundär: Gespräch buchen (für Enterprise/Institutionen).
 
-### B2. Prompt/Chat Export & Import
+## Format & Lieferung
 
-**Nutzer-Flow:** Bestehende Chat-Historie als `.md` runterladen (portabel für andere KIs) und umgekehrt Prompts als `.md` importieren.
+- **Format**: 16:9, PDF + Keynote/PowerPoint-fähig. Zusätzlich Web-Version als eigene Route (`/pitch`) mit denselben Slides — durch Prospects browserbar, teilbar per Link, analytics-fähig.
+- **Assets**: App-Screenshots (Chat, Daily Impulse, Church Profile), 3 anonyme Dialog-Auszüge, Logo-Varianten (bereits vorhanden), QR mit BibleBot-Logo (`BrandedQRCode`).
+- **Sprache**: DE primär, EN-Version parallel (i18n-Keys wiederverwendbar).
 
-**Umsetzung:**
-- `src/pages/mein-bereich/GedaechtnisPage.tsx` bekommt zwei Buttons:
-  - "Chats exportieren" — lädt alle `chat_conversations` + `chat_messages` des Users, generiert `.md` client-seitig (Titel, Datum, User/Assistant-Blöcke)
-  - "Prompt importieren" — `.md`-Upload, öffnet neuen Chat mit vorbelegtem System-Kontext
-- Kein Backend nötig für Export (Client-only); Import nutzt `sessionStorage` → `BibelBotChat` liest beim Mount
+## Technische Umsetzung (falls gewünscht)
 
-### B3. Kontextbezogene Bibel-Pushes (Erweiterung Bible Moments)
+Zwei Wege — wähle einen:
 
-Bestehende `bible_moments`-Infrastruktur nutzen — nur neue Trigger-Typen.
+**A) Web-Deck als Route `/pitch`** (empfohlen)
+- Nutzt bestehende Design-Tokens, Fonts, Komponenten.
+- Fixed-Resolution-Scaling (1920×1080) wie im slides-app-Pattern.
+- Keyboard-Nav, Präsentiermodus, PDF-Export via `Cmd+P`.
+- Tracking: welche Slide wie lange angesehen → Sales-Signal.
+- Teilbar per Link mit Passwort-/Token-Schutz optional.
 
-**Neue Trigger im bestehenden Enum:**
-- `calendar` — Kalender-Events (User trägt manuell ein: "Prüfung am 15.", "Beerdigung Mutter")
-- `journal_mood` — automatisch: wenn im Journal negative Stimmung erkannt wird, folgt am nächsten Morgen ein passender Vers
-- `memory_topic` — nutzt B1: wenn Memory ein Thema erwähnt ("Job-Verlust"), sendet passende Verse
+**B) Statisches PDF via `pptxgenjs` oder `docx`-Skill**
+- Einmalig generiert, offline verteilbar.
+- Weniger flexibel, aber sofort E-Mail-tauglich.
 
-**Umsetzung:**
-- Migration: Enum-Erweiterung `ALTER TYPE bible_moment_trigger ADD VALUE ...` (3 neue Werte)
-- `bible-moment-dispatch` Edge Function: neuer Branch pro Trigger, für `memory_topic` liest sie `user_memory` und generiert Themen-passenden Vers via `openai/gpt-5-mini`
-- `BibleMoments.tsx`: UI-Cards für die 3 neuen Trigger
+## Offene Fragen vor Bau
 
----
+1. **Zielgruppe erste Version**: Kirchen (Patronat) *oder* Institutionen (Spital/HR) *oder* beides in einem Deck mit Track-Weiche?
+2. **Sprache**: DE-only start, oder DE+EN parallel?
+3. **Format**: Web-Deck (`/pitch`) oder statisches PDF — oder beides (Web zuerst, PDF-Export daraus)?
+4. **Zahlen**: Darf ich echte Zahlen aus `analytics_events` ziehen, oder platzhalten wir?
 
-## Reihenfolge
-
-1. **Hero A/B-Test** (klein, sofortiger Lern-Effekt) — ~30 Min
-2. **B1 Memory-Import** (grösster Impact, Alleinstellungsmerkmal) — Migration + Seite + Chat-Integration
-3. **B2 Export/Import Prompts** — reines Frontend, schnell
-4. **B3 Kontext-Pushes** — Enum-Erweiterung + Dispatcher-Branches
-
-## Technische Details
-
-**Datenbank-Migration (B1):**
-```sql
-CREATE TABLE public.user_memory (
-  id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
-  user_id uuid NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,
-  content text NOT NULL CHECK (length(content) <= 20000),
-  source text NOT NULL CHECK (source IN ('gpt','claude','gemini','manual')),
-  is_active boolean NOT NULL DEFAULT true,
-  imported_at timestamptz NOT NULL DEFAULT now(),
-  updated_at timestamptz NOT NULL DEFAULT now()
-);
-GRANT SELECT, INSERT, UPDATE, DELETE ON public.user_memory TO authenticated;
-GRANT ALL ON public.user_memory TO service_role;
-ALTER TABLE public.user_memory ENABLE ROW LEVEL SECURITY;
-CREATE POLICY "own_memory" ON public.user_memory FOR ALL TO authenticated
-  USING (user_id = auth.uid()) WITH CHECK (user_id = auth.uid());
-```
-
-**Modell-Wahl:** `openai/gpt-5-mini` (priority) für Memory-Parsing und Themen-Matching — schnell, günstig, gut genug für Extraction. Chat selbst bleibt auf `gpt-5.5`.
-
-**Datenschutz:** Memory-Content wird nie geloggt, nie in Analytics, nie in Outreach. Löschung = harter Delete.
-
----
-
-Bestätigst du die Reihenfolge, oder soll ein Teil vorgezogen/gestrichen werden?
+Sobald du diese vier beantwortest, baue ich das Deck in einem Rutsch.
