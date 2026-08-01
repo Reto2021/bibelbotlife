@@ -29,7 +29,7 @@ export function CrossCard({ post, hasReacted, onReact, onOpen }: Props) {
   const reported = hasReacted(post.id, "report");
 
   async function share() {
-    const url = `${window.location.origin}/kreuzwege`;
+    const url = getCrossPostUrl(post);
     const text = t("crossways.card.shareText", { place: post.place_label });
     let completed = false;
     try {
