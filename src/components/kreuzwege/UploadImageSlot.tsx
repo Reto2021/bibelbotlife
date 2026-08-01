@@ -16,6 +16,7 @@ export function UploadImageSlot({
   quote,
   quoteReference,
   burnQuote,
+  targetAspect = "original",
   onEdited,
   onRemove,
 }: {
@@ -24,12 +25,19 @@ export function UploadImageSlot({
   quote: string;
   quoteReference: string;
   burnQuote: boolean;
+  /** Format chosen for all images; applied automatically, can be overridden here. */
+  targetAspect?: CropAspect;
   onEdited: (file: File) => void;
   onRemove: () => void;
 }) {
   const { t } = useTranslation();
   const [rotation, setRotation] = useState(0);
-  const [aspect, setAspect] = useState<CropAspect>("original");
+  const [aspect, setAspect] = useState<CropAspect>(targetAspect);
+
+  // Follow the dialog-wide target format; a manual pick below still wins afterwards.
+  useEffect(() => {
+    setAspect(targetAspect);
+  }, [targetAspect]);
   const [edited, setEdited] = useState<File>(file);
   const [preview, setPreview] = useState<string | null>(null);
   const [burnedPreview, setBurnedPreview] = useState<string | null>(null);
@@ -161,7 +169,7 @@ export function UploadImageSlot({
             ) : (
               <span>{(edited.size / 1024 / 1024).toFixed(1)} MB</span>
             )}
-            {(rotation !== 0 || aspect !== "original") && (
+            {(rotation !== 0 || aspect !== targetAspect) && (
               <Button
                 type="button"
                 variant="ghost"
@@ -169,7 +177,7 @@ export function UploadImageSlot({
                 className="ml-auto h-7 px-2"
                 onClick={() => {
                   setRotation(0);
-                  setAspect("original");
+                  setAspect(targetAspect);
                 }}
               >
                 {t("crossways.upload.editReset", "Zurücksetzen")}

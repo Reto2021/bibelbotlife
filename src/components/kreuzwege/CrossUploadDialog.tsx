@@ -31,6 +31,7 @@ import { submitCrossPost } from "@/hooks/use-cross-posts";
 import { ModerationError } from "@/lib/moderation";
 import { withQuotationMarks } from "@/lib/burn-quote";
 import { UploadImageSlot } from "./UploadImageSlot";
+import { CROP_ASPECTS, type CropAspect } from "@/lib/transform-image";
 import { VersePicker } from "./VersePicker";
 
 const CrossMap = lazy(() => import("./CrossMap"));
@@ -84,6 +85,8 @@ export function CrossUploadDialog({
   const [quote, setQuote] = useState("");
   const [quoteReference, setQuoteReference] = useState("");
   const [burnQuote, setBurnQuote] = useState(true);
+  /** Target format applied to every picked image (auto center-crop instead of rejecting). */
+  const [targetAspect, setTargetAspect] = useState<CropAspect>("original");
 
   function reset() {
     setImages([]);
@@ -100,6 +103,7 @@ export function CrossUploadDialog({
     setQuote("");
     setQuoteReference("");
     setBurnQuote(true);
+    setTargetAspect("original");
     setProgress(null);
     setStatuses({});
   }
@@ -348,6 +352,33 @@ export function CrossUploadDialog({
                     .replace("{{count}}", String(images.length))
                     .replace("{{max}}", String(MAX_FILES))}
                 </p>
+                <div className="space-y-1.5 rounded-lg border border-border/60 bg-muted/30 p-2.5">
+                  <p className="text-xs font-medium">
+                    {t("crossways.upload.targetFormat", "Zielformat für alle Bilder")}
+                  </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {CROP_ASPECTS.map((option) => (
+                      <Button
+                        key={option}
+                        type="button"
+                        size="sm"
+                        variant={targetAspect === option ? "default" : "outline"}
+                        className="h-7 px-2.5 text-xs"
+                        onClick={() => setTargetAspect(option)}
+                      >
+                        {option === "original"
+                          ? t("crossways.upload.cropOriginal", "Original")
+                          : option}
+                      </Button>
+                    ))}
+                  </div>
+                  <p className="text-xs text-muted-foreground">
+                    {t(
+                      "crossways.upload.targetFormatHint",
+                      "Abweichende Seitenverhältnisse werden automatisch mittig zugeschnitten – die Vorschau zeigt das Ergebnis. Pro Bild anpassbar.",
+                    )}
+                  </p>
+                </div>
                 {images.map((item, index) => (
                   <UploadImageSlot
                     key={item.id}
@@ -356,6 +387,7 @@ export function CrossUploadDialog({
                     quote={quote}
                     quoteReference={quoteReference}
                     burnQuote={burnQuote}
+                    targetAspect={targetAspect}
                     onEdited={(edited) =>
                       setEditedFiles((prev) => ({ ...prev, [item.id]: edited }))
                     }
