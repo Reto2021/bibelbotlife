@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { burnQuoteIntoImage } from "@/lib/burn-quote";
+import { ModerationError, moderateSubmission } from "@/lib/moderation";
 
 export type CrossInteraction = "prayer" | "amen" | "share" | "report";
 
@@ -145,6 +146,14 @@ export async function submitCrossPost(input: NewCrossPost) {
   const blob = burned
     ? await burnQuoteIntoImage(input.file, { quote, reference })
     : await compressImage(input.file);
+
+  // Safety gate: no pornographic imagery, no racist / hateful text.
+  const verdict = await moderateSubmission({
+    image: blob,
+    texts: [input.placeLabel, input.story ?? "", quote, reference, input.authorName ?? ""],
+  });
+  if (!verdict.allowed) throw new ModerationError(verdict);
+
   const path = `${crypto.randomUUID()}.jpg`;
 
   const { error: uploadError } = await supabase.storage

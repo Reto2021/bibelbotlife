@@ -167,7 +167,9 @@
       "imageUnreadable": "Bild konnte nicht gelesen werden",
       "imageUnreadableDesc": "Bitte eine andere Datei wählen.",
       "imageTooSmall": "Bild zu klein",
-      "imageTooSmallDesc": "Mindestens {{min}} x {{min}} Pixel."
+      "imageTooSmallDesc": "Mindestens {{min}} x {{min}} Pixel.",
+      "blockedTitle": "Inhalt nicht erlaubt",
+      "blockedDesc": "Dieser Beitrag verstösst gegen unsere Regeln (keine sexuellen, rassistischen oder gewaltverherrlichenden Inhalte)."
     },
     "card": {
       "anonymous": "Anonym",
