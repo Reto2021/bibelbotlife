@@ -211,6 +211,35 @@ export function CrossDetailModal({ post, open, onOpenChange, hasReacted, onReact
             </div>
           </div>
         </div>
+
+        {/* Full-screen photo overlay: the whole motif, never cropped. */}
+        {lightbox && post.image_url && (
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-label={t("crossways.modal.openLightbox", "Foto im Vollbild anzeigen")}
+            onClick={() => setLightbox(false)}
+            className="fixed inset-0 z-[60] flex cursor-zoom-out items-center justify-center bg-foreground/95 p-4 animate-in fade-in"
+          >
+            <img
+              src={post.image_url}
+              alt={t("crossways.card.imageAlt", { place: post.place_label })}
+              className="max-h-full max-w-full object-contain"
+            />
+            <Button
+              variant="secondary"
+              size="icon"
+              className="absolute right-4 top-4"
+              aria-label={t("crossways.modal.closeLightbox", "Vollbild schliessen")}
+              onClick={(e) => {
+                e.stopPropagation();
+                setLightbox(false);
+              }}
+            >
+              <X className="h-4 w-4" />
+            </Button>
+          </div>
+        )}
       </DialogContent>
     </Dialog>
   );
