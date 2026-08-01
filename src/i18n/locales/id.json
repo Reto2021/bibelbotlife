@@ -2192,17 +2192,11 @@
     },
     "admin": {
       "title": "Moderasi Jalan Salib",
-      "reported": "Dilaporkan",
-      "pending": "Tertunda",
-      "approved": "Disetujui",
-      "rejected": "Ditolak",
-      "all": "Semua",
       "loading": "Memuat…",
       "empty": "Tidak ada entri.",
       "approve": "Setujui",
       "reject": "Tolak",
       "delete": "Hapus",
-      "rejectReasonPlaceholder": "Alasan penolakan",
       "filter": {
         "reported": "Dilaporkan",
         "pending": "Tertunda",

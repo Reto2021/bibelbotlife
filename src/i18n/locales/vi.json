@@ -2153,17 +2153,11 @@
     },
     "admin": {
       "title": "Kiểm duyệt Crossways",
-      "reported": "Đã báo cáo",
-      "pending": "Đang chờ xử lý",
-      "approved": "Đã duyệt",
-      "rejected": "Đã từ chối",
-      "all": "Tất cả",
       "loading": "Đang tải…",
       "empty": "Không có mục nào.",
       "approve": "Duyệt",
       "reject": "Từ chối",
       "delete": "Xóa",
-      "rejectReasonPlaceholder": "Lý do từ chối",
       "filter": {
         "reported": "Đã báo cáo",
         "pending": "Đang chờ xử lý",

@@ -2152,17 +2152,11 @@
     },
     "admin": {
       "title": "十字路口管理",
-      "reported": "已举报",
-      "pending": "待处理",
-      "approved": "已批准",
-      "rejected": "已拒绝",
-      "all": "全部",
       "loading": "加载中…",
       "empty": "无条目。",
       "approve": "批准",
       "reject": "拒绝",
       "delete": "删除",
-      "rejectReasonPlaceholder": "拒绝原因",
       "filter": {
         "reported": "已举报",
         "pending": "待处理",

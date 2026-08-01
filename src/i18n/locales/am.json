@@ -2149,17 +2149,11 @@
     },
     "admin": {
       "title": "የመስቀለኛ መንገድ አስተዳደር",
-      "reported": "ሪፖርት ተደርጓል",
-      "pending": "በመጠባበቅ ላይ",
-      "approved": "ጸድቋል",
-      "rejected": "ውድቅ ተደርጓል",
-      "all": "ሁሉም",
       "loading": "በመጫን ላይ…",
       "empty": "ምንም ግቤቶች የሉም።",
       "approve": "አጽድቅ",
       "reject": "ውድቅ አድርግ",
       "delete": "ሰርዝ",
-      "rejectReasonPlaceholder": "የውድቅነት ምክንያት",
       "filter": {
         "reported": "ሪፖርት ተደርጓል",
         "pending": "በመጠባበቅ ላይ",

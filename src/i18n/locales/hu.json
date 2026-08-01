@@ -2151,17 +2151,11 @@
     },
     "admin": {
       "title": "Keresztutak moderálása",
-      "reported": "Jelentve",
-      "pending": "Függőben",
-      "approved": "Jóváhagyva",
-      "rejected": "Elutasítva",
-      "all": "Összes",
       "loading": "Betöltés…",
       "empty": "Nincsenek bejegyzések.",
       "approve": "Jóváhagyás",
       "reject": "Elutasítás",
       "delete": "Törlés",
-      "rejectReasonPlaceholder": "Elutasítás oka",
       "filter": {
         "reported": "Jelentett",
         "pending": "Függőben",

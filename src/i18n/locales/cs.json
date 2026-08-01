@@ -2151,17 +2151,11 @@
     },
     "admin": {
       "title": "Moderace křížových cest",
-      "reported": "Nahlášeno",
-      "pending": "Čekající",
-      "approved": "Schváleno",
-      "rejected": "Zamítnuto",
-      "all": "Vše",
       "loading": "Načítám…",
       "empty": "Žádné záznamy.",
       "approve": "Schválit",
       "reject": "Zamítnout",
       "delete": "Smazat",
-      "rejectReasonPlaceholder": "Důvod odmítnutí",
       "filter": {
         "reported": "Nahlášeno",
         "pending": "Čekající",

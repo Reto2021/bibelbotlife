@@ -2151,17 +2151,11 @@
     },
     "admin": {
       "title": "Модерация на кръстопътища",
-      "reported": "Докладвано",
-      "pending": "В очакване",
-      "approved": "Одобрени",
-      "rejected": "Отхвърлени",
-      "all": "Всички",
       "loading": "Зареждане…",
       "empty": "Няма записи.",
       "approve": "Одобряване",
       "reject": "Отхвърляне",
       "delete": "Изтриване",
-      "rejectReasonPlaceholder": "Причина за отхвърляне",
       "filter": {
         "reported": "Докладвани",
         "pending": "Чакащи",

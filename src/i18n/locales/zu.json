@@ -2151,17 +2151,11 @@
     },
     "admin": {
       "title": "Ukuphatha kwe-Crossways",
-      "reported": "Kubikiwe",
-      "pending": "Kulindile",
-      "approved": "Kugunyaziwe",
-      "rejected": "Kwenqatshiwe",
-      "all": "Konke",
       "loading": "Iyalayisha…",
       "empty": "Azikho izinto.",
       "approve": "Gunyaza",
       "reject": "Yenqaba",
       "delete": "Susa",
-      "rejectReasonPlaceholder": "Isizathu sokwenqaba",
       "filter": {
         "reported": "Kubikiwe",
         "pending": "Kusalindile",

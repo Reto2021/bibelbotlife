@@ -2154,17 +2154,11 @@
     },
     "admin": {
       "title": "Moderasyon ng Crossways",
-      "reported": "Naiulat",
-      "pending": "Nakabinbin",
-      "approved": "Naaprubahan",
-      "rejected": "Tinanggihan",
-      "all": "Lahat",
       "loading": "Naglo-load…",
       "empty": "Walang entry.",
       "approve": "Aprubahan",
       "reject": "Tanggihan",
       "delete": "Tanggalin",
-      "rejectReasonPlaceholder": "Dahilan ng Pagtanggi",
       "filter": {
         "reported": "Iniulat",
         "pending": "Nakabinbin",

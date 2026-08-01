@@ -2151,17 +2151,11 @@
     },
     "admin": {
       "title": "Usimamizi wa Njia Panda",
-      "reported": "Imeripotiwa",
-      "pending": "Inasubiri",
-      "approved": "Imeidhinishwa",
-      "rejected": "Imekataliwa",
-      "all": "Zote",
       "loading": "Inapakia…",
       "empty": "Hakuna viingilio.",
       "approve": "Idhinisha",
       "reject": "Kataa",
       "delete": "Futa",
-      "rejectReasonPlaceholder": "Sababu ya kukataa",
       "filter": {
         "reported": "Imetolewa ripoti",
         "pending": "Inasubiri",

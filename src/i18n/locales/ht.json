@@ -2151,17 +2151,11 @@
     },
     "admin": {
       "title": "Modération kwa",
-      "reported": "Rapòte",
-      "pending": "An atant",
-      "approved": "Apwouve",
-      "rejected": "Rejte",
-      "all": "Tout",
       "loading": "Ap chaje…",
       "empty": "Pa gen antre.",
       "approve": "Apwouve",
       "reject": "Rejte",
       "delete": "Efase",
-      "rejectReasonPlaceholder": "Rezon pou rejè",
       "filter": {
         "reported": "Rapòte",
         "pending": "An atant",

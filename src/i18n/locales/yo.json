@@ -2151,17 +2151,11 @@
     },
     "admin": {
       "title": "Ìṣàkóso Àwọn Ọ̀nà Agbelebu",
-      "reported": "Ti fún ìròyìn",
-      "pending": "Dúró",
-      "approved": "Fọwọ́sí",
-      "rejected": "Kọ̀",
-      "all": "Gbogbo",
       "loading": "Ń rù…",
       "empty": "Kò sí ohun kankan.",
       "approve": "Fọwọ́sí",
       "reject": "Kọ̀",
       "delete": "Paarẹ́",
-      "rejectReasonPlaceholder": "Ìdí ìkọ̀sílẹ̀",
       "filter": {
         "reported": "Wọ́n ti ròyìn rẹ̀",
         "pending": "Dúró de",

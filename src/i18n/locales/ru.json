@@ -2151,17 +2151,11 @@
     },
     "admin": {
       "title": "Модерация перекрестков",
-      "reported": "Сообщено",
-      "pending": "В ожидании",
-      "approved": "Одобрено",
-      "rejected": "Отклонено",
-      "all": "Все",
       "loading": "Загрузка…",
       "empty": "Нет записей.",
       "approve": "Одобрить",
       "reject": "Отклонить",
       "delete": "Удалить",
-      "rejectReasonPlaceholder": "Причина отклонения",
       "filter": {
         "reported": "Сообщено",
         "pending": "В ожидании",

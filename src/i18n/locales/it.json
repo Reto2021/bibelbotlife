@@ -2159,17 +2159,11 @@
     },
     "admin": {
       "title": "Moderazione delle Vie Crucis",
-      "reported": "Segnalato",
-      "pending": "In sospeso",
-      "approved": "Approvato",
-      "rejected": "Rifiutato",
-      "all": "Tutti",
       "loading": "Caricamento…",
       "empty": "Nessuna voce.",
       "approve": "Approva",
       "reject": "Rifiuta",
       "delete": "Elimina",
-      "rejectReasonPlaceholder": "Motivo del rifiuto",
       "filter": {
         "reported": "Segnalato",
         "pending": "In sospeso",

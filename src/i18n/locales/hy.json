@@ -2151,17 +2151,11 @@
     },
     "admin": {
       "title": "Խաչմերուկների մոդերացիա",
-      "reported": "Հաղորդվել է",
-      "pending": "Սպասման մեջ",
-      "approved": "Հաստատված է",
-      "rejected": "Մերժված է",
-      "all": "Բոլորը",
       "loading": "Բեռնվում է…",
       "empty": "Գրառումներ չկան։",
       "approve": "Հաստատել",
       "reject": "Մերժել",
       "delete": "Ջնջել",
-      "rejectReasonPlaceholder": "Մերժման պատճառը",
       "filter": {
         "reported": "Հաղորդված",
         "pending": "Սպասվող",

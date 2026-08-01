@@ -2159,17 +2159,11 @@
     },
     "admin": {
       "title": "Modération des chemins de croix",
-      "reported": "Signalé",
-      "pending": "En attente",
-      "approved": "Approuvé",
-      "rejected": "Rejeté",
-      "all": "Tous",
       "loading": "Chargement…",
       "empty": "Aucune entrée.",
       "approve": "Approuver",
       "reject": "Rejeter",
       "delete": "Supprimer",
-      "rejectReasonPlaceholder": "Motif du rejet",
       "filter": {
         "reported": "Signalé",
         "pending": "En attente",

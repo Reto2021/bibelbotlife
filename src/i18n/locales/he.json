@@ -2151,17 +2151,11 @@
     },
     "admin": {
       "title": "ניהול צמתים",
-      "reported": "דווח",
-      "pending": "ממתין",
-      "approved": "אושר",
-      "rejected": "נדחה",
-      "all": "הכל",
       "loading": "טוען...",
       "empty": "אין פריטים.",
       "approve": "אשר",
       "reject": "דחה",
       "delete": "מחק",
-      "rejectReasonPlaceholder": "סיבת דחייה",
       "filter": {
         "reported": "מדווח",
         "pending": "ממתין",

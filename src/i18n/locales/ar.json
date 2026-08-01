@@ -2151,17 +2151,11 @@
     },
     "admin": {
       "title": "إدارة مفترق الطرق",
-      "reported": "تم الإبلاغ",
-      "pending": "قيد الانتظار",
-      "approved": "تمت الموافقة عليها",
-      "rejected": "مرفوض",
-      "all": "الكل",
       "loading": "جارٍ التحميل...",
       "empty": "لا توجد إدخالات.",
       "approve": "موافقة",
       "reject": "رفض",
       "delete": "حذف",
-      "rejectReasonPlaceholder": "سبب الرفض",
       "filter": {
         "reported": "تم الإبلاغ عنها",
         "pending": "قيد الانتظار",

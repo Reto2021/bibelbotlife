@@ -2192,17 +2192,11 @@
     },
     "admin": {
       "title": "Nchịkwa ụzọ dị iche iche",
-      "reported": "Akọọla",
-      "pending": "Na-echere",
-      "approved": "Anabatara",
-      "rejected": "Ajụrụ",
-      "all": "Niile",
       "loading": "Na-ebunye…",
       "empty": "Enweghị ntinye.",
       "approve": "Anabata",
       "reject": "Jụ",
       "delete": "Hichapụ",
-      "rejectReasonPlaceholder": "Ihe kpatara ịjụ",
       "filter": {
         "reported": "Akọpụtara",
         "pending": "Na-echere",

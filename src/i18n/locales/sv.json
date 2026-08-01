@@ -2151,17 +2151,11 @@
     },
     "admin": {
       "title": "Korsvägsmoderering",
-      "reported": "Rapporterad",
-      "pending": "Väntande",
-      "approved": "Godkänd",
-      "rejected": "Avvisad",
-      "all": "Alla",
       "loading": "Laddar…",
       "empty": "Inga poster.",
       "approve": "Godkänn",
       "reject": "Avvisa",
       "delete": "Radera",
-      "rejectReasonPlaceholder": "Anledning till avvisning",
       "filter": {
         "reported": "Rapporterad",
         "pending": "Väntande",

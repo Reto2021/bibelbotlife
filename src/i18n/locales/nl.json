@@ -2192,17 +2192,11 @@
     },
     "admin": {
       "title": "Kruispunten-moderatie",
-      "reported": "Gemeld",
-      "pending": "In afwachting",
-      "approved": "Goedgekeurd",
-      "rejected": "Afgewezen",
-      "all": "Alle",
       "loading": "Laden…",
       "empty": "Geen vermeldingen.",
       "approve": "Goedkeuren",
       "reject": "Afwijzen",
       "delete": "Verwijderen",
-      "rejectReasonPlaceholder": "Reden van afwijzing",
       "filter": {
         "reported": "Gerapporteerd",
         "pending": "In afwachting",

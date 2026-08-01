@@ -2193,17 +2193,11 @@
     },
     "admin": {
       "title": "Korsvei-moderering",
-      "reported": "Rapportert",
-      "pending": "Ventende",
-      "approved": "Godkjent",
-      "rejected": "Avvist",
-      "all": "Alle",
       "loading": "Laster inn…",
       "empty": "Ingen oppføringer.",
       "approve": "Godkjenn",
       "reject": "Avvis",
       "delete": "Slett",
-      "rejectReasonPlaceholder": "Årsak til avvisning",
       "filter": {
         "reported": "Rapportert",
         "pending": "Ventende",

@@ -2151,17 +2151,11 @@
     },
     "admin": {
       "title": "Moderación de Cruces",
-      "reported": "Reportado",
-      "pending": "Pendiente",
-      "approved": "Aprobado",
-      "rejected": "Rechazado",
-      "all": "Todos",
       "loading": "Cargando…",
       "empty": "No hay entradas.",
       "approve": "Aprobar",
       "reject": "Rechazar",
       "delete": "Eliminar",
-      "rejectReasonPlaceholder": "Motivo del rechazo",
       "filter": {
         "reported": "Reportado",
         "pending": "Pendiente",

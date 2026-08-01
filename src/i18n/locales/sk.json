@@ -2151,17 +2151,11 @@
     },
     "admin": {
       "title": "Moderácia križovatiek",
-      "reported": "Nahlásené",
-      "pending": "Čakajúce",
-      "approved": "Schválené",
-      "rejected": "Zamietnuté",
-      "all": "Všetky",
       "loading": "Načítavam…",
       "empty": "Žiadne záznamy.",
       "approve": "Schváliť",
       "reject": "Zamietnuť",
       "delete": "Vymazať",
-      "rejectReasonPlaceholder": "Dôvod odmietnutia",
       "filter": {
         "reported": "Nahlásené",
         "pending": "Čakajúce",

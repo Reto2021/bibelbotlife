@@ -2151,17 +2151,11 @@
     },
     "admin": {
       "title": "Krydsvejs-moderation",
-      "reported": "Rapporteret",
-      "pending": "Afventende",
-      "approved": "Godkendt",
-      "rejected": "Afvist",
-      "all": "Alle",
       "loading": "Indlæser…",
       "empty": "Ingen poster.",
       "approve": "Godkend",
       "reject": "Afvis",
       "delete": "Slet",
-      "rejectReasonPlaceholder": "Årsag til afvisning",
       "filter": {
         "reported": "Anmeldt",
         "pending": "Afventende",

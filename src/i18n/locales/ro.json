@@ -2151,17 +2151,11 @@
     },
     "admin": {
       "title": "Moderare Căi",
-      "reported": "Raportat",
-      "pending": "În așteptare",
-      "approved": "Aprobat",
-      "rejected": "Respins",
-      "all": "Toate",
       "loading": "Se încarcă…",
       "empty": "Nici o înregistrare.",
       "approve": "Aprobă",
       "reject": "Respinge",
       "delete": "Șterge",
-      "rejectReasonPlaceholder": "Motivul respingerii",
       "filter": {
         "reported": "Raportate",
         "pending": "În așteptare",

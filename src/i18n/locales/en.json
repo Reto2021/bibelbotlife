@@ -2213,17 +2213,11 @@
     },
     "admin": {
       "title": "Crossways Moderation",
-      "reported": "Reported",
-      "pending": "Pending",
-      "approved": "Approved",
-      "rejected": "Rejected",
-      "all": "All",
       "loading": "Loading…",
       "empty": "No entries.",
       "approve": "Approve",
       "reject": "Reject",
       "delete": "Delete",
-      "rejectReasonPlaceholder": "Reason for rejection",
       "filter": {
         "reported": "Reported",
         "pending": "Pending",

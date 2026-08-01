@@ -2151,17 +2151,11 @@
     },
     "admin": {
       "title": "Moderacja skrzyżowań",
-      "reported": "Zgłoszono",
-      "pending": "Oczekujące",
-      "approved": "Zatwierdzone",
-      "rejected": "Odrzucone",
-      "all": "Wszystkie",
       "loading": "Ładowanie…",
       "empty": "Brak wpisów.",
       "approve": "Zatwierdź",
       "reject": "Odrzuć",
       "delete": "Usuń",
-      "rejectReasonPlaceholder": "Powód odrzucenia",
       "filter": {
         "reported": "Zgłoszone",
         "pending": "Oczekujące",
