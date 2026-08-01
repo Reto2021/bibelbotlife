@@ -208,9 +208,14 @@ export function CrossUploadDialog({
     if (!images.length || !placeLabel.trim() || !consent) return;
     setSubmitting(true);
     setProgress({ done: 0, total: images.length });
+    setStatuses(Object.fromEntries(images.map((i) => [i.id, { state: "pending" as const }])));
+
     let uploaded = 0;
-    try {
-      for (const item of images) {
+    const failures: { name: string; message: string }[] = [];
+
+    for (const item of images) {
+      setStatuses((prev) => ({ ...prev, [item.id]: { state: "uploading" } }));
+      try {
         await submitCrossPost({
           file: editedFiles[item.id] ?? item.file,
           placeLabel,
@@ -225,44 +230,59 @@ export function CrossUploadDialog({
           burnQuote,
         });
         uploaded += 1;
-        setProgress({ done: uploaded, total: images.length });
+        setStatuses((prev) => ({ ...prev, [item.id]: { state: "done" } }));
+      } catch (err) {
+        const message =
+          err instanceof ModerationError
+            ? t(
+                "crossways.upload.blockedDesc",
+                "Dieser Beitrag verstösst gegen unsere Regeln (keine sexuellen, rassistischen oder gewaltverherrlichenden Inhalte).",
+              )
+            : err instanceof Error
+              ? err.message
+              : t("crossways.upload.errorDesc");
+        failures.push({ name: item.file.name, message });
+        setStatuses((prev) => ({ ...prev, [item.id]: { state: "error", message } }));
       }
-      toast({
-        title: t("crossways.upload.successTitle"),
+      setProgress({ done: uploaded + failures.length, total: images.length });
+    }
+
+    setSubmitting(false);
+
+    if (uploaded > 0) {
+      toast.success(t("crossways.upload.successTitle"), {
         description:
-          images.length > 1
+          uploaded > 1
             ? t("crossways.upload.successDescMany", "{{count}} Bilder wurden veröffentlicht.").replace(
                 "{{count}}",
                 String(uploaded),
               )
             : t("crossways.upload.successDesc"),
       });
-      reset();
-      setOpen(false);
       onSubmitted();
-    } catch (err) {
-      if (uploaded > 0) onSubmitted();
-      if (err instanceof ModerationError) {
-        toast({
-          title: t("crossways.upload.blockedTitle", "Inhalt nicht erlaubt"),
-          description: t(
-            "crossways.upload.blockedDesc",
-            "Dieser Beitrag verstösst gegen unsere Regeln (keine sexuellen, rassistischen oder gewaltverherrlichenden Inhalte).",
-          ),
-          variant: "destructive",
-        });
-        return;
-      }
-      toast({
-        title: t("crossways.upload.errorTitle"),
-        description: err instanceof Error ? err.message : t("crossways.upload.errorDesc"),
-        variant: "destructive",
-      });
-    } finally {
-      setSubmitting(false);
-      setProgress(null);
     }
+
+    if (failures.length) {
+      toast.error(t("crossways.upload.errorTitle"), {
+        description:
+          failures.length === 1
+            ? `${failures[0].name}: ${failures[0].message}`
+            : t("crossways.upload.errorDescMany", "{{count}} Bilder konnten nicht hochgeladen werden.").replace(
+                "{{count}}",
+                String(failures.length),
+              ),
+      });
+      // Keep the failed images in the dialog so the user can retry.
+      const failedNames = new Set(failures.map((f) => f.name));
+      setImages((prev) => prev.filter((i) => failedNames.has(i.file.name)));
+      setProgress(null);
+      return;
+    }
+
+    reset();
+    setOpen(false);
   }
+
 
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
