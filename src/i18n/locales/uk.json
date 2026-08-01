@@ -2137,7 +2137,11 @@
       "successTitle": "Дякуємо за ваш хрест",
       "successDesc": "Ваш хрест тепер опубліковано.",
       "errorTitle": "Помилка завантаження",
-      "errorDesc": "Будь ласка, спробуйте ще раз."
+      "errorDesc": "Будь ласка, спробуйте ще раз.",
+      "dropHint": "Drag an image here or click to select",
+      "replaceHint": "Drag another image or click to replace",
+      "removeImage": "Remove",
+      "notAnImage": "Please choose an image file"
     },
     "card": {
       "anonymous": "Анонімно",

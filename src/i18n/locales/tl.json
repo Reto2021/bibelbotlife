@@ -2140,7 +2140,11 @@
       "successTitle": "Salamat sa Iyong Krus",
       "successDesc": "Live na ngayon ang iyong krus.",
       "errorTitle": "Nabigo ang Pag-upload",
-      "errorDesc": "Mangyaring subukang muli."
+      "errorDesc": "Mangyaring subukang muli.",
+      "dropHint": "Drag an image here or click to select",
+      "replaceHint": "Drag another image or click to replace",
+      "removeImage": "Remove",
+      "notAnImage": "Please choose an image file"
     },
     "card": {
       "anonymous": "Anonymous",

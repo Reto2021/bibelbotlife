@@ -2137,7 +2137,11 @@
       "successTitle": "Mulțumim pentru crucea ta",
       "successDesc": "Crucea ta este acum live.",
       "errorTitle": "Încărcare eșuată",
-      "errorDesc": "Te rog să încerci din nou."
+      "errorDesc": "Te rog să încerci din nou.",
+      "dropHint": "Drag an image here or click to select",
+      "replaceHint": "Drag another image or click to replace",
+      "removeImage": "Remove",
+      "notAnImage": "Please choose an image file"
     },
     "card": {
       "anonymous": "Anonim",

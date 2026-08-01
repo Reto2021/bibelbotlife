@@ -138,7 +138,11 @@
       "successTitle": "Danke für dein Kreuz",
       "successDesc": "Dein Kreuz ist jetzt live.",
       "errorTitle": "Upload fehlgeschlagen",
-      "errorDesc": "Bitte nochmals versuchen."
+      "errorDesc": "Bitte nochmals versuchen.",
+      "dropHint": "Bild hierhin ziehen oder klicken zum Auswählen",
+      "replaceHint": "Anderes Bild ziehen oder klicken zum Ersetzen",
+      "removeImage": "Entfernen",
+      "notAnImage": "Bitte eine Bilddatei auswählen"
     },
     "card": {
       "anonymous": "Anonym",

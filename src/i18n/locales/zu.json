@@ -2137,7 +2137,11 @@
       "successTitle": "Siyabonga ngesiphambano sakho",
       "successDesc": "Isiphambano sakho sesiphila.",
       "errorTitle": "Ukulayisha kwehlulekile",
-      "errorDesc": "Sicela uzame futhi."
+      "errorDesc": "Sicela uzame futhi.",
+      "dropHint": "Drag an image here or click to select",
+      "replaceHint": "Drag another image or click to replace",
+      "removeImage": "Remove",
+      "notAnImage": "Please choose an image file"
     },
     "card": {
       "anonymous": "Ongaziwa",

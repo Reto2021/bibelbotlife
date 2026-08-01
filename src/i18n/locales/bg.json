@@ -2137,7 +2137,11 @@
       "successTitle": "Благодарим за вашия кръст",
       "successDesc": "Вашият кръст вече е на живо.",
       "errorTitle": "Качването не бе успешно",
-      "errorDesc": "Моля, опитайте отново."
+      "errorDesc": "Моля, опитайте отново.",
+      "dropHint": "Drag an image here or click to select",
+      "replaceHint": "Drag another image or click to replace",
+      "removeImage": "Remove",
+      "notAnImage": "Please choose an image file"
     },
     "card": {
       "anonymous": "Анонимен",

@@ -2135,7 +2135,11 @@
       "successTitle": "ስለ መስቀልዎ እናመሰግናለን",
       "successDesc": "መስቀልዎ አሁን ቀጥታ ነው።",
       "errorTitle": "መጫን አልተሳካም",
-      "errorDesc": "እባክዎ እንደገና ይሞክሩ።"
+      "errorDesc": "እባክዎ እንደገና ይሞክሩ።",
+      "dropHint": "Drag an image here or click to select",
+      "replaceHint": "Drag another image or click to replace",
+      "removeImage": "Remove",
+      "notAnImage": "Please choose an image file"
     },
     "card": {
       "anonymous": "ስም-አልባ",

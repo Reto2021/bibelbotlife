@@ -2137,7 +2137,11 @@
       "successTitle": "Asante kwa msalaba wako",
       "successDesc": "Msalaba wako sasa umetumwa.",
       "errorTitle": "Upakiaji umeshindwa",
-      "errorDesc": "Tafadhali jaribu tena."
+      "errorDesc": "Tafadhali jaribu tena.",
+      "dropHint": "Drag an image here or click to select",
+      "replaceHint": "Drag another image or click to replace",
+      "removeImage": "Remove",
+      "notAnImage": "Please choose an image file"
     },
     "card": {
       "anonymous": "Bila kujulikana",

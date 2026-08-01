@@ -2137,7 +2137,11 @@
       "successTitle": "Спасибо за ваш крест",
       "successDesc": "Ваш крест теперь опубликован.",
       "errorTitle": "Ошибка загрузки",
-      "errorDesc": "Пожалуйста, попробуйте еще раз."
+      "errorDesc": "Пожалуйста, попробуйте еще раз.",
+      "dropHint": "Drag an image here or click to select",
+      "replaceHint": "Drag another image or click to replace",
+      "removeImage": "Remove",
+      "notAnImage": "Please choose an image file"
     },
     "card": {
       "anonymous": "Анонимно",

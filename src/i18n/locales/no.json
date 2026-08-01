@@ -2179,7 +2179,11 @@
       "successTitle": "Takk for ditt kors",
       "successDesc": "Ditt kors er nå live.",
       "errorTitle": "Opplasting mislyktes",
-      "errorDesc": "Vennligst prøv igjen."
+      "errorDesc": "Vennligst prøv igjen.",
+      "dropHint": "Drag an image here or click to select",
+      "replaceHint": "Drag another image or click to replace",
+      "removeImage": "Remove",
+      "notAnImage": "Please choose an image file"
     },
     "card": {
       "anonymous": "Anonym",

@@ -2137,7 +2137,11 @@
       "successTitle": "תודה על הצלב שלך",
       "successDesc": "הצלב שלך עכשיו פעיל.",
       "errorTitle": "העלאה נכשלה",
-      "errorDesc": "אנא נסה שוב."
+      "errorDesc": "אנא נסה שוב.",
+      "dropHint": "Drag an image here or click to select",
+      "replaceHint": "Drag another image or click to replace",
+      "removeImage": "Remove",
+      "notAnImage": "Please choose an image file"
     },
     "card": {
       "anonymous": "אנונימי",

@@ -2137,7 +2137,11 @@
       "successTitle": "Tack för ditt kors",
       "successDesc": "Ditt kors är nu live.",
       "errorTitle": "Uppladdning misslyckades",
-      "errorDesc": "Vänligen försök igen."
+      "errorDesc": "Vänligen försök igen.",
+      "dropHint": "Drag an image here or click to select",
+      "replaceHint": "Drag another image or click to replace",
+      "removeImage": "Remove",
+      "notAnImage": "Please choose an image file"
     },
     "card": {
       "anonymous": "Anonym",

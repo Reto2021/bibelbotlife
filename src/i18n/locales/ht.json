@@ -2137,7 +2137,11 @@
       "successTitle": "Mèsi pou kwa ou",
       "successDesc": "Kwa ou a ap viv kounye a.",
       "errorTitle": "Telechaje echwe",
-      "errorDesc": "Tanpri eseye ankò."
+      "errorDesc": "Tanpri eseye ankò.",
+      "dropHint": "Drag an image here or click to select",
+      "replaceHint": "Drag another image or click to replace",
+      "removeImage": "Remove",
+      "notAnImage": "Please choose an image file"
     },
     "card": {
       "anonymous": "Anonim",

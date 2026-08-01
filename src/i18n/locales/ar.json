@@ -2137,7 +2137,11 @@
       "successTitle": "شكرًا على صليبك",
       "successDesc": "صليبك الآن مباشر.",
       "errorTitle": "فشل التحميل",
-      "errorDesc": "يرجى المحاولة مرة أخرى."
+      "errorDesc": "يرجى المحاولة مرة أخرى.",
+      "dropHint": "Drag an image here or click to select",
+      "replaceHint": "Drag another image or click to replace",
+      "removeImage": "Remove",
+      "notAnImage": "Please choose an image file"
     },
     "card": {
       "anonymous": "مجهول",

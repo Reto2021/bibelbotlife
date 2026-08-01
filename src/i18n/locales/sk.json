@@ -2137,7 +2137,11 @@
       "successTitle": "Ďakujeme za váš kríž",
       "successDesc": "Váš kríž je teraz aktívny.",
       "errorTitle": "Nahrávanie zlyhalo",
-      "errorDesc": "Prosím, skúste to znova."
+      "errorDesc": "Prosím, skúste to znova.",
+      "dropHint": "Drag an image here or click to select",
+      "replaceHint": "Drag another image or click to replace",
+      "removeImage": "Remove",
+      "notAnImage": "Please choose an image file"
     },
     "card": {
       "anonymous": "Anonymne",

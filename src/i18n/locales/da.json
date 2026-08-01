@@ -2137,7 +2137,11 @@
       "successTitle": "Tak for dit kors",
       "successDesc": "Dit kors er nu live.",
       "errorTitle": "Upload mislykkedes",
-      "errorDesc": "Prøv venligst igen."
+      "errorDesc": "Prøv venligst igen.",
+      "dropHint": "Drag an image here or click to select",
+      "replaceHint": "Drag another image or click to replace",
+      "removeImage": "Remove",
+      "notAnImage": "Please choose an image file"
     },
     "card": {
       "anonymous": "Anonym",

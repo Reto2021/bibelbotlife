@@ -2138,7 +2138,11 @@
       "successTitle": "Ευχαριστούμε για τον σταυρό σας",
       "successDesc": "Ο σταυρός σας είναι τώρα ζωντανός.",
       "errorTitle": "Η μεταφόρτωση απέτυχε",
-      "errorDesc": "Παρακαλώ δοκιμάστε ξανά."
+      "errorDesc": "Παρακαλώ δοκιμάστε ξανά.",
+      "dropHint": "Drag an image here or click to select",
+      "replaceHint": "Drag another image or click to replace",
+      "removeImage": "Remove",
+      "notAnImage": "Please choose an image file"
     },
     "card": {
       "anonymous": "Ανώνυμος",

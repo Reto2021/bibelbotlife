@@ -2145,7 +2145,11 @@
       "successTitle": "Grazie per la tua croce",
       "successDesc": "La tua croce è ora online.",
       "errorTitle": "Caricamento fallito",
-      "errorDesc": "Per favore, riprova."
+      "errorDesc": "Per favore, riprova.",
+      "dropHint": "Drag an image here or click to select",
+      "replaceHint": "Drag another image or click to replace",
+      "removeImage": "Remove",
+      "notAnImage": "Please choose an image file"
     },
     "card": {
       "anonymous": "Anonimo",

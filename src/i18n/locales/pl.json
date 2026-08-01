@@ -2137,7 +2137,11 @@
       "successTitle": "Dziękujemy za Twój krzyż",
       "successDesc": "Twój krzyż jest teraz dostępny.",
       "errorTitle": "Przesyłanie nie powiodło się",
-      "errorDesc": "Spróbuj ponownie."
+      "errorDesc": "Spróbuj ponownie.",
+      "dropHint": "Drag an image here or click to select",
+      "replaceHint": "Drag another image or click to replace",
+      "removeImage": "Remove",
+      "notAnImage": "Please choose an image file"
     },
     "card": {
       "anonymous": "Anonimowo",
