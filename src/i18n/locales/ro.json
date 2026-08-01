@@ -2169,7 +2169,8 @@
       "progressLabel": "Upload-Fortschritt",
       "errorDescMany": "{{count}} Bilder konnten nicht hochgeladen werden.",
       "targetFormat": "Target format for all photos",
-      "targetFormatHint": "Photos with a different aspect ratio are cropped to centre automatically – the preview shows the result. Adjustable per photo."
+      "targetFormatHint": "Photos with a different aspect ratio are cropped to centre automatically – the preview shows the result. Adjustable per photo.",
+      "burnQuoteOffHint": "Recommended: show the quote below the photo. Short quotes work best."
     },
     "card": {
       "anonymous": "Anonim",
@@ -2184,7 +2185,8 @@
       "report": "Raportează",
       "reported": "Raportat",
       "reportSentTitle": "Raport trimis",
-      "reportSentDesc": "Mulțumim, vom verifica contribuția."
+      "reportSentDesc": "Mulțumim, vom verifica contribuția.",
+      "openPhoto": "View photo large"
     },
     "admin": {
       "title": "Moderare Căi",
@@ -2207,7 +2209,9 @@
     },
     "modal": {
       "mapLabel": "Locație",
-      "linkCopiedDescription": "Linkul a fost copiat în clipboard."
+      "linkCopiedDescription": "Linkul a fost copiat în clipboard.",
+      "openLightbox": "View photo full screen",
+      "closeLightbox": "Close full screen"
     }
   }
 }

@@ -2210,7 +2210,8 @@
       "progressLabel": "Upload-Fortschritt",
       "errorDescMany": "{{count}} Bilder konnten nicht hochgeladen werden.",
       "targetFormat": "Target format for all photos",
-      "targetFormatHint": "Photos with a different aspect ratio are cropped to centre automatically – the preview shows the result. Adjustable per photo."
+      "targetFormatHint": "Photos with a different aspect ratio are cropped to centre automatically – the preview shows the result. Adjustable per photo.",
+      "burnQuoteOffHint": "Recommended: show the quote below the photo. Short quotes work best."
     },
     "card": {
       "anonymous": "Anonim",
@@ -2225,7 +2226,8 @@
       "report": "Laporkan",
       "reported": "Dilaporkan",
       "reportSentTitle": "Laporan terkirim",
-      "reportSentDesc": "Terima kasih, kami akan meninjau kontribusi tersebut."
+      "reportSentDesc": "Terima kasih, kami akan meninjau kontribusi tersebut.",
+      "openPhoto": "View photo large"
     },
     "admin": {
       "title": "Moderasi Jalan Salib",
@@ -2248,7 +2250,9 @@
     },
     "modal": {
       "mapLabel": "Lokasi",
-      "linkCopiedDescription": "Tautan telah disalin ke papan klip."
+      "linkCopiedDescription": "Tautan telah disalin ke papan klip.",
+      "openLightbox": "View photo full screen",
+      "closeLightbox": "Close full screen"
     }
   }
 }

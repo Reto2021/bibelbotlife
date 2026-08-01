@@ -2170,7 +2170,8 @@
       "progressLabel": "Upload-Fortschritt",
       "errorDescMany": "{{count}} Bilder konnten nicht hochgeladen werden.",
       "targetFormat": "Target format for all photos",
-      "targetFormatHint": "Photos with a different aspect ratio are cropped to centre automatically – the preview shows the result. Adjustable per photo."
+      "targetFormatHint": "Photos with a different aspect ratio are cropped to centre automatically – the preview shows the result. Adjustable per photo.",
+      "burnQuoteOffHint": "Recommended: show the quote below the photo. Short quotes work best."
     },
     "card": {
       "anonymous": "Ανώνυμος",
@@ -2185,7 +2186,8 @@
       "report": "Αναφορά",
       "reported": "Αναφέρθηκε",
       "reportSentTitle": "Η αναφορά στάλθηκε",
-      "reportSentDesc": "Ευχαριστούμε, θα ελέγξουμε την ανάρτηση."
+      "reportSentDesc": "Ευχαριστούμε, θα ελέγξουμε την ανάρτηση.",
+      "openPhoto": "View photo large"
     },
     "admin": {
       "title": "Διασταυρούμενες διαδρομές - Συντονισμός",
@@ -2208,7 +2210,9 @@
     },
     "modal": {
       "mapLabel": "Τοποθεσία",
-      "linkCopiedDescription": "Ο σύνδεσμος αντιγράφηκε στο πρόχειρο."
+      "linkCopiedDescription": "Ο σύνδεσμος αντιγράφηκε στο πρόχειρο.",
+      "openLightbox": "View photo full screen",
+      "closeLightbox": "Close full screen"
     }
   }
 }

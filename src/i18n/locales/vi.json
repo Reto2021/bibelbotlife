@@ -2171,7 +2171,8 @@
       "progressLabel": "Upload-Fortschritt",
       "errorDescMany": "{{count}} Bilder konnten nicht hochgeladen werden.",
       "targetFormat": "Target format for all photos",
-      "targetFormatHint": "Photos with a different aspect ratio are cropped to centre automatically – the preview shows the result. Adjustable per photo."
+      "targetFormatHint": "Photos with a different aspect ratio are cropped to centre automatically – the preview shows the result. Adjustable per photo.",
+      "burnQuoteOffHint": "Recommended: show the quote below the photo. Short quotes work best."
     },
     "card": {
       "anonymous": "Ẩn danh",
@@ -2186,7 +2187,8 @@
       "report": "Báo cáo",
       "reported": "Đã báo cáo",
       "reportSentTitle": "Đã gửi báo cáo",
-      "reportSentDesc": "Cảm ơn bạn, chúng tôi sẽ xem xét bài đăng."
+      "reportSentDesc": "Cảm ơn bạn, chúng tôi sẽ xem xét bài đăng.",
+      "openPhoto": "View photo large"
     },
     "admin": {
       "title": "Kiểm duyệt Crossways",
@@ -2209,7 +2211,9 @@
     },
     "modal": {
       "mapLabel": "Vị trí",
-      "linkCopiedDescription": "Liên kết đã được sao chép vào khay nhớ tạm."
+      "linkCopiedDescription": "Liên kết đã được sao chép vào khay nhớ tạm.",
+      "openLightbox": "View photo full screen",
+      "closeLightbox": "Close full screen"
     }
   }
 }

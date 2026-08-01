@@ -2170,7 +2170,8 @@
       "progressLabel": "Upload-Fortschritt",
       "errorDescMany": "{{count}} Bilder konnten nicht hochgeladen werden.",
       "targetFormat": "Target format for all photos",
-      "targetFormatHint": "Photos with a different aspect ratio are cropped to centre automatically – the preview shows the result. Adjustable per photo."
+      "targetFormatHint": "Photos with a different aspect ratio are cropped to centre automatically – the preview shows the result. Adjustable per photo.",
+      "burnQuoteOffHint": "Recommended: show the quote below the photo. Short quotes work best."
     },
     "card": {
       "anonymous": "匿名",
@@ -2185,7 +2186,8 @@
       "report": "举报",
       "reported": "已举报",
       "reportSentTitle": "举报已发送",
-      "reportSentDesc": "谢谢，我们正在审核该帖子。"
+      "reportSentDesc": "谢谢，我们正在审核该帖子。",
+      "openPhoto": "View photo large"
     },
     "admin": {
       "title": "十字路口管理",
@@ -2208,7 +2210,9 @@
     },
     "modal": {
       "mapLabel": "地点",
-      "linkCopiedDescription": "链接已复制到剪贴板。"
+      "linkCopiedDescription": "链接已复制到剪贴板。",
+      "openLightbox": "View photo full screen",
+      "closeLightbox": "Close full screen"
     }
   }
 }

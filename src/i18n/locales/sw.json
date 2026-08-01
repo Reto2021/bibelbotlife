@@ -2169,7 +2169,8 @@
       "progressLabel": "Upload-Fortschritt",
       "errorDescMany": "{{count}} Bilder konnten nicht hochgeladen werden.",
       "targetFormat": "Target format for all photos",
-      "targetFormatHint": "Photos with a different aspect ratio are cropped to centre automatically – the preview shows the result. Adjustable per photo."
+      "targetFormatHint": "Photos with a different aspect ratio are cropped to centre automatically – the preview shows the result. Adjustable per photo.",
+      "burnQuoteOffHint": "Recommended: show the quote below the photo. Short quotes work best."
     },
     "card": {
       "anonymous": "Bila kujulikana",
@@ -2184,7 +2185,8 @@
       "report": "Ripoti",
       "reported": "Imeripotiwa",
       "reportSentTitle": "Ripoti imetumwa",
-      "reportSentDesc": "Asante, tunakagua chapisho."
+      "reportSentDesc": "Asante, tunakagua chapisho.",
+      "openPhoto": "View photo large"
     },
     "admin": {
       "title": "Usimamizi wa Njia Panda",
@@ -2207,7 +2209,9 @@
     },
     "modal": {
       "mapLabel": "Mahali",
-      "linkCopiedDescription": "Kiungo kimenakiliwa kwenye ubao wa kunakili."
+      "linkCopiedDescription": "Kiungo kimenakiliwa kwenye ubao wa kunakili.",
+      "openLightbox": "View photo full screen",
+      "closeLightbox": "Close full screen"
     }
   }
 }

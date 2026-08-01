@@ -2211,7 +2211,8 @@
       "progressLabel": "Upload-Fortschritt",
       "errorDescMany": "{{count}} Bilder konnten nicht hochgeladen werden.",
       "targetFormat": "Target format for all photos",
-      "targetFormatHint": "Photos with a different aspect ratio are cropped to centre automatically – the preview shows the result. Adjustable per photo."
+      "targetFormatHint": "Photos with a different aspect ratio are cropped to centre automatically – the preview shows the result. Adjustable per photo.",
+      "burnQuoteOffHint": "Recommended: show the quote below the photo. Short quotes work best."
     },
     "card": {
       "anonymous": "Anonym",
@@ -2226,7 +2227,8 @@
       "report": "Rapporter",
       "reported": "Rapportert",
       "reportSentTitle": "Rapport sendt",
-      "reportSentDesc": "Takk, vi vil gjennomgå bidraget."
+      "reportSentDesc": "Takk, vi vil gjennomgå bidraget.",
+      "openPhoto": "View photo large"
     },
     "admin": {
       "title": "Korsvei-moderering",
@@ -2249,7 +2251,9 @@
     },
     "modal": {
       "mapLabel": "Sted",
-      "linkCopiedDescription": "Lenken er kopiert til utklippstavlen."
+      "linkCopiedDescription": "Lenken er kopiert til utklippstavlen.",
+      "openLightbox": "View photo full screen",
+      "closeLightbox": "Close full screen"
     }
   }
 }

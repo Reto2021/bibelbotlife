@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { MapPin, HandHeart, Sparkles, ExternalLink, Plus, Minus, Link2, Check } from "lucide-react";
+import { MapPin, HandHeart, Sparkles, ExternalLink, Plus, Minus, Link2, Check, Maximize2, X } from "lucide-react";
 import { toast } from "sonner";
 import {
   Dialog,
@@ -28,13 +28,28 @@ export function CrossDetailModal({ post, open, onOpenChange, hasReacted, onReact
   const { t } = useTranslation();
   const [zoom, setZoom] = useState(13);
   const [copied, setCopied] = useState(false);
+  const [lightbox, setLightbox] = useState(false);
 
   useEffect(() => {
     if (open) {
       setZoom(13);
       setCopied(false);
+      setLightbox(false);
     }
   }, [open, post?.id]);
+
+  // Escape closes the lightbox first, not the whole detail modal.
+  useEffect(() => {
+    if (!lightbox) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        e.stopPropagation();
+        setLightbox(false);
+      }
+    };
+    window.addEventListener("keydown", onKey, true);
+    return () => window.removeEventListener("keydown", onKey, true);
+  }, [lightbox]);
 
   if (!post) return null;
 
@@ -77,11 +92,21 @@ export function CrossDetailModal({ post, open, onOpenChange, hasReacted, onReact
       <DialogContent className="max-w-2xl p-0 overflow-hidden">
         <div className="max-h-[80vh] overflow-y-auto">
           {post.image_url && (
-            <img
-              src={post.image_url}
-              alt={t("crossways.card.imageAlt", { place: post.place_label })}
-              className="aspect-[16/10] w-full object-cover"
-            />
+            <button
+              type="button"
+              onClick={() => setLightbox(true)}
+              aria-label={t("crossways.modal.openLightbox", "Foto im Vollbild anzeigen")}
+              className="relative block w-full cursor-zoom-in bg-foreground/90"
+            >
+              <img
+                src={post.image_url}
+                alt={t("crossways.card.imageAlt", { place: post.place_label })}
+                className="mx-auto max-h-[70vh] w-auto max-w-full object-contain"
+              />
+              <span className="absolute bottom-3 right-3 rounded-full bg-background/80 p-2 text-foreground shadow-sm backdrop-blur">
+                <Maximize2 className="h-4 w-4" />
+              </span>
+            </button>
           )}
 
           <div className="p-6 space-y-5">
@@ -199,6 +224,35 @@ export function CrossDetailModal({ post, open, onOpenChange, hasReacted, onReact
             </div>
           </div>
         </div>
+
+        {/* Full-screen photo overlay: the whole motif, never cropped. */}
+        {lightbox && post.image_url && (
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-label={t("crossways.modal.openLightbox", "Foto im Vollbild anzeigen")}
+            onClick={() => setLightbox(false)}
+            className="fixed inset-0 z-[60] flex cursor-zoom-out items-center justify-center bg-foreground/95 p-4 animate-in fade-in"
+          >
+            <img
+              src={post.image_url}
+              alt={t("crossways.card.imageAlt", { place: post.place_label })}
+              className="max-h-full max-w-full object-contain"
+            />
+            <Button
+              variant="secondary"
+              size="icon"
+              className="absolute right-4 top-4"
+              aria-label={t("crossways.modal.closeLightbox", "Vollbild schliessen")}
+              onClick={(e) => {
+                e.stopPropagation();
+                setLightbox(false);
+              }}
+            >
+              <X className="h-4 w-4" />
+            </Button>
+          </div>
+        )}
       </DialogContent>
     </Dialog>
   );

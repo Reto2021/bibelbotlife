@@ -2169,7 +2169,8 @@
       "progressLabel": "Upload-Fortschritt",
       "errorDescMany": "{{count}} Bilder konnten nicht hochgeladen werden.",
       "targetFormat": "Target format for all photos",
-      "targetFormatHint": "Photos with a different aspect ratio are cropped to centre automatically – the preview shows the result. Adjustable per photo."
+      "targetFormatHint": "Photos with a different aspect ratio are cropped to centre automatically – the preview shows the result. Adjustable per photo.",
+      "burnQuoteOffHint": "Recommended: show the quote below the photo. Short quotes work best."
     },
     "card": {
       "anonymous": "Anonym",
@@ -2184,7 +2185,8 @@
       "report": "Rapportera",
       "reported": "Rapporterad",
       "reportSentTitle": "Rapport skickad",
-      "reportSentDesc": "Tack, vi granskar bidraget."
+      "reportSentDesc": "Tack, vi granskar bidraget.",
+      "openPhoto": "View photo large"
     },
     "admin": {
       "title": "Korsvägsmoderering",
@@ -2207,7 +2209,9 @@
     },
     "modal": {
       "mapLabel": "Plats",
-      "linkCopiedDescription": "Länken kopierades till urklipp."
+      "linkCopiedDescription": "Länken kopierades till urklipp.",
+      "openLightbox": "View photo full screen",
+      "closeLightbox": "Close full screen"
     }
   }
 }

@@ -111,7 +111,9 @@
       "zoomOut": "Weiter herauszoomen",
       "copyLink": "Link kopieren",
       "linkCopied": "Link kopiert",
-      "linkCopiedDescription": "Der Link wurde in die Zwischenablage kopiert."
+      "linkCopiedDescription": "Der Link wurde in die Zwischenablage kopiert.",
+      "openLightbox": "Foto im Vollbild anzeigen",
+      "closeLightbox": "Vollbild schliessen"
     },
     "upload": {
       "trigger": "Kreuz hinzufügen",
@@ -183,7 +185,8 @@
       "targetFormatHint": "Abweichende Seitenverhältnisse werden automatisch mittig zugeschnitten – die Vorschau zeigt das Ergebnis. Pro Bild anpassbar.",
       "cropManual": "Ausschnitt wählen",
       "cropZoom": "Zoom",
-      "cropHint": "Ziehen zum Verschieben, Scrollen oder Slider zum Zoomen. Die Vorschau zeigt genau das Ergebnis."
+      "cropHint": "Ziehen zum Verschieben, Scrollen oder Slider zum Zoomen. Die Vorschau zeigt genau das Ergebnis.",
+      "burnQuoteOffHint": "Empfohlen: Zitat unter dem Foto anzeigen. Kurze Zitate wirken am besten."
     },
     "card": {
       "anonymous": "Anonym",
@@ -198,7 +201,8 @@
       "report": "Melden",
       "reported": "Gemeldet",
       "reportSentTitle": "Meldung gesendet",
-      "reportSentDesc": "Danke, wir prüfen den Beitrag."
+      "reportSentDesc": "Danke, wir prüfen den Beitrag.",
+      "openPhoto": "Foto gross anzeigen"
     },
     "admin": {
       "title": "Kreuzwege-Moderation",

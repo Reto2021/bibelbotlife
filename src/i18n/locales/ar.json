@@ -2169,7 +2169,8 @@
       "progressLabel": "Upload-Fortschritt",
       "errorDescMany": "{{count}} Bilder konnten nicht hochgeladen werden.",
       "targetFormat": "Target format for all photos",
-      "targetFormatHint": "Photos with a different aspect ratio are cropped to centre automatically – the preview shows the result. Adjustable per photo."
+      "targetFormatHint": "Photos with a different aspect ratio are cropped to centre automatically – the preview shows the result. Adjustable per photo.",
+      "burnQuoteOffHint": "Recommended: show the quote below the photo. Short quotes work best."
     },
     "card": {
       "anonymous": "مجهول",
@@ -2184,7 +2185,8 @@
       "report": "إبلاغ",
       "reported": "تم الإبلاغ",
       "reportSentTitle": "تم إرسال البلاغ",
-      "reportSentDesc": "شكرًا لك، سنراجع المنشور."
+      "reportSentDesc": "شكرًا لك، سنراجع المنشور.",
+      "openPhoto": "View photo large"
     },
     "admin": {
       "title": "إدارة مفترق الطرق",
@@ -2207,7 +2209,9 @@
     },
     "modal": {
       "mapLabel": "الموقع",
-      "linkCopiedDescription": "تم نسخ الرابط إلى الحافظة."
+      "linkCopiedDescription": "تم نسخ الرابط إلى الحافظة.",
+      "openLightbox": "View photo full screen",
+      "closeLightbox": "Close full screen"
     }
   }
 }

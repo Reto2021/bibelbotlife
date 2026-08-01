@@ -2169,7 +2169,8 @@
       "progressLabel": "Upload-Fortschritt",
       "errorDescMany": "{{count}} Bilder konnten nicht hochgeladen werden.",
       "targetFormat": "Target format for all photos",
-      "targetFormatHint": "Photos with a different aspect ratio are cropped to centre automatically – the preview shows the result. Adjustable per photo."
+      "targetFormatHint": "Photos with a different aspect ratio are cropped to centre automatically – the preview shows the result. Adjustable per photo.",
+      "burnQuoteOffHint": "Recommended: show the quote below the photo. Short quotes work best."
     },
     "card": {
       "anonymous": "익명",
@@ -2184,7 +2185,8 @@
       "report": "신고",
       "reported": "신고됨",
       "reportSentTitle": "신고가 전송되었습니다",
-      "reportSentDesc": "감사합니다. 게시물을 검토하겠습니다."
+      "reportSentDesc": "감사합니다. 게시물을 검토하겠습니다.",
+      "openPhoto": "View photo large"
     },
     "admin": {
       "title": "교차로 관리",
@@ -2207,7 +2209,9 @@
     },
     "modal": {
       "mapLabel": "위치",
-      "linkCopiedDescription": "링크가 클립보드에 복사되었습니다."
+      "linkCopiedDescription": "링크가 클립보드에 복사되었습니다.",
+      "openLightbox": "View photo full screen",
+      "closeLightbox": "Close full screen"
     }
   }
 }

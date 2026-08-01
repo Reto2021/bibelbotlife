@@ -29,7 +29,7 @@ import { normalizeImageOrientation } from "@/lib/exif-orientation";
 
 import { submitCrossPost } from "@/hooks/use-cross-posts";
 import { ModerationError } from "@/lib/moderation";
-import { withQuotationMarks } from "@/lib/burn-quote";
+import { MAX_BURN_QUOTE_LENGTH, truncateQuote, withQuotationMarks } from "@/lib/burn-quote";
 import { UploadImageSlot } from "./UploadImageSlot";
 import { CROP_ASPECTS, type CropAspect } from "@/lib/transform-image";
 import { VersePicker } from "./VersePicker";
@@ -84,7 +84,7 @@ export function CrossUploadDialog({
   const [dragActive, setDragActive] = useState(false);
   const [quote, setQuote] = useState("");
   const [quoteReference, setQuoteReference] = useState("");
-  const [burnQuote, setBurnQuote] = useState(true);
+  const [burnQuote, setBurnQuote] = useState(false);
   /** Target format applied to every picked image (auto center-crop instead of rejecting). */
   const [targetAspect, setTargetAspect] = useState<CropAspect>("original");
 
@@ -488,7 +488,7 @@ export function CrossUploadDialog({
               </Label>
               <VersePicker
                 onPick={(text, reference) => {
-                  setQuote(text);
+                  setQuote(truncateQuote(text));
                   setQuoteReference(reference);
                 }}
               />
@@ -496,10 +496,10 @@ export function CrossUploadDialog({
             <Textarea
               id="cross-quote"
               value={quote}
-              maxLength={280}
+              maxLength={MAX_BURN_QUOTE_LENGTH}
               rows={2}
               placeholder={t("crossways.upload.quotePlaceholder", "z. B. Der Herr ist mein Hirte")}
-              onChange={(e) => setQuote(e.target.value)}
+              onChange={(e) => setQuote(e.target.value.slice(0, MAX_BURN_QUOTE_LENGTH))}
             />
             <div className="flex items-center justify-between gap-2">
               <Input
@@ -508,7 +508,7 @@ export function CrossUploadDialog({
                 placeholder={t("crossways.upload.quoteReferencePlaceholder", "Quelle, z. B. Psalm 23,1")}
                 onChange={(e) => setQuoteReference(e.target.value)}
               />
-              <span className="shrink-0 text-xs text-muted-foreground">{quote.length}/280</span>
+              <span className="shrink-0 text-xs text-muted-foreground">{quote.length}/{MAX_BURN_QUOTE_LENGTH}</span>
             </div>
             {quote.trim() && (
               <p className="text-sm italic text-muted-foreground">
@@ -527,11 +527,14 @@ export function CrossUploadDialog({
                 onCheckedChange={setBurnQuote}
               />
             </div>
-            {burnQuote && quote.trim() && (
-              <p className="text-xs text-muted-foreground">
-                {t("crossways.upload.burnQuoteHint", "Die Vorschau oben zeigt, wie das Foto hochgeladen wird.")}
-              </p>
-            )}
+            <p className="text-xs text-muted-foreground">
+              {burnQuote && quote.trim()
+                ? t("crossways.upload.burnQuoteHint", "Die Vorschau oben zeigt, wie das Foto hochgeladen wird.")
+                : t(
+                    "crossways.upload.burnQuoteOffHint",
+                    "Empfohlen: Zitat unter dem Foto anzeigen. Kurze Zitate wirken am besten.",
+                  )}
+            </p>
           </div>
 
           <div className="flex items-center justify-between rounded-lg border border-border/60 p-3">

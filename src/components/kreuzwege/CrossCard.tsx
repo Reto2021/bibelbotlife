@@ -16,9 +16,11 @@ interface Props {
   post: CrossPost;
   hasReacted: (id: string, kind: CrossInteraction) => boolean;
   onReact: (id: string, kind: CrossInteraction) => void;
+  /** Opens the detail overlay showing the full, uncropped photo. */
+  onOpen?: (id: string) => void;
 }
 
-export function CrossCard({ post, hasReacted, onReact }: Props) {
+export function CrossCard({ post, hasReacted, onReact, onOpen }: Props) {
   const { t } = useTranslation();
   const { toast } = useToast();
   const prayed = hasReacted(post.id, "prayer");
@@ -52,12 +54,19 @@ export function CrossCard({ post, hasReacted, onReact }: Props) {
   return (
     <Card className="overflow-hidden border-border/60 bg-card/80 backdrop-blur">
       {post.image_url && (
-        <img
-          src={post.image_url}
-          alt={t("crossways.card.imageAlt", { place: post.place_label })}
-          loading="lazy"
-          className="aspect-[4/3] w-full object-cover"
-        />
+        <button
+          type="button"
+          onClick={() => onOpen?.(post.id)}
+          aria-label={t("crossways.card.openPhoto", "Foto gross anzeigen")}
+          className="group block w-full cursor-zoom-in overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+        >
+          <img
+            src={post.image_url}
+            alt={t("crossways.card.imageAlt", { place: post.place_label })}
+            loading="lazy"
+            className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+          />
+        </button>
       )}
       <div className="space-y-3 p-4">
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
