@@ -110,6 +110,18 @@ export default function CrossLandingPage({ type }: Props) {
     );
   }
 
+  // Keep the URL in sync with the open cross so it can be shared / indexed.
+  function openDetail(id: string) {
+    setDetailId(id);
+    const post = posts.find((p) => p.id === id);
+    if (post?.slug) window.history.replaceState(null, "", `/kreuzwege/${post.slug}`);
+  }
+
+  function closeDetail() {
+    setDetailId(null);
+    window.history.replaceState(null, "", cfg.canonicalPath);
+  }
+
   const title = t(cfg.titleKey, { defaultValue: cfg.titleKey });
   const subtitle = t(cfg.subtitleKey, { defaultValue: cfg.subtitleKey });
   const metaTitle = t(cfg.metaTitleKey, { defaultValue: title });
