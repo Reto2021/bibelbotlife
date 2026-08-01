@@ -2337,6 +2337,7 @@
       "sortNewest": "Recently uploaded",
       "sortOldest": "Oldest first",
       "sortPlace": "Place A–Z",
+      "resetFilters": "Reset filters",
       "noResults": "No crosses match this search.",
       "resultCount": "{{count}} of {{total}} crosses",
       "status": {

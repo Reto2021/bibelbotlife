@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { toast } from "sonner";
-import { ImageUp, Loader2, Pencil, Search, Trash2, X } from "lucide-react";
+import { ImageUp, Loader2, Pencil, RotateCcw, Search, Trash2, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
@@ -82,6 +82,16 @@ export function MyCrosses() {
     setActiveSuggestion(-1);
   };
 
+  const resetFilters = () => {
+    setQuery("");
+    setStatus("all");
+    setSort("newest");
+    setSuggestOpen(false);
+    setActiveSuggestion(-1);
+    setVisibleCount(PAGE_SIZE);
+  };
+
+  const filtersAreDefault = query === "" && status === "all" && sort === "newest";
 
   const visiblePosts = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -335,6 +345,18 @@ export function MyCrosses() {
             <SelectItem value="place">{t("crossways.mine.sortPlace", { defaultValue: "Ort A–Z" })}</SelectItem>
           </SelectContent>
         </Select>
+        <Button
+          type="button"
+          variant="ghost"
+          size="icon"
+          className="shrink-0"
+          disabled={filtersAreDefault}
+          aria-label={t("crossways.mine.resetFilters", { defaultValue: "Filter zurücksetzen" })}
+          title={t("crossways.mine.resetFilters", { defaultValue: "Filter zurücksetzen" })}
+          onClick={resetFilters}
+        >
+          <RotateCcw className="h-4 w-4" />
+        </Button>
       </div>
 
       {visiblePosts.length === 0 ? (
