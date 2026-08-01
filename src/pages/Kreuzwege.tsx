@@ -11,7 +11,7 @@ import { useToast } from "@/hooks/use-toast";
 const CrossMap = lazy(() => import("@/components/kreuzwege/CrossMap"));
 
 export default function Kreuzwege() {
-  const { posts, loading, prayed, pray, reload } = useCrossPosts();
+  const { posts, loading, hasReacted, react, reload } = useCrossPosts();
   const { toast } = useToast();
   const [view, setView] = useState<"feed" | "map">("feed");
   const [me, setMe] = useState<{ lat: number; lng: number } | null>(null);
