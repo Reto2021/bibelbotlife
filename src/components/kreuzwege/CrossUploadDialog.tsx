@@ -16,6 +16,14 @@ import { Switch } from "@/components/ui/switch";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Crop, Crosshair, Loader2, Plus, Quote, RotateCcw, RotateCw, Upload, X } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import {
+  IMAGE_ACCEPT_ATTRIBUTE,
+  MIN_IMAGE_DIMENSION,
+  validateImageContent,
+  validateImageFile,
+  type ImageValidationResult,
+} from "@/lib/validate-image";
+
 import { submitCrossPost } from "@/hooks/use-cross-posts";
 import { burnQuoteIntoImage, withQuotationMarks } from "@/lib/burn-quote";
 import { applyImageEdits, CROP_ASPECTS, type CropAspect } from "@/lib/transform-image";
