@@ -37,6 +37,8 @@ export function CrossMarquee() {
   const { t } = useTranslation();
   const { posts: realItems, hasReacted, react } = useCrossPosts();
   const [selected, setSelected] = useState<CrossPost | null>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const pausedRef = useRef(false);
 
   const items = useMemo<MarqueeItem[]>(() => {
     const withImages = realItems.filter((p) => p.image_url).slice(0, 12);
@@ -45,8 +47,61 @@ export function CrossMarquee() {
     return [...withImages, ...PLACEHOLDERS.slice(0, needed)];
   }, [realItems]);
 
-  // Duplicate the row so the CSS translate loop appears seamless.
+  // Duplicate the row so the scroll loop appears seamless.
   const loop = [...items, ...items];
+
+  // Auto-scroll a native scroll container: users can still swipe/drag freely,
+  // and the drift pauses while they interact.
+  useEffect(() => {
+    const el = trackRef.current;
+    if (!el) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    let raf = 0;
+    let last = performance.now();
+    const SPEED = 40; // px per second
+
+    const step = (now: number) => {
+      const dt = (now - last) / 1000;
+      last = now;
+      if (!pausedRef.current) {
+        const half = el.scrollWidth / 2;
+        let next = el.scrollLeft + SPEED * dt;
+        if (half > 0 && next >= half) next -= half;
+        el.scrollLeft = next;
+      }
+      raf = requestAnimationFrame(step);
+    };
+    raf = requestAnimationFrame(step);
+
+    const pause = () => { pausedRef.current = true; };
+    const resume = () => { pausedRef.current = false; };
+    let resumeTimer: number | undefined;
+    const pauseThenResume = () => {
+      pause();
+      window.clearTimeout(resumeTimer);
+      resumeTimer = window.setTimeout(resume, 2500);
+    };
+
+    el.addEventListener("pointerenter", pause);
+    el.addEventListener("pointerleave", resume);
+    el.addEventListener("pointerdown", pause);
+    el.addEventListener("touchstart", pause, { passive: true });
+    el.addEventListener("touchend", pauseThenResume, { passive: true });
+    el.addEventListener("wheel", pauseThenResume, { passive: true });
+
+    return () => {
+      cancelAnimationFrame(raf);
+      window.clearTimeout(resumeTimer);
+      el.removeEventListener("pointerenter", pause);
+      el.removeEventListener("pointerleave", resume);
+      el.removeEventListener("pointerdown", pause);
+      el.removeEventListener("touchstart", pause);
+      el.removeEventListener("touchend", pauseThenResume);
+      el.removeEventListener("wheel", pauseThenResume);
+    };
+  }, [loop.length]);
+
 
   return (
     <section className="border-y border-border/50 bg-card/40 py-12" aria-labelledby="kreuzwege-teaser">
