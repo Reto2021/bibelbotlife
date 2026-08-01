@@ -1,5 +1,6 @@
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { MapPin, HandHeart, Sparkles } from "lucide-react";
+import { MapPin, HandHeart, Sparkles, ExternalLink, Plus, Minus } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -19,14 +20,30 @@ interface Props {
   onReact: (id: string, kind: CrossInteraction) => void;
 }
 
+const MIN_ZOOM = 4;
+const MAX_ZOOM = 18;
+
 export function CrossDetailModal({ post, open, onOpenChange, hasReacted, onReact }: Props) {
   const { t } = useTranslation();
+  const [zoom, setZoom] = useState(13);
+
+  useEffect(() => {
+    if (open) setZoom(13);
+  }, [open, post?.id]);
 
   if (!post) return null;
 
   const prayed = hasReacted(post.id, "prayer");
   const amened = hasReacted(post.id, "amen");
   const hasCoords = post.lat != null && post.lng != null;
+  const mapsUrl = hasCoords
+    ? `https://www.google.com/maps/search/?api=1&query=${post.lat},${post.lng}`
+    : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+        [post.place_label, post.country].filter(Boolean).join(", "),
+      )}`;
+
+  const openExternalMaps = () => window.open(mapsUrl, "_blank", "noopener,noreferrer");
+
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
