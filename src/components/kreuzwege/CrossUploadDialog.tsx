@@ -145,23 +145,23 @@ export function CrossUploadDialog({ onSubmitted }: { onSubmitted: () => void }) 
 
           <div className="grid grid-cols-2 gap-3">
             <div className="space-y-1.5">
-              <Label htmlFor="cross-place">Ort</Label>
+              <Label htmlFor="cross-place">{t("crossways.upload.placeLabel")}</Label>
               <Input
                 id="cross-place"
                 value={placeLabel}
                 maxLength={120}
                 required
-                placeholder="z. B. Wegkreuz Melchtal"
+                placeholder={t("crossways.upload.placePlaceholder")}
                 onChange={(e) => setPlaceLabel(e.target.value)}
               />
             </div>
             <div className="space-y-1.5">
-              <Label htmlFor="cross-country">Land</Label>
+              <Label htmlFor="cross-country">{t("crossways.upload.countryLabel")}</Label>
               <Input
                 id="cross-country"
                 value={country}
                 maxLength={60}
-                placeholder="Schweiz"
+                placeholder={t("crossways.upload.countryPlaceholder")}
                 onChange={(e) => setCountry(e.target.value)}
               />
             </div>
