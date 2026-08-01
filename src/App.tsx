@@ -12,6 +12,7 @@ import { AuthProvider } from "@/hooks/use-auth";
 import { SplashScreen } from "@/components/SplashScreen";
 import { useChurchBranding, hexToHsl } from "@/hooks/use-church-branding";
 import ScrollToTop from "@/components/ScrollToTop";
+import { HostRedirect } from "@/components/HostRedirect";
 import { useTranslation } from "react-i18next";
 
 const RTL_LANGUAGES = ["ar", "he", "fa", "ur"];
