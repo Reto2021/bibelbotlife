@@ -50,6 +50,26 @@ export function CrossDetailModal({ post, open, onOpenChange, hasReacted, onReact
 
   const openExternalMaps = () => window.open(mapsUrl, "_blank", "noopener,noreferrer");
 
+  const shareUrl = `${window.location.origin}/kreuzwege?post=${post.id}`;
+
+  async function copyLink() {
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+    } catch {
+      const el = document.createElement("textarea");
+      el.value = shareUrl;
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand("copy");
+      el.remove();
+    }
+    setCopied(true);
+    onReact(post.id, "share");
+    toast({ title: t("crossways.modal.linkCopied", "Link kopiert") });
+    setTimeout(() => setCopied(false), 2000);
+  }
+
+
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
