@@ -45,6 +45,7 @@ export function CrossUploadDialog({
     if (!next) reset();
   }
   const [file, setFile] = useState<File | null>(null);
+  const [editedFile, setEditedFile] = useState<File | null>(null);
   const [preview, setPreview] = useState<string | null>(null);
   const [placeLabel, setPlaceLabel] = useState("");
   const [country, setCountry] = useState("");
@@ -60,18 +61,50 @@ export function CrossUploadDialog({
   const [quoteReference, setQuoteReference] = useState("");
   const [burnQuote, setBurnQuote] = useState(true);
   const [burnedPreview, setBurnedPreview] = useState<string | null>(null);
+  const [rotation, setRotation] = useState(0);
+  const [aspect, setAspect] = useState<CropAspect>("original");
+  const [editing, setEditing] = useState(false);
+
+  // Apply rotation/crop; `editedFile` is what gets previewed and uploaded.
+  useEffect(() => {
+    let cancelled = false;
+    if (!file) {
+      setEditedFile(null);
+      setPreview(null);
+      return;
+    }
+    setEditing(true);
+    (async () => {
+      let result = file;
+      try {
+        result = await applyImageEdits(file, { rotation, aspect });
+      } catch {
+        result = file;
+      }
+      if (cancelled) return;
+      setEditedFile(result);
+      setPreview((prev) => {
+        if (prev) URL.revokeObjectURL(prev);
+        return URL.createObjectURL(result);
+      });
+      setEditing(false);
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [file, rotation, aspect]);
 
   // Live preview of the burned-in quote (same renderer as the upload).
   useEffect(() => {
     let cancelled = false;
     let url: string | null = null;
-    if (!file || !burnQuote || !quote.trim()) {
+    if (!editedFile || !burnQuote || !quote.trim()) {
       setBurnedPreview(null);
       return;
     }
     const timer = setTimeout(async () => {
       try {
-        const blob = await burnQuoteIntoImage(file, {
+        const blob = await burnQuoteIntoImage(editedFile, {
           quote,
           reference: quoteReference,
           maxSize: 900,
@@ -89,10 +122,11 @@ export function CrossUploadDialog({
       clearTimeout(timer);
       if (url) URL.revokeObjectURL(url);
     };
-  }, [file, quote, quoteReference, burnQuote]);
+  }, [editedFile, quote, quoteReference, burnQuote]);
 
   function reset() {
     setFile(null);
+    setEditedFile(null);
     setPreview(null);
     setPlaceLabel("");
     setCountry("");
@@ -107,6 +141,9 @@ export function CrossUploadDialog({
     setQuoteReference("");
     setBurnQuote(true);
     setBurnedPreview(null);
+    setRotation(0);
+    setAspect("original");
+    setEditing(false);
   }
 
   function pickFile(f: File | undefined) {
@@ -119,9 +156,11 @@ export function CrossUploadDialog({
       toast({ title: t("crossways.upload.imageTooBig"), description: t("crossways.upload.imageTooBigDesc"), variant: "destructive" });
       return;
     }
+    setRotation(0);
+    setAspect("original");
     setFile(f);
-    setPreview(URL.createObjectURL(f));
   }
+
 
   function handleDrop(e: React.DragEvent) {
     e.preventDefault();
