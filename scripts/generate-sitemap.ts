@@ -37,6 +37,10 @@ const staticEntries: Entry[] = [
   { path: "/guide/ai-bible-study", changefreq: "monthly", priority: "0.7" },
   { path: "/guide/discord-integration", changefreq: "monthly", priority: "0.7" },
   { path: "/bibel-bot-vergleich", changefreq: "monthly", priority: "0.8" },
+  { path: "/kreuzwege", changefreq: "daily", priority: "0.8" },
+  { path: "/wegkreuze", changefreq: "weekly", priority: "0.7" },
+  { path: "/gipfelkreuze", changefreq: "weekly", priority: "0.7" },
+  { path: "/bergkreuze", changefreq: "weekly", priority: "0.7" },
 ];
 
 async function fetchJson(path: string) {
