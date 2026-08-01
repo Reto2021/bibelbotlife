@@ -46,6 +46,7 @@ export default function CrossMap({
   picked = null,
   onPick,
 }: Props) {
+  const { t } = useTranslation();
   const [ready, setReady] = useState(false);
   useEffect(() => setReady(true), []);
 
