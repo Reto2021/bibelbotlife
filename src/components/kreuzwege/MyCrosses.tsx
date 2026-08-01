@@ -55,7 +55,33 @@ export function MyCrosses() {
   const [status, setStatus] = useState("all");
   const [sort, setSort] = useState("newest");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  const [suggestOpen, setSuggestOpen] = useState(false);
+  const [activeSuggestion, setActiveSuggestion] = useState(-1);
   const sentinelRef = useRef<HTMLDivElement>(null);
+
+  // Autocomplete: unique place labels from the user's own crosses, ranked by frequency.
+  const suggestions = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    const counts = new Map<string, number>();
+    for (const p of posts) {
+      const place = (p.place_label ?? "").trim();
+      if (!place) continue;
+      if (q && !place.toLowerCase().includes(q)) continue;
+      counts.set(place, (counts.get(place) ?? 0) + 1);
+    }
+    const list = [...counts.entries()].map(([place, count]) => ({ place, count }));
+    if (list.length === 1 && list[0].place.toLowerCase() === q) return [];
+    return list
+      .sort((a, b) => b.count - a.count || a.place.localeCompare(b.place))
+      .slice(0, 8);
+  }, [posts, query]);
+
+  const applySuggestion = (s: { place: string }) => {
+    setQuery(s.place);
+    setSuggestOpen(false);
+    setActiveSuggestion(-1);
+  };
+
 
   const visiblePosts = useMemo(() => {
     const q = query.trim().toLowerCase();
