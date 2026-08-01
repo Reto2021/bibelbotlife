@@ -21,6 +21,7 @@ import { submitCrossPost } from "@/hooks/use-cross-posts";
 const CrossMap = lazy(() => import("./CrossMap"));
 
 export function CrossUploadDialog({ onSubmitted }: { onSubmitted: () => void }) {
+  const { t } = useTranslation();
   const { toast } = useToast();
   const [open, setOpen] = useState(false);
   const [file, setFile] = useState<File | null>(null);
