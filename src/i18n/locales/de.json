@@ -142,17 +142,24 @@
     },
     "admin": {
       "title": "Kreuzwege-Moderation",
-      "reported": "Gemeldet",
-      "pending": "Ausstehend",
-      "approved": "Freigegeben",
-      "rejected": "Abgelehnt",
-      "all": "Alle",
+      "filter": {
+        "reported": "Gemeldet",
+        "pending": "Ausstehend",
+        "approved": "Freigegeben",
+        "rejected": "Abgelehnt",
+        "all": "Alle"
+      },
       "loading": "Lade…",
       "empty": "Keine Einträge.",
       "approve": "Freigeben",
+      "approved": "Freigegeben",
       "reject": "Ablehnen",
+      "rejected": "Abgelehnt",
       "delete": "Löschen",
-      "rejectReasonPlaceholder": "Ablehnungsgrund"
+      "deleted": "Gelöscht",
+      "error": "Fehler",
+      "rejectionPlaceholder": "Ablehnungsgrund",
+      "reportedCount": "{{count}}× gemeldet"
     }
   },
   "coaching": {
