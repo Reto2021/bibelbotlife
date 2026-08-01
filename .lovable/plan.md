@@ -1,44 +1,24 @@
 ## Ziel
+Fotos vollständig sichtbar machen, Zitat-Overlays nicht mehr abschneiden und das Einbrennen optional/kontrolliert machen.
 
-Beim Upload eines Wegkreuz-Fotos kann ein Kommentar oder Bibelzitat in Anführungszeichen erfasst werden. Das Zitat wird gespeichert (Anzeige im Feed, Karussell, Detail-Modal) und zusätzlich optional direkt ins Bild gerendert, damit es beim Teilen sichtbar bleibt.
+## 1. Foto als Overlay (Lightbox)
+- Feed-Karte (`CrossCard.tsx`): Bild wird klickbar (Button-Semantik, `aria-label`, Tastatur-fokussierbar) und öffnet das Detail-Modal. Dafür bekommt `CrossFeed`/`Kreuzwege.tsx` eine `onOpen(id)`-Weitergabe, wie im Karussell schon vorhanden.
+- `CrossDetailModal.tsx`: Bild oben wird als vollständige Ansicht dargestellt — `object-contain`, dunkler Hintergrund, max. Höhe ca. 70vh, kein Beschnitt. Klick auf das Bild öffnet eine reine Vollbild-Lightbox (Bild zentriert, Schliessen-Button, Klick/Escape schliesst).
+- Feed-Vorschau bleibt beschnitten (4:3), damit das Raster ruhig bleibt; die volle Ansicht kommt aus dem Overlay.
 
-## Was der Nutzer sieht
+## 2. Zitatlänge begrenzen
+- Upload-Dialog: Zitatfeld erhält ein hartes Limit (max. 140 Zeichen) mit Zeichenzähler und Hinweis "kurze Zitate wirken am besten". Vers-Auswahl (`VersePicker`) kürzt zu lange Verse sauber am Wortende mit "…" und übernimmt die Referenz separat.
+- Der volle Verstext bleibt in der Karte/Detailansicht als lesbarer Blockquote erhalten — gekürzt wird nur, was aufs Bild kommt.
 
-1. Im Upload-Modal ein neues Feld „Bibelzitat oder Gedanke“
-   - Freitext eintippen, Anführungszeichen werden automatisch gesetzt („…“, ohne ß-Regeln zu verletzen)
-   - Optional Quellenangabe (z. B. Psalm 23,1)
-2. Daneben Button „Vers aus der Bibel wählen“
-   - kleine Suche über die bestehende Bibelsuche (5 Übersetzungen)
-   - Klick auf ein Ergebnis füllt Zitat + Referenz automatisch
-3. Schalter „Zitat aufs Foto schreiben“ (Standard: an)
-   - Live-Vorschau: Zitat unten im Bild, weiss auf sanftem Verlauf, Referenz kleiner darunter
-   - Text wird automatisch umgebrochen und bei langen Zitaten verkleinert
-4. Im Feed / Detail-Modal / Karussell erscheint das Zitat als eigenes Element (kursiv, in Anführungszeichen, mit Referenz), auch wenn die Einbrennung deaktiviert war.
+## 3. Einbrennen verbessern und optional
+- Standard: Einbrennen **aus**. Das Zitat wird als Text unter dem Bild angezeigt (bereits vorhanden) und im Overlay der Karte nicht mehr über das Motiv gelegt.
+- Wer einbrennt, bekommt eine robustere Ausgabe in `burn-quote.ts`:
+  - Zeilen dürfen bis 6 Zeilen, Fontgrösse skaliert weiter herunter, Untergrenze auf ~2.2% der Breite.
+  - Wenn der Text danach noch nicht passt, wird er am Wortende mit "…" gekürzt statt überzulaufen.
+  - Zitatblock nutzt Bildhöhe als Budget (max. ~38% der Höhe), Gradient wächst mit.
+- Bestehende Posts mit überlangen eingebrannten Zitaten bleiben unverändert; in der Detailansicht sind sie durch `object-contain` nun ganz sichtbar.
 
-## Technisch
-
-**Datenbank** (Migration, Tabelle `cross_posts`)
-- `quote text`, `quote_reference text`, `quote_burned boolean not null default false`
-- Längenprüfung im bestehenden `validate_cross_post`-Trigger (Zitat max. 280 Zeichen, Referenz max. 60)
-- `get_approved_cross_posts()` um die neuen Felder erweitern (Rückgabetyp neu erstellen)
-
-**Bild-Rendering** (Client, kein Server nötig)
-- Neues Modul `src/lib/burn-quote.ts`: Bild in ein `<canvas>` zeichnen, Verlauf + Zitat + Referenz rendern, als JPEG (Qualität 0.9) zurückgeben
-- Beim Absenden wird bei aktivem Schalter die gerenderte Datei in den Storage geladen, sonst das Original
-- Vorschau nutzt dasselbe Modul, damit „was du siehst, wird geladen“ gilt
-
-**Upload-Modal** (`CrossUploadDialog.tsx`)
-- Zustand für Zitat, Referenz, Burn-Schalter, Vorschau-URL
-- Versauswahl über die vorhandene Bibelsuche-RPC (`search_bible_verses`), eingebettet in ein Popover mit Debounce
-- Zitat und Referenz werden immer in der Datenbank gespeichert
-
-**Anzeige**
-- `CrossCard.tsx`, `CrossDetailModal.tsx`: Zitat-Block über bzw. unter dem Bild
-- `use-cross-posts.ts`: Typ `CrossPost` um die drei Felder erweitern
-- Share-Text im Detail-Modal nutzt das Zitat, wenn vorhanden
-
-**i18n**
-- Neue Keys unter `crossways.upload.*` und `crossways.card.*` (Feldlabel, Platzhalter, Versauswahl, Schalter, Hinweis) in `de.json` und per Skript in alle 38 Sprachen ausgerollt
-
-## Abschluss
-Build und ein Playwright-Klicktest (Foto ablegen, Zitat eintippen, Vorschau prüfen).
+## 4. Technische Details
+- Betroffene Dateien: `src/components/kreuzwege/CrossCard.tsx`, `CrossFeed.tsx`, `CrossDetailModal.tsx`, `CrossUploadDialog.tsx`, `VersePicker.tsx`, `src/lib/burn-quote.ts`, `src/pages/Kreuzwege.tsx`.
+- Neue i18n-Keys (Lightbox öffnen/schliessen, Zeichenzähler, Hinweis zum Einbrennen) in allen 38 Locale-Dateien, deutsche Schreibweise ohne ß.
+- Keine Datenbank- oder Edge-Function-Änderungen nötig.
