@@ -180,7 +180,10 @@
       "progressLabel": "Upload-Fortschritt",
       "errorDescMany": "{{count}} Bilder konnten nicht hochgeladen werden.",
       "targetFormat": "Zielformat für alle Bilder",
-      "targetFormatHint": "Abweichende Seitenverhältnisse werden automatisch mittig zugeschnitten – die Vorschau zeigt das Ergebnis. Pro Bild anpassbar."
+      "targetFormatHint": "Abweichende Seitenverhältnisse werden automatisch mittig zugeschnitten – die Vorschau zeigt das Ergebnis. Pro Bild anpassbar.",
+      "cropManual": "Ausschnitt wählen",
+      "cropZoom": "Zoom",
+      "cropHint": "Ziehen zum Verschieben, Scrollen oder Slider zum Zoomen. Die Vorschau zeigt genau das Ergebnis."
     },
     "card": {
       "anonymous": "Anonym",
