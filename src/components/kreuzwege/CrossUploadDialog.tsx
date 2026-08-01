@@ -522,6 +522,50 @@ export function CrossUploadDialog({
             </Label>
           </div>
 
+          {(progress || Object.keys(statuses).length > 0) && (
+            <div className="space-y-2 rounded-xl border border-border/60 p-3">
+              <div className="flex items-center justify-between text-xs text-muted-foreground">
+                <span>{t("crossways.upload.progressLabel", "Upload-Fortschritt")}</span>
+                {progress && (
+                  <span>
+                    {progress.done}/{progress.total}
+                  </span>
+                )}
+              </div>
+              <Progress
+                value={progress ? (progress.done / Math.max(1, progress.total)) * 100 : 100}
+                className="h-2"
+              />
+              <ul className="space-y-1 text-xs">
+                {images.map((item) => {
+                  const status = statuses[item.id];
+                  if (!status) return null;
+                  return (
+                    <li key={item.id} className="flex items-start gap-1.5">
+                      {status.state === "done" && (
+                        <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-primary" />
+                      )}
+                      {status.state === "error" && (
+                        <AlertCircle className="mt-0.5 h-3.5 w-3.5 shrink-0 text-destructive" />
+                      )}
+                      {status.state === "uploading" && (
+                        <Loader2 className="mt-0.5 h-3.5 w-3.5 shrink-0 animate-spin text-muted-foreground" />
+                      )}
+                      {status.state === "pending" && (
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-muted-foreground/40" />
+                      )}
+                      <span className="min-w-0 flex-1 truncate">{item.file.name}</span>
+                      {status.state === "error" && (
+                        <span className="max-w-[55%] text-right text-destructive">{status.message}</span>
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          )}
+
+
           <Button
             type="submit"
             className="w-full"
