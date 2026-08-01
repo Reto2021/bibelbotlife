@@ -2088,5 +2088,85 @@
       "28": "What moved or touched me today?",
       "29": "How do I want to look back on today a year from now?"
     }
+  },
+  "crossways": {
+    "metaTitle": "Krstni putevi – Delite krstove širom sveta | BibleBot.Life",
+    "metaDescription": "Krstovi pored puta, na vrhovima planina i u crkvama: Podelite svoju fotografiju sa lokacijom i pričom, otkrijte krstove na mapi i pratite ih u molitvi.",
+    "title": "Krstni putevi",
+    "subtitle": "Krstovi pored puta, na vrhovima planina, u crkvama. Podelite svoju fotografiju sa lokacijom i kratkom pričom — i pratite krstove drugih u molitvi.",
+    "feed": "Feed",
+    "map": "Mapa",
+    "nearMe": "U mojoj blizini",
+    "sortNear": "Sortiraj po blizini",
+    "locationUnavailable": "Lokacija nedostupna",
+    "locationDenied": "Lokacija odbijena",
+    "empty": "Još uvek nema objavljenih krstova. Budite prvi koji će objaviti.",
+    "marquee": {
+      "eyebrow": "Krstni putevi",
+      "title": "Krstovi iz celog sveta",
+      "description": "Pored puta, na vrhovima planina, u crkvama. Podelite svoju fotografiju — i pratite krstove drugih u molitvi.",
+      "cta": "Otkrijte krstne puteve"
+    },
+    "upload": {
+      "trigger": "Dodaj krst",
+      "title": "Dodaj krst",
+      "description": "Fotografija, lokacija i kratka priča. Vaš doprinos se odmah pojavljuje na mapi.",
+      "photoLabel": "Fotografija",
+      "photoPlaceholder": "Izaberite ili snimite fotografiju",
+      "placeLabel": "Mesto",
+      "placePlaceholder": "npr. Krst pored puta Melchtal",
+      "countryLabel": "Država",
+      "countryPlaceholder": "Švajcarska",
+      "useLocation": "Koristi lokaciju",
+      "openMap": "Postavi tačku na mapi",
+      "closeMap": "Zatvori mapu",
+      "storyLabel": "Priča (opciono)",
+      "storyPlaceholder": "Šta ovaj krst čini posebnim?",
+      "anonymousLabel": "Objavi anonimno",
+      "authorLabel": "Prikazano ime (opciono)",
+      "consent": "Fotografija je moja, ne prikazuje prepoznatljive osobe i može biti objavljena na BibleBot.Life.",
+      "submit": "Pošalji na pregled",
+      "imageTooBig": "Slika prevelika",
+      "imageTooBigDesc": "Maksimalno 5 MB.",
+      "locationDeniedDesc": "Molimo vas da ručno postavite tačku na mapi.",
+      "successTitle": "Hvala na vašem krstu",
+      "successDesc": "Vaš krst je sada uživo.",
+      "errorTitle": "Neuspelo otpremanje",
+      "errorDesc": "Molimo pokušajte ponovo."
+    },
+    "card": {
+      "anonymous": "Anonimno",
+      "imageAlt": "Krst kod {{place}}",
+      "prayer": "Molitva za to",
+      "prayed": "U molitvi",
+      "amen": "Amin",
+      "share": "Podeli",
+      "shareTitle": "Krstni putevi",
+      "shareText": "{{place}} – Krstni putevi na BibleBot.Life",
+      "linkCopied": "Link kopiran",
+      "report": "Prijavi",
+      "reported": "Prijavljeno",
+      "reportSentTitle": "Prijava poslata",
+      "reportSentDesc": "Hvala, pregledaćemo objavu."
+    },
+    "admin": {
+      "title": "Moderacija raskrsnica",
+      "loading": "Učitavanje…",
+      "empty": "Nema unosa.",
+      "approve": "Odobri",
+      "reject": "Odbij",
+      "delete": "Izbriši",
+      "filter": {
+        "reported": "Prijavljeno",
+        "pending": "Na čekanju",
+        "approved": "Odobreno",
+        "rejected": "Odbijeno",
+        "all": "Sve"
+      },
+      "deleted": "Izbrisano",
+      "error": "Greška",
+      "rejectionPlaceholder": "Razlog odbijanja",
+      "reportedCount": "Prijavljeno {{count}} puta"
+    }
   }
 }

@@ -2088,5 +2088,85 @@
       "28": "What moved or touched me today?",
       "29": "How do I want to look back on today a year from now?"
     }
+  },
+  "crossways": {
+    "metaTitle": "Korsveje – Del kors over hele verden | BibleBot.Life",
+    "metaDescription": "Kors ved vejkanten, på bjergtoppe og i kirker: Del dit foto med sted og historie, opdag kors på kortet og ledsag dem i bøn.",
+    "title": "Korsveje",
+    "subtitle": "Kors ved vejkanten, på bjergtoppe, i kirker. Del dit foto med sted og en kort historie — og ledsag andres kors i bøn.",
+    "feed": "Feed",
+    "map": "Kort",
+    "nearMe": "I nærheden af mig",
+    "sortNear": "Sorter efter nærhed",
+    "locationUnavailable": "Placering ikke tilgængelig",
+    "locationDenied": "Placering nægtet",
+    "empty": "Ingen kors er endnu blevet offentliggjort. Vær det første bidrag.",
+    "marquee": {
+      "eyebrow": "Korsveje",
+      "title": "Kors fra hele verden",
+      "description": "Ved vejkanten, på bjergtoppe, i kirker. Del dit foto — og ledsag andres kors i bøn.",
+      "cta": "Opdag korsveje"
+    },
+    "upload": {
+      "trigger": "Tilføj kors",
+      "title": "Tilføj kors",
+      "description": "Foto, sted og en kort historie. Dit bidrag vises med det samme på kortet.",
+      "photoLabel": "Foto",
+      "photoPlaceholder": "Vælg eller tag et foto",
+      "placeLabel": "Sted",
+      "placePlaceholder": "f.eks. Vejkors Melchtal",
+      "countryLabel": "Land",
+      "countryPlaceholder": "Schweiz",
+      "useLocation": "Brug placering",
+      "openMap": "Sæt punkt på kort",
+      "closeMap": "Luk kort",
+      "storyLabel": "Historie (valgfrit)",
+      "storyPlaceholder": "Hvad gør dette kors specielt?",
+      "anonymousLabel": "Offentliggør anonymt",
+      "authorLabel": "Visningsnavn (valgfrit)",
+      "consent": "Billedet er mit, viser ingen genkendelige personer og må offentliggøres på BibleBot.Life.",
+      "submit": "Send til gennemgang",
+      "imageTooBig": "Billede for stort",
+      "imageTooBigDesc": "Maksimalt 5 MB.",
+      "locationDeniedDesc": "Sæt venligst punktet manuelt på kortet.",
+      "successTitle": "Tak for dit kors",
+      "successDesc": "Dit kors er nu live.",
+      "errorTitle": "Upload mislykkedes",
+      "errorDesc": "Prøv venligst igen."
+    },
+    "card": {
+      "anonymous": "Anonym",
+      "imageAlt": "Kors ved {{place}}",
+      "prayer": "En bøn for det",
+      "prayed": "I bøn",
+      "amen": "Amen",
+      "share": "Del",
+      "shareTitle": "Korsveje",
+      "shareText": "{{place}} – Korsveje på BibleBot.Life",
+      "linkCopied": "Link kopieret",
+      "report": "Rapportér",
+      "reported": "Rapporteret",
+      "reportSentTitle": "Rapport sendt",
+      "reportSentDesc": "Tak, vi gennemgår bidraget."
+    },
+    "admin": {
+      "title": "Krydsvejs-moderation",
+      "loading": "Indlæser…",
+      "empty": "Ingen poster.",
+      "approve": "Godkend",
+      "reject": "Afvis",
+      "delete": "Slet",
+      "filter": {
+        "reported": "Anmeldt",
+        "pending": "Afventende",
+        "approved": "Godkendt",
+        "rejected": "Afvist",
+        "all": "Alle"
+      },
+      "deleted": "Slettet",
+      "error": "Fejl",
+      "rejectionPlaceholder": "Årsag til afvisning",
+      "reportedCount": "{{count}}× anmeldt"
+    }
   }
 }

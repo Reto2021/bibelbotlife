@@ -2088,5 +2088,85 @@
       "28": "What moved or touched me today?",
       "29": "How do I want to look back on today a year from now?"
     }
+  },
+  "crossways": {
+    "metaTitle": "Keresztutak – Keresztek megosztása világszerte | BibleBot.Life",
+    "metaDescription": "Keresztek az út szélén, hegycsúcsokon és templomokban: Ossza meg fotóját helyszínnel és történettel, fedezzen fel kereszteket a térképen, és kísérje őket imával.",
+    "title": "Keresztutak",
+    "subtitle": "Keresztek az út szélén, hegycsúcsokon, templomokban. Ossza meg fotóját helyszínnel és rövid történettel – és kísérje imával mások keresztjeit.",
+    "feed": "Hírfolyam",
+    "map": "Térkép",
+    "nearMe": "A közelemben",
+    "sortNear": "Közelség szerint rendezve",
+    "locationUnavailable": "Helyszín nem elérhető",
+    "locationDenied": "Helyszín elutasítva",
+    "empty": "Még nincsenek keresztek közzétéve. Legyen Ön az első hozzászóló.",
+    "marquee": {
+      "eyebrow": "Keresztutak",
+      "title": "Keresztek a világ minden tájáról",
+      "description": "Az út szélén, hegycsúcsokon, templomokban. Ossza meg fotóját – és kísérje imával mások keresztjeit.",
+      "cta": "Fedezze fel a Keresztutakat"
+    },
+    "upload": {
+      "trigger": "Kereszt hozzáadása",
+      "title": "Kereszt hozzáadása",
+      "description": "Fotó, helyszín és egy rövid történet. Hozzászólása azonnal megjelenik a térképen.",
+      "photoLabel": "Fotó",
+      "photoPlaceholder": "Válasszon vagy készítsen fotót",
+      "placeLabel": "Helyszín",
+      "placePlaceholder": "pl. Melchtali útmenti kereszt",
+      "countryLabel": "Ország",
+      "countryPlaceholder": "Svájc",
+      "useLocation": "Helyszín használata",
+      "openMap": "Pont elhelyezése a térképen",
+      "closeMap": "Térkép bezárása",
+      "storyLabel": "Történet (opcionális)",
+      "storyPlaceholder": "Mi teszi különlegessé ezt a keresztet?",
+      "anonymousLabel": "Névtelenül közzétéve",
+      "authorLabel": "Megjelenítendő név (opcionális)",
+      "consent": "A fotó tőlem származik, nem mutat felismerhető személyeket, és közzétehető a BibleBot.Life oldalon.",
+      "submit": "Elküldés felülvizsgálatra",
+      "imageTooBig": "Túl nagy kép",
+      "imageTooBigDesc": "Maximum 5 MB.",
+      "locationDeniedDesc": "Kérjük, manuálisan helyezze el a pontot a térképen.",
+      "successTitle": "Köszönjük a keresztet",
+      "successDesc": "Keresztje mostantól élő.",
+      "errorTitle": "Feltöltés sikertelen",
+      "errorDesc": "Kérjük, próbálja újra."
+    },
+    "card": {
+      "anonymous": "Névtelen",
+      "imageAlt": "Kereszt itt: {{place}}",
+      "prayer": "Egy ima érte",
+      "prayed": "Imában",
+      "amen": "Ámen",
+      "share": "Megosztás",
+      "shareTitle": "Keresztutak",
+      "shareText": "{{place}} – Keresztutak a BibleBot.Life oldalon",
+      "linkCopied": "Link másolva",
+      "report": "Jelentés",
+      "reported": "Jelentve",
+      "reportSentTitle": "Jelentés elküldve",
+      "reportSentDesc": "Köszönjük, felülvizsgáljuk a bejegyzést."
+    },
+    "admin": {
+      "title": "Keresztutak moderálása",
+      "loading": "Betöltés…",
+      "empty": "Nincsenek bejegyzések.",
+      "approve": "Jóváhagyás",
+      "reject": "Elutasítás",
+      "delete": "Törlés",
+      "filter": {
+        "reported": "Jelentett",
+        "pending": "Függőben",
+        "approved": "Jóváhagyva",
+        "rejected": "Elutasítva",
+        "all": "Mind"
+      },
+      "deleted": "Törölve",
+      "error": "Hiba",
+      "rejectionPlaceholder": "Elutasítás oka",
+      "reportedCount": "{{count}}× jelentve"
+    }
   }
 }

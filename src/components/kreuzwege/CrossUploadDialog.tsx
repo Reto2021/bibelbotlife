@@ -1,4 +1,5 @@
 import { lazy, Suspense, useState } from "react";
+import { useTranslation } from "react-i18next";
 import {
   Dialog,
   DialogContent,
@@ -20,6 +21,7 @@ import { submitCrossPost } from "@/hooks/use-cross-posts";
 const CrossMap = lazy(() => import("./CrossMap"));
 
 export function CrossUploadDialog({ onSubmitted }: { onSubmitted: () => void }) {
+  const { t } = useTranslation();
   const { toast } = useToast();
   const [open, setOpen] = useState(false);
   const [file, setFile] = useState<File | null>(null);
@@ -50,7 +52,7 @@ export function CrossUploadDialog({ onSubmitted }: { onSubmitted: () => void }) 
   function pickFile(f: File | undefined) {
     if (!f) return;
     if (f.size > 5 * 1024 * 1024) {
-      toast({ title: "Bild zu gross", description: "Maximal 5 MB.", variant: "destructive" });
+      toast({ title: t("crossways.upload.imageTooBig"), description: t("crossways.upload.imageTooBigDesc"), variant: "destructive" });
       return;
     }
     setFile(f);
@@ -59,12 +61,12 @@ export function CrossUploadDialog({ onSubmitted }: { onSubmitted: () => void }) 
 
   function useMyLocation() {
     if (!navigator.geolocation) {
-      toast({ title: "Standort nicht verfügbar", variant: "destructive" });
+      toast({ title: t("crossways.locationUnavailable"), variant: "destructive" });
       return;
     }
     navigator.geolocation.getCurrentPosition(
       (pos) => setCoords({ lat: pos.coords.latitude, lng: pos.coords.longitude }),
-      () => toast({ title: "Standort abgelehnt", description: "Setz den Punkt bitte manuell auf der Karte." }),
+      () => toast({ title: t("crossways.locationDenied"), description: t("crossways.upload.locationDeniedDesc") }),
       { enableHighAccuracy: true, timeout: 8000 },
     );
   }
@@ -85,16 +87,16 @@ export function CrossUploadDialog({ onSubmitted }: { onSubmitted: () => void }) 
         isAnonymous,
       });
       toast({
-        title: "Danke für dein Kreuz",
-        description: "Wir prüfen den Beitrag und veröffentlichen ihn danach.",
+        title: t("crossways.upload.successTitle"),
+        description: t("crossways.upload.successDesc"),
       });
       reset();
       setOpen(false);
       onSubmitted();
     } catch (err) {
       toast({
-        title: "Upload fehlgeschlagen",
-        description: err instanceof Error ? err.message : "Bitte nochmals versuchen.",
+        title: t("crossways.upload.errorTitle"),
+        description: err instanceof Error ? err.message : t("crossways.upload.errorDesc"),
         variant: "destructive",
       });
     } finally {
@@ -106,30 +108,28 @@ export function CrossUploadDialog({ onSubmitted }: { onSubmitted: () => void }) 
     <Dialog open={open} onOpenChange={(o) => { setOpen(o); if (!o) reset(); }}>
       <DialogTrigger asChild>
         <Button size="lg" className="gap-2">
-          <Plus className="h-4 w-4" /> Kreuz hinzufügen
+          <Plus className="h-4 w-4" /> {t("crossways.upload.trigger")}
         </Button>
       </DialogTrigger>
       <DialogContent className="max-h-[90vh] overflow-y-auto sm:max-w-lg">
         <DialogHeader>
-          <DialogTitle>Kreuz hinzufügen</DialogTitle>
-          <DialogDescription>
-            Foto, Ort und eine kurze Geschichte. Jeder Beitrag wird vor der Veröffentlichung geprüft.
-          </DialogDescription>
+          <DialogTitle>{t("crossways.upload.title")}</DialogTitle>
+          <DialogDescription>{t("crossways.upload.description")}</DialogDescription>
         </DialogHeader>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
-            <Label htmlFor="cross-photo">Foto</Label>
+            <Label htmlFor="cross-photo">{t("crossways.upload.photoLabel")}</Label>
             <label
               htmlFor="cross-photo"
               className="flex cursor-pointer flex-col items-center justify-center gap-2 rounded-xl border border-dashed border-border p-6 text-center text-sm text-muted-foreground hover:border-primary/60"
             >
               {preview ? (
-                <img src={preview} alt="Vorschau" className="max-h-48 rounded-lg object-cover" />
+                <img src={preview} alt={t("crossways.upload.photoLabel")} className="max-h-48 rounded-lg object-cover" />
               ) : (
                 <>
                   <Camera className="h-6 w-6 text-primary" />
-                  Foto auswählen oder aufnehmen
+                  {t("crossways.upload.photoPlaceholder")}
                 </>
               )}
             </label>
@@ -145,23 +145,23 @@ export function CrossUploadDialog({ onSubmitted }: { onSubmitted: () => void }) 
 
           <div className="grid grid-cols-2 gap-3">
             <div className="space-y-1.5">
-              <Label htmlFor="cross-place">Ort</Label>
+              <Label htmlFor="cross-place">{t("crossways.upload.placeLabel")}</Label>
               <Input
                 id="cross-place"
                 value={placeLabel}
                 maxLength={120}
                 required
-                placeholder="z. B. Wegkreuz Melchtal"
+                placeholder={t("crossways.upload.placePlaceholder")}
                 onChange={(e) => setPlaceLabel(e.target.value)}
               />
             </div>
             <div className="space-y-1.5">
-              <Label htmlFor="cross-country">Land</Label>
+              <Label htmlFor="cross-country">{t("crossways.upload.countryLabel")}</Label>
               <Input
                 id="cross-country"
                 value={country}
                 maxLength={60}
-                placeholder="Schweiz"
+                placeholder={t("crossways.upload.countryPlaceholder")}
                 onChange={(e) => setCountry(e.target.value)}
               />
             </div>
@@ -170,7 +170,7 @@ export function CrossUploadDialog({ onSubmitted }: { onSubmitted: () => void }) 
           <div className="space-y-2">
             <div className="flex flex-wrap items-center gap-2">
               <Button type="button" variant="outline" size="sm" onClick={useMyLocation} className="gap-1.5">
-                <Crosshair className="h-4 w-4" /> Standort verwenden
+                <Crosshair className="h-4 w-4" /> {t("crossways.upload.useLocation")}
               </Button>
               <Button
                 type="button"
@@ -178,7 +178,7 @@ export function CrossUploadDialog({ onSubmitted }: { onSubmitted: () => void }) 
                 size="sm"
                 onClick={() => setShowPicker((v) => !v)}
               >
-                {showPicker ? "Karte schliessen" : "Punkt auf Karte setzen"}
+                {showPicker ? t("crossways.upload.closeMap") : t("crossways.upload.openMap")}
               </Button>
               {coords && (
                 <span className="text-xs text-muted-foreground">
@@ -201,26 +201,26 @@ export function CrossUploadDialog({ onSubmitted }: { onSubmitted: () => void }) 
           </div>
 
           <div className="space-y-1.5">
-            <Label htmlFor="cross-story">Geschichte (optional)</Label>
+            <Label htmlFor="cross-story">{t("crossways.upload.storyLabel")}</Label>
             <Textarea
               id="cross-story"
               value={story}
               maxLength={500}
               rows={3}
-              placeholder="Was macht dieses Kreuz besonders?"
+              placeholder={t("crossways.upload.storyPlaceholder")}
               onChange={(e) => setStory(e.target.value)}
             />
             <p className="text-right text-xs text-muted-foreground">{story.length}/500</p>
           </div>
 
           <div className="flex items-center justify-between rounded-lg border border-border/60 p-3">
-            <Label htmlFor="cross-anon" className="text-sm font-normal">Anonym veröffentlichen</Label>
+            <Label htmlFor="cross-anon" className="text-sm font-normal">{t("crossways.upload.anonymousLabel")}</Label>
             <Switch id="cross-anon" checked={isAnonymous} onCheckedChange={setIsAnonymous} />
           </div>
 
           {!isAnonymous && (
             <div className="space-y-1.5">
-              <Label htmlFor="cross-author">Anzeigename (optional)</Label>
+              <Label htmlFor="cross-author">{t("crossways.upload.authorLabel")}</Label>
               <Input
                 id="cross-author"
                 value={authorName}
@@ -237,14 +237,13 @@ export function CrossUploadDialog({ onSubmitted }: { onSubmitted: () => void }) 
               onCheckedChange={(v) => setConsent(v === true)}
             />
             <Label htmlFor="cross-consent" className="text-xs font-normal leading-relaxed">
-              Das Foto ist von mir, zeigt keine erkennbaren Personen und darf auf BibleBot.Life
-              veröffentlicht werden.
+              {t("crossways.upload.consent")}
             </Label>
           </div>
 
           <Button type="submit" className="w-full" disabled={submitting || !file || !placeLabel.trim() || !consent}>
             {submitting ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : null}
-            Zur Prüfung einsenden
+            {t("crossways.upload.submit")}
           </Button>
         </form>
       </DialogContent>

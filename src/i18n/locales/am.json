@@ -2086,5 +2086,85 @@
       "28": "What moved or touched me today?",
       "29": "How do I want to look back on today a year from now?"
     }
+  },
+  "crossways": {
+    "metaTitle": "መስቀለኛ መንገዶች - በመላው ዓለም መስቀሎችን ያካፍሉ | BibleBot.Life",
+    "metaDescription": "በመንገድ ዳር፣ በተራራ ጫፎች እና በቤተክርስቲያኖች ውስጥ ያሉ መስቀሎች፡ ፎቶዎን ከቦታ እና ታሪክ ጋር ያካፍሉ፣ በካርታው ላይ መስቀሎችን ያግኙ እና በጸሎት አብረዋቸው።",
+    "title": "መስቀለኛ መንገዶች",
+    "subtitle": "በመንገድ ዳር፣ በተራራ ጫፎች፣ በቤተክርስቲያኖች ውስጥ ያሉ መስቀሎች። ፎቶዎን ከቦታ እና አጭር ታሪክ ጋር ያካፍሉ — እና የሌሎችን መስቀሎች በጸሎት አብረዋቸው።",
+    "feed": "ምግብ",
+    "map": "ካርታ",
+    "nearMe": "በአቅራቢያዬ",
+    "sortNear": "በአቅራቢያ ደርድር",
+    "locationUnavailable": "ቦታ የለም",
+    "locationDenied": "ቦታ ተከልክሏል",
+    "empty": "እስካሁን ምንም መስቀሎች አልተለጠፉም። የመጀመሪያው ተሳታፊ ይሁኑ።",
+    "marquee": {
+      "eyebrow": "መስቀለኛ መንገዶች",
+      "title": "ከመላው ዓለም የመጡ መስቀሎች",
+      "description": "በመንገድ ዳር፣ በተራራ ጫፎች፣ በቤተክርስቲያኖች ውስጥ። ፎቶዎን ያካፍሉ — እና የሌሎችን መስቀሎች በጸሎት አብረዋቸው።",
+      "cta": "መስቀለኛ መንገዶችን ያግኙ"
+    },
+    "upload": {
+      "trigger": "መስቀል አክል",
+      "title": "መስቀል አክል",
+      "description": "ፎቶ፣ ቦታ እና አጭር ታሪክ። የእርስዎ ልጥፍ ወዲያውኑ በካርታው ላይ ይታያል።",
+      "photoLabel": "ፎቶ",
+      "photoPlaceholder": "ፎቶ ይምረጡ ወይም ያንሱ",
+      "placeLabel": "ቦታ",
+      "placePlaceholder": "ለምሳሌ የመልችታል መንገድ መስቀል",
+      "countryLabel": "ሀገር",
+      "countryPlaceholder": "ስዊዘርላንድ",
+      "useLocation": "ቦታ ተጠቀም",
+      "openMap": "ነጥብ በካርታው ላይ አስቀምጥ",
+      "closeMap": "ካርታ ዝጋ",
+      "storyLabel": "ታሪክ (አማራጭ)",
+      "storyPlaceholder": "ይህ መስቀል ልዩ የሚያደርገው ምንድን ነው?",
+      "anonymousLabel": "በስም-አልባ ይለጥፉ",
+      "authorLabel": "የማሳያ ስም (አማራጭ)",
+      "consent": "ፎቶው የእኔ ነው፣ ምንም የሚታወቁ ሰዎችን አያሳይም እና በBibleBot.Life ላይ ሊታተም ይችላል።",
+      "submit": "ለግምገማ አስገባ",
+      "imageTooBig": "ምስል በጣም ትልቅ ነው",
+      "imageTooBigDesc": "ከፍተኛው 5 ሜባ።",
+      "locationDeniedDesc": "እባክዎ ነጥቡን በካርታው ላይ በእጅ ያስቀምጡ።",
+      "successTitle": "ስለ መስቀልዎ እናመሰግናለን",
+      "successDesc": "መስቀልዎ አሁን ቀጥታ ነው።",
+      "errorTitle": "መጫን አልተሳካም",
+      "errorDesc": "እባክዎ እንደገና ይሞክሩ።"
+    },
+    "card": {
+      "anonymous": "ስም-አልባ",
+      "imageAlt": "መስቀል በ{{place}}",
+      "prayer": "ለዚህ ጸሎት",
+      "prayed": "በጸሎት",
+      "amen": "አሜን",
+      "share": "አጋራ",
+      "shareTitle": "መስቀለኛ መንገዶች",
+      "shareText": "{{place}} – መስቀለኛ መንገዶች በBibleBot.Life",
+      "linkCopied": "አገናኝ ተቀድቷል",
+      "report": "ሪፖርት አድርግ",
+      "reported": "ሪፖርት ተደርጓል",
+      "reportSentTitle": "ሪፖርት ተልኳል",
+      "reportSentDesc": "እናመሰግናለን፣ ልጥፉን እየገመገምን ነው።"
+    },
+    "admin": {
+      "title": "የመስቀለኛ መንገድ አስተዳደር",
+      "loading": "በመጫን ላይ…",
+      "empty": "ምንም ግቤቶች የሉም።",
+      "approve": "አጽድቅ",
+      "reject": "ውድቅ አድርግ",
+      "delete": "ሰርዝ",
+      "filter": {
+        "reported": "ሪፖርት ተደርጓል",
+        "pending": "በመጠባበቅ ላይ",
+        "approved": "ጸድቋል",
+        "rejected": "ውድቅ ተደርጓል",
+        "all": "ሁሉም"
+      },
+      "deleted": "ተሰርዟል",
+      "error": "ስህተት",
+      "rejectionPlaceholder": "የውድቅነት ምክንያት",
+      "reportedCount": "{{count}}× ሪፖርት ተደርጓል"
+    }
   }
 }

@@ -2088,5 +2088,85 @@
       "28": "What moved or touched me today?",
       "29": "How do I want to look back on today a year from now?"
     }
+  },
+  "crossways": {
+    "metaTitle": "Izindlela Zesiphambano – Yabelana ngeziphambano emhlabeni wonke | BibleBot.Life",
+    "metaDescription": "Iziphambano ezisendleleni, eziseziqongweni zezintaba nasezinkonzweni: Yabelana ngesithombe sakho nendawo nomlando, thola iziphambano kumephu bese uziphelekezela ngomkhuleko.",
+    "title": "Izindlela Zesiphambano",
+    "subtitle": "Iziphambano ezisendleleni, eziseziqongweni zezintaba, ezinkonzweni. Yabelana ngesithombe sakho nendawo nomlando omfushane — bese uphelekezela iziphambano zabanye ngomkhuleko.",
+    "feed": "Okuphakelayo",
+    "map": "Imephu",
+    "nearMe": "Eduze kwami",
+    "sortNear": "Hlela ngokusondelana",
+    "locationUnavailable": "Indawo ayitholakali",
+    "locationDenied": "Indawo yenqatshiwe",
+    "empty": "Azikho iziphambano ezishicilelwe okwamanje. Yiba ngowokuqala ukuthumela.",
+    "marquee": {
+      "eyebrow": "Izindlela Zesiphambano",
+      "title": "Iziphambano ezivela emhlabeni wonke",
+      "description": "Eceleni komgwaqo, ezintabeni, emasontweni. Yabelana ngesithombe sakho — bese uphelekezela iziphambano zabanye ngomkhuleko.",
+      "cta": "Thola izindlela zesiphambano"
+    },
+    "upload": {
+      "trigger": "Engeza isiphambano",
+      "title": "Engeza isiphambano",
+      "description": "Isithombe, indawo nomlando omfushane. Okuthunyelwe kwakho kuzovela ngokushesha kumephu.",
+      "photoLabel": "Isithombe",
+      "photoPlaceholder": "Khetha noma thatha isithombe",
+      "placeLabel": "Indawo",
+      "placePlaceholder": "isb. Isiphambano somgwaqo iMelchtal",
+      "countryLabel": "Izwe",
+      "countryPlaceholder": "ISwitzerland",
+      "useLocation": "Sebenzisa indawo",
+      "openMap": "Beka iphoyinti kumephu",
+      "closeMap": "Vala imephu",
+      "storyLabel": "Indaba (ongakukhetha)",
+      "storyPlaceholder": "Yini eyenza lesi siphambano sibe esikhethekile?",
+      "anonymousLabel": "Shicilela ngokungaziwa",
+      "authorLabel": "Igama lokubonisa (ongakukhetha)",
+      "consent": "Isithombe esami, asibonisi abantu ababonakalayo futhi singashicilelwa ku-BibleBot.Life.",
+      "submit": "Thumela ukuze sibuyekezwe",
+      "imageTooBig": "Isithombe sikhulu kakhulu",
+      "imageTooBigDesc": "Ubukhulu obungu-5 MB.",
+      "locationDeniedDesc": "Sicela ubeke iphoyinti kumephu ngesandla.",
+      "successTitle": "Siyabonga ngesiphambano sakho",
+      "successDesc": "Isiphambano sakho sesiphila.",
+      "errorTitle": "Ukulayisha kwehlulekile",
+      "errorDesc": "Sicela uzame futhi."
+    },
+    "card": {
+      "anonymous": "Ongaziwa",
+      "imageAlt": "Isiphambano e-{{place}}",
+      "prayer": "Umkhuleko ngaso",
+      "prayed": "Ngomkhuleko",
+      "amen": "Amen",
+      "share": "Yabelana",
+      "shareTitle": "Izindlela Zesiphambano",
+      "shareText": "{{place}} – Izindlela Zesiphambano ku-BibleBot.Life",
+      "linkCopied": "Isixhumanisi sikopishiwe",
+      "report": "Bika",
+      "reported": "Kubikiwe",
+      "reportSentTitle": "Umbiko uthunyelwe",
+      "reportSentDesc": "Siyabonga, sizobuyekeza okuthunyelwe."
+    },
+    "admin": {
+      "title": "Ukuphatha kwe-Crossways",
+      "loading": "Iyalayisha…",
+      "empty": "Azikho izinto.",
+      "approve": "Gunyaza",
+      "reject": "Yenqaba",
+      "delete": "Susa",
+      "filter": {
+        "reported": "Kubikiwe",
+        "pending": "Kusalindile",
+        "approved": "Kugunyaziwe",
+        "rejected": "Kwenqatshiwe",
+        "all": "Konke"
+      },
+      "deleted": "Kususiwe",
+      "error": "Iphutha",
+      "rejectionPlaceholder": "Isizathu sokwenqaba",
+      "reportedCount": "Kubikiwe {{count}}×"
+    }
   }
 }

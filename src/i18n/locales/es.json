@@ -2088,5 +2088,85 @@
       "28": "What moved or touched me today?",
       "29": "How do I want to look back on today a year from now?"
     }
+  },
+  "crossways": {
+    "metaTitle": "Caminos de Cruces – Comparte cruces de todo el mundo | BibleBot.Life",
+    "metaDescription": "Cruces al borde del camino, en cumbres de montañas y en iglesias: comparte tu foto con ubicación e historia, descubre cruces en el mapa y acompáñalas en oración.",
+    "title": "Caminos de Cruces",
+    "subtitle": "Cruces al borde del camino, en cumbres de montañas, en iglesias. Comparte tu foto con ubicación y una breve historia — y acompaña las cruces de otros en oración.",
+    "feed": "Feed",
+    "map": "Mapa",
+    "nearMe": "Cerca de mí",
+    "sortNear": "Ordenar por cercanía",
+    "locationUnavailable": "Ubicación no disponible",
+    "locationDenied": "Ubicación denegada",
+    "empty": "Aún no se han publicado cruces. Sé la primera contribución.",
+    "marquee": {
+      "eyebrow": "Caminos de Cruces",
+      "title": "Cruces de todo el mundo",
+      "description": "Al borde del camino, en cumbres de montañas, en iglesias. Comparte tu foto — y acompaña las cruces de otros en oración.",
+      "cta": "Descubrir Caminos de Cruces"
+    },
+    "upload": {
+      "trigger": "Añadir cruz",
+      "title": "Añadir cruz",
+      "description": "Foto, ubicación y una breve historia. Tu contribución aparecerá inmediatamente en el mapa.",
+      "photoLabel": "Foto",
+      "photoPlaceholder": "Seleccionar o tomar foto",
+      "placeLabel": "Lugar",
+      "placePlaceholder": "Ej. Cruz de camino Melchtal",
+      "countryLabel": "País",
+      "countryPlaceholder": "Suiza",
+      "useLocation": "Usar ubicación",
+      "openMap": "Establecer punto en el mapa",
+      "closeMap": "Cerrar mapa",
+      "storyLabel": "Historia (opcional)",
+      "storyPlaceholder": "¿Qué hace especial a esta cruz?",
+      "anonymousLabel": "Publicar anónimamente",
+      "authorLabel": "Nombre de visualización (opcional)",
+      "consent": "La foto es mía, no muestra personas reconocibles y puede ser publicada en BibleBot.Life.",
+      "submit": "Enviar para revisión",
+      "imageTooBig": "Imagen demasiado grande",
+      "imageTooBigDesc": "Máximo 5 MB.",
+      "locationDeniedDesc": "Por favor, establece el punto manualmente en el mapa.",
+      "successTitle": "Gracias por tu cruz",
+      "successDesc": "Tu cruz ya está en vivo.",
+      "errorTitle": "Error al subir",
+      "errorDesc": "Por favor, inténtalo de nuevo."
+    },
+    "card": {
+      "anonymous": "Anónimo",
+      "imageAlt": "Cruz en {{place}}",
+      "prayer": "Una oración por esto",
+      "prayed": "En oración",
+      "amen": "Amén",
+      "share": "Compartir",
+      "shareTitle": "Caminos de Cruces",
+      "shareText": "{{place}} – Caminos de Cruces en BibleBot.Life",
+      "linkCopied": "Enlace copiado",
+      "report": "Reportar",
+      "reported": "Reportado",
+      "reportSentTitle": "Reporte enviado",
+      "reportSentDesc": "Gracias, revisaremos la publicación."
+    },
+    "admin": {
+      "title": "Moderación de Cruces",
+      "loading": "Cargando…",
+      "empty": "No hay entradas.",
+      "approve": "Aprobar",
+      "reject": "Rechazar",
+      "delete": "Eliminar",
+      "filter": {
+        "reported": "Reportado",
+        "pending": "Pendiente",
+        "approved": "Aprobado",
+        "rejected": "Rechazado",
+        "all": "Todos"
+      },
+      "deleted": "Eliminado",
+      "error": "Error",
+      "rejectionPlaceholder": "Motivo del rechazo",
+      "reportedCount": "Reportado {{count}} veces"
+    }
   }
 }

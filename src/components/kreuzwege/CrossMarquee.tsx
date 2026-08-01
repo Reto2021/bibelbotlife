@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { ArrowRight, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -16,6 +17,7 @@ interface Item {
  * on the landing page. Renders nothing until at least 3 images are available.
  */
 export function CrossMarquee() {
+  const { t } = useTranslation();
   const [items, setItems] = useState<Item[]>([]);
 
   useEffect(() => {
@@ -41,19 +43,18 @@ export function CrossMarquee() {
         <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
           <div>
             <p className="mb-1 flex items-center gap-1.5 text-xs uppercase tracking-[0.2em] text-primary">
-              <MapPin className="h-3.5 w-3.5" /> Kreuzwege
+              <MapPin className="h-3.5 w-3.5" /> {t("crossways.marquee.eyebrow")}
             </p>
             <h2 id="kreuzwege-teaser" className="font-display text-3xl uppercase tracking-tight sm:text-4xl">
-              Kreuze aus aller Welt
+              {t("crossways.marquee.title")}
             </h2>
             <p className="mt-2 max-w-xl text-muted-foreground">
-              Am Wegrand, auf Bergspitzen, in Kirchen. Teile dein Foto — und begleite die Kreuze
-              anderer im Gebet.
+              {t("crossways.marquee.description")}
             </p>
           </div>
           <Button asChild size="lg" className="gap-1.5">
             <Link to="/kreuzwege">
-              Kreuzwege entdecken <ArrowRight className="h-4 w-4" />
+              {t("crossways.marquee.cta")} <ArrowRight className="h-4 w-4" />
             </Link>
           </Button>
         </div>
@@ -66,11 +67,11 @@ export function CrossMarquee() {
               key={`${p.id}-${i}`}
               to="/kreuzwege"
               className="relative w-56 shrink-0 overflow-hidden rounded-xl border border-border/60 transition-transform duration-300 hover:scale-[1.03] sm:w-64"
-              aria-label={`Kreuz bei ${p.place_label} ansehen`}
+              aria-label={t("crossways.card.imageAlt", { place: p.place_label })}
             >
               <img
                 src={p.image_url!}
-                alt={`Kreuz bei ${p.place_label}`}
+                alt={t("crossways.card.imageAlt", { place: p.place_label })}
                 loading="lazy"
                 className="aspect-[4/5] w-full object-cover"
               />

@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 import {
   MapPin,
   HandHeart,
@@ -18,6 +19,7 @@ interface Props {
 }
 
 export function CrossCard({ post, hasReacted, onReact }: Props) {
+  const { t } = useTranslation();
   const { toast } = useToast();
   const prayed = hasReacted(post.id, "prayer");
   const amened = hasReacted(post.id, "amen");
@@ -25,16 +27,16 @@ export function CrossCard({ post, hasReacted, onReact }: Props) {
 
   async function share() {
     const url = `${window.location.origin}/kreuzwege`;
-    const text = `${post.place_label} – Kreuzwege auf BibleBot.Life`;
+    const text = t("crossways.card.shareText", { place: post.place_label });
     let completed = false;
     try {
       if (navigator.share) {
-        await navigator.share({ title: "Kreuzwege", text, url });
+        await navigator.share({ title: t("crossways.card.shareTitle"), text, url });
         completed = true;
       } else {
         await navigator.clipboard.writeText(`${text} ${url}`);
         completed = true;
-        toast({ title: "Link kopiert" });
+        toast({ title: t("crossways.card.linkCopied") });
       }
     } catch {
       /* abgebrochen */
@@ -44,7 +46,7 @@ export function CrossCard({ post, hasReacted, onReact }: Props) {
 
   function report() {
     onReact(post.id, "report");
-    toast({ title: "Meldung gesendet", description: "Danke, wir prüfen den Beitrag." });
+    toast({ title: t("crossways.card.reportSentTitle"), description: t("crossways.card.reportSentDesc") });
   }
 
   return (
@@ -52,7 +54,7 @@ export function CrossCard({ post, hasReacted, onReact }: Props) {
       {post.image_url && (
         <img
           src={post.image_url}
-          alt={`Kreuz bei ${post.place_label}`}
+          alt={t("crossways.card.imageAlt", { place: post.place_label })}
           loading="lazy"
           className="aspect-[4/3] w-full object-cover"
         />
@@ -69,7 +71,7 @@ export function CrossCard({ post, hasReacted, onReact }: Props) {
         )}
 
         <p className="text-xs text-muted-foreground">
-          {post.is_anonymous || !post.author_name ? "Anonym" : post.author_name}
+          {post.is_anonymous || !post.author_name ? t("crossways.card.anonymous") : post.author_name}
         </p>
 
         <div className="flex flex-wrap items-center gap-2 border-t border-border/50 pt-3">
@@ -81,7 +83,7 @@ export function CrossCard({ post, hasReacted, onReact }: Props) {
             className="gap-1.5"
           >
             <HandHeart className="h-4 w-4" />
-            {prayed ? "Im Gebet" : "Ein Gebet dafür"}
+            {prayed ? t("crossways.card.prayed") : t("crossways.card.prayer")}
             <span className="text-xs text-muted-foreground">{post.prayer_count}</span>
           </Button>
 
@@ -93,7 +95,7 @@ export function CrossCard({ post, hasReacted, onReact }: Props) {
             className="gap-1.5"
           >
             <Sparkles className="h-4 w-4" />
-            Amen
+            {t("crossways.card.amen")}
             <span className="text-xs text-muted-foreground">{post.amen_count}</span>
           </Button>
 
@@ -102,10 +104,10 @@ export function CrossCard({ post, hasReacted, onReact }: Props) {
             size="sm"
             onClick={share}
             className="ml-auto gap-1.5"
-            aria-label="Teilen"
+            aria-label={t("crossways.card.share")}
           >
             <Share2 className="h-4 w-4" />
-            Teilen
+            {t("crossways.card.share")}
             {post.share_count > 0 && (
               <span className="text-xs text-muted-foreground">{post.share_count}</span>
             )}
@@ -117,10 +119,10 @@ export function CrossCard({ post, hasReacted, onReact }: Props) {
             disabled={reported}
             onClick={report}
             className="gap-1.5 text-muted-foreground hover:text-destructive"
-            aria-label="Melden"
+            aria-label={t("crossways.card.report")}
           >
             {reported ? <FlagOff className="h-4 w-4" /> : <Flag className="h-4 w-4" />}
-            {reported ? "Gemeldet" : "Melden"}
+            {reported ? t("crossways.card.reported") : t("crossways.card.report")}
           </Button>
         </div>
       </div>

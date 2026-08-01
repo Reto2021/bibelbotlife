@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { Card } from "@/components/ui/card";
@@ -29,6 +30,7 @@ type CrossRow = {
 };
 
 export default function CrossModeration() {
+  const { t } = useTranslation();
   const { toast } = useToast();
   const qc = useQueryClient();
   const [filter, setFilter] = useState<"pending" | "approved" | "rejected" | "reported" | "all">("reported");
@@ -82,10 +84,10 @@ export default function CrossModeration() {
       if (error) throw error;
     },
     onSuccess: (_, { status }) => {
-      toast({ title: status === "approved" ? "Freigegeben" : "Abgelehnt" });
+      toast({ title: status === "approved" ? t("crossways.admin.approved") : t("crossways.admin.rejected") });
       qc.invalidateQueries({ queryKey: ["admin-crosses"] });
     },
-    onError: (e: Error) => toast({ title: "Fehler", description: e.message, variant: "destructive" }),
+    onError: (e: Error) => toast({ title: t("crossways.admin.error", "Fehler"), description: e.message, variant: "destructive" }),
   });
 
   const remove = useMutation({
@@ -95,7 +97,7 @@ export default function CrossModeration() {
       if (error) throw error;
     },
     onSuccess: () => {
-      toast({ title: "Gelöscht" });
+      toast({ title: t("crossways.admin.deleted") });
       qc.invalidateQueries({ queryKey: ["admin-crosses"] });
     },
   });
@@ -107,7 +109,7 @@ export default function CrossModeration() {
           <Link to="/admin" className="text-muted-foreground hover:text-foreground">
             <ArrowLeft className="h-5 w-5" />
           </Link>
-          <h1 className="text-2xl font-bold">Kreuzwege-Moderation</h1>
+          <h1 className="text-2xl font-bold">{t("crossways.admin.title")}</h1>
         </div>
 
         <div className="flex flex-wrap gap-2">
@@ -118,23 +120,15 @@ export default function CrossModeration() {
               size="sm"
               onClick={() => setFilter(f)}
             >
-              {f === "reported"
-                ? "Gemeldet"
-                : f === "pending"
-                  ? "Ausstehend"
-                  : f === "approved"
-                    ? "Freigegeben"
-                    : f === "rejected"
-                      ? "Abgelehnt"
-                      : "Alle"}
+              {t(`crossways.admin.filter.${f}`)}
             </Button>
           ))}
         </div>
 
         {isLoading ? (
-          <p className="text-muted-foreground">Lade…</p>
+          <p className="text-muted-foreground">{t("crossways.admin.loading")}</p>
         ) : rows.length === 0 ? (
-          <p className="text-muted-foreground">Keine Einträge.</p>
+          <p className="text-muted-foreground">{t("crossways.admin.empty")}</p>
         ) : (
           <div className="space-y-4">
             {rows.map((row) => (
@@ -154,12 +148,12 @@ export default function CrossModeration() {
                       {row.country && <span className="text-sm text-muted-foreground">· {row.country}</span>}
                       <Badge variant={row.status === "approved" ? "default" : "secondary"}>{row.status}</Badge>
                       {row.reported_count > 0 && (
-                        <Badge variant="destructive">{row.reported_count}× gemeldet</Badge>
+                        <Badge variant="destructive">{t("crossways.admin.reportedCount", { count: row.reported_count })}</Badge>
                       )}
                     </div>
                     {row.story && <p className="text-sm text-muted-foreground">{row.story}</p>}
                     <p className="text-xs text-muted-foreground">
-                      {row.is_anonymous ? "Anonym" : row.author_name || "—"} ·{" "}
+                      {row.is_anonymous ? t("crossways.card.anonymous") : row.author_name || "—"} ·{" "}
                       {new Date(row.created_at).toLocaleString("de-CH")}
                       {row.lat != null && ` · ${row.lat.toFixed(3)}, ${row.lng?.toFixed(3)}`}
                     </p>
@@ -170,10 +164,10 @@ export default function CrossModeration() {
                         onClick={() => setStatus.mutate({ id: row.id, status: "approved" })}
                         className="gap-1.5"
                       >
-                        <Check className="h-4 w-4" /> Freigeben
+                        <Check className="h-4 w-4" /> {t("crossways.admin.approve")}
                       </Button>
                       <Input
-                        placeholder="Ablehnungsgrund"
+                        placeholder={t("crossways.admin.rejectionPlaceholder")}
                         className="h-9 w-48"
                         value={reasons[row.id] ?? ""}
                         onChange={(e) => setReasons((p) => ({ ...p, [row.id]: e.target.value }))}
@@ -186,7 +180,7 @@ export default function CrossModeration() {
                           setStatus.mutate({ id: row.id, status: "rejected", reason: reasons[row.id] })
                         }
                       >
-                        <X className="h-4 w-4" /> Ablehnen
+                        <X className="h-4 w-4" /> {t("crossways.admin.reject")}
                       </Button>
                       <Button
                         size="sm"
@@ -194,7 +188,7 @@ export default function CrossModeration() {
                         className="gap-1.5 text-destructive"
                         onClick={() => remove.mutate(row)}
                       >
-                        <Trash2 className="h-4 w-4" /> Löschen
+                        <Trash2 className="h-4 w-4" /> {t("crossways.admin.delete")}
                       </Button>
                     </div>
                   </div>

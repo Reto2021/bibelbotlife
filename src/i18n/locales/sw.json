@@ -2088,5 +2088,85 @@
       "28": "What moved or touched me today?",
       "29": "How do I want to look back on today a year from now?"
     }
+  },
+  "crossways": {
+    "metaTitle": "Njia za Msalaba – Shiriki Misalaba Ulimwenguni Pote | BibleBot.Life",
+    "metaDescription": "Misalaba kando ya barabara, kwenye vilele vya milima, na makanisani: Shiriki picha yako na eneo na hadithi, gundua misalaba kwenye ramani, na uwaombee.",
+    "title": "Njia za Msalaba",
+    "subtitle": "Misalaba kando ya barabara, kwenye vilele vya milima, makanisani. Shiriki picha yako na eneo na hadithi fupi — na uwaombee misalaba ya wengine.",
+    "feed": "Mlisho",
+    "map": "Ramani",
+    "nearMe": "Karibu Nami",
+    "sortNear": "Panga kwa Ukaribu",
+    "locationUnavailable": "Eneo halipatikani",
+    "locationDenied": "Ruhusa ya eneo imekataliwa",
+    "empty": "Bado hakuna misalaba iliyochapishwa. Kuwa mchangiaji wa kwanza.",
+    "marquee": {
+      "eyebrow": "Njia za Msalaba",
+      "title": "Misalaba kutoka Ulimwenguni Pote",
+      "description": "Kando ya barabara, kwenye vilele vya milima, makanisani. Shiriki picha yako — na uwaombee misalaba ya wengine.",
+      "cta": "Gundua Njia za Msalaba"
+    },
+    "upload": {
+      "trigger": "Ongeza Msalaba",
+      "title": "Ongeza Msalaba",
+      "description": "Picha, eneo, na hadithi fupi. Mchango wako utaonekana mara moja kwenye ramani.",
+      "photoLabel": "Picha",
+      "photoPlaceholder": "Chagua au piga picha",
+      "placeLabel": "Eneo",
+      "placePlaceholder": "k.m. Msalaba wa Barabara Melchtal",
+      "countryLabel": "Nchi",
+      "countryPlaceholder": "Uswisi",
+      "useLocation": "Tumia Eneo",
+      "openMap": "Weka alama kwenye ramani",
+      "closeMap": "Funga Ramani",
+      "storyLabel": "Hadithi (hiari)",
+      "storyPlaceholder": "Ni nini kinachofanya msalaba huu kuwa wa pekee?",
+      "anonymousLabel": "Chapisha bila kujulikana",
+      "authorLabel": "Jina la kuonyesha (hiari)",
+      "consent": "Picha ni yangu, haionyeshi watu wanaotambulika, na inaweza kuchapishwa kwenye BibleBot.Life.",
+      "submit": "Tuma kwa ukaguzi",
+      "imageTooBig": "Picha kubwa mno",
+      "imageTooBigDesc": "Upeo wa MB 5.",
+      "locationDeniedDesc": "Tafadhali weka alama mwenyewe kwenye ramani.",
+      "successTitle": "Asante kwa msalaba wako",
+      "successDesc": "Msalaba wako sasa umetumwa.",
+      "errorTitle": "Upakiaji umeshindwa",
+      "errorDesc": "Tafadhali jaribu tena."
+    },
+    "card": {
+      "anonymous": "Bila kujulikana",
+      "imageAlt": "Msalaba karibu na {{place}}",
+      "prayer": "Ombi kwa ajili yake",
+      "prayed": "Katika maombi",
+      "amen": "Amina",
+      "share": "Shiriki",
+      "shareTitle": "Njia za Msalaba",
+      "shareText": "{{place}} – Njia za Msalaba kwenye BibleBot.Life",
+      "linkCopied": "Kiungo kimenakiliwa",
+      "report": "Ripoti",
+      "reported": "Imeripotiwa",
+      "reportSentTitle": "Ripoti imetumwa",
+      "reportSentDesc": "Asante, tunakagua chapisho."
+    },
+    "admin": {
+      "title": "Usimamizi wa Njia Panda",
+      "loading": "Inapakia…",
+      "empty": "Hakuna viingilio.",
+      "approve": "Idhinisha",
+      "reject": "Kataa",
+      "delete": "Futa",
+      "filter": {
+        "reported": "Imetolewa ripoti",
+        "pending": "Inasubiri",
+        "approved": "Imeidhinishwa",
+        "rejected": "Imekataliwa",
+        "all": "Zote"
+      },
+      "deleted": "Imefutwa",
+      "error": "Hitilafu",
+      "rejectionPlaceholder": "Sababu ya kukataliwa",
+      "reportedCount": "Imetolewa ripoti mara {{count}}×"
+    }
   }
 }

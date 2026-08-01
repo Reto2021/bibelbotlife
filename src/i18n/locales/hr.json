@@ -2088,5 +2088,85 @@
       "28": "What moved or touched me today?",
       "29": "How do I want to look back on today a year from now?"
     }
+  },
+  "crossways": {
+    "metaTitle": "Križni putovi – Podijelite križeve diljem svijeta | BibleBot.Life",
+    "metaDescription": "Križevi uz cestu, na vrhovima planina i u crkvama: Podijelite svoju fotografiju s lokacijom i pričom, otkrijte križeve na karti i pratite ih u molitvi.",
+    "title": "Križni putovi",
+    "subtitle": "Križevi uz cestu, na vrhovima planina, u crkvama. Podijelite svoju fotografiju s lokacijom i kratkom pričom — i pratite križeve drugih u molitvi.",
+    "feed": "Feed",
+    "map": "Karta",
+    "nearMe": "Blizu mene",
+    "sortNear": "Sortiraj po blizini",
+    "locationUnavailable": "Lokacija nije dostupna",
+    "locationDenied": "Lokacija odbijena",
+    "empty": "Još nema objavljenih križeva. Budite prvi koji će objaviti.",
+    "marquee": {
+      "eyebrow": "Križni putovi",
+      "title": "Križevi iz cijelog svijeta",
+      "description": "Uz cestu, na vrhovima planina, u crkvama. Podijelite svoju fotografiju — i pratite križeve drugih u molitvi.",
+      "cta": "Otkrijte križne putove"
+    },
+    "upload": {
+      "trigger": "Dodaj križ",
+      "title": "Dodaj križ",
+      "description": "Fotografija, lokacija i kratka priča. Vaš će se doprinos odmah pojaviti na karti.",
+      "photoLabel": "Fotografija",
+      "photoPlaceholder": "Odaberite ili snimite fotografiju",
+      "placeLabel": "Mjesto",
+      "placePlaceholder": "npr. Križni put Melchtal",
+      "countryLabel": "Zemlja",
+      "countryPlaceholder": "Švicarska",
+      "useLocation": "Koristi lokaciju",
+      "openMap": "Postavi točku na karti",
+      "closeMap": "Zatvori kartu",
+      "storyLabel": "Priča (opcionalno)",
+      "storyPlaceholder": "Što ovaj križ čini posebnim?",
+      "anonymousLabel": "Objavi anonimno",
+      "authorLabel": "Prikazno ime (opcionalno)",
+      "consent": "Fotografija je moja, ne prikazuje prepoznatljive osobe i smije biti objavljena na BibleBot.Life.",
+      "submit": "Pošalji na pregled",
+      "imageTooBig": "Slika prevelika",
+      "imageTooBigDesc": "Maksimalno 5 MB.",
+      "locationDeniedDesc": "Molimo postavite točku ručno na karti.",
+      "successTitle": "Hvala na vašem križu",
+      "successDesc": "Vaš križ je sada uživo.",
+      "errorTitle": "Prijenos nije uspio",
+      "errorDesc": "Molimo pokušajte ponovno."
+    },
+    "card": {
+      "anonymous": "Anonimno",
+      "imageAlt": "Križ kod {{place}}",
+      "prayer": "Molitva za to",
+      "prayed": "U molitvi",
+      "amen": "Amen",
+      "share": "Podijeli",
+      "shareTitle": "Križni putovi",
+      "shareText": "{{place}} – Križni putovi na BibleBot.Life",
+      "linkCopied": "Poveznica kopirana",
+      "report": "Prijavi",
+      "reported": "Prijavljeno",
+      "reportSentTitle": "Prijava poslana",
+      "reportSentDesc": "Hvala, pregledat ćemo objavu."
+    },
+    "admin": {
+      "title": "Moderacija raskrižja",
+      "loading": "Učitavanje…",
+      "empty": "Nema unosa.",
+      "approve": "Odobri",
+      "reject": "Odbij",
+      "delete": "Izbriši",
+      "filter": {
+        "reported": "Prijavljeno",
+        "pending": "Na čekanju",
+        "approved": "Odobreno",
+        "rejected": "Odbijeno",
+        "all": "Sve"
+      },
+      "deleted": "Izbrisano",
+      "error": "Greška",
+      "rejectionPlaceholder": "Razlog odbijanja",
+      "reportedCount": "Prijavljeno {{count}}×"
+    }
   }
 }

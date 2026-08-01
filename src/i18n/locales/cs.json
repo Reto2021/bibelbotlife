@@ -2088,5 +2088,85 @@
       "28": "What moved or touched me today?",
       "29": "How do I want to look back on today a year from now?"
     }
+  },
+  "crossways": {
+    "metaTitle": "Křížové cesty – sdílejte kříže po celém světě | BibleBot.Life",
+    "metaDescription": "Kříže u cesty, na vrcholcích hor a v kostelech: Sdílejte svou fotografii s místem a příběhem, objevujte kříže na mapě a doprovázejte je modlitbou.",
+    "title": "Křížové cesty",
+    "subtitle": "Kříže u cesty, na vrcholcích hor, v kostelech. Sdílejte svou fotografii s místem a krátkým příběhem — a doprovázejte kříže ostatních modlitbou.",
+    "feed": "Kanál",
+    "map": "Mapa",
+    "nearMe": "V mém okolí",
+    "sortNear": "Seřadit podle blízkosti",
+    "locationUnavailable": "Poloha není k dispozici",
+    "locationDenied": "Přístup k poloze odepřen",
+    "empty": "Zatím nebyly zveřejněny žádné kříže. Buďte první, kdo přispěje.",
+    "marquee": {
+      "eyebrow": "Křížové cesty",
+      "title": "Kříže z celého světa",
+      "description": "U cesty, na vrcholcích hor, v kostelech. Sdílejte svou fotografii — a doprovázejte kříže ostatních modlitbou.",
+      "cta": "Objevte křížové cesty"
+    },
+    "upload": {
+      "trigger": "Přidat kříž",
+      "title": "Přidat kříž",
+      "description": "Fotografie, místo a krátký příběh. Váš příspěvek se okamžitě objeví na mapě.",
+      "photoLabel": "Fotografie",
+      "photoPlaceholder": "Vybrat nebo pořídit fotografii",
+      "placeLabel": "Místo",
+      "placePlaceholder": "např. Kříž u cesty Melchtal",
+      "countryLabel": "Země",
+      "countryPlaceholder": "Švýcarsko",
+      "useLocation": "Použít polohu",
+      "openMap": "Nastavit bod na mapě",
+      "closeMap": "Zavřít mapu",
+      "storyLabel": "Příběh (volitelné)",
+      "storyPlaceholder": "Čím je tento kříž zvláštní?",
+      "anonymousLabel": "Zveřejnit anonymně",
+      "authorLabel": "Zobrazované jméno (volitelné)",
+      "consent": "Fotografie je moje, nezobrazuje žádné rozpoznatelné osoby a smí být zveřejněna na BibleBot.Life.",
+      "submit": "Odeslat ke kontrole",
+      "imageTooBig": "Obrázek je příliš velký",
+      "imageTooBigDesc": "Maximálně 5 MB.",
+      "locationDeniedDesc": "Nastavte prosím bod ručně na mapě.",
+      "successTitle": "Děkujeme za váš kříž",
+      "successDesc": "Váš kříž je nyní živý.",
+      "errorTitle": "Nahrávání se nezdařilo",
+      "errorDesc": "Zkuste to prosím znovu."
+    },
+    "card": {
+      "anonymous": "Anonymní",
+      "imageAlt": "Kříž u {{place}}",
+      "prayer": "Modlitba za to",
+      "prayed": "V modlitbě",
+      "amen": "Amen",
+      "share": "Sdílet",
+      "shareTitle": "Křížové cesty",
+      "shareText": "{{place}} – Křížové cesty na BibleBot.Life",
+      "linkCopied": "Odkaz zkopírován",
+      "report": "Nahlásit",
+      "reported": "Nahlášeno",
+      "reportSentTitle": "Hlášení odesláno",
+      "reportSentDesc": "Děkujeme, příspěvek prověříme."
+    },
+    "admin": {
+      "title": "Moderace křížových cest",
+      "loading": "Načítám…",
+      "empty": "Žádné záznamy.",
+      "approve": "Schválit",
+      "reject": "Zamítnout",
+      "delete": "Smazat",
+      "filter": {
+        "reported": "Nahlášeno",
+        "pending": "Čekající",
+        "approved": "Schváleno",
+        "rejected": "Zamítnuto",
+        "all": "Vše"
+      },
+      "deleted": "Smazáno",
+      "error": "Chyba",
+      "rejectionPlaceholder": "Důvod zamítnutí",
+      "reportedCount": "Nahlášeno {{count}}×"
+    }
   }
 }

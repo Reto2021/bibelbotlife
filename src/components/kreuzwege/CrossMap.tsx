@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
@@ -45,6 +46,7 @@ export default function CrossMap({
   picked = null,
   onPick,
 }: Props) {
+  const { t } = useTranslation();
   const [ready, setReady] = useState(false);
   useEffect(() => setReady(true), []);
 
@@ -71,7 +73,7 @@ export default function CrossMap({
                 {p.image_url && (
                   <img
                     src={p.image_url}
-                    alt={`Kreuz bei ${p.place_label}`}
+                    alt={t("crossways.card.imageAlt", { place: p.place_label })}
                     className="h-24 w-full rounded object-cover"
                   />
                 )}

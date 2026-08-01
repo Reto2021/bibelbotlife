@@ -2088,5 +2088,85 @@
       "28": "What moved or touched me today?",
       "29": "How do I want to look back on today a year from now?"
     }
+  },
+  "crossways": {
+    "metaTitle": "Căi ale Crucii – Împărtășește cruci din întreaga lume | BibleBot.Life",
+    "metaDescription": "Cruci pe marginea drumului, pe vârfuri de munte și în biserici: Împărtășește fotografia ta cu locația și povestea, descoperă cruci pe hartă și însoțește-le în rugăciune.",
+    "title": "Căi ale Crucii",
+    "subtitle": "Cruci pe marginea drumului, pe vârfuri de munte, în biserici. Împărtășește fotografia ta cu locația și o scurtă poveste — și însoțește crucile altora în rugăciune.",
+    "feed": "Flux",
+    "map": "Hartă",
+    "nearMe": "Lângă mine",
+    "sortNear": "Sortare după proximitate",
+    "locationUnavailable": "Locație indisponibilă",
+    "locationDenied": "Locație refuzată",
+    "empty": "Încă nu au fost publicate cruci. Fii prima contribuție.",
+    "marquee": {
+      "eyebrow": "Căi ale Crucii",
+      "title": "Cruci din întreaga lume",
+      "description": "Pe marginea drumului, pe vârfuri de munte, în biserici. Împărtășește fotografia ta — și însoțește crucile altora în rugăciune.",
+      "cta": "Descoperă Căi ale Crucii"
+    },
+    "upload": {
+      "trigger": "Adaugă o cruce",
+      "title": "Adaugă o cruce",
+      "description": "Fotografie, locație și o scurtă poveste. Contribuția ta va apărea imediat pe hartă.",
+      "photoLabel": "Fotografie",
+      "photoPlaceholder": "Selectează sau fă o fotografie",
+      "placeLabel": "Locație",
+      "placePlaceholder": "ex. Crucea de la Melchtal",
+      "countryLabel": "Țară",
+      "countryPlaceholder": "Elveția",
+      "useLocation": "Folosește locația curentă",
+      "openMap": "Setează punctul pe hartă",
+      "closeMap": "Închide harta",
+      "storyLabel": "Poveste (opțional)",
+      "storyPlaceholder": "Ce face această cruce specială?",
+      "anonymousLabel": "Publică anonim",
+      "authorLabel": "Nume afișat (opțional)",
+      "consent": "Fotografia îmi aparține, nu prezintă persoane identificabile și poate fi publicată pe BibleBot.Life.",
+      "submit": "Trimite pentru verificare",
+      "imageTooBig": "Imagine prea mare",
+      "imageTooBigDesc": "Maxim 5 MB.",
+      "locationDeniedDesc": "Te rog să setezi punctul manual pe hartă.",
+      "successTitle": "Mulțumim pentru crucea ta",
+      "successDesc": "Crucea ta este acum live.",
+      "errorTitle": "Încărcare eșuată",
+      "errorDesc": "Te rog să încerci din nou."
+    },
+    "card": {
+      "anonymous": "Anonim",
+      "imageAlt": "Cruce la {{place}}",
+      "prayer": "O rugăciune pentru aceasta",
+      "prayed": "În rugăciune",
+      "amen": "Amin",
+      "share": "Distribuie",
+      "shareTitle": "Căi ale Crucii",
+      "shareText": "{{place}} – Căi ale Crucii pe BibleBot.Life",
+      "linkCopied": "Link copiat",
+      "report": "Raportează",
+      "reported": "Raportat",
+      "reportSentTitle": "Raport trimis",
+      "reportSentDesc": "Mulțumim, vom verifica contribuția."
+    },
+    "admin": {
+      "title": "Moderare Căi",
+      "loading": "Se încarcă…",
+      "empty": "Nici o înregistrare.",
+      "approve": "Aprobă",
+      "reject": "Respinge",
+      "delete": "Șterge",
+      "filter": {
+        "reported": "Raportate",
+        "pending": "În așteptare",
+        "approved": "Aprobate",
+        "rejected": "Respinse",
+        "all": "Toate"
+      },
+      "deleted": "Șters",
+      "error": "Eroare",
+      "rejectionPlaceholder": "Motivul respingerii",
+      "reportedCount": "Raportate de {{count}} ori"
+    }
   }
 }
