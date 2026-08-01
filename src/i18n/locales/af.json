@@ -2158,7 +2158,14 @@
       "cropLabel": "Crop",
       "cropOriginal": "Original",
       "editReset": "Reset",
-      "editApplying": "Applying changes …"
+      "editApplying": "Applying changes …",
+      "addMorePhotos": "Weitere Bilder hinzufügen",
+      "multiHint": "Mehrere Bilder möglich (max. {{max}})",
+      "selectedCount": "{{count}} von {{max}} Bildern ausgewählt",
+      "maxFilesTitle": "Maximal {{max}} Bilder",
+      "maxFilesDesc": "Weitere Bilder wurden nicht übernommen. Bitte in mehreren Beiträgen hochladen.",
+      "successDescMany": "{{count}} Bilder wurden veröffentlicht.",
+      "submitting": "{{done}}/{{total}} hochgeladen …"
     },
     "card": {
       "anonymous": "Anoniem",
