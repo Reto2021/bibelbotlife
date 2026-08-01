@@ -350,6 +350,7 @@ export function MyCrosses() {
           variant="ghost"
           size="icon"
           className="shrink-0"
+          disabled={filtersAreDefault}
           aria-label={t("crossways.mine.resetFilters", { defaultValue: "Filter zurücksetzen" })}
           title={t("crossways.mine.resetFilters", { defaultValue: "Filter zurücksetzen" })}
           onClick={resetFilters}
