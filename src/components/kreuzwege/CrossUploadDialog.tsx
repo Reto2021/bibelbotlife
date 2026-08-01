@@ -108,15 +108,13 @@ export function CrossUploadDialog({ onSubmitted }: { onSubmitted: () => void }) 
     <Dialog open={open} onOpenChange={(o) => { setOpen(o); if (!o) reset(); }}>
       <DialogTrigger asChild>
         <Button size="lg" className="gap-2">
-          <Plus className="h-4 w-4" /> Kreuz hinzufügen
+          <Plus className="h-4 w-4" /> {t("crossways.upload.trigger")}
         </Button>
       </DialogTrigger>
       <DialogContent className="max-h-[90vh] overflow-y-auto sm:max-w-lg">
         <DialogHeader>
-          <DialogTitle>Kreuz hinzufügen</DialogTitle>
-          <DialogDescription>
-            Foto, Ort und eine kurze Geschichte. Jeder Beitrag wird vor der Veröffentlichung geprüft.
-          </DialogDescription>
+          <DialogTitle>{t("crossways.upload.title")}</DialogTitle>
+          <DialogDescription>{t("crossways.upload.description")}</DialogDescription>
         </DialogHeader>
 
         <form onSubmit={handleSubmit} className="space-y-4">
