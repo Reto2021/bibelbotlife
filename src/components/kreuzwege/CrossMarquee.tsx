@@ -72,7 +72,7 @@ export function CrossMarquee() {
       </div>
 
       <div className="group relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]">
-        <div className="flex w-max gap-4 animate-marquee group-hover:[animation-play-state:paused] motion-reduce:animate-none">
+        <div className="flex w-max gap-4 animate-marquee group-hover:[animation-play-state:paused] group-focus-within:[animation-play-state:paused] group-active:[animation-play-state:paused] motion-reduce:animate-none">
           {loop.map((p, i) => {
             const label = isPlaceholder(p) ? t(p.place_label_key) : p.place_label;
             const cardContent = (
@@ -85,18 +85,21 @@ export function CrossMarquee() {
                   height={1280}
                   className="aspect-[4/5] w-full object-cover"
                 />
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/90 to-transparent p-3">
-                  <p className="truncate text-sm font-medium text-foreground">{label}</p>
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-foreground/85 via-foreground/45 to-transparent p-3 pt-8">
+                  <p className="truncate text-sm font-semibold text-background drop-shadow">{label}</p>
                 </div>
               </>
             );
+
+            const cardClass =
+              "relative z-10 w-56 shrink-0 overflow-hidden rounded-xl border border-border/60 text-left [touch-action:manipulation] transition-transform duration-300 hover:scale-[1.03] active:scale-[0.98] sm:w-64";
 
             if (isPlaceholder(p)) {
               return (
                 <Link
                   key={`${p.id}-${i}`}
                   to="/kreuzwege"
-                  className="relative w-56 shrink-0 overflow-hidden rounded-xl border border-border/60 transition-transform duration-300 hover:scale-[1.03] sm:w-64"
+                  className={cardClass}
                   aria-label={t("crossways.card.imageAlt", { place: label })}
                 >
                   {cardContent}
@@ -109,7 +112,7 @@ export function CrossMarquee() {
                 key={`${p.id}-${i}`}
                 type="button"
                 onClick={() => setSelected(p)}
-                className="relative w-56 shrink-0 overflow-hidden rounded-xl border border-border/60 text-left transition-transform duration-300 hover:scale-[1.03] sm:w-64"
+                className={cardClass}
                 aria-label={t("crossways.card.imageAlt", { place: label })}
               >
                 {cardContent}
@@ -118,6 +121,7 @@ export function CrossMarquee() {
           })}
         </div>
       </div>
+
 
       <CrossDetailModal
         post={selected}
