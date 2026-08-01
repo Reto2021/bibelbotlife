@@ -147,14 +147,54 @@ export function CrossUploadDialog({
     setEditing(false);
   }
 
-  function pickFile(f: File | undefined) {
+  function rejectFile(result: ImageValidationResult) {
+    const messages: Record<string, { title: string; description?: string }> = {
+      notAnImage: { title: t("crossways.upload.notAnImage") },
+      empty: { title: t("crossways.upload.fileEmpty", "Die Datei ist leer.") },
+      unsupportedFormat: {
+        title: t("crossways.upload.unsupportedFormat", "Dateiformat nicht unterstützt"),
+        description: t("crossways.upload.unsupportedFormatDesc", "Erlaubt sind: {{formats}}.").replace(
+          "{{formats}}",
+          String(result.values?.formats ?? ""),
+        ),
+      },
+      convertHeic: {
+        title: t("crossways.upload.unsupportedFormat", "Dateiformat nicht unterstützt"),
+        description: t(
+          "crossways.upload.convertHeicDesc",
+          "HEIC/TIFF kann nicht angezeigt werden. Bitte als JPG oder PNG speichern.",
+        ),
+      },
+      tooBig: {
+        title: t("crossways.upload.imageTooBig"),
+        description: t("crossways.upload.imageTooBigDesc"),
+      },
+      unreadable: {
+        title: t("crossways.upload.imageUnreadable", "Bild konnte nicht gelesen werden"),
+        description: t("crossways.upload.imageUnreadableDesc", "Bitte eine andere Datei wählen."),
+      },
+      tooSmall: {
+        title: t("crossways.upload.imageTooSmall", "Bild zu klein"),
+        description: t("crossways.upload.imageTooSmallDesc", "Mindestens {{min}} x {{min}} Pixel.").replace(
+          /{{min}}/g,
+          String(result.values?.min ?? MIN_IMAGE_DIMENSION),
+        ),
+      },
+    };
+    const msg = messages[result.code ?? "notAnImage"] ?? messages.notAnImage;
+    toast({ ...msg, variant: "destructive" });
+  }
+
+  async function pickFile(f: File | undefined) {
     if (!f) return;
-    if (!f.type.startsWith("image/")) {
-      toast({ title: t("crossways.upload.notAnImage"), variant: "destructive" });
+    const basic = validateImageFile(f);
+    if (!basic.ok) {
+      rejectFile(basic);
       return;
     }
-    if (f.size > 5 * 1024 * 1024) {
-      toast({ title: t("crossways.upload.imageTooBig"), description: t("crossways.upload.imageTooBigDesc"), variant: "destructive" });
+    const content = await validateImageContent(f);
+    if (!content.ok) {
+      rejectFile(content);
       return;
     }
     setRotation(0);
@@ -166,8 +206,9 @@ export function CrossUploadDialog({
   function handleDrop(e: React.DragEvent) {
     e.preventDefault();
     setDragActive(false);
-    pickFile(e.dataTransfer.files?.[0]);
+    void pickFile(e.dataTransfer.files?.[0]);
   }
+
 
   function useMyLocation() {
     if (!navigator.geolocation) {
