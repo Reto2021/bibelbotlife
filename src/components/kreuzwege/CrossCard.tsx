@@ -1,6 +1,13 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MapPin, HandHeart, Share2, Sparkles } from "lucide-react";
+import {
+  MapPin,
+  HandHeart,
+  Share2,
+  Sparkles,
+  Flag,
+  FlagOff,
+} from "lucide-react";
 import type { CrossInteraction, CrossPost } from "@/hooks/use-cross-posts";
 import { useToast } from "@/hooks/use-toast";
 
