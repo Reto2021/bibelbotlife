@@ -136,7 +136,11 @@ export function CrossMarquee() {
           <span className="hidden sm:inline">{t("crossways.marquee.uploadCta")}</span>
         </Link>
 
-        <div className="flex w-max gap-4 animate-marquee group-hover:[animation-play-state:paused] group-focus-within:[animation-play-state:paused] group-active:[animation-play-state:paused] motion-reduce:animate-none">
+        <div
+          ref={trackRef}
+          className="flex w-full gap-4 overflow-x-auto overflow-y-hidden scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden [touch-action:pan-x] cursor-grab active:cursor-grabbing"
+        >
+
           {loop.map((p, i) => {
             const label = isPlaceholder(p) ? t(p.place_label_key) : p.place_label;
             const cardContent = (
