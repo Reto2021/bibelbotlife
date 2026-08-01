@@ -2212,6 +2212,25 @@
       "linkCopiedDescription": "O link foi copiado para a área de transferência.",
       "openLightbox": "View photo full screen",
       "closeLightbox": "Close full screen"
+    },
+    "mine": {
+      "title": "My crosses",
+      "hint": "These are your own posts. As long as you use the same browser you can edit or delete them. Sign in to keep them linked to your account.",
+      "empty": "You have not uploaded a cross yet.",
+      "edit": "Edit",
+      "delete": "Delete",
+      "editTitle": "Edit post",
+      "save": "Save",
+      "cancel": "Cancel",
+      "saved": "Changes saved",
+      "saveError": "Could not save",
+      "deleted": "Post deleted",
+      "deleteError": "Could not delete",
+      "deleteTitle": "Delete post?",
+      "deleteConfirm": "The photo and all reactions will be removed permanently. This cannot be undone.",
+      "imageLocked": "The photo itself cannot be changed later — delete the post and upload it again.",
+      "placeRequired": "Please enter a place.",
+      "tab": "My crosses"
     }
   }
 }

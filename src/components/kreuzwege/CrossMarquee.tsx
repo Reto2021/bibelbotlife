@@ -126,9 +126,9 @@ export function CrossMarquee() {
 
 
   return (
-    <section className="border-y border-border/50 bg-card/40 py-12" aria-labelledby="kreuzwege-teaser">
+    <section className="border-y border-border/50 bg-card/40 py-8 sm:py-12" aria-labelledby="kreuzwege-teaser">
       <div className="container mx-auto max-w-6xl px-4">
-        <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
+        <div className="mb-4 flex flex-wrap items-end justify-between gap-4 sm:mb-6">
           <div>
             <p className="mb-1 flex items-center gap-1.5 text-xs uppercase tracking-[0.2em] text-primary">
               <MapPin className="h-3.5 w-3.5" /> {t("crossways.marquee.eyebrow")}

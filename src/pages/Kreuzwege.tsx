@@ -4,8 +4,9 @@ import { useSearchParams } from "react-router-dom";
 import { SEOHead } from "@/components/SEOHead";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Button } from "@/components/ui/button";
-import { Loader2, LayoutGrid, Map as MapIcon, Navigation } from "lucide-react";
+import { Loader2, LayoutGrid, Map as MapIcon, Navigation, User } from "lucide-react";
 import { CrossFeed } from "@/components/kreuzwege/CrossFeed";
+import { MyCrosses } from "@/components/kreuzwege/MyCrosses";
 import { CrossUploadDialog } from "@/components/kreuzwege/CrossUploadDialog";
 import { CrossDetailModal } from "@/components/kreuzwege/CrossDetailModal";
 import { useCrossPosts, distanceKm } from "@/hooks/use-cross-posts";
@@ -17,7 +18,7 @@ export default function Kreuzwege() {
   const { t } = useTranslation();
   const { posts, loading, hasReacted, react, reload } = useCrossPosts();
   const { toast } = useToast();
-  const [view, setView] = useState<"feed" | "map">("feed");
+  const [view, setView] = useState<"feed" | "map" | "mine">("feed");
   const [me, setMe] = useState<{ lat: number; lng: number } | null>(null);
   const [searchParams, setSearchParams] = useSearchParams();
   const [detailId, setDetailId] = useState<string | null>(null);
@@ -108,6 +109,14 @@ export default function Kreuzwege() {
             >
               <MapIcon className="h-4 w-4" /> {t("crossways.map")}
             </Button>
+            <Button
+              variant={view === "mine" ? "secondary" : "ghost"}
+              size="sm"
+              className="gap-1.5"
+              onClick={() => setView("mine")}
+            >
+              <User className="h-4 w-4" /> {t("crossways.mine.tab")}
+            </Button>
           </div>
           <Button variant="outline" size="sm" className="gap-1.5" onClick={nearMe}>
             <Navigation className="h-4 w-4" /> {t("crossways.nearMe")}
@@ -127,6 +136,8 @@ export default function Kreuzwege() {
           <div className="flex justify-center py-20">
             <Loader2 className="h-6 w-6 animate-spin text-primary" />
           </div>
+        ) : view === "mine" ? (
+          <MyCrosses />
         ) : view === "feed" ? (
           <CrossFeed posts={sorted} hasReacted={hasReacted} onReact={react} onOpen={setDetailId} />
         ) : (

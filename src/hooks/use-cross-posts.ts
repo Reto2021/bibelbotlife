@@ -226,3 +226,73 @@ export function distanceKm(
     Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLng / 2) ** 2;
   return 2 * R * Math.asin(Math.sqrt(h));
 }
+
+
+/** A post owned by this browser session (or logged-in account). */
+export interface MyCrossPost extends CrossPost {
+  image_path: string;
+  status: string;
+  updated_at: string;
+}
+
+async function manage(action: string, payload: Record<string, unknown> = {}) {
+  const { data, error } = await supabase.functions.invoke("cross-post-manage", {
+    body: { action, sessionId: getSessionId(), ...payload },
+  });
+  let result = (data ?? null) as { error?: string; posts?: MyCrossPost[] } | null;
+  if (!result && error) {
+    try {
+      result = await (error as { context?: Response }).context?.json();
+    } catch {
+      /* keep original error */
+    }
+  }
+  if (result?.error) throw new Error(result.error);
+  if (error) throw error;
+  return result;
+}
+
+export function useMyCrossPosts() {
+  const [posts, setPosts] = useState<MyCrossPost[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  const load = useCallback(async () => {
+    setLoading(true);
+    try {
+      const res = await manage("list");
+      setPosts((res?.posts ?? []) as MyCrossPost[]);
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    load();
+  }, [load]);
+
+  const update = useCallback(
+    async (input: {
+      id: string;
+      placeLabel: string;
+      story?: string | null;
+      quote?: string | null;
+      quoteReference?: string | null;
+      authorName?: string | null;
+      isAnonymous: boolean;
+    }) => {
+      await manage("update", input);
+      await load();
+    },
+    [load],
+  );
+
+  const remove = useCallback(
+    async (id: string) => {
+      await manage("delete", { id });
+      setPosts((prev) => prev.filter((p) => p.id !== id));
+    },
+    [],
+  );
+
+  return { posts, loading, reload: load, update, remove };
+}
