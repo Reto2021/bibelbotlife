@@ -201,26 +201,26 @@ export function CrossUploadDialog({ onSubmitted }: { onSubmitted: () => void }) 
           </div>
 
           <div className="space-y-1.5">
-            <Label htmlFor="cross-story">Geschichte (optional)</Label>
+            <Label htmlFor="cross-story">{t("crossways.upload.storyLabel")}</Label>
             <Textarea
               id="cross-story"
               value={story}
               maxLength={500}
               rows={3}
-              placeholder="Was macht dieses Kreuz besonders?"
+              placeholder={t("crossways.upload.storyPlaceholder")}
               onChange={(e) => setStory(e.target.value)}
             />
             <p className="text-right text-xs text-muted-foreground">{story.length}/500</p>
           </div>
 
           <div className="flex items-center justify-between rounded-lg border border-border/60 p-3">
-            <Label htmlFor="cross-anon" className="text-sm font-normal">Anonym veröffentlichen</Label>
+            <Label htmlFor="cross-anon" className="text-sm font-normal">{t("crossways.upload.anonymousLabel")}</Label>
             <Switch id="cross-anon" checked={isAnonymous} onCheckedChange={setIsAnonymous} />
           </div>
 
           {!isAnonymous && (
             <div className="space-y-1.5">
-              <Label htmlFor="cross-author">Anzeigename (optional)</Label>
+              <Label htmlFor="cross-author">{t("crossways.upload.authorLabel")}</Label>
               <Input
                 id="cross-author"
                 value={authorName}
