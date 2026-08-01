@@ -101,6 +101,9 @@
       "placeholder2": "Andacht in der Kapelle",
       "placeholder3": "Kreuz am Horizont"
     },
+    "modal": {
+      "mapLabel": "Standort"
+    },
     "upload": {
       "trigger": "Kreuz hinzufügen",
       "title": "Kreuz hinzufügen",
