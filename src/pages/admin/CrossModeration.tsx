@@ -148,12 +148,12 @@ export default function CrossModeration() {
                       {row.country && <span className="text-sm text-muted-foreground">· {row.country}</span>}
                       <Badge variant={row.status === "approved" ? "default" : "secondary"}>{row.status}</Badge>
                       {row.reported_count > 0 && (
-                        <Badge variant="destructive">{row.reported_count}× gemeldet</Badge>
+                        <Badge variant="destructive">{t("crossways.admin.reportedCount", { count: row.reported_count })}</Badge>
                       )}
                     </div>
                     {row.story && <p className="text-sm text-muted-foreground">{row.story}</p>}
                     <p className="text-xs text-muted-foreground">
-                      {row.is_anonymous ? "Anonym" : row.author_name || "—"} ·{" "}
+                      {row.is_anonymous ? t("crossways.card.anonymous") : row.author_name || "—"} ·{" "}
                       {new Date(row.created_at).toLocaleString("de-CH")}
                       {row.lat != null && ` · ${row.lat.toFixed(3)}, ${row.lng?.toFixed(3)}`}
                     </p>
@@ -164,10 +164,10 @@ export default function CrossModeration() {
                         onClick={() => setStatus.mutate({ id: row.id, status: "approved" })}
                         className="gap-1.5"
                       >
-                        <Check className="h-4 w-4" /> Freigeben
+                        <Check className="h-4 w-4" /> {t("crossways.admin.approve")}
                       </Button>
                       <Input
-                        placeholder="Ablehnungsgrund"
+                        placeholder={t("crossways.admin.rejectionPlaceholder")}
                         className="h-9 w-48"
                         value={reasons[row.id] ?? ""}
                         onChange={(e) => setReasons((p) => ({ ...p, [row.id]: e.target.value }))}
@@ -180,7 +180,7 @@ export default function CrossModeration() {
                           setStatus.mutate({ id: row.id, status: "rejected", reason: reasons[row.id] })
                         }
                       >
-                        <X className="h-4 w-4" /> Ablehnen
+                        <X className="h-4 w-4" /> {t("crossways.admin.reject")}
                       </Button>
                       <Button
                         size="sm"
@@ -188,7 +188,7 @@ export default function CrossModeration() {
                         className="gap-1.5 text-destructive"
                         onClick={() => remove.mutate(row)}
                       >
-                        <Trash2 className="h-4 w-4" /> Löschen
+                        <Trash2 className="h-4 w-4" /> {t("crossways.admin.delete")}
                       </Button>
                     </div>
                   </div>
