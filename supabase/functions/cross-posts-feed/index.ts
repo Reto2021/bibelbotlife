@@ -33,6 +33,7 @@ Deno.serve(async (req) => {
 
     const result = posts.map((p) => ({
       id: p.id,
+      slug: p.slug,
       place_label: p.place_label,
       country: p.country,
       lat: p.lat,
