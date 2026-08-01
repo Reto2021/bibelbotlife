@@ -14,7 +14,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Crop, Crosshair, Loader2, Plus, Quote, RotateCcw, RotateCw, Upload, X } from "lucide-react";
+import { Crosshair, Loader2, Plus, Quote, Upload } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import {
   IMAGE_ACCEPT_ATTRIBUTE,
@@ -26,11 +26,18 @@ import {
 
 import { submitCrossPost } from "@/hooks/use-cross-posts";
 import { ModerationError } from "@/lib/moderation";
-import { burnQuoteIntoImage, withQuotationMarks } from "@/lib/burn-quote";
-import { applyImageEdits, CROP_ASPECTS, type CropAspect } from "@/lib/transform-image";
+import { withQuotationMarks } from "@/lib/burn-quote";
+import { UploadImageSlot } from "./UploadImageSlot";
 import { VersePicker } from "./VersePicker";
 
 const CrossMap = lazy(() => import("./CrossMap"));
+
+const MAX_FILES = 6;
+
+interface PickedImage {
+  id: string;
+  file: File;
+}
 
 export function CrossUploadDialog({
   onSubmitted,
@@ -54,9 +61,9 @@ export function CrossUploadDialog({
     onOpenChange?.(next);
     if (!next) reset();
   }
-  const [file, setFile] = useState<File | null>(null);
-  const [editedFile, setEditedFile] = useState<File | null>(null);
-  const [preview, setPreview] = useState<string | null>(null);
+
+  const [images, setImages] = useState<PickedImage[]>([]);
+  const [editedFiles, setEditedFiles] = useState<Record<string, File>>({});
   const [placeLabel, setPlaceLabel] = useState("");
   const [country, setCountry] = useState("");
   const [story, setStory] = useState("");
@@ -66,78 +73,15 @@ export function CrossUploadDialog({
   const [coords, setCoords] = useState<{ lat: number; lng: number } | null>(null);
   const [showPicker, setShowPicker] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [progress, setProgress] = useState<{ done: number; total: number } | null>(null);
   const [dragActive, setDragActive] = useState(false);
   const [quote, setQuote] = useState("");
   const [quoteReference, setQuoteReference] = useState("");
   const [burnQuote, setBurnQuote] = useState(true);
-  const [burnedPreview, setBurnedPreview] = useState<string | null>(null);
-  const [rotation, setRotation] = useState(0);
-  const [aspect, setAspect] = useState<CropAspect>("original");
-  const [editing, setEditing] = useState(false);
-
-  // Apply rotation/crop; `editedFile` is what gets previewed and uploaded.
-  useEffect(() => {
-    let cancelled = false;
-    if (!file) {
-      setEditedFile(null);
-      setPreview(null);
-      return;
-    }
-    setEditing(true);
-    (async () => {
-      let result = file;
-      try {
-        result = await applyImageEdits(file, { rotation, aspect });
-      } catch {
-        result = file;
-      }
-      if (cancelled) return;
-      setEditedFile(result);
-      setPreview((prev) => {
-        if (prev) URL.revokeObjectURL(prev);
-        return URL.createObjectURL(result);
-      });
-      setEditing(false);
-    })();
-    return () => {
-      cancelled = true;
-    };
-  }, [file, rotation, aspect]);
-
-  // Live preview of the burned-in quote (same renderer as the upload).
-  useEffect(() => {
-    let cancelled = false;
-    let url: string | null = null;
-    if (!editedFile || !burnQuote || !quote.trim()) {
-      setBurnedPreview(null);
-      return;
-    }
-    const timer = setTimeout(async () => {
-      try {
-        const blob = await burnQuoteIntoImage(editedFile, {
-          quote,
-          reference: quoteReference,
-          maxSize: 900,
-          quality: 0.8,
-        });
-        if (cancelled) return;
-        url = URL.createObjectURL(blob);
-        setBurnedPreview(url);
-      } catch {
-        setBurnedPreview(null);
-      }
-    }, 350);
-    return () => {
-      cancelled = true;
-      clearTimeout(timer);
-      if (url) URL.revokeObjectURL(url);
-    };
-  }, [editedFile, quote, quoteReference, burnQuote]);
 
   function reset() {
-    setFile(null);
-    setEditedFile(null);
-    setPreview(null);
+    setImages([]);
+    setEditedFiles({});
     setPlaceLabel("");
     setCountry("");
     setStory("");
@@ -150,13 +94,10 @@ export function CrossUploadDialog({
     setQuote("");
     setQuoteReference("");
     setBurnQuote(true);
-    setBurnedPreview(null);
-    setRotation(0);
-    setAspect("original");
-    setEditing(false);
+    setProgress(null);
   }
 
-  function rejectFile(result: ImageValidationResult) {
+  function rejectFile(result: ImageValidationResult, name?: string) {
     const messages: Record<string, { title: string; description?: string }> = {
       notAnImage: { title: t("crossways.upload.notAnImage") },
       empty: { title: t("crossways.upload.fileEmpty", "Die Datei ist leer.") },
@@ -191,33 +132,64 @@ export function CrossUploadDialog({
       },
     };
     const msg = messages[result.code ?? "notAnImage"] ?? messages.notAnImage;
-    toast({ ...msg, variant: "destructive" });
+    toast({
+      title: name ? `${name}: ${msg.title}` : msg.title,
+      description: msg.description,
+      variant: "destructive",
+    });
   }
 
-  async function pickFile(f: File | undefined) {
-    if (!f) return;
-    const basic = validateImageFile(f);
-    if (!basic.ok) {
-      rejectFile(basic);
-      return;
+  async function pickFiles(list: FileList | File[] | null | undefined) {
+    const incoming = Array.from(list ?? []);
+    if (!incoming.length) return;
+
+    const accepted: PickedImage[] = [];
+    let limitHit = false;
+
+    for (const f of incoming) {
+      if (images.length + accepted.length >= MAX_FILES) {
+        limitHit = true;
+        break;
+      }
+      const basic = validateImageFile(f);
+      if (!basic.ok) {
+        rejectFile(basic, f.name);
+        continue;
+      }
+      const content = await validateImageContent(f);
+      if (!content.ok) {
+        rejectFile(content, f.name);
+        continue;
+      }
+      accepted.push({ id: crypto.randomUUID(), file: f });
     }
-    const content = await validateImageContent(f);
-    if (!content.ok) {
-      rejectFile(content);
-      return;
+
+    if (limitHit) {
+      toast({
+        title: t("crossways.upload.maxFilesTitle", "Maximal {{max}} Bilder").replace("{{max}}", String(MAX_FILES)),
+        description: t(
+          "crossways.upload.maxFilesDesc",
+          "Weitere Bilder wurden nicht übernommen. Bitte in mehreren Beiträgen hochladen.",
+        ),
+      });
     }
-    setRotation(0);
-    setAspect("original");
-    setFile(f);
+    if (accepted.length) setImages((prev) => [...prev, ...accepted]);
   }
 
+  function removeImage(id: string) {
+    setImages((prev) => prev.filter((item) => item.id !== id));
+    setEditedFiles((prev) => {
+      const next = { ...prev };
+      delete next[id];
+      return next;
+    });
+  }
 
   function handleDrop(e: React.DragEvent) {
     e.preventDefault();
     setDragActive(false);
-    void pickFile(e.dataTransfer.files?.[0]);
+    void pickFiles(e.dataTransfer.files);
   }
-
 
   function useMyLocation() {
     if (!navigator.geolocation) {
@@ -233,31 +205,43 @@ export function CrossUploadDialog({
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    const upload = editedFile ?? file;
-    if (!upload || !placeLabel.trim() || !consent || editing) return;
+    if (!images.length || !placeLabel.trim() || !consent) return;
     setSubmitting(true);
+    setProgress({ done: 0, total: images.length });
+    let uploaded = 0;
     try {
-      await submitCrossPost({
-        file: upload,
-        placeLabel,
-        country,
-        lat: coords?.lat ?? null,
-        lng: coords?.lng ?? null,
-        story,
-        authorName,
-        isAnonymous,
-        quote,
-        quoteReference,
-        burnQuote,
-      });
+      for (const item of images) {
+        await submitCrossPost({
+          file: editedFiles[item.id] ?? item.file,
+          placeLabel,
+          country,
+          lat: coords?.lat ?? null,
+          lng: coords?.lng ?? null,
+          story,
+          authorName,
+          isAnonymous,
+          quote,
+          quoteReference,
+          burnQuote,
+        });
+        uploaded += 1;
+        setProgress({ done: uploaded, total: images.length });
+      }
       toast({
         title: t("crossways.upload.successTitle"),
-        description: t("crossways.upload.successDesc"),
+        description:
+          images.length > 1
+            ? t("crossways.upload.successDescMany", "{{count}} Bilder wurden veröffentlicht.").replace(
+                "{{count}}",
+                String(uploaded),
+              )
+            : t("crossways.upload.successDesc"),
       });
       reset();
       setOpen(false);
       onSubmitted();
     } catch (err) {
+      if (uploaded > 0) onSubmitted();
       if (err instanceof ModerationError) {
         toast({
           title: t("crossways.upload.blockedTitle", "Inhalt nicht erlaubt"),
@@ -274,9 +258,9 @@ export function CrossUploadDialog({
         description: err instanceof Error ? err.message : t("crossways.upload.errorDesc"),
         variant: "destructive",
       });
-
     } finally {
       setSubmitting(false);
+      setProgress(null);
     }
   }
 
@@ -308,123 +292,56 @@ export function CrossUploadDialog({
                 dragActive ? "border-primary bg-primary/5" : "border-border hover:border-primary/60"
               }`}
             >
-              {preview ? (
-                <>
-                  <img
-                    src={burnedPreview ?? preview}
-                    alt={t("crossways.upload.photoLabel")}
-                    className="max-h-48 rounded-lg object-cover"
-                  />
-                  <span className="text-xs">{t("crossways.upload.replaceHint")}</span>
-                </>
-              ) : (
-                <>
-                  <Upload className={`h-6 w-6 ${dragActive ? "text-primary" : "text-primary/80"}`} />
-                  <span>{t("crossways.upload.photoPlaceholder")}</span>
-                  <span className="text-xs">{t("crossways.upload.dropHint")}</span>
-                </>
-              )}
+              <Upload className={`h-6 w-6 ${dragActive ? "text-primary" : "text-primary/80"}`} />
+              <span>
+                {images.length
+                  ? t("crossways.upload.addMorePhotos", "Weitere Bilder hinzufügen")
+                  : t("crossways.upload.photoPlaceholder")}
+              </span>
+              <span className="text-xs">
+                {t("crossways.upload.dropHint")} ·{" "}
+                {t("crossways.upload.multiHint", "Mehrere Bilder möglich (max. {{max}})").replace(
+                  "{{max}}",
+                  String(MAX_FILES),
+                )}
+              </span>
             </label>
-            {file && (
-              <div className="space-y-3 rounded-xl border border-border/60 p-3">
-                <div className="flex flex-wrap items-center gap-2">
-                  <Label className="mr-auto flex items-center gap-1.5 text-sm">
-                    <Crop className="h-4 w-4 text-primary" />
-                    {t("crossways.upload.editImage", "Bild bearbeiten")}
-                  </Label>
-                  <Button
-                    type="button"
-                    variant="outline"
-                    size="icon"
-                    className="h-8 w-8"
-                    aria-label={t("crossways.upload.rotateLeft", "Nach links drehen")}
-                    onClick={() => setRotation((r) => (r + 270) % 360)}
-                  >
-                    <RotateCcw className="h-4 w-4" />
-                  </Button>
-                  <Button
-                    type="button"
-                    variant="outline"
-                    size="icon"
-                    className="h-8 w-8"
-                    aria-label={t("crossways.upload.rotateRight", "Nach rechts drehen")}
-                    onClick={() => setRotation((r) => (r + 90) % 360)}
-                  >
-                    <RotateCw className="h-4 w-4" />
-                  </Button>
-                </div>
 
-                <div className="flex flex-wrap items-center gap-1.5">
-                  <span className="mr-1 text-xs text-muted-foreground">
-                    {t("crossways.upload.cropLabel", "Zuschnitt")}
-                  </span>
-                  {CROP_ASPECTS.map((option) => (
-                    <Button
-                      key={option}
-                      type="button"
-                      size="sm"
-                      variant={aspect === option ? "default" : "outline"}
-                      className="h-7 px-2.5 text-xs"
-                      onClick={() => setAspect(option)}
-                    >
-                      {option === "original"
-                        ? t("crossways.upload.cropOriginal", "Original")
-                        : option}
-                    </Button>
-                  ))}
-                </div>
-
-                <div className="flex items-center justify-between gap-2 text-xs text-muted-foreground">
-                  <span className="truncate">
-                    {editing ? (
-                      <span className="flex items-center gap-1.5">
-                        <Loader2 className="h-3.5 w-3.5 animate-spin" />
-                        {t("crossways.upload.editApplying", "Bearbeitung wird angewendet …")}
-                      </span>
-                    ) : (
-                      <>
-                        {file.name} ·{" "}
-                        {(((editedFile ?? file).size) / 1024 / 1024).toFixed(1)} MB
-                      </>
-                    )}
-                  </span>
-                  <div className="flex shrink-0 items-center gap-1">
-                    {(rotation !== 0 || aspect !== "original") && (
-                      <Button
-                        type="button"
-                        variant="ghost"
-                        size="sm"
-                        className="h-7 px-2"
-                        onClick={() => {
-                          setRotation(0);
-                          setAspect("original");
-                        }}
-                      >
-                        {t("crossways.upload.editReset", "Zurücksetzen")}
-                      </Button>
-                    )}
-                    <Button
-                      type="button"
-                      variant="ghost"
-                      size="sm"
-                      className="h-7 gap-1 px-2"
-                      onClick={() => setFile(null)}
-                    >
-                      <X className="h-3.5 w-3.5" /> {t("crossways.upload.removeImage")}
-                    </Button>
-                  </div>
-                </div>
+            {images.length > 0 && (
+              <div className="space-y-2">
+                <p className="text-xs text-muted-foreground">
+                  {t("crossways.upload.selectedCount", "{{count}} von {{max}} Bildern ausgewählt")
+                    .replace("{{count}}", String(images.length))
+                    .replace("{{max}}", String(MAX_FILES))}
+                </p>
+                {images.map((item, index) => (
+                  <UploadImageSlot
+                    key={item.id}
+                    file={item.file}
+                    index={index}
+                    quote={quote}
+                    quoteReference={quoteReference}
+                    burnQuote={burnQuote}
+                    onEdited={(edited) =>
+                      setEditedFiles((prev) => ({ ...prev, [item.id]: edited }))
+                    }
+                    onRemove={() => removeImage(item.id)}
+                  />
+                ))}
               </div>
             )}
+
             <input
               id="cross-photo"
               type="file"
+              multiple
               accept={IMAGE_ACCEPT_ATTRIBUTE}
               className="hidden"
-              onChange={(e) => void pickFile(e.target.files?.[0])}
+              onChange={(e) => {
+                void pickFiles(e.target.files);
+                e.target.value = "";
+              }}
             />
-
-
           </div>
 
           <div className="grid grid-cols-2 gap-3">
@@ -551,7 +468,6 @@ export function CrossUploadDialog({
             )}
           </div>
 
-
           <div className="flex items-center justify-between rounded-lg border border-border/60 p-3">
             <Label htmlFor="cross-anon" className="text-sm font-normal">{t("crossways.upload.anonymousLabel")}</Label>
             <Switch id="cross-anon" checked={isAnonymous} onCheckedChange={setIsAnonymous} />
@@ -580,9 +496,17 @@ export function CrossUploadDialog({
             </Label>
           </div>
 
-          <Button type="submit" className="w-full" disabled={submitting || !file || !placeLabel.trim() || !consent}>
+          <Button
+            type="submit"
+            className="w-full"
+            disabled={submitting || !images.length || !placeLabel.trim() || !consent}
+          >
             {submitting ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : null}
-            {t("crossways.upload.submit")}
+            {submitting && progress
+              ? t("crossways.upload.submitting", "{{done}}/{{total}} hochgeladen …")
+                  .replace("{{done}}", String(progress.done))
+                  .replace("{{total}}", String(progress.total))
+              : t("crossways.upload.submit")}
           </Button>
         </form>
       </DialogContent>
