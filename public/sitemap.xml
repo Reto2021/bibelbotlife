@@ -32,6 +32,8 @@
   <url><loc>https://biblebot.life/wegkreuze</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://biblebot.life/gipfelkreuze</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://biblebot.life/bergkreuze</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://biblebot.life/kreuzwege/kleiner-mittager-bf6f</loc><lastmod>2026-08-01</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://biblebot.life/kreuzwege/hafling-a634</loc><lastmod>2026-08-01</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://biblebot.life/church/testgemeinde</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
   <url><loc>https://biblebot.life/church-integration/testgemeinde</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
 </urlset>
