@@ -291,7 +291,9 @@
         "approved": "Freigegeben",
         "pending": "In Prüfung",
         "rejected": "Abgelehnt"
-      }
+      },
+      "resultCountPaged": "{{shown}} von {{count}} Kreuzen angezeigt",
+      "loadMore": "Mehr laden"
     }
   },
   "coaching": {
