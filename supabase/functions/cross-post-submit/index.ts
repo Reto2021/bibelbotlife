@@ -160,6 +160,21 @@ Deno.serve(async (req) => {
       auth: { persistSession: false },
     });
 
+    // Attach a signed-in owner when a valid bearer token is present, so the post
+    // stays editable across devices. Never trust an owner id from the body.
+    let userId: string | null = null;
+    const anonKey = Deno.env.get("SUPABASE_ANON_KEY")!;
+    const authHeader = req.headers.get("Authorization") ?? "";
+    const token = authHeader.startsWith("Bearer ") ? authHeader.slice(7) : "";
+    if (token && token !== anonKey) {
+      const authClient = createClient(supabaseUrl, anonKey, {
+        global: { headers: { Authorization: `Bearer ${token}` } },
+        auth: { persistSession: false },
+      });
+      const { data: userData } = await authClient.auth.getUser();
+      userId = userData?.user?.id ?? null;
+    }
+
     const ext = mime === "image/jpeg" ? "jpg" : mime.split("/")[1];
     const path = `${crypto.randomUUID()}.${ext}`;
 
@@ -186,6 +201,7 @@ Deno.serve(async (req) => {
         author_name: authorName,
         is_anonymous: isAnonymous,
         session_id: sessionId,
+        user_id: userId,
       })
       .select("id")
       .single();
