@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 
-export type CrossInteraction = "prayer" | "amen" | "share";
+export type CrossInteraction = "prayer" | "amen" | "share" | "report";
 
 export interface CrossPost {
   id: string;
@@ -15,6 +15,7 @@ export interface CrossPost {
   prayer_count: number;
   amen_count: number;
   share_count: number;
+  reported_count: number;
   created_at: string;
   image_url: string | null;
 }
@@ -104,6 +105,7 @@ export function useCrossPosts() {
                 prayer_count: counts.prayer_count ?? p.prayer_count,
                 amen_count: counts.amen_count ?? p.amen_count,
                 share_count: counts.share_count ?? p.share_count,
+                reported_count: counts.reported_count ?? p.reported_count,
               }
             : p,
         ),
@@ -146,7 +148,7 @@ export async function submitCrossPost(input: NewCrossPost) {
     author_name: input.isAnonymous ? null : input.authorName?.trim() || null,
     is_anonymous: input.isAnonymous,
     session_id: getSessionId(),
-    status: "pending",
+    status: "approved",
     prayer_count: 0,
   } as any);
   if (error) throw error;

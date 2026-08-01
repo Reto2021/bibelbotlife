@@ -22,13 +22,16 @@ type CrossRow = {
   status: string;
   rejection_reason: string | null;
   prayer_count: number;
+  amen_count: number;
+  share_count: number;
+  reported_count: number;
   created_at: string;
 };
 
 export default function CrossModeration() {
   const { toast } = useToast();
   const qc = useQueryClient();
-  const [filter, setFilter] = useState<"pending" | "approved" | "rejected" | "all">("pending");
+  const [filter, setFilter] = useState<"pending" | "approved" | "rejected" | "reported" | "all">("reported");
   const [urls, setUrls] = useState<Record<string, string>>({});
   const [reasons, setReasons] = useState<Record<string, string>>({});
 
@@ -39,7 +42,11 @@ export default function CrossModeration() {
         .from("cross_posts" as any)
         .select("*")
         .order("created_at", { ascending: false });
-      if (filter !== "all") q = q.eq("status", filter);
+      if (filter === "reported") {
+        q = q.eq("status", "approved").gt("reported_count", 0).order("reported_count", { ascending: false });
+      } else if (filter !== "all") {
+        q = q.eq("status", filter);
+      }
       const { data, error } = await q;
       if (error) throw error;
       return (data ?? []) as unknown as CrossRow[];
@@ -104,14 +111,22 @@ export default function CrossModeration() {
         </div>
 
         <div className="flex flex-wrap gap-2">
-          {(["pending", "approved", "rejected", "all"] as const).map((f) => (
+          {(["reported", "pending", "approved", "rejected", "all"] as const).map((f) => (
             <Button
               key={f}
               variant={filter === f ? "default" : "outline"}
               size="sm"
               onClick={() => setFilter(f)}
             >
-              {f === "pending" ? "Ausstehend" : f === "approved" ? "Freigegeben" : f === "rejected" ? "Abgelehnt" : "Alle"}
+              {f === "reported"
+                ? "Gemeldet"
+                : f === "pending"
+                  ? "Ausstehend"
+                  : f === "approved"
+                    ? "Freigegeben"
+                    : f === "rejected"
+                      ? "Abgelehnt"
+                      : "Alle"}
             </Button>
           ))}
         </div>
@@ -138,6 +153,9 @@ export default function CrossModeration() {
                       <span className="font-medium">{row.place_label}</span>
                       {row.country && <span className="text-sm text-muted-foreground">· {row.country}</span>}
                       <Badge variant={row.status === "approved" ? "default" : "secondary"}>{row.status}</Badge>
+                      {row.reported_count > 0 && (
+                        <Badge variant="destructive">{row.reported_count}× gemeldet</Badge>
+                      )}
                     </div>
                     {row.story && <p className="text-sm text-muted-foreground">{row.story}</p>}
                     <p className="text-xs text-muted-foreground">

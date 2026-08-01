@@ -1,0 +1,2 @@
+ALTER TABLE public.cross_interactions DROP CONSTRAINT IF EXISTS cross_interactions_kind_check;
+ALTER TABLE public.cross_interactions ADD CONSTRAINT cross_interactions_kind_check CHECK (kind = ANY (ARRAY['prayer'::text, 'amen'::text, 'share'::text, 'report'::text]));

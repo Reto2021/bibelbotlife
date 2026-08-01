@@ -1,6 +1,13 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MapPin, HandHeart, Share2, Sparkles } from "lucide-react";
+import {
+  MapPin,
+  HandHeart,
+  Share2,
+  Sparkles,
+  Flag,
+  FlagOff,
+} from "lucide-react";
 import type { CrossInteraction, CrossPost } from "@/hooks/use-cross-posts";
 import { useToast } from "@/hooks/use-toast";
 
@@ -14,6 +21,7 @@ export function CrossCard({ post, hasReacted, onReact }: Props) {
   const { toast } = useToast();
   const prayed = hasReacted(post.id, "prayer");
   const amened = hasReacted(post.id, "amen");
+  const reported = hasReacted(post.id, "report");
 
   async function share() {
     const url = `${window.location.origin}/kreuzwege`;
@@ -32,6 +40,11 @@ export function CrossCard({ post, hasReacted, onReact }: Props) {
       /* abgebrochen */
     }
     if (completed) onReact(post.id, "share");
+  }
+
+  function report() {
+    onReact(post.id, "report");
+    toast({ title: "Meldung gesendet", description: "Danke, wir prüfen den Beitrag." });
   }
 
   return (
@@ -96,6 +109,18 @@ export function CrossCard({ post, hasReacted, onReact }: Props) {
             {post.share_count > 0 && (
               <span className="text-xs text-muted-foreground">{post.share_count}</span>
             )}
+          </Button>
+
+          <Button
+            variant={reported ? "secondary" : "ghost"}
+            size="sm"
+            disabled={reported}
+            onClick={report}
+            className="gap-1.5 text-muted-foreground hover:text-destructive"
+            aria-label="Melden"
+          >
+            {reported ? <FlagOff className="h-4 w-4" /> : <Flag className="h-4 w-4" />}
+            {reported ? "Gemeldet" : "Melden"}
           </Button>
         </div>
       </div>

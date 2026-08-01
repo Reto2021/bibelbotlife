@@ -1247,6 +1247,7 @@ export type Database = {
           place_label: string
           prayer_count: number
           rejection_reason: string | null
+          reported_count: number
           session_id: string | null
           share_count: number
           status: string
@@ -1267,6 +1268,7 @@ export type Database = {
           place_label: string
           prayer_count?: number
           rejection_reason?: string | null
+          reported_count?: number
           session_id?: string | null
           share_count?: number
           status?: string
@@ -1287,6 +1289,7 @@ export type Database = {
           place_label?: string
           prayer_count?: number
           rejection_reason?: string | null
+          reported_count?: number
           session_id?: string | null
           share_count?: number
           status?: string
@@ -3279,6 +3282,7 @@ export type Database = {
         Returns: {
           amen_count: number
           prayer_count: number
+          reported_count: number
           share_count: number
         }[]
       }
