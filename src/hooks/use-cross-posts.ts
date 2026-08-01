@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 
-export type CrossInteraction = "prayer" | "amen" | "share";
+export type CrossInteraction = "prayer" | "amen" | "share" | "report";
 
 export interface CrossPost {
   id: string;
@@ -15,6 +15,7 @@ export interface CrossPost {
   prayer_count: number;
   amen_count: number;
   share_count: number;
+  reported_count: number;
   created_at: string;
   image_url: string | null;
 }
