@@ -91,6 +91,8 @@ export function MyCrosses() {
     setVisibleCount(PAGE_SIZE);
   };
 
+  const filtersAreDefault = query === "" && status === "all" && sort === "newest";
+
   const visiblePosts = useMemo(() => {
     const q = query.trim().toLowerCase();
     const filtered = posts.filter((p) => {
