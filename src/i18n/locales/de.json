@@ -142,7 +142,17 @@
       "dropHint": "Bild hierhin ziehen oder klicken zum Auswählen",
       "replaceHint": "Anderes Bild ziehen oder klicken zum Ersetzen",
       "removeImage": "Entfernen",
-      "notAnImage": "Bitte eine Bilddatei auswählen"
+      "notAnImage": "Bitte eine Bilddatei auswählen",
+      "quoteLabel": "Bibelzitat oder Gedanke",
+      "quotePlaceholder": "z. B. Der Herr ist mein Hirte",
+      "quoteReferencePlaceholder": "Quelle, z. B. Psalm 23,1",
+      "burnQuoteLabel": "Zitat aufs Foto schreiben",
+      "burnQuoteHint": "Die Vorschau oben zeigt, wie das Foto hochgeladen wird.",
+      "pickVerse": "Vers aus der Bibel wählen",
+      "versePlaceholder": "Thema oder Stichwort, z. B. Trost",
+      "verseSearching": "Suche läuft …",
+      "verseSearchError": "Suche gerade nicht möglich",
+      "verseNoResults": "Keine Verse gefunden"
     },
     "card": {
       "anonymous": "Anonym",
