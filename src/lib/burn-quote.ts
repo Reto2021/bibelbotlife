@@ -29,6 +29,19 @@ function wrapLines(ctx: CanvasRenderingContext2D, text: string, maxWidth: number
   return lines;
 }
 
+/** Max characters we allow on a photo, so the motif stays visible. */
+export const MAX_BURN_QUOTE_LENGTH = 140;
+
+/** Shorten a quote at a word boundary so it never overflows the photo. */
+export function truncateQuote(text: string, max = MAX_BURN_QUOTE_LENGTH): string {
+  const trimmed = text.trim();
+  if (trimmed.length <= max) return trimmed;
+  const cut = trimmed.slice(0, max);
+  const lastSpace = cut.lastIndexOf(" ");
+  const base = lastSpace > max * 0.5 ? cut.slice(0, lastSpace) : cut;
+  return `${base.replace(/[\s.,;:–-]+$/, "")}…`;
+}
+
 /** Wrap the quote in typographic quotation marks, unless it already has them. */
 export function withQuotationMarks(text: string): string {
   const trimmed = text.trim();
