@@ -58,19 +58,30 @@ export async function burnQuoteIntoImage(
 
   ctx.drawImage(bitmap, 0, 0, w, h);
 
-  const text = withQuotationMarks(quote);
+  const text = withQuotationMarks(truncateQuote(quote));
   if (text) {
     const padding = Math.round(w * 0.06);
     const maxTextWidth = w - padding * 2;
+    // The quote block may never eat more than ~38% of the photo height.
+    const maxBlockHeight = h * 0.38;
 
-    // Shrink the font until the quote fits in at most 5 lines.
+    // Shrink the font until the quote fits into the allowed block.
     let fontSize = Math.round(w * 0.058);
+    const minFontSize = Math.max(10, Math.round(w * 0.022));
     let lines: string[] = [];
-    for (let i = 0; i < 12; i += 1) {
+    for (let i = 0; i < 16; i += 1) {
       ctx.font = `600 ${fontSize}px Barlow, system-ui, sans-serif`;
       lines = wrapLines(ctx, text, maxTextWidth);
-      if (lines.length <= 5 || fontSize <= Math.round(w * 0.028)) break;
-      fontSize = Math.round(fontSize * 0.9);
+      const fits = lines.length <= 6 && lines.length * fontSize * 1.28 <= maxBlockHeight;
+      if (fits || fontSize <= minFontSize) break;
+      fontSize = Math.max(minFontSize, Math.round(fontSize * 0.9));
+    }
+
+    // Last resort: cut at a word boundary instead of overflowing the canvas.
+    const maxLines = Math.max(2, Math.min(6, Math.floor(maxBlockHeight / (fontSize * 1.28))));
+    if (lines.length > maxLines) {
+      lines = lines.slice(0, maxLines);
+      lines[maxLines - 1] = `${lines[maxLines - 1].replace(/[\s.,;:–-]+$/, "")}…\u201C`;
     }
 
     const lineHeight = Math.round(fontSize * 1.28);
