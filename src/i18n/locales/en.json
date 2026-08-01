@@ -2329,7 +2329,21 @@
       "photoReplaced": "New photo saved and checked",
       "photoReset": "Discard new photo",
       "photoInvalid": "Please choose an image file.",
-      "photoTooLarge": "The image is too large (max. 15 MB)."
+      "photoTooLarge": "The image is too large (max. 15 MB).",
+      "searchPlaceholder": "Search place …",
+      "filterStatus": "Status",
+      "statusAll": "All statuses",
+      "sort": "Sort",
+      "sortNewest": "Recently uploaded",
+      "sortOldest": "Oldest first",
+      "sortPlace": "Place A–Z",
+      "noResults": "No crosses match this search.",
+      "resultCount": "{{count}} of {{total}} crosses",
+      "status": {
+        "approved": "Approved",
+        "pending": "In review",
+        "rejected": "Rejected"
+      }
     }
   }
 }

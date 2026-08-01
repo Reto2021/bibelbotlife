@@ -1,13 +1,22 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { toast } from "sonner";
-import { ImageUp, Loader2, Pencil, Trash2, X } from "lucide-react";
+import { ImageUp, Loader2, Pencil, Search, Trash2, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Switch } from "@/components/ui/switch";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+
 import {
   Dialog,
   DialogContent,
@@ -37,6 +46,26 @@ export function MyCrosses() {
   const [newPhoto, setNewPhoto] = useState<File | null>(null);
   const [newPhotoUrl, setNewPhotoUrl] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // Client-side list controls: text search on place, status filter, upload-date sort.
+  const [query, setQuery] = useState("");
+  const [status, setStatus] = useState("all");
+  const [sort, setSort] = useState("newest");
+
+  const visiblePosts = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    const filtered = posts.filter((p) => {
+      const matchesStatus = status === "all" || p.status === status;
+      const matchesQuery = !q || (p.place_label ?? "").toLowerCase().includes(q);
+      return matchesStatus && matchesQuery;
+    });
+    return filtered.sort((a, b) => {
+      if (sort === "place") return (a.place_label ?? "").localeCompare(b.place_label ?? "");
+      const diff = new Date(b.created_at).getTime() - new Date(a.created_at).getTime();
+      return sort === "oldest" ? -diff : diff;
+    });
+  }, [posts, query, status, sort]);
+
 
   const [form, setForm] = useState({
     placeLabel: "",
@@ -152,11 +181,67 @@ export function MyCrosses() {
     );
   }
 
+  const statusLabel = (status: string) =>
+    t(`crossways.mine.status.${status}`, {
+      defaultValue:
+        status === "approved" ? "Freigegeben" : status === "pending" ? "In Prüfung" : "Abgelehnt",
+    });
+
   return (
     <div className="space-y-4">
       <p className="text-sm text-muted-foreground">{t("crossways.mine.hint")}</p>
 
-      {posts.map((post) => (
+      <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
+        <div className="relative flex-1">
+          <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+          <Input
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            className="pl-9"
+            placeholder={t("crossways.mine.searchPlaceholder", { defaultValue: "Ort suchen …" })}
+            aria-label={t("crossways.mine.searchPlaceholder", { defaultValue: "Ort suchen …" })}
+          />
+        </div>
+        <Select value={status} onValueChange={setStatus}>
+          <SelectTrigger className="sm:w-44" aria-label={t("crossways.mine.filterStatus", { defaultValue: "Status" })}>
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">{t("crossways.mine.statusAll", { defaultValue: "Alle Status" })}</SelectItem>
+            <SelectItem value="approved">{statusLabel("approved")}</SelectItem>
+            <SelectItem value="pending">{statusLabel("pending")}</SelectItem>
+            <SelectItem value="rejected">{statusLabel("rejected")}</SelectItem>
+          </SelectContent>
+        </Select>
+        <Select value={sort} onValueChange={setSort}>
+          <SelectTrigger className="sm:w-48" aria-label={t("crossways.mine.sort", { defaultValue: "Sortierung" })}>
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="newest">{t("crossways.mine.sortNewest", { defaultValue: "Zuletzt hochgeladen" })}</SelectItem>
+            <SelectItem value="oldest">{t("crossways.mine.sortOldest", { defaultValue: "Älteste zuerst" })}</SelectItem>
+            <SelectItem value="place">{t("crossways.mine.sortPlace", { defaultValue: "Ort A–Z" })}</SelectItem>
+          </SelectContent>
+        </Select>
+      </div>
+
+      {visiblePosts.length === 0 ? (
+        <div className="rounded-xl border border-border/60 p-8 text-center">
+          <p className="text-muted-foreground">
+            {t("crossways.mine.noResults", { defaultValue: "Keine Kreuze passen zu dieser Suche." })}
+          </p>
+        </div>
+      ) : (
+        <p className="text-xs text-muted-foreground">
+          {t("crossways.mine.resultCount", {
+            count: visiblePosts.length,
+            defaultValue: "{{count}} von {{total}} Kreuzen",
+            total: posts.length,
+          })}
+        </p>
+      )}
+
+      {visiblePosts.map((post) => (
         <Card key={post.id} className="overflow-hidden p-4">
           <div className="flex flex-col gap-4 sm:flex-row">
             {post.image_url && (
@@ -168,7 +253,20 @@ export function MyCrosses() {
               />
             )}
             <div className="flex-1 space-y-2">
-              <p className="font-medium">{post.place_label}</p>
+              <div className="flex flex-wrap items-center gap-2">
+                <p className="font-medium">{post.place_label}</p>
+                <Badge
+                  variant={
+                    post.status === "approved"
+                      ? "default"
+                      : post.status === "pending"
+                        ? "secondary"
+                        : "destructive"
+                  }
+                >
+                  {statusLabel(post.status)}
+                </Badge>
+              </div>
               {post.story && (
                 <p className="line-clamp-2 text-sm text-muted-foreground">{post.story}</p>
               )}
@@ -197,6 +295,7 @@ export function MyCrosses() {
           </div>
         </Card>
       ))}
+
 
       <Dialog open={!!editing} onOpenChange={(o) => !o && setEditing(null)}>
         <DialogContent className="max-h-[90vh] overflow-y-auto sm:max-w-lg">
