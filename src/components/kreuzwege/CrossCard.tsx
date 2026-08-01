@@ -21,6 +21,7 @@ export function CrossCard({ post, hasReacted, onReact }: Props) {
   const { toast } = useToast();
   const prayed = hasReacted(post.id, "prayer");
   const amened = hasReacted(post.id, "amen");
+  const reported = hasReacted(post.id, "report");
 
   async function share() {
     const url = `${window.location.origin}/kreuzwege`;
@@ -39,6 +40,11 @@ export function CrossCard({ post, hasReacted, onReact }: Props) {
       /* abgebrochen */
     }
     if (completed) onReact(post.id, "share");
+  }
+
+  function report() {
+    onReact(post.id, "report");
+    toast({ title: "Meldung gesendet", description: "Danke, wir prüfen den Beitrag." });
   }
 
   return (
