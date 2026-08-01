@@ -105,6 +105,7 @@ export function useCrossPosts() {
                 prayer_count: counts.prayer_count ?? p.prayer_count,
                 amen_count: counts.amen_count ?? p.amen_count,
                 share_count: counts.share_count ?? p.share_count,
+                reported_count: counts.reported_count ?? p.reported_count,
               }
             : p,
         ),
