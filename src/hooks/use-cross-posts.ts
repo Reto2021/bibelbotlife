@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
+import { burnQuoteIntoImage } from "@/lib/burn-quote";
 
 export type CrossInteraction = "prayer" | "amen" | "share" | "report";
 
