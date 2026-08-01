@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import {
   Menu, X as XIcon, HandHeart, GraduationCap, Building2, HeartHandshake,
   Send, FileText, ShieldCheck, LogIn, LogOut, User, Users, Shield, MessageCircle, Heart,
-  ChevronDown, BookOpen, Mail, Brain, Newspaper
+  ChevronDown, BookOpen, Mail, Brain, Newspaper, MapPin
 } from "lucide-react";
 import { AppLogo } from "@/components/AppLogo";
 import { Button } from "@/components/ui/button";
@@ -82,6 +82,13 @@ export function SiteHeader() {
               {t("nav.bibleQuiz")}
             </Link>
           </Button>
+          <Button asChild variant="ghost" size="sm">
+            <Link to="/kreuzwege">
+              <MapPin className="h-4 w-4 mr-1.5" />
+              {t("nav.crossways", "Kreuzwege")}
+            </Link>
+          </Button>
+
 
           {/* More dropdown for secondary links */}
           <DropdownMenu>
@@ -243,6 +250,10 @@ export function SiteHeader() {
           <Link to="/bibelquiz" className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-foreground hover:bg-primary/10 transition-colors" onClick={() => setMobileMenuOpen(false)}>
             <GraduationCap className="h-4 w-4 text-primary" />
             {t("nav.bibleQuiz")}
+          </Link>
+          <Link to="/kreuzwege" className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-foreground hover:bg-primary/10 transition-colors" onClick={() => setMobileMenuOpen(false)}>
+            <MapPin className="h-4 w-4 text-primary" />
+            {t("nav.crossways", "Kreuzwege")}
           </Link>
           <Link to="/churches" className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-foreground hover:bg-primary/10 transition-colors" onClick={() => setMobileMenuOpen(false)}>
             <BookOpen className="h-4 w-4 text-primary" />

@@ -59,6 +59,8 @@ const OutreachAdmin = lazy(() => import("./pages/admin/OutreachAdmin"));
 const OutreachStatusDashboard = lazy(() => import("./pages/admin/OutreachStatusDashboard"));
 const OutreachLogs = lazy(() => import("./pages/admin/OutreachLogs"));
 const PrayerModeration = lazy(() => import("./pages/admin/PrayerModeration"));
+const CrossModeration = lazy(() => import("./pages/admin/CrossModeration"));
+const Kreuzwege = lazy(() => import("./pages/Kreuzwege"));
 const ReferralAdmin = lazy(() => import("./pages/admin/ReferralAdmin"));
 const SeoAdmin = lazy(() => import("./pages/admin/SeoAdmin"));
 const FeedbackAdmin = lazy(() => import("./pages/admin/FeedbackAdmin"));
@@ -196,6 +198,7 @@ const App = () => {
                    <Route path="/bible-search" element={<BibleSearch />} />
                    <Route path="/bibel" element={<BibleSearch />} />
                   <Route path="/gebetswand" element={<PrayerWall />} />
+                  <Route path="/kreuzwege" element={<Kreuzwege />} />
                   <Route path="/bibelquiz" element={<BibleQuiz />} />
                   <Route path="/unsubscribe" element={<Unsubscribe />} />
                   <Route path="/spenden" element={<Spenden />} />
@@ -241,6 +244,7 @@ const App = () => {
                   <Route path="/admin/outreach/status" element={<ProtectedAdminRoute><OutreachStatusDashboard /></ProtectedAdminRoute>} />
                   <Route path="/admin/outreach/logs" element={<ProtectedAdminRoute><OutreachLogs /></ProtectedAdminRoute>} />
                   <Route path="/admin/prayers" element={<ProtectedAdminRoute><PrayerModeration /></ProtectedAdminRoute>} />
+                  <Route path="/admin/kreuzwege" element={<ProtectedAdminRoute><CrossModeration /></ProtectedAdminRoute>} />
 
                   <Route path="/admin/referrals" element={<ProtectedAdminRoute><ReferralAdmin /></ProtectedAdminRoute>} />
                   <Route path="/admin/referral" element={<ProtectedAdminRoute><ReferralAdmin /></ProtectedAdminRoute>} />

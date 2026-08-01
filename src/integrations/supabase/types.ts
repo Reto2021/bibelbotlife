@@ -1199,6 +1199,63 @@ export type Database = {
         }
         Relationships: []
       }
+      cross_posts: {
+        Row: {
+          author_name: string | null
+          country: string | null
+          created_at: string
+          id: string
+          image_path: string
+          is_anonymous: boolean
+          lat: number | null
+          lng: number | null
+          moderated_at: string | null
+          moderated_by: string | null
+          place_label: string
+          prayer_count: number
+          rejection_reason: string | null
+          session_id: string | null
+          status: string
+          story: string | null
+        }
+        Insert: {
+          author_name?: string | null
+          country?: string | null
+          created_at?: string
+          id?: string
+          image_path: string
+          is_anonymous?: boolean
+          lat?: number | null
+          lng?: number | null
+          moderated_at?: string | null
+          moderated_by?: string | null
+          place_label: string
+          prayer_count?: number
+          rejection_reason?: string | null
+          session_id?: string | null
+          status?: string
+          story?: string | null
+        }
+        Update: {
+          author_name?: string | null
+          country?: string | null
+          created_at?: string
+          id?: string
+          image_path?: string
+          is_anonymous?: boolean
+          lat?: number | null
+          lng?: number | null
+          moderated_at?: string | null
+          moderated_by?: string | null
+          place_label?: string
+          prayer_count?: number
+          rejection_reason?: string | null
+          session_id?: string | null
+          status?: string
+          story?: string | null
+        }
+        Relationships: []
+      }
       daily_broadcast_log: {
         Row: {
           id: string
@@ -2984,6 +3041,22 @@ export type Database = {
         Args: { payload: Json; queue_name: string }
         Returns: number
       }
+      get_approved_cross_posts: {
+        Args: never
+        Returns: {
+          author_name: string
+          country: string
+          created_at: string
+          id: string
+          image_path: string
+          is_anonymous: boolean
+          lat: number
+          lng: number
+          place_label: string
+          prayer_count: number
+          story: string
+        }[]
+      }
       get_explanation_rewrite_status: {
         Args: never
         Returns: {
@@ -3103,6 +3176,10 @@ export type Database = {
       }
       increment_circle_prayer_count: {
         Args: { request_id: string }
+        Returns: undefined
+      }
+      increment_cross_prayer_count: {
+        Args: { post_id: string }
         Returns: undefined
       }
       increment_golden_answer_use: {
