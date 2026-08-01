@@ -2343,7 +2343,9 @@
         "approved": "Approved",
         "pending": "In review",
         "rejected": "Rejected"
-      }
+      },
+      "resultCountPaged": "{{shown}} of {{count}} crosses shown",
+      "loadMore": "Load more"
     }
   }
 }

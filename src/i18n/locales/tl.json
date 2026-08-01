@@ -2233,7 +2233,9 @@
       "deleteConfirm": "The photo and all reactions will be removed permanently. This cannot be undone.",
       "imageLocked": "The photo itself cannot be changed later — delete the post and upload it again.",
       "placeRequired": "Please enter a place.",
-      "tab": "My crosses"
+      "tab": "My crosses",
+      "resultCountPaged": "{{shown}} of {{count}} crosses shown",
+      "loadMore": "Load more"
     }
   }
 }

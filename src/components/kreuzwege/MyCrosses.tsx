@@ -37,6 +37,9 @@ import {
 import { useMyCrossPosts, type MyCrossPost } from "@/hooks/use-cross-posts";
 import { MAX_BURN_QUOTE_LENGTH } from "@/lib/burn-quote";
 
+/** Cards rendered per batch; keeps the DOM small when a user has many crosses. */
+const PAGE_SIZE = 9;
+
 export function MyCrosses() {
   const { t } = useTranslation();
   const { posts, loading, update, remove } = useMyCrossPosts();
@@ -51,6 +54,8 @@ export function MyCrosses() {
   const [query, setQuery] = useState("");
   const [status, setStatus] = useState("all");
   const [sort, setSort] = useState("newest");
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  const sentinelRef = useRef<HTMLDivElement>(null);
 
   const visiblePosts = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -65,6 +70,35 @@ export function MyCrosses() {
       return sort === "oldest" ? -diff : diff;
     });
   }, [posts, query, status, sort]);
+
+  // Any change to the list controls starts paging over from the first batch.
+  useEffect(() => {
+    setVisibleCount(PAGE_SIZE);
+  }, [query, status, sort]);
+
+  const pagedPosts = useMemo(
+    () => visiblePosts.slice(0, visibleCount),
+    [visiblePosts, visibleCount],
+  );
+  const hasMore = visibleCount < visiblePosts.length;
+
+  // Infinite scroll: load the next batch once the sentinel enters the viewport.
+  useEffect(() => {
+    const el = sentinelRef.current;
+    if (!el || !hasMore) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0]?.isIntersecting) {
+          setVisibleCount((c) => c + PAGE_SIZE);
+        }
+      },
+      { rootMargin: "300px" },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [hasMore, visiblePosts.length]);
+
+
 
 
   const [form, setForm] = useState({
@@ -233,15 +267,15 @@ export function MyCrosses() {
         </div>
       ) : (
         <p className="text-xs text-muted-foreground">
-          {t("crossways.mine.resultCount", {
+          {t("crossways.mine.resultCountPaged", {
+            shown: pagedPosts.length,
             count: visiblePosts.length,
-            defaultValue: "{{count}} von {{total}} Kreuzen",
-            total: posts.length,
+            defaultValue: "{{shown}} von {{count}} Kreuzen angezeigt",
           })}
         </p>
       )}
 
-      {visiblePosts.map((post) => (
+      {pagedPosts.map((post) => (
         <Card key={post.id} className="overflow-hidden p-4">
           <div className="flex flex-col gap-4 sm:flex-row">
             {post.image_url && (
@@ -295,6 +329,22 @@ export function MyCrosses() {
           </div>
         </Card>
       ))}
+
+      {hasMore && (
+        <div ref={sentinelRef} className="flex justify-center pt-2">
+          <Button
+            variant="outline"
+            size="sm"
+            className="gap-1.5"
+            onClick={() => setVisibleCount((c) => c + PAGE_SIZE)}
+          >
+            <Loader2 className="h-4 w-4 animate-spin" />
+            {t("crossways.mine.loadMore", { defaultValue: "Mehr laden" })}
+          </Button>
+        </div>
+      )}
+
+
 
 
       <Dialog open={!!editing} onOpenChange={(o) => !o && setEditing(null)}>
