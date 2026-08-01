@@ -44,18 +44,15 @@ export default function Kreuzwege() {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Kreuzwege – Kreuze weltweit teilen | BibleBot.Life"
-        description="Kreuze am Wegrand, auf Bergspitzen und in Kirchen: Teile dein Foto mit Ort und Geschichte, entdecke Kreuze auf der Karte und begleite sie im Gebet."
+        title={t("crossways.metaTitle")}
+        description={t("crossways.metaDescription")}
       />
       <SiteHeader />
 
       <main className="container mx-auto max-w-6xl px-4 py-10">
         <header className="mb-8 max-w-2xl">
-          <h1 className="font-display text-4xl uppercase tracking-tight sm:text-5xl">Kreuzwege</h1>
-          <p className="mt-3 text-muted-foreground">
-            Kreuze am Wegrand, auf Bergspitzen, in Kirchen. Teile dein Foto mit Ort und kurzer
-            Geschichte — und begleite die Kreuze anderer im Gebet.
-          </p>
+          <h1 className="font-display text-4xl uppercase tracking-tight sm:text-5xl">{t("crossways.title")}</h1>
+          <p className="mt-3 text-muted-foreground">{t("crossways.subtitle")}</p>
         </header>
 
         <div className="mb-6 flex flex-wrap items-center gap-2">
@@ -66,7 +63,7 @@ export default function Kreuzwege() {
               className="gap-1.5"
               onClick={() => setView("feed")}
             >
-              <LayoutGrid className="h-4 w-4" /> Feed
+              <LayoutGrid className="h-4 w-4" /> {t("crossways.feed")}
             </Button>
             <Button
               variant={view === "map" ? "secondary" : "ghost"}
@@ -74,11 +71,11 @@ export default function Kreuzwege() {
               className="gap-1.5"
               onClick={() => setView("map")}
             >
-              <MapIcon className="h-4 w-4" /> Karte
+              <MapIcon className="h-4 w-4" /> {t("crossways.map")}
             </Button>
           </div>
           <Button variant="outline" size="sm" className="gap-1.5" onClick={nearMe}>
-            <Navigation className="h-4 w-4" /> In meiner Nähe
+            <Navigation className="h-4 w-4" /> {t("crossways.nearMe")}
           </Button>
           <div className="ml-auto">
             <CrossUploadDialog onSubmitted={reload} />
