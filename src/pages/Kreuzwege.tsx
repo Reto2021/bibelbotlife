@@ -128,7 +128,7 @@ export default function Kreuzwege() {
             <Loader2 className="h-6 w-6 animate-spin text-primary" />
           </div>
         ) : view === "feed" ? (
-          <CrossFeed posts={sorted} hasReacted={hasReacted} onReact={react} />
+          <CrossFeed posts={sorted} hasReacted={hasReacted} onReact={react} onOpen={setDetailId} />
         ) : (
           <Suspense fallback={<div className="h-[70vh] rounded-xl bg-muted/40" />}>
             <CrossMap

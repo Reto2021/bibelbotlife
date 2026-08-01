@@ -6,9 +6,10 @@ interface Props {
   posts: CrossPost[];
   hasReacted: (id: string, kind: CrossInteraction) => boolean;
   onReact: (id: string, kind: CrossInteraction) => void;
+  onOpen?: (id: string) => void;
 }
 
-export function CrossFeed({ posts, hasReacted, onReact }: Props) {
+export function CrossFeed({ posts, hasReacted, onReact, onOpen }: Props) {
   const { t } = useTranslation();
   if (posts.length === 0) {
     return (
@@ -21,7 +22,7 @@ export function CrossFeed({ posts, hasReacted, onReact }: Props) {
   return (
     <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {posts.map((p) => (
-        <CrossCard key={p.id} post={p} hasReacted={hasReacted} onReact={onReact} />
+        <CrossCard key={p.id} post={p} hasReacted={hasReacted} onReact={onReact} onOpen={onOpen} />
       ))}
     </div>
   );
