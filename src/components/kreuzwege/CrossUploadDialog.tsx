@@ -16,6 +16,14 @@ import { Switch } from "@/components/ui/switch";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Crop, Crosshair, Loader2, Plus, Quote, RotateCcw, RotateCw, Upload, X } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import {
+  IMAGE_ACCEPT_ATTRIBUTE,
+  MIN_IMAGE_DIMENSION,
+  validateImageContent,
+  validateImageFile,
+  type ImageValidationResult,
+} from "@/lib/validate-image";
+
 import { submitCrossPost } from "@/hooks/use-cross-posts";
 import { burnQuoteIntoImage, withQuotationMarks } from "@/lib/burn-quote";
 import { applyImageEdits, CROP_ASPECTS, type CropAspect } from "@/lib/transform-image";
@@ -147,14 +155,54 @@ export function CrossUploadDialog({
     setEditing(false);
   }
 
-  function pickFile(f: File | undefined) {
+  function rejectFile(result: ImageValidationResult) {
+    const messages: Record<string, { title: string; description?: string }> = {
+      notAnImage: { title: t("crossways.upload.notAnImage") },
+      empty: { title: t("crossways.upload.fileEmpty", "Die Datei ist leer.") },
+      unsupportedFormat: {
+        title: t("crossways.upload.unsupportedFormat", "Dateiformat nicht unterstützt"),
+        description: t("crossways.upload.unsupportedFormatDesc", "Erlaubt sind: {{formats}}.").replace(
+          "{{formats}}",
+          String(result.values?.formats ?? ""),
+        ),
+      },
+      convertHeic: {
+        title: t("crossways.upload.unsupportedFormat", "Dateiformat nicht unterstützt"),
+        description: t(
+          "crossways.upload.convertHeicDesc",
+          "HEIC/TIFF kann nicht angezeigt werden. Bitte als JPG oder PNG speichern.",
+        ),
+      },
+      tooBig: {
+        title: t("crossways.upload.imageTooBig"),
+        description: t("crossways.upload.imageTooBigDesc"),
+      },
+      unreadable: {
+        title: t("crossways.upload.imageUnreadable", "Bild konnte nicht gelesen werden"),
+        description: t("crossways.upload.imageUnreadableDesc", "Bitte eine andere Datei wählen."),
+      },
+      tooSmall: {
+        title: t("crossways.upload.imageTooSmall", "Bild zu klein"),
+        description: t("crossways.upload.imageTooSmallDesc", "Mindestens {{min}} x {{min}} Pixel.").replace(
+          /{{min}}/g,
+          String(result.values?.min ?? MIN_IMAGE_DIMENSION),
+        ),
+      },
+    };
+    const msg = messages[result.code ?? "notAnImage"] ?? messages.notAnImage;
+    toast({ ...msg, variant: "destructive" });
+  }
+
+  async function pickFile(f: File | undefined) {
     if (!f) return;
-    if (!f.type.startsWith("image/")) {
-      toast({ title: t("crossways.upload.notAnImage"), variant: "destructive" });
+    const basic = validateImageFile(f);
+    if (!basic.ok) {
+      rejectFile(basic);
       return;
     }
-    if (f.size > 5 * 1024 * 1024) {
-      toast({ title: t("crossways.upload.imageTooBig"), description: t("crossways.upload.imageTooBigDesc"), variant: "destructive" });
+    const content = await validateImageContent(f);
+    if (!content.ok) {
+      rejectFile(content);
       return;
     }
     setRotation(0);
@@ -166,8 +214,9 @@ export function CrossUploadDialog({
   function handleDrop(e: React.DragEvent) {
     e.preventDefault();
     setDragActive(false);
-    pickFile(e.dataTransfer.files?.[0]);
+    void pickFile(e.dataTransfer.files?.[0]);
   }
+
 
   function useMyLocation() {
     if (!navigator.geolocation) {
@@ -357,9 +406,9 @@ export function CrossUploadDialog({
             <input
               id="cross-photo"
               type="file"
-              accept="image/*"
+              accept={IMAGE_ACCEPT_ATTRIBUTE}
               className="hidden"
-              onChange={(e) => pickFile(e.target.files?.[0])}
+              onChange={(e) => void pickFile(e.target.files?.[0])}
             />
 
 

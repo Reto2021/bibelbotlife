@@ -159,7 +159,15 @@
       "cropLabel": "Zuschnitt",
       "cropOriginal": "Original",
       "editReset": "Zurücksetzen",
-      "editApplying": "Bearbeitung wird angewendet …"
+      "editApplying": "Bearbeitung wird angewendet …",
+      "unsupportedFormat": "Dateiformat nicht unterstützt",
+      "unsupportedFormatDesc": "Erlaubt sind: {{formats}}.",
+      "convertHeicDesc": "HEIC/TIFF kann im Browser nicht angezeigt werden. Bitte als JPG oder PNG speichern.",
+      "fileEmpty": "Die Datei ist leer.",
+      "imageUnreadable": "Bild konnte nicht gelesen werden",
+      "imageUnreadableDesc": "Bitte eine andere Datei wählen.",
+      "imageTooSmall": "Bild zu klein",
+      "imageTooSmallDesc": "Mindestens {{min}} x {{min}} Pixel."
     },
     "card": {
       "anonymous": "Anonym",
