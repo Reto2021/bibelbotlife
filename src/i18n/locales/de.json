@@ -169,7 +169,14 @@
       "imageTooSmall": "Bild zu klein",
       "imageTooSmallDesc": "Mindestens {{min}} x {{min}} Pixel.",
       "blockedTitle": "Inhalt nicht erlaubt",
-      "blockedDesc": "Dieser Beitrag verstösst gegen unsere Regeln (keine sexuellen, rassistischen oder gewaltverherrlichenden Inhalte)."
+      "blockedDesc": "Dieser Beitrag verstösst gegen unsere Regeln (keine sexuellen, rassistischen oder gewaltverherrlichenden Inhalte).",
+      "addMorePhotos": "Weitere Bilder hinzufügen",
+      "multiHint": "Mehrere Bilder möglich (max. {{max}})",
+      "selectedCount": "{{count}} von {{max}} Bildern ausgewählt",
+      "maxFilesTitle": "Maximal {{max}} Bilder",
+      "maxFilesDesc": "Weitere Bilder wurden nicht übernommen. Bitte in mehreren Beiträgen hochladen.",
+      "successDescMany": "{{count}} Bilder wurden veröffentlicht.",
+      "submitting": "{{done}}/{{total}} hochgeladen …"
     },
     "card": {
       "anonymous": "Anonym",
