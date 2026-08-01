@@ -183,11 +183,12 @@ export function CrossUploadDialog({
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!file || !placeLabel.trim() || !consent) return;
+    const upload = editedFile ?? file;
+    if (!upload || !placeLabel.trim() || !consent || editing) return;
     setSubmitting(true);
     try {
       await submitCrossPost({
-        file,
+        file: upload,
         placeLabel,
         country,
         lat: coords?.lat ?? null,
