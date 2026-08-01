@@ -173,6 +173,28 @@ Deno.serve(async (req) => {
       return xmlResponse(wrapUrlset(entries));
     }
 
+    // ─── Crosses: Kreuzwege detail pages ──────────────────────────
+    if (type === "crosses") {
+      const { data: crosses } = await supabase
+        .from("cross_posts")
+        .select("slug, updated_at, created_at")
+        .eq("status", "approved");
+
+      const entries: string[] = [];
+      for (const c of crosses ?? []) {
+        if (!c.slug) continue;
+        entries.push(
+          urlEntry(`${SITE}/kreuzwege/${c.slug}`, {
+            lastmod: (c.updated_at ?? c.created_at)?.split("T")[0],
+            changefreq: "monthly",
+            priority: 0.6,
+            altLangs: SUPPORTED_LANGS,
+          })
+        );
+      }
+      return xmlResponse(wrapUrlset(entries));
+    }
+
     // ─── Topics per language ─────────────────────────────────────
     if (type === "topics") {
       const lang = url.searchParams.get("lang") ?? "de";
