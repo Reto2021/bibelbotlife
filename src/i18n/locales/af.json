@@ -2105,7 +2105,10 @@
       "eyebrow": "Kruispaaie",
       "title": "Kruise van regoor die wêreld",
       "description": "Langs die pad, op bergtoppe, in kerke. Deel jou foto — en vergesel ander se kruise in gebed.",
-      "cta": "Ontdek Kruispaaie"
+      "cta": "Ontdek Kruispaaie",
+      "placeholder1": "Kruispad in die berge",
+      "placeholder2": "Oordenking in die kapel",
+      "placeholder3": "Kruis op die horison"
     },
     "upload": {
       "trigger": "Voeg kruis by",

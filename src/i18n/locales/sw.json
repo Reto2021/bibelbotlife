@@ -2105,7 +2105,10 @@
       "eyebrow": "Njia za Msalaba",
       "title": "Misalaba kutoka Ulimwenguni Pote",
       "description": "Kando ya barabara, kwenye vilele vya milima, makanisani. Shiriki picha yako — na uwaombee misalaba ya wengine.",
-      "cta": "Gundua Njia za Msalaba"
+      "cta": "Gundua Njia za Msalaba",
+      "placeholder1": "Njia panda milimani",
+      "placeholder2": "Ibada kanisani",
+      "placeholder3": "Msalaba upeoni"
     },
     "upload": {
       "trigger": "Ongeza Msalaba",

@@ -2113,7 +2113,10 @@
       "eyebrow": "Via Crucis",
       "title": "Croci da tutto il mondo",
       "description": "Ai bordi delle strade, sulle cime delle montagne, nelle chiese. Condividi la tua foto — e accompagna le croci degli altri nella preghiera.",
-      "cta": "Scopri le Via Crucis"
+      "cta": "Scopri le Via Crucis",
+      "placeholder1": "Incrocio nelle montagne",
+      "placeholder2": "Devozione nella cappella",
+      "placeholder3": "Croce all'orizzonte"
     },
     "upload": {
       "trigger": "Aggiungi croce",

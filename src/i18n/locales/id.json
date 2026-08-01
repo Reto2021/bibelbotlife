@@ -2146,7 +2146,10 @@
       "eyebrow": "Jalan Salib",
       "title": "Salib dari Seluruh Dunia",
       "description": "Di pinggir jalan, di puncak gunung, di gereja. Bagikan foto Anda — dan doakan salib orang lain.",
-      "cta": "Temukan Jalan Salib"
+      "cta": "Temukan Jalan Salib",
+      "placeholder1": "Persimpangan jalan di pegunungan",
+      "placeholder2": "Ibadah di kapel",
+      "placeholder3": "Salib di cakrawala"
     },
     "upload": {
       "trigger": "Tambahkan Salib",

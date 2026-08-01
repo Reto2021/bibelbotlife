@@ -2105,7 +2105,10 @@
       "eyebrow": "Korsveje",
       "title": "Kors fra hele verden",
       "description": "Ved vejkanten, på bjergtoppe, i kirker. Del dit foto — og ledsag andres kors i bøn.",
-      "cta": "Opdag korsveje"
+      "cta": "Opdag korsveje",
+      "placeholder1": "Vejkryds i bjergene",
+      "placeholder2": "Andagt i kapellet",
+      "placeholder3": "Kors ved horisonten"
     },
     "upload": {
       "trigger": "Tilføj kors",

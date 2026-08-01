@@ -2105,7 +2105,10 @@
       "eyebrow": "Caminhos da Cruz",
       "title": "Cruzes de todo o mundo",
       "description": "À beira da estrada, em picos de montanhas, em igrejas. Compartilhe sua foto — e acompanhe as cruzes de outras pessoas em oração.",
-      "cta": "Descobrir Caminhos da Cruz"
+      "cta": "Descobrir Caminhos da Cruz",
+      "placeholder1": "Encruzilhada nas montanhas",
+      "placeholder2": "Devocional na capela",
+      "placeholder3": "Cruz no horizonte"
     },
     "upload": {
       "trigger": "Adicionar cruz",

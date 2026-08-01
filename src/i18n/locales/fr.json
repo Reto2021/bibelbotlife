@@ -2113,7 +2113,10 @@
       "eyebrow": "Chemins de Croix",
       "title": "Des croix du monde entier",
       "description": "Au bord des chemins, sur les sommets des montagnes, dans les églises. Partagez votre photo — et accompagnez les croix des autres par la prière.",
-      "cta": "Découvrir les Chemins de Croix"
+      "cta": "Découvrir les Chemins de Croix",
+      "placeholder1": "Carrefour dans les montagnes",
+      "placeholder2": "Dévotion dans la chapelle",
+      "placeholder3": "Croix à l'horizon"
     },
     "upload": {
       "trigger": "Ajouter une croix",

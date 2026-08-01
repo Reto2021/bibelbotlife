@@ -2105,7 +2105,10 @@
       "eyebrow": "Křížové cesty",
       "title": "Kříže z celého světa",
       "description": "U cesty, na vrcholcích hor, v kostelech. Sdílejte svou fotografii — a doprovázejte kříže ostatních modlitbou.",
-      "cta": "Objevte křížové cesty"
+      "cta": "Objevte křížové cesty",
+      "placeholder1": "Křížová cesta v horách",
+      "placeholder2": "Pobožnost v kapli",
+      "placeholder3": "Kříž na obzoru"
     },
     "upload": {
       "trigger": "Přidat kříž",

@@ -2105,7 +2105,10 @@
       "eyebrow": "Korsvägar",
       "title": "Kors från hela världen",
       "description": "Vid vägkanten, på bergstoppar, i kyrkor. Dela ditt foto — och följ andras kors i bön.",
-      "cta": "Upptäck korsvägar"
+      "cta": "Upptäck korsvägar",
+      "placeholder1": "Vägkors i bergen",
+      "placeholder2": "Andakt i kapellet",
+      "placeholder3": "Kors vid horisonten"
     },
     "upload": {
       "trigger": "Lägg till kors",

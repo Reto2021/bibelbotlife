@@ -2105,7 +2105,10 @@
       "eyebrow": "Krstni putevi",
       "title": "Krstovi iz celog sveta",
       "description": "Pored puta, na vrhovima planina, u crkvama. Podelite svoju fotografiju — i pratite krstove drugih u molitvi.",
-      "cta": "Otkrijte krstne puteve"
+      "cta": "Otkrijte krstne puteve",
+      "placeholder1": "Raskršće u planinama",
+      "placeholder2": "Pobožnost u kapeli",
+      "placeholder3": "Krst na horizontu"
     },
     "upload": {
       "trigger": "Dodaj krst",

@@ -2108,7 +2108,10 @@
       "eyebrow": "Mga Daan ng Krus",
       "title": "Mga Krus mula sa Buong Mundo",
       "description": "Sa tabi ng kalsada, sa mga tuktok ng bundok, sa mga simbahan. Ibahagi ang iyong larawan — at samahan ang mga krus ng iba sa panalangin.",
-      "cta": "Tuklasin ang Mga Daan ng Krus"
+      "cta": "Tuklasin ang Mga Daan ng Krus",
+      "placeholder1": "Tawiran sa kabundukan",
+      "placeholder2": "Debosyon sa kapilya",
+      "placeholder3": "Krus sa abot-tanaw"
     },
     "upload": {
       "trigger": "Magdagdag ng Krus",
