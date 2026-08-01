@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { ArrowRight, Camera, MapPin } from "lucide-react";
@@ -37,6 +37,8 @@ export function CrossMarquee() {
   const { t } = useTranslation();
   const { posts: realItems, hasReacted, react } = useCrossPosts();
   const [selected, setSelected] = useState<CrossPost | null>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const pausedRef = useRef(false);
 
   const items = useMemo<MarqueeItem[]>(() => {
     const withImages = realItems.filter((p) => p.image_url).slice(0, 12);
@@ -45,8 +47,83 @@ export function CrossMarquee() {
     return [...withImages, ...PLACEHOLDERS.slice(0, needed)];
   }, [realItems]);
 
-  // Duplicate the row so the CSS translate loop appears seamless.
+  // Duplicate the row so the scroll loop appears seamless.
   const loop = [...items, ...items];
+
+  // Auto-scroll a native scroll container: users can still swipe/drag freely,
+  // and the drift pauses while they interact.
+  useEffect(() => {
+    const el = trackRef.current;
+    if (!el) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    let raf = 0;
+    let last = performance.now();
+    const SPEED = 40; // px per second
+
+    const step = (now: number) => {
+      const dt = (now - last) / 1000;
+      last = now;
+      if (!pausedRef.current) {
+        const half = el.scrollWidth / 2;
+        let next = el.scrollLeft + SPEED * dt;
+        if (half > 0 && next >= half) next -= half;
+        el.scrollLeft = next;
+      }
+      raf = requestAnimationFrame(step);
+    };
+    raf = requestAnimationFrame(step);
+
+    const pause = () => { pausedRef.current = true; };
+    const resume = () => { pausedRef.current = false; };
+    let resumeTimer: number | undefined;
+    const pauseThenResume = () => {
+      pause();
+      window.clearTimeout(resumeTimer);
+      resumeTimer = window.setTimeout(resume, 2500);
+    };
+
+    el.addEventListener("pointerenter", pause);
+    el.addEventListener("pointerleave", resume);
+    // Desktop mouse drag ("grab and pull").
+    let dragging = false;
+    let startX = 0;
+    let startScroll = 0;
+    const onDown = (e: PointerEvent) => {
+      pause();
+      if (e.pointerType === "mouse") {
+        dragging = true;
+        startX = e.clientX;
+        startScroll = el.scrollLeft;
+      }
+    };
+    const onMove = (e: PointerEvent) => {
+      if (!dragging) return;
+      el.scrollLeft = startScroll - (e.clientX - startX);
+    };
+    const onUp = () => { dragging = false; };
+    el.addEventListener("pointerdown", onDown);
+    window.addEventListener("pointermove", onMove);
+    window.addEventListener("pointerup", onUp);
+
+    el.addEventListener("touchstart", pause, { passive: true });
+    el.addEventListener("touchend", pauseThenResume, { passive: true });
+    el.addEventListener("wheel", pauseThenResume, { passive: true });
+
+    return () => {
+      cancelAnimationFrame(raf);
+      window.clearTimeout(resumeTimer);
+      el.removeEventListener("pointerenter", pause);
+      el.removeEventListener("pointerleave", resume);
+      el.removeEventListener("pointerdown", onDown);
+      window.removeEventListener("pointermove", onMove);
+      window.removeEventListener("pointerup", onUp);
+      el.removeEventListener("touchstart", pause);
+      el.removeEventListener("touchend", pauseThenResume);
+      el.removeEventListener("wheel", pauseThenResume);
+    };
+  }, [loop.length]);
+
 
   return (
     <section className="border-y border-border/50 bg-card/40 py-12" aria-labelledby="kreuzwege-teaser">
@@ -81,7 +158,11 @@ export function CrossMarquee() {
           <span className="hidden sm:inline">{t("crossways.marquee.uploadCta")}</span>
         </Link>
 
-        <div className="flex w-max gap-4 animate-marquee group-hover:[animation-play-state:paused] group-focus-within:[animation-play-state:paused] group-active:[animation-play-state:paused] motion-reduce:animate-none">
+        <div
+          ref={trackRef}
+          className="flex w-full gap-4 overflow-x-auto overflow-y-hidden scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden [touch-action:pan-x] cursor-grab active:cursor-grabbing"
+        >
+
           {loop.map((p, i) => {
             const label = isPlaceholder(p) ? t(p.place_label_key) : p.place_label;
             const cardContent = (
