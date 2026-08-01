@@ -148,7 +148,7 @@ export async function submitCrossPost(input: NewCrossPost) {
     author_name: input.isAnonymous ? null : input.authorName?.trim() || null,
     is_anonymous: input.isAnonymous,
     session_id: getSessionId(),
-    status: "pending",
+    status: "approved",
     prayer_count: 0,
   } as any);
   if (error) throw error;
