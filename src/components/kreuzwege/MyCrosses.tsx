@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { toast } from "sonner";
-import { ImageUp, Loader2, Pencil, Search, Trash2, X } from "lucide-react";
+import { ImageUp, Loader2, Pencil, RotateCcw, Search, Trash2, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";

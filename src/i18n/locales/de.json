@@ -285,6 +285,7 @@
       "sortNewest": "Zuletzt hochgeladen",
       "sortOldest": "Älteste zuerst",
       "sortPlace": "Ort A–Z",
+      "resetFilters": "Filter zurücksetzen",
       "noResults": "Keine Kreuze passen zu dieser Suche.",
       "resultCount": "{{count}} von {{total}} Kreuzen",
       "status": {
