@@ -82,6 +82,14 @@ export function MyCrosses() {
     setActiveSuggestion(-1);
   };
 
+  const resetFilters = () => {
+    setQuery("");
+    setStatus("all");
+    setSort("newest");
+    setSuggestOpen(false);
+    setActiveSuggestion(-1);
+    setVisibleCount(PAGE_SIZE);
+  };
 
   const visiblePosts = useMemo(() => {
     const q = query.trim().toLowerCase();
