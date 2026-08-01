@@ -113,7 +113,13 @@ export default function Kreuzwege() {
             <Navigation className="h-4 w-4" /> {t("crossways.nearMe")}
           </Button>
           <div className="ml-auto">
-            <CrossUploadDialog onSubmitted={reload} />
+            <CrossUploadDialog
+              onSubmitted={reload}
+              defaultOpen={uploadOpen}
+              onOpenChange={(open) => {
+                if (!open) clearUploadParam();
+              }}
+            />
           </div>
         </div>
 
