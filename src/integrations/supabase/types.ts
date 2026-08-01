@@ -3218,10 +3218,6 @@ export type Database = {
         Args: { request_id: string }
         Returns: undefined
       }
-      increment_cross_prayer_count: {
-        Args: { post_id: string }
-        Returns: undefined
-      }
       increment_golden_answer_use: {
         Args: { answer_id: string }
         Returns: undefined
