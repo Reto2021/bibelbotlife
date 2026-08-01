@@ -19,6 +19,7 @@ interface Props {
 }
 
 export function CrossCard({ post, hasReacted, onReact }: Props) {
+  const { t } = useTranslation();
   const { toast } = useToast();
   const prayed = hasReacted(post.id, "prayer");
   const amened = hasReacted(post.id, "amen");
@@ -26,16 +27,16 @@ export function CrossCard({ post, hasReacted, onReact }: Props) {
 
   async function share() {
     const url = `${window.location.origin}/kreuzwege`;
-    const text = `${post.place_label} – Kreuzwege auf BibleBot.Life`;
+    const text = t("crossways.card.shareText", { place: post.place_label });
     let completed = false;
     try {
       if (navigator.share) {
-        await navigator.share({ title: "Kreuzwege", text, url });
+        await navigator.share({ title: t("crossways.card.shareTitle"), text, url });
         completed = true;
       } else {
         await navigator.clipboard.writeText(`${text} ${url}`);
         completed = true;
-        toast({ title: "Link kopiert" });
+        toast({ title: t("crossways.card.linkCopied") });
       }
     } catch {
       /* abgebrochen */
@@ -45,7 +46,7 @@ export function CrossCard({ post, hasReacted, onReact }: Props) {
 
   function report() {
     onReact(post.id, "report");
-    toast({ title: "Meldung gesendet", description: "Danke, wir prüfen den Beitrag." });
+    toast({ title: t("crossways.card.reportSentTitle"), description: t("crossways.card.reportSentDesc") });
   }
 
   return (
