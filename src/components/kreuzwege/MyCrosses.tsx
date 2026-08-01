@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useLocation, useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import { ImageUp, Loader2, Pencil, RotateCcw, Search, Trash2, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -42,6 +43,8 @@ const PAGE_SIZE = 9;
 
 export function MyCrosses() {
   const { t } = useTranslation();
+  const location = useLocation();
+  const navigate = useNavigate();
   const { posts, loading, update, remove } = useMyCrossPosts();
   const [editing, setEditing] = useState<MyCrossPost | null>(null);
   const [deleting, setDeleting] = useState<MyCrossPost | null>(null);
@@ -51,13 +54,45 @@ export function MyCrosses() {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Client-side list controls: text search on place, status filter, upload-date sort.
-  const [query, setQuery] = useState("");
-  const [status, setStatus] = useState("all");
-  const [sort, setSort] = useState("newest");
+  // Hydrate once from URL so filters survive reloads and can be shared as links.
+  const initialParams = useMemo(() => new URLSearchParams(location.search), [location.search]);
+  const [query, setQuery] = useState(() => initialParams.get("q") ?? "");
+  const [status, setStatus] = useState(() => initialParams.get("status") ?? "all");
+  const [sort, setSort] = useState(() => initialParams.get("sort") ?? "newest");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [suggestOpen, setSuggestOpen] = useState(false);
   const [activeSuggestion, setActiveSuggestion] = useState(-1);
   const sentinelRef = useRef<HTMLDivElement>(null);
+
+  const hasHydrated = useRef(false);
+  useEffect(() => {
+    if (hasHydrated.current) return;
+    hasHydrated.current = true;
+    const sp = new URLSearchParams(location.search);
+    setQuery(sp.get("q") ?? "");
+    setStatus(sp.get("status") ?? "all");
+    setSort(sp.get("sort") ?? "newest");
+  }, [location.search]);
+
+  // Debounce the search text so the URL doesn't update on every keystroke.
+  const [debouncedQuery, setDebouncedQuery] = useState(query);
+  useEffect(() => {
+    const timer = setTimeout(() => setDebouncedQuery(query), 250);
+    return () => clearTimeout(timer);
+  }, [query]);
+
+  // Write clean filter state back to the URL (replace, no history spam).
+  useEffect(() => {
+    const sp = new URLSearchParams(location.search);
+    const next = new URLSearchParams();
+    const q = debouncedQuery.trim();
+    if (q) next.set("q", q);
+    if (status !== "all") next.set("status", status);
+    if (sort !== "newest") next.set("sort", sort);
+    if (next.toString() !== sp.toString()) {
+      navigate({ search: next.toString() }, { replace: true });
+    }
+  }, [debouncedQuery, status, sort, location.search, navigate]);
 
   // Autocomplete: unique place labels from the user's own crosses, ranked by frequency.
   const suggestions = useMemo(() => {
