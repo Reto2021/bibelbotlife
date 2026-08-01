@@ -12,6 +12,7 @@ import { useToast } from "@/hooks/use-toast";
 const CrossMap = lazy(() => import("@/components/kreuzwege/CrossMap"));
 
 export default function Kreuzwege() {
+  const { t } = useTranslation();
   const { posts, loading, hasReacted, react, reload } = useCrossPosts();
   const { toast } = useToast();
   const [view, setView] = useState<"feed" | "map">("feed");
@@ -28,15 +29,15 @@ export default function Kreuzwege() {
 
   function nearMe() {
     if (!navigator.geolocation) {
-      toast({ title: "Standort nicht verfügbar", variant: "destructive" });
+      toast({ title: t("crossways.locationUnavailable"), variant: "destructive" });
       return;
     }
     navigator.geolocation.getCurrentPosition(
       (pos) => {
         setMe({ lat: pos.coords.latitude, lng: pos.coords.longitude });
-        toast({ title: "Nach Nähe sortiert" });
+        toast({ title: t("crossways.sortNear") });
       },
-      () => toast({ title: "Standort abgelehnt", variant: "destructive" }),
+      () => toast({ title: t("crossways.locationDenied"), variant: "destructive" }),
     );
   }
 
