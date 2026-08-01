@@ -123,7 +123,7 @@ export function CrossUploadDialog({
   }
 
   return (
-    <Dialog open={open} onOpenChange={(o) => { setOpen(o); if (!o) reset(); }}>
+    <Dialog open={open} onOpenChange={handleOpenChange}>
       <DialogTrigger asChild>
         <Button size="lg" className="gap-2">
           <Plus className="h-4 w-4" /> {t("crossways.upload.trigger")}
