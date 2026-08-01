@@ -65,7 +65,7 @@ export function CrossDetailModal({ post, open, onOpenChange, hasReacted, onReact
 
   const openExternalMaps = () => window.open(mapsUrl, "_blank", "noopener,noreferrer");
 
-  const shareUrl = `${window.location.origin}/kreuzwege?post=${post.id}`;
+  const shareUrl = getCrossPostUrl(post);
 
   async function copyLink() {
     try {
