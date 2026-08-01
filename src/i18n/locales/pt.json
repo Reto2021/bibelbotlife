@@ -2172,7 +2172,8 @@
       "reportedCount": "Denunciado {{count}}×"
     },
     "modal": {
-      "mapLabel": "Localização"
+      "mapLabel": "Localização",
+      "linkCopiedDescription": "O link foi copiado para a área de transferência."
     }
   }
 }

@@ -2172,7 +2172,8 @@
       "reportedCount": "{{count}}× հաղորդված է"
     },
     "modal": {
-      "mapLabel": "Դիրք"
+      "mapLabel": "Դիրք",
+      "linkCopiedDescription": "Հղումը պատճենվել է սեղմատախտակ։"
     }
   }
 }

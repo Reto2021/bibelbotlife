@@ -2172,7 +2172,8 @@
       "reportedCount": "Ilmoitettu {{count}} kertaa"
     },
     "modal": {
-      "mapLabel": "Sijainti"
+      "mapLabel": "Sijainti",
+      "linkCopiedDescription": "Linkki kopioitiin leikepöydälle."
     }
   }
 }

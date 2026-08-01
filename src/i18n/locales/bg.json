@@ -2172,7 +2172,8 @@
       "reportedCount": "Докладвани {{count}} пъти"
     },
     "modal": {
-      "mapLabel": "Местоположение"
+      "mapLabel": "Местоположение",
+      "linkCopiedDescription": "Връзката е копирана в клипборда."
     }
   }
 }

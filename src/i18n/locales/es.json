@@ -2172,7 +2172,8 @@
       "reportedCount": "Reportado {{count}} veces"
     },
     "modal": {
-      "mapLabel": "Ubicación"
+      "mapLabel": "Ubicación",
+      "linkCopiedDescription": "El enlace se ha copiado en el portapapeles."
     }
   }
 }

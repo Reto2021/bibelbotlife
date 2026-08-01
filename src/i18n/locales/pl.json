@@ -2172,7 +2172,8 @@
       "reportedCount": "Zgłoszono {{count}} razy"
     },
     "modal": {
-      "mapLabel": "Lokalizacja"
+      "mapLabel": "Lokalizacja",
+      "linkCopiedDescription": "Link został skopiowany do schowka."
     }
   }
 }

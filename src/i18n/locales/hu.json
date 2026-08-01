@@ -2172,7 +2172,8 @@
       "reportedCount": "{{count}}× jelentve"
     },
     "modal": {
-      "mapLabel": "Helyszín"
+      "mapLabel": "Helyszín",
+      "linkCopiedDescription": "A link a vágólapra lett másolva."
     }
   }
 }

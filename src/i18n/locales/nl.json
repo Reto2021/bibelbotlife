@@ -2213,7 +2213,8 @@
       "reportedCount": "{{count}}× gerapporteerd"
     },
     "modal": {
-      "mapLabel": "Locatie"
+      "mapLabel": "Locatie",
+      "linkCopiedDescription": "De link is naar het klembord gekopieerd."
     }
   }
 }

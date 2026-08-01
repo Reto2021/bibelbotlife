@@ -2213,7 +2213,8 @@
       "reportedCount": "Dilaporkan {{count}} kali"
     },
     "modal": {
-      "mapLabel": "Lokasi"
+      "mapLabel": "Lokasi",
+      "linkCopiedDescription": "Tautan telah disalin ke papan klip."
     }
   }
 }

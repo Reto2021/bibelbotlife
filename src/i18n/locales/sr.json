@@ -2172,7 +2172,8 @@
       "reportedCount": "Prijavljeno {{count}} puta"
     },
     "modal": {
-      "mapLabel": "Lokacija"
+      "mapLabel": "Lokacija",
+      "linkCopiedDescription": "Veza je kopirana u privremenu memoriju."
     }
   }
 }

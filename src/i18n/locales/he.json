@@ -2172,7 +2172,8 @@
       "reportedCount": "דווח {{count}} פעמים"
     },
     "modal": {
-      "mapLabel": "מיקום"
+      "mapLabel": "מיקום",
+      "linkCopiedDescription": "הקישור הועתק ללוח."
     }
   }
 }

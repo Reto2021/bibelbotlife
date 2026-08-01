@@ -2173,7 +2173,8 @@
       "reportedCount": "Αναφέρθηκε {{count}} φορές"
     },
     "modal": {
-      "mapLabel": "Τοποθεσία"
+      "mapLabel": "Τοποθεσία",
+      "linkCopiedDescription": "Ο σύνδεσμος αντιγράφηκε στο πρόχειρο."
     }
   }
 }

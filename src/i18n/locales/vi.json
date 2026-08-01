@@ -2174,7 +2174,8 @@
       "reportedCount": "Đã báo cáo {{count}} lần"
     },
     "modal": {
-      "mapLabel": "Vị trí"
+      "mapLabel": "Vị trí",
+      "linkCopiedDescription": "Liên kết đã được sao chép vào khay nhớ tạm."
     }
   }
 }

@@ -2170,7 +2170,8 @@
       "reportedCount": "{{count}}× ሪፖርት ተደርጓል"
     },
     "modal": {
-      "mapLabel": "አካባቢ"
+      "mapLabel": "አካባቢ",
+      "linkCopiedDescription": "ማስፈንጠሪያ ወደ ቅንጥብ ሰሌዳ ተቀድሯል።"
     }
   }
 }

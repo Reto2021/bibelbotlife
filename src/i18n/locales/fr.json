@@ -2180,7 +2180,8 @@
       "reportedCount": "Signalé {{count}} fois"
     },
     "modal": {
-      "mapLabel": "Emplacement"
+      "mapLabel": "Emplacement",
+      "linkCopiedDescription": "Le lien a été copié dans le presse-papiers."
     }
   }
 }
