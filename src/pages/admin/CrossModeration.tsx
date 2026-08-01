@@ -97,7 +97,7 @@ export default function CrossModeration() {
       if (error) throw error;
     },
     onSuccess: () => {
-      toast({ title: "Gelöscht" });
+      toast({ title: t("crossways.admin.deleted") });
       qc.invalidateQueries({ queryKey: ["admin-crosses"] });
     },
   });
