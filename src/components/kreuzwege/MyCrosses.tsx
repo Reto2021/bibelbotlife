@@ -330,6 +330,22 @@ export function MyCrosses() {
         </Card>
       ))}
 
+      {hasMore && (
+        <div ref={sentinelRef} className="flex justify-center pt-2">
+          <Button
+            variant="outline"
+            size="sm"
+            className="gap-1.5"
+            onClick={() => setVisibleCount((c) => c + PAGE_SIZE)}
+          >
+            <Loader2 className="h-4 w-4 animate-spin" />
+            {t("crossways.mine.loadMore", { defaultValue: "Mehr laden" })}
+          </Button>
+        </div>
+      )}
+
+
+
 
       <Dialog open={!!editing} onOpenChange={(o) => !o && setEditing(null)}>
         <DialogContent className="max-h-[90vh] overflow-y-auto sm:max-w-lg">
