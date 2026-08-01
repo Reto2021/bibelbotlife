@@ -66,6 +66,17 @@ export function CrossCard({ post, hasReacted, onReact }: Props) {
           {post.country && <span>· {post.country}</span>}
         </div>
 
+        {post.quote && (
+          <blockquote className="border-l-2 border-primary/60 pl-3 text-sm italic leading-relaxed text-foreground/90">
+            {`\u201E${post.quote}\u201C`}
+            {post.quote_reference && (
+              <footer className="mt-1 text-xs not-italic text-muted-foreground">
+                {post.quote_reference}
+              </footer>
+            )}
+          </blockquote>
+        )}
+
         {post.story && (
           <p className="text-sm leading-relaxed text-muted-foreground">{post.story}</p>
         )}
