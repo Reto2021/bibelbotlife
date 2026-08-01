@@ -198,15 +198,14 @@ export function CrossMarquee() {
             }
 
             return (
-              <button
+              <Link
                 key={`${p.id}-${i}`}
-                type="button"
-                onClick={() => setSelected(p)}
+                to={`/kreuzwege/${p.slug}`}
                 className={cardClass}
                 aria-label={t("crossways.card.imageAlt", { place: label })}
               >
                 {cardContent}
-              </button>
+              </Link>
             );
           })}
         </div>

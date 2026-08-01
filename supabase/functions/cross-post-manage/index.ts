@@ -79,7 +79,7 @@ Deno.serve(async (req) => {
       const { data, error } = await admin
         .from("cross_posts")
         .select(
-          "id,image_path,place_label,country,lat,lng,story,quote,quote_reference,quote_burned,author_name,is_anonymous,status,prayer_count,amen_count,share_count,reported_count,created_at,updated_at",
+          "id,slug,image_path,place_label,country,lat,lng,story,quote,quote_reference,quote_burned,author_name,is_anonymous,status,prayer_count,amen_count,share_count,reported_count,created_at,updated_at",
         )
         .or(ownerFilter())
         .order("created_at", { ascending: false });

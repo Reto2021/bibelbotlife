@@ -83,6 +83,30 @@
   "crossways": {
     "metaTitle": "Kreuzwege – Kreuze weltweit teilen | BibleBot.Life",
     "metaDescription": "Kreuze am Wegrand, auf Bergspitzen und in Kirchen: Teile dein Foto mit Ort und Geschichte, entdecke Kreuze auf der Karte und begleite sie im Gebet.",
+    "landing": {
+      "allCrosses": "Alle Kreuze entdecken",
+      "wegkreuze": {
+        "eyebrow": "Wegkreuze",
+        "title": "Wegkreuze weltweit",
+        "subtitle": "Flurkreuze, Marterl und Bildstöcke am Wegrand: Entdecke alte und neue Kreuze, teile dein Foto und erhalte Gebete aus der Community.",
+        "metaTitle": "Wegkreuze weltweit – Flurkreuze & Marterl | BibleBot.Life",
+        "metaDescription": "Entdecke Wegkreuze, Flurkreuze und Marterl aus aller Welt. Teile dein Foto mit Ort und Geschichte und begleite andere Kreuze im Gebet."
+      },
+      "gipfelkreuze": {
+        "eyebrow": "Gipfelkreuze",
+        "title": "Gipfelkreuze & Bergkreuze",
+        "subtitle": "Kreuze auf Bergspitzen und Gipfeln: Entdecke Gipfelkreuze aus den Alpen und der ganzen Welt, teile dein Foto und erhalte Gebete.",
+        "metaTitle": "Gipfelkreuze & Bergkreuze weltweit | BibleBot.Life",
+        "metaDescription": "Entdecke Gipfelkreuze und Bergkreuze aus aller Welt. Teile dein Foto vom Gipfel mit Ort und Geschichte und begleite andere Kreuze im Gebet."
+      },
+      "bergkreuze": {
+        "eyebrow": "Bergkreuze",
+        "title": "Bergkreuze in Deutschland und weltweit",
+        "subtitle": "Kreuze auf Bergen und Gipfeln: Entdecke Bergkreuze in Deutschland, den Alpen und weltweit. Teile dein Foto und erhalte Gebete.",
+        "metaTitle": "Bergkreuze in Deutschland & weltweit | BibleBot.Life",
+        "metaDescription": "Entdecke Bergkreuze und Gipfelkreuze in Deutschland, den Alpen und weltweit. Teile dein Foto mit Ort und Geschichte und begleite andere Kreuze im Gebet."
+      }
+    },
     "title": "Kreuzwege",
     "subtitle": "Kreuze am Wegrand, auf Bergspitzen, in Kirchen. Teile dein Foto mit Ort und kurzer Geschichte — und begleite die Kreuze anderer im Gebet.",
     "feed": "Feed",
@@ -114,6 +138,12 @@
       "linkCopiedDescription": "Der Link wurde in die Zwischenablage kopiert.",
       "openLightbox": "Foto im Vollbild anzeigen",
       "closeLightbox": "Vollbild schliessen"
+    },
+    "detail": {
+      "metaTitle": "{{place}} – Kreuzwege | BibleBot.Life",
+      "metaDescription": "Kreuz bei {{place}}. {{quote}} {{story}}",
+      "notFoundTitle": "Kreuz nicht gefunden",
+      "notFoundDesc": "Dieser Link führt zu keinem veröffentlichten Kreuz. Entdecke weitere Kreuze im Feed."
     },
     "upload": {
       "trigger": "Kreuz hinzufügen",

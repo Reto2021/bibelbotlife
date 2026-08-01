@@ -12,6 +12,7 @@ import { AuthProvider } from "@/hooks/use-auth";
 import { SplashScreen } from "@/components/SplashScreen";
 import { useChurchBranding, hexToHsl } from "@/hooks/use-church-branding";
 import ScrollToTop from "@/components/ScrollToTop";
+import { HostRedirect } from "@/components/HostRedirect";
 import { useTranslation } from "react-i18next";
 
 const RTL_LANGUAGES = ["ar", "he", "fa", "ur"];
@@ -61,6 +62,7 @@ const OutreachLogs = lazy(() => import("./pages/admin/OutreachLogs"));
 const PrayerModeration = lazy(() => import("./pages/admin/PrayerModeration"));
 const CrossModeration = lazy(() => import("./pages/admin/CrossModeration"));
 const Kreuzwege = lazy(() => import("./pages/Kreuzwege"));
+const CrossLandingPage = lazy(() => import("./pages/CrossLandingPage"));
 const ReferralAdmin = lazy(() => import("./pages/admin/ReferralAdmin"));
 const SeoAdmin = lazy(() => import("./pages/admin/SeoAdmin"));
 const FeedbackAdmin = lazy(() => import("./pages/admin/FeedbackAdmin"));
@@ -174,6 +176,7 @@ const App = () => {
           <AuthProvider>
             <AnalyticsProvider>
               <ScrollToTop />
+              <HostRedirect />
               <DirectionManager />
               <ChurchColorOverride />
               <Suspense fallback={<PageLoader />}>
@@ -197,9 +200,13 @@ const App = () => {
                   <Route path="/fuer-lehrkraefte" element={<ForTeachers />} />
                    <Route path="/bible-search" element={<BibleSearch />} />
                    <Route path="/bibel" element={<BibleSearch />} />
-                  <Route path="/gebetswand" element={<PrayerWall />} />
-                  <Route path="/kreuzwege" element={<Kreuzwege />} />
-                  <Route path="/bibelquiz" element={<BibleQuiz />} />
+                   <Route path="/gebetswand" element={<PrayerWall />} />
+                   <Route path="/kreuzwege/:slug" element={<Kreuzwege />} />
+                   <Route path="/kreuzwege" element={<Kreuzwege />} />
+                   <Route path="/wegkreuze" element={<CrossLandingPage type="wegkreuze" />} />
+                   <Route path="/gipfelkreuze" element={<CrossLandingPage type="gipfelkreuze" />} />
+                   <Route path="/bergkreuze" element={<CrossLandingPage type="bergkreuze" />} />
+                   <Route path="/bibelquiz" element={<BibleQuiz />} />
                   <Route path="/unsubscribe" element={<Unsubscribe />} />
                   <Route path="/spenden" element={<Spenden />} />
                   <Route path="/spenden/danke" element={<Spenden />} />

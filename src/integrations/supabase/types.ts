@@ -1253,6 +1253,7 @@ export type Database = {
           reported_count: number
           session_id: string | null
           share_count: number
+          slug: string | null
           status: string
           story: string | null
           updated_at: string
@@ -1279,6 +1280,7 @@ export type Database = {
           reported_count?: number
           session_id?: string | null
           share_count?: number
+          slug?: string | null
           status?: string
           story?: string | null
           updated_at?: string
@@ -1305,6 +1307,7 @@ export type Database = {
           reported_count?: number
           session_id?: string | null
           share_count?: number
+          slug?: string | null
           status?: string
           story?: string | null
           updated_at?: string
@@ -3097,6 +3100,10 @@ export type Database = {
         Args: { payload: Json; queue_name: string }
         Returns: number
       }
+      generate_cross_slug: {
+        Args: { place_label: string; post_id: string }
+        Returns: string
+      }
       get_approved_cross_posts: {
         Args: never
         Returns: {
@@ -3114,7 +3121,9 @@ export type Database = {
           quote: string
           quote_burned: boolean
           quote_reference: string
+          reported_count: number
           share_count: number
+          slug: string
           story: string
         }[]
       }

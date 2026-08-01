@@ -176,7 +176,18 @@ Deno.serve(async (req) => {
     }
 
     const ext = mime === "image/jpeg" ? "jpg" : mime.split("/")[1];
-    const path = `${crypto.randomUUID()}.${ext}`;
+    const postId = crypto.randomUUID();
+    const path = `${postId}.${ext}`;
+
+    // Generate the SEO-friendly slug from the place label + short id.
+    const { data: slugData, error: slugErr } = await admin.rpc("generate_cross_slug", {
+      place_label: placeLabel,
+      post_id: postId,
+    });
+    if (slugErr) {
+      console.error("cross slug generation failed", slugErr.message);
+    }
+    const slug = typeof slugData === "string" && slugData ? slugData : postId.slice(0, 8);
 
     const { error: uploadError } = await admin.storage
       .from("cross-photos")
@@ -189,7 +200,9 @@ Deno.serve(async (req) => {
     const { data: inserted, error: insertError } = await admin
       .from("cross_posts")
       .insert({
+        id: postId,
         image_path: path,
+        slug,
         place_label: placeLabel,
         country,
         lat,
@@ -203,7 +216,7 @@ Deno.serve(async (req) => {
         session_id: sessionId,
         user_id: userId,
       })
-      .select("id")
+      .select("id,slug")
       .single();
 
     if (insertError || !inserted) {
@@ -215,7 +228,7 @@ Deno.serve(async (req) => {
     // Community uploads go live immediately; reports move them into the queue.
     await admin.from("cross_posts").update({ status: "approved" }).eq("id", inserted.id);
 
-    return json({ id: inserted.id, imagePath: path, mime, bytes: bytes.byteLength });
+    return json({ id: inserted.id, slug: inserted.slug, imagePath: path, mime, bytes: bytes.byteLength });
   } catch (err) {
     console.error("cross-post-submit error", err);
     return json({ error: "unexpected_error" }, 500);

@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import type { CrossPost, CrossInteraction } from "@/hooks/use-cross-posts";
+import { getCrossPostUrl } from "@/hooks/use-cross-posts";
 import CrossMap from "./CrossMap";
 
 interface Props {
@@ -64,7 +65,7 @@ export function CrossDetailModal({ post, open, onOpenChange, hasReacted, onReact
 
   const openExternalMaps = () => window.open(mapsUrl, "_blank", "noopener,noreferrer");
 
-  const shareUrl = `${window.location.origin}/kreuzwege?post=${post.id}`;
+  const shareUrl = getCrossPostUrl(post);
 
   async function copyLink() {
     try {

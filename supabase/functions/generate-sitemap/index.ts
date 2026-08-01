@@ -73,6 +73,7 @@ function sitemapIndex(today: string): string {
   const items: string[] = [];
   items.push(`  <sitemap><loc>${FN_BASE}?type=core</loc><lastmod>${today}</lastmod></sitemap>`);
   items.push(`  <sitemap><loc>${FN_BASE}?type=verses</loc><lastmod>${today}</lastmod></sitemap>`);
+  items.push(`  <sitemap><loc>${FN_BASE}?type=crosses</loc><lastmod>${today}</lastmod></sitemap>`);
   for (const lang of SUPPORTED_LANGS) {
     items.push(`  <sitemap><loc>${FN_BASE}?type=topics&amp;lang=${lang}</loc><lastmod>${today}</lastmod></sitemap>`);
   }
@@ -168,6 +169,28 @@ Deno.serve(async (req) => {
             })
           );
         }
+      }
+      return xmlResponse(wrapUrlset(entries));
+    }
+
+    // ─── Crosses: Kreuzwege detail pages ──────────────────────────
+    if (type === "crosses") {
+      const { data: crosses } = await supabase
+        .from("cross_posts")
+        .select("slug, updated_at, created_at")
+        .eq("status", "approved");
+
+      const entries: string[] = [];
+      for (const c of crosses ?? []) {
+        if (!c.slug) continue;
+        entries.push(
+          urlEntry(`${SITE}/kreuzwege/${c.slug}`, {
+            lastmod: (c.updated_at ?? c.created_at)?.split("T")[0],
+            changefreq: "monthly",
+            priority: 0.6,
+            altLangs: SUPPORTED_LANGS,
+          })
+        );
       }
       return xmlResponse(wrapUrlset(entries));
     }

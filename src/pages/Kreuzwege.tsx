@@ -1,6 +1,6 @@
 import { lazy, Suspense, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, useParams, useNavigate } from "react-router-dom";
 import { SEOHead } from "@/components/SEOHead";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Button } from "@/components/ui/button";
@@ -9,7 +9,7 @@ import { CrossFeed } from "@/components/kreuzwege/CrossFeed";
 import { MyCrosses } from "@/components/kreuzwege/MyCrosses";
 import { CrossUploadDialog } from "@/components/kreuzwege/CrossUploadDialog";
 import { CrossDetailModal } from "@/components/kreuzwege/CrossDetailModal";
-import { useCrossPosts, distanceKm } from "@/hooks/use-cross-posts";
+import { useCrossPosts, distanceKm, getCrossPostUrl } from "@/hooks/use-cross-posts";
 import { useToast } from "@/hooks/use-toast";
 
 const CrossMap = lazy(() => import("@/components/kreuzwege/CrossMap"));
@@ -18,6 +18,8 @@ export default function Kreuzwege() {
   const { t } = useTranslation();
   const { posts, loading, hasReacted, react, reload } = useCrossPosts();
   const { toast } = useToast();
+  const navigate = useNavigate();
+  const { slug } = useParams<{ slug?: string }>();
   const [view, setView] = useState<"feed" | "map" | "mine">("feed");
   const [me, setMe] = useState<{ lat: number; lng: number } | null>(null);
   const [searchParams, setSearchParams] = useSearchParams();
@@ -27,9 +29,15 @@ export default function Kreuzwege() {
   const uploadParam = searchParams.get("upload");
   const uploadOpen = uploadParam === "1";
 
+  // Prefer the slug route param, fall back to legacy ?post= query param.
   useEffect(() => {
-    if (deepLinkId && posts.some((p) => p.id === deepLinkId)) setDetailId(deepLinkId);
-  }, [deepLinkId, posts]);
+    if (slug) {
+      const found = posts.find((p) => p.slug === slug);
+      if (found) setDetailId(found.id);
+    } else if (deepLinkId && posts.some((p) => p.id === deepLinkId)) {
+      setDetailId(deepLinkId);
+    }
+  }, [slug, deepLinkId, posts]);
 
   function clearUploadParam() {
     if (uploadParam !== null) {
@@ -46,6 +54,10 @@ export default function Kreuzwege() {
 
   function closeDetail() {
     setDetailId(null);
+    if (slug) {
+      navigate("/kreuzwege", { replace: true });
+      return;
+    }
     if (searchParams.has("post")) {
       const next = new URLSearchParams(searchParams);
       next.delete("post");
@@ -77,19 +89,68 @@ export default function Kreuzwege() {
     );
   }
 
+  const pageTitle = detailPost
+    ? t("crossways.detail.metaTitle", { place: detailPost.place_label, defaultValue: `${detailPost.place_label} – Kreuzwege | BibleBot.Life` })
+    : t("crossways.metaTitle");
+  const pageDescription = detailPost
+    ? t("crossways.detail.metaDescription", {
+        place: detailPost.place_label,
+        quote: detailPost.quote ?? "",
+        story: detailPost.story ?? "",
+        defaultValue: t("crossways.metaDescription"),
+      })
+    : t("crossways.metaDescription");
+  const canonicalPath = detailPost ? `/kreuzwege/${detailPost.slug}` : "/kreuzwege";
+  const detailImage = detailPost?.image_url ?? undefined;
+
+  const jsonLd = detailPost
+    ? {
+        "@context": "https://schema.org",
+        "@type": "ImageObject",
+        contentUrl: detailImage,
+        name: detailPost.place_label,
+        description: [detailPost.quote, detailPost.story].filter(Boolean).join(" ").slice(0, 300),
+        locationCreated: detailPost.country
+          ? {
+              "@type": "Place",
+              name: [detailPost.place_label, detailPost.country].filter(Boolean).join(", "),
+              geo:
+                detailPost.lat != null && detailPost.lng != null
+                  ? { "@type": "GeoCoordinates", latitude: detailPost.lat, longitude: detailPost.lng }
+                  : undefined,
+            }
+          : undefined,
+      }
+    : null;
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title={t("crossways.metaTitle")}
-        description={t("crossways.metaDescription")}
+        title={pageTitle}
+        description={pageDescription}
+        path={canonicalPath}
+        image={detailImage}
       />
+      {jsonLd && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      )}
       <SiteHeader />
 
       <main className="container mx-auto max-w-6xl px-4 py-10">
-        <header className="mb-8 max-w-2xl">
-          <h1 className="font-display text-4xl uppercase tracking-tight sm:text-5xl">{t("crossways.title")}</h1>
-          <p className="mt-3 text-muted-foreground">{t("crossways.subtitle")}</p>
-        </header>
+        {slug && !loading && !detailPost ? (
+          <header className="mb-8 max-w-2xl">
+            <h1 className="font-display text-4xl uppercase tracking-tight sm:text-5xl">{t("crossways.detail.notFoundTitle")}</h1>
+            <p className="mt-3 text-muted-foreground">{t("crossways.detail.notFoundDesc")}</p>
+            <Button className="mt-6" asChild>
+              <a href="/kreuzwege">{t("crossways.feed")}</a>
+            </Button>
+          </header>
+        ) : (
+          <header className="mb-8 max-w-2xl">
+            <h1 className="font-display text-4xl uppercase tracking-tight sm:text-5xl">{t("crossways.title")}</h1>
+            <p className="mt-3 text-muted-foreground">{t("crossways.subtitle")}</p>
+          </header>
+        )}
 
         <div className="mb-6 flex flex-wrap items-center gap-2">
           <div className="flex rounded-lg border border-border/60 p-1">
