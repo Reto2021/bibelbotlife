@@ -122,6 +122,11 @@ const Index = () => {
         <DailyImpulse />
       </Suspense>
 
+      {/* Kreuzwege — lebendes Bilder-Karussell als Einstieg */}
+      <Suspense fallback={<div className="h-20" />}>
+        <CrossMarquee />
+      </Suspense>
+
       {/* Features Section */}
       <section id="features" className="py-20 px-4 bg-card/40">
         <div className="container mx-auto max-w-6xl">
