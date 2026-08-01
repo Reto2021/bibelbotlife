@@ -61,12 +61,12 @@ export function CrossUploadDialog({ onSubmitted }: { onSubmitted: () => void }) 
 
   function useMyLocation() {
     if (!navigator.geolocation) {
-      toast({ title: "Standort nicht verfügbar", variant: "destructive" });
+      toast({ title: t("crossways.locationUnavailable"), variant: "destructive" });
       return;
     }
     navigator.geolocation.getCurrentPosition(
       (pos) => setCoords({ lat: pos.coords.latitude, lng: pos.coords.longitude }),
-      () => toast({ title: "Standort abgelehnt", description: "Setz den Punkt bitte manuell auf der Karte." }),
+      () => toast({ title: t("crossways.locationDenied"), description: t("crossways.upload.locationDeniedDesc") }),
       { enableHighAccuracy: true, timeout: 8000 },
     );
   }
