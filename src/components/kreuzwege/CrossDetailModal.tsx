@@ -64,7 +64,9 @@ export function CrossDetailModal({ post, open, onOpenChange, hasReacted, onReact
     }
     setCopied(true);
     onReact(post.id, "share");
-    toast({ title: t("crossways.modal.linkCopied", "Link kopiert") });
+    toast.success(t("crossways.modal.linkCopied", "Link kopiert"), {
+      description: t("crossways.modal.linkCopiedDescription", "Der Link wurde in die Zwischenablage kopiert."),
+    });
     setTimeout(() => setCopied(false), 2000);
   }
 
