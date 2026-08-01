@@ -55,7 +55,33 @@ export function MyCrosses() {
   const [status, setStatus] = useState("all");
   const [sort, setSort] = useState("newest");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  const [suggestOpen, setSuggestOpen] = useState(false);
+  const [activeSuggestion, setActiveSuggestion] = useState(-1);
   const sentinelRef = useRef<HTMLDivElement>(null);
+
+  // Autocomplete: unique place labels from the user's own crosses, ranked by frequency.
+  const suggestions = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    const counts = new Map<string, number>();
+    for (const p of posts) {
+      const place = (p.place_label ?? "").trim();
+      if (!place) continue;
+      if (q && !place.toLowerCase().includes(q)) continue;
+      counts.set(place, (counts.get(place) ?? 0) + 1);
+    }
+    const list = [...counts.entries()].map(([place, count]) => ({ place, count }));
+    if (list.length === 1 && list[0].place.toLowerCase() === q) return [];
+    return list
+      .sort((a, b) => b.count - a.count || a.place.localeCompare(b.place))
+      .slice(0, 8);
+  }, [posts, query]);
+
+  const applySuggestion = (s: { place: string }) => {
+    setQuery(s.place);
+    setSuggestOpen(false);
+    setActiveSuggestion(-1);
+  };
+
 
   const visiblePosts = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -225,16 +251,68 @@ export function MyCrosses() {
     <div className="space-y-4">
       <p className="text-sm text-muted-foreground">{t("crossways.mine.hint")}</p>
 
-      <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
+      <div className="flex flex-col gap-2 sm:flex-row sm:items-start">
         <div className="relative flex-1">
-          <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+          <Search className="pointer-events-none absolute left-3 top-[1.15rem] h-4 w-4 -translate-y-1/2 text-muted-foreground" />
           <Input
             value={query}
-            onChange={(e) => setQuery(e.target.value)}
+            onChange={(e) => {
+              setQuery(e.target.value);
+              setSuggestOpen(true);
+              setActiveSuggestion(-1);
+            }}
+            onFocus={() => setSuggestOpen(true)}
+            onBlur={() => window.setTimeout(() => setSuggestOpen(false), 120)}
+            onKeyDown={(e) => {
+              if (!suggestOpen || suggestions.length === 0) return;
+              if (e.key === "ArrowDown") {
+                e.preventDefault();
+                setActiveSuggestion((i) => (i + 1) % suggestions.length);
+              } else if (e.key === "ArrowUp") {
+                e.preventDefault();
+                setActiveSuggestion((i) => (i <= 0 ? suggestions.length - 1 : i - 1));
+              } else if (e.key === "Enter" && activeSuggestion >= 0) {
+                e.preventDefault();
+                applySuggestion(suggestions[activeSuggestion]);
+              } else if (e.key === "Escape") {
+                setSuggestOpen(false);
+              }
+            }}
             className="pl-9"
+            role="combobox"
+            aria-expanded={suggestOpen && suggestions.length > 0}
+            aria-autocomplete="list"
+            aria-controls="mine-place-suggestions"
+            autoComplete="off"
             placeholder={t("crossways.mine.searchPlaceholder", { defaultValue: "Ort suchen …" })}
             aria-label={t("crossways.mine.searchPlaceholder", { defaultValue: "Ort suchen …" })}
           />
+          {suggestOpen && suggestions.length > 0 && (
+            <ul
+              id="mine-place-suggestions"
+              role="listbox"
+              className="absolute z-30 mt-1 w-full overflow-hidden rounded-lg border border-border/60 bg-popover shadow-md"
+            >
+              {suggestions.map((s, i) => (
+                <li key={s.place}>
+                  <button
+                    type="button"
+                    role="option"
+                    aria-selected={i === activeSuggestion}
+                    onMouseDown={(e) => e.preventDefault()}
+                    onMouseEnter={() => setActiveSuggestion(i)}
+                    onClick={() => applySuggestion(s)}
+                    className={`flex w-full items-center justify-between gap-3 px-3 py-2 text-left text-sm ${
+                      i === activeSuggestion ? "bg-accent text-accent-foreground" : "text-foreground"
+                    }`}
+                  >
+                    <span className="truncate">{s.place}</span>
+                    <span className="shrink-0 text-xs text-muted-foreground">{s.count}</span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
         <Select value={status} onValueChange={setStatus}>
           <SelectTrigger className="sm:w-44" aria-label={t("crossways.mine.filterStatus", { defaultValue: "Status" })}>
