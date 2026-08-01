@@ -237,14 +237,13 @@ export function CrossUploadDialog({ onSubmitted }: { onSubmitted: () => void }) 
               onCheckedChange={(v) => setConsent(v === true)}
             />
             <Label htmlFor="cross-consent" className="text-xs font-normal leading-relaxed">
-              Das Foto ist von mir, zeigt keine erkennbaren Personen und darf auf BibleBot.Life
-              veröffentlicht werden.
+              {t("crossways.upload.consent")}
             </Label>
           </div>
 
           <Button type="submit" className="w-full" disabled={submitting || !file || !placeLabel.trim() || !consent}>
             {submitting ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : null}
-            Zur Prüfung einsenden
+            {t("crossways.upload.submit")}
           </Button>
         </form>
       </DialogContent>
