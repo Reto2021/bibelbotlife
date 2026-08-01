@@ -67,7 +67,7 @@ export function CrossMarquee() {
               key={`${p.id}-${i}`}
               to="/kreuzwege"
               className="relative w-56 shrink-0 overflow-hidden rounded-xl border border-border/60 transition-transform duration-300 hover:scale-[1.03] sm:w-64"
-              aria-label={`Kreuz bei ${p.place_label} ansehen`}
+              aria-label={t("crossways.card.imageAlt", { place: p.place_label })}
             >
               <img
                 src={p.image_url!}
