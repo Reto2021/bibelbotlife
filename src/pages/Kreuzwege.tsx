@@ -23,10 +23,20 @@ export default function Kreuzwege() {
   const [detailId, setDetailId] = useState<string | null>(null);
 
   const deepLinkId = searchParams.get("post");
+  const uploadParam = searchParams.get("upload");
+  const uploadOpen = uploadParam === "1";
 
   useEffect(() => {
     if (deepLinkId && posts.some((p) => p.id === deepLinkId)) setDetailId(deepLinkId);
   }, [deepLinkId, posts]);
+
+  function clearUploadParam() {
+    if (uploadParam !== null) {
+      const next = new URLSearchParams(searchParams);
+      next.delete("upload");
+      setSearchParams(next, { replace: true });
+    }
+  }
 
   const detailPost = useMemo(
     () => posts.find((p) => p.id === detailId) ?? null,
