@@ -178,6 +178,13 @@ export function CrossDetailModal({ post, open, onOpenChange, hasReacted, onReact
                 {t("crossways.card.amen")}
                 <span className="text-xs text-muted-foreground">{post.amen_count}</span>
               </Button>
+
+              <Button variant="outline" size="default" onClick={copyLink} className="gap-2">
+                {copied ? <Check className="h-4 w-4" /> : <Link2 className="h-4 w-4" />}
+                {copied
+                  ? t("crossways.modal.linkCopied", "Link kopiert")
+                  : t("crossways.modal.copyLink", "Link kopieren")}
+              </Button>
             </div>
           </div>
         </div>
