@@ -152,7 +152,14 @@
       "versePlaceholder": "Thema oder Stichwort, z. B. Trost",
       "verseSearching": "Suche läuft …",
       "verseSearchError": "Suche gerade nicht möglich",
-      "verseNoResults": "Keine Verse gefunden"
+      "verseNoResults": "Keine Verse gefunden",
+      "editImage": "Bild bearbeiten",
+      "rotateLeft": "Nach links drehen",
+      "rotateRight": "Nach rechts drehen",
+      "cropLabel": "Zuschnitt",
+      "cropOriginal": "Original",
+      "editReset": "Zurücksetzen",
+      "editApplying": "Bearbeitung wird angewendet …"
     },
     "card": {
       "anonymous": "Anonym",
