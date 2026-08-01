@@ -38,6 +38,19 @@ export function CrossDetailModal({ post, open, onOpenChange, hasReacted, onReact
     }
   }, [open, post?.id]);
 
+  // Escape closes the lightbox first, not the whole detail modal.
+  useEffect(() => {
+    if (!lightbox) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        e.stopPropagation();
+        setLightbox(false);
+      }
+    };
+    window.addEventListener("keydown", onKey, true);
+    return () => window.removeEventListener("keydown", onKey, true);
+  }, [lightbox]);
+
   if (!post) return null;
 
   const prayed = hasReacted(post.id, "prayer");
