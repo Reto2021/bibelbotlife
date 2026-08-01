@@ -25,6 +25,7 @@ import {
   validateImageFile,
   type ImageValidationResult,
 } from "@/lib/validate-image";
+import { normalizeImageOrientation } from "@/lib/exif-orientation";
 
 import { submitCrossPost } from "@/hooks/use-cross-posts";
 import { ModerationError } from "@/lib/moderation";
