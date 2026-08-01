@@ -22,6 +22,9 @@ type CrossRow = {
   status: string;
   rejection_reason: string | null;
   prayer_count: number;
+  amen_count: number;
+  share_count: number;
+  reported_count: number;
   created_at: string;
 };
 
