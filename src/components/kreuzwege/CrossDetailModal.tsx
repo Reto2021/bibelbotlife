@@ -59,11 +59,17 @@ export function CrossDetailModal({ post, open, onOpenChange, hasReacted, onReact
 
           <div className="p-6 space-y-5">
             <DialogHeader className="text-left space-y-2">
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <button
+                type="button"
+                onClick={openExternalMaps}
+                className="flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-primary"
+                title={t("crossways.modal.openMaps", "In Karten öffnen")}
+              >
                 <MapPin className="h-4 w-4 text-primary" />
                 <span className="font-medium text-foreground">{post.place_label}</span>
                 {post.country && <span>· {post.country}</span>}
-              </div>
+                <ExternalLink className="h-3.5 w-3.5" />
+              </button>
               <DialogTitle className="text-2xl font-display uppercase tracking-tight">
                 {post.place_label}
               </DialogTitle>
