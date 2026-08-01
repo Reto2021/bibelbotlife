@@ -54,6 +54,8 @@ export function MyCrosses() {
   const [query, setQuery] = useState("");
   const [status, setStatus] = useState("all");
   const [sort, setSort] = useState("newest");
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  const sentinelRef = useRef<HTMLDivElement>(null);
 
   const visiblePosts = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -68,6 +70,35 @@ export function MyCrosses() {
       return sort === "oldest" ? -diff : diff;
     });
   }, [posts, query, status, sort]);
+
+  // Any change to the list controls starts paging over from the first batch.
+  useEffect(() => {
+    setVisibleCount(PAGE_SIZE);
+  }, [query, status, sort]);
+
+  const pagedPosts = useMemo(
+    () => visiblePosts.slice(0, visibleCount),
+    [visiblePosts, visibleCount],
+  );
+  const hasMore = visibleCount < visiblePosts.length;
+
+  // Infinite scroll: load the next batch once the sentinel enters the viewport.
+  useEffect(() => {
+    const el = sentinelRef.current;
+    if (!el || !hasMore) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0]?.isIntersecting) {
+          setVisibleCount((c) => c + PAGE_SIZE);
+        }
+      },
+      { rootMargin: "300px" },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [hasMore, visiblePosts.length]);
+
+
 
 
   const [form, setForm] = useState({
