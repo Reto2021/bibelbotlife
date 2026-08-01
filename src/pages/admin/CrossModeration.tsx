@@ -30,6 +30,7 @@ type CrossRow = {
 };
 
 export default function CrossModeration() {
+  const { t } = useTranslation();
   const { toast } = useToast();
   const qc = useQueryClient();
   const [filter, setFilter] = useState<"pending" | "approved" | "rejected" | "reported" | "all">("reported");
