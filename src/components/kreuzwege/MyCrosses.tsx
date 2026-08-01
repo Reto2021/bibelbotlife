@@ -205,6 +205,62 @@ export function MyCrosses() {
           </DialogHeader>
 
           <div className="space-y-4">
+            <div className="space-y-2">
+              <Label>{t("crossways.mine.photoLabel", { defaultValue: "Foto" })}</Label>
+              <div className="flex gap-3">
+                <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-lg bg-muted">
+                  {(newPhotoUrl || editing?.image_url) && (
+                    <img
+                      src={newPhotoUrl || editing?.image_url || ""}
+                      alt={form.placeLabel}
+                      className="h-full w-full object-cover"
+                    />
+                  )}
+                  {newPhoto && (
+                    <button
+                      type="button"
+                      aria-label={t("crossways.mine.photoReset", { defaultValue: "Neues Foto verwerfen" })}
+                      onClick={() => setNewPhoto(null)}
+                      className="absolute right-1 top-1 rounded-full bg-background/90 p-1 text-foreground shadow"
+                    >
+                      <X className="h-3.5 w-3.5" />
+                    </button>
+                  )}
+                </div>
+                <div className="flex-1 space-y-2">
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept="image/*"
+                    className="hidden"
+                    onChange={(e) => {
+                      pickPhoto(e.target.files?.[0]);
+                      e.target.value = "";
+                    }}
+                  />
+                  <Button
+                    type="button"
+                    size="sm"
+                    variant="outline"
+                    className="gap-1.5"
+                    onClick={() => fileInputRef.current?.click()}
+                  >
+                    <ImageUp className="h-4 w-4" />
+                    {t("crossways.mine.replacePhoto", { defaultValue: "Foto ersetzen" })}
+                  </Button>
+                  <p className="text-xs text-muted-foreground">
+                    {newPhoto
+                      ? t("crossways.mine.photoPending", {
+                          defaultValue: "Neues Foto wird beim Speichern erneut geprüft.",
+                        })
+                      : t("crossways.mine.replacePhotoHint", {
+                          defaultValue:
+                            "Du kannst das Foto ersetzen, ohne den Beitrag zu löschen – Reaktionen und Link bleiben erhalten.",
+                        })}
+                  </p>
+                </div>
+              </div>
+            </div>
             <div className="space-y-1.5">
               <Label>{t("crossways.upload.placeLabel")}</Label>
               <Input
@@ -236,7 +292,6 @@ export function MyCrosses() {
                 value={form.quoteReference}
                 onChange={(e) => setForm((f) => ({ ...f, quoteReference: e.target.value }))}
               />
-              <p className="text-xs text-muted-foreground">{t("crossways.mine.imageLocked")}</p>
             </div>
             <div className="flex items-center justify-between rounded-lg border border-border/60 p-3">
               <Label htmlFor="mine-anon" className="cursor-pointer">
