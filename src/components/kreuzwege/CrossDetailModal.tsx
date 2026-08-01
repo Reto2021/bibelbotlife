@@ -1,5 +1,6 @@
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { MapPin, HandHeart, Sparkles } from "lucide-react";
+import { MapPin, HandHeart, Sparkles, ExternalLink, Plus, Minus } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -19,14 +20,30 @@ interface Props {
   onReact: (id: string, kind: CrossInteraction) => void;
 }
 
+const MIN_ZOOM = 4;
+const MAX_ZOOM = 18;
+
 export function CrossDetailModal({ post, open, onOpenChange, hasReacted, onReact }: Props) {
   const { t } = useTranslation();
+  const [zoom, setZoom] = useState(13);
+
+  useEffect(() => {
+    if (open) setZoom(13);
+  }, [open, post?.id]);
 
   if (!post) return null;
 
   const prayed = hasReacted(post.id, "prayer");
   const amened = hasReacted(post.id, "amen");
   const hasCoords = post.lat != null && post.lng != null;
+  const mapsUrl = hasCoords
+    ? `https://www.google.com/maps/search/?api=1&query=${post.lat},${post.lng}`
+    : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+        [post.place_label, post.country].filter(Boolean).join(", "),
+      )}`;
+
+  const openExternalMaps = () => window.open(mapsUrl, "_blank", "noopener,noreferrer");
+
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -42,11 +59,17 @@ export function CrossDetailModal({ post, open, onOpenChange, hasReacted, onReact
 
           <div className="p-6 space-y-5">
             <DialogHeader className="text-left space-y-2">
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <button
+                type="button"
+                onClick={openExternalMaps}
+                className="flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-primary"
+                title={t("crossways.modal.openMaps", "In Karten öffnen")}
+              >
                 <MapPin className="h-4 w-4 text-primary" />
                 <span className="font-medium text-foreground">{post.place_label}</span>
                 {post.country && <span>· {post.country}</span>}
-              </div>
+                <ExternalLink className="h-3.5 w-3.5" />
+              </button>
               <DialogTitle className="text-2xl font-display uppercase tracking-tight">
                 {post.place_label}
               </DialogTitle>
@@ -59,15 +82,49 @@ export function CrossDetailModal({ post, open, onOpenChange, hasReacted, onReact
 
             {hasCoords && (
               <div className="space-y-2">
-                <p className="text-xs uppercase tracking-wider text-muted-foreground">
-                  {t("crossways.modal.mapLabel", "Standort")}
-                </p>
+                <div className="flex items-center justify-between gap-2">
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground">
+                    {t("crossways.modal.mapLabel", "Standort")}
+                  </p>
+                  <div className="flex items-center gap-1">
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      className="h-7 w-7"
+                      aria-label={t("crossways.modal.zoomOut", "Weiter herauszoomen")}
+                      disabled={zoom <= MIN_ZOOM}
+                      onClick={() => setZoom((z) => Math.max(MIN_ZOOM, z - 2))}
+                    >
+                      <Minus className="h-3.5 w-3.5" />
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      className="h-7 w-7"
+                      aria-label={t("crossways.modal.zoomIn", "Näher heranzoomen")}
+                      disabled={zoom >= MAX_ZOOM}
+                      onClick={() => setZoom((z) => Math.min(MAX_ZOOM, z + 2))}
+                    >
+                      <Plus className="h-3.5 w-3.5" />
+                    </Button>
+                  </div>
+                </div>
                 <CrossMap
                   posts={[post]}
                   center={[post.lat as number, post.lng as number]}
-                  zoom={13}
+                  zoom={zoom}
                   height="240px"
+                  onMarkerClick={openExternalMaps}
                 />
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <p className="text-xs text-muted-foreground">
+                    {t("crossways.modal.pinHint", "Nadel antippen, um die Adresse in Karten zu öffnen")}
+                  </p>
+                  <Button variant="ghost" size="sm" className="gap-1.5" onClick={openExternalMaps}>
+                    <ExternalLink className="h-3.5 w-3.5" />
+                    {t("crossways.modal.openMaps", "In Karten öffnen")}
+                  </Button>
+                </div>
               </div>
             )}
 
