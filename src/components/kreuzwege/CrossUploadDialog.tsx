@@ -25,6 +25,7 @@ import {
 } from "@/lib/validate-image";
 
 import { submitCrossPost } from "@/hooks/use-cross-posts";
+import { ModerationError } from "@/lib/moderation";
 import { burnQuoteIntoImage, withQuotationMarks } from "@/lib/burn-quote";
 import { applyImageEdits, CROP_ASPECTS, type CropAspect } from "@/lib/transform-image";
 import { VersePicker } from "./VersePicker";
