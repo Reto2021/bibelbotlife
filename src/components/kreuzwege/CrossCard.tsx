@@ -110,6 +110,18 @@ export function CrossCard({ post, hasReacted, onReact }: Props) {
               <span className="text-xs text-muted-foreground">{post.share_count}</span>
             )}
           </Button>
+
+          <Button
+            variant={reported ? "secondary" : "ghost"}
+            size="sm"
+            disabled={reported}
+            onClick={report}
+            className="gap-1.5 text-muted-foreground hover:text-destructive"
+            aria-label="Melden"
+          >
+            {reported ? <FlagOff className="h-4 w-4" /> : <Flag className="h-4 w-4" />}
+            {reported ? "Gemeldet" : "Melden"}
+          </Button>
         </div>
       </div>
     </Card>
