@@ -3,6 +3,7 @@
  * Used for the "Kreuzwege" upload: the quote stays visible when the photo is shared.
  */
 
+import { decodeImageOriented } from "@/lib/exif-orientation";
 export interface BurnQuoteOptions {
   quote: string;
   reference?: string;
@@ -44,7 +45,7 @@ export async function burnQuoteIntoImage(
   file: File | Blob,
   { quote, reference, maxSize = 1600, quality = 0.9 }: BurnQuoteOptions,
 ): Promise<Blob> {
-  const bitmap = await createImageBitmap(file);
+  const bitmap = await decodeImageOriented(file);
   const scale = Math.min(1, maxSize / Math.max(bitmap.width, bitmap.height));
   const w = Math.round(bitmap.width * scale);
   const h = Math.round(bitmap.height * scale);

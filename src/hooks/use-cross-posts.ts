@@ -1,3 +1,4 @@
+import { decodeImageOriented } from "@/lib/exif-orientation";
 import { useCallback, useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { burnQuoteIntoImage } from "@/lib/burn-quote";
@@ -48,7 +49,7 @@ function readReacted(): Set<string> {
 
 /** Downscale + re-encode to JPEG so uploads stay small. */
 export async function compressImage(file: File, maxSize = 1600): Promise<Blob> {
-  const bitmap = await createImageBitmap(file);
+  const bitmap = await decodeImageOriented(file);
   const scale = Math.min(1, maxSize / Math.max(bitmap.width, bitmap.height));
   const w = Math.round(bitmap.width * scale);
   const h = Math.round(bitmap.height * scale);

@@ -25,6 +25,7 @@ import {
   validateImageFile,
   type ImageValidationResult,
 } from "@/lib/validate-image";
+import { normalizeImageOrientation } from "@/lib/exif-orientation";
 
 import { submitCrossPost } from "@/hooks/use-cross-posts";
 import { ModerationError } from "@/lib/moderation";
@@ -167,7 +168,14 @@ export function CrossUploadDialog({
         rejectFile(content, f.name);
         continue;
       }
-      accepted.push({ id: crypto.randomUUID(), file: f });
+      // Bake EXIF rotation into the pixels so preview, edits and upload match.
+      let normalized = f;
+      try {
+        normalized = await normalizeImageOrientation(f);
+      } catch {
+        normalized = f;
+      }
+      accepted.push({ id: crypto.randomUUID(), file: normalized });
     }
 
     if (limitHit) {
