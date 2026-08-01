@@ -10,6 +10,7 @@ import {
   FlagOff,
 } from "lucide-react";
 import type { CrossInteraction, CrossPost } from "@/hooks/use-cross-posts";
+import { getCrossPostUrl } from "@/hooks/use-cross-posts";
 import { useToast } from "@/hooks/use-toast";
 
 interface Props {
