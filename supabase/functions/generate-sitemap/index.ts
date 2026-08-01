@@ -73,6 +73,7 @@ function sitemapIndex(today: string): string {
   const items: string[] = [];
   items.push(`  <sitemap><loc>${FN_BASE}?type=core</loc><lastmod>${today}</lastmod></sitemap>`);
   items.push(`  <sitemap><loc>${FN_BASE}?type=verses</loc><lastmod>${today}</lastmod></sitemap>`);
+  items.push(`  <sitemap><loc>${FN_BASE}?type=crosses</loc><lastmod>${today}</lastmod></sitemap>`);
   for (const lang of SUPPORTED_LANGS) {
     items.push(`  <sitemap><loc>${FN_BASE}?type=topics&amp;lang=${lang}</loc><lastmod>${today}</lastmod></sitemap>`);
   }
