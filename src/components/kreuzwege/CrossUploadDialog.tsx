@@ -14,7 +14,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Camera, Crosshair, Loader2, Plus } from "lucide-react";
+import { Camera, Crosshair, Loader2, Plus, Upload, X } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { submitCrossPost } from "@/hooks/use-cross-posts";
 
@@ -152,25 +152,56 @@ export function CrossUploadDialog({
             <Label htmlFor="cross-photo">{t("crossways.upload.photoLabel")}</Label>
             <label
               htmlFor="cross-photo"
-              className="flex cursor-pointer flex-col items-center justify-center gap-2 rounded-xl border border-dashed border-border p-6 text-center text-sm text-muted-foreground hover:border-primary/60"
+              onDragOver={(e) => {
+                e.preventDefault();
+                setDragActive(true);
+              }}
+              onDragLeave={() => setDragActive(false)}
+              onDrop={handleDrop}
+              className={`flex cursor-pointer flex-col items-center justify-center gap-2 rounded-xl border border-dashed p-6 text-center text-sm text-muted-foreground transition-colors ${
+                dragActive ? "border-primary bg-primary/5" : "border-border hover:border-primary/60"
+              }`}
             >
               {preview ? (
-                <img src={preview} alt={t("crossways.upload.photoLabel")} className="max-h-48 rounded-lg object-cover" />
+                <>
+                  <img src={preview} alt={t("crossways.upload.photoLabel")} className="max-h-48 rounded-lg object-cover" />
+                  <span className="text-xs">{t("crossways.upload.replaceHint")}</span>
+                </>
               ) : (
                 <>
-                  <Camera className="h-6 w-6 text-primary" />
-                  {t("crossways.upload.photoPlaceholder")}
+                  <Upload className={`h-6 w-6 ${dragActive ? "text-primary" : "text-primary/80"}`} />
+                  <span>{t("crossways.upload.photoPlaceholder")}</span>
+                  <span className="text-xs">{t("crossways.upload.dropHint")}</span>
                 </>
               )}
             </label>
+            {file && (
+              <div className="flex items-center justify-between gap-2 text-xs text-muted-foreground">
+                <span className="truncate">
+                  {file.name} · {(file.size / 1024 / 1024).toFixed(1)} MB
+                </span>
+                <Button
+                  type="button"
+                  variant="ghost"
+                  size="sm"
+                  className="h-7 gap-1 px-2"
+                  onClick={() => {
+                    setFile(null);
+                    setPreview(null);
+                  }}
+                >
+                  <X className="h-3.5 w-3.5" /> {t("crossways.upload.removeImage")}
+                </Button>
+              </div>
+            )}
             <input
               id="cross-photo"
               type="file"
               accept="image/*"
-              capture="environment"
               className="hidden"
               onChange={(e) => pickFile(e.target.files?.[0])}
             />
+
           </div>
 
           <div className="grid grid-cols-2 gap-3">
