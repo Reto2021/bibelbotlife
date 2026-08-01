@@ -17,6 +17,7 @@ interface Item {
  * on the landing page. Renders nothing until at least 3 images are available.
  */
 export function CrossMarquee() {
+  const { t } = useTranslation();
   const [items, setItems] = useState<Item[]>([]);
 
   useEffect(() => {
@@ -42,19 +43,18 @@ export function CrossMarquee() {
         <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
           <div>
             <p className="mb-1 flex items-center gap-1.5 text-xs uppercase tracking-[0.2em] text-primary">
-              <MapPin className="h-3.5 w-3.5" /> Kreuzwege
+              <MapPin className="h-3.5 w-3.5" /> {t("crossways.marquee.eyebrow")}
             </p>
             <h2 id="kreuzwege-teaser" className="font-display text-3xl uppercase tracking-tight sm:text-4xl">
-              Kreuze aus aller Welt
+              {t("crossways.marquee.title")}
             </h2>
             <p className="mt-2 max-w-xl text-muted-foreground">
-              Am Wegrand, auf Bergspitzen, in Kirchen. Teile dein Foto — und begleite die Kreuze
-              anderer im Gebet.
+              {t("crossways.marquee.description")}
             </p>
           </div>
           <Button asChild size="lg" className="gap-1.5">
             <Link to="/kreuzwege">
-              Kreuzwege entdecken <ArrowRight className="h-4 w-4" />
+              {t("crossways.marquee.cta")} <ArrowRight className="h-4 w-4" />
             </Link>
           </Button>
         </div>
