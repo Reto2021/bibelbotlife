@@ -406,7 +406,7 @@ export function CrossUploadDialog({
             <input
               id="cross-photo"
               type="file"
-              accept="image/*"
+              accept={IMAGE_ACCEPT_ATTRIBUTE}
               className="hidden"
               onChange={(e) => pickFile(e.target.files?.[0])}
             />
