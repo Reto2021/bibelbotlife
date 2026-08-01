@@ -2,12 +2,64 @@ import { corsHeaders } from "https://esm.sh/@supabase/supabase-js@2.95.0/cors";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.95.0";
 
 /**
- * Owner self-service for "Kreuzwege" posts: list, edit, delete.
+ * Owner self-service for "Kreuzwege" posts: list, edit (incl. photo replace), delete.
  *
  * Ownership is proven either by the anonymous browser session id that was sent
  * with the upload, or by a validated bearer token (logged-in users). All writes
  * happen with the service role; the client never touches storage or the table.
  */
+
+const MAX_IMAGE_BYTES = 5 * 1024 * 1024;
+const MIN_IMAGE_BYTES = 1024;
+
+type Sig = { mime: string; test: (b: Uint8Array) => boolean };
+
+const SIGNATURES: Sig[] = [
+  { mime: "image/jpeg", test: (b) => b[0] === 0xff && b[1] === 0xd8 && b[2] === 0xff },
+  {
+    mime: "image/png",
+    test: (b) =>
+      b[0] === 0x89 && b[1] === 0x50 && b[2] === 0x4e && b[3] === 0x47 &&
+      b[4] === 0x0d && b[5] === 0x0a && b[6] === 0x1a && b[7] === 0x0a,
+  },
+  {
+    mime: "image/webp",
+    test: (b) =>
+      b[0] === 0x52 && b[1] === 0x49 && b[2] === 0x46 && b[3] === 0x46 &&
+      b[8] === 0x57 && b[9] === 0x45 && b[10] === 0x42 && b[11] === 0x50,
+  },
+  {
+    mime: "image/avif",
+    test: (b) =>
+      b[4] === 0x66 && b[5] === 0x74 && b[6] === 0x79 && b[7] === 0x70 &&
+      String.fromCharCode(b[8], b[9], b[10], b[11]).startsWith("av"),
+  },
+  {
+    mime: "image/gif",
+    test: (b) => b[0] === 0x47 && b[1] === 0x49 && b[2] === 0x46 && b[3] === 0x38,
+  },
+];
+
+/** Detects the real image type from the file's magic bytes. */
+function detectMime(bytes: Uint8Array): string | null {
+  if (bytes.length < 16) return null;
+  for (const sig of SIGNATURES) {
+    if (sig.test(bytes)) return sig.mime;
+  }
+  return null;
+}
+
+function decodeBase64(input: string): Uint8Array | null {
+  try {
+    const clean = input.includes(",") ? input.slice(input.indexOf(",") + 1) : input;
+    const binary = atob(clean);
+    const out = new Uint8Array(binary.length);
+    for (let i = 0; i < binary.length; i++) out[i] = binary.charCodeAt(i);
+    return out;
+  } catch {
+    return null;
+  }
+}
 
 function str(value: unknown, max: number): string | null {
   if (typeof value !== "string") return null;
