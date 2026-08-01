@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { burnQuoteIntoImage } from "@/lib/burn-quote";
-import { ModerationError, moderateSubmission } from "@/lib/moderation";
+import { ModerationError, localTextCheck } from "@/lib/moderation";
 
 export type CrossInteraction = "prayer" | "amen" | "share" | "report";
 
@@ -185,9 +185,18 @@ export async function submitCrossPost(input: NewCrossPost) {
     },
   });
 
-  const payload = (data ?? null) as
+  let payload = (data ?? null) as
     | { error?: string; categories?: string[]; reason?: string; id?: string }
     | null;
+
+  if (!payload?.id && error) {
+    // Non-2xx responses arrive as FunctionsHttpError; the JSON body carries the reason.
+    try {
+      payload = await (error as { context?: Response }).context?.json();
+    } catch {
+      /* keep original error */
+    }
+  }
 
   if (payload?.error === "blocked") {
     throw new ModerationError({
