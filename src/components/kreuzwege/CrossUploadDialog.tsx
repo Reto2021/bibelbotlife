@@ -119,17 +119,17 @@ export function CrossUploadDialog({ onSubmitted }: { onSubmitted: () => void }) 
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
-            <Label htmlFor="cross-photo">Foto</Label>
+            <Label htmlFor="cross-photo">{t("crossways.upload.photoLabel")}</Label>
             <label
               htmlFor="cross-photo"
               className="flex cursor-pointer flex-col items-center justify-center gap-2 rounded-xl border border-dashed border-border p-6 text-center text-sm text-muted-foreground hover:border-primary/60"
             >
               {preview ? (
-                <img src={preview} alt="Vorschau" className="max-h-48 rounded-lg object-cover" />
+                <img src={preview} alt={t("crossways.upload.photoLabel")} className="max-h-48 rounded-lg object-cover" />
               ) : (
                 <>
                   <Camera className="h-6 w-6 text-primary" />
-                  Foto auswählen oder aufnehmen
+                  {t("crossways.upload.photoPlaceholder")}
                 </>
               )}
             </label>
