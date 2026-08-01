@@ -6,7 +6,7 @@ const BASE_URL = "https://biblebot.life";
 const SUPABASE_URL = "https://swsthxftugjqznqjcfpk.supabase.co";
 const ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN3c3RoeGZ0dWdqcXpucWpjZnBrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU1NDk2OTEsImV4cCI6MjA5MTEyNTY5MX0.PA5KmApM_W0sngwt5LmGssh8vcZVU7N0-XA8Dhd3lVU";
 
-interface Entry { path: string; changefreq?: string; priority?: string; }
+interface Entry { path: string; changefreq?: string; priority?: string; lastmod?: string; }
 
 const staticEntries: Entry[] = [
   { path: "/", changefreq: "weekly", priority: "1.0" },
@@ -51,8 +51,35 @@ async function fetchJson(path: string) {
   return r.json();
 }
 
+async function fetchRpc(fn: string) {
+  const r = await fetch(`${SUPABASE_URL}/rest/v1/rpc/${fn}`, {
+    method: "POST",
+    headers: { apikey: ANON, Authorization: `Bearer ${ANON}`, "Content-Type": "application/json" },
+    body: "{}",
+  });
+  if (!r.ok) return [];
+  return r.json();
+}
+
 async function main() {
   const entries: Entry[] = [...staticEntries];
+
+  // Kreuzwege detail pages: one entry per approved cross post.
+  let crosses = (await fetchJson(
+    "cross_posts?select=slug,updated_at,created_at&status=eq.approved&slug=not.is.null",
+  )) as { slug: string; updated_at?: string; created_at?: string }[];
+  if (!Array.isArray(crosses) || crosses.length === 0) {
+    crosses = (await fetchRpc("get_approved_cross_posts")) as typeof crosses;
+  }
+  for (const c of Array.isArray(crosses) ? crosses : []) {
+    if (!c?.slug) continue;
+    entries.push({
+      path: `/kreuzwege/${c.slug}`,
+      changefreq: "monthly",
+      priority: "0.6",
+      lastmod: (c.updated_at ?? c.created_at)?.split("T")[0],
+    });
+  }
 
   // church_partners has RLS that may block anon; merge fetched slugs with known public partners.
   const fetched = (await fetchJson("church_partners?select=slug&slug=not.is.null")) as { slug: string }[];
@@ -70,6 +97,7 @@ async function main() {
       .map(
         (e) =>
           `  <url><loc>${BASE_URL}${e.path}</loc>` +
+          (e.lastmod ? `<lastmod>${e.lastmod}</lastmod>` : "") +
           (e.changefreq ? `<changefreq>${e.changefreq}</changefreq>` : "") +
           (e.priority ? `<priority>${e.priority}</priority>` : "") +
           `</url>`,
