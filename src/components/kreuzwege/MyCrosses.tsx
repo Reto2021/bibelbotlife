@@ -59,7 +59,7 @@ export function MyCrosses() {
   async function save() {
     if (!editing) return;
     if (!form.placeLabel.trim()) {
-      toast.error(t("crossways.upload.placeRequired"));
+      toast.error(t("crossways.mine.placeRequired"));
       return;
     }
     setSaving(true);
@@ -77,7 +77,7 @@ export function MyCrosses() {
       setEditing(null);
     } catch (e) {
       const msg = e instanceof Error && e.message === "blocked"
-        ? t("crossways.moderation.blocked")
+        ? t("crossways.upload.blockedTitle")
         : t("crossways.mine.saveError");
       toast.error(msg);
     } finally {
@@ -139,7 +139,7 @@ export function MyCrosses() {
                 </p>
               )}
               <p className="text-xs text-muted-foreground">
-                {new Date(post.created_at).toLocaleDateString()} · {t("crossways.card.prayers", { count: post.prayer_count })}
+                {new Date(post.created_at).toLocaleDateString()} · {`${post.prayer_count} × ${t("crossways.card.prayer")}`}
               </p>
               <div className="flex flex-wrap gap-2 pt-1">
                 <Button size="sm" variant="outline" className="gap-1.5" onClick={() => openEdit(post)}>
@@ -167,7 +167,7 @@ export function MyCrosses() {
 
           <div className="space-y-4">
             <div className="space-y-1.5">
-              <Label>{t("crossways.upload.place")}</Label>
+              <Label>{t("crossways.upload.placeLabel")}</Label>
               <Input
                 value={form.placeLabel}
                 maxLength={120}
@@ -175,7 +175,7 @@ export function MyCrosses() {
               />
             </div>
             <div className="space-y-1.5">
-              <Label>{t("crossways.upload.story")}</Label>
+              <Label>{t("crossways.upload.storyLabel")}</Label>
               <Textarea
                 rows={3}
                 maxLength={500}
@@ -184,7 +184,7 @@ export function MyCrosses() {
               />
             </div>
             <div className="space-y-1.5">
-              <Label>{t("crossways.upload.quote")}</Label>
+              <Label>{t("crossways.upload.quoteLabel")}</Label>
               <Textarea
                 rows={2}
                 maxLength={MAX_BURN_QUOTE_LENGTH * 2}
@@ -192,7 +192,7 @@ export function MyCrosses() {
                 onChange={(e) => setForm((f) => ({ ...f, quote: e.target.value }))}
               />
               <Input
-                placeholder={t("crossways.upload.quoteReference")}
+                placeholder={t("crossways.upload.quoteReferencePlaceholder")}
                 maxLength={80}
                 value={form.quoteReference}
                 onChange={(e) => setForm((f) => ({ ...f, quoteReference: e.target.value }))}
@@ -201,7 +201,7 @@ export function MyCrosses() {
             </div>
             <div className="flex items-center justify-between rounded-lg border border-border/60 p-3">
               <Label htmlFor="mine-anon" className="cursor-pointer">
-                {t("crossways.upload.anonymous")}
+                {t("crossways.upload.anonymousLabel")}
               </Label>
               <Switch
                 id="mine-anon"
@@ -211,7 +211,7 @@ export function MyCrosses() {
             </div>
             {!form.isAnonymous && (
               <Input
-                placeholder={t("crossways.upload.name")}
+                placeholder={t("crossways.upload.authorLabel")}
                 maxLength={60}
                 value={form.authorName}
                 onChange={(e) => setForm((f) => ({ ...f, authorName: e.target.value }))}

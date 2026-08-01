@@ -222,6 +222,25 @@
       "error": "Fehler",
       "rejectionPlaceholder": "Ablehnungsgrund",
       "reportedCount": "{{count}}× gemeldet"
+    },
+    "mine": {
+      "title": "Meine Kreuze",
+      "hint": "Hier findest du deine eigenen Beiträge. Solange du denselben Browser nutzt, kannst du sie bearbeiten oder löschen. Melde dich an, damit die Zuordnung dauerhaft bleibt.",
+      "empty": "Du hast noch kein Kreuz hochgeladen.",
+      "edit": "Bearbeiten",
+      "delete": "Löschen",
+      "editTitle": "Beitrag bearbeiten",
+      "save": "Speichern",
+      "cancel": "Abbrechen",
+      "saved": "Änderungen gespeichert",
+      "saveError": "Speichern fehlgeschlagen",
+      "deleted": "Beitrag gelöscht",
+      "deleteError": "Löschen fehlgeschlagen",
+      "deleteTitle": "Beitrag löschen?",
+      "deleteConfirm": "Das Foto und alle Reaktionen werden endgültig entfernt. Das kann nicht rückgängig gemacht werden.",
+      "imageLocked": "Das Foto selbst kann nicht nachträglich geändert werden – lösche den Beitrag und lade ihn neu hoch.",
+      "placeRequired": "Bitte gib einen Ort an.",
+      "tab": "Meine Kreuze"
     }
   },
   "coaching": {
