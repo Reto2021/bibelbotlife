@@ -47,6 +47,26 @@ export function MyCrosses() {
   const [newPhotoUrl, setNewPhotoUrl] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  // Client-side list controls: text search on place, status filter, upload-date sort.
+  const [query, setQuery] = useState("");
+  const [status, setStatus] = useState("all");
+  const [sort, setSort] = useState("newest");
+
+  const visiblePosts = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    const filtered = posts.filter((p) => {
+      const matchesStatus = status === "all" || p.status === status;
+      const matchesQuery = !q || (p.place_label ?? "").toLowerCase().includes(q);
+      return matchesStatus && matchesQuery;
+    });
+    return filtered.sort((a, b) => {
+      if (sort === "place") return (a.place_label ?? "").localeCompare(b.place_label ?? "");
+      const diff = new Date(b.created_at).getTime() - new Date(a.created_at).getTime();
+      return sort === "oldest" ? -diff : diff;
+    });
+  }, [posts, query, status, sort]);
+
+
   const [form, setForm] = useState({
     placeLabel: "",
     story: "",
