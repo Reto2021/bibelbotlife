@@ -2213,7 +2213,14 @@
       "versePlaceholder": "Topic or keyword, e.g. comfort",
       "verseSearching": "Searching …",
       "verseSearchError": "Search is unavailable right now",
-      "verseNoResults": "No verses found"
+      "verseNoResults": "No verses found",
+      "editImage": "Edit image",
+      "rotateLeft": "Rotate left",
+      "rotateRight": "Rotate right",
+      "cropLabel": "Crop",
+      "cropOriginal": "Original",
+      "editReset": "Reset",
+      "editApplying": "Applying changes …"
     },
     "card": {
       "anonymous": "Anonymous",
