@@ -84,10 +84,10 @@ export default function CrossModeration() {
       if (error) throw error;
     },
     onSuccess: (_, { status }) => {
-      toast({ title: status === "approved" ? "Freigegeben" : "Abgelehnt" });
+      toast({ title: status === "approved" ? t("crossways.admin.approved") : t("crossways.admin.rejected") });
       qc.invalidateQueries({ queryKey: ["admin-crosses"] });
     },
-    onError: (e: Error) => toast({ title: "Fehler", description: e.message, variant: "destructive" }),
+    onError: (e: Error) => toast({ title: t("crossways.admin.error", "Fehler"), description: e.message, variant: "destructive" }),
   });
 
   const remove = useMutation({
