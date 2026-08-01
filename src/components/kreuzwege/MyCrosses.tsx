@@ -37,6 +37,8 @@ import {
 } from "@/components/ui/alert-dialog";
 import { useMyCrossPosts, type MyCrossPost } from "@/hooks/use-cross-posts";
 import { MAX_BURN_QUOTE_LENGTH } from "@/lib/burn-quote";
+import { VersePicker } from "@/components/kreuzwege/VersePicker";
+
 
 /** Cards rendered per batch; keeps the DOM small when a user has many crosses. */
 const PAGE_SIZE = 9;
@@ -563,7 +565,14 @@ export function MyCrosses() {
               />
             </div>
             <div className="space-y-1.5">
-              <Label>{t("crossways.upload.quoteLabel")}</Label>
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <Label>{t("crossways.upload.quoteLabel")}</Label>
+                <VersePicker
+                  onPick={(text, reference) =>
+                    setForm((f) => ({ ...f, quote: text, quoteReference: reference }))
+                  }
+                />
+              </div>
               <Textarea
                 rows={2}
                 maxLength={MAX_BURN_QUOTE_LENGTH * 2}
@@ -577,6 +586,7 @@ export function MyCrosses() {
                 onChange={(e) => setForm((f) => ({ ...f, quoteReference: e.target.value }))}
               />
             </div>
+
             <div className="flex items-center justify-between rounded-lg border border-border/60 p-3">
               <Label htmlFor="mine-anon" className="cursor-pointer">
                 {t("crossways.upload.anonymousLabel")}
