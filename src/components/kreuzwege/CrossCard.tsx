@@ -83,7 +83,7 @@ export function CrossCard({ post, hasReacted, onReact }: Props) {
             className="gap-1.5"
           >
             <HandHeart className="h-4 w-4" />
-            {prayed ? "Im Gebet" : "Ein Gebet dafür"}
+            {prayed ? t("crossways.card.prayed") : t("crossways.card.prayer")}
             <span className="text-xs text-muted-foreground">{post.prayer_count}</span>
           </Button>
 
@@ -95,7 +95,7 @@ export function CrossCard({ post, hasReacted, onReact }: Props) {
             className="gap-1.5"
           >
             <Sparkles className="h-4 w-4" />
-            Amen
+            {t("crossways.card.amen")}
             <span className="text-xs text-muted-foreground">{post.amen_count}</span>
           </Button>
 
@@ -104,10 +104,10 @@ export function CrossCard({ post, hasReacted, onReact }: Props) {
             size="sm"
             onClick={share}
             className="ml-auto gap-1.5"
-            aria-label="Teilen"
+            aria-label={t("crossways.card.share")}
           >
             <Share2 className="h-4 w-4" />
-            Teilen
+            {t("crossways.card.share")}
             {post.share_count > 0 && (
               <span className="text-xs text-muted-foreground">{post.share_count}</span>
             )}
@@ -119,10 +119,10 @@ export function CrossCard({ post, hasReacted, onReact }: Props) {
             disabled={reported}
             onClick={report}
             className="gap-1.5 text-muted-foreground hover:text-destructive"
-            aria-label="Melden"
+            aria-label={t("crossways.card.report")}
           >
             {reported ? <FlagOff className="h-4 w-4" /> : <Flag className="h-4 w-4" />}
-            {reported ? "Gemeldet" : "Melden"}
+            {reported ? t("crossways.card.reported") : t("crossways.card.report")}
           </Button>
         </div>
       </div>
