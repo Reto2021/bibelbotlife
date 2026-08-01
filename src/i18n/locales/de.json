@@ -277,7 +277,21 @@
       "photoReplaced": "Neues Foto gespeichert und geprüft",
       "photoReset": "Neues Foto verwerfen",
       "photoInvalid": "Bitte wähle eine Bilddatei.",
-      "photoTooLarge": "Das Bild ist zu gross (max. 15 MB)."
+      "photoTooLarge": "Das Bild ist zu gross (max. 15 MB).",
+      "searchPlaceholder": "Ort suchen …",
+      "filterStatus": "Status",
+      "statusAll": "Alle Status",
+      "sort": "Sortierung",
+      "sortNewest": "Zuletzt hochgeladen",
+      "sortOldest": "Älteste zuerst",
+      "sortPlace": "Ort A–Z",
+      "noResults": "Keine Kreuze passen zu dieser Suche.",
+      "resultCount": "{{count}} von {{total}} Kreuzen",
+      "status": {
+        "approved": "Freigegeben",
+        "pending": "In Prüfung",
+        "rejected": "Abgelehnt"
+      }
     }
   },
   "coaching": {
