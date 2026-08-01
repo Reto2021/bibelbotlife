@@ -73,7 +73,7 @@ export default function CrossMap({
                 {p.image_url && (
                   <img
                     src={p.image_url}
-                    alt={`Kreuz bei ${p.place_label}`}
+                    alt={t("crossways.card.imageAlt", { place: p.place_label })}
                     className="h-24 w-full rounded object-cover"
                   />
                 )}
