@@ -19,6 +19,9 @@ import { useAuth } from "@/hooks/use-auth";
 // BibleBotChat overlay removed - chat is now inline in ChatHero
 const DailyImpulse = lazy(() => import("@/components/DailyImpulse"));
 const DailySubscribe = lazy(() => import("@/components/DailySubscribe"));
+const CrossMarquee = lazy(() =>
+  import("@/components/kreuzwege/CrossMarquee").then((m) => ({ default: m.CrossMarquee })),
+);
 import { Separator } from "@/components/ui/separator";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
@@ -120,6 +123,11 @@ const Index = () => {
 
       <Suspense fallback={<div className="h-20" />}>
         <DailyImpulse />
+      </Suspense>
+
+      {/* Kreuzwege — lebendes Bilder-Karussell als Einstieg */}
+      <Suspense fallback={<div className="h-20" />}>
+        <CrossMarquee />
       </Suspense>
 
       {/* Features Section */}
