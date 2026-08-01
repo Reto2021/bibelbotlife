@@ -111,14 +111,22 @@ export default function CrossModeration() {
         </div>
 
         <div className="flex flex-wrap gap-2">
-          {(["pending", "approved", "rejected", "all"] as const).map((f) => (
+          {(["reported", "pending", "approved", "rejected", "all"] as const).map((f) => (
             <Button
               key={f}
               variant={filter === f ? "default" : "outline"}
               size="sm"
               onClick={() => setFilter(f)}
             >
-              {f === "pending" ? "Ausstehend" : f === "approved" ? "Freigegeben" : f === "rejected" ? "Abgelehnt" : "Alle"}
+              {f === "reported"
+                ? "Gemeldet"
+                : f === "pending"
+                  ? "Ausstehend"
+                  : f === "approved"
+                    ? "Freigegeben"
+                    : f === "rejected"
+                      ? "Abgelehnt"
+                      : "Alle"}
             </Button>
           ))}
         </div>
