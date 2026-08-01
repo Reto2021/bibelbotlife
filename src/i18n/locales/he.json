@@ -2170,6 +2170,9 @@
       "error": "שגיאה",
       "rejectionPlaceholder": "סיבת דחייה",
       "reportedCount": "דווח {{count}} פעמים"
+    },
+    "modal": {
+      "mapLabel": "מיקום"
     }
   }
 }

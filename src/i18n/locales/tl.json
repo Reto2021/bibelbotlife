@@ -2173,6 +2173,9 @@
       "error": "Error",
       "rejectionPlaceholder": "Dahilan ng pagtanggi",
       "reportedCount": "Iniulat nang {{count}}×"
+    },
+    "modal": {
+      "mapLabel": "Lokasyon"
     }
   }
 }

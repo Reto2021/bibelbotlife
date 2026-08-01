@@ -2170,6 +2170,9 @@
       "error": "Fel",
       "rejectionPlaceholder": "Anledning till avslag",
       "reportedCount": "Rapporterad {{count}} gånger"
+    },
+    "modal": {
+      "mapLabel": "Plats"
     }
   }
 }

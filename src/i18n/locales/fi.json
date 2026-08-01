@@ -2170,6 +2170,9 @@
       "error": "Virhe",
       "rejectionPlaceholder": "Hylkäämisen syy",
       "reportedCount": "Ilmoitettu {{count}} kertaa"
+    },
+    "modal": {
+      "mapLabel": "Sijainti"
     }
   }
 }

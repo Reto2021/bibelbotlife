@@ -2232,6 +2232,9 @@
       "error": "Error",
       "rejectionPlaceholder": "Reason for rejection",
       "reportedCount": "Reported {{count}}×"
+    },
+    "modal": {
+      "mapLabel": "Location"
     }
   }
 }

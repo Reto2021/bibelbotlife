@@ -2170,6 +2170,9 @@
       "error": "Грешка",
       "rejectionPlaceholder": "Причина за отхвърляне",
       "reportedCount": "Докладвани {{count}} пъти"
+    },
+    "modal": {
+      "mapLabel": "Местоположение"
     }
   }
 }

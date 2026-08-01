@@ -2170,6 +2170,9 @@
       "error": "Eroare",
       "rejectionPlaceholder": "Motivul respingerii",
       "reportedCount": "Raportate de {{count}} ori"
+    },
+    "modal": {
+      "mapLabel": "Locație"
     }
   }
 }

@@ -2170,6 +2170,9 @@
       "error": "Ошибка",
       "rejectionPlaceholder": "Причина отклонения",
       "reportedCount": "Сообщено {{count}} раз"
+    },
+    "modal": {
+      "mapLabel": "Местоположение"
     }
   }
 }

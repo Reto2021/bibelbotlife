@@ -2170,6 +2170,9 @@
       "error": "Fout",
       "rejectionPlaceholder": "Rede vir verwerping",
       "reportedCount": "{{count}}× gerapporteer"
+    },
+    "modal": {
+      "mapLabel": "Ligging"
     }
   }
 }

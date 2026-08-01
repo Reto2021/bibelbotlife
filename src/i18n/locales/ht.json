@@ -2170,6 +2170,9 @@
       "error": "Erè",
       "rejectionPlaceholder": "Rezon pou rejè",
       "reportedCount": "Rapòte {{count}} fwa"
+    },
+    "modal": {
+      "mapLabel": "Kote"
     }
   }
 }

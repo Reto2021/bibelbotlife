@@ -2170,6 +2170,9 @@
       "error": "خطأ",
       "rejectionPlaceholder": "سبب الرفض",
       "reportedCount": "تم الإبلاغ عنها {{count}} مرة"
+    },
+    "modal": {
+      "mapLabel": "الموقع"
     }
   }
 }

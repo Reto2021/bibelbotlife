@@ -2170,6 +2170,9 @@
       "error": "Iphutha",
       "rejectionPlaceholder": "Isizathu sokwenqaba",
       "reportedCount": "Kubikiwe {{count}}×"
+    },
+    "modal": {
+      "mapLabel": "Indawo"
     }
   }
 }

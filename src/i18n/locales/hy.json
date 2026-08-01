@@ -2170,6 +2170,9 @@
       "error": "Սխալ",
       "rejectionPlaceholder": "Մերժման պատճառը",
       "reportedCount": "{{count}}× հաղորդված է"
+    },
+    "modal": {
+      "mapLabel": "Դիրք"
     }
   }
 }

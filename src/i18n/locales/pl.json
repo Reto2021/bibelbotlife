@@ -2170,6 +2170,9 @@
       "error": "Błąd",
       "rejectionPlaceholder": "Powód odrzucenia",
       "reportedCount": "Zgłoszono {{count}} razy"
+    },
+    "modal": {
+      "mapLabel": "Lokalizacja"
     }
   }
 }

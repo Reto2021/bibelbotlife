@@ -2170,6 +2170,9 @@
       "error": "Greška",
       "rejectionPlaceholder": "Razlog odbijanja",
       "reportedCount": "Prijavljeno {{count}} puta"
+    },
+    "modal": {
+      "mapLabel": "Lokacija"
     }
   }
 }

@@ -2170,6 +2170,9 @@
       "error": "오류",
       "rejectionPlaceholder": "거부 사유",
       "reportedCount": "{{count}}회 신고됨"
+    },
+    "modal": {
+      "mapLabel": "위치"
     }
   }
 }

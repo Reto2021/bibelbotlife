@@ -2170,6 +2170,9 @@
       "error": "Fejl",
       "rejectionPlaceholder": "Årsag til afvisning",
       "reportedCount": "{{count}}× anmeldt"
+    },
+    "modal": {
+      "mapLabel": "Placering"
     }
   }
 }

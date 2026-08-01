@@ -2211,6 +2211,9 @@
       "error": "Njehie",
       "rejectionPlaceholder": "Ihe kpatara ịjụ",
       "reportedCount": "Akọpụtara {{count}}×"
+    },
+    "modal": {
+      "mapLabel": "Ebe"
     }
   }
 }

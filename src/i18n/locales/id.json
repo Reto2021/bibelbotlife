@@ -2211,6 +2211,9 @@
       "error": "Kesalahan",
       "rejectionPlaceholder": "Alasan penolakan",
       "reportedCount": "Dilaporkan {{count}} kali"
+    },
+    "modal": {
+      "mapLabel": "Lokasi"
     }
   }
 }
