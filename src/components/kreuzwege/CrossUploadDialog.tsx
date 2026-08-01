@@ -264,22 +264,94 @@ export function CrossUploadDialog({
               )}
             </label>
             {file && (
-              <div className="flex items-center justify-between gap-2 text-xs text-muted-foreground">
-                <span className="truncate">
-                  {file.name} · {(file.size / 1024 / 1024).toFixed(1)} MB
-                </span>
-                <Button
-                  type="button"
-                  variant="ghost"
-                  size="sm"
-                  className="h-7 gap-1 px-2"
-                  onClick={() => {
-                    setFile(null);
-                    setPreview(null);
-                  }}
-                >
-                  <X className="h-3.5 w-3.5" /> {t("crossways.upload.removeImage")}
-                </Button>
+              <div className="space-y-3 rounded-xl border border-border/60 p-3">
+                <div className="flex flex-wrap items-center gap-2">
+                  <Label className="mr-auto flex items-center gap-1.5 text-sm">
+                    <Crop className="h-4 w-4 text-primary" />
+                    {t("crossways.upload.editImage", "Bild bearbeiten")}
+                  </Label>
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="icon"
+                    className="h-8 w-8"
+                    aria-label={t("crossways.upload.rotateLeft", "Nach links drehen")}
+                    onClick={() => setRotation((r) => (r + 270) % 360)}
+                  >
+                    <RotateCcw className="h-4 w-4" />
+                  </Button>
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="icon"
+                    className="h-8 w-8"
+                    aria-label={t("crossways.upload.rotateRight", "Nach rechts drehen")}
+                    onClick={() => setRotation((r) => (r + 90) % 360)}
+                  >
+                    <RotateCw className="h-4 w-4" />
+                  </Button>
+                </div>
+
+                <div className="flex flex-wrap items-center gap-1.5">
+                  <span className="mr-1 text-xs text-muted-foreground">
+                    {t("crossways.upload.cropLabel", "Zuschnitt")}
+                  </span>
+                  {CROP_ASPECTS.map((option) => (
+                    <Button
+                      key={option}
+                      type="button"
+                      size="sm"
+                      variant={aspect === option ? "default" : "outline"}
+                      className="h-7 px-2.5 text-xs"
+                      onClick={() => setAspect(option)}
+                    >
+                      {option === "original"
+                        ? t("crossways.upload.cropOriginal", "Original")
+                        : option}
+                    </Button>
+                  ))}
+                </div>
+
+                <div className="flex items-center justify-between gap-2 text-xs text-muted-foreground">
+                  <span className="truncate">
+                    {editing ? (
+                      <span className="flex items-center gap-1.5">
+                        <Loader2 className="h-3.5 w-3.5 animate-spin" />
+                        {t("crossways.upload.editApplying", "Bearbeitung wird angewendet …")}
+                      </span>
+                    ) : (
+                      <>
+                        {file.name} ·{" "}
+                        {(((editedFile ?? file).size) / 1024 / 1024).toFixed(1)} MB
+                      </>
+                    )}
+                  </span>
+                  <div className="flex shrink-0 items-center gap-1">
+                    {(rotation !== 0 || aspect !== "original") && (
+                      <Button
+                        type="button"
+                        variant="ghost"
+                        size="sm"
+                        className="h-7 px-2"
+                        onClick={() => {
+                          setRotation(0);
+                          setAspect("original");
+                        }}
+                      >
+                        {t("crossways.upload.editReset", "Zurücksetzen")}
+                      </Button>
+                    )}
+                    <Button
+                      type="button"
+                      variant="ghost"
+                      size="sm"
+                      className="h-7 gap-1 px-2"
+                      onClick={() => setFile(null)}
+                    >
+                      <X className="h-3.5 w-3.5" /> {t("crossways.upload.removeImage")}
+                    </Button>
+                  </div>
+                </div>
               </div>
             )}
             <input
@@ -289,6 +361,7 @@ export function CrossUploadDialog({
               className="hidden"
               onChange={(e) => pickFile(e.target.files?.[0])}
             />
+
 
           </div>
 
