@@ -1255,6 +1255,8 @@ export type Database = {
           share_count: number
           status: string
           story: string | null
+          updated_at: string
+          user_id: string | null
         }
         Insert: {
           amen_count?: number
@@ -1279,6 +1281,8 @@ export type Database = {
           share_count?: number
           status?: string
           story?: string | null
+          updated_at?: string
+          user_id?: string | null
         }
         Update: {
           amen_count?: number
@@ -1303,6 +1307,8 @@ export type Database = {
           share_count?: number
           status?: string
           story?: string | null
+          updated_at?: string
+          user_id?: string | null
         }
         Relationships: []
       }
