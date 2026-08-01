@@ -2108,7 +2108,9 @@
       "cta": "Ontdek Kruispaaie",
       "placeholder1": "Kruispad in die berge",
       "placeholder2": "Oordenking in die kapel",
-      "placeholder3": "Kruis op die horison"
+      "placeholder3": "Kruis op die horison",
+      "uploadCta": "Share your wayside cross",
+      "uploadAria": "Upload your own wayside cross photo"
     },
     "upload": {
       "trigger": "Voeg kruis by",

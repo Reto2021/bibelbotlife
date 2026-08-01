@@ -2108,7 +2108,9 @@
       "cta": "Descoperă Căi ale Crucii",
       "placeholder1": "Răscruce în munți",
       "placeholder2": "Devoțiune în capelă",
-      "placeholder3": "Cruce la orizont"
+      "placeholder3": "Cruce la orizont",
+      "uploadCta": "Share your wayside cross",
+      "uploadAria": "Upload your own wayside cross photo"
     },
     "upload": {
       "trigger": "Adaugă o cruce",

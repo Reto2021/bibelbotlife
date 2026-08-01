@@ -2108,7 +2108,9 @@
       "cta": "Odkryj Drogi Krzyżowe",
       "placeholder1": "Rozdroże w górach",
       "placeholder2": "Nabożeństwo w kaplicy",
-      "placeholder3": "Krzyż na horyzoncie"
+      "placeholder3": "Krzyż na horyzoncie",
+      "uploadCta": "Share your wayside cross",
+      "uploadAria": "Upload your own wayside cross photo"
     },
     "upload": {
       "trigger": "Dodaj krzyż",

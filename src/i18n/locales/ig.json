@@ -2149,7 +2149,9 @@
       "cta": "Chọpụta ụzọ obe",
       "placeholder1": "Ụzọ obe n'ugwu",
       "placeholder2": "Ofufe n'ụlọ ụka",
-      "placeholder3": "Obe n'eluigwe"
+      "placeholder3": "Obe n'eluigwe",
+      "uploadCta": "Share your wayside cross",
+      "uploadAria": "Upload your own wayside cross photo"
     },
     "upload": {
       "trigger": "Tinye obe",

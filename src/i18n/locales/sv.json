@@ -2108,7 +2108,9 @@
       "cta": "Upptäck korsvägar",
       "placeholder1": "Vägkors i bergen",
       "placeholder2": "Andakt i kapellet",
-      "placeholder3": "Kors vid horisonten"
+      "placeholder3": "Kors vid horisonten",
+      "uploadCta": "Share your wayside cross",
+      "uploadAria": "Upload your own wayside cross photo"
     },
     "upload": {
       "trigger": "Lägg till kors",

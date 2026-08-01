@@ -2170,7 +2170,9 @@
       "cta": "Discover Crossroads",
       "placeholder1": "Crossroads in the mountains",
       "placeholder2": "Devotion in the chapel",
-      "placeholder3": "Cross on the horizon"
+      "placeholder3": "Cross on the horizon",
+      "uploadCta": "Share your wayside cross",
+      "uploadAria": "Upload your own wayside cross photo"
     },
     "upload": {
       "trigger": "Add cross",

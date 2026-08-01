@@ -2108,7 +2108,9 @@
       "cta": "Opdag korsveje",
       "placeholder1": "Vejkryds i bjergene",
       "placeholder2": "Andagt i kapellet",
-      "placeholder3": "Kors ved horisonten"
+      "placeholder3": "Kors ved horisonten",
+      "uploadCta": "Share your wayside cross",
+      "uploadAria": "Upload your own wayside cross photo"
     },
     "upload": {
       "trigger": "Tilføj kors",

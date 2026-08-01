@@ -2108,7 +2108,9 @@
       "cta": "Gundua Njia za Msalaba",
       "placeholder1": "Njia panda milimani",
       "placeholder2": "Ibada kanisani",
-      "placeholder3": "Msalaba upeoni"
+      "placeholder3": "Msalaba upeoni",
+      "uploadCta": "Share your wayside cross",
+      "uploadAria": "Upload your own wayside cross photo"
     },
     "upload": {
       "trigger": "Ongeza Msalaba",

@@ -2110,7 +2110,9 @@
       "cta": "Khám phá Đường Thánh Giá",
       "placeholder1": "Ngã tư đường trên núi",
       "placeholder2": "Tôn thờ trong nhà nguyện",
-      "placeholder3": "Thập tự giá trên đường chân trời"
+      "placeholder3": "Thập tự giá trên đường chân trời",
+      "uploadCta": "Share your wayside cross",
+      "uploadAria": "Upload your own wayside cross photo"
     },
     "upload": {
       "trigger": "Thêm Thánh giá",

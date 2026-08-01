@@ -2108,7 +2108,9 @@
       "cta": "Thola izindlela zesiphambano",
       "placeholder1": "Indawo yokuwela ezintabeni",
       "placeholder2": "Ukuzinikela eChapel",
-      "placeholder3": "Isiphambano emkhathizwe"
+      "placeholder3": "Isiphambano emkhathizwe",
+      "uploadCta": "Share your wayside cross",
+      "uploadAria": "Upload your own wayside cross photo"
     },
     "upload": {
       "trigger": "Engeza isiphambano",

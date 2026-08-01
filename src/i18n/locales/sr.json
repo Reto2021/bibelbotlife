@@ -2108,7 +2108,9 @@
       "cta": "Otkrijte krstne puteve",
       "placeholder1": "Raskršće u planinama",
       "placeholder2": "Pobožnost u kapeli",
-      "placeholder3": "Krst na horizontu"
+      "placeholder3": "Krst na horizontu",
+      "uploadCta": "Share your wayside cross",
+      "uploadAria": "Upload your own wayside cross photo"
     },
     "upload": {
       "trigger": "Dodaj krst",

@@ -2108,7 +2108,9 @@
       "cta": "십자가의 길 발견하기",
       "placeholder1": "산속 십자로",
       "placeholder2": "예배당에서의 묵상",
-      "placeholder3": "수평선 위의 십자가"
+      "placeholder3": "수평선 위의 십자가",
+      "uploadCta": "Share your wayside cross",
+      "uploadAria": "Upload your own wayside cross photo"
     },
     "upload": {
       "trigger": "십자가 추가",

@@ -2116,7 +2116,9 @@
       "cta": "Scopri le Via Crucis",
       "placeholder1": "Incrocio nelle montagne",
       "placeholder2": "Devozione nella cappella",
-      "placeholder3": "Croce all'orizzonte"
+      "placeholder3": "Croce all'orizzonte",
+      "uploadCta": "Share your wayside cross",
+      "uploadAria": "Upload your own wayside cross photo"
     },
     "upload": {
       "trigger": "Aggiungi croce",

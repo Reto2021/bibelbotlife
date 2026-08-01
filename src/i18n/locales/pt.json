@@ -2108,7 +2108,9 @@
       "cta": "Descobrir Caminhos da Cruz",
       "placeholder1": "Encruzilhada nas montanhas",
       "placeholder2": "Devocional na capela",
-      "placeholder3": "Cruz no horizonte"
+      "placeholder3": "Cruz no horizonte",
+      "uploadCta": "Share your wayside cross",
+      "uploadAria": "Upload your own wayside cross photo"
     },
     "upload": {
       "trigger": "Adicionar cruz",

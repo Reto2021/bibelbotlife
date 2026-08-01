@@ -2108,7 +2108,9 @@
       "cta": "Відкрийте для себе хресні дороги",
       "placeholder1": "Перехрестя в горах",
       "placeholder2": "Богослужіння в каплиці",
-      "placeholder3": "Хрест на горизонті"
+      "placeholder3": "Хрест на горизонті",
+      "uploadCta": "Share your wayside cross",
+      "uploadAria": "Upload your own wayside cross photo"
     },
     "upload": {
       "trigger": "Додати хрест",

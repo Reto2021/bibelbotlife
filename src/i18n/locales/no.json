@@ -2150,7 +2150,9 @@
       "cta": "Oppdag korsveier",
       "placeholder1": "Veikryss i fjellet",
       "placeholder2": "Andakt i kapellet",
-      "placeholder3": "Kors i horisonten"
+      "placeholder3": "Kors i horisonten",
+      "uploadCta": "Share your wayside cross",
+      "uploadAria": "Upload your own wayside cross photo"
     },
     "upload": {
       "trigger": "Legg til kors",

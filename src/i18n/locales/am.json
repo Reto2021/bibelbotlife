@@ -2106,7 +2106,9 @@
       "cta": "መስቀለኛ መንገዶችን ያግኙ",
       "placeholder1": "በተራሮች ላይ መስቀለኛ መንገድ",
       "placeholder2": "በጸሎት ቤት ውስጥ መሰጠት",
-      "placeholder3": "በአድማስ ላይ መስቀል"
+      "placeholder3": "በአድማስ ላይ መስቀል",
+      "uploadCta": "Share your wayside cross",
+      "uploadAria": "Upload your own wayside cross photo"
     },
     "upload": {
       "trigger": "መስቀል አክል",

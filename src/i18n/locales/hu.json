@@ -2108,7 +2108,9 @@
       "cta": "Fedezze fel a Keresztutakat",
       "placeholder1": "Keresztút a hegyekben",
       "placeholder2": "Áhítat a kápolnában",
-      "placeholder3": "Kereszt a horizonton"
+      "placeholder3": "Kereszt a horizonton",
+      "uploadCta": "Share your wayside cross",
+      "uploadAria": "Upload your own wayside cross photo"
     },
     "upload": {
       "trigger": "Kereszt hozzáadása",
