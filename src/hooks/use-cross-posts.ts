@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
+import { burnQuoteIntoImage } from "@/lib/burn-quote";
 
 export type CrossInteraction = "prayer" | "amen" | "share" | "report";
 
@@ -10,6 +11,9 @@ export interface CrossPost {
   lat: number | null;
   lng: number | null;
   story: string | null;
+  quote: string | null;
+  quote_reference: string | null;
+  quote_burned: boolean;
   author_name: string | null;
   is_anonymous: boolean;
   prayer_count: number;
@@ -127,10 +131,20 @@ export interface NewCrossPost {
   story?: string;
   authorName?: string;
   isAnonymous: boolean;
+  quote?: string;
+  quoteReference?: string;
+  /** When true the quote is rendered into the uploaded image. */
+  burnQuote?: boolean;
 }
 
 export async function submitCrossPost(input: NewCrossPost) {
-  const blob = await compressImage(input.file);
+  const quote = input.quote?.trim() || "";
+  const reference = input.quoteReference?.trim() || "";
+  const burned = Boolean(quote) && input.burnQuote !== false;
+
+  const blob = burned
+    ? await burnQuoteIntoImage(input.file, { quote, reference })
+    : await compressImage(input.file);
   const path = `${crypto.randomUUID()}.jpg`;
 
   const { error: uploadError } = await supabase.storage
@@ -145,6 +159,9 @@ export async function submitCrossPost(input: NewCrossPost) {
     lat: input.lat ?? null,
     lng: input.lng ?? null,
     story: input.story?.trim() || null,
+    quote: quote || null,
+    quote_reference: reference || null,
+    quote_burned: burned,
     author_name: input.isAnonymous ? null : input.authorName?.trim() || null,
     is_anonymous: input.isAnonymous,
     session_id: getSessionId(),

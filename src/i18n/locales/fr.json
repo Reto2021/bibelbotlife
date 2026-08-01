@@ -2149,7 +2149,17 @@
       "dropHint": "Drag an image here or click to select",
       "replaceHint": "Drag another image or click to replace",
       "removeImage": "Remove",
-      "notAnImage": "Please choose an image file"
+      "notAnImage": "Please choose an image file",
+      "quoteLabel": "Bible quote or thought",
+      "quotePlaceholder": "e.g. The Lord is my shepherd",
+      "quoteReferencePlaceholder": "Source, e.g. Psalm 23:1",
+      "burnQuoteLabel": "Write the quote onto the photo",
+      "burnQuoteHint": "The preview above shows how the photo will be uploaded.",
+      "pickVerse": "Pick a verse from the Bible",
+      "versePlaceholder": "Topic or keyword, e.g. comfort",
+      "verseSearching": "Searching …",
+      "verseSearchError": "Search is unavailable right now",
+      "verseNoResults": "No verses found"
     },
     "card": {
       "anonymous": "Anonyme",

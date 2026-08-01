@@ -14,9 +14,11 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Crosshair, Loader2, Plus, Upload, X } from "lucide-react";
+import { Crosshair, Loader2, Plus, Quote, Upload, X } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { submitCrossPost } from "@/hooks/use-cross-posts";
+import { burnQuoteIntoImage, withQuotationMarks } from "@/lib/burn-quote";
+import { VersePicker } from "./VersePicker";
 
 const CrossMap = lazy(() => import("./CrossMap"));
 
@@ -54,6 +56,40 @@ export function CrossUploadDialog({
   const [showPicker, setShowPicker] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [dragActive, setDragActive] = useState(false);
+  const [quote, setQuote] = useState("");
+  const [quoteReference, setQuoteReference] = useState("");
+  const [burnQuote, setBurnQuote] = useState(true);
+  const [burnedPreview, setBurnedPreview] = useState<string | null>(null);
+
+  // Live preview of the burned-in quote (same renderer as the upload).
+  useEffect(() => {
+    let cancelled = false;
+    let url: string | null = null;
+    if (!file || !burnQuote || !quote.trim()) {
+      setBurnedPreview(null);
+      return;
+    }
+    const timer = setTimeout(async () => {
+      try {
+        const blob = await burnQuoteIntoImage(file, {
+          quote,
+          reference: quoteReference,
+          maxSize: 900,
+          quality: 0.8,
+        });
+        if (cancelled) return;
+        url = URL.createObjectURL(blob);
+        setBurnedPreview(url);
+      } catch {
+        setBurnedPreview(null);
+      }
+    }, 350);
+    return () => {
+      cancelled = true;
+      clearTimeout(timer);
+      if (url) URL.revokeObjectURL(url);
+    };
+  }, [file, quote, quoteReference, burnQuote]);
 
   function reset() {
     setFile(null);
@@ -67,6 +103,10 @@ export function CrossUploadDialog({
     setCoords(null);
     setShowPicker(false);
     setDragActive(false);
+    setQuote("");
+    setQuoteReference("");
+    setBurnQuote(true);
+    setBurnedPreview(null);
   }
 
   function pickFile(f: File | undefined) {
@@ -115,6 +155,9 @@ export function CrossUploadDialog({
         story,
         authorName,
         isAnonymous,
+        quote,
+        quoteReference,
+        burnQuote,
       });
       toast({
         title: t("crossways.upload.successTitle"),
@@ -164,7 +207,11 @@ export function CrossUploadDialog({
             >
               {preview ? (
                 <>
-                  <img src={preview} alt={t("crossways.upload.photoLabel")} className="max-h-48 rounded-lg object-cover" />
+                  <img
+                    src={burnedPreview ?? preview}
+                    alt={t("crossways.upload.photoLabel")}
+                    className="max-h-48 rounded-lg object-cover"
+                  />
                   <span className="text-xs">{t("crossways.upload.replaceHint")}</span>
                 </>
               ) : (
@@ -273,6 +320,61 @@ export function CrossUploadDialog({
             />
             <p className="text-right text-xs text-muted-foreground">{story.length}/500</p>
           </div>
+
+          <div className="space-y-2 rounded-xl border border-border/60 p-3">
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <Label htmlFor="cross-quote" className="flex items-center gap-1.5">
+                <Quote className="h-4 w-4 text-primary" />
+                {t("crossways.upload.quoteLabel", "Bibelzitat oder Gedanke")}
+              </Label>
+              <VersePicker
+                onPick={(text, reference) => {
+                  setQuote(text);
+                  setQuoteReference(reference);
+                }}
+              />
+            </div>
+            <Textarea
+              id="cross-quote"
+              value={quote}
+              maxLength={280}
+              rows={2}
+              placeholder={t("crossways.upload.quotePlaceholder", "z. B. Der Herr ist mein Hirte")}
+              onChange={(e) => setQuote(e.target.value)}
+            />
+            <div className="flex items-center justify-between gap-2">
+              <Input
+                value={quoteReference}
+                maxLength={80}
+                placeholder={t("crossways.upload.quoteReferencePlaceholder", "Quelle, z. B. Psalm 23,1")}
+                onChange={(e) => setQuoteReference(e.target.value)}
+              />
+              <span className="shrink-0 text-xs text-muted-foreground">{quote.length}/280</span>
+            </div>
+            {quote.trim() && (
+              <p className="text-sm italic text-muted-foreground">
+                {withQuotationMarks(quote)}
+                {quoteReference.trim() && <span className="not-italic"> — {quoteReference.trim()}</span>}
+              </p>
+            )}
+            <div className="flex items-center justify-between gap-3 pt-1">
+              <Label htmlFor="cross-burn" className="text-sm font-normal leading-snug">
+                {t("crossways.upload.burnQuoteLabel", "Zitat aufs Foto schreiben")}
+              </Label>
+              <Switch
+                id="cross-burn"
+                checked={burnQuote}
+                disabled={!quote.trim()}
+                onCheckedChange={setBurnQuote}
+              />
+            </div>
+            {burnQuote && quote.trim() && (
+              <p className="text-xs text-muted-foreground">
+                {t("crossways.upload.burnQuoteHint", "Die Vorschau oben zeigt, wie das Foto hochgeladen wird.")}
+              </p>
+            )}
+          </div>
+
 
           <div className="flex items-center justify-between rounded-lg border border-border/60 p-3">
             <Label htmlFor="cross-anon" className="text-sm font-normal">{t("crossways.upload.anonymousLabel")}</Label>

@@ -100,6 +100,16 @@ export function CrossDetailModal({ post, open, onOpenChange, hasReacted, onReact
               <DialogTitle className="text-2xl font-display uppercase tracking-tight">
                 {post.place_label}
               </DialogTitle>
+              {post.quote && (
+                <blockquote className="border-l-2 border-primary/60 pl-3 text-base italic leading-relaxed text-foreground/90">
+                  {`\u201E${post.quote}\u201C`}
+                  {post.quote_reference && (
+                    <footer className="mt-1 text-sm not-italic text-muted-foreground">
+                      {post.quote_reference}
+                    </footer>
+                  )}
+                </blockquote>
+              )}
               {post.story && (
                 <DialogDescription className="text-base leading-relaxed">
                   {post.story}

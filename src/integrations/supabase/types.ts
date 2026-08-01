@@ -1246,6 +1246,9 @@ export type Database = {
           moderated_by: string | null
           place_label: string
           prayer_count: number
+          quote: string | null
+          quote_burned: boolean
+          quote_reference: string | null
           rejection_reason: string | null
           reported_count: number
           session_id: string | null
@@ -1267,6 +1270,9 @@ export type Database = {
           moderated_by?: string | null
           place_label: string
           prayer_count?: number
+          quote?: string | null
+          quote_burned?: boolean
+          quote_reference?: string | null
           rejection_reason?: string | null
           reported_count?: number
           session_id?: string | null
@@ -1288,6 +1294,9 @@ export type Database = {
           moderated_by?: string | null
           place_label?: string
           prayer_count?: number
+          quote?: string | null
+          quote_burned?: boolean
+          quote_reference?: string | null
           rejection_reason?: string | null
           reported_count?: number
           session_id?: string | null
@@ -3096,6 +3105,9 @@ export type Database = {
           lng: number
           place_label: string
           prayer_count: number
+          quote: string
+          quote_burned: boolean
+          quote_reference: string
           share_count: number
           story: string
         }[]
