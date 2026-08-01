@@ -109,7 +109,7 @@ export default function CrossModeration() {
           <Link to="/admin" className="text-muted-foreground hover:text-foreground">
             <ArrowLeft className="h-5 w-5" />
           </Link>
-          <h1 className="text-2xl font-bold">Kreuzwege-Moderation</h1>
+          <h1 className="text-2xl font-bold">{t("crossways.admin.title")}</h1>
         </div>
 
         <div className="flex flex-wrap gap-2">
@@ -120,23 +120,15 @@ export default function CrossModeration() {
               size="sm"
               onClick={() => setFilter(f)}
             >
-              {f === "reported"
-                ? "Gemeldet"
-                : f === "pending"
-                  ? "Ausstehend"
-                  : f === "approved"
-                    ? "Freigegeben"
-                    : f === "rejected"
-                      ? "Abgelehnt"
-                      : "Alle"}
+              {t(`crossways.admin.filter.${f}`)}
             </Button>
           ))}
         </div>
 
         {isLoading ? (
-          <p className="text-muted-foreground">Lade…</p>
+          <p className="text-muted-foreground">{t("crossways.admin.loading")}</p>
         ) : rows.length === 0 ? (
-          <p className="text-muted-foreground">Keine Einträge.</p>
+          <p className="text-muted-foreground">{t("crossways.admin.empty")}</p>
         ) : (
           <div className="space-y-4">
             {rows.map((row) => (
