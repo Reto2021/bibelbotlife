@@ -408,7 +408,7 @@ export function CrossUploadDialog({
               type="file"
               accept={IMAGE_ACCEPT_ATTRIBUTE}
               className="hidden"
-              onChange={(e) => pickFile(e.target.files?.[0])}
+              onChange={(e) => void pickFile(e.target.files?.[0])}
             />
 
 
