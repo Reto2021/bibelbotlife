@@ -87,16 +87,16 @@ export function CrossUploadDialog({ onSubmitted }: { onSubmitted: () => void }) 
         isAnonymous,
       });
       toast({
-        title: "Danke für dein Kreuz",
-        description: "Wir prüfen den Beitrag und veröffentlichen ihn danach.",
+        title: t("crossways.upload.successTitle"),
+        description: t("crossways.upload.successDesc"),
       });
       reset();
       setOpen(false);
       onSubmitted();
     } catch (err) {
       toast({
-        title: "Upload fehlgeschlagen",
-        description: err instanceof Error ? err.message : "Bitte nochmals versuchen.",
+        title: t("crossways.upload.errorTitle"),
+        description: err instanceof Error ? err.message : t("crossways.upload.errorDesc"),
         variant: "destructive",
       });
     } finally {
