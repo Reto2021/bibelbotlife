@@ -14,8 +14,10 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Crosshair, Loader2, Plus, Quote, Upload } from "lucide-react";
+import { Progress } from "@/components/ui/progress";
+import { AlertCircle, CheckCircle2, Crosshair, Loader2, Plus, Quote, Upload } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { toast as notify } from "sonner";
 import {
   IMAGE_ACCEPT_ATTRIBUTE,
   MIN_IMAGE_DIMENSION,
@@ -74,6 +76,9 @@ export function CrossUploadDialog({
   const [showPicker, setShowPicker] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [progress, setProgress] = useState<{ done: number; total: number } | null>(null);
+  const [statuses, setStatuses] = useState<
+    Record<string, { state: "pending" | "uploading" | "done" | "error"; message?: string }>
+  >({});
   const [dragActive, setDragActive] = useState(false);
   const [quote, setQuote] = useState("");
   const [quoteReference, setQuoteReference] = useState("");
@@ -95,6 +100,7 @@ export function CrossUploadDialog({
     setQuoteReference("");
     setBurnQuote(true);
     setProgress(null);
+    setStatuses({});
   }
 
   function rejectFile(result: ImageValidationResult, name?: string) {
@@ -208,9 +214,14 @@ export function CrossUploadDialog({
     if (!images.length || !placeLabel.trim() || !consent) return;
     setSubmitting(true);
     setProgress({ done: 0, total: images.length });
+    setStatuses(Object.fromEntries(images.map((i) => [i.id, { state: "pending" as const }])));
+
     let uploaded = 0;
-    try {
-      for (const item of images) {
+    const failures: { name: string; message: string }[] = [];
+
+    for (const item of images) {
+      setStatuses((prev) => ({ ...prev, [item.id]: { state: "uploading" } }));
+      try {
         await submitCrossPost({
           file: editedFiles[item.id] ?? item.file,
           placeLabel,
@@ -225,44 +236,59 @@ export function CrossUploadDialog({
           burnQuote,
         });
         uploaded += 1;
-        setProgress({ done: uploaded, total: images.length });
+        setStatuses((prev) => ({ ...prev, [item.id]: { state: "done" } }));
+      } catch (err) {
+        const message =
+          err instanceof ModerationError
+            ? t(
+                "crossways.upload.blockedDesc",
+                "Dieser Beitrag verstösst gegen unsere Regeln (keine sexuellen, rassistischen oder gewaltverherrlichenden Inhalte).",
+              )
+            : err instanceof Error
+              ? err.message
+              : t("crossways.upload.errorDesc");
+        failures.push({ name: item.file.name, message });
+        setStatuses((prev) => ({ ...prev, [item.id]: { state: "error", message } }));
       }
-      toast({
-        title: t("crossways.upload.successTitle"),
+      setProgress({ done: uploaded + failures.length, total: images.length });
+    }
+
+    setSubmitting(false);
+
+    if (uploaded > 0) {
+      notify.success(t("crossways.upload.successTitle"), {
         description:
-          images.length > 1
+          uploaded > 1
             ? t("crossways.upload.successDescMany", "{{count}} Bilder wurden veröffentlicht.").replace(
                 "{{count}}",
                 String(uploaded),
               )
             : t("crossways.upload.successDesc"),
       });
-      reset();
-      setOpen(false);
       onSubmitted();
-    } catch (err) {
-      if (uploaded > 0) onSubmitted();
-      if (err instanceof ModerationError) {
-        toast({
-          title: t("crossways.upload.blockedTitle", "Inhalt nicht erlaubt"),
-          description: t(
-            "crossways.upload.blockedDesc",
-            "Dieser Beitrag verstösst gegen unsere Regeln (keine sexuellen, rassistischen oder gewaltverherrlichenden Inhalte).",
-          ),
-          variant: "destructive",
-        });
-        return;
-      }
-      toast({
-        title: t("crossways.upload.errorTitle"),
-        description: err instanceof Error ? err.message : t("crossways.upload.errorDesc"),
-        variant: "destructive",
-      });
-    } finally {
-      setSubmitting(false);
-      setProgress(null);
     }
+
+    if (failures.length) {
+      notify.error(t("crossways.upload.errorTitle"), {
+        description:
+          failures.length === 1
+            ? `${failures[0].name}: ${failures[0].message}`
+            : t("crossways.upload.errorDescMany", "{{count}} Bilder konnten nicht hochgeladen werden.").replace(
+                "{{count}}",
+                String(failures.length),
+              ),
+      });
+      // Keep the failed images in the dialog so the user can retry.
+      const failedNames = new Set(failures.map((f) => f.name));
+      setImages((prev) => prev.filter((i) => failedNames.has(i.file.name)));
+      setProgress(null);
+      return;
+    }
+
+    reset();
+    setOpen(false);
   }
+
 
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
@@ -495,6 +521,50 @@ export function CrossUploadDialog({
               {t("crossways.upload.consent")}
             </Label>
           </div>
+
+          {(progress || Object.keys(statuses).length > 0) && (
+            <div className="space-y-2 rounded-xl border border-border/60 p-3">
+              <div className="flex items-center justify-between text-xs text-muted-foreground">
+                <span>{t("crossways.upload.progressLabel", "Upload-Fortschritt")}</span>
+                {progress && (
+                  <span>
+                    {progress.done}/{progress.total}
+                  </span>
+                )}
+              </div>
+              <Progress
+                value={progress ? (progress.done / Math.max(1, progress.total)) * 100 : 100}
+                className="h-2"
+              />
+              <ul className="space-y-1 text-xs">
+                {images.map((item) => {
+                  const status = statuses[item.id];
+                  if (!status) return null;
+                  return (
+                    <li key={item.id} className="flex items-start gap-1.5">
+                      {status.state === "done" && (
+                        <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-primary" />
+                      )}
+                      {status.state === "error" && (
+                        <AlertCircle className="mt-0.5 h-3.5 w-3.5 shrink-0 text-destructive" />
+                      )}
+                      {status.state === "uploading" && (
+                        <Loader2 className="mt-0.5 h-3.5 w-3.5 shrink-0 animate-spin text-muted-foreground" />
+                      )}
+                      {status.state === "pending" && (
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-muted-foreground/40" />
+                      )}
+                      <span className="min-w-0 flex-1 truncate">{item.file.name}</span>
+                      {status.state === "error" && (
+                        <span className="max-w-[55%] text-right text-destructive">{status.message}</span>
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          )}
+
 
           <Button
             type="submit"
