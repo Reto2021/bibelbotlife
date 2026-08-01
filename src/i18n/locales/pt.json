@@ -2170,6 +2170,9 @@
       "error": "Erro",
       "rejectionPlaceholder": "Motivo da rejeição",
       "reportedCount": "Denunciado {{count}}×"
+    },
+    "modal": {
+      "mapLabel": "Localização"
     }
   }
 }

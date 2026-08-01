@@ -2170,6 +2170,9 @@
       "error": "Àṣìṣe",
       "rejectionPlaceholder": "Ìdí tí wọ́n fi kọ̀ ọ́",
       "reportedCount": "{{count}}× ròyìn"
+    },
+    "modal": {
+      "mapLabel": "Ibi tí ó wà"
     }
   }
 }

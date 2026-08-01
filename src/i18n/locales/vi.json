@@ -2172,6 +2172,9 @@
       "error": "Lỗi",
       "rejectionPlaceholder": "Lý do từ chối",
       "reportedCount": "Đã báo cáo {{count}} lần"
+    },
+    "modal": {
+      "mapLabel": "Vị trí"
     }
   }
 }

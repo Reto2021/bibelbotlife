@@ -2212,6 +2212,9 @@
       "error": "Feil",
       "rejectionPlaceholder": "Årsak til avvisning",
       "reportedCount": "Rapportert {{count}} ganger"
+    },
+    "modal": {
+      "mapLabel": "Sted"
     }
   }
 }

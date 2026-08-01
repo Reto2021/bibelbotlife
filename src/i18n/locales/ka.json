@@ -2172,6 +2172,9 @@
       "error": "შეცდომა",
       "rejectionPlaceholder": "უარყოფის მიზეზი",
       "reportedCount": "{{count}}× შეტყობინებული"
+    },
+    "modal": {
+      "mapLabel": "მდებარეობა"
     }
   }
 }

@@ -2170,6 +2170,9 @@
       "error": "Помилка",
       "rejectionPlaceholder": "Причина відхилення",
       "reportedCount": "Повідомлено {{count}} разів"
+    },
+    "modal": {
+      "mapLabel": "Місцезнаходження"
     }
   }
 }

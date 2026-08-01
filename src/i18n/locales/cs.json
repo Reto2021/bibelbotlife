@@ -2170,6 +2170,9 @@
       "error": "Chyba",
       "rejectionPlaceholder": "Důvod zamítnutí",
       "reportedCount": "Nahlášeno {{count}}×"
+    },
+    "modal": {
+      "mapLabel": "Umístění"
     }
   }
 }

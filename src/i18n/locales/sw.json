@@ -2170,6 +2170,9 @@
       "error": "Hitilafu",
       "rejectionPlaceholder": "Sababu ya kukataliwa",
       "reportedCount": "Imetolewa ripoti mara {{count}}×"
+    },
+    "modal": {
+      "mapLabel": "Mahali"
     }
   }
 }

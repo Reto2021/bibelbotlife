@@ -2171,6 +2171,9 @@
       "error": "错误",
       "rejectionPlaceholder": "拒绝理由",
       "reportedCount": "被举报{{count}}次"
+    },
+    "modal": {
+      "mapLabel": "地点"
     }
   }
 }

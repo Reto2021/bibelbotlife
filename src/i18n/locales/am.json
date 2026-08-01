@@ -2168,6 +2168,9 @@
       "error": "ስህተት",
       "rejectionPlaceholder": "የውድቅነት ምክንያት",
       "reportedCount": "{{count}}× ሪፖርት ተደርጓል"
+    },
+    "modal": {
+      "mapLabel": "አካባቢ"
     }
   }
 }

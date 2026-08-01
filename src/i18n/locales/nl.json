@@ -2211,6 +2211,9 @@
       "error": "Fout",
       "rejectionPlaceholder": "Reden van afwijzing",
       "reportedCount": "{{count}}× gerapporteerd"
+    },
+    "modal": {
+      "mapLabel": "Locatie"
     }
   }
 }

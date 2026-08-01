@@ -2170,6 +2170,9 @@
       "error": "Hiba",
       "rejectionPlaceholder": "Elutasítás oka",
       "reportedCount": "{{count}}× jelentve"
+    },
+    "modal": {
+      "mapLabel": "Helyszín"
     }
   }
 }

@@ -2178,6 +2178,9 @@
       "error": "Errore",
       "rejectionPlaceholder": "Motivo del rifiuto",
       "reportedCount": "Segnalato {{count}} volte"
+    },
+    "modal": {
+      "mapLabel": "Posizione"
     }
   }
 }

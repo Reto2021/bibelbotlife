@@ -2170,6 +2170,9 @@
       "error": "Chyba",
       "rejectionPlaceholder": "Dôvod zamietnutia",
       "reportedCount": "Nahlásené {{count}}×"
+    },
+    "modal": {
+      "mapLabel": "Umiestnenie"
     }
   }
 }

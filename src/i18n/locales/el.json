@@ -2171,6 +2171,9 @@
       "error": "Σφάλμα",
       "rejectionPlaceholder": "Λόγος απόρριψης",
       "reportedCount": "Αναφέρθηκε {{count}} φορές"
+    },
+    "modal": {
+      "mapLabel": "Τοποθεσία"
     }
   }
 }
