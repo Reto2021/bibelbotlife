@@ -14,8 +14,10 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Crosshair, Loader2, Plus, Quote, Upload } from "lucide-react";
+import { Progress } from "@/components/ui/progress";
+import { AlertCircle, CheckCircle2, Crosshair, Loader2, Plus, Quote, Upload } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { toast as notify } from "sonner";
 import {
   IMAGE_ACCEPT_ATTRIBUTE,
   MIN_IMAGE_DIMENSION,
@@ -74,6 +76,9 @@ export function CrossUploadDialog({
   const [showPicker, setShowPicker] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [progress, setProgress] = useState<{ done: number; total: number } | null>(null);
+  const [statuses, setStatuses] = useState<
+    Record<string, { state: "pending" | "uploading" | "done" | "error"; message?: string }>
+  >({});
   const [dragActive, setDragActive] = useState(false);
   const [quote, setQuote] = useState("");
   const [quoteReference, setQuoteReference] = useState("");
@@ -95,6 +100,7 @@ export function CrossUploadDialog({
     setQuoteReference("");
     setBurnQuote(true);
     setProgress(null);
+    setStatuses({});
   }
 
   function rejectFile(result: ImageValidationResult, name?: string) {
@@ -250,7 +256,7 @@ export function CrossUploadDialog({
     setSubmitting(false);
 
     if (uploaded > 0) {
-      toast.success(t("crossways.upload.successTitle"), {
+      notify.success(t("crossways.upload.successTitle"), {
         description:
           uploaded > 1
             ? t("crossways.upload.successDescMany", "{{count}} Bilder wurden veröffentlicht.").replace(
@@ -263,7 +269,7 @@ export function CrossUploadDialog({
     }
 
     if (failures.length) {
-      toast.error(t("crossways.upload.errorTitle"), {
+      notify.error(t("crossways.upload.errorTitle"), {
         description:
           failures.length === 1
             ? `${failures[0].name}: ${failures[0].message}`
