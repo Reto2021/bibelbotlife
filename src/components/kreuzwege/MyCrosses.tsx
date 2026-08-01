@@ -37,6 +37,9 @@ import {
 import { useMyCrossPosts, type MyCrossPost } from "@/hooks/use-cross-posts";
 import { MAX_BURN_QUOTE_LENGTH } from "@/lib/burn-quote";
 
+/** Cards rendered per batch; keeps the DOM small when a user has many crosses. */
+const PAGE_SIZE = 9;
+
 export function MyCrosses() {
   const { t } = useTranslation();
   const { posts, loading, update, remove } = useMyCrossPosts();
