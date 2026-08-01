@@ -198,6 +198,7 @@ const App = () => {
                    <Route path="/bible-search" element={<BibleSearch />} />
                    <Route path="/bibel" element={<BibleSearch />} />
                   <Route path="/gebetswand" element={<PrayerWall />} />
+                  <Route path="/kreuzwege" element={<Kreuzwege />} />
                   <Route path="/bibelquiz" element={<BibleQuiz />} />
                   <Route path="/unsubscribe" element={<Unsubscribe />} />
                   <Route path="/spenden" element={<Spenden />} />
