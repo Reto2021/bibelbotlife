@@ -167,7 +167,14 @@ export function CrossUploadDialog({
         rejectFile(content, f.name);
         continue;
       }
-      accepted.push({ id: crypto.randomUUID(), file: f });
+      // Bake EXIF rotation into the pixels so preview, edits and upload match.
+      let normalized = f;
+      try {
+        normalized = await normalizeImageOrientation(f);
+      } catch {
+        normalized = f;
+      }
+      accepted.push({ id: crypto.randomUUID(), file: normalized });
     }
 
     if (limitHit) {
