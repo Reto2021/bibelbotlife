@@ -138,6 +138,16 @@ export interface NewCrossPost {
   burnQuote?: boolean;
 }
 
+async function blobToBase64(blob: Blob): Promise<string> {
+  const buf = new Uint8Array(await blob.arrayBuffer());
+  let binary = "";
+  const chunk = 0x8000;
+  for (let i = 0; i < buf.length; i += chunk) {
+    binary += String.fromCharCode(...buf.subarray(i, i + chunk));
+  }
+  return btoa(binary);
+}
+
 export async function submitCrossPost(input: NewCrossPost) {
   const quote = input.quote?.trim() || "";
   const reference = input.quoteReference?.trim() || "";
@@ -147,38 +157,49 @@ export async function submitCrossPost(input: NewCrossPost) {
     ? await burnQuoteIntoImage(input.file, { quote, reference })
     : await compressImage(input.file);
 
-  // Safety gate: no pornographic imagery, no racist / hateful text.
-  const verdict = await moderateSubmission({
-    image: blob,
-    texts: [input.placeLabel, input.story ?? "", quote, reference, input.authorName ?? ""],
+  // Fast local text filter; the authoritative checks (file type, size, image and
+  // text moderation) all run server side in the cross-post-submit function.
+  const local = localTextCheck([
+    input.placeLabel,
+    input.story ?? "",
+    quote,
+    reference,
+    input.authorName ?? "",
+  ]);
+  if (local) throw new ModerationError(local);
+
+  const { data, error } = await supabase.functions.invoke("cross-post-submit", {
+    body: {
+      imageBase64: await blobToBase64(blob),
+      placeLabel: input.placeLabel,
+      country: input.country ?? null,
+      lat: input.lat ?? null,
+      lng: input.lng ?? null,
+      story: input.story ?? null,
+      authorName: input.authorName ?? null,
+      isAnonymous: input.isAnonymous,
+      quote,
+      quoteReference: reference,
+      quoteBurned: burned,
+      sessionId: getSessionId(),
+    },
   });
-  if (!verdict.allowed) throw new ModerationError(verdict);
 
-  const path = `${crypto.randomUUID()}.jpg`;
+  const payload = (data ?? null) as
+    | { error?: string; categories?: string[]; reason?: string; id?: string }
+    | null;
 
-  const { error: uploadError } = await supabase.storage
-    .from("cross-photos")
-    .upload(path, blob, { contentType: "image/jpeg", upsert: false });
-  if (uploadError) throw uploadError;
-
-  const { error } = await supabase.from("cross_posts" as any).insert({
-    image_path: path,
-    place_label: input.placeLabel.trim(),
-    country: input.country?.trim() || null,
-    lat: input.lat ?? null,
-    lng: input.lng ?? null,
-    story: input.story?.trim() || null,
-    quote: quote || null,
-    quote_reference: reference || null,
-    quote_burned: burned,
-    author_name: input.isAnonymous ? null : input.authorName?.trim() || null,
-    is_anonymous: input.isAnonymous,
-    session_id: getSessionId(),
-    status: "approved",
-    prayer_count: 0,
-  } as any);
+  if (payload?.error === "blocked") {
+    throw new ModerationError({
+      allowed: false,
+      categories: payload.categories ?? [],
+      reason: payload.reason ?? "",
+    });
+  }
+  if (payload?.error) throw new Error(payload.error);
   if (error) throw error;
 }
+
 
 /** Haversine distance in km. */
 export function distanceKm(
