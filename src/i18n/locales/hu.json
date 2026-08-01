@@ -2105,7 +2105,10 @@
       "eyebrow": "Keresztutak",
       "title": "Keresztek a világ minden tájáról",
       "description": "Az út szélén, hegycsúcsokon, templomokban. Ossza meg fotóját – és kísérje imával mások keresztjeit.",
-      "cta": "Fedezze fel a Keresztutakat"
+      "cta": "Fedezze fel a Keresztutakat",
+      "placeholder1": "Keresztút a hegyekben",
+      "placeholder2": "Áhítat a kápolnában",
+      "placeholder3": "Kereszt a horizonton"
     },
     "upload": {
       "trigger": "Kereszt hozzáadása",

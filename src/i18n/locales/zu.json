@@ -2105,7 +2105,10 @@
       "eyebrow": "Izindlela Zesiphambano",
       "title": "Iziphambano ezivela emhlabeni wonke",
       "description": "Eceleni komgwaqo, ezintabeni, emasontweni. Yabelana ngesithombe sakho — bese uphelekezela iziphambano zabanye ngomkhuleko.",
-      "cta": "Thola izindlela zesiphambano"
+      "cta": "Thola izindlela zesiphambano",
+      "placeholder1": "Indawo yokuwela ezintabeni",
+      "placeholder2": "Ukuzinikela eChapel",
+      "placeholder3": "Isiphambano emkhathizwe"
     },
     "upload": {
       "trigger": "Engeza isiphambano",

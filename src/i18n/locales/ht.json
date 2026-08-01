@@ -2105,7 +2105,10 @@
       "eyebrow": "Kreuzwege",
       "title": "Krua soti nan tout mond lan",
       "description": "Sou bò wout la, sou tèt mòn yo, nan legliz yo. Pataje foto ou — epi akonpaye kwa lòt moun nan lapriyè.",
-      "cta": "Dekouvri Kreuzwege"
+      "cta": "Dekouvri Kreuzwege",
+      "placeholder1": "Kwa nan mòn yo",
+      "placeholder2": "Devosyon nan chapèl la",
+      "placeholder3": "Kwa sou orizon an"
     },
     "upload": {
       "trigger": "Ajoute kwa",

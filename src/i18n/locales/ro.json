@@ -2105,7 +2105,10 @@
       "eyebrow": "Căi ale Crucii",
       "title": "Cruci din întreaga lume",
       "description": "Pe marginea drumului, pe vârfuri de munte, în biserici. Împărtășește fotografia ta — și însoțește crucile altora în rugăciune.",
-      "cta": "Descoperă Căi ale Crucii"
+      "cta": "Descoperă Căi ale Crucii",
+      "placeholder1": "Răscruce în munți",
+      "placeholder2": "Devoțiune în capelă",
+      "placeholder3": "Cruce la orizont"
     },
     "upload": {
       "trigger": "Adaugă o cruce",

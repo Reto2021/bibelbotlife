@@ -2147,7 +2147,10 @@
       "eyebrow": "Korsveier",
       "title": "Kors fra hele verden",
       "description": "Langs veien, på fjelltopper, i kirker. Del bildet ditt – og følg andres kors i bønn.",
-      "cta": "Oppdag korsveier"
+      "cta": "Oppdag korsveier",
+      "placeholder1": "Veikryss i fjellet",
+      "placeholder2": "Andakt i kapellet",
+      "placeholder3": "Kors i horisonten"
     },
     "upload": {
       "trigger": "Legg til kors",

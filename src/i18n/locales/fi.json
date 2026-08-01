@@ -2105,7 +2105,10 @@
       "eyebrow": "Ristintiet",
       "title": "Ristejä kaikkialta maailmasta",
       "description": "Tienvarsilla, vuorenhuipuilla, kirkoissa. Jaa valokuvasi – ja tue muiden ristejä rukouksin.",
-      "cta": "Tutustu Ristinteihin"
+      "cta": "Tutustu Ristinteihin",
+      "placeholder1": "Risteykset vuorilla",
+      "placeholder2": "Hartaus kappelissa",
+      "placeholder3": "Risti horisontissa"
     },
     "upload": {
       "trigger": "Lisää risti",

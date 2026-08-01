@@ -2105,7 +2105,10 @@
       "eyebrow": "Drogi Krzyżowe",
       "title": "Krzyże z całego świata",
       "description": "Przydrożne, na szczytach gór, w kościołach. Udostępnij swoje zdjęcie — i towarzysz krzyżom innych w modlitwie.",
-      "cta": "Odkryj Drogi Krzyżowe"
+      "cta": "Odkryj Drogi Krzyżowe",
+      "placeholder1": "Rozdroże w górach",
+      "placeholder2": "Nabożeństwo w kaplicy",
+      "placeholder3": "Krzyż na horyzoncie"
     },
     "upload": {
       "trigger": "Dodaj krzyż",

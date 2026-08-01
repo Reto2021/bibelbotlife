@@ -2106,7 +2106,10 @@
       "eyebrow": "十字架之路",
       "title": "来自世界各地的十字架",
       "description": "路边、山顶、教堂。分享你的照片 — 并为他人的十字架祈祷。",
-      "cta": "探索十字架之路"
+      "cta": "探索十字架之路",
+      "placeholder1": "山间十字路口",
+      "placeholder2": "教堂里的灵修",
+      "placeholder3": "地平线上的十字架"
     },
     "upload": {
       "trigger": "添加十字架",

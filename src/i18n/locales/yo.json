@@ -2105,7 +2105,10 @@
       "eyebrow": "Àwọn Ọ̀nà Agbelebu",
       "title": "Àwọn agbelebu láti gbogbo àgbáyé",
       "description": "Ní ẹ̀bá ọ̀nà, lórí òkè, nínú àwọn ṣọ́ọ̀ṣì. Pín fọ́tò rẹ — kí o sì bá àwọn agbelebu àwọn mìíràn gbàdúrà.",
-      "cta": "Ṣàwárí Àwọn Ọ̀nà Agbelebu"
+      "cta": "Ṣàwárí Àwọn Ọ̀nà Agbelebu",
+      "placeholder1": "Ọna agbelebu ni awọn oke-nla",
+      "placeholder2": "Ifọkansin ni ile-ijọsin",
+      "placeholder3": "Agbelebu ni oju-ọrun"
     },
     "upload": {
       "trigger": "Fi agbelebu kún",

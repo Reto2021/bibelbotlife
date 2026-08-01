@@ -2146,7 +2146,10 @@
       "eyebrow": "Kruiswegen",
       "title": "Kruisen van over de hele wereld",
       "description": "Langs de weg, op bergtoppen, in kerken. Deel je foto — en begeleid de kruisen van anderen in gebed.",
-      "cta": "Ontdek kruiswegen"
+      "cta": "Ontdek kruiswegen",
+      "placeholder1": "Wegkruis in de bergen",
+      "placeholder2": "Devotie in de kapel",
+      "placeholder3": "Kruis aan de horizon"
     },
     "upload": {
       "trigger": "Kruis toevoegen",

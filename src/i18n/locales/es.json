@@ -2105,7 +2105,10 @@
       "eyebrow": "Caminos de Cruces",
       "title": "Cruces de todo el mundo",
       "description": "Al borde del camino, en cumbres de montañas, en iglesias. Comparte tu foto — y acompaña las cruces de otros en oración.",
-      "cta": "Descubrir Caminos de Cruces"
+      "cta": "Descubrir Caminos de Cruces",
+      "placeholder1": "Cruce de caminos en las montañas",
+      "placeholder2": "Devocional en la capilla",
+      "placeholder3": "Cruz en el horizonte"
     },
     "upload": {
       "trigger": "Añadir cruz",

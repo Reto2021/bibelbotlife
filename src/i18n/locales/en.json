@@ -2167,7 +2167,10 @@
       "eyebrow": "Crossroads",
       "title": "Crosses from all over the world",
       "description": "By the roadside, on mountain peaks, in churches. Share your photo — and accompany the crosses of others in prayer.",
-      "cta": "Discover Crossroads"
+      "cta": "Discover Crossroads",
+      "placeholder1": "Crossroads in the mountains",
+      "placeholder2": "Devotion in the chapel",
+      "placeholder3": "Cross on the horizon"
     },
     "upload": {
       "trigger": "Add cross",

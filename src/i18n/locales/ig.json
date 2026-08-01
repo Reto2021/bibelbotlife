@@ -2146,7 +2146,10 @@
       "eyebrow": "Ụzọ obe",
       "title": "Obe sitere n'ụwa niile",
       "description": "N'akụkụ ụzọ, n'elu ugwu, n'ụka. Kekọrịta foto gị — ma soro obe ndị ọzọ kpee ekpere.",
-      "cta": "Chọpụta ụzọ obe"
+      "cta": "Chọpụta ụzọ obe",
+      "placeholder1": "Ụzọ obe n'ugwu",
+      "placeholder2": "Ofufe n'ụlọ ụka",
+      "placeholder3": "Obe n'eluigwe"
     },
     "upload": {
       "trigger": "Tinye obe",

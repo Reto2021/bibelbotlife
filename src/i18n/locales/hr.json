@@ -2105,7 +2105,10 @@
       "eyebrow": "Križni putovi",
       "title": "Križevi iz cijelog svijeta",
       "description": "Uz cestu, na vrhovima planina, u crkvama. Podijelite svoju fotografiju — i pratite križeve drugih u molitvi.",
-      "cta": "Otkrijte križne putove"
+      "cta": "Otkrijte križne putove",
+      "placeholder1": "Križanje u planinama",
+      "placeholder2": "Pobožnost u kapelici",
+      "placeholder3": "Križ na horizontu"
     },
     "upload": {
       "trigger": "Dodaj križ",
