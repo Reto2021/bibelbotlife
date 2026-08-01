@@ -41,6 +41,8 @@ Deno.serve(async (req) => {
       author_name: p.author_name,
       is_anonymous: p.is_anonymous,
       prayer_count: p.prayer_count,
+      amen_count: p.amen_count ?? 0,
+      share_count: p.share_count ?? 0,
       created_at: p.created_at,
       image_url: urlMap.get(String(p.image_path)) ?? null,
     }));
