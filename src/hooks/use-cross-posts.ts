@@ -10,6 +10,9 @@ export interface CrossPost {
   lat: number | null;
   lng: number | null;
   story: string | null;
+  quote: string | null;
+  quote_reference: string | null;
+  quote_burned: boolean;
   author_name: string | null;
   is_anonymous: boolean;
   prayer_count: number;
