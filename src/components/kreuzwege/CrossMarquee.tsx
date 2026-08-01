@@ -71,7 +71,7 @@ export function CrossMarquee() {
             >
               <img
                 src={p.image_url!}
-                alt={`Kreuz bei ${p.place_label}`}
+                alt={t("crossways.card.imageAlt", { place: p.place_label })}
                 loading="lazy"
                 className="aspect-[4/5] w-full object-cover"
               />
