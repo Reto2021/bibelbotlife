@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { MapPin, HandHeart, Sparkles, ExternalLink, Plus, Minus } from "lucide-react";
+import { MapPin, HandHeart, Sparkles, ExternalLink, Plus, Minus, Link2, Check } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 import {
   Dialog,
   DialogContent,
@@ -25,10 +26,15 @@ const MAX_ZOOM = 18;
 
 export function CrossDetailModal({ post, open, onOpenChange, hasReacted, onReact }: Props) {
   const { t } = useTranslation();
+  const { toast } = useToast();
   const [zoom, setZoom] = useState(13);
+  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
-    if (open) setZoom(13);
+    if (open) {
+      setZoom(13);
+      setCopied(false);
+    }
   }, [open, post?.id]);
 
   if (!post) return null;
@@ -43,6 +49,26 @@ export function CrossDetailModal({ post, open, onOpenChange, hasReacted, onReact
       )}`;
 
   const openExternalMaps = () => window.open(mapsUrl, "_blank", "noopener,noreferrer");
+
+  const shareUrl = `${window.location.origin}/kreuzwege?post=${post.id}`;
+
+  async function copyLink() {
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+    } catch {
+      const el = document.createElement("textarea");
+      el.value = shareUrl;
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand("copy");
+      el.remove();
+    }
+    setCopied(true);
+    onReact(post.id, "share");
+    toast({ title: t("crossways.modal.linkCopied", "Link kopiert") });
+    setTimeout(() => setCopied(false), 2000);
+  }
+
 
 
   return (
@@ -151,6 +177,13 @@ export function CrossDetailModal({ post, open, onOpenChange, hasReacted, onReact
                 <Sparkles className="h-4 w-4" />
                 {t("crossways.card.amen")}
                 <span className="text-xs text-muted-foreground">{post.amen_count}</span>
+              </Button>
+
+              <Button variant="outline" size="default" onClick={copyLink} className="gap-2">
+                {copied ? <Check className="h-4 w-4" /> : <Link2 className="h-4 w-4" />}
+                {copied
+                  ? t("crossways.modal.linkCopied", "Link kopiert")
+                  : t("crossways.modal.copyLink", "Link kopieren")}
               </Button>
             </div>
           </div>

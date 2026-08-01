@@ -1,11 +1,13 @@
-import { lazy, Suspense, useMemo, useState } from "react";
+import { lazy, Suspense, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useSearchParams } from "react-router-dom";
 import { SEOHead } from "@/components/SEOHead";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Button } from "@/components/ui/button";
 import { Loader2, LayoutGrid, Map as MapIcon, Navigation } from "lucide-react";
 import { CrossFeed } from "@/components/kreuzwege/CrossFeed";
 import { CrossUploadDialog } from "@/components/kreuzwege/CrossUploadDialog";
+import { CrossDetailModal } from "@/components/kreuzwege/CrossDetailModal";
 import { useCrossPosts, distanceKm } from "@/hooks/use-cross-posts";
 import { useToast } from "@/hooks/use-toast";
 
@@ -17,6 +19,29 @@ export default function Kreuzwege() {
   const { toast } = useToast();
   const [view, setView] = useState<"feed" | "map">("feed");
   const [me, setMe] = useState<{ lat: number; lng: number } | null>(null);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [detailId, setDetailId] = useState<string | null>(null);
+
+  const deepLinkId = searchParams.get("post");
+
+  useEffect(() => {
+    if (deepLinkId && posts.some((p) => p.id === deepLinkId)) setDetailId(deepLinkId);
+  }, [deepLinkId, posts]);
+
+  const detailPost = useMemo(
+    () => posts.find((p) => p.id === detailId) ?? null,
+    [posts, detailId],
+  );
+
+  function closeDetail() {
+    setDetailId(null);
+    if (searchParams.has("post")) {
+      const next = new URLSearchParams(searchParams);
+      next.delete("post");
+      setSearchParams(next, { replace: true });
+    }
+  }
+
 
   const sorted = useMemo(() => {
     if (!me) return posts;
@@ -97,6 +122,14 @@ export default function Kreuzwege() {
             />
           </Suspense>
         )}
+
+        <CrossDetailModal
+          post={detailPost}
+          open={!!detailPost}
+          onOpenChange={(o) => !o && closeDetail()}
+          hasReacted={hasReacted}
+          onReact={react}
+        />
       </main>
     </div>
   );
