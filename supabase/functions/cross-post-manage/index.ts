@@ -186,8 +186,26 @@ Deno.serve(async (req) => {
     const quoteReference = str(body.quoteReference, 80);
     const isAnonymous = body.isAnonymous === true;
     const authorName = isAnonymous ? null : str(body.authorName, 60);
+    const quoteBurned = body.quoteBurned === true;
 
-    // Re-run text moderation on edited content.
+    // ---- optional photo replacement ----
+    let newBytes: Uint8Array | null = null;
+    let newMime: string | null = null;
+    if (typeof body.imageBase64 === "string" && body.imageBase64) {
+      if (body.imageBase64.length > Math.ceil((MAX_IMAGE_BYTES * 4) / 3) + 1024) {
+        return json({ error: "image_too_large", maxBytes: MAX_IMAGE_BYTES }, 413);
+      }
+      newBytes = decodeBase64(body.imageBase64);
+      if (!newBytes) return json({ error: "image_unreadable" }, 400);
+      if (newBytes.byteLength < MIN_IMAGE_BYTES) return json({ error: "image_too_small" }, 400);
+      if (newBytes.byteLength > MAX_IMAGE_BYTES) {
+        return json({ error: "image_too_large", maxBytes: MAX_IMAGE_BYTES }, 413);
+      }
+      newMime = detectMime(newBytes);
+      if (!newMime) return json({ error: "unsupported_format" }, 415);
+    }
+
+    // Re-run moderation on edited content (image included when replaced).
     const modRes = await fetch(`${supabaseUrl}/functions/v1/content-moderation`, {
       method: "POST",
       headers: {
@@ -196,6 +214,7 @@ Deno.serve(async (req) => {
       },
       body: JSON.stringify({
         texts: [placeLabel, story ?? "", quote ?? "", quoteReference ?? "", authorName ?? ""],
+        ...(newMime ? { imageBase64: body.imageBase64, imageMimeType: newMime } : {}),
       }),
     });
     if (modRes.ok) {
@@ -208,6 +227,20 @@ Deno.serve(async (req) => {
       }
     }
 
+    // Upload the replacement under a fresh path so caches/CDN never serve the old photo.
+    let newPath: string | null = null;
+    if (newBytes && newMime) {
+      const ext = newMime === "image/jpeg" ? "jpg" : newMime.split("/")[1];
+      newPath = `${id}-${Date.now()}.${ext}`;
+      const { error: upErr } = await admin.storage
+        .from("cross-photos")
+        .upload(newPath, newBytes, { contentType: newMime, upsert: false });
+      if (upErr) {
+        console.error("cross replace upload failed", upErr.message);
+        return json({ error: "upload_failed" }, 500);
+      }
+    }
+
     const { error: updErr } = await admin
       .from("cross_posts")
       .update({
@@ -217,11 +250,28 @@ Deno.serve(async (req) => {
         quote_reference: quoteReference,
         author_name: authorName,
         is_anonymous: isAnonymous,
+        ...(newPath ? { image_path: newPath, quote_burned: quoteBurned } : {}),
       })
       .eq("id", id);
-    if (updErr) throw updErr;
+    if (updErr) {
+      if (newPath) await admin.storage.from("cross-photos").remove([newPath]);
+      throw updErr;
+    }
 
-    return json({ ok: true, id });
+    // Old file only goes away once the row points at the new one.
+    if (newPath && owned.image_path && owned.image_path !== newPath) {
+      await admin.storage.from("cross-photos").remove([owned.image_path as string]);
+    }
+
+    let imageUrl: string | null = null;
+    if (newPath) {
+      const { data: signed } = await admin.storage
+        .from("cross-photos")
+        .createSignedUrl(newPath, 60 * 60);
+      imageUrl = signed?.signedUrl ?? null;
+    }
+
+    return json({ ok: true, id, imagePath: newPath, imageUrl });
   } catch (err) {
     console.error("cross-post-manage error", err);
     return json({ error: "unexpected_error" }, 500);
