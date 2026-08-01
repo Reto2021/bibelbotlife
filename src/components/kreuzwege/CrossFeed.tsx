@@ -1,13 +1,13 @@
 import { CrossCard } from "./CrossCard";
-import type { CrossPost } from "@/hooks/use-cross-posts";
+import type { CrossInteraction, CrossPost } from "@/hooks/use-cross-posts";
 
 interface Props {
   posts: CrossPost[];
-  prayed: Set<string>;
-  onPray: (id: string) => void;
+  hasReacted: (id: string, kind: CrossInteraction) => boolean;
+  onReact: (id: string, kind: CrossInteraction) => void;
 }
 
-export function CrossFeed({ posts, prayed, onPray }: Props) {
+export function CrossFeed({ posts, hasReacted, onReact }: Props) {
   if (posts.length === 0) {
     return (
       <p className="py-16 text-center text-muted-foreground">
@@ -19,7 +19,7 @@ export function CrossFeed({ posts, prayed, onPray }: Props) {
   return (
     <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {posts.map((p) => (
-        <CrossCard key={p.id} post={p} hasPrayed={prayed.has(p.id)} onPray={onPray} />
+        <CrossCard key={p.id} post={p} hasReacted={hasReacted} onReact={onReact} />
       ))}
     </div>
   );

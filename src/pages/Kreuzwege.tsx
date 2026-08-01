@@ -11,7 +11,7 @@ import { useToast } from "@/hooks/use-toast";
 const CrossMap = lazy(() => import("@/components/kreuzwege/CrossMap"));
 
 export default function Kreuzwege() {
-  const { posts, loading, prayed, pray, reload } = useCrossPosts();
+  const { posts, loading, hasReacted, react, reload } = useCrossPosts();
   const { toast } = useToast();
   const [view, setView] = useState<"feed" | "map">("feed");
   const [me, setMe] = useState<{ lat: number; lng: number } | null>(null);
@@ -88,7 +88,7 @@ export default function Kreuzwege() {
             <Loader2 className="h-6 w-6 animate-spin text-primary" />
           </div>
         ) : view === "feed" ? (
-          <CrossFeed posts={sorted} prayed={prayed} onPray={pray} />
+          <CrossFeed posts={sorted} hasReacted={hasReacted} onReact={react} />
         ) : (
           <Suspense fallback={<div className="h-[70vh] rounded-xl bg-muted/40" />}>
             <CrossMap

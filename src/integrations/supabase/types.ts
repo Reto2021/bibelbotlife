@@ -1199,8 +1199,41 @@ export type Database = {
         }
         Relationships: []
       }
+      cross_interactions: {
+        Row: {
+          created_at: string
+          id: string
+          kind: string
+          post_id: string
+          session_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          kind: string
+          post_id: string
+          session_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          kind?: string
+          post_id?: string
+          session_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "cross_interactions_post_id_fkey"
+            columns: ["post_id"]
+            isOneToOne: false
+            referencedRelation: "cross_posts"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       cross_posts: {
         Row: {
+          amen_count: number
           author_name: string | null
           country: string | null
           created_at: string
@@ -1215,10 +1248,12 @@ export type Database = {
           prayer_count: number
           rejection_reason: string | null
           session_id: string | null
+          share_count: number
           status: string
           story: string | null
         }
         Insert: {
+          amen_count?: number
           author_name?: string | null
           country?: string | null
           created_at?: string
@@ -1233,10 +1268,12 @@ export type Database = {
           prayer_count?: number
           rejection_reason?: string | null
           session_id?: string | null
+          share_count?: number
           status?: string
           story?: string | null
         }
         Update: {
+          amen_count?: number
           author_name?: string | null
           country?: string | null
           created_at?: string
@@ -1251,6 +1288,7 @@ export type Database = {
           prayer_count?: number
           rejection_reason?: string | null
           session_id?: string | null
+          share_count?: number
           status?: string
           story?: string | null
         }
@@ -3044,6 +3082,7 @@ export type Database = {
       get_approved_cross_posts: {
         Args: never
         Returns: {
+          amen_count: number
           author_name: string
           country: string
           created_at: string
@@ -3054,6 +3093,7 @@ export type Database = {
           lng: number
           place_label: string
           prayer_count: number
+          share_count: number
           story: string
         }[]
       }
@@ -3178,10 +3218,6 @@ export type Database = {
         Args: { request_id: string }
         Returns: undefined
       }
-      increment_cross_prayer_count: {
-        Args: { post_id: string }
-        Returns: undefined
-      }
       increment_golden_answer_use: {
         Args: { answer_id: string }
         Returns: undefined
@@ -3236,6 +3272,14 @@ export type Database = {
           message: Json
           msg_id: number
           read_ct: number
+        }[]
+      }
+      record_cross_interaction: {
+        Args: { p_kind: string; p_post_id: string; p_session_id: string }
+        Returns: {
+          amen_count: number
+          prayer_count: number
+          share_count: number
         }[]
       }
       record_widget_question: {
