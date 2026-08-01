@@ -257,11 +257,23 @@ export function CrossUploadDialog({
       setOpen(false);
       onSubmitted();
     } catch (err) {
+      if (err instanceof ModerationError) {
+        toast({
+          title: t("crossways.upload.blockedTitle", "Inhalt nicht erlaubt"),
+          description: t(
+            "crossways.upload.blockedDesc",
+            "Dieser Beitrag verstösst gegen unsere Regeln (keine sexuellen, rassistischen oder gewaltverherrlichenden Inhalte).",
+          ),
+          variant: "destructive",
+        });
+        return;
+      }
       toast({
         title: t("crossways.upload.errorTitle"),
         description: err instanceof Error ? err.message : t("crossways.upload.errorDesc"),
         variant: "destructive",
       });
+
     } finally {
       setSubmitting(false);
     }
