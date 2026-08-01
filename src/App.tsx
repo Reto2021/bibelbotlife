@@ -197,9 +197,10 @@ const App = () => {
                   <Route path="/fuer-lehrkraefte" element={<ForTeachers />} />
                    <Route path="/bible-search" element={<BibleSearch />} />
                    <Route path="/bibel" element={<BibleSearch />} />
-                  <Route path="/gebetswand" element={<PrayerWall />} />
-                  <Route path="/kreuzwege" element={<Kreuzwege />} />
-                  <Route path="/bibelquiz" element={<BibleQuiz />} />
+                   <Route path="/gebetswand" element={<PrayerWall />} />
+                   <Route path="/kreuzwege/:slug" element={<Kreuzwege />} />
+                   <Route path="/kreuzwege" element={<Kreuzwege />} />
+                   <Route path="/bibelquiz" element={<BibleQuiz />} />
                   <Route path="/unsubscribe" element={<Unsubscribe />} />
                   <Route path="/spenden" element={<Spenden />} />
                   <Route path="/spenden/danke" element={<Spenden />} />
