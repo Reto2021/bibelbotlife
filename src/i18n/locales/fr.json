@@ -2177,7 +2177,8 @@
       "progressLabel": "Upload-Fortschritt",
       "errorDescMany": "{{count}} Bilder konnten nicht hochgeladen werden.",
       "targetFormat": "Target format for all photos",
-      "targetFormatHint": "Photos with a different aspect ratio are cropped to centre automatically – the preview shows the result. Adjustable per photo."
+      "targetFormatHint": "Photos with a different aspect ratio are cropped to centre automatically – the preview shows the result. Adjustable per photo.",
+      "burnQuoteOffHint": "Recommended: show the quote below the photo. Short quotes work best."
     },
     "card": {
       "anonymous": "Anonyme",
@@ -2192,7 +2193,8 @@
       "report": "Signaler",
       "reported": "Signalé",
       "reportSentTitle": "Signalement envoyé",
-      "reportSentDesc": "Merci, nous allons examiner la contribution."
+      "reportSentDesc": "Merci, nous allons examiner la contribution.",
+      "openPhoto": "View photo large"
     },
     "admin": {
       "title": "Modération des chemins de croix",
@@ -2215,7 +2217,9 @@
     },
     "modal": {
       "mapLabel": "Emplacement",
-      "linkCopiedDescription": "Le lien a été copié dans le presse-papiers."
+      "linkCopiedDescription": "Le lien a été copié dans le presse-papiers.",
+      "openLightbox": "View photo full screen",
+      "closeLightbox": "Close full screen"
     }
   }
 }

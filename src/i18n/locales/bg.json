@@ -2169,7 +2169,8 @@
       "progressLabel": "Upload-Fortschritt",
       "errorDescMany": "{{count}} Bilder konnten nicht hochgeladen werden.",
       "targetFormat": "Target format for all photos",
-      "targetFormatHint": "Photos with a different aspect ratio are cropped to centre automatically – the preview shows the result. Adjustable per photo."
+      "targetFormatHint": "Photos with a different aspect ratio are cropped to centre automatically – the preview shows the result. Adjustable per photo.",
+      "burnQuoteOffHint": "Recommended: show the quote below the photo. Short quotes work best."
     },
     "card": {
       "anonymous": "Анонимен",
@@ -2184,7 +2185,8 @@
       "report": "Докладване",
       "reported": "Докладвано",
       "reportSentTitle": "Докладът е изпратен",
-      "reportSentDesc": "Благодарим, ще прегледаме публикацията."
+      "reportSentDesc": "Благодарим, ще прегледаме публикацията.",
+      "openPhoto": "View photo large"
     },
     "admin": {
       "title": "Модерация на кръстопътища",
@@ -2207,7 +2209,9 @@
     },
     "modal": {
       "mapLabel": "Местоположение",
-      "linkCopiedDescription": "Връзката е копирана в клипборда."
+      "linkCopiedDescription": "Връзката е копирана в клипборда.",
+      "openLightbox": "View photo full screen",
+      "closeLightbox": "Close full screen"
     }
   }
 }

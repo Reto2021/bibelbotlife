@@ -2169,7 +2169,8 @@
       "progressLabel": "Upload-Fortschritt",
       "errorDescMany": "{{count}} Bilder konnten nicht hochgeladen werden.",
       "targetFormat": "Target format for all photos",
-      "targetFormatHint": "Photos with a different aspect ratio are cropped to centre automatically – the preview shows the result. Adjustable per photo."
+      "targetFormatHint": "Photos with a different aspect ratio are cropped to centre automatically – the preview shows the result. Adjustable per photo.",
+      "burnQuoteOffHint": "Recommended: show the quote below the photo. Short quotes work best."
     },
     "card": {
       "anonymous": "Анонимно",
@@ -2184,7 +2185,8 @@
       "report": "Сообщить",
       "reported": "Сообщено",
       "reportSentTitle": "Сообщение отправлено",
-      "reportSentDesc": "Спасибо, мы проверим публикацию."
+      "reportSentDesc": "Спасибо, мы проверим публикацию.",
+      "openPhoto": "View photo large"
     },
     "admin": {
       "title": "Модерация перекрестков",
@@ -2207,7 +2209,9 @@
     },
     "modal": {
       "mapLabel": "Местоположение",
-      "linkCopiedDescription": "Ссылка скопирована в буфер обмена."
+      "linkCopiedDescription": "Ссылка скопирована в буфер обмена.",
+      "openLightbox": "View photo full screen",
+      "closeLightbox": "Close full screen"
     }
   }
 }

@@ -2169,7 +2169,8 @@
       "progressLabel": "Upload-Fortschritt",
       "errorDescMany": "{{count}} Bilder konnten nicht hochgeladen werden.",
       "targetFormat": "Target format for all photos",
-      "targetFormatHint": "Photos with a different aspect ratio are cropped to centre automatically – the preview shows the result. Adjustable per photo."
+      "targetFormatHint": "Photos with a different aspect ratio are cropped to centre automatically – the preview shows the result. Adjustable per photo.",
+      "burnQuoteOffHint": "Recommended: show the quote below the photo. Short quotes work best."
     },
     "card": {
       "anonymous": "Névtelen",
@@ -2184,7 +2185,8 @@
       "report": "Jelentés",
       "reported": "Jelentve",
       "reportSentTitle": "Jelentés elküldve",
-      "reportSentDesc": "Köszönjük, felülvizsgáljuk a bejegyzést."
+      "reportSentDesc": "Köszönjük, felülvizsgáljuk a bejegyzést.",
+      "openPhoto": "View photo large"
     },
     "admin": {
       "title": "Keresztutak moderálása",
@@ -2207,7 +2209,9 @@
     },
     "modal": {
       "mapLabel": "Helyszín",
-      "linkCopiedDescription": "A link a vágólapra lett másolva."
+      "linkCopiedDescription": "A link a vágólapra lett másolva.",
+      "openLightbox": "View photo full screen",
+      "closeLightbox": "Close full screen"
     }
   }
 }

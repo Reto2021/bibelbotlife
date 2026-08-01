@@ -2169,7 +2169,8 @@
       "progressLabel": "Upload-Fortschritt",
       "errorDescMany": "{{count}} Bilder konnten nicht hochgeladen werden.",
       "targetFormat": "Target format for all photos",
-      "targetFormatHint": "Photos with a different aspect ratio are cropped to centre automatically – the preview shows the result. Adjustable per photo."
+      "targetFormatHint": "Photos with a different aspect ratio are cropped to centre automatically – the preview shows the result. Adjustable per photo.",
+      "burnQuoteOffHint": "Recommended: show the quote below the photo. Short quotes work best."
     },
     "card": {
       "anonymous": "Anonim",
@@ -2184,7 +2185,8 @@
       "report": "Rapòte",
       "reported": "Rapòte",
       "reportSentTitle": "Rapò voye",
-      "reportSentDesc": "Mèsi, n ap revize kontribisyon an."
+      "reportSentDesc": "Mèsi, n ap revize kontribisyon an.",
+      "openPhoto": "View photo large"
     },
     "admin": {
       "title": "Modération kwa",
@@ -2207,7 +2209,9 @@
     },
     "modal": {
       "mapLabel": "Kote",
-      "linkCopiedDescription": "Lyen an kopye nan clipboard la."
+      "linkCopiedDescription": "Lyen an kopye nan clipboard la.",
+      "openLightbox": "View photo full screen",
+      "closeLightbox": "Close full screen"
     }
   }
 }
