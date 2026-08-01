@@ -52,7 +52,7 @@ export function CrossUploadDialog({ onSubmitted }: { onSubmitted: () => void }) 
   function pickFile(f: File | undefined) {
     if (!f) return;
     if (f.size > 5 * 1024 * 1024) {
-      toast({ title: "Bild zu gross", description: "Maximal 5 MB.", variant: "destructive" });
+      toast({ title: t("crossways.upload.imageTooBig"), description: t("crossways.upload.imageTooBigDesc"), variant: "destructive" });
       return;
     }
     setFile(f);
