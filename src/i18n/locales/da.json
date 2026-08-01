@@ -2172,7 +2172,8 @@
       "reportedCount": "{{count}}× anmeldt"
     },
     "modal": {
-      "mapLabel": "Placering"
+      "mapLabel": "Placering",
+      "linkCopiedDescription": "Linket er kopieret til udklipsholderen."
     }
   }
 }

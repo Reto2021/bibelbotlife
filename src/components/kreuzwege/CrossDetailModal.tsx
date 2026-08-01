@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { MapPin, HandHeart, Sparkles, ExternalLink, Plus, Minus, Link2, Check } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
+import { toast } from "sonner";
 import {
   Dialog,
   DialogContent,
@@ -26,7 +26,6 @@ const MAX_ZOOM = 18;
 
 export function CrossDetailModal({ post, open, onOpenChange, hasReacted, onReact }: Props) {
   const { t } = useTranslation();
-  const { toast } = useToast();
   const [zoom, setZoom] = useState(13);
   const [copied, setCopied] = useState(false);
 
@@ -65,7 +64,9 @@ export function CrossDetailModal({ post, open, onOpenChange, hasReacted, onReact
     }
     setCopied(true);
     onReact(post.id, "share");
-    toast({ title: t("crossways.modal.linkCopied", "Link kopiert") });
+    toast.success(t("crossways.modal.linkCopied", "Link kopiert"), {
+      description: t("crossways.modal.linkCopiedDescription", "Der Link wurde in die Zwischenablage kopiert."),
+    });
     setTimeout(() => setCopied(false), 2000);
   }
 

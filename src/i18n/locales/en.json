@@ -2234,7 +2234,8 @@
       "reportedCount": "Reported {{count}}×"
     },
     "modal": {
-      "mapLabel": "Location"
+      "mapLabel": "Location",
+      "linkCopiedDescription": "The link was copied to your clipboard."
     }
   }
 }

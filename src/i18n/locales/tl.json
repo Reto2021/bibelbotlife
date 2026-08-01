@@ -2175,7 +2175,8 @@
       "reportedCount": "Iniulat nang {{count}}×"
     },
     "modal": {
-      "mapLabel": "Lokasyon"
+      "mapLabel": "Lokasyon",
+      "linkCopiedDescription": "Ang link ay nakopya sa clipboard."
     }
   }
 }

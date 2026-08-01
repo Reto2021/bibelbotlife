@@ -2173,7 +2173,8 @@
       "reportedCount": "被举报{{count}}次"
     },
     "modal": {
-      "mapLabel": "地点"
+      "mapLabel": "地点",
+      "linkCopiedDescription": "链接已复制到剪贴板。"
     }
   }
 }

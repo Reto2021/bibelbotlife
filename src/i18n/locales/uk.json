@@ -2172,7 +2172,8 @@
       "reportedCount": "Повідомлено {{count}} разів"
     },
     "modal": {
-      "mapLabel": "Місцезнаходження"
+      "mapLabel": "Місцезнаходження",
+      "linkCopiedDescription": "Посилання скопійовано в буфер обміну."
     }
   }
 }

@@ -108,7 +108,8 @@
       "zoomIn": "Näher heranzoomen",
       "zoomOut": "Weiter herauszoomen",
       "copyLink": "Link kopieren",
-      "linkCopied": "Link kopiert"
+      "linkCopied": "Link kopiert",
+      "linkCopiedDescription": "Der Link wurde in die Zwischenablage kopiert."
     },
     "upload": {
       "trigger": "Kreuz hinzufügen",

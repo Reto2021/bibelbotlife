@@ -2172,7 +2172,8 @@
       "reportedCount": "تم الإبلاغ عنها {{count}} مرة"
     },
     "modal": {
-      "mapLabel": "الموقع"
+      "mapLabel": "الموقع",
+      "linkCopiedDescription": "تم نسخ الرابط إلى الحافظة."
     }
   }
 }

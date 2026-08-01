@@ -2172,7 +2172,8 @@
       "reportedCount": "{{count}}× ròyìn"
     },
     "modal": {
-      "mapLabel": "Ibi tí ó wà"
+      "mapLabel": "Ibi tí ó wà",
+      "linkCopiedDescription": "Ọna asopọ ti a daakọ si ibi ipamọ."
     }
   }
 }

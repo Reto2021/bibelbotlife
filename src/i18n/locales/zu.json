@@ -2172,7 +2172,8 @@
       "reportedCount": "Kubikiwe {{count}}×"
     },
     "modal": {
-      "mapLabel": "Indawo"
+      "mapLabel": "Indawo",
+      "linkCopiedDescription": "Isixhumanisi sikopishwe kukhadi lokukopisha."
     }
   }
 }

@@ -2172,7 +2172,8 @@
       "reportedCount": "{{count}}× gerapporteer"
     },
     "modal": {
-      "mapLabel": "Ligging"
+      "mapLabel": "Ligging",
+      "linkCopiedDescription": "Die skakel is na die knipbord gekopieer."
     }
   }
 }

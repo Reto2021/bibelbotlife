@@ -2172,7 +2172,8 @@
       "reportedCount": "Rapòte {{count}} fwa"
     },
     "modal": {
-      "mapLabel": "Kote"
+      "mapLabel": "Kote",
+      "linkCopiedDescription": "Lyen an kopye nan clipboard la."
     }
   }
 }

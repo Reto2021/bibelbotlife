@@ -2174,7 +2174,8 @@
       "reportedCount": "{{count}}× შეტყობინებული"
     },
     "modal": {
-      "mapLabel": "მდებარეობა"
+      "mapLabel": "მდებარეობა",
+      "linkCopiedDescription": "ბმული კოპირებულია ბუფერში."
     }
   }
 }

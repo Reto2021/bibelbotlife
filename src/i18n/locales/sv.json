@@ -2172,7 +2172,8 @@
       "reportedCount": "Rapporterad {{count}} gånger"
     },
     "modal": {
-      "mapLabel": "Plats"
+      "mapLabel": "Plats",
+      "linkCopiedDescription": "Länken kopierades till urklipp."
     }
   }
 }

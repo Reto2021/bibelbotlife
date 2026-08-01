@@ -2180,7 +2180,8 @@
       "reportedCount": "Segnalato {{count}} volte"
     },
     "modal": {
-      "mapLabel": "Posizione"
+      "mapLabel": "Posizione",
+      "linkCopiedDescription": "Il link è stato copiato negli appunti."
     }
   }
 }

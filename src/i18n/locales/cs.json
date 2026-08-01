@@ -2172,7 +2172,8 @@
       "reportedCount": "Nahlášeno {{count}}×"
     },
     "modal": {
-      "mapLabel": "Umístění"
+      "mapLabel": "Umístění",
+      "linkCopiedDescription": "Odkaz byl zkopírován do schránky."
     }
   }
 }

@@ -2172,7 +2172,8 @@
       "reportedCount": "Raportate de {{count}} ori"
     },
     "modal": {
-      "mapLabel": "Locație"
+      "mapLabel": "Locație",
+      "linkCopiedDescription": "Linkul a fost copiat în clipboard."
     }
   }
 }

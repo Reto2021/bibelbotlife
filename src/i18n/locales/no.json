@@ -2214,7 +2214,8 @@
       "reportedCount": "Rapportert {{count}} ganger"
     },
     "modal": {
-      "mapLabel": "Sted"
+      "mapLabel": "Sted",
+      "linkCopiedDescription": "Lenken er kopiert til utklippstavlen."
     }
   }
 }

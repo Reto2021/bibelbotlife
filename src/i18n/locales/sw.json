@@ -2172,7 +2172,8 @@
       "reportedCount": "Imetolewa ripoti mara {{count}}×"
     },
     "modal": {
-      "mapLabel": "Mahali"
+      "mapLabel": "Mahali",
+      "linkCopiedDescription": "Kiungo kimenakiliwa kwenye ubao wa kunakili."
     }
   }
 }
