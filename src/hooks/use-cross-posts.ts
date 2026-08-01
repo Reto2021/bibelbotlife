@@ -8,6 +8,7 @@ export type CrossInteraction = "prayer" | "amen" | "share" | "report";
 
 export interface CrossPost {
   id: string;
+  slug: string;
   place_label: string;
   country: string | null;
   lat: number | null;
@@ -24,6 +25,10 @@ export interface CrossPost {
   reported_count: number;
   created_at: string;
   image_url: string | null;
+}
+
+export function getCrossPostUrl(post: Pick<CrossPost, "slug">): string {
+  return `${window.location.origin}/kreuzwege/${post.slug}`;
 }
 
 const REACTED_KEY = "biblebot-crosses-reactions";
