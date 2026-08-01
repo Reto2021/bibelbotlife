@@ -59,6 +59,8 @@ const OutreachAdmin = lazy(() => import("./pages/admin/OutreachAdmin"));
 const OutreachStatusDashboard = lazy(() => import("./pages/admin/OutreachStatusDashboard"));
 const OutreachLogs = lazy(() => import("./pages/admin/OutreachLogs"));
 const PrayerModeration = lazy(() => import("./pages/admin/PrayerModeration"));
+const CrossModeration = lazy(() => import("./pages/admin/CrossModeration"));
+const Kreuzwege = lazy(() => import("./pages/Kreuzwege"));
 const ReferralAdmin = lazy(() => import("./pages/admin/ReferralAdmin"));
 const SeoAdmin = lazy(() => import("./pages/admin/SeoAdmin"));
 const FeedbackAdmin = lazy(() => import("./pages/admin/FeedbackAdmin"));
