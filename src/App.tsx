@@ -176,6 +176,7 @@ const App = () => {
           <AuthProvider>
             <AnalyticsProvider>
               <ScrollToTop />
+              <HostRedirect />
               <DirectionManager />
               <ChurchColorOverride />
               <Suspense fallback={<PageLoader />}>
