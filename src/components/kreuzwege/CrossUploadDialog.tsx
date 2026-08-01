@@ -321,6 +321,61 @@ export function CrossUploadDialog({
             <p className="text-right text-xs text-muted-foreground">{story.length}/500</p>
           </div>
 
+          <div className="space-y-2 rounded-xl border border-border/60 p-3">
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <Label htmlFor="cross-quote" className="flex items-center gap-1.5">
+                <Quote className="h-4 w-4 text-primary" />
+                {t("crossways.upload.quoteLabel", "Bibelzitat oder Gedanke")}
+              </Label>
+              <VersePicker
+                onPick={(text, reference) => {
+                  setQuote(text);
+                  setQuoteReference(reference);
+                }}
+              />
+            </div>
+            <Textarea
+              id="cross-quote"
+              value={quote}
+              maxLength={280}
+              rows={2}
+              placeholder={t("crossways.upload.quotePlaceholder", "z. B. Der Herr ist mein Hirte")}
+              onChange={(e) => setQuote(e.target.value)}
+            />
+            <div className="flex items-center justify-between gap-2">
+              <Input
+                value={quoteReference}
+                maxLength={80}
+                placeholder={t("crossways.upload.quoteReferencePlaceholder", "Quelle, z. B. Psalm 23,1")}
+                onChange={(e) => setQuoteReference(e.target.value)}
+              />
+              <span className="shrink-0 text-xs text-muted-foreground">{quote.length}/280</span>
+            </div>
+            {quote.trim() && (
+              <p className="text-sm italic text-muted-foreground">
+                {withQuotationMarks(quote)}
+                {quoteReference.trim() && <span className="not-italic"> — {quoteReference.trim()}</span>}
+              </p>
+            )}
+            <div className="flex items-center justify-between gap-3 pt-1">
+              <Label htmlFor="cross-burn" className="text-sm font-normal leading-snug">
+                {t("crossways.upload.burnQuoteLabel", "Zitat aufs Foto schreiben")}
+              </Label>
+              <Switch
+                id="cross-burn"
+                checked={burnQuote}
+                disabled={!quote.trim()}
+                onCheckedChange={setBurnQuote}
+              />
+            </div>
+            {burnQuote && quote.trim() && (
+              <p className="text-xs text-muted-foreground">
+                {t("crossways.upload.burnQuoteHint", "Die Vorschau oben zeigt, wie das Foto hochgeladen wird.")}
+              </p>
+            )}
+          </div>
+
+
           <div className="flex items-center justify-between rounded-lg border border-border/60 p-3">
             <Label htmlFor="cross-anon" className="text-sm font-normal">{t("crossways.upload.anonymousLabel")}</Label>
             <Switch id="cross-anon" checked={isAnonymous} onCheckedChange={setIsAnonymous} />
