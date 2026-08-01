@@ -2108,7 +2108,9 @@
       "cta": "Otkrijte križne putove",
       "placeholder1": "Križanje u planinama",
       "placeholder2": "Pobožnost u kapelici",
-      "placeholder3": "Križ na horizontu"
+      "placeholder3": "Križ na horizontu",
+      "uploadCta": "Share your wayside cross",
+      "uploadAria": "Upload your own wayside cross photo"
     },
     "upload": {
       "trigger": "Dodaj križ",

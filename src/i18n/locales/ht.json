@@ -2108,7 +2108,9 @@
       "cta": "Dekouvri Kreuzwege",
       "placeholder1": "Kwa nan mòn yo",
       "placeholder2": "Devosyon nan chapèl la",
-      "placeholder3": "Kwa sou orizon an"
+      "placeholder3": "Kwa sou orizon an",
+      "uploadCta": "Share your wayside cross",
+      "uploadAria": "Upload your own wayside cross photo"
     },
     "upload": {
       "trigger": "Ajoute kwa",

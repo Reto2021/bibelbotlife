@@ -2108,7 +2108,9 @@
       "cta": "Objavte krížové cesty",
       "placeholder1": "Krížová cesta v horách",
       "placeholder2": "Pobožnosť v kaplnke",
-      "placeholder3": "Kríž na obzore"
+      "placeholder3": "Kríž na obzore",
+      "uploadCta": "Share your wayside cross",
+      "uploadAria": "Upload your own wayside cross photo"
     },
     "upload": {
       "trigger": "Pridať kríž",

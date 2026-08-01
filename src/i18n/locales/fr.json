@@ -2116,7 +2116,9 @@
       "cta": "Découvrir les Chemins de Croix",
       "placeholder1": "Carrefour dans les montagnes",
       "placeholder2": "Dévotion dans la chapelle",
-      "placeholder3": "Croix à l'horizon"
+      "placeholder3": "Croix à l'horizon",
+      "uploadCta": "Share your wayside cross",
+      "uploadAria": "Upload your own wayside cross photo"
     },
     "upload": {
       "trigger": "Ajouter une croix",

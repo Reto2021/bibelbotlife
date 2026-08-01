@@ -2111,7 +2111,9 @@
       "cta": "Tuklasin ang Mga Daan ng Krus",
       "placeholder1": "Tawiran sa kabundukan",
       "placeholder2": "Debosyon sa kapilya",
-      "placeholder3": "Krus sa abot-tanaw"
+      "placeholder3": "Krus sa abot-tanaw",
+      "uploadCta": "Share your wayside cross",
+      "uploadAria": "Upload your own wayside cross photo"
     },
     "upload": {
       "trigger": "Magdagdag ng Krus",

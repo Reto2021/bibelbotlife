@@ -2149,7 +2149,9 @@
       "cta": "Ontdek kruiswegen",
       "placeholder1": "Wegkruis in de bergen",
       "placeholder2": "Devotie in de kapel",
-      "placeholder3": "Kruis aan de horizon"
+      "placeholder3": "Kruis aan de horizon",
+      "uploadCta": "Share your wayside cross",
+      "uploadAria": "Upload your own wayside cross photo"
     },
     "upload": {
       "trigger": "Kruis toevoegen",

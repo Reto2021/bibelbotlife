@@ -2108,7 +2108,9 @@
       "cta": "Открийте кръстопътища",
       "placeholder1": "Кръстопът в планината",
       "placeholder2": "Богослужение в параклиса",
-      "placeholder3": "Кръст на хоризонта"
+      "placeholder3": "Кръст на хоризонта",
+      "uploadCta": "Share your wayside cross",
+      "uploadAria": "Upload your own wayside cross photo"
     },
     "upload": {
       "trigger": "Добавяне на кръст",

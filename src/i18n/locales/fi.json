@@ -2108,7 +2108,9 @@
       "cta": "Tutustu Ristinteihin",
       "placeholder1": "Risteykset vuorilla",
       "placeholder2": "Hartaus kappelissa",
-      "placeholder3": "Risti horisontissa"
+      "placeholder3": "Risti horisontissa",
+      "uploadCta": "Share your wayside cross",
+      "uploadAria": "Upload your own wayside cross photo"
     },
     "upload": {
       "trigger": "Lisää risti",

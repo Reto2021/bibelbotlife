@@ -2110,7 +2110,9 @@
       "cta": "აღმოაჩინეთ ჯვრის გზები",
       "placeholder1": "გზაჯვარედინი მთებში",
       "placeholder2": "ლოცვა სამლოცველოში",
-      "placeholder3": "ჯვარი ჰორიზონტზე"
+      "placeholder3": "ჯვარი ჰორიზონტზე",
+      "uploadCta": "Share your wayside cross",
+      "uploadAria": "Upload your own wayside cross photo"
     },
     "upload": {
       "trigger": "ჯვრის დამატება",

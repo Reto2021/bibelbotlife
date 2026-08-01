@@ -2108,7 +2108,9 @@
       "cta": "Բացահայտել խաչուղիները",
       "placeholder1": "Խաչմերուկներ լեռներում",
       "placeholder2": "Երկրպագություն մատուռում",
-      "placeholder3": "Խաչը հորիզոնում"
+      "placeholder3": "Խաչը հորիզոնում",
+      "uploadCta": "Share your wayside cross",
+      "uploadAria": "Upload your own wayside cross photo"
     },
     "upload": {
       "trigger": "Ավելացնել խաչ",

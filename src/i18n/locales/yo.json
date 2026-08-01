@@ -2108,7 +2108,9 @@
       "cta": "Ṣàwárí Àwọn Ọ̀nà Agbelebu",
       "placeholder1": "Ọna agbelebu ni awọn oke-nla",
       "placeholder2": "Ifọkansin ni ile-ijọsin",
-      "placeholder3": "Agbelebu ni oju-ọrun"
+      "placeholder3": "Agbelebu ni oju-ọrun",
+      "uploadCta": "Share your wayside cross",
+      "uploadAria": "Upload your own wayside cross photo"
     },
     "upload": {
       "trigger": "Fi agbelebu kún",

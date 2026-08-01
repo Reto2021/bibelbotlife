@@ -2108,7 +2108,9 @@
       "cta": "اكتشف طرق الصليب",
       "placeholder1": "مفترق طرق في الجبال",
       "placeholder2": "العبادة في الكنيسة الصغيرة",
-      "placeholder3": "صليب في الأفق"
+      "placeholder3": "صليب في الأفق",
+      "uploadCta": "Share your wayside cross",
+      "uploadAria": "Upload your own wayside cross photo"
     },
     "upload": {
       "trigger": "أضف صليبًا",

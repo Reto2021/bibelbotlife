@@ -2109,7 +2109,9 @@
       "cta": "Ανακαλύψτε σταυροδρόμια",
       "placeholder1": "Σταυροδρόμι στα βουνά",
       "placeholder2": "Αφιέρωμα στο παρεκκλήσι",
-      "placeholder3": "Σταυρός στον ορίζοντα"
+      "placeholder3": "Σταυρός στον ορίζοντα",
+      "uploadCta": "Share your wayside cross",
+      "uploadAria": "Upload your own wayside cross photo"
     },
     "upload": {
       "trigger": "Προσθήκη σταυρού",

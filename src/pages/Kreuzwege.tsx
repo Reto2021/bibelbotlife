@@ -23,10 +23,20 @@ export default function Kreuzwege() {
   const [detailId, setDetailId] = useState<string | null>(null);
 
   const deepLinkId = searchParams.get("post");
+  const uploadParam = searchParams.get("upload");
+  const uploadOpen = uploadParam === "1";
 
   useEffect(() => {
     if (deepLinkId && posts.some((p) => p.id === deepLinkId)) setDetailId(deepLinkId);
   }, [deepLinkId, posts]);
+
+  function clearUploadParam() {
+    if (uploadParam !== null) {
+      const next = new URLSearchParams(searchParams);
+      next.delete("upload");
+      setSearchParams(next, { replace: true });
+    }
+  }
 
   const detailPost = useMemo(
     () => posts.find((p) => p.id === detailId) ?? null,
@@ -103,7 +113,13 @@ export default function Kreuzwege() {
             <Navigation className="h-4 w-4" /> {t("crossways.nearMe")}
           </Button>
           <div className="ml-auto">
-            <CrossUploadDialog onSubmitted={reload} />
+            <CrossUploadDialog
+              onSubmitted={reload}
+              defaultOpen={uploadOpen}
+              onOpenChange={(open) => {
+                if (!open) clearUploadParam();
+              }}
+            />
           </div>
         </div>
 

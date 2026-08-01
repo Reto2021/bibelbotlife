@@ -2149,7 +2149,9 @@
       "cta": "Temukan Jalan Salib",
       "placeholder1": "Persimpangan jalan di pegunungan",
       "placeholder2": "Ibadah di kapel",
-      "placeholder3": "Salib di cakrawala"
+      "placeholder3": "Salib di cakrawala",
+      "uploadCta": "Share your wayside cross",
+      "uploadAria": "Upload your own wayside cross photo"
     },
     "upload": {
       "trigger": "Tambahkan Salib",

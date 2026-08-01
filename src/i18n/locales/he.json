@@ -2108,7 +2108,9 @@
       "cta": "גלה דרכי צלב",
       "placeholder1": "צלב דרכים בהרים",
       "placeholder2": "תפילה בקפלה",
-      "placeholder3": "צלב באופק"
+      "placeholder3": "צלב באופק",
+      "uploadCta": "Share your wayside cross",
+      "uploadAria": "Upload your own wayside cross photo"
     },
     "upload": {
       "trigger": "הוסף צלב",

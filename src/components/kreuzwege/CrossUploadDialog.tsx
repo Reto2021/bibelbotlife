@@ -1,4 +1,4 @@
-import { lazy, Suspense, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
   Dialog,
@@ -20,10 +20,28 @@ import { submitCrossPost } from "@/hooks/use-cross-posts";
 
 const CrossMap = lazy(() => import("./CrossMap"));
 
-export function CrossUploadDialog({ onSubmitted }: { onSubmitted: () => void }) {
+export function CrossUploadDialog({
+  onSubmitted,
+  defaultOpen = false,
+  onOpenChange,
+}: {
+  onSubmitted: () => void;
+  defaultOpen?: boolean;
+  onOpenChange?: (open: boolean) => void;
+}) {
   const { t } = useTranslation();
   const { toast } = useToast();
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(defaultOpen);
+
+  useEffect(() => {
+    setOpen(defaultOpen);
+  }, [defaultOpen]);
+
+  function handleOpenChange(next: boolean) {
+    setOpen(next);
+    onOpenChange?.(next);
+    if (!next) reset();
+  }
   const [file, setFile] = useState<File | null>(null);
   const [preview, setPreview] = useState<string | null>(null);
   const [placeLabel, setPlaceLabel] = useState("");
@@ -105,7 +123,7 @@ export function CrossUploadDialog({ onSubmitted }: { onSubmitted: () => void }) 
   }
 
   return (
-    <Dialog open={open} onOpenChange={(o) => { setOpen(o); if (!o) reset(); }}>
+    <Dialog open={open} onOpenChange={handleOpenChange}>
       <DialogTrigger asChild>
         <Button size="lg" className="gap-2">
           <Plus className="h-4 w-4" /> {t("crossways.upload.trigger")}

@@ -2109,7 +2109,9 @@
       "cta": "探索十字架之路",
       "placeholder1": "山间十字路口",
       "placeholder2": "教堂里的灵修",
-      "placeholder3": "地平线上的十字架"
+      "placeholder3": "地平线上的十字架",
+      "uploadCta": "Share your wayside cross",
+      "uploadAria": "Upload your own wayside cross photo"
     },
     "upload": {
       "trigger": "添加十字架",
