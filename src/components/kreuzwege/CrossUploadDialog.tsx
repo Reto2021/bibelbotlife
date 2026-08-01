@@ -155,6 +155,9 @@ export function CrossUploadDialog({
         story,
         authorName,
         isAnonymous,
+        quote,
+        quoteReference,
+        burnQuote,
       });
       toast({
         title: t("crossways.upload.successTitle"),
