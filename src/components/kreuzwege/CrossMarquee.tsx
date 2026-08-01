@@ -72,6 +72,15 @@ export function CrossMarquee() {
       </div>
 
       <div className="group relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]">
+        <Link
+          to="/kreuzwege?upload=1"
+          className="absolute bottom-4 right-4 z-20 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:scale-105 hover:bg-primary/90 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 sm:bottom-6 sm:right-6 sm:px-5 sm:py-3"
+          aria-label={t("crossways.marquee.uploadAria")}
+        >
+          <Camera className="h-4 w-4" />
+          <span className="hidden sm:inline">{t("crossways.marquee.uploadCta")}</span>
+        </Link>
+
         <div className="flex w-max gap-4 animate-marquee group-hover:[animation-play-state:paused] group-focus-within:[animation-play-state:paused] group-active:[animation-play-state:paused] motion-reduce:animate-none">
           {loop.map((p, i) => {
             const label = isPlaceholder(p) ? t(p.place_label_key) : p.place_label;
