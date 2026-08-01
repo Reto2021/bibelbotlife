@@ -89,12 +89,51 @@ export default function Kreuzwege() {
     );
   }
 
+  const pageTitle = detailPost
+    ? t("crossways.detail.metaTitle", { place: detailPost.place_label, defaultValue: `${detailPost.place_label} – Kreuzwege | BibleBot.Life` })
+    : t("crossways.metaTitle");
+  const pageDescription = detailPost
+    ? t("crossways.detail.metaDescription", {
+        place: detailPost.place_label,
+        quote: detailPost.quote ?? "",
+        story: detailPost.story ?? "",
+        defaultValue: t("crossways.metaDescription"),
+      })
+    : t("crossways.metaDescription");
+  const canonicalPath = detailPost ? `/kreuzwege/${detailPost.slug}` : "/kreuzwege";
+  const detailImage = detailPost?.image_url ?? undefined;
+
+  const jsonLd = detailPost
+    ? {
+        "@context": "https://schema.org",
+        "@type": "ImageObject",
+        contentUrl: detailImage,
+        name: detailPost.place_label,
+        description: [detailPost.quote, detailPost.story].filter(Boolean).join(" ").slice(0, 300),
+        locationCreated: detailPost.country
+          ? {
+              "@type": "Place",
+              name: [detailPost.place_label, detailPost.country].filter(Boolean).join(", "),
+              geo:
+                detailPost.lat != null && detailPost.lng != null
+                  ? { "@type": "GeoCoordinates", latitude: detailPost.lat, longitude: detailPost.lng }
+                  : undefined,
+            }
+          : undefined,
+      }
+    : null;
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title={t("crossways.metaTitle")}
-        description={t("crossways.metaDescription")}
+        title={pageTitle}
+        description={pageDescription}
+        path={canonicalPath}
+        image={detailImage}
       />
+      {jsonLd && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      )}
       <SiteHeader />
 
       <main className="container mx-auto max-w-6xl px-4 py-10">
