@@ -244,6 +244,7 @@ const App = () => {
                   <Route path="/admin/outreach/status" element={<ProtectedAdminRoute><OutreachStatusDashboard /></ProtectedAdminRoute>} />
                   <Route path="/admin/outreach/logs" element={<ProtectedAdminRoute><OutreachLogs /></ProtectedAdminRoute>} />
                   <Route path="/admin/prayers" element={<ProtectedAdminRoute><PrayerModeration /></ProtectedAdminRoute>} />
+                  <Route path="/admin/kreuzwege" element={<ProtectedAdminRoute><CrossModeration /></ProtectedAdminRoute>} />
 
                   <Route path="/admin/referrals" element={<ProtectedAdminRoute><ReferralAdmin /></ProtectedAdminRoute>} />
                   <Route path="/admin/referral" element={<ProtectedAdminRoute><ReferralAdmin /></ProtectedAdminRoute>} />
