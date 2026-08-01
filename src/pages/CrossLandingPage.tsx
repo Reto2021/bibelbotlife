@@ -178,17 +178,37 @@ export default function CrossLandingPage({ type }: Props) {
             <Loader2 className="h-6 w-6 animate-spin text-primary" />
           </div>
         ) : view === "feed" ? (
-          <CrossFeed posts={sorted} hasReacted={hasReacted} onReact={react} onOpen={setDetailId} />
+          <CrossFeed posts={sorted} hasReacted={hasReacted} onReact={react} onOpen={openDetail} />
         ) : (
           <Suspense fallback={<div className="h-[70vh] rounded-xl bg-muted/40" />}>
             <CrossMap posts={filtered} center={me ? [me.lat, me.lng] : undefined} zoom={me ? 11 : 6} />
           </Suspense>
         )}
 
+        {sorted.length > 0 && (
+          <nav aria-label={title} className="mt-12 border-t border-border/60 pt-6">
+            <h2 className="mb-3 text-sm font-semibold uppercase tracking-[0.15em] text-muted-foreground">
+              {t("crossways.landing.detailPages", { defaultValue: "Detailseiten" })}
+            </h2>
+            <ul className="flex flex-wrap gap-2">
+              {sorted.slice(0, 60).map((p) => (
+                <li key={p.id}>
+                  <Link
+                    to={`/kreuzwege/${p.slug}`}
+                    className="inline-flex rounded-full border border-border/60 px-3 py-1 text-sm text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+                  >
+                    {p.place_label || t("crossways.landing.unnamed", { defaultValue: "Kreuz" })}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
+
         <CrossDetailModal
           post={detailPost}
           open={!!detailPost}
-          onOpenChange={(o) => !o && setDetailId(null)}
+          onOpenChange={(o) => !o && closeDetail()}
           hasReacted={hasReacted}
           onReact={react}
         />
