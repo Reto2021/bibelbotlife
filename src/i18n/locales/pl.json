@@ -2150,7 +2150,7 @@
       "reportSentDesc": "Dziękujemy, sprawdzimy wpis."
     },
     "admin": {
-      "title": "Moderacja Dróg Krzyżowych",
+      "title": "Moderacja skrzyżowań",
       "reported": "Zgłoszono",
       "pending": "Oczekujące",
       "approved": "Zatwierdzone",
@@ -2161,7 +2161,18 @@
       "approve": "Zatwierdź",
       "reject": "Odrzuć",
       "delete": "Usuń",
-      "rejectReasonPlaceholder": "Powód odrzucenia"
+      "rejectReasonPlaceholder": "Powód odrzucenia",
+      "filter": {
+        "reported": "Zgłoszone",
+        "pending": "Oczekujące",
+        "approved": "Zatwierdzone",
+        "rejected": "Odrzucone",
+        "all": "Wszystkie"
+      },
+      "deleted": "Usunięto",
+      "error": "Błąd",
+      "rejectionPlaceholder": "Powód odrzucenia",
+      "reportedCount": "Zgłoszono {{count}} razy"
     }
   }
 }

@@ -2212,7 +2212,7 @@
       "reportSentDesc": "Thank you, we will review the post."
     },
     "admin": {
-      "title": "Crossroads Moderation",
+      "title": "Crossways Moderation",
       "reported": "Reported",
       "pending": "Pending",
       "approved": "Approved",
@@ -2223,7 +2223,18 @@
       "approve": "Approve",
       "reject": "Reject",
       "delete": "Delete",
-      "rejectReasonPlaceholder": "Reason for rejection"
+      "rejectReasonPlaceholder": "Reason for rejection",
+      "filter": {
+        "reported": "Reported",
+        "pending": "Pending",
+        "approved": "Approved",
+        "rejected": "Rejected",
+        "all": "All"
+      },
+      "deleted": "Deleted",
+      "error": "Error",
+      "rejectionPlaceholder": "Reason for rejection",
+      "reportedCount": "Reported {{count}}×"
     }
   }
 }

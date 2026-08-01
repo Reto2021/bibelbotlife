@@ -2150,18 +2150,29 @@
       "reportSentDesc": "Дякуємо, ми перевіримо допис."
     },
     "admin": {
-      "title": "Модерація хресних доріг",
+      "title": "Модерація перехресть",
       "reported": "Повідомлено",
       "pending": "Очікує",
-      "approved": "Схвалено",
+      "approved": "Затверджено",
       "rejected": "Відхилено",
       "all": "Всі",
       "loading": "Завантаження…",
       "empty": "Немає записів.",
-      "approve": "Схвалити",
+      "approve": "Затвердити",
       "reject": "Відхилити",
       "delete": "Видалити",
-      "rejectReasonPlaceholder": "Причина відхилення"
+      "rejectReasonPlaceholder": "Причина відхилення",
+      "filter": {
+        "reported": "Повідомлено",
+        "pending": "Очікує на розгляд",
+        "approved": "Затверджено",
+        "rejected": "Відхилено",
+        "all": "Усі"
+      },
+      "deleted": "Видалено",
+      "error": "Помилка",
+      "rejectionPlaceholder": "Причина відхилення",
+      "reportedCount": "Повідомлено {{count}} разів"
     }
   }
 }

@@ -2156,12 +2156,23 @@
       "approved": "Goedgekeur",
       "rejected": "Verwerp",
       "all": "Alles",
-      "loading": "Laai…",
-      "empty": "Geen inskrywings.",
+      "loading": "Laai tans…",
+      "empty": "Geen inskrywings nie.",
       "approve": "Keur goed",
       "reject": "Verwerp",
       "delete": "Vee uit",
-      "rejectReasonPlaceholder": "Rede vir verwerping"
+      "rejectReasonPlaceholder": "Rede vir verwerping",
+      "filter": {
+        "reported": "Gerapporteer",
+        "pending": "Hangende",
+        "approved": "Goedgekeur",
+        "rejected": "Verwerp",
+        "all": "Alles"
+      },
+      "deleted": "Uitgevee",
+      "error": "Fout",
+      "rejectionPlaceholder": "Rede vir verwerping",
+      "reportedCount": "{{count}}× gerapporteer"
     }
   }
 }

@@ -2150,18 +2150,29 @@
       "reportSentDesc": "شكرًا لك، سنراجع المنشور."
     },
     "admin": {
-      "title": "إدارة طرق الصليب",
+      "title": "إدارة مفترق الطرق",
       "reported": "تم الإبلاغ",
       "pending": "قيد الانتظار",
-      "approved": "تمت الموافقة",
+      "approved": "تمت الموافقة عليها",
       "rejected": "مرفوض",
       "all": "الكل",
-      "loading": "جارٍ التحميل…",
+      "loading": "جارٍ التحميل...",
       "empty": "لا توجد إدخالات.",
-      "approve": "الموافقة",
-      "reject": "الرفض",
+      "approve": "موافقة",
+      "reject": "رفض",
       "delete": "حذف",
-      "rejectReasonPlaceholder": "سبب الرفض"
+      "rejectReasonPlaceholder": "سبب الرفض",
+      "filter": {
+        "reported": "تم الإبلاغ عنها",
+        "pending": "قيد الانتظار",
+        "approved": "تمت الموافقة عليها",
+        "rejected": "مرفوض",
+        "all": "الكل"
+      },
+      "deleted": "تم الحذف",
+      "error": "خطأ",
+      "rejectionPlaceholder": "سبب الرفض",
+      "reportedCount": "تم الإبلاغ عنها {{count}} مرة"
     }
   }
 }

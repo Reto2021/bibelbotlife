@@ -2150,7 +2150,7 @@
       "reportSentDesc": "Tack, vi granskar bidraget."
     },
     "admin": {
-      "title": "Korsvägar-moderering",
+      "title": "Korsvägsmoderering",
       "reported": "Rapporterad",
       "pending": "Väntande",
       "approved": "Godkänd",
@@ -2161,7 +2161,18 @@
       "approve": "Godkänn",
       "reject": "Avvisa",
       "delete": "Radera",
-      "rejectReasonPlaceholder": "Anledning till avvisning"
+      "rejectReasonPlaceholder": "Anledning till avvisning",
+      "filter": {
+        "reported": "Rapporterad",
+        "pending": "Väntande",
+        "approved": "Godkänd",
+        "rejected": "Avvisad",
+        "all": "Alla"
+      },
+      "deleted": "Raderad",
+      "error": "Fel",
+      "rejectionPlaceholder": "Anledning till avslag",
+      "reportedCount": "Rapporterad {{count}} gånger"
     }
   }
 }

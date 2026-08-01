@@ -2150,7 +2150,7 @@
       "reportSentDesc": "Kiitos, tarkistamme julkaisun."
     },
     "admin": {
-      "title": "Ristintiet-moderointi",
+      "title": "Risteymien moderointi",
       "reported": "Ilmoitettu",
       "pending": "Odottaa",
       "approved": "Hyväksytty",
@@ -2161,7 +2161,18 @@
       "approve": "Hyväksy",
       "reject": "Hylkää",
       "delete": "Poista",
-      "rejectReasonPlaceholder": "Hylkäämisen syy"
+      "rejectReasonPlaceholder": "Hylkäämisen syy",
+      "filter": {
+        "reported": "Ilmoitettu",
+        "pending": "Odottaa",
+        "approved": "Hyväksytty",
+        "rejected": "Hylätty",
+        "all": "Kaikki"
+      },
+      "deleted": "Poistettu",
+      "error": "Virhe",
+      "rejectionPlaceholder": "Hylkäämisen syy",
+      "reportedCount": "Ilmoitettu {{count}} kertaa"
     }
   }
 }

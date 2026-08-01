@@ -2158,7 +2158,7 @@
       "reportSentDesc": "Grazie, esamineremo il contributo."
     },
     "admin": {
-      "title": "Moderazione Via Crucis",
+      "title": "Moderazione delle Vie Crucis",
       "reported": "Segnalato",
       "pending": "In sospeso",
       "approved": "Approvato",
@@ -2169,7 +2169,18 @@
       "approve": "Approva",
       "reject": "Rifiuta",
       "delete": "Elimina",
-      "rejectReasonPlaceholder": "Motivo del rifiuto"
+      "rejectReasonPlaceholder": "Motivo del rifiuto",
+      "filter": {
+        "reported": "Segnalato",
+        "pending": "In sospeso",
+        "approved": "Approvato",
+        "rejected": "Rifiutato",
+        "all": "Tutti"
+      },
+      "deleted": "Eliminato",
+      "error": "Errore",
+      "rejectionPlaceholder": "Motivo del rifiuto",
+      "reportedCount": "Segnalato {{count}} volte"
     }
   }
 }

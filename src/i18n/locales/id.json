@@ -2202,7 +2202,18 @@
       "approve": "Setujui",
       "reject": "Tolak",
       "delete": "Hapus",
-      "rejectReasonPlaceholder": "Alasan penolakan"
+      "rejectReasonPlaceholder": "Alasan penolakan",
+      "filter": {
+        "reported": "Dilaporkan",
+        "pending": "Tertunda",
+        "approved": "Disetujui",
+        "rejected": "Ditolak",
+        "all": "Semua"
+      },
+      "deleted": "Dihapus",
+      "error": "Kesalahan",
+      "rejectionPlaceholder": "Alasan penolakan",
+      "reportedCount": "Dilaporkan {{count}} kali"
     }
   }
 }

@@ -2158,7 +2158,7 @@
       "reportSentDesc": "Merci, nous allons examiner la contribution."
     },
     "admin": {
-      "title": "Modération des Chemins de Croix",
+      "title": "Modération des chemins de croix",
       "reported": "Signalé",
       "pending": "En attente",
       "approved": "Approuvé",
@@ -2169,7 +2169,18 @@
       "approve": "Approuver",
       "reject": "Rejeter",
       "delete": "Supprimer",
-      "rejectReasonPlaceholder": "Motif du rejet"
+      "rejectReasonPlaceholder": "Motif du rejet",
+      "filter": {
+        "reported": "Signalé",
+        "pending": "En attente",
+        "approved": "Approuvé",
+        "rejected": "Rejeté",
+        "all": "Tous"
+      },
+      "deleted": "Supprimé",
+      "error": "Erreur",
+      "rejectionPlaceholder": "Raison du rejet",
+      "reportedCount": "Signalé {{count}} fois"
     }
   }
 }

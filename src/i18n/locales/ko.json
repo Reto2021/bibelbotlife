@@ -2150,18 +2150,29 @@
       "reportSentDesc": "감사합니다. 게시물을 검토하겠습니다."
     },
     "admin": {
-      "title": "십자가의 길 관리",
+      "title": "교차로 관리",
       "reported": "신고됨",
       "pending": "대기 중",
       "approved": "승인됨",
       "rejected": "거부됨",
       "all": "모두",
       "loading": "로드 중…",
-      "empty": "항목이 없습니다.",
+      "empty": "항목 없음.",
       "approve": "승인",
       "reject": "거부",
       "delete": "삭제",
-      "rejectReasonPlaceholder": "거부 사유"
+      "rejectReasonPlaceholder": "거부 사유",
+      "filter": {
+        "reported": "신고됨",
+        "pending": "대기 중",
+        "approved": "승인됨",
+        "rejected": "거부됨",
+        "all": "모두"
+      },
+      "deleted": "삭제됨",
+      "error": "오류",
+      "rejectionPlaceholder": "거부 사유",
+      "reportedCount": "{{count}}회 신고됨"
     }
   }
 }

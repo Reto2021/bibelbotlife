@@ -2150,7 +2150,7 @@
       "reportSentDesc": "Siyabonga, sizobuyekeza okuthunyelwe."
     },
     "admin": {
-      "title": "Ukulinganisa Izindlela Zesiphambano",
+      "title": "Ukuphatha kwe-Crossways",
       "reported": "Kubikiwe",
       "pending": "Kulindile",
       "approved": "Kugunyaziwe",
@@ -2161,7 +2161,18 @@
       "approve": "Gunyaza",
       "reject": "Yenqaba",
       "delete": "Susa",
-      "rejectReasonPlaceholder": "Isizathu sokwenqaba"
+      "rejectReasonPlaceholder": "Isizathu sokwenqaba",
+      "filter": {
+        "reported": "Kubikiwe",
+        "pending": "Kusalindile",
+        "approved": "Kugunyaziwe",
+        "rejected": "Kwenqatshiwe",
+        "all": "Konke"
+      },
+      "deleted": "Kususiwe",
+      "error": "Iphutha",
+      "rejectionPlaceholder": "Isizathu sokwenqaba",
+      "reportedCount": "Kubikiwe {{count}}×"
     }
   }
 }

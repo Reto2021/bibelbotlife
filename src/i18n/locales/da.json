@@ -2150,7 +2150,7 @@
       "reportSentDesc": "Tak, vi gennemgår bidraget."
     },
     "admin": {
-      "title": "Korsveje-moderation",
+      "title": "Krydsvejs-moderation",
       "reported": "Rapporteret",
       "pending": "Afventende",
       "approved": "Godkendt",
@@ -2161,7 +2161,18 @@
       "approve": "Godkend",
       "reject": "Afvis",
       "delete": "Slet",
-      "rejectReasonPlaceholder": "Årsag til afvisning"
+      "rejectReasonPlaceholder": "Årsag til afvisning",
+      "filter": {
+        "reported": "Anmeldt",
+        "pending": "Afventende",
+        "approved": "Godkendt",
+        "rejected": "Afvist",
+        "all": "Alle"
+      },
+      "deleted": "Slettet",
+      "error": "Fejl",
+      "rejectionPlaceholder": "Årsag til afvisning",
+      "reportedCount": "{{count}}× anmeldt"
     }
   }
 }

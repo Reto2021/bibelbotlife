@@ -2154,14 +2154,25 @@
       "reported": "Nahlášeno",
       "pending": "Čekající",
       "approved": "Schváleno",
-      "rejected": "Odmítnuto",
+      "rejected": "Zamítnuto",
       "all": "Vše",
-      "loading": "Načítání…",
+      "loading": "Načítám…",
       "empty": "Žádné záznamy.",
       "approve": "Schválit",
-      "reject": "Odmítnout",
+      "reject": "Zamítnout",
       "delete": "Smazat",
-      "rejectReasonPlaceholder": "Důvod odmítnutí"
+      "rejectReasonPlaceholder": "Důvod odmítnutí",
+      "filter": {
+        "reported": "Nahlášeno",
+        "pending": "Čekající",
+        "approved": "Schváleno",
+        "rejected": "Zamítnuto",
+        "all": "Vše"
+      },
+      "deleted": "Smazáno",
+      "error": "Chyba",
+      "rejectionPlaceholder": "Důvod zamítnutí",
+      "reportedCount": "Nahlášeno {{count}}×"
     }
   }
 }

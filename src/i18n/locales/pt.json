@@ -2150,18 +2150,29 @@
       "reportSentDesc": "Obrigado, estamos revisando a postagem."
     },
     "admin": {
-      "title": "Moderação de Caminhos da Cruz",
+      "title": "Moderação de Vias Sacras",
       "reported": "Denunciado",
       "pending": "Pendente",
       "approved": "Aprovado",
       "rejected": "Rejeitado",
       "all": "Todos",
       "loading": "Carregando…",
-      "empty": "Nenhum item.",
+      "empty": "Nenhum registro.",
       "approve": "Aprovar",
       "reject": "Rejeitar",
       "delete": "Excluir",
-      "rejectReasonPlaceholder": "Motivo da rejeição"
+      "rejectReasonPlaceholder": "Motivo da rejeição",
+      "filter": {
+        "reported": "Denunciado",
+        "pending": "Pendente",
+        "approved": "Aprovado",
+        "rejected": "Rejeitado",
+        "all": "Todos"
+      },
+      "deleted": "Excluído",
+      "error": "Erro",
+      "rejectionPlaceholder": "Motivo da rejeição",
+      "reportedCount": "Denunciado {{count}}×"
     }
   }
 }

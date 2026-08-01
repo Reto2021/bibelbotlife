@@ -2161,7 +2161,18 @@
       "approve": "Jóváhagyás",
       "reject": "Elutasítás",
       "delete": "Törlés",
-      "rejectReasonPlaceholder": "Elutasítás oka"
+      "rejectReasonPlaceholder": "Elutasítás oka",
+      "filter": {
+        "reported": "Jelentett",
+        "pending": "Függőben",
+        "approved": "Jóváhagyva",
+        "rejected": "Elutasítva",
+        "all": "Mind"
+      },
+      "deleted": "Törölve",
+      "error": "Hiba",
+      "rejectionPlaceholder": "Elutasítás oka",
+      "reportedCount": "{{count}}× jelentve"
     }
   }
 }

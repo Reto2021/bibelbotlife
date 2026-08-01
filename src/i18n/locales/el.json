@@ -2151,7 +2151,7 @@
       "reportSentDesc": "Ευχαριστούμε, θα ελέγξουμε την ανάρτηση."
     },
     "admin": {
-      "title": "Συντονισμός Σταυροδρομιών",
+      "title": "Διασταυρούμενες διαδρομές - Συντονισμός",
       "reported": "Αναφέρθηκε",
       "pending": "Εκκρεμεί",
       "approved": "Εγκρίθηκε",
@@ -2162,7 +2162,18 @@
       "approve": "Έγκριση",
       "reject": "Απόρριψη",
       "delete": "Διαγραφή",
-      "rejectReasonPlaceholder": "Λόγος απόρριψης"
+      "rejectReasonPlaceholder": "Λόγος απόρριψης",
+      "filter": {
+        "reported": "Αναφέρθηκε",
+        "pending": "Σε εκκρεμότητα",
+        "approved": "Εγκρίθηκε",
+        "rejected": "Απορρίφθηκε",
+        "all": "Όλα"
+      },
+      "deleted": "Διαγράφηκε",
+      "error": "Σφάλμα",
+      "rejectionPlaceholder": "Λόγος απόρριψης",
+      "reportedCount": "Αναφέρθηκε {{count}} φορές"
     }
   }
 }

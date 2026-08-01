@@ -2151,7 +2151,7 @@
       "reportSentDesc": "谢谢，我们正在审核该帖子。"
     },
     "admin": {
-      "title": "十字架之路审核",
+      "title": "十字路口管理",
       "reported": "已举报",
       "pending": "待处理",
       "approved": "已批准",
@@ -2162,7 +2162,18 @@
       "approve": "批准",
       "reject": "拒绝",
       "delete": "删除",
-      "rejectReasonPlaceholder": "拒绝原因"
+      "rejectReasonPlaceholder": "拒绝原因",
+      "filter": {
+        "reported": "已举报",
+        "pending": "待处理",
+        "approved": "已批准",
+        "rejected": "已拒绝",
+        "all": "全部"
+      },
+      "deleted": "已删除",
+      "error": "错误",
+      "rejectionPlaceholder": "拒绝理由",
+      "reportedCount": "被举报{{count}}次"
     }
   }
 }

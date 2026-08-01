@@ -2191,18 +2191,29 @@
       "reportSentDesc": "Daalụ, anyị ga-enyocha ntinye ahụ."
     },
     "admin": {
-      "title": "Nlekọta ụzọ obe",
+      "title": "Nchịkwa ụzọ dị iche iche",
       "reported": "Akọọla",
       "pending": "Na-echere",
-      "approved": "Anabatala",
-      "rejected": "Ajụla",
+      "approved": "Anabatara",
+      "rejected": "Ajụrụ",
       "all": "Niile",
       "loading": "Na-ebunye…",
       "empty": "Enweghị ntinye.",
       "approve": "Anabata",
       "reject": "Jụ",
       "delete": "Hichapụ",
-      "rejectReasonPlaceholder": "Ihe kpatara ịjụ"
+      "rejectReasonPlaceholder": "Ihe kpatara ịjụ",
+      "filter": {
+        "reported": "Akọpụtara",
+        "pending": "Na-echere",
+        "approved": "Anabatara",
+        "rejected": "Ajụrụ",
+        "all": "Niile"
+      },
+      "deleted": "Ehichapụla",
+      "error": "Njehie",
+      "rejectionPlaceholder": "Ihe kpatara ịjụ",
+      "reportedCount": "Akọpụtara {{count}}×"
     }
   }
 }

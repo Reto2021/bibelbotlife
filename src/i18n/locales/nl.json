@@ -2191,7 +2191,7 @@
       "reportSentDesc": "Bedankt, we controleren de bijdrage."
     },
     "admin": {
-      "title": "Kruiswegen-moderatie",
+      "title": "Kruispunten-moderatie",
       "reported": "Gemeld",
       "pending": "In afwachting",
       "approved": "Goedgekeurd",
@@ -2202,7 +2202,18 @@
       "approve": "Goedkeuren",
       "reject": "Afwijzen",
       "delete": "Verwijderen",
-      "rejectReasonPlaceholder": "Reden van afwijzing"
+      "rejectReasonPlaceholder": "Reden van afwijzing",
+      "filter": {
+        "reported": "Gerapporteerd",
+        "pending": "In afwachting",
+        "approved": "Goedgekeurd",
+        "rejected": "Afgewezen",
+        "all": "Alle"
+      },
+      "deleted": "Verwijderd",
+      "error": "Fout",
+      "rejectionPlaceholder": "Reden van afwijzing",
+      "reportedCount": "{{count}}× gerapporteerd"
     }
   }
 }

@@ -2152,18 +2152,29 @@
       "reportSentDesc": "გმადლობთ, ჩვენ განვიხილავთ პოსტს."
     },
     "admin": {
-      "title": "ჯვრის გზების მოდერაცია",
+      "title": "გზაჯვარედინების მოდერაცია",
       "reported": "მოხსენებული",
       "pending": "მოლოდინში",
-      "approved": "დამტკიცებული",
-      "rejected": "უარყოფილი",
+      "approved": "დამტკიცებულია",
+      "rejected": "უარყოფილია",
       "all": "ყველა",
       "loading": "იტვირთება…",
       "empty": "ჩანაწერები არ არის.",
       "approve": "დამტკიცება",
       "reject": "უარყოფა",
       "delete": "წაშლა",
-      "rejectReasonPlaceholder": "უარყოფის მიზეზი"
+      "rejectReasonPlaceholder": "უარყოფის მიზეზი",
+      "filter": {
+        "reported": "შეტყობინებული",
+        "pending": "მოლოდინში",
+        "approved": "დამტკიცებული",
+        "rejected": "უარყოფილი",
+        "all": "ყველა"
+      },
+      "deleted": "წაშლილია",
+      "error": "შეცდომა",
+      "rejectionPlaceholder": "უარყოფის მიზეზი",
+      "reportedCount": "{{count}}× შეტყობინებული"
     }
   }
 }

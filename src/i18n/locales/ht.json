@@ -2150,7 +2150,7 @@
       "reportSentDesc": "Mèsi, n ap revize kontribisyon an."
     },
     "admin": {
-      "title": "Kreuzwege-Moderation",
+      "title": "Modération kwa",
       "reported": "Rapòte",
       "pending": "An atant",
       "approved": "Apwouve",
@@ -2161,7 +2161,18 @@
       "approve": "Apwouve",
       "reject": "Rejte",
       "delete": "Efase",
-      "rejectReasonPlaceholder": "Rezon pou rejè"
+      "rejectReasonPlaceholder": "Rezon pou rejè",
+      "filter": {
+        "reported": "Rapòte",
+        "pending": "An atant",
+        "approved": "Apwouve",
+        "rejected": "Rejte",
+        "all": "Tout"
+      },
+      "deleted": "Efase",
+      "error": "Erè",
+      "rejectionPlaceholder": "Rezon pou rejè",
+      "reportedCount": "Rapòte {{count}} fwa"
     }
   }
 }

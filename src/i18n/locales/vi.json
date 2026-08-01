@@ -2152,7 +2152,7 @@
       "reportSentDesc": "Cảm ơn bạn, chúng tôi sẽ xem xét bài đăng."
     },
     "admin": {
-      "title": "Kiểm duyệt Đường Thánh Giá",
+      "title": "Kiểm duyệt Crossways",
       "reported": "Đã báo cáo",
       "pending": "Đang chờ xử lý",
       "approved": "Đã duyệt",
@@ -2163,7 +2163,18 @@
       "approve": "Duyệt",
       "reject": "Từ chối",
       "delete": "Xóa",
-      "rejectReasonPlaceholder": "Lý do từ chối"
+      "rejectReasonPlaceholder": "Lý do từ chối",
+      "filter": {
+        "reported": "Đã báo cáo",
+        "pending": "Đang chờ xử lý",
+        "approved": "Đã duyệt",
+        "rejected": "Đã từ chối",
+        "all": "Tất cả"
+      },
+      "deleted": "Đã xóa",
+      "error": "Lỗi",
+      "rejectionPlaceholder": "Lý do từ chối",
+      "reportedCount": "Đã báo cáo {{count}} lần"
     }
   }
 }

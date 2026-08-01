@@ -2192,18 +2192,29 @@
       "reportSentDesc": "Takk, vi vil gjennomgå bidraget."
     },
     "admin": {
-      "title": "Korsveier-moderering",
+      "title": "Korsvei-moderering",
       "reported": "Rapportert",
       "pending": "Ventende",
       "approved": "Godkjent",
       "rejected": "Avvist",
       "all": "Alle",
-      "loading": "Laster…",
+      "loading": "Laster inn…",
       "empty": "Ingen oppføringer.",
       "approve": "Godkjenn",
       "reject": "Avvis",
       "delete": "Slett",
-      "rejectReasonPlaceholder": "Årsak til avvisning"
+      "rejectReasonPlaceholder": "Årsak til avvisning",
+      "filter": {
+        "reported": "Rapportert",
+        "pending": "Ventende",
+        "approved": "Godkjent",
+        "rejected": "Avvist",
+        "all": "Alle"
+      },
+      "deleted": "Slettet",
+      "error": "Feil",
+      "rejectionPlaceholder": "Årsak til avvisning",
+      "reportedCount": "Rapportert {{count}} ganger"
     }
   }
 }

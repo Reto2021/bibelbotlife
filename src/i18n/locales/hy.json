@@ -2150,7 +2150,7 @@
       "reportSentDesc": "Շնորհակալություն, մենք կստուգենք գրառումը։"
     },
     "admin": {
-      "title": "Խաչուղիների մոդերացիա",
+      "title": "Խաչմերուկների մոդերացիա",
       "reported": "Հաղորդվել է",
       "pending": "Սպասման մեջ",
       "approved": "Հաստատված է",
@@ -2161,7 +2161,18 @@
       "approve": "Հաստատել",
       "reject": "Մերժել",
       "delete": "Ջնջել",
-      "rejectReasonPlaceholder": "Մերժման պատճառը"
+      "rejectReasonPlaceholder": "Մերժման պատճառը",
+      "filter": {
+        "reported": "Հաղորդված",
+        "pending": "Սպասվող",
+        "approved": "Հաստատված",
+        "rejected": "Մերժված",
+        "all": "Բոլորը"
+      },
+      "deleted": "Ջնջված է",
+      "error": "Սխալ",
+      "rejectionPlaceholder": "Մերժման պատճառը",
+      "reportedCount": "{{count}}× հաղորդված է"
     }
   }
 }

@@ -2150,18 +2150,29 @@
       "reportSentDesc": "Mulțumim, vom verifica contribuția."
     },
     "admin": {
-      "title": "Moderare Căi ale Crucii",
+      "title": "Moderare Căi",
       "reported": "Raportat",
       "pending": "În așteptare",
       "approved": "Aprobat",
       "rejected": "Respins",
       "all": "Toate",
       "loading": "Se încarcă…",
-      "empty": "Niciun element.",
+      "empty": "Nici o înregistrare.",
       "approve": "Aprobă",
       "reject": "Respinge",
       "delete": "Șterge",
-      "rejectReasonPlaceholder": "Motivul respingerii"
+      "rejectReasonPlaceholder": "Motivul respingerii",
+      "filter": {
+        "reported": "Raportate",
+        "pending": "În așteptare",
+        "approved": "Aprobate",
+        "rejected": "Respinse",
+        "all": "Toate"
+      },
+      "deleted": "Șters",
+      "error": "Eroare",
+      "rejectionPlaceholder": "Motivul respingerii",
+      "reportedCount": "Raportate de {{count}} ori"
     }
   }
 }

@@ -2150,7 +2150,7 @@
       "reportSentDesc": "Gracias, revisaremos la publicación."
     },
     "admin": {
-      "title": "Moderación de Caminos de Cruces",
+      "title": "Moderación de Cruces",
       "reported": "Reportado",
       "pending": "Pendiente",
       "approved": "Aprobado",
@@ -2161,7 +2161,18 @@
       "approve": "Aprobar",
       "reject": "Rechazar",
       "delete": "Eliminar",
-      "rejectReasonPlaceholder": "Motivo del rechazo"
+      "rejectReasonPlaceholder": "Motivo del rechazo",
+      "filter": {
+        "reported": "Reportado",
+        "pending": "Pendiente",
+        "approved": "Aprobado",
+        "rejected": "Rechazado",
+        "all": "Todos"
+      },
+      "deleted": "Eliminado",
+      "error": "Error",
+      "rejectionPlaceholder": "Motivo del rechazo",
+      "reportedCount": "Reportado {{count}} veces"
     }
   }
 }

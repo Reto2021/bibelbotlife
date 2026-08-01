@@ -2150,7 +2150,7 @@
       "reportSentDesc": "Спасибо, мы проверим публикацию."
     },
     "admin": {
-      "title": "Модерация Крестных путей",
+      "title": "Модерация перекрестков",
       "reported": "Сообщено",
       "pending": "В ожидании",
       "approved": "Одобрено",
@@ -2161,7 +2161,18 @@
       "approve": "Одобрить",
       "reject": "Отклонить",
       "delete": "Удалить",
-      "rejectReasonPlaceholder": "Причина отклонения"
+      "rejectReasonPlaceholder": "Причина отклонения",
+      "filter": {
+        "reported": "Сообщено",
+        "pending": "В ожидании",
+        "approved": "Одобрено",
+        "rejected": "Отклонено",
+        "all": "Все"
+      },
+      "deleted": "Удалено",
+      "error": "Ошибка",
+      "rejectionPlaceholder": "Причина отклонения",
+      "reportedCount": "Сообщено {{count}} раз"
     }
   }
 }

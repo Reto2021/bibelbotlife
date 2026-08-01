@@ -2150,18 +2150,29 @@
       "reportSentDesc": "תודה, אנו בודקים את הפוסט."
     },
     "admin": {
-      "title": "ניהול דרכי הצלב",
+      "title": "ניהול צמתים",
       "reported": "דווח",
       "pending": "ממתין",
       "approved": "אושר",
       "rejected": "נדחה",
       "all": "הכל",
-      "loading": "טוען…",
+      "loading": "טוען...",
       "empty": "אין פריטים.",
       "approve": "אשר",
       "reject": "דחה",
       "delete": "מחק",
-      "rejectReasonPlaceholder": "סיבת דחייה"
+      "rejectReasonPlaceholder": "סיבת דחייה",
+      "filter": {
+        "reported": "מדווח",
+        "pending": "ממתין",
+        "approved": "אושר",
+        "rejected": "נדחה",
+        "all": "הכל"
+      },
+      "deleted": "נמחק",
+      "error": "שגיאה",
+      "rejectionPlaceholder": "סיבת דחייה",
+      "reportedCount": "דווח {{count}} פעמים"
     }
   }
 }

@@ -2150,7 +2150,7 @@
       "reportSentDesc": "Hvala, pregledat ćemo objavu."
     },
     "admin": {
-      "title": "Moderacija križnih putova",
+      "title": "Moderacija raskrižja",
       "reported": "Prijavljeno",
       "pending": "Na čekanju",
       "approved": "Odobreno",
@@ -2161,7 +2161,18 @@
       "approve": "Odobri",
       "reject": "Odbij",
       "delete": "Izbriši",
-      "rejectReasonPlaceholder": "Razlog odbijanja"
+      "rejectReasonPlaceholder": "Razlog odbijanja",
+      "filter": {
+        "reported": "Prijavljeno",
+        "pending": "Na čekanju",
+        "approved": "Odobreno",
+        "rejected": "Odbijeno",
+        "all": "Sve"
+      },
+      "deleted": "Izbrisano",
+      "error": "Greška",
+      "rejectionPlaceholder": "Razlog odbijanja",
+      "reportedCount": "Prijavljeno {{count}}×"
     }
   }
 }

@@ -2153,15 +2153,26 @@
       "title": "Модерация на кръстопътища",
       "reported": "Докладвано",
       "pending": "В очакване",
-      "approved": "Одобрено",
-      "rejected": "Отхвърлено",
+      "approved": "Одобрени",
+      "rejected": "Отхвърлени",
       "all": "Всички",
       "loading": "Зареждане…",
       "empty": "Няма записи.",
       "approve": "Одобряване",
       "reject": "Отхвърляне",
       "delete": "Изтриване",
-      "rejectReasonPlaceholder": "Причина за отхвърляне"
+      "rejectReasonPlaceholder": "Причина за отхвърляне",
+      "filter": {
+        "reported": "Докладвани",
+        "pending": "Чакащи",
+        "approved": "Одобрени",
+        "rejected": "Отхвърлени",
+        "all": "Всички"
+      },
+      "deleted": "Изтрити",
+      "error": "Грешка",
+      "rejectionPlaceholder": "Причина за отхвърляне",
+      "reportedCount": "Докладвани {{count}} пъти"
     }
   }
 }

@@ -2153,15 +2153,26 @@
       "title": "Ìṣàkóso Àwọn Ọ̀nà Agbelebu",
       "reported": "Ti fún ìròyìn",
       "pending": "Dúró",
-      "approved": "Ti fọwọ́ sí",
-      "rejected": "Ti kọ̀",
+      "approved": "Fọwọ́sí",
+      "rejected": "Kọ̀",
       "all": "Gbogbo",
-      "loading": "Ìkójáde…",
-      "empty": "Kò sí àwọn ìkọ́kọ́.",
-      "approve": "Fọwọ́ sí",
+      "loading": "Ń rù…",
+      "empty": "Kò sí ohun kankan.",
+      "approve": "Fọwọ́sí",
       "reject": "Kọ̀",
       "delete": "Paarẹ́",
-      "rejectReasonPlaceholder": "Ìdí ìkọ̀sílẹ̀"
+      "rejectReasonPlaceholder": "Ìdí ìkọ̀sílẹ̀",
+      "filter": {
+        "reported": "Wọ́n ti ròyìn rẹ̀",
+        "pending": "Dúró de",
+        "approved": "Fọwọ́sí",
+        "rejected": "Kọ̀",
+        "all": "Gbogbo rẹ̀"
+      },
+      "deleted": "Paarẹ́",
+      "error": "Àṣìṣe",
+      "rejectionPlaceholder": "Ìdí tí wọ́n fi kọ̀ ọ́",
+      "reportedCount": "{{count}}× ròyìn"
     }
   }
 }

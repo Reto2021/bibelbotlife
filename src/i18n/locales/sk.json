@@ -2150,18 +2150,29 @@
       "reportSentDesc": "Ďakujeme, príspevok preveríme."
     },
     "admin": {
-      "title": "Moderácia krížových ciest",
+      "title": "Moderácia križovatiek",
       "reported": "Nahlásené",
       "pending": "Čakajúce",
       "approved": "Schválené",
-      "rejected": "Odmietnuté",
+      "rejected": "Zamietnuté",
       "all": "Všetky",
-      "loading": "Načítava sa…",
+      "loading": "Načítavam…",
       "empty": "Žiadne záznamy.",
       "approve": "Schváliť",
-      "reject": "Odmietnuť",
+      "reject": "Zamietnuť",
       "delete": "Vymazať",
-      "rejectReasonPlaceholder": "Dôvod odmietnutia"
+      "rejectReasonPlaceholder": "Dôvod odmietnutia",
+      "filter": {
+        "reported": "Nahlásené",
+        "pending": "Čakajúce",
+        "approved": "Schválené",
+        "rejected": "Zamietnuté",
+        "all": "Všetky"
+      },
+      "deleted": "Vymazané",
+      "error": "Chyba",
+      "rejectionPlaceholder": "Dôvod zamietnutia",
+      "reportedCount": "Nahlásené {{count}}×"
     }
   }
 }

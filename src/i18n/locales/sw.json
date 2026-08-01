@@ -2150,7 +2150,7 @@
       "reportSentDesc": "Asante, tunakagua chapisho."
     },
     "admin": {
-      "title": "Usimamizi wa Njia za Msalaba",
+      "title": "Usimamizi wa Njia Panda",
       "reported": "Imeripotiwa",
       "pending": "Inasubiri",
       "approved": "Imeidhinishwa",
@@ -2161,7 +2161,18 @@
       "approve": "Idhinisha",
       "reject": "Kataa",
       "delete": "Futa",
-      "rejectReasonPlaceholder": "Sababu ya kukataa"
+      "rejectReasonPlaceholder": "Sababu ya kukataa",
+      "filter": {
+        "reported": "Imetolewa ripoti",
+        "pending": "Inasubiri",
+        "approved": "Imeidhinishwa",
+        "rejected": "Imekataliwa",
+        "all": "Zote"
+      },
+      "deleted": "Imefutwa",
+      "error": "Hitilafu",
+      "rejectionPlaceholder": "Sababu ya kukataliwa",
+      "reportedCount": "Imetolewa ripoti mara {{count}}×"
     }
   }
 }
