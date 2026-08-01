@@ -207,7 +207,11 @@ export function CrossUploadDialog({
             >
               {preview ? (
                 <>
-                  <img src={preview} alt={t("crossways.upload.photoLabel")} className="max-h-48 rounded-lg object-cover" />
+                  <img
+                    src={burnedPreview ?? preview}
+                    alt={t("crossways.upload.photoLabel")}
+                    className="max-h-48 rounded-lg object-cover"
+                  />
                   <span className="text-xs">{t("crossways.upload.replaceHint")}</span>
                 </>
               ) : (
