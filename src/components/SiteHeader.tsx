@@ -82,6 +82,13 @@ export function SiteHeader() {
               {t("nav.bibleQuiz")}
             </Link>
           </Button>
+          <Button asChild variant="ghost" size="sm">
+            <Link to="/kreuzwege">
+              <MapPin className="h-4 w-4 mr-1.5" />
+              {t("nav.crossways", "Kreuzwege")}
+            </Link>
+          </Button>
+
 
           {/* More dropdown for secondary links */}
           <DropdownMenu>
