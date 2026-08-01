@@ -201,6 +201,9 @@ const App = () => {
                    <Route path="/gebetswand" element={<PrayerWall />} />
                    <Route path="/kreuzwege/:slug" element={<Kreuzwege />} />
                    <Route path="/kreuzwege" element={<Kreuzwege />} />
+                   <Route path="/wegkreuze" element={<CrossLandingPage type="wegkreuze" />} />
+                   <Route path="/gipfelkreuze" element={<CrossLandingPage type="gipfelkreuze" />} />
+                   <Route path="/bergkreuze" element={<CrossLandingPage type="bergkreuze" />} />
                    <Route path="/bibelquiz" element={<BibleQuiz />} />
                   <Route path="/unsubscribe" element={<Unsubscribe />} />
                   <Route path="/spenden" element={<Spenden />} />
