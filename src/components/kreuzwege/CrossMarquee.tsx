@@ -115,7 +115,9 @@ export function CrossMarquee() {
       window.clearTimeout(resumeTimer);
       el.removeEventListener("pointerenter", pause);
       el.removeEventListener("pointerleave", resume);
-      el.removeEventListener("pointerdown", pause);
+      el.removeEventListener("pointerdown", onDown);
+      window.removeEventListener("pointermove", onMove);
+      window.removeEventListener("pointerup", onUp);
       el.removeEventListener("touchstart", pause);
       el.removeEventListener("touchend", pauseThenResume);
       el.removeEventListener("wheel", pauseThenResume);
