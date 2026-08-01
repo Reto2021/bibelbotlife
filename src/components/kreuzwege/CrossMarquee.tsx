@@ -85,7 +85,27 @@ export function CrossMarquee() {
 
     el.addEventListener("pointerenter", pause);
     el.addEventListener("pointerleave", resume);
-    el.addEventListener("pointerdown", pause);
+    // Desktop mouse drag ("grab and pull").
+    let dragging = false;
+    let startX = 0;
+    let startScroll = 0;
+    const onDown = (e: PointerEvent) => {
+      pause();
+      if (e.pointerType === "mouse") {
+        dragging = true;
+        startX = e.clientX;
+        startScroll = el.scrollLeft;
+      }
+    };
+    const onMove = (e: PointerEvent) => {
+      if (!dragging) return;
+      el.scrollLeft = startScroll - (e.clientX - startX);
+    };
+    const onUp = () => { dragging = false; };
+    el.addEventListener("pointerdown", onDown);
+    window.addEventListener("pointermove", onMove);
+    window.addEventListener("pointerup", onUp);
+
     el.addEventListener("touchstart", pause, { passive: true });
     el.addEventListener("touchend", pauseThenResume, { passive: true });
     el.addEventListener("wheel", pauseThenResume, { passive: true });
