@@ -267,15 +267,15 @@ export function MyCrosses() {
         </div>
       ) : (
         <p className="text-xs text-muted-foreground">
-          {t("crossways.mine.resultCount", {
+          {t("crossways.mine.resultCountPaged", {
+            shown: pagedPosts.length,
             count: visiblePosts.length,
-            defaultValue: "{{count}} von {{total}} Kreuzen",
-            total: posts.length,
+            defaultValue: "{{shown}} von {{count}} Kreuzen angezeigt",
           })}
         </p>
       )}
 
-      {visiblePosts.map((post) => (
+      {pagedPosts.map((post) => (
         <Card key={post.id} className="overflow-hidden p-4">
           <div className="flex flex-col gap-4 sm:flex-row">
             {post.image_url && (
