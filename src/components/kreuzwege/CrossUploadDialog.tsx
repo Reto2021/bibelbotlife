@@ -23,13 +23,25 @@ const CrossMap = lazy(() => import("./CrossMap"));
 export function CrossUploadDialog({
   onSubmitted,
   defaultOpen = false,
+  onOpenChange,
 }: {
   onSubmitted: () => void;
   defaultOpen?: boolean;
+  onOpenChange?: (open: boolean) => void;
 }) {
   const { t } = useTranslation();
   const { toast } = useToast();
   const [open, setOpen] = useState(defaultOpen);
+
+  useEffect(() => {
+    setOpen(defaultOpen);
+  }, [defaultOpen]);
+
+  function handleOpenChange(next: boolean) {
+    setOpen(next);
+    onOpenChange?.(next);
+    if (!next) reset();
+  }
   const [file, setFile] = useState<File | null>(null);
   const [preview, setPreview] = useState<string | null>(null);
   const [placeLabel, setPlaceLabel] = useState("");
