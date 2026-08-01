@@ -3,6 +3,7 @@
  * Applied before the quote is burned in and before the file is uploaded.
  */
 
+import { decodeImageOriented } from "@/lib/exif-orientation";
 export type CropAspect = "original" | "1:1" | "4:5" | "16:9";
 
 export interface ImageEdits {
@@ -35,7 +36,7 @@ export async function applyImageEdits(
 ): Promise<File> {
   if (!hasImageEdits({ rotation, aspect })) return file;
 
-  const bitmap = await createImageBitmap(file);
+  const bitmap = await decodeImageOriented(file);
   const angle = ((rotation % 360) + 360) % 360;
   const swap = angle === 90 || angle === 270;
   const rotatedW = swap ? bitmap.height : bitmap.width;

@@ -4,6 +4,7 @@
  * path all enforce the same rules.
  */
 
+import { decodeImageOriented } from "@/lib/exif-orientation";
 export const MAX_IMAGE_BYTES = 5 * 1024 * 1024;
 export const MIN_IMAGE_DIMENSION = 200;
 
@@ -92,7 +93,7 @@ export function validateImageFile(file: File): ImageValidationResult {
 export async function validateImageContent(file: File): Promise<ImageValidationResult> {
   let bitmap: ImageBitmap;
   try {
-    bitmap = await createImageBitmap(file);
+    bitmap = await decodeImageOriented(file);
   } catch {
     return { ok: false, code: "unreadable" };
   }
