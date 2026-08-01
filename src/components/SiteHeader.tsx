@@ -251,6 +251,10 @@ export function SiteHeader() {
             <GraduationCap className="h-4 w-4 text-primary" />
             {t("nav.bibleQuiz")}
           </Link>
+          <Link to="/kreuzwege" className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-foreground hover:bg-primary/10 transition-colors" onClick={() => setMobileMenuOpen(false)}>
+            <MapPin className="h-4 w-4 text-primary" />
+            {t("nav.crossways", "Kreuzwege")}
+          </Link>
           <Link to="/churches" className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-foreground hover:bg-primary/10 transition-colors" onClick={() => setMobileMenuOpen(false)}>
             <BookOpen className="h-4 w-4 text-primary" />
             {t("church.directoryBadge")}
