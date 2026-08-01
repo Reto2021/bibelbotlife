@@ -170,7 +170,7 @@ export function CrossUploadDialog({ onSubmitted }: { onSubmitted: () => void }) 
           <div className="space-y-2">
             <div className="flex flex-wrap items-center gap-2">
               <Button type="button" variant="outline" size="sm" onClick={useMyLocation} className="gap-1.5">
-                <Crosshair className="h-4 w-4" /> Standort verwenden
+                <Crosshair className="h-4 w-4" /> {t("crossways.upload.useLocation")}
               </Button>
               <Button
                 type="button"
@@ -178,7 +178,7 @@ export function CrossUploadDialog({ onSubmitted }: { onSubmitted: () => void }) 
                 size="sm"
                 onClick={() => setShowPicker((v) => !v)}
               >
-                {showPicker ? "Karte schliessen" : "Punkt auf Karte setzen"}
+                {showPicker ? t("crossways.upload.closeMap") : t("crossways.upload.openMap")}
               </Button>
               {coords && (
                 <span className="text-xs text-muted-foreground">
