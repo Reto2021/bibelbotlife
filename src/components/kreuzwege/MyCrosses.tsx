@@ -34,6 +34,9 @@ export function MyCrosses() {
   const [editing, setEditing] = useState<MyCrossPost | null>(null);
   const [deleting, setDeleting] = useState<MyCrossPost | null>(null);
   const [saving, setSaving] = useState(false);
+  const [newPhoto, setNewPhoto] = useState<File | null>(null);
+  const [newPhotoUrl, setNewPhotoUrl] = useState<string | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const [form, setForm] = useState({
     placeLabel: "",
@@ -44,6 +47,17 @@ export function MyCrosses() {
     isAnonymous: true,
   });
 
+  // Local preview of the replacement photo; revoked when it changes or unmounts.
+  useEffect(() => {
+    if (!newPhoto) {
+      setNewPhotoUrl(null);
+      return;
+    }
+    const url = URL.createObjectURL(newPhoto);
+    setNewPhotoUrl(url);
+    return () => URL.revokeObjectURL(url);
+  }, [newPhoto]);
+
   function openEdit(post: MyCrossPost) {
     setForm({
       placeLabel: post.place_label ?? "",
@@ -53,7 +67,21 @@ export function MyCrosses() {
       authorName: post.author_name ?? "",
       isAnonymous: post.is_anonymous,
     });
+    setNewPhoto(null);
     setEditing(post);
+  }
+
+  function pickPhoto(file: File | undefined) {
+    if (!file) return;
+    if (!file.type.startsWith("image/")) {
+      toast.error(t("crossways.mine.photoInvalid", { defaultValue: "Bitte wähle eine Bilddatei." }));
+      return;
+    }
+    if (file.size > 15 * 1024 * 1024) {
+      toast.error(t("crossways.mine.photoTooLarge", { defaultValue: "Das Bild ist zu gross (max. 15 MB)." }));
+      return;
+    }
+    setNewPhoto(file);
   }
 
   async function save() {
@@ -72,13 +100,24 @@ export function MyCrosses() {
         quoteReference: form.quoteReference || null,
         authorName: form.authorName || null,
         isAnonymous: form.isAnonymous,
+        file: newPhoto,
       });
-      toast.success(t("crossways.mine.saved"));
+      toast.success(
+        newPhoto
+          ? t("crossways.mine.photoReplaced", { defaultValue: "Neues Foto gespeichert und geprüft" })
+          : t("crossways.mine.saved"),
+      );
+      setNewPhoto(null);
       setEditing(null);
     } catch (e) {
-      const msg = e instanceof Error && e.message === "blocked"
+      const code = e instanceof Error ? e.message : "";
+      const msg = code === "blocked"
         ? t("crossways.upload.blockedTitle")
-        : t("crossways.mine.saveError");
+        : code === "image_too_large"
+          ? t("crossways.mine.photoTooLarge", { defaultValue: "Das Bild ist zu gross (max. 15 MB)." })
+          : code === "unsupported_format"
+            ? t("crossways.mine.photoInvalid", { defaultValue: "Bitte wähle eine Bilddatei." })
+            : t("crossways.mine.saveError");
       toast.error(msg);
     } finally {
       setSaving(false);
