@@ -1,6 +1,6 @@
 import { lazy, Suspense, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, useParams, useNavigate } from "react-router-dom";
 import { SEOHead } from "@/components/SEOHead";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Button } from "@/components/ui/button";
@@ -9,7 +9,7 @@ import { CrossFeed } from "@/components/kreuzwege/CrossFeed";
 import { MyCrosses } from "@/components/kreuzwege/MyCrosses";
 import { CrossUploadDialog } from "@/components/kreuzwege/CrossUploadDialog";
 import { CrossDetailModal } from "@/components/kreuzwege/CrossDetailModal";
-import { useCrossPosts, distanceKm } from "@/hooks/use-cross-posts";
+import { useCrossPosts, distanceKm, getCrossPostUrl } from "@/hooks/use-cross-posts";
 import { useToast } from "@/hooks/use-toast";
 
 const CrossMap = lazy(() => import("@/components/kreuzwege/CrossMap"));
@@ -18,6 +18,8 @@ export default function Kreuzwege() {
   const { t } = useTranslation();
   const { posts, loading, hasReacted, react, reload } = useCrossPosts();
   const { toast } = useToast();
+  const navigate = useNavigate();
+  const { slug } = useParams<{ slug?: string }>();
   const [view, setView] = useState<"feed" | "map" | "mine">("feed");
   const [me, setMe] = useState<{ lat: number; lng: number } | null>(null);
   const [searchParams, setSearchParams] = useSearchParams();
@@ -27,9 +29,15 @@ export default function Kreuzwege() {
   const uploadParam = searchParams.get("upload");
   const uploadOpen = uploadParam === "1";
 
+  // Prefer the slug route param, fall back to legacy ?post= query param.
   useEffect(() => {
-    if (deepLinkId && posts.some((p) => p.id === deepLinkId)) setDetailId(deepLinkId);
-  }, [deepLinkId, posts]);
+    if (slug) {
+      const found = posts.find((p) => p.slug === slug);
+      if (found) setDetailId(found.id);
+    } else if (deepLinkId && posts.some((p) => p.id === deepLinkId)) {
+      setDetailId(deepLinkId);
+    }
+  }, [slug, deepLinkId, posts]);
 
   function clearUploadParam() {
     if (uploadParam !== null) {
@@ -46,6 +54,10 @@ export default function Kreuzwege() {
 
   function closeDetail() {
     setDetailId(null);
+    if (slug) {
+      navigate("/kreuzwege", { replace: true });
+      return;
+    }
     if (searchParams.has("post")) {
       const next = new URLSearchParams(searchParams);
       next.delete("post");
