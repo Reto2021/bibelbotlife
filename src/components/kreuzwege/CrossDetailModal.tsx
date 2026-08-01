@@ -82,15 +82,49 @@ export function CrossDetailModal({ post, open, onOpenChange, hasReacted, onReact
 
             {hasCoords && (
               <div className="space-y-2">
-                <p className="text-xs uppercase tracking-wider text-muted-foreground">
-                  {t("crossways.modal.mapLabel", "Standort")}
-                </p>
+                <div className="flex items-center justify-between gap-2">
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground">
+                    {t("crossways.modal.mapLabel", "Standort")}
+                  </p>
+                  <div className="flex items-center gap-1">
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      className="h-7 w-7"
+                      aria-label={t("crossways.modal.zoomOut", "Weiter herauszoomen")}
+                      disabled={zoom <= MIN_ZOOM}
+                      onClick={() => setZoom((z) => Math.max(MIN_ZOOM, z - 2))}
+                    >
+                      <Minus className="h-3.5 w-3.5" />
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      className="h-7 w-7"
+                      aria-label={t("crossways.modal.zoomIn", "Näher heranzoomen")}
+                      disabled={zoom >= MAX_ZOOM}
+                      onClick={() => setZoom((z) => Math.min(MAX_ZOOM, z + 2))}
+                    >
+                      <Plus className="h-3.5 w-3.5" />
+                    </Button>
+                  </div>
+                </div>
                 <CrossMap
                   posts={[post]}
                   center={[post.lat as number, post.lng as number]}
-                  zoom={13}
+                  zoom={zoom}
                   height="240px"
+                  onMarkerClick={openExternalMaps}
                 />
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <p className="text-xs text-muted-foreground">
+                    {t("crossways.modal.pinHint", "Nadel antippen, um die Adresse in Karten zu öffnen")}
+                  </p>
+                  <Button variant="ghost" size="sm" className="gap-1.5" onClick={openExternalMaps}>
+                    <ExternalLink className="h-3.5 w-3.5" />
+                    {t("crossways.modal.openMaps", "In Karten öffnen")}
+                  </Button>
+                </div>
               </div>
             )}
 
