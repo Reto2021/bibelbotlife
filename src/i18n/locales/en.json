@@ -2275,6 +2275,12 @@
       "openLightbox": "View photo full screen",
       "closeLightbox": "Close full screen"
     },
+    "detail": {
+      "metaTitle": "{{place}} – Crossroads | BibleBot.Life",
+      "metaDescription": "Cross at {{place}}. {{quote}} {{story}}",
+      "notFoundTitle": "Cross not found",
+      "notFoundDesc": "This link does not lead to a published cross. Discover more crosses in the feed."
+    },
     "mine": {
       "title": "My crosses",
       "hint": "These are your own posts. As long as you use the same browser you can edit or delete them. Sign in to keep them linked to your account.",

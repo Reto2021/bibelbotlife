@@ -115,6 +115,12 @@
       "openLightbox": "Foto im Vollbild anzeigen",
       "closeLightbox": "Vollbild schliessen"
     },
+    "detail": {
+      "metaTitle": "{{place}} – Kreuzwege | BibleBot.Life",
+      "metaDescription": "Kreuz bei {{place}}. {{quote}} {{story}}",
+      "notFoundTitle": "Kreuz nicht gefunden",
+      "notFoundDesc": "Dieser Link führt zu keinem veröffentlichten Kreuz. Entdecke weitere Kreuze im Feed."
+    },
     "upload": {
       "trigger": "Kreuz hinzufügen",
       "title": "Kreuz hinzufügen",
