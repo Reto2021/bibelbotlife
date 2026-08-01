@@ -26,7 +26,6 @@ const MAX_ZOOM = 18;
 
 export function CrossDetailModal({ post, open, onOpenChange, hasReacted, onReact }: Props) {
   const { t } = useTranslation();
-  const { toast } = useToast();
   const [zoom, setZoom] = useState(13);
   const [copied, setCopied] = useState(false);
 
