@@ -56,6 +56,40 @@ export function CrossUploadDialog({
   const [showPicker, setShowPicker] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [dragActive, setDragActive] = useState(false);
+  const [quote, setQuote] = useState("");
+  const [quoteReference, setQuoteReference] = useState("");
+  const [burnQuote, setBurnQuote] = useState(true);
+  const [burnedPreview, setBurnedPreview] = useState<string | null>(null);
+
+  // Live preview of the burned-in quote (same renderer as the upload).
+  useEffect(() => {
+    let cancelled = false;
+    let url: string | null = null;
+    if (!file || !burnQuote || !quote.trim()) {
+      setBurnedPreview(null);
+      return;
+    }
+    const timer = setTimeout(async () => {
+      try {
+        const blob = await burnQuoteIntoImage(file, {
+          quote,
+          reference: quoteReference,
+          maxSize: 900,
+          quality: 0.8,
+        });
+        if (cancelled) return;
+        url = URL.createObjectURL(blob);
+        setBurnedPreview(url);
+      } catch {
+        setBurnedPreview(null);
+      }
+    }, 350);
+    return () => {
+      cancelled = true;
+      clearTimeout(timer);
+      if (url) URL.revokeObjectURL(url);
+    };
+  }, [file, quote, quoteReference, burnQuote]);
 
   function reset() {
     setFile(null);
@@ -69,6 +103,10 @@ export function CrossUploadDialog({
     setCoords(null);
     setShowPicker(false);
     setDragActive(false);
+    setQuote("");
+    setQuoteReference("");
+    setBurnQuote(true);
+    setBurnedPreview(null);
   }
 
   function pickFile(f: File | undefined) {
