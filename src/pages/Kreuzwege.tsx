@@ -137,10 +137,20 @@ export default function Kreuzwege() {
       <SiteHeader />
 
       <main className="container mx-auto max-w-6xl px-4 py-10">
-        <header className="mb-8 max-w-2xl">
-          <h1 className="font-display text-4xl uppercase tracking-tight sm:text-5xl">{t("crossways.title")}</h1>
-          <p className="mt-3 text-muted-foreground">{t("crossways.subtitle")}</p>
-        </header>
+        {slug && !loading && !detailPost ? (
+          <header className="mb-8 max-w-2xl">
+            <h1 className="font-display text-4xl uppercase tracking-tight sm:text-5xl">{t("crossways.detail.notFoundTitle")}</h1>
+            <p className="mt-3 text-muted-foreground">{t("crossways.detail.notFoundDesc")}</p>
+            <Button className="mt-6" asChild>
+              <a href="/kreuzwege">{t("crossways.feed")}</a>
+            </Button>
+          </header>
+        ) : (
+          <header className="mb-8 max-w-2xl">
+            <h1 className="font-display text-4xl uppercase tracking-tight sm:text-5xl">{t("crossways.title")}</h1>
+            <p className="mt-3 text-muted-foreground">{t("crossways.subtitle")}</p>
+          </header>
+        )}
 
         <div className="mb-6 flex flex-wrap items-center gap-2">
           <div className="flex rounded-lg border border-border/60 p-1">
