@@ -203,7 +203,7 @@ Deno.serve(async (req) => {
         session_id: sessionId,
         user_id: userId,
       })
-      .select("id")
+      .select("id,slug")
       .single();
 
     if (insertError || !inserted) {
@@ -215,7 +215,7 @@ Deno.serve(async (req) => {
     // Community uploads go live immediately; reports move them into the queue.
     await admin.from("cross_posts").update({ status: "approved" }).eq("id", inserted.id);
 
-    return json({ id: inserted.id, imagePath: path, mime, bytes: bytes.byteLength });
+    return json({ id: inserted.id, slug: inserted.slug, imagePath: path, mime, bytes: bytes.byteLength });
   } catch (err) {
     console.error("cross-post-submit error", err);
     return json({ error: "unexpected_error" }, 500);
