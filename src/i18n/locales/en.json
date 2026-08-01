@@ -2154,6 +2154,30 @@
   "crossways": {
     "metaTitle": "Crossroads – Share crosses worldwide | BibleBot.Life",
     "metaDescription": "Crosses by the roadside, on mountain peaks and in churches: Share your photo with location and story, discover crosses on the map and accompany them in prayer.",
+    "landing": {
+      "allCrosses": "Discover all crosses",
+      "wegkreuze": {
+        "eyebrow": "Roadside crosses",
+        "title": "Roadside crosses worldwide",
+        "subtitle": "Wayside crosses, field crosses and shrines by the roadside: Discover old and new crosses, share your photo and receive prayers from the community.",
+        "metaTitle": "Roadside crosses worldwide – Wayside shrines | BibleBot.Life",
+        "metaDescription": "Discover wayside crosses, field crosses and shrines from around the world. Share your photo with location and story and accompany other crosses in prayer."
+      },
+      "gipfelkreuze": {
+        "eyebrow": "Summit crosses",
+        "title": "Summit & mountain crosses",
+        "subtitle": "Crosses on mountain peaks and summits: Discover summit crosses from the Alps and around the world, share your photo and receive prayers.",
+        "metaTitle": "Summit & mountain crosses worldwide | BibleBot.Life",
+        "metaDescription": "Discover summit crosses and mountain crosses from around the world. Share your summit photo with location and story and accompany other crosses in prayer."
+      },
+      "bergkreuze": {
+        "eyebrow": "Mountain crosses",
+        "title": "Mountain crosses in Germany and worldwide",
+        "subtitle": "Crosses on mountains and summits: Discover mountain crosses in Germany, the Alps and worldwide. Share your photo and receive prayers.",
+        "metaTitle": "Mountain crosses in Germany & worldwide | BibleBot.Life",
+        "metaDescription": "Discover mountain crosses and summit crosses in Germany, the Alps and worldwide. Share your photo with location and story and accompany other crosses in prayer."
+      }
+    },
     "title": "Crossroads",
     "subtitle": "Crosses by the roadside, on mountain peaks, in churches. Share your photo with location and a short story — and accompany the crosses of others in prayer.",
     "feed": "Feed",
