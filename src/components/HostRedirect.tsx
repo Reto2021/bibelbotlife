@@ -20,7 +20,8 @@ export function HostRedirect() {
   useEffect(() => {
     const host = window.location.hostname.toLowerCase();
     const target = HOST_ROUTE_MAP[host];
-    if (target && window.location.pathname !== target) {
+    // Only map the bare domain root; deep links (e.g. /kreuzwege/:slug) stay intact.
+    if (target && window.location.pathname === "/") {
       navigate(target, { replace: true });
     }
   }, [navigate]);
