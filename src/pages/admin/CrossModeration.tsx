@@ -153,6 +153,9 @@ export default function CrossModeration() {
                       <span className="font-medium">{row.place_label}</span>
                       {row.country && <span className="text-sm text-muted-foreground">· {row.country}</span>}
                       <Badge variant={row.status === "approved" ? "default" : "secondary"}>{row.status}</Badge>
+                      {row.reported_count > 0 && (
+                        <Badge variant="destructive">{row.reported_count}× gemeldet</Badge>
+                      )}
                     </div>
                     {row.story && <p className="text-sm text-muted-foreground">{row.story}</p>}
                     <p className="text-xs text-muted-foreground">
