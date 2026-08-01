@@ -1,6 +1,8 @@
 import { useCallback, useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 
+export type CrossInteraction = "prayer" | "amen" | "share";
+
 export interface CrossPost {
   id: string;
   place_label: string;
@@ -11,11 +13,13 @@ export interface CrossPost {
   author_name: string | null;
   is_anonymous: boolean;
   prayer_count: number;
+  amen_count: number;
+  share_count: number;
   created_at: string;
   image_url: string | null;
 }
 
-const PRAYED_KEY = "biblebot-crosses-prayed";
+const REACTED_KEY = "biblebot-crosses-reactions";
 
 function getSessionId() {
   let id = localStorage.getItem("biblebot-session");
@@ -26,9 +30,10 @@ function getSessionId() {
   return id;
 }
 
-function readPrayed(): Set<string> {
+/** Map of `${postId}:${kind}` → true for interactions already sent from this device. */
+function readReacted(): Set<string> {
   try {
-    const raw = localStorage.getItem(PRAYED_KEY);
+    const raw = localStorage.getItem(REACTED_KEY);
     return raw ? new Set(JSON.parse(raw)) : new Set();
   } catch {
     return new Set();
@@ -55,7 +60,7 @@ export async function compressImage(file: File, maxSize = 1600): Promise<Blob> {
 export function useCrossPosts() {
   const [posts, setPosts] = useState<CrossPost[]>([]);
   const [loading, setLoading] = useState(true);
-  const [prayed, setPrayed] = useState<Set<string>>(() => readPrayed());
+  const [reacted, setReacted] = useState<Set<string>>(() => readReacted());
 
   const load = useCallback(async () => {
     const { data, error } = await supabase.functions.invoke("cross-posts-feed");
@@ -67,23 +72,49 @@ export function useCrossPosts() {
     load();
   }, [load]);
 
-  const pray = useCallback(
-    async (id: string) => {
-      if (prayed.has(id)) return;
-      const next = new Set(prayed);
-      next.add(id);
-      setPrayed(next);
-      localStorage.setItem(PRAYED_KEY, JSON.stringify([...next]));
-      setPosts((prev) =>
-        prev.map((p) => (p.id === id ? { ...p, prayer_count: p.prayer_count + 1 } : p)),
-      );
-      await supabase.rpc("increment_cross_prayer_count" as any, { post_id: id });
-    },
-    [prayed],
+  const hasReacted = useCallback(
+    (id: string, kind: CrossInteraction) => reacted.has(`${id}:${kind}`),
+    [reacted],
   );
 
-  return { posts, loading, prayed, pray, reload: load };
+  const react = useCallback(
+    async (id: string, kind: CrossInteraction) => {
+      const key = `${id}:${kind}`;
+      if (reacted.has(key)) return;
+
+      const next = new Set(reacted);
+      next.add(key);
+      setReacted(next);
+      localStorage.setItem(REACTED_KEY, JSON.stringify([...next]));
+
+      const { data, error } = await supabase.rpc("record_cross_interaction" as any, {
+        p_post_id: id,
+        p_session_id: getSessionId(),
+        p_kind: kind,
+      });
+
+      const counts = Array.isArray(data) ? (data[0] as any) : null;
+      if (error || !counts) return;
+
+      setPosts((prev) =>
+        prev.map((p) =>
+          p.id === id
+            ? {
+                ...p,
+                prayer_count: counts.prayer_count ?? p.prayer_count,
+                amen_count: counts.amen_count ?? p.amen_count,
+                share_count: counts.share_count ?? p.share_count,
+              }
+            : p,
+        ),
+      );
+    },
+    [reacted],
+  );
+
+  return { posts, loading, hasReacted, react, reload: load };
 }
+
 
 export interface NewCrossPost {
   file: File;
