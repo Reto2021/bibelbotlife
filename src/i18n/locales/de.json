@@ -102,7 +102,11 @@
       "placeholder3": "Kreuz am Horizont"
     },
     "modal": {
-      "mapLabel": "Standort"
+      "mapLabel": "Standort",
+      "pinHint": "Nadel antippen, um die Adresse in Karten zu öffnen",
+      "openMaps": "In Karten öffnen",
+      "zoomIn": "Näher heranzoomen",
+      "zoomOut": "Weiter herauszoomen"
     },
     "upload": {
       "trigger": "Kreuz hinzufügen",
