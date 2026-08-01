@@ -54,7 +54,7 @@ export function CrossCard({ post, hasReacted, onReact }: Props) {
       {post.image_url && (
         <img
           src={post.image_url}
-          alt={`Kreuz bei ${post.place_label}`}
+          alt={t("crossways.card.imageAlt", { place: post.place_label })}
           loading="lazy"
           className="aspect-[4/3] w-full object-cover"
         />
@@ -71,7 +71,7 @@ export function CrossCard({ post, hasReacted, onReact }: Props) {
         )}
 
         <p className="text-xs text-muted-foreground">
-          {post.is_anonymous || !post.author_name ? "Anonym" : post.author_name}
+          {post.is_anonymous || !post.author_name ? t("crossways.card.anonymous") : post.author_name}
         </p>
 
         <div className="flex flex-wrap items-center gap-2 border-t border-border/50 pt-3">
