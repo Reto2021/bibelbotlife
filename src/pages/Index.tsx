@@ -118,16 +118,16 @@ const Index = () => {
         {/* Chat-First Hero – above the fold */}
         <ChatHero />
 
+      {/* Kreuzwege — lebendes Bilder-Karussell als Einstieg */}
+      <Suspense fallback={<div className="h-20" />}>
+        <CrossMarquee />
+      </Suspense>
+
       {/* Entry Tiles — 9 curated topic chips in 3 groups */}
       <EntryTiles />
 
       <Suspense fallback={<div className="h-20" />}>
         <DailyImpulse />
-      </Suspense>
-
-      {/* Kreuzwege — lebendes Bilder-Karussell als Einstieg */}
-      <Suspense fallback={<div className="h-20" />}>
-        <CrossMarquee />
       </Suspense>
 
       {/* Features Section */}
