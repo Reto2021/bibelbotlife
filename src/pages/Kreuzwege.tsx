@@ -122,6 +122,14 @@ export default function Kreuzwege() {
             />
           </Suspense>
         )}
+
+        <CrossDetailModal
+          post={detailPost}
+          open={!!detailPost}
+          onOpenChange={(o) => !o && closeDetail()}
+          hasReacted={hasReacted}
+          onReact={react}
+        />
       </main>
     </div>
   );
