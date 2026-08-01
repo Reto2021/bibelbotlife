@@ -53,6 +53,7 @@ export function CrossUploadDialog({
   const [coords, setCoords] = useState<{ lat: number; lng: number } | null>(null);
   const [showPicker, setShowPicker] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [dragActive, setDragActive] = useState(false);
 
   function reset() {
     setFile(null);
@@ -65,16 +66,27 @@ export function CrossUploadDialog({
     setConsent(false);
     setCoords(null);
     setShowPicker(false);
+    setDragActive(false);
   }
 
   function pickFile(f: File | undefined) {
     if (!f) return;
+    if (!f.type.startsWith("image/")) {
+      toast({ title: t("crossways.upload.notAnImage"), variant: "destructive" });
+      return;
+    }
     if (f.size > 5 * 1024 * 1024) {
       toast({ title: t("crossways.upload.imageTooBig"), description: t("crossways.upload.imageTooBigDesc"), variant: "destructive" });
       return;
     }
     setFile(f);
     setPreview(URL.createObjectURL(f));
+  }
+
+  function handleDrop(e: React.DragEvent) {
+    e.preventDefault();
+    setDragActive(false);
+    pickFile(e.dataTransfer.files?.[0]);
   }
 
   function useMyLocation() {
