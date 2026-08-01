@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { toast } from "sonner";
-import { Loader2, Pencil, Trash2 } from "lucide-react";
+import { ImageUp, Loader2, Pencil, Trash2, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -34,6 +34,9 @@ export function MyCrosses() {
   const [editing, setEditing] = useState<MyCrossPost | null>(null);
   const [deleting, setDeleting] = useState<MyCrossPost | null>(null);
   const [saving, setSaving] = useState(false);
+  const [newPhoto, setNewPhoto] = useState<File | null>(null);
+  const [newPhotoUrl, setNewPhotoUrl] = useState<string | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const [form, setForm] = useState({
     placeLabel: "",
@@ -44,6 +47,17 @@ export function MyCrosses() {
     isAnonymous: true,
   });
 
+  // Local preview of the replacement photo; revoked when it changes or unmounts.
+  useEffect(() => {
+    if (!newPhoto) {
+      setNewPhotoUrl(null);
+      return;
+    }
+    const url = URL.createObjectURL(newPhoto);
+    setNewPhotoUrl(url);
+    return () => URL.revokeObjectURL(url);
+  }, [newPhoto]);
+
   function openEdit(post: MyCrossPost) {
     setForm({
       placeLabel: post.place_label ?? "",
@@ -53,7 +67,21 @@ export function MyCrosses() {
       authorName: post.author_name ?? "",
       isAnonymous: post.is_anonymous,
     });
+    setNewPhoto(null);
     setEditing(post);
+  }
+
+  function pickPhoto(file: File | undefined) {
+    if (!file) return;
+    if (!file.type.startsWith("image/")) {
+      toast.error(t("crossways.mine.photoInvalid", { defaultValue: "Bitte wähle eine Bilddatei." }));
+      return;
+    }
+    if (file.size > 15 * 1024 * 1024) {
+      toast.error(t("crossways.mine.photoTooLarge", { defaultValue: "Das Bild ist zu gross (max. 15 MB)." }));
+      return;
+    }
+    setNewPhoto(file);
   }
 
   async function save() {
@@ -72,13 +100,24 @@ export function MyCrosses() {
         quoteReference: form.quoteReference || null,
         authorName: form.authorName || null,
         isAnonymous: form.isAnonymous,
+        file: newPhoto,
       });
-      toast.success(t("crossways.mine.saved"));
+      toast.success(
+        newPhoto
+          ? t("crossways.mine.photoReplaced", { defaultValue: "Neues Foto gespeichert und geprüft" })
+          : t("crossways.mine.saved"),
+      );
+      setNewPhoto(null);
       setEditing(null);
     } catch (e) {
-      const msg = e instanceof Error && e.message === "blocked"
+      const code = e instanceof Error ? e.message : "";
+      const msg = code === "blocked"
         ? t("crossways.upload.blockedTitle")
-        : t("crossways.mine.saveError");
+        : code === "image_too_large"
+          ? t("crossways.mine.photoTooLarge", { defaultValue: "Das Bild ist zu gross (max. 15 MB)." })
+          : code === "unsupported_format"
+            ? t("crossways.mine.photoInvalid", { defaultValue: "Bitte wähle eine Bilddatei." })
+            : t("crossways.mine.saveError");
       toast.error(msg);
     } finally {
       setSaving(false);
@@ -166,6 +205,62 @@ export function MyCrosses() {
           </DialogHeader>
 
           <div className="space-y-4">
+            <div className="space-y-2">
+              <Label>{t("crossways.mine.photoLabel", { defaultValue: "Foto" })}</Label>
+              <div className="flex gap-3">
+                <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-lg bg-muted">
+                  {(newPhotoUrl || editing?.image_url) && (
+                    <img
+                      src={newPhotoUrl || editing?.image_url || ""}
+                      alt={form.placeLabel}
+                      className="h-full w-full object-cover"
+                    />
+                  )}
+                  {newPhoto && (
+                    <button
+                      type="button"
+                      aria-label={t("crossways.mine.photoReset", { defaultValue: "Neues Foto verwerfen" })}
+                      onClick={() => setNewPhoto(null)}
+                      className="absolute right-1 top-1 rounded-full bg-background/90 p-1 text-foreground shadow"
+                    >
+                      <X className="h-3.5 w-3.5" />
+                    </button>
+                  )}
+                </div>
+                <div className="flex-1 space-y-2">
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept="image/*"
+                    className="hidden"
+                    onChange={(e) => {
+                      pickPhoto(e.target.files?.[0]);
+                      e.target.value = "";
+                    }}
+                  />
+                  <Button
+                    type="button"
+                    size="sm"
+                    variant="outline"
+                    className="gap-1.5"
+                    onClick={() => fileInputRef.current?.click()}
+                  >
+                    <ImageUp className="h-4 w-4" />
+                    {t("crossways.mine.replacePhoto", { defaultValue: "Foto ersetzen" })}
+                  </Button>
+                  <p className="text-xs text-muted-foreground">
+                    {newPhoto
+                      ? t("crossways.mine.photoPending", {
+                          defaultValue: "Neues Foto wird beim Speichern erneut geprüft.",
+                        })
+                      : t("crossways.mine.replacePhotoHint", {
+                          defaultValue:
+                            "Du kannst das Foto ersetzen, ohne den Beitrag zu löschen – Reaktionen und Link bleiben erhalten.",
+                        })}
+                  </p>
+                </div>
+              </div>
+            </div>
             <div className="space-y-1.5">
               <Label>{t("crossways.upload.placeLabel")}</Label>
               <Input
@@ -197,7 +292,6 @@ export function MyCrosses() {
                 value={form.quoteReference}
                 onChange={(e) => setForm((f) => ({ ...f, quoteReference: e.target.value }))}
               />
-              <p className="text-xs text-muted-foreground">{t("crossways.mine.imageLocked")}</p>
             </div>
             <div className="flex items-center justify-between rounded-lg border border-border/60 p-3">
               <Label htmlFor="mine-anon" className="cursor-pointer">

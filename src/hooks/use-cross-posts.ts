@@ -284,8 +284,24 @@ export function useMyCrossPosts() {
       quoteReference?: string | null;
       authorName?: string | null;
       isAnonymous: boolean;
+      /** Optional replacement photo; the server re-runs moderation on it. */
+      file?: File | null;
+      /** Burn the quote into the replacement photo (defaults to true when a quote exists). */
+      burnQuote?: boolean;
     }) => {
-      await manage("update", input);
+      const { file, burnQuote, ...rest } = input;
+      let imageBase64: string | undefined;
+      let quoteBurned = false;
+      if (file) {
+        const quote = (input.quote ?? "").trim();
+        const reference = (input.quoteReference ?? "").trim();
+        quoteBurned = Boolean(quote) && burnQuote !== false;
+        const blob = quoteBurned
+          ? await burnQuoteIntoImage(file, { quote, reference })
+          : await compressImage(file);
+        imageBase64 = await blobToBase64(blob);
+      }
+      await manage("update", { ...rest, ...(imageBase64 ? { imageBase64, quoteBurned } : {}) });
       await load();
     },
     [load],

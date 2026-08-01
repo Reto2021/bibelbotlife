@@ -2320,9 +2320,16 @@
       "deleteError": "Could not delete",
       "deleteTitle": "Delete post?",
       "deleteConfirm": "The photo and all reactions will be removed permanently. This cannot be undone.",
-      "imageLocked": "The photo itself cannot be changed later — delete the post and upload it again.",
       "placeRequired": "Please enter a place.",
-      "tab": "My crosses"
+      "tab": "My crosses",
+      "photoLabel": "Photo",
+      "replacePhoto": "Replace photo",
+      "replacePhotoHint": "You can replace the photo without deleting the post — reactions and link stay intact.",
+      "photoPending": "The new photo is re-checked when you save.",
+      "photoReplaced": "New photo saved and checked",
+      "photoReset": "Discard new photo",
+      "photoInvalid": "Please choose an image file.",
+      "photoTooLarge": "The image is too large (max. 15 MB)."
     }
   }
 }

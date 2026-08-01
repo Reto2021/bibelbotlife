@@ -268,9 +268,16 @@
       "deleteError": "Löschen fehlgeschlagen",
       "deleteTitle": "Beitrag löschen?",
       "deleteConfirm": "Das Foto und alle Reaktionen werden endgültig entfernt. Das kann nicht rückgängig gemacht werden.",
-      "imageLocked": "Das Foto selbst kann nicht nachträglich geändert werden – lösche den Beitrag und lade ihn neu hoch.",
       "placeRequired": "Bitte gib einen Ort an.",
-      "tab": "Meine Kreuze"
+      "tab": "Meine Kreuze",
+      "photoLabel": "Foto",
+      "replacePhoto": "Foto ersetzen",
+      "replacePhotoHint": "Du kannst das Foto ersetzen, ohne den Beitrag zu löschen – Reaktionen und Link bleiben erhalten.",
+      "photoPending": "Neues Foto wird beim Speichern erneut geprüft.",
+      "photoReplaced": "Neues Foto gespeichert und geprüft",
+      "photoReset": "Neues Foto verwerfen",
+      "photoInvalid": "Bitte wähle eine Bilddatei.",
+      "photoTooLarge": "Das Bild ist zu gross (max. 15 MB)."
     }
   },
   "coaching": {
