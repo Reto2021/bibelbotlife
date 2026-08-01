@@ -28,7 +28,7 @@ type CrossRow = {
 export default function CrossModeration() {
   const { toast } = useToast();
   const qc = useQueryClient();
-  const [filter, setFilter] = useState<"pending" | "approved" | "rejected" | "all">("pending");
+  const [filter, setFilter] = useState<"pending" | "approved" | "rejected" | "reported" | "all">("reported");
   const [urls, setUrls] = useState<Record<string, string>>({});
   const [reasons, setReasons] = useState<Record<string, string>>({});
 
@@ -39,7 +39,11 @@ export default function CrossModeration() {
         .from("cross_posts" as any)
         .select("*")
         .order("created_at", { ascending: false });
-      if (filter !== "all") q = q.eq("status", filter);
+      if (filter === "reported") {
+        q = q.eq("status", "approved").gt("reported_count", 0).order("reported_count", { ascending: false });
+      } else if (filter !== "all") {
+        q = q.eq("status", filter);
+      }
       const { data, error } = await q;
       if (error) throw error;
       return (data ?? []) as unknown as CrossRow[];
