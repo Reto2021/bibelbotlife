@@ -106,7 +106,9 @@
       "pinHint": "Nadel antippen, um die Adresse in Karten zu öffnen",
       "openMaps": "In Karten öffnen",
       "zoomIn": "Näher heranzoomen",
-      "zoomOut": "Weiter herauszoomen"
+      "zoomOut": "Weiter herauszoomen",
+      "copyLink": "Link kopieren",
+      "linkCopied": "Link kopiert"
     },
     "upload": {
       "trigger": "Kreuz hinzufügen",
