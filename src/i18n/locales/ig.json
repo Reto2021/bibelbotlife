@@ -2208,7 +2208,9 @@
       "successDescMany": "{{count}} Bilder wurden veröffentlicht.",
       "submitting": "{{done}}/{{total}} hochgeladen …",
       "progressLabel": "Upload-Fortschritt",
-      "errorDescMany": "{{count}} Bilder konnten nicht hochgeladen werden."
+      "errorDescMany": "{{count}} Bilder konnten nicht hochgeladen werden.",
+      "targetFormat": "Target format for all photos",
+      "targetFormatHint": "Photos with a different aspect ratio are cropped to centre automatically – the preview shows the result. Adjustable per photo."
     },
     "card": {
       "anonymous": "Amaghị aha",
