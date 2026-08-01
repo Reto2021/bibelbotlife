@@ -2137,7 +2137,11 @@
       "successTitle": "Kiitos rististäsi",
       "successDesc": "Ristisi on nyt julkaistu.",
       "errorTitle": "Lähetys epäonnistui",
-      "errorDesc": "Yritä uudelleen."
+      "errorDesc": "Yritä uudelleen.",
+      "dropHint": "Drag an image here or click to select",
+      "replaceHint": "Drag another image or click to replace",
+      "removeImage": "Remove",
+      "notAnImage": "Please choose an image file"
     },
     "card": {
       "anonymous": "Anonyymi",

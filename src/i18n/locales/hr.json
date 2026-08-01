@@ -2137,7 +2137,11 @@
       "successTitle": "Hvala na vašem križu",
       "successDesc": "Vaš križ je sada uživo.",
       "errorTitle": "Prijenos nije uspio",
-      "errorDesc": "Molimo pokušajte ponovno."
+      "errorDesc": "Molimo pokušajte ponovno.",
+      "dropHint": "Drag an image here or click to select",
+      "replaceHint": "Drag another image or click to replace",
+      "removeImage": "Remove",
+      "notAnImage": "Please choose an image file"
     },
     "card": {
       "anonymous": "Anonimno",

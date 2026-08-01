@@ -2178,7 +2178,11 @@
       "successTitle": "Bedankt voor je kruis",
       "successDesc": "Je kruis is nu live.",
       "errorTitle": "Upload mislukt",
-      "errorDesc": "Probeer het opnieuw."
+      "errorDesc": "Probeer het opnieuw.",
+      "dropHint": "Drag an image here or click to select",
+      "replaceHint": "Drag another image or click to replace",
+      "removeImage": "Remove",
+      "notAnImage": "Please choose an image file"
     },
     "card": {
       "anonymous": "Anoniem",

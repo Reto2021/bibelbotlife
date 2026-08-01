@@ -2178,7 +2178,11 @@
       "successTitle": "Terima kasih atas salib Anda",
       "successDesc": "Salib Anda sekarang aktif.",
       "errorTitle": "Unggah gagal",
-      "errorDesc": "Silakan coba lagi."
+      "errorDesc": "Silakan coba lagi.",
+      "dropHint": "Drag an image here or click to select",
+      "replaceHint": "Drag another image or click to replace",
+      "removeImage": "Remove",
+      "notAnImage": "Please choose an image file"
     },
     "card": {
       "anonymous": "Anonim",

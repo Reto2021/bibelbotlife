@@ -14,7 +14,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Camera, Crosshair, Loader2, Plus, Upload, X } from "lucide-react";
+import { Crosshair, Loader2, Plus, Upload, X } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { submitCrossPost } from "@/hooks/use-cross-posts";
 

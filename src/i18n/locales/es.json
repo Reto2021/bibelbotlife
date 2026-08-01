@@ -2137,7 +2137,11 @@
       "successTitle": "Gracias por tu cruz",
       "successDesc": "Tu cruz ya está en vivo.",
       "errorTitle": "Error al subir",
-      "errorDesc": "Por favor, inténtalo de nuevo."
+      "errorDesc": "Por favor, inténtalo de nuevo.",
+      "dropHint": "Drag an image here or click to select",
+      "replaceHint": "Drag another image or click to replace",
+      "removeImage": "Remove",
+      "notAnImage": "Please choose an image file"
     },
     "card": {
       "anonymous": "Anónimo",

@@ -2138,7 +2138,11 @@
       "successTitle": "感谢您的十字架",
       "successDesc": "您的十字架现已上线。",
       "errorTitle": "上传失败",
-      "errorDesc": "请再试一次。"
+      "errorDesc": "请再试一次。",
+      "dropHint": "Drag an image here or click to select",
+      "replaceHint": "Drag another image or click to replace",
+      "removeImage": "Remove",
+      "notAnImage": "Please choose an image file"
     },
     "card": {
       "anonymous": "匿名",

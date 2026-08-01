@@ -2137,7 +2137,11 @@
       "successTitle": "십자가에 감사드립니다",
       "successDesc": "귀하의 십자가가 이제 게시되었습니다.",
       "errorTitle": "업로드 실패",
-      "errorDesc": "다시 시도해주세요."
+      "errorDesc": "다시 시도해주세요.",
+      "dropHint": "Drag an image here or click to select",
+      "replaceHint": "Drag another image or click to replace",
+      "removeImage": "Remove",
+      "notAnImage": "Please choose an image file"
     },
     "card": {
       "anonymous": "익명",

@@ -2145,7 +2145,11 @@
       "successTitle": "Merci pour votre croix",
       "successDesc": "Votre croix est maintenant en ligne.",
       "errorTitle": "Échec du téléchargement",
-      "errorDesc": "Veuillez réessayer."
+      "errorDesc": "Veuillez réessayer.",
+      "dropHint": "Drag an image here or click to select",
+      "replaceHint": "Drag another image or click to replace",
+      "removeImage": "Remove",
+      "notAnImage": "Please choose an image file"
     },
     "card": {
       "anonymous": "Anonyme",

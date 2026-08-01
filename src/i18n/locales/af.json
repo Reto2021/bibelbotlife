@@ -2137,7 +2137,11 @@
       "successTitle": "Dankie vir jou kruis",
       "successDesc": "Jou kruis is nou regstreeks.",
       "errorTitle": "Oplaai het misluk",
-      "errorDesc": "Probeer asseblief weer."
+      "errorDesc": "Probeer asseblief weer.",
+      "dropHint": "Drag an image here or click to select",
+      "replaceHint": "Drag another image or click to replace",
+      "removeImage": "Remove",
+      "notAnImage": "Please choose an image file"
     },
     "card": {
       "anonymous": "Anoniem",

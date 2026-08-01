@@ -2137,7 +2137,11 @@
       "successTitle": "Շնորհակալություն ձեր խաչի համար",
       "successDesc": "Ձեր խաչն այժմ հասանելի է։",
       "errorTitle": "Բեռնումը ձախողվեց",
-      "errorDesc": "Խնդրում ենք նորից փորձել։"
+      "errorDesc": "Խնդրում ենք նորից փորձել։",
+      "dropHint": "Drag an image here or click to select",
+      "replaceHint": "Drag another image or click to replace",
+      "removeImage": "Remove",
+      "notAnImage": "Please choose an image file"
     },
     "card": {
       "anonymous": "Անանուն",

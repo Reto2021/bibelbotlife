@@ -2137,7 +2137,11 @@
       "successTitle": "O ṣeun fún agbelebu rẹ",
       "successDesc": "Agbelebu rẹ ti wà lórí ìkànnì báyìí.",
       "errorTitle": "Ìkójáde kò jáde",
-      "errorDesc": "Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kan sí."
+      "errorDesc": "Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kan sí.",
+      "dropHint": "Drag an image here or click to select",
+      "replaceHint": "Drag another image or click to replace",
+      "removeImage": "Remove",
+      "notAnImage": "Please choose an image file"
     },
     "card": {
       "anonymous": "Àìlórúkọ",

@@ -2137,7 +2137,11 @@
       "successTitle": "Obrigado pela sua cruz",
       "successDesc": "Sua cruz está agora ao vivo.",
       "errorTitle": "Falha no upload",
-      "errorDesc": "Por favor, tente novamente."
+      "errorDesc": "Por favor, tente novamente.",
+      "dropHint": "Drag an image here or click to select",
+      "replaceHint": "Drag another image or click to replace",
+      "removeImage": "Remove",
+      "notAnImage": "Please choose an image file"
     },
     "card": {
       "anonymous": "Anônimo",

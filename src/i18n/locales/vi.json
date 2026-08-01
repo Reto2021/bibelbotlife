@@ -2139,7 +2139,11 @@
       "successTitle": "Cảm ơn bạn đã gửi Thánh giá",
       "successDesc": "Thánh giá của bạn hiện đã được đăng.",
       "errorTitle": "Tải lên thất bại",
-      "errorDesc": "Vui lòng thử lại."
+      "errorDesc": "Vui lòng thử lại.",
+      "dropHint": "Drag an image here or click to select",
+      "replaceHint": "Drag another image or click to replace",
+      "removeImage": "Remove",
+      "notAnImage": "Please choose an image file"
     },
     "card": {
       "anonymous": "Ẩn danh",

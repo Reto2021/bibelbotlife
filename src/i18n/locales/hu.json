@@ -2137,7 +2137,11 @@
       "successTitle": "Köszönjük a keresztet",
       "successDesc": "Keresztje mostantól élő.",
       "errorTitle": "Feltöltés sikertelen",
-      "errorDesc": "Kérjük, próbálja újra."
+      "errorDesc": "Kérjük, próbálja újra.",
+      "dropHint": "Drag an image here or click to select",
+      "replaceHint": "Drag another image or click to replace",
+      "removeImage": "Remove",
+      "notAnImage": "Please choose an image file"
     },
     "card": {
       "anonymous": "Névtelen",

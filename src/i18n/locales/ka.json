@@ -2139,7 +2139,11 @@
       "successTitle": "მადლობა თქვენი ჯვრისთვის",
       "successDesc": "თქვენი ჯვარი ახლა ცოცხალია.",
       "errorTitle": "ატვირთვა ვერ მოხერხდა",
-      "errorDesc": "გთხოვთ, სცადოთ ხელახლა."
+      "errorDesc": "გთხოვთ, სცადოთ ხელახლა.",
+      "dropHint": "Drag an image here or click to select",
+      "replaceHint": "Drag another image or click to replace",
+      "removeImage": "Remove",
+      "notAnImage": "Please choose an image file"
     },
     "card": {
       "anonymous": "ანონიმური",
