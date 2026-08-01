@@ -343,6 +343,17 @@ export function MyCrosses() {
             <SelectItem value="place">{t("crossways.mine.sortPlace", { defaultValue: "Ort A–Z" })}</SelectItem>
           </SelectContent>
         </Select>
+        <Button
+          type="button"
+          variant="ghost"
+          size="icon"
+          className="shrink-0"
+          aria-label={t("crossways.mine.resetFilters", { defaultValue: "Filter zurücksetzen" })}
+          title={t("crossways.mine.resetFilters", { defaultValue: "Filter zurücksetzen" })}
+          onClick={resetFilters}
+        >
+          <RotateCcw className="h-4 w-4" />
+        </Button>
       </div>
 
       {visiblePosts.length === 0 ? (
