@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { CrossCard } from "./CrossCard";
 import type { CrossInteraction, CrossPost } from "@/hooks/use-cross-posts";
 
@@ -8,10 +9,11 @@ interface Props {
 }
 
 export function CrossFeed({ posts, hasReacted, onReact }: Props) {
+  const { t } = useTranslation();
   if (posts.length === 0) {
     return (
       <p className="py-16 text-center text-muted-foreground">
-        Noch keine Kreuze veröffentlicht. Sei der erste Beitrag.
+        {t("crossways.empty")}
       </p>
     );
   }
