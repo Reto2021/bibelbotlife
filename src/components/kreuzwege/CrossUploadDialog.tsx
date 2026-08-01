@@ -14,10 +14,11 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Crosshair, Loader2, Plus, Quote, Upload, X } from "lucide-react";
+import { Crop, Crosshair, Loader2, Plus, Quote, RotateCcw, RotateCw, Upload, X } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { submitCrossPost } from "@/hooks/use-cross-posts";
 import { burnQuoteIntoImage, withQuotationMarks } from "@/lib/burn-quote";
+import { applyImageEdits, CROP_ASPECTS, type CropAspect } from "@/lib/transform-image";
 import { VersePicker } from "./VersePicker";
 
 const CrossMap = lazy(() => import("./CrossMap"));
