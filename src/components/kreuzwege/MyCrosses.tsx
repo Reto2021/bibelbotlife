@@ -242,6 +242,8 @@ export function MyCrosses() {
         authorName: form.authorName || null,
         isAnonymous: form.isAnonymous,
         file: newPhoto,
+        burnQuote,
+
       });
       toast.success(
         newPhoto
