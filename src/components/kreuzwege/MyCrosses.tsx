@@ -207,8 +207,10 @@ export function MyCrosses() {
       isAnonymous: post.is_anonymous,
     });
     setNewPhoto(null);
+    setBurnQuote(false);
     setEditing(post);
   }
+
 
   function pickPhoto(file: File | undefined) {
     if (!file) return;
