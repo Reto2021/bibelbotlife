@@ -555,7 +555,22 @@ export function MyCrosses() {
                   </p>
                 </div>
               </div>
+              {newPhoto && form.quote.trim() && (
+                <div className="flex items-center justify-between rounded-lg border border-border/60 p-3">
+                  <Label htmlFor="mine-burn" className="cursor-pointer text-sm">
+                    {t("crossways.mine.burnQuoteLabel", {
+                      defaultValue: "Vers ins neue Foto einbrennen",
+                    })}
+                  </Label>
+                  <Switch
+                    id="mine-burn"
+                    checked={burnQuote}
+                    onCheckedChange={setBurnQuote}
+                  />
+                </div>
+              )}
             </div>
+
             <div className="space-y-1.5">
               <Label>{t("crossways.upload.placeLabel")}</Label>
               <Input
