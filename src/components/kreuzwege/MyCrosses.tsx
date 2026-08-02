@@ -251,6 +251,8 @@ export function MyCrosses() {
           : t("crossways.mine.saved"),
       );
       setNewPhoto(null);
+      setBurnQuote(false);
+
       setEditing(null);
     } catch (e) {
       const code = e instanceof Error ? e.message : "";
