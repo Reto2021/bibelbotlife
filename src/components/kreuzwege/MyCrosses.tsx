@@ -53,7 +53,10 @@ export function MyCrosses() {
   const [saving, setSaving] = useState(false);
   const [newPhoto, setNewPhoto] = useState<File | null>(null);
   const [newPhotoUrl, setNewPhotoUrl] = useState<string | null>(null);
+  // Replacement photos stay untouched by default; the user opts in to burning the verse.
+  const [burnQuote, setBurnQuote] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
 
   // Client-side list controls: text search on place, status filter, upload-date sort.
   // Hydrate once from URL so filters survive reloads and can be shared as links.
