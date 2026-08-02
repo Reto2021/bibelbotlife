@@ -53,7 +53,10 @@ export function MyCrosses() {
   const [saving, setSaving] = useState(false);
   const [newPhoto, setNewPhoto] = useState<File | null>(null);
   const [newPhotoUrl, setNewPhotoUrl] = useState<string | null>(null);
+  // Replacement photos stay untouched by default; the user opts in to burning the verse.
+  const [burnQuote, setBurnQuote] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
 
   // Client-side list controls: text search on place, status filter, upload-date sort.
   // Hydrate once from URL so filters survive reloads and can be shared as links.
@@ -204,8 +207,10 @@ export function MyCrosses() {
       isAnonymous: post.is_anonymous,
     });
     setNewPhoto(null);
+    setBurnQuote(false);
     setEditing(post);
   }
+
 
   function pickPhoto(file: File | undefined) {
     if (!file) return;
@@ -237,6 +242,8 @@ export function MyCrosses() {
         authorName: form.authorName || null,
         isAnonymous: form.isAnonymous,
         file: newPhoto,
+        burnQuote,
+
       });
       toast.success(
         newPhoto
@@ -244,6 +251,8 @@ export function MyCrosses() {
           : t("crossways.mine.saved"),
       );
       setNewPhoto(null);
+      setBurnQuote(false);
+
       setEditing(null);
     } catch (e) {
       const code = e instanceof Error ? e.message : "";
@@ -546,7 +555,22 @@ export function MyCrosses() {
                   </p>
                 </div>
               </div>
+              {newPhoto && form.quote.trim() && (
+                <div className="flex items-center justify-between rounded-lg border border-border/60 p-3">
+                  <Label htmlFor="mine-burn" className="cursor-pointer text-sm">
+                    {t("crossways.mine.burnQuoteLabel", {
+                      defaultValue: "Vers ins neue Foto einbrennen",
+                    })}
+                  </Label>
+                  <Switch
+                    id="mine-burn"
+                    checked={burnQuote}
+                    onCheckedChange={setBurnQuote}
+                  />
+                </div>
+              )}
             </div>
+
             <div className="space-y-1.5">
               <Label>{t("crossways.upload.placeLabel")}</Label>
               <Input
