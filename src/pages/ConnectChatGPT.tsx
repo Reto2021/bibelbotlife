@@ -8,6 +8,7 @@ import { AddToChatGPTButton, CopyMcpUrlButton, getMcpUrl } from "@/components/Ad
 import {
   Bot,
   ArrowLeft,
+  Copy,
   ExternalLink,
   Lock,
   MessageSquareHeart,
