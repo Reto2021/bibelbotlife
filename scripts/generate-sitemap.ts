@@ -41,6 +41,7 @@ const staticEntries: Entry[] = [
   { path: "/wegkreuze", changefreq: "weekly", priority: "0.7" },
   { path: "/gipfelkreuze", changefreq: "weekly", priority: "0.7" },
   { path: "/bergkreuze", changefreq: "weekly", priority: "0.7" },
+  { path: "/connect", changefreq: "monthly", priority: "0.6" },
 ];
 
 async function fetchJson(path: string) {

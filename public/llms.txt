@@ -25,6 +25,7 @@ BibleBot.Life ist eine Progressive Web App (PWA), die Menschen im deutschsprachi
 
 - [Widget einbetten](/widget): BibleBot-Widget für eigene Websites.
 - [Embed-Code](/embed): Direkte Einbettung des Bibel-Chats.
+- [In ChatGPT verbinden](/connect): BibleBot als MCP-Server mit ChatGPT, Claude oder Cursor nutzen.
 
 ## Über das Projekt
 
