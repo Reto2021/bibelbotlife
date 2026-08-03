@@ -73,20 +73,7 @@ const faqs = [
 ];
 
 export default function ConnectChatGPT() {
-  const { toast } = useToast();
-  const [copied, setCopied] = useState(false);
   const mcpUrl = getMcpUrl();
-
-  const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText(mcpUrl);
-      setCopied(true);
-      toast({ title: "URL kopiert", description: "Füge sie jetzt in deinem MCP-Client ein." });
-      setTimeout(() => setCopied(false), 2000);
-    } catch {
-      toast({ title: "Kopieren nicht möglich", description: "Bitte markiere die URL manuell.", variant: "destructive" });
-    }
-  };
 
   return (
     <>
