@@ -2,7 +2,7 @@ import { lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 import { SEOHead } from "@/components/SEOHead";
 import { useTranslation } from "react-i18next";
-import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, GraduationCap, Church, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass, Send, Building2, Shield, EyeOff, Code2, Server, Globe, Headphones, ClipboardList, BookHeart } from "lucide-react";
+import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, GraduationCap, Church, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass, Send, Building2, Shield, EyeOff, Code2, Server, Globe, Headphones, ClipboardList, BookHeart, Bot } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { ChurchBanner } from "@/components/ChurchBanner";
 import { ReferralSection } from "@/components/ReferralSection";
@@ -15,6 +15,7 @@ import { AppLogo } from "@/components/AppLogo";
 import { ToolCard, useToolDefs } from "@/components/ToolCards";
 import { useFavoriteTools } from "@/hooks/use-favorite-tools";
 import { useAuth } from "@/hooks/use-auth";
+import { AddToChatGPTButton } from "@/components/AddToChatGPTButton";
 
 // BibleBotChat overlay removed - chat is now inline in ChatHero
 const DailyImpulse = lazy(() => import("@/components/DailyImpulse"));
