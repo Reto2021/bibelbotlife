@@ -1,17 +1,13 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { SEOHead } from "@/components/SEOHead";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { useToast } from "@/hooks/use-toast";
 import { AddToChatGPTButton, CopyMcpUrlButton, getMcpUrl } from "@/components/AddToChatGPTButton";
 import {
   Bot,
   ArrowLeft,
-  Check,
-  Copy,
   ExternalLink,
   Lock,
   MessageSquareHeart,
