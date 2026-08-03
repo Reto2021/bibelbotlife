@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { SEOHead } from "/src/components/SEOHead";
-import { SiteHeader } from "/src/components/SiteHeader";
-import { Button } from "/src/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "/src/components/ui/card";
-import { Input } from "/src/components/ui/input";
-import { useToast } from "/src/hooks/use-toast";
+import { SEOHead } from "@/components/SEOHead";
+import { SiteHeader } from "@/components/SiteHeader";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { useToast } from "@/hooks/use-toast";
 import {
   Bot,
   ArrowLeft,
