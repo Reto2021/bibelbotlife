@@ -222,13 +222,52 @@ var list_my_bible_moments_default = defineTool6({
   }
 });
 
+// src/lib/mcp/tools/bible-coaching.ts
+import { defineTool as defineTool7 } from "npm:@lovable.dev/mcp-js@0.26.1";
+import { z as z7 } from "npm:zod@^3.25.76";
+var bible_coaching_default = defineTool7({
+  name: "bible_coaching",
+  title: "Bibel-Coaching",
+  description: "Holt zu einem Lebensthema oder einer Stimmung passende Bibelstellen und gibt einen kurzen Coaching-Rahmen (PERMA, Logotherapie, Dankbarkeit, Vergebung) zur\xFCck. Keine Diagnose, sondern seelsorgerliche Orientierung.",
+  inputSchema: {
+    topic: z7.string().trim().min(2).describe("Lebensthema oder Frage, z.B. 'Angst vor der Zukunft' oder 'Dankbarkeit st\xE4rken'."),
+    mood: z7.string().trim().optional().describe("Optionale Stimmung, z.B. '\xE4ngstlich', 'dankbar', 'einsam', 'motiviert'.")
+  },
+  annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
+  handler: async ({ topic, mood }, ctx) => {
+    if (!ctx.isAuthenticated()) {
+      return { content: [{ type: "text", text: "Nicht angemeldet." }], isError: true };
+    }
+    const supabase = supabaseForUser(ctx);
+    const searchTerms = [topic, mood].filter(Boolean).join(" ");
+    const { data, error } = await supabase.from("bible_verses").select("book, chapter, verse, text, translation").textSearch("fts", searchTerms, { type: "websearch", config: "german" }).limit(5);
+    if (error) return { content: [{ type: "text", text: error.message }], isError: true };
+    const rows = data ?? [];
+    const versesText = rows.length ? rows.map((r) => `${r.book} ${r.chapter},${r.verse} (${r.translation}): ${r.text}`).join("\n") : "Keine direkten Bibeltreffer.";
+    const framework = [
+      "Coaching-Rahmen:",
+      "- Positive Emotion: Was l\xE4sst dich heute dankbar werden?",
+      "- Engagement: Wo findest du Halt und Sinn? (Logotherapie)",
+      "- Relationships: Wer steht an deiner Seite?",
+      "- Meaning: Welchen kleinen Schritt kannst du heute gehen?",
+      "- Accomplishment: Was ist schon gelungen?",
+      "",
+      "Passende Bibelstellen:",
+      versesText,
+      "",
+      "Hinweis: BibleBot ersetzt keine professionelle Beratung. Bei akuten Krisen wende dich an die Telefonseelsorge (CH 143, DE/AT 0800 111 0 111)."
+    ].join("\n");
+    return { content: [{ type: "text", text: framework }], structuredContent: { verses: rows, topic, mood } };
+  }
+});
+
 // src/lib/mcp/index.ts
 var projectRef = "swsthxftugjqznqjcfpk";
 var mcp_default = defineMcp({
   name: "biblebotlife",
   title: "BibleBotLife",
-  version: "0.1.0",
-  instructions: "Werkzeuge f\xFCr BibleBot.Life, den pers\xF6nlichen Bibel-Begleiter. `search_bible` durchsucht die Bibel\xFCbersetzungen, `list_prayer_wall` liest die \xF6ffentliche Gebetswand, `list_my_journal_entries` und `create_journal_entry` arbeiten mit dem pers\xF6nlichen Journal, `list_my_crosses` zeigt eigene Kreuzwege-Uploads und `list_my_bible_moments` die konfigurierten Bibel-Momente. Antworten auf Deutsch (Schweiz), ohne \xDF.",
+  version: "0.1.1",
+  instructions: "BibleBot.Life ist ein pers\xF6nlicher, christlicher Bibel-Begleiter. Wenn du Fragen stellst, nutze den Coaching-Ansatz: PERMA (Positive Psychologie), Logotherapie (Sinn), Dankbarkeit und Vergebung. Beginne mit Empathie, stelle eine kl\xE4rende Gegenfrage, suche dann mit `search_bible` nach passenden Stellen, pr\xFCfe Zitate sorgf\xE4ltig und gib den Vers-Text w\xF6rtlich wieder. Bei akuten Krisen (Selbstgef\xE4hrdung, Suizidgedanken, Gewalt) weise sofort auf professionelle Hilfe hin (Telefonseelsorge 143 in der Schweiz bzw. 0800 111 0 111 in Deutschland/\xD6sterreich) und wiederhole das Angebot. Keine medizinischen oder psychotherapeutischen Diagnosen. Keine Dogmen-Vermittlung. Keine Daten ausserhalb der freigegebenen Tools verwenden. Antworte auf Deutsch (Schweiz), ohne \xDF.",
   auth: auth.oauth.issuer({
     issuer: `https://${projectRef}.supabase.co/auth/v1`,
     acceptedAudiences: "authenticated"
@@ -239,7 +278,8 @@ var mcp_default = defineMcp({
     list_my_journal_entries_default,
     create_journal_entry_default,
     list_my_crosses_default,
-    list_my_bible_moments_default
+    list_my_bible_moments_default,
+    bible_coaching_default
   ]
 });
 

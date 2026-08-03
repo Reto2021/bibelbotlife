@@ -1,15 +1,13 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { SEOHead } from "@/components/SEOHead";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { useToast } from "@/hooks/use-toast";
+import { AddToChatGPTButton, CopyMcpUrlButton, getMcpUrl } from "@/components/AddToChatGPTButton";
 import {
   Bot,
   ArrowLeft,
-  Check,
   Copy,
   ExternalLink,
   Lock,
@@ -20,14 +18,8 @@ import {
   MapPin,
   HandHeart,
   ScrollText,
+  Shield,
 } from "lucide-react";
-
-const MCP_PATH = "/functions/v1/mcp";
-
-function getMcpUrl(): string {
-  const base = import.meta.env.VITE_SUPABASE_URL ?? window.location.origin;
-  return `${base.replace(/\/$/, "")}${MCP_PATH}`;
-}
 
 const steps = [
   {
@@ -58,7 +50,8 @@ const tools = [
   { icon: ScrollText, title: "Persönliches Journal", desc: "Zeige eigene Einträge an oder erstelle neue Impulse." },
   { icon: MapPin, title: "Meine Kreuzwege", desc: "Rufe deine hochgeladenen Kreuz-Fotos und Status ab." },
   { icon: BookOpen, title: "Bibel-Momente", desc: "Lass dich an Geburtstage, Anlässe und tägliche Impulse erinnern." },
-  { icon: MessageSquareHeart, title: "Pastoraler Begleiter", desc: "Fragen, Antworten, Trost – direkt im Chat-Client." },
+  { icon: MessageSquareHeart, title: "Bibel-Coaching", desc: "PERMA, Logotherapie, Dankbarkeit und Vergebung – mit geprüften Zitaten." },
+  { icon: Shield, title: "Guardrails", desc: "Bei Krisen sofort Hilfsangebote, keine Diagnosen, keine Dogmen-Vermittlung." },
 ];
 
 const faqs = [
@@ -81,20 +74,7 @@ const faqs = [
 ];
 
 export default function ConnectChatGPT() {
-  const { toast } = useToast();
-  const [copied, setCopied] = useState(false);
   const mcpUrl = getMcpUrl();
-
-  const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText(mcpUrl);
-      setCopied(true);
-      toast({ title: "URL kopiert", description: "Füge sie jetzt in deinem MCP-Client ein." });
-      setTimeout(() => setCopied(false), 2000);
-    } catch {
-      toast({ title: "Kopieren nicht möglich", description: "Bitte markiere die URL manuell.", variant: "destructive" });
-    }
-  };
 
   return (
     <>
@@ -130,13 +110,10 @@ export default function ConnectChatGPT() {
                 sicher mit deinem BibleBot-Login.
               </p>
               <div className="flex flex-wrap gap-3">
-                <Button size="lg" onClick={handleCopy} className="gap-2">
-                  {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
-                  Verbindungs-URL kopieren
-                </Button>
+                <AddToChatGPTButton size="lg" className="gap-2" />
                 <Button asChild size="lg" variant="outline" className="gap-2">
                   <a
-                    href="https://openai.com/index/introducing-the-chatgpt-mcp-marketplace/"
+                    href="https://learn.chatgpt.com/docs/extend/mcp"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -167,10 +144,7 @@ export default function ConnectChatGPT() {
                     className="font-mono text-sm bg-muted/50"
                     onFocus={(e) => e.target.select()}
                   />
-                  <Button onClick={handleCopy} className="shrink-0 gap-2">
-                    {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
-                    Kopieren
-                  </Button>
+                  <CopyMcpUrlButton />
                 </div>
                 <p className="text-xs text-muted-foreground">
                   Die Verbindung läuft über OAuth 2.1. Du behältst die Kontrolle: ChatGPT darf nur das tun,
@@ -274,10 +248,7 @@ export default function ConnectChatGPT() {
                 Kopiere die URL, öffne deinen MCP-Client und erlebe die Bibel dort, wo du ohnehin schon schreibst.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-3">
-                <Button size="lg" onClick={handleCopy} className="gap-2">
-                  {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
-                  Verbindungs-URL kopieren
-                </Button>
+                <AddToChatGPTButton size="lg" className="gap-2" />
                 <Button asChild size="lg" variant="outline">
                   <Link to="/login?next=/.lovable/oauth/consent">Zur Anmeldung</Link>
                 </Button>

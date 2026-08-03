@@ -12,7 +12,7 @@
   "mcp": {
     "server": {
       "name": "biblebotlife",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "title": "BibleBotLife"
     },
     "tools": [
@@ -176,6 +176,36 @@
               "description": "Nur aktive Momente zurückgeben (Standard true)."
             }
           },
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "bible_coaching",
+        "title": "Bibel-Coaching",
+        "description": "Holt zu einem Lebensthema oder einer Stimmung passende Bibelstellen und gibt einen kurzen Coaching-Rahmen (PERMA, Logotherapie, Dankbarkeit, Vergebung) zurück. Keine Diagnose, sondern seelsorgerliche Orientierung.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "topic": {
+              "type": "string",
+              "minLength": 2,
+              "description": "Lebensthema oder Frage, z.B. 'Angst vor der Zukunft' oder 'Dankbarkeit stärken'."
+            },
+            "mood": {
+              "type": "string",
+              "description": "Optionale Stimmung, z.B. 'ängstlich', 'dankbar', 'einsam', 'motiviert'."
+            }
+          },
+          "required": [
+            "topic"
+          ],
           "additionalProperties": false,
           "$schema": "http://json-schema.org/draft-07/schema#"
         },

@@ -2,7 +2,7 @@ import { lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 import { SEOHead } from "@/components/SEOHead";
 import { useTranslation } from "react-i18next";
-import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, GraduationCap, Church, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass, Send, Building2, Shield, EyeOff, Code2, Server, Globe, Headphones, ClipboardList, BookHeart } from "lucide-react";
+import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, GraduationCap, Church, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass, Send, Building2, Shield, EyeOff, Code2, Server, Globe, Headphones, ClipboardList, BookHeart, Bot } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { ChurchBanner } from "@/components/ChurchBanner";
 import { ReferralSection } from "@/components/ReferralSection";
@@ -15,6 +15,7 @@ import { AppLogo } from "@/components/AppLogo";
 import { ToolCard, useToolDefs } from "@/components/ToolCards";
 import { useFavoriteTools } from "@/hooks/use-favorite-tools";
 import { useAuth } from "@/hooks/use-auth";
+import { AddToChatGPTButton } from "@/components/AddToChatGPTButton";
 
 // BibleBotChat overlay removed - chat is now inline in ChatHero
 const DailyImpulse = lazy(() => import("@/components/DailyImpulse"));
@@ -265,6 +266,33 @@ const Index = () => {
                 <p className="text-sm text-muted-foreground leading-relaxed">{item.text}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Add to ChatGPT CTA */}
+      <section className="py-16 px-4 bg-card/40 border-y border-border/50">
+        <div className="container mx-auto max-w-4xl">
+          <div className="flex flex-col md:flex-row items-center gap-8 p-8 rounded-2xl border border-border bg-card/80 backdrop-blur-sm shadow-[var(--shadow-warm)]">
+            <div className="flex-1 text-center md:text-left">
+              <div className="inline-flex items-center gap-2 text-sm font-medium text-primary bg-primary/10 px-4 py-1.5 rounded-full mb-4">
+                <Bot className="h-4 w-4" />
+                Neu: BibleBot in ChatGPT
+              </div>
+              <h2 className="text-3xl font-bold text-foreground mb-3">
+                Dein Bibel-Begleiter direkt im Chat
+              </h2>
+              <p className="text-muted-foreground max-w-xl">
+                Verbinde BibleBot mit ChatGPT, Claude oder Cursor. Suche die Bibel, pflege dein Journal
+                und lass dich coachen – mit denselben Guardrails wie in der App.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3 shrink-0">
+              <AddToChatGPTButton size="lg" />
+              <Button asChild size="lg" variant="outline">
+                <Link to="/connect">Mehr erfahren</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
