@@ -96,6 +96,7 @@ const Flyer = lazy(() => import("./pages/Flyer"));
 const GuideAIBibleStudy = lazy(() => import("./pages/GuideAIBibleStudy"));
 const GuideDiscordIntegration = lazy(() => import("./pages/GuideDiscordIntegration"));
 const BibelBotVergleich = lazy(() => import("./pages/BibelBotVergleich"));
+const ConnectChatGPT = lazy(() => import("./pages/ConnectChatGPT"));
 
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { ProtectedAdminRoute } from "@/components/ProtectedAdminRoute";
@@ -216,8 +217,9 @@ const App = () => {
                   <Route path="/ki-und-seelsorge" element={<KIundSeelsorge />} />
                   <Route path="/guide/ai-bible-study" element={<GuideAIBibleStudy />} />
                   <Route path="/guide/discord-integration" element={<GuideDiscordIntegration />} />
-                  <Route path="/bibel-bot-vergleich" element={<BibelBotVergleich />} />
-                  <Route path="/vergleich" element={<BibelBotVergleich />} />
+                   <Route path="/bibel-bot-vergleich" element={<BibelBotVergleich />} />
+                   <Route path="/vergleich" element={<BibelBotVergleich />} />
+                   <Route path="/connect" element={<ConnectChatGPT />} />
                   <Route path="/presse" element={<Presse />} />
                   <Route path="/flyer" element={<Flyer />} />
                   <Route path="/login" element={<Login />} />
