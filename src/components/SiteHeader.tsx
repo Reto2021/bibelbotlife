@@ -143,6 +143,12 @@ export function SiteHeader() {
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
+                <Link to="/connect" className="flex items-center gap-2 cursor-pointer">
+                  <Bot className="h-4 w-4" />
+                  {t("nav.connectChatGPT", "In ChatGPT verbinden")}
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
                 <Link to="/presse" className="flex items-center gap-2 cursor-pointer">
                   <Newspaper className="h-4 w-4" />
                   {t("nav.press", "Presse")}
