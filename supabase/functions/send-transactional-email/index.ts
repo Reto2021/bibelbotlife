@@ -30,9 +30,38 @@ function generateToken(): string {
     .join('')
 }
 
-// Auth note: this function uses verify_jwt = true in config.toml, so Supabase's
-// gateway validates the caller's JWT (anon or service_role) before the request
-// reaches this code. No in-function auth check is needed.
+// Auth note: verify_jwt = true only proves a valid project JWT (the public anon
+// key qualifies). We therefore authorize in-function:
+//  - service-role bearer token -> full access (internal/cron callers)
+//  - signed-in user JWT        -> full access
+//  - anonymous/public callers  -> only the public form templates below
+const PUBLIC_TEMPLATES = new Set([
+  'contact-confirmation',
+  'contact-notification',
+  'qr-sticker',
+])
+
+async function classifyCaller(req: Request): Promise<'service' | 'user' | 'anon'> {
+  const authHeader = req.headers.get('authorization') ?? ''
+  const token = authHeader.toLowerCase().startsWith('bearer ')
+    ? authHeader.slice(7).trim()
+    : ''
+  if (!token) return 'anon'
+  if (token === Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')) return 'service'
+  if (token === Deno.env.get('SUPABASE_ANON_KEY')) return 'anon'
+  try {
+    const authClient = createClient(
+      Deno.env.get('SUPABASE_URL')!,
+      Deno.env.get('SUPABASE_ANON_KEY')!,
+      { global: { headers: { Authorization: `Bearer ${token}` } } }
+    )
+    const { data, error } = await authClient.auth.getUser(token)
+    if (!error && data?.user) return 'user'
+  } catch {
+    // fall through
+  }
+  return 'anon'
+}
 
 Deno.serve(async (req) => {
   // Handle CORS preflight
@@ -84,6 +113,19 @@ Deno.serve(async (req) => {
       JSON.stringify({ error: 'templateName is required' }),
       {
         status: 400,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      }
+    )
+  }
+
+  // Authorization: anonymous callers may only use the public form templates.
+  const caller = await classifyCaller(req)
+  if (caller === 'anon' && !PUBLIC_TEMPLATES.has(templateName)) {
+    console.warn('Blocked unauthorized transactional email request', { templateName })
+    return new Response(
+      JSON.stringify({ error: 'Unauthorized' }),
+      {
+        status: 401,
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       }
     )

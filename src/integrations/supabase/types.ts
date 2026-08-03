@@ -3183,6 +3183,16 @@ export type Database = {
           prayer_count: number
         }[]
       }
+      get_quiz_highscores: {
+        Args: { p_limit?: number; p_min_questions?: number }
+        Returns: {
+          created_at: string
+          difficulty: string
+          quiz_mode: string
+          score: number
+          total_questions: number
+        }[]
+      }
       get_referral_partner_conversions: {
         Args: { p_code: string }
         Returns: {

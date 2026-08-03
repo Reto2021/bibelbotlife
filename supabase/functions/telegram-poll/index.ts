@@ -4,7 +4,17 @@ const GATEWAY_URL = 'https://connector-gateway.lovable.dev/telegram';
 const MAX_RUNTIME_MS = 55_000;
 const MIN_REMAINING_MS = 5_000;
 
-Deno.serve(async () => {
+Deno.serve(async (req: Request) => {
+  // Cron/service-only endpoint: require the service-role bearer token.
+  const authHeader = req.headers.get('authorization') ?? '';
+  const token = authHeader.toLowerCase().startsWith('bearer ') ? authHeader.slice(7).trim() : '';
+  if (!token || token !== Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')) {
+    return new Response(JSON.stringify({ error: 'Unauthorized' }), {
+      status: 401,
+      headers: { 'Content-Type': 'application/json' },
+    });
+  }
+
   const startTime = Date.now();
 
   const LOVABLE_API_KEY = Deno.env.get('LOVABLE_API_KEY');
