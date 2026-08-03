@@ -68,16 +68,12 @@ export default function BibleQuiz() {
 
   useEffect(() => {
     supabase
-      .from("quiz_scores")
-      .select("score, total_questions, quiz_mode, difficulty, created_at")
-      .gte("total_questions", ROUND_SIZE)
-      .order("score", { ascending: false })
-      .order("created_at", { ascending: true })
-      .limit(10)
+      .rpc("get_quiz_highscores" as any, { p_min_questions: ROUND_SIZE, p_limit: 10 })
       .then(({ data }) => {
-        if (data) setHighscores(data);
+        if (data) setHighscores(data as unknown as HighscoreEntry[]);
       });
   }, [mode]);
+
   const [total, setTotal] = useState(0);
   const [showResult, setShowResult] = useState(false);
   const [answers, setAnswers] = useState<AnswerRecord[]>([]);
