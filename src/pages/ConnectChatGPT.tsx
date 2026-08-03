@@ -53,7 +53,8 @@ const tools = [
   { icon: ScrollText, title: "Persönliches Journal", desc: "Zeige eigene Einträge an oder erstelle neue Impulse." },
   { icon: MapPin, title: "Meine Kreuzwege", desc: "Rufe deine hochgeladenen Kreuz-Fotos und Status ab." },
   { icon: BookOpen, title: "Bibel-Momente", desc: "Lass dich an Geburtstage, Anlässe und tägliche Impulse erinnern." },
-  { icon: MessageSquareHeart, title: "Pastoraler Begleiter", desc: "Fragen, Antworten, Trost – direkt im Chat-Client." },
+  { icon: MessageSquareHeart, title: "Bibel-Coaching", desc: "PERMA, Logotherapie, Dankbarkeit und Vergebung – mit geprüften Zitaten." },
+  { icon: Shield, title: "Guardrails", desc: "Bei Krisen sofort Hilfsangebote, keine Diagnosen, keine Dogmen-Vermittlung." },
 ];
 
 const faqs = [
