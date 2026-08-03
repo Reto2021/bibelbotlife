@@ -264,10 +264,7 @@ export default function ConnectChatGPT() {
                 Kopiere die URL, öffne deinen MCP-Client und erlebe die Bibel dort, wo du ohnehin schon schreibst.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-3">
-                <Button size="lg" onClick={handleCopy} className="gap-2">
-                  {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
-                  Verbindungs-URL kopieren
-                </Button>
+                <AddToChatGPTButton size="lg" className="gap-2" />
                 <Button asChild size="lg" variant="outline">
                   <Link to="/login?next=/.lovable/oauth/consent">Zur Anmeldung</Link>
                 </Button>
