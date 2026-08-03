@@ -57,6 +57,12 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const [consentContact, setConsentContact] = useState(false);
   const [churchName, setChurchName] = useState<string | null>(null);
+  const nextPath = safeNextPath(new URLSearchParams(window.location.search).get("next"));
+  const successPath = nextPath ?? "/mein-bereich";
+  const oauthRedirect = nextPath
+    ? `${window.location.origin}${nextPath}`
+    : window.location.origin;
+
 
   // Check if user arrived via a church link
   useEffect(() => {
