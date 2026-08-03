@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import {
   Menu, X as XIcon, HandHeart, GraduationCap, Building2, HeartHandshake,
   Send, FileText, ShieldCheck, LogIn, LogOut, User, Users, Shield, MessageCircle, Heart,
-  ChevronDown, BookOpen, Mail, Brain, Newspaper, MapPin
+  ChevronDown, BookOpen, Mail, Brain, Newspaper, MapPin, Bot
 } from "lucide-react";
 import { AppLogo } from "@/components/AppLogo";
 import { Button } from "@/components/ui/button";
