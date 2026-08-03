@@ -1,0 +1,186 @@
+{
+  "version": 1,
+  "sdk_version": "0.26.1",
+  "path": "/mcp",
+  "auth": {
+    "type": "oauth",
+    "issuer": "https://swsthxftugjqznqjcfpk.supabase.co/auth/v1",
+    "accepted_audiences": [
+      "authenticated"
+    ]
+  },
+  "mcp": {
+    "server": {
+      "name": "biblebotlife",
+      "version": "0.1.0",
+      "title": "BibleBotLife"
+    },
+    "tools": [
+      {
+        "name": "search_bible",
+        "title": "Bibel durchsuchen",
+        "description": "Volltextsuche in den Bibelübersetzungen von BibleBot.Life. Gibt Buch, Kapitel, Vers, Übersetzung und Verstext zurück.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "minLength": 2,
+              "description": "Suchbegriff oder Phrase, z.B. 'Hoffnung' oder 'Psalm 23'."
+            },
+            "translation": {
+              "type": "string",
+              "description": "Optionaler Übersetzungscode, z.B. 'LUT', 'SCH', 'ELB', 'EU', 'ZB'."
+            },
+            "limit": {
+              "type": "integer",
+              "description": "Maximale Trefferzahl (Standard 10, max 50)."
+            }
+          },
+          "required": [
+            "query"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_prayer_wall",
+        "title": "Gebetswand lesen",
+        "description": "Liest die freigegebenen, öffentlichen Gebetsanliegen der Gebetswand von BibleBot.Life.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "limit": {
+              "type": "integer",
+              "description": "Maximale Anzahl Anliegen (Standard 20, max 50)."
+            }
+          },
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_my_journal_entries",
+        "title": "Meine Journal-Einträge",
+        "description": "Listet die eigenen Journal-Einträge (Impuls, Bibelstelle, Stimmung) der angemeldeten Person.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "limit": {
+              "type": "integer",
+              "description": "Maximale Anzahl Einträge (Standard 20, max 50)."
+            }
+          },
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "create_journal_entry",
+        "title": "Journal-Eintrag erstellen",
+        "description": "Erstellt einen neuen Journal-Eintrag für die angemeldete Person in BibleBot.Life.",
+        "annotations": {
+          "readOnlyHint": false,
+          "destructiveHint": false,
+          "idempotentHint": false,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "content": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Der Text des Eintrags."
+            },
+            "verse_ref": {
+              "type": "string",
+              "description": "Optionale Bibelstelle, z.B. 'Psalm 23,1'."
+            },
+            "mood": {
+              "type": "string",
+              "description": "Optionale Stimmung, z.B. 'dankbar', 'unruhig'."
+            },
+            "prompt": {
+              "type": "string",
+              "description": "Optionale Impulsfrage, auf die der Eintrag antwortet."
+            }
+          },
+          "required": [
+            "content"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_my_crosses",
+        "title": "Meine Kreuze",
+        "description": "Listet die eigenen hochgeladenen Kreuz-Fotos aus den Kreuzwegen inklusive Status, Ort, Zitat und Freigabe-Link.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "description": "Optionaler Statusfilter: 'pending', 'approved' oder 'rejected'."
+            },
+            "limit": {
+              "type": "integer",
+              "description": "Maximale Anzahl (Standard 20, max 50)."
+            }
+          },
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_my_bible_moments",
+        "title": "Meine Bibel-Momente",
+        "description": "Listet die konfigurierten Bibel-Momente (Trigger, Kanal, Sprache, Ruhezeiten) der angemeldeten Person.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "only_active": {
+              "type": "boolean",
+              "description": "Nur aktive Momente zurückgeben (Standard true)."
+            }
+          },
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
