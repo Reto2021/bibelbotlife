@@ -16,6 +16,14 @@ import { Link } from "react-router-dom";
 
 type Mode = "login" | "signup" | "forgot";
 
+/** Only allow same-origin relative paths as post-login redirect targets. */
+function safeNextPath(raw: string | null): string | null {
+  if (!raw) return null;
+  if (!raw.startsWith("/") || raw.startsWith("//")) return null;
+  return raw;
+}
+
+
 /** After signup, create church_members entry if a church slug is stored. */
 async function linkChurchMembership(userId: string, consentContact: boolean) {
   const slug = localStorage.getItem("biblebot-church");
