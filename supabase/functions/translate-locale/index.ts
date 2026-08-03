@@ -1,3 +1,4 @@
+import { requireAdminOrService } from "../_shared/auth.ts";
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 
 const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY")!;
@@ -9,6 +10,9 @@ const corsHeaders = {
 
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
+
+  const auth = await requireAdminOrService(req);
+  if (!auth.ok) return auth.response;
 
   const { sourceJson, targetLang, langName, mode } = await req.json();
 
