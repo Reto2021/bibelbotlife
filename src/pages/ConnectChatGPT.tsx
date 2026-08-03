@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
+import { AddToChatGPTButton, CopyMcpUrlButton, getMcpUrl } from "@/components/AddToChatGPTButton";
 import {
   Bot,
   ArrowLeft,
@@ -20,14 +21,8 @@ import {
   MapPin,
   HandHeart,
   ScrollText,
+  Shield,
 } from "lucide-react";
-
-const MCP_PATH = "/functions/v1/mcp";
-
-function getMcpUrl(): string {
-  const base = import.meta.env.VITE_SUPABASE_URL ?? window.location.origin;
-  return `${base.replace(/\/$/, "")}${MCP_PATH}`;
-}
 
 const steps = [
   {
