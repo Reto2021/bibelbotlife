@@ -265,6 +265,10 @@ export function SiteHeader() {
             <BookOpen className="h-4 w-4 text-primary" />
             {t("church.directoryBadge")}
           </Link>
+          <Link to="/connect" className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-foreground hover:bg-primary/10 transition-colors" onClick={() => setMobileMenuOpen(false)}>
+            <Bot className="h-4 w-4 text-primary" />
+            {t("nav.connectChatGPT", "In ChatGPT verbinden")}
+          </Link>
 
           {/* For professionals */}
           <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground px-3 pt-3 pb-1">
