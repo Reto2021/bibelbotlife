@@ -80,7 +80,7 @@ const Login = () => {
 
   // Redirect if already logged in
   if (user) {
-    navigate("/mein-bereich", { replace: true });
+    navigate(successPath, { replace: true });
     return null;
   }
 
@@ -99,7 +99,7 @@ const Login = () => {
         const { data, error } = await supabase.auth.signUp({
           email,
           password,
-          options: { emailRedirectTo: window.location.origin },
+          options: { emailRedirectTo: oauthRedirect },
         });
         if (error) throw error;
         // Link church membership right after signup
@@ -110,7 +110,7 @@ const Login = () => {
       } else {
         const { error } = await supabase.auth.signInWithPassword({ email, password });
         if (error) throw error;
-        navigate("/mein-bereich", { replace: true });
+        navigate(successPath, { replace: true });
       }
     } catch (err: any) {
       toast({ title: t("auth.error", "Fehler"), description: err.message, variant: "destructive" });
@@ -127,13 +127,13 @@ const Login = () => {
         sessionStorage.setItem("biblebot-church-consent", consentContact ? "1" : "0");
       }
       const result = await lovable.auth.signInWithOAuth("google", {
-        redirect_uri: window.location.origin,
+        redirect_uri: oauthRedirect,
       });
       if (result.error) {
         toast({ title: t("auth.error", "Fehler"), description: String(result.error), variant: "destructive" });
       }
       if (result.redirected) return;
-      navigate("/", { replace: true });
+      navigate(nextPath ?? "/", { replace: true });
     } catch (err: any) {
       toast({ title: t("auth.error", "Fehler"), description: err.message, variant: "destructive" });
     } finally {
@@ -148,13 +148,13 @@ const Login = () => {
         sessionStorage.setItem("biblebot-church-consent", consentContact ? "1" : "0");
       }
       const result = await lovable.auth.signInWithOAuth("apple", {
-        redirect_uri: window.location.origin,
+        redirect_uri: oauthRedirect,
       });
       if (result.error) {
         toast({ title: t("auth.error", "Fehler"), description: String(result.error), variant: "destructive" });
       }
       if (result.redirected) return;
-      navigate("/", { replace: true });
+      navigate(nextPath ?? "/", { replace: true });
     } catch (err: any) {
       toast({ title: t("auth.error", "Fehler"), description: err.message, variant: "destructive" });
     } finally {
