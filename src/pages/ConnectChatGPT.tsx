@@ -126,13 +126,10 @@ export default function ConnectChatGPT() {
                 sicher mit deinem BibleBot-Login.
               </p>
               <div className="flex flex-wrap gap-3">
-                <Button size="lg" onClick={handleCopy} className="gap-2">
-                  {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
-                  Verbindungs-URL kopieren
-                </Button>
+                <AddToChatGPTButton size="lg" className="gap-2" />
                 <Button asChild size="lg" variant="outline" className="gap-2">
                   <a
-                    href="https://openai.com/index/introducing-the-chatgpt-mcp-marketplace/"
+                    href="https://learn.chatgpt.com/docs/extend/mcp"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
