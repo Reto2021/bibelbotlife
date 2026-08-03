@@ -160,10 +160,7 @@ export default function ConnectChatGPT() {
                     className="font-mono text-sm bg-muted/50"
                     onFocus={(e) => e.target.select()}
                   />
-                  <Button onClick={handleCopy} className="shrink-0 gap-2">
-                    {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
-                    Kopieren
-                  </Button>
+                  <CopyMcpUrlButton />
                 </div>
                 <p className="text-xs text-muted-foreground">
                   Die Verbindung läuft über OAuth 2.1. Du behältst die Kontrolle: ChatGPT darf nur das tun,
