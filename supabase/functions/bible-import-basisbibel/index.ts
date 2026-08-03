@@ -1,3 +1,4 @@
+import { requireAdminOrService } from "../_shared/auth.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.4";
 
 const corsHeaders = {
@@ -14,6 +15,9 @@ function clean(t: string) {
 
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
+
+  const auth = await requireAdminOrService(req);
+  if (!auth.ok) return auth.response;
 
   const supabase = createClient(
     Deno.env.get("SUPABASE_URL")!,
