@@ -30,6 +30,7 @@ const ChurchIntegration = lazy(() => import("./pages/ChurchIntegration"));
 
 const Unsubscribe = lazy(() => import("./pages/Unsubscribe"));
 const Login = lazy(() => import("./pages/Login"));
+const OAuthConsent = lazy(() => import("./pages/OAuthConsent"));
 const ResetPassword = lazy(() => import("./pages/ResetPassword"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const Dashboard = lazy(() => import("./pages/Dashboard"));
@@ -220,6 +221,7 @@ const App = () => {
                   <Route path="/presse" element={<Presse />} />
                   <Route path="/flyer" element={<Flyer />} />
                   <Route path="/login" element={<Login />} />
+                  <Route path="/.lovable/oauth/consent" element={<OAuthConsent />} />
                   <Route path="/reset-password" element={<ResetPassword />} />
                   <Route path="/dashboard" element={<ProtectedDashboardRoute><Dashboard /></ProtectedDashboardRoute>}>
                     <Route index element={<DashboardHome />} />
