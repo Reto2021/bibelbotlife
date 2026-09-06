@@ -15,6 +15,7 @@ import { useToast } from "@/hooks/use-toast";
 import { useTrack } from "@/components/AnalyticsProvider";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Shimmer } from "@/components/ai-elements/shimmer";
+import { ThinkingIndicator } from "@/components/chat/ThinkingIndicator";
 import {
   PromptInput,
   PromptInputTextarea,
@@ -961,12 +962,9 @@ export function BibleBotChat() {
         )}
 
         {isLoading && messages[messages.length - 1]?.role !== "assistant" && (
-          <div className="flex justify-start">
-            <div className="rounded-2xl rounded-bl-md px-4 py-3">
-              <Shimmer className="text-sm">{t("chat.thinking", "Ich denke nach ...")}</Shimmer>
-            </div>
-          </div>
+          <ThinkingIndicator t={t} />
         )}
+
 
       </div>
 
