@@ -659,6 +659,7 @@ const Index = () => {
                 <p>Industriestrasse 19</p>
                 <p>5200 Brugg, Schweiz</p>
                 <p className="mt-1">kontakt@biblebot.life</p>
+                <p><a href="https://www.tech-4-good.ch" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">www.tech-4-good.ch</a></p>
               </div>
               <div>
                 <p className="font-semibold text-background/70 mb-2">{t("footer.notes")}</p>

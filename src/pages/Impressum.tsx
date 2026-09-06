@@ -39,7 +39,8 @@ const Impressum = () => {
           <section>
             <h2 className="text-xl font-semibold mb-2">Kontakt</h2>
             <p className="text-muted-foreground">
-              E-Mail: <a href="mailto:kontakt@biblebot.life" className="text-primary hover:underline">kontakt@biblebot.life</a>
+              E-Mail: <a href="mailto:kontakt@biblebot.life" className="text-primary hover:underline">kontakt@biblebot.life</a><br />
+              Web: <a href="https://www.tech-4-good.ch" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">www.tech-4-good.ch</a>
             </p>
           </section>
 
