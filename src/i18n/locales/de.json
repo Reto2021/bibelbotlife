@@ -2289,8 +2289,19 @@
     "metaDesc": "Wie verbindet BibleBot KI mit Seelsorge? Evidenzbasierte Methodik (PERMA, Logotherapie), Qualitätssicherung, Krisenintervention und Grenzen der KI — transparent erklärt."
   },
   "why": {
-    "title": "Warum BibleBot.Life — und nicht einfach ein Chatbot?",
-    "subtitle": "Drei Unterschiede, die zählen.",
+    "title": "Warum BibleBot.Life — und nicht einfach ChatGPT?",
+    "subtitle": "Ein Bibel-Begleiter ist mehr als eine Antwortmaschine. Hier der entscheidende Unterschied.",
+    "badge": "BibleBot vs. ChatGPT",
+    "comparisonTitle": "Der Unterschied auf einen Blick",
+    "cta": "Jetzt kostenlos ausprobieren",
+    "ctaSecondary": "Methodik erfahren",
+    "comparison": [
+      { "aspect": "Bibelkenntnis", "chatgpt": "Antworten basieren auf allgemeinen Trainingsdaten — Bibelstellen können frei erfunden sein.", "biblebot": "Über 35 Übersetzungen in 30+ Sprachen. Jede Stelle wird von einem QA-Agenten auf Korrektheit geprüft." },
+      { "aspect": "Methodik", "chatgpt": "Generische Gesprächsführung ohne strukturierten Ansatz.", "biblebot": "Evidenzbasierte Coaching-Methoden: PERMA, Logotherapie, Dankbarkeits- und Vergebungsforschung." },
+      { "aspect": "Krisenintervention", "chatgpt": "Keine automatische Erkennung oder Weiterleitung bei Suizid- oder Krisensignalen.", "biblebot": "Erkennt Krisensignale und verweist sofort auf Telefonseelsorge in CH, DE und AT." },
+      { "aspect": "Persönliches Gedächtnis", "chatgpt": "Vergisst den Kontext nach dem Gespräch — kein dauerhaftes Begleiten möglich.", "biblebot": "Merkt sich wichtige Momente, Anlässe und Geburtstage für passende Impulse und Gebete." },
+      { "aspect": "Datenschutz", "chatgpt": "Gespräche werden auf Servern gespeichert und können zur Modellverbesserung genutzt werden.", "biblebot": "Kein Login nötig. Chatverlauf bleibt lokal auf dem Gerät — anonym und urteilsfrei." }
+    ],
     "wisdom": {
       "title": "Geprüfte Weisheit",
       "text": "BibleBot.Life kennt über 35 Bibelübersetzungen in 30+ Sprachen und prüft jede Stelle automatisch auf Korrektheit. Keine Halluzinationen, kein Raten — nur geprüfte Weisheit aus 2000 Jahren."
