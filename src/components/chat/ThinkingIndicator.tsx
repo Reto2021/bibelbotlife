@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Shimmer } from "@/components/ai-elements/shimmer";
 
 interface ThinkingIndicatorProps {
-  t: (key: string, fallback?: string) => string;
+  t: (key: string, fallback?: any) => string;
 }
 
 /**
