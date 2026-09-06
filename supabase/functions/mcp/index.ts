@@ -3,10 +3,10 @@
 // supabase function: mcp
 // Bundled from src/lib/mcp/index.ts by @lovable.dev/mcp-js.
 // src/lib/mcp/index.ts
-import { auth, defineMcp } from "npm:@lovable.dev/mcp-js@0.26.1";
+import { auth, defineMcp } from "npm:@lovable.dev/mcp-js@0.26.3";
 
 // src/lib/mcp/tools/search-bible.ts
-import { defineTool } from "npm:@lovable.dev/mcp-js@0.26.1";
+import { defineTool } from "npm:@lovable.dev/mcp-js@0.26.3";
 import { z } from "npm:zod@^3.25.76";
 
 // src/lib/mcp/supabase.ts
@@ -86,7 +86,7 @@ var search_bible_default = defineTool({
 });
 
 // src/lib/mcp/tools/list-prayer-wall.ts
-import { defineTool as defineTool2 } from "npm:@lovable.dev/mcp-js@0.26.1";
+import { defineTool as defineTool2 } from "npm:@lovable.dev/mcp-js@0.26.3";
 import { z as z2 } from "npm:zod@^3.25.76";
 var list_prayer_wall_default = defineTool2({
   name: "list_prayer_wall",
@@ -113,7 +113,7 @@ var list_prayer_wall_default = defineTool2({
 });
 
 // src/lib/mcp/tools/list-my-journal-entries.ts
-import { defineTool as defineTool3 } from "npm:@lovable.dev/mcp-js@0.26.1";
+import { defineTool as defineTool3 } from "npm:@lovable.dev/mcp-js@0.26.3";
 import { z as z3 } from "npm:zod@^3.25.76";
 var list_my_journal_entries_default = defineTool3({
   name: "list_my_journal_entries",
@@ -138,7 +138,7 @@ var list_my_journal_entries_default = defineTool3({
 });
 
 // src/lib/mcp/tools/create-journal-entry.ts
-import { defineTool as defineTool4 } from "npm:@lovable.dev/mcp-js@0.26.1";
+import { defineTool as defineTool4 } from "npm:@lovable.dev/mcp-js@0.26.3";
 import { z as z4 } from "npm:zod@^3.25.76";
 var create_journal_entry_default = defineTool4({
   name: "create_journal_entry",
@@ -166,7 +166,7 @@ var create_journal_entry_default = defineTool4({
 });
 
 // src/lib/mcp/tools/list-my-crosses.ts
-import { defineTool as defineTool5 } from "npm:@lovable.dev/mcp-js@0.26.1";
+import { defineTool as defineTool5 } from "npm:@lovable.dev/mcp-js@0.26.3";
 import { z as z5 } from "npm:zod@^3.25.76";
 var list_my_crosses_default = defineTool5({
   name: "list_my_crosses",
@@ -197,7 +197,7 @@ var list_my_crosses_default = defineTool5({
 });
 
 // src/lib/mcp/tools/list-my-bible-moments.ts
-import { defineTool as defineTool6 } from "npm:@lovable.dev/mcp-js@0.26.1";
+import { defineTool as defineTool6 } from "npm:@lovable.dev/mcp-js@0.26.3";
 import { z as z6 } from "npm:zod@^3.25.76";
 var list_my_bible_moments_default = defineTool6({
   name: "list_my_bible_moments",
@@ -223,7 +223,7 @@ var list_my_bible_moments_default = defineTool6({
 });
 
 // src/lib/mcp/tools/bible-coaching.ts
-import { defineTool as defineTool7 } from "npm:@lovable.dev/mcp-js@0.26.1";
+import { defineTool as defineTool7 } from "npm:@lovable.dev/mcp-js@0.26.3";
 import { z as z7 } from "npm:zod@^3.25.76";
 var bible_coaching_default = defineTool7({
   name: "bible_coaching",
@@ -284,5 +284,5 @@ var mcp_default = defineMcp({
 });
 
 // lovable-mcp-supabase-entry.ts
-import { createSupabaseHandler } from "npm:@lovable.dev/mcp-js@0.26.1/stacks/supabase";
+import { createSupabaseHandler } from "npm:@lovable.dev/mcp-js@0.26.3/stacks/supabase";
 Deno.serve(createSupabaseHandler(mcp_default, { functionName: "mcp" }));
