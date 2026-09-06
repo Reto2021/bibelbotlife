@@ -2063,8 +2063,19 @@
     "error": "Error"
   },
   "why": {
-    "title": "Why BibleBot.Life — and not just a chatbot?",
-    "subtitle": "Three differences that matter.",
+    "title": "Why BibleBot.Life — instead of just asking ChatGPT?",
+    "subtitle": "A Bible companion is more than an answer machine. Here's the difference that matters.",
+    "badge": "BibleBot vs. ChatGPT",
+    "comparisonTitle": "The difference at a glance",
+    "cta": "Try it free now",
+    "ctaSecondary": "Learn the methodology",
+    "comparison": [
+      { "aspect": "Bible knowledge", "chatgpt": "Responses rely on general training data — Bible references can be invented.", "biblebot": "35+ translations in 30+ languages. Every reference is verified by a QA agent for accuracy." },
+      { "aspect": "Methodology", "chatgpt": "Generic conversation flow without a structured approach.", "biblebot": "Evidence-based coaching methods: PERMA, logotherapy, gratitude and forgiveness research." },
+      { "aspect": "Crisis intervention", "chatgpt": "No automatic detection or referral for suicide or crisis signals.", "biblebot": "Detects crisis signals and immediately refers to pastoral hotlines in CH, DE and AT." },
+      { "aspect": "Personal memory", "chatgpt": "Forgets context after the chat — no lasting companionship possible.", "biblebot": "Remembers important moments, events and birthdays for timely impulses and prayers." },
+      { "aspect": "Privacy", "chatgpt": "Conversations are stored on servers and may be used for model improvement.", "biblebot": "No login needed. Chat history stays locally on your device — anonymous and judgment-free." }
+    ],
     "wisdom": {
       "title": "Verified wisdom",
       "text": "BibleBot.Life knows over 35 Bible translations in 30+ languages and automatically checks every reference for accuracy. No hallucinations, no guessing — only verified wisdom from 2,000 years of scripture."

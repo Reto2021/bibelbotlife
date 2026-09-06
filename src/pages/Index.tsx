@@ -235,37 +235,84 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Warum BibleBot? — 3 Pressewinkel */}
-      <section className="py-16 px-4 bg-card/40">
-        <div className="container mx-auto max-w-4xl">
+      {/* Warum BibleBot? — klarer Wertversprechen vs. generischer KI */}
+      <section className="py-20 px-4 bg-card/40">
+        <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold text-foreground mb-3">{t("why.title", "Warum BibleBot — und nicht einfach ChatGPT?")}</h2>
-            <p className="text-muted-foreground max-w-xl mx-auto">{t("why.subtitle", "Drei Unterschiede, die zählen.")}</p>
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-primary bg-primary/10 px-4 py-1.5 rounded-full mb-4">
+              <Bot className="h-4 w-4" />
+              {t("why.badge", "BibleBot vs. ChatGPT")}
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
+              {t("why.title", "Warum BibleBot — und nicht einfach ChatGPT?")}
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              {t("why.subtitle", "Ein Bibel-Begleiter ist mehr als eine Antwortmaschine. Hier der entscheidende Unterschied.")}
+            </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
+
+          <Card className="bg-card/80 border-border overflow-hidden mb-10">
+            <CardHeader className="pb-0">
+              <CardTitle className="text-center text-xl">
+                {t("why.comparisonTitle", "Der Unterschied auf einen Blick")}
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="p-0">
+              <div className="divide-y divide-border">
+                {(t("why.comparison", { returnObjects: true }) as Array<{ aspect: string; chatgpt: string; biblebot: string }>)?.map((row) => (
+                  <div key={row.aspect} className="grid md:grid-cols-[1.2fr_1fr_1fr] gap-0">
+                    <div className="p-4 md:p-5 flex items-center border-b md:border-b-0 md:border-r border-border bg-muted/20">
+                      <span className="font-semibold text-foreground text-sm">{row.aspect}</span>
+                    </div>
+                    <div className="p-4 md:p-5 flex items-start gap-2 bg-destructive/5">
+                      <XIcon className="h-4 w-4 text-destructive/70 shrink-0 mt-0.5" />
+                      <span className="text-sm text-muted-foreground">{row.chatgpt}</span>
+                    </div>
+                    <div className="p-4 md:p-5 flex items-start gap-2 bg-primary/5">
+                      <Check className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                      <span className="text-sm text-foreground/90">{row.biblebot}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-10">
             {[
               {
-                emoji: "🏛️",
-                title: t("why.wisdom.title", "Nicht irgendeine KI"),
-                text: t("why.wisdom.text", "BibleBot kennt über 35 Bibelübersetzungen in 38 Sprachen und prüft jede Stelle automatisch auf Korrektheit. Keine Halluzinationen, kein Raten — nur geprüfte Weisheit aus 2000 Jahren."),
+                icon: BookOpen,
+                title: t("why.wisdom.title", "Geprüfte Weisheit"),
+                text: t("why.wisdom.text", "BibleBot kennt über 35 Bibelübersetzungen in 30+ Sprachen und prüft jede Stelle automatisch auf Korrektheit. Keine Halluzinationen, kein Raten — nur geprüfte Weisheit aus 2000 Jahren."),
               },
               {
-                emoji: "🆘",
+                icon: Shield,
                 title: t("why.crisis.title", "Mit Krisenintervention"),
                 text: t("why.crisis.text", "Als erste Bibel-App weltweit erkennt BibleBot automatisch Krisensituationen und leitet sofort zu Telefonseelsorge-Nummern in CH, DE und AT weiter."),
               },
               {
-                emoji: "⛪",
+                icon: Heart,
                 title: t("why.nochurch.title", "Ergänzt deine Gemeinde"),
                 text: t("why.nochurch.text", "Ob du jeden Sonntag in der Kirche bist oder die Bibel jahrelang nicht aufgeschlagen hast — BibleBot begegnet dir dort, wo du gerade stehst. Kein Vorwissen nötig."),
               },
             ].map((item) => (
               <div key={item.title} className="flex flex-col gap-4 p-6 rounded-2xl border border-border bg-card/60 hover:shadow-md transition-shadow">
-                <span className="text-4xl">{item.emoji}</span>
+                <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <item.icon className="h-5 w-5 text-primary" />
+                </div>
                 <h3 className="font-bold text-foreground text-lg leading-tight">{item.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{item.text}</p>
               </div>
             ))}
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Button asChild size="lg">
+              <a href="#chat">{t("why.cta", "Jetzt kostenlos ausprobieren")}</a>
+            </Button>
+            <Button asChild variant="outline" size="lg">
+              <Link to="/ki-und-seelsorge">{t("why.ctaSecondary", "Methodik erfahren")}</Link>
+            </Button>
           </div>
         </div>
       </section>
