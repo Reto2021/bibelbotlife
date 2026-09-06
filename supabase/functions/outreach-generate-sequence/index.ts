@@ -179,7 +179,7 @@ async function callAI(lovableKey: string, systemPrompt: string, userPrompt: stri
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      model: "google/gemini-2.5-flash",
+      model: "google/gemini-3.7-flash",
       messages: [
         { role: "system", content: systemPrompt },
         { role: "user", content: userPrompt },

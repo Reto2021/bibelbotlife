@@ -98,7 +98,7 @@ async function callLovableAI(prompt: string): Promise<any> {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      model: "google/gemini-2.5-flash",
+      model: "google/gemini-3.7-flash",
       messages: [
         { role: "system", content: "You generate concise, warm SEO content for Bible verses. Always return valid JSON only." },
         { role: "user", content: prompt },

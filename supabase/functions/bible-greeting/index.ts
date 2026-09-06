@@ -67,7 +67,7 @@ Nur JSON, kein Markdown, keine Erklärungen.`;
         Authorization: `Bearer ${LOVABLE_API_KEY}`,
       },
       body: JSON.stringify({
-        model: "openai/gpt-5-mini",
+        model: "openai/gpt-5.4-mini",
         service_tier: "priority",
         messages: [
           { role: "system", content: sys },
