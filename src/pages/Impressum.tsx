@@ -29,7 +29,7 @@ const Impressum = () => {
           <section>
             <h2 className="text-xl font-semibold mb-2">Verantwortlich für den Inhalt</h2>
             <p className="text-muted-foreground">
-              2Go Media AG<br />
+              Verein Tech4Good<br />
               Industriestrasse 19<br />
               5200 Brugg<br />
               Schweiz

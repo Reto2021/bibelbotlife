@@ -655,7 +655,7 @@ const Index = () => {
             <div className="grid sm:grid-cols-2 gap-6 text-sm text-background/80 mb-8">
               <div>
                 <p className="font-semibold text-background/70 mb-2">{t("footer.impressum")}</p>
-                <p>2Go Media AG</p>
+                <p>Verein Tech4Good</p>
                 <p>Industriestrasse 19</p>
                 <p>5200 Brugg, Schweiz</p>
                 <p className="mt-1">kontakt@biblebot.life</p>

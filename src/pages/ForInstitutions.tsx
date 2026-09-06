@@ -120,7 +120,7 @@ const ForInstitutions = () => {
             biblischer Orientierung ermöglichen wollen.
           </p>
           <p className="text-sm text-muted-foreground italic">
-            Ein Angebot der 2Go Media AG · Alle Preise exkl. MwSt.
+            Ein Angebot der Verein Tech4Good · Alle Preise exkl. MwSt.
           </p>
         </div>
       </section>
