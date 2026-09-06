@@ -23,7 +23,7 @@ Deno.serve(async (req) => {
   const prompt = `Translate this JSON from German to ${langName} (${targetLang}). Rules:
 - Keep ALL JSON keys EXACTLY as they are (do not translate keys)
 - Only translate the string values
-- Keep URLs, emoji, \\n characters, and brand names (BibleBot, BibleBot.Life, Telegram, WhatsApp, Instagram, 2Go Media AG) unchanged
+- Keep URLs, emoji, \\n characters, and brand names (BibleBot, BibleBot.Life, Telegram, WhatsApp, Instagram, Verein Tech4Good) unchanged
 - Preserve placeholders like {name}, {{count}}, %s exactly
 - Return ONLY the complete valid JSON object with the SAME structure
 - No markdown fences, no explanation, no comments
