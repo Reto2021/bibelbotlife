@@ -196,13 +196,13 @@ export default function Presse() {
             <h2 className="text-2xl font-bold text-foreground mb-6 text-center">Boilerplate (für Artikel)</h2>
             <div className="relative p-5 rounded-xl bg-card border border-border">
               <div className="flex justify-end mb-2">
-                <CopyButton text="BibleBot.Life ist ein kostenloser KI-Begleiter, der biblische Weisheit mit evidenzbasierter Seelsorge-Methodik verbindet. Die Plattform ist in 38 Sprachen verfügbar, erkennt automatisch Krisensignale und verweist bei Bedarf sofort auf Telefonseelsorge-Nummern. BibleBot.Life wurde von Reto Wettstein (Schweiz) gegründet und ist unter biblebot.life zugänglich — anonym, kostenlos, ohne Anmeldung." />
+                <CopyButton text="BibleBot.Life ist ein kostenloser KI-Begleiter, der biblische Weisheit mit evidenzbasierter Seelsorge-Methodik verbindet. Die Plattform ist in 38 Sprachen verfügbar, erkennt automatisch Krisensignale und verweist bei Bedarf sofort auf Telefonseelsorge-Nummern. BibleBot.Life wird vom Verein Tech4Good (Industriestrasse 19, 5200 Brugg, www.tech-4-good.ch) herausgegeben und ist unter biblebot.life zugänglich — anonym, kostenlos, ohne Anmeldung." />
               </div>
               <p className="text-sm text-foreground/80 leading-relaxed">
                 BibleBot.Life ist ein kostenloser KI-Begleiter, der biblische Weisheit mit evidenzbasierter
                 Seelsorge-Methodik verbindet. Die Plattform ist in 38 Sprachen verfügbar, erkennt automatisch
-                Krisensignale und verweist bei Bedarf sofort auf Telefonseelsorge-Nummern. BibleBot.Life wurde
-                von Reto Wettstein (Schweiz) gegründet und ist unter{" "}
+                Krisensignale und verweist bei Bedarf sofort auf Telefonseelsorge-Nummern. BibleBot.Life wird vom
+                Verein Tech4Good (Industriestrasse 19, 5200 Brugg, www.tech-4-good.ch) herausgegeben und ist unter{" "}
                 <a href="https://biblebot.life" className="text-primary">biblebot.life</a>{" "}
                 zugänglich — anonym, kostenlos, ohne Anmeldung.
               </p>
