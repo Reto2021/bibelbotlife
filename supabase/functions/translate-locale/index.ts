@@ -36,7 +36,7 @@ Deno.serve(async (req) => {
       "Authorization": `Bearer ${LOVABLE_API_KEY}`,
     },
     body: JSON.stringify({
-      model: isDiff ? "google/gemini-2.5-flash" : "google/gemini-2.5-flash",
+      model: isDiff ? "google/gemini-3.7-flash" : "google/gemini-3.7-flash",
       messages: [{ role: "user", content: prompt + "\n\n" + JSON.stringify(sourceJson) }],
       temperature: 0.15,
     }),

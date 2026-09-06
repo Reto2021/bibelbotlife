@@ -62,7 +62,7 @@ Deno.serve(async (req) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: "openai/gpt-5-mini",
+        model: "openai/gpt-5.4-mini",
         service_tier: "priority",
         messages: [
           { role: "system", content: SYSTEM },

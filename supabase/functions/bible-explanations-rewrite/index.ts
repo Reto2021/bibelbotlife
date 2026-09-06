@@ -7,7 +7,7 @@ const corsHeaders = {
 };
 
 const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY")!;
-const MODEL = "google/gemini-2.5-flash-lite";
+const MODEL = "google/gemini-3.1-flash-lite";
 const BATCH_SIZE = 25;
 const MAX_PARALLEL = 8;
 

@@ -1128,7 +1128,7 @@ async function searchBibleVerses(
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: "google/gemini-2.5-flash-lite",
+        model: "google/gemini-3.1-flash-lite",
         messages: [
           {
             role: "system",
@@ -1252,7 +1252,7 @@ async function searchTheology(query: string, sourceType?: string): Promise<strin
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: "google/gemini-2.5-flash-lite",
+        model: "google/gemini-3.1-flash-lite",
         messages: [
           {
             role: "system",
@@ -1755,7 +1755,7 @@ serve(async (req) => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          model: "google/gemini-2.5-flash-lite",
+          model: "google/gemini-3.1-flash-lite",
           messages: [
             {
               role: "system",
@@ -1797,7 +1797,7 @@ serve(async (req) => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          model: "google/gemini-2.5-flash-lite",
+          model: "google/gemini-3.1-flash-lite",
           messages: [
             {
               role: "system",
@@ -1982,7 +1982,7 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            model: "openai/gpt-5-mini",
+            model: "openai/gpt-5.4-mini",
             service_tier: "priority",
             stream: true,
             messages: [
@@ -2036,7 +2036,7 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            model: "google/gemini-2.5-flash-lite",
+            model: "google/gemini-3.1-flash-lite",
             messages: [
               {
                 role: "system",

@@ -59,7 +59,7 @@ Antworte als JSON: {"facts": [{"topic": "kurzes Label", "content": "1-3 Sätze"}
       method: "POST",
       headers: { "Content-Type": "application/json", "Lovable-API-Key": LOVABLE_API_KEY },
       body: JSON.stringify({
-        model: "openai/gpt-5-mini",
+        model: "openai/gpt-5.4-mini",
         service_tier: "priority",
         messages: [
           { role: "system", content: sys },

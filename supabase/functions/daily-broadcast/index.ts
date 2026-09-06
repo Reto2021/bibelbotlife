@@ -99,7 +99,7 @@ ${JSON.stringify(impulse, null, 2)}`;
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: "google/gemini-2.5-flash-lite",
+        model: "google/gemini-3.1-flash-lite",
         messages: [
           { role: "system", content: "You are a translator. Output ONLY valid JSON. No markdown code blocks." },
           { role: "user", content: prompt },
