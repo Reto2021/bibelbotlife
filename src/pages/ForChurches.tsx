@@ -347,7 +347,7 @@ const ForChurches = () => {
           {/* Transparency note */}
           <div className="mt-6 max-w-3xl mx-auto text-center bg-primary/5 border border-primary/20 rounded-xl p-6">
             <p className="text-sm text-muted-foreground leading-relaxed">
-              BibleBot.Life wird von der <strong>Verein Tech4Good</strong> entwickelt und professionell betrieben.
+              BibleBot.Life wird vom <strong>Verein Tech4Good</strong> entwickelt und professionell betrieben.
               Die Abo-Pakete finanzieren Weiterentwicklung, Qualitätssicherung und persönlichen Support.
               Für Privatpersonen bleibt BibleBot kostenlos. Alle Preise exkl. MwSt.
             </p>
