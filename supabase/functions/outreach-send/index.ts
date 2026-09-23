@@ -50,6 +50,20 @@ async function requireAuth(
   anonKey: string,
   serviceKey: string,
 ): Promise<{ ok: true } | { ok: false; response: Response }> {
+  const cronKey = req.headers.get("x-cron-key") ?? "";
+  if (cronKey) {
+    const { data: cronOk, error: cronErr } = await supabase.rpc("check_cron_key", {
+      candidate: cronKey,
+    });
+    if (!cronErr && cronOk === true) return { ok: true };
+    return {
+      ok: false,
+      response: new Response(
+        JSON.stringify({ error: "Invalid cron secret" }),
+        { status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" } },
+      ),
+    };
+  }
   const cronSecret = req.headers.get("x-outreach-cron");
   if (cronSecret) {
     const { data: setting } = await supabase

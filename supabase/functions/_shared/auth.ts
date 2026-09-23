@@ -1,6 +1,23 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.1";
 import { corsHeaders } from "https://esm.sh/@supabase/supabase-js@2.95.0/cors";
 
+// Cron jobs authenticate with a shared secret stored in a private table
+// (never in the cron command itself). They send it via the x-cron-key header.
+export async function verifyCronKey(req: Request): Promise<boolean> {
+  const cronKey = req.headers.get("x-cron-key") ?? "";
+  if (!cronKey) return false;
+  const supabase = createClient(
+    Deno.env.get("SUPABASE_URL")!,
+    Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
+  );
+  const { data, error } = await supabase.rpc("check_cron_key", { candidate: cronKey });
+  if (error) {
+    console.error("verifyCronKey failed:", error.message);
+    return false;
+  }
+  return data === true;
+}
+
 export async function requireAdminOrService(
   req: Request,
 ): Promise<{ ok: true } | { ok: false; response: Response }> {
@@ -16,8 +33,12 @@ export async function requireAdminOrService(
     JSON.stringify({ error: "Unauthorized" }),
     { status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" } },
   );
-  if (!token) return { ok: false, response: unauthorized };
+  if (!token) {
+    if (await verifyCronKey(req)) return { ok: true };
+    return { ok: false, response: unauthorized };
+  }
   if (token === serviceKey) return { ok: true };
+  if (await verifyCronKey(req)) return { ok: true };
 
   const authClient = createClient(supabaseUrl, anonKey, {
     global: { headers: { Authorization: `Bearer ${token}` } },

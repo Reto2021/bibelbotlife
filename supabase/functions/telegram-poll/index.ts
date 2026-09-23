@@ -1,14 +1,16 @@
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+import { verifyCronKey } from '../_shared/auth.ts';
 
 const GATEWAY_URL = 'https://connector-gateway.lovable.dev/telegram';
 const MAX_RUNTIME_MS = 55_000;
 const MIN_REMAINING_MS = 5_000;
 
 Deno.serve(async (req: Request) => {
-  // Cron/service-only endpoint: require the service-role bearer token.
+  // Cron/service-only endpoint: accept the shared cron key or service-role token.
+  const cronKeyOk = await verifyCronKey(req);
   const authHeader = req.headers.get('authorization') ?? '';
   const token = authHeader.toLowerCase().startsWith('bearer ') ? authHeader.slice(7).trim() : '';
-  if (!token || token !== Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')) {
+  if (!cronKeyOk && (!token || token !== Deno.env.get('SUPABASE_SERVICE_ROLE_KEY'))) {
     return new Response(JSON.stringify({ error: 'Unauthorized' }), {
       status: 401,
       headers: { 'Content-Type': 'application/json' },
