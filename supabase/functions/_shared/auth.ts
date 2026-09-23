@@ -33,7 +33,10 @@ export async function requireAdminOrService(
     JSON.stringify({ error: "Unauthorized" }),
     { status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" } },
   );
-  if (!token) return { ok: false, response: unauthorized };
+  if (!token) {
+    if (await verifyCronKey(req)) return { ok: true };
+    return { ok: false, response: unauthorized };
+  }
   if (token === serviceKey) return { ok: true };
   if (await verifyCronKey(req)) return { ok: true };
 
