@@ -14,9 +14,10 @@ Deno.serve(async (req) => {
   const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
   const supabase = createClient(supabaseUrl, serviceKey);
 
-  // Verify service role or admin key
+  // Verify service role, shared cron key, or admin key
   const authHeader = req.headers.get("authorization");
-  if (authHeader !== `Bearer ${serviceKey}`) {
+  const cronKeyOk = await verifyCronKey(req);
+  if (authHeader !== `Bearer ${serviceKey}` && !cronKeyOk) {
     const url = new URL(req.url);
     const key = url.searchParams.get("key");
     const ADMIN_KEY = Deno.env.get("ANALYTICS_ADMIN_KEY");
