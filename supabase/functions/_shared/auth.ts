@@ -10,13 +10,12 @@ export async function verifyCronKey(req: Request): Promise<boolean> {
     Deno.env.get("SUPABASE_URL")!,
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
   );
-  const { data } = await supabase
-    .schema("private_cron")
-    .from("cron_secrets")
-    .select("secret")
-    .eq("name", "cron")
-    .maybeSingle();
-  return !!data && data.secret === cronKey;
+  const { data, error } = await supabase.rpc("check_cron_key", { candidate: cronKey });
+  if (error) {
+    console.error("verifyCronKey failed:", error.message);
+    return false;
+  }
+  return data === true;
 }
 
 export async function requireAdminOrService(

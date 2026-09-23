@@ -52,13 +52,10 @@ async function requireAuth(
 ): Promise<{ ok: true } | { ok: false; response: Response }> {
   const cronKey = req.headers.get("x-cron-key") ?? "";
   if (cronKey) {
-    const { data: cronRow } = await supabase
-      .schema("private_cron")
-      .from("cron_secrets")
-      .select("secret")
-      .eq("name", "cron")
-      .maybeSingle();
-    if (cronRow?.secret === cronKey) return { ok: true };
+    const { data: cronOk, error: cronErr } = await supabase.rpc("check_cron_key", {
+      candidate: cronKey,
+    });
+    if (!cronErr && cronOk === true) return { ok: true };
     return {
       ok: false,
       response: new Response(
