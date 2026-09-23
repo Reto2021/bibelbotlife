@@ -1,5 +1,6 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.1";
 import { corsHeaders } from "https://esm.sh/@supabase/supabase-js@2.95.0/cors";
+import { verifyCronKey } from "../_shared/auth.ts";
 
 const RESEND_GATEWAY = "https://connector-gateway.lovable.dev/resend";
 const REPORT_TO = "reto@biblebot.life";
