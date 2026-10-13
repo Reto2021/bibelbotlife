@@ -166,7 +166,7 @@ export default function ServicesCalendar() {
           <h2 className="text-lg font-semibold text-foreground">
             {viewMode === "month"
               ? `${MONTHS[month]} ${year}`
-              : `Woche vom ${weekDays[0].toLocaleDateString("de-CH", { day: "numeric", month: "long" })}`
+              : `Woche vom ${weekDays[0]!.toLocaleDateString("de-CH", { day: "numeric", month: "long" })}`
             }
           </h2>
           <Button variant="link" size="sm" className="text-xs" onClick={() => setCurrentDate(new Date())}>
