@@ -19,6 +19,7 @@ import { useAuth } from "@/hooks/use-auth";
 import { openBibleBotChat } from "@/lib/chat-events";
 import { useNavigate } from "@/lib/router-compat";
 import { toast } from "sonner";
+import { memoryAutoExtract } from "@/lib/memory-auto-extract.functions";
 
 
 const SOURCE_LABELS: Record<MemorySource, string> = {
@@ -271,11 +272,8 @@ export default function GedaechtnisPage() {
               if (!user) return;
               setExtracting(true);
               try {
-                const { data, error } = await supabase.functions.invoke("memory-auto-extract", {
-                  body: { limit_messages: 100 },
-                });
-                if (error) throw error;
-                const n = (data as any)?.extracted ?? 0;
+                const data = await memoryAutoExtract({ data: { limit_messages: 100 } });
+                const n = data.extracted;
                 if (n > 0) {
                   toast.success(`${n} Erinnerung${n === 1 ? "" : "en"} aus Chats destilliert`);
                   memories.refetch();
