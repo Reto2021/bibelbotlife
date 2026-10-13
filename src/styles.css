@@ -1,0 +1,331 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design system definition — "Golden Hour" palette.
+ *
+ * Color variables are kept as HSL triplets (e.g. `32 65% 52%`) because the app
+ * composes them at runtime (`hsl(var(--primary) / 0.6)`, church branding overrides
+ * that set `--primary` from a hex color). @theme inline wraps them in hsl().
+ */
+
+@theme inline {
+  --font-sans: "Barlow", "Inter", system-ui, sans-serif;
+  --font-serif: "Lora", Georgia, serif;
+  --font-display: "Bebas Neue", "Barlow", Impact, sans-serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-telegram: hsl(var(--telegram));
+  --color-telegram-foreground: hsl(var(--telegram-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-ring-offset-background: hsl(var(--background));
+  --color-sidebar: hsl(var(--sidebar-background));
+  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
+  --color-sidebar-primary: hsl(var(--sidebar-primary));
+  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
+  --color-sidebar-accent: hsl(var(--sidebar-accent));
+  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
+  --color-sidebar-border: hsl(var(--sidebar-border));
+  --color-sidebar-ring: hsl(var(--sidebar-ring));
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-marquee: marquee 45s linear infinite;
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+  @media (width >= 1400px) {
+    max-width: 1400px;
+  }
+}
+
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+:root {
+  --background: 38 40% 97%;
+  --foreground: 200 15% 20%;
+
+  --card: 38 30% 99%;
+  --card-foreground: 200 15% 20%;
+
+  --popover: 38 30% 99%;
+  --popover-foreground: 200 15% 20%;
+
+  --primary: 32 65% 52%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 185 45% 35%;
+  --secondary-foreground: 0 0% 100%;
+
+  --muted: 38 25% 93%;
+  --muted-foreground: 200 10% 45%;
+
+  --accent: 32 50% 93%;
+  --accent-foreground: 32 65% 38%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+
+  --telegram: 200 80% 50%;
+  --telegram-foreground: 0 0% 100%;
+
+  --border: 32 25% 88%;
+  --input: 32 25% 88%;
+  --ring: 32 65% 52%;
+
+  --radius: 0.5rem;
+
+  --gradient-hero: radial-gradient(80% 60% at 50% 0%, hsl(32 55% 94%) 0%, hsl(38 40% 97%) 55%, hsl(185 20% 96%) 100%);
+  --gradient-cta: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+  --gradient-glow: radial-gradient(60% 60% at 50% 40%, hsl(32 70% 82% / 0.55) 0%, transparent 70%);
+
+  --shadow-warm: 0 32px 64px -24px hsl(32 55% 30% / 0.18), 0 8px 24px -12px hsl(32 55% 30% / 0.10);
+  --shadow-elegant: 0 20px 50px -20px hsl(32 55% 30% / 0.20);
+
+  --chat-warmth: 32 50% 97%;
+  --chat-bot-bubble: 32 40% 94%;
+  --chat-welcome-glow: 32 45% 96%;
+
+  --sidebar-background: 38 30% 98%;
+  --sidebar-foreground: 200 10% 26%;
+  --sidebar-primary: 185 45% 35%;
+  --sidebar-primary-foreground: 0 0% 98%;
+  --sidebar-accent: 32 30% 95%;
+  --sidebar-accent-foreground: 200 15% 20%;
+  --sidebar-border: 32 20% 91%;
+  --sidebar-ring: 185 45% 45%;
+}
+
+.dark {
+  --background: 200 18% 8%;
+  --foreground: 38 20% 92%;
+
+  --card: 200 15% 12%;
+  --card-foreground: 38 20% 92%;
+
+  --popover: 200 15% 12%;
+  --popover-foreground: 38 20% 92%;
+
+  --primary: 32 65% 55%;
+  --primary-foreground: 200 18% 8%;
+
+  --secondary: 185 45% 50%;
+  --secondary-foreground: 0 0% 100%;
+
+  --muted: 200 12% 16%;
+  --muted-foreground: 200 8% 72%;
+
+  --accent: 32 30% 18%;
+  --accent-foreground: 32 55% 72%;
+
+  --destructive: 0 63% 45%;
+  --destructive-foreground: 0 0% 100%;
+
+  --telegram: 200 80% 55%;
+  --telegram-foreground: 0 0% 100%;
+
+  --border: 200 10% 20%;
+  --input: 200 10% 20%;
+  --ring: 32 65% 55%;
+
+  --gradient-hero: radial-gradient(80% 60% at 50% 0%, hsl(200 15% 11%) 0%, hsl(200 18% 8%) 55%, hsl(185 12% 8%) 100%);
+  --gradient-cta: linear-gradient(135deg, hsl(32 65% 45%) 0%, hsl(185 45% 35%) 100%);
+  --gradient-glow: radial-gradient(60% 60% at 50% 40%, hsl(32 55% 30% / 0.35) 0%, transparent 70%);
+
+  --shadow-warm: 0 32px 64px -24px hsl(0 0% 0% / 0.5), 0 8px 24px -12px hsl(0 0% 0% / 0.3);
+  --shadow-elegant: 0 20px 50px -20px hsl(32 55% 30% / 0.35);
+
+  --chat-warmth: 200 15% 10%;
+  --chat-bot-bubble: 200 12% 16%;
+  --chat-welcome-glow: 200 15% 12%;
+
+  --sidebar-background: 200 18% 9%;
+  --sidebar-foreground: 38 20% 90%;
+  --sidebar-primary: 185 45% 50%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 200 12% 16%;
+  --sidebar-accent-foreground: 38 20% 90%;
+  --sidebar-border: 200 10% 18%;
+  --sidebar-ring: 185 45% 50%;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  /* Tailwind v3 default: buttons use a pointer cursor */
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3 {
+    font-family: "Barlow", Inter, system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+  }
+
+  .font-display {
+    font-family: "Bebas Neue", "Barlow", Impact, sans-serif;
+    letter-spacing: 0.02em;
+  }
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
+@utility shadow-warm {
+  box-shadow: var(--shadow-warm);
+}
+@utility shadow-elegant {
+  box-shadow: var(--shadow-elegant);
+}
+@utility bg-glow {
+  background-image: var(--gradient-glow);
+}
+
+@keyframes bounce-gentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-bounce-gentle {
+  animation: bounce-gentle 2s ease-in-out 3;
+}
+
+@keyframes pulse-warm {
+  0%, 100% { box-shadow: 0 0 0 0 hsl(32 65% 52% / 0.4); }
+  50% { box-shadow: 0 0 0 12px hsl(32 65% 52% / 0); }
+}
+
+.animate-pulse-warm {
+  animation: pulse-warm 2.5s ease-in-out infinite;
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.5s ease-out forwards;
+}
+
+/* Slow candle breathe behind hero */
+@keyframes candle-breathe {
+  0%, 100% { opacity: 0.55; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.06); }
+}
+.animate-candle {
+  animation: candle-breathe 6s ease-in-out infinite;
+}
+
+/* Animated splash blobs — fresh, youthful movement */
+@keyframes blob-drift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(6%, -4%) scale(1.08); }
+  66% { transform: translate(-4%, 5%) scale(0.95); }
+}
+.animate-blob {
+  animation: blob-drift 14s ease-in-out infinite;
+  will-change: transform;
+}
+.animate-blob-slow {
+  animation: blob-drift 22s ease-in-out infinite reverse;
+  will-change: transform;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 12s ease infinite;
+}
+
+.chat-welcome-gradient {
+  background: linear-gradient(180deg, hsl(var(--chat-welcome-glow)) 0%, hsl(var(--chat-warmth)) 100%);
+}
+
+/* Safe area for bottom navigation on notched devices */
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Serif prose: tune line-height for Lora */
+.font-serif p,
+.font-serif li {
+  line-height: 1.75;
+}
+
+/* Bible verse quotes use warm gold left border */
+blockquote.bible-verse {
+  border-left-color: hsl(var(--primary) / 0.6);
+  background: hsl(var(--accent) / 0.25);
+  border-radius: 0 0.5rem 0.5rem 0;
+  padding: 0.5rem 1rem;
+}
+
+/* RTL: mirror border side for bible verses */
+[dir="rtl"] blockquote.bible-verse {
+  border-left-color: transparent;
+  border-right: 4px solid hsl(var(--primary) / 0.6);
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+/* RTL: flip horizontal spacing that Tailwind doesn't auto-flip */
+[dir="rtl"] .space-x-2 > :not(:last-child),
+[dir="rtl"] .space-x-3 > :not(:last-child),
+[dir="rtl"] .space-x-4 > :not(:last-child) {
+  --tw-space-x-reverse: 1;
+}
