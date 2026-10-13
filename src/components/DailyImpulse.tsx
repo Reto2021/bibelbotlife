@@ -33,7 +33,7 @@ type Impulse = {
 };
 
 function normalizeLang(lang?: string): string {
-  return (lang || "de").split("-")[0].toLowerCase();
+  return (lang || "de").split("-")[0]!.toLowerCase();
 }
 
 function getImpulseCacheKey(lang: string): string {
@@ -234,12 +234,14 @@ export function DailyImpulse() {
         verse: impulse.verse,
         reference: impulse.reference,
         topic: impulse.topic,
-        backgroundUrl: bgUrl || undefined,
-        churchBranding: churchBranding ? {
-          name: churchBranding.churchName,
-          logoUrl: churchBranding.logoUrl,
-          slug: churchBranding.churchSlug,
-        } : undefined,
+        ...(bgUrl ? { backgroundUrl: bgUrl } : {}),
+        ...(churchBranding ? {
+          churchBranding: {
+            name: churchBranding.churchName,
+            logoUrl: churchBranding.logoUrl,
+            slug: churchBranding.churchSlug,
+          },
+        } : {}),
       });
       const url = URL.createObjectURL(blob);
       setShareBlob(blob);
