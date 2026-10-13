@@ -7,7 +7,7 @@ import { toast } from "@/hooks/use-toast";
 
 const VAPID_PUBLIC_KEY = "BLMl5bBRzhlza0ozrHEblp3BfKtbyDsbOP-n120rl6teGPFdoyFb77P9WnOZpbFs2hKyfwILmw8WQebJrp_qc7c";
 
-const SUBSCRIBE_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/subscribe-daily`;
+const SUBSCRIBE_URL = `${import.meta.env["VITE_SUPABASE_URL"]}/functions/v1/subscribe-daily`;
 const TELEGRAM_LINK = "https://t.me/meinbibelbot";
 
 type Channel = "push" | "sms" | "telegram";
@@ -75,10 +75,10 @@ export function DailySubscribe() {
       }
 
       const body: Record<string, unknown> = { channel: selectedChannel, language: i18n.language };
-      if (firstName.trim()) body.first_name = firstName.trim();
-      if (selectedChannel === "sms") body.phone_number = phone;
+      if (firstName.trim()) body["first_name"] = firstName.trim();
+      if (selectedChannel === "sms") body["phone_number"] = phone;
       if (selectedChannel === "push" && pushSubscription) {
-        body.push_subscription = pushSubscription.toJSON();
+        body["push_subscription"] = pushSubscription.toJSON();
       }
 
       const resp = await fetch(SUBSCRIBE_URL, {

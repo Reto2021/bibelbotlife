@@ -84,8 +84,8 @@ const EulogyWriter = () => {
       setGeneratedText(draft.generated_text || "");
       const fd = draft.form_data as Record<string, string> | null;
       if (fd) {
-        setPersonAge(fd.personAge || "");
-        setAdditionalNotes(fd.additionalNotes || "");
+        setPersonAge(fd["personAge"] || "");
+        setAdditionalNotes(fd["additionalNotes"] || "");
       }
       const tr = draft.transcripts as Array<{ text: string; duration: number }> | null;
       if (tr && tr.length > 0) {
@@ -282,12 +282,12 @@ const EulogyWriter = () => {
 
     try {
       const resp = await fetch(
-        `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/eulogy-writer`,
+        `${import.meta.env["VITE_SUPABASE_URL"]}/functions/v1/eulogy-writer`,
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+            Authorization: `Bearer ${import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"]}`,
           },
           body: JSON.stringify({
             transcript: fullTranscript,

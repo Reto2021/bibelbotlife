@@ -38,7 +38,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
                 type: "user_registered",
                 data: {
                   email: session.user.email || "",
-                  firstName: session.user.user_metadata?.full_name || "",
+                  firstName: session.user.user_metadata?.["full_name"] || "",
                 },
               },
             }).catch(() => {});

@@ -7,7 +7,7 @@ import listMyCrossesTool from "./tools/list-my-crosses";
 import listMyBibleMomentsTool from "./tools/list-my-bible-moments";
 import bibleCoachingTool from "./tools/bible-coaching";
 
-const projectRef = import.meta.env.VITE_SUPABASE_PROJECT_ID ?? "project-ref-unset";
+const projectRef = import.meta.env["VITE_SUPABASE_PROJECT_ID"] ?? "project-ref-unset";
 
 export default defineMcp({
   name: "biblebotlife",

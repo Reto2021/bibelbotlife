@@ -116,7 +116,7 @@ export default function TeamPage() {
                 templateData: {
                   churchName: church?.name || "",
                   role: form.role,
-                  inviterName: user?.user_metadata?.full_name || user?.email || "",
+                  inviterName: user?.user_metadata?.["full_name"] || user?.email || "",
                   dashboardUrl: `${window.location.origin}/dashboard`,
                 },
               },

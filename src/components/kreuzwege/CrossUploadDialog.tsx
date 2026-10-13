@@ -116,7 +116,7 @@ export function CrossUploadDialog({
         title: t("crossways.upload.unsupportedFormat", "Dateiformat nicht unterstützt"),
         description: t("crossways.upload.unsupportedFormatDesc", "Erlaubt sind: {{formats}}.").replace(
           "{{formats}}",
-          String(result.values?.formats ?? ""),
+          String(result.values?.["formats"] ?? ""),
         ),
       },
       convertHeic: {
@@ -138,11 +138,11 @@ export function CrossUploadDialog({
         title: t("crossways.upload.imageTooSmall", "Bild zu klein"),
         description: t("crossways.upload.imageTooSmallDesc", "Mindestens {{min}} x {{min}} Pixel.").replace(
           /{{min}}/g,
-          String(result.values?.min ?? MIN_IMAGE_DIMENSION),
+          String(result.values?.["min"] ?? MIN_IMAGE_DIMENSION),
         ),
       },
     };
-    const msg = messages[result.code ?? "notAnImage"] ?? messages.notAnImage;
+    const msg = messages[result.code ?? "notAnImage"] ?? messages["notAnImage"];
     toast({
       title: name ? `${name}: ${msg.title}` : msg.title,
       description: msg.description,

@@ -25,7 +25,7 @@ import {
 } from "@/components/ai-elements/prompt-input";
 
 
-const STT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/elevenlabs-stt`;
+const STT_URL = `${import.meta.env["VITE_SUPABASE_URL"]}/functions/v1/elevenlabs-stt`;
 
 import { CHAT_OPEN_EVENT, type ChatMode } from "@/lib/chat-events";
 import { getVisitorId, getChurchSlugFromUrlOrStorage } from "@/lib/widget-visitor";
@@ -46,8 +46,8 @@ type Message = {
   qa?: QAResult | "loading" | "skipped";
 };
 
-const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/bibelbot-chat`;
-const QA_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/bibelbot-qa`;
+const CHAT_URL = `${import.meta.env["VITE_SUPABASE_URL"]}/functions/v1/bibelbot-chat`;
+const QA_URL = `${import.meta.env["VITE_SUPABASE_URL"]}/functions/v1/bibelbot-qa`;
 
 const JOURNEY_DISMISSED_KEY = "bibelbot-journey-dismissed";
 const JOURNEY_NUDGE_KEY = "bibelbot-journey-nudge-ts";
@@ -379,7 +379,7 @@ export function BibleBotChat() {
     try {
       const resp = await fetch(QA_URL, {
         method: "POST",
-        headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}` },
+        headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"]}` },
         body: JSON.stringify({ text }),
       });
       if (!resp.ok) { setMessages((prev) => prev.map((m, i) => (i === msgIndex ? { ...m, qa: "skipped" } : m))); return; }
@@ -408,8 +408,8 @@ export function BibleBotChat() {
           const resp = await fetch(STT_URL, {
             method: "POST",
             headers: {
-              apikey: import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
-              Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+              apikey: import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"],
+              Authorization: `Bearer ${import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"]}`,
             },
             body: formData,
           });
@@ -532,7 +532,7 @@ export function BibleBotChat() {
         const visitorId = churchSlug ? getVisitorId() : null;
         const resp = await fetch(CHAT_URL, {
           method: "POST",
-          headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}` },
+          headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"]}` },
           body: JSON.stringify({ messages: contextMessages, language: i18n.language, mode: chatMode, preferredTranslation: preferredTranslation !== "auto" ? preferredTranslation : undefined, screenWidth: window.innerWidth, churchSlug, visitorId }),
         });
 
@@ -594,7 +594,7 @@ export function BibleBotChat() {
           console.warn("Stream read failed, using fallback:", streamErr);
           const fallbackResp = await fetch(CHAT_URL, {
             method: "POST",
-            headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}` },
+            headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"]}` },
             body: JSON.stringify({ messages: contextMessages, language: i18n.language, mode: chatMode, preferredTranslation: preferredTranslation !== "auto" ? preferredTranslation : undefined, screenWidth: window.innerWidth, churchSlug, visitorId }),
           });
           const fullText = await fallbackResp.text();

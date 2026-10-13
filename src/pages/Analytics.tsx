@@ -165,7 +165,7 @@ const Analytics = () => {
     setError("");
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/analytics-dashboard?key=${encodeURIComponent(key)}&days=${useDays}`,
+        `${import.meta.env["VITE_SUPABASE_URL"]}/functions/v1/analytics-dashboard?key=${encodeURIComponent(key)}&days=${useDays}`,
         { headers: { "Content-Type": "application/json" } }
       );
       if (!response.ok) {
@@ -1073,7 +1073,7 @@ const Analytics = () => {
             <CardContent>
               <div className="h-48">
                 <ResponsiveContainer width="100%" height="100%">
-                  <AreaChart data={data?.referrerTrend?.map((d) => ({ ...d, date: String(d.date).slice(5) }))}>
+                  <AreaChart data={data?.referrerTrend?.map((d) => ({ ...d, date: String(d["date"]).slice(5) }))}>
                     <CartesianGrid strokeDasharray="3 3" className="stroke-border" />
                     <XAxis dataKey="date" tick={{ fontSize: 10 }} className="fill-muted-foreground" />
                     <YAxis tick={{ fontSize: 10 }} className="fill-muted-foreground" allowDecimals={false} />

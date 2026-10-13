@@ -16,8 +16,8 @@ const Unsubscribe = () => {
     if (!token) { setStatus("invalid"); return; }
     const validate = async () => {
       try {
-        const url = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/handle-email-unsubscribe?token=${token}`;
-        const res = await fetch(url, { headers: { apikey: import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY } });
+        const url = `${import.meta.env["VITE_SUPABASE_URL"]}/functions/v1/handle-email-unsubscribe?token=${token}`;
+        const res = await fetch(url, { headers: { apikey: import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"] } });
         const data = await res.json();
         if (!res.ok) { setStatus("invalid"); return; }
         setStatus(data.valid ? "valid" : data.reason === "already_unsubscribed" ? "already" : "invalid");

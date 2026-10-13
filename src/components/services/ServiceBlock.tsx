@@ -103,7 +103,7 @@ interface ServiceBlockProps {
 export function ServiceBlock({ block, onUpdate, onDelete, onAskBibleBot, onPickResource }: ServiceBlockProps) {
   const [expanded, setExpanded] = useState(true);
   const [titleFocused, setTitleFocused] = useState(false);
-  const mediaUrl = (block.metadata?.mediaUrl as string) || "";
+  const mediaUrl = (block.metadata?.["mediaUrl"] as string) || "";
 
   const embedInfo = useMemo(() => {
     if (!mediaUrl) return null;

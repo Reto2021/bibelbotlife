@@ -7,7 +7,7 @@ const MCP_PATH = "/functions/v1/mcp";
 const CHATGPT_URL = "https://chatgpt.com";
 
 export function getMcpUrl(): string {
-  const base = import.meta.env.VITE_SUPABASE_URL ?? window.location.origin;
+  const base = import.meta.env["VITE_SUPABASE_URL"] ?? window.location.origin;
   return `${base.replace(/\/$/, "")}${MCP_PATH}`;
 }
 

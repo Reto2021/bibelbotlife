@@ -14,7 +14,7 @@ interface VerseResult {
   translation: string;
 }
 
-const SEARCH_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/bible-search`;
+const SEARCH_URL = `${import.meta.env["VITE_SUPABASE_URL"]}/functions/v1/bible-search`;
 
 /** Small verse search used inside the Kreuzwege upload dialog. */
 export function VersePicker({
@@ -43,7 +43,7 @@ export function VersePicker({
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+            Authorization: `Bearer ${import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"]}`,
           },
           body: JSON.stringify({
             query: term,

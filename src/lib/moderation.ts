@@ -70,8 +70,8 @@ export async function moderateSubmission(input: {
   try {
     const payload: Record<string, unknown> = { texts };
     if (input.image) {
-      payload.imageBase64 = await blobToBase64(input.image);
-      payload.imageMimeType = input.image.type || "image/jpeg";
+      payload["imageBase64"] = await blobToBase64(input.image);
+      payload["imageMimeType"] = input.image.type || "image/jpeg";
     }
 
     const { data, error } = await supabase.functions.invoke("content-moderation", {

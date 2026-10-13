@@ -22,9 +22,9 @@ export function ExplanationRewriteStatus() {
   });
 
   const counts = Object.fromEntries((data ?? []).map((r) => [r.status, Number(r.count)]));
-  const done = counts.done ?? 0;
-  const pending = counts.pending ?? 0;
-  const failed = counts.failed ?? 0;
+  const done = counts["done"] ?? 0;
+  const pending = counts["pending"] ?? 0;
+  const failed = counts["failed"] ?? 0;
   const total = done + pending + failed;
   const percent = total > 0 ? Math.round((done / total) * 100) : 0;
 

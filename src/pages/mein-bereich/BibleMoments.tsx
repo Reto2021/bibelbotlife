@@ -129,12 +129,12 @@ function VoiceCapture({
           fd.append("audio", blob, "recording.webm");
           fd.append("language", "de");
           const resp = await fetch(
-            `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/elevenlabs-stt`,
+            `${import.meta.env["VITE_SUPABASE_URL"]}/functions/v1/elevenlabs-stt`,
             {
               method: "POST",
               headers: {
-                apikey: import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
-                Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+                apikey: import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"],
+                Authorization: `Bearer ${import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"]}`,
               },
               body: fd,
             },
@@ -439,21 +439,21 @@ function AddMomentDialog() {
     const finalLabel = label.trim() || meta?.defaultLabel || "Bible Moment";
     const config: Record<string, any> = { ...(meta?.defaultConfig ?? {}) };
 
-    if (triggerType === "time") config.time = time;
+    if (triggerType === "time") config["time"] = time;
 
     if (triggerType === "calendar") {
       if (!calDate) { toast.error("Bitte ein Datum wählen"); return; }
-      config.event = calEvent.trim();
-      config.date = calDate;
+      config["event"] = calEvent.trim();
+      config["date"] = calDate;
     }
 
     if (triggerType === "birthday") {
       if (!bdayName.trim()) { toast.error("Bitte einen Namen eingeben"); return; }
       if (!bdayDate) { toast.error("Bitte ein Datum wählen"); return; }
-      config.recipient_name = bdayName.trim();
-      config.date = bdayDate;
-      config.relationship = bdayRelation.trim();
-      config.occasion = "Geburtstag";
+      config["recipient_name"] = bdayName.trim();
+      config["date"] = bdayDate;
+      config["relationship"] = bdayRelation.trim();
+      config["occasion"] = "Geburtstag";
     }
 
     // Store birthday as calendar trigger under the hood — the dispatcher already

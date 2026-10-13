@@ -71,12 +71,12 @@ function DonationForm() {
     };
 
     if (isMonthly) {
-      body.priceId = "support_monthly_5";
+      body["priceId"] = "support_monthly_5";
     } else if (selectedPreset !== null) {
       const presetMap = ["donation_5", "donation_10", "donation_25"];
-      body.priceId = presetMap[selectedPreset];
+      body["priceId"] = presetMap[selectedPreset];
     } else {
-      body.customAmountCents = amountCents;
+      body["customAmountCents"] = amountCents;
     }
 
     const { data, error } = await supabase.functions.invoke("create-checkout", { body });

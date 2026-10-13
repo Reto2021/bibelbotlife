@@ -116,7 +116,7 @@ export default function ServicesCalendar() {
       to={`/dashboard/editor/${service.id}`}
       className="block"
     >
-      <div className={cn("text-xs px-1.5 py-0.5 rounded truncate cursor-pointer hover:opacity-80 transition-opacity", SERVICE_TYPE_COLORS[service.service_type] || SERVICE_TYPE_COLORS.other)}>
+      <div className={cn("text-xs px-1.5 py-0.5 rounded truncate cursor-pointer hover:opacity-80 transition-opacity", SERVICE_TYPE_COLORS[service.service_type] || SERVICE_TYPE_COLORS["other"])}>
         {service.service_time?.slice(0, 5)} {service.title}
       </div>
     </Link>

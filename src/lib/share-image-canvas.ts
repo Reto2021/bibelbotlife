@@ -32,7 +32,7 @@ type ShareTileOptions = {
   churchBranding?: ChurchBrandingInfo;
 };
 
-const SHARE_IMAGE_FN_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/impulse-share-image`;
+const SHARE_IMAGE_FN_URL = `${import.meta.env["VITE_SUPABASE_URL"]}/functions/v1/impulse-share-image`;
 
 /**
  * Fetch an AI-generated background image URL for the given impulse.

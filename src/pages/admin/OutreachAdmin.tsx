@@ -959,7 +959,7 @@ export default function OutreachAdmin() {
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {loadingCampaigns && <div className="col-span-full text-center py-8 text-muted-foreground"><Loader2 className="h-6 w-6 animate-spin mx-auto" /></div>}
         {campaigns.map((c: any) => {
-          const st = CAMPAIGN_STATUS[c.status] || CAMPAIGN_STATUS.paused;
+          const st = CAMPAIGN_STATUS[c.status] || CAMPAIGN_STATUS["paused"];
           const isSelected = c.id === selectedCampaignId;
           return (
             <Card
@@ -1192,7 +1192,7 @@ export default function OutreachAdmin() {
                     </TableHeader>
                     <TableBody>
                       {leads.map((lead: any) => {
-                        const ls = LEAD_STATUS[lead.status] || LEAD_STATUS.new;
+                        const ls = LEAD_STATUS[lead.status] || LEAD_STATUS["new"];
                         return (
                           <TableRow key={lead.id}>
                             <TableCell className="font-medium">
@@ -1385,13 +1385,13 @@ export default function OutreachAdmin() {
             {stats ? (
               <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
                 <Card><CardHeader className="pb-2"><CardDescription>Total Leads</CardDescription><CardTitle className="text-2xl">{stats.totalLeads}</CardTitle></CardHeader></Card>
-                <Card><CardHeader className="pb-2"><CardDescription>E-Mails gesendet</CardDescription><CardTitle className="text-2xl">{stats.emailStatus.sent || 0}</CardTitle></CardHeader></Card>
-                <Card><CardHeader className="pb-2"><CardDescription>Geantwortet</CardDescription><CardTitle className="text-2xl text-secondary">{stats.leadStatus.replied || 0}</CardTitle></CardHeader></Card>
-                <Card><CardHeader className="pb-2"><CardDescription>Demo gebucht</CardDescription><CardTitle className="text-2xl text-primary">{stats.leadStatus.booked || 0}</CardTitle></CardHeader></Card>
+                <Card><CardHeader className="pb-2"><CardDescription>E-Mails gesendet</CardDescription><CardTitle className="text-2xl">{stats.emailStatus["sent"] || 0}</CardTitle></CardHeader></Card>
+                <Card><CardHeader className="pb-2"><CardDescription>Geantwortet</CardDescription><CardTitle className="text-2xl text-secondary">{stats.leadStatus["replied"] || 0}</CardTitle></CardHeader></Card>
+                <Card><CardHeader className="pb-2"><CardDescription>Demo gebucht</CardDescription><CardTitle className="text-2xl text-primary">{stats.leadStatus["booked"] || 0}</CardTitle></CardHeader></Card>
                 <Card><CardHeader className="pb-2"><CardDescription>Geöffnet</CardDescription><CardTitle className="text-2xl text-blue-600">{stats.opened}</CardTitle><CardContent className="pt-0 text-xs text-muted-foreground">{stats.openRate}% Open Rate</CardContent></CardHeader></Card>
                 <Card><CardHeader className="pb-2"><CardDescription>Geklickt</CardDescription><CardTitle className="text-2xl text-violet-600">{stats.clicked}</CardTitle><CardContent className="pt-0 text-xs text-muted-foreground">{stats.clickRate}% Click Rate</CardContent></CardHeader></Card>
-                <Card><CardHeader className="pb-2"><CardDescription>Bounces</CardDescription><CardTitle className="text-2xl text-orange-600">{stats.emailStatus.bounced || 0}</CardTitle></CardHeader></Card>
-                <Card><CardHeader className="pb-2"><CardDescription>Systemfehler</CardDescription><CardTitle className="text-2xl text-red-600">{stats.emailStatus.failed_system || 0}</CardTitle></CardHeader></Card>
+                <Card><CardHeader className="pb-2"><CardDescription>Bounces</CardDescription><CardTitle className="text-2xl text-orange-600">{stats.emailStatus["bounced"] || 0}</CardTitle></CardHeader></Card>
+                <Card><CardHeader className="pb-2"><CardDescription>Systemfehler</CardDescription><CardTitle className="text-2xl text-red-600">{stats.emailStatus["failed_system"] || 0}</CardTitle></CardHeader></Card>
               </div>
             ) : (
               <div className="text-center py-8 text-muted-foreground">Wähle eine Kampagne</div>

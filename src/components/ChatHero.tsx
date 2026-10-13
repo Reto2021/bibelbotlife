@@ -84,8 +84,8 @@ function getSpeechLang(lang: string): string {
   return map[lang] || "de-CH";
 }
 
-const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/bibelbot-chat`;
-const QA_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/bibelbot-qa`;
+const CHAT_URL = `${import.meta.env["VITE_SUPABASE_URL"]}/functions/v1/bibelbot-chat`;
+const QA_URL = `${import.meta.env["VITE_SUPABASE_URL"]}/functions/v1/bibelbot-qa`;
 
 type QAResult = {
   citations_found: number;
@@ -374,7 +374,7 @@ export function ChatHero() {
     try {
       const resp = await fetch(QA_URL, {
         method: "POST",
-        headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}` },
+        headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"]}` },
         body: JSON.stringify({ text }),
       });
       if (!resp.ok) { setQaMap((prev) => ({ ...prev, [msgIndex]: "skipped" })); return; }
@@ -654,7 +654,7 @@ export function ChatHero() {
       try {
         const resp = await fetch(CHAT_URL, {
           method: "POST",
-          headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}` },
+          headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"]}` },
           body: JSON.stringify({ messages: allMessages, journeyDay: 1, language: i18n.language, mode: chatMode }),
         });
 
@@ -713,7 +713,7 @@ export function ChatHero() {
           console.warn("Stream read failed, using fallback:", streamErr);
           const fallbackResp = await fetch(CHAT_URL, {
             method: "POST",
-            headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}` },
+            headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"]}` },
             body: JSON.stringify({ messages: allMessages, journeyDay: 1, language: i18n.language, mode: chatMode }),
           });
           const fullText = await fallbackResp.text();
@@ -741,7 +741,7 @@ export function ChatHero() {
           setFollowUpsLoading(true);
           fetch(CHAT_URL, {
             method: "POST",
-            headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}` },
+            headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"]}` },
             body: JSON.stringify({
               messages: [
                 { role: "user", content: text.trim() },
@@ -761,7 +761,7 @@ export function ChatHero() {
             try {
               const titleResp = await fetch(CHAT_URL, {
                 method: "POST",
-                headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}` },
+                headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"]}` },
                 body: JSON.stringify({
                   messages: [
                     { role: "user", content: text.trim() },

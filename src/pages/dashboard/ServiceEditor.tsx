@@ -114,7 +114,7 @@ export default function ServiceEditor() {
             serviceDate,
             churchName: church?.name || "",
             downloadUrl,
-            senderName: user?.user_metadata?.full_name || user?.email || "",
+            senderName: user?.user_metadata?.["full_name"] || user?.email || "",
           },
         },
       });
@@ -148,7 +148,7 @@ export default function ServiceEditor() {
               serviceDate,
               churchName: church?.name || "",
               downloadUrl,
-              senderName: user?.user_metadata?.full_name || user?.email || "",
+              senderName: user?.user_metadata?.["full_name"] || user?.email || "",
             },
           },
         });
