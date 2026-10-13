@@ -132,7 +132,7 @@ export function useCurrency(): CurrencyConverter {
   const [rates, setRates] = useState<Record<string, number> | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const currency = useMemo(() => getCurrencyFromLocale(), []);
-  const symbol = currencySymbols[currency] || currency;
+  const symbol = currencySymbols[currency] ?? currency;
 
   useEffect(() => {
     fetchRates().then((r) => {
