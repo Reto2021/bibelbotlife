@@ -197,8 +197,8 @@ function splitCitationSource(node: React.ReactNode, t: (key: string, opts?: any)
       let i = 0;
       while ((m = re.exec(n)) !== null) {
         if (m.index > last) parts.push(n.slice(last, m.index));
-        const ref = m[1].trim();
-        const source = m[2].trim();
+        const ref = m[1]!.trim();
+        const source = m[2]!.trim();
         parts.push(
           <span key={`cite-${i++}`} className="inline-flex items-baseline gap-1">
             <span>📖 {ref}</span>
@@ -465,6 +465,7 @@ export function BibleBotChat() {
       const timer = setTimeout(() => setShowWelcome(true), 600);
       return () => clearTimeout(timer);
     }
+    return undefined;
   }, [isOpen, messages.length, showWelcome]);
 
   useEffect(() => {
@@ -473,6 +474,7 @@ export function BibleBotChat() {
       const timer = setTimeout(() => setShowJourneyOffer(true), 1200);
       return () => clearTimeout(timer);
     }
+    return undefined;
   }, [messages, showJourneyOffer]);
 
   useEffect(() => {
@@ -480,6 +482,7 @@ export function BibleBotChat() {
       const timer = setTimeout(() => setShowRenameTip(true), 4000);
       return () => clearTimeout(timer);
     }
+    return undefined;
   }, [messages.length, botName, showRenameTip]);
 
   useEffect(() => { if (messages.length > 0) saveMessages(messages); }, [messages]);
@@ -617,9 +620,9 @@ export function BibleBotChat() {
           queueMicrotask(() => {
             setMessages((prev) => {
               let lastAssistantIdx = -1;
-              for (let i = prev.length - 1; i >= 0; i--) { if (prev[i].role === "assistant") { lastAssistantIdx = i; break; } }
-              if (lastAssistantIdx >= 0 && !prev[lastAssistantIdx].qa) {
-                setTimeout(() => runQA(prev[lastAssistantIdx].content, lastAssistantIdx), 0);
+              for (let i = prev.length - 1; i >= 0; i--) { if (prev[i]?.role === "assistant") { lastAssistantIdx = i; break; } }
+              if (lastAssistantIdx >= 0 && !prev[lastAssistantIdx]?.qa) {
+                setTimeout(() => runQA(prev[lastAssistantIdx]!.content, lastAssistantIdx), 0);
               }
               return prev;
             });
@@ -1022,7 +1025,7 @@ export function BibleBotChat() {
               </Button>
             </PromptInputTools>
             <PromptInputSubmit
-              status={isLoading ? "streaming" : undefined}
+              {...(isLoading ? { status: "streaming" as const } : {})}
               disabled={!input.trim() || isLoading}
             />
           </PromptInputFooter>

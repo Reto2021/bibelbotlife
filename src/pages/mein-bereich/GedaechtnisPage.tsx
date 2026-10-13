@@ -14,7 +14,6 @@ import {
   useDeleteMemory,
   type MemorySource,
 } from "@/hooks/use-user-memory";
-import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/use-auth";
 import { openBibleBotChat } from "@/lib/chat-events";
 import { useNavigate } from "@/lib/router-compat";
