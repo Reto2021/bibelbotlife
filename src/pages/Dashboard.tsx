@@ -1,7 +1,7 @@
-import { Outlet } from "react-router-dom";
+import { Outlet } from "@/lib/router-compat";
 import { Calendar, Plus, BookOpen, Users, Settings, Home, ListMusic, FileText, Receipt, LayoutTemplate, GraduationCap } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/lib/router-compat";
 import {
   SidebarProvider,
   Sidebar,
@@ -19,7 +19,7 @@ import { useAuth } from "@/hooks/use-auth";
 import { Button } from "@/components/ui/button";
 import { LogOut } from "lucide-react";
 import { AppLogo } from "@/components/AppLogo";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { BibleBotChat } from "@/components/BibelBotChat";
 
 const navItems = [

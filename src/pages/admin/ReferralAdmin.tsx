@@ -10,7 +10,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import { Link, Users, TrendingUp, DollarSign, Plus, Copy, ArrowLeft, ExternalLink } from "lucide-react";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink } from "@/lib/router-compat";
 
 export default function ReferralAdmin() {
   const qc = useQueryClient();

@@ -5,7 +5,7 @@ import { useState } from "react";
 import { openBibleBotChat } from "@/lib/chat-events";
 import { openLifeWheel } from "@/components/LifeWheel";
 import { useTrack } from "@/components/AnalyticsProvider";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "@/lib/router-compat";
 import { cn } from "@/lib/utils";
 
 type TileConfig = {

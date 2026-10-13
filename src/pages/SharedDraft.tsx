@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams } from "@/lib/router-compat";
 import { useTranslation } from "react-i18next";
 import { useSharedDraft } from "@/hooks/use-ceremony-drafts";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";

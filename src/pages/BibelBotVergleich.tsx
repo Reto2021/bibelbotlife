@@ -3,7 +3,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { Helmet } from "react-helmet-async";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { CheckCircle2, XCircle, ArrowRight, Shield, BookOpen, Heart, Globe2, Lock, Sparkles } from "lucide-react";
 
 const COMPETITORS = [

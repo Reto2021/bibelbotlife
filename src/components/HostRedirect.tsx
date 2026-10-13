@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "@/lib/router-compat";
 
 const HOST_ROUTE_MAP: Record<string, string> = {
   "wegkreuze.ch": "/wegkreuze",

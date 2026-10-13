@@ -25,7 +25,7 @@ const CrossMarquee = lazy(() =>
 );
 import { Separator } from "@/components/ui/separator";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 
 const TELEGRAM_LINK = "https://t.me/meinbibelbot";
 

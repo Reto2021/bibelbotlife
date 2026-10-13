@@ -9,7 +9,7 @@ import { CrossUploadDialog } from "@/components/kreuzwege/CrossUploadDialog";
 import { CrossDetailModal } from "@/components/kreuzwege/CrossDetailModal";
 import { useCrossPosts, distanceKm } from "@/hooks/use-cross-posts";
 import { useToast } from "@/hooks/use-toast";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 
 const CrossMap = lazy(() => import("@/components/kreuzwege/CrossMap"));
 

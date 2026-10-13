@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { ArrowRight, Camera, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useCrossPosts, type CrossPost } from "@/hooks/use-cross-posts";

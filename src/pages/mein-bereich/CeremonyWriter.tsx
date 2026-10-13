@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import {
   ArrowLeft, Sparkles, Download, Loader2, Save, Share2,
   Check, Copy, ExternalLink, Music, BookOpenText, HandHeart,

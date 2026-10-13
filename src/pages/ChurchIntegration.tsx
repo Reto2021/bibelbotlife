@@ -2,7 +2,7 @@ import { useState } from "react";
 import { BrandedQRCode } from "@/components/BrandedQRCode";
 import { QRStickerDownload } from "@/components/QRStickerDownload";
 import { QRFlyerDownload } from "@/components/QRFlyerDownload";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link } from "@/lib/router-compat";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { Copy, Check, ArrowLeft, ExternalLink, Code2, Link2, QrCode, Globe, Mail, Loader2 } from "lucide-react";

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { useTranslation } from "react-i18next";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Cross, Heart, Baby, BookHeart, ArrowRight, NotebookPen, Sparkle, Brain } from "lucide-react";

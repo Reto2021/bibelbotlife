@@ -1,4 +1,4 @@
-import { Navigate } from "react-router-dom";
+import { Navigate } from "@/lib/router-compat";
 import { useAuth } from "@/hooks/use-auth";
 import { useCanAccessDashboard } from "@/hooks/use-team-membership";
 

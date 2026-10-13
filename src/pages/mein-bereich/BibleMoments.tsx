@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import {
   ArrowLeft, Clock, MapPin, Heart, CloudRain, CalendarDays, Plus, Trash2,
   Sparkle, Bell, BellRing, CalendarClock, Mic, Square, Loader2, Gift,

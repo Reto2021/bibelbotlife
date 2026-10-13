@@ -3,7 +3,7 @@ import { Plus, ChevronLeft, ChevronRight, CalendarDays, CalendarRange, Play, Cop
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "@/lib/router-compat";
 import { useServices, useDeleteService, useDuplicateService, useUpdateServiceStatus } from "@/hooks/use-services";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { toast } from "sonner";
