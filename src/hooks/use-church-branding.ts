@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -11,6 +12,7 @@ export type ChurchBranding = {
 };
 
 function getChurchSlug(): string | null {
+  if (typeof window === "undefined") return null;
   // Check URL param first (new visit), then localStorage (returning user)
   const urlSlug = new URLSearchParams(window.location.search).get("church");
   if (urlSlug) {
@@ -69,7 +71,11 @@ export function hexToHsl(hex: string): string | null {
 }
 
 export function useChurchBranding() {
-  const slug = getChurchSlug();
+  // Resolved after hydration so server and first client render match.
+  const [slug, setSlug] = useState<string | null>(null);
+  useEffect(() => {
+    setSlug(getChurchSlug());
+  }, []);
 
   const { data: branding, isLoading } = useQuery({
     queryKey: ["church-branding", slug],
