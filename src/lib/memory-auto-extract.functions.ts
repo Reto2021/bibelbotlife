@@ -69,8 +69,8 @@ Antworte als JSON: {"facts": [{"topic": "kurzes Label", "content": "1-3 Sätze"}
     const rows = facts.slice(0, 20).map((f) => ({
       user_id: user.id,
       source: "chat_auto",
-      content: f.content.trim().slice(0, 2000),
-      topic: (f.topic ?? "").trim().slice(0, 80) || null,
+      // user_memory has no topic column, so the label is kept as a prefix of the content.
+      content: [(f.topic ?? "").trim().slice(0, 80), f.content.trim()].filter(Boolean).join(": ").slice(0, 2000),
       is_active: true,
     }));
 

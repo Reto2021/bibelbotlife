@@ -110,6 +110,7 @@ function QABadge({ qa, t }: { qa: QAResult | "loading" | "skipped"; t: (key: str
       const timer = setTimeout(() => setShowExtended(false), 9000);
       return () => clearTimeout(timer);
     }
+    return undefined;
   }, [showExtended, qa]);
 
   if (qa === "loading") {
@@ -214,13 +215,13 @@ function extractOptions(text: string): { cleanText: string; options: string[] } 
   const markers = [...flat.matchAll(inlineMarkerRe)];
 
   if (markers.length >= 2) {
-    const firstIndex = markers[0].index ?? -1;
+    const firstIndex = markers[0]?.index ?? -1;
     if (firstIndex >= 0) {
       const cleanText = flat.slice(0, firstIndex).trim();
       const options = markers
         .map((marker, index) => {
           const start = (marker.index ?? 0) + marker[0].length;
-          const end = index + 1 < markers.length ? (markers[index + 1].index ?? flat.length) : flat.length;
+          const end = index + 1 < markers.length ? (markers[index + 1]?.index ?? flat.length) : flat.length;
           return flat
             .slice(start, end)
             .replace(/\*{1,2}/g, "")
@@ -480,7 +481,7 @@ export function ChatHero() {
     const selected: { emoji: string; key: string }[] = [];
 
     // 1 familiar tile (favorite)
-    if (clicked.length > 0) {
+    if (clicked.length > 0 && clicked[0]) {
       selected.push(clicked[0]);
     }
 
@@ -498,7 +499,8 @@ export function ChatHero() {
         selected.push(pick);
       } else if (freshPool.length > 0) {
         // If we picked a duplicate, grab the next one
-        selected.push(freshPool.splice(0, 1)[0]);
+        const next = freshPool.splice(0, 1)[0];
+        if (next) selected.push(next);
       }
     }
 
@@ -605,6 +607,7 @@ export function ChatHero() {
   useEffect(() => {
     if (isFocused || hasConversation) return;
     const currentPhrase = phrases[phraseIndex];
+    if (!currentPhrase) return;
     let timeout: ReturnType<typeof setTimeout>;
     if (!isDeleting) {
       if (placeholder.length < currentPhrase.length) {
