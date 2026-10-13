@@ -1,25 +1,16 @@
 import { createServerFn } from "@tanstack/react-start";
 
-export type CrossPostFeedItem = {
-  id: unknown;
-  slug: unknown;
-  place_label: unknown;
-  country: unknown;
-  lat: unknown;
-  lng: unknown;
-  story: unknown;
-  quote: unknown;
-  quote_reference: unknown;
-  quote_burned: unknown;
-  author_name: unknown;
-  is_anonymous: unknown;
-  prayer_count: unknown;
-  amen_count: unknown;
-  share_count: unknown;
-  reported_count: unknown;
-  created_at: unknown;
-  image_url: string | null;
-};
+type FeedValue = string | number | boolean | null;
+
+export type CrossPostFeedItem = Record<
+  | "id" | "slug" | "place_label" | "country" | "lat" | "lng" | "story" | "quote" | "quote_reference"
+  | "quote_burned" | "author_name" | "is_anonymous" | "prayer_count" | "amen_count" | "share_count"
+  | "reported_count" | "created_at",
+  FeedValue
+> & { image_url: string | null };
+
+const v = (x: unknown): FeedValue =>
+  x === null || x === undefined ? null : typeof x === "string" || typeof x === "number" || typeof x === "boolean" ? x : String(x);
 
 /** Public read-only feed of approved "Kreuzwege" posts with short-lived signed image URLs. */
 export const crossPostsFeed = createServerFn({ method: "GET" }).handler(async (): Promise<{ posts: CrossPostFeedItem[] }> => {
@@ -36,28 +27,28 @@ export const crossPostsFeed = createServerFn({ method: "GET" }).handler(async ()
   if (paths.length > 0) {
     const { data: signed, error: signErr } = await admin.storage.from("cross-photos").createSignedUrls(paths, 60 * 60);
     if (signErr) throw new Error(signErr.message);
-    urlMap = new Map((signed ?? []).map((s) => [String(s.path), s.signedUrl]));
+    urlMap = new Map((signed ?? []).flatMap((s) => (s.signedUrl ? [[String(s.path), s.signedUrl] as const] : [])));
   }
 
   return {
     posts: posts.map((p) => ({
-      id: p["id"],
-      slug: p["slug"],
-      place_label: p["place_label"],
-      country: p["country"],
-      lat: p["lat"],
-      lng: p["lng"],
-      story: p["story"],
-      quote: p["quote"] ?? null,
-      quote_reference: p["quote_reference"] ?? null,
-      quote_burned: p["quote_burned"] ?? false,
-      author_name: p["author_name"],
-      is_anonymous: p["is_anonymous"],
-      prayer_count: p["prayer_count"],
-      amen_count: p["amen_count"] ?? 0,
-      share_count: p["share_count"] ?? 0,
-      reported_count: p["reported_count"] ?? 0,
-      created_at: p["created_at"],
+      id: v(p["id"]),
+      slug: v(p["slug"]),
+      place_label: v(p["place_label"]),
+      country: v(p["country"]),
+      lat: v(p["lat"]),
+      lng: v(p["lng"]),
+      story: v(p["story"]),
+      quote: v(p["quote"]),
+      quote_reference: v(p["quote_reference"]),
+      quote_burned: v(p["quote_burned"] ?? false),
+      author_name: v(p["author_name"]),
+      is_anonymous: v(p["is_anonymous"]),
+      prayer_count: v(p["prayer_count"]),
+      amen_count: v(p["amen_count"] ?? 0),
+      share_count: v(p["share_count"] ?? 0),
+      reported_count: v(p["reported_count"] ?? 0),
+      created_at: v(p["created_at"]),
       image_url: urlMap.get(String(p["image_path"])) ?? null,
     })),
   };

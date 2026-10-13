@@ -18,6 +18,7 @@ import { useAuth } from "@/hooks/use-auth";
 import { openBibleBotChat } from "@/lib/chat-events";
 import { useNavigate } from "@/lib/router-compat";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 import { memoryAutoExtract } from "@/lib/memory-auto-extract.functions";
 
 
