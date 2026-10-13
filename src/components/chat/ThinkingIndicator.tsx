@@ -37,7 +37,7 @@ export function ThinkingIndicator({ t }: ThinkingIndicatorProps) {
             />
           ))}
         </span>
-        <Shimmer className="text-sm">{label}</Shimmer>
+        <Shimmer className="text-sm">{label ?? ""}</Shimmer>
         {seconds >= 8 && (
           <span className="text-xs text-muted-foreground tabular-nums">{seconds}s</span>
         )}

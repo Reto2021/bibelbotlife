@@ -179,7 +179,7 @@ export function parseGermanDate(input: string, today: Date = new Date()): ParseR
     const d = iso(dt.getUTCFullYear(), dt.getUTCMonth() + 1, dt.getUTCDate())!;
     return {
       date: d,
-      matched: rel[1],
+      matched: rel[1]!,
       cleanedText: input.replace(new RegExp(`\\b${rel[1]}\\b`, "i"), "").trim(),
     };
   }
