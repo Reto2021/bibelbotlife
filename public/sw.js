@@ -1,6 +1,7 @@
-// Service Worker: Web Push + Offline App-Shell (Phase 4)
-const CACHE = 'bibelbot-v2';
-const CORE = ['/', '/index.html', '/manifest.json', '/favicon.ico'];
+// Service Worker: Web Push + Offline fallback.
+// v3: pages are server-rendered now — no /index.html shell; the last online copy of a page is the offline fallback.
+const CACHE = 'bibelbot-v3';
+const CORE = ['/manifest.json', '/favicon.ico'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
@@ -33,11 +34,13 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(
       fetch(req)
         .then((res) => {
-          const copy = res.clone();
-          caches.open(CACHE).then((c) => c.put('/index.html', copy)).catch(() => {});
+          if (res && res.ok) {
+            const copy = res.clone();
+            caches.open(CACHE).then((c) => c.put(req, copy)).catch(() => {});
+          }
           return res;
         })
-        .catch(() => caches.match('/index.html').then((r) => r || caches.match('/'))),
+        .catch(() => caches.match(req).then((r) => r || caches.match('/'))),
     );
     return;
   }
