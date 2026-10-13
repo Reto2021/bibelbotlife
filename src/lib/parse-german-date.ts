@@ -93,15 +93,15 @@ export function parseGermanDate(input: string, today: Date = new Date()): ParseR
   // 1) ISO 2026-11-15
   const isoM = text.match(/(\d{4})[-/](\d{1,2})[-/](\d{1,2})/);
   if (isoM) {
-    const d = iso(+isoM[1], +isoM[2], +isoM[3]);
+    const d = iso(+isoM[1]!, +isoM[2]!, +isoM[3]!);
     if (d) return { date: d, matched: isoM[0], cleanedText: input.replace(isoM[0], "").trim() };
   }
 
   // 2) numeric DD.MM(.YYYY)?
   const numM = text.match(/(\d{1,2})[.\/-](\d{1,2})(?:[.\/-](\d{2,4}))?\.?/);
   if (numM) {
-    const d = +numM[1];
-    const m = +numM[2];
+    const d = +numM[1]!;
+    const m = +numM[2]!;
     let y = numM[3] ? normalizeYear(+numM[3]) : currentYear;
     let candidate = iso(y, m, d);
     if (candidate) {
@@ -127,8 +127,8 @@ export function parseGermanDate(input: string, today: Date = new Date()): ParseR
   const dayMonthRe = new RegExp(`(\\d{1,2})\\.?\\s*(${monthNames})(?:\\s+(\\d{2,4}))?`, "i");
   const dm = text.match(dayMonthRe);
   if (dm) {
-    const d = +dm[1];
-    const m = MONTHS[dm[2].toLowerCase()];
+    const d = +dm[1]!;
+    const m = MONTHS[dm[2]!.toLowerCase()]!;
     let y = dm[3] ? normalizeYear(+dm[3]) : currentYear;
     let candidate = iso(y, m, d);
     if (candidate) {
@@ -151,8 +151,8 @@ export function parseGermanDate(input: string, today: Date = new Date()): ParseR
   const ordRe = new RegExp(`(?:am\\s+)?(${ordinalKeys})\\s+(${monthNames})(?:\\s+(\\d{2,4}))?`, "i");
   const om = text.match(ordRe);
   if (om) {
-    const d = ORDINALS[om[1].toLowerCase()];
-    const m = MONTHS[om[2].toLowerCase()];
+    const d = ORDINALS[om[1]!.toLowerCase()]!;
+    const m = MONTHS[om[2]!.toLowerCase()]!;
     let y = om[3] ? normalizeYear(+om[3]) : currentYear;
     let candidate = iso(y, m, d);
     if (candidate) {
@@ -189,7 +189,7 @@ export function parseGermanDate(input: string, today: Date = new Date()): ParseR
   const wdRe = new RegExp(`\\b(?:n(?:ä|ae)chsten|kommenden|am)?\\s*(${wdKeys})\\b`, "i");
   const wd = text.match(wdRe);
   if (wd) {
-    const target = WEEKDAYS[wd[1].toLowerCase()];
+    const target = WEEKDAYS[wd[1]!.toLowerCase()]!;
     const dt = new Date(today);
     const cur = dt.getUTCDay();
     let diff = (target - cur + 7) % 7;
@@ -212,9 +212,9 @@ export function parseGermanDate(input: string, today: Date = new Date()): ParseR
  */
 export function extractPersonName(input: string): string | null {
   const forFrom = input.match(/\b(?:für|fuer|von)\s+([A-ZÄÖÜ][a-zäöüß]+(?:\s+[A-ZÄÖÜ][a-zäöüß]+)?)/);
-  if (forFrom) return forFrom[1];
+  if (forFrom) return forFrom[1]!;
   const cap = input.match(/\b([A-ZÄÖÜ][a-zäöüß]{2,})\b/);
-  if (cap) return cap[1];
+  if (cap) return cap[1]!;
   return null;
 }
 
