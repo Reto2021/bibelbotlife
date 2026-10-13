@@ -23,7 +23,7 @@ export function ThinkingIndicator({ t }: ThinkingIndicatorProps) {
     t("chat.thinkingVerses", "Ich prüfe die Verse ..."),
     t("chat.thinkingWords", "Ich suche die passenden Worte ..."),
   ];
-  const label = phases[Math.min(Math.floor(seconds / 4), phases.length - 1)];
+  const label = phases[Math.min(Math.floor(seconds / 4), phases.length - 1)] ?? phases[0]!;
 
   return (
     <div className="flex justify-start">
