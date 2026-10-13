@@ -3091,6 +3091,7 @@ export type Database = {
           sources: string[]
         }[]
       }
+      check_cron_key: { Args: { candidate: string }; Returns: boolean }
       delete_email: {
         Args: { message_id: number; queue_name: string }
         Returns: boolean
