@@ -80,7 +80,8 @@ i18n
     interpolation: { escapeValue: false },
     detection: {
       order: ["localStorage", "navigator"],
-      caches: ["localStorage"],
+      // Cached manually after hydration (see applyDetectedLanguage) so the initial "de" never overwrites a saved choice.
+      caches: [],
       lookupLocalStorage: "biblebot-lang",
     },
   });
@@ -92,6 +93,18 @@ export function applyDetectedLanguage() {
   const detected = detector?.detect?.();
   const lng = Array.isArray(detected) ? detected[0] : detected;
   if (lng && lng !== i18n.language) void i18n.changeLanguage(lng);
+  if (!cacheListenerAttached) {
+    cacheListenerAttached = true;
+    i18n.on("languageChanged", (next) => {
+      try {
+        window.localStorage.setItem("biblebot-lang", next);
+      } catch {
+        // storage unavailable (private mode) — ignore
+      }
+    });
+  }
 }
+
+let cacheListenerAttached = false;
 
 export default i18n;
