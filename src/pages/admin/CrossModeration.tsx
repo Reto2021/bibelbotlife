@@ -65,7 +65,7 @@ export default function CrossModeration() {
       if (data) {
         setUrls((prev) => ({
           ...prev,
-          ...Object.fromEntries(data.filter((d) => d.signedUrl).map((d) => [d.path as string, d.signedUrl])),
+          ...Object.fromEntries(data.filter((d) => d.signedUrl).map((d) => [d.path as string, d.signedUrl as string])),
         }));
       }
     })();
@@ -177,7 +177,7 @@ export default function CrossModeration() {
                         variant="outline"
                         className="gap-1.5"
                         onClick={() =>
-                          setStatus.mutate({ id: row.id, status: "rejected", reason: reasons[row.id] })
+                          setStatus.mutate({ id: row.id, status: "rejected", ...(reasons[row.id] ? { reason: reasons[row.id] } : {}) })
                         }
                       >
                         <X className="h-4 w-4" /> {t("crossways.admin.reject")}
