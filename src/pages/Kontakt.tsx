@@ -147,7 +147,7 @@ export default function Kontakt() {
           </div>
 
           {/* Form */}
-          <Card className="border-border/50 shadow-sm">
+          <Card className="border-border/50 shadow-xs">
             <CardContent className="pt-6">
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="space-y-2">

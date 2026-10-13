@@ -516,7 +516,7 @@ export function MyCrosses() {
                       type="button"
                       aria-label={t("crossways.mine.photoReset", { defaultValue: "Neues Foto verwerfen" })}
                       onClick={() => setNewPhoto(null)}
-                      className="absolute right-1 top-1 rounded-full bg-background/90 p-1 text-foreground shadow"
+                      className="absolute right-1 top-1 rounded-full bg-background/90 p-1 text-foreground shadow-sm"
                     >
                       <X className="h-3.5 w-3.5" />
                     </button>

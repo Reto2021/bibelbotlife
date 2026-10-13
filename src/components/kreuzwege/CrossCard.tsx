@@ -53,13 +53,13 @@ export function CrossCard({ post, hasReacted, onReact, onOpen }: Props) {
   }
 
   return (
-    <Card className="overflow-hidden border-border/60 bg-card/80 backdrop-blur">
+    <Card className="overflow-hidden border-border/60 bg-card/80 backdrop-blur-sm">
       {post.image_url && (
         <button
           type="button"
           onClick={() => onOpen?.(post.id)}
           aria-label={t("crossways.card.openPhoto", "Foto gross anzeigen")}
-          className="group block w-full cursor-zoom-in overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          className="group block w-full cursor-zoom-in overflow-hidden focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring"
         >
           <img
             src={post.image_url}

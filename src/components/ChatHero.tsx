@@ -280,7 +280,7 @@ function LiveDemoPreview({ onTryIt }: { onTryIt: () => void }) {
       transition={{ duration: 0.5, delay: 0.3 }}
       className="max-w-2xl mx-auto w-full mb-5"
     >
-      <div className="bg-card/50 backdrop-blur-sm rounded-2xl border border-border/60 p-3 sm:p-4 space-y-2.5">
+      <div className="bg-card/50 backdrop-blur-xs rounded-2xl border border-border/60 p-3 sm:p-4 space-y-2.5">
         {/* User bubble */}
         <div className="flex justify-end">
           <motion.div
@@ -299,7 +299,7 @@ function LiveDemoPreview({ onTryIt }: { onTryIt: () => void }) {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3 }}
-              className="bg-card border border-border rounded-2xl rounded-bl-md px-3 py-2 max-w-[85%] shadow-sm"
+              className="bg-card border border-border rounded-2xl rounded-bl-md px-3 py-2 max-w-[85%] shadow-xs"
             >
               {phase === "typing" ? (
                 <div className="flex items-center gap-1 py-1 px-1">
@@ -936,7 +936,7 @@ export function ChatHero() {
         {conversations.length > 0 && (
           <button
             onClick={() => setSidebarOpen(true)}
-            className="absolute top-4 left-4 z-30 h-9 w-9 rounded-lg bg-card border border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/40 transition-all shadow-sm"
+            className="absolute top-4 left-4 z-30 h-9 w-9 rounded-lg bg-card border border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/40 transition-all shadow-xs"
             title={t("chat.history", "Gespräche")}
           >
             <Menu className="h-4 w-4" />
@@ -1025,7 +1025,7 @@ export function ChatHero() {
                         }
                       }}
                       placeholder={isFocused ? t("chatHero.focusPlaceholder") : placeholder + "│"}
-                      className="w-full bg-transparent pl-12 pr-24 py-4 md:pl-14 md:py-5 text-base md:text-lg text-foreground placeholder:text-muted-foreground/60 focus:outline-none rounded-2xl"
+                      className="w-full bg-transparent pl-12 pr-24 py-4 md:pl-14 md:py-5 text-base md:text-lg text-foreground placeholder:text-muted-foreground/60 focus:outline-hidden rounded-2xl"
                       aria-label={t("chatHero.ariaLabel")}
                       autoComplete="off"
                     />
@@ -1085,7 +1085,7 @@ export function ChatHero() {
                     <button
                       key={card.key}
                       onClick={() => { trackTileClick(card.key); sendMessage(card.prompt); }}
-                      className="group flex items-center gap-3 sm:gap-2 bg-card/70 backdrop-blur-sm border border-border rounded-xl px-4 sm:px-3 py-3 sm:py-2.5 hover:border-primary/40 hover:shadow-md hover:bg-card transition-all duration-200 cursor-pointer min-w-0"
+                      className="group flex items-center gap-3 sm:gap-2 bg-card/70 backdrop-blur-xs border border-border rounded-xl px-4 sm:px-3 py-3 sm:py-2.5 hover:border-primary/40 hover:shadow-md hover:bg-card transition-all duration-200 cursor-pointer min-w-0"
                     >
                       <span className="text-xl sm:text-xl shrink-0">{card.emoji}</span>
                       <div className="text-left min-w-0">
@@ -1143,7 +1143,7 @@ export function ChatHero() {
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4, delay: 0.6 }} className="max-w-2xl mx-auto w-full">
                   <button
                     onClick={() => sendMessage(t("verseExplain", { quote: dailyVerse.quote, ref: dailyVerse.ref }))}
-                    className="relative w-full bg-card/40 backdrop-blur-sm rounded-xl px-6 py-4 border border-primary/10 text-center overflow-hidden cursor-pointer hover:border-primary/30 hover:shadow-md transition-all duration-300 group"
+                    className="relative w-full bg-card/40 backdrop-blur-xs rounded-xl px-6 py-4 border border-primary/10 text-center overflow-hidden cursor-pointer hover:border-primary/30 hover:shadow-md transition-all duration-300 group"
                   >
                     <p className="text-foreground/70 italic text-sm sm:text-base leading-relaxed font-serif">{dailyVerse.quote}</p>
                     <p className="text-primary/50 text-xs mt-1.5 font-medium">– {dailyVerse.ref}</p>
@@ -1269,7 +1269,7 @@ export function ChatHero() {
                             <button
                               key={i}
                               onClick={() => { setFollowUps([]); sendMessage(fu.prompt); }}
-                              className="inline-flex items-center gap-1.5 text-xs px-3 py-2 rounded-xl border border-border bg-card/70 text-foreground/80 hover:border-primary/40 hover:bg-card hover:text-foreground transition-all duration-200 shadow-sm"
+                              className="inline-flex items-center gap-1.5 text-xs px-3 py-2 rounded-xl border border-border bg-card/70 text-foreground/80 hover:border-primary/40 hover:bg-card hover:text-foreground transition-all duration-200 shadow-xs"
                             >
                               <span>{fu.emoji}</span>
                               <span>{fu.label}</span>

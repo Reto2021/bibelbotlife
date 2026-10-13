@@ -560,7 +560,7 @@ export default function CeremonyWriter({ config }: Props) {
       <SEOHead titleKey={config.seoTitleKey} descKey={config.seoDescKey} path={config.seoPath} />
 
       {/* Header */}
-      <header className="border-b bg-card/80 backdrop-blur-sm sticky top-0 z-10">
+      <header className="border-b bg-card/80 backdrop-blur-xs sticky top-0 z-10">
         <div className="max-w-3xl mx-auto px-4 py-2.5 flex items-center justify-between">
           <div className="flex items-center gap-2 min-w-0">
             <Link to="/mein-bereich" className="hidden md:block">

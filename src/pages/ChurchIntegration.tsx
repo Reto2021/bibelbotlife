@@ -149,7 +149,7 @@ const ChurchIntegration = () => {
             </CardHeader>
             <CardContent>
               <div className="flex flex-col sm:flex-row items-start gap-4">
-                <div className="bg-white p-3 rounded-xl border shadow-sm">
+                <div className="bg-white p-3 rounded-xl border shadow-xs">
                   <BrandedQRCode value={qrLink} size={160} />
                 </div>
                 <div className="space-y-2">

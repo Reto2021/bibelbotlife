@@ -48,7 +48,7 @@ export function SiteHeader() {
   };
 
   return (
-    <nav className="bg-card/80 backdrop-blur-sm border-b border-border sticky top-0 z-50">
+    <nav className="bg-card/80 backdrop-blur-xs border-b border-border sticky top-0 z-50">
       <div className="container mx-auto px-4 py-2.5 flex justify-between items-center">
         {/* Logo */}
         <Link
@@ -230,7 +230,7 @@ export function SiteHeader() {
 
       {/* Mobile menu */}
       <div
-        className={`lg:hidden border-t border-border bg-card/95 backdrop-blur-sm overflow-y-auto overscroll-contain transition-all duration-300 ease-in-out ${
+        className={`lg:hidden border-t border-border bg-card/95 backdrop-blur-xs overflow-y-auto overscroll-contain transition-all duration-300 ease-in-out ${
           mobileMenuOpen ? "max-h-[calc(100vh-4rem)] opacity-100" : "max-h-0 opacity-0 border-t-transparent"
         }`}
         style={{ WebkitOverflowScrolling: "touch" }}

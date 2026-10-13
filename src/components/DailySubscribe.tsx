@@ -104,7 +104,7 @@ export function DailySubscribe() {
 
   if (isSuccess) {
     return (
-      <div className="bg-card/80 backdrop-blur-sm rounded-2xl border border-border p-8 text-center">
+      <div className="bg-card/80 backdrop-blur-xs rounded-2xl border border-border p-8 text-center">
         <CheckCircle2 className="h-12 w-12 text-primary mx-auto mb-4" />
         <h3 className="text-xl font-bold text-foreground mb-2">{t("subscribe.successTitle")}</h3>
         <p className="text-muted-foreground">{t("subscribe.successText")}</p>
@@ -113,7 +113,7 @@ export function DailySubscribe() {
   }
 
   return (
-    <div className="bg-card/80 backdrop-blur-sm rounded-2xl border border-border p-8">
+    <div className="bg-card/80 backdrop-blur-xs rounded-2xl border border-border p-8">
       <div className="text-center mb-6">
         <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-3">
           <Bell className="h-6 w-6 text-primary" />

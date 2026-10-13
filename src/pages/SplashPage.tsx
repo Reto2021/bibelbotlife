@@ -94,7 +94,7 @@ export default function SplashPage() {
 
       {/* Interactive Demo Preview for Leads */}
       {church.source === "lead" && (
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 mb-8 max-w-sm w-full">
+        <div className="bg-white/10 backdrop-blur-xs rounded-2xl p-4 mb-8 max-w-sm w-full">
           <div className="flex items-center gap-2 mb-3">
             <MessageCircle className="h-5 w-5 text-white/80" />
             <span className="text-white/80 text-sm font-medium">Live-Vorschau</span>
@@ -140,7 +140,7 @@ export default function SplashPage() {
 
       {/* Website Score Badge for Leads */}
       {church.source === "lead" && church.website_score != null && (
-        <div className="mt-4 bg-white/15 backdrop-blur-sm rounded-full px-4 py-2 text-white/90 text-sm">
+        <div className="mt-4 bg-white/15 backdrop-blur-xs rounded-full px-4 py-2 text-white/90 text-sm">
           Aktueller Website-Score: <strong>{church.website_score}/10</strong> — wir können das verbessern!
         </div>
       )}

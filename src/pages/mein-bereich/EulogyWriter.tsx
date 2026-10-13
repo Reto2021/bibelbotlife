@@ -400,7 +400,7 @@ const EulogyWriter = () => {
       <SEOHead titleKey="eulogy.pageTitle" descKey="eulogy.pageDesc" path="/mein-bereich/abdankung" />
 
       {/* Compact sticky header */}
-      <header className="border-b bg-card/80 backdrop-blur-sm sticky top-0 z-10">
+      <header className="border-b bg-card/80 backdrop-blur-xs sticky top-0 z-10">
         <div className="max-w-3xl mx-auto px-4 py-2.5 flex items-center justify-between">
           <div className="flex items-center gap-2 min-w-0">
             <Link to="/mein-bereich" className="hidden md:block">

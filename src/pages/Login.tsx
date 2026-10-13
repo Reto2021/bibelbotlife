@@ -178,7 +178,7 @@ const Login = () => {
           </Link>
         </div>
 
-        <Card className="bg-card/90 backdrop-blur-sm border-border">
+        <Card className="bg-card/90 backdrop-blur-xs border-border">
           <CardHeader className="text-center pb-4">
             <CardTitle className="text-xl">{titles[mode]}</CardTitle>
             <CardDescription>

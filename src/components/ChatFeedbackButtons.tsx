@@ -138,7 +138,7 @@ export function ChatFeedbackButtons({ questionText, answerText, language }: Prop
               if (e.key === "Enter") submitComment();
             }}
             placeholder={t("feedback.placeholder", "Was war nicht passend? (optional)")}
-            className="flex-1 text-xs px-2 py-1.5 rounded-md bg-background border border-input focus:outline-none focus:ring-1 focus:ring-primary"
+            className="flex-1 text-xs px-2 py-1.5 rounded-md bg-background border border-input focus:outline-hidden focus:ring-1 focus:ring-primary"
             maxLength={500}
             autoFocus
           />

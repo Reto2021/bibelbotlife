@@ -559,7 +559,7 @@ export function DailyImpulse() {
                     loading="lazy"
                   />
                 </div>
-                <div className="bg-card/80 backdrop-blur-sm p-3 space-y-3">
+                <div className="bg-card/80 backdrop-blur-xs p-3 space-y-3">
                   {/* Share text preview */}
                   <div className="relative group">
                     <div className="bg-muted/40 rounded-lg p-3 pr-10 text-xs text-muted-foreground whitespace-pre-line font-mono leading-relaxed max-h-40 overflow-y-auto">
@@ -736,7 +736,7 @@ export function DailyImpulse() {
                       placeholder={t("subscribe.phonePlaceholder", "+41 79 123 45 67")}
                       value={smsPhone}
                       onChange={(e) => setSmsPhone(e.target.value)}
-                      className="flex-1 h-7 text-xs px-3 rounded-md border border-primary/30 bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary"
+                      className="flex-1 h-7 text-xs px-3 rounded-md border border-primary/30 bg-background text-foreground placeholder:text-muted-foreground focus:outline-hidden focus:ring-1 focus:ring-primary"
                       maxLength={20}
                     />
                     <Button

@@ -104,7 +104,7 @@ export function CrossDetailModal({ post, open, onOpenChange, hasReacted, onReact
                 alt={t("crossways.card.imageAlt", { place: post.place_label })}
                 className="mx-auto max-h-[70vh] w-auto max-w-full object-contain"
               />
-              <span className="absolute bottom-3 right-3 rounded-full bg-background/80 p-2 text-foreground shadow-sm backdrop-blur">
+              <span className="absolute bottom-3 right-3 rounded-full bg-background/80 p-2 text-foreground shadow-xs backdrop-blur-sm">
                 <Maximize2 className="h-4 w-4" />
               </span>
             </button>

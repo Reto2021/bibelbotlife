@@ -96,7 +96,7 @@ export default function WidgetPreview() {
 
         {/* A/B Toggle */}
         {lead.ab_variant_color && (
-          <div className="flex items-center gap-3 mb-4 p-3 bg-white dark:bg-slate-800 rounded-lg shadow-sm">
+          <div className="flex items-center gap-3 mb-4 p-3 bg-white dark:bg-slate-800 rounded-lg shadow-xs">
             <ArrowLeftRight className="h-4 w-4 text-muted-foreground" />
             <span className="text-sm text-muted-foreground">Farbvariante:</span>
             <Button
@@ -116,8 +116,8 @@ export default function WidgetPreview() {
               Alternative
             </Button>
             <div className="flex gap-2 ml-auto">
-              <div className="w-6 h-6 rounded-full border-2 border-white shadow" style={{ background: lead.primary_color || "#ccc" }} title="Original" />
-              <div className="w-6 h-6 rounded-full border-2 border-white shadow" style={{ background: lead.ab_variant_color || "#ccc" }} title="Alternative" />
+              <div className="w-6 h-6 rounded-full border-2 border-white shadow-sm" style={{ background: lead.primary_color || "#ccc" }} title="Original" />
+              <div className="w-6 h-6 rounded-full border-2 border-white shadow-sm" style={{ background: lead.ab_variant_color || "#ccc" }} title="Alternative" />
             </div>
           </div>
         )}
@@ -162,7 +162,7 @@ export default function WidgetPreview() {
             <input
               type="text"
               placeholder="Frage zur Bibel stellen…"
-              className="flex-1 bg-slate-50 dark:bg-slate-700 rounded-full px-4 py-2 text-sm outline-none"
+              className="flex-1 bg-slate-50 dark:bg-slate-700 rounded-full px-4 py-2 text-sm outline-hidden"
               readOnly
             />
             <button

@@ -686,7 +686,7 @@ export default function BibleMoments() {
         </div>
       </div>
 
-      <div className="rounded-2xl border bg-card/60 backdrop-blur-sm p-4 md:p-6 shadow-elegant">
+      <div className="rounded-2xl border bg-card/60 backdrop-blur-xs p-4 md:p-6 shadow-elegant">
         <div className="flex items-center justify-between gap-3 mb-4">
           <div>
             <h2 className="font-display text-xl">Deine Momente</h2>
@@ -731,7 +731,7 @@ function PushEnableCard() {
   if (status === "unsupported") return null;
   const enabled = status === "subscribed";
   return (
-    <div className="rounded-2xl border bg-card/60 backdrop-blur-sm p-4 md:p-6 shadow-elegant flex items-start gap-4">
+    <div className="rounded-2xl border bg-card/60 backdrop-blur-xs p-4 md:p-6 shadow-elegant flex items-start gap-4">
       <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
         {enabled ? <BellRing className="h-5 w-5 text-primary" /> : <Bell className="h-5 w-5 text-primary" />}
       </div>
