@@ -1,5 +1,5 @@
 import { SEOHead } from "@/components/SEOHead";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -17,7 +17,7 @@ export default function ForTeachers() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const features = Array.from({ length: 9 }, (_, i) => ({
-    icon: featureIcons[i],
+    icon: featureIcons[i]!,
     title: t(`teachers.f${i + 1}Title`),
     desc: t(`teachers.f${i + 1}Desc`),
   }));

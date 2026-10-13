@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { ArrowLeft, ThumbsDown, ThumbsUp, Loader2, CheckCircle2, Sparkles, MessageSquare } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
@@ -94,7 +94,7 @@ export default function FeedbackAdmin() {
   const markReviewed = async (id: string) => {
     const { error } = await supabase
       .from("chat_feedback")
-      .update({ reviewed: true, reviewed_at: new Date().toISOString(), reviewed_by: user?.id })
+      .update({ reviewed: true, reviewed_at: new Date().toISOString(), ...(user?.id ? { reviewed_by: user.id } : {}) })
       .eq("id", id);
     if (error) {
       toast({ title: "Fehler", description: error.message, variant: "destructive" });
@@ -121,7 +121,7 @@ export default function FeedbackAdmin() {
         topic: e.topic.trim() || null,
         language: fb.language || "de",
         source_feedback_id: fbId,
-        created_by: user?.id,
+        ...(user?.id ? { created_by: user.id } : {}),
       })
       .select("id")
       .single();
@@ -141,7 +141,7 @@ export default function FeedbackAdmin() {
 
     await supabase
       .from("chat_feedback")
-      .update({ reviewed: true, reviewed_at: new Date().toISOString(), reviewed_by: user?.id })
+      .update({ reviewed: true, reviewed_at: new Date().toISOString(), ...(user?.id ? { reviewed_by: user.id } : {}) })
       .eq("id", fbId);
 
     setSaving(null);

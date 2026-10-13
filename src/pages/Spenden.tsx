@@ -10,7 +10,7 @@ import { EmbeddedCheckoutProvider, EmbeddedCheckout } from "@stripe/react-stripe
 import { getStripe, getStripeEnvironment } from "@/lib/stripe";
 import { supabase } from "@/integrations/supabase/client";
 import { PaymentTestModeBanner } from "@/components/PaymentTestModeBanner";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "@/lib/router-compat";
 
 const PRESET_AMOUNTS = [
   { label: "CHF 5", cents: 500, icon: Coffee },
@@ -55,7 +55,7 @@ function DonationForm() {
   const [showCheckout, setShowCheckout] = useState(false);
 
   const getAmountCents = (): number => {
-    if (selectedPreset !== null) return PRESET_AMOUNTS[selectedPreset].cents;
+    if (selectedPreset !== null) return PRESET_AMOUNTS[selectedPreset]!.cents;
     const parsed = parseFloat(customAmount);
     if (!isNaN(parsed) && parsed >= 1) return Math.round(parsed * 100);
     return 0;
@@ -71,12 +71,12 @@ function DonationForm() {
     };
 
     if (isMonthly) {
-      body.priceId = "support_monthly_5";
+      body["priceId"] = "support_monthly_5";
     } else if (selectedPreset !== null) {
       const presetMap = ["donation_5", "donation_10", "donation_25"];
-      body.priceId = presetMap[selectedPreset];
+      body["priceId"] = presetMap[selectedPreset];
     } else {
-      body.customAmountCents = amountCents;
+      body["customAmountCents"] = amountCents;
     }
 
     const { data, error } = await supabase.functions.invoke("create-checkout", { body });

@@ -158,7 +158,7 @@ export default function BibleSeedStatus() {
           retry_mode: mode,
           batch_size: 50,
         };
-        if (list && list.length > 0) payload.translations = list;
+        if (list && list.length > 0) payload["translations"] = list;
 
         const { data: result, error: fnErr } = await supabase.functions.invoke(
           "bible-extra-seed-nt",

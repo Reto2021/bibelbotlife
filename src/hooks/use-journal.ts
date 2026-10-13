@@ -78,8 +78,8 @@ export function useUpdateEntry() {
       mood?: JournalMood | null;
     }) => {
       const patch: Record<string, unknown> = {};
-      if (input.content !== undefined) patch.content = input.content;
-      if (input.mood !== undefined) patch.mood = input.mood;
+      if (input.content !== undefined) patch["content"] = input.content;
+      if (input.mood !== undefined) patch["mood"] = input.mood;
       const { data, error } = await (supabase as any)
         .from("journal_entries")
         .update(patch)

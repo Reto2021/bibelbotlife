@@ -84,7 +84,7 @@ export default function CrossMap({
             key={p.id}
             position={[p.lat as number, p.lng as number]}
             icon={icon}
-            eventHandlers={onMarkerClick ? { click: () => onMarkerClick(p) } : undefined}
+            {...(onMarkerClick ? { eventHandlers: { click: () => onMarkerClick(p) } } : {})}
           >
             {!onMarkerClick && (
               <Popup>

@@ -25,7 +25,7 @@ import {
 } from "@/components/ai-elements/prompt-input";
 
 
-const STT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/elevenlabs-stt`;
+const STT_URL = `${import.meta.env["VITE_SUPABASE_URL"]}/functions/v1/elevenlabs-stt`;
 
 import { CHAT_OPEN_EVENT, type ChatMode } from "@/lib/chat-events";
 import { getVisitorId, getChurchSlugFromUrlOrStorage } from "@/lib/widget-visitor";
@@ -46,8 +46,8 @@ type Message = {
   qa?: QAResult | "loading" | "skipped";
 };
 
-const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/bibelbot-chat`;
-const QA_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/bibelbot-qa`;
+const CHAT_URL = `${import.meta.env["VITE_SUPABASE_URL"]}/functions/v1/bibelbot-chat`;
+const QA_URL = `${import.meta.env["VITE_SUPABASE_URL"]}/functions/v1/bibelbot-qa`;
 
 const JOURNEY_DISMISSED_KEY = "bibelbot-journey-dismissed";
 const JOURNEY_NUDGE_KEY = "bibelbot-journey-nudge-ts";
@@ -197,8 +197,8 @@ function splitCitationSource(node: React.ReactNode, t: (key: string, opts?: any)
       let i = 0;
       while ((m = re.exec(n)) !== null) {
         if (m.index > last) parts.push(n.slice(last, m.index));
-        const ref = m[1].trim();
-        const source = m[2].trim();
+        const ref = m[1]!.trim();
+        const source = m[2]!.trim();
         parts.push(
           <span key={`cite-${i++}`} className="inline-flex items-baseline gap-1">
             <span>📖 {ref}</span>
@@ -379,7 +379,7 @@ export function BibleBotChat() {
     try {
       const resp = await fetch(QA_URL, {
         method: "POST",
-        headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}` },
+        headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"]}` },
         body: JSON.stringify({ text }),
       });
       if (!resp.ok) { setMessages((prev) => prev.map((m, i) => (i === msgIndex ? { ...m, qa: "skipped" } : m))); return; }
@@ -408,8 +408,8 @@ export function BibleBotChat() {
           const resp = await fetch(STT_URL, {
             method: "POST",
             headers: {
-              apikey: import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
-              Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+              apikey: import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"],
+              Authorization: `Bearer ${import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"]}`,
             },
             body: formData,
           });
@@ -465,6 +465,7 @@ export function BibleBotChat() {
       const timer = setTimeout(() => setShowWelcome(true), 600);
       return () => clearTimeout(timer);
     }
+    return undefined;
   }, [isOpen, messages.length, showWelcome]);
 
   useEffect(() => {
@@ -473,6 +474,7 @@ export function BibleBotChat() {
       const timer = setTimeout(() => setShowJourneyOffer(true), 1200);
       return () => clearTimeout(timer);
     }
+    return undefined;
   }, [messages, showJourneyOffer]);
 
   useEffect(() => {
@@ -480,6 +482,7 @@ export function BibleBotChat() {
       const timer = setTimeout(() => setShowRenameTip(true), 4000);
       return () => clearTimeout(timer);
     }
+    return undefined;
   }, [messages.length, botName, showRenameTip]);
 
   useEffect(() => { if (messages.length > 0) saveMessages(messages); }, [messages]);
@@ -532,7 +535,7 @@ export function BibleBotChat() {
         const visitorId = churchSlug ? getVisitorId() : null;
         const resp = await fetch(CHAT_URL, {
           method: "POST",
-          headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}` },
+          headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"]}` },
           body: JSON.stringify({ messages: contextMessages, language: i18n.language, mode: chatMode, preferredTranslation: preferredTranslation !== "auto" ? preferredTranslation : undefined, screenWidth: window.innerWidth, churchSlug, visitorId }),
         });
 
@@ -594,7 +597,7 @@ export function BibleBotChat() {
           console.warn("Stream read failed, using fallback:", streamErr);
           const fallbackResp = await fetch(CHAT_URL, {
             method: "POST",
-            headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}` },
+            headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"]}` },
             body: JSON.stringify({ messages: contextMessages, language: i18n.language, mode: chatMode, preferredTranslation: preferredTranslation !== "auto" ? preferredTranslation : undefined, screenWidth: window.innerWidth, churchSlug, visitorId }),
           });
           const fullText = await fallbackResp.text();
@@ -617,9 +620,9 @@ export function BibleBotChat() {
           queueMicrotask(() => {
             setMessages((prev) => {
               let lastAssistantIdx = -1;
-              for (let i = prev.length - 1; i >= 0; i--) { if (prev[i].role === "assistant") { lastAssistantIdx = i; break; } }
-              if (lastAssistantIdx >= 0 && !prev[lastAssistantIdx].qa) {
-                setTimeout(() => runQA(prev[lastAssistantIdx].content, lastAssistantIdx), 0);
+              for (let i = prev.length - 1; i >= 0; i--) { if (prev[i]?.role === "assistant") { lastAssistantIdx = i; break; } }
+              if (lastAssistantIdx >= 0 && !prev[lastAssistantIdx]?.qa) {
+                setTimeout(() => runQA(prev[lastAssistantIdx]!.content, lastAssistantIdx), 0);
               }
               return prev;
             });
@@ -752,7 +755,7 @@ export function BibleBotChat() {
                 setPreferredTranslation(v);
                 try { localStorage.setItem("bibelbot-translation", v); } catch {}
               }}
-              className="appearance-none bg-transparent text-muted-foreground hover:text-foreground cursor-pointer text-[10px] pr-4 pl-1 py-1 rounded-lg hover:bg-muted/50 transition-colors focus:outline-none focus:ring-1 focus:ring-primary/30"
+              className="appearance-none bg-transparent text-muted-foreground hover:text-foreground cursor-pointer text-[10px] pr-4 pl-1 py-1 rounded-lg hover:bg-muted/50 transition-colors focus:outline-hidden focus:ring-1 focus:ring-primary/30"
               title={t("chat.translationSelect", "Bibelübersetzung")}
             >
               <option value="auto">📖 Auto</option>
@@ -1022,7 +1025,7 @@ export function BibleBotChat() {
               </Button>
             </PromptInputTools>
             <PromptInputSubmit
-              status={isLoading ? "streaming" : undefined}
+              {...(isLoading ? { status: "streaming" as const } : {})}
               disabled={!input.trim() || isLoading}
             />
           </PromptInputFooter>

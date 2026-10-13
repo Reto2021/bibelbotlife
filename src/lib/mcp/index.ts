@@ -7,7 +7,7 @@ import listMyCrossesTool from "./tools/list-my-crosses";
 import listMyBibleMomentsTool from "./tools/list-my-bible-moments";
 import bibleCoachingTool from "./tools/bible-coaching";
 
-const projectRef = import.meta.env.VITE_SUPABASE_PROJECT_ID ?? "project-ref-unset";
+const projectRef = import.meta.env["VITE_SUPABASE_PROJECT_ID"] ?? "project-ref-unset";
 
 export default defineMcp({
   name: "biblebotlife",
@@ -20,12 +20,19 @@ export default defineMcp({
     acceptedAudiences: "authenticated",
   }),
   tools: [
+    // @ts-expect-error mcp-js ToolDefinition<Input, undefined> isn't assignable to AnyToolDefinition under exactOptionalPropertyTypes (library typing bug)
     searchBibleTool,
+    // @ts-expect-error mcp-js ToolDefinition<Input, undefined> isn't assignable to AnyToolDefinition under exactOptionalPropertyTypes (library typing bug)
     listPrayerWallTool,
+    // @ts-expect-error mcp-js ToolDefinition<Input, undefined> isn't assignable to AnyToolDefinition under exactOptionalPropertyTypes (library typing bug)
     listMyJournalEntriesTool,
+    // @ts-expect-error mcp-js ToolDefinition<Input, undefined> isn't assignable to AnyToolDefinition under exactOptionalPropertyTypes (library typing bug)
     createJournalEntryTool,
+    // @ts-expect-error mcp-js ToolDefinition<Input, undefined> isn't assignable to AnyToolDefinition under exactOptionalPropertyTypes (library typing bug)
     listMyCrossesTool,
+    // @ts-expect-error mcp-js ToolDefinition<Input, undefined> isn't assignable to AnyToolDefinition under exactOptionalPropertyTypes (library typing bug)
     listMyBibleMomentsTool,
+    // @ts-expect-error mcp-js ToolDefinition<Input, undefined> isn't assignable to AnyToolDefinition under exactOptionalPropertyTypes (library typing bug)
     bibleCoachingTool,
   ],
 });

@@ -2,7 +2,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SEOHead } from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { Brain, BookOpen, CheckCircle2, XCircle, Shield, Sparkles, MessageCircle, Search, Heart, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 

@@ -94,7 +94,7 @@ export async function burnQuoteIntoImage(
     const maxLines = Math.max(2, Math.min(6, Math.floor(maxBlockHeight / (fontSize * 1.28))));
     if (lines.length > maxLines) {
       lines = lines.slice(0, maxLines);
-      lines[maxLines - 1] = `${lines[maxLines - 1].replace(/[\s.,;:–-]+$/, "")}…\u201C`;
+      lines[maxLines - 1] = `${(lines[maxLines - 1] ?? "").replace(/[\s.,;:–-]+$/, "")}…\u201C`;
     }
 
     const lineHeight = Math.round(fontSize * 1.28);

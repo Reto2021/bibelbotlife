@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "@/lib/router-compat";
 import { toast } from "sonner";
 import { ImageUp, Loader2, Pencil, RotateCcw, Search, Trash2, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -95,7 +95,8 @@ export function MyCrosses() {
     if (status !== "all") next.set("status", status);
     if (sort !== "newest") next.set("sort", sort);
     if (next.toString() !== sp.toString()) {
-      navigate({ search: next.toString() }, { replace: true });
+      const qs = next.toString();
+      navigate(`${location.pathname}${qs ? `?${qs}` : ""}`, { replace: true });
     }
   }, [debouncedQuery, status, sort, location.search, navigate]);
 
@@ -110,7 +111,7 @@ export function MyCrosses() {
       counts.set(place, (counts.get(place) ?? 0) + 1);
     }
     const list = [...counts.entries()].map(([place, count]) => ({ place, count }));
-    if (list.length === 1 && list[0].place.toLowerCase() === q) return [];
+    if (list.length === 1 && list[0]!.place.toLowerCase() === q) return [];
     return list
       .sort((a, b) => b.count - a.count || a.place.localeCompare(b.place))
       .slice(0, 8);
@@ -329,7 +330,8 @@ export function MyCrosses() {
                 setActiveSuggestion((i) => (i <= 0 ? suggestions.length - 1 : i - 1));
               } else if (e.key === "Enter" && activeSuggestion >= 0) {
                 e.preventDefault();
-                applySuggestion(suggestions[activeSuggestion]);
+                const sel = suggestions[activeSuggestion];
+                if (sel) applySuggestion(sel);
               } else if (e.key === "Escape") {
                 setSuggestOpen(false);
               }
@@ -516,7 +518,7 @@ export function MyCrosses() {
                       type="button"
                       aria-label={t("crossways.mine.photoReset", { defaultValue: "Neues Foto verwerfen" })}
                       onClick={() => setNewPhoto(null)}
-                      className="absolute right-1 top-1 rounded-full bg-background/90 p-1 text-foreground shadow"
+                      className="absolute right-1 top-1 rounded-full bg-background/90 p-1 text-foreground shadow-sm"
                     >
                       <X className="h-3.5 w-3.5" />
                     </button>

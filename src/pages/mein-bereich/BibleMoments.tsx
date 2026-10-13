@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import {
   ArrowLeft, Clock, MapPin, Heart, CloudRain, CalendarDays, Plus, Trash2,
   Sparkle, Bell, BellRing, CalendarClock, Mic, Square, Loader2, Gift,
@@ -129,12 +129,12 @@ function VoiceCapture({
           fd.append("audio", blob, "recording.webm");
           fd.append("language", "de");
           const resp = await fetch(
-            `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/elevenlabs-stt`,
+            `${import.meta.env["VITE_SUPABASE_URL"]}/functions/v1/elevenlabs-stt`,
             {
               method: "POST",
               headers: {
-                apikey: import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
-                Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+                apikey: import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"],
+                Authorization: `Bearer ${import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"]}`,
               },
               body: fd,
             },
@@ -439,21 +439,21 @@ function AddMomentDialog() {
     const finalLabel = label.trim() || meta?.defaultLabel || "Bible Moment";
     const config: Record<string, any> = { ...(meta?.defaultConfig ?? {}) };
 
-    if (triggerType === "time") config.time = time;
+    if (triggerType === "time") config["time"] = time;
 
     if (triggerType === "calendar") {
       if (!calDate) { toast.error("Bitte ein Datum wählen"); return; }
-      config.event = calEvent.trim();
-      config.date = calDate;
+      config["event"] = calEvent.trim();
+      config["date"] = calDate;
     }
 
     if (triggerType === "birthday") {
       if (!bdayName.trim()) { toast.error("Bitte einen Namen eingeben"); return; }
       if (!bdayDate) { toast.error("Bitte ein Datum wählen"); return; }
-      config.recipient_name = bdayName.trim();
-      config.date = bdayDate;
-      config.relationship = bdayRelation.trim();
-      config.occasion = "Geburtstag";
+      config["recipient_name"] = bdayName.trim();
+      config["date"] = bdayDate;
+      config["relationship"] = bdayRelation.trim();
+      config["occasion"] = "Geburtstag";
     }
 
     // Store birthday as calendar trigger under the hood — the dispatcher already
@@ -686,7 +686,7 @@ export default function BibleMoments() {
         </div>
       </div>
 
-      <div className="rounded-2xl border bg-card/60 backdrop-blur-sm p-4 md:p-6 shadow-elegant">
+      <div className="rounded-2xl border bg-card/60 backdrop-blur-xs p-4 md:p-6 shadow-elegant">
         <div className="flex items-center justify-between gap-3 mb-4">
           <div>
             <h2 className="font-display text-xl">Deine Momente</h2>
@@ -731,7 +731,7 @@ function PushEnableCard() {
   if (status === "unsupported") return null;
   const enabled = status === "subscribed";
   return (
-    <div className="rounded-2xl border bg-card/60 backdrop-blur-sm p-4 md:p-6 shadow-elegant flex items-start gap-4">
+    <div className="rounded-2xl border bg-card/60 backdrop-blur-xs p-4 md:p-6 shadow-elegant flex items-start gap-4">
       <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
         {enabled ? <BellRing className="h-5 w-5 text-primary" /> : <Bell className="h-5 w-5 text-primary" />}
       </div>

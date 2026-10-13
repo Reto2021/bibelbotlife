@@ -23,7 +23,7 @@ export function ThinkingIndicator({ t }: ThinkingIndicatorProps) {
     t("chat.thinkingVerses", "Ich prüfe die Verse ..."),
     t("chat.thinkingWords", "Ich suche die passenden Worte ..."),
   ];
-  const label = phases[Math.min(Math.floor(seconds / 4), phases.length - 1)];
+  const label = phases[Math.min(Math.floor(seconds / 4), phases.length - 1)] ?? phases[0]!;
 
   return (
     <div className="flex justify-start">
@@ -37,7 +37,7 @@ export function ThinkingIndicator({ t }: ThinkingIndicatorProps) {
             />
           ))}
         </span>
-        <Shimmer className="text-sm">{label}</Shimmer>
+        <Shimmer className="text-sm" children={label} />
         {seconds >= 8 && (
           <span className="text-xs text-muted-foreground tabular-nums">{seconds}s</span>
         )}

@@ -25,7 +25,7 @@ const CrossMarquee = lazy(() =>
 );
 import { Separator } from "@/components/ui/separator";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 
 const TELEGRAM_LINK = "https://t.me/meinbibelbot";
 
@@ -141,7 +141,7 @@ const Index = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <Card key={index} className="bg-card/80 backdrop-blur-sm border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <Card key={index} className="bg-card/80 backdrop-blur-xs border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                 <CardHeader className="text-center">
                   <feature.icon className="h-12 w-12 text-primary mx-auto mb-4" />
                   <CardTitle className="text-xl text-card-foreground">{feature.title}</CardTitle>
@@ -164,7 +164,7 @@ const Index = () => {
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {/* Personal use */}
-            <Card className="bg-card/80 backdrop-blur-sm border-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col">
+            <Card className="bg-card/80 backdrop-blur-xs border-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col">
               <CardHeader>
                 <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mb-3">
                   <Heart className="h-6 w-6 text-primary" />
@@ -188,7 +188,7 @@ const Index = () => {
             </Card>
 
             {/* Church / celebrant use */}
-            <Card className="bg-card/80 backdrop-blur-sm border-secondary/30 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col">
+            <Card className="bg-card/80 backdrop-blur-xs border-secondary/30 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col">
               <CardHeader>
                 <div className="h-12 w-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-3">
                   <Church className="h-6 w-6 text-secondary" />
@@ -320,7 +320,7 @@ const Index = () => {
       {/* Add to ChatGPT CTA */}
       <section className="py-16 px-4 bg-card/40 border-y border-border/50">
         <div className="container mx-auto max-w-4xl">
-          <div className="flex flex-col md:flex-row items-center gap-8 p-8 rounded-2xl border border-border bg-card/80 backdrop-blur-sm shadow-[var(--shadow-warm)]">
+          <div className="flex flex-col md:flex-row items-center gap-8 p-8 rounded-2xl border border-border bg-card/80 backdrop-blur-xs shadow-[var(--shadow-warm)]">
             <div className="flex-1 text-center md:text-left">
               <div className="inline-flex items-center gap-2 text-sm font-medium text-primary bg-primary/10 px-4 py-1.5 rounded-full mb-4">
                 <Bot className="h-4 w-4" />
@@ -370,7 +370,7 @@ const Index = () => {
             ))}
           </div>
 
-          <div className="bg-card/60 backdrop-blur-sm rounded-2xl border border-border p-8 text-center">
+          <div className="bg-card/60 backdrop-blur-xs rounded-2xl border border-border p-8 text-center">
             <p className="text-foreground/80 italic text-lg mb-2">{t("discover.quote")}</p>
             <p className="text-muted-foreground text-sm mb-6">{t("discover.quoteRef")}</p>
             <p className="text-sm text-muted-foreground max-w-xl mx-auto">{t("discover.quoteText")}</p>
@@ -580,7 +580,7 @@ const Index = () => {
           <h2 className="text-4xl font-bold text-foreground mb-4">{t("donate.title")}</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">{t("donate.subtitle")}</p>
           
-          <Card className="bg-card/80 backdrop-blur-sm border-border max-w-md mx-auto">
+          <Card className="bg-card/80 backdrop-blur-xs border-border max-w-md mx-auto">
             <CardHeader>
               <CardTitle className="text-xl">{t("donate.onlineTitle", "Online spenden")}</CardTitle>
               <CardDescription>{t("donate.bankSubtitle")}</CardDescription>

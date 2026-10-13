@@ -14,8 +14,8 @@ import { useCircle } from "@/hooks/use-circle";
 import { toast as sonnerToast } from "sonner";
 
 const IMPULSE_CACHE_KEY = "bibelbot-daily-impulse";
-const IMPULSE_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/daily-impulse`;
-const SUBSCRIBE_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/subscribe-daily`;
+const IMPULSE_URL = `${import.meta.env["VITE_SUPABASE_URL"]}/functions/v1/daily-impulse`;
+const SUBSCRIBE_URL = `${import.meta.env["VITE_SUPABASE_URL"]}/functions/v1/subscribe-daily`;
 const TELEGRAM_LINK = "https://t.me/meinbibelbot";
 const VAPID_PUBLIC_KEY = "BLMl5bBRzhlza0ozrHEblp3BfKtbyDsbOP-n120rl6teGPFdoyFb77P9WnOZpbFs2hKyfwILmw8WQebJrp_qc7c";
 const SUBSCRIBED_KEY = "bibelbot-daily-subscribed";
@@ -33,7 +33,7 @@ type Impulse = {
 };
 
 function normalizeLang(lang?: string): string {
-  return (lang || "de").split("-")[0].toLowerCase();
+  return (lang || "de").split("-")[0]!.toLowerCase();
 }
 
 function getImpulseCacheKey(lang: string): string {
@@ -186,7 +186,7 @@ export function DailyImpulse() {
       try {
         const resp = await fetch(`${IMPULSE_URL}?lang=${requestLang}`, {
           headers: {
-            Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+            Authorization: `Bearer ${import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"]}`,
           },
           signal: controller.signal,
         });
@@ -234,12 +234,14 @@ export function DailyImpulse() {
         verse: impulse.verse,
         reference: impulse.reference,
         topic: impulse.topic,
-        backgroundUrl: bgUrl || undefined,
-        churchBranding: churchBranding ? {
-          name: churchBranding.churchName,
-          logoUrl: churchBranding.logoUrl,
-          slug: churchBranding.churchSlug,
-        } : undefined,
+        ...(bgUrl ? { backgroundUrl: bgUrl } : {}),
+        ...(churchBranding ? {
+          churchBranding: {
+            name: churchBranding.churchName,
+            logoUrl: churchBranding.logoUrl,
+            slug: churchBranding.churchSlug,
+          },
+        } : {}),
       });
       const url = URL.createObjectURL(blob);
       setShareBlob(blob);
@@ -559,7 +561,7 @@ export function DailyImpulse() {
                     loading="lazy"
                   />
                 </div>
-                <div className="bg-card/80 backdrop-blur-sm p-3 space-y-3">
+                <div className="bg-card/80 backdrop-blur-xs p-3 space-y-3">
                   {/* Share text preview */}
                   <div className="relative group">
                     <div className="bg-muted/40 rounded-lg p-3 pr-10 text-xs text-muted-foreground whitespace-pre-line font-mono leading-relaxed max-h-40 overflow-y-auto">
@@ -736,7 +738,7 @@ export function DailyImpulse() {
                       placeholder={t("subscribe.phonePlaceholder", "+41 79 123 45 67")}
                       value={smsPhone}
                       onChange={(e) => setSmsPhone(e.target.value)}
-                      className="flex-1 h-7 text-xs px-3 rounded-md border border-primary/30 bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary"
+                      className="flex-1 h-7 text-xs px-3 rounded-md border border-primary/30 bg-background text-foreground placeholder:text-muted-foreground focus:outline-hidden focus:ring-1 focus:ring-primary"
                       maxLength={20}
                     />
                     <Button

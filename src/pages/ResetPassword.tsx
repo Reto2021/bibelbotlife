@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "@/lib/router-compat";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -50,7 +50,7 @@ const ResetPassword = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center px-4" style={{ background: "var(--gradient-hero)" }}>
-      <Card className="w-full max-w-sm bg-card/90 backdrop-blur-sm">
+      <Card className="w-full max-w-sm bg-card/90 backdrop-blur-xs">
         <CardHeader className="text-center">
           <AppLogo className="h-10 w-10 mx-auto mb-2" />
           <CardTitle>{t("auth.newPassword", "Neues Passwort setzen")}</CardTitle>

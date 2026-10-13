@@ -108,6 +108,7 @@ export function parseVerseSlug(slug: string): { book: BookEntry; chapter: number
   const m = slug.toLowerCase().match(/^(.+?)-(\d+)-(\d+)$/);
   if (!m) return null;
   const [, bookSlug, ch, vs] = m;
+  if (!bookSlug || !ch || !vs) return null;
   const book = SLUG_INDEX.get(bookSlug);
   if (!book) return null;
   const chapter = parseInt(ch, 10);
@@ -123,14 +124,14 @@ export function buildVerseSlug(bookSlug: string, chapter: number, verse: number)
 
 /** Localized display name for a book in a given language (falls back to English). */
 export function localizedBookName(book: BookEntry, lang: string): string {
-  return book.names[lang]?.[0] ?? book.names.en[0];
+  return book.names[lang]?.[0] ?? book.names["en"]?.[0] ?? book.slug;
 }
 
 /** Resolve all localized name variants for DB lookup in a given language. */
 export function bookNameVariants(book: BookEntry, lang: string): string[] {
   const variants = new Set<string>();
   (book.names[lang] || []).forEach((n) => variants.add(n));
-  (book.names.en || []).forEach((n) => variants.add(n));
+  (book.names["en"] || []).forEach((n) => variants.add(n));
   return Array.from(variants);
 }
 

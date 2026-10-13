@@ -1,6 +1,6 @@
 import { lazy, Suspense, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useSearchParams, useParams, useNavigate } from "react-router-dom";
+import { useSearchParams, useParams, useNavigate } from "@/lib/router-compat";
 import { SEOHead } from "@/components/SEOHead";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Button } from "@/components/ui/button";

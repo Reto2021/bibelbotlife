@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Check, X, ArrowLeft, Trash2, MapPin } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { useToast } from "@/hooks/use-toast";
 
 type CrossRow = {
@@ -65,7 +65,7 @@ export default function CrossModeration() {
       if (data) {
         setUrls((prev) => ({
           ...prev,
-          ...Object.fromEntries(data.filter((d) => d.signedUrl).map((d) => [d.path as string, d.signedUrl])),
+          ...Object.fromEntries(data.filter((d) => d.signedUrl).map((d) => [d.path as string, d.signedUrl as string])),
         }));
       }
     })();
@@ -177,7 +177,7 @@ export default function CrossModeration() {
                         variant="outline"
                         className="gap-1.5"
                         onClick={() =>
-                          setStatus.mutate({ id: row.id, status: "rejected", reason: reasons[row.id] })
+                          setStatus.mutate({ id: row.id, status: "rejected", ...(reasons[row.id] ? { reason: reasons[row.id] } : {}) })
                         }
                       >
                         <X className="h-4 w-4" /> {t("crossways.admin.reject")}

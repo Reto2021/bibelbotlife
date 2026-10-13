@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams } from "@/lib/router-compat";
 import { Search, Book, Loader2, ChevronRight } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -14,7 +14,7 @@ import { RestrictedTranslationFooter } from "@/components/RestrictedTranslationF
 
 const RESTRICTED_TRANSLATIONS = new Set(["basisbibel", "schlachter2000", "EU", "ELB", "NIV"]);
 
-const SEARCH_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/bible-search`;
+const SEARCH_URL = `${import.meta.env["VITE_SUPABASE_URL"]}/functions/v1/bible-search`;
 
 type SearchResult = {
   id: string;
@@ -67,7 +67,7 @@ export default function BibleSearch() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+          Authorization: `Bearer ${import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"]}`,
         },
         body: JSON.stringify({ query: query.trim(), translation, limit: 30, language: i18n.language?.split("-")[0] || "de" }),
       });

@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link } from "@/lib/router-compat";
 import { Helmet } from "react-helmet-async";
 import { toPng } from "html-to-image";
 import { QRCodeSVG } from "qrcode.react";

@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link } from "@/lib/router-compat";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { Church, ArrowLeft, MapPin, Globe, Clock, Send, ExternalLink } from "lucide-react";
@@ -82,7 +82,7 @@ const ChurchPartner = () => {
   return (
     <div className="min-h-screen" style={{ background: "var(--gradient-hero)" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
-      <nav className="bg-card/80 backdrop-blur-sm border-b border-border sticky top-0 z-50">
+      <nav className="bg-card/80 backdrop-blur-xs border-b border-border sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link to="/churches" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
             <ArrowLeft className="h-4 w-4" />

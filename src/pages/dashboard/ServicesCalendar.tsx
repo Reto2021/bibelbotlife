@@ -3,7 +3,7 @@ import { Plus, ChevronLeft, ChevronRight, CalendarDays, CalendarRange, Play, Cop
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "@/lib/router-compat";
 import { useServices, useDeleteService, useDuplicateService, useUpdateServiceStatus } from "@/hooks/use-services";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { toast } from "sonner";
@@ -116,7 +116,7 @@ export default function ServicesCalendar() {
       to={`/dashboard/editor/${service.id}`}
       className="block"
     >
-      <div className={cn("text-xs px-1.5 py-0.5 rounded truncate cursor-pointer hover:opacity-80 transition-opacity", SERVICE_TYPE_COLORS[service.service_type] || SERVICE_TYPE_COLORS.other)}>
+      <div className={cn("text-xs px-1.5 py-0.5 rounded truncate cursor-pointer hover:opacity-80 transition-opacity", SERVICE_TYPE_COLORS[service.service_type] || SERVICE_TYPE_COLORS["other"])}>
         {service.service_time?.slice(0, 5)} {service.title}
       </div>
     </Link>
@@ -166,7 +166,7 @@ export default function ServicesCalendar() {
           <h2 className="text-lg font-semibold text-foreground">
             {viewMode === "month"
               ? `${MONTHS[month]} ${year}`
-              : `Woche vom ${weekDays[0].toLocaleDateString("de-CH", { day: "numeric", month: "long" })}`
+              : `Woche vom ${weekDays[0]!.toLocaleDateString("de-CH", { day: "numeric", month: "long" })}`
             }
           </h2>
           <Button variant="link" size="sm" className="text-xs" onClick={() => setCurrentDate(new Date())}>
@@ -194,7 +194,7 @@ export default function ServicesCalendar() {
             <div className="grid grid-cols-7 gap-px bg-border rounded-lg overflow-hidden">
               {monthDays.map(({ date, isCurrentMonth }, i) => {
                 const key = formatDateKey(date);
-                const dayServices = servicesByDate[key];
+                const dayServices = key ? servicesByDate[key] : undefined;
                 const isToday = key === today;
                 return (
                   <div
@@ -229,7 +229,7 @@ export default function ServicesCalendar() {
             <div className="grid grid-cols-7 gap-2">
               {weekDays.map((date, i) => {
                 const key = formatDateKey(date);
-                const dayServices = servicesByDate[key];
+                const dayServices = key ? servicesByDate[key] : undefined;
                 const isToday = key === today;
                 return (
                   <div key={i} className="space-y-2">
@@ -246,14 +246,14 @@ export default function ServicesCalendar() {
                       </div>
                     </div>
                     <div className="space-y-1 min-h-[200px]">
-                      {dayServices?.map((s) => (
+                      {dayServices?.map((s: any) => (
                         <div key={s.id} className="relative group">
                           <Link to={`/dashboard/editor/${s.id}`}>
                             <Card className="p-2 hover:border-primary/50 transition-colors cursor-pointer">
                               <div className="text-xs font-medium truncate">{s.title}</div>
                               <div className="text-[10px] text-muted-foreground">{s.service_time?.slice(0, 5)}</div>
                               <div className="flex items-center justify-between mt-1">
-                                <Badge variant="outline" className={cn("text-[10px]", SERVICE_TYPE_COLORS[s.service_type])}>
+                                <Badge variant="outline" className={cn("text-[10px]", SERVICE_TYPE_COLORS[s.service_type ?? ""])}>
                                   {SERVICE_TYPE_LABELS[s.service_type] || s.service_type}
                                 </Badge>
                                 <div className="flex items-center gap-1">

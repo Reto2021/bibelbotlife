@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams } from "@/lib/router-compat";
 import { useTranslation } from "react-i18next";
 import { useSharedDraft } from "@/hooks/use-ceremony-drafts";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -104,7 +104,7 @@ export default function SharedDraft() {
         path={`/shared/${token}`}
       />
 
-      <header className="border-b bg-card/80 backdrop-blur-sm">
+      <header className="border-b bg-card/80 backdrop-blur-xs">
         <div className="max-w-3xl mx-auto px-4 py-4 flex items-center gap-3">
           <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
             <Icon className="h-5 w-5 text-primary" />

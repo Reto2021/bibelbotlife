@@ -1,0 +1,20 @@
+{
+  "customizations": [
+    { "token": "Golden Hour HSL color tokens (:root, light)", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "Golden Hour HSL color tokens (.dark)", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "--telegram / --telegram-foreground (+ bg-telegram)", "source": "src/index.css + tailwind.config.ts", "reappliedIn": "src/styles.css" },
+    { "token": "--sidebar-* tokens", "source": "src/index.css + tailwind.config.ts", "reappliedIn": "src/styles.css" },
+    { "token": "--gradient-hero / --gradient-cta / --gradient-glow", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "--shadow-warm / --shadow-elegant", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "--chat-warmth / --chat-bot-bubble / --chat-welcome-glow", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "--radius 0.5rem + radius scale", "source": "src/index.css + tailwind.config.ts", "reappliedIn": "src/styles.css" },
+    { "token": "font-sans Barlow / font-serif Lora / font-display Bebas Neue", "source": "tailwind.config.ts", "reappliedIn": "src/styles.css" },
+    { "token": "h1-h3 Barlow headings + .font-display base rules", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "container (centered, 2rem, 1400px)", "source": "tailwind.config.ts", "reappliedIn": "src/styles.css" },
+    { "token": "accordion-down / accordion-up / marquee animations", "source": "tailwind.config.ts", "reappliedIn": "src/styles.css" },
+    { "token": "utilities text-balance / shadow-warm / shadow-elegant / bg-glow", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "keyframes + classes bounce-gentle / pulse-warm / fade-up / candle / blob / gradient", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": ".chat-welcome-gradient / .safe-area-bottom / .font-serif line-height", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "blockquote.bible-verse + RTL mirror rules", "source": "src/index.css", "reappliedIn": "src/styles.css" }
+  ]
+}

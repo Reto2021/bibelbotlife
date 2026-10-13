@@ -52,6 +52,9 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
+    // Server render and the first client render both use German so hydration matches;
+    // applyDetectedLanguage() switches to the visitor's language right after hydration.
+    lng: "de",
     resources: {
       de: { translation: de }, en: { translation: en }, fr: { translation: fr },
       es: { translation: es }, it: { translation: it }, pl: { translation: pl },
@@ -77,9 +80,31 @@ i18n
     interpolation: { escapeValue: false },
     detection: {
       order: ["localStorage", "navigator"],
-      caches: ["localStorage"],
+      // Cached manually after hydration (see applyDetectedLanguage) so the initial "de" never overwrites a saved choice.
+      caches: [],
       lookupLocalStorage: "biblebot-lang",
     },
   });
+
+/** Runs the browser language detector (localStorage → navigator) and switches language. Client-only. */
+export function applyDetectedLanguage() {
+  if (typeof window === "undefined") return;
+  const detector = i18n.services.languageDetector as { detect?: () => string | string[] | undefined } | undefined;
+  const detected = detector?.detect?.();
+  const lng = Array.isArray(detected) ? detected[0] : detected;
+  if (lng && lng !== i18n.language) void i18n.changeLanguage(lng);
+  if (!cacheListenerAttached) {
+    cacheListenerAttached = true;
+    i18n.on("languageChanged", (next) => {
+      try {
+        window.localStorage.setItem("biblebot-lang", next);
+      } catch {
+        // storage unavailable (private mode) — ignore
+      }
+    });
+  }
+}
+
+let cacheListenerAttached = false;
 
 export default i18n;

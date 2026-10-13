@@ -39,7 +39,7 @@ function supabasePublishableKey() {
       const parsed = JSON.parse(keyset);
       if (parsed && typeof parsed === "object" && !Array.isArray(parsed)) {
         const keys = parsed;
-        const key = [keys.default, ...Object.values(keys)].find((v) => typeof v === "string" && v.trim().startsWith("sb_publishable_"))?.trim();
+        const key = [keys["default"], ...Object.values(keys)].find((v) => typeof v === "string" && v.trim().startsWith("sb_publishable_"))?.trim();
         if (key) return key;
       }
     } catch {
@@ -273,12 +273,19 @@ var mcp_default = defineMcp({
     acceptedAudiences: "authenticated"
   }),
   tools: [
+    // @ts-expect-error mcp-js ToolDefinition<Input, undefined> isn't assignable to AnyToolDefinition under exactOptionalPropertyTypes (library typing bug)
     search_bible_default,
+    // @ts-expect-error mcp-js ToolDefinition<Input, undefined> isn't assignable to AnyToolDefinition under exactOptionalPropertyTypes (library typing bug)
     list_prayer_wall_default,
+    // @ts-expect-error mcp-js ToolDefinition<Input, undefined> isn't assignable to AnyToolDefinition under exactOptionalPropertyTypes (library typing bug)
     list_my_journal_entries_default,
+    // @ts-expect-error mcp-js ToolDefinition<Input, undefined> isn't assignable to AnyToolDefinition under exactOptionalPropertyTypes (library typing bug)
     create_journal_entry_default,
+    // @ts-expect-error mcp-js ToolDefinition<Input, undefined> isn't assignable to AnyToolDefinition under exactOptionalPropertyTypes (library typing bug)
     list_my_crosses_default,
+    // @ts-expect-error mcp-js ToolDefinition<Input, undefined> isn't assignable to AnyToolDefinition under exactOptionalPropertyTypes (library typing bug)
     list_my_bible_moments_default,
+    // @ts-expect-error mcp-js ToolDefinition<Input, undefined> isn't assignable to AnyToolDefinition under exactOptionalPropertyTypes (library typing bug)
     bible_coaching_default
   ]
 });

@@ -3,6 +3,7 @@ import { useCallback, useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { burnQuoteIntoImage } from "@/lib/burn-quote";
 import { ModerationError, localTextCheck } from "@/lib/moderation";
+import { crossPostsFeed } from "@/lib/cross-posts-feed.functions";
 
 export type CrossInteraction = "prayer" | "amen" | "share" | "report";
 
@@ -75,8 +76,12 @@ export function useCrossPosts() {
   const [reacted, setReacted] = useState<Set<string>>(() => readReacted());
 
   const load = useCallback(async () => {
-    const { data, error } = await supabase.functions.invoke("cross-posts-feed");
-    if (!error && data?.posts) setPosts(data.posts as CrossPost[]);
+    try {
+      const data = await crossPostsFeed();
+      setPosts(data.posts as unknown as CrossPost[]);
+    } catch (e) {
+      console.error("cross-posts-feed failed", e);
+    }
     setLoading(false);
   }, []);
 

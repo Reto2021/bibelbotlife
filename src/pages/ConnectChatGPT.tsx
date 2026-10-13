@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { SEOHead } from "@/components/SEOHead";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Button } from "@/components/ui/button";
@@ -129,7 +129,7 @@ export default function ConnectChatGPT() {
         {/* URL card */}
         <section className="pb-16">
           <div className="container mx-auto px-4">
-            <Card className="max-w-3xl border-border/80 bg-card/80 backdrop-blur-sm shadow-[var(--shadow-warm)]">
+            <Card className="max-w-3xl border-border/80 bg-card/80 backdrop-blur-xs shadow-[var(--shadow-warm)]">
               <CardHeader>
                 <CardTitle className="text-lg">BibleBot MCP-Server</CardTitle>
                 <CardDescription>

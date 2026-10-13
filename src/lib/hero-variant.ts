@@ -12,7 +12,7 @@ export function getHeroVariant(): HeroVariant {
   try {
     const existing = localStorage.getItem(STORAGE_KEY) as HeroVariant | null;
     if (existing && HERO_VARIANTS.includes(existing)) return existing;
-    const pick = HERO_VARIANTS[Math.floor(Math.random() * HERO_VARIANTS.length)];
+    const pick = HERO_VARIANTS[Math.floor(Math.random() * HERO_VARIANTS.length)] ?? "praesenz";
     localStorage.setItem(STORAGE_KEY, pick);
     return pick;
   } catch {

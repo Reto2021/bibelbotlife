@@ -116,7 +116,7 @@ export function CrossUploadDialog({
         title: t("crossways.upload.unsupportedFormat", "Dateiformat nicht unterstützt"),
         description: t("crossways.upload.unsupportedFormatDesc", "Erlaubt sind: {{formats}}.").replace(
           "{{formats}}",
-          String(result.values?.formats ?? ""),
+          String(result.values?.["formats"] ?? ""),
         ),
       },
       convertHeic: {
@@ -138,11 +138,11 @@ export function CrossUploadDialog({
         title: t("crossways.upload.imageTooSmall", "Bild zu klein"),
         description: t("crossways.upload.imageTooSmallDesc", "Mindestens {{min}} x {{min}} Pixel.").replace(
           /{{min}}/g,
-          String(result.values?.min ?? MIN_IMAGE_DIMENSION),
+          String(result.values?.["min"] ?? MIN_IMAGE_DIMENSION),
         ),
       },
     };
-    const msg = messages[result.code ?? "notAnImage"] ?? messages.notAnImage;
+    const msg = messages[result.code ?? "notAnImage"] ?? messages["notAnImage"]!;
     toast({
       title: name ? `${name}: ${msg.title}` : msg.title,
       description: msg.description,
@@ -284,7 +284,7 @@ export function CrossUploadDialog({
       notify.error(t("crossways.upload.errorTitle"), {
         description:
           failures.length === 1
-            ? `${failures[0].name}: ${failures[0].message}`
+            ? `${failures[0]!.name}: ${failures[0]!.message}`
             : t("crossways.upload.errorDescMany", "{{count}} Bilder konnten nicht hochgeladen werden.").replace(
                 "{{count}}",
                 String(failures.length),
@@ -458,7 +458,7 @@ export function CrossUploadDialog({
                 <CrossMap
                   height="13rem"
                   zoom={coords ? 12 : 7}
-                  center={coords ? [coords.lat, coords.lng] : undefined}
+                  {...(coords ? { center: [coords.lat, coords.lng] as [number, number] } : {})}
                   pickMode
                   picked={coords}
                   onPick={(lat, lng) => setCoords({ lat, lng })}

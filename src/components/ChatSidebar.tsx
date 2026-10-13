@@ -63,7 +63,7 @@ export function ChatSidebar({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-background/60 backdrop-blur-sm z-40 md:hidden"
+            className="fixed inset-0 bg-background/60 backdrop-blur-xs z-40 md:hidden"
             onClick={onClose}
           />
 
@@ -103,7 +103,7 @@ export function ChatSidebar({
                   value={searchQuery}
                   onChange={(e) => handleSearch(e.target.value)}
                   placeholder={t("chat.searchHistory", "Gespräche durchsuchen…")}
-                  className="w-full bg-muted/50 border border-border rounded-lg pl-8 pr-3 py-2 text-xs text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary/40"
+                  className="w-full bg-muted/50 border border-border rounded-lg pl-8 pr-3 py-2 text-xs text-foreground placeholder:text-muted-foreground/60 focus:outline-hidden focus:border-primary/40"
                 />
               </div>
             </div>

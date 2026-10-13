@@ -84,8 +84,8 @@ function getSpeechLang(lang: string): string {
   return map[lang] || "de-CH";
 }
 
-const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/bibelbot-chat`;
-const QA_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/bibelbot-qa`;
+const CHAT_URL = `${import.meta.env["VITE_SUPABASE_URL"]}/functions/v1/bibelbot-chat`;
+const QA_URL = `${import.meta.env["VITE_SUPABASE_URL"]}/functions/v1/bibelbot-qa`;
 
 type QAResult = {
   citations_found: number;
@@ -110,6 +110,7 @@ function QABadge({ qa, t }: { qa: QAResult | "loading" | "skipped"; t: (key: str
       const timer = setTimeout(() => setShowExtended(false), 9000);
       return () => clearTimeout(timer);
     }
+    return undefined;
   }, [showExtended, qa]);
 
   if (qa === "loading") {
@@ -214,13 +215,13 @@ function extractOptions(text: string): { cleanText: string; options: string[] } 
   const markers = [...flat.matchAll(inlineMarkerRe)];
 
   if (markers.length >= 2) {
-    const firstIndex = markers[0].index ?? -1;
+    const firstIndex = markers[0]?.index ?? -1;
     if (firstIndex >= 0) {
       const cleanText = flat.slice(0, firstIndex).trim();
       const options = markers
         .map((marker, index) => {
           const start = (marker.index ?? 0) + marker[0].length;
-          const end = index + 1 < markers.length ? (markers[index + 1].index ?? flat.length) : flat.length;
+          const end = index + 1 < markers.length ? (markers[index + 1]?.index ?? flat.length) : flat.length;
           return flat
             .slice(start, end)
             .replace(/\*{1,2}/g, "")
@@ -280,7 +281,7 @@ function LiveDemoPreview({ onTryIt }: { onTryIt: () => void }) {
       transition={{ duration: 0.5, delay: 0.3 }}
       className="max-w-2xl mx-auto w-full mb-5"
     >
-      <div className="bg-card/50 backdrop-blur-sm rounded-2xl border border-border/60 p-3 sm:p-4 space-y-2.5">
+      <div className="bg-card/50 backdrop-blur-xs rounded-2xl border border-border/60 p-3 sm:p-4 space-y-2.5">
         {/* User bubble */}
         <div className="flex justify-end">
           <motion.div
@@ -299,7 +300,7 @@ function LiveDemoPreview({ onTryIt }: { onTryIt: () => void }) {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3 }}
-              className="bg-card border border-border rounded-2xl rounded-bl-md px-3 py-2 max-w-[85%] shadow-sm"
+              className="bg-card border border-border rounded-2xl rounded-bl-md px-3 py-2 max-w-[85%] shadow-xs"
             >
               {phase === "typing" ? (
                 <div className="flex items-center gap-1 py-1 px-1">
@@ -374,7 +375,7 @@ export function ChatHero() {
     try {
       const resp = await fetch(QA_URL, {
         method: "POST",
-        headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}` },
+        headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"]}` },
         body: JSON.stringify({ text }),
       });
       if (!resp.ok) { setQaMap((prev) => ({ ...prev, [msgIndex]: "skipped" })); return; }
@@ -480,7 +481,7 @@ export function ChatHero() {
     const selected: { emoji: string; key: string }[] = [];
 
     // 1 familiar tile (favorite)
-    if (clicked.length > 0) {
+    if (clicked.length > 0 && clicked[0]) {
       selected.push(clicked[0]);
     }
 
@@ -498,7 +499,8 @@ export function ChatHero() {
         selected.push(pick);
       } else if (freshPool.length > 0) {
         // If we picked a duplicate, grab the next one
-        selected.push(freshPool.splice(0, 1)[0]);
+        const next = freshPool.splice(0, 1)[0];
+        if (next) selected.push(next);
       }
     }
 
@@ -605,6 +607,7 @@ export function ChatHero() {
   useEffect(() => {
     if (isFocused || hasConversation) return;
     const currentPhrase = phrases[phraseIndex];
+    if (!currentPhrase) return;
     let timeout: ReturnType<typeof setTimeout>;
     if (!isDeleting) {
       if (placeholder.length < currentPhrase.length) {
@@ -654,7 +657,7 @@ export function ChatHero() {
       try {
         const resp = await fetch(CHAT_URL, {
           method: "POST",
-          headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}` },
+          headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"]}` },
           body: JSON.stringify({ messages: allMessages, journeyDay: 1, language: i18n.language, mode: chatMode }),
         });
 
@@ -713,7 +716,7 @@ export function ChatHero() {
           console.warn("Stream read failed, using fallback:", streamErr);
           const fallbackResp = await fetch(CHAT_URL, {
             method: "POST",
-            headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}` },
+            headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"]}` },
             body: JSON.stringify({ messages: allMessages, journeyDay: 1, language: i18n.language, mode: chatMode }),
           });
           const fullText = await fallbackResp.text();
@@ -741,7 +744,7 @@ export function ChatHero() {
           setFollowUpsLoading(true);
           fetch(CHAT_URL, {
             method: "POST",
-            headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}` },
+            headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"]}` },
             body: JSON.stringify({
               messages: [
                 { role: "user", content: text.trim() },
@@ -761,7 +764,7 @@ export function ChatHero() {
             try {
               const titleResp = await fetch(CHAT_URL, {
                 method: "POST",
-                headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}` },
+                headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"]}` },
                 body: JSON.stringify({
                   messages: [
                     { role: "user", content: text.trim() },
@@ -936,7 +939,7 @@ export function ChatHero() {
         {conversations.length > 0 && (
           <button
             onClick={() => setSidebarOpen(true)}
-            className="absolute top-4 left-4 z-30 h-9 w-9 rounded-lg bg-card border border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/40 transition-all shadow-sm"
+            className="absolute top-4 left-4 z-30 h-9 w-9 rounded-lg bg-card border border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/40 transition-all shadow-xs"
             title={t("chat.history", "Gespräche")}
           >
             <Menu className="h-4 w-4" />
@@ -1025,7 +1028,7 @@ export function ChatHero() {
                         }
                       }}
                       placeholder={isFocused ? t("chatHero.focusPlaceholder") : placeholder + "│"}
-                      className="w-full bg-transparent pl-12 pr-24 py-4 md:pl-14 md:py-5 text-base md:text-lg text-foreground placeholder:text-muted-foreground/60 focus:outline-none rounded-2xl"
+                      className="w-full bg-transparent pl-12 pr-24 py-4 md:pl-14 md:py-5 text-base md:text-lg text-foreground placeholder:text-muted-foreground/60 focus:outline-hidden rounded-2xl"
                       aria-label={t("chatHero.ariaLabel")}
                       autoComplete="off"
                     />
@@ -1085,7 +1088,7 @@ export function ChatHero() {
                     <button
                       key={card.key}
                       onClick={() => { trackTileClick(card.key); sendMessage(card.prompt); }}
-                      className="group flex items-center gap-3 sm:gap-2 bg-card/70 backdrop-blur-sm border border-border rounded-xl px-4 sm:px-3 py-3 sm:py-2.5 hover:border-primary/40 hover:shadow-md hover:bg-card transition-all duration-200 cursor-pointer min-w-0"
+                      className="group flex items-center gap-3 sm:gap-2 bg-card/70 backdrop-blur-xs border border-border rounded-xl px-4 sm:px-3 py-3 sm:py-2.5 hover:border-primary/40 hover:shadow-md hover:bg-card transition-all duration-200 cursor-pointer min-w-0"
                     >
                       <span className="text-xl sm:text-xl shrink-0">{card.emoji}</span>
                       <div className="text-left min-w-0">
@@ -1143,7 +1146,7 @@ export function ChatHero() {
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4, delay: 0.6 }} className="max-w-2xl mx-auto w-full">
                   <button
                     onClick={() => sendMessage(t("verseExplain", { quote: dailyVerse.quote, ref: dailyVerse.ref }))}
-                    className="relative w-full bg-card/40 backdrop-blur-sm rounded-xl px-6 py-4 border border-primary/10 text-center overflow-hidden cursor-pointer hover:border-primary/30 hover:shadow-md transition-all duration-300 group"
+                    className="relative w-full bg-card/40 backdrop-blur-xs rounded-xl px-6 py-4 border border-primary/10 text-center overflow-hidden cursor-pointer hover:border-primary/30 hover:shadow-md transition-all duration-300 group"
                   >
                     <p className="text-foreground/70 italic text-sm sm:text-base leading-relaxed font-serif">{dailyVerse.quote}</p>
                     <p className="text-primary/50 text-xs mt-1.5 font-medium">– {dailyVerse.ref}</p>
@@ -1269,7 +1272,7 @@ export function ChatHero() {
                             <button
                               key={i}
                               onClick={() => { setFollowUps([]); sendMessage(fu.prompt); }}
-                              className="inline-flex items-center gap-1.5 text-xs px-3 py-2 rounded-xl border border-border bg-card/70 text-foreground/80 hover:border-primary/40 hover:bg-card hover:text-foreground transition-all duration-200 shadow-sm"
+                              className="inline-flex items-center gap-1.5 text-xs px-3 py-2 rounded-xl border border-border bg-card/70 text-foreground/80 hover:border-primary/40 hover:bg-card hover:text-foreground transition-all duration-200 shadow-xs"
                             >
                               <span>{fu.emoji}</span>
                               <span>{fu.label}</span>

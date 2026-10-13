@@ -1,6 +1,6 @@
 import { useState, useRef, useCallback, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { ArrowLeft, Mic, Square, Play, Pause, Trash2, Sparkles, Download, Loader2, Save, Share2, Check, Copy, ExternalLink, Music, BookOpenText, HandHeart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -84,8 +84,8 @@ const EulogyWriter = () => {
       setGeneratedText(draft.generated_text || "");
       const fd = draft.form_data as Record<string, string> | null;
       if (fd) {
-        setPersonAge(fd.personAge || "");
-        setAdditionalNotes(fd.additionalNotes || "");
+        setPersonAge(fd["personAge"] || "");
+        setAdditionalNotes(fd["additionalNotes"] || "");
       }
       const tr = draft.transcripts as Array<{ text: string; duration: number }> | null;
       if (tr && tr.length > 0) {
@@ -282,12 +282,12 @@ const EulogyWriter = () => {
 
     try {
       const resp = await fetch(
-        `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/eulogy-writer`,
+        `${import.meta.env["VITE_SUPABASE_URL"]}/functions/v1/eulogy-writer`,
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+            Authorization: `Bearer ${import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"]}`,
           },
           body: JSON.stringify({
             transcript: fullTranscript,
@@ -400,7 +400,7 @@ const EulogyWriter = () => {
       <SEOHead titleKey="eulogy.pageTitle" descKey="eulogy.pageDesc" path="/mein-bereich/abdankung" />
 
       {/* Compact sticky header */}
-      <header className="border-b bg-card/80 backdrop-blur-sm sticky top-0 z-10">
+      <header className="border-b bg-card/80 backdrop-blur-xs sticky top-0 z-10">
         <div className="max-w-3xl mx-auto px-4 py-2.5 flex items-center justify-between">
           <div className="flex items-center gap-2 min-w-0">
             <Link to="/mein-bereich" className="hidden md:block">

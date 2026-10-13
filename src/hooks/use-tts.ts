@@ -1,6 +1,6 @@
 import { useState, useRef, useCallback } from "react";
 
-const TTS_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/elevenlabs-tts`;
+const TTS_URL = `${import.meta.env["VITE_SUPABASE_URL"]}/functions/v1/elevenlabs-tts`;
 
 export type TTSVoice = "male" | "female";
 
@@ -65,8 +65,8 @@ export function useTTS() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          apikey: import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
-          Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+          apikey: import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"],
+          Authorization: `Bearer ${import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"]}`,
         },
         body: JSON.stringify({ text: cleanText, voiceId: VOICE_IDS[currentVoice] }),
       });

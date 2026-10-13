@@ -7,7 +7,7 @@ import { toast } from "@/hooks/use-toast";
 
 const VAPID_PUBLIC_KEY = "BLMl5bBRzhlza0ozrHEblp3BfKtbyDsbOP-n120rl6teGPFdoyFb77P9WnOZpbFs2hKyfwILmw8WQebJrp_qc7c";
 
-const SUBSCRIBE_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/subscribe-daily`;
+const SUBSCRIBE_URL = `${import.meta.env["VITE_SUPABASE_URL"]}/functions/v1/subscribe-daily`;
 const TELEGRAM_LINK = "https://t.me/meinbibelbot";
 
 type Channel = "push" | "sms" | "telegram";
@@ -75,10 +75,10 @@ export function DailySubscribe() {
       }
 
       const body: Record<string, unknown> = { channel: selectedChannel, language: i18n.language };
-      if (firstName.trim()) body.first_name = firstName.trim();
-      if (selectedChannel === "sms") body.phone_number = phone;
+      if (firstName.trim()) body["first_name"] = firstName.trim();
+      if (selectedChannel === "sms") body["phone_number"] = phone;
       if (selectedChannel === "push" && pushSubscription) {
-        body.push_subscription = pushSubscription.toJSON();
+        body["push_subscription"] = pushSubscription.toJSON();
       }
 
       const resp = await fetch(SUBSCRIBE_URL, {
@@ -104,7 +104,7 @@ export function DailySubscribe() {
 
   if (isSuccess) {
     return (
-      <div className="bg-card/80 backdrop-blur-sm rounded-2xl border border-border p-8 text-center">
+      <div className="bg-card/80 backdrop-blur-xs rounded-2xl border border-border p-8 text-center">
         <CheckCircle2 className="h-12 w-12 text-primary mx-auto mb-4" />
         <h3 className="text-xl font-bold text-foreground mb-2">{t("subscribe.successTitle")}</h3>
         <p className="text-muted-foreground">{t("subscribe.successText")}</p>
@@ -113,7 +113,7 @@ export function DailySubscribe() {
   }
 
   return (
-    <div className="bg-card/80 backdrop-blur-sm rounded-2xl border border-border p-8">
+    <div className="bg-card/80 backdrop-blur-xs rounded-2xl border border-border p-8">
       <div className="text-center mb-6">
         <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-3">
           <Bell className="h-6 w-6 text-primary" />

@@ -3,8 +3,8 @@ import { Mic, MicOff, X, Loader2, Volume2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 
-const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/bibelbot-chat`;
-const TTS_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/elevenlabs-tts`;
+const CHAT_URL = `${import.meta.env["VITE_SUPABASE_URL"]}/functions/v1/bibelbot-chat`;
+const TTS_URL = `${import.meta.env["VITE_SUPABASE_URL"]}/functions/v1/elevenlabs-tts`;
 const VOICE_ID = "onwK4e9ZLuTAKqWW03F9"; // Daniel – warm, gut für Deutsch
 
 type Status = "idle" | "listening" | "thinking" | "speaking" | "error";
@@ -92,8 +92,8 @@ export function VoiceMode({ open, onClose, botName }: VoiceModeProps) {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          apikey: import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
-          Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+          apikey: import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"],
+          Authorization: `Bearer ${import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"]}`,
         },
         body: JSON.stringify({ text: next, voiceId: VOICE_ID }),
       });
@@ -161,8 +161,8 @@ export function VoiceMode({ open, onClose, botName }: VoiceModeProps) {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          apikey: import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
-          Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+          apikey: import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"],
+          Authorization: `Bearer ${import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"]}`,
           Accept: "text/event-stream",
         },
         body: JSON.stringify({

@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import {
   ArrowLeft, Sparkles, Download, Loader2, Save, Share2,
   Check, Copy, ExternalLink, Music, BookOpenText, HandHeart,
@@ -105,8 +105,8 @@ export const WEDDING_CONFIG: CeremonyConfig = {
   ],
   notesPlaceholder: "Eure Geschichte, Wünsche für die Zeremonie, besondere Momente die erwähnt werden sollen…",
   generateLabel: "Trauungstext generieren",
-  pdfTitle: (fd) => fd.partnerName1 && fd.partnerName2 ? `${fd.partnerName1} & ${fd.partnerName2}` : "Trauung",
-  pdfFileName: (fd) => fd.partnerName1 && fd.partnerName2 ? `Trauung_${fd.partnerName1}_${fd.partnerName2}.pdf` : "Trauung.pdf",
+  pdfTitle: (fd) => fd["partnerName1"] && fd["partnerName2"] ? `${fd["partnerName1"]} & ${fd["partnerName2"]}` : "Trauung",
+  pdfFileName: (fd) => fd["partnerName1"] && fd["partnerName2"] ? `Trauung_${fd["partnerName1"]}_${fd["partnerName2"]}.pdf` : "Trauung.pdf",
   suggestedTags: ["hochzeit", "wedding", "liebe", "love"],
 };
 
@@ -135,8 +135,8 @@ export const BAPTISM_CONFIG: CeremonyConfig = {
   ],
   notesPlaceholder: "Taufwünsche, besondere Bibelverse, was euch für die Taufe wichtig ist…",
   generateLabel: "Tauftext generieren",
-  pdfTitle: (fd) => fd.childName ? `Taufe von ${fd.childName}` : "Taufe",
-  pdfFileName: (fd) => fd.childName ? `Taufe_${fd.childName.replace(/\s+/g, "_")}.pdf` : "Taufe.pdf",
+  pdfTitle: (fd) => fd["childName"] ? `Taufe von ${fd["childName"]}` : "Taufe",
+  pdfFileName: (fd) => fd["childName"] ? `Taufe_${fd["childName"].replace(/\s+/g, "_")}.pdf` : "Taufe.pdf",
   suggestedTags: ["taufe", "baptism", "taufgebet"],
 };
 
@@ -164,8 +164,8 @@ export const CONFIRMATION_CONFIG: CeremonyConfig = {
   ],
   notesPlaceholder: "Persönliche Gedanken, Glaubensweg, besondere Wünsche für die Feier…",
   generateLabel: "Text generieren",
-  pdfTitle: (fd) => fd.confirmandName ? `Konfirmation / Firmung — ${fd.confirmandName}` : "Konfirmation",
-  pdfFileName: (fd) => fd.confirmandName ? `Konfirmation_${fd.confirmandName.replace(/\s+/g, "_")}.pdf` : "Konfirmation.pdf",
+  pdfTitle: (fd) => fd["confirmandName"] ? `Konfirmation / Firmung — ${fd["confirmandName"]}` : "Konfirmation",
+  pdfFileName: (fd) => fd["confirmandName"] ? `Konfirmation_${fd["confirmandName"].replace(/\s+/g, "_")}.pdf` : "Konfirmation.pdf",
   suggestedTags: ["konfirmation", "firmung", "confirmation", "erstkommunion"],
 };
 
@@ -236,7 +236,7 @@ export default function CeremonyWriter({ config }: Props) {
       const fd = draft.form_data as Record<string, string> | null;
       if (fd) {
         setFormData(fd);
-        setNotes(fd._notes || "");
+        setNotes(fd["_notes"] || "");
       }
       const tr = draft.transcripts as Array<{ text: string; duration: number }> | null;
       if (tr && tr.length > 0) {
@@ -439,7 +439,7 @@ export default function CeremonyWriter({ config }: Props) {
     try {
       let edgeFnType = config.edgeFnType;
       if (ceremonyType === "confirmation") {
-        const trad = formData.tradition || "";
+        const trad = formData["tradition"] || "";
         if (trad === "catholic_communion") edgeFnType = "first_communion";
         else if (trad === "catholic_firmung") edgeFnType = "firmung";
       }
@@ -449,12 +449,12 @@ export default function CeremonyWriter({ config }: Props) {
       const combinedNotes = [allTranscripts, notes].filter(Boolean).join("\n\n---\nSprachnotizen:\n");
 
       const resp = await fetch(
-        `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/ceremony-writer`,
+        `${import.meta.env["VITE_SUPABASE_URL"]}/functions/v1/ceremony-writer`,
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+            Authorization: `Bearer ${import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"]}`,
           },
           body: JSON.stringify({
             ceremonyType: edgeFnType,
@@ -560,7 +560,7 @@ export default function CeremonyWriter({ config }: Props) {
       <SEOHead titleKey={config.seoTitleKey} descKey={config.seoDescKey} path={config.seoPath} />
 
       {/* Header */}
-      <header className="border-b bg-card/80 backdrop-blur-sm sticky top-0 z-10">
+      <header className="border-b bg-card/80 backdrop-blur-xs sticky top-0 z-10">
         <div className="max-w-3xl mx-auto px-4 py-2.5 flex items-center justify-between">
           <div className="flex items-center gap-2 min-w-0">
             <Link to="/mein-bereich" className="hidden md:block">

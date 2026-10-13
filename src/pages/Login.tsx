@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "@/lib/router-compat";
 import { supabase } from "@/integrations/supabase/client";
 import { lovable } from "@/integrations/lovable/index";
 import { useAuth } from "@/hooks/use-auth";
@@ -12,7 +12,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Mail, Loader2, ArrowLeft, Eye, EyeOff } from "lucide-react";
 import { AppLogo } from "@/components/AppLogo";
 import { useToast } from "@/hooks/use-toast";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 
 type Mode = "login" | "signup" | "forgot";
 
@@ -178,7 +178,7 @@ const Login = () => {
           </Link>
         </div>
 
-        <Card className="bg-card/90 backdrop-blur-sm border-border">
+        <Card className="bg-card/90 backdrop-blur-xs border-border">
           <CardHeader className="text-center pb-4">
             <CardTitle className="text-xl">{titles[mode]}</CardTitle>
             <CardDescription>

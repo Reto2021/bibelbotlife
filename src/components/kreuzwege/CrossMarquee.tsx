@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { ArrowRight, Camera, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useCrossPosts, type CrossPost } from "@/hooks/use-cross-posts";
@@ -151,7 +151,7 @@ export function CrossMarquee() {
       <div className="group relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]">
         <Link
           to="/kreuzwege?upload=1"
-          className="absolute bottom-4 right-4 z-20 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:scale-105 hover:bg-primary/90 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 sm:bottom-6 sm:right-6 sm:px-5 sm:py-3"
+          className="absolute bottom-4 right-4 z-20 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:scale-105 hover:bg-primary/90 hover:shadow-xl focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 sm:bottom-6 sm:right-6 sm:px-5 sm:py-3"
           aria-label={t("crossways.marquee.uploadAria")}
         >
           <Camera className="h-4 w-4" />
@@ -176,7 +176,7 @@ export function CrossMarquee() {
                   className="aspect-[4/5] w-full object-cover"
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-foreground/85 via-foreground/45 to-transparent p-3 pt-8">
-                  <p className="truncate text-sm font-semibold text-background drop-shadow">{label}</p>
+                  <p className="truncate text-sm font-semibold text-background drop-shadow-sm">{label}</p>
                 </div>
               </>
             );

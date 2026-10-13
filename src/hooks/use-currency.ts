@@ -45,7 +45,7 @@ function getCurrencyFromLocale(): string {
   if (localeCurrencyMap[locale]) return localeCurrencyMap[locale];
 
   // Try language-only match
-  const lang = locale.split("-")[0];
+  const lang = locale.split("-")[0] ?? locale;
   const langMap: Record<string, string> = {
     de: "EUR", fr: "EUR", es: "EUR", it: "EUR", nl: "EUR",
     pt: "EUR", fi: "EUR", el: "EUR", sk: "EUR", hr: "EUR",
@@ -132,7 +132,7 @@ export function useCurrency(): CurrencyConverter {
   const [rates, setRates] = useState<Record<string, number> | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const currency = useMemo(() => getCurrencyFromLocale(), []);
-  const symbol = currencySymbols[currency] || currency;
+  const symbol = currencySymbols[currency] ?? currency;
 
   useEffect(() => {
     fetchRates().then((r) => {

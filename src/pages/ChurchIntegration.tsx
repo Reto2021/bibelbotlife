@@ -2,7 +2,7 @@ import { useState } from "react";
 import { BrandedQRCode } from "@/components/BrandedQRCode";
 import { QRStickerDownload } from "@/components/QRStickerDownload";
 import { QRFlyerDownload } from "@/components/QRFlyerDownload";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link } from "@/lib/router-compat";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { Copy, Check, ArrowLeft, ExternalLink, Code2, Link2, QrCode, Globe, Mail, Loader2 } from "lucide-react";
@@ -11,7 +11,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { useToast } from "@/hooks/use-toast";
 
 const BASE_URL = "https://biblebot.life";
-const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
+const SUPABASE_URL = import.meta.env["VITE_SUPABASE_URL"];
 
 function CopyButton({ text, label }: { text: string; label?: string }) {
   const [copied, setCopied] = useState(false);
@@ -149,7 +149,7 @@ const ChurchIntegration = () => {
             </CardHeader>
             <CardContent>
               <div className="flex flex-col sm:flex-row items-start gap-4">
-                <div className="bg-white p-3 rounded-xl border shadow-sm">
+                <div className="bg-white p-3 rounded-xl border shadow-xs">
                   <BrandedQRCode value={qrLink} size={160} />
                 </div>
                 <div className="space-y-2">
