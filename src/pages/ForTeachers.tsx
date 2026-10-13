@@ -17,7 +17,7 @@ export default function ForTeachers() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const features = Array.from({ length: 9 }, (_, i) => ({
-    icon: featureIcons[i],
+    icon: featureIcons[i]!,
     title: t(`teachers.f${i + 1}Title`),
     desc: t(`teachers.f${i + 1}Desc`),
   }));

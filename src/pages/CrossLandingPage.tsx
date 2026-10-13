@@ -181,7 +181,7 @@ export default function CrossLandingPage({ type }: Props) {
           <CrossFeed posts={sorted} hasReacted={hasReacted} onReact={react} onOpen={openDetail} />
         ) : (
           <Suspense fallback={<div className="h-[70vh] rounded-xl bg-muted/40" />}>
-            <CrossMap posts={filtered} center={me ? [me.lat, me.lng] : undefined} zoom={me ? 11 : 6} />
+            <CrossMap posts={filtered} {...(me ? { center: [me.lat, me.lng] as [number, number] } : {})} zoom={me ? 11 : 6} />
           </Suspense>
         )}
 

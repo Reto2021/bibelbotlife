@@ -95,7 +95,8 @@ export function MyCrosses() {
     if (status !== "all") next.set("status", status);
     if (sort !== "newest") next.set("sort", sort);
     if (next.toString() !== sp.toString()) {
-      navigate({ search: next.toString() }, { replace: true });
+      const qs = next.toString();
+      navigate(`${location.pathname}${qs ? `?${qs}` : ""}`, { replace: true });
     }
   }, [debouncedQuery, status, sort, location.search, navigate]);
 
@@ -110,7 +111,7 @@ export function MyCrosses() {
       counts.set(place, (counts.get(place) ?? 0) + 1);
     }
     const list = [...counts.entries()].map(([place, count]) => ({ place, count }));
-    if (list.length === 1 && list[0].place.toLowerCase() === q) return [];
+    if (list.length === 1 && list[0]!.place.toLowerCase() === q) return [];
     return list
       .sort((a, b) => b.count - a.count || a.place.localeCompare(b.place))
       .slice(0, 8);
@@ -329,7 +330,8 @@ export function MyCrosses() {
                 setActiveSuggestion((i) => (i <= 0 ? suggestions.length - 1 : i - 1));
               } else if (e.key === "Enter" && activeSuggestion >= 0) {
                 e.preventDefault();
-                applySuggestion(suggestions[activeSuggestion]);
+                const sel = suggestions[activeSuggestion];
+                if (sel) applySuggestion(sel);
               } else if (e.key === "Escape") {
                 setSuggestOpen(false);
               }

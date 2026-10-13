@@ -55,7 +55,7 @@ function DonationForm() {
   const [showCheckout, setShowCheckout] = useState(false);
 
   const getAmountCents = (): number => {
-    if (selectedPreset !== null) return PRESET_AMOUNTS[selectedPreset].cents;
+    if (selectedPreset !== null) return PRESET_AMOUNTS[selectedPreset]!.cents;
     const parsed = parseFloat(customAmount);
     if (!isNaN(parsed) && parsed >= 1) return Math.round(parsed * 100);
     return 0;
