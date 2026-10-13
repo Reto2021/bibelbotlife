@@ -52,6 +52,9 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
+    // Server render and the first client render both use German so hydration matches;
+    // applyDetectedLanguage() switches to the visitor's language right after hydration.
+    lng: "de",
     resources: {
       de: { translation: de }, en: { translation: en }, fr: { translation: fr },
       es: { translation: es }, it: { translation: it }, pl: { translation: pl },
@@ -81,5 +84,14 @@ i18n
       lookupLocalStorage: "biblebot-lang",
     },
   });
+
+/** Runs the browser language detector (localStorage → navigator) and switches language. Client-only. */
+export function applyDetectedLanguage() {
+  if (typeof window === "undefined") return;
+  const detector = i18n.services.languageDetector as { detect?: () => string | string[] | undefined } | undefined;
+  const detected = detector?.detect?.();
+  const lng = Array.isArray(detected) ? detected[0] : detected;
+  if (lng && lng !== i18n.language) void i18n.changeLanguage(lng);
+}
 
 export default i18n;
