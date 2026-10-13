@@ -959,7 +959,7 @@ export default function OutreachAdmin() {
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {loadingCampaigns && <div className="col-span-full text-center py-8 text-muted-foreground"><Loader2 className="h-6 w-6 animate-spin mx-auto" /></div>}
         {campaigns.map((c: any) => {
-          const st = CAMPAIGN_STATUS[c.status] || CAMPAIGN_STATUS["paused"];
+          const st = CAMPAIGN_STATUS[c.status] || CAMPAIGN_STATUS["paused"]!;
           const isSelected = c.id === selectedCampaignId;
           return (
             <Card
@@ -1192,7 +1192,7 @@ export default function OutreachAdmin() {
                     </TableHeader>
                     <TableBody>
                       {leads.map((lead: any) => {
-                        const ls = LEAD_STATUS[lead.status] || LEAD_STATUS["new"];
+                        const ls = LEAD_STATUS[lead.status] || LEAD_STATUS["new"]!;
                         return (
                           <TableRow key={lead.id}>
                             <TableCell className="font-medium">
