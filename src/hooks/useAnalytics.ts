@@ -3,6 +3,7 @@ import { useLocation } from "@/lib/router-compat";
 import { supabase } from "@/integrations/supabase/client";
 
 const getSessionId = (): string => {
+  if (typeof window === "undefined") return "";
   let id = sessionStorage.getItem("bb_sid");
   if (!id) {
     id = crypto.randomUUID();
@@ -13,6 +14,7 @@ const getSessionId = (): string => {
 
 /** Persistent visitor ID across sessions (localStorage) */
 const getVisitorId = (): string => {
+  if (typeof window === "undefined") return "";
   let id = localStorage.getItem("bb_vid");
   if (!id) {
     id = crypto.randomUUID();
