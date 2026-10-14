@@ -130,10 +130,15 @@ export default function VersePage() {
   const path = `/vers/${slug}`;
   const url = `${SITE}${path}`;
 
-  const title =
+  const isGermanPsalm23 = lang === "de" && parsed.book.number === 19 && parsed.chapter === 23;
+  const title = isGermanPsalm23
+    ? `Psalm 23,${parsed.verse}: Bedeutung & Erklärung | BibleBot.Life`
+    :
     seo?.title ||
     `${referenceLabel} – ${t("verse.titleSuffix", "Bedeutung, Kontext & Reflexion")}`;
-  const description =
+  const description = isGermanPsalm23
+    ? `Psalm 23 Bedeutung: Entdecke Vers ${parsed.verse} im Kontext des Hirtenpsalms, vergleiche Bibelübersetzungen und stelle deine Fragen im kostenlosen Bibel-Chat.`
+    :
     seo?.meta_description ||
     (primaryText
       ? `${primaryText.slice(0, 140)}… – ${t("verse.descSuffix", "Bedeutung, Kontext und persönliche Reflexion zu")} ${referenceLabel}.`
@@ -172,6 +177,7 @@ export default function VersePage() {
         description={description}
         path={path}
         canonicalUrl={url}
+        type="article"
       />
       {structured.length > 0 && <StructuredData data={structured} />}
       <SiteHeader />

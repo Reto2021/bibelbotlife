@@ -12,6 +12,8 @@ interface SEOHeadProps {
   canonicalUrl?: string | undefined;
   /** Override OG image. */
   image?: string | undefined;
+  /** Open Graph content type for this page. */
+  type?: "website" | "article" | undefined;
   /** Set <meta name="robots">. Defaults to "index,follow". */
   robots?: string | undefined;
   /** Whether to emit hreflang tags. Default: true. */
@@ -29,6 +31,7 @@ export const SEOHead = ({
   path = "",
   canonicalUrl,
   image,
+  type = "website",
   robots = "index,follow,max-image-preview:large",
   withHreflang = true,
 }: SEOHeadProps) => {
@@ -52,12 +55,14 @@ export const SEOHead = ({
         {resolvedTitle && <meta property="og:title" content={resolvedTitle} />}
         {resolvedDesc && <meta property="og:description" content={resolvedDesc} />}
         <meta property="og:url" content={canonical} />
+        <meta property="og:type" content={type} />
         <meta property="og:image" content={ogImage} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         {resolvedTitle && <meta name="twitter:title" content={resolvedTitle} />}
         {resolvedDesc && <meta name="twitter:description" content={resolvedDesc} />}
         <meta name="twitter:image" content={ogImage} />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       {withHreflang && <HreflangTags path={path} />}
     </>

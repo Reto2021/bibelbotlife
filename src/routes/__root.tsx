@@ -96,10 +96,12 @@ function FallbackSeo() {
       <meta name="description" content={DESCRIPTION} />
       <meta property="og:title" content={OG_TITLE} />
       <meta property="og:description" content={OG_DESCRIPTION} />
+      <meta property="og:type" content="website" />
       <meta property="og:image" content={OG_IMAGE} />
       <meta name="twitter:title" content={OG_TITLE} />
       <meta name="twitter:description" content={OG_DESCRIPTION} />
       <meta name="twitter:image" content={OG_IMAGE} />
+      <meta name="twitter:card" content="summary_large_image" />
     </Helmet>
   );
 }
@@ -119,18 +121,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "apple-mobile-web-app-capable", content: "yes" },
       { name: "apple-mobile-web-app-status-bar-style", content: "black-translucent" },
       { name: "apple-mobile-web-app-title", content: "BibleBot" },
-      { property: "og:type", content: "website" },
       { property: "og:site_name", content: "BibleBot.Life" },
       { property: "og:locale", content: "de_CH" },
       { property: "og:locale:alternate", content: "en_US" },
       { property: "og:locale:alternate", content: "fr_FR" },
       { property: "og:locale:alternate", content: "es_ES" },
       { property: "og:locale:alternate", content: "it_IT" },
-      { property: "og:image:secure_url", content: OG_IMAGE },
-      { property: "og:image:alt", content: "BibleBot.Life – Dein persönlicher Begleiter" },
-      { property: "og:image:type", content: "image/png" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image:alt", content: "BibleBot.Life – Dein persönlicher Begleiter" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
