@@ -1,3 +1,4 @@
+import { bibleGreeting } from "@/lib/bible-greeting.functions";
 import { useRef, useState } from "react";
 import { Link } from "@/lib/router-compat";
 import {
@@ -222,16 +223,15 @@ function ShareGreetingDialog({ moment }: { moment: BibleMoment }) {
     setLoading(true);
     setGreeting(null);
     try {
-      const { data, error } = await supabase.functions.invoke("bible-greeting", {
-        body: {
+      const data = await bibleGreeting({
+        data: {
           recipient_name: recipient,
           occasion: cfg.occasion || "Geburtstag",
           relationship: cfg.relationship || "",
           language: moment.language || "de",
         },
       });
-      if (error) throw error;
-      setGreeting(data as any);
+      setGreeting(data);
     } catch (e: any) {
       toast.error("Konnte Gruss nicht generieren");
     } finally {

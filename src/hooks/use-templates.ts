@@ -37,7 +37,7 @@ export function useCreateTemplate() {
   const { user } = useAuth();
 
   return useMutation({
-    mutationFn: async (input: { name: string; tradition: string; blocks: ServiceBlockData[]; church_id?: string }) => {
+    mutationFn: async (input: { name: string; tradition: string; blocks: ServiceBlockData[]; church_id?: string | undefined }) => {
       const { error } = await supabase.from("service_templates").insert({
         name: input.name,
         tradition: input.tradition as any,

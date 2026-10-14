@@ -12,7 +12,7 @@ import {
 import { Button } from "@/components/ui/button";
 import type { CrossPost, CrossInteraction } from "@/hooks/use-cross-posts";
 import { getCrossPostUrl } from "@/hooks/use-cross-posts";
-import CrossMap from "./CrossMap";
+import CrossMap from "./LazyCrossMap";
 
 interface Props {
   post: CrossPost | null;
@@ -177,7 +177,7 @@ export function CrossDetailModal({ post, open, onOpenChange, hasReacted, onReact
                   center={[post.lat as number, post.lng as number]}
                   zoom={zoom}
                   height="240px"
-                  onMarkerClick={openExternalMaps}
+                  onMarkerClick={() => { openExternalMaps(); }}
                 />
                 <div className="flex flex-wrap items-center justify-between gap-2">
                   <p className="text-xs text-muted-foreground">

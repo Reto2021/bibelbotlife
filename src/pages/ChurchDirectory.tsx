@@ -1,4 +1,15 @@
 import { useState } from "react";
+
+type ChurchRow = {
+  id: string;
+  slug: string;
+  name: string;
+  denomination: string | null;
+  city: string | null;
+  country: string | null;
+  logo_url: string | null;
+  plan_tier: string | null;
+};
 import { useTranslation } from "react-i18next";
 import { Link } from "@/lib/router-compat";
 import { useQuery } from "@tanstack/react-query";
@@ -27,7 +38,7 @@ const ChurchDirectory = () => {
   });
 
   const filtered = churches.filter(
-    (c) =>
+    (c: ChurchRow) =>
       c.name.toLowerCase().includes(search.toLowerCase()) ||
       (c.city?.toLowerCase().includes(search.toLowerCase()) ?? false) ||
       (c.denomination?.toLowerCase().includes(search.toLowerCase()) ?? false)
@@ -74,7 +85,7 @@ const ChurchDirectory = () => {
             </div>
           ) : (
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filtered.map((church) => (
+              {filtered.map((church: ChurchRow) => (
                 <Link key={church.id} to={`/church/${church.slug}`}>
                   <Card className="bg-card/80 border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1 h-full">
                     <CardHeader className="flex flex-row items-center gap-3">

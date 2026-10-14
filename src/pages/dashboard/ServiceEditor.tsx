@@ -57,7 +57,7 @@ export default function ServiceEditor() {
 
   const initialType = (isNew && searchParams.get("type")) || "regular";
   const [title, setTitle] = useState(SERVICE_TYPE_TITLES[initialType] || "Neuer Gottesdienst");
-  const [serviceDate, setServiceDate] = useState(new Date().toISOString().split("T")[0]);
+  const [serviceDate, setServiceDate] = useState(new Date().toISOString().split("T")[0]!);
   const [serviceTime, setServiceTime] = useState("10:00");
   const [serviceType, setServiceType] = useState(initialType);
   const [tradition, setTradition] = useState("reformed");

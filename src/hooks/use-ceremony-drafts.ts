@@ -1,3 +1,4 @@
+import { omitUndefined } from "@/lib/omit-undefined";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/use-auth";
@@ -8,11 +9,11 @@ type CeremonyType = "funeral" | "wedding" | "baptism" | "confirmation";
 
 interface DraftData {
   ceremony_type: CeremonyType;
-  title?: string;
-  person_name?: string;
-  form_data?: Record<string, unknown>;
-  transcripts?: Array<{ text: string; duration: number }>;
-  generated_text?: string;
+  title?: string | undefined;
+  person_name?: string | undefined;
+  form_data?: Record<string, unknown> | undefined;
+  transcripts?: Array<{ text: string; duration: number }> | undefined;
+  generated_text?: string | undefined;
 }
 
 export function useCeremonyDrafts(ceremonyType?: CeremonyType) {
@@ -36,17 +37,17 @@ export function useCeremonyDrafts(ceremonyType?: CeremonyType) {
   });
 
   const saveDraft = useMutation({
-    mutationFn: async ({ id, ...data }: DraftData & { id?: string }) => {
+    mutationFn: async ({ id, ...data }: DraftData & { id?: string | undefined }) => {
       if (id) {
         const { data: updated, error } = await supabase
           .from("ceremony_drafts")
-          .update({
+          .update(omitUndefined({
             title: data.title,
             person_name: data.person_name,
             form_data: (data.form_data ?? {}) as Json,
             transcripts: (data.transcripts ?? []) as unknown as Json,
             generated_text: data.generated_text,
-          })
+          }))
           .eq("id", id)
           .select()
           .single();
@@ -55,7 +56,7 @@ export function useCeremonyDrafts(ceremonyType?: CeremonyType) {
       } else {
         const { data: created, error } = await supabase
           .from("ceremony_drafts")
-          .insert({
+          .insert(omitUndefined({
             user_id: user!.id,
             ceremony_type: data.ceremony_type,
             title: data.title,
@@ -63,7 +64,7 @@ export function useCeremonyDrafts(ceremonyType?: CeremonyType) {
             form_data: (data.form_data ?? {}) as Json,
             transcripts: (data.transcripts ?? []) as unknown as Json,
             generated_text: data.generated_text,
-          })
+          }))
           .select()
           .single();
         if (error) throw error;

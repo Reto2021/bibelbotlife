@@ -17,7 +17,11 @@ function getInitial(): boolean {
 }
 
 export function useSeniorMode() {
-  const [isSenior, setIsSenior] = useState(getInitial);
+  const [isSenior, setIsSenior] = useState(false);
+  // Stored preference is read after hydration so server and first client render match.
+  useEffect(() => {
+    setIsSenior(getInitial());
+  }, []);
 
   useEffect(() => {
     try {

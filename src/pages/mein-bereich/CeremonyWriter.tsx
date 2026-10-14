@@ -227,7 +227,7 @@ export default function CeremonyWriter({ config }: Props) {
   // Load draft
   useEffect(() => {
     if (draftsQuery.data && draftsQuery.data.length > 0 && !draftId) {
-      const draft = draftsQuery.data[0];
+      const draft = draftsQuery.data[0]!;
       setDraftId(draft.id);
       setDraftTitle((draft as any).title || "");
       setShareToken(draft.share_token);
@@ -386,7 +386,7 @@ export default function CeremonyWriter({ config }: Props) {
         id: draftId || undefined,
         ceremony_type: ceremonyType,
         title: draftTitle,
-        person_name: formData[config.fields[0]?.key] || "",
+        person_name: formData[config.fields[0]?.key ?? ""] || "",
         form_data: { ...formData, _notes: notes },
         transcripts: recordings.map((r) => ({ text: r.transcript, duration: r.duration })),
         generated_text: generatedText,

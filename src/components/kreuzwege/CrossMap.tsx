@@ -33,10 +33,10 @@ interface Props {
   zoom?: number | undefined;
   height?: string | undefined;
   pickMode?: boolean | undefined;
-  picked?: { lat: number | undefined; lng: number } | null;
-  onPick?: (lat: number, lng: number) => void | undefined;
+  picked?: { lat: number; lng: number } | null | undefined;
+  onPick?: ((lat: number, lng: number) => void) | undefined;
   /** When set, clicking a marker calls this instead of showing the popup. */
-  onMarkerClick?: (post: CrossPost) => void | undefined;
+  onMarkerClick?: ((post: CrossPost) => void) | undefined;
 }
 
 /** Keeps the map view in sync when center/zoom change from outside. */

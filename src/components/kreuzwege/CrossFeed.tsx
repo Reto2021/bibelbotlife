@@ -6,7 +6,7 @@ interface Props {
   posts: CrossPost[];
   hasReacted: (id: string, kind: CrossInteraction) => boolean;
   onReact: (id: string, kind: CrossInteraction) => void;
-  onOpen?: (id: string) => void;
+  onOpen?: ((id: string) => void) | undefined;
 }
 
 export function CrossFeed({ posts, hasReacted, onReact, onOpen }: Props) {

@@ -20,7 +20,7 @@ import { useChatHistory, type ChatMessage } from "@/hooks/use-chat-history";
 import { ChatSidebar } from "@/components/ChatSidebar";
 import { useAuth } from "@/hooks/use-auth";
 import { useChurchBranding } from "@/hooks/use-church-branding";
-import { getHeroVariant } from "@/lib/hero-variant";
+import { getHeroVariant, type HeroVariant } from "@/lib/hero-variant";
 
 const TYPEWRITER_SPEED = 45;
 const PAUSE_BETWEEN = 2800;
@@ -29,10 +29,12 @@ const DELETE_SPEED = 25;
 const DAILY_VERSES_COUNT = 14;
 
 function getDailyVerseIndex() {
-  const today = new Date();
-  const dayOfYear = Math.floor(
-    (today.getTime() - new Date(today.getFullYear(), 0, 0).getTime()) / 86400000
-  );
+  // Day of year in Swiss time, so the server and the browser pick the same verse.
+  const [y, m, d] = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Zurich" })
+    .format(new Date())
+    .split("-")
+    .map(Number);
+  const dayOfYear = Math.floor((Date.UTC(y!, m! - 1, d!) - Date.UTC(y!, 0, 0)) / 86400000);
   return dayOfYear % DAILY_VERSES_COUNT;
 }
 
@@ -77,7 +79,9 @@ const TOPIC_CHIPS: TopicChip[] = [
 ];
 
 const SpeechRecognition =
-  (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+  typeof window === "undefined"
+    ? undefined
+    : (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
 
 function getSpeechLang(lang: string): string {
   const map: Record<string, string> = { de: "de-CH", en: "en-US", fr: "fr-FR", es: "es-ES" };
@@ -100,9 +104,11 @@ function likelyHasCitations(text: string): boolean {
 }
 
 function QABadge({ qa, t }: { qa: QAResult | "loading" | "skipped"; t: (key: string, opts?: any) => string }) {
-  const [showExtended, setShowExtended] = useState(() => {
-    return !localStorage.getItem("biblebot-qa-explained");
-  });
+  const [showExtended, setShowExtended] = useState(false);
+  // Stored preference is read after hydration so server and first client render match.
+  useEffect(() => {
+    setShowExtended(!localStorage.getItem("biblebot-qa-explained"));
+  }, []);
 
   useEffect(() => {
     if (showExtended && qa !== "loading" && qa !== "skipped" && typeof qa === "object" && !qa.has_issues) {
@@ -338,6 +344,11 @@ function LiveDemoPreview({ onTryIt }: { onTryIt: () => void }) {
 
 export function ChatHero() {
   const { t, i18n } = useTranslation();
+  // Voice input support is only known in the browser; resolve after hydration.
+  const [speechSupported, setSpeechSupported] = useState(false);
+  useEffect(() => {
+    setSpeechSupported(!!SpeechRecognition);
+  }, []);
   const [input, setInput] = useState("");
   const [placeholder, setPlaceholder] = useState("");
   const [phraseIndex, setPhraseIndex] = useState(0);
@@ -347,7 +358,11 @@ export function ChatHero() {
   const [chatMode, setChatMode] = useState<ChatMode>("normal");
   const [isListening, setIsListening] = useState(false);
   const [showMoreChips, setShowMoreChips] = useState(false);
-  const [loginHintDismissed, setLoginHintDismissed] = useState(() => localStorage.getItem("biblebot-login-hint-dismissed") === "1");
+  const [loginHintDismissed, setLoginHintDismissed] = useState(true);
+  // Stored preference is read after hydration so server and first client render match.
+  useEffect(() => {
+    setLoginHintDismissed(localStorage.getItem("biblebot-login-hint-dismissed") === "1");
+  }, []);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [selectedSuggestion, setSelectedSuggestion] = useState(-1);
@@ -390,10 +405,14 @@ export function ChatHero() {
     quote: t(`dailyVerses.v${dailyVerseIdx}`),
     ref: t(`dailyVerses.r${dailyVerseIdx}`),
   }), [dailyVerseIdx, t]);
-  const heroVariant = useMemo(() => getHeroVariant(), []);
+  // A/B headline variant is stored in the browser, so it is resolved after hydration.
+  const [heroVariant, setHeroVariant] = useState<HeroVariant | null>(null);
+  useEffect(() => {
+    setHeroVariant(getHeroVariant());
+  }, []);
   const heroViewTrackedRef = useRef(false);
   useEffect(() => {
-    if (heroViewTrackedRef.current) return;
+    if (!heroVariant || heroViewTrackedRef.current) return;
     heroViewTrackedRef.current = true;
     track("hero_variant_view", { variant: heroVariant });
   }, [heroVariant, track]);
@@ -633,7 +652,7 @@ export function ChatHero() {
     async (text: string) => {
       if (!text.trim() || isLoading) return;
       track("chat_hero_submit", user ? { query: text.slice(0, 50) } : {});
-      track("hero_variant_cta_click", { variant: heroVariant });
+      track("hero_variant_cta_click", { variant: heroVariant ?? "praesenz" });
 
       const userMsg: ChatMessage = { role: "user", content: text.trim() };
 
@@ -965,9 +984,9 @@ export function ChatHero() {
                     className="pointer-events-none absolute inset-x-0 -top-16 h-64 bg-glow animate-candle"
                   />
                   <h1 className="font-display font-normal text-5xl sm:text-6xl md:text-7xl text-foreground leading-[1.05] tracking-tight text-balance">
-                    {t(`hero.title1_${heroVariant}`)}
+                    {t(`hero.title1_${heroVariant ?? "praesenz"}`)}
                     <span className="italic text-primary block sm:inline">
-                      {t(`hero.title2_${heroVariant}`)}
+                      {t(`hero.title2_${heroVariant ?? "praesenz"}`)}
                     </span>
                   </h1>
                 </div>
@@ -1033,7 +1052,7 @@ export function ChatHero() {
                       autoComplete="off"
                     />
                     <div className="absolute right-3 flex items-center gap-1.5">
-                      {SpeechRecognition && (
+                      {speechSupported && (
                         <button
                           type="button"
                           onClick={isListening ? stopListening : startListening}
@@ -1335,7 +1354,7 @@ export function ChatHero() {
                       className={`${s.inputHeight} max-h-[120px] ${s.inputText} resize-none`}
                       rows={isSenior ? 2 : 1}
                     />
-                    {SpeechRecognition && (
+                    {speechSupported && (
                       <Button size="icon" variant={isListening ? "destructive" : "outline"} onClick={isListening ? stopListening : startListening} aria-pressed={isListening} aria-label={isListening ? "Aufnahme stoppen" : "Spracheingabe starten"} className={`${s.btnSize} shrink-0 ${isListening ? "animate-pulse" : ""}`}>
                         {isListening ? <Mic className={s.btnIcon} /> : <MicOff className={s.btnIcon} />}
                       </Button>

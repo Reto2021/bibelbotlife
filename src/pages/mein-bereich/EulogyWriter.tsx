@@ -75,7 +75,7 @@ const EulogyWriter = () => {
   // Load most recent draft
   useEffect(() => {
     if (draftsQuery.data && draftsQuery.data.length > 0 && !draftId) {
-      const draft = draftsQuery.data[0];
+      const draft = draftsQuery.data[0]!;
       setDraftId(draft.id);
       setDraftTitle((draft as any).title || "");
       setPersonName(draft.person_name || "");

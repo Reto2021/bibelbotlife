@@ -136,15 +136,22 @@ export function DailyImpulse() {
   const currentLang = normalizeLang(i18n.resolvedLanguage || i18n.language);
   const [collapsed, setCollapsed] = useState(true); // will sync with isMobile on first render
   const [collapsedInitialized, setCollapsedInitialized] = useState(false);
-  const [impulse, setImpulse] = useState<Impulse | null>(() => getCachedImpulse(currentLang));
+  // Cached impulse lives in the browser; it is picked up by the effect below after hydration.
+  const [impulse, setImpulse] = useState<Impulse | null>(null);
   const [isExpanded, setIsExpanded] = useState(false);
-  const [isLoading, setIsLoading] = useState(!impulse);
+  const [isLoading, setIsLoading] = useState(true);
   const [shareImageUrl, setShareImageUrl] = useState<string | null>(null);
   const [shareBlob, setShareBlob] = useState<Blob | null>(null);
   const [isGeneratingImage, setIsGeneratingImage] = useState(false);
-  const [isSubscribed, setIsSubscribed] = useState(() => localStorage.getItem(SUBSCRIBED_KEY) === "1");
-  const [subscriberId, setSubscriberId] = useState<string | null>(() => localStorage.getItem(SUBSCRIBER_ID_KEY));
-  const [subscriberChannel, setSubscriberChannel] = useState<string | null>(() => localStorage.getItem(SUBSCRIBER_CHANNEL_KEY));
+  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [subscriberId, setSubscriberId] = useState<string | null>(null);
+  const [subscriberChannel, setSubscriberChannel] = useState<string | null>(null);
+  // Stored preference is read after hydration so server and first client render match.
+  useEffect(() => {
+    setIsSubscribed(localStorage.getItem(SUBSCRIBED_KEY) === "1");
+    setSubscriberId(localStorage.getItem(SUBSCRIBER_ID_KEY));
+    setSubscriberChannel(localStorage.getItem(SUBSCRIBER_CHANNEL_KEY));
+  }, []);
   const [showChannels, setShowChannels] = useState(false);
   const [showManage, setShowManage] = useState(false);
   const [isSubscribing, setIsSubscribing] = useState(false);

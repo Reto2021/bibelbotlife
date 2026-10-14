@@ -339,20 +339,29 @@ export function BibleBotChat() {
   const [chatMode, setChatMode] = useState<ChatMode>("normal");
   const [showTeaser, setShowTeaser] = useState(false);
   const [messages, setMessages] = useState<Message[]>(loadMessages);
-  const [journeyDay, setJourneyDay] = useState(getJourneyDay);
+  const [journeyDay, setJourneyDay] = useState(0);
+  // Stored values are read after hydration so server and first client render match.
+  useEffect(() => {
+    setJourneyDay(getJourneyDay());
+  }, []);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isListening, setIsListening] = useState(false);
   const [isTranscribing, setIsTranscribing] = useState(false);
-  const [botName, setBotName] = useState(getBotName);
+  const [botName, setBotName] = useState(DEFAULT_BOT_NAME);
+  useEffect(() => {
+    setBotName(getBotName());
+  }, []);
   const [isEditingName, setIsEditingName] = useState(false);
   const [nameDraft, setNameDraft] = useState("");
   const [showWelcome, setShowWelcome] = useState(false);
   const [showJourneyOffer, setShowJourneyOffer] = useState(false);
   const [showRenameTip, setShowRenameTip] = useState(false);
-  const [preferredTranslation, setPreferredTranslation] = useState(() => {
-    try { return localStorage.getItem("bibelbot-translation") || "auto"; } catch { return "auto"; }
-  });
+  const [preferredTranslation, setPreferredTranslation] = useState("auto");
+  // Stored preference is read after hydration so server and first client render match.
+  useEffect(() => {
+    try { setPreferredTranslation(localStorage.getItem("bibelbot-translation") || "auto"); } catch { /* storage unavailable */ }
+  }, []);
   const [showScrollDown, setShowScrollDown] = useState(false);
   const [voiceModeOpen, setVoiceModeOpen] = useState(false);
   const [recordingSeconds, setRecordingSeconds] = useState(0);
