@@ -201,7 +201,7 @@ const CHANNELS = [
 function formatDateHuman(iso: string): string {
   try {
     const [y, m, d] = iso.split("-").map(Number);
-    return new Date(Date.UTC(y, m - 1, d)).toLocaleDateString("de-CH", {
+    return new Date(Date.UTC(y!, m! - 1, d!)).toLocaleDateString("de-CH", {
       day: "2-digit", month: "long", year: "numeric",
     });
   } catch { return iso; }

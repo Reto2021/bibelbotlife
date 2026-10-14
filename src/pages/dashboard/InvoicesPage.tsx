@@ -75,7 +75,7 @@ export default function InvoicesPage() {
 
   const updateLineItem = (index: number, field: keyof LineItem, value: string | number) => {
     const updated = [...lineItems];
-    updated[index] = { ...updated[index], [field]: value };
+    updated[index] = { ...updated[index]!, [field]: value };
     setLineItems(updated);
   };
 
@@ -305,7 +305,7 @@ export default function InvoicesPage() {
               </TableHeader>
               <TableBody>
                 {invoices.map((inv: any) => {
-                  const statusInfo = STATUS_BADGES[inv.status] || STATUS_BADGES["draft"];
+                  const statusInfo = STATUS_BADGES[inv.status] || STATUS_BADGES["draft"]!;
                   return (
                     <TableRow key={inv.id}>
                       <TableCell className="font-mono text-sm">{inv.invoice_number}</TableCell>

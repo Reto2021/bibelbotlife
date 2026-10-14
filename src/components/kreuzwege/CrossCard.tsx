@@ -18,7 +18,7 @@ interface Props {
   hasReacted: (id: string, kind: CrossInteraction) => boolean;
   onReact: (id: string, kind: CrossInteraction) => void;
   /** Opens the detail overlay showing the full, uncropped photo. */
-  onOpen?: (id: string) => void;
+  onOpen?: (id: string) => void | undefined;
 }
 
 export function CrossCard({ post, hasReacted, onReact, onOpen }: Props) {

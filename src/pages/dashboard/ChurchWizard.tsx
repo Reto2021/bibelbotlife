@@ -120,7 +120,7 @@ export default function ChurchWizard() {
     }
   };
 
-  const StepIcon = steps[step].icon;
+  const StepIcon = steps[step]!.icon;
 
   return (
     <div className="max-w-lg mx-auto">
@@ -143,8 +143,8 @@ export default function ChurchWizard() {
       <Card>
         <CardHeader className="text-center">
           <StepIcon className="h-10 w-10 text-primary mx-auto mb-2" />
-          <CardTitle className="text-xl">{steps[step].title}</CardTitle>
-          <CardDescription>{steps[step].desc}</CardDescription>
+          <CardTitle className="text-xl">{steps[step]!.title}</CardTitle>
+          <CardDescription>{steps[step]!.desc}</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           {step === 0 && (

@@ -204,12 +204,12 @@ export default function VersePage() {
             {/* Primary verse card */}
             <Card className="p-6 md:p-8 bg-gradient-to-br from-primary/5 to-secondary/5 border-primary/20">
               <blockquote className="text-xl md:text-2xl leading-relaxed font-serif italic text-foreground">
-                «{verses[0].text}»
+                «{verses[0]!.text}»
               </blockquote>
               <div className="mt-4 flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
                 <span className="font-medium">{referenceLabel}</span>
                 <span className="px-2 py-0.5 rounded-full bg-muted text-xs uppercase tracking-wide">
-                  {verses[0].translation}
+                  {verses[0]!.translation}
                 </span>
               </div>
             </Card>

@@ -129,7 +129,7 @@ export default function RecordsPage() {
 
   const updateParticipant = (i: number, field: "name" | "role", value: string) => {
     const updated = [...form.participants];
-    updated[i] = { ...updated[i], [field]: value };
+    updated[i] = { ...updated[i]!, [field]: value };
     setForm({ ...form, participants: updated });
   };
 
