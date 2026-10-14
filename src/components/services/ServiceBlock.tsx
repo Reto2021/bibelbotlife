@@ -19,8 +19,8 @@ export interface ServiceBlockData {
   type: BlockType;
   title: string;
   content: string;
-  duration?: number;
-  metadata?: Record<string, unknown>;
+  duration?: number | undefined;
+  metadata?: Record<string, unknown> | undefined;
 }
 
 const BLOCK_ICONS: Record<BlockType, React.ElementType> = {

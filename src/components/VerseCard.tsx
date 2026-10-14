@@ -4,11 +4,11 @@ import { MoodSymbol, type MoodId } from "@/components/MoodSymbol";
 interface VerseCardProps {
   verseText: string;
   verseRef: string;
-  explanation?: string;
-  qrUrl?: string;
-  mood?: MoodId;
+  explanation?: string | undefined;
+  qrUrl?: string | undefined;
+  mood?: MoodId | undefined;
   // 1080x1920 for stories, 1080x1080 for square
-  format?: "story" | "square";
+  format?: "story" | "square" | undefined;
 }
 
 /**

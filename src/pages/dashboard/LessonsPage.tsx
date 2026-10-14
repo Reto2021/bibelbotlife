@@ -65,8 +65,8 @@ export default function LessonsPage() {
     setCurrentDate(d);
   };
 
-  const today = new Date().toISOString().split("T")[0];
-  const formatDateKey = (d: Date) => d.toISOString().split("T")[0];
+  const today = new Date().toISOString().split("T")[0]!;
+  const formatDateKey = (d: Date) => d.toISOString().split("T")[0]!;
 
   const upcomingLessons = useMemo(() => {
     return (lessons ?? []).filter((l) => l.service_date >= today).slice(0, 50);

@@ -160,7 +160,7 @@ export function useCircle() {
 
       const { error: joinError } = await supabase
         .from("circle_members")
-        .insert({ circle_id: data[0].id, user_id: user!.id, display_name: displayName });
+        .insert({ circle_id: data[0]!.id, user_id: user!.id, display_name: displayName });
       if (joinError) throw joinError;
     },
     onSuccess: () => {

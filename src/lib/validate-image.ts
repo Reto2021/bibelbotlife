@@ -44,7 +44,7 @@ export interface ImageValidationResult {
 
 function extensionOf(name: string): string {
   const match = /\.([a-z0-9]+)$/i.exec(name.trim());
-  return match ? match[1].toLowerCase() : "";
+  return match ? match[1]!.toLowerCase() : "";
 }
 
 /** Synchronous checks: MIME type, extension and file size. */

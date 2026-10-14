@@ -94,7 +94,7 @@ export default function SharedDraft() {
     );
   }
 
-  const Icon = typeIcons[draft.ceremony_type] || Cross;
+  const Icon = typeIcons[draft.ceremony_type as keyof typeof typeIcons] || Cross;
 
   return (
     <div className="min-h-screen bg-background">

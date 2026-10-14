@@ -304,7 +304,7 @@ export function UploadImageSlot({
               min={MIN_CROP_ZOOM}
               max={MAX_CROP_ZOOM}
               step={0.02}
-              onValueChange={([v]) => applyZoom(v)}
+              onValueChange={([v]) => applyZoom(v!)}
               aria-label={t("crossways.upload.cropZoom", "Zoom")}
             />
             <span className="w-10 shrink-0 text-right text-xs text-muted-foreground">

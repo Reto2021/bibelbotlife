@@ -3,19 +3,19 @@ import { useTranslation } from "react-i18next";
 import { HreflangTags } from "./seo/HreflangTags";
 
 interface SEOHeadProps {
-  titleKey?: string;
-  descKey?: string;
-  title?: string;
-  description?: string;
-  path?: string;
+  titleKey?: string | undefined;
+  descKey?: string | undefined;
+  title?: string | undefined;
+  description?: string | undefined;
+  path?: string | undefined;
   /** Override canonical URL completely (e.g. for verse/topic pages). */
-  canonicalUrl?: string;
+  canonicalUrl?: string | undefined;
   /** Override OG image. */
-  image?: string;
+  image?: string | undefined;
   /** Set <meta name="robots">. Defaults to "index,follow". */
-  robots?: string;
+  robots?: string | undefined;
   /** Whether to emit hreflang tags. Default: true. */
-  withHreflang?: boolean;
+  withHreflang?: boolean | undefined;
 }
 
 const SITE = "https://biblebot.life";

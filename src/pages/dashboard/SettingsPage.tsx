@@ -214,7 +214,7 @@ export default function SettingsPage() {
   );
 
   const subStatus = church.subscription_status ?? "trial";
-  const statusInfo = STATUS_LABELS[subStatus] ?? STATUS_LABELS["trial"];
+  const statusInfo = STATUS_LABELS[subStatus] ?? STATUS_LABELS["trial"]!;
 
   return (
     <div className="space-y-6">

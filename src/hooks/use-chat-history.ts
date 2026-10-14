@@ -219,8 +219,8 @@ export function useChatHistory() {
 
         const nextMessages = [...conversation.messages];
         for (let i = nextMessages.length - 1; i >= 0; i -= 1) {
-          if (nextMessages[i].role === "assistant") {
-            nextMessages[i] = { ...nextMessages[i], content };
+          if (nextMessages[i]!.role === "assistant") {
+            nextMessages[i] = { ...nextMessages[i]!, content };
             break;
           }
         }

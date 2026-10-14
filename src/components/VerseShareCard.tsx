@@ -112,7 +112,7 @@ export function extractMainVerse(text: string): { verse: string; reference: stri
   const quoteRe = /[«"„"]([^«»"„"]{15,400})[»""]/g;
   let match: RegExpExecArray | null;
   while ((match = quoteRe.exec(text)) !== null) {
-    const verse = match[1].trim();
+    const verse = match[1]!.trim();
     const after = text.slice(match.index + match[0].length, match.index + match[0].length + 80);
     const refMatch = after.match(BIBLE_REF_RE);
     if (refMatch) {

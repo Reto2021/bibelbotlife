@@ -28,15 +28,15 @@ function ClickPicker({ onPick }: { onPick: (lat: number, lng: number) => void })
 }
 
 interface Props {
-  posts?: CrossPost[];
-  center?: [number, number];
-  zoom?: number;
-  height?: string;
-  pickMode?: boolean;
-  picked?: { lat: number; lng: number } | null;
-  onPick?: (lat: number, lng: number) => void;
+  posts?: CrossPost[] | undefined;
+  center?: [number, number] | undefined;
+  zoom?: number | undefined;
+  height?: string | undefined;
+  pickMode?: boolean | undefined;
+  picked?: { lat: number | undefined; lng: number } | null;
+  onPick?: (lat: number, lng: number) => void | undefined;
   /** When set, clicking a marker calls this instead of showing the popup. */
-  onMarkerClick?: (post: CrossPost) => void;
+  onMarkerClick?: (post: CrossPost) => void | undefined;
 }
 
 /** Keeps the map view in sync when center/zoom change from outside. */
