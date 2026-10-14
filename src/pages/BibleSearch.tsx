@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { useSearchParams } from "@/lib/router-compat";
+import { useSearchParams, useLocation } from "@/lib/router-compat";
 import { Search, Book, Loader2, ChevronRight } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -50,6 +50,7 @@ const TRANSLATION_LABELS: Record<string, string> = {
 export default function BibleSearch() {
   const { t, i18n } = useTranslation();
   const [searchParams] = useSearchParams();
+  const { pathname } = useLocation();
   const [query, setQuery] = useState("");
   const [translation, setTranslation] = useState("all");
   const [results, setResults] = useState<SearchResponse | null>(null);
@@ -120,6 +121,7 @@ export default function BibleSearch() {
       <SEOHead
         title={t("bibleSearch.seoTitle")}
         description={t("bibleSearch.seoDesc")}
+        path={pathname}
       />
 
       <div className="min-h-screen bg-background">
