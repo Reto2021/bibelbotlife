@@ -10,7 +10,7 @@ import { EmbeddedCheckoutProvider, EmbeddedCheckout } from "@stripe/react-stripe
 import { getStripe, getStripeEnvironment } from "@/lib/stripe";
 import { supabase } from "@/integrations/supabase/client";
 import { PaymentTestModeBanner } from "@/components/PaymentTestModeBanner";
-import { Link, useSearchParams } from "@/lib/router-compat";
+import { Link, useLocation, useSearchParams } from "@/lib/router-compat";
 
 const PRESET_AMOUNTS = [
   { label: "CHF 5", cents: 500, icon: Coffee },
@@ -168,7 +168,8 @@ function DonationForm() {
 
 export default function Spenden() {
   const [searchParams] = useSearchParams();
-  const isThankYou = window.location.pathname.includes("/danke");
+  const { pathname } = useLocation();
+  const isThankYou = pathname.includes("/danke");
 
   if (isThankYou) return <DonationThankYou />;
 

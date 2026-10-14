@@ -18,7 +18,12 @@ export const ChurchBanner = () => {
     }
   }, [slugFromUrl]);
 
-  const storedSlug = slugFromUrl || localStorage.getItem("biblebot-church");
+  // Read after hydration so server and first client render match.
+  const [savedSlug, setSavedSlug] = useState<string | null>(null);
+  useEffect(() => {
+    setSavedSlug(localStorage.getItem("biblebot-church"));
+  }, []);
+  const storedSlug = slugFromUrl || savedSlug;
 
   const { data: church } = useQuery({
     queryKey: ["church-banner", storedSlug],

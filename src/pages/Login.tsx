@@ -57,11 +57,12 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const [consentContact, setConsentContact] = useState(false);
   const [churchName, setChurchName] = useState<string | null>(null);
-  const nextPath = safeNextPath(new URLSearchParams(window.location.search).get("next"));
+  // Only used inside event handlers, so reading window here cannot affect the rendered markup.
+  const isBrowser = typeof window !== "undefined";
+  const nextPath = isBrowser ? safeNextPath(new URLSearchParams(window.location.search).get("next")) : null;
   const successPath = nextPath ?? "/mein-bereich";
-  const oauthRedirect = nextPath
-    ? `${window.location.origin}${nextPath}`
-    : window.location.origin;
+  const origin = isBrowser ? window.location.origin : "";
+  const oauthRedirect = nextPath ? `${origin}${nextPath}` : origin;
 
 
   // Check if user arrived via a church link

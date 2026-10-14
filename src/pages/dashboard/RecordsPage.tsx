@@ -1,3 +1,4 @@
+import { omitUndefined } from "@/lib/omit-undefined";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FileText, Plus, Pencil, Trash2, Search } from "lucide-react";
@@ -93,14 +94,14 @@ export default function RecordsPage() {
 
   const handleSave = async () => {
     try {
-      const payload = {
+      const payload = omitUndefined({
         record_type: form.record_type,
         record_date: form.record_date,
         officiant: form.officiant || undefined,
         record_number: form.record_number || undefined,
         notes: form.notes || undefined,
         participants: form.participants.filter((p) => p.name.trim()),
-      };
+      });
       if (editId) {
         await updateRecord.mutateAsync({ id: editId, ...payload });
         toast.success(t("records.updated", "Eintrag aktualisiert"));

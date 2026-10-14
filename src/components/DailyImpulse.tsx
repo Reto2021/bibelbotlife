@@ -142,9 +142,15 @@ export function DailyImpulse() {
   const [shareImageUrl, setShareImageUrl] = useState<string | null>(null);
   const [shareBlob, setShareBlob] = useState<Blob | null>(null);
   const [isGeneratingImage, setIsGeneratingImage] = useState(false);
-  const [isSubscribed, setIsSubscribed] = useState(() => localStorage.getItem(SUBSCRIBED_KEY) === "1");
-  const [subscriberId, setSubscriberId] = useState<string | null>(() => localStorage.getItem(SUBSCRIBER_ID_KEY));
-  const [subscriberChannel, setSubscriberChannel] = useState<string | null>(() => localStorage.getItem(SUBSCRIBER_CHANNEL_KEY));
+  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [subscriberId, setSubscriberId] = useState<string | null>(null);
+  const [subscriberChannel, setSubscriberChannel] = useState<string | null>(null);
+  // Stored preference is read after hydration so server and first client render match.
+  useEffect(() => {
+    setIsSubscribed(localStorage.getItem(SUBSCRIBED_KEY) === "1");
+    setSubscriberId(localStorage.getItem(SUBSCRIBER_ID_KEY));
+    setSubscriberChannel(localStorage.getItem(SUBSCRIBER_CHANNEL_KEY));
+  }, []);
   const [showChannels, setShowChannels] = useState(false);
   const [showManage, setShowManage] = useState(false);
   const [isSubscribing, setIsSubscribing] = useState(false);

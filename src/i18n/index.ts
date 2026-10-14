@@ -41,7 +41,7 @@ import ht from "./locales/ht.json";
 import ar from "./locales/ar.json";
 import he from "./locales/he.json";
 
-const supportedLngs = [
+export const supportedLngs = [
   "de", "en", "fr", "es", "it", "pl", "cs", "pt", "nl", "ro",
   "da", "no", "sv", "fi", "el", "hr", "sr", "hu", "sk", "bg",
   "ru", "uk", "ka", "hy", "ko", "tl", "id", "vi", "zh",
@@ -52,8 +52,8 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    // Server render and the first client render both use German so hydration matches;
-    // applyDetectedLanguage() switches to the visitor's language right after hydration.
+    // The root route switches to the per-request language (cookie / Accept-Language) before
+    // rendering, so server HTML and the first client render always use the same language.
     lng: "de",
     resources: {
       de: { translation: de }, en: { translation: en }, fr: { translation: fr },
@@ -86,25 +86,33 @@ i18n
     },
   });
 
-/** Runs the browser language detector (localStorage → navigator) and switches language. Client-only. */
-export function applyDetectedLanguage() {
-  if (typeof window === "undefined") return;
-  const detector = i18n.services.languageDetector as { detect?: () => string | string[] | undefined } | undefined;
-  const detected = detector?.detect?.();
-  const lng = Array.isArray(detected) ? detected[0] : detected;
-  if (lng && lng !== i18n.language) void i18n.changeLanguage(lng);
-  if (!cacheListenerAttached) {
-    cacheListenerAttached = true;
-    i18n.on("languageChanged", (next) => {
-      try {
-        window.localStorage.setItem("biblebot-lang", next);
-      } catch {
-        // storage unavailable (private mode) — ignore
-      }
-    });
+export const LANG_COOKIE = "biblebot-lang";
+export const LANG_STORAGE_KEY = "biblebot-lang";
+
+/** Picks the first supported language from a list of candidates (e.g. "en-US" → "en"); defaults to German. */
+export function resolveLanguage(candidates: Array<string | null | undefined>): string {
+  for (const c of candidates) {
+    if (!c) continue;
+    const base = c.trim().toLowerCase().split(/[-_]/)[0] ?? "";
+    if ((supportedLngs as readonly string[]).includes(base)) return base;
   }
+  return "de";
 }
 
-let cacheListenerAttached = false;
+let persistListenerAttached = false;
+
+/** Remembers language changes in localStorage and a cookie (so the server renders in the same language). Client-only. */
+export function persistLanguageChanges() {
+  if (typeof window === "undefined" || persistListenerAttached) return;
+  persistListenerAttached = true;
+  i18n.on("languageChanged", (next) => {
+    try {
+      window.localStorage.setItem(LANG_STORAGE_KEY, next);
+    } catch {
+      // storage unavailable (private mode) — ignore
+    }
+    document.cookie = `${LANG_COOKIE}=${encodeURIComponent(next)}; path=/; max-age=31536000; samesite=lax`;
+  });
+}
 
 export default i18n;

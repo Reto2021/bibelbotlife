@@ -34,7 +34,7 @@ import { UploadImageSlot } from "./UploadImageSlot";
 import { CROP_ASPECTS, type CropAspect } from "@/lib/transform-image";
 import { VersePicker } from "./VersePicker";
 
-const CrossMap = lazy(() => import("./CrossMap"));
+import CrossMap from "./LazyCrossMap";
 
 const MAX_FILES = 6;
 

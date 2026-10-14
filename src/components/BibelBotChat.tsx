@@ -350,9 +350,11 @@ export function BibleBotChat() {
   const [showWelcome, setShowWelcome] = useState(false);
   const [showJourneyOffer, setShowJourneyOffer] = useState(false);
   const [showRenameTip, setShowRenameTip] = useState(false);
-  const [preferredTranslation, setPreferredTranslation] = useState(() => {
-    try { return localStorage.getItem("bibelbot-translation") || "auto"; } catch { return "auto"; }
-  });
+  const [preferredTranslation, setPreferredTranslation] = useState("auto");
+  // Stored preference is read after hydration so server and first client render match.
+  useEffect(() => {
+    try { setPreferredTranslation(localStorage.getItem("bibelbot-translation") || "auto"); } catch { /* storage unavailable */ }
+  }, []);
   const [showScrollDown, setShowScrollDown] = useState(false);
   const [voiceModeOpen, setVoiceModeOpen] = useState(false);
   const [recordingSeconds, setRecordingSeconds] = useState(0);

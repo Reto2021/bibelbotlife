@@ -17,7 +17,7 @@ export default function ForCelebrants() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const features = Array.from({ length: 10 }, (_, i) => ({
-    icon: featureIcons[i],
+    icon: featureIcons[i]!,
     title: t(`celebrants.f${i + 1}Title`),
     desc: t(`celebrants.f${i + 1}Desc`),
   }));

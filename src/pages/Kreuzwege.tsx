@@ -12,7 +12,7 @@ import { CrossDetailModal } from "@/components/kreuzwege/CrossDetailModal";
 import { useCrossPosts, distanceKm, getCrossPostUrl } from "@/hooks/use-cross-posts";
 import { useToast } from "@/hooks/use-toast";
 
-const CrossMap = lazy(() => import("@/components/kreuzwege/CrossMap"));
+import CrossMap from "@/components/kreuzwege/LazyCrossMap";
 
 export default function Kreuzwege() {
   const { t } = useTranslation();

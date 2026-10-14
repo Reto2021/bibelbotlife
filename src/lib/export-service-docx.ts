@@ -56,7 +56,7 @@ interface ExportOptions {
   serviceType: string;
   tradition: string;
   blocks: ServiceBlockData[];
-  churchName?: string;
+  churchName?: string | undefined;
   notes?: string;
 }
 

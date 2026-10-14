@@ -331,7 +331,7 @@ export default function ConductorMode() {
     );
   }
 
-  const Icon = BLOCK_ICONS[currentBlock?.type] || FileText;
+  const Icon = (currentBlock ? BLOCK_ICONS[currentBlock.type] : undefined) || FileText;
   const NextIcon = nextBlock ? (BLOCK_ICONS[nextBlock.type] || FileText) : null;
 
   return (
@@ -394,26 +394,26 @@ export default function ConductorMode() {
         <div className="flex items-center gap-2 mb-4">
           <Icon className="h-6 w-6 text-primary" />
           <span className="text-sm font-medium text-primary uppercase tracking-wider">
-            {BLOCK_LABELS[currentBlock.type] || currentBlock.type}
+            {currentBlock ? BLOCK_LABELS[currentBlock.type] || currentBlock.type : ""}
           </span>
-          {currentBlock.duration && (
+          {currentBlock?.duration && (
             <span className="text-xs text-muted-foreground ml-2">
-              ~{currentBlock.duration} Min. | {formatTime(blockElapsed)}
+              ~{currentBlock?.duration} Min. | {formatTime(blockElapsed)}
             </span>
           )}
         </div>
 
         {/* Title */}
-        {currentBlock.title && (
+        {currentBlock?.title && (
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-6 max-w-4xl leading-tight">
-            {currentBlock.title}
+            {currentBlock?.title}
           </h2>
         )}
 
         {/* Content */}
-        {currentBlock.content && (
+        {currentBlock?.content && (
           <div className="text-xl sm:text-2xl lg:text-3xl leading-relaxed text-center max-w-3xl whitespace-pre-wrap text-foreground/90">
-            {currentBlock.content}
+            {currentBlock?.content}
           </div>
         )}
       </div>

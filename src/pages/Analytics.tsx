@@ -112,7 +112,7 @@ const COLORS = [
 
 /** KPI card with optional info tooltip */
 const StatCard = ({ icon: Icon, label, value, sub, tooltip, color = "text-primary" }: {
-  icon: any; label: string; value: string | number; sub?: string; tooltip?: string; color?: string;
+  icon: any; label: string; value: string | number; sub?: string | undefined; tooltip?: string | undefined; color?: string | undefined;
 }) => (
   <Card className="min-w-0">
     <CardContent className="pt-4 pb-3 px-3">
@@ -392,7 +392,7 @@ const Analytics = () => {
                       tickFormatter={(h) => `${h}h`} />
                     <YAxis tick={{ fontSize: 10 }} className="fill-muted-foreground" allowDecimals={false} />
                     <RTooltip contentStyle={{ background: "hsl(var(--card))", border: "1px solid hsl(var(--border))", borderRadius: 8, fontSize: 12 }}
-                      formatter={(v: number) => [v, "Events"]}
+                      formatter={(v) => [v, "Events"]}
                       labelFormatter={(h) => `${h}:00 – ${h}:59`} />
                     <Bar dataKey="count" fill="hsl(var(--chart-3))" radius={[3, 3, 0, 0]} />
                   </BarChart>
@@ -415,7 +415,7 @@ const Analytics = () => {
                     <XAxis dataKey="day" tick={{ fontSize: 11 }} className="fill-muted-foreground" />
                     <YAxis tick={{ fontSize: 10 }} className="fill-muted-foreground" allowDecimals={false} />
                     <RTooltip contentStyle={{ background: "hsl(var(--card))", border: "1px solid hsl(var(--border))", borderRadius: 8, fontSize: 12 }}
-                      formatter={(v: number) => [v, "Events"]} />
+                      formatter={(v) => [v, "Events"]} />
                     <Bar dataKey="count" fill="hsl(var(--chart-4))" radius={[3, 3, 0, 0]} />
                   </BarChart>
                 </ResponsiveContainer>
@@ -511,8 +511,8 @@ const Analytics = () => {
                     let anomaly = false;
                     let dropPct = 0;
                     if (trend.length >= 2) {
-                      const prev = trend[trend.length - 2].sessions;
-                      const curr = trend[trend.length - 1].sessions;
+                      const prev = trend[trend.length - 2]!.sessions;
+                      const curr = trend[trend.length - 1]!.sessions;
                       if (prev > 0) {
                         dropPct = Math.round(((prev - curr) / prev) * 100);
                         anomaly = dropPct > 50;
@@ -775,10 +775,10 @@ const Analytics = () => {
                         outerRadius={70}
                         paddingAngle={3}
                         dataKey="value"
-                        label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
+                        label={({ name, percent }) => `${name} ${((percent ?? 0) * 100).toFixed(0)}%`}
                       >
                         {deviceData.map((_, i) => (
-                          <Cell key={i} fill={COLORS[i % COLORS.length]} />
+                          <Cell key={i} fill={COLORS[i % COLORS.length]!} />
                         ))}
                       </Pie>
                       <RTooltip contentStyle={{ background: "hsl(var(--card))", border: "1px solid hsl(var(--border))", borderRadius: 8, fontSize: 12 }} />
@@ -825,7 +825,7 @@ const Analytics = () => {
                   <YAxis tick={{ fontSize: 10 }} className="fill-muted-foreground" allowDecimals={false} />
                   <RTooltip
                     contentStyle={{ background: "hsl(var(--card))", border: "1px solid hsl(var(--border))", borderRadius: 8, fontSize: 12 }}
-                    formatter={(value: number) => [value, "Interaktionen"]}
+                    formatter={(value) => [value, "Interaktionen"]}
                   />
                   <Bar dataKey="interactions" fill="hsl(var(--chart-3))" radius={[3, 3, 0, 0]} />
                 </BarChart>
@@ -1073,7 +1073,7 @@ const Analytics = () => {
             <CardContent>
               <div className="h-48">
                 <ResponsiveContainer width="100%" height="100%">
-                  <AreaChart data={data?.referrerTrend?.map((d) => ({ ...d, date: String(d["date"]).slice(5) }))}>
+                  <AreaChart data={data?.referrerTrend?.map((d) => ({ ...d, date: String(d["date"]).slice(5) })) ?? []}>
                     <CartesianGrid strokeDasharray="3 3" className="stroke-border" />
                     <XAxis dataKey="date" tick={{ fontSize: 10 }} className="fill-muted-foreground" />
                     <YAxis tick={{ fontSize: 10 }} className="fill-muted-foreground" allowDecimals={false} />
@@ -1084,8 +1084,8 @@ const Analytics = () => {
                         type="monotone"
                         dataKey={key}
                         stackId="1"
-                        fill={COLORS[i % COLORS.length]}
-                        stroke={COLORS[i % COLORS.length]}
+                        fill={COLORS[i % COLORS.length]!}
+                        stroke={COLORS[i % COLORS.length]!}
                         fillOpacity={0.4}
                         strokeWidth={1.5}
                       />

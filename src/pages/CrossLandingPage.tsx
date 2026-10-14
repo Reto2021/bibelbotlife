@@ -11,7 +11,7 @@ import { useCrossPosts, distanceKm } from "@/hooks/use-cross-posts";
 import { useToast } from "@/hooks/use-toast";
 import { Link } from "@/lib/router-compat";
 
-const CrossMap = lazy(() => import("@/components/kreuzwege/CrossMap"));
+import CrossMap from "@/components/kreuzwege/LazyCrossMap";
 
 type LandingType = "wegkreuze" | "gipfelkreuze" | "bergkreuze";
 

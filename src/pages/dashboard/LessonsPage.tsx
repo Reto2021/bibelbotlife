@@ -190,7 +190,7 @@ export default function LessonsPage() {
               <Button variant="ghost" size="icon" onClick={() => navigate(-1)}><ChevronLeft className="h-5 w-5" /></Button>
               <div className="text-center">
                 <h2 className="text-sm font-semibold text-foreground">
-                  Woche vom {weekDays[0].toLocaleDateString("de-CH", { day: "numeric", month: "long" })}
+                  Woche vom {weekDays[0]!.toLocaleDateString("de-CH", { day: "numeric", month: "long" })}
                 </h2>
                 <Button variant="link" size="sm" className="text-xs" onClick={() => setCurrentDate(new Date())}>Heute</Button>
               </div>

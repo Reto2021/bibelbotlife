@@ -1,7 +1,7 @@
 // ported from main.tsx
 import "@/i18n";
 
-import { useEffect, useState, type ReactNode } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { QueryClientProvider, type QueryClient } from "@tanstack/react-query";
 import {
   createRootRouteWithContext,
@@ -9,14 +9,16 @@ import {
   Link,
   Outlet,
   Scripts,
+  useLocation,
   useRouter,
   type ErrorComponentProps,
 } from "@tanstack/react-router";
-import { HelmetProvider } from "react-helmet-async";
-import { useTranslation } from "react-i18next";
+import { Helmet, HelmetProvider } from "react-helmet-async";
+import { I18nextProvider, useTranslation } from "react-i18next";
 
 import appCss from "../styles.css?url";
-import { applyDetectedLanguage } from "@/i18n";
+import i18n, { LANG_COOKIE, LANG_STORAGE_KEY, persistLanguageChanges } from "@/i18n";
+import { getRequestLanguage } from "@/lib/request-language";
 import { reportLovableError } from "@/lib/lovable-error-reporting";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
@@ -76,14 +78,41 @@ const STRUCTURED_DATA = {
 
 const RTL_LANGUAGES = ["ar", "he", "fa", "ur"];
 
+// Pages whose component does not render <SEOHead>. They get the site-wide title and
+// description from <FallbackSeo>. Pages with <SEOHead> own their title, description,
+// canonical and hreflang — the root never emits those, so crawlers see one set per page.
+const PAGES_WITHOUT_SEO = [
+  /^\/impressum$/, /^\/datenschutz$/, /^\/analytics$/, /^\/church\//, /^\/church-integration\//, /^\/embed$/,
+  /^\/login$/, /^\/reset-password$/, /^\/unsubscribe$/, /^\/splash\//, /^\/widget-preview\//, /^\/\.lovable\//,
+  /^\/dashboard(\/|$)/, /^\/mein-bereich\/(taufe|hochzeit|konfirmation)$/, /^\/mein-bereich\/?$/, /^\/admin(\/|$)/,
+];
+
+function FallbackSeo() {
+  const { pathname } = useLocation();
+  if (!PAGES_WITHOUT_SEO.some((re) => re.test(pathname))) return null;
+  return (
+    <Helmet>
+      <title>{TITLE}</title>
+      <meta name="description" content={DESCRIPTION} />
+      <meta property="og:title" content={OG_TITLE} />
+      <meta property="og:description" content={OG_DESCRIPTION} />
+      <meta property="og:image" content={OG_IMAGE} />
+      <meta name="twitter:title" content={OG_TITLE} />
+      <meta name="twitter:description" content={OG_DESCRIPTION} />
+      <meta name="twitter:image" content={OG_IMAGE} />
+    </Helmet>
+  );
+}
+
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
+  // Language is decided per request on the server and reused for the first client render.
+  loader: () => ({ lng: getRequestLanguage() }),
+  staleTime: Infinity,
+  shouldReload: false,
   head: () => ({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1.0, viewport-fit=cover" },
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1" },
       { name: "google-site-verification", content: "NGHhCKgn6AtaWgpCIWIL_PBk-3urR6YcBwviWudK23w" },
       { name: "author", content: "BibleBot.Life" },
       { name: "theme-color", content: "#D4911A" },
@@ -91,25 +120,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "apple-mobile-web-app-status-bar-style", content: "black-translucent" },
       { name: "apple-mobile-web-app-title", content: "BibleBot" },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: `${SITE}/` },
       { property: "og:site_name", content: "BibleBot.Life" },
       { property: "og:locale", content: "de_CH" },
       { property: "og:locale:alternate", content: "en_US" },
       { property: "og:locale:alternate", content: "fr_FR" },
       { property: "og:locale:alternate", content: "es_ES" },
       { property: "og:locale:alternate", content: "it_IT" },
-      { property: "og:title", content: OG_TITLE },
-      { property: "og:description", content: OG_DESCRIPTION },
-      { property: "og:image", content: OG_IMAGE },
       { property: "og:image:secure_url", content: OG_IMAGE },
-      { property: "og:image:width", content: "1200" },
-      { property: "og:image:height", content: "630" },
       { property: "og:image:alt", content: "BibleBot.Life – Dein persönlicher Begleiter" },
       { property: "og:image:type", content: "image/png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: OG_TITLE },
-      { name: "twitter:description", content: OG_DESCRIPTION },
-      { name: "twitter:image", content: OG_IMAGE },
       { name: "twitter:image:alt", content: "BibleBot.Life – Dein persönlicher Begleiter" },
     ],
     links: [
@@ -119,9 +139,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "stylesheet", href: FONTS_URL },
       { rel: "preconnect", href: BACKEND_ORIGIN, crossOrigin: "anonymous" },
       { rel: "dns-prefetch", href: BACKEND_ORIGIN },
-      { rel: "canonical", href: `${SITE}/` },
-      ...HREFLANGS.map((lng) => ({ rel: "alternate", hrefLang: lng, href: `${SITE}/?lng=${lng}` })),
-      { rel: "alternate", hrefLang: "x-default", href: `${SITE}/` },
       { rel: "manifest", href: "/manifest.json" },
       { rel: "apple-touch-icon", sizes: "192x192", href: "/favicon-gold.png" },
       { rel: "icon", type: "image/png", sizes: "192x192", href: "/favicon-gold.png", media: "(prefers-color-scheme: light)" },
@@ -138,8 +155,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 function RootShell({ children }: { children: ReactNode }) {
+  const lng = Route.useLoaderData({ select: (d) => d.lng }) ?? "de";
   return (
-    <html lang="de" suppressHydrationWarning>
+    <html lang={lng} dir={RTL_LANGUAGES.includes(lng) ? "rtl" : "ltr"} suppressHydrationWarning>
       <head>
         <HeadContent />
       </head>
@@ -166,7 +184,17 @@ function DirectionManager() {
   const { i18n } = useTranslation();
 
   useEffect(() => {
-    applyDetectedLanguage();
+    persistLanguageChanges();
+    // One-time upgrade for visitors who saved a language before it was also stored in a cookie.
+    const hasCookie = document.cookie.split(";").some((c) => c.trim().startsWith(`${LANG_COOKIE}=`));
+    let saved: string | null = null;
+    try {
+      saved = localStorage.getItem(LANG_STORAGE_KEY);
+    } catch {
+      saved = null;
+    }
+    if (!hasCookie && saved && saved !== i18n.language) void i18n.changeLanguage(saved);
+    else if (!hasCookie) document.cookie = `${LANG_COOKIE}=${encodeURIComponent(i18n.language)}; path=/; max-age=31536000; samesite=lax`;
   }, []);
 
   useEffect(() => {
@@ -203,6 +231,15 @@ function ChurchColorOverride() {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const lng = Route.useLoaderData({ select: (d) => d.lng }) ?? "de";
+  // Server: a per-request copy so concurrent requests never share a language.
+  // Browser: the shared instance, switched before the first render so hydration matches.
+  const i18nInstance = useMemo(() => {
+    if (typeof window === "undefined") return i18n.cloneInstance({ lng });
+    if (i18n.language !== lng) void i18n.changeLanguage(lng);
+    return i18n;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   const [showSplash, setShowSplash] = useState(false);
 
   useEffect(() => {
@@ -213,6 +250,7 @@ function RootComponent() {
   }, []);
 
   return (
+    <I18nextProvider i18n={i18nInstance}>
     <HelmetProvider>
       <QueryClientProvider client={queryClient}>
         <TooltipProvider>
@@ -225,6 +263,7 @@ function RootComponent() {
               <HostRedirect />
               <DirectionManager />
               <ChurchColorOverride />
+              <FallbackSeo />
               <Outlet />
               <InstallPrompt />
               <VoiceFloatingButton />
@@ -233,6 +272,7 @@ function RootComponent() {
         </TooltipProvider>
       </QueryClientProvider>
     </HelmetProvider>
+    </I18nextProvider>
   );
 }
 
