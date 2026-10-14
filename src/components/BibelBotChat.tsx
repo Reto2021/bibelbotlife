@@ -339,12 +339,19 @@ export function BibleBotChat() {
   const [chatMode, setChatMode] = useState<ChatMode>("normal");
   const [showTeaser, setShowTeaser] = useState(false);
   const [messages, setMessages] = useState<Message[]>(loadMessages);
-  const [journeyDay, setJourneyDay] = useState(getJourneyDay);
+  const [journeyDay, setJourneyDay] = useState(0);
+  // Stored values are read after hydration so server and first client render match.
+  useEffect(() => {
+    setJourneyDay(getJourneyDay());
+  }, []);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isListening, setIsListening] = useState(false);
   const [isTranscribing, setIsTranscribing] = useState(false);
-  const [botName, setBotName] = useState(getBotName);
+  const [botName, setBotName] = useState(DEFAULT_BOT_NAME);
+  useEffect(() => {
+    setBotName(getBotName());
+  }, []);
   const [isEditingName, setIsEditingName] = useState(false);
   const [nameDraft, setNameDraft] = useState("");
   const [showWelcome, setShowWelcome] = useState(false);
