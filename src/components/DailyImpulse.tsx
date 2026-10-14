@@ -136,9 +136,10 @@ export function DailyImpulse() {
   const currentLang = normalizeLang(i18n.resolvedLanguage || i18n.language);
   const [collapsed, setCollapsed] = useState(true); // will sync with isMobile on first render
   const [collapsedInitialized, setCollapsedInitialized] = useState(false);
-  const [impulse, setImpulse] = useState<Impulse | null>(() => getCachedImpulse(currentLang));
+  // Cached impulse lives in the browser; it is picked up by the effect below after hydration.
+  const [impulse, setImpulse] = useState<Impulse | null>(null);
   const [isExpanded, setIsExpanded] = useState(false);
-  const [isLoading, setIsLoading] = useState(!impulse);
+  const [isLoading, setIsLoading] = useState(true);
   const [shareImageUrl, setShareImageUrl] = useState<string | null>(null);
   const [shareBlob, setShareBlob] = useState<Blob | null>(null);
   const [isGeneratingImage, setIsGeneratingImage] = useState(false);
