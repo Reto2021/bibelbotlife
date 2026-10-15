@@ -2599,16 +2599,22 @@ export type Database = {
       telegram_bot_state: {
         Row: {
           id: number
+          poll_lock_token: string | null
+          poll_lock_until: string | null
           update_offset: number
           updated_at: string
         }
         Insert: {
           id: number
+          poll_lock_token?: string | null
+          poll_lock_until?: string | null
           update_offset?: number
           updated_at?: string
         }
         Update: {
           id?: number
+          poll_lock_token?: string | null
+          poll_lock_until?: string | null
           update_offset?: number
           updated_at?: string
         }
@@ -3066,6 +3072,10 @@ export type Database = {
       }
     }
     Functions: {
+      acquire_telegram_poll_lock: {
+        Args: { p_token: string }
+        Returns: boolean
+      }
       admin_list_contacts: {
         Args: never
         Returns: {
@@ -3332,6 +3342,11 @@ export type Database = {
           question_count: number
         }[]
       }
+      release_telegram_poll_lock: {
+        Args: { p_token: string }
+        Returns: undefined
+      }
+      renew_telegram_poll_lock: { Args: { p_token: string }; Returns: boolean }
       search_bible_verses:
         | {
             Args: {

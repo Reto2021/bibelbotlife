@@ -1,5 +1,6 @@
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 import { verifyCronKey } from '../_shared/auth.ts';
+import { withPollLock } from './poll-lock.ts';
 
 const GATEWAY_URL = 'https://connector-gateway.lovable.dev/telegram';
 const MAX_RUNTIME_MS = 55_000;
@@ -25,10 +26,13 @@ Deno.serve(async (req: Request) => {
   const TELEGRAM_API_KEY = Deno.env.get('TELEGRAM_API_KEY');
   if (!TELEGRAM_API_KEY) throw new Error('TELEGRAM_API_KEY is not configured');
 
-  const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
-  const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
+  const supabaseUrl = Deno.env.get('SUPABASE_URL');
+  const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
+  if (!supabaseUrl || !supabaseServiceKey) throw new Error('Database configuration is missing');
   const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
+  try {
+  const result = await withPollLock(supabase, async (lockToken) => {
   let totalProcessed = 0;
   let currentOffset: number;
 
@@ -52,6 +56,8 @@ Deno.serve(async (req: Request) => {
 
     if (remainingMs < MIN_REMAINING_MS) break;
 
+    const { data: renewed, error: renewError } = await supabase.rpc('renew_telegram_poll_lock', { p_token: lockToken });
+    if (renewError || renewed !== true) throw new Error('Telegram polling lock was lost');
     const timeout = Math.min(50, Math.floor(remainingMs / 1000) - 5);
     if (timeout < 1) break;
 
@@ -67,10 +73,11 @@ Deno.serve(async (req: Request) => {
         timeout,
         allowed_updates: ['message'],
       }),
+      signal: AbortSignal.timeout(remainingMs - 1_000),
     });
 
     const data = await response.json();
-    if (!response.ok) {
+    if (!response.ok || data.ok === false) {
       console.error('Telegram getUpdates error:', data);
       return new Response(JSON.stringify({ error: data }), { status: 502 });
     }
@@ -101,6 +108,8 @@ Deno.serve(async (req: Request) => {
       // Process each message
       for (const row of rows) {
         if (!row.text) continue;
+        const { data: stillOwned, error: leaseError } = await supabase.rpc('renew_telegram_poll_lock', { p_token: lockToken });
+        if (leaseError || stillOwned !== true) throw new Error('Telegram polling lock was lost');
         
         try {
           // Handle /daily command
@@ -153,6 +162,13 @@ Deno.serve(async (req: Request) => {
   }
 
   return new Response(JSON.stringify({ ok: true, processed: totalProcessed, finalOffset: currentOffset }));
+  });
+  if (result.skipped) return Response.json({ ok: true, skipped: 'already_running' });
+  return result.value;
+  } catch (error) {
+    console.error('Telegram polling failed:', error instanceof Error ? error.message : 'Unknown error');
+    return Response.json({ error: 'Telegram polling failed' }, { status: 502 });
+  }
 });
 
 async function generateAndSendReply(
