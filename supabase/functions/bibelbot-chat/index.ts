@@ -605,7 +605,7 @@ function buildBibleTools(lang: string) {
   };
 
   const EXTRA_TRANSLATION_CODES = [
-    "HRD", "GRU", "EU", "ZB", "ELB",
+    "HRD", "GRU", "EU", "ELB",
     "LUT2017", "MENG", "NLB", "HFA", "GNB", "BB", "NEUE", "NGUE",
     "NWT", "TUR", "BR", "SLT1951", "LU1545", "HER", "MNT", "PAT",
   ];
@@ -614,7 +614,7 @@ function buildBibleTools(lang: string) {
     type: "function" as const,
     function: {
       name: "lookup_bible_verse_extra",
-      description: "Schlägt Verse in einer der zusätzlichen deutschen Bibelübersetzungen nach (Henne-Rösch, Grünewald, Einheitsübersetzung, Zürcher, Luther 2017, Menge, Hoffnung für Alle, Gute Nachricht, BasisBibel, NeÜ, Neue Genfer, Buber-Rosenzweig, Tur-Sinai u.a.). Quelle: bibel.github.io. Liefert die wissenschaftliche Zitation mit. WICHTIG: aus geschützten Übersetzungen nur 1 Perikope (max. 3-7 Verse) im Antworttext zitieren, immer mit Quellenangabe.",
+      description: "Schlägt Verse in einer der zusätzlichen deutschen Bibelübersetzungen nach (Henne-Rösch, Grünewald, Einheitsübersetzung, Luther 2017, Menge, Hoffnung für Alle, Gute Nachricht, BasisBibel, NeÜ, Neue Genfer, Buber-Rosenzweig, Tur-Sinai u.a.). Quelle: bibel.github.io. Die Zürcher Bibel ist NICHT verfügbar (keine Lizenz): Wenn jemand danach fragt, sag das offen und biete Elberfelder oder BasisBibel an. Liefert die wissenschaftliche Zitation mit. WICHTIG: aus geschützten Übersetzungen nur 1 Perikope (max. 3-7 Verse) im Antworttext zitieren, immer mit Quellenangabe.",
       parameters: {
         type: "object",
         properties: {
