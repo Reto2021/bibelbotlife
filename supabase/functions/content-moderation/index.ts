@@ -6,7 +6,7 @@ import { corsHeaders } from "https://esm.sh/@supabase/supabase-js@2.95.0/cors";
  * Returns { allowed, categories, reason }.
  */
 
-const MODEL = "google/gemini-3.6-flash";
+const MODEL = "google/gemini-3.8-flash";
 
 const SYSTEM = `You are a strict content-safety reviewer for a Christian community app where
 people upload photos of wayside crosses together with a short story or Bible quote.
