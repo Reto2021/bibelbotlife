@@ -2652,6 +2652,7 @@ export type Database = {
           content: string
           created_at: string | null
           embedding: string | null
+          embedding_v2: unknown
           id: string
           metadata: Json | null
           source_type: Database["public"]["Enums"]["theology_source_type"]
@@ -2661,6 +2662,7 @@ export type Database = {
           content: string
           created_at?: string | null
           embedding?: string | null
+          embedding_v2?: unknown
           id?: string
           metadata?: Json | null
           source_type: Database["public"]["Enums"]["theology_source_type"]
@@ -2670,6 +2672,7 @@ export type Database = {
           content?: string
           created_at?: string | null
           embedding?: string | null
+          embedding_v2?: unknown
           id?: string
           metadata?: Json | null
           source_type?: Database["public"]["Enums"]["theology_source_type"]
@@ -2827,6 +2830,36 @@ export type Database = {
           verse_ref?: string
           verse_text?: string
           view_count?: number
+        }
+        Relationships: []
+      }
+      verse_meaning_index: {
+        Row: {
+          book_number: number
+          chapter: number
+          created_at: string
+          embedding: unknown
+          language: string
+          source_translation: string
+          verse: number
+        }
+        Insert: {
+          book_number: number
+          chapter: number
+          created_at?: string
+          embedding: unknown
+          language?: string
+          source_translation: string
+          verse: number
+        }
+        Update: {
+          book_number?: number
+          chapter?: number
+          created_at?: string
+          embedding?: unknown
+          language?: string
+          source_translation?: string
+          verse?: number
         }
         Relationships: []
       }
@@ -3317,6 +3350,15 @@ export type Database = {
         }
         Returns: number
       }
+      next_verses_to_embed: {
+        Args: { p_limit?: number }
+        Returns: {
+          book_number: number
+          chapter: number
+          text: string
+          verse: number
+        }[]
+      }
       read_email_batch: {
         Args: { batch_size: number; queue_name: string; vt: number }
         Returns: {
@@ -3434,6 +3476,28 @@ export type Database = {
           similarity: number
           source_type: Database["public"]["Enums"]["theology_source_type"]
           title: string
+        }[]
+      }
+      search_theology_v2: {
+        Args: { match_count?: number; query_embedding: unknown }
+        Returns: {
+          content: string
+          id: string
+          similarity: number
+          title: string
+        }[]
+      }
+      search_verse_meaning: {
+        Args: {
+          match_count?: number
+          p_language?: string
+          query_embedding: unknown
+        }
+        Returns: {
+          book_number: number
+          chapter: number
+          similarity: number
+          verse: number
         }[]
       }
       trigger_outreach_daily_report: { Args: never; Returns: undefined }

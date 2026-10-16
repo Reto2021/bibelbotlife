@@ -1100,6 +1100,51 @@ async function lookupBibleVerseExtra(
   });
 }
 
+// ── Meaning search (Gemini Embedding 2) ─────────────────────────
+const EMBED_MODEL = "google/gemini-embedding-2";
+const MEANING_MIN_SIMILARITY = 0.55;
+
+async function embedQuery(text: string): Promise<number[] | null> {
+  const res = await fetch("https://ai.gateway.lovable.dev/v1/embeddings", {
+    method: "POST",
+    headers: { Authorization: `Bearer ${Deno.env.get("LOVABLE_API_KEY")}`, "Content-Type": "application/json" },
+    body: JSON.stringify({ model: EMBED_MODEL, input: text.slice(0, 2000) }),
+  });
+  if (!res.ok) {
+    console.error("embedQuery failed", res.status, (await res.text()).slice(0, 200));
+    return null;
+  }
+  const d = await res.json();
+  return d.data?.[0]?.embedding ?? null;
+}
+
+// Finds verses by meaning (index built from BasisBibel) and returns their text
+// in the requested translation (default BasisBibel).
+async function meaningSearchVerses(supabase: any, query: string, translation?: string): Promise<any[]> {
+  const vec = await embedQuery(query);
+  if (!vec) return [];
+  const { data: hits, error } = await supabase.rpc("search_verse_meaning", {
+    query_embedding: JSON.stringify(vec), match_count: 8, p_language: "de",
+  });
+  if (error || !hits?.length) return [];
+  const good = hits.filter((h: any) => h.similarity >= MEANING_MIN_SIMILARITY);
+  if (!good.length) return [];
+  const trans = !translation || translation === "all" ? "basisbibel" : translation;
+  const table = RESTRICTED_DB_TRANSLATIONS.has(trans) ? "bible_verses_restricted" : "bible_verses";
+  const orFilter = good
+    .map((h: any) => `and(book_number.eq.${h.book_number},chapter.eq.${h.chapter},verse.eq.${h.verse})`)
+    .join(",");
+  const { data: rows } = await supabase
+    .from(table)
+    .select("book, book_number, chapter, verse, text, translation")
+    .eq("translation", trans)
+    .or(orFilter);
+  if (!rows?.length) return [];
+  const key = (r: any) => `${r.book_number}-${r.chapter}-${r.verse}`;
+  const byKey = new Map(rows.map((r: any) => [key(r), r]));
+  return good.map((h: any) => byKey.get(key(h))).filter(Boolean);
+}
+
 async function searchBibleVerses(
   query: string,
   translation?: string,
@@ -1111,6 +1156,10 @@ async function searchBibleVerses(
   );
 
   const searchLang = lang || "de";
+  // Meaning search (German index) runs in parallel with the word search below.
+  const meaningPromise = searchLang === "de"
+    ? meaningSearchVerses(supabase, query, translation).catch((e) => { console.error("meaning search", e); return []; })
+    : Promise.resolve([] as any[]);
 
   // Use AI to expand search terms in the user's language
   const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY")!;
@@ -1196,6 +1245,22 @@ Antworte NUR mit dem tsquery-String, nichts anderes. Keine Anführungszeichen, k
     results = merged.slice(0, 8);
   }
 
+  // Combine word search with meaning search: meaning hits first, then word hits, deduplicated.
+  const meaningHits = await meaningPromise;
+  if (meaningHits.length) {
+    const seen = new Set<string>();
+    const combined: any[] = [];
+    const add = (r: any) => {
+      const k = `${r.book_number ?? r.book}-${r.chapter}-${r.verse}`;
+      if (seen.has(k)) return;
+      seen.add(k);
+      combined.push(r);
+    };
+    meaningHits.slice(0, 5).forEach(add);
+    (results || []).forEach(add);
+    results = combined.slice(0, 8);
+  }
+
   if (!results || results.length === 0) {
     return `Keine Verse zu «${query}» gefunden.`;
   }
@@ -1239,6 +1304,20 @@ async function searchTheology(query: string, sourceType?: string): Promise<strin
     Deno.env.get("SUPABASE_URL")!,
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
   );
+
+  // Meaning search first (Gemini Embedding 2); falls back to word search below.
+  if (!sourceType) {
+    try {
+      const vec = await embedQuery(query);
+      if (vec) {
+        const { data: sem } = await supabase.rpc("search_theology_v2", { query_embedding: JSON.stringify(vec), match_count: 4 });
+        const good = (sem || []).filter((r: any) => r.similarity >= MEANING_MIN_SIMILARITY);
+        if (good.length) return good.map((r: any) => `**${r.title}**\n${r.content}`).join("\n\n---\n\n");
+      }
+    } catch (e) {
+      console.error("Theology meaning search error:", e);
+    }
+  }
 
   // Expand search terms via AI
   const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY")!;
