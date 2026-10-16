@@ -2060,239 +2060,186 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
       finalMessages = recentMessages;
     }
 
-    // ── Step 1: Non-streaming call WITH tools to let AI decide which verses to look up ──
-    const initialResponse = await fetch(
-      "https://ai.gateway.lovable.dev/v1/chat/completions",
-      {
+    // ── Claude Opus 5.5 via native Messages API, streamed, with tool loop ──
+    // Output is re-emitted in the OpenAI-style SSE shape the client already parses.
+    const CHAT_MODEL = "anthropic/claude-opus-5-5";
+    const openAiTools = [bibleTools.BIBLE_LOOKUP_TOOL, bibleTools.BIBLE_SEARCH_TOOL, bibleTools.BIBLE_LOOKUP_EXTRA_TOOL, THEOLOGY_SEARCH_TOOL, VALIDATE_REFERENCE_TOOL] as any[];
+    const claudeTools = openAiTools.map((t) => ({
+      name: t.function.name,
+      description: t.function.description,
+      input_schema: t.function.parameters,
+    }));
+
+    const toText = (c: unknown): string =>
+      typeof c === "string" ? c : Array.isArray(c) ? c.map((p: any) => p?.text ?? "").join("\n") : String(c ?? "");
+    const claudeMessages: any[] = [];
+    for (const m of finalMessages as any[]) {
+      if (m.role !== "user" && m.role !== "assistant") continue;
+      const text = toText(m.content).trim();
+      if (!text) continue;
+      const last = claudeMessages[claudeMessages.length - 1];
+      if (last && last.role === m.role) last.content += "\n\n" + text;
+      else claudeMessages.push({ role: m.role, content: text });
+    }
+    while (claudeMessages.length && claudeMessages[0].role !== "user") claudeMessages.shift();
+
+    const executeTool = async (name: string, args: any): Promise<string> => {
+      try {
+        switch (name) {
+          case "lookup_bible_verse":
+            return await lookupBibleVerse(args.book, args.chapter, args.verse_start, args.verse_end, args.translation, lang);
+          case "search_bible_verses":
+            return await searchBibleVerses(args.query, args.translation, lang);
+          case "search_theology":
+            return await searchTheology(args.query, args.source_type);
+          case "lookup_bible_verse_extra":
+            return await lookupBibleVerseExtra(args.translation_code, args.book, args.chapter, args.verse_start, args.verse_end);
+          case "validate_bible_reference":
+            return await validateBibleReference(args.book, args.chapter, args.verse_start, args.verse_end);
+          default:
+            return "Unbekanntes Tool.";
+        }
+      } catch (e) {
+        console.error("Tool error:", name, e);
+        return name === "validate_bible_reference"
+          ? JSON.stringify({ valid: false, reason: "internal_error", action: "ask_user" })
+          : "Fehler beim Nachschlagen.";
+      }
+    };
+
+    const callClaude = (msgs: any[]) =>
+      fetch("https://ai.gateway.lovable.dev/v1/messages", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${LOVABLE_API_KEY}`,
           "Content-Type": "application/json",
+          "anthropic-version": "2023-06-01",
+          "X-Lovable-AIG-SDK": "fetch",
         },
         body: JSON.stringify({
-          model: "openai/gpt-5.5",
-          service_tier: "priority",
-          messages: [
-            { role: "system", content: systemPrompt },
-            ...finalMessages,
-          ],
-          tools: [bibleTools.BIBLE_LOOKUP_TOOL, bibleTools.BIBLE_SEARCH_TOOL, bibleTools.BIBLE_LOOKUP_EXTRA_TOOL, THEOLOGY_SEARCH_TOOL, VALIDATE_REFERENCE_TOOL],
+          model: CHAT_MODEL,
+          max_tokens: 16000,
+          stream: true,
+          system: systemPrompt,
+          messages: msgs,
+          tools: claudeTools,
+          tool_choice: { type: "auto" },
+          output_config: { effort: "medium" },
         }),
-      }
-    );
-
-    if (!initialResponse.ok) {
-      if (initialResponse.status === 429) {
-        return new Response(
-          JSON.stringify({ error: "Zu viele Anfragen. Bitte versuche es in einer Minute erneut." }),
-          { status: 429, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-        );
-      }
-      if (initialResponse.status === 402) {
-        return new Response(
-          JSON.stringify({ error: "KI-Kontingent erschöpft. Bitte später erneut versuchen." }),
-          { status: 402, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-        );
-      }
-      const text = await initialResponse.text();
-      console.error("AI gateway error:", initialResponse.status, text);
-      return new Response(
-        JSON.stringify({ error: "KI-Fehler aufgetreten" }),
-        { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-      );
-    }
-
-    const initialData = await initialResponse.json();
-    const choice = initialData.choices?.[0];
-
-    // Check if the AI wants to call the Bible lookup tool
-    if (choice?.finish_reason === "tool_calls" || choice?.message?.tool_calls?.length > 0) {
-      const toolCalls = choice.message.tool_calls || [];
-      
-      // Execute all tool calls in parallel
-      const toolResults = await Promise.all(
-        toolCalls.map(async (tc: any) => {
-          if (tc.function.name === "lookup_bible_verse") {
-            try {
-              const args = JSON.parse(tc.function.arguments);
-              const result = await lookupBibleVerse(
-                args.book,
-                args.chapter,
-                args.verse_start,
-                args.verse_end,
-                args.translation,
-                lang
-              );
-              return { id: tc.id, result };
-            } catch (e) {
-              console.error("Tool call error:", e);
-              return { id: tc.id, result: "Fehler beim Nachschlagen des Verses." };
-            }
-          }
-          if (tc.function.name === "search_bible_verses") {
-            try {
-              const args = JSON.parse(tc.function.arguments);
-              const result = await searchBibleVerses(
-                args.query,
-                args.translation,
-                lang
-              );
-              return { id: tc.id, result };
-            } catch (e) {
-              console.error("Search tool error:", e);
-              return { id: tc.id, result: "Fehler bei der Bibelsuche." };
-            }
-          }
-          if (tc.function.name === "search_theology") {
-            try {
-              const args = JSON.parse(tc.function.arguments);
-              const result = await searchTheology(
-                args.query,
-                args.source_type
-              );
-              return { id: tc.id, result };
-            } catch (e) {
-              console.error("Theology search error:", e);
-              return { id: tc.id, result: "Fehler bei der theologischen Suche." };
-            }
-          }
-          if (tc.function.name === "lookup_bible_verse_extra") {
-            try {
-              const args = JSON.parse(tc.function.arguments);
-              const result = await lookupBibleVerseExtra(
-                args.translation_code,
-                args.book,
-                args.chapter,
-                args.verse_start,
-                args.verse_end,
-              );
-              return { id: tc.id, result };
-            } catch (e) {
-              console.error("Extra lookup error:", e);
-              return { id: tc.id, result: "Fehler beim Nachschlagen in zusätzlicher Übersetzung." };
-            }
-          }
-          if (tc.function.name === "validate_bible_reference") {
-            try {
-              const args = JSON.parse(tc.function.arguments);
-              const result = await validateBibleReference(
-                args.book,
-                args.chapter,
-                args.verse_start,
-                args.verse_end,
-              );
-              return { id: tc.id, result };
-            } catch (e) {
-              console.error("Validate reference error:", e);
-              return { id: tc.id, result: JSON.stringify({ valid: false, reason: "internal_error", action: "ask_user" }) };
-            }
-          }
-          return { id: tc.id, result: "Unbekanntes Tool." };
-        })
-      );
-
-      // ── Step 2: Send tool results back and stream the final response ──
-      const followUpMessages = [
-        { role: "system", content: systemPrompt },
-        ...finalMessages,
-        choice.message, // assistant message with tool_calls
-        ...toolResults.map((tr: any) => ({
-          role: "tool" as const,
-          tool_call_id: tr.id,
-          content: tr.result,
-        })),
-      ];
-
-      const streamResponse = await fetch(
-        "https://ai.gateway.lovable.dev/v1/chat/completions",
-        {
-          method: "POST",
-          headers: {
-            Authorization: `Bearer ${LOVABLE_API_KEY}`,
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            model: "openai/gpt-5.5",
-            service_tier: "priority",
-            messages: followUpMessages,
-            stream: true,
-          }),
-        }
-      );
-
-      if (!streamResponse.ok) {
-        const errText = await streamResponse.text();
-        console.error("Stream after tool call error:", streamResponse.status, errText);
-        return new Response(
-          JSON.stringify({ error: "KI-Fehler aufgetreten" }),
-          { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-        );
-      }
-
-      // Stream with spelling fix
-      const reader = streamResponse.body!.getReader();
-      const decoder = new TextDecoder();
-      const encoder = new TextEncoder();
-      let chunkIndex = 0;
-      const stream = new ReadableStream({
-        async start(controller) {
-          if (isCrisisMessage) {
-            const crisisSSE = JSON.stringify({ choices: [{ delta: { content: CRISIS_PREFIX }, finish_reason: null }] });
-            controller.enqueue(encoder.encode(`data: ${crisisSSE}\n\n`));
-          }
-        },
-        async pull(controller) {
-          const { done, value } = await reader.read();
-          if (done) { controller.close(); return; }
-          let text = decoder.decode(value, { stream: true });
-          text = text.replace(/"content":"([^"]*)"/g, (_match, content) => {
-            return `"content":"${fixSpelling(content)}"`;
-          });
-          chunkIndex++;
-          controller.enqueue(encoder.encode(text));
-        },
       });
 
-      return new Response(stream, {
-        headers: { ...corsHeaders, ...widgetHeaders, "Content-Type": "text/event-stream" },
+    const firstResponse = await callClaude(claudeMessages);
+    if (!firstResponse.ok) {
+      const text = await firstResponse.text();
+      console.error("AI gateway error:", firstResponse.status, text);
+      const status = firstResponse.status;
+      const msg =
+        status === 429 ? "Zu viele Anfragen. Bitte versuche es in einer Minute erneut."
+        : status === 402 ? "KI-Kontingent erschöpft. Bitte später erneut versuchen."
+        : "KI-Fehler aufgetreten";
+      return new Response(JSON.stringify({ error: msg }), {
+        status: status === 429 || status === 402 || status === 403 ? status : 500,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
     }
 
-    // ── No tool calls: re-stream the response ──
-    // The initial call was non-streaming. We need to stream the final answer.
-    // Since we already have the complete response, convert it to SSE format.
-    const content = choice?.message?.content || "";
-    const fixedContent = fixSpelling(content);
-
-    // Stream it as SSE to maintain the same client interface
     const encoder = new TextEncoder();
-    const finalContent = isCrisisMessage ? CRISIS_PREFIX + fixedContent : fixedContent;
-    const stream = new ReadableStream({
-      start(controller) {
-        // Send as a single chunk in SSE format
-        const sseData = JSON.stringify({
-          choices: [{
-            delta: { content: finalContent },
-            finish_reason: null,
-          }],
-        });
-        controller.enqueue(encoder.encode(`data: ${sseData}\n\n`));
+    const sse = (obj: unknown) => encoder.encode(`data: ${JSON.stringify(obj)}\n\n`);
+    const delta = (content: string) => sse({ choices: [{ delta: { content }, finish_reason: null }] });
 
-        // Send done
-        const doneData = JSON.stringify({
-          choices: [{
-            delta: {},
-            finish_reason: "stop",
-          }],
-        });
-        controller.enqueue(encoder.encode(`data: ${doneData}\n\n`));
-        controller.enqueue(encoder.encode("data: [DONE]\n\n"));
-        controller.close();
+    const stream = new ReadableStream({
+      async start(controller) {
+        try {
+          if (isCrisisMessage) controller.enqueue(delta(CRISIS_PREFIX));
+          let response: Response = firstResponse;
+          const msgs = [...claudeMessages];
+          for (let round = 0; round < 4; round++) {
+            const reader = response.body!.getReader();
+            const decoder = new TextDecoder();
+            let buf = "";
+            const blocks: any[] = [];
+            let stopReason = "";
+            while (true) {
+              const { done, value } = await reader.read();
+              if (done) break;
+              buf += decoder.decode(value, { stream: true });
+              let idx;
+              while ((idx = buf.indexOf("\n")) >= 0) {
+                const line = buf.slice(0, idx).trim();
+                buf = buf.slice(idx + 1);
+                if (!line.startsWith("data:")) continue;
+                let ev: any;
+                try { ev = JSON.parse(line.slice(5)); } catch { continue; }
+                if (ev.type === "content_block_start") {
+                  const b = { ...ev.content_block };
+                  if (b.type === "tool_use") b._json = "";
+                  if (b.type === "text") b.text = "";
+                  if (b.type === "thinking") { b.thinking = b.thinking ?? ""; b.signature = b.signature ?? ""; }
+                  blocks[ev.index] = b;
+                } else if (ev.type === "content_block_delta") {
+                  const b = blocks[ev.index];
+                  const d = ev.delta;
+                  if (d.type === "text_delta") {
+                    if (b) b.text += d.text;
+                    controller.enqueue(delta(fixSpelling(d.text)));
+                  } else if (d.type === "input_json_delta" && b) b._json += d.partial_json;
+                  else if (d.type === "thinking_delta" && b) b.thinking += d.thinking;
+                  else if (d.type === "signature_delta" && b) b.signature += d.signature;
+                } else if (ev.type === "message_delta") {
+                  stopReason = ev.delta?.stop_reason ?? stopReason;
+                } else if (ev.type === "error") {
+                  console.error("Claude stream error:", ev.error);
+                  stopReason = "error";
+                }
+              }
+            }
+
+            if (stopReason === "refusal") {
+              controller.enqueue(delta("\n\nDarauf können wir hier leider nicht eingehen. Wenn du in Not bist: Die Dargebotene Hand ist rund um die Uhr unter 143 erreichbar."));
+              break;
+            }
+            if (stopReason !== "tool_use") break;
+
+            const assistantContent = blocks.filter(Boolean).map((b) => {
+              if (b.type === "tool_use") {
+                let input = {};
+                try { input = b._json ? JSON.parse(b._json) : {}; } catch { input = {}; }
+                b.input = input;
+                return { type: "tool_use", id: b.id, name: b.name, input };
+              }
+              const { _json, ...rest } = b;
+              return rest;
+            });
+            const toolUses = assistantContent.filter((b: any) => b.type === "tool_use");
+            const results = await Promise.all(
+              toolUses.map(async (t: any) => ({
+                type: "tool_result",
+                tool_use_id: t.id,
+                content: String(await executeTool(t.name, t.input)),
+              })),
+            );
+            msgs.push({ role: "assistant", content: assistantContent });
+            msgs.push({ role: "user", content: results });
+
+            response = await callClaude(msgs);
+            if (!response.ok) {
+              console.error("Claude follow-up error:", response.status, await response.text());
+              controller.enqueue(delta("\n\nEntschuldige, beim Nachschlagen ist ein Fehler passiert. Bitte versuche es nochmals."));
+              break;
+            }
+          }
+          controller.enqueue(sse({ choices: [{ delta: {}, finish_reason: "stop" }] }));
+          controller.enqueue(encoder.encode("data: [DONE]\n\n"));
+        } catch (e) {
+          console.error("Stream error:", e);
+        } finally {
+          controller.close();
+        }
       },
     });
 
     return new Response(stream, {
-      headers: { ...corsHeaders, ...widgetHeaders, "Content-Type": "text/event-stream" },
+      headers: { ...corsHeaders, ...widgetHeaders, "Content-Type": "text/event-stream", "Cache-Control": "no-cache, no-transform" },
     });
   } catch (e) {
     console.error("bibelbot-chat error:", e);
