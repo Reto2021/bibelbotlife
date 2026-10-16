@@ -11,3 +11,4 @@
 - Backend functions with fixed URLs (cron jobs, webhooks, MCP endpoint, public embed script, function-to-function calls) stay as Supabase edge functions — external callers depend on their URLs.
 - Telegram polling acquires an atomic service-only database lease before reading its offset, renews ownership before polling/processing, and releases by owner token in finally — overlapping scheduled runs must never call getUpdates concurrently.
 - TypeScript runs with the template's strict flags (incl. `exactOptionalPropertyTypes`); database payloads with optional values go through `omitUndefined()` — matches previous runtime behaviour without loosening types.
+- Meaning search uses one German verse index (Gemini Embedding 2, built from BasisBibel, keyed by book/chapter/verse) and fetches the text in the requested translation; the `theology-embed-batch` function fills it and chains itself until done — one index serves every German translation and keeps storage small.
