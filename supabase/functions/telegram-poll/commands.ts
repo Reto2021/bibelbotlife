@@ -8,7 +8,7 @@ export type TelegramCommand =
 export function parseTelegramCommand(text: string): TelegramCommand {
   const match = text.trim().match(/^\/([a-z]+)(?:@\w+)?(?:\s+([\s\S]*))?$/i);
   if (!match) return { kind: 'chat' };
-  const cmd = match[1].toLowerCase();
+  const cmd = (match[1] ?? '').toLowerCase();
   const args = (match[2] ?? '').trim();
   if (cmd === 'start') return { kind: 'start' };
   if (cmd === 'stopdaily') return { kind: 'stopdaily' };
