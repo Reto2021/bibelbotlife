@@ -1,6 +1,7 @@
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 import { verifyCronKey } from '../_shared/auth.ts';
 import { withPollLock } from './poll-lock.ts';
+import { parseTelegramCommand } from './commands.ts';
 
 const GATEWAY_URL = 'https://connector-gateway.lovable.dev/telegram';
 const MAX_RUNTIME_MS = 55_000;
@@ -105,60 +106,63 @@ Deno.serve(async (req: Request) => {
         return new Response(JSON.stringify({ error: insertErr.message }), { status: 500 });
       }
 
-      // Process each message
+      // Process each message, saving the offset after each one so a crash
+      // neither skips nor double-answers messages.
       for (const row of rows) {
-        if (!row.text) continue;
         const { data: stillOwned, error: leaseError } = await supabase.rpc('renew_telegram_poll_lock', { p_token: lockToken });
         if (leaseError || stillOwned !== true) throw new Error('Telegram polling lock was lost');
-        
-        try {
-          // Handle /daily command
-          if (row.text.trim().toLowerCase().startsWith('/daily')) {
-            await handleDailyCommand(row.chat_id, row.text, LOVABLE_API_KEY, TELEGRAM_API_KEY, supabase);
-            continue;
+
+        if (row.text) {
+          try {
+            const command = parseTelegramCommand(row.text);
+            if (command.kind === 'daily') {
+              await handleDailyCommand(row.chat_id, command.firstName, LOVABLE_API_KEY, TELEGRAM_API_KEY, supabase);
+            } else if (command.kind === 'stopdaily') {
+              await handleStopDailyCommand(row.chat_id, LOVABLE_API_KEY, TELEGRAM_API_KEY, supabase);
+            } else if (command.kind === 'start') {
+              await sendTelegramMessage(row.chat_id,
+                "Willkommen bei BibleBot! 🙏\n\nIch bin dein persönlicher Begleiter mit der Bibel.\n\n" +
+                "*Befehle:*\n" +
+                "/daily – Täglichen Bibelimpuls um 07:00 abonnieren\n" +
+                "/daily Thomas – Mit persönlicher Begrüssung\n" +
+                "/stopdaily – Täglichen Impuls abbestellen\n\n" +
+                "Oder schreib mir einfach – ich bin hier für dich. 💛",
+                LOVABLE_API_KEY, TELEGRAM_API_KEY
+              );
+            } else {
+              await generateAndSendReply(row.chat_id, row.text, LOVABLE_API_KEY, TELEGRAM_API_KEY, supabase);
+            }
+          } catch (err) {
+            console.error(`Failed to reply to chat ${row.chat_id}:`, err);
           }
-          // Handle /stopdaily command
-          if (row.text.trim().toLowerCase().startsWith('/stopdaily')) {
-            await handleStopDailyCommand(row.chat_id, LOVABLE_API_KEY, TELEGRAM_API_KEY, supabase);
-            continue;
-          }
-          // Handle /start command
-          if (row.text.trim().toLowerCase() === '/start') {
-            await sendTelegramMessage(row.chat_id, 
-              "Willkommen bei BibleBot! 🙏\n\nIch bin dein persönlicher Begleiter mit der Bibel.\n\n" +
-              "*Befehle:*\n" +
-              "/daily – Täglichen Bibelimpuls um 07:00 abonnieren\n" +
-              "/daily Thomas – Mit persönlicher Begrüssung\n" +
-              "/stopdaily – Täglichen Impuls abbestellen\n\n" +
-              "Oder schreib mir einfach – ich bin hier für dich. 💛",
-              LOVABLE_API_KEY, TELEGRAM_API_KEY
-            );
-            continue;
-          }
-          
-          await generateAndSendReply(row.chat_id, row.text, LOVABLE_API_KEY, TELEGRAM_API_KEY, supabase);
-        } catch (err) {
-          console.error(`Failed to reply to chat ${row.chat_id}:`, err);
         }
+
+        const { error: offsetErr } = await supabase
+          .from('telegram_bot_state')
+          .update({ update_offset: row.update_id + 1, updated_at: new Date().toISOString() })
+          .eq('id', 1);
+        if (offsetErr) {
+          console.error('Offset update error:', offsetErr);
+          return new Response(JSON.stringify({ error: offsetErr.message }), { status: 500 });
+        }
+        currentOffset = row.update_id + 1;
+        totalProcessed++;
       }
-
-      totalProcessed += rows.length;
     }
 
-    // Advance offset
+    // Skip past non-message updates too
     const newOffset = Math.max(...updates.map((u: any) => u.update_id)) + 1;
-
-    const { error: offsetErr } = await supabase
-      .from('telegram_bot_state')
-      .update({ update_offset: newOffset, updated_at: new Date().toISOString() })
-      .eq('id', 1);
-
-    if (offsetErr) {
-      console.error('Offset update error:', offsetErr);
-      return new Response(JSON.stringify({ error: offsetErr.message }), { status: 500 });
+    if (newOffset > currentOffset) {
+      const { error: offsetErr } = await supabase
+        .from('telegram_bot_state')
+        .update({ update_offset: newOffset, updated_at: new Date().toISOString() })
+        .eq('id', 1);
+      if (offsetErr) {
+        console.error('Offset update error:', offsetErr);
+        return new Response(JSON.stringify({ error: offsetErr.message }), { status: 500 });
+      }
+      currentOffset = newOffset;
     }
-
-    currentOffset = newOffset;
   }
 
   return new Response(JSON.stringify({ ok: true, processed: totalProcessed, finalOffset: currentOffset }));
@@ -367,13 +371,11 @@ async function sendTelegramMessage(
 
 async function handleDailyCommand(
   chatId: number,
-  text: string,
+  firstName: string | null,
   lovableApiKey: string,
   telegramApiKey: string,
   supabase: any,
 ) {
-  const parts = text.trim().split(/\s+/);
-  const firstName = parts.length > 1 ? parts.slice(1).join(' ').slice(0, 50) : null;
 
   const { data: existing } = await supabase
     .from('daily_subscribers')
