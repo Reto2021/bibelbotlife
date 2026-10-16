@@ -1,6 +1,7 @@
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 import { verifyCronKey } from '../_shared/auth.ts';
 import { withPollLock } from './poll-lock.ts';
+import { parseTelegramCommand } from './commands.ts';
 
 const GATEWAY_URL = 'https://connector-gateway.lovable.dev/telegram';
 const MAX_RUNTIME_MS = 55_000;
@@ -370,13 +371,11 @@ async function sendTelegramMessage(
 
 async function handleDailyCommand(
   chatId: number,
-  text: string,
+  firstName: string | null,
   lovableApiKey: string,
   telegramApiKey: string,
   supabase: any,
 ) {
-  const parts = text.trim().split(/\s+/);
-  const firstName = parts.length > 1 ? parts.slice(1).join(' ').slice(0, 50) : null;
 
   const { data: existing } = await supabase
     .from('daily_subscribers')
