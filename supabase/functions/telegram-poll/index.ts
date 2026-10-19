@@ -2,6 +2,12 @@ import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 import { verifyCronKey } from '../_shared/auth.ts';
 import { withPollLock } from './poll-lock.ts';
 import { parseTelegramCommand } from './commands.ts';
+import { CHOOSE_TEXT, COMPANIONS, normalizeCompanionChoice, resolveCompanion, type CompanionChoice } from '../_shared/companions.ts';
+
+async function getCompanionChoice(chatId: number, supabase: any): Promise<CompanionChoice> {
+  const { data } = await supabase.from('telegram_chat_settings').select('companion').eq('chat_id', chatId).maybeSingle();
+  return normalizeCompanionChoice(data?.companion);
+}
 
 const GATEWAY_URL = 'https://connector-gateway.lovable.dev/telegram';
 const MAX_RUNTIME_MS = 55_000;
@@ -119,16 +125,27 @@ Deno.serve(async (req: Request) => {
               await handleDailyCommand(row.chat_id, command.firstName, LOVABLE_API_KEY, TELEGRAM_API_KEY, supabase);
             } else if (command.kind === 'stopdaily') {
               await handleStopDailyCommand(row.chat_id, LOVABLE_API_KEY, TELEGRAM_API_KEY, supabase);
+            } else if (command.kind === 'companion') {
+              await supabase.from('telegram_chat_settings').upsert(
+                { chat_id: row.chat_id, companion: command.companion, updated_at: new Date().toISOString() },
+                { onConflict: 'chat_id' },
+              );
+              const text = command.companion === 'auto'
+                ? "Gut, wir wählen passend zu deiner Frage, ob Lea oder Jonas dich begleitet. Wechseln kannst du jederzeit mit /lea oder /jonas.\n\nSchreib einfach, was dich beschäftigt."
+                : COMPANIONS[command.companion].greeting;
+              await sendTelegramMessage(row.chat_id, text, LOVABLE_API_KEY, TELEGRAM_API_KEY);
             } else if (command.kind === 'start') {
-              await sendTelegramMessage(row.chat_id,
-                "Willkommen bei BibleBot! 🙏\n\nIch bin dein persönlicher Begleiter mit der Bibel.\n\n" +
-                "*Befehle:*\n" +
+              const choice = await getCompanionChoice(row.chat_id, supabase);
+              const commands =
+                "\n\n*Befehle:*\n" +
                 "/daily – Täglichen Bibelimpuls um 07:00 abonnieren\n" +
                 "/daily Thomas – Mit persönlicher Begrüssung\n" +
-                "/stopdaily – Täglichen Impuls abbestellen\n\n" +
-                "Oder schreib mir einfach – ich bin hier für dich. 💛",
-                LOVABLE_API_KEY, TELEGRAM_API_KEY
-              );
+                "/stopdaily – Täglichen Impuls abbestellen\n" +
+                "/lea · /jonas · /auto – Begleitung wählen";
+              const text = choice === 'auto'
+                ? "Willkommen bei BibleBot.Life! 🕯️\n\n" + CHOOSE_TEXT + commands
+                : COMPANIONS[choice].greeting + commands;
+              await sendTelegramMessage(row.chat_id, text, LOVABLE_API_KEY, TELEGRAM_API_KEY);
             } else {
               await generateAndSendReply(row.chat_id, row.text, LOVABLE_API_KEY, TELEGRAM_API_KEY, supabase);
             }
@@ -182,6 +199,20 @@ async function generateAndSendReply(
   telegramApiKey: string,
   supabase: any
 ) {
+  const companionChoice = await getCompanionChoice(chatId, supabase);
+  const { data: userRows } = await supabase
+    .from('telegram_messages')
+    .select('text')
+    .eq('chat_id', chatId)
+    .or('role.is.null,role.neq.assistant')
+    .not('text', 'is', null)
+    .order('created_at', { ascending: true })
+    .limit(30);
+  const companionId = resolveCompanion(
+    companionChoice,
+    [...(userRows || []).map((r: any) => String(r.text)).filter((t: string) => !t.startsWith('/')), userText],
+  );
+
   // Fetch last 50 messages from this chat for conversation context
   const { data: history } = await supabase
     .from('telegram_messages')
@@ -268,7 +299,7 @@ async function generateAndSendReply(
         messages: [
           {
             role: "system",
-            content: `Du bist BibleBot – ein einfühlsamer, weiser Begleiter für Menschen, die an der Bibel wachsen wollen. Du sprichst Deutsch (Schweiz), kein ß. Achte auf korrekte Grammatik und vollständige Wörter (z.B. "schlägt" statt "schlät"). Halte Antworten unter 4000 Zeichen (Telegram-Limit). Verwende Markdown-Formatierung sparsam (Telegram unterstützt nur *bold*, _italic*, \`code\`). Antworte fokussiert und warmherzig. Du erinnerst dich an den bisherigen Gesprächsverlauf.
+            content: `${COMPANIONS[companionId].prompt}\n(Die folgenden BibleBot-Regeln gelten weiter; du sprichst aber als ${COMPANIONS[companionId].name}.)\n\nDu bist BibleBot – ein einfühlsamer, weiser Begleiter für Menschen, die an der Bibel wachsen wollen. Du sprichst Deutsch (Schweiz), kein ß. Achte auf korrekte Grammatik und vollständige Wörter (z.B. "schlägt" statt "schlät"). Halte Antworten unter 4000 Zeichen (Telegram-Limit). Verwende Markdown-Formatierung sparsam (Telegram unterstützt nur *bold*, _italic*, \`code\`). Antworte fokussiert und warmherzig. Du erinnerst dich an den bisherigen Gesprächsverlauf.
 
 WICHTIG – Interaktive Gesprächsführung:
 Beende JEDE Antwort mit einer Anschlussfrage oder Auswahl, damit der Nutzer einfach weiterkommt. Formuliere 2-3 konkrete Optionen, die der Nutzer mit einem Buchstaben oder kurzen Wort beantworten kann. Beispiele:

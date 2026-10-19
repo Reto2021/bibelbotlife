@@ -361,7 +361,9 @@ export function BibleBotChat() {
   // Stored preference is read after hydration so server and first client render match.
   useEffect(() => {
     try { setPreferredTranslation(localStorage.getItem("bibelbot-translation") || "auto"); } catch { /* storage unavailable */ }
+    try { setCompanion(localStorage.getItem("bibelbot-companion") || "auto"); } catch { /* storage unavailable */ }
   }, []);
+  const [companion, setCompanion] = useState("auto");
   const [showScrollDown, setShowScrollDown] = useState(false);
   const [voiceModeOpen, setVoiceModeOpen] = useState(false);
   const [recordingSeconds, setRecordingSeconds] = useState(0);
@@ -545,7 +547,7 @@ export function BibleBotChat() {
         const resp = await fetch(CHAT_URL, {
           method: "POST",
           headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"]}` },
-          body: JSON.stringify({ messages: contextMessages, language: i18n.language, mode: chatMode, preferredTranslation: preferredTranslation !== "auto" ? preferredTranslation : undefined, screenWidth: window.innerWidth, churchSlug, visitorId }),
+          body: JSON.stringify({ messages: contextMessages, language: i18n.language, mode: chatMode, preferredTranslation: preferredTranslation !== "auto" ? preferredTranslation : undefined, screenWidth: window.innerWidth, churchSlug, visitorId, companion }),
         });
 
         if (!resp.ok) {
@@ -607,7 +609,7 @@ export function BibleBotChat() {
           const fallbackResp = await fetch(CHAT_URL, {
             method: "POST",
             headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"]}` },
-            body: JSON.stringify({ messages: contextMessages, language: i18n.language, mode: chatMode, preferredTranslation: preferredTranslation !== "auto" ? preferredTranslation : undefined, screenWidth: window.innerWidth, churchSlug, visitorId }),
+            body: JSON.stringify({ messages: contextMessages, language: i18n.language, mode: chatMode, preferredTranslation: preferredTranslation !== "auto" ? preferredTranslation : undefined, screenWidth: window.innerWidth, churchSlug, visitorId, companion }),
           });
           const fullText = await fallbackResp.text();
           const lines = fullText.split("\n");
@@ -756,6 +758,21 @@ export function BibleBotChat() {
           </div>
         </div>
         <div className="flex items-center gap-1.5">
+          <select
+            value={companion}
+            onChange={(e) => {
+              const v = e.target.value;
+              setCompanion(v);
+              try { localStorage.setItem("bibelbot-companion", v); } catch { /* storage unavailable */ }
+            }}
+            className="appearance-none bg-transparent text-muted-foreground hover:text-foreground cursor-pointer text-[10px] px-1 py-1 rounded-lg hover:bg-muted/50 transition-colors focus:outline-hidden focus:ring-1 focus:ring-primary/30"
+            title="Wer begleitet dich?"
+            aria-label="Begleitung wählen"
+          >
+            <option value="auto">🕯️ Passend</option>
+            <option value="lea">Lea</option>
+            <option value="jonas">Jonas</option>
+          </select>
           <div className="relative">
             <select
               value={preferredTranslation}
