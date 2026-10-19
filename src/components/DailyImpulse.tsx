@@ -163,6 +163,22 @@ export function DailyImpulse() {
   const tts = useTTS();
 
   // Initialise collapse state based on mobile once detected
+  // Deep link from SMS/Push/Telegram (?impuls=1 or #impuls): open and scroll to the impulse
+  const rootRef = useRef<HTMLDivElement>(null);
+  const [deepLinked, setDeepLinked] = useState(false);
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.has("impuls") || window.location.hash === "#impuls") setDeepLinked(true);
+  }, []);
+  useEffect(() => {
+    if (!deepLinked || isLoading || !impulse) return;
+    setCollapsed(false);
+    setCollapsedInitialized(true);
+    setIsExpanded(true);
+    const id = setTimeout(() => rootRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }), 150);
+    return () => clearTimeout(id);
+  }, [deepLinked, isLoading, impulse]);
+
   useEffect(() => {
     if (!collapsedInitialized && isMobile !== undefined) {
       setCollapsed(isMobile);
@@ -478,7 +494,7 @@ export function DailyImpulse() {
   if (!impulse) return null;
 
   return (
-    <div className="bg-primary/10 dark:bg-primary/15 border-b border-primary/20 overflow-hidden">
+    <div id="impuls" ref={rootRef} className="bg-primary/10 dark:bg-primary/15 border-b border-primary/20 overflow-hidden scroll-mt-16">
       {/* Outer collapse toggle */}
       <button
         onClick={() => setCollapsed(!collapsed)}

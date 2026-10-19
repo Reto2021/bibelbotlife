@@ -161,7 +161,7 @@ function formatSMS(impulse: Record<string, string>, firstName?: string, lang = "
   const [greeting] = getGreeting(lang);
   const name = firstName ? `${greeting}, ${firstName}!` : `${greeting}!`;
   // Kein konstanter Topic-Prefix mehr — direkt mit dem variierenden Teaser starten.
-  return `${name} ${impulse.teaser} (${impulse.reference}) | BibelBot.ch`;
+  return `${name} ${impulse.teaser} (${impulse.reference}) https://biblebot.life/?impuls=1`;
 }
 
 serve(async (req) => {
@@ -247,7 +247,7 @@ serve(async (req) => {
         const msg = JSON.stringify({
           title: `🙏 ${impulse.topic}`,
           body: impulse.teaser,
-          url: "https://bibelbot.ch",
+          url: "https://biblebot.life/?impuls=1",
         });
         success = await sendWebPush(sub.push_subscription, msg, vapidPublic, vapidPrivate);
       }
