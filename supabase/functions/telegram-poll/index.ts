@@ -204,7 +204,7 @@ async function generateAndSendReply(
     .from('telegram_messages')
     .select('text')
     .eq('chat_id', chatId)
-    .neq('role', 'assistant')
+    .or('role.is.null,role.neq.assistant')
     .not('text', 'is', null)
     .order('created_at', { ascending: true })
     .limit(30);
