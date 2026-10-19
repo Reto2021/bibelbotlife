@@ -1,11 +1,12 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.4";
+import { COMPANIONS, normalizeCompanionChoice, resolveCompanion } from "../_shared/companions.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers":
     "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
-  "Access-Control-Expose-Headers": "x-widget-limit-exceeded, x-widget-question-count, x-widget-plan-tier",
+  "Access-Control-Expose-Headers": "x-companion, x-widget-limit-exceeded, x-widget-question-count, x-widget-plan-tier",
 };
 
 // Fix common AI spelling mistakes: wrong umlaut substitutions, sz→ss, etc.
@@ -1784,7 +1785,7 @@ serve(async (req) => {
   }
 
   try {
-    const { messages, journeyDay, language, mode, preferredTranslation, screenWidth, churchSlug, visitorId } = await req.json();
+    const { messages, journeyDay, language, mode, preferredTranslation, screenWidth, churchSlug, visitorId, companion } = await req.json();
 
     // Crisis check on latest user message
     const latestUserMsg = [...messages].reverse().find((m: { role: string }) => m.role === "user");
@@ -1915,6 +1916,11 @@ serve(async (req) => {
       const langNames: Record<string, string> = { en: "English", fr: "French", es: "Spanish", it: "Italian", pt: "Portuguese", pl: "Polish", cs: "Czech" };
       systemPrompt += `\n\n[LANGUAGE OVERRIDE: The user's interface is set to ${langNames[lang] || lang}. You MUST respond in ${langNames[lang] || lang}. Adapt Bible quotes to well-known translations in that language. Keep your coaching style and depth identical.]`;
     }
+    const companionId = resolveCompanion(
+      normalizeCompanionChoice(companion),
+      (messages as { role: string; content: unknown }[]).filter((m) => m.role === "user").map((m) => String(m.content ?? "")),
+    );
+    systemPrompt += `\n\n${COMPANIONS[companionId].prompt}`;
 
     // === Adaptive response length ===
     const msgCount = messages.filter((m: { role: string }) => m.role === "user").length;
@@ -2089,7 +2095,7 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
         });
       }
       return new Response(voiceResp.body, {
-        headers: { ...corsHeaders, ...widgetHeaders, "Content-Type": "text/event-stream" },
+        headers: { ...corsHeaders, ...widgetHeaders, "x-companion": companionId, "Content-Type": "text/event-stream" },
       });
     }
 
@@ -2318,7 +2324,7 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
     });
 
     return new Response(stream, {
-      headers: { ...corsHeaders, ...widgetHeaders, "Content-Type": "text/event-stream", "Cache-Control": "no-cache, no-transform" },
+      headers: { ...corsHeaders, ...widgetHeaders, "x-companion": companionId, "Content-Type": "text/event-stream", "Cache-Control": "no-cache, no-transform" },
     });
   } catch (e) {
     console.error("bibelbot-chat error:", e);
