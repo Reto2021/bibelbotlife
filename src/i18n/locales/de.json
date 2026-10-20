@@ -2296,11 +2296,31 @@
     "cta": "Jetzt kostenlos ausprobieren",
     "ctaSecondary": "Methodik erfahren",
     "comparison": [
-      { "aspect": "Bibelkenntnis", "chatgpt": "Antworten basieren auf allgemeinen Trainingsdaten — Bibelstellen können frei erfunden sein.", "biblebot": "Über 35 Übersetzungen in 30+ Sprachen. Jede Stelle wird von einem QA-Agenten auf Korrektheit geprüft." },
-      { "aspect": "Methodik", "chatgpt": "Generische Gesprächsführung ohne strukturierten Ansatz.", "biblebot": "Evidenzbasierte Coaching-Methoden: PERMA, Logotherapie, Dankbarkeits- und Vergebungsforschung." },
-      { "aspect": "Krisenintervention", "chatgpt": "Keine automatische Erkennung oder Weiterleitung bei Suizid- oder Krisensignalen.", "biblebot": "Erkennt Krisensignale und verweist sofort auf Telefonseelsorge in CH, DE und AT." },
-      { "aspect": "Persönliches Gedächtnis", "chatgpt": "Vergisst den Kontext nach dem Gespräch — kein dauerhaftes Begleiten möglich.", "biblebot": "Merkt sich wichtige Momente, Anlässe und Geburtstage für passende Impulse und Gebete." },
-      { "aspect": "Datenschutz", "chatgpt": "Gespräche werden auf Servern gespeichert und können zur Modellverbesserung genutzt werden.", "biblebot": "Kein Login nötig. Chatverlauf bleibt lokal auf dem Gerät — anonym und urteilsfrei." }
+      {
+        "aspect": "Bibelkenntnis",
+        "chatgpt": "Antworten basieren auf allgemeinen Trainingsdaten — Bibelstellen können frei erfunden sein.",
+        "biblebot": "Über 35 Übersetzungen in 30+ Sprachen. Jede Stelle wird von einem QA-Agenten auf Korrektheit geprüft."
+      },
+      {
+        "aspect": "Methodik",
+        "chatgpt": "Generische Gesprächsführung ohne strukturierten Ansatz.",
+        "biblebot": "Evidenzbasierte Coaching-Methoden: PERMA, Logotherapie, Dankbarkeits- und Vergebungsforschung."
+      },
+      {
+        "aspect": "Krisenintervention",
+        "chatgpt": "Keine automatische Erkennung oder Weiterleitung bei Suizid- oder Krisensignalen.",
+        "biblebot": "Erkennt Krisensignale und verweist sofort auf Telefonseelsorge in CH, DE und AT."
+      },
+      {
+        "aspect": "Persönliches Gedächtnis",
+        "chatgpt": "Vergisst den Kontext nach dem Gespräch — kein dauerhaftes Begleiten möglich.",
+        "biblebot": "Merkt sich wichtige Momente, Anlässe und Geburtstage für passende Impulse und Gebete."
+      },
+      {
+        "aspect": "Datenschutz",
+        "chatgpt": "Gespräche werden auf Servern gespeichert und können zur Modellverbesserung genutzt werden.",
+        "biblebot": "Kein Login nötig. Chatverlauf bleibt lokal auf dem Gerät — anonym und urteilsfrei."
+      }
     ],
     "wisdom": {
       "title": "Geprüfte Weisheit",
@@ -2390,6 +2410,29 @@
     "tile": {
       "title": "KI-Gedächtnis",
       "desc": "Importiere, was ChatGPT, Claude oder Gemini über dich weiss"
+    }
+  },
+  "companion": {
+    "title1": "Wer soll dich ",
+    "title2": "begleiten?",
+    "choose": "Wer soll dich begleiten?",
+    "imgAlt": "{{name}}, Begleitfigur",
+    "footer": "Lea und Jonas sind erfundene Figuren des Vereins Tech4Good. Antippen genügt – oder schreib unten selbst.",
+    "lea": {
+      "tagline": "34, Pflegefachfrau · hört zuerst zu",
+      "hello": "Hoi, ich bin Lea. Ich glaube – auch ohne Kirche. Was trägst du heute mit dir herum?",
+      "q1": "Kann man glauben, ohne in eine Kirche zu gehen?",
+      "q2": "Ich fühle mich leer. Wo finde ich Halt?",
+      "q3": "Wie bete ich, wenn ich nicht weiss wie?",
+      "q4": "Gott hat mich enttäuscht. Darf ich das sagen?"
+    },
+    "jonas": {
+      "tagline": "41 · direkt, ehrlich, ohne Moralkeule",
+      "hello": "Salü, ich bin Jonas. Ich bin lange vor Gott davongelaufen. Frag mich, was du sonst für dich behältst.",
+      "q1": "Ich zweifle an allem. Ist das schlimm?",
+      "q2": "Was sagt die Bibel wirklich über Sex?",
+      "q3": "Wie werde ich Schuld los, die mich verfolgt?",
+      "q4": "Ist die Bibel nicht einfach ein altes Märchenbuch?"
     }
   }
 }

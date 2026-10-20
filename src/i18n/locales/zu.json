@@ -2234,5 +2234,28 @@
       "resultCountPaged": "{{shown}} of {{count}} crosses shown",
       "loadMore": "Load more"
     }
+  },
+  "companion": {
+    "title1": "Ubani ofuna ",
+    "title2": "akuphelezele?",
+    "choose": "Ubani ofuna akuphelezele?",
+    "imgAlt": "{{name}}, umuntu okuphelezelayo",
+    "footer": "U-Lea no-Jonas ngabalingiswa abaqanjiwe benhlangano i-Tech4Good. Vele ucindezele – noma uzibhalele wena ngezansi.",
+    "lea": {
+      "tagline": "34, unesi · ulalela kuqala",
+      "hello": "Sawubona, ngingu-Lea. Nginokholo – ngisho ngaphandle kwesonto. Yini ekusindayo namhlanje?",
+      "q1": "Kungenzeka yini ukukholwa ngaphandle kokuya esontweni?",
+      "q2": "Ngizizwa ngingelutho ngaphakathi. Ngingakutholaphi ukuthula?",
+      "q3": "Ngithandaza kanjani uma ngingazi ukuthi kwenziwa kanjani?",
+      "q4": "UNkulunkulu ungiphoxile. Kuvumelekile ukukusho lokho?"
+    },
+    "jonas": {
+      "tagline": "41 · uqondile, uthembekile, akahluleli",
+      "hello": "Sho, ngingu-Jonas. Ngamgijimela kude uNkulunkulu isikhathi eside. Ngibuze lezo zinto ojwayele ukuzigcina kuwena.",
+      "q1": "Ngingabaza yonke into. Ingabe kubi lokho?",
+      "q2": "Lithini ngempela iBhayibheli ngezocansi?",
+      "q3": "Ngingalilahla kanjani icala elingihluphayo?",
+      "q4": "IBhayibheli akusona nje incwadi yezinganekwane zakudala?"
+    }
   }
 }

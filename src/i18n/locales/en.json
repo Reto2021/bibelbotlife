@@ -2070,11 +2070,31 @@
     "cta": "Try it free now",
     "ctaSecondary": "Learn the methodology",
     "comparison": [
-      { "aspect": "Bible knowledge", "chatgpt": "Responses rely on general training data — Bible references can be invented.", "biblebot": "35+ translations in 30+ languages. Every reference is verified by a QA agent for accuracy." },
-      { "aspect": "Methodology", "chatgpt": "Generic conversation flow without a structured approach.", "biblebot": "Evidence-based coaching methods: PERMA, logotherapy, gratitude and forgiveness research." },
-      { "aspect": "Crisis intervention", "chatgpt": "No automatic detection or referral for suicide or crisis signals.", "biblebot": "Detects crisis signals and immediately refers to pastoral hotlines in CH, DE and AT." },
-      { "aspect": "Personal memory", "chatgpt": "Forgets context after the chat — no lasting companionship possible.", "biblebot": "Remembers important moments, events and birthdays for timely impulses and prayers." },
-      { "aspect": "Privacy", "chatgpt": "Conversations are stored on servers and may be used for model improvement.", "biblebot": "No login needed. Chat history stays locally on your device — anonymous and judgment-free." }
+      {
+        "aspect": "Bible knowledge",
+        "chatgpt": "Responses rely on general training data — Bible references can be invented.",
+        "biblebot": "35+ translations in 30+ languages. Every reference is verified by a QA agent for accuracy."
+      },
+      {
+        "aspect": "Methodology",
+        "chatgpt": "Generic conversation flow without a structured approach.",
+        "biblebot": "Evidence-based coaching methods: PERMA, logotherapy, gratitude and forgiveness research."
+      },
+      {
+        "aspect": "Crisis intervention",
+        "chatgpt": "No automatic detection or referral for suicide or crisis signals.",
+        "biblebot": "Detects crisis signals and immediately refers to pastoral hotlines in CH, DE and AT."
+      },
+      {
+        "aspect": "Personal memory",
+        "chatgpt": "Forgets context after the chat — no lasting companionship possible.",
+        "biblebot": "Remembers important moments, events and birthdays for timely impulses and prayers."
+      },
+      {
+        "aspect": "Privacy",
+        "chatgpt": "Conversations are stored on servers and may be used for model improvement.",
+        "biblebot": "No login needed. Chat history stays locally on your device — anonymous and judgment-free."
+      }
     ],
     "wisdom": {
       "title": "Verified wisdom",
@@ -2358,6 +2378,29 @@
       },
       "resultCountPaged": "{{shown}} of {{count}} crosses shown",
       "loadMore": "Load more"
+    }
+  },
+  "companion": {
+    "title1": "Who should ",
+    "title2": "walk with you?",
+    "choose": "Who should walk with you?",
+    "imgAlt": "{{name}}, companion",
+    "footer": "Lea and Jonas are fictional characters created by the non-profit Tech4Good. Just tap one – or write your own message below.",
+    "lea": {
+      "tagline": "34, nurse · listens first",
+      "hello": "Hi, I'm Lea. I have faith – even without church. What are you carrying around with you today?",
+      "q1": "Can you believe without going to church?",
+      "q2": "I feel empty. Where can I find something to hold onto?",
+      "q3": "How do I pray when I don't know how?",
+      "q4": "God let me down. Am I allowed to say that?"
+    },
+    "jonas": {
+      "tagline": "41 · direct, honest, no lecturing",
+      "hello": "Hey, I'm Jonas. I spent a long time running away from God. Ask me the things you usually keep to yourself.",
+      "q1": "I doubt everything. Is that bad?",
+      "q2": "What does the Bible actually say about sex?",
+      "q3": "How do I let go of guilt that's haunting me?",
+      "q4": "Isn't the Bible just an old book of fairy tales?"
     }
   }
 }

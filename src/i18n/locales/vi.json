@@ -2236,5 +2236,28 @@
       "resultCountPaged": "{{shown}} of {{count}} crosses shown",
       "loadMore": "Load more"
     }
+  },
+  "companion": {
+    "title1": "Ai sẽ đồng hành ",
+    "title2": "cùng bạn?",
+    "choose": "Ai sẽ đồng hành cùng bạn?",
+    "imgAlt": "{{name}}, người bạn đồng hành",
+    "footer": "Lea và Jonas là các nhân vật hư cấu của tổ chức Tech4Good. Chỉ cần chạm để chọn – hoặc tự viết tin nhắn của bạn bên dưới.",
+    "lea": {
+      "tagline": "34 tuổi, điều dưỡng viên · luôn lắng nghe trước",
+      "hello": "Chào bạn, mình là Lea. Mình có niềm tin – dù chẳng cần đến nhà thờ. Hôm nay bạn đang có tâm sự gì trong lòng?",
+      "q1": "Có thể có niềm tin mà không cần đi nhà thờ không?",
+      "q2": "Mình thấy trống rỗng quá. Tìm đâu ra điểm tựa bây giờ?",
+      "q3": "Làm sao để cầu nguyện khi mình chẳng biết phải nói gì?",
+      "q4": "Chúa làm mình thất vọng. Mình có được nói ra như vậy không?"
+    },
+    "jonas": {
+      "tagline": "41 tuổi · thẳng thắn, chân thành, không giáo điều",
+      "hello": "Chào bạn, mình là Jonas. Mình từng trốn chạy Chúa một thời gian dài. Cứ thoải mái hỏi mình những điều bạn thường giữ kín trong lòng nhé.",
+      "q1": "Mình hoài nghi mọi thứ. Điều đó có tệ lắm không?",
+      "q2": "Kinh Thánh thực sự nói gì về tình dục?",
+      "q3": "Làm sao để thoát khỏi cảm giác áy náy cứ bám theo mình mãi?",
+      "q4": "Chẳng phải Kinh Thánh chỉ là một cuốn truyện cổ tích xưa cũ thôi sao?"
+    }
   }
 }

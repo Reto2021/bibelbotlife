@@ -2234,5 +2234,28 @@
       "resultCountPaged": "{{shown}} of {{count}} crosses shown",
       "loadMore": "Load more"
     }
+  },
+  "companion": {
+    "title1": "Cine vrei să te ",
+    "title2": "însoțească?",
+    "choose": "Cine vrei să te însoțească?",
+    "imgAlt": "{{name}}, partener de drum",
+    "footer": "Lea și Jonas sunt personaje fictive ale asociației Tech4Good. E de ajuns să apeși – sau scrie tu mai jos.",
+    "lea": {
+      "tagline": "34 de ani, asistentă medicală · mai întâi ascultă",
+      "hello": "Bună, sunt Lea. Eu cred – chiar și fără biserică. Ce porți pe suflet azi?",
+      "q1": "Poți să crezi și fără să mergi la biserică?",
+      "q2": "Mă simt gol pe dinăuntru. Unde găsesc un sprijin?",
+      "q3": "Cum să mă rog dacă nu știu cum?",
+      "q4": "Dumnezeu m-a dezamăgit. Am voie să spun asta?"
+    },
+    "jonas": {
+      "tagline": "41 de ani · direct, sincer, fără predici",
+      "hello": "Salut, sunt Jonas. Multă vreme am fugit de Dumnezeu. Întreabă-mă ce ții de obicei doar pentru tine.",
+      "q1": "Mă îndoiesc de toate. E grav?",
+      "q2": "Ce spune Biblia de fapt despre sex?",
+      "q3": "Cum scap de vinovăția care mă urmărește?",
+      "q4": "Nu e Biblia doar o carte veche de povești?"
+    }
   }
 }

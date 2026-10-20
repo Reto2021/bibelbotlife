@@ -2234,5 +2234,28 @@
       "resultCountPaged": "{{shown}} of {{count}} crosses shown",
       "loadMore": "Load more"
     }
+  },
+  "companion": {
+    "title1": "Kto ma ci ",
+    "title2": "towarzyszyć?",
+    "choose": "Kto ma ci towarzyszyć?",
+    "imgAlt": "{{name}}, postać towarzysząca",
+    "footer": "Lea i Jonas to fikcyjne postacie stworzone przez stowarzyszenie Tech4Good. Wystarczy kliknąć – albo napisz na dole własną wiadomość.",
+    "lea": {
+      "tagline": "34 lata, pielęgniarka · najpierw słucha",
+      "hello": "Cześć, jestem Lea. Wierzę – ale bez kościoła. Co ci dzisiaj leży na sercu?",
+      "q1": "Czy można wierzyć, nie chodząc do kościoła?",
+      "q2": "Czuję pustkę. Gdzie znaleźć oparcie?",
+      "q3": "Jak się modlić, kiedy nie wiem jak?",
+      "q4": "Bóg mnie zawiódł. Mogę to w ogóle powiedzieć?"
+    },
+    "jonas": {
+      "tagline": "41 lat · bezpośredni, szczery, bez moralizowania",
+      "hello": "Cześć, jestem Jonas. Długo uciekałem przed Bogiem. Zapytaj mnie o to, co zwykle trzymasz tylko dla siebie.",
+      "q1": "Wątpię we wszystko. Czy to coś złego?",
+      "q2": "Co Biblia tak naprawdę mówi o seksie?",
+      "q3": "Jak uwolnić się od poczucia winy, które za mną chodzi?",
+      "q4": "Czy Biblia to nie po prostu stara książka z bajkami?"
+    }
   }
 }

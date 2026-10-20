@@ -2234,5 +2234,28 @@
       "resultCountPaged": "{{shown}} of {{count}} crosses shown",
       "loadMore": "Load more"
     }
+  },
+  "companion": {
+    "title1": "Kuka saisi kulkea ",
+    "title2": "rinnallasi?",
+    "choose": "Kuka saisi kulkea rinnallasi?",
+    "imgAlt": "{{name}}, rinnallakulkija",
+    "footer": "Lea ja Jonas ovat Tech4Good-yhdistyksen luomia hahmoja. Napauta vain vastausta – tai kirjoita omasi alle.",
+    "lea": {
+      "tagline": "34, sairaanhoitaja · kuuntelee ensin",
+      "hello": "Moi, olen Lea. Minä uskon – myös ilman kirkkoa. Mitä kannat mukanasi tänään?",
+      "q1": "Voiko uskoa, vaikkei kävisi kirkossa?",
+      "q2": "Tunnen oloni tyhjäksi. Mistä löytäisin turvaa?",
+      "q3": "Miten rukoillaan, jos ei yhtään tiedä miten?",
+      "q4": "Jumala tuotti minulle pettymyksen. Saako sen sanoa ääneen?"
+    },
+    "jonas": {
+      "tagline": "41 · suora, rehellinen, ilman moraalisaarnoja",
+      "hello": "Hei, olen Jonas. Juoksin pitkään karkuun Jumalaa. Kysy minulta sellaista, mitä yleensä pitäisit vain omana tietonasi.",
+      "q1": "Epäilen ihan kaikkea. Onko se paha juttu?",
+      "q2": "Mitä Raamattu oikeasti sanoo seksistä?",
+      "q3": "Miten pääsen eroon syyllisyydestä, joka vainoaa minua?",
+      "q4": "Eikö Raamattu ole vain vanha satukirja?"
+    }
   }
 }

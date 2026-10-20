@@ -2276,5 +2276,28 @@
       "resultCountPaged": "{{shown}} of {{count}} crosses shown",
       "loadMore": "Load more"
     }
+  },
+  "companion": {
+    "title1": "Hvem skal ",
+    "title2": "følge deg?",
+    "choose": "Hvem skal følge deg?",
+    "imgAlt": "{{name}}, samtalepartner",
+    "footer": "Lea og Jonas er oppdiktede figurer fra foreningen Tech4Good. Bare trykk – eller skriv selv nedenfor.",
+    "lea": {
+      "tagline": "34, sykepleier · lytter først",
+      "hello": "Hei, jeg er Lea. Jeg tror – også uten kirken. Hva bærer du på i dag?",
+      "q1": "Kan man tro uten å gå i kirken?",
+      "q2": "Jeg føler meg tom. Hvor finner jeg fotfeste?",
+      "q3": "Hvordan ber jeg når jeg ikke vet hvordan?",
+      "q4": "Gud har skuffet meg. Er det lov å si det?"
+    },
+    "jonas": {
+      "tagline": "41 · direkte, ærlig, uten moralpreken",
+      "hello": "Hei, jeg er Jonas. Jeg løp lenge unna Gud. Spør meg om det du ellers holder for deg selv.",
+      "q1": "Jeg tviler på alt. Gjør det noe?",
+      "q2": "Hva sier Bibelen egentlig om sex?",
+      "q3": "Hvordan blir jeg kvitt skyld som forfølger meg?",
+      "q4": "Er ikke Bibelen bare en gammel eventyrbok?"
+    }
   }
 }

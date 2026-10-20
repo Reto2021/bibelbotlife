@@ -2275,5 +2275,28 @@
       "resultCountPaged": "{{shown}} of {{count}} crosses shown",
       "loadMore": "Load more"
     }
+  },
+  "companion": {
+    "title1": "Onye ka ị chọrọ ",
+    "title2": "ka o soro gị?",
+    "choose": "Onye ka ị chọrọ ka o soro gị?",
+    "imgAlt": "{{name}}, onye enyemaka",
+    "footer": "Lea na Jonas bụ ndị a rụpụtara nke nzukọ Tech4Good. Pịa naanị otu – ma ọ bụ deere onwe gị n'okpuru.",
+    "lea": {
+      "tagline": "34, nọọsụ · na-ebu ụzọ ege ntị",
+      "hello": "Kedu, abụ m Lea. Enwere m okwukwe – n'agbanyeghị na anaghị m aga ụka. Gịnị na-anyịgbu gị n'obi taa?",
+      "q1": "Mmadụ nwere ike ikwere na Chineke ma ọ bụrụ na ọ naghị aga ụka?",
+      "q2": "Ọ dị m ka ihe efu n'ime. Ebee ka m ga-ahụ nkwado?",
+      "q3": "Kedu ka m ga-esi kpee ekpere ma ọ bụrụ na amaghị m otú e si eme ya?",
+      "q4": "Chineke emechuola m ihu. Ọ̀ dị mma ka m kwuo ya otú ahụ?"
+    },
+    "jonas": {
+      "tagline": "41 · na-ekwu eziokwu n'echeghị echiche, n'enweghị ikpe ikpe",
+      "hello": "Ndewo, abụ m Jonas. Agbara m Chineke ọsọ ruo ogologo oge. Jụọ m ihe ndị ahụ ị na-anaghị agwa onye ọ bụla.",
+      "q1": "Ana m enwe obi abụọ n'ihe niile. Ọ̀ dị njọ?",
+      "q2": "Gịnị ka Baịbụl na-ekwu n'ezie banyere mmekọahụ?",
+      "q3": "Kedu ka m ga-esi wepụ obi amamikpe na-enye m nsogbu?",
+      "q4": "Baịbụl ọ̀ bụghị naanị akwụkwọ akụkọ ifo nke oge ochie?"
+    }
   }
 }

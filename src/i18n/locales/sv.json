@@ -2234,5 +2234,28 @@
       "resultCountPaged": "{{shown}} of {{count}} crosses shown",
       "loadMore": "Load more"
     }
+  },
+  "companion": {
+    "title1": "Vem ska ",
+    "title2": "göra dig sällskap?",
+    "choose": "Vem ska göra dig sällskap?",
+    "imgAlt": "{{name}}, följeslagare",
+    "footer": "Lea och Jonas är påhittade figurer från föreningen Tech4Good. Bara tryck – eller skriv själv här nedanför.",
+    "lea": {
+      "tagline": "34, sjuksköterska · lyssnar först",
+      "hello": "Hej, jag är Lea. Jag tror – även utan kyrkan. Vad bär du på i dag?",
+      "q1": "Kan man tro utan att gå till kyrkan?",
+      "q2": "Jag känner mig tom. Var hittar jag fäste?",
+      "q3": "Hur ber jag när jag inte vet hur man gör?",
+      "q4": "Gud har gjort mig besviken. Får jag säga det?"
+    },
+    "jonas": {
+      "tagline": "41 · rak, ärlig, utan pekpinnar",
+      "hello": "Tjena, jag är Jonas. Jag flydde länge från Gud. Fråga mig det du annars håller för dig själv.",
+      "q1": "Jag tvivlar på allt. Är det fel?",
+      "q2": "Vad säger Bibeln egentligen om sex?",
+      "q3": "Hur blir jag av med skuld som förföljer mig?",
+      "q4": "Är inte Bibeln bara en gammal sagobok?"
+    }
   }
 }

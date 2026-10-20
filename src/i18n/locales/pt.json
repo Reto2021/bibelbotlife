@@ -2234,5 +2234,28 @@
       "resultCountPaged": "{{shown}} of {{count}} crosses shown",
       "loadMore": "Load more"
     }
+  },
+  "companion": {
+    "title1": "Quem vai te ",
+    "title2": "acompanhar?",
+    "choose": "Quem vai te acompanhar?",
+    "imgAlt": "{{name}}, figura de apoio",
+    "footer": "A Lea e o Jonas são personagens fictícios da associação Tech4Good. Basta tocar em uma opção – ou digite você mesmo abaixo.",
+    "lea": {
+      "tagline": "34 anos, enfermeira · primeiro escuta",
+      "hello": "Oi, eu sou a Lea. Eu tenho fé – mesmo sem frequentar uma igreja. O que você está carregando no peito hoje?",
+      "q1": "Dá para ter fé sem ir à igreja?",
+      "q2": "Sinto um vazio por dentro. Onde encontro apoio?",
+      "q3": "Como rezar se eu nem sei como começar?",
+      "q4": "Deus me decepcionou. Posso falar isso em voz alta?"
+    },
+    "jonas": {
+      "tagline": "41 anos · direto, sincero, sem lição de moral",
+      "hello": "Oi, eu sou o Jonas. Passei muito tempo fugindo de Deus. Me pergunta aquilo que você normalmente guarda só para você.",
+      "q1": "Tenho dúvidas sobre tudo. Isso é ruim?",
+      "q2": "O que a Bíblia realmente diz sobre sexo?",
+      "q3": "Como me livro de uma culpa que não me larga?",
+      "q4": "A Bíblia não é só um livro antigo de contos de fadas?"
+    }
   }
 }

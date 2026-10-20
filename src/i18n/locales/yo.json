@@ -2234,5 +2234,28 @@
       "resultCountPaged": "{{shown}} of {{count}} crosses shown",
       "loadMore": "Load more"
     }
+  },
+  "companion": {
+    "title1": "Ta lo fẹ́ kí ó ",
+    "title2": "bá ẹ rìn?",
+    "choose": "Ta lo fẹ́ kí ó bá ẹ rìn?",
+    "imgAlt": "{{name}}, alábàárìn",
+    "footer": "Lea àti Jonas kì í ṣe èèyàn gidi, àwọn ẹgbẹ́ Tech4Good ló dá wọn lédàá. Kàn tẹ̀ ẹ́ lẹ́ẹ̀kan – tàbí kó o kọ ọ̀rọ̀ tìẹ sí ìsàlẹ̀.",
+    "lea": {
+      "tagline": "Ọmọ ọdún 34, nọ́ọ̀sì · á kọ́kọ́ tẹ́tí sí ẹ",
+      "hello": "Báwo, èmi ni Lea. Mo ní ìgbàgbọ́ – bó tilẹ̀ jẹ́ pé mi ò kì í lọ ṣọ́ọ̀ṣì. Kí lo ń rù lọ́kàn lónìí?",
+      "q1": "Ṣé èèyàn lè ní ìgbàgbọ́ láì lọ sí ṣọ́ọ̀ṣì?",
+      "q2": "Inú mi dà bí ẹni pé ó ṣófo. Ibo ni mo ti lè rí ìtìlẹ́yìn?",
+      "q3": "Báwo ni mo ṣe lè gbàdúrà tí mi ò bá mọ bí a ṣe ń ṣe é?",
+      "q4": "Ọlọ́run já mi kulẹ̀. Ṣé mo lè sọ bẹ́ẹ̀?"
+    },
+    "jonas": {
+      "tagline": "Ọmọ ọdún 41 · sọ̀rọ̀ tààrà, aláìlábòsí, kì í ṣe onídàájọ́",
+      "hello": "Báwo, èmi ni Jonas. Mo ti sá fún Ọlọ́run fún ìgbà pípẹ́. Bi mí ní ohun tí o kò lè sọ fún ẹlòmíràn.",
+      "q1": "Gbogbo nǹkan ló ń ṣe mí ní iyèméjì. Ṣé ó burú?",
+      "q2": "Kí ni Bíbélì sọ gan-an nípa ìbálòpọ̀?",
+      "q3": "Báwo ni mo ṣe lè bọ́ lọ́wọ́ ẹ̀bi tí ń tẹ̀lé mi?",
+      "q4": "Ṣé Bíbélì kò kàn jẹ́ ìwé ìtàn àlọ́ àtijọ́?"
+    }
   }
 }

@@ -2234,5 +2234,28 @@
       "resultCountPaged": "{{shown}} of {{count}} crosses shown",
       "loadMore": "Load more"
     }
+  },
+  "companion": {
+    "title1": "Ki tartson ",
+    "title2": "veled?",
+    "choose": "Ki tartson veled?",
+    "imgAlt": "{{name}}, kísérő",
+    "footer": "Lea és Jonas a Tech4Good egyesület kitalált karakterei. Elég csak ráböknöd – vagy írj te magad alul.",
+    "lea": {
+      "tagline": "34, ápolónő · először csak meghallgat",
+      "hello": "Szia, Lea vagyok. Hiszek – templom nélkül is. Mit cipelsz ma magadban?",
+      "q1": "Lehet úgy is hinni, ha az ember nem jár templomba?",
+      "q2": "Üresnek érzem magam. Hol találok kapaszkodót?",
+      "q3": "Hogyan imádkozzak, ha azt sem tudom, hogyan kell?",
+      "q4": "Csalódtam Istenben. Szabad ilyet kimondani?"
+    },
+    "jonas": {
+      "tagline": "41 · közvetlen, őszinte, kioktatás nélkül",
+      "hello": "Szia, Jonas vagyok. Sokáig menekültem Isten elől. Kérdezz arról, amit máskor inkább magadban tartanál.",
+      "q1": "Mindenben kételkedem. Ez baj?",
+      "q2": "Mit mond valójában a Biblia a szexről?",
+      "q3": "Hogyan szabaduljak meg a bűntudattól, ami folyamatosan kísért?",
+      "q4": "Nem csak egy régi mesekönyv a Biblia?"
+    }
   }
 }
