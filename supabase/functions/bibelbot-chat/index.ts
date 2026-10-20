@@ -2311,7 +2311,7 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
                 content: String(await executeTool(t.name, t.input)),
               })),
             );
-            msgs.push({ role: "assistant", content: assistantContent });
+            msgs.push({ role: "assistant", content: assistantContent.filter((b: any) => b.type !== "thinking" && b.type !== "redacted_thinking") });
             msgs.push({ role: "user", content: results });
             console.log(`[timing] tools done ${Date.now() - t0}ms`);
 
