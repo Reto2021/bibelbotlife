@@ -1,4 +1,3 @@
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.4";
 import { COMPANIONS, normalizeCompanionChoice, resolveCompanion } from "../_shared/companions.ts";
 
@@ -1779,7 +1778,8 @@ const CRISIS_PREFIX = `🆘 **Wenn du gerade in einer Notlage bist / If you are 
 
 // ── Main handler ───────────────────────────────────────────────────
 
-serve(async (req) => {
+Deno.serve(async (req) => {
+  const t0 = Date.now();
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
@@ -2145,9 +2145,12 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
       finalMessages = recentMessages;
     }
 
-    // ── Claude Opus 5.5 via native Messages API, streamed, with tool loop ──
+    // ── Claude Opus 5 via native Messages API, streamed, with tool loop ──
     // Output is re-emitted in the OpenAI-style SSE shape the client already parses.
-    const CHAT_MODEL = "anthropic/claude-opus-5-5";
+    // Opus 5.5 always thinks first and then delivers the whole text in one burst
+    // (~4s of silence per tool round), so the chat uses Opus 5 with thinking off,
+    // which streams word by word.
+    const CHAT_MODEL = "anthropic/claude-opus-5";
     const openAiTools = [bibleTools.BIBLE_LOOKUP_TOOL, bibleTools.BIBLE_SEARCH_TOOL, bibleTools.BIBLE_LOOKUP_EXTRA_TOOL, THEOLOGY_SEARCH_TOOL, VALIDATE_REFERENCE_TOOL] as any[];
     const claudeTools = openAiTools.map((t) => ({
       name: t.function.name,
@@ -2177,8 +2180,14 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
             return await searchBibleVerses(args.query, args.translation, lang);
           case "search_theology":
             return await searchTheology(args.query, args.source_type);
-          case "lookup_bible_verse_extra":
+          case "lookup_bible_verse_extra": {
+            // BasisBibel lives in our own database, not in the external source.
+            const code = String(args.translation_code ?? "").toLowerCase();
+            if (code === "bb" || code === "basisbibel") {
+              return await lookupBibleVerse(args.book, args.chapter, args.verse_start, args.verse_end, "basisbibel", lang);
+            }
             return await lookupBibleVerseExtra(args.translation_code, args.book, args.chapter, args.verse_start, args.verse_end);
+          }
           case "validate_bible_reference":
             return await validateBibleReference(args.book, args.chapter, args.verse_start, args.verse_end);
           default:
@@ -2209,11 +2218,13 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
           messages: msgs,
           tools: claudeTools,
           tool_choice: { type: "auto" },
-          output_config: { effort: "low" },
+          thinking: { type: "disabled" },
         }),
       });
 
+    console.log(`[timing] prep done ${Date.now() - t0}ms`);
     const firstResponse = await callClaude(claudeMessages);
+    console.log(`[timing] claude headers ${Date.now() - t0}ms`);
     if (!firstResponse.ok) {
       const text = await firstResponse.text();
       console.error("AI gateway error:", firstResponse.status, text);
@@ -2240,8 +2251,12 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
         try {
           if (isCrisisMessage) controller.enqueue(delta(CRISIS_PREFIX));
           let response: Response = firstResponse;
+          let firstTextLogged = false;
+          let sentText = false;
+          let needsParagraphBreak = false;
           const msgs = [...claudeMessages];
           for (let round = 0; round < 4; round++) {
+            if (round > 0 && sentText) needsParagraphBreak = true;
             const reader = response.body!.getReader();
             const decoder = new TextDecoder();
             let buf = "";
@@ -2268,8 +2283,12 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
                   const b = blocks[ev.index];
                   const d = ev.delta;
                   if (d.type === "text_delta") {
+                    if (!firstTextLogged) { firstTextLogged = true; console.log(`[timing] first text ${Date.now() - t0}ms round ${round}`); }
                     if (b) b.text += d.text;
-                    controller.enqueue(delta(fixSpelling(d.text)));
+                    let out = fixSpelling(String(d.text).replace(/<br\s*\/?>/gi, "\n"));
+                    // Keep text from separate tool rounds in separate paragraphs.
+                    if (needsParagraphBreak && out.trim()) { out = "\n\n" + out.trimStart(); needsParagraphBreak = false; }
+                    if (out) { controller.enqueue(delta(out)); sentText = true; }
                   } else if (d.type === "input_json_delta" && b) b._json += d.partial_json;
                   else if (d.type === "thinking_delta" && b) b.thinking += d.thinking;
                   else if (d.type === "signature_delta" && b) b.signature += d.signature;
@@ -2299,6 +2318,7 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
               return rest;
             });
             const toolUses = assistantContent.filter((b: any) => b.type === "tool_use");
+            console.log(`[timing] round ${round} end ${Date.now() - t0}ms tools=${toolUses.map((t: any) => t.name).join(",")} blocks=${assistantContent.map((b: any) => b.type).join(",")}`);
             const results = await Promise.all(
               toolUses.map(async (t: any) => ({
                 type: "tool_result",
@@ -2306,10 +2326,12 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
                 content: String(await executeTool(t.name, t.input)),
               })),
             );
-            msgs.push({ role: "assistant", content: assistantContent });
+            msgs.push({ role: "assistant", content: assistantContent.filter((b: any) => b.type !== "thinking" && b.type !== "redacted_thinking") });
             msgs.push({ role: "user", content: results });
+            console.log(`[timing] tools done ${Date.now() - t0}ms`);
 
             response = await callClaude(msgs);
+            console.log(`[timing] round ${round + 1} headers ${Date.now() - t0}ms`);
             if (!response.ok) {
               console.error("Claude follow-up error:", response.status, await response.text());
               controller.enqueue(delta("\n\nEntschuldige, beim Nachschlagen ist ein Fehler passiert. Bitte versuche es nochmals."));
@@ -2318,6 +2340,7 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
           }
           controller.enqueue(sse({ choices: [{ delta: {}, finish_reason: "stop" }] }));
           controller.enqueue(encoder.encode("data: [DONE]\n\n"));
+          console.log(`[timing] done ${Date.now() - t0}ms`);
         } catch (e) {
           console.error("Stream error:", e);
         } finally {
