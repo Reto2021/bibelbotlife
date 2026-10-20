@@ -9,6 +9,7 @@ import { useSeniorMode } from "@/hooks/use-senior-mode";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTrack } from "@/components/AnalyticsProvider";
 import { openLifeWheel } from "@/components/LifeWheel";
+import { CompanionHero } from "@/components/CompanionHero";
 import { CHAT_OPEN_EVENT, CHAT_RESET_EVENT, type ChatMode } from "@/lib/chat-events";
 import ReactMarkdown from "react-markdown";
 import { ShareButton } from "@/components/ShareButton";
@@ -677,7 +678,7 @@ export function ChatHero() {
         const resp = await fetch(CHAT_URL, {
           method: "POST",
           headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"]}` },
-          body: JSON.stringify({ messages: allMessages, journeyDay: 1, language: i18n.language, mode: chatMode }),
+          body: JSON.stringify({ messages: allMessages, journeyDay: 1, language: i18n.language, mode: chatMode, companion: (() => { try { return localStorage.getItem("bibelbot-companion") || "auto"; } catch { return "auto"; } })() }),
         });
 
         if (!resp.ok) {
@@ -736,7 +737,7 @@ export function ChatHero() {
           const fallbackResp = await fetch(CHAT_URL, {
             method: "POST",
             headers: { "Content-Type": "application/json", Authorization: `Bearer ${import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"]}` },
-            body: JSON.stringify({ messages: allMessages, journeyDay: 1, language: i18n.language, mode: chatMode }),
+            body: JSON.stringify({ messages: allMessages, journeyDay: 1, language: i18n.language, mode: chatMode, companion: (() => { try { return localStorage.getItem("bibelbot-companion") || "auto"; } catch { return "auto"; } })() }),
           });
           const fullText = await fallbackResp.text();
           for (const line of fullText.split("\n")) {
@@ -983,28 +984,13 @@ export function ChatHero() {
                     aria-hidden="true"
                     className="pointer-events-none absolute inset-x-0 -top-16 h-64 bg-glow animate-candle"
                   />
-                  <h1 className="font-display font-normal text-5xl sm:text-6xl md:text-7xl text-foreground leading-[1.05] tracking-tight text-balance">
-                    {t(`hero.title1_${heroVariant ?? "praesenz"}`)}
-                    <span className="italic text-primary block sm:inline">
-                      {t(`hero.title2_${heroVariant ?? "praesenz"}`)}
-                    </span>
+                  <h1 className="font-display font-normal text-4xl sm:text-6xl md:text-7xl text-foreground leading-[1.05] tracking-tight text-balance">
+                    {i18n.language.startsWith("de") ? <>Wer soll dich{" "}<span className="italic text-primary">begleiten?</span></> : <>{t(`hero.title1_${heroVariant ?? "praesenz"}`)}<span className="italic text-primary block sm:inline">{t(`hero.title2_${heroVariant ?? "praesenz"}`)}</span></>}
                   </h1>
                 </div>
 
 
-                {/* Compact trust badges – inline */}
-                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3, delay: 0.1 }} className="mb-4 sm:mb-6 text-center">
-                  <span className="inline-flex items-center gap-2 text-[11px] sm:text-xs text-muted-foreground">
-                    <Shield className="h-3 w-3 text-primary shrink-0" />
-                    <span>{t("hero.badge.optionalLogin")}</span>
-                    <span className="text-primary/30">·</span>
-                    <EyeOff className="h-3 w-3 text-primary shrink-0" />
-                    <span>{t("hero.badge.noData")}</span>
-                    <span className="text-primary/30">·</span>
-                    <Heart className="h-3 w-3 text-primary shrink-0" />
-                    <span>{t("hero.badge.noJudgment")}</span>
-                  </span>
-                </motion.div>
+                <CompanionHero onAsk={(q) => sendMessage(q)} />
 
                 {/* Search input – appears fast */}
                 <motion.form
