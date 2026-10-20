@@ -985,7 +985,7 @@ export function ChatHero() {
                     className="pointer-events-none absolute inset-x-0 -top-16 h-64 bg-glow animate-candle"
                   />
                   <h1 className="font-display font-normal text-4xl sm:text-6xl md:text-7xl text-foreground leading-[1.05] tracking-tight text-balance">
-                    {i18n.language.startsWith("de") ? <>Wer soll dich{" "}<span className="italic text-primary">begleiten?</span></> : <>{t(`hero.title1_${heroVariant ?? "praesenz"}`)}<span className="italic text-primary block sm:inline">{t(`hero.title2_${heroVariant ?? "praesenz"}`)}</span></>}
+                    <>{t("companion.title1")}<span className="italic text-primary">{t("companion.title2")}</span></>
                   </h1>
                 </div>
 
