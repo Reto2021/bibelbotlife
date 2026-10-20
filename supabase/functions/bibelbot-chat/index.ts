@@ -2145,9 +2145,12 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
       finalMessages = recentMessages;
     }
 
-    // ── Claude Opus 5.5 via native Messages API, streamed, with tool loop ──
+    // ── Claude Opus 5 via native Messages API, streamed, with tool loop ──
     // Output is re-emitted in the OpenAI-style SSE shape the client already parses.
-    const CHAT_MODEL = "anthropic/claude-opus-5-5";
+    // Opus 5.5 always thinks first and then delivers the whole text in one burst
+    // (~4s of silence per tool round), so the chat uses Opus 5 with thinking off,
+    // which streams word by word.
+    const CHAT_MODEL = "anthropic/claude-opus-5";
     const openAiTools = [bibleTools.BIBLE_LOOKUP_TOOL, bibleTools.BIBLE_SEARCH_TOOL, bibleTools.BIBLE_LOOKUP_EXTRA_TOOL, THEOLOGY_SEARCH_TOOL, VALIDATE_REFERENCE_TOOL] as any[];
     const claudeTools = openAiTools.map((t) => ({
       name: t.function.name,
@@ -2177,8 +2180,14 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
             return await searchBibleVerses(args.query, args.translation, lang);
           case "search_theology":
             return await searchTheology(args.query, args.source_type);
-          case "lookup_bible_verse_extra":
+          case "lookup_bible_verse_extra": {
+            // BasisBibel lives in our own database, not in the external source.
+            const code = String(args.translation_code ?? "").toLowerCase();
+            if (code === "bb" || code === "basisbibel") {
+              return await lookupBibleVerse(args.book, args.chapter, args.verse_start, args.verse_end, "basisbibel", lang);
+            }
             return await lookupBibleVerseExtra(args.translation_code, args.book, args.chapter, args.verse_start, args.verse_end);
+          }
           case "validate_bible_reference":
             return await validateBibleReference(args.book, args.chapter, args.verse_start, args.verse_end);
           default:
@@ -2209,7 +2218,7 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
           messages: msgs,
           tools: claudeTools,
           tool_choice: { type: "auto" },
-          output_config: { effort: "low" },
+          thinking: { type: "disabled" },
         }),
       });
 
