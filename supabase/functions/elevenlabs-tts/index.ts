@@ -10,13 +10,23 @@ Deno.serve(async (req) => {
     return new Response("ok", { headers: corsHeaders });
   }
 
+  // The chat is anonymous, so TTS must work without login. Signed-in users get
+  // longer texts; anonymous callers are capped to keep abuse cheap.
   const auth = await requireUser(req);
-  if (!auth.ok) return auth.response;
+  const maxLen = auth.ok ? 5000 : 2500;
 
   try {
-    const { text, voiceId } = await req.json();
+    const { text: rawText, voiceId } = await req.json();
+    const allowedVoices = new Set(["onwK4e9ZLuTAKqWW03F9", "EXAVITQu4vr4xnSDxMaL"]);
+    if (voiceId && !allowedVoices.has(voiceId)) {
+      return new Response(JSON.stringify({ error: "Invalid voice" }), {
+        status: 400,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+    const text = typeof rawText === "string" ? rawText.slice(0, maxLen) : rawText;
 
-    if (!text || typeof text !== "string" || text.length > 5000) {
+    if (!text || typeof text !== "string") {
       return new Response(JSON.stringify({ error: "Invalid or too long text" }), {
         status: 400,
         headers: { ...corsHeaders, "Content-Type": "application/json" },
