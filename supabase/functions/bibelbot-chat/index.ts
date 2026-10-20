@@ -1,4 +1,3 @@
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.4";
 import { COMPANIONS, normalizeCompanionChoice, resolveCompanion } from "../_shared/companions.ts";
 
@@ -1779,7 +1778,8 @@ const CRISIS_PREFIX = `🆘 **Wenn du gerade in einer Notlage bist / If you are 
 
 // ── Main handler ───────────────────────────────────────────────────
 
-serve(async (req) => {
+Deno.serve(async (req) => {
+  const t0 = Date.now();
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
@@ -2213,7 +2213,9 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
         }),
       });
 
+    console.log(`[timing] prep done ${Date.now() - t0}ms`);
     const firstResponse = await callClaude(claudeMessages);
+    console.log(`[timing] claude headers ${Date.now() - t0}ms`);
     if (!firstResponse.ok) {
       const text = await firstResponse.text();
       console.error("AI gateway error:", firstResponse.status, text);
@@ -2240,6 +2242,7 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
         try {
           if (isCrisisMessage) controller.enqueue(delta(CRISIS_PREFIX));
           let response: Response = firstResponse;
+          let firstTextLogged = false;
           const msgs = [...claudeMessages];
           for (let round = 0; round < 4; round++) {
             const reader = response.body!.getReader();
@@ -2268,6 +2271,7 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
                   const b = blocks[ev.index];
                   const d = ev.delta;
                   if (d.type === "text_delta") {
+                    if (!firstTextLogged) { firstTextLogged = true; console.log(`[timing] first text ${Date.now() - t0}ms round ${round}`); }
                     if (b) b.text += d.text;
                     controller.enqueue(delta(fixSpelling(d.text)));
                   } else if (d.type === "input_json_delta" && b) b._json += d.partial_json;
@@ -2318,6 +2322,7 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
           }
           controller.enqueue(sse({ choices: [{ delta: {}, finish_reason: "stop" }] }));
           controller.enqueue(encoder.encode("data: [DONE]\n\n"));
+          console.log(`[timing] done ${Date.now() - t0}ms`);
         } catch (e) {
           console.error("Stream error:", e);
         } finally {
