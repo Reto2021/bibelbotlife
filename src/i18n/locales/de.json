@@ -2424,7 +2424,15 @@
       "q1": "Kann man glauben, ohne in eine Kirche zu gehen?",
       "q2": "Ich fühle mich leer. Wo finde ich Halt?",
       "q3": "Wie bete ich, wenn ich nicht weiss wie?",
-      "q4": "Gott hat mich enttäuscht. Darf ich das sagen?"
+      "q4": "Gott hat mich enttäuscht. Darf ich das sagen?",
+      "q5": "Ich bin so müde von allem. Darf ich einfach mal schwach sein?",
+      "q6": "Mein Vater ist gestorben. Wo ist er jetzt?",
+      "q7": "Ich fühle mich einsam, obwohl ich Leute um mich habe.",
+      "q8": "Wie vergebe ich jemandem, der sich nie entschuldigt hat?",
+      "q9": "Ich habe Angst vor der Zukunft. Was hilft?",
+      "q10": "Bin ich genug, so wie ich bin?",
+      "q11": "Meine Beziehung ist am Ende. Was jetzt?",
+      "q12": "Warum lässt Gott Leid zu?"
     },
     "jonas": {
       "tagline": "41 · direkt, ehrlich, ohne Moralkeule",
@@ -2432,7 +2440,16 @@
       "q1": "Ich zweifle an allem. Ist das schlimm?",
       "q2": "Was sagt die Bibel wirklich über Sex?",
       "q3": "Wie werde ich Schuld los, die mich verfolgt?",
-      "q4": "Ist die Bibel nicht einfach ein altes Märchenbuch?"
-    }
+      "q4": "Ist die Bibel nicht einfach ein altes Märchenbuch?",
+      "q5": "Ich habe meine Familie enttäuscht. Kann ich das wiedergutmachen?",
+      "q6": "Wie finde ich heraus, was ich mit meinem Leben soll?",
+      "q7": "Ich bin wütend auf Gott. Hält er das aus?",
+      "q8": "Bin ich ein Versager, wenn ich nicht mehr kann?",
+      "q9": "Hat Jesus wirklich gelebt – oder ist das erfunden?",
+      "q10": "Ich trinke zu viel. Was sagt die Bibel dazu?",
+      "q11": "Wie bleibe ich gelassen, wenn alles schiefgeht?",
+      "q12": "Gibt es Gott, und wie merke ich das?"
+    },
+    "more": "Andere Fragen"
   }
 }

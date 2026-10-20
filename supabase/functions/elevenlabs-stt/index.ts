@@ -10,8 +10,10 @@ Deno.serve(async (req) => {
     return new Response("ok", { headers: corsHeaders });
   }
 
+  // The chat is anonymous, so voice input must work without login.
+  // Anonymous callers get a smaller upload cap to keep abuse cheap.
   const auth = await requireUser(req);
-  if (!auth.ok) return auth.response;
+  const maxBytes = auth.ok ? 25 * 1024 * 1024 : 5 * 1024 * 1024;
 
   try {
     const formData = await req.formData();
@@ -21,6 +23,12 @@ Deno.serve(async (req) => {
     if (!audioFile) {
       return new Response(JSON.stringify({ error: "No audio file provided" }), {
         status: 400,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+    if (audioFile.size > maxBytes) {
+      return new Response(JSON.stringify({ error: "Audio too long" }), {
+        status: 413,
         headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
     }
