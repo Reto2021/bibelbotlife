@@ -2209,7 +2209,7 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
           messages: msgs,
           tools: claudeTools,
           tool_choice: { type: "auto" },
-          output_config: { effort: "medium" },
+          output_config: { effort: "low" },
         }),
       });
 
@@ -2233,7 +2233,10 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
     const delta = (content: string) => sse({ choices: [{ delta: { content }, finish_reason: null }] });
 
     const stream = new ReadableStream({
-      async start(controller) {
+      // Do not await inside start(): the runtime only flushes chunks once start() resolves,
+      // which held back the whole answer until it was complete.
+      start(controller) {
+        void (async () => {
         try {
           if (isCrisisMessage) controller.enqueue(delta(CRISIS_PREFIX));
           let response: Response = firstResponse;
@@ -2320,6 +2323,7 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
         } finally {
           controller.close();
         }
+        })();
       },
     });
 
