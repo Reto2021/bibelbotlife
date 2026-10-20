@@ -2392,7 +2392,15 @@
       "q1": "Can you believe without going to church?",
       "q2": "I feel empty. Where can I find something to hold onto?",
       "q3": "How do I pray when I don't know how?",
-      "q4": "God let me down. Am I allowed to say that?"
+      "q4": "God let me down. Am I allowed to say that?",
+      "q5": "I'm so tired of everything. May I just be weak for once?",
+      "q6": "My father died. Where is he now?",
+      "q7": "I feel lonely even with people around me.",
+      "q8": "How do I forgive someone who never apologized?",
+      "q9": "I'm afraid of the future. What helps?",
+      "q10": "Am I enough as I am?",
+      "q11": "My relationship is over. What now?",
+      "q12": "Why does God allow suffering?"
     },
     "jonas": {
       "tagline": "41 · direct, honest, no lecturing",
@@ -2400,7 +2408,16 @@
       "q1": "I doubt everything. Is that bad?",
       "q2": "What does the Bible actually say about sex?",
       "q3": "How do I let go of guilt that's haunting me?",
-      "q4": "Isn't the Bible just an old book of fairy tales?"
-    }
+      "q4": "Isn't the Bible just an old book of fairy tales?",
+      "q5": "I let my family down. Can I make it right?",
+      "q6": "How do I figure out what to do with my life?",
+      "q7": "I'm angry at God. Can he handle that?",
+      "q8": "Am I a failure if I can't go on?",
+      "q9": "Did Jesus really live – or is it made up?",
+      "q10": "I drink too much. What does the Bible say?",
+      "q11": "How do I stay calm when everything goes wrong?",
+      "q12": "Does God exist, and how would I notice?"
+    },
+    "more": "Other questions"
   }
 }
