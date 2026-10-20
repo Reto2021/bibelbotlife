@@ -2252,8 +2252,11 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
           if (isCrisisMessage) controller.enqueue(delta(CRISIS_PREFIX));
           let response: Response = firstResponse;
           let firstTextLogged = false;
+          let sentText = false;
+          let needsParagraphBreak = false;
           const msgs = [...claudeMessages];
           for (let round = 0; round < 4; round++) {
+            if (round > 0 && sentText) needsParagraphBreak = true;
             const reader = response.body!.getReader();
             const decoder = new TextDecoder();
             let buf = "";
@@ -2282,7 +2285,10 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
                   if (d.type === "text_delta") {
                     if (!firstTextLogged) { firstTextLogged = true; console.log(`[timing] first text ${Date.now() - t0}ms round ${round}`); }
                     if (b) b.text += d.text;
-                    controller.enqueue(delta(fixSpelling(d.text)));
+                    let out = fixSpelling(String(d.text).replace(/<br\s*\/?>/gi, "\n"));
+                    // Keep text from separate tool rounds in separate paragraphs.
+                    if (needsParagraphBreak && out.trim()) { out = "\n\n" + out.trimStart(); needsParagraphBreak = false; }
+                    if (out) { controller.enqueue(delta(out)); sentText = true; }
                   } else if (d.type === "input_json_delta" && b) b._json += d.partial_json;
                   else if (d.type === "thinking_delta" && b) b.thinking += d.thinking;
                   else if (d.type === "signature_delta" && b) b.signature += d.signature;
