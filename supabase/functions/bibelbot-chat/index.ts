@@ -2303,6 +2303,7 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
               return rest;
             });
             const toolUses = assistantContent.filter((b: any) => b.type === "tool_use");
+            console.log(`[timing] round ${round} end ${Date.now() - t0}ms tools=${toolUses.map((t: any) => t.name).join(",")} blocks=${assistantContent.map((b: any) => b.type).join(",")}`);
             const results = await Promise.all(
               toolUses.map(async (t: any) => ({
                 type: "tool_result",
@@ -2312,8 +2313,10 @@ Bot: «[Zusammenfassung der Reise] ... [Bibelverse zur tiefsten Erkenntnis] ... 
             );
             msgs.push({ role: "assistant", content: assistantContent });
             msgs.push({ role: "user", content: results });
+            console.log(`[timing] tools done ${Date.now() - t0}ms`);
 
             response = await callClaude(msgs);
+            console.log(`[timing] round ${round + 1} headers ${Date.now() - t0}ms`);
             if (!response.ok) {
               console.error("Claude follow-up error:", response.status, await response.text());
               controller.enqueue(delta("\n\nEntschuldige, beim Nachschlagen ist ein Fehler passiert. Bitte versuche es nochmals."));
