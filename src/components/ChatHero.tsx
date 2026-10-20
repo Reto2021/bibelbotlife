@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import bibelbotLogo from "@/assets/biblebot-logo.png";
-import { Search, ArrowRight, Shield, Loader2, Mic, MicOff, Send, Menu, LogIn, X, EyeOff, Heart, Accessibility, Volume2, VolumeX, CheckCircle2, AlertTriangle } from "lucide-react";
+import { Search, ArrowRight, Loader2, Mic, MicOff, Send, Menu, LogIn, X, Accessibility, Volume2, VolumeX, CheckCircle2, AlertTriangle } from "lucide-react";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { useTTS } from "@/hooks/use-tts";
 
