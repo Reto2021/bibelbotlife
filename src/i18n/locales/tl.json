@@ -2237,5 +2237,28 @@
       "resultCountPaged": "{{shown}} of {{count}} crosses shown",
       "loadMore": "Load more"
     }
+  },
+  "companion": {
+    "title1": "Sino ang gusto mong ",
+    "title2": "makasama?",
+    "choose": "Sino ang gusto mong makasama?",
+    "imgAlt": "{{name}}, makakasama mo sa usapan",
+    "footer": "Sina Lea at Jonas ay mga kathang-isip na karakter mula sa Tech4Good. Pindutin lang – o ikaw mismo ang magsulat sa ibaba.",
+    "lea": {
+      "tagline": "34, nars · nakikinig muna",
+      "hello": "Uy, ako si Lea. Naniniwala ako – kahit hindi nagsisimba. May dinadala ka ba o bumabagabag sa 'yo ngayon?",
+      "q1": "Puwede bang maniwala nang hindi nagsisimba?",
+      "q2": "Pakiramdam ko hungkag ako. Saan ako makakapit?",
+      "q3": "Paano ako magdadasal kung hindi ko alam kung paano?",
+      "q4": "Binigo ako ng Diyos. Ayos lang bang sabihin 'yun?"
+    },
+    "jonas": {
+      "tagline": "41 · diretsahan, totoo, walang halong sermon",
+      "hello": "Kamusta, ako si Jonas. Matagal din akong lumayo sa Diyos. Tanungin mo 'ko tungkol sa mga bagay na kinikimkim mo lang.",
+      "q1": "Dudang-duda ako sa lahat. Masama ba 'yun?",
+      "q2": "Ano ba talaga ang sinasabi ng Bibliya tungkol sa sex?",
+      "q3": "Paano mawawala ang guilt na bumabagabag sa akin?",
+      "q4": "Hindi ba lumang libro lang ng mga fairy tale ang Bibliya?"
+    }
   }
 }

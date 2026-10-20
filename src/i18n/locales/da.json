@@ -2234,5 +2234,28 @@
       "resultCountPaged": "{{shown}} of {{count}} crosses shown",
       "loadMore": "Load more"
     }
+  },
+  "companion": {
+    "title1": "Hvem vil du følges ",
+    "title2": "med?",
+    "choose": "Hvem vil du følges med?",
+    "imgAlt": "{{name}}, samtalepartner",
+    "footer": "Lea og Jonas er fiktive personer skabt af foreningen Tech4Good. Tryk på en af dem – eller skriv selv nedenfor.",
+    "lea": {
+      "tagline": "34, sygeplejerske · lytter først",
+      "hello": "Hej, jeg er Lea. Jeg tror – også uden kirken. Hvad går du og tumler med i dag?",
+      "q1": "Kan man godt tro uden at gå i kirke?",
+      "q2": "Jeg føler mig helt tom indeni. Hvor finder jeg fodfæste?",
+      "q3": "Hvordan beder man, når man ikke aner hvordan?",
+      "q4": "Gud har skuffet mig. Må man godt sige det?"
+    },
+    "jonas": {
+      "tagline": "41 · direkte, ærlig, uden løftede pegefingre",
+      "hello": "Hej, jeg er Jonas. Jeg har løbet væk fra Gud i mange år. Spørg mig om det, du ellers holder for dig selv.",
+      "q1": "Jeg tvivler på det hele. Er det helt forkert?",
+      "q2": "Hvad siger Bibelen egentlig om sex?",
+      "q3": "Hvordan slipper man af med skyldfølelse, der bliver ved med at nage?",
+      "q4": "Er Bibelen ikke bare en gammel eventyrbog?"
+    }
   }
 }

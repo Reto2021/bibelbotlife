@@ -3,38 +3,18 @@ import { motion } from "framer-motion";
 import leaImg from "@/assets/companions/lea.jpg";
 import jonasImg from "@/assets/companions/jonas.jpg";
 import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
 
 export type CompanionPick = "lea" | "jonas";
 const STORAGE_KEY = "bibelbot-companion";
 
-const PEOPLE: Record<CompanionPick, { name: string; img: string; tagline: string; hello: string; questions: string[] }> = {
-  lea: {
-    name: "Lea",
-    img: leaImg,
-    tagline: "34, Pflegefachfrau · hört zuerst zu",
-    hello: "Hoi, ich bin Lea. Ich glaube – auch ohne Kirche. Was trägst du heute mit dir herum?",
-    questions: [
-      "Kann man glauben, ohne in eine Kirche zu gehen?",
-      "Ich fühle mich leer. Wo finde ich Halt?",
-      "Wie bete ich, wenn ich nicht weiss wie?",
-      "Gott hat mich enttäuscht. Darf ich das sagen?",
-    ],
-  },
-  jonas: {
-    name: "Jonas",
-    img: jonasImg,
-    tagline: "41 · direkt, ehrlich, ohne Moralkeule",
-    hello: "Salü, ich bin Jonas. Ich bin lange vor Gott davongelaufen. Frag mich, was du sonst für dich behältst.",
-    questions: [
-      "Ich zweifle an allem. Ist das schlimm?",
-      "Was sagt die Bibel wirklich über Sex?",
-      "Wie werde ich Schuld los, die mich verfolgt?",
-      "Ist die Bibel nicht einfach ein altes Märchenbuch?",
-    ],
-  },
+const PEOPLE: Record<CompanionPick, { name: string; img: string }> = {
+  lea: { name: "Lea", img: leaImg },
+  jonas: { name: "Jonas", img: jonasImg },
 };
 
 export function CompanionHero({ onAsk }: { onAsk: (question: string) => void }) {
+  const { t } = useTranslation();
   const [pick, setPick] = useState<CompanionPick>("lea");
 
   useEffect(() => {
@@ -49,12 +29,17 @@ export function CompanionHero({ onAsk }: { onAsk: (question: string) => void }) 
     try { localStorage.setItem(STORAGE_KEY, p); } catch { /* ignore */ }
   };
 
-  const person = PEOPLE[pick];
+  const person = {
+    name: PEOPLE[pick].name,
+    tagline: t(`companion.${pick}.tagline`),
+    hello: t(`companion.${pick}.hello`),
+    questions: [1, 2, 3, 4].map((n) => t(`companion.${pick}.q${n}`)),
+  };
 
   return (
     <div className="max-w-2xl mx-auto w-full mb-5">
       {/* Choose your companion */}
-      <div className="flex justify-center gap-4 mb-4" role="radiogroup" aria-label="Wer soll dich begleiten?">
+      <div className="flex justify-center gap-4 mb-4" role="radiogroup" aria-label={t("companion.choose")}>
         {(Object.keys(PEOPLE) as CompanionPick[]).map((id) => {
           const p = PEOPLE[id];
           const active = id === pick;
@@ -76,7 +61,7 @@ export function CompanionHero({ onAsk }: { onAsk: (question: string) => void }) 
                   active ? "ring-2 ring-primary shadow-warm" : "ring-1 ring-border",
                 )}
               >
-                <img src={p.img} alt={`${p.name}, Begleitfigur`} width={80} height={80} className="h-full w-full object-cover" />
+                <img src={p.img} alt={t("companion.imgAlt", { name: p.name })} width={80} height={80} className="h-full w-full object-cover" />
                 {active && <span className="absolute bottom-1 right-1 h-3 w-3 rounded-full bg-primary ring-2 ring-background" />}
               </span>
               <span className="text-sm font-medium text-foreground">{p.name}</span>
@@ -118,7 +103,7 @@ export function CompanionHero({ onAsk }: { onAsk: (question: string) => void }) 
       </div>
 
       <p className="mt-2 text-[11px] text-muted-foreground text-center">
-        Lea und Jonas sind erfundene Figuren des Vereins Tech4Good. Antippen genügt – oder schreib unten selbst.
+        {t("companion.footer")}
       </p>
     </div>
   );

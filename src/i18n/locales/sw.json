@@ -2234,5 +2234,28 @@
       "resultCountPaged": "{{shown}} of {{count}} crosses shown",
       "loadMore": "Load more"
     }
+  },
+  "companion": {
+    "title1": "Nani ungependa ",
+    "title2": "aongozane nawe?",
+    "choose": "Nani ungependa aongozane nawe?",
+    "imgAlt": "{{name}}, mhusika wa kuongozana nawe",
+    "footer": "Lea na Jonas ni wahusika wa kubuni wa shirika la Tech4Good. Gusa tu – au andika ujumbe wako mwenyewe hapa chini.",
+    "lea": {
+      "tagline": "34, muuguzi · anasikiliza kwanza",
+      "hello": "Mambo, naitwa Lea. Ninaamini – hata bila kwenda kanisani. Una nini moyoni leo?",
+      "q1": "Je, unaweza kuamini bila kwenda kanisani?",
+      "q2": "Ninajihisi mtupu. Wapi naweza kupata tegemeo?",
+      "q3": "Ninasalije ikiwa sijui namna ya kuomba?",
+      "q4": "Mungu amenikatisha tamaa. Je, ninaweza kusema hivyo?"
+    },
+    "jonas": {
+      "tagline": "41 · muwazi, mkweli, asiyehukumu",
+      "hello": "Sasa, naitwa Jonas. Nilimkimbia Mungu kwa muda mrefu. Niulize kile ambacho huwa unakibakiza moyoni.",
+      "q1": "Nina mashaka na kila kitu. Je, ni vibaya?",
+      "q2": "Biblia inasemaje hasa kuhusu ngono?",
+      "q3": "Ninawezaje kuondokana na hatia inayoniandama?",
+      "q4": "Je, Biblia si kitabu tu cha zamani cha hadithi za kubuni?"
+    }
   }
 }

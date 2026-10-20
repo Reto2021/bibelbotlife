@@ -2234,5 +2234,28 @@
       "resultCountPaged": "{{shown}} of {{count}} crosses shown",
       "loadMore": "Load more"
     }
+  },
+  "companion": {
+    "title1": "Kdo tě má ",
+    "title2": "doprovázet?",
+    "choose": "Kdo tě má doprovázet?",
+    "imgAlt": "{{name}}, průvodce",
+    "footer": "Lea a Jonas jsou smyšlené postavy spolku Tech4Good. Stačí klepnout – nebo dole napiš vlastní zprávu.",
+    "lea": {
+      "tagline": "34, zdravotní sestra · nejdřív naslouchá",
+      "hello": "Ahoj, já jsem Lea. Věřím – i bez církve. Co si v sobě dneska neseš?",
+      "q1": "Dá se věřit, i když nechodím do kostela?",
+      "q2": "Cítím se prázdně. Kde najít oporu?",
+      "q3": "Jak se modlit, když nevím, jak na to?",
+      "q4": "Bůh mě zklamal. Můžu to říct nahlas?"
+    },
+    "jonas": {
+      "tagline": "41 · přímý, upřímný, bez poučování",
+      "hello": "Čau, já jsem Jonas. Dlouho jsem před Bohem utíkal. Zeptej se mě na cokoliv, co si jinak nechává proto sebe.",
+      "q1": "O všem pochybuju. Je to špatně?",
+      "q2": "Co Bible doopravdy říká o sexu?",
+      "q3": "Jak se zbavit viny, která mě pořád pronásleduje?",
+      "q4": "Není Bible prostě jenom stará kniha pohádek?"
+    }
   }
 }

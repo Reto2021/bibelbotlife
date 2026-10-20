@@ -2234,5 +2234,28 @@
       "resultCountPaged": "{{shown}} of {{count}} crosses shown",
       "loadMore": "Load more"
     }
+  },
+  "companion": {
+    "title1": "Kto by ťa mal ",
+    "title2": "sprevádzať?",
+    "choose": "Kto by ťa mal sprevádzať?",
+    "imgAlt": "{{name}}, sprievodná postava",
+    "footer": "Lea a Jonas sú vymyslené postavy združenia Tech4Good. Stačí ťuknúť – alebo napíš dole vlastnú správu.",
+    "lea": {
+      "tagline": "34, zdravotná sestra · najprv počúva",
+      "hello": "Ahoj, som Lea. Verím – aj bez kostola. Čo si dnes nesieš v sebe?",
+      "q1": "Dá sa veriť aj bez chodenia do kostola?",
+      "q2": "Cítim sa prázdno. Kde nájdem oporu?",
+      "q3": "Ako sa mám modliť, keď neviem ako?",
+      "q4": "Boh ma sklamal. Môžem to vôbec povedať?"
+    },
+    "jonas": {
+      "tagline": "41 · priamy, úprimný, bez poučovania",
+      "hello": "Ahoj, som Jonas. Dlho som pred Bohom utekal. Spýtaj sa ma na čokoľvek, čo si inak nechávaš pre seba.",
+      "q1": "Pochybujem o všetkom. Je to zlé?",
+      "q2": "Čo hovorí Biblia naozaj o sexe?",
+      "q3": "Ako sa zbavím viny, ktorá ma stále prenasleduje?",
+      "q4": "Nie je Biblia len stará kniha rozprávok?"
+    }
   }
 }

@@ -2275,5 +2275,28 @@
       "resultCountPaged": "{{shown}} of {{count}} crosses shown",
       "loadMore": "Load more"
     }
+  },
+  "companion": {
+    "title1": "Siapa yang mau ",
+    "title2": "menemanimu?",
+    "choose": "Siapa yang mau menemanimu?",
+    "imgAlt": "{{name}}, teman ngobrol",
+    "footer": "Lea dan Jonas adalah karakter rekaan dari komunitas Tech4Good. Cukup ketuk – atau tulis sendiri ceritamu di bawah.",
+    "lea": {
+      "tagline": "34 tahun, perawat · siap mendengarkan terlebih dahulu",
+      "hello": "Hai, aku Lea. Aku percaya pada Tuhan – meski tanpa ke gereja. Apa yang lagi membebani hatimu hari ini?",
+      "q1": "Bisa nggak ya tetap percaya tanpa harus ke gereja?",
+      "q2": "Aku merasa hampa. Di mana aku bisa mencari pegangan?",
+      "q3": "Gimana cara berdoa kalau aku nggak tahu caranya?",
+      "q4": "Tuhan bikin aku kecewa. Boleh nggak aku ngomong begitu?"
+    },
+    "jonas": {
+      "tagline": "41 tahun · ceplas-ceplos, jujur, tanpa menghakimi",
+      "hello": "Halo, aku Jonas. Dulu aku lama lari dari Tuhan. Tanyakan saja hal yang biasanya kamu pendam sendiri.",
+      "q1": "Aku meragukan segalanya. Apakah itu salah?",
+      "q2": "Apa kata Alkitab sebenarnya tentang seks?",
+      "q3": "Gimana caranya lepas dari rasa bersalah yang terus menghantui?",
+      "q4": "Bukankah Alkitab cuma buku dongeng kuno?"
+    }
   }
 }

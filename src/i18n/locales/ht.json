@@ -2234,5 +2234,28 @@
       "resultCountPaged": "{{shown}} of {{count}} crosses shown",
       "loadMore": "Load more"
     }
+  },
+  "companion": {
+    "title1": "Kiyès ou ta renmen ki ",
+    "title2": "akonpaye w?",
+    "choose": "Kiyès ou ta renmen ki akonpaye w?",
+    "imgAlt": "{{name}}, konpayon vwayaj",
+    "footer": "Lea ak Jonas se pèsonaj fiktif asosyasyon Tech4Good kreye. Jis klike sou youn – oswa ekri mesaj pa w la anba a.",
+    "lea": {
+      "tagline": "34 an, enfimyè · li pran tan koute anvan",
+      "hello": "Alo, mwen se Lea. Mwen gen lafwa – menm san ale legliz. Ki chay ou gen sou kè w jodi a?",
+      "q1": "Èske yon moun ka gen lafwa san l pa al legliz?",
+      "q2": "Mwen santi m vid. Kote m ka jwenn fòs pou m kenbe?",
+      "q3": "Kouman pou m priye lè m pa konn kijan pou m fè sa?",
+      "q4": "Bondye desevwa m. Èske m gen dwa di sa?"
+    },
+    "jonas": {
+      "tagline": "41 an · fran, sensè, san fè moral",
+      "hello": "Sak pase, mwen se Jonas. Mwen fè anpil tan ap kouri pou Bondye. Poze m kesyon ou pa janm oze di pèsonn yo.",
+      "q1": "M ap doute de tout bagay. Èske sa grav?",
+      "q2": "Kisa Labib di toutbonvre sou zafè sèks?",
+      "q3": "Kouman pou m libere anba remò k ap kouri dèyè m yo?",
+      "q4": "Èske Labib pa senpleman yon vye liv istwa imajinè?"
+    }
   }
 }

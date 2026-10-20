@@ -2234,5 +2234,28 @@
       "resultCountPaged": "{{shown}} of {{count}} crosses shown",
       "loadMore": "Load more"
     }
+  },
+  "companion": {
+    "title1": "Ko želiš da te ",
+    "title2": "prati?",
+    "choose": "Ko želiš da te prati?",
+    "imgAlt": "{{name}}, saputnik",
+    "footer": "Lea i Jonas su izmišljeni likovi udruženja Tech4Good. Dovoljno je da dodirneš – ili dole napiši šta želiš.",
+    "lea": {
+      "tagline": "34, medicinska sestra · prvo sasluša",
+      "hello": "Ćao, ja sam Lea. Verujem – čak i bez crkve. Šta danas nosiš u sebi?",
+      "q1": "Može li da se veruje i bez odlaska u crkvu?",
+      "q2": "Osećam se prazno. Gde da pronađem oslonac?",
+      "q3": "Kako da se molim kad ne znam kako?",
+      "q4": "Bog me je razočarao. Da li smem to da kažem?"
+    },
+    "jonas": {
+      "tagline": "41 · direktan, iskren, bez moralisanja",
+      "hello": "Hej, ja sam Jonas. Dugo sam bežao od Boga. Pitaj me ono što inače čuvaš za sebe.",
+      "q1": "Sumnjam u sve. Da li je to loše?",
+      "q2": "Šta Biblija stvarno kaže o seksu?",
+      "q3": "Kako da se rešim krivice koja me proganja?",
+      "q4": "Zar Biblija nije samo stara knjiga bajki?"
+    }
   }
 }

@@ -2275,5 +2275,28 @@
       "resultCountPaged": "{{shown}} of {{count}} crosses shown",
       "loadMore": "Load more"
     }
+  },
+  "companion": {
+    "title1": "Wie mag jou ",
+    "title2": "begeleiden?",
+    "choose": "Wie mag jou begeleiden?",
+    "imgAlt": "{{name}}, gesprekspartner",
+    "footer": "Lea en Jonas zijn verzonnen personages van de vereniging Tech4Good. Even aantikken is genoeg – of typ hieronder zelf iets.",
+    "lea": {
+      "tagline": "34, verpleegkundige · luistert eerst naar je",
+      "hello": "Hoi, ik ben Lea. Ik geloof – ook zonder kerk. Wat draag jij vandaag met je mee?",
+      "q1": "Kun je geloven zonder naar een kerk te gaan?",
+      "q2": "Ik voel me leeg. Waar vind ik houvast?",
+      "q3": "Hoe bid ik als ik niet weet hoe het moet?",
+      "q4": "God heeft me teleurgesteld. Mag ik dat zeggen?"
+    },
+    "jonas": {
+      "tagline": "41 · direct, eerlijk, zonder opgeheven vingertje",
+      "hello": "Hey, ik ben Jonas. Ik ben lang weggelopen voor God. Vraag me gerust wat je anders voor jezelf houdt.",
+      "q1": "Ik twijfel aan alles. Is dat erg?",
+      "q2": "Wat zegt de Bijbel nou echt over seks?",
+      "q3": "Hoe kom ik af van schuldgevoelens die me blijven achtervolgen?",
+      "q4": "Is de Bijbel niet gewoon een oud sprookjesboek?"
+    }
   }
 }

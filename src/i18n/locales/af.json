@@ -2234,5 +2234,28 @@
       "resultCountPaged": "{{shown}} of {{count}} crosses shown",
       "loadMore": "Load more"
     }
+  },
+  "companion": {
+    "title1": "Wie moet jou ",
+    "title2": "vergesel?",
+    "choose": "Wie moet jou vergesel?",
+    "imgAlt": "{{name}}, metgesel",
+    "footer": "Lea en Jonas is fiktiewe karakters van die vereniging Tech4Good. Tik net – of skryf self hier onder.",
+    "lea": {
+      "tagline": "34, verpleegkundige · luister eers",
+      "hello": "Haai, ek is Lea. Ek glo – selfs sonder ’n kerk. Wat dra jy vandag saam met jou rond?",
+      "q1": "Kan ’n mens glo sonder om kerk toe te gaan?",
+      "q2": "Ek voel leeg. Waar vind ek vastigheid?",
+      "q3": "Hoe bid ek as ek nie weet hoe nie?",
+      "q4": "God het my teleurgestel. Mag ek dit sê?"
+    },
+    "jonas": {
+      "tagline": "41 · reguit, eerlik, sonder prekerigheid",
+      "hello": "Hallo, ek is Jonas. Ek het lank van God af weggehardloop. Vra my dit wat jy gewoonlik vir jouself hou.",
+      "q1": "Ek twyfel aan alles. Is dit erg?",
+      "q2": "Wat sê die Bybel regtig oor seks?",
+      "q3": "Hoe raak ek ontslae van skuldgevoelens wat my bly agtervolg?",
+      "q4": "Is die Bybel nie maar net ’n ou sprokiesboek nie?"
+    }
   }
 }
