@@ -88,10 +88,8 @@ const Index = () => {
       <SiteHeader />
 
       <main>
-        {/* Einziges sichtbares H1 steht im Chat-Hero; dieser Titel bleibt für Screenreader & SEO */}
-        <h1 className="sr-only">
-          BibleBot.Life · Dein Bibel-Begleiter
-        </h1>
+        {/* Einziges sichtbares H1 steht im Chat-Hero; dieser Titel dient Screenreadern & SEO */}
+        <p className="sr-only">BibleBot.Life · Dein Bibel-Begleiter</p>
         {/* Sanctuary-Hero: Lea & Jonas, Fragen, Eingabefeld – mehr nicht */}
         <ChatHero />
 
