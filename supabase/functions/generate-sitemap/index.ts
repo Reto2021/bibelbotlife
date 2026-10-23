@@ -88,9 +88,28 @@ const xmlResponse = (xml: string) =>
     headers: {
       ...corsHeaders,
       "Content-Type": "application/xml; charset=utf-8",
-      "Cache-Control": "public, max-age=3600",
+      "Cache-Control": "public, max-age=3600, s-maxage=21600",
     },
   });
+
+type TopicRow = { slug: string; language: string; updated_at: string | null };
+const TOPIC_CACHE_MS = 6 * 60 * 60 * 1000;
+let topicCache: { at: number; rows: TopicRow[] } | null = null;
+
+async function getTopicRows(supabase: any): Promise<TopicRow[]> {
+  if (topicCache && Date.now() - topicCache.at < TOPIC_CACHE_MS) return topicCache.rows;
+  const { data, error } = await supabase
+    .from("seo_topics")
+    .select("slug, language, updated_at")
+    .eq("is_published", true);
+  if (error) {
+    if (topicCache) return topicCache.rows;
+    throw error;
+  }
+  topicCache = { at: Date.now(), rows: (data ?? []) as TopicRow[] };
+  return topicCache.rows;
+}
+
 
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: corsHeaders });
@@ -202,20 +221,13 @@ Deno.serve(async (req) => {
         return xmlResponse(wrapUrlset([]));
       }
 
-      const { data: topics } = await supabase
-        .from("seo_topics")
-        .select("slug, updated_at")
-        .eq("is_published", true)
-        .eq("language", lang);
-
-      // Get all available langs per slug for hreflang alternates
-      const { data: allLangs } = await supabase
-        .from("seo_topics")
-        .select("slug, language")
-        .eq("is_published", true);
+      // One cached read of all published topics serves every language request
+      // (instead of two queries per call) — keeps database load low.
+      const allRows = await getTopicRows(supabase);
+      const topics = allRows.filter((r) => r.language === lang);
 
       const langsBySlug = new Map<string, string[]>();
-      for (const r of allLangs ?? []) {
+      for (const r of allRows) {
         const arr = langsBySlug.get(r.slug) ?? [];
         arr.push(r.language);
         langsBySlug.set(r.slug, arr);
