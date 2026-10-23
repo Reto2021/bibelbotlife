@@ -36,6 +36,13 @@
       "when": 1792526605348,
       "tag": "0004_relax_insert_policy_lookups",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1792778856614,
+      "tag": "0005_migration",
+      "breakpoints": true
     }
   ]
 }

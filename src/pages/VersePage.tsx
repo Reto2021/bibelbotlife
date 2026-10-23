@@ -22,7 +22,9 @@ import {
   TOP_VERSES,
   bookBySlug,
 } from "@/lib/bible-slugs";
-import { BookOpen, MessageCircle, Share2 } from "lucide-react";
+import { BookOpen, MessageCircle, Share2, Sparkles, Feather, HelpCircle, HandHeart, Loader2 } from "lucide-react";
+import { useServerFn } from "@tanstack/react-start";
+import { getVerseMeaning, type KeyWord } from "@/lib/verse-meaning.functions";
 
 interface VerseRow {
   text: string;
@@ -39,6 +41,10 @@ interface SeoRow {
   reflection: string | null;
   related_references: string[] | null;
   related_topics: string[] | null;
+  summary?: string | null;
+  key_words?: KeyWord[] | null;
+  life_questions?: string[] | null;
+  prayer?: string | null;
 }
 
 const SITE = "https://biblebot.life";
@@ -54,6 +60,8 @@ export default function VersePage() {
   const [verses, setVerses] = useState<VerseRow[]>([]);
   const [seo, setSeo] = useState<SeoRow | null>(null);
   const [loading, setLoading] = useState(true);
+  const [deepening, setDeepening] = useState(false);
+  const fetchMeaning = useServerFn(getVerseMeaning);
 
   useEffect(() => {
     if (!parsed) {
@@ -86,7 +94,7 @@ export default function VersePage() {
       const slug = buildVerseSlug(parsed.book.slug, parsed.chapter, parsed.verse);
       const { data: seoData } = await supabase
         .from("verse_seo_content")
-        .select("title,meta_description,context,reflection,related_references,related_topics")
+        .select("title,meta_description,context,reflection,related_references,related_topics,summary,key_words,life_questions,prayer,view_count")
         .eq("reference_slug", slug)
         .eq("language", lang)
         .maybeSingle();
@@ -105,6 +113,29 @@ export default function VersePage() {
       setVerses(chosen);
       setSeo((seoData as SeoRow) || null);
       setLoading(false);
+
+      // Generate the detailed meaning once, then it is cached for everyone
+      if (!(seoData as any)?.summary && chosen.length > 0) {
+        setDeepening(true);
+        try {
+          const res = await fetchMeaning({
+            data: {
+              slug,
+              lang: /^[a-z]{2}$/.test(lang) ? lang : "de",
+              book_number: parsed.book.number,
+              chapter: parsed.chapter,
+              verse: parsed.verse,
+              reference: `${chosen[0]!.book} ${parsed.chapter},${parsed.verse}`,
+              text: chosen[0]!.text.slice(0, 1200),
+            },
+          });
+          if (!cancelled && res.meaning) setSeo(res.meaning as SeoRow);
+        } catch (e) {
+          console.error("verse meaning", e);
+        } finally {
+          if (!cancelled) setDeepening(false);
+        }
+      }
     })();
     return () => {
       cancelled = true;
@@ -208,8 +239,9 @@ export default function VersePage() {
         ) : (
           <>
             {/* Primary verse card */}
-            <Card className="p-6 md:p-8 bg-gradient-to-br from-primary/5 to-secondary/5 border-primary/20">
-              <blockquote className="text-xl md:text-2xl leading-relaxed font-serif italic text-foreground">
+            <Card className="relative overflow-hidden rounded-3xl p-8 md:p-12 bg-gradient-to-br from-primary/10 via-background to-secondary/10 border-primary/20 shadow-lg">
+              <div aria-hidden className="pointer-events-none absolute -top-24 -right-24 h-64 w-64 rounded-full bg-primary/20 blur-3xl" />
+              <blockquote className="relative text-2xl md:text-3xl leading-relaxed font-serif italic text-foreground">
                 «{verses[0]!.text}»
               </blockquote>
               <div className="mt-4 flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
@@ -237,6 +269,22 @@ export default function VersePage() {
               </section>
             )}
 
+            {/* Core message */}
+            {seo?.summary && (
+              <section className="rounded-3xl border border-primary/20 bg-primary/5 p-6 md:p-8">
+                <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+                  <Sparkles className="h-4 w-4" /> {t("verse.coreMessage", "Die Kernbotschaft")}
+                </p>
+                <p className="mt-3 text-lg md:text-xl font-serif leading-relaxed text-foreground">{seo.summary}</p>
+              </section>
+            )}
+            {deepening && !seo?.summary && (
+              <div className="flex items-center gap-3 rounded-3xl border border-dashed border-primary/30 p-6 text-muted-foreground">
+                <Loader2 className="h-5 w-5 animate-spin text-primary" />
+                {t("verse.deepening", "Wir bereiten die ausführliche Bedeutung dieses Verses vor …")}
+              </div>
+            )}
+
             {/* Context */}
             {seo?.context && (
               <section className="space-y-3">
@@ -254,6 +302,51 @@ export default function VersePage() {
                 <div className="prose prose-neutral dark:prose-invert max-w-none">
                   <p className="text-foreground/90 leading-relaxed whitespace-pre-line">{seo.reflection}</p>
                 </div>
+              </section>
+            )}
+
+            {/* Key words */}
+            {seo?.key_words && seo.key_words.length > 0 && (
+              <section className="space-y-3">
+                <h2 className="flex items-center gap-2 text-xl font-semibold"><Feather className="h-5 w-5 text-primary" />{t("verse.keyWords", "Schlüsselwörter")}</h2>
+                <div className="grid gap-3 sm:grid-cols-2">
+                  {seo.key_words.map((k, i) => (
+                    <Card key={i} className="rounded-2xl p-5">
+                      <p className="font-serif text-lg text-foreground">{k.word}</p>
+                      {k.original && <p className="text-xs uppercase tracking-wide text-primary mt-0.5">{k.original}</p>}
+                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{k.meaning}</p>
+                    </Card>
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {/* Life questions */}
+            {seo?.life_questions && seo.life_questions.length > 0 && (
+              <section className="space-y-3">
+                <h2 className="flex items-center gap-2 text-xl font-semibold"><HelpCircle className="h-5 w-5 text-primary" />{t("verse.lifeQuestions", "Fragen für deinen Weg")}</h2>
+                <ul className="space-y-2">
+                  {seo.life_questions.map((q, i) => (
+                    <li key={i}>
+                      <button
+                        type="button"
+                        onClick={() => { sessionStorage.setItem("biblebot-chat-seed", `${referenceLabel}: ${q}`); navigate("/?chat=open"); }}
+                        className="w-full text-left rounded-2xl border border-border bg-card px-5 py-4 text-foreground hover:border-primary/40 hover:bg-primary/5 transition-colors"
+                      >
+                        {q}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
+
+            {/* Prayer */}
+            {seo?.prayer && (
+              <section className="rounded-3xl bg-secondary/10 border border-secondary/20 p-6 md:p-8 text-center">
+                <HandHeart className="mx-auto h-6 w-6 text-secondary" />
+                <h2 className="mt-2 text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground">{t("verse.prayer", "Ein Gebet dazu")}</h2>
+                <p className="mt-3 font-serif italic text-lg leading-relaxed text-foreground">{seo.prayer}</p>
               </section>
             )}
 

@@ -2889,12 +2889,16 @@ export type Database = {
           created_at: string
           id: string
           is_featured: boolean
+          key_words: Json | null
           language: string
+          life_questions: string[] | null
           meta_description: string | null
+          prayer: string | null
           reference_slug: string
           reflection: string | null
           related_references: string[] | null
           related_topics: string[] | null
+          summary: string | null
           title: string | null
           updated_at: string
           verse: number
@@ -2907,12 +2911,16 @@ export type Database = {
           created_at?: string
           id?: string
           is_featured?: boolean
+          key_words?: Json | null
           language?: string
+          life_questions?: string[] | null
           meta_description?: string | null
+          prayer?: string | null
           reference_slug: string
           reflection?: string | null
           related_references?: string[] | null
           related_topics?: string[] | null
+          summary?: string | null
           title?: string | null
           updated_at?: string
           verse: number
@@ -2925,12 +2933,16 @@ export type Database = {
           created_at?: string
           id?: string
           is_featured?: boolean
+          key_words?: Json | null
           language?: string
+          life_questions?: string[] | null
           meta_description?: string | null
+          prayer?: string | null
           reference_slug?: string
           reflection?: string | null
           related_references?: string[] | null
           related_topics?: string[] | null
+          summary?: string | null
           title?: string | null
           updated_at?: string
           verse?: number

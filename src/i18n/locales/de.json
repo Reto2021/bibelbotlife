@@ -2451,5 +2451,13 @@
       "q12": "Gibt es Gott, und wie merke ich das?"
     },
     "more": "Andere Fragen"
+  },
+  "verse": {
+    "coreMessage": "Die Kernbotschaft",
+    "deepening": "Wir bereiten die ausführliche Bedeutung dieses Verses vor …",
+    "keyWords": "Schlüsselwörter",
+    "lifeQuestions": "Fragen für deinen Weg",
+    "prayer": "Ein Gebet dazu",
+    "meaningLink": "Bedeutung"
   }
 }
