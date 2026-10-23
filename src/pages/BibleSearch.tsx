@@ -261,6 +261,8 @@ export default function BibleSearch() {
 
 function VerseCard({ verse }: { verse: SearchResult }) {
   const { data: matches = [] } = useExplanationsInText(verse.text);
+  const bookEntry = BOOKS.find((b) => b.number === verse.book_number);
+  const meaningSlug = bookEntry ? buildVerseSlug(bookEntry.slug, verse.chapter, verse.verse) : null;
   return (
     <div className="p-4 rounded-lg border border-border bg-card hover:bg-accent/50 transition-colors">
       <div className="flex items-start justify-between gap-4">
@@ -268,9 +270,16 @@ function VerseCard({ verse }: { verse: SearchResult }) {
           <p className="text-foreground leading-relaxed">
             {matches.length > 0 ? wrapKeywordsInText(verse.text, matches) : verse.text}
           </p>
-          <p className="text-sm text-primary font-medium mt-2">
-            {verse.book} {verse.chapter},{verse.verse}
-          </p>
+          <div className="mt-2 flex flex-wrap items-center gap-3">
+            <p className="text-sm text-primary font-medium">
+              {verse.book} {verse.chapter},{verse.verse}
+            </p>
+            {meaningSlug && (
+              <Link to={`/vers/${meaningSlug}`} className="text-xs font-medium rounded-full border border-primary/30 px-2.5 py-1 text-primary hover:bg-primary/10 transition-colors">
+                Bedeutung →
+              </Link>
+            )}
+          </div>
         </div>
         <Badge variant="outline" className="shrink-0 text-xs">
           {TRANSLATION_LABELS[verse.translation] || verse.translation}
