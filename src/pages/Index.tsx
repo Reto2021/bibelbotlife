@@ -11,6 +11,7 @@ import { ChurchBanner } from "@/components/ChurchBanner";
 import { ChatHero } from "@/components/ChatHero";
 import { LifeWheelProvider } from "@/components/LifeWheel";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
 import { AppLogo } from "@/components/AppLogo";
 import { Link } from "@/lib/router-compat";
 
