@@ -2419,5 +2419,13 @@
       "q12": "Does God exist, and how would I notice?"
     },
     "more": "Other questions"
+  },
+  "verse": {
+    "coreMessage": "The core message",
+    "deepening": "We are preparing the detailed meaning of this verse …",
+    "keyWords": "Key words",
+    "lifeQuestions": "Questions for your journey",
+    "prayer": "A prayer for this",
+    "meaningLink": "Meaning"
   }
 }
