@@ -1,33 +1,21 @@
 import { lazy, Suspense } from "react";
-import { motion } from "framer-motion";
 import { SEOHead } from "@/components/SEOHead";
 import { useTranslation } from "react-i18next";
-import { MessageCircle, BookOpen, Calendar, Heart, Users, Star, GraduationCap, Church, CheckCircle2, Brain, X as XIcon, Check, HelpCircle, HandHeart, Copy, Compass, Send, Building2, Shield, EyeOff, Code2, Server, Globe, Headphones, ClipboardList, BookHeart, Bot } from "lucide-react";
+import {
+  MessageCircle, BookOpen, Heart, Users, GraduationCap, HelpCircle, HandHeart,
+  Mail, Building2, HeartHandshake, Bot, User, MapPin, Calendar, Compass,
+  Shield, EyeOff, X as XIcon, Check,
+} from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { ChurchBanner } from "@/components/ChurchBanner";
-import { ReferralSection } from "@/components/ReferralSection";
-import { EntryTiles } from "@/components/EntryTiles";
 import { ChatHero } from "@/components/ChatHero";
 import { LifeWheelProvider } from "@/components/LifeWheel";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { AppLogo } from "@/components/AppLogo";
-import { ToolCard, useToolDefs } from "@/components/ToolCards";
-import { useFavoriteTools } from "@/hooks/use-favorite-tools";
-import { useAuth } from "@/hooks/use-auth";
-import { AddToChatGPTButton } from "@/components/AddToChatGPTButton";
-
-// BibleBotChat overlay removed - chat is now inline in ChatHero
-const DailyImpulse = lazy(() => import("@/components/DailyImpulse"));
-const DailySubscribe = lazy(() => import("@/components/DailySubscribe"));
-const CrossMarquee = lazy(() =>
-  import("@/components/kreuzwege/CrossMarquee").then((m) => ({ default: m.CrossMarquee })),
-);
-import { Separator } from "@/components/ui/separator";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
+import { AppLogo } from "@/components/AppLogo";
 import { Link } from "@/lib/router-compat";
 
-const TELEGRAM_LINK = "https://t.me/meinbibelbot";
+const DailyImpulse = lazy(() => import("@/components/DailyImpulse"));
 
 const BIBLE_EDITIONS_DATA = [
   { name: "Lutherbibel", year: "1912", traditionKey: "evangelical" },
@@ -35,42 +23,46 @@ const BIBLE_EDITIONS_DATA = [
   { name: "Elberfelder Bibel", year: "2006", traditionKey: "literal" },
 ];
 
-const ToolsSection = () => {
+// Ruhige Entdecken-Sektion: alle Nebenwege als schlichte Kacheln statt langer Marketing-Blöcke
+const DiscoverGrid = () => {
   const { t } = useTranslation();
-  const tools = useToolDefs();
-  const { user } = useAuth();
-  const { toggleFavorite, isFavorite } = useFavoriteTools();
+
+  const tiles = [
+    { icon: HandHeart, to: "/gebetswand", label: t("nav.prayerWall") },
+    { icon: GraduationCap, to: "/bibelquiz", label: t("nav.bibleQuiz") },
+    { icon: MapPin, to: "/kreuzwege", label: t("nav.crossways", "Kreuzwege") },
+    { icon: BookOpen, to: "/bible-search", label: t("nav.bibleSearch", "Bibelsuche") },
+    { icon: Calendar, to: "/dashboard", label: t("nav.planner", "Messeplaner") },
+    { icon: Building2, to: "/for-churches", label: t("institutions.badge") },
+    { icon: HeartHandshake, to: "/fuer-seelsorger", label: t("nav.forCelebrants") },
+    { icon: User, to: "/mein-bereich", label: t("meinBereichNav") },
+    { icon: Bot, to: "/connect", label: t("nav.connectChatGPT", "In ChatGPT verbinden") },
+    { icon: Users, to: "/ueber-uns", label: t("nav.about", "Über uns") },
+    { icon: Heart, to: "/spenden", label: t("nav.donate", "Spenden") },
+    { icon: Mail, to: "/kontakt", label: t("nav.contact", "Kontakt") },
+  ];
 
   return (
     <section className="py-16 px-4">
-      <div className="container mx-auto max-w-4xl">
-        <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 text-sm font-medium text-primary bg-primary/10 px-4 py-1.5 rounded-full mb-4">
+      <div className="container mx-auto max-w-3xl">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center gap-2 text-sm font-medium text-primary bg-primary/10 px-4 py-1.5 rounded-full mb-3">
             <Compass className="h-4 w-4" />
-            {t("tools.badge")}
+            {t("nav.explore", "Entdecken")}
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-            {t("tools.title")}
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            {t("tools.subtitle")}
-          </p>
-          {user && (
-            <p className="text-xs text-muted-foreground mt-2">
-              <Star className="inline h-3 w-3 text-primary mr-1" />
-              {t("tools.favoriteTip")}
-            </p>
-          )}
+          <h2 className="text-3xl font-bold text-foreground mb-3">{t("discover.title")}</h2>
+          <p className="text-muted-foreground max-w-xl mx-auto">{t("discover.subtitle")}</p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {tools.map((tool) => (
-            <ToolCard
-              key={tool.id}
-              tool={tool}
-              isFavorite={isFavorite(tool.id)}
-              isLoggedIn={!!user}
-              onToggleFavorite={() => toggleFavorite(tool.id)}
-            />
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+          {tiles.map((tile) => (
+            <Link
+              key={tile.to}
+              to={tile.to}
+              className="group flex items-center gap-2.5 rounded-xl border border-border bg-card/70 px-3.5 py-3 text-sm text-foreground hover:border-primary/40 hover:bg-primary/5 transition-colors"
+            >
+              <tile.icon className="h-4 w-4 text-primary shrink-0" />
+              <span className="truncate">{tile.label}</span>
+            </Link>
           ))}
         </div>
       </div>
@@ -81,26 +73,10 @@ const ToolsSection = () => {
 const Index = () => {
   const { t, i18n } = useTranslation();
 
-  const features = [
-    { icon: BookOpen, title: t("features.bible.title"), description: t("features.bible.desc") },
-    { icon: Star, title: t("features.goals.title"), description: t("features.goals.desc") },
-    { icon: Heart, title: t("features.self.title"), description: t("features.self.desc") },
-    { icon: GraduationCap, title: t("features.faith.title"), description: t("features.faith.desc") },
-    { icon: Calendar, title: t("features.daily.title"), description: t("features.daily.desc") },
-    { icon: Users, title: t("features.groups.title"), description: t("features.groups.desc") },
-  ];
-
   const scienceMethods = [
-    { icon: Brain, ...t("coaching.perma", { returnObjects: true }) as { name: string; author: string; desc: string } },
     { icon: Heart, ...t("coaching.logo", { returnObjects: true }) as { name: string; author: string; desc: string } },
-    { icon: Star, ...t("coaching.gratitude", { returnObjects: true }) as { name: string; author: string; desc: string } },
+    { icon: Shield, ...t("coaching.gratitude", { returnObjects: true }) as { name: string; author: string; desc: string } },
     { icon: Users, ...t("coaching.forgiveness", { returnObjects: true }) as { name: string; author: string; desc: string } },
-  ];
-
-  const discoverCards = [
-    { emoji: "🤔", title: t("discover.doubt.title"), text: t("discover.doubt.text") },
-    { emoji: "🔍", title: t("discover.search.title"), text: t("discover.search.text") },
-    { emoji: "🌱", title: t("discover.deepen.title"), text: t("discover.deepen.text") },
   ];
 
   return (
@@ -112,311 +88,49 @@ const Index = () => {
       <SiteHeader />
 
       <main>
-        {/* Visible H1 for SEO and accessibility */}
-        <h1 className="sr-only md:not-sr-only md:text-center md:text-xl md:font-normal md:text-muted-foreground md:tracking-[0.2em] md:uppercase md:pt-8 md:px-4">
-          BibleBot.Life · Dein Bibel-Begleiter
-        </h1>
-        {/* Chat-First Hero – above the fold */}
+        {/* Einziges sichtbares H1 steht im Chat-Hero; dieser Titel dient Screenreadern & SEO */}
+        <p className="sr-only">BibleBot.Life · Dein Bibel-Begleiter</p>
+        {/* Sanctuary-Hero: Lea & Jonas, Fragen, Eingabefeld – mehr nicht */}
         <ChatHero />
 
-      {/* Kreuzwege — lebendes Bilder-Karussell als Einstieg */}
-      <Suspense fallback={<div className="h-20" />}>
-        <CrossMarquee />
-      </Suspense>
-
-      {/* Entry Tiles — 9 curated topic chips in 3 groups */}
-      <EntryTiles />
-
+      {/* Täglicher Impuls – das tägliche Ritual */}
       <Suspense fallback={<div className="h-20" />}>
         <DailyImpulse />
       </Suspense>
 
-      {/* Features Section */}
-      <section id="features" className="py-20 px-4 bg-card/40">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">{t("features.sectionTitle")}</h2>
-            <p className="text-xl text-muted-foreground">{t("features.sectionSubtitle")}</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <Card key={index} className="bg-card/80 backdrop-blur-xs border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <CardHeader className="text-center">
-                  <feature.icon className="h-12 w-12 text-primary mx-auto mb-4" />
-                  <CardTitle className="text-xl text-card-foreground">{feature.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-muted-foreground text-center leading-relaxed">{feature.description}</CardDescription>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Audience Split — who is this for? */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold text-foreground mb-3">{t("audience.title")}</h2>
-            <p className="text-muted-foreground">{t("audience.subtitle")}</p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {/* Personal use */}
-            <Card className="bg-card/80 backdrop-blur-xs border-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col">
-              <CardHeader>
-                <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mb-3">
-                  <Heart className="h-6 w-6 text-primary" />
-                </div>
-                <CardTitle className="text-xl">{t("audience.personal.title")}</CardTitle>
-                <CardDescription className="leading-relaxed">{t("audience.personal.desc")}</CardDescription>
-              </CardHeader>
-              <CardContent className="mt-auto">
-                <ul className="space-y-2 mb-5">
-                  {(["f1", "f2", "f3", "f4"] as const).map((f) => (
-                    <li key={f} className="flex items-center gap-2 text-sm text-foreground/80">
-                      <CheckCircle2 className="h-4 w-4 text-primary shrink-0" />
-                      {t(`audience.personal.${f}`)}
-                    </li>
-                  ))}
-                </ul>
-                <Button asChild className="w-full" size="lg">
-                  <a href="#chat">{t("audience.personal.cta")}</a>
-                </Button>
-              </CardContent>
-            </Card>
-
-            {/* Church / celebrant use */}
-            <Card className="bg-card/80 backdrop-blur-xs border-secondary/30 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col">
-              <CardHeader>
-                <div className="h-12 w-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-3">
-                  <Church className="h-6 w-6 text-secondary" />
-                </div>
-                <CardTitle className="text-xl">{t("audience.church.title")}</CardTitle>
-                <CardDescription className="leading-relaxed">{t("audience.church.desc")}</CardDescription>
-              </CardHeader>
-              <CardContent className="mt-auto">
-                <ul className="space-y-2 mb-5">
-                  {(["f1", "f2", "f3", "f4"] as const).map((f) => (
-                    <li key={f} className="flex items-center gap-2 text-sm text-foreground/80">
-                      <CheckCircle2 className="h-4 w-4 text-secondary shrink-0" />
-                      {t(`audience.church.${f}`)}
-                    </li>
-                  ))}
-                </ul>
-                <Button asChild variant="outline" className="w-full border-secondary/40 hover:bg-secondary/10 hover:text-secondary" size="lg">
-                  <Link to="/for-churches">{t("audience.church.cta")}</Link>
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Trust Signals */}
-      <section className="py-14 px-4">
+      {/* Vertrauen – ruhig, drei kurze Signale */}
+      <section className="py-12 px-4">
         <div className="container mx-auto max-w-3xl">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
             {([
               { icon: Shield, key: "qa" },
               { icon: EyeOff, key: "noAds" },
               { icon: Heart, key: "noExpertise" },
             ] as const).map((item) => (
-              <div key={item.key} className="flex flex-col items-center gap-3 p-6 rounded-2xl bg-card/60 border border-border">
-                <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                  <item.icon className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="font-semibold text-foreground">{t(`trust.${item.key}.title`)}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{t(`trust.${item.key}.text`)}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Warum BibleBot? — klarer Wertversprechen vs. generischer KI */}
-      <section className="py-20 px-4 bg-card/40">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 text-sm font-medium text-primary bg-primary/10 px-4 py-1.5 rounded-full mb-4">
-              <Bot className="h-4 w-4" />
-              {t("why.badge", "BibleBot vs. ChatGPT")}
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-              {t("why.title", "Warum BibleBot — und nicht einfach ChatGPT?")}
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              {t("why.subtitle", "Ein Bibel-Begleiter ist mehr als eine Antwortmaschine. Hier der entscheidende Unterschied.")}
-            </p>
-          </div>
-
-          <Card className="bg-card/80 border-border overflow-hidden mb-10">
-            <CardHeader className="pb-0">
-              <CardTitle className="text-center text-xl">
-                {t("why.comparisonTitle", "Der Unterschied auf einen Blick")}
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="p-0">
-              <div className="divide-y divide-border">
-                {(t("why.comparison", { returnObjects: true }) as Array<{ aspect: string; chatgpt: string; biblebot: string }>)?.map((row) => (
-                  <div key={row.aspect} className="grid md:grid-cols-[1.2fr_1fr_1fr] gap-0">
-                    <div className="p-4 md:p-5 flex items-center border-b md:border-b-0 md:border-r border-border bg-muted/20">
-                      <span className="font-semibold text-foreground text-sm">{row.aspect}</span>
-                    </div>
-                    <div className="p-4 md:p-5 flex items-start gap-2 bg-destructive/5">
-                      <XIcon className="h-4 w-4 text-destructive/70 shrink-0 mt-0.5" />
-                      <span className="text-sm text-muted-foreground">{row.chatgpt}</span>
-                    </div>
-                    <div className="p-4 md:p-5 flex items-start gap-2 bg-primary/5">
-                      <Check className="h-4 w-4 text-primary shrink-0 mt-0.5" />
-                      <span className="text-sm text-foreground/90">{row.biblebot}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-
-          <div className="grid md:grid-cols-3 gap-6 mb-10">
-            {[
-              {
-                icon: BookOpen,
-                title: t("why.wisdom.title", "Geprüfte Weisheit"),
-                text: t("why.wisdom.text", "BibleBot kennt über 35 Bibelübersetzungen in 30+ Sprachen und prüft jede Stelle automatisch auf Korrektheit. Keine Halluzinationen, kein Raten — nur geprüfte Weisheit aus 2000 Jahren."),
-              },
-              {
-                icon: Shield,
-                title: t("why.crisis.title", "Mit Krisenintervention"),
-                text: t("why.crisis.text", "Als erste Bibel-App weltweit erkennt BibleBot automatisch Krisensituationen und leitet sofort zu Telefonseelsorge-Nummern in CH, DE und AT weiter."),
-              },
-              {
-                icon: Heart,
-                title: t("why.nochurch.title", "Ergänzt deine Gemeinde"),
-                text: t("why.nochurch.text", "Ob du jeden Sonntag in der Kirche bist oder die Bibel jahrelang nicht aufgeschlagen hast — BibleBot begegnet dir dort, wo du gerade stehst. Kein Vorwissen nötig."),
-              },
-            ].map((item) => (
-              <div key={item.title} className="flex flex-col gap-4 p-6 rounded-2xl border border-border bg-card/60 hover:shadow-md transition-shadow">
-                <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
+              <div key={item.key} className="flex flex-col items-center gap-2 p-5 rounded-2xl bg-card/60 border border-border">
+                <div className="h-10 w-10 rounded-xl bg-primary/10 flex items-center justify-center">
                   <item.icon className="h-5 w-5 text-primary" />
                 </div>
-                <h3 className="font-bold text-foreground text-lg leading-tight">{item.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{item.text}</p>
+                <h3 className="font-semibold text-foreground text-sm">{t(`trust.${item.key}.title`)}</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">{t(`trust.${item.key}.text`)}</p>
               </div>
             ))}
           </div>
-
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Button asChild size="lg">
-              <a href="#chat">{t("why.cta", "Jetzt kostenlos ausprobieren")}</a>
-            </Button>
-            <Button asChild variant="outline" size="lg">
-              <Link to="/ki-und-seelsorge">{t("why.ctaSecondary", "Methodik erfahren")}</Link>
-            </Button>
-          </div>
         </div>
       </section>
 
-      {/* Add to ChatGPT CTA */}
-      <section className="py-16 px-4 bg-card/40 border-y border-border/50">
-        <div className="container mx-auto max-w-4xl">
-          <div className="flex flex-col md:flex-row items-center gap-8 p-8 rounded-2xl border border-border bg-card/80 backdrop-blur-xs shadow-[var(--shadow-warm)]">
-            <div className="flex-1 text-center md:text-left">
-              <div className="inline-flex items-center gap-2 text-sm font-medium text-primary bg-primary/10 px-4 py-1.5 rounded-full mb-4">
-                <Bot className="h-4 w-4" />
-                Neu: BibleBot in ChatGPT
-              </div>
-              <h2 className="text-3xl font-bold text-foreground mb-3">
-                Dein Bibel-Begleiter direkt im Chat
-              </h2>
-              <p className="text-muted-foreground max-w-xl">
-                Verbinde BibleBot mit ChatGPT, Claude oder Cursor. Suche die Bibel, pflege dein Journal
-                und lass dich coachen – mit denselben Guardrails wie in der App.
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-3 shrink-0">
-              <AddToChatGPTButton size="lg" />
-              <Button asChild size="lg" variant="outline">
-                <Link to="/connect">Mehr erfahren</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Glaube neu entdecken */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 text-sm font-medium text-primary bg-primary/10 px-4 py-1.5 rounded-full mb-4">
-              <Compass className="h-4 w-4" />
-              {t("discover.badge")}
-            </div>
-            <h2 className="text-4xl font-bold text-foreground mb-4">{t("discover.title")}</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{t("discover.subtitle")}</p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6 mb-10">
-            {discoverCards.map((item) => (
-              <Card key={item.title} className="bg-card/80 border-border text-center">
-                <CardHeader>
-                  <span className="text-3xl mb-2 block">{item.emoji}</span>
-                  <CardTitle className="text-lg">{item.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{item.text}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          <div className="bg-card/60 backdrop-blur-xs rounded-2xl border border-border p-8 text-center">
-            <p className="text-foreground/80 italic text-lg mb-2">{t("discover.quote")}</p>
-            <p className="text-muted-foreground text-sm mb-6">{t("discover.quoteRef")}</p>
-            <p className="text-sm text-muted-foreground max-w-xl mx-auto">{t("discover.quoteText")}</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Mein Kreis Teaser */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-2xl text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <div className="inline-flex items-center gap-2 text-sm font-medium text-primary bg-primary/10 px-4 py-1.5 rounded-full mb-4">
-              <Users className="h-4 w-4" />
-              {t("circle.teaserBadge")}
-            </div>
-            <h2 className="text-3xl font-bold text-foreground mb-3">{t("circle.teaserTitle")}</h2>
-            <p className="text-muted-foreground mb-6 max-w-xl mx-auto">{t("circle.teaserDesc")}</p>
-            <Button asChild size="lg">
-              <Link to="/mein-kreis">
-                <Users className="h-4 w-4 mr-2" />
-                {t("circle.teaserCta")}
-              </Link>
-            </Button>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Subscribe CTA is now integrated in the DailyImpulse banner */}
-      {/* Referral / Empfehlen */}
-      <ReferralSection />
-      {/* Tools Section */}
-      <ToolsSection />
+      {/* Entdecken – alle Nebenwege als ruhige Kacheln */}
+      <DiscoverGrid />
 
       {/* FAQ */}
-      <section className="py-20 px-4">
+      <section className="py-16 px-4">
         <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-12">
+          <div className="text-center mb-10">
             <div className="inline-flex items-center gap-2 text-sm font-medium text-secondary bg-secondary/10 px-4 py-1.5 rounded-full mb-4">
               <HelpCircle className="h-4 w-4" />
               {t("faq.badge")}
             </div>
-            <h2 className="text-4xl font-bold text-foreground mb-4">{t("faq.title")}</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-4">{t("faq.title")}</h2>
             <p className="text-lg text-muted-foreground">{t("faq.subtitle")}</p>
           </div>
 
@@ -496,7 +210,7 @@ const Index = () => {
                 <div className="space-y-3">
                   {(t("faq.q4Items", { returnObjects: true }) as string[]).map((item, i) => (
                     <div key={i} className="flex items-start gap-2">
-                      <CheckCircle2 className="h-4 w-4 text-telegram shrink-0 mt-0.5" />
+                      <Check className="h-4 w-4 text-telegram shrink-0 mt-0.5" />
                       <span className="text-sm">{item}</span>
                     </div>
                   ))}
@@ -510,121 +224,7 @@ const Index = () => {
                 <AccordionContent className="text-muted-foreground leading-relaxed pb-6">{t(`faq.${key}Answer`)}</AccordionContent>
               </AccordionItem>
             ))}
-
-            <AccordionItem value="methodik" className="bg-card/80 border border-border rounded-xl px-6 data-[state=open]:shadow-md">
-              <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
-                {t("faqExtra.methodik.q")}
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
-                <p className="mb-4">{t("coaching.subtitle")}</p>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                  {scienceMethods.map((method) => (
-                    <div key={method.name} className="text-center">
-                      <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-2">
-                        <method.icon className="h-5 w-5 text-primary" />
-                      </div>
-                      <p className="font-semibold text-foreground text-sm">{method.name}</p>
-                      <p className="text-xs text-muted-foreground">{method.author}</p>
-                      <p className="text-xs text-muted-foreground mt-1">{method.desc}</p>
-                    </div>
-                  ))}
-                </div>
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="journey" className="bg-card/80 border border-border rounded-xl px-6 data-[state=open]:shadow-md">
-              <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
-                {t("faqExtra.journey.q")}
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
-                <p className="mb-4">{t("coaching.journeyDesc")}</p>
-                <div className="grid md:grid-cols-3 gap-4">
-                  {[
-                    { num: 1, title: t("coaching.week1"), desc: t("coaching.week1Desc") },
-                    { num: 2, title: t("coaching.week2"), desc: t("coaching.week2Desc") },
-                    { num: 3, title: t("coaching.week3"), desc: t("coaching.week3Desc") },
-                  ].map((w) => (
-                    <div key={w.num}>
-                      <div className="flex items-center gap-2 mb-2">
-                        <span className="h-7 w-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold">{w.num}</span>
-                        <span className="font-semibold text-foreground text-sm">{w.title}</span>
-                      </div>
-                      <p className="text-xs text-muted-foreground leading-relaxed">{w.desc}</p>
-                    </div>
-                  ))}
-                </div>
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="glaube-psychologie" className="bg-card/80 border border-border rounded-xl px-6 data-[state=open]:shadow-md">
-              <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
-                {t("faqExtra.faithPsych.q")}
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
-                {t("faqExtra.faithPsych.a")}
-              </AccordionContent>
-            </AccordionItem>
           </Accordion>
-        </div>
-      </section>
-
-      {/* Spenden Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto max-w-3xl text-center">
-          <div className="mb-4">
-            <span className="inline-flex items-center gap-2 text-sm font-medium text-primary bg-primary/10 px-4 py-1.5 rounded-full">
-              <HandHeart className="h-4 w-4" />
-              {t("donate.badge")}
-            </span>
-          </div>
-          <h2 className="text-4xl font-bold text-foreground mb-4">{t("donate.title")}</h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">{t("donate.subtitle")}</p>
-          
-          <Card className="bg-card/80 backdrop-blur-xs border-border max-w-md mx-auto">
-            <CardHeader>
-              <CardTitle className="text-xl">{t("donate.onlineTitle", "Online spenden")}</CardTitle>
-              <CardDescription>{t("donate.bankSubtitle")}</CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="space-y-3">
-                <Button
-                  className="w-full"
-                  size="lg"
-                  asChild
-                >
-                  <Link to="/spenden">
-                    <Heart className="h-4 w-4 mr-2" />
-                    {t("donate.ctaDonate", "Jetzt spenden")}
-                  </Link>
-                </Button>
-              </div>
-              <p className="text-xs text-muted-foreground text-center">
-                {t("donate.stripeNote", "Sicher via Kreditkarte, Twint & mehr")}
-              </p>
-            </CardContent>
-          </Card>
-
-          {/* Verwendungszwecke */}
-          <div className="mt-10 max-w-lg mx-auto text-left">
-            <h3 className="text-lg font-semibold text-foreground mb-4 text-center">{t("donate.purposeHeading")}</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {[
-                { icon: Code2, key: "purposeItem1" },
-                { icon: Server, key: "purposeItem2" },
-                { icon: Globe, key: "purposeItem3" },
-                { icon: Headphones, key: "purposeItem4" },
-                { icon: ClipboardList, key: "purposeItem5" },
-                { icon: BookHeart, key: "purposeItem6" },
-              ].map(({ icon: Icon, key }) => (
-                <div key={key} className="flex items-start gap-3 p-3 rounded-lg bg-muted/50">
-                  <Icon className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                  <span className="text-sm text-muted-foreground">{t(`donate.${key}`)}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <p className="text-sm text-muted-foreground mt-8">{t("donate.note")}</p>
         </div>
       </section>
 
@@ -650,7 +250,7 @@ const Index = () => {
           </div>
           <p className="mb-4 text-center text-background/70">{t("footer.tagline")}</p>
           <p className="text-background/80 text-xs mb-6 max-w-2xl mx-auto text-center">{t("footer.disclaimer")}</p>
-          
+
           <div className="border-t border-background/20 pt-6 mt-6">
             <div className="grid sm:grid-cols-2 gap-6 text-sm text-background/80 mb-8">
               <div>
@@ -685,8 +285,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-
-      {/* BibleBotChat overlay removed - chat is inline in hero */}
     </div>
     </LifeWheelProvider>
   );
