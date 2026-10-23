@@ -1,6 +1,7 @@
 import { useState, useCallback, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { useSearchParams, useLocation } from "@/lib/router-compat";
+import { useSearchParams, useLocation, Link } from "@/lib/router-compat";
+import { BOOKS, buildVerseSlug } from "@/lib/bible-slugs";
 import { Search, Book, Loader2, ChevronRight } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -261,6 +262,7 @@ export default function BibleSearch() {
 
 function VerseCard({ verse }: { verse: SearchResult }) {
   const { data: matches = [] } = useExplanationsInText(verse.text);
+  const { t } = useTranslation();
   const bookEntry = BOOKS.find((b) => b.number === verse.book_number);
   const meaningSlug = bookEntry ? buildVerseSlug(bookEntry.slug, verse.chapter, verse.verse) : null;
   return (
@@ -276,7 +278,7 @@ function VerseCard({ verse }: { verse: SearchResult }) {
             </p>
             {meaningSlug && (
               <Link to={`/vers/${meaningSlug}`} className="text-xs font-medium rounded-full border border-primary/30 px-2.5 py-1 text-primary hover:bg-primary/10 transition-colors">
-                Bedeutung →
+                {t("verse.meaningLink", "Bedeutung")} →
               </Link>
             )}
           </div>
